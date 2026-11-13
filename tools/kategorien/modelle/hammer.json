@@ -1,0 +1,318 @@
+{
+ "parts": [
+  {
+   "id": "ringkeil",
+   "component_id": "steel_hammer_head",
+   "material_id": "steel",
+   "name": "Ringkeil",
+   "short": "Ringkeil",
+   "shape": "cyl",
+   "x": 51,
+   "y": 2,
+   "w": 8,
+   "d": 8,
+   "z": 13,
+   "h": 4,
+   "explode": [
+    0,
+    0,
+    84
+   ],
+   "mass": 3.8,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Kleiner Stahlkeil mit Ring, quer zum Holzkeil eingeschlagen. Mit Durchschlag und Hammer heraustreiben.",
+   "color": "#8C949A",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 2,
+     "y": 2,
+     "w": 4,
+     "fill": "#5E666C"
+    }
+   ]
+  },
+  {
+   "id": "holzkeil",
+   "component_id": "wooden_handle",
+   "material_id": "wood",
+   "name": "Holzkeil",
+   "short": "Holzkeil",
+   "shape": "box",
+   "x": 42,
+   "y": 0,
+   "w": 26,
+   "d": 14,
+   "z": 14,
+   "h": 2,
+   "r": 0.5,
+   "explode": [
+    0,
+    0,
+    109
+   ],
+   "mass": 2.9,
+   "materials": [
+    [
+     "holz",
+     100
+    ]
+   ],
+   "info": "Hartholzkeil, mit Leim in den Schlitz am Stielende getrieben. Er spreizt das Holz im Auge, damit der Kopf nicht abfliegt.",
+   "color": "#B0824A"
+  },
+  {
+   "id": "finne",
+   "component_id": "steel_hammer_head",
+   "material_id": "steel",
+   "name": "Finne",
+   "short": "Finne",
+   "shape": "box",
+   "x": 0,
+   "y": 3,
+   "w": 32,
+   "d": 20,
+   "z": 4,
+   "h": 22,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    45
+   ],
+   "mass": 105.6,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Die keilförmige schmale Seite zum Strecken und Treiben von Blech.",
+   "color": "#5E666C",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 7,
+     "w": 10,
+     "d": 6,
+     "r": 1,
+     "fill": "#B9C0C5"
+    }
+   ]
+  },
+  {
+   "id": "kopf",
+   "component_id": "steel_hammer_head",
+   "material_id": "steel",
+   "name": "Hammerkopf mit Auge",
+   "short": "Kopf",
+   "shape": "box",
+   "x": 32,
+   "y": 0,
+   "w": 48,
+   "d": 26,
+   "z": 0,
+   "h": 30,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    45
+   ],
+   "mass": 249.6,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Geschmiedeter, gehärteter Werkzeugstahl. Das ovale Auge nimmt den Stiel auf. Erst Keile heraustreiben, dann den Kopf vom Stiel schlagen: Er gehört zum Altmetall.",
+   "color": "#5E666C",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 8,
+     "y": 4,
+     "w": 32,
+     "d": 18,
+     "r": 6,
+     "fill": "#4C5358"
+    }
+   ]
+  },
+  {
+   "id": "bahn",
+   "component_id": "steel_hammer_head",
+   "material_id": "steel",
+   "name": "Bahn (Schlagfläche)",
+   "short": "Bahn",
+   "shape": "box",
+   "x": 80,
+   "y": 0,
+   "w": 30,
+   "d": 26,
+   "z": 0,
+   "h": 30,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    45
+   ],
+   "mass": 144,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Quadratische, gehärtete Schlagfläche mit Fase. Hat sie Grate oder Risse, kann Stahl absplittern.",
+   "color": "#5E666C",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 26,
+     "y": 1,
+     "w": 4,
+     "d": 24,
+     "r": 1,
+     "fill": "#B9C0C5"
+    }
+   ]
+  },
+  {
+   "id": "stiel_kopf",
+   "component_id": "wooden_handle",
+   "material_id": "wood",
+   "name": "Stielende im Auge",
+   "short": "Stielende",
+   "shape": "box",
+   "x": 41,
+   "y": 0,
+   "w": 28,
+   "d": 26,
+   "z": 7,
+   "h": 16,
+   "r": 6,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 7.7,
+   "materials": [
+    [
+     "holz",
+     100
+    ]
+   ],
+   "info": "Das obere Stielende ist geschlitzt und steckt im Auge. Hier sitzen die Keile.",
+   "color": "#D2A86E",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 6,
+     "w": 26,
+     "d": 2,
+     "r": 1,
+     "fill": "#9C7442"
+    }
+   ]
+  },
+  {
+   "id": "stiel_hals",
+   "component_id": "wooden_handle",
+   "material_id": "wood",
+   "name": "Stielhals",
+   "short": "Stielhals",
+   "shape": "box",
+   "x": 43,
+   "y": 26,
+   "w": 24,
+   "d": 100,
+   "z": 5,
+   "h": 20,
+   "r": 8,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 28.8,
+   "materials": [
+    [
+     "holz",
+     100
+    ]
+   ],
+   "info": "Dünnere Stelle unter dem Kopf, federt Schläge ab. Bricht ein Stiel, dann meist hier.",
+   "color": "#D2A86E",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 10,
+     "w": 16,
+     "d": 80,
+     "r": 6,
+     "fill": "#C99C60"
+    }
+   ]
+  },
+  {
+   "id": "stiel_griff",
+   "component_id": "wooden_handle",
+   "material_id": "wood",
+   "name": "Holzstiel (Griff)",
+   "short": "Stiel",
+   "shape": "box",
+   "x": 40,
+   "y": 126,
+   "w": 30,
+   "d": 194,
+   "z": 3,
+   "h": 24,
+   "r": 11,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 57.6,
+   "materials": [
+    [
+     "holz",
+     100
+    ]
+   ],
+   "info": "Eschenholz, zäh und elastisch. Unbehandeltes Holz kann wiederverwendet oder als Altholz abgegeben werden.",
+   "color": "#D2A86E",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 5,
+     "y": 20,
+     "w": 20,
+     "d": 160,
+     "r": 9,
+     "fill": "#C99C60"
+    },
+    {
+     "shape": "cyl",
+     "x": 11,
+     "y": 182,
+     "w": 8,
+     "fill": "#8E6A3E"
+    }
+   ]
+  }
+ ]
+}

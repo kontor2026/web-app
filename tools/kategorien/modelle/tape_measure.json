@@ -1,0 +1,367 @@
+{
+ "parts": [
+  {
+   "id": "schraube",
+   "component_id": "plastic_housing",
+   "material_id": "steel",
+   "name": "Gehäuseschraube",
+   "short": "Schraube",
+   "shape": "cyl",
+   "x": 28,
+   "y": 29,
+   "w": 5,
+   "z": 28,
+   "h": 2,
+   "explode": [
+    0,
+    0,
+    158.0
+   ],
+   "mass": 0.6,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Hält beide Gehäusehälften zusammen. Vorsicht: Beim Öffnen kann die Feder herausspringen.",
+   "color": "#9AA2A6",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0.5,
+     "y": 2,
+     "w": 4,
+     "d": 1,
+     "fill": "#5A6268"
+    }
+   ]
+  },
+  {
+   "id": "deckel",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Gehäusehälfte oben",
+   "short": "Gehäuse oben",
+   "shape": "box",
+   "x": 0,
+   "y": 2,
+   "w": 60,
+   "d": 60,
+   "z": 15,
+   "h": 15,
+   "r": 16,
+   "explode": [
+    0,
+    0,
+    136.0
+   ],
+   "mass": 25.4,
+   "materials": [
+    [
+     "pcabs",
+     80
+    ],
+    [
+     "tpe",
+     20
+    ]
+   ],
+   "info": "ABS mit gummierter Griffzone. Schraube lösen, dann die Hälften vorsichtig auseinanderziehen.",
+   "color": "#F2C230",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 4,
+     "w": 52,
+     "d": 52,
+     "r": 14,
+     "fill": "#2E3236"
+    },
+    {
+     "shape": "cyl",
+     "x": 16,
+     "y": 15,
+     "w": 28,
+     "fill": "#F2C230"
+    }
+   ]
+  },
+  {
+   "id": "band",
+   "component_id": "steel_tape",
+   "material_id": "steel",
+   "name": "Stahlmaßband (3 m)",
+   "short": "Maßband",
+   "shape": "cyl",
+   "x": 6,
+   "y": 8,
+   "w": 48,
+   "z": 5,
+   "h": 19,
+   "explode": [
+    0,
+    0,
+    107.0
+   ],
+   "mass": 58.3,
+   "materials": [
+    [
+     "stahl",
+     93
+    ],
+    [
+     "druck",
+     7
+    ]
+   ],
+   "info": "Gewölbtes, lackiertes Federstahlband mit aufgedruckter Skala. Das Band ist scharfkantig: Handschuhe tragen, es gehört zum Altmetall.",
+   "color": "#F4D24A",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 2,
+     "y": 2,
+     "w": 44,
+     "fill": "#E6C23C"
+    },
+    {
+     "shape": "cyl",
+     "x": 10,
+     "y": 10,
+     "w": 28,
+     "fill": "#2B2B2B"
+    }
+   ]
+  },
+  {
+   "id": "feder",
+   "component_id": "steel_spring",
+   "material_id": "steel",
+   "name": "Rückholfeder (Spiralfeder)",
+   "short": "Feder",
+   "shape": "cyl",
+   "x": 17,
+   "y": 20,
+   "w": 26,
+   "z": 7,
+   "h": 15,
+   "explode": [
+    0,
+    0,
+    70.0
+   ],
+   "mass": 19.1,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Aufgewickeltes Federstahlband, das das Maßband zurückzieht. Steht unter Spannung und kann herausschnellen. Mit einer Zange herausziehen, Schutzbrille tragen.",
+   "color": "#3C4247",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 3,
+     "w": 20,
+     "fill": "#596168"
+    },
+    {
+     "shape": "cyl",
+     "x": 7,
+     "y": 7,
+     "w": 12,
+     "fill": "#3C4247"
+    },
+    {
+     "shape": "cyl",
+     "x": 10,
+     "y": 10,
+     "w": 6,
+     "fill": "#596168"
+    }
+   ]
+  },
+  {
+   "id": "trommel",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Trommel mit Achse",
+   "short": "Trommel",
+   "shape": "cyl",
+   "x": 16,
+   "y": 19,
+   "w": 28,
+   "z": 4,
+   "h": 22,
+   "explode": [
+    0,
+    0,
+    31.0
+   ],
+   "mass": 5.3,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Kunststoffspule, auf die das Band gewickelt ist. Innen ist die Feder an der Achse eingehängt.",
+   "color": "#D9D4C8",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 9,
+     "y": 9,
+     "w": 10,
+     "fill": "#B3AE9F"
+    }
+   ]
+  },
+  {
+   "id": "unterschale",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Gehäusehälfte unten",
+   "short": "Gehäuse unten",
+   "shape": "box",
+   "x": 0,
+   "y": 2,
+   "w": 60,
+   "d": 60,
+   "z": 0,
+   "h": 15,
+   "r": 16,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 25.4,
+   "materials": [
+    [
+     "pcabs",
+     80
+    ],
+    [
+     "tpe",
+     20
+    ]
+   ],
+   "info": "Hier sitzen Achse und Bandführung. Sortenrein bleibt das Gehäuse nur ohne Band und Feder.",
+   "color": "#F2C230",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 3,
+     "w": 54,
+     "d": 54,
+     "r": 14,
+     "fill": "#E2B024"
+    },
+    {
+     "shape": "cyl",
+     "x": 14,
+     "y": 14,
+     "w": 32,
+     "fill": "#C99C1C"
+    }
+   ]
+  },
+  {
+   "id": "feststeller",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Feststeller",
+   "short": "Feststeller",
+   "shape": "box",
+   "x": 60,
+   "y": 38,
+   "w": 4,
+   "d": 20,
+   "z": 10,
+   "h": 10,
+   "r": 1.5,
+   "explode": [
+    22,
+    0,
+    0
+   ],
+   "mass": 4.2,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Schieber, der das Band mit einem Bremsklotz festklemmt. Drückt man ihn, bleibt das Band draußen.",
+   "color": "#C8322B"
+  },
+  {
+   "id": "haken",
+   "component_id": "steel_tape",
+   "material_id": "steel",
+   "name": "Endhaken",
+   "short": "Haken",
+   "shape": "box",
+   "x": 1,
+   "y": 62,
+   "w": 10,
+   "d": 3,
+   "z": 4,
+   "h": 22,
+   "r": 0.5,
+   "explode": [
+    0,
+    26,
+    0
+   ],
+   "mass": 3.2,
+   "materials": [
+    [
+     "stahl",
+     90
+    ],
+    [
+     "messing",
+     10
+    ]
+   ],
+   "info": "Vernieteter Stahlhaken am Bandanfang. Er sitzt bewusst locker, damit innen und außen richtig gemessen wird.",
+   "color": "#8C949A"
+  },
+  {
+   "id": "clip",
+   "component_id": "plastic_housing",
+   "material_id": "steel",
+   "name": "Gürtelclip",
+   "short": "Clip",
+   "shape": "box",
+   "x": 12,
+   "y": 0,
+   "w": 36,
+   "d": 2,
+   "z": 6,
+   "h": 18,
+   "r": 1,
+   "explode": [
+    0,
+    -26,
+    0
+   ],
+   "mass": 8.5,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Federstahlclip, an der Rückseite angeschraubt. Abschrauben und zum Altmetall geben.",
+   "color": "#B5BCC1"
+  }
+ ]
+}

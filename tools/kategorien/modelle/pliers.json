@@ -1,0 +1,454 @@
+{
+ "parts": [
+  {
+   "id": "niet",
+   "component_id": "steel_pliers_jaws",
+   "material_id": "steel",
+   "name": "Gelenkniet",
+   "short": "Niet",
+   "shape": "cyl",
+   "x": 26,
+   "y": 60,
+   "w": 8,
+   "z": 0,
+   "h": 15,
+   "explode": [
+    0,
+    0,
+    54.0
+   ],
+   "mass": 6.1,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Hält beide Hälften zusammen und ist die Drehachse. Ist vernietet und lässt sich nicht lösen.",
+   "color": "#8C949A",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 2,
+     "y": 2,
+     "w": 4,
+     "fill": "#6C747A"
+    }
+   ]
+  },
+  {
+   "id": "backe_links",
+   "component_id": "steel_pliers_jaws",
+   "material_id": "steel",
+   "name": "Backe der oberen Hälfte",
+   "short": "Backe A",
+   "shape": "box",
+   "x": 19,
+   "y": 0,
+   "w": 11,
+   "d": 50,
+   "z": 1.5,
+   "h": 12,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    20.0
+   ],
+   "mass": 22.2,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Gehärteter Chrom-Vanadium-Stahl mit Riffelung zum Greifen und Schneide zum Drahtschneiden.",
+   "color": "#5E666C",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 7,
+     "y": 3,
+     "w": 3.5,
+     "d": 2,
+     "r": 0.5,
+     "fill": "#AEB5BA"
+    },
+    {
+     "shape": "box",
+     "x": 7,
+     "y": 7,
+     "w": 3.5,
+     "d": 2,
+     "r": 0.5,
+     "fill": "#AEB5BA"
+    },
+    {
+     "shape": "box",
+     "x": 7,
+     "y": 11,
+     "w": 3.5,
+     "d": 2,
+     "r": 0.5,
+     "fill": "#AEB5BA"
+    },
+    {
+     "shape": "box",
+     "x": 7,
+     "y": 15,
+     "w": 3.5,
+     "d": 2,
+     "r": 0.5,
+     "fill": "#AEB5BA"
+    },
+    {
+     "shape": "box",
+     "x": 7,
+     "y": 19,
+     "w": 3.5,
+     "d": 2,
+     "r": 0.5,
+     "fill": "#AEB5BA"
+    },
+    {
+     "shape": "box",
+     "x": 7,
+     "y": 23,
+     "w": 3.5,
+     "d": 2,
+     "r": 0.5,
+     "fill": "#AEB5BA"
+    },
+    {
+     "shape": "box",
+     "x": 9,
+     "y": 30,
+     "w": 2,
+     "d": 16,
+     "r": 0.5,
+     "fill": "#AEB5BA"
+    }
+   ]
+  },
+  {
+   "id": "gelenk_oben",
+   "component_id": "steel_pliers_jaws",
+   "material_id": "steel",
+   "name": "Gelenk der oberen Hälfte",
+   "short": "Gelenk A",
+   "shape": "box",
+   "x": 16,
+   "y": 50,
+   "w": 28,
+   "d": 28,
+   "z": 7.5,
+   "h": 6.5,
+   "r": 10,
+   "explode": [
+    0,
+    0,
+    20.0
+   ],
+   "mass": 24.2,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Am Gelenk ist jede Hälfte auf halbe Dicke abgeflacht, so liegen beide Hälften übereinander.",
+   "color": "#5E666C",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 10,
+     "y": 10,
+     "w": 8,
+     "fill": "#AEB5BA"
+    }
+   ]
+  },
+  {
+   "id": "schenkel_rechts",
+   "component_id": "steel_pliers_jaws",
+   "material_id": "steel",
+   "name": "Schenkel der oberen Hälfte",
+   "short": "Schenkel A",
+   "shape": "box",
+   "x": 38,
+   "y": 78,
+   "w": 10,
+   "d": 97,
+   "z": 3,
+   "h": 9,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    20.0
+   ],
+   "mass": 34.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Die Hälfte kreuzt im Gelenk: Die linke Backe gehört zum rechten Griff.",
+   "color": "#5E666C",
+   "label": false
+  },
+  {
+   "id": "backe_rechts",
+   "component_id": "steel_pliers_jaws",
+   "material_id": "steel",
+   "name": "Backe der unteren Hälfte",
+   "short": "Backe B",
+   "shape": "box",
+   "x": 30,
+   "y": 0,
+   "w": 11,
+   "d": 50,
+   "z": 1.5,
+   "h": 12,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 22.2,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Gegenstück mit Riffelung. Der Stahl ist wertvoller Schrott für den Wertstoffhof.",
+   "color": "#5E666C",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0.5,
+     "y": 3,
+     "w": 3.5,
+     "d": 2,
+     "r": 0.5,
+     "fill": "#AEB5BA"
+    },
+    {
+     "shape": "box",
+     "x": 0.5,
+     "y": 7,
+     "w": 3.5,
+     "d": 2,
+     "r": 0.5,
+     "fill": "#AEB5BA"
+    },
+    {
+     "shape": "box",
+     "x": 0.5,
+     "y": 11,
+     "w": 3.5,
+     "d": 2,
+     "r": 0.5,
+     "fill": "#AEB5BA"
+    },
+    {
+     "shape": "box",
+     "x": 0.5,
+     "y": 15,
+     "w": 3.5,
+     "d": 2,
+     "r": 0.5,
+     "fill": "#AEB5BA"
+    },
+    {
+     "shape": "box",
+     "x": 0.5,
+     "y": 19,
+     "w": 3.5,
+     "d": 2,
+     "r": 0.5,
+     "fill": "#AEB5BA"
+    },
+    {
+     "shape": "box",
+     "x": 0.5,
+     "y": 23,
+     "w": 3.5,
+     "d": 2,
+     "r": 0.5,
+     "fill": "#AEB5BA"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 30,
+     "w": 2,
+     "d": 16,
+     "r": 0.5,
+     "fill": "#AEB5BA"
+    }
+   ]
+  },
+  {
+   "id": "gelenk_unten",
+   "component_id": "steel_pliers_jaws",
+   "material_id": "steel",
+   "name": "Gelenk der unteren Hälfte",
+   "short": "Gelenk B",
+   "shape": "box",
+   "x": 16,
+   "y": 50,
+   "w": 28,
+   "d": 28,
+   "z": 1,
+   "h": 6.5,
+   "r": 10,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 24.2,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Untere Gelenkplatte mit Bohrung für den Niet.",
+   "color": "#5E666C",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 10,
+     "y": 10,
+     "w": 8,
+     "fill": "#AEB5BA"
+    }
+   ]
+  },
+  {
+   "id": "schenkel_links",
+   "component_id": "steel_pliers_jaws",
+   "material_id": "steel",
+   "name": "Schenkel der unteren Hälfte",
+   "short": "Schenkel B",
+   "shape": "box",
+   "x": 12,
+   "y": 78,
+   "w": 10,
+   "d": 97,
+   "z": 3,
+   "h": 9,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 34.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Stahlkern des linken Griffs, unter der Kunststoffhülle.",
+   "color": "#5E666C",
+   "label": false
+  },
+  {
+   "id": "griff_links",
+   "component_id": "plastic_handles",
+   "material_id": "pp",
+   "name": "Griffhülle links",
+   "short": "Griff links",
+   "shape": "box",
+   "x": 4,
+   "y": 86,
+   "w": 24,
+   "d": 94,
+   "z": 0,
+   "h": 15,
+   "r": 10,
+   "explode": [
+    -42,
+    0,
+    0
+   ],
+   "mass": 16.2,
+   "materials": [
+    [
+     "pp",
+     60
+    ],
+    [
+     "tpe",
+     40
+    ]
+   ],
+   "info": "Zwei-Komponenten-Griff aus PP und weichem TPE. Abziehen oder aufschneiden, dann Kunststoff in den Restmüll und Stahl zum Altmetall.",
+   "color": "#C8322B",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 12,
+     "w": 16,
+     "d": 70,
+     "r": 7,
+     "fill": "#E9B92D"
+    }
+   ]
+  },
+  {
+   "id": "griff_rechts",
+   "component_id": "plastic_handles",
+   "material_id": "pp",
+   "name": "Griffhülle rechts",
+   "short": "Griff rechts",
+   "shape": "box",
+   "x": 32,
+   "y": 86,
+   "w": 24,
+   "d": 94,
+   "z": 0,
+   "h": 15,
+   "r": 10,
+   "explode": [
+    42,
+    0,
+    0
+   ],
+   "mass": 16.2,
+   "materials": [
+    [
+     "pp",
+     60
+    ],
+    [
+     "tpe",
+     40
+    ]
+   ],
+   "info": "Isoliert nicht gegen Strom, wenn kein VDE-Zeichen draufsteht.",
+   "color": "#C8322B",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 12,
+     "w": 16,
+     "d": 70,
+     "r": 7,
+     "fill": "#E9B92D"
+    }
+   ]
+  }
+ ]
+}

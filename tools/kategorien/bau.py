@@ -174,6 +174,9 @@ def schreibe(oid, teile, pruefen=True):
     doppelt = {i for i in ids if ids.count(i) > 1}
     if doppelt:
         raise ValueError(f'doppelte ids: {doppelt}')
+    ohne = [p['id'] for p in teile if p['explode'] is None]
+    if ohne:
+        raise ValueError(f'Teile ohne explode (explodiere() aufrufen oder explode setzen): {ohne}')
     ziel = SRC / 'modelle' / f'{oid}.json'
     ziel.write_text(json.dumps({'parts': [_sauber(p) for p in teile]}, ensure_ascii=False, indent=1) + '\n',
                     encoding='utf-8')

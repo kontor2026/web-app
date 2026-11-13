@@ -4,7 +4,7 @@
  "name_en": "Sealant Cartridge",
  "klasse": "Wertstoffhof",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -26,25 +26,27 @@
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 0,75 kg",
+   "v": "≈ 2,35 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 0,10 kg",
-   "hint": "spart 0,65 kg, wenn recycelte Materialien eingesetzt werden"
+   "v": "≈ 2,26 kg",
+   "hint": "spart 0,09 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
   "metalle_mg": {},
   "herkunft": {},
   "materialien_g": {
-   "hdpe": 312.5,
-   "pp": 37.5
+   "silicone": 297.3,
+   "hdpe": 45.1,
+   "pp": 4.8,
+   "paper": 2.9
   },
-  "co2_kg": 0.747,
-  "co2_mit_recyclat_kg": 0.098,
-  "co2_ersparnis_kg": 0.649,
+  "co2_kg": 2.353,
+  "co2_mit_recyclat_kg": 2.26,
+  "co2_ersparnis_kg": 0.093,
   "co2_ohne_faktor": [],
   "rohstoffwert_eur": 0,
   "wert_ohne_preis": [],
@@ -94,59 +96,290 @@
   "nicht": "Nicht in die Gelbe Tonne",
   "warnung": "Reste von Farben, Klebern oder Chemikalien gehören zur Schadstoffsammlung."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "pp_nozzle",
-   "component_id": "pp_nozzle",
-   "name": "Nozzle",
-   "short": "Nozzle",
-   "shape": "cyl",
-   "x": 13.8,
-   "y": 13.8,
-   "w": 22.5,
-   "h": 27.6,
-   "z": 195.5,
-   "explode": [
-    0,
-    0,
-    27.6
-   ],
-   "mass": 37.5,
-   "materials": [
-    [
-     "pp",
-     100
-    ]
-   ],
-   "material_id": "pp",
-   "info": "Unscrew it from the cartridge."
-  },
-  {
-   "id": "hdpe_cartridge_tube",
+   "id": "spitze",
    "component_id": "hdpe_cartridge_tube",
-   "name": "Cartridge",
-   "short": "Cartridge",
+   "material_id": "hdpe",
+   "name": "Gewindespitze",
+   "short": "Spitze",
    "shape": "cyl",
-   "x": 0,
-   "y": 0,
-   "w": 50.0,
-   "h": 195.5,
-   "z": 0.0,
+   "x": 17,
+   "y": 17,
+   "w": 16,
+   "z": 208,
+   "h": 22,
    "explode": [
     0,
     0,
-    0
+    0.0
    ],
-   "mass": 312.5,
+   "mass": 2.9,
    "materials": [
     [
      "hdpe",
      100
     ]
    ],
+   "info": "Angespritzte Spitze mit Außengewinde, oben durch eine dünne Wand verschlossen. Vor dem Gebrauch abschneiden, dann die Düse aufschrauben.",
+   "color": "#F2F1EC",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 5,
+     "y": 5,
+     "w": 6,
+     "fill": "#D8D6CE"
+    }
+   ]
+  },
+  {
+   "id": "schulter",
+   "component_id": "hdpe_cartridge_tube",
    "material_id": "hdpe",
-   "info": "Let leftover sealant cure; empty cartridges go in plastic packaging."
+   "name": "Kartuschenschulter",
+   "short": "Schulter",
+   "shape": "cyl",
+   "x": 3,
+   "y": 3,
+   "w": 44,
+   "z": 200,
+   "h": 8,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 3.8,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "Übergang vom Rohr zur Spitze.",
+   "color": "#F2F1EC",
+   "label": false
+  },
+  {
+   "id": "rohr_oben",
+   "component_id": "hdpe_cartridge_tube",
+   "material_id": "hdpe",
+   "name": "Kartuschenrohr",
+   "short": "Kartusche",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 50,
+   "z": 100,
+   "h": 100,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 17.3,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "Steifes HDPE-Rohr. Restinhalt aushärten lassen; die leere Kartusche gehört in die Gelbe Tonne, eine noch volle zur Schadstoffsammlung oder zum Wertstoffhof.",
+   "color": "#F2F1EC",
+   "opacity": 0.85,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 2,
+     "y": 2,
+     "w": 46,
+     "fill": "#E4E2DA"
+    }
+   ]
+  },
+  {
+   "id": "rohr_unten",
+   "component_id": "hdpe_cartridge_tube",
+   "material_id": "hdpe",
+   "name": "Kartuschenrohr unten",
+   "short": "Rohr unten",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 50,
+   "z": 0,
+   "h": 100,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 17.3,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "Unten offen: Hier drückt die Kartuschenpistole den Kolben nach oben.",
+   "color": "#F2F1EC",
+   "opacity": 0.85,
+   "label": false
+  },
+  {
+   "id": "dichtmasse",
+   "component_id": "hdpe_cartridge_tube",
+   "material_id": "silicone",
+   "name": "Silikon-Dichtmasse",
+   "short": "Silikon",
+   "shape": "cyl",
+   "x": 1.5,
+   "y": 1.5,
+   "w": 47,
+   "z": 14,
+   "h": 186,
+   "explode": [
+    -70,
+    0,
+    0
+   ],
+   "mass": 297.3,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "info": "Pastöses Silikon, das an der Luft mit Feuchtigkeit aushärtet. Nicht in den Ausguss: Reste in der Kartusche aushärten lassen.",
+   "color": "#FAFAFA",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 8,
+     "y": 8,
+     "w": 31,
+     "fill": "#F0F0F0"
+    }
+   ]
+  },
+  {
+   "id": "kolben",
+   "component_id": "hdpe_cartridge_tube",
+   "material_id": "hdpe",
+   "name": "Kolben",
+   "short": "Kolben",
+   "shape": "cyl",
+   "x": 1.5,
+   "y": 1.5,
+   "w": 47,
+   "z": 2,
+   "h": 10,
+   "explode": [
+    -70,
+    0,
+    0
+   ],
+   "mass": 3.8,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "Beweglicher HDPE-Boden. Die Pistole schiebt ihn nach oben und presst so die Masse heraus.",
+   "color": "#E0DED6",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 13.5,
+     "y": 13.5,
+     "w": 20,
+     "fill": "#CFCCC2"
+    }
+   ]
+  },
+  {
+   "id": "duese",
+   "component_id": "pp_nozzle",
+   "material_id": "pp",
+   "name": "Spritzdüse",
+   "short": "Düse",
+   "shape": "cyl",
+   "x": 41,
+   "y": 41,
+   "w": 12,
+   "z": 30,
+   "h": 110,
+   "explode": [
+    60,
+    0,
+    0
+   ],
+   "mass": 4.8,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Kegelförmige PP-Düse zum Aufschrauben. Die Spitze schräg anschneiden, je nach Fugenbreite. Mit ausgehärtetem Silikon in den Restmüll.",
+   "color": "#EDEDE6",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 3,
+     "w": 6,
+     "fill": "#CFCFC6"
+    },
+    {
+     "shape": "cyl",
+     "x": 5,
+     "y": 5,
+     "w": 2,
+     "fill": "#9A9A92"
+    }
+   ]
+  },
+  {
+   "id": "etikett",
+   "component_id": "hdpe_cartridge_tube",
+   "material_id": "paper",
+   "name": "Etikett",
+   "short": "Etikett",
+   "shape": "box",
+   "x": 49.7,
+   "y": 5,
+   "w": 0.3,
+   "d": 30,
+   "z": 20,
+   "h": 170,
+   "r": 0,
+   "explode": [
+    35,
+    0,
+    0
+   ],
+   "mass": 2.9,
+   "materials": [
+    [
+     "papier",
+     80
+    ],
+    [
+     "druck",
+     10
+    ],
+    [
+     "klebstoff",
+     10
+    ]
+   ],
+   "info": "Bedrucktes Papieretikett mit Gefahrenhinweisen. Kann an der Kartusche bleiben.",
+   "color": "#2F6DB5",
+   "sortBias": 100
   }
  ]
 }

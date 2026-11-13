@@ -1,0 +1,516 @@
+{
+ "parts": [
+  {
+   "id": "kolben_kuppe",
+   "component_id": "bulb_glass",
+   "material_id": "special_glass",
+   "name": "Glaskolben (Kuppe)",
+   "short": "Kolben",
+   "shape": "cyl",
+   "x": 14,
+   "y": 14,
+   "w": 32,
+   "z": 100,
+   "h": 5,
+   "explode": [
+    0,
+    0,
+    94.0
+   ],
+   "mass": 1.67,
+   "materials": [
+    [
+     "behaelterglas",
+     100
+    ]
+   ],
+   "info": "Dünnes Kalk-Natron-Glas, nur etwa 0,5 mm dick. Innen Vakuum oder Edelgas, damit die Wendel nicht verbrennt. Glühbirnen gehören in den Restmüll, nicht ins Altglas.",
+   "color": "#E9F1F4",
+   "opacity": 0.6
+  },
+  {
+   "id": "kolben_oben",
+   "component_id": "bulb_glass",
+   "material_id": "special_glass",
+   "name": "Glaskolben (oben)",
+   "short": "Kolben oben",
+   "shape": "cyl",
+   "x": 4,
+   "y": 4,
+   "w": 52,
+   "z": 88,
+   "h": 12,
+   "explode": [
+    0,
+    0,
+    94.0
+   ],
+   "mass": 3.9,
+   "materials": [
+    [
+     "behaelterglas",
+     100
+    ]
+   ],
+   "info": "Gewölbter oberer Teil des Kolbens.",
+   "color": "#E9F1F4",
+   "opacity": 0.6,
+   "label": false
+  },
+  {
+   "id": "kolben_mitte",
+   "component_id": "bulb_glass",
+   "material_id": "special_glass",
+   "name": "Glaskolben (Mitte)",
+   "short": "Kolben Mitte",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 60,
+   "z": 60,
+   "h": 28,
+   "explode": [
+    0,
+    0,
+    94.0
+   ],
+   "mass": 6.69,
+   "materials": [
+    [
+     "behaelterglas",
+     100
+    ]
+   ],
+   "info": "Breiteste Stelle, 60 mm. Zerbricht leicht: Scherben mit Handschuhen aufsammeln.",
+   "color": "#E9F1F4",
+   "opacity": 0.6,
+   "label": false
+  },
+  {
+   "id": "kolben_unten",
+   "component_id": "bulb_glass",
+   "material_id": "special_glass",
+   "name": "Glaskolben (unten)",
+   "short": "Kolben unten",
+   "shape": "cyl",
+   "x": 5,
+   "y": 5,
+   "w": 50,
+   "z": 42,
+   "h": 18,
+   "explode": [
+    0,
+    0,
+    94.0
+   ],
+   "mass": 4.46,
+   "materials": [
+    [
+     "behaelterglas",
+     100
+    ]
+   ],
+   "info": "Der Kolben verjüngt sich zum Hals.",
+   "color": "#E9F1F4",
+   "opacity": 0.6,
+   "label": false
+  },
+  {
+   "id": "kolben_hals",
+   "component_id": "bulb_glass",
+   "material_id": "special_glass",
+   "name": "Glaskolben (Hals)",
+   "short": "Kolbenhals",
+   "shape": "cyl",
+   "x": 14,
+   "y": 14,
+   "w": 32,
+   "z": 22,
+   "h": 20,
+   "explode": [
+    0,
+    0,
+    94.0
+   ],
+   "mass": 3.34,
+   "materials": [
+    [
+     "behaelterglas",
+     100
+    ]
+   ],
+   "info": "Der Hals steckt im Sockel und ist dort mit Kitt eingeklebt.",
+   "color": "#E9F1F4",
+   "opacity": 0.6,
+   "label": false
+  },
+  {
+   "id": "tellerfuss",
+   "component_id": "bulb_glass",
+   "material_id": "special_glass",
+   "name": "Tellerfuß mit Quetschung",
+   "short": "Tellerfuß",
+   "shape": "cyl",
+   "x": 24,
+   "y": 24,
+   "w": 12,
+   "z": 26,
+   "h": 36,
+   "explode": [
+    0,
+    0,
+    42.0
+   ],
+   "mass": 2.79,
+   "materials": [
+    [
+     "behaelterglas",
+     90
+    ],
+    [
+     "nickel",
+     10
+    ]
+   ],
+   "info": "Glasröhrchen, mit dem Kolben verschmolzen. In der flachen Quetschung sind die Drähte luftdicht eingeschmolzen.",
+   "color": "#DCE8EC",
+   "opacity": 0.75,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 4.5,
+     "w": 10,
+     "d": 3,
+     "r": 1,
+     "fill": "#C7D6DC"
+    }
+   ]
+  },
+  {
+   "id": "wendel",
+   "component_id": "bulb_filament",
+   "material_id": "mixed_electronics",
+   "name": "Glühwendel (Wolfram)",
+   "short": "Glühwendel",
+   "shape": "box",
+   "x": 21,
+   "y": 29.4,
+   "w": 18,
+   "d": 1.2,
+   "z": 76.5,
+   "h": 1.2,
+   "r": 0.5,
+   "explode": [
+    55,
+    0,
+    22
+   ],
+   "mass": 0.02,
+   "materials": [
+    [
+     "nichrom",
+     100
+    ]
+   ],
+   "info": "Doppelt gewendelter Wolframdraht, dünner als ein Haar. Glüht bei etwa 2.500 Grad; nur 5 % der Energie werden Licht, der Rest Wärme. Ist sie durchgebrannt, ist die Birne kaputt.",
+   "color": "#3D3A36",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0.5,
+     "y": 0.1,
+     "w": 1,
+     "d": 1,
+     "fill": "#F2B33D"
+    },
+    {
+     "shape": "cyl",
+     "x": 2.4,
+     "y": 0.1,
+     "w": 1,
+     "d": 1,
+     "fill": "#F2B33D"
+    },
+    {
+     "shape": "cyl",
+     "x": 4.3,
+     "y": 0.1,
+     "w": 1,
+     "d": 1,
+     "fill": "#F2B33D"
+    },
+    {
+     "shape": "cyl",
+     "x": 6.2,
+     "y": 0.1,
+     "w": 1,
+     "d": 1,
+     "fill": "#F2B33D"
+    },
+    {
+     "shape": "cyl",
+     "x": 8.1,
+     "y": 0.1,
+     "w": 1,
+     "d": 1,
+     "fill": "#F2B33D"
+    },
+    {
+     "shape": "cyl",
+     "x": 10.0,
+     "y": 0.1,
+     "w": 1,
+     "d": 1,
+     "fill": "#F2B33D"
+    },
+    {
+     "shape": "cyl",
+     "x": 11.9,
+     "y": 0.1,
+     "w": 1,
+     "d": 1,
+     "fill": "#F2B33D"
+    },
+    {
+     "shape": "cyl",
+     "x": 13.8,
+     "y": 0.1,
+     "w": 1,
+     "d": 1,
+     "fill": "#F2B33D"
+    },
+    {
+     "shape": "cyl",
+     "x": 15.7,
+     "y": 0.1,
+     "w": 1,
+     "d": 1,
+     "fill": "#F2B33D"
+    }
+   ]
+  },
+  {
+   "id": "haltedraehte",
+   "component_id": "bulb_filament",
+   "material_id": "mixed_electronics",
+   "name": "Haltedrähte (Molybdän)",
+   "short": "Haltedrähte",
+   "shape": "box",
+   "x": 19,
+   "y": 29.5,
+   "w": 22,
+   "d": 1,
+   "z": 64,
+   "h": 12,
+   "r": 0.3,
+   "explode": [
+    55,
+    0,
+    12
+   ],
+   "mass": 0.11,
+   "materials": [
+    [
+     "nickel",
+     100
+    ]
+   ],
+   "info": "Feine Molybdänhaken im Glasknopf halten die Wendel, damit sie nicht durchhängt.",
+   "color": "#8D949A",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0.5,
+     "y": 0.1,
+     "w": 0.8,
+     "d": 0.8,
+     "fill": "#5A6268"
+    },
+    {
+     "shape": "box",
+     "x": 7.3,
+     "y": 0.1,
+     "w": 0.8,
+     "d": 0.8,
+     "fill": "#5A6268"
+    },
+    {
+     "shape": "box",
+     "x": 14.1,
+     "y": 0.1,
+     "w": 0.8,
+     "d": 0.8,
+     "fill": "#5A6268"
+    },
+    {
+     "shape": "box",
+     "x": 20.9,
+     "y": 0.1,
+     "w": 0.8,
+     "d": 0.8,
+     "fill": "#5A6268"
+    }
+   ]
+  },
+  {
+   "id": "zuleitungen",
+   "component_id": "bulb_filament",
+   "material_id": "mixed_electronics",
+   "name": "Zuleitungsdrähte",
+   "short": "Zuleitungen",
+   "shape": "box",
+   "x": 25,
+   "y": 29.5,
+   "w": 10,
+   "d": 1,
+   "z": 16,
+   "h": 60,
+   "r": 0.3,
+   "explode": [
+    55,
+    0,
+    0
+   ],
+   "mass": 0.33,
+   "materials": [
+    [
+     "kupfer",
+     60
+    ],
+    [
+     "nickel",
+     40
+    ]
+   ],
+   "info": "Kupfer- und Nickeldrähte führen den Strom vom Sockel zur Wendel. Einer ist an den Fußkontakt, einer an das Gewinde gelötet.",
+   "color": "#B87333"
+  },
+  {
+   "id": "kitt",
+   "component_id": "bulb_screw_base",
+   "material_id": "ceramic",
+   "name": "Sockelkitt",
+   "short": "Kitt",
+   "shape": "cyl",
+   "x": 15,
+   "y": 15,
+   "w": 30,
+   "z": 20,
+   "h": 6,
+   "explode": [
+    0,
+    0,
+    30.0
+   ],
+   "mass": 1.67,
+   "materials": [
+    [
+     "keramik",
+     80
+    ],
+    [
+     "phenolharz",
+     20
+    ]
+   ],
+   "info": "Harzkitt verklebt Glas und Sockel. Nicht lösen: Die Birne bleibt im Ganzen.",
+   "color": "#C9B98F",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 7,
+     "y": 7,
+     "w": 16,
+     "fill": "#B5A57C"
+    }
+   ]
+  },
+  {
+   "id": "sockel",
+   "component_id": "bulb_screw_base",
+   "material_id": "aluminium",
+   "name": "Schraubsockel E27",
+   "short": "Sockel",
+   "shape": "cyl",
+   "x": 16.5,
+   "y": 16.5,
+   "w": 27,
+   "z": 3,
+   "h": 23,
+   "explode": [
+    0,
+    0,
+    12.0
+   ],
+   "mass": 2.79,
+   "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "info": "Gerolltes Aluminiumblech mit Gewinde, passt in jede normale Lampenfassung.",
+   "color": "#C2C6C9",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 1.5,
+     "y": 1.5,
+     "w": 24,
+     "fill": "#B0B5B8"
+    },
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 3,
+     "w": 21
+    }
+   ]
+  },
+  {
+   "id": "fusskontakt",
+   "component_id": "bulb_screw_base",
+   "material_id": "copper",
+   "name": "Fußkontakt mit Isolierglas",
+   "short": "Fußkontakt",
+   "shape": "cyl",
+   "x": 22,
+   "y": 22,
+   "w": 16,
+   "z": 0,
+   "h": 3,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 2.23,
+   "materials": [
+    [
+     "behaelterglas",
+     70
+    ],
+    [
+     "messing",
+     15
+    ],
+    [
+     "lot",
+     15
+    ]
+   ],
+   "info": "Schwarzes Glas trennt das Gewinde vom Lötkontakt in der Mitte. Hier fließt der Strom hinein.",
+   "color": "#2A2B2D",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 5,
+     "y": 5,
+     "w": 6,
+     "fill": "#C9CDD0"
+    }
+   ]
+  }
+ ]
+}

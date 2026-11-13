@@ -1,0 +1,285 @@
+{
+ "parts": [
+  {
+   "id": "klinge",
+   "component_id": "steel_shaft",
+   "material_id": "steel",
+   "name": "Schlitzklinge",
+   "short": "Klinge",
+   "shape": "box",
+   "x": 11.75,
+   "y": 203,
+   "w": 6.5,
+   "d": 17,
+   "z": 14,
+   "h": 2,
+   "r": 0.3,
+   "explode": [
+    0,
+    0,
+    36.0
+   ],
+   "mass": 3.8,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Flach geschmiedete, gehärtete Spitze, schwarz brüniert. Sie greift in den Schlitz der Schraube.",
+   "color": "#33383C"
+  },
+  {
+   "id": "schaft",
+   "component_id": "steel_shaft",
+   "material_id": "steel",
+   "name": "Rundschaft",
+   "short": "Schaft",
+   "shape": "box",
+   "x": 12,
+   "y": 60,
+   "w": 6,
+   "d": 143,
+   "z": 12,
+   "h": 6,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    36.0
+   ],
+   "mass": 46.2,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Chrom-Vanadium-Stahl, verchromt. Ist fest in den Griff gespritzt: Zum Trennen den Griff mit einer Säge aufschneiden. Der Stahl gehört zum Altmetall.",
+   "color": "#B5BCC1",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1.5,
+     "y": 50,
+     "w": 3,
+     "d": 80,
+     "r": 1.5,
+     "fill": "#DCE1E4"
+    }
+   ]
+  },
+  {
+   "id": "fluegel",
+   "component_id": "steel_shaft",
+   "material_id": "steel",
+   "name": "Verdrehsicherung (Flügel)",
+   "short": "Flügel",
+   "shape": "box",
+   "x": 9,
+   "y": 46,
+   "w": 12,
+   "d": 14,
+   "z": 14,
+   "h": 2,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    36.0
+   ],
+   "mass": 3.8,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Angestauchte Flügel am Schaftende. Sie verhindern, dass sich der Schaft im Griff dreht.",
+   "color": "#B5BCC1"
+  },
+  {
+   "id": "griff_kappe",
+   "component_id": "plastic_handle",
+   "material_id": "pp",
+   "name": "Griffkappe",
+   "short": "Kappe",
+   "shape": "box",
+   "x": 1,
+   "y": 0,
+   "w": 28,
+   "d": 18,
+   "z": 1,
+   "h": 28,
+   "r": 12,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 10.3,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Hartes Polypropylen mit Aufhängeloch. Der Griff ist in einem Stück um den Schaft gespritzt.",
+   "color": "#C8322B",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 10,
+     "y": 5,
+     "w": 8,
+     "fill": "#7E1E19"
+    }
+   ]
+  },
+  {
+   "id": "griff_weich",
+   "component_id": "plastic_handle",
+   "material_id": "rubber",
+   "name": "Weichgriff",
+   "short": "Weichgriff",
+   "shape": "box",
+   "x": 0,
+   "y": 18,
+   "w": 30,
+   "d": 72,
+   "z": 0,
+   "h": 30,
+   "r": 14,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 28.2,
+   "materials": [
+    [
+     "tpe",
+     70
+    ],
+    [
+     "pp",
+     30
+    ]
+   ],
+   "info": "Weiche TPE-Zone auf dem harten Kern, damit die Hand nicht abrutscht. Lässt sich nicht vom Kern trennen.",
+   "color": "#F1C232",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 13,
+     "y": 4.0,
+     "w": 4,
+     "d": 6,
+     "r": 2,
+     "fill": "#C99A1E"
+    },
+    {
+     "shape": "box",
+     "x": 13,
+     "y": 12.5,
+     "w": 4,
+     "d": 6,
+     "r": 2,
+     "fill": "#C99A1E"
+    },
+    {
+     "shape": "box",
+     "x": 13,
+     "y": 21.0,
+     "w": 4,
+     "d": 6,
+     "r": 2,
+     "fill": "#C99A1E"
+    },
+    {
+     "shape": "box",
+     "x": 13,
+     "y": 29.5,
+     "w": 4,
+     "d": 6,
+     "r": 2,
+     "fill": "#C99A1E"
+    },
+    {
+     "shape": "box",
+     "x": 13,
+     "y": 38.0,
+     "w": 4,
+     "d": 6,
+     "r": 2,
+     "fill": "#C99A1E"
+    },
+    {
+     "shape": "box",
+     "x": 13,
+     "y": 46.5,
+     "w": 4,
+     "d": 6,
+     "r": 2,
+     "fill": "#C99A1E"
+    },
+    {
+     "shape": "box",
+     "x": 13,
+     "y": 55.0,
+     "w": 4,
+     "d": 6,
+     "r": 2,
+     "fill": "#C99A1E"
+    },
+    {
+     "shape": "box",
+     "x": 13,
+     "y": 63.5,
+     "w": 4,
+     "d": 6,
+     "r": 2,
+     "fill": "#C99A1E"
+    }
+   ]
+  },
+  {
+   "id": "griff_hals",
+   "component_id": "plastic_handle",
+   "material_id": "pp",
+   "name": "Griffhals",
+   "short": "Griffhals",
+   "shape": "box",
+   "x": 3,
+   "y": 90,
+   "w": 24,
+   "d": 15,
+   "z": 3,
+   "h": 24,
+   "r": 10,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 7.7,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Verjüngter Übergang zum Schaft, hier tritt der Stahl aus dem Griff.",
+   "color": "#C8322B",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 9,
+     "y": 4,
+     "w": 6,
+     "fill": "#7E1E19"
+    }
+   ]
+  }
+ ]
+}

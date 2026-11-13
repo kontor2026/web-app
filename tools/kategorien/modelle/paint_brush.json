@@ -1,0 +1,352 @@
+{
+ "parts": [
+  {
+   "id": "naegel",
+   "component_id": "steel_ferrule",
+   "material_id": "steel",
+   "name": "Zwingennägel",
+   "short": "Nägel",
+   "shape": "box",
+   "x": 17,
+   "y": 150,
+   "w": 11,
+   "d": 3,
+   "z": 13.6,
+   "h": 1.6,
+   "r": 0.5,
+   "explode": [
+    0,
+    0,
+    22
+   ],
+   "mass": 0.4,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Zwei kleine Nägel halten die Zwinge am Stiel. Mit einer Zange herausziehen.",
+   "color": "#7D858B",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0,
+     "y": 0,
+     "w": 3,
+     "fill": "#5A6268"
+    },
+    {
+     "shape": "cyl",
+     "x": 8,
+     "y": 0,
+     "w": 3,
+     "fill": "#5A6268"
+    }
+   ]
+  },
+  {
+   "id": "zwinge",
+   "component_id": "steel_ferrule",
+   "material_id": "steel",
+   "name": "Zwinge",
+   "short": "Zwinge",
+   "shape": "box",
+   "x": 0,
+   "y": 146,
+   "w": 45,
+   "d": 36,
+   "z": 0,
+   "h": 15,
+   "r": 5,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 7.9,
+   "materials": [
+    [
+     "stahl",
+     97
+    ],
+    [
+     "lot",
+     3
+    ]
+   ],
+   "info": "Verzinntes Stahlblech, um Stiel und Borsten gequetscht. Zum Trennen mit einer Zange aufbiegen; die Zwinge gehört zum Altmetall.",
+   "color": "#C4CACE",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 8,
+     "w": 39,
+     "d": 1.2,
+     "r": 0.5,
+     "fill": "#A9B0B5"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 16,
+     "w": 39,
+     "d": 1.2,
+     "r": 0.5,
+     "fill": "#A9B0B5"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 24,
+     "w": 39,
+     "d": 1.2,
+     "r": 0.5,
+     "fill": "#A9B0B5"
+    }
+   ]
+  },
+  {
+   "id": "einlage",
+   "component_id": "synthetic_bristles",
+   "material_id": "wood",
+   "name": "Einlage (Keil)",
+   "short": "Einlage",
+   "shape": "box",
+   "x": 6,
+   "y": 158,
+   "w": 33,
+   "d": 20,
+   "z": 6.5,
+   "h": 2,
+   "r": 1,
+   "explode": [
+    0,
+    48,
+    18
+   ],
+   "mass": 1,
+   "materials": [
+    [
+     "holz",
+     100
+    ]
+   ],
+   "info": "Dünnes Holzplättchen mitten im Borstenpaket. Es spreizt die Borsten und macht den Pinsel dicker.",
+   "color": "#C9A27A"
+  },
+  {
+   "id": "klebepfropfen",
+   "component_id": "synthetic_bristles",
+   "material_id": "polyester",
+   "name": "Klebepfropfen (Epoxid)",
+   "short": "Klebepfropfen",
+   "shape": "box",
+   "x": 2,
+   "y": 156,
+   "w": 41,
+   "d": 24,
+   "z": 1.5,
+   "h": 12,
+   "r": 3,
+   "explode": [
+    0,
+    48,
+    0
+   ],
+   "mass": 4,
+   "materials": [
+    [
+     "klebstoff",
+     60
+    ],
+    [
+     "polyester",
+     40
+    ]
+   ],
+   "info": "Harter Kleber hält die Borstenenden in der Zwinge fest. Er lässt sich nicht von den Borsten lösen.",
+   "color": "#8F7A52",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 2,
+     "w": 39,
+     "d": 20,
+     "r": 2,
+     "fill": "#A68E62"
+    }
+   ]
+  },
+  {
+   "id": "borsten",
+   "component_id": "synthetic_bristles",
+   "material_id": "polyester",
+   "name": "Kunstborsten",
+   "short": "Borsten",
+   "shape": "box",
+   "x": 1,
+   "y": 180,
+   "w": 43,
+   "d": 50,
+   "z": 1.5,
+   "h": 12,
+   "r": 2,
+   "explode": [
+    0,
+    80,
+    0
+   ],
+   "mass": 8.9,
+   "materials": [
+    [
+     "polyester",
+     100
+    ]
+   ],
+   "info": "Feine Polyesterfasern mit gespaltenen Spitzen. Pinsel auswaschen und wiederverwenden; mit eingetrockneter Farbe gehört er in den Restmüll, nie Farbreste in den Ausguss.",
+   "color": "#3B3530",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2.0,
+     "y": 2.0,
+     "w": 2,
+     "d": 46,
+     "r": 1,
+     "fill": "#4E4740"
+    },
+    {
+     "shape": "box",
+     "x": 6.2,
+     "y": 2.0,
+     "w": 2,
+     "d": 46,
+     "r": 1,
+     "fill": "#4E4740"
+    },
+    {
+     "shape": "box",
+     "x": 10.4,
+     "y": 2.0,
+     "w": 2,
+     "d": 46,
+     "r": 1,
+     "fill": "#4E4740"
+    },
+    {
+     "shape": "box",
+     "x": 14.6,
+     "y": 2.0,
+     "w": 2,
+     "d": 46,
+     "r": 1,
+     "fill": "#4E4740"
+    },
+    {
+     "shape": "box",
+     "x": 18.8,
+     "y": 2.0,
+     "w": 2,
+     "d": 46,
+     "r": 1,
+     "fill": "#4E4740"
+    },
+    {
+     "shape": "box",
+     "x": 23.0,
+     "y": 2.0,
+     "w": 2,
+     "d": 46,
+     "r": 1,
+     "fill": "#4E4740"
+    },
+    {
+     "shape": "box",
+     "x": 27.2,
+     "y": 2.0,
+     "w": 2,
+     "d": 46,
+     "r": 1,
+     "fill": "#4E4740"
+    },
+    {
+     "shape": "box",
+     "x": 31.4,
+     "y": 2.0,
+     "w": 2,
+     "d": 46,
+     "r": 1,
+     "fill": "#4E4740"
+    },
+    {
+     "shape": "box",
+     "x": 35.6,
+     "y": 2.0,
+     "w": 2,
+     "d": 46,
+     "r": 1,
+     "fill": "#4E4740"
+    },
+    {
+     "shape": "box",
+     "x": 39.8,
+     "y": 2.0,
+     "w": 2,
+     "d": 46,
+     "r": 1,
+     "fill": "#4E4740"
+    }
+   ]
+  },
+  {
+   "id": "stiel",
+   "component_id": "wooden_handle",
+   "material_id": "wood",
+   "name": "Holzstiel",
+   "short": "Stiel",
+   "shape": "box",
+   "x": 10,
+   "y": 0,
+   "w": 25,
+   "d": 160,
+   "z": 1.5,
+   "h": 12,
+   "r": 6,
+   "explode": [
+    0,
+    -40,
+    0
+   ],
+   "mass": 17.8,
+   "materials": [
+    [
+     "holz",
+     100
+    ]
+   ],
+   "info": "Buchenholz, farbig lackiert, mit Loch zum Aufhängen. Nach dem Abtrennen der Zwinge kann das Holz wiederverwendet werden.",
+   "color": "#B5683A",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 9,
+     "y": 10,
+     "w": 7,
+     "fill": "#5A3A22"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 30,
+     "w": 19,
+     "d": 110,
+     "r": 6,
+     "fill": "#C27646"
+    }
+   ]
+  }
+ ]
+}
