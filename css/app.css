@@ -32,3 +32,18 @@
   --good: #72B48D; --vf: #0C0E0D; --scrim: rgba(0, 0, 0, .6); color-scheme: dark;
 }
 
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font: 15px/1.5 var(--sans);
+  display: grid;
+  grid-template-rows: 56px 1fr;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+.mono, .eyebrow, .num { font-family: var(--mono); }
+.eyebrow { font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); }
+
