@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kreislauf-Station – Präsentation</title>
+<link rel="stylesheet" href="styles.css">
+<script type="importmap">{ "imports": { "three": "./assets/three.module.js" } }</script>
+</head>
+<body data-mode="praesi">
+  <canvas id="world" aria-label="3D-Werkstatt"></canvas>
+  <div id="overlay">
+    <div id="labels"></div>
+    <section id="slide" class="slide"></section>
+    <iframe id="app" title="Kreislauf-Station (live)" allow="camera; microphone; fullscreen"></iframe>
+    <button id="next" type="button" aria-label="Weiter">Weiter ›</button>
+    <aside id="notes" hidden></aside>
+    <div id="help" hidden>
+      <h3>Tasten</h3>
+      <dl>
+        <dt>→ ↓ Leertaste Bild↓</dt><dd>weiter</dd>
+        <dt>← ↑ Bild↑</dt><dd>zurück</dd>
+        <dt>1–9</dt><dd>direkt zur Folie</dd>
+        <dt>F</dt><dd>Vollbild</dd>
+        <dt>T</dt><dd>Sprechertext</dd>
+        <dt>R</dt><dd>Kamera zurücksetzen</dd>
+        <dt>H</dt><dd>diese Hilfe</dd>
+        <dt>Maus ziehen, Mausrad</dt><dd>frei drehen und zoomen</dd>
+        <dt>In der App</dt><dd>Klick daneben oder „Weiter“ holt die Tasten zurück</dd>
+      </dl>
+    </div>
+    <footer id="footer"></footer>
+  </div>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
