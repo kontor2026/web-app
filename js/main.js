@@ -244,6 +244,37 @@ function showResult(v, obj) {
   animate(side.querySelectorAll('.cand .bar i'), { scaleX: [0, 1], transformOrigin: ['0% 50%', '0% 50%'], delay: stagger(80, { start: 300 }), duration: 700, ease: 'outExpo' });
 }
 
+/* ------------------------------------------------------------------ */
+/* 02 Steckbrief                                                        */
+/* ------------------------------------------------------------------ */
+
+function materialMix(obj) {
+  const by = {};
+  let total = 0;
+  for (const p of obj.parts) for (const [id, share] of p.materials) {
+    const m = (p.mass ?? 1) * share / 100;
+    const cls = MATERIALS[id].cls;
+    by[cls] = (by[cls] ?? 0) + m;
+    total += m;
+  }
+  return Object.entries(by).map(([cls, m]) => ({ cls, share: m / total })).sort((a, b) => b.share - a.share);
+}
+
+function partElements(part) {
+  const by = {};
+  for (const [mid, share] of part.materials) {
+    for (const [sym, es] of MATERIALS[mid].elements) by[sym] = (by[sym] ?? 0) + share * es / 100;
+  }
+  return Object.entries(by).sort((a, b) => b[1] - a[1]);
+}
+
+const elTile = (sym, share) => {
+  const e = ELEMENTS[sym];
+  return `<button class="el ${e.kritisch === true ? 'crit' : ''}" data-el="${sym}">
+    <span class="z">${e.z}</span>${share != null ? `<span class="share">${share < 1 ? '<1' : Math.round(share)} %</span>` : ''}
+    <span class="sym">${sym}</span><span class="nm">${e.name}</span></button>`;
+};
+
 document.querySelector('.brand').addEventListener('click', viewScan);
 
 // Direkteinstieg für Demo und Entwicklung: #sheet=laptop oder #craft=flasche
