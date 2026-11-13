@@ -1,0 +1,952 @@
+{
+ "parts": [
+  {
+   "id": "oberschale",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Oberschale",
+   "short": "Oberschale",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 350,
+   "d": 260,
+   "z": 50,
+   "h": 50,
+   "r": 10,
+   "explode": [
+    0,
+    0,
+    329.1
+   ],
+   "mass": 743.5,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Obere Gehäusehälfte aus Kunststoff. Garantiesiegel und Schrauben sitzen unter den Gummifüßen, dann rundum aufclipsen.",
+   "color": "#2B2F33",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 250,
+     "y": 30,
+     "w": 6,
+     "d": 200,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "box",
+     "x": 264,
+     "y": 30,
+     "w": 6,
+     "d": 200,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "box",
+     "x": 278,
+     "y": 30,
+     "w": 6,
+     "d": 200,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "box",
+     "x": 292,
+     "y": 30,
+     "w": 6,
+     "d": 200,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "box",
+     "x": 306,
+     "y": 30,
+     "w": 6,
+     "d": 200,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "box",
+     "x": 320,
+     "y": 30,
+     "w": 6,
+     "d": 200,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "box",
+     "x": 150,
+     "y": 238,
+     "w": 50,
+     "d": 8,
+     "r": 3,
+     "fill": "#4A5156"
+    }
+   ]
+  },
+  {
+   "id": "luefter",
+   "component_id": "cooling_fan",
+   "material_id": "mixed_electronics",
+   "name": "Radiallüfter",
+   "short": "Lüfter",
+   "shape": "cyl",
+   "x": 60,
+   "y": 80,
+   "w": 100,
+   "z": 70,
+   "h": 25,
+   "explode": [
+    0,
+    0,
+    249.1
+   ],
+   "mass": 205.9,
+   "materials": [
+    [
+     "pcabs",
+     55
+    ],
+    [
+     "kupfer",
+     20
+    ],
+    [
+     "ferrit",
+     10
+    ],
+    [
+     "stahl",
+     10
+    ],
+    [
+     "chip",
+     5
+    ]
+   ],
+   "info": "Saugt Luft an und bläst sie durch den Kühlkörper nach hinten hinaus. Stecker abziehen, drei Schrauben lösen. Staub mit einem Pinsel entfernen.",
+   "color": "#3A3F44",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 30,
+     "y": 30,
+     "w": 40,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "cyl",
+     "x": 44,
+     "y": 44,
+     "w": 12,
+     "fill": "#9AA2A8"
+    }
+   ]
+  },
+  {
+   "id": "kuehlkoerper",
+   "component_id": "cpu_cooler",
+   "material_id": "aluminium",
+   "name": "Kühlkörper (Aluminiumlamellen)",
+   "short": "Kühlkörper",
+   "shape": "box",
+   "x": 50,
+   "y": 70,
+   "w": 120,
+   "d": 120,
+   "z": 40,
+   "h": 28,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    216.1
+   ],
+   "mass": 480.4,
+   "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "info": "Dichte Aluminiumlamellen nehmen die Wärme der APU auf. Nach dem Abschrauben leicht verdrehen, um die Wärmeleitpaste zu lösen.",
+   "color": "#C9CED2",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 4.0,
+     "w": 112,
+     "d": 2,
+     "fill": "#B5BBC0"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 9.2,
+     "w": 112,
+     "d": 2,
+     "fill": "#B5BBC0"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 14.4,
+     "w": 112,
+     "d": 2,
+     "fill": "#B5BBC0"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 19.6,
+     "w": 112,
+     "d": 2,
+     "fill": "#B5BBC0"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 24.8,
+     "w": 112,
+     "d": 2,
+     "fill": "#B5BBC0"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 30.0,
+     "w": 112,
+     "d": 2,
+     "fill": "#B5BBC0"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 35.2,
+     "w": 112,
+     "d": 2,
+     "fill": "#B5BBC0"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 40.4,
+     "w": 112,
+     "d": 2,
+     "fill": "#B5BBC0"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 45.6,
+     "w": 112,
+     "d": 2,
+     "fill": "#B5BBC0"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 50.8,
+     "w": 112,
+     "d": 2,
+     "fill": "#B5BBC0"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 56.0,
+     "w": 112,
+     "d": 2,
+     "fill": "#B5BBC0"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 61.2,
+     "w": 112,
+     "d": 2,
+     "fill": "#B5BBC0"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 66.4,
+     "w": 112,
+     "d": 2,
+     "fill": "#B5BBC0"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 71.6,
+     "w": 112,
+     "d": 2,
+     "fill": "#B5BBC0"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 76.8,
+     "w": 112,
+     "d": 2,
+     "fill": "#B5BBC0"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 82.0,
+     "w": 112,
+     "d": 2,
+     "fill": "#B5BBC0"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 87.2,
+     "w": 112,
+     "d": 2,
+     "fill": "#B5BBC0"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 92.4,
+     "w": 112,
+     "d": 2,
+     "fill": "#B5BBC0"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 97.6,
+     "w": 112,
+     "d": 2,
+     "fill": "#B5BBC0"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 102.8,
+     "w": 112,
+     "d": 2,
+     "fill": "#B5BBC0"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 108.0,
+     "w": 112,
+     "d": 2,
+     "fill": "#B5BBC0"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 113.2,
+     "w": 112,
+     "d": 2,
+     "fill": "#B5BBC0"
+    }
+   ]
+  },
+  {
+   "id": "heatpipes",
+   "component_id": "cpu_cooler",
+   "material_id": "copper",
+   "name": "Kupferplatte mit Heatpipes",
+   "short": "Heatpipes",
+   "shape": "box",
+   "x": 70,
+   "y": 100,
+   "w": 80,
+   "d": 60,
+   "z": 34,
+   "h": 4,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    183.1
+   ],
+   "mass": 183,
+   "materials": [
+    [
+     "kupfer",
+     95
+    ],
+    [
+     "elektrolyt",
+     5
+    ]
+   ],
+   "info": "Kupferplatte und Rohre mit etwas Flüssigkeit darin, die die Wärme sehr schnell zu den Lamellen leiten. Wertvolles Kupfer.",
+   "color": "#B87333",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 8,
+     "y": 6,
+     "w": 8,
+     "d": 48,
+     "r": 4,
+     "fill": "#C98A4B"
+    },
+    {
+     "shape": "box",
+     "x": 26,
+     "y": 6,
+     "w": 8,
+     "d": 48,
+     "r": 4,
+     "fill": "#C98A4B"
+    },
+    {
+     "shape": "box",
+     "x": 44,
+     "y": 6,
+     "w": 8,
+     "d": 48,
+     "r": 4,
+     "fill": "#C98A4B"
+    },
+    {
+     "shape": "box",
+     "x": 62,
+     "y": 6,
+     "w": 8,
+     "d": 48,
+     "r": 4,
+     "fill": "#C98A4B"
+    }
+   ]
+  },
+  {
+   "id": "abschirmblech",
+   "component_id": "plastic_housing",
+   "material_id": "steel",
+   "name": "Abschirmblech",
+   "short": "Abschirmblech",
+   "shape": "box",
+   "x": 12,
+   "y": 17,
+   "w": 211,
+   "d": 226,
+   "z": 33.6,
+   "h": 1,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    147.5
+   ],
+   "mass": 343.2,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Stahlblech über der Platine gegen Funkstörungen. In der Mitte eine Öffnung für den Kühler. Mit dem Magneten prüfen: Stahl.",
+   "color": "#9AA2A8",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 56,
+     "y": 81,
+     "w": 84,
+     "d": 64,
+     "r": 2,
+     "fill": "#7D858B"
+    }
+   ]
+  },
+  {
+   "id": "speicher",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "Grafikspeicher (GDDR)",
+   "short": "Grafikspeicher",
+   "shape": "box",
+   "x": 140,
+   "y": 100,
+   "w": 16,
+   "d": 60,
+   "z": 31.6,
+   "h": 1.2,
+   "r": 0.5,
+   "explode": [
+    0,
+    0,
+    112.0
+   ],
+   "mass": 13.7,
+   "materials": [
+    [
+     "chip",
+     100
+    ]
+   ],
+   "info": "Acht schnelle Speicherchips rund um die APU, hier gebündelt gezeigt. Gemeinsamer Speicher für Spiele und Grafik.",
+   "color": "#22272B",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 2,
+     "w": 14,
+     "d": 12,
+     "fill": "#33393D"
+    },
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 17,
+     "w": 14,
+     "d": 12,
+     "fill": "#33393D"
+    },
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 32,
+     "w": 14,
+     "d": 12,
+     "fill": "#33393D"
+    },
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 47,
+     "w": 14,
+     "d": 12,
+     "fill": "#33393D"
+    }
+   ]
+  },
+  {
+   "id": "apu",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "APU (Prozessor und Grafik)",
+   "short": "APU",
+   "shape": "box",
+   "x": 90,
+   "y": 110,
+   "w": 40,
+   "d": 40,
+   "z": 31.6,
+   "h": 2.5,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    112.0
+   ],
+   "mass": 28.6,
+   "materials": [
+    [
+     "chip",
+     60
+    ],
+    [
+     "fr4",
+     25
+    ],
+    [
+     "kupfer",
+     15
+    ]
+   ],
+   "info": "Ein großer Chip mit Prozessor und Grafikeinheit. Er wird sehr heiß und braucht deshalb den Kühler darüber.",
+   "color": "#5E656A",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 8,
+     "y": 8,
+     "w": 24,
+     "d": 24,
+     "r": 1,
+     "fill": "#B5BBC0"
+    }
+   ]
+  },
+  {
+   "id": "mainboard",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "Hauptplatine",
+   "short": "Hauptplatine",
+   "shape": "box",
+   "x": 10,
+   "y": 15,
+   "w": 215,
+   "d": 230,
+   "z": 30,
+   "h": 1.6,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    97.0
+   ],
+   "mass": 434.7,
+   "materials": [
+    [
+     "fr4",
+     50
+    ],
+    [
+     "kupfer",
+     20
+    ],
+    [
+     "chip",
+     15
+    ],
+    [
+     "stahl",
+     8
+    ],
+    [
+     "lot",
+     7
+    ]
+   ],
+   "info": "Mit HDMI-, USB- und Netzwerkbuchsen an der Rückseite. Alle Flachbandkabel abziehen, dann ausschrauben.",
+   "color": "#2E6B45",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 2,
+     "w": 20,
+     "d": 10,
+     "r": 1,
+     "fill": "#B7BCC0"
+    },
+    {
+     "shape": "box",
+     "x": 30,
+     "y": 2,
+     "w": 14,
+     "d": 10,
+     "r": 1,
+     "fill": "#B7BCC0"
+    },
+    {
+     "shape": "box",
+     "x": 50,
+     "y": 2,
+     "w": 14,
+     "d": 10,
+     "r": 1,
+     "fill": "#B7BCC0"
+    },
+    {
+     "shape": "box",
+     "x": 150,
+     "y": 180,
+     "w": 30,
+     "d": 30,
+     "r": 1,
+     "fill": "#22272B"
+    }
+   ]
+  },
+  {
+   "id": "ssd",
+   "component_id": "hard_drive",
+   "material_id": "mixed_electronics",
+   "name": "SSD (2,5 Zoll)",
+   "short": "SSD",
+   "shape": "box",
+   "x": 20,
+   "y": 165,
+   "w": 100,
+   "d": 70,
+   "z": 10,
+   "h": 7,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    75.0
+   ],
+   "mass": 68.6,
+   "materials": [
+    [
+     "alu",
+     45
+    ],
+    [
+     "fr4",
+     25
+    ],
+    [
+     "chip",
+     25
+    ],
+    [
+     "kupfer",
+     5
+    ]
+   ],
+   "info": "Speichert Spiele und Spielstände. Einschub herausziehen; Konto vorher abmelden und Daten löschen.",
+   "color": "#5E656A",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 10,
+     "w": 80,
+     "d": 50,
+     "r": 2,
+     "fill": "#E8E8E0"
+    }
+   ]
+  },
+  {
+   "id": "trafo",
+   "component_id": "power_supply_unit",
+   "material_id": "mixed_electronics",
+   "name": "Transformator",
+   "short": "Trafo",
+   "shape": "box",
+   "x": 250,
+   "y": 40,
+   "w": 40,
+   "d": 40,
+   "z": 9.6,
+   "h": 30,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    92.0
+   ],
+   "mass": 183,
+   "materials": [
+    [
+     "ferrit",
+     50
+    ],
+    [
+     "kupfer",
+     40
+    ],
+    [
+     "pcabs",
+     10
+    ]
+   ],
+   "info": "Kupferwicklungen auf einem Ferritkern. Er trennt die Netzspannung vom Rest der Konsole.",
+   "color": "#3A3F44",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 5,
+     "y": 5,
+     "w": 30,
+     "d": 30,
+     "r": 2,
+     "fill": "#C5803D"
+    }
+   ]
+  },
+  {
+   "id": "elko",
+   "component_id": "power_supply_unit",
+   "material_id": "mixed_electronics",
+   "name": "Elektrolytkondensator",
+   "short": "Elko",
+   "shape": "cyl",
+   "x": 300,
+   "y": 55,
+   "w": 25,
+   "z": 9.6,
+   "h": 35,
+   "explode": [
+    0,
+    0,
+    92.0
+   ],
+   "mass": 34.3,
+   "materials": [
+    [
+     "alu",
+     50
+    ],
+    [
+     "papier",
+     20
+    ],
+    [
+     "elektrolyt",
+     15
+    ],
+    [
+     "pcabs",
+     10
+    ],
+    [
+     "gummi",
+     5
+    ]
+   ],
+   "info": "Speichert Energie und glättet die Spannung. Kann noch nach dem Ausstecken geladen sein: nicht an die Beinchen fassen.",
+   "color": "#2F4F7A",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 4,
+     "w": 17,
+     "fill": "#B9C0C6"
+    }
+   ]
+  },
+  {
+   "id": "netzteil",
+   "component_id": "power_supply_unit",
+   "material_id": "mixed_electronics",
+   "name": "Netzteilplatine mit Kühlblechen",
+   "short": "Netzteil",
+   "shape": "box",
+   "x": 230,
+   "y": 15,
+   "w": 110,
+   "d": 230,
+   "z": 8,
+   "h": 1.6,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    77.0
+   ],
+   "mass": 480.4,
+   "materials": [
+    [
+     "fr4",
+     35
+    ],
+    [
+     "alu",
+     25
+    ],
+    [
+     "kupfer",
+     20
+    ],
+    [
+     "ferrit",
+     10
+    ],
+    [
+     "chip",
+     10
+    ]
+   ],
+   "info": "Eingebautes Netzteil: macht aus 230 Volt die Niederspannung. Nur als Ganzes ausbauen, nicht weiter öffnen.",
+   "color": "#2E6B45",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 120,
+     "w": 90,
+     "d": 20,
+     "r": 2,
+     "fill": "#C9CED2"
+    },
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 160,
+     "w": 90,
+     "d": 20,
+     "r": 2,
+     "fill": "#C9CED2"
+    },
+    {
+     "shape": "box",
+     "x": 80,
+     "y": 205,
+     "w": 24,
+     "d": 18,
+     "r": 2,
+     "fill": "#1E2226"
+    }
+   ]
+  },
+  {
+   "id": "unterschale",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Unterschale mit Laufwerksschacht",
+   "short": "Unterschale",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 350,
+   "d": 260,
+   "z": 0,
+   "h": 50,
+   "r": 10,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 800.7,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Untere Gehäusehälfte aus Kunststoff mit Gummifüßen. Trägt Platine und Netzteil; leer ab in die Elektro-Sammlung.",
+   "color": "#2B2F33",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 20,
+     "y": 20,
+     "w": 20,
+     "d": 20,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "cyl",
+     "x": 310,
+     "y": 20,
+     "w": 20,
+     "d": 20,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "cyl",
+     "x": 20,
+     "y": 220,
+     "w": 20,
+     "d": 20,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "cyl",
+     "x": 310,
+     "y": 220,
+     "w": 20,
+     "d": 20,
+     "fill": "#1E2226"
+    }
+   ]
+  }
+ ]
+}

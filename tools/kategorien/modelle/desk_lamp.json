@@ -1,0 +1,686 @@
+{
+ "parts": [
+  {
+   "id": "kopfgelenk",
+   "component_id": "lamp_arm",
+   "material_id": "aluminium",
+   "name": "Kopfgelenk",
+   "short": "Kopfgelenk",
+   "shape": "cyl",
+   "x": 63,
+   "y": 16,
+   "w": 24,
+   "z": 370,
+   "h": 30,
+   "explode": [
+    0,
+    0,
+    165
+   ],
+   "mass": 21.7,
+   "materials": [
+    [
+     "alu",
+     80
+    ],
+    [
+     "stahl",
+     20
+    ]
+   ],
+   "info": "Gelenk zwischen Oberarm und Kopf mit Stahlschraube und Reibscheibe. Schraube lösen, dann trennen.",
+   "color": "#2B2F33",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 7,
+     "y": 7,
+     "w": 10,
+     "fill": "#9AA2A8"
+    }
+   ]
+  },
+  {
+   "id": "kopfarm",
+   "component_id": "lamp_arm",
+   "material_id": "aluminium",
+   "name": "Kopfarm",
+   "short": "Kopfarm",
+   "shape": "box",
+   "x": 69,
+   "y": 35,
+   "w": 12,
+   "d": 65,
+   "z": 380,
+   "h": 10,
+   "r": 5,
+   "explode": [
+    0,
+    0,
+    210
+   ],
+   "mass": 21.7,
+   "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "info": "Kurzes Aluminiumrohr zum Schirm. Innen läuft das dünne Kabel zum LED-Modul.",
+   "color": "#C9CED2"
+  },
+  {
+   "id": "schirm",
+   "component_id": "lamp_shade",
+   "material_id": "steel",
+   "name": "Lampenschirm",
+   "short": "Schirm",
+   "shape": "cyl",
+   "x": 20,
+   "y": 40,
+   "w": 110,
+   "z": 341,
+   "h": 39,
+   "explode": [
+    0,
+    0,
+    52.0
+   ],
+   "mass": 104.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Pulverbeschichtetes Stahlblech, leitet Wärme ab. Den Haltering am Kopfarm abschrauben; ab ins Altmetall.",
+   "color": "#2B2F33",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 40,
+     "y": 40,
+     "w": 30,
+     "fill": "#3A3F44"
+    }
+   ]
+  },
+  {
+   "id": "ledmodul",
+   "component_id": "led_module",
+   "material_id": "mixed_electronics",
+   "name": "LED-Modul",
+   "short": "LED-Modul",
+   "shape": "cyl",
+   "x": 35,
+   "y": 55,
+   "w": 80,
+   "z": 340,
+   "h": 3,
+   "explode": [
+    0,
+    0,
+    25.0
+   ],
+   "mass": 21.7,
+   "materials": [
+    [
+     "alu",
+     50
+    ],
+    [
+     "led",
+     20
+    ],
+    [
+     "fr4",
+     20
+    ],
+    [
+     "kupfer",
+     10
+    ]
+   ],
+   "info": "Aluminiumplatine mit vielen kleinen weißen LEDs. Hält viele Jahre; sie wird mit zwei Schrauben gelöst.",
+   "color": "#ECECE6",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 12,
+     "y": 12,
+     "w": 6,
+     "d": 6,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 26,
+     "y": 12,
+     "w": 6,
+     "d": 6,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 40,
+     "y": 12,
+     "w": 6,
+     "d": 6,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 54,
+     "y": 12,
+     "w": 6,
+     "d": 6,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 12,
+     "y": 26,
+     "w": 6,
+     "d": 6,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 26,
+     "y": 26,
+     "w": 6,
+     "d": 6,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 40,
+     "y": 26,
+     "w": 6,
+     "d": 6,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 54,
+     "y": 26,
+     "w": 6,
+     "d": 6,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 12,
+     "y": 40,
+     "w": 6,
+     "d": 6,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 26,
+     "y": 40,
+     "w": 6,
+     "d": 6,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 40,
+     "y": 40,
+     "w": 6,
+     "d": 6,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 54,
+     "y": 40,
+     "w": 6,
+     "d": 6,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 12,
+     "y": 54,
+     "w": 6,
+     "d": 6,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 26,
+     "y": 54,
+     "w": 6,
+     "d": 6,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 40,
+     "y": 54,
+     "w": 6,
+     "d": 6,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 54,
+     "y": 54,
+     "w": 6,
+     "d": 6,
+     "fill": "#F6D86B"
+    }
+   ]
+  },
+  {
+   "id": "streuscheibe",
+   "component_id": "led_module",
+   "material_id": "pc",
+   "name": "Streuscheibe",
+   "short": "Streuscheibe",
+   "shape": "cyl",
+   "x": 22,
+   "y": 42,
+   "w": 106,
+   "z": 338,
+   "h": 2,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 13,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Milchige Kunststoffscheibe, die das grelle LED-Licht weich verteilt. Eingeclipst, vorsichtig heraushebeln.",
+   "color": "#F4F6F8",
+   "opacity": 0.75
+  },
+  {
+   "id": "oberarm",
+   "component_id": "lamp_arm",
+   "material_id": "aluminium",
+   "name": "Oberarm",
+   "short": "Oberarm",
+   "shape": "box",
+   "x": 67,
+   "y": 20,
+   "w": 16,
+   "d": 16,
+   "z": 254,
+   "h": 116,
+   "r": 4,
+   "explode": [
+    0,
+    0,
+    140
+   ],
+   "mass": 43.5,
+   "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "info": "Aluminiumrohr mit dem Kabel innen. Aluminium lässt sich sehr gut recyceln.",
+   "color": "#C9CED2"
+  },
+  {
+   "id": "ellbogen",
+   "component_id": "lamp_arm",
+   "material_id": "aluminium",
+   "name": "Ellbogengelenk",
+   "short": "Ellbogen",
+   "shape": "cyl",
+   "x": 63,
+   "y": 16,
+   "w": 24,
+   "z": 230,
+   "h": 24,
+   "explode": [
+    0,
+    0,
+    115
+   ],
+   "mass": 21.7,
+   "materials": [
+    [
+     "alu",
+     70
+    ],
+    [
+     "stahl",
+     30
+    ]
+   ],
+   "info": "Mittleres Gelenk; die Stahlschraube darin kann man mit einem Inbusschlüssel lösen.",
+   "color": "#2B2F33",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 7,
+     "y": 7,
+     "w": 10,
+     "fill": "#9AA2A8"
+    }
+   ]
+  },
+  {
+   "id": "zugfeder",
+   "component_id": "lamp_arm",
+   "material_id": "steel",
+   "name": "Zugfeder",
+   "short": "Zugfeder",
+   "shape": "box",
+   "x": 69,
+   "y": 40,
+   "w": 12,
+   "d": 6,
+   "z": 60,
+   "h": 150,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    70
+   ],
+   "mass": 17.4,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Stahlfeder, die den Arm in jeder Stellung hält. Steht unter Spannung: beim Aushängen festhalten.",
+   "color": "#9AA2A8"
+  },
+  {
+   "id": "unterarm",
+   "component_id": "lamp_arm",
+   "material_id": "aluminium",
+   "name": "Unterarm",
+   "short": "Unterarm",
+   "shape": "box",
+   "x": 67,
+   "y": 20,
+   "w": 16,
+   "d": 16,
+   "z": 40,
+   "h": 190,
+   "r": 4,
+   "explode": [
+    0,
+    0,
+    90
+   ],
+   "mass": 69.6,
+   "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "info": "Längstes Armteil aus Aluminiumrohr. Nach Lösen der Gelenkschrauben vom Fuß abnehmen.",
+   "color": "#C9CED2"
+  },
+  {
+   "id": "drehgelenk",
+   "component_id": "lamp_arm",
+   "material_id": "aluminium",
+   "name": "Drehgelenk am Fuß",
+   "short": "Drehgelenk",
+   "shape": "cyl",
+   "x": 60,
+   "y": 13,
+   "w": 30,
+   "z": 25,
+   "h": 15,
+   "explode": [
+    0,
+    0,
+    65
+   ],
+   "mass": 34.8,
+   "materials": [
+    [
+     "alu",
+     60
+    ],
+    [
+     "stahl",
+     30
+    ],
+    [
+     "pcabs",
+     10
+    ]
+   ],
+   "info": "Lässt den Arm drehen. Durch die Mitte läuft das Kabel in den Fuß.",
+   "color": "#2B2F33",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 9,
+     "y": 9,
+     "w": 12,
+     "fill": "#1E2226"
+    }
+   ]
+  },
+  {
+   "id": "treiber",
+   "component_id": "led_module",
+   "material_id": "pcb",
+   "name": "LED-Treiber mit Dimmer",
+   "short": "Treiber",
+   "shape": "box",
+   "x": 20,
+   "y": 95,
+   "w": 60,
+   "d": 40,
+   "z": 19,
+   "h": 1.6,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    61
+   ],
+   "mass": 13,
+   "materials": [
+    [
+     "fr4",
+     45
+    ],
+    [
+     "kupfer",
+     25
+    ],
+    [
+     "chip",
+     15
+    ],
+    [
+     "ferrit",
+     10
+    ],
+    [
+     "lot",
+     5
+    ]
+   ],
+   "info": "Kleine Platine im Fuß: macht aus 230 Volt den Strom für die LEDs und regelt die Helligkeit über die Touch-Taste.",
+   "color": "#2E6B45",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 6,
+     "y": 8,
+     "w": 14,
+     "d": 14,
+     "r": 1,
+     "fill": "#C5803D"
+    },
+    {
+     "shape": "box",
+     "x": 30,
+     "y": 10,
+     "w": 10,
+     "d": 10,
+     "r": 1,
+     "fill": "#22272B"
+    }
+   ]
+  },
+  {
+   "id": "gewicht",
+   "component_id": "steel_lamp_base",
+   "material_id": "steel",
+   "name": "Gewichtsplatte",
+   "short": "Gewicht",
+   "shape": "box",
+   "x": 15,
+   "y": 15,
+   "w": 120,
+   "d": 120,
+   "z": 3,
+   "h": 15,
+   "r": 6,
+   "explode": [
+    0,
+    0,
+    47
+   ],
+   "mass": 278.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Schwere Stahlplatte, damit die Lampe nicht umkippt. Reines Metall, ab ins Altmetall.",
+   "color": "#5E656A"
+  },
+  {
+   "id": "standfuss",
+   "component_id": "steel_lamp_base",
+   "material_id": "steel",
+   "name": "Fußgehäuse",
+   "short": "Fuß",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 150,
+   "d": 150,
+   "z": 0,
+   "h": 25,
+   "r": 10,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 173.9,
+   "materials": [
+    [
+     "stahl",
+     90
+    ],
+    [
+     "textil",
+     10
+    ]
+   ],
+   "info": "Stahlblech-Gehäuse mit Filzunterseite und Touch-Taste. Bodenplatte abschrauben, um Kabel und Platine zu lösen.",
+   "color": "#2B2F33",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 40,
+     "y": 110,
+     "w": 20,
+     "fill": "#5DADE2"
+    }
+   ]
+  },
+  {
+   "id": "kabel",
+   "component_id": "cable_insulation",
+   "material_id": "pvc",
+   "name": "Netzkabel (Isolierung)",
+   "short": "Kabel",
+   "shape": "box",
+   "x": 10,
+   "y": 4,
+   "w": 130,
+   "d": 8,
+   "z": 0,
+   "h": 8,
+   "r": 4,
+   "explode": [
+    170,
+    0,
+    0
+   ],
+   "mass": 43.5,
+   "materials": [
+    [
+     "pvc",
+     90
+    ],
+    [
+     "pp",
+     10
+    ]
+   ],
+   "info": "1,8 m PVC-Kabel mit Eurostecker. Längs aufschlitzen, um die Kupferadern zu trennen.",
+   "color": "#2B2F33",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 0,
+     "w": 16,
+     "d": 8,
+     "r": 2,
+     "fill": "#4A5156"
+    }
+   ]
+  },
+  {
+   "id": "kupferadern",
+   "component_id": "cable_copper_core",
+   "material_id": "copper",
+   "name": "Kupferadern",
+   "short": "Kupferadern",
+   "shape": "box",
+   "x": 10,
+   "y": 16,
+   "w": 130,
+   "d": 4,
+   "z": 0,
+   "h": 4,
+   "r": 1,
+   "explode": [
+    170,
+    0,
+    0
+   ],
+   "mass": 21.7,
+   "materials": [
+    [
+     "kupfer",
+     100
+    ]
+   ],
+   "info": "Zwei dünne Kupferadern. Kupfer ist wertvoll und wird eingeschmolzen.",
+   "color": "#B87333"
+  }
+ ]
+}

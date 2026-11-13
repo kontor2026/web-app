@@ -1,0 +1,750 @@
+{
+ "parts": [
+  {
+   "id": "propeller_hl",
+   "component_id": "propellers",
+   "material_id": "pp",
+   "name": "Propeller hinten links",
+   "short": "Propeller",
+   "shape": "box",
+   "x": 0,
+   "y": 59,
+   "w": 130,
+   "d": 12,
+   "z": 76,
+   "h": 6,
+   "r": 6,
+   "explode": [
+    0,
+    0,
+    118.0
+   ],
+   "mass": 6.3,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Leichter Kunststoffpropeller (zwei Blätter). Gegen den Uhrzeigersinn drücken und drehen, dann abnehmen. Kanten sind scharf: Finger weg, solange die Motoren laufen.",
+   "color": "#2B2F33",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 59,
+     "y": 0,
+     "w": 12,
+     "fill": "#9AA2A8"
+    }
+   ]
+  },
+  {
+   "id": "propeller_hr",
+   "component_id": "propellers",
+   "material_id": "pp",
+   "name": "Propeller hinten rechts",
+   "short": "Propeller",
+   "shape": "box",
+   "x": 170,
+   "y": 59,
+   "w": 130,
+   "d": 12,
+   "z": 76,
+   "h": 6,
+   "r": 6,
+   "explode": [
+    0,
+    0,
+    118.0
+   ],
+   "mass": 6.3,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Leichter Kunststoffpropeller (zwei Blätter). Gegen den Uhrzeigersinn drücken und drehen, dann abnehmen. Kanten sind scharf: Finger weg, solange die Motoren laufen.",
+   "color": "#2B2F33",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 59,
+     "y": 0,
+     "w": 12,
+     "fill": "#9AA2A8"
+    }
+   ]
+  },
+  {
+   "id": "propeller_vl",
+   "component_id": "propellers",
+   "material_id": "pp",
+   "name": "Propeller vorne links",
+   "short": "Propeller",
+   "shape": "box",
+   "x": 59,
+   "y": 170,
+   "w": 12,
+   "d": 130,
+   "z": 76,
+   "h": 6,
+   "r": 6,
+   "explode": [
+    0,
+    0,
+    118.0
+   ],
+   "mass": 6.3,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Leichter Kunststoffpropeller (zwei Blätter). Gegen den Uhrzeigersinn drücken und drehen, dann abnehmen. Kanten sind scharf: Finger weg, solange die Motoren laufen.",
+   "color": "#2B2F33",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0,
+     "y": 59,
+     "w": 12,
+     "fill": "#9AA2A8"
+    }
+   ]
+  },
+  {
+   "id": "propeller_vr",
+   "component_id": "propellers",
+   "material_id": "pp",
+   "name": "Propeller vorne rechts",
+   "short": "Propeller",
+   "shape": "box",
+   "x": 229,
+   "y": 170,
+   "w": 12,
+   "d": 130,
+   "z": 76,
+   "h": 6,
+   "r": 6,
+   "explode": [
+    0,
+    0,
+    118.0
+   ],
+   "mass": 6.3,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Leichter Kunststoffpropeller (zwei Blätter). Gegen den Uhrzeigersinn drücken und drehen, dann abnehmen. Kanten sind scharf: Finger weg, solange die Motoren laufen.",
+   "color": "#2B2F33",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0,
+     "y": 59,
+     "w": 12,
+     "fill": "#9AA2A8"
+    }
+   ]
+  },
+  {
+   "id": "motor_hl",
+   "component_id": "electric_motor",
+   "material_id": "mixed_electronics",
+   "name": "Motor hinten links",
+   "short": "Motor",
+   "shape": "cyl",
+   "x": 51,
+   "y": 51,
+   "w": 28,
+   "z": 52,
+   "h": 24,
+   "explode": [
+    0,
+    0,
+    48.0
+   ],
+   "mass": 31.4,
+   "materials": [
+    [
+     "kupfer",
+     30
+    ],
+    [
+     "ndfeb",
+     25
+    ],
+    [
+     "stahl",
+     25
+    ],
+    [
+     "alu",
+     20
+    ]
+   ],
+   "info": "Bürstenloser Motor: Kupferspulen innen, Neodym-Magnete in der drehenden Glocke. Mit vier Schrauben am Arm.",
+   "color": "#9AA2A8",
+   "label": true,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 4,
+     "w": 20,
+     "fill": "#5E656A"
+    },
+    {
+     "shape": "cyl",
+     "x": 11,
+     "y": 11,
+     "w": 6,
+     "fill": "#C9CED2"
+    }
+   ]
+  },
+  {
+   "id": "motor_hr",
+   "component_id": "electric_motor",
+   "material_id": "mixed_electronics",
+   "name": "Motor hinten rechts",
+   "short": "Motor",
+   "shape": "cyl",
+   "x": 221,
+   "y": 51,
+   "w": 28,
+   "z": 52,
+   "h": 24,
+   "explode": [
+    0,
+    0,
+    48.0
+   ],
+   "mass": 31.4,
+   "materials": [
+    [
+     "kupfer",
+     30
+    ],
+    [
+     "ndfeb",
+     25
+    ],
+    [
+     "stahl",
+     25
+    ],
+    [
+     "alu",
+     20
+    ]
+   ],
+   "info": "Bürstenloser Motor: Kupferspulen innen, Neodym-Magnete in der drehenden Glocke. Mit vier Schrauben am Arm.",
+   "color": "#9AA2A8",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 4,
+     "w": 20,
+     "fill": "#5E656A"
+    },
+    {
+     "shape": "cyl",
+     "x": 11,
+     "y": 11,
+     "w": 6,
+     "fill": "#C9CED2"
+    }
+   ]
+  },
+  {
+   "id": "motor_vl",
+   "component_id": "electric_motor",
+   "material_id": "mixed_electronics",
+   "name": "Motor vorne links",
+   "short": "Motor",
+   "shape": "cyl",
+   "x": 51,
+   "y": 221,
+   "w": 28,
+   "z": 52,
+   "h": 24,
+   "explode": [
+    0,
+    0,
+    48.0
+   ],
+   "mass": 31.4,
+   "materials": [
+    [
+     "kupfer",
+     30
+    ],
+    [
+     "ndfeb",
+     25
+    ],
+    [
+     "stahl",
+     25
+    ],
+    [
+     "alu",
+     20
+    ]
+   ],
+   "info": "Bürstenloser Motor: Kupferspulen innen, Neodym-Magnete in der drehenden Glocke. Mit vier Schrauben am Arm.",
+   "color": "#9AA2A8",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 4,
+     "w": 20,
+     "fill": "#5E656A"
+    },
+    {
+     "shape": "cyl",
+     "x": 11,
+     "y": 11,
+     "w": 6,
+     "fill": "#C9CED2"
+    }
+   ]
+  },
+  {
+   "id": "motor_vr",
+   "component_id": "electric_motor",
+   "material_id": "mixed_electronics",
+   "name": "Motor vorne rechts",
+   "short": "Motor",
+   "shape": "cyl",
+   "x": 221,
+   "y": 221,
+   "w": 28,
+   "z": 52,
+   "h": 24,
+   "explode": [
+    0,
+    0,
+    48.0
+   ],
+   "mass": 31.4,
+   "materials": [
+    [
+     "kupfer",
+     30
+    ],
+    [
+     "ndfeb",
+     25
+    ],
+    [
+     "stahl",
+     25
+    ],
+    [
+     "alu",
+     20
+    ]
+   ],
+   "info": "Bürstenloser Motor: Kupferspulen innen, Neodym-Magnete in der drehenden Glocke. Mit vier Schrauben am Arm.",
+   "color": "#9AA2A8",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 4,
+     "w": 20,
+     "fill": "#5E656A"
+    },
+    {
+     "shape": "cyl",
+     "x": 11,
+     "y": 11,
+     "w": 6,
+     "fill": "#C9CED2"
+    }
+   ]
+  },
+  {
+   "id": "oberschale",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Rumpf-Oberschale",
+   "short": "Oberschale",
+   "shape": "box",
+   "x": 105,
+   "y": 40,
+   "w": 90,
+   "d": 220,
+   "z": 40,
+   "h": 18,
+   "r": 14,
+   "explode": [
+    0,
+    0,
+    111.0
+   ],
+   "mass": 47,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Kunststoffdeckel des Rumpfs mit Akkuschacht und Statuslicht. Schrauben sitzen unten, dann vorsichtig aufclipsen.",
+   "color": "#3A3F44",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 12,
+     "y": 105,
+     "w": 66,
+     "d": 105,
+     "r": 6,
+     "fill": "#2B2F33"
+    },
+    {
+     "shape": "cyl",
+     "x": 40,
+     "y": 20,
+     "w": 10,
+     "fill": "#7FD07F"
+    }
+   ]
+  },
+  {
+   "id": "akku",
+   "component_id": "li_ion_battery",
+   "material_id": "li_ion",
+   "name": "Lithium-Polymer-Akku",
+   "short": "Akku",
+   "shape": "box",
+   "x": 118,
+   "y": 148,
+   "w": 64,
+   "d": 100,
+   "z": 30,
+   "h": 26,
+   "r": 4,
+   "explode": [
+    0,
+    0,
+    70.0
+   ],
+   "mass": 209.1,
+   "materials": [
+    [
+     "lco",
+     38
+    ],
+    [
+     "graphit",
+     20
+    ],
+    [
+     "elektrolyt",
+     15
+    ],
+    [
+     "alu",
+     10
+    ],
+    [
+     "kupfer",
+     8
+    ],
+    [
+     "pcabs",
+     9
+    ]
+   ],
+   "info": "Flugakku mit 11 Volt. Nach hinten aus dem Rumpf ziehen. Aufgebläht oder beschädigt nie mehr laden; Pole abkleben und zur Sammelstelle.",
+   "color": "#2B2F33",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 6,
+     "y": 10,
+     "w": 52,
+     "d": 70,
+     "r": 3,
+     "fill": "#3F6E9C"
+    },
+    {
+     "shape": "box",
+     "x": 8,
+     "y": 88,
+     "w": 8,
+     "d": 6,
+     "fill": "#7FD07F"
+    }
+   ]
+  },
+  {
+   "id": "flugsteuerung",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "Flugsteuerung mit Motorreglern",
+   "short": "Flugsteuerung",
+   "shape": "box",
+   "x": 112,
+   "y": 76,
+   "w": 76,
+   "d": 70,
+   "z": 24,
+   "h": 1.6,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    36.0
+   ],
+   "mass": 26.1,
+   "materials": [
+    [
+     "fr4",
+     45
+    ],
+    [
+     "kupfer",
+     22
+    ],
+    [
+     "chip",
+     25
+    ],
+    [
+     "lot",
+     8
+    ]
+   ],
+   "info": "Hält die Drohne mit Lagesensoren, GPS und Funkchip in der Luft und steuert die vier Motoren. Enthält Gold und Kupfer.",
+   "color": "#2E6B45",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 28,
+     "y": 25,
+     "w": 20,
+     "d": 20,
+     "r": 1,
+     "fill": "#22272B"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 4,
+     "w": 10,
+     "d": 10,
+     "fill": "#22272B"
+    },
+    {
+     "shape": "box",
+     "x": 62,
+     "y": 4,
+     "w": 10,
+     "d": 10,
+     "fill": "#22272B"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 56,
+     "w": 10,
+     "d": 10,
+     "fill": "#22272B"
+    },
+    {
+     "shape": "box",
+     "x": 62,
+     "y": 56,
+     "w": 10,
+     "d": 10,
+     "fill": "#22272B"
+    }
+   ]
+  },
+  {
+   "id": "arm_hinten",
+   "component_id": "plastic_housing",
+   "material_id": "pc",
+   "name": "Arm hinten",
+   "short": "Arm hinten",
+   "shape": "box",
+   "x": 55,
+   "y": 58,
+   "w": 190,
+   "d": 14,
+   "z": 42,
+   "h": 10,
+   "r": 5,
+   "explode": [
+    0,
+    0,
+    23.0
+   ],
+   "mass": 31.4,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Steifer Kunststoffarm mit den Motorkabeln innen. Faltbar, mit einem Stahlstift im Gelenk.",
+   "color": "#3A3F44"
+  },
+  {
+   "id": "arm_vorne",
+   "component_id": "plastic_housing",
+   "material_id": "pc",
+   "name": "Arm vorne",
+   "short": "Arm vorne",
+   "shape": "box",
+   "x": 55,
+   "y": 228,
+   "w": 190,
+   "d": 14,
+   "z": 42,
+   "h": 10,
+   "r": 5,
+   "explode": [
+    0,
+    0,
+    23.0
+   ],
+   "mass": 31.4,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Vorderer Arm, baugleich mit dem hinteren. Kabel vor dem Abschrauben ablöten oder abziehen.",
+   "color": "#3A3F44"
+  },
+  {
+   "id": "unterschale",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Rumpf-Unterschale",
+   "short": "Unterschale",
+   "shape": "box",
+   "x": 105,
+   "y": 40,
+   "w": 90,
+   "d": 220,
+   "z": 12,
+   "h": 28,
+   "r": 14,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 52.3,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Bodenteil des Rumpfs mit Abstandssensoren und Landefüßen. Kunststoff, kommt mit in die Elektro-Sammlung.",
+   "color": "#3A3F44",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 30,
+     "y": 60,
+     "w": 12,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "cyl",
+     "x": 48,
+     "y": 60,
+     "w": 12,
+     "fill": "#1E2226"
+    }
+   ]
+  },
+  {
+   "id": "kamera",
+   "component_id": "camera_lens_unit",
+   "material_id": "mixed_electronics",
+   "name": "Kamera mit Gimbal",
+   "short": "Kamera",
+   "shape": "box",
+   "x": 130,
+   "y": 240,
+   "w": 40,
+   "d": 40,
+   "z": 0,
+   "h": 30,
+   "r": 6,
+   "explode": [
+    0,
+    60,
+    0
+   ],
+   "mass": 52.3,
+   "materials": [
+    [
+     "alu",
+     30
+    ],
+    [
+     "chip",
+     20
+    ],
+    [
+     "glas",
+     15
+    ],
+    [
+     "kupfer",
+     15
+    ],
+    [
+     "ndfeb",
+     10
+    ],
+    [
+     "pcabs",
+     10
+    ]
+   ],
+   "info": "Kamera mit Linsen und Bildsensor, die drei kleine Motoren (Gimbal) ruhig halten. Flachbandkabel vorsichtig abziehen.",
+   "color": "#2B2F33",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 12,
+     "y": 22,
+     "w": 16,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "cyl",
+     "x": 15,
+     "y": 25,
+     "w": 10,
+     "fill": "#3D5A80"
+    }
+   ]
+  }
+ ]
+}

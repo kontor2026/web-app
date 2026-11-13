@@ -1,0 +1,646 @@
+{
+ "parts": [
+  {
+   "id": "deckel",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Deckel mit Tasten",
+   "short": "Deckel",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 100,
+   "z": 140,
+   "h": 10,
+   "explode": [
+    0,
+    0,
+    288.4
+   ],
+   "mass": 36.7,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Oberer Abschluss mit Laut-, Leise- und Mikrofon-Taste. Nach dem Abnehmen des Stoffbezugs abschrauben.",
+   "color": "#2B2F33",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 5,
+     "y": 5,
+     "w": 90,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 22,
+     "y": 44,
+     "w": 12,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "cyl",
+     "x": 44,
+     "y": 44,
+     "w": 12,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "cyl",
+     "x": 66,
+     "y": 44,
+     "w": 12,
+     "fill": "#C0392B"
+    }
+   ]
+  },
+  {
+   "id": "ledring",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "LED-Ring",
+   "short": "LED-Ring",
+   "shape": "cyl",
+   "x": 5,
+   "y": 5,
+   "w": 90,
+   "z": 138,
+   "h": 2,
+   "explode": [
+    0,
+    0,
+    263.4
+   ],
+   "mass": 7.3,
+   "materials": [
+    [
+     "fr4",
+     45
+    ],
+    [
+     "led",
+     25
+    ],
+    [
+     "kupfer",
+     20
+    ],
+    [
+     "pcabs",
+     10
+    ]
+   ],
+   "info": "Ringförmige Platine mit kleinen LEDs. Leuchtet, wenn der Lautsprecher zuhört oder antwortet.",
+   "color": "#DDE6EA",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 6,
+     "y": 6,
+     "w": 78,
+     "fill": "#5DADE2"
+    },
+    {
+     "shape": "cyl",
+     "x": 10,
+     "y": 10,
+     "w": 70,
+     "fill": "#DDE6EA"
+    }
+   ]
+  },
+  {
+   "id": "mikrofonplatine",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "Mikrofonplatine",
+   "short": "Mikrofone",
+   "shape": "cyl",
+   "x": 10,
+   "y": 10,
+   "w": 80,
+   "z": 136,
+   "h": 1.6,
+   "explode": [
+    0,
+    0,
+    238.8
+   ],
+   "mass": 9.2,
+   "materials": [
+    [
+     "fr4",
+     55
+    ],
+    [
+     "kupfer",
+     20
+    ],
+    [
+     "chip",
+     15
+    ],
+    [
+     "lot",
+     10
+    ]
+   ],
+   "info": "Mit mehreren winzigen Mikrofonen, die hören, aus welcher Richtung gesprochen wird. Die Stummtaste trennt sie ab.",
+   "color": "#2E6B45",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 36,
+     "y": 4,
+     "w": 8,
+     "fill": "#22272B"
+    },
+    {
+     "shape": "cyl",
+     "x": 36,
+     "y": 68,
+     "w": 8,
+     "fill": "#22272B"
+    },
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 36,
+     "w": 8,
+     "fill": "#22272B"
+    },
+    {
+     "shape": "cyl",
+     "x": 68,
+     "y": 36,
+     "w": 8,
+     "fill": "#22272B"
+    }
+   ]
+  },
+  {
+   "id": "hochtoener",
+   "component_id": "speaker_driver",
+   "material_id": "mixed_electronics",
+   "name": "Hochtöner",
+   "short": "Hochtöner",
+   "shape": "cyl",
+   "x": 30,
+   "y": 30,
+   "w": 40,
+   "z": 108,
+   "h": 22,
+   "explode": [
+    0,
+    0,
+    219.8
+   ],
+   "mass": 36.7,
+   "materials": [
+    [
+     "ndfeb",
+     30
+    ],
+    [
+     "stahl",
+     30
+    ],
+    [
+     "kupfer",
+     15
+    ],
+    [
+     "pcabs",
+     15
+    ],
+    [
+     "textil",
+     10
+    ]
+   ],
+   "info": "Kleiner Lautsprecher für hohe Töne mit Neodym-Magnet. Hält sich an Stahl fest; von Bankkarten fernhalten.",
+   "color": "#5E656A",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 8,
+     "y": 8,
+     "w": 24,
+     "fill": "#C9CED2"
+    }
+   ]
+  },
+  {
+   "id": "soc",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "Prozessor mit WLAN",
+   "short": "Prozessor",
+   "shape": "box",
+   "x": 38,
+   "y": 38,
+   "w": 14,
+   "d": 14,
+   "z": 101.6,
+   "h": 1.2,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    200.0
+   ],
+   "mass": 2.8,
+   "materials": [
+    [
+     "chip",
+     100
+    ]
+   ],
+   "info": "Verarbeitet Sprache und Musik und funkt per WLAN und Bluetooth. Die Spracherkennung läuft meist im Internet.",
+   "color": "#22272B"
+  },
+  {
+   "id": "hauptplatine",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "Hauptplatine",
+   "short": "Hauptplatine",
+   "shape": "box",
+   "x": 20,
+   "y": 20,
+   "w": 60,
+   "d": 60,
+   "z": 100,
+   "h": 1.6,
+   "r": 6,
+   "explode": [
+    0,
+    0,
+    190
+   ],
+   "mass": 32.1,
+   "materials": [
+    [
+     "fr4",
+     55
+    ],
+    [
+     "kupfer",
+     20
+    ],
+    [
+     "chip",
+     15
+    ],
+    [
+     "lot",
+     10
+    ]
+   ],
+   "info": "Mit Verstärker, Speicher und Stromanschluss. Steckverbinder abziehen, zwei Schrauben lösen.",
+   "color": "#2E6B45",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 40,
+     "y": 4,
+     "w": 14,
+     "d": 10,
+     "r": 1,
+     "fill": "#22272B"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 44,
+     "w": 12,
+     "d": 10,
+     "r": 1,
+     "fill": "#B7BCC0"
+    }
+   ]
+  },
+  {
+   "id": "magnet",
+   "component_id": "speaker_driver",
+   "material_id": "mixed_electronics",
+   "name": "Tieftöner-Magnet",
+   "short": "Magnet",
+   "shape": "cyl",
+   "x": 27.5,
+   "y": 27.5,
+   "w": 45,
+   "z": 72,
+   "h": 20,
+   "explode": [
+    0,
+    0,
+    173
+   ],
+   "mass": 137.8,
+   "materials": [
+    [
+     "ferrit",
+     70
+    ],
+    [
+     "stahl",
+     25
+    ],
+    [
+     "kupfer",
+     5
+    ]
+   ],
+   "info": "Schwerer Ferritmagnet mit Stahlpolplatten und Schwingspule. Kommt mit dem Stahl ins Altmetall.",
+   "color": "#5E656A",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 12.5,
+     "y": 12.5,
+     "w": 20,
+     "fill": "#9AA2A8"
+    }
+   ]
+  },
+  {
+   "id": "tieftoener",
+   "component_id": "speaker_driver",
+   "material_id": "mixed_electronics",
+   "name": "Tieftöner (Korb und Membran)",
+   "short": "Tieftöner",
+   "shape": "cyl",
+   "x": 12,
+   "y": 12,
+   "w": 76,
+   "z": 30,
+   "h": 42,
+   "explode": [
+    0,
+    0,
+    148
+   ],
+   "mass": 110.2,
+   "materials": [
+    [
+     "stahl",
+     45
+    ],
+    [
+     "papier",
+     25
+    ],
+    [
+     "gummi",
+     15
+    ],
+    [
+     "kupfer",
+     10
+    ],
+    [
+     "pcabs",
+     5
+    ]
+   ],
+   "info": "Großer Lautsprecher für den Bass, strahlt nach unten. Stahlkorb mit Papiermembran und Gummisicke.",
+   "color": "#3A3F44",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 6,
+     "y": 6,
+     "w": 64,
+     "fill": "#2B2F33"
+    },
+    {
+     "shape": "cyl",
+     "x": 26,
+     "y": 26,
+     "w": 24,
+     "fill": "#9AA2A8"
+    }
+   ]
+  },
+  {
+   "id": "innengehaeuse",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Innengehäuse",
+   "short": "Innengehäuse",
+   "shape": "cyl",
+   "x": 2,
+   "y": 2,
+   "w": 96,
+   "z": 10,
+   "h": 128,
+   "explode": [
+    0,
+    0,
+    15
+   ],
+   "mass": 229.6,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Stabiles Kunststoffrohr, in dem alle Teile verschraubt sind. Es bildet den Resonanzraum für den Bass.",
+   "color": "#3A3F44",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 4,
+     "w": 88,
+     "fill": "#2B2F33"
+    }
+   ]
+  },
+  {
+   "id": "stoffbezug",
+   "component_id": "speaker_fabric_cover",
+   "material_id": "polyester",
+   "name": "Stoffbezug",
+   "short": "Stoffbezug",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 100,
+   "z": 10,
+   "h": 130,
+   "explode": [
+    130,
+    -130,
+    0
+   ],
+   "mass": 23,
+   "materials": [
+    [
+     "polyester",
+     100
+    ]
+   ],
+   "info": "Polyestergewebe über einem dünnen Gitter. Sockel abhebeln, dann den Stoff nach oben abrollen. Waschbar und wiederverwendbar.",
+   "color": "#6E7579",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 2,
+     "y": 2,
+     "w": 96,
+     "fill": "#5E656A"
+    }
+   ]
+  },
+  {
+   "id": "netzteil",
+   "component_id": "power_adapter",
+   "material_id": "mixed_electronics",
+   "name": "Steckernetzteil",
+   "short": "Netzteil",
+   "shape": "box",
+   "x": 30,
+   "y": 30,
+   "w": 40,
+   "d": 40,
+   "z": 14,
+   "h": 30,
+   "r": 6,
+   "explode": [
+    -130,
+    130,
+    0
+   ],
+   "mass": 82.7,
+   "materials": [
+    [
+     "pcabs",
+     35
+    ],
+    [
+     "kupfer",
+     25
+    ],
+    [
+     "ferrit",
+     15
+    ],
+    [
+     "fr4",
+     15
+    ],
+    [
+     "chip",
+     5
+    ],
+    [
+     "elektrolyt",
+     5
+    ]
+   ],
+   "info": "Wandelt 230 Volt in 15 Volt um. Nicht öffnen; zusammen mit dem Lautsprecher als Elektroschrott abgeben.",
+   "color": "#F2F2F2",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 8,
+     "y": 8,
+     "w": 24,
+     "d": 24,
+     "r": 4,
+     "fill": "#E4E6E8"
+    }
+   ]
+  },
+  {
+   "id": "kabel",
+   "component_id": "power_adapter",
+   "material_id": "pvc",
+   "name": "Anschlusskabel",
+   "short": "Kabel",
+   "shape": "box",
+   "x": 10,
+   "y": 74,
+   "w": 80,
+   "d": 6,
+   "z": 12,
+   "h": 6,
+   "r": 3,
+   "explode": [
+    -130,
+    130,
+    0
+   ],
+   "mass": 36.7,
+   "materials": [
+    [
+     "pvc",
+     60
+    ],
+    [
+     "kupfer",
+     35
+    ],
+    [
+     "pcabs",
+     5
+    ]
+   ],
+   "info": "1,5 m Kabel mit Rundstecker. PVC-Mantel längs aufschlitzen, um die Kupferadern zu gewinnen.",
+   "color": "#F2F2F2"
+  },
+  {
+   "id": "sockel",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Sockel mit Gummifuß",
+   "short": "Sockel",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 100,
+   "z": 0,
+   "h": 10,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 55.1,
+   "materials": [
+    [
+     "pcabs",
+     80
+    ],
+    [
+     "gummi",
+     20
+    ]
+   ],
+   "info": "Bodenteil mit rutschfestem Gummiring und Strombuchse. Mit einem flachen Werkzeug abhebeln.",
+   "color": "#2B2F33",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 6,
+     "y": 6,
+     "w": 88,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "cyl",
+     "x": 12,
+     "y": 12,
+     "w": 76,
+     "fill": "#2B2F33"
+    }
+   ]
+  }
+ ]
+}

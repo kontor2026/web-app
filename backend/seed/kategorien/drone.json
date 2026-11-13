@@ -4,7 +4,7 @@
  "name_en": "Drone",
  "klasse": "Elektroschrott · Kleingerät",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -21,51 +21,52 @@
  "werte": [
   {
    "k": "Rohstoffwert",
-   "v": "≈ 2,16 €",
+   "v": "≈ 1,65 €",
    "hint": "Gold, Silber, Palladium zu Preisen vom 13.11. Ohne Kobalt, Palladium (kein Preis)."
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 5,04 kg",
+   "v": "≈ 5,54 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 4,48 kg",
-   "hint": "spart 0,56 kg, wenn recycelte Materialien eingesetzt werden"
+   "v": "≈ 5,28 kg",
+   "hint": "spart 0,26 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Cu": 73125.0,
-   "Fe": 25312.0,
-   "Al": 16875.0,
-   "Co": 15413.0,
-   "Ag": 45.0,
-   "Au": 10.0,
-   "Pd": 4.5
+   "Cu": 79500.0,
+   "Al": 31365.0,
+   "Co": 28647.0,
+   "Fe": 26685.0,
+   "Ag": 21.0,
+   "Au": 4.7,
+   "Pd": 2.09
   },
   "herkunft": {
    "Cu": "Modellmassen (Schätzung)",
-   "Fe": "Modellmassen (Schätzung)",
    "Al": "Modellmassen (Schätzung)",
-   "Co": "112 g Akku × 13,7% Kobalt (Schätzung, oeko2012 Tab, 25)",
-   "Ag": "56 g Leiterplatte × oeko2012 Tab, 15, Motherboard Notebook (Umicore 2011)",
-   "Au": "56 g Leiterplatte × oeko2012 Tab, 15, Motherboard Notebook (Umicore 2011)",
-   "Pd": "56 g Leiterplatte × oeko2012 Tab, 15, Motherboard Notebook (Umicore 2011)"
+   "Co": "209 g Akku × 13,7% Kobalt (Schätzung, oeko2012 Tab, 25)",
+   "Fe": "Modellmassen (Schätzung)",
+   "Ag": "26 g Leiterplatte × oeko2012 Tab, 15, Motherboard Notebook (Umicore 2011)",
+   "Au": "26 g Leiterplatte × oeko2012 Tab, 15, Motherboard Notebook (Umicore 2011)",
+   "Pd": "26 g Leiterplatte × oeko2012 Tab, 15, Motherboard Notebook (Umicore 2011)"
   },
   "materialien_g": {
-   "abs": 234.4,
-   "mixed_electronics": 168.8,
-   "li_ion": 112.5,
-   "pcb": 56.2,
-   "pp": 28.1
+   "li_ion": 209.1,
+   "mixed_electronics": 177.9,
+   "abs": 99.3,
+   "pc": 62.8,
+   "pcb": 26.1,
+   "pp": 25.2
   },
-  "co2_kg": 5.035,
-  "co2_mit_recyclat_kg": 4.476,
-  "co2_ersparnis_kg": 0.56,
+  "co2_kg": 5.543,
+  "co2_mit_recyclat_kg": 5.284,
+  "co2_ersparnis_kg": 0.259,
   "co2_ohne_faktor": [],
-  "rohstoffwert_eur": 2.16,
+  "rohstoffwert_eur": 1.65,
   "wert_ohne_preis": [
    "Co",
    "Pd"
@@ -116,165 +117,458 @@
   "nicht": "Nicht in Restmüll oder Gelbe Tonne",
   "warnung": "Akku oder Batterie nicht beschädigen. Wenn möglich herausnehmen und getrennt abgeben, fest verbaute Akkus drinlassen."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "propellers",
+   "id": "propeller_hl",
    "component_id": "propellers",
-   "name": "Propellers",
-   "short": "Propellers",
+   "material_id": "pp",
+   "name": "Propeller hinten links",
+   "short": "Propeller",
    "shape": "box",
-   "x": 117.0,
-   "y": 117.0,
-   "w": 66.0,
-   "d": 66.0,
-   "h": 13.5,
-   "z": 72.0,
-   "r": 7.9,
+   "x": 0,
+   "y": 59,
+   "w": 130,
+   "d": 12,
+   "z": 76,
+   "h": 6,
+   "r": 6,
    "explode": [
     0,
     0,
-    817.2
+    118.0
    ],
-   "mass": 28.13,
+   "mass": 6.3,
    "materials": [
     [
      "pp",
      100
     ]
    ],
-   "material_id": "pp",
-   "info": "Unscrew or push-and-twist them off the motors."
+   "info": "Leichter Kunststoffpropeller (zwei Blätter). Gegen den Uhrzeigersinn drücken und drehen, dann abnehmen. Kanten sind scharf: Finger weg, solange die Motoren laufen.",
+   "color": "#2B2F33",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 59,
+     "y": 0,
+     "w": 12,
+     "fill": "#9AA2A8"
+    }
+   ]
   },
   {
-   "id": "plastic_housing_ober",
-   "component_id": "plastic_housing",
-   "name": "Plastic Housing (Oberteil)",
-   "short": "Plastic Housing (O",
+   "id": "propeller_hr",
+   "component_id": "propellers",
+   "material_id": "pp",
+   "name": "Propeller hinten rechts",
+   "short": "Propeller",
    "shape": "box",
-   "x": 0,
-   "y": 0,
-   "w": 300.0,
-   "d": 300.0,
-   "h": 18.0,
-   "z": 54.0,
-   "r": 36.0,
+   "x": 170,
+   "y": 59,
+   "w": 130,
+   "d": 12,
+   "z": 76,
+   "h": 6,
+   "r": 6,
    "explode": [
     0,
     0,
-    697.2
+    118.0
    ],
-   "mass": 70.31,
+   "mass": 6.3,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Leichter Kunststoffpropeller (zwei Blätter). Gegen den Uhrzeigersinn drücken und drehen, dann abnehmen. Kanten sind scharf: Finger weg, solange die Motoren laufen.",
+   "color": "#2B2F33",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 59,
+     "y": 0,
+     "w": 12,
+     "fill": "#9AA2A8"
+    }
+   ]
+  },
+  {
+   "id": "propeller_vl",
+   "component_id": "propellers",
+   "material_id": "pp",
+   "name": "Propeller vorne links",
+   "short": "Propeller",
+   "shape": "box",
+   "x": 59,
+   "y": 170,
+   "w": 12,
+   "d": 130,
+   "z": 76,
+   "h": 6,
+   "r": 6,
+   "explode": [
+    0,
+    0,
+    118.0
+   ],
+   "mass": 6.3,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Leichter Kunststoffpropeller (zwei Blätter). Gegen den Uhrzeigersinn drücken und drehen, dann abnehmen. Kanten sind scharf: Finger weg, solange die Motoren laufen.",
+   "color": "#2B2F33",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0,
+     "y": 59,
+     "w": 12,
+     "fill": "#9AA2A8"
+    }
+   ]
+  },
+  {
+   "id": "propeller_vr",
+   "component_id": "propellers",
+   "material_id": "pp",
+   "name": "Propeller vorne rechts",
+   "short": "Propeller",
+   "shape": "box",
+   "x": 229,
+   "y": 170,
+   "w": 12,
+   "d": 130,
+   "z": 76,
+   "h": 6,
+   "r": 6,
+   "explode": [
+    0,
+    0,
+    118.0
+   ],
+   "mass": 6.3,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Leichter Kunststoffpropeller (zwei Blätter). Gegen den Uhrzeigersinn drücken und drehen, dann abnehmen. Kanten sind scharf: Finger weg, solange die Motoren laufen.",
+   "color": "#2B2F33",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0,
+     "y": 59,
+     "w": 12,
+     "fill": "#9AA2A8"
+    }
+   ]
+  },
+  {
+   "id": "motor_hl",
+   "component_id": "electric_motor",
+   "material_id": "mixed_electronics",
+   "name": "Motor hinten links",
+   "short": "Motor",
+   "shape": "cyl",
+   "x": 51,
+   "y": 51,
+   "w": 28,
+   "z": 52,
+   "h": 24,
+   "explode": [
+    0,
+    0,
+    48.0
+   ],
+   "mass": 31.4,
+   "materials": [
+    [
+     "kupfer",
+     30
+    ],
+    [
+     "ndfeb",
+     25
+    ],
+    [
+     "stahl",
+     25
+    ],
+    [
+     "alu",
+     20
+    ]
+   ],
+   "info": "Bürstenloser Motor: Kupferspulen innen, Neodym-Magnete in der drehenden Glocke. Mit vier Schrauben am Arm.",
+   "color": "#9AA2A8",
+   "label": true,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 4,
+     "w": 20,
+     "fill": "#5E656A"
+    },
+    {
+     "shape": "cyl",
+     "x": 11,
+     "y": 11,
+     "w": 6,
+     "fill": "#C9CED2"
+    }
+   ]
+  },
+  {
+   "id": "motor_hr",
+   "component_id": "electric_motor",
+   "material_id": "mixed_electronics",
+   "name": "Motor hinten rechts",
+   "short": "Motor",
+   "shape": "cyl",
+   "x": 221,
+   "y": 51,
+   "w": 28,
+   "z": 52,
+   "h": 24,
+   "explode": [
+    0,
+    0,
+    48.0
+   ],
+   "mass": 31.4,
+   "materials": [
+    [
+     "kupfer",
+     30
+    ],
+    [
+     "ndfeb",
+     25
+    ],
+    [
+     "stahl",
+     25
+    ],
+    [
+     "alu",
+     20
+    ]
+   ],
+   "info": "Bürstenloser Motor: Kupferspulen innen, Neodym-Magnete in der drehenden Glocke. Mit vier Schrauben am Arm.",
+   "color": "#9AA2A8",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 4,
+     "w": 20,
+     "fill": "#5E656A"
+    },
+    {
+     "shape": "cyl",
+     "x": 11,
+     "y": 11,
+     "w": 6,
+     "fill": "#C9CED2"
+    }
+   ]
+  },
+  {
+   "id": "motor_vl",
+   "component_id": "electric_motor",
+   "material_id": "mixed_electronics",
+   "name": "Motor vorne links",
+   "short": "Motor",
+   "shape": "cyl",
+   "x": 51,
+   "y": 221,
+   "w": 28,
+   "z": 52,
+   "h": 24,
+   "explode": [
+    0,
+    0,
+    48.0
+   ],
+   "mass": 31.4,
+   "materials": [
+    [
+     "kupfer",
+     30
+    ],
+    [
+     "ndfeb",
+     25
+    ],
+    [
+     "stahl",
+     25
+    ],
+    [
+     "alu",
+     20
+    ]
+   ],
+   "info": "Bürstenloser Motor: Kupferspulen innen, Neodym-Magnete in der drehenden Glocke. Mit vier Schrauben am Arm.",
+   "color": "#9AA2A8",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 4,
+     "w": 20,
+     "fill": "#5E656A"
+    },
+    {
+     "shape": "cyl",
+     "x": 11,
+     "y": 11,
+     "w": 6,
+     "fill": "#C9CED2"
+    }
+   ]
+  },
+  {
+   "id": "motor_vr",
+   "component_id": "electric_motor",
+   "material_id": "mixed_electronics",
+   "name": "Motor vorne rechts",
+   "short": "Motor",
+   "shape": "cyl",
+   "x": 221,
+   "y": 221,
+   "w": 28,
+   "z": 52,
+   "h": 24,
+   "explode": [
+    0,
+    0,
+    48.0
+   ],
+   "mass": 31.4,
+   "materials": [
+    [
+     "kupfer",
+     30
+    ],
+    [
+     "ndfeb",
+     25
+    ],
+    [
+     "stahl",
+     25
+    ],
+    [
+     "alu",
+     20
+    ]
+   ],
+   "info": "Bürstenloser Motor: Kupferspulen innen, Neodym-Magnete in der drehenden Glocke. Mit vier Schrauben am Arm.",
+   "color": "#9AA2A8",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 4,
+     "w": 20,
+     "fill": "#5E656A"
+    },
+    {
+     "shape": "cyl",
+     "x": 11,
+     "y": 11,
+     "w": 6,
+     "fill": "#C9CED2"
+    }
+   ]
+  },
+  {
+   "id": "oberschale",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Rumpf-Oberschale",
+   "short": "Oberschale",
+   "shape": "box",
+   "x": 105,
+   "y": 40,
+   "w": 90,
+   "d": 220,
+   "z": 40,
+   "h": 18,
+   "r": 14,
+   "explode": [
+    0,
+    0,
+    111.0
+   ],
+   "mass": 47,
    "materials": [
     [
      "pcabs",
      100
     ]
    ],
-   "material_id": "abs",
-   "info": "Look for hidden screws under rubber feet or labels, then pry the clips open."
+   "info": "Kunststoffdeckel des Rumpfs mit Akkuschacht und Statuslicht. Schrauben sitzen unten, dann vorsichtig aufclipsen.",
+   "color": "#3A3F44",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 12,
+     "y": 105,
+     "w": 66,
+     "d": 105,
+     "r": 6,
+     "fill": "#2B2F33"
+    },
+    {
+     "shape": "cyl",
+     "x": 40,
+     "y": 20,
+     "w": 10,
+     "fill": "#7FD07F"
+    }
+   ]
   },
   {
-   "id": "camera_lens_unit",
-   "component_id": "camera_lens_unit",
-   "name": "Lens Unit",
-   "short": "Lens Unit",
-   "shape": "cyl",
-   "x": 162.0,
-   "y": 162.0,
-   "w": 126.0,
-   "h": 24.3,
-   "z": 10.8,
-   "explode": [
-    0,
-    0,
-    596.1
-   ],
-   "mass": 56.25,
-   "materials": [
-    [
-     "chip",
-     30
-    ],
-    [
-     "kupfer",
-     30
-    ],
-    [
-     "pcabs",
-     25
-    ],
-    [
-     "stahl",
-     15
-    ]
-   ],
-   "material_id": "mixed_electronics",
-   "info": "Unscrew it from the body; it contains glass elements and a small motor."
-  },
-  {
-   "id": "circuit_board",
-   "component_id": "circuit_board",
-   "name": "Circuit Board",
-   "short": "Circuit Board",
-   "shape": "box",
-   "x": 12.0,
-   "y": 162.0,
-   "w": 126.0,
-   "d": 126.0,
-   "h": 24.3,
-   "z": 10.8,
-   "r": 15.1,
-   "explode": [
-    0,
-    0,
-    451.8
-   ],
-   "mass": 56.25,
-   "materials": [
-    [
-     "fr4",
-     55
-    ],
-    [
-     "kupfer",
-     20
-    ],
-    [
-     "chip",
-     15
-    ],
-    [
-     "lot",
-     10
-    ]
-   ],
-   "material_id": "pcb",
-   "info": "Unscrew and unplug all ribbon cables; hand in at an e-waste collection point."
-  },
-  {
-   "id": "li_ion_battery",
+   "id": "akku",
    "component_id": "li_ion_battery",
-   "name": "Lithium-Ion Battery",
-   "short": "Lithium-Ion Batter",
+   "material_id": "li_ion",
+   "name": "Lithium-Polymer-Akku",
+   "short": "Akku",
    "shape": "box",
-   "x": 162.0,
-   "y": 27.0,
-   "w": 126.0,
-   "d": 126.0,
-   "h": 24.3,
-   "z": 10.8,
-   "r": 15.1,
+   "x": 118,
+   "y": 148,
+   "w": 64,
+   "d": 100,
+   "z": 30,
+   "h": 26,
+   "r": 4,
    "explode": [
     0,
     0,
-    307.5
+    70.0
    ],
-   "mass": 112.5,
+   "mass": 209.1,
    "materials": [
     [
      "lco",
-     40
+     38
     ],
     [
      "graphit",
@@ -286,81 +580,290 @@
     ],
     [
      "alu",
-     15
-    ],
-    [
-     "kupfer",
      10
-    ]
-   ],
-   "material_id": "li_ion",
-   "info": "Never puncture or bend it; tape the contacts and bring it to a battery collection point."
-  },
-  {
-   "id": "electric_motor",
-   "component_id": "electric_motor",
-   "name": "Electric Motor",
-   "short": "Electric Motor",
-   "shape": "cyl",
-   "x": 12.0,
-   "y": 27.0,
-   "w": 126.0,
-   "h": 24.3,
-   "z": 10.8,
-   "explode": [
-    0,
-    0,
-    163.2
-   ],
-   "mass": 112.5,
-   "materials": [
-    [
-     "chip",
-     30
     ],
     [
      "kupfer",
-     30
+     8
     ],
     [
      "pcabs",
-     25
-    ],
-    [
-     "stahl",
-     15
+     9
     ]
    ],
-   "material_id": "mixed_electronics",
-   "info": "Unscrew from the housing and cut the wires; contains copper windings and magnets."
+   "info": "Flugakku mit 11 Volt. Nach hinten aus dem Rumpf ziehen. Aufgebläht oder beschädigt nie mehr laden; Pole abkleben und zur Sammelstelle.",
+   "color": "#2B2F33",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 6,
+     "y": 10,
+     "w": 52,
+     "d": 70,
+     "r": 3,
+     "fill": "#3F6E9C"
+    },
+    {
+     "shape": "box",
+     "x": 8,
+     "y": 88,
+     "w": 8,
+     "d": 6,
+     "fill": "#7FD07F"
+    }
+   ]
   },
   {
-   "id": "plastic_housing",
-   "component_id": "plastic_housing",
-   "name": "Plastic Housing (Unterteil)",
-   "short": "Plastic Housing (U",
+   "id": "flugsteuerung",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "Flugsteuerung mit Motorreglern",
+   "short": "Flugsteuerung",
    "shape": "box",
-   "x": 0,
-   "y": 0,
-   "w": 300.0,
-   "d": 300.0,
-   "h": 54.0,
-   "z": 0,
-   "r": 36.0,
+   "x": 112,
+   "y": 76,
+   "w": 76,
+   "d": 70,
+   "z": 24,
+   "h": 1.6,
+   "r": 3,
    "explode": [
     0,
     0,
-    0
+    36.0
    ],
-   "mass": 164.06,
+   "mass": 26.1,
+   "materials": [
+    [
+     "fr4",
+     45
+    ],
+    [
+     "kupfer",
+     22
+    ],
+    [
+     "chip",
+     25
+    ],
+    [
+     "lot",
+     8
+    ]
+   ],
+   "info": "Hält die Drohne mit Lagesensoren, GPS und Funkchip in der Luft und steuert die vier Motoren. Enthält Gold und Kupfer.",
+   "color": "#2E6B45",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 28,
+     "y": 25,
+     "w": 20,
+     "d": 20,
+     "r": 1,
+     "fill": "#22272B"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 4,
+     "w": 10,
+     "d": 10,
+     "fill": "#22272B"
+    },
+    {
+     "shape": "box",
+     "x": 62,
+     "y": 4,
+     "w": 10,
+     "d": 10,
+     "fill": "#22272B"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 56,
+     "w": 10,
+     "d": 10,
+     "fill": "#22272B"
+    },
+    {
+     "shape": "box",
+     "x": 62,
+     "y": 56,
+     "w": 10,
+     "d": 10,
+     "fill": "#22272B"
+    }
+   ]
+  },
+  {
+   "id": "arm_hinten",
+   "component_id": "plastic_housing",
+   "material_id": "pc",
+   "name": "Arm hinten",
+   "short": "Arm hinten",
+   "shape": "box",
+   "x": 55,
+   "y": 58,
+   "w": 190,
+   "d": 14,
+   "z": 42,
+   "h": 10,
+   "r": 5,
+   "explode": [
+    0,
+    0,
+    23.0
+   ],
+   "mass": 31.4,
    "materials": [
     [
      "pcabs",
      100
     ]
    ],
+   "info": "Steifer Kunststoffarm mit den Motorkabeln innen. Faltbar, mit einem Stahlstift im Gelenk.",
+   "color": "#3A3F44"
+  },
+  {
+   "id": "arm_vorne",
+   "component_id": "plastic_housing",
+   "material_id": "pc",
+   "name": "Arm vorne",
+   "short": "Arm vorne",
+   "shape": "box",
+   "x": 55,
+   "y": 228,
+   "w": 190,
+   "d": 14,
+   "z": 42,
+   "h": 10,
+   "r": 5,
+   "explode": [
+    0,
+    0,
+    23.0
+   ],
+   "mass": 31.4,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Vorderer Arm, baugleich mit dem hinteren. Kabel vor dem Abschrauben ablöten oder abziehen.",
+   "color": "#3A3F44"
+  },
+  {
+   "id": "unterschale",
+   "component_id": "plastic_housing",
    "material_id": "abs",
-   "info": "Look for hidden screws under rubber feet or labels, then pry the clips open."
+   "name": "Rumpf-Unterschale",
+   "short": "Unterschale",
+   "shape": "box",
+   "x": 105,
+   "y": 40,
+   "w": 90,
+   "d": 220,
+   "z": 12,
+   "h": 28,
+   "r": 14,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 52.3,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Bodenteil des Rumpfs mit Abstandssensoren und Landefüßen. Kunststoff, kommt mit in die Elektro-Sammlung.",
+   "color": "#3A3F44",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 30,
+     "y": 60,
+     "w": 12,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "cyl",
+     "x": 48,
+     "y": 60,
+     "w": 12,
+     "fill": "#1E2226"
+    }
+   ]
+  },
+  {
+   "id": "kamera",
+   "component_id": "camera_lens_unit",
+   "material_id": "mixed_electronics",
+   "name": "Kamera mit Gimbal",
+   "short": "Kamera",
+   "shape": "box",
+   "x": 130,
+   "y": 240,
+   "w": 40,
+   "d": 40,
+   "z": 0,
+   "h": 30,
+   "r": 6,
+   "explode": [
+    0,
+    60,
+    0
+   ],
+   "mass": 52.3,
+   "materials": [
+    [
+     "alu",
+     30
+    ],
+    [
+     "chip",
+     20
+    ],
+    [
+     "glas",
+     15
+    ],
+    [
+     "kupfer",
+     15
+    ],
+    [
+     "ndfeb",
+     10
+    ],
+    [
+     "pcabs",
+     10
+    ]
+   ],
+   "info": "Kamera mit Linsen und Bildsensor, die drei kleine Motoren (Gimbal) ruhig halten. Flachbandkabel vorsichtig abziehen.",
+   "color": "#2B2F33",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 12,
+     "y": 22,
+     "w": 16,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "cyl",
+     "x": 15,
+     "y": 25,
+     "w": 10,
+     "fill": "#3D5A80"
+    }
+   ]
   }
  ]
 }

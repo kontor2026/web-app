@@ -1,0 +1,1079 @@
+{
+ "parts": [
+  {
+   "id": "seitenwand",
+   "component_id": "steel_pc_case",
+   "material_id": "steel",
+   "name": "Seitenwand",
+   "short": "Seitenwand",
+   "shape": "box",
+   "x": 198,
+   "y": 0,
+   "w": 2,
+   "d": 400,
+   "z": 0,
+   "h": 450,
+   "r": 0.5,
+   "explode": [
+    0,
+    -450,
+    0
+   ],
+   "mass": 812.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Stahlblech, hinten mit zwei Rändelschrauben befestigt. Schrauben lösen und nach hinten abziehen.",
+   "color": "#3A3F44"
+  },
+  {
+   "id": "frontblende",
+   "component_id": "plastic_front_panel",
+   "material_id": "abs",
+   "name": "Frontblende",
+   "short": "Frontblende",
+   "shape": "box",
+   "x": 0,
+   "y": 400,
+   "w": 200,
+   "d": 20,
+   "z": 0,
+   "h": 450,
+   "r": 3,
+   "explode": [
+    0,
+    70,
+    0
+   ],
+   "mass": 487.4,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Kunststoffblende mit Einschalter, USB-Buchsen und Staubfilter. Unten kräftig ziehen, sie ist nur eingeclipst.",
+   "color": "#2B2F33",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 90,
+     "y": 4,
+     "w": 12,
+     "fill": "#5DADE2"
+    },
+    {
+     "shape": "box",
+     "x": 30,
+     "y": 6,
+     "w": 14,
+     "d": 6,
+     "r": 1,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "box",
+     "x": 50,
+     "y": 6,
+     "w": 14,
+     "d": 6,
+     "r": 1,
+     "fill": "#1E2226"
+    }
+   ]
+  },
+  {
+   "id": "kuehlerluefter",
+   "component_id": "cpu_cooler",
+   "material_id": "mixed_electronics",
+   "name": "Lüfter des CPU-Kühlers",
+   "short": "Kühlerlüfter",
+   "shape": "box",
+   "x": 22,
+   "y": 155,
+   "w": 120,
+   "d": 25,
+   "z": 290,
+   "h": 120,
+   "r": 4,
+   "explode": [
+    342.0,
+    0,
+    0
+   ],
+   "mass": 105.6,
+   "materials": [
+    [
+     "pcabs",
+     60
+    ],
+    [
+     "kupfer",
+     20
+    ],
+    [
+     "ferrit",
+     10
+    ],
+    [
+     "stahl",
+     5
+    ],
+    [
+     "chip",
+     5
+    ]
+   ],
+   "info": "120-mm-Lüfter, mit Drahtklammern am Kühlkörper. Er bläst die warme Luft nach hinten aus dem Gehäuse.",
+   "color": "#2B2F33",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 6,
+     "y": 2,
+     "w": 108,
+     "d": 21,
+     "fill": "#1E2226"
+    }
+   ]
+  },
+  {
+   "id": "kuehler",
+   "component_id": "cpu_cooler",
+   "material_id": "aluminium",
+   "name": "CPU-Kühlkörper mit Heatpipes",
+   "short": "CPU-Kühler",
+   "shape": "box",
+   "x": 10.6,
+   "y": 100,
+   "w": 150,
+   "d": 55,
+   "z": 290,
+   "h": 125,
+   "r": 2,
+   "explode": [
+    342.0,
+    0,
+    0
+   ],
+   "mass": 446.8,
+   "materials": [
+    [
+     "alu",
+     75
+    ],
+    [
+     "kupfer",
+     25
+    ]
+   ],
+   "info": "Viele dünne Aluminiumlamellen auf Kupfer-Heatpipes. Leicht verdrehen, damit sich die Wärmeleitpaste löst, dann abheben.",
+   "color": "#C9CED2",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 5,
+     "w": 142,
+     "d": 45,
+     "fill": "#B5BBC0"
+    },
+    {
+     "shape": "cyl",
+     "x": 20,
+     "y": 8,
+     "w": 8,
+     "d": 8,
+     "fill": "#B87333"
+    },
+    {
+     "shape": "cyl",
+     "x": 52,
+     "y": 8,
+     "w": 8,
+     "d": 8,
+     "fill": "#B87333"
+    },
+    {
+     "shape": "cyl",
+     "x": 84,
+     "y": 8,
+     "w": 8,
+     "d": 8,
+     "fill": "#B87333"
+    },
+    {
+     "shape": "cyl",
+     "x": 116,
+     "y": 8,
+     "w": 8,
+     "d": 8,
+     "fill": "#B87333"
+    }
+   ]
+  },
+  {
+   "id": "ram",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "Arbeitsspeicher (2 Module)",
+   "short": "RAM",
+   "shape": "box",
+   "x": 7.6,
+   "y": 195,
+   "w": 31,
+   "d": 16,
+   "z": 280,
+   "h": 133,
+   "r": 0.5,
+   "explode": [
+    292.0,
+    0,
+    0
+   ],
+   "mass": 56.9,
+   "materials": [
+    [
+     "fr4",
+     45
+    ],
+    [
+     "chip",
+     30
+    ],
+    [
+     "kupfer",
+     15
+    ],
+    [
+     "alu",
+     10
+    ]
+   ],
+   "info": "Zwei Speicherriegel mit Speicherchips. Die Klammern am Steckplatz zur Seite drücken, dann gerade herausziehen.",
+   "color": "#1F3A5F"
+  },
+  {
+   "id": "cpu",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "Prozessor (CPU)",
+   "short": "Prozessor",
+   "shape": "box",
+   "x": 7.6,
+   "y": 110,
+   "w": 3,
+   "d": 40,
+   "z": 330,
+   "h": 40,
+   "r": 1,
+   "explode": [
+    292.0,
+    0,
+    0
+   ],
+   "mass": 24.4,
+   "materials": [
+    [
+     "chip",
+     50
+    ],
+    [
+     "kupfer",
+     35
+    ],
+    [
+     "fr4",
+     15
+    ]
+   ],
+   "info": "Das Rechenzentrum des PCs: ein Siliziumchip unter einem vernickelten Kupferdeckel. Enthält auch etwas Gold.",
+   "color": "#B5BBC0"
+  },
+  {
+   "id": "ssd",
+   "component_id": "hard_drive",
+   "material_id": "pcb",
+   "name": "M.2-SSD",
+   "short": "SSD",
+   "shape": "box",
+   "x": 7.6,
+   "y": 110,
+   "w": 2.5,
+   "d": 22,
+   "z": 230,
+   "h": 80,
+   "r": 0.5,
+   "explode": [
+    292.0,
+    0,
+    0
+   ],
+   "mass": 6.5,
+   "materials": [
+    [
+     "fr4",
+     45
+    ],
+    [
+     "chip",
+     40
+    ],
+    [
+     "kupfer",
+     10
+    ],
+    [
+     "lot",
+     5
+    ]
+   ],
+   "info": "Flacher Speicherriegel mit dem Betriebssystem und allen Daten. Eine Schraube lösen; vor dem Abgeben Daten löschen.",
+   "color": "#2E6B45"
+  },
+  {
+   "id": "grafikkarte",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "Grafikkarte",
+   "short": "Grafikkarte",
+   "shape": "box",
+   "x": 7.6,
+   "y": 15,
+   "w": 112,
+   "d": 250,
+   "z": 185,
+   "h": 40,
+   "r": 3,
+   "explode": [
+    292.0,
+    0,
+    0
+   ],
+   "mass": 731.1,
+   "materials": [
+    [
+     "alu",
+     35
+    ],
+    [
+     "fr4",
+     20
+    ],
+    [
+     "kupfer",
+     15
+    ],
+    [
+     "pcabs",
+     15
+    ],
+    [
+     "chip",
+     10
+    ],
+    [
+     "stahl",
+     5
+    ]
+   ],
+   "info": "Eigene Platine mit Grafikchip, Speicher, Kühlkörper und Lüftern. Hinten verschraubt, im Steckplatz mit einem Riegel gesichert.",
+   "color": "#2B2F33",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 10,
+     "y": 20,
+     "w": 90,
+     "d": 95,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "cyl",
+     "x": 10,
+     "y": 135,
+     "w": 90,
+     "d": 95,
+     "fill": "#1E2226"
+    }
+   ]
+  },
+  {
+   "id": "mainboard",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "Mainboard (Hauptplatine)",
+   "short": "Mainboard",
+   "shape": "box",
+   "x": 6,
+   "y": 15,
+   "w": 1.6,
+   "d": 244,
+   "z": 140,
+   "h": 305,
+   "r": 0.5,
+   "explode": [
+    242,
+    0,
+    0
+   ],
+   "mass": 487.4,
+   "materials": [
+    [
+     "fr4",
+     50
+    ],
+    [
+     "kupfer",
+     18
+    ],
+    [
+     "chip",
+     15
+    ],
+    [
+     "stahl",
+     7
+    ],
+    [
+     "alu",
+     5
+    ],
+    [
+     "lot",
+     5
+    ]
+   ],
+   "info": "Verbindet alle Bauteile. Mit neun Schrauben am Gehäuse, vorher alle Stecker abziehen. Enthält Gold, Kupfer und Zinn.",
+   "color": "#2E6B45"
+  },
+  {
+   "id": "festplatte",
+   "component_id": "hard_drive",
+   "material_id": "mixed_electronics",
+   "name": "Festplatte (3,5 Zoll)",
+   "short": "Festplatte",
+   "shape": "box",
+   "x": 40,
+   "y": 240,
+   "w": 101.6,
+   "d": 147,
+   "z": 20,
+   "h": 26,
+   "r": 2,
+   "explode": [
+    208,
+    0,
+    0
+   ],
+   "mass": 519.9,
+   "materials": [
+    [
+     "alu",
+     55
+    ],
+    [
+     "stahl",
+     15
+    ],
+    [
+     "fr4",
+     10
+    ],
+    [
+     "kupfer",
+     10
+    ],
+    [
+     "ndfeb",
+     5
+    ],
+    [
+     "chip",
+     5
+    ]
+   ],
+   "info": "Drehende Magnetscheiben mit Lese-Schreibkopf und Neodym-Magneten. Daten löschen oder die Platte zerstören.",
+   "color": "#B5BBC0",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 6,
+     "y": 6,
+     "w": 89,
+     "d": 100,
+     "r": 4,
+     "fill": "#C9CED2"
+    },
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 112,
+     "w": 82,
+     "d": 30,
+     "r": 1,
+     "fill": "#E8E8E0"
+    }
+   ]
+  },
+  {
+   "id": "netzteil",
+   "component_id": "power_supply_unit",
+   "material_id": "mixed_electronics",
+   "name": "Netzteil",
+   "short": "Netzteil",
+   "shape": "box",
+   "x": 20,
+   "y": 5,
+   "w": 150,
+   "d": 140,
+   "z": 5,
+   "h": 86,
+   "r": 2,
+   "explode": [
+    228,
+    0,
+    0
+   ],
+   "mass": 1381,
+   "materials": [
+    [
+     "stahl",
+     45
+    ],
+    [
+     "kupfer",
+     15
+    ],
+    [
+     "alu",
+     10
+    ],
+    [
+     "fr4",
+     10
+    ],
+    [
+     "ferrit",
+     8
+    ],
+    [
+     "chip",
+     5
+    ],
+    [
+     "pcabs",
+     5
+    ],
+    [
+     "elektrolyt",
+     2
+    ]
+   ],
+   "info": "Macht aus 230 Volt die Gleichspannungen für den PC. Nur ausschrauben, nicht öffnen: Die Kondensatoren können noch geladen sein.",
+   "color": "#2B2F33",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 15,
+     "y": 10,
+     "w": 120,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "box",
+     "x": 25,
+     "y": 70,
+     "w": 100,
+     "d": 3,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 25,
+     "y": 82,
+     "w": 100,
+     "d": 3,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 25,
+     "y": 94,
+     "w": 100,
+     "d": 3,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 25,
+     "y": 106,
+     "w": 100,
+     "d": 3,
+     "fill": "#3A3F44"
+    }
+   ]
+  },
+  {
+   "id": "gehaeuse",
+   "component_id": "steel_pc_case",
+   "material_id": "steel",
+   "name": "Gehäuse (Stahlrahmen)",
+   "short": "Gehäuse",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 198,
+   "d": 400,
+   "z": 0,
+   "h": 450,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 2762,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Leeres Gehäuse aus verzinktem Stahlblech mit Laufwerksschächten. Wenn alles ausgebaut ist: ab zum Altmetall.",
+   "color": "#9AA2A8",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 30,
+     "y": 50,
+     "w": 14,
+     "d": 3,
+     "fill": "#7D858B"
+    },
+    {
+     "shape": "box",
+     "x": 50,
+     "y": 50,
+     "w": 14,
+     "d": 3,
+     "fill": "#7D858B"
+    },
+    {
+     "shape": "box",
+     "x": 70,
+     "y": 50,
+     "w": 14,
+     "d": 3,
+     "fill": "#7D858B"
+    },
+    {
+     "shape": "box",
+     "x": 90,
+     "y": 50,
+     "w": 14,
+     "d": 3,
+     "fill": "#7D858B"
+    },
+    {
+     "shape": "box",
+     "x": 110,
+     "y": 50,
+     "w": 14,
+     "d": 3,
+     "fill": "#7D858B"
+    },
+    {
+     "shape": "box",
+     "x": 130,
+     "y": 50,
+     "w": 14,
+     "d": 3,
+     "fill": "#7D858B"
+    },
+    {
+     "shape": "box",
+     "x": 150,
+     "y": 50,
+     "w": 14,
+     "d": 3,
+     "fill": "#7D858B"
+    },
+    {
+     "shape": "box",
+     "x": 30,
+     "y": 58,
+     "w": 14,
+     "d": 3,
+     "fill": "#7D858B"
+    },
+    {
+     "shape": "box",
+     "x": 50,
+     "y": 58,
+     "w": 14,
+     "d": 3,
+     "fill": "#7D858B"
+    },
+    {
+     "shape": "box",
+     "x": 70,
+     "y": 58,
+     "w": 14,
+     "d": 3,
+     "fill": "#7D858B"
+    },
+    {
+     "shape": "box",
+     "x": 90,
+     "y": 58,
+     "w": 14,
+     "d": 3,
+     "fill": "#7D858B"
+    },
+    {
+     "shape": "box",
+     "x": 110,
+     "y": 58,
+     "w": 14,
+     "d": 3,
+     "fill": "#7D858B"
+    },
+    {
+     "shape": "box",
+     "x": 130,
+     "y": 58,
+     "w": 14,
+     "d": 3,
+     "fill": "#7D858B"
+    },
+    {
+     "shape": "box",
+     "x": 150,
+     "y": 58,
+     "w": 14,
+     "d": 3,
+     "fill": "#7D858B"
+    },
+    {
+     "shape": "box",
+     "x": 30,
+     "y": 66,
+     "w": 14,
+     "d": 3,
+     "fill": "#7D858B"
+    },
+    {
+     "shape": "box",
+     "x": 50,
+     "y": 66,
+     "w": 14,
+     "d": 3,
+     "fill": "#7D858B"
+    },
+    {
+     "shape": "box",
+     "x": 70,
+     "y": 66,
+     "w": 14,
+     "d": 3,
+     "fill": "#7D858B"
+    },
+    {
+     "shape": "box",
+     "x": 90,
+     "y": 66,
+     "w": 14,
+     "d": 3,
+     "fill": "#7D858B"
+    },
+    {
+     "shape": "box",
+     "x": 110,
+     "y": 66,
+     "w": 14,
+     "d": 3,
+     "fill": "#7D858B"
+    },
+    {
+     "shape": "box",
+     "x": 130,
+     "y": 66,
+     "w": 14,
+     "d": 3,
+     "fill": "#7D858B"
+    },
+    {
+     "shape": "box",
+     "x": 150,
+     "y": 66,
+     "w": 14,
+     "d": 3,
+     "fill": "#7D858B"
+    },
+    {
+     "shape": "box",
+     "x": 30,
+     "y": 74,
+     "w": 14,
+     "d": 3,
+     "fill": "#7D858B"
+    },
+    {
+     "shape": "box",
+     "x": 50,
+     "y": 74,
+     "w": 14,
+     "d": 3,
+     "fill": "#7D858B"
+    },
+    {
+     "shape": "box",
+     "x": 70,
+     "y": 74,
+     "w": 14,
+     "d": 3,
+     "fill": "#7D858B"
+    },
+    {
+     "shape": "box",
+     "x": 90,
+     "y": 74,
+     "w": 14,
+     "d": 3,
+     "fill": "#7D858B"
+    },
+    {
+     "shape": "box",
+     "x": 110,
+     "y": 74,
+     "w": 14,
+     "d": 3,
+     "fill": "#7D858B"
+    },
+    {
+     "shape": "box",
+     "x": 130,
+     "y": 74,
+     "w": 14,
+     "d": 3,
+     "fill": "#7D858B"
+    },
+    {
+     "shape": "box",
+     "x": 150,
+     "y": 74,
+     "w": 14,
+     "d": 3,
+     "fill": "#7D858B"
+    },
+    {
+     "shape": "box",
+     "x": 30,
+     "y": 82,
+     "w": 14,
+     "d": 3,
+     "fill": "#7D858B"
+    },
+    {
+     "shape": "box",
+     "x": 50,
+     "y": 82,
+     "w": 14,
+     "d": 3,
+     "fill": "#7D858B"
+    },
+    {
+     "shape": "box",
+     "x": 70,
+     "y": 82,
+     "w": 14,
+     "d": 3,
+     "fill": "#7D858B"
+    },
+    {
+     "shape": "box",
+     "x": 90,
+     "y": 82,
+     "w": 14,
+     "d": 3,
+     "fill": "#7D858B"
+    },
+    {
+     "shape": "box",
+     "x": 110,
+     "y": 82,
+     "w": 14,
+     "d": 3,
+     "fill": "#7D858B"
+    },
+    {
+     "shape": "box",
+     "x": 130,
+     "y": 82,
+     "w": 14,
+     "d": 3,
+     "fill": "#7D858B"
+    },
+    {
+     "shape": "box",
+     "x": 150,
+     "y": 82,
+     "w": 14,
+     "d": 3,
+     "fill": "#7D858B"
+    },
+    {
+     "shape": "box",
+     "x": 30,
+     "y": 90,
+     "w": 14,
+     "d": 3,
+     "fill": "#7D858B"
+    },
+    {
+     "shape": "box",
+     "x": 50,
+     "y": 90,
+     "w": 14,
+     "d": 3,
+     "fill": "#7D858B"
+    },
+    {
+     "shape": "box",
+     "x": 70,
+     "y": 90,
+     "w": 14,
+     "d": 3,
+     "fill": "#7D858B"
+    },
+    {
+     "shape": "box",
+     "x": 90,
+     "y": 90,
+     "w": 14,
+     "d": 3,
+     "fill": "#7D858B"
+    },
+    {
+     "shape": "box",
+     "x": 110,
+     "y": 90,
+     "w": 14,
+     "d": 3,
+     "fill": "#7D858B"
+    },
+    {
+     "shape": "box",
+     "x": 130,
+     "y": 90,
+     "w": 14,
+     "d": 3,
+     "fill": "#7D858B"
+    },
+    {
+     "shape": "box",
+     "x": 150,
+     "y": 90,
+     "w": 14,
+     "d": 3,
+     "fill": "#7D858B"
+    },
+    {
+     "shape": "box",
+     "x": 20,
+     "y": 250,
+     "w": 150,
+     "d": 120,
+     "r": 4,
+     "fill": "#7D858B"
+    }
+   ]
+  },
+  {
+   "id": "kabel",
+   "component_id": "cable_insulation",
+   "material_id": "pvc",
+   "name": "Netzkabel (Isolierung)",
+   "short": "Kabel",
+   "shape": "box",
+   "x": 20,
+   "y": 180,
+   "w": 160,
+   "d": 10,
+   "z": 0,
+   "h": 8,
+   "r": 4,
+   "explode": [
+    -200,
+    0,
+    0
+   ],
+   "mass": 121.9,
+   "materials": [
+    [
+     "pvc",
+     90
+    ],
+    [
+     "pp",
+     10
+    ]
+   ],
+   "info": "1,5 m Kaltgerätekabel mit PVC-Mantel. Stecker abschneiden und längs aufschlitzen.",
+   "color": "#2B2F33",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 0,
+     "w": 25,
+     "d": 10,
+     "r": 2,
+     "fill": "#4A5156"
+    },
+    {
+     "shape": "box",
+     "x": 135,
+     "y": 0,
+     "w": 25,
+     "d": 10,
+     "r": 2,
+     "fill": "#4A5156"
+    }
+   ]
+  },
+  {
+   "id": "kupferadern",
+   "component_id": "cable_copper_core",
+   "material_id": "copper",
+   "name": "Kupferadern",
+   "short": "Kupferadern",
+   "shape": "box",
+   "x": 20,
+   "y": 205,
+   "w": 160,
+   "d": 4,
+   "z": 0,
+   "h": 4,
+   "r": 1,
+   "explode": [
+    -200,
+    0,
+    0
+   ],
+   "mass": 56.9,
+   "materials": [
+    [
+     "kupfer",
+     100
+    ]
+   ],
+   "info": "Drei Kupferadern (Phase, Neutralleiter, Schutzleiter). Reines Kupfer ist wertvoll.",
+   "color": "#B87333"
+  }
+ ]
+}

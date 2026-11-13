@@ -4,7 +4,7 @@
  "name_en": "Digital Camera",
  "klasse": "Elektroschrott · Kleingerät",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -21,51 +21,52 @@
  "werte": [
   {
    "k": "Rohstoffwert",
-   "v": "≈ 0,96 €",
+   "v": "≈ 1,19 €",
    "hint": "Gold, Silber, Palladium zu Preisen vom 13.11. Ohne Kobalt, Palladium (kein Preis)."
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 2,41 kg",
+   "v": "≈ 2,73 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 2,13 kg",
-   "hint": "spart 0,28 kg, wenn recycelte Materialien eingesetzt werden"
+   "v": "≈ 1,80 kg",
+   "hint": "spart 0,93 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Cu": 27690.0,
-   "Fe": 8307.0,
-   "Al": 8307.0,
-   "Co": 7587.0,
-   "Ag": 22.0,
-   "Au": 4.98,
-   "Pd": 2.22
+   "Al": 74190.0,
+   "Cu": 35260.0,
+   "Fe": 13590.0,
+   "Co": 4192.0,
+   "Ag": 20.0,
+   "Au": 4.52,
+   "Pd": 2.01
   },
   "herkunft": {
+   "Al": "Modellmassen (Schätzung)",
    "Cu": "Modellmassen (Schätzung)",
    "Fe": "Modellmassen (Schätzung)",
-   "Al": "Modellmassen (Schätzung)",
-   "Co": "55 g Akku × 13,7% Kobalt (Schätzung, oeko2012 Tab, 25)",
-   "Ag": "28 g Leiterplatte × oeko2012 Tab, 15, Motherboard Notebook (Umicore 2011)",
-   "Au": "28 g Leiterplatte × oeko2012 Tab, 15, Motherboard Notebook (Umicore 2011)",
-   "Pd": "28 g Leiterplatte × oeko2012 Tab, 15, Motherboard Notebook (Umicore 2011)"
+   "Co": "31 g Akku × 13,7% Kobalt (Schätzung, oeko2012 Tab, 25)",
+   "Ag": "25 g Leiterplatte × oeko2012 Tab, 15, Motherboard Notebook (Umicore 2011)",
+   "Au": "25 g Leiterplatte × oeko2012 Tab, 15, Motherboard Notebook (Umicore 2011)",
+   "Pd": "25 g Leiterplatte × oeko2012 Tab, 15, Motherboard Notebook (Umicore 2011)"
   },
   "materialien_g": {
-   "abs": 115.4,
-   "mixed_electronics": 55.4,
-   "li_ion": 55.4,
-   "special_glass": 46.1,
-   "pcb": 27.7
+   "mixed_electronics": 90.6,
+   "aluminium": 69.6,
+   "abs": 55.7,
+   "li_ion": 30.6,
+   "special_glass": 28.6,
+   "pcb": 25.1
   },
-  "co2_kg": 2.413,
-  "co2_mit_recyclat_kg": 2.128,
-  "co2_ersparnis_kg": 0.285,
+  "co2_kg": 2.732,
+  "co2_mit_recyclat_kg": 1.799,
+  "co2_ersparnis_kg": 0.934,
   "co2_ohne_faktor": [],
-  "rohstoffwert_eur": 0.96,
+  "rohstoffwert_eur": 1.19,
   "wert_ohne_preis": [
    "Co",
    "Pd"
@@ -116,127 +117,448 @@
   "nicht": "Nicht in Restmüll oder Gelbe Tonne",
   "warnung": "Akku oder Batterie nicht beschädigen. Wenn möglich herausnehmen und getrennt abgeben, fest verbaute Akkus drinlassen."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "lcd_panel",
-   "component_id": "lcd_panel",
-   "name": "LCD Panel",
-   "short": "LCD Panel",
+   "id": "frontschale",
+   "component_id": "plastic_housing",
+   "material_id": "aluminium",
+   "name": "Frontschale (Aluminium)",
+   "short": "Frontschale",
    "shape": "box",
-   "x": 2.2,
-   "y": 1.3,
-   "w": 105.6,
-   "d": 62.4,
-   "h": 2.7,
-   "z": 36.0,
-   "r": 7.5,
+   "x": 0,
+   "y": 0,
+   "w": 110,
+   "d": 65,
+   "z": 14,
+   "h": 14,
+   "r": 6,
    "explode": [
     0,
     0,
-    258.8
+    159.7
    ],
-   "mass": 46.15,
+   "mass": 69.6,
+   "materials": [
+    [
+     "alu",
+     85
+    ],
+    [
+     "pcabs",
+     15
+    ]
+   ],
+   "info": "Vorderes Gehäuseteil aus Aluminium mit Öffnung für das Objektiv. Nach dem Lösen der kleinen Schrauben an Seiten und Boden abheben.",
+   "color": "#9AA2A8",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 43,
+     "y": 9.5,
+     "w": 46,
+     "fill": "#2B2F33"
+    },
+    {
+     "shape": "box",
+     "x": 8,
+     "y": 5,
+     "w": 30,
+     "d": 10,
+     "r": 2,
+     "fill": "#E8ECEE"
+    },
+    {
+     "shape": "cyl",
+     "x": 92,
+     "y": 8,
+     "w": 6,
+     "fill": "#C0392B"
+    }
+   ]
+  },
+  {
+   "id": "frontlinse",
+   "component_id": "camera_lens_unit",
+   "material_id": "special_glass",
+   "name": "Frontlinse",
+   "short": "Frontlinse",
+   "shape": "cyl",
+   "x": 56,
+   "y": 22.5,
+   "w": 20,
+   "z": 42,
+   "h": 3,
+   "explode": [
+    0,
+    0,
+    110.7
+   ],
+   "mass": 4.2,
    "materials": [
     [
      "glas",
      100
     ]
    ],
-   "material_id": "special_glass",
-   "info": "Remove the back cover screws; handle the panel flat, it breaks easily."
+   "info": "Vorderste Glaslinse, sammelt das Licht. Optisches Glas, nicht ins Altglas.",
+   "color": "#BFD8E0",
+   "opacity": 0.65
   },
   {
-   "id": "plastic_housing_ober",
-   "component_id": "plastic_housing",
-   "name": "Plastic Housing (Oberteil)",
-   "short": "Plastic Housing (O",
-   "shape": "box",
-   "x": 0,
-   "y": 0,
-   "w": 110.0,
-   "d": 65.0,
-   "h": 9.0,
-   "z": 27.0,
-   "r": 7.8,
+   "id": "linse_mitte",
+   "component_id": "camera_lens_unit",
+   "material_id": "special_glass",
+   "name": "Zoomlinse",
+   "short": "Zoomlinse",
+   "shape": "cyl",
+   "x": 58,
+   "y": 24.5,
+   "w": 16,
+   "z": 32,
+   "h": 3,
    "explode": [
     0,
     0,
-    223.8
+    105.7
    ],
-   "mass": 34.62,
+   "mass": 2.8,
    "materials": [
     [
-     "pcabs",
+     "glas",
      100
     ]
    ],
-   "material_id": "abs",
-   "info": "Look for hidden screws under rubber feet or labels, then pry the clips open."
+   "info": "Bewegliche Linsengruppe: Ein kleiner Motor verschiebt sie zum Zoomen.",
+   "color": "#BFD8E0",
+   "opacity": 0.65
   },
   {
-   "id": "memory_card",
-   "component_id": "memory_card",
-   "name": "Memory Card",
-   "short": "Memory Card",
-   "shape": "box",
-   "x": 59.4,
-   "y": 35.1,
-   "w": 46.2,
-   "d": 27.3,
-   "h": 12.15,
-   "z": 5.4,
-   "r": 3.3,
+   "id": "linse_hinten",
+   "component_id": "camera_lens_unit",
+   "material_id": "special_glass",
+   "name": "Fokuslinse",
+   "short": "Fokuslinse",
+   "shape": "cyl",
+   "x": 60,
+   "y": 26.5,
+   "w": 12,
+   "z": 22,
+   "h": 3,
    "explode": [
     0,
     0,
-    198.2
+    100.7
    ],
-   "mass": 27.69,
+   "mass": 2.1,
    "materials": [
     [
-     "chip",
-     30
-    ],
-    [
-     "kupfer",
-     30
-    ],
+     "glas",
+     100
+    ]
+   ],
+   "info": "Stellt scharf, indem sie sich ein winziges Stück vor oder zurück bewegt.",
+   "color": "#BFD8E0",
+   "opacity": 0.65
+  },
+  {
+   "id": "tubus",
+   "component_id": "camera_lens_unit",
+   "material_id": "mixed_electronics",
+   "name": "Objektivtubus",
+   "short": "Tubus",
+   "shape": "cyl",
+   "x": 44,
+   "y": 10.5,
+   "w": 44,
+   "z": 16,
+   "h": 26,
+   "explode": [
+    0,
+    0,
+    68.7
+   ],
+   "mass": 55.7,
+   "materials": [
     [
      "pcabs",
+     60
+    ],
+    [
+     "alu",
      25
     ],
     [
      "stahl",
-     15
+     10
+    ],
+    [
+     "kupfer",
+     5
     ]
    ],
-   "material_id": "mixed_electronics",
-   "info": "Push to release it; wipe it or keep it, it may still hold photos."
+   "info": "Ineinander gesteckte Ringe, die beim Einschalten ausfahren. Mit drei Schrauben auf dem Sensor befestigt.",
+   "color": "#2B2F33",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 4,
+     "w": 36,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 12,
+     "y": 12,
+     "w": 20,
+     "fill": "#1E2226"
+    }
+   ]
   },
   {
-   "id": "li_ion_battery",
-   "component_id": "li_ion_battery",
-   "name": "Lithium-Ion Battery",
-   "short": "Lithium-Ion Batter",
-   "shape": "box",
-   "x": 4.4,
-   "y": 35.1,
-   "w": 46.2,
-   "d": 27.3,
-   "h": 12.15,
-   "z": 5.4,
-   "r": 3.3,
+   "id": "zoommotor",
+   "component_id": "camera_lens_unit",
+   "material_id": "mixed_electronics",
+   "name": "Zoommotor",
+   "short": "Zoommotor",
+   "shape": "cyl",
+   "x": 90,
+   "y": 44,
+   "w": 10,
+   "z": 16,
+   "h": 12,
    "explode": [
     0,
     0,
-    151.0
+    56.7
    ],
-   "mass": 55.38,
+   "mass": 7,
+   "materials": [
+    [
+     "stahl",
+     40
+    ],
+    [
+     "kupfer",
+     35
+    ],
+    [
+     "ndfeb",
+     20
+    ],
+    [
+     "pcabs",
+     5
+    ]
+   ],
+   "info": "Winziger Elektromotor mit Zahnrädern, der den Tubus aus- und einfährt. Enthält einen Neodym-Magneten.",
+   "color": "#B5BBC0"
+  },
+  {
+   "id": "bildsensor",
+   "component_id": "camera_lens_unit",
+   "material_id": "mixed_electronics",
+   "name": "Bildsensor",
+   "short": "Bildsensor",
+   "shape": "box",
+   "x": 56,
+   "y": 25,
+   "w": 20,
+   "d": 15,
+   "z": 14,
+   "h": 2,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    50.7
+   ],
+   "mass": 4.2,
+   "materials": [
+    [
+     "chip",
+     50
+    ],
+    [
+     "keramik",
+     30
+    ],
+    [
+     "glas",
+     20
+    ]
+   ],
+   "info": "Siliziumchip mit Millionen lichtempfindlicher Punkte (Pixel), hinter einem Schutzglas. Nicht berühren.",
+   "color": "#4B3B5C",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 3,
+     "w": 12,
+     "d": 9,
+     "r": 0.5,
+     "fill": "#7A5C8C"
+    }
+   ]
+  },
+  {
+   "id": "blitz",
+   "component_id": "circuit_board",
+   "material_id": "mixed_electronics",
+   "name": "Blitzeinheit mit Kondensator",
+   "short": "Blitz",
+   "shape": "box",
+   "x": 6,
+   "y": 3,
+   "w": 34,
+   "d": 13,
+   "z": 16,
+   "h": 10,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    37.5
+   ],
+   "mass": 20.9,
+   "materials": [
+    [
+     "alu",
+     35
+    ],
+    [
+     "glas",
+     15
+    ],
+    [
+     "kupfer",
+     15
+    ],
+    [
+     "papier",
+     10
+    ],
+    [
+     "elektrolyt",
+     10
+    ],
+    [
+     "fr4",
+     10
+    ],
+    [
+     "pcabs",
+     5
+    ]
+   ],
+   "info": "Blitzröhre mit Reflektor und einem großen Kondensator, der auf über 300 Volt aufgeladen wird. Gefährlich: nie an die Kontakte fassen, auch wenn der Akku fehlt.",
+   "color": "#C9CED2",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 2,
+     "w": 22,
+     "d": 9,
+     "r": 2,
+     "fill": "#F2F2E8"
+    },
+    {
+     "shape": "cyl",
+     "x": 25,
+     "y": 2,
+     "w": 8,
+     "fill": "#2B2F33"
+    }
+   ]
+  },
+  {
+   "id": "hauptplatine",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "Hauptplatine",
+   "short": "Hauptplatine",
+   "shape": "box",
+   "x": 44,
+   "y": 4,
+   "w": 62,
+   "d": 57,
+   "z": 12,
+   "h": 1.2,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    41.5
+   ],
+   "mass": 25.1,
+   "materials": [
+    [
+     "fr4",
+     45
+    ],
+    [
+     "kupfer",
+     20
+    ],
+    [
+     "chip",
+     25
+    ],
+    [
+     "lot",
+     10
+    ]
+   ],
+   "info": "Mit Bildprozessor, Speicher und Kartenleser. Flachbandkabel zu Display und Objektiv vorsichtig lösen.",
+   "color": "#2E6B45",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 40,
+     "y": 42,
+     "w": 12,
+     "d": 12,
+     "r": 1,
+     "fill": "#22272B"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 44,
+     "w": 10,
+     "d": 8,
+     "r": 1,
+     "fill": "#22272B"
+    }
+   ]
+  },
+  {
+   "id": "akku",
+   "component_id": "li_ion_battery",
+   "material_id": "li_ion",
+   "name": "Lithium-Ionen-Akku",
+   "short": "Akku",
+   "shape": "box",
+   "x": 4,
+   "y": 17,
+   "w": 36,
+   "d": 44,
+   "z": 4,
+   "h": 9,
+   "r": 2,
+   "explode": [
+    0,
+    80,
+    0
+   ],
+   "mass": 30.6,
    "materials": [
     [
      "lco",
-     40
+     38
     ],
     [
      "graphit",
@@ -248,121 +570,181 @@
     ],
     [
      "alu",
-     15
+     12
     ],
     [
      "kupfer",
-     10
-    ]
-   ],
-   "material_id": "li_ion",
-   "info": "Never puncture or bend it; tape the contacts and bring it to a battery collection point."
-  },
-  {
-   "id": "circuit_board",
-   "component_id": "circuit_board",
-   "name": "Circuit Board",
-   "short": "Circuit Board",
-   "shape": "box",
-   "x": 59.4,
-   "y": 5.8,
-   "w": 46.2,
-   "d": 27.3,
-   "h": 12.15,
-   "z": 5.4,
-   "r": 3.3,
-   "explode": [
-    0,
-    0,
-    103.8
-   ],
-   "mass": 27.69,
-   "materials": [
-    [
-     "fr4",
-     55
-    ],
-    [
-     "kupfer",
-     20
-    ],
-    [
-     "chip",
-     15
-    ],
-    [
-     "lot",
-     10
-    ]
-   ],
-   "material_id": "pcb",
-   "info": "Unscrew and unplug all ribbon cables; hand in at an e-waste collection point."
-  },
-  {
-   "id": "camera_lens_unit",
-   "component_id": "camera_lens_unit",
-   "name": "Lens Unit",
-   "short": "Lens Unit",
-   "shape": "cyl",
-   "x": 13.8,
-   "y": 5.8,
-   "w": 27.3,
-   "h": 12.15,
-   "z": 5.4,
-   "explode": [
-    0,
-    0,
-    56.6
-   ],
-   "mass": 27.69,
-   "materials": [
-    [
-     "chip",
-     30
-    ],
-    [
-     "kupfer",
-     30
+     8
     ],
     [
      "pcabs",
-     25
-    ],
-    [
-     "stahl",
-     15
+     7
     ]
    ],
-   "material_id": "mixed_electronics",
-   "info": "Unscrew it from the body; it contains glass elements and a small motor."
+   "info": "Wechselakku mit Kontakten an einer Kante. Klappe öffnen, Riegel zur Seite schieben, Akku herausnehmen. Pole abkleben und zur Batterie-Sammelstelle.",
+   "color": "#2B2F33",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 6,
+     "w": 28,
+     "d": 30,
+     "r": 2,
+     "fill": "#5DADE2"
+    }
+   ]
   },
   {
-   "id": "plastic_housing",
-   "component_id": "plastic_housing",
-   "name": "Plastic Housing (Unterteil)",
-   "short": "Plastic Housing (U",
+   "id": "speicherkarte",
+   "component_id": "memory_card",
+   "material_id": "mixed_electronics",
+   "name": "SD-Speicherkarte",
+   "short": "Speicherkarte",
    "shape": "box",
-   "x": 0,
-   "y": 0,
-   "w": 110.0,
-   "d": 65.0,
-   "h": 27.0,
-   "z": 0,
-   "r": 7.8,
+   "x": 10,
+   "y": 33,
+   "w": 24,
+   "d": 32,
+   "z": 13.5,
+   "h": 2.1,
+   "r": 1,
+   "explode": [
+    0,
+    80,
+    15
+   ],
+   "mass": 2.8,
+   "materials": [
+    [
+     "pcabs",
+     55
+    ],
+    [
+     "chip",
+     35
+    ],
+    [
+     "kupfer",
+     10
+    ]
+   ],
+   "info": "Speichert die Fotos. Zum Lösen eindrücken; die Fotos vorher sichern und die Karte löschen oder behalten.",
+   "color": "#1F3A5F",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 3,
+     "w": 18,
+     "d": 10,
+     "r": 1,
+     "fill": "#E8E8E0"
+    }
+   ]
+  },
+  {
+   "id": "display",
+   "component_id": "lcd_panel",
+   "material_id": "special_glass",
+   "name": "LCD-Display",
+   "short": "Display",
+   "shape": "box",
+   "x": 6,
+   "y": 8,
+   "w": 74,
+   "d": 49,
+   "z": 1.5,
+   "h": 3.5,
+   "r": 2,
    "explode": [
     0,
     0,
-    0
+    30.5
    ],
-   "mass": 80.77,
+   "mass": 19.5,
+   "materials": [
+    [
+     "displayglas",
+     70
+    ],
+    [
+     "folien",
+     15
+    ],
+    [
+     "led",
+     5
+    ],
+    [
+     "kupfer",
+     5
+    ],
+    [
+     "chip",
+     5
+    ]
+   ],
+   "info": "3-Zoll-Bildschirm mit Hintergrundlicht, zeigt nach hinten. Flach anfassen, das Glas bricht leicht.",
+   "color": "#31373B",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 6,
+     "y": 2,
+     "w": 62,
+     "d": 45,
+     "r": 1,
+     "fill": "#9AA2A8"
+    }
+   ]
+  },
+  {
+   "id": "rueckschale",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Rückschale mit Tasten",
+   "short": "Rückschale",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 110,
+   "d": 65,
+   "z": 0,
+   "h": 14,
+   "r": 6,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 55.7,
    "materials": [
     [
      "pcabs",
      100
     ]
    ],
-   "material_id": "abs",
-   "info": "Look for hidden screws under rubber feet or labels, then pry the clips open."
+   "info": "Hinteres Gehäuseteil mit Displayfenster, Tasten und Stativgewinde. Kunststoff mit kleinen Metallteilen.",
+   "color": "#3A3F44",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 6,
+     "w": 78,
+     "d": 53,
+     "r": 3,
+     "fill": "#2B2F33"
+    },
+    {
+     "shape": "cyl",
+     "x": 88,
+     "y": 20,
+     "w": 14,
+     "fill": "#4A5156"
+    }
+   ]
   }
  ]
 }

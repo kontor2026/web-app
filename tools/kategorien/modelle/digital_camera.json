@@ -1,0 +1,631 @@
+{
+ "parts": [
+  {
+   "id": "frontschale",
+   "component_id": "plastic_housing",
+   "material_id": "aluminium",
+   "name": "Frontschale (Aluminium)",
+   "short": "Frontschale",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 110,
+   "d": 65,
+   "z": 14,
+   "h": 14,
+   "r": 6,
+   "explode": [
+    0,
+    0,
+    159.7
+   ],
+   "mass": 69.6,
+   "materials": [
+    [
+     "alu",
+     85
+    ],
+    [
+     "pcabs",
+     15
+    ]
+   ],
+   "info": "Vorderes Gehäuseteil aus Aluminium mit Öffnung für das Objektiv. Nach dem Lösen der kleinen Schrauben an Seiten und Boden abheben.",
+   "color": "#9AA2A8",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 43,
+     "y": 9.5,
+     "w": 46,
+     "fill": "#2B2F33"
+    },
+    {
+     "shape": "box",
+     "x": 8,
+     "y": 5,
+     "w": 30,
+     "d": 10,
+     "r": 2,
+     "fill": "#E8ECEE"
+    },
+    {
+     "shape": "cyl",
+     "x": 92,
+     "y": 8,
+     "w": 6,
+     "fill": "#C0392B"
+    }
+   ]
+  },
+  {
+   "id": "frontlinse",
+   "component_id": "camera_lens_unit",
+   "material_id": "special_glass",
+   "name": "Frontlinse",
+   "short": "Frontlinse",
+   "shape": "cyl",
+   "x": 56,
+   "y": 22.5,
+   "w": 20,
+   "z": 42,
+   "h": 3,
+   "explode": [
+    0,
+    0,
+    110.7
+   ],
+   "mass": 4.2,
+   "materials": [
+    [
+     "glas",
+     100
+    ]
+   ],
+   "info": "Vorderste Glaslinse, sammelt das Licht. Optisches Glas, nicht ins Altglas.",
+   "color": "#BFD8E0",
+   "opacity": 0.65
+  },
+  {
+   "id": "linse_mitte",
+   "component_id": "camera_lens_unit",
+   "material_id": "special_glass",
+   "name": "Zoomlinse",
+   "short": "Zoomlinse",
+   "shape": "cyl",
+   "x": 58,
+   "y": 24.5,
+   "w": 16,
+   "z": 32,
+   "h": 3,
+   "explode": [
+    0,
+    0,
+    105.7
+   ],
+   "mass": 2.8,
+   "materials": [
+    [
+     "glas",
+     100
+    ]
+   ],
+   "info": "Bewegliche Linsengruppe: Ein kleiner Motor verschiebt sie zum Zoomen.",
+   "color": "#BFD8E0",
+   "opacity": 0.65
+  },
+  {
+   "id": "linse_hinten",
+   "component_id": "camera_lens_unit",
+   "material_id": "special_glass",
+   "name": "Fokuslinse",
+   "short": "Fokuslinse",
+   "shape": "cyl",
+   "x": 60,
+   "y": 26.5,
+   "w": 12,
+   "z": 22,
+   "h": 3,
+   "explode": [
+    0,
+    0,
+    100.7
+   ],
+   "mass": 2.1,
+   "materials": [
+    [
+     "glas",
+     100
+    ]
+   ],
+   "info": "Stellt scharf, indem sie sich ein winziges Stück vor oder zurück bewegt.",
+   "color": "#BFD8E0",
+   "opacity": 0.65
+  },
+  {
+   "id": "tubus",
+   "component_id": "camera_lens_unit",
+   "material_id": "mixed_electronics",
+   "name": "Objektivtubus",
+   "short": "Tubus",
+   "shape": "cyl",
+   "x": 44,
+   "y": 10.5,
+   "w": 44,
+   "z": 16,
+   "h": 26,
+   "explode": [
+    0,
+    0,
+    68.7
+   ],
+   "mass": 55.7,
+   "materials": [
+    [
+     "pcabs",
+     60
+    ],
+    [
+     "alu",
+     25
+    ],
+    [
+     "stahl",
+     10
+    ],
+    [
+     "kupfer",
+     5
+    ]
+   ],
+   "info": "Ineinander gesteckte Ringe, die beim Einschalten ausfahren. Mit drei Schrauben auf dem Sensor befestigt.",
+   "color": "#2B2F33",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 4,
+     "w": 36,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 12,
+     "y": 12,
+     "w": 20,
+     "fill": "#1E2226"
+    }
+   ]
+  },
+  {
+   "id": "zoommotor",
+   "component_id": "camera_lens_unit",
+   "material_id": "mixed_electronics",
+   "name": "Zoommotor",
+   "short": "Zoommotor",
+   "shape": "cyl",
+   "x": 90,
+   "y": 44,
+   "w": 10,
+   "z": 16,
+   "h": 12,
+   "explode": [
+    0,
+    0,
+    56.7
+   ],
+   "mass": 7,
+   "materials": [
+    [
+     "stahl",
+     40
+    ],
+    [
+     "kupfer",
+     35
+    ],
+    [
+     "ndfeb",
+     20
+    ],
+    [
+     "pcabs",
+     5
+    ]
+   ],
+   "info": "Winziger Elektromotor mit Zahnrädern, der den Tubus aus- und einfährt. Enthält einen Neodym-Magneten.",
+   "color": "#B5BBC0"
+  },
+  {
+   "id": "bildsensor",
+   "component_id": "camera_lens_unit",
+   "material_id": "mixed_electronics",
+   "name": "Bildsensor",
+   "short": "Bildsensor",
+   "shape": "box",
+   "x": 56,
+   "y": 25,
+   "w": 20,
+   "d": 15,
+   "z": 14,
+   "h": 2,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    50.7
+   ],
+   "mass": 4.2,
+   "materials": [
+    [
+     "chip",
+     50
+    ],
+    [
+     "keramik",
+     30
+    ],
+    [
+     "glas",
+     20
+    ]
+   ],
+   "info": "Siliziumchip mit Millionen lichtempfindlicher Punkte (Pixel), hinter einem Schutzglas. Nicht berühren.",
+   "color": "#4B3B5C",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 3,
+     "w": 12,
+     "d": 9,
+     "r": 0.5,
+     "fill": "#7A5C8C"
+    }
+   ]
+  },
+  {
+   "id": "blitz",
+   "component_id": "circuit_board",
+   "material_id": "mixed_electronics",
+   "name": "Blitzeinheit mit Kondensator",
+   "short": "Blitz",
+   "shape": "box",
+   "x": 6,
+   "y": 3,
+   "w": 34,
+   "d": 13,
+   "z": 16,
+   "h": 10,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    37.5
+   ],
+   "mass": 20.9,
+   "materials": [
+    [
+     "alu",
+     35
+    ],
+    [
+     "glas",
+     15
+    ],
+    [
+     "kupfer",
+     15
+    ],
+    [
+     "papier",
+     10
+    ],
+    [
+     "elektrolyt",
+     10
+    ],
+    [
+     "fr4",
+     10
+    ],
+    [
+     "pcabs",
+     5
+    ]
+   ],
+   "info": "Blitzröhre mit Reflektor und einem großen Kondensator, der auf über 300 Volt aufgeladen wird. Gefährlich: nie an die Kontakte fassen, auch wenn der Akku fehlt.",
+   "color": "#C9CED2",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 2,
+     "w": 22,
+     "d": 9,
+     "r": 2,
+     "fill": "#F2F2E8"
+    },
+    {
+     "shape": "cyl",
+     "x": 25,
+     "y": 2,
+     "w": 8,
+     "fill": "#2B2F33"
+    }
+   ]
+  },
+  {
+   "id": "hauptplatine",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "Hauptplatine",
+   "short": "Hauptplatine",
+   "shape": "box",
+   "x": 44,
+   "y": 4,
+   "w": 62,
+   "d": 57,
+   "z": 12,
+   "h": 1.2,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    41.5
+   ],
+   "mass": 25.1,
+   "materials": [
+    [
+     "fr4",
+     45
+    ],
+    [
+     "kupfer",
+     20
+    ],
+    [
+     "chip",
+     25
+    ],
+    [
+     "lot",
+     10
+    ]
+   ],
+   "info": "Mit Bildprozessor, Speicher und Kartenleser. Flachbandkabel zu Display und Objektiv vorsichtig lösen.",
+   "color": "#2E6B45",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 40,
+     "y": 42,
+     "w": 12,
+     "d": 12,
+     "r": 1,
+     "fill": "#22272B"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 44,
+     "w": 10,
+     "d": 8,
+     "r": 1,
+     "fill": "#22272B"
+    }
+   ]
+  },
+  {
+   "id": "akku",
+   "component_id": "li_ion_battery",
+   "material_id": "li_ion",
+   "name": "Lithium-Ionen-Akku",
+   "short": "Akku",
+   "shape": "box",
+   "x": 4,
+   "y": 17,
+   "w": 36,
+   "d": 44,
+   "z": 4,
+   "h": 9,
+   "r": 2,
+   "explode": [
+    0,
+    80,
+    0
+   ],
+   "mass": 30.6,
+   "materials": [
+    [
+     "lco",
+     38
+    ],
+    [
+     "graphit",
+     20
+    ],
+    [
+     "elektrolyt",
+     15
+    ],
+    [
+     "alu",
+     12
+    ],
+    [
+     "kupfer",
+     8
+    ],
+    [
+     "pcabs",
+     7
+    ]
+   ],
+   "info": "Wechselakku mit Kontakten an einer Kante. Klappe öffnen, Riegel zur Seite schieben, Akku herausnehmen. Pole abkleben und zur Batterie-Sammelstelle.",
+   "color": "#2B2F33",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 6,
+     "w": 28,
+     "d": 30,
+     "r": 2,
+     "fill": "#5DADE2"
+    }
+   ]
+  },
+  {
+   "id": "speicherkarte",
+   "component_id": "memory_card",
+   "material_id": "mixed_electronics",
+   "name": "SD-Speicherkarte",
+   "short": "Speicherkarte",
+   "shape": "box",
+   "x": 10,
+   "y": 33,
+   "w": 24,
+   "d": 32,
+   "z": 13.5,
+   "h": 2.1,
+   "r": 1,
+   "explode": [
+    0,
+    80,
+    15
+   ],
+   "mass": 2.8,
+   "materials": [
+    [
+     "pcabs",
+     55
+    ],
+    [
+     "chip",
+     35
+    ],
+    [
+     "kupfer",
+     10
+    ]
+   ],
+   "info": "Speichert die Fotos. Zum Lösen eindrücken; die Fotos vorher sichern und die Karte löschen oder behalten.",
+   "color": "#1F3A5F",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 3,
+     "w": 18,
+     "d": 10,
+     "r": 1,
+     "fill": "#E8E8E0"
+    }
+   ]
+  },
+  {
+   "id": "display",
+   "component_id": "lcd_panel",
+   "material_id": "special_glass",
+   "name": "LCD-Display",
+   "short": "Display",
+   "shape": "box",
+   "x": 6,
+   "y": 8,
+   "w": 74,
+   "d": 49,
+   "z": 1.5,
+   "h": 3.5,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    30.5
+   ],
+   "mass": 19.5,
+   "materials": [
+    [
+     "displayglas",
+     70
+    ],
+    [
+     "folien",
+     15
+    ],
+    [
+     "led",
+     5
+    ],
+    [
+     "kupfer",
+     5
+    ],
+    [
+     "chip",
+     5
+    ]
+   ],
+   "info": "3-Zoll-Bildschirm mit Hintergrundlicht, zeigt nach hinten. Flach anfassen, das Glas bricht leicht.",
+   "color": "#31373B",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 6,
+     "y": 2,
+     "w": 62,
+     "d": 45,
+     "r": 1,
+     "fill": "#9AA2A8"
+    }
+   ]
+  },
+  {
+   "id": "rueckschale",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Rückschale mit Tasten",
+   "short": "Rückschale",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 110,
+   "d": 65,
+   "z": 0,
+   "h": 14,
+   "r": 6,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 55.7,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Hinteres Gehäuseteil mit Displayfenster, Tasten und Stativgewinde. Kunststoff mit kleinen Metallteilen.",
+   "color": "#3A3F44",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 6,
+     "w": 78,
+     "d": 53,
+     "r": 3,
+     "fill": "#2B2F33"
+    },
+    {
+     "shape": "cyl",
+     "x": 88,
+     "y": 20,
+     "w": 14,
+     "fill": "#4A5156"
+    }
+   ]
+  }
+ ]
+}
