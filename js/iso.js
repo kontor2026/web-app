@@ -155,6 +155,10 @@ export class ExplodedView {
       for (const m of marks) {
         el('polygon', { class: 'mark', points: str(m.pts), fill: m.fill ?? 'none' }, g);
       }
+      g.addEventListener('pointerenter', (e) => this.hover(p.id, e));
+      g.addEventListener('pointermove', (e) => this.moveTip(e));
+      g.addEventListener('pointerleave', () => this.hover(null));
+      g.addEventListener('click', () => this.onSelect?.(p.id));
       this.nodes.set(p.id, { g, off: [off[0] * s, off[1] * s], top: top.map(tx) });
     }
 
@@ -163,6 +167,7 @@ export class ExplodedView {
       for (const st of this.states) st.t = this.exploded ? 1 : 0;
       this.apply();
       this.calloutLayer.style.opacity = this.exploded ? 1 : 0;
+      if (this.selected) this.select(this.selected);
     } else {
       this.apply();
     }
@@ -255,5 +260,29 @@ export class ExplodedView {
         });
       },
     });
+  }
+
+  hover(id, e) {
+    this.svg.classList.toggle('has-hot', !!id);
+    this.svg.querySelectorAll('.hot').forEach((n) => n.classList.remove('hot'));
+    if (id) this.svg.querySelectorAll(`[data-id="${id}"]`).forEach((n) => n.classList.add('hot'));
+    this.onHover?.(id, e);
+  }
+
+  moveTip(e) { this.onHover?.('move', e); }
+
+  // Von außen gesteuertes Hervorheben (z. B. Hover in der Bauteilliste).
+  highlight(id) {
+    if (!this.svg) return;
+    this.svg.classList.toggle('has-hot', !!id);
+    this.svg.querySelectorAll('.hot').forEach((n) => n.classList.remove('hot'));
+    if (id) this.svg.querySelectorAll(`[data-id="${id}"]`).forEach((n) => n.classList.add('hot'));
+  }
+
+  select(id) {
+    this.selected = id;
+    if (!this.svg) return;
+    this.svg.querySelectorAll('.sel').forEach((n) => n.classList.remove('sel'));
+    if (id) this.svg.querySelectorAll(`[data-id="${id}"]`).forEach((n) => n.classList.add('sel'));
   }
 }
