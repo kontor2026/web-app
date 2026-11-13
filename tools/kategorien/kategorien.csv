@@ -191,7 +191,7 @@ toy_car;Spielzeugauto;RM;30;70;25;40;eckig
 badminton_racket;Badmintonschläger;RM;220;670;30;90;eckig
 swim_goggles;Schwimmbrille;RM;160;40;35;30;eckig
 frisbee;Frisbee;RM;270;270;30;175;rund
-vinyl_record;Schallplatte;WH;300;300;2;180;rund
+vinyl_record;Schallplatte;WH;315;315;4;290;eckig
 hammer;Hammer;WM;110;320;30;600;eckig
 screwdriver;Schraubendreher;WM;30;220;30;100;eckig
 paint_brush;Pinsel;RM;45;230;15;40;eckig

@@ -1,0 +1,478 @@
+{
+ "parts": [
+  {
+   "id": "noppe_1",
+   "component_id": "abs_brick",
+   "material_id": "abs",
+   "name": "Noppen (8 Stück)",
+   "short": "Noppen",
+   "shape": "cyl",
+   "x": 1.5,
+   "y": 1.5,
+   "w": 4.8,
+   "z": 9.6,
+   "h": 1.7,
+   "explode": [
+    0,
+    0,
+    29.6
+   ],
+   "mass": 0.039,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Die Noppen klemmen in die Röhren und Wände des nächsten Steins. Die Maße stimmen auf Hundertstel Millimeter, deshalb halten die Steine so gut.",
+   "color": "#C8302A",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0.9,
+     "y": 0.9,
+     "w": 3,
+     "fill": "#B52924"
+    }
+   ]
+  },
+  {
+   "id": "noppe_2",
+   "component_id": "abs_brick",
+   "material_id": "abs",
+   "name": "Noppe 2",
+   "short": "Noppen",
+   "shape": "cyl",
+   "x": 9.5,
+   "y": 1.5,
+   "w": 4.8,
+   "z": 9.6,
+   "h": 1.7,
+   "explode": [
+    0,
+    0,
+    29.6
+   ],
+   "mass": 0.039,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Weitere Noppe.",
+   "color": "#C8302A",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0.9,
+     "y": 0.9,
+     "w": 3,
+     "fill": "#B52924"
+    }
+   ]
+  },
+  {
+   "id": "noppe_3",
+   "component_id": "abs_brick",
+   "material_id": "abs",
+   "name": "Noppe 3",
+   "short": "Noppen",
+   "shape": "cyl",
+   "x": 17.5,
+   "y": 1.5,
+   "w": 4.8,
+   "z": 9.6,
+   "h": 1.7,
+   "explode": [
+    0,
+    0,
+    29.6
+   ],
+   "mass": 0.039,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Weitere Noppe.",
+   "color": "#C8302A",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0.9,
+     "y": 0.9,
+     "w": 3,
+     "fill": "#B52924"
+    }
+   ]
+  },
+  {
+   "id": "noppe_4",
+   "component_id": "abs_brick",
+   "material_id": "abs",
+   "name": "Noppe 4",
+   "short": "Noppen",
+   "shape": "cyl",
+   "x": 25.5,
+   "y": 1.5,
+   "w": 4.8,
+   "z": 9.6,
+   "h": 1.7,
+   "explode": [
+    0,
+    0,
+    29.6
+   ],
+   "mass": 0.039,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Weitere Noppe.",
+   "color": "#C8302A",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0.9,
+     "y": 0.9,
+     "w": 3,
+     "fill": "#B52924"
+    }
+   ]
+  },
+  {
+   "id": "noppe_5",
+   "component_id": "abs_brick",
+   "material_id": "abs",
+   "name": "Noppe 5",
+   "short": "Noppen",
+   "shape": "cyl",
+   "x": 1.5,
+   "y": 9.5,
+   "w": 4.8,
+   "z": 9.6,
+   "h": 1.7,
+   "explode": [
+    0,
+    0,
+    29.6
+   ],
+   "mass": 0.039,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Weitere Noppe.",
+   "color": "#C8302A",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0.9,
+     "y": 0.9,
+     "w": 3,
+     "fill": "#B52924"
+    }
+   ]
+  },
+  {
+   "id": "noppe_6",
+   "component_id": "abs_brick",
+   "material_id": "abs",
+   "name": "Noppe 6",
+   "short": "Noppen",
+   "shape": "cyl",
+   "x": 9.5,
+   "y": 9.5,
+   "w": 4.8,
+   "z": 9.6,
+   "h": 1.7,
+   "explode": [
+    0,
+    0,
+    29.6
+   ],
+   "mass": 0.039,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Weitere Noppe.",
+   "color": "#C8302A",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0.9,
+     "y": 0.9,
+     "w": 3,
+     "fill": "#B52924"
+    }
+   ]
+  },
+  {
+   "id": "noppe_7",
+   "component_id": "abs_brick",
+   "material_id": "abs",
+   "name": "Noppe 7",
+   "short": "Noppen",
+   "shape": "cyl",
+   "x": 17.5,
+   "y": 9.5,
+   "w": 4.8,
+   "z": 9.6,
+   "h": 1.7,
+   "explode": [
+    0,
+    0,
+    29.6
+   ],
+   "mass": 0.039,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Weitere Noppe.",
+   "color": "#C8302A",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0.9,
+     "y": 0.9,
+     "w": 3,
+     "fill": "#B52924"
+    }
+   ]
+  },
+  {
+   "id": "noppe_8",
+   "component_id": "abs_brick",
+   "material_id": "abs",
+   "name": "Noppe 8",
+   "short": "Noppen",
+   "shape": "cyl",
+   "x": 25.5,
+   "y": 9.5,
+   "w": 4.8,
+   "z": 9.6,
+   "h": 1.7,
+   "explode": [
+    0,
+    0,
+    29.6
+   ],
+   "mass": 0.039,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Weitere Noppe.",
+   "color": "#C8302A",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0.9,
+     "y": 0.9,
+     "w": 3,
+     "fill": "#B52924"
+    }
+   ]
+  },
+  {
+   "id": "deckplatte",
+   "component_id": "abs_brick",
+   "material_id": "abs",
+   "name": "Deckplatte",
+   "short": "Deckplatte",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 31.8,
+   "d": 15.8,
+   "z": 8.6,
+   "h": 1,
+   "r": 0.2,
+   "explode": [
+    0,
+    0,
+    22.6
+   ],
+   "mass": 0.543,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Die geschlossene Oberseite, mit Wänden, Röhren und Noppen in einem Stück gespritzt. ABS hält Jahrzehnte: Steine weitergeben statt wegwerfen, im Restmüll werden sie verbrannt.",
+   "color": "#C8302A"
+  },
+  {
+   "id": "rohr_1",
+   "component_id": "abs_brick",
+   "material_id": "abs",
+   "name": "Hohlröhren (3 Stück)",
+   "short": "Röhren",
+   "shape": "cyl",
+   "x": 4.65,
+   "y": 4.65,
+   "w": 6.51,
+   "z": 0,
+   "h": 8.6,
+   "explode": [
+    0,
+    0,
+    15.6
+   ],
+   "mass": 0.118,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Röhren an der Unterseite, zwischen die die Noppen eines anderen Steins greifen.",
+   "color": "#C8302A",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0.855,
+     "y": 0.855,
+     "w": 4.8,
+     "fill": "#8E1E1A"
+    }
+   ]
+  },
+  {
+   "id": "rohr_2",
+   "component_id": "abs_brick",
+   "material_id": "abs",
+   "name": "Röhre 2",
+   "short": "Röhren",
+   "shape": "cyl",
+   "x": 12.64,
+   "y": 4.65,
+   "w": 6.51,
+   "z": 0,
+   "h": 8.6,
+   "explode": [
+    0,
+    0,
+    15.6
+   ],
+   "mass": 0.118,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Weitere Röhre.",
+   "color": "#C8302A",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0.855,
+     "y": 0.855,
+     "w": 4.8,
+     "fill": "#8E1E1A"
+    }
+   ]
+  },
+  {
+   "id": "rohr_3",
+   "component_id": "abs_brick",
+   "material_id": "abs",
+   "name": "Röhre 3",
+   "short": "Röhren",
+   "shape": "cyl",
+   "x": 20.64,
+   "y": 4.65,
+   "w": 6.51,
+   "z": 0,
+   "h": 8.6,
+   "explode": [
+    0,
+    0,
+    15.6
+   ],
+   "mass": 0.118,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Weitere Röhre.",
+   "color": "#C8302A",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0.855,
+     "y": 0.855,
+     "w": 4.8,
+     "fill": "#8E1E1A"
+    }
+   ]
+  },
+  {
+   "id": "waende",
+   "component_id": "abs_brick",
+   "material_id": "abs",
+   "name": "Außenwände",
+   "short": "Wände",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 31.8,
+   "d": 15.8,
+   "z": 0,
+   "h": 8.6,
+   "r": 0.2,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 1.086,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Vier dünne Wände, unten offen. Gemeinsam mit den Röhren klemmen sie die Noppen des Steins darunter.",
+   "color": "#C8302A",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1.2,
+     "y": 1.2,
+     "w": 29.400000000000002,
+     "d": 13.4,
+     "r": 0.2,
+     "fill": "#8E1E1A"
+    }
+   ]
+  }
+ ]
+}

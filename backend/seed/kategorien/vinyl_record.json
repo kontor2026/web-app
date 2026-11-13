@@ -4,7 +4,7 @@
  "name_en": "Vinyl Record",
  "klasse": "Wertstoffhof",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -16,8 +16,8 @@
   ],
   "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
  },
- "masse": "300 × 300 × 2 mm",
- "gewicht": "≈ 180 g",
+ "masse": "315 × 315 × 4 mm",
+ "gewicht": "≈ 290 g",
  "werte": [
   {
    "k": "Rohstoffwert",
@@ -26,25 +26,27 @@
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 0,36 kg",
+   "v": "≈ 0,50 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 0,07 kg",
-   "hint": "spart 0,29 kg, wenn recycelte Materialien eingesetzt werden"
+   "v": "≈ 0,13 kg",
+   "hint": "spart 0,37 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
   "metalle_mg": {},
   "herkunft": {},
   "materialien_g": {
-   "pvc": 160.7,
-   "cardboard": 19.3
+   "pvc": 202.0,
+   "cardboard": 69.3,
+   "paper": 14.4,
+   "pp": 4.3
   },
-  "co2_kg": 0.361,
-  "co2_mit_recyclat_kg": 0.069,
-  "co2_ersparnis_kg": 0.292,
+  "co2_kg": 0.501,
+  "co2_mit_recyclat_kg": 0.127,
+  "co2_ersparnis_kg": 0.374,
   "co2_ohne_faktor": [],
   "rohstoffwert_eur": 0,
   "wert_ohne_preis": [],
@@ -94,61 +96,351 @@
   "nicht": "Nicht in die Gelbe Tonne",
   "warnung": "Reste von Farben, Klebern oder Chemikalien gehören zur Schadstoffsammlung."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "cardboard_sleeve",
+   "id": "folie",
    "component_id": "cardboard_sleeve",
-   "name": "Cardboard Sleeve",
-   "short": "Cardboard Sleeve",
+   "material_id": "pp",
+   "name": "Schutzfolie",
+   "short": "Folie",
    "shape": "box",
-   "x": 303.0,
-   "y": 60.0,
-   "w": 9.0,
-   "d": 180.0,
-   "h": 1.2,
-   "z": 0.4,
-   "r": 1.1,
+   "x": 0,
+   "y": 0,
+   "w": 314,
+   "d": 314,
+   "z": 3.2,
+   "h": 0.05,
+   "r": 1,
    "explode": [
-    120.0,
     0,
-    36.0
+    0,
+    391.9
    ],
-   "mass": 19.29,
+   "mass": 4.3,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Dünne Schrumpffolie aus Kunststoff, schützt die neue Hülle. Abziehen und in die Gelbe Tonne oder den Restmüll, nicht ins Altpapier.",
+   "color": "#E4ECF0",
+   "opacity": 0.35
+  },
+  {
+   "id": "etikett_oben",
+   "component_id": "pvc_record",
+   "material_id": "paper",
+   "name": "Etikett Seite A",
+   "short": "Etikett A",
+   "shape": "cyl",
+   "x": 107,
+   "y": 107,
+   "w": 100,
+   "z": 2.4,
+   "h": 0.05,
+   "explode": [
+    0,
+    0,
+    282.6
+   ],
+   "mass": 0.7,
    "materials": [
     [
      "papier",
-     100
+     90
+    ],
+    [
+     "druck",
+     10
     ]
    ],
-   "material_id": "cardboard",
-   "info": "Tear along the perforation or slide it off."
+   "info": "Bedrucktes Papier mit Titel und Seite, beim Pressen fest ins Vinyl eingepresst. Es lässt sich nicht ablösen.",
+   "color": "#C8423A",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 22,
+     "y": 28,
+     "w": 56,
+     "d": 6,
+     "r": 1,
+     "fill": "#F2E6C8"
+    },
+    {
+     "shape": "box",
+     "x": 30,
+     "y": 66,
+     "w": 40,
+     "d": 4,
+     "r": 1,
+     "fill": "#F2E6C8"
+    },
+    {
+     "shape": "cyl",
+     "x": 46.4,
+     "y": 46.4,
+     "w": 7.2,
+     "fill": "#E8E4DA"
+    }
+   ]
   },
   {
-   "id": "pvc_record",
+   "id": "platte",
    "component_id": "pvc_record",
-   "name": "Record",
-   "short": "Record",
+   "material_id": "pvc",
+   "name": "Schallplatte aus Vinyl",
+   "short": "Platte",
    "shape": "cyl",
-   "x": 0,
-   "y": 0,
-   "w": 300.0,
-   "h": 2.0,
-   "z": 0.0,
+   "x": 6,
+   "y": 6,
+   "w": 302,
+   "z": 0.9,
+   "h": 1.5,
    "explode": [
     0,
     0,
-    0
+    252.6
    ],
-   "mass": 160.71,
+   "mass": 202,
    "materials": [
     [
      "pvc",
-     100
+     99
+    ],
+    [
+     "druck",
+     1
     ]
    ],
-   "material_id": "pvc",
-   "info": "Sell or donate it; PVC records are not recycled through household bins."
+   "info": "PVC mit Ruß gefärbt. In der spiralförmigen Rille steckt der Ton als feine Wellen, die die Nadel abtastet. Weitergeben oder verkaufen; über die Hausmülltonnen wird PVC nicht recycelt.",
+   "color": "#1C1D1F",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 3.0,
+     "y": 3.0,
+     "w": 296,
+     "fill": "#2A2B2E"
+    },
+    {
+     "shape": "cyl",
+     "x": 7.0,
+     "y": 7.0,
+     "w": 288,
+     "fill": "#303134"
+    },
+    {
+     "shape": "cyl",
+     "x": 20.0,
+     "y": 20.0,
+     "w": 262,
+     "fill": "#232427"
+    },
+    {
+     "shape": "cyl",
+     "x": 33.0,
+     "y": 33.0,
+     "w": 236,
+     "fill": "#303134"
+    },
+    {
+     "shape": "cyl",
+     "x": 46.0,
+     "y": 46.0,
+     "w": 210,
+     "fill": "#232427"
+    },
+    {
+     "shape": "cyl",
+     "x": 59.0,
+     "y": 59.0,
+     "w": 184,
+     "fill": "#303134"
+    },
+    {
+     "shape": "cyl",
+     "x": 72.0,
+     "y": 72.0,
+     "w": 158,
+     "fill": "#232427"
+    },
+    {
+     "shape": "cyl",
+     "x": 86.0,
+     "y": 86.0,
+     "w": 130,
+     "fill": "#303134"
+    },
+    {
+     "shape": "cyl",
+     "x": 91.0,
+     "y": 91.0,
+     "w": 120,
+     "fill": "#18191B"
+    },
+    {
+     "shape": "cyl",
+     "x": 147.4,
+     "y": 147.4,
+     "w": 7.2,
+     "fill": "#E8E4DA"
+    }
+   ]
+  },
+  {
+   "id": "etikett_unten",
+   "component_id": "pvc_record",
+   "material_id": "paper",
+   "name": "Etikett Seite B",
+   "short": "Etikett B",
+   "shape": "cyl",
+   "x": 107,
+   "y": 107,
+   "w": 100,
+   "z": 0.85,
+   "h": 0.05,
+   "explode": [
+    0,
+    0,
+    142.6
+   ],
+   "mass": 0.7,
+   "materials": [
+    [
+     "papier",
+     90
+    ],
+    [
+     "druck",
+     10
+    ]
+   ],
+   "info": "Etikett der Rückseite, ebenfalls eingepresst.",
+   "color": "#3E6FA8",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 46.4,
+     "y": 46.4,
+     "w": 7.2,
+     "fill": "#E8E4DA"
+    }
+   ]
+  },
+  {
+   "id": "innenhuelle",
+   "component_id": "cardboard_sleeve",
+   "material_id": "paper",
+   "name": "Papier-Innenhülle",
+   "short": "Innenhülle",
+   "shape": "box",
+   "x": 5,
+   "y": 5,
+   "w": 304,
+   "d": 304,
+   "z": 0.6,
+   "h": 0.25,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    112.6
+   ],
+   "mass": 13,
+   "materials": [
+    [
+     "papier",
+     97
+    ],
+    [
+     "druck",
+     3
+    ]
+   ],
+   "info": "Weißes Papier, oft mit Folie gefüttert, mit rundem Sichtloch für das Etikett. Reines Papier darf ins Altpapier, gefütterte Hüllen in den Restmüll.",
+   "color": "#EFEBE0",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 97.0,
+     "y": 97.0,
+     "w": 110,
+     "fill": "#D9D3C2"
+    }
+   ]
+  },
+  {
+   "id": "huelle",
+   "component_id": "cardboard_sleeve",
+   "material_id": "cardboard",
+   "name": "Plattenhülle (Cover)",
+   "short": "Cover",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 314,
+   "d": 314,
+   "z": 0,
+   "h": 3.2,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 69.3,
+   "materials": [
+    [
+     "papier",
+     94
+    ],
+    [
+     "druck",
+     6
+    ]
+   ],
+   "info": "Gefalteter Karton, an drei Seiten verklebt, rundum bedruckt. Die Platte wird an der offenen Seite herausgezogen. Eine leere Hülle kommt ins Altpapier.",
+   "color": "#E2B33C",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 30,
+     "y": 30,
+     "w": 254,
+     "d": 200,
+     "r": 3,
+     "fill": "#C8423A"
+    },
+    {
+     "shape": "cyl",
+     "x": 107,
+     "y": 60,
+     "w": 100,
+     "d": 100,
+     "fill": "#F2E6C8"
+    },
+    {
+     "shape": "box",
+     "x": 30,
+     "y": 250,
+     "w": 180,
+     "d": 14,
+     "r": 2,
+     "fill": "#22272B"
+    },
+    {
+     "shape": "box",
+     "x": 30,
+     "y": 272,
+     "w": 120,
+     "d": 8,
+     "r": 2,
+     "fill": "#22272B"
+    }
+   ]
   }
  ]
 }

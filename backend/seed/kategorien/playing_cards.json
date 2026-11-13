@@ -4,7 +4,7 @@
  "name_en": "Playing Cards",
  "klasse": "Restmüll",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -39,12 +39,13 @@
   "metalle_mg": {},
   "herkunft": {},
   "materialien_g": {
-   "paper_plastic_composite": 67.6,
-   "cardboard": 32.4
+   "paper_plastic_composite": 88.4,
+   "cardboard": 10.7,
+   "pp": 0.9
   },
-  "co2_kg": 0.07,
-  "co2_mit_recyclat_kg": 0.07,
-  "co2_ersparnis_kg": 0.0,
+  "co2_kg": 0.069,
+  "co2_mit_recyclat_kg": 0.068,
+  "co2_ersparnis_kg": 0.001,
   "co2_ohne_faktor": [],
   "rohstoffwert_eur": 0,
   "wert_ohne_preis": [],
@@ -94,87 +95,113 @@
   "nicht": "Nicht in die Gelbe Tonne: keine Verpackung",
   "warnung": "Gut Erhaltenes lieber verschenken oder in der Werkstatt abgeben."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "coated_cards_ober",
-   "component_id": "coated_cards",
-   "name": "Cards (Oberteil)",
-   "short": "Cards (Oberteil)",
+   "id": "folie",
+   "component_id": "cardboard_box_body",
+   "material_id": "pp",
+   "name": "Cellophanfolie",
+   "short": "Folie",
    "shape": "box",
    "x": 0,
    "y": 0,
-   "w": 60.0,
-   "d": 90.0,
-   "h": 4.0,
-   "z": 12.0,
-   "r": 7.2,
+   "w": 60,
+   "d": 90,
+   "z": 20,
+   "h": 0.05,
+   "r": 1,
    "explode": [
     0,
     0,
-    65.4
+    166.5
    ],
-   "mass": 20.27,
+   "mass": 0.9,
    "materials": [
     [
-     "papier",
-     85
-    ],
-    [
-     "ldpe",
-     15
-    ]
-   ],
-   "material_id": "paper_plastic_composite",
-   "info": "Plastic-coated cards go in residual waste."
-  },
-  {
-   "id": "cardboard_box_body",
-   "component_id": "cardboard_box_body",
-   "name": "Box",
-   "short": "Box",
-   "shape": "box",
-   "x": 9.0,
-   "y": 13.5,
-   "w": 42.0,
-   "d": 63.0,
-   "h": 5.4,
-   "z": 2.4,
-   "r": 5.0,
-   "explode": [
-    0,
-    0,
-    39.6
-   ],
-   "mass": 32.43,
-   "materials": [
-    [
-     "papier",
+     "pp",
      100
     ]
    ],
-   "material_id": "cardboard",
-   "info": "Flatten it; tear off heavily greasy or food-soiled parts first."
+   "info": "Dünne Kunststofffolie mit Aufreißfaden um neue Spiele. Abziehen und in die Gelbe Tonne geben.",
+   "color": "#E4ECF0",
+   "opacity": 0.35,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 70,
+     "w": 60,
+     "d": 2,
+     "r": 0,
+     "fill": "#C8423A"
+    }
+   ]
   },
   {
-   "id": "coated_cards",
-   "component_id": "coated_cards",
-   "name": "Cards (Unterteil)",
-   "short": "Cards (Unterteil)",
+   "id": "lasche",
+   "component_id": "cardboard_box_body",
+   "material_id": "cardboard",
+   "name": "Deckellasche",
+   "short": "Lasche",
    "shape": "box",
    "x": 0,
-   "y": 0,
-   "w": 60.0,
-   "d": 90.0,
-   "h": 12.0,
-   "z": 0,
-   "r": 7.2,
+   "y": 72,
+   "w": 60,
+   "d": 18,
+   "z": 19.5,
+   "h": 0.5,
+   "r": 1,
    "explode": [
     0,
     0,
-    0
+    136.5
    ],
-   "mass": 47.3,
+   "mass": 1.8,
+   "materials": [
+    [
+     "papier",
+     92
+    ],
+    [
+     "druck",
+     8
+    ]
+   ],
+   "info": "Klappe mit Einstecklasche, verschließt die Schachtel oben. Sie ist an der Rückwand angeknickt.",
+   "color": "#2F5E9E",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 4,
+     "w": 40,
+     "d": 10,
+     "r": 5,
+     "fill": "#244B80"
+    }
+   ]
+  },
+  {
+   "id": "karte_oben",
+   "component_id": "coated_cards",
+   "material_id": "paper_plastic_composite",
+   "name": "Oberste Karte (Herz-Ass)",
+   "short": "Karte",
+   "shape": "box",
+   "x": 1,
+   "y": 1,
+   "w": 58,
+   "d": 88,
+   "z": 18.7,
+   "h": 0.3,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    97.0
+   ],
+   "mass": 1.6,
    "materials": [
     [
      "papier",
@@ -185,8 +212,357 @@
      15
     ]
    ],
+   "info": "Karton, beidseitig bedruckt und mit Kunststoff beschichtet, damit die Karten gleiten und nicht knicken. Wegen der Beschichtung gehören alte Karten in den Restmüll.",
+   "color": "#F6F3EC",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 4,
+     "w": 6,
+     "d": 8,
+     "r": 1,
+     "fill": "#C8423A"
+    },
+    {
+     "shape": "cyl",
+     "x": 20,
+     "y": 32,
+     "w": 18,
+     "d": 18,
+     "fill": "#C8423A"
+    },
+    {
+     "shape": "box",
+     "x": 48,
+     "y": 76,
+     "w": 6,
+     "d": 8,
+     "r": 1,
+     "fill": "#C8423A"
+    }
+   ]
+  },
+  {
+   "id": "stapel",
+   "component_id": "coated_cards",
    "material_id": "paper_plastic_composite",
-   "info": "Plastic-coated cards go in residual waste."
+   "name": "Kartenstapel (54 Karten)",
+   "short": "Kartenstapel",
+   "shape": "box",
+   "x": 1,
+   "y": 1,
+   "w": 58,
+   "d": 88,
+   "z": 2.5,
+   "h": 16.2,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 86.8,
+   "materials": [
+    [
+     "papier",
+     85
+    ],
+    [
+     "ldpe",
+     15
+    ]
+   ],
+   "info": "Gleiche beschichtete Karten, zusammen gut 16 mm hoch. Vollständige Spiele lieber weitergeben, einzelne Karten taugen zum Basteln.",
+   "color": "#E9E4D8",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 3,
+     "w": 52,
+     "d": 82,
+     "r": 2,
+     "fill": "#3E6FA8"
+    },
+    {
+     "shape": "cyl",
+     "x": 8,
+     "y": 8.0,
+     "w": 6,
+     "d": 6,
+     "fill": "#F6F3EC"
+    },
+    {
+     "shape": "cyl",
+     "x": 20,
+     "y": 8.0,
+     "w": 6,
+     "d": 6,
+     "fill": "#F6F3EC"
+    },
+    {
+     "shape": "cyl",
+     "x": 32,
+     "y": 8.0,
+     "w": 6,
+     "d": 6,
+     "fill": "#F6F3EC"
+    },
+    {
+     "shape": "cyl",
+     "x": 44,
+     "y": 8.0,
+     "w": 6,
+     "d": 6,
+     "fill": "#F6F3EC"
+    },
+    {
+     "shape": "cyl",
+     "x": 8,
+     "y": 19.5,
+     "w": 6,
+     "d": 6,
+     "fill": "#F6F3EC"
+    },
+    {
+     "shape": "cyl",
+     "x": 20,
+     "y": 19.5,
+     "w": 6,
+     "d": 6,
+     "fill": "#F6F3EC"
+    },
+    {
+     "shape": "cyl",
+     "x": 32,
+     "y": 19.5,
+     "w": 6,
+     "d": 6,
+     "fill": "#F6F3EC"
+    },
+    {
+     "shape": "cyl",
+     "x": 44,
+     "y": 19.5,
+     "w": 6,
+     "d": 6,
+     "fill": "#F6F3EC"
+    },
+    {
+     "shape": "cyl",
+     "x": 8,
+     "y": 31.0,
+     "w": 6,
+     "d": 6,
+     "fill": "#F6F3EC"
+    },
+    {
+     "shape": "cyl",
+     "x": 20,
+     "y": 31.0,
+     "w": 6,
+     "d": 6,
+     "fill": "#F6F3EC"
+    },
+    {
+     "shape": "cyl",
+     "x": 32,
+     "y": 31.0,
+     "w": 6,
+     "d": 6,
+     "fill": "#F6F3EC"
+    },
+    {
+     "shape": "cyl",
+     "x": 44,
+     "y": 31.0,
+     "w": 6,
+     "d": 6,
+     "fill": "#F6F3EC"
+    },
+    {
+     "shape": "cyl",
+     "x": 8,
+     "y": 42.5,
+     "w": 6,
+     "d": 6,
+     "fill": "#F6F3EC"
+    },
+    {
+     "shape": "cyl",
+     "x": 20,
+     "y": 42.5,
+     "w": 6,
+     "d": 6,
+     "fill": "#F6F3EC"
+    },
+    {
+     "shape": "cyl",
+     "x": 32,
+     "y": 42.5,
+     "w": 6,
+     "d": 6,
+     "fill": "#F6F3EC"
+    },
+    {
+     "shape": "cyl",
+     "x": 44,
+     "y": 42.5,
+     "w": 6,
+     "d": 6,
+     "fill": "#F6F3EC"
+    },
+    {
+     "shape": "cyl",
+     "x": 8,
+     "y": 54.0,
+     "w": 6,
+     "d": 6,
+     "fill": "#F6F3EC"
+    },
+    {
+     "shape": "cyl",
+     "x": 20,
+     "y": 54.0,
+     "w": 6,
+     "d": 6,
+     "fill": "#F6F3EC"
+    },
+    {
+     "shape": "cyl",
+     "x": 32,
+     "y": 54.0,
+     "w": 6,
+     "d": 6,
+     "fill": "#F6F3EC"
+    },
+    {
+     "shape": "cyl",
+     "x": 44,
+     "y": 54.0,
+     "w": 6,
+     "d": 6,
+     "fill": "#F6F3EC"
+    },
+    {
+     "shape": "cyl",
+     "x": 8,
+     "y": 65.5,
+     "w": 6,
+     "d": 6,
+     "fill": "#F6F3EC"
+    },
+    {
+     "shape": "cyl",
+     "x": 20,
+     "y": 65.5,
+     "w": 6,
+     "d": 6,
+     "fill": "#F6F3EC"
+    },
+    {
+     "shape": "cyl",
+     "x": 32,
+     "y": 65.5,
+     "w": 6,
+     "d": 6,
+     "fill": "#F6F3EC"
+    },
+    {
+     "shape": "cyl",
+     "x": 44,
+     "y": 65.5,
+     "w": 6,
+     "d": 6,
+     "fill": "#F6F3EC"
+    },
+    {
+     "shape": "cyl",
+     "x": 8,
+     "y": 77.0,
+     "w": 6,
+     "d": 6,
+     "fill": "#F6F3EC"
+    },
+    {
+     "shape": "cyl",
+     "x": 20,
+     "y": 77.0,
+     "w": 6,
+     "d": 6,
+     "fill": "#F6F3EC"
+    },
+    {
+     "shape": "cyl",
+     "x": 32,
+     "y": 77.0,
+     "w": 6,
+     "d": 6,
+     "fill": "#F6F3EC"
+    },
+    {
+     "shape": "cyl",
+     "x": 44,
+     "y": 77.0,
+     "w": 6,
+     "d": 6,
+     "fill": "#F6F3EC"
+    }
+   ]
+  },
+  {
+   "id": "schachtel",
+   "component_id": "cardboard_box_body",
+   "material_id": "cardboard",
+   "name": "Schachtel",
+   "short": "Schachtel",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 60,
+   "d": 90,
+   "z": 0,
+   "h": 19.5,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 8.9,
+   "materials": [
+    [
+     "papier",
+     92
+    ],
+    [
+     "druck",
+     8
+    ]
+   ],
+   "info": "Faltschachtel aus dünnem bedrucktem Karton, an einer Lasche verklebt. Leer flach drücken und ins Altpapier.",
+   "color": "#2F5E9E",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 1,
+     "w": 58,
+     "d": 88,
+     "r": 1,
+     "fill": "#1E3B66"
+    },
+    {
+     "shape": "box",
+     "x": 20,
+     "y": 2,
+     "w": 20,
+     "d": 8,
+     "r": 4,
+     "fill": "#244B80"
+    }
+   ]
   }
  ]
 }

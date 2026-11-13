@@ -4,7 +4,7 @@
  "name_en": "Board Game",
  "klasse": "Verpackung · Papier",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -26,12 +26,12 @@
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 0,49 kg",
+   "v": "≈ 0,74 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 0,49 kg",
+   "v": "≈ 0,74 kg",
    "hint": "spart 0,00 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
@@ -39,12 +39,12 @@
   "metalle_mg": {},
   "herkunft": {},
   "materialien_g": {
-   "paper": 510.2,
-   "cardboard": 367.4,
-   "wood": 122.5
+   "cardboard": 952.6,
+   "wood": 24.8,
+   "paper": 22.5
   },
-  "co2_kg": 0.486,
-  "co2_mit_recyclat_kg": 0.486,
+  "co2_kg": 0.739,
+  "co2_mit_recyclat_kg": 0.739,
   "co2_ersparnis_kg": 0.0,
   "co2_ohne_faktor": [],
   "rohstoffwert_eur": 0,
@@ -95,147 +95,1024 @@
   "nicht": "Nicht in Restmüll, wenn sauber",
   "warnung": "Kartons flach falten. Stark verschmutzte Teile in den Restmüll."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "paper_sheets_ober",
-   "component_id": "paper_sheets",
-   "name": "Paper (Oberteil)",
-   "short": "Paper (Oberteil)",
+   "id": "deckel",
+   "component_id": "cardboard_box_body",
+   "material_id": "cardboard",
+   "name": "Schachteldeckel",
+   "short": "Deckel",
    "shape": "box",
    "x": 0,
    "y": 0,
-   "w": 270.0,
-   "d": 270.0,
-   "h": 12.0,
-   "z": 36.0,
-   "r": 32.4,
+   "w": 270,
+   "d": 270,
+   "z": 3,
+   "h": 57,
+   "r": 1,
    "explode": [
     0,
-    0,
-    480.6
+    -310,
+    -3
    ],
-   "mass": 153.06,
+   "mass": 152.2,
    "materials": [
     [
      "papier",
-     100
+     95
+    ],
+    [
+     "druck",
+     5
     ]
    ],
-   "material_id": "paper",
-   "info": "Remove any plastic wrap or inserts."
+   "info": "Graupappe mit bedrucktem Papier kaschiert, an den Ecken verklebt. Er wird über das Unterteil gestülpt. Leer und flach gedrückt kommt er ins Altpapier.",
+   "color": "#3E6FA8",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 20,
+     "y": 20,
+     "w": 230,
+     "d": 150,
+     "r": 4,
+     "fill": "#E2B33C"
+    },
+    {
+     "shape": "cyl",
+     "x": 85,
+     "y": 40,
+     "w": 100,
+     "d": 100,
+     "fill": "#C8423A"
+    },
+    {
+     "shape": "box",
+     "x": 30,
+     "y": 190,
+     "w": 210,
+     "d": 24,
+     "r": 3,
+     "fill": "#F2E6C8"
+    },
+    {
+     "shape": "box",
+     "x": 60,
+     "y": 228,
+     "w": 150,
+     "d": 12,
+     "r": 3,
+     "fill": "#F2E6C8"
+    }
+   ]
   },
   {
-   "id": "wooden_pieces",
-   "component_id": "wooden_pieces",
-   "name": "Pieces",
-   "short": "Pieces",
+   "id": "anleitung",
+   "component_id": "paper_sheets",
+   "material_id": "paper",
+   "name": "Spielanleitung",
+   "short": "Anleitung",
    "shape": "box",
-   "x": 10.8,
-   "y": 145.8,
-   "w": 113.4,
-   "d": 113.4,
-   "h": 16.2,
-   "z": 7.2,
-   "r": 13.6,
+   "x": 30,
+   "y": 20,
+   "w": 210,
+   "d": 230,
+   "z": 53,
+   "h": 1,
+   "r": 0.5,
    "explode": [
     0,
     0,
-    385.2
+    320.0
    ],
-   "mass": 122.45,
+   "mass": 22.5,
+   "materials": [
+    [
+     "papier",
+     92
+    ],
+    [
+     "druck",
+     8
+    ]
+   ],
+   "info": "Gefaltetes Heft aus Papier. Ins Altpapier, oder besser im Spiel lassen, sonst ist es unvollständig.",
+   "color": "#F4F2EE",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 15,
+     "y": 15,
+     "w": 180,
+     "d": 20,
+     "r": 2,
+     "fill": "#C8423A"
+    },
+    {
+     "shape": "box",
+     "x": 15,
+     "y": 50,
+     "w": 180,
+     "d": 6,
+     "fill": "#5B6166"
+    },
+    {
+     "shape": "box",
+     "x": 15,
+     "y": 68,
+     "w": 180,
+     "d": 6,
+     "fill": "#5B6166"
+    },
+    {
+     "shape": "box",
+     "x": 15,
+     "y": 86,
+     "w": 180,
+     "d": 6,
+     "fill": "#5B6166"
+    },
+    {
+     "shape": "box",
+     "x": 15,
+     "y": 104,
+     "w": 180,
+     "d": 6,
+     "fill": "#5B6166"
+    },
+    {
+     "shape": "box",
+     "x": 15,
+     "y": 122,
+     "w": 180,
+     "d": 6,
+     "fill": "#5B6166"
+    },
+    {
+     "shape": "box",
+     "x": 15,
+     "y": 140,
+     "w": 180,
+     "d": 6,
+     "fill": "#5B6166"
+    },
+    {
+     "shape": "box",
+     "x": 15,
+     "y": 158,
+     "w": 180,
+     "d": 6,
+     "fill": "#5B6166"
+    },
+    {
+     "shape": "box",
+     "x": 15,
+     "y": 176,
+     "w": 180,
+     "d": 6,
+     "fill": "#5B6166"
+    },
+    {
+     "shape": "box",
+     "x": 15,
+     "y": 194,
+     "w": 180,
+     "d": 6,
+     "fill": "#5B6166"
+    }
+   ]
+  },
+  {
+   "id": "spielplan",
+   "component_id": "game_board",
+   "material_id": "cardboard",
+   "name": "Spielplan (gefaltet)",
+   "short": "Spielplan",
+   "shape": "box",
+   "x": 5,
+   "y": 5,
+   "w": 260,
+   "d": 260,
+   "z": 45,
+   "h": 8,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    250.0
+   ],
+   "mass": 360.8,
+   "materials": [
+    [
+     "papier",
+     95
+    ],
+    [
+     "druck",
+     5
+    ]
+   ],
+   "info": "Vier Felder aus Graupappe, mit Papier kaschiert und mit Gewebestreifen gefaltet. Ins Altpapier; Plan mit Folienbeschichtung in den Restmüll.",
+   "color": "#7FB069",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 129,
+     "w": 260,
+     "d": 2,
+     "r": 0,
+     "fill": "#5E8A4D"
+    },
+    {
+     "shape": "box",
+     "x": 129,
+     "y": 0,
+     "w": 2,
+     "d": 260,
+     "r": 0,
+     "fill": "#5E8A4D"
+    },
+    {
+     "shape": "box",
+     "x": 16.0,
+     "y": 16.0,
+     "w": 18,
+     "d": 18,
+     "fill": "#F2E6C8"
+    },
+    {
+     "shape": "box",
+     "x": 39.5,
+     "y": 16.0,
+     "w": 18,
+     "d": 18,
+     "fill": "#F2E6C8"
+    },
+    {
+     "shape": "box",
+     "x": 63.0,
+     "y": 16.0,
+     "w": 18,
+     "d": 18,
+     "fill": "#F2E6C8"
+    },
+    {
+     "shape": "box",
+     "x": 86.5,
+     "y": 16.0,
+     "w": 18,
+     "d": 18,
+     "fill": "#F2E6C8"
+    },
+    {
+     "shape": "box",
+     "x": 110.0,
+     "y": 16.0,
+     "w": 18,
+     "d": 18,
+     "fill": "#F2E6C8"
+    },
+    {
+     "shape": "box",
+     "x": 133.5,
+     "y": 16.0,
+     "w": 18,
+     "d": 18,
+     "fill": "#F2E6C8"
+    },
+    {
+     "shape": "box",
+     "x": 157.0,
+     "y": 16.0,
+     "w": 18,
+     "d": 18,
+     "fill": "#F2E6C8"
+    },
+    {
+     "shape": "box",
+     "x": 180.5,
+     "y": 16.0,
+     "w": 18,
+     "d": 18,
+     "fill": "#F2E6C8"
+    },
+    {
+     "shape": "box",
+     "x": 204.0,
+     "y": 16.0,
+     "w": 18,
+     "d": 18,
+     "fill": "#F2E6C8"
+    },
+    {
+     "shape": "box",
+     "x": 227.5,
+     "y": 16.0,
+     "w": 18,
+     "d": 18,
+     "fill": "#F2E6C8"
+    },
+    {
+     "shape": "box",
+     "x": 16.0,
+     "y": 226.0,
+     "w": 18,
+     "d": 18,
+     "fill": "#F2E6C8"
+    },
+    {
+     "shape": "box",
+     "x": 39.5,
+     "y": 226.0,
+     "w": 18,
+     "d": 18,
+     "fill": "#F2E6C8"
+    },
+    {
+     "shape": "box",
+     "x": 63.0,
+     "y": 226.0,
+     "w": 18,
+     "d": 18,
+     "fill": "#F2E6C8"
+    },
+    {
+     "shape": "box",
+     "x": 86.5,
+     "y": 226.0,
+     "w": 18,
+     "d": 18,
+     "fill": "#F2E6C8"
+    },
+    {
+     "shape": "box",
+     "x": 110.0,
+     "y": 226.0,
+     "w": 18,
+     "d": 18,
+     "fill": "#F2E6C8"
+    },
+    {
+     "shape": "box",
+     "x": 133.5,
+     "y": 226.0,
+     "w": 18,
+     "d": 18,
+     "fill": "#F2E6C8"
+    },
+    {
+     "shape": "box",
+     "x": 157.0,
+     "y": 226.0,
+     "w": 18,
+     "d": 18,
+     "fill": "#F2E6C8"
+    },
+    {
+     "shape": "box",
+     "x": 180.5,
+     "y": 226.0,
+     "w": 18,
+     "d": 18,
+     "fill": "#F2E6C8"
+    },
+    {
+     "shape": "box",
+     "x": 204.0,
+     "y": 226.0,
+     "w": 18,
+     "d": 18,
+     "fill": "#F2E6C8"
+    },
+    {
+     "shape": "box",
+     "x": 227.5,
+     "y": 226.0,
+     "w": 18,
+     "d": 18,
+     "fill": "#F2E6C8"
+    },
+    {
+     "shape": "box",
+     "x": 16,
+     "y": 39.0,
+     "w": 18,
+     "d": 18,
+     "fill": "#F2E6C8"
+    },
+    {
+     "shape": "box",
+     "x": 16,
+     "y": 62.5,
+     "w": 18,
+     "d": 18,
+     "fill": "#F2E6C8"
+    },
+    {
+     "shape": "box",
+     "x": 16,
+     "y": 86.0,
+     "w": 18,
+     "d": 18,
+     "fill": "#F2E6C8"
+    },
+    {
+     "shape": "box",
+     "x": 16,
+     "y": 109.5,
+     "w": 18,
+     "d": 18,
+     "fill": "#F2E6C8"
+    },
+    {
+     "shape": "box",
+     "x": 16,
+     "y": 133.0,
+     "w": 18,
+     "d": 18,
+     "fill": "#F2E6C8"
+    },
+    {
+     "shape": "box",
+     "x": 16,
+     "y": 156.5,
+     "w": 18,
+     "d": 18,
+     "fill": "#F2E6C8"
+    },
+    {
+     "shape": "box",
+     "x": 16,
+     "y": 180.0,
+     "w": 18,
+     "d": 18,
+     "fill": "#F2E6C8"
+    },
+    {
+     "shape": "box",
+     "x": 16,
+     "y": 203.5,
+     "w": 18,
+     "d": 18,
+     "fill": "#F2E6C8"
+    },
+    {
+     "shape": "box",
+     "x": 226,
+     "y": 39.0,
+     "w": 18,
+     "d": 18,
+     "fill": "#F2E6C8"
+    },
+    {
+     "shape": "box",
+     "x": 226,
+     "y": 62.5,
+     "w": 18,
+     "d": 18,
+     "fill": "#F2E6C8"
+    },
+    {
+     "shape": "box",
+     "x": 226,
+     "y": 86.0,
+     "w": 18,
+     "d": 18,
+     "fill": "#F2E6C8"
+    },
+    {
+     "shape": "box",
+     "x": 226,
+     "y": 109.5,
+     "w": 18,
+     "d": 18,
+     "fill": "#F2E6C8"
+    },
+    {
+     "shape": "box",
+     "x": 226,
+     "y": 133.0,
+     "w": 18,
+     "d": 18,
+     "fill": "#F2E6C8"
+    },
+    {
+     "shape": "box",
+     "x": 226,
+     "y": 156.5,
+     "w": 18,
+     "d": 18,
+     "fill": "#F2E6C8"
+    },
+    {
+     "shape": "box",
+     "x": 226,
+     "y": 180.0,
+     "w": 18,
+     "d": 18,
+     "fill": "#F2E6C8"
+    },
+    {
+     "shape": "box",
+     "x": 226,
+     "y": 203.5,
+     "w": 18,
+     "d": 18,
+     "fill": "#F2E6C8"
+    }
+   ]
+  },
+  {
+   "id": "karten_1",
+   "component_id": "paper_sheets",
+   "material_id": "cardboard",
+   "name": "Ereigniskarten",
+   "short": "Karten",
+   "shape": "box",
+   "x": 22,
+   "y": 25,
+   "w": 58,
+   "d": 88,
+   "z": 27,
+   "h": 18,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    173.0
+   ],
+   "mass": 112.7,
+   "materials": [
+    [
+     "papier",
+     95
+    ],
+    [
+     "druck",
+     5
+    ]
+   ],
+   "info": "Rund 60 Karten aus bedrucktem Karton. Unbeschichtet ins Altpapier, beschichtet in den Restmüll.",
+   "color": "#E9E4D8",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 4,
+     "w": 50,
+     "d": 80,
+     "r": 2,
+     "fill": "#C8423A"
+    },
+    {
+     "shape": "cyl",
+     "x": 17,
+     "y": 32,
+     "w": 24,
+     "fill": "#F2E6C8"
+    }
+   ]
+  },
+  {
+   "id": "karten_2",
+   "component_id": "paper_sheets",
+   "material_id": "cardboard",
+   "name": "Fragekarten",
+   "short": "Karten",
+   "shape": "box",
+   "x": 22,
+   "y": 150,
+   "w": 58,
+   "d": 88,
+   "z": 27,
+   "h": 18,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    173.0
+   ],
+   "mass": 112.7,
+   "materials": [
+    [
+     "papier",
+     95
+    ],
+    [
+     "druck",
+     5
+    ]
+   ],
+   "info": "Zweiter Kartenstapel.",
+   "color": "#E9E4D8",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 4,
+     "w": 50,
+     "d": 80,
+     "r": 2,
+     "fill": "#3E6FA8"
+    },
+    {
+     "shape": "cyl",
+     "x": 17,
+     "y": 32,
+     "w": 24,
+     "fill": "#F2E6C8"
+    }
+   ]
+  },
+  {
+   "id": "figur_1",
+   "component_id": "wooden_pieces",
+   "material_id": "wood",
+   "name": "Spielfiguren (4 Stück)",
+   "short": "Figuren",
+   "shape": "cyl",
+   "x": 110,
+   "y": 40,
+   "w": 16,
+   "z": 20,
+   "h": 25,
+   "explode": [
+    0,
+    0,
+    180.0
+   ],
+   "mass": 4.5,
    "materials": [
     [
      "holz",
-     100
+     98
+    ],
+    [
+     "druck",
+     2
     ]
    ],
+   "info": "Gedrechseltes, farbig lackiertes Buchenholz. Als Ersatzfiguren für andere Spiele aufheben.",
+   "color": "#C8423A",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 3,
+     "w": 10,
+     "fill": "#FFFFFF"
+    }
+   ]
+  },
+  {
+   "id": "figur_2",
+   "component_id": "wooden_pieces",
    "material_id": "wood",
-   "info": "Keep them as spare pieces for other games."
-  },
-  {
-   "id": "game_board",
-   "component_id": "game_board",
-   "name": "Board",
-   "short": "Board",
-   "shape": "box",
-   "x": 145.8,
-   "y": 24.3,
-   "w": 113.4,
-   "d": 113.4,
-   "h": 16.2,
-   "z": 7.2,
-   "r": 13.6,
+   "name": "Spielfigur 2",
+   "short": "Figuren",
+   "shape": "cyl",
+   "x": 136,
+   "y": 40,
+   "w": 16,
+   "z": 20,
+   "h": 25,
    "explode": [
     0,
     0,
-    261.0
+    180.0
    ],
-   "mass": 122.45,
+   "mass": 4.5,
    "materials": [
     [
-     "papier",
-     100
+     "holz",
+     98
+    ],
+    [
+     "druck",
+     2
     ]
    ],
-   "material_id": "cardboard",
-   "info": "Folding board with paper on both sides; it goes in paper waste."
+   "info": "Weitere Figur.",
+   "color": "#2F8F5B",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 3,
+     "w": 10,
+     "fill": "#FFFFFF"
+    }
+   ]
   },
   {
-   "id": "cardboard_box_body",
+   "id": "figur_3",
+   "component_id": "wooden_pieces",
+   "material_id": "wood",
+   "name": "Spielfigur 3",
+   "short": "Figuren",
+   "shape": "cyl",
+   "x": 162,
+   "y": 40,
+   "w": 16,
+   "z": 20,
+   "h": 25,
+   "explode": [
+    0,
+    0,
+    180.0
+   ],
+   "mass": 4.5,
+   "materials": [
+    [
+     "holz",
+     98
+    ],
+    [
+     "druck",
+     2
+    ]
+   ],
+   "info": "Weitere Figur.",
+   "color": "#E2B33C",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 3,
+     "w": 10,
+     "fill": "#FFFFFF"
+    }
+   ]
+  },
+  {
+   "id": "figur_4",
+   "component_id": "wooden_pieces",
+   "material_id": "wood",
+   "name": "Spielfigur 4",
+   "short": "Figuren",
+   "shape": "cyl",
+   "x": 188,
+   "y": 40,
+   "w": 16,
+   "z": 20,
+   "h": 25,
+   "explode": [
+    0,
+    0,
+    180.0
+   ],
+   "mass": 4.5,
+   "materials": [
+    [
+     "holz",
+     98
+    ],
+    [
+     "druck",
+     2
+    ]
+   ],
+   "info": "Weitere Figur.",
+   "color": "#3E6FA8",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 3,
+     "w": 10,
+     "fill": "#FFFFFF"
+    }
+   ]
+  },
+  {
+   "id": "wuerfel_1",
+   "component_id": "wooden_pieces",
+   "material_id": "wood",
+   "name": "Würfel (2 Stück)",
+   "short": "Würfel",
+   "shape": "box",
+   "x": 120,
+   "y": 150,
+   "w": 16,
+   "d": 16,
+   "z": 29,
+   "h": 16,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    171.0
+   ],
+   "mass": 3.4,
+   "materials": [
+    [
+     "holz",
+     97
+    ],
+    [
+     "druck",
+     3
+    ]
+   ],
+   "info": "Holzwürfel mit eingeprägten, gefärbten Augen. Gehören zu den Ersatzteilen, nicht in den Müll.",
+   "color": "#F2E6C8",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 3,
+     "w": 3,
+     "fill": "#22272B"
+    },
+    {
+     "shape": "cyl",
+     "x": 6.5,
+     "y": 6.5,
+     "w": 3,
+     "fill": "#22272B"
+    },
+    {
+     "shape": "cyl",
+     "x": 10,
+     "y": 10,
+     "w": 3,
+     "fill": "#22272B"
+    }
+   ]
+  },
+  {
+   "id": "wuerfel_2",
+   "component_id": "wooden_pieces",
+   "material_id": "wood",
+   "name": "Würfel 2",
+   "short": "Würfel",
+   "shape": "box",
+   "x": 160,
+   "y": 150,
+   "w": 16,
+   "d": 16,
+   "z": 29,
+   "h": 16,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    171.0
+   ],
+   "mass": 3.4,
+   "materials": [
+    [
+     "holz",
+     97
+    ],
+    [
+     "druck",
+     3
+    ]
+   ],
+   "info": "Zweiter Würfel.",
+   "color": "#F2E6C8",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 3,
+     "w": 3,
+     "fill": "#22272B"
+    },
+    {
+     "shape": "cyl",
+     "x": 6.5,
+     "y": 6.5,
+     "w": 3,
+     "fill": "#22272B"
+    },
+    {
+     "shape": "cyl",
+     "x": 10,
+     "y": 10,
+     "w": 3,
+     "fill": "#22272B"
+    }
+   ]
+  },
+  {
+   "id": "einsatz",
    "component_id": "cardboard_box_body",
-   "name": "Box",
-   "short": "Box",
+   "material_id": "cardboard",
+   "name": "Einsatz mit Fächern",
+   "short": "Einsatz",
    "shape": "box",
-   "x": 10.8,
-   "y": 24.3,
-   "w": 113.4,
-   "d": 113.4,
-   "h": 16.2,
-   "z": 7.2,
-   "r": 13.6,
+   "x": 4,
+   "y": 4,
+   "w": 262,
+   "d": 262,
+   "z": 1,
+   "h": 44,
+   "r": 1,
    "explode": [
     0,
     0,
-    136.8
+    125.0
    ],
-   "mass": 244.9,
+   "mass": 67.6,
    "materials": [
     [
      "papier",
      100
     ]
    ],
-   "material_id": "cardboard",
-   "info": "Flatten it; tear off heavily greasy or food-soiled parts first."
+   "info": "Gefalteter Karton, der das Spielmaterial in Fächern ordnet. Ins Altpapier; Einsätze aus Kunststoff gehören in den Restmüll.",
+   "color": "#B9A98C",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 14,
+     "y": 17,
+     "w": 66,
+     "d": 96,
+     "r": 2,
+     "fill": "#9E8E72"
+    },
+    {
+     "shape": "box",
+     "x": 14,
+     "y": 142,
+     "w": 66,
+     "d": 96,
+     "r": 2,
+     "fill": "#9E8E72"
+    },
+    {
+     "shape": "box",
+     "x": 98,
+     "y": 30,
+     "w": 120,
+     "d": 36,
+     "r": 2,
+     "fill": "#9E8E72"
+    },
+    {
+     "shape": "box",
+     "x": 108,
+     "y": 140,
+     "w": 70,
+     "d": 36,
+     "r": 2,
+     "fill": "#9E8E72"
+    }
+   ]
   },
   {
-   "id": "paper_sheets",
-   "component_id": "paper_sheets",
-   "name": "Paper (Unterteil)",
-   "short": "Paper (Unterteil)",
+   "id": "unterteil",
+   "component_id": "cardboard_box_body",
+   "material_id": "cardboard",
+   "name": "Schachtelunterteil",
+   "short": "Unterteil",
    "shape": "box",
-   "x": 0,
-   "y": 0,
-   "w": 270.0,
-   "d": 270.0,
-   "h": 36.0,
+   "x": 2,
+   "y": 2,
+   "w": 266,
+   "d": 266,
    "z": 0,
-   "r": 32.4,
+   "h": 56,
+   "r": 1,
    "explode": [
     0,
     0,
-    0
+    0.0
    ],
-   "mass": 357.14,
+   "mass": 146.6,
    "materials": [
     [
      "papier",
-     100
+     95
+    ],
+    [
+     "druck",
+     5
     ]
    ],
-   "material_id": "paper",
-   "info": "Remove any plastic wrap or inserts."
+   "info": "Gleicher Aufbau wie der Deckel, innen oft weiß. Flach drücken und ins Altpapier.",
+   "color": "#E6E1D6",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 2,
+     "w": 262,
+     "d": 262,
+     "r": 1,
+     "fill": "#CFC8B8"
+    }
+   ]
   }
  ]
 }

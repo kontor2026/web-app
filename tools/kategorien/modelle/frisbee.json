@@ -1,0 +1,185 @@
+{
+ "parts": [
+  {
+   "id": "aufdruck",
+   "component_id": "pp_disc",
+   "material_id": "pp",
+   "name": "Aufdruck",
+   "short": "Aufdruck",
+   "shape": "cyl",
+   "x": 50,
+   "y": 50,
+   "w": 170,
+   "z": 30,
+   "h": 0.05,
+   "explode": [
+    0,
+    0,
+    200.0
+   ],
+   "mass": 0.2,
+   "materials": [
+    [
+     "druck",
+     100
+    ]
+   ],
+   "info": "Farbe, direkt auf die Scheibe gedruckt. Sie lässt sich nicht abtrennen und stört beim Wiederverwenden nicht.",
+   "color": "#3E6FA8",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 25,
+     "y": 25,
+     "w": 120,
+     "fill": "#F2E6C8"
+    },
+    {
+     "shape": "box",
+     "x": 45,
+     "y": 75,
+     "w": 80,
+     "d": 20,
+     "r": 4,
+     "fill": "#C8423A"
+    }
+   ]
+  },
+  {
+   "id": "flugplatte",
+   "component_id": "pp_disc",
+   "material_id": "pp",
+   "name": "Flugplatte",
+   "short": "Flugplatte",
+   "shape": "cyl",
+   "x": 10,
+   "y": 10,
+   "w": 250,
+   "z": 27,
+   "h": 3,
+   "explode": [
+    0,
+    0,
+    160.0
+   ],
+   "mass": 69.9,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Die flache Oberseite. Ihre Fläche erzeugt beim Fliegen Auftrieb wie ein Flügel; die feinen Rillen (Flugringe) beruhigen die Luftströmung.",
+   "color": "#F0F0EA",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 10.0,
+     "y": 10.0,
+     "w": 230,
+     "fill": "#E2E3DE"
+    },
+    {
+     "shape": "cyl",
+     "x": 15.0,
+     "y": 15.0,
+     "w": 220,
+     "fill": "#F0F0EA"
+    },
+    {
+     "shape": "cyl",
+     "x": 22.0,
+     "y": 22.0,
+     "w": 206,
+     "fill": "#E2E3DE"
+    },
+    {
+     "shape": "cyl",
+     "x": 27.0,
+     "y": 27.0,
+     "w": 196,
+     "fill": "#F0F0EA"
+    }
+   ]
+  },
+  {
+   "id": "schulter",
+   "component_id": "pp_disc",
+   "material_id": "pp",
+   "name": "Schulter",
+   "short": "Schulter",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 270,
+   "z": 22,
+   "h": 5,
+   "explode": [
+    0,
+    0,
+    80.0
+   ],
+   "mass": 40,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Gewölbter Übergang zwischen Platte und Rand. Hier ist die Scheibe am stabilsten.",
+   "color": "#E6E7E2",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 10.0,
+     "y": 10.0,
+     "w": 250,
+     "fill": "#C9CCC8"
+    }
+   ]
+  },
+  {
+   "id": "rand",
+   "component_id": "pp_disc",
+   "material_id": "pp",
+   "name": "Rand (Lippe)",
+   "short": "Rand",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 270,
+   "z": 0,
+   "h": 22,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 64.9,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Der nach unten gezogene, verdickte Rand. Er gibt Gewicht nach außen, so stabilisiert die Drehung den Flug, und man kann gut greifen. Kaputte Scheiben in den Restmüll, sie sind keine Verpackung.",
+   "color": "#F0F0EA",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 6.0,
+     "y": 6.0,
+     "w": 258,
+     "fill": "#C9CCC8"
+    },
+    {
+     "shape": "cyl",
+     "x": 10.0,
+     "y": 10.0,
+     "w": 250,
+     "fill": "#B5B8B4"
+    }
+   ]
+  }
+ ]
+}
