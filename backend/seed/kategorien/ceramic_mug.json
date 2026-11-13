@@ -4,7 +4,7 @@
  "name_en": "Ceramic Mug",
  "klasse": "Restmüll",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -93,33 +93,187 @@
   "nicht": "Nicht in die Gelbe Tonne: keine Verpackung",
   "warnung": "Gut Erhaltenes lieber verschenken oder in der Werkstatt abgeben."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "ceramic_body",
+   "id": "glasur",
    "component_id": "ceramic_body",
-   "name": "Mug",
-   "short": "Mug",
+   "material_id": "ceramic",
+   "name": "Glasur",
+   "short": "Glasur",
    "shape": "cyl",
-   "x": 0,
-   "y": 0,
-   "w": 85.0,
-   "h": 95.0,
-   "z": 0.0,
+   "x": 4,
+   "y": 4,
+   "w": 70,
+   "z": 8,
+   "h": 0.4,
    "explode": [
     0,
     0,
-    0
+    105.0
    ],
-   "mass": 330.0,
+   "mass": 18,
+   "materials": [
+    [
+     "glas",
+     70
+    ],
+    [
+     "keramik",
+     30
+    ]
+   ],
+   "info": "Glasartige Schicht, die beim zweiten Brand auf den Ton schmilzt. Sie macht den Becher wasserdicht und lässt sich nicht abtrennen.",
+   "color": "#F1EEE6",
+   "opacity": 0.8,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 15,
+     "y": 15,
+     "w": 40,
+     "fill": "#E6E1D6"
+    }
+   ]
+  },
+  {
+   "id": "rand",
+   "component_id": "ceramic_body",
+   "material_id": "ceramic",
+   "name": "Trinkrand",
+   "short": "Rand",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 78,
+   "z": 85,
+   "h": 10,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 35,
    "materials": [
     [
      "keramik",
      100
     ]
    ],
+   "info": "Abgerundete Lippe, rundum glasiert. Hier platzen oft kleine Stücke ab: dann lieber nicht mehr daraus trinken.",
+   "color": "#3F7FA6",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 4,
+     "w": 70,
+     "fill": "#F1EEE6"
+    }
+   ]
+  },
+  {
+   "id": "wand",
+   "component_id": "ceramic_body",
    "material_id": "ceramic",
-   "info": "Ceramic does not belong in the glass bin; broken pieces go in residual waste."
+   "name": "Becherwand",
+   "short": "Wand",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 78,
+   "z": 6,
+   "h": 79,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 200,
+   "materials": [
+    [
+     "keramik",
+     100
+    ]
+   ],
+   "info": "Gebrannter Ton (Steingut), etwa 5 mm dick. Keramik gehört nicht ins Altglas, weil sie dort die neue Glasschmelze verdirbt. Ganze Becher spenden, Scherben in den Restmüll.",
+   "color": "#3F7FA6"
+  },
+  {
+   "id": "standring",
+   "component_id": "ceramic_body",
+   "material_id": "ceramic",
+   "name": "Standring (unglasiert)",
+   "short": "Standring",
+   "shape": "cyl",
+   "x": 4,
+   "y": 4,
+   "w": 70,
+   "z": 0,
+   "h": 6,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 45,
+   "materials": [
+    [
+     "keramik",
+     100
+    ]
+   ],
+   "info": "Unten bleibt ein Ring ohne Glasur, damit der Becher beim Brennen nicht am Ofen festklebt. Man sieht dort die helle Farbe des Tons.",
+   "color": "#D8CBB4",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 6,
+     "y": 6,
+     "w": 58,
+     "fill": "#CBBDA4"
+    }
+   ]
+  },
+  {
+   "id": "henkel",
+   "component_id": "ceramic_body",
+   "material_id": "ceramic",
+   "name": "Henkel",
+   "short": "Henkel",
+   "shape": "box",
+   "x": 74,
+   "y": 33,
+   "w": 21,
+   "d": 12,
+   "z": 20,
+   "h": 60,
+   "r": 6,
+   "explode": [
+    35,
+    0,
+    0
+   ],
+   "mass": 32,
+   "materials": [
+    [
+     "keramik",
+     100
+    ]
+   ],
+   "info": "Separat geformt und vor dem Brennen mit flüssigem Ton (Schlicker) angesetzt. Nach dem Brand ist er fest mit dem Becher verbunden.",
+   "color": "#3F7FA6",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 2,
+     "w": 13,
+     "d": 8,
+     "r": 4,
+     "fill": "#346C8E"
+    }
+   ]
   }
  ]
 }

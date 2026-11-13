@@ -1,0 +1,208 @@
+{
+ "parts": [
+  {
+   "id": "spitze",
+   "component_id": "knife_blade",
+   "material_id": "steel",
+   "name": "Klingenspitze",
+   "short": "Spitze",
+   "shape": "box",
+   "x": 9,
+   "y": 0,
+   "w": 16,
+   "d": 24,
+   "z": 9,
+   "h": 2,
+   "r": 8,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 6.1,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Die Schneide läuft hier zum Klingenrücken hoch und endet in der Spitze.",
+   "color": "#C3C9CE",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 8,
+     "w": 2,
+     "d": 16,
+     "r": 1,
+     "fill": "#E3E7EA"
+    }
+   ]
+  },
+  {
+   "id": "klinge",
+   "component_id": "knife_blade",
+   "material_id": "steel",
+   "name": "Klinge",
+   "short": "Klinge",
+   "shape": "box",
+   "x": 0,
+   "y": 24,
+   "w": 25,
+   "d": 172,
+   "z": 9,
+   "h": 2,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 76,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Rostfreier Messerstahl, an einer Kante scharf geschliffen. Vor dem Wegwerfen in dicke Pappe wickeln und festkleben, dann als Metallschrott zum Wertstoffhof.",
+   "color": "#C3C9CE",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 0,
+     "w": 2.5,
+     "d": 172,
+     "r": 1,
+     "fill": "#E3E7EA"
+    },
+    {
+     "shape": "box",
+     "x": 8,
+     "y": 140,
+     "w": 12,
+     "d": 20,
+     "r": 2,
+     "fill": "#B2B8BD"
+    }
+   ]
+  },
+  {
+   "id": "kropf",
+   "component_id": "knife_blade",
+   "material_id": "steel",
+   "name": "Kropf",
+   "short": "Kropf",
+   "shape": "box",
+   "x": 0,
+   "y": 196,
+   "w": 25,
+   "d": 10,
+   "z": 5,
+   "h": 10,
+   "r": 3,
+   "explode": [
+    0,
+    12,
+    0
+   ],
+   "mass": 15.2,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Verdickung zwischen Klinge und Griff. Sie schützt die Finger davor, auf die Schneide zu rutschen.",
+   "color": "#B2B8BD"
+  },
+  {
+   "id": "angel",
+   "component_id": "knife_blade",
+   "material_id": "steel",
+   "name": "Angel (Erl)",
+   "short": "Angel",
+   "shape": "box",
+   "x": 7,
+   "y": 206,
+   "w": 11,
+   "d": 106,
+   "z": 9,
+   "h": 2.5,
+   "r": 2,
+   "explode": [
+    0,
+    26,
+    0
+   ],
+   "mass": 20.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Verlängerung der Klinge, die im Griff steckt. Durchgehende Angeln halten länger.",
+   "color": "#C3C9CE",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 30,
+     "w": 5,
+     "fill": "#8E959B"
+    },
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 75,
+     "w": 5,
+     "fill": "#8E959B"
+    }
+   ]
+  },
+  {
+   "id": "griff",
+   "component_id": "knife_handle",
+   "material_id": "pp",
+   "name": "Kunststoffgriff",
+   "short": "Griff",
+   "shape": "box",
+   "x": 1,
+   "y": 204,
+   "w": 23,
+   "d": 116,
+   "z": 0,
+   "h": 20,
+   "r": 9,
+   "explode": [
+    45,
+    0,
+    0
+   ],
+   "mass": 32.4,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Polypropylen, direkt um die Angel gespritzt. Abtrennen nur mit einer Säge, sonst das ganze Messer zum Wertstoffhof bringen.",
+   "color": "#2E3338",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 10,
+     "w": 15,
+     "d": 96,
+     "r": 6,
+     "fill": "#3E444A"
+    }
+   ]
+  }
+ ]
+}

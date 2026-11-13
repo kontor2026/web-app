@@ -1,0 +1,126 @@
+{
+ "parts": [
+  {
+   "id": "laffe",
+   "component_id": "wooden_spoon_body",
+   "material_id": "wood",
+   "name": "Laffe",
+   "short": "Laffe",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 60,
+   "d": 82,
+   "z": 0,
+   "h": 15,
+   "explode": [
+    0,
+    -16,
+    0
+   ],
+   "mass": 14,
+   "materials": [
+    [
+     "holz",
+     100
+    ]
+   ],
+   "info": "Die flache Mulde zum Rühren und Abschmecken. Dunkle, rissige Stellen sind verbranntes Holz: Dann ist es Zeit für einen neuen Löffel.",
+   "color": "#D9B48A",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 6,
+     "y": 7,
+     "w": 48,
+     "d": 66,
+     "fill": "#CFA97E"
+    },
+    {
+     "shape": "cyl",
+     "x": 14,
+     "y": 16,
+     "w": 32,
+     "d": 46,
+     "fill": "#C69F73"
+    }
+   ]
+  },
+  {
+   "id": "hals",
+   "component_id": "wooden_spoon_body",
+   "material_id": "wood",
+   "name": "Hals",
+   "short": "Hals",
+   "shape": "box",
+   "x": 21,
+   "y": 78,
+   "w": 18,
+   "d": 32,
+   "z": 2,
+   "h": 11,
+   "r": 6,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 4,
+   "materials": [
+    [
+     "holz",
+     100
+    ]
+   ],
+   "info": "Übergang von der Laffe zum Stiel, hier ist der Löffel am stärksten belastet.",
+   "color": "#D3AE84"
+  },
+  {
+   "id": "stiel",
+   "component_id": "wooden_spoon_body",
+   "material_id": "wood",
+   "name": "Stiel",
+   "short": "Stiel",
+   "shape": "box",
+   "x": 23,
+   "y": 110,
+   "w": 14,
+   "d": 190,
+   "z": 3,
+   "h": 10,
+   "r": 6,
+   "explode": [
+    0,
+    16,
+    0
+   ],
+   "mass": 22,
+   "materials": [
+    [
+     "holz",
+     100
+    ]
+   ],
+   "info": "Unbehandeltes oder nur mit Speiseöl eingeriebenes Buchenholz. Es darf in die Biotonne oder in den Restmüll; lackierte Löffel nur in den Restmüll.",
+   "color": "#D9B48A",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 3.5,
+     "y": 172,
+     "w": 7,
+     "fill": "#8E6B47"
+    },
+    {
+     "shape": "box",
+     "x": 5,
+     "y": 10,
+     "w": 4,
+     "d": 150,
+     "r": 2,
+     "fill": "#CFA97E"
+    }
+   ]
+  }
+ ]
+}

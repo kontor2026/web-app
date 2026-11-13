@@ -1,0 +1,392 @@
+{
+ "parts": [
+  {
+   "id": "leiste_1",
+   "component_id": "wooden_board",
+   "material_id": "wood",
+   "name": "Holzleiste 1",
+   "short": "Holzleiste",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 62.5,
+   "d": 380,
+   "z": 4,
+   "h": 16,
+   "r": 6,
+   "explode": [
+    -24.0,
+    0,
+    26
+   ],
+   "mass": 197.8,
+   "materials": [
+    [
+     "holz",
+     98
+    ],
+    [
+     "klebstoff",
+     2
+    ]
+   ],
+   "info": "Massive Buchenleiste. Holz wirkt leicht keimhemmend. Ein abgenutztes Brett kann man abschleifen, neu einölen und weiter benutzen.",
+   "color": "#D9B48A",
+   "label": true,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 12.0,
+     "y": 12,
+     "w": 50.5,
+     "d": 6,
+     "fill": "#B88E62"
+    },
+    {
+     "shape": "box",
+     "x": 12.0,
+     "y": 362,
+     "w": 50.5,
+     "d": 6,
+     "fill": "#B88E62"
+    },
+    {
+     "shape": "box",
+     "x": 12,
+     "y": 12,
+     "w": 6,
+     "d": 356,
+     "fill": "#B88E62"
+    }
+   ]
+  },
+  {
+   "id": "leiste_2",
+   "component_id": "wooden_board",
+   "material_id": "wood",
+   "name": "Holzleiste 2",
+   "short": "Leiste 2",
+   "shape": "box",
+   "x": 62.5,
+   "y": 0,
+   "w": 62.5,
+   "d": 380,
+   "z": 4,
+   "h": 16,
+   "r": 0,
+   "explode": [
+    -8.0,
+    0,
+    26
+   ],
+   "mass": 197.8,
+   "materials": [
+    [
+     "holz",
+     98
+    ],
+    [
+     "klebstoff",
+     2
+    ]
+   ],
+   "info": "Die Leisten sind mit wasserfestem Leim verbunden. Deshalb gehört ein altes Brett nicht in den Kompost, sondern zum Altholz am Wertstoffhof oder in den Restmüll.",
+   "color": "#CFA97E",
+   "label": true,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 12,
+     "w": 62.5,
+     "d": 6,
+     "fill": "#B88E62"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 362,
+     "w": 62.5,
+     "d": 6,
+     "fill": "#B88E62"
+    }
+   ]
+  },
+  {
+   "id": "leiste_3",
+   "component_id": "wooden_board",
+   "material_id": "wood",
+   "name": "Holzleiste 3",
+   "short": "Leiste 3",
+   "shape": "box",
+   "x": 125,
+   "y": 0,
+   "w": 62.5,
+   "d": 380,
+   "z": 4,
+   "h": 16,
+   "r": 0,
+   "explode": [
+    8.0,
+    0,
+    26
+   ],
+   "mass": 197.8,
+   "materials": [
+    [
+     "holz",
+     98
+    ],
+    [
+     "klebstoff",
+     2
+    ]
+   ],
+   "info": "Die Jahresringe der Leisten liegen abwechselnd, damit sich das Brett nicht verzieht.",
+   "color": "#DDBA92",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 12,
+     "w": 62.5,
+     "d": 6,
+     "fill": "#B88E62"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 362,
+     "w": 62.5,
+     "d": 6,
+     "fill": "#B88E62"
+    }
+   ]
+  },
+  {
+   "id": "leiste_4",
+   "component_id": "wooden_board",
+   "material_id": "wood",
+   "name": "Holzleiste 4",
+   "short": "Leiste 4",
+   "shape": "box",
+   "x": 187.5,
+   "y": 0,
+   "w": 62.5,
+   "d": 380,
+   "z": 4,
+   "h": 16,
+   "r": 6,
+   "explode": [
+    24.0,
+    0,
+    26
+   ],
+   "mass": 197.8,
+   "materials": [
+    [
+     "holz",
+     98
+    ],
+    [
+     "klebstoff",
+     2
+    ]
+   ],
+   "info": "Die umlaufende Saftrille fängt Fleisch- und Obstsaft auf.",
+   "color": "#D3AE84",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 12,
+     "w": 50.5,
+     "d": 6,
+     "fill": "#B88E62"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 362,
+     "w": 50.5,
+     "d": 6,
+     "fill": "#B88E62"
+    },
+    {
+     "shape": "box",
+     "x": 44.5,
+     "y": 12,
+     "w": 6,
+     "d": 356,
+     "fill": "#B88E62"
+    }
+   ]
+  },
+  {
+   "id": "fuss_1",
+   "component_id": "wooden_board",
+   "material_id": "rubber",
+   "name": "Gummifuß",
+   "short": "Gummifuß",
+   "shape": "cyl",
+   "x": 15,
+   "y": 20,
+   "w": 18,
+   "z": 0,
+   "h": 4,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 2.2,
+   "materials": [
+    [
+     "gummi",
+     85
+    ],
+    [
+     "stahl",
+     15
+    ]
+   ],
+   "info": "Rutschfester Gummipuffer, mit einer kleinen Edelstahlschraube festgeschraubt. Vor dem Entsorgen abschrauben: Gummi kommt in den Restmüll.",
+   "color": "#3A3D40",
+   "label": true,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 6.5,
+     "y": 6.5,
+     "w": 5,
+     "fill": "#9AA2A6"
+    }
+   ]
+  },
+  {
+   "id": "fuss_2",
+   "component_id": "wooden_board",
+   "material_id": "rubber",
+   "name": "Gummifuß",
+   "short": "Gummifuß",
+   "shape": "cyl",
+   "x": 217,
+   "y": 20,
+   "w": 18,
+   "z": 0,
+   "h": 4,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 2.2,
+   "materials": [
+    [
+     "gummi",
+     85
+    ],
+    [
+     "stahl",
+     15
+    ]
+   ],
+   "info": "Rutschfester Gummipuffer, mit einer kleinen Edelstahlschraube festgeschraubt. Vor dem Entsorgen abschrauben: Gummi kommt in den Restmüll.",
+   "color": "#3A3D40",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 6.5,
+     "y": 6.5,
+     "w": 5,
+     "fill": "#9AA2A6"
+    }
+   ]
+  },
+  {
+   "id": "fuss_3",
+   "component_id": "wooden_board",
+   "material_id": "rubber",
+   "name": "Gummifuß",
+   "short": "Gummifuß",
+   "shape": "cyl",
+   "x": 15,
+   "y": 342,
+   "w": 18,
+   "z": 0,
+   "h": 4,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 2.2,
+   "materials": [
+    [
+     "gummi",
+     85
+    ],
+    [
+     "stahl",
+     15
+    ]
+   ],
+   "info": "Rutschfester Gummipuffer, mit einer kleinen Edelstahlschraube festgeschraubt. Vor dem Entsorgen abschrauben: Gummi kommt in den Restmüll.",
+   "color": "#3A3D40",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 6.5,
+     "y": 6.5,
+     "w": 5,
+     "fill": "#9AA2A6"
+    }
+   ]
+  },
+  {
+   "id": "fuss_4",
+   "component_id": "wooden_board",
+   "material_id": "rubber",
+   "name": "Gummifuß",
+   "short": "Gummifuß",
+   "shape": "cyl",
+   "x": 217,
+   "y": 342,
+   "w": 18,
+   "z": 0,
+   "h": 4,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 2.2,
+   "materials": [
+    [
+     "gummi",
+     85
+    ],
+    [
+     "stahl",
+     15
+    ]
+   ],
+   "info": "Rutschfester Gummipuffer, mit einer kleinen Edelstahlschraube festgeschraubt. Vor dem Entsorgen abschrauben: Gummi kommt in den Restmüll.",
+   "color": "#3A3D40",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 6.5,
+     "y": 6.5,
+     "w": 5,
+     "fill": "#9AA2A6"
+    }
+   ]
+  }
+ ]
+}

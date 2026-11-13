@@ -1,0 +1,295 @@
+{
+ "parts": [
+  {
+   "id": "deckel",
+   "component_id": "pp_lid",
+   "material_id": "pp",
+   "name": "Klickdeckel",
+   "short": "Deckel",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 180,
+   "d": 120,
+   "z": 62,
+   "h": 8,
+   "r": 14,
+   "explode": [
+    0,
+    0,
+    34.0
+   ],
+   "mass": 34.9,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Polypropylen (PP, Recyclingcode 5). Deckel abnehmen, Dichtung herausziehen, dann gehören Deckel und Dose in die Gelbe Tonne.",
+   "color": "#4A90B8",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 10,
+     "w": 160,
+     "d": 100,
+     "r": 10,
+     "fill": "#5AA0C8"
+    },
+    {
+     "shape": "box",
+     "x": 70,
+     "y": 50,
+     "w": 40,
+     "d": 20,
+     "r": 6,
+     "fill": "#3C7DA3"
+    }
+   ]
+  },
+  {
+   "id": "lasche_vorne",
+   "component_id": "pp_lid",
+   "material_id": "pp",
+   "name": "Verschlusslasche vorne",
+   "short": "Lasche",
+   "shape": "box",
+   "x": 70,
+   "y": 116,
+   "w": 40,
+   "d": 4,
+   "z": 50,
+   "h": 20,
+   "r": 1.5,
+   "explode": [
+    0,
+    26,
+    34
+   ],
+   "mass": 2.1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Klappe mit Filmscharnier, aus einem Stück mit dem Deckel gespritzt. Sie schnappt unter den Rand der Dose. Bricht sie ab, ist der Deckel undicht.",
+   "color": "#3C7DA3"
+  },
+  {
+   "id": "lasche_hinten",
+   "component_id": "pp_lid",
+   "material_id": "pp",
+   "name": "Verschlusslasche hinten",
+   "short": "Lasche",
+   "shape": "box",
+   "x": 70,
+   "y": 0,
+   "w": 40,
+   "d": 4,
+   "z": 50,
+   "h": 20,
+   "r": 1.5,
+   "explode": [
+    0,
+    -26,
+    34
+   ],
+   "mass": 2.1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Klappe mit Filmscharnier, aus einem Stück mit dem Deckel gespritzt. Sie schnappt unter den Rand der Dose. Bricht sie ab, ist der Deckel undicht.",
+   "color": "#3C7DA3",
+   "label": false
+  },
+  {
+   "id": "lasche_links",
+   "component_id": "pp_lid",
+   "material_id": "pp",
+   "name": "Verschlusslasche links",
+   "short": "Lasche",
+   "shape": "box",
+   "x": 0,
+   "y": 45,
+   "w": 4,
+   "d": 30,
+   "z": 50,
+   "h": 20,
+   "r": 1.5,
+   "explode": [
+    -26,
+    0,
+    34
+   ],
+   "mass": 2.1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Klappe mit Filmscharnier, aus einem Stück mit dem Deckel gespritzt. Sie schnappt unter den Rand der Dose. Bricht sie ab, ist der Deckel undicht.",
+   "color": "#3C7DA3",
+   "label": false
+  },
+  {
+   "id": "lasche_rechts",
+   "component_id": "pp_lid",
+   "material_id": "pp",
+   "name": "Verschlusslasche rechts",
+   "short": "Lasche",
+   "shape": "box",
+   "x": 176,
+   "y": 45,
+   "w": 4,
+   "d": 30,
+   "z": 50,
+   "h": 20,
+   "r": 1.5,
+   "explode": [
+    26,
+    0,
+    34
+   ],
+   "mass": 2.1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Klappe mit Filmscharnier, aus einem Stück mit dem Deckel gespritzt. Sie schnappt unter den Rand der Dose. Bricht sie ab, ist der Deckel undicht.",
+   "color": "#3C7DA3",
+   "label": false
+  },
+  {
+   "id": "dichtung",
+   "component_id": "silicone_seal",
+   "material_id": "silicone",
+   "name": "Silikondichtung",
+   "short": "Dichtung",
+   "shape": "box",
+   "x": 4,
+   "y": 4,
+   "w": 172,
+   "d": 112,
+   "z": 61,
+   "h": 3,
+   "r": 12,
+   "explode": [
+    0,
+    0,
+    16.0
+   ],
+   "mass": 5.1,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "info": "Weicher Silikonring in der Nut des Deckels, macht die Dose auslaufsicher. Mit einem stumpfen Messer herausziehen: Silikon kommt in den Restmüll.",
+   "color": "#F2F2F2",
+   "opacity": 0.85,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 4,
+     "w": 164,
+     "d": 104,
+     "r": 9,
+     "fill": "#4A90B8"
+    }
+   ]
+  },
+  {
+   "id": "rand",
+   "component_id": "pp_food_tray",
+   "material_id": "pp",
+   "name": "Dosenrand",
+   "short": "Rand",
+   "shape": "box",
+   "x": 2,
+   "y": 2,
+   "w": 176,
+   "d": 116,
+   "z": 55,
+   "h": 6,
+   "r": 13,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 12.3,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Verstärkter Rand mit Wulst, unter den die Laschen greifen.",
+   "color": "#E8EEF0",
+   "opacity": 0.85,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 4,
+     "w": 168,
+     "d": 108,
+     "r": 10,
+     "fill": "#D8E0E3"
+    }
+   ]
+  },
+  {
+   "id": "schale",
+   "component_id": "pp_food_tray",
+   "material_id": "pp",
+   "name": "Dose",
+   "short": "Dose",
+   "shape": "box",
+   "x": 6,
+   "y": 6,
+   "w": 168,
+   "d": 108,
+   "z": 0,
+   "h": 55,
+   "r": 12,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 59.5,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Leicht konische Schale, damit man mehrere Dosen ineinanderstapeln kann. Essensreste auskratzen, Ausspülen ist für die Gelbe Tonne nicht nötig.",
+   "color": "#E8EEF0",
+   "opacity": 0.85,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 6,
+     "y": 6,
+     "w": 156,
+     "d": 96,
+     "r": 9,
+     "fill": "#D8E0E3"
+    }
+   ]
+  }
+ ]
+}

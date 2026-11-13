@@ -1,0 +1,285 @@
+{
+ "parts": [
+  {
+   "id": "becher",
+   "component_id": "pp_lid",
+   "material_id": "pp",
+   "name": "Trinkbecher (Deckel)",
+   "short": "Becher",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 75,
+   "z": 205,
+   "h": 65,
+   "explode": [
+    0,
+    0,
+    116.0
+   ],
+   "mass": 41.5,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Polypropylen-Becher, wird über den Hals geschraubt und dient unterwegs als Tasse. Kunststoffteile abschrauben und getrennt entsorgen.",
+   "color": "#2E3338",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 4,
+     "w": 67,
+     "fill": "#3E444A"
+    }
+   ]
+  },
+  {
+   "id": "stopfen",
+   "component_id": "pp_lid",
+   "material_id": "pp",
+   "name": "Verschlussstopfen",
+   "short": "Stopfen",
+   "shape": "cyl",
+   "x": 16.5,
+   "y": 16.5,
+   "w": 42,
+   "z": 212,
+   "h": 26,
+   "explode": [
+    0,
+    0,
+    63.0
+   ],
+   "mass": 27.6,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Schraubstopfen aus PP mit Druckknopf und Ausgießöffnung. Innen ist er hohl, damit wenig Wärme entweicht.",
+   "color": "#454B51",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 11,
+     "y": 11,
+     "w": 20,
+     "fill": "#D9473A"
+    },
+    {
+     "shape": "box",
+     "x": 17,
+     "y": 2,
+     "w": 8,
+     "d": 6,
+     "r": 2,
+     "fill": "#1E2226"
+    }
+   ]
+  },
+  {
+   "id": "dichtung",
+   "component_id": "silicone_seal",
+   "material_id": "silicone",
+   "name": "Silikondichtring",
+   "short": "Dichtung",
+   "shape": "cyl",
+   "x": 14.5,
+   "y": 14.5,
+   "w": 46,
+   "z": 214,
+   "h": 3,
+   "explode": [
+    0,
+    0,
+    38.0
+   ],
+   "mass": 3.7,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "info": "Weicher Ring um den Stopfen, hält die Flasche dicht. Zum Reinigen abziehen, am Ende in den Restmüll.",
+   "color": "#E8E4DA",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 4,
+     "w": 38,
+     "fill": "#454B51"
+    }
+   ]
+  },
+  {
+   "id": "innen_hals",
+   "component_id": "stainless_steel_body",
+   "material_id": "steel",
+   "name": "Hals der Innenflasche",
+   "short": "Innenhals",
+   "shape": "cyl",
+   "x": 17.5,
+   "y": 17.5,
+   "w": 40,
+   "z": 205,
+   "h": 17,
+   "explode": [
+    100,
+    0,
+    0
+   ],
+   "mass": 9.2,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Hier sind Innenflasche und Außenmantel miteinander verschweißt. Die Öffnung hat Platz für den Stopfen.",
+   "color": "#B5BBC0",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 3,
+     "w": 34,
+     "fill": "#8E959B"
+    }
+   ]
+  },
+  {
+   "id": "innenflasche",
+   "component_id": "stainless_steel_body",
+   "material_id": "steel",
+   "name": "Innenflasche",
+   "short": "Innenflasche",
+   "shape": "cyl",
+   "x": 4,
+   "y": 4,
+   "w": 67,
+   "z": 8,
+   "h": 197,
+   "explode": [
+    100,
+    0,
+    0
+   ],
+   "mass": 147.5,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Dünnwandiger Edelstahl, außen oft verkupfert oder verspiegelt. Zwischen ihr und dem Mantel ist ein Vakuum: Ohne Luft kann kaum Wärme hindurch. Nicht aufbohren!",
+   "color": "#B5BBC0"
+  },
+  {
+   "id": "schulter",
+   "component_id": "stainless_steel_body",
+   "material_id": "steel",
+   "name": "Schulter mit Gewinde",
+   "short": "Schulter",
+   "shape": "cyl",
+   "x": 9.5,
+   "y": 9.5,
+   "w": 56,
+   "z": 200,
+   "h": 12,
+   "explode": [
+    0,
+    0,
+    20.0
+   ],
+   "mass": 18.4,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Gewinde, auf das der Becher geschraubt wird.",
+   "color": "#C9CED2",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 8,
+     "y": 8,
+     "w": 40,
+     "fill": "#8E959B"
+    }
+   ]
+  },
+  {
+   "id": "mantel",
+   "component_id": "stainless_steel_body",
+   "material_id": "steel",
+   "name": "Außenmantel",
+   "short": "Außenmantel",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 75,
+   "z": 4,
+   "h": 196,
+   "explode": [
+    0,
+    0,
+    20.0
+   ],
+   "mass": 138.2,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Edelstahlrohr, außen gebürstet oder lackiert. Ohne Kunststoffteile gehört die Flasche als Metallschrott zum Wertstoffhof.",
+   "color": "#C9CED2"
+  },
+  {
+   "id": "bodenkappe",
+   "component_id": "stainless_steel_body",
+   "material_id": "steel",
+   "name": "Bodenkappe",
+   "short": "Boden",
+   "shape": "cyl",
+   "x": 1.5,
+   "y": 1.5,
+   "w": 72,
+   "z": 0,
+   "h": 4,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 13.8,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Deckt die Stelle ab, an der die Luft beim Herstellen abgesaugt und die Flasche dann verschlossen wurde.",
+   "color": "#B5BBC0",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 26,
+     "y": 26,
+     "w": 20,
+     "fill": "#9AA2A6"
+    }
+   ]
+  }
+ ]
+}

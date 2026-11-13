@@ -1,0 +1,284 @@
+{
+ "parts": [
+  {
+   "id": "zinke_1",
+   "component_id": "steel_cutlery",
+   "material_id": "steel",
+   "name": "Zinke 1",
+   "short": "Zinken",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 4,
+   "d": 40,
+   "z": 10,
+   "h": 3,
+   "r": 2,
+   "explode": [
+    0,
+    -24,
+    0
+   ],
+   "mass": 2,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Vier gestanzte Zinken, die Spitzen sind leicht abgerundet. Sie sind aus demselben Stück Stahl wie die ganze Gabel.",
+   "color": "#C3C9CE",
+   "label": true,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1.5,
+     "y": 3,
+     "w": 1,
+     "d": 34,
+     "r": 0.5,
+     "fill": "#E3E7EA"
+    }
+   ]
+  },
+  {
+   "id": "zinke_2",
+   "component_id": "steel_cutlery",
+   "material_id": "steel",
+   "name": "Zinke 2",
+   "short": "Zinken",
+   "shape": "box",
+   "x": 7,
+   "y": 0,
+   "w": 4,
+   "d": 40,
+   "z": 10,
+   "h": 3,
+   "r": 2,
+   "explode": [
+    0,
+    -24,
+    0
+   ],
+   "mass": 2,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Vier gestanzte Zinken, die Spitzen sind leicht abgerundet. Sie sind aus demselben Stück Stahl wie die ganze Gabel.",
+   "color": "#C3C9CE",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1.5,
+     "y": 3,
+     "w": 1,
+     "d": 34,
+     "r": 0.5,
+     "fill": "#E3E7EA"
+    }
+   ]
+  },
+  {
+   "id": "zinke_3",
+   "component_id": "steel_cutlery",
+   "material_id": "steel",
+   "name": "Zinke 3",
+   "short": "Zinken",
+   "shape": "box",
+   "x": 14,
+   "y": 0,
+   "w": 4,
+   "d": 40,
+   "z": 10,
+   "h": 3,
+   "r": 2,
+   "explode": [
+    0,
+    -24,
+    0
+   ],
+   "mass": 2,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Vier gestanzte Zinken, die Spitzen sind leicht abgerundet. Sie sind aus demselben Stück Stahl wie die ganze Gabel.",
+   "color": "#C3C9CE",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1.5,
+     "y": 3,
+     "w": 1,
+     "d": 34,
+     "r": 0.5,
+     "fill": "#E3E7EA"
+    }
+   ]
+  },
+  {
+   "id": "zinke_4",
+   "component_id": "steel_cutlery",
+   "material_id": "steel",
+   "name": "Zinke 4",
+   "short": "Zinken",
+   "shape": "box",
+   "x": 21,
+   "y": 0,
+   "w": 4,
+   "d": 40,
+   "z": 10,
+   "h": 3,
+   "r": 2,
+   "explode": [
+    0,
+    -24,
+    0
+   ],
+   "mass": 2,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Vier gestanzte Zinken, die Spitzen sind leicht abgerundet. Sie sind aus demselben Stück Stahl wie die ganze Gabel.",
+   "color": "#C3C9CE",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1.5,
+     "y": 3,
+     "w": 1,
+     "d": 34,
+     "r": 0.5,
+     "fill": "#E3E7EA"
+    }
+   ]
+  },
+  {
+   "id": "ansatz",
+   "component_id": "steel_cutlery",
+   "material_id": "steel",
+   "name": "Zinkenansatz",
+   "short": "Ansatz",
+   "shape": "box",
+   "x": 0,
+   "y": 36,
+   "w": 25,
+   "d": 20,
+   "z": 7,
+   "h": 4,
+   "r": 5,
+   "explode": [
+    0,
+    -12,
+    0
+   ],
+   "mass": 7,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Breiteste Stelle der Gabel, hier ist das Blech nach oben gewölbt, damit Essen nicht herunterrutscht.",
+   "color": "#C3C9CE",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 4,
+     "w": 19,
+     "d": 10,
+     "r": 4,
+     "fill": "#E3E7EA"
+    }
+   ]
+  },
+  {
+   "id": "hals",
+   "component_id": "steel_cutlery",
+   "material_id": "steel",
+   "name": "Hals",
+   "short": "Hals",
+   "shape": "box",
+   "x": 8,
+   "y": 56,
+   "w": 9,
+   "d": 44,
+   "z": 3,
+   "h": 5,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 8,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Schmale, gebogene Stelle zwischen Griff und Zinken. Durch die Biegung liegt die Gabel nur hinten und vorne auf.",
+   "color": "#C3C9CE"
+  },
+  {
+   "id": "griff",
+   "component_id": "steel_cutlery",
+   "material_id": "steel",
+   "name": "Griff",
+   "short": "Griff",
+   "shape": "box",
+   "x": 2,
+   "y": 100,
+   "w": 21,
+   "d": 100,
+   "z": 0,
+   "h": 3.5,
+   "r": 10,
+   "explode": [
+    0,
+    12,
+    0
+   ],
+   "mass": 22,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Rostfreier Edelstahl (18/10: mit Chrom und Nickel). Besteck hält ewig: gut erhaltenes spenden, kaputtes als Metallschrott zum Wertstoffhof, nicht in die Gelbe Tonne.",
+   "color": "#C3C9CE",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 10,
+     "w": 15,
+     "d": 80,
+     "r": 7,
+     "fill": "#E3E7EA"
+    },
+    {
+     "shape": "cyl",
+     "x": 7.5,
+     "y": 88,
+     "w": 6,
+     "fill": "#A9B0B5"
+    }
+   ]
+  }
+ ]
+}
