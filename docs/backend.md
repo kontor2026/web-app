@@ -64,6 +64,27 @@ backend/.venv/Scripts/python -m uvicorn backend.app.main:app --port 8000
 
 Dann http://localhost:8000 öffnen. In der Kopfzeile steht „KI lokal · qwen3-vl:4b“. Ohne Backend (z. B. `python -m http.server`) läuft die App im Demo-Modus mit simulierten Daten.
 
+## KI-Proxy für die Entwicklung
+
+Nur für Entwickler, nicht Teil der App und nicht in den Containern. Der Proxy (`tools/ki_proxy.py`) fragt beim Start, welche KI er nutzen soll (`lokal`, `claude` oder `claude-abo`), und bietet sie als OpenAI-kompatiblen Server an. Das Backend läuft dabei immer mit `LLM_PROVIDER=lokal` und spricht nur mit dem Proxy. Zum Wechseln der KI wird nur der Proxy neu gestartet, das Backend läuft weiter.
+
+```bash
+backend/.venv/bin/python tools/ki_proxy.py               # fragt nach der KI (Windows: backend/.venv/Scripts/python)
+backend/.venv/bin/python tools/ki_proxy.py --ki claude   # ohne Rückfrage
+LLM_PROVIDER=lokal LLM_BASE_URL=http://127.0.0.1:4000/v1 backend/.venv/bin/python -m uvicorn backend.app.main:app --port 8000
+```
+
+Backend unter Windows (PowerShell):
+
+```powershell
+$env:LLM_PROVIDER="lokal"; $env:LLM_BASE_URL="http://127.0.0.1:4000/v1"; backend/.venv/Scripts/python -m uvicorn backend.app.main:app --port 8000
+```
+
+- `lokal` leitet unverändert an einen OpenAI-kompatiblen Server weiter, standardmäßig Ollama auf `localhost:11434` (ändern mit `--upstream`).
+- `claude` und `claude-abo` nutzen dieselben Module wie das Backend (`llm_claude.py`, `llm_claude_abo.py`) und dieselben Einstellungen (`ANTHROPIC_API_KEY`, `CLAUDE_MODEL`, Abo-Anmeldung des Rechners).
+- Der Proxy hört standardmäßig nur auf `127.0.0.1:4000` (`--host`, `--port`). Das Abo ist persönlich: den Proxy im Modus `claude-abo` nicht für andere Rechner freigeben.
+- Weil das Backend „lokal“ sieht, rechnet es nicht voraus und zeigt in der Kopfzeile „KI lokal · station-vl“. Mit Claude hinter dem Proxy `VORAUSRECHNEN=an` setzen.
+
 ## Einstellungen (Umgebungsvariablen)
 
 | Variable | Standard | Zweck |
