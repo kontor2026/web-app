@@ -20,8 +20,8 @@
   "name": "Tablet",
   "name_en": "Tablet",
   "klasse": "Elektroschrott · Bildschirmgerät",
-  "teile": 5,
-  "platzhalter": true
+  "teile": 13,
+  "platzhalter": false
  },
  {
   "id": "smartwatch",
@@ -36,56 +36,56 @@
   "name": "Kopfhörer",
   "name_en": "Headphones",
   "klasse": "Elektroschrott · Kleingerät",
-  "teile": 6,
-  "platzhalter": true
+  "teile": 14,
+  "platzhalter": false
  },
  {
   "id": "earbuds",
   "name": "Kabellose Ohrhörer",
   "name_en": "Wireless Earbuds",
   "klasse": "Elektroschrott · Kleingerät",
-  "teile": 6,
-  "platzhalter": true
+  "teile": 11,
+  "platzhalter": false
  },
  {
   "id": "computer_mouse",
   "name": "Computermaus",
   "name_en": "Computer Mouse",
   "klasse": "Elektroschrott · Kleingerät",
-  "teile": 6,
-  "platzhalter": true
+  "teile": 13,
+  "platzhalter": false
  },
  {
   "id": "keyboard",
   "name": "Tastatur",
   "name_en": "Keyboard",
   "klasse": "Elektroschrott · Kleingerät",
-  "teile": 6,
-  "platzhalter": true
+  "teile": 12,
+  "platzhalter": false
  },
  {
   "id": "phone_charger",
   "name": "Handy-Ladegerät",
   "name_en": "Phone Charger",
   "klasse": "Elektroschrott · Kleingerät",
-  "teile": 3,
-  "platzhalter": true
+  "teile": 11,
+  "platzhalter": false
  },
  {
   "id": "usb_cable",
   "name": "USB-Kabel",
   "name_en": "USB Cable",
   "klasse": "Elektroschrott · Kleingerät",
-  "teile": 4,
-  "platzhalter": true
+  "teile": 9,
+  "platzhalter": false
  },
  {
   "id": "power_bank",
   "name": "Powerbank",
   "name_en": "Power Bank",
   "klasse": "Elektroschrott · Kleingerät",
-  "teile": 4,
-  "platzhalter": true
+  "teile": 12,
+  "platzhalter": false
  },
  {
   "id": "monitor",
@@ -108,16 +108,16 @@
   "name": "Fernbedienung",
   "name_en": "Remote Control",
   "klasse": "Elektroschrott · Kleingerät",
-  "teile": 5,
-  "platzhalter": true
+  "teile": 11,
+  "platzhalter": false
  },
  {
   "id": "led_bulb",
   "name": "LED-Lampe",
   "name_en": "LED Light Bulb",
   "klasse": "Leuchtmittel",
-  "teile": 5,
-  "platzhalter": true
+  "teile": 12,
+  "platzhalter": false
  },
  {
   "id": "flashlight",
@@ -132,40 +132,40 @@
   "name": "Alkali-Batterie (AA)",
   "name_en": "Alkaline Battery",
   "klasse": "Batterien",
-  "teile": 1,
-  "platzhalter": true
+  "teile": 8,
+  "platzhalter": false
  },
  {
   "id": "electric_toothbrush",
   "name": "Elektrische Zahnbürste",
   "name_en": "Electric Toothbrush",
   "klasse": "Elektroschrott · Kleingerät",
-  "teile": 5,
-  "platzhalter": true
+  "teile": 11,
+  "platzhalter": false
  },
  {
   "id": "hair_dryer",
   "name": "Föhn",
   "name_en": "Hair Dryer",
   "klasse": "Elektroschrott · Kleingerät",
-  "teile": 6,
-  "platzhalter": true
+  "teile": 12,
+  "platzhalter": false
  },
  {
   "id": "electric_kettle",
   "name": "Wasserkocher",
   "name_en": "Electric Kettle",
   "klasse": "Elektroschrott · Kleingerät",
-  "teile": 7,
-  "platzhalter": true
+  "teile": 14,
+  "platzhalter": false
  },
  {
   "id": "toaster",
   "name": "Toaster",
   "name_en": "Toaster",
   "klasse": "Elektroschrott · Kleingerät",
-  "teile": 6,
-  "platzhalter": true
+  "teile": 14,
+  "platzhalter": false
  },
  {
   "id": "coffee_capsule",
@@ -348,16 +348,16 @@
   "name": "Sneaker",
   "name_en": "Sneaker",
   "klasse": "Textilien und Schuhe",
-  "teile": 4,
-  "platzhalter": true
+  "teile": 8,
+  "platzhalter": false
  },
  {
   "id": "t_shirt",
   "name": "T-Shirt",
   "name_en": "T-Shirt",
   "klasse": "Textilien und Schuhe",
-  "teile": 2,
-  "platzhalter": true
+  "teile": 6,
+  "platzhalter": false
  },
  {
   "id": "jeans",
@@ -420,8 +420,8 @@
   "name": "Gamecontroller",
   "name_en": "Game Controller",
   "klasse": "Elektroschrott · Kleingerät",
-  "teile": 6,
-  "platzhalter": true
+  "teile": 16,
+  "platzhalter": false
  },
  {
   "id": "wifi_router",

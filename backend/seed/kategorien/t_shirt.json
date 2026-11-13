@@ -4,7 +4,7 @@
  "name_en": "T-Shirt",
  "klasse": "Textilien und Schuhe",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -26,12 +26,12 @@
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 0,18 kg",
+   "v": "≈ 0,14 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 0,18 kg",
+   "v": "≈ 0,14 kg",
    "hint": "spart 0,00 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
@@ -39,11 +39,11 @@
   "metalle_mg": {},
   "herkunft": {},
   "materialien_g": {
-   "cotton": 133.9,
-   "polyester": 16.1
+   "cotton": 147.0,
+   "polyester": 0.5
   },
-  "co2_kg": 0.178,
-  "co2_mit_recyclat_kg": 0.178,
+  "co2_kg": 0.139,
+  "co2_mit_recyclat_kg": 0.139,
   "co2_ersparnis_kg": 0.0,
   "co2_ohne_faktor": [],
   "rohstoffwert_eur": 0,
@@ -94,63 +94,293 @@
   "nicht": "Tragbares nicht in den Restmüll",
   "warnung": "Schuhe paarweise zusammenbinden."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "care_label",
-   "component_id": "care_label",
-   "name": "Care Label",
-   "short": "Care Label",
-   "shape": "box",
-   "x": 303.0,
-   "y": 80.0,
-   "w": 9.0,
-   "d": 240.0,
-   "h": 6.0,
-   "z": 2.0,
-   "r": 1.1,
+   "id": "kragen",
+   "component_id": "cotton_fabric",
+   "material_id": "cotton",
+   "name": "Kragenbündchen",
+   "short": "Kragen",
+   "shape": "cyl",
+   "x": 120,
+   "y": 0,
+   "w": 90,
+   "d": 46,
+   "z": 5,
+   "h": 1.5,
    "explode": [
-    120.0,
     0,
-    42.0
+    0,
+    180.0
    ],
-   "mass": 16.07,
+   "mass": 7,
+   "materials": [
+    [
+     "baumwolle",
+     95
+    ],
+    [
+     "polyester",
+     5
+    ]
+   ],
+   "info": "Elastischer Rippstrick, rund an den Halsausschnitt genäht. Etwas Elasthan sorgt dafür, dass er nicht ausleiert.",
+   "color": "#3F6E9E",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 7,
+     "y": 6,
+     "w": 76,
+     "d": 34,
+     "fill": "#2E5277"
+    }
+   ]
+  },
+  {
+   "id": "vorderteil",
+   "component_id": "cotton_fabric",
+   "material_id": "cotton",
+   "name": "Vorderteil",
+   "short": "Vorderteil",
+   "shape": "box",
+   "x": 50,
+   "y": 26,
+   "w": 230,
+   "d": 319,
+   "z": 2.5,
+   "h": 2.5,
+   "r": 4,
+   "explode": [
+    0,
+    0,
+    90.0
+   ],
+   "mass": 52,
+   "materials": [
+    [
+     "baumwolle",
+     98
+    ],
+    [
+     "polyester",
+     2
+    ]
+   ],
+   "info": "Baumwoll-Single-Jersey. Tragbare Shirts in die Altkleidersammlung, kaputte zum Textilrecycling: Daraus werden Putzlappen oder Dämmstoff.",
+   "color": "#4C7FB5",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 305,
+     "w": 230,
+     "d": 3,
+     "r": 0,
+     "fill": "#3F6E9E"
+    },
+    {
+     "shape": "box",
+     "x": 75,
+     "y": 60,
+     "w": 80,
+     "d": 60,
+     "r": 6,
+     "fill": "#E8E6E1"
+    }
+   ]
+  },
+  {
+   "id": "etikett",
+   "component_id": "care_label",
+   "material_id": "polyester",
+   "name": "Pflegeetikett",
+   "short": "Etikett",
+   "shape": "box",
+   "x": 155,
+   "y": 4,
+   "w": 20,
+   "d": 20,
+   "z": 2.5,
+   "h": 0.3,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    90.0
+   ],
+   "mass": 0.5,
    "materials": [
     [
      "polyester",
      100
     ]
    ],
-   "material_id": "polyester",
-   "info": "Cut it off at the seam."
+   "info": "Polyester-Etikett mit Waschsymbolen und Fasergehalt. Vor dem Recycling an der Naht abschneiden, weil es ein anderes Material ist.",
+   "color": "#F4F2EE",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 4,
+     "w": 14,
+     "d": 2,
+     "r": 0,
+     "fill": "#8E969A"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 8,
+     "w": 14,
+     "d": 2,
+     "r": 0,
+     "fill": "#8E969A"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 12,
+     "w": 10,
+     "d": 2,
+     "r": 0,
+     "fill": "#8E969A"
+    }
+   ]
   },
   {
-   "id": "cotton_fabric",
+   "id": "rueckenteil",
    "component_id": "cotton_fabric",
-   "name": "Fabric",
-   "short": "Fabric",
+   "material_id": "cotton",
+   "name": "Rückenteil",
+   "short": "Rückenteil",
    "shape": "box",
-   "x": 0,
+   "x": 50,
    "y": 0,
-   "w": 300.0,
-   "d": 400.0,
-   "h": 10.0,
-   "z": 0.0,
-   "r": 36.0,
+   "w": 230,
+   "d": 345,
+   "z": 0,
+   "h": 2.5,
+   "r": 4,
    "explode": [
     0,
     0,
-    0
+    0.0
    ],
-   "mass": 133.93,
+   "mass": 56,
    "materials": [
     [
      "baumwolle",
-     100
+     98
+    ],
+    [
+     "polyester",
+     2
     ]
    ],
+   "info": "Gleicher Stoff wie vorne, an Schultern und Seiten mit Polyestergarn vernäht. Zum Trennen die Nähte aufschneiden.",
+   "color": "#4C7FB5",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 331,
+     "w": 230,
+     "d": 3,
+     "r": 0,
+     "fill": "#3F6E9E"
+    }
+   ]
+  },
+  {
+   "id": "aermel_l",
+   "component_id": "cotton_fabric",
    "material_id": "cotton",
-   "info": "Donate if wearable; otherwise use the textile collection."
+   "name": "Ärmel links",
+   "short": "Ärmel",
+   "shape": "box",
+   "x": 0,
+   "y": 10,
+   "w": 50,
+   "d": 120,
+   "z": 0,
+   "h": 5,
+   "r": 6,
+   "explode": [
+    -40,
+    0,
+    0
+   ],
+   "mass": 16,
+   "materials": [
+    [
+     "baumwolle",
+     98
+    ],
+    [
+     "polyester",
+     2
+    ]
+   ],
+   "info": "Doppellagiger Ärmel, an der Schulter angesetzt. Der umgenähte Saum verhindert, dass der Stoff ausfranst.",
+   "color": "#4C7FB5",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 0,
+     "w": 3,
+     "d": 120,
+     "r": 0,
+     "fill": "#3F6E9E"
+    }
+   ]
+  },
+  {
+   "id": "aermel_r",
+   "component_id": "cotton_fabric",
+   "material_id": "cotton",
+   "name": "Ärmel rechts",
+   "short": "Ärmel",
+   "shape": "box",
+   "x": 280,
+   "y": 10,
+   "w": 50,
+   "d": 120,
+   "z": 0,
+   "h": 5,
+   "r": 6,
+   "explode": [
+    40,
+    0,
+    0
+   ],
+   "mass": 16,
+   "materials": [
+    [
+     "baumwolle",
+     98
+    ],
+    [
+     "polyester",
+     2
+    ]
+   ],
+   "info": "Gegenstück zum linken Ärmel.",
+   "color": "#4C7FB5",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 45,
+     "y": 0,
+     "w": 3,
+     "d": 120,
+     "r": 0,
+     "fill": "#3F6E9E"
+    }
+   ]
   }
  ]
 }

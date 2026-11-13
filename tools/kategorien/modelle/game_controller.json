@@ -1,0 +1,790 @@
+{
+ "parts": [
+  {
+   "id": "kappe_l",
+   "component_id": "thumbstick_caps",
+   "material_id": "rubber",
+   "name": "Stick-Kappe links",
+   "short": "Stick-Kappe",
+   "shape": "cyl",
+   "x": 27,
+   "y": 11,
+   "w": 22,
+   "z": 48,
+   "h": 6,
+   "explode": [
+    0,
+    0,
+    228.0
+   ],
+   "mass": 2,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "info": "Griffige Gummikappe, steckt nur auf dem Stick. Gerade nach oben abziehen; abgenutzte Kappen gibt es einzeln.",
+   "color": "#262B2F",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 4,
+     "w": 14,
+     "fill": "#3A4045"
+    }
+   ]
+  },
+  {
+   "id": "kappe_r",
+   "component_id": "thumbstick_caps",
+   "material_id": "rubber",
+   "name": "Stick-Kappe rechts",
+   "short": "Stick-Kappe",
+   "shape": "cyl",
+   "x": 89,
+   "y": 39,
+   "w": 22,
+   "z": 48,
+   "h": 6,
+   "explode": [
+    0,
+    0,
+    228.0
+   ],
+   "mass": 2,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "info": "Zweite Gummikappe, gleich aufgebaut.",
+   "color": "#262B2F",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 4,
+     "w": 14,
+     "fill": "#3A4045"
+    }
+   ]
+  },
+  {
+   "id": "tasten",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Aktionstasten",
+   "short": "Tasten",
+   "shape": "box",
+   "x": 106,
+   "y": 10,
+   "w": 28,
+   "d": 28,
+   "z": 34,
+   "h": 3,
+   "r": 10,
+   "explode": [
+    0,
+    0,
+    242.0
+   ],
+   "mass": 3,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Vier Kunststofftasten auf einer Gummimatte. Beim Drücken schließt ein Kohlepunkt einen Kontakt auf der Platine.",
+   "color": "#4C5155",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 10,
+     "y": 1,
+     "w": 8,
+     "fill": "#E3C14B"
+    },
+    {
+     "shape": "cyl",
+     "x": 1,
+     "y": 10,
+     "w": 8,
+     "fill": "#4C8BD0"
+    },
+    {
+     "shape": "cyl",
+     "x": 19,
+     "y": 10,
+     "w": 8,
+     "fill": "#D0574C"
+    },
+    {
+     "shape": "cyl",
+     "x": 10,
+     "y": 19,
+     "w": 8,
+     "fill": "#5BB062"
+    }
+   ]
+  },
+  {
+   "id": "steuerkreuz",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Steuerkreuz",
+   "short": "Steuerkreuz",
+   "shape": "box",
+   "x": 45,
+   "y": 38,
+   "w": 22,
+   "d": 22,
+   "z": 34,
+   "h": 2.5,
+   "r": 4,
+   "explode": [
+    0,
+    0,
+    242.0
+   ],
+   "mass": 2,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Ein Stück Kunststoff mit vier Druckpunkten auf der Gummimatte darunter.",
+   "color": "#4C5155",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 7.5,
+     "y": 1,
+     "w": 7,
+     "d": 20,
+     "r": 1.5,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 7.5,
+     "w": 20,
+     "d": 7,
+     "r": 1.5,
+     "fill": "#262B2F"
+    }
+   ]
+  },
+  {
+   "id": "oberschale",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Oberschale",
+   "short": "Oberschale",
+   "shape": "box",
+   "x": 10,
+   "y": 3,
+   "w": 135,
+   "d": 68,
+   "z": 22,
+   "h": 12,
+   "r": 26,
+   "explode": [
+    0,
+    0,
+    202.0
+   ],
+   "mass": 48,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "ABS-Kunststoff. Die Schrauben sitzen oft unter Gummifüßen oder Aufklebern, danach die Clips mit einem Plektrum lösen.",
+   "color": "#3A3F44",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 15,
+     "y": 6,
+     "w": 26,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "cyl",
+     "x": 77,
+     "y": 34,
+     "w": 26,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "cyl",
+     "x": 61,
+     "y": 6,
+     "w": 13,
+     "fill": "#8E969A"
+    },
+    {
+     "shape": "box",
+     "x": 46,
+     "y": 22,
+     "w": 8,
+     "d": 4,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 82,
+     "y": 22,
+     "w": 8,
+     "d": 4,
+     "r": 2,
+     "fill": "#262B2F"
+    }
+   ]
+  },
+  {
+   "id": "stick_l",
+   "component_id": "circuit_board",
+   "material_id": "mixed_electronics",
+   "name": "Stickmodul links",
+   "short": "Stickmodul",
+   "shape": "cyl",
+   "x": 32,
+   "y": 16,
+   "w": 12,
+   "z": 17.6,
+   "h": 30.4,
+   "explode": [
+    0,
+    0,
+    136.0
+   ],
+   "mass": 5,
+   "materials": [
+    [
+     "pcabs",
+     50
+    ],
+    [
+     "stahl",
+     25
+    ],
+    [
+     "kupfer",
+     15
+    ],
+    [
+     "kontakte",
+     10
+    ]
+   ],
+   "info": "Zwei Drehwiderstände messen, wie weit der Stick gekippt ist. Verschleißt mit der Zeit („Drift“) und lässt sich auslöten.",
+   "color": "#6E7579"
+  },
+  {
+   "id": "stick_r",
+   "component_id": "circuit_board",
+   "material_id": "mixed_electronics",
+   "name": "Stickmodul rechts",
+   "short": "Stickmodul",
+   "shape": "cyl",
+   "x": 94,
+   "y": 44,
+   "w": 12,
+   "z": 17.6,
+   "h": 30.4,
+   "explode": [
+    0,
+    0,
+    136.0
+   ],
+   "mass": 5,
+   "materials": [
+    [
+     "pcabs",
+     50
+    ],
+    [
+     "stahl",
+     25
+    ],
+    [
+     "kupfer",
+     15
+    ],
+    [
+     "kontakte",
+     10
+    ]
+   ],
+   "info": "Zweites Stickmodul, gleich aufgebaut.",
+   "color": "#6E7579",
+   "label": false
+  },
+  {
+   "id": "trigger_l",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Schultertaste links",
+   "short": "Trigger",
+   "shape": "box",
+   "x": 18,
+   "y": 0,
+   "w": 32,
+   "d": 16,
+   "z": 20,
+   "h": 14,
+   "r": 6,
+   "explode": [
+    0,
+    -45,
+    30
+   ],
+   "mass": 6,
+   "materials": [
+    [
+     "pcabs",
+     80
+    ],
+    [
+     "stahl",
+     10
+    ],
+    [
+     "ndfeb",
+     10
+    ]
+   ],
+   "info": "Analoger Trigger mit Feder und kleinem Magnet, dessen Position ein Sensor misst. Ist nur eingehängt.",
+   "color": "#3A3F44",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 2,
+     "w": 28,
+     "d": 6,
+     "r": 3,
+     "fill": "#4C5155"
+    }
+   ]
+  },
+  {
+   "id": "trigger_r",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Schultertaste rechts",
+   "short": "Trigger",
+   "shape": "box",
+   "x": 105,
+   "y": 0,
+   "w": 32,
+   "d": 16,
+   "z": 20,
+   "h": 14,
+   "r": 6,
+   "explode": [
+    0,
+    -45,
+    30
+   ],
+   "mass": 6,
+   "materials": [
+    [
+     "pcabs",
+     80
+    ],
+    [
+     "stahl",
+     10
+    ],
+    [
+     "ndfeb",
+     10
+    ]
+   ],
+   "info": "Zweiter Trigger, gleich aufgebaut.",
+   "color": "#3A3F44",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 2,
+     "w": 28,
+     "d": 6,
+     "r": 3,
+     "fill": "#4C5155"
+    }
+   ]
+  },
+  {
+   "id": "platine",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "Hauptplatine",
+   "short": "Platine",
+   "shape": "box",
+   "x": 28,
+   "y": 8,
+   "w": 99,
+   "d": 50,
+   "z": 16,
+   "h": 1.6,
+   "r": 8,
+   "explode": [
+    0,
+    0,
+    96
+   ],
+   "mass": 24,
+   "materials": [
+    [
+     "fr4",
+     50
+    ],
+    [
+     "kupfer",
+     22
+    ],
+    [
+     "chip",
+     18
+    ],
+    [
+     "lot",
+     10
+    ]
+   ],
+   "info": "Mit Funkchip (Bluetooth), Ladechip und Kontaktflächen für die Tasten. Gehört zum Elektroschrott.",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 42,
+     "y": 6,
+     "w": 14,
+     "d": 14,
+     "r": 1,
+     "fill": "#3F4547"
+    },
+    {
+     "shape": "box",
+     "x": 60,
+     "y": 30,
+     "w": 10,
+     "d": 10,
+     "r": 1,
+     "fill": "#3F4547"
+    },
+    {
+     "shape": "box",
+     "x": 44,
+     "y": 40,
+     "w": 10,
+     "d": 8,
+     "r": 1,
+     "fill": "#9BA3A8"
+    }
+   ]
+  },
+  {
+   "id": "akku",
+   "component_id": "li_ion_battery",
+   "material_id": "li_ion",
+   "name": "Lithium-Ionen-Akku",
+   "short": "Akku",
+   "shape": "box",
+   "x": 52,
+   "y": 28,
+   "w": 50,
+   "d": 34,
+   "z": 5,
+   "h": 10,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    57
+   ],
+   "mass": 32,
+   "materials": [
+    [
+     "lco",
+     36
+    ],
+    [
+     "graphit",
+     18
+    ],
+    [
+     "elektrolyt",
+     14
+    ],
+    [
+     "kupfer",
+     10
+    ],
+    [
+     "alu",
+     10
+    ],
+    [
+     "pcabs",
+     12
+    ]
+   ],
+   "info": "Etwa 1.000 mAh in einer Kunststoffhülle, mit Stecker an der Platine. Ausstecken, Pole abkleben und zur Batterie-Sammelstelle bringen.",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 3,
+     "w": 44,
+     "d": 28,
+     "r": 2
+    }
+   ]
+  },
+  {
+   "id": "motor_l",
+   "component_id": "vibration_motor",
+   "material_id": "mixed_electronics",
+   "name": "Vibrationsmotor links",
+   "short": "Rumble-Motor",
+   "shape": "box",
+   "x": 18,
+   "y": 62,
+   "w": 18,
+   "d": 28,
+   "z": 4,
+   "h": 14,
+   "r": 4,
+   "explode": [
+    0,
+    0,
+    60
+   ],
+   "mass": 14,
+   "materials": [
+    [
+     "stahl",
+     50
+    ],
+    [
+     "kupfer",
+     25
+    ],
+    [
+     "ndfeb",
+     10
+    ],
+    [
+     "pcabs",
+     15
+    ]
+   ],
+   "info": "Kleiner Elektromotor mit einem Gewicht, das nicht in der Mitte sitzt: Er rüttelt. In den Griff geklipst, Kabel abschneiden.",
+   "color": "#9BA3A8",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 2,
+     "y": 20,
+     "w": 14,
+     "d": 7,
+     "fill": "#B07A4A"
+    }
+   ]
+  },
+  {
+   "id": "motor_r",
+   "component_id": "vibration_motor",
+   "material_id": "mixed_electronics",
+   "name": "Vibrationsmotor rechts",
+   "short": "Rumble-Motor",
+   "shape": "box",
+   "x": 119,
+   "y": 62,
+   "w": 18,
+   "d": 28,
+   "z": 4,
+   "h": 14,
+   "r": 4,
+   "explode": [
+    0,
+    0,
+    60
+   ],
+   "mass": 10,
+   "materials": [
+    [
+     "stahl",
+     50
+    ],
+    [
+     "kupfer",
+     25
+    ],
+    [
+     "ndfeb",
+     10
+    ],
+    [
+     "pcabs",
+     15
+    ]
+   ],
+   "info": "Etwas leichteres Gewicht als links, damit sich die beiden Vibrationen unterscheiden.",
+   "color": "#9BA3A8",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 2,
+     "y": 20,
+     "w": 14,
+     "d": 7,
+     "fill": "#B07A4A"
+    }
+   ]
+  },
+  {
+   "id": "unterschale",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Unterschale",
+   "short": "Unterschale",
+   "shape": "box",
+   "x": 40,
+   "y": 6,
+   "w": 75,
+   "d": 62,
+   "z": 3,
+   "h": 19,
+   "r": 14,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 28,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Untere Gehäusehälfte aus ABS. Leer ausgebaut sortenreiner Kunststoff.",
+   "color": "#3A3F44",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 3,
+     "w": 69,
+     "d": 56,
+     "r": 11,
+     "fill": "#30353A"
+    }
+   ]
+  },
+  {
+   "id": "griff_l",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Griff links",
+   "short": "Griff",
+   "shape": "box",
+   "x": 0,
+   "y": 24,
+   "w": 40,
+   "d": 81,
+   "z": 0,
+   "h": 24,
+   "r": 20,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 17,
+   "materials": [
+    [
+     "pcabs",
+     85
+    ],
+    [
+     "tpu",
+     15
+    ]
+   ],
+   "info": "Teil der Unterschale. Die Griffflächen sind oft mit weichem Kunststoff überzogen.",
+   "color": "#3A3F44",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 4,
+     "w": 32,
+     "d": 73,
+     "r": 16,
+     "fill": "#30353A"
+    }
+   ]
+  },
+  {
+   "id": "griff_r",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Griff rechts",
+   "short": "Griff",
+   "shape": "box",
+   "x": 115,
+   "y": 24,
+   "w": 40,
+   "d": 81,
+   "z": 0,
+   "h": 24,
+   "r": 20,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 17,
+   "materials": [
+    [
+     "pcabs",
+     85
+    ],
+    [
+     "tpu",
+     15
+    ]
+   ],
+   "info": "Rechter Griff, Gegenstück zum linken.",
+   "color": "#3A3F44",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 4,
+     "w": 32,
+     "d": 73,
+     "r": 16,
+     "fill": "#30353A"
+    }
+   ]
+  }
+ ]
+}

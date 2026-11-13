@@ -1,0 +1,90 @@
+"""3D-Modell: game_controller. Erzeugt tools/kategorien/modelle/game_controller.json."""
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+
+from bau import teil, mark, raster, explodiere, schreibe  # noqa: E402
+
+# Typischer Gamepad mit versetzten Sticks, liegt mit den Tasten nach oben: 155 × 105 × 55 mm.
+# y = 0 ist die Rückseite mit den Schultertasten, die Griffe zeigen nach vorne.
+GEH = '#3A3F44'
+SCHWARZ = '#262B2F'
+teile = [
+    teil('kappe_l', 'thumbstick_caps', 'Stick-Kappe links', 'Stick-Kappe', 'cyl',
+         x=27, y=11, w=22, z=48, h=6, mass=2, materials=[['gummi', 100]], color=SCHWARZ,
+         info='Griffige Gummikappe, steckt nur auf dem Stick. Gerade nach oben abziehen; abgenutzte Kappen gibt es einzeln.',
+         marks=[mark('cyl', 4, 4, 14, fill='#3A4045')]),
+    teil('kappe_r', 'thumbstick_caps', 'Stick-Kappe rechts', 'Stick-Kappe', 'cyl',
+         x=89, y=39, w=22, z=48, h=6, mass=2, materials=[['gummi', 100]], color=SCHWARZ, label=False,
+         info='Zweite Gummikappe, gleich aufgebaut.',
+         marks=[mark('cyl', 4, 4, 14, fill='#3A4045')]),
+    teil('tasten', 'plastic_housing', 'Aktionstasten', 'Tasten', 'box',
+         x=106, y=10, w=28, d=28, z=34, h=3, r=10, mass=3, materials=[['pcabs', 100]], color='#4C5155',
+         info='Vier Kunststofftasten auf einer Gummimatte. Beim Drücken schließt ein Kohlepunkt einen Kontakt auf der Platine.',
+         marks=[mark('cyl', 10, 1, 8, fill='#E3C14B'), mark('cyl', 1, 10, 8, fill='#4C8BD0'),
+                mark('cyl', 19, 10, 8, fill='#D0574C'), mark('cyl', 10, 19, 8, fill='#5BB062')]),
+    teil('steuerkreuz', 'plastic_housing', 'Steuerkreuz', 'Steuerkreuz', 'box',
+         x=45, y=38, w=22, d=22, z=34, h=2.5, r=4, mass=2, materials=[['pcabs', 100]], color='#4C5155',
+         info='Ein Stück Kunststoff mit vier Druckpunkten auf der Gummimatte darunter.',
+         marks=[mark('box', 7.5, 1, 7, 20, 1.5, SCHWARZ), mark('box', 1, 7.5, 20, 7, 1.5, SCHWARZ)]),
+    teil('oberschale', 'plastic_housing', 'Oberschale', 'Oberschale', 'box',
+         x=10, y=3, w=135, d=68, z=22, h=12, r=26, mass=48, material_id='abs', materials=[['pcabs', 100]], color=GEH,
+         info='ABS-Kunststoff. Die Schrauben sitzen oft unter Gummifüßen oder Aufklebern, danach die Clips mit einem '
+              'Plektrum lösen.',
+         marks=[mark('cyl', 15, 6, 26, fill=SCHWARZ), mark('cyl', 77, 34, 26, fill=SCHWARZ),
+                mark('cyl', 61, 6, 13, fill='#8E969A'), mark('box', 46, 22, 8, 4, 2, SCHWARZ),
+                mark('box', 82, 22, 8, 4, 2, SCHWARZ)]),
+    teil('stick_l', 'circuit_board', 'Stickmodul links', 'Stickmodul', 'cyl',
+         x=32, y=16, w=12, z=17.6, h=30.4, mass=5, material_id='mixed_electronics',
+         materials=[['pcabs', 50], ['stahl', 25], ['kupfer', 15], ['kontakte', 10]], color='#6E7579',
+         info='Zwei Drehwiderstände messen, wie weit der Stick gekippt ist. Verschleißt mit der Zeit („Drift“) und lässt sich auslöten.'),
+    teil('stick_r', 'circuit_board', 'Stickmodul rechts', 'Stickmodul', 'cyl',
+         x=94, y=44, w=12, z=17.6, h=30.4, mass=5, material_id='mixed_electronics', label=False,
+         materials=[['pcabs', 50], ['stahl', 25], ['kupfer', 15], ['kontakte', 10]], color='#6E7579',
+         info='Zweites Stickmodul, gleich aufgebaut.'),
+    teil('trigger_l', 'plastic_housing', 'Schultertaste links', 'Trigger', 'box',
+         x=18, y=0, w=32, d=16, z=20, h=14, r=6, mass=6, materials=[['pcabs', 80], ['stahl', 10], ['ndfeb', 10]], color=GEH,
+         explode=[0, -45, 30],
+         info='Analoger Trigger mit Feder und kleinem Magnet, dessen Position ein Sensor misst. Ist nur eingehängt.',
+         marks=[mark('box', 2, 2, 28, 6, 3, '#4C5155')]),
+    teil('trigger_r', 'plastic_housing', 'Schultertaste rechts', 'Trigger', 'box',
+         x=105, y=0, w=32, d=16, z=20, h=14, r=6, mass=6, materials=[['pcabs', 80], ['stahl', 10], ['ndfeb', 10]], color=GEH,
+         explode=[0, -45, 30], label=False,
+         info='Zweiter Trigger, gleich aufgebaut.',
+         marks=[mark('box', 2, 2, 28, 6, 3, '#4C5155')]),
+    teil('platine', 'circuit_board', 'Hauptplatine', 'Platine', 'box',
+         x=28, y=8, w=99, d=50, z=16, h=1.6, r=8, mass=24, materials=[['fr4', 50], ['kupfer', 22], ['chip', 18], ['lot', 10]],
+         info='Mit Funkchip (Bluetooth), Ladechip und Kontaktflächen für die Tasten. Gehört zum Elektroschrott.',
+         marks=[mark('box', 42, 6, 14, 14, 1, '#3F4547'), mark('box', 60, 30, 10, 10, 1, '#3F4547'),
+                mark('box', 44, 40, 10, 8, 1, '#9BA3A8')]),
+    teil('akku', 'li_ion_battery', 'Lithium-Ionen-Akku', 'Akku', 'box',
+         x=52, y=28, w=50, d=34, z=5, h=10, r=3, mass=32,
+         materials=[['lco', 36], ['graphit', 18], ['elektrolyt', 14], ['kupfer', 10], ['alu', 10], ['pcabs', 12]],
+         info='Etwa 1.000 mAh in einer Kunststoffhülle, mit Stecker an der Platine. Ausstecken, Pole abkleben und zur Batterie-Sammelstelle bringen.',
+         marks=[mark('box', 3, 3, 44, 28, 2)]),
+    teil('motor_l', 'vibration_motor', 'Vibrationsmotor links', 'Rumble-Motor', 'box',
+         x=18, y=62, w=18, d=28, z=4, h=14, r=4, mass=14, materials=[['stahl', 50], ['kupfer', 25], ['ndfeb', 10], ['pcabs', 15]],
+         color='#9BA3A8',
+         info='Kleiner Elektromotor mit einem Gewicht, das nicht in der Mitte sitzt: Er rüttelt. In den Griff geklipst, Kabel abschneiden.',
+         marks=[mark('cyl', 2, 20, 14, 7, fill='#B07A4A')]),
+    teil('motor_r', 'vibration_motor', 'Vibrationsmotor rechts', 'Rumble-Motor', 'box',
+         x=119, y=62, w=18, d=28, z=4, h=14, r=4, mass=10, materials=[['stahl', 50], ['kupfer', 25], ['ndfeb', 10], ['pcabs', 15]],
+         color='#9BA3A8', label=False,
+         info='Etwas leichteres Gewicht als links, damit sich die beiden Vibrationen unterscheiden.',
+         marks=[mark('cyl', 2, 20, 14, 7, fill='#B07A4A')]),
+    teil('unterschale', 'plastic_housing', 'Unterschale', 'Unterschale', 'box',
+         x=40, y=6, w=75, d=62, z=3, h=19, r=14, mass=28, material_id='abs', materials=[['pcabs', 100]], color=GEH,
+         info='Untere Gehäusehälfte aus ABS. Leer ausgebaut sortenreiner Kunststoff.',
+         marks=[mark('box', 3, 3, 69, 56, 11, '#30353A')]),
+    teil('griff_l', 'plastic_housing', 'Griff links', 'Griff', 'box',
+         x=0, y=24, w=40, d=81, r=20, z=0, h=24, mass=17, material_id='abs', materials=[['pcabs', 85], ['tpu', 15]], color=GEH,
+         info='Teil der Unterschale. Die Griffflächen sind oft mit weichem Kunststoff überzogen.',
+         marks=[mark('box', 4, 4, 32, 73, 16, '#30353A')]),
+    teil('griff_r', 'plastic_housing', 'Griff rechts', 'Griff', 'box',
+         x=115, y=24, w=40, d=81, r=20, z=0, h=24, mass=17, material_id='abs', materials=[['pcabs', 85], ['tpu', 15]], color=GEH,
+         label=False, info='Rechter Griff, Gegenstück zum linken.',
+         marks=[mark('box', 4, 4, 32, 73, 16, '#30353A')]),
+]
+
+explodiere(teile, abstand=40, fest=('unterschale', 'griff_l', 'griff_r'))
+schreibe('game_controller', teile)

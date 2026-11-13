@@ -1,0 +1,1412 @@
+{
+ "parts": [
+  {
+   "id": "senkel",
+   "component_id": "shoelaces",
+   "material_id": "polyester",
+   "name": "Schnürsenkel",
+   "short": "Schnürsenkel",
+   "shape": "box",
+   "x": 38,
+   "y": 100,
+   "w": 34,
+   "d": 88,
+   "z": 104,
+   "h": 4,
+   "r": 3,
+   "explode": [
+    130,
+    0,
+    40
+   ],
+   "mass": 10,
+   "materials": [
+    [
+     "polyester",
+     100
+    ]
+   ],
+   "info": "Geflochtenes Polyester mit Kunststoffenden. Ausfädeln: Sie lassen sich weiterverwenden oder mit dem Textil abgeben.",
+   "color": "#F4F2EE",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 6,
+     "w": 34,
+     "d": 3,
+     "r": 1.5,
+     "fill": "#C9C6BF"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 20,
+     "w": 34,
+     "d": 3,
+     "r": 1.5,
+     "fill": "#C9C6BF"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 34,
+     "w": 34,
+     "d": 3,
+     "r": 1.5,
+     "fill": "#C9C6BF"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 48,
+     "w": 34,
+     "d": 3,
+     "r": 1.5,
+     "fill": "#C9C6BF"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 62,
+     "w": 34,
+     "d": 3,
+     "r": 1.5,
+     "fill": "#C9C6BF"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 76,
+     "w": 34,
+     "d": 3,
+     "r": 1.5,
+     "fill": "#C9C6BF"
+    }
+   ]
+  },
+  {
+   "id": "zunge",
+   "component_id": "textile_upper",
+   "material_id": "polyester",
+   "name": "Zunge",
+   "short": "Zunge",
+   "shape": "box",
+   "x": 30,
+   "y": 95,
+   "w": 50,
+   "d": 100,
+   "z": 80,
+   "h": 24,
+   "r": 20,
+   "explode": [
+    0,
+    0,
+    164
+   ],
+   "mass": 16,
+   "materials": [
+    [
+     "polyester",
+     70
+    ],
+    [
+     "schaum",
+     30
+    ]
+   ],
+   "info": "Gepolsterte Lasche unter den Schnürsenkeln, oben am Schaft angenäht. Im Inneren steckt Schaumstoff.",
+   "color": "#E8E6E1",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 15,
+     "y": 6,
+     "w": 20,
+     "d": 10,
+     "r": 2,
+     "fill": "#5E656A"
+    }
+   ]
+  },
+  {
+   "id": "ferse",
+   "component_id": "textile_upper",
+   "material_id": "polyester",
+   "name": "Fersenteil mit Kragen",
+   "short": "Fersenteil",
+   "shape": "box",
+   "x": 8,
+   "y": 0,
+   "w": 94,
+   "d": 95,
+   "z": 32,
+   "h": 86,
+   "r": 40,
+   "explode": [
+    0,
+    0,
+    124
+   ],
+   "mass": 50,
+   "materials": [
+    [
+     "polyester",
+     65
+    ],
+    [
+     "schaum",
+     25
+    ],
+    [
+     "tpu",
+     10
+    ]
+   ],
+   "info": "Gepolsterter Schaft rund um Knöchel und Ferse. Mit dem Vorderschaft vernäht und an die Sohle geklebt.",
+   "color": "#E8E6E1",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 17,
+     "y": 20,
+     "w": 60,
+     "d": 70,
+     "fill": "#C9C6BF"
+    },
+    {
+     "shape": "box",
+     "x": 40,
+     "y": 0,
+     "w": 14,
+     "d": 8,
+     "r": 3,
+     "fill": "#5E656A"
+    }
+   ]
+  },
+  {
+   "id": "vorfuss",
+   "component_id": "textile_upper",
+   "material_id": "polyester",
+   "name": "Obermaterial Vorfuß",
+   "short": "Obermaterial",
+   "shape": "box",
+   "x": 5,
+   "y": 95,
+   "w": 100,
+   "d": 195,
+   "z": 32,
+   "h": 48,
+   "r": 45,
+   "explode": [
+    0,
+    0,
+    124
+   ],
+   "mass": 62,
+   "materials": [
+    [
+     "polyester",
+     80
+    ],
+    [
+     "tpu",
+     15
+    ],
+    [
+     "schaum",
+     5
+    ]
+   ],
+   "info": "Atmungsaktives Polyester-Netzgewebe mit aufgeschweißten Kunststoff-Verstärkungen. Mit dem Messer entlang der Sohlennaht abtrennen.",
+   "color": "#E8E6E1",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 26,
+     "y": 10,
+     "w": 4,
+     "d": 4
+    },
+    {
+     "shape": "cyl",
+     "x": 38,
+     "y": 10,
+     "w": 4,
+     "d": 4
+    },
+    {
+     "shape": "cyl",
+     "x": 50,
+     "y": 10,
+     "w": 4,
+     "d": 4
+    },
+    {
+     "shape": "cyl",
+     "x": 62,
+     "y": 10,
+     "w": 4,
+     "d": 4
+    },
+    {
+     "shape": "cyl",
+     "x": 74,
+     "y": 10,
+     "w": 4,
+     "d": 4
+    },
+    {
+     "shape": "cyl",
+     "x": 26,
+     "y": 20,
+     "w": 4,
+     "d": 4
+    },
+    {
+     "shape": "cyl",
+     "x": 38,
+     "y": 20,
+     "w": 4,
+     "d": 4
+    },
+    {
+     "shape": "cyl",
+     "x": 50,
+     "y": 20,
+     "w": 4,
+     "d": 4
+    },
+    {
+     "shape": "cyl",
+     "x": 62,
+     "y": 20,
+     "w": 4,
+     "d": 4
+    },
+    {
+     "shape": "cyl",
+     "x": 74,
+     "y": 20,
+     "w": 4,
+     "d": 4
+    },
+    {
+     "shape": "box",
+     "x": 8,
+     "y": 130,
+     "w": 84,
+     "d": 50,
+     "r": 35,
+     "fill": "#D6D3CC"
+    }
+   ]
+  },
+  {
+   "id": "fersenkappe",
+   "component_id": "textile_upper",
+   "material_id": "polyurethane",
+   "name": "Fersenkappe",
+   "short": "Fersenkappe",
+   "shape": "box",
+   "x": 12,
+   "y": 3,
+   "w": 86,
+   "d": 40,
+   "z": 36,
+   "h": 55,
+   "r": 34,
+   "explode": [
+    -130,
+    0,
+    0
+   ],
+   "mass": 14,
+   "materials": [
+    [
+     "tpu",
+     100
+    ]
+   ],
+   "info": "Feste Kunststoffschale zwischen Futter und Obermaterial. Sie hält die Ferse im Schuh stabil.",
+   "color": "#B8BCC0"
+  },
+  {
+   "id": "einlegesohle",
+   "component_id": "foam_midsole",
+   "material_id": "pu_foam",
+   "name": "Einlegesohle",
+   "short": "Einlegesohle",
+   "shape": "box",
+   "x": 12,
+   "y": 6,
+   "w": 86,
+   "d": 276,
+   "z": 32,
+   "h": 4,
+   "r": 40,
+   "explode": [
+    0,
+    0,
+    80
+   ],
+   "mass": 22,
+   "materials": [
+    [
+     "schaum",
+     85
+    ],
+    [
+     "polyester",
+     15
+    ]
+   ],
+   "info": "Weicher Schaumstoff mit Stoffbezug. Lose eingelegt: einfach herausziehen.",
+   "color": "#5E656A",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 4,
+     "w": 66,
+     "d": 60,
+     "r": 30,
+     "fill": "#6E7579"
+    }
+   ]
+  },
+  {
+   "id": "zwischensohle",
+   "component_id": "foam_midsole",
+   "material_id": "eva_foam",
+   "name": "Zwischensohle (EVA)",
+   "short": "Zwischensohle",
+   "shape": "box",
+   "x": 3,
+   "y": 0,
+   "w": 104,
+   "d": 290,
+   "z": 10,
+   "h": 22,
+   "r": 48,
+   "explode": [
+    0,
+    0,
+    40
+   ],
+   "mass": 108,
+   "materials": [
+    [
+     "schaum",
+     100
+    ]
+   ],
+   "info": "Leichter EVA-Schaum, der beim Laufen federt. Mit der Laufsohle verklebt: nur mit Heißluft und Messer trennbar.",
+   "color": "#F4F2EE"
+  },
+  {
+   "id": "laufsohle",
+   "component_id": "rubber_outsole",
+   "material_id": "rubber",
+   "name": "Laufsohle",
+   "short": "Laufsohle",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 110,
+   "d": 290,
+   "z": 0,
+   "h": 10,
+   "r": 50,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 118,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "info": "Abriebfester Gummi mit Profil für Halt. Nach Erwärmen des Klebers von der Zwischensohle abziehen.",
+   "color": "#3A3F44",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 14,
+     "y": 14.0,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 28,
+     "y": 14.0,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 42,
+     "y": 14.0,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 56,
+     "y": 14.0,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 70,
+     "y": 14.0,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 84,
+     "y": 14.0,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 14,
+     "y": 28.5,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 28,
+     "y": 28.5,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 42,
+     "y": 28.5,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 56,
+     "y": 28.5,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 70,
+     "y": 28.5,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 84,
+     "y": 28.5,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 14,
+     "y": 43.0,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 28,
+     "y": 43.0,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 42,
+     "y": 43.0,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 56,
+     "y": 43.0,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 70,
+     "y": 43.0,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 84,
+     "y": 43.0,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 14,
+     "y": 57.5,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 28,
+     "y": 57.5,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 42,
+     "y": 57.5,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 56,
+     "y": 57.5,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 70,
+     "y": 57.5,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 84,
+     "y": 57.5,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 14,
+     "y": 72.0,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 28,
+     "y": 72.0,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 42,
+     "y": 72.0,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 56,
+     "y": 72.0,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 70,
+     "y": 72.0,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 84,
+     "y": 72.0,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 14,
+     "y": 86.5,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 28,
+     "y": 86.5,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 42,
+     "y": 86.5,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 56,
+     "y": 86.5,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 70,
+     "y": 86.5,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 84,
+     "y": 86.5,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 14,
+     "y": 101.0,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 28,
+     "y": 101.0,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 42,
+     "y": 101.0,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 56,
+     "y": 101.0,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 70,
+     "y": 101.0,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 84,
+     "y": 101.0,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 14,
+     "y": 115.5,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 28,
+     "y": 115.5,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 42,
+     "y": 115.5,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 56,
+     "y": 115.5,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 70,
+     "y": 115.5,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 84,
+     "y": 115.5,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 14,
+     "y": 130.0,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 28,
+     "y": 130.0,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 42,
+     "y": 130.0,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 56,
+     "y": 130.0,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 70,
+     "y": 130.0,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 84,
+     "y": 130.0,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 14,
+     "y": 144.5,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 28,
+     "y": 144.5,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 42,
+     "y": 144.5,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 56,
+     "y": 144.5,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 70,
+     "y": 144.5,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 84,
+     "y": 144.5,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 14,
+     "y": 159.0,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 28,
+     "y": 159.0,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 42,
+     "y": 159.0,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 56,
+     "y": 159.0,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 70,
+     "y": 159.0,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 84,
+     "y": 159.0,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 14,
+     "y": 173.5,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 28,
+     "y": 173.5,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 42,
+     "y": 173.5,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 56,
+     "y": 173.5,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 70,
+     "y": 173.5,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 84,
+     "y": 173.5,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 14,
+     "y": 188.0,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 28,
+     "y": 188.0,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 42,
+     "y": 188.0,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 56,
+     "y": 188.0,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 70,
+     "y": 188.0,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 84,
+     "y": 188.0,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 14,
+     "y": 202.5,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 28,
+     "y": 202.5,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 42,
+     "y": 202.5,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 56,
+     "y": 202.5,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 70,
+     "y": 202.5,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 84,
+     "y": 202.5,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 14,
+     "y": 217.0,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 28,
+     "y": 217.0,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 42,
+     "y": 217.0,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 56,
+     "y": 217.0,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 70,
+     "y": 217.0,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 84,
+     "y": 217.0,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 14,
+     "y": 231.5,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 28,
+     "y": 231.5,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 42,
+     "y": 231.5,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 56,
+     "y": 231.5,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 70,
+     "y": 231.5,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 84,
+     "y": 231.5,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 14,
+     "y": 246.0,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 28,
+     "y": 246.0,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 42,
+     "y": 246.0,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 56,
+     "y": 246.0,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 70,
+     "y": 246.0,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 84,
+     "y": 246.0,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 14,
+     "y": 260.5,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 28,
+     "y": 260.5,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 42,
+     "y": 260.5,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 56,
+     "y": 260.5,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 70,
+     "y": 260.5,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "box",
+     "x": 84,
+     "y": 260.5,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#262B2F"
+    }
+   ]
+  }
+ ]
+}

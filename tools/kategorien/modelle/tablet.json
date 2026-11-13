@@ -1,0 +1,738 @@
+{
+ "parts": [
+  {
+   "id": "deckglas",
+   "component_id": "tablet_display",
+   "material_id": "special_glass",
+   "name": "Deckglas",
+   "short": "Deckglas",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 178,
+   "d": 248,
+   "z": 6.4,
+   "h": 0.6,
+   "r": 12,
+   "explode": [
+    0,
+    0,
+    284.8
+   ],
+   "mass": 58,
+   "materials": [
+    [
+     "glas",
+     100
+    ]
+   ],
+   "info": "Chemisch gehärtetes Glas, zugleich die Touch-Fläche. Mit Wärme und Kunststoff-Plektren vom Rahmen lösen, dabei Schutzbrille tragen: Es kann splittern.",
+   "color": "#C9DEDF",
+   "opacity": 0.6,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 84,
+     "y": 5,
+     "w": 10,
+     "fill": "#262B2F"
+    }
+   ]
+  },
+  {
+   "id": "display",
+   "component_id": "tablet_display",
+   "material_id": "special_glass",
+   "name": "Display-Einheit (LCD)",
+   "short": "Display",
+   "shape": "box",
+   "x": 1,
+   "y": 1,
+   "w": 176,
+   "d": 246,
+   "z": 5.2,
+   "h": 1.2,
+   "r": 11,
+   "explode": [
+    0,
+    0,
+    189.8
+   ],
+   "mass": 110,
+   "materials": [
+    [
+     "displayglas",
+     50
+    ],
+    [
+     "folien",
+     30
+    ],
+    [
+     "led",
+     10
+    ],
+    [
+     "kupfer",
+     10
+    ]
+   ],
+   "info": "Flüssigkristallanzeige mit LED-Hintergrundlicht und Lichtleitfolien. Mit dünnen Flachbandkabeln an der Platine angesteckt.",
+   "color": "#31373B",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 9,
+     "y": 9,
+     "w": 158,
+     "d": 228,
+     "r": 4,
+     "fill": "#3D464C"
+    }
+   ]
+  },
+  {
+   "id": "soc",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "Prozessor (SoC)",
+   "short": "Prozessor",
+   "shape": "box",
+   "x": 12,
+   "y": 70,
+   "w": 16,
+   "d": 16,
+   "z": 2.2,
+   "h": 1,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    125.0
+   ],
+   "mass": 2.5,
+   "materials": [
+    [
+     "chip",
+     100
+    ]
+   ],
+   "info": "Rechenkern, Grafik und Arbeitsspeicher in einem Gehäuse. Steckt unter einem Abschirmblech.",
+   "color": "#3F4547"
+  },
+  {
+   "id": "speicher",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "Speicherchip (NAND)",
+   "short": "Speicher",
+   "shape": "box",
+   "x": 13,
+   "y": 96,
+   "w": 14,
+   "d": 18,
+   "z": 2.2,
+   "h": 1,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    125.0
+   ],
+   "mass": 1.5,
+   "materials": [
+    [
+     "chip",
+     100
+    ]
+   ],
+   "info": "Speichert Fotos, Apps und Konten. Vor dem Abgeben das Tablet auf Werkseinstellungen zurücksetzen.",
+   "color": "#3F4547"
+  },
+  {
+   "id": "kamera",
+   "component_id": "circuit_board",
+   "material_id": "mixed_electronics",
+   "name": "Rückkamera",
+   "short": "Kamera",
+   "shape": "box",
+   "x": 8,
+   "y": 8,
+   "w": 22,
+   "d": 22,
+   "z": 1,
+   "h": 4,
+   "r": 4,
+   "explode": [
+    0,
+    0,
+    95.0
+   ],
+   "mass": 4,
+   "materials": [
+    [
+     "chip",
+     35
+    ],
+    [
+     "alu",
+     30
+    ],
+    [
+     "glas",
+     20
+    ],
+    [
+     "ndfeb",
+     15
+    ]
+   ],
+   "info": "Bildsensor mit Linsen und kleinem Magnetantrieb für den Autofokus. Mit einem Stecker auf der Platine.",
+   "color": "#5E656A",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 4,
+     "w": 14,
+     "fill": "#262B2F"
+    }
+   ]
+  },
+  {
+   "id": "frontkamera",
+   "component_id": "circuit_board",
+   "material_id": "mixed_electronics",
+   "name": "Frontkamera",
+   "short": "Frontkamera",
+   "shape": "box",
+   "x": 80,
+   "y": 3,
+   "w": 18,
+   "d": 8,
+   "z": 1,
+   "h": 3,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    95.0
+   ],
+   "mass": 1.5,
+   "materials": [
+    [
+     "chip",
+     50
+    ],
+    [
+     "glas",
+     30
+    ],
+    [
+     "alu",
+     20
+    ]
+   ],
+   "info": "Kleine Kamera für Videoanrufe, oben mittig unter dem Glasrand.",
+   "color": "#5E656A",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 5,
+     "y": 0.5,
+     "w": 7,
+     "fill": "#262B2F"
+    }
+   ]
+  },
+  {
+   "id": "platine",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "Logikplatine",
+   "short": "Platine",
+   "shape": "box",
+   "x": 8,
+   "y": 36,
+   "w": 24,
+   "d": 176,
+   "z": 1,
+   "h": 1.2,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    95.0
+   ],
+   "mass": 20,
+   "materials": [
+    [
+     "fr4",
+     45
+    ],
+    [
+     "kupfer",
+     25
+    ],
+    [
+     "chip",
+     20
+    ],
+    [
+     "lot",
+     10
+    ]
+   ],
+   "info": "Schmale Leiterplatte mit Funk-, Lade- und Audiochips. Hier stecken Gold und Kupfer: ab zur Elektro-Sammlung.",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 5,
+     "y": 130,
+     "w": 6,
+     "d": 6
+    },
+    {
+     "shape": "box",
+     "x": 13,
+     "y": 130,
+     "w": 6,
+     "d": 6
+    },
+    {
+     "shape": "box",
+     "x": 5,
+     "y": 140,
+     "w": 6,
+     "d": 6
+    },
+    {
+     "shape": "box",
+     "x": 13,
+     "y": 140,
+     "w": 6,
+     "d": 6
+    },
+    {
+     "shape": "box",
+     "x": 5,
+     "y": 150,
+     "w": 6,
+     "d": 6
+    },
+    {
+     "shape": "box",
+     "x": 13,
+     "y": 150,
+     "w": 6,
+     "d": 6
+    }
+   ]
+  },
+  {
+   "id": "akku1",
+   "component_id": "li_ion_battery",
+   "material_id": "li_ion",
+   "name": "Akkuzelle oben",
+   "short": "Akku",
+   "shape": "box",
+   "x": 40,
+   "y": 22,
+   "w": 128,
+   "d": 98,
+   "z": 1,
+   "h": 3.8,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    95.0
+   ],
+   "mass": 56,
+   "materials": [
+    [
+     "lco",
+     38
+    ],
+    [
+     "graphit",
+     20
+    ],
+    [
+     "elektrolyt",
+     15
+    ],
+    [
+     "kupfer",
+     10
+    ],
+    [
+     "alu",
+     10
+    ],
+    [
+     "folien",
+     7
+    ]
+   ],
+   "info": "Zusammen mit der zweiten Zelle etwa 7.500 mAh. Sehr fest verklebt: niemals mit Metallwerkzeug hebeln, ein beschädigter Akku kann brennen.",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 4,
+     "w": 120,
+     "d": 90,
+     "r": 2
+    }
+   ]
+  },
+  {
+   "id": "akku2",
+   "component_id": "li_ion_battery",
+   "material_id": "li_ion",
+   "name": "Akkuzelle unten",
+   "short": "Akku",
+   "shape": "box",
+   "x": 40,
+   "y": 124,
+   "w": 128,
+   "d": 98,
+   "z": 1,
+   "h": 3.8,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    95.0
+   ],
+   "mass": 56,
+   "materials": [
+    [
+     "lco",
+     38
+    ],
+    [
+     "graphit",
+     20
+    ],
+    [
+     "elektrolyt",
+     15
+    ],
+    [
+     "kupfer",
+     10
+    ],
+    [
+     "alu",
+     10
+    ],
+    [
+     "folien",
+     7
+    ]
+   ],
+   "info": "Zweite Zelle, parallel geschaltet. Pole abkleben und zur Batterie-Sammelstelle bringen.",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 4,
+     "w": 120,
+     "d": 90,
+     "r": 2
+    }
+   ]
+  },
+  {
+   "id": "lautsprecher_l",
+   "component_id": "circuit_board",
+   "material_id": "mixed_electronics",
+   "name": "Lautsprecher links",
+   "short": "Lautsprecher",
+   "shape": "box",
+   "x": 8,
+   "y": 226,
+   "w": 50,
+   "d": 16,
+   "z": 1,
+   "h": 4,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    95.0
+   ],
+   "mass": 7,
+   "materials": [
+    [
+     "pcabs",
+     45
+    ],
+    [
+     "ndfeb",
+     35
+    ],
+    [
+     "kupfer",
+     20
+    ]
+   ],
+   "info": "Kleiner Neodym-Magnet mit Schwingspule in einer Kunststoffkammer. Ausgebaut weiter nutzbar.",
+   "color": "#6E7579",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 4.0,
+     "y": 5.0,
+     "w": 3,
+     "d": 6
+    },
+    {
+     "shape": "cyl",
+     "x": 9.5,
+     "y": 5.0,
+     "w": 3,
+     "d": 6
+    },
+    {
+     "shape": "cyl",
+     "x": 15.0,
+     "y": 5.0,
+     "w": 3,
+     "d": 6
+    },
+    {
+     "shape": "cyl",
+     "x": 20.5,
+     "y": 5.0,
+     "w": 3,
+     "d": 6
+    },
+    {
+     "shape": "cyl",
+     "x": 26.0,
+     "y": 5.0,
+     "w": 3,
+     "d": 6
+    },
+    {
+     "shape": "cyl",
+     "x": 31.5,
+     "y": 5.0,
+     "w": 3,
+     "d": 6
+    },
+    {
+     "shape": "cyl",
+     "x": 37.0,
+     "y": 5.0,
+     "w": 3,
+     "d": 6
+    },
+    {
+     "shape": "cyl",
+     "x": 42.5,
+     "y": 5.0,
+     "w": 3,
+     "d": 6
+    }
+   ]
+  },
+  {
+   "id": "lautsprecher_r",
+   "component_id": "circuit_board",
+   "material_id": "mixed_electronics",
+   "name": "Lautsprecher rechts",
+   "short": "Lautsprecher",
+   "shape": "box",
+   "x": 120,
+   "y": 226,
+   "w": 50,
+   "d": 16,
+   "z": 1,
+   "h": 4,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    95.0
+   ],
+   "mass": 7,
+   "materials": [
+    [
+     "pcabs",
+     45
+    ],
+    [
+     "ndfeb",
+     35
+    ],
+    [
+     "kupfer",
+     20
+    ]
+   ],
+   "info": "Zweiter Lautsprecher für Stereo-Ton.",
+   "color": "#6E7579",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 4.0,
+     "y": 5.0,
+     "w": 3,
+     "d": 6
+    },
+    {
+     "shape": "cyl",
+     "x": 9.5,
+     "y": 5.0,
+     "w": 3,
+     "d": 6
+    },
+    {
+     "shape": "cyl",
+     "x": 15.0,
+     "y": 5.0,
+     "w": 3,
+     "d": 6
+    },
+    {
+     "shape": "cyl",
+     "x": 20.5,
+     "y": 5.0,
+     "w": 3,
+     "d": 6
+    },
+    {
+     "shape": "cyl",
+     "x": 26.0,
+     "y": 5.0,
+     "w": 3,
+     "d": 6
+    },
+    {
+     "shape": "cyl",
+     "x": 31.5,
+     "y": 5.0,
+     "w": 3,
+     "d": 6
+    },
+    {
+     "shape": "cyl",
+     "x": 37.0,
+     "y": 5.0,
+     "w": 3,
+     "d": 6
+    },
+    {
+     "shape": "cyl",
+     "x": 42.5,
+     "y": 5.0,
+     "w": 3,
+     "d": 6
+    }
+   ]
+  },
+  {
+   "id": "buchse",
+   "component_id": "circuit_board",
+   "material_id": "mixed_electronics",
+   "name": "USB-C-Buchse",
+   "short": "USB-C",
+   "shape": "box",
+   "x": 79,
+   "y": 230,
+   "w": 20,
+   "d": 14,
+   "z": 1,
+   "h": 3,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    95.0
+   ],
+   "mass": 2,
+   "materials": [
+    [
+     "stahl",
+     40
+    ],
+    [
+     "kupfer",
+     25
+    ],
+    [
+     "kontakte",
+     15
+    ],
+    [
+     "pcabs",
+     20
+    ]
+   ],
+   "info": "Ladebuchse auf einer eigenen kleinen Platine, mit Flachbandkabel verbunden. Lässt sich einzeln tauschen.",
+   "color": "#9BA3A8",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 9,
+     "w": 12,
+     "d": 4,
+     "r": 2,
+     "fill": "#262B2F"
+    }
+   ]
+  },
+  {
+   "id": "gehaeuse",
+   "component_id": "aluminium_housing",
+   "material_id": "aluminium",
+   "name": "Aluminium-Gehäuse",
+   "short": "Gehäuse",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 178,
+   "d": 248,
+   "z": 0,
+   "h": 1,
+   "r": 12,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 150,
+   "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "info": "Aus einem Aluminiumblock gefräst. Erst alle Bauteile ausbauen, dann ist die leere Schale reines Aluminium.",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 3,
+     "w": 172,
+     "d": 242,
+     "r": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 12,
+     "y": 12,
+     "w": 14,
+     "fill": "#262B2F"
+    }
+   ]
+  }
+ ]
+}
