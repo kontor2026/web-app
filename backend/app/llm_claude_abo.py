@@ -1,8 +1,9 @@
 """Claude über das Claude Agent SDK mit dem Zugang eines Claude-Abos (privater Test).
 
-Anmeldung: lokal die Claude-Code-Anmeldung des Rechners (~/.claude/.credentials.json),
-im Container das Token aus `claude setup-token` in CLAUDE_CODE_OAUTH_TOKEN.
-Ein gesetzter ANTHROPIC_API_KEY hätte Vorrang und wird in diesem Modus ignoriert."""
+Anmeldung ausschließlich über ein ausdrücklich hinterlegtes Token aus `claude setup-token`
+(CLAUDE_CODE_OAUTH_TOKEN oder CLAUDE_CODE_OAUTH_TOKEN_FILE, siehe docs/claude-sdk.md).
+Persönliche Claude-Code-Anmeldungen auf dem Rechner werden nie benutzt: Der SDK-Prozess bekommt ein
+eigenes, leeres Konfigurationsverzeichnis (CLAUDE_CONFIG_DIR)."""
 import asyncio
 import json
 import os
@@ -26,6 +27,7 @@ _BUILTIN = ['Bash', 'BashOutput', 'KillShell', 'Read', 'Write', 'Edit', 'MultiEd
             'WebSearch', 'WebFetch', 'Task', 'TodoWrite', 'ExitPlanMode', 'Skill', 'SlashCommand', 'ListMcpResources',
             'ReadMcpResource', 'Monitor', 'AskUserQuestion']
 _WORKDIR = Path(tempfile.gettempdir()) / 'station-claude'
+_CONFIGDIR = Path(tempfile.gettempdir()) / 'station-claude-config'   # isoliert von ~/.claude
 
 
 def _image(data_url):
@@ -41,6 +43,7 @@ async def _run(system, user, schema, name, images):
         yield {'type': 'user', 'message': {'role': 'user', 'content': content}}
 
     _WORKDIR.mkdir(exist_ok=True)
+    _CONFIGDIR.mkdir(exist_ok=True)
     options = ClaudeAgentOptions(
         model=config.CLAUDE_MODEL,
         system_prompt=system,
@@ -51,6 +54,7 @@ async def _run(system, user, schema, name, images):
         setting_sources=[],          # keine CLAUDE.md, Skills oder Einstellungen des Rechners laden
         max_turns=4,                 # Antwort kommt über ein internes StructuredOutput-Werkzeug
         cwd=str(_WORKDIR),
+        env={'CLAUDE_CODE_OAUTH_TOKEN': config.CLAUDE_CODE_OAUTH_TOKEN, 'CLAUDE_CONFIG_DIR': str(_CONFIGDIR)},
     )
     result = None
     async for msg in query(prompt=nachricht(), options=options):
@@ -60,7 +64,9 @@ async def _run(system, user, schema, name, images):
 
 
 def chat_json(*, model, system, user, schema, name, images=(), max_tokens=2500, temperature=None):
-    os.environ.pop('ANTHROPIC_API_KEY', None)  # sonst würde der API-Schlüssel statt des Abos genutzt
+    if not config.CLAUDE_CODE_OAUTH_TOKEN:
+        raise ClaudeAboError('Kein Abo-Token hinterlegt (CLAUDE_CODE_OAUTH_TOKEN_FILE oder CLAUDE_CODE_OAUTH_TOKEN)')
+    os.environ.pop('ANTHROPIC_API_KEY', None)  # sonst würde ein API-Schlüssel Vorrang vor dem Token bekommen
     t0 = time.perf_counter()
     try:
         res = asyncio.run(asyncio.wait_for(_run(system, user, schema, name, list(images)), config.LLM_TIMEOUT))
@@ -82,8 +88,6 @@ def chat_json(*, model, system, user, schema, name, images=(), max_tokens=2500, 
 
 def health():
     base = {'modus': 'claude-abo', 'anbieter': 'claude', 'modell': config.CLAUDE_MODEL}
-    token = os.getenv('CLAUDE_CODE_OAUTH_TOKEN')
-    lokal = (Path.home() / '.claude' / '.credentials.json').exists()
-    if not (token or lokal):
-        return {**base, 'ok': False, 'hinweis': 'Kein Abo-Zugang: CLAUDE_CODE_OAUTH_TOKEN setzen (claude setup-token)'}
+    if not config.CLAUDE_CODE_OAUTH_TOKEN:
+        return {**base, 'ok': False, 'hinweis': 'Kein Abo-Token hinterlegt, siehe docs/claude-sdk.md'}
     return {**base, 'ok': True, 'hinweis': None}

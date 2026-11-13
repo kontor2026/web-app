@@ -16,7 +16,18 @@ LLM_MODE = os.getenv('LLM_MODE', 'openai')         # 'openai' oder 'mock' (ohne 
 # Anbieter: 'lokal' = OpenAI-kompatibler Server (Ollama im Inferenz-Container), 'claude' = Anthropic-API
 # mit API-Schlüssel, 'claude-abo' = Claude Agent SDK mit Abo-Zugang (CLAUDE_CODE_OAUTH_TOKEN).
 LLM_PROVIDER = os.getenv('LLM_PROVIDER', 'lokal')
-ANTHROPIC_API_KEY = os.getenv('ANTHROPIC_API_KEY', '')
+
+
+def secret(name):
+    """Geheimnis aus NAME_FILE (Docker-Secret, Datei mit Rechten 600) oder aus NAME (Umgebung). Nie im Code oder Image."""
+    pfad = os.getenv(f'{name}_FILE')
+    if pfad and Path(pfad).exists():
+        return Path(pfad).read_text(encoding='utf-8').strip()
+    return os.getenv(name, '').strip()
+
+
+ANTHROPIC_API_KEY = secret('ANTHROPIC_API_KEY')
+CLAUDE_CODE_OAUTH_TOKEN = secret('CLAUDE_CODE_OAUTH_TOKEN')
 CLAUDE_MODEL = os.getenv('CLAUDE_MODEL', 'claude-opus-5-5')
 
 # Steckbrief und Bauideen schon beim Upload im Hintergrund starten ('auto': nur bei Claude, weil ein

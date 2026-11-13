@@ -20,7 +20,7 @@ _client = None
 def client():
     global _client
     if _client is None:
-        _client = anthropic.Anthropic(timeout=config.LLM_TIMEOUT, max_retries=2)
+        _client = anthropic.Anthropic(api_key=config.ANTHROPIC_API_KEY or None, timeout=config.LLM_TIMEOUT, max_retries=2)
     return _client
 
 
