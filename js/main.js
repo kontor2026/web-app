@@ -111,8 +111,38 @@ function viewScan() {
     r.onload = () => analyze(v, r.result, null);
     r.readAsDataURL(file.files[0]);
   });
+  v.querySelector('#cam').addEventListener('click', () => startCamera(v));
   show(v, 'scan');
   animate(v.querySelectorAll('.side > *'), { opacity: [0, 1], translateY: [10, 0], delay: stagger(70, { start: 200 }), duration: 500, ease: 'outCubic' });
+}
+
+async function startCamera(v) {
+  const vf = v.querySelector('#vf');
+  try {
+    state.stream = await navigator.mediaDevices.getUserMedia({ video: { width: 1920, height: 1080 } });
+  } catch {
+    v.querySelector('#vf-state').textContent = 'Kamera nicht verfügbar, bitte Bild hochladen';
+    return;
+  }
+  v.querySelector('#vf-idle').style.display = 'none';
+  const video = h('<video autoplay playsinline muted></video>');
+  video.srcObject = state.stream;
+  vf.prepend(video);
+  const shot = h('<button class="btn primary" style="position:absolute;bottom:28px;left:50%;transform:translateX(-50%)">Foto aufnehmen</button>');
+  vf.appendChild(shot);
+  v.querySelector('#vf-state').textContent = 'live';
+  shot.addEventListener('click', () => {
+    const c = document.createElement('canvas');
+    c.width = video.videoWidth; c.height = video.videoHeight;
+    c.getContext('2d').drawImage(video, 0, 0);
+    shot.remove(); video.remove(); stopCamera();
+    analyze(v, c.toDataURL('image/jpeg', 0.9), null);
+  });
+}
+
+function stopCamera() {
+  state.stream?.getTracks().forEach((t) => t.stop());
+  state.stream = null;
 }
 
 document.querySelector('.brand').addEventListener('click', viewScan);
