@@ -1,0 +1,6 @@
+# Stationsmodell für Ollama: Qwen3-VL mit genug Kontext für Bild + Prompt + Steckbrief.
+# Ollama begrenzt sonst auf 4096 Token, dann wird der Steckbrief abgeschnitten.
+#   ollama create station-vl -f backend/Modelfile
+# Auf der Station mit GPU: FROM qwen3-vl:8b
+FROM qwen3-vl:4b
+PARAMETER num_ctx 12288
