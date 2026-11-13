@@ -1,0 +1,435 @@
+{
+ "parts": [
+  {
+   "id": "rahmen",
+   "component_id": "wooden_frame",
+   "material_id": "wood",
+   "name": "Holzrahmen",
+   "short": "Rahmen",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 180,
+   "d": 230,
+   "z": 0,
+   "h": 20,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    408.8
+   ],
+   "mass": 147.6,
+   "materials": [
+    [
+     "holz",
+     100
+    ]
+   ],
+   "info": "Leiste aus Kiefernholz, lackiert und an den Ecken auf Gehrung verleimt. Hinten hat sie einen Falz, in dem Glas, Bild und Rückwand liegen. Ohne Glas und Metall kann sie zum Altholz.",
+   "color": "#B98A57",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 6,
+     "y": 6,
+     "w": 168,
+     "d": 218,
+     "r": 1,
+     "fill": "#A37548"
+    },
+    {
+     "shape": "box",
+     "x": 20,
+     "y": 20,
+     "w": 140,
+     "d": 190,
+     "r": 0.5,
+     "fill": "#E9EEF0"
+    }
+   ]
+  },
+  {
+   "id": "glas",
+   "component_id": "frame_glass",
+   "material_id": "special_glass",
+   "name": "Glasscheibe",
+   "short": "Glas",
+   "shape": "box",
+   "x": 15,
+   "y": 15,
+   "w": 150,
+   "d": 200,
+   "z": 6.8,
+   "h": 2,
+   "r": 0.5,
+   "explode": [
+    0,
+    0,
+    320.0
+   ],
+   "mass": 130.3,
+   "materials": [
+    [
+     "glas",
+     100
+    ]
+   ],
+   "info": "Dünnes Flachglas, 2 mm dick. Gehört nicht in den Altglascontainer: in Zeitungspapier wickeln und in den Restmüll geben. Vorsicht, die Kanten sind scharf.",
+   "color": "#CFE3EA",
+   "opacity": 0.6
+  },
+  {
+   "id": "passepartout",
+   "component_id": "cardboard_backing",
+   "material_id": "cardboard",
+   "name": "Passepartout",
+   "short": "Passepartout",
+   "shape": "box",
+   "x": 15,
+   "y": 15,
+   "w": 150,
+   "d": 200,
+   "z": 5.3,
+   "h": 1.5,
+   "r": 0.5,
+   "explode": [
+    0,
+    0,
+    240.0
+   ],
+   "mass": 15.6,
+   "materials": [
+    [
+     "papier",
+     100
+    ]
+   ],
+   "info": "Karton mit ausgeschnittenem Fenster, er setzt das Bild vom Glas ab. Sauber ins Altpapier.",
+   "color": "#F3F0E8",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 25,
+     "y": 25,
+     "w": 100,
+     "d": 150,
+     "r": 0,
+     "fill": "#DCD7CB"
+    }
+   ]
+  },
+  {
+   "id": "foto",
+   "component_id": "cardboard_backing",
+   "material_id": "paper",
+   "name": "Fotoabzug",
+   "short": "Foto",
+   "shape": "box",
+   "x": 25,
+   "y": 30,
+   "w": 130,
+   "d": 170,
+   "z": 5,
+   "h": 0.3,
+   "r": 0,
+   "explode": [
+    0,
+    0,
+    160.0
+   ],
+   "mass": 3.5,
+   "materials": [
+    [
+     "papier",
+     90
+    ],
+    [
+     "druck",
+     10
+    ]
+   ],
+   "info": "Fotopapier mit Kunststoffbeschichtung. Herausnehmen und behalten, das Bild gehört nicht zum Müll.",
+   "color": "#7FA6C4",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 10,
+     "w": 110,
+     "d": 70,
+     "r": 0,
+     "fill": "#A9C9DF"
+    },
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 85,
+     "w": 110,
+     "d": 75,
+     "r": 0,
+     "fill": "#5E8A5A"
+    }
+   ]
+  },
+  {
+   "id": "rueckwand",
+   "component_id": "cardboard_backing",
+   "material_id": "cardboard",
+   "name": "Rückwand aus Hartpappe",
+   "short": "Rückwand",
+   "shape": "box",
+   "x": 15,
+   "y": 15,
+   "w": 150,
+   "d": 200,
+   "z": 2.5,
+   "h": 2.5,
+   "r": 0.5,
+   "explode": [
+    0,
+    0,
+    80.0
+   ],
+   "mass": 47.8,
+   "materials": [
+    [
+     "papier",
+     100
+    ]
+   ],
+   "info": "Graue Hartpappe mit einem Aufsteller zum Hinstellen. Nach dem Lösen der Klammern herausheben, dann ins Altpapier.",
+   "color": "#8C8478",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 60,
+     "y": 90,
+     "w": 30,
+     "d": 100,
+     "r": 2,
+     "fill": "#7A7266"
+    }
+   ]
+  },
+  {
+   "id": "klammer_l",
+   "component_id": "wooden_frame",
+   "material_id": "steel",
+   "name": "Drehklammer",
+   "short": "Klammer",
+   "shape": "box",
+   "x": 9,
+   "y": 108,
+   "w": 14,
+   "d": 14,
+   "z": 1.5,
+   "h": 1,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 0.9,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Drehklammer aus Federstahl. Zur Seite drehen, dann lässt sich die Rückwand herausnehmen.",
+   "color": "#A9AFB4",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 4,
+     "w": 6,
+     "fill": "#7D858B"
+    }
+   ]
+  },
+  {
+   "id": "klammer_r",
+   "component_id": "wooden_frame",
+   "material_id": "steel",
+   "name": "Drehklammer",
+   "short": "Klammer",
+   "shape": "box",
+   "x": 157,
+   "y": 108,
+   "w": 14,
+   "d": 14,
+   "z": 1.5,
+   "h": 1,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 0.9,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Drehklammer aus Federstahl. Zur Seite drehen, dann lässt sich die Rückwand herausnehmen.",
+   "color": "#A9AFB4",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 4,
+     "w": 6,
+     "fill": "#7D858B"
+    }
+   ]
+  },
+  {
+   "id": "klammer_u",
+   "component_id": "wooden_frame",
+   "material_id": "steel",
+   "name": "Drehklammer",
+   "short": "Klammer",
+   "shape": "box",
+   "x": 83,
+   "y": 208,
+   "w": 14,
+   "d": 14,
+   "z": 1.5,
+   "h": 1,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 0.9,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Drehklammer aus Federstahl. Zur Seite drehen, dann lässt sich die Rückwand herausnehmen.",
+   "color": "#A9AFB4",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 4,
+     "w": 6,
+     "fill": "#7D858B"
+    }
+   ]
+  },
+  {
+   "id": "aufhaenger",
+   "component_id": "wooden_frame",
+   "material_id": "steel",
+   "name": "Zackenaufhänger",
+   "short": "Aufhänger",
+   "shape": "box",
+   "x": 75,
+   "y": 4,
+   "w": 30,
+   "d": 8,
+   "z": 0,
+   "h": 1.5,
+   "r": 0.5,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 2.6,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Gezacktes Blech, mit zwei kleinen Nägeln auf die Leiste genagelt. Mit einer Zange abziehen, dann zum Metallschrott.",
+   "color": "#A9AFB4",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 1,
+     "w": 2,
+     "d": 3,
+     "fill": "#7D858B"
+    },
+    {
+     "shape": "box",
+     "x": 5,
+     "y": 1,
+     "w": 2,
+     "d": 3,
+     "fill": "#7D858B"
+    },
+    {
+     "shape": "box",
+     "x": 8,
+     "y": 1,
+     "w": 2,
+     "d": 3,
+     "fill": "#7D858B"
+    },
+    {
+     "shape": "box",
+     "x": 11,
+     "y": 1,
+     "w": 2,
+     "d": 3,
+     "fill": "#7D858B"
+    },
+    {
+     "shape": "box",
+     "x": 14,
+     "y": 1,
+     "w": 2,
+     "d": 3,
+     "fill": "#7D858B"
+    },
+    {
+     "shape": "box",
+     "x": 17,
+     "y": 1,
+     "w": 2,
+     "d": 3,
+     "fill": "#7D858B"
+    },
+    {
+     "shape": "box",
+     "x": 20,
+     "y": 1,
+     "w": 2,
+     "d": 3,
+     "fill": "#7D858B"
+    },
+    {
+     "shape": "box",
+     "x": 23,
+     "y": 1,
+     "w": 2,
+     "d": 3,
+     "fill": "#7D858B"
+    },
+    {
+     "shape": "box",
+     "x": 26,
+     "y": 1,
+     "w": 2,
+     "d": 3,
+     "fill": "#7D858B"
+    }
+   ]
+  }
+ ]
+}

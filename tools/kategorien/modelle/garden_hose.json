@@ -1,0 +1,430 @@
+{
+ "parts": [
+  {
+   "id": "mantel",
+   "component_id": "pvc_hose",
+   "material_id": "pvc",
+   "name": "Außenmantel",
+   "short": "Außenmantel",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 400,
+   "z": 0,
+   "h": 60,
+   "explode": [
+    0,
+    0,
+    206.0
+   ],
+   "mass": 953.6,
+   "materials": [
+    [
+     "pvc",
+     100
+    ]
+   ],
+   "info": "Grünes Weich-PVC mit Weichmachern und UV-Schutz. Für den Wertstoffhof in Stücke schneiden; alte Stücke taugen als Kantenschutz oder Griffpolster.",
+   "color": "#3E8E4A",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0.0,
+     "y": 0.0,
+     "w": 400.0
+    },
+    {
+     "shape": "cyl",
+     "x": 10.5,
+     "y": 10.5,
+     "w": 379.0
+    },
+    {
+     "shape": "cyl",
+     "x": 21.0,
+     "y": 21.0,
+     "w": 358.0
+    },
+    {
+     "shape": "cyl",
+     "x": 31.5,
+     "y": 31.5,
+     "w": 337.0
+    },
+    {
+     "shape": "cyl",
+     "x": 42.0,
+     "y": 42.0,
+     "w": 316.0
+    },
+    {
+     "shape": "cyl",
+     "x": 52.5,
+     "y": 52.5,
+     "w": 295.0
+    },
+    {
+     "shape": "cyl",
+     "x": 63.0,
+     "y": 63.0,
+     "w": 274.0
+    },
+    {
+     "shape": "cyl",
+     "x": 73.5,
+     "y": 73.5,
+     "w": 253.0,
+     "fill": "#5E6B60"
+    }
+   ]
+  },
+  {
+   "id": "gewebe",
+   "component_id": "pvc_hose",
+   "material_id": "polyester",
+   "name": "Polyestergewebe",
+   "short": "Gewebe",
+   "shape": "cyl",
+   "x": 2,
+   "y": 2,
+   "w": 396,
+   "z": 1,
+   "h": 58,
+   "explode": [
+    0,
+    0,
+    102.0
+   ],
+   "mass": 110.4,
+   "materials": [
+    [
+     "polyester",
+     100
+    ]
+   ],
+   "info": "Kreuzgewebe aus Polyesterfäden zwischen den PVC-Schichten. Es verhindert, dass der Schlauch unter Wasserdruck platzt oder abknickt. Lässt sich nicht vom PVC trennen.",
+   "color": "#E9E3C8",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0.0,
+     "y": 0.0,
+     "w": 396.0
+    },
+    {
+     "shape": "cyl",
+     "x": 10.5,
+     "y": 10.5,
+     "w": 375.0
+    },
+    {
+     "shape": "cyl",
+     "x": 21.0,
+     "y": 21.0,
+     "w": 354.0
+    },
+    {
+     "shape": "cyl",
+     "x": 31.5,
+     "y": 31.5,
+     "w": 333.0
+    },
+    {
+     "shape": "cyl",
+     "x": 42.0,
+     "y": 42.0,
+     "w": 312.0
+    },
+    {
+     "shape": "cyl",
+     "x": 52.5,
+     "y": 52.5,
+     "w": 291.0
+    },
+    {
+     "shape": "cyl",
+     "x": 63.0,
+     "y": 63.0,
+     "w": 270.0
+    },
+    {
+     "shape": "cyl",
+     "x": 73.5,
+     "y": 73.5,
+     "w": 249.0,
+     "fill": "#5E6B60"
+    }
+   ]
+  },
+  {
+   "id": "seele",
+   "component_id": "pvc_hose",
+   "material_id": "pvc",
+   "name": "Innenschlauch",
+   "short": "Innenschlauch",
+   "shape": "cyl",
+   "x": 4,
+   "y": 4,
+   "w": 392,
+   "z": 2,
+   "h": 56,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 883.3,
+   "materials": [
+    [
+     "pvc",
+     100
+    ]
+   ],
+   "info": "Glatte Innenschicht aus PVC, durch die das Wasser fließt. Kein Trinkwasser aus Gartenschläuchen trinken: Weichmacher können sich lösen.",
+   "color": "#2F3A33",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0.0,
+     "y": 0.0,
+     "w": 392.0
+    },
+    {
+     "shape": "cyl",
+     "x": 10.5,
+     "y": 10.5,
+     "w": 371.0
+    },
+    {
+     "shape": "cyl",
+     "x": 21.0,
+     "y": 21.0,
+     "w": 350.0
+    },
+    {
+     "shape": "cyl",
+     "x": 31.5,
+     "y": 31.5,
+     "w": 329.0
+    },
+    {
+     "shape": "cyl",
+     "x": 42.0,
+     "y": 42.0,
+     "w": 308.0
+    },
+    {
+     "shape": "cyl",
+     "x": 52.5,
+     "y": 52.5,
+     "w": 287.0
+    },
+    {
+     "shape": "cyl",
+     "x": 63.0,
+     "y": 63.0,
+     "w": 266.0
+    },
+    {
+     "shape": "cyl",
+     "x": 73.5,
+     "y": 73.5,
+     "w": 245.0,
+     "fill": "#5E6B60"
+    }
+   ]
+  },
+  {
+   "id": "ueberwurf",
+   "component_id": "hose_connector",
+   "material_id": "pp",
+   "name": "Überwurfmutter",
+   "short": "Überwurf",
+   "shape": "box",
+   "x": 108,
+   "y": 133,
+   "w": 30,
+   "d": 32,
+   "z": 14,
+   "h": 32,
+   "r": 6,
+   "explode": [
+    312,
+    0,
+    0
+   ],
+   "mass": 12,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Wird über die Spreizkrallen geschraubt und presst sie auf den Schlauch. Aufdrehen und abziehen, dann ist der Anschluss vom Schlauch getrennt.",
+   "color": "#F2A23A",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 2,
+     "w": 2,
+     "d": 28,
+     "r": 1,
+     "fill": "#D5892A"
+    },
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 2,
+     "w": 2,
+     "d": 28,
+     "r": 1,
+     "fill": "#D5892A"
+    },
+    {
+     "shape": "box",
+     "x": 16,
+     "y": 2,
+     "w": 2,
+     "d": 28,
+     "r": 1,
+     "fill": "#D5892A"
+    },
+    {
+     "shape": "box",
+     "x": 22,
+     "y": 2,
+     "w": 2,
+     "d": 28,
+     "r": 1,
+     "fill": "#D5892A"
+    }
+   ]
+  },
+  {
+   "id": "kupplung",
+   "component_id": "hose_connector",
+   "material_id": "pp",
+   "name": "Schlauchstück mit Spreizkrallen",
+   "short": "Schlauchstück",
+   "shape": "box",
+   "x": 138,
+   "y": 136,
+   "w": 50,
+   "d": 26,
+   "z": 17,
+   "h": 26,
+   "r": 5,
+   "explode": [
+    330,
+    0,
+    0
+   ],
+   "mass": 18.1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "PP-Kupplung, die auf Wasserhahn, Brause oder Spritze klickt. Die Krallen greifen in den Schlauch. Ganz aus Kunststoff, aber keine Verpackung: zum Wertstoffhof.",
+   "color": "#5B6066",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 4,
+     "w": 14,
+     "d": 18,
+     "r": 2,
+     "fill": "#F2A23A"
+    },
+    {
+     "shape": "box",
+     "x": 30,
+     "y": 3,
+     "w": 18,
+     "d": 20,
+     "r": 4,
+     "fill": "#464B50"
+    }
+   ]
+  },
+  {
+   "id": "oring",
+   "component_id": "hose_connector",
+   "material_id": "rubber",
+   "name": "O-Ring-Dichtung",
+   "short": "O-Ring",
+   "shape": "box",
+   "x": 188,
+   "y": 141,
+   "w": 3,
+   "d": 16,
+   "z": 22,
+   "h": 16,
+   "r": 1,
+   "explode": [
+    345,
+    0,
+    0
+   ],
+   "mass": 0.5,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "info": "Gummiring vorn in der Kupplung, er dichtet zum Gegenstück ab. Tropft der Anschluss, reicht oft ein neuer O-Ring.",
+   "color": "#1F2224"
+  },
+  {
+   "id": "hahnstueck",
+   "component_id": "hose_connector",
+   "material_id": "pp",
+   "name": "Hahnanschluss 3/4 Zoll",
+   "short": "Hahnanschluss",
+   "shape": "cyl",
+   "x": 150,
+   "y": 225,
+   "w": 36,
+   "z": 10,
+   "h": 30,
+   "explode": [
+    300,
+    20,
+    0
+   ],
+   "mass": 22.1,
+   "materials": [
+    [
+     "pp",
+     85
+    ],
+    [
+     "gummi",
+     15
+    ]
+   ],
+   "info": "Wird auf den Wasserhahn geschraubt, innen sitzt eine Flachdichtung aus Gummi. Am Hahn lassen, wenn nur der Schlauch entsorgt wird.",
+   "color": "#5B6066",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 4,
+     "w": 28,
+     "fill": "#F2A23A"
+    },
+    {
+     "shape": "cyl",
+     "x": 11,
+     "y": 11,
+     "w": 14,
+     "fill": "#2B2E31"
+    }
+   ]
+  }
+ ]
+}

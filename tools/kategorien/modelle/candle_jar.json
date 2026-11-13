@@ -1,0 +1,215 @@
+{
+ "parts": [
+  {
+   "id": "docht",
+   "component_id": "cotton_wick",
+   "material_id": "cotton",
+   "name": "Docht",
+   "short": "Docht",
+   "shape": "cyl",
+   "x": 38.75,
+   "y": 38.75,
+   "w": 2.5,
+   "z": 10,
+   "h": 66,
+   "explode": [
+    0,
+    0,
+    194.0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "baumwolle",
+     100
+    ]
+   ],
+   "info": "Geflochtene Baumwolle, mit Wachs getränkt. Aus dem warmen Wachs ziehen; er kommt in den Restmüll.",
+   "color": "#2E2A26"
+  },
+  {
+   "id": "dochthalter",
+   "component_id": "wick_holder",
+   "material_id": "steel",
+   "name": "Dochthalter",
+   "short": "Dochthalter",
+   "shape": "cyl",
+   "x": 32,
+   "y": 32,
+   "w": 16,
+   "z": 8,
+   "h": 2,
+   "explode": [
+    0,
+    0,
+    194.0
+   ],
+   "mass": 0.5,
+   "materials": [
+    [
+     "stahl",
+     95
+    ],
+    [
+     "alu",
+     5
+    ]
+   ],
+   "info": "Blechplättchen am Glasboden, oft mit einem Klebepunkt festgeklebt. Es hält den Docht gerade. Mit einem Löffel lösen und zum Metall geben.",
+   "color": "#B9BFC4",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 6,
+     "y": 6,
+     "w": 4,
+     "fill": "#8E959B"
+    }
+   ]
+  },
+  {
+   "id": "wachs",
+   "component_id": "paraffin_wax",
+   "material_id": "paraffin_wax",
+   "name": "Duftwachs",
+   "short": "Wachs",
+   "shape": "cyl",
+   "x": 4,
+   "y": 4,
+   "w": 72,
+   "z": 8,
+   "h": 62,
+   "explode": [
+    0,
+    0,
+    107.0
+   ],
+   "mass": 191.8,
+   "materials": [
+    [
+     "wachs",
+     97
+    ],
+    [
+     "organisch",
+     3
+    ]
+   ],
+   "info": "Paraffin mit Duftöl und Farbe. Reste im warmen Wasserbad schmelzen und ausgießen, daraus lassen sich neue Kerzen machen. Wachs nie in den Ausguss kippen.",
+   "color": "#E8C9D2",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 32,
+     "y": 32,
+     "w": 8,
+     "fill": "#D3AFBA"
+    }
+   ]
+  },
+  {
+   "id": "glas_wand",
+   "component_id": "glass_container",
+   "material_id": "glass",
+   "name": "Glaswand",
+   "short": "Glas",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 80,
+   "z": 8,
+   "h": 82,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 104.6,
+   "materials": [
+    [
+     "behaelterglas",
+     100
+    ]
+   ],
+   "info": "Dickwandiges Behälterglas. Ganz leer und ohne Wachsreste in den Altglascontainer, oder gespült als Vorratsglas oder Stiftebecher weiterverwenden.",
+   "color": "#D7E7EA",
+   "opacity": 0.65,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 4,
+     "w": 72,
+     "fill": "#EAF2F4"
+    }
+   ]
+  },
+  {
+   "id": "glas_boden",
+   "component_id": "glass_container",
+   "material_id": "glass",
+   "name": "Glasboden",
+   "short": "Boden",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 80,
+   "z": 0,
+   "h": 8,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 52.3,
+   "materials": [
+    [
+     "behaelterglas",
+     100
+    ]
+   ],
+   "info": "Massiver Boden, damit die Wärme der Flamme den Tisch nicht erreicht.",
+   "color": "#D7E7EA",
+   "opacity": 0.7,
+   "label": false
+  },
+  {
+   "id": "etikett",
+   "component_id": "glass_container",
+   "material_id": "paper",
+   "name": "Papieretikett",
+   "short": "Etikett",
+   "shape": "box",
+   "x": 80,
+   "y": 20,
+   "w": 0.3,
+   "d": 40,
+   "z": 25,
+   "h": 35,
+   "r": 0,
+   "explode": [
+    45,
+    0,
+    0
+   ],
+   "mass": 0.4,
+   "materials": [
+    [
+     "papier",
+     85
+    ],
+    [
+     "druck",
+     8
+    ],
+    [
+     "klebstoff",
+     7
+    ]
+   ],
+   "info": "Bedrucktes Papier mit Klebstoff. Darf am Glas bleiben, die Glashütte brennt es ab.",
+   "color": "#3F5E4C",
+   "sortBias": 100
+  }
+ ]
+}

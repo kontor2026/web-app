@@ -1,0 +1,267 @@
+{
+ "parts": [
+  {
+   "id": "griffstueck",
+   "component_id": "steel_handle",
+   "material_id": "pp",
+   "name": "Griffstück",
+   "short": "Griffstück",
+   "shape": "box",
+   "x": 110,
+   "y": 140,
+   "w": 80,
+   "d": 20,
+   "z": 274,
+   "h": 18,
+   "r": 8,
+   "explode": [
+    0,
+    0,
+    50.0
+   ],
+   "mass": 12.1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Kunststoffgriff auf dem Bügel, damit der Draht nicht in die Hand schneidet. Lässt sich meist nur abschneiden; kleine Kunststoffreste stören beim Metallrecycling nicht.",
+   "color": "#2B2E31",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 8,
+     "y": 4,
+     "w": 4,
+     "d": 12,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 17,
+     "y": 4,
+     "w": 4,
+     "d": 12,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 26,
+     "y": 4,
+     "w": 4,
+     "d": 12,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 35,
+     "y": 4,
+     "w": 4,
+     "d": 12,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 44,
+     "y": 4,
+     "w": 4,
+     "d": 12,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 53,
+     "y": 4,
+     "w": 4,
+     "d": 12,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 62,
+     "y": 4,
+     "w": 4,
+     "d": 12,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 71,
+     "y": 4,
+     "w": 4,
+     "d": 12,
+     "fill": "#1E2022"
+    }
+   ]
+  },
+  {
+   "id": "buegel",
+   "component_id": "steel_handle",
+   "material_id": "steel",
+   "name": "Drahtbügel",
+   "short": "Bügel",
+   "shape": "box",
+   "x": 4,
+   "y": 148,
+   "w": 292,
+   "d": 4,
+   "z": 270,
+   "h": 4,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    50.0
+   ],
+   "mass": 35.2,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Verzinkter Stahldraht, in die Ösen am Rand eingehängt. Zum Trennen aus den Ösen biegen und zum Metallschrott geben.",
+   "color": "#9DA4AA"
+  },
+  {
+   "id": "rand",
+   "component_id": "pp_bucket_body",
+   "material_id": "pp",
+   "name": "Rand mit Ausguss und Ösen",
+   "short": "Rand",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 300,
+   "z": 255,
+   "h": 15,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 70.4,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Verstärkter Wulstrand, vorn mit Ausguss, seitlich zwei Ösen für den Bügel.",
+   "color": "#3C7DC4",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 8,
+     "y": 8,
+     "w": 284,
+     "fill": "#2F6AA8"
+    },
+    {
+     "shape": "box",
+     "x": 135,
+     "y": 286,
+     "w": 30,
+     "d": 12,
+     "r": 5,
+     "fill": "#5893D1"
+    }
+   ]
+  },
+  {
+   "id": "wand_oben",
+   "component_id": "pp_bucket_body",
+   "material_id": "pp",
+   "name": "Eimerwand oben mit Literskala",
+   "short": "Wand",
+   "shape": "cyl",
+   "x": 5,
+   "y": 5,
+   "w": 290,
+   "z": 135,
+   "h": 120,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 171,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "PP, Recyclingcode 5. Innen eine eingeprägte Literskala. Ein Eimer ist keine Verpackung: kaputte Eimer zum Wertstoffhof. Farb- und Gipsreste vorher ganz austrocknen lassen.",
+   "color": "#3C7DC4",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 140,
+     "y": 8,
+     "w": 4,
+     "d": 30,
+     "r": 1,
+     "fill": "#5893D1"
+    }
+   ]
+  },
+  {
+   "id": "wand_unten",
+   "component_id": "pp_bucket_body",
+   "material_id": "pp",
+   "name": "Eimerwand unten",
+   "short": "Wand",
+   "shape": "cyl",
+   "x": 15,
+   "y": 15,
+   "w": 270,
+   "z": 10,
+   "h": 125,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 150.9,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Die Wand wird nach unten enger, so lassen sich Eimer ineinanderstapeln.",
+   "color": "#3C7DC4",
+   "label": false
+  },
+  {
+   "id": "boden",
+   "component_id": "pp_bucket_body",
+   "material_id": "pp",
+   "name": "Boden mit Standring",
+   "short": "Boden",
+   "shape": "cyl",
+   "x": 25,
+   "y": 25,
+   "w": 250,
+   "z": 0,
+   "h": 10,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 60.4,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Boden mit Standring und eingeprägtem Recyclingzeichen.",
+   "color": "#3C7DC4",
+   "label": false
+  }
+ ]
+}

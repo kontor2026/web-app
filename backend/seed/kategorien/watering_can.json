@@ -4,7 +4,7 @@
  "name_en": "Watering Can",
  "klasse": "Wertstoffhof",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -39,8 +39,8 @@
   "metalle_mg": {},
   "herkunft": {},
   "materialien_g": {
-   "hdpe": 566.0,
-   "pp": 34.0
+   "hdpe": 567.5,
+   "pp": 32.3
   },
   "co2_kg": 1.288,
   "co2_mit_recyclat_kg": 0.167,
@@ -94,63 +94,664 @@
   "nicht": "Nicht in die Gelbe Tonne",
   "warnung": "Reste von Farben, Klebern oder Chemikalien gehören zur Schadstoffsammlung."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "watering_rose",
+   "id": "lochplatte",
    "component_id": "watering_rose",
-   "name": "Rose",
-   "short": "Rose",
-   "shape": "box",
-   "x": 208.5,
-   "y": 58.5,
-   "w": 33.0,
-   "d": 33.0,
-   "h": 45.0,
-   "z": 300.0,
-   "r": 4.0,
+   "material_id": "pp",
+   "name": "Lochplatte der Brause",
+   "short": "Lochplatte",
+   "shape": "cyl",
+   "x": 380,
+   "y": 40,
+   "w": 70,
+   "z": 272,
+   "h": 3,
    "explode": [
+    90,
     0,
-    0,
-    120.0
+    70
    ],
-   "mass": 33.96,
+   "mass": 7.8,
    "materials": [
     [
      "pp",
      100
     ]
    ],
-   "material_id": "pp",
-   "info": "Pull it off the spout."
+   "info": "Gelochte Platte, die das Wasser in feine Strahlen teilt. Verstopfte Löcher mit einer Nadel freimachen statt die Brause wegzuwerfen.",
+   "color": "#2F6DB5",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 3,
+     "w": 64,
+     "fill": "#285E9C"
+    },
+    {
+     "shape": "cyl",
+     "x": 13,
+     "y": 13,
+     "w": 3,
+     "d": 3,
+     "fill": "#173B66"
+    },
+    {
+     "shape": "cyl",
+     "x": 21,
+     "y": 13,
+     "w": 3,
+     "d": 3,
+     "fill": "#173B66"
+    },
+    {
+     "shape": "cyl",
+     "x": 29,
+     "y": 13,
+     "w": 3,
+     "d": 3,
+     "fill": "#173B66"
+    },
+    {
+     "shape": "cyl",
+     "x": 37,
+     "y": 13,
+     "w": 3,
+     "d": 3,
+     "fill": "#173B66"
+    },
+    {
+     "shape": "cyl",
+     "x": 45,
+     "y": 13,
+     "w": 3,
+     "d": 3,
+     "fill": "#173B66"
+    },
+    {
+     "shape": "cyl",
+     "x": 53,
+     "y": 13,
+     "w": 3,
+     "d": 3,
+     "fill": "#173B66"
+    },
+    {
+     "shape": "cyl",
+     "x": 13,
+     "y": 21,
+     "w": 3,
+     "d": 3,
+     "fill": "#173B66"
+    },
+    {
+     "shape": "cyl",
+     "x": 21,
+     "y": 21,
+     "w": 3,
+     "d": 3,
+     "fill": "#173B66"
+    },
+    {
+     "shape": "cyl",
+     "x": 29,
+     "y": 21,
+     "w": 3,
+     "d": 3,
+     "fill": "#173B66"
+    },
+    {
+     "shape": "cyl",
+     "x": 37,
+     "y": 21,
+     "w": 3,
+     "d": 3,
+     "fill": "#173B66"
+    },
+    {
+     "shape": "cyl",
+     "x": 45,
+     "y": 21,
+     "w": 3,
+     "d": 3,
+     "fill": "#173B66"
+    },
+    {
+     "shape": "cyl",
+     "x": 53,
+     "y": 21,
+     "w": 3,
+     "d": 3,
+     "fill": "#173B66"
+    },
+    {
+     "shape": "cyl",
+     "x": 13,
+     "y": 29,
+     "w": 3,
+     "d": 3,
+     "fill": "#173B66"
+    },
+    {
+     "shape": "cyl",
+     "x": 21,
+     "y": 29,
+     "w": 3,
+     "d": 3,
+     "fill": "#173B66"
+    },
+    {
+     "shape": "cyl",
+     "x": 29,
+     "y": 29,
+     "w": 3,
+     "d": 3,
+     "fill": "#173B66"
+    },
+    {
+     "shape": "cyl",
+     "x": 37,
+     "y": 29,
+     "w": 3,
+     "d": 3,
+     "fill": "#173B66"
+    },
+    {
+     "shape": "cyl",
+     "x": 45,
+     "y": 29,
+     "w": 3,
+     "d": 3,
+     "fill": "#173B66"
+    },
+    {
+     "shape": "cyl",
+     "x": 53,
+     "y": 29,
+     "w": 3,
+     "d": 3,
+     "fill": "#173B66"
+    },
+    {
+     "shape": "cyl",
+     "x": 13,
+     "y": 37,
+     "w": 3,
+     "d": 3,
+     "fill": "#173B66"
+    },
+    {
+     "shape": "cyl",
+     "x": 21,
+     "y": 37,
+     "w": 3,
+     "d": 3,
+     "fill": "#173B66"
+    },
+    {
+     "shape": "cyl",
+     "x": 29,
+     "y": 37,
+     "w": 3,
+     "d": 3,
+     "fill": "#173B66"
+    },
+    {
+     "shape": "cyl",
+     "x": 37,
+     "y": 37,
+     "w": 3,
+     "d": 3,
+     "fill": "#173B66"
+    },
+    {
+     "shape": "cyl",
+     "x": 45,
+     "y": 37,
+     "w": 3,
+     "d": 3,
+     "fill": "#173B66"
+    },
+    {
+     "shape": "cyl",
+     "x": 53,
+     "y": 37,
+     "w": 3,
+     "d": 3,
+     "fill": "#173B66"
+    },
+    {
+     "shape": "cyl",
+     "x": 13,
+     "y": 45,
+     "w": 3,
+     "d": 3,
+     "fill": "#173B66"
+    },
+    {
+     "shape": "cyl",
+     "x": 21,
+     "y": 45,
+     "w": 3,
+     "d": 3,
+     "fill": "#173B66"
+    },
+    {
+     "shape": "cyl",
+     "x": 29,
+     "y": 45,
+     "w": 3,
+     "d": 3,
+     "fill": "#173B66"
+    },
+    {
+     "shape": "cyl",
+     "x": 37,
+     "y": 45,
+     "w": 3,
+     "d": 3,
+     "fill": "#173B66"
+    },
+    {
+     "shape": "cyl",
+     "x": 45,
+     "y": 45,
+     "w": 3,
+     "d": 3,
+     "fill": "#173B66"
+    },
+    {
+     "shape": "cyl",
+     "x": 53,
+     "y": 45,
+     "w": 3,
+     "d": 3,
+     "fill": "#173B66"
+    },
+    {
+     "shape": "cyl",
+     "x": 13,
+     "y": 53,
+     "w": 3,
+     "d": 3,
+     "fill": "#173B66"
+    },
+    {
+     "shape": "cyl",
+     "x": 21,
+     "y": 53,
+     "w": 3,
+     "d": 3,
+     "fill": "#173B66"
+    },
+    {
+     "shape": "cyl",
+     "x": 29,
+     "y": 53,
+     "w": 3,
+     "d": 3,
+     "fill": "#173B66"
+    },
+    {
+     "shape": "cyl",
+     "x": 37,
+     "y": 53,
+     "w": 3,
+     "d": 3,
+     "fill": "#173B66"
+    },
+    {
+     "shape": "cyl",
+     "x": 45,
+     "y": 53,
+     "w": 3,
+     "d": 3,
+     "fill": "#173B66"
+    },
+    {
+     "shape": "cyl",
+     "x": 53,
+     "y": 53,
+     "w": 3,
+     "d": 3,
+     "fill": "#173B66"
+    }
+   ]
   },
   {
-   "id": "watering_can_body",
+   "id": "brause",
+   "component_id": "watering_rose",
+   "material_id": "pp",
+   "name": "Brausekopf",
+   "short": "Brause",
+   "shape": "cyl",
+   "x": 380,
+   "y": 40,
+   "w": 70,
+   "z": 250,
+   "h": 22,
+   "explode": [
+    90,
+    0,
+    20
+   ],
+   "mass": 24.5,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Aufgesteckter Kopf aus PP. Vor dem Entsorgen vom Rohr abziehen: Er ist oft aus anderem Kunststoff und nützlich als Ersatzteil.",
+   "color": "#2F6DB5",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 22,
+     "y": 22,
+     "w": 26,
+     "fill": "#285E9C"
+    }
+   ]
+  },
+  {
+   "id": "griff",
    "component_id": "watering_can_body",
-   "name": "Can",
-   "short": "Can",
+   "material_id": "hdpe",
+   "name": "Bügelgriff",
+   "short": "Griff",
    "shape": "box",
-   "x": 0,
-   "y": 0,
-   "w": 450.0,
-   "d": 150.0,
-   "h": 300.0,
-   "z": 0.0,
-   "r": 18.0,
+   "x": 20,
+   "y": 60,
+   "w": 130,
+   "d": 30,
+   "z": 275,
+   "h": 25,
+   "r": 12,
    "explode": [
     0,
     0,
     0
    ],
-   "mass": 566.04,
+   "mass": 39.2,
    "materials": [
     [
      "hdpe",
      100
     ]
    ],
+   "info": "Hohl geblasener Griff, zum Tragen der vollen Kanne. Er ist mit der Kanne aus einem Stück.",
+   "color": "#3F8F5A",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 30,
+     "y": 8,
+     "w": 70,
+     "d": 14,
+     "r": 6,
+     "fill": "#347A4C"
+    }
+   ]
+  },
+  {
+   "id": "steg_hinten",
+   "component_id": "watering_can_body",
    "material_id": "hdpe",
-   "info": "Pull off the rose first."
+   "name": "Griffsteg",
+   "short": "Griffsteg",
+   "shape": "box",
+   "x": 20,
+   "y": 60,
+   "w": 25,
+   "d": 30,
+   "z": 242,
+   "h": 33,
+   "r": 10,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 7.8,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "Hinterer Steg des Griffs, hier hält man die Kanne zum Kippen.",
+   "color": "#3F8F5A",
+   "label": false
+  },
+  {
+   "id": "steg_vorn",
+   "component_id": "watering_can_body",
+   "material_id": "hdpe",
+   "name": "Griffsteg",
+   "short": "Griffsteg",
+   "shape": "box",
+   "x": 125,
+   "y": 60,
+   "w": 25,
+   "d": 30,
+   "z": 242,
+   "h": 33,
+   "r": 10,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 7.8,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "Vorderer Steg des Griffs neben der Einfüllöffnung.",
+   "color": "#3F8F5A",
+   "label": false
+  },
+  {
+   "id": "einfuellung",
+   "component_id": "watering_can_body",
+   "material_id": "hdpe",
+   "name": "Einfüllöffnung",
+   "short": "Einfüllöffnung",
+   "shape": "cyl",
+   "x": 152,
+   "y": 40,
+   "w": 80,
+   "d": 70,
+   "z": 242,
+   "h": 12,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 14.7,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "Breite Öffnung zum Füllen am Wasserhahn oder in der Regentonne.",
+   "color": "#3F8F5A",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 6,
+     "y": 6,
+     "w": 68,
+     "d": 58,
+     "fill": "#1F3B2A"
+    }
+   ]
+  },
+  {
+   "id": "rohr_4",
+   "component_id": "watering_can_body",
+   "material_id": "hdpe",
+   "name": "Ausgussrohr",
+   "short": "Ausgussrohr",
+   "shape": "box",
+   "x": 385,
+   "y": 55,
+   "w": 40,
+   "d": 40,
+   "z": 190,
+   "h": 60,
+   "r": 14,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 17.6,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "Das Ausgussrohr ist mit der Kanne aus einem Stück geblasen.",
+   "color": "#3F8F5A"
+  },
+  {
+   "id": "rohr_3",
+   "component_id": "watering_can_body",
+   "material_id": "hdpe",
+   "name": "Ausgussrohr",
+   "short": "Ausgussrohr",
+   "shape": "box",
+   "x": 340,
+   "y": 55,
+   "w": 45,
+   "d": 40,
+   "z": 130,
+   "h": 65,
+   "r": 14,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 19.6,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "Das Ausgussrohr ist mit der Kanne aus einem Stück geblasen.",
+   "color": "#3F8F5A",
+   "label": false
+  },
+  {
+   "id": "rohr_2",
+   "component_id": "watering_can_body",
+   "material_id": "hdpe",
+   "name": "Ausgussrohr",
+   "short": "Ausgussrohr",
+   "shape": "box",
+   "x": 290,
+   "y": 55,
+   "w": 50,
+   "d": 40,
+   "z": 70,
+   "h": 65,
+   "r": 14,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 19.6,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "Das Ausgussrohr ist mit der Kanne aus einem Stück geblasen.",
+   "color": "#3F8F5A",
+   "label": false
+  },
+  {
+   "id": "rohr_1",
+   "component_id": "watering_can_body",
+   "material_id": "hdpe",
+   "name": "Ausgussrohr",
+   "short": "Ausgussrohr",
+   "shape": "box",
+   "x": 240,
+   "y": 55,
+   "w": 50,
+   "d": 40,
+   "z": 20,
+   "h": 55,
+   "r": 14,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 19.6,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "Das Ausgussrohr ist mit der Kanne aus einem Stück geblasen.",
+   "color": "#3F8F5A",
+   "label": false
+  },
+  {
+   "id": "kanne",
+   "component_id": "watering_can_body",
+   "material_id": "hdpe",
+   "name": "Kannenkörper",
+   "short": "Kanne",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 240,
+   "d": 150,
+   "z": 0,
+   "h": 242,
+   "r": 35,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 421.6,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "Blasgeformtes HDPE, Recyclingcode 2. Keine Verpackung, also nicht in die Gelbe Tonne: kaputte Kannen zum Wertstoffhof. Risse lassen sich oft verschweißen.",
+   "color": "#3F8F5A",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 8,
+     "y": 8,
+     "w": 224,
+     "d": 134,
+     "r": 30,
+     "fill": "#347A4C"
+    }
+   ]
   }
  ]
 }

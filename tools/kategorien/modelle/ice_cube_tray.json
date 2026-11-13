@@ -1,0 +1,389 @@
+{
+ "parts": [
+  {
+   "id": "deckel",
+   "component_id": "silicone_tray",
+   "material_id": "pp",
+   "name": "Deckel",
+   "short": "Deckel",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 110,
+   "d": 250,
+   "z": 26,
+   "h": 4,
+   "r": 10,
+   "explode": [
+    0,
+    0,
+    50.0
+   ],
+   "mass": 21.5,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Durchsichtiger PP-Deckel, schützt das Eis vor Gerüchen aus dem Gefrierfach. Kunststoff, aber keine Verpackung: kaputt in den Restmüll.",
+   "color": "#E4F1F3",
+   "opacity": 0.7,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 4,
+     "w": 102,
+     "d": 242,
+     "r": 8,
+     "fill": "#D3E6E9"
+    }
+   ]
+  },
+  {
+   "id": "rand",
+   "component_id": "silicone_tray",
+   "material_id": "silicone",
+   "name": "Rand",
+   "short": "Rand",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 110,
+   "d": 250,
+   "z": 22,
+   "h": 4,
+   "r": 10,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 13.7,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "info": "Steifer Rand zum Festhalten. Die Form ist aus einem Stück Silikon gegossen.",
+   "color": "#4FB3BF",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 8,
+     "y": 8,
+     "w": 44,
+     "d": 30,
+     "r": 6,
+     "fill": "#2F7F89"
+    },
+    {
+     "shape": "box",
+     "x": 58,
+     "y": 8,
+     "w": 44,
+     "d": 30,
+     "r": 6,
+     "fill": "#2F7F89"
+    },
+    {
+     "shape": "box",
+     "x": 8,
+     "y": 41,
+     "w": 44,
+     "d": 30,
+     "r": 6,
+     "fill": "#2F7F89"
+    },
+    {
+     "shape": "box",
+     "x": 58,
+     "y": 41,
+     "w": 44,
+     "d": 30,
+     "r": 6,
+     "fill": "#2F7F89"
+    },
+    {
+     "shape": "box",
+     "x": 8,
+     "y": 74,
+     "w": 44,
+     "d": 30,
+     "r": 6,
+     "fill": "#2F7F89"
+    },
+    {
+     "shape": "box",
+     "x": 58,
+     "y": 74,
+     "w": 44,
+     "d": 30,
+     "r": 6,
+     "fill": "#2F7F89"
+    },
+    {
+     "shape": "box",
+     "x": 8,
+     "y": 107,
+     "w": 44,
+     "d": 30,
+     "r": 6,
+     "fill": "#2F7F89"
+    },
+    {
+     "shape": "box",
+     "x": 58,
+     "y": 107,
+     "w": 44,
+     "d": 30,
+     "r": 6,
+     "fill": "#2F7F89"
+    },
+    {
+     "shape": "box",
+     "x": 8,
+     "y": 140,
+     "w": 44,
+     "d": 30,
+     "r": 6,
+     "fill": "#2F7F89"
+    },
+    {
+     "shape": "box",
+     "x": 58,
+     "y": 140,
+     "w": 44,
+     "d": 30,
+     "r": 6,
+     "fill": "#2F7F89"
+    },
+    {
+     "shape": "box",
+     "x": 8,
+     "y": 173,
+     "w": 44,
+     "d": 30,
+     "r": 6,
+     "fill": "#2F7F89"
+    },
+    {
+     "shape": "box",
+     "x": 58,
+     "y": 173,
+     "w": 44,
+     "d": 30,
+     "r": 6,
+     "fill": "#2F7F89"
+    },
+    {
+     "shape": "box",
+     "x": 8,
+     "y": 206,
+     "w": 44,
+     "d": 30,
+     "r": 6,
+     "fill": "#2F7F89"
+    },
+    {
+     "shape": "box",
+     "x": 58,
+     "y": 206,
+     "w": 44,
+     "d": 30,
+     "r": 6,
+     "fill": "#2F7F89"
+    }
+   ]
+  },
+  {
+   "id": "mulden",
+   "component_id": "silicone_tray",
+   "material_id": "silicone",
+   "name": "Mulden für 14 Würfel",
+   "short": "Mulden",
+   "shape": "box",
+   "x": 4,
+   "y": 4,
+   "w": 102,
+   "d": 242,
+   "z": 3,
+   "h": 19,
+   "r": 8,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 39,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "info": "Weiches Silikon, das Eis löst sich durch Biegen. Silikon gehört nicht in die Gelbe Tonne, sondern in den Restmüll. Lange haltbar: lieber weiterverwenden.",
+   "color": "#4FB3BF",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 4,
+     "w": 44,
+     "d": 30,
+     "r": 6,
+     "fill": "#3C9AA5"
+    },
+    {
+     "shape": "box",
+     "x": 54,
+     "y": 4,
+     "w": 44,
+     "d": 30,
+     "r": 6,
+     "fill": "#3C9AA5"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 37,
+     "w": 44,
+     "d": 30,
+     "r": 6,
+     "fill": "#3C9AA5"
+    },
+    {
+     "shape": "box",
+     "x": 54,
+     "y": 37,
+     "w": 44,
+     "d": 30,
+     "r": 6,
+     "fill": "#3C9AA5"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 70,
+     "w": 44,
+     "d": 30,
+     "r": 6,
+     "fill": "#3C9AA5"
+    },
+    {
+     "shape": "box",
+     "x": 54,
+     "y": 70,
+     "w": 44,
+     "d": 30,
+     "r": 6,
+     "fill": "#3C9AA5"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 103,
+     "w": 44,
+     "d": 30,
+     "r": 6,
+     "fill": "#3C9AA5"
+    },
+    {
+     "shape": "box",
+     "x": 54,
+     "y": 103,
+     "w": 44,
+     "d": 30,
+     "r": 6,
+     "fill": "#3C9AA5"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 136,
+     "w": 44,
+     "d": 30,
+     "r": 6,
+     "fill": "#3C9AA5"
+    },
+    {
+     "shape": "box",
+     "x": 54,
+     "y": 136,
+     "w": 44,
+     "d": 30,
+     "r": 6,
+     "fill": "#3C9AA5"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 169,
+     "w": 44,
+     "d": 30,
+     "r": 6,
+     "fill": "#3C9AA5"
+    },
+    {
+     "shape": "box",
+     "x": 54,
+     "y": 169,
+     "w": 44,
+     "d": 30,
+     "r": 6,
+     "fill": "#3C9AA5"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 202,
+     "w": 44,
+     "d": 30,
+     "r": 6,
+     "fill": "#3C9AA5"
+    },
+    {
+     "shape": "box",
+     "x": 54,
+     "y": 202,
+     "w": 44,
+     "d": 30,
+     "r": 6,
+     "fill": "#3C9AA5"
+    }
+   ]
+  },
+  {
+   "id": "boden",
+   "component_id": "silicone_tray",
+   "material_id": "silicone",
+   "name": "Boden mit Noppen",
+   "short": "Boden",
+   "shape": "box",
+   "x": 8,
+   "y": 8,
+   "w": 94,
+   "d": 234,
+   "z": 0,
+   "h": 3,
+   "r": 6,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 5.9,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "info": "Unterseite der Mulden, kleine Noppen verhindern das Rutschen.",
+   "color": "#4FB3BF",
+   "label": false
+  }
+ ]
+}

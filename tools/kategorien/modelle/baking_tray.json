@@ -1,0 +1,162 @@
+{
+ "parts": [
+  {
+   "id": "draht",
+   "component_id": "steel_baking_tray",
+   "material_id": "steel",
+   "name": "Versteifungsdraht im Rollrand",
+   "short": "Randdraht",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 460,
+   "d": 380,
+   "z": 16,
+   "h": 4,
+   "r": 15,
+   "explode": [
+    0,
+    0,
+    334.2
+   ],
+   "mass": 75.5,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Stahldraht, um den der obere Rand eingerollt ist. Er verhindert, dass sich das Blech in der Hitze verzieht.",
+   "color": "#9DA4AA",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 4,
+     "w": 452,
+     "d": 372,
+     "r": 12,
+     "fill": "#C4C9CD"
+    }
+   ]
+  },
+  {
+   "id": "emaille_innen",
+   "component_id": "steel_baking_tray",
+   "material_id": "special_glass",
+   "name": "Emaille innen",
+   "short": "Emaille innen",
+   "shape": "box",
+   "x": 4,
+   "y": 4,
+   "w": 452,
+   "d": 372,
+   "z": 0.9,
+   "h": 0.2,
+   "r": 12,
+   "explode": [
+    0,
+    0,
+    239.1
+   ],
+   "mass": 37.7,
+   "materials": [
+    [
+     "glas",
+     100
+    ]
+   ],
+   "info": "Glasartige Schicht, bei 800 °C auf den Stahl geschmolzen. Hart und kratzfest; im Metallwerk schmilzt sie zu Schlacke.",
+   "color": "#2E3134",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 12,
+     "y": 12,
+     "w": 428,
+     "d": 348,
+     "r": 8,
+     "fill": "#383B3F"
+    }
+   ]
+  },
+  {
+   "id": "blech",
+   "component_id": "steel_baking_tray",
+   "material_id": "steel",
+   "name": "Stahlblech mit Rollrand",
+   "short": "Blech",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 460,
+   "d": 380,
+   "z": 0.1,
+   "h": 19.9,
+   "r": 15,
+   "explode": [
+    0,
+    0,
+    110.0
+   ],
+   "mass": 1149,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Tiefgezogenes Stahlblech, 1 mm dick. Zum Altmetall auf den Wertstoffhof, nicht in die Gelbe Tonne. Mit Magnet erkennbar: Stahl haftet, Aluminiumbleche nicht.",
+   "color": "#6E767C",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 4,
+     "w": 452,
+     "d": 372,
+     "r": 12,
+     "fill": "#5E656A"
+    },
+    {
+     "shape": "box",
+     "x": 16,
+     "y": 16,
+     "w": 428,
+     "d": 348,
+     "r": 8,
+     "fill": "#80878D"
+    }
+   ]
+  },
+  {
+   "id": "emaille_aussen",
+   "component_id": "steel_baking_tray",
+   "material_id": "special_glass",
+   "name": "Emaille außen",
+   "short": "Emaille außen",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 460,
+   "d": 380,
+   "z": 0,
+   "h": 0.1,
+   "r": 15,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 37.7,
+   "materials": [
+    [
+     "glas",
+     100
+    ]
+   ],
+   "info": "Dünnere Emailleschicht auf der Unterseite, schützt vor Rost.",
+   "color": "#2E3134"
+  }
+ ]
+}

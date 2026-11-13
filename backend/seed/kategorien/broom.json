@@ -4,7 +4,7 @@
  "name_en": "Broom",
  "klasse": "Restmüll",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -26,25 +26,30 @@
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 1,41 kg",
+   "v": "≈ 1,04 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 0,22 kg",
-   "hint": "spart 1,20 kg, wenn recycelte Materialien eingesetzt werden"
+   "v": "≈ 0,21 kg",
+   "hint": "spart 0,83 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
-  "metalle_mg": {},
-  "herkunft": {},
-  "materialien_g": {
-   "pp": 729.4,
-   "wood": 70.6
+  "metalle_mg": {
+   "Fe": 49588.0
   },
-  "co2_kg": 1.413,
-  "co2_mit_recyclat_kg": 0.216,
-  "co2_ersparnis_kg": 1.197,
+  "herkunft": {
+   "Fe": "Modellmassen (Schätzung)"
+  },
+  "materialien_g": {
+   "pp": 447.9,
+   "wood": 301.5,
+   "steel": 50.6
+  },
+  "co2_kg": 1.041,
+  "co2_mit_recyclat_kg": 0.214,
+  "co2_ersparnis_kg": 0.828,
   "co2_ohne_faktor": [],
   "rohstoffwert_eur": 0,
   "wert_ohne_preis": [],
@@ -94,119 +99,1059 @@
   "nicht": "Nicht in die Gelbe Tonne: keine Verpackung",
   "warnung": "Gut Erhaltenes lieber verschenken oder in der Werkstatt abgeben."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "broom_head_ober",
+   "id": "stielhalter",
    "component_id": "broom_head",
-   "name": "Head (Oberteil)",
-   "short": "Head (Oberteil)",
+   "material_id": "steel",
+   "name": "Stielhalter",
+   "short": "Stielhalter",
+   "shape": "box",
+   "x": 125,
+   "y": 150,
+   "w": 50,
+   "d": 40,
+   "z": 60,
+   "h": 14,
+   "r": 4,
+   "explode": [
+    0,
+    40,
+    80
+   ],
+   "mass": 37.7,
+   "materials": [
+    [
+     "stahl",
+     98
+    ],
+    [
+     "pp",
+     2
+    ]
+   ],
+   "info": "Verzinktes Blech, mit zwei Schrauben auf den Kopf geschraubt. Es stützt den Stiel, damit er beim Kehren nicht abbricht. Abschrauben und zum Metallschrott.",
+   "color": "#A9AFB4",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 5,
+     "y": 14,
+     "w": 8,
+     "fill": "#6E767C"
+    },
+    {
+     "shape": "cyl",
+     "x": 37,
+     "y": 14,
+     "w": 8,
+     "fill": "#6E767C"
+    },
+    {
+     "shape": "cyl",
+     "x": 16,
+     "y": 8,
+     "w": 18,
+     "fill": "#7D858B"
+    }
+   ]
+  },
+  {
+   "id": "drahtanker",
+   "component_id": "broom_bristles",
+   "material_id": "steel",
+   "name": "Drahtanker der Borstenbündel",
+   "short": "Drahtanker",
+   "shape": "box",
+   "x": 10,
+   "y": 104,
+   "w": 280,
+   "d": 6,
+   "z": 20,
+   "h": 40,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    90
+   ],
+   "mass": 12.9,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Jedes Borstenbündel wird mit einem kleinen Drahtstück in sein Loch gestanzt. Die Anker lassen sich nicht herausholen, deshalb Kopf und Borsten zusammen entsorgen.",
+   "color": "#9DA4AA",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 1,
+     "w": 8,
+     "d": 4,
+     "fill": "#6E767C"
+    },
+    {
+     "shape": "box",
+     "x": 16,
+     "y": 1,
+     "w": 8,
+     "d": 4,
+     "fill": "#6E767C"
+    },
+    {
+     "shape": "box",
+     "x": 30,
+     "y": 1,
+     "w": 8,
+     "d": 4,
+     "fill": "#6E767C"
+    },
+    {
+     "shape": "box",
+     "x": 44,
+     "y": 1,
+     "w": 8,
+     "d": 4,
+     "fill": "#6E767C"
+    },
+    {
+     "shape": "box",
+     "x": 58,
+     "y": 1,
+     "w": 8,
+     "d": 4,
+     "fill": "#6E767C"
+    },
+    {
+     "shape": "box",
+     "x": 72,
+     "y": 1,
+     "w": 8,
+     "d": 4,
+     "fill": "#6E767C"
+    },
+    {
+     "shape": "box",
+     "x": 86,
+     "y": 1,
+     "w": 8,
+     "d": 4,
+     "fill": "#6E767C"
+    },
+    {
+     "shape": "box",
+     "x": 100,
+     "y": 1,
+     "w": 8,
+     "d": 4,
+     "fill": "#6E767C"
+    },
+    {
+     "shape": "box",
+     "x": 114,
+     "y": 1,
+     "w": 8,
+     "d": 4,
+     "fill": "#6E767C"
+    },
+    {
+     "shape": "box",
+     "x": 128,
+     "y": 1,
+     "w": 8,
+     "d": 4,
+     "fill": "#6E767C"
+    },
+    {
+     "shape": "box",
+     "x": 142,
+     "y": 1,
+     "w": 8,
+     "d": 4,
+     "fill": "#6E767C"
+    },
+    {
+     "shape": "box",
+     "x": 156,
+     "y": 1,
+     "w": 8,
+     "d": 4,
+     "fill": "#6E767C"
+    },
+    {
+     "shape": "box",
+     "x": 170,
+     "y": 1,
+     "w": 8,
+     "d": 4,
+     "fill": "#6E767C"
+    },
+    {
+     "shape": "box",
+     "x": 184,
+     "y": 1,
+     "w": 8,
+     "d": 4,
+     "fill": "#6E767C"
+    },
+    {
+     "shape": "box",
+     "x": 198,
+     "y": 1,
+     "w": 8,
+     "d": 4,
+     "fill": "#6E767C"
+    },
+    {
+     "shape": "box",
+     "x": 212,
+     "y": 1,
+     "w": 8,
+     "d": 4,
+     "fill": "#6E767C"
+    },
+    {
+     "shape": "box",
+     "x": 226,
+     "y": 1,
+     "w": 8,
+     "d": 4,
+     "fill": "#6E767C"
+    },
+    {
+     "shape": "box",
+     "x": 240,
+     "y": 1,
+     "w": 8,
+     "d": 4,
+     "fill": "#6E767C"
+    },
+    {
+     "shape": "box",
+     "x": 254,
+     "y": 1,
+     "w": 8,
+     "d": 4,
+     "fill": "#6E767C"
+    },
+    {
+     "shape": "box",
+     "x": 268,
+     "y": 1,
+     "w": 8,
+     "d": 4,
+     "fill": "#6E767C"
+    }
+   ]
+  },
+  {
+   "id": "borsten",
+   "component_id": "broom_bristles",
+   "material_id": "pp",
+   "name": "Borsten",
+   "short": "Borsten",
+   "shape": "box",
+   "x": 4,
+   "y": 0,
+   "w": 292,
+   "d": 104,
+   "z": 0,
+   "h": 80,
+   "r": 6,
+   "explode": [
+    0,
+    -90,
+    0
+   ],
+   "mass": 161.5,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Gekräuselte PP-Fasern in vielen Bündeln. Sind sie abgenutzt, kann man bei vielen Besen nur den Kopf tauschen und den Stiel weiternutzen.",
+   "color": "#3B3B3D",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 8,
+     "y": 8,
+     "w": 9,
+     "d": 9,
+     "fill": "#2A2A2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 22,
+     "y": 8,
+     "w": 9,
+     "d": 9,
+     "fill": "#2A2A2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 36,
+     "y": 8,
+     "w": 9,
+     "d": 9,
+     "fill": "#2A2A2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 50,
+     "y": 8,
+     "w": 9,
+     "d": 9,
+     "fill": "#2A2A2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 64,
+     "y": 8,
+     "w": 9,
+     "d": 9,
+     "fill": "#2A2A2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 78,
+     "y": 8,
+     "w": 9,
+     "d": 9,
+     "fill": "#2A2A2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 92,
+     "y": 8,
+     "w": 9,
+     "d": 9,
+     "fill": "#2A2A2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 106,
+     "y": 8,
+     "w": 9,
+     "d": 9,
+     "fill": "#2A2A2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 120,
+     "y": 8,
+     "w": 9,
+     "d": 9,
+     "fill": "#2A2A2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 134,
+     "y": 8,
+     "w": 9,
+     "d": 9,
+     "fill": "#2A2A2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 148,
+     "y": 8,
+     "w": 9,
+     "d": 9,
+     "fill": "#2A2A2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 162,
+     "y": 8,
+     "w": 9,
+     "d": 9,
+     "fill": "#2A2A2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 176,
+     "y": 8,
+     "w": 9,
+     "d": 9,
+     "fill": "#2A2A2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 190,
+     "y": 8,
+     "w": 9,
+     "d": 9,
+     "fill": "#2A2A2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 204,
+     "y": 8,
+     "w": 9,
+     "d": 9,
+     "fill": "#2A2A2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 218,
+     "y": 8,
+     "w": 9,
+     "d": 9,
+     "fill": "#2A2A2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 232,
+     "y": 8,
+     "w": 9,
+     "d": 9,
+     "fill": "#2A2A2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 246,
+     "y": 8,
+     "w": 9,
+     "d": 9,
+     "fill": "#2A2A2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 260,
+     "y": 8,
+     "w": 9,
+     "d": 9,
+     "fill": "#2A2A2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 274,
+     "y": 8,
+     "w": 9,
+     "d": 9,
+     "fill": "#2A2A2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 8,
+     "y": 32,
+     "w": 9,
+     "d": 9,
+     "fill": "#2A2A2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 22,
+     "y": 32,
+     "w": 9,
+     "d": 9,
+     "fill": "#2A2A2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 36,
+     "y": 32,
+     "w": 9,
+     "d": 9,
+     "fill": "#2A2A2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 50,
+     "y": 32,
+     "w": 9,
+     "d": 9,
+     "fill": "#2A2A2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 64,
+     "y": 32,
+     "w": 9,
+     "d": 9,
+     "fill": "#2A2A2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 78,
+     "y": 32,
+     "w": 9,
+     "d": 9,
+     "fill": "#2A2A2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 92,
+     "y": 32,
+     "w": 9,
+     "d": 9,
+     "fill": "#2A2A2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 106,
+     "y": 32,
+     "w": 9,
+     "d": 9,
+     "fill": "#2A2A2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 120,
+     "y": 32,
+     "w": 9,
+     "d": 9,
+     "fill": "#2A2A2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 134,
+     "y": 32,
+     "w": 9,
+     "d": 9,
+     "fill": "#2A2A2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 148,
+     "y": 32,
+     "w": 9,
+     "d": 9,
+     "fill": "#2A2A2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 162,
+     "y": 32,
+     "w": 9,
+     "d": 9,
+     "fill": "#2A2A2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 176,
+     "y": 32,
+     "w": 9,
+     "d": 9,
+     "fill": "#2A2A2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 190,
+     "y": 32,
+     "w": 9,
+     "d": 9,
+     "fill": "#2A2A2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 204,
+     "y": 32,
+     "w": 9,
+     "d": 9,
+     "fill": "#2A2A2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 218,
+     "y": 32,
+     "w": 9,
+     "d": 9,
+     "fill": "#2A2A2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 232,
+     "y": 32,
+     "w": 9,
+     "d": 9,
+     "fill": "#2A2A2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 246,
+     "y": 32,
+     "w": 9,
+     "d": 9,
+     "fill": "#2A2A2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 260,
+     "y": 32,
+     "w": 9,
+     "d": 9,
+     "fill": "#2A2A2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 274,
+     "y": 32,
+     "w": 9,
+     "d": 9,
+     "fill": "#2A2A2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 8,
+     "y": 56,
+     "w": 9,
+     "d": 9,
+     "fill": "#2A2A2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 22,
+     "y": 56,
+     "w": 9,
+     "d": 9,
+     "fill": "#2A2A2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 36,
+     "y": 56,
+     "w": 9,
+     "d": 9,
+     "fill": "#2A2A2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 50,
+     "y": 56,
+     "w": 9,
+     "d": 9,
+     "fill": "#2A2A2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 64,
+     "y": 56,
+     "w": 9,
+     "d": 9,
+     "fill": "#2A2A2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 78,
+     "y": 56,
+     "w": 9,
+     "d": 9,
+     "fill": "#2A2A2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 92,
+     "y": 56,
+     "w": 9,
+     "d": 9,
+     "fill": "#2A2A2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 106,
+     "y": 56,
+     "w": 9,
+     "d": 9,
+     "fill": "#2A2A2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 120,
+     "y": 56,
+     "w": 9,
+     "d": 9,
+     "fill": "#2A2A2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 134,
+     "y": 56,
+     "w": 9,
+     "d": 9,
+     "fill": "#2A2A2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 148,
+     "y": 56,
+     "w": 9,
+     "d": 9,
+     "fill": "#2A2A2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 162,
+     "y": 56,
+     "w": 9,
+     "d": 9,
+     "fill": "#2A2A2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 176,
+     "y": 56,
+     "w": 9,
+     "d": 9,
+     "fill": "#2A2A2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 190,
+     "y": 56,
+     "w": 9,
+     "d": 9,
+     "fill": "#2A2A2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 204,
+     "y": 56,
+     "w": 9,
+     "d": 9,
+     "fill": "#2A2A2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 218,
+     "y": 56,
+     "w": 9,
+     "d": 9,
+     "fill": "#2A2A2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 232,
+     "y": 56,
+     "w": 9,
+     "d": 9,
+     "fill": "#2A2A2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 246,
+     "y": 56,
+     "w": 9,
+     "d": 9,
+     "fill": "#2A2A2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 260,
+     "y": 56,
+     "w": 9,
+     "d": 9,
+     "fill": "#2A2A2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 274,
+     "y": 56,
+     "w": 9,
+     "d": 9,
+     "fill": "#2A2A2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 8,
+     "y": 80,
+     "w": 9,
+     "d": 9,
+     "fill": "#2A2A2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 22,
+     "y": 80,
+     "w": 9,
+     "d": 9,
+     "fill": "#2A2A2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 36,
+     "y": 80,
+     "w": 9,
+     "d": 9,
+     "fill": "#2A2A2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 50,
+     "y": 80,
+     "w": 9,
+     "d": 9,
+     "fill": "#2A2A2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 64,
+     "y": 80,
+     "w": 9,
+     "d": 9,
+     "fill": "#2A2A2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 78,
+     "y": 80,
+     "w": 9,
+     "d": 9,
+     "fill": "#2A2A2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 92,
+     "y": 80,
+     "w": 9,
+     "d": 9,
+     "fill": "#2A2A2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 106,
+     "y": 80,
+     "w": 9,
+     "d": 9,
+     "fill": "#2A2A2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 120,
+     "y": 80,
+     "w": 9,
+     "d": 9,
+     "fill": "#2A2A2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 134,
+     "y": 80,
+     "w": 9,
+     "d": 9,
+     "fill": "#2A2A2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 148,
+     "y": 80,
+     "w": 9,
+     "d": 9,
+     "fill": "#2A2A2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 162,
+     "y": 80,
+     "w": 9,
+     "d": 9,
+     "fill": "#2A2A2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 176,
+     "y": 80,
+     "w": 9,
+     "d": 9,
+     "fill": "#2A2A2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 190,
+     "y": 80,
+     "w": 9,
+     "d": 9,
+     "fill": "#2A2A2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 204,
+     "y": 80,
+     "w": 9,
+     "d": 9,
+     "fill": "#2A2A2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 218,
+     "y": 80,
+     "w": 9,
+     "d": 9,
+     "fill": "#2A2A2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 232,
+     "y": 80,
+     "w": 9,
+     "d": 9,
+     "fill": "#2A2A2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 246,
+     "y": 80,
+     "w": 9,
+     "d": 9,
+     "fill": "#2A2A2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 260,
+     "y": 80,
+     "w": 9,
+     "d": 9,
+     "fill": "#2A2A2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 274,
+     "y": 80,
+     "w": 9,
+     "d": 9,
+     "fill": "#2A2A2C"
+    }
+   ]
+  },
+  {
+   "id": "kopf",
+   "component_id": "broom_head",
+   "material_id": "pp",
+   "name": "Besenkopf",
+   "short": "Kopf",
    "shape": "box",
    "x": 0,
-   "y": 0,
-   "w": 300.0,
-   "d": 1200.0,
-   "h": 16.0,
-   "z": 48.0,
-   "r": 36.0,
+   "y": 100,
+   "w": 300,
+   "d": 60,
+   "z": 10,
+   "h": 60,
+   "r": 8,
    "explode": [
     0,
     0,
-    621.6
+    0
    ],
-   "mass": 176.47,
+   "mass": 279.9,
    "materials": [
     [
      "pp",
      100
     ]
    ],
-   "material_id": "pp",
-   "info": "Unscrew it from the handle."
+   "info": "Spritzgegossener PP-Körper mit vielen Bohrungen für die Borsten und einem Gewindeloch für den Stiel. Kopf mit Borsten in den Restmüll oder zum Wertstoffhof.",
+   "color": "#C8462F",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 6,
+     "y": 6,
+     "w": 288,
+     "d": 48,
+     "r": 6,
+     "fill": "#B23C28"
+    },
+    {
+     "shape": "cyl",
+     "x": 138,
+     "y": 30,
+     "w": 24,
+     "fill": "#7A2A1C"
+    }
+   ]
   },
   {
-   "id": "broom_bristles",
-   "component_id": "broom_bristles",
-   "name": "Bristles",
-   "short": "Bristles",
-   "shape": "box",
-   "x": 45.0,
-   "y": 180.0,
-   "w": 210.0,
-   "d": 840.0,
-   "h": 21.6,
-   "z": 9.6,
-   "r": 25.2,
-   "explode": [
-    0,
-    0,
-    338.4
-   ],
-   "mass": 141.18,
-   "materials": [
-    [
-     "pp",
-     100
-    ]
-   ],
-   "material_id": "pp",
-   "info": "Stapled into the head; leave them in."
-  },
-  {
-   "id": "wooden_handle",
+   "id": "stiel",
    "component_id": "wooden_handle",
-   "name": "Handle",
-   "short": "Handle",
+   "material_id": "wood",
+   "name": "Holzstiel mit Gewinde",
+   "short": "Stiel",
    "shape": "box",
-   "x": 318.0,
-   "y": 60.0,
-   "w": 15.0,
-   "d": 1080.0,
-   "h": 6.4,
-   "z": 8.0,
-   "r": 1.8,
+   "x": 138,
+   "y": 160,
+   "w": 24,
+   "d": 1020,
+   "z": 28,
+   "h": 24,
+   "r": 10,
    "explode": [
-    120.0,
     0,
-    90.0
+    160,
+    0
    ],
-   "mass": 70.59,
+   "mass": 301.5,
    "materials": [
     [
      "holz",
      100
     ]
    ],
-   "material_id": "wood",
-   "info": "Separate it from the metal or plastic part and reuse it."
+   "info": "Buchen- oder Kiefernholz, lackiert, vorn mit Gewinde. Aus dem Kopf herausdrehen: Der Stiel passt auf einen neuen Kopf oder kommt zum Altholz.",
+   "color": "#C99A62",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 2,
+     "w": 20,
+     "d": 30,
+     "r": 8,
+     "fill": "#A87C48"
+    },
+    {
+     "shape": "box",
+     "x": 6,
+     "y": 40,
+     "w": 12,
+     "d": 970,
+     "r": 6,
+     "fill": "#D7AC76"
+    }
+   ]
   },
   {
-   "id": "broom_head",
-   "component_id": "broom_head",
-   "name": "Head (Unterteil)",
-   "short": "Head (Unterteil)",
+   "id": "kappe",
+   "component_id": "wooden_handle",
+   "material_id": "pp",
+   "name": "Aufhängekappe",
+   "short": "Kappe",
    "shape": "box",
-   "x": 0,
-   "y": 0,
-   "w": 300.0,
-   "d": 1200.0,
-   "h": 48.0,
-   "z": 0,
-   "r": 36.0,
+   "x": 136,
+   "y": 1180,
+   "w": 28,
+   "d": 20,
+   "z": 26,
+   "h": 28,
+   "r": 8,
    "explode": [
     0,
-    0,
+    220,
     0
    ],
-   "mass": 411.76,
+   "mass": 6.5,
    "materials": [
     [
      "pp",
      100
     ]
    ],
-   "material_id": "pp",
-   "info": "Unscrew it from the handle."
+   "info": "Kunststoffkappe mit Loch zum Aufhängen am Stielende. Abziehen und getrennt entsorgen.",
+   "color": "#C8462F",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 8,
+     "y": 4,
+     "w": 12,
+     "fill": "#7A2A1C"
+    }
+   ]
   }
  ]
 }

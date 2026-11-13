@@ -4,7 +4,7 @@
  "name_en": "Bicycle Inner Tube",
  "klasse": "Wertstoffhof",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -21,7 +21,7 @@
  "werte": [
   {
    "k": "Rohstoffwert",
-   "v": "≈ 0,20 €",
+   "v": "≈ 0,12 €",
    "hint": "Kupfer zu Preisen vom 13.11."
   },
   {
@@ -31,26 +31,27 @@
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 0,48 kg",
-   "hint": "spart 0,05 kg, wenn recycelte Materialien eingesetzt werden"
+   "v": "≈ 0,49 kg",
+   "hint": "spart 0,03 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Cu": 16070.0
+   "Cu": 9500.0
   },
   "herkunft": {
    "Cu": "Modellmassen (Schätzung)"
   },
   "materialien_g": {
-   "rubber": 133.9,
-   "copper": 16.1
+   "rubber": 140.0,
+   "copper": 9.5,
+   "pp": 0.5
   },
   "co2_kg": 0.524,
-  "co2_mit_recyclat_kg": 0.476,
-  "co2_ersparnis_kg": 0.048,
+  "co2_mit_recyclat_kg": 0.494,
+  "co2_ersparnis_kg": 0.029,
   "co2_ohne_faktor": [],
-  "rohstoffwert_eur": 0.2,
+  "rohstoffwert_eur": 0.12,
   "wert_ohne_preis": [],
   "preisstand": "2026-11-13",
   "quellen": {
@@ -98,59 +99,249 @@
   "nicht": "Nicht in die Gelbe Tonne",
   "warnung": "Reste von Farben, Klebern oder Chemikalien gehören zur Schadstoffsammlung."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "tube_valve",
+   "id": "kappe",
    "component_id": "tube_valve",
-   "name": "Valve",
-   "short": "Valve",
+   "material_id": "pp",
+   "name": "Ventilkappe",
+   "short": "Kappe",
    "shape": "cyl",
-   "x": 117.0,
-   "y": 117.0,
-   "w": 66.0,
-   "h": 4.5,
-   "z": 30.0,
+   "x": 145.5,
+   "y": 20.5,
+   "w": 9,
+   "z": 24,
+   "h": 10,
    "explode": [
     0,
     0,
-    120.0
+    166.0
    ],
-   "mass": 16.07,
+   "mass": 0.5,
    "materials": [
     [
-     "kupfer",
+     "pp",
      100
     ]
    ],
-   "material_id": "copper",
-   "info": "Cut it out with a sharp knife."
+   "info": "Kunststoffkappe gegen Schmutz und Wasser. Abschrauben, sie gehört in den Restmüll.",
+   "color": "#1F2224",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 1.5,
+     "y": 1.5,
+     "w": 6,
+     "fill": "#33373A"
+    }
+   ]
   },
   {
-   "id": "butyl_tube",
-   "component_id": "butyl_tube",
-   "name": "Tube",
-   "short": "Tube",
+   "id": "einsatz",
+   "component_id": "tube_valve",
+   "material_id": "copper",
+   "name": "Ventileinsatz",
+   "short": "Einsatz",
    "shape": "cyl",
-   "x": 0,
-   "y": 0,
-   "w": 300.0,
-   "h": 30.0,
-   "z": 0.0,
+   "x": 148,
+   "y": 23,
+   "w": 4,
+   "z": 19,
+   "h": 12,
    "explode": [
     0,
     0,
-    0
+    134.0
    ],
-   "mass": 133.93,
+   "mass": 1.1,
+   "materials": [
+    [
+     "messing",
+     80
+    ],
+    [
+     "stahl",
+     12
+    ],
+    [
+     "gummi",
+     8
+    ]
+   ],
+   "info": "Kleines Rückschlagventil mit Feder und Gummidichtung, eingeschraubt in den Schaft. Mit einem Ventilschlüssel herausdrehen, dann entweicht die Luft ganz.",
+   "color": "#C9A548",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 1.25,
+     "y": 1.25,
+     "w": 1.5,
+     "fill": "#8F7430"
+    }
+   ]
+  },
+  {
+   "id": "mutter",
+   "component_id": "tube_valve",
+   "material_id": "copper",
+   "name": "Rändelmutter",
+   "short": "Mutter",
+   "shape": "cyl",
+   "x": 143,
+   "y": 18,
+   "w": 14,
+   "z": 20,
+   "h": 4,
+   "explode": [
+    0,
+    0,
+    104.0
+   ],
+   "mass": 2.1,
+   "materials": [
+    [
+     "messing",
+     90
+    ],
+    [
+     "nickel",
+     10
+    ]
+   ],
+   "info": "Vernickelte Messingmutter, hält das Ventil im Felgenloch. Abschrauben, bevor man den Schlauch aus der Felge zieht.",
+   "color": "#C6CBCF",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 3,
+     "w": 8,
+     "fill": "#8E969A"
+    }
+   ]
+  },
+  {
+   "id": "schaft",
+   "component_id": "tube_valve",
+   "material_id": "copper",
+   "name": "Ventilschaft",
+   "short": "Ventilschaft",
+   "shape": "cyl",
+   "x": 146,
+   "y": 21,
+   "w": 8,
+   "z": 6,
+   "h": 26,
+   "explode": [
+    0,
+    0,
+    67.0
+   ],
+   "mass": 6.3,
+   "materials": [
+    [
+     "messing",
+     100
+    ]
+   ],
+   "info": "Messingrohr mit Gewinde, unten in den Gummifuß einvulkanisiert. Mit einem scharfen Messer samt Fuß herausschneiden: Messing ist wertvoller Metallschrott.",
+   "color": "#C9A548",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 2,
+     "y": 2,
+     "w": 4,
+     "fill": "#8F7430"
+    }
+   ]
+  },
+  {
+   "id": "ventilfuss",
+   "component_id": "butyl_tube",
+   "material_id": "rubber",
+   "name": "Gummifuß des Ventils",
+   "short": "Ventilfuß",
+   "shape": "cyl",
+   "x": 138,
+   "y": 13,
+   "w": 24,
+   "z": 21,
+   "h": 2,
+   "explode": [
+    0,
+    0,
+    25.0
+   ],
+   "mass": 3.2,
    "materials": [
     [
      "gummi",
      100
     ]
    ],
+   "info": "Verstärkte Gummiplatte, mit der das Ventil fest mit dem Schlauch verbunden ist.",
+   "color": "#3A3D40"
+  },
+  {
+   "id": "schlauch",
+   "component_id": "butyl_tube",
    "material_id": "rubber",
-   "info": "Patch it instead of throwing it away; old tubes make great straps."
+   "name": "Butylschlauch",
+   "short": "Schlauch",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 300,
+   "z": 0,
+   "h": 21,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 136.8,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "info": "Luftdichter Butylkautschuk mit Ruß, zusammengelegt. Ein Loch lässt sich flicken. Alte Schläuche eignen sich als Spanngummi oder Bastelmaterial, sonst Wertstoffhof oder Fahrradladen.",
+   "color": "#2B2D2F",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 50,
+     "y": 50,
+     "w": 200,
+     "fill": "#45484B"
+    },
+    {
+     "shape": "cyl",
+     "x": 8,
+     "y": 8,
+     "w": 284,
+     "fill": "#323538"
+    },
+    {
+     "shape": "cyl",
+     "x": 20,
+     "y": 20,
+     "w": 260,
+     "fill": "#2B2D2F"
+    },
+    {
+     "shape": "box",
+     "x": 126,
+     "y": 280,
+     "w": 48,
+     "d": 6,
+     "r": 2,
+     "fill": "#8E969A"
+    }
+   ]
   }
  ]
 }

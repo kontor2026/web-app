@@ -1,0 +1,204 @@
+{
+ "parts": [
+  {
+   "id": "rand",
+   "component_id": "pp_plant_pot",
+   "material_id": "pp",
+   "name": "Stapelrand",
+   "short": "Rand",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 130,
+   "z": 112,
+   "h": 8,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 6.1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Umgebogener Rand, der den dünnen Topf stabil macht. Leere Töpfe stapeln sich ineinander und lassen sich in der Gärtnerei zurückgeben.",
+   "color": "#2E2F31",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 3,
+     "w": 124,
+     "fill": "#3B3D40"
+    },
+    {
+     "shape": "cyl",
+     "x": 6,
+     "y": 6,
+     "w": 118,
+     "fill": "#5A4636"
+    }
+   ]
+  },
+  {
+   "id": "wand_oben",
+   "component_id": "pp_plant_pot",
+   "material_id": "pp",
+   "name": "Topfwand oben",
+   "short": "Wand",
+   "shape": "cyl",
+   "x": 3,
+   "y": 3,
+   "w": 124,
+   "z": 60,
+   "h": 52,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 14.2,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "PP, Recyclingcode 5. Erde ausklopfen, dann in die Gelbe Tonne. Schwarze Töpfe erkennt die Sortieranlage oft nicht, besser sind graue, braune oder bunte Töpfe.",
+   "color": "#2E2F31"
+  },
+  {
+   "id": "wand_unten",
+   "component_id": "pp_plant_pot",
+   "material_id": "pp",
+   "name": "Topfwand unten",
+   "short": "Wand",
+   "shape": "cyl",
+   "x": 10,
+   "y": 10,
+   "w": 110,
+   "z": 5,
+   "h": 55,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 13.2,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Die Wand wird nach unten enger, so rutscht der Wurzelballen beim Umtopfen leicht heraus.",
+   "color": "#2E2F31",
+   "label": false
+  },
+  {
+   "id": "boden",
+   "component_id": "pp_plant_pot",
+   "material_id": "pp",
+   "name": "Boden mit Abzugslöchern",
+   "short": "Boden",
+   "shape": "cyl",
+   "x": 17,
+   "y": 17,
+   "w": 96,
+   "z": 0,
+   "h": 5,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 6.1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Mehrere Löcher lassen überschüssiges Gießwasser ablaufen, damit die Wurzeln nicht faulen.",
+   "color": "#2E2F31",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 43,
+     "y": 43,
+     "w": 10,
+     "fill": "#151617"
+    },
+    {
+     "shape": "cyl",
+     "x": 20,
+     "y": 43,
+     "w": 8,
+     "fill": "#151617"
+    },
+    {
+     "shape": "cyl",
+     "x": 68,
+     "y": 43,
+     "w": 8,
+     "fill": "#151617"
+    },
+    {
+     "shape": "cyl",
+     "x": 44,
+     "y": 20,
+     "w": 8,
+     "fill": "#151617"
+    },
+    {
+     "shape": "cyl",
+     "x": 44,
+     "y": 68,
+     "w": 8,
+     "fill": "#151617"
+    }
+   ]
+  },
+  {
+   "id": "etikett",
+   "component_id": "pp_plant_pot",
+   "material_id": "paper",
+   "name": "Preisetikett",
+   "short": "Etikett",
+   "shape": "box",
+   "x": 127,
+   "y": 50,
+   "w": 0.3,
+   "d": 30,
+   "z": 70,
+   "h": 25,
+   "r": 0,
+   "explode": [
+    40,
+    0,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "papier",
+     80
+    ],
+    [
+     "druck",
+     8
+    ],
+    [
+     "klebstoff",
+     12
+    ]
+   ],
+   "info": "Aufkleber aus Papier. Darf dranbleiben, er stört das Recycling kaum.",
+   "color": "#F4E04D",
+   "sortBias": 100
+  }
+ ]
+}
