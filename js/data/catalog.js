@@ -123,6 +123,10 @@ export const MATERIALS = {
                 text: 'Textil mit Kunststoffschicht für Ohrpolster und Taschen. Wird mit der Zeit rissig.' },
   glimmer:    { name: 'Glimmer', cls: 'glas', elements: [['Si', 21], ['Al', 20], ['O', 46], ['K', 10], ['Mg', 1]], recycling: 'gering',
                 text: 'Hitzefestes Mineral in dünnen Platten. Trägt die Heizdrähte in Föhn und Toaster.' },
+  verbundfolie: { name: 'Verpackungs-Verbundfolie', cls: 'kunststoff', elements: [['C', 72], ['H', 9], ['O', 14], ['Al', 5]], recycling: 'gering',
+                text: 'Mehrere verklebte Schichten aus PE, PET oder PP, oft mit hauchdünnem Aluminium. Schützt vor Licht und Luft, lässt sich aber kaum trennen.' },
+  klebstoff:  { name: 'Klebstoff (Acrylat)', cls: 'kunststoff', elements: [['C', 60], ['H', 8], ['O', 32]], recycling: 'gering',
+                text: 'Klebeschicht auf Bändern und Etiketten. Stört im Recycling kaum, wenn sie dünn ist.' },
 };
 
 // Elemente: Endpunkt der Drill-down-Kette.

@@ -29,7 +29,7 @@ OUT = ROOT / 'backend' / 'seed' / 'kategorien'
 MATERIAL = {
     'pet': [['pet', 100]], 'hdpe': [['hdpe', 100]], 'pvc': [['pvc', 100]], 'ldpe': [['ldpe', 100]], 'pp': [['pp', 100]],
     'ps': [['ps', 100]], 'eps': [['ps', 100]], 'abs': [['pcabs', 100]], 'pc': [['pcabs', 100]],
-    'multilayer_plastic': [['folien', 100]], 'silicone': [['gummi', 100]], 'rubber': [['gummi', 100]],
+    'multilayer_plastic': [['verbundfolie', 100]], 'silicone': [['gummi', 100]], 'rubber': [['gummi', 100]],
     'pu_foam': [['schaum', 100]], 'eva_foam': [['schaum', 100]], 'polyurethane': [['schaum', 100]],
     'nylon': [['nylon', 100]], 'polyester': [['polyester', 100]], 'cotton': [['baumwolle', 100]], 'wool': [['wolle', 100]],
     'leather': [['leder', 100]], 'wood': [['holz', 100]], 'cork': [['kork', 100]], 'paper': [['papier', 100]],

@@ -1127,6 +1127,50 @@
       ],
       "recycling": "gering",
       "text": "Hitzefestes Mineral in dünnen Platten. Trägt die Heizdrähte in Föhn und Toaster."
+    },
+    "verbundfolie": {
+      "name": "Verpackungs-Verbundfolie",
+      "cls": "kunststoff",
+      "elements": [
+        [
+          "C",
+          72
+        ],
+        [
+          "H",
+          9
+        ],
+        [
+          "O",
+          14
+        ],
+        [
+          "Al",
+          5
+        ]
+      ],
+      "recycling": "gering",
+      "text": "Mehrere verklebte Schichten aus PE, PET oder PP, oft mit hauchdünnem Aluminium. Schützt vor Licht und Luft, lässt sich aber kaum trennen."
+    },
+    "klebstoff": {
+      "name": "Klebstoff (Acrylat)",
+      "cls": "kunststoff",
+      "elements": [
+        [
+          "C",
+          60
+        ],
+        [
+          "H",
+          8
+        ],
+        [
+          "O",
+          32
+        ]
+      ],
+      "recycling": "gering",
+      "text": "Klebeschicht auf Bändern und Etiketten. Stört im Recycling kaum, wenn sie dünn ist."
     }
   },
   "elements": {
