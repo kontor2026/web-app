@@ -3,10 +3,12 @@
 import smartphone from './smartphone.js';
 import laptop from './laptop.js';
 import netzteil from './netzteil.js';
+import flasche from './flasche.js';
 
 export const OBJECTS = [
   smartphone,
   laptop,
   netzteil,
+  flasche,
 ];
 export const getObject = (id) => OBJECTS.find((o) => o.id === id);
