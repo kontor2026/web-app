@@ -24,6 +24,8 @@ services:
       ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
       CLAUDE_CODE_OAUTH_TOKEN: ${CLAUDE_CODE_OAUTH_TOKEN:-}
       CLAUDE_MODEL: ${CLAUDE_MODEL:-claude-opus-5-5}
+      VORAUSRECHNEN: ${VORAUSRECHNEN:-auto}          # Steckbrief/Ideen ab Upload: auto | an | aus
+      LLM_MODE: ${LLM_MODE:-openai}                  # mock = KI aus, nur Foto-Abgleich
     volumes: [station-daten:/data]
     depends_on: [inferenz]
     restart: unless-stopped

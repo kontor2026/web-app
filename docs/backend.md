@@ -38,6 +38,20 @@ Bei jedem Push auf `main` baut GitHub Actions die drei Images und veröffentlich
 - Alle Claude-Code-Werkzeuge sind abgeschaltet, `setting_sources=[]` verhindert, dass Einstellungen oder CLAUDE.md des Rechners geladen werden.
 - Gemessen (AirPods-Foto, Claude Opus 5.5): Erkennung 8 s, Steckbrief 34 s, Bauideen 37 s. Ergebnisse deutlich genauer als das lokale 4B-Modell.
 
+## Vorausrechnen (parallel ab Upload)
+
+Steckbrief und Bauideen brauchen nur das Bild. Mit Claude (`claude`, `claude-abo`) starten sie deshalb beim Upload sofort parallel zur Erkennung, als Hintergrund-Jobs im Backend. Wählt der Schüler den wahrscheinlichsten Kandidaten (Normalfall), wird der vorbereitete Steckbrief übernommen. Wählt er einen anderen, wird für diesen neu gerechnet. Beim lokalen Modell (nur eine Anfrage gleichzeitig) starten die Bauideen direkt nach dem Steckbrief im Hintergrund. Steuerung: `VORAUSRECHNEN=auto|an|aus`. Stand der Jobs: `GET /api/scans/{id}/jobs`, im Frontend als „Bauideen bereit“ neben den Buttons.
+
+Gemessen (AirPods-Foto, Claude-Abo, Opus 5.5):
+
+| ab Upload | |
+|---|---|
+| 8,7 s | Erkennung fertig, Steckbrief und Ideen laufen schon |
+| 38 s | Steckbrief fertig (nach dem Bestätigen nur noch 22 s Wartezeit) |
+| sofort | Bauideen beim Öffnen fertig |
+
+Ein kompletter neuer Gegenstand kostet beim Pro-Abo etwa 2 Prozentpunkte des 5-Stunden-Kontingents.
+
 ## Ohne Docker starten
 
 ```bash
