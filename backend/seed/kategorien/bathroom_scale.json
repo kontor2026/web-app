@@ -4,7 +4,7 @@
  "name_en": "Bathroom Scale",
  "klasse": "Elektroschrott · Kleingerät",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -21,50 +21,48 @@
  "werte": [
   {
    "k": "Rohstoffwert",
-   "v": "≈ 1,62 €",
-   "hint": "Gold, Silber, Palladium zu Preisen vom 13.11. Ohne Palladium (kein Preis)."
+   "v": "≈ 0,38 €",
+   "hint": "Silber, Kupfer zu Preisen vom 13.11."
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 8,55 kg",
+   "v": "≈ 4,37 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 4,80 kg",
-   "hint": "spart 3,75 kg, wenn recycelte Materialien eingesetzt werden"
+   "v": "≈ 2,26 kg",
+   "hint": "spart 2,11 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Al": 211760.0,
-   "Cu": 21176.0,
-   "Ag": 26.0,
-   "Au": 6.35,
-   "Pd": 2.01
+   "Al": 76400.0,
+   "Cu": 3300.0,
+   "Ag": 4.12,
+   "Au": 0.99,
+   "Pd": 0.31
   },
   "herkunft": {
    "Al": "Modellmassen (Schätzung)",
    "Cu": "Modellmassen (Schätzung)",
-   "Ag": "106 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)",
-   "Au": "106 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)",
-   "Pd": "106 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)"
+   "Ag": "16 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)",
+   "Au": "16 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)",
+   "Pd": "16 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)"
   },
   "materialien_g": {
-   "special_glass": 529.4,
-   "abs": 441.2,
-   "alkaline": 211.8,
-   "aluminium": 211.8,
-   "pcb": 105.9
+   "special_glass": 1199.6,
+   "abs": 182.9,
+   "aluminium": 76.4,
+   "alkaline": 24.4,
+   "pcb": 16.5
   },
-  "co2_kg": 8.546,
-  "co2_mit_recyclat_kg": 4.799,
-  "co2_ersparnis_kg": 3.747,
+  "co2_kg": 4.373,
+  "co2_mit_recyclat_kg": 2.26,
+  "co2_ersparnis_kg": 2.113,
   "co2_ohne_faktor": [],
-  "rohstoffwert_eur": 1.62,
-  "wert_ohne_preis": [
-   "Pd"
-  ],
+  "rohstoffwert_eur": 0.38,
+  "wert_ohne_preis": [],
   "preisstand": "2026-11-13",
   "quellen": {
    "oeko2012": {
@@ -111,141 +109,243 @@
   "nicht": "Nicht in Restmüll oder Gelbe Tonne",
   "warnung": "Akku oder Batterie nicht beschädigen. Wenn möglich herausnehmen und getrennt abgeben, fest verbaute Akkus drinlassen."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "lcd_panel",
-   "component_id": "lcd_panel",
-   "name": "LCD Panel",
-   "short": "LCD Panel",
-   "shape": "box",
-   "x": 6.0,
-   "y": 6.0,
-   "w": 288.0,
-   "d": 288.0,
-   "h": 1.5,
-   "z": 21.5,
-   "r": 34.6,
-   "explode": [
-    0,
-    0,
-    740.4
-   ],
-   "mass": 176.47,
-   "materials": [
-    [
-     "glas",
-     100
-    ]
-   ],
-   "material_id": "special_glass",
-   "info": "Remove the back cover screws; handle the panel flat, it breaks easily."
-  },
-  {
-   "id": "glass_platform",
+   "id": "glas",
    "component_id": "glass_platform",
-   "name": "Glass Top",
-   "short": "Glass Top",
-   "shape": "box",
-   "x": 6.0,
-   "y": 6.0,
-   "w": 288.0,
-   "d": 288.0,
-   "h": 1.5,
-   "z": 20.0,
-   "r": 34.6,
-   "explode": [
-    0,
-    0,
-    620.4
-   ],
-   "mass": 352.94,
-   "materials": [
-    [
-     "glas",
-     100
-    ]
-   ],
    "material_id": "special_glass",
-   "info": "Tempered glass: unscrew it from below; it can shatter if knocked at the edge."
-  },
-  {
-   "id": "plastic_housing_ober",
-   "component_id": "plastic_housing",
-   "name": "Plastic Housing (Oberteil)",
-   "short": "Plastic Housing (O",
+   "name": "Sicherheitsglas-Platte",
+   "short": "Glasplatte",
    "shape": "box",
    "x": 0,
    "y": 0,
-   "w": 300.0,
-   "d": 300.0,
-   "h": 5.0,
-   "z": 15.0,
-   "r": 36.0,
+   "w": 300,
+   "d": 300,
+   "z": 20,
+   "h": 5,
+   "r": 14,
    "explode": [
     0,
     0,
-    500.4
+    190.5
    ],
-   "mass": 132.35,
+   "mass": 1191.1,
+   "materials": [
+    [
+     "glas",
+     98
+    ],
+    [
+     "druck",
+     2
+    ]
+   ],
+   "info": "5 mm dickes Einscheiben-Sicherheitsglas, von unten verschraubt oder verklebt. Gehört nicht ins Altglas! An den Kanten ist es empfindlich und kann in viele Krümel zerspringen.",
+   "color": "#DCE6EA",
+   "opacity": 0.65,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 108,
+     "y": 243,
+     "w": 84,
+     "d": 40,
+     "r": 4,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 114,
+     "y": 249,
+     "w": 72,
+     "d": 28,
+     "r": 2,
+     "fill": "#55616A"
+    }
+   ]
+  },
+  {
+   "id": "traegerplatte",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Kunststoff-Trägerplatte",
+   "short": "Trägerplatte",
+   "shape": "box",
+   "x": 4,
+   "y": 4,
+   "w": 292,
+   "d": 292,
+   "z": 15,
+   "h": 5,
+   "r": 12,
+   "explode": [
+    0,
+    0,
+    120.5
+   ],
+   "mass": 127.6,
    "materials": [
     [
      "pcabs",
      100
     ]
    ],
-   "material_id": "abs",
-   "info": "Look for hidden screws under rubber feet or labels, then pry the clips open."
+   "info": "Dünne ABS-Platte unter dem Glas, an der Füße, Platine und Batteriefach festgeschraubt sind.",
+   "color": "#E9EAE7",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 104,
+     "y": 239,
+     "w": 84,
+     "d": 40,
+     "r": 4,
+     "fill": "#D5D6D2"
+    },
+    {
+     "shape": "box",
+     "x": 116,
+     "y": 128,
+     "w": 60,
+     "d": 38,
+     "r": 3,
+     "fill": "#D5D6D2"
+    }
+   ]
   },
   {
-   "id": "alkaline_cell",
-   "component_id": "alkaline_cell",
-   "name": "Battery",
-   "short": "Battery",
-   "shape": "cyl",
-   "x": 12.0,
-   "y": 162.0,
-   "w": 126.0,
-   "h": 6.75,
-   "z": 3.0,
+   "id": "lcd",
+   "component_id": "lcd_panel",
+   "material_id": "special_glass",
+   "name": "LCD-Anzeige",
+   "short": "LCD",
+   "shape": "box",
+   "x": 115,
+   "y": 249,
+   "w": 70,
+   "d": 28,
+   "z": 12.6,
+   "h": 2.4,
+   "r": 1,
    "explode": [
     0,
     0,
-    385.6
+    29.0
    ],
-   "mass": 211.76,
+   "mass": 8.5,
    "materials": [
     [
-     "zinkmangan",
-     80
+     "glas",
+     70
     ],
     [
-     "stahl",
+     "folien",
      20
+    ],
+    [
+     "displayglas",
+     10
     ]
    ],
-   "material_id": "alkaline",
-   "info": "Remove from the device and tape the contacts before handing it in."
+   "info": "Zwei Glasplättchen mit Flüssigkristall dazwischen, zeigt Ziffern ohne Hintergrundlicht. Ein Gummistreifen verbindet sie mit der Platine. Bricht leicht.",
+   "color": "#9AA79A",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 8,
+     "y": 6,
+     "w": 12,
+     "d": 16,
+     "r": 1,
+     "fill": "#5D6A5D"
+    },
+    {
+     "shape": "box",
+     "x": 23,
+     "y": 6,
+     "w": 12,
+     "d": 16,
+     "r": 1,
+     "fill": "#5D6A5D"
+    },
+    {
+     "shape": "box",
+     "x": 38,
+     "y": 6,
+     "w": 12,
+     "d": 16,
+     "r": 1,
+     "fill": "#5D6A5D"
+    },
+    {
+     "shape": "box",
+     "x": 53,
+     "y": 6,
+     "w": 12,
+     "d": 16,
+     "r": 1,
+     "fill": "#5D6A5D"
+    }
+   ]
   },
   {
-   "id": "circuit_board",
+   "id": "chip",
    "component_id": "circuit_board",
-   "name": "Circuit Board",
-   "short": "Circuit Board",
+   "material_id": "pcb",
+   "name": "Wägechip",
+   "short": "Chip",
    "shape": "box",
-   "x": 162.0,
-   "y": 27.0,
-   "w": 126.0,
-   "d": 126.0,
-   "h": 6.75,
-   "z": 3.0,
-   "r": 15.1,
+   "x": 106,
+   "y": 237,
+   "w": 9,
+   "d": 9,
+   "z": 11.6,
+   "h": 1,
+   "r": 0.3,
    "explode": [
     0,
     0,
-    258.8
+    14.0
    ],
-   "mass": 105.88,
+   "mass": 0.5,
+   "materials": [
+    [
+     "chip",
+     100
+    ]
+   ],
+   "info": "Misst die winzigen Spannungen der vier Wägezellen und rechnet sie in Kilogramm um.",
+   "color": "#22272B",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0.6,
+     "y": 0.6,
+     "w": 1
+    }
+   ]
+  },
+  {
+   "id": "platine",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "Platine",
+   "short": "Platine",
+   "shape": "box",
+   "x": 102,
+   "y": 234,
+   "w": 96,
+   "d": 48,
+   "z": 10,
+   "h": 1.6,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 16,
    "materials": [
     [
      "fr4",
@@ -264,62 +364,573 @@
      10
     ]
    ],
-   "material_id": "pcb",
-   "info": "Unscrew and unplug all ribbon cables; hand in at an e-waste collection point."
+   "info": "Leiterplatte mit Chip und Kontakten für die Wägezellen-Drähte. Zur Elektro-Sammlung geben.",
+   "color": "#2E6B45",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 40,
+     "w": 4,
+     "d": 4,
+     "r": 0.5,
+     "fill": "#C9A74A"
+    },
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 40,
+     "w": 4,
+     "d": 4,
+     "r": 0.5,
+     "fill": "#C9A74A"
+    },
+    {
+     "shape": "box",
+     "x": 16,
+     "y": 40,
+     "w": 4,
+     "d": 4,
+     "r": 0.5,
+     "fill": "#C9A74A"
+    },
+    {
+     "shape": "box",
+     "x": 22,
+     "y": 40,
+     "w": 4,
+     "d": 4,
+     "r": 0.5,
+     "fill": "#C9A74A"
+    }
+   ]
   },
   {
-   "id": "load_cell",
-   "component_id": "load_cell",
-   "name": "Load Cell",
-   "short": "Load Cell",
-   "shape": "cyl",
-   "x": 12.0,
-   "y": 27.0,
-   "w": 126.0,
-   "h": 6.75,
-   "z": 3.0,
+   "id": "batterie_1",
+   "component_id": "alkaline_cell",
+   "material_id": "alkaline",
+   "name": "Micro-Batterie (AAA)",
+   "short": "Batterie AAA",
+   "shape": "box",
+   "x": 128,
+   "y": 138,
+   "w": 44.5,
+   "d": 10.5,
+   "z": 4,
+   "h": 10.5,
+   "r": 5,
    "explode": [
     0,
     0,
-    132.0
+    51.0
    ],
-   "mass": 211.76,
+   "mass": 12.2,
+   "materials": [
+    [
+     "zinkmangan",
+     80
+    ],
+    [
+     "stahl",
+     20
+    ]
+   ],
+   "info": "Zwei 1,5-Volt-Zellen, von unten durch eine Klappe zugänglich. Herausnehmen und in die Batteriesammlung geben.",
+   "color": "#2F6FB0",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 0,
+     "w": 5,
+     "d": 10.5,
+     "r": 2.5,
+     "fill": "#B7BCC0"
+    }
+   ]
+  },
+  {
+   "id": "batterie_2",
+   "component_id": "alkaline_cell",
+   "material_id": "alkaline",
+   "name": "Micro-Batterie (AAA)",
+   "short": "Batterie AAA",
+   "shape": "box",
+   "x": 128,
+   "y": 151,
+   "w": 44.5,
+   "d": 10.5,
+   "z": 4,
+   "h": 10.5,
+   "r": 5,
+   "explode": [
+    0,
+    0,
+    51.0
+   ],
+   "mass": 12.2,
+   "materials": [
+    [
+     "zinkmangan",
+     80
+    ],
+    [
+     "stahl",
+     20
+    ]
+   ],
+   "info": "Zweite Zelle, liegt umgekehrt zur ersten.",
+   "color": "#2F6FB0",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 39.5,
+     "y": 0,
+     "w": 5,
+     "d": 10.5,
+     "r": 2.5,
+     "fill": "#B7BCC0"
+    }
+   ]
+  },
+  {
+   "id": "waegezelle_1",
+   "component_id": "load_cell",
+   "material_id": "aluminium",
+   "name": "Wägezelle",
+   "short": "Wägezelle",
+   "shape": "box",
+   "x": 15,
+   "y": 15,
+   "w": 34,
+   "d": 34,
+   "z": 9,
+   "h": 6,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    40.0
+   ],
+   "mass": 19.1,
    "materials": [
     [
      "alu",
      100
     ]
    ],
-   "material_id": "aluminium",
-   "info": "Unscrew it and cut the thin wires; it is a solid aluminium block with sensors."
+   "info": "Aluminiumplatte mit aufgeklebten Dehnungsmessstreifen. Sie verbiegt sich unter dem Gewicht minimal, daraus berechnet die Waage die Kilos. Drei dünne Drähte führen zur Platine.",
+   "color": "#C9CDD0",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 4,
+     "w": 26,
+     "d": 6,
+     "r": 1,
+     "fill": "#AEB3B7"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 24,
+     "w": 26,
+     "d": 6,
+     "r": 1,
+     "fill": "#AEB3B7"
+    },
+    {
+     "shape": "box",
+     "x": 13,
+     "y": 12,
+     "w": 8,
+     "d": 10,
+     "r": 0.5,
+     "fill": "#C5803D"
+    }
+   ]
   },
   {
-   "id": "plastic_housing",
-   "component_id": "plastic_housing",
-   "name": "Plastic Housing (Unterteil)",
-   "short": "Plastic Housing (U",
+   "id": "waegezelle_2",
+   "component_id": "load_cell",
+   "material_id": "aluminium",
+   "name": "Wägezelle",
+   "short": "Wägezelle",
    "shape": "box",
-   "x": 0,
-   "y": 0,
-   "w": 300.0,
-   "d": 300.0,
-   "h": 15.0,
-   "z": 0,
-   "r": 36.0,
+   "x": 251,
+   "y": 15,
+   "w": 34,
+   "d": 34,
+   "z": 9,
+   "h": 6,
+   "r": 2,
    "explode": [
     0,
     0,
-    0
+    40.0
    ],
-   "mass": 308.82,
+   "mass": 19.1,
+   "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "info": "Eine von vier gleichen Wägezellen, eine in jeder Ecke.",
+   "color": "#C9CDD0",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 4,
+     "w": 26,
+     "d": 6,
+     "r": 1,
+     "fill": "#AEB3B7"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 24,
+     "w": 26,
+     "d": 6,
+     "r": 1,
+     "fill": "#AEB3B7"
+    },
+    {
+     "shape": "box",
+     "x": 13,
+     "y": 12,
+     "w": 8,
+     "d": 10,
+     "r": 0.5,
+     "fill": "#C5803D"
+    }
+   ]
+  },
+  {
+   "id": "waegezelle_3",
+   "component_id": "load_cell",
+   "material_id": "aluminium",
+   "name": "Wägezelle",
+   "short": "Wägezelle",
+   "shape": "box",
+   "x": 15,
+   "y": 251,
+   "w": 34,
+   "d": 34,
+   "z": 9,
+   "h": 6,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    40.0
+   ],
+   "mass": 19.1,
+   "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "info": "Eine von vier gleichen Wägezellen, eine in jeder Ecke.",
+   "color": "#C9CDD0",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 4,
+     "w": 26,
+     "d": 6,
+     "r": 1,
+     "fill": "#AEB3B7"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 24,
+     "w": 26,
+     "d": 6,
+     "r": 1,
+     "fill": "#AEB3B7"
+    },
+    {
+     "shape": "box",
+     "x": 13,
+     "y": 12,
+     "w": 8,
+     "d": 10,
+     "r": 0.5,
+     "fill": "#C5803D"
+    }
+   ]
+  },
+  {
+   "id": "waegezelle_4",
+   "component_id": "load_cell",
+   "material_id": "aluminium",
+   "name": "Wägezelle",
+   "short": "Wägezelle",
+   "shape": "box",
+   "x": 251,
+   "y": 251,
+   "w": 34,
+   "d": 34,
+   "z": 9,
+   "h": 6,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    40.0
+   ],
+   "mass": 19.1,
+   "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "info": "Eine von vier gleichen Wägezellen, eine in jeder Ecke.",
+   "color": "#C9CDD0",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 4,
+     "w": 26,
+     "d": 6,
+     "r": 1,
+     "fill": "#AEB3B7"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 24,
+     "w": 26,
+     "d": 6,
+     "r": 1,
+     "fill": "#AEB3B7"
+    },
+    {
+     "shape": "box",
+     "x": 13,
+     "y": 12,
+     "w": 8,
+     "d": 10,
+     "r": 0.5,
+     "fill": "#C5803D"
+    }
+   ]
+  },
+  {
+   "id": "batteriefach",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Batteriefach mit Klappe",
+   "short": "Batteriefach",
+   "shape": "box",
+   "x": 120,
+   "y": 130,
+   "w": 60,
+   "d": 40,
+   "z": 0,
+   "h": 15,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 21.3,
    "materials": [
     [
      "pcabs",
      100
     ]
    ],
+   "info": "Kunststoffkasten mit Kontaktfedern aus Stahl, von unten mit einer Klappe verschlossen.",
+   "color": "#2B2E31",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 4,
+     "w": 52,
+     "d": 32,
+     "r": 2,
+     "fill": "#1E2022"
+    }
+   ]
+  },
+  {
+   "id": "fuss_1",
+   "component_id": "plastic_housing",
    "material_id": "abs",
-   "info": "Look for hidden screws under rubber feet or labels, then pry the clips open."
+   "name": "Fuß mit Gummikappe",
+   "short": "Fuß",
+   "shape": "cyl",
+   "x": 12,
+   "y": 12,
+   "w": 40,
+   "z": 0,
+   "h": 9,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 8.5,
+   "materials": [
+    [
+     "pcabs",
+     75
+    ],
+    [
+     "gummi",
+     25
+    ]
+   ],
+   "info": "Kunststofffuß, in dem die Wägezelle sitzt, unten eine rutschfeste Gummikappe. Mit zwei Schrauben an der Trägerplatte befestigt.",
+   "color": "#2B2E31",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 5,
+     "y": 5,
+     "w": 30,
+     "fill": "#3A3D40"
+    }
+   ]
+  },
+  {
+   "id": "fuss_2",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Fuß mit Gummikappe",
+   "short": "Fuß",
+   "shape": "cyl",
+   "x": 248,
+   "y": 12,
+   "w": 40,
+   "z": 0,
+   "h": 9,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 8.5,
+   "materials": [
+    [
+     "pcabs",
+     75
+    ],
+    [
+     "gummi",
+     25
+    ]
+   ],
+   "info": "Gleicher Fuß wie die anderen drei.",
+   "color": "#2B2E31",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 5,
+     "y": 5,
+     "w": 30,
+     "fill": "#3A3D40"
+    }
+   ]
+  },
+  {
+   "id": "fuss_3",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Fuß mit Gummikappe",
+   "short": "Fuß",
+   "shape": "cyl",
+   "x": 12,
+   "y": 248,
+   "w": 40,
+   "z": 0,
+   "h": 9,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 8.5,
+   "materials": [
+    [
+     "pcabs",
+     75
+    ],
+    [
+     "gummi",
+     25
+    ]
+   ],
+   "info": "Gleicher Fuß wie die anderen drei.",
+   "color": "#2B2E31",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 5,
+     "y": 5,
+     "w": 30,
+     "fill": "#3A3D40"
+    }
+   ]
+  },
+  {
+   "id": "fuss_4",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Fuß mit Gummikappe",
+   "short": "Fuß",
+   "shape": "cyl",
+   "x": 248,
+   "y": 248,
+   "w": 40,
+   "z": 0,
+   "h": 9,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 8.5,
+   "materials": [
+    [
+     "pcabs",
+     75
+    ],
+    [
+     "gummi",
+     25
+    ]
+   ],
+   "info": "Gleicher Fuß wie die anderen drei.",
+   "color": "#2B2E31",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 5,
+     "y": 5,
+     "w": 30,
+     "fill": "#3A3D40"
+    }
+   ]
   }
  ]
 }

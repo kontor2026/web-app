@@ -4,7 +4,7 @@
  "name_en": "Laptop Charger",
  "klasse": "Elektroschrott · Kleingerät",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -21,47 +21,52 @@
  "werte": [
   {
    "k": "Rohstoffwert",
-   "v": "≈ 0,46 €",
+   "v": "≈ 1,01 €",
    "hint": "Gold, Silber, Kupfer zu Preisen vom 13.11."
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 1,61 kg",
+   "v": "≈ 1,81 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 1,05 kg",
-   "hint": "spart 0,56 kg, wenn recycelte Materialien eingesetzt werden"
+   "v": "≈ 1,20 kg",
+   "hint": "spart 0,61 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Fe": 118551.0,
-   "Cu": 20326.0,
-   "Ag": 7.26,
-   "Au": 1.74,
-   "Pd": 0.55
+   "Cu": 62360.0,
+   "Al": 16500.0,
+   "Fe": 13088.0,
+   "Ag": 6.33,
+   "Au": 1.52,
+   "Pd": 0.48
   },
   "herkunft": {
-   "Fe": "Modellmassen (Schätzung)",
    "Cu": "Modellmassen (Schätzung)",
-   "Ag": "29 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)",
-   "Au": "29 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)",
-   "Pd": "29 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)"
+   "Al": "Modellmassen (Schätzung)",
+   "Fe": "Modellmassen (Schätzung)",
+   "Ag": "25 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)",
+   "Au": "25 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)",
+   "Pd": "25 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)"
   },
   "materialien_g": {
-   "steel": 121.0,
-   "abs": 121.0,
-   "pcb": 29.0,
-   "copper": 14.5,
-   "pvc": 14.5
+   "abs": 98.1,
+   "mixed_electronics": 67.0,
+   "pvc": 49.6,
+   "copper": 37.2,
+   "pcb": 25.3,
+   "aluminium": 16.5,
+   "steel": 3.1,
+   "pc": 3.1
   },
-  "co2_kg": 1.609,
-  "co2_mit_recyclat_kg": 1.052,
-  "co2_ersparnis_kg": 0.557,
+  "co2_kg": 1.814,
+  "co2_mit_recyclat_kg": 1.204,
+  "co2_ersparnis_kg": 0.611,
   "co2_ohne_faktor": [],
-  "rohstoffwert_eur": 0.46,
+  "rohstoffwert_eur": 1.01,
   "wert_ohne_preis": [],
   "preisstand": "2026-11-13",
   "quellen": {
@@ -109,27 +114,704 @@
   "nicht": "Nicht in Restmüll oder Gelbe Tonne",
   "warnung": "Kabel und Stecker dranlassen."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "circuit_board",
-   "component_id": "circuit_board",
-   "name": "Circuit Board",
-   "short": "Circuit Board",
+   "id": "kabel_adern",
+   "component_id": "cable_copper_core",
+   "material_id": "copper",
+   "name": "Kupferadern des Ladekabels",
+   "short": "Adern",
    "shape": "box",
-   "x": 16.5,
-   "y": 7.5,
-   "w": 77.0,
-   "d": 35.0,
-   "h": 10.5,
-   "z": 6.0,
-   "r": 4.2,
+   "x": 12,
+   "y": 6,
+   "w": 84,
+   "d": 38,
+   "z": 24.5,
+   "h": 7,
+   "r": 18,
+   "explode": [
+    135,
+    0,
+    6
+   ],
+   "mass": 28.9,
+   "materials": [
+    [
+     "kupfer",
+     75
+    ],
+    [
+     "pvc",
+     25
+    ]
+   ],
+   "info": "Zwei Leiter für Plus und Minus, oft als Innenader mit Kupfergeflecht darum. Nach dem Abisolieren kommt reines Kupfer zum Vorschein.",
+   "color": "#C5803D",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 4,
+     "w": 76,
+     "d": 30,
+     "r": 14
+    },
+    {
+     "shape": "box",
+     "x": 8,
+     "y": 8,
+     "w": 68,
+     "d": 22,
+     "r": 10
+    }
+   ]
+  },
+  {
+   "id": "kabel_mantel",
+   "component_id": "cable_insulation",
+   "material_id": "pvc",
+   "name": "Kabelmantel (Ladekabel, 1,8 m)",
+   "short": "Kabelmantel",
+   "shape": "box",
+   "x": 10,
+   "y": 4,
+   "w": 88,
+   "d": 42,
+   "z": 24,
+   "h": 8,
+   "r": 20,
+   "explode": [
+    135,
+    0,
+    -24
+   ],
+   "mass": 43.4,
+   "materials": [
+    [
+     "pvc",
+     100
+    ]
+   ],
+   "info": "Schwarzer PVC-Mantel, zu einem Bündel gelegt. Mit Abisolierzange längs aufschlitzen; nahe am Gehäuse sitzt meist ein Ferritkern gegen Funkstörungen.",
+   "color": "#3A3D40",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 4,
+     "w": 80,
+     "d": 34,
+     "r": 16
+    },
+    {
+     "shape": "box",
+     "x": 9,
+     "y": 9,
+     "w": 70,
+     "d": 24,
+     "r": 11
+    },
+    {
+     "shape": "cyl",
+     "x": 6,
+     "y": 13,
+     "w": 16,
+     "d": 16,
+     "fill": "#4A4F54"
+    }
+   ]
+  },
+  {
+   "id": "stecker_huelle",
+   "component_id": "connector_shell",
+   "material_id": "pvc",
+   "name": "Steckergriff (angespritzt)",
+   "short": "Steckergriff",
+   "shape": "box",
+   "x": 98,
+   "y": 19,
+   "w": 13,
+   "d": 12,
+   "z": 0,
+   "h": 12,
+   "r": 4,
+   "explode": [
+    140,
+    0,
+    0
+   ],
+   "mass": 6.2,
+   "materials": [
+    [
+     "pvc",
+     90
+    ],
+    [
+     "lot",
+     10
+    ]
+   ],
+   "info": "Kunststoff um die Lötstellen gespritzt. Kabel direkt dahinter abschneiden, dann sind Stecker und Kabel getrennt.",
+   "color": "#2B2E31",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 2,
+     "w": 1.5,
+     "d": 8,
+     "r": 0.5,
+     "fill": "#3A3D40"
+    },
+    {
+     "shape": "box",
+     "x": 6,
+     "y": 2,
+     "w": 1.5,
+     "d": 8,
+     "r": 0.5,
+     "fill": "#3A3D40"
+    },
+    {
+     "shape": "box",
+     "x": 9,
+     "y": 2,
+     "w": 1.5,
+     "d": 8,
+     "r": 0.5,
+     "fill": "#3A3D40"
+    }
+   ]
+  },
+  {
+   "id": "hohlstecker",
+   "component_id": "connector_shell",
+   "material_id": "steel",
+   "name": "Hohlstecker (5,5 mm)",
+   "short": "Hohlstecker",
+   "shape": "box",
+   "x": 111,
+   "y": 22.25,
+   "w": 10,
+   "d": 5.5,
+   "z": 3.25,
+   "h": 5.5,
+   "r": 2.7,
+   "explode": [
+    153,
+    0,
+    -3.25
+   ],
+   "mass": 3.1,
+   "materials": [
+    [
+     "stahl",
+     70
+    ],
+    [
+     "nickel",
+     10
+    ],
+    [
+     "messing",
+     15
+    ],
+    [
+     "pcabs",
+     5
+    ]
+   ],
+   "info": "Vernickelte Metallhülse (Minus) mit Kontakt innen (Plus). Ein Magnet zieht den Stahl an.",
+   "color": "#C9CDD0",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 6,
+     "y": 1.5,
+     "w": 4,
+     "d": 2.5,
+     "r": 1.2,
+     "fill": "#2A2E31"
+    }
+   ]
+  },
+  {
+   "id": "oberschale",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Gehäuse-Oberschale",
+   "short": "Oberschale",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 98,
+   "d": 50,
+   "z": 12,
+   "h": 12,
+   "r": 6,
    "explode": [
     0,
     0,
-    88.0
+    108.0
    ],
-   "mass": 29.03,
+   "mass": 46.5,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Schwer entflammbares PC/ABS. Die Schalen sind fast immer verschweißt; nicht aufbrechen, denn innen können Kondensatoren noch geladen sein.",
+   "color": "#2B2E31",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 20,
+     "y": 10,
+     "w": 58,
+     "d": 30,
+     "r": 4,
+     "fill": "#34383C"
+    },
+    {
+     "shape": "cyl",
+     "x": 82,
+     "y": 20,
+     "w": 10,
+     "fill": "#7FD36B"
+    }
+   ]
+  },
+  {
+   "id": "kuehlblech",
+   "component_id": "circuit_board",
+   "material_id": "aluminium",
+   "name": "Kühlblech mit Transistoren",
+   "short": "Kühlblech",
+   "shape": "box",
+   "x": 36,
+   "y": 40,
+   "w": 34,
+   "d": 3,
+   "z": 4.6,
+   "h": 16,
+   "r": 0.3,
+   "explode": [
+    0,
+    0,
+    75.4
+   ],
+   "mass": 16.5,
+   "materials": [
+    [
+     "alu",
+     85
+    ],
+    [
+     "chip",
+     10
+    ],
+    [
+     "kupfer",
+     5
+    ]
+   ],
+   "info": "Aluminiumblech, an das Schalttransistor und Gleichrichter geschraubt sind. Leitet ihre Wärme ab.",
+   "color": "#C9CDD0"
+  },
+  {
+   "id": "elko_gross",
+   "component_id": "circuit_board",
+   "material_id": "mixed_electronics",
+   "name": "Hochvolt-Elko (400 V)",
+   "short": "Elko 400 V",
+   "shape": "cyl",
+   "x": 17,
+   "y": 26,
+   "w": 18,
+   "z": 4.6,
+   "h": 17,
+   "explode": [
+    0,
+    0,
+    75.4
+   ],
+   "mass": 13.4,
+   "materials": [
+    [
+     "alu",
+     55
+    ],
+    [
+     "papier",
+     20
+    ],
+    [
+     "pcabs",
+     10
+    ],
+    [
+     "gummi",
+     5
+    ],
+    [
+     "kupfer",
+     10
+    ]
+   ],
+   "info": "Speichert die gleichgerichtete Netzspannung von rund 325 Volt. Kann auch ausgesteckt noch geladen sein, Anschlüsse nie berühren.",
+   "color": "#2F4F7A",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 2,
+     "y": 2,
+     "w": 14,
+     "fill": "#B9C0C6"
+    },
+    {
+     "shape": "box",
+     "x": 8,
+     "y": 2,
+     "w": 2,
+     "d": 14,
+     "r": 0.5,
+     "fill": "#8A939A"
+    }
+   ]
+  },
+  {
+   "id": "drossel",
+   "component_id": "circuit_board",
+   "material_id": "mixed_electronics",
+   "name": "Netzfilter-Drossel",
+   "short": "Netzdrossel",
+   "shape": "box",
+   "x": 17,
+   "y": 5,
+   "w": 13,
+   "d": 15,
+   "z": 4.6,
+   "h": 14,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    75.4
+   ],
+   "mass": 10.3,
+   "materials": [
+    [
+     "ferrit",
+     55
+    ],
+    [
+     "kupfer",
+     40
+    ],
+    [
+     "pcabs",
+     5
+    ]
+   ],
+   "info": "Ringkern aus Ferrit mit zwei Kupferwicklungen. Hält Störungen vom Stromnetz fern.",
+   "color": "#3A3F44",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 1.5,
+     "y": 2,
+     "w": 10,
+     "d": 11,
+     "fill": "#C5803D"
+    },
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 4.5,
+     "w": 5,
+     "d": 6
+    }
+   ]
+  },
+  {
+   "id": "trafo",
+   "component_id": "circuit_board",
+   "material_id": "mixed_electronics",
+   "name": "Übertrager (Trafo)",
+   "short": "Trafo",
+   "shape": "box",
+   "x": 40,
+   "y": 10,
+   "w": 24,
+   "d": 24,
+   "z": 4.6,
+   "h": 18,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    75.4
+   ],
+   "mass": 35.1,
+   "materials": [
+    [
+     "ferrit",
+     55
+    ],
+    [
+     "kupfer",
+     35
+    ],
+    [
+     "pcabs",
+     5
+    ],
+    [
+     "polyester",
+     5
+    ]
+   ],
+   "info": "Ferritkern mit Kupferwicklungen, in gelbes Isolierband gewickelt. Trennt die Netzspannung sicher vom 19-Volt-Ausgang.",
+   "color": "#E2C34A",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 3,
+     "w": 18,
+     "d": 18,
+     "r": 1,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 7,
+     "y": 7,
+     "w": 10,
+     "d": 10,
+     "r": 1,
+     "fill": "#C5803D"
+    }
+   ]
+  },
+  {
+   "id": "elko_aus1",
+   "component_id": "circuit_board",
+   "material_id": "mixed_electronics",
+   "name": "Ausgangs-Elko",
+   "short": "Elko Ausgang",
+   "shape": "cyl",
+   "x": 72,
+   "y": 8,
+   "w": 10,
+   "z": 4.6,
+   "h": 14,
+   "explode": [
+    0,
+    0,
+    75.4
+   ],
+   "mass": 4.1,
+   "materials": [
+    [
+     "alu",
+     55
+    ],
+    [
+     "papier",
+     20
+    ],
+    [
+     "pcabs",
+     10
+    ],
+    [
+     "gummi",
+     5
+    ],
+    [
+     "kupfer",
+     10
+    ]
+   ],
+   "info": "Glätten die 19-Volt-Ausgangsspannung, damit der Laptop gleichmäßig geladen wird.",
+   "color": "#3B3B3B",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 2,
+     "y": 2,
+     "w": 6,
+     "fill": "#B9C0C6"
+    }
+   ]
+  },
+  {
+   "id": "elko_aus2",
+   "component_id": "circuit_board",
+   "material_id": "mixed_electronics",
+   "name": "Ausgangs-Elko",
+   "short": "Elko Ausgang",
+   "shape": "cyl",
+   "x": 72,
+   "y": 22,
+   "w": 10,
+   "z": 4.6,
+   "h": 14,
+   "explode": [
+    0,
+    0,
+    75.4
+   ],
+   "mass": 4.1,
+   "materials": [
+    [
+     "alu",
+     55
+    ],
+    [
+     "papier",
+     20
+    ],
+    [
+     "pcabs",
+     10
+    ],
+    [
+     "gummi",
+     5
+    ],
+    [
+     "kupfer",
+     10
+    ]
+   ],
+   "info": "Zweiter Ausgangskondensator, parallel zum ersten.",
+   "color": "#3B3B3B",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 2,
+     "y": 2,
+     "w": 6,
+     "fill": "#B9C0C6"
+    }
+   ]
+  },
+  {
+   "id": "regler",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "Regler-Chip",
+   "short": "Chip",
+   "shape": "box",
+   "x": 42,
+   "y": 44.5,
+   "w": 8,
+   "d": 3.5,
+   "z": 4.6,
+   "h": 1.6,
+   "r": 0.3,
+   "explode": [
+    0,
+    0,
+    75.4
+   ],
+   "mass": 0.5,
+   "materials": [
+    [
+     "chip",
+     100
+    ]
+   ],
+   "info": "Steuert, wie oft der Strom durch den Trafo geschaltet wird, und begrenzt die Leistung auf 65 Watt.",
+   "color": "#22272B",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1
+    }
+   ]
+  },
+  {
+   "id": "netzbuchse",
+   "component_id": "connector_shell",
+   "material_id": "copper",
+   "name": "Netzbuchse C6 („Kleeblatt“)",
+   "short": "Netzbuchse",
+   "shape": "box",
+   "x": 1,
+   "y": 15,
+   "w": 13,
+   "d": 20,
+   "z": 4.6,
+   "h": 12,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    75.4
+   ],
+   "mass": 8.3,
+   "materials": [
+    [
+     "pcabs",
+     70
+    ],
+    [
+     "messing",
+     30
+    ]
+   ],
+   "info": "Hier steckt das Netzkabel. Drei Messingkontakte in Kunststoff, auf die Platine gelötet.",
+   "color": "#2B2E31",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 2.5,
+     "w": 7
+    },
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 10.5,
+     "w": 7
+    },
+    {
+     "shape": "cyl",
+     "x": 5,
+     "y": 7,
+     "w": 4,
+     "fill": "#C9A74A"
+    }
+   ]
+  },
+  {
+   "id": "platine",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "Platine",
+   "short": "Platine",
+   "shape": "box",
+   "x": 2,
+   "y": 2,
+   "w": 94,
+   "d": 46,
+   "z": 3,
+   "h": 1.6,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    53.4
+   ],
+   "mass": 24.8,
    "materials": [
     [
      "fr4",
@@ -148,120 +830,89 @@
      10
     ]
    ],
-   "material_id": "pcb",
-   "info": "Unscrew and unplug all ribbon cables; hand in at an e-waste collection point."
+   "info": "Leiterplatte mit Netz- und Niederspannungsseite. Als Elektroschrott abgeben, dort werden Kupfer, Zinn und Gold zurückgewonnen.",
+   "color": "#2E6B45",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 66,
+     "y": 3,
+     "w": 1.2,
+     "d": 40,
+     "r": 0.5,
+     "fill": "#1E3F2A"
+    }
+   ]
   },
   {
-   "id": "connector_shell",
-   "component_id": "connector_shell",
-   "name": "Connector Shell",
-   "short": "Connector Shell",
-   "shape": "box",
-   "x": 0,
-   "y": 0,
-   "w": 110.0,
-   "d": 50.0,
-   "h": 15.0,
-   "z": 15.0,
-   "r": 6.0,
-   "explode": [
-    0,
-    0,
-    32.0
-   ],
-   "mass": 120.97,
-   "materials": [
-    [
-     "stahl",
-     100
-    ]
-   ],
-   "material_id": "steel",
-   "info": "Cut the cable just behind the connector."
-  },
-  {
-   "id": "cable_copper_core",
-   "component_id": "cable_copper_core",
-   "name": "Cable Wires",
-   "short": "Cable Wires",
-   "shape": "box",
-   "x": 116.6,
-   "y": 2.5,
-   "w": 5.5,
-   "d": 45.0,
-   "h": 3.0,
-   "z": 3.0,
-   "r": 0.7,
-   "explode": [
-    53.5,
-    0,
-    9.6
-   ],
-   "mass": 14.52,
-   "materials": [
-    [
-     "kupfer",
-     100
-    ]
-   ],
-   "material_id": "copper",
-   "info": "Cut off the plug and strip the insulation to free the copper."
-  },
-  {
-   "id": "cable_insulation",
-   "component_id": "cable_insulation",
-   "name": "Cable Insulation",
-   "short": "Cable Insulation",
-   "shape": "box",
-   "x": 127.6,
-   "y": 2.5,
-   "w": 5.5,
-   "d": 45.0,
-   "h": 3.0,
-   "z": 3.0,
-   "r": 0.7,
-   "explode": [
-    70.0,
-    0,
-    9.6
-   ],
-   "mass": 14.52,
-   "materials": [
-    [
-     "pvc",
-     100
-    ]
-   ],
-   "material_id": "pvc",
-   "info": "Slit lengthwise with a cable stripper to separate it from the wires."
-  },
-  {
-   "id": "plastic_housing",
+   "id": "isolierfolie",
    "component_id": "plastic_housing",
-   "name": "Plastic Housing",
-   "short": "Plastic Housing",
+   "material_id": "pc",
+   "name": "Isolierfolie",
+   "short": "Isolierfolie",
    "shape": "box",
-   "x": 0,
-   "y": 0,
-   "w": 110.0,
-   "d": 50.0,
-   "h": 15.0,
-   "z": 0.0,
-   "r": 6.0,
+   "x": 1.5,
+   "y": 1.5,
+   "w": 95,
+   "d": 47,
+   "z": 2.4,
+   "h": 0.4,
+   "r": 2,
    "explode": [
     0,
     0,
-    0
+    31.6
    ],
-   "mass": 120.97,
+   "mass": 3.1,
    "materials": [
     [
      "pcabs",
      100
     ]
    ],
+   "info": "Dünne Kunststofffolie unter der Platine. Verhindert, dass Lötstellen das Gehäuse berühren.",
+   "color": "#E8E4D8",
+   "opacity": 0.75
+  },
+  {
+   "id": "unterschale",
+   "component_id": "plastic_housing",
    "material_id": "abs",
-   "info": "Look for hidden screws under rubber feet or labels, then pry the clips open."
+   "name": "Gehäuse-Unterschale mit Typenschild",
+   "short": "Unterschale",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 98,
+   "d": 50,
+   "z": 0,
+   "h": 12,
+   "r": 6,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 51.6,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Auf dem Typenschild an der Unterseite stehen 19 V und 3,42 A (65 W). Ganzes Netzteil zur Elektro-Sammlung bringen.",
+   "color": "#2B2E31",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 15,
+     "w": 11,
+     "d": 20,
+     "r": 2,
+     "fill": "#1E2022"
+    }
+   ]
   }
  ]
 }

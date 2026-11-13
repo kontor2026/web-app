@@ -1,0 +1,214 @@
+{
+ "parts": [
+  {
+   "id": "deckel",
+   "component_id": "button_cell",
+   "material_id": "steel",
+   "name": "Minuspol-Deckel",
+   "short": "Minuspol",
+   "shape": "cyl",
+   "x": 1.6,
+   "y": 1.6,
+   "w": 16.8,
+   "z": 2.6,
+   "h": 0.6,
+   "explode": [
+    0,
+    0,
+    50.6
+   ],
+   "mass": 0.53,
+   "materials": [
+    [
+     "stahl",
+     90
+    ],
+    [
+     "nickel",
+     10
+    ]
+   ],
+   "info": "Vernickeltes Stahlblech, der Minuspol. Vor dem Abgeben beide Seiten mit Klebeband abkleben, damit es keinen Kurzschluss gibt.",
+   "color": "#C9CDD0",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 2,
+     "y": 2,
+     "w": 12.8
+    },
+    {
+     "shape": "cyl",
+     "x": 5.4,
+     "y": 5.4,
+     "w": 6
+    }
+   ]
+  },
+  {
+   "id": "dichtung",
+   "component_id": "button_cell",
+   "material_id": "pp",
+   "name": "Dichtring",
+   "short": "Dichtring",
+   "shape": "cyl",
+   "x": 0.8,
+   "y": 0.8,
+   "w": 18.4,
+   "z": 0.4,
+   "h": 2.8,
+   "explode": [
+    0,
+    0,
+    41.0
+   ],
+   "mass": 0.11,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Kunststoffring zwischen Deckel und Becher. Er isoliert die beiden Pole und hält den Elektrolyten dicht.",
+   "color": "#2E3236",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 1,
+     "y": 1,
+     "w": 16.4,
+     "fill": "#5E656A"
+    }
+   ]
+  },
+  {
+   "id": "anode",
+   "component_id": "button_cell",
+   "material_id": "coin_cell",
+   "name": "Lithium-Anode",
+   "short": "Lithium",
+   "shape": "cyl",
+   "x": 2.5,
+   "y": 2.5,
+   "w": 15,
+   "z": 2,
+   "h": 0.6,
+   "explode": [
+    0,
+    0,
+    29.8
+   ],
+   "mass": 0.13,
+   "materials": [
+    [
+     "knopfzelle",
+     100
+    ]
+   ],
+   "info": "Dünne Scheibe aus Lithium-Metall. Lithium reagiert heftig mit Wasser, darum die Zelle nie aufschneiden.",
+   "color": "#B4B8BC"
+  },
+  {
+   "id": "separator",
+   "component_id": "button_cell",
+   "material_id": "coin_cell",
+   "name": "Separator mit Elektrolyt",
+   "short": "Separator",
+   "shape": "cyl",
+   "x": 2,
+   "y": 2,
+   "w": 16,
+   "z": 1.8,
+   "h": 0.2,
+   "explode": [
+    0,
+    0,
+    20.8
+   ],
+   "mass": 0.21,
+   "materials": [
+    [
+     "pp",
+     50
+    ],
+    [
+     "knopfzelle",
+     50
+    ]
+   ],
+   "info": "Vlies aus Kunststoff, getränkt mit organischem Elektrolyten. Trennt Anode und Kathode.",
+   "color": "#ECE6D6"
+  },
+  {
+   "id": "kathode",
+   "component_id": "button_cell",
+   "material_id": "coin_cell",
+   "name": "Braunstein-Kathode",
+   "short": "Kathode",
+   "shape": "cyl",
+   "x": 2.25,
+   "y": 2.25,
+   "w": 15.5,
+   "z": 0.4,
+   "h": 1.4,
+   "explode": [
+    0,
+    0,
+    11.8
+   ],
+   "mass": 1.06,
+   "materials": [
+    [
+     "knopfzelle",
+     85
+    ],
+    [
+     "graphit",
+     15
+    ]
+   ],
+   "info": "Gepresste Tablette aus Mangandioxid und Graphit. Zusammen mit dem Lithium liefert sie 3 Volt.",
+   "color": "#2A2B2D"
+  },
+  {
+   "id": "becher",
+   "component_id": "button_cell",
+   "material_id": "steel",
+   "name": "Pluspol-Becher",
+   "short": "Pluspol",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 20,
+   "z": 0,
+   "h": 3.2,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 0.96,
+   "materials": [
+    [
+     "stahl",
+     90
+    ],
+    [
+     "nickel",
+     10
+    ]
+   ],
+   "info": "Flacher Becher aus vernickeltem Stahl, der Pluspol mit der Aufschrift „CR2032“. Knopfzellen gehören in die Batteriesammlung und außer Reichweite kleiner Kinder: Verschluckt sind sie lebensgefährlich.",
+   "color": "#C9CDD0",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0.8,
+     "y": 0.8,
+     "w": 18.4,
+     "fill": "#5E656A"
+    }
+   ]
+  }
+ ]
+}

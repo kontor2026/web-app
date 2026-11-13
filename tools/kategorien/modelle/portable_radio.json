@@ -1,0 +1,648 @@
+{
+ "parts": [
+  {
+   "id": "griff",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Tragegriff",
+   "short": "Griff",
+   "shape": "box",
+   "x": 40,
+   "y": 30,
+   "w": 140,
+   "d": 20,
+   "z": 112,
+   "h": 18,
+   "r": 8,
+   "explode": [
+    0,
+    0,
+    50
+   ],
+   "mass": 33,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Kunststoffbügel, innen mit zwei Schrauben am Gehäuse befestigt. Zuerst abschrauben.",
+   "color": "#2B2E31",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 6,
+     "w": 120,
+     "d": 8,
+     "r": 4,
+     "fill": "#3A3D40"
+    }
+   ]
+  },
+  {
+   "id": "antenne",
+   "component_id": "telescopic_antenna",
+   "material_id": "steel",
+   "name": "Teleskopantenne",
+   "short": "Antenne",
+   "shape": "box",
+   "x": 30,
+   "y": 4,
+   "w": 170,
+   "d": 8,
+   "z": 112,
+   "h": 8,
+   "r": 4,
+   "explode": [
+    40,
+    0,
+    50
+   ],
+   "mass": 27.5,
+   "materials": [
+    [
+     "stahl",
+     85
+    ],
+    [
+     "messing",
+     10
+    ],
+    [
+     "pcabs",
+     5
+    ]
+   ],
+   "info": "Ineinandergeschobene Röhrchen aus verchromtem Stahl für den UKW-Empfang. Innen im Gehäuse mit einer Mutter festgeschraubt.",
+   "color": "#C9CDD0",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 30,
+     "y": 1.5,
+     "w": 1.5,
+     "d": 5,
+     "r": 0.5,
+     "fill": "#8A939A"
+    },
+    {
+     "shape": "box",
+     "x": 65,
+     "y": 1.5,
+     "w": 1.5,
+     "d": 5,
+     "r": 0.5,
+     "fill": "#8A939A"
+    },
+    {
+     "shape": "box",
+     "x": 100,
+     "y": 1.5,
+     "w": 1.5,
+     "d": 5,
+     "r": 0.5,
+     "fill": "#8A939A"
+    },
+    {
+     "shape": "box",
+     "x": 135,
+     "y": 1.5,
+     "w": 1.5,
+     "d": 5,
+     "r": 0.5,
+     "fill": "#8A939A"
+    }
+   ]
+  },
+  {
+   "id": "knoepfe",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Drehknöpfe (Sender und Lautstärke)",
+   "short": "Drehknöpfe",
+   "shape": "box",
+   "x": 150,
+   "y": 52,
+   "w": 56,
+   "d": 22,
+   "z": 112,
+   "h": 8,
+   "r": 3,
+   "explode": [
+    0,
+    30,
+    50
+   ],
+   "mass": 8.8,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Gerändelte Kunststoffknöpfe, nur auf die Achsen gesteckt. Lassen sich mit den Fingern abziehen.",
+   "color": "#2B2E31",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 2,
+     "y": 2,
+     "w": 18,
+     "fill": "#4A4F54"
+    },
+    {
+     "shape": "cyl",
+     "x": 34,
+     "y": 2,
+     "w": 18,
+     "fill": "#4A4F54"
+    },
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 3,
+     "w": 2,
+     "d": 6,
+     "r": 1,
+     "fill": "#E35A4E"
+    }
+   ]
+  },
+  {
+   "id": "frontschale",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Frontschale mit Lautsprechergitter",
+   "short": "Frontschale",
+   "shape": "box",
+   "x": 0,
+   "y": 52,
+   "w": 220,
+   "d": 28,
+   "z": 0,
+   "h": 112,
+   "r": 10,
+   "explode": [
+    0,
+    70,
+    0
+   ],
+   "mass": 137.7,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Vorderes Gehäuseteil aus ABS mit Lochgitter vor dem Lautsprecher und Senderskala. Hinten sitzen 4 bis 6 Schrauben, oft im Batteriefach versteckt.",
+   "color": "#3A3D40",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 6,
+     "y": 6,
+     "w": 208,
+     "d": 16,
+     "r": 6,
+     "fill": "#34383C"
+    },
+    {
+     "shape": "box",
+     "x": 130,
+     "y": 8,
+     "w": 80,
+     "d": 10,
+     "r": 2,
+     "fill": "#E8E2C8"
+    }
+   ]
+  },
+  {
+   "id": "lautsprecher",
+   "component_id": "speaker_driver",
+   "material_id": "mixed_electronics",
+   "name": "Lautsprecher (100 mm)",
+   "short": "Lautsprecher",
+   "shape": "box",
+   "x": 15,
+   "y": 40,
+   "w": 100,
+   "d": 12,
+   "z": 6,
+   "h": 100,
+   "r": 6,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 60.6,
+   "materials": [
+    [
+     "stahl",
+     50
+    ],
+    [
+     "papier",
+     25
+    ],
+    [
+     "kupfer",
+     10
+    ],
+    [
+     "gummi",
+     10
+    ],
+    [
+     "pcabs",
+     5
+    ]
+   ],
+   "info": "Membran aus Pappe in einem Stahlkorb. Sie schwingt und erzeugt den Ton, angetrieben von der Schwingspule. Mit vier Schrauben an der Frontschale.",
+   "color": "#3B3B3B",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 6,
+     "y": 2,
+     "w": 88,
+     "d": 8,
+     "r": 4,
+     "fill": "#55493C"
+    }
+   ]
+  },
+  {
+   "id": "magnet",
+   "component_id": "speaker_driver",
+   "material_id": "mixed_electronics",
+   "name": "Ferritmagnet des Lautsprechers",
+   "short": "Magnet",
+   "shape": "cyl",
+   "x": 45,
+   "y": 26,
+   "w": 40,
+   "d": 14,
+   "z": 36,
+   "h": 40,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 104.7,
+   "materials": [
+    [
+     "ferrit",
+     80
+    ],
+    [
+     "stahl",
+     15
+    ],
+    [
+     "kupfer",
+     5
+    ]
+   ],
+   "info": "Schwerer Ringmagnet aus Ferrit hinter der Membran. Zieht Schrauben und Büroklammern an.",
+   "color": "#4A4F54",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 8,
+     "y": 3,
+     "w": 24,
+     "d": 8,
+     "fill": "#8A939A"
+    }
+   ]
+  },
+  {
+   "id": "ferritstab",
+   "component_id": "circuit_board",
+   "material_id": "mixed_electronics",
+   "name": "Ferritstab-Antenne (Mittelwelle)",
+   "short": "Ferritantenne",
+   "shape": "box",
+   "x": 20,
+   "y": 14,
+   "w": 110,
+   "d": 10,
+   "z": 92,
+   "h": 10,
+   "r": 4,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 19.8,
+   "materials": [
+    [
+     "ferrit",
+     75
+    ],
+    [
+     "kupfer",
+     20
+    ],
+    [
+     "pcabs",
+     5
+    ]
+   ],
+   "info": "Stab aus Ferrit mit Kupferwicklung. Empfängt Mittelwelle, deshalb funktioniert MW auch ohne ausgezogene Antenne.",
+   "color": "#3A3F44",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 30,
+     "y": 1,
+     "w": 22,
+     "d": 8,
+     "r": 2,
+     "fill": "#C5803D"
+    },
+    {
+     "shape": "box",
+     "x": 62,
+     "y": 1,
+     "w": 12,
+     "d": 8,
+     "r": 2,
+     "fill": "#C5803D"
+    }
+   ]
+  },
+  {
+   "id": "drehko",
+   "component_id": "circuit_board",
+   "material_id": "mixed_electronics",
+   "name": "Drehkondensator (Senderwahl)",
+   "short": "Drehko",
+   "shape": "box",
+   "x": 150,
+   "y": 32,
+   "w": 22,
+   "d": 12,
+   "z": 60,
+   "h": 22,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 11,
+   "materials": [
+    [
+     "alu",
+     45
+    ],
+    [
+     "pcabs",
+     40
+    ],
+    [
+     "stahl",
+     10
+    ],
+    [
+     "kupfer",
+     5
+    ]
+   ],
+   "info": "Plattenpaket, das beim Drehen am Senderknopf ineinander greift. So wird der Sender eingestellt.",
+   "color": "#E8E8E2",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 6,
+     "y": 1,
+     "w": 10,
+     "fill": "#B7BCC0"
+    }
+   ]
+  },
+  {
+   "id": "chip",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "Radio-Chip",
+   "short": "Chip",
+   "shape": "box",
+   "x": 180,
+   "y": 32,
+   "w": 12,
+   "d": 4,
+   "z": 40,
+   "h": 12,
+   "r": 0.3,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 2.2,
+   "materials": [
+    [
+     "chip",
+     100
+    ]
+   ],
+   "info": "Ein einziger Chip empfängt, verstärkt und dekodiert das Radiosignal.",
+   "color": "#22272B"
+  },
+  {
+   "id": "platine",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "Platine",
+   "short": "Platine",
+   "shape": "box",
+   "x": 125,
+   "y": 30,
+   "w": 85,
+   "d": 2,
+   "z": 10,
+   "h": 95,
+   "r": 0.3,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 49.6,
+   "materials": [
+    [
+     "fr4",
+     55
+    ],
+    [
+     "kupfer",
+     20
+    ],
+    [
+     "chip",
+     15
+    ],
+    [
+     "lot",
+     10
+    ]
+   ],
+   "info": "Senkrecht stehende Leiterplatte hinter der Senderskala. Mit Lautsprecher, Antennen und Batteriefach über Drähte verlötet.",
+   "color": "#2E6B45"
+  },
+  {
+   "id": "batterien",
+   "component_id": "alkaline_cell",
+   "material_id": "alkaline",
+   "name": "Vier Babyzellen (C)",
+   "short": "Batterien C",
+   "shape": "box",
+   "x": 10,
+   "y": 3,
+   "w": 200,
+   "d": 26,
+   "z": 4,
+   "h": 26,
+   "r": 8,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 290.8,
+   "materials": [
+    [
+     "zinkmangan",
+     80
+    ],
+    [
+     "stahl",
+     20
+    ]
+   ],
+   "info": "Vier 1,5-Volt-Zellen in Reihe ergeben 6 Volt. Sie sind der schwerste Teil des Radios: herausnehmen und in die Batteriesammlung geben.",
+   "color": "#C8423A",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 0,
+     "w": 50,
+     "d": 26,
+     "r": 8,
+     "fill": "#C8423A"
+    },
+    {
+     "shape": "box",
+     "x": 50,
+     "y": 0,
+     "w": 50,
+     "d": 26,
+     "r": 8,
+     "fill": "#C8423A"
+    },
+    {
+     "shape": "box",
+     "x": 100,
+     "y": 0,
+     "w": 50,
+     "d": 26,
+     "r": 8,
+     "fill": "#C8423A"
+    },
+    {
+     "shape": "box",
+     "x": 150,
+     "y": 0,
+     "w": 50,
+     "d": 26,
+     "r": 8,
+     "fill": "#C8423A"
+    },
+    {
+     "shape": "box",
+     "x": 44,
+     "y": 6,
+     "w": 6,
+     "d": 14,
+     "r": 2,
+     "fill": "#B7BCC0"
+    },
+    {
+     "shape": "box",
+     "x": 94,
+     "y": 6,
+     "w": 6,
+     "d": 14,
+     "r": 2,
+     "fill": "#B7BCC0"
+    },
+    {
+     "shape": "box",
+     "x": 144,
+     "y": 6,
+     "w": 6,
+     "d": 14,
+     "r": 2,
+     "fill": "#B7BCC0"
+    },
+    {
+     "shape": "box",
+     "x": 194,
+     "y": 6,
+     "w": 6,
+     "d": 14,
+     "r": 2,
+     "fill": "#B7BCC0"
+    }
+   ]
+  },
+  {
+   "id": "rueckschale",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Rückschale mit Batteriefach",
+   "short": "Rückschale",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 220,
+   "d": 52,
+   "z": 0,
+   "h": 112,
+   "r": 10,
+   "explode": [
+    0,
+    -75,
+    0
+   ],
+   "mass": 154.2,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Hinteres Gehäuseteil mit Batteriefach-Deckel und Typenschild. Nach Lösen der Schrauben nach hinten abziehen.",
+   "color": "#3A3D40",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 8,
+     "y": 4,
+     "w": 204,
+     "d": 44,
+     "r": 8,
+     "fill": "#34383C"
+    }
+   ]
+  }
+ ]
+}

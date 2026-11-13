@@ -4,7 +4,7 @@
  "name_en": "Power Strip",
  "klasse": "Elektroschrott · Kleingerät",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -21,40 +21,40 @@
  "werte": [
   {
    "k": "Rohstoffwert",
-   "v": "≈ 3,03 €",
+   "v": "≈ 1,78 €",
    "hint": "Kupfer zu Preisen vom 13.11."
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 1,60 kg",
+   "v": "≈ 1,41 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 0,44 kg",
-   "hint": "spart 1,17 kg, wenn recycelte Materialien eingesetzt werden"
+   "v": "≈ 0,28 kg",
+   "hint": "spart 1,13 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Cu": 240317.0,
-   "Fe": 7258.0
+   "Cu": 140700.0,
+   "Fe": 2250.0
   },
   "herkunft": {
    "Cu": "Modellmassen (Schätzung)",
    "Fe": "Modellmassen (Schätzung)"
   },
   "materialien_g": {
-   "copper": 225.8,
-   "abs": 201.6,
-   "mixed_electronics": 48.4,
-   "pvc": 24.2
+   "abs": 223.8,
+   "copper": 136.2,
+   "pvc": 125.0,
+   "mixed_electronics": 15.0
   },
-  "co2_kg": 1.603,
-  "co2_mit_recyclat_kg": 0.437,
-  "co2_ersparnis_kg": 1.166,
+  "co2_kg": 1.412,
+  "co2_mit_recyclat_kg": 0.284,
+  "co2_ersparnis_kg": 1.128,
   "co2_ohne_faktor": [],
-  "rohstoffwert_eur": 3.03,
+  "rohstoffwert_eur": 1.78,
   "wert_ohne_preis": [],
   "preisstand": "2026-11-13",
   "quellen": {
@@ -102,159 +102,796 @@
   "nicht": "Nicht in Restmüll oder Gelbe Tonne",
   "warnung": "Kabel und Stecker dranlassen."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "rocker_switch",
-   "component_id": "rocker_switch",
-   "name": "Switch",
-   "short": "Switch",
-   "shape": "box",
-   "x": 8.2,
-   "y": 45.0,
-   "w": 38.5,
-   "d": 210.0,
-   "h": 14.0,
-   "z": 8.0,
-   "r": 4.6,
-   "explode": [
-    0,
-    0,
-    174.0
-   ],
-   "mass": 48.39,
-   "materials": [
-    [
-     "chip",
-     30
-    ],
-    [
-     "kupfer",
-     30
-    ],
-    [
-     "pcabs",
-     25
-    ],
-    [
-     "stahl",
-     15
-    ]
-   ],
-   "material_id": "mixed_electronics",
-   "info": "Pop it out of the housing with a small screwdriver."
-  },
-  {
-   "id": "plug_pins",
-   "component_id": "plug_pins",
-   "name": "Plug Pins",
-   "short": "Plug Pins",
+   "id": "oberteil",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Gehäuse-Oberteil mit Steckdosen",
+   "short": "Oberteil",
    "shape": "box",
    "x": 0,
    "y": 0,
-   "w": 55.0,
-   "d": 300.0,
-   "h": 20.0,
-   "z": 20.0,
-   "r": 6.6,
+   "w": 54,
+   "d": 225,
+   "z": 19,
+   "h": 19,
+   "r": 8,
    "explode": [
     0,
     0,
-    71.0
+    64.0
    ],
-   "mass": 201.61,
+   "mass": 118.8,
    "materials": [
     [
-     "kupfer",
+     "pcabs",
      100
     ]
    ],
-   "material_id": "copper",
-   "info": "Brass pins are pressed into the housing; break the housing open to remove them."
+   "info": "Weißes PP oder PC mit vier Steckdosen. Innen mit Schrauben am Unterteil befestigt, die oft unter Aufklebern sitzen. Nur ausgesteckt öffnen!",
+   "color": "#F1F2F0",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 8,
+     "y": 10,
+     "w": 38,
+     "d": 38,
+     "fill": "#E2E3E0"
+    },
+    {
+     "shape": "cyl",
+     "x": 17,
+     "y": 26.5,
+     "w": 5,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "cyl",
+     "x": 32,
+     "y": 26.5,
+     "w": 5,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 26,
+     "y": 11,
+     "w": 2,
+     "d": 6,
+     "r": 0.5,
+     "fill": "#B7BCC0"
+    },
+    {
+     "shape": "box",
+     "x": 26,
+     "y": 41,
+     "w": 2,
+     "d": 6,
+     "r": 0.5,
+     "fill": "#B7BCC0"
+    },
+    {
+     "shape": "cyl",
+     "x": 8,
+     "y": 54,
+     "w": 38,
+     "d": 38,
+     "fill": "#E2E3E0"
+    },
+    {
+     "shape": "cyl",
+     "x": 17,
+     "y": 70.5,
+     "w": 5,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "cyl",
+     "x": 32,
+     "y": 70.5,
+     "w": 5,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 26,
+     "y": 55,
+     "w": 2,
+     "d": 6,
+     "r": 0.5,
+     "fill": "#B7BCC0"
+    },
+    {
+     "shape": "box",
+     "x": 26,
+     "y": 85,
+     "w": 2,
+     "d": 6,
+     "r": 0.5,
+     "fill": "#B7BCC0"
+    },
+    {
+     "shape": "cyl",
+     "x": 8,
+     "y": 98,
+     "w": 38,
+     "d": 38,
+     "fill": "#E2E3E0"
+    },
+    {
+     "shape": "cyl",
+     "x": 17,
+     "y": 114.5,
+     "w": 5,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "cyl",
+     "x": 32,
+     "y": 114.5,
+     "w": 5,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 26,
+     "y": 99,
+     "w": 2,
+     "d": 6,
+     "r": 0.5,
+     "fill": "#B7BCC0"
+    },
+    {
+     "shape": "box",
+     "x": 26,
+     "y": 129,
+     "w": 2,
+     "d": 6,
+     "r": 0.5,
+     "fill": "#B7BCC0"
+    },
+    {
+     "shape": "cyl",
+     "x": 8,
+     "y": 142,
+     "w": 38,
+     "d": 38,
+     "fill": "#E2E3E0"
+    },
+    {
+     "shape": "cyl",
+     "x": 17,
+     "y": 158.5,
+     "w": 5,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "cyl",
+     "x": 32,
+     "y": 158.5,
+     "w": 5,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 26,
+     "y": 143,
+     "w": 2,
+     "d": 6,
+     "r": 0.5,
+     "fill": "#B7BCC0"
+    },
+    {
+     "shape": "box",
+     "x": 26,
+     "y": 173,
+     "w": 2,
+     "d": 6,
+     "r": 0.5,
+     "fill": "#B7BCC0"
+    },
+    {
+     "shape": "box",
+     "x": 17,
+     "y": 191,
+     "w": 20,
+     "d": 26,
+     "r": 3,
+     "fill": "#C8423A"
+    }
+   ]
   },
   {
-   "id": "cable_copper_core",
+   "id": "schalter",
+   "component_id": "rocker_switch",
+   "material_id": "mixed_electronics",
+   "name": "Beleuchteter Wippschalter",
+   "short": "Schalter",
+   "shape": "box",
+   "x": 17,
+   "y": 191,
+   "w": 20,
+   "d": 26,
+   "z": 20,
+   "h": 18,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    108.0
+   ],
+   "mass": 15,
+   "materials": [
+    [
+     "pcabs",
+     55
+    ],
+    [
+     "messing",
+     25
+    ],
+    [
+     "kupfer",
+     10
+    ],
+    [
+     "stahl",
+     5
+    ],
+    [
+     "chip",
+     5
+    ]
+   ],
+   "info": "Schaltet beide Leiter ab, die rote Glimmlampe zeigt an, ob Strom anliegt. Lässt sich mit einem kleinen Schraubendreher aus dem Gehäuse drücken.",
+   "color": "#C8423A",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 2,
+     "w": 16,
+     "d": 10,
+     "r": 2,
+     "fill": "#E35A4E"
+    },
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 14,
+     "w": 16,
+     "d": 10,
+     "r": 2,
+     "fill": "#A9362E"
+    }
+   ]
+  },
+  {
+   "id": "schiene_l",
+   "component_id": "plug_pins",
+   "material_id": "copper",
+   "name": "Kontaktschiene Phase",
+   "short": "Schiene Phase",
+   "shape": "box",
+   "x": 13,
+   "y": 12,
+   "w": 3,
+   "d": 176,
+   "z": 5,
+   "h": 12,
+   "r": 0.5,
+   "explode": [
+    0,
+    0,
+    40.0
+   ],
+   "mass": 15,
+   "materials": [
+    [
+     "messing",
+     100
+    ]
+   ],
+   "info": "Gestanztes Messingblech mit federnden Klemmen für je einen Steckerstift. Wertvoll fürs Recycling.",
+   "color": "#D4B464",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0.5,
+     "y": 14.5,
+     "w": 2,
+     "d": 9,
+     "r": 0.5,
+     "fill": "#B08F3C"
+    },
+    {
+     "shape": "box",
+     "x": 0.5,
+     "y": 58.5,
+     "w": 2,
+     "d": 9,
+     "r": 0.5,
+     "fill": "#B08F3C"
+    },
+    {
+     "shape": "box",
+     "x": 0.5,
+     "y": 102.5,
+     "w": 2,
+     "d": 9,
+     "r": 0.5,
+     "fill": "#B08F3C"
+    },
+    {
+     "shape": "box",
+     "x": 0.5,
+     "y": 146.5,
+     "w": 2,
+     "d": 9,
+     "r": 0.5,
+     "fill": "#B08F3C"
+    }
+   ]
+  },
+  {
+   "id": "schiene_pe",
+   "component_id": "plug_pins",
+   "material_id": "copper",
+   "name": "Schutzleiter-Schiene",
+   "short": "Schutzleiter",
+   "shape": "box",
+   "x": 25.5,
+   "y": 10,
+   "w": 3,
+   "d": 176,
+   "z": 5,
+   "h": 12,
+   "r": 0.5,
+   "explode": [
+    0,
+    0,
+    40.0
+   ],
+   "mass": 17.5,
+   "materials": [
+    [
+     "messing",
+     100
+    ]
+   ],
+   "info": "Verbindet die Schutzkontakt-Bügel aller Steckdosen mit dem grün-gelben Leiter.",
+   "color": "#D4B464",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0.5,
+     "y": 1,
+     "w": 2,
+     "d": 6,
+     "r": 0.5,
+     "fill": "#B08F3C"
+    },
+    {
+     "shape": "box",
+     "x": 0.5,
+     "y": 45,
+     "w": 2,
+     "d": 6,
+     "r": 0.5,
+     "fill": "#B08F3C"
+    },
+    {
+     "shape": "box",
+     "x": 0.5,
+     "y": 89,
+     "w": 2,
+     "d": 6,
+     "r": 0.5,
+     "fill": "#B08F3C"
+    },
+    {
+     "shape": "box",
+     "x": 0.5,
+     "y": 133,
+     "w": 2,
+     "d": 6,
+     "r": 0.5,
+     "fill": "#B08F3C"
+    }
+   ]
+  },
+  {
+   "id": "schiene_n",
+   "component_id": "plug_pins",
+   "material_id": "copper",
+   "name": "Kontaktschiene Neutralleiter",
+   "short": "Schiene Neutral",
+   "shape": "box",
+   "x": 38,
+   "y": 12,
+   "w": 3,
+   "d": 176,
+   "z": 5,
+   "h": 12,
+   "r": 0.5,
+   "explode": [
+    0,
+    0,
+    40.0
+   ],
+   "mass": 15,
+   "materials": [
+    [
+     "messing",
+     100
+    ]
+   ],
+   "info": "Zweite Messingschiene für den blauen Neutralleiter.",
+   "color": "#D4B464",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0.5,
+     "y": 14.5,
+     "w": 2,
+     "d": 9,
+     "r": 0.5,
+     "fill": "#B08F3C"
+    },
+    {
+     "shape": "box",
+     "x": 0.5,
+     "y": 58.5,
+     "w": 2,
+     "d": 9,
+     "r": 0.5,
+     "fill": "#B08F3C"
+    },
+    {
+     "shape": "box",
+     "x": 0.5,
+     "y": 102.5,
+     "w": 2,
+     "d": 9,
+     "r": 0.5,
+     "fill": "#B08F3C"
+    },
+    {
+     "shape": "box",
+     "x": 0.5,
+     "y": 146.5,
+     "w": 2,
+     "d": 9,
+     "r": 0.5,
+     "fill": "#B08F3C"
+    }
+   ]
+  },
+  {
+   "id": "zugentlastung",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Zugentlastung",
+   "short": "Zugentlastung",
+   "shape": "box",
+   "x": 15,
+   "y": 205,
+   "w": 24,
+   "d": 14,
+   "z": 4,
+   "h": 8,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    41.0
+   ],
+   "mass": 5,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Kunststoffbügel mit zwei Schrauben, der das Kabel festklemmt, damit es nicht aus den Klemmen reißt.",
+   "color": "#3A3D40",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 2,
+     "y": 4,
+     "w": 6
+    },
+    {
+     "shape": "cyl",
+     "x": 16,
+     "y": 4,
+     "w": 6
+    }
+   ]
+  },
+  {
+   "id": "unterteil",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Gehäuse-Unterteil",
+   "short": "Unterteil",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 54,
+   "d": 225,
+   "z": 0,
+   "h": 19,
+   "r": 8,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 100,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Wanne mit Stegen, in die die Schienen eingelegt sind. Ohne Metallteile kann der Kunststoff recycelt werden.",
+   "color": "#F1F2F0",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 4,
+     "w": 46,
+     "d": 217,
+     "r": 6,
+     "fill": "#E2E3E0"
+    }
+   ]
+  },
+  {
+   "id": "adern",
    "component_id": "cable_copper_core",
-   "name": "Cable Wires",
-   "short": "Cable Wires",
-   "shape": "box",
-   "x": 58.3,
-   "y": 15.0,
-   "w": 3.0,
-   "d": 270.0,
-   "h": 3.2,
-   "z": 4.0,
-   "r": 0.4,
+   "material_id": "copper",
+   "name": "Drei Kupferadern (1,5 mm²)",
+   "short": "Adern",
+   "shape": "cyl",
+   "x": 3,
+   "y": 229,
+   "w": 52,
+   "z": 1,
+   "h": 14,
    "explode": [
-    34.2,
     0,
-    21.3
+    0,
+    45.0
    ],
-   "mass": 24.19,
+   "mass": 77.5,
    "materials": [
     [
      "kupfer",
-     100
+     70
+    ],
+    [
+     "pvc",
+     30
     ]
    ],
-   "material_id": "copper",
-   "info": "Cut off the plug and strip the insulation to free the copper."
+   "info": "Braun (Phase), Blau (Neutralleiter) und Grün-Gelb (Schutzleiter), jede Ader aus feinen Kupferdrähten mit eigener Isolierung.",
+   "color": "#C5803D",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0,
+     "y": 0,
+     "w": 52
+    },
+    {
+     "shape": "cyl",
+     "x": 7,
+     "y": 7,
+     "w": 38
+    },
+    {
+     "shape": "cyl",
+     "x": 14,
+     "y": 14,
+     "w": 24
+    },
+    {
+     "shape": "cyl",
+     "x": 2,
+     "y": 22,
+     "w": 5,
+     "fill": "#7B4A2A"
+    },
+    {
+     "shape": "cyl",
+     "x": 2,
+     "y": 27,
+     "w": 5,
+     "fill": "#3A6BB0"
+    },
+    {
+     "shape": "cyl",
+     "x": 2,
+     "y": 32,
+     "w": 5,
+     "fill": "#7FB04A"
+    }
+   ]
   },
   {
-   "id": "cable_insulation",
+   "id": "mantel",
    "component_id": "cable_insulation",
-   "name": "Cable Insulation",
-   "short": "Cable Insulation",
-   "shape": "box",
-   "x": 64.3,
-   "y": 15.0,
-   "w": 3.0,
-   "d": 270.0,
-   "h": 3.2,
-   "z": 4.0,
-   "r": 0.4,
+   "material_id": "pvc",
+   "name": "Kabelmantel",
+   "short": "Kabelmantel",
+   "shape": "cyl",
+   "x": 0,
+   "y": 226,
+   "w": 58,
+   "z": 0,
+   "h": 16,
    "explode": [
-    42.5,
     0,
-    21.3
+    0,
+    0.0
    ],
-   "mass": 24.19,
+   "mass": 87.5,
    "materials": [
     [
      "pvc",
      100
     ]
    ],
-   "material_id": "pvc",
-   "info": "Slit lengthwise with a cable stripper to separate it from the wires."
+   "info": "Weißer PVC-Mantel, 1,4 m lang, hier aufgerollt. Stecker und Leiste abschneiden, dann längs aufschlitzen.",
+   "color": "#F1F2F0",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0.0,
+     "y": 0.0,
+     "w": 58.0
+    },
+    {
+     "shape": "cyl",
+     "x": 7.5,
+     "y": 7.5,
+     "w": 43.0
+    },
+    {
+     "shape": "cyl",
+     "x": 15.0,
+     "y": 15.0,
+     "w": 28.0
+    },
+    {
+     "shape": "cyl",
+     "x": 22.5,
+     "y": 22.5,
+     "w": 13.0
+    }
+   ]
   },
   {
-   "id": "plastic_housing",
+   "id": "stecker",
    "component_id": "plastic_housing",
-   "name": "Plastic Housing",
-   "short": "Plastic Housing",
+   "material_id": "pvc",
+   "name": "Schutzkontaktstecker",
+   "short": "Stecker",
    "shape": "box",
-   "x": 0,
-   "y": 0,
-   "w": 55.0,
-   "d": 300.0,
-   "h": 20.0,
-   "z": 0.0,
-   "r": 6.6,
+   "x": 10,
+   "y": 286,
+   "w": 36,
+   "d": 24,
+   "z": 0,
+   "h": 36,
+   "r": 4,
    "explode": [
     0,
-    0,
+    14,
     0
    ],
-   "mass": 201.61,
+   "mass": 37.5,
    "materials": [
     [
-     "pcabs",
-     100
+     "pvc",
+     85
+    ],
+    [
+     "stahl",
+     10
+    ],
+    [
+     "messing",
+     5
     ]
    ],
-   "material_id": "abs",
-   "info": "Look for hidden screws under rubber feet or labels, then pry the clips open."
+   "info": "Angespritzter Weich-PVC-Stecker mit zwei Schutzkontakt-Blechen an den Seiten. Direkt am Stecker abschneiden.",
+   "color": "#F1F2F0",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 2,
+     "w": 32,
+     "d": 20,
+     "r": 3,
+     "fill": "#E2E3E0"
+    }
+   ]
+  },
+  {
+   "id": "stift_l",
+   "component_id": "plug_pins",
+   "material_id": "copper",
+   "name": "Steckerstift links",
+   "short": "Stift",
+   "shape": "box",
+   "x": 16.1,
+   "y": 310,
+   "w": 4.8,
+   "d": 19,
+   "z": 15.6,
+   "h": 4.8,
+   "r": 2.4,
+   "explode": [
+    0,
+    30,
+    0
+   ],
+   "mass": 5.6,
+   "materials": [
+    [
+     "messing",
+     95
+    ],
+    [
+     "nickel",
+     5
+    ]
+   ],
+   "info": "Vernickeltes Messing, 4,8 mm dick. Im Stecker eingespritzt, kommt nur beim Aufschneiden heraus.",
+   "color": "#C9CDD0"
+  },
+  {
+   "id": "stift_r",
+   "component_id": "plug_pins",
+   "material_id": "copper",
+   "name": "Steckerstift rechts",
+   "short": "Stift",
+   "shape": "box",
+   "x": 35.1,
+   "y": 310,
+   "w": 4.8,
+   "d": 19,
+   "z": 15.6,
+   "h": 4.8,
+   "r": 2.4,
+   "explode": [
+    0,
+    30,
+    0
+   ],
+   "mass": 5.6,
+   "materials": [
+    [
+     "messing",
+     95
+    ],
+    [
+     "nickel",
+     5
+    ]
+   ],
+   "info": "Zweiter Stift, 19 mm Abstand zum ersten.",
+   "color": "#C9CDD0",
+   "label": false
   }
  ]
 }

@@ -4,7 +4,7 @@
  "name_en": "Wired Earphones",
  "klasse": "Elektroschrott · Kleingerät",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -21,7 +21,7 @@
  "werte": [
   {
    "k": "Rohstoffwert",
-   "v": "≈ 0,04 €",
+   "v": "≈ 0,06 €",
    "hint": "Kupfer zu Preisen vom 13.11."
   },
   {
@@ -37,25 +37,25 @@
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Cu": 3528.0,
-   "Fe": 294.0
+   "Cu": 4636.0,
+   "Fe": 483.0
   },
   "herkunft": {
    "Cu": "Modellmassen (Schätzung)",
    "Fe": "Modellmassen (Schätzung)"
   },
   "materialien_g": {
-   "abs": 8.2,
-   "copper": 2.9,
-   "mixed_electronics": 2.0,
-   "silicone": 1.0,
-   "pvc": 1.0
+   "pvc": 6.1,
+   "copper": 3.7,
+   "mixed_electronics": 3.2,
+   "abs": 1.7,
+   "silicone": 0.3
   },
-  "co2_kg": 0.051,
+  "co2_kg": 0.048,
   "co2_mit_recyclat_kg": 0.022,
-  "co2_ersparnis_kg": 0.029,
+  "co2_ersparnis_kg": 0.026,
   "co2_ohne_faktor": [],
-  "rohstoffwert_eur": 0.04,
+  "rohstoffwert_eur": 0.06,
   "wert_ohne_preis": [],
   "preisstand": "2026-11-13",
   "quellen": {
@@ -103,207 +103,509 @@
   "nicht": "Nicht in Restmüll oder Gelbe Tonne",
   "warnung": "Kabel und Stecker dranlassen."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "silicone_ear_tips",
+   "id": "ohrstoepsel",
    "component_id": "silicone_ear_tips",
-   "name": "Ear Tips",
-   "short": "Ear Tips",
+   "material_id": "silicone",
+   "name": "Silikon-Ohrstöpsel",
+   "short": "Ohrstöpsel",
    "shape": "cyl",
-   "x": 31.2,
-   "y": 31.2,
-   "w": 17.6,
-   "h": 2.25,
-   "z": 12.0,
+   "x": 65.5,
+   "y": 4.5,
+   "w": 11,
+   "z": 11,
+   "h": 4,
    "explode": [
     0,
     0,
-    136.0
+    24.0
    ],
-   "mass": 0.98,
+   "mass": 0.33,
    "materials": [
     [
      "gummi",
      100
     ]
    ],
-   "material_id": "silicone",
-   "info": "Pull them off the nozzle by hand."
+   "info": "Weiche Silikonkappe, lässt sich von Hand abziehen und waschen. Gehört in den Restmüll.",
+   "color": "#3A3D40",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 3.5,
+     "y": 3.5,
+     "w": 4,
+     "fill": "#1E2022"
+    }
+   ]
   },
   {
-   "id": "plastic_housing_ober",
+   "id": "vorderschale",
    "component_id": "plastic_housing",
-   "name": "Plastic Housing (Oberteil)",
-   "short": "Plastic Housing (O",
-   "shape": "cyl",
-   "x": 0,
-   "y": 0,
-   "w": 80.0,
-   "h": 3.0,
-   "z": 9.0,
-   "explode": [
-    0,
-    0,
-    104.0
-   ],
-   "mass": 2.45,
-   "materials": [
-    [
-     "pcabs",
-     100
-    ]
-   ],
    "material_id": "abs",
-   "info": "Look for hidden screws under rubber feet or labels, then pry the clips open."
-  },
-  {
-   "id": "audio_jack",
-   "component_id": "audio_jack",
-   "name": "Jack Plug",
-   "short": "Jack Plug",
-   "shape": "box",
-   "x": 43.2,
-   "y": 7.2,
-   "w": 33.6,
-   "d": 33.6,
-   "h": 4.05,
-   "z": 1.8,
-   "r": 4.0,
+   "name": "Vorderschale mit Schallrohr",
+   "short": "Vorderschale",
+   "shape": "cyl",
+   "x": 63.5,
+   "y": 2.5,
+   "w": 15,
+   "z": 8,
+   "h": 3,
    "explode": [
     0,
     0,
-    75.2
+    16.0
    ],
-   "mass": 1.96,
+   "mass": 0.44,
    "materials": [
     [
-     "kupfer",
+     "pcabs",
      100
     ]
    ],
-   "material_id": "copper",
-   "info": "Cut the cable just behind the plug."
+   "info": "Kunststoffschale mit kurzem Röhrchen, auf dem der Ohrstöpsel steckt. Mit der Rückschale verklebt.",
+   "color": "#2B2E31",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 4,
+     "w": 7,
+     "fill": "#3A3D40"
+    },
+    {
+     "shape": "cyl",
+     "x": 5.5,
+     "y": 5.5,
+     "w": 4,
+     "fill": "#1E2022"
+    }
+   ]
   },
   {
-   "id": "speaker_driver",
+   "id": "treiber",
    "component_id": "speaker_driver",
-   "name": "Speaker",
-   "short": "Speaker",
+   "material_id": "mixed_electronics",
+   "name": "Lautsprecher (10 mm)",
+   "short": "Lautsprecher",
    "shape": "cyl",
-   "x": 3.2,
-   "y": 7.2,
-   "w": 33.6,
-   "h": 4.05,
-   "z": 1.8,
+   "x": 64.5,
+   "y": 3.5,
+   "w": 13,
+   "z": 5,
+   "h": 3,
    "explode": [
     0,
     0,
-    39.2
+    8.0
    ],
-   "mass": 1.96,
+   "mass": 0.89,
    "materials": [
     [
-     "chip",
+     "ndfeb",
      30
     ],
     [
      "kupfer",
-     30
-    ],
-    [
-     "pcabs",
-     25
+     15
     ],
     [
      "stahl",
+     30
+    ],
+    [
+     "folien",
+     10
+    ],
+    [
+     "pcabs",
      15
     ]
    ],
-   "material_id": "mixed_electronics",
-   "info": "Contains a strong magnet; keep away from cards and other electronics."
+   "info": "Winziger Lautsprecher mit Neodym-Magnet und Schwingspule aus Kupferdraht. Der Magnet ist stark, nicht an Bankkarten halten.",
+   "color": "#C9CDD1",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 2,
+     "y": 2,
+     "w": 9,
+     "fill": "#C98F62"
+    },
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 4,
+     "w": 5,
+     "fill": "#5A6066"
+    }
+   ]
   },
   {
-   "id": "cable_copper_core",
-   "component_id": "cable_copper_core",
-   "name": "Cable Wires",
-   "short": "Cable Wires",
-   "shape": "box",
-   "x": 84.8,
-   "y": 4.0,
-   "w": 4.0,
-   "d": 72.0,
-   "h": 3.0,
-   "z": 1.5,
-   "r": 0.5,
-   "explode": [
-    43.0,
-    0,
-    9.6
-   ],
-   "mass": 0.98,
-   "materials": [
-    [
-     "kupfer",
-     100
-    ]
-   ],
-   "material_id": "copper",
-   "info": "Cut off the plug and strip the insulation to free the copper."
-  },
-  {
-   "id": "cable_insulation",
-   "component_id": "cable_insulation",
-   "name": "Cable Insulation",
-   "short": "Cable Insulation",
-   "shape": "box",
-   "x": 92.8,
-   "y": 4.0,
-   "w": 4.0,
-   "d": 72.0,
-   "h": 3.0,
-   "z": 1.5,
-   "r": 0.5,
-   "explode": [
-    55.0,
-    0,
-    9.6
-   ],
-   "mass": 0.98,
-   "materials": [
-    [
-     "pvc",
-     100
-    ]
-   ],
-   "material_id": "pvc",
-   "info": "Slit lengthwise with a cable stripper to separate it from the wires."
-  },
-  {
-   "id": "plastic_housing",
+   "id": "rueckschale",
    "component_id": "plastic_housing",
-   "name": "Plastic Housing (Unterteil)",
-   "short": "Plastic Housing (U",
+   "material_id": "abs",
+   "name": "Rückschale mit Knickschutz",
+   "short": "Rückschale",
    "shape": "cyl",
-   "x": 0,
-   "y": 0,
-   "w": 80.0,
-   "h": 9.0,
+   "x": 63,
+   "y": 2,
+   "w": 16,
    "z": 0,
+   "h": 5,
    "explode": [
     0,
     0,
-    0
+    0.0
    ],
-   "mass": 5.71,
+   "mass": 0.67,
    "materials": [
     [
      "pcabs",
      100
     ]
    ],
+   "info": "Hier kommt das Kabel an, die Adern sind am Lautsprecher angelötet. Zum Trennen das Kabel abschneiden.",
+   "color": "#2B2E31",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 2,
+     "y": 2,
+     "w": 12,
+     "fill": "#3A3D40"
+    }
+   ]
+  },
+  {
+   "id": "ohrhoerer_r",
+   "component_id": "speaker_driver",
+   "material_id": "mixed_electronics",
+   "name": "Ohrhörer rechts (komplett)",
+   "short": "Ohrhörer rechts",
+   "shape": "cyl",
+   "x": 63,
+   "y": 21,
+   "w": 16,
+   "z": 0,
+   "h": 15,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 2.33,
+   "materials": [
+    [
+     "pcabs",
+     45
+    ],
+    [
+     "ndfeb",
+     12
+    ],
+    [
+     "stahl",
+     13
+    ],
+    [
+     "kupfer",
+     10
+    ],
+    [
+     "gummi",
+     15
+    ],
+    [
+     "folien",
+     5
+    ]
+   ],
+   "info": "Genauso aufgebaut wie der linke: Ohrstöpsel, zwei verklebte Schalen und ein kleiner Lautsprecher.",
+   "color": "#2B2E31",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 2.5,
+     "y": 2.5,
+     "w": 11,
+     "fill": "#3A3D40"
+    },
+    {
+     "shape": "cyl",
+     "x": 6,
+     "y": 6,
+     "w": 4,
+     "fill": "#1E2022"
+    }
+   ]
+  },
+  {
+   "id": "y_verteiler",
+   "component_id": "plastic_housing",
    "material_id": "abs",
-   "info": "Look for hidden screws under rubber feet or labels, then pry the clips open."
+   "name": "Y-Verteiler",
+   "short": "Y-Verteiler",
+   "shape": "box",
+   "x": 65,
+   "y": 39,
+   "w": 12,
+   "d": 6,
+   "z": 0,
+   "h": 5,
+   "r": 2.5,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 0.56,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Hier teilt sich das Kabel in einen linken und rechten Strang. Kunststoff, um das Kabel gespritzt.",
+   "color": "#2B2E31",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 2,
+     "w": 8,
+     "d": 2,
+     "r": 1,
+     "fill": "#3A3D40"
+    }
+   ]
+  },
+  {
+   "id": "stecker_gehaeuse",
+   "component_id": "audio_jack",
+   "material_id": "pvc",
+   "name": "Steckergehäuse",
+   "short": "Steckergehäuse",
+   "shape": "box",
+   "x": 65,
+   "y": 46,
+   "w": 8,
+   "d": 20,
+   "z": 0,
+   "h": 8,
+   "r": 3.5,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 1.11,
+   "materials": [
+    [
+     "pvc",
+     85
+    ],
+    [
+     "lot",
+     15
+    ]
+   ],
+   "info": "Angespritzter Kunststoff mit Knickschutz. Innen sind die drei Adern an den Stift gelötet. Direkt dahinter abschneiden.",
+   "color": "#2B2E31",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1.5,
+     "y": 2,
+     "w": 5,
+     "d": 12,
+     "r": 2,
+     "fill": "#3A3D40"
+    }
+   ]
+  },
+  {
+   "id": "klinkenstift",
+   "component_id": "audio_jack",
+   "material_id": "copper",
+   "name": "3,5-mm-Klinkenstift",
+   "short": "Klinkenstift",
+   "shape": "box",
+   "x": 67.25,
+   "y": 66,
+   "w": 3.5,
+   "d": 14,
+   "z": 2.25,
+   "h": 3.5,
+   "r": 1.7,
+   "explode": [
+    0,
+    14,
+    0
+   ],
+   "mass": 0.89,
+   "materials": [
+    [
+     "messing",
+     85
+    ],
+    [
+     "nickel",
+     10
+    ],
+    [
+     "ptfe",
+     5
+    ]
+   ],
+   "info": "Vernickeltes Messing mit drei Kontakten (links, rechts, Masse), getrennt durch schwarze Isolierringe.",
+   "color": "#C9CDD0",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0.5,
+     "y": 3,
+     "w": 2.5,
+     "d": 0.8,
+     "r": 0.3,
+     "fill": "#22272B"
+    },
+    {
+     "shape": "box",
+     "x": 0.5,
+     "y": 7,
+     "w": 2.5,
+     "d": 0.8,
+     "r": 0.3,
+     "fill": "#22272B"
+    }
+   ]
+  },
+  {
+   "id": "adern",
+   "component_id": "cable_copper_core",
+   "material_id": "copper",
+   "name": "Kupferlitzen (Lackdraht)",
+   "short": "Adern",
+   "shape": "cyl",
+   "x": 1,
+   "y": 1,
+   "w": 58,
+   "z": 0.5,
+   "h": 3,
+   "explode": [
+    0,
+    0,
+    31.5
+   ],
+   "mass": 2.78,
+   "materials": [
+    [
+     "kupfer",
+     80
+    ],
+    [
+     "polyester",
+     20
+    ]
+   ],
+   "info": "Hauchdünne Kupferlitzen, mit farbigem Lack isoliert (rot, grün, kupferfarben). Lack und Kupfer trennt erst die Recyclinganlage.",
+   "color": "#C5803D",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0.0,
+     "y": 0.0,
+     "w": 58.0
+    },
+    {
+     "shape": "cyl",
+     "x": 2.2,
+     "y": 2.2,
+     "w": 53.6
+    },
+    {
+     "shape": "cyl",
+     "x": 4.4,
+     "y": 4.4,
+     "w": 49.2
+    },
+    {
+     "shape": "cyl",
+     "x": 6.6,
+     "y": 6.6,
+     "w": 44.8
+    },
+    {
+     "shape": "cyl",
+     "x": 2,
+     "y": 27,
+     "w": 2,
+     "fill": "#C8423A"
+    },
+    {
+     "shape": "cyl",
+     "x": 4.5,
+     "y": 27,
+     "w": 2,
+     "fill": "#3E9A57"
+    }
+   ]
+  },
+  {
+   "id": "mantel",
+   "component_id": "cable_insulation",
+   "material_id": "pvc",
+   "name": "Kabelmantel",
+   "short": "Mantel",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 60,
+   "z": 0,
+   "h": 4,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 5,
+   "materials": [
+    [
+     "tpe",
+     100
+    ]
+   ],
+   "info": "Dünner, weicher Mantel aus thermoplastischem Elastomer (früher PVC). Ein Kabel von 1,2 m wiegt nur wenige Gramm.",
+   "color": "#2B2E31",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0.0,
+     "y": 0.0,
+     "w": 60.0
+    },
+    {
+     "shape": "cyl",
+     "x": 2.2,
+     "y": 2.2,
+     "w": 55.6
+    },
+    {
+     "shape": "cyl",
+     "x": 4.4,
+     "y": 4.4,
+     "w": 51.2
+    },
+    {
+     "shape": "cyl",
+     "x": 6.6,
+     "y": 6.6,
+     "w": 46.8
+    }
+   ]
   }
  ]
 }

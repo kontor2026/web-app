@@ -4,7 +4,7 @@
  "name_en": "Bike Light",
  "klasse": "Elektroschrott · Kleingerät",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -21,51 +21,54 @@
  "werte": [
   {
    "k": "Rohstoffwert",
-   "v": "≈ 0,11 €",
+   "v": "≈ 0,10 €",
    "hint": "Silber, Kobalt, Kupfer zu Preisen vom 13.11. Ohne Kobalt (kein Preis)."
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 0,61 kg",
+   "v": "≈ 0,74 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 0,55 kg",
+   "v": "≈ 0,68 kg",
    "hint": "spart 0,06 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Cu": 4542.0,
-   "Al": 1946.0,
-   "Co": 1777.0,
-   "Fe": 974.0,
-   "Ag": 1.62,
-   "Au": 0.39,
-   "Pd": 0.12
+   "Al": 4245.0,
+   "Cu": 4230.0,
+   "Co": 3877.0,
+   "Fe": 1250.0,
+   "Ag": 1.07,
+   "Au": 0.26,
+   "Pd": 0.08
   },
   "herkunft": {
-   "Cu": "Modellmassen (Schätzung)",
    "Al": "Modellmassen (Schätzung)",
-   "Co": "13 g Akku × 13,7% Kobalt (Schätzung, oeko2012 Tab, 25)",
+   "Cu": "Modellmassen (Schätzung)",
+   "Co": "28 g Akku × 13,7% Kobalt (Schätzung, oeko2012 Tab, 25)",
    "Fe": "Modellmassen (Schätzung)",
-   "Ag": "6 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)",
-   "Au": "6 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)",
-   "Pd": "6 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)"
+   "Ag": "4 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)",
+   "Au": "4 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)",
+   "Pd": "4 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)"
   },
   "materialien_g": {
-   "rubber": 27.0,
-   "abs": 27.0,
-   "li_ion": 13.0,
-   "pcb": 6.5,
-   "mixed_electronics": 6.5
+   "li_ion": 28.3,
+   "abs": 24.2,
+   "rubber": 9.1,
+   "pc": 7.0,
+   "pcb": 4.3,
+   "nylon": 4.0,
+   "mixed_electronics": 1.8,
+   "steel": 1.0
   },
-  "co2_kg": 0.608,
-  "co2_mit_recyclat_kg": 0.548,
-  "co2_ersparnis_kg": 0.059,
+  "co2_kg": 0.738,
+  "co2_mit_recyclat_kg": 0.683,
+  "co2_ersparnis_kg": 0.055,
   "co2_ohne_faktor": [],
-  "rohstoffwert_eur": 0.11,
+  "rohstoffwert_eur": 0.1,
   "wert_ohne_preis": [
    "Co"
   ],
@@ -115,27 +118,167 @@
   "nicht": "Nicht in Restmüll oder Gelbe Tonne",
   "warnung": "Akku oder Batterie nicht beschädigen. Wenn möglich herausnehmen und getrennt abgeben, fest verbaute Akkus drinlassen."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "circuit_board",
-   "component_id": "circuit_board",
-   "name": "Circuit Board",
-   "short": "Circuit Board",
+   "id": "oberschale",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Gehäuse-Oberschale mit Taster",
+   "short": "Oberschale",
    "shape": "box",
-   "x": 1.6,
-   "y": 43.2,
-   "w": 16.8,
-   "d": 33.6,
-   "h": 14.0,
-   "z": 8.0,
-   "r": 2.0,
+   "x": 1,
+   "y": 0,
+   "w": 38,
+   "d": 74,
+   "z": 24,
+   "h": 16,
+   "r": 10,
    "explode": [
     0,
     0,
-    156.0
+    153.4
    ],
-   "mass": 6.49,
+   "mass": 12.1,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Kunststoffschale aus PC/ABS, meist mit zwei kleinen Schrauben oder Clips am Unterteil befestigt. Durch die Gummikappe oben wird das Licht ein- und ausgeschaltet.",
+   "color": "#2B2E31",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 12,
+     "y": 26,
+     "w": 14,
+     "fill": "#4A4F54"
+    },
+    {
+     "shape": "cyl",
+     "x": 16,
+     "y": 30,
+     "w": 6,
+     "fill": "#7FD36B"
+    },
+    {
+     "shape": "box",
+     "x": 6,
+     "y": 4,
+     "w": 26,
+     "d": 6,
+     "r": 3,
+     "fill": "#3A3D40"
+    }
+   ]
+  },
+  {
+   "id": "usb_buchse",
+   "component_id": "circuit_board",
+   "material_id": "steel",
+   "name": "USB-C-Ladebuchse",
+   "short": "USB-Buchse",
+   "shape": "box",
+   "x": 15.5,
+   "y": 3,
+   "w": 9,
+   "d": 7,
+   "z": 23.2,
+   "h": 3.2,
+   "r": 1.5,
+   "explode": [
+    0,
+    0,
+    125.0
+   ],
+   "mass": 1,
+   "materials": [
+    [
+     "stahl",
+     70
+    ],
+    [
+     "kontakte",
+     15
+    ],
+    [
+     "pcabs",
+     15
+    ]
+   ],
+   "info": "Hinten unter einer Gummiklappe. Hier wird das Licht mit einem USB-Kabel aufgeladen.",
+   "color": "#B7BCC0",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1.5,
+     "y": 0.5,
+     "w": 6,
+     "d": 1.6,
+     "r": 0.8,
+     "fill": "#2A2E31"
+    }
+   ]
+  },
+  {
+   "id": "ladechip",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "Lade- und LED-Treiberchip",
+   "short": "Chip",
+   "shape": "box",
+   "x": 10,
+   "y": 24,
+   "w": 6,
+   "d": 6,
+   "z": 23.2,
+   "h": 1,
+   "r": 0.3,
+   "explode": [
+    0,
+    0,
+    125.0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "chip",
+     100
+    ]
+   ],
+   "info": "Lädt den Akku sicher auf und regelt den Strom für die LED, auch im Blinkmodus.",
+   "color": "#22272B",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0.6,
+     "y": 0.6,
+     "w": 1
+    }
+   ]
+  },
+  {
+   "id": "platine",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "Platine",
+   "short": "Platine",
+   "shape": "box",
+   "x": 4,
+   "y": 2,
+   "w": 32,
+   "d": 50,
+   "z": 22,
+   "h": 1.2,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    115.0
+   ],
+   "mass": 4,
    "materials": [
     [
      "fr4",
@@ -154,28 +297,47 @@
      10
     ]
    ],
-   "material_id": "pcb",
-   "info": "Unscrew and unplug all ribbon cables; hand in at an e-waste collection point."
+   "info": "Leiterplatte mit Taster, Ladechip und Anzeige-LED. Mit dem Akku über zwei Drähte verlötet.",
+   "color": "#2E6B45",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 12,
+     "y": 26,
+     "w": 8,
+     "fill": "#B7BCC0"
+    },
+    {
+     "shape": "box",
+     "x": 24,
+     "y": 40,
+     "w": 4,
+     "d": 6,
+     "r": 0.5,
+     "fill": "#E8E8E2"
+    }
+   ]
   },
   {
-   "id": "li_ion_battery",
+   "id": "akku",
    "component_id": "li_ion_battery",
-   "name": "Lithium-Ion Battery",
-   "short": "Lithium-Ion Batter",
+   "material_id": "li_ion",
+   "name": "Lithium-Polymer-Akku",
+   "short": "Akku",
    "shape": "box",
-   "x": 21.6,
-   "y": 7.2,
-   "w": 16.8,
-   "d": 33.6,
-   "h": 14.0,
-   "z": 8.0,
-   "r": 2.0,
+   "x": 5,
+   "y": 6,
+   "w": 30,
+   "d": 48,
+   "z": 12,
+   "h": 9,
+   "r": 2,
    "explode": [
     0,
     0,
-    118.0
+    90.0
    ],
-   "mass": 12.97,
+   "mass": 28.3,
    "materials": [
     [
      "lco",
@@ -198,104 +360,340 @@
      10
     ]
    ],
-   "material_id": "li_ion",
-   "info": "Never puncture or bend it; tape the contacts and bring it to a battery collection point."
+   "info": "Etwa 1.500 mAh in einer Folientasche. Nicht knicken oder durchstechen, Drähte abschneiden, Enden abkleben und zur Batteriesammlung bringen.",
+   "color": "#9DA6AD",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 4,
+     "w": 24,
+     "d": 38,
+     "r": 2
+    },
+    {
+     "shape": "box",
+     "x": 6,
+     "y": 8,
+     "w": 18,
+     "d": 10,
+     "r": 1,
+     "fill": "#C8423A"
+    }
+   ]
   },
   {
-   "id": "led_module",
+   "id": "led_platine",
    "component_id": "led_module",
-   "name": "LED Module",
-   "short": "LED Module",
+   "material_id": "mixed_electronics",
+   "name": "LED-Platine (Aluminiumkern)",
+   "short": "LED-Platine",
    "shape": "box",
-   "x": 1.6,
-   "y": 7.2,
-   "w": 16.8,
-   "d": 33.6,
-   "h": 14.0,
-   "z": 8.0,
-   "r": 2.0,
+   "x": 10,
+   "y": 56,
+   "w": 20,
+   "d": 1.6,
+   "z": 14,
+   "h": 20,
+   "r": 0.3,
    "explode": [
     0,
-    0,
-    80.0
+    18,
+    0
    ],
-   "mass": 6.49,
+   "mass": 1.5,
    "materials": [
     [
-     "chip",
-     30
+     "alu",
+     75
     ],
     [
      "kupfer",
-     30
+     10
     ],
     [
-     "pcabs",
+     "fr4",
+     10
+    ],
+    [
+     "lot",
+     5
+    ]
+   ],
+   "info": "Steht senkrecht hinter dem Reflektor. Das Aluminium leitet die Wärme der LED ab.",
+   "color": "#ECECE6"
+  },
+  {
+   "id": "led",
+   "component_id": "led_module",
+   "material_id": "mixed_electronics",
+   "name": "Hochleistungs-LED",
+   "short": "LED",
+   "shape": "box",
+   "x": 16,
+   "y": 57.6,
+   "w": 8,
+   "d": 3,
+   "z": 20,
+   "h": 8,
+   "r": 0.5,
+   "explode": [
+    0,
+    26,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "led",
+     60
+    ],
+    [
+     "keramik",
      25
     ],
     [
-     "stahl",
-     15
+     "kupfer",
+     10
+    ],
+    [
+     "lot",
+     5
     ]
    ],
-   "material_id": "mixed_electronics",
-   "info": "Pull it out of the socket or unscrew it from the reflector."
+   "info": "Eine einzige sehr helle Leuchtdiode auf Keramik, gelber Leuchtstoff macht das Licht weiß.",
+   "color": "#F6D86B"
   },
   {
-   "id": "rubber_mount",
-   "component_id": "rubber_mount",
-   "name": "Mount",
-   "short": "Mount",
+   "id": "reflektor",
+   "component_id": "led_module",
+   "material_id": "pc",
+   "name": "Reflektor",
+   "short": "Reflektor",
    "shape": "box",
-   "x": 0,
+   "x": 6,
+   "y": 60.6,
+   "w": 28,
+   "d": 10,
+   "z": 13,
+   "h": 22,
+   "r": 4,
+   "explode": [
+    0,
+    38,
+    0
+   ],
+   "mass": 3,
+   "materials": [
+    [
+     "pcabs",
+     95
+    ],
+    [
+     "alu",
+     5
+    ]
+   ],
+   "info": "Kunststoff, innen hauchdünn mit Aluminium bedampft. Bündelt das Licht nach vorne auf die Straße.",
+   "color": "#D6DADD",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 1,
+     "w": 20,
+     "d": 8,
+     "r": 3,
+     "fill": "#EEF0F1"
+    }
+   ]
+  },
+  {
+   "id": "streuscheibe",
+   "component_id": "plastic_housing",
+   "material_id": "pc",
+   "name": "Streuscheibe",
+   "short": "Streuscheibe",
+   "shape": "box",
+   "x": 2,
+   "y": 72,
+   "w": 36,
+   "d": 6,
+   "z": 12,
+   "h": 26,
+   "r": 3,
+   "explode": [
+    0,
+    56,
+    0
+   ],
+   "mass": 4,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Klares Polycarbonat, schlagfest. Mit dem Gehäuse verklebt oder verrastet, lässt sich nach vorne abhebeln.",
+   "color": "#DDEFF7",
+   "opacity": 0.6,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 1,
+     "w": 28,
+     "d": 4,
+     "r": 2
+    }
+   ]
+  },
+  {
+   "id": "unterschale",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Gehäuse-Unterschale",
+   "short": "Unterschale",
+   "shape": "box",
+   "x": 1,
    "y": 0,
-   "w": 40.0,
-   "d": 80.0,
-   "h": 20.0,
-   "z": 20.0,
-   "r": 4.8,
+   "w": 38,
+   "d": 74,
+   "z": 10,
+   "h": 14,
+   "r": 10,
    "explode": [
     0,
     0,
-    24.0
+    52.0
    ],
-   "mass": 27.03,
+   "mass": 12.1,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Wanne für Akku und Platine, unten mit Schiene für die Halterung.",
+   "color": "#2B2E31",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 4,
+     "w": 32,
+     "d": 52,
+     "r": 6,
+     "fill": "#34383C"
+    }
+   ]
+  },
+  {
+   "id": "schiene",
+   "component_id": "rubber_mount",
+   "material_id": "nylon",
+   "name": "Halteschiene",
+   "short": "Halteschiene",
+   "shape": "box",
+   "x": 8,
+   "y": 18,
+   "w": 24,
+   "d": 34,
+   "z": 6,
+   "h": 4,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    26.0
+   ],
+   "mass": 4,
+   "materials": [
+    [
+     "nylon",
+     100
+    ]
+   ],
+   "info": "Harter Kunststoff-Schlitten, in den das Licht einrastet. Zum Abnehmen den Riegel drücken.",
+   "color": "#3A3D40",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 2,
+     "w": 16,
+     "d": 30,
+     "r": 2,
+     "fill": "#2B2E31"
+    }
+   ]
+  },
+  {
+   "id": "gummihalter",
+   "component_id": "rubber_mount",
+   "material_id": "rubber",
+   "name": "Gummi-Halteband",
+   "short": "Gummiband",
+   "shape": "box",
+   "x": 6,
+   "y": 16,
+   "w": 28,
+   "d": 38,
+   "z": 0,
+   "h": 6,
+   "r": 6,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 9.1,
    "materials": [
     [
      "gummi",
      100
     ]
    ],
-   "material_id": "rubber",
-   "info": "Stretch it off the clip."
-  },
-  {
-   "id": "plastic_housing",
-   "component_id": "plastic_housing",
-   "name": "Plastic Housing",
-   "short": "Plastic Housing",
-   "shape": "box",
-   "x": 0,
-   "y": 0,
-   "w": 40.0,
-   "d": 80.0,
-   "h": 20.0,
-   "z": 0.0,
-   "r": 4.8,
-   "explode": [
-    0,
-    0,
-    0
-   ],
-   "mass": 27.03,
-   "materials": [
-    [
-     "pcabs",
-     100
-    ]
-   ],
-   "material_id": "abs",
-   "info": "Look for hidden screws under rubber feet or labels, then pry the clips open."
+   "info": "Dehnbares Silikon- oder Gummiband, das um den Lenker gespannt und in einen Haken gehängt wird. Einfach abziehen, es gehört in den Restmüll.",
+   "color": "#1F2224",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 6,
+     "w": 20,
+     "d": 3,
+     "r": 1,
+     "fill": "#34383C"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 14,
+     "w": 20,
+     "d": 3,
+     "r": 1,
+     "fill": "#34383C"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 22,
+     "w": 20,
+     "d": 3,
+     "r": 1,
+     "fill": "#34383C"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 30,
+     "w": 20,
+     "d": 3,
+     "r": 1,
+     "fill": "#34383C"
+    }
+   ]
   }
  ]
 }

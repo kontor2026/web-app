@@ -4,7 +4,7 @@
  "name_en": "Energy-Saving Lamp",
  "klasse": "Leuchtmittel",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -21,43 +21,50 @@
  "werte": [
   {
    "k": "Rohstoffwert",
-   "v": "≈ 0,08 €",
+   "v": "≈ 0,15 €",
    "hint": "Silber, Kupfer zu Preisen vom 13.11."
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 0,43 kg",
+   "v": "≈ 0,38 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 0,33 kg",
-   "hint": "spart 0,10 kg, wenn recycelte Materialien eingesetzt werden"
+   "v": "≈ 0,23 kg",
+   "hint": "spart 0,14 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Cu": 1714.0,
-   "Ag": 2.14,
-   "Au": 0.51,
-   "Pd": 0.16
+   "Cu": 8500.0,
+   "Al": 5300.0,
+   "Fe": 1500.0,
+   "Ag": 1.0,
+   "Au": 0.24,
+   "Pd": 0.08
   },
   "herkunft": {
    "Cu": "Modellmassen (Schätzung)",
-   "Ag": "9 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)",
-   "Au": "9 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)",
-   "Pd": "9 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)"
+   "Al": "Modellmassen (Schätzung)",
+   "Fe": "Modellmassen (Schätzung)",
+   "Ag": "4 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)",
+   "Au": "4 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)",
+   "Pd": "4 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)"
   },
   "materialien_g": {
-   "abs": 35.7,
-   "special_glass": 35.7,
-   "pcb": 8.6
+   "special_glass": 37.3,
+   "abs": 18.7,
+   "mixed_electronics": 10.0,
+   "aluminium": 5.3,
+   "copper": 4.7,
+   "pcb": 4.0
   },
-  "co2_kg": 0.433,
-  "co2_mit_recyclat_kg": 0.33,
-  "co2_ersparnis_kg": 0.103,
+  "co2_kg": 0.375,
+  "co2_mit_recyclat_kg": 0.234,
+  "co2_ersparnis_kg": 0.142,
   "co2_ohne_faktor": [],
-  "rohstoffwert_eur": 0.08,
+  "rohstoffwert_eur": 0.15,
   "wert_ohne_preis": [],
   "preisstand": "2026-11-13",
   "quellen": {
@@ -105,27 +112,382 @@
   "nicht": "Nicht in Restmüll oder Altglas",
   "warnung": "Enthält etwas Quecksilber: nicht zerbrechen."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "circuit_board",
-   "component_id": "circuit_board",
-   "name": "Circuit Board",
-   "short": "Circuit Board",
-   "shape": "box",
-   "x": 7.5,
-   "y": 7.5,
-   "w": 35.0,
-   "d": 35.0,
-   "h": 45.5,
-   "z": 26.0,
-   "r": 4.2,
+   "id": "rohr_kuppe",
+   "component_id": "fluorescent_tube",
+   "material_id": "special_glass",
+   "name": "Glasrohr (Spiralspitze)",
+   "short": "Spiralspitze",
+   "shape": "cyl",
+   "x": 7,
+   "y": 7,
+   "w": 32,
+   "z": 118,
+   "h": 12,
    "explode": [
     0,
     0,
-    144.0
+    99.6
    ],
-   "mass": 8.57,
+   "mass": 5.3,
+   "materials": [
+    [
+     "glas",
+     100
+    ]
+   ],
+   "info": "Oberes Ende der Glasspirale. Das Rohr enthält wenige Milligramm giftiges Quecksilber: nicht zerbrechen und die ganze Lampe zur Sammelstelle bringen.",
+   "color": "#F2F4F2",
+   "opacity": 0.7,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0,
+     "y": 0,
+     "w": 32
+    },
+    {
+     "shape": "cyl",
+     "x": 5,
+     "y": 5,
+     "w": 22
+    },
+    {
+     "shape": "cyl",
+     "x": 10,
+     "y": 10,
+     "w": 12
+    }
+   ]
+  },
+  {
+   "id": "rohr",
+   "component_id": "fluorescent_tube",
+   "material_id": "special_glass",
+   "name": "Leuchtstoffröhre (Glasspirale)",
+   "short": "Glasrohr",
+   "shape": "cyl",
+   "x": 1,
+   "y": 1,
+   "w": 44,
+   "z": 62,
+   "h": 56,
+   "explode": [
+    0,
+    0,
+    99.6
+   ],
+   "mass": 32,
+   "materials": [
+    [
+     "glas",
+     100
+    ]
+   ],
+   "info": "Gewundenes Glasrohr, innen mit weißem Leuchtstoff beschichtet. Strom bringt Quecksilberdampf zum Leuchten, der Leuchtstoff macht daraus sichtbares Licht. Das Rohr enthält wenige Milligramm giftiges Quecksilber: nicht zerbrechen und die ganze Lampe zur Sammelstelle bringen.",
+   "color": "#F2F4F2",
+   "opacity": 0.7,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0,
+     "y": 0,
+     "w": 44
+    },
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 4,
+     "w": 36
+    },
+    {
+     "shape": "cyl",
+     "x": 8,
+     "y": 8,
+     "w": 28
+    },
+    {
+     "shape": "cyl",
+     "x": 12,
+     "y": 12,
+     "w": 20
+    }
+   ]
+  },
+  {
+   "id": "elektroden",
+   "component_id": "fluorescent_tube",
+   "material_id": "copper",
+   "name": "Rohrenden mit Glühwendeln",
+   "short": "Elektroden",
+   "shape": "box",
+   "x": 8,
+   "y": 18,
+   "w": 30,
+   "d": 10,
+   "z": 56,
+   "h": 8,
+   "r": 4,
+   "explode": [
+    48,
+    0,
+    0
+   ],
+   "mass": 2,
+   "materials": [
+    [
+     "glas",
+     50
+    ],
+    [
+     "nickel",
+     25
+    ],
+    [
+     "kupfer",
+     20
+    ],
+    [
+     "stahl",
+     5
+    ]
+   ],
+   "info": "Die beiden Enden des Rohrs mit je einer kleinen Glühwendel. Sie stecken im Halter und sind mit Drähten an die Platine gelötet. Hier sitzt oft auch das Quecksilber-Amalgam.",
+   "color": "#E8EAE8",
+   "opacity": 0.75,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 2,
+     "w": 6,
+     "fill": "#9EA3A8"
+    },
+    {
+     "shape": "cyl",
+     "x": 21,
+     "y": 2,
+     "w": 6,
+     "fill": "#9EA3A8"
+    }
+   ]
+  },
+  {
+   "id": "halter",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Rohrhalter (Gehäusedeckel)",
+   "short": "Rohrhalter",
+   "shape": "cyl",
+   "x": 1,
+   "y": 1,
+   "w": 44,
+   "z": 50,
+   "h": 12,
+   "explode": [
+    0,
+    0,
+    85.6
+   ],
+   "mass": 8,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Kunststoffring aus PBT, hält die Glasspirale. Mit dem Unterteil verrastet; nicht aufbrechen, sonst kann das Glas splittern.",
+   "color": "#F1F1EC",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 6,
+     "y": 6,
+     "w": 32,
+     "fill": "#E0E0DA"
+    },
+    {
+     "shape": "cyl",
+     "x": 11,
+     "y": 18,
+     "w": 8,
+     "fill": "#D0D0CA"
+    },
+    {
+     "shape": "cyl",
+     "x": 25,
+     "y": 18,
+     "w": 8,
+     "fill": "#D0D0CA"
+    }
+   ]
+  },
+  {
+   "id": "elko",
+   "component_id": "circuit_board",
+   "material_id": "mixed_electronics",
+   "name": "Elektrolytkondensator",
+   "short": "Elko",
+   "shape": "cyl",
+   "x": 8,
+   "y": 16,
+   "w": 10,
+   "z": 33.6,
+   "h": 14,
+   "explode": [
+    0,
+    0,
+    74.0
+   ],
+   "mass": 2.7,
+   "materials": [
+    [
+     "alu",
+     55
+    ],
+    [
+     "papier",
+     20
+    ],
+    [
+     "pcabs",
+     10
+    ],
+    [
+     "gummi",
+     5
+    ],
+    [
+     "kupfer",
+     10
+    ]
+   ],
+   "info": "Glättet die gleichgerichtete Netzspannung. Kann kurz nach dem Ausschalten noch geladen sein.",
+   "color": "#2F4F7A",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 2,
+     "y": 2,
+     "w": 6,
+     "fill": "#B9C0C6"
+    }
+   ]
+  },
+  {
+   "id": "drossel",
+   "component_id": "circuit_board",
+   "material_id": "mixed_electronics",
+   "name": "Drossel (Ferritkern)",
+   "short": "Drossel",
+   "shape": "box",
+   "x": 21,
+   "y": 14,
+   "w": 12,
+   "d": 11,
+   "z": 33.6,
+   "h": 10,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    74.0
+   ],
+   "mass": 5.3,
+   "materials": [
+    [
+     "ferrit",
+     55
+    ],
+    [
+     "kupfer",
+     40
+    ],
+    [
+     "pcabs",
+     5
+    ]
+   ],
+   "info": "Kupferspule auf Ferritkern. Begrenzt den Strom durch das Rohr, sobald es leuchtet.",
+   "color": "#3A3F44",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 2,
+     "w": 8,
+     "d": 7,
+     "r": 1,
+     "fill": "#C5803D"
+    }
+   ]
+  },
+  {
+   "id": "transistoren",
+   "component_id": "circuit_board",
+   "material_id": "mixed_electronics",
+   "name": "Transistoren und Ringkern",
+   "short": "Transistoren",
+   "shape": "box",
+   "x": 14,
+   "y": 28,
+   "w": 18,
+   "d": 6,
+   "z": 33.6,
+   "h": 9,
+   "r": 0.5,
+   "explode": [
+    0,
+    0,
+    74.0
+   ],
+   "mass": 2,
+   "materials": [
+    [
+     "chip",
+     45
+    ],
+    [
+     "ferrit",
+     25
+    ],
+    [
+     "kupfer",
+     30
+    ]
+   ],
+   "info": "Zwei Schalttransistoren und ein kleiner Ringkern-Übertrager. Sie erzeugen die hohe Frequenz, mit der das Rohr flackerfrei leuchtet.",
+   "color": "#22272B",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 12,
+     "y": 1,
+     "w": 4,
+     "fill": "#3A6B9A"
+    }
+   ]
+  },
+  {
+   "id": "platine",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "Platine (Vorschaltgerät)",
+   "short": "Platine",
+   "shape": "cyl",
+   "x": 4,
+   "y": 4,
+   "w": 38,
+   "z": 32,
+   "h": 1.6,
+   "explode": [
+    0,
+    0,
+    60
+   ],
+   "mass": 4,
    "materials": [
     [
      "fr4",
@@ -144,60 +506,166 @@
      10
     ]
    ],
-   "material_id": "pcb",
-   "info": "Unscrew and unplug all ribbon cables; hand in at an e-waste collection point."
+   "info": "Runde Leiterplatte mit dem elektronischen Vorschaltgerät. Gehört mit der Lampe zur Sammelstelle.",
+   "color": "#C9A35A",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 4,
+     "w": 30,
+     "fill": "#B8924A"
+    }
+   ]
   },
   {
-   "id": "plastic_housing",
+   "id": "gehaeuse_oben",
    "component_id": "plastic_housing",
-   "name": "Plastic Housing",
-   "short": "Plastic Housing",
+   "material_id": "abs",
+   "name": "Gehäuse (oberer Teil)",
+   "short": "Gehäuse",
    "shape": "cyl",
-   "x": 0,
-   "y": 0,
-   "w": 50.0,
-   "h": 65.0,
-   "z": 65.0,
+   "x": 2,
+   "y": 2,
+   "w": 42,
+   "z": 34,
+   "h": 16,
    "explode": [
     0,
     0,
-    20.0
+    28
    ],
-   "mass": 35.71,
+   "mass": 6.7,
    "materials": [
     [
      "pcabs",
      100
     ]
    ],
-   "material_id": "abs",
-   "info": "Look for hidden screws under rubber feet or labels, then pry the clips open."
+   "info": "Schwer entflammbarer Kunststoff, umschließt die Elektronik. Wird beim Betrieb warm.",
+   "color": "#F1F1EC",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 3,
+     "w": 36,
+     "fill": "#E6E6E0"
+    }
+   ]
   },
   {
-   "id": "fluorescent_tube",
-   "component_id": "fluorescent_tube",
-   "name": "Glass Tube",
-   "short": "Glass Tube",
+   "id": "gehaeuse_unten",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Gehäuse (Hals)",
+   "short": "Gehäusehals",
    "shape": "cyl",
-   "x": 0,
-   "y": 0,
-   "w": 50.0,
-   "h": 65.0,
-   "z": 0.0,
+   "x": 6,
+   "y": 6,
+   "w": 34,
+   "z": 24,
+   "h": 10,
+   "explode": [
+    0,
+    0,
+    28
+   ],
+   "mass": 4,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Verjüngt sich zum Sockel hin. Der Sockel ist eingepresst oder eingeklebt.",
+   "color": "#F1F1EC",
+   "label": false
+  },
+  {
+   "id": "sockel",
+   "component_id": "plastic_housing",
+   "material_id": "aluminium",
+   "name": "Schraubsockel E27",
+   "short": "Sockel",
+   "shape": "cyl",
+   "x": 9.5,
+   "y": 9.5,
+   "w": 27,
+   "z": 3,
+   "h": 21,
+   "explode": [
+    0,
+    0,
+    14
+   ],
+   "mass": 5.3,
+   "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "info": "Gewinde aus Aluminiumblech, passt in jede normale Lampenfassung.",
+   "color": "#C2C6C9",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 1.5,
+     "y": 1.5,
+     "w": 24
+    },
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 3,
+     "w": 21
+    }
+   ]
+  },
+  {
+   "id": "fusskontakt",
+   "component_id": "plastic_housing",
+   "material_id": "copper",
+   "name": "Fußkontakt mit Isolierglas",
+   "short": "Fußkontakt",
+   "shape": "cyl",
+   "x": 17,
+   "y": 17,
+   "w": 12,
+   "z": 0,
+   "h": 3,
    "explode": [
     0,
     0,
     0
    ],
-   "mass": 35.71,
+   "mass": 2.7,
    "materials": [
     [
-     "glas",
-     100
+     "messing",
+     45
+    ],
+    [
+     "behaelterglas",
+     40
+    ],
+    [
+     "lot",
+     15
     ]
    ],
-   "material_id": "special_glass",
-   "info": "Contains mercury: do not break it, hand in the whole lamp at a collection point."
+   "info": "Messingkontakt mit Lötpunkt, durch schwarzes Glas vom Gewinde getrennt.",
+   "color": "#2A2B2D",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 3,
+     "w": 6,
+     "fill": "#D4B464"
+    }
+   ]
   }
  ]
 }

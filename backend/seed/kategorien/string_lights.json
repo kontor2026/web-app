@@ -4,7 +4,7 @@
  "name_en": "Fairy Lights",
  "klasse": "Elektroschrott · Kleingerät",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -21,41 +21,49 @@
  "werte": [
   {
    "k": "Rohstoffwert",
-   "v": "≈ 0,48 €",
+   "v": "≈ 0,54 €",
    "hint": "Kupfer zu Preisen vom 13.11."
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 0,68 kg",
+   "v": "≈ 0,62 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 0,56 kg",
-   "hint": "spart 0,12 kg, wenn recycelte Materialien eingesetzt werden"
+   "v": "≈ 0,40 kg",
+   "hint": "spart 0,22 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Cu": 38183.0,
-   "Fe": 13636.0
+   "Cu": 40480.0,
+   "Fe": 5096.0,
+   "Ag": 0.93,
+   "Au": 0.22,
+   "Pd": 0.07
   },
   "herkunft": {
    "Cu": "Modellmassen (Schätzung)",
-   "Fe": "Modellmassen (Schätzung)"
+   "Fe": "Modellmassen (Schätzung)",
+   "Ag": "4 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)",
+   "Au": "4 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)",
+   "Pd": "4 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)"
   },
   "materialien_g": {
-   "mixed_electronics": 90.9,
-   "alkaline": 43.6,
-   "pp": 43.6,
-   "copper": 10.9,
-   "pvc": 10.9
+   "alkaline": 84.6,
+   "copper": 36.8,
+   "pp": 34.4,
+   "pvc": 27.0,
+   "mixed_electronics": 9.8,
+   "pcb": 3.7,
+   "steel": 3.7
   },
-  "co2_kg": 0.68,
-  "co2_mit_recyclat_kg": 0.556,
-  "co2_ersparnis_kg": 0.124,
+  "co2_kg": 0.624,
+  "co2_mit_recyclat_kg": 0.401,
+  "co2_ersparnis_kg": 0.223,
   "co2_ohne_faktor": [],
-  "rohstoffwert_eur": 0.48,
+  "rohstoffwert_eur": 0.54,
   "wert_ohne_preis": [],
   "preisstand": "2026-11-13",
   "quellen": {
@@ -103,63 +111,596 @@
   "nicht": "Nicht in Restmüll oder Gelbe Tonne",
   "warnung": "Akku oder Batterie nicht beschädigen. Wenn möglich herausnehmen und getrennt abgeben, fest verbaute Akkus drinlassen."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "led_module_ober",
+   "id": "leds",
    "component_id": "led_module",
-   "name": "LED Module (Oberteil)",
-   "short": "LED Module (Oberte",
+   "material_id": "mixed_electronics",
+   "name": "40 Mini-LEDs",
+   "short": "LEDs",
    "shape": "cyl",
-   "x": 0,
-   "y": 0,
-   "w": 150.0,
-   "h": 8.0,
-   "z": 24.0,
+   "x": 3,
+   "y": 3,
+   "w": 99,
+   "z": 30,
+   "h": 4,
    "explode": [
     0,
     0,
-    201.6
+    80.0
    ],
-   "mass": 27.27,
+   "mass": 9.8,
    "materials": [
     [
-     "chip",
-     30
-    ],
-    [
-     "kupfer",
-     30
+     "led",
+     40
     ],
     [
      "pcabs",
-     25
+     40
+    ],
+    [
+     "kupfer",
+     10
+    ],
+    [
+     "lot",
+     10
+    ]
+   ],
+   "info": "Winzige Leuchtdioden, in Tropfen aus Kunstharz eingegossen und direkt auf den Draht gelötet. Sie lassen sich nicht einzeln abtrennen, die ganze Kette ist Elektroschrott.",
+   "color": "#F2F2E8",
+   "opacity": 0.6,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 91.06,
+     "y": 47.5,
+     "w": 4,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 87.74,
+     "y": 64.17,
+     "w": 4,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 78.3,
+     "y": 78.3,
+     "w": 4,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 64.17,
+     "y": 87.74,
+     "w": 4,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 47.5,
+     "y": 91.06,
+     "w": 4,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 30.83,
+     "y": 87.74,
+     "w": 4,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 16.7,
+     "y": 78.3,
+     "w": 4,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 7.26,
+     "y": 64.17,
+     "w": 4,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 3.94,
+     "y": 47.5,
+     "w": 4,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 7.26,
+     "y": 30.83,
+     "w": 4,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 16.7,
+     "y": 16.7,
+     "w": 4,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 30.83,
+     "y": 7.26,
+     "w": 4,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 47.5,
+     "y": 3.94,
+     "w": 4,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 64.17,
+     "y": 7.26,
+     "w": 4,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 78.3,
+     "y": 16.7,
+     "w": 4,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 87.74,
+     "y": 30.83,
+     "w": 4,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 83.14,
+     "y": 47.5,
+     "w": 4,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 79.61,
+     "y": 62.96,
+     "w": 4,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 69.72,
+     "y": 75.36,
+     "w": 4,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 55.43,
+     "y": 82.25,
+     "w": 4,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 39.57,
+     "y": 82.25,
+     "w": 4,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 25.28,
+     "y": 75.36,
+     "w": 4,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 15.39,
+     "y": 62.96,
+     "w": 4,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 11.86,
+     "y": 47.5,
+     "w": 4,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 15.39,
+     "y": 32.04,
+     "w": 4,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 25.28,
+     "y": 19.64,
+     "w": 4,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 39.57,
+     "y": 12.75,
+     "w": 4,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 55.43,
+     "y": 12.75,
+     "w": 4,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 69.72,
+     "y": 19.64,
+     "w": 4,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 79.61,
+     "y": 32.04,
+     "w": 4,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 75.22,
+     "y": 47.5,
+     "w": 4,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 69.93,
+     "y": 63.79,
+     "w": 4,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 56.07,
+     "y": 73.86,
+     "w": 4,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 38.93,
+     "y": 73.86,
+     "w": 4,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 25.07,
+     "y": 63.79,
+     "w": 4,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 19.78,
+     "y": 47.5,
+     "w": 4,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 25.07,
+     "y": 31.21,
+     "w": 4,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 38.93,
+     "y": 21.14,
+     "w": 4,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 56.07,
+     "y": 21.14,
+     "w": 4,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 69.93,
+     "y": 31.21,
+     "w": 4,
+     "fill": "#F6D86B"
+    }
+   ]
+  },
+  {
+   "id": "draht",
+   "component_id": "cable_copper_core",
+   "material_id": "copper",
+   "name": "Kupferdraht (lackiert)",
+   "short": "Kupferdraht",
+   "shape": "cyl",
+   "x": 2,
+   "y": 2,
+   "w": 101,
+   "z": 1,
+   "h": 28,
+   "explode": [
+    0,
+    0,
+    55.0
+   ],
+   "mass": 36.8,
+   "materials": [
+    [
+     "kupfer",
+     85
+    ],
+    [
+     "polyester",
+     15
+    ]
+   ],
+   "info": "Zwei dünne, lackisolierte Kupferdrähte, an denen die LEDs hängen. Biegsam, aber bricht bei häufigem Knicken.",
+   "color": "#C5803D",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0,
+     "y": 0,
+     "w": 101
+    },
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 4,
+     "w": 93
+    },
+    {
+     "shape": "cyl",
+     "x": 8,
+     "y": 8,
+     "w": 85
+    },
+    {
+     "shape": "cyl",
+     "x": 12,
+     "y": 12,
+     "w": 77
+    },
+    {
+     "shape": "cyl",
+     "x": 16,
+     "y": 16,
+     "w": 69
+    }
+   ]
+  },
+  {
+   "id": "mantel",
+   "component_id": "cable_insulation",
+   "material_id": "pvc",
+   "name": "Kabelisolierung",
+   "short": "Isolierung",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 105,
+   "z": 0,
+   "h": 30,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 27,
+   "materials": [
+    [
+     "pvc",
+     100
+    ]
+   ],
+   "info": "Grüne oder durchsichtige PVC-Hülle um den Draht. Zum Recycling muss sie in der Anlage vom Kupfer getrennt werden.",
+   "color": "#3E7A4A",
+   "opacity": 0.8,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0,
+     "y": 0,
+     "w": 105
+    },
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 4,
+     "w": 97
+    },
+    {
+     "shape": "cyl",
+     "x": 8,
+     "y": 8,
+     "w": 89
+    },
+    {
+     "shape": "cyl",
+     "x": 12,
+     "y": 12,
+     "w": 81
+    },
+    {
+     "shape": "cyl",
+     "x": 16,
+     "y": 16,
+     "w": 73
+    }
+   ]
+  },
+  {
+   "id": "schalter",
+   "component_id": "battery_box",
+   "material_id": "pcb",
+   "name": "Schiebeschalter mit Timer-Platine",
+   "short": "Schalter",
+   "shape": "box",
+   "x": 140,
+   "y": 124,
+   "w": 8,
+   "d": 18,
+   "z": 6,
+   "h": 10,
+   "r": 1,
+   "explode": [
+    28,
+    0,
+    0
+   ],
+   "mass": 3.7,
+   "materials": [
+    [
+     "fr4",
+     35
+    ],
+    [
+     "kupfer",
+     20
+    ],
+    [
+     "chip",
+     15
     ],
     [
      "stahl",
      15
+    ],
+    [
+     "pcabs",
+     15
     ]
    ],
-   "material_id": "mixed_electronics",
-   "info": "Pull it out of the socket or unscrew it from the reflector."
+   "info": "Schaltet die Kette ein, aus oder auf Timer (6 Stunden an, 18 aus). Kleine Platine mit Chip und Widerstand.",
+   "color": "#3A3D40",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 4,
+     "w": 4,
+     "d": 6,
+     "r": 1,
+     "fill": "#7FD36B"
+    }
+   ]
   },
   {
-   "id": "alkaline_cell",
-   "component_id": "alkaline_cell",
-   "name": "Battery",
-   "short": "Battery",
-   "shape": "cyl",
-   "x": 81.0,
-   "y": 13.5,
-   "w": 63.0,
-   "h": 10.8,
-   "z": 4.8,
+   "id": "deckel",
+   "component_id": "battery_box",
+   "material_id": "pp",
+   "name": "Batteriefach-Deckel",
+   "short": "Deckel",
+   "shape": "box",
+   "x": 80,
+   "y": 108,
+   "w": 68,
+   "d": 50,
+   "z": 18,
+   "h": 4,
+   "r": 4,
    "explode": [
     0,
     0,
-    150.0
+    66.5
    ],
-   "mass": 43.64,
+   "mass": 12.3,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Wird zum Batteriewechsel aufgeschoben. Polypropylen, lässt sich gut recyceln, wenn die Elektronik entfernt ist.",
+   "color": "#2B2E31",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 8,
+     "w": 48,
+     "d": 2,
+     "r": 1,
+     "fill": "#3A3D40"
+    },
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 18,
+     "w": 48,
+     "d": 2,
+     "r": 1,
+     "fill": "#3A3D40"
+    },
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 28,
+     "w": 48,
+     "d": 2,
+     "r": 1,
+     "fill": "#3A3D40"
+    },
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 38,
+     "w": 48,
+     "d": 2,
+     "r": 1,
+     "fill": "#3A3D40"
+    }
+   ]
+  },
+  {
+   "id": "batterie_1",
+   "component_id": "alkaline_cell",
+   "material_id": "alkaline",
+   "name": "Mignon-Batterie (AA)",
+   "short": "Batterie AA",
+   "shape": "box",
+   "x": 88,
+   "y": 112,
+   "w": 50.5,
+   "d": 14.5,
+   "z": 3,
+   "h": 14.5,
+   "r": 7,
+   "explode": [
+    0,
+    0,
+    41.0
+   ],
+   "mass": 28.2,
    "materials": [
     [
      "zinkmangan",
@@ -170,130 +711,208 @@
      20
     ]
    ],
-   "material_id": "alkaline",
-   "info": "Remove from the device and tape the contacts before handing it in."
+   "info": "Drei 1,5-Volt-Zellen in Reihe ergeben 4,5 Volt. Vor dem Wegwerfen herausnehmen und in die Batteriesammlung geben.",
+   "color": "#C8423A",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 0,
+     "w": 6,
+     "d": 14.5,
+     "r": 3,
+     "fill": "#B7BCC0"
+    }
+   ]
   },
   {
-   "id": "battery_box",
-   "component_id": "battery_box",
-   "name": "Battery Box",
-   "short": "Battery Box",
+   "id": "batterie_2",
+   "component_id": "alkaline_cell",
+   "material_id": "alkaline",
+   "name": "Mignon-Batterie (AA)",
+   "short": "Batterie AA",
    "shape": "box",
-   "x": 6.0,
-   "y": 13.5,
-   "w": 63.0,
-   "d": 63.0,
-   "h": 10.8,
-   "z": 4.8,
-   "r": 7.6,
+   "x": 88,
+   "y": 126.5,
+   "w": 50.5,
+   "d": 14.5,
+   "z": 3,
+   "h": 14.5,
+   "r": 7,
    "explode": [
     0,
     0,
-    79.2
+    41.0
    ],
-   "mass": 43.64,
+   "mass": 28.2,
+   "materials": [
+    [
+     "zinkmangan",
+     80
+    ],
+    [
+     "stahl",
+     20
+    ]
+   ],
+   "info": "Zweite Zelle, liegt umgekehrt zur ersten.",
+   "color": "#C8423A",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 44.5,
+     "y": 0,
+     "w": 6,
+     "d": 14.5,
+     "r": 3,
+     "fill": "#B7BCC0"
+    }
+   ]
+  },
+  {
+   "id": "batterie_3",
+   "component_id": "alkaline_cell",
+   "material_id": "alkaline",
+   "name": "Mignon-Batterie (AA)",
+   "short": "Batterie AA",
+   "shape": "box",
+   "x": 88,
+   "y": 141,
+   "w": 50.5,
+   "d": 14.5,
+   "z": 3,
+   "h": 14.5,
+   "r": 7,
+   "explode": [
+    0,
+    0,
+    41.0
+   ],
+   "mass": 28.2,
+   "materials": [
+    [
+     "zinkmangan",
+     80
+    ],
+    [
+     "stahl",
+     20
+    ]
+   ],
+   "info": "Dritte Zelle.",
+   "color": "#C8423A",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 0,
+     "w": 6,
+     "d": 14.5,
+     "r": 3,
+     "fill": "#B7BCC0"
+    }
+   ]
+  },
+  {
+   "id": "kontakte",
+   "component_id": "battery_box",
+   "material_id": "steel",
+   "name": "Kontaktfedern",
+   "short": "Federn",
+   "shape": "box",
+   "x": 83,
+   "y": 111,
+   "w": 4,
+   "d": 45,
+   "z": 3,
+   "h": 14,
+   "r": 0.5,
+   "explode": [
+    0,
+    0,
+    29.0
+   ],
+   "mass": 3.7,
+   "materials": [
+    [
+     "stahl",
+     90
+    ],
+    [
+     "nickel",
+     10
+    ]
+   ],
+   "info": "Vernickelte Stahlfedern und -bleche, die die Batterien verbinden. Ein Magnet zieht sie an.",
+   "color": "#C9CDD0",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0.5,
+     "y": 4.0,
+     "w": 3,
+     "d": 7,
+     "r": 1
+    },
+    {
+     "shape": "box",
+     "x": 0.5,
+     "y": 18.5,
+     "w": 3,
+     "d": 7,
+     "r": 1
+    },
+    {
+     "shape": "box",
+     "x": 0.5,
+     "y": 33.0,
+     "w": 3,
+     "d": 7,
+     "r": 1
+    }
+   ]
+  },
+  {
+   "id": "kasten",
+   "component_id": "battery_box",
+   "material_id": "pp",
+   "name": "Batteriekasten",
+   "short": "Batteriekasten",
+   "shape": "box",
+   "x": 80,
+   "y": 108,
+   "w": 68,
+   "d": 50,
+   "z": 0,
+   "h": 18,
+   "r": 4,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 22.1,
    "materials": [
     [
      "pp",
      100
     ]
    ],
-   "material_id": "pp",
-   "info": "Slide the cover off and take out the batteries first."
-  },
-  {
-   "id": "cable_copper_core",
-   "component_id": "cable_copper_core",
-   "name": "Cable Wires",
-   "short": "Cable Wires",
-   "shape": "box",
-   "x": 159.0,
-   "y": 7.5,
-   "w": 7.5,
-   "d": 135.0,
-   "h": 3.2,
-   "z": 4.0,
-   "r": 0.9,
-   "explode": [
-    67.5,
-    0,
-    18.0
-   ],
-   "mass": 10.91,
-   "materials": [
-    [
-     "kupfer",
-     100
-    ]
-   ],
-   "material_id": "copper",
-   "info": "Cut off the plug and strip the insulation to free the copper."
-  },
-  {
-   "id": "cable_insulation",
-   "component_id": "cable_insulation",
-   "name": "Cable Insulation",
-   "short": "Cable Insulation",
-   "shape": "box",
-   "x": 174.0,
-   "y": 7.5,
-   "w": 7.5,
-   "d": 135.0,
-   "h": 3.2,
-   "z": 4.0,
-   "r": 0.9,
-   "explode": [
-    90.0,
-    0,
-    18.0
-   ],
-   "mass": 10.91,
-   "materials": [
-    [
-     "pvc",
-     100
-    ]
-   ],
-   "material_id": "pvc",
-   "info": "Slit lengthwise with a cable stripper to separate it from the wires."
-  },
-  {
-   "id": "led_module",
-   "component_id": "led_module",
-   "name": "LED Module (Unterteil)",
-   "short": "LED Module (Untert",
-   "shape": "cyl",
-   "x": 0,
-   "y": 0,
-   "w": 150.0,
-   "h": 24.0,
-   "z": 0,
-   "explode": [
-    0,
-    0,
-    0
-   ],
-   "mass": 63.64,
-   "materials": [
-    [
-     "chip",
-     30
-    ],
-    [
-     "kupfer",
-     30
-    ],
-    [
-     "pcabs",
-     25
-    ],
-    [
-     "stahl",
-     15
-    ]
-   ],
-   "material_id": "mixed_electronics",
-   "info": "Pull it out of the socket or unscrew it from the reflector."
+   "info": "Gehäuse aus Polypropylen mit drei Mulden. Erst die Batterien herausnehmen, dann den Kasten mit Kette zur Elektro-Sammlung bringen.",
+   "color": "#2B2E31",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 3,
+     "w": 62,
+     "d": 44,
+     "r": 3,
+     "fill": "#1E2022"
+    }
+   ]
   }
  ]
 }
