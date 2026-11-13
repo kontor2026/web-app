@@ -1,0 +1,581 @@
+{
+ "parts": [
+  {
+   "id": "oberschale",
+   "component_id": "plastic_housing",
+   "material_id": "phenolic_resin",
+   "name": "Obere Gehäuseschale",
+   "short": "Oberschale",
+   "shape": "box",
+   "x": 0,
+   "y": 10,
+   "w": 230,
+   "d": 220,
+   "z": 50,
+   "h": 50,
+   "r": 40,
+   "explode": [
+    0,
+    0,
+    464
+   ],
+   "mass": 190.1,
+   "materials": [
+    [
+     "phenolharz",
+     60
+    ],
+    [
+     "pcabs",
+     40
+    ]
+   ],
+   "info": "Hitzefeste Kunststoffschale mit Kontrollleuchten. Die Schrauben sitzen innen unter der Backplatte.",
+   "color": "#2E3338",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 95,
+     "y": 185,
+     "w": 10,
+     "fill": "#E74C3C"
+    },
+    {
+     "shape": "cyl",
+     "x": 125,
+     "y": 185,
+     "w": 10,
+     "fill": "#2ECC71"
+    },
+    {
+     "shape": "box",
+     "x": 20,
+     "y": 20,
+     "w": 190,
+     "d": 150,
+     "r": 30,
+     "fill": "#3C4248"
+    }
+   ]
+  },
+  {
+   "id": "heizung_oben",
+   "component_id": "heating_element",
+   "material_id": "nickel_chrome",
+   "name": "Heizelement oben",
+   "short": "Heizung oben",
+   "shape": "box",
+   "x": 25,
+   "y": 30,
+   "w": 180,
+   "d": 180,
+   "z": 62,
+   "h": 6,
+   "r": 30,
+   "explode": [
+    0,
+    0,
+    386
+   ],
+   "mass": 84.5,
+   "materials": [
+    [
+     "stahl",
+     55
+    ],
+    [
+     "nichrom",
+     20
+    ],
+    [
+     "keramik",
+     25
+    ]
+   ],
+   "info": "Rohrheizkörper: Heizdraht in Keramikpulver in einem Stahlrohr, auf die Rückseite der Platte gepresst. Erst ganz abkühlen lassen.",
+   "color": "#9AA2A6",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 0,
+     "w": 180,
+     "d": 10,
+     "r": 5,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 0,
+     "w": 10,
+     "d": 180,
+     "r": 5,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 170,
+     "y": 0,
+     "w": 10,
+     "d": 180,
+     "r": 5,
+     "fill": "#C4672D"
+    }
+   ]
+  },
+  {
+   "id": "platte_oben",
+   "component_id": "nonstick_plates",
+   "material_id": "aluminium",
+   "name": "Backplatte oben",
+   "short": "Platte oben",
+   "shape": "box",
+   "x": 15,
+   "y": 20,
+   "w": 200,
+   "d": 200,
+   "z": 50,
+   "h": 12,
+   "r": 20,
+   "explode": [
+    0,
+    0,
+    326
+   ],
+   "mass": 316.9,
+   "materials": [
+    [
+     "alu",
+     97
+    ],
+    [
+     "ptfe",
+     3
+    ]
+   ],
+   "info": "Aluminiumguss mit Antihaftbeschichtung (PTFE) und zwei dreieckigen Mulden. Von innen mit vier Schrauben an der Schale befestigt.",
+   "color": "#3A3F44",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 10,
+     "w": 85,
+     "d": 180,
+     "r": 8,
+     "fill": "#2A2D30"
+    },
+    {
+     "shape": "box",
+     "x": 105,
+     "y": 10,
+     "w": 85,
+     "d": 180,
+     "r": 8,
+     "fill": "#2A2D30"
+    }
+   ]
+  },
+  {
+   "id": "platte_unten",
+   "component_id": "nonstick_plates",
+   "material_id": "aluminium",
+   "name": "Backplatte unten",
+   "short": "Platte unten",
+   "shape": "box",
+   "x": 15,
+   "y": 20,
+   "w": 200,
+   "d": 200,
+   "z": 38,
+   "h": 12,
+   "r": 20,
+   "explode": [
+    0,
+    0,
+    266
+   ],
+   "mass": 316.9,
+   "materials": [
+    [
+     "alu",
+     97
+    ],
+    [
+     "ptfe",
+     3
+    ]
+   ],
+   "info": "Aluminiumguss mit Antihaftbeschichtung (PTFE) und zwei dreieckigen Mulden. Von innen mit vier Schrauben an der Schale befestigt.",
+   "color": "#3A3F44",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 10,
+     "w": 85,
+     "d": 180,
+     "r": 8,
+     "fill": "#2A2D30"
+    },
+    {
+     "shape": "box",
+     "x": 105,
+     "y": 10,
+     "w": 85,
+     "d": 180,
+     "r": 8,
+     "fill": "#2A2D30"
+    }
+   ]
+  },
+  {
+   "id": "heizung_unten",
+   "component_id": "heating_element",
+   "material_id": "nickel_chrome",
+   "name": "Heizelement unten",
+   "short": "Heizung unten",
+   "shape": "box",
+   "x": 25,
+   "y": 30,
+   "w": 180,
+   "d": 180,
+   "z": 32,
+   "h": 6,
+   "r": 30,
+   "explode": [
+    0,
+    0,
+    206
+   ],
+   "mass": 84.5,
+   "materials": [
+    [
+     "stahl",
+     55
+    ],
+    [
+     "nichrom",
+     20
+    ],
+    [
+     "keramik",
+     25
+    ]
+   ],
+   "info": "Rohrheizkörper: Heizdraht in Keramikpulver in einem Stahlrohr, auf die Rückseite der Platte gepresst. Erst ganz abkühlen lassen.",
+   "color": "#9AA2A6",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 0,
+     "w": 180,
+     "d": 10,
+     "r": 5,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 0,
+     "w": 10,
+     "d": 180,
+     "r": 5,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 170,
+     "y": 0,
+     "w": 10,
+     "d": 180,
+     "r": 5,
+     "fill": "#C4672D"
+    }
+   ]
+  },
+  {
+   "id": "thermostat",
+   "component_id": "thermostat",
+   "material_id": "mixed_electronics",
+   "name": "Thermostat (Bimetall)",
+   "short": "Thermostat",
+   "shape": "box",
+   "x": 160,
+   "y": 100,
+   "w": 30,
+   "d": 25,
+   "z": 24,
+   "h": 8,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    146
+   ],
+   "mass": 15.8,
+   "materials": [
+    [
+     "bimetall",
+     40
+    ],
+    [
+     "keramik",
+     25
+    ],
+    [
+     "kupfer",
+     20
+    ],
+    [
+     "kontakte",
+     15
+    ]
+   ],
+   "info": "Eine Bimetallscheibe schaltet die Heizung bei etwa 200 Grad ab und lässt die grüne Lampe leuchten. Sitzt unter der unteren Platte.",
+   "color": "#B8BEC4",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 9,
+     "y": 6,
+     "w": 13,
+     "fill": "#D5DADE"
+    }
+   ]
+  },
+  {
+   "id": "unterschale",
+   "component_id": "plastic_housing",
+   "material_id": "phenolic_resin",
+   "name": "Untere Gehäuseschale",
+   "short": "Unterschale",
+   "shape": "box",
+   "x": 0,
+   "y": 10,
+   "w": 230,
+   "d": 220,
+   "z": 8,
+   "h": 42,
+   "r": 40,
+   "explode": [
+    0,
+    0,
+    60
+   ],
+   "mass": 190.1,
+   "materials": [
+    [
+     "phenolharz",
+     60
+    ],
+    [
+     "pcabs",
+     40
+    ]
+   ],
+   "info": "Hitzefeste Schale, in der Platte, Heizung und Thermostat sitzen. Erst nach dem Abschrauben der Bodenplatte zugänglich.",
+   "color": "#2E3338"
+  },
+  {
+   "id": "bodenplatte",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Bodenplatte mit Füßen",
+   "short": "Bodenplatte",
+   "shape": "box",
+   "x": 5,
+   "y": 15,
+   "w": 220,
+   "d": 210,
+   "z": 0,
+   "h": 8,
+   "r": 36,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 105.6,
+   "materials": [
+    [
+     "stahl",
+     85
+    ],
+    [
+     "gummi",
+     15
+    ]
+   ],
+   "info": "Stahlblech mit Gummifüßen und Lüftungsschlitzen. Nach dem Lösen der Schrauben kommt man an den Thermostat.",
+   "color": "#7C858C",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 14,
+     "y": 14,
+     "w": 16,
+     "d": 16,
+     "fill": "#2E3338"
+    },
+    {
+     "shape": "cyl",
+     "x": 190,
+     "y": 14,
+     "w": 16,
+     "d": 16,
+     "fill": "#2E3338"
+    },
+    {
+     "shape": "cyl",
+     "x": 14,
+     "y": 180,
+     "w": 16,
+     "d": 16,
+     "fill": "#2E3338"
+    },
+    {
+     "shape": "cyl",
+     "x": 190,
+     "y": 180,
+     "w": 16,
+     "d": 16,
+     "fill": "#2E3338"
+    }
+   ]
+  },
+  {
+   "id": "verschluss",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Verschlussgriff",
+   "short": "Verschluss",
+   "shape": "box",
+   "x": 85,
+   "y": 222,
+   "w": 60,
+   "d": 18,
+   "z": 40,
+   "h": 45,
+   "r": 6,
+   "explode": [
+    0,
+    60,
+    0
+   ],
+   "mass": 26.4,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Hält beide Schalen zusammen, damit das Sandwich gepresst wird. Mit einem Stift im Gelenk befestigt.",
+   "color": "#3C4248"
+  },
+  {
+   "id": "scharnier",
+   "component_id": "plastic_housing",
+   "material_id": "steel",
+   "name": "Scharnier",
+   "short": "Scharnier",
+   "shape": "box",
+   "x": 70,
+   "y": 0,
+   "w": 90,
+   "d": 12,
+   "z": 40,
+   "h": 22,
+   "r": 3,
+   "explode": [
+    0,
+    -50,
+    0
+   ],
+   "mass": 42.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Stahlscharnier, das beide Schalen verbindet. Abschrauben und zum Altmetall geben.",
+   "color": "#9AA2A6"
+  },
+  {
+   "id": "kabel",
+   "component_id": "cable_insulation",
+   "material_id": "pvc",
+   "name": "Netzkabel (Isolierung)",
+   "short": "Kabel",
+   "shape": "box",
+   "x": 160,
+   "y": 14,
+   "w": 70,
+   "d": 8,
+   "z": 2,
+   "h": 8,
+   "r": 4,
+   "explode": [
+    70,
+    0,
+    0
+   ],
+   "mass": 84.5,
+   "materials": [
+    [
+     "pvc",
+     90
+    ],
+    [
+     "pp",
+     10
+    ]
+   ],
+   "info": "Etwa 80 cm PVC-Mantel mit Stecker. Längs aufschlitzen, um die Kupferadern freizulegen.",
+   "color": "#2E3338",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 60,
+     "y": 1,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#555"
+    }
+   ]
+  },
+  {
+   "id": "kupferadern",
+   "component_id": "cable_copper_core",
+   "material_id": "copper",
+   "name": "Kupferadern",
+   "short": "Kupferadern",
+   "shape": "box",
+   "x": 160,
+   "y": 16.5,
+   "w": 70,
+   "d": 3,
+   "z": 4.5,
+   "h": 3,
+   "r": 1,
+   "explode": [
+    70,
+    0,
+    15
+   ],
+   "mass": 42.3,
+   "materials": [
+    [
+     "kupfer",
+     100
+    ]
+   ],
+   "info": "Drei Kupferadern. Kupfer lässt sich fast verlustfrei wiederverwerten.",
+   "color": "#B87333"
+  }
+ ]
+}

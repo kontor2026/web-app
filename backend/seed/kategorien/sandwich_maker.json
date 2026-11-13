@@ -4,7 +4,7 @@
  "name_en": "Sandwich Maker",
  "klasse": "Elektroschrott · Kleingerät",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -21,26 +21,26 @@
  "werte": [
   {
    "k": "Rohstoffwert",
-   "v": "≈ 5,19 €",
+   "v": "≈ 4,36 €",
    "hint": "Kupfer zu Preisen vom 13.11."
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 13,1 kg",
+   "v": "≈ 11,2 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 1,15 kg",
-   "hint": "spart 11,9 kg, wenn recycelte Materialien eingesetzt werden"
+   "v": "≈ 1,25 kg",
+   "hint": "spart 9,96 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Al": 757580.0,
-   "Ni": 145456.0,
-   "Cu": 72723.0,
-   "Fe": 13636.0
+   "Al": 633800.0,
+   "Ni": 135200.0,
+   "Cu": 47040.0,
+   "Fe": 43824.0
   },
   "herkunft": {
    "Al": "Modellmassen (Schätzung)",
@@ -49,18 +49,20 @@
    "Fe": "Modellmassen (Schätzung)"
   },
   "materialien_g": {
-   "aluminium": 757.6,
-   "abs": 378.8,
-   "nickel_chrome": 181.8,
-   "mixed_electronics": 90.9,
-   "copper": 45.5,
-   "pvc": 45.5
+   "aluminium": 633.8,
+   "phenolic_resin": 380.2,
+   "nickel_chrome": 169.0,
+   "abs": 132.0,
+   "pvc": 84.5,
+   "steel": 42.3,
+   "copper": 42.3,
+   "mixed_electronics": 15.8
   },
-  "co2_kg": 13.078,
-  "co2_mit_recyclat_kg": 1.146,
-  "co2_ersparnis_kg": 11.931,
+  "co2_kg": 11.216,
+  "co2_mit_recyclat_kg": 1.254,
+  "co2_ersparnis_kg": 9.962,
   "co2_ohne_faktor": [],
-  "rohstoffwert_eur": 5.19,
+  "rohstoffwert_eur": 4.36,
   "wert_ohne_preis": [],
   "preisstand": "2026-11-13",
   "quellen": {
@@ -108,187 +110,584 @@
   "nicht": "Nicht in Restmüll oder Gelbe Tonne",
   "warnung": "Kabel und Stecker dranlassen."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "thermostat",
-   "component_id": "thermostat",
-   "name": "Thermostat",
-   "short": "Thermostat",
+   "id": "oberschale",
+   "component_id": "plastic_housing",
+   "material_id": "phenolic_resin",
+   "name": "Obere Gehäuseschale",
+   "short": "Oberschale",
    "shape": "box",
-   "x": 124.2,
-   "y": 21.6,
-   "w": 96.6,
-   "d": 100.8,
-   "h": 35.0,
-   "z": 20.0,
-   "r": 11.6,
+   "x": 0,
+   "y": 10,
+   "w": 230,
+   "d": 220,
+   "z": 50,
+   "h": 50,
+   "r": 40,
    "explode": [
     0,
     0,
-    397.0
+    464
    ],
-   "mass": 90.91,
+   "mass": 190.1,
    "materials": [
     [
-     "chip",
-     30
-    ],
-    [
-     "kupfer",
-     30
+     "phenolharz",
+     60
     ],
     [
      "pcabs",
-     25
-    ],
-    [
-     "stahl",
-     15
+     40
     ]
    ],
-   "material_id": "mixed_electronics",
-   "info": "Located under the base plate; unscrew the bottom cover to reach it."
+   "info": "Hitzefeste Kunststoffschale mit Kontrollleuchten. Die Schrauben sitzen innen unter der Backplatte.",
+   "color": "#2E3338",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 95,
+     "y": 185,
+     "w": 10,
+     "fill": "#E74C3C"
+    },
+    {
+     "shape": "cyl",
+     "x": 125,
+     "y": 185,
+     "w": 10,
+     "fill": "#2ECC71"
+    },
+    {
+     "shape": "box",
+     "x": 20,
+     "y": 20,
+     "w": 190,
+     "d": 150,
+     "r": 30,
+     "fill": "#3C4248"
+    }
+   ]
   },
   {
-   "id": "heating_element",
+   "id": "heizung_oben",
    "component_id": "heating_element",
-   "name": "Heating Element",
-   "short": "Heating Element",
+   "material_id": "nickel_chrome",
+   "name": "Heizelement oben",
+   "short": "Heizung oben",
    "shape": "box",
-   "x": 9.2,
-   "y": 21.6,
-   "w": 96.6,
-   "d": 100.8,
-   "h": 35.0,
-   "z": 20.0,
-   "r": 11.6,
+   "x": 25,
+   "y": 30,
+   "w": 180,
+   "d": 180,
+   "z": 62,
+   "h": 6,
+   "r": 30,
    "explode": [
     0,
     0,
-    268.0
+    386
    ],
-   "mass": 181.82,
+   "mass": 84.5,
    "materials": [
     [
+     "stahl",
+     55
+    ],
+    [
      "nichrom",
-     100
+     20
+    ],
+    [
+     "keramik",
+     25
     ]
    ],
-   "material_id": "nickel_chrome",
-   "info": "Unplug and let it cool down fully before opening the housing."
+   "info": "Rohrheizkörper: Heizdraht in Keramikpulver in einem Stahlrohr, auf die Rückseite der Platte gepresst. Erst ganz abkühlen lassen.",
+   "color": "#9AA2A6",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 0,
+     "w": 180,
+     "d": 10,
+     "r": 5,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 0,
+     "w": 10,
+     "d": 180,
+     "r": 5,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 170,
+     "y": 0,
+     "w": 10,
+     "d": 180,
+     "r": 5,
+     "fill": "#C4672D"
+    }
+   ]
   },
   {
-   "id": "nonstick_plates",
+   "id": "platte_oben",
    "component_id": "nonstick_plates",
-   "name": "Baking Plates",
-   "short": "Baking Plates",
+   "material_id": "aluminium",
+   "name": "Backplatte oben",
+   "short": "Platte oben",
    "shape": "box",
-   "x": 0,
-   "y": 0,
-   "w": 230.0,
-   "d": 240.0,
-   "h": 50.0,
-   "z": 50.0,
-   "r": 27.6,
+   "x": 15,
+   "y": 20,
+   "w": 200,
+   "d": 200,
+   "z": 50,
+   "h": 12,
+   "r": 20,
    "explode": [
     0,
     0,
-    94.0
+    326
    ],
-   "mass": 757.58,
+   "mass": 316.9,
    "materials": [
     [
      "alu",
-     100
+     97
+    ],
+    [
+     "ptfe",
+     3
     ]
    ],
-   "material_id": "aluminium",
-   "info": "Unscrew the plates from inside each shell; the coating stays on them."
+   "info": "Aluminiumguss mit Antihaftbeschichtung (PTFE) und zwei dreieckigen Mulden. Von innen mit vier Schrauben an der Schale befestigt.",
+   "color": "#3A3F44",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 10,
+     "w": 85,
+     "d": 180,
+     "r": 8,
+     "fill": "#2A2D30"
+    },
+    {
+     "shape": "box",
+     "x": 105,
+     "y": 10,
+     "w": 85,
+     "d": 180,
+     "r": 8,
+     "fill": "#2A2D30"
+    }
+   ]
   },
   {
-   "id": "cable_copper_core",
-   "component_id": "cable_copper_core",
-   "name": "Cable Wires",
-   "short": "Cable Wires",
+   "id": "platte_unten",
+   "component_id": "nonstick_plates",
+   "material_id": "aluminium",
+   "name": "Backplatte unten",
+   "short": "Platte unten",
    "shape": "box",
-   "x": 243.8,
-   "y": 12.0,
-   "w": 11.5,
-   "d": 216.0,
-   "h": 8.0,
-   "z": 10.0,
-   "r": 1.4,
+   "x": 15,
+   "y": 20,
+   "w": 200,
+   "d": 200,
+   "z": 38,
+   "h": 12,
+   "r": 20,
    "explode": [
-    95.5,
     0,
-    28.2
+    0,
+    266
    ],
-   "mass": 45.45,
+   "mass": 316.9,
    "materials": [
+    [
+     "alu",
+     97
+    ],
+    [
+     "ptfe",
+     3
+    ]
+   ],
+   "info": "Aluminiumguss mit Antihaftbeschichtung (PTFE) und zwei dreieckigen Mulden. Von innen mit vier Schrauben an der Schale befestigt.",
+   "color": "#3A3F44",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 10,
+     "w": 85,
+     "d": 180,
+     "r": 8,
+     "fill": "#2A2D30"
+    },
+    {
+     "shape": "box",
+     "x": 105,
+     "y": 10,
+     "w": 85,
+     "d": 180,
+     "r": 8,
+     "fill": "#2A2D30"
+    }
+   ]
+  },
+  {
+   "id": "heizung_unten",
+   "component_id": "heating_element",
+   "material_id": "nickel_chrome",
+   "name": "Heizelement unten",
+   "short": "Heizung unten",
+   "shape": "box",
+   "x": 25,
+   "y": 30,
+   "w": 180,
+   "d": 180,
+   "z": 32,
+   "h": 6,
+   "r": 30,
+   "explode": [
+    0,
+    0,
+    206
+   ],
+   "mass": 84.5,
+   "materials": [
+    [
+     "stahl",
+     55
+    ],
+    [
+     "nichrom",
+     20
+    ],
+    [
+     "keramik",
+     25
+    ]
+   ],
+   "info": "Rohrheizkörper: Heizdraht in Keramikpulver in einem Stahlrohr, auf die Rückseite der Platte gepresst. Erst ganz abkühlen lassen.",
+   "color": "#9AA2A6",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 0,
+     "w": 180,
+     "d": 10,
+     "r": 5,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 0,
+     "w": 10,
+     "d": 180,
+     "r": 5,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 170,
+     "y": 0,
+     "w": 10,
+     "d": 180,
+     "r": 5,
+     "fill": "#C4672D"
+    }
+   ]
+  },
+  {
+   "id": "thermostat",
+   "component_id": "thermostat",
+   "material_id": "mixed_electronics",
+   "name": "Thermostat (Bimetall)",
+   "short": "Thermostat",
+   "shape": "box",
+   "x": 160,
+   "y": 100,
+   "w": 30,
+   "d": 25,
+   "z": 24,
+   "h": 8,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    146
+   ],
+   "mass": 15.8,
+   "materials": [
+    [
+     "bimetall",
+     40
+    ],
+    [
+     "keramik",
+     25
+    ],
     [
      "kupfer",
-     100
-    ]
-   ],
-   "material_id": "copper",
-   "info": "Cut off the plug and strip the insulation to free the copper."
-  },
-  {
-   "id": "cable_insulation",
-   "component_id": "cable_insulation",
-   "name": "Cable Insulation",
-   "short": "Cable Insulation",
-   "shape": "box",
-   "x": 266.8,
-   "y": 12.0,
-   "w": 11.5,
-   "d": 216.0,
-   "h": 8.0,
-   "z": 10.0,
-   "r": 1.4,
-   "explode": [
-    130.0,
-    0,
-    28.2
-   ],
-   "mass": 45.45,
-   "materials": [
+     20
+    ],
     [
-     "pvc",
-     100
+     "kontakte",
+     15
     ]
    ],
-   "material_id": "pvc",
-   "info": "Slit lengthwise with a cable stripper to separate it from the wires."
+   "info": "Eine Bimetallscheibe schaltet die Heizung bei etwa 200 Grad ab und lässt die grüne Lampe leuchten. Sitzt unter der unteren Platte.",
+   "color": "#B8BEC4",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 9,
+     "y": 6,
+     "w": 13,
+     "fill": "#D5DADE"
+    }
+   ]
   },
   {
-   "id": "plastic_housing",
+   "id": "unterschale",
    "component_id": "plastic_housing",
-   "name": "Plastic Housing",
-   "short": "Plastic Housing",
+   "material_id": "phenolic_resin",
+   "name": "Untere Gehäuseschale",
+   "short": "Unterschale",
    "shape": "box",
    "x": 0,
-   "y": 0,
-   "w": 230.0,
-   "d": 240.0,
-   "h": 50.0,
-   "z": 0.0,
-   "r": 27.6,
+   "y": 10,
+   "w": 230,
+   "d": 220,
+   "z": 8,
+   "h": 42,
+   "r": 40,
+   "explode": [
+    0,
+    0,
+    60
+   ],
+   "mass": 190.1,
+   "materials": [
+    [
+     "phenolharz",
+     60
+    ],
+    [
+     "pcabs",
+     40
+    ]
+   ],
+   "info": "Hitzefeste Schale, in der Platte, Heizung und Thermostat sitzen. Erst nach dem Abschrauben der Bodenplatte zugänglich.",
+   "color": "#2E3338"
+  },
+  {
+   "id": "bodenplatte",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Bodenplatte mit Füßen",
+   "short": "Bodenplatte",
+   "shape": "box",
+   "x": 5,
+   "y": 15,
+   "w": 220,
+   "d": 210,
+   "z": 0,
+   "h": 8,
+   "r": 36,
    "explode": [
     0,
     0,
     0
    ],
-   "mass": 378.79,
+   "mass": 105.6,
+   "materials": [
+    [
+     "stahl",
+     85
+    ],
+    [
+     "gummi",
+     15
+    ]
+   ],
+   "info": "Stahlblech mit Gummifüßen und Lüftungsschlitzen. Nach dem Lösen der Schrauben kommt man an den Thermostat.",
+   "color": "#7C858C",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 14,
+     "y": 14,
+     "w": 16,
+     "d": 16,
+     "fill": "#2E3338"
+    },
+    {
+     "shape": "cyl",
+     "x": 190,
+     "y": 14,
+     "w": 16,
+     "d": 16,
+     "fill": "#2E3338"
+    },
+    {
+     "shape": "cyl",
+     "x": 14,
+     "y": 180,
+     "w": 16,
+     "d": 16,
+     "fill": "#2E3338"
+    },
+    {
+     "shape": "cyl",
+     "x": 190,
+     "y": 180,
+     "w": 16,
+     "d": 16,
+     "fill": "#2E3338"
+    }
+   ]
+  },
+  {
+   "id": "verschluss",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Verschlussgriff",
+   "short": "Verschluss",
+   "shape": "box",
+   "x": 85,
+   "y": 222,
+   "w": 60,
+   "d": 18,
+   "z": 40,
+   "h": 45,
+   "r": 6,
+   "explode": [
+    0,
+    60,
+    0
+   ],
+   "mass": 26.4,
    "materials": [
     [
      "pcabs",
      100
     ]
    ],
-   "material_id": "abs",
-   "info": "Look for hidden screws under rubber feet or labels, then pry the clips open."
+   "info": "Hält beide Schalen zusammen, damit das Sandwich gepresst wird. Mit einem Stift im Gelenk befestigt.",
+   "color": "#3C4248"
+  },
+  {
+   "id": "scharnier",
+   "component_id": "plastic_housing",
+   "material_id": "steel",
+   "name": "Scharnier",
+   "short": "Scharnier",
+   "shape": "box",
+   "x": 70,
+   "y": 0,
+   "w": 90,
+   "d": 12,
+   "z": 40,
+   "h": 22,
+   "r": 3,
+   "explode": [
+    0,
+    -50,
+    0
+   ],
+   "mass": 42.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Stahlscharnier, das beide Schalen verbindet. Abschrauben und zum Altmetall geben.",
+   "color": "#9AA2A6"
+  },
+  {
+   "id": "kabel",
+   "component_id": "cable_insulation",
+   "material_id": "pvc",
+   "name": "Netzkabel (Isolierung)",
+   "short": "Kabel",
+   "shape": "box",
+   "x": 160,
+   "y": 14,
+   "w": 70,
+   "d": 8,
+   "z": 2,
+   "h": 8,
+   "r": 4,
+   "explode": [
+    70,
+    0,
+    0
+   ],
+   "mass": 84.5,
+   "materials": [
+    [
+     "pvc",
+     90
+    ],
+    [
+     "pp",
+     10
+    ]
+   ],
+   "info": "Etwa 80 cm PVC-Mantel mit Stecker. Längs aufschlitzen, um die Kupferadern freizulegen.",
+   "color": "#2E3338",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 60,
+     "y": 1,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#555"
+    }
+   ]
+  },
+  {
+   "id": "kupferadern",
+   "component_id": "cable_copper_core",
+   "material_id": "copper",
+   "name": "Kupferadern",
+   "short": "Kupferadern",
+   "shape": "box",
+   "x": 160,
+   "y": 16.5,
+   "w": 70,
+   "d": 3,
+   "z": 4.5,
+   "h": 3,
+   "r": 1,
+   "explode": [
+    70,
+    0,
+    15
+   ],
+   "mass": 42.3,
+   "materials": [
+    [
+     "kupfer",
+     100
+    ]
+   ],
+   "info": "Drei Kupferadern. Kupfer lässt sich fast verlustfrei wiederverwerten.",
+   "color": "#B87333"
   }
  ]
 }

@@ -4,7 +4,7 @@
  "name_en": "Blender",
  "klasse": "Elektroschrott · Kleingerät",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -21,42 +21,44 @@
  "werte": [
   {
    "k": "Rohstoffwert",
-   "v": "≈ 2,60 €",
+   "v": "≈ 3,73 €",
    "hint": "Kupfer zu Preisen vom 13.11."
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 8,00 kg",
+   "v": "≈ 8,73 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 5,15 kg",
-   "hint": "spart 2,85 kg, wenn recycelte Materialien eingesetzt werden"
+   "v": "≈ 6,63 kg",
+   "hint": "spart 2,10 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Fe": 423750.0,
-   "Cu": 206250.0
+   "Cu": 295130.0,
+   "Fe": 236341.0
   },
   "herkunft": {
-   "Fe": "Modellmassen (Schätzung)",
-   "Cu": "Modellmassen (Schätzung)"
+   "Cu": "Modellmassen (Schätzung)",
+   "Fe": "Modellmassen (Schätzung)"
   },
   "materialien_g": {
-   "abs": 781.2,
-   "pc": 781.2,
-   "mixed_electronics": 375.0,
-   "steel": 375.0,
-   "copper": 93.8,
-   "pvc": 93.8
+   "mixed_electronics": 849.1,
+   "abs": 591.4,
+   "pc": 586.4,
+   "pp": 202.2,
+   "steel": 111.2,
+   "pvc": 80.9,
+   "copper": 40.4,
+   "rubber": 38.4
   },
-  "co2_kg": 8.003,
-  "co2_mit_recyclat_kg": 5.15,
-  "co2_ersparnis_kg": 2.852,
+  "co2_kg": 8.727,
+  "co2_mit_recyclat_kg": 6.627,
+  "co2_ersparnis_kg": 2.1,
   "co2_ohne_faktor": [],
-  "rohstoffwert_eur": 2.6,
+  "rohstoffwert_eur": 3.73,
   "wert_ohne_preis": [],
   "preisstand": "2026-11-13",
   "quellen": {
@@ -104,185 +106,803 @@
   "nicht": "Nicht in Restmüll oder Gelbe Tonne",
   "warnung": "Kabel und Stecker dranlassen."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "electric_motor",
-   "component_id": "electric_motor",
-   "name": "Electric Motor",
-   "short": "Electric Motor",
-   "shape": "cyl",
-   "x": 91.8,
-   "y": 15.3,
-   "w": 71.4,
-   "h": 133.0,
-   "z": 76.0,
+   "id": "deckel",
+   "component_id": "blender_jar",
+   "material_id": "pp",
+   "name": "Behälterdeckel",
+   "short": "Deckel",
+   "shape": "box",
+   "x": 15,
+   "y": 15,
+   "w": 140,
+   "d": 140,
+   "z": 360,
+   "h": 20,
+   "r": 24,
    "explode": [
     0,
     0,
-    641.0
+    369
    ],
-   "mass": 375.0,
+   "mass": 80.9,
    "materials": [
     [
-     "chip",
-     30
+     "pp",
+     55
     ],
     [
-     "kupfer",
-     30
-    ],
+     "tpe",
+     45
+    ]
+   ],
+   "info": "Weicher Deckel mit Dichtlippe und eingesetztem Messbecher zum Nachfüllen. Wird nur aufgedrückt; Messbecher herausdrehen und beides zum Kunststoff.",
+   "color": "#2E3338",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 40,
+     "y": 40,
+     "w": 60,
+     "fill": "#C5D3DC"
+    },
+    {
+     "shape": "cyl",
+     "x": 50,
+     "y": 50,
+     "w": 40,
+     "fill": "#E9EEF2"
+    }
+   ]
+  },
+  {
+   "id": "behaelter_oben",
+   "component_id": "blender_jar",
+   "material_id": "pc",
+   "name": "Mixbehälter Oberteil",
+   "short": "Behälter oben",
+   "shape": "box",
+   "x": 15,
+   "y": 15,
+   "w": 140,
+   "d": 140,
+   "z": 260,
+   "h": 100,
+   "r": 24,
+   "explode": [
+    0,
+    0,
+    344
+   ],
+   "mass": 303.3,
+   "materials": [
     [
      "pcabs",
-     25
+     100
+    ]
+   ],
+   "info": "Bruchfester Kunststoff (Copolyester oder Polycarbonat) mit Skala. Den Materialcode findet man am Behälterboden.",
+   "color": "#DDE6EC",
+   "opacity": 0.6,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 10,
+     "w": 120,
+     "d": 120,
+     "r": 20,
+     "fill": "#C5D3DC"
+    }
+   ]
+  },
+  {
+   "id": "griff",
+   "component_id": "blender_jar",
+   "material_id": "pc",
+   "name": "Behältergriff",
+   "short": "Griff",
+   "shape": "box",
+   "x": 155,
+   "y": 70,
+   "w": 25,
+   "d": 30,
+   "z": 200,
+   "h": 140,
+   "r": 8,
+   "explode": [
+    0,
+    0,
+    344
+   ],
+   "mass": 60.7,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Angespritzter Griff des Behälters. Er gehört zum Behälter und wird nicht abgetrennt.",
+   "color": "#2E3338"
+  },
+  {
+   "id": "behaelter_unten",
+   "component_id": "blender_jar",
+   "material_id": "pc",
+   "name": "Mixbehälter Unterteil",
+   "short": "Behälter unten",
+   "shape": "box",
+   "x": 25,
+   "y": 25,
+   "w": 120,
+   "d": 120,
+   "z": 160,
+   "h": 100,
+   "r": 20,
+   "explode": [
+    0,
+    0,
+    344
+   ],
+   "mass": 222.4,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Der Behälter wird nach unten schmaler, damit das Mixgut immer wieder zum Messer fällt.",
+   "color": "#DDE6EC",
+   "opacity": 0.6
+  },
+  {
+   "id": "messer",
+   "component_id": "blender_blade",
+   "material_id": "steel",
+   "name": "Messereinheit",
+   "short": "Messer",
+   "shape": "cyl",
+   "x": 40,
+   "y": 40,
+   "w": 90,
+   "z": 160,
+   "h": 18,
+   "explode": [
+    0,
+    0,
+    301
+   ],
+   "mass": 111.2,
+   "materials": [
+    [
+     "stahl",
+     90
+    ],
+    [
+     "messing",
+     5
+    ],
+    [
+     "gummi",
+     5
+    ]
+   ],
+   "info": "Vier Edelstahlklingen auf einer kugelgelagerten Welle. Sehr scharf: vor dem Entsorgen in Zeitungspapier wickeln.",
+   "color": "#B8BEC4",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 5,
+     "y": 39,
+     "w": 80,
+     "d": 12,
+     "r": 4,
+     "fill": "#D5DADE"
+    },
+    {
+     "shape": "box",
+     "x": 39,
+     "y": 5,
+     "w": 12,
+     "d": 80,
+     "r": 4,
+     "fill": "#D5DADE"
+    },
+    {
+     "shape": "cyl",
+     "x": 35,
+     "y": 35,
+     "w": 20,
+     "fill": "#7C858C"
+    }
+   ]
+  },
+  {
+   "id": "dichtring",
+   "component_id": "blender_blade",
+   "material_id": "rubber",
+   "name": "Dichtring",
+   "short": "Dichtring",
+   "shape": "cyl",
+   "x": 40,
+   "y": 40,
+   "w": 90,
+   "z": 156,
+   "h": 4,
+   "explode": [
+    0,
+    0,
+    276
+   ],
+   "mass": 8.1,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "info": "Silikonring zwischen Messereinheit und Behälter. Er hält dicht und lässt sich mit den Fingern abziehen.",
+   "color": "#5A6670",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 12,
+     "y": 12,
+     "w": 66,
+     "fill": "#3A444C"
+    }
+   ]
+  },
+  {
+   "id": "behaelterfuss",
+   "component_id": "blender_jar",
+   "material_id": "pp",
+   "name": "Behälterfuß mit Kupplung",
+   "short": "Behälterfuß",
+   "shape": "box",
+   "x": 20,
+   "y": 20,
+   "w": 130,
+   "d": 130,
+   "z": 140,
+   "h": 16,
+   "r": 20,
+   "explode": [
+    0,
+    0,
+    251
+   ],
+   "mass": 91,
+   "materials": [
+    [
+     "pp",
+     85
     ],
     [
      "stahl",
      15
     ]
    ],
-   "material_id": "mixed_electronics",
-   "info": "Unscrew from the housing and cut the wires; contains copper windings and magnets."
+   "info": "Schraubring unter dem Behälter, hält die Messereinheit und trägt das Gegenstück der Antriebskupplung. Gegen den Uhrzeigersinn abschrauben.",
+   "color": "#2E3338",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 45,
+     "y": 45,
+     "w": 40,
+     "fill": "#9AA2A6"
+    }
+   ]
   },
   {
-   "id": "blender_blade",
-   "component_id": "blender_blade",
-   "name": "Blade Assembly",
-   "short": "Blade Assembly",
-   "shape": "box",
-   "x": 6.8,
-   "y": 15.3,
-   "w": 71.4,
-   "d": 71.4,
-   "h": 133.0,
-   "z": 76.0,
-   "r": 8.6,
-   "explode": [
-    0,
-    0,
-    440.0
-   ],
-   "mass": 375.0,
-   "materials": [
-    [
-     "stahl",
-     100
-    ]
-   ],
-   "material_id": "steel",
-   "info": "Unscrew the bottom ring of the jar; the blades are very sharp, wrap them before disposal."
-  },
-  {
-   "id": "plastic_housing",
+   "id": "gehaeuse",
    "component_id": "plastic_housing",
-   "name": "Plastic Housing",
-   "short": "Plastic Housing",
+   "material_id": "abs",
+   "name": "Sockelgehäuse",
+   "short": "Gehäuse",
    "shape": "box",
    "x": 0,
    "y": 0,
-   "w": 170.0,
-   "d": 170.0,
-   "h": 190.0,
-   "z": 190.0,
-   "r": 20.4,
+   "w": 170,
+   "d": 170,
+   "z": 12,
+   "h": 128,
+   "r": 24,
    "explode": [
     0,
     0,
-    68.0
+    226
    ],
-   "mass": 781.25,
+   "mass": 424.6,
    "materials": [
     [
      "pcabs",
      100
     ]
    ],
-   "material_id": "abs",
-   "info": "Look for hidden screws under rubber feet or labels, then pry the clips open."
+   "info": "Kunststoffgehäuse des Motorsockels. Die Schrauben sitzen unter den Gummifüßen der Bodenplatte.",
+   "color": "#3C4248",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 20,
+     "y": 20,
+     "w": 130,
+     "d": 130,
+     "r": 18,
+     "fill": "#2E3338"
+    },
+    {
+     "shape": "cyl",
+     "x": 60,
+     "y": 60,
+     "w": 50,
+     "fill": "#1E2226"
+    }
+   ]
   },
   {
-   "id": "cable_copper_core",
-   "component_id": "cable_copper_core",
-   "name": "Cable Wires",
-   "short": "Cable Wires",
-   "shape": "box",
-   "x": 180.2,
-   "y": 8.5,
-   "w": 8.5,
-   "d": 153.0,
-   "h": 30.4,
-   "z": 38.0,
-   "r": 1.0,
+   "id": "kupplung",
+   "component_id": "electric_motor",
+   "material_id": "rubber",
+   "name": "Antriebskupplung",
+   "short": "Kupplung",
+   "shape": "cyl",
+   "x": 65,
+   "y": 65,
+   "w": 40,
+   "z": 120,
+   "h": 22,
    "explode": [
-    74.5,
     0,
-    20.4
+    0,
+    71
    ],
-   "mass": 93.75,
+   "mass": 30.3,
+   "materials": [
+    [
+     "gummi",
+     50
+    ],
+    [
+     "stahl",
+     50
+    ]
+   ],
+   "info": "Gezahntes Gummi-Metall-Teil auf der Motorwelle, das den Behälter antreibt. Mit einem Schlüssel von der Welle drehen.",
+   "color": "#2E3338",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 12,
+     "y": 12,
+     "w": 16,
+     "fill": "#9AA2A6"
+    }
+   ]
+  },
+  {
+   "id": "motor",
+   "component_id": "electric_motor",
+   "material_id": "mixed_electronics",
+   "name": "Universalmotor",
+   "short": "Motor",
+   "shape": "cyl",
+   "x": 35,
+   "y": 35,
+   "w": 100,
+   "z": 30,
+   "h": 90,
+   "explode": [
+    0,
+    0,
+    46
+   ],
+   "mass": 808.7,
+   "materials": [
+    [
+     "kupfer",
+     30
+    ],
+    [
+     "stahl",
+     55
+    ],
+    [
+     "graphit",
+     3
+    ],
+    [
+     "pcabs",
+     7
+    ],
+    [
+     "alu",
+     5
+    ]
+   ],
+   "info": "Kräftiger Motor mit Kupferwicklungen und Kohlebürsten, bis 1000 Watt. Ist mit vier Schrauben am Gehäuse befestigt.",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 10,
+     "y": 10,
+     "w": 80,
+     "fill": "#B87333"
+    },
+    {
+     "shape": "cyl",
+     "x": 35,
+     "y": 35,
+     "w": 30,
+     "fill": "#7C858C"
+    }
+   ]
+  },
+  {
+   "id": "schalter",
+   "component_id": "electric_motor",
+   "material_id": "mixed_electronics",
+   "name": "Drehzahlschalter mit Entstörteilen",
+   "short": "Schalter",
+   "shape": "box",
+   "x": 20,
+   "y": 148,
+   "w": 130,
+   "d": 14,
+   "z": 30,
+   "h": 80,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    7
+   ],
+   "mass": 40.4,
+   "materials": [
+    [
+     "pcabs",
+     45
+    ],
+    [
+     "kupfer",
+     25
+    ],
+    [
+     "kontakte",
+     10
+    ],
+    [
+     "fr4",
+     15
+    ],
+    [
+     "chip",
+     5
+    ]
+   ],
+   "info": "Stufenschalter mit Kondensator gegen Funkstörungen. Kabel sind gesteckt und lassen sich abziehen.",
+   "color": "#2F6B3A",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 50,
+     "y": 3,
+     "w": 30,
+     "d": 8,
+     "r": 1,
+     "fill": "#9AA2A6"
+    }
+   ]
+  },
+  {
+   "id": "drehknopf",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Drehknopf",
+   "short": "Drehknopf",
+   "shape": "box",
+   "x": 65,
+   "y": 168,
+   "w": 40,
+   "d": 14,
+   "z": 50,
+   "h": 40,
+   "r": 4,
+   "explode": [
+    0,
+    50,
+    0
+   ],
+   "mass": 15.2,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Stellt die Stufen und die Puls-Funktion ein. Gerade von der Achse abziehen.",
+   "color": "#9AA2A6"
+  },
+  {
+   "id": "luefter",
+   "component_id": "electric_motor",
+   "material_id": "pp",
+   "name": "Lüfterrad",
+   "short": "Lüfter",
+   "shape": "cyl",
+   "x": 45,
+   "y": 45,
+   "w": 80,
+   "z": 14,
+   "h": 14,
+   "explode": [
+    0,
+    0,
+    23
+   ],
+   "mass": 30.3,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Sitzt unten auf der Motorwelle und kühlt den Motor. Lässt sich nach dem Lösen der Mutter abziehen.",
+   "color": "#5F6B75",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 37,
+     "w": 8,
+     "d": 6,
+     "r": 1,
+     "fill": "#4A545C"
+    },
+    {
+     "shape": "box",
+     "x": 20,
+     "y": 37,
+     "w": 8,
+     "d": 6,
+     "r": 1,
+     "fill": "#4A545C"
+    },
+    {
+     "shape": "box",
+     "x": 30,
+     "y": 37,
+     "w": 8,
+     "d": 6,
+     "r": 1,
+     "fill": "#4A545C"
+    },
+    {
+     "shape": "box",
+     "x": 40,
+     "y": 37,
+     "w": 8,
+     "d": 6,
+     "r": 1,
+     "fill": "#4A545C"
+    },
+    {
+     "shape": "box",
+     "x": 50,
+     "y": 37,
+     "w": 8,
+     "d": 6,
+     "r": 1,
+     "fill": "#4A545C"
+    },
+    {
+     "shape": "box",
+     "x": 60,
+     "y": 37,
+     "w": 8,
+     "d": 6,
+     "r": 1,
+     "fill": "#4A545C"
+    }
+   ]
+  },
+  {
+   "id": "bodenplatte",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Bodenplatte mit Saugfüßen",
+   "short": "Bodenplatte",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 170,
+   "d": 170,
+   "z": 0,
+   "h": 12,
+   "r": 24,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 151.6,
+   "materials": [
+    [
+     "pcabs",
+     85
+    ],
+    [
+     "gummi",
+     15
+    ]
+   ],
+   "info": "Unterseite mit Lüftungsschlitzen und Saugfüßen. Unter den Füßen verstecken sich die Gehäuseschrauben.",
+   "color": "#2E3338",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 14,
+     "y": 14,
+     "w": 16,
+     "d": 16,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "cyl",
+     "x": 140,
+     "y": 14,
+     "w": 16,
+     "d": 16,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "cyl",
+     "x": 14,
+     "y": 140,
+     "w": 16,
+     "d": 16,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "cyl",
+     "x": 140,
+     "y": 140,
+     "w": 16,
+     "d": 16,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "box",
+     "x": 40,
+     "y": 80,
+     "w": 8,
+     "d": 10,
+     "r": 1,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "box",
+     "x": 56,
+     "y": 80,
+     "w": 8,
+     "d": 10,
+     "r": 1,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "box",
+     "x": 72,
+     "y": 80,
+     "w": 8,
+     "d": 10,
+     "r": 1,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "box",
+     "x": 88,
+     "y": 80,
+     "w": 8,
+     "d": 10,
+     "r": 1,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "box",
+     "x": 104,
+     "y": 80,
+     "w": 8,
+     "d": 10,
+     "r": 1,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "box",
+     "x": 120,
+     "y": 80,
+     "w": 8,
+     "d": 10,
+     "r": 1,
+     "fill": "#1E2226"
+    }
+   ]
+  },
+  {
+   "id": "kabel",
+   "component_id": "cable_insulation",
+   "material_id": "pvc",
+   "name": "Netzkabel (Isolierung)",
+   "short": "Kabel",
+   "shape": "box",
+   "x": 100,
+   "y": 10,
+   "w": 70,
+   "d": 8,
+   "z": 2,
+   "h": 8,
+   "r": 4,
+   "explode": [
+    80,
+    0,
+    0
+   ],
+   "mass": 80.9,
+   "materials": [
+    [
+     "pvc",
+     90
+    ],
+    [
+     "pp",
+     10
+    ]
+   ],
+   "info": "Etwa 1 m PVC-Mantel mit Stecker. Längs aufschlitzen, um Kupfer und PVC zu trennen.",
+   "color": "#2E3338",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 60,
+     "y": 1,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#555"
+    }
+   ]
+  },
+  {
+   "id": "kupferadern",
+   "component_id": "cable_copper_core",
+   "material_id": "copper",
+   "name": "Kupferadern",
+   "short": "Kupferadern",
+   "shape": "box",
+   "x": 100,
+   "y": 12.5,
+   "w": 70,
+   "d": 3,
+   "z": 4.5,
+   "h": 3,
+   "r": 1,
+   "explode": [
+    80,
+    0,
+    15
+   ],
+   "mass": 40.4,
    "materials": [
     [
      "kupfer",
      100
     ]
    ],
-   "material_id": "copper",
-   "info": "Cut off the plug and strip the insulation to free the copper."
-  },
-  {
-   "id": "cable_insulation",
-   "component_id": "cable_insulation",
-   "name": "Cable Insulation",
-   "short": "Cable Insulation",
-   "shape": "box",
-   "x": 197.2,
-   "y": 8.5,
-   "w": 8.5,
-   "d": 153.0,
-   "h": 30.4,
-   "z": 38.0,
-   "r": 1.0,
-   "explode": [
-    100.0,
-    0,
-    20.4
-   ],
-   "mass": 93.75,
-   "materials": [
-    [
-     "pvc",
-     100
-    ]
-   ],
-   "material_id": "pvc",
-   "info": "Slit lengthwise with a cable stripper to separate it from the wires."
-  },
-  {
-   "id": "blender_jar",
-   "component_id": "blender_jar",
-   "name": "Jar",
-   "short": "Jar",
-   "shape": "box",
-   "x": 0,
-   "y": 0,
-   "w": 170.0,
-   "d": 170.0,
-   "h": 190.0,
-   "z": 0.0,
-   "r": 20.4,
-   "explode": [
-    0,
-    0,
-    0
-   ],
-   "mass": 781.25,
-   "materials": [
-    [
-     "pcabs",
-     100
-    ]
-   ],
-   "material_id": "pc",
-   "info": "Lift it off the base; check the bottom for a material code."
+   "info": "Drei Kupferadern. Kupfer ist der wertvollste Rohstoff im Kabel und wird fast vollständig recycelt.",
+   "color": "#B87333"
   }
  ]
 }

@@ -1,0 +1,663 @@
+{
+ "parts": [
+  {
+   "id": "auswurftaste",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Auswurftaste",
+   "short": "Auswurftaste",
+   "shape": "box",
+   "x": 20,
+   "y": 35,
+   "w": 26,
+   "d": 20,
+   "z": 150,
+   "h": 6,
+   "r": 4,
+   "explode": [
+    0,
+    0,
+    142
+   ],
+   "mass": 8.5,
+   "materials": [
+    [
+     "pcabs",
+     80
+    ],
+    [
+     "stahl",
+     20
+    ]
+   ],
+   "info": "Drückt über eine Stahlfeder die Besen aus dem Getriebe. Kappe ist nur aufgesteckt.",
+   "color": "#9AA2A6"
+  },
+  {
+   "id": "oberschale",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Gehäuse-Oberschale mit Griff",
+   "short": "Oberschale",
+   "shape": "box",
+   "x": 0,
+   "y": 5,
+   "w": 200,
+   "d": 80,
+   "z": 110,
+   "h": 40,
+   "r": 22,
+   "explode": [
+    0,
+    0,
+    122
+   ],
+   "mass": 159.8,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Obere Hälfte mit Handgriff. Die Schrauben sitzen von unten in der Unterschale, eine oft unter dem Typenschild.",
+   "color": "#E9EEF2",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 70,
+     "y": 28,
+     "w": 105,
+     "d": 24,
+     "r": 10,
+     "fill": "#C5CDD3"
+    },
+    {
+     "shape": "box",
+     "x": 50,
+     "y": 32,
+     "w": 14,
+     "d": 16,
+     "r": 3,
+     "fill": "#5F6B75"
+    }
+   ]
+  },
+  {
+   "id": "schalter",
+   "component_id": "plastic_housing",
+   "material_id": "mixed_electronics",
+   "name": "Stufenschalter mit Entstörkondensator",
+   "short": "Schalter",
+   "shape": "box",
+   "x": 40,
+   "y": 30,
+   "w": 30,
+   "d": 30,
+   "z": 100,
+   "h": 14,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    98
+   ],
+   "mass": 21.3,
+   "materials": [
+    [
+     "pcabs",
+     50
+    ],
+    [
+     "kupfer",
+     25
+    ],
+    [
+     "kontakte",
+     10
+    ],
+    [
+     "pp",
+     15
+    ]
+   ],
+   "info": "Schiebeschalter für fünf Stufen; der Kondensator verhindert Funkstörungen. Kabel sind gelötet oder gesteckt.",
+   "color": "#5F6B75",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 8,
+     "w": 10,
+     "d": 14,
+     "r": 2,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "box",
+     "x": 17,
+     "y": 5,
+     "w": 10,
+     "d": 20,
+     "r": 2,
+     "fill": "#D9B44A"
+    }
+   ]
+  },
+  {
+   "id": "luefterrad",
+   "component_id": "electric_motor",
+   "material_id": "pp",
+   "name": "Lüfterrad",
+   "short": "Lüfterrad",
+   "shape": "box",
+   "x": 154,
+   "y": 25,
+   "w": 10,
+   "d": 40,
+   "z": 78,
+   "h": 36,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    82
+   ],
+   "mass": 8.5,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Sitzt auf der Motorwelle und bläst Kühlluft durch die Schlitze im Gehäuse.",
+   "color": "#5F6B75",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 3,
+     "w": 6,
+     "d": 3,
+     "r": 1,
+     "fill": "#4A545C"
+    },
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 9,
+     "w": 6,
+     "d": 3,
+     "r": 1,
+     "fill": "#4A545C"
+    },
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 15,
+     "w": 6,
+     "d": 3,
+     "r": 1,
+     "fill": "#4A545C"
+    },
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 21,
+     "w": 6,
+     "d": 3,
+     "r": 1,
+     "fill": "#4A545C"
+    },
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 27,
+     "w": 6,
+     "d": 3,
+     "r": 1,
+     "fill": "#4A545C"
+    },
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 33,
+     "w": 6,
+     "d": 3,
+     "r": 1,
+     "fill": "#4A545C"
+    }
+   ]
+  },
+  {
+   "id": "motor",
+   "component_id": "electric_motor",
+   "material_id": "mixed_electronics",
+   "name": "Universalmotor",
+   "short": "Motor",
+   "shape": "box",
+   "x": 90,
+   "y": 22,
+   "w": 62,
+   "d": 46,
+   "z": 76,
+   "h": 40,
+   "r": 16,
+   "explode": [
+    0,
+    0,
+    84
+   ],
+   "mass": 298.2,
+   "materials": [
+    [
+     "kupfer",
+     32
+    ],
+    [
+     "stahl",
+     55
+    ],
+    [
+     "graphit",
+     3
+    ],
+    [
+     "pcabs",
+     10
+    ]
+   ],
+   "info": "Motor mit Kupferwicklungen und Kohlebürsten, treibt über eine Schnecke beide Besen an. Mit zwei Schrauben befestigt.",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 8,
+     "y": 6,
+     "w": 46,
+     "d": 34,
+     "r": 12,
+     "fill": "#B87333"
+    },
+    {
+     "shape": "cyl",
+     "x": 2,
+     "y": 18,
+     "w": 10,
+     "fill": "#9AA2A6"
+    }
+   ]
+  },
+  {
+   "id": "getriebe",
+   "component_id": "electric_motor",
+   "material_id": "nylon",
+   "name": "Schneckengetriebe",
+   "short": "Getriebe",
+   "shape": "box",
+   "x": 25,
+   "y": 15,
+   "w": 60,
+   "d": 60,
+   "z": 82,
+   "h": 18,
+   "r": 6,
+   "explode": [
+    0,
+    0,
+    78
+   ],
+   "mass": 63.9,
+   "materials": [
+    [
+     "nylon",
+     55
+    ],
+    [
+     "stahl",
+     45
+    ]
+   ],
+   "info": "Zwei Kunststoffzahnräder mit Stahlbuchsen drehen die Besen gegenläufig. Sie sind gefettet; Fett mit Papier abwischen.",
+   "color": "#E9EEF2",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 6,
+     "y": 3,
+     "w": 24,
+     "fill": "#D5DADE"
+    },
+    {
+     "shape": "cyl",
+     "x": 6,
+     "y": 33,
+     "w": 24,
+     "fill": "#D5DADE"
+    },
+    {
+     "shape": "box",
+     "x": 34,
+     "y": 25,
+     "w": 26,
+     "d": 10,
+     "r": 3,
+     "fill": "#9AA2A6"
+    }
+   ]
+  },
+  {
+   "id": "unterschale",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Gehäuse-Unterschale",
+   "short": "Unterschale",
+   "shape": "box",
+   "x": 0,
+   "y": 5,
+   "w": 200,
+   "d": 80,
+   "z": 72,
+   "h": 38,
+   "r": 22,
+   "explode": [
+    0,
+    0,
+    30
+   ],
+   "mass": 149.1,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Untere Hälfte mit den beiden Öffnungen für die Besen und Lüftungsschlitzen. Kommt zum Kunststoff, wenn alle Metallteile entfernt sind.",
+   "color": "#E9EEF2",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 44,
+     "y": 16,
+     "w": 14,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 44,
+     "y": 50,
+     "w": 14,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "box",
+     "x": 150,
+     "y": 15,
+     "w": 4,
+     "d": 50,
+     "r": 1,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "box",
+     "x": 159,
+     "y": 15,
+     "w": 4,
+     "d": 50,
+     "r": 1,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "box",
+     "x": 168,
+     "y": 15,
+     "w": 4,
+     "d": 50,
+     "r": 1,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "box",
+     "x": 177,
+     "y": 15,
+     "w": 4,
+     "d": 50,
+     "r": 1,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "box",
+     "x": 186,
+     "y": 15,
+     "w": 4,
+     "d": 50,
+     "r": 1,
+     "fill": "#9AA2A6"
+    }
+   ]
+  },
+  {
+   "id": "schaft_links",
+   "component_id": "mixer_beaters",
+   "material_id": "steel",
+   "name": "Besenschaft links",
+   "short": "Schaft links",
+   "shape": "cyl",
+   "x": 47,
+   "y": 24,
+   "w": 8,
+   "z": 45,
+   "h": 37,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 12.8,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Edelstahlschaft mit Nut, rastet im Getriebe ein. Auswurftaste drücken, dann lösen sich die Besen.",
+   "color": "#B8BEC4",
+   "label": true
+  },
+  {
+   "id": "besen_links",
+   "component_id": "mixer_beaters",
+   "material_id": "steel",
+   "name": "Rührbesen links",
+   "short": "Besen links",
+   "shape": "cyl",
+   "x": 35,
+   "y": 12,
+   "w": 32,
+   "z": 0,
+   "h": 45,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 37.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Vier gebogene Edelstahldrähte. Reiner Stahl: kommt zum Altmetall.",
+   "color": "#C9CED2",
+   "label": true,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 14,
+     "w": 28,
+     "d": 4,
+     "r": 1,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "box",
+     "x": 14,
+     "y": 2,
+     "w": 4,
+     "d": 28,
+     "r": 1,
+     "fill": "#9AA2A6"
+    }
+   ]
+  },
+  {
+   "id": "schaft_rechts",
+   "component_id": "mixer_beaters",
+   "material_id": "steel",
+   "name": "Besenschaft rechts",
+   "short": "Schaft rechts",
+   "shape": "cyl",
+   "x": 47,
+   "y": 58,
+   "w": 8,
+   "z": 45,
+   "h": 37,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 12.8,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Edelstahlschaft mit Nut, rastet im Getriebe ein. Auswurftaste drücken, dann lösen sich die Besen.",
+   "color": "#B8BEC4",
+   "label": false
+  },
+  {
+   "id": "besen_rechts",
+   "component_id": "mixer_beaters",
+   "material_id": "steel",
+   "name": "Rührbesen rechts",
+   "short": "Besen rechts",
+   "shape": "cyl",
+   "x": 35,
+   "y": 46,
+   "w": 32,
+   "z": 0,
+   "h": 45,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 37.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Vier gebogene Edelstahldrähte. Reiner Stahl: kommt zum Altmetall.",
+   "color": "#C9CED2",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 14,
+     "w": 28,
+     "d": 4,
+     "r": 1,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "box",
+     "x": 14,
+     "y": 2,
+     "w": 4,
+     "d": 28,
+     "r": 1,
+     "fill": "#9AA2A6"
+    }
+   ]
+  },
+  {
+   "id": "kabel",
+   "component_id": "cable_insulation",
+   "material_id": "pvc",
+   "name": "Netzkabel (Isolierung)",
+   "short": "Kabel",
+   "shape": "box",
+   "x": 150,
+   "y": 41,
+   "w": 50,
+   "d": 8,
+   "z": 74,
+   "h": 8,
+   "r": 4,
+   "explode": [
+    70,
+    0,
+    0
+   ],
+   "mass": 63.9,
+   "materials": [
+    [
+     "pvc",
+     90
+    ],
+    [
+     "pp",
+     10
+    ]
+   ],
+   "info": "Etwa 1,2 m PVC-Mantel mit Eurostecker. Längs aufschlitzen, um die Kupferadern freizulegen.",
+   "color": "#2E3338",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 40,
+     "y": 1,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#555"
+    }
+   ]
+  },
+  {
+   "id": "kupferadern",
+   "component_id": "cable_copper_core",
+   "material_id": "copper",
+   "name": "Kupferadern",
+   "short": "Kupferadern",
+   "shape": "box",
+   "x": 150,
+   "y": 43.5,
+   "w": 50,
+   "d": 3,
+   "z": 76.5,
+   "h": 3,
+   "r": 1,
+   "explode": [
+    70,
+    0,
+    15
+   ],
+   "mass": 26.6,
+   "materials": [
+    [
+     "kupfer",
+     100
+    ]
+   ],
+   "info": "Zwei Kupferadern aus feiner Litze. Kupfer lässt sich fast verlustfrei wiederverwerten.",
+   "color": "#B87333"
+  }
+ ]
+}

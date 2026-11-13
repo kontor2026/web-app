@@ -4,7 +4,7 @@
  "name_en": "Electric Shaver",
  "klasse": "Elektroschrott · Kleingerät",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -21,51 +21,51 @@
  "werte": [
   {
    "k": "Rohstoffwert",
-   "v": "≈ 0,38 €",
-   "hint": "Gold, Silber, Kobalt zu Preisen vom 13.11. Ohne Kobalt (kein Preis)."
+   "v": "≈ 0,32 €",
+   "hint": "Silber, Kobalt, Kupfer zu Preisen vom 13.11. Ohne Kobalt (kein Preis)."
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 1,58 kg",
+   "v": "≈ 1,26 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 1,40 kg",
-   "hint": "spart 0,19 kg, wenn recycelte Materialien eingesetzt werden"
+   "v": "≈ 1,04 kg",
+   "hint": "spart 0,22 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Cu": 18620.0,
-   "Fe": 14710.0,
-   "Al": 5586.0,
-   "Co": 5102.0,
-   "Ag": 4.66,
-   "Au": 1.12,
-   "Pd": 0.35
+   "Fe": 19947.0,
+   "Cu": 16770.0,
+   "Al": 3660.0,
+   "Co": 3343.0,
+   "Ag": 3.33,
+   "Au": 0.8,
+   "Pd": 0.25
   },
   "herkunft": {
-   "Cu": "Modellmassen (Schätzung)",
    "Fe": "Modellmassen (Schätzung)",
+   "Cu": "Modellmassen (Schätzung)",
    "Al": "Modellmassen (Schätzung)",
-   "Co": "37 g Akku × 13,7% Kobalt (Schätzung, oeko2012 Tab, 25)",
-   "Ag": "19 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)",
-   "Au": "19 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)",
-   "Pd": "19 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)"
+   "Co": "24 g Akku × 13,7% Kobalt (Schätzung, oeko2012 Tab, 25)",
+   "Ag": "13 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)",
+   "Au": "13 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)",
+   "Pd": "13 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)"
   },
   "materialien_g": {
-   "abs": 77.6,
-   "li_ion": 37.2,
-   "mixed_electronics": 37.2,
-   "pcb": 18.6,
-   "steel": 9.3
+   "abs": 88.9,
+   "mixed_electronics": 38.9,
+   "li_ion": 24.4,
+   "steel": 14.4,
+   "pcb": 13.3
   },
-  "co2_kg": 1.584,
-  "co2_mit_recyclat_kg": 1.397,
-  "co2_ersparnis_kg": 0.187,
+  "co2_kg": 1.264,
+  "co2_mit_recyclat_kg": 1.043,
+  "co2_ersparnis_kg": 0.221,
   "co2_ohne_faktor": [],
-  "rohstoffwert_eur": 0.38,
+  "rohstoffwert_eur": 0.32,
   "wert_ohne_preis": [
    "Co"
   ],
@@ -115,95 +115,839 @@
   "nicht": "Nicht in Restmüll oder Gelbe Tonne",
   "warnung": "Akku oder Batterie nicht beschädigen. Wenn möglich herausnehmen und getrennt abgeben, fest verbaute Akkus drinlassen."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "shaver_foil_head",
+   "id": "scherfolie",
    "component_id": "shaver_foil_head",
-   "name": "Shaving Head",
-   "short": "Shaving Head",
+   "material_id": "steel",
+   "name": "Scherfolie",
+   "short": "Scherfolie",
    "shape": "box",
-   "x": 22.1,
-   "y": 9.6,
-   "w": 15.8,
-   "d": 15.8,
-   "h": 18.0,
-   "z": 127.5,
-   "r": 1.9,
+   "x": 6,
+   "y": 8,
+   "w": 48,
+   "d": 19,
+   "z": 146,
+   "h": 4,
+   "r": 6,
    "explode": [
     0,
     0,
-    233.5
+    56
    ],
-   "mass": 9.31,
+   "mass": 3.3,
    "materials": [
+    [
+     "nickel",
+     90
+    ],
     [
      "stahl",
-     100
-    ]
-   ],
-   "material_id": "steel",
-   "info": "Press the release button and lift the head off."
-  },
-  {
-   "id": "circuit_board",
-   "component_id": "circuit_board",
-   "name": "Circuit Board",
-   "short": "Circuit Board",
-   "shape": "box",
-   "x": 2.4,
-   "y": 18.9,
-   "w": 25.2,
-   "d": 14.7,
-   "h": 52.5,
-   "z": 25.5,
-   "r": 1.8,
-   "explode": [
-    0,
-    0,
-    264.0
-   ],
-   "mass": 18.62,
-   "materials": [
-    [
-     "fr4",
-     55
-    ],
-    [
-     "kupfer",
-     20
-    ],
-    [
-     "chip",
-     15
-    ],
-    [
-     "lot",
      10
     ]
    ],
-   "material_id": "pcb",
-   "info": "Unscrew and unplug all ribbon cables; hand in at an e-waste collection point."
+   "info": "Hauchdünne, gelochte Folie aus galvanisch geformtem Nickel. Sehr empfindlich; Nickel kann Allergien auslösen.",
+   "color": "#D5DADE",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 3,
+     "w": 2,
+     "d": 2,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 6,
+     "y": 3,
+     "w": 2,
+     "d": 2,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 9,
+     "y": 3,
+     "w": 2,
+     "d": 2,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 12,
+     "y": 3,
+     "w": 2,
+     "d": 2,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 15,
+     "y": 3,
+     "w": 2,
+     "d": 2,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 18,
+     "y": 3,
+     "w": 2,
+     "d": 2,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 21,
+     "y": 3,
+     "w": 2,
+     "d": 2,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 24,
+     "y": 3,
+     "w": 2,
+     "d": 2,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 27,
+     "y": 3,
+     "w": 2,
+     "d": 2,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 30,
+     "y": 3,
+     "w": 2,
+     "d": 2,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 33,
+     "y": 3,
+     "w": 2,
+     "d": 2,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 36,
+     "y": 3,
+     "w": 2,
+     "d": 2,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 39,
+     "y": 3,
+     "w": 2,
+     "d": 2,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 42,
+     "y": 3,
+     "w": 2,
+     "d": 2,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 7,
+     "w": 2,
+     "d": 2,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 6,
+     "y": 7,
+     "w": 2,
+     "d": 2,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 9,
+     "y": 7,
+     "w": 2,
+     "d": 2,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 12,
+     "y": 7,
+     "w": 2,
+     "d": 2,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 15,
+     "y": 7,
+     "w": 2,
+     "d": 2,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 18,
+     "y": 7,
+     "w": 2,
+     "d": 2,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 21,
+     "y": 7,
+     "w": 2,
+     "d": 2,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 24,
+     "y": 7,
+     "w": 2,
+     "d": 2,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 27,
+     "y": 7,
+     "w": 2,
+     "d": 2,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 30,
+     "y": 7,
+     "w": 2,
+     "d": 2,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 33,
+     "y": 7,
+     "w": 2,
+     "d": 2,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 36,
+     "y": 7,
+     "w": 2,
+     "d": 2,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 39,
+     "y": 7,
+     "w": 2,
+     "d": 2,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 42,
+     "y": 7,
+     "w": 2,
+     "d": 2,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 11,
+     "w": 2,
+     "d": 2,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 6,
+     "y": 11,
+     "w": 2,
+     "d": 2,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 9,
+     "y": 11,
+     "w": 2,
+     "d": 2,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 12,
+     "y": 11,
+     "w": 2,
+     "d": 2,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 15,
+     "y": 11,
+     "w": 2,
+     "d": 2,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 18,
+     "y": 11,
+     "w": 2,
+     "d": 2,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 21,
+     "y": 11,
+     "w": 2,
+     "d": 2,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 24,
+     "y": 11,
+     "w": 2,
+     "d": 2,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 27,
+     "y": 11,
+     "w": 2,
+     "d": 2,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 30,
+     "y": 11,
+     "w": 2,
+     "d": 2,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 33,
+     "y": 11,
+     "w": 2,
+     "d": 2,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 36,
+     "y": 11,
+     "w": 2,
+     "d": 2,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 39,
+     "y": 11,
+     "w": 2,
+     "d": 2,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 42,
+     "y": 11,
+     "w": 2,
+     "d": 2,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 15,
+     "w": 2,
+     "d": 2,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 6,
+     "y": 15,
+     "w": 2,
+     "d": 2,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 9,
+     "y": 15,
+     "w": 2,
+     "d": 2,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 12,
+     "y": 15,
+     "w": 2,
+     "d": 2,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 15,
+     "y": 15,
+     "w": 2,
+     "d": 2,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 18,
+     "y": 15,
+     "w": 2,
+     "d": 2,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 21,
+     "y": 15,
+     "w": 2,
+     "d": 2,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 24,
+     "y": 15,
+     "w": 2,
+     "d": 2,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 27,
+     "y": 15,
+     "w": 2,
+     "d": 2,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 30,
+     "y": 15,
+     "w": 2,
+     "d": 2,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 33,
+     "y": 15,
+     "w": 2,
+     "d": 2,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 36,
+     "y": 15,
+     "w": 2,
+     "d": 2,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 39,
+     "y": 15,
+     "w": 2,
+     "d": 2,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 42,
+     "y": 15,
+     "w": 2,
+     "d": 2,
+     "fill": "#9AA2A6"
+    }
+   ]
   },
   {
-   "id": "li_ion_battery",
-   "component_id": "li_ion_battery",
-   "name": "Lithium-Ion Battery",
-   "short": "Lithium-Ion Batter",
+   "id": "scherkopfrahmen",
+   "component_id": "shaver_foil_head",
+   "material_id": "abs",
+   "name": "Scherkopfrahmen",
+   "short": "Scherkopf",
    "shape": "box",
-   "x": 32.4,
-   "y": 3.2,
-   "w": 25.2,
-   "d": 14.7,
-   "h": 52.5,
-   "z": 25.5,
-   "r": 1.8,
+   "x": 2,
+   "y": 3,
+   "w": 56,
+   "d": 29,
+   "z": 128,
+   "h": 18,
+   "r": 8,
    "explode": [
     0,
     0,
-    192.5
+    44
    ],
-   "mass": 37.24,
+   "mass": 15.6,
+   "materials": [
+    [
+     "pcabs",
+     90
+    ],
+    [
+     "stahl",
+     10
+    ]
+   ],
+   "info": "Kunststoffrahmen, der die Folie spannt. Seitliche Tasten drücken und den Kopf nach oben abheben.",
+   "color": "#3C4248",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 5,
+     "w": 48,
+     "d": 19,
+     "r": 6,
+     "fill": "#2E3338"
+    }
+   ]
+  },
+  {
+   "id": "klingenblock",
+   "component_id": "shaver_foil_head",
+   "material_id": "steel",
+   "name": "Klingenblock",
+   "short": "Klingen",
+   "shape": "box",
+   "x": 8,
+   "y": 11,
+   "w": 44,
+   "d": 13,
+   "z": 124,
+   "h": 14,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    22
+   ],
+   "mass": 11.1,
+   "materials": [
+    [
+     "stahl",
+     85
+    ],
+    [
+     "pcabs",
+     15
+    ]
+   ],
+   "info": "Viele kleine Stahlklingen, die unter der Folie hin- und herschwingen und die Haare abschneiden. Scharf, nicht mit den Fingern abwischen.",
+   "color": "#B8BEC4",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 2,
+     "w": 1,
+     "d": 9,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 2,
+     "w": 1,
+     "d": 9,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "box",
+     "x": 6,
+     "y": 2,
+     "w": 1,
+     "d": 9,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "box",
+     "x": 8,
+     "y": 2,
+     "w": 1,
+     "d": 9,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 2,
+     "w": 1,
+     "d": 9,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "box",
+     "x": 12,
+     "y": 2,
+     "w": 1,
+     "d": 9,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "box",
+     "x": 14,
+     "y": 2,
+     "w": 1,
+     "d": 9,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "box",
+     "x": 16,
+     "y": 2,
+     "w": 1,
+     "d": 9,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "box",
+     "x": 18,
+     "y": 2,
+     "w": 1,
+     "d": 9,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "box",
+     "x": 20,
+     "y": 2,
+     "w": 1,
+     "d": 9,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "box",
+     "x": 22,
+     "y": 2,
+     "w": 1,
+     "d": 9,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "box",
+     "x": 24,
+     "y": 2,
+     "w": 1,
+     "d": 9,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "box",
+     "x": 26,
+     "y": 2,
+     "w": 1,
+     "d": 9,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "box",
+     "x": 28,
+     "y": 2,
+     "w": 1,
+     "d": 9,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "box",
+     "x": 30,
+     "y": 2,
+     "w": 1,
+     "d": 9,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "box",
+     "x": 32,
+     "y": 2,
+     "w": 1,
+     "d": 9,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "box",
+     "x": 34,
+     "y": 2,
+     "w": 1,
+     "d": 9,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "box",
+     "x": 36,
+     "y": 2,
+     "w": 1,
+     "d": 9,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "box",
+     "x": 38,
+     "y": 2,
+     "w": 1,
+     "d": 9,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "box",
+     "x": 40,
+     "y": 2,
+     "w": 1,
+     "d": 9,
+     "fill": "#7C858C"
+    }
+   ]
+  },
+  {
+   "id": "antrieb",
+   "component_id": "electric_motor",
+   "material_id": "abs",
+   "name": "Antriebsbrücke",
+   "short": "Antrieb",
+   "shape": "box",
+   "x": 12,
+   "y": 8,
+   "w": 36,
+   "d": 18,
+   "z": 112,
+   "h": 12,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    10
+   ],
+   "mass": 6.7,
+   "materials": [
+    [
+     "pcabs",
+     70
+    ],
+    [
+     "stahl",
+     30
+    ]
+   ],
+   "info": "Wandelt die Drehung des Motors über einen Exzenter in eine Hin-und-Her-Bewegung um. Kunststoff mit Stahlstift.",
+   "color": "#5F6B75",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 14,
+     "y": 5,
+     "w": 8,
+     "fill": "#9AA2A6"
+    }
+   ]
+  },
+  {
+   "id": "motor",
+   "component_id": "electric_motor",
+   "material_id": "mixed_electronics",
+   "name": "Gleichstrommotor",
+   "short": "Motor",
+   "shape": "cyl",
+   "x": 18,
+   "y": 6,
+   "w": 24,
+   "d": 20,
+   "z": 75,
+   "h": 35,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 38.9,
+   "materials": [
+    [
+     "stahl",
+     45
+    ],
+    [
+     "kupfer",
+     25
+    ],
+    [
+     "ferrit",
+     20
+    ],
+    [
+     "pcabs",
+     10
+    ]
+   ],
+   "info": "Kleiner Gleichstrommotor mit Kupferwicklung und Ferritmagnet. An die Platine gelötet; Lötfahnen mit einer Zange abknipsen.",
+   "color": "#9AA2A6",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 9,
+     "y": 7,
+     "w": 6,
+     "fill": "#7C858C"
+    }
+   ]
+  },
+  {
+   "id": "akku",
+   "component_id": "li_ion_battery",
+   "material_id": "li_ion",
+   "name": "Lithium-Ionen-Akku (14500)",
+   "short": "Akku",
+   "shape": "cyl",
+   "x": 23,
+   "y": 10,
+   "w": 14,
+   "z": 15,
+   "h": 50,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 24.4,
    "materials": [
     [
      "lco",
@@ -226,74 +970,182 @@
      10
     ]
    ],
-   "material_id": "li_ion",
-   "info": "Never puncture or bend it; tape the contacts and bring it to a battery collection point."
+   "info": "Rundzelle mit etwa 800 mAh, an die Platine gelötet. Nie anstechen oder biegen; Pole abkleben und zur Batteriesammelstelle bringen.",
+   "color": "#2E86C1",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 4,
+     "w": 6,
+     "fill": "#9AA2A6"
+    }
+   ]
   },
   {
-   "id": "electric_motor",
-   "component_id": "electric_motor",
-   "name": "Electric Motor",
-   "short": "Electric Motor",
-   "shape": "cyl",
-   "x": 7.7,
-   "y": 3.2,
-   "w": 14.7,
-   "h": 52.5,
-   "z": 25.5,
+   "id": "platine",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "Ladeelektronik",
+   "short": "Platine",
+   "shape": "box",
+   "x": 8,
+   "y": 27,
+   "w": 44,
+   "d": 3,
+   "z": 10,
+   "h": 100,
+   "r": 0.5,
    "explode": [
     0,
-    0,
-    121.0
+    30,
+    0
    ],
-   "mass": 37.24,
+   "mass": 13.3,
    "materials": [
     [
-     "chip",
-     30
+     "fr4",
+     55
     ],
     [
      "kupfer",
-     30
+     20
     ],
+    [
+     "chip",
+     15
+    ],
+    [
+     "lot",
+     10
+    ]
+   ],
+   "info": "Steuert Laden und Motor und trägt die Ladeanzeige. Mit Akku und Motor verlötet, kommt zum Elektroschrott.",
+   "color": "#2F6B3A",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 18,
+     "y": 0.5,
+     "w": 8,
+     "d": 2,
+     "r": 0.5,
+     "fill": "#222"
+    }
+   ]
+  },
+  {
+   "id": "vorderschale",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Vordere Gehäuseschale",
+   "short": "Vorderschale",
+   "shape": "box",
+   "x": 0,
+   "y": 17,
+   "w": 60,
+   "d": 18,
+   "z": 0,
+   "h": 128,
+   "r": 8,
+   "explode": [
+    0,
+    60,
+    0
+   ],
+   "mass": 33.3,
+   "materials": [
     [
      "pcabs",
-     25
+     85
     ],
     [
-     "stahl",
+     "tpe",
      15
     ]
    ],
-   "material_id": "mixed_electronics",
-   "info": "Unscrew from the housing and cut the wires; contains copper windings and magnets."
+   "info": "Vorderseite mit gummierter Griffzone und Fenster für die Ladeanzeige. Verclipst; mit einem Kunststoffhebel aufziehen.",
+   "color": "#2E3338",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 8,
+     "y": 4,
+     "w": 44,
+     "d": 10,
+     "r": 4,
+     "fill": "#1E2226"
+    }
+   ]
   },
   {
-   "id": "plastic_housing",
+   "id": "taste",
    "component_id": "plastic_housing",
-   "name": "Plastic Housing",
-   "short": "Plastic Housing",
+   "material_id": "abs",
+   "name": "Ein-/Aus-Taste",
+   "short": "Taste",
    "shape": "box",
-   "x": 0,
-   "y": 0,
-   "w": 60.0,
-   "d": 35.0,
-   "h": 127.5,
-   "z": 0.0,
-   "r": 4.2,
+   "x": 22,
+   "y": 35,
+   "w": 16,
+   "d": 3,
+   "z": 70,
+   "h": 20,
+   "r": 1,
    "explode": [
     0,
-    0,
+    85,
     0
    ],
-   "mass": 77.59,
+   "mass": 2.2,
    "materials": [
     [
      "pcabs",
      100
     ]
    ],
+   "info": "Kunststofftaste über dem Schalter auf der Platine. Ist nur eingesetzt.",
+   "color": "#9AA2A6"
+  },
+  {
+   "id": "rueckschale",
+   "component_id": "plastic_housing",
    "material_id": "abs",
-   "info": "Look for hidden screws under rubber feet or labels, then pry the clips open."
+   "name": "Hintere Gehäuseschale",
+   "short": "Rückschale",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 60,
+   "d": 17,
+   "z": 0,
+   "h": 128,
+   "r": 8,
+   "explode": [
+    0,
+    -50,
+    0
+   ],
+   "mass": 31.1,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Rückseite mit Ladebuchse unten. Sie ist mit zwei Schrauben unter dem Scherkopf befestigt.",
+   "color": "#3C4248",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 8,
+     "y": 3,
+     "w": 44,
+     "d": 10,
+     "r": 4,
+     "fill": "#2E3338"
+    }
+   ]
   }
  ]
 }

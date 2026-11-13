@@ -4,7 +4,7 @@
  "name_en": "Hair Straightener",
  "klasse": "Elektroschrott · Kleingerät",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -21,48 +21,51 @@
  "werte": [
   {
    "k": "Rohstoffwert",
-   "v": "≈ 0,83 €",
-   "hint": "Gold, Silber, Kupfer zu Preisen vom 13.11."
+   "v": "≈ 0,67 €",
+   "hint": "Silber, Kupfer zu Preisen vom 13.11."
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 1,58 kg",
+   "v": "≈ 2,04 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 0,81 kg",
-   "hint": "spart 0,77 kg, wenn recycelte Materialien eingesetzt werden"
+   "v": "≈ 1,04 kg",
+   "hint": "spart 1,00 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Ni": 33936.0,
-   "Cu": 14852.0,
-   "Ag": 5.3,
-   "Au": 1.27,
-   "Pd": 0.4
+   "Al": 71000.0,
+   "Cu": 28440.0,
+   "Fe": 14896.0,
+   "Ag": 3.8,
+   "Au": 0.91,
+   "Pd": 0.29
   },
   "herkunft": {
-   "Ni": "Modellmassen (Schätzung)",
+   "Al": "Modellmassen (Schätzung)",
    "Cu": "Modellmassen (Schätzung)",
-   "Ag": "21 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)",
-   "Au": "21 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)",
-   "Pd": "21 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)"
+   "Fe": "Modellmassen (Schätzung)",
+   "Ag": "15 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)",
+   "Au": "15 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)",
+   "Pd": "15 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)"
   },
   "materialien_g": {
-   "ceramic": 176.8,
-   "abs": 88.4,
-   "nickel_chrome": 42.4,
-   "pcb": 21.2,
-   "copper": 10.6,
-   "pvc": 10.6
+   "pc": 142.0,
+   "aluminium": 71.0,
+   "pvc": 50.7,
+   "ceramic": 30.4,
+   "copper": 25.4,
+   "pcb": 15.2,
+   "steel": 15.2
   },
-  "co2_kg": 1.584,
-  "co2_mit_recyclat_kg": 0.81,
-  "co2_ersparnis_kg": 0.774,
+  "co2_kg": 2.044,
+  "co2_mit_recyclat_kg": 1.04,
+  "co2_ersparnis_kg": 1.004,
   "co2_ohne_faktor": [],
-  "rohstoffwert_eur": 0.83,
+  "rohstoffwert_eur": 0.67,
   "wert_ohne_preis": [],
   "preisstand": "2026-11-13",
   "quellen": {
@@ -110,27 +113,256 @@
   "nicht": "Nicht in Restmüll oder Gelbe Tonne",
   "warnung": "Kabel und Stecker dranlassen."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "circuit_board",
-   "component_id": "circuit_board",
-   "name": "Circuit Board",
-   "short": "Circuit Board",
+   "id": "oberarm",
+   "component_id": "plastic_housing",
+   "material_id": "pc",
+   "name": "Oberer Arm",
+   "short": "Oberarm",
    "shape": "box",
-   "x": 16.2,
-   "y": 27.0,
-   "w": 12.6,
-   "d": 126.0,
-   "h": 12.25,
-   "z": 7.0,
-   "r": 1.5,
+   "x": 0,
+   "y": 10,
+   "w": 30,
+   "d": 290,
+   "z": 18,
+   "h": 17,
+   "r": 8,
    "explode": [
     0,
     0,
-    238.2
+    138
    ],
-   "mass": 21.21,
+   "mass": 71,
+   "materials": [
+    [
+     "pcabs",
+     90
+    ],
+    [
+     "stahl",
+     10
+    ]
+   ],
+   "info": "Hitzefeste Kunststoffschale mit gefedertem Plattenrahmen. Die Schalen sind verclipst und mit kleinen Schrauben gesichert.",
+   "color": "#2E3338",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 170,
+     "w": 24,
+     "d": 115,
+     "r": 4,
+     "fill": "#3C4248"
+    }
+   ]
+  },
+  {
+   "id": "heizer_oben",
+   "component_id": "heating_element",
+   "material_id": "ceramic",
+   "name": "Heizelement oben",
+   "short": "Heizer oben",
+   "shape": "box",
+   "x": 6,
+   "y": 185,
+   "w": 18,
+   "d": 100,
+   "z": 22,
+   "h": 3,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    106
+   ],
+   "mass": 15.2,
+   "materials": [
+    [
+     "keramik",
+     70
+    ],
+    [
+     "nichrom",
+     15
+    ],
+    [
+     "alu",
+     15
+    ]
+   ],
+   "info": "Keramikheizer mit eingedruckter Heizbahn, erreicht bis 230 Grad. Erst ganz abkühlen lassen, dann ablösen.",
+   "color": "#E9E1D0",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 4,
+     "w": 14,
+     "d": 92,
+     "r": 1,
+     "fill": "#C4672D"
+    }
+   ]
+  },
+  {
+   "id": "platte_oben",
+   "component_id": "ceramic_plates",
+   "material_id": "aluminium",
+   "name": "Heizplatte oben",
+   "short": "Platte oben",
+   "shape": "box",
+   "x": 3,
+   "y": 180,
+   "w": 24,
+   "d": 110,
+   "z": 18,
+   "h": 4,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    81
+   ],
+   "mass": 35.5,
+   "materials": [
+    [
+     "alu",
+     88
+    ],
+    [
+     "keramik",
+     12
+    ]
+   ],
+   "info": "Aluminiumplatte mit Keramikbeschichtung, die die Haare glättet. Nach dem Abkühlen aus dem Federrahmen hebeln.",
+   "color": "#D5D0C8",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 4,
+     "w": 20,
+     "d": 102,
+     "r": 2,
+     "fill": "#E8E4DD"
+    }
+   ]
+  },
+  {
+   "id": "platte_unten",
+   "component_id": "ceramic_plates",
+   "material_id": "aluminium",
+   "name": "Heizplatte unten",
+   "short": "Platte unten",
+   "shape": "box",
+   "x": 3,
+   "y": 180,
+   "w": 24,
+   "d": 110,
+   "z": 13,
+   "h": 4,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    57
+   ],
+   "mass": 35.5,
+   "materials": [
+    [
+     "alu",
+     88
+    ],
+    [
+     "keramik",
+     12
+    ]
+   ],
+   "info": "Aluminiumplatte mit Keramikbeschichtung, die die Haare glättet. Nach dem Abkühlen aus dem Federrahmen hebeln.",
+   "color": "#D5D0C8",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 4,
+     "w": 20,
+     "d": 102,
+     "r": 2,
+     "fill": "#E8E4DD"
+    }
+   ]
+  },
+  {
+   "id": "heizer_unten",
+   "component_id": "heating_element",
+   "material_id": "ceramic",
+   "name": "Heizelement unten",
+   "short": "Heizer unten",
+   "shape": "box",
+   "x": 6,
+   "y": 185,
+   "w": 18,
+   "d": 100,
+   "z": 10,
+   "h": 3,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    32
+   ],
+   "mass": 15.2,
+   "materials": [
+    [
+     "keramik",
+     70
+    ],
+    [
+     "nichrom",
+     15
+    ],
+    [
+     "alu",
+     15
+    ]
+   ],
+   "info": "Keramikheizer mit eingedruckter Heizbahn, erreicht bis 230 Grad. Erst ganz abkühlen lassen, dann ablösen.",
+   "color": "#E9E1D0",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 4,
+     "w": 14,
+     "d": 92,
+     "r": 1,
+     "fill": "#C4672D"
+    }
+   ]
+  },
+  {
+   "id": "platine",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "Steuerplatine mit Tasten",
+   "short": "Platine",
+   "shape": "box",
+   "x": 5,
+   "y": 60,
+   "w": 20,
+   "d": 110,
+   "z": 4,
+   "h": 6,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    38
+   ],
+   "mass": 15.2,
    "materials": [
     [
      "fr4",
@@ -149,148 +381,187 @@
      10
     ]
    ],
-   "material_id": "pcb",
-   "info": "Unscrew and unplug all ribbon cables; hand in at an e-waste collection point."
+   "info": "Regelt die Temperatur und schaltet nach einer Stunde automatisch ab. Mit Tasten und Anzeige verlötet, kommt zum Elektroschrott.",
+   "color": "#2F6B3A",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 5,
+     "y": 70,
+     "w": 10,
+     "d": 20,
+     "r": 1,
+     "fill": "#222"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 20,
+     "w": 12,
+     "d": 30,
+     "r": 2,
+     "fill": "#E0E4E7"
+    },
+    {
+     "shape": "box",
+     "x": 5,
+     "y": 95,
+     "w": 10,
+     "d": 8,
+     "r": 1,
+     "fill": "#E74C3C"
+    }
+   ]
   },
   {
-   "id": "heating_element",
-   "component_id": "heating_element",
-   "name": "Heating Element",
-   "short": "Heating Element",
-   "shape": "box",
-   "x": 1.2,
-   "y": 27.0,
-   "w": 12.6,
-   "d": 126.0,
-   "h": 12.25,
-   "z": 7.0,
-   "r": 1.5,
-   "explode": [
-    0,
-    0,
-    160.0
-   ],
-   "mass": 42.42,
-   "materials": [
-    [
-     "nichrom",
-     100
-    ]
-   ],
-   "material_id": "nickel_chrome",
-   "info": "Unplug and let it cool down fully before opening the housing."
-  },
-  {
-   "id": "ceramic_plates",
-   "component_id": "ceramic_plates",
-   "name": "Ceramic Plates",
-   "short": "Ceramic Plates",
+   "id": "unterarm",
+   "component_id": "plastic_housing",
+   "material_id": "pc",
+   "name": "Unterer Arm mit Bedienfeld",
+   "short": "Unterarm",
    "shape": "box",
    "x": 0,
-   "y": 0,
-   "w": 30.0,
-   "d": 300.0,
-   "h": 17.5,
-   "z": 17.5,
-   "r": 3.6,
+   "y": 10,
+   "w": 30,
+   "d": 290,
+   "z": 0,
+   "h": 17,
+   "r": 8,
    "explode": [
     0,
     0,
-    66.0
+    0
    ],
-   "mass": 176.77,
+   "mass": 71,
    "materials": [
     [
-     "keramik",
-     100
+     "pcabs",
+     90
+    ],
+    [
+     "stahl",
+     10
     ]
    ],
-   "material_id": "ceramic",
-   "info": "Let it cool down fully, then unclip the plate frame from each arm."
+   "info": "Untere Schale mit Ein-Taste und Temperaturtasten, innen die Platine. Zuerst die Platten ausbauen, dann die Schale öffnen.",
+   "color": "#2E3338",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 6,
+     "y": 80,
+     "w": 18,
+     "d": 40,
+     "r": 4,
+     "fill": "#1E2226"
+    }
+   ]
   },
   {
-   "id": "cable_copper_core",
-   "component_id": "cable_copper_core",
-   "name": "Cable Wires",
-   "short": "Cable Wires",
+   "id": "gelenk",
+   "component_id": "plastic_housing",
+   "material_id": "steel",
+   "name": "Federgelenk mit Verriegelung",
+   "short": "Gelenk",
    "shape": "box",
-   "x": 31.8,
-   "y": 15.0,
-   "w": 3.0,
-   "d": 270.0,
-   "h": 3.0,
-   "z": 3.5,
-   "r": 0.4,
+   "x": 3,
+   "y": 2,
+   "w": 24,
+   "d": 28,
+   "z": 8,
+   "h": 20,
+   "r": 4,
    "explode": [
-    25.5,
     0,
-    19.8
+    -50,
+    0
    ],
-   "mass": 10.61,
+   "mass": 15.2,
+   "materials": [
+    [
+     "stahl",
+     60
+    ],
+    [
+     "pcabs",
+     40
+    ]
+   ],
+   "info": "Achse mit Stahlfeder, die die Arme aufdrückt, und Schiebeverriegelung. Feder kann beim Ausbau herausspringen.",
+   "color": "#9AA2A6"
+  },
+  {
+   "id": "kabel",
+   "component_id": "cable_insulation",
+   "material_id": "pvc",
+   "name": "Netzkabel mit Drehgelenk",
+   "short": "Kabel",
+   "shape": "box",
+   "x": 11,
+   "y": 0,
+   "w": 8,
+   "d": 60,
+   "z": 13,
+   "h": 8,
+   "r": 4,
+   "explode": [
+    40,
+    0,
+    0
+   ],
+   "mass": 50.7,
+   "materials": [
+    [
+     "pvc",
+     85
+    ],
+    [
+     "pcabs",
+     15
+    ]
+   ],
+   "info": "Etwa 2 m Kabel mit 360-Grad-Drehgelenk, damit es sich nicht verdreht. Längs aufschlitzen, um die Kupferadern freizulegen.",
+   "color": "#2E3338",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 0,
+     "w": 6,
+     "d": 10,
+     "r": 2,
+     "fill": "#555"
+    }
+   ]
+  },
+  {
+   "id": "kupferadern",
+   "component_id": "cable_copper_core",
+   "material_id": "copper",
+   "name": "Kupferadern",
+   "short": "Kupferadern",
+   "shape": "box",
+   "x": 13.5,
+   "y": 0,
+   "w": 3,
+   "d": 60,
+   "z": 15.5,
+   "h": 3,
+   "r": 1,
+   "explode": [
+    40,
+    0,
+    12
+   ],
+   "mass": 25.4,
    "materials": [
     [
      "kupfer",
      100
     ]
    ],
-   "material_id": "copper",
-   "info": "Cut off the plug and strip the insulation to free the copper."
-  },
-  {
-   "id": "cable_insulation",
-   "component_id": "cable_insulation",
-   "name": "Cable Insulation",
-   "short": "Cable Insulation",
-   "shape": "box",
-   "x": 37.8,
-   "y": 15.0,
-   "w": 3.0,
-   "d": 270.0,
-   "h": 3.0,
-   "z": 3.5,
-   "r": 0.4,
-   "explode": [
-    30.0,
-    0,
-    19.8
-   ],
-   "mass": 10.61,
-   "materials": [
-    [
-     "pvc",
-     100
-    ]
-   ],
-   "material_id": "pvc",
-   "info": "Slit lengthwise with a cable stripper to separate it from the wires."
-  },
-  {
-   "id": "plastic_housing",
-   "component_id": "plastic_housing",
-   "name": "Plastic Housing",
-   "short": "Plastic Housing",
-   "shape": "box",
-   "x": 0,
-   "y": 0,
-   "w": 30.0,
-   "d": 300.0,
-   "h": 17.5,
-   "z": 0.0,
-   "r": 3.6,
-   "explode": [
-    0,
-    0,
-    0
-   ],
-   "mass": 88.38,
-   "materials": [
-    [
-     "pcabs",
-     100
-    ]
-   ],
-   "material_id": "abs",
-   "info": "Look for hidden screws under rubber feet or labels, then pry the clips open."
+   "info": "Zwei Kupferadern aus feiner Litze. Kupfer lässt sich fast verlustfrei wiederverwerten.",
+   "color": "#B87333"
   }
  ]
 }

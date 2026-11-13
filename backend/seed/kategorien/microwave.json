@@ -4,7 +4,7 @@
  "name_en": "Microwave Oven",
  "klasse": "Elektroschrott · Großgerät",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -21,49 +21,50 @@
  "werte": [
   {
    "k": "Rohstoffwert",
-   "v": "≈ 16,2 €",
+   "v": "≈ 17,5 €",
    "hint": "Gold, Silber, Palladium zu Preisen vom 13.11. Ohne Palladium (kein Preis)."
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 52,1 kg",
+   "v": "≈ 42,5 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 35,7 kg",
-   "hint": "spart 16,4 kg, wenn recycelte Materialien eingesetzt werden"
+   "v": "≈ 28,7 kg",
+   "hint": "spart 13,9 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Fe": 5861538.0,
-   "Cu": 899998.0,
-   "Ag": 173.0,
-   "Au": 42.0,
-   "Pd": 13.0
+   "Fe": 5322176.0,
+   "Cu": 1314380.0,
+   "Ag": 31.0,
+   "Au": 7.46,
+   "Pd": 2.36
   },
   "herkunft": {
    "Fe": "Modellmassen (Schätzung)",
    "Cu": "Modellmassen (Schätzung)",
-   "Ag": "692 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)",
-   "Au": "692 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)",
-   "Pd": "692 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)"
+   "Ag": "124 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)",
+   "Au": "124 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)",
+   "Pd": "124 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)"
   },
   "materialien_g": {
-   "steel": 5769.2,
-   "special_glass": 2307.7,
-   "mixed_electronics": 1384.6,
-   "abs": 1153.8,
-   "pcb": 692.3,
-   "copper": 346.1,
-   "pvc": 346.1
+   "steel": 4806.7,
+   "mixed_electronics": 4077.4,
+   "abs": 1740.3,
+   "special_glass": 994.5,
+   "pcb": 124.3,
+   "pvc": 124.3,
+   "pp": 66.3,
+   "copper": 66.3
   },
-  "co2_kg": 52.148,
-  "co2_mit_recyclat_kg": 35.744,
-  "co2_ersparnis_kg": 16.404,
+  "co2_kg": 42.547,
+  "co2_mit_recyclat_kg": 28.685,
+  "co2_ersparnis_kg": 13.862,
   "co2_ohne_faktor": [],
-  "rohstoffwert_eur": 16.24,
+  "rohstoffwert_eur": 17.47,
   "wert_ohne_preis": [
    "Pd"
   ],
@@ -113,111 +114,835 @@
   "nicht": "Nicht in Restmüll oder Sperrmüll",
   "warnung": "Nicht selbst ausschlachten."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "plastic_front_panel",
-   "component_id": "plastic_front_panel",
-   "name": "Front Panel",
-   "short": "Front Panel",
+   "id": "haube",
+   "component_id": "steel_microwave_cavity",
+   "material_id": "steel",
+   "name": "Gehäusehaube (Stahlblech)",
+   "short": "Haube",
    "shape": "box",
-   "x": 9.0,
-   "y": 7.0,
-   "w": 432.0,
-   "d": 336.0,
-   "h": 15.6,
-   "z": 223.6,
-   "r": 40.3,
+   "x": 0,
+   "y": 0,
+   "w": 450,
+   "d": 325,
+   "z": 10,
+   "h": 250,
+   "r": 4,
    "explode": [
     0,
     0,
-    940.4
+    399
    ],
-   "mass": 1153.85,
+   "mass": 1657.5,
    "materials": [
     [
-     "pcabs",
-     100
+     "stahl",
+     97
+    ],
+    [
+     "druck",
+     3
     ]
    ],
-   "material_id": "abs",
-   "info": "Pull firmly at the bottom edge; it is held by plastic clips."
+   "info": "Lackiertes Stahlblech, U-förmig über das Gerät gebogen und hinten verschraubt. Nie selbst öffnen: Der Hochspannungskondensator kann auch ausgesteckt noch tödliche Spannung speichern; nur der Wertstoffhof bzw. die Elektroschrott-Annahme darf das Gerät zerlegen.",
+   "color": "#E4E7EA",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 345,
+     "y": 40,
+     "w": 90,
+     "d": 6,
+     "r": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "box",
+     "x": 345,
+     "y": 54,
+     "w": 90,
+     "d": 6,
+     "r": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "box",
+     "x": 345,
+     "y": 68,
+     "w": 90,
+     "d": 6,
+     "r": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "box",
+     "x": 345,
+     "y": 82,
+     "w": 90,
+     "d": 6,
+     "r": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "box",
+     "x": 345,
+     "y": 96,
+     "w": 90,
+     "d": 6,
+     "r": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "box",
+     "x": 345,
+     "y": 110,
+     "w": 90,
+     "d": 6,
+     "r": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "box",
+     "x": 345,
+     "y": 124,
+     "w": 90,
+     "d": 6,
+     "r": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "box",
+     "x": 345,
+     "y": 138,
+     "w": 90,
+     "d": 6,
+     "r": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "box",
+     "x": 345,
+     "y": 152,
+     "w": 90,
+     "d": 6,
+     "r": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "box",
+     "x": 345,
+     "y": 166,
+     "w": 90,
+     "d": 6,
+     "r": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "box",
+     "x": 345,
+     "y": 180,
+     "w": 90,
+     "d": 6,
+     "r": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "box",
+     "x": 345,
+     "y": 194,
+     "w": 90,
+     "d": 6,
+     "r": 2,
+     "fill": "#B8BEC4"
+    }
+   ]
   },
   {
-   "id": "glass_turntable",
+   "id": "drehteller",
    "component_id": "glass_turntable",
-   "name": "Turntable",
-   "short": "Turntable",
-   "shape": "box",
-   "x": 9.0,
-   "y": 7.0,
-   "w": 432.0,
-   "d": 336.0,
-   "h": 15.6,
-   "z": 208.0,
-   "r": 40.3,
+   "material_id": "special_glass",
+   "name": "Drehteller (Glas)",
+   "short": "Drehteller",
+   "shape": "cyl",
+   "x": 25,
+   "y": 25,
+   "w": 290,
+   "z": 48,
+   "h": 6,
    "explode": [
     0,
     0,
-    780.4
+    325
    ],
-   "mass": 2307.69,
+   "mass": 994.5,
    "materials": [
     [
      "glas",
      100
     ]
    ],
-   "material_id": "special_glass",
-   "info": "Lift it out; heat-resistant glass must not go in the glass bin."
+   "info": "Hitzebeständiges Glas, einfach herausheben. Gehört nicht in den Altglascontainer, sondern in den Restmüll oder wird weiterverwendet.",
+   "color": "#CFE3EA",
+   "opacity": 0.65,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 20,
+     "y": 20,
+     "w": 250,
+     "fill": "#BBD3DC"
+    }
+   ]
   },
   {
-   "id": "steel_microwave_cavity_ober",
-   "component_id": "steel_microwave_cavity",
-   "name": "Cavity (Oberteil)",
-   "short": "Cavity (Oberteil)",
-   "shape": "box",
-   "x": 0,
-   "y": 0,
-   "w": 450.0,
-   "d": 350.0,
-   "h": 52.0,
-   "z": 156.0,
-   "r": 42.0,
+   "id": "rollenring",
+   "component_id": "glass_turntable",
+   "material_id": "pp",
+   "name": "Rollenring",
+   "short": "Rollenring",
+   "shape": "cyl",
+   "x": 95,
+   "y": 95,
+   "w": 150,
+   "z": 40,
+   "h": 8,
    "explode": [
     0,
     0,
-    620.4
+    295
    ],
-   "mass": 1730.77,
+   "mass": 66.3,
+   "materials": [
+    [
+     "pp",
+     70
+    ],
+    [
+     "nylon",
+     30
+    ]
+   ],
+   "info": "Kunststoffring mit drei Rollen, auf dem der Drehteller läuft. Reiner Kunststoff, zum Spülen herausnehmen.",
+   "color": "#9AA2A6",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 15,
+     "y": 15,
+     "w": 120,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 68,
+     "y": 0,
+     "w": 14,
+     "fill": "#2E3338"
+    },
+    {
+     "shape": "cyl",
+     "x": 6,
+     "y": 100,
+     "w": 14,
+     "fill": "#2E3338"
+    },
+    {
+     "shape": "cyl",
+     "x": 130,
+     "y": 100,
+     "w": 14,
+     "fill": "#2E3338"
+    }
+   ]
+  },
+  {
+   "id": "garraum",
+   "component_id": "steel_microwave_cavity",
+   "material_id": "steel",
+   "name": "Garraum (Stahlblech)",
+   "short": "Garraum",
+   "shape": "box",
+   "x": 15,
+   "y": 15,
+   "w": 310,
+   "d": 305,
+   "z": 30,
+   "h": 215,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    60
+   ],
+   "mass": 2486.2,
    "materials": [
     [
      "stahl",
      100
     ]
    ],
-   "material_id": "steel",
-   "info": "Leave opening to an e-waste centre: the capacitor inside can hold a lethal charge even when unplugged."
+   "info": "Innenraum aus beschichtetem Stahlblech, der die Mikrowellen einschließt. Ist mit dem Gehäuserahmen vernietet und kommt ins Altmetall.",
+   "color": "#C9CED2",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 250,
+     "y": 120,
+     "w": 50,
+     "d": 60,
+     "r": 2,
+     "fill": "#B5A57A"
+    },
+    {
+     "shape": "cyl",
+     "x": 30,
+     "y": 30,
+     "w": 6,
+     "d": 6,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 42,
+     "y": 30,
+     "w": 6,
+     "d": 6,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 54,
+     "y": 30,
+     "w": 6,
+     "d": 6,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 66,
+     "y": 30,
+     "w": 6,
+     "d": 6,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 78,
+     "y": 30,
+     "w": 6,
+     "d": 6,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 90,
+     "y": 30,
+     "w": 6,
+     "d": 6,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 30,
+     "y": 42,
+     "w": 6,
+     "d": 6,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 42,
+     "y": 42,
+     "w": 6,
+     "d": 6,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 54,
+     "y": 42,
+     "w": 6,
+     "d": 6,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 66,
+     "y": 42,
+     "w": 6,
+     "d": 6,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 78,
+     "y": 42,
+     "w": 6,
+     "d": 6,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 90,
+     "y": 42,
+     "w": 6,
+     "d": 6,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 30,
+     "y": 54,
+     "w": 6,
+     "d": 6,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 42,
+     "y": 54,
+     "w": 6,
+     "d": 6,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 54,
+     "y": 54,
+     "w": 6,
+     "d": 6,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 66,
+     "y": 54,
+     "w": 6,
+     "d": 6,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 78,
+     "y": 54,
+     "w": 6,
+     "d": 6,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 90,
+     "y": 54,
+     "w": 6,
+     "d": 6,
+     "fill": "#9AA2A6"
+    }
+   ]
   },
   {
-   "id": "circuit_board",
-   "component_id": "circuit_board",
-   "name": "Circuit Board",
-   "short": "Circuit Board",
-   "shape": "box",
-   "x": 243.0,
-   "y": 31.5,
-   "w": 189.0,
-   "d": 147.0,
-   "h": 70.2,
-   "z": 31.2,
-   "r": 17.6,
+   "id": "drehtellermotor",
+   "component_id": "glass_turntable",
+   "material_id": "mixed_electronics",
+   "name": "Drehtellermotor",
+   "short": "Tellermotor",
+   "shape": "cyl",
+   "x": 150,
+   "y": 150,
+   "w": 40,
+   "z": 10,
+   "h": 20,
    "explode": [
     0,
     0,
-    515.0
+    30
    ],
-   "mass": 692.31,
+   "mass": 99.4,
+   "materials": [
+    [
+     "kupfer",
+     25
+    ],
+    [
+     "stahl",
+     35
+    ],
+    [
+     "pcabs",
+     30
+    ],
+    [
+     "nylon",
+     10
+    ]
+   ],
+   "info": "Kleiner Synchronmotor unter dem Garraum, dreht den Teller mit 5 Umdrehungen pro Minute. Enthält eine Kupferspule und ein Kunststoffgetriebe.",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 6,
+     "y": 6,
+     "w": 28,
+     "fill": "#B87333"
+    },
+    {
+     "shape": "cyl",
+     "x": 16,
+     "y": 16,
+     "w": 8,
+     "fill": "#9AA2A6"
+    }
+   ]
+  },
+  {
+   "id": "magnetron",
+   "component_id": "magnetron",
+   "material_id": "mixed_electronics",
+   "name": "Magnetron",
+   "short": "Magnetron",
+   "shape": "box",
+   "x": 340,
+   "y": 70,
+   "w": 90,
+   "d": 100,
+   "z": 120,
+   "h": 90,
+   "r": 4,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 745.9,
+   "materials": [
+    [
+     "stahl",
+     35
+    ],
+    [
+     "kupfer",
+     25
+    ],
+    [
+     "ferrit",
+     20
+    ],
+    [
+     "keramik",
+     10
+    ],
+    [
+     "alu",
+     10
+    ]
+   ],
+   "info": "Erzeugt die Mikrowellen; hat Kühlrippen aus Aluminium und zwei starke Ferritmagnete. Die Keramik innen kann giftiges Berylliumoxid enthalten, darum nie aufbrechen.",
+   "color": "#B8BEC4",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 5,
+     "y": 5,
+     "w": 80,
+     "d": 4,
+     "r": 1,
+     "fill": "#D5DADE"
+    },
+    {
+     "shape": "box",
+     "x": 5,
+     "y": 13,
+     "w": 80,
+     "d": 4,
+     "r": 1,
+     "fill": "#D5DADE"
+    },
+    {
+     "shape": "box",
+     "x": 5,
+     "y": 21,
+     "w": 80,
+     "d": 4,
+     "r": 1,
+     "fill": "#D5DADE"
+    },
+    {
+     "shape": "box",
+     "x": 5,
+     "y": 29,
+     "w": 80,
+     "d": 4,
+     "r": 1,
+     "fill": "#D5DADE"
+    },
+    {
+     "shape": "box",
+     "x": 5,
+     "y": 37,
+     "w": 80,
+     "d": 4,
+     "r": 1,
+     "fill": "#D5DADE"
+    },
+    {
+     "shape": "box",
+     "x": 5,
+     "y": 45,
+     "w": 80,
+     "d": 4,
+     "r": 1,
+     "fill": "#D5DADE"
+    },
+    {
+     "shape": "box",
+     "x": 5,
+     "y": 53,
+     "w": 80,
+     "d": 4,
+     "r": 1,
+     "fill": "#D5DADE"
+    },
+    {
+     "shape": "box",
+     "x": 5,
+     "y": 61,
+     "w": 80,
+     "d": 4,
+     "r": 1,
+     "fill": "#D5DADE"
+    },
+    {
+     "shape": "box",
+     "x": 5,
+     "y": 69,
+     "w": 80,
+     "d": 4,
+     "r": 1,
+     "fill": "#D5DADE"
+    },
+    {
+     "shape": "box",
+     "x": 5,
+     "y": 77,
+     "w": 80,
+     "d": 4,
+     "r": 1,
+     "fill": "#D5DADE"
+    },
+    {
+     "shape": "box",
+     "x": 5,
+     "y": 85,
+     "w": 80,
+     "d": 4,
+     "r": 1,
+     "fill": "#D5DADE"
+    },
+    {
+     "shape": "box",
+     "x": 5,
+     "y": 93,
+     "w": 80,
+     "d": 4,
+     "r": 1,
+     "fill": "#D5DADE"
+    },
+    {
+     "shape": "cyl",
+     "x": 30,
+     "y": 35,
+     "w": 30,
+     "fill": "#7C858C"
+    }
+   ]
+  },
+  {
+   "id": "luefter",
+   "component_id": "magnetron",
+   "material_id": "mixed_electronics",
+   "name": "Kühllüfter",
+   "short": "Lüfter",
+   "shape": "box",
+   "x": 345,
+   "y": 25,
+   "w": 95,
+   "d": 30,
+   "z": 130,
+   "h": 90,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 124.3,
+   "materials": [
+    [
+     "pp",
+     40
+    ],
+    [
+     "kupfer",
+     25
+    ],
+    [
+     "stahl",
+     35
+    ]
+   ],
+   "info": "Bläst Luft über das Magnetron und durch den Garraum. Der Motor hat eine Kupferwicklung.",
+   "color": "#5F6B75",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 30,
+     "y": 2,
+     "w": 35,
+     "d": 26,
+     "r": 4,
+     "fill": "#B87333"
+    }
+   ]
+  },
+  {
+   "id": "kondensator",
+   "component_id": "magnetron",
+   "material_id": "mixed_electronics",
+   "name": "Hochspannungskondensator",
+   "short": "HV-Kondensator",
+   "shape": "box",
+   "x": 345,
+   "y": 15,
+   "w": 50,
+   "d": 40,
+   "z": 10,
+   "h": 60,
+   "r": 14,
+   "explode": [
+    0,
+    0,
+    30
+   ],
+   "mass": 207.2,
+   "materials": [
+    [
+     "alu",
+     45
+    ],
+    [
+     "pp",
+     35
+    ],
+    [
+     "stahl",
+     10
+    ],
+    [
+     "kupfer",
+     10
+    ]
+   ],
+   "info": "Speichert über 2000 Volt für das Magnetron und kann auch Tage nach dem Ausstecken noch tödlich sein. Nur die Elektroschrott-Annahme darf ihn ausbauen und entladen.",
+   "color": "#9AA2A6",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 8,
+     "y": 12,
+     "w": 10,
+     "d": 16,
+     "r": 2,
+     "fill": "#D5DADE"
+    },
+    {
+     "shape": "box",
+     "x": 32,
+     "y": 12,
+     "w": 10,
+     "d": 16,
+     "r": 2,
+     "fill": "#D5DADE"
+    }
+   ]
+  },
+  {
+   "id": "trafo",
+   "component_id": "magnetron",
+   "material_id": "mixed_electronics",
+   "name": "Hochspannungstransformator",
+   "short": "HV-Trafo",
+   "shape": "box",
+   "x": 345,
+   "y": 190,
+   "w": 90,
+   "d": 110,
+   "z": 10,
+   "h": 100,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    30
+   ],
+   "mass": 2900.6,
+   "materials": [
+    [
+     "stahl",
+     62
+    ],
+    [
+     "kupfer",
+     33
+    ],
+    [
+     "pcabs",
+     5
+    ]
+   ],
+   "info": "Schwerstes Bauteil: Eisenkern mit dicken Kupferwicklungen, wandelt 230 Volt in etwa 2000 Volt um. Wertvoll für das Metallrecycling.",
+   "color": "#5A6670",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 20,
+     "w": 70,
+     "d": 70,
+     "r": 6,
+     "fill": "#B87333"
+    },
+    {
+     "shape": "box",
+     "x": 25,
+     "y": 35,
+     "w": 40,
+     "d": 40,
+     "r": 2,
+     "fill": "#5A6670"
+    }
+   ]
+  },
+  {
+   "id": "platine",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "Steuerplatine",
+   "short": "Platine",
+   "shape": "box",
+   "x": 340,
+   "y": 305,
+   "w": 105,
+   "d": 17,
+   "z": 40,
+   "h": 200,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 124.3,
    "materials": [
     [
      "fr4",
@@ -236,130 +961,260 @@
      10
     ]
    ],
-   "material_id": "pcb",
-   "info": "Unscrew and unplug all ribbon cables; hand in at an e-waste collection point."
+   "info": "Steuert Zeit, Leistung und Anzeige über Relais. Steckverbinder abziehen; die Platine kommt zum Elektroschrott.",
+   "color": "#2F6B3A",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 4,
+     "w": 25,
+     "d": 9,
+     "r": 1,
+     "fill": "#222"
+    },
+    {
+     "shape": "box",
+     "x": 50,
+     "y": 4,
+     "w": 40,
+     "d": 9,
+     "r": 1,
+     "fill": "#E0E4E7"
+    }
+   ]
   },
   {
-   "id": "magnetron",
-   "component_id": "magnetron",
-   "name": "Magnetron",
-   "short": "Magnetron",
-   "shape": "cyl",
-   "x": 39.0,
-   "y": 31.5,
-   "w": 147.0,
-   "h": 70.2,
-   "z": 31.2,
-   "explode": [
-    0,
-    0,
-    284.8
-   ],
-   "mass": 1384.62,
-   "materials": [
-    [
-     "chip",
-     30
-    ],
-    [
-     "kupfer",
-     30
-    ],
-    [
-     "pcabs",
-     25
-    ],
-    [
-     "stahl",
-     15
-    ]
-   ],
-   "material_id": "mixed_electronics",
-   "info": "Do not remove it yourself; it contains ceramic insulators and strong magnets."
-  },
-  {
-   "id": "cable_copper_core",
-   "component_id": "cable_copper_core",
-   "name": "Cable Wires",
-   "short": "Cable Wires",
-   "shape": "box",
-   "x": 477.0,
-   "y": 17.5,
-   "w": 22.5,
-   "d": 315.0,
-   "h": 20.8,
-   "z": 26.0,
-   "r": 2.7,
-   "explode": [
-    172.5,
-    0,
-    48.0
-   ],
-   "mass": 346.15,
-   "materials": [
-    [
-     "kupfer",
-     100
-    ]
-   ],
-   "material_id": "copper",
-   "info": "Cut off the plug and strip the insulation to free the copper."
-  },
-  {
-   "id": "cable_insulation",
-   "component_id": "cable_insulation",
-   "name": "Cable Insulation",
-   "short": "Cable Insulation",
-   "shape": "box",
-   "x": 522.0,
-   "y": 17.5,
-   "w": 22.5,
-   "d": 315.0,
-   "h": 20.8,
-   "z": 26.0,
-   "r": 2.7,
-   "explode": [
-    240.0,
-    0,
-    48.0
-   ],
-   "mass": 346.15,
-   "materials": [
-    [
-     "pvc",
-     100
-    ]
-   ],
-   "material_id": "pvc",
-   "info": "Slit lengthwise with a cable stripper to separate it from the wires."
-  },
-  {
-   "id": "steel_microwave_cavity",
+   "id": "bodenplatte",
    "component_id": "steel_microwave_cavity",
-   "name": "Cavity (Unterteil)",
-   "short": "Cavity (Unterteil)",
+   "material_id": "steel",
+   "name": "Bodenplatte",
+   "short": "Bodenplatte",
    "shape": "box",
    "x": 0,
    "y": 0,
-   "w": 450.0,
-   "d": 350.0,
-   "h": 156.0,
+   "w": 450,
+   "d": 325,
    "z": 0,
-   "r": 42.0,
+   "h": 10,
+   "r": 2,
    "explode": [
     0,
     0,
     0
    ],
-   "mass": 4038.46,
+   "mass": 663,
    "materials": [
     [
      "stahl",
+     95
+    ],
+    [
+     "gummi",
+     5
+    ]
+   ],
+   "info": "Verzinktes Stahlblech mit vier Gummifüßen, trägt Trafo und Garraum. Kommt ins Altmetall.",
+   "color": "#7C858C",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 15,
+     "y": 15,
+     "w": 20,
+     "d": 20,
+     "fill": "#2E3338"
+    },
+    {
+     "shape": "cyl",
+     "x": 415,
+     "y": 15,
+     "w": 20,
+     "d": 20,
+     "fill": "#2E3338"
+    },
+    {
+     "shape": "cyl",
+     "x": 15,
+     "y": 290,
+     "w": 20,
+     "d": 20,
+     "fill": "#2E3338"
+    },
+    {
+     "shape": "cyl",
+     "x": 415,
+     "y": 290,
+     "w": 20,
+     "d": 20,
+     "fill": "#2E3338"
+    }
+   ]
+  },
+  {
+   "id": "tuer",
+   "component_id": "plastic_front_panel",
+   "material_id": "abs",
+   "name": "Tür mit Sichtfenster",
+   "short": "Tür",
+   "shape": "box",
+   "x": 0,
+   "y": 325,
+   "w": 330,
+   "d": 25,
+   "z": 10,
+   "h": 250,
+   "r": 3,
+   "explode": [
+    0,
+    120,
+    0
+   ],
+   "mass": 1491.7,
+   "materials": [
+    [
+     "pcabs",
+     35
+    ],
+    [
+     "glas",
+     30
+    ],
+    [
+     "stahl",
+     30
+    ],
+    [
+     "gummi",
+     5
+    ]
+   ],
+   "info": "Kunststoffrahmen mit Glasscheibe und gelochtem Metallgitter, das die Mikrowellen abschirmt. Die Scharniere sind mit dem Gehäuse verschraubt.",
+   "color": "#2E3338",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 5,
+     "w": 310,
+     "d": 15,
+     "r": 2,
+     "fill": "#4A545C"
+    }
+   ]
+  },
+  {
+   "id": "bedienfeld",
+   "component_id": "plastic_front_panel",
+   "material_id": "abs",
+   "name": "Bedienfeld",
+   "short": "Bedienfeld",
+   "shape": "box",
+   "x": 330,
+   "y": 325,
+   "w": 120,
+   "d": 25,
+   "z": 10,
+   "h": 250,
+   "r": 3,
+   "explode": [
+    0,
+    120,
+    0
+   ],
+   "mass": 248.6,
+   "materials": [
+    [
+     "pcabs",
      100
     ]
    ],
-   "material_id": "steel",
-   "info": "Leave opening to an e-waste centre: the capacitor inside can hold a lethal charge even when unplugged."
+   "info": "Kunststoffblende mit Anzeige, Tasten und Drehknopf. Ist eingeclipst: unten kräftig herausziehen.",
+   "color": "#3C4248",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 5,
+     "w": 100,
+     "d": 15,
+     "r": 2,
+     "fill": "#2E3338"
+    }
+   ]
+  },
+  {
+   "id": "kabel",
+   "component_id": "cable_insulation",
+   "material_id": "pvc",
+   "name": "Netzkabel (Isolierung)",
+   "short": "Kabel",
+   "shape": "box",
+   "x": 370,
+   "y": 0,
+   "w": 80,
+   "d": 8,
+   "z": 20,
+   "h": 8,
+   "r": 4,
+   "explode": [
+    80,
+    0,
+    0
+   ],
+   "mass": 124.3,
+   "materials": [
+    [
+     "pvc",
+     90
+    ],
+    [
+     "pp",
+     10
+    ]
+   ],
+   "info": "Etwa 1 m dickes PVC-Kabel mit Schutzkontaktstecker. Längs aufschlitzen, um die Kupferadern freizulegen.",
+   "color": "#2E3338",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 70,
+     "y": 1,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#555"
+    }
+   ]
+  },
+  {
+   "id": "kupferadern",
+   "component_id": "cable_copper_core",
+   "material_id": "copper",
+   "name": "Kupferadern",
+   "short": "Kupferadern",
+   "shape": "box",
+   "x": 370,
+   "y": 2.5,
+   "w": 80,
+   "d": 3,
+   "z": 22.5,
+   "h": 3,
+   "r": 1,
+   "explode": [
+    80,
+    0,
+    15
+   ],
+   "mass": 66.3,
+   "materials": [
+    [
+     "kupfer",
+     100
+    ]
+   ],
+   "info": "Drei Kupferadern für bis zu 1200 Watt. Kupfer lässt sich fast verlustfrei wiederverwerten.",
+   "color": "#B87333"
   }
  ]
 }

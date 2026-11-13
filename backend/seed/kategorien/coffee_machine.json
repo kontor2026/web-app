@@ -4,7 +4,7 @@
  "name_en": "Coffee Machine",
  "klasse": "Elektroschrott · Kleingerät",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -21,51 +21,53 @@
  "werte": [
   {
    "k": "Rohstoffwert",
-   "v": "≈ 6,38 €",
+   "v": "≈ 5,12 €",
    "hint": "Gold, Silber, Palladium zu Preisen vom 13.11. Ohne Palladium (kein Preis)."
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 12,7 kg",
+   "v": "≈ 10,2 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 5,96 kg",
-   "hint": "spart 6,75 kg, wenn recycelte Materialien eingesetzt werden"
+   "v": "≈ 3,84 kg",
+   "hint": "spart 6,38 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Ni": 249352.0,
-   "Cu": 132464.0,
-   "Fe": 11688.0,
-   "Ag": 39.0,
-   "Au": 9.35,
-   "Pd": 2.96
+   "Ni": 223280.0,
+   "Cu": 118140.0,
+   "Fe": 62232.0,
+   "Ag": 14.0,
+   "Au": 3.35,
+   "Pd": 1.06
   },
   "herkunft": {
    "Ni": "Modellmassen (Schätzung)",
    "Cu": "Modellmassen (Schätzung)",
    "Fe": "Modellmassen (Schätzung)",
-   "Ag": "156 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)",
-   "Au": "156 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)",
-   "Pd": "156 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)"
+   "Ag": "56 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)",
+   "Au": "56 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)",
+   "Pd": "56 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)"
   },
   "materialien_g": {
-   "pp": 649.4,
-   "abs": 649.4,
-   "nickel_chrome": 311.7,
-   "pcb": 155.8,
-   "mixed_electronics": 77.9,
-   "copper": 77.9,
-   "pvc": 77.9
+   "abs": 958.1,
+   "pp": 306.9,
+   "nickel_chrome": 279.1,
+   "mixed_electronics": 232.6,
+   "pvc": 74.4,
+   "pcb": 55.8,
+   "copper": 37.2,
+   "silicone": 27.9,
+   "steel": 27.9
   },
-  "co2_kg": 12.707,
-  "co2_mit_recyclat_kg": 5.956,
-  "co2_ersparnis_kg": 6.75,
+  "co2_kg": 10.222,
+  "co2_mit_recyclat_kg": 3.841,
+  "co2_ersparnis_kg": 6.381,
   "co2_ohne_faktor": [],
-  "rohstoffwert_eur": 6.38,
+  "rohstoffwert_eur": 5.12,
   "wert_ohne_preis": [
    "Pd"
   ],
@@ -115,67 +117,322 @@
   "nicht": "Nicht in Restmüll oder Gelbe Tonne",
   "warnung": "Kabel und Stecker dranlassen."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "water_pump",
-   "component_id": "water_pump",
-   "name": "Pump",
-   "short": "Pump",
+   "id": "deckel",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Brühkammerdeckel mit Hebel",
+   "short": "Deckel",
    "shape": "box",
-   "x": 55.0,
-   "y": 80.0,
-   "w": 90.0,
-   "d": 90.0,
-   "h": 39.6,
-   "z": 280.5,
-   "r": 10.8,
+   "x": 20,
+   "y": 90,
+   "w": 160,
+   "d": 150,
+   "z": 296,
+   "h": 34,
+   "r": 30,
    "explode": [
     0,
     0,
-    591.0
+    305.0
    ],
-   "mass": 77.92,
+   "mass": 120.9,
    "materials": [
     [
-     "chip",
-     30
+     "pcabs",
+     85
     ],
+    [
+     "stahl",
+     10
+    ],
+    [
+     "gummi",
+     5
+    ]
+   ],
+   "info": "Klappdeckel mit Duschsieb und Dichtung, wird mit dem Hebel verriegelt. Das Scharnier hat eine Stahlfeder.",
+   "color": "#2E3338",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 50,
+     "y": 120,
+     "w": 60,
+     "d": 22,
+     "r": 8,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 40,
+     "y": 20,
+     "w": 80,
+     "fill": "#3C4248"
+    }
+   ]
+  },
+  {
+   "id": "padhalter",
+   "component_id": "plastic_housing",
+   "material_id": "pp",
+   "name": "Padhalter",
+   "short": "Padhalter",
+   "shape": "cyl",
+   "x": 50,
+   "y": 115,
+   "w": 100,
+   "z": 280,
+   "h": 16,
+   "explode": [
+    0,
+    0,
+    280.0
+   ],
+   "mass": 46.5,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Schale, in die das Kaffeepad gelegt wird. Reines Polypropylen; benutzte Pads gehören in den Bioabfall oder Restmüll.",
+   "color": "#3C4248",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 15,
+     "y": 15,
+     "w": 70,
+     "fill": "#2E3338"
+    },
+    {
+     "shape": "cyl",
+     "x": 45,
+     "y": 45,
+     "w": 10,
+     "fill": "#1E2226"
+    }
+   ]
+  },
+  {
+   "id": "gehaeuse",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Gehäuse",
+   "short": "Gehäuse",
+   "shape": "box",
+   "x": 0,
+   "y": 70,
+   "w": 200,
+   "d": 170,
+   "z": 20,
+   "h": 260,
+   "r": 30,
+   "explode": [
+    0,
+    0,
+    255.0
+   ],
+   "mass": 558.1,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Kunststoffgehäuse aus zwei Schalen. Schrauben sitzen unter der Tropfschale und hinter dem Wassertank, oft mit Sonderköpfen.",
+   "color": "#3C4248",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 50,
+     "y": 45,
+     "w": 100,
+     "fill": "#2E3338"
+    },
+    {
+     "shape": "cyl",
+     "x": 90,
+     "y": 150,
+     "w": 14,
+     "fill": "#5DADE2"
+    }
+   ]
+  },
+  {
+   "id": "schlaeuche",
+   "component_id": "water_pump",
+   "material_id": "silicone",
+   "name": "Silikonschläuche mit Rückschlagventil",
+   "short": "Schläuche",
+   "shape": "box",
+   "x": 118,
+   "y": 130,
+   "w": 16,
+   "d": 40,
+   "z": 80,
+   "h": 170,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 27.9,
+   "materials": [
+    [
+     "gummi",
+     90
+    ],
+    [
+     "messing",
+     10
+    ]
+   ],
+   "info": "Verbinden Tank, Pumpe, Erhitzer und Brühkopf. Mit Klemmen gesichert; Klemme aufbiegen und Schlauch abziehen.",
+   "color": "#E9EEF2",
+   "opacity": 0.8
+  },
+  {
+   "id": "durchlauferhitzer",
+   "component_id": "heating_element",
+   "material_id": "nickel_chrome",
+   "name": "Durchlauferhitzer",
+   "short": "Erhitzer",
+   "shape": "box",
+   "x": 40,
+   "y": 90,
+   "w": 70,
+   "d": 70,
+   "z": 90,
+   "h": 80,
+   "r": 6,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 279.1,
+   "materials": [
+    [
+     "alu",
+     70
+    ],
+    [
+     "nichrom",
+     10
+    ],
+    [
+     "keramik",
+     10
+    ],
+    [
+     "stahl",
+     5
+    ],
+    [
+     "bimetall",
+     5
+    ]
+   ],
+   "info": "Aluminiumblock mit eingegossenem Heizstab, erhitzt das Wasser auf 90 Grad. Zwei Bimetall-Sicherungen schalten bei Überhitzung ab.",
+   "color": "#B8BEC4",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 8,
+     "y": 8,
+     "w": 54,
+     "d": 54,
+     "r": 6,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 50,
+     "y": 5,
+     "w": 12,
+     "d": 10,
+     "r": 2,
+     "fill": "#9AA2A6"
+    }
+   ]
+  },
+  {
+   "id": "pumpe",
+   "component_id": "water_pump",
+   "material_id": "mixed_electronics",
+   "name": "Vibrationspumpe",
+   "short": "Pumpe",
+   "shape": "box",
+   "x": 120,
+   "y": 80,
+   "w": 55,
+   "d": 45,
+   "z": 30,
+   "h": 45,
+   "r": 10,
+   "explode": [
+    0,
+    0,
+    15
+   ],
+   "mass": 232.6,
+   "materials": [
     [
      "kupfer",
      30
+    ],
+    [
+     "stahl",
+     40
     ],
     [
      "pcabs",
      25
     ],
     [
-     "stahl",
-     15
+     "messing",
+     5
     ]
    ],
-   "material_id": "mixed_electronics",
-   "info": "Pull off the hoses and unscrew the pump from the frame."
+   "info": "Eine Kupferspule lässt einen Kolben hin und her schwingen und drückt das Wasser durch das Pad. In Gummilagern eingesetzt, lässt sich herausziehen.",
+   "color": "#5F6B75",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 6,
+     "y": 6,
+     "w": 43,
+     "d": 33,
+     "r": 8,
+     "fill": "#B87333"
+    }
+   ]
   },
   {
-   "id": "circuit_board",
+   "id": "platine",
    "component_id": "circuit_board",
-   "name": "Circuit Board",
-   "short": "Circuit Board",
+   "material_id": "pcb",
+   "name": "Steuerplatine",
+   "short": "Platine",
    "shape": "box",
-   "x": 108.0,
-   "y": 22.5,
-   "w": 84.0,
-   "d": 105.0,
-   "h": 115.5,
-   "z": 56.1,
-   "r": 10.1,
+   "x": 15,
+   "y": 80,
+   "w": 18,
+   "d": 100,
+   "z": 30,
+   "h": 120,
+   "r": 1,
    "explode": [
     0,
     0,
-    609.9
+    15
    ],
-   "mass": 155.84,
+   "mass": 55.8,
    "materials": [
     [
      "fr4",
@@ -194,148 +451,332 @@
      10
     ]
    ],
-   "material_id": "pcb",
-   "info": "Unscrew and unplug all ribbon cables; hand in at an e-waste collection point."
+   "info": "Steuert Pumpe, Heizung und Tasten. Steckverbinder abziehen und die Platine zum Elektroschrott geben.",
+   "color": "#2F6B3A",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 20,
+     "w": 10,
+     "d": 15,
+     "r": 1,
+     "fill": "#222"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 60,
+     "w": 10,
+     "d": 20,
+     "r": 2,
+     "fill": "#E0E4E7"
+    }
+   ]
   },
   {
-   "id": "heating_element",
-   "component_id": "heating_element",
-   "name": "Heating Element",
-   "short": "Heating Element",
+   "id": "bodenplatte",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Bodenplatte",
+   "short": "Bodenplatte",
    "shape": "box",
-   "x": 8.0,
-   "y": 22.5,
-   "w": 84.0,
-   "d": 105.0,
-   "h": 115.5,
-   "z": 56.1,
-   "r": 10.1,
+   "x": 10,
+   "y": 0,
+   "w": 180,
+   "d": 250,
+   "z": 0,
+   "h": 20,
+   "r": 20,
    "explode": [
     0,
     0,
-    404.4
+    0
    ],
-   "mass": 311.69,
+   "mass": 279.1,
    "materials": [
     [
-     "nichrom",
-     100
+     "pcabs",
+     90
+    ],
+    [
+     "gummi",
+     10
     ]
    ],
-   "material_id": "nickel_chrome",
-   "info": "Unplug and let it cool down fully before opening the housing."
+   "info": "Fuß der Maschine mit Gummifüßen und Kabelführung. Ist mit dem Gehäuse verschraubt.",
+   "color": "#2E3338",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 10,
+     "y": 10,
+     "w": 16,
+     "d": 16,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "cyl",
+     "x": 154,
+     "y": 10,
+     "w": 16,
+     "d": 16,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "cyl",
+     "x": 10,
+     "y": 224,
+     "w": 16,
+     "d": 16,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "cyl",
+     "x": 154,
+     "y": 224,
+     "w": 16,
+     "d": 16,
+     "fill": "#1E2226"
+    }
+   ]
   },
   {
-   "id": "water_tank",
+   "id": "wassertank",
    "component_id": "water_tank",
-   "name": "Water Tank",
-   "short": "Water Tank",
+   "material_id": "pp",
+   "name": "Wassertank mit Deckel",
+   "short": "Wassertank",
    "shape": "box",
-   "x": 0,
+   "x": 15,
    "y": 0,
-   "w": 200.0,
-   "d": 250.0,
-   "h": 140.25,
-   "z": 140.25,
-   "r": 24.0,
+   "w": 170,
+   "d": 65,
+   "z": 30,
+   "h": 290,
+   "r": 14,
    "explode": [
     0,
-    0,
-    90.0
+    -100,
+    0
    ],
-   "mass": 649.35,
+   "mass": 186,
    "materials": [
     [
      "pp",
      100
     ]
    ],
-   "material_id": "pp",
-   "info": "Lift it out of the device; it usually clips in from the top or back."
+   "info": "Durchsichtiger Kunststofftank, wird nach oben herausgehoben. Reines Polypropylen ohne Metall, gehört zum Kunststoff.",
+   "color": "#CFE3EA",
+   "opacity": 0.6,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 5,
+     "y": 5,
+     "w": 160,
+     "d": 55,
+     "r": 10,
+     "fill": "#3C4248"
+    }
+   ]
   },
   {
-   "id": "cable_copper_core",
-   "component_id": "cable_copper_core",
-   "name": "Cable Wires",
-   "short": "Cable Wires",
+   "id": "tassenrost",
+   "component_id": "plastic_housing",
+   "material_id": "steel",
+   "name": "Tassenrost",
+   "short": "Tassenrost",
    "shape": "box",
-   "x": 212.0,
-   "y": 12.5,
-   "w": 10.0,
-   "d": 225.0,
-   "h": 26.4,
-   "z": 33.0,
-   "r": 1.2,
+   "x": 40,
+   "y": 180,
+   "w": 120,
+   "d": 65,
+   "z": 40,
+   "h": 4,
+   "r": 6,
    "explode": [
-    85.0,
     0,
-    27.0
+    110,
+    0
    ],
-   "mass": 77.92,
+   "mass": 27.9,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Edelstahlgitter, auf dem die Tasse steht. Lose aufgelegt, zum Spülen abnehmen.",
+   "color": "#C9CED2",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 8,
+     "y": 8,
+     "w": 104,
+     "d": 3,
+     "r": 1,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "box",
+     "x": 8,
+     "y": 16,
+     "w": 104,
+     "d": 3,
+     "r": 1,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "box",
+     "x": 8,
+     "y": 24,
+     "w": 104,
+     "d": 3,
+     "r": 1,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "box",
+     "x": 8,
+     "y": 32,
+     "w": 104,
+     "d": 3,
+     "r": 1,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "box",
+     "x": 8,
+     "y": 40,
+     "w": 104,
+     "d": 3,
+     "r": 1,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "box",
+     "x": 8,
+     "y": 48,
+     "w": 104,
+     "d": 3,
+     "r": 1,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "box",
+     "x": 8,
+     "y": 56,
+     "w": 104,
+     "d": 3,
+     "r": 1,
+     "fill": "#7C858C"
+    }
+   ]
+  },
+  {
+   "id": "tropfschale",
+   "component_id": "plastic_housing",
+   "material_id": "pp",
+   "name": "Tropfschale",
+   "short": "Tropfschale",
+   "shape": "box",
+   "x": 35,
+   "y": 175,
+   "w": 130,
+   "d": 75,
+   "z": 20,
+   "h": 20,
+   "r": 10,
+   "explode": [
+    0,
+    110,
+    0
+   ],
+   "mass": 74.4,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Fängt Tropfen und Restwasser auf. Nach vorne herausziehen und regelmäßig leeren.",
+   "color": "#2E3338"
+  },
+  {
+   "id": "kabel",
+   "component_id": "cable_insulation",
+   "material_id": "pvc",
+   "name": "Netzkabel (Isolierung)",
+   "short": "Kabel",
+   "shape": "box",
+   "x": 130,
+   "y": 40,
+   "w": 70,
+   "d": 8,
+   "z": 5,
+   "h": 8,
+   "r": 4,
+   "explode": [
+    80,
+    0,
+    0
+   ],
+   "mass": 74.4,
+   "materials": [
+    [
+     "pvc",
+     90
+    ],
+    [
+     "pp",
+     10
+    ]
+   ],
+   "info": "Etwa 80 cm PVC-Mantel mit Stecker. Längs aufschlitzen, um die Kupferadern freizulegen.",
+   "color": "#2E3338",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 60,
+     "y": 1,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#555"
+    }
+   ]
+  },
+  {
+   "id": "kupferadern",
+   "component_id": "cable_copper_core",
+   "material_id": "copper",
+   "name": "Kupferadern",
+   "short": "Kupferadern",
+   "shape": "box",
+   "x": 130,
+   "y": 42.5,
+   "w": 70,
+   "d": 3,
+   "z": 7.5,
+   "h": 3,
+   "r": 1,
+   "explode": [
+    80,
+    0,
+    15
+   ],
+   "mass": 37.2,
    "materials": [
     [
      "kupfer",
      100
     ]
    ],
-   "material_id": "copper",
-   "info": "Cut off the plug and strip the insulation to free the copper."
-  },
-  {
-   "id": "cable_insulation",
-   "component_id": "cable_insulation",
-   "name": "Cable Insulation",
-   "short": "Cable Insulation",
-   "shape": "box",
-   "x": 232.0,
-   "y": 12.5,
-   "w": 10.0,
-   "d": 225.0,
-   "h": 26.4,
-   "z": 33.0,
-   "r": 1.2,
-   "explode": [
-    115.0,
-    0,
-    27.0
-   ],
-   "mass": 77.92,
-   "materials": [
-    [
-     "pvc",
-     100
-    ]
-   ],
-   "material_id": "pvc",
-   "info": "Slit lengthwise with a cable stripper to separate it from the wires."
-  },
-  {
-   "id": "plastic_housing",
-   "component_id": "plastic_housing",
-   "name": "Plastic Housing",
-   "short": "Plastic Housing",
-   "shape": "box",
-   "x": 0,
-   "y": 0,
-   "w": 200.0,
-   "d": 250.0,
-   "h": 140.25,
-   "z": 0.0,
-   "r": 24.0,
-   "explode": [
-    0,
-    0,
-    0
-   ],
-   "mass": 649.35,
-   "materials": [
-    [
-     "pcabs",
-     100
-    ]
-   ],
-   "material_id": "abs",
-   "info": "Look for hidden screws under rubber feet or labels, then pry the clips open."
+   "info": "Drei Kupferadern aus feiner Litze. Kupfer lässt sich fast verlustfrei wiederverwerten.",
+   "color": "#B87333"
   }
  ]
 }

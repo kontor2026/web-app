@@ -1,0 +1,452 @@
+{
+ "parts": [
+  {
+   "id": "oberarm",
+   "component_id": "plastic_housing",
+   "material_id": "pc",
+   "name": "Oberer Arm",
+   "short": "Oberarm",
+   "shape": "box",
+   "x": 0,
+   "y": 10,
+   "w": 30,
+   "d": 290,
+   "z": 18,
+   "h": 17,
+   "r": 8,
+   "explode": [
+    0,
+    0,
+    138
+   ],
+   "mass": 71,
+   "materials": [
+    [
+     "pcabs",
+     90
+    ],
+    [
+     "stahl",
+     10
+    ]
+   ],
+   "info": "Hitzefeste Kunststoffschale mit gefedertem Plattenrahmen. Die Schalen sind verclipst und mit kleinen Schrauben gesichert.",
+   "color": "#2E3338",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 170,
+     "w": 24,
+     "d": 115,
+     "r": 4,
+     "fill": "#3C4248"
+    }
+   ]
+  },
+  {
+   "id": "heizer_oben",
+   "component_id": "heating_element",
+   "material_id": "ceramic",
+   "name": "Heizelement oben",
+   "short": "Heizer oben",
+   "shape": "box",
+   "x": 6,
+   "y": 185,
+   "w": 18,
+   "d": 100,
+   "z": 22,
+   "h": 3,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    106
+   ],
+   "mass": 15.2,
+   "materials": [
+    [
+     "keramik",
+     70
+    ],
+    [
+     "nichrom",
+     15
+    ],
+    [
+     "alu",
+     15
+    ]
+   ],
+   "info": "Keramikheizer mit eingedruckter Heizbahn, erreicht bis 230 Grad. Erst ganz abkühlen lassen, dann ablösen.",
+   "color": "#E9E1D0",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 4,
+     "w": 14,
+     "d": 92,
+     "r": 1,
+     "fill": "#C4672D"
+    }
+   ]
+  },
+  {
+   "id": "platte_oben",
+   "component_id": "ceramic_plates",
+   "material_id": "aluminium",
+   "name": "Heizplatte oben",
+   "short": "Platte oben",
+   "shape": "box",
+   "x": 3,
+   "y": 180,
+   "w": 24,
+   "d": 110,
+   "z": 18,
+   "h": 4,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    81
+   ],
+   "mass": 35.5,
+   "materials": [
+    [
+     "alu",
+     88
+    ],
+    [
+     "keramik",
+     12
+    ]
+   ],
+   "info": "Aluminiumplatte mit Keramikbeschichtung, die die Haare glättet. Nach dem Abkühlen aus dem Federrahmen hebeln.",
+   "color": "#D5D0C8",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 4,
+     "w": 20,
+     "d": 102,
+     "r": 2,
+     "fill": "#E8E4DD"
+    }
+   ]
+  },
+  {
+   "id": "platte_unten",
+   "component_id": "ceramic_plates",
+   "material_id": "aluminium",
+   "name": "Heizplatte unten",
+   "short": "Platte unten",
+   "shape": "box",
+   "x": 3,
+   "y": 180,
+   "w": 24,
+   "d": 110,
+   "z": 13,
+   "h": 4,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    57
+   ],
+   "mass": 35.5,
+   "materials": [
+    [
+     "alu",
+     88
+    ],
+    [
+     "keramik",
+     12
+    ]
+   ],
+   "info": "Aluminiumplatte mit Keramikbeschichtung, die die Haare glättet. Nach dem Abkühlen aus dem Federrahmen hebeln.",
+   "color": "#D5D0C8",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 4,
+     "w": 20,
+     "d": 102,
+     "r": 2,
+     "fill": "#E8E4DD"
+    }
+   ]
+  },
+  {
+   "id": "heizer_unten",
+   "component_id": "heating_element",
+   "material_id": "ceramic",
+   "name": "Heizelement unten",
+   "short": "Heizer unten",
+   "shape": "box",
+   "x": 6,
+   "y": 185,
+   "w": 18,
+   "d": 100,
+   "z": 10,
+   "h": 3,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    32
+   ],
+   "mass": 15.2,
+   "materials": [
+    [
+     "keramik",
+     70
+    ],
+    [
+     "nichrom",
+     15
+    ],
+    [
+     "alu",
+     15
+    ]
+   ],
+   "info": "Keramikheizer mit eingedruckter Heizbahn, erreicht bis 230 Grad. Erst ganz abkühlen lassen, dann ablösen.",
+   "color": "#E9E1D0",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 4,
+     "w": 14,
+     "d": 92,
+     "r": 1,
+     "fill": "#C4672D"
+    }
+   ]
+  },
+  {
+   "id": "platine",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "Steuerplatine mit Tasten",
+   "short": "Platine",
+   "shape": "box",
+   "x": 5,
+   "y": 60,
+   "w": 20,
+   "d": 110,
+   "z": 4,
+   "h": 6,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    38
+   ],
+   "mass": 15.2,
+   "materials": [
+    [
+     "fr4",
+     55
+    ],
+    [
+     "kupfer",
+     20
+    ],
+    [
+     "chip",
+     15
+    ],
+    [
+     "lot",
+     10
+    ]
+   ],
+   "info": "Regelt die Temperatur und schaltet nach einer Stunde automatisch ab. Mit Tasten und Anzeige verlötet, kommt zum Elektroschrott.",
+   "color": "#2F6B3A",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 5,
+     "y": 70,
+     "w": 10,
+     "d": 20,
+     "r": 1,
+     "fill": "#222"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 20,
+     "w": 12,
+     "d": 30,
+     "r": 2,
+     "fill": "#E0E4E7"
+    },
+    {
+     "shape": "box",
+     "x": 5,
+     "y": 95,
+     "w": 10,
+     "d": 8,
+     "r": 1,
+     "fill": "#E74C3C"
+    }
+   ]
+  },
+  {
+   "id": "unterarm",
+   "component_id": "plastic_housing",
+   "material_id": "pc",
+   "name": "Unterer Arm mit Bedienfeld",
+   "short": "Unterarm",
+   "shape": "box",
+   "x": 0,
+   "y": 10,
+   "w": 30,
+   "d": 290,
+   "z": 0,
+   "h": 17,
+   "r": 8,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 71,
+   "materials": [
+    [
+     "pcabs",
+     90
+    ],
+    [
+     "stahl",
+     10
+    ]
+   ],
+   "info": "Untere Schale mit Ein-Taste und Temperaturtasten, innen die Platine. Zuerst die Platten ausbauen, dann die Schale öffnen.",
+   "color": "#2E3338",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 6,
+     "y": 80,
+     "w": 18,
+     "d": 40,
+     "r": 4,
+     "fill": "#1E2226"
+    }
+   ]
+  },
+  {
+   "id": "gelenk",
+   "component_id": "plastic_housing",
+   "material_id": "steel",
+   "name": "Federgelenk mit Verriegelung",
+   "short": "Gelenk",
+   "shape": "box",
+   "x": 3,
+   "y": 2,
+   "w": 24,
+   "d": 28,
+   "z": 8,
+   "h": 20,
+   "r": 4,
+   "explode": [
+    0,
+    -50,
+    0
+   ],
+   "mass": 15.2,
+   "materials": [
+    [
+     "stahl",
+     60
+    ],
+    [
+     "pcabs",
+     40
+    ]
+   ],
+   "info": "Achse mit Stahlfeder, die die Arme aufdrückt, und Schiebeverriegelung. Feder kann beim Ausbau herausspringen.",
+   "color": "#9AA2A6"
+  },
+  {
+   "id": "kabel",
+   "component_id": "cable_insulation",
+   "material_id": "pvc",
+   "name": "Netzkabel mit Drehgelenk",
+   "short": "Kabel",
+   "shape": "box",
+   "x": 11,
+   "y": 0,
+   "w": 8,
+   "d": 60,
+   "z": 13,
+   "h": 8,
+   "r": 4,
+   "explode": [
+    40,
+    0,
+    0
+   ],
+   "mass": 50.7,
+   "materials": [
+    [
+     "pvc",
+     85
+    ],
+    [
+     "pcabs",
+     15
+    ]
+   ],
+   "info": "Etwa 2 m Kabel mit 360-Grad-Drehgelenk, damit es sich nicht verdreht. Längs aufschlitzen, um die Kupferadern freizulegen.",
+   "color": "#2E3338",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 0,
+     "w": 6,
+     "d": 10,
+     "r": 2,
+     "fill": "#555"
+    }
+   ]
+  },
+  {
+   "id": "kupferadern",
+   "component_id": "cable_copper_core",
+   "material_id": "copper",
+   "name": "Kupferadern",
+   "short": "Kupferadern",
+   "shape": "box",
+   "x": 13.5,
+   "y": 0,
+   "w": 3,
+   "d": 60,
+   "z": 15.5,
+   "h": 3,
+   "r": 1,
+   "explode": [
+    40,
+    0,
+    12
+   ],
+   "mass": 25.4,
+   "materials": [
+    [
+     "kupfer",
+     100
+    ]
+   ],
+   "info": "Zwei Kupferadern aus feiner Litze. Kupfer lässt sich fast verlustfrei wiederverwerten.",
+   "color": "#B87333"
+  }
+ ]
+}

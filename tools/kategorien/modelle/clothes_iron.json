@@ -1,0 +1,832 @@
+{
+ "parts": [
+  {
+   "id": "regler",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Temperaturregler",
+   "short": "Regler",
+   "shape": "cyl",
+   "x": 40,
+   "y": 190,
+   "w": 40,
+   "z": 72,
+   "h": 8,
+   "explode": [
+    0,
+    0,
+    188
+   ],
+   "mass": 10.1,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Drehknopf, der über eine Achse den Thermostat verstellt. Lässt sich mit einem flachen Schraubendreher abhebeln.",
+   "color": "#9AA2A6",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 18,
+     "y": 4,
+     "w": 4,
+     "d": 14,
+     "r": 1,
+     "fill": "#2E3338"
+    }
+   ]
+  },
+  {
+   "id": "oberschale",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Gehäuse mit Griff",
+   "short": "Gehäuse",
+   "shape": "box",
+   "x": 10,
+   "y": 20,
+   "w": 100,
+   "d": 220,
+   "z": 72,
+   "h": 68,
+   "r": 40,
+   "explode": [
+    0,
+    0,
+    100
+   ],
+   "mass": 202.5,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Hitzefester Kunststoff mit Griff und Dampftasten. Ist mit Schrauben von unten durch die Sohle befestigt.",
+   "color": "#5DADE2",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 30,
+     "y": 40,
+     "w": 40,
+     "d": 110,
+     "r": 18,
+     "fill": "#2E3338"
+    },
+    {
+     "shape": "cyl",
+     "x": 38,
+     "y": 170,
+     "w": 12,
+     "fill": "#E9EEF2"
+    },
+    {
+     "shape": "cyl",
+     "x": 52,
+     "y": 170,
+     "w": 12,
+     "fill": "#E9EEF2"
+    }
+   ]
+  },
+  {
+   "id": "wassertank",
+   "component_id": "water_tank",
+   "material_id": "pp",
+   "name": "Wassertank",
+   "short": "Wassertank",
+   "shape": "box",
+   "x": 12,
+   "y": 30,
+   "w": 96,
+   "d": 225,
+   "z": 36,
+   "h": 36,
+   "r": 45,
+   "explode": [
+    0,
+    0,
+    80
+   ],
+   "mass": 91.1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Durchsichtiger Kunststofftank für etwa 300 ml Wasser. Ist eingeklipst; ohne Metall gehört er zum Kunststoff.",
+   "color": "#CFE3EA",
+   "opacity": 0.6,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 30,
+     "y": 190,
+     "w": 30,
+     "d": 20,
+     "r": 8,
+     "fill": "#3C4248"
+    }
+   ]
+  },
+  {
+   "id": "thermostat",
+   "component_id": "thermostat",
+   "material_id": "mixed_electronics",
+   "name": "Thermostat (Bimetall)",
+   "short": "Thermostat",
+   "shape": "box",
+   "x": 45,
+   "y": 120,
+   "w": 30,
+   "d": 30,
+   "z": 26,
+   "h": 10,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    60
+   ],
+   "mass": 30.4,
+   "materials": [
+    [
+     "bimetall",
+     40
+    ],
+    [
+     "keramik",
+     20
+    ],
+    [
+     "kupfer",
+     20
+    ],
+    [
+     "kontakte",
+     20
+    ]
+   ],
+   "info": "Ein Bimetallstreifen schaltet die Heizung aus, wenn die eingestellte Temperatur erreicht ist. Klickt beim Aufheizen hörbar.",
+   "color": "#B8BEC4",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 10,
+     "y": 10,
+     "w": 10,
+     "fill": "#D5DADE"
+    }
+   ]
+  },
+  {
+   "id": "hitzeschild",
+   "component_id": "iron_soleplate",
+   "material_id": "steel",
+   "name": "Hitzeschutzblech",
+   "short": "Hitzeschild",
+   "shape": "box",
+   "x": 10,
+   "y": 15,
+   "w": 100,
+   "d": 235,
+   "z": 22,
+   "h": 4,
+   "r": 45,
+   "explode": [
+    0,
+    0,
+    40
+   ],
+   "mass": 60.8,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Dünnes Stahlblech zwischen heißer Sohle und Kunststoffteilen. Kommt zum Altmetall.",
+   "color": "#9AA2A6"
+  },
+  {
+   "id": "heizelement",
+   "component_id": "heating_element",
+   "material_id": "nickel_chrome",
+   "name": "Rohrheizkörper",
+   "short": "Heizelement",
+   "shape": "box",
+   "x": 15,
+   "y": 25,
+   "w": 90,
+   "d": 210,
+   "z": 16,
+   "h": 6,
+   "r": 40,
+   "explode": [
+    0,
+    0,
+    20
+   ],
+   "mass": 151.9,
+   "materials": [
+    [
+     "stahl",
+     50
+    ],
+    [
+     "nichrom",
+     20
+    ],
+    [
+     "keramik",
+     30
+    ]
+   ],
+   "info": "U-förmiges Heizrohr mit Nickel-Chrom-Draht, in die Sohle eingegossen. Lässt sich nicht von der Sohle trennen.",
+   "color": "#8C7B6B",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 0,
+     "w": 10,
+     "d": 200,
+     "r": 5,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 80,
+     "y": 0,
+     "w": 10,
+     "d": 200,
+     "r": 5,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 0,
+     "w": 90,
+     "d": 10,
+     "r": 5,
+     "fill": "#C4672D"
+    }
+   ]
+  },
+  {
+   "id": "sohle",
+   "component_id": "iron_soleplate",
+   "material_id": "aluminium",
+   "name": "Bügelsohle",
+   "short": "Sohle",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 120,
+   "d": 270,
+   "z": 0,
+   "h": 16,
+   "r": 55,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 455.7,
+   "materials": [
+    [
+     "alu",
+     95
+    ],
+    [
+     "keramik",
+     5
+    ]
+   ],
+   "info": "Aluminiumguss mit Keramikbeschichtung und Dampflöchern. Wertvolles Aluminium für den Metallschrott.",
+   "color": "#C9CED2",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 30,
+     "y": 40,
+     "w": 4,
+     "d": 4,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 48,
+     "y": 40,
+     "w": 4,
+     "d": 4,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 66,
+     "y": 40,
+     "w": 4,
+     "d": 4,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 84,
+     "y": 40,
+     "w": 4,
+     "d": 4,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 30,
+     "y": 56,
+     "w": 4,
+     "d": 4,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 48,
+     "y": 56,
+     "w": 4,
+     "d": 4,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 66,
+     "y": 56,
+     "w": 4,
+     "d": 4,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 84,
+     "y": 56,
+     "w": 4,
+     "d": 4,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 30,
+     "y": 72,
+     "w": 4,
+     "d": 4,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 48,
+     "y": 72,
+     "w": 4,
+     "d": 4,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 66,
+     "y": 72,
+     "w": 4,
+     "d": 4,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 84,
+     "y": 72,
+     "w": 4,
+     "d": 4,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 30,
+     "y": 88,
+     "w": 4,
+     "d": 4,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 48,
+     "y": 88,
+     "w": 4,
+     "d": 4,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 66,
+     "y": 88,
+     "w": 4,
+     "d": 4,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 84,
+     "y": 88,
+     "w": 4,
+     "d": 4,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 30,
+     "y": 104,
+     "w": 4,
+     "d": 4,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 48,
+     "y": 104,
+     "w": 4,
+     "d": 4,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 66,
+     "y": 104,
+     "w": 4,
+     "d": 4,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 84,
+     "y": 104,
+     "w": 4,
+     "d": 4,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 30,
+     "y": 120,
+     "w": 4,
+     "d": 4,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 48,
+     "y": 120,
+     "w": 4,
+     "d": 4,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 66,
+     "y": 120,
+     "w": 4,
+     "d": 4,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 84,
+     "y": 120,
+     "w": 4,
+     "d": 4,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 30,
+     "y": 136,
+     "w": 4,
+     "d": 4,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 48,
+     "y": 136,
+     "w": 4,
+     "d": 4,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 66,
+     "y": 136,
+     "w": 4,
+     "d": 4,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 84,
+     "y": 136,
+     "w": 4,
+     "d": 4,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 30,
+     "y": 152,
+     "w": 4,
+     "d": 4,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 48,
+     "y": 152,
+     "w": 4,
+     "d": 4,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 66,
+     "y": 152,
+     "w": 4,
+     "d": 4,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 84,
+     "y": 152,
+     "w": 4,
+     "d": 4,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 30,
+     "y": 168,
+     "w": 4,
+     "d": 4,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 48,
+     "y": 168,
+     "w": 4,
+     "d": 4,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 66,
+     "y": 168,
+     "w": 4,
+     "d": 4,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 84,
+     "y": 168,
+     "w": 4,
+     "d": 4,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 30,
+     "y": 184,
+     "w": 4,
+     "d": 4,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 48,
+     "y": 184,
+     "w": 4,
+     "d": 4,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 66,
+     "y": 184,
+     "w": 4,
+     "d": 4,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 84,
+     "y": 184,
+     "w": 4,
+     "d": 4,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 30,
+     "y": 200,
+     "w": 4,
+     "d": 4,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 48,
+     "y": 200,
+     "w": 4,
+     "d": 4,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 66,
+     "y": 200,
+     "w": 4,
+     "d": 4,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 84,
+     "y": 200,
+     "w": 4,
+     "d": 4,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 30,
+     "y": 216,
+     "w": 4,
+     "d": 4,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 48,
+     "y": 216,
+     "w": 4,
+     "d": 4,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 66,
+     "y": 216,
+     "w": 4,
+     "d": 4,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 84,
+     "y": 216,
+     "w": 4,
+     "d": 4,
+     "fill": "#7C858C"
+    }
+   ]
+  },
+  {
+   "id": "heckkappe",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Heckkappe mit Kabelgelenk",
+   "short": "Heckkappe",
+   "shape": "box",
+   "x": 25,
+   "y": 0,
+   "w": 70,
+   "d": 22,
+   "z": 20,
+   "h": 70,
+   "r": 8,
+   "explode": [
+    0,
+    -50,
+    0
+   ],
+   "mass": 40.5,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Rückwand mit Stellfläche und Kabelgelenk. Hinter ihr liegen die Kabelanschlüsse; zwei Schrauben lösen.",
+   "color": "#2E3338"
+  },
+  {
+   "id": "spruehduese",
+   "component_id": "water_tank",
+   "material_id": "pp",
+   "name": "Sprühdüse",
+   "short": "Sprühdüse",
+   "shape": "box",
+   "x": 50,
+   "y": 240,
+   "w": 20,
+   "d": 22,
+   "z": 76,
+   "h": 14,
+   "r": 4,
+   "explode": [
+    0,
+    40,
+    0
+   ],
+   "mass": 5.1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Kleine Pumpdüse, die Wasser aus dem Tank auf die Wäsche sprüht. Reiner Kunststoff.",
+   "color": "#E9EEF2"
+  },
+  {
+   "id": "kabel",
+   "component_id": "cable_insulation",
+   "material_id": "pvc",
+   "name": "Netzkabel (Isolierung)",
+   "short": "Kabel",
+   "shape": "box",
+   "x": 40,
+   "y": 4,
+   "w": 80,
+   "d": 8,
+   "z": 30,
+   "h": 8,
+   "r": 4,
+   "explode": [
+    80,
+    -50,
+    0
+   ],
+   "mass": 101.3,
+   "materials": [
+    [
+     "pvc",
+     85
+    ],
+    [
+     "textil",
+     15
+    ]
+   ],
+   "info": "Etwa 2 m Kabel mit Stoffummantelung oder PVC. Längs aufschlitzen, um die Kupferadern freizulegen.",
+   "color": "#2E3338",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 70,
+     "y": 1,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#555"
+    }
+   ]
+  },
+  {
+   "id": "kupferadern",
+   "component_id": "cable_copper_core",
+   "material_id": "copper",
+   "name": "Kupferadern",
+   "short": "Kupferadern",
+   "shape": "box",
+   "x": 40,
+   "y": 6.5,
+   "w": 80,
+   "d": 3,
+   "z": 32.5,
+   "h": 3,
+   "r": 1,
+   "explode": [
+    80,
+    -50,
+    15
+   ],
+   "mass": 50.6,
+   "materials": [
+    [
+     "kupfer",
+     100
+    ]
+   ],
+   "info": "Drei Kupferadern für bis zu 2400 Watt. Kupfer lässt sich fast verlustfrei wiederverwerten.",
+   "color": "#B87333"
+  }
+ ]
+}
