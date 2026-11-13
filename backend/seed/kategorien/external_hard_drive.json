@@ -21,7 +21,7 @@
  "werte": [
   {
    "k": "Rohstoffwert",
-   "v": "≈ 0,62 €",
+   "v": "≈ 0,61 €",
    "hint": "Gold, Silber, Palladium zu Preisen vom 13.11. Ohne Palladium (kein Preis)."
   },
   {
@@ -31,39 +31,40 @@
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 0,68 kg",
-   "hint": "spart 0,86 kg, wenn recycelte Materialien eingesetzt werden"
+   "v": "≈ 0,69 kg",
+   "hint": "spart 0,85 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Al": 56600.0,
-   "Fe": 17229.0,
-   "Cu": 10510.0,
+   "Al": 55700.0,
+   "Fe": 17071.0,
+   "Cu": 10330.0,
    "Ag": 12.0,
-   "Au": 2.79,
-   "Pd": 1.24
+   "Au": 2.74,
+   "Pd": 1.22
   },
   "herkunft": {
    "Al": "Modellmassen (Schätzung)",
    "Fe": "Modellmassen (Schätzung)",
    "Cu": "Modellmassen (Schätzung)",
-   "Ag": "16 g Leiterplatte × oeko2012 Tab, 15, Motherboard Notebook (Umicore 2011)",
-   "Au": "16 g Leiterplatte × oeko2012 Tab, 15, Motherboard Notebook (Umicore 2011)",
-   "Pd": "16 g Leiterplatte × oeko2012 Tab, 15, Motherboard Notebook (Umicore 2011)"
+   "Ag": "15 g Leiterplatte × oeko2012 Tab, 15, Motherboard Notebook (Umicore 2011)",
+   "Au": "15 g Leiterplatte × oeko2012 Tab, 15, Motherboard Notebook (Umicore 2011)",
+   "Pd": "15 g Leiterplatte × oeko2012 Tab, 15, Motherboard Notebook (Umicore 2011)"
   },
   "materialien_g": {
-   "abs": 89.5,
-   "aluminium": 56.6,
-   "mixed_electronics": 24.7,
-   "pcb": 15.5,
-   "steel": 13.8
+   "abs": 88.1,
+   "aluminium": 55.7,
+   "mixed_electronics": 24.3,
+   "pcb": 15.2,
+   "steel": 13.7,
+   "silicone": 3.0
   },
-  "co2_kg": 1.544,
-  "co2_mit_recyclat_kg": 0.679,
-  "co2_ersparnis_kg": 0.865,
+  "co2_kg": 1.541,
+  "co2_mit_recyclat_kg": 0.689,
+  "co2_ersparnis_kg": 0.852,
   "co2_ohne_faktor": [],
-  "rohstoffwert_eur": 0.62,
+  "rohstoffwert_eur": 0.61,
   "wert_ohne_preis": [
    "Pd"
   ],
@@ -80,6 +81,22 @@
    "westmetall2026": {
     "titel": "Westmetall Marktdaten (LME, London Fixing, WM-Notiz)",
     "url": "https://www.westmetall.com/en/markdaten.php"
+   },
+   "usgs2026": {
+    "titel": "Mineral Commodity Summaries 2026 (ver. 1.3, May 2026)",
+    "url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf"
+   },
+   "eucrm2023": {
+    "titel": "Study on the Critical Raw Materials for the EU 2023 – Final Report",
+    "url": "https://single-market-economy.ec.europa.eu/publications/study-critical-raw-materials-eu-2023-final-report_en"
+   },
+   "eu2024crma": {
+    "titel": "Verordnung (EU) 2024/1252 zur Schaffung eines Rahmens zur Gewährleistung einer sicheren und nachhaltigen Versorgung mit kritischen Rohstoffen (Critical Raw Materials Act)",
+    "url": "https://op.europa.eu/en/publication-detail/-/publication/aa3c49f7-08e7-11ef-a251-01aa75ed71a1"
+   },
+   "usdapsd2026": {
+    "titel": "Production, Supply and Distribution Online (PSD), Datensatz Cotton (psd_cotton_csv.zip)",
+    "url": "https://apps.fas.usda.gov/psdonline/downloads/psd_cotton_csv.zip"
    }
   }
  },
@@ -134,7 +151,7 @@
     0,
     366.4
    ],
-   "mass": 43.2,
+   "mass": 42.5,
    "materials": [
     [
      "pcabs",
@@ -172,7 +189,7 @@
     0,
     312.8
    ],
-   "mass": 12.3,
+   "mass": 12.2,
    "materials": [
     [
      "stahl",
@@ -304,7 +321,7 @@
     0,
     214.0
    ],
-   "mass": 9.3,
+   "mass": 9.1,
    "materials": [
     [
      "alu",
@@ -344,7 +361,7 @@
     0,
     164.0
    ],
-   "mass": 14.4,
+   "mass": 14.2,
    "materials": [
     [
      "stahl",
@@ -394,7 +411,7 @@
     0,
     163.5
    ],
-   "mass": 10.3,
+   "mass": 10.1,
    "materials": [
     [
      "ndfeb",
@@ -427,7 +444,7 @@
     0,
     106.5
    ],
-   "mass": 43.2,
+   "mass": 42.5,
    "materials": [
     [
      "alu",
@@ -474,7 +491,7 @@
     0,
     56.5
    ],
-   "mass": 9.3,
+   "mass": 9.1,
    "materials": [
     [
      "fr4",
@@ -535,7 +552,7 @@
    "x": 31,
    "y": 108,
    "w": 12,
-   "d": 7,
+   "d": 7.5,
    "z": 5.2,
    "h": 3.5,
    "r": 0.5,
@@ -561,6 +578,7 @@
    ],
    "info": "Breite USB-3-Buchse für das Kabel zum Computer. Angelötet, wackelt sie oft nach Jahren.",
    "color": "#C9CED2",
+   "sortBias": 12,
    "marks": [
     {
      "shape": "box",
@@ -592,7 +610,7 @@
     0,
     56.0
    ],
-   "mass": 6.2,
+   "mass": 6.1,
    "materials": [
     [
      "fr4",
@@ -635,6 +653,67 @@
    ]
   },
   {
+   "id": "puffer_l",
+   "component_id": "plastic_housing",
+   "material_id": "silicone",
+   "name": "Gummipuffer",
+   "short": "Gummipuffer",
+   "shape": "box",
+   "x": 1,
+   "y": 20,
+   "w": 4,
+   "d": 60,
+   "z": 4,
+   "h": 8,
+   "r": 1.5,
+   "explode": [
+    0,
+    0,
+    56.0
+   ],
+   "mass": 1.5,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "info": "Weiche Gummistreifen links und rechts. Sie dämpfen Stöße, damit der Kopf die Scheibe nicht berührt.",
+   "color": "#4A5156",
+   "sortBias": -8
+  },
+  {
+   "id": "puffer_r",
+   "component_id": "plastic_housing",
+   "material_id": "silicone",
+   "name": "Gummipuffer",
+   "short": "Gummipuffer",
+   "shape": "box",
+   "x": 75,
+   "y": 20,
+   "w": 4,
+   "d": 60,
+   "z": 4,
+   "h": 8,
+   "r": 1.5,
+   "explode": [
+    0,
+    0,
+    56.0
+   ],
+   "mass": 1.5,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "info": "Zweiter Gummipuffer auf der anderen Seite.",
+   "color": "#4A5156",
+   "label": false,
+   "sortBias": -8
+  },
+  {
    "id": "unterschale",
    "component_id": "plastic_housing",
    "material_id": "abs",
@@ -653,7 +732,7 @@
     0,
     0.0
    ],
-   "mass": 46.3,
+   "mass": 45.6,
    "materials": [
     [
      "pcabs",

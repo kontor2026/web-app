@@ -21,51 +21,52 @@
  "werte": [
   {
    "k": "Rohstoffwert",
-   "v": "≈ 1,49 €",
+   "v": "≈ 1,55 €",
    "hint": "Silber, Kobalt, Kupfer zu Preisen vom 13.11. Ohne Kobalt (kein Preis)."
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 7,40 kg",
+   "v": "≈ 7,14 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 5,76 kg",
-   "hint": "spart 1,64 kg, wenn recycelte Materialien eingesetzt werden"
+   "v": "≈ 5,43 kg",
+   "hint": "spart 1,71 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Fe": 385049.0,
-   "Cu": 102190.0,
-   "Al": 33900.0,
-   "Co": 30962.0,
-   "Ag": 3.67,
-   "Au": 0.88,
-   "Pd": 0.28
+   "Fe": 365495.0,
+   "Cu": 108030.0,
+   "Al": 31470.0,
+   "Co": 28743.0,
+   "Ag": 3.42,
+   "Au": 0.82,
+   "Pd": 0.26
   },
   "herkunft": {
    "Fe": "Modellmassen (Schätzung)",
    "Cu": "Modellmassen (Schätzung)",
    "Al": "Modellmassen (Schätzung)",
-   "Co": "226 g Akku × 13,7% Kobalt (Schätzung, oeko2012 Tab, 25)",
-   "Ag": "15 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)",
-   "Au": "15 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)",
-   "Pd": "15 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)"
+   "Co": "210 g Akku × 13,7% Kobalt (Schätzung, oeko2012 Tab, 25)",
+   "Ag": "14 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)",
+   "Au": "14 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)",
+   "Pd": "14 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)"
   },
   "materialien_g": {
-   "abs": 450.1,
-   "steel": 353.8,
-   "mixed_electronics": 255.5,
-   "li_ion": 226.0,
-   "pcb": 14.7
+   "abs": 485.4,
+   "steel": 335.5,
+   "mixed_electronics": 244.7,
+   "li_ion": 209.8,
+   "pcb": 13.7,
+   "copper": 10.9
   },
-  "co2_kg": 7.399,
-  "co2_mit_recyclat_kg": 5.764,
-  "co2_ersparnis_kg": 1.635,
+  "co2_kg": 7.143,
+  "co2_mit_recyclat_kg": 5.432,
+  "co2_ersparnis_kg": 1.712,
   "co2_ohne_faktor": [],
-  "rohstoffwert_eur": 1.49,
+  "rohstoffwert_eur": 1.55,
   "wert_ohne_preis": [
    "Co"
   ],
@@ -82,6 +83,22 @@
    "westmetall2026": {
     "titel": "Westmetall Marktdaten (LME, London Fixing, WM-Notiz)",
     "url": "https://www.westmetall.com/en/markdaten.php"
+   },
+   "usgs2026": {
+    "titel": "Mineral Commodity Summaries 2026 (ver. 1.3, May 2026)",
+    "url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf"
+   },
+   "eucrm2023": {
+    "titel": "Study on the Critical Raw Materials for the EU 2023 – Final Report",
+    "url": "https://single-market-economy.ec.europa.eu/publications/study-critical-raw-materials-eu-2023-final-report_en"
+   },
+   "eu2024crma": {
+    "titel": "Verordnung (EU) 2024/1252 zur Schaffung eines Rahmens zur Gewährleistung einer sicheren und nachhaltigen Versorgung mit kritischen Rohstoffen (Critical Raw Materials Act)",
+    "url": "https://op.europa.eu/en/publication-detail/-/publication/aa3c49f7-08e7-11ef-a251-01aa75ed71a1"
+   },
+   "usdapsd2026": {
+    "titel": "Production, Supply and Distribution Online (PSD), Datensatz Cotton (psd_cotton_csv.zip)",
+    "url": "https://apps.fas.usda.gov/psdonline/downloads/psd_cotton_csv.zip"
    }
   }
  },
@@ -118,11 +135,11 @@
  "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "schale_links_kopf",
+   "id": "schale_links",
    "component_id": "plastic_housing",
    "material_id": "abs",
-   "name": "Gehäusehälfte links (Kopf)",
-   "short": "Halbschale links",
+   "name": "Gehäusehälfte links",
+   "short": "Schale links",
    "shape": "box",
    "x": 12,
    "y": 5,
@@ -130,52 +147,64 @@
    "d": 135,
    "z": 150,
    "h": 70,
-   "r": 10,
+   "r": 6,
    "explode": [
-    -80,
-    80,
+    -125,
+    0,
     0
    ],
-   "mass": 88.4,
+   "mass": 82.1,
    "materials": [
     [
      "pcabs",
-     100
+     85
+    ],
+    [
+     "tpe",
+     15
     ]
    ],
-   "info": "Linke Gehäusehälfte aus Kunststoff mit Gummi-Einlagen. Etwa zehn Torx-Schrauben lösen, dann abheben.",
+   "info": "Linke Gehäusehälfte aus glasfaserverstärktem Kunststoff. Etwa zehn Torx-Schrauben lösen, dann abheben.",
    "color": "#D9822B",
    "marks": [
     {
      "shape": "box",
-     "x": 6,
-     "y": 10,
-     "w": 16,
-     "d": 3,
+     "x": 8,
+     "y": 12,
+     "w": 14,
+     "d": 2.5,
      "fill": "#1E2226"
     },
     {
      "shape": "box",
-     "x": 6,
+     "x": 8,
      "y": 18,
-     "w": 16,
-     "d": 3,
+     "w": 14,
+     "d": 2.5,
      "fill": "#1E2226"
     },
     {
      "shape": "box",
-     "x": 6,
-     "y": 26,
-     "w": 16,
-     "d": 3,
+     "x": 8,
+     "y": 24,
+     "w": 14,
+     "d": 2.5,
      "fill": "#1E2226"
     },
     {
      "shape": "box",
-     "x": 6,
-     "y": 34,
-     "w": 16,
-     "d": 3,
+     "x": 8,
+     "y": 30,
+     "w": 14,
+     "d": 2.5,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "box",
+     "x": 8,
+     "y": 36,
+     "w": 14,
+     "d": 2.5,
      "fill": "#1E2226"
     }
    ]
@@ -191,15 +220,79 @@
    "y": 95,
    "w": 18,
    "d": 55,
-   "z": 60,
-   "h": 90,
+   "z": 72,
+   "h": 78,
    "r": 6,
    "explode": [
-    -80,
-    80,
+    -125,
+    0,
     0
    ],
-   "mass": 59,
+   "mass": 50.2,
+   "materials": [
+    [
+     "pcabs",
+     80
+    ],
+    [
+     "tpe",
+     20
+    ]
+   ],
+   "info": "Griffteil der linken Schale, mit weichem Gummi überzogen.",
+   "color": "#2E3338",
+   "label": false
+  },
+  {
+   "id": "schale_links_fuss",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Gehäusehälfte links (Fuß)",
+   "short": "Fuß links",
+   "shape": "box",
+   "x": 4,
+   "y": 55,
+   "w": 36,
+   "d": 120,
+   "z": 60,
+   "h": 12,
+   "r": 8,
+   "explode": [
+    -125,
+    0,
+    0
+   ],
+   "mass": 31.9,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Fuß der linken Schale mit Führungsschiene für den Akku.",
+   "color": "#D9822B",
+   "label": false
+  },
+  {
+   "id": "schale_rechts",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Gehäusehälfte rechts",
+   "short": "Schale rechts",
+   "shape": "box",
+   "x": 40,
+   "y": 5,
+   "w": 28,
+   "d": 135,
+   "z": 150,
+   "h": 70,
+   "r": 6,
+   "explode": [
+    160,
+    0,
+    0
+   ],
+   "mass": 82.1,
    "materials": [
     [
      "pcabs",
@@ -210,69 +303,47 @@
      15
     ]
    ],
-   "info": "Griffteil der linken Schale, mit weichem Gummi überzogen. Gehört zur Kopfschale.",
-   "color": "#2E3338",
-   "label": false
-  },
-  {
-   "id": "schale_rechts_kopf",
-   "component_id": "plastic_housing",
-   "material_id": "abs",
-   "name": "Gehäusehälfte rechts (Kopf)",
-   "short": "Halbschale rechts",
-   "shape": "box",
-   "x": 40,
-   "y": 5,
-   "w": 28,
-   "d": 135,
-   "z": 150,
-   "h": 70,
-   "r": 10,
-   "explode": [
-    80,
-    -80,
-    0
-   ],
-   "mass": 88.4,
-   "materials": [
-    [
-     "pcabs",
-     100
-    ]
-   ],
    "info": "Rechte Gehäusehälfte; in ihren Stegen liegen Motor und Getriebe. Kunststoff mit Glasfasern, nicht sortenrein.",
    "color": "#D9822B",
    "marks": [
     {
      "shape": "box",
      "x": 6,
-     "y": 10,
-     "w": 16,
-     "d": 3,
+     "y": 12,
+     "w": 14,
+     "d": 2.5,
      "fill": "#1E2226"
     },
     {
      "shape": "box",
      "x": 6,
      "y": 18,
-     "w": 16,
-     "d": 3,
+     "w": 14,
+     "d": 2.5,
      "fill": "#1E2226"
     },
     {
      "shape": "box",
      "x": 6,
-     "y": 26,
-     "w": 16,
-     "d": 3,
+     "y": 24,
+     "w": 14,
+     "d": 2.5,
      "fill": "#1E2226"
     },
     {
      "shape": "box",
      "x": 6,
-     "y": 34,
-     "w": 16,
-     "d": 3,
+     "y": 30,
+     "w": 14,
+     "d": 2.5,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "box",
+     "x": 6,
+     "y": 36,
+     "w": 14,
+     "d": 2.5,
      "fill": "#1E2226"
     }
    ]
@@ -288,28 +359,94 @@
    "y": 95,
    "w": 18,
    "d": 55,
-   "z": 60,
-   "h": 90,
+   "z": 72,
+   "h": 78,
    "r": 6,
    "explode": [
-    80,
-    -80,
+    160,
+    0,
     0
    ],
-   "mass": 59,
+   "mass": 50.2,
    "materials": [
     [
      "pcabs",
-     85
+     80
     ],
     [
      "tpe",
-     15
+     20
     ]
    ],
    "info": "Griffteil der rechten Schale mit Gummiüberzug.",
    "color": "#2E3338",
    "label": false
+  },
+  {
+   "id": "schale_rechts_fuss",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Gehäusehälfte rechts (Fuß)",
+   "short": "Fuß rechts",
+   "shape": "box",
+   "x": 40,
+   "y": 55,
+   "w": 36,
+   "d": 120,
+   "z": 60,
+   "h": 12,
+   "r": 8,
+   "explode": [
+    160,
+    0,
+    0
+   ],
+   "mass": 31.9,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Fuß der rechten Schale mit Führungsschiene für den Akku.",
+   "color": "#D9822B",
+   "label": false
+  },
+  {
+   "id": "schrauben",
+   "component_id": "plastic_housing",
+   "material_id": "steel",
+   "name": "Torx-Schrauben (10 Stück)",
+   "short": "Schrauben",
+   "shape": "cyl",
+   "x": 14,
+   "y": 20,
+   "w": 6,
+   "z": 200,
+   "h": 14,
+   "explode": [
+    -195,
+    0,
+    0
+   ],
+   "mass": 7.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Halten die beiden Schalen zusammen. Man braucht einen Torx-Schraubendreher T10 oder T15.",
+   "color": "#7D858B",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 1.5,
+     "y": 1.5,
+     "w": 3,
+     "fill": "#4A5156"
+    }
+   ]
   },
   {
    "id": "planetenraeder",
@@ -321,14 +458,14 @@
    "x": 26,
    "y": 104,
    "w": 28,
-   "z": 170,
-   "h": 30,
+   "z": 172,
+   "h": 26,
    "explode": [
     0,
     20,
-    80
+    75
    ],
-   "mass": 59,
+   "mass": 54.7,
    "materials": [
     [
      "stahl",
@@ -362,25 +499,25 @@
    ]
   },
   {
-   "id": "bohrfutter",
+   "id": "bohrfutter_0",
    "component_id": "drill_chuck",
    "material_id": "steel",
    "name": "Schnellspannbohrfutter",
    "short": "Bohrfutter",
    "shape": "box",
-   "x": 21,
-   "y": 152,
-   "w": 38,
-   "d": 48,
-   "z": 166,
-   "h": 38,
-   "r": 10,
+   "x": 28.77,
+   "y": 154,
+   "w": 22.46,
+   "d": 46,
+   "z": 167,
+   "h": 7.2,
+   "r": 3,
    "explode": [
     0,
-    75,
+    105,
     0
    ],
-   "mass": 176.9,
+   "mass": 32.8,
    "materials": [
     [
      "stahl",
@@ -393,38 +530,213 @@
    ],
    "info": "Spannt Bohrer und Bits mit drei Stahlbacken. Ganz öffnen, die Linksschraube innen lösen, dann abschrauben.",
    "color": "#3A3F44",
+   "label": false
+  },
+  {
+   "id": "bohrfutter_1",
+   "component_id": "drill_chuck",
+   "material_id": "steel",
+   "name": "Schnellspannbohrfutter",
+   "short": "Bohrfutter",
+   "shape": "box",
+   "x": 22.84,
+   "y": 154,
+   "w": 34.31,
+   "d": 46,
+   "z": 174.2,
+   "h": 7.2,
+   "r": 3,
+   "explode": [
+    0,
+    105,
+    0
+   ],
+   "mass": 32.8,
+   "materials": [
+    [
+     "stahl",
+     85
+    ],
+    [
+     "pcabs",
+     15
+    ]
+   ],
+   "info": "Spannt Bohrer und Bits mit drei Stahlbacken. Ganz öffnen, die Linksschraube innen lösen, dann abschrauben.",
+   "color": "#3A3F44",
+   "label": false
+  },
+  {
+   "id": "bohrfutter_2",
+   "component_id": "drill_chuck",
+   "material_id": "steel",
+   "name": "Schnellspannbohrfutter",
+   "short": "Bohrfutter",
+   "shape": "box",
+   "x": 21.28,
+   "y": 154,
+   "w": 37.44,
+   "d": 46,
+   "z": 181.4,
+   "h": 7.2,
+   "r": 3,
+   "explode": [
+    0,
+    105,
+    0
+   ],
+   "mass": 32.8,
+   "materials": [
+    [
+     "stahl",
+     85
+    ],
+    [
+     "pcabs",
+     15
+    ]
+   ],
+   "info": "Spannt Bohrer und Bits mit drei Stahlbacken. Ganz öffnen, die Linksschraube innen lösen, dann abschrauben.",
+   "color": "#3A3F44"
+  },
+  {
+   "id": "bohrfutter_3",
+   "component_id": "drill_chuck",
+   "material_id": "steel",
+   "name": "Schnellspannbohrfutter",
+   "short": "Bohrfutter",
+   "shape": "box",
+   "x": 22.84,
+   "y": 154,
+   "w": 34.31,
+   "d": 46,
+   "z": 188.6,
+   "h": 7.2,
+   "r": 3,
+   "explode": [
+    0,
+    105,
+    0
+   ],
+   "mass": 32.8,
+   "materials": [
+    [
+     "stahl",
+     85
+    ],
+    [
+     "pcabs",
+     15
+    ]
+   ],
+   "info": "Spannt Bohrer und Bits mit drei Stahlbacken. Ganz öffnen, die Linksschraube innen lösen, dann abschrauben.",
+   "color": "#3A3F44",
+   "label": false
+  },
+  {
+   "id": "bohrfutter_4",
+   "component_id": "drill_chuck",
+   "material_id": "steel",
+   "name": "Schnellspannbohrfutter",
+   "short": "Bohrfutter",
+   "shape": "box",
+   "x": 28.77,
+   "y": 154,
+   "w": 22.46,
+   "d": 46,
+   "z": 195.8,
+   "h": 7.2,
+   "r": 3,
+   "explode": [
+    0,
+    105,
+    0
+   ],
+   "mass": 32.8,
+   "materials": [
+    [
+     "stahl",
+     85
+    ],
+    [
+     "pcabs",
+     15
+    ]
+   ],
+   "info": "Spannt Bohrer und Bits mit drei Stahlbacken. Ganz öffnen, die Linksschraube innen lösen, dann abschrauben.",
+   "color": "#3A3F44",
+   "label": false,
    "marks": [
     {
      "shape": "box",
-     "x": 4,
+     "x": 1,
+     "y": 4,
+     "w": 20.46,
+     "d": 2,
+     "fill": "#5E656A"
+    },
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 10,
+     "w": 20.46,
+     "d": 2,
+     "fill": "#5E656A"
+    },
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 16,
+     "w": 20.46,
+     "d": 2,
+     "fill": "#5E656A"
+    },
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 22,
+     "w": 20.46,
+     "d": 2,
+     "fill": "#5E656A"
+    },
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 28,
+     "w": 20.46,
+     "d": 2,
+     "fill": "#5E656A"
+    },
+    {
+     "shape": "box",
+     "x": 1,
      "y": 34,
-     "w": 30,
-     "d": 14,
-     "r": 6,
+     "w": 20.46,
+     "d": 2,
      "fill": "#5E656A"
     }
    ]
   },
   {
-   "id": "drehmomentring",
+   "id": "drehmomentring_0",
    "component_id": "gearbox",
    "material_id": "abs",
    "name": "Drehmomentring",
    "short": "Drehmoment",
    "shape": "box",
-   "x": 12,
+   "x": 23.15,
    "y": 140,
-   "w": 56,
-   "d": 12,
-   "z": 157,
-   "h": 56,
-   "r": 6,
+   "w": 33.7,
+   "d": 13,
+   "z": 158,
+   "h": 10.8,
+   "r": 3,
    "explode": [
     0,
-    45,
+    70,
     0
    ],
-   "mass": 29.5,
+   "mass": 5.5,
    "materials": [
     [
      "pcabs",
@@ -437,77 +749,197 @@
    ],
    "info": "Stellt ein, ab welcher Kraft die Rutschkupplung auslöst. Innen drücken Stahlfedern auf Kugeln.",
    "color": "#2E3338",
+   "label": false
+  },
+  {
+   "id": "drehmomentring_1",
+   "component_id": "gearbox",
+   "material_id": "abs",
+   "name": "Drehmomentring",
+   "short": "Drehmoment",
+   "shape": "box",
+   "x": 14.26,
+   "y": 140,
+   "w": 51.47,
+   "d": 13,
+   "z": 168.8,
+   "h": 10.8,
+   "r": 3,
+   "explode": [
+    0,
+    70,
+    0
+   ],
+   "mass": 5.5,
+   "materials": [
+    [
+     "pcabs",
+     70
+    ],
+    [
+     "stahl",
+     30
+    ]
+   ],
+   "info": "Stellt ein, ab welcher Kraft die Rutschkupplung auslöst. Innen drücken Stahlfedern auf Kugeln.",
+   "color": "#2E3338",
+   "label": false
+  },
+  {
+   "id": "drehmomentring_2",
+   "component_id": "gearbox",
+   "material_id": "abs",
+   "name": "Drehmomentring",
+   "short": "Drehmoment",
+   "shape": "box",
+   "x": 11.92,
+   "y": 140,
+   "w": 56.16,
+   "d": 13,
+   "z": 179.6,
+   "h": 10.8,
+   "r": 3,
+   "explode": [
+    0,
+    70,
+    0
+   ],
+   "mass": 5.5,
+   "materials": [
+    [
+     "pcabs",
+     70
+    ],
+    [
+     "stahl",
+     30
+    ]
+   ],
+   "info": "Stellt ein, ab welcher Kraft die Rutschkupplung auslöst. Innen drücken Stahlfedern auf Kugeln.",
+   "color": "#2E3338"
+  },
+  {
+   "id": "drehmomentring_3",
+   "component_id": "gearbox",
+   "material_id": "abs",
+   "name": "Drehmomentring",
+   "short": "Drehmoment",
+   "shape": "box",
+   "x": 14.26,
+   "y": 140,
+   "w": 51.47,
+   "d": 13,
+   "z": 190.4,
+   "h": 10.8,
+   "r": 3,
+   "explode": [
+    0,
+    70,
+    0
+   ],
+   "mass": 5.5,
+   "materials": [
+    [
+     "pcabs",
+     70
+    ],
+    [
+     "stahl",
+     30
+    ]
+   ],
+   "info": "Stellt ein, ab welcher Kraft die Rutschkupplung auslöst. Innen drücken Stahlfedern auf Kugeln.",
+   "color": "#2E3338",
+   "label": false
+  },
+  {
+   "id": "drehmomentring_4",
+   "component_id": "gearbox",
+   "material_id": "abs",
+   "name": "Drehmomentring",
+   "short": "Drehmoment",
+   "shape": "box",
+   "x": 23.15,
+   "y": 140,
+   "w": 33.7,
+   "d": 13,
+   "z": 201.2,
+   "h": 10.8,
+   "r": 3,
+   "explode": [
+    0,
+    70,
+    0
+   ],
+   "mass": 5.5,
+   "materials": [
+    [
+     "pcabs",
+     70
+    ],
+    [
+     "stahl",
+     30
+    ]
+   ],
+   "info": "Stellt ein, ab welcher Kraft die Rutschkupplung auslöst. Innen drücken Stahlfedern auf Kugeln.",
+   "color": "#2E3338",
+   "label": false,
    "marks": [
     {
      "shape": "box",
-     "x": 4,
-     "y": 2,
-     "w": 4,
-     "d": 8,
+     "x": 2,
+     "y": 3,
+     "w": 2,
+     "d": 7,
      "fill": "#F2F2F2"
     },
     {
      "shape": "box",
-     "x": 13,
-     "y": 2,
-     "w": 4,
-     "d": 8,
+     "x": 8,
+     "y": 3,
+     "w": 2,
+     "d": 7,
      "fill": "#F2F2F2"
     },
     {
      "shape": "box",
-     "x": 22,
-     "y": 2,
-     "w": 4,
-     "d": 8,
+     "x": 14,
+     "y": 3,
+     "w": 2,
+     "d": 7,
      "fill": "#F2F2F2"
     },
     {
      "shape": "box",
-     "x": 31,
-     "y": 2,
-     "w": 4,
-     "d": 8,
-     "fill": "#F2F2F2"
-    },
-    {
-     "shape": "box",
-     "x": 40,
-     "y": 2,
-     "w": 4,
-     "d": 8,
-     "fill": "#F2F2F2"
-    },
-    {
-     "shape": "box",
-     "x": 49,
-     "y": 2,
-     "w": 4,
-     "d": 8,
+     "x": 20,
+     "y": 3,
+     "w": 2,
+     "d": 7,
      "fill": "#F2F2F2"
     }
    ]
   },
   {
-   "id": "getriebe",
+   "id": "getriebe_0",
    "component_id": "gearbox",
    "material_id": "steel",
    "name": "Getriebegehäuse mit Gangschalter",
    "short": "Getriebe",
    "shape": "box",
-   "x": 22,
-   "y": 95,
-   "w": 36,
-   "d": 45,
+   "x": 28.14,
+   "y": 96,
+   "w": 23.71,
+   "d": 44,
    "z": 166,
-   "h": 38,
-   "r": 10,
+   "h": 7.6,
+   "r": 3,
    "explode": [
     0,
-    20,
+    35,
     0
    ],
-   "mass": 117.9,
+   "mass": 21.9,
    "materials": [
     [
      "stahl",
@@ -518,40 +950,176 @@
      45
     ]
    ],
-   "info": "Hält die Planetenräder; mit dem Schieber oben wählt man zwei Gänge. Mit dem Motor zusammen herausheben.",
+   "info": "Hält die Planetenräder; mit dem Schieber oben wählt man zwei Gänge. Zusammen mit dem Motor herausheben.",
    "color": "#5E656A",
+   "label": false
+  },
+  {
+   "id": "getriebe_1",
+   "component_id": "gearbox",
+   "material_id": "steel",
+   "name": "Getriebegehäuse mit Gangschalter",
+   "short": "Getriebe",
+   "shape": "box",
+   "x": 21.89,
+   "y": 96,
+   "w": 36.22,
+   "d": 44,
+   "z": 173.6,
+   "h": 7.6,
+   "r": 3,
+   "explode": [
+    0,
+    35,
+    0
+   ],
+   "mass": 21.9,
+   "materials": [
+    [
+     "stahl",
+     55
+    ],
+    [
+     "pcabs",
+     45
+    ]
+   ],
+   "info": "Hält die Planetenräder; mit dem Schieber oben wählt man zwei Gänge. Zusammen mit dem Motor herausheben.",
+   "color": "#5E656A",
+   "label": false
+  },
+  {
+   "id": "getriebe_2",
+   "component_id": "gearbox",
+   "material_id": "steel",
+   "name": "Getriebegehäuse mit Gangschalter",
+   "short": "Getriebe",
+   "shape": "box",
+   "x": 20.24,
+   "y": 96,
+   "w": 39.52,
+   "d": 44,
+   "z": 181.2,
+   "h": 7.6,
+   "r": 3,
+   "explode": [
+    0,
+    35,
+    0
+   ],
+   "mass": 21.9,
+   "materials": [
+    [
+     "stahl",
+     55
+    ],
+    [
+     "pcabs",
+     45
+    ]
+   ],
+   "info": "Hält die Planetenräder; mit dem Schieber oben wählt man zwei Gänge. Zusammen mit dem Motor herausheben.",
+   "color": "#5E656A"
+  },
+  {
+   "id": "getriebe_3",
+   "component_id": "gearbox",
+   "material_id": "steel",
+   "name": "Getriebegehäuse mit Gangschalter",
+   "short": "Getriebe",
+   "shape": "box",
+   "x": 21.89,
+   "y": 96,
+   "w": 36.22,
+   "d": 44,
+   "z": 188.8,
+   "h": 7.6,
+   "r": 3,
+   "explode": [
+    0,
+    35,
+    0
+   ],
+   "mass": 21.9,
+   "materials": [
+    [
+     "stahl",
+     55
+    ],
+    [
+     "pcabs",
+     45
+    ]
+   ],
+   "info": "Hält die Planetenräder; mit dem Schieber oben wählt man zwei Gänge. Zusammen mit dem Motor herausheben.",
+   "color": "#5E656A",
+   "label": false
+  },
+  {
+   "id": "getriebe_4",
+   "component_id": "gearbox",
+   "material_id": "steel",
+   "name": "Getriebegehäuse mit Gangschalter",
+   "short": "Getriebe",
+   "shape": "box",
+   "x": 28.14,
+   "y": 96,
+   "w": 23.71,
+   "d": 44,
+   "z": 196.4,
+   "h": 7.6,
+   "r": 3,
+   "explode": [
+    0,
+    35,
+    0
+   ],
+   "mass": 21.9,
+   "materials": [
+    [
+     "stahl",
+     55
+    ],
+    [
+     "pcabs",
+     45
+    ]
+   ],
+   "info": "Hält die Planetenräder; mit dem Schieber oben wählt man zwei Gänge. Zusammen mit dem Motor herausheben.",
+   "color": "#5E656A",
+   "label": false,
    "marks": [
     {
      "shape": "box",
-     "x": 10,
-     "y": 10,
-     "w": 16,
-     "d": 20,
-     "r": 4,
+     "x": 1,
+     "y": 6,
+     "w": 21.71,
+     "d": 18,
+     "r": 2,
      "fill": "#1E2226"
     }
    ]
   },
   {
-   "id": "motor",
+   "id": "motor_0",
    "component_id": "electric_motor",
    "material_id": "mixed_electronics",
    "name": "Gleichstrommotor",
    "short": "Motor",
    "shape": "box",
-   "x": 22,
-   "y": 35,
-   "w": 36,
-   "d": 60,
+   "x": 28.77,
+   "y": 36,
+   "w": 22.46,
+   "d": 58,
    "z": 167,
-   "h": 36,
-   "r": 12,
+   "h": 7.2,
+   "r": 3,
    "explode": [
     0,
-    -15,
+    0,
     0
    ],
-   "mass": 226,
+   "mass": 42,
    "materials": [
     [
      "stahl",
@@ -576,78 +1144,389 @@
    ],
    "info": "Bürstenmotor mit Kupferwicklung und Ferritmagneten. Drähte abschneiden; viel Kupfer und Stahl.",
    "color": "#9AA2A8",
+   "label": false
+  },
+  {
+   "id": "motor_1",
+   "component_id": "electric_motor",
+   "material_id": "mixed_electronics",
+   "name": "Gleichstrommotor",
+   "short": "Motor",
+   "shape": "box",
+   "x": 22.84,
+   "y": 36,
+   "w": 34.31,
+   "d": 58,
+   "z": 174.2,
+   "h": 7.2,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 42,
+   "materials": [
+    [
+     "stahl",
+     45
+    ],
+    [
+     "kupfer",
+     25
+    ],
+    [
+     "ferrit",
+     22
+    ],
+    [
+     "graphit",
+     5
+    ],
+    [
+     "pcabs",
+     3
+    ]
+   ],
+   "info": "Bürstenmotor mit Kupferwicklung und Ferritmagneten. Drähte abschneiden; viel Kupfer und Stahl.",
+   "color": "#9AA2A8",
+   "label": false
+  },
+  {
+   "id": "motor_2",
+   "component_id": "electric_motor",
+   "material_id": "mixed_electronics",
+   "name": "Gleichstrommotor",
+   "short": "Motor",
+   "shape": "box",
+   "x": 21.28,
+   "y": 36,
+   "w": 37.44,
+   "d": 58,
+   "z": 181.4,
+   "h": 7.2,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 42,
+   "materials": [
+    [
+     "stahl",
+     45
+    ],
+    [
+     "kupfer",
+     25
+    ],
+    [
+     "ferrit",
+     22
+    ],
+    [
+     "graphit",
+     5
+    ],
+    [
+     "pcabs",
+     3
+    ]
+   ],
+   "info": "Bürstenmotor mit Kupferwicklung und Ferritmagneten. Drähte abschneiden; viel Kupfer und Stahl.",
+   "color": "#9AA2A8"
+  },
+  {
+   "id": "motor_3",
+   "component_id": "electric_motor",
+   "material_id": "mixed_electronics",
+   "name": "Gleichstrommotor",
+   "short": "Motor",
+   "shape": "box",
+   "x": 22.84,
+   "y": 36,
+   "w": 34.31,
+   "d": 58,
+   "z": 188.6,
+   "h": 7.2,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 42,
+   "materials": [
+    [
+     "stahl",
+     45
+    ],
+    [
+     "kupfer",
+     25
+    ],
+    [
+     "ferrit",
+     22
+    ],
+    [
+     "graphit",
+     5
+    ],
+    [
+     "pcabs",
+     3
+    ]
+   ],
+   "info": "Bürstenmotor mit Kupferwicklung und Ferritmagneten. Drähte abschneiden; viel Kupfer und Stahl.",
+   "color": "#9AA2A8",
+   "label": false
+  },
+  {
+   "id": "motor_4",
+   "component_id": "electric_motor",
+   "material_id": "mixed_electronics",
+   "name": "Gleichstrommotor",
+   "short": "Motor",
+   "shape": "box",
+   "x": 28.77,
+   "y": 36,
+   "w": 22.46,
+   "d": 58,
+   "z": 195.8,
+   "h": 7.2,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 42,
+   "materials": [
+    [
+     "stahl",
+     45
+    ],
+    [
+     "kupfer",
+     25
+    ],
+    [
+     "ferrit",
+     22
+    ],
+    [
+     "graphit",
+     5
+    ],
+    [
+     "pcabs",
+     3
+    ]
+   ],
+   "info": "Bürstenmotor mit Kupferwicklung und Ferritmagneten. Drähte abschneiden; viel Kupfer und Stahl.",
+   "color": "#9AA2A8",
+   "label": false,
    "marks": [
     {
      "shape": "box",
-     "x": 4,
-     "y": 4,
-     "w": 28,
-     "d": 10,
-     "r": 4,
-     "fill": "#B87333"
-    },
-    {
-     "shape": "box",
-     "x": 6,
-     "y": 20,
-     "w": 3,
-     "d": 30,
+     "x": 1,
+     "y": 6,
+     "w": 20.46,
+     "d": 2,
      "fill": "#7D858B"
     },
     {
      "shape": "box",
-     "x": 13,
-     "y": 20,
-     "w": 3,
-     "d": 30,
+     "x": 1,
+     "y": 18,
+     "w": 20.46,
+     "d": 2,
      "fill": "#7D858B"
     },
     {
      "shape": "box",
-     "x": 20,
-     "y": 20,
-     "w": 3,
-     "d": 30,
+     "x": 1,
+     "y": 30,
+     "w": 20.46,
+     "d": 2,
      "fill": "#7D858B"
     },
     {
      "shape": "box",
-     "x": 27,
-     "y": 20,
-     "w": 3,
-     "d": 30,
+     "x": 1,
+     "y": 42,
+     "w": 20.46,
+     "d": 2,
      "fill": "#7D858B"
     }
    ]
   },
   {
-   "id": "abzug",
-   "component_id": "plastic_housing",
-   "material_id": "abs",
-   "name": "Abzug",
-   "short": "Abzug",
+   "id": "kohlebuersten",
+   "component_id": "electric_motor",
+   "material_id": "mixed_electronics",
+   "name": "Kohlebürsten",
+   "short": "Kohlebürsten",
    "shape": "box",
-   "x": 32,
-   "y": 148,
-   "w": 16,
-   "d": 16,
-   "z": 118,
-   "h": 24,
-   "r": 5,
+   "x": 30,
+   "y": 26,
+   "w": 20,
+   "d": 8,
+   "z": 196,
+   "h": 8,
+   "r": 2,
    "explode": [
     0,
-    30,
+    -40,
+    30
+   ],
+   "mass": 5.5,
+   "materials": [
+    [
+     "graphit",
+     70
+    ],
+    [
+     "kupfer",
+     20
+    ],
+    [
+     "stahl",
+     10
+    ]
+   ],
+   "info": "Zwei Graphitstücke drücken mit Federn auf den drehenden Kommutator und übertragen den Strom. Nutzen sich ab.",
+   "color": "#2B2F33",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 2,
+     "w": 6,
+     "d": 4,
+     "r": 1,
+     "fill": "#B87333"
+    },
+    {
+     "shape": "box",
+     "x": 12,
+     "y": 2,
+     "w": 6,
+     "d": 4,
+     "r": 1,
+     "fill": "#B87333"
+    }
+   ]
+  },
+  {
+   "id": "luefter",
+   "component_id": "electric_motor",
+   "material_id": "abs",
+   "name": "Lüfterrad",
+   "short": "Lüfter",
+   "shape": "box",
+   "x": 23,
+   "y": 12,
+   "w": 34,
+   "d": 8,
+   "z": 168,
+   "h": 34,
+   "r": 12,
+   "explode": [
+    0,
+    -40,
     0
    ],
-   "mass": 7.9,
+   "mass": 5.5,
    "materials": [
     [
      "pcabs",
      100
     ]
    ],
-   "info": "Je weiter man drückt, desto schneller dreht der Motor. Steckt auf dem Schalter.",
-   "color": "#2E3338"
+   "info": "Sitzt auf der Motorwelle und saugt Kühlluft durch die Schlitze im Gehäuse.",
+   "color": "#3A3F44",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4.0,
+     "y": 2.0,
+     "w": 2,
+     "d": 4,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "box",
+     "x": 8.6,
+     "y": 2.0,
+     "w": 2,
+     "d": 4,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "box",
+     "x": 13.2,
+     "y": 2.0,
+     "w": 2,
+     "d": 4,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "box",
+     "x": 17.8,
+     "y": 2.0,
+     "w": 2,
+     "d": 4,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "box",
+     "x": 22.4,
+     "y": 2.0,
+     "w": 2,
+     "d": 4,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "box",
+     "x": 27.0,
+     "y": 2.0,
+     "w": 2,
+     "d": 4,
+     "fill": "#1E2226"
+    }
+   ]
+  },
+  {
+   "id": "richtung",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Drehrichtungsschalter",
+   "short": "Rechts/Links",
+   "shape": "box",
+   "x": 18,
+   "y": 110,
+   "w": 44,
+   "d": 8,
+   "z": 140,
+   "h": 8,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    52
+   ],
+   "mass": 3.6,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Schieber quer durch den Griff: von links gedrückt rechtsherum, von rechts linksherum. Steckt nur.",
+   "color": "#C0392B"
   },
   {
    "id": "schalter",
@@ -657,18 +1536,18 @@
    "short": "Schalter",
    "shape": "box",
    "x": 27,
-   "y": 105,
+   "y": 104,
    "w": 26,
-   "d": 43,
-   "z": 110,
+   "d": 40,
+   "z": 100,
    "h": 38,
    "r": 3,
    "explode": [
     0,
     0,
-    0.0
+    25
    ],
-   "mass": 29.5,
+   "mass": 27.4,
    "materials": [
     [
      "pcabs",
@@ -691,17 +1570,112 @@
      10
     ]
    ],
-   "info": "Elektronischer Schalter mit Rechts-/Linkslauf-Schieber. Regelt die Drehzahl mit einem Leistungstransistor.",
+   "info": "Elektronischer Schalter. Regelt die Drehzahl mit einem Leistungstransistor auf einem Kühlblech.",
    "color": "#3A3F44",
    "marks": [
     {
      "shape": "box",
      "x": 4,
-     "y": 4,
+     "y": 6,
      "w": 18,
-     "d": 8,
+     "d": 10,
      "r": 2,
-     "fill": "#C0392B"
+     "fill": "#9AA2A8"
+    },
+    {
+     "shape": "box",
+     "x": 6,
+     "y": 24,
+     "w": 14,
+     "d": 10,
+     "r": 1,
+     "fill": "#1E2226"
+    }
+   ]
+  },
+  {
+   "id": "abzug",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Abzug",
+   "short": "Abzug",
+   "shape": "box",
+   "x": 32,
+   "y": 144,
+   "w": 16,
+   "d": 20,
+   "z": 112,
+   "h": 26,
+   "r": 5,
+   "explode": [
+    0,
+    40,
+    25
+   ],
+   "mass": 7.3,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Je weiter man drückt, desto schneller dreht der Motor. Steckt auf dem Stößel des Schalters.",
+   "color": "#2E3338",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 12,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#4A5156"
+    }
+   ]
+  },
+  {
+   "id": "led",
+   "component_id": "circuit_board",
+   "material_id": "mixed_electronics",
+   "name": "LED-Arbeitslicht",
+   "short": "LED",
+   "shape": "box",
+   "x": 33,
+   "y": 160,
+   "w": 14,
+   "d": 10,
+   "z": 63,
+   "h": 6,
+   "r": 2,
+   "explode": [
+    0,
+    40,
+    60
+   ],
+   "mass": 1.8,
+   "materials": [
+    [
+     "led",
+     40
+    ],
+    [
+     "fr4",
+     30
+    ],
+    [
+     "kupfer",
+     30
+    ]
+   ],
+   "info": "Kleine LED im Fuß, leuchtet beim Drücken des Abzugs auf die Bohrstelle.",
+   "color": "#E8E4C8",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 2,
+     "w": 6,
+     "fill": "#FFF6B0"
     }
    ]
   },
@@ -721,10 +1695,10 @@
    "r": 2,
    "explode": [
     0,
-    -200,
-    98
+    200,
+    80
    ],
-   "mass": 14.7,
+   "mass": 13.7,
    "materials": [
     [
      "fr4",
@@ -743,7 +1717,7 @@
      10
     ]
    ],
-   "info": "Überwacht jede Zelle und schaltet ab, bevor der Akku zu leer, zu voll oder zu heiß wird. Mit Ladestandsanzeige.",
+   "info": "Überwacht jede Zelle und schaltet ab, bevor der Akku zu leer, zu voll oder zu heiß wird.",
    "color": "#2E6B45",
    "marks": [
     {
@@ -786,6 +1760,15 @@
      "d": 20,
      "r": 1,
      "fill": "#22272B"
+    },
+    {
+     "shape": "box",
+     "x": 42,
+     "y": 40,
+     "w": 12,
+     "d": 10,
+     "r": 1,
+     "fill": "#22272B"
     }
    ]
   },
@@ -805,10 +1788,10 @@
    "r": 3,
    "explode": [
     0,
-    -200,
-    77
+    200,
+    72
    ],
-   "mass": 226,
+   "mass": 209.8,
    "materials": [
     [
      "nmc",
@@ -882,6 +1865,117 @@
      "d": 17,
      "r": 8,
      "fill": "#5E8CB8"
+    },
+    {
+     "shape": "box",
+     "x": 30,
+     "y": 3,
+     "w": 6,
+     "d": 13,
+     "fill": "#B9BEC2"
+    },
+    {
+     "shape": "box",
+     "x": 30,
+     "y": 22,
+     "w": 6,
+     "d": 13,
+     "fill": "#B9BEC2"
+    },
+    {
+     "shape": "box",
+     "x": 30,
+     "y": 41,
+     "w": 6,
+     "d": 13,
+     "fill": "#B9BEC2"
+    },
+    {
+     "shape": "box",
+     "x": 30,
+     "y": 60,
+     "w": 6,
+     "d": 13,
+     "fill": "#B9BEC2"
+    },
+    {
+     "shape": "box",
+     "x": 30,
+     "y": 79,
+     "w": 6,
+     "d": 13,
+     "fill": "#B9BEC2"
+    }
+   ]
+  },
+  {
+   "id": "akku_kontakte",
+   "component_id": "battery_pack",
+   "material_id": "copper",
+   "name": "Akku-Kontaktblock",
+   "short": "Kontakte",
+   "shape": "box",
+   "x": 28,
+   "y": 92,
+   "w": 24,
+   "d": 36,
+   "z": 60,
+   "h": 10,
+   "r": 2,
+   "explode": [
+    95,
+    200,
+    0
+   ],
+   "mass": 10.9,
+   "materials": [
+    [
+     "kupfer",
+     50
+    ],
+    [
+     "kontakte",
+     10
+    ],
+    [
+     "pcabs",
+     40
+    ]
+   ],
+   "info": "Federnde Kupferkontakte, über die der Strom ins Gerät fließt. Nicht mit Metall überbrücken.",
+   "color": "#3A3F44",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 4,
+     "w": 2,
+     "d": 28,
+     "fill": "#C9A24B"
+    },
+    {
+     "shape": "box",
+     "x": 9,
+     "y": 4,
+     "w": 2,
+     "d": 28,
+     "fill": "#C9A24B"
+    },
+    {
+     "shape": "box",
+     "x": 14,
+     "y": 4,
+     "w": 2,
+     "d": 28,
+     "fill": "#C9A24B"
+    },
+    {
+     "shape": "box",
+     "x": 19,
+     "y": 4,
+     "w": 2,
+     "d": 28,
+     "fill": "#C9A24B"
     }
    ]
   },
@@ -889,7 +1983,7 @@
    "id": "akku_gehaeuse",
    "component_id": "battery_pack",
    "material_id": "abs",
-   "name": "Akkugehäuse",
+   "name": "Akkugehäuse mit Ladeanzeige",
    "short": "Akkugehäuse",
    "shape": "box",
    "x": 0,
@@ -901,10 +1995,10 @@
    "r": 8,
    "explode": [
     0,
-    -200,
+    200,
     0
    ],
-   "mass": 117.9,
+   "mass": 109.5,
    "materials": [
     [
      "pcabs",
@@ -923,28 +2017,90 @@
      5
     ]
    ],
-   "info": "Kunststoffgehäuse mit Führungsschienen und Kontakten. Den ganzen Akku vom Gerät abschieben und ungeöffnet zur Batteriesammlung bringen.",
+   "info": "Kunststoffgehäuse mit Führungsschienen. Den ganzen Akku abschieben und ungeöffnet zur Batteriesammlung bringen.",
    "color": "#2E3338",
    "marks": [
     {
      "shape": "box",
-     "x": 20,
-     "y": 10,
-     "w": 40,
-     "d": 100,
-     "r": 4,
-     "fill": "#3A3F44"
+     "x": 6,
+     "y": 8,
+     "w": 4,
+     "d": 104,
+     "r": 2,
+     "fill": "#4A5156"
     },
     {
      "shape": "box",
-     "x": 32,
+     "x": 70,
+     "y": 8,
+     "w": 4,
+     "d": 104,
+     "r": 2,
+     "fill": "#4A5156"
+    },
+    {
+     "shape": "box",
+     "x": 30,
      "y": 100,
-     "w": 16,
+     "w": 20,
      "d": 12,
      "r": 2,
      "fill": "#D9822B"
+    },
+    {
+     "shape": "box",
+     "x": 34,
+     "y": 112,
+     "w": 3,
+     "d": 3,
+     "fill": "#7FD07F"
+    },
+    {
+     "shape": "box",
+     "x": 39,
+     "y": 112,
+     "w": 3,
+     "d": 3,
+     "fill": "#7FD07F"
+    },
+    {
+     "shape": "box",
+     "x": 44,
+     "y": 112,
+     "w": 3,
+     "d": 3,
+     "fill": "#7FD07F"
     }
    ]
+  },
+  {
+   "id": "entriegelung",
+   "component_id": "battery_pack",
+   "material_id": "abs",
+   "name": "Entriegelungstaste",
+   "short": "Entriegelung",
+   "shape": "box",
+   "x": 28,
+   "y": 172,
+   "w": 24,
+   "d": 8,
+   "z": 36,
+   "h": 16,
+   "r": 3,
+   "explode": [
+    0,
+    220,
+    0
+   ],
+   "mass": 3.6,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Drücken und den Akku nach vorn abziehen. Eine Feder lässt die Taste wieder einrasten.",
+   "color": "#D9822B"
   }
  ]
 }

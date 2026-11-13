@@ -17,7 +17,7 @@
    "explode": [
     0,
     0,
-    256.4
+    228.5
    ],
    "mass": 2.3,
    "materials": [
@@ -96,9 +96,9 @@
    "explode": [
     0,
     0,
-    256.8
+    228.9
    ],
-   "mass": 3.5,
+   "mass": 3.4,
    "materials": [
     [
      "pcabs",
@@ -106,8 +106,8 @@
     ]
    ],
    "info": "Klare Kunststoffscheibe, schützt das empfindliche LCD. Von innen eingeklebt.",
-   "color": "#C9DEDF",
-   "opacity": 0.6
+   "color": "#B9CED0",
+   "opacity": 0.3
   },
   {
    "id": "oberschale",
@@ -126,9 +126,9 @@
    "explode": [
     0,
     0,
-    201.4
+    173.5
    ],
-   "mass": 34.6,
+   "mass": 34.3,
    "materials": [
     [
      "pcabs",
@@ -186,7 +186,7 @@
     0,
     112.0
    ],
-   "mass": 16.2,
+   "mass": 16,
    "materials": [
     [
      "gummi",
@@ -538,13 +538,13 @@
    "y": 20,
    "w": 64,
    "d": 26,
-   "z": 9,
-   "h": 2.2,
+   "z": 12,
+   "h": 1.6,
    "r": 1,
    "explode": [
+    105,
     0,
-    0,
-    143.2
+    40
    ],
    "mass": 6.9,
    "materials": [
@@ -559,94 +559,113 @@
    ],
    "info": "Zwei dünne Glasplatten mit Flüssigkristallen dazwischen. Zerbricht leicht, flach anfassen.",
    "color": "#A9B4A2",
+   "sortBias": 0.6,
    "marks": [
     {
      "shape": "box",
-     "x": 4.0,
-     "y": 8.0,
-     "w": 5,
-     "d": 10,
+     "x": 5.0,
+     "y": 9.0,
+     "w": 4.2,
+     "d": 9,
      "r": 0.5,
-     "fill": "#7E897A"
+     "fill": "#3E4740"
     },
     {
      "shape": "box",
-     "x": 9.8,
-     "y": 8.0,
-     "w": 5,
-     "d": 10,
+     "x": 10.6,
+     "y": 9.0,
+     "w": 4.2,
+     "d": 9,
      "r": 0.5,
-     "fill": "#7E897A"
+     "fill": "#3E4740"
     },
     {
      "shape": "box",
-     "x": 15.6,
-     "y": 8.0,
-     "w": 5,
-     "d": 10,
+     "x": 16.2,
+     "y": 9.0,
+     "w": 4.2,
+     "d": 9,
      "r": 0.5,
-     "fill": "#7E897A"
+     "fill": "#3E4740"
     },
     {
      "shape": "box",
-     "x": 21.4,
-     "y": 8.0,
-     "w": 5,
-     "d": 10,
+     "x": 21.8,
+     "y": 9.0,
+     "w": 4.2,
+     "d": 9,
      "r": 0.5,
-     "fill": "#7E897A"
+     "fill": "#3E4740"
     },
     {
      "shape": "box",
-     "x": 27.2,
-     "y": 8.0,
-     "w": 5,
-     "d": 10,
+     "x": 27.4,
+     "y": 9.0,
+     "w": 4.2,
+     "d": 9,
      "r": 0.5,
-     "fill": "#7E897A"
+     "fill": "#3E4740"
     },
     {
      "shape": "box",
      "x": 33.0,
-     "y": 8.0,
-     "w": 5,
-     "d": 10,
+     "y": 9.0,
+     "w": 4.2,
+     "d": 9,
+     "r": 0.5,
+     "fill": "#3E4740"
+    },
+    {
+     "shape": "box",
+     "x": 38.6,
+     "y": 9.0,
+     "w": 4.2,
+     "d": 9,
+     "r": 0.5,
+     "fill": "#3E4740"
+    },
+    {
+     "shape": "box",
+     "x": 44.2,
+     "y": 9.0,
+     "w": 4.2,
+     "d": 9,
+     "r": 0.5,
+     "fill": "#3E4740"
+    },
+    {
+     "shape": "box",
+     "x": 49.8,
+     "y": 9.0,
+     "w": 4.2,
+     "d": 9,
+     "r": 0.5,
+     "fill": "#3E4740"
+    },
+    {
+     "shape": "box",
+     "x": 55.4,
+     "y": 9.0,
+     "w": 4.2,
+     "d": 9,
+     "r": 0.5,
+     "fill": "#3E4740"
+    },
+    {
+     "shape": "box",
+     "x": 5,
+     "y": 3,
+     "w": 6,
+     "d": 2.5,
      "r": 0.5,
      "fill": "#7E897A"
     },
     {
      "shape": "box",
-     "x": 38.8,
-     "y": 8.0,
-     "w": 5,
-     "d": 10,
-     "r": 0.5,
-     "fill": "#7E897A"
-    },
-    {
-     "shape": "box",
-     "x": 44.6,
-     "y": 8.0,
-     "w": 5,
-     "d": 10,
-     "r": 0.5,
-     "fill": "#7E897A"
-    },
-    {
-     "shape": "box",
-     "x": 50.4,
-     "y": 8.0,
-     "w": 5,
-     "d": 10,
-     "r": 0.5,
-     "fill": "#7E897A"
-    },
-    {
-     "shape": "box",
-     "x": 56.2,
-     "y": 8.0,
-     "w": 5,
-     "d": 10,
+     "x": 14,
+     "y": 3,
+     "w": 4,
+     "d": 2.5,
      "r": 0.5,
      "fill": "#7E897A"
     }
@@ -664,12 +683,12 @@
    "w": 60,
    "d": 2,
    "z": 7.2,
-   "h": 1.8,
+   "h": 4.8,
    "r": 0.5,
    "explode": [
+    105,
     0,
-    0,
-    88.2
+    12
    ],
    "mass": 0.6,
    "materials": [
@@ -735,7 +754,7 @@
     0,
     57.0
    ],
-   "mass": 9.2,
+   "mass": 9.1,
    "materials": [
     [
      "fr4",
@@ -1136,7 +1155,7 @@
     0,
     10
    ],
-   "mass": 2.7,
+   "mass": 2.6,
    "materials": [
     [
      "knopfzelle",
@@ -1174,7 +1193,7 @@
     0,
     0
    ],
-   "mass": 1.2,
+   "mass": 1.1,
    "materials": [
     [
      "pcabs",
@@ -1190,6 +1209,42 @@
      "y": 9,
      "w": 4,
      "fill": "#9BA3A8"
+    }
+   ]
+  },
+  {
+   "id": "schrauben",
+   "component_id": "plastic_housing",
+   "material_id": "steel",
+   "name": "Gehäuseschrauben (4 Stück)",
+   "short": "Schrauben",
+   "shape": "cyl",
+   "x": 6,
+   "y": 150,
+   "w": 3,
+   "z": 1,
+   "h": 8,
+   "explode": [
+    -60,
+    0,
+    0
+   ],
+   "mass": 1.1,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Kleine Kreuzschlitzschrauben von unten, oft unter den Gummifüßen versteckt. Füße vorsichtig abziehen.",
+   "color": "#9BA3A8",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0.75,
+     "y": 0.75,
+     "w": 1.5,
+     "fill": "#5E656A"
     }
    ]
   },
@@ -1212,7 +1267,7 @@
     0,
     0.0
    ],
-   "mass": 32.3,
+   "mass": 32,
    "materials": [
     [
      "pcabs",

@@ -12,14 +12,18 @@ GEH = '#25292D'
 CHIP = '#3F4547'
 teile = [
     teil('deckglas', 'plastic_housing', 'Deckglas', 'Deckglas', 'box', material_id='special_glass',
-         x=0.5, y=4, w=19, d=38, z=10, h=1, r=9, mass=1.2, materials=[['glas', 100]], color='#C9DEDF', opacity=0.6,
+         x=0.5, y=4, w=19, d=38, z=10, h=1, r=9, mass=1.2, materials=[['glas', 100]], color='#9FB4BA', opacity=0.3,
          info='Gehärtetes, gewölbtes Glas über dem Display. Mit dem Rahmen verklebt.'),
     teil('display', 'circuit_board', 'OLED-Display', 'Display', 'box', material_id='special_glass',
          x=3, y=8, w=14, d=30, z=9.2, h=0.8, r=2, mass=1, materials=[['displayglas', 60], ['folien', 25], ['kupfer', 15]],
-         color='#1F2326',
+         color='#1F2326', sortBias=0.5,
          info='Leuchtende Pixel ohne Hintergrundlicht. Mit einem winzigen Flachbandkabel an der Platine angesteckt.',
          marks=[mark('box', 2, 6, 10, 6, 1, '#7FC8F0'), mark('box', 3, 14, 8, 2, 0.5, '#5F8F4E'),
                 mark('box', 3, 18, 6, 2, 0.5, '#C9A227')]),
+    teil('flexkabel', 'circuit_board', 'Display-Flachbandkabel', 'Flexkabel', 'box', material_id='mixed_electronics',
+         x=6, y=37.5, w=8, d=3, z=8.4, h=0.4, r=0.5, mass=0.05, materials=[['folien', 70], ['kupfer', 30]], color='#C98A2E',
+         info='Hauchdünne Folie mit Kupferbahnen. Verbindet das Display mit der Platine; reißt beim Öffnen leicht.',
+         marks=raster(1, 1.8, 6, 1, 0.5, 1, 1.1, fill='#E3B04B')),
     teil('oberschale', 'plastic_housing', 'Gehäuse-Oberteil', 'Oberteil', 'box',
          x=0.5, y=4, w=19, d=38, z=5, h=5, r=9, mass=2.5, color=GEH,
          info='Rahmen aus Kunststoff, oft mit dem Glas und dem Unterteil verklebt. Nur mit Wärme zu öffnen.',
@@ -44,13 +48,16 @@ teile = [
     teil('unterschale', 'plastic_housing', 'Gehäuse-Unterteil', 'Unterteil', 'box',
          x=0.5, y=4, w=19, d=38, z=1, h=4, r=9, mass=2, color=GEH,
          info='Boden mit Fenster für den Pulssensor und zwei Ladekontakten aus Edelstahl.',
-         marks=[mark('box', 5, 13, 9, 12, 3, '#1E2226'), mark('cyl', 6, 31, 2.5, fill='#C9A227'),
-                mark('cyl', 10.5, 31, 2.5, fill='#C9A227')]),
+         marks=[mark('box', 5, 13, 9, 12, 3, '#1E2226')]),
     teil('pulssensor', 'circuit_board', 'Optischer Pulssensor', 'Pulssensor', 'box', material_id='mixed_electronics',
          x=5.5, y=17, w=9, d=12, z=0, h=1.5, r=3, mass=0.5, materials=[['pcabs', 40], ['led', 30], ['chip', 30]],
          color='#3A3F44',
          info='Grüne LEDs leuchten in die Haut, eine Fotodiode misst, wie viel Licht zurückkommt. Daraus wird der Puls berechnet.',
          marks=[mark('cyl', 1, 4, 3, fill='#5FBF6E'), mark('cyl', 5, 4, 3, fill='#5FBF6E'), mark('box', 2.5, 8, 4, 2.5, 0.5, '#22272B')]),
+    teil('ladekontakte', 'plastic_housing', 'Ladekontakte', 'Ladekontakte', 'box', material_id='steel',
+         x=5.5, y=30.5, w=9, d=3.5, z=0, h=1, r=1.5, mass=0.2, materials=[['stahl', 90], ['kontakte', 10]], color='#C9A227',
+         info='Zwei Edelstahl-Kontakte für das magnetische Ladekabel. Mit einem Wattestäbchen sauber halten.',
+         marks=[mark('cyl', 0.5, 0.5, 2.5, fill='#E3C04B'), mark('cyl', 6, 0.5, 2.5, fill='#E3C04B')]),
     teil('armband_hinten', 'silicone_strap', 'Armband, hinteres Teil (gekürzt)', 'Armband', 'box',
          x=2, y=0, w=16, d=4, z=2, h=3, r=1, mass=7, explode=[0, -25, 0], color='#3A4148',
          info='Silikonband, hier gekürzt gezeigt. Mit dem Schnellverschluss abziehen; reines Silikon gehört in den Restmüll.',
@@ -61,6 +68,6 @@ teile = [
          marks=[mark('cyl', 6.5, 1, 3, fill='#2B3035')]),
 ]
 
-explodiere(teile, abstand=18, abstaende={'soc': 6, 'sensorchip': 6, 'motor': 6}, nach_liste=True)
+explodiere(teile, abstand=18, abstaende={'soc': 6, 'sensorchip': 6, 'motor': 6, 'flexkabel': 4}, nach_liste=True)
 skaliere_masse(teile, oid='fitness_tracker', stellen=2)
 schreibe('fitness_tracker', teile)

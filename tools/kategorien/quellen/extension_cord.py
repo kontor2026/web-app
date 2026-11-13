@@ -30,16 +30,40 @@ def steckdose(y0):
 
 teile = [
     teil('oberteil', 'plastic_housing', 'Gehäuse-Oberteil mit Steckdosen', 'Oberteil', 'box',
-         x=0, y=0, w=54, d=225, z=19, h=19, r=8, mass=95,
+         x=0, y=0, w=54, d=225, z=19, h=19, r=8, mass=95, explode=[-80, 0, 45],
          info='Weißes PP oder PC mit vier Steckdosen. Innen mit Schrauben am Unterteil befestigt, die oft unter '
               'Aufklebern sitzen. Nur ausgesteckt öffnen!',
-         color=WEISS, marks=sum((steckdose(y) for y in DOSEN), []) + [mark('box', 17, 191, 20, 26, 3, '#C8423A')]),
+         color=WEISS, marks=sum((steckdose(y) for y in DOSEN), []) + [mark('box', 17, 191, 20, 26, 3, '#4A4D50')]),
     teil('schalter', 'rocker_switch', 'Beleuchteter Wippschalter', 'Schalter', 'box',
-         x=17, y=191, w=20, d=26, z=20, h=18, r=2, mass=12,
+         x=17, y=191, w=20, d=26, z=20, h=18, r=2, mass=12, explode=[-80, 0, 75],
          materials=[['pcabs', 55], ['messing', 25], ['kupfer', 10], ['stahl', 5], ['chip', 5]],
          info='Schaltet beide Leiter ab, die rote Glimmlampe zeigt an, ob Strom anliegt. Lässt sich mit einem '
               'kleinen Schraubendreher aus dem Gehäuse drücken.',
          color='#C8423A', marks=[mark('box', 2, 2, 16, 10, 2, '#E35A4E'), mark('box', 2, 14, 16, 10, 2, '#A9362E')]),
+    teil('glimmlampe', 'rocker_switch', 'Glimmlampe im Schalter', 'Glimmlampe', 'box', material_id='mixed_electronics',
+         x=24, y=196, w=6, d=12, z=21, h=5, r=2.5, mass=1, materials=[['glas', 50], ['kupfer', 30], ['chip', 20]],
+         color='#E8A060',
+         info='Kleine Neon-Lampe mit Vorwiderstand. Leuchtet rot, solange der Schalter an ist und Strom anliegt.'),
+    teil('kinderschutz_0', 'plastic_housing', 'Kinderschutz-Klappe', 'Kinderschutz', 'box',
+         x=12, y=18, w=30, d=22, z=31, h=1.5, r=3, mass=1.5, color='#E8E8E2',
+         info='Federnder Schieber unter jeder Dose. Er gibt die Löcher nur frei, wenn beide Stifte gleichzeitig drücken.',
+         marks=[mark('box', 3, 9, 8, 4, 1, '#C9CBC6'), mark('box', 19, 9, 8, 4, 1, '#C9CBC6')]),
+    teil('kinderschutz_1', 'plastic_housing', 'Kinderschutz-Klappe', 'Kinderschutz', 'box',
+         x=12, y=62, w=30, d=22, z=31, h=1.5, r=3, mass=1.5, color='#E8E8E2', label=False,
+         info='Federnder Schieber unter jeder Dose. Er gibt die Löcher nur frei, wenn beide Stifte gleichzeitig drücken.',
+         marks=[mark('box', 3, 9, 8, 4, 1, '#C9CBC6'), mark('box', 19, 9, 8, 4, 1, '#C9CBC6')]),
+    teil('kinderschutz_2', 'plastic_housing', 'Kinderschutz-Klappe', 'Kinderschutz', 'box',
+         x=12, y=106, w=30, d=22, z=31, h=1.5, r=3, mass=1.5, color='#E8E8E2', label=False,
+         info='Federnder Schieber unter jeder Dose. Er gibt die Löcher nur frei, wenn beide Stifte gleichzeitig drücken.',
+         marks=[mark('box', 3, 9, 8, 4, 1, '#C9CBC6'), mark('box', 19, 9, 8, 4, 1, '#C9CBC6')]),
+    teil('kinderschutz_3', 'plastic_housing', 'Kinderschutz-Klappe', 'Kinderschutz', 'box',
+         x=12, y=150, w=30, d=22, z=31, h=1.5, r=3, mass=1.5, color='#E8E8E2', label=False,
+         info='Federnder Schieber unter jeder Dose. Er gibt die Löcher nur frei, wenn beide Stifte gleichzeitig drücken.',
+         marks=[mark('box', 3, 9, 8, 4, 1, '#C9CBC6'), mark('box', 19, 9, 8, 4, 1, '#C9CBC6')]),
+    teil('schrauben', 'plastic_housing', 'Gehäuseschrauben (6 Stück)', 'Schrauben', 'cyl', material_id='steel',
+         x=4, y=120, w=4, z=3, h=28, mass=3, color='#9BA3A8', materials=[['stahl', 100]],
+         info='Halten Ober- und Unterteil zusammen; Köpfe sitzen unten, oft unter Gummifüßen oder Aufklebern.',
+         marks=[mark('cyl', 1, 1, 2, fill='#5E656A')]),
     teil('schiene_l', 'plug_pins', 'Kontaktschiene Phase', 'Schiene Phase', 'box',
          material_id='copper', x=13, y=12, w=3, d=176, z=5, h=12, r=0.5, mass=12, materials=[['messing', 100]],
          info='Gestanztes Messingblech mit federnden Klemmen für je einen Steckerstift. Wertvoll fürs Recycling.',
@@ -48,7 +72,7 @@ teile = [
          material_id='copper', x=25.5, y=10, w=3, d=176, z=5, h=12, r=0.5, mass=14, materials=[['messing', 100]],
          info='Verbindet die Schutzkontakt-Bügel aller Steckdosen mit dem grün-gelben Leiter.',
          color=MESSING, marks=raster(0.5, 1, 1, 4, 2, 6, 0, 44, r=0.5, fill='#B08F3C')),
-    teil('schiene_n', 'plug_pins', 'Kontaktschiene Neutralleiter', 'Schiene Neutral', 'box',
+    teil('schiene_n', 'plug_pins', 'Kontaktschiene Neutralleiter', 'Neutralleiter', 'box',
          material_id='copper', x=38, y=12, w=3, d=176, z=5, h=12, r=0.5, mass=12, materials=[['messing', 100]],
          info='Zweite Messingschiene für den blauen Neutralleiter.', color=MESSING,
          marks=raster(0.5, 14.5, 1, 4, 2, 9, 0, 44, r=0.5, fill='#B08F3C')),
@@ -87,6 +111,6 @@ teile = [
          materials=[['messing', 95], ['nickel', 5]], label=False,
          info='Zweiter Stift, 19 mm Abstand zum ersten.', color='#C9CDD0'),
 ]
-explodiere(teile, abstand=26, abstaende={'adern': 30})
+explodiere(teile, abstand=24, abstaende={'adern': 30, 'glimmlampe': 12})
 skaliere_masse(teile, oid='extension_cord')
 schreibe('extension_cord', teile)

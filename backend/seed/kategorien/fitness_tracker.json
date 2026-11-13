@@ -37,11 +37,11 @@
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Cu": 756.0,
-   "Al": 420.0,
-   "Co": 384.0,
-   "Fe": 126.0,
-   "Ag": 0.9,
+   "Cu": 763.0,
+   "Al": 416.0,
+   "Co": 379.0,
+   "Fe": 308.0,
+   "Ag": 0.89,
    "Au": 0.2,
    "Pd": 0.09
   },
@@ -55,15 +55,16 @@
    "Pd": "1 g Leiterplatte × oeko2012 Tab, 15, Motherboard Notebook (Umicore 2011)"
   },
   "materialien_g": {
-   "silicone": 14.0,
+   "silicone": 13.9,
    "abs": 4.2,
    "li_ion": 2.8,
-   "special_glass": 2.1,
+   "special_glass": 2.0,
    "pcb": 1.1,
-   "mixed_electronics": 0.8
+   "mixed_electronics": 0.9,
+   "steel": 0.2
   },
-  "co2_kg": 0.205,
-  "co2_mit_recyclat_kg": 0.194,
+  "co2_kg": 0.203,
+  "co2_mit_recyclat_kg": 0.193,
   "co2_ersparnis_kg": 0.011,
   "co2_ohne_faktor": [],
   "rohstoffwert_eur": 0.03,
@@ -83,6 +84,22 @@
    "westmetall2026": {
     "titel": "Westmetall Marktdaten (LME, London Fixing, WM-Notiz)",
     "url": "https://www.westmetall.com/en/markdaten.php"
+   },
+   "usgs2026": {
+    "titel": "Mineral Commodity Summaries 2026 (ver. 1.3, May 2026)",
+    "url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf"
+   },
+   "eucrm2023": {
+    "titel": "Study on the Critical Raw Materials for the EU 2023 – Final Report",
+    "url": "https://single-market-economy.ec.europa.eu/publications/study-critical-raw-materials-eu-2023-final-report_en"
+   },
+   "eu2024crma": {
+    "titel": "Verordnung (EU) 2024/1252 zur Schaffung eines Rahmens zur Gewährleistung einer sicheren und nachhaltigen Versorgung mit kritischen Rohstoffen (Critical Raw Materials Act)",
+    "url": "https://op.europa.eu/en/publication-detail/-/publication/aa3c49f7-08e7-11ef-a251-01aa75ed71a1"
+   },
+   "usdapsd2026": {
+    "titel": "Production, Supply and Distribution Online (PSD), Datensatz Cotton (psd_cotton_csv.zip)",
+    "url": "https://apps.fas.usda.gov/psdonline/downloads/psd_cotton_csv.zip"
    }
   }
  },
@@ -135,9 +152,9 @@
    "explode": [
     0,
     0,
-    113.6
+    118.0
    ],
-   "mass": 1.12,
+   "mass": 1.11,
    "materials": [
     [
      "glas",
@@ -145,8 +162,8 @@
     ]
    ],
    "info": "Gehärtetes, gewölbtes Glas über dem Display. Mit dem Rahmen verklebt.",
-   "color": "#C9DEDF",
-   "opacity": 0.6
+   "color": "#9FB4BA",
+   "opacity": 0.3
   },
   {
    "id": "display",
@@ -165,9 +182,9 @@
    "explode": [
     0,
     0,
-    95.6
+    100.0
    ],
-   "mass": 0.93,
+   "mass": 0.92,
    "materials": [
     [
      "displayglas",
@@ -184,6 +201,7 @@
    ],
    "info": "Leuchtende Pixel ohne Hintergrundlicht. Mit einem winzigen Flachbandkabel an der Platine angesteckt.",
    "color": "#1F2326",
+   "sortBias": 0.5,
    "marks": [
     {
      "shape": "box",
@@ -215,6 +233,89 @@
    ]
   },
   {
+   "id": "flexkabel",
+   "component_id": "circuit_board",
+   "material_id": "mixed_electronics",
+   "name": "Display-Flachbandkabel",
+   "short": "Flexkabel",
+   "shape": "box",
+   "x": 6,
+   "y": 37.5,
+   "w": 8,
+   "d": 3,
+   "z": 8.4,
+   "h": 0.4,
+   "r": 0.5,
+   "explode": [
+    0,
+    0,
+    82.4
+   ],
+   "mass": 0.05,
+   "materials": [
+    [
+     "folien",
+     70
+    ],
+    [
+     "kupfer",
+     30
+    ]
+   ],
+   "info": "Hauchdünne Folie mit Kupferbahnen. Verbindet das Display mit der Platine; reißt beim Öffnen leicht.",
+   "color": "#C98A2E",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1.0,
+     "y": 1.8,
+     "w": 0.5,
+     "d": 1,
+     "fill": "#E3B04B"
+    },
+    {
+     "shape": "box",
+     "x": 2.1,
+     "y": 1.8,
+     "w": 0.5,
+     "d": 1,
+     "fill": "#E3B04B"
+    },
+    {
+     "shape": "box",
+     "x": 3.2,
+     "y": 1.8,
+     "w": 0.5,
+     "d": 1,
+     "fill": "#E3B04B"
+    },
+    {
+     "shape": "box",
+     "x": 4.3,
+     "y": 1.8,
+     "w": 0.5,
+     "d": 1,
+     "fill": "#E3B04B"
+    },
+    {
+     "shape": "box",
+     "x": 5.4,
+     "y": 1.8,
+     "w": 0.5,
+     "d": 1,
+     "fill": "#E3B04B"
+    },
+    {
+     "shape": "box",
+     "x": 6.5,
+     "y": 1.8,
+     "w": 0.5,
+     "d": 1,
+     "fill": "#E3B04B"
+    }
+   ]
+  },
+  {
    "id": "oberschale",
    "component_id": "plastic_housing",
    "material_id": "abs",
@@ -233,7 +334,7 @@
     0,
     76.8
    ],
-   "mass": 2.33,
+   "mass": 2.31,
    "materials": [
     [
      "pcabs",
@@ -308,7 +409,7 @@
     0,
     55.5
    ],
-   "mass": 2.8,
+   "mass": 2.77,
    "materials": [
     [
      "lco",
@@ -421,7 +522,7 @@
     0,
     37.5
    ],
-   "mass": 0.93,
+   "mass": 0.92,
    "materials": [
     [
      "fr4",
@@ -462,7 +563,7 @@
     0,
     18.5
    ],
-   "mass": 1.87,
+   "mass": 1.85,
    "materials": [
     [
      "pcabs",
@@ -480,20 +581,6 @@
      "d": 12,
      "r": 3,
      "fill": "#1E2226"
-    },
-    {
-     "shape": "cyl",
-     "x": 6,
-     "y": 31,
-     "w": 2.5,
-     "fill": "#C9A227"
-    },
-    {
-     "shape": "cyl",
-     "x": 10.5,
-     "y": 31,
-     "w": 2.5,
-     "fill": "#C9A227"
     }
    ]
   },
@@ -516,7 +603,7 @@
     0,
     0.0
    ],
-   "mass": 0.47,
+   "mass": 0.46,
    "materials": [
     [
      "pcabs",
@@ -560,6 +647,55 @@
    ]
   },
   {
+   "id": "ladekontakte",
+   "component_id": "plastic_housing",
+   "material_id": "steel",
+   "name": "Ladekontakte",
+   "short": "Ladekontakte",
+   "shape": "box",
+   "x": 5.5,
+   "y": 30.5,
+   "w": 9,
+   "d": 3.5,
+   "z": 0,
+   "h": 1,
+   "r": 1.5,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 0.18,
+   "materials": [
+    [
+     "stahl",
+     90
+    ],
+    [
+     "kontakte",
+     10
+    ]
+   ],
+   "info": "Zwei Edelstahl-Kontakte für das magnetische Ladekabel. Mit einem Wattestäbchen sauber halten.",
+   "color": "#C9A227",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 2.5,
+     "fill": "#E3C04B"
+    },
+    {
+     "shape": "cyl",
+     "x": 6,
+     "y": 0.5,
+     "w": 2.5,
+     "fill": "#E3C04B"
+    }
+   ]
+  },
+  {
    "id": "armband_hinten",
    "component_id": "silicone_strap",
    "material_id": "silicone",
@@ -578,7 +714,7 @@
     -25,
     0
    ],
-   "mass": 6.53,
+   "mass": 6.47,
    "materials": [
     [
      "gummi",
@@ -618,7 +754,7 @@
     25,
     0
    ],
-   "mass": 7.46,
+   "mass": 7.39,
    "materials": [
     [
      "gummi",

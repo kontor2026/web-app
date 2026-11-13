@@ -16,10 +16,10 @@
    "r": 8,
    "explode": [
     0,
-    0,
-    217.0
+    -430,
+    120
    ],
-   "mass": 1207.5,
+   "mass": 1188.2,
    "materials": [
     [
      "pcabs",
@@ -89,9 +89,9 @@
    "explode": [
     0,
     0,
-    84.0
+    233.0
    ],
-   "mass": 38.4,
+   "mass": 37.8,
    "materials": [
     [
      "pp",
@@ -145,9 +145,9 @@
    "explode": [
     0,
     0,
-    84.0
+    233.0
    ],
-   "mass": 49.4,
+   "mass": 48.6,
    "materials": [
     [
      "pp",
@@ -203,6 +203,85 @@
    ]
   },
   {
+   "id": "druckkopf",
+   "component_id": "ink_cartridge",
+   "material_id": "mixed_electronics",
+   "name": "Druckkopf mit Düsen",
+   "short": "Druckkopf",
+   "shape": "box",
+   "x": 160,
+   "y": 140,
+   "w": 70,
+   "d": 40,
+   "z": 64,
+   "h": 6,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    231.0
+   ],
+   "mass": 13,
+   "materials": [
+    [
+     "pcabs",
+     50
+    ],
+    [
+     "chip",
+     20
+    ],
+    [
+     "kupfer",
+     15
+    ],
+    [
+     "stahl",
+     15
+    ]
+   ],
+   "info": "Hunderte haarfeine Düsen spritzen winzige Tintentropfen aufs Papier. Eingetrocknete Düsen erzeugen Streifen.",
+   "color": "#5E656A",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 6,
+     "y": 6,
+     "w": 12,
+     "d": 28,
+     "r": 1,
+     "fill": "#22272B"
+    },
+    {
+     "shape": "box",
+     "x": 22,
+     "y": 6,
+     "w": 12,
+     "d": 28,
+     "r": 1,
+     "fill": "#22272B"
+    },
+    {
+     "shape": "box",
+     "x": 38,
+     "y": 6,
+     "w": 12,
+     "d": 28,
+     "r": 1,
+     "fill": "#22272B"
+    },
+    {
+     "shape": "box",
+     "x": 54,
+     "y": 6,
+     "w": 12,
+     "d": 28,
+     "r": 1,
+     "fill": "#22272B"
+    }
+   ]
+  },
+  {
    "id": "schlitten",
    "component_id": "steel_rail",
    "material_id": "abs",
@@ -219,9 +298,9 @@
    "explode": [
     0,
     0,
-    52.0
+    180.0
    ],
-   "mass": 131.7,
+   "mass": 129.6,
    "materials": [
     [
      "pcabs",
@@ -255,6 +334,40 @@
    ]
   },
   {
+   "id": "encoder",
+   "component_id": "steel_rail",
+   "material_id": "pet",
+   "name": "Encoder-Streifen",
+   "short": "Encoder",
+   "shape": "box",
+   "x": 20,
+   "y": 176,
+   "w": 390,
+   "d": 2,
+   "z": 100,
+   "h": 12,
+   "r": 0.5,
+   "explode": [
+    0,
+    0,
+    31.0
+   ],
+   "mass": 2.2,
+   "materials": [
+    [
+     "pet",
+     95
+    ],
+    [
+     "druck",
+     5
+    ]
+   ],
+   "info": "Durchsichtiger Folienstreifen mit feinen Strichen. Ein Lichtsensor am Schlitten zählt sie und weiß so, wo er ist.",
+   "color": "#C9DEDF",
+   "opacity": 0.6
+  },
+  {
    "id": "zahnriemen",
    "component_id": "electric_motor",
    "material_id": "rubber",
@@ -271,9 +384,9 @@
    "explode": [
     0,
     0,
-    0.0
+    39.0
    ],
-   "mass": 11,
+   "mass": 10.8,
    "materials": [
     [
      "gummi",
@@ -304,9 +417,9 @@
    "explode": [
     0,
     0,
-    0.0
+    98.0
    ],
-   "mass": 461,
+   "mass": 453.7,
    "materials": [
     [
      "stahl",
@@ -331,9 +444,9 @@
    "explode": [
     0,
     0,
-    15.0
+    45.0
    ],
-   "mass": 98.8,
+   "mass": 97.2,
    "materials": [
     [
      "stahl",
@@ -381,9 +494,9 @@
    "explode": [
     0,
     0,
-    22.0
+    52.0
    ],
-   "mass": 351.3,
+   "mass": 345.6,
    "materials": [
     [
      "stahl",
@@ -459,9 +572,9 @@
    "explode": [
     0,
     0,
-    55.0
+    85.0
    ],
-   "mass": 164.7,
+   "mass": 162,
    "materials": [
     [
      "stahl",
@@ -493,6 +606,63 @@
    ]
   },
   {
+   "id": "parkstation",
+   "component_id": "ink_cartridge",
+   "material_id": "abs",
+   "name": "Reinigungs- und Parkstation",
+   "short": "Parkstation",
+   "shape": "box",
+   "x": 40,
+   "y": 150,
+   "w": 90,
+   "d": 50,
+   "z": 34,
+   "h": 16,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    66.0
+   ],
+   "mass": 64.8,
+   "materials": [
+    [
+     "pcabs",
+     70
+    ],
+    [
+     "gummi",
+     20
+    ],
+    [
+     "stahl",
+     10
+    ]
+   ],
+   "info": "Hier parkt der Schlitten. Gummikappen verschließen die Düsen, eine kleine Pumpe saugt alte Tinte ins Vlies.",
+   "color": "#5E656A",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 10,
+     "w": 30,
+     "d": 28,
+     "r": 4,
+     "fill": "#2B2F33"
+    },
+    {
+     "shape": "box",
+     "x": 48,
+     "y": 10,
+     "w": 30,
+     "d": 28,
+     "r": 4,
+     "fill": "#2B2F33"
+    }
+   ]
+  },
+  {
    "id": "hauptplatine",
    "component_id": "circuit_board",
    "material_id": "pcb",
@@ -509,9 +679,9 @@
    "explode": [
     0,
     0,
-    58.0
+    88.0
    ],
-   "mass": 120.7,
+   "mass": 118.8,
    "materials": [
     [
      "fr4",
@@ -583,9 +753,9 @@
    "explode": [
     0,
     0,
-    58.0
+    88.0
    ],
-   "mass": 153.7,
+   "mass": 151.2,
    "materials": [
     [
      "fr4",
@@ -650,9 +820,9 @@
    "explode": [
     0,
     0,
-    60.0
+    90.0
    ],
-   "mass": 87.8,
+   "mass": 86.4,
    "materials": [
     [
      "schaum",
@@ -674,18 +844,18 @@
    "short": "Ausgabefach",
    "shape": "box",
    "x": 90,
-   "y": 330,
+   "y": 320,
    "w": 250,
-   "d": 30,
+   "d": 70,
    "z": 20,
-   "h": 10,
+   "h": 8,
    "r": 3,
    "explode": [
     0,
-    110,
+    90,
     0
    ],
-   "mass": 197.6,
+   "mass": 194.4,
    "materials": [
     [
      "pcabs",
@@ -694,14 +864,24 @@
    ],
    "info": "Ausziehbares Fach, das die bedruckten Blätter auffängt. Steckt in Führungen und lässt sich herausziehen.",
    "color": "#D5D8DB",
+   "sortBias": 25,
    "marks": [
     {
      "shape": "box",
      "x": 100,
-     "y": 18,
+     "y": 52,
      "w": 50,
      "d": 8,
      "r": 3,
+     "fill": "#C2C6CA"
+    },
+    {
+     "shape": "box",
+     "x": 6,
+     "y": 42,
+     "w": 238,
+     "d": 2,
+     "r": 1,
      "fill": "#C2C6CA"
     }
    ]
@@ -725,7 +905,7 @@
     0,
     0.0
    ],
-   "mass": 1756.3,
+   "mass": 1728.2,
    "materials": [
     [
      "pcabs",
@@ -789,10 +969,10 @@
    "r": 4,
    "explode": [
     200,
-    0,
+    60,
     0
    ],
-   "mass": 120.7,
+   "mass": 118.8,
    "materials": [
     [
      "pvc",
@@ -833,10 +1013,10 @@
    "r": 1,
    "explode": [
     200,
-    0,
+    60,
     0
    ],
-   "mass": 49.4,
+   "mass": 48.6,
    "materials": [
     [
      "kupfer",

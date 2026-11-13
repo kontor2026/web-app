@@ -26,39 +26,40 @@
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 0,70 kg",
+   "v": "≈ 0,69 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 0,51 kg",
+   "v": "≈ 0,50 kg",
    "hint": "spart 0,19 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Cu": 3540.0,
-   "Fe": 690.0,
-   "Ag": 2.7,
-   "Au": 0.65,
-   "Pd": 0.21
+   "Fe": 6290.0,
+   "Cu": 3860.0,
+   "Ag": 2.58,
+   "Au": 0.62,
+   "Pd": 0.2
   },
   "herkunft": {
-   "Cu": "Modellmassen (Schätzung)",
    "Fe": "Modellmassen (Schätzung)",
-   "Ag": "11 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)",
-   "Au": "11 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)",
-   "Pd": "11 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)"
+   "Cu": "Modellmassen (Schätzung)",
+   "Ag": "10 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)",
+   "Au": "10 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)",
+   "Pd": "10 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)"
   },
   "materialien_g": {
-   "abs": 87.2,
-   "alkaline": 47.3,
-   "pcb": 10.8,
-   "mixed_electronics": 4.6
+   "abs": 83.0,
+   "alkaline": 45.1,
+   "pcb": 10.3,
+   "mixed_electronics": 6.0,
+   "steel": 5.5
   },
-  "co2_kg": 0.704,
-  "co2_mit_recyclat_kg": 0.513,
-  "co2_ersparnis_kg": 0.191,
+  "co2_kg": 0.692,
+  "co2_mit_recyclat_kg": 0.5,
+  "co2_ersparnis_kg": 0.192,
   "co2_ohne_faktor": [],
   "rohstoffwert_eur": 0.12,
   "wert_ohne_preis": [],
@@ -75,6 +76,22 @@
    "westmetall2026": {
     "titel": "Westmetall Marktdaten (LME, London Fixing, WM-Notiz)",
     "url": "https://www.westmetall.com/en/markdaten.php"
+   },
+   "usgs2026": {
+    "titel": "Mineral Commodity Summaries 2026 (ver. 1.3, May 2026)",
+    "url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf"
+   },
+   "eucrm2023": {
+    "titel": "Study on the Critical Raw Materials for the EU 2023 – Final Report",
+    "url": "https://single-market-economy.ec.europa.eu/publications/study-critical-raw-materials-eu-2023-final-report_en"
+   },
+   "eu2024crma": {
+    "titel": "Verordnung (EU) 2024/1252 zur Schaffung eines Rahmens zur Gewährleistung einer sicheren und nachhaltigen Versorgung mit kritischen Rohstoffen (Critical Raw Materials Act)",
+    "url": "https://op.europa.eu/en/publication-detail/-/publication/aa3c49f7-08e7-11ef-a251-01aa75ed71a1"
+   },
+   "usdapsd2026": {
+    "titel": "Production, Supply and Distribution Online (PSD), Datensatz Cotton (psd_cotton_csv.zip)",
+    "url": "https://apps.fas.usda.gov/psdonline/downloads/psd_cotton_csv.zip"
    }
   }
  },
@@ -125,9 +142,9 @@
    "explode": [
     0,
     0,
-    216.6
+    244.6
    ],
-   "mass": 2.1,
+   "mass": 2,
    "materials": [
     [
      "pcabs",
@@ -161,9 +178,9 @@
    "explode": [
     0,
     0,
-    195.6
+    223.6
    ],
-   "mass": 8.4,
+   "mass": 8,
    "materials": [
     [
      "pcabs",
@@ -197,9 +214,9 @@
    "explode": [
     0,
     0,
-    195.6
+    223.6
    ],
-   "mass": 23.1,
+   "mass": 22,
    "materials": [
     [
      "pcabs",
@@ -338,9 +355,9 @@
    "explode": [
     0,
     0,
-    150.6
+    178.6
    ],
-   "mass": 5.3,
+   "mass": 5,
    "materials": [
     [
      "pcabs",
@@ -444,6 +461,34 @@
    ]
   },
   {
+   "id": "gitter",
+   "component_id": "plastic_housing",
+   "material_id": "steel",
+   "name": "Insektengitter",
+   "short": "Insektengitter",
+   "shape": "cyl",
+   "x": 14,
+   "y": 29,
+   "w": 42,
+   "z": 11,
+   "h": 13,
+   "explode": [
+    0,
+    0,
+    125.6
+   ],
+   "mass": 1.5,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Feines Edelstahlnetz rund um die Rauchkammer. Lässt Rauch hinein, aber keine Insekten, die Fehlalarm auslösen.",
+   "color": "#9AA2A8",
+   "opacity": 0.45
+  },
+  {
    "id": "ir_led",
    "component_id": "circuit_board",
    "material_id": "mixed_electronics",
@@ -523,7 +568,7 @@
     0,
     107.0
    ],
-   "mass": 4.2,
+   "mass": 4,
    "materials": [
     [
      "keramik",
@@ -547,6 +592,90 @@
      "y": 7,
      "w": 6,
      "fill": "#B8A060"
+    }
+   ]
+  },
+  {
+   "id": "status_led",
+   "component_id": "circuit_board",
+   "material_id": "mixed_electronics",
+   "name": "Rote Kontroll-LED",
+   "short": "Kontroll-LED",
+   "shape": "cyl",
+   "x": 66,
+   "y": 22,
+   "w": 4,
+   "z": 9.6,
+   "h": 4,
+   "explode": [
+    0,
+    0,
+    107.0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "led",
+     60
+    ],
+    [
+     "kupfer",
+     40
+    ]
+   ],
+   "info": "Blinkt etwa alle 40 Sekunden kurz rot und zeigt so: Der Melder arbeitet.",
+   "color": "#C9302C"
+  },
+  {
+   "id": "batterieclip",
+   "component_id": "alkaline_cell",
+   "material_id": "mixed_electronics",
+   "name": "9-V-Batterieclip mit Kabel",
+   "short": "Batterieclip",
+   "shape": "box",
+   "x": 60,
+   "y": 76,
+   "w": 22,
+   "d": 8,
+   "z": 9.6,
+   "h": 6,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    107.0
+   ],
+   "mass": 1.5,
+   "materials": [
+    [
+     "pvc",
+     40
+    ],
+    [
+     "kupfer",
+     35
+    ],
+    [
+     "stahl",
+     25
+    ]
+   ],
+   "info": "Druckknopf-Kontakte, die auf die Pole der Batterie gedrückt werden. Rotes Kabel Plus, schwarzes Minus.",
+   "color": "#2B2F33",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 1.5,
+     "w": 5,
+     "fill": "#B9BEC2"
+    },
+    {
+     "shape": "cyl",
+     "x": 13,
+     "y": 1.5,
+     "w": 5,
+     "fill": "#B9BEC2"
     }
    ]
   },
@@ -596,7 +725,7 @@
     0,
     92.0
    ],
-   "mass": 10.5,
+   "mass": 10,
    "materials": [
     [
      "fr4",
@@ -648,7 +777,7 @@
     0,
     0
    ],
-   "mass": 47.3,
+   "mass": 45.1,
    "materials": [
     [
      "zinkmangan",
@@ -661,6 +790,7 @@
    ],
    "info": "Alkaline-Block für etwa ein Jahr. Piept der Melder kurz, ist sie leer: Pole abkleben und zur Batterie-Sammelbox.",
    "color": "#3A6EA5",
+   "sortBias": -10,
    "marks": [
     {
      "shape": "cyl",
@@ -695,7 +825,7 @@
     0,
     40.0
    ],
-   "mass": 29.4,
+   "mass": 28,
    "materials": [
     [
      "pcabs",
@@ -704,6 +834,46 @@
    ],
    "info": "Trägt Platine und Batteriefach. Ein Schieber verhindert, dass die Haube ohne Batterie schließt.",
    "color": "#ECEDEA"
+  },
+  {
+   "id": "duebel",
+   "component_id": "plastic_housing",
+   "material_id": "steel",
+   "name": "Schrauben und Dübel",
+   "short": "Schrauben+Dübel",
+   "shape": "cyl",
+   "x": 17,
+   "y": 46,
+   "w": 6,
+   "z": 0.5,
+   "h": 5,
+   "explode": [
+    -70,
+    0,
+    0
+   ],
+   "mass": 4,
+   "materials": [
+    [
+     "stahl",
+     60
+    ],
+    [
+     "pp",
+     40
+    ]
+   ],
+   "info": "Zwei Schrauben mit Kunststoffdübeln halten die Montageplatte an der Decke. Stahl und Kunststoff trennen.",
+   "color": "#9AA2A8",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 1.5,
+     "y": 1.5,
+     "w": 3,
+     "fill": "#5E656A"
+    }
+   ]
   },
   {
    "id": "sockel",
@@ -722,7 +892,7 @@
     0,
     0.0
    ],
-   "mass": 18.9,
+   "mass": 18,
    "materials": [
     [
      "pcabs",

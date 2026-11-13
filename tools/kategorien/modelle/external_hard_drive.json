@@ -19,7 +19,7 @@
     0,
     366.4
    ],
-   "mass": 43.2,
+   "mass": 42.5,
    "materials": [
     [
      "pcabs",
@@ -57,7 +57,7 @@
     0,
     312.8
    ],
-   "mass": 12.3,
+   "mass": 12.2,
    "materials": [
     [
      "stahl",
@@ -189,7 +189,7 @@
     0,
     214.0
    ],
-   "mass": 9.3,
+   "mass": 9.1,
    "materials": [
     [
      "alu",
@@ -229,7 +229,7 @@
     0,
     164.0
    ],
-   "mass": 14.4,
+   "mass": 14.2,
    "materials": [
     [
      "stahl",
@@ -279,7 +279,7 @@
     0,
     163.5
    ],
-   "mass": 10.3,
+   "mass": 10.1,
    "materials": [
     [
      "ndfeb",
@@ -312,7 +312,7 @@
     0,
     106.5
    ],
-   "mass": 43.2,
+   "mass": 42.5,
    "materials": [
     [
      "alu",
@@ -359,7 +359,7 @@
     0,
     56.5
    ],
-   "mass": 9.3,
+   "mass": 9.1,
    "materials": [
     [
      "fr4",
@@ -420,7 +420,7 @@
    "x": 31,
    "y": 108,
    "w": 12,
-   "d": 7,
+   "d": 7.5,
    "z": 5.2,
    "h": 3.5,
    "r": 0.5,
@@ -446,6 +446,7 @@
    ],
    "info": "Breite USB-3-Buchse für das Kabel zum Computer. Angelötet, wackelt sie oft nach Jahren.",
    "color": "#C9CED2",
+   "sortBias": 12,
    "marks": [
     {
      "shape": "box",
@@ -477,7 +478,7 @@
     0,
     56.0
    ],
-   "mass": 6.2,
+   "mass": 6.1,
    "materials": [
     [
      "fr4",
@@ -520,6 +521,67 @@
    ]
   },
   {
+   "id": "puffer_l",
+   "component_id": "plastic_housing",
+   "material_id": "silicone",
+   "name": "Gummipuffer",
+   "short": "Gummipuffer",
+   "shape": "box",
+   "x": 1,
+   "y": 20,
+   "w": 4,
+   "d": 60,
+   "z": 4,
+   "h": 8,
+   "r": 1.5,
+   "explode": [
+    0,
+    0,
+    56.0
+   ],
+   "mass": 1.5,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "info": "Weiche Gummistreifen links und rechts. Sie dämpfen Stöße, damit der Kopf die Scheibe nicht berührt.",
+   "color": "#4A5156",
+   "sortBias": -8
+  },
+  {
+   "id": "puffer_r",
+   "component_id": "plastic_housing",
+   "material_id": "silicone",
+   "name": "Gummipuffer",
+   "short": "Gummipuffer",
+   "shape": "box",
+   "x": 75,
+   "y": 20,
+   "w": 4,
+   "d": 60,
+   "z": 4,
+   "h": 8,
+   "r": 1.5,
+   "explode": [
+    0,
+    0,
+    56.0
+   ],
+   "mass": 1.5,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "info": "Zweiter Gummipuffer auf der anderen Seite.",
+   "color": "#4A5156",
+   "label": false,
+   "sortBias": -8
+  },
+  {
    "id": "unterschale",
    "component_id": "plastic_housing",
    "material_id": "abs",
@@ -538,7 +600,7 @@
     0,
     0.0
    ],
-   "mass": 46.3,
+   "mass": 45.6,
    "materials": [
     [
      "pcabs",

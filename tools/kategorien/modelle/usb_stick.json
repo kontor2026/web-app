@@ -30,6 +30,68 @@
    "color": "#2F3438"
   },
   {
+   "id": "etikett",
+   "component_id": "plastic_housing",
+   "material_id": "paper",
+   "name": "Aufkleber mit Speichergröße",
+   "short": "Aufkleber",
+   "shape": "box",
+   "x": 3,
+   "y": 19,
+   "w": 14,
+   "d": 22,
+   "z": 8,
+   "h": 0.2,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    50.2
+   ],
+   "mass": 0.05,
+   "materials": [
+    [
+     "folien",
+     70
+    ],
+    [
+     "klebstoff",
+     30
+    ]
+   ],
+   "info": "Bedruckte Folie mit Hersteller und Speichergröße. Abziehen, bevor man das Gehäuse aufhebelt.",
+   "color": "#D9822B",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 3,
+     "w": 10,
+     "d": 5,
+     "r": 1,
+     "fill": "#F2F2F2"
+    },
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 11,
+     "w": 6,
+     "d": 2,
+     "r": 0.5,
+     "fill": "#2E3338"
+    },
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 15,
+     "w": 8,
+     "d": 2,
+     "r": 0.5,
+     "fill": "#2E3338"
+    }
+   ]
+  },
+  {
    "id": "oberschale",
    "component_id": "plastic_housing",
    "material_id": "abs",
@@ -48,7 +110,7 @@
     0,
     36.2
    ],
-   "mass": 2.41,
+   "mass": 2.4,
    "materials": [
     [
      "pcabs",
@@ -64,6 +126,15 @@
      "y": 33,
      "w": 6,
      "fill": "#1E2226"
+    },
+    {
+     "shape": "box",
+     "x": 8,
+     "y": 29.5,
+     "w": 4,
+     "d": 2.5,
+     "r": 0.5,
+     "fill": "#7FC8F0"
     }
    ]
   },
@@ -75,7 +146,7 @@
    "short": "LED",
    "shape": "box",
    "x": 8.5,
-   "y": 45,
+   "y": 44.5,
    "w": 3,
    "d": 2,
    "z": 3.5,
@@ -219,7 +290,7 @@
     0,
     15.5
    ],
-   "mass": 0.88,
+   "mass": 0.87,
    "materials": [
     [
      "fr4",
@@ -298,7 +369,7 @@
     -22,
     0
    ],
-   "mass": 1.97,
+   "mass": 1.96,
    "materials": [
     [
      "stahl",
@@ -351,7 +422,7 @@
     0,
     0.0
    ],
-   "mass": 2.41,
+   "mass": 2.4,
    "materials": [
     [
      "pcabs",

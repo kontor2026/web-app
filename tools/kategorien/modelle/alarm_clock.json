@@ -4,11 +4,11 @@
    "id": "schlummertaste",
    "component_id": "plastic_housing",
    "material_id": "abs",
-   "name": "Schlummertaste",
+   "name": "Schlummertaste mit Licht",
    "short": "Schlummertaste",
    "shape": "box",
    "x": 25,
-   "y": 20,
+   "y": 22,
    "w": 50,
    "d": 16,
    "z": 78,
@@ -19,14 +19,14 @@
     0,
     45
    ],
-   "mass": 3.8,
+   "mass": 3.7,
    "materials": [
     [
      "pcabs",
      100
     ]
    ],
-   "info": "Große Taste oben: drücken, und der Wecker klingelt nach ein paar Minuten noch einmal.",
+   "info": "Große Taste oben: drücken, und der Wecker klingelt nach ein paar Minuten noch einmal. Schaltet auch das Licht an.",
    "color": "#C9302C",
    "marks": [
     {
@@ -43,7 +43,7 @@
   {
    "id": "einstelltasten",
    "component_id": "plastic_housing",
-   "material_id": "abs",
+   "material_id": "silicone",
    "name": "Einstelltasten",
    "short": "Einstelltasten",
    "shape": "box",
@@ -59,14 +59,14 @@
     0,
     45
    ],
-   "mass": 2.9,
+   "mass": 2.8,
    "materials": [
     [
-     "pcabs",
+     "gummi",
      100
     ]
    ],
-   "info": "Gummitasten für Uhrzeit, Weckzeit und Licht. Drücken unten auf Kontaktfelder der Platine.",
+   "info": "Gummitasten für Uhrzeit, Weckzeit und Alarm an/aus. Drücken unten auf Kontaktfelder der Platine.",
    "color": "#4A5258",
    "marks": [
     {
@@ -76,7 +76,7 @@
      "w": 16,
      "d": 6,
      "r": 2,
-     "fill": "#5E656A"
+     "fill": "#6E767C"
     },
     {
      "shape": "box",
@@ -85,7 +85,7 @@
      "w": 16,
      "d": 6,
      "r": 2,
-     "fill": "#5E656A"
+     "fill": "#6E767C"
     },
     {
      "shape": "box",
@@ -94,7 +94,7 @@
      "w": 16,
      "d": 6,
      "r": 2,
-     "fill": "#5E656A"
+     "fill": "#6E767C"
     },
     {
      "shape": "box",
@@ -103,39 +103,76 @@
      "w": 16,
      "d": 6,
      "r": 2,
+     "fill": "#6E767C"
+    }
+   ]
+  },
+  {
+   "id": "schrauben",
+   "component_id": "plastic_housing",
+   "material_id": "steel",
+   "name": "Gehäuseschrauben (4 Stück)",
+   "short": "Schrauben",
+   "shape": "cyl",
+   "x": 48,
+   "y": 12,
+   "w": 4,
+   "z": 30,
+   "h": 12,
+   "explode": [
+    0,
+    -75,
+    100
+   ],
+   "mass": 1.9,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Kleine Kreuzschlitzschrauben im Batteriefach halten beide Schalen zusammen.",
+   "color": "#9AA2A8",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 1,
+     "y": 1,
+     "w": 2,
      "fill": "#5E656A"
     }
    ]
   },
   {
-   "id": "frontscheibe",
+   "id": "sichtscheibe",
    "component_id": "plastic_housing",
    "material_id": "pc",
    "name": "Sichtscheibe",
    "short": "Sichtscheibe",
    "shape": "box",
-   "x": 10,
-   "y": 57,
-   "w": 80,
+   "x": 8,
+   "y": 59,
+   "w": 84,
    "d": 2,
-   "z": 26,
-   "h": 44,
-   "r": 0.5,
+   "z": 22,
+   "h": 50,
+   "r": 1,
    "explode": [
     0,
     60,
     20
    ],
-   "mass": 7.6,
+   "mass": 7.4,
    "materials": [
     [
      "pcabs",
      100
     ]
    ],
-   "info": "Klare Kunststoffscheibe vor dem Display, von innen eingeklebt.",
-   "color": "#C9DEDF",
-   "opacity": 0.6
+   "info": "Klare Kunststoffscheibe vor dem Display, eingeklebt. Mit einem Föhn erwärmen, dann lässt sie sich lösen.",
+   "color": "#B9CED0",
+   "opacity": 0.55,
+   "sortBias": 8
   },
   {
    "id": "lcd",
@@ -144,19 +181,19 @@
    "name": "Flüssigkristall-Anzeige (LCD)",
    "short": "LCD",
    "shape": "box",
-   "x": 14,
-   "y": 50,
-   "w": 72,
-   "d": 2.5,
-   "z": 30,
-   "h": 36,
+   "x": 12,
+   "y": 56.4,
+   "w": 76,
+   "d": 2.6,
+   "z": 26,
+   "h": 42,
    "r": 0.5,
    "explode": [
     0,
-    32,
+    34,
     20
    ],
-   "mass": 9.5,
+   "mass": 9.3,
    "materials": [
     [
      "glas",
@@ -167,8 +204,269 @@
      15
     ]
    ],
-   "info": "Zeigt die großen Ziffern. Zwei Glasplatten mit Flüssigkristall, über Leitgummis mit der Platine verbunden. Bricht leicht.",
-   "color": "#A9B4A2"
+   "info": "Zeigt die großen Ziffern. Zwei Glasplatten mit Flüssigkristall dazwischen. Bricht leicht, flach anfassen.",
+   "color": "#9FAE98",
+   "sortBias": 11
+  },
+  {
+   "id": "leitgummi",
+   "component_id": "lcd_panel",
+   "material_id": "silicone",
+   "name": "Leitgummi-Streifen",
+   "short": "Leitgummi",
+   "shape": "box",
+   "x": 14,
+   "y": 47.6,
+   "w": 72,
+   "d": 8.8,
+   "z": 22,
+   "h": 4,
+   "r": 1,
+   "explode": [
+    0,
+    22,
+    20
+   ],
+   "mass": 0.9,
+   "materials": [
+    [
+     "gummi",
+     90
+    ],
+    [
+     "graphit",
+     10
+    ]
+   ],
+   "info": "Gummistreifen mit feinen leitenden Schichten. Verbindet das LCD ohne Löten mit der Platine.",
+   "color": "#E1DED6",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1.0,
+     "y": 1.0,
+     "w": 1.5,
+     "d": 6.8,
+     "fill": "#7E7A72"
+    },
+    {
+     "shape": "box",
+     "x": 3.95,
+     "y": 1.0,
+     "w": 1.5,
+     "d": 6.8,
+     "fill": "#7E7A72"
+    },
+    {
+     "shape": "box",
+     "x": 6.9,
+     "y": 1.0,
+     "w": 1.5,
+     "d": 6.8,
+     "fill": "#7E7A72"
+    },
+    {
+     "shape": "box",
+     "x": 9.85,
+     "y": 1.0,
+     "w": 1.5,
+     "d": 6.8,
+     "fill": "#7E7A72"
+    },
+    {
+     "shape": "box",
+     "x": 12.8,
+     "y": 1.0,
+     "w": 1.5,
+     "d": 6.8,
+     "fill": "#7E7A72"
+    },
+    {
+     "shape": "box",
+     "x": 15.75,
+     "y": 1.0,
+     "w": 1.5,
+     "d": 6.8,
+     "fill": "#7E7A72"
+    },
+    {
+     "shape": "box",
+     "x": 18.7,
+     "y": 1.0,
+     "w": 1.5,
+     "d": 6.8,
+     "fill": "#7E7A72"
+    },
+    {
+     "shape": "box",
+     "x": 21.65,
+     "y": 1.0,
+     "w": 1.5,
+     "d": 6.8,
+     "fill": "#7E7A72"
+    },
+    {
+     "shape": "box",
+     "x": 24.6,
+     "y": 1.0,
+     "w": 1.5,
+     "d": 6.8,
+     "fill": "#7E7A72"
+    },
+    {
+     "shape": "box",
+     "x": 27.55,
+     "y": 1.0,
+     "w": 1.5,
+     "d": 6.8,
+     "fill": "#7E7A72"
+    },
+    {
+     "shape": "box",
+     "x": 30.5,
+     "y": 1.0,
+     "w": 1.5,
+     "d": 6.8,
+     "fill": "#7E7A72"
+    },
+    {
+     "shape": "box",
+     "x": 33.45,
+     "y": 1.0,
+     "w": 1.5,
+     "d": 6.8,
+     "fill": "#7E7A72"
+    },
+    {
+     "shape": "box",
+     "x": 36.4,
+     "y": 1.0,
+     "w": 1.5,
+     "d": 6.8,
+     "fill": "#7E7A72"
+    },
+    {
+     "shape": "box",
+     "x": 39.35,
+     "y": 1.0,
+     "w": 1.5,
+     "d": 6.8,
+     "fill": "#7E7A72"
+    },
+    {
+     "shape": "box",
+     "x": 42.3,
+     "y": 1.0,
+     "w": 1.5,
+     "d": 6.8,
+     "fill": "#7E7A72"
+    },
+    {
+     "shape": "box",
+     "x": 45.25,
+     "y": 1.0,
+     "w": 1.5,
+     "d": 6.8,
+     "fill": "#7E7A72"
+    },
+    {
+     "shape": "box",
+     "x": 48.2,
+     "y": 1.0,
+     "w": 1.5,
+     "d": 6.8,
+     "fill": "#7E7A72"
+    },
+    {
+     "shape": "box",
+     "x": 51.15,
+     "y": 1.0,
+     "w": 1.5,
+     "d": 6.8,
+     "fill": "#7E7A72"
+    },
+    {
+     "shape": "box",
+     "x": 54.1,
+     "y": 1.0,
+     "w": 1.5,
+     "d": 6.8,
+     "fill": "#7E7A72"
+    },
+    {
+     "shape": "box",
+     "x": 57.05,
+     "y": 1.0,
+     "w": 1.5,
+     "d": 6.8,
+     "fill": "#7E7A72"
+    },
+    {
+     "shape": "box",
+     "x": 60.0,
+     "y": 1.0,
+     "w": 1.5,
+     "d": 6.8,
+     "fill": "#7E7A72"
+    },
+    {
+     "shape": "box",
+     "x": 62.95,
+     "y": 1.0,
+     "w": 1.5,
+     "d": 6.8,
+     "fill": "#7E7A72"
+    },
+    {
+     "shape": "box",
+     "x": 65.9,
+     "y": 1.0,
+     "w": 1.5,
+     "d": 6.8,
+     "fill": "#7E7A72"
+    },
+    {
+     "shape": "box",
+     "x": 68.85,
+     "y": 1.0,
+     "w": 1.5,
+     "d": 6.8,
+     "fill": "#7E7A72"
+    }
+   ]
+  },
+  {
+   "id": "led",
+   "component_id": "circuit_board",
+   "material_id": "mixed_electronics",
+   "name": "Hintergrund-LED",
+   "short": "LED",
+   "shape": "box",
+   "x": 46,
+   "y": 45.6,
+   "w": 8,
+   "d": 4,
+   "z": 70,
+   "h": 3,
+   "r": 1,
+   "explode": [
+    0,
+    10,
+    20
+   ],
+   "mass": 0.2,
+   "materials": [
+    [
+     "led",
+     60
+    ],
+    [
+     "kupfer",
+     40
+    ]
+   ],
+   "info": "Beleuchtet das Display kurz, wenn man die Schlummertaste drückt.",
+   "color": "#F4F0D0"
   },
   {
    "id": "chip",
@@ -177,12 +475,12 @@
    "name": "Uhrenchip (unter Epoxid)",
    "short": "Chip",
    "shape": "box",
-   "x": 40,
+   "x": 34,
    "y": 45.6,
    "w": 14,
    "d": 2,
-   "z": 16,
-   "h": 10,
+   "z": 32,
+   "h": 12,
    "r": 0.5,
    "explode": [
     0,
@@ -200,8 +498,45 @@
      40
     ]
    ],
-   "info": "Zählt mithilfe eines Quarzes die Sekunden und steuert Anzeige und Weckton.",
+   "info": "Schwarzer Kunstharz-Tropfen über dem Chip. Zählt die Sekunden und steuert Anzeige und Weckton.",
    "color": "#1E2226"
+  },
+  {
+   "id": "quarz",
+   "component_id": "circuit_board",
+   "material_id": "mixed_electronics",
+   "name": "Uhrenquarz 32 kHz",
+   "short": "Quarz",
+   "shape": "box",
+   "x": 56,
+   "y": 45.6,
+   "w": 8,
+   "d": 2.5,
+   "z": 34,
+   "h": 3,
+   "r": 1.2,
+   "explode": [
+    0,
+    8,
+    20
+   ],
+   "mass": 0.2,
+   "materials": [
+    [
+     "stahl",
+     50
+    ],
+    [
+     "glas",
+     30
+    ],
+    [
+     "kupfer",
+     20
+    ]
+   ],
+   "info": "Winziger Quarzkristall, der genau 32.768-mal pro Sekunde schwingt. Daraus zählt der Chip die Zeit.",
+   "color": "#B9BEC2"
   },
   {
    "id": "platine",
@@ -215,14 +550,14 @@
    "w": 80,
    "d": 1.6,
    "z": 12,
-   "h": 60,
+   "h": 62,
    "r": 0.5,
    "explode": [
     0,
     0,
     20
    ],
-   "mass": 17.2,
+   "mass": 16.8,
    "materials": [
     [
      "fr4",
@@ -252,16 +587,16 @@
    "short": "Lautsprecher",
    "shape": "cyl",
    "x": 63,
-   "y": 10,
+   "y": 8,
    "w": 34,
    "z": 3,
    "h": 10,
    "explode": [
-    0,
+    125,
     0,
     0
    ],
-   "mass": 14.3,
+   "mass": 14,
    "materials": [
     [
      "stahl",
@@ -318,11 +653,11 @@
    "h": 14.5,
    "r": 7,
    "explode": [
-    0,
+    118,
     0,
     0
    ],
-   "mass": 22,
+   "mass": 21.4,
    "materials": [
     [
      "zinkmangan",
@@ -344,6 +679,15 @@
      "d": 11.5,
      "r": 3,
      "fill": "#C9A227"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 3,
+     "w": 30,
+     "d": 8.5,
+     "r": 2,
+     "fill": "#5E8CB8"
     }
    ]
   },
@@ -362,11 +706,11 @@
    "h": 14.5,
    "r": 7,
    "explode": [
-    0,
+    118,
     0,
     0
    ],
-   "mass": 22,
+   "mass": 21.4,
    "materials": [
     [
      "zinkmangan",
@@ -389,6 +733,68 @@
      "d": 11.5,
      "r": 3,
      "fill": "#C9A227"
+    },
+    {
+     "shape": "box",
+     "x": 16,
+     "y": 3,
+     "w": 30,
+     "d": 8.5,
+     "r": 2,
+     "fill": "#5E8CB8"
+    }
+   ]
+  },
+  {
+   "id": "federn",
+   "component_id": "alkaline_cell",
+   "material_id": "steel",
+   "name": "Batterie-Kontaktfedern",
+   "short": "Kontaktfedern",
+   "shape": "box",
+   "x": 3,
+   "y": 8,
+   "w": 4,
+   "d": 30,
+   "z": 2,
+   "h": 14,
+   "r": 1,
+   "explode": [
+    100,
+    0,
+    0
+   ],
+   "mass": 1.9,
+   "materials": [
+    [
+     "stahl",
+     90
+    ],
+    [
+     "nickel",
+     10
+    ]
+   ],
+   "info": "Vernickelte Stahlfedern drücken die Batterien an. Grüner oder weißer Belag heißt: Batterie ist ausgelaufen.",
+   "color": "#B9BEC2",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0.5,
+     "y": 2,
+     "w": 3,
+     "d": 11,
+     "r": 1.5,
+     "fill": "#8E969B"
+    },
+    {
+     "shape": "box",
+     "x": 0.5,
+     "y": 17,
+     "w": 3,
+     "d": 11,
+     "r": 1.5,
+     "fill": "#8E969B"
     }
    ]
   },
@@ -402,16 +808,16 @@
    "x": 0,
    "y": 30,
    "w": 100,
-   "d": 30,
+   "d": 29,
    "z": 0,
    "h": 78,
-   "r": 6,
+   "r": 3,
    "explode": [
     -140,
     0,
     0
    ],
-   "mass": 47.7,
+   "mass": 46.5,
    "materials": [
     [
      "pcabs",
@@ -423,11 +829,11 @@
    "marks": [
     {
      "shape": "box",
-     "x": 4,
-     "y": 4,
-     "w": 92,
-     "d": 22,
-     "r": 4,
+     "x": 22,
+     "y": 5,
+     "w": 56,
+     "d": 10,
+     "r": 2,
      "fill": "#23272A"
     }
    ]
@@ -436,41 +842,97 @@
    "id": "rueckschale",
    "component_id": "plastic_housing",
    "material_id": "abs",
-   "name": "Rückschale mit Batteriefach",
+   "name": "Rückschale",
    "short": "Rückschale",
    "shape": "box",
    "x": 0,
-   "y": 0,
+   "y": 2,
    "w": 100,
-   "d": 30,
+   "d": 28,
    "z": 0,
    "h": 78,
-   "r": 6,
+   "r": 3,
    "explode": [
     0,
     -75,
     0
    ],
-   "mass": 52.5,
+   "mass": 48.4,
    "materials": [
     [
      "pcabs",
      100
     ]
    ],
-   "info": "Hinteres Gehäuseteil mit Batteriefach und Lautsprecher-Löchern. Reiner Kunststoff, wenn alles ausgebaut ist.",
+   "info": "Hinteres Gehäuseteil mit Lautsprecher-Löchern. Reiner Kunststoff, wenn alles ausgebaut ist.",
    "color": "#2E3338",
    "marks": [
     {
      "shape": "box",
-     "x": 4,
-     "y": 4,
-     "w": 92,
-     "d": 22,
-     "r": 4,
+     "x": 6,
+     "y": 2,
+     "w": 18,
+     "d": 10,
+     "r": 2,
+     "fill": "#23272A"
+    },
+    {
+     "shape": "box",
+     "x": 27,
+     "y": 2,
+     "w": 18,
+     "d": 10,
+     "r": 2,
+     "fill": "#23272A"
+    },
+    {
+     "shape": "box",
+     "x": 48,
+     "y": 2,
+     "w": 18,
+     "d": 10,
+     "r": 2,
+     "fill": "#23272A"
+    },
+    {
+     "shape": "box",
+     "x": 69,
+     "y": 2,
+     "w": 18,
+     "d": 10,
+     "r": 2,
      "fill": "#23272A"
     }
    ]
+  },
+  {
+   "id": "batteriedeckel",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Batteriefachdeckel",
+   "short": "Batteriedeckel",
+   "shape": "box",
+   "x": 4,
+   "y": 0,
+   "w": 58,
+   "d": 2,
+   "z": 1,
+   "h": 20,
+   "r": 1,
+   "explode": [
+    0,
+    -120,
+    0
+   ],
+   "mass": 2.8,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Rastet hinten unten ein. Mit dem Daumen auf den Pfeil drücken und herunterschieben.",
+   "color": "#3A3F44"
   }
  ]
 }

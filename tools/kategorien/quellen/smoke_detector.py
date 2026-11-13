@@ -35,6 +35,9 @@ teile = [
          x=16, y=31, w=38, z=11, h=14, mass=5, color='#2B2F33',
          info='Schwarzes Labyrinth mit feinem Insektengitter: Rauch kommt hinein, Licht von außen nicht. Lässt sich abziehen.',
          marks=ring(19, 19, 15, 12, 3, '#4A5156') + [mark('cyl', 11, 11, 16, fill='#1E2226')]),
+    teil('gitter', 'plastic_housing', 'Insektengitter', 'Insektengitter', 'cyl', material_id='steel',
+         x=14, y=29, w=42, z=11, h=13, mass=1.5, materials=[['stahl', 100]], color='#9AA2A8', opacity=0.45,
+         info='Feines Edelstahlnetz rund um die Rauchkammer. Lässt Rauch hinein, aber keine Insekten, die Fehlalarm auslösen.'),
     teil('ir_led', 'circuit_board', 'Infrarot-LED', 'IR-LED', 'cyl', material_id='mixed_electronics',
          x=22, y=46, w=5, z=9.6, h=5, mass=0.2, materials=[['led', 60], ['kupfer', 40]], color='#5A5F8C', opacity=0.85,
          info='Sendet regelmäßig unsichtbare Lichtblitze in die Kammer.'),
@@ -45,6 +48,14 @@ teile = [
          x=37, y=73, w=20, z=9.6, h=7, mass=4, materials=[['keramik', 35], ['messing', 35], ['pcabs', 30]], color='#2B2F33',
          info='Keramikplättchen auf Messing schwingt bei Spannung und piept mit 85 dB. Auf der Platine lassen.',
          marks=[mark('cyl', 7, 7, 6, fill='#B8A060')]),
+    teil('status_led', 'circuit_board', 'Rote Kontroll-LED', 'Kontroll-LED', 'cyl', material_id='mixed_electronics',
+         x=66, y=22, w=4, z=9.6, h=4, mass=0.1, materials=[['led', 60], ['kupfer', 40]], color='#C9302C',
+         info='Blinkt etwa alle 40 Sekunden kurz rot und zeigt so: Der Melder arbeitet.'),
+    teil('batterieclip', 'alkaline_cell', '9-V-Batterieclip mit Kabel', 'Batterieclip', 'box', material_id='mixed_electronics',
+         x=60, y=76, w=22, d=8, z=9.6, h=6, r=2, mass=1.5, materials=[['pvc', 40], ['kupfer', 35], ['stahl', 25]],
+         color='#2B2F33',
+         info='Druckknopf-Kontakte, die auf die Pole der Batterie gedrückt werden. Rotes Kabel Plus, schwarzes Minus.',
+         marks=[mark('cyl', 4, 1.5, 5, fill='#B9BEC2'), mark('cyl', 13, 1.5, 5, fill='#B9BEC2')]),
     teil('mikrocontroller', 'circuit_board', 'Steuerchip', 'Chip', 'box',
          x=22, y=16, w=10, d=8, z=9.6, h=1.4, r=0.5, mass=0.3, materials=[['chip', 100]], color=CHIP,
          info='Misst alle paar Sekunden, prüft die Batterie und löst den Alarm aus.'),
@@ -53,12 +64,16 @@ teile = [
          info='Runde Leiterplatte, mit zwei Schrauben im Gehäuse. Zusammen mit dem Gehäuse in die Elektro-Sammlung.',
          marks=[mark('box', 50, 18, 30, 52, 2, '#3E7D55')]),
     teil('batterie', 'alkaline_cell', '9-V-Blockbatterie', '9-V-Block', 'box',
-         x=58, y=26, w=26.5, d=48.5, z=9.6, h=17.5, r=2, mass=45, explode=[85, 0, 0], color='#3A6EA5',
+         x=58, y=26, w=26.5, d=48.5, z=9.6, h=17.5, r=2, mass=45, explode=[85, 0, 0], color='#3A6EA5', sortBias=-10,
          info='Alkaline-Block für etwa ein Jahr. Piept der Melder kurz, ist sie leer: Pole abkleben und zur Batterie-Sammelbox.',
          marks=[mark('cyl', 4, 1, 6, fill='#B9BEC2'), mark('cyl', 16, 1, 6, fill='#B9BEC2')]),
     teil('gehaeuse', 'plastic_housing', 'Gehäuse-Unterteil', 'Gehäuse', 'cyl',
          x=0, y=0, w=100, z=6, h=14, mass=28, color=GEH,
          info='Trägt Platine und Batteriefach. Ein Schieber verhindert, dass die Haube ohne Batterie schließt.'),
+    teil('duebel', 'plastic_housing', 'Schrauben und Dübel', 'Schrauben+Dübel', 'cyl', material_id='steel',
+         x=17, y=46, w=6, z=0.5, h=5, mass=4, explode=[-70, 0, 0], materials=[['stahl', 60], ['pp', 40]], color='#9AA2A8',
+         info='Zwei Schrauben mit Kunststoffdübeln halten die Montageplatte an der Decke. Stahl und Kunststoff trennen.',
+         marks=[mark('cyl', 1.5, 1.5, 3, fill='#5E656A')]),
     teil('sockel', 'plastic_housing', 'Montageplatte', 'Montageplatte', 'cyl',
          x=4, y=4, w=92, z=0, h=6, mass=18, color='#D8DAD6',
          info='Wird an die Decke geschraubt, der Melder rastet mit einer Drehung ein. Reiner Kunststoff.',
@@ -66,6 +81,6 @@ teile = [
 ]
 
 explodiere(teile, abstand=40, gruppen=[['kuppe', 'haube']],
-           abstaende={'ir_led': 15, 'fotodiode': 15, 'mikrocontroller': 15, 'piezo': 15, 'pruefknopf': 20}, nach_liste=True)
+           abstaende={'ir_led': 15, 'fotodiode': 15, 'mikrocontroller': 15, 'piezo': 15, 'pruefknopf': 20, 'status_led': 15, 'batterieclip': 15, 'gitter': 15}, nach_liste=True)
 skaliere_masse(teile, oid='smoke_detector')
 schreibe('smoke_detector', teile)

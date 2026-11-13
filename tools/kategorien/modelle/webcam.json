@@ -17,9 +17,9 @@
    "explode": [
     0,
     0,
-    89.0
+    78.6
    ],
-   "mass": 6.5,
+   "mass": 6.4,
    "materials": [
     [
      "pcabs",
@@ -34,7 +34,7 @@
      "x": 34,
      "y": 3,
      "w": 24,
-     "fill": "#0F1113"
+     "fill": "#3A3F44"
     },
     {
      "shape": "cyl",
@@ -73,14 +73,14 @@
    "x": 37,
    "y": 6,
    "w": 18,
-   "z": 20,
-   "h": 6,
+   "z": 21.5,
+   "h": 7,
    "explode": [
     0,
     0,
-    71.0
+    58.1
    ],
-   "mass": 2.2,
+   "mass": 2.1,
    "materials": [
     [
      "pcabs",
@@ -91,24 +91,69 @@
      30
     ]
    ],
-   "info": "Mehrere kleine Kunststofflinsen in einem Gewinderohr. Lässt sich vom Sensor abschrauben.",
-   "color": "#3A3F44",
+   "info": "Mehrere kleine Linsen in einem Gewinderohr, das zum Scharfstellen gedreht wird. Lässt sich vom Sensor abschrauben.",
+   "color": "#2B2F33",
+   "sortBias": 0.5,
    "marks": [
     {
      "shape": "cyl",
-     "x": 3,
-     "y": 3,
-     "w": 12,
+     "x": 2,
+     "y": 2,
+     "w": 14,
+     "fill": "#1B2A3C"
+    },
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 4,
+     "w": 10,
      "fill": "#2E4A6B"
     },
     {
      "shape": "cyl",
-     "x": 6,
-     "y": 6,
-     "w": 6,
-     "fill": "#4A6E96"
+     "x": 6.5,
+     "y": 6.5,
+     "w": 5,
+     "fill": "#5B86B5"
+    },
+    {
+     "shape": "cyl",
+     "x": 8.5,
+     "y": 6.5,
+     "w": 2,
+     "fill": "#C9DEF0"
     }
    ]
+  },
+  {
+   "id": "ir_filter",
+   "component_id": "webcam_lens",
+   "material_id": "special_glass",
+   "name": "Infrarot-Sperrfilter",
+   "short": "IR-Filter",
+   "shape": "box",
+   "x": 41,
+   "y": 10,
+   "w": 10,
+   "d": 10,
+   "z": 20.2,
+   "h": 0.6,
+   "r": 0.5,
+   "explode": [
+    0,
+    0,
+    40.8
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "glas",
+     100
+    ]
+   ],
+   "info": "Hauchdünnes, bläuliches Glasplättchen. Hält unsichtbares Infrarotlicht ab, damit die Farben stimmen.",
+   "color": "#8FA0C8",
+   "opacity": 0.7
   },
   {
    "id": "bildsensor",
@@ -127,7 +172,7 @@
    "explode": [
     0,
     0,
-    53.0
+    35.0
    ],
    "mass": 0.5,
    "materials": [
@@ -171,7 +216,7 @@
    "explode": [
     0,
     0,
-    53.0
+    35.0
    ],
    "mass": 0.4,
    "materials": [
@@ -200,7 +245,7 @@
    "explode": [
     0,
     0,
-    53.0
+    35.0
    ],
    "mass": 0.1,
    "materials": [
@@ -237,7 +282,7 @@
    "explode": [
     0,
     0,
-    53.0
+    35.0
    ],
    "mass": 0.1,
    "materials": [
@@ -275,9 +320,9 @@
    "explode": [
     0,
     0,
-    45.0
+    27.0
    ],
-   "mass": 6.5,
+   "mass": 6.4,
    "materials": [
     [
      "fr4",
@@ -338,6 +383,42 @@
    ]
   },
   {
+   "id": "schrauben",
+   "component_id": "plastic_housing",
+   "material_id": "steel",
+   "name": "Gehäuseschrauben (2 Stück)",
+   "short": "Schrauben",
+   "shape": "cyl",
+   "x": 12,
+   "y": 13.5,
+   "w": 3,
+   "z": 9,
+   "h": 8,
+   "explode": [
+    -45,
+    0,
+    0
+   ],
+   "mass": 0.4,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Halten Platine und Rückschale. Sie sitzen oft unter einem Aufkleber oder unter dem Gummipad.",
+   "color": "#9BA3A8",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0.75,
+     "y": 0.75,
+     "w": 1.5,
+     "fill": "#5E656A"
+    }
+   ]
+  },
+  {
    "id": "rueckschale",
    "component_id": "plastic_housing",
    "material_id": "abs",
@@ -354,9 +435,9 @@
    "explode": [
     0,
     0,
-    18.0
+    0.0
    ],
-   "mass": 19.4,
+   "mass": 19.3,
    "materials": [
     [
      "pcabs",
@@ -393,10 +474,10 @@
    "r": 4,
    "explode": [
     0,
-    0,
-    0.0
+    50,
+    0
    ],
-   "mass": 15.1,
+   "mass": 12.9,
    "materials": [
     [
      "pcabs",
@@ -408,19 +489,151 @@
    "marks": [
     {
      "shape": "box",
+     "x": 2,
+     "y": 0,
+     "w": 46,
+     "d": 4,
+     "r": 2,
+     "fill": "#3A3F44"
+    }
+   ]
+  },
+  {
+   "id": "gummipad",
+   "component_id": "plastic_housing",
+   "material_id": "silicone",
+   "name": "Gummiauflage",
+   "short": "Gummipad",
+   "shape": "box",
+   "x": 24,
+   "y": 6,
+   "w": 44,
+   "d": 20,
+   "z": 8,
+   "h": 0.8,
+   "r": 3,
+   "explode": [
+    0,
+    50,
+    14
+   ],
+   "mass": 1.1,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "info": "Rutschfeste Auflage, damit die Kamera auf dem Bildschirmrand nicht verrutscht. Geklebt.",
+   "color": "#3A3F44",
+   "marks": [
+    {
+     "shape": "box",
      "x": 3,
      "y": 3,
-     "w": 44,
-     "d": 20,
-     "r": 3,
-     "fill": "#3A3F44"
+     "w": 2,
+     "d": 14,
+     "r": 1,
+     "fill": "#2E3338"
     },
     {
+     "shape": "box",
+     "x": 8,
+     "y": 3,
+     "w": 2,
+     "d": 14,
+     "r": 1,
+     "fill": "#2E3338"
+    },
+    {
+     "shape": "box",
+     "x": 13,
+     "y": 3,
+     "w": 2,
+     "d": 14,
+     "r": 1,
+     "fill": "#2E3338"
+    },
+    {
+     "shape": "box",
+     "x": 18,
+     "y": 3,
+     "w": 2,
+     "d": 14,
+     "r": 1,
+     "fill": "#2E3338"
+    },
+    {
+     "shape": "box",
+     "x": 23,
+     "y": 3,
+     "w": 2,
+     "d": 14,
+     "r": 1,
+     "fill": "#2E3338"
+    },
+    {
+     "shape": "box",
+     "x": 28,
+     "y": 3,
+     "w": 2,
+     "d": 14,
+     "r": 1,
+     "fill": "#2E3338"
+    },
+    {
+     "shape": "box",
+     "x": 33,
+     "y": 3,
+     "w": 2,
+     "d": 14,
+     "r": 1,
+     "fill": "#2E3338"
+    },
+    {
+     "shape": "box",
+     "x": 38,
+     "y": 3,
+     "w": 2,
+     "d": 14,
+     "r": 1,
+     "fill": "#2E3338"
+    }
+   ]
+  },
+  {
+   "id": "stativgewinde",
+   "component_id": "plastic_housing",
+   "material_id": "copper",
+   "name": "Stativgewinde (Messing)",
+   "short": "Stativgewinde",
+   "shape": "cyl",
+   "x": 43,
+   "y": 12,
+   "w": 6,
+   "z": 1,
+   "h": 6,
+   "explode": [
+    0,
+    50,
+    28
+   ],
+   "mass": 1.1,
+   "materials": [
+    [
+     "messing",
+     100
+    ]
+   ],
+   "info": "Eingepresste Gewindehülse für ein Kamerastativ. Messing ist ein wertvolles Metall.",
+   "color": "#C9A24B",
+   "marks": [
+    {
      "shape": "cyl",
-     "x": 21,
-     "y": 9,
-     "w": 7,
-     "fill": "#9BA3A8"
+     "x": 1.5,
+     "y": 1.5,
+     "w": 3,
+     "fill": "#7A6230"
     }
    ]
   },
@@ -439,11 +652,11 @@
    "h": 5,
    "r": 2.5,
    "explode": [
-    40,
+    45,
     0,
     0
    ],
-   "mass": 19.4,
+   "mass": 19.3,
    "materials": [
     [
      "pvc",
@@ -479,7 +692,7 @@
    "h": 3,
    "r": 1.5,
    "explode": [
-    40,
+    45,
     0,
     15
    ],

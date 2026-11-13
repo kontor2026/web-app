@@ -15,11 +15,11 @@
    "h": 19,
    "r": 8,
    "explode": [
+    -80,
     0,
-    0,
-    64.0
+    45
    ],
-   "mass": 118.8,
+   "mass": 115.9,
    "materials": [
     [
      "pcabs",
@@ -196,7 +196,7 @@
      "w": 20,
      "d": 26,
      "r": 3,
-     "fill": "#C8423A"
+     "fill": "#4A4D50"
     }
    ]
   },
@@ -215,11 +215,11 @@
    "h": 18,
    "r": 2,
    "explode": [
+    -80,
     0,
-    0,
-    108.0
+    75
    ],
-   "mass": 15,
+   "mass": 14.6,
    "materials": [
     [
      "pcabs",
@@ -266,6 +266,278 @@
    ]
   },
   {
+   "id": "glimmlampe",
+   "component_id": "rocker_switch",
+   "material_id": "mixed_electronics",
+   "name": "Glimmlampe im Schalter",
+   "short": "Glimmlampe",
+   "shape": "box",
+   "x": 24,
+   "y": 196,
+   "w": 6,
+   "d": 12,
+   "z": 21,
+   "h": 5,
+   "r": 2.5,
+   "explode": [
+    0,
+    0,
+    42.0
+   ],
+   "mass": 1.2,
+   "materials": [
+    [
+     "glas",
+     50
+    ],
+    [
+     "kupfer",
+     30
+    ],
+    [
+     "chip",
+     20
+    ]
+   ],
+   "info": "Kleine Neon-Lampe mit Vorwiderstand. Leuchtet rot, solange der Schalter an ist und Strom anliegt.",
+   "color": "#E8A060"
+  },
+  {
+   "id": "kinderschutz_0",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Kinderschutz-Klappe",
+   "short": "Kinderschutz",
+   "shape": "box",
+   "x": 12,
+   "y": 18,
+   "w": 30,
+   "d": 22,
+   "z": 31,
+   "h": 1.5,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    48.0
+   ],
+   "mass": 1.8,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Federnder Schieber unter jeder Dose. Er gibt die Löcher nur frei, wenn beide Stifte gleichzeitig drücken.",
+   "color": "#E8E8E2",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 9,
+     "w": 8,
+     "d": 4,
+     "r": 1,
+     "fill": "#C9CBC6"
+    },
+    {
+     "shape": "box",
+     "x": 19,
+     "y": 9,
+     "w": 8,
+     "d": 4,
+     "r": 1,
+     "fill": "#C9CBC6"
+    }
+   ]
+  },
+  {
+   "id": "kinderschutz_1",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Kinderschutz-Klappe",
+   "short": "Kinderschutz",
+   "shape": "box",
+   "x": 12,
+   "y": 62,
+   "w": 30,
+   "d": 22,
+   "z": 31,
+   "h": 1.5,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    48.0
+   ],
+   "mass": 1.8,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Federnder Schieber unter jeder Dose. Er gibt die Löcher nur frei, wenn beide Stifte gleichzeitig drücken.",
+   "color": "#E8E8E2",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 9,
+     "w": 8,
+     "d": 4,
+     "r": 1,
+     "fill": "#C9CBC6"
+    },
+    {
+     "shape": "box",
+     "x": 19,
+     "y": 9,
+     "w": 8,
+     "d": 4,
+     "r": 1,
+     "fill": "#C9CBC6"
+    }
+   ]
+  },
+  {
+   "id": "kinderschutz_2",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Kinderschutz-Klappe",
+   "short": "Kinderschutz",
+   "shape": "box",
+   "x": 12,
+   "y": 106,
+   "w": 30,
+   "d": 22,
+   "z": 31,
+   "h": 1.5,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    48.0
+   ],
+   "mass": 1.8,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Federnder Schieber unter jeder Dose. Er gibt die Löcher nur frei, wenn beide Stifte gleichzeitig drücken.",
+   "color": "#E8E8E2",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 9,
+     "w": 8,
+     "d": 4,
+     "r": 1,
+     "fill": "#C9CBC6"
+    },
+    {
+     "shape": "box",
+     "x": 19,
+     "y": 9,
+     "w": 8,
+     "d": 4,
+     "r": 1,
+     "fill": "#C9CBC6"
+    }
+   ]
+  },
+  {
+   "id": "kinderschutz_3",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Kinderschutz-Klappe",
+   "short": "Kinderschutz",
+   "shape": "box",
+   "x": 12,
+   "y": 150,
+   "w": 30,
+   "d": 22,
+   "z": 31,
+   "h": 1.5,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    48.0
+   ],
+   "mass": 1.8,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Federnder Schieber unter jeder Dose. Er gibt die Löcher nur frei, wenn beide Stifte gleichzeitig drücken.",
+   "color": "#E8E8E2",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 9,
+     "w": 8,
+     "d": 4,
+     "r": 1,
+     "fill": "#C9CBC6"
+    },
+    {
+     "shape": "box",
+     "x": 19,
+     "y": 9,
+     "w": 8,
+     "d": 4,
+     "r": 1,
+     "fill": "#C9CBC6"
+    }
+   ]
+  },
+  {
+   "id": "schrauben",
+   "component_id": "plastic_housing",
+   "material_id": "steel",
+   "name": "Gehäuseschrauben (6 Stück)",
+   "short": "Schrauben",
+   "shape": "cyl",
+   "x": 4,
+   "y": 120,
+   "w": 4,
+   "z": 3,
+   "h": 28,
+   "explode": [
+    0,
+    0,
+    40.0
+   ],
+   "mass": 3.7,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Halten Ober- und Unterteil zusammen; Köpfe sitzen unten, oft unter Gummifüßen oder Aufklebern.",
+   "color": "#9BA3A8",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 1,
+     "y": 1,
+     "w": 2,
+     "fill": "#5E656A"
+    }
+   ]
+  },
+  {
    "id": "schiene_l",
    "component_id": "plug_pins",
    "material_id": "copper",
@@ -282,9 +554,9 @@
    "explode": [
     0,
     0,
-    40.0
+    38.0
    ],
-   "mass": 15,
+   "mass": 14.6,
    "materials": [
     [
      "messing",
@@ -349,9 +621,9 @@
    "explode": [
     0,
     0,
-    40.0
+    38.0
    ],
-   "mass": 17.5,
+   "mass": 17.1,
    "materials": [
     [
      "messing",
@@ -404,7 +676,7 @@
    "component_id": "plug_pins",
    "material_id": "copper",
    "name": "Kontaktschiene Neutralleiter",
-   "short": "Schiene Neutral",
+   "short": "Neutralleiter",
    "shape": "box",
    "x": 38,
    "y": 12,
@@ -416,9 +688,9 @@
    "explode": [
     0,
     0,
-    40.0
+    38.0
    ],
-   "mass": 15,
+   "mass": 14.6,
    "materials": [
     [
      "messing",
@@ -483,9 +755,9 @@
    "explode": [
     0,
     0,
-    41.0
+    39.0
    ],
-   "mass": 5,
+   "mass": 4.9,
    "materials": [
     [
      "pcabs",
@@ -528,7 +800,7 @@
     0,
     0.0
    ],
-   "mass": 100,
+   "mass": 97.6,
    "materials": [
     [
      "pcabs",
@@ -566,7 +838,7 @@
     0,
     45.0
    ],
-   "mass": 77.5,
+   "mass": 75.6,
    "materials": [
     [
      "kupfer",
@@ -638,7 +910,7 @@
     0,
     0.0
    ],
-   "mass": 87.5,
+   "mass": 85.4,
    "materials": [
     [
      "pvc",
@@ -693,7 +965,7 @@
     14,
     0
    ],
-   "mass": 37.5,
+   "mass": 36.6,
    "materials": [
     [
      "pvc",
@@ -741,7 +1013,7 @@
     30,
     0
    ],
-   "mass": 5.6,
+   "mass": 5.5,
    "materials": [
     [
      "messing",
@@ -774,7 +1046,7 @@
     30,
     0
    ],
-   "mass": 5.6,
+   "mass": 5.5,
    "materials": [
     [
      "messing",

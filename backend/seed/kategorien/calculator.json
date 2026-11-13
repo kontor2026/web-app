@@ -31,16 +31,16 @@
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 0,50 kg",
+   "v": "≈ 0,49 kg",
    "hint": "spart 0,15 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Cu": 2650.0,
-   "Fe": 345.0,
-   "Ag": 7.84,
-   "Au": 1.76,
+   "Cu": 2630.0,
+   "Fe": 1423.0,
+   "Ag": 7.76,
+   "Au": 1.75,
    "Pd": 0.78
   },
   "herkunft": {
@@ -51,17 +51,18 @@
    "Pd": "10 g Leiterplatte × oeko2012 Tab, 15, Motherboard Notebook (Umicore 2011)"
   },
   "materialien_g": {
-   "abs": 68.1,
-   "silicone": 16.8,
-   "pcb": 9.8,
+   "abs": 67.4,
+   "silicone": 16.6,
+   "pcb": 9.7,
    "special_glass": 6.9,
-   "pc": 3.5,
-   "coin_cell": 2.7,
-   "mixed_electronics": 2.3
+   "pc": 3.4,
+   "coin_cell": 2.6,
+   "mixed_electronics": 2.3,
+   "steel": 1.1
   },
-  "co2_kg": 0.65,
-  "co2_mit_recyclat_kg": 0.496,
-  "co2_ersparnis_kg": 0.154,
+  "co2_kg": 0.646,
+  "co2_mit_recyclat_kg": 0.492,
+  "co2_ersparnis_kg": 0.155,
   "co2_ohne_faktor": [
    "coin_cell"
   ],
@@ -80,6 +81,22 @@
    "westmetall2026": {
     "titel": "Westmetall Marktdaten (LME, London Fixing, WM-Notiz)",
     "url": "https://www.westmetall.com/en/markdaten.php"
+   },
+   "usgs2026": {
+    "titel": "Mineral Commodity Summaries 2026 (ver. 1.3, May 2026)",
+    "url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf"
+   },
+   "eucrm2023": {
+    "titel": "Study on the Critical Raw Materials for the EU 2023 – Final Report",
+    "url": "https://single-market-economy.ec.europa.eu/publications/study-critical-raw-materials-eu-2023-final-report_en"
+   },
+   "eu2024crma": {
+    "titel": "Verordnung (EU) 2024/1252 zur Schaffung eines Rahmens zur Gewährleistung einer sicheren und nachhaltigen Versorgung mit kritischen Rohstoffen (Critical Raw Materials Act)",
+    "url": "https://op.europa.eu/en/publication-detail/-/publication/aa3c49f7-08e7-11ef-a251-01aa75ed71a1"
+   },
+   "usdapsd2026": {
+    "titel": "Production, Supply and Distribution Online (PSD), Datensatz Cotton (psd_cotton_csv.zip)",
+    "url": "https://apps.fas.usda.gov/psdonline/downloads/psd_cotton_csv.zip"
    }
   }
  },
@@ -132,7 +149,7 @@
    "explode": [
     0,
     0,
-    256.4
+    228.5
    ],
    "mass": 2.3,
    "materials": [
@@ -211,9 +228,9 @@
    "explode": [
     0,
     0,
-    256.8
+    228.9
    ],
-   "mass": 3.5,
+   "mass": 3.4,
    "materials": [
     [
      "pcabs",
@@ -221,8 +238,8 @@
     ]
    ],
    "info": "Klare Kunststoffscheibe, schützt das empfindliche LCD. Von innen eingeklebt.",
-   "color": "#C9DEDF",
-   "opacity": 0.6
+   "color": "#B9CED0",
+   "opacity": 0.3
   },
   {
    "id": "oberschale",
@@ -241,9 +258,9 @@
    "explode": [
     0,
     0,
-    201.4
+    173.5
    ],
-   "mass": 34.6,
+   "mass": 34.3,
    "materials": [
     [
      "pcabs",
@@ -301,7 +318,7 @@
     0,
     112.0
    ],
-   "mass": 16.2,
+   "mass": 16,
    "materials": [
     [
      "gummi",
@@ -653,13 +670,13 @@
    "y": 20,
    "w": 64,
    "d": 26,
-   "z": 9,
-   "h": 2.2,
+   "z": 12,
+   "h": 1.6,
    "r": 1,
    "explode": [
+    105,
     0,
-    0,
-    143.2
+    40
    ],
    "mass": 6.9,
    "materials": [
@@ -674,94 +691,113 @@
    ],
    "info": "Zwei dünne Glasplatten mit Flüssigkristallen dazwischen. Zerbricht leicht, flach anfassen.",
    "color": "#A9B4A2",
+   "sortBias": 0.6,
    "marks": [
     {
      "shape": "box",
-     "x": 4.0,
-     "y": 8.0,
-     "w": 5,
-     "d": 10,
+     "x": 5.0,
+     "y": 9.0,
+     "w": 4.2,
+     "d": 9,
      "r": 0.5,
-     "fill": "#7E897A"
+     "fill": "#3E4740"
     },
     {
      "shape": "box",
-     "x": 9.8,
-     "y": 8.0,
-     "w": 5,
-     "d": 10,
+     "x": 10.6,
+     "y": 9.0,
+     "w": 4.2,
+     "d": 9,
      "r": 0.5,
-     "fill": "#7E897A"
+     "fill": "#3E4740"
     },
     {
      "shape": "box",
-     "x": 15.6,
-     "y": 8.0,
-     "w": 5,
-     "d": 10,
+     "x": 16.2,
+     "y": 9.0,
+     "w": 4.2,
+     "d": 9,
      "r": 0.5,
-     "fill": "#7E897A"
+     "fill": "#3E4740"
     },
     {
      "shape": "box",
-     "x": 21.4,
-     "y": 8.0,
-     "w": 5,
-     "d": 10,
+     "x": 21.8,
+     "y": 9.0,
+     "w": 4.2,
+     "d": 9,
      "r": 0.5,
-     "fill": "#7E897A"
+     "fill": "#3E4740"
     },
     {
      "shape": "box",
-     "x": 27.2,
-     "y": 8.0,
-     "w": 5,
-     "d": 10,
+     "x": 27.4,
+     "y": 9.0,
+     "w": 4.2,
+     "d": 9,
      "r": 0.5,
-     "fill": "#7E897A"
+     "fill": "#3E4740"
     },
     {
      "shape": "box",
      "x": 33.0,
-     "y": 8.0,
-     "w": 5,
-     "d": 10,
+     "y": 9.0,
+     "w": 4.2,
+     "d": 9,
+     "r": 0.5,
+     "fill": "#3E4740"
+    },
+    {
+     "shape": "box",
+     "x": 38.6,
+     "y": 9.0,
+     "w": 4.2,
+     "d": 9,
+     "r": 0.5,
+     "fill": "#3E4740"
+    },
+    {
+     "shape": "box",
+     "x": 44.2,
+     "y": 9.0,
+     "w": 4.2,
+     "d": 9,
+     "r": 0.5,
+     "fill": "#3E4740"
+    },
+    {
+     "shape": "box",
+     "x": 49.8,
+     "y": 9.0,
+     "w": 4.2,
+     "d": 9,
+     "r": 0.5,
+     "fill": "#3E4740"
+    },
+    {
+     "shape": "box",
+     "x": 55.4,
+     "y": 9.0,
+     "w": 4.2,
+     "d": 9,
+     "r": 0.5,
+     "fill": "#3E4740"
+    },
+    {
+     "shape": "box",
+     "x": 5,
+     "y": 3,
+     "w": 6,
+     "d": 2.5,
      "r": 0.5,
      "fill": "#7E897A"
     },
     {
      "shape": "box",
-     "x": 38.8,
-     "y": 8.0,
-     "w": 5,
-     "d": 10,
-     "r": 0.5,
-     "fill": "#7E897A"
-    },
-    {
-     "shape": "box",
-     "x": 44.6,
-     "y": 8.0,
-     "w": 5,
-     "d": 10,
-     "r": 0.5,
-     "fill": "#7E897A"
-    },
-    {
-     "shape": "box",
-     "x": 50.4,
-     "y": 8.0,
-     "w": 5,
-     "d": 10,
-     "r": 0.5,
-     "fill": "#7E897A"
-    },
-    {
-     "shape": "box",
-     "x": 56.2,
-     "y": 8.0,
-     "w": 5,
-     "d": 10,
+     "x": 14,
+     "y": 3,
+     "w": 4,
+     "d": 2.5,
      "r": 0.5,
      "fill": "#7E897A"
     }
@@ -779,12 +815,12 @@
    "w": 60,
    "d": 2,
    "z": 7.2,
-   "h": 1.8,
+   "h": 4.8,
    "r": 0.5,
    "explode": [
+    105,
     0,
-    0,
-    88.2
+    12
    ],
    "mass": 0.6,
    "materials": [
@@ -850,7 +886,7 @@
     0,
     57.0
    ],
-   "mass": 9.2,
+   "mass": 9.1,
    "materials": [
     [
      "fr4",
@@ -1251,7 +1287,7 @@
     0,
     10
    ],
-   "mass": 2.7,
+   "mass": 2.6,
    "materials": [
     [
      "knopfzelle",
@@ -1289,7 +1325,7 @@
     0,
     0
    ],
-   "mass": 1.2,
+   "mass": 1.1,
    "materials": [
     [
      "pcabs",
@@ -1305,6 +1341,42 @@
      "y": 9,
      "w": 4,
      "fill": "#9BA3A8"
+    }
+   ]
+  },
+  {
+   "id": "schrauben",
+   "component_id": "plastic_housing",
+   "material_id": "steel",
+   "name": "Gehäuseschrauben (4 Stück)",
+   "short": "Schrauben",
+   "shape": "cyl",
+   "x": 6,
+   "y": 150,
+   "w": 3,
+   "z": 1,
+   "h": 8,
+   "explode": [
+    -60,
+    0,
+    0
+   ],
+   "mass": 1.1,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Kleine Kreuzschlitzschrauben von unten, oft unter den Gummifüßen versteckt. Füße vorsichtig abziehen.",
+   "color": "#9BA3A8",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0.75,
+     "y": 0.75,
+     "w": 1.5,
+     "fill": "#5E656A"
     }
    ]
   },
@@ -1327,7 +1399,7 @@
     0,
     0.0
    ],
-   "mass": 32.3,
+   "mass": 32,
    "materials": [
     [
      "pcabs",
