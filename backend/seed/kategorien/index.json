@@ -252,7 +252,7 @@
   "name": "Pizzakarton",
   "name_en": "Pizza Box",
   "klasse": "Verpackung · Papier",
-  "teile": 6,
+  "teile": 11,
   "platzhalter": false
  },
  {
@@ -260,7 +260,7 @@
   "name": "Pappkarton",
   "name_en": "Cardboard Box",
   "klasse": "Verpackung · Papier",
-  "teile": 8,
+  "teile": 11,
   "platzhalter": false
  },
  {
@@ -268,7 +268,7 @@
   "name": "Zeitung",
   "name_en": "Newspaper",
   "klasse": "Verpackung · Papier",
-  "teile": 4,
+  "teile": 7,
   "platzhalter": false
  },
  {
@@ -732,7 +732,7 @@
   "name": "Eierkarton",
   "name_en": "Egg Carton",
   "klasse": "Verpackung · Papier",
-  "teile": 6,
+  "teile": 13,
   "platzhalter": false
  },
  {
@@ -836,7 +836,7 @@
   "name": "Papiertüte",
   "name_en": "Paper Bag",
   "klasse": "Verpackung · Papier",
-  "teile": 10,
+  "teile": 14,
   "platzhalter": false
  },
  {
@@ -860,7 +860,7 @@
   "name": "Müslipackung",
   "name_en": "Cereal Box",
   "klasse": "Verpackung · Papier",
-  "teile": 4,
+  "teile": 6,
   "platzhalter": false
  },
  {

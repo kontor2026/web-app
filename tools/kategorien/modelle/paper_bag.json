@@ -8,18 +8,18 @@
    "short": "Griff",
    "shape": "box",
    "x": 85,
-   "y": 137,
+   "y": 135,
    "w": 90,
-   "d": 3,
-   "z": 270,
-   "h": 50,
-   "r": 1.5,
+   "d": 4,
+   "z": 312,
+   "h": 6,
+   "r": 2,
    "explode": [
     0,
-    70,
-    30
+    54.0,
+    70
    ],
-   "mass": 3.1,
+   "mass": 1.5,
    "materials": [
     [
      "papier",
@@ -34,25 +34,24 @@
    "color": "#B88C5A"
   },
   {
-   "id": "griff_hinten",
+   "id": "griff_vorne_l",
    "component_id": "paper_bag_body",
    "material_id": "paper",
-   "name": "Kordelgriff hinten",
-   "short": "Griff hinten",
-   "shape": "box",
+   "name": "Kordel, Schenkel",
+   "short": "Kordel",
+   "shape": "cyl",
    "x": 85,
-   "y": 0,
-   "w": 90,
-   "d": 3,
-   "z": 270,
-   "h": 50,
-   "r": 1.5,
+   "y": 135,
+   "w": 5,
+   "d": 4,
+   "z": 268,
+   "h": 44,
    "explode": [
     0,
-    -70,
-    30
+    54.0,
+    70
    ],
-   "mass": 3.1,
+   "mass": 0.8,
    "materials": [
     [
      "papier",
@@ -63,7 +62,140 @@
      4
     ]
    ],
-   "info": "Zweiter Griff, genauso eingeklebt wie der vordere.",
+   "info": "Linkes Ende der Kordel, unter dem Pappstreifen festgeklebt.",
+   "color": "#B88C5A",
+   "label": false
+  },
+  {
+   "id": "griff_vorne_r",
+   "component_id": "paper_bag_body",
+   "material_id": "paper",
+   "name": "Kordel, Schenkel",
+   "short": "Kordel",
+   "shape": "cyl",
+   "x": 170,
+   "y": 135,
+   "w": 5,
+   "d": 4,
+   "z": 268,
+   "h": 44,
+   "explode": [
+    0,
+    54.0,
+    70
+   ],
+   "mass": 0.8,
+   "materials": [
+    [
+     "papier",
+     96
+    ],
+    [
+     "klebstoff",
+     4
+    ]
+   ],
+   "info": "Rechtes Ende der Kordel, unter dem Pappstreifen festgeklebt.",
+   "color": "#B88C5A",
+   "label": false
+  },
+  {
+   "id": "griff_hinten",
+   "component_id": "paper_bag_body",
+   "material_id": "paper",
+   "name": "Kordelgriff hinten",
+   "short": "Griff",
+   "shape": "box",
+   "x": 85,
+   "y": 2,
+   "w": 90,
+   "d": 4,
+   "z": 312,
+   "h": 6,
+   "r": 2,
+   "explode": [
+    0,
+    -54.0,
+    70
+   ],
+   "mass": 1.5,
+   "materials": [
+    [
+     "papier",
+     96
+    ],
+    [
+     "klebstoff",
+     4
+    ]
+   ],
+   "info": "Zweiter Griff, genauso eingeklebt.",
+   "color": "#B88C5A",
+   "label": false
+  },
+  {
+   "id": "griff_hinten_l",
+   "component_id": "paper_bag_body",
+   "material_id": "paper",
+   "name": "Kordel, Schenkel",
+   "short": "Kordel",
+   "shape": "cyl",
+   "x": 85,
+   "y": 2,
+   "w": 5,
+   "d": 4,
+   "z": 268,
+   "h": 44,
+   "explode": [
+    0,
+    -54.0,
+    70
+   ],
+   "mass": 0.8,
+   "materials": [
+    [
+     "papier",
+     96
+    ],
+    [
+     "klebstoff",
+     4
+    ]
+   ],
+   "info": "Linkes Ende der Kordel, unter dem Pappstreifen festgeklebt.",
+   "color": "#B88C5A",
+   "label": false
+  },
+  {
+   "id": "griff_hinten_r",
+   "component_id": "paper_bag_body",
+   "material_id": "paper",
+   "name": "Kordel, Schenkel",
+   "short": "Kordel",
+   "shape": "cyl",
+   "x": 170,
+   "y": 2,
+   "w": 5,
+   "d": 4,
+   "z": 268,
+   "h": 44,
+   "explode": [
+    0,
+    -54.0,
+    70
+   ],
+   "mass": 0.8,
+   "materials": [
+    [
+     "papier",
+     96
+    ],
+    [
+     "klebstoff",
+     4
+    ]
+   ],
+   "info": "Rechtes Ende der Kordel, unter dem Pappstreifen festgeklebt.",
    "color": "#B88C5A",
    "label": false
   },
@@ -83,7 +215,7 @@
    "r": 0,
    "explode": [
     0,
-    70,
+    54.0,
     0
    ],
    "mass": 1.9,
@@ -116,7 +248,7 @@
    "r": 0,
    "explode": [
     0,
-    -70,
+    -54.0,
     0
    ],
    "mass": 1.9,
@@ -150,7 +282,7 @@
    "r": 0,
    "explode": [
     0,
-    70,
+    120,
     0
    ],
    "mass": 9.3,
@@ -187,7 +319,7 @@
    "r": 0,
    "explode": [
     0,
-    -70,
+    -120,
     0
    ],
    "mass": 9.6,
@@ -223,7 +355,7 @@
    "h": 270,
    "r": 0,
    "explode": [
-    -70,
+    -120,
     0,
     0
    ],
@@ -260,7 +392,7 @@
    "h": 270,
    "r": 0,
    "explode": [
-    70,
+    120,
     0,
     0
    ],

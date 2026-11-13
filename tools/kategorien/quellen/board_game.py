@@ -10,7 +10,7 @@ import sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-from bau import teil, mark, raster, explodiere, skaliere_masse, schreibe  # noqa: E402
+from bau import teil, mark, raster, skaliere_masse, schreibe  # noqa: E402
 
 PAPPE = '#3E6FA8'
 GRAU = '#B9A98C'
@@ -74,8 +74,12 @@ teile += [
 
 by = {p['id']: p for p in teile}
 by['deckel']['explode'] = [0, -(270 + 40), -3]
-unten = [p for p in teile if p['id'] != 'deckel']
-klein = {p['id']: 30 for p in unten if p['id'].startswith(('figur', 'wuerfel', 'karten'))}
-explodiere(unten, abstand=70, abstaende=klein)
+by['unterteil']['explode'] = [0, 0, 0]
+by['einsatz']['explode'] = [0, 0, 75]
+for p in teile:
+    if p['id'].startswith(('figur', 'wuerfel', 'karten')):
+        p['explode'] = [0, 0, round(75 + 45 + 35 - p['z'] + 1, 1)]
+by['spielplan']['explode'] = [310, 0, -45]
+by['anleitung']['explode'] = [-330, 60, -50]
 skaliere_masse(teile, oid='board_game')
 schreibe('board_game', teile)

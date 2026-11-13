@@ -31,7 +31,7 @@
     ]
    ],
    "info": "Zwei lange und zwei kurze Laschen, mit Heißleim verklebt. Zum Öffnen an der Lasche aufziehen.",
-   "color": "#D8A440",
+   "color": "#C8423A",
    "marks": [
     {
      "shape": "box",
@@ -40,16 +40,34 @@
      "w": 190,
      "d": 4,
      "r": 0,
-     "fill": "#B3842E"
+     "fill": "#9E3530"
     },
     {
      "shape": "box",
      "x": 80,
-     "y": 33,
+     "y": 31,
      "w": 30,
-     "d": 4,
-     "r": 1,
-     "fill": "#3A3F44"
+     "d": 8,
+     "r": 2,
+     "fill": "#F2EBDD"
+    },
+    {
+     "shape": "box",
+     "x": 20,
+     "y": 8,
+     "w": 60,
+     "d": 14,
+     "r": 2,
+     "fill": "#F2EBDD"
+    },
+    {
+     "shape": "box",
+     "x": 110,
+     "y": 48,
+     "w": 60,
+     "d": 14,
+     "r": 2,
+     "fill": "#F2EBDD"
     }
    ]
   },
@@ -57,22 +75,70 @@
    "id": "mantel",
    "component_id": "cardboard_box_body",
    "material_id": "cardboard",
-   "name": "Faltschachtel",
+   "name": "Faltschachtel (bedruckt)",
    "short": "Schachtel",
    "shape": "box",
    "x": 0,
    "y": 0,
    "w": 190,
    "d": 70,
-   "z": 6,
-   "h": 278,
+   "z": 215,
+   "h": 69,
    "r": 0.5,
    "explode": [
     0,
     0,
     60
    ],
-   "mass": 54.7,
+   "mass": 14.2,
+   "materials": [
+    [
+     "papier",
+     93
+    ],
+    [
+     "druck",
+     6
+    ],
+    [
+     "klebstoff",
+     1
+    ]
+   ],
+   "info": "Bedruckter Frischfaserkarton, an einer Seitenkante verklebt. Leer flach drücken und ins Altpapier.",
+   "color": "#C8423A",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 2,
+     "w": 186,
+     "d": 66,
+     "r": 0,
+     "fill": "#8E6B45"
+    }
+   ]
+  },
+  {
+   "id": "mantel_mitte",
+   "component_id": "cardboard_box_body",
+   "material_id": "cardboard",
+   "name": "Faltschachtel, Mitte",
+   "short": "Schachtel",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 190,
+   "d": 70,
+   "z": 40,
+   "h": 175,
+   "r": 0.5,
+   "explode": [
+    0,
+    0,
+    60
+   ],
+   "mass": 34.4,
    "materials": [
     [
      "papier",
@@ -87,19 +153,43 @@
      1
     ]
    ],
-   "info": "Bedruckter Karton, an einer Seitenkante verklebt. Leer flach drücken und ins Altpapier.",
+   "info": "Der Aufdruck läuft um die ganze Schachtel: Bild vorne, Nährwerte und Zutaten an den Seiten.",
    "color": "#D8A440",
-   "marks": [
-    {
-     "shape": "box",
-     "x": 2,
-     "y": 2,
-     "w": 186,
-     "d": 66,
-     "r": 0,
-     "fill": "#8E6B45"
-    }
-   ]
+   "label": false
+  },
+  {
+   "id": "mantel_unten",
+   "component_id": "cardboard_box_body",
+   "material_id": "cardboard",
+   "name": "Faltschachtel, unten",
+   "short": "Schachtel",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 190,
+   "d": 70,
+   "z": 6,
+   "h": 34,
+   "r": 0.5,
+   "explode": [
+    0,
+    0,
+    60
+   ],
+   "mass": 6.1,
+   "materials": [
+    [
+     "papier",
+     96
+    ],
+    [
+     "druck",
+     4
+    ]
+   ],
+   "info": "Unterer Rand mit Nährwerttabelle und Recyclinghinweis.",
+   "color": "#F2EBDD",
+   "label": false
   },
   {
    "id": "laschen_unten",
@@ -149,9 +239,9 @@
    "h": 270,
    "r": 6,
    "explode": [
-    230,
+    250,
     0,
-    0
+    90
    ],
    "mass": 7.1,
    "materials": [
@@ -163,6 +253,7 @@
    "info": "PE-Beutel, hält das Müsli frisch und trocken. Gehört nicht ins Altpapier: leer in die Gelbe Tonne.",
    "color": "#E8EEF2",
    "opacity": 0.6,
+   "sortBias": -250,
    "marks": [
     {
      "shape": "box",

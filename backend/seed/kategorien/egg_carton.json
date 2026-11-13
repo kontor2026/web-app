@@ -39,7 +39,7 @@
   "metalle_mg": {},
   "herkunft": {},
   "materialien_g": {
-   "cardboard": 29.5,
+   "cardboard": 29.6,
    "paper": 0.4
   },
   "co2_kg": 0.023,
@@ -131,9 +131,9 @@
    "name": "Preisetikett",
    "short": "Etikett",
    "shape": "box",
-   "x": 45,
+   "x": 40,
    "y": 30,
-   "w": 70,
+   "w": 80,
    "d": 45,
    "z": 70,
    "h": 0.2,
@@ -141,7 +141,7 @@
    "explode": [
     0,
     0,
-    175.0
+    142
    ],
    "mass": 0.4,
    "materials": [
@@ -158,14 +158,14 @@
      7
     ]
    ],
-   "info": "Papieraufkleber mit Haltbarkeitsdatum und Erzeugercode. Darf am Karton bleiben.",
+   "info": "Papieraufkleber mit Haltbarkeitsdatum, Gewichtsklasse und Erzeugercode. Darf am Karton bleiben.",
    "color": "#F4F2EE",
    "marks": [
     {
      "shape": "box",
      "x": 5,
      "y": 5,
-     "w": 45,
+     "w": 50,
      "d": 6,
      "r": 0,
      "fill": "#3A3F44"
@@ -183,10 +183,114 @@
      "shape": "box",
      "x": 5,
      "y": 30,
-     "w": 60,
+     "w": 70,
      "d": 9,
      "r": 0,
-     "fill": "#B3423A"
+     "fill": "#5C9E5A"
+    },
+    {
+     "shape": "cyl",
+     "x": 60,
+     "y": 4,
+     "w": 15,
+     "fill": "#E3B23C"
+    }
+   ]
+  },
+  {
+   "id": "deckel_oben",
+   "component_id": "molded_pulp_tray",
+   "material_id": "cardboard",
+   "name": "Deckel, Oberseite mit Rippen",
+   "short": "Deckel",
+   "shape": "box",
+   "x": 8,
+   "y": 8,
+   "w": 144,
+   "d": 89,
+   "z": 56,
+   "h": 14,
+   "r": 12,
+   "explode": [
+    0,
+    0,
+    102
+   ],
+   "mass": 5.4,
+   "materials": [
+    [
+     "papier",
+     100
+    ]
+   ],
+   "info": "Hinten mit der Unterschale verbunden. Die Rippen und Schrägen machen den dünnen Faserguss stabil.",
+   "color": "#B9AE9C",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 4,
+     "w": 136,
+     "d": 81,
+     "r": 10,
+     "fill": "#9C907C"
+    },
+    {
+     "shape": "box",
+     "x": 7,
+     "y": 7,
+     "w": 130,
+     "d": 75,
+     "r": 8,
+     "fill": "#B9AE9C"
+    },
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 2,
+     "w": 26,
+     "d": 3,
+     "fill": "#9C907C"
+    },
+    {
+     "shape": "box",
+     "x": 56,
+     "y": 2,
+     "w": 26,
+     "d": 3,
+     "fill": "#9C907C"
+    },
+    {
+     "shape": "box",
+     "x": 102,
+     "y": 2,
+     "w": 26,
+     "d": 3,
+     "fill": "#9C907C"
+    },
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 84,
+     "w": 26,
+     "d": 3,
+     "fill": "#9C907C"
+    },
+    {
+     "shape": "box",
+     "x": 56,
+     "y": 84,
+     "w": 26,
+     "d": 3,
+     "fill": "#9C907C"
+    },
+    {
+     "shape": "box",
+     "x": 102,
+     "y": 84,
+     "w": 26,
+     "d": 3,
+     "fill": "#9C907C"
     }
    ]
   },
@@ -194,71 +298,39 @@
    "id": "deckel",
    "component_id": "molded_pulp_tray",
    "material_id": "cardboard",
-   "name": "Deckel",
-   "short": "Deckel",
+   "name": "Deckel, Seitenwände",
+   "short": "Deckelwand",
    "shape": "box",
    "x": 0,
    "y": 0,
    "w": 160,
-   "d": 105,
-   "z": 36,
-   "h": 34,
-   "r": 10,
+   "d": 103,
+   "z": 34,
+   "h": 22,
+   "r": 12,
    "explode": [
     0,
     0,
-    130.0
+    102
    ],
-   "mass": 11.6,
+   "mass": 6.5,
    "materials": [
     [
      "papier",
      100
     ]
    ],
-   "info": "Hinten mit der Unterschale verbunden. Die Rippen machen den dünnen Faserguss stabil.",
+   "info": "Die schrägen Wände des Deckels; zusammen mit der Oberseite ein Pressteil.",
    "color": "#B9AE9C",
+   "label": false,
    "marks": [
     {
      "shape": "box",
      "x": 6,
      "y": 6,
      "w": 148,
-     "d": 93,
-     "r": 8,
-     "fill": "#9C907C"
-    },
-    {
-     "shape": "box",
-     "x": 10,
-     "y": 10,
-     "w": 140,
-     "d": 85,
-     "r": 6,
-     "fill": "#B9AE9C"
-    },
-    {
-     "shape": "box",
-     "x": 14,
-     "y": 8,
-     "w": 32,
-     "d": 6,
-     "fill": "#9C907C"
-    },
-    {
-     "shape": "box",
-     "x": 62,
-     "y": 8,
-     "w": 32,
-     "d": 6,
-     "fill": "#9C907C"
-    },
-    {
-     "shape": "box",
-     "x": 110,
-     "y": 8,
-     "w": 32,
-     "d": 6,
+     "d": 91,
+     "r": 10,
      "fill": "#9C907C"
     }
    ]
@@ -273,14 +345,14 @@
    "x": 48,
    "y": 45,
    "w": 15,
-   "z": 20,
-   "h": 40,
+   "z": 34,
+   "h": 22,
    "explode": [
     0,
     0,
-    61.0
+    40
    ],
-   "mass": 0.8,
+   "mass": 0.9,
    "materials": [
     [
      "papier",
@@ -309,14 +381,14 @@
    "x": 97,
    "y": 45,
    "w": 15,
-   "z": 20,
-   "h": 40,
+   "z": 34,
+   "h": 22,
    "explode": [
     0,
     0,
-    61.0
+    40
    ],
-   "mass": 0.8,
+   "mass": 0.9,
    "materials": [
     [
      "papier",
@@ -340,22 +412,22 @@
    "id": "schale",
    "component_id": "molded_pulp_tray",
    "material_id": "cardboard",
-   "name": "Unterschale mit Eiermulden",
+   "name": "Unterschale (Rand)",
    "short": "Unterschale",
    "shape": "box",
    "x": 2,
    "y": 2,
    "w": 156,
    "d": 101,
-   "z": 0,
-   "h": 36,
+   "z": 28,
+   "h": 6,
    "r": 8,
    "explode": [
     0,
     0,
-    0.0
+    0
    ],
-   "mass": 14.7,
+   "mass": 5.4,
    "materials": [
     [
      "papier",
@@ -376,71 +448,70 @@
     },
     {
      "shape": "cyl",
-     "x": 5,
-     "y": 3,
-     "w": 46,
-     "d": 46,
+     "x": 7,
+     "y": 6,
+     "w": 42,
+     "d": 40,
      "fill": "#857A68"
     },
     {
      "shape": "cyl",
-     "x": 55,
-     "y": 3,
-     "w": 46,
-     "d": 46,
+     "x": 57,
+     "y": 6,
+     "w": 42,
+     "d": 40,
      "fill": "#857A68"
     },
     {
      "shape": "cyl",
-     "x": 105,
-     "y": 3,
-     "w": 46,
-     "d": 46,
+     "x": 107,
+     "y": 6,
+     "w": 42,
+     "d": 40,
      "fill": "#857A68"
     },
     {
      "shape": "cyl",
-     "x": 5,
-     "y": 53,
-     "w": 46,
-     "d": 46,
+     "x": 7,
+     "y": 55,
+     "w": 42,
+     "d": 40,
      "fill": "#857A68"
     },
     {
      "shape": "cyl",
-     "x": 55,
-     "y": 53,
-     "w": 46,
-     "d": 46,
+     "x": 57,
+     "y": 55,
+     "w": 42,
+     "d": 40,
      "fill": "#857A68"
     },
     {
      "shape": "cyl",
-     "x": 105,
-     "y": 53,
-     "w": 46,
-     "d": 46,
+     "x": 107,
+     "y": 55,
+     "w": 42,
+     "d": 40,
      "fill": "#857A68"
     }
    ]
   },
   {
-   "id": "lasche",
+   "id": "mulde_1",
    "component_id": "molded_pulp_tray",
    "material_id": "cardboard",
-   "name": "Verschlusslasche",
-   "short": "Lasche",
-   "shape": "box",
-   "x": 40,
-   "y": 100,
-   "w": 80,
-   "d": 5,
-   "z": 10,
-   "h": 24,
-   "r": 1,
+   "name": "Eiermulde",
+   "short": "Eiermulde",
+   "shape": "cyl",
+   "x": 7,
+   "y": 6,
+   "w": 46,
+   "d": 44,
+   "z": 2,
+   "h": 26,
    "explode": [
     0,
-    50,
+    0,
     0
    ],
    "mass": 1.6,
@@ -450,15 +521,190 @@
      100
     ]
    ],
-   "info": "Wird in die Schlitze des Deckels gesteckt und hält den Karton geschlossen.",
+   "info": "Eine von sechs Mulden. Sie federt Stöße ab, weil die Fasern leicht nachgeben.",
+   "color": "#B9AE9C"
+  },
+  {
+   "id": "mulde_2",
+   "component_id": "molded_pulp_tray",
+   "material_id": "cardboard",
+   "name": "Eiermulde",
+   "short": "Eiermulde",
+   "shape": "cyl",
+   "x": 57,
+   "y": 6,
+   "w": 46,
+   "d": 44,
+   "z": 2,
+   "h": 26,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 1.6,
+   "materials": [
+    [
+     "papier",
+     100
+    ]
+   ],
+   "info": "Weitere Mulde.",
    "color": "#B9AE9C",
+   "label": false
+  },
+  {
+   "id": "mulde_3",
+   "component_id": "molded_pulp_tray",
+   "material_id": "cardboard",
+   "name": "Eiermulde",
+   "short": "Eiermulde",
+   "shape": "cyl",
+   "x": 107,
+   "y": 6,
+   "w": 46,
+   "d": 44,
+   "z": 2,
+   "h": 26,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 1.6,
+   "materials": [
+    [
+     "papier",
+     100
+    ]
+   ],
+   "info": "Weitere Mulde.",
+   "color": "#B9AE9C",
+   "label": false
+  },
+  {
+   "id": "mulde_4",
+   "component_id": "molded_pulp_tray",
+   "material_id": "cardboard",
+   "name": "Eiermulde",
+   "short": "Eiermulde",
+   "shape": "cyl",
+   "x": 7,
+   "y": 55,
+   "w": 46,
+   "d": 44,
+   "z": 2,
+   "h": 26,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 1.6,
+   "materials": [
+    [
+     "papier",
+     100
+    ]
+   ],
+   "info": "Weitere Mulde.",
+   "color": "#B9AE9C",
+   "label": false
+  },
+  {
+   "id": "mulde_5",
+   "component_id": "molded_pulp_tray",
+   "material_id": "cardboard",
+   "name": "Eiermulde",
+   "short": "Eiermulde",
+   "shape": "cyl",
+   "x": 57,
+   "y": 55,
+   "w": 46,
+   "d": 44,
+   "z": 2,
+   "h": 26,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 1.6,
+   "materials": [
+    [
+     "papier",
+     100
+    ]
+   ],
+   "info": "Weitere Mulde.",
+   "color": "#B9AE9C",
+   "label": false
+  },
+  {
+   "id": "mulde_6",
+   "component_id": "molded_pulp_tray",
+   "material_id": "cardboard",
+   "name": "Eiermulde",
+   "short": "Eiermulde",
+   "shape": "cyl",
+   "x": 107,
+   "y": 55,
+   "w": 46,
+   "d": 44,
+   "z": 2,
+   "h": 26,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 1.6,
+   "materials": [
+    [
+     "papier",
+     100
+    ]
+   ],
+   "info": "Weitere Mulde.",
+   "color": "#B9AE9C",
+   "label": false
+  },
+  {
+   "id": "lasche",
+   "component_id": "molded_pulp_tray",
+   "material_id": "cardboard",
+   "name": "Verschlusslasche",
+   "short": "Lasche",
+   "shape": "box",
+   "x": 62,
+   "y": 103,
+   "w": 36,
+   "d": 2,
+   "z": 30,
+   "h": 18,
+   "r": 1,
+   "explode": [
+    0,
+    70,
+    0
+   ],
+   "mass": 0.9,
+   "materials": [
+    [
+     "papier",
+     100
+    ]
+   ],
+   "info": "Hängt vorne am Deckel. Ihre Nasen rasten in Schlitze der Unterschale ein und halten den Karton zu.",
+   "color": "#B9AE9C",
+   "sortBias": 25,
    "marks": [
     {
      "shape": "box",
-     "x": 30,
+     "x": 8,
      "y": 0,
      "w": 20,
-     "d": 5,
+     "d": 2,
      "r": 1,
      "fill": "#9C907C"
     }

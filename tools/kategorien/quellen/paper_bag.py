@@ -15,21 +15,37 @@ DUNKEL = '#A9814F'
 WAND = [['papier', 97], ['druck', 2], ['klebstoff', 1]]
 GRIFF = [['papier', 96], ['klebstoff', 4]]
 H = 270  # Korpushöhe, darüber die Griffe bis 320 mm
-AUS = 70  # Wände nach außen
+AUS = 120  # Wände nach außen
+
+
+def griff(seite, y, dy, mit_label):
+    """Kordelgriff als Schlaufe: zwei Schenkel innen an der Wand und der Bogen darüber."""
+    ex = [0, dy * 0.45, 70]
+    farbe = '#B88C5A'
+    info = ('Gedrehte Papierkordel, innen mit einem Pappstreifen angeklebt. Ist der Kleber aus Kunststoff, '
+            'Griffe abreißen, der Rest darf ins Altpapier.') if mit_label else 'Zweiter Griff, genauso eingeklebt.'
+    return [
+        teil(f'griff_{seite}', 'paper_bag_body', f'Kordelgriff {seite}', 'Griff', 'box',
+             x=85, y=y, w=90, d=4, z=H + 42, h=6, r=2, explode=ex, mass=1.2, materials=GRIFF, color=farbe,
+             label=None if mit_label else False, info=info),
+        teil(f'griff_{seite}_l', 'paper_bag_body', 'Kordel, Schenkel', 'Kordel', 'cyl',
+             x=85, y=y, w=5, d=4, z=H - 2, h=44, explode=ex, mass=0.65, materials=GRIFF, color=farbe, label=False,
+             info='Linkes Ende der Kordel, unter dem Pappstreifen festgeklebt.'),
+        teil(f'griff_{seite}_r', 'paper_bag_body', 'Kordel, Schenkel', 'Kordel', 'cyl',
+             x=170, y=y, w=5, d=4, z=H - 2, h=44, explode=ex, mass=0.65, materials=GRIFF, color=farbe, label=False,
+             info='Rechtes Ende der Kordel, unter dem Pappstreifen festgeklebt.'),
+    ]
+
+
 teile = [
-    teil('griff_vorne', 'paper_bag_body', 'Kordelgriff vorne', 'Griff', 'box',
-         x=85, y=137, w=90, d=3, z=H, h=50, r=1.5, explode=[0, AUS, 30], mass=2.5, materials=GRIFF, color='#B88C5A',
-         info='Gedrehte Papierkordel, innen mit einem Pappstreifen angeklebt. Ist der Kleber aus Kunststoff, '
-              'Griffe abreißen, der Rest darf ins Altpapier.'),
-    teil('griff_hinten', 'paper_bag_body', 'Kordelgriff hinten', 'Griff hinten', 'box',
-         x=85, y=0, w=90, d=3, z=H, h=50, r=1.5, explode=[0, -AUS, 30], mass=2.5, materials=GRIFF, color='#B88C5A',
-         label=False, info='Zweiter Griff, genauso eingeklebt wie der vordere.'),
+    *griff('vorne', 135, AUS, True),
+    *griff('hinten', 2, -AUS, False),
     teil('verstaerkung_vorne', 'paper_bag_body', 'Griffverstärkung vorne', 'Verstärkung', 'box',
-         x=70, y=137, w=120, d=2, z=H - 40, h=40, r=0, explode=[0, AUS, 0], mass=1.5, materials=GRIFF, color=DUNKEL,
+         x=70, y=137, w=120, d=2, z=H - 40, h=40, r=0, explode=[0, AUS * 0.45, 0], mass=1.5, materials=GRIFF, color=DUNKEL,
          info='Pappstreifen innen am Rand, an den die Griffenden geklebt sind. Er verteilt das Gewicht, '
               'damit die Tasche nicht einreißt.'),
     teil('verstaerkung_hinten', 'paper_bag_body', 'Griffverstärkung hinten', 'Verstärkung', 'box',
-         x=70, y=1, w=120, d=2, z=H - 40, h=40, r=0, explode=[0, -AUS, 0], mass=1.5, materials=GRIFF, color=DUNKEL,
+         x=70, y=1, w=120, d=2, z=H - 40, h=40, r=0, explode=[0, -AUS * 0.45, 0], mass=1.5, materials=GRIFF, color=DUNKEL,
          label=False, info='Gegenstück an der Rückwand.'),
     teil('wand_vorne', 'paper_bag_body', 'Vorderwand', 'Vorderwand', 'box',
          x=0, y=139, w=260, d=1, z=0, h=H, r=0, explode=[0, AUS, 0], mass=7.5, materials=WAND, color=KRAFT,

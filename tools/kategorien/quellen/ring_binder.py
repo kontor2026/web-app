@@ -3,7 +3,7 @@ import sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-from bau import teil, mark, explodiere, skaliere_masse, schreibe  # noqa: E402
+from bau import teil, mark, skaliere_masse, schreibe  # noqa: E402
 
 # A4-Ordner (8 cm Rücken) flach auf dem Tisch, Vorderdeckel oben, Rücken links (x = 0). 285 × 320 × 80 mm laut CSV.
 # Graupappe-Deckel mit PP-Folie kaschiert, Hebelmechanik auf dem Rückdeckel vernietet, Stahlkanten unten.
@@ -68,7 +68,11 @@ teile = [
          color='#F3F1EC'),
 ]
 
-explodiere(teile, abstand=55, nach_liste=True, abstaende={'niete': 25},
-           gruppen=[['folie_vorne', 'kante_vorne'], ['folie_hinten', 'kante_hinten']])
+EX = {'folie_vorne': [0, -370, -10], 'kante_vorne': [0, -370, -10], 'deckel_vorne': [0, -370, -60],
+      'ring_vorne': [0, 0, 100], 'ring_hinten': [0, 0, 100], 'hebel': [0, 0, 100], 'grundplatte': [0, 0, 55],
+      'niete': [0, 0, 22], 'deckel_hinten': [0, 0, 0], 'kante_hinten': [0, 0, -45], 'folie_hinten': [0, 0, -45],
+      'ruecken': [-90, 0, 0], 'rueckenschild': [-210, 0, 70]}
+for p in teile:
+    p['explode'] = EX[p['id']]
 skaliere_masse(teile, oid='ring_binder')
 schreibe('ring_binder', teile)
