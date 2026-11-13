@@ -517,6 +517,7 @@ function viewSheet() {
       </div>
       <div class="stats">${obj.werte.map((w) => `<div><b>${w.v}</b><span>${w.k}</span><small>${w.hint}</small></div>`).join('')}</div>
       <div><h3>Warum das wertvoll ist</h3><p>${obj.wertvoll}</p></div>
+      ${metallListe(obj)}
       <div>
         <h3>Materialmix nach Gewicht</h3>
         <div class="mix">${mix.map((m) => `<i style="width:${m.share * 100}%;background:${CLASSES[m.cls].color}"></i>`).join('')}</div>
@@ -649,6 +650,20 @@ function watchPrep(v, obj) {
     if (st.ideen === 'laeuft') setTimeout(tick, 2000);
   };
   tick();
+}
+
+// Metallgehalte aus der Rohstoff-Datenbank (data/rohstoffe), mit Herkunft jedes Werts.
+const METALLNAMEN = { Au: 'Gold', Ag: 'Silber', Pd: 'Palladium', Pt: 'Platin', Co: 'Kobalt', Cu: 'Kupfer', Al: 'Aluminium', Fe: 'Eisen',
+  Ni: 'Nickel', Nd: 'Neodym', Pr: 'Praseodym', Dy: 'Dysprosium', Ta: 'Tantal', In: 'Indium', Ga: 'Gallium', Y: 'Yttrium' };
+const menge = (mg) => (mg >= 1000 ? `${fmt((mg / 1000).toFixed(mg >= 10000 ? 0 : 1))} g` : `${fmt(mg < 10 ? mg.toFixed(1) : Math.round(mg))} mg`);
+function metallListe(obj) {
+  const m = obj.rohstoffe?.metalle_mg;
+  if (!m || !Object.keys(m).length) return '';
+  const wichtig = ['Au', 'Ag', 'Pd', 'Pt', 'Co', 'Nd', 'Ta', 'In', 'Cu', 'Al', 'Ni', 'Fe'].filter((e) => m[e]);
+  return `<div><h3>Was an Metallen drinsteckt</h3><div class="plist">${wichtig.map((e) => `
+    <div class="prow" title="${obj.rohstoffe.herkunft[e] ?? ''}"><span class="n">${e}</span>
+      <span>${METALLNAMEN[e] ?? e}<small>${obj.rohstoffe.herkunft[e] ?? ''}</small></span><span class="m">${menge(m[e])}</span></div>`).join('')}
+  </div></div>`;
 }
 
 function moveTip(e) {

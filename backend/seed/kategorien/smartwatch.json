@@ -21,20 +21,68 @@
  "werte": [
   {
    "k": "Rohstoffwert",
-   "v": "–",
-   "hint": "folgt aus der Kategorie-Datenbank"
+   "v": "≈ 0,17 €",
+   "hint": "Silber, Kobalt, Kupfer zu Preisen vom 13.11. Ohne Kobalt (kein Preis)."
   },
   {
-   "k": "Gebrauchtwert",
-   "v": "–",
-   "hint": "folgt aus der Kategorie-Datenbank"
+   "k": "CO₂ der Materialien",
+   "v": "≈ 0,51 kg",
+   "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
-   "k": "CO₂ Herstellung",
-   "v": "–",
-   "hint": "folgt aus der Kategorie-Datenbank"
+   "k": "mit Recyclat",
+   "v": "≈ 0,30 kg",
+   "hint": "spart 0,21 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
+ "rohstoffe": {
+  "metalle_mg": {
+   "Al": 19146.0,
+   "Cu": 1715.0,
+   "Co": 1174.0,
+   "Ag": 3.43,
+   "Au": 0.77,
+   "Pd": 0.34
+  },
+  "herkunft": {
+   "Al": "Modellmassen (Schätzung)",
+   "Cu": "Modellmassen (Schätzung)",
+   "Co": "9 g Akku × 13,7% Kobalt (Schätzung, oeko2012 Tab, 25)",
+   "Ag": "4 g Leiterplatte × oeko2012 Tab, 15, Motherboard Notebook (Umicore 2011)",
+   "Au": "4 g Leiterplatte × oeko2012 Tab, 15, Motherboard Notebook (Umicore 2011)",
+   "Pd": "4 g Leiterplatte × oeko2012 Tab, 15, Motherboard Notebook (Umicore 2011)"
+  },
+  "materialien_g": {
+   "aluminium": 17.9,
+   "li_ion": 8.6,
+   "special_glass": 7.1,
+   "pcb": 4.3,
+   "silicone": 2.1
+  },
+  "co2_kg": 0.513,
+  "co2_mit_recyclat_kg": 0.305,
+  "co2_ersparnis_kg": 0.208,
+  "co2_ohne_faktor": [],
+  "rohstoffwert_eur": 0.17,
+  "wert_ohne_preis": [
+   "Co"
+  ],
+  "preisstand": "2026-11-13",
+  "quellen": {
+   "oeko2012": {
+    "titel": "Recycling critical raw materials from waste electronic equipment",
+    "url": "https://www.oeko.de/oekodoc/1375/2012-010-en.pdf"
+   },
+   "idemat2026": {
+    "titel": "Idemat 2026 RevB2 (Datei Idemat_2026RevB2.xlsx, Blatt Idemat2026)",
+    "url": "https://www.ecocostsvalue.com/data-tools-books/"
+   },
+   "westmetall2026": {
+    "titel": "Westmetall Marktdaten (LME, London Fixing, WM-Notiz)",
+    "url": "https://www.westmetall.com/en/markdaten.php"
+   }
+  }
+ },
  "wertvoll": "Elektrogeräte enthalten Metalle wie Kupfer, Gold und Kobalt, die sich zurückgewinnen lassen. Noch mehr spart, wer sie repariert und weiternutzt.",
  "kreislauf": [
   {
@@ -65,7 +113,7 @@
   "nicht": "Nicht in Restmüll oder Gelbe Tonne",
   "warnung": "Akku oder Batterie nicht beschädigen. Wenn möglich herausnehmen und getrennt abgeben, fest verbaute Akkus drinlassen."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
    "id": "smartwatch_display",

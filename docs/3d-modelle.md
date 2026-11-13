@@ -123,7 +123,7 @@ Zuerst, was Schüler am häufigsten mitbringen: `pet_bottle`, `aluminium_can`, `
 ## Nicht anfassen
 
 - `backend/app/*`, `js/main.js`, `js/iso.js`: Pipeline und Renderer. Braucht der Renderer eine neue Fähigkeit (z. B. eine weitere Form), das bitte melden statt selbst umbauen.
-- Die Felder `werte` (Rohstoffwert, CO₂) und alle Rohstoffmengen: Die kommen parallel aus einer eigenen Kategorie-Datenbank mit Quellen. Gewichte (`mass`) und Materialanteile der Teile gehören dagegen zum Modell.
+- Die Felder `werte` und `rohstoffe` (Rohstoffwert, CO₂, Metallgehalte): Die berechnet `build.py` aus der Rohstoff-Datenbank in `data/rohstoffe/` (siehe dortige README). Sie rechnen mit den `mass`- und `material_id`-Angaben eurer Teile. Realistische Massen und korrekte `material_id` je Teil machen also auch die Rohstoffwerte genauer.
 - `data/classifier.json` (Team).
 
 ## Git

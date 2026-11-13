@@ -18,6 +18,9 @@ import re
 import sys
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import rohstoffe  # noqa: E402
+
 ROOT = Path(__file__).resolve().parents[2]
 SRC = ROOT / 'tools' / 'kategorien'
 OUT = ROOT / 'backend' / 'seed' / 'kategorien'
@@ -250,6 +253,7 @@ def main():
             # Oberste Teile zuerst nummerieren, wie bei den handgebauten Modellen
             parts.sort(key=lambda p: -(p['z'] + p['explode'][2]))
 
+        rs = rohstoffe.berechne(oid, parts)
         code = z['entsorgung']
         art = 'elektro' if code in ('EK', 'EB', 'EG', 'BAT', 'LM') else 'verpackung' if code in ('VK', 'VG', 'VP', 'PF') else 'alltag'
         wo, nicht, warnung = ENTSORGUNG[code]
@@ -267,9 +271,8 @@ def main():
             'erkennung': {'conf': 1.0, 'modelle': [[z['name'], 1.0]], 'hinweis': 'Kategorie-Modell, kein bestimmtes Produkt.'},
             'masse': f'{fmt(W)} × {fmt(D)} × {fmt(H)} mm',
             'gewicht': f'≈ {fmt(round(gramm / 1000, 1))} kg' if gramm >= 1000 else f'≈ {fmt(gramm)} g',
-            'werte': [{'k': 'Rohstoffwert', 'v': '–', 'hint': 'folgt aus der Kategorie-Datenbank'},
-                      {'k': 'Gebrauchtwert', 'v': '–', 'hint': 'folgt aus der Kategorie-Datenbank'},
-                      {'k': 'CO₂ Herstellung', 'v': '–', 'hint': 'folgt aus der Kategorie-Datenbank'}],
+            'werte': rohstoffe.werte(rs),
+            'rohstoffe': rs,
             'wertvoll': WERT[art],
             'kreislauf': [{'t': t, 'd': d, **({'tone': tone} if tone else {})}
                           for (t, tone), d in zip([('Rohstoffe', None), ('Herstellung', None), ('Nutzung', None),
@@ -277,7 +280,7 @@ def main():
             'entsorgung': {'wo': wo, 'nicht': nicht, 'warnung': warnung},
             'quelle': ('Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). '
                        + ('Geometrie: automatischer Platzhalter. ' if platzhalter else 'Geometrie: handgebautes Modell. ')
-                       + 'Rohstoffmengen folgen aus der Kategorie-Datenbank.'),
+                       + 'Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall ' + rs['preisstand'] + '.'),
             'parts': parts,
         }
         (OUT / f'{oid}.json').write_text(json.dumps(obj, ensure_ascii=False, indent=1) + '\n', encoding='utf-8')

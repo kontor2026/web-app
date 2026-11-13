@@ -43,7 +43,7 @@ def conn():
 
 def _seed_kategorien(c):
     """Kategorie-Modelle (tools/kategorien/build.py) bei jedem Start nachtragen und aktualisieren.
-    Handgebaute Demo-Objekte gleicher ID (smartphone, laptop) bleiben unangetastet."""
+    Ersetzt Demo-Objekte gleicher ID (smartphone, laptop), behält deren Bauideen. KI-Entwürfe bleiben unberührt."""
     ordner = config.SEED / 'kategorien'
     if not ordner.exists():
         return
@@ -51,9 +51,13 @@ def _seed_kategorien(c):
         if f.name == 'index.json':
             continue
         o = json.loads(f.read_text(encoding='utf-8'))
-        row = c.execute('SELECT status FROM objects WHERE id = ?', (o['id'],)).fetchone()
-        if row and row['status'] != 'kategorie':
+        row = c.execute('SELECT status, data FROM objects WHERE id = ?', (o['id'],)).fetchone()
+        if row and row['status'] == 'entwurf':
             continue
+        if row and not o.get('projekte'):        # Bauideen eines älteren Objekts gleicher ID behalten
+            alt = json.loads(row['data']).get('projekte')
+            if alt:
+                o['projekte'] = alt
         _put_object(c, o, 'kategorie', 'kategorie')
         for n in (o['name'], o.get('name_en'), o['id']):
             c.execute('INSERT OR IGNORE INTO aliases VALUES (?, ?)', (key(n), o['id']))

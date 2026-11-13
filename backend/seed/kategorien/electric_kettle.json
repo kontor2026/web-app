@@ -21,20 +21,61 @@
  "werte": [
   {
    "k": "Rohstoffwert",
-   "v": "–",
-   "hint": "folgt aus der Kategorie-Datenbank"
+   "v": "≈ 2,85 €",
+   "hint": "Kupfer zu Preisen vom 13.11."
   },
   {
-   "k": "Gebrauchtwert",
-   "v": "–",
-   "hint": "folgt aus der Kategorie-Datenbank"
+   "k": "CO₂ der Materialien",
+   "v": "≈ 4,77 kg",
+   "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
-   "k": "CO₂ Herstellung",
-   "v": "–",
-   "hint": "folgt aus der Kategorie-Datenbank"
+   "k": "mit Recyclat",
+   "v": "≈ 1,04 kg",
+   "hint": "spart 3,72 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
+ "rohstoffe": {
+  "metalle_mg": {
+   "Fe": 712861.0,
+   "Ni": 137144.0,
+   "Cu": 68573.0
+  },
+  "herkunft": {
+   "Fe": "Modellmassen (Schätzung)",
+   "Ni": "Modellmassen (Schätzung)",
+   "Cu": "Modellmassen (Schätzung)"
+  },
+  "materialien_g": {
+   "steel": 714.3,
+   "nickel_chrome": 171.4,
+   "mixed_electronics": 85.7,
+   "pp": 42.9,
+   "copper": 42.9,
+   "pvc": 42.9
+  },
+  "co2_kg": 4.766,
+  "co2_mit_recyclat_kg": 1.042,
+  "co2_ersparnis_kg": 3.724,
+  "co2_ohne_faktor": [],
+  "rohstoffwert_eur": 2.85,
+  "wert_ohne_preis": [],
+  "preisstand": "2026-11-13",
+  "quellen": {
+   "oeko2012": {
+    "titel": "Recycling critical raw materials from waste electronic equipment",
+    "url": "https://www.oeko.de/oekodoc/1375/2012-010-en.pdf"
+   },
+   "idemat2026": {
+    "titel": "Idemat 2026 RevB2 (Datei Idemat_2026RevB2.xlsx, Blatt Idemat2026)",
+    "url": "https://www.ecocostsvalue.com/data-tools-books/"
+   },
+   "westmetall2026": {
+    "titel": "Westmetall Marktdaten (LME, London Fixing, WM-Notiz)",
+    "url": "https://www.westmetall.com/en/markdaten.php"
+   }
+  }
+ },
  "wertvoll": "Elektrogeräte enthalten Metalle wie Kupfer, Gold und Kobalt, die sich zurückgewinnen lassen. Noch mehr spart, wer sie repariert und weiternutzt.",
  "kreislauf": [
   {
@@ -65,7 +106,7 @@
   "nicht": "Nicht in Restmüll oder Gelbe Tonne",
   "warnung": "Kabel und Stecker dranlassen."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
    "id": "stainless_steel_body_ober",

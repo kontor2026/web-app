@@ -21,20 +21,64 @@
  "werte": [
   {
    "k": "Rohstoffwert",
-   "v": "–",
-   "hint": "folgt aus der Kategorie-Datenbank"
+   "v": "≈ 3,31 €",
+   "hint": "Kupfer zu Preisen vom 13.11."
   },
   {
-   "k": "Gebrauchtwert",
-   "v": "–",
-   "hint": "folgt aus der Kategorie-Datenbank"
+   "k": "CO₂ der Materialien",
+   "v": "≈ 8,82 kg",
+   "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
-   "k": "CO₂ Herstellung",
-   "v": "–",
-   "hint": "folgt aus der Kategorie-Datenbank"
+   "k": "mit Recyclat",
+   "v": "≈ 0,80 kg",
+   "hint": "spart 8,02 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
+ "rohstoffe": {
+  "metalle_mg": {
+   "Al": 483870.0,
+   "Ni": 92904.0,
+   "Cu": 46448.0,
+   "Fe": 8709.0
+  },
+  "herkunft": {
+   "Al": "Modellmassen (Schätzung)",
+   "Ni": "Modellmassen (Schätzung)",
+   "Cu": "Modellmassen (Schätzung)",
+   "Fe": "Modellmassen (Schätzung)"
+  },
+  "materialien_g": {
+   "aluminium": 483.9,
+   "pp": 241.9,
+   "abs": 241.9,
+   "nickel_chrome": 116.1,
+   "mixed_electronics": 58.1,
+   "copper": 29.0,
+   "pvc": 29.0
+  },
+  "co2_kg": 8.817,
+  "co2_mit_recyclat_kg": 0.8,
+  "co2_ersparnis_kg": 8.018,
+  "co2_ohne_faktor": [],
+  "rohstoffwert_eur": 3.31,
+  "wert_ohne_preis": [],
+  "preisstand": "2026-11-13",
+  "quellen": {
+   "oeko2012": {
+    "titel": "Recycling critical raw materials from waste electronic equipment",
+    "url": "https://www.oeko.de/oekodoc/1375/2012-010-en.pdf"
+   },
+   "idemat2026": {
+    "titel": "Idemat 2026 RevB2 (Datei Idemat_2026RevB2.xlsx, Blatt Idemat2026)",
+    "url": "https://www.ecocostsvalue.com/data-tools-books/"
+   },
+   "westmetall2026": {
+    "titel": "Westmetall Marktdaten (LME, London Fixing, WM-Notiz)",
+    "url": "https://www.westmetall.com/en/markdaten.php"
+   }
+  }
+ },
  "wertvoll": "Elektrogeräte enthalten Metalle wie Kupfer, Gold und Kobalt, die sich zurückgewinnen lassen. Noch mehr spart, wer sie repariert und weiternutzt.",
  "kreislauf": [
   {
@@ -65,7 +109,7 @@
   "nicht": "Nicht in Restmüll oder Gelbe Tonne",
   "warnung": "Kabel und Stecker dranlassen."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
    "id": "thermostat",

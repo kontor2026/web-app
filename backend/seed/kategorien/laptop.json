@@ -21,20 +21,91 @@
  "werte": [
   {
    "k": "Rohstoffwert",
-   "v": "–",
-   "hint": "folgt aus der Kategorie-Datenbank"
+   "v": "≈ 15,6 €",
+   "hint": "Gold, Silber, Palladium zu Preisen vom 13.11. Ohne Kobalt, Palladium, Platin (kein Preis)."
   },
   {
-   "k": "Gebrauchtwert",
-   "v": "–",
-   "hint": "folgt aus der Kategorie-Datenbank"
+   "k": "CO₂ der Materialien",
+   "v": "≈ 14,8 kg",
+   "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
-   "k": "CO₂ Herstellung",
-   "v": "–",
-   "hint": "folgt aus der Kategorie-Datenbank"
+   "k": "mit Recyclat",
+   "v": "≈ 7,40 kg",
+   "hint": "spart 7,39 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
+ "rohstoffe": {
+  "metalle_mg": {
+   "Al": 604595.0,
+   "Cu": 164090.0,
+   "Co": 65000,
+   "Fe": 12810.0,
+   "Nd": 2100,
+   "Ta": 1700,
+   "Ag": 440,
+   "Pr": 270,
+   "Au": 100,
+   "Dy": 60,
+   "In": 40,
+   "Pd": 40,
+   "Pt": 4,
+   "Ga": 1.6
+  },
+  "herkunft": {
+   "Al": "Modellmassen (Schätzung)",
+   "Cu": "Modellmassen (Schätzung)",
+   "Co": "oeko2012 Tab. 23 (LED-Hintergrundbeleuchtung)",
+   "Fe": "Modellmassen (Schätzung)",
+   "Nd": "oeko2012 Tab. 23 (LED-Hintergrundbeleuchtung)",
+   "Ta": "oeko2012 Tab. 23 (LED-Hintergrundbeleuchtung)",
+   "Ag": "oeko2012 Tab. 23 (LED-Hintergrundbeleuchtung)",
+   "Pr": "oeko2012 Tab. 23 (LED-Hintergrundbeleuchtung)",
+   "Au": "oeko2012 Tab. 23 (LED-Hintergrundbeleuchtung)",
+   "Dy": "oeko2012 Tab. 23 (LED-Hintergrundbeleuchtung)",
+   "In": "oeko2012 Tab. 23 (LED-Hintergrundbeleuchtung)",
+   "Pd": "oeko2012 Tab. 23 (LED-Hintergrundbeleuchtung)",
+   "Pt": "oeko2012 Tab. 23 (LED-Hintergrundbeleuchtung)",
+   "Ga": "oeko2012 Tab. 23 (LED-Hintergrundbeleuchtung)"
+  },
+  "materialien_g": {
+   "aluminium": 580.1,
+   "li_ion": 163.3,
+   "abs": 156.5,
+   "special_glass": 131.2,
+   "pcb": 119.0,
+   "copper": 114.5,
+   "multilayer_plastic": 98.6,
+   "mixed_electronics": 31.5,
+   "silicone": 18.0,
+   "steel": 8.2
+  },
+  "co2_kg": 14.795,
+  "co2_mit_recyclat_kg": 7.403,
+  "co2_ersparnis_kg": 7.392,
+  "co2_ohne_faktor": [],
+  "rohstoffwert_eur": 15.58,
+  "wert_ohne_preis": [
+   "Co",
+   "Pd",
+   "Pt"
+  ],
+  "preisstand": "2026-11-13",
+  "quellen": {
+   "oeko2012": {
+    "titel": "Recycling critical raw materials from waste electronic equipment",
+    "url": "https://www.oeko.de/oekodoc/1375/2012-010-en.pdf"
+   },
+   "idemat2026": {
+    "titel": "Idemat 2026 RevB2 (Datei Idemat_2026RevB2.xlsx, Blatt Idemat2026)",
+    "url": "https://www.ecocostsvalue.com/data-tools-books/"
+   },
+   "westmetall2026": {
+    "titel": "Westmetall Marktdaten (LME, London Fixing, WM-Notiz)",
+    "url": "https://www.westmetall.com/en/markdaten.php"
+   }
+  }
+ },
  "wertvoll": "Elektrogeräte enthalten Metalle wie Kupfer, Gold und Kobalt, die sich zurückgewinnen lassen. Noch mehr spart, wer sie repariert und weiternutzt.",
  "kreislauf": [
   {
@@ -65,7 +136,7 @@
   "nicht": "Nicht in Restmüll oder Sperrmüll",
   "warnung": "Akku oder Batterie nicht beschädigen. Wenn möglich herausnehmen und getrennt abgeben, fest verbaute Akkus drinlassen."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
    "id": "deckel",
