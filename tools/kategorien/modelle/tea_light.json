@@ -1,0 +1,143 @@
+{
+ "parts": [
+  {
+   "id": "docht",
+   "component_id": "cotton_wick",
+   "material_id": "cotton",
+   "name": "Docht",
+   "short": "Docht",
+   "shape": "cyl",
+   "x": 18,
+   "y": 18,
+   "w": 2,
+   "z": 2,
+   "h": 15.5,
+   "explode": [
+    0,
+    0,
+    52.9
+   ],
+   "mass": 0.05,
+   "materials": [
+    [
+     "baumwolle",
+     100
+    ]
+   ],
+   "info": "Geflochtene Baumwolle, mit Wachs getränkt. Saugt das geschmolzene Wachs nach oben, wo es verbrennt.",
+   "color": "#2E2A26"
+  },
+  {
+   "id": "dochthalter",
+   "component_id": "wick_holder",
+   "material_id": "steel",
+   "name": "Dochthalter",
+   "short": "Dochthalter",
+   "shape": "cyl",
+   "x": 14,
+   "y": 14,
+   "w": 10,
+   "z": 0.3,
+   "h": 1.7,
+   "explode": [
+    0,
+    0,
+    52.9
+   ],
+   "mass": 0.15,
+   "materials": [
+    [
+     "stahl",
+     95
+    ],
+    [
+     "alu",
+     5
+    ]
+   ],
+   "info": "Kleines Blechplättchen, in das der Docht geklemmt ist. Es hält ihn aufrecht und löscht die Flamme, wenn das Wachs alle ist.",
+   "color": "#B9BFC4",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 3.5,
+     "y": 3.5,
+     "w": 3,
+     "fill": "#8E959B"
+    }
+   ]
+  },
+  {
+   "id": "wachs",
+   "component_id": "paraffin_wax",
+   "material_id": "paraffin_wax",
+   "name": "Wachsblock",
+   "short": "Wachs",
+   "shape": "cyl",
+   "x": 0.5,
+   "y": 0.5,
+   "w": 37,
+   "z": 0.3,
+   "h": 14.2,
+   "explode": [
+    0,
+    0,
+    26.7
+   ],
+   "mass": 11.28,
+   "materials": [
+    [
+     "wachs",
+     100
+    ]
+   ],
+   "info": "Paraffin aus Erdöl, manchmal auch Stearin oder Rapswachs. Warm aus der Schale drücken: Reste lassen sich zu neuen Kerzen schmelzen.",
+   "color": "#F3EFE6",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 16.5,
+     "y": 16.5,
+     "w": 4,
+     "fill": "#E2DCCD"
+    }
+   ]
+  },
+  {
+   "id": "schale",
+   "component_id": "aluminium_cup",
+   "material_id": "aluminium",
+   "name": "Aluminiumschale",
+   "short": "Schale",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 38,
+   "z": 0,
+   "h": 15,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 0.51,
+   "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "info": "Dünnes Aluminium, schützt den Tisch vor heißem Wachs. Leer und ohne Wachs in die Gelbe Tonne.",
+   "color": "#C9CED3",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 37,
+     "fill": "#B9BFC4"
+    }
+   ]
+  }
+ ]
+}

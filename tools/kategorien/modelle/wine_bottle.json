@@ -1,0 +1,309 @@
+{
+ "parts": [
+  {
+   "id": "kapsel",
+   "component_id": "aluminium_capsule_foil",
+   "material_id": "aluminium",
+   "name": "Kapsel (Flaschenhalsfolie)",
+   "short": "Kapsel",
+   "shape": "cyl",
+   "x": 22.5,
+   "y": 22.5,
+   "w": 31,
+   "z": 250,
+   "h": 50,
+   "explode": [
+    0,
+    0,
+    137.0
+   ],
+   "mass": 1.5,
+   "materials": [
+    [
+     "alu",
+     80
+    ],
+    [
+     "ldpe",
+     15
+    ],
+    [
+     "druck",
+     5
+    ]
+   ],
+   "info": "Dünne Alufolie mit Kunststoff, schützt den Korken. Unter dem Wulst am Hals rundherum einschneiden und abziehen. Sie gehört in die Gelbe Tonne, nicht ins Altglas.",
+   "color": "#7A1F2B",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 4,
+     "w": 23,
+     "fill": "#9C3340"
+    },
+    {
+     "shape": "cyl",
+     "x": 12,
+     "y": 12,
+     "w": 7,
+     "fill": "#5A1620"
+    }
+   ]
+  },
+  {
+   "id": "korken",
+   "component_id": "cork_stopper",
+   "material_id": "cork",
+   "name": "Naturkorken",
+   "short": "Korken",
+   "shape": "cyl",
+   "x": 26,
+   "y": 26,
+   "w": 24,
+   "z": 254,
+   "h": 45,
+   "explode": [
+    0,
+    0,
+    66.0
+   ],
+   "mass": 4,
+   "materials": [
+    [
+     "kork",
+     100
+    ]
+   ],
+   "info": "Aus der Rinde der Korkeiche gestanzt. Mit dem Korkenzieher herausziehen. Naturkorken werden gesammelt und zu Dämmstoff verarbeitet.",
+   "color": "#C49A63",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 3,
+     "w": 18,
+     "fill": "#B08550"
+    }
+   ]
+  },
+  {
+   "id": "mundstueck",
+   "component_id": "glass_container",
+   "material_id": "glass",
+   "name": "Mündung mit Wulst",
+   "short": "Mündung",
+   "shape": "cyl",
+   "x": 23,
+   "y": 23,
+   "w": 30,
+   "z": 286,
+   "h": 12,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 11.9,
+   "materials": [
+    [
+     "behaelterglas",
+     100
+    ]
+   ],
+   "info": "Verdickter Rand, an dem die Kapsel sitzt. Teil der Flasche, in einem Stück geformt.",
+   "color": "#2F5E3A",
+   "opacity": 0.7,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 3,
+     "w": 24,
+     "fill": "#C49A63"
+    }
+   ]
+  },
+  {
+   "id": "hals",
+   "component_id": "glass_container",
+   "material_id": "glass",
+   "name": "Flaschenhals",
+   "short": "Hals",
+   "shape": "cyl",
+   "x": 23.5,
+   "y": 23.5,
+   "w": 29,
+   "z": 240,
+   "h": 46,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 39.8,
+   "materials": [
+    [
+     "behaelterglas",
+     100
+    ]
+   ],
+   "info": "Langer, schmaler Hals, in dem der Korken steckt.",
+   "color": "#2F5E3A",
+   "opacity": 0.7
+  },
+  {
+   "id": "schulter_oben",
+   "component_id": "glass_container",
+   "material_id": "glass",
+   "name": "Flaschenschulter (oben)",
+   "short": "Schulter",
+   "shape": "cyl",
+   "x": 18,
+   "y": 18,
+   "w": 40,
+   "z": 225,
+   "h": 15,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 27.8,
+   "materials": [
+    [
+     "behaelterglas",
+     100
+    ]
+   ],
+   "info": "Die Schulter hält beim Einschenken den Weinstein zurück.",
+   "color": "#2F5E3A",
+   "opacity": 0.7,
+   "label": false
+  },
+  {
+   "id": "schulter",
+   "component_id": "glass_container",
+   "material_id": "glass",
+   "name": "Flaschenschulter",
+   "short": "Schulter",
+   "shape": "cyl",
+   "x": 6,
+   "y": 6,
+   "w": 64,
+   "z": 205,
+   "h": 20,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 44.7,
+   "materials": [
+    [
+     "behaelterglas",
+     100
+    ]
+   ],
+   "info": "Ausgeprägte Schulter der Bordeauxflasche. Grünes Glas schützt den Wein vor Licht.",
+   "color": "#2F5E3A",
+   "opacity": 0.7
+  },
+  {
+   "id": "koerper",
+   "component_id": "glass_container",
+   "material_id": "glass",
+   "name": "Flaschenkörper",
+   "short": "Körper",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 76,
+   "z": 0,
+   "h": 205,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 367.8,
+   "materials": [
+    [
+     "behaelterglas",
+     100
+    ]
+   ],
+   "info": "Kalk-Natron-Glas aus Sand, Soda und Kalk. Unten mit Einstich (Boden nach innen gewölbt). Leer in den Grünglas-Container geben, Korken vorher heraus.",
+   "color": "#2F5E3A",
+   "opacity": 0.7,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 6,
+     "y": 6,
+     "w": 64
+    }
+   ]
+  },
+  {
+   "id": "halsschild",
+   "component_id": "paper_label",
+   "material_id": "paper",
+   "name": "Halsschild",
+   "short": "Halsschild",
+   "shape": "box",
+   "x": 52.5,
+   "y": 28,
+   "w": 0.3,
+   "d": 20,
+   "z": 245,
+   "h": 14,
+   "r": 0,
+   "explode": [
+    55,
+    0,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "papier",
+     100
+    ]
+   ],
+   "info": "Kleines Papierschild mit dem Jahrgang. Darf am Glas bleiben.",
+   "color": "#E9DFC4",
+   "sortBias": 100
+  },
+  {
+   "id": "etikett",
+   "component_id": "paper_label",
+   "material_id": "paper",
+   "name": "Bauchetikett",
+   "short": "Etikett",
+   "shape": "box",
+   "x": 76,
+   "y": 13,
+   "w": 0.3,
+   "d": 50,
+   "z": 70,
+   "h": 95,
+   "r": 0,
+   "explode": [
+    55,
+    0,
+    0
+   ],
+   "mass": 2.2,
+   "materials": [
+    [
+     "papier",
+     100
+    ]
+   ],
+   "info": "Papier mit Leim. In warmem Wasser lässt es sich ablösen, beim Altglas darf es aber dranbleiben: Es verbrennt in der Schmelze.",
+   "color": "#EFE6CF",
+   "sortBias": 100
+  }
+ ]
+}

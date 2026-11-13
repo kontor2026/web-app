@@ -1,0 +1,194 @@
+{
+ "parts": [
+  {
+   "id": "folie",
+   "component_id": "aluminium_lid_foil",
+   "material_id": "aluminium",
+   "name": "Deckelfolie",
+   "short": "Deckelfolie",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 37,
+   "z": 27.8,
+   "h": 0.2,
+   "explode": [
+    0,
+    0,
+    10.0
+   ],
+   "mass": 0.2,
+   "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "info": "Dünne Aluminiumfolie, auf den Kragen gesiegelt. In der Maschine wird sie durchstochen. Ganz abziehen und mit der Kapsel in die Gelbe Tonne geben.",
+   "color": "#D3D7DA",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 4,
+     "w": 29
+    },
+    {
+     "shape": "cyl",
+     "x": 15.5,
+     "y": 15.5,
+     "w": 6,
+     "fill": "#B9BFC4"
+    }
+   ]
+  },
+  {
+   "id": "kragen",
+   "component_id": "aluminium_capsule",
+   "material_id": "aluminium",
+   "name": "Kragen (Bördelrand)",
+   "short": "Kragen",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 37,
+   "z": 26.8,
+   "h": 1,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 0.33,
+   "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "info": "Umgebogener Rand, auf dem die Folie klebt. Die Maschine klemmt die Kapsel hier dicht ein.",
+   "color": "#7A4B8C",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 3.5,
+     "y": 3.5,
+     "w": 30,
+     "fill": "#5C3A2A"
+    }
+   ]
+  },
+  {
+   "id": "koerper_oben",
+   "component_id": "aluminium_capsule",
+   "material_id": "aluminium",
+   "name": "Kapselkörper",
+   "short": "Kapsel",
+   "shape": "cyl",
+   "x": 3.5,
+   "y": 3.5,
+   "w": 30,
+   "z": 14,
+   "h": 12.8,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 1.3,
+   "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "info": "Aus einer Aluminiumscheibe tiefgezogen. Darin stecken etwa 5 g Kaffeepulver: den Kaffeesatz in den Bio-Müll leeren, dann wird das Aluminium recycelt.",
+   "color": "#7A4B8C"
+  },
+  {
+   "id": "koerper_unten",
+   "component_id": "aluminium_capsule",
+   "material_id": "aluminium",
+   "name": "Kapselkörper (unten)",
+   "short": "Kapsel unten",
+   "shape": "cyl",
+   "x": 6,
+   "y": 6,
+   "w": 25,
+   "z": 5,
+   "h": 9,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 0.78,
+   "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "info": "Verjüngt sich nach unten, damit die Kapsel in die Brühkammer passt.",
+   "color": "#7A4B8C",
+   "label": false
+  },
+  {
+   "id": "kuppe",
+   "component_id": "aluminium_capsule",
+   "material_id": "aluminium",
+   "name": "Kuppe mit Einstichstelle",
+   "short": "Kuppe",
+   "shape": "cyl",
+   "x": 11,
+   "y": 11,
+   "w": 15,
+   "z": 0,
+   "h": 5,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 0.33,
+   "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "info": "Hier sticht die Maschine Löcher hinein, durch die heißes Wasser mit Druck einströmt.",
+   "color": "#7A4B8C"
+  },
+  {
+   "id": "lack",
+   "component_id": "aluminium_capsule",
+   "material_id": "aluminium",
+   "name": "Farblack",
+   "short": "Farblack",
+   "shape": "box",
+   "x": 33.5,
+   "y": 8.5,
+   "w": 0.3,
+   "d": 20,
+   "z": 6,
+   "h": 19,
+   "r": 0,
+   "explode": [
+    30,
+    0,
+    0
+   ],
+   "mass": 0.07,
+   "materials": [
+    [
+     "druck",
+     100
+    ]
+   ],
+   "info": "Die Farbe zeigt die Kaffeesorte. Der Lack verbrennt beim Einschmelzen, das Aluminium bleibt übrig.",
+   "color": "#7A4B8C",
+   "sortBias": 100
+  }
+ ]
+}

@@ -1,0 +1,330 @@
+{
+ "parts": [
+  {
+   "id": "kappe",
+   "component_id": "pp_spray_cap",
+   "material_id": "pp",
+   "name": "Schutzkappe",
+   "short": "Kappe",
+   "shape": "cyl",
+   "x": 0.5,
+   "y": 0.5,
+   "w": 52,
+   "z": 135,
+   "h": 55,
+   "explode": [
+    0,
+    0,
+    126.0
+   ],
+   "mass": 10.3,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Polypropylen, nur aufgesteckt. Abziehen und getrennt in die Gelbe Tonne geben.",
+   "color": "#2C5F8A",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 6,
+     "y": 6,
+     "w": 40,
+     "fill": "#3A6F9C"
+    }
+   ]
+  },
+  {
+   "id": "spruehkopf",
+   "component_id": "spray_valve",
+   "material_id": "pp",
+   "name": "Sprühkopf",
+   "short": "Sprühkopf",
+   "shape": "cyl",
+   "x": 17.5,
+   "y": 17.5,
+   "w": 18,
+   "z": 158,
+   "h": 14,
+   "explode": [
+    0,
+    0,
+    71.0
+   ],
+   "mass": 1.9,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Kunststoffknopf mit feiner Düse. Beim Drücken öffnet er das Ventil und das Spray zerstäubt.",
+   "color": "#E8E8E2",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 4,
+     "w": 10,
+     "fill": "#D4D4CE"
+    },
+    {
+     "shape": "cyl",
+     "x": 7.5,
+     "y": 15,
+     "w": 3,
+     "fill": "#2A2E31"
+    }
+   ]
+  },
+  {
+   "id": "ventilteller",
+   "component_id": "spray_valve",
+   "material_id": "steel",
+   "name": "Ventilteller",
+   "short": "Ventilteller",
+   "shape": "cyl",
+   "x": 13.8,
+   "y": 13.8,
+   "w": 25.4,
+   "z": 153,
+   "h": 5,
+   "explode": [
+    0,
+    0,
+    53.0
+   ],
+   "mass": 2.8,
+   "materials": [
+    [
+     "weissblech",
+     90
+    ],
+    [
+     "gummi",
+     10
+    ]
+   ],
+   "info": "Weißblechteller mit Gummidichtung, auf den Dosenrand gepresst (gecrimpt). Nicht abhebeln: In der Dose kann noch Druck sein.",
+   "color": "#B9BFC4",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 4.2,
+     "y": 4.2,
+     "w": 17,
+     "fill": "#A3AAB0"
+    },
+    {
+     "shape": "cyl",
+     "x": 10.7,
+     "y": 10.7,
+     "w": 4,
+     "fill": "#2A2E31"
+    }
+   ]
+  },
+  {
+   "id": "ventil",
+   "component_id": "spray_valve",
+   "material_id": "pp",
+   "name": "Ventilgehäuse mit Feder",
+   "short": "Ventil",
+   "shape": "cyl",
+   "x": 22.5,
+   "y": 22.5,
+   "w": 8,
+   "z": 137,
+   "h": 16,
+   "explode": [
+    0,
+    0,
+    35.0
+   ],
+   "mass": 1,
+   "materials": [
+    [
+     "pp",
+     60
+    ],
+    [
+     "stahl",
+     25
+    ],
+    [
+     "gummi",
+     15
+    ]
+   ],
+   "info": "Kleines Kunststoffgehäuse mit Stahlfeder. Die Feder drückt das Ventil wieder zu, wenn man loslässt.",
+   "color": "#E4E0D2",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 2,
+     "y": 2,
+     "w": 4,
+     "fill": "#9DA4AA"
+    }
+   ]
+  },
+  {
+   "id": "dosenrand",
+   "component_id": "aluminium_spray_can_body",
+   "material_id": "aluminium",
+   "name": "Dosenrand (Curl)",
+   "short": "Dosenrand",
+   "shape": "cyl",
+   "x": 13,
+   "y": 13,
+   "w": 27,
+   "z": 150,
+   "h": 4,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 1.9,
+   "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "info": "Eingerollter Rand, auf den der Ventilteller gepresst wird.",
+   "color": "#C9CED3",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 2.5,
+     "y": 2.5,
+     "w": 22,
+     "fill": "#8E959B"
+    }
+   ]
+  },
+  {
+   "id": "schulter",
+   "component_id": "aluminium_spray_can_body",
+   "material_id": "aluminium",
+   "name": "Dosenschulter",
+   "short": "Schulter",
+   "shape": "cyl",
+   "x": 3.5,
+   "y": 3.5,
+   "w": 46,
+   "z": 135,
+   "h": 15,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 5.1,
+   "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "info": "Die Schulter wird aus dem Rohr gedrückt und zum Rand hin immer enger.",
+   "color": "#C9CED3",
+   "label": false
+  },
+  {
+   "id": "rumpf",
+   "component_id": "aluminium_spray_can_body",
+   "material_id": "aluminium",
+   "name": "Dosenrumpf (Monoblock)",
+   "short": "Dose",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 53,
+   "z": 0,
+   "h": 135,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 36,
+   "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "info": "Aus einem Aluminiumbutzen in einem Stück fließgepresst, der Boden ist nach innen gewölbt. Nur ganz leer in die Gelbe Tonne. Nie anstechen, zerdrücken oder erhitzen: Explosionsgefahr.",
+   "color": "#C9CED3",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 3.5,
+     "y": 3.5,
+     "w": 46
+    }
+   ]
+  },
+  {
+   "id": "steigrohr",
+   "component_id": "spray_valve",
+   "material_id": "ldpe",
+   "name": "Steigrohr",
+   "short": "Steigrohr",
+   "shape": "cyl",
+   "x": 24.75,
+   "y": 24.75,
+   "w": 3.5,
+   "z": 4,
+   "h": 134,
+   "explode": [
+    45,
+    0,
+    0
+   ],
+   "mass": 0.4,
+   "materials": [
+    [
+     "ldpe",
+     100
+    ]
+   ],
+   "info": "Dünner Schlauch bis zum Boden, durch den der Inhalt zum Ventil gedrückt wird.",
+   "color": "#EDEDE8"
+  },
+  {
+   "id": "druck",
+   "component_id": "aluminium_spray_can_body",
+   "material_id": "aluminium",
+   "name": "Außenlack und Druck",
+   "short": "Druck",
+   "shape": "box",
+   "x": 53,
+   "y": 6.5,
+   "w": 0.3,
+   "d": 40,
+   "z": 10,
+   "h": 115,
+   "r": 0,
+   "explode": [
+    55,
+    0,
+    0
+   ],
+   "mass": 0.5,
+   "materials": [
+    [
+     "druck",
+     100
+    ]
+   ],
+   "info": "Direkt auf das Aluminium gedruckt. Verbrennt beim Einschmelzen, das Aluminium wird wieder zu Metall.",
+   "color": "#2C5F8A",
+   "sortBias": 100
+  }
+ ]
+}

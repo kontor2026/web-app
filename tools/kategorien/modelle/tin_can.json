@@ -1,0 +1,213 @@
+{
+ "parts": [
+  {
+   "id": "ring",
+   "component_id": "steel_can_lid",
+   "material_id": "steel",
+   "name": "Aufreißring",
+   "short": "Ring",
+   "shape": "box",
+   "x": 26.5,
+   "y": 8,
+   "w": 20,
+   "d": 26,
+   "z": 109.4,
+   "h": 0.6,
+   "r": 9,
+   "explode": [
+    0,
+    0,
+    75.6
+   ],
+   "mass": 1.5,
+   "materials": [
+    [
+     "weissblech",
+     100
+    ]
+   ],
+   "info": "Mit einer Niete am Deckel befestigt. Hochziehen, dann reißt der Deckel entlang der Ritzlinie ab.",
+   "color": "#B9BFC4",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 4,
+     "w": 12,
+     "d": 12,
+     "r": 6,
+     "fill": "#8E959B"
+    }
+   ]
+  },
+  {
+   "id": "deckel",
+   "component_id": "steel_can_lid",
+   "material_id": "steel",
+   "name": "Aufreißdeckel",
+   "short": "Deckel",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 73,
+   "z": 107,
+   "h": 3,
+   "explode": [
+    0,
+    0,
+    50.0
+   ],
+   "mass": 8.9,
+   "materials": [
+    [
+     "weissblech",
+     97
+    ],
+    [
+     "druck",
+     3
+    ]
+   ],
+   "info": "Weißblech mit eingeprägter Ritzlinie. Die Kante ist scharf: in die leere Dose drücken und mit ihr in die Gelbe Tonne geben.",
+   "color": "#C3C8CC",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 3,
+     "w": 67
+    },
+    {
+     "shape": "cyl",
+     "x": 5,
+     "y": 5,
+     "w": 63,
+     "fill": "#B3B9BE"
+    },
+    {
+     "shape": "cyl",
+     "x": 33.5,
+     "y": 22,
+     "w": 6,
+     "fill": "#9DA4AA"
+    }
+   ]
+  },
+  {
+   "id": "rumpf",
+   "component_id": "steel_can_body",
+   "material_id": "steel",
+   "name": "Dosenrumpf",
+   "short": "Rumpf",
+   "shape": "cyl",
+   "x": 0.5,
+   "y": 0.5,
+   "w": 72,
+   "z": 3,
+   "h": 104,
+   "explode": [
+    0,
+    0,
+    25.0
+   ],
+   "mass": 35.7,
+   "materials": [
+    [
+     "weissblech",
+     97
+    ],
+    [
+     "druck",
+     3
+    ]
+   ],
+   "info": "Stahlblech, dünn verzinnt (Weißblech), zu einem Rohr gerollt und verschweißt. Die Sicken machen ihn stabil. Ein Magnet bleibt daran hängen, so erkennt man Stahl.",
+   "color": "#C3C8CC",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 2,
+     "y": 2,
+     "w": 68,
+     "fill": "#E6E2D6"
+    }
+   ]
+  },
+  {
+   "id": "boden",
+   "component_id": "steel_can_lid",
+   "material_id": "steel",
+   "name": "Dosenboden",
+   "short": "Boden",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 73,
+   "z": 0,
+   "h": 3,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 6.9,
+   "materials": [
+    [
+     "weissblech",
+     97
+    ],
+    [
+     "druck",
+     3
+    ]
+   ],
+   "info": "Wie der Deckel auf den Rumpf gefalzt, aber ohne Aufreißlinie. Bleibt an der Dose.",
+   "color": "#C3C8CC",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 3,
+     "w": 67
+    },
+    {
+     "shape": "cyl",
+     "x": 12,
+     "y": 12,
+     "w": 49,
+     "fill": "#B3B9BE"
+    }
+   ]
+  },
+  {
+   "id": "etikett",
+   "component_id": "paper_label",
+   "material_id": "paper",
+   "name": "Papierbanderole",
+   "short": "Etikett",
+   "shape": "box",
+   "x": 73,
+   "y": 11.5,
+   "w": 0.3,
+   "d": 50,
+   "z": 10,
+   "h": 90,
+   "r": 0,
+   "explode": [
+    50,
+    0,
+    0
+   ],
+   "mass": 2,
+   "materials": [
+    [
+     "papier",
+     100
+    ]
+   ],
+   "info": "Rundum geklebtes Papier. Darf dranbleiben, beim Einschmelzen verbrennt es.",
+   "color": "#D9503F",
+   "sortBias": 100
+  }
+ ]
+}

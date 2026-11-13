@@ -4,7 +4,7 @@
  "name_en": "Tin Can",
  "klasse": "Verpackung · Gelbe Tonne",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -37,18 +37,18 @@
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Fe": 51019.0
+   "Fe": 51940.0
   },
   "herkunft": {
    "Fe": "Modellmassen (Schätzung)"
   },
   "materialien_g": {
-   "steel": 52.1,
-   "paper": 3.0
+   "steel": 53.0,
+   "paper": 2.0
   },
-  "co2_kg": 0.132,
+  "co2_kg": 0.134,
   "co2_mit_recyclat_kg": 0.036,
-  "co2_ersparnis_kg": 0.095,
+  "co2_ersparnis_kg": 0.097,
   "co2_ohne_faktor": [],
   "rohstoffwert_eur": 0,
   "wert_ohne_preis": [],
@@ -98,87 +98,216 @@
   "nicht": "Nicht in Restmüll oder Altpapier",
   "warnung": "Restentleert reicht, nicht ausspülen. Teile aus verschiedenen Materialien trennen."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "steel_can_lid",
+   "id": "ring",
    "component_id": "steel_can_lid",
-   "name": "Lid",
-   "short": "Lid",
-   "shape": "cyl",
-   "x": 20.1,
-   "y": 20.1,
-   "w": 32.9,
-   "h": 13.2,
-   "z": 93.5,
+   "material_id": "steel",
+   "name": "Aufreißring",
+   "short": "Ring",
+   "shape": "box",
+   "x": 26.5,
+   "y": 8,
+   "w": 20,
+   "d": 26,
+   "z": 109.4,
+   "h": 0.6,
+   "r": 9,
    "explode": [
     0,
     0,
-    29.2
+    75.6
    ],
-   "mass": 2.95,
+   "mass": 1.5,
    "materials": [
     [
-     "stahl",
+     "weissblech",
      100
     ]
    ],
-   "material_id": "steel",
-   "info": "Push the sharp lid into the empty can before recycling."
+   "info": "Mit einer Niete am Deckel befestigt. Hochziehen, dann reißt der Deckel entlang der Ritzlinie ab.",
+   "color": "#B9BFC4",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 4,
+     "w": 12,
+     "d": 12,
+     "r": 6,
+     "fill": "#8E959B"
+    }
+   ]
   },
   {
-   "id": "paper_label",
-   "component_id": "paper_label",
-   "name": "Paper Label",
-   "short": "Paper Label",
-   "shape": "box",
-   "x": 73.7,
-   "y": 14.6,
-   "w": 2.2,
-   "d": 43.8,
-   "h": 60.5,
-   "z": 22.0,
-   "r": 0.3,
+   "id": "deckel",
+   "component_id": "steel_can_lid",
+   "material_id": "steel",
+   "name": "Aufreißdeckel",
+   "short": "Deckel",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 73,
+   "z": 107,
+   "h": 3,
    "explode": [
-    40.5,
     0,
-    8.8
+    0,
+    50.0
    ],
-   "mass": 2.95,
+   "mass": 8.9,
+   "materials": [
+    [
+     "weissblech",
+     97
+    ],
+    [
+     "druck",
+     3
+    ]
+   ],
+   "info": "Weißblech mit eingeprägter Ritzlinie. Die Kante ist scharf: in die leere Dose drücken und mit ihr in die Gelbe Tonne geben.",
+   "color": "#C3C8CC",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 3,
+     "w": 67
+    },
+    {
+     "shape": "cyl",
+     "x": 5,
+     "y": 5,
+     "w": 63,
+     "fill": "#B3B9BE"
+    },
+    {
+     "shape": "cyl",
+     "x": 33.5,
+     "y": 22,
+     "w": 6,
+     "fill": "#9DA4AA"
+    }
+   ]
+  },
+  {
+   "id": "rumpf",
+   "component_id": "steel_can_body",
+   "material_id": "steel",
+   "name": "Dosenrumpf",
+   "short": "Rumpf",
+   "shape": "cyl",
+   "x": 0.5,
+   "y": 0.5,
+   "w": 72,
+   "z": 3,
+   "h": 104,
+   "explode": [
+    0,
+    0,
+    25.0
+   ],
+   "mass": 35.7,
+   "materials": [
+    [
+     "weissblech",
+     97
+    ],
+    [
+     "druck",
+     3
+    ]
+   ],
+   "info": "Stahlblech, dünn verzinnt (Weißblech), zu einem Rohr gerollt und verschweißt. Die Sicken machen ihn stabil. Ein Magnet bleibt daran hängen, so erkennt man Stahl.",
+   "color": "#C3C8CC",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 2,
+     "y": 2,
+     "w": 68,
+     "fill": "#E6E2D6"
+    }
+   ]
+  },
+  {
+   "id": "boden",
+   "component_id": "steel_can_lid",
+   "material_id": "steel",
+   "name": "Dosenboden",
+   "short": "Boden",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 73,
+   "z": 0,
+   "h": 3,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 6.9,
+   "materials": [
+    [
+     "weissblech",
+     97
+    ],
+    [
+     "druck",
+     3
+    ]
+   ],
+   "info": "Wie der Deckel auf den Rumpf gefalzt, aber ohne Aufreißlinie. Bleibt an der Dose.",
+   "color": "#C3C8CC",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 3,
+     "w": 67
+    },
+    {
+     "shape": "cyl",
+     "x": 12,
+     "y": 12,
+     "w": 49,
+     "fill": "#B3B9BE"
+    }
+   ]
+  },
+  {
+   "id": "etikett",
+   "component_id": "paper_label",
+   "material_id": "paper",
+   "name": "Papierbanderole",
+   "short": "Etikett",
+   "shape": "box",
+   "x": 73,
+   "y": 11.5,
+   "w": 0.3,
+   "d": 50,
+   "z": 10,
+   "h": 90,
+   "r": 0,
+   "explode": [
+    50,
+    0,
+    0
+   ],
+   "mass": 2,
    "materials": [
     [
      "papier",
      100
     ]
    ],
-   "material_id": "paper",
-   "info": "Soak in warm water to peel it off; leaving it on is usually fine."
-  },
-  {
-   "id": "steel_can_body",
-   "component_id": "steel_can_body",
-   "name": "Can",
-   "short": "Can",
-   "shape": "cyl",
-   "x": 0,
-   "y": 0,
-   "w": 73.0,
-   "h": 93.5,
-   "z": 0.0,
-   "explode": [
-    0,
-    0,
-    0
-   ],
-   "mass": 49.11,
-   "materials": [
-    [
-     "stahl",
-     100
-    ]
-   ],
-   "material_id": "steel",
-   "info": "Rinse it; check with a magnet to tell it apart from aluminium."
+   "info": "Rundum geklebtes Papier. Darf dranbleiben, beim Einschmelzen verbrennt es.",
+   "color": "#D9503F",
+   "sortBias": 100
   }
  ]
 }

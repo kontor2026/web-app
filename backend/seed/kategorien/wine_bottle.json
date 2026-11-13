@@ -4,7 +4,7 @@
  "name_en": "Wine Bottle",
  "klasse": "Verpackung · Glas",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -21,38 +21,38 @@
  "werte": [
   {
    "k": "Rohstoffwert",
-   "v": "≈ 0,07 €",
+   "v": "< 0,01 €",
    "hint": "Kaum Metalle enthalten."
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 1,01 kg",
+   "v": "≈ 0,83 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 0,52 kg",
-   "hint": "spart 0,49 kg, wenn recycelte Materialien eingesetzt werden"
+   "v": "≈ 0,58 kg",
+   "hint": "spart 0,25 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Al": 25420.0
+   "Al": 1500.0
   },
   "herkunft": {
    "Al": "Modellmassen (Schätzung)"
   },
   "materialien_g": {
-   "glass": 423.7,
-   "aluminium": 25.4,
-   "cork": 25.4,
-   "paper": 25.4
+   "glass": 492.0,
+   "cork": 4.0,
+   "paper": 2.5,
+   "aluminium": 1.5
   },
-  "co2_kg": 1.015,
-  "co2_mit_recyclat_kg": 0.521,
-  "co2_ersparnis_kg": 0.494,
+  "co2_kg": 0.829,
+  "co2_mit_recyclat_kg": 0.577,
+  "co2_ersparnis_kg": 0.253,
   "co2_ohne_faktor": [],
-  "rohstoffwert_eur": 0.07,
+  "rohstoffwert_eur": 0.0,
   "wert_ohne_preis": [],
   "preisstand": "2026-11-13",
   "quellen": {
@@ -100,113 +100,312 @@
   "nicht": "Keine Trinkgläser, Keramik oder Glühbirnen",
   "warnung": "Deckel abnehmen und in die Gelbe Tonne geben."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "aluminium_capsule_foil",
+   "id": "kapsel",
    "component_id": "aluminium_capsule_foil",
-   "name": "Capsule Foil",
-   "short": "Capsule Foil",
+   "material_id": "aluminium",
+   "name": "Kapsel (Flaschenhalsfolie)",
+   "short": "Kapsel",
    "shape": "cyl",
-   "x": 36.1,
-   "y": 20.9,
-   "w": 34.2,
-   "h": 36.0,
-   "z": 255.0,
+   "x": 22.5,
+   "y": 22.5,
+   "w": 31,
+   "z": 250,
+   "h": 50,
    "explode": [
     0,
     0,
-    108.0
+    137.0
    ],
-   "mass": 25.42,
+   "mass": 1.5,
    "materials": [
     [
      "alu",
-     100
+     80
+    ],
+    [
+     "ldpe",
+     15
+    ],
+    [
+     "druck",
+     5
     ]
    ],
-   "material_id": "aluminium",
-   "info": "Cut along the ridge below the neck and pull the foil off."
+   "info": "Dünne Alufolie mit Kunststoff, schützt den Korken. Unter dem Wulst am Hals rundherum einschneiden und abziehen. Sie gehört in die Gelbe Tonne, nicht ins Altglas.",
+   "color": "#7A1F2B",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 4,
+     "w": 23,
+     "fill": "#9C3340"
+    },
+    {
+     "shape": "cyl",
+     "x": 12,
+     "y": 12,
+     "w": 7,
+     "fill": "#5A1620"
+    }
+   ]
   },
   {
-   "id": "cork_stopper",
+   "id": "korken",
    "component_id": "cork_stopper",
-   "name": "Cork",
-   "short": "Cork",
+   "material_id": "cork",
+   "name": "Naturkorken",
+   "short": "Korken",
    "shape": "cyl",
-   "x": 20.9,
-   "y": 20.9,
-   "w": 34.2,
-   "h": 36.0,
-   "z": 255.0,
+   "x": 26,
+   "y": 26,
+   "w": 24,
+   "z": 254,
+   "h": 45,
    "explode": [
     0,
     0,
-    36.0
+    66.0
    ],
-   "mass": 25.42,
+   "mass": 4,
    "materials": [
     [
      "kork",
      100
     ]
    ],
-   "material_id": "cork",
-   "info": "Pull it out with a corkscrew; collect natural corks separately."
+   "info": "Aus der Rinde der Korkeiche gestanzt. Mit dem Korkenzieher herausziehen. Naturkorken werden gesammelt und zu Dämmstoff verarbeitet.",
+   "color": "#C49A63",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 3,
+     "w": 18,
+     "fill": "#B08550"
+    }
+   ]
   },
   {
-   "id": "paper_label",
-   "component_id": "paper_label",
-   "name": "Paper Label",
-   "short": "Paper Label",
-   "shape": "box",
-   "x": 76.8,
-   "y": 15.2,
-   "w": 2.3,
-   "d": 45.6,
-   "h": 165.0,
-   "z": 60.0,
-   "r": 0.3,
-   "explode": [
-    41.6,
-    0,
-    10.8
-   ],
-   "mass": 25.42,
-   "materials": [
-    [
-     "papier",
-     100
-    ]
-   ],
-   "material_id": "paper",
-   "info": "Soak in warm water to peel it off; leaving it on is usually fine."
-  },
-  {
-   "id": "glass_container",
+   "id": "mundstueck",
    "component_id": "glass_container",
-   "name": "Glass",
-   "short": "Glass",
+   "material_id": "glass",
+   "name": "Mündung mit Wulst",
+   "short": "Mündung",
    "shape": "cyl",
-   "x": 0,
-   "y": 0,
-   "w": 76.0,
-   "h": 255.0,
-   "z": 0.0,
+   "x": 23,
+   "y": 23,
+   "w": 30,
+   "z": 286,
+   "h": 12,
    "explode": [
     0,
     0,
-    0
+    0.0
    ],
-   "mass": 423.73,
+   "mass": 11.9,
    "materials": [
     [
      "behaelterglas",
      100
     ]
    ],
+   "info": "Verdickter Rand, an dem die Kapsel sitzt. Teil der Flasche, in einem Stück geformt.",
+   "color": "#2F5E3A",
+   "opacity": 0.7,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 3,
+     "w": 24,
+     "fill": "#C49A63"
+    }
+   ]
+  },
+  {
+   "id": "hals",
+   "component_id": "glass_container",
    "material_id": "glass",
-   "info": "Empty it and sort it by colour into the glass bin."
+   "name": "Flaschenhals",
+   "short": "Hals",
+   "shape": "cyl",
+   "x": 23.5,
+   "y": 23.5,
+   "w": 29,
+   "z": 240,
+   "h": 46,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 39.8,
+   "materials": [
+    [
+     "behaelterglas",
+     100
+    ]
+   ],
+   "info": "Langer, schmaler Hals, in dem der Korken steckt.",
+   "color": "#2F5E3A",
+   "opacity": 0.7
+  },
+  {
+   "id": "schulter_oben",
+   "component_id": "glass_container",
+   "material_id": "glass",
+   "name": "Flaschenschulter (oben)",
+   "short": "Schulter",
+   "shape": "cyl",
+   "x": 18,
+   "y": 18,
+   "w": 40,
+   "z": 225,
+   "h": 15,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 27.8,
+   "materials": [
+    [
+     "behaelterglas",
+     100
+    ]
+   ],
+   "info": "Die Schulter hält beim Einschenken den Weinstein zurück.",
+   "color": "#2F5E3A",
+   "opacity": 0.7,
+   "label": false
+  },
+  {
+   "id": "schulter",
+   "component_id": "glass_container",
+   "material_id": "glass",
+   "name": "Flaschenschulter",
+   "short": "Schulter",
+   "shape": "cyl",
+   "x": 6,
+   "y": 6,
+   "w": 64,
+   "z": 205,
+   "h": 20,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 44.7,
+   "materials": [
+    [
+     "behaelterglas",
+     100
+    ]
+   ],
+   "info": "Ausgeprägte Schulter der Bordeauxflasche. Grünes Glas schützt den Wein vor Licht.",
+   "color": "#2F5E3A",
+   "opacity": 0.7
+  },
+  {
+   "id": "koerper",
+   "component_id": "glass_container",
+   "material_id": "glass",
+   "name": "Flaschenkörper",
+   "short": "Körper",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 76,
+   "z": 0,
+   "h": 205,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 367.8,
+   "materials": [
+    [
+     "behaelterglas",
+     100
+    ]
+   ],
+   "info": "Kalk-Natron-Glas aus Sand, Soda und Kalk. Unten mit Einstich (Boden nach innen gewölbt). Leer in den Grünglas-Container geben, Korken vorher heraus.",
+   "color": "#2F5E3A",
+   "opacity": 0.7,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 6,
+     "y": 6,
+     "w": 64
+    }
+   ]
+  },
+  {
+   "id": "halsschild",
+   "component_id": "paper_label",
+   "material_id": "paper",
+   "name": "Halsschild",
+   "short": "Halsschild",
+   "shape": "box",
+   "x": 52.5,
+   "y": 28,
+   "w": 0.3,
+   "d": 20,
+   "z": 245,
+   "h": 14,
+   "r": 0,
+   "explode": [
+    55,
+    0,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "papier",
+     100
+    ]
+   ],
+   "info": "Kleines Papierschild mit dem Jahrgang. Darf am Glas bleiben.",
+   "color": "#E9DFC4",
+   "sortBias": 100
+  },
+  {
+   "id": "etikett",
+   "component_id": "paper_label",
+   "material_id": "paper",
+   "name": "Bauchetikett",
+   "short": "Etikett",
+   "shape": "box",
+   "x": 76,
+   "y": 13,
+   "w": 0.3,
+   "d": 50,
+   "z": 70,
+   "h": 95,
+   "r": 0,
+   "explode": [
+    55,
+    0,
+    0
+   ],
+   "mass": 2.2,
+   "materials": [
+    [
+     "papier",
+     100
+    ]
+   ],
+   "info": "Papier mit Leim. In warmem Wasser lässt es sich ablösen, beim Altglas darf es aber dranbleiben: Es verbrennt in der Schmelze.",
+   "color": "#EFE6CF",
+   "sortBias": 100
   }
  ]
 }

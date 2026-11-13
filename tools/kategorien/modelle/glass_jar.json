@@ -1,0 +1,218 @@
+{
+ "parts": [
+  {
+   "id": "deckel",
+   "component_id": "twist_off_lid",
+   "material_id": "steel",
+   "name": "Twist-off-Deckel",
+   "short": "Deckel",
+   "shape": "cyl",
+   "x": 4,
+   "y": 4,
+   "w": 67,
+   "z": 91,
+   "h": 9,
+   "explode": [
+    0,
+    0,
+    42.5
+   ],
+   "mass": 14.2,
+   "materials": [
+    [
+     "weissblech",
+     96
+    ],
+    [
+     "druck",
+     4
+    ]
+   ],
+   "info": "Weißblech, innen lackiert. Vier Nocken greifen ins Gewinde. Abschrauben und in die Gelbe Tonne geben.",
+   "color": "#C9A646",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 4,
+     "w": 59,
+     "fill": "#D8B85A"
+    },
+    {
+     "shape": "cyl",
+     "x": 22.5,
+     "y": 22.5,
+     "w": 22,
+     "fill": "#B8963A"
+    }
+   ]
+  },
+  {
+   "id": "dichtung",
+   "component_id": "twist_off_lid",
+   "material_id": "pvc",
+   "name": "Dichtungsmasse",
+   "short": "Dichtung",
+   "shape": "cyl",
+   "x": 5.5,
+   "y": 5.5,
+   "w": 64,
+   "z": 94,
+   "h": 1.5,
+   "explode": [
+    0,
+    0,
+    20.0
+   ],
+   "mass": 1,
+   "materials": [
+    [
+     "pvc",
+     100
+    ]
+   ],
+   "info": "Weicher Kunststoffring innen im Deckel. Er macht das Glas luftdicht, beim Öffnen hört man es ploppen. Bleibt am Deckel.",
+   "color": "#E4E0D2",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 5,
+     "y": 5,
+     "w": 54,
+     "fill": "#C9A646"
+    }
+   ]
+  },
+  {
+   "id": "gewinde",
+   "component_id": "glass_container",
+   "material_id": "glass",
+   "name": "Gewindehals",
+   "short": "Gewinde",
+   "shape": "cyl",
+   "x": 6,
+   "y": 6,
+   "w": 63,
+   "z": 88,
+   "h": 8,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 14.2,
+   "materials": [
+    [
+     "behaelterglas",
+     100
+    ]
+   ],
+   "info": "Kurze Gewindegänge aus Glas, auf denen der Deckel greift.",
+   "color": "#DCE8E4",
+   "opacity": 0.6,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 4,
+     "w": 55
+    }
+   ]
+  },
+  {
+   "id": "schulter",
+   "component_id": "glass_container",
+   "material_id": "glass",
+   "name": "Schulter",
+   "short": "Schulter",
+   "shape": "cyl",
+   "x": 3,
+   "y": 3,
+   "w": 69,
+   "z": 80,
+   "h": 8,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 16.3,
+   "materials": [
+    [
+     "behaelterglas",
+     100
+    ]
+   ],
+   "info": "Übergang vom Körper zum Gewinde.",
+   "color": "#DCE8E4",
+   "opacity": 0.6,
+   "label": false
+  },
+  {
+   "id": "koerper",
+   "component_id": "glass_container",
+   "material_id": "glass",
+   "name": "Glaskörper",
+   "short": "Glaskörper",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 75,
+   "z": 0,
+   "h": 80,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 152.7,
+   "materials": [
+    [
+     "behaelterglas",
+     100
+    ]
+   ],
+   "info": "Weißglas (farblos). Leer, aber ungespült in den Weißglas-Container. Der Deckel gehört nicht ins Altglas.",
+   "color": "#DCE8E4",
+   "opacity": 0.6,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 4,
+     "w": 67
+    }
+   ]
+  },
+  {
+   "id": "etikett",
+   "component_id": "paper_label",
+   "material_id": "paper",
+   "name": "Papieretikett",
+   "short": "Etikett",
+   "shape": "box",
+   "x": 75,
+   "y": 12.5,
+   "w": 0.3,
+   "d": 50,
+   "z": 15,
+   "h": 55,
+   "r": 0,
+   "explode": [
+    50,
+    0,
+    0
+   ],
+   "mass": 1.5,
+   "materials": [
+    [
+     "papier",
+     100
+    ]
+   ],
+   "info": "Papier mit Leim. Darf beim Altglas dranbleiben, es verbrennt in der Schmelze.",
+   "color": "#E8DDC0",
+   "sortBias": 100
+  }
+ ]
+}
