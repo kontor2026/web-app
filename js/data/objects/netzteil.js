@@ -72,4 +72,22 @@ export default {
       info: 'Abnehmbar. Ein Netzkabel kann für viele andere Geräte weiterverwendet werden.',
       marks: [{ shape: 'box', x: 0, y: 0.5, w: 20, d: 7, r: 3, fill: '#4A4F53' }] },
   ],
+
+  projekte: [
+    { titel: 'Ladestation für die Werkstatt', kurz: 'Das Netzteil bekommt ein Gehäuse aus Holz und HDPE und lädt Akkugeräte am Arbeitsplatz.',
+      stufe: 1, dauer: '60 min', lernziel: 'Ein Netzteil überlebt oft drei Geräte.',
+      nutzt: [{ neu: true, name: 'Netzteil (komplett)' }, { inv: 'holzleiste', menge: 3 }, { inv: 'hdpe-platte', menge: 1 }],
+      werkzeug: ['Säge', 'Akkuschrauber'],
+      schritte: ['Kasten aus Holzleisten bauen', 'Deckplatte aus HDPE mit Kabeldurchlass', 'Netzteil einlegen, Kabel nach außen führen'] },
+    { titel: 'Kupferdraht-Baum', kurz: 'Aus den Adern des Netzkabels wird eine Drahtskulptur.',
+      stufe: 1, dauer: '45 min', lernziel: 'Wie viel Kupfer steckt in einem Kabel?',
+      nutzt: [{ neu: true, name: 'Netzkabel' }, { inv: 'holzscheibe', menge: 1 }],
+      werkzeug: ['Abisolierzange', 'Seitenschneider'],
+      schritte: ['Stecker abschneiden, Mantel entfernen', 'Adern abisolieren und Kupfer wiegen', 'Litzen verdrillen und auf Holzscheibe befestigen'] },
+    { titel: 'LED-Werkstattlicht', kurz: 'USB-C liefert Strom für einen LED-Streifen aus dem Lager.',
+      stufe: 2, dauer: '50 min', lernziel: 'Gleichstrom, Spannung und sicheres Arbeiten auf der Niedervoltseite.',
+      nutzt: [{ neu: true, name: 'USB-C-Kabel' }, { inv: 'led-streifen', menge: 1 }, { inv: 'holzleiste', menge: 1 }],
+      werkzeug: ['Lötkolben', 'Schrumpfschlauch'],
+      schritte: ['5-Volt-LED-Streifen auswählen', 'An das USB-Kabel anlöten und isolieren', 'Auf Holzleiste kleben, über der Werkbank montieren'] },
+  ],
 };

@@ -50,4 +50,22 @@ export default {
       explode: [75, 0, 0], sortBias: 100, color: '#3F6E9E', opacity: 0.9, mass: 0.5, materials: [['druck', 100]],
       info: 'Direkt aufgedruckte Farbe. Bleibt beim Recycling als Verunreinigung im Granulat und färbt es leicht.' },
   ],
+
+  projekte: [
+    { titel: 'Karabiner im Spritzguss', kurz: 'Flasche schreddern, Granulat erhitzen und in die Karabinerform spritzen.',
+      stufe: 2, dauer: '90 min', lernziel: 'Sortenreinheit: Warum muss der PP-Deckel weg?',
+      nutzt: [{ neu: true, name: 'Flaschenkörper (HDPE, 52 g)' }, { inv: 'hdpe-deckel', menge: 20 }],
+      werkzeug: ['Fahrrad-Schredder', 'Spritzgussmaschine', 'Karabinerform'],
+      schritte: ['Deckel und Ausgießer entfernen, Flasche spülen', 'Mit Muskelkraft schreddern', 'Granulat einfüllen, spritzen, abkühlen lassen'] },
+    { titel: 'Schöpfschaufel', kurz: 'Aus der Flasche mit Griff wird eine Schaufel für Granulat und Erde.',
+      stufe: 1, dauer: '20 min', lernziel: 'Weiterverwenden vor Recyceln: Die Form selbst ist schon wertvoll.',
+      nutzt: [{ neu: true, name: 'Flaschenkörper mit Griff' }],
+      werkzeug: ['Cutter', 'Schleifpapier'],
+      schritte: ['Schnittlinie schräg unter dem Griff anzeichnen', 'Mit dem Cutter ausschneiden', 'Kanten glatt schleifen'] },
+    { titel: 'Vogelfutterstation', kurz: 'Flasche mit Holzstäben als Sitzstangen, aufgehängt am Henkel.',
+      stufe: 1, dauer: '40 min', lernziel: 'Kunststoff draußen: UV-Licht macht ihn mit der Zeit spröde.',
+      nutzt: [{ neu: true, name: 'Flasche (komplett)' }, { inv: 'rundstab', menge: 2 }, { inv: 'draht', menge: 1 }],
+      werkzeug: ['Bohrer', 'Cutter'],
+      schritte: ['Zwei Futteröffnungen ausschneiden', 'Löcher für Rundstäbe bohren', 'Mit Draht am Griff aufhängen'] },
+  ],
 };
