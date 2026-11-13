@@ -58,3 +58,71 @@ function show(viewEl, step) {
   animate(viewEl, { opacity: [0, 1], translateY: [16, 0], duration: 420, delay: old ? 140 : 0, ease: 'outCubic' });
 }
 
+/* ------------------------------------------------------------------ */
+/* 01 Erfassen                                                          */
+/* ------------------------------------------------------------------ */
+
+function viewScan() {
+  const v = h(`
+    <section class="view scan">
+      <div class="viewfinder" id="vf">
+        <div class="vf-grid"></div>
+        <i class="vf-corner tl"></i><i class="vf-corner tr"></i><i class="vf-corner bl"></i><i class="vf-corner br"></i>
+        <div class="vf-meta"><span>Station 01 · Kamera oben</span><span id="vf-state">bereit</span></div>
+        <div class="vf-idle" id="vf-idle">
+          <h2>Leg deinen Gegenstand auf die Fläche</h2>
+          <p>Die Kamera erkennt, was es ist. Du kannst auch ein Foto hochladen.</p>
+          <div class="row">
+            <button class="btn" id="cam">Kamera starten</button>
+            <button class="btn" id="upl">Bild hochladen</button>
+          </div>
+          <input type="file" id="file" accept="image/*" hidden>
+        </div>
+      </div>
+      <aside class="side" id="side">
+        <div>
+          <div class="eyebrow">Schritt 01 · Erfassen</div>
+          <h1 style="margin-top:8px">Was hast du mitgebracht?</h1>
+          <p class="lead" style="margin-top:10px">Die Station erkennt deinen Gegenstand, zeigt dir, was in ihm steckt, und schlägt vor, was du daraus bauen kannst.</p>
+        </div>
+        <ol class="howto">
+          <li>Gegenstand mittig auf die Station legen</li>
+          <li>Scannen und Ergebnis kurz prüfen</li>
+          <li>Steckbrief ansehen, dann einlagern oder bauen</li>
+        </ol>
+        <div>
+          <div class="eyebrow" style="margin-bottom:10px">Beispiele zum Ausprobieren</div>
+          <div class="samples">
+            ${OBJECTS.map((o) => `<button class="sample" data-id="${o.id}"><img src="${o.photo}" alt=""><span>${o.name}</span></button>`).join('')}
+          </div>
+        </div>
+      </aside>
+    </section>`);
+
+  v.querySelectorAll('.sample').forEach((b) => b.addEventListener('click', () => {
+    const o = getObject(b.dataset.id);
+    analyze(v, o.photo, o);
+  }));
+  const file = v.querySelector('#file');
+  v.querySelector('#upl').addEventListener('click', () => file.click());
+  file.addEventListener('change', () => {
+    if (!file.files[0]) return;
+    const r = new FileReader();
+    r.onload = () => analyze(v, r.result, null);
+    r.readAsDataURL(file.files[0]);
+  });
+  show(v, 'scan');
+  animate(v.querySelectorAll('.side > *'), { opacity: [0, 1], translateY: [10, 0], delay: stagger(70, { start: 200 }), duration: 500, ease: 'outCubic' });
+}
+
+document.querySelector('.brand').addEventListener('click', viewScan);
+
+// Direkteinstieg für Demo und Entwicklung: #sheet=laptop oder #craft=flasche
+const [, mode, id] = location.hash.match(/^#(sheet|craft)=(\w+)/) ?? [];
+if (mode && getObject(id)) {
+  state.obj = getObject(id);
+  state.model = state.obj.erkennung.modelle[0][0];
+  mode === 'sheet' ? viewSheet() : viewCraft();
+} else {
+  viewScan();
+}
