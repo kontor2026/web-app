@@ -1,0 +1,127 @@
+{
+ "id": "eraser",
+ "name": "Radiergummi",
+ "name_en": "Eraser",
+ "klasse": "Restmüll",
+ "kategorie": true,
+ "platzhalter": true,
+ "photo": null,
+ "erkennung": {
+  "conf": 1.0,
+  "modelle": [
+   [
+    "Radiergummi",
+    1.0
+   ]
+  ],
+  "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
+ },
+ "masse": "20 × 40 × 10 mm",
+ "gewicht": "≈ 15 g",
+ "werte": [
+  {
+   "k": "Rohstoffwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "Gebrauchtwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "CO₂ Herstellung",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  }
+ ],
+ "wertvoll": "Je länger ein Gegenstand genutzt wird, desto weniger Rohstoffe und Energie braucht es für Ersatz.",
+ "kreislauf": [
+  {
+   "t": "Rohstoffe",
+   "d": "Erdöl, Metallerze, Holz oder Baumwolle"
+  },
+  {
+   "t": "Herstellung",
+   "d": "Industrielle Fertigung"
+  },
+  {
+   "t": "Nutzung",
+   "d": "Jahre, wenn man es pflegt"
+  },
+  {
+   "t": "Heute oft",
+   "d": "Landet im Restmüll und wird verbrannt",
+   "tone": "bad"
+  },
+  {
+   "t": "Besser",
+   "d": "Reparieren, weitergeben oder Teile in der Werkstatt nutzen",
+   "tone": "good"
+  }
+ ],
+ "entsorgung": {
+  "wo": "Restmüll.",
+  "nicht": "Nicht in die Gelbe Tonne: keine Verpackung",
+  "warnung": "Gut Erhaltenes lieber verschenken oder in der Werkstatt abgeben."
+ },
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "parts": [
+  {
+   "id": "paper_label",
+   "component_id": "paper_label",
+   "name": "Paper Label",
+   "short": "Paper Label",
+   "shape": "box",
+   "x": 20.2,
+   "y": 8.0,
+   "w": 1.0,
+   "d": 24.0,
+   "h": 6.0,
+   "z": 2.0,
+   "r": 0.1,
+   "explode": [
+    22.0,
+    0,
+    3.6
+   ],
+   "mass": 1.61,
+   "materials": [
+    [
+     "papier",
+     100
+    ]
+   ],
+   "material_id": "paper",
+   "info": "Soak in warm water to peel it off; leaving it on is usually fine."
+  },
+  {
+   "id": "eraser_block",
+   "component_id": "eraser_block",
+   "name": "Eraser",
+   "short": "Eraser",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 20.0,
+   "d": 40.0,
+   "h": 10.0,
+   "z": 0.0,
+   "r": 2.4,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 13.39,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "material_id": "rubber",
+   "info": "Peel off the paper sleeve and use it up completely."
+  }
+ ]
+}

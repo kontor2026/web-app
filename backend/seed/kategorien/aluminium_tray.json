@@ -1,0 +1,131 @@
+{
+ "id": "aluminium_tray",
+ "name": "Aluschale",
+ "name_en": "Aluminium Food Tray",
+ "klasse": "Verpackung · Gelbe Tonne",
+ "kategorie": true,
+ "platzhalter": true,
+ "photo": null,
+ "erkennung": {
+  "conf": 1.0,
+  "modelle": [
+   [
+    "Aluschale",
+    1.0
+   ]
+  ],
+  "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
+ },
+ "masse": "200 × 150 × 40 mm",
+ "gewicht": "≈ 15 g",
+ "werte": [
+  {
+   "k": "Rohstoffwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "Gebrauchtwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "CO₂ Herstellung",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  }
+ ],
+ "wertvoll": "Sortenrein getrennt wird aus Verpackung wieder Rohstoff. Jede richtig getrennte Verpackung spart neues Material.",
+ "kreislauf": [
+  {
+   "t": "Rohstoffe",
+   "d": "Erdöl, Holz, Bauxit oder Quarzsand"
+  },
+  {
+   "t": "Herstellung",
+   "d": "Wenige Sekunden Formgebung in der Fabrik"
+  },
+  {
+   "t": "Nutzung",
+   "d": "Oft nur Minuten bis Tage"
+  },
+  {
+   "t": "Heute oft",
+   "d": "Falsch getrennt und dann verbrannt",
+   "tone": "bad"
+  },
+  {
+   "t": "Besser",
+   "d": "Richtig trennen oder in der Werkstatt neu formen",
+   "tone": "good"
+  }
+ ],
+ "entsorgung": {
+  "wo": "Gelbe Tonne oder Gelber Sack.",
+  "nicht": "Nicht in Restmüll oder Altpapier",
+  "warnung": "Restentleert reicht, nicht ausspülen. Teile aus verschiedenen Materialien trennen."
+ },
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "parts": [
+  {
+   "id": "cardboard_lid",
+   "component_id": "cardboard_lid",
+   "name": "Lid",
+   "short": "Lid",
+   "shape": "box",
+   "x": 10.0,
+   "y": 7.5,
+   "w": 180.0,
+   "d": 135.0,
+   "h": 3.2,
+   "z": 40.0,
+   "r": 16.2,
+   "explode": [
+    0,
+    0,
+    70.0
+   ],
+   "mass": 0.85,
+   "materials": [
+    [
+     "papier",
+     85
+    ],
+    [
+     "ldpe",
+     15
+    ]
+   ],
+   "material_id": "paper_plastic_composite",
+   "info": "Usually laminated on the inside; put it in residual waste."
+  },
+  {
+   "id": "aluminium_tray_body",
+   "component_id": "aluminium_tray_body",
+   "name": "Tray",
+   "short": "Tray",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 200.0,
+   "d": 150.0,
+   "h": 40.0,
+   "z": 0.0,
+   "r": 18.0,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 14.15,
+   "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "material_id": "aluminium",
+   "info": "Scrape out leftovers; small food residue is fine."
+  }
+ ]
+}

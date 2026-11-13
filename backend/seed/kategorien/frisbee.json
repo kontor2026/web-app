@@ -1,0 +1,97 @@
+{
+ "id": "frisbee",
+ "name": "Frisbee",
+ "name_en": "Frisbee",
+ "klasse": "Restmüll",
+ "kategorie": true,
+ "platzhalter": true,
+ "photo": null,
+ "erkennung": {
+  "conf": 1.0,
+  "modelle": [
+   [
+    "Frisbee",
+    1.0
+   ]
+  ],
+  "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
+ },
+ "masse": "270 × 270 × 30 mm",
+ "gewicht": "≈ 175 g",
+ "werte": [
+  {
+   "k": "Rohstoffwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "Gebrauchtwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "CO₂ Herstellung",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  }
+ ],
+ "wertvoll": "Je länger ein Gegenstand genutzt wird, desto weniger Rohstoffe und Energie braucht es für Ersatz.",
+ "kreislauf": [
+  {
+   "t": "Rohstoffe",
+   "d": "Erdöl, Metallerze, Holz oder Baumwolle"
+  },
+  {
+   "t": "Herstellung",
+   "d": "Industrielle Fertigung"
+  },
+  {
+   "t": "Nutzung",
+   "d": "Jahre, wenn man es pflegt"
+  },
+  {
+   "t": "Heute oft",
+   "d": "Landet im Restmüll und wird verbrannt",
+   "tone": "bad"
+  },
+  {
+   "t": "Besser",
+   "d": "Reparieren, weitergeben oder Teile in der Werkstatt nutzen",
+   "tone": "good"
+  }
+ ],
+ "entsorgung": {
+  "wo": "Restmüll.",
+  "nicht": "Nicht in die Gelbe Tonne: keine Verpackung",
+  "warnung": "Gut Erhaltenes lieber verschenken oder in der Werkstatt abgeben."
+ },
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "parts": [
+  {
+   "id": "pp_disc",
+   "component_id": "pp_disc",
+   "name": "Disc",
+   "short": "Disc",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 270.0,
+   "h": 30.0,
+   "z": 0.0,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 175.0,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "material_id": "pp",
+   "info": "Solid PP; reuse it or cut it into scoops and trays."
+  }
+ ]
+}

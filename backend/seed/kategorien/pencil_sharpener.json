@@ -1,0 +1,155 @@
+{
+ "id": "pencil_sharpener",
+ "name": "Anspitzer",
+ "name_en": "Pencil Sharpener",
+ "klasse": "Restmüll",
+ "kategorie": true,
+ "platzhalter": true,
+ "photo": null,
+ "erkennung": {
+  "conf": 1.0,
+  "modelle": [
+   [
+    "Anspitzer",
+    1.0
+   ]
+  ],
+  "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
+ },
+ "masse": "25 × 35 × 20 mm",
+ "gewicht": "≈ 15 g",
+ "werte": [
+  {
+   "k": "Rohstoffwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "Gebrauchtwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "CO₂ Herstellung",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  }
+ ],
+ "wertvoll": "Je länger ein Gegenstand genutzt wird, desto weniger Rohstoffe und Energie braucht es für Ersatz.",
+ "kreislauf": [
+  {
+   "t": "Rohstoffe",
+   "d": "Erdöl, Metallerze, Holz oder Baumwolle"
+  },
+  {
+   "t": "Herstellung",
+   "d": "Industrielle Fertigung"
+  },
+  {
+   "t": "Nutzung",
+   "d": "Jahre, wenn man es pflegt"
+  },
+  {
+   "t": "Heute oft",
+   "d": "Landet im Restmüll und wird verbrannt",
+   "tone": "bad"
+  },
+  {
+   "t": "Besser",
+   "d": "Reparieren, weitergeben oder Teile in der Werkstatt nutzen",
+   "tone": "good"
+  }
+ ],
+ "entsorgung": {
+  "wo": "Restmüll.",
+  "nicht": "Nicht in die Gelbe Tonne: keine Verpackung",
+  "warnung": "Gut Erhaltenes lieber verschenken oder in der Werkstatt abgeben."
+ },
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "parts": [
+  {
+   "id": "sharpener_blade",
+   "component_id": "sharpener_blade",
+   "name": "Blade",
+   "short": "Blade",
+   "shape": "box",
+   "x": 3.8,
+   "y": 5.2,
+   "w": 17.5,
+   "d": 24.5,
+   "h": 7.0,
+   "z": 4.0,
+   "r": 2.1,
+   "explode": [
+    0,
+    0,
+    40.0
+   ],
+   "mass": 2.07,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "material_id": "steel",
+   "info": "Replace just the blade when it gets dull."
+  },
+  {
+   "id": "hinge_screws",
+   "component_id": "hinge_screws",
+   "name": "Hinge Screws",
+   "short": "Hinge Screws",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 25.0,
+   "d": 35.0,
+   "h": 10.0,
+   "z": 10.0,
+   "r": 3.0,
+   "explode": [
+    0,
+    0,
+    12.0
+   ],
+   "mass": 4.31,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "material_id": "steel",
+   "info": "Unscrew them with a precision screwdriver."
+  },
+  {
+   "id": "sharpener_body",
+   "component_id": "sharpener_body",
+   "name": "Body",
+   "short": "Body",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 25.0,
+   "d": 35.0,
+   "h": 10.0,
+   "z": 0.0,
+   "r": 3.0,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 8.62,
+   "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "material_id": "aluminium",
+   "info": "Unscrew the tiny screw to free the blade."
+  }
+ ]
+}

@@ -1,0 +1,151 @@
+{
+ "id": "thermos_flask",
+ "name": "Thermoskanne",
+ "name_en": "Thermos Flask",
+ "klasse": "Metall · Wertstoffhof",
+ "kategorie": true,
+ "platzhalter": true,
+ "photo": null,
+ "erkennung": {
+  "conf": 1.0,
+  "modelle": [
+   [
+    "Thermoskanne",
+    1.0
+   ]
+  ],
+  "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
+ },
+ "masse": "75 × 75 × 270 mm",
+ "gewicht": "≈ 400 g",
+ "werte": [
+  {
+   "k": "Rohstoffwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "Gebrauchtwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "CO₂ Herstellung",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  }
+ ],
+ "wertvoll": "Je länger ein Gegenstand genutzt wird, desto weniger Rohstoffe und Energie braucht es für Ersatz.",
+ "kreislauf": [
+  {
+   "t": "Rohstoffe",
+   "d": "Erdöl, Metallerze, Holz oder Baumwolle"
+  },
+  {
+   "t": "Herstellung",
+   "d": "Industrielle Fertigung"
+  },
+  {
+   "t": "Nutzung",
+   "d": "Jahre, wenn man es pflegt"
+  },
+  {
+   "t": "Heute oft",
+   "d": "Landet im Restmüll und wird verbrannt",
+   "tone": "bad"
+  },
+  {
+   "t": "Besser",
+   "d": "Reparieren, weitergeben oder Teile in der Werkstatt nutzen",
+   "tone": "good"
+  }
+ ],
+ "entsorgung": {
+  "wo": "Recyclinghof (Altmetall).",
+  "nicht": "Nicht in die Gelbe Tonne: keine Verpackung",
+  "warnung": "Scharfe Klingen vorher einwickeln."
+ },
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "parts": [
+  {
+   "id": "pp_lid",
+   "component_id": "pp_lid",
+   "name": "Lid",
+   "short": "Lid",
+   "shape": "cyl",
+   "x": 20.6,
+   "y": 20.6,
+   "w": 33.8,
+   "h": 32.4,
+   "z": 229.5,
+   "explode": [
+    0,
+    0,
+    159.3
+   ],
+   "mass": 20.34,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "material_id": "pp",
+   "info": "Snap it off the rim."
+  },
+  {
+   "id": "silicone_seal",
+   "component_id": "silicone_seal",
+   "name": "Seal",
+   "short": "Seal",
+   "shape": "box",
+   "x": 11.2,
+   "y": 11.2,
+   "w": 52.5,
+   "d": 52.5,
+   "h": 94.5,
+   "z": 45.9,
+   "r": 6.3,
+   "explode": [
+    0,
+    0,
+    216.0
+   ],
+   "mass": 40.68,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "material_id": "silicone",
+   "info": "Pull it out of the groove in the lid."
+  },
+  {
+   "id": "stainless_steel_body",
+   "component_id": "stainless_steel_body",
+   "name": "Body",
+   "short": "Body",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 75.0,
+   "h": 229.5,
+   "z": 0.0,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 338.98,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "material_id": "steel",
+   "info": "Remains after removing plastic parts, base and electronics."
+  }
+ ]
+}

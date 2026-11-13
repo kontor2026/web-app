@@ -1,0 +1,181 @@
+{
+ "id": "toy_car",
+ "name": "Spielzeugauto",
+ "name_en": "Toy Car",
+ "klasse": "Restmüll",
+ "kategorie": true,
+ "platzhalter": true,
+ "photo": null,
+ "erkennung": {
+  "conf": 1.0,
+  "modelle": [
+   [
+    "Spielzeugauto",
+    1.0
+   ]
+  ],
+  "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
+ },
+ "masse": "30 × 70 × 25 mm",
+ "gewicht": "≈ 40 g",
+ "werte": [
+  {
+   "k": "Rohstoffwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "Gebrauchtwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "CO₂ Herstellung",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  }
+ ],
+ "wertvoll": "Je länger ein Gegenstand genutzt wird, desto weniger Rohstoffe und Energie braucht es für Ersatz.",
+ "kreislauf": [
+  {
+   "t": "Rohstoffe",
+   "d": "Erdöl, Metallerze, Holz oder Baumwolle"
+  },
+  {
+   "t": "Herstellung",
+   "d": "Industrielle Fertigung"
+  },
+  {
+   "t": "Nutzung",
+   "d": "Jahre, wenn man es pflegt"
+  },
+  {
+   "t": "Heute oft",
+   "d": "Landet im Restmüll und wird verbrannt",
+   "tone": "bad"
+  },
+  {
+   "t": "Besser",
+   "d": "Reparieren, weitergeben oder Teile in der Werkstatt nutzen",
+   "tone": "good"
+  }
+ ],
+ "entsorgung": {
+  "wo": "Restmüll.",
+  "nicht": "Nicht in die Gelbe Tonne: keine Verpackung",
+  "warnung": "Gut Erhaltenes lieber verschenken oder in der Werkstatt abgeben."
+ },
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "parts": [
+  {
+   "id": "pp_wheels",
+   "component_id": "pp_wheels",
+   "name": "Wheels",
+   "short": "Wheels",
+   "shape": "cyl",
+   "x": 11.7,
+   "y": 31.7,
+   "w": 6.6,
+   "h": 3.75,
+   "z": 20.0,
+   "explode": [
+    0,
+    0,
+    66.8
+   ],
+   "mass": 2.03,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "material_id": "pp",
+   "info": "Pull them off the axles."
+  },
+  {
+   "id": "toy_car_body_ober",
+   "component_id": "toy_car_body",
+   "name": "Body (Oberteil)",
+   "short": "Body (Oberteil)",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 30.0,
+   "d": 70.0,
+   "h": 5.0,
+   "z": 15.0,
+   "r": 3.6,
+   "explode": [
+    0,
+    0,
+    46.8
+   ],
+   "mass": 10.17,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "material_id": "abs",
+   "info": "Drill out the rivets on the bottom to open it."
+  },
+  {
+   "id": "steel_axles",
+   "component_id": "steel_axles",
+   "name": "Axles",
+   "short": "Axles",
+   "shape": "box",
+   "x": 4.5,
+   "y": 10.5,
+   "w": 21.0,
+   "d": 49.0,
+   "h": 6.75,
+   "z": 3.0,
+   "r": 2.5,
+   "explode": [
+    0,
+    0,
+    32.0
+   ],
+   "mass": 4.07,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "material_id": "steel",
+   "info": "Pull them out once the base plate is off."
+  },
+  {
+   "id": "toy_car_body",
+   "component_id": "toy_car_body",
+   "name": "Body (Unterteil)",
+   "short": "Body (Unterteil)",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 30.0,
+   "d": 70.0,
+   "h": 15.0,
+   "z": 0,
+   "r": 3.6,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 23.73,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "material_id": "abs",
+   "info": "Drill out the rivets on the bottom to open it."
+  }
+ ]
+}

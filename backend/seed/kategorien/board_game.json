@@ -1,0 +1,211 @@
+{
+ "id": "board_game",
+ "name": "Brettspiel",
+ "name_en": "Board Game",
+ "klasse": "Verpackung · Papier",
+ "kategorie": true,
+ "platzhalter": true,
+ "photo": null,
+ "erkennung": {
+  "conf": 1.0,
+  "modelle": [
+   [
+    "Brettspiel",
+    1.0
+   ]
+  ],
+  "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
+ },
+ "masse": "270 × 270 × 60 mm",
+ "gewicht": "≈ 1 kg",
+ "werte": [
+  {
+   "k": "Rohstoffwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "Gebrauchtwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "CO₂ Herstellung",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  }
+ ],
+ "wertvoll": "Sortenrein getrennt wird aus Verpackung wieder Rohstoff. Jede richtig getrennte Verpackung spart neues Material.",
+ "kreislauf": [
+  {
+   "t": "Rohstoffe",
+   "d": "Erdöl, Holz, Bauxit oder Quarzsand"
+  },
+  {
+   "t": "Herstellung",
+   "d": "Wenige Sekunden Formgebung in der Fabrik"
+  },
+  {
+   "t": "Nutzung",
+   "d": "Oft nur Minuten bis Tage"
+  },
+  {
+   "t": "Heute oft",
+   "d": "Falsch getrennt und dann verbrannt",
+   "tone": "bad"
+  },
+  {
+   "t": "Besser",
+   "d": "Richtig trennen oder in der Werkstatt neu formen",
+   "tone": "good"
+  }
+ ],
+ "entsorgung": {
+  "wo": "Papiertonne oder Altpapiercontainer.",
+  "nicht": "Nicht in Restmüll, wenn sauber",
+  "warnung": "Kartons flach falten. Stark verschmutzte Teile in den Restmüll."
+ },
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "parts": [
+  {
+   "id": "paper_sheets_ober",
+   "component_id": "paper_sheets",
+   "name": "Paper (Oberteil)",
+   "short": "Paper (Oberteil)",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 270.0,
+   "d": 270.0,
+   "h": 12.0,
+   "z": 36.0,
+   "r": 32.4,
+   "explode": [
+    0,
+    0,
+    480.6
+   ],
+   "mass": 153.06,
+   "materials": [
+    [
+     "papier",
+     100
+    ]
+   ],
+   "material_id": "paper",
+   "info": "Remove any plastic wrap or inserts."
+  },
+  {
+   "id": "wooden_pieces",
+   "component_id": "wooden_pieces",
+   "name": "Pieces",
+   "short": "Pieces",
+   "shape": "box",
+   "x": 10.8,
+   "y": 145.8,
+   "w": 113.4,
+   "d": 113.4,
+   "h": 16.2,
+   "z": 7.2,
+   "r": 13.6,
+   "explode": [
+    0,
+    0,
+    385.2
+   ],
+   "mass": 122.45,
+   "materials": [
+    [
+     "holz",
+     100
+    ]
+   ],
+   "material_id": "wood",
+   "info": "Keep them as spare pieces for other games."
+  },
+  {
+   "id": "game_board",
+   "component_id": "game_board",
+   "name": "Board",
+   "short": "Board",
+   "shape": "box",
+   "x": 145.8,
+   "y": 24.3,
+   "w": 113.4,
+   "d": 113.4,
+   "h": 16.2,
+   "z": 7.2,
+   "r": 13.6,
+   "explode": [
+    0,
+    0,
+    261.0
+   ],
+   "mass": 122.45,
+   "materials": [
+    [
+     "papier",
+     100
+    ]
+   ],
+   "material_id": "cardboard",
+   "info": "Folding board with paper on both sides; it goes in paper waste."
+  },
+  {
+   "id": "cardboard_box_body",
+   "component_id": "cardboard_box_body",
+   "name": "Box",
+   "short": "Box",
+   "shape": "box",
+   "x": 10.8,
+   "y": 24.3,
+   "w": 113.4,
+   "d": 113.4,
+   "h": 16.2,
+   "z": 7.2,
+   "r": 13.6,
+   "explode": [
+    0,
+    0,
+    136.8
+   ],
+   "mass": 244.9,
+   "materials": [
+    [
+     "papier",
+     100
+    ]
+   ],
+   "material_id": "cardboard",
+   "info": "Flatten it; tear off heavily greasy or food-soiled parts first."
+  },
+  {
+   "id": "paper_sheets",
+   "component_id": "paper_sheets",
+   "name": "Paper (Unterteil)",
+   "short": "Paper (Unterteil)",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 270.0,
+   "d": 270.0,
+   "h": 36.0,
+   "z": 0,
+   "r": 32.4,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 357.14,
+   "materials": [
+    [
+     "papier",
+     100
+    ]
+   ],
+   "material_id": "paper",
+   "info": "Remove any plastic wrap or inserts."
+  }
+ ]
+}

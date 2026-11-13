@@ -1,0 +1,155 @@
+{
+ "id": "leather_handbag",
+ "name": "Lederhandtasche",
+ "name_en": "Leather Handbag",
+ "klasse": "Textilien und Schuhe",
+ "kategorie": true,
+ "platzhalter": true,
+ "photo": null,
+ "erkennung": {
+  "conf": 1.0,
+  "modelle": [
+   [
+    "Lederhandtasche",
+    1.0
+   ]
+  ],
+  "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
+ },
+ "masse": "300 × 120 × 250 mm",
+ "gewicht": "≈ 700 g",
+ "werte": [
+  {
+   "k": "Rohstoffwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "Gebrauchtwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "CO₂ Herstellung",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  }
+ ],
+ "wertvoll": "Je länger ein Gegenstand genutzt wird, desto weniger Rohstoffe und Energie braucht es für Ersatz.",
+ "kreislauf": [
+  {
+   "t": "Rohstoffe",
+   "d": "Erdöl, Metallerze, Holz oder Baumwolle"
+  },
+  {
+   "t": "Herstellung",
+   "d": "Industrielle Fertigung"
+  },
+  {
+   "t": "Nutzung",
+   "d": "Jahre, wenn man es pflegt"
+  },
+  {
+   "t": "Heute oft",
+   "d": "Landet im Restmüll und wird verbrannt",
+   "tone": "bad"
+  },
+  {
+   "t": "Besser",
+   "d": "Reparieren, weitergeben oder Teile in der Werkstatt nutzen",
+   "tone": "good"
+  }
+ ],
+ "entsorgung": {
+  "wo": "Altkleidercontainer oder Recyclinghof, sauber und in einem Beutel.",
+  "nicht": "Tragbares nicht in den Restmüll",
+  "warnung": "Schuhe paarweise zusammenbinden."
+ },
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "parts": [
+  {
+   "id": "polyester_lining",
+   "component_id": "polyester_lining",
+   "name": "Lining",
+   "short": "Lining",
+   "shape": "box",
+   "x": 45.0,
+   "y": 18.0,
+   "w": 210.0,
+   "d": 84.0,
+   "h": 87.5,
+   "z": 50.0,
+   "r": 10.1,
+   "explode": [
+    0,
+    0,
+    368.0
+   ],
+   "mass": 75.0,
+   "materials": [
+    [
+     "polyester",
+     100
+    ]
+   ],
+   "material_id": "polyester",
+   "info": "Cut it out along the inner seam."
+  },
+  {
+   "id": "metal_zipper",
+   "component_id": "metal_zipper",
+   "name": "Zipper",
+   "short": "Zipper",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 300.0,
+   "d": 120.0,
+   "h": 125.0,
+   "z": 125.0,
+   "r": 14.4,
+   "explode": [
+    0,
+    0,
+    84.0
+   ],
+   "mass": 312.5,
+   "materials": [
+    [
+     "kupfer",
+     100
+    ]
+   ],
+   "material_id": "copper",
+   "info": "Cut along both sides of the zipper tape."
+  },
+  {
+   "id": "leather_panel",
+   "component_id": "leather_panel",
+   "name": "Leather",
+   "short": "Leather",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 300.0,
+   "d": 120.0,
+   "h": 125.0,
+   "z": 0.0,
+   "r": 14.4,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 312.5,
+   "materials": [
+    [
+     "leder",
+     100
+    ]
+   ],
+   "material_id": "leather",
+   "info": "Unpick the seams to get flat pieces."
+  }
+ ]
+}

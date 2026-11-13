@@ -1,0 +1,277 @@
+{
+ "id": "vacuum_cleaner",
+ "name": "Staubsauger",
+ "name_en": "Vacuum Cleaner",
+ "klasse": "Elektroschrott · Großgerät",
+ "kategorie": true,
+ "platzhalter": true,
+ "photo": null,
+ "erkennung": {
+  "conf": 1.0,
+  "modelle": [
+   [
+    "Staubsauger",
+    1.0
+   ]
+  ],
+  "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
+ },
+ "masse": "300 × 400 × 270 mm",
+ "gewicht": "≈ 5 kg",
+ "werte": [
+  {
+   "k": "Rohstoffwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "Gebrauchtwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "CO₂ Herstellung",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  }
+ ],
+ "wertvoll": "Elektrogeräte enthalten Metalle wie Kupfer, Gold und Kobalt, die sich zurückgewinnen lassen. Noch mehr spart, wer sie repariert und weiternutzt.",
+ "kreislauf": [
+  {
+   "t": "Rohstoffe",
+   "d": "Erze für Kupfer, Gold, Zinn und Seltene Erden aus vielen Ländern"
+  },
+  {
+   "t": "Herstellung",
+   "d": "Platinen und Akkus in Asien, sehr energieintensiv"
+  },
+  {
+   "t": "Nutzung",
+   "d": "Oft nur wenige Jahre"
+  },
+  {
+   "t": "Heute oft",
+   "d": "Liegt in der Schublade oder landet im Restmüll",
+   "tone": "bad"
+  },
+  {
+   "t": "Besser",
+   "d": "Reparieren, weitergeben, dann Elektro-Sammlung",
+   "tone": "good"
+  }
+ ],
+ "entsorgung": {
+  "wo": "Recyclinghof oder Abholung als Elektro-Großgerät.",
+  "nicht": "Nicht in Restmüll oder Sperrmüll",
+  "warnung": "Nicht selbst ausschlachten."
+ },
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "parts": [
+  {
+   "id": "electric_motor",
+   "component_id": "electric_motor",
+   "name": "Electric Motor",
+   "short": "Electric Motor",
+   "shape": "cyl",
+   "x": 45.0,
+   "y": 95.0,
+   "w": 210.0,
+   "h": 94.5,
+   "z": 54.0,
+   "explode": [
+    0,
+    0,
+    636.0
+   ],
+   "mass": 625.0,
+   "materials": [
+    [
+     "chip",
+     30
+    ],
+    [
+     "kupfer",
+     30
+    ],
+    [
+     "pcabs",
+     25
+    ],
+    [
+     "stahl",
+     15
+    ]
+   ],
+   "material_id": "mixed_electronics",
+   "info": "Unscrew from the housing and cut the wires; contains copper windings and magnets."
+  },
+  {
+   "id": "hepa_filter",
+   "component_id": "hepa_filter",
+   "name": "Filter",
+   "short": "Filter",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 300.0,
+   "d": 400.0,
+   "h": 90.0,
+   "z": 180.0,
+   "r": 36.0,
+   "explode": [
+    0,
+    0,
+    280.0
+   ],
+   "mass": 1302.08,
+   "materials": [
+    [
+     "polyester",
+     100
+    ]
+   ],
+   "material_id": "polyester",
+   "info": "Tap it out over a bin; filters full of fine dust go in residual waste."
+  },
+  {
+   "id": "dust_bag",
+   "component_id": "dust_bag",
+   "name": "Dust Bag",
+   "short": "Dust Bag",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 300.0,
+   "d": 400.0,
+   "h": 90.0,
+   "z": 90.0,
+   "r": 36.0,
+   "explode": [
+    0,
+    0,
+    140.0
+   ],
+   "mass": 1302.08,
+   "materials": [
+    [
+     "papier",
+     100
+    ]
+   ],
+   "material_id": "paper",
+   "info": "Remove it full and put it in residual waste; used bags cannot be recycled."
+  },
+  {
+   "id": "vacuum_hose",
+   "component_id": "vacuum_hose",
+   "name": "Hose",
+   "short": "Hose",
+   "shape": "box",
+   "x": 318.0,
+   "y": 20.0,
+   "w": 15.0,
+   "d": 360.0,
+   "h": 21.6,
+   "z": 27.0,
+   "r": 1.8,
+   "explode": [
+    120.0,
+    0,
+    42.0
+   ],
+   "mass": 156.25,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "material_id": "pp",
+   "info": "Twist and pull it off the inlet."
+  },
+  {
+   "id": "cable_copper_core",
+   "component_id": "cable_copper_core",
+   "name": "Cable Wires",
+   "short": "Cable Wires",
+   "shape": "box",
+   "x": 348.0,
+   "y": 20.0,
+   "w": 15.0,
+   "d": 360.0,
+   "h": 21.6,
+   "z": 27.0,
+   "r": 1.8,
+   "explode": [
+    165.0,
+    0,
+    42.0
+   ],
+   "mass": 156.25,
+   "materials": [
+    [
+     "kupfer",
+     100
+    ]
+   ],
+   "material_id": "copper",
+   "info": "Cut off the plug and strip the insulation to free the copper."
+  },
+  {
+   "id": "cable_insulation",
+   "component_id": "cable_insulation",
+   "name": "Cable Insulation",
+   "short": "Cable Insulation",
+   "shape": "box",
+   "x": 378.0,
+   "y": 20.0,
+   "w": 15.0,
+   "d": 360.0,
+   "h": 21.6,
+   "z": 27.0,
+   "r": 1.8,
+   "explode": [
+    210.0,
+    0,
+    42.0
+   ],
+   "mass": 156.25,
+   "materials": [
+    [
+     "pvc",
+     100
+    ]
+   ],
+   "material_id": "pvc",
+   "info": "Slit lengthwise with a cable stripper to separate it from the wires."
+  },
+  {
+   "id": "plastic_housing",
+   "component_id": "plastic_housing",
+   "name": "Plastic Housing",
+   "short": "Plastic Housing",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 300.0,
+   "d": 400.0,
+   "h": 90.0,
+   "z": 0.0,
+   "r": 36.0,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 1302.08,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "material_id": "abs",
+   "info": "Look for hidden screws under rubber feet or labels, then pry the clips open."
+  }
+ ]
+}

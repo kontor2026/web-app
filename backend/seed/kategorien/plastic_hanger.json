@@ -1,0 +1,127 @@
+{
+ "id": "plastic_hanger",
+ "name": "Kleiderbügel",
+ "name_en": "Plastic Hanger",
+ "klasse": "Restmüll",
+ "kategorie": true,
+ "platzhalter": true,
+ "photo": null,
+ "erkennung": {
+  "conf": 1.0,
+  "modelle": [
+   [
+    "Kleiderbügel",
+    1.0
+   ]
+  ],
+  "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
+ },
+ "masse": "420 × 200 × 10 mm",
+ "gewicht": "≈ 50 g",
+ "werte": [
+  {
+   "k": "Rohstoffwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "Gebrauchtwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "CO₂ Herstellung",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  }
+ ],
+ "wertvoll": "Je länger ein Gegenstand genutzt wird, desto weniger Rohstoffe und Energie braucht es für Ersatz.",
+ "kreislauf": [
+  {
+   "t": "Rohstoffe",
+   "d": "Erdöl, Metallerze, Holz oder Baumwolle"
+  },
+  {
+   "t": "Herstellung",
+   "d": "Industrielle Fertigung"
+  },
+  {
+   "t": "Nutzung",
+   "d": "Jahre, wenn man es pflegt"
+  },
+  {
+   "t": "Heute oft",
+   "d": "Landet im Restmüll und wird verbrannt",
+   "tone": "bad"
+  },
+  {
+   "t": "Besser",
+   "d": "Reparieren, weitergeben oder Teile in der Werkstatt nutzen",
+   "tone": "good"
+  }
+ ],
+ "entsorgung": {
+  "wo": "Restmüll.",
+  "nicht": "Nicht in die Gelbe Tonne: keine Verpackung",
+  "warnung": "Gut Erhaltenes lieber verschenken oder in der Werkstatt abgeben."
+ },
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "parts": [
+  {
+   "id": "steel_hook",
+   "component_id": "steel_hook",
+   "name": "Hook",
+   "short": "Hook",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 420.0,
+   "d": 200.0,
+   "h": 5.0,
+   "z": 5.0,
+   "r": 24.0,
+   "explode": [
+    0,
+    0,
+    124.0
+   ],
+   "mass": 16.67,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "material_id": "steel",
+   "info": "Twist it out of the hanger with pliers."
+  },
+  {
+   "id": "ps_hanger_body",
+   "component_id": "ps_hanger_body",
+   "name": "Hanger",
+   "short": "Hanger",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 420.0,
+   "d": 200.0,
+   "h": 5.0,
+   "z": 0.0,
+   "r": 24.0,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 33.33,
+   "materials": [
+    [
+     "ps",
+     100
+    ]
+   ],
+   "material_id": "ps",
+   "info": "Reuse it or return it to a clothing store that collects them."
+  }
+ ]
+}

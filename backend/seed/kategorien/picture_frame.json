@@ -1,0 +1,183 @@
+{
+ "id": "picture_frame",
+ "name": "Bilderrahmen",
+ "name_en": "Picture Frame",
+ "klasse": "Restmüll",
+ "kategorie": true,
+ "platzhalter": true,
+ "photo": null,
+ "erkennung": {
+  "conf": 1.0,
+  "modelle": [
+   [
+    "Bilderrahmen",
+    1.0
+   ]
+  ],
+  "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
+ },
+ "masse": "180 × 230 × 20 mm",
+ "gewicht": "≈ 350 g",
+ "werte": [
+  {
+   "k": "Rohstoffwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "Gebrauchtwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "CO₂ Herstellung",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  }
+ ],
+ "wertvoll": "Je länger ein Gegenstand genutzt wird, desto weniger Rohstoffe und Energie braucht es für Ersatz.",
+ "kreislauf": [
+  {
+   "t": "Rohstoffe",
+   "d": "Erdöl, Metallerze, Holz oder Baumwolle"
+  },
+  {
+   "t": "Herstellung",
+   "d": "Industrielle Fertigung"
+  },
+  {
+   "t": "Nutzung",
+   "d": "Jahre, wenn man es pflegt"
+  },
+  {
+   "t": "Heute oft",
+   "d": "Landet im Restmüll und wird verbrannt",
+   "tone": "bad"
+  },
+  {
+   "t": "Besser",
+   "d": "Reparieren, weitergeben oder Teile in der Werkstatt nutzen",
+   "tone": "good"
+  }
+ ],
+ "entsorgung": {
+  "wo": "Restmüll.",
+  "nicht": "Nicht in die Gelbe Tonne: keine Verpackung",
+  "warnung": "Gut Erhaltenes lieber verschenken oder in der Werkstatt abgeben."
+ },
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "parts": [
+  {
+   "id": "frame_glass",
+   "component_id": "frame_glass",
+   "name": "Glass Pane",
+   "short": "Glass Pane",
+   "shape": "box",
+   "x": 3.6,
+   "y": 4.6,
+   "w": 172.8,
+   "d": 220.8,
+   "h": 1.2,
+   "z": 16.0,
+   "r": 20.7,
+   "explode": [
+    0,
+    0,
+    251.4
+   ],
+   "mass": 137.25,
+   "materials": [
+    [
+     "glas",
+     100
+    ]
+   ],
+   "material_id": "special_glass",
+   "info": "Flat glass does not belong in the glass bin; wrap it and put it in residual waste."
+  },
+  {
+   "id": "wooden_frame_ober",
+   "component_id": "wooden_frame",
+   "name": "Frame (Oberteil)",
+   "short": "Frame (Oberteil)",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 180.0,
+   "d": 230.0,
+   "h": 4.0,
+   "z": 12.0,
+   "r": 21.6,
+   "explode": [
+    0,
+    0,
+    169.4
+   ],
+   "mass": 51.47,
+   "materials": [
+    [
+     "holz",
+     100
+    ]
+   ],
+   "material_id": "wood",
+   "info": "Bend up the metal tabs at the back to remove the backing."
+  },
+  {
+   "id": "cardboard_backing",
+   "component_id": "cardboard_backing",
+   "name": "Backing",
+   "short": "Backing",
+   "shape": "box",
+   "x": 27.0,
+   "y": 34.5,
+   "w": 126.0,
+   "d": 161.0,
+   "h": 5.4,
+   "z": 2.4,
+   "r": 15.1,
+   "explode": [
+    0,
+    0,
+    91.6
+   ],
+   "mass": 41.18,
+   "materials": [
+    [
+     "papier",
+     100
+    ]
+   ],
+   "material_id": "cardboard",
+   "info": "Lift it out after bending the tabs."
+  },
+  {
+   "id": "wooden_frame",
+   "component_id": "wooden_frame",
+   "name": "Frame (Unterteil)",
+   "short": "Frame (Unterteil)",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 180.0,
+   "d": 230.0,
+   "h": 12.0,
+   "z": 0,
+   "r": 21.6,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 120.1,
+   "materials": [
+    [
+     "holz",
+     100
+    ]
+   ],
+   "material_id": "wood",
+   "info": "Bend up the metal tabs at the back to remove the backing."
+  }
+ ]
+}

@@ -1,0 +1,155 @@
+{
+ "id": "plush_toy",
+ "name": "Kuscheltier",
+ "name_en": "Plush Toy",
+ "klasse": "Restmüll",
+ "kategorie": true,
+ "platzhalter": true,
+ "photo": null,
+ "erkennung": {
+  "conf": 1.0,
+  "modelle": [
+   [
+    "Kuscheltier",
+    1.0
+   ]
+  ],
+  "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
+ },
+ "masse": "200 × 150 × 250 mm",
+ "gewicht": "≈ 300 g",
+ "werte": [
+  {
+   "k": "Rohstoffwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "Gebrauchtwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "CO₂ Herstellung",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  }
+ ],
+ "wertvoll": "Je länger ein Gegenstand genutzt wird, desto weniger Rohstoffe und Energie braucht es für Ersatz.",
+ "kreislauf": [
+  {
+   "t": "Rohstoffe",
+   "d": "Erdöl, Metallerze, Holz oder Baumwolle"
+  },
+  {
+   "t": "Herstellung",
+   "d": "Industrielle Fertigung"
+  },
+  {
+   "t": "Nutzung",
+   "d": "Jahre, wenn man es pflegt"
+  },
+  {
+   "t": "Heute oft",
+   "d": "Landet im Restmüll und wird verbrannt",
+   "tone": "bad"
+  },
+  {
+   "t": "Besser",
+   "d": "Reparieren, weitergeben oder Teile in der Werkstatt nutzen",
+   "tone": "good"
+  }
+ ],
+ "entsorgung": {
+  "wo": "Restmüll.",
+  "nicht": "Nicht in die Gelbe Tonne: keine Verpackung",
+  "warnung": "Gut Erhaltenes lieber verschenken oder in der Werkstatt abgeben."
+ },
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "parts": [
+  {
+   "id": "polyester_fill",
+   "component_id": "polyester_fill",
+   "name": "Insulation",
+   "short": "Insulation",
+   "shape": "box",
+   "x": 30.0,
+   "y": 22.5,
+   "w": 140.0,
+   "d": 105.0,
+   "h": 87.5,
+   "z": 50.0,
+   "r": 12.6,
+   "explode": [
+    0,
+    0,
+    340.0
+   ],
+   "mass": 32.14,
+   "materials": [
+    [
+     "polyester",
+     100
+    ]
+   ],
+   "material_id": "polyester",
+   "info": "Cut open the lining to pull out the fill; reuse it as stuffing."
+  },
+  {
+   "id": "plastic_eyes",
+   "component_id": "plastic_eyes",
+   "name": "Eyes",
+   "short": "Eyes",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 200.0,
+   "d": 150.0,
+   "h": 125.0,
+   "z": 125.0,
+   "r": 18.0,
+   "explode": [
+    0,
+    0,
+    70.0
+   ],
+   "mass": 133.93,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "material_id": "abs",
+   "info": "Fixed with a washer on the inside; cut the fabric around them."
+  },
+  {
+   "id": "polyester_plush",
+   "component_id": "polyester_plush",
+   "name": "Fur Fabric",
+   "short": "Fur Fabric",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 200.0,
+   "d": 150.0,
+   "h": 125.0,
+   "z": 0.0,
+   "r": 18.0,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 133.93,
+   "materials": [
+    [
+     "polyester",
+     100
+    ]
+   ],
+   "material_id": "polyester",
+   "info": "Donate clean toys; otherwise open a seam to take out the filling."
+  }
+ ]
+}

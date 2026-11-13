@@ -1,0 +1,99 @@
+{
+ "id": "bottle_crate",
+ "name": "Getränkekiste",
+ "name_en": "Bottle Crate",
+ "klasse": "Pfandverpackung",
+ "kategorie": true,
+ "platzhalter": true,
+ "photo": null,
+ "erkennung": {
+  "conf": 1.0,
+  "modelle": [
+   [
+    "Getränkekiste",
+    1.0
+   ]
+  ],
+  "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
+ },
+ "masse": "400 × 300 × 300 mm",
+ "gewicht": "≈ 1,7 kg",
+ "werte": [
+  {
+   "k": "Rohstoffwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "Gebrauchtwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "CO₂ Herstellung",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  }
+ ],
+ "wertvoll": "Sortenrein getrennt wird aus Verpackung wieder Rohstoff. Jede richtig getrennte Verpackung spart neues Material.",
+ "kreislauf": [
+  {
+   "t": "Rohstoffe",
+   "d": "Erdöl, Holz, Bauxit oder Quarzsand"
+  },
+  {
+   "t": "Herstellung",
+   "d": "Wenige Sekunden Formgebung in der Fabrik"
+  },
+  {
+   "t": "Nutzung",
+   "d": "Oft nur Minuten bis Tage"
+  },
+  {
+   "t": "Heute oft",
+   "d": "Falsch getrennt und dann verbrannt",
+   "tone": "bad"
+  },
+  {
+   "t": "Besser",
+   "d": "Richtig trennen oder in der Werkstatt neu formen",
+   "tone": "good"
+  }
+ ],
+ "entsorgung": {
+  "wo": "Pfandautomat im Handel.",
+  "nicht": "Nicht in die Gelbe Tonne, sonst ist das Pfand weg",
+  "warnung": "Pfandlogo nicht abreißen."
+ },
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "parts": [
+  {
+   "id": "hdpe_crate_body",
+   "component_id": "hdpe_crate_body",
+   "name": "Crate",
+   "short": "Crate",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 400.0,
+   "d": 300.0,
+   "h": 300.0,
+   "z": 0.0,
+   "r": 36.0,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 1700.0,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "material_id": "hdpe",
+   "info": "Return it to the shop; crates carry a deposit and are reused for years."
+  }
+ ]
+}

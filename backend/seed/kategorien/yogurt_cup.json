@@ -1,0 +1,151 @@
+{
+ "id": "yogurt_cup",
+ "name": "Joghurtbecher",
+ "name_en": "Yogurt Cup",
+ "klasse": "Verpackung · Gelbe Tonne",
+ "kategorie": true,
+ "platzhalter": true,
+ "photo": null,
+ "erkennung": {
+  "conf": 1.0,
+  "modelle": [
+   [
+    "Joghurtbecher",
+    1.0
+   ]
+  ],
+  "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
+ },
+ "masse": "75 × 75 × 70 mm",
+ "gewicht": "≈ 6 g",
+ "werte": [
+  {
+   "k": "Rohstoffwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "Gebrauchtwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "CO₂ Herstellung",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  }
+ ],
+ "wertvoll": "Sortenrein getrennt wird aus Verpackung wieder Rohstoff. Jede richtig getrennte Verpackung spart neues Material.",
+ "kreislauf": [
+  {
+   "t": "Rohstoffe",
+   "d": "Erdöl, Holz, Bauxit oder Quarzsand"
+  },
+  {
+   "t": "Herstellung",
+   "d": "Wenige Sekunden Formgebung in der Fabrik"
+  },
+  {
+   "t": "Nutzung",
+   "d": "Oft nur Minuten bis Tage"
+  },
+  {
+   "t": "Heute oft",
+   "d": "Falsch getrennt und dann verbrannt",
+   "tone": "bad"
+  },
+  {
+   "t": "Besser",
+   "d": "Richtig trennen oder in der Werkstatt neu formen",
+   "tone": "good"
+  }
+ ],
+ "entsorgung": {
+  "wo": "Gelbe Tonne oder Gelber Sack.",
+  "nicht": "Nicht in Restmüll oder Altpapier",
+  "warnung": "Restentleert reicht, nicht ausspülen. Teile aus verschiedenen Materialien trennen."
+ },
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "parts": [
+  {
+   "id": "aluminium_lid_foil",
+   "component_id": "aluminium_lid_foil",
+   "name": "Lid Foil",
+   "short": "Lid Foil",
+   "shape": "cyl",
+   "x": 3.8,
+   "y": 3.8,
+   "w": 67.5,
+   "h": 5.6,
+   "z": 70.0,
+   "explode": [
+    0,
+    0,
+    30.0
+   ],
+   "mass": 0.32,
+   "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "material_id": "aluminium",
+   "info": "Peel it off completely and put it in the same bin as the cup."
+  },
+  {
+   "id": "cardboard_sleeve",
+   "component_id": "cardboard_sleeve",
+   "name": "Cardboard Sleeve",
+   "short": "Cardboard Sleeve",
+   "shape": "box",
+   "x": 75.8,
+   "y": 15.0,
+   "w": 2.2,
+   "d": 45.0,
+   "h": 42.0,
+   "z": 14.0,
+   "r": 0.3,
+   "explode": [
+    41.2,
+    0,
+    9.0
+   ],
+   "mass": 0.32,
+   "materials": [
+    [
+     "papier",
+     100
+    ]
+   ],
+   "material_id": "cardboard",
+   "info": "Tear along the perforation or slide it off."
+  },
+  {
+   "id": "pp_cup_body",
+   "component_id": "pp_cup_body",
+   "name": "Cup",
+   "short": "Cup",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 75.0,
+   "h": 70.0,
+   "z": 0.0,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 5.36,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "material_id": "pp",
+   "info": "Scrape it empty; there is no need to rinse it."
+  }
+ ]
+}

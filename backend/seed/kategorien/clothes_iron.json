@@ -1,0 +1,279 @@
+{
+ "id": "clothes_iron",
+ "name": "Bügeleisen",
+ "name_en": "Clothes Iron",
+ "klasse": "Elektroschrott · Kleingerät",
+ "kategorie": true,
+ "platzhalter": true,
+ "photo": null,
+ "erkennung": {
+  "conf": 1.0,
+  "modelle": [
+   [
+    "Bügeleisen",
+    1.0
+   ]
+  ],
+  "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
+ },
+ "masse": "120 × 270 × 140 mm",
+ "gewicht": "≈ 1,2 kg",
+ "werte": [
+  {
+   "k": "Rohstoffwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "Gebrauchtwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "CO₂ Herstellung",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  }
+ ],
+ "wertvoll": "Elektrogeräte enthalten Metalle wie Kupfer, Gold und Kobalt, die sich zurückgewinnen lassen. Noch mehr spart, wer sie repariert und weiternutzt.",
+ "kreislauf": [
+  {
+   "t": "Rohstoffe",
+   "d": "Erze für Kupfer, Gold, Zinn und Seltene Erden aus vielen Ländern"
+  },
+  {
+   "t": "Herstellung",
+   "d": "Platinen und Akkus in Asien, sehr energieintensiv"
+  },
+  {
+   "t": "Nutzung",
+   "d": "Oft nur wenige Jahre"
+  },
+  {
+   "t": "Heute oft",
+   "d": "Liegt in der Schublade oder landet im Restmüll",
+   "tone": "bad"
+  },
+  {
+   "t": "Besser",
+   "d": "Reparieren, weitergeben, dann Elektro-Sammlung",
+   "tone": "good"
+  }
+ ],
+ "entsorgung": {
+  "wo": "Recyclinghof oder Rücknahme im Handel. Kleine Elektrogeräte bis 25 cm nehmen auch große Supermärkte kostenlos zurück.",
+  "nicht": "Nicht in Restmüll oder Gelbe Tonne",
+  "warnung": "Kabel und Stecker dranlassen."
+ },
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "parts": [
+  {
+   "id": "thermostat",
+   "component_id": "thermostat",
+   "name": "Thermostat",
+   "short": "Thermostat",
+   "shape": "box",
+   "x": 64.8,
+   "y": 24.3,
+   "w": 50.4,
+   "d": 113.4,
+   "h": 49.0,
+   "z": 28.0,
+   "r": 6.0,
+   "explode": [
+    0,
+    0,
+    473.0
+   ],
+   "mass": 58.06,
+   "materials": [
+    [
+     "chip",
+     30
+    ],
+    [
+     "kupfer",
+     30
+    ],
+    [
+     "pcabs",
+     25
+    ],
+    [
+     "stahl",
+     15
+    ]
+   ],
+   "material_id": "mixed_electronics",
+   "info": "Located under the base plate; unscrew the bottom cover to reach it."
+  },
+  {
+   "id": "heating_element",
+   "component_id": "heating_element",
+   "name": "Heating Element",
+   "short": "Heating Element",
+   "shape": "box",
+   "x": 4.8,
+   "y": 24.3,
+   "w": 50.4,
+   "d": 113.4,
+   "h": 49.0,
+   "z": 28.0,
+   "r": 6.0,
+   "explode": [
+    0,
+    0,
+    346.0
+   ],
+   "mass": 116.13,
+   "materials": [
+    [
+     "nichrom",
+     100
+    ]
+   ],
+   "material_id": "nickel_chrome",
+   "info": "Unplug and let it cool down fully before opening the housing."
+  },
+  {
+   "id": "water_tank",
+   "component_id": "water_tank",
+   "name": "Water Tank",
+   "short": "Water Tank",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 120.0,
+   "d": 270.0,
+   "h": 46.67,
+   "z": 93.33,
+   "r": 14.4,
+   "explode": [
+    0,
+    0,
+    156.0
+   ],
+   "mass": 241.94,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "material_id": "pp",
+   "info": "Lift it out of the device; it usually clips in from the top or back."
+  },
+  {
+   "id": "plastic_housing",
+   "component_id": "plastic_housing",
+   "name": "Plastic Housing",
+   "short": "Plastic Housing",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 120.0,
+   "d": 270.0,
+   "h": 46.67,
+   "z": 46.67,
+   "r": 14.4,
+   "explode": [
+    0,
+    0,
+    78.0
+   ],
+   "mass": 241.94,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "material_id": "abs",
+   "info": "Look for hidden screws under rubber feet or labels, then pry the clips open."
+  },
+  {
+   "id": "cable_copper_core",
+   "component_id": "cable_copper_core",
+   "name": "Cable Wires",
+   "short": "Cable Wires",
+   "shape": "box",
+   "x": 127.2,
+   "y": 13.5,
+   "w": 6.0,
+   "d": 243.0,
+   "h": 11.2,
+   "z": 14.0,
+   "r": 0.7,
+   "explode": [
+    57.0,
+    0,
+    23.4
+   ],
+   "mass": 29.03,
+   "materials": [
+    [
+     "kupfer",
+     100
+    ]
+   ],
+   "material_id": "copper",
+   "info": "Cut off the plug and strip the insulation to free the copper."
+  },
+  {
+   "id": "cable_insulation",
+   "component_id": "cable_insulation",
+   "name": "Cable Insulation",
+   "short": "Cable Insulation",
+   "shape": "box",
+   "x": 139.2,
+   "y": 13.5,
+   "w": 6.0,
+   "d": 243.0,
+   "h": 11.2,
+   "z": 14.0,
+   "r": 0.7,
+   "explode": [
+    75.0,
+    0,
+    23.4
+   ],
+   "mass": 29.03,
+   "materials": [
+    [
+     "pvc",
+     100
+    ]
+   ],
+   "material_id": "pvc",
+   "info": "Slit lengthwise with a cable stripper to separate it from the wires."
+  },
+  {
+   "id": "iron_soleplate",
+   "component_id": "iron_soleplate",
+   "name": "Soleplate",
+   "short": "Soleplate",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 120.0,
+   "d": 270.0,
+   "h": 46.67,
+   "z": 0.0,
+   "r": 14.4,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 483.87,
+   "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "material_id": "aluminium",
+   "info": "Unscrew the plastic housing from above; the soleplate is bolted to it."
+  }
+ ]
+}

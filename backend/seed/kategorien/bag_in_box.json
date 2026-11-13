@@ -1,0 +1,183 @@
+{
+ "id": "bag_in_box",
+ "name": "Bag-in-Box",
+ "name_en": "Bag-in-Box",
+ "klasse": "Verpackung · Gelbe Tonne",
+ "kategorie": true,
+ "platzhalter": true,
+ "photo": null,
+ "erkennung": {
+  "conf": 1.0,
+  "modelle": [
+   [
+    "Bag-in-Box",
+    1.0
+   ]
+  ],
+  "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
+ },
+ "masse": "250 × 160 × 300 mm",
+ "gewicht": "≈ 400 g",
+ "werte": [
+  {
+   "k": "Rohstoffwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "Gebrauchtwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "CO₂ Herstellung",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  }
+ ],
+ "wertvoll": "Sortenrein getrennt wird aus Verpackung wieder Rohstoff. Jede richtig getrennte Verpackung spart neues Material.",
+ "kreislauf": [
+  {
+   "t": "Rohstoffe",
+   "d": "Erdöl, Holz, Bauxit oder Quarzsand"
+  },
+  {
+   "t": "Herstellung",
+   "d": "Wenige Sekunden Formgebung in der Fabrik"
+  },
+  {
+   "t": "Nutzung",
+   "d": "Oft nur Minuten bis Tage"
+  },
+  {
+   "t": "Heute oft",
+   "d": "Falsch getrennt und dann verbrannt",
+   "tone": "bad"
+  },
+  {
+   "t": "Besser",
+   "d": "Richtig trennen oder in der Werkstatt neu formen",
+   "tone": "good"
+  }
+ ],
+ "entsorgung": {
+  "wo": "Gelbe Tonne oder Gelber Sack.",
+  "nicht": "Nicht in Restmüll oder Altpapier",
+  "warnung": "Restentleert reicht, nicht ausspülen. Teile aus verschiedenen Materialien trennen."
+ },
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "parts": [
+  {
+   "id": "pp_tap",
+   "component_id": "pp_tap",
+   "name": "Tap",
+   "short": "Tap",
+   "shape": "box",
+   "x": 107.4,
+   "y": 62.4,
+   "w": 35.2,
+   "d": 35.2,
+   "h": 45.0,
+   "z": 240.0,
+   "r": 4.2,
+   "explode": [
+    0,
+    0,
+    327.0
+   ],
+   "mass": 30.0,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "material_id": "pp",
+   "info": "Pull it out of the bag spout."
+  },
+  {
+   "id": "multilayer_bag_ober",
+   "component_id": "multilayer_bag",
+   "name": "Inner Bag (Oberteil)",
+   "short": "Inner Bag (Obertei",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 250.0,
+   "d": 160.0,
+   "h": 60.0,
+   "z": 180.0,
+   "r": 19.2,
+   "explode": [
+    0,
+    0,
+    245.0
+   ],
+   "mass": 75.0,
+   "materials": [
+    [
+     "folien",
+     100
+    ]
+   ],
+   "material_id": "multilayer_plastic",
+   "info": "Pull it out through the tap hole and empty it."
+  },
+  {
+   "id": "cardboard_box_body",
+   "component_id": "cardboard_box_body",
+   "name": "Box",
+   "short": "Box",
+   "shape": "box",
+   "x": 37.5,
+   "y": 24.0,
+   "w": 175.0,
+   "d": 112.0,
+   "h": 81.0,
+   "z": 36.0,
+   "r": 13.4,
+   "explode": [
+    0,
+    0,
+    226.0
+   ],
+   "mass": 120.0,
+   "materials": [
+    [
+     "papier",
+     100
+    ]
+   ],
+   "material_id": "cardboard",
+   "info": "Flatten it; tear off heavily greasy or food-soiled parts first."
+  },
+  {
+   "id": "multilayer_bag",
+   "component_id": "multilayer_bag",
+   "name": "Inner Bag (Unterteil)",
+   "short": "Inner Bag (Unterte",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 250.0,
+   "d": 160.0,
+   "h": 180.0,
+   "z": 0,
+   "r": 19.2,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 175.0,
+   "materials": [
+    [
+     "folien",
+     100
+    ]
+   ],
+   "material_id": "multilayer_plastic",
+   "info": "Pull it out through the tap hole and empty it."
+  }
+ ]
+}

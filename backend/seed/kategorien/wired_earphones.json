@@ -1,0 +1,271 @@
+{
+ "id": "wired_earphones",
+ "name": "Kabel-Kopfhörer",
+ "name_en": "Wired Earphones",
+ "klasse": "Elektroschrott · Kleingerät",
+ "kategorie": true,
+ "platzhalter": true,
+ "photo": null,
+ "erkennung": {
+  "conf": 1.0,
+  "modelle": [
+   [
+    "Kabel-Kopfhörer",
+    1.0
+   ]
+  ],
+  "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
+ },
+ "masse": "80 × 80 × 15 mm",
+ "gewicht": "≈ 15 g",
+ "werte": [
+  {
+   "k": "Rohstoffwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "Gebrauchtwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "CO₂ Herstellung",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  }
+ ],
+ "wertvoll": "Elektrogeräte enthalten Metalle wie Kupfer, Gold und Kobalt, die sich zurückgewinnen lassen. Noch mehr spart, wer sie repariert und weiternutzt.",
+ "kreislauf": [
+  {
+   "t": "Rohstoffe",
+   "d": "Erze für Kupfer, Gold, Zinn und Seltene Erden aus vielen Ländern"
+  },
+  {
+   "t": "Herstellung",
+   "d": "Platinen und Akkus in Asien, sehr energieintensiv"
+  },
+  {
+   "t": "Nutzung",
+   "d": "Oft nur wenige Jahre"
+  },
+  {
+   "t": "Heute oft",
+   "d": "Liegt in der Schublade oder landet im Restmüll",
+   "tone": "bad"
+  },
+  {
+   "t": "Besser",
+   "d": "Reparieren, weitergeben, dann Elektro-Sammlung",
+   "tone": "good"
+  }
+ ],
+ "entsorgung": {
+  "wo": "Recyclinghof oder Rücknahme im Handel. Kleine Elektrogeräte bis 25 cm nehmen auch große Supermärkte kostenlos zurück.",
+  "nicht": "Nicht in Restmüll oder Gelbe Tonne",
+  "warnung": "Kabel und Stecker dranlassen."
+ },
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "parts": [
+  {
+   "id": "silicone_ear_tips",
+   "component_id": "silicone_ear_tips",
+   "name": "Ear Tips",
+   "short": "Ear Tips",
+   "shape": "cyl",
+   "x": 31.2,
+   "y": 31.2,
+   "w": 17.6,
+   "h": 2.25,
+   "z": 12.0,
+   "explode": [
+    0,
+    0,
+    136.0
+   ],
+   "mass": 0.98,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "material_id": "silicone",
+   "info": "Pull them off the nozzle by hand."
+  },
+  {
+   "id": "plastic_housing_ober",
+   "component_id": "plastic_housing",
+   "name": "Plastic Housing (Oberteil)",
+   "short": "Plastic Housing (O",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 80.0,
+   "h": 3.0,
+   "z": 9.0,
+   "explode": [
+    0,
+    0,
+    104.0
+   ],
+   "mass": 2.45,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "material_id": "abs",
+   "info": "Look for hidden screws under rubber feet or labels, then pry the clips open."
+  },
+  {
+   "id": "audio_jack",
+   "component_id": "audio_jack",
+   "name": "Jack Plug",
+   "short": "Jack Plug",
+   "shape": "box",
+   "x": 43.2,
+   "y": 7.2,
+   "w": 33.6,
+   "d": 33.6,
+   "h": 4.05,
+   "z": 1.8,
+   "r": 4.0,
+   "explode": [
+    0,
+    0,
+    75.2
+   ],
+   "mass": 1.96,
+   "materials": [
+    [
+     "kupfer",
+     100
+    ]
+   ],
+   "material_id": "copper",
+   "info": "Cut the cable just behind the plug."
+  },
+  {
+   "id": "speaker_driver",
+   "component_id": "speaker_driver",
+   "name": "Speaker",
+   "short": "Speaker",
+   "shape": "cyl",
+   "x": 3.2,
+   "y": 7.2,
+   "w": 33.6,
+   "h": 4.05,
+   "z": 1.8,
+   "explode": [
+    0,
+    0,
+    39.2
+   ],
+   "mass": 1.96,
+   "materials": [
+    [
+     "chip",
+     30
+    ],
+    [
+     "kupfer",
+     30
+    ],
+    [
+     "pcabs",
+     25
+    ],
+    [
+     "stahl",
+     15
+    ]
+   ],
+   "material_id": "mixed_electronics",
+   "info": "Contains a strong magnet; keep away from cards and other electronics."
+  },
+  {
+   "id": "cable_copper_core",
+   "component_id": "cable_copper_core",
+   "name": "Cable Wires",
+   "short": "Cable Wires",
+   "shape": "box",
+   "x": 84.8,
+   "y": 4.0,
+   "w": 4.0,
+   "d": 72.0,
+   "h": 3.0,
+   "z": 1.5,
+   "r": 0.5,
+   "explode": [
+    43.0,
+    0,
+    9.6
+   ],
+   "mass": 0.98,
+   "materials": [
+    [
+     "kupfer",
+     100
+    ]
+   ],
+   "material_id": "copper",
+   "info": "Cut off the plug and strip the insulation to free the copper."
+  },
+  {
+   "id": "cable_insulation",
+   "component_id": "cable_insulation",
+   "name": "Cable Insulation",
+   "short": "Cable Insulation",
+   "shape": "box",
+   "x": 92.8,
+   "y": 4.0,
+   "w": 4.0,
+   "d": 72.0,
+   "h": 3.0,
+   "z": 1.5,
+   "r": 0.5,
+   "explode": [
+    55.0,
+    0,
+    9.6
+   ],
+   "mass": 0.98,
+   "materials": [
+    [
+     "pvc",
+     100
+    ]
+   ],
+   "material_id": "pvc",
+   "info": "Slit lengthwise with a cable stripper to separate it from the wires."
+  },
+  {
+   "id": "plastic_housing",
+   "component_id": "plastic_housing",
+   "name": "Plastic Housing (Unterteil)",
+   "short": "Plastic Housing (U",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 80.0,
+   "h": 9.0,
+   "z": 0,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 5.71,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "material_id": "abs",
+   "info": "Look for hidden screws under rubber feet or labels, then pry the clips open."
+  }
+ ]
+}

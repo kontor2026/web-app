@@ -1,0 +1,183 @@
+{
+ "id": "sneaker",
+ "name": "Sneaker",
+ "name_en": "Sneaker",
+ "klasse": "Textilien und Schuhe",
+ "kategorie": true,
+ "platzhalter": true,
+ "photo": null,
+ "erkennung": {
+  "conf": 1.0,
+  "modelle": [
+   [
+    "Sneaker",
+    1.0
+   ]
+  ],
+  "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
+ },
+ "masse": "110 × 290 × 120 mm",
+ "gewicht": "≈ 400 g",
+ "werte": [
+  {
+   "k": "Rohstoffwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "Gebrauchtwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "CO₂ Herstellung",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  }
+ ],
+ "wertvoll": "Je länger ein Gegenstand genutzt wird, desto weniger Rohstoffe und Energie braucht es für Ersatz.",
+ "kreislauf": [
+  {
+   "t": "Rohstoffe",
+   "d": "Erdöl, Metallerze, Holz oder Baumwolle"
+  },
+  {
+   "t": "Herstellung",
+   "d": "Industrielle Fertigung"
+  },
+  {
+   "t": "Nutzung",
+   "d": "Jahre, wenn man es pflegt"
+  },
+  {
+   "t": "Heute oft",
+   "d": "Landet im Restmüll und wird verbrannt",
+   "tone": "bad"
+  },
+  {
+   "t": "Besser",
+   "d": "Reparieren, weitergeben oder Teile in der Werkstatt nutzen",
+   "tone": "good"
+  }
+ ],
+ "entsorgung": {
+  "wo": "Altkleidercontainer oder Recyclinghof, sauber und in einem Beutel.",
+  "nicht": "Tragbares nicht in den Restmüll",
+  "warnung": "Schuhe paarweise zusammenbinden."
+ },
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "parts": [
+  {
+   "id": "textile_upper",
+   "component_id": "textile_upper",
+   "name": "Upper",
+   "short": "Upper",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 110.0,
+   "d": 290.0,
+   "h": 40.0,
+   "z": 80.0,
+   "r": 13.2,
+   "explode": [
+    0,
+    0,
+    160.0
+   ],
+   "mass": 128.21,
+   "materials": [
+    [
+     "polyester",
+     100
+    ]
+   ],
+   "material_id": "polyester",
+   "info": "Cut it away along the sole seam; donate wearable shoes instead."
+  },
+  {
+   "id": "foam_midsole",
+   "component_id": "foam_midsole",
+   "name": "Midsole",
+   "short": "Midsole",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 110.0,
+   "d": 290.0,
+   "h": 40.0,
+   "z": 40.0,
+   "r": 13.2,
+   "explode": [
+    0,
+    0,
+    80.0
+   ],
+   "mass": 128.21,
+   "materials": [
+    [
+     "schaum",
+     100
+    ]
+   ],
+   "material_id": "eva_foam",
+   "info": "Glued to the outsole; separate with a heat gun and a knife."
+  },
+  {
+   "id": "shoelaces",
+   "component_id": "shoelaces",
+   "name": "Laces",
+   "short": "Laces",
+   "shape": "box",
+   "x": 116.6,
+   "y": 14.5,
+   "w": 5.5,
+   "d": 261.0,
+   "h": 9.6,
+   "z": 12.0,
+   "r": 0.7,
+   "explode": [
+    53.5,
+    0,
+    24.0
+   ],
+   "mass": 15.38,
+   "materials": [
+    [
+     "polyester",
+     100
+    ]
+   ],
+   "material_id": "polyester",
+   "info": "Unthread them."
+  },
+  {
+   "id": "rubber_outsole",
+   "component_id": "rubber_outsole",
+   "name": "Outsole",
+   "short": "Outsole",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 110.0,
+   "d": 290.0,
+   "h": 40.0,
+   "z": 0.0,
+   "r": 13.2,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 128.21,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "material_id": "rubber",
+   "info": "Peel it off the midsole after heating the glue."
+  }
+ ]
+}

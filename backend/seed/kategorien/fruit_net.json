@@ -1,0 +1,127 @@
+{
+ "id": "fruit_net",
+ "name": "Obstnetz",
+ "name_en": "Fruit Net",
+ "klasse": "Verpackung · Gelbe Tonne",
+ "kategorie": true,
+ "platzhalter": true,
+ "photo": null,
+ "erkennung": {
+  "conf": 1.0,
+  "modelle": [
+   [
+    "Obstnetz",
+    1.0
+   ]
+  ],
+  "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
+ },
+ "masse": "150 × 250 × 5 mm",
+ "gewicht": "≈ 5 g",
+ "werte": [
+  {
+   "k": "Rohstoffwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "Gebrauchtwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "CO₂ Herstellung",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  }
+ ],
+ "wertvoll": "Sortenrein getrennt wird aus Verpackung wieder Rohstoff. Jede richtig getrennte Verpackung spart neues Material.",
+ "kreislauf": [
+  {
+   "t": "Rohstoffe",
+   "d": "Erdöl, Holz, Bauxit oder Quarzsand"
+  },
+  {
+   "t": "Herstellung",
+   "d": "Wenige Sekunden Formgebung in der Fabrik"
+  },
+  {
+   "t": "Nutzung",
+   "d": "Oft nur Minuten bis Tage"
+  },
+  {
+   "t": "Heute oft",
+   "d": "Falsch getrennt und dann verbrannt",
+   "tone": "bad"
+  },
+  {
+   "t": "Besser",
+   "d": "Richtig trennen oder in der Werkstatt neu formen",
+   "tone": "good"
+  }
+ ],
+ "entsorgung": {
+  "wo": "Gelbe Tonne oder Gelber Sack.",
+  "nicht": "Nicht in Restmüll oder Altpapier",
+  "warnung": "Restentleert reicht, nicht ausspülen. Teile aus verschiedenen Materialien trennen."
+ },
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "parts": [
+  {
+   "id": "plastic_label",
+   "component_id": "plastic_label",
+   "name": "Label",
+   "short": "Label",
+   "shape": "box",
+   "x": 151.5,
+   "y": 50.0,
+   "w": 4.5,
+   "d": 150.0,
+   "h": 3.0,
+   "z": 1.0,
+   "r": 0.5,
+   "explode": [
+    67.5,
+    0,
+    24.0
+   ],
+   "mass": 0.54,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "material_id": "pp",
+   "info": "Tear along the seam or cut it off."
+  },
+  {
+   "id": "fruit_net_mesh",
+   "component_id": "fruit_net_mesh",
+   "name": "Net",
+   "short": "Net",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 150.0,
+   "d": 250.0,
+   "h": 5.0,
+   "z": 0.0,
+   "r": 18.0,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 4.46,
+   "materials": [
+    [
+     "ldpe",
+     100
+    ]
+   ],
+   "material_id": "ldpe",
+   "info": "Cut off any metal clips first."
+  }
+ ]
+}

@@ -1,0 +1,183 @@
+{
+ "id": "food_container",
+ "name": "Frischhaltedose",
+ "name_en": "Food Storage Container",
+ "klasse": "Wertstoffhof",
+ "kategorie": true,
+ "platzhalter": true,
+ "photo": null,
+ "erkennung": {
+  "conf": 1.0,
+  "modelle": [
+   [
+    "Frischhaltedose",
+    1.0
+   ]
+  ],
+  "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
+ },
+ "masse": "180 × 120 × 70 mm",
+ "gewicht": "≈ 120 g",
+ "werte": [
+  {
+   "k": "Rohstoffwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "Gebrauchtwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "CO₂ Herstellung",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  }
+ ],
+ "wertvoll": "Je länger ein Gegenstand genutzt wird, desto weniger Rohstoffe und Energie braucht es für Ersatz.",
+ "kreislauf": [
+  {
+   "t": "Rohstoffe",
+   "d": "Erdöl, Metallerze, Holz oder Baumwolle"
+  },
+  {
+   "t": "Herstellung",
+   "d": "Industrielle Fertigung"
+  },
+  {
+   "t": "Nutzung",
+   "d": "Jahre, wenn man es pflegt"
+  },
+  {
+   "t": "Heute oft",
+   "d": "Landet im Restmüll und wird verbrannt",
+   "tone": "bad"
+  },
+  {
+   "t": "Besser",
+   "d": "Reparieren, weitergeben oder Teile in der Werkstatt nutzen",
+   "tone": "good"
+  }
+ ],
+ "entsorgung": {
+  "wo": "Recyclinghof.",
+  "nicht": "Nicht in die Gelbe Tonne",
+  "warnung": "Reste von Farben, Klebern oder Chemikalien gehören zur Schadstoffsammlung."
+ },
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "parts": [
+  {
+   "id": "pp_lid",
+   "component_id": "pp_lid",
+   "name": "Lid",
+   "short": "Lid",
+   "shape": "box",
+   "x": 9.0,
+   "y": 6.0,
+   "w": 162.0,
+   "d": 108.0,
+   "h": 5.6,
+   "z": 56.0,
+   "r": 13.0,
+   "explode": [
+    0,
+    0,
+    198.9
+   ],
+   "mass": 10.59,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "material_id": "pp",
+   "info": "Snap it off the rim."
+  },
+  {
+   "id": "pp_food_tray_ober",
+   "component_id": "pp_food_tray",
+   "name": "Tray (Oberteil)",
+   "short": "Tray (Oberteil)",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 180.0,
+   "d": 120.0,
+   "h": 14.0,
+   "z": 42.0,
+   "r": 14.4,
+   "explode": [
+    0,
+    0,
+    138.9
+   ],
+   "mass": 26.47,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "material_id": "pp",
+   "info": "Scrape out food leftovers; there is no need to rinse it."
+  },
+  {
+   "id": "silicone_seal",
+   "component_id": "silicone_seal",
+   "name": "Seal",
+   "short": "Seal",
+   "shape": "box",
+   "x": 27.0,
+   "y": 18.0,
+   "w": 126.0,
+   "d": 84.0,
+   "h": 18.9,
+   "z": 8.4,
+   "r": 10.1,
+   "explode": [
+    0,
+    0,
+    93.6
+   ],
+   "mass": 21.18,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "material_id": "silicone",
+   "info": "Pull it out of the groove in the lid."
+  },
+  {
+   "id": "pp_food_tray",
+   "component_id": "pp_food_tray",
+   "name": "Tray (Unterteil)",
+   "short": "Tray (Unterteil)",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 180.0,
+   "d": 120.0,
+   "h": 42.0,
+   "z": 0,
+   "r": 14.4,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 61.76,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "material_id": "pp",
+   "info": "Scrape out food leftovers; there is no need to rinse it."
+  }
+ ]
+}

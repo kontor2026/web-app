@@ -1,0 +1,177 @@
+{
+ "id": "pencil",
+ "name": "Bleistift",
+ "name_en": "Pencil",
+ "klasse": "Restmüll",
+ "kategorie": true,
+ "platzhalter": true,
+ "photo": null,
+ "erkennung": {
+  "conf": 1.0,
+  "modelle": [
+   [
+    "Bleistift",
+    1.0
+   ]
+  ],
+  "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
+ },
+ "masse": "8 × 8 × 175 mm",
+ "gewicht": "≈ 5 g",
+ "werte": [
+  {
+   "k": "Rohstoffwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "Gebrauchtwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "CO₂ Herstellung",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  }
+ ],
+ "wertvoll": "Je länger ein Gegenstand genutzt wird, desto weniger Rohstoffe und Energie braucht es für Ersatz.",
+ "kreislauf": [
+  {
+   "t": "Rohstoffe",
+   "d": "Erdöl, Metallerze, Holz oder Baumwolle"
+  },
+  {
+   "t": "Herstellung",
+   "d": "Industrielle Fertigung"
+  },
+  {
+   "t": "Nutzung",
+   "d": "Jahre, wenn man es pflegt"
+  },
+  {
+   "t": "Heute oft",
+   "d": "Landet im Restmüll und wird verbrannt",
+   "tone": "bad"
+  },
+  {
+   "t": "Besser",
+   "d": "Reparieren, weitergeben oder Teile in der Werkstatt nutzen",
+   "tone": "good"
+  }
+ ],
+ "entsorgung": {
+  "wo": "Restmüll.",
+  "nicht": "Nicht in die Gelbe Tonne: keine Verpackung",
+  "warnung": "Gut Erhaltenes lieber verschenken oder in der Werkstatt abgeben."
+ },
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "parts": [
+  {
+   "id": "graphite_core",
+   "component_id": "graphite_core",
+   "name": "Lead",
+   "short": "Lead",
+   "shape": "box",
+   "x": 1.2,
+   "y": 1.2,
+   "w": 5.6,
+   "d": 5.6,
+   "h": 61.25,
+   "z": 35.0,
+   "r": 0.7,
+   "explode": [
+    0,
+    0,
+    203.0
+   ],
+   "mass": 0.28,
+   "materials": [
+    [
+     "grafitton",
+     100
+    ]
+   ],
+   "material_id": "graphite_clay",
+   "info": "Stays inside the wood."
+  },
+  {
+   "id": "pencil_ferrule",
+   "component_id": "pencil_ferrule",
+   "name": "Ferrule",
+   "short": "Ferrule",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 8.0,
+   "h": 58.33,
+   "z": 116.67,
+   "explode": [
+    0,
+    0,
+    42.0
+   ],
+   "mass": 1.18,
+   "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "material_id": "aluminium",
+   "info": "Twist it off with pliers."
+  },
+  {
+   "id": "rubber_eraser",
+   "component_id": "rubber_eraser",
+   "name": "Eraser",
+   "short": "Eraser",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 8.0,
+   "h": 58.33,
+   "z": 58.33,
+   "explode": [
+    0,
+    0,
+    21.0
+   ],
+   "mass": 1.18,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "material_id": "rubber",
+   "info": "Pinch the ferrule open with pliers to pull it out."
+  },
+  {
+   "id": "wooden_pencil_body",
+   "component_id": "wooden_pencil_body",
+   "name": "Wooden Body",
+   "short": "Wooden Body",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 8.0,
+   "h": 58.33,
+   "z": 0.0,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 2.36,
+   "materials": [
+    [
+     "holz",
+     100
+    ]
+   ],
+   "material_id": "wood",
+   "info": "Lacquered wood; do not compost it."
+  }
+ ]
+}

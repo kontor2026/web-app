@@ -1,0 +1,125 @@
+{
+ "id": "beverage_carton",
+ "name": "Getränkekarton",
+ "name_en": "Beverage Carton",
+ "klasse": "Verpackung · Gelbe Tonne",
+ "kategorie": true,
+ "platzhalter": true,
+ "photo": null,
+ "erkennung": {
+  "conf": 1.0,
+  "modelle": [
+   [
+    "Getränkekarton",
+    1.0
+   ]
+  ],
+  "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
+ },
+ "masse": "70 × 60 × 195 mm",
+ "gewicht": "≈ 30 g",
+ "werte": [
+  {
+   "k": "Rohstoffwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "Gebrauchtwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "CO₂ Herstellung",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  }
+ ],
+ "wertvoll": "Sortenrein getrennt wird aus Verpackung wieder Rohstoff. Jede richtig getrennte Verpackung spart neues Material.",
+ "kreislauf": [
+  {
+   "t": "Rohstoffe",
+   "d": "Erdöl, Holz, Bauxit oder Quarzsand"
+  },
+  {
+   "t": "Herstellung",
+   "d": "Wenige Sekunden Formgebung in der Fabrik"
+  },
+  {
+   "t": "Nutzung",
+   "d": "Oft nur Minuten bis Tage"
+  },
+  {
+   "t": "Heute oft",
+   "d": "Falsch getrennt und dann verbrannt",
+   "tone": "bad"
+  },
+  {
+   "t": "Besser",
+   "d": "Richtig trennen oder in der Werkstatt neu formen",
+   "tone": "good"
+  }
+ ],
+ "entsorgung": {
+  "wo": "Gelbe Tonne oder Gelber Sack.",
+  "nicht": "Nicht in Restmüll oder Altpapier",
+  "warnung": "Restentleert reicht, nicht ausspülen. Teile aus verschiedenen Materialien trennen."
+ },
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "parts": [
+  {
+   "id": "hdpe_screw_cap",
+   "component_id": "hdpe_screw_cap",
+   "name": "Screw Cap",
+   "short": "Screw Cap",
+   "shape": "cyl",
+   "x": 21.5,
+   "y": 16.5,
+   "w": 27.0,
+   "h": 23.4,
+   "z": 165.75,
+   "explode": [
+    0,
+    0,
+    26.0
+   ],
+   "mass": 1.7,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "material_id": "hdpe",
+   "info": "Twist off; recycle it separately or keep it on as local rules require."
+  },
+  {
+   "id": "carton_body",
+   "component_id": "carton_body",
+   "name": "Carton",
+   "short": "Carton",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 70.0,
+   "d": 60.0,
+   "h": 165.75,
+   "z": 0.0,
+   "r": 7.2,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 28.3,
+   "materials": [
+    [
+     "verbund",
+     100
+    ]
+   ],
+   "material_id": "composite_carton",
+   "info": "Empty and flatten it; do not separate the layers."
+  }
+ ]
+}

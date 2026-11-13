@@ -884,9 +884,53 @@ async function initBackend() {
 
 await initBackend();
 
+// Kategorie-Katalog: alle Modelle aus backend/seed/kategorien zum Durchsehen (#katalog, #kat=<id>).
+async function viewKatalog() {
+  const liste = await api.kategorien().catch(() => []);
+  const gruppen = {};
+  liste.forEach((k) => (gruppen[k.klasse] ??= []).push(k));
+  const v = h(`
+    <section class="view craft">
+      <div class="craft-main">
+        <div class="craft-head"><div>
+          <div class="eyebrow">Kategorie-Modelle · ${liste.length}</div>
+          <h1 style="margin-top:8px">Katalog der Explosionszeichnungen</h1>
+          <p>Ein Modell pro Kategorie. Grün umrandet: handgebaut, sonst Platzhalter. Klick öffnet den Steckbrief.</p>
+        </div></div>
+        <div class="katalog">${Object.entries(gruppen).map(([kl, ks]) => `
+          <div><h4 class="eyebrow">${kl} · ${ks.length}</h4>
+          <div class="kat-list">${ks.map((k) => `<a href="#kat=${k.id}" class="tag ${k.platzhalter ? '' : 'hoch'}" title="${k.platzhalter ? 'Platzhalter' : 'handgebaut'}">${k.name}</a>`).join('')}</div></div>`).join('')}
+        </div>
+      </div>
+    </section>`);
+  show(v, 'scan');
+}
+
+async function openKategorie(id) {
+  try {
+    state.obj = await api.objekt(id);
+  } catch (e) {
+    errorModal('Kategorie nicht gefunden', e.message, [{ label: 'Zum Katalog', run: () => { location.hash = '#katalog'; } }]);
+    return;
+  }
+  state.model = state.obj.name;
+  viewSheet();
+}
+
+window.addEventListener('hashchange', () => {
+  const kat = location.hash.match(/^#kat=(\w+)/);
+  if (kat) openKategorie(kat[1]);
+  else if (location.hash === '#katalog') viewKatalog();
+});
+
 // Direkteinstieg für Demo und Entwicklung: #sheet=laptop oder #craft=flasche
 const [, mode, id] = location.hash.match(/^#(sheet|craft)=(\w+)/) ?? [];
-if (mode && getObject(id)) {
+const katStart = location.hash.match(/^#kat=(\w+)/);
+if (katStart && api.online) {
+  openKategorie(katStart[1]);
+} else if (location.hash === '#katalog' && api.online) {
+  viewKatalog();
+} else if (mode && getObject(id)) {
   state.obj = getObject(id);
   state.model = state.obj.erkennung.modelle[0][0];
   mode === 'sheet' ? viewSheet() : viewCraft();

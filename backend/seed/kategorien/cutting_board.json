@@ -1,0 +1,99 @@
+{
+ "id": "cutting_board",
+ "name": "Schneidebrett",
+ "name_en": "Cutting Board",
+ "klasse": "Holz",
+ "kategorie": true,
+ "platzhalter": true,
+ "photo": null,
+ "erkennung": {
+  "conf": 1.0,
+  "modelle": [
+   [
+    "Schneidebrett",
+    1.0
+   ]
+  ],
+  "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
+ },
+ "masse": "250 × 380 × 20 mm",
+ "gewicht": "≈ 800 g",
+ "werte": [
+  {
+   "k": "Rohstoffwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "Gebrauchtwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "CO₂ Herstellung",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  }
+ ],
+ "wertvoll": "Je länger ein Gegenstand genutzt wird, desto weniger Rohstoffe und Energie braucht es für Ersatz.",
+ "kreislauf": [
+  {
+   "t": "Rohstoffe",
+   "d": "Erdöl, Metallerze, Holz oder Baumwolle"
+  },
+  {
+   "t": "Herstellung",
+   "d": "Industrielle Fertigung"
+  },
+  {
+   "t": "Nutzung",
+   "d": "Jahre, wenn man es pflegt"
+  },
+  {
+   "t": "Heute oft",
+   "d": "Landet im Restmüll und wird verbrannt",
+   "tone": "bad"
+  },
+  {
+   "t": "Besser",
+   "d": "Reparieren, weitergeben oder Teile in der Werkstatt nutzen",
+   "tone": "good"
+  }
+ ],
+ "entsorgung": {
+  "wo": "Recyclinghof (Altholz). Kleine Holzteile in den Restmüll.",
+  "nicht": "Nicht in die Biotonne",
+  "warnung": "Lackiertes Holz ist Altholz, kein Brennholz."
+ },
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "parts": [
+  {
+   "id": "wooden_board",
+   "component_id": "wooden_board",
+   "name": "Board",
+   "short": "Board",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 250.0,
+   "d": 380.0,
+   "h": 20.0,
+   "z": 0.0,
+   "r": 30.0,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 800.0,
+   "materials": [
+    [
+     "holz",
+     100
+    ]
+   ],
+   "material_id": "wood",
+   "info": "Oiled wood; sand it down and reuse it, or put it in residual waste."
+  }
+ ]
+}

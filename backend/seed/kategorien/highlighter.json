@@ -1,0 +1,177 @@
+{
+ "id": "highlighter",
+ "name": "Textmarker",
+ "name_en": "Highlighter",
+ "klasse": "Restmüll",
+ "kategorie": true,
+ "platzhalter": true,
+ "photo": null,
+ "erkennung": {
+  "conf": 1.0,
+  "modelle": [
+   [
+    "Textmarker",
+    1.0
+   ]
+  ],
+  "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
+ },
+ "masse": "20 × 20 × 120 mm",
+ "gewicht": "≈ 15 g",
+ "werte": [
+  {
+   "k": "Rohstoffwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "Gebrauchtwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "CO₂ Herstellung",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  }
+ ],
+ "wertvoll": "Je länger ein Gegenstand genutzt wird, desto weniger Rohstoffe und Energie braucht es für Ersatz.",
+ "kreislauf": [
+  {
+   "t": "Rohstoffe",
+   "d": "Erdöl, Metallerze, Holz oder Baumwolle"
+  },
+  {
+   "t": "Herstellung",
+   "d": "Industrielle Fertigung"
+  },
+  {
+   "t": "Nutzung",
+   "d": "Jahre, wenn man es pflegt"
+  },
+  {
+   "t": "Heute oft",
+   "d": "Landet im Restmüll und wird verbrannt",
+   "tone": "bad"
+  },
+  {
+   "t": "Besser",
+   "d": "Reparieren, weitergeben oder Teile in der Werkstatt nutzen",
+   "tone": "good"
+  }
+ ],
+ "entsorgung": {
+  "wo": "Restmüll.",
+  "nicht": "Nicht in die Gelbe Tonne: keine Verpackung",
+  "warnung": "Gut Erhaltenes lieber verschenken oder in der Werkstatt abgeben."
+ },
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "parts": [
+  {
+   "id": "pen_cap",
+   "component_id": "pen_cap",
+   "name": "Cap",
+   "short": "Cap",
+   "shape": "cyl",
+   "x": 9.5,
+   "y": 5.5,
+   "w": 9.0,
+   "h": 14.4,
+   "z": 102.0,
+   "explode": [
+    0,
+    0,
+    99.6
+   ],
+   "mass": 1.22,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "material_id": "pp",
+   "info": "Pull it off the tip."
+  },
+  {
+   "id": "marker_nib",
+   "component_id": "marker_nib",
+   "name": "Nib",
+   "short": "Nib",
+   "shape": "cyl",
+   "x": 5.5,
+   "y": 5.5,
+   "w": 9.0,
+   "h": 14.4,
+   "z": 102.0,
+   "explode": [
+    0,
+    0,
+    70.8
+   ],
+   "mass": 1.22,
+   "materials": [
+    [
+     "polyester",
+     100
+    ]
+   ],
+   "material_id": "polyester",
+   "info": "Pull it out with pliers."
+  },
+  {
+   "id": "marker_ink_reservoir",
+   "component_id": "marker_ink_reservoir",
+   "name": "Ink Reservoir",
+   "short": "Ink Reservoir",
+   "shape": "box",
+   "x": 3.0,
+   "y": 3.0,
+   "w": 14.0,
+   "d": 14.0,
+   "h": 42.0,
+   "z": 20.4,
+   "r": 1.7,
+   "explode": [
+    0,
+    0,
+    96.0
+   ],
+   "mass": 2.43,
+   "materials": [
+    [
+     "polyester",
+     100
+    ]
+   ],
+   "material_id": "polyester",
+   "info": "Pull out the back plug and slide it out; many markers can be refilled."
+  },
+  {
+   "id": "pen_barrel",
+   "component_id": "pen_barrel",
+   "name": "Barrel",
+   "short": "Barrel",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 20.0,
+   "h": 102.0,
+   "z": 0.0,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 10.14,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "material_id": "pp",
+   "info": "Unscrew the barrel to release the refill."
+  }
+ ]
+}

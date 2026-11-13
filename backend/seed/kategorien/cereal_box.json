@@ -1,0 +1,127 @@
+{
+ "id": "cereal_box",
+ "name": "Müslipackung",
+ "name_en": "Cereal Box",
+ "klasse": "Verpackung · Papier",
+ "kategorie": true,
+ "platzhalter": true,
+ "photo": null,
+ "erkennung": {
+  "conf": 1.0,
+  "modelle": [
+   [
+    "Müslipackung",
+    1.0
+   ]
+  ],
+  "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
+ },
+ "masse": "190 × 70 × 290 mm",
+ "gewicht": "≈ 80 g",
+ "werte": [
+  {
+   "k": "Rohstoffwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "Gebrauchtwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "CO₂ Herstellung",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  }
+ ],
+ "wertvoll": "Sortenrein getrennt wird aus Verpackung wieder Rohstoff. Jede richtig getrennte Verpackung spart neues Material.",
+ "kreislauf": [
+  {
+   "t": "Rohstoffe",
+   "d": "Erdöl, Holz, Bauxit oder Quarzsand"
+  },
+  {
+   "t": "Herstellung",
+   "d": "Wenige Sekunden Formgebung in der Fabrik"
+  },
+  {
+   "t": "Nutzung",
+   "d": "Oft nur Minuten bis Tage"
+  },
+  {
+   "t": "Heute oft",
+   "d": "Falsch getrennt und dann verbrannt",
+   "tone": "bad"
+  },
+  {
+   "t": "Besser",
+   "d": "Richtig trennen oder in der Werkstatt neu formen",
+   "tone": "good"
+  }
+ ],
+ "entsorgung": {
+  "wo": "Papiertonne oder Altpapiercontainer.",
+  "nicht": "Nicht in Restmüll, wenn sauber",
+  "warnung": "Kartons flach falten. Stark verschmutzte Teile in den Restmüll."
+ },
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "parts": [
+  {
+   "id": "cardboard_box_body",
+   "component_id": "cardboard_box_body",
+   "name": "Box",
+   "short": "Box",
+   "shape": "box",
+   "x": 28.5,
+   "y": 10.5,
+   "w": 133.0,
+   "d": 49.0,
+   "h": 101.5,
+   "z": 58.0,
+   "r": 5.9,
+   "explode": [
+    0,
+    0,
+    284.0
+   ],
+   "mass": 25.95,
+   "materials": [
+    [
+     "papier",
+     100
+    ]
+   ],
+   "material_id": "cardboard",
+   "info": "Flatten it; tear off heavily greasy or food-soiled parts first."
+  },
+  {
+   "id": "ldpe_film",
+   "component_id": "ldpe_film",
+   "name": "Film",
+   "short": "Film",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 190.0,
+   "d": 70.0,
+   "h": 290.0,
+   "z": 0.0,
+   "r": 8.4,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 54.05,
+   "materials": [
+    [
+     "ldpe",
+     100
+    ]
+   ],
+   "material_id": "ldpe",
+   "info": "Empty it and fold or ball it up loosely."
+  }
+ ]
+}

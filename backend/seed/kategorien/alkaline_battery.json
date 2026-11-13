@@ -1,0 +1,101 @@
+{
+ "id": "alkaline_battery",
+ "name": "Alkali-Batterie (AA)",
+ "name_en": "Alkaline Battery",
+ "klasse": "Batterien",
+ "kategorie": true,
+ "platzhalter": true,
+ "photo": null,
+ "erkennung": {
+  "conf": 1.0,
+  "modelle": [
+   [
+    "Alkali-Batterie (AA)",
+    1.0
+   ]
+  ],
+  "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
+ },
+ "masse": "14 × 14 × 50 mm",
+ "gewicht": "≈ 23 g",
+ "werte": [
+  {
+   "k": "Rohstoffwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "Gebrauchtwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "CO₂ Herstellung",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  }
+ ],
+ "wertvoll": "Elektrogeräte enthalten Metalle wie Kupfer, Gold und Kobalt, die sich zurückgewinnen lassen. Noch mehr spart, wer sie repariert und weiternutzt.",
+ "kreislauf": [
+  {
+   "t": "Rohstoffe",
+   "d": "Erze für Kupfer, Gold, Zinn und Seltene Erden aus vielen Ländern"
+  },
+  {
+   "t": "Herstellung",
+   "d": "Platinen und Akkus in Asien, sehr energieintensiv"
+  },
+  {
+   "t": "Nutzung",
+   "d": "Oft nur wenige Jahre"
+  },
+  {
+   "t": "Heute oft",
+   "d": "Liegt in der Schublade oder landet im Restmüll",
+   "tone": "bad"
+  },
+  {
+   "t": "Besser",
+   "d": "Reparieren, weitergeben, dann Elektro-Sammlung",
+   "tone": "good"
+  }
+ ],
+ "entsorgung": {
+  "wo": "Batterie-Sammelbox im Handel oder Recyclinghof.",
+  "nicht": "Nicht in Restmüll oder Gelbe Tonne",
+  "warnung": "Pole von Lithium-Batterien mit Klebeband abkleben."
+ },
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "parts": [
+  {
+   "id": "alkaline_cell",
+   "component_id": "alkaline_cell",
+   "name": "Battery",
+   "short": "Battery",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 14.0,
+   "h": 50.0,
+   "z": 0.0,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 23.0,
+   "materials": [
+    [
+     "zinkmangan",
+     80
+    ],
+    [
+     "stahl",
+     20
+    ]
+   ],
+   "material_id": "alkaline",
+   "info": "Remove from the device and tape the contacts before handing it in."
+  }
+ ]
+}

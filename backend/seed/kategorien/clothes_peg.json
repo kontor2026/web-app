@@ -1,0 +1,155 @@
+{
+ "id": "clothes_peg",
+ "name": "Wäscheklammer",
+ "name_en": "Clothes Peg",
+ "klasse": "Restmüll",
+ "kategorie": true,
+ "platzhalter": true,
+ "photo": null,
+ "erkennung": {
+  "conf": 1.0,
+  "modelle": [
+   [
+    "Wäscheklammer",
+    1.0
+   ]
+  ],
+  "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
+ },
+ "masse": "10 × 75 × 15 mm",
+ "gewicht": "≈ 6 g",
+ "werte": [
+  {
+   "k": "Rohstoffwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "Gebrauchtwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "CO₂ Herstellung",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  }
+ ],
+ "wertvoll": "Je länger ein Gegenstand genutzt wird, desto weniger Rohstoffe und Energie braucht es für Ersatz.",
+ "kreislauf": [
+  {
+   "t": "Rohstoffe",
+   "d": "Erdöl, Metallerze, Holz oder Baumwolle"
+  },
+  {
+   "t": "Herstellung",
+   "d": "Industrielle Fertigung"
+  },
+  {
+   "t": "Nutzung",
+   "d": "Jahre, wenn man es pflegt"
+  },
+  {
+   "t": "Heute oft",
+   "d": "Landet im Restmüll und wird verbrannt",
+   "tone": "bad"
+  },
+  {
+   "t": "Besser",
+   "d": "Reparieren, weitergeben oder Teile in der Werkstatt nutzen",
+   "tone": "good"
+  }
+ ],
+ "entsorgung": {
+  "wo": "Restmüll.",
+  "nicht": "Nicht in die Gelbe Tonne: keine Verpackung",
+  "warnung": "Gut Erhaltenes lieber verschenken oder in der Werkstatt abgeben."
+ },
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "parts": [
+  {
+   "id": "peg_halves_ober",
+   "component_id": "peg_halves",
+   "name": "Peg Halves (Oberteil)",
+   "short": "Peg Halves (Oberte",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 10.0,
+   "d": 75.0,
+   "h": 3.0,
+   "z": 9.0,
+   "r": 1.2,
+   "explode": [
+    0,
+    0,
+    38.0
+   ],
+   "mass": 1.45,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "material_id": "pp",
+   "info": "Twist the halves apart to release the spring."
+  },
+  {
+   "id": "steel_spring",
+   "component_id": "steel_spring",
+   "name": "Spring",
+   "short": "Spring",
+   "shape": "box",
+   "x": 1.5,
+   "y": 11.2,
+   "w": 7.0,
+   "d": 52.5,
+   "h": 4.05,
+   "z": 1.8,
+   "r": 0.8,
+   "explode": [
+    0,
+    0,
+    24.2
+   ],
+   "mass": 1.16,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "material_id": "steel",
+   "info": "Pull it out with pliers."
+  },
+  {
+   "id": "peg_halves",
+   "component_id": "peg_halves",
+   "name": "Peg Halves (Unterteil)",
+   "short": "Peg Halves (Untert",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 10.0,
+   "d": 75.0,
+   "h": 9.0,
+   "z": 0,
+   "r": 1.2,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 3.39,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "material_id": "pp",
+   "info": "Twist the halves apart to release the spring."
+  }
+ ]
+}

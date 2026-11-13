@@ -1,0 +1,99 @@
+{
+ "id": "paper_bag",
+ "name": "Papiertüte",
+ "name_en": "Paper Bag",
+ "klasse": "Verpackung · Papier",
+ "kategorie": true,
+ "platzhalter": true,
+ "photo": null,
+ "erkennung": {
+  "conf": 1.0,
+  "modelle": [
+   [
+    "Papiertüte",
+    1.0
+   ]
+  ],
+  "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
+ },
+ "masse": "260 × 140 × 320 mm",
+ "gewicht": "≈ 60 g",
+ "werte": [
+  {
+   "k": "Rohstoffwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "Gebrauchtwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "CO₂ Herstellung",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  }
+ ],
+ "wertvoll": "Sortenrein getrennt wird aus Verpackung wieder Rohstoff. Jede richtig getrennte Verpackung spart neues Material.",
+ "kreislauf": [
+  {
+   "t": "Rohstoffe",
+   "d": "Erdöl, Holz, Bauxit oder Quarzsand"
+  },
+  {
+   "t": "Herstellung",
+   "d": "Wenige Sekunden Formgebung in der Fabrik"
+  },
+  {
+   "t": "Nutzung",
+   "d": "Oft nur Minuten bis Tage"
+  },
+  {
+   "t": "Heute oft",
+   "d": "Falsch getrennt und dann verbrannt",
+   "tone": "bad"
+  },
+  {
+   "t": "Besser",
+   "d": "Richtig trennen oder in der Werkstatt neu formen",
+   "tone": "good"
+  }
+ ],
+ "entsorgung": {
+  "wo": "Papiertonne oder Altpapiercontainer.",
+  "nicht": "Nicht in Restmüll, wenn sauber",
+  "warnung": "Kartons flach falten. Stark verschmutzte Teile in den Restmüll."
+ },
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "parts": [
+  {
+   "id": "paper_bag_body",
+   "component_id": "paper_bag_body",
+   "name": "Bag",
+   "short": "Bag",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 260.0,
+   "d": 140.0,
+   "h": 320.0,
+   "z": 0.0,
+   "r": 16.8,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 60.0,
+   "materials": [
+    [
+     "papier",
+     100
+    ]
+   ],
+   "material_id": "paper",
+   "info": "Tear off the handles if they are glued with plastic."
+  }
+ ]
+}

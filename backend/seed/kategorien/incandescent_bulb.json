@@ -1,0 +1,161 @@
+{
+ "id": "incandescent_bulb",
+ "name": "Glühbirne",
+ "name_en": "Incandescent Bulb",
+ "klasse": "Restmüll",
+ "kategorie": true,
+ "platzhalter": true,
+ "photo": null,
+ "erkennung": {
+  "conf": 1.0,
+  "modelle": [
+   [
+    "Glühbirne",
+    1.0
+   ]
+  ],
+  "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
+ },
+ "masse": "60 × 60 × 105 mm",
+ "gewicht": "≈ 30 g",
+ "werte": [
+  {
+   "k": "Rohstoffwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "Gebrauchtwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "CO₂ Herstellung",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  }
+ ],
+ "wertvoll": "Je länger ein Gegenstand genutzt wird, desto weniger Rohstoffe und Energie braucht es für Ersatz.",
+ "kreislauf": [
+  {
+   "t": "Rohstoffe",
+   "d": "Erdöl, Metallerze, Holz oder Baumwolle"
+  },
+  {
+   "t": "Herstellung",
+   "d": "Industrielle Fertigung"
+  },
+  {
+   "t": "Nutzung",
+   "d": "Jahre, wenn man es pflegt"
+  },
+  {
+   "t": "Heute oft",
+   "d": "Landet im Restmüll und wird verbrannt",
+   "tone": "bad"
+  },
+  {
+   "t": "Besser",
+   "d": "Reparieren, weitergeben oder Teile in der Werkstatt nutzen",
+   "tone": "good"
+  }
+ ],
+ "entsorgung": {
+  "wo": "Restmüll.",
+  "nicht": "Nicht in die Gelbe Tonne: keine Verpackung",
+  "warnung": "Gut Erhaltenes lieber verschenken oder in der Werkstatt abgeben."
+ },
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "parts": [
+  {
+   "id": "bulb_screw_base",
+   "component_id": "bulb_screw_base",
+   "name": "Screw Base",
+   "short": "Screw Base",
+   "shape": "cyl",
+   "x": 32.4,
+   "y": 5.4,
+   "w": 25.2,
+   "h": 36.75,
+   "z": 21.0,
+   "explode": [
+    0,
+    0,
+    168.8
+   ],
+   "mass": 2.9,
+   "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "material_id": "aluminium",
+   "info": "Cemented to the glass; leave it attached."
+  },
+  {
+   "id": "bulb_filament",
+   "component_id": "bulb_filament",
+   "name": "Filament",
+   "short": "Filament",
+   "shape": "cyl",
+   "x": 2.4,
+   "y": 5.4,
+   "w": 25.2,
+   "h": 36.75,
+   "z": 21.0,
+   "explode": [
+    0,
+    0,
+    108.0
+   ],
+   "mass": 2.9,
+   "materials": [
+    [
+     "chip",
+     30
+    ],
+    [
+     "kupfer",
+     30
+    ],
+    [
+     "pcabs",
+     25
+    ],
+    [
+     "stahl",
+     15
+    ]
+   ],
+   "material_id": "mixed_electronics",
+   "info": "Stays inside the glass."
+  },
+  {
+   "id": "bulb_glass",
+   "component_id": "bulb_glass",
+   "name": "Glass Bulb",
+   "short": "Glass Bulb",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 60.0,
+   "h": 105.0,
+   "z": 0.0,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 24.19,
+   "materials": [
+    [
+     "glas",
+     100
+    ]
+   ],
+   "material_id": "special_glass",
+   "info": "Old bulbs go in residual waste, not the glass bin."
+  }
+ ]
+}

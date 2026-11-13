@@ -1,0 +1,179 @@
+{
+ "id": "candle_jar",
+ "name": "Duftkerze im Glas",
+ "name_en": "Jar Candle",
+ "klasse": "Verpackung · Glas",
+ "kategorie": true,
+ "platzhalter": true,
+ "photo": null,
+ "erkennung": {
+  "conf": 1.0,
+  "modelle": [
+   [
+    "Duftkerze im Glas",
+    1.0
+   ]
+  ],
+  "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
+ },
+ "masse": "80 × 80 × 90 mm",
+ "gewicht": "≈ 350 g",
+ "werte": [
+  {
+   "k": "Rohstoffwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "Gebrauchtwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "CO₂ Herstellung",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  }
+ ],
+ "wertvoll": "Sortenrein getrennt wird aus Verpackung wieder Rohstoff. Jede richtig getrennte Verpackung spart neues Material.",
+ "kreislauf": [
+  {
+   "t": "Rohstoffe",
+   "d": "Erdöl, Holz, Bauxit oder Quarzsand"
+  },
+  {
+   "t": "Herstellung",
+   "d": "Wenige Sekunden Formgebung in der Fabrik"
+  },
+  {
+   "t": "Nutzung",
+   "d": "Oft nur Minuten bis Tage"
+  },
+  {
+   "t": "Heute oft",
+   "d": "Falsch getrennt und dann verbrannt",
+   "tone": "bad"
+  },
+  {
+   "t": "Besser",
+   "d": "Richtig trennen oder in der Werkstatt neu formen",
+   "tone": "good"
+  }
+ ],
+ "entsorgung": {
+  "wo": "Altglascontainer, nach Farben getrennt (weiß, grün, braun; andere Farben zu Grün).",
+  "nicht": "Keine Trinkgläser, Keramik oder Glühbirnen",
+  "warnung": "Deckel abnehmen und in die Gelbe Tonne geben."
+ },
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "parts": [
+  {
+   "id": "wick_holder",
+   "component_id": "wick_holder",
+   "name": "Wick Holder",
+   "short": "Wick Holder",
+   "shape": "box",
+   "x": 43.2,
+   "y": 7.2,
+   "w": 33.6,
+   "d": 33.6,
+   "h": 31.5,
+   "z": 18.0,
+   "r": 4.0,
+   "explode": [
+    0,
+    0,
+    199.5
+   ],
+   "mass": 24.14,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "material_id": "steel",
+   "info": "Small metal disc at the bottom of the wick."
+  },
+  {
+   "id": "cotton_wick",
+   "component_id": "cotton_wick",
+   "name": "Wick",
+   "short": "Wick",
+   "shape": "box",
+   "x": 3.2,
+   "y": 7.2,
+   "w": 33.6,
+   "d": 33.6,
+   "h": 31.5,
+   "z": 18.0,
+   "r": 4.0,
+   "explode": [
+    0,
+    0,
+    136.0
+   ],
+   "mass": 24.14,
+   "materials": [
+    [
+     "baumwolle",
+     100
+    ]
+   ],
+   "material_id": "cotton",
+   "info": "Pull it out of the warm wax."
+  },
+  {
+   "id": "paraffin_wax",
+   "component_id": "paraffin_wax",
+   "name": "Wax",
+   "short": "Wax",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 80.0,
+   "h": 45.0,
+   "z": 45.0,
+   "explode": [
+    0,
+    0,
+    32.0
+   ],
+   "mass": 100.57,
+   "materials": [
+    [
+     "wachs",
+     100
+    ]
+   ],
+   "material_id": "paraffin_wax",
+   "info": "Collect leftovers and melt them into new candles."
+  },
+  {
+   "id": "glass_container",
+   "component_id": "glass_container",
+   "name": "Glass",
+   "short": "Glass",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 80.0,
+   "h": 45.0,
+   "z": 0.0,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 201.15,
+   "materials": [
+    [
+     "behaelterglas",
+     100
+    ]
+   ],
+   "material_id": "glass",
+   "info": "Empty it and sort it by colour into the glass bin."
+  }
+ ]
+}

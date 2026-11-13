@@ -1,0 +1,317 @@
+{
+ "id": "microwave",
+ "name": "Mikrowelle",
+ "name_en": "Microwave Oven",
+ "klasse": "Elektroschrott · Großgerät",
+ "kategorie": true,
+ "platzhalter": true,
+ "photo": null,
+ "erkennung": {
+  "conf": 1.0,
+  "modelle": [
+   [
+    "Mikrowelle",
+    1.0
+   ]
+  ],
+  "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
+ },
+ "masse": "450 × 350 × 260 mm",
+ "gewicht": "≈ 12 kg",
+ "werte": [
+  {
+   "k": "Rohstoffwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "Gebrauchtwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "CO₂ Herstellung",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  }
+ ],
+ "wertvoll": "Elektrogeräte enthalten Metalle wie Kupfer, Gold und Kobalt, die sich zurückgewinnen lassen. Noch mehr spart, wer sie repariert und weiternutzt.",
+ "kreislauf": [
+  {
+   "t": "Rohstoffe",
+   "d": "Erze für Kupfer, Gold, Zinn und Seltene Erden aus vielen Ländern"
+  },
+  {
+   "t": "Herstellung",
+   "d": "Platinen und Akkus in Asien, sehr energieintensiv"
+  },
+  {
+   "t": "Nutzung",
+   "d": "Oft nur wenige Jahre"
+  },
+  {
+   "t": "Heute oft",
+   "d": "Liegt in der Schublade oder landet im Restmüll",
+   "tone": "bad"
+  },
+  {
+   "t": "Besser",
+   "d": "Reparieren, weitergeben, dann Elektro-Sammlung",
+   "tone": "good"
+  }
+ ],
+ "entsorgung": {
+  "wo": "Recyclinghof oder Abholung als Elektro-Großgerät.",
+  "nicht": "Nicht in Restmüll oder Sperrmüll",
+  "warnung": "Nicht selbst ausschlachten."
+ },
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "parts": [
+  {
+   "id": "plastic_front_panel",
+   "component_id": "plastic_front_panel",
+   "name": "Front Panel",
+   "short": "Front Panel",
+   "shape": "box",
+   "x": 9.0,
+   "y": 7.0,
+   "w": 432.0,
+   "d": 336.0,
+   "h": 15.6,
+   "z": 223.6,
+   "r": 40.3,
+   "explode": [
+    0,
+    0,
+    940.4
+   ],
+   "mass": 1153.85,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "material_id": "abs",
+   "info": "Pull firmly at the bottom edge; it is held by plastic clips."
+  },
+  {
+   "id": "glass_turntable",
+   "component_id": "glass_turntable",
+   "name": "Turntable",
+   "short": "Turntable",
+   "shape": "box",
+   "x": 9.0,
+   "y": 7.0,
+   "w": 432.0,
+   "d": 336.0,
+   "h": 15.6,
+   "z": 208.0,
+   "r": 40.3,
+   "explode": [
+    0,
+    0,
+    780.4
+   ],
+   "mass": 2307.69,
+   "materials": [
+    [
+     "glas",
+     100
+    ]
+   ],
+   "material_id": "special_glass",
+   "info": "Lift it out; heat-resistant glass must not go in the glass bin."
+  },
+  {
+   "id": "steel_microwave_cavity_ober",
+   "component_id": "steel_microwave_cavity",
+   "name": "Cavity (Oberteil)",
+   "short": "Cavity (Oberteil)",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 450.0,
+   "d": 350.0,
+   "h": 52.0,
+   "z": 156.0,
+   "r": 42.0,
+   "explode": [
+    0,
+    0,
+    620.4
+   ],
+   "mass": 1730.77,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "material_id": "steel",
+   "info": "Leave opening to an e-waste centre: the capacitor inside can hold a lethal charge even when unplugged."
+  },
+  {
+   "id": "circuit_board",
+   "component_id": "circuit_board",
+   "name": "Circuit Board",
+   "short": "Circuit Board",
+   "shape": "box",
+   "x": 243.0,
+   "y": 31.5,
+   "w": 189.0,
+   "d": 147.0,
+   "h": 70.2,
+   "z": 31.2,
+   "r": 17.6,
+   "explode": [
+    0,
+    0,
+    515.0
+   ],
+   "mass": 692.31,
+   "materials": [
+    [
+     "fr4",
+     55
+    ],
+    [
+     "kupfer",
+     20
+    ],
+    [
+     "chip",
+     15
+    ],
+    [
+     "lot",
+     10
+    ]
+   ],
+   "material_id": "pcb",
+   "info": "Unscrew and unplug all ribbon cables; hand in at an e-waste collection point."
+  },
+  {
+   "id": "magnetron",
+   "component_id": "magnetron",
+   "name": "Magnetron",
+   "short": "Magnetron",
+   "shape": "cyl",
+   "x": 39.0,
+   "y": 31.5,
+   "w": 147.0,
+   "h": 70.2,
+   "z": 31.2,
+   "explode": [
+    0,
+    0,
+    284.8
+   ],
+   "mass": 1384.62,
+   "materials": [
+    [
+     "chip",
+     30
+    ],
+    [
+     "kupfer",
+     30
+    ],
+    [
+     "pcabs",
+     25
+    ],
+    [
+     "stahl",
+     15
+    ]
+   ],
+   "material_id": "mixed_electronics",
+   "info": "Do not remove it yourself; it contains ceramic insulators and strong magnets."
+  },
+  {
+   "id": "cable_copper_core",
+   "component_id": "cable_copper_core",
+   "name": "Cable Wires",
+   "short": "Cable Wires",
+   "shape": "box",
+   "x": 477.0,
+   "y": 17.5,
+   "w": 22.5,
+   "d": 315.0,
+   "h": 20.8,
+   "z": 26.0,
+   "r": 2.7,
+   "explode": [
+    172.5,
+    0,
+    48.0
+   ],
+   "mass": 346.15,
+   "materials": [
+    [
+     "kupfer",
+     100
+    ]
+   ],
+   "material_id": "copper",
+   "info": "Cut off the plug and strip the insulation to free the copper."
+  },
+  {
+   "id": "cable_insulation",
+   "component_id": "cable_insulation",
+   "name": "Cable Insulation",
+   "short": "Cable Insulation",
+   "shape": "box",
+   "x": 522.0,
+   "y": 17.5,
+   "w": 22.5,
+   "d": 315.0,
+   "h": 20.8,
+   "z": 26.0,
+   "r": 2.7,
+   "explode": [
+    240.0,
+    0,
+    48.0
+   ],
+   "mass": 346.15,
+   "materials": [
+    [
+     "pvc",
+     100
+    ]
+   ],
+   "material_id": "pvc",
+   "info": "Slit lengthwise with a cable stripper to separate it from the wires."
+  },
+  {
+   "id": "steel_microwave_cavity",
+   "component_id": "steel_microwave_cavity",
+   "name": "Cavity (Unterteil)",
+   "short": "Cavity (Unterteil)",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 450.0,
+   "d": 350.0,
+   "h": 156.0,
+   "z": 0,
+   "r": 42.0,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 4038.46,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "material_id": "steel",
+   "info": "Leave opening to an e-waste centre: the capacitor inside can hold a lethal charge even when unplugged."
+  }
+ ]
+}

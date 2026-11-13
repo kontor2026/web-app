@@ -1,0 +1,155 @@
+{
+ "id": "baseball_cap",
+ "name": "Basecap",
+ "name_en": "Baseball Cap",
+ "klasse": "Textilien und Schuhe",
+ "kategorie": true,
+ "platzhalter": true,
+ "photo": null,
+ "erkennung": {
+  "conf": 1.0,
+  "modelle": [
+   [
+    "Basecap",
+    1.0
+   ]
+  ],
+  "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
+ },
+ "masse": "190 × 250 × 110 mm",
+ "gewicht": "≈ 100 g",
+ "werte": [
+  {
+   "k": "Rohstoffwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "Gebrauchtwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "CO₂ Herstellung",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  }
+ ],
+ "wertvoll": "Je länger ein Gegenstand genutzt wird, desto weniger Rohstoffe und Energie braucht es für Ersatz.",
+ "kreislauf": [
+  {
+   "t": "Rohstoffe",
+   "d": "Erdöl, Metallerze, Holz oder Baumwolle"
+  },
+  {
+   "t": "Herstellung",
+   "d": "Industrielle Fertigung"
+  },
+  {
+   "t": "Nutzung",
+   "d": "Jahre, wenn man es pflegt"
+  },
+  {
+   "t": "Heute oft",
+   "d": "Landet im Restmüll und wird verbrannt",
+   "tone": "bad"
+  },
+  {
+   "t": "Besser",
+   "d": "Reparieren, weitergeben oder Teile in der Werkstatt nutzen",
+   "tone": "good"
+  }
+ ],
+ "entsorgung": {
+  "wo": "Altkleidercontainer oder Recyclinghof, sauber und in einem Beutel.",
+  "nicht": "Tragbares nicht in den Restmüll",
+  "warnung": "Schuhe paarweise zusammenbinden."
+ },
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "parts": [
+  {
+   "id": "visor_insert",
+   "component_id": "visor_insert",
+   "name": "Visor Insert",
+   "short": "Visor Insert",
+   "shape": "box",
+   "x": 9.5,
+   "y": 12.5,
+   "w": 171.0,
+   "d": 225.0,
+   "h": 8.8,
+   "z": 110.0,
+   "r": 20.5,
+   "explode": [
+    0,
+    0,
+    176.0
+   ],
+   "mass": 5.66,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "material_id": "pp",
+   "info": "Cut open the visor seam and slide it out."
+  },
+  {
+   "id": "plastic_buckles",
+   "component_id": "plastic_buckles",
+   "name": "Buckles",
+   "short": "Buckles",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 190.0,
+   "d": 250.0,
+   "h": 55.0,
+   "z": 55.0,
+   "r": 22.8,
+   "explode": [
+    0,
+    0,
+    88.0
+   ],
+   "mass": 47.17,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "material_id": "pp",
+   "info": "Cut the straps just behind the buckle."
+  },
+  {
+   "id": "cotton_fabric",
+   "component_id": "cotton_fabric",
+   "name": "Fabric",
+   "short": "Fabric",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 190.0,
+   "d": 250.0,
+   "h": 55.0,
+   "z": 0.0,
+   "r": 22.8,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 47.17,
+   "materials": [
+    [
+     "baumwolle",
+     100
+    ]
+   ],
+   "material_id": "cotton",
+   "info": "Donate if wearable; otherwise use the textile collection."
+  }
+ ]
+}

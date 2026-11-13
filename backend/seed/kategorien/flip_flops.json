@@ -1,0 +1,127 @@
+{
+ "id": "flip_flops",
+ "name": "Flip-Flops",
+ "name_en": "Flip-Flops",
+ "klasse": "Restmüll",
+ "kategorie": true,
+ "platzhalter": true,
+ "photo": null,
+ "erkennung": {
+  "conf": 1.0,
+  "modelle": [
+   [
+    "Flip-Flops",
+    1.0
+   ]
+  ],
+  "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
+ },
+ "masse": "100 × 260 × 25 mm",
+ "gewicht": "≈ 100 g",
+ "werte": [
+  {
+   "k": "Rohstoffwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "Gebrauchtwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "CO₂ Herstellung",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  }
+ ],
+ "wertvoll": "Je länger ein Gegenstand genutzt wird, desto weniger Rohstoffe und Energie braucht es für Ersatz.",
+ "kreislauf": [
+  {
+   "t": "Rohstoffe",
+   "d": "Erdöl, Metallerze, Holz oder Baumwolle"
+  },
+  {
+   "t": "Herstellung",
+   "d": "Industrielle Fertigung"
+  },
+  {
+   "t": "Nutzung",
+   "d": "Jahre, wenn man es pflegt"
+  },
+  {
+   "t": "Heute oft",
+   "d": "Landet im Restmüll und wird verbrannt",
+   "tone": "bad"
+  },
+  {
+   "t": "Besser",
+   "d": "Reparieren, weitergeben oder Teile in der Werkstatt nutzen",
+   "tone": "good"
+  }
+ ],
+ "entsorgung": {
+  "wo": "Restmüll.",
+  "nicht": "Nicht in die Gelbe Tonne: keine Verpackung",
+  "warnung": "Gut Erhaltenes lieber verschenken oder in der Werkstatt abgeben."
+ },
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "parts": [
+  {
+   "id": "rubber_strap",
+   "component_id": "rubber_strap",
+   "name": "Strap",
+   "short": "Strap",
+   "shape": "box",
+   "x": 106.0,
+   "y": 13.0,
+   "w": 5.0,
+   "d": 234.0,
+   "h": 3.0,
+   "z": 2.5,
+   "r": 0.6,
+   "explode": [
+    50.0,
+    0,
+    21.6
+   ],
+   "mass": 10.71,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "material_id": "rubber",
+   "info": "Push the toe plug out from underneath."
+  },
+  {
+   "id": "eva_sole",
+   "component_id": "eva_sole",
+   "name": "Sole",
+   "short": "Sole",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 100.0,
+   "d": 260.0,
+   "h": 25.0,
+   "z": 0.0,
+   "r": 12.0,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 89.29,
+   "materials": [
+    [
+     "schaum",
+     100
+    ]
+   ],
+   "material_id": "eva_foam",
+   "info": "Push the strap plugs through from below."
+  }
+ ]
+}

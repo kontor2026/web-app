@@ -355,6 +355,11 @@ svg.iso { width: 100%; height: 100%; display: block; overflow: visible; }
 .prep.ready { color: var(--good); }
 .prep.ready::before { background: var(--good); }
 
+.katalog { display: grid; gap: 22px; }
+.kat-list { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.kat-list a { text-decoration: none; padding: 5px 10px; font-size: 12px; }
+.kat-list a:hover { border-color: var(--accent); color: var(--accent); }
+
 /* Schmale Bildschirme: alles untereinander, Seite scrollt */
 @media (max-width: 900px) {
   html, body { height: auto; }

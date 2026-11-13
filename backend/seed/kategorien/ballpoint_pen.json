@@ -1,0 +1,179 @@
+{
+ "id": "ballpoint_pen",
+ "name": "Kugelschreiber",
+ "name_en": "Ballpoint Pen",
+ "klasse": "Restmüll",
+ "kategorie": true,
+ "platzhalter": true,
+ "photo": null,
+ "erkennung": {
+  "conf": 1.0,
+  "modelle": [
+   [
+    "Kugelschreiber",
+    1.0
+   ]
+  ],
+  "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
+ },
+ "masse": "10 × 10 × 145 mm",
+ "gewicht": "≈ 8 g",
+ "werte": [
+  {
+   "k": "Rohstoffwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "Gebrauchtwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "CO₂ Herstellung",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  }
+ ],
+ "wertvoll": "Je länger ein Gegenstand genutzt wird, desto weniger Rohstoffe und Energie braucht es für Ersatz.",
+ "kreislauf": [
+  {
+   "t": "Rohstoffe",
+   "d": "Erdöl, Metallerze, Holz oder Baumwolle"
+  },
+  {
+   "t": "Herstellung",
+   "d": "Industrielle Fertigung"
+  },
+  {
+   "t": "Nutzung",
+   "d": "Jahre, wenn man es pflegt"
+  },
+  {
+   "t": "Heute oft",
+   "d": "Landet im Restmüll und wird verbrannt",
+   "tone": "bad"
+  },
+  {
+   "t": "Besser",
+   "d": "Reparieren, weitergeben oder Teile in der Werkstatt nutzen",
+   "tone": "good"
+  }
+ ],
+ "entsorgung": {
+  "wo": "Restmüll.",
+  "nicht": "Nicht in die Gelbe Tonne: keine Verpackung",
+  "warnung": "Gut Erhaltenes lieber verschenken oder in der Werkstatt abgeben."
+ },
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "parts": [
+  {
+   "id": "pen_cap",
+   "component_id": "pen_cap",
+   "name": "Cap",
+   "short": "Cap",
+   "shape": "cyl",
+   "x": 2.8,
+   "y": 2.8,
+   "w": 4.5,
+   "h": 17.4,
+   "z": 123.25,
+   "explode": [
+    0,
+    0,
+    153.8
+   ],
+   "mass": 0.6,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "material_id": "pp",
+   "info": "Pull it off the tip."
+  },
+  {
+   "id": "steel_spring",
+   "component_id": "steel_spring",
+   "name": "Spring",
+   "short": "Spring",
+   "shape": "box",
+   "x": 5.4,
+   "y": 0.9,
+   "w": 4.2,
+   "d": 4.2,
+   "h": 50.75,
+   "z": 24.65,
+   "r": 0.5,
+   "explode": [
+    0,
+    0,
+    184.2
+   ],
+   "mass": 1.2,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "material_id": "steel",
+   "info": "Pull it out with pliers."
+  },
+  {
+   "id": "ink_refill",
+   "component_id": "ink_refill",
+   "name": "Ink Refill",
+   "short": "Ink Refill",
+   "shape": "box",
+   "x": 0.4,
+   "y": 0.9,
+   "w": 4.2,
+   "d": 4.2,
+   "h": 50.75,
+   "z": 24.65,
+   "r": 0.5,
+   "explode": [
+    0,
+    0,
+    116.0
+   ],
+   "mass": 1.2,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "material_id": "pp",
+   "info": "Replace the refill instead of the whole pen."
+  },
+  {
+   "id": "pen_barrel",
+   "component_id": "pen_barrel",
+   "name": "Barrel",
+   "short": "Barrel",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 10.0,
+   "h": 123.25,
+   "z": 0.0,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 5.0,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "material_id": "pp",
+   "info": "Unscrew the barrel to release the refill."
+  }
+ ]
+}

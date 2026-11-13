@@ -1,0 +1,263 @@
+{
+ "id": "portable_radio",
+ "name": "Kofferradio",
+ "name_en": "Portable Radio",
+ "klasse": "Elektroschrott · Kleingerät",
+ "kategorie": true,
+ "platzhalter": true,
+ "photo": null,
+ "erkennung": {
+  "conf": 1.0,
+  "modelle": [
+   [
+    "Kofferradio",
+    1.0
+   ]
+  ],
+  "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
+ },
+ "masse": "220 × 80 × 130 mm",
+ "gewicht": "≈ 900 g",
+ "werte": [
+  {
+   "k": "Rohstoffwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "Gebrauchtwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "CO₂ Herstellung",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  }
+ ],
+ "wertvoll": "Elektrogeräte enthalten Metalle wie Kupfer, Gold und Kobalt, die sich zurückgewinnen lassen. Noch mehr spart, wer sie repariert und weiternutzt.",
+ "kreislauf": [
+  {
+   "t": "Rohstoffe",
+   "d": "Erze für Kupfer, Gold, Zinn und Seltene Erden aus vielen Ländern"
+  },
+  {
+   "t": "Herstellung",
+   "d": "Platinen und Akkus in Asien, sehr energieintensiv"
+  },
+  {
+   "t": "Nutzung",
+   "d": "Oft nur wenige Jahre"
+  },
+  {
+   "t": "Heute oft",
+   "d": "Liegt in der Schublade oder landet im Restmüll",
+   "tone": "bad"
+  },
+  {
+   "t": "Besser",
+   "d": "Reparieren, weitergeben, dann Elektro-Sammlung",
+   "tone": "good"
+  }
+ ],
+ "entsorgung": {
+  "wo": "Recyclinghof oder Rücknahme im Handel. Kleine Elektrogeräte bis 25 cm nehmen auch große Supermärkte kostenlos zurück.",
+  "nicht": "Nicht in Restmüll oder Gelbe Tonne",
+  "warnung": "Akku oder Batterie nicht beschädigen. Wenn möglich herausnehmen und getrennt abgeben, fest verbaute Akkus drinlassen."
+ },
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "parts": [
+  {
+   "id": "plastic_housing_ober",
+   "component_id": "plastic_housing",
+   "name": "Plastic Housing (Oberteil)",
+   "short": "Plastic Housing (O",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 220.0,
+   "d": 80.0,
+   "h": 26.0,
+   "z": 78.0,
+   "r": 9.6,
+   "explode": [
+    0,
+    0,
+    345.3
+   ],
+   "mass": 129.81,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "material_id": "abs",
+   "info": "Look for hidden screws under rubber feet or labels, then pry the clips open."
+  },
+  {
+   "id": "alkaline_cell",
+   "component_id": "alkaline_cell",
+   "name": "Battery",
+   "short": "Battery",
+   "shape": "cyl",
+   "x": 38.2,
+   "y": 43.2,
+   "w": 33.6,
+   "h": 35.1,
+   "z": 15.6,
+   "explode": [
+    0,
+    0,
+    312.6
+   ],
+   "mass": 207.69,
+   "materials": [
+    [
+     "zinkmangan",
+     80
+    ],
+    [
+     "stahl",
+     20
+    ]
+   ],
+   "material_id": "alkaline",
+   "info": "Remove from the device and tape the contacts before handing it in."
+  },
+  {
+   "id": "circuit_board",
+   "component_id": "circuit_board",
+   "name": "Circuit Board",
+   "short": "Circuit Board",
+   "shape": "box",
+   "x": 118.8,
+   "y": 7.2,
+   "w": 92.4,
+   "d": 33.6,
+   "h": 35.1,
+   "z": 15.6,
+   "r": 4.0,
+   "explode": [
+    0,
+    0,
+    217.5
+   ],
+   "mass": 103.85,
+   "materials": [
+    [
+     "fr4",
+     55
+    ],
+    [
+     "kupfer",
+     20
+    ],
+    [
+     "chip",
+     15
+    ],
+    [
+     "lot",
+     10
+    ]
+   ],
+   "material_id": "pcb",
+   "info": "Unscrew and unplug all ribbon cables; hand in at an e-waste collection point."
+  },
+  {
+   "id": "speaker_driver",
+   "component_id": "speaker_driver",
+   "name": "Speaker",
+   "short": "Speaker",
+   "shape": "cyl",
+   "x": 38.2,
+   "y": 7.2,
+   "w": 33.6,
+   "h": 35.1,
+   "z": 15.6,
+   "explode": [
+    0,
+    0,
+    122.4
+   ],
+   "mass": 103.85,
+   "materials": [
+    [
+     "chip",
+     30
+    ],
+    [
+     "kupfer",
+     30
+    ],
+    [
+     "pcabs",
+     25
+    ],
+    [
+     "stahl",
+     15
+    ]
+   ],
+   "material_id": "mixed_electronics",
+   "info": "Contains a strong magnet; keep away from cards and other electronics."
+  },
+  {
+   "id": "telescopic_antenna",
+   "component_id": "telescopic_antenna",
+   "name": "Antenna",
+   "short": "Antenna",
+   "shape": "box",
+   "x": 233.2,
+   "y": 4.0,
+   "w": 11.0,
+   "d": 72.0,
+   "h": 10.4,
+   "z": 13.0,
+   "r": 1.3,
+   "explode": [
+    92.0,
+    0,
+    18.0
+   ],
+   "mass": 51.92,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "material_id": "steel",
+   "info": "Unscrew the nut at its base inside the housing."
+  },
+  {
+   "id": "plastic_housing",
+   "component_id": "plastic_housing",
+   "name": "Plastic Housing (Unterteil)",
+   "short": "Plastic Housing (U",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 220.0,
+   "d": 80.0,
+   "h": 78.0,
+   "z": 0,
+   "r": 9.6,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 302.88,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "material_id": "abs",
+   "info": "Look for hidden screws under rubber feet or labels, then pry the clips open."
+  }
+ ]
+}

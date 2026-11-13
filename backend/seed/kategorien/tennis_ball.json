@@ -1,0 +1,151 @@
+{
+ "id": "tennis_ball",
+ "name": "Tennisball",
+ "name_en": "Tennis Ball",
+ "klasse": "Restmüll",
+ "kategorie": true,
+ "platzhalter": true,
+ "photo": null,
+ "erkennung": {
+  "conf": 1.0,
+  "modelle": [
+   [
+    "Tennisball",
+    1.0
+   ]
+  ],
+  "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
+ },
+ "masse": "67 × 67 × 67 mm",
+ "gewicht": "≈ 58 g",
+ "werte": [
+  {
+   "k": "Rohstoffwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "Gebrauchtwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "CO₂ Herstellung",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  }
+ ],
+ "wertvoll": "Je länger ein Gegenstand genutzt wird, desto weniger Rohstoffe und Energie braucht es für Ersatz.",
+ "kreislauf": [
+  {
+   "t": "Rohstoffe",
+   "d": "Erdöl, Metallerze, Holz oder Baumwolle"
+  },
+  {
+   "t": "Herstellung",
+   "d": "Industrielle Fertigung"
+  },
+  {
+   "t": "Nutzung",
+   "d": "Jahre, wenn man es pflegt"
+  },
+  {
+   "t": "Heute oft",
+   "d": "Landet im Restmüll und wird verbrannt",
+   "tone": "bad"
+  },
+  {
+   "t": "Besser",
+   "d": "Reparieren, weitergeben oder Teile in der Werkstatt nutzen",
+   "tone": "good"
+  }
+ ],
+ "entsorgung": {
+  "wo": "Restmüll.",
+  "nicht": "Nicht in die Gelbe Tonne: keine Verpackung",
+  "warnung": "Gut Erhaltenes lieber verschenken oder in der Werkstatt abgeben."
+ },
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "parts": [
+  {
+   "id": "felt_cover_ober",
+   "component_id": "felt_cover",
+   "name": "Felt (Oberteil)",
+   "short": "Felt (Oberteil)",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 67.0,
+   "h": 13.4,
+   "z": 40.2,
+   "explode": [
+    0,
+    0,
+    71.7
+   ],
+   "mass": 14.03,
+   "materials": [
+    [
+     "wolle",
+     100
+    ]
+   ],
+   "material_id": "wool",
+   "info": "Glued to the core; peel it off after cutting."
+  },
+  {
+   "id": "rubber_core",
+   "component_id": "rubber_core",
+   "name": "Core",
+   "short": "Core",
+   "shape": "box",
+   "x": 10.1,
+   "y": 10.1,
+   "w": 46.9,
+   "d": 46.9,
+   "h": 18.09,
+   "z": 8.04,
+   "r": 5.6,
+   "explode": [
+    0,
+    0,
+    59.0
+   ],
+   "mass": 11.23,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "material_id": "rubber",
+   "info": "Cut the ball in half with a saw."
+  },
+  {
+   "id": "felt_cover",
+   "component_id": "felt_cover",
+   "name": "Felt (Unterteil)",
+   "short": "Felt (Unterteil)",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 67.0,
+   "h": 40.2,
+   "z": 0,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 32.74,
+   "materials": [
+    [
+     "wolle",
+     100
+    ]
+   ],
+   "material_id": "wool",
+   "info": "Glued to the core; peel it off after cutting."
+  }
+ ]
+}

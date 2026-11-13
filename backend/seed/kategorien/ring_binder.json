@@ -1,0 +1,183 @@
+{
+ "id": "ring_binder",
+ "name": "Ordner",
+ "name_en": "Ring Binder",
+ "klasse": "Verpackung · Papier",
+ "kategorie": true,
+ "platzhalter": true,
+ "photo": null,
+ "erkennung": {
+  "conf": 1.0,
+  "modelle": [
+   [
+    "Ordner",
+    1.0
+   ]
+  ],
+  "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
+ },
+ "masse": "285 × 320 × 80 mm",
+ "gewicht": "≈ 600 g",
+ "werte": [
+  {
+   "k": "Rohstoffwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "Gebrauchtwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "CO₂ Herstellung",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  }
+ ],
+ "wertvoll": "Sortenrein getrennt wird aus Verpackung wieder Rohstoff. Jede richtig getrennte Verpackung spart neues Material.",
+ "kreislauf": [
+  {
+   "t": "Rohstoffe",
+   "d": "Erdöl, Holz, Bauxit oder Quarzsand"
+  },
+  {
+   "t": "Herstellung",
+   "d": "Wenige Sekunden Formgebung in der Fabrik"
+  },
+  {
+   "t": "Nutzung",
+   "d": "Oft nur Minuten bis Tage"
+  },
+  {
+   "t": "Heute oft",
+   "d": "Falsch getrennt und dann verbrannt",
+   "tone": "bad"
+  },
+  {
+   "t": "Besser",
+   "d": "Richtig trennen oder in der Werkstatt neu formen",
+   "tone": "good"
+  }
+ ],
+ "entsorgung": {
+  "wo": "Papiertonne oder Altpapiercontainer.",
+  "nicht": "Nicht in Restmüll, wenn sauber",
+  "warnung": "Kartons flach falten. Stark verschmutzte Teile in den Restmüll."
+ },
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "parts": [
+  {
+   "id": "pp_cover_film",
+   "component_id": "pp_cover_film",
+   "name": "Film",
+   "short": "Film",
+   "shape": "box",
+   "x": 14.2,
+   "y": 16.0,
+   "w": 256.5,
+   "d": 288.0,
+   "h": 6.4,
+   "z": 64.0,
+   "r": 30.8,
+   "explode": [
+    0,
+    0,
+    384.6
+   ],
+   "mass": 52.94,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "material_id": "pp",
+   "info": "Peel it off the cardboard."
+  },
+  {
+   "id": "cardboard_cover_ober",
+   "component_id": "cardboard_cover",
+   "name": "Cover (Oberteil)",
+   "short": "Cover (Oberteil)",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 285.0,
+   "d": 320.0,
+   "h": 16.0,
+   "z": 48.0,
+   "r": 34.2,
+   "explode": [
+    0,
+    0,
+    263.6
+   ],
+   "mass": 132.35,
+   "materials": [
+    [
+     "papier",
+     100
+    ]
+   ],
+   "material_id": "cardboard",
+   "info": "Peel off any plastic film before putting it in paper waste."
+  },
+  {
+   "id": "ring_mechanism",
+   "component_id": "ring_mechanism",
+   "name": "Ring Mechanism",
+   "short": "Ring Mechanism",
+   "shape": "box",
+   "x": 42.8,
+   "y": 48.0,
+   "w": 199.5,
+   "d": 224.0,
+   "h": 21.6,
+   "z": 9.6,
+   "r": 23.9,
+   "explode": [
+    0,
+    0,
+    159.4
+   ],
+   "mass": 105.88,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "material_id": "steel",
+   "info": "Drill out or pry open the two rivets."
+  },
+  {
+   "id": "cardboard_cover",
+   "component_id": "cardboard_cover",
+   "name": "Cover (Unterteil)",
+   "short": "Cover (Unterteil)",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 285.0,
+   "d": 320.0,
+   "h": 48.0,
+   "z": 0,
+   "r": 34.2,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 308.82,
+   "materials": [
+    [
+     "papier",
+     100
+    ]
+   ],
+   "material_id": "cardboard",
+   "info": "Peel off any plastic film before putting it in paper waste."
+  }
+ ]
+}

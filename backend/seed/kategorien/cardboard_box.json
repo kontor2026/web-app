@@ -1,0 +1,155 @@
+{
+ "id": "cardboard_box",
+ "name": "Pappkarton",
+ "name_en": "Cardboard Box",
+ "klasse": "Verpackung · Papier",
+ "kategorie": true,
+ "platzhalter": true,
+ "photo": null,
+ "erkennung": {
+  "conf": 1.0,
+  "modelle": [
+   [
+    "Pappkarton",
+    1.0
+   ]
+  ],
+  "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
+ },
+ "masse": "400 × 300 × 250 mm",
+ "gewicht": "≈ 600 g",
+ "werte": [
+  {
+   "k": "Rohstoffwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "Gebrauchtwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "CO₂ Herstellung",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  }
+ ],
+ "wertvoll": "Sortenrein getrennt wird aus Verpackung wieder Rohstoff. Jede richtig getrennte Verpackung spart neues Material.",
+ "kreislauf": [
+  {
+   "t": "Rohstoffe",
+   "d": "Erdöl, Holz, Bauxit oder Quarzsand"
+  },
+  {
+   "t": "Herstellung",
+   "d": "Wenige Sekunden Formgebung in der Fabrik"
+  },
+  {
+   "t": "Nutzung",
+   "d": "Oft nur Minuten bis Tage"
+  },
+  {
+   "t": "Heute oft",
+   "d": "Falsch getrennt und dann verbrannt",
+   "tone": "bad"
+  },
+  {
+   "t": "Besser",
+   "d": "Richtig trennen oder in der Werkstatt neu formen",
+   "tone": "good"
+  }
+ ],
+ "entsorgung": {
+  "wo": "Papiertonne oder Altpapiercontainer.",
+  "nicht": "Nicht in Restmüll, wenn sauber",
+  "warnung": "Kartons flach falten. Stark verschmutzte Teile in den Restmüll."
+ },
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "parts": [
+  {
+   "id": "packing_tape",
+   "component_id": "packing_tape",
+   "name": "Packing Tape",
+   "short": "Packing Tape",
+   "shape": "box",
+   "x": 404.0,
+   "y": 60.0,
+   "w": 12.0,
+   "d": 180.0,
+   "h": 150.0,
+   "z": 50.0,
+   "r": 1.4,
+   "explode": [
+    155.0,
+    0,
+    42.0
+   ],
+   "mass": 32.14,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "material_id": "pp",
+   "info": "Peel it off before flattening the box."
+  },
+  {
+   "id": "paper_label",
+   "component_id": "paper_label",
+   "name": "Paper Label",
+   "short": "Paper Label",
+   "shape": "box",
+   "x": 407.0,
+   "y": 60.0,
+   "w": 12.0,
+   "d": 180.0,
+   "h": 150.0,
+   "z": 50.0,
+   "r": 1.4,
+   "explode": [
+    215.0,
+    0,
+    42.0
+   ],
+   "mass": 32.14,
+   "materials": [
+    [
+     "papier",
+     100
+    ]
+   ],
+   "material_id": "paper",
+   "info": "Soak in warm water to peel it off; leaving it on is usually fine."
+  },
+  {
+   "id": "cardboard_box_body",
+   "component_id": "cardboard_box_body",
+   "name": "Box",
+   "short": "Box",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 400.0,
+   "d": 300.0,
+   "h": 250.0,
+   "z": 0.0,
+   "r": 36.0,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 535.71,
+   "materials": [
+    [
+     "papier",
+     100
+    ]
+   ],
+   "material_id": "cardboard",
+   "info": "Flatten it; tear off heavily greasy or food-soiled parts first."
+  }
+ ]
+}

@@ -1,0 +1,179 @@
+{
+ "id": "tea_light",
+ "name": "Teelicht",
+ "name_en": "Tea Light",
+ "klasse": "Verpackung · Gelbe Tonne",
+ "kategorie": true,
+ "platzhalter": true,
+ "photo": null,
+ "erkennung": {
+  "conf": 1.0,
+  "modelle": [
+   [
+    "Teelicht",
+    1.0
+   ]
+  ],
+  "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
+ },
+ "masse": "38 × 38 × 16 mm",
+ "gewicht": "≈ 12 g",
+ "werte": [
+  {
+   "k": "Rohstoffwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "Gebrauchtwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "CO₂ Herstellung",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  }
+ ],
+ "wertvoll": "Sortenrein getrennt wird aus Verpackung wieder Rohstoff. Jede richtig getrennte Verpackung spart neues Material.",
+ "kreislauf": [
+  {
+   "t": "Rohstoffe",
+   "d": "Erdöl, Holz, Bauxit oder Quarzsand"
+  },
+  {
+   "t": "Herstellung",
+   "d": "Wenige Sekunden Formgebung in der Fabrik"
+  },
+  {
+   "t": "Nutzung",
+   "d": "Oft nur Minuten bis Tage"
+  },
+  {
+   "t": "Heute oft",
+   "d": "Falsch getrennt und dann verbrannt",
+   "tone": "bad"
+  },
+  {
+   "t": "Besser",
+   "d": "Richtig trennen oder in der Werkstatt neu formen",
+   "tone": "good"
+  }
+ ],
+ "entsorgung": {
+  "wo": "Gelbe Tonne oder Gelber Sack.",
+  "nicht": "Nicht in Restmüll oder Altpapier",
+  "warnung": "Restentleert reicht, nicht ausspülen. Teile aus verschiedenen Materialien trennen."
+ },
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "parts": [
+  {
+   "id": "wick_holder",
+   "component_id": "wick_holder",
+   "name": "Wick Holder",
+   "short": "Wick Holder",
+   "shape": "box",
+   "x": 20.5,
+   "y": 3.4,
+   "w": 16.0,
+   "d": 16.0,
+   "h": 5.6,
+   "z": 3.2,
+   "r": 1.9,
+   "explode": [
+    0,
+    0,
+    64.0
+   ],
+   "mass": 1.16,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "material_id": "steel",
+   "info": "Small metal disc at the bottom of the wick."
+  },
+  {
+   "id": "cotton_wick",
+   "component_id": "cotton_wick",
+   "name": "Wick",
+   "short": "Wick",
+   "shape": "box",
+   "x": 1.5,
+   "y": 3.4,
+   "w": 16.0,
+   "d": 16.0,
+   "h": 5.6,
+   "z": 3.2,
+   "r": 1.9,
+   "explode": [
+    0,
+    0,
+    43.2
+   ],
+   "mass": 1.16,
+   "materials": [
+    [
+     "baumwolle",
+     100
+    ]
+   ],
+   "material_id": "cotton",
+   "info": "Pull it out of the warm wax."
+  },
+  {
+   "id": "paraffin_wax",
+   "component_id": "paraffin_wax",
+   "name": "Wax",
+   "short": "Wax",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 38.0,
+   "h": 8.0,
+   "z": 8.0,
+   "explode": [
+    0,
+    0,
+    15.2
+   ],
+   "mass": 4.84,
+   "materials": [
+    [
+     "wachs",
+     100
+    ]
+   ],
+   "material_id": "paraffin_wax",
+   "info": "Collect leftovers and melt them into new candles."
+  },
+  {
+   "id": "aluminium_cup",
+   "component_id": "aluminium_cup",
+   "name": "Cup",
+   "short": "Cup",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 38.0,
+   "h": 8.0,
+   "z": 0.0,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 4.84,
+   "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "material_id": "aluminium",
+   "info": "Let the wax cool and push it out from below."
+  }
+ ]
+}

@@ -1,0 +1,151 @@
+{
+ "id": "pill_bottle",
+ "name": "Tablettendose",
+ "name_en": "Pill Bottle",
+ "klasse": "Verpackung · Gelbe Tonne",
+ "kategorie": true,
+ "platzhalter": true,
+ "photo": null,
+ "erkennung": {
+  "conf": 1.0,
+  "modelle": [
+   [
+    "Tablettendose",
+    1.0
+   ]
+  ],
+  "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
+ },
+ "masse": "40 × 40 × 70 mm",
+ "gewicht": "≈ 10 g",
+ "werte": [
+  {
+   "k": "Rohstoffwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "Gebrauchtwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "CO₂ Herstellung",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  }
+ ],
+ "wertvoll": "Sortenrein getrennt wird aus Verpackung wieder Rohstoff. Jede richtig getrennte Verpackung spart neues Material.",
+ "kreislauf": [
+  {
+   "t": "Rohstoffe",
+   "d": "Erdöl, Holz, Bauxit oder Quarzsand"
+  },
+  {
+   "t": "Herstellung",
+   "d": "Wenige Sekunden Formgebung in der Fabrik"
+  },
+  {
+   "t": "Nutzung",
+   "d": "Oft nur Minuten bis Tage"
+  },
+  {
+   "t": "Heute oft",
+   "d": "Falsch getrennt und dann verbrannt",
+   "tone": "bad"
+  },
+  {
+   "t": "Besser",
+   "d": "Richtig trennen oder in der Werkstatt neu formen",
+   "tone": "good"
+  }
+ ],
+ "entsorgung": {
+  "wo": "Gelbe Tonne oder Gelber Sack.",
+  "nicht": "Nicht in Restmüll oder Altpapier",
+  "warnung": "Restentleert reicht, nicht ausspülen. Teile aus verschiedenen Materialien trennen."
+ },
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "parts": [
+  {
+   "id": "child_safe_cap",
+   "component_id": "child_safe_cap",
+   "name": "Child-Safe Cap",
+   "short": "Child-Safe Cap",
+   "shape": "cyl",
+   "x": 11.0,
+   "y": 11.0,
+   "w": 18.0,
+   "h": 8.4,
+   "z": 59.5,
+   "explode": [
+    0,
+    0,
+    16.0
+   ],
+   "mass": 0.54,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "material_id": "pp",
+   "info": "Push down and turn at the same time."
+  },
+  {
+   "id": "paper_label",
+   "component_id": "paper_label",
+   "name": "Paper Label",
+   "short": "Paper Label",
+   "shape": "box",
+   "x": 40.4,
+   "y": 8.0,
+   "w": 1.2,
+   "d": 24.0,
+   "h": 38.5,
+   "z": 14.0,
+   "r": 0.1,
+   "explode": [
+    29.0,
+    0,
+    4.8
+   ],
+   "mass": 0.54,
+   "materials": [
+    [
+     "papier",
+     100
+    ]
+   ],
+   "material_id": "paper",
+   "info": "Soak in warm water to peel it off; leaving it on is usually fine."
+  },
+  {
+   "id": "hdpe_bottle_body",
+   "component_id": "hdpe_bottle_body",
+   "name": "Bottle",
+   "short": "Bottle",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 40.0,
+   "h": 59.5,
+   "z": 0.0,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 8.93,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "material_id": "hdpe",
+   "info": "Rinse out the remaining product."
+  }
+ ]
+}

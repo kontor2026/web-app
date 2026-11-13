@@ -1,0 +1,127 @@
+{
+ "id": "envelope",
+ "name": "Briefumschlag",
+ "name_en": "Window Envelope",
+ "klasse": "Verpackung · Papier",
+ "kategorie": true,
+ "platzhalter": true,
+ "photo": null,
+ "erkennung": {
+  "conf": 1.0,
+  "modelle": [
+   [
+    "Briefumschlag",
+    1.0
+   ]
+  ],
+  "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
+ },
+ "masse": "220 × 110 × 2 mm",
+ "gewicht": "≈ 5 g",
+ "werte": [
+  {
+   "k": "Rohstoffwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "Gebrauchtwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "CO₂ Herstellung",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  }
+ ],
+ "wertvoll": "Sortenrein getrennt wird aus Verpackung wieder Rohstoff. Jede richtig getrennte Verpackung spart neues Material.",
+ "kreislauf": [
+  {
+   "t": "Rohstoffe",
+   "d": "Erdöl, Holz, Bauxit oder Quarzsand"
+  },
+  {
+   "t": "Herstellung",
+   "d": "Wenige Sekunden Formgebung in der Fabrik"
+  },
+  {
+   "t": "Nutzung",
+   "d": "Oft nur Minuten bis Tage"
+  },
+  {
+   "t": "Heute oft",
+   "d": "Falsch getrennt und dann verbrannt",
+   "tone": "bad"
+  },
+  {
+   "t": "Besser",
+   "d": "Richtig trennen oder in der Werkstatt neu formen",
+   "tone": "good"
+  }
+ ],
+ "entsorgung": {
+  "wo": "Papiertonne oder Altpapiercontainer.",
+  "nicht": "Nicht in Restmüll, wenn sauber",
+  "warnung": "Kartons flach falten. Stark verschmutzte Teile in den Restmüll."
+ },
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "parts": [
+  {
+   "id": "window_film",
+   "component_id": "window_film",
+   "name": "Window",
+   "short": "Window",
+   "shape": "box",
+   "x": 11.0,
+   "y": 5.5,
+   "w": 198.0,
+   "d": 99.0,
+   "h": 0.5,
+   "z": 2.0,
+   "r": 11.9,
+   "explode": [
+    0,
+    0,
+    66.0
+   ],
+   "mass": 0.28,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "material_id": "pp",
+   "info": "Tear it out; small windows are usually fine in paper waste."
+  },
+  {
+   "id": "paper_envelope_body",
+   "component_id": "paper_envelope_body",
+   "name": "Envelope",
+   "short": "Envelope",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 220.0,
+   "d": 110.0,
+   "h": 2.0,
+   "z": 0.0,
+   "r": 13.2,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 4.72,
+   "materials": [
+    [
+     "papier",
+     100
+    ]
+   ],
+   "material_id": "paper",
+   "info": "Remove any plastic parts before putting it in paper waste."
+  }
+ ]
+}

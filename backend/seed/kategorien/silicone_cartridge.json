@@ -1,0 +1,123 @@
+{
+ "id": "silicone_cartridge",
+ "name": "Silikonkartusche",
+ "name_en": "Sealant Cartridge",
+ "klasse": "Wertstoffhof",
+ "kategorie": true,
+ "platzhalter": true,
+ "photo": null,
+ "erkennung": {
+  "conf": 1.0,
+  "modelle": [
+   [
+    "Silikonkartusche",
+    1.0
+   ]
+  ],
+  "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
+ },
+ "masse": "50 × 50 × 230 mm",
+ "gewicht": "≈ 350 g",
+ "werte": [
+  {
+   "k": "Rohstoffwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "Gebrauchtwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "CO₂ Herstellung",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  }
+ ],
+ "wertvoll": "Je länger ein Gegenstand genutzt wird, desto weniger Rohstoffe und Energie braucht es für Ersatz.",
+ "kreislauf": [
+  {
+   "t": "Rohstoffe",
+   "d": "Erdöl, Metallerze, Holz oder Baumwolle"
+  },
+  {
+   "t": "Herstellung",
+   "d": "Industrielle Fertigung"
+  },
+  {
+   "t": "Nutzung",
+   "d": "Jahre, wenn man es pflegt"
+  },
+  {
+   "t": "Heute oft",
+   "d": "Landet im Restmüll und wird verbrannt",
+   "tone": "bad"
+  },
+  {
+   "t": "Besser",
+   "d": "Reparieren, weitergeben oder Teile in der Werkstatt nutzen",
+   "tone": "good"
+  }
+ ],
+ "entsorgung": {
+  "wo": "Recyclinghof.",
+  "nicht": "Nicht in die Gelbe Tonne",
+  "warnung": "Reste von Farben, Klebern oder Chemikalien gehören zur Schadstoffsammlung."
+ },
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "parts": [
+  {
+   "id": "pp_nozzle",
+   "component_id": "pp_nozzle",
+   "name": "Nozzle",
+   "short": "Nozzle",
+   "shape": "cyl",
+   "x": 13.8,
+   "y": 13.8,
+   "w": 22.5,
+   "h": 27.6,
+   "z": 195.5,
+   "explode": [
+    0,
+    0,
+    27.6
+   ],
+   "mass": 37.5,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "material_id": "pp",
+   "info": "Unscrew it from the cartridge."
+  },
+  {
+   "id": "hdpe_cartridge_tube",
+   "component_id": "hdpe_cartridge_tube",
+   "name": "Cartridge",
+   "short": "Cartridge",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 50.0,
+   "h": 195.5,
+   "z": 0.0,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 312.5,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "material_id": "hdpe",
+   "info": "Let leftover sealant cure; empty cartridges go in plastic packaging."
+  }
+ ]
+}

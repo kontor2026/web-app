@@ -1,0 +1,155 @@
+{
+ "id": "umbrella",
+ "name": "Regenschirm",
+ "name_en": "Umbrella",
+ "klasse": "Metall · Wertstoffhof",
+ "kategorie": true,
+ "platzhalter": true,
+ "photo": null,
+ "erkennung": {
+  "conf": 1.0,
+  "modelle": [
+   [
+    "Regenschirm",
+    1.0
+   ]
+  ],
+  "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
+ },
+ "masse": "90 × 900 × 90 mm",
+ "gewicht": "≈ 400 g",
+ "werte": [
+  {
+   "k": "Rohstoffwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "Gebrauchtwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "CO₂ Herstellung",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  }
+ ],
+ "wertvoll": "Je länger ein Gegenstand genutzt wird, desto weniger Rohstoffe und Energie braucht es für Ersatz.",
+ "kreislauf": [
+  {
+   "t": "Rohstoffe",
+   "d": "Erdöl, Metallerze, Holz oder Baumwolle"
+  },
+  {
+   "t": "Herstellung",
+   "d": "Industrielle Fertigung"
+  },
+  {
+   "t": "Nutzung",
+   "d": "Jahre, wenn man es pflegt"
+  },
+  {
+   "t": "Heute oft",
+   "d": "Landet im Restmüll und wird verbrannt",
+   "tone": "bad"
+  },
+  {
+   "t": "Besser",
+   "d": "Reparieren, weitergeben oder Teile in der Werkstatt nutzen",
+   "tone": "good"
+  }
+ ],
+ "entsorgung": {
+  "wo": "Recyclinghof (Altmetall).",
+  "nicht": "Nicht in die Gelbe Tonne: keine Verpackung",
+  "warnung": "Scharfe Klingen vorher einwickeln."
+ },
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "parts": [
+  {
+   "id": "polyester_canopy",
+   "component_id": "polyester_canopy",
+   "name": "Canopy",
+   "short": "Canopy",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 90.0,
+   "d": 900.0,
+   "h": 45.0,
+   "z": 45.0,
+   "r": 10.8,
+   "explode": [
+    0,
+    0,
+    198.0
+   ],
+   "mass": 188.68,
+   "materials": [
+    [
+     "polyester",
+     100
+    ]
+   ],
+   "material_id": "polyester",
+   "info": "Unpick the stitches at the rib tips and centre."
+  },
+  {
+   "id": "plastic_handle",
+   "component_id": "plastic_handle",
+   "name": "Handle",
+   "short": "Handle",
+   "shape": "box",
+   "x": 95.4,
+   "y": 45.0,
+   "w": 4.5,
+   "d": 810.0,
+   "h": 7.2,
+   "z": 9.0,
+   "r": 0.5,
+   "explode": [
+    46.5,
+    0,
+    59.4
+   ],
+   "mass": 22.64,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "material_id": "pp",
+   "info": "Usually held by one or two screws."
+  },
+  {
+   "id": "steel_frame",
+   "component_id": "steel_frame",
+   "name": "Frame and Ribs",
+   "short": "Frame and Ribs",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 90.0,
+   "d": 900.0,
+   "h": 45.0,
+   "z": 0.0,
+   "r": 10.8,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 188.68,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "material_id": "steel",
+   "info": "Cut the fabric off at the rib tips."
+  }
+ ]
+}

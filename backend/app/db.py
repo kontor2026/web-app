@@ -37,7 +37,27 @@ def conn():
         _conn.executescript(SCHEMA)
         if not _conn.execute('SELECT 1 FROM objects LIMIT 1').fetchone():
             _seed(_conn)
+        _seed_kategorien(_conn)
     return _conn
+
+
+def _seed_kategorien(c):
+    """Kategorie-Modelle (tools/kategorien/build.py) bei jedem Start nachtragen und aktualisieren.
+    Handgebaute Demo-Objekte gleicher ID (smartphone, laptop) bleiben unangetastet."""
+    ordner = config.SEED / 'kategorien'
+    if not ordner.exists():
+        return
+    for f in sorted(ordner.glob('*.json')):
+        if f.name == 'index.json':
+            continue
+        o = json.loads(f.read_text(encoding='utf-8'))
+        row = c.execute('SELECT status FROM objects WHERE id = ?', (o['id'],)).fetchone()
+        if row and row['status'] != 'kategorie':
+            continue
+        _put_object(c, o, 'kategorie', 'kategorie')
+        for n in (o['name'], o.get('name_en'), o['id']):
+            c.execute('INSERT OR IGNORE INTO aliases VALUES (?, ?)', (key(n), o['id']))
+    c.commit()
 
 
 def _seed(c):

@@ -1,0 +1,183 @@
+{
+ "id": "tape_measure",
+ "name": "Maßband",
+ "name_en": "Tape Measure",
+ "klasse": "Restmüll",
+ "kategorie": true,
+ "platzhalter": true,
+ "photo": null,
+ "erkennung": {
+  "conf": 1.0,
+  "modelle": [
+   [
+    "Maßband",
+    1.0
+   ]
+  ],
+  "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
+ },
+ "masse": "65 × 65 × 30 mm",
+ "gewicht": "≈ 150 g",
+ "werte": [
+  {
+   "k": "Rohstoffwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "Gebrauchtwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "CO₂ Herstellung",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  }
+ ],
+ "wertvoll": "Je länger ein Gegenstand genutzt wird, desto weniger Rohstoffe und Energie braucht es für Ersatz.",
+ "kreislauf": [
+  {
+   "t": "Rohstoffe",
+   "d": "Erdöl, Metallerze, Holz oder Baumwolle"
+  },
+  {
+   "t": "Herstellung",
+   "d": "Industrielle Fertigung"
+  },
+  {
+   "t": "Nutzung",
+   "d": "Jahre, wenn man es pflegt"
+  },
+  {
+   "t": "Heute oft",
+   "d": "Landet im Restmüll und wird verbrannt",
+   "tone": "bad"
+  },
+  {
+   "t": "Besser",
+   "d": "Reparieren, weitergeben oder Teile in der Werkstatt nutzen",
+   "tone": "good"
+  }
+ ],
+ "entsorgung": {
+  "wo": "Restmüll.",
+  "nicht": "Nicht in die Gelbe Tonne: keine Verpackung",
+  "warnung": "Gut Erhaltenes lieber verschenken oder in der Werkstatt abgeben."
+ },
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "parts": [
+  {
+   "id": "plastic_housing_ober",
+   "component_id": "plastic_housing",
+   "name": "Plastic Housing (Oberteil)",
+   "short": "Plastic Housing (O",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 65.0,
+   "d": 65.0,
+   "h": 6.0,
+   "z": 18.0,
+   "r": 7.8,
+   "explode": [
+    0,
+    0,
+    60.1
+   ],
+   "mass": 33.09,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "material_id": "abs",
+   "info": "Look for hidden screws under rubber feet or labels, then pry the clips open."
+  },
+  {
+   "id": "steel_spring",
+   "component_id": "steel_spring",
+   "name": "Spring",
+   "short": "Spring",
+   "shape": "box",
+   "x": 9.8,
+   "y": 9.8,
+   "w": 45.5,
+   "d": 45.5,
+   "h": 8.1,
+   "z": 3.6,
+   "r": 5.5,
+   "explode": [
+    0,
+    0,
+    40.4
+   ],
+   "mass": 26.47,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "material_id": "steel",
+   "info": "Pull it out with pliers."
+  },
+  {
+   "id": "steel_tape",
+   "component_id": "steel_tape",
+   "name": "Tape",
+   "short": "Tape",
+   "shape": "box",
+   "x": 65.7,
+   "y": 13.0,
+   "w": 1.9,
+   "d": 39.0,
+   "h": 18.0,
+   "z": 6.0,
+   "r": 0.2,
+   "explode": [
+    37.8,
+    0,
+    7.8
+   ],
+   "mass": 13.24,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "material_id": "steel",
+   "info": "The coiled spring snaps back hard; open the housing carefully."
+  },
+  {
+   "id": "plastic_housing",
+   "component_id": "plastic_housing",
+   "name": "Plastic Housing (Unterteil)",
+   "short": "Plastic Housing (U",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 65.0,
+   "d": 65.0,
+   "h": 18.0,
+   "z": 0,
+   "r": 7.8,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 77.21,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "material_id": "abs",
+   "info": "Look for hidden screws under rubber feet or labels, then pry the clips open."
+  }
+ ]
+}

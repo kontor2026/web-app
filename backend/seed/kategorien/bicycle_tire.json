@@ -1,0 +1,179 @@
+{
+ "id": "bicycle_tire",
+ "name": "Fahrradreifen",
+ "name_en": "Bicycle Tire",
+ "klasse": "Wertstoffhof",
+ "kategorie": true,
+ "platzhalter": true,
+ "photo": null,
+ "erkennung": {
+  "conf": 1.0,
+  "modelle": [
+   [
+    "Fahrradreifen",
+    1.0
+   ]
+  ],
+  "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
+ },
+ "masse": "650 × 650 × 50 mm",
+ "gewicht": "≈ 700 g",
+ "werte": [
+  {
+   "k": "Rohstoffwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "Gebrauchtwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "CO₂ Herstellung",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  }
+ ],
+ "wertvoll": "Je länger ein Gegenstand genutzt wird, desto weniger Rohstoffe und Energie braucht es für Ersatz.",
+ "kreislauf": [
+  {
+   "t": "Rohstoffe",
+   "d": "Erdöl, Metallerze, Holz oder Baumwolle"
+  },
+  {
+   "t": "Herstellung",
+   "d": "Industrielle Fertigung"
+  },
+  {
+   "t": "Nutzung",
+   "d": "Jahre, wenn man es pflegt"
+  },
+  {
+   "t": "Heute oft",
+   "d": "Landet im Restmüll und wird verbrannt",
+   "tone": "bad"
+  },
+  {
+   "t": "Besser",
+   "d": "Reparieren, weitergeben oder Teile in der Werkstatt nutzen",
+   "tone": "good"
+  }
+ ],
+ "entsorgung": {
+  "wo": "Recyclinghof.",
+  "nicht": "Nicht in die Gelbe Tonne",
+  "warnung": "Reste von Farben, Klebern oder Chemikalien gehören zur Schadstoffsammlung."
+ },
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "parts": [
+  {
+   "id": "tire_rubber_ober",
+   "component_id": "tire_rubber",
+   "name": "Tread (Oberteil)",
+   "short": "Tread (Oberteil)",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 650.0,
+   "h": 10.0,
+   "z": 30.0,
+   "explode": [
+    0,
+    0,
+    807.0
+   ],
+   "mass": 141.89,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "material_id": "rubber",
+   "info": "Take the tire to a bike shop or tire collection point."
+  },
+  {
+   "id": "tire_casing_fabric",
+   "component_id": "tire_casing_fabric",
+   "name": "Casing",
+   "short": "Casing",
+   "shape": "box",
+   "x": 351.0,
+   "y": 58.5,
+   "w": 273.0,
+   "d": 273.0,
+   "h": 13.5,
+   "z": 6.0,
+   "r": 32.8,
+   "explode": [
+    0,
+    0,
+    557.5
+   ],
+   "mass": 113.51,
+   "materials": [
+    [
+     "nylon",
+     100
+    ]
+   ],
+   "material_id": "nylon",
+   "info": "Vulcanised into the rubber; it cannot be separated by hand."
+  },
+  {
+   "id": "steel_bead_wire",
+   "component_id": "steel_bead_wire",
+   "name": "Bead Wire",
+   "short": "Bead Wire",
+   "shape": "box",
+   "x": 26.0,
+   "y": 58.5,
+   "w": 273.0,
+   "d": 273.0,
+   "h": 13.5,
+   "z": 6.0,
+   "r": 32.8,
+   "explode": [
+    0,
+    0,
+    284.0
+   ],
+   "mass": 113.51,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "material_id": "steel",
+   "info": "Cut the rubber away along the rim edge."
+  },
+  {
+   "id": "tire_rubber",
+   "component_id": "tire_rubber",
+   "name": "Tread (Unterteil)",
+   "short": "Tread (Unterteil)",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 650.0,
+   "h": 30.0,
+   "z": 0,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 331.08,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "material_id": "rubber",
+   "info": "Take the tire to a bike shop or tire collection point."
+  }
+ ]
+}

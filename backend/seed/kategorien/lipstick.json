@@ -1,0 +1,125 @@
+{
+ "id": "lipstick",
+ "name": "Lippenstift",
+ "name_en": "Lipstick",
+ "klasse": "Verpackung · Gelbe Tonne",
+ "kategorie": true,
+ "platzhalter": true,
+ "photo": null,
+ "erkennung": {
+  "conf": 1.0,
+  "modelle": [
+   [
+    "Lippenstift",
+    1.0
+   ]
+  ],
+  "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
+ },
+ "masse": "20 × 20 × 80 mm",
+ "gewicht": "≈ 20 g",
+ "werte": [
+  {
+   "k": "Rohstoffwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "Gebrauchtwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "CO₂ Herstellung",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  }
+ ],
+ "wertvoll": "Sortenrein getrennt wird aus Verpackung wieder Rohstoff. Jede richtig getrennte Verpackung spart neues Material.",
+ "kreislauf": [
+  {
+   "t": "Rohstoffe",
+   "d": "Erdöl, Holz, Bauxit oder Quarzsand"
+  },
+  {
+   "t": "Herstellung",
+   "d": "Wenige Sekunden Formgebung in der Fabrik"
+  },
+  {
+   "t": "Nutzung",
+   "d": "Oft nur Minuten bis Tage"
+  },
+  {
+   "t": "Heute oft",
+   "d": "Falsch getrennt und dann verbrannt",
+   "tone": "bad"
+  },
+  {
+   "t": "Besser",
+   "d": "Richtig trennen oder in der Werkstatt neu formen",
+   "tone": "good"
+  }
+ ],
+ "entsorgung": {
+  "wo": "Gelbe Tonne oder Gelber Sack.",
+  "nicht": "Nicht in Restmüll oder Altpapier",
+  "warnung": "Restentleert reicht, nicht ausspülen. Teile aus verschiedenen Materialien trennen."
+ },
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "parts": [
+  {
+   "id": "lipstick_bullet",
+   "component_id": "lipstick_bullet",
+   "name": "Lipstick",
+   "short": "Lipstick",
+   "shape": "box",
+   "x": 3.0,
+   "y": 3.0,
+   "w": 14.0,
+   "d": 14.0,
+   "h": 28.0,
+   "z": 16.0,
+   "r": 1.7,
+   "explode": [
+    0,
+    0,
+    76.0
+   ],
+   "mass": 3.87,
+   "materials": [
+    [
+     "wachs",
+     100
+    ]
+   ],
+   "material_id": "paraffin_wax",
+   "info": "Scrape it out into residual waste."
+  },
+  {
+   "id": "lipstick_case",
+   "component_id": "lipstick_case",
+   "name": "Case",
+   "short": "Case",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 20.0,
+   "h": 80.0,
+   "z": 0.0,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 16.13,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "material_id": "pp",
+   "info": "Scrape out remaining product with a cotton swab."
+  }
+ ]
+}

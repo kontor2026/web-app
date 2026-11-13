@@ -1,0 +1,149 @@
+{
+ "id": "spray_can",
+ "name": "Spraydose",
+ "name_en": "Spray Can",
+ "klasse": "Verpackung · Gelbe Tonne",
+ "kategorie": true,
+ "platzhalter": true,
+ "photo": null,
+ "erkennung": {
+  "conf": 1.0,
+  "modelle": [
+   [
+    "Spraydose",
+    1.0
+   ]
+  ],
+  "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
+ },
+ "masse": "53 × 53 × 190 mm",
+ "gewicht": "≈ 60 g",
+ "werte": [
+  {
+   "k": "Rohstoffwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "Gebrauchtwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "CO₂ Herstellung",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  }
+ ],
+ "wertvoll": "Sortenrein getrennt wird aus Verpackung wieder Rohstoff. Jede richtig getrennte Verpackung spart neues Material.",
+ "kreislauf": [
+  {
+   "t": "Rohstoffe",
+   "d": "Erdöl, Holz, Bauxit oder Quarzsand"
+  },
+  {
+   "t": "Herstellung",
+   "d": "Wenige Sekunden Formgebung in der Fabrik"
+  },
+  {
+   "t": "Nutzung",
+   "d": "Oft nur Minuten bis Tage"
+  },
+  {
+   "t": "Heute oft",
+   "d": "Falsch getrennt und dann verbrannt",
+   "tone": "bad"
+  },
+  {
+   "t": "Besser",
+   "d": "Richtig trennen oder in der Werkstatt neu formen",
+   "tone": "good"
+  }
+ ],
+ "entsorgung": {
+  "wo": "Gelbe Tonne oder Gelber Sack.",
+  "nicht": "Nicht in Restmüll oder Altpapier",
+  "warnung": "Restentleert reicht, nicht ausspülen. Teile aus verschiedenen Materialien trennen."
+ },
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "parts": [
+  {
+   "id": "pp_spray_cap",
+   "component_id": "pp_spray_cap",
+   "name": "Cap",
+   "short": "Cap",
+   "shape": "cyl",
+   "x": 25.2,
+   "y": 14.6,
+   "w": 23.9,
+   "h": 22.8,
+   "z": 161.5,
+   "explode": [
+    0,
+    0,
+    68.4
+   ],
+   "mass": 3.21,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "material_id": "pp",
+   "info": "Pull it off the nozzle."
+  },
+  {
+   "id": "spray_valve",
+   "component_id": "spray_valve",
+   "name": "Valve",
+   "short": "Valve",
+   "shape": "cyl",
+   "x": 14.6,
+   "y": 14.6,
+   "w": 23.9,
+   "h": 22.8,
+   "z": 161.5,
+   "explode": [
+    0,
+    0,
+    22.8
+   ],
+   "mass": 3.21,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "material_id": "steel",
+   "info": "Crimped onto the can; do not try to remove it."
+  },
+  {
+   "id": "aluminium_spray_can_body",
+   "component_id": "aluminium_spray_can_body",
+   "name": "Can",
+   "short": "Can",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 53.0,
+   "h": 161.5,
+   "z": 0.0,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 53.57,
+   "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "material_id": "aluminium",
+   "info": "Only recycle when completely empty; never pierce or crush a spray can."
+  }
+ ]
+}

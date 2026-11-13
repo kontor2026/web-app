@@ -1,0 +1,149 @@
+{
+ "id": "football",
+ "name": "Fußball",
+ "name_en": "Football",
+ "klasse": "Restmüll",
+ "kategorie": true,
+ "platzhalter": true,
+ "photo": null,
+ "erkennung": {
+  "conf": 1.0,
+  "modelle": [
+   [
+    "Fußball",
+    1.0
+   ]
+  ],
+  "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
+ },
+ "masse": "220 × 220 × 220 mm",
+ "gewicht": "≈ 430 g",
+ "werte": [
+  {
+   "k": "Rohstoffwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "Gebrauchtwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "CO₂ Herstellung",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  }
+ ],
+ "wertvoll": "Je länger ein Gegenstand genutzt wird, desto weniger Rohstoffe und Energie braucht es für Ersatz.",
+ "kreislauf": [
+  {
+   "t": "Rohstoffe",
+   "d": "Erdöl, Metallerze, Holz oder Baumwolle"
+  },
+  {
+   "t": "Herstellung",
+   "d": "Industrielle Fertigung"
+  },
+  {
+   "t": "Nutzung",
+   "d": "Jahre, wenn man es pflegt"
+  },
+  {
+   "t": "Heute oft",
+   "d": "Landet im Restmüll und wird verbrannt",
+   "tone": "bad"
+  },
+  {
+   "t": "Besser",
+   "d": "Reparieren, weitergeben oder Teile in der Werkstatt nutzen",
+   "tone": "good"
+  }
+ ],
+ "entsorgung": {
+  "wo": "Restmüll.",
+  "nicht": "Nicht in die Gelbe Tonne: keine Verpackung",
+  "warnung": "Gut Erhaltenes lieber verschenken oder in der Werkstatt abgeben."
+ },
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "parts": [
+  {
+   "id": "pu_cover_ober",
+   "component_id": "pu_cover",
+   "name": "Cover (Oberteil)",
+   "short": "Cover (Oberteil)",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 220.0,
+   "h": 44.0,
+   "z": 132.0,
+   "explode": [
+    0,
+    0,
+    235.4
+   ],
+   "mass": 104.03,
+   "materials": [
+    [
+     "schaum",
+     100
+    ]
+   ],
+   "material_id": "polyurethane",
+   "info": "Cut along the seams to free the panels."
+  },
+  {
+   "id": "latex_bladder",
+   "component_id": "latex_bladder",
+   "name": "Bladder",
+   "short": "Bladder",
+   "shape": "cyl",
+   "x": 33.0,
+   "y": 33.0,
+   "w": 154.0,
+   "h": 59.4,
+   "z": 26.4,
+   "explode": [
+    0,
+    0,
+    193.6
+   ],
+   "mass": 83.23,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "material_id": "rubber",
+   "info": "Pull it out through a cut seam."
+  },
+  {
+   "id": "pu_cover",
+   "component_id": "pu_cover",
+   "name": "Cover (Unterteil)",
+   "short": "Cover (Unterteil)",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 220.0,
+   "h": 132.0,
+   "z": 0,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 242.74,
+   "materials": [
+    [
+     "schaum",
+     100
+    ]
+   ],
+   "material_id": "polyurethane",
+   "info": "Cut along the seams to free the panels."
+  }
+ ]
+}

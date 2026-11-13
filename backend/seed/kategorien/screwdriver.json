@@ -1,0 +1,127 @@
+{
+ "id": "screwdriver",
+ "name": "Schraubendreher",
+ "name_en": "Screwdriver",
+ "klasse": "Metall · Wertstoffhof",
+ "kategorie": true,
+ "platzhalter": true,
+ "photo": null,
+ "erkennung": {
+  "conf": 1.0,
+  "modelle": [
+   [
+    "Schraubendreher",
+    1.0
+   ]
+  ],
+  "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
+ },
+ "masse": "30 × 220 × 30 mm",
+ "gewicht": "≈ 100 g",
+ "werte": [
+  {
+   "k": "Rohstoffwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "Gebrauchtwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "CO₂ Herstellung",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  }
+ ],
+ "wertvoll": "Je länger ein Gegenstand genutzt wird, desto weniger Rohstoffe und Energie braucht es für Ersatz.",
+ "kreislauf": [
+  {
+   "t": "Rohstoffe",
+   "d": "Erdöl, Metallerze, Holz oder Baumwolle"
+  },
+  {
+   "t": "Herstellung",
+   "d": "Industrielle Fertigung"
+  },
+  {
+   "t": "Nutzung",
+   "d": "Jahre, wenn man es pflegt"
+  },
+  {
+   "t": "Heute oft",
+   "d": "Landet im Restmüll und wird verbrannt",
+   "tone": "bad"
+  },
+  {
+   "t": "Besser",
+   "d": "Reparieren, weitergeben oder Teile in der Werkstatt nutzen",
+   "tone": "good"
+  }
+ ],
+ "entsorgung": {
+  "wo": "Recyclinghof (Altmetall).",
+  "nicht": "Nicht in die Gelbe Tonne: keine Verpackung",
+  "warnung": "Scharfe Klingen vorher einwickeln."
+ },
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "parts": [
+  {
+   "id": "plastic_handle",
+   "component_id": "plastic_handle",
+   "name": "Handle",
+   "short": "Handle",
+   "shape": "box",
+   "x": 31.8,
+   "y": 11.0,
+   "w": 3.0,
+   "d": 198.0,
+   "h": 3.0,
+   "z": 3.0,
+   "r": 0.4,
+   "explode": [
+    25.5,
+    0,
+    15.0
+   ],
+   "mass": 10.71,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "material_id": "pp",
+   "info": "Usually held by one or two screws."
+  },
+  {
+   "id": "steel_shaft",
+   "component_id": "steel_shaft",
+   "name": "Shaft",
+   "short": "Shaft",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 30.0,
+   "d": 220.0,
+   "h": 30.0,
+   "z": 0.0,
+   "r": 3.6,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 89.29,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "material_id": "steel",
+   "info": "Moulded into the handle; cut the handle off with a saw."
+  }
+ ]
+}

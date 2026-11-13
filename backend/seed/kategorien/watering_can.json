@@ -1,0 +1,127 @@
+{
+ "id": "watering_can",
+ "name": "Gießkanne",
+ "name_en": "Watering Can",
+ "klasse": "Wertstoffhof",
+ "kategorie": true,
+ "platzhalter": true,
+ "photo": null,
+ "erkennung": {
+  "conf": 1.0,
+  "modelle": [
+   [
+    "Gießkanne",
+    1.0
+   ]
+  ],
+  "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
+ },
+ "masse": "450 × 150 × 300 mm",
+ "gewicht": "≈ 600 g",
+ "werte": [
+  {
+   "k": "Rohstoffwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "Gebrauchtwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "CO₂ Herstellung",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  }
+ ],
+ "wertvoll": "Je länger ein Gegenstand genutzt wird, desto weniger Rohstoffe und Energie braucht es für Ersatz.",
+ "kreislauf": [
+  {
+   "t": "Rohstoffe",
+   "d": "Erdöl, Metallerze, Holz oder Baumwolle"
+  },
+  {
+   "t": "Herstellung",
+   "d": "Industrielle Fertigung"
+  },
+  {
+   "t": "Nutzung",
+   "d": "Jahre, wenn man es pflegt"
+  },
+  {
+   "t": "Heute oft",
+   "d": "Landet im Restmüll und wird verbrannt",
+   "tone": "bad"
+  },
+  {
+   "t": "Besser",
+   "d": "Reparieren, weitergeben oder Teile in der Werkstatt nutzen",
+   "tone": "good"
+  }
+ ],
+ "entsorgung": {
+  "wo": "Recyclinghof.",
+  "nicht": "Nicht in die Gelbe Tonne",
+  "warnung": "Reste von Farben, Klebern oder Chemikalien gehören zur Schadstoffsammlung."
+ },
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "parts": [
+  {
+   "id": "watering_rose",
+   "component_id": "watering_rose",
+   "name": "Rose",
+   "short": "Rose",
+   "shape": "box",
+   "x": 208.5,
+   "y": 58.5,
+   "w": 33.0,
+   "d": 33.0,
+   "h": 45.0,
+   "z": 300.0,
+   "r": 4.0,
+   "explode": [
+    0,
+    0,
+    120.0
+   ],
+   "mass": 33.96,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "material_id": "pp",
+   "info": "Pull it off the spout."
+  },
+  {
+   "id": "watering_can_body",
+   "component_id": "watering_can_body",
+   "name": "Can",
+   "short": "Can",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 450.0,
+   "d": 150.0,
+   "h": 300.0,
+   "z": 0.0,
+   "r": 18.0,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 566.04,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "material_id": "hdpe",
+   "info": "Pull off the rose first."
+  }
+ ]
+}

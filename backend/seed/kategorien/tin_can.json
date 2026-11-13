@@ -1,0 +1,151 @@
+{
+ "id": "tin_can",
+ "name": "Konservendose",
+ "name_en": "Tin Can",
+ "klasse": "Verpackung · Gelbe Tonne",
+ "kategorie": true,
+ "platzhalter": true,
+ "photo": null,
+ "erkennung": {
+  "conf": 1.0,
+  "modelle": [
+   [
+    "Konservendose",
+    1.0
+   ]
+  ],
+  "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
+ },
+ "masse": "73 × 73 × 110 mm",
+ "gewicht": "≈ 55 g",
+ "werte": [
+  {
+   "k": "Rohstoffwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "Gebrauchtwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "CO₂ Herstellung",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  }
+ ],
+ "wertvoll": "Sortenrein getrennt wird aus Verpackung wieder Rohstoff. Jede richtig getrennte Verpackung spart neues Material.",
+ "kreislauf": [
+  {
+   "t": "Rohstoffe",
+   "d": "Erdöl, Holz, Bauxit oder Quarzsand"
+  },
+  {
+   "t": "Herstellung",
+   "d": "Wenige Sekunden Formgebung in der Fabrik"
+  },
+  {
+   "t": "Nutzung",
+   "d": "Oft nur Minuten bis Tage"
+  },
+  {
+   "t": "Heute oft",
+   "d": "Falsch getrennt und dann verbrannt",
+   "tone": "bad"
+  },
+  {
+   "t": "Besser",
+   "d": "Richtig trennen oder in der Werkstatt neu formen",
+   "tone": "good"
+  }
+ ],
+ "entsorgung": {
+  "wo": "Gelbe Tonne oder Gelber Sack.",
+  "nicht": "Nicht in Restmüll oder Altpapier",
+  "warnung": "Restentleert reicht, nicht ausspülen. Teile aus verschiedenen Materialien trennen."
+ },
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "parts": [
+  {
+   "id": "steel_can_lid",
+   "component_id": "steel_can_lid",
+   "name": "Lid",
+   "short": "Lid",
+   "shape": "cyl",
+   "x": 20.1,
+   "y": 20.1,
+   "w": 32.9,
+   "h": 13.2,
+   "z": 93.5,
+   "explode": [
+    0,
+    0,
+    29.2
+   ],
+   "mass": 2.95,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "material_id": "steel",
+   "info": "Push the sharp lid into the empty can before recycling."
+  },
+  {
+   "id": "paper_label",
+   "component_id": "paper_label",
+   "name": "Paper Label",
+   "short": "Paper Label",
+   "shape": "box",
+   "x": 73.7,
+   "y": 14.6,
+   "w": 2.2,
+   "d": 43.8,
+   "h": 60.5,
+   "z": 22.0,
+   "r": 0.3,
+   "explode": [
+    40.5,
+    0,
+    8.8
+   ],
+   "mass": 2.95,
+   "materials": [
+    [
+     "papier",
+     100
+    ]
+   ],
+   "material_id": "paper",
+   "info": "Soak in warm water to peel it off; leaving it on is usually fine."
+  },
+  {
+   "id": "steel_can_body",
+   "component_id": "steel_can_body",
+   "name": "Can",
+   "short": "Can",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 73.0,
+   "h": 93.5,
+   "z": 0.0,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 49.11,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "material_id": "steel",
+   "info": "Rinse it; check with a magnet to tell it apart from aluminium."
+  }
+ ]
+}

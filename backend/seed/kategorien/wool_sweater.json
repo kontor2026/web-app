@@ -1,0 +1,127 @@
+{
+ "id": "wool_sweater",
+ "name": "Wollpullover",
+ "name_en": "Wool Sweater",
+ "klasse": "Textilien und Schuhe",
+ "kategorie": true,
+ "platzhalter": true,
+ "photo": null,
+ "erkennung": {
+  "conf": 1.0,
+  "modelle": [
+   [
+    "Wollpullover",
+    1.0
+   ]
+  ],
+  "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
+ },
+ "masse": "350 × 400 × 40 mm",
+ "gewicht": "≈ 500 g",
+ "werte": [
+  {
+   "k": "Rohstoffwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "Gebrauchtwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "CO₂ Herstellung",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  }
+ ],
+ "wertvoll": "Je länger ein Gegenstand genutzt wird, desto weniger Rohstoffe und Energie braucht es für Ersatz.",
+ "kreislauf": [
+  {
+   "t": "Rohstoffe",
+   "d": "Erdöl, Metallerze, Holz oder Baumwolle"
+  },
+  {
+   "t": "Herstellung",
+   "d": "Industrielle Fertigung"
+  },
+  {
+   "t": "Nutzung",
+   "d": "Jahre, wenn man es pflegt"
+  },
+  {
+   "t": "Heute oft",
+   "d": "Landet im Restmüll und wird verbrannt",
+   "tone": "bad"
+  },
+  {
+   "t": "Besser",
+   "d": "Reparieren, weitergeben oder Teile in der Werkstatt nutzen",
+   "tone": "good"
+  }
+ ],
+ "entsorgung": {
+  "wo": "Altkleidercontainer oder Recyclinghof, sauber und in einem Beutel.",
+  "nicht": "Tragbares nicht in den Restmüll",
+  "warnung": "Schuhe paarweise zusammenbinden."
+ },
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "parts": [
+  {
+   "id": "care_label",
+   "component_id": "care_label",
+   "name": "Care Label",
+   "short": "Care Label",
+   "shape": "box",
+   "x": 353.5,
+   "y": 80.0,
+   "w": 10.5,
+   "d": 240.0,
+   "h": 24.0,
+   "z": 8.0,
+   "r": 1.3,
+   "explode": [
+    137.5,
+    0,
+    45.0
+   ],
+   "mass": 53.57,
+   "materials": [
+    [
+     "polyester",
+     100
+    ]
+   ],
+   "material_id": "polyester",
+   "info": "Cut it off at the seam."
+  },
+  {
+   "id": "wool_fabric",
+   "component_id": "wool_fabric",
+   "name": "Knit",
+   "short": "Knit",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 350.0,
+   "d": 400.0,
+   "h": 40.0,
+   "z": 0.0,
+   "r": 42.0,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 446.43,
+   "materials": [
+    [
+     "wolle",
+     100
+    ]
+   ],
+   "material_id": "wool",
+   "info": "Donate it if wearable; otherwise unravel it to reuse the yarn."
+  }
+ ]
+}

@@ -1,0 +1,359 @@
+{
+ "id": "desktop_pc",
+ "name": "Desktop-PC",
+ "name_en": "Desktop PC",
+ "klasse": "Elektroschrott · Kleingerät",
+ "kategorie": true,
+ "platzhalter": true,
+ "photo": null,
+ "erkennung": {
+  "conf": 1.0,
+  "modelle": [
+   [
+    "Desktop-PC",
+    1.0
+   ]
+  ],
+  "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
+ },
+ "masse": "200 × 420 × 450 mm",
+ "gewicht": "≈ 8 kg",
+ "werte": [
+  {
+   "k": "Rohstoffwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "Gebrauchtwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "CO₂ Herstellung",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  }
+ ],
+ "wertvoll": "Elektrogeräte enthalten Metalle wie Kupfer, Gold und Kobalt, die sich zurückgewinnen lassen. Noch mehr spart, wer sie repariert und weiternutzt.",
+ "kreislauf": [
+  {
+   "t": "Rohstoffe",
+   "d": "Erze für Kupfer, Gold, Zinn und Seltene Erden aus vielen Ländern"
+  },
+  {
+   "t": "Herstellung",
+   "d": "Platinen und Akkus in Asien, sehr energieintensiv"
+  },
+  {
+   "t": "Nutzung",
+   "d": "Oft nur wenige Jahre"
+  },
+  {
+   "t": "Heute oft",
+   "d": "Liegt in der Schublade oder landet im Restmüll",
+   "tone": "bad"
+  },
+  {
+   "t": "Besser",
+   "d": "Reparieren, weitergeben, dann Elektro-Sammlung",
+   "tone": "good"
+  }
+ ],
+ "entsorgung": {
+  "wo": "Recyclinghof oder Rücknahme im Handel. Kleine Elektrogeräte bis 25 cm nehmen auch große Supermärkte kostenlos zurück.",
+  "nicht": "Nicht in Restmüll oder Gelbe Tonne",
+  "warnung": "Kabel und Stecker dranlassen."
+ },
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "parts": [
+  {
+   "id": "plastic_front_panel",
+   "component_id": "plastic_front_panel",
+   "name": "Front Panel",
+   "short": "Front Panel",
+   "shape": "box",
+   "x": 4.0,
+   "y": 8.4,
+   "w": 192.0,
+   "d": 403.2,
+   "h": 27.0,
+   "z": 360.0,
+   "r": 23.0,
+   "explode": [
+    0,
+    0,
+    1230.0
+   ],
+   "mass": 1230.77,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "material_id": "abs",
+   "info": "Pull firmly at the bottom edge; it is held by plastic clips."
+  },
+  {
+   "id": "steel_pc_case_ober",
+   "component_id": "steel_pc_case",
+   "name": "Case (Oberteil)",
+   "short": "Case (Oberteil)",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 200.0,
+   "d": 420.0,
+   "h": 90.0,
+   "z": 270.0,
+   "r": 24.0,
+   "explode": [
+    0,
+    0,
+    1106.0
+   ],
+   "mass": 923.08,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "material_id": "steel",
+   "info": "Remove the side panel thumbscrews, then unscrew all drives and boards; the empty case is sheet steel."
+  },
+  {
+   "id": "cpu_cooler",
+   "component_id": "cpu_cooler",
+   "name": "CPU Cooler",
+   "short": "CPU Cooler",
+   "shape": "box",
+   "x": 108.0,
+   "y": 226.8,
+   "w": 84.0,
+   "d": 176.4,
+   "h": 121.5,
+   "z": 54.0,
+   "r": 10.1,
+   "explode": [
+    0,
+    0,
+    1076.5
+   ],
+   "mass": 738.46,
+   "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "material_id": "aluminium",
+   "info": "Release the clips or screws, twist gently to break the thermal paste, then wipe it clean."
+  },
+  {
+   "id": "hard_drive",
+   "component_id": "hard_drive",
+   "name": "Hard Drive",
+   "short": "Hard Drive",
+   "shape": "box",
+   "x": 8.0,
+   "y": 226.8,
+   "w": 84.0,
+   "d": 176.4,
+   "h": 121.5,
+   "z": 54.0,
+   "r": 10.1,
+   "explode": [
+    0,
+    0,
+    831.0
+   ],
+   "mass": 738.46,
+   "materials": [
+    [
+     "chip",
+     30
+    ],
+    [
+     "kupfer",
+     30
+    ],
+    [
+     "pcabs",
+     25
+    ],
+    [
+     "stahl",
+     15
+    ]
+   ],
+   "material_id": "mixed_electronics",
+   "info": "Unscrew it from the drive bay; wipe or physically destroy it to protect your data."
+  },
+  {
+   "id": "power_supply_unit",
+   "component_id": "power_supply_unit",
+   "name": "Power Supply",
+   "short": "Power Supply",
+   "shape": "box",
+   "x": 108.0,
+   "y": 37.8,
+   "w": 84.0,
+   "d": 176.4,
+   "h": 121.5,
+   "z": 54.0,
+   "r": 10.1,
+   "explode": [
+    0,
+    0,
+    585.5
+   ],
+   "mass": 738.46,
+   "materials": [
+    [
+     "chip",
+     30
+    ],
+    [
+     "kupfer",
+     30
+    ],
+    [
+     "pcabs",
+     25
+    ],
+    [
+     "stahl",
+     15
+    ]
+   ],
+   "material_id": "mixed_electronics",
+   "info": "Unscrew it from the case; do not open it, the capacitors can hold a charge."
+  },
+  {
+   "id": "circuit_board",
+   "component_id": "circuit_board",
+   "name": "Circuit Board",
+   "short": "Circuit Board",
+   "shape": "box",
+   "x": 8.0,
+   "y": 37.8,
+   "w": 84.0,
+   "d": 176.4,
+   "h": 121.5,
+   "z": 54.0,
+   "r": 10.1,
+   "explode": [
+    0,
+    0,
+    340.0
+   ],
+   "mass": 738.46,
+   "materials": [
+    [
+     "fr4",
+     55
+    ],
+    [
+     "kupfer",
+     20
+    ],
+    [
+     "chip",
+     15
+    ],
+    [
+     "lot",
+     10
+    ]
+   ],
+   "material_id": "pcb",
+   "info": "Unscrew and unplug all ribbon cables; hand in at an e-waste collection point."
+  },
+  {
+   "id": "cable_copper_core",
+   "component_id": "cable_copper_core",
+   "name": "Cable Wires",
+   "short": "Cable Wires",
+   "shape": "box",
+   "x": 212.0,
+   "y": 21.0,
+   "w": 10.0,
+   "d": 378.0,
+   "h": 36.0,
+   "z": 45.0,
+   "r": 1.2,
+   "explode": [
+    85.0,
+    0,
+    37.2
+   ],
+   "mass": 369.23,
+   "materials": [
+    [
+     "kupfer",
+     100
+    ]
+   ],
+   "material_id": "copper",
+   "info": "Cut off the plug and strip the insulation to free the copper."
+  },
+  {
+   "id": "cable_insulation",
+   "component_id": "cable_insulation",
+   "name": "Cable Insulation",
+   "short": "Cable Insulation",
+   "shape": "box",
+   "x": 232.0,
+   "y": 21.0,
+   "w": 10.0,
+   "d": 378.0,
+   "h": 36.0,
+   "z": 45.0,
+   "r": 1.2,
+   "explode": [
+    115.0,
+    0,
+    37.2
+   ],
+   "mass": 369.23,
+   "materials": [
+    [
+     "pvc",
+     100
+    ]
+   ],
+   "material_id": "pvc",
+   "info": "Slit lengthwise with a cable stripper to separate it from the wires."
+  },
+  {
+   "id": "steel_pc_case",
+   "component_id": "steel_pc_case",
+   "name": "Case (Unterteil)",
+   "short": "Case (Unterteil)",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 200.0,
+   "d": 420.0,
+   "h": 270.0,
+   "z": 0,
+   "r": 24.0,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 2153.85,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "material_id": "steel",
+   "info": "Remove the side panel thumbscrews, then unscrew all drives and boards; the empty case is sheet steel."
+  }
+ ]
+}

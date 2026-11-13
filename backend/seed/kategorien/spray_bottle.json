@@ -1,0 +1,155 @@
+{
+ "id": "spray_bottle",
+ "name": "Sprühflasche",
+ "name_en": "Spray Bottle",
+ "klasse": "Verpackung · Gelbe Tonne",
+ "kategorie": true,
+ "platzhalter": true,
+ "photo": null,
+ "erkennung": {
+  "conf": 1.0,
+  "modelle": [
+   [
+    "Sprühflasche",
+    1.0
+   ]
+  ],
+  "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
+ },
+ "masse": "100 × 50 × 260 mm",
+ "gewicht": "≈ 60 g",
+ "werte": [
+  {
+   "k": "Rohstoffwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "Gebrauchtwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "CO₂ Herstellung",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  }
+ ],
+ "wertvoll": "Sortenrein getrennt wird aus Verpackung wieder Rohstoff. Jede richtig getrennte Verpackung spart neues Material.",
+ "kreislauf": [
+  {
+   "t": "Rohstoffe",
+   "d": "Erdöl, Holz, Bauxit oder Quarzsand"
+  },
+  {
+   "t": "Herstellung",
+   "d": "Wenige Sekunden Formgebung in der Fabrik"
+  },
+  {
+   "t": "Nutzung",
+   "d": "Oft nur Minuten bis Tage"
+  },
+  {
+   "t": "Heute oft",
+   "d": "Falsch getrennt und dann verbrannt",
+   "tone": "bad"
+  },
+  {
+   "t": "Besser",
+   "d": "Richtig trennen oder in der Werkstatt neu formen",
+   "tone": "good"
+  }
+ ],
+ "entsorgung": {
+  "wo": "Gelbe Tonne oder Gelber Sack.",
+  "nicht": "Nicht in Restmüll oder Altpapier",
+  "warnung": "Restentleert reicht, nicht ausspülen. Teile aus verschiedenen Materialien trennen."
+ },
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "parts": [
+  {
+   "id": "trigger_sprayer",
+   "component_id": "trigger_sprayer",
+   "name": "Trigger Sprayer",
+   "short": "Trigger Sprayer",
+   "shape": "box",
+   "x": 38.8,
+   "y": 13.8,
+   "w": 22.5,
+   "d": 22.5,
+   "h": 31.2,
+   "z": 221.0,
+   "r": 2.7,
+   "explode": [
+    0,
+    0,
+    31.2
+   ],
+   "mass": 3.21,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "material_id": "pp",
+   "info": "Unscrew it; the spring and dip tube stay attached, so keep it as one piece."
+  },
+  {
+   "id": "plastic_label",
+   "component_id": "plastic_label",
+   "name": "Label",
+   "short": "Label",
+   "shape": "box",
+   "x": 101.0,
+   "y": 10.0,
+   "w": 3.0,
+   "d": 30.0,
+   "h": 143.0,
+   "z": 52.0,
+   "r": 0.4,
+   "explode": [
+    50.0,
+    0,
+    9.4
+   ],
+   "mass": 3.21,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "material_id": "pp",
+   "info": "Tear along the seam or cut it off."
+  },
+  {
+   "id": "hdpe_bottle_body",
+   "component_id": "hdpe_bottle_body",
+   "name": "Bottle",
+   "short": "Bottle",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 100.0,
+   "d": 50.0,
+   "h": 221.0,
+   "z": 0.0,
+   "r": 6.0,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 53.57,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "material_id": "hdpe",
+   "info": "Rinse out the remaining product."
+  }
+ ]
+}

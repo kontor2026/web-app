@@ -1,0 +1,179 @@
+{
+ "id": "usb_cable",
+ "name": "USB-Kabel",
+ "name_en": "USB Cable",
+ "klasse": "Elektroschrott · Kleingerät",
+ "kategorie": true,
+ "platzhalter": true,
+ "photo": null,
+ "erkennung": {
+  "conf": 1.0,
+  "modelle": [
+   [
+    "USB-Kabel",
+    1.0
+   ]
+  ],
+  "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
+ },
+ "masse": "120 × 120 × 12 mm",
+ "gewicht": "≈ 30 g",
+ "werte": [
+  {
+   "k": "Rohstoffwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "Gebrauchtwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "CO₂ Herstellung",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  }
+ ],
+ "wertvoll": "Elektrogeräte enthalten Metalle wie Kupfer, Gold und Kobalt, die sich zurückgewinnen lassen. Noch mehr spart, wer sie repariert und weiternutzt.",
+ "kreislauf": [
+  {
+   "t": "Rohstoffe",
+   "d": "Erze für Kupfer, Gold, Zinn und Seltene Erden aus vielen Ländern"
+  },
+  {
+   "t": "Herstellung",
+   "d": "Platinen und Akkus in Asien, sehr energieintensiv"
+  },
+  {
+   "t": "Nutzung",
+   "d": "Oft nur wenige Jahre"
+  },
+  {
+   "t": "Heute oft",
+   "d": "Liegt in der Schublade oder landet im Restmüll",
+   "tone": "bad"
+  },
+  {
+   "t": "Besser",
+   "d": "Reparieren, weitergeben, dann Elektro-Sammlung",
+   "tone": "good"
+  }
+ ],
+ "entsorgung": {
+  "wo": "Recyclinghof oder Rücknahme im Handel. Kleine Elektrogeräte bis 25 cm nehmen auch große Supermärkte kostenlos zurück.",
+  "nicht": "Nicht in Restmüll oder Gelbe Tonne",
+  "warnung": "Kabel und Stecker dranlassen."
+ },
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "parts": [
+  {
+   "id": "connector_shell",
+   "component_id": "connector_shell",
+   "name": "Connector Shell",
+   "short": "Connector Shell",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 120.0,
+   "h": 6.0,
+   "z": 6.0,
+   "explode": [
+    0,
+    0,
+    48.0
+   ],
+   "mass": 13.39,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "material_id": "steel",
+   "info": "Cut the cable just behind the connector."
+  },
+  {
+   "id": "cable_copper_core",
+   "component_id": "cable_copper_core",
+   "name": "Cable Wires",
+   "short": "Cable Wires",
+   "shape": "box",
+   "x": 127.2,
+   "y": 6.0,
+   "w": 6.0,
+   "d": 108.0,
+   "h": 3.0,
+   "z": 1.2,
+   "r": 0.7,
+   "explode": [
+    57.0,
+    0,
+    14.4
+   ],
+   "mass": 1.61,
+   "materials": [
+    [
+     "kupfer",
+     100
+    ]
+   ],
+   "material_id": "copper",
+   "info": "Cut off the plug and strip the insulation to free the copper."
+  },
+  {
+   "id": "cable_insulation",
+   "component_id": "cable_insulation",
+   "name": "Cable Insulation",
+   "short": "Cable Insulation",
+   "shape": "box",
+   "x": 139.2,
+   "y": 6.0,
+   "w": 6.0,
+   "d": 108.0,
+   "h": 3.0,
+   "z": 1.2,
+   "r": 0.7,
+   "explode": [
+    75.0,
+    0,
+    14.4
+   ],
+   "mass": 1.61,
+   "materials": [
+    [
+     "pvc",
+     100
+    ]
+   ],
+   "material_id": "pvc",
+   "info": "Slit lengthwise with a cable stripper to separate it from the wires."
+  },
+  {
+   "id": "plastic_housing",
+   "component_id": "plastic_housing",
+   "name": "Plastic Housing",
+   "short": "Plastic Housing",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 120.0,
+   "h": 6.0,
+   "z": 0.0,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 13.39,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "material_id": "abs",
+   "info": "Look for hidden screws under rubber feet or labels, then pry the clips open."
+  }
+ ]
+}

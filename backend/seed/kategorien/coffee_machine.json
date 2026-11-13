@@ -1,0 +1,291 @@
+{
+ "id": "coffee_machine",
+ "name": "Kaffeemaschine",
+ "name_en": "Coffee Machine",
+ "klasse": "Elektroschrott · Kleingerät",
+ "kategorie": true,
+ "platzhalter": true,
+ "photo": null,
+ "erkennung": {
+  "conf": 1.0,
+  "modelle": [
+   [
+    "Kaffeemaschine",
+    1.0
+   ]
+  ],
+  "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
+ },
+ "masse": "200 × 250 × 330 mm",
+ "gewicht": "≈ 2 kg",
+ "werte": [
+  {
+   "k": "Rohstoffwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "Gebrauchtwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "CO₂ Herstellung",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  }
+ ],
+ "wertvoll": "Elektrogeräte enthalten Metalle wie Kupfer, Gold und Kobalt, die sich zurückgewinnen lassen. Noch mehr spart, wer sie repariert und weiternutzt.",
+ "kreislauf": [
+  {
+   "t": "Rohstoffe",
+   "d": "Erze für Kupfer, Gold, Zinn und Seltene Erden aus vielen Ländern"
+  },
+  {
+   "t": "Herstellung",
+   "d": "Platinen und Akkus in Asien, sehr energieintensiv"
+  },
+  {
+   "t": "Nutzung",
+   "d": "Oft nur wenige Jahre"
+  },
+  {
+   "t": "Heute oft",
+   "d": "Liegt in der Schublade oder landet im Restmüll",
+   "tone": "bad"
+  },
+  {
+   "t": "Besser",
+   "d": "Reparieren, weitergeben, dann Elektro-Sammlung",
+   "tone": "good"
+  }
+ ],
+ "entsorgung": {
+  "wo": "Recyclinghof oder Rücknahme im Handel. Kleine Elektrogeräte bis 25 cm nehmen auch große Supermärkte kostenlos zurück.",
+  "nicht": "Nicht in Restmüll oder Gelbe Tonne",
+  "warnung": "Kabel und Stecker dranlassen."
+ },
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "parts": [
+  {
+   "id": "water_pump",
+   "component_id": "water_pump",
+   "name": "Pump",
+   "short": "Pump",
+   "shape": "box",
+   "x": 55.0,
+   "y": 80.0,
+   "w": 90.0,
+   "d": 90.0,
+   "h": 39.6,
+   "z": 280.5,
+   "r": 10.8,
+   "explode": [
+    0,
+    0,
+    591.0
+   ],
+   "mass": 77.92,
+   "materials": [
+    [
+     "chip",
+     30
+    ],
+    [
+     "kupfer",
+     30
+    ],
+    [
+     "pcabs",
+     25
+    ],
+    [
+     "stahl",
+     15
+    ]
+   ],
+   "material_id": "mixed_electronics",
+   "info": "Pull off the hoses and unscrew the pump from the frame."
+  },
+  {
+   "id": "circuit_board",
+   "component_id": "circuit_board",
+   "name": "Circuit Board",
+   "short": "Circuit Board",
+   "shape": "box",
+   "x": 108.0,
+   "y": 22.5,
+   "w": 84.0,
+   "d": 105.0,
+   "h": 115.5,
+   "z": 56.1,
+   "r": 10.1,
+   "explode": [
+    0,
+    0,
+    609.9
+   ],
+   "mass": 155.84,
+   "materials": [
+    [
+     "fr4",
+     55
+    ],
+    [
+     "kupfer",
+     20
+    ],
+    [
+     "chip",
+     15
+    ],
+    [
+     "lot",
+     10
+    ]
+   ],
+   "material_id": "pcb",
+   "info": "Unscrew and unplug all ribbon cables; hand in at an e-waste collection point."
+  },
+  {
+   "id": "heating_element",
+   "component_id": "heating_element",
+   "name": "Heating Element",
+   "short": "Heating Element",
+   "shape": "box",
+   "x": 8.0,
+   "y": 22.5,
+   "w": 84.0,
+   "d": 105.0,
+   "h": 115.5,
+   "z": 56.1,
+   "r": 10.1,
+   "explode": [
+    0,
+    0,
+    404.4
+   ],
+   "mass": 311.69,
+   "materials": [
+    [
+     "nichrom",
+     100
+    ]
+   ],
+   "material_id": "nickel_chrome",
+   "info": "Unplug and let it cool down fully before opening the housing."
+  },
+  {
+   "id": "water_tank",
+   "component_id": "water_tank",
+   "name": "Water Tank",
+   "short": "Water Tank",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 200.0,
+   "d": 250.0,
+   "h": 140.25,
+   "z": 140.25,
+   "r": 24.0,
+   "explode": [
+    0,
+    0,
+    90.0
+   ],
+   "mass": 649.35,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "material_id": "pp",
+   "info": "Lift it out of the device; it usually clips in from the top or back."
+  },
+  {
+   "id": "cable_copper_core",
+   "component_id": "cable_copper_core",
+   "name": "Cable Wires",
+   "short": "Cable Wires",
+   "shape": "box",
+   "x": 212.0,
+   "y": 12.5,
+   "w": 10.0,
+   "d": 225.0,
+   "h": 26.4,
+   "z": 33.0,
+   "r": 1.2,
+   "explode": [
+    85.0,
+    0,
+    27.0
+   ],
+   "mass": 77.92,
+   "materials": [
+    [
+     "kupfer",
+     100
+    ]
+   ],
+   "material_id": "copper",
+   "info": "Cut off the plug and strip the insulation to free the copper."
+  },
+  {
+   "id": "cable_insulation",
+   "component_id": "cable_insulation",
+   "name": "Cable Insulation",
+   "short": "Cable Insulation",
+   "shape": "box",
+   "x": 232.0,
+   "y": 12.5,
+   "w": 10.0,
+   "d": 225.0,
+   "h": 26.4,
+   "z": 33.0,
+   "r": 1.2,
+   "explode": [
+    115.0,
+    0,
+    27.0
+   ],
+   "mass": 77.92,
+   "materials": [
+    [
+     "pvc",
+     100
+    ]
+   ],
+   "material_id": "pvc",
+   "info": "Slit lengthwise with a cable stripper to separate it from the wires."
+  },
+  {
+   "id": "plastic_housing",
+   "component_id": "plastic_housing",
+   "name": "Plastic Housing",
+   "short": "Plastic Housing",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 200.0,
+   "d": 250.0,
+   "h": 140.25,
+   "z": 0.0,
+   "r": 24.0,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 649.35,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "material_id": "abs",
+   "info": "Look for hidden screws under rubber feet or labels, then pry the clips open."
+  }
+ ]
+}

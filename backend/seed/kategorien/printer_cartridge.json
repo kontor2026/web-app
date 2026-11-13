@@ -1,0 +1,195 @@
+{
+ "id": "printer_cartridge",
+ "name": "Druckerpatrone",
+ "name_en": "Printer Cartridge",
+ "klasse": "Wertstoffhof",
+ "kategorie": true,
+ "platzhalter": true,
+ "photo": null,
+ "erkennung": {
+  "conf": 1.0,
+  "modelle": [
+   [
+    "Druckerpatrone",
+    1.0
+   ]
+  ],
+  "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
+ },
+ "masse": "40 × 60 × 70 mm",
+ "gewicht": "≈ 50 g",
+ "werte": [
+  {
+   "k": "Rohstoffwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "Gebrauchtwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "CO₂ Herstellung",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  }
+ ],
+ "wertvoll": "Je länger ein Gegenstand genutzt wird, desto weniger Rohstoffe und Energie braucht es für Ersatz.",
+ "kreislauf": [
+  {
+   "t": "Rohstoffe",
+   "d": "Erdöl, Metallerze, Holz oder Baumwolle"
+  },
+  {
+   "t": "Herstellung",
+   "d": "Industrielle Fertigung"
+  },
+  {
+   "t": "Nutzung",
+   "d": "Jahre, wenn man es pflegt"
+  },
+  {
+   "t": "Heute oft",
+   "d": "Landet im Restmüll und wird verbrannt",
+   "tone": "bad"
+  },
+  {
+   "t": "Besser",
+   "d": "Reparieren, weitergeben oder Teile in der Werkstatt nutzen",
+   "tone": "good"
+  }
+ ],
+ "entsorgung": {
+  "wo": "Recyclinghof.",
+  "nicht": "Nicht in die Gelbe Tonne",
+  "warnung": "Reste von Farben, Klebern oder Chemikalien gehören zur Schadstoffsammlung."
+ },
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "parts": [
+  {
+   "id": "ink_cartridge_ober",
+   "component_id": "ink_cartridge",
+   "name": "Ink Cartridge (Oberteil)",
+   "short": "Ink Cartridge (Obe",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 40.0,
+   "d": 60.0,
+   "h": 14.0,
+   "z": 42.0,
+   "r": 4.8,
+   "explode": [
+    0,
+    0,
+    97.8
+   ],
+   "mass": 10.14,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "material_id": "pp",
+   "info": "Open the cover and press the cartridge down to release it; many shops take cartridges back."
+  },
+  {
+   "id": "ink_sponge",
+   "component_id": "ink_sponge",
+   "name": "Ink Sponge",
+   "short": "Ink Sponge",
+   "shape": "box",
+   "x": 21.6,
+   "y": 5.4,
+   "w": 16.8,
+   "d": 25.2,
+   "h": 18.9,
+   "z": 8.4,
+   "r": 2.0,
+   "explode": [
+    0,
+    0,
+    92.5
+   ],
+   "mass": 8.11,
+   "materials": [
+    [
+     "schaum",
+     100
+    ]
+   ],
+   "material_id": "pu_foam",
+   "info": "Do not open it, the ink stains; refill or return the cartridge instead."
+  },
+  {
+   "id": "cartridge_chip",
+   "component_id": "cartridge_chip",
+   "name": "Chip",
+   "short": "Chip",
+   "shape": "box",
+   "x": 1.6,
+   "y": 5.4,
+   "w": 16.8,
+   "d": 25.2,
+   "h": 18.9,
+   "z": 8.4,
+   "r": 2.0,
+   "explode": [
+    0,
+    0,
+    53.6
+   ],
+   "mass": 8.11,
+   "materials": [
+    [
+     "fr4",
+     55
+    ],
+    [
+     "kupfer",
+     20
+    ],
+    [
+     "chip",
+     15
+    ],
+    [
+     "lot",
+     10
+    ]
+   ],
+   "material_id": "pcb",
+   "info": "Glued on the side; leave it, refill stations reuse it."
+  },
+  {
+   "id": "ink_cartridge",
+   "component_id": "ink_cartridge",
+   "name": "Ink Cartridge (Unterteil)",
+   "short": "Ink Cartridge (Unt",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 40.0,
+   "d": 60.0,
+   "h": 42.0,
+   "z": 0,
+   "r": 4.8,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 23.65,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "material_id": "pp",
+   "info": "Open the cover and press the cartridge down to release it; many shops take cartridges back."
+  }
+ ]
+}

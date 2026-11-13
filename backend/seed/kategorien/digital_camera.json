@@ -1,0 +1,317 @@
+{
+ "id": "digital_camera",
+ "name": "Digitalkamera",
+ "name_en": "Digital Camera",
+ "klasse": "Elektroschrott · Kleingerät",
+ "kategorie": true,
+ "platzhalter": true,
+ "photo": null,
+ "erkennung": {
+  "conf": 1.0,
+  "modelle": [
+   [
+    "Digitalkamera",
+    1.0
+   ]
+  ],
+  "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
+ },
+ "masse": "110 × 65 × 45 mm",
+ "gewicht": "≈ 300 g",
+ "werte": [
+  {
+   "k": "Rohstoffwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "Gebrauchtwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "CO₂ Herstellung",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  }
+ ],
+ "wertvoll": "Elektrogeräte enthalten Metalle wie Kupfer, Gold und Kobalt, die sich zurückgewinnen lassen. Noch mehr spart, wer sie repariert und weiternutzt.",
+ "kreislauf": [
+  {
+   "t": "Rohstoffe",
+   "d": "Erze für Kupfer, Gold, Zinn und Seltene Erden aus vielen Ländern"
+  },
+  {
+   "t": "Herstellung",
+   "d": "Platinen und Akkus in Asien, sehr energieintensiv"
+  },
+  {
+   "t": "Nutzung",
+   "d": "Oft nur wenige Jahre"
+  },
+  {
+   "t": "Heute oft",
+   "d": "Liegt in der Schublade oder landet im Restmüll",
+   "tone": "bad"
+  },
+  {
+   "t": "Besser",
+   "d": "Reparieren, weitergeben, dann Elektro-Sammlung",
+   "tone": "good"
+  }
+ ],
+ "entsorgung": {
+  "wo": "Recyclinghof oder Rücknahme im Handel. Kleine Elektrogeräte bis 25 cm nehmen auch große Supermärkte kostenlos zurück.",
+  "nicht": "Nicht in Restmüll oder Gelbe Tonne",
+  "warnung": "Akku oder Batterie nicht beschädigen. Wenn möglich herausnehmen und getrennt abgeben, fest verbaute Akkus drinlassen."
+ },
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "parts": [
+  {
+   "id": "lcd_panel",
+   "component_id": "lcd_panel",
+   "name": "LCD Panel",
+   "short": "LCD Panel",
+   "shape": "box",
+   "x": 2.2,
+   "y": 1.3,
+   "w": 105.6,
+   "d": 62.4,
+   "h": 2.7,
+   "z": 36.0,
+   "r": 7.5,
+   "explode": [
+    0,
+    0,
+    258.8
+   ],
+   "mass": 46.15,
+   "materials": [
+    [
+     "glas",
+     100
+    ]
+   ],
+   "material_id": "special_glass",
+   "info": "Remove the back cover screws; handle the panel flat, it breaks easily."
+  },
+  {
+   "id": "plastic_housing_ober",
+   "component_id": "plastic_housing",
+   "name": "Plastic Housing (Oberteil)",
+   "short": "Plastic Housing (O",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 110.0,
+   "d": 65.0,
+   "h": 9.0,
+   "z": 27.0,
+   "r": 7.8,
+   "explode": [
+    0,
+    0,
+    223.8
+   ],
+   "mass": 34.62,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "material_id": "abs",
+   "info": "Look for hidden screws under rubber feet or labels, then pry the clips open."
+  },
+  {
+   "id": "memory_card",
+   "component_id": "memory_card",
+   "name": "Memory Card",
+   "short": "Memory Card",
+   "shape": "box",
+   "x": 59.4,
+   "y": 35.1,
+   "w": 46.2,
+   "d": 27.3,
+   "h": 12.15,
+   "z": 5.4,
+   "r": 3.3,
+   "explode": [
+    0,
+    0,
+    198.2
+   ],
+   "mass": 27.69,
+   "materials": [
+    [
+     "chip",
+     30
+    ],
+    [
+     "kupfer",
+     30
+    ],
+    [
+     "pcabs",
+     25
+    ],
+    [
+     "stahl",
+     15
+    ]
+   ],
+   "material_id": "mixed_electronics",
+   "info": "Push to release it; wipe it or keep it, it may still hold photos."
+  },
+  {
+   "id": "li_ion_battery",
+   "component_id": "li_ion_battery",
+   "name": "Lithium-Ion Battery",
+   "short": "Lithium-Ion Batter",
+   "shape": "box",
+   "x": 4.4,
+   "y": 35.1,
+   "w": 46.2,
+   "d": 27.3,
+   "h": 12.15,
+   "z": 5.4,
+   "r": 3.3,
+   "explode": [
+    0,
+    0,
+    151.0
+   ],
+   "mass": 55.38,
+   "materials": [
+    [
+     "lco",
+     40
+    ],
+    [
+     "graphit",
+     20
+    ],
+    [
+     "elektrolyt",
+     15
+    ],
+    [
+     "alu",
+     15
+    ],
+    [
+     "kupfer",
+     10
+    ]
+   ],
+   "material_id": "li_ion",
+   "info": "Never puncture or bend it; tape the contacts and bring it to a battery collection point."
+  },
+  {
+   "id": "circuit_board",
+   "component_id": "circuit_board",
+   "name": "Circuit Board",
+   "short": "Circuit Board",
+   "shape": "box",
+   "x": 59.4,
+   "y": 5.8,
+   "w": 46.2,
+   "d": 27.3,
+   "h": 12.15,
+   "z": 5.4,
+   "r": 3.3,
+   "explode": [
+    0,
+    0,
+    103.8
+   ],
+   "mass": 27.69,
+   "materials": [
+    [
+     "fr4",
+     55
+    ],
+    [
+     "kupfer",
+     20
+    ],
+    [
+     "chip",
+     15
+    ],
+    [
+     "lot",
+     10
+    ]
+   ],
+   "material_id": "pcb",
+   "info": "Unscrew and unplug all ribbon cables; hand in at an e-waste collection point."
+  },
+  {
+   "id": "camera_lens_unit",
+   "component_id": "camera_lens_unit",
+   "name": "Lens Unit",
+   "short": "Lens Unit",
+   "shape": "cyl",
+   "x": 13.8,
+   "y": 5.8,
+   "w": 27.3,
+   "h": 12.15,
+   "z": 5.4,
+   "explode": [
+    0,
+    0,
+    56.6
+   ],
+   "mass": 27.69,
+   "materials": [
+    [
+     "chip",
+     30
+    ],
+    [
+     "kupfer",
+     30
+    ],
+    [
+     "pcabs",
+     25
+    ],
+    [
+     "stahl",
+     15
+    ]
+   ],
+   "material_id": "mixed_electronics",
+   "info": "Unscrew it from the body; it contains glass elements and a small motor."
+  },
+  {
+   "id": "plastic_housing",
+   "component_id": "plastic_housing",
+   "name": "Plastic Housing (Unterteil)",
+   "short": "Plastic Housing (U",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 110.0,
+   "d": 65.0,
+   "h": 27.0,
+   "z": 0,
+   "r": 7.8,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 80.77,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "material_id": "abs",
+   "info": "Look for hidden screws under rubber feet or labels, then pry the clips open."
+  }
+ ]
+}

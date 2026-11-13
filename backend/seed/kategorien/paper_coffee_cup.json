@@ -1,0 +1,155 @@
+{
+ "id": "paper_coffee_cup",
+ "name": "Coffee-to-go-Becher",
+ "name_en": "Paper Coffee Cup",
+ "klasse": "Verpackung · Gelbe Tonne",
+ "kategorie": true,
+ "platzhalter": true,
+ "photo": null,
+ "erkennung": {
+  "conf": 1.0,
+  "modelle": [
+   [
+    "Coffee-to-go-Becher",
+    1.0
+   ]
+  ],
+  "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
+ },
+ "masse": "80 × 80 × 110 mm",
+ "gewicht": "≈ 12 g",
+ "werte": [
+  {
+   "k": "Rohstoffwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "Gebrauchtwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "CO₂ Herstellung",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  }
+ ],
+ "wertvoll": "Sortenrein getrennt wird aus Verpackung wieder Rohstoff. Jede richtig getrennte Verpackung spart neues Material.",
+ "kreislauf": [
+  {
+   "t": "Rohstoffe",
+   "d": "Erdöl, Holz, Bauxit oder Quarzsand"
+  },
+  {
+   "t": "Herstellung",
+   "d": "Wenige Sekunden Formgebung in der Fabrik"
+  },
+  {
+   "t": "Nutzung",
+   "d": "Oft nur Minuten bis Tage"
+  },
+  {
+   "t": "Heute oft",
+   "d": "Falsch getrennt und dann verbrannt",
+   "tone": "bad"
+  },
+  {
+   "t": "Besser",
+   "d": "Richtig trennen oder in der Werkstatt neu formen",
+   "tone": "good"
+  }
+ ],
+ "entsorgung": {
+  "wo": "Gelbe Tonne oder Gelber Sack.",
+  "nicht": "Nicht in Restmüll oder Altpapier",
+  "warnung": "Restentleert reicht, nicht ausspülen. Teile aus verschiedenen Materialien trennen."
+ },
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "parts": [
+  {
+   "id": "ps_cup_lid",
+   "component_id": "ps_cup_lid",
+   "name": "Lid",
+   "short": "Lid",
+   "shape": "cyl",
+   "x": 22.0,
+   "y": 22.0,
+   "w": 36.0,
+   "h": 13.2,
+   "z": 93.5,
+   "explode": [
+    0,
+    0,
+    32.0
+   ],
+   "mass": 1.16,
+   "materials": [
+    [
+     "ps",
+     100
+    ]
+   ],
+   "material_id": "ps",
+   "info": "Pull it off the cup rim."
+  },
+  {
+   "id": "cardboard_sleeve",
+   "component_id": "cardboard_sleeve",
+   "name": "Cardboard Sleeve",
+   "short": "Cardboard Sleeve",
+   "shape": "box",
+   "x": 80.8,
+   "y": 16.0,
+   "w": 2.4,
+   "d": 48.0,
+   "h": 60.5,
+   "z": 22.0,
+   "r": 0.3,
+   "explode": [
+    43.0,
+    0,
+    9.6
+   ],
+   "mass": 1.16,
+   "materials": [
+    [
+     "papier",
+     100
+    ]
+   ],
+   "material_id": "cardboard",
+   "info": "Tear along the perforation or slide it off."
+  },
+  {
+   "id": "coated_paper_cup",
+   "component_id": "coated_paper_cup",
+   "name": "Cup",
+   "short": "Cup",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 80.0,
+   "h": 93.5,
+   "z": 0.0,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 9.68,
+   "materials": [
+    [
+     "papier",
+     85
+    ],
+    [
+     "ldpe",
+     15
+    ]
+   ],
+   "material_id": "paper_plastic_composite",
+   "info": "Has a plastic lining, so it does not go in paper recycling."
+  }
+ ]
+}

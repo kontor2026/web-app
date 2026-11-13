@@ -2,6 +2,8 @@
 
 Start (aus dem Projektordner):  uvicorn backend.app.main:app --port 8000
 """
+import json
+
 from fastapi import FastAPI, HTTPException
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
@@ -58,6 +60,13 @@ def scan_jobs(sid: int):
 @app.post('/api/steckbrief')
 def steckbrief(body: SteckbriefIn):
     return _run(pipeline.steckbrief, body.scan_id, body.modell, body.objekt)
+
+
+@app.get('/api/kategorien')
+def kategorien():
+    """Übersicht der Kategorie-Modelle (backend/seed/kategorien/index.json)."""
+    f = config.SEED / 'kategorien' / 'index.json'
+    return json.loads(f.read_text(encoding='utf-8')) if f.exists() else []
 
 
 @app.get('/api/objects')

@@ -1,0 +1,153 @@
+{
+ "id": "detergent_bottle",
+ "name": "Waschmittelflasche",
+ "name_en": "Detergent Bottle",
+ "klasse": "Verpackung · Gelbe Tonne",
+ "kategorie": true,
+ "platzhalter": true,
+ "photo": null,
+ "erkennung": {
+  "conf": 1.0,
+  "modelle": [
+   [
+    "Waschmittelflasche",
+    1.0
+   ]
+  ],
+  "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
+ },
+ "masse": "100 × 70 × 260 mm",
+ "gewicht": "≈ 90 g",
+ "werte": [
+  {
+   "k": "Rohstoffwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "Gebrauchtwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "CO₂ Herstellung",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  }
+ ],
+ "wertvoll": "Sortenrein getrennt wird aus Verpackung wieder Rohstoff. Jede richtig getrennte Verpackung spart neues Material.",
+ "kreislauf": [
+  {
+   "t": "Rohstoffe",
+   "d": "Erdöl, Holz, Bauxit oder Quarzsand"
+  },
+  {
+   "t": "Herstellung",
+   "d": "Wenige Sekunden Formgebung in der Fabrik"
+  },
+  {
+   "t": "Nutzung",
+   "d": "Oft nur Minuten bis Tage"
+  },
+  {
+   "t": "Heute oft",
+   "d": "Falsch getrennt und dann verbrannt",
+   "tone": "bad"
+  },
+  {
+   "t": "Besser",
+   "d": "Richtig trennen oder in der Werkstatt neu formen",
+   "tone": "good"
+  }
+ ],
+ "entsorgung": {
+  "wo": "Gelbe Tonne oder Gelber Sack.",
+  "nicht": "Nicht in Restmüll oder Altpapier",
+  "warnung": "Restentleert reicht, nicht ausspülen. Teile aus verschiedenen Materialien trennen."
+ },
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "parts": [
+  {
+   "id": "pp_flip_cap",
+   "component_id": "pp_flip_cap",
+   "name": "Flip Cap",
+   "short": "Flip Cap",
+   "shape": "cyl",
+   "x": 34.2,
+   "y": 19.2,
+   "w": 31.5,
+   "h": 31.2,
+   "z": 221.0,
+   "explode": [
+    0,
+    0,
+    34.0
+   ],
+   "mass": 4.82,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "material_id": "pp",
+   "info": "Unscrew it from the bottle or tube."
+  },
+  {
+   "id": "plastic_label",
+   "component_id": "plastic_label",
+   "name": "Label",
+   "short": "Label",
+   "shape": "box",
+   "x": 101.0,
+   "y": 14.0,
+   "w": 3.0,
+   "d": 42.0,
+   "h": 143.0,
+   "z": 52.0,
+   "r": 0.4,
+   "explode": [
+    50.0,
+    0,
+    10.2
+   ],
+   "mass": 4.82,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "material_id": "pp",
+   "info": "Tear along the seam or cut it off."
+  },
+  {
+   "id": "hdpe_bottle_body",
+   "component_id": "hdpe_bottle_body",
+   "name": "Bottle",
+   "short": "Bottle",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 100.0,
+   "d": 70.0,
+   "h": 221.0,
+   "z": 0.0,
+   "r": 8.4,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 80.36,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "material_id": "hdpe",
+   "info": "Rinse out the remaining product."
+  }
+ ]
+}

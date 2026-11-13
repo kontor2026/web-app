@@ -1,0 +1,183 @@
+{
+ "id": "hairbrush",
+ "name": "Haarbürste",
+ "name_en": "Hairbrush",
+ "klasse": "Restmüll",
+ "kategorie": true,
+ "platzhalter": true,
+ "photo": null,
+ "erkennung": {
+  "conf": 1.0,
+  "modelle": [
+   [
+    "Haarbürste",
+    1.0
+   ]
+  ],
+  "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
+ },
+ "masse": "70 × 230 × 45 mm",
+ "gewicht": "≈ 80 g",
+ "werte": [
+  {
+   "k": "Rohstoffwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "Gebrauchtwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "CO₂ Herstellung",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  }
+ ],
+ "wertvoll": "Je länger ein Gegenstand genutzt wird, desto weniger Rohstoffe und Energie braucht es für Ersatz.",
+ "kreislauf": [
+  {
+   "t": "Rohstoffe",
+   "d": "Erdöl, Metallerze, Holz oder Baumwolle"
+  },
+  {
+   "t": "Herstellung",
+   "d": "Industrielle Fertigung"
+  },
+  {
+   "t": "Nutzung",
+   "d": "Jahre, wenn man es pflegt"
+  },
+  {
+   "t": "Heute oft",
+   "d": "Landet im Restmüll und wird verbrannt",
+   "tone": "bad"
+  },
+  {
+   "t": "Besser",
+   "d": "Reparieren, weitergeben oder Teile in der Werkstatt nutzen",
+   "tone": "good"
+  }
+ ],
+ "entsorgung": {
+  "wo": "Restmüll.",
+  "nicht": "Nicht in die Gelbe Tonne: keine Verpackung",
+  "warnung": "Gut Erhaltenes lieber verschenken oder in der Werkstatt abgeben."
+ },
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "parts": [
+  {
+   "id": "rubber_cushion",
+   "component_id": "rubber_cushion",
+   "name": "Cushion",
+   "short": "Cushion",
+   "shape": "box",
+   "x": 3.5,
+   "y": 11.5,
+   "w": 63.0,
+   "d": 207.0,
+   "h": 3.6,
+   "z": 36.0,
+   "r": 7.6,
+   "explode": [
+    0,
+    0,
+    192.2
+   ],
+   "mass": 4.07,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "material_id": "rubber",
+   "info": "Pry the edge out of the body with a flat tool."
+  },
+  {
+   "id": "hairbrush_body_ober",
+   "component_id": "hairbrush_body",
+   "name": "Body (Oberteil)",
+   "short": "Body (Oberteil)",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 70.0,
+   "d": 230.0,
+   "h": 9.0,
+   "z": 27.0,
+   "r": 8.4,
+   "explode": [
+    0,
+    0,
+    132.2
+   ],
+   "mass": 20.34,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "material_id": "abs",
+   "info": "Pull out the rubber cushion with the bristles first."
+  },
+  {
+   "id": "nylon_bristles",
+   "component_id": "nylon_bristles",
+   "name": "Bristles",
+   "short": "Bristles",
+   "shape": "box",
+   "x": 10.5,
+   "y": 34.5,
+   "w": 49.0,
+   "d": 161.0,
+   "h": 12.15,
+   "z": 5.4,
+   "r": 5.9,
+   "explode": [
+    0,
+    0,
+    81.6
+   ],
+   "mass": 8.14,
+   "materials": [
+    [
+     "nylon",
+     100
+    ]
+   ],
+   "material_id": "nylon",
+   "info": "Anchored with tiny metal staples; pull them out with pliers."
+  },
+  {
+   "id": "hairbrush_body",
+   "component_id": "hairbrush_body",
+   "name": "Body (Unterteil)",
+   "short": "Body (Unterteil)",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 70.0,
+   "d": 230.0,
+   "h": 27.0,
+   "z": 0,
+   "r": 8.4,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 47.46,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "material_id": "abs",
+   "info": "Pull out the rubber cushion with the bristles first."
+  }
+ ]
+}

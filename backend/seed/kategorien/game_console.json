@@ -1,0 +1,313 @@
+{
+ "id": "game_console",
+ "name": "Spielkonsole",
+ "name_en": "Game Console",
+ "klasse": "Elektroschrott · Kleingerät",
+ "kategorie": true,
+ "platzhalter": true,
+ "photo": null,
+ "erkennung": {
+  "conf": 1.0,
+  "modelle": [
+   [
+    "Spielkonsole",
+    1.0
+   ]
+  ],
+  "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
+ },
+ "masse": "350 × 260 × 100 mm",
+ "gewicht": "≈ 4 kg",
+ "werte": [
+  {
+   "k": "Rohstoffwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "Gebrauchtwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "CO₂ Herstellung",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  }
+ ],
+ "wertvoll": "Elektrogeräte enthalten Metalle wie Kupfer, Gold und Kobalt, die sich zurückgewinnen lassen. Noch mehr spart, wer sie repariert und weiternutzt.",
+ "kreislauf": [
+  {
+   "t": "Rohstoffe",
+   "d": "Erze für Kupfer, Gold, Zinn und Seltene Erden aus vielen Ländern"
+  },
+  {
+   "t": "Herstellung",
+   "d": "Platinen und Akkus in Asien, sehr energieintensiv"
+  },
+  {
+   "t": "Nutzung",
+   "d": "Oft nur wenige Jahre"
+  },
+  {
+   "t": "Heute oft",
+   "d": "Liegt in der Schublade oder landet im Restmüll",
+   "tone": "bad"
+  },
+  {
+   "t": "Besser",
+   "d": "Reparieren, weitergeben, dann Elektro-Sammlung",
+   "tone": "good"
+  }
+ ],
+ "entsorgung": {
+  "wo": "Recyclinghof oder Rücknahme im Handel. Kleine Elektrogeräte bis 25 cm nehmen auch große Supermärkte kostenlos zurück.",
+  "nicht": "Nicht in Restmüll oder Gelbe Tonne",
+  "warnung": "Kabel und Stecker dranlassen."
+ },
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "parts": [
+  {
+   "id": "plastic_housing_ober",
+   "component_id": "plastic_housing",
+   "name": "Plastic Housing (Oberteil)",
+   "short": "Plastic Housing (O",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 350.0,
+   "d": 260.0,
+   "h": 20.0,
+   "z": 60.0,
+   "r": 31.2,
+   "explode": [
+    0,
+    0,
+    867.0
+   ],
+   "mass": 545.45,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "material_id": "abs",
+   "info": "Look for hidden screws under rubber feet or labels, then pry the clips open."
+  },
+  {
+   "id": "cooling_fan",
+   "component_id": "cooling_fan",
+   "name": "Fan",
+   "short": "Fan",
+   "shape": "cyl",
+   "x": 120.4,
+   "y": 75.4,
+   "w": 109.2,
+   "h": 27.0,
+   "z": 12.0,
+   "explode": [
+    0,
+    0,
+    766.0
+   ],
+   "mass": 436.36,
+   "materials": [
+    [
+     "chip",
+     30
+    ],
+    [
+     "kupfer",
+     30
+    ],
+    [
+     "pcabs",
+     25
+    ],
+    [
+     "stahl",
+     15
+    ]
+   ],
+   "material_id": "mixed_electronics",
+   "info": "Unplug the fan cable from the board and unscrew it."
+  },
+  {
+   "id": "hard_drive",
+   "component_id": "hard_drive",
+   "name": "Hard Drive",
+   "short": "Hard Drive",
+   "shape": "box",
+   "x": 189.0,
+   "y": 140.4,
+   "w": 147.0,
+   "d": 109.2,
+   "h": 27.0,
+   "z": 12.0,
+   "r": 13.1,
+   "explode": [
+    0,
+    0,
+    617.0
+   ],
+   "mass": 436.36,
+   "materials": [
+    [
+     "chip",
+     30
+    ],
+    [
+     "kupfer",
+     30
+    ],
+    [
+     "pcabs",
+     25
+    ],
+    [
+     "stahl",
+     15
+    ]
+   ],
+   "material_id": "mixed_electronics",
+   "info": "Unscrew it from the drive bay; wipe or physically destroy it to protect your data."
+  },
+  {
+   "id": "cpu_cooler",
+   "component_id": "cpu_cooler",
+   "name": "CPU Cooler",
+   "short": "CPU Cooler",
+   "shape": "box",
+   "x": 14.0,
+   "y": 140.4,
+   "w": 147.0,
+   "d": 109.2,
+   "h": 27.0,
+   "z": 12.0,
+   "r": 13.1,
+   "explode": [
+    0,
+    0,
+    468.0
+   ],
+   "mass": 436.36,
+   "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "material_id": "aluminium",
+   "info": "Release the clips or screws, twist gently to break the thermal paste, then wipe it clean."
+  },
+  {
+   "id": "power_supply_unit",
+   "component_id": "power_supply_unit",
+   "name": "Power Supply",
+   "short": "Power Supply",
+   "shape": "box",
+   "x": 189.0,
+   "y": 23.4,
+   "w": 147.0,
+   "d": 109.2,
+   "h": 27.0,
+   "z": 12.0,
+   "r": 13.1,
+   "explode": [
+    0,
+    0,
+    319.0
+   ],
+   "mass": 436.36,
+   "materials": [
+    [
+     "chip",
+     30
+    ],
+    [
+     "kupfer",
+     30
+    ],
+    [
+     "pcabs",
+     25
+    ],
+    [
+     "stahl",
+     15
+    ]
+   ],
+   "material_id": "mixed_electronics",
+   "info": "Unscrew it from the case; do not open it, the capacitors can hold a charge."
+  },
+  {
+   "id": "circuit_board",
+   "component_id": "circuit_board",
+   "name": "Circuit Board",
+   "short": "Circuit Board",
+   "shape": "box",
+   "x": 14.0,
+   "y": 23.4,
+   "w": 147.0,
+   "d": 109.2,
+   "h": 27.0,
+   "z": 12.0,
+   "r": 13.1,
+   "explode": [
+    0,
+    0,
+    170.0
+   ],
+   "mass": 436.36,
+   "materials": [
+    [
+     "fr4",
+     55
+    ],
+    [
+     "kupfer",
+     20
+    ],
+    [
+     "chip",
+     15
+    ],
+    [
+     "lot",
+     10
+    ]
+   ],
+   "material_id": "pcb",
+   "info": "Unscrew and unplug all ribbon cables; hand in at an e-waste collection point."
+  },
+  {
+   "id": "plastic_housing",
+   "component_id": "plastic_housing",
+   "name": "Plastic Housing (Unterteil)",
+   "short": "Plastic Housing (U",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 350.0,
+   "d": 260.0,
+   "h": 60.0,
+   "z": 0,
+   "r": 31.2,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 1272.73,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "material_id": "abs",
+   "info": "Look for hidden screws under rubber feet or labels, then pry the clips open."
+  }
+ ]
+}

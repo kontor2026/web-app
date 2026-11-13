@@ -1,0 +1,155 @@
+{
+ "id": "leather_shoe",
+ "name": "Lederschuh",
+ "name_en": "Leather Shoe",
+ "klasse": "Textilien und Schuhe",
+ "kategorie": true,
+ "platzhalter": true,
+ "photo": null,
+ "erkennung": {
+  "conf": 1.0,
+  "modelle": [
+   [
+    "Lederschuh",
+    1.0
+   ]
+  ],
+  "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
+ },
+ "masse": "110 × 290 × 110 mm",
+ "gewicht": "≈ 500 g",
+ "werte": [
+  {
+   "k": "Rohstoffwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "Gebrauchtwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "CO₂ Herstellung",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  }
+ ],
+ "wertvoll": "Je länger ein Gegenstand genutzt wird, desto weniger Rohstoffe und Energie braucht es für Ersatz.",
+ "kreislauf": [
+  {
+   "t": "Rohstoffe",
+   "d": "Erdöl, Metallerze, Holz oder Baumwolle"
+  },
+  {
+   "t": "Herstellung",
+   "d": "Industrielle Fertigung"
+  },
+  {
+   "t": "Nutzung",
+   "d": "Jahre, wenn man es pflegt"
+  },
+  {
+   "t": "Heute oft",
+   "d": "Landet im Restmüll und wird verbrannt",
+   "tone": "bad"
+  },
+  {
+   "t": "Besser",
+   "d": "Reparieren, weitergeben oder Teile in der Werkstatt nutzen",
+   "tone": "good"
+  }
+ ],
+ "entsorgung": {
+  "wo": "Altkleidercontainer oder Recyclinghof, sauber und in einem Beutel.",
+  "nicht": "Tragbares nicht in den Restmüll",
+  "warnung": "Schuhe paarweise zusammenbinden."
+ },
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "parts": [
+  {
+   "id": "leather_upper",
+   "component_id": "leather_upper",
+   "name": "Upper",
+   "short": "Upper",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 110.0,
+   "d": 290.0,
+   "h": 55.0,
+   "z": 55.0,
+   "r": 13.2,
+   "explode": [
+    0,
+    0,
+    80.0
+   ],
+   "mass": 235.85,
+   "materials": [
+    [
+     "leder",
+     100
+    ]
+   ],
+   "material_id": "leather",
+   "info": "Bring wearable shoes to a shoe container; otherwise cut the upper away from the sole."
+  },
+  {
+   "id": "shoelaces",
+   "component_id": "shoelaces",
+   "name": "Laces",
+   "short": "Laces",
+   "shape": "box",
+   "x": 116.6,
+   "y": 14.5,
+   "w": 5.5,
+   "d": 261.0,
+   "h": 8.8,
+   "z": 11.0,
+   "r": 0.7,
+   "explode": [
+    53.5,
+    0,
+    24.0
+   ],
+   "mass": 28.3,
+   "materials": [
+    [
+     "polyester",
+     100
+    ]
+   ],
+   "material_id": "polyester",
+   "info": "Unthread them."
+  },
+  {
+   "id": "rubber_outsole",
+   "component_id": "rubber_outsole",
+   "name": "Outsole",
+   "short": "Outsole",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 110.0,
+   "d": 290.0,
+   "h": 55.0,
+   "z": 0.0,
+   "r": 13.2,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 235.85,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "material_id": "rubber",
+   "info": "Peel it off the midsole after heating the glue."
+  }
+ ]
+}

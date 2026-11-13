@@ -1,0 +1,151 @@
+{
+ "id": "compact_disc",
+ "name": "CD",
+ "name_en": "Compact Disc",
+ "klasse": "Wertstoffhof",
+ "kategorie": true,
+ "platzhalter": true,
+ "photo": null,
+ "erkennung": {
+  "conf": 1.0,
+  "modelle": [
+   [
+    "CD",
+    1.0
+   ]
+  ],
+  "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
+ },
+ "masse": "120 × 120 × 2 mm",
+ "gewicht": "≈ 16 g",
+ "werte": [
+  {
+   "k": "Rohstoffwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "Gebrauchtwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "CO₂ Herstellung",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  }
+ ],
+ "wertvoll": "Je länger ein Gegenstand genutzt wird, desto weniger Rohstoffe und Energie braucht es für Ersatz.",
+ "kreislauf": [
+  {
+   "t": "Rohstoffe",
+   "d": "Erdöl, Metallerze, Holz oder Baumwolle"
+  },
+  {
+   "t": "Herstellung",
+   "d": "Industrielle Fertigung"
+  },
+  {
+   "t": "Nutzung",
+   "d": "Jahre, wenn man es pflegt"
+  },
+  {
+   "t": "Heute oft",
+   "d": "Landet im Restmüll und wird verbrannt",
+   "tone": "bad"
+  },
+  {
+   "t": "Besser",
+   "d": "Reparieren, weitergeben oder Teile in der Werkstatt nutzen",
+   "tone": "good"
+  }
+ ],
+ "entsorgung": {
+  "wo": "Recyclinghof.",
+  "nicht": "Nicht in die Gelbe Tonne",
+  "warnung": "Reste von Farben, Klebern oder Chemikalien gehören zur Schadstoffsammlung."
+ },
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "parts": [
+  {
+   "id": "cd_case",
+   "component_id": "cd_case",
+   "name": "Jewel Case",
+   "short": "Jewel Case",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 120.0,
+   "h": 1.0,
+   "z": 1.0,
+   "explode": [
+    0,
+    0,
+    48.0
+   ],
+   "mass": 5.13,
+   "materials": [
+    [
+     "ps",
+     100
+    ]
+   ],
+   "material_id": "ps",
+   "info": "Take out the booklet and the disc."
+  },
+  {
+   "id": "paper_booklet",
+   "component_id": "paper_booklet",
+   "name": "Booklet",
+   "short": "Booklet",
+   "shape": "box",
+   "x": 121.2,
+   "y": 24.0,
+   "w": 3.6,
+   "d": 72.0,
+   "h": 1.2,
+   "z": 0.4,
+   "r": 0.4,
+   "explode": [
+    57.0,
+    0,
+    14.4
+   ],
+   "mass": 0.62,
+   "materials": [
+    [
+     "papier",
+     100
+    ]
+   ],
+   "material_id": "paper",
+   "info": "Slide it out from under the clips."
+  },
+  {
+   "id": "disc_body",
+   "component_id": "disc_body",
+   "name": "Disc",
+   "short": "Disc",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 120.0,
+   "h": 1.0,
+   "z": 0.0,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 10.26,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "material_id": "pc",
+   "info": "Scratch it to make the data unreadable; some shops collect CDs."
+  }
+ ]
+}

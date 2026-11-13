@@ -1,0 +1,183 @@
+{
+ "id": "winter_jacket",
+ "name": "Winterjacke",
+ "name_en": "Winter Jacket",
+ "klasse": "Textilien und Schuhe",
+ "kategorie": true,
+ "platzhalter": true,
+ "photo": null,
+ "erkennung": {
+  "conf": 1.0,
+  "modelle": [
+   [
+    "Winterjacke",
+    1.0
+   ]
+  ],
+  "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
+ },
+ "masse": "400 × 500 × 80 mm",
+ "gewicht": "≈ 1,2 kg",
+ "werte": [
+  {
+   "k": "Rohstoffwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "Gebrauchtwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "CO₂ Herstellung",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  }
+ ],
+ "wertvoll": "Je länger ein Gegenstand genutzt wird, desto weniger Rohstoffe und Energie braucht es für Ersatz.",
+ "kreislauf": [
+  {
+   "t": "Rohstoffe",
+   "d": "Erdöl, Metallerze, Holz oder Baumwolle"
+  },
+  {
+   "t": "Herstellung",
+   "d": "Industrielle Fertigung"
+  },
+  {
+   "t": "Nutzung",
+   "d": "Jahre, wenn man es pflegt"
+  },
+  {
+   "t": "Heute oft",
+   "d": "Landet im Restmüll und wird verbrannt",
+   "tone": "bad"
+  },
+  {
+   "t": "Besser",
+   "d": "Reparieren, weitergeben oder Teile in der Werkstatt nutzen",
+   "tone": "good"
+  }
+ ],
+ "entsorgung": {
+  "wo": "Altkleidercontainer oder Recyclinghof, sauber und in einem Beutel.",
+  "nicht": "Tragbares nicht in den Restmüll",
+  "warnung": "Schuhe paarweise zusammenbinden."
+ },
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "parts": [
+  {
+   "id": "polyester_fill",
+   "component_id": "polyester_fill",
+   "name": "Insulation",
+   "short": "Insulation",
+   "shape": "box",
+   "x": 60.0,
+   "y": 75.0,
+   "w": 280.0,
+   "d": 350.0,
+   "h": 28.0,
+   "z": 16.0,
+   "r": 33.6,
+   "explode": [
+    0,
+    0,
+    424.0
+   ],
+   "mass": 122.03,
+   "materials": [
+    [
+     "polyester",
+     100
+    ]
+   ],
+   "material_id": "polyester",
+   "info": "Cut open the lining to pull out the fill; reuse it as stuffing."
+  },
+  {
+   "id": "metal_zipper",
+   "component_id": "metal_zipper",
+   "name": "Zipper",
+   "short": "Zipper",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 400.0,
+   "d": 500.0,
+   "h": 40.0,
+   "z": 40.0,
+   "r": 48.0,
+   "explode": [
+    0,
+    0,
+    180.0
+   ],
+   "mass": 508.47,
+   "materials": [
+    [
+     "kupfer",
+     100
+    ]
+   ],
+   "material_id": "copper",
+   "info": "Cut along both sides of the zipper tape."
+  },
+  {
+   "id": "care_label",
+   "component_id": "care_label",
+   "name": "Care Label",
+   "short": "Care Label",
+   "shape": "box",
+   "x": 404.0,
+   "y": 100.0,
+   "w": 12.0,
+   "d": 300.0,
+   "h": 48.0,
+   "z": 16.0,
+   "r": 1.4,
+   "explode": [
+    155.0,
+    0,
+    54.0
+   ],
+   "mass": 61.02,
+   "materials": [
+    [
+     "polyester",
+     100
+    ]
+   ],
+   "material_id": "polyester",
+   "info": "Cut it off at the seam."
+  },
+  {
+   "id": "nylon_fabric",
+   "component_id": "nylon_fabric",
+   "name": "Fabric",
+   "short": "Fabric",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 400.0,
+   "d": 500.0,
+   "h": 40.0,
+   "z": 0.0,
+   "r": 48.0,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 508.47,
+   "materials": [
+    [
+     "nylon",
+     100
+    ]
+   ],
+   "material_id": "nylon",
+   "info": "Remove buckles and zippers first."
+  }
+ ]
+}

@@ -1,0 +1,245 @@
+{
+ "id": "electric_toothbrush",
+ "name": "Elektrische Zahnbürste",
+ "name_en": "Electric Toothbrush",
+ "klasse": "Elektroschrott · Kleingerät",
+ "kategorie": true,
+ "platzhalter": true,
+ "photo": null,
+ "erkennung": {
+  "conf": 1.0,
+  "modelle": [
+   [
+    "Elektrische Zahnbürste",
+    1.0
+   ]
+  ],
+  "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
+ },
+ "masse": "28 × 28 × 230 mm",
+ "gewicht": "≈ 120 g",
+ "werte": [
+  {
+   "k": "Rohstoffwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "Gebrauchtwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "CO₂ Herstellung",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  }
+ ],
+ "wertvoll": "Elektrogeräte enthalten Metalle wie Kupfer, Gold und Kobalt, die sich zurückgewinnen lassen. Noch mehr spart, wer sie repariert und weiternutzt.",
+ "kreislauf": [
+  {
+   "t": "Rohstoffe",
+   "d": "Erze für Kupfer, Gold, Zinn und Seltene Erden aus vielen Ländern"
+  },
+  {
+   "t": "Herstellung",
+   "d": "Platinen und Akkus in Asien, sehr energieintensiv"
+  },
+  {
+   "t": "Nutzung",
+   "d": "Oft nur wenige Jahre"
+  },
+  {
+   "t": "Heute oft",
+   "d": "Liegt in der Schublade oder landet im Restmüll",
+   "tone": "bad"
+  },
+  {
+   "t": "Besser",
+   "d": "Reparieren, weitergeben, dann Elektro-Sammlung",
+   "tone": "good"
+  }
+ ],
+ "entsorgung": {
+  "wo": "Recyclinghof oder Rücknahme im Handel. Kleine Elektrogeräte bis 25 cm nehmen auch große Supermärkte kostenlos zurück.",
+  "nicht": "Nicht in Restmüll oder Gelbe Tonne",
+  "warnung": "Akku oder Batterie nicht beschädigen. Wenn möglich herausnehmen und getrennt abgeben, fest verbaute Akkus drinlassen."
+ },
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "parts": [
+  {
+   "id": "circuit_board",
+   "component_id": "circuit_board",
+   "name": "Circuit Board",
+   "short": "Circuit Board",
+   "shape": "box",
+   "x": 1.1,
+   "y": 15.1,
+   "w": 11.8,
+   "d": 11.8,
+   "h": 80.5,
+   "z": 46.0,
+   "r": 1.4,
+   "explode": [
+    0,
+    0,
+    455.4
+   ],
+   "mass": 9.0,
+   "materials": [
+    [
+     "fr4",
+     55
+    ],
+    [
+     "kupfer",
+     20
+    ],
+    [
+     "chip",
+     15
+    ],
+    [
+     "lot",
+     10
+    ]
+   ],
+   "material_id": "pcb",
+   "info": "Unscrew and unplug all ribbon cables; hand in at an e-waste collection point."
+  },
+  {
+   "id": "li_ion_battery",
+   "component_id": "li_ion_battery",
+   "name": "Lithium-Ion Battery",
+   "short": "Lithium-Ion Batter",
+   "shape": "box",
+   "x": 15.1,
+   "y": 2.5,
+   "w": 11.8,
+   "d": 11.8,
+   "h": 80.5,
+   "z": 46.0,
+   "r": 1.4,
+   "explode": [
+    0,
+    0,
+    347.3
+   ],
+   "mass": 18.0,
+   "materials": [
+    [
+     "lco",
+     40
+    ],
+    [
+     "graphit",
+     20
+    ],
+    [
+     "elektrolyt",
+     15
+    ],
+    [
+     "alu",
+     15
+    ],
+    [
+     "kupfer",
+     10
+    ]
+   ],
+   "material_id": "li_ion",
+   "info": "Never puncture or bend it; tape the contacts and bring it to a battery collection point."
+  },
+  {
+   "id": "electric_motor",
+   "component_id": "electric_motor",
+   "name": "Electric Motor",
+   "short": "Electric Motor",
+   "shape": "cyl",
+   "x": 1.1,
+   "y": 2.5,
+   "w": 11.8,
+   "h": 80.5,
+   "z": 46.0,
+   "explode": [
+    0,
+    0,
+    239.2
+   ],
+   "mass": 18.0,
+   "materials": [
+    [
+     "chip",
+     30
+    ],
+    [
+     "kupfer",
+     30
+    ],
+    [
+     "pcabs",
+     25
+    ],
+    [
+     "stahl",
+     15
+    ]
+   ],
+   "material_id": "mixed_electronics",
+   "info": "Unscrew from the housing and cut the wires; contains copper windings and magnets."
+  },
+  {
+   "id": "brush_head",
+   "component_id": "brush_head",
+   "name": "Brush Head",
+   "short": "Brush Head",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 28.0,
+   "h": 115.0,
+   "z": 115.0,
+   "explode": [
+    0,
+    0,
+    27.6
+   ],
+   "mass": 37.5,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "material_id": "pp",
+   "info": "Pull it straight off the handle; dispose of separately from the handle."
+  },
+  {
+   "id": "plastic_housing",
+   "component_id": "plastic_housing",
+   "name": "Plastic Housing",
+   "short": "Plastic Housing",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 28.0,
+   "h": 115.0,
+   "z": 0.0,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 37.5,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "material_id": "abs",
+   "info": "Look for hidden screws under rubber feet or labels, then pry the clips open."
+  }
+ ]
+}

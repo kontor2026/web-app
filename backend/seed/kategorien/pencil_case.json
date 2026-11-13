@@ -1,0 +1,127 @@
+{
+ "id": "pencil_case",
+ "name": "Federmäppchen",
+ "name_en": "Pencil Case",
+ "klasse": "Restmüll",
+ "kategorie": true,
+ "platzhalter": true,
+ "photo": null,
+ "erkennung": {
+  "conf": 1.0,
+  "modelle": [
+   [
+    "Federmäppchen",
+    1.0
+   ]
+  ],
+  "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
+ },
+ "masse": "80 × 210 × 40 mm",
+ "gewicht": "≈ 100 g",
+ "werte": [
+  {
+   "k": "Rohstoffwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "Gebrauchtwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "CO₂ Herstellung",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  }
+ ],
+ "wertvoll": "Je länger ein Gegenstand genutzt wird, desto weniger Rohstoffe und Energie braucht es für Ersatz.",
+ "kreislauf": [
+  {
+   "t": "Rohstoffe",
+   "d": "Erdöl, Metallerze, Holz oder Baumwolle"
+  },
+  {
+   "t": "Herstellung",
+   "d": "Industrielle Fertigung"
+  },
+  {
+   "t": "Nutzung",
+   "d": "Jahre, wenn man es pflegt"
+  },
+  {
+   "t": "Heute oft",
+   "d": "Landet im Restmüll und wird verbrannt",
+   "tone": "bad"
+  },
+  {
+   "t": "Besser",
+   "d": "Reparieren, weitergeben oder Teile in der Werkstatt nutzen",
+   "tone": "good"
+  }
+ ],
+ "entsorgung": {
+  "wo": "Restmüll.",
+  "nicht": "Nicht in die Gelbe Tonne: keine Verpackung",
+  "warnung": "Gut Erhaltenes lieber verschenken oder in der Werkstatt abgeben."
+ },
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "parts": [
+  {
+   "id": "metal_zipper",
+   "component_id": "metal_zipper",
+   "name": "Zipper",
+   "short": "Zipper",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 80.0,
+   "d": 210.0,
+   "h": 20.0,
+   "z": 20.0,
+   "r": 9.6,
+   "explode": [
+    0,
+    0,
+    58.0
+   ],
+   "mass": 50.0,
+   "materials": [
+    [
+     "kupfer",
+     100
+    ]
+   ],
+   "material_id": "copper",
+   "info": "Cut along both sides of the zipper tape."
+  },
+  {
+   "id": "nylon_fabric",
+   "component_id": "nylon_fabric",
+   "name": "Fabric",
+   "short": "Fabric",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 80.0,
+   "d": 210.0,
+   "h": 20.0,
+   "z": 0.0,
+   "r": 9.6,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 50.0,
+   "materials": [
+    [
+     "nylon",
+     100
+    ]
+   ],
+   "material_id": "nylon",
+   "info": "Remove buckles and zippers first."
+  }
+ ]
+}

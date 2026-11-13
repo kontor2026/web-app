@@ -1,0 +1,209 @@
+{
+ "id": "skateboard",
+ "name": "Skateboard",
+ "name_en": "Skateboard",
+ "klasse": "Wertstoffhof",
+ "kategorie": true,
+ "platzhalter": true,
+ "photo": null,
+ "erkennung": {
+  "conf": 1.0,
+  "modelle": [
+   [
+    "Skateboard",
+    1.0
+   ]
+  ],
+  "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
+ },
+ "masse": "200 × 800 × 100 mm",
+ "gewicht": "≈ 2,3 kg",
+ "werte": [
+  {
+   "k": "Rohstoffwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "Gebrauchtwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "CO₂ Herstellung",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  }
+ ],
+ "wertvoll": "Je länger ein Gegenstand genutzt wird, desto weniger Rohstoffe und Energie braucht es für Ersatz.",
+ "kreislauf": [
+  {
+   "t": "Rohstoffe",
+   "d": "Erdöl, Metallerze, Holz oder Baumwolle"
+  },
+  {
+   "t": "Herstellung",
+   "d": "Industrielle Fertigung"
+  },
+  {
+   "t": "Nutzung",
+   "d": "Jahre, wenn man es pflegt"
+  },
+  {
+   "t": "Heute oft",
+   "d": "Landet im Restmüll und wird verbrannt",
+   "tone": "bad"
+  },
+  {
+   "t": "Besser",
+   "d": "Reparieren, weitergeben oder Teile in der Werkstatt nutzen",
+   "tone": "good"
+  }
+ ],
+ "entsorgung": {
+  "wo": "Recyclinghof.",
+  "nicht": "Nicht in die Gelbe Tonne",
+  "warnung": "Reste von Farben, Klebern oder Chemikalien gehören zur Schadstoffsammlung."
+ },
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "parts": [
+  {
+   "id": "pu_wheels",
+   "component_id": "pu_wheels",
+   "name": "Wheels",
+   "short": "Wheels",
+   "shape": "cyl",
+   "x": 78.0,
+   "y": 378.0,
+   "w": 44.0,
+   "h": 15.0,
+   "z": 100.0,
+   "explode": [
+    0,
+    0,
+    400.0
+   ],
+   "mass": 116.95,
+   "materials": [
+    [
+     "schaum",
+     100
+    ]
+   ],
+   "material_id": "polyurethane",
+   "info": "Pull them off the axles after removing the nuts."
+  },
+  {
+   "id": "aluminium_trucks",
+   "component_id": "aluminium_trucks",
+   "name": "Trucks",
+   "short": "Trucks",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 200.0,
+   "d": 800.0,
+   "h": 50.0,
+   "z": 50.0,
+   "r": 24.0,
+   "explode": [
+    0,
+    0,
+    200.0
+   ],
+   "mass": 974.58,
+   "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "material_id": "aluminium",
+   "info": "Remove the axle nuts to take off the wheels."
+  },
+  {
+   "id": "steel_bearings",
+   "component_id": "steel_bearings",
+   "name": "Bearings",
+   "short": "Bearings",
+   "shape": "box",
+   "x": 202.0,
+   "y": 160.0,
+   "w": 6.0,
+   "d": 480.0,
+   "h": 60.0,
+   "z": 20.0,
+   "r": 0.7,
+   "explode": [
+    85.0,
+    0,
+    60.0
+   ],
+   "mass": 116.95,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "material_id": "steel",
+   "info": "Push them out of the wheels with the truck axle."
+  },
+  {
+   "id": "grip_tape",
+   "component_id": "grip_tape",
+   "name": "Grip Tape",
+   "short": "Grip Tape",
+   "shape": "box",
+   "x": 205.0,
+   "y": 160.0,
+   "w": 6.0,
+   "d": 480.0,
+   "h": 60.0,
+   "z": 20.0,
+   "r": 0.7,
+   "explode": [
+    115.0,
+    0,
+    60.0
+   ],
+   "mass": 116.95,
+   "materials": [
+    [
+     "pvc",
+     100
+    ]
+   ],
+   "material_id": "pvc",
+   "info": "Heat it with a hair dryer and peel it off the deck."
+  },
+  {
+   "id": "wooden_deck",
+   "component_id": "wooden_deck",
+   "name": "Deck",
+   "short": "Deck",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 200.0,
+   "d": 800.0,
+   "h": 50.0,
+   "z": 0.0,
+   "r": 24.0,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 974.58,
+   "materials": [
+    [
+     "holz",
+     100
+    ]
+   ],
+   "material_id": "wood",
+   "info": "Unscrew the trucks from the top with a skate tool."
+  }
+ ]
+}

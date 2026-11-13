@@ -1,0 +1,223 @@
+{
+ "id": "extension_cord",
+ "name": "Mehrfachsteckdose",
+ "name_en": "Power Strip",
+ "klasse": "Elektroschrott · Kleingerät",
+ "kategorie": true,
+ "platzhalter": true,
+ "photo": null,
+ "erkennung": {
+  "conf": 1.0,
+  "modelle": [
+   [
+    "Mehrfachsteckdose",
+    1.0
+   ]
+  ],
+  "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
+ },
+ "masse": "55 × 300 × 40 mm",
+ "gewicht": "≈ 500 g",
+ "werte": [
+  {
+   "k": "Rohstoffwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "Gebrauchtwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "CO₂ Herstellung",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  }
+ ],
+ "wertvoll": "Elektrogeräte enthalten Metalle wie Kupfer, Gold und Kobalt, die sich zurückgewinnen lassen. Noch mehr spart, wer sie repariert und weiternutzt.",
+ "kreislauf": [
+  {
+   "t": "Rohstoffe",
+   "d": "Erze für Kupfer, Gold, Zinn und Seltene Erden aus vielen Ländern"
+  },
+  {
+   "t": "Herstellung",
+   "d": "Platinen und Akkus in Asien, sehr energieintensiv"
+  },
+  {
+   "t": "Nutzung",
+   "d": "Oft nur wenige Jahre"
+  },
+  {
+   "t": "Heute oft",
+   "d": "Liegt in der Schublade oder landet im Restmüll",
+   "tone": "bad"
+  },
+  {
+   "t": "Besser",
+   "d": "Reparieren, weitergeben, dann Elektro-Sammlung",
+   "tone": "good"
+  }
+ ],
+ "entsorgung": {
+  "wo": "Recyclinghof oder Rücknahme im Handel. Kleine Elektrogeräte bis 25 cm nehmen auch große Supermärkte kostenlos zurück.",
+  "nicht": "Nicht in Restmüll oder Gelbe Tonne",
+  "warnung": "Kabel und Stecker dranlassen."
+ },
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "parts": [
+  {
+   "id": "rocker_switch",
+   "component_id": "rocker_switch",
+   "name": "Switch",
+   "short": "Switch",
+   "shape": "box",
+   "x": 8.2,
+   "y": 45.0,
+   "w": 38.5,
+   "d": 210.0,
+   "h": 14.0,
+   "z": 8.0,
+   "r": 4.6,
+   "explode": [
+    0,
+    0,
+    174.0
+   ],
+   "mass": 48.39,
+   "materials": [
+    [
+     "chip",
+     30
+    ],
+    [
+     "kupfer",
+     30
+    ],
+    [
+     "pcabs",
+     25
+    ],
+    [
+     "stahl",
+     15
+    ]
+   ],
+   "material_id": "mixed_electronics",
+   "info": "Pop it out of the housing with a small screwdriver."
+  },
+  {
+   "id": "plug_pins",
+   "component_id": "plug_pins",
+   "name": "Plug Pins",
+   "short": "Plug Pins",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 55.0,
+   "d": 300.0,
+   "h": 20.0,
+   "z": 20.0,
+   "r": 6.6,
+   "explode": [
+    0,
+    0,
+    71.0
+   ],
+   "mass": 201.61,
+   "materials": [
+    [
+     "kupfer",
+     100
+    ]
+   ],
+   "material_id": "copper",
+   "info": "Brass pins are pressed into the housing; break the housing open to remove them."
+  },
+  {
+   "id": "cable_copper_core",
+   "component_id": "cable_copper_core",
+   "name": "Cable Wires",
+   "short": "Cable Wires",
+   "shape": "box",
+   "x": 58.3,
+   "y": 15.0,
+   "w": 3.0,
+   "d": 270.0,
+   "h": 3.2,
+   "z": 4.0,
+   "r": 0.4,
+   "explode": [
+    34.2,
+    0,
+    21.3
+   ],
+   "mass": 24.19,
+   "materials": [
+    [
+     "kupfer",
+     100
+    ]
+   ],
+   "material_id": "copper",
+   "info": "Cut off the plug and strip the insulation to free the copper."
+  },
+  {
+   "id": "cable_insulation",
+   "component_id": "cable_insulation",
+   "name": "Cable Insulation",
+   "short": "Cable Insulation",
+   "shape": "box",
+   "x": 64.3,
+   "y": 15.0,
+   "w": 3.0,
+   "d": 270.0,
+   "h": 3.2,
+   "z": 4.0,
+   "r": 0.4,
+   "explode": [
+    42.5,
+    0,
+    21.3
+   ],
+   "mass": 24.19,
+   "materials": [
+    [
+     "pvc",
+     100
+    ]
+   ],
+   "material_id": "pvc",
+   "info": "Slit lengthwise with a cable stripper to separate it from the wires."
+  },
+  {
+   "id": "plastic_housing",
+   "component_id": "plastic_housing",
+   "name": "Plastic Housing",
+   "short": "Plastic Housing",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 55.0,
+   "d": 300.0,
+   "h": 20.0,
+   "z": 0.0,
+   "r": 6.6,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 201.61,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "material_id": "abs",
+   "info": "Look for hidden screws under rubber feet or labels, then pry the clips open."
+  }
+ ]
+}

@@ -1,0 +1,155 @@
+{
+ "id": "tape_dispenser",
+ "name": "Klebebandabroller",
+ "name_en": "Tape Dispenser",
+ "klasse": "Restmüll",
+ "kategorie": true,
+ "platzhalter": true,
+ "photo": null,
+ "erkennung": {
+  "conf": 1.0,
+  "modelle": [
+   [
+    "Klebebandabroller",
+    1.0
+   ]
+  ],
+  "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
+ },
+ "masse": "60 × 130 × 70 mm",
+ "gewicht": "≈ 150 g",
+ "werte": [
+  {
+   "k": "Rohstoffwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "Gebrauchtwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "CO₂ Herstellung",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  }
+ ],
+ "wertvoll": "Je länger ein Gegenstand genutzt wird, desto weniger Rohstoffe und Energie braucht es für Ersatz.",
+ "kreislauf": [
+  {
+   "t": "Rohstoffe",
+   "d": "Erdöl, Metallerze, Holz oder Baumwolle"
+  },
+  {
+   "t": "Herstellung",
+   "d": "Industrielle Fertigung"
+  },
+  {
+   "t": "Nutzung",
+   "d": "Jahre, wenn man es pflegt"
+  },
+  {
+   "t": "Heute oft",
+   "d": "Landet im Restmüll und wird verbrannt",
+   "tone": "bad"
+  },
+  {
+   "t": "Besser",
+   "d": "Reparieren, weitergeben oder Teile in der Werkstatt nutzen",
+   "tone": "good"
+  }
+ ],
+ "entsorgung": {
+  "wo": "Restmüll.",
+  "nicht": "Nicht in die Gelbe Tonne: keine Verpackung",
+  "warnung": "Gut Erhaltenes lieber verschenken oder in der Werkstatt abgeben."
+ },
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "parts": [
+  {
+   "id": "ps_dispenser_body_ober",
+   "component_id": "ps_dispenser_body",
+   "name": "Dispenser (Oberteil)",
+   "short": "Dispenser (Obertei",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 60.0,
+   "d": 130.0,
+   "h": 14.0,
+   "z": 42.0,
+   "r": 7.2,
+   "explode": [
+    0,
+    0,
+    94.9
+   ],
+   "mass": 36.29,
+   "materials": [
+    [
+     "ps",
+     100
+    ]
+   ],
+   "material_id": "ps",
+   "info": "Pull the tape roll out of the holder."
+  },
+  {
+   "id": "steel_cutting_blade",
+   "component_id": "steel_cutting_blade",
+   "name": "Blade",
+   "short": "Blade",
+   "shape": "box",
+   "x": 9.0,
+   "y": 19.5,
+   "w": 42.0,
+   "d": 91.0,
+   "h": 18.9,
+   "z": 8.4,
+   "r": 5.0,
+   "explode": [
+    0,
+    0,
+    71.6
+   ],
+   "mass": 29.03,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "material_id": "steel",
+   "info": "Pry it out of its slot and wrap it before disposal."
+  },
+  {
+   "id": "ps_dispenser_body",
+   "component_id": "ps_dispenser_body",
+   "name": "Dispenser (Unterteil)",
+   "short": "Dispenser (Unterte",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 60.0,
+   "d": 130.0,
+   "h": 42.0,
+   "z": 0,
+   "r": 7.2,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 84.68,
+   "materials": [
+    [
+     "ps",
+     100
+    ]
+   ],
+   "material_id": "ps",
+   "info": "Pull the tape roll out of the holder."
+  }
+ ]
+}

@@ -1,0 +1,127 @@
+{
+ "id": "scissors",
+ "name": "Schere",
+ "name_en": "Scissors",
+ "klasse": "Metall · Wertstoffhof",
+ "kategorie": true,
+ "platzhalter": true,
+ "photo": null,
+ "erkennung": {
+  "conf": 1.0,
+  "modelle": [
+   [
+    "Schere",
+    1.0
+   ]
+  ],
+  "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
+ },
+ "masse": "70 × 200 × 10 mm",
+ "gewicht": "≈ 80 g",
+ "werte": [
+  {
+   "k": "Rohstoffwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "Gebrauchtwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "CO₂ Herstellung",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  }
+ ],
+ "wertvoll": "Je länger ein Gegenstand genutzt wird, desto weniger Rohstoffe und Energie braucht es für Ersatz.",
+ "kreislauf": [
+  {
+   "t": "Rohstoffe",
+   "d": "Erdöl, Metallerze, Holz oder Baumwolle"
+  },
+  {
+   "t": "Herstellung",
+   "d": "Industrielle Fertigung"
+  },
+  {
+   "t": "Nutzung",
+   "d": "Jahre, wenn man es pflegt"
+  },
+  {
+   "t": "Heute oft",
+   "d": "Landet im Restmüll und wird verbrannt",
+   "tone": "bad"
+  },
+  {
+   "t": "Besser",
+   "d": "Reparieren, weitergeben oder Teile in der Werkstatt nutzen",
+   "tone": "good"
+  }
+ ],
+ "entsorgung": {
+  "wo": "Recyclinghof (Altmetall).",
+  "nicht": "Nicht in die Gelbe Tonne: keine Verpackung",
+  "warnung": "Scharfe Klingen vorher einwickeln."
+ },
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "parts": [
+  {
+   "id": "plastic_handles",
+   "component_id": "plastic_handles",
+   "name": "Handles",
+   "short": "Handles",
+   "shape": "box",
+   "x": 74.2,
+   "y": 10.0,
+   "w": 3.5,
+   "d": 180.0,
+   "h": 3.0,
+   "z": 1.0,
+   "r": 0.4,
+   "explode": [
+    39.5,
+    0,
+    16.2
+   ],
+   "mass": 4.53,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "material_id": "pp",
+   "info": "Often moulded on; cut them off if they won't come off."
+  },
+  {
+   "id": "steel_blades",
+   "component_id": "steel_blades",
+   "name": "Blades",
+   "short": "Blades",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 70.0,
+   "d": 200.0,
+   "h": 10.0,
+   "z": 0.0,
+   "r": 8.4,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 75.47,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "material_id": "steel",
+   "info": "Unscrew the pivot screw; wrap the blades before disposal."
+  }
+ ]
+}

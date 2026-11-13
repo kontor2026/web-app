@@ -1,0 +1,237 @@
+{
+ "id": "toaster",
+ "name": "Toaster",
+ "name_en": "Toaster",
+ "klasse": "Elektroschrott · Kleingerät",
+ "kategorie": true,
+ "platzhalter": true,
+ "photo": null,
+ "erkennung": {
+  "conf": 1.0,
+  "modelle": [
+   [
+    "Toaster",
+    1.0
+   ]
+  ],
+  "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
+ },
+ "masse": "280 × 160 × 190 mm",
+ "gewicht": "≈ 1,2 kg",
+ "werte": [
+  {
+   "k": "Rohstoffwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "Gebrauchtwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "CO₂ Herstellung",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  }
+ ],
+ "wertvoll": "Elektrogeräte enthalten Metalle wie Kupfer, Gold und Kobalt, die sich zurückgewinnen lassen. Noch mehr spart, wer sie repariert und weiternutzt.",
+ "kreislauf": [
+  {
+   "t": "Rohstoffe",
+   "d": "Erze für Kupfer, Gold, Zinn und Seltene Erden aus vielen Ländern"
+  },
+  {
+   "t": "Herstellung",
+   "d": "Platinen und Akkus in Asien, sehr energieintensiv"
+  },
+  {
+   "t": "Nutzung",
+   "d": "Oft nur wenige Jahre"
+  },
+  {
+   "t": "Heute oft",
+   "d": "Liegt in der Schublade oder landet im Restmüll",
+   "tone": "bad"
+  },
+  {
+   "t": "Besser",
+   "d": "Reparieren, weitergeben, dann Elektro-Sammlung",
+   "tone": "good"
+  }
+ ],
+ "entsorgung": {
+  "wo": "Recyclinghof oder Rücknahme im Handel. Kleine Elektrogeräte bis 25 cm nehmen auch große Supermärkte kostenlos zurück.",
+  "nicht": "Nicht in Restmüll oder Gelbe Tonne",
+  "warnung": "Kabel und Stecker dranlassen."
+ },
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "parts": [
+  {
+   "id": "plastic_knobs",
+   "component_id": "plastic_knobs",
+   "name": "Knobs and Lever",
+   "short": "Knobs and Lever",
+   "shape": "cyl",
+   "x": 122.4,
+   "y": 62.4,
+   "w": 35.2,
+   "h": 28.5,
+   "z": 190.0,
+   "explode": [
+    0,
+    0,
+    330.5
+   ],
+   "mass": 37.5,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "material_id": "pp",
+   "info": "Pull them straight off the shafts."
+  },
+  {
+   "id": "heating_element",
+   "component_id": "heating_element",
+   "name": "Heating Element",
+   "short": "Heating Element",
+   "shape": "box",
+   "x": 42.0,
+   "y": 24.0,
+   "w": 196.0,
+   "d": 112.0,
+   "h": 66.5,
+   "z": 38.0,
+   "r": 13.4,
+   "explode": [
+    0,
+    0,
+    328.0
+   ],
+   "mass": 150.0,
+   "materials": [
+    [
+     "nichrom",
+     100
+    ]
+   ],
+   "material_id": "nickel_chrome",
+   "info": "Unplug and let it cool down fully before opening the housing."
+  },
+  {
+   "id": "stainless_steel_body",
+   "component_id": "stainless_steel_body",
+   "name": "Body",
+   "short": "Body",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 280.0,
+   "d": 160.0,
+   "h": 95.0,
+   "z": 95.0,
+   "r": 19.2,
+   "explode": [
+    0,
+    0,
+    88.0
+   ],
+   "mass": 625.0,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "material_id": "steel",
+   "info": "Remains after removing plastic parts, base and electronics."
+  },
+  {
+   "id": "cable_copper_core",
+   "component_id": "cable_copper_core",
+   "name": "Cable Wires",
+   "short": "Cable Wires",
+   "shape": "box",
+   "x": 296.8,
+   "y": 8.0,
+   "w": 14.0,
+   "d": 144.0,
+   "h": 15.2,
+   "z": 19.0,
+   "r": 1.7,
+   "explode": [
+    113.0,
+    0,
+    26.4
+   ],
+   "mass": 37.5,
+   "materials": [
+    [
+     "kupfer",
+     100
+    ]
+   ],
+   "material_id": "copper",
+   "info": "Cut off the plug and strip the insulation to free the copper."
+  },
+  {
+   "id": "cable_insulation",
+   "component_id": "cable_insulation",
+   "name": "Cable Insulation",
+   "short": "Cable Insulation",
+   "shape": "box",
+   "x": 324.8,
+   "y": 8.0,
+   "w": 14.0,
+   "d": 144.0,
+   "h": 15.2,
+   "z": 19.0,
+   "r": 1.7,
+   "explode": [
+    155.0,
+    0,
+    26.4
+   ],
+   "mass": 37.5,
+   "materials": [
+    [
+     "pvc",
+     100
+    ]
+   ],
+   "material_id": "pvc",
+   "info": "Slit lengthwise with a cable stripper to separate it from the wires."
+  },
+  {
+   "id": "crumb_tray",
+   "component_id": "crumb_tray",
+   "name": "Crumb Tray",
+   "short": "Crumb Tray",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 280.0,
+   "d": 160.0,
+   "h": 95.0,
+   "z": 0.0,
+   "r": 19.2,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 312.5,
+   "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "material_id": "aluminium",
+   "info": "Slide it out from the bottom of the toaster."
+  }
+ ]
+}

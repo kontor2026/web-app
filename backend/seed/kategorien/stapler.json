@@ -1,0 +1,183 @@
+{
+ "id": "stapler",
+ "name": "Tacker",
+ "name_en": "Stapler",
+ "klasse": "Metall · Wertstoffhof",
+ "kategorie": true,
+ "platzhalter": true,
+ "photo": null,
+ "erkennung": {
+  "conf": 1.0,
+  "modelle": [
+   [
+    "Tacker",
+    1.0
+   ]
+  ],
+  "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
+ },
+ "masse": "40 × 150 × 60 mm",
+ "gewicht": "≈ 200 g",
+ "werte": [
+  {
+   "k": "Rohstoffwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "Gebrauchtwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "CO₂ Herstellung",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  }
+ ],
+ "wertvoll": "Je länger ein Gegenstand genutzt wird, desto weniger Rohstoffe und Energie braucht es für Ersatz.",
+ "kreislauf": [
+  {
+   "t": "Rohstoffe",
+   "d": "Erdöl, Metallerze, Holz oder Baumwolle"
+  },
+  {
+   "t": "Herstellung",
+   "d": "Industrielle Fertigung"
+  },
+  {
+   "t": "Nutzung",
+   "d": "Jahre, wenn man es pflegt"
+  },
+  {
+   "t": "Heute oft",
+   "d": "Landet im Restmüll und wird verbrannt",
+   "tone": "bad"
+  },
+  {
+   "t": "Besser",
+   "d": "Reparieren, weitergeben oder Teile in der Werkstatt nutzen",
+   "tone": "good"
+  }
+ ],
+ "entsorgung": {
+  "wo": "Recyclinghof (Altmetall).",
+  "nicht": "Nicht in die Gelbe Tonne: keine Verpackung",
+  "warnung": "Scharfe Klingen vorher einwickeln."
+ },
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "parts": [
+  {
+   "id": "plastic_base_ober",
+   "component_id": "plastic_base",
+   "name": "Base (Oberteil)",
+   "short": "Base (Oberteil)",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 40.0,
+   "d": 150.0,
+   "h": 12.0,
+   "z": 36.0,
+   "r": 4.8,
+   "explode": [
+    0,
+    0,
+    146.4
+   ],
+   "mass": 34.88,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "material_id": "abs",
+   "info": "Pry it off the steel arm."
+  },
+  {
+   "id": "steel_spring",
+   "component_id": "steel_spring",
+   "name": "Spring",
+   "short": "Spring",
+   "shape": "box",
+   "x": 21.6,
+   "y": 13.5,
+   "w": 16.8,
+   "d": 63.0,
+   "h": 16.2,
+   "z": 7.2,
+   "r": 2.0,
+   "explode": [
+    0,
+    0,
+    121.0
+   ],
+   "mass": 27.91,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "material_id": "steel",
+   "info": "Pull it out with pliers."
+  },
+  {
+   "id": "steel_stapler_body",
+   "component_id": "steel_stapler_body",
+   "name": "Stapler Arm",
+   "short": "Stapler Arm",
+   "shape": "box",
+   "x": 1.6,
+   "y": 13.5,
+   "w": 16.8,
+   "d": 63.0,
+   "h": 16.2,
+   "z": 7.2,
+   "r": 2.0,
+   "explode": [
+    0,
+    0,
+    66.8
+   ],
+   "mass": 55.81,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "material_id": "steel",
+   "info": "Remove the staples, then knock out the hinge pin."
+  },
+  {
+   "id": "plastic_base",
+   "component_id": "plastic_base",
+   "name": "Base (Unterteil)",
+   "short": "Base (Unterteil)",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 40.0,
+   "d": 150.0,
+   "h": 36.0,
+   "z": 0,
+   "r": 4.8,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 81.4,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "material_id": "abs",
+   "info": "Pry it off the steel arm."
+  }
+ ]
+}

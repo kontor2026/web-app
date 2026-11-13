@@ -1,0 +1,243 @@
+{
+ "id": "analog_wristwatch",
+ "name": "Armbanduhr",
+ "name_en": "Wristwatch",
+ "klasse": "Elektroschrott · Kleingerät",
+ "kategorie": true,
+ "platzhalter": true,
+ "photo": null,
+ "erkennung": {
+  "conf": 1.0,
+  "modelle": [
+   [
+    "Armbanduhr",
+    1.0
+   ]
+  ],
+  "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
+ },
+ "masse": "40 × 40 × 12 mm",
+ "gewicht": "≈ 60 g",
+ "werte": [
+  {
+   "k": "Rohstoffwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "Gebrauchtwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "CO₂ Herstellung",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  }
+ ],
+ "wertvoll": "Elektrogeräte enthalten Metalle wie Kupfer, Gold und Kobalt, die sich zurückgewinnen lassen. Noch mehr spart, wer sie repariert und weiternutzt.",
+ "kreislauf": [
+  {
+   "t": "Rohstoffe",
+   "d": "Erze für Kupfer, Gold, Zinn und Seltene Erden aus vielen Ländern"
+  },
+  {
+   "t": "Herstellung",
+   "d": "Platinen und Akkus in Asien, sehr energieintensiv"
+  },
+  {
+   "t": "Nutzung",
+   "d": "Oft nur wenige Jahre"
+  },
+  {
+   "t": "Heute oft",
+   "d": "Liegt in der Schublade oder landet im Restmüll",
+   "tone": "bad"
+  },
+  {
+   "t": "Besser",
+   "d": "Reparieren, weitergeben, dann Elektro-Sammlung",
+   "tone": "good"
+  }
+ ],
+ "entsorgung": {
+  "wo": "Recyclinghof oder Rücknahme im Handel. Kleine Elektrogeräte bis 25 cm nehmen auch große Supermärkte kostenlos zurück.",
+  "nicht": "Nicht in Restmüll oder Gelbe Tonne",
+  "warnung": "Akku oder Batterie nicht beschädigen. Wenn möglich herausnehmen und getrennt abgeben, fest verbaute Akkus drinlassen."
+ },
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "parts": [
+  {
+   "id": "button_cell",
+   "component_id": "button_cell",
+   "name": "Button Cell",
+   "short": "Button Cell",
+   "shape": "cyl",
+   "x": 15.6,
+   "y": 15.6,
+   "w": 8.8,
+   "h": 1.8,
+   "z": 10.32,
+   "explode": [
+    0,
+    0,
+    67.3
+   ],
+   "mass": 6.0,
+   "materials": [
+    [
+     "knopfzelle",
+     100
+    ]
+   ],
+   "material_id": "coin_cell",
+   "info": "Open the battery lid and lift it out; tape both sides and hand it in at a battery collection point."
+  },
+  {
+   "id": "watch_glass",
+   "component_id": "watch_glass",
+   "name": "Crystal",
+   "short": "Crystal",
+   "shape": "cyl",
+   "x": 0.8,
+   "y": 0.8,
+   "w": 38.4,
+   "h": 0.72,
+   "z": 9.6,
+   "explode": [
+    0,
+    0,
+    51.3
+   ],
+   "mass": 20.0,
+   "materials": [
+    [
+     "glas",
+     100
+    ]
+   ],
+   "material_id": "special_glass",
+   "info": "Pressed into the case; leave it in."
+  },
+  {
+   "id": "steel_watch_case_ober",
+   "component_id": "steel_watch_case",
+   "name": "Case (Oberteil)",
+   "short": "Case (Oberteil)",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 40.0,
+   "h": 2.4,
+   "z": 7.2,
+   "explode": [
+    0,
+    0,
+    35.3
+   ],
+   "mass": 7.5,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "material_id": "steel",
+   "info": "Use a case knife to pop off the back."
+  },
+  {
+   "id": "watch_movement",
+   "component_id": "watch_movement",
+   "name": "Movement",
+   "short": "Movement",
+   "shape": "box",
+   "x": 6.0,
+   "y": 6.0,
+   "w": 28.0,
+   "d": 28.0,
+   "h": 3.24,
+   "z": 1.44,
+   "r": 3.4,
+   "explode": [
+    0,
+    0,
+    21.8
+   ],
+   "mass": 6.0,
+   "materials": [
+    [
+     "chip",
+     30
+    ],
+    [
+     "kupfer",
+     30
+    ],
+    [
+     "pcabs",
+     25
+    ],
+    [
+     "stahl",
+     15
+    ]
+   ],
+   "material_id": "mixed_electronics",
+   "info": "Lift it out after pulling out the crown stem."
+  },
+  {
+   "id": "leather_strap",
+   "component_id": "leather_strap",
+   "name": "Strap",
+   "short": "Strap",
+   "shape": "box",
+   "x": 42.4,
+   "y": 2.0,
+   "w": 3.0,
+   "d": 36.0,
+   "h": 3.0,
+   "z": 1.2,
+   "r": 0.4,
+   "explode": [
+    29.0,
+    0,
+    4.8
+   ],
+   "mass": 3.0,
+   "materials": [
+    [
+     "leder",
+     100
+    ]
+   ],
+   "material_id": "leather",
+   "info": "Unscrew the buckle screw or unpick the stitching around it."
+  },
+  {
+   "id": "steel_watch_case",
+   "component_id": "steel_watch_case",
+   "name": "Case (Unterteil)",
+   "short": "Case (Unterteil)",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 40.0,
+   "h": 7.2,
+   "z": 0,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 17.5,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "material_id": "steel",
+   "info": "Use a case knife to pop off the back."
+  }
+ ]
+}

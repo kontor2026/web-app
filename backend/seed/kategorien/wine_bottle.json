@@ -1,0 +1,177 @@
+{
+ "id": "wine_bottle",
+ "name": "Weinflasche",
+ "name_en": "Wine Bottle",
+ "klasse": "Verpackung · Glas",
+ "kategorie": true,
+ "platzhalter": true,
+ "photo": null,
+ "erkennung": {
+  "conf": 1.0,
+  "modelle": [
+   [
+    "Weinflasche",
+    1.0
+   ]
+  ],
+  "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
+ },
+ "masse": "76 × 76 × 300 mm",
+ "gewicht": "≈ 500 g",
+ "werte": [
+  {
+   "k": "Rohstoffwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "Gebrauchtwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "CO₂ Herstellung",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  }
+ ],
+ "wertvoll": "Sortenrein getrennt wird aus Verpackung wieder Rohstoff. Jede richtig getrennte Verpackung spart neues Material.",
+ "kreislauf": [
+  {
+   "t": "Rohstoffe",
+   "d": "Erdöl, Holz, Bauxit oder Quarzsand"
+  },
+  {
+   "t": "Herstellung",
+   "d": "Wenige Sekunden Formgebung in der Fabrik"
+  },
+  {
+   "t": "Nutzung",
+   "d": "Oft nur Minuten bis Tage"
+  },
+  {
+   "t": "Heute oft",
+   "d": "Falsch getrennt und dann verbrannt",
+   "tone": "bad"
+  },
+  {
+   "t": "Besser",
+   "d": "Richtig trennen oder in der Werkstatt neu formen",
+   "tone": "good"
+  }
+ ],
+ "entsorgung": {
+  "wo": "Altglascontainer, nach Farben getrennt (weiß, grün, braun; andere Farben zu Grün).",
+  "nicht": "Keine Trinkgläser, Keramik oder Glühbirnen",
+  "warnung": "Deckel abnehmen und in die Gelbe Tonne geben."
+ },
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "parts": [
+  {
+   "id": "aluminium_capsule_foil",
+   "component_id": "aluminium_capsule_foil",
+   "name": "Capsule Foil",
+   "short": "Capsule Foil",
+   "shape": "cyl",
+   "x": 36.1,
+   "y": 20.9,
+   "w": 34.2,
+   "h": 36.0,
+   "z": 255.0,
+   "explode": [
+    0,
+    0,
+    108.0
+   ],
+   "mass": 25.42,
+   "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "material_id": "aluminium",
+   "info": "Cut along the ridge below the neck and pull the foil off."
+  },
+  {
+   "id": "cork_stopper",
+   "component_id": "cork_stopper",
+   "name": "Cork",
+   "short": "Cork",
+   "shape": "cyl",
+   "x": 20.9,
+   "y": 20.9,
+   "w": 34.2,
+   "h": 36.0,
+   "z": 255.0,
+   "explode": [
+    0,
+    0,
+    36.0
+   ],
+   "mass": 25.42,
+   "materials": [
+    [
+     "kork",
+     100
+    ]
+   ],
+   "material_id": "cork",
+   "info": "Pull it out with a corkscrew; collect natural corks separately."
+  },
+  {
+   "id": "paper_label",
+   "component_id": "paper_label",
+   "name": "Paper Label",
+   "short": "Paper Label",
+   "shape": "box",
+   "x": 76.8,
+   "y": 15.2,
+   "w": 2.3,
+   "d": 45.6,
+   "h": 165.0,
+   "z": 60.0,
+   "r": 0.3,
+   "explode": [
+    41.6,
+    0,
+    10.8
+   ],
+   "mass": 25.42,
+   "materials": [
+    [
+     "papier",
+     100
+    ]
+   ],
+   "material_id": "paper",
+   "info": "Soak in warm water to peel it off; leaving it on is usually fine."
+  },
+  {
+   "id": "glass_container",
+   "component_id": "glass_container",
+   "name": "Glass",
+   "short": "Glass",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 76.0,
+   "h": 255.0,
+   "z": 0.0,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 423.73,
+   "materials": [
+    [
+     "behaelterglas",
+     100
+    ]
+   ],
+   "material_id": "glass",
+   "info": "Empty it and sort it by colour into the glass bin."
+  }
+ ]
+}

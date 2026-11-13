@@ -1,0 +1,249 @@
+{
+ "id": "blender",
+ "name": "Standmixer",
+ "name_en": "Blender",
+ "klasse": "Elektroschrott · Kleingerät",
+ "kategorie": true,
+ "platzhalter": true,
+ "photo": null,
+ "erkennung": {
+  "conf": 1.0,
+  "modelle": [
+   [
+    "Standmixer",
+    1.0
+   ]
+  ],
+  "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
+ },
+ "masse": "170 × 170 × 380 mm",
+ "gewicht": "≈ 2,5 kg",
+ "werte": [
+  {
+   "k": "Rohstoffwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "Gebrauchtwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "CO₂ Herstellung",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  }
+ ],
+ "wertvoll": "Elektrogeräte enthalten Metalle wie Kupfer, Gold und Kobalt, die sich zurückgewinnen lassen. Noch mehr spart, wer sie repariert und weiternutzt.",
+ "kreislauf": [
+  {
+   "t": "Rohstoffe",
+   "d": "Erze für Kupfer, Gold, Zinn und Seltene Erden aus vielen Ländern"
+  },
+  {
+   "t": "Herstellung",
+   "d": "Platinen und Akkus in Asien, sehr energieintensiv"
+  },
+  {
+   "t": "Nutzung",
+   "d": "Oft nur wenige Jahre"
+  },
+  {
+   "t": "Heute oft",
+   "d": "Liegt in der Schublade oder landet im Restmüll",
+   "tone": "bad"
+  },
+  {
+   "t": "Besser",
+   "d": "Reparieren, weitergeben, dann Elektro-Sammlung",
+   "tone": "good"
+  }
+ ],
+ "entsorgung": {
+  "wo": "Recyclinghof oder Rücknahme im Handel. Kleine Elektrogeräte bis 25 cm nehmen auch große Supermärkte kostenlos zurück.",
+  "nicht": "Nicht in Restmüll oder Gelbe Tonne",
+  "warnung": "Kabel und Stecker dranlassen."
+ },
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "parts": [
+  {
+   "id": "electric_motor",
+   "component_id": "electric_motor",
+   "name": "Electric Motor",
+   "short": "Electric Motor",
+   "shape": "cyl",
+   "x": 91.8,
+   "y": 15.3,
+   "w": 71.4,
+   "h": 133.0,
+   "z": 76.0,
+   "explode": [
+    0,
+    0,
+    641.0
+   ],
+   "mass": 375.0,
+   "materials": [
+    [
+     "chip",
+     30
+    ],
+    [
+     "kupfer",
+     30
+    ],
+    [
+     "pcabs",
+     25
+    ],
+    [
+     "stahl",
+     15
+    ]
+   ],
+   "material_id": "mixed_electronics",
+   "info": "Unscrew from the housing and cut the wires; contains copper windings and magnets."
+  },
+  {
+   "id": "blender_blade",
+   "component_id": "blender_blade",
+   "name": "Blade Assembly",
+   "short": "Blade Assembly",
+   "shape": "box",
+   "x": 6.8,
+   "y": 15.3,
+   "w": 71.4,
+   "d": 71.4,
+   "h": 133.0,
+   "z": 76.0,
+   "r": 8.6,
+   "explode": [
+    0,
+    0,
+    440.0
+   ],
+   "mass": 375.0,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "material_id": "steel",
+   "info": "Unscrew the bottom ring of the jar; the blades are very sharp, wrap them before disposal."
+  },
+  {
+   "id": "plastic_housing",
+   "component_id": "plastic_housing",
+   "name": "Plastic Housing",
+   "short": "Plastic Housing",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 170.0,
+   "d": 170.0,
+   "h": 190.0,
+   "z": 190.0,
+   "r": 20.4,
+   "explode": [
+    0,
+    0,
+    68.0
+   ],
+   "mass": 781.25,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "material_id": "abs",
+   "info": "Look for hidden screws under rubber feet or labels, then pry the clips open."
+  },
+  {
+   "id": "cable_copper_core",
+   "component_id": "cable_copper_core",
+   "name": "Cable Wires",
+   "short": "Cable Wires",
+   "shape": "box",
+   "x": 180.2,
+   "y": 8.5,
+   "w": 8.5,
+   "d": 153.0,
+   "h": 30.4,
+   "z": 38.0,
+   "r": 1.0,
+   "explode": [
+    74.5,
+    0,
+    20.4
+   ],
+   "mass": 93.75,
+   "materials": [
+    [
+     "kupfer",
+     100
+    ]
+   ],
+   "material_id": "copper",
+   "info": "Cut off the plug and strip the insulation to free the copper."
+  },
+  {
+   "id": "cable_insulation",
+   "component_id": "cable_insulation",
+   "name": "Cable Insulation",
+   "short": "Cable Insulation",
+   "shape": "box",
+   "x": 197.2,
+   "y": 8.5,
+   "w": 8.5,
+   "d": 153.0,
+   "h": 30.4,
+   "z": 38.0,
+   "r": 1.0,
+   "explode": [
+    100.0,
+    0,
+    20.4
+   ],
+   "mass": 93.75,
+   "materials": [
+    [
+     "pvc",
+     100
+    ]
+   ],
+   "material_id": "pvc",
+   "info": "Slit lengthwise with a cable stripper to separate it from the wires."
+  },
+  {
+   "id": "blender_jar",
+   "component_id": "blender_jar",
+   "name": "Jar",
+   "short": "Jar",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 170.0,
+   "d": 170.0,
+   "h": 190.0,
+   "z": 0.0,
+   "r": 20.4,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 781.25,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "material_id": "pc",
+   "info": "Lift it off the base; check the bottom for a material code."
+  }
+ ]
+}

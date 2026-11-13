@@ -1,0 +1,1610 @@
+[
+ {
+  "id": "smartphone",
+  "name": "Smartphone",
+  "name_en": "Smartphone",
+  "klasse": "Elektroschrott · Kleingerät",
+  "teile": 12,
+  "platzhalter": false
+ },
+ {
+  "id": "laptop",
+  "name": "Laptop",
+  "name_en": "Laptop",
+  "klasse": "Elektroschrott · Bildschirmgerät",
+  "teile": 17,
+  "platzhalter": false
+ },
+ {
+  "id": "tablet",
+  "name": "Tablet",
+  "name_en": "Tablet",
+  "klasse": "Elektroschrott · Bildschirmgerät",
+  "teile": 5,
+  "platzhalter": true
+ },
+ {
+  "id": "smartwatch",
+  "name": "Smartwatch",
+  "name_en": "Smartwatch",
+  "klasse": "Elektroschrott · Kleingerät",
+  "teile": 6,
+  "platzhalter": true
+ },
+ {
+  "id": "headphones",
+  "name": "Kopfhörer",
+  "name_en": "Headphones",
+  "klasse": "Elektroschrott · Kleingerät",
+  "teile": 6,
+  "platzhalter": true
+ },
+ {
+  "id": "earbuds",
+  "name": "Kabellose Ohrhörer",
+  "name_en": "Wireless Earbuds",
+  "klasse": "Elektroschrott · Kleingerät",
+  "teile": 6,
+  "platzhalter": true
+ },
+ {
+  "id": "computer_mouse",
+  "name": "Computermaus",
+  "name_en": "Computer Mouse",
+  "klasse": "Elektroschrott · Kleingerät",
+  "teile": 6,
+  "platzhalter": true
+ },
+ {
+  "id": "keyboard",
+  "name": "Tastatur",
+  "name_en": "Keyboard",
+  "klasse": "Elektroschrott · Kleingerät",
+  "teile": 6,
+  "platzhalter": true
+ },
+ {
+  "id": "phone_charger",
+  "name": "Handy-Ladegerät",
+  "name_en": "Phone Charger",
+  "klasse": "Elektroschrott · Kleingerät",
+  "teile": 3,
+  "platzhalter": true
+ },
+ {
+  "id": "usb_cable",
+  "name": "USB-Kabel",
+  "name_en": "USB Cable",
+  "klasse": "Elektroschrott · Kleingerät",
+  "teile": 4,
+  "platzhalter": true
+ },
+ {
+  "id": "power_bank",
+  "name": "Powerbank",
+  "name_en": "Power Bank",
+  "klasse": "Elektroschrott · Kleingerät",
+  "teile": 4,
+  "platzhalter": true
+ },
+ {
+  "id": "monitor",
+  "name": "Monitor",
+  "name_en": "Computer Monitor",
+  "klasse": "Elektroschrott · Bildschirmgerät",
+  "teile": 8,
+  "platzhalter": true
+ },
+ {
+  "id": "television",
+  "name": "Fernseher",
+  "name_en": "Television",
+  "klasse": "Elektroschrott · Bildschirmgerät",
+  "teile": 8,
+  "platzhalter": true
+ },
+ {
+  "id": "remote_control",
+  "name": "Fernbedienung",
+  "name_en": "Remote Control",
+  "klasse": "Elektroschrott · Kleingerät",
+  "teile": 5,
+  "platzhalter": true
+ },
+ {
+  "id": "led_bulb",
+  "name": "LED-Lampe",
+  "name_en": "LED Light Bulb",
+  "klasse": "Leuchtmittel",
+  "teile": 5,
+  "platzhalter": true
+ },
+ {
+  "id": "flashlight",
+  "name": "Taschenlampe",
+  "name_en": "Flashlight",
+  "klasse": "Elektroschrott · Kleingerät",
+  "teile": 5,
+  "platzhalter": true
+ },
+ {
+  "id": "alkaline_battery",
+  "name": "Alkali-Batterie (AA)",
+  "name_en": "Alkaline Battery",
+  "klasse": "Batterien",
+  "teile": 1,
+  "platzhalter": true
+ },
+ {
+  "id": "electric_toothbrush",
+  "name": "Elektrische Zahnbürste",
+  "name_en": "Electric Toothbrush",
+  "klasse": "Elektroschrott · Kleingerät",
+  "teile": 5,
+  "platzhalter": true
+ },
+ {
+  "id": "hair_dryer",
+  "name": "Föhn",
+  "name_en": "Hair Dryer",
+  "klasse": "Elektroschrott · Kleingerät",
+  "teile": 6,
+  "platzhalter": true
+ },
+ {
+  "id": "electric_kettle",
+  "name": "Wasserkocher",
+  "name_en": "Electric Kettle",
+  "klasse": "Elektroschrott · Kleingerät",
+  "teile": 7,
+  "platzhalter": true
+ },
+ {
+  "id": "toaster",
+  "name": "Toaster",
+  "name_en": "Toaster",
+  "klasse": "Elektroschrott · Kleingerät",
+  "teile": 6,
+  "platzhalter": true
+ },
+ {
+  "id": "coffee_capsule",
+  "name": "Kaffeekapsel",
+  "name_en": "Coffee Capsule",
+  "klasse": "Verpackung · Gelbe Tonne",
+  "teile": 2,
+  "platzhalter": true
+ },
+ {
+  "id": "pet_bottle",
+  "name": "PET-Flasche",
+  "name_en": "PET Bottle",
+  "klasse": "Pfandverpackung",
+  "teile": 3,
+  "platzhalter": true
+ },
+ {
+  "id": "glass_bottle",
+  "name": "Glasflasche",
+  "name_en": "Glass Bottle",
+  "klasse": "Verpackung · Glas",
+  "teile": 3,
+  "platzhalter": true
+ },
+ {
+  "id": "wine_bottle",
+  "name": "Weinflasche",
+  "name_en": "Wine Bottle",
+  "klasse": "Verpackung · Glas",
+  "teile": 4,
+  "platzhalter": true
+ },
+ {
+  "id": "glass_jar",
+  "name": "Schraubglas",
+  "name_en": "Glass Jar",
+  "klasse": "Verpackung · Glas",
+  "teile": 3,
+  "platzhalter": true
+ },
+ {
+  "id": "aluminium_can",
+  "name": "Getränkedose",
+  "name_en": "Aluminium Can",
+  "klasse": "Pfandverpackung",
+  "teile": 1,
+  "platzhalter": true
+ },
+ {
+  "id": "tin_can",
+  "name": "Konservendose",
+  "name_en": "Tin Can",
+  "klasse": "Verpackung · Gelbe Tonne",
+  "teile": 3,
+  "platzhalter": true
+ },
+ {
+  "id": "beverage_carton",
+  "name": "Getränkekarton",
+  "name_en": "Beverage Carton",
+  "klasse": "Verpackung · Gelbe Tonne",
+  "teile": 2,
+  "platzhalter": true
+ },
+ {
+  "id": "yogurt_cup",
+  "name": "Joghurtbecher",
+  "name_en": "Yogurt Cup",
+  "klasse": "Verpackung · Gelbe Tonne",
+  "teile": 3,
+  "platzhalter": true
+ },
+ {
+  "id": "paper_coffee_cup",
+  "name": "Coffee-to-go-Becher",
+  "name_en": "Paper Coffee Cup",
+  "klasse": "Verpackung · Gelbe Tonne",
+  "teile": 3,
+  "platzhalter": true
+ },
+ {
+  "id": "pizza_box",
+  "name": "Pizzakarton",
+  "name_en": "Pizza Box",
+  "klasse": "Verpackung · Papier",
+  "teile": 1,
+  "platzhalter": true
+ },
+ {
+  "id": "cardboard_box",
+  "name": "Pappkarton",
+  "name_en": "Cardboard Box",
+  "klasse": "Verpackung · Papier",
+  "teile": 3,
+  "platzhalter": true
+ },
+ {
+  "id": "newspaper",
+  "name": "Zeitung",
+  "name_en": "Newspaper",
+  "klasse": "Verpackung · Papier",
+  "teile": 1,
+  "platzhalter": true
+ },
+ {
+  "id": "plastic_bag",
+  "name": "Plastiktüte",
+  "name_en": "Plastic Bag",
+  "klasse": "Verpackung · Gelbe Tonne",
+  "teile": 1,
+  "platzhalter": true
+ },
+ {
+  "id": "chips_bag",
+  "name": "Chipstüte",
+  "name_en": "Chips Bag",
+  "klasse": "Verpackung · Gelbe Tonne",
+  "teile": 1,
+  "platzhalter": true
+ },
+ {
+  "id": "toothpaste_tube",
+  "name": "Zahnpastatube",
+  "name_en": "Toothpaste Tube",
+  "klasse": "Verpackung · Gelbe Tonne",
+  "teile": 2,
+  "platzhalter": true
+ },
+ {
+  "id": "shampoo_bottle",
+  "name": "Shampooflasche",
+  "name_en": "Shampoo Bottle",
+  "klasse": "Verpackung · Gelbe Tonne",
+  "teile": 3,
+  "platzhalter": true
+ },
+ {
+  "id": "spray_can",
+  "name": "Spraydose",
+  "name_en": "Spray Can",
+  "klasse": "Verpackung · Gelbe Tonne",
+  "teile": 3,
+  "platzhalter": true
+ },
+ {
+  "id": "ballpoint_pen",
+  "name": "Kugelschreiber",
+  "name_en": "Ballpoint Pen",
+  "klasse": "Restmüll",
+  "teile": 4,
+  "platzhalter": true
+ },
+ {
+  "id": "pencil",
+  "name": "Bleistift",
+  "name_en": "Pencil",
+  "klasse": "Restmüll",
+  "teile": 4,
+  "platzhalter": true
+ },
+ {
+  "id": "scissors",
+  "name": "Schere",
+  "name_en": "Scissors",
+  "klasse": "Metall · Wertstoffhof",
+  "teile": 2,
+  "platzhalter": true
+ },
+ {
+  "id": "umbrella",
+  "name": "Regenschirm",
+  "name_en": "Umbrella",
+  "klasse": "Metall · Wertstoffhof",
+  "teile": 3,
+  "platzhalter": true
+ },
+ {
+  "id": "sneaker",
+  "name": "Sneaker",
+  "name_en": "Sneaker",
+  "klasse": "Textilien und Schuhe",
+  "teile": 4,
+  "platzhalter": true
+ },
+ {
+  "id": "t_shirt",
+  "name": "T-Shirt",
+  "name_en": "T-Shirt",
+  "klasse": "Textilien und Schuhe",
+  "teile": 2,
+  "platzhalter": true
+ },
+ {
+  "id": "jeans",
+  "name": "Jeans",
+  "name_en": "Jeans",
+  "klasse": "Textilien und Schuhe",
+  "teile": 4,
+  "platzhalter": true
+ },
+ {
+  "id": "backpack",
+  "name": "Rucksack",
+  "name_en": "Backpack",
+  "klasse": "Textilien und Schuhe",
+  "teile": 4,
+  "platzhalter": true
+ },
+ {
+  "id": "sunglasses",
+  "name": "Sonnenbrille",
+  "name_en": "Sunglasses",
+  "klasse": "Restmüll",
+  "teile": 3,
+  "platzhalter": true
+ },
+ {
+  "id": "bicycle_tire",
+  "name": "Fahrradreifen",
+  "name_en": "Bicycle Tire",
+  "klasse": "Wertstoffhof",
+  "teile": 4,
+  "platzhalter": true
+ },
+ {
+  "id": "compact_disc",
+  "name": "CD",
+  "name_en": "Compact Disc",
+  "klasse": "Wertstoffhof",
+  "teile": 3,
+  "platzhalter": true
+ },
+ {
+  "id": "tea_light",
+  "name": "Teelicht",
+  "name_en": "Tea Light",
+  "klasse": "Verpackung · Gelbe Tonne",
+  "teile": 4,
+  "platzhalter": true
+ },
+ {
+  "id": "desktop_pc",
+  "name": "Desktop-PC",
+  "name_en": "Desktop PC",
+  "klasse": "Elektroschrott · Kleingerät",
+  "teile": 9,
+  "platzhalter": true
+ },
+ {
+  "id": "game_controller",
+  "name": "Gamecontroller",
+  "name_en": "Game Controller",
+  "klasse": "Elektroschrott · Kleingerät",
+  "teile": 6,
+  "platzhalter": true
+ },
+ {
+  "id": "wifi_router",
+  "name": "WLAN-Router",
+  "name_en": "Wi-Fi Router",
+  "klasse": "Elektroschrott · Kleingerät",
+  "teile": 5,
+  "platzhalter": true
+ },
+ {
+  "id": "smart_speaker",
+  "name": "Smart Speaker",
+  "name_en": "Smart Speaker",
+  "klasse": "Elektroschrott · Kleingerät",
+  "teile": 5,
+  "platzhalter": true
+ },
+ {
+  "id": "digital_camera",
+  "name": "Digitalkamera",
+  "name_en": "Digital Camera",
+  "klasse": "Elektroschrott · Kleingerät",
+  "teile": 7,
+  "platzhalter": true
+ },
+ {
+  "id": "e_reader",
+  "name": "E-Book-Reader",
+  "name_en": "E-Reader",
+  "klasse": "Elektroschrott · Kleingerät",
+  "teile": 5,
+  "platzhalter": true
+ },
+ {
+  "id": "bluetooth_speaker",
+  "name": "Bluetooth-Lautsprecher",
+  "name_en": "Bluetooth Speaker",
+  "klasse": "Elektroschrott · Kleingerät",
+  "teile": 6,
+  "platzhalter": true
+ },
+ {
+  "id": "desk_lamp",
+  "name": "Schreibtischlampe",
+  "name_en": "Desk Lamp",
+  "klasse": "Elektroschrott · Kleingerät",
+  "teile": 6,
+  "platzhalter": true
+ },
+ {
+  "id": "electric_fan",
+  "name": "Ventilator",
+  "name_en": "Electric Fan",
+  "klasse": "Elektroschrott · Kleingerät",
+  "teile": 6,
+  "platzhalter": true
+ },
+ {
+  "id": "vacuum_cleaner",
+  "name": "Staubsauger",
+  "name_en": "Vacuum Cleaner",
+  "klasse": "Elektroschrott · Großgerät",
+  "teile": 7,
+  "platzhalter": true
+ },
+ {
+  "id": "blender",
+  "name": "Standmixer",
+  "name_en": "Blender",
+  "klasse": "Elektroschrott · Kleingerät",
+  "teile": 6,
+  "platzhalter": true
+ },
+ {
+  "id": "microwave",
+  "name": "Mikrowelle",
+  "name_en": "Microwave Oven",
+  "klasse": "Elektroschrott · Großgerät",
+  "teile": 8,
+  "platzhalter": true
+ },
+ {
+  "id": "coffee_machine",
+  "name": "Kaffeemaschine",
+  "name_en": "Coffee Machine",
+  "klasse": "Elektroschrott · Kleingerät",
+  "teile": 7,
+  "platzhalter": true
+ },
+ {
+  "id": "hand_mixer",
+  "name": "Handmixer",
+  "name_en": "Hand Mixer",
+  "klasse": "Elektroschrott · Kleingerät",
+  "teile": 6,
+  "platzhalter": true
+ },
+ {
+  "id": "electric_shaver",
+  "name": "Elektrorasierer",
+  "name_en": "Electric Shaver",
+  "klasse": "Elektroschrott · Kleingerät",
+  "teile": 5,
+  "platzhalter": true
+ },
+ {
+  "id": "hair_straightener",
+  "name": "Glätteisen",
+  "name_en": "Hair Straightener",
+  "klasse": "Elektroschrott · Kleingerät",
+  "teile": 6,
+  "platzhalter": true
+ },
+ {
+  "id": "clothes_iron",
+  "name": "Bügeleisen",
+  "name_en": "Clothes Iron",
+  "klasse": "Elektroschrott · Kleingerät",
+  "teile": 7,
+  "platzhalter": true
+ },
+ {
+  "id": "calculator",
+  "name": "Taschenrechner",
+  "name_en": "Calculator",
+  "klasse": "Elektroschrott · Kleingerät",
+  "teile": 7,
+  "platzhalter": true
+ },
+ {
+  "id": "smoke_detector",
+  "name": "Rauchmelder",
+  "name_en": "Smoke Detector",
+  "klasse": "Elektroschrott · Kleingerät",
+  "teile": 5,
+  "platzhalter": true
+ },
+ {
+  "id": "extension_cord",
+  "name": "Mehrfachsteckdose",
+  "name_en": "Power Strip",
+  "klasse": "Elektroschrott · Kleingerät",
+  "teile": 5,
+  "platzhalter": true
+ },
+ {
+  "id": "webcam",
+  "name": "Webcam",
+  "name_en": "Webcam",
+  "klasse": "Elektroschrott · Kleingerät",
+  "teile": 6,
+  "platzhalter": true
+ },
+ {
+  "id": "inkjet_printer",
+  "name": "Tintenstrahldrucker",
+  "name_en": "Inkjet Printer",
+  "klasse": "Elektroschrott · Kleingerät",
+  "teile": 7,
+  "platzhalter": true
+ },
+ {
+  "id": "external_hard_drive",
+  "name": "Externe Festplatte",
+  "name_en": "External Hard Drive",
+  "klasse": "Elektroschrott · Kleingerät",
+  "teile": 4,
+  "platzhalter": true
+ },
+ {
+  "id": "usb_stick",
+  "name": "USB-Stick",
+  "name_en": "USB Stick",
+  "klasse": "Elektroschrott · Kleingerät",
+  "teile": 3,
+  "platzhalter": true
+ },
+ {
+  "id": "fitness_tracker",
+  "name": "Fitnessarmband",
+  "name_en": "Fitness Tracker",
+  "klasse": "Elektroschrott · Kleingerät",
+  "teile": 5,
+  "platzhalter": true
+ },
+ {
+  "id": "alarm_clock",
+  "name": "Wecker",
+  "name_en": "Alarm Clock",
+  "klasse": "Elektroschrott · Kleingerät",
+  "teile": 6,
+  "platzhalter": true
+ },
+ {
+  "id": "cordless_drill",
+  "name": "Akkuschrauber",
+  "name_en": "Cordless Drill",
+  "klasse": "Elektroschrott · Kleingerät",
+  "teile": 7,
+  "platzhalter": true
+ },
+ {
+  "id": "portable_radio",
+  "name": "Kofferradio",
+  "name_en": "Portable Radio",
+  "klasse": "Elektroschrott · Kleingerät",
+  "teile": 6,
+  "platzhalter": true
+ },
+ {
+  "id": "compact_fluorescent_lamp",
+  "name": "Energiesparlampe",
+  "name_en": "Energy-Saving Lamp",
+  "klasse": "Leuchtmittel",
+  "teile": 3,
+  "platzhalter": true
+ },
+ {
+  "id": "game_console",
+  "name": "Spielkonsole",
+  "name_en": "Game Console",
+  "klasse": "Elektroschrott · Kleingerät",
+  "teile": 7,
+  "platzhalter": true
+ },
+ {
+  "id": "laptop_charger",
+  "name": "Laptop-Netzteil",
+  "name_en": "Laptop Charger",
+  "klasse": "Elektroschrott · Kleingerät",
+  "teile": 5,
+  "platzhalter": true
+ },
+ {
+  "id": "wired_earphones",
+  "name": "Kabel-Kopfhörer",
+  "name_en": "Wired Earphones",
+  "klasse": "Elektroschrott · Kleingerät",
+  "teile": 7,
+  "platzhalter": true
+ },
+ {
+  "id": "bike_light",
+  "name": "Fahrradlicht",
+  "name_en": "Bike Light",
+  "klasse": "Elektroschrott · Kleingerät",
+  "teile": 5,
+  "platzhalter": true
+ },
+ {
+  "id": "string_lights",
+  "name": "Lichterkette",
+  "name_en": "Fairy Lights",
+  "klasse": "Elektroschrott · Kleingerät",
+  "teile": 6,
+  "platzhalter": true
+ },
+ {
+  "id": "kitchen_scale",
+  "name": "Küchenwaage",
+  "name_en": "Kitchen Scale",
+  "klasse": "Elektroschrott · Kleingerät",
+  "teile": 7,
+  "platzhalter": true
+ },
+ {
+  "id": "bathroom_scale",
+  "name": "Personenwaage",
+  "name_en": "Bathroom Scale",
+  "klasse": "Elektroschrott · Kleingerät",
+  "teile": 7,
+  "platzhalter": true
+ },
+ {
+  "id": "sandwich_maker",
+  "name": "Sandwichmaker",
+  "name_en": "Sandwich Maker",
+  "klasse": "Elektroschrott · Kleingerät",
+  "teile": 6,
+  "platzhalter": true
+ },
+ {
+  "id": "button_cell_battery",
+  "name": "Knopfzelle",
+  "name_en": "Button Cell",
+  "klasse": "Batterien",
+  "teile": 1,
+  "platzhalter": true
+ },
+ {
+  "id": "soldering_iron",
+  "name": "Lötkolben",
+  "name_en": "Soldering Iron",
+  "klasse": "Elektroschrott · Kleingerät",
+  "teile": 6,
+  "platzhalter": true
+ },
+ {
+  "id": "drone",
+  "name": "Drohne",
+  "name_en": "Drone",
+  "klasse": "Elektroschrott · Kleingerät",
+  "teile": 7,
+  "platzhalter": true
+ },
+ {
+  "id": "egg_carton",
+  "name": "Eierkarton",
+  "name_en": "Egg Carton",
+  "klasse": "Verpackung · Papier",
+  "teile": 1,
+  "platzhalter": true
+ },
+ {
+  "id": "plastic_cup",
+  "name": "Plastikbecher",
+  "name_en": "Plastic Cup",
+  "klasse": "Verpackung · Gelbe Tonne",
+  "teile": 1,
+  "platzhalter": true
+ },
+ {
+  "id": "takeaway_container",
+  "name": "Einwegbox",
+  "name_en": "Takeaway Container",
+  "klasse": "Verpackung · Gelbe Tonne",
+  "teile": 2,
+  "platzhalter": true
+ },
+ {
+  "id": "foam_food_tray",
+  "name": "Styroporschale",
+  "name_en": "Foam Meat Tray",
+  "klasse": "Verpackung · Gelbe Tonne",
+  "teile": 3,
+  "platzhalter": true
+ },
+ {
+  "id": "cling_film",
+  "name": "Frischhaltefolie",
+  "name_en": "Cling Film",
+  "klasse": "Verpackung · Gelbe Tonne",
+  "teile": 1,
+  "platzhalter": true
+ },
+ {
+  "id": "aluminium_foil",
+  "name": "Alufolie",
+  "name_en": "Aluminium Foil",
+  "klasse": "Verpackung · Gelbe Tonne",
+  "teile": 1,
+  "platzhalter": true
+ },
+ {
+  "id": "blister_pack",
+  "name": "Blisterverpackung",
+  "name_en": "Blister Pack",
+  "klasse": "Verpackung · Gelbe Tonne",
+  "teile": 2,
+  "platzhalter": true
+ },
+ {
+  "id": "pill_bottle",
+  "name": "Tablettendose",
+  "name_en": "Pill Bottle",
+  "klasse": "Verpackung · Gelbe Tonne",
+  "teile": 3,
+  "platzhalter": true
+ },
+ {
+  "id": "detergent_bottle",
+  "name": "Waschmittelflasche",
+  "name_en": "Detergent Bottle",
+  "klasse": "Verpackung · Gelbe Tonne",
+  "teile": 3,
+  "platzhalter": true
+ },
+ {
+  "id": "spray_bottle",
+  "name": "Sprühflasche",
+  "name_en": "Spray Bottle",
+  "klasse": "Verpackung · Gelbe Tonne",
+  "teile": 3,
+  "platzhalter": true
+ },
+ {
+  "id": "soap_dispenser",
+  "name": "Seifenspender",
+  "name_en": "Liquid Soap Dispenser",
+  "klasse": "Verpackung · Gelbe Tonne",
+  "teile": 3,
+  "platzhalter": true
+ },
+ {
+  "id": "bubble_wrap",
+  "name": "Luftpolsterfolie",
+  "name_en": "Bubble Wrap",
+  "klasse": "Verpackung · Gelbe Tonne",
+  "teile": 1,
+  "platzhalter": true
+ },
+ {
+  "id": "padded_envelope",
+  "name": "Luftpolsterumschlag",
+  "name_en": "Padded Envelope",
+  "klasse": "Restmüll",
+  "teile": 3,
+  "platzhalter": true
+ },
+ {
+  "id": "paper_bag",
+  "name": "Papiertüte",
+  "name_en": "Paper Bag",
+  "klasse": "Verpackung · Papier",
+  "teile": 1,
+  "platzhalter": true
+ },
+ {
+  "id": "shoebox",
+  "name": "Schuhkarton",
+  "name_en": "Shoebox",
+  "klasse": "Verpackung · Papier",
+  "teile": 3,
+  "platzhalter": true
+ },
+ {
+  "id": "aluminium_tray",
+  "name": "Aluschale",
+  "name_en": "Aluminium Food Tray",
+  "klasse": "Verpackung · Gelbe Tonne",
+  "teile": 2,
+  "platzhalter": true
+ },
+ {
+  "id": "cereal_box",
+  "name": "Müslipackung",
+  "name_en": "Cereal Box",
+  "klasse": "Verpackung · Papier",
+  "teile": 2,
+  "platzhalter": true
+ },
+ {
+  "id": "tea_bag",
+  "name": "Teebeutel",
+  "name_en": "Tea Bag",
+  "klasse": "Bioabfall",
+  "teile": 5,
+  "platzhalter": true
+ },
+ {
+  "id": "plastic_straw",
+  "name": "Trinkhalm",
+  "name_en": "Plastic Straw",
+  "klasse": "Restmüll",
+  "teile": 1,
+  "platzhalter": true
+ },
+ {
+  "id": "coffee_bag",
+  "name": "Kaffeeverpackung",
+  "name_en": "Coffee Bag",
+  "klasse": "Verpackung · Gelbe Tonne",
+  "teile": 2,
+  "platzhalter": true
+ },
+ {
+  "id": "roll_on_deodorant",
+  "name": "Deoroller",
+  "name_en": "Roll-On Deodorant",
+  "klasse": "Verpackung · Gelbe Tonne",
+  "teile": 3,
+  "platzhalter": true
+ },
+ {
+  "id": "lipstick",
+  "name": "Lippenstift",
+  "name_en": "Lipstick",
+  "klasse": "Verpackung · Gelbe Tonne",
+  "teile": 2,
+  "platzhalter": true
+ },
+ {
+  "id": "cosmetic_jar",
+  "name": "Cremetiegel",
+  "name_en": "Cosmetic Jar",
+  "klasse": "Verpackung · Gelbe Tonne",
+  "teile": 2,
+  "platzhalter": true
+ },
+ {
+  "id": "fruit_net",
+  "name": "Obstnetz",
+  "name_en": "Fruit Net",
+  "klasse": "Verpackung · Gelbe Tonne",
+  "teile": 2,
+  "platzhalter": true
+ },
+ {
+  "id": "can_carrier",
+  "name": "Dosenträger",
+  "name_en": "Can Carrier Rings",
+  "klasse": "Verpackung · Gelbe Tonne",
+  "teile": 1,
+  "platzhalter": true
+ },
+ {
+  "id": "bag_in_box",
+  "name": "Bag-in-Box",
+  "name_en": "Bag-in-Box",
+  "klasse": "Verpackung · Gelbe Tonne",
+  "teile": 4,
+  "platzhalter": true
+ },
+ {
+  "id": "bottle_crate",
+  "name": "Getränkekiste",
+  "name_en": "Bottle Crate",
+  "klasse": "Pfandverpackung",
+  "teile": 1,
+  "platzhalter": true
+ },
+ {
+  "id": "paint_bucket",
+  "name": "Farbeimer",
+  "name_en": "Paint Bucket",
+  "klasse": "Wertstoffhof",
+  "teile": 3,
+  "platzhalter": true
+ },
+ {
+  "id": "perfume_bottle",
+  "name": "Parfümflakon",
+  "name_en": "Perfume Bottle",
+  "klasse": "Verpackung · Glas",
+  "teile": 3,
+  "platzhalter": true
+ },
+ {
+  "id": "squeeze_bottle",
+  "name": "Quetschflasche",
+  "name_en": "Squeeze Bottle",
+  "klasse": "Verpackung · Gelbe Tonne",
+  "teile": 3,
+  "platzhalter": true
+ },
+ {
+  "id": "kitchen_sponge",
+  "name": "Küchenschwamm",
+  "name_en": "Kitchen Sponge",
+  "klasse": "Restmüll",
+  "teile": 3,
+  "platzhalter": true
+ },
+ {
+  "id": "toothbrush",
+  "name": "Zahnbürste",
+  "name_en": "Toothbrush",
+  "klasse": "Restmüll",
+  "teile": 2,
+  "platzhalter": true
+ },
+ {
+  "id": "disposable_razor",
+  "name": "Einwegrasierer",
+  "name_en": "Disposable Razor",
+  "klasse": "Restmüll",
+  "teile": 2,
+  "platzhalter": true
+ },
+ {
+  "id": "hairbrush",
+  "name": "Haarbürste",
+  "name_en": "Hairbrush",
+  "klasse": "Restmüll",
+  "teile": 4,
+  "platzhalter": true
+ },
+ {
+  "id": "comb",
+  "name": "Kamm",
+  "name_en": "Comb",
+  "klasse": "Restmüll",
+  "teile": 1,
+  "platzhalter": true
+ },
+ {
+  "id": "cooking_pot",
+  "name": "Kochtopf",
+  "name_en": "Cooking Pot",
+  "klasse": "Metall · Wertstoffhof",
+  "teile": 3,
+  "platzhalter": true
+ },
+ {
+  "id": "frying_pan",
+  "name": "Bratpfanne",
+  "name_en": "Frying Pan",
+  "klasse": "Metall · Wertstoffhof",
+  "teile": 2,
+  "platzhalter": true
+ },
+ {
+  "id": "ceramic_mug",
+  "name": "Kaffeebecher (Keramik)",
+  "name_en": "Ceramic Mug",
+  "klasse": "Restmüll",
+  "teile": 1,
+  "platzhalter": true
+ },
+ {
+  "id": "drinking_glass",
+  "name": "Trinkglas",
+  "name_en": "Drinking Glass",
+  "klasse": "Restmüll",
+  "teile": 1,
+  "platzhalter": true
+ },
+ {
+  "id": "kitchen_knife",
+  "name": "Küchenmesser",
+  "name_en": "Kitchen Knife",
+  "klasse": "Metall · Wertstoffhof",
+  "teile": 2,
+  "platzhalter": true
+ },
+ {
+  "id": "cutting_board",
+  "name": "Schneidebrett",
+  "name_en": "Cutting Board",
+  "klasse": "Holz",
+  "teile": 1,
+  "platzhalter": true
+ },
+ {
+  "id": "wooden_spoon",
+  "name": "Kochlöffel",
+  "name_en": "Wooden Spoon",
+  "klasse": "Restmüll",
+  "teile": 1,
+  "platzhalter": true
+ },
+ {
+  "id": "food_container",
+  "name": "Frischhaltedose",
+  "name_en": "Food Storage Container",
+  "klasse": "Wertstoffhof",
+  "teile": 4,
+  "platzhalter": true
+ },
+ {
+  "id": "thermos_flask",
+  "name": "Thermoskanne",
+  "name_en": "Thermos Flask",
+  "klasse": "Metall · Wertstoffhof",
+  "teile": 3,
+  "platzhalter": true
+ },
+ {
+  "id": "wire_hanger",
+  "name": "Drahtbügel",
+  "name_en": "Wire Hanger",
+  "klasse": "Metall · Wertstoffhof",
+  "teile": 1,
+  "platzhalter": true
+ },
+ {
+  "id": "plastic_hanger",
+  "name": "Kleiderbügel",
+  "name_en": "Plastic Hanger",
+  "klasse": "Restmüll",
+  "teile": 2,
+  "platzhalter": true
+ },
+ {
+  "id": "clothes_peg",
+  "name": "Wäscheklammer",
+  "name_en": "Clothes Peg",
+  "klasse": "Restmüll",
+  "teile": 3,
+  "platzhalter": true
+ },
+ {
+  "id": "picture_frame",
+  "name": "Bilderrahmen",
+  "name_en": "Picture Frame",
+  "klasse": "Restmüll",
+  "teile": 4,
+  "platzhalter": true
+ },
+ {
+  "id": "candle_jar",
+  "name": "Duftkerze im Glas",
+  "name_en": "Jar Candle",
+  "klasse": "Verpackung · Glas",
+  "teile": 4,
+  "platzhalter": true
+ },
+ {
+  "id": "door_key",
+  "name": "Schlüssel",
+  "name_en": "Key",
+  "klasse": "Metall · Wertstoffhof",
+  "teile": 1,
+  "platzhalter": true
+ },
+ {
+  "id": "padlock",
+  "name": "Vorhängeschloss",
+  "name_en": "Padlock",
+  "klasse": "Metall · Wertstoffhof",
+  "teile": 2,
+  "platzhalter": true
+ },
+ {
+  "id": "bicycle_inner_tube",
+  "name": "Fahrradschlauch",
+  "name_en": "Bicycle Inner Tube",
+  "klasse": "Wertstoffhof",
+  "teile": 2,
+  "platzhalter": true
+ },
+ {
+  "id": "garden_hose",
+  "name": "Gartenschlauch",
+  "name_en": "Garden Hose",
+  "klasse": "Wertstoffhof",
+  "teile": 2,
+  "platzhalter": true
+ },
+ {
+  "id": "plant_pot",
+  "name": "Blumentopf",
+  "name_en": "Plastic Plant Pot",
+  "klasse": "Verpackung · Gelbe Tonne",
+  "teile": 1,
+  "platzhalter": true
+ },
+ {
+  "id": "watering_can",
+  "name": "Gießkanne",
+  "name_en": "Watering Can",
+  "klasse": "Wertstoffhof",
+  "teile": 2,
+  "platzhalter": true
+ },
+ {
+  "id": "broom",
+  "name": "Besen",
+  "name_en": "Broom",
+  "klasse": "Restmüll",
+  "teile": 4,
+  "platzhalter": true
+ },
+ {
+  "id": "bucket",
+  "name": "Eimer",
+  "name_en": "Bucket",
+  "klasse": "Wertstoffhof",
+  "teile": 2,
+  "platzhalter": true
+ },
+ {
+  "id": "ice_cube_tray",
+  "name": "Eiswürfelform",
+  "name_en": "Ice Cube Tray",
+  "klasse": "Restmüll",
+  "teile": 1,
+  "platzhalter": true
+ },
+ {
+  "id": "baking_tray",
+  "name": "Backblech",
+  "name_en": "Baking Tray",
+  "klasse": "Metall · Wertstoffhof",
+  "teile": 1,
+  "platzhalter": true
+ },
+ {
+  "id": "fork",
+  "name": "Gabel",
+  "name_en": "Fork",
+  "klasse": "Metall · Wertstoffhof",
+  "teile": 1,
+  "platzhalter": true
+ },
+ {
+  "id": "stapler",
+  "name": "Tacker",
+  "name_en": "Stapler",
+  "klasse": "Metall · Wertstoffhof",
+  "teile": 4,
+  "platzhalter": true
+ },
+ {
+  "id": "ring_binder",
+  "name": "Ordner",
+  "name_en": "Ring Binder",
+  "klasse": "Verpackung · Papier",
+  "teile": 4,
+  "platzhalter": true
+ },
+ {
+  "id": "spiral_notebook",
+  "name": "Spiralblock",
+  "name_en": "Spiral Notebook",
+  "klasse": "Verpackung · Papier",
+  "teile": 4,
+  "platzhalter": true
+ },
+ {
+  "id": "felt_tip_marker",
+  "name": "Filzstift",
+  "name_en": "Felt-Tip Marker",
+  "klasse": "Restmüll",
+  "teile": 4,
+  "platzhalter": true
+ },
+ {
+  "id": "highlighter",
+  "name": "Textmarker",
+  "name_en": "Highlighter",
+  "klasse": "Restmüll",
+  "teile": 4,
+  "platzhalter": true
+ },
+ {
+  "id": "plastic_ruler",
+  "name": "Lineal",
+  "name_en": "Plastic Ruler",
+  "klasse": "Restmüll",
+  "teile": 1,
+  "platzhalter": true
+ },
+ {
+  "id": "eraser",
+  "name": "Radiergummi",
+  "name_en": "Eraser",
+  "klasse": "Restmüll",
+  "teile": 2,
+  "platzhalter": true
+ },
+ {
+  "id": "glue_stick",
+  "name": "Klebestift",
+  "name_en": "Glue Stick",
+  "klasse": "Restmüll",
+  "teile": 2,
+  "platzhalter": true
+ },
+ {
+  "id": "tape_dispenser",
+  "name": "Klebebandabroller",
+  "name_en": "Tape Dispenser",
+  "klasse": "Restmüll",
+  "teile": 3,
+  "platzhalter": true
+ },
+ {
+  "id": "envelope",
+  "name": "Briefumschlag",
+  "name_en": "Window Envelope",
+  "klasse": "Verpackung · Papier",
+  "teile": 2,
+  "platzhalter": true
+ },
+ {
+  "id": "printer_cartridge",
+  "name": "Druckerpatrone",
+  "name_en": "Printer Cartridge",
+  "klasse": "Wertstoffhof",
+  "teile": 4,
+  "platzhalter": true
+ },
+ {
+  "id": "pencil_case",
+  "name": "Federmäppchen",
+  "name_en": "Pencil Case",
+  "klasse": "Restmüll",
+  "teile": 2,
+  "platzhalter": true
+ },
+ {
+  "id": "plastic_folder",
+  "name": "Kunststoff-Hefter",
+  "name_en": "Plastic Folder",
+  "klasse": "Restmüll",
+  "teile": 1,
+  "platzhalter": true
+ },
+ {
+  "id": "pencil_sharpener",
+  "name": "Anspitzer",
+  "name_en": "Pencil Sharpener",
+  "klasse": "Restmüll",
+  "teile": 3,
+  "platzhalter": true
+ },
+ {
+  "id": "clipboard",
+  "name": "Klemmbrett",
+  "name_en": "Clipboard",
+  "klasse": "Restmüll",
+  "teile": 2,
+  "platzhalter": true
+ },
+ {
+  "id": "wool_sweater",
+  "name": "Wollpullover",
+  "name_en": "Wool Sweater",
+  "klasse": "Textilien und Schuhe",
+  "teile": 2,
+  "platzhalter": true
+ },
+ {
+  "id": "leather_belt",
+  "name": "Ledergürtel",
+  "name_en": "Leather Belt",
+  "klasse": "Textilien und Schuhe",
+  "teile": 2,
+  "platzhalter": true
+ },
+ {
+  "id": "leather_shoe",
+  "name": "Lederschuh",
+  "name_en": "Leather Shoe",
+  "klasse": "Textilien und Schuhe",
+  "teile": 3,
+  "platzhalter": true
+ },
+ {
+  "id": "sock",
+  "name": "Socke",
+  "name_en": "Sock",
+  "klasse": "Textilien und Schuhe",
+  "teile": 1,
+  "platzhalter": true
+ },
+ {
+  "id": "baseball_cap",
+  "name": "Basecap",
+  "name_en": "Baseball Cap",
+  "klasse": "Textilien und Schuhe",
+  "teile": 3,
+  "platzhalter": true
+ },
+ {
+  "id": "winter_jacket",
+  "name": "Winterjacke",
+  "name_en": "Winter Jacket",
+  "klasse": "Textilien und Schuhe",
+  "teile": 4,
+  "platzhalter": true
+ },
+ {
+  "id": "bed_sheet",
+  "name": "Bettlaken",
+  "name_en": "Bed Sheet",
+  "klasse": "Textilien und Schuhe",
+  "teile": 1,
+  "platzhalter": true
+ },
+ {
+  "id": "towel",
+  "name": "Handtuch",
+  "name_en": "Towel",
+  "klasse": "Textilien und Schuhe",
+  "teile": 2,
+  "platzhalter": true
+ },
+ {
+  "id": "leather_handbag",
+  "name": "Lederhandtasche",
+  "name_en": "Leather Handbag",
+  "klasse": "Textilien und Schuhe",
+  "teile": 3,
+  "platzhalter": true
+ },
+ {
+  "id": "flip_flops",
+  "name": "Flip-Flops",
+  "name_en": "Flip-Flops",
+  "klasse": "Restmüll",
+  "teile": 2,
+  "platzhalter": true
+ },
+ {
+  "id": "rain_jacket",
+  "name": "Regenjacke",
+  "name_en": "Rain Jacket",
+  "klasse": "Textilien und Schuhe",
+  "teile": 3,
+  "platzhalter": true
+ },
+ {
+  "id": "analog_wristwatch",
+  "name": "Armbanduhr",
+  "name_en": "Wristwatch",
+  "klasse": "Elektroschrott · Kleingerät",
+  "teile": 6,
+  "platzhalter": true
+ },
+ {
+  "id": "building_brick",
+  "name": "Baustein",
+  "name_en": "Toy Building Brick",
+  "klasse": "Restmüll",
+  "teile": 1,
+  "platzhalter": true
+ },
+ {
+  "id": "football",
+  "name": "Fußball",
+  "name_en": "Football",
+  "klasse": "Restmüll",
+  "teile": 3,
+  "platzhalter": true
+ },
+ {
+  "id": "tennis_ball",
+  "name": "Tennisball",
+  "name_en": "Tennis Ball",
+  "klasse": "Restmüll",
+  "teile": 3,
+  "platzhalter": true
+ },
+ {
+  "id": "yoga_mat",
+  "name": "Yogamatte",
+  "name_en": "Yoga Mat",
+  "klasse": "Restmüll",
+  "teile": 1,
+  "platzhalter": true
+ },
+ {
+  "id": "skateboard",
+  "name": "Skateboard",
+  "name_en": "Skateboard",
+  "klasse": "Wertstoffhof",
+  "teile": 5,
+  "platzhalter": true
+ },
+ {
+  "id": "bicycle_helmet",
+  "name": "Fahrradhelm",
+  "name_en": "Bicycle Helmet",
+  "klasse": "Restmüll",
+  "teile": 4,
+  "platzhalter": true
+ },
+ {
+  "id": "sports_bottle",
+  "name": "Trinkflasche",
+  "name_en": "Sports Bottle",
+  "klasse": "Restmüll",
+  "teile": 2,
+  "platzhalter": true
+ },
+ {
+  "id": "plush_toy",
+  "name": "Kuscheltier",
+  "name_en": "Plush Toy",
+  "klasse": "Restmüll",
+  "teile": 3,
+  "platzhalter": true
+ },
+ {
+  "id": "board_game",
+  "name": "Brettspiel",
+  "name_en": "Board Game",
+  "klasse": "Verpackung · Papier",
+  "teile": 5,
+  "platzhalter": true
+ },
+ {
+  "id": "playing_cards",
+  "name": "Spielkarten",
+  "name_en": "Playing Cards",
+  "klasse": "Restmüll",
+  "teile": 3,
+  "platzhalter": true
+ },
+ {
+  "id": "toy_car",
+  "name": "Spielzeugauto",
+  "name_en": "Toy Car",
+  "klasse": "Restmüll",
+  "teile": 4,
+  "platzhalter": true
+ },
+ {
+  "id": "badminton_racket",
+  "name": "Badmintonschläger",
+  "name_en": "Badminton Racket",
+  "klasse": "Restmüll",
+  "teile": 3,
+  "platzhalter": true
+ },
+ {
+  "id": "swim_goggles",
+  "name": "Schwimmbrille",
+  "name_en": "Swim Goggles",
+  "klasse": "Restmüll",
+  "teile": 2,
+  "platzhalter": true
+ },
+ {
+  "id": "frisbee",
+  "name": "Frisbee",
+  "name_en": "Frisbee",
+  "klasse": "Restmüll",
+  "teile": 1,
+  "platzhalter": true
+ },
+ {
+  "id": "vinyl_record",
+  "name": "Schallplatte",
+  "name_en": "Vinyl Record",
+  "klasse": "Wertstoffhof",
+  "teile": 2,
+  "platzhalter": true
+ },
+ {
+  "id": "hammer",
+  "name": "Hammer",
+  "name_en": "Hammer",
+  "klasse": "Metall · Wertstoffhof",
+  "teile": 2,
+  "platzhalter": true
+ },
+ {
+  "id": "screwdriver",
+  "name": "Schraubendreher",
+  "name_en": "Screwdriver",
+  "klasse": "Metall · Wertstoffhof",
+  "teile": 2,
+  "platzhalter": true
+ },
+ {
+  "id": "paint_brush",
+  "name": "Pinsel",
+  "name_en": "Paint Brush",
+  "klasse": "Restmüll",
+  "teile": 4,
+  "platzhalter": true
+ },
+ {
+  "id": "tape_measure",
+  "name": "Maßband",
+  "name_en": "Tape Measure",
+  "klasse": "Restmüll",
+  "teile": 4,
+  "platzhalter": true
+ },
+ {
+  "id": "silicone_cartridge",
+  "name": "Silikonkartusche",
+  "name_en": "Sealant Cartridge",
+  "klasse": "Wertstoffhof",
+  "teile": 2,
+  "platzhalter": true
+ },
+ {
+  "id": "incandescent_bulb",
+  "name": "Glühbirne",
+  "name_en": "Incandescent Bulb",
+  "klasse": "Restmüll",
+  "teile": 3,
+  "platzhalter": true
+ },
+ {
+  "id": "storage_box",
+  "name": "Aufbewahrungsbox",
+  "name_en": "Storage Box",
+  "klasse": "Wertstoffhof",
+  "teile": 2,
+  "platzhalter": true
+ },
+ {
+  "id": "pliers",
+  "name": "Zange",
+  "name_en": "Pliers",
+  "klasse": "Metall · Wertstoffhof",
+  "teile": 2,
+  "platzhalter": true
+ }
+]

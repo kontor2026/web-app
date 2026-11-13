@@ -1,0 +1,127 @@
+{
+ "id": "coffee_bag",
+ "name": "Kaffeeverpackung",
+ "name_en": "Coffee Bag",
+ "klasse": "Verpackung · Gelbe Tonne",
+ "kategorie": true,
+ "platzhalter": true,
+ "photo": null,
+ "erkennung": {
+  "conf": 1.0,
+  "modelle": [
+   [
+    "Kaffeeverpackung",
+    1.0
+   ]
+  ],
+  "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
+ },
+ "masse": "100 × 60 × 220 mm",
+ "gewicht": "≈ 12 g",
+ "werte": [
+  {
+   "k": "Rohstoffwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "Gebrauchtwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "CO₂ Herstellung",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  }
+ ],
+ "wertvoll": "Sortenrein getrennt wird aus Verpackung wieder Rohstoff. Jede richtig getrennte Verpackung spart neues Material.",
+ "kreislauf": [
+  {
+   "t": "Rohstoffe",
+   "d": "Erdöl, Holz, Bauxit oder Quarzsand"
+  },
+  {
+   "t": "Herstellung",
+   "d": "Wenige Sekunden Formgebung in der Fabrik"
+  },
+  {
+   "t": "Nutzung",
+   "d": "Oft nur Minuten bis Tage"
+  },
+  {
+   "t": "Heute oft",
+   "d": "Falsch getrennt und dann verbrannt",
+   "tone": "bad"
+  },
+  {
+   "t": "Besser",
+   "d": "Richtig trennen oder in der Werkstatt neu formen",
+   "tone": "good"
+  }
+ ],
+ "entsorgung": {
+  "wo": "Gelbe Tonne oder Gelber Sack.",
+  "nicht": "Nicht in Restmüll oder Altpapier",
+  "warnung": "Restentleert reicht, nicht ausspülen. Teile aus verschiedenen Materialien trennen."
+ },
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "parts": [
+  {
+   "id": "degassing_valve",
+   "component_id": "degassing_valve",
+   "name": "Aroma Valve",
+   "short": "Aroma Valve",
+   "shape": "box",
+   "x": 36.5,
+   "y": 16.5,
+   "w": 27.0,
+   "d": 27.0,
+   "h": 26.4,
+   "z": 187.0,
+   "r": 3.2,
+   "explode": [
+    0,
+    0,
+    32.0
+   ],
+   "mass": 1.29,
+   "materials": [
+    [
+     "ldpe",
+     100
+    ]
+   ],
+   "material_id": "ldpe",
+   "info": "Cut it out of the bag with scissors."
+  },
+  {
+   "id": "multilayer_film",
+   "component_id": "multilayer_film",
+   "name": "Bag",
+   "short": "Bag",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 100.0,
+   "d": 60.0,
+   "h": 187.0,
+   "z": 0.0,
+   "r": 7.2,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 10.71,
+   "materials": [
+    [
+     "folien",
+     100
+    ]
+   ],
+   "material_id": "multilayer_plastic",
+   "info": "Shake it empty; the metallised layer cannot be separated."
+  }
+ ]
+}

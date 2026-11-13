@@ -1,0 +1,155 @@
+{
+ "id": "kitchen_sponge",
+ "name": "Küchenschwamm",
+ "name_en": "Kitchen Sponge",
+ "klasse": "Restmüll",
+ "kategorie": true,
+ "platzhalter": true,
+ "photo": null,
+ "erkennung": {
+  "conf": 1.0,
+  "modelle": [
+   [
+    "Küchenschwamm",
+    1.0
+   ]
+  ],
+  "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
+ },
+ "masse": "70 × 100 × 30 mm",
+ "gewicht": "≈ 10 g",
+ "werte": [
+  {
+   "k": "Rohstoffwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "Gebrauchtwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "CO₂ Herstellung",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  }
+ ],
+ "wertvoll": "Je länger ein Gegenstand genutzt wird, desto weniger Rohstoffe und Energie braucht es für Ersatz.",
+ "kreislauf": [
+  {
+   "t": "Rohstoffe",
+   "d": "Erdöl, Metallerze, Holz oder Baumwolle"
+  },
+  {
+   "t": "Herstellung",
+   "d": "Industrielle Fertigung"
+  },
+  {
+   "t": "Nutzung",
+   "d": "Jahre, wenn man es pflegt"
+  },
+  {
+   "t": "Heute oft",
+   "d": "Landet im Restmüll und wird verbrannt",
+   "tone": "bad"
+  },
+  {
+   "t": "Besser",
+   "d": "Reparieren, weitergeben oder Teile in der Werkstatt nutzen",
+   "tone": "good"
+  }
+ ],
+ "entsorgung": {
+  "wo": "Restmüll.",
+  "nicht": "Nicht in die Gelbe Tonne: keine Verpackung",
+  "warnung": "Gut Erhaltenes lieber verschenken oder in der Werkstatt abgeben."
+ },
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "parts": [
+  {
+   "id": "sponge_foam_ober",
+   "component_id": "sponge_foam",
+   "name": "Sponge (Oberteil)",
+   "short": "Sponge (Oberteil)",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 70.0,
+   "d": 100.0,
+   "h": 6.0,
+   "z": 18.0,
+   "r": 8.4,
+   "explode": [
+    0,
+    0,
+    76.1
+   ],
+   "mass": 2.42,
+   "materials": [
+    [
+     "schaum",
+     100
+    ]
+   ],
+   "material_id": "pu_foam",
+   "info": "Goes in residual waste; cut old sponges into small cleaning pads instead."
+  },
+  {
+   "id": "scrub_pad",
+   "component_id": "scrub_pad",
+   "name": "Scouring Pad",
+   "short": "Scouring Pad",
+   "shape": "box",
+   "x": 10.5,
+   "y": 15.0,
+   "w": 49.0,
+   "d": 70.0,
+   "h": 8.1,
+   "z": 3.6,
+   "r": 5.9,
+   "explode": [
+    0,
+    0,
+    48.4
+   ],
+   "mass": 1.94,
+   "materials": [
+    [
+     "nylon",
+     100
+    ]
+   ],
+   "material_id": "nylon",
+   "info": "Glued to the sponge; it cannot be separated."
+  },
+  {
+   "id": "sponge_foam",
+   "component_id": "sponge_foam",
+   "name": "Sponge (Unterteil)",
+   "short": "Sponge (Unterteil)",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 70.0,
+   "d": 100.0,
+   "h": 18.0,
+   "z": 0,
+   "r": 8.4,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 5.65,
+   "materials": [
+    [
+     "schaum",
+     100
+    ]
+   ],
+   "material_id": "pu_foam",
+   "info": "Goes in residual waste; cut old sponges into small cleaning pads instead."
+  }
+ ]
+}

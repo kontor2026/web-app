@@ -1,0 +1,125 @@
+{
+ "id": "leather_belt",
+ "name": "Ledergürtel",
+ "name_en": "Leather Belt",
+ "klasse": "Textilien und Schuhe",
+ "kategorie": true,
+ "platzhalter": true,
+ "photo": null,
+ "erkennung": {
+  "conf": 1.0,
+  "modelle": [
+   [
+    "Ledergürtel",
+    1.0
+   ]
+  ],
+  "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
+ },
+ "masse": "100 × 100 × 40 mm",
+ "gewicht": "≈ 200 g",
+ "werte": [
+  {
+   "k": "Rohstoffwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "Gebrauchtwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "CO₂ Herstellung",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  }
+ ],
+ "wertvoll": "Je länger ein Gegenstand genutzt wird, desto weniger Rohstoffe und Energie braucht es für Ersatz.",
+ "kreislauf": [
+  {
+   "t": "Rohstoffe",
+   "d": "Erdöl, Metallerze, Holz oder Baumwolle"
+  },
+  {
+   "t": "Herstellung",
+   "d": "Industrielle Fertigung"
+  },
+  {
+   "t": "Nutzung",
+   "d": "Jahre, wenn man es pflegt"
+  },
+  {
+   "t": "Heute oft",
+   "d": "Landet im Restmüll und wird verbrannt",
+   "tone": "bad"
+  },
+  {
+   "t": "Besser",
+   "d": "Reparieren, weitergeben oder Teile in der Werkstatt nutzen",
+   "tone": "good"
+  }
+ ],
+ "entsorgung": {
+  "wo": "Altkleidercontainer oder Recyclinghof, sauber und in einem Beutel.",
+  "nicht": "Tragbares nicht in den Restmüll",
+  "warnung": "Schuhe paarweise zusammenbinden."
+ },
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "parts": [
+  {
+   "id": "leather_strap",
+   "component_id": "leather_strap",
+   "name": "Strap",
+   "short": "Strap",
+   "shape": "box",
+   "x": 106.0,
+   "y": 5.0,
+   "w": 5.0,
+   "d": 90.0,
+   "h": 3.2,
+   "z": 4.0,
+   "r": 0.6,
+   "explode": [
+    50.0,
+    0,
+    12.0
+   ],
+   "mass": 21.43,
+   "materials": [
+    [
+     "leder",
+     100
+    ]
+   ],
+   "material_id": "leather",
+   "info": "Unscrew the buckle screw or unpick the stitching around it."
+  },
+  {
+   "id": "belt_buckle",
+   "component_id": "belt_buckle",
+   "name": "Buckle",
+   "short": "Buckle",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 100.0,
+   "h": 40.0,
+   "z": 0.0,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 178.57,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "material_id": "steel",
+   "info": "Unscrew it from the strap end."
+  }
+ ]
+}

@@ -1,0 +1,127 @@
+{
+ "id": "storage_box",
+ "name": "Aufbewahrungsbox",
+ "name_en": "Storage Box",
+ "klasse": "Wertstoffhof",
+ "kategorie": true,
+ "platzhalter": true,
+ "photo": null,
+ "erkennung": {
+  "conf": 1.0,
+  "modelle": [
+   [
+    "Aufbewahrungsbox",
+    1.0
+   ]
+  ],
+  "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
+ },
+ "masse": "390 × 290 × 220 mm",
+ "gewicht": "≈ 1,2 kg",
+ "werte": [
+  {
+   "k": "Rohstoffwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "Gebrauchtwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "CO₂ Herstellung",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  }
+ ],
+ "wertvoll": "Je länger ein Gegenstand genutzt wird, desto weniger Rohstoffe und Energie braucht es für Ersatz.",
+ "kreislauf": [
+  {
+   "t": "Rohstoffe",
+   "d": "Erdöl, Metallerze, Holz oder Baumwolle"
+  },
+  {
+   "t": "Herstellung",
+   "d": "Industrielle Fertigung"
+  },
+  {
+   "t": "Nutzung",
+   "d": "Jahre, wenn man es pflegt"
+  },
+  {
+   "t": "Heute oft",
+   "d": "Landet im Restmüll und wird verbrannt",
+   "tone": "bad"
+  },
+  {
+   "t": "Besser",
+   "d": "Reparieren, weitergeben oder Teile in der Werkstatt nutzen",
+   "tone": "good"
+  }
+ ],
+ "entsorgung": {
+  "wo": "Recyclinghof.",
+  "nicht": "Nicht in die Gelbe Tonne",
+  "warnung": "Reste von Farben, Klebern oder Chemikalien gehören zur Schadstoffsammlung."
+ },
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "parts": [
+  {
+   "id": "pp_lid",
+   "component_id": "pp_lid",
+   "name": "Lid",
+   "short": "Lid",
+   "shape": "box",
+   "x": 19.5,
+   "y": 14.5,
+   "w": 351.0,
+   "d": 261.0,
+   "h": 17.6,
+   "z": 220.0,
+   "r": 31.3,
+   "explode": [
+    0,
+    0,
+    136.0
+   ],
+   "mass": 128.57,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "material_id": "pp",
+   "info": "Snap it off the rim."
+  },
+  {
+   "id": "pp_storage_box",
+   "component_id": "pp_storage_box",
+   "name": "Box",
+   "short": "Box",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 390.0,
+   "d": 290.0,
+   "h": 220.0,
+   "z": 0.0,
+   "r": 34.8,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 1071.43,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "material_id": "pp",
+   "info": "Remove labels; large rigid plastics go to the recycling centre."
+  }
+ ]
+}

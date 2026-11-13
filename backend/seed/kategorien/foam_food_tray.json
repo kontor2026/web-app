@@ -1,0 +1,159 @@
+{
+ "id": "foam_food_tray",
+ "name": "Styroporschale",
+ "name_en": "Foam Meat Tray",
+ "klasse": "Verpackung · Gelbe Tonne",
+ "kategorie": true,
+ "platzhalter": true,
+ "photo": null,
+ "erkennung": {
+  "conf": 1.0,
+  "modelle": [
+   [
+    "Styroporschale",
+    1.0
+   ]
+  ],
+  "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
+ },
+ "masse": "200 × 140 × 20 mm",
+ "gewicht": "≈ 6 g",
+ "werte": [
+  {
+   "k": "Rohstoffwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "Gebrauchtwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "CO₂ Herstellung",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  }
+ ],
+ "wertvoll": "Sortenrein getrennt wird aus Verpackung wieder Rohstoff. Jede richtig getrennte Verpackung spart neues Material.",
+ "kreislauf": [
+  {
+   "t": "Rohstoffe",
+   "d": "Erdöl, Holz, Bauxit oder Quarzsand"
+  },
+  {
+   "t": "Herstellung",
+   "d": "Wenige Sekunden Formgebung in der Fabrik"
+  },
+  {
+   "t": "Nutzung",
+   "d": "Oft nur Minuten bis Tage"
+  },
+  {
+   "t": "Heute oft",
+   "d": "Falsch getrennt und dann verbrannt",
+   "tone": "bad"
+  },
+  {
+   "t": "Besser",
+   "d": "Richtig trennen oder in der Werkstatt neu formen",
+   "tone": "good"
+  }
+ ],
+ "entsorgung": {
+  "wo": "Gelbe Tonne oder Gelber Sack.",
+  "nicht": "Nicht in Restmüll oder Altpapier",
+  "warnung": "Restentleert reicht, nicht ausspülen. Teile aus verschiedenen Materialien trennen."
+ },
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "parts": [
+  {
+   "id": "absorbent_pad",
+   "component_id": "absorbent_pad",
+   "name": "Absorbent Pad",
+   "short": "Absorbent Pad",
+   "shape": "box",
+   "x": 30.0,
+   "y": 21.0,
+   "w": 140.0,
+   "d": 98.0,
+   "h": 7.0,
+   "z": 4.0,
+   "r": 11.8,
+   "explode": [
+    0,
+    0,
+    152.0
+   ],
+   "mass": 0.64,
+   "materials": [
+    [
+     "papier",
+     85
+    ],
+    [
+     "ldpe",
+     15
+    ]
+   ],
+   "material_id": "paper_plastic_composite",
+   "info": "Pull it out and put it in residual waste."
+  },
+  {
+   "id": "ldpe_film",
+   "component_id": "ldpe_film",
+   "name": "Film",
+   "short": "Film",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 200.0,
+   "d": 140.0,
+   "h": 10.0,
+   "z": 10.0,
+   "r": 16.8,
+   "explode": [
+    0,
+    0,
+    68.0
+   ],
+   "mass": 2.68,
+   "materials": [
+    [
+     "ldpe",
+     100
+    ]
+   ],
+   "material_id": "ldpe",
+   "info": "Empty it and fold or ball it up loosely."
+  },
+  {
+   "id": "eps_tray",
+   "component_id": "eps_tray",
+   "name": "Foam Tray",
+   "short": "Foam Tray",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 200.0,
+   "d": 140.0,
+   "h": 10.0,
+   "z": 0.0,
+   "r": 16.8,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 2.68,
+   "materials": [
+    [
+     "ps",
+     100
+    ]
+   ],
+   "material_id": "eps",
+   "info": "Peel off the film and pad first, then break it up for the bin."
+  }
+ ]
+}

@@ -1,0 +1,151 @@
+{
+ "id": "paint_bucket",
+ "name": "Farbeimer",
+ "name_en": "Paint Bucket",
+ "klasse": "Wertstoffhof",
+ "kategorie": true,
+ "platzhalter": true,
+ "photo": null,
+ "erkennung": {
+  "conf": 1.0,
+  "modelle": [
+   [
+    "Farbeimer",
+    1.0
+   ]
+  ],
+  "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
+ },
+ "masse": "200 × 200 × 220 mm",
+ "gewicht": "≈ 400 g",
+ "werte": [
+  {
+   "k": "Rohstoffwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "Gebrauchtwert",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  },
+  {
+   "k": "CO₂ Herstellung",
+   "v": "–",
+   "hint": "folgt aus der Kategorie-Datenbank"
+  }
+ ],
+ "wertvoll": "Je länger ein Gegenstand genutzt wird, desto weniger Rohstoffe und Energie braucht es für Ersatz.",
+ "kreislauf": [
+  {
+   "t": "Rohstoffe",
+   "d": "Erdöl, Metallerze, Holz oder Baumwolle"
+  },
+  {
+   "t": "Herstellung",
+   "d": "Industrielle Fertigung"
+  },
+  {
+   "t": "Nutzung",
+   "d": "Jahre, wenn man es pflegt"
+  },
+  {
+   "t": "Heute oft",
+   "d": "Landet im Restmüll und wird verbrannt",
+   "tone": "bad"
+  },
+  {
+   "t": "Besser",
+   "d": "Reparieren, weitergeben oder Teile in der Werkstatt nutzen",
+   "tone": "good"
+  }
+ ],
+ "entsorgung": {
+  "wo": "Recyclinghof.",
+  "nicht": "Nicht in die Gelbe Tonne",
+  "warnung": "Reste von Farben, Klebern oder Chemikalien gehören zur Schadstoffsammlung."
+ },
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Rohstoffmengen folgen aus der Kategorie-Datenbank.",
+ "parts": [
+  {
+   "id": "pp_lid",
+   "component_id": "pp_lid",
+   "name": "Lid",
+   "short": "Lid",
+   "shape": "cyl",
+   "x": 10.0,
+   "y": 10.0,
+   "w": 180.0,
+   "h": 17.6,
+   "z": 220.0,
+   "explode": [
+    0,
+    0,
+    80.0
+   ],
+   "mass": 21.43,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "material_id": "pp",
+   "info": "Snap it off the rim."
+  },
+  {
+   "id": "steel_handle",
+   "component_id": "steel_handle",
+   "name": "Handle",
+   "short": "Handle",
+   "shape": "box",
+   "x": 212.0,
+   "y": 10.0,
+   "w": 10.0,
+   "d": 180.0,
+   "h": 17.6,
+   "z": 22.0,
+   "r": 1.2,
+   "explode": [
+    85.0,
+    0,
+    24.0
+   ],
+   "mass": 21.43,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "material_id": "steel",
+   "info": "Unhook it from the side lugs."
+  },
+  {
+   "id": "pp_bucket_body",
+   "component_id": "pp_bucket_body",
+   "name": "Bucket",
+   "short": "Bucket",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 200.0,
+   "h": 220.0,
+   "z": 0.0,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 357.14,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "material_id": "pp",
+   "info": "Empty it; let paint or plaster leftovers dry out completely first."
+  }
+ ]
+}
