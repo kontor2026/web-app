@@ -1,0 +1,119 @@
+{
+ "parts": [
+  {
+   "id": "mundstueck",
+   "component_id": "pp_straw",
+   "material_id": "pp",
+   "name": "Mundstück",
+   "short": "Mundstück",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 6,
+   "z": 160,
+   "h": 40,
+   "explode": [
+    0,
+    0,
+    30.0
+   ],
+   "mass": 0.2,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Kurzes oberes Rohrstück aus Polypropylen. Einweg-Trinkhalme aus Kunststoff sind in der EU seit 2021 verboten, Reste bitte in den Restmüll.",
+   "color": "#E8505B",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0.6,
+     "y": 0.6,
+     "w": 4.8,
+     "fill": "#7A2A30"
+    }
+   ]
+  },
+  {
+   "id": "gelenk",
+   "component_id": "pp_straw",
+   "material_id": "pp",
+   "name": "Faltenbalg (Knickgelenk)",
+   "short": "Knickgelenk",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 6,
+   "z": 140,
+   "h": 20,
+   "explode": [
+    0,
+    0,
+    15.0
+   ],
+   "mass": 0.12,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Eingeprägte Rillen wie bei einer Ziehharmonika. Dadurch lässt sich der Halm knicken, ohne dass er zusammenfällt.",
+   "color": "#F07A83",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0.3,
+     "y": 0.3,
+     "w": 5.4,
+     "fill": "#D64550"
+    },
+    {
+     "shape": "cyl",
+     "x": 0.6,
+     "y": 0.6,
+     "w": 4.8,
+     "fill": "#7A2A30"
+    }
+   ]
+  },
+  {
+   "id": "rohr",
+   "component_id": "pp_straw",
+   "material_id": "pp",
+   "name": "Unterrohr",
+   "short": "Rohr",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 6,
+   "z": 0,
+   "h": 140,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 0.68,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Dünnwandiges Rohr. Für die Sortieranlage ist es zu klein und leicht, es landet meist im Restmüll. Besser: Halme aus Glas oder Edelstahl wiederverwenden.",
+   "color": "#E8505B",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0.6,
+     "y": 0.6,
+     "w": 4.8,
+     "fill": "#7A2A30"
+    }
+   ]
+  }
+ ]
+}

@@ -127,6 +127,8 @@ export const MATERIALS = {
                 text: 'Mehrere verklebte Schichten aus PE, PET oder PP, oft mit hauchdünnem Aluminium. Schützt vor Licht und Luft, lässt sich aber kaum trennen.' },
   klebstoff:  { name: 'Klebstoff (Acrylat)', cls: 'kunststoff', elements: [['C', 60], ['H', 8], ['O', 32]], recycling: 'gering',
                 text: 'Klebeschicht auf Bändern und Etiketten. Stört im Recycling kaum, wenn sie dünn ist.' },
+  organisch:  { name: 'Pflanzenreste (Tee, Kaffee)', cls: 'papier', elements: [['C', 48], ['O', 40], ['H', 6], ['N', 3]], recycling: 'hoch',
+                text: 'Getrocknete Blätter oder gemahlene Bohnen. Gehören in die Biotonne und werden zu Kompost oder Biogas.' },
 };
 
 // Elemente: Endpunkt der Drill-down-Kette.

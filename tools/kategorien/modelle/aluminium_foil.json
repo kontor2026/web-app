@@ -1,0 +1,316 @@
+{
+ "parts": [
+  {
+   "id": "folie_1",
+   "component_id": "aluminium_foil_sheet",
+   "material_id": "aluminium",
+   "name": "Aufgewickelte Alufolie",
+   "short": "Alufolie",
+   "shape": "box",
+   "x": 2,
+   "y": 8,
+   "w": 296,
+   "d": 24,
+   "z": 32,
+   "h": 8,
+   "r": 0,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 17.68,
+   "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "info": "Gewalztes Aluminium, nur etwa 0,01 mm dick: eine Seite glänzt, die andere ist matt. Saubere Reste zu einer faustgroßen Kugel knüllen, dann erkennt die Sortieranlage sie.",
+   "color": "#C9CED3",
+   "label": true,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 6.0,
+     "w": 296,
+     "d": 4.8,
+     "r": 0,
+     "fill": "#E4E7EA"
+    }
+   ]
+  },
+  {
+   "id": "folienende",
+   "component_id": "aluminium_foil_sheet",
+   "material_id": "aluminium",
+   "name": "Loses Folienende",
+   "short": "Folienende",
+   "shape": "box",
+   "x": 2,
+   "y": 40,
+   "w": 296,
+   "d": 0.3,
+   "z": 6,
+   "h": 24,
+   "r": 0,
+   "explode": [
+    0,
+    45,
+    0
+   ],
+   "mass": 0.86,
+   "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "info": "Hier wird die Folie abgerollt und an der Kante abgerissen. Benutzte Folie mit Essensresten gehört in den Restmüll, saubere in die Gelbe Tonne.",
+   "color": "#C9CED3"
+  },
+  {
+   "id": "folie_2",
+   "component_id": "aluminium_foil_sheet",
+   "material_id": "aluminium",
+   "name": "Aufgewickelte Alufolie (Schnitt)",
+   "short": "Alufolie",
+   "shape": "box",
+   "x": 2,
+   "y": 1.65,
+   "w": 296,
+   "d": 36.7,
+   "z": 24,
+   "h": 8,
+   "r": 0,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 27.03,
+   "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "info": "Gewalztes Aluminium, nur etwa 0,01 mm dick: eine Seite glänzt, die andere ist matt. Saubere Reste zu einer faustgroßen Kugel knüllen, dann erkennt die Sortieranlage sie.",
+   "color": "#C9CED3",
+   "label": false
+  },
+  {
+   "id": "folie_3",
+   "component_id": "aluminium_foil_sheet",
+   "material_id": "aluminium",
+   "name": "Aufgewickelte Alufolie (Schnitt)",
+   "short": "Alufolie",
+   "shape": "box",
+   "x": 2,
+   "y": 0,
+   "w": 296,
+   "d": 40,
+   "z": 16,
+   "h": 8,
+   "r": 0,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 29.46,
+   "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "info": "Gewalztes Aluminium, nur etwa 0,01 mm dick: eine Seite glänzt, die andere ist matt. Saubere Reste zu einer faustgroßen Kugel knüllen, dann erkennt die Sortieranlage sie.",
+   "color": "#C9CED3",
+   "label": false
+  },
+  {
+   "id": "folie_4",
+   "component_id": "aluminium_foil_sheet",
+   "material_id": "aluminium",
+   "name": "Aufgewickelte Alufolie (Schnitt)",
+   "short": "Alufolie",
+   "shape": "box",
+   "x": 2,
+   "y": 1.65,
+   "w": 296,
+   "d": 36.7,
+   "z": 8,
+   "h": 8,
+   "r": 0,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 27.03,
+   "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "info": "Gewalztes Aluminium, nur etwa 0,01 mm dick: eine Seite glänzt, die andere ist matt. Saubere Reste zu einer faustgroßen Kugel knüllen, dann erkennt die Sortieranlage sie.",
+   "color": "#C9CED3",
+   "label": false
+  },
+  {
+   "id": "folie_5",
+   "component_id": "aluminium_foil_sheet",
+   "material_id": "aluminium",
+   "name": "Aufgewickelte Alufolie (Schnitt)",
+   "short": "Alufolie",
+   "shape": "box",
+   "x": 2,
+   "y": 8,
+   "w": 296,
+   "d": 24,
+   "z": 0,
+   "h": 8,
+   "r": 0,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 17.68,
+   "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "info": "Gewalztes Aluminium, nur etwa 0,01 mm dick: eine Seite glänzt, die andere ist matt. Saubere Reste zu einer faustgroßen Kugel knüllen, dann erkennt die Sortieranlage sie.",
+   "color": "#C9CED3",
+   "label": false
+  },
+  {
+   "id": "kern_1",
+   "component_id": "aluminium_foil_sheet",
+   "material_id": "cardboard",
+   "name": "Papphülse (Wickelkern)",
+   "short": "Papphülse",
+   "shape": "box",
+   "x": 0,
+   "y": 8.8,
+   "w": 300,
+   "d": 22.4,
+   "z": 25,
+   "h": 10,
+   "r": 0,
+   "explode": [
+    330,
+    0,
+    0
+   ],
+   "mass": 9.07,
+   "materials": [
+    [
+     "papier",
+     97
+    ],
+    [
+     "klebstoff",
+     3
+    ]
+   ],
+   "info": "Gewickelte Pappe, auf der die Folie aufgerollt ist. Wenn die Rolle leer ist, kommt die Hülse ins Altpapier.",
+   "color": "#B58C5E",
+   "label": true,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 0,
+     "w": 300,
+     "d": 22.4,
+     "r": 0,
+     "fill": "#A27B50"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 10.2,
+     "w": 300,
+     "d": 2,
+     "r": 0,
+     "fill": "#8E6A42"
+    }
+   ]
+  },
+  {
+   "id": "kern_2",
+   "component_id": "aluminium_foil_sheet",
+   "material_id": "cardboard",
+   "name": "Papphülse (Wickelkern)",
+   "short": "Papphülse",
+   "shape": "box",
+   "x": 0,
+   "y": 5,
+   "w": 300,
+   "d": 30,
+   "z": 15,
+   "h": 10,
+   "r": 0,
+   "explode": [
+    330,
+    0,
+    0
+   ],
+   "mass": 12.14,
+   "materials": [
+    [
+     "papier",
+     97
+    ],
+    [
+     "klebstoff",
+     3
+    ]
+   ],
+   "info": "Gewickelte Pappe, auf der die Folie aufgerollt ist. Wenn die Rolle leer ist, kommt die Hülse ins Altpapier.",
+   "color": "#B58C5E",
+   "label": false
+  },
+  {
+   "id": "kern_3",
+   "component_id": "aluminium_foil_sheet",
+   "material_id": "cardboard",
+   "name": "Papphülse (Wickelkern)",
+   "short": "Papphülse",
+   "shape": "box",
+   "x": 0,
+   "y": 8.8,
+   "w": 300,
+   "d": 22.4,
+   "z": 5,
+   "h": 10,
+   "r": 0,
+   "explode": [
+    330,
+    0,
+    0
+   ],
+   "mass": 9.07,
+   "materials": [
+    [
+     "papier",
+     97
+    ],
+    [
+     "klebstoff",
+     3
+    ]
+   ],
+   "info": "Gewickelte Pappe, auf der die Folie aufgerollt ist. Wenn die Rolle leer ist, kommt die Hülse ins Altpapier.",
+   "color": "#B58C5E",
+   "label": false
+  }
+ ]
+}

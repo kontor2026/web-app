@@ -1,0 +1,322 @@
+{
+ "parts": [
+  {
+   "id": "folie_1",
+   "component_id": "ldpe_film",
+   "material_id": "ldpe",
+   "name": "Aufgewickelte Folie",
+   "short": "Folienwickel",
+   "shape": "box",
+   "x": 2,
+   "y": 8,
+   "w": 296,
+   "d": 24,
+   "z": 32,
+   "h": 8,
+   "r": 0,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 13.55,
+   "materials": [
+    [
+     "ldpe",
+     100
+    ]
+   ],
+   "info": "Etwa 30 m hauchdünne LDPE-Folie (0,01 mm), die durch ihre Haftkraft an Schüsseln klebt. Saubere Folienreste locker in die Gelbe Tonne, verschmutzte in den Restmüll.",
+   "color": "#DDE9EC",
+   "opacity": 0.8,
+   "label": true,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 7.2,
+     "w": 296,
+     "d": 3.6,
+     "r": 0,
+     "fill": "#F4F9FA"
+    }
+   ]
+  },
+  {
+   "id": "folienende",
+   "component_id": "ldpe_film",
+   "material_id": "ldpe",
+   "name": "Loses Folienende",
+   "short": "Folienende",
+   "shape": "box",
+   "x": 2,
+   "y": 40,
+   "w": 296,
+   "d": 0.3,
+   "z": 6,
+   "h": 24,
+   "r": 0,
+   "explode": [
+    0,
+    45,
+    0
+   ],
+   "mass": 0.51,
+   "materials": [
+    [
+     "ldpe",
+     100
+    ]
+   ],
+   "info": "Hier zieht man die Folie ab. Sie haftet an sich selbst, deshalb sucht man den Anfang oft lange.",
+   "color": "#DDE9EC",
+   "opacity": 0.7
+  },
+  {
+   "id": "folie_2",
+   "component_id": "ldpe_film",
+   "material_id": "ldpe",
+   "name": "Aufgewickelte Folie (Schnitt)",
+   "short": "Folienwickel",
+   "shape": "box",
+   "x": 2,
+   "y": 1.65,
+   "w": 296,
+   "d": 36.7,
+   "z": 24,
+   "h": 8,
+   "r": 0,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 20.72,
+   "materials": [
+    [
+     "ldpe",
+     100
+    ]
+   ],
+   "info": "Etwa 30 m hauchdünne LDPE-Folie (0,01 mm), die durch ihre Haftkraft an Schüsseln klebt. Saubere Folienreste locker in die Gelbe Tonne, verschmutzte in den Restmüll.",
+   "color": "#DDE9EC",
+   "opacity": 0.8,
+   "label": false
+  },
+  {
+   "id": "folie_3",
+   "component_id": "ldpe_film",
+   "material_id": "ldpe",
+   "name": "Aufgewickelte Folie (Schnitt)",
+   "short": "Folienwickel",
+   "shape": "box",
+   "x": 2,
+   "y": 0,
+   "w": 296,
+   "d": 40,
+   "z": 16,
+   "h": 8,
+   "r": 0,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 22.58,
+   "materials": [
+    [
+     "ldpe",
+     100
+    ]
+   ],
+   "info": "Etwa 30 m hauchdünne LDPE-Folie (0,01 mm), die durch ihre Haftkraft an Schüsseln klebt. Saubere Folienreste locker in die Gelbe Tonne, verschmutzte in den Restmüll.",
+   "color": "#DDE9EC",
+   "opacity": 0.8,
+   "label": false
+  },
+  {
+   "id": "folie_4",
+   "component_id": "ldpe_film",
+   "material_id": "ldpe",
+   "name": "Aufgewickelte Folie (Schnitt)",
+   "short": "Folienwickel",
+   "shape": "box",
+   "x": 2,
+   "y": 1.65,
+   "w": 296,
+   "d": 36.7,
+   "z": 8,
+   "h": 8,
+   "r": 0,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 20.72,
+   "materials": [
+    [
+     "ldpe",
+     100
+    ]
+   ],
+   "info": "Etwa 30 m hauchdünne LDPE-Folie (0,01 mm), die durch ihre Haftkraft an Schüsseln klebt. Saubere Folienreste locker in die Gelbe Tonne, verschmutzte in den Restmüll.",
+   "color": "#DDE9EC",
+   "opacity": 0.8,
+   "label": false
+  },
+  {
+   "id": "folie_5",
+   "component_id": "ldpe_film",
+   "material_id": "ldpe",
+   "name": "Aufgewickelte Folie (Schnitt)",
+   "short": "Folienwickel",
+   "shape": "box",
+   "x": 2,
+   "y": 8,
+   "w": 296,
+   "d": 24,
+   "z": 0,
+   "h": 8,
+   "r": 0,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 13.55,
+   "materials": [
+    [
+     "ldpe",
+     100
+    ]
+   ],
+   "info": "Etwa 30 m hauchdünne LDPE-Folie (0,01 mm), die durch ihre Haftkraft an Schüsseln klebt. Saubere Folienreste locker in die Gelbe Tonne, verschmutzte in den Restmüll.",
+   "color": "#DDE9EC",
+   "opacity": 0.8,
+   "label": false
+  },
+  {
+   "id": "kern_1",
+   "component_id": "ldpe_film",
+   "material_id": "cardboard",
+   "name": "Papphülse (Wickelkern)",
+   "short": "Papphülse",
+   "shape": "box",
+   "x": 0,
+   "y": 8.8,
+   "w": 300,
+   "d": 22.4,
+   "z": 25,
+   "h": 10,
+   "r": 0,
+   "explode": [
+    330,
+    0,
+    0
+   ],
+   "mass": 8.5,
+   "materials": [
+    [
+     "papier",
+     97
+    ],
+    [
+     "klebstoff",
+     3
+    ]
+   ],
+   "info": "Gewickelte Pappe, auf der die Folie aufgerollt ist. Wenn die Rolle leer ist, kommt die Hülse ins Altpapier.",
+   "color": "#B58C5E",
+   "label": true,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 0,
+     "w": 300,
+     "d": 22.4,
+     "r": 0,
+     "fill": "#A27B50"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 10.2,
+     "w": 300,
+     "d": 2,
+     "r": 0,
+     "fill": "#8E6A42"
+    }
+   ]
+  },
+  {
+   "id": "kern_2",
+   "component_id": "ldpe_film",
+   "material_id": "cardboard",
+   "name": "Papphülse (Wickelkern)",
+   "short": "Papphülse",
+   "shape": "box",
+   "x": 0,
+   "y": 5,
+   "w": 300,
+   "d": 30,
+   "z": 15,
+   "h": 10,
+   "r": 0,
+   "explode": [
+    330,
+    0,
+    0
+   ],
+   "mass": 11.37,
+   "materials": [
+    [
+     "papier",
+     97
+    ],
+    [
+     "klebstoff",
+     3
+    ]
+   ],
+   "info": "Gewickelte Pappe, auf der die Folie aufgerollt ist. Wenn die Rolle leer ist, kommt die Hülse ins Altpapier.",
+   "color": "#B58C5E",
+   "label": false
+  },
+  {
+   "id": "kern_3",
+   "component_id": "ldpe_film",
+   "material_id": "cardboard",
+   "name": "Papphülse (Wickelkern)",
+   "short": "Papphülse",
+   "shape": "box",
+   "x": 0,
+   "y": 8.8,
+   "w": 300,
+   "d": 22.4,
+   "z": 5,
+   "h": 10,
+   "r": 0,
+   "explode": [
+    330,
+    0,
+    0
+   ],
+   "mass": 8.5,
+   "materials": [
+    [
+     "papier",
+     97
+    ],
+    [
+     "klebstoff",
+     3
+    ]
+   ],
+   "info": "Gewickelte Pappe, auf der die Folie aufgerollt ist. Wenn die Rolle leer ist, kommt die Hülse ins Altpapier.",
+   "color": "#B58C5E",
+   "label": false
+  }
+ ]
+}

@@ -4,7 +4,7 @@
  "name_en": "Can Carrier Rings",
  "klasse": "Verpackung · Gelbe Tonne",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -93,35 +93,324 @@
   "nicht": "Nicht in Restmüll oder Altpapier",
   "warnung": "Restentleert reicht, nicht ausspülen. Teile aus verschiedenen Materialien trennen."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "ldpe_rings",
+   "id": "mittelsteg",
    "component_id": "ldpe_rings",
-   "name": "Rings",
-   "short": "Rings",
+   "material_id": "ldpe",
+   "name": "Mittelsteg",
+   "short": "Mittelsteg",
    "shape": "box",
    "x": 0,
-   "y": 0,
-   "w": 250.0,
-   "d": 170.0,
-   "h": 5.0,
-   "z": 0.0,
-   "r": 20.4,
+   "y": 78,
+   "w": 250,
+   "d": 14,
+   "z": 0,
+   "h": 1.5,
+   "r": 3,
    "explode": [
     0,
     0,
     0
    ],
-   "mass": 5.0,
+   "mass": 0.8,
    "materials": [
     [
      "ldpe",
      100
     ]
    ],
+   "info": "Der Steg zwischen den beiden Ringreihen hält alles zusammen. Hier greift man den Sixpack.",
+   "color": "#E6ECEE",
+   "opacity": 0.85,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 6,
+     "w": 242,
+     "d": 2,
+     "r": 0,
+     "fill": "#D3DBDE"
+    }
+   ]
+  },
+  {
+   "id": "ring_1",
+   "component_id": "ldpe_rings",
    "material_id": "ldpe",
-   "info": "Cut every ring open so animals cannot get caught in them."
+   "name": "Haltering",
+   "short": "Ring",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 82,
+   "d": 82,
+   "z": 0,
+   "h": 1.5,
+   "explode": [
+    -25,
+    -25,
+    0
+   ],
+   "mass": 0.7,
+   "materials": [
+    [
+     "ldpe",
+     100
+    ]
+   ],
+   "info": "Dehnbarer LDPE-Ring, der sich um den Dosenrand spannt. Jeden Ring vor dem Wegwerfen durchschneiden, damit sich keine Tiere darin verfangen. Dann in die Gelbe Tonne.",
+   "color": "#E6ECEE",
+   "opacity": 0.85,
+   "label": true,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 7,
+     "y": 7,
+     "w": 68,
+     "fill": "#D3DBDE"
+    },
+    {
+     "shape": "cyl",
+     "x": 9,
+     "y": 9,
+     "w": 64,
+     "fill": "#5E6A70"
+    }
+   ]
+  },
+  {
+   "id": "ring_2",
+   "component_id": "ldpe_rings",
+   "material_id": "ldpe",
+   "name": "Haltering 2",
+   "short": "Ring",
+   "shape": "cyl",
+   "x": 84,
+   "y": 0,
+   "w": 82,
+   "d": 82,
+   "z": 0,
+   "h": 1.5,
+   "explode": [
+    0,
+    -25,
+    0
+   ],
+   "mass": 0.7,
+   "materials": [
+    [
+     "ldpe",
+     100
+    ]
+   ],
+   "info": "Gleicher Ring wie Ring 1, ebenfalls aufschneiden.",
+   "color": "#E6ECEE",
+   "opacity": 0.85,
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 7,
+     "y": 7,
+     "w": 68,
+     "fill": "#D3DBDE"
+    },
+    {
+     "shape": "cyl",
+     "x": 9,
+     "y": 9,
+     "w": 64,
+     "fill": "#5E6A70"
+    }
+   ]
+  },
+  {
+   "id": "ring_3",
+   "component_id": "ldpe_rings",
+   "material_id": "ldpe",
+   "name": "Haltering 3",
+   "short": "Ring",
+   "shape": "cyl",
+   "x": 168,
+   "y": 0,
+   "w": 82,
+   "d": 82,
+   "z": 0,
+   "h": 1.5,
+   "explode": [
+    25,
+    -25,
+    0
+   ],
+   "mass": 0.7,
+   "materials": [
+    [
+     "ldpe",
+     100
+    ]
+   ],
+   "info": "Gleicher Ring wie Ring 1, ebenfalls aufschneiden.",
+   "color": "#E6ECEE",
+   "opacity": 0.85,
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 7,
+     "y": 7,
+     "w": 68,
+     "fill": "#D3DBDE"
+    },
+    {
+     "shape": "cyl",
+     "x": 9,
+     "y": 9,
+     "w": 64,
+     "fill": "#5E6A70"
+    }
+   ]
+  },
+  {
+   "id": "ring_4",
+   "component_id": "ldpe_rings",
+   "material_id": "ldpe",
+   "name": "Haltering 4",
+   "short": "Ring",
+   "shape": "cyl",
+   "x": 0,
+   "y": 88,
+   "w": 82,
+   "d": 82,
+   "z": 0,
+   "h": 1.5,
+   "explode": [
+    -25,
+    25,
+    0
+   ],
+   "mass": 0.7,
+   "materials": [
+    [
+     "ldpe",
+     100
+    ]
+   ],
+   "info": "Gleicher Ring wie Ring 1, ebenfalls aufschneiden.",
+   "color": "#E6ECEE",
+   "opacity": 0.85,
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 7,
+     "y": 7,
+     "w": 68,
+     "fill": "#D3DBDE"
+    },
+    {
+     "shape": "cyl",
+     "x": 9,
+     "y": 9,
+     "w": 64,
+     "fill": "#5E6A70"
+    }
+   ]
+  },
+  {
+   "id": "ring_5",
+   "component_id": "ldpe_rings",
+   "material_id": "ldpe",
+   "name": "Haltering 5",
+   "short": "Ring",
+   "shape": "cyl",
+   "x": 84,
+   "y": 88,
+   "w": 82,
+   "d": 82,
+   "z": 0,
+   "h": 1.5,
+   "explode": [
+    0,
+    25,
+    0
+   ],
+   "mass": 0.7,
+   "materials": [
+    [
+     "ldpe",
+     100
+    ]
+   ],
+   "info": "Gleicher Ring wie Ring 1, ebenfalls aufschneiden.",
+   "color": "#E6ECEE",
+   "opacity": 0.85,
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 7,
+     "y": 7,
+     "w": 68,
+     "fill": "#D3DBDE"
+    },
+    {
+     "shape": "cyl",
+     "x": 9,
+     "y": 9,
+     "w": 64,
+     "fill": "#5E6A70"
+    }
+   ]
+  },
+  {
+   "id": "ring_6",
+   "component_id": "ldpe_rings",
+   "material_id": "ldpe",
+   "name": "Haltering 6",
+   "short": "Ring",
+   "shape": "cyl",
+   "x": 168,
+   "y": 88,
+   "w": 82,
+   "d": 82,
+   "z": 0,
+   "h": 1.5,
+   "explode": [
+    25,
+    25,
+    0
+   ],
+   "mass": 0.7,
+   "materials": [
+    [
+     "ldpe",
+     100
+    ]
+   ],
+   "info": "Gleicher Ring wie Ring 1, ebenfalls aufschneiden.",
+   "color": "#E6ECEE",
+   "opacity": 0.85,
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 7,
+     "y": 7,
+     "w": 68,
+     "fill": "#D3DBDE"
+    },
+    {
+     "shape": "cyl",
+     "x": 9,
+     "y": 9,
+     "w": 64,
+     "fill": "#5E6A70"
+    }
+   ]
   }
  ]
 }

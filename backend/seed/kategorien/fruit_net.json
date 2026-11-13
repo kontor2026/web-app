@@ -4,7 +4,7 @@
  "name_en": "Fruit Net",
  "klasse": "Verpackung · Gelbe Tonne",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -39,10 +39,10 @@
   "metalle_mg": {},
   "herkunft": {},
   "materialien_g": {
-   "ldpe": 4.5,
-   "pp": 0.5
+   "ldpe": 3.7,
+   "pp": 1.3
   },
-  "co2_kg": 0.011,
+  "co2_kg": 0.01,
   "co2_mit_recyclat_kg": 0.001,
   "co2_ersparnis_kg": 0.009,
   "co2_ohne_faktor": [],
@@ -94,63 +94,757 @@
   "nicht": "Nicht in Restmüll oder Altpapier",
   "warnung": "Restentleert reicht, nicht ausspülen. Teile aus verschiedenen Materialien trennen."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "plastic_label",
+   "id": "etikett_vorne",
    "component_id": "plastic_label",
-   "name": "Label",
-   "short": "Label",
-   "shape": "box",
-   "x": 151.5,
-   "y": 50.0,
-   "w": 4.5,
-   "d": 150.0,
-   "h": 3.0,
-   "z": 1.0,
-   "r": 0.5,
-   "explode": [
-    67.5,
-    0,
-    24.0
-   ],
-   "mass": 0.54,
-   "materials": [
-    [
-     "pp",
-     100
-    ]
-   ],
    "material_id": "pp",
-   "info": "Tear along the seam or cut it off."
-  },
-  {
-   "id": "fruit_net_mesh",
-   "component_id": "fruit_net_mesh",
-   "name": "Net",
-   "short": "Net",
+   "name": "Etikett-Banderole (Vorderseite)",
+   "short": "Etikett",
    "shape": "box",
    "x": 0,
    "y": 0,
-   "w": 150.0,
-   "d": 250.0,
-   "h": 5.0,
-   "z": 0.0,
-   "r": 18.0,
+   "w": 150,
+   "d": 40,
+   "z": 4.2,
+   "h": 0.3,
+   "r": 1,
    "explode": [
     0,
     0,
-    0
+    300.1
    ],
-   "mass": 4.46,
+   "mass": 0.7,
+   "materials": [
+    [
+     "pp",
+     94
+    ],
+    [
+     "druck",
+     6
+    ]
+   ],
+   "info": "Bedruckter PP-Streifen mit Sorte, Herkunft und Gewicht, um das Netz herum verschweißt. Mit der Schere abschneiden oder an der Naht aufreißen.",
+   "color": "#F4F1EA",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 6,
+     "y": 5,
+     "w": 60,
+     "d": 30,
+     "r": 3,
+     "fill": "#E2672E"
+    },
+    {
+     "shape": "box",
+     "x": 74,
+     "y": 6,
+     "w": 66,
+     "d": 6,
+     "r": 0,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 74,
+     "y": 16,
+     "w": 50,
+     "d": 5,
+     "r": 0,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 74,
+     "y": 26,
+     "w": 66,
+     "d": 9,
+     "r": 0,
+     "fill": "#22272B"
+    }
+   ]
+  },
+  {
+   "id": "netz_oben",
+   "component_id": "fruit_net_mesh",
+   "material_id": "ldpe",
+   "name": "Netz (obere Lage)",
+   "short": "Netz",
+   "shape": "box",
+   "x": 0,
+   "y": 30,
+   "w": 150,
+   "d": 220,
+   "z": 2.2,
+   "h": 2,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    200.1
+   ],
+   "mass": 1.7,
    "materials": [
     [
      "ldpe",
      100
     ]
    ],
+   "info": "Gewirkter Schlauch aus dünnen LDPE-Fäden. Leer in die Gelbe Tonne. Sind Metallklammern dran, diese vorher abschneiden.",
+   "color": "#E2672E",
+   "opacity": 0.35,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 0,
+     "w": 1.2,
+     "d": 220,
+     "r": 0,
+     "fill": "#C24F1E"
+    },
+    {
+     "shape": "box",
+     "x": 16,
+     "y": 0,
+     "w": 1.2,
+     "d": 220,
+     "r": 0,
+     "fill": "#C24F1E"
+    },
+    {
+     "shape": "box",
+     "x": 28,
+     "y": 0,
+     "w": 1.2,
+     "d": 220,
+     "r": 0,
+     "fill": "#C24F1E"
+    },
+    {
+     "shape": "box",
+     "x": 40,
+     "y": 0,
+     "w": 1.2,
+     "d": 220,
+     "r": 0,
+     "fill": "#C24F1E"
+    },
+    {
+     "shape": "box",
+     "x": 52,
+     "y": 0,
+     "w": 1.2,
+     "d": 220,
+     "r": 0,
+     "fill": "#C24F1E"
+    },
+    {
+     "shape": "box",
+     "x": 64,
+     "y": 0,
+     "w": 1.2,
+     "d": 220,
+     "r": 0,
+     "fill": "#C24F1E"
+    },
+    {
+     "shape": "box",
+     "x": 76,
+     "y": 0,
+     "w": 1.2,
+     "d": 220,
+     "r": 0,
+     "fill": "#C24F1E"
+    },
+    {
+     "shape": "box",
+     "x": 88,
+     "y": 0,
+     "w": 1.2,
+     "d": 220,
+     "r": 0,
+     "fill": "#C24F1E"
+    },
+    {
+     "shape": "box",
+     "x": 100,
+     "y": 0,
+     "w": 1.2,
+     "d": 220,
+     "r": 0,
+     "fill": "#C24F1E"
+    },
+    {
+     "shape": "box",
+     "x": 112,
+     "y": 0,
+     "w": 1.2,
+     "d": 220,
+     "r": 0,
+     "fill": "#C24F1E"
+    },
+    {
+     "shape": "box",
+     "x": 124,
+     "y": 0,
+     "w": 1.2,
+     "d": 220,
+     "r": 0,
+     "fill": "#C24F1E"
+    },
+    {
+     "shape": "box",
+     "x": 136,
+     "y": 0,
+     "w": 1.2,
+     "d": 220,
+     "r": 0,
+     "fill": "#C24F1E"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 4,
+     "w": 150,
+     "d": 1.2,
+     "r": 0,
+     "fill": "#C24F1E"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 16,
+     "w": 150,
+     "d": 1.2,
+     "r": 0,
+     "fill": "#C24F1E"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 28,
+     "w": 150,
+     "d": 1.2,
+     "r": 0,
+     "fill": "#C24F1E"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 40,
+     "w": 150,
+     "d": 1.2,
+     "r": 0,
+     "fill": "#C24F1E"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 52,
+     "w": 150,
+     "d": 1.2,
+     "r": 0,
+     "fill": "#C24F1E"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 64,
+     "w": 150,
+     "d": 1.2,
+     "r": 0,
+     "fill": "#C24F1E"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 76,
+     "w": 150,
+     "d": 1.2,
+     "r": 0,
+     "fill": "#C24F1E"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 88,
+     "w": 150,
+     "d": 1.2,
+     "r": 0,
+     "fill": "#C24F1E"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 100,
+     "w": 150,
+     "d": 1.2,
+     "r": 0,
+     "fill": "#C24F1E"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 112,
+     "w": 150,
+     "d": 1.2,
+     "r": 0,
+     "fill": "#C24F1E"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 124,
+     "w": 150,
+     "d": 1.2,
+     "r": 0,
+     "fill": "#C24F1E"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 136,
+     "w": 150,
+     "d": 1.2,
+     "r": 0,
+     "fill": "#C24F1E"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 148,
+     "w": 150,
+     "d": 1.2,
+     "r": 0,
+     "fill": "#C24F1E"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 160,
+     "w": 150,
+     "d": 1.2,
+     "r": 0,
+     "fill": "#C24F1E"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 172,
+     "w": 150,
+     "d": 1.2,
+     "r": 0,
+     "fill": "#C24F1E"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 184,
+     "w": 150,
+     "d": 1.2,
+     "r": 0,
+     "fill": "#C24F1E"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 196,
+     "w": 150,
+     "d": 1.2,
+     "r": 0,
+     "fill": "#C24F1E"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 208,
+     "w": 150,
+     "d": 1.2,
+     "r": 0,
+     "fill": "#C24F1E"
+    }
+   ]
+  },
+  {
+   "id": "netz_unten",
+   "component_id": "fruit_net_mesh",
    "material_id": "ldpe",
-   "info": "Cut off any metal clips first."
+   "name": "Netz (untere Lage)",
+   "short": "Netz unten",
+   "shape": "box",
+   "x": 0,
+   "y": 30,
+   "w": 150,
+   "d": 220,
+   "z": 0.2,
+   "h": 2,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    100.1
+   ],
+   "mass": 1.7,
+   "materials": [
+    [
+     "ldpe",
+     100
+    ]
+   ],
+   "info": "Rückseite desselben Netzschlauchs. Netze können sich in Maschinen verfangen, deshalb nicht in andere Verpackungen stopfen.",
+   "color": "#E2672E",
+   "opacity": 0.35,
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 0,
+     "w": 1.2,
+     "d": 220,
+     "r": 0,
+     "fill": "#C24F1E"
+    },
+    {
+     "shape": "box",
+     "x": 16,
+     "y": 0,
+     "w": 1.2,
+     "d": 220,
+     "r": 0,
+     "fill": "#C24F1E"
+    },
+    {
+     "shape": "box",
+     "x": 28,
+     "y": 0,
+     "w": 1.2,
+     "d": 220,
+     "r": 0,
+     "fill": "#C24F1E"
+    },
+    {
+     "shape": "box",
+     "x": 40,
+     "y": 0,
+     "w": 1.2,
+     "d": 220,
+     "r": 0,
+     "fill": "#C24F1E"
+    },
+    {
+     "shape": "box",
+     "x": 52,
+     "y": 0,
+     "w": 1.2,
+     "d": 220,
+     "r": 0,
+     "fill": "#C24F1E"
+    },
+    {
+     "shape": "box",
+     "x": 64,
+     "y": 0,
+     "w": 1.2,
+     "d": 220,
+     "r": 0,
+     "fill": "#C24F1E"
+    },
+    {
+     "shape": "box",
+     "x": 76,
+     "y": 0,
+     "w": 1.2,
+     "d": 220,
+     "r": 0,
+     "fill": "#C24F1E"
+    },
+    {
+     "shape": "box",
+     "x": 88,
+     "y": 0,
+     "w": 1.2,
+     "d": 220,
+     "r": 0,
+     "fill": "#C24F1E"
+    },
+    {
+     "shape": "box",
+     "x": 100,
+     "y": 0,
+     "w": 1.2,
+     "d": 220,
+     "r": 0,
+     "fill": "#C24F1E"
+    },
+    {
+     "shape": "box",
+     "x": 112,
+     "y": 0,
+     "w": 1.2,
+     "d": 220,
+     "r": 0,
+     "fill": "#C24F1E"
+    },
+    {
+     "shape": "box",
+     "x": 124,
+     "y": 0,
+     "w": 1.2,
+     "d": 220,
+     "r": 0,
+     "fill": "#C24F1E"
+    },
+    {
+     "shape": "box",
+     "x": 136,
+     "y": 0,
+     "w": 1.2,
+     "d": 220,
+     "r": 0,
+     "fill": "#C24F1E"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 4,
+     "w": 150,
+     "d": 1.2,
+     "r": 0,
+     "fill": "#C24F1E"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 16,
+     "w": 150,
+     "d": 1.2,
+     "r": 0,
+     "fill": "#C24F1E"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 28,
+     "w": 150,
+     "d": 1.2,
+     "r": 0,
+     "fill": "#C24F1E"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 40,
+     "w": 150,
+     "d": 1.2,
+     "r": 0,
+     "fill": "#C24F1E"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 52,
+     "w": 150,
+     "d": 1.2,
+     "r": 0,
+     "fill": "#C24F1E"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 64,
+     "w": 150,
+     "d": 1.2,
+     "r": 0,
+     "fill": "#C24F1E"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 76,
+     "w": 150,
+     "d": 1.2,
+     "r": 0,
+     "fill": "#C24F1E"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 88,
+     "w": 150,
+     "d": 1.2,
+     "r": 0,
+     "fill": "#C24F1E"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 100,
+     "w": 150,
+     "d": 1.2,
+     "r": 0,
+     "fill": "#C24F1E"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 112,
+     "w": 150,
+     "d": 1.2,
+     "r": 0,
+     "fill": "#C24F1E"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 124,
+     "w": 150,
+     "d": 1.2,
+     "r": 0,
+     "fill": "#C24F1E"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 136,
+     "w": 150,
+     "d": 1.2,
+     "r": 0,
+     "fill": "#C24F1E"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 148,
+     "w": 150,
+     "d": 1.2,
+     "r": 0,
+     "fill": "#C24F1E"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 160,
+     "w": 150,
+     "d": 1.2,
+     "r": 0,
+     "fill": "#C24F1E"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 172,
+     "w": 150,
+     "d": 1.2,
+     "r": 0,
+     "fill": "#C24F1E"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 184,
+     "w": 150,
+     "d": 1.2,
+     "r": 0,
+     "fill": "#C24F1E"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 196,
+     "w": 150,
+     "d": 1.2,
+     "r": 0,
+     "fill": "#C24F1E"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 208,
+     "w": 150,
+     "d": 1.2,
+     "r": 0,
+     "fill": "#C24F1E"
+    }
+   ]
+  },
+  {
+   "id": "bodennaht",
+   "component_id": "fruit_net_mesh",
+   "material_id": "ldpe",
+   "name": "Bodennaht (verschweißt)",
+   "short": "Bodennaht",
+   "shape": "box",
+   "x": 0,
+   "y": 244,
+   "w": 150,
+   "d": 6,
+   "z": 4.2,
+   "h": 0.6,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    300.1
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "ldpe",
+     100
+    ]
+   ],
+   "info": "Unten sind beide Netzlagen zu einer festen Kante verschmolzen.",
+   "color": "#C24F1E"
+  },
+  {
+   "id": "etikett_hinten",
+   "component_id": "plastic_label",
+   "material_id": "pp",
+   "name": "Etikett-Banderole (Rückseite)",
+   "short": "Etikett hinten",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 150,
+   "d": 40,
+   "z": 0,
+   "h": 0.3,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 0.6,
+   "materials": [
+    [
+     "pp",
+     97
+    ],
+    [
+     "druck",
+     3
+    ]
+   ],
+   "info": "Rückseite der Banderole mit Barcode. Netz und Etikett sind verschiedene Kunststoffe, kommen aber beide in die Gelbe Tonne.",
+   "color": "#F4F1EA",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 8,
+     "w": 60,
+     "d": 24,
+     "r": 0,
+     "fill": "#22272B"
+    }
+   ]
   }
  ]
 }

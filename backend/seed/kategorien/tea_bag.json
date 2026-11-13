@@ -4,7 +4,7 @@
  "name_en": "Tea Bag",
  "klasse": "Bioabfall",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -37,19 +37,20 @@
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Fe": 480.0
+   "Fe": 20.0
   },
   "herkunft": {
    "Fe": "Modellmassen (Schätzung)"
   },
   "materialien_g": {
-   "paper": 2.3,
-   "steel": 0.5,
-   "cotton": 0.2
+   "wood": 2.4,
+   "paper": 0.5,
+   "cotton": 0.1,
+   "steel": 0.0
   },
-  "co2_kg": 0.002,
+  "co2_kg": 0.001,
   "co2_mit_recyclat_kg": 0.001,
-  "co2_ersparnis_kg": 0.001,
+  "co2_ersparnis_kg": 0.0,
   "co2_ohne_faktor": [],
   "rohstoffwert_eur": 0,
   "wert_ohne_preis": [],
@@ -99,147 +100,663 @@
   "nicht": "Nicht in die Gelbe Tonne",
   "warnung": "Metallklammer und Faden vorher entfernen."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "filter_paper_ober",
-   "component_id": "filter_paper",
-   "name": "Filter Bag (Oberteil)",
-   "short": "Filter Bag (Oberte",
-   "shape": "box",
-   "x": 0,
-   "y": 0,
-   "w": 60.0,
-   "d": 70.0,
-   "h": 1.0,
-   "z": 3.0,
-   "r": 7.2,
-   "explode": [
-    0,
-    0,
-    53.4
-   ],
-   "mass": 0.61,
-   "materials": [
-    [
-     "papier",
-     100
-    ]
-   ],
-   "material_id": "paper",
-   "info": "Compost plastic-free bags together with the tea leaves."
-  },
-  {
-   "id": "staple",
-   "component_id": "staple",
-   "name": "Staple",
-   "short": "Staple",
-   "shape": "box",
-   "x": 9.0,
-   "y": 10.5,
-   "w": 42.0,
-   "d": 49.0,
-   "h": 1.35,
-   "z": 0.6,
-   "r": 5.0,
-   "explode": [
-    0,
-    0,
-    28.4
-   ],
-   "mass": 0.49,
-   "materials": [
-    [
-     "stahl",
-     100
-    ]
-   ],
-   "material_id": "steel",
-   "info": "Pull it out with your fingernail or pliers."
-  },
-  {
-   "id": "paper_tag",
+   "id": "etikett",
    "component_id": "paper_tag",
-   "name": "Tag",
-   "short": "Tag",
+   "material_id": "paper",
+   "name": "Etikett",
+   "short": "Etikett",
    "shape": "box",
-   "x": 63.6,
-   "y": 14.0,
-   "w": 1.8,
-   "d": 42.0,
-   "h": 3.0,
-   "z": 1.0,
-   "r": 0.2,
+   "x": 10,
+   "y": 34,
+   "w": 36,
+   "d": 28,
+   "z": 4.6,
+   "h": 0.3,
+   "r": 1,
    "explode": [
-    45.0,
     0,
-    7.8
+    0,
+    75.0
    ],
-   "mass": 0.24,
+   "mass": 0.12,
    "materials": [
     [
      "papier",
-     100
+     95
+    ],
+    [
+     "druck",
+     5
     ]
    ],
-   "material_id": "paper",
-   "info": "Tear it off the string."
+   "info": "Kleines Kartonetikett zum Festhalten, mit der Teesorte bedruckt. Abreißen und ins Altpapier oder mit in den Biomüll.",
+   "color": "#F4F1EA",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 3,
+     "w": 30,
+     "d": 22,
+     "r": 1,
+     "fill": "#2F7A4A"
+    },
+    {
+     "shape": "box",
+     "x": 7,
+     "y": 10,
+     "w": 22,
+     "d": 4,
+     "r": 0,
+     "fill": "#F4F1EA"
+    }
+   ]
   },
   {
-   "id": "cotton_string",
+   "id": "faden",
    "component_id": "cotton_string",
-   "name": "String",
-   "short": "String",
+   "material_id": "cotton",
+   "name": "Baumwollfaden",
+   "short": "Faden",
    "shape": "box",
-   "x": 63.6,
-   "y": 3.5,
-   "w": 3.0,
-   "d": 63.0,
-   "h": 3.0,
-   "z": 0.5,
-   "r": 0.4,
+   "x": 27,
+   "y": 8,
+   "w": 1,
+   "d": 26,
+   "z": 4.6,
+   "h": 0.15,
+   "r": 0,
    "explode": [
-    36.0,
     0,
-    7.8
+    0,
+    75.0
    ],
-   "mass": 0.24,
+   "mass": 0.06,
    "materials": [
     [
      "baumwolle",
      100
     ]
    ],
-   "material_id": "cotton",
-   "info": "Pull it off the bag."
+   "info": "Ungebleichter Baumwollfaden, durch Etikett und Beutel geknotet oder geklammert. Er verrottet im Kompost.",
+   "color": "#F7F4EC"
   },
   {
-   "id": "filter_paper",
-   "component_id": "filter_paper",
-   "name": "Filter Bag (Unterteil)",
-   "short": "Filter Bag (Untert",
+   "id": "klammer",
+   "component_id": "staple",
+   "material_id": "steel",
+   "name": "Heftklammer",
+   "short": "Klammer",
    "shape": "box",
-   "x": 0,
-   "y": 0,
-   "w": 60.0,
-   "d": 70.0,
-   "h": 3.0,
-   "z": 0,
-   "r": 7.2,
+   "x": 24,
+   "y": 2,
+   "w": 7,
+   "d": 2,
+   "z": 1.2,
+   "h": 0.4,
+   "r": 0,
    "explode": [
     0,
     0,
-    0
+    12.0
    ],
-   "mass": 1.42,
+   "mass": 0.02,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Winzige Stahlklammer, die den Faden am Beutel hält. Vor dem Kompostieren herausziehen, viele Marken kommen inzwischen ohne Klammer aus.",
+   "color": "#AEB4B9",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 0.7,
+     "w": 7,
+     "d": 0.6,
+     "r": 0,
+     "fill": "#868D93"
+    }
+   ]
+  },
+  {
+   "id": "filter_oben",
+   "component_id": "filter_paper",
+   "material_id": "paper",
+   "name": "Filterpapier (Oberseite)",
+   "short": "Filterpapier",
+   "shape": "box",
+   "x": 0,
+   "y": 8,
+   "w": 55,
+   "d": 62,
+   "z": 4.4,
+   "h": 0.2,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    50.0
+   ],
+   "mass": 0.15,
+   "materials": [
+    [
+     "papier",
+     90
+    ],
+    [
+     "pp",
+     10
+    ]
+   ],
+   "info": "Dünnes Papier aus Zellstoff und Hanf- oder Abacafasern. Viele Beutel enthalten etwas Kunststoff zum Heißsiegeln, darum kommen nicht alle in den Kompost.",
+   "color": "#EFE9DC",
+   "opacity": 0.85,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 29,
+     "w": 55,
+     "d": 2,
+     "r": 0,
+     "fill": "#E0D8C6"
+    },
+    {
+     "shape": "box",
+     "x": 4.0,
+     "y": 4.0,
+     "w": 4,
+     "d": 2,
+     "fill": "#E0D8C6"
+    },
+    {
+     "shape": "box",
+     "x": 12.6,
+     "y": 4.0,
+     "w": 4,
+     "d": 2,
+     "fill": "#E0D8C6"
+    },
+    {
+     "shape": "box",
+     "x": 21.2,
+     "y": 4.0,
+     "w": 4,
+     "d": 2,
+     "fill": "#E0D8C6"
+    },
+    {
+     "shape": "box",
+     "x": 29.8,
+     "y": 4.0,
+     "w": 4,
+     "d": 2,
+     "fill": "#E0D8C6"
+    },
+    {
+     "shape": "box",
+     "x": 38.4,
+     "y": 4.0,
+     "w": 4,
+     "d": 2,
+     "fill": "#E0D8C6"
+    },
+    {
+     "shape": "box",
+     "x": 47.0,
+     "y": 4.0,
+     "w": 4,
+     "d": 2,
+     "fill": "#E0D8C6"
+    }
+   ]
+  },
+  {
+   "id": "tee",
+   "component_id": "filter_paper",
+   "material_id": "wood",
+   "name": "Teeblätter (Inhalt)",
+   "short": "Tee",
+   "shape": "box",
+   "x": 2,
+   "y": 10,
+   "w": 51,
+   "d": 58,
+   "z": 0.2,
+   "h": 4.2,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    25.0
+   ],
+   "mass": 2.44,
+   "materials": [
+    [
+     "organisch",
+     100
+    ]
+   ],
+   "info": "Etwa 2 g fein geschnittener Tee. Nach dem Aufbrühen gehört er in den Biomüll oder auf den Kompost.",
+   "color": "#5A4632",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 4,
+     "w": 3,
+     "d": 3,
+     "fill": "#3F3022"
+    },
+    {
+     "shape": "cyl",
+     "x": 12,
+     "y": 4,
+     "w": 3,
+     "d": 3,
+     "fill": "#3F3022"
+    },
+    {
+     "shape": "cyl",
+     "x": 20,
+     "y": 4,
+     "w": 3,
+     "d": 3,
+     "fill": "#3F3022"
+    },
+    {
+     "shape": "cyl",
+     "x": 28,
+     "y": 4,
+     "w": 3,
+     "d": 3,
+     "fill": "#3F3022"
+    },
+    {
+     "shape": "cyl",
+     "x": 36,
+     "y": 4,
+     "w": 3,
+     "d": 3,
+     "fill": "#3F3022"
+    },
+    {
+     "shape": "cyl",
+     "x": 44,
+     "y": 4,
+     "w": 3,
+     "d": 3,
+     "fill": "#3F3022"
+    },
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 12,
+     "w": 3,
+     "d": 3,
+     "fill": "#3F3022"
+    },
+    {
+     "shape": "cyl",
+     "x": 12,
+     "y": 12,
+     "w": 3,
+     "d": 3,
+     "fill": "#3F3022"
+    },
+    {
+     "shape": "cyl",
+     "x": 20,
+     "y": 12,
+     "w": 3,
+     "d": 3,
+     "fill": "#3F3022"
+    },
+    {
+     "shape": "cyl",
+     "x": 28,
+     "y": 12,
+     "w": 3,
+     "d": 3,
+     "fill": "#3F3022"
+    },
+    {
+     "shape": "cyl",
+     "x": 36,
+     "y": 12,
+     "w": 3,
+     "d": 3,
+     "fill": "#3F3022"
+    },
+    {
+     "shape": "cyl",
+     "x": 44,
+     "y": 12,
+     "w": 3,
+     "d": 3,
+     "fill": "#3F3022"
+    },
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 20,
+     "w": 3,
+     "d": 3,
+     "fill": "#3F3022"
+    },
+    {
+     "shape": "cyl",
+     "x": 12,
+     "y": 20,
+     "w": 3,
+     "d": 3,
+     "fill": "#3F3022"
+    },
+    {
+     "shape": "cyl",
+     "x": 20,
+     "y": 20,
+     "w": 3,
+     "d": 3,
+     "fill": "#3F3022"
+    },
+    {
+     "shape": "cyl",
+     "x": 28,
+     "y": 20,
+     "w": 3,
+     "d": 3,
+     "fill": "#3F3022"
+    },
+    {
+     "shape": "cyl",
+     "x": 36,
+     "y": 20,
+     "w": 3,
+     "d": 3,
+     "fill": "#3F3022"
+    },
+    {
+     "shape": "cyl",
+     "x": 44,
+     "y": 20,
+     "w": 3,
+     "d": 3,
+     "fill": "#3F3022"
+    },
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 28,
+     "w": 3,
+     "d": 3,
+     "fill": "#3F3022"
+    },
+    {
+     "shape": "cyl",
+     "x": 12,
+     "y": 28,
+     "w": 3,
+     "d": 3,
+     "fill": "#3F3022"
+    },
+    {
+     "shape": "cyl",
+     "x": 20,
+     "y": 28,
+     "w": 3,
+     "d": 3,
+     "fill": "#3F3022"
+    },
+    {
+     "shape": "cyl",
+     "x": 28,
+     "y": 28,
+     "w": 3,
+     "d": 3,
+     "fill": "#3F3022"
+    },
+    {
+     "shape": "cyl",
+     "x": 36,
+     "y": 28,
+     "w": 3,
+     "d": 3,
+     "fill": "#3F3022"
+    },
+    {
+     "shape": "cyl",
+     "x": 44,
+     "y": 28,
+     "w": 3,
+     "d": 3,
+     "fill": "#3F3022"
+    },
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 36,
+     "w": 3,
+     "d": 3,
+     "fill": "#3F3022"
+    },
+    {
+     "shape": "cyl",
+     "x": 12,
+     "y": 36,
+     "w": 3,
+     "d": 3,
+     "fill": "#3F3022"
+    },
+    {
+     "shape": "cyl",
+     "x": 20,
+     "y": 36,
+     "w": 3,
+     "d": 3,
+     "fill": "#3F3022"
+    },
+    {
+     "shape": "cyl",
+     "x": 28,
+     "y": 36,
+     "w": 3,
+     "d": 3,
+     "fill": "#3F3022"
+    },
+    {
+     "shape": "cyl",
+     "x": 36,
+     "y": 36,
+     "w": 3,
+     "d": 3,
+     "fill": "#3F3022"
+    },
+    {
+     "shape": "cyl",
+     "x": 44,
+     "y": 36,
+     "w": 3,
+     "d": 3,
+     "fill": "#3F3022"
+    },
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 44,
+     "w": 3,
+     "d": 3,
+     "fill": "#3F3022"
+    },
+    {
+     "shape": "cyl",
+     "x": 12,
+     "y": 44,
+     "w": 3,
+     "d": 3,
+     "fill": "#3F3022"
+    },
+    {
+     "shape": "cyl",
+     "x": 20,
+     "y": 44,
+     "w": 3,
+     "d": 3,
+     "fill": "#3F3022"
+    },
+    {
+     "shape": "cyl",
+     "x": 28,
+     "y": 44,
+     "w": 3,
+     "d": 3,
+     "fill": "#3F3022"
+    },
+    {
+     "shape": "cyl",
+     "x": 36,
+     "y": 44,
+     "w": 3,
+     "d": 3,
+     "fill": "#3F3022"
+    },
+    {
+     "shape": "cyl",
+     "x": 44,
+     "y": 44,
+     "w": 3,
+     "d": 3,
+     "fill": "#3F3022"
+    },
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 52,
+     "w": 3,
+     "d": 3,
+     "fill": "#3F3022"
+    },
+    {
+     "shape": "cyl",
+     "x": 12,
+     "y": 52,
+     "w": 3,
+     "d": 3,
+     "fill": "#3F3022"
+    },
+    {
+     "shape": "cyl",
+     "x": 20,
+     "y": 52,
+     "w": 3,
+     "d": 3,
+     "fill": "#3F3022"
+    },
+    {
+     "shape": "cyl",
+     "x": 28,
+     "y": 52,
+     "w": 3,
+     "d": 3,
+     "fill": "#3F3022"
+    },
+    {
+     "shape": "cyl",
+     "x": 36,
+     "y": 52,
+     "w": 3,
+     "d": 3,
+     "fill": "#3F3022"
+    },
+    {
+     "shape": "cyl",
+     "x": 44,
+     "y": 52,
+     "w": 3,
+     "d": 3,
+     "fill": "#3F3022"
+    }
+   ]
+  },
+  {
+   "id": "filter_unten",
+   "component_id": "filter_paper",
+   "material_id": "paper",
+   "name": "Filterpapier (Unterseite)",
+   "short": "Filter unten",
+   "shape": "box",
+   "x": 0,
+   "y": 8,
+   "w": 55,
+   "d": 62,
+   "z": 0,
+   "h": 0.2,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 0.15,
+   "materials": [
+    [
+     "papier",
+     90
+    ],
+    [
+     "pp",
+     10
+    ]
+   ],
+   "info": "Zweite Seite desselben Papierstreifens. Beutel und Tee zusammen in den Biomüll, wenn der Beutel kunststofffrei ist.",
+   "color": "#EFE9DC",
+   "label": false
+  },
+  {
+   "id": "kopf",
+   "component_id": "filter_paper",
+   "material_id": "paper",
+   "name": "Gefalteter Kopf",
+   "short": "Kopf",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 55,
+   "d": 8,
+   "z": 0,
+   "h": 1.2,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 0.06,
    "materials": [
     [
      "papier",
      100
     ]
    ],
-   "material_id": "paper",
-   "info": "Compost plastic-free bags together with the tea leaves."
+   "info": "Das Beutelende ist mehrfach umgefaltet und so ohne Kleber verschlossen. Hier sitzt die Klammer.",
+   "color": "#E6DFCE",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 3,
+     "w": 55,
+     "d": 1,
+     "r": 0,
+     "fill": "#CFC6B2"
+    }
+   ]
   }
  ]
 }

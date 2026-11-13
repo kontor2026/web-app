@@ -4,7 +4,7 @@
  "name_en": "Paper Bag",
  "klasse": "Verpackung · Papier",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -26,12 +26,12 @@
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 0,02 kg",
+   "v": "≈ 0,03 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 0,02 kg",
+   "v": "≈ 0,03 kg",
    "hint": "spart 0,00 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
@@ -39,10 +39,11 @@
   "metalle_mg": {},
   "herkunft": {},
   "materialien_g": {
-   "paper": 60.0
+   "paper": 47.8,
+   "cardboard": 12.4
   },
-  "co2_kg": 0.022,
-  "co2_mit_recyclat_kg": 0.022,
+  "co2_kg": 0.027,
+  "co2_mit_recyclat_kg": 0.027,
   "co2_ersparnis_kg": 0.0,
   "co2_ohne_faktor": [],
   "rohstoffwert_eur": 0,
@@ -93,35 +94,392 @@
   "nicht": "Nicht in Restmüll, wenn sauber",
   "warnung": "Kartons flach falten. Stark verschmutzte Teile in den Restmüll."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "paper_bag_body",
+   "id": "griff_vorne",
    "component_id": "paper_bag_body",
-   "name": "Bag",
-   "short": "Bag",
+   "material_id": "paper",
+   "name": "Kordelgriff vorne",
+   "short": "Griff",
+   "shape": "box",
+   "x": 85,
+   "y": 137,
+   "w": 90,
+   "d": 3,
+   "z": 270,
+   "h": 50,
+   "r": 1.5,
+   "explode": [
+    0,
+    70,
+    30
+   ],
+   "mass": 3.1,
+   "materials": [
+    [
+     "papier",
+     96
+    ],
+    [
+     "klebstoff",
+     4
+    ]
+   ],
+   "info": "Gedrehte Papierkordel, innen mit einem Pappstreifen angeklebt. Ist der Kleber aus Kunststoff, Griffe abreißen, der Rest darf ins Altpapier.",
+   "color": "#B88C5A"
+  },
+  {
+   "id": "griff_hinten",
+   "component_id": "paper_bag_body",
+   "material_id": "paper",
+   "name": "Kordelgriff hinten",
+   "short": "Griff hinten",
+   "shape": "box",
+   "x": 85,
+   "y": 0,
+   "w": 90,
+   "d": 3,
+   "z": 270,
+   "h": 50,
+   "r": 1.5,
+   "explode": [
+    0,
+    -70,
+    30
+   ],
+   "mass": 3.1,
+   "materials": [
+    [
+     "papier",
+     96
+    ],
+    [
+     "klebstoff",
+     4
+    ]
+   ],
+   "info": "Zweiter Griff, genauso eingeklebt wie der vordere.",
+   "color": "#B88C5A",
+   "label": false
+  },
+  {
+   "id": "verstaerkung_vorne",
+   "component_id": "paper_bag_body",
+   "material_id": "paper",
+   "name": "Griffverstärkung vorne",
+   "short": "Verstärkung",
+   "shape": "box",
+   "x": 70,
+   "y": 137,
+   "w": 120,
+   "d": 2,
+   "z": 230,
+   "h": 40,
+   "r": 0,
+   "explode": [
+    0,
+    70,
+    0
+   ],
+   "mass": 1.9,
+   "materials": [
+    [
+     "papier",
+     96
+    ],
+    [
+     "klebstoff",
+     4
+    ]
+   ],
+   "info": "Pappstreifen innen am Rand, an den die Griffenden geklebt sind. Er verteilt das Gewicht, damit die Tasche nicht einreißt.",
+   "color": "#A9814F"
+  },
+  {
+   "id": "verstaerkung_hinten",
+   "component_id": "paper_bag_body",
+   "material_id": "paper",
+   "name": "Griffverstärkung hinten",
+   "short": "Verstärkung",
+   "shape": "box",
+   "x": 70,
+   "y": 1,
+   "w": 120,
+   "d": 2,
+   "z": 230,
+   "h": 40,
+   "r": 0,
+   "explode": [
+    0,
+    -70,
+    0
+   ],
+   "mass": 1.9,
+   "materials": [
+    [
+     "papier",
+     96
+    ],
+    [
+     "klebstoff",
+     4
+    ]
+   ],
+   "info": "Gegenstück an der Rückwand.",
+   "color": "#A9814F",
+   "label": false
+  },
+  {
+   "id": "wand_vorne",
+   "component_id": "paper_bag_body",
+   "material_id": "paper",
+   "name": "Vorderwand",
+   "short": "Vorderwand",
+   "shape": "box",
+   "x": 0,
+   "y": 139,
+   "w": 260,
+   "d": 1,
+   "z": 0,
+   "h": 270,
+   "r": 0,
+   "explode": [
+    0,
+    70,
+    0
+   ],
+   "mass": 9.3,
+   "materials": [
+    [
+     "papier",
+     97
+    ],
+    [
+     "druck",
+     2
+    ],
+    [
+     "klebstoff",
+     1
+    ]
+   ],
+   "info": "Kraftpapier aus langen Holzfasern, oft mit hohem Altpapieranteil. Am oberen Rand nach innen umgeschlagen, damit die Kante stabil ist.",
+   "color": "#C49A6C"
+  },
+  {
+   "id": "wand_hinten",
+   "component_id": "paper_bag_body",
+   "material_id": "paper",
+   "name": "Rückwand mit Längsnaht",
+   "short": "Rückwand",
    "shape": "box",
    "x": 0,
    "y": 0,
-   "w": 260.0,
-   "d": 140.0,
-   "h": 320.0,
-   "z": 0.0,
-   "r": 16.8,
+   "w": 260,
+   "d": 1,
+   "z": 0,
+   "h": 270,
+   "r": 0,
    "explode": [
     0,
+    -70,
+    0
+   ],
+   "mass": 9.6,
+   "materials": [
+    [
+     "papier",
+     97
+    ],
+    [
+     "druck",
+     2
+    ],
+    [
+     "klebstoff",
+     1
+    ]
+   ],
+   "info": "Die ganze Tasche ist aus einem Papierschlauch gefaltet. Seine Längsnaht ist hinten verklebt.",
+   "color": "#C49A6C"
+  },
+  {
+   "id": "seite_links",
+   "component_id": "paper_bag_body",
+   "material_id": "paper",
+   "name": "Seitenfalte links",
+   "short": "Seitenfalte",
+   "shape": "box",
+   "x": 0,
+   "y": 1,
+   "w": 1,
+   "d": 138,
+   "z": 0,
+   "h": 270,
+   "r": 0,
+   "explode": [
+    -70,
     0,
     0
    ],
-   "mass": 60.0,
+   "mass": 4.5,
+   "materials": [
+    [
+     "papier",
+     97
+    ],
+    [
+     "druck",
+     2
+    ],
+    [
+     "klebstoff",
+     1
+    ]
+   ],
+   "info": "Seitenwand mit Mittelknick. Leer faltet sie sich nach innen, so liegt die Tasche flach.",
+   "color": "#A9814F"
+  },
+  {
+   "id": "seite_rechts",
+   "component_id": "paper_bag_body",
+   "material_id": "paper",
+   "name": "Seitenfalte rechts",
+   "short": "Seitenfalte",
+   "shape": "box",
+   "x": 259,
+   "y": 1,
+   "w": 1,
+   "d": 138,
+   "z": 0,
+   "h": 270,
+   "r": 0,
+   "explode": [
+    70,
+    0,
+    0
+   ],
+   "mass": 4.5,
+   "materials": [
+    [
+     "papier",
+     97
+    ],
+    [
+     "druck",
+     2
+    ],
+    [
+     "klebstoff",
+     1
+    ]
+   ],
+   "info": "Gegenstück zur linken Seitenfalte.",
+   "color": "#A9814F",
+   "label": false
+  },
+  {
+   "id": "bodeneinlage",
+   "component_id": "paper_bag_body",
+   "material_id": "cardboard",
+   "name": "Bodeneinlage (Karton)",
+   "short": "Bodeneinlage",
+   "shape": "box",
+   "x": 3,
+   "y": 3,
+   "w": 254,
+   "d": 134,
+   "z": 2,
+   "h": 1,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    120
+   ],
+   "mass": 12.4,
    "materials": [
     [
      "papier",
      100
     ]
    ],
+   "info": "Loser Kartonzuschnitt, der den Boden steif macht. Darf mit der Tasche ins Altpapier.",
+   "color": "#B08A5E",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 64,
+     "w": 254,
+     "d": 6,
+     "r": 0,
+     "fill": "#9E7A52"
+    }
+   ]
+  },
+  {
+   "id": "boden",
+   "component_id": "paper_bag_body",
    "material_id": "paper",
-   "info": "Tear off the handles if they are glued with plastic."
+   "name": "Kreuzboden",
+   "short": "Boden",
+   "shape": "box",
+   "x": 1,
+   "y": 1,
+   "w": 258,
+   "d": 138,
+   "z": 0,
+   "h": 2,
+   "r": 0,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 9.9,
+   "materials": [
+    [
+     "papier",
+     95
+    ],
+    [
+     "klebstoff",
+     5
+    ]
+   ],
+   "info": "Das Schlauchende ist zu einem rechteckigen Boden gefaltet und verklebt. Er trägt das ganze Gewicht.",
+   "color": "#C49A6C",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 0,
+     "w": 258,
+     "d": 34,
+     "r": 0,
+     "fill": "#A9814F"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 104,
+     "w": 258,
+     "d": 34,
+     "r": 0,
+     "fill": "#A9814F"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 64,
+     "w": 258,
+     "d": 10,
+     "r": 0,
+     "fill": "#B48E5C"
+    }
+   ]
   }
  ]
 }
