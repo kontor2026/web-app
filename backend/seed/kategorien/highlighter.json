@@ -4,7 +4,7 @@
  "name_en": "Highlighter",
  "klasse": "Restmüll",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -31,7 +31,7 @@
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 0,01 kg",
+   "v": "≈ 0,02 kg",
    "hint": "spart 0,02 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
@@ -39,12 +39,12 @@
   "metalle_mg": {},
   "herkunft": {},
   "materialien_g": {
-   "pp": 11.4,
-   "polyester": 3.7
+   "pp": 11.1,
+   "polyester": 3.9
   },
   "co2_kg": 0.034,
-  "co2_mit_recyclat_kg": 0.015,
-  "co2_ersparnis_kg": 0.019,
+  "co2_mit_recyclat_kg": 0.016,
+  "co2_ersparnis_kg": 0.018,
   "co2_ohne_faktor": [],
   "rohstoffwert_eur": 0,
   "wert_ohne_preis": [],
@@ -94,113 +94,263 @@
   "nicht": "Nicht in die Gelbe Tonne: keine Verpackung",
   "warnung": "Gut Erhaltenes lieber verschenken oder in der Werkstatt abgeben."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "pen_cap",
+   "id": "kappe",
    "component_id": "pen_cap",
-   "name": "Cap",
-   "short": "Cap",
+   "material_id": "pp",
+   "name": "Kappe",
+   "short": "Kappe",
    "shape": "cyl",
-   "x": 9.5,
-   "y": 5.5,
-   "w": 9.0,
-   "h": 14.4,
-   "z": 102.0,
+   "x": 0,
+   "y": 1.5,
+   "w": 18,
+   "d": 17,
+   "z": 84,
+   "h": 36,
    "explode": [
     0,
     0,
-    99.6
+    24.0
    ],
-   "mass": 1.22,
+   "mass": 2.79,
    "materials": [
     [
      "pp",
      100
     ]
    ],
+   "info": "Hält die Spitze feucht. Die neonfarbene Tinte trocknet offen in wenigen Stunden ein.",
+   "color": "#3A3F44",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 7,
+     "y": 6.5,
+     "w": 4,
+     "fill": "#2A2E31"
+    }
+   ]
+  },
+  {
+   "id": "clip",
+   "component_id": "pen_cap",
    "material_id": "pp",
-   "info": "Pull it off the tip."
-  },
-  {
-   "id": "marker_nib",
-   "component_id": "marker_nib",
-   "name": "Nib",
-   "short": "Nib",
-   "shape": "cyl",
-   "x": 5.5,
-   "y": 5.5,
-   "w": 9.0,
-   "h": 14.4,
-   "z": 102.0,
-   "explode": [
-    0,
-    0,
-    70.8
-   ],
-   "mass": 1.22,
-   "materials": [
-    [
-     "polyester",
-     100
-    ]
-   ],
-   "material_id": "polyester",
-   "info": "Pull it out with pliers."
-  },
-  {
-   "id": "marker_ink_reservoir",
-   "component_id": "marker_ink_reservoir",
-   "name": "Ink Reservoir",
-   "short": "Ink Reservoir",
+   "name": "Clip",
+   "short": "Clip",
    "shape": "box",
-   "x": 3.0,
-   "y": 3.0,
-   "w": 14.0,
-   "d": 14.0,
-   "h": 42.0,
-   "z": 20.4,
-   "r": 1.7,
+   "x": 18,
+   "y": 8.5,
+   "w": 2,
+   "d": 3,
+   "z": 90,
+   "h": 28,
+   "r": 0.6,
    "explode": [
     0,
     0,
-    96.0
+    24.0
    ],
-   "mass": 2.43,
+   "mass": 0.43,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Angespritzter Clip aus Polypropylen, wie die Kappe.",
+   "color": "#3A3F44"
+  },
+  {
+   "id": "spitze",
+   "component_id": "marker_nib",
+   "material_id": "polyester",
+   "name": "Keilspitze",
+   "short": "Keilspitze",
+   "shape": "box",
+   "x": 7,
+   "y": 8,
+   "w": 5,
+   "d": 4,
+   "z": 90,
+   "h": 20,
+   "r": 0.5,
+   "explode": [
+    30,
+    0,
+    10
+   ],
+   "mass": 0.43,
    "materials": [
     [
      "polyester",
      100
     ]
    ],
-   "material_id": "polyester",
-   "info": "Pull out the back plug and slide it out; many markers can be refilled."
+   "info": "Schräg geschnittene Polyesterfaser: breit für Zeilen, schmal für feine Striche. Mit einer Zange herausziehen.",
+   "color": "#F2E23A",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 4,
+     "d": 1,
+     "r": 0.3,
+     "fill": "#E0CC20"
+    }
+   ]
   },
   {
-   "id": "pen_barrel",
+   "id": "spitzenhalter",
    "component_id": "pen_barrel",
-   "name": "Barrel",
-   "short": "Barrel",
+   "material_id": "pp",
+   "name": "Spitzenhalter",
+   "short": "Spitzenhalter",
    "shape": "cyl",
-   "x": 0,
-   "y": 0,
-   "w": 20.0,
-   "h": 102.0,
-   "z": 0.0,
+   "x": 1.5,
+   "y": 2.5,
+   "w": 16,
+   "d": 15,
+   "z": 88,
+   "h": 10,
    "explode": [
     0,
+    0,
+    66.0
+   ],
+   "mass": 1.07,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Vorderteil mit Schlitz für die Keilspitze, in den Schaft eingepresst.",
+   "color": "#F2E23A",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 5.5,
+     "y": 5.5,
+     "w": 5,
+     "d": 4,
+     "r": 0.5,
+     "fill": "#B8A817"
+    }
+   ]
+  },
+  {
+   "id": "tank",
+   "component_id": "marker_ink_reservoir",
+   "material_id": "polyester",
+   "name": "Fasertank mit Leuchttinte",
+   "short": "Tank",
+   "shape": "cyl",
+   "x": 3.5,
+   "y": 4,
+   "w": 12,
+   "d": 12,
+   "z": 6,
+   "h": 80,
+   "explode": [
+    30,
     0,
     0
    ],
-   "mass": 10.14,
+   "mass": 3.43,
+   "materials": [
+    [
+     "polyester",
+     75
+    ],
+    [
+     "pp",
+     15
+    ],
+    [
+     "druck",
+     10
+    ]
+   ],
+   "info": "Polyesterwatte mit fluoreszierender Tinte. Nachfüllbare Textmarker sparen viel Kunststoff.",
+   "color": "#F7F09A",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 2,
+     "y": 2,
+     "w": 8,
+     "fill": "#F2E23A"
+    }
+   ]
+  },
+  {
+   "id": "schaft",
+   "component_id": "pen_barrel",
+   "material_id": "pp",
+   "name": "Schaft",
+   "short": "Schaft",
+   "shape": "cyl",
+   "x": 1,
+   "y": 2,
+   "w": 17,
+   "d": 16,
+   "z": 4,
+   "h": 84,
+   "explode": [
+    0,
+    0,
+    10.0
+   ],
+   "mass": 6,
    "materials": [
     [
      "pp",
      100
     ]
    ],
+   "info": "Ovaler Polypropylen-Schaft, damit der Stift nicht wegrollt. Ausgetrocknet in den Restmüll.",
+   "color": "#F2E23A",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 2.5,
+     "y": 2.5,
+     "w": 12,
+     "d": 11,
+     "fill": "#E0CC20"
+    }
+   ]
+  },
+  {
+   "id": "endstopfen",
+   "component_id": "pen_barrel",
    "material_id": "pp",
-   "info": "Unscrew the barrel to release the refill."
+   "name": "Endstopfen",
+   "short": "Endstopfen",
+   "shape": "cyl",
+   "x": 1.5,
+   "y": 2.5,
+   "w": 16,
+   "d": 15,
+   "z": 0,
+   "h": 4,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 0.86,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Hinterer Stopfen. Abziehen, dann lässt sich der Tank nachfüllen oder herausnehmen.",
+   "color": "#3A3F44"
   }
  ]
 }

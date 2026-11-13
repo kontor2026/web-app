@@ -1,0 +1,449 @@
+{
+ "parts": [
+  {
+   "id": "folie_vorne",
+   "component_id": "pp_cover_film",
+   "material_id": "pp",
+   "name": "PP-Folie Vorderdeckel",
+   "short": "Folie vorne",
+   "shape": "box",
+   "x": 3,
+   "y": 0,
+   "w": 282,
+   "d": 320,
+   "z": 79.6,
+   "h": 0.4,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    300.6
+   ],
+   "mass": 8.3,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Hauchdünne Polypropylenfolie, die die Pappe abwaschbar macht. Abziehen, dann darf die Pappe ins Altpapier.",
+   "color": "#3E6E9E",
+   "opacity": 0.8,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 90,
+     "y": 120,
+     "w": 120,
+     "d": 70,
+     "r": 3,
+     "fill": "#F3F1EC"
+    }
+   ]
+  },
+  {
+   "id": "kante_vorne",
+   "component_id": "cardboard_cover",
+   "material_id": "steel",
+   "name": "Stahlkante Vorderdeckel",
+   "short": "Kante vorne",
+   "shape": "box",
+   "x": 3,
+   "y": 314,
+   "w": 282,
+   "d": 6,
+   "z": 80,
+   "h": 0.6,
+   "r": 0,
+   "explode": [
+    0,
+    0,
+    300.6
+   ],
+   "mass": 5.9,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Schmaler Stahlstreifen an der Unterkante, damit der Ordner im Regal nicht durchscheuert. Mit einer Zange abbiegen.",
+   "color": "#B8BEC4"
+  },
+  {
+   "id": "deckel_vorne",
+   "component_id": "cardboard_cover",
+   "material_id": "cardboard",
+   "name": "Vorderdeckel (Graupappe)",
+   "short": "Vorderdeckel",
+   "shape": "box",
+   "x": 3,
+   "y": 0,
+   "w": 282,
+   "d": 320,
+   "z": 77,
+   "h": 2.6,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    245.6
+   ],
+   "mass": 194.5,
+   "materials": [
+    [
+     "papier",
+     100
+    ]
+   ],
+   "info": "Feste Graupappe aus Altpapier. Ohne Folie und Metall gehört sie ins Altpapier.",
+   "color": "#8C9AA6"
+  },
+  {
+   "id": "ring_vorne",
+   "component_id": "ring_mechanism",
+   "material_id": "steel",
+   "name": "Bügel vorne",
+   "short": "Bügel vorne",
+   "shape": "box",
+   "x": 28,
+   "y": 112,
+   "w": 30,
+   "d": 8,
+   "z": 6.6,
+   "h": 68,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    193.0
+   ],
+   "mass": 16.5,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Halbrunder Stahlbügel, der durch die Lochung der Blätter greift. Er öffnet sich mit dem Hebel.",
+   "color": "#B8BEC4"
+  },
+  {
+   "id": "ring_hinten",
+   "component_id": "ring_mechanism",
+   "material_id": "steel",
+   "name": "Bügel hinten",
+   "short": "Bügel hinten",
+   "shape": "box",
+   "x": 28,
+   "y": 192,
+   "w": 30,
+   "d": 8,
+   "z": 6.6,
+   "h": 68,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    193.0
+   ],
+   "mass": 16.5,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Zweiter Bügel im Abstand von 8 cm, genau passend zur Zweifachlochung.",
+   "color": "#B8BEC4",
+   "label": false
+  },
+  {
+   "id": "hebel",
+   "component_id": "ring_mechanism",
+   "material_id": "steel",
+   "name": "Hebel",
+   "short": "Hebel",
+   "shape": "box",
+   "x": 30,
+   "y": 215,
+   "w": 40,
+   "d": 50,
+   "z": 6.6,
+   "h": 8,
+   "r": 6,
+   "explode": [
+    0,
+    0,
+    193.0
+   ],
+   "mass": 21.2,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Stahlhebel, der die Bügel öffnet und schließt. Mit dem Niederhalter zusammen hält er das Papier fest.",
+   "color": "#B8BEC4",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 12,
+     "y": 30,
+     "w": 16,
+     "d": 12,
+     "fill": "#8E969A"
+    }
+   ]
+  },
+  {
+   "id": "grundplatte",
+   "component_id": "ring_mechanism",
+   "material_id": "steel",
+   "name": "Grundplatte der Mechanik",
+   "short": "Grundplatte",
+   "shape": "box",
+   "x": 20,
+   "y": 80,
+   "w": 60,
+   "d": 190,
+   "z": 2.6,
+   "h": 4,
+   "r": 4,
+   "explode": [
+    0,
+    0,
+    138.0
+   ],
+   "mass": 64.8,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Gestanztes Stahlblech, das alle Teile der Mechanik trägt. Wertvoller Stahlschrott für den Wertstoffhof.",
+   "color": "#9AA2A6",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 8,
+     "y": 10,
+     "w": 44,
+     "d": 170,
+     "r": 3,
+     "fill": "#B0B6BA"
+    }
+   ]
+  },
+  {
+   "id": "niete",
+   "component_id": "ring_mechanism",
+   "material_id": "steel",
+   "name": "Nieten",
+   "short": "Nieten",
+   "shape": "box",
+   "x": 45,
+   "y": 86,
+   "w": 10,
+   "d": 178,
+   "z": 0,
+   "h": 2.6,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    83.0
+   ],
+   "mass": 4.7,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Zwei Hohlnieten halten die Mechanik in der Pappe. Aufbohren oder mit einem Schraubendreher aufhebeln.",
+   "color": "#8E969A",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 1,
+     "y": 1,
+     "w": 8
+    },
+    {
+     "shape": "cyl",
+     "x": 1,
+     "y": 169,
+     "w": 8
+    }
+   ]
+  },
+  {
+   "id": "deckel_hinten",
+   "component_id": "cardboard_cover",
+   "material_id": "cardboard",
+   "name": "Rückdeckel (Graupappe)",
+   "short": "Rückdeckel",
+   "shape": "box",
+   "x": 3,
+   "y": 0,
+   "w": 282,
+   "d": 320,
+   "z": 0.4,
+   "h": 2.6,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    55.0
+   ],
+   "mass": 194.5,
+   "materials": [
+    [
+     "papier",
+     100
+    ]
+   ],
+   "info": "Trägt die Mechanik. Erst die Mechanik abtrennen, dann die Pappe ins Altpapier.",
+   "color": "#8C9AA6",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 260,
+     "y": 150,
+     "w": 10,
+     "d": 20,
+     "fill": "#5A6268"
+    }
+   ]
+  },
+  {
+   "id": "kante_hinten",
+   "component_id": "cardboard_cover",
+   "material_id": "steel",
+   "name": "Stahlkante Rückdeckel",
+   "short": "Kante hinten",
+   "shape": "box",
+   "x": 3,
+   "y": 314,
+   "w": 282,
+   "d": 6,
+   "z": -0.6,
+   "h": 0.6,
+   "r": 0,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 5.9,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Gegenstück zur vorderen Stahlkante.",
+   "color": "#B8BEC4",
+   "label": false
+  },
+  {
+   "id": "folie_hinten",
+   "component_id": "pp_cover_film",
+   "material_id": "pp",
+   "name": "PP-Folie Rückdeckel",
+   "short": "Folie hinten",
+   "shape": "box",
+   "x": 3,
+   "y": 0,
+   "w": 282,
+   "d": 320,
+   "z": 0,
+   "h": 0.4,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 8.3,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Folie auf der Rückseite. Sie ist nur aufgeklebt und lässt sich von einer Ecke aus abziehen.",
+   "color": "#3E6E9E",
+   "opacity": 0.8
+  },
+  {
+   "id": "ruecken",
+   "component_id": "cardboard_cover",
+   "material_id": "cardboard",
+   "name": "Rücken mit Griffloch",
+   "short": "Rücken",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 3,
+   "d": 320,
+   "z": 0,
+   "h": 80,
+   "r": 0,
+   "explode": [
+    -60,
+    0,
+    0
+   ],
+   "mass": 56.6,
+   "materials": [
+    [
+     "papier",
+     90
+    ],
+    [
+     "pp",
+     10
+    ]
+   ],
+   "info": "Pappe des Rückens, mit Folie bezogen. Im Griffloch steckt oft ein Metallring, der vorher heraus muss.",
+   "color": "#3E6E9E"
+  },
+  {
+   "id": "rueckenschild",
+   "component_id": "cardboard_cover",
+   "material_id": "paper",
+   "name": "Rückenschild",
+   "short": "Rückenschild",
+   "shape": "box",
+   "x": -0.3,
+   "y": 40,
+   "w": 0.3,
+   "d": 180,
+   "z": 10,
+   "h": 60,
+   "r": 0,
+   "explode": [
+    -120,
+    0,
+    0
+   ],
+   "mass": 2.4,
+   "materials": [
+    [
+     "papier",
+     95
+    ],
+    [
+     "druck",
+     5
+    ]
+   ],
+   "info": "Papierschild zum Beschriften, in einer Folientasche. Darf ins Altpapier.",
+   "color": "#F3F1EC"
+  }
+ ]
+}

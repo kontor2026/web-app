@@ -4,7 +4,7 @@
  "name_en": "Stapler",
  "klasse": "Metall · Wertstoffhof",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -31,24 +31,25 @@
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 0,12 kg",
-   "hint": "spart 0,41 kg, wenn recycelte Materialien eingesetzt werden"
+   "v": "≈ 0,14 kg",
+   "hint": "spart 0,38 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Fe": 82046.0
+   "Fe": 139160.0
   },
   "herkunft": {
    "Fe": "Modellmassen (Schätzung)"
   },
   "materialien_g": {
-   "abs": 116.3,
-   "steel": 83.7
+   "steel": 142.0,
+   "abs": 53.0,
+   "rubber": 5.0
   },
-  "co2_kg": 0.523,
-  "co2_mit_recyclat_kg": 0.115,
-  "co2_ersparnis_kg": 0.408,
+  "co2_kg": 0.516,
+  "co2_mit_recyclat_kg": 0.14,
+  "co2_ersparnis_kg": 0.377,
   "co2_ohne_faktor": [],
   "rohstoffwert_eur": 0,
   "wert_ohne_preis": [],
@@ -98,119 +99,804 @@
   "nicht": "Nicht in die Gelbe Tonne: keine Verpackung",
   "warnung": "Scharfe Klingen vorher einwickeln."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "plastic_base_ober",
+   "id": "kappe",
    "component_id": "plastic_base",
-   "name": "Base (Oberteil)",
-   "short": "Base (Oberteil)",
+   "material_id": "abs",
+   "name": "Griffkappe",
+   "short": "Kappe",
    "shape": "box",
-   "x": 0,
-   "y": 0,
-   "w": 40.0,
-   "d": 150.0,
-   "h": 12.0,
-   "z": 36.0,
-   "r": 4.8,
+   "x": 4,
+   "y": 40,
+   "w": 32,
+   "d": 106,
+   "z": 54,
+   "h": 6,
+   "r": 10,
    "explode": [
     0,
     0,
-    146.4
+    95.0
    ],
-   "mass": 34.88,
+   "mass": 10,
    "materials": [
     [
      "pcabs",
      100
     ]
    ],
-   "material_id": "abs",
-   "info": "Pry it off the steel arm."
+   "info": "Kunststoffkappe auf dem Bügel, hier drückt man drauf. Meist nur eingeklipst: mit einem Schraubendreher abhebeln.",
+   "color": "#2A2E31",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 6,
+     "y": 20,
+     "w": 20,
+     "d": 60,
+     "r": 8,
+     "fill": "#3A3F44"
+    }
+   ]
   },
   {
-   "id": "steel_spring",
-   "component_id": "steel_spring",
-   "name": "Spring",
-   "short": "Spring",
-   "shape": "box",
-   "x": 21.6,
-   "y": 13.5,
-   "w": 16.8,
-   "d": 63.0,
-   "h": 16.2,
-   "z": 7.2,
-   "r": 2.0,
-   "explode": [
-    0,
-    0,
-    121.0
-   ],
-   "mass": 27.91,
-   "materials": [
-    [
-     "stahl",
-     100
-    ]
-   ],
-   "material_id": "steel",
-   "info": "Pull it out with pliers."
-  },
-  {
-   "id": "steel_stapler_body",
+   "id": "arm",
    "component_id": "steel_stapler_body",
-   "name": "Stapler Arm",
-   "short": "Stapler Arm",
-   "shape": "box",
-   "x": 1.6,
-   "y": 13.5,
-   "w": 16.8,
-   "d": 63.0,
-   "h": 16.2,
-   "z": 7.2,
-   "r": 2.0,
-   "explode": [
-    0,
-    0,
-    66.8
-   ],
-   "mass": 55.81,
-   "materials": [
-    [
-     "stahl",
-     100
-    ]
-   ],
    "material_id": "steel",
-   "info": "Remove the staples, then knock out the hinge pin."
-  },
-  {
-   "id": "plastic_base",
-   "component_id": "plastic_base",
-   "name": "Base (Unterteil)",
-   "short": "Base (Unterteil)",
+   "name": "Bügel (Oberarm)",
+   "short": "Bügel",
    "shape": "box",
    "x": 0,
    "y": 0,
-   "w": 40.0,
-   "d": 150.0,
-   "h": 36.0,
-   "z": 0,
-   "r": 4.8,
+   "w": 40,
+   "d": 150,
+   "z": 38,
+   "h": 16,
+   "r": 8,
    "explode": [
     0,
+    0,
+    81.0
+   ],
+   "mass": 85,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Gebogenes, verchromtes Stahlblech. Es trägt vorne den Eintreiber und ist hinten mit dem Scharnierstift gelagert.",
+   "color": "#D5DADE",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 4,
+     "w": 32,
+     "d": 30,
+     "r": 6,
+     "fill": "#AEB4B9"
+    }
+   ]
+  },
+  {
+   "id": "treiber",
+   "component_id": "steel_stapler_body",
+   "material_id": "steel",
+   "name": "Eintreiber (Messer)",
+   "short": "Eintreiber",
+   "shape": "box",
+   "x": 13,
+   "y": 136,
+   "w": 14,
+   "d": 2,
+   "z": 24,
+   "h": 14,
+   "r": 0,
+   "explode": [
+    0,
+    0,
+    67.0
+   ],
+   "mass": 3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Dünne Stahlklinge im Kopf des Bügels. Sie drückt beim Heften genau eine Klammer aus dem Magazin durchs Papier.",
+   "color": "#B8BEC4"
+  },
+  {
+   "id": "klammern",
+   "component_id": "steel_stapler_body",
+   "material_id": "steel",
+   "name": "Heftklammerstreifen",
+   "short": "Klammern",
+   "shape": "box",
+   "x": 13.6,
+   "y": 60,
+   "w": 12.8,
+   "d": 74,
+   "z": 29,
+   "h": 6,
+   "r": 0,
+   "explode": [
+    0,
+    0,
+    62.0
+   ],
+   "mass": 4,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Etwa 100 verzinkte Stahlklammern, leicht aneinandergeklebt. Vor dem Entsorgen herausnehmen und weiterverwenden.",
+   "color": "#CBD1D5",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0.4,
+     "y": 2,
+     "w": 12,
+     "d": 0.8,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "box",
+     "x": 0.4,
+     "y": 4,
+     "w": 12,
+     "d": 0.8,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "box",
+     "x": 0.4,
+     "y": 6,
+     "w": 12,
+     "d": 0.8,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "box",
+     "x": 0.4,
+     "y": 8,
+     "w": 12,
+     "d": 0.8,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "box",
+     "x": 0.4,
+     "y": 10,
+     "w": 12,
+     "d": 0.8,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "box",
+     "x": 0.4,
+     "y": 12,
+     "w": 12,
+     "d": 0.8,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "box",
+     "x": 0.4,
+     "y": 14,
+     "w": 12,
+     "d": 0.8,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "box",
+     "x": 0.4,
+     "y": 16,
+     "w": 12,
+     "d": 0.8,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "box",
+     "x": 0.4,
+     "y": 18,
+     "w": 12,
+     "d": 0.8,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "box",
+     "x": 0.4,
+     "y": 20,
+     "w": 12,
+     "d": 0.8,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "box",
+     "x": 0.4,
+     "y": 22,
+     "w": 12,
+     "d": 0.8,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "box",
+     "x": 0.4,
+     "y": 24,
+     "w": 12,
+     "d": 0.8,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "box",
+     "x": 0.4,
+     "y": 26,
+     "w": 12,
+     "d": 0.8,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "box",
+     "x": 0.4,
+     "y": 28,
+     "w": 12,
+     "d": 0.8,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "box",
+     "x": 0.4,
+     "y": 30,
+     "w": 12,
+     "d": 0.8,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "box",
+     "x": 0.4,
+     "y": 32,
+     "w": 12,
+     "d": 0.8,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "box",
+     "x": 0.4,
+     "y": 34,
+     "w": 12,
+     "d": 0.8,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "box",
+     "x": 0.4,
+     "y": 36,
+     "w": 12,
+     "d": 0.8,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "box",
+     "x": 0.4,
+     "y": 38,
+     "w": 12,
+     "d": 0.8,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "box",
+     "x": 0.4,
+     "y": 40,
+     "w": 12,
+     "d": 0.8,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "box",
+     "x": 0.4,
+     "y": 42,
+     "w": 12,
+     "d": 0.8,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "box",
+     "x": 0.4,
+     "y": 44,
+     "w": 12,
+     "d": 0.8,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "box",
+     "x": 0.4,
+     "y": 46,
+     "w": 12,
+     "d": 0.8,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "box",
+     "x": 0.4,
+     "y": 48,
+     "w": 12,
+     "d": 0.8,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "box",
+     "x": 0.4,
+     "y": 50,
+     "w": 12,
+     "d": 0.8,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "box",
+     "x": 0.4,
+     "y": 52,
+     "w": 12,
+     "d": 0.8,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "box",
+     "x": 0.4,
+     "y": 54,
+     "w": 12,
+     "d": 0.8,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "box",
+     "x": 0.4,
+     "y": 56,
+     "w": 12,
+     "d": 0.8,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "box",
+     "x": 0.4,
+     "y": 58,
+     "w": 12,
+     "d": 0.8,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "box",
+     "x": 0.4,
+     "y": 60,
+     "w": 12,
+     "d": 0.8,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "box",
+     "x": 0.4,
+     "y": 62,
+     "w": 12,
+     "d": 0.8,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "box",
+     "x": 0.4,
+     "y": 64,
+     "w": 12,
+     "d": 0.8,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "box",
+     "x": 0.4,
+     "y": 66,
+     "w": 12,
+     "d": 0.8,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "box",
+     "x": 0.4,
+     "y": 68,
+     "w": 12,
+     "d": 0.8,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "box",
+     "x": 0.4,
+     "y": 70,
+     "w": 12,
+     "d": 0.8,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "box",
+     "x": 0.4,
+     "y": 72,
+     "w": 12,
+     "d": 0.8,
+     "fill": "#9AA2A6"
+    }
+   ]
+  },
+  {
+   "id": "schieber",
+   "component_id": "steel_spring",
+   "material_id": "abs",
+   "name": "Klammerschieber",
+   "short": "Schieber",
+   "shape": "box",
+   "x": 14,
+   "y": 40,
+   "w": 12,
+   "d": 18,
+   "z": 28,
+   "h": 8,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    63.0
+   ],
+   "mass": 3,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Kunststoffschlitten, der die Klammern nach vorne zum Eintreiber schiebt.",
+   "color": "#C8423A"
+  },
+  {
+   "id": "schieberfeder",
+   "component_id": "steel_spring",
+   "material_id": "steel",
+   "name": "Schieberfeder",
+   "short": "Schieberfeder",
+   "shape": "box",
+   "x": 17.5,
+   "y": 12,
+   "w": 5,
+   "d": 28,
+   "z": 30,
+   "h": 4,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    61.0
+   ],
+   "mass": 2,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Lange Schraubenfeder aus Federstahl, die den Schieber gegen die Klammern drückt. Mit einer Zange aushängen.",
+   "color": "#B8BEC4",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0.5,
+     "y": 1,
+     "w": 4,
+     "d": 0.8,
+     "fill": "#8E969A"
+    },
+    {
+     "shape": "box",
+     "x": 0.5,
+     "y": 3,
+     "w": 4,
+     "d": 0.8,
+     "fill": "#8E969A"
+    },
+    {
+     "shape": "box",
+     "x": 0.5,
+     "y": 5,
+     "w": 4,
+     "d": 0.8,
+     "fill": "#8E969A"
+    },
+    {
+     "shape": "box",
+     "x": 0.5,
+     "y": 7,
+     "w": 4,
+     "d": 0.8,
+     "fill": "#8E969A"
+    },
+    {
+     "shape": "box",
+     "x": 0.5,
+     "y": 9,
+     "w": 4,
+     "d": 0.8,
+     "fill": "#8E969A"
+    },
+    {
+     "shape": "box",
+     "x": 0.5,
+     "y": 11,
+     "w": 4,
+     "d": 0.8,
+     "fill": "#8E969A"
+    },
+    {
+     "shape": "box",
+     "x": 0.5,
+     "y": 13,
+     "w": 4,
+     "d": 0.8,
+     "fill": "#8E969A"
+    },
+    {
+     "shape": "box",
+     "x": 0.5,
+     "y": 15,
+     "w": 4,
+     "d": 0.8,
+     "fill": "#8E969A"
+    },
+    {
+     "shape": "box",
+     "x": 0.5,
+     "y": 17,
+     "w": 4,
+     "d": 0.8,
+     "fill": "#8E969A"
+    },
+    {
+     "shape": "box",
+     "x": 0.5,
+     "y": 19,
+     "w": 4,
+     "d": 0.8,
+     "fill": "#8E969A"
+    },
+    {
+     "shape": "box",
+     "x": 0.5,
+     "y": 21,
+     "w": 4,
+     "d": 0.8,
+     "fill": "#8E969A"
+    },
+    {
+     "shape": "box",
+     "x": 0.5,
+     "y": 23,
+     "w": 4,
+     "d": 0.8,
+     "fill": "#8E969A"
+    },
+    {
+     "shape": "box",
+     "x": 0.5,
+     "y": 25,
+     "w": 4,
+     "d": 0.8,
+     "fill": "#8E969A"
+    }
+   ]
+  },
+  {
+   "id": "magazin",
+   "component_id": "steel_stapler_body",
+   "material_id": "steel",
+   "name": "Magazin",
+   "short": "Magazin",
+   "shape": "box",
+   "x": 8,
+   "y": 10,
+   "w": 24,
+   "d": 134,
+   "z": 22,
+   "h": 14,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    41.0
+   ],
+   "mass": 35,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "U-förmige Stahlschiene, in die man die Klammern legt. Sie ist hinten mit dem Scharnier verbunden.",
+   "color": "#B8BEC4",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 5,
+     "y": 30,
+     "w": 14,
+     "d": 100,
+     "r": 1,
+     "fill": "#8E969A"
+    }
+   ]
+  },
+  {
+   "id": "scharnierfeder",
+   "component_id": "steel_spring",
+   "material_id": "steel",
+   "name": "Rückstellfeder",
+   "short": "Rückstellfeder",
+   "shape": "box",
+   "x": 15,
+   "y": 18,
+   "w": 10,
+   "d": 60,
+   "z": 13,
+   "h": 8,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    28.0
+   ],
+   "mass": 6,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Blattfeder zwischen Unterteil und Magazin. Sie drückt den Tacker nach dem Heften wieder auf.",
+   "color": "#8E969A"
+  },
+  {
+   "id": "stift",
+   "component_id": "steel_stapler_body",
+   "material_id": "steel",
+   "name": "Scharnierstift",
+   "short": "Scharnierstift",
+   "shape": "box",
+   "x": 0,
+   "y": 6,
+   "w": 40,
+   "d": 4,
+   "z": 24,
+   "h": 4,
+   "r": 2,
+   "explode": [
+    60,
     0,
     0
    ],
-   "mass": 81.4,
+   "mass": 2,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Stahlstift, um den sich Bügel und Magazin drehen. Mit Hammer und Durchschlag heraustreiben, dann zerfällt der Tacker in seine Teile.",
+   "color": "#9AA2A6"
+  },
+  {
+   "id": "amboss",
+   "component_id": "steel_stapler_body",
+   "material_id": "steel",
+   "name": "Amboss (Biegeplatte)",
+   "short": "Amboss",
+   "shape": "box",
+   "x": 12,
+   "y": 118,
+   "w": 16,
+   "d": 24,
+   "z": 13,
+   "h": 2,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    28.0
+   ],
+   "mass": 5,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Gehärtetes Stahlplättchen mit zwei Mulden. Darin biegen sich die Klammerbeine um; gedreht heftet er zum Lösen.",
+   "color": "#D5DADE",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 8,
+     "w": 3,
+     "d": 8,
+     "r": 1,
+     "fill": "#8E969A"
+    },
+    {
+     "shape": "box",
+     "x": 9,
+     "y": 8,
+     "w": 3,
+     "d": 8,
+     "r": 1,
+     "fill": "#8E969A"
+    }
+   ]
+  },
+  {
+   "id": "unterteil",
+   "component_id": "plastic_base",
+   "material_id": "abs",
+   "name": "Unterteil",
+   "short": "Unterteil",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 40,
+   "d": 150,
+   "z": 3,
+   "h": 10,
+   "r": 8,
+   "explode": [
+    0,
+    0,
+    14.0
+   ],
+   "mass": 40,
    "materials": [
     [
      "pcabs",
      100
     ]
    ],
-   "material_id": "abs",
-   "info": "Pry it off the steel arm."
+   "info": "Fuß aus ABS-Kunststoff, mit dem Amboss vernietet. Vom Stahl abhebeln: Kunststoff und Metall getrennt entsorgen.",
+   "color": "#2A2E31"
+  },
+  {
+   "id": "fuss",
+   "component_id": "plastic_base",
+   "material_id": "rubber",
+   "name": "Gummifuß",
+   "short": "Gummifuß",
+   "shape": "box",
+   "x": 2,
+   "y": 4,
+   "w": 36,
+   "d": 142,
+   "z": 0,
+   "h": 3,
+   "r": 7,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 5,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "info": "Rutschfeste Gummisohle, nur eingeklebt. Sie lässt sich mit den Fingern abziehen.",
+   "color": "#3A3F44"
   }
  ]
 }

@@ -4,7 +4,7 @@
  "name_en": "Eraser",
  "klasse": "Restmüll",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -39,11 +39,11 @@
   "metalle_mg": {},
   "herkunft": {},
   "materialien_g": {
-   "rubber": 13.4,
-   "paper": 1.6
+   "rubber": 14.8,
+   "paper": 0.2
   },
-  "co2_kg": 0.047,
-  "co2_mit_recyclat_kg": 0.047,
+  "co2_kg": 0.052,
+  "co2_mit_recyclat_kg": 0.052,
   "co2_ersparnis_kg": 0.0,
   "co2_ohne_faktor": [],
   "rohstoffwert_eur": 0,
@@ -94,63 +94,204 @@
   "nicht": "Nicht in die Gelbe Tonne: keine Verpackung",
   "warnung": "Gut Erhaltenes lieber verschenken oder in der Werkstatt abgeben."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "paper_label",
+   "id": "manschette_oben",
    "component_id": "paper_label",
-   "name": "Paper Label",
-   "short": "Paper Label",
+   "material_id": "paper",
+   "name": "Papiermanschette (Oberseite)",
+   "short": "Manschette",
    "shape": "box",
-   "x": 20.2,
-   "y": 8.0,
-   "w": 1.0,
-   "d": 24.0,
-   "h": 6.0,
-   "z": 2.0,
-   "r": 0.1,
+   "x": 0,
+   "y": 8,
+   "w": 20,
+   "d": 24,
+   "z": 9.7,
+   "h": 0.3,
+   "r": 0,
    "explode": [
-    22.0,
     0,
-    3.6
+    0,
+    14
    ],
-   "mass": 1.61,
+   "mass": 0.08,
+   "materials": [
+    [
+     "papier",
+     92
+    ],
+    [
+     "druck",
+     8
+    ]
+   ],
+   "info": "Bedruckter Papierstreifen um den Radierer. Er schützt die Kanten und lässt sich einfach abstreifen; ins Altpapier.",
+   "color": "#3E6E9E",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 6,
+     "w": 16,
+     "d": 6,
+     "r": 1,
+     "fill": "#F3F1EC"
+    },
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 15,
+     "w": 16,
+     "d": 3,
+     "r": 0.5,
+     "fill": "#F2E23A"
+    }
+   ]
+  },
+  {
+   "id": "manschette_links",
+   "component_id": "paper_label",
+   "material_id": "paper",
+   "name": "Manschette (linke Seite)",
+   "short": "Seite links",
+   "shape": "box",
+   "x": 0,
+   "y": 8,
+   "w": 0.3,
+   "d": 24,
+   "z": 0.3,
+   "h": 9.4,
+   "r": 0,
+   "explode": [
+    -12,
+    0,
+    0
+   ],
+   "mass": 0.03,
    "materials": [
     [
      "papier",
      100
     ]
    ],
-   "material_id": "paper",
-   "info": "Soak in warm water to peel it off; leaving it on is usually fine."
+   "info": "Seitenteil des Papierstreifens.",
+   "color": "#3E6E9E",
+   "label": false
   },
   {
-   "id": "eraser_block",
+   "id": "manschette_rechts",
+   "component_id": "paper_label",
+   "material_id": "paper",
+   "name": "Manschette (rechte Seite)",
+   "short": "Seite rechts",
+   "shape": "box",
+   "x": 19.7,
+   "y": 8,
+   "w": 0.3,
+   "d": 24,
+   "z": 0.3,
+   "h": 9.4,
+   "r": 0,
+   "explode": [
+    12,
+    0,
+    0
+   ],
+   "mass": 0.03,
+   "materials": [
+    [
+     "papier",
+     100
+    ]
+   ],
+   "info": "Seitenteil des Papierstreifens.",
+   "color": "#3E6E9E",
+   "label": false
+  },
+  {
+   "id": "radierer",
    "component_id": "eraser_block",
-   "name": "Eraser",
-   "short": "Eraser",
+   "material_id": "rubber",
+   "name": "Radierblock",
+   "short": "Radierer",
+   "shape": "box",
+   "x": 0.3,
+   "y": 0,
+   "w": 19.4,
+   "d": 40,
+   "z": 0.3,
+   "h": 9.4,
+   "r": 1.5,
+   "explode": [
+    0,
+    48,
+    0
+   ],
+   "mass": 14.78,
+   "materials": [
+    [
+     "gummi",
+     65
+    ],
+    [
+     "tpe",
+     35
+    ]
+   ],
+   "info": "Weicher Kunststoff-Radierer (synthetischer Kautschuk mit Weichmachern), nimmt Grafit vom Papier auf. Am besten ganz aufbrauchen, Reste in den Restmüll.",
+   "color": "#F3F1EC",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 0,
+     "w": 19.4,
+     "d": 3,
+     "r": 1.5,
+     "fill": "#E4E1D8"
+    }
+   ]
+  },
+  {
+   "id": "manschette_unten",
+   "component_id": "paper_label",
+   "material_id": "paper",
+   "name": "Manschette (Unterseite)",
+   "short": "Unterseite",
    "shape": "box",
    "x": 0,
-   "y": 0,
-   "w": 20.0,
-   "d": 40.0,
-   "h": 10.0,
-   "z": 0.0,
-   "r": 2.4,
+   "y": 8,
+   "w": 20,
+   "d": 24,
+   "z": 0,
+   "h": 0.3,
+   "r": 0,
    "explode": [
     0,
     0,
     0
    ],
-   "mass": 13.39,
+   "mass": 0.08,
    "materials": [
     [
-     "gummi",
+     "papier",
      100
     ]
    ],
-   "material_id": "rubber",
-   "info": "Peel off the paper sleeve and use it up completely."
+   "info": "Hier sind die Enden des Papierstreifens überlappend verklebt.",
+   "color": "#3E6E9E",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 8,
+     "y": 0,
+     "w": 6,
+     "d": 24,
+     "r": 0,
+     "fill": "#2F5A85"
+    }
+   ]
   }
  ]
 }

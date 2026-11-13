@@ -1,0 +1,260 @@
+{
+ "parts": [
+  {
+   "id": "kappe",
+   "component_id": "pen_cap",
+   "material_id": "pp",
+   "name": "Kappe",
+   "short": "Kappe",
+   "shape": "cyl",
+   "x": 0,
+   "y": 1.5,
+   "w": 18,
+   "d": 17,
+   "z": 84,
+   "h": 36,
+   "explode": [
+    0,
+    0,
+    24.0
+   ],
+   "mass": 2.79,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Hält die Spitze feucht. Die neonfarbene Tinte trocknet offen in wenigen Stunden ein.",
+   "color": "#3A3F44",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 7,
+     "y": 6.5,
+     "w": 4,
+     "fill": "#2A2E31"
+    }
+   ]
+  },
+  {
+   "id": "clip",
+   "component_id": "pen_cap",
+   "material_id": "pp",
+   "name": "Clip",
+   "short": "Clip",
+   "shape": "box",
+   "x": 18,
+   "y": 8.5,
+   "w": 2,
+   "d": 3,
+   "z": 90,
+   "h": 28,
+   "r": 0.6,
+   "explode": [
+    0,
+    0,
+    24.0
+   ],
+   "mass": 0.43,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Angespritzter Clip aus Polypropylen, wie die Kappe.",
+   "color": "#3A3F44"
+  },
+  {
+   "id": "spitze",
+   "component_id": "marker_nib",
+   "material_id": "polyester",
+   "name": "Keilspitze",
+   "short": "Keilspitze",
+   "shape": "box",
+   "x": 7,
+   "y": 8,
+   "w": 5,
+   "d": 4,
+   "z": 90,
+   "h": 20,
+   "r": 0.5,
+   "explode": [
+    30,
+    0,
+    10
+   ],
+   "mass": 0.43,
+   "materials": [
+    [
+     "polyester",
+     100
+    ]
+   ],
+   "info": "Schräg geschnittene Polyesterfaser: breit für Zeilen, schmal für feine Striche. Mit einer Zange herausziehen.",
+   "color": "#F2E23A",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 4,
+     "d": 1,
+     "r": 0.3,
+     "fill": "#E0CC20"
+    }
+   ]
+  },
+  {
+   "id": "spitzenhalter",
+   "component_id": "pen_barrel",
+   "material_id": "pp",
+   "name": "Spitzenhalter",
+   "short": "Spitzenhalter",
+   "shape": "cyl",
+   "x": 1.5,
+   "y": 2.5,
+   "w": 16,
+   "d": 15,
+   "z": 88,
+   "h": 10,
+   "explode": [
+    0,
+    0,
+    66.0
+   ],
+   "mass": 1.07,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Vorderteil mit Schlitz für die Keilspitze, in den Schaft eingepresst.",
+   "color": "#F2E23A",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 5.5,
+     "y": 5.5,
+     "w": 5,
+     "d": 4,
+     "r": 0.5,
+     "fill": "#B8A817"
+    }
+   ]
+  },
+  {
+   "id": "tank",
+   "component_id": "marker_ink_reservoir",
+   "material_id": "polyester",
+   "name": "Fasertank mit Leuchttinte",
+   "short": "Tank",
+   "shape": "cyl",
+   "x": 3.5,
+   "y": 4,
+   "w": 12,
+   "d": 12,
+   "z": 6,
+   "h": 80,
+   "explode": [
+    30,
+    0,
+    0
+   ],
+   "mass": 3.43,
+   "materials": [
+    [
+     "polyester",
+     75
+    ],
+    [
+     "pp",
+     15
+    ],
+    [
+     "druck",
+     10
+    ]
+   ],
+   "info": "Polyesterwatte mit fluoreszierender Tinte. Nachfüllbare Textmarker sparen viel Kunststoff.",
+   "color": "#F7F09A",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 2,
+     "y": 2,
+     "w": 8,
+     "fill": "#F2E23A"
+    }
+   ]
+  },
+  {
+   "id": "schaft",
+   "component_id": "pen_barrel",
+   "material_id": "pp",
+   "name": "Schaft",
+   "short": "Schaft",
+   "shape": "cyl",
+   "x": 1,
+   "y": 2,
+   "w": 17,
+   "d": 16,
+   "z": 4,
+   "h": 84,
+   "explode": [
+    0,
+    0,
+    10.0
+   ],
+   "mass": 6,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Ovaler Polypropylen-Schaft, damit der Stift nicht wegrollt. Ausgetrocknet in den Restmüll.",
+   "color": "#F2E23A",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 2.5,
+     "y": 2.5,
+     "w": 12,
+     "d": 11,
+     "fill": "#E0CC20"
+    }
+   ]
+  },
+  {
+   "id": "endstopfen",
+   "component_id": "pen_barrel",
+   "material_id": "pp",
+   "name": "Endstopfen",
+   "short": "Endstopfen",
+   "shape": "cyl",
+   "x": 1.5,
+   "y": 2.5,
+   "w": 16,
+   "d": 15,
+   "z": 0,
+   "h": 4,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 0.86,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Hinterer Stopfen. Abziehen, dann lässt sich der Tank nachfüllen oder herausnehmen.",
+   "color": "#3A3F44"
+  }
+ ]
+}

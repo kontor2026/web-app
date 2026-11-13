@@ -4,7 +4,7 @@
  "name_en": "Glue Stick",
  "klasse": "Restmüll",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -93,59 +93,223 @@
   "nicht": "Nicht in die Gelbe Tonne: keine Verpackung",
   "warnung": "Gut Erhaltenes lieber verschenken oder in der Werkstatt abgeben."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "pen_cap",
+   "id": "kappe",
    "component_id": "pen_cap",
-   "name": "Cap",
-   "short": "Cap",
+   "material_id": "pp",
+   "name": "Schraub-/Steckkappe",
+   "short": "Kappe",
    "shape": "cyl",
-   "x": 8.2,
-   "y": 8.2,
-   "w": 13.5,
-   "h": 12.0,
-   "z": 85.0,
+   "x": 0,
+   "y": 0,
+   "w": 30,
+   "z": 70,
+   "h": 30,
    "explode": [
     0,
     0,
-    12.0
+    18
    ],
-   "mass": 3.21,
+   "mass": 2.81,
    "materials": [
     [
      "pp",
      100
     ]
    ],
-   "material_id": "pp",
-   "info": "Pull it off the tip."
+   "info": "Dichte Kappe aus Polypropylen, damit der Kleber nicht austrocknet. Gleicher Kunststoff wie die Hülse.",
+   "color": "#D9473A",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 5,
+     "y": 5,
+     "w": 20,
+     "fill": "#B83A2F"
+    }
+   ]
   },
   {
-   "id": "glue_stick_tube",
+   "id": "klebemasse",
    "component_id": "glue_stick_tube",
-   "name": "Tube",
-   "short": "Tube",
+   "material_id": "pp",
+   "name": "Klebemasse",
+   "short": "Kleber",
    "shape": "cyl",
-   "x": 0,
-   "y": 0,
-   "w": 30.0,
-   "h": 85.0,
-   "z": 0.0,
+   "x": 4,
+   "y": 4,
+   "w": 22,
+   "z": 30,
+   "h": 44,
+   "explode": [
+    42,
+    0,
+    42.0
+   ],
+   "mass": 19.69,
+   "materials": [
+    [
+     "klebstoff",
+     100
+    ]
+   ],
+   "info": "Fester Klebstoff aus Seife, PVP-Kunststoff und Wasser, lösemittelfrei und auswaschbar. Reste herauskratzen; die Masse gehört in den Restmüll.",
+   "color": "#FAFAF5",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 3,
+     "w": 16,
+     "fill": "#EDEBE4"
+    }
+   ]
+  },
+  {
+   "id": "kolben",
+   "component_id": "glue_stick_tube",
+   "material_id": "pp",
+   "name": "Kolben (Schale)",
+   "short": "Kolben",
+   "shape": "cyl",
+   "x": 3,
+   "y": 3,
+   "w": 24,
+   "z": 24,
+   "h": 8,
+   "explode": [
+    42,
+    0,
+    32.0
+   ],
+   "mass": 0.94,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Kleine Schale mit Innengewinde. Beim Drehen wandert sie auf der Spindel nach oben und schiebt den Kleber heraus.",
+   "color": "#F3F1EC",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 8,
+     "y": 8,
+     "w": 8,
+     "fill": "#C9CDD0"
+    }
+   ]
+  },
+  {
+   "id": "spindel",
+   "component_id": "glue_stick_tube",
+   "material_id": "pp",
+   "name": "Gewindespindel",
+   "short": "Spindel",
+   "shape": "cyl",
+   "x": 11,
+   "y": 11,
+   "w": 8,
+   "z": 8,
+   "h": 40,
+   "explode": [
+    42,
+    0,
+    0.0
+   ],
+   "mass": 0.75,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Schraube aus Kunststoff, fest mit dem Drehknopf verbunden. Sie trägt den Kolben.",
+   "color": "#F3F1EC",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 2,
+     "y": 2,
+     "w": 4,
+     "fill": "#C9CDD0"
+    }
+   ]
+  },
+  {
+   "id": "huelse",
+   "component_id": "glue_stick_tube",
+   "material_id": "pp",
+   "name": "Hülse",
+   "short": "Hülse",
+   "shape": "cyl",
+   "x": 1,
+   "y": 1,
+   "w": 28,
+   "z": 10,
+   "h": 64,
    "explode": [
     0,
     0,
     0
    ],
-   "mass": 26.79,
+   "mass": 4.22,
    "materials": [
     [
      "pp",
      100
     ]
    ],
+   "info": "Bedruckte PP-Hülse. Ganz leer gedreht und ausgekratzt darf sie in die Gelbe Tonne; mit Kleberesten in den Restmüll.",
+   "color": "#F3F1EC",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 2,
+     "y": 2,
+     "w": 24,
+     "fill": "#E4E1D8"
+    }
+   ]
+  },
+  {
+   "id": "drehknopf",
+   "component_id": "glue_stick_tube",
    "material_id": "pp",
-   "info": "Twist down fully and scrape out leftover glue."
+   "name": "Drehknopf",
+   "short": "Drehknopf",
+   "shape": "cyl",
+   "x": 1,
+   "y": 1,
+   "w": 28,
+   "z": 0,
+   "h": 10,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 1.59,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Am Boden drehen, dann schraubt sich der Kleber heraus. Er ist in die Hülse eingeschnappt.",
+   "color": "#D9473A",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 9,
+     "y": 9,
+     "w": 10,
+     "fill": "#B83A2F"
+    }
+   ]
   }
  ]
 }
