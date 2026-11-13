@@ -1,0 +1,444 @@
+{
+ "parts": [
+  {
+   "id": "kordelstopper",
+   "component_id": "coated_polyester_fabric",
+   "material_id": "pp",
+   "name": "Kordelstopper der Kapuze",
+   "short": "Kordelstopper",
+   "shape": "cyl",
+   "x": 60,
+   "y": 12,
+   "w": 10,
+   "d": 14,
+   "z": 30,
+   "h": 5,
+   "explode": [
+    0,
+    0,
+    12.0
+   ],
+   "mass": 1.6,
+   "materials": [
+    [
+     "pp",
+     80
+    ],
+    [
+     "stahl",
+     20
+    ]
+   ],
+   "info": "Kunststoffklemme mit Stahlfeder für den Kapuzenzug. Vor dem Recycling abschneiden.",
+   "color": "#22272B",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 2.5,
+     "y": 4,
+     "w": 5,
+     "fill": "#555C62"
+    }
+   ]
+  },
+  {
+   "id": "kapuze",
+   "component_id": "coated_polyester_fabric",
+   "material_id": "polyester",
+   "name": "Kapuze, im Kragen eingerollt",
+   "short": "Kapuze",
+   "shape": "box",
+   "x": 75,
+   "y": 0,
+   "w": 150,
+   "d": 45,
+   "z": 20,
+   "h": 10,
+   "r": 12,
+   "explode": [
+    0,
+    0,
+    164.0
+   ],
+   "mass": 37.6,
+   "materials": [
+    [
+     "polyester",
+     85
+    ],
+    [
+     "tpu",
+     15
+    ]
+   ],
+   "info": "Die Kapuze steckt eingerollt im Kragen und wird bei Regen herausgezogen. Mit Gummizug am Gesicht.",
+   "color": "#E8B83A",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 6,
+     "y": 20,
+     "w": 138,
+     "d": 2,
+     "r": 1,
+     "fill": "#C99A22"
+    }
+   ]
+  },
+  {
+   "id": "reissverschluss",
+   "component_id": "metal_zipper",
+   "material_id": "copper",
+   "name": "Reißverschluss mit Abdeckleiste",
+   "short": "Reißverschluss",
+   "shape": "box",
+   "x": 143,
+   "y": 40,
+   "w": 14,
+   "d": 360,
+   "z": 24,
+   "h": 3,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    73.0
+   ],
+   "mass": 26.8,
+   "materials": [
+    [
+     "messing",
+     45
+    ],
+    [
+     "polyester",
+     50
+    ],
+    [
+     "stahl",
+     5
+    ]
+   ],
+   "info": "Metallreißverschluss unter einer Stoffleiste, die den Regen abhält. Seitlich am Band abschneiden.",
+   "color": "#2A2E31",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 5,
+     "y": 0,
+     "w": 4,
+     "d": 360,
+     "r": 0.5,
+     "fill": "#B7BCC0"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 20,
+     "w": 8,
+     "d": 14,
+     "r": 2,
+     "fill": "#B7BCC0"
+    }
+   ]
+  },
+  {
+   "id": "vorne_l",
+   "component_id": "coated_polyester_fabric",
+   "material_id": "polyester",
+   "name": "Vorderteil links",
+   "short": "Vorderteil",
+   "shape": "box",
+   "x": 0,
+   "y": 40,
+   "w": 143,
+   "d": 360,
+   "z": 17,
+   "h": 7,
+   "r": 6,
+   "explode": [
+    0,
+    0,
+    80.0
+   ],
+   "mass": 48.3,
+   "materials": [
+    [
+     "polyester",
+     85
+    ],
+    [
+     "tpu",
+     15
+    ]
+   ],
+   "info": "Polyestergewebe mit einer wasserdichten Polyurethan-Beschichtung innen. Die Beschichtung lässt sich nicht ablösen: Stoff lieber für Taschen oder Beutel weiterverwenden.",
+   "color": "#E8B83A",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 25,
+     "y": 230,
+     "w": 80,
+     "d": 5,
+     "r": 2,
+     "fill": "#C99A22"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 352,
+     "w": 143,
+     "d": 3,
+     "r": 0,
+     "fill": "#C99A22"
+    }
+   ]
+  },
+  {
+   "id": "vorne_r",
+   "component_id": "coated_polyester_fabric",
+   "material_id": "polyester",
+   "name": "Vorderteil rechts",
+   "short": "Vorderteil",
+   "shape": "box",
+   "x": 157,
+   "y": 40,
+   "w": 143,
+   "d": 360,
+   "z": 17,
+   "h": 7,
+   "r": 6,
+   "explode": [
+    0,
+    0,
+    80.0
+   ],
+   "mass": 48.3,
+   "materials": [
+    [
+     "polyester",
+     85
+    ],
+    [
+     "tpu",
+     15
+    ]
+   ],
+   "info": "Gegenstück zur linken Vorderseite, mit Tasche hinter einer Regenklappe.",
+   "color": "#E8B83A",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 38,
+     "y": 230,
+     "w": 80,
+     "d": 5,
+     "r": 2,
+     "fill": "#C99A22"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 352,
+     "w": 143,
+     "d": 3,
+     "r": 0,
+     "fill": "#C99A22"
+    }
+   ]
+  },
+  {
+   "id": "etikett",
+   "component_id": "care_label",
+   "material_id": "polyester",
+   "name": "Pflegeetikett",
+   "short": "Etikett",
+   "shape": "box",
+   "x": 200,
+   "y": 10,
+   "w": 25,
+   "d": 32,
+   "z": 16.7,
+   "h": 0.3,
+   "r": 1,
+   "explode": [
+    130,
+    -70,
+    0
+   ],
+   "mass": 1.1,
+   "materials": [
+    [
+     "polyester",
+     100
+    ]
+   ],
+   "info": "Etikett mit Waschsymbolen: nicht in den Trockner, sonst leidet die Beschichtung. Abschneiden vor dem Recycling.",
+   "color": "#F4F2EE",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 5,
+     "w": 17,
+     "d": 3,
+     "r": 0,
+     "fill": "#8E969A"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 12,
+     "w": 17,
+     "d": 3,
+     "r": 0,
+     "fill": "#8E969A"
+    }
+   ]
+  },
+  {
+   "id": "ruecken",
+   "component_id": "coated_polyester_fabric",
+   "material_id": "polyester",
+   "name": "Rückenteil mit Nahtband",
+   "short": "Rückenteil",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 300,
+   "d": 400,
+   "z": 8,
+   "h": 9,
+   "r": 6,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 107.4,
+   "materials": [
+    [
+     "polyester",
+     85
+    ],
+    [
+     "tpu",
+     15
+    ]
+   ],
+   "info": "Alle Nähte sind innen mit einem aufgeschweißten Kunststoffband abgedichtet, damit kein Wasser durch die Stiche dringt.",
+   "color": "#E8B83A",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 120,
+     "w": 300,
+     "d": 8,
+     "r": 0,
+     "fill": "#C99A22"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 392,
+     "w": 300,
+     "d": 3,
+     "r": 0,
+     "fill": "#C99A22"
+    }
+   ]
+  },
+  {
+   "id": "aermel_l",
+   "component_id": "coated_polyester_fabric",
+   "material_id": "polyester",
+   "name": "Ärmel links (eingeschlagen)",
+   "short": "Ärmel",
+   "shape": "box",
+   "x": 15,
+   "y": 30,
+   "w": 125,
+   "d": 350,
+   "z": 0,
+   "h": 8,
+   "r": 10,
+   "explode": [
+    -190,
+    0,
+    0
+   ],
+   "mass": 64.4,
+   "materials": [
+    [
+     "polyester",
+     85
+    ],
+    [
+     "tpu",
+     15
+    ]
+   ],
+   "info": "Ärmel mit Klettriegel am Handgelenk, beim Falten unter den Rücken geschlagen.",
+   "color": "#E8B83A",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 20,
+     "y": 320,
+     "w": 85,
+     "d": 22,
+     "r": 3,
+     "fill": "#C99A22"
+    }
+   ]
+  },
+  {
+   "id": "aermel_r",
+   "component_id": "coated_polyester_fabric",
+   "material_id": "polyester",
+   "name": "Ärmel rechts (eingeschlagen)",
+   "short": "Ärmel",
+   "shape": "box",
+   "x": 160,
+   "y": 30,
+   "w": 125,
+   "d": 350,
+   "z": 0,
+   "h": 8,
+   "r": 10,
+   "explode": [
+    190,
+    0,
+    0
+   ],
+   "mass": 64.4,
+   "materials": [
+    [
+     "polyester",
+     85
+    ],
+    [
+     "tpu",
+     15
+    ]
+   ],
+   "info": "Gegenstück zum linken Ärmel.",
+   "color": "#E8B83A",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 20,
+     "y": 320,
+     "w": 85,
+     "d": 22,
+     "r": 3,
+     "fill": "#C99A22"
+    }
+   ]
+  }
+ ]
+}

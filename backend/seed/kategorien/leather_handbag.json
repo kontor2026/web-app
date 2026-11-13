@@ -4,7 +4,7 @@
  "name_en": "Leather Handbag",
  "klasse": "Textilien und Schuhe",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -21,37 +21,38 @@
  "werte": [
   {
    "k": "Rohstoffwert",
-   "v": "≈ 3,94 €",
+   "v": "≈ 0,34 €",
    "hint": "Kupfer zu Preisen vom 13.11."
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 6,46 kg",
+   "v": "≈ 9,58 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 5,51 kg",
-   "hint": "spart 0,94 kg, wenn recycelte Materialien eingesetzt werden"
+   "v": "≈ 9,44 kg",
+   "hint": "spart 0,14 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Cu": 312500.0
+   "Cu": 27200.0
   },
   "herkunft": {
    "Cu": "Modellmassen (Schätzung)"
   },
   "materialien_g": {
-   "copper": 312.5,
-   "leather": 312.5,
-   "polyester": 75.0
+   "leather": 557.4,
+   "polyester": 81.6,
+   "pp": 34.0,
+   "copper": 27.2
   },
-  "co2_kg": 6.456,
-  "co2_mit_recyclat_kg": 5.514,
-  "co2_ersparnis_kg": 0.942,
+  "co2_kg": 9.58,
+  "co2_mit_recyclat_kg": 9.442,
+  "co2_ersparnis_kg": 0.138,
   "co2_ohne_faktor": [],
-  "rohstoffwert_eur": 3.94,
+  "rohstoffwert_eur": 0.34,
   "wert_ohne_preis": [],
   "preisstand": "2026-11-13",
   "quellen": {
@@ -99,91 +100,395 @@
   "nicht": "Tragbares nicht in den Restmüll",
   "warnung": "Schuhe paarweise zusammenbinden."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "polyester_lining",
-   "component_id": "polyester_lining",
-   "name": "Lining",
-   "short": "Lining",
+   "id": "henkel_v",
+   "component_id": "leather_panel",
+   "material_id": "leather",
+   "name": "Henkel vorne",
+   "short": "Henkel",
    "shape": "box",
-   "x": 45.0,
-   "y": 18.0,
-   "w": 210.0,
-   "d": 84.0,
-   "h": 87.5,
-   "z": 50.0,
-   "r": 10.1,
+   "x": 75,
+   "y": 106,
+   "w": 150,
+   "d": 8,
+   "z": 200,
+   "h": 50,
+   "r": 4,
    "explode": [
     0,
     0,
-    368.0
+    146.0
    ],
-   "mass": 75.0,
+   "mass": 61.2,
+   "materials": [
+    [
+     "leder",
+     85
+    ],
+    [
+     "polyester",
+     5
+    ],
+    [
+     "stahl",
+     10
+    ]
+   ],
+   "info": "Zwei verklebte Lederstreifen mit Kunststoffkern, an beiden Enden mit Metallringen oder Nieten befestigt.",
+   "color": "#5C3A24"
+  },
+  {
+   "id": "henkel_h",
+   "component_id": "leather_panel",
+   "material_id": "leather",
+   "name": "Henkel hinten",
+   "short": "Henkel",
+   "shape": "box",
+   "x": 75,
+   "y": 6,
+   "w": 150,
+   "d": 8,
+   "z": 200,
+   "h": 50,
+   "r": 4,
+   "explode": [
+    0,
+    0,
+    146.0
+   ],
+   "mass": 61.2,
+   "materials": [
+    [
+     "leder",
+     85
+    ],
+    [
+     "polyester",
+     5
+    ],
+    [
+     "stahl",
+     10
+    ]
+   ],
+   "info": "Gegenstück am Rückenteil.",
+   "color": "#5C3A24",
+   "label": false
+  },
+  {
+   "id": "schieber",
+   "component_id": "metal_zipper",
+   "material_id": "copper",
+   "name": "Schieber mit Zipper",
+   "short": "Schieber",
+   "shape": "box",
+   "x": 228,
+   "y": 50,
+   "w": 16,
+   "d": 20,
+   "z": 200,
+   "h": 5,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    165.0
+   ],
+   "mass": 6.8,
+   "materials": [
+    [
+     "messing",
+     70
+    ],
+    [
+     "stahl",
+     30
+    ]
+   ],
+   "info": "Gegossener Metallschieber mit Lederanhänger. Er verbindet die beiden Zahnreihen beim Ziehen.",
+   "color": "#C9A24A"
+  },
+  {
+   "id": "reissverschluss",
+   "component_id": "metal_zipper",
+   "material_id": "copper",
+   "name": "Reißverschluss",
+   "short": "Reißverschluss",
+   "shape": "box",
+   "x": 20,
+   "y": 54,
+   "w": 260,
+   "d": 12,
+   "z": 196,
+   "h": 4,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    150.0
+   ],
+   "mass": 20.4,
+   "materials": [
+    [
+     "messing",
+     55
+    ],
+    [
+     "polyester",
+     40
+    ],
+    [
+     "stahl",
+     5
+    ]
+   ],
+   "info": "Metallzähne auf Polyesterband, oben zwischen Futter und Leder eingenäht. Mit der Schere am Band entlang heraustrennen.",
+   "color": "#2A2E31",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 4,
+     "w": 260,
+     "d": 4,
+     "r": 0.5,
+     "fill": "#C9A24A"
+    }
+   ]
+  },
+  {
+   "id": "vorderteil",
+   "component_id": "leather_panel",
+   "material_id": "leather",
+   "name": "Vorderwand",
+   "short": "Vorderwand",
+   "shape": "box",
+   "x": 0,
+   "y": 114,
+   "w": 300,
+   "d": 6,
+   "z": 10,
+   "h": 190,
+   "r": 2,
+   "explode": [
+    0,
+    90,
+    0
+   ],
+   "mass": 203.9,
+   "materials": [
+    [
+     "leder",
+     95
+    ],
+    [
+     "polyester",
+     5
+    ]
+   ],
+   "info": "Rindsleder, an den Kanten eingefasst und mit Polyestergarn vernäht. Nähte auftrennen, dann bleiben flache Lederstücke zum Basteln übrig.",
+   "color": "#8A5A3B"
+  },
+  {
+   "id": "seite_l",
+   "component_id": "leather_panel",
+   "material_id": "leather",
+   "name": "Seitenteil links",
+   "short": "Seitenteil",
+   "shape": "box",
+   "x": 0,
+   "y": 6,
+   "w": 6,
+   "d": 108,
+   "z": 10,
+   "h": 190,
+   "r": 2,
+   "explode": [
+    -90,
+    0,
+    0
+   ],
+   "mass": 61.2,
+   "materials": [
+    [
+     "leder",
+     95
+    ],
+    [
+     "polyester",
+     5
+    ]
+   ],
+   "info": "Schmaler Lederstreifen (Keder), der Vorder- und Rückwand verbindet und der Tasche ihre Tiefe gibt.",
+   "color": "#8A5A3B"
+  },
+  {
+   "id": "seite_r",
+   "component_id": "leather_panel",
+   "material_id": "leather",
+   "name": "Seitenteil rechts",
+   "short": "Seitenteil",
+   "shape": "box",
+   "x": 294,
+   "y": 6,
+   "w": 6,
+   "d": 108,
+   "z": 10,
+   "h": 190,
+   "r": 2,
+   "explode": [
+    90,
+    0,
+    0
+   ],
+   "mass": 61.2,
+   "materials": [
+    [
+     "leder",
+     95
+    ],
+    [
+     "polyester",
+     5
+    ]
+   ],
+   "info": "Gegenstück zum linken Seitenteil.",
+   "color": "#8A5A3B",
+   "label": false
+  },
+  {
+   "id": "futter",
+   "component_id": "polyester_lining",
+   "material_id": "polyester",
+   "name": "Innenfutter mit Innentasche",
+   "short": "Futter",
+   "shape": "box",
+   "x": 8,
+   "y": 8,
+   "w": 284,
+   "d": 104,
+   "z": 13,
+   "h": 183,
+   "r": 4,
+   "explode": [
+    0,
+    0,
+    100.0
+   ],
+   "mass": 81.6,
    "materials": [
     [
      "polyester",
      100
     ]
    ],
-   "material_id": "polyester",
-   "info": "Cut it out along the inner seam."
+   "info": "Eingenähter Beutel aus Polyester-Satin. An der oberen Naht entlang herausschneiden.",
+   "color": "#C9B48F",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 40,
+     "y": 6,
+     "w": 120,
+     "d": 4,
+     "r": 1,
+     "fill": "#B39E78"
+    }
+   ]
   },
   {
-   "id": "metal_zipper",
-   "component_id": "metal_zipper",
-   "name": "Zipper",
-   "short": "Zipper",
+   "id": "bodeneinlage",
+   "component_id": "leather_panel",
+   "material_id": "pp",
+   "name": "Bodeneinlage",
+   "short": "Bodeneinlage",
    "shape": "box",
-   "x": 0,
-   "y": 0,
-   "w": 300.0,
-   "d": 120.0,
-   "h": 125.0,
-   "z": 125.0,
-   "r": 14.4,
+   "x": 10,
+   "y": 10,
+   "w": 280,
+   "d": 100,
+   "z": 10,
+   "h": 3,
+   "r": 6,
    "explode": [
     0,
     0,
-    84.0
+    50.0
    ],
-   "mass": 312.5,
+   "mass": 34,
    "materials": [
     [
-     "kupfer",
+     "pp",
      100
     ]
    ],
-   "material_id": "copper",
-   "info": "Cut along both sides of the zipper tape."
+   "info": "Feste Kunststoffplatte, damit der Boden nicht durchhängt. Lose unter dem Futter oder eingeklebt.",
+   "color": "#E8E6E1"
   },
   {
-   "id": "leather_panel",
+   "id": "boden",
    "component_id": "leather_panel",
-   "name": "Leather",
-   "short": "Leather",
+   "material_id": "leather",
+   "name": "Boden mit Standfüßen",
+   "short": "Boden",
    "shape": "box",
    "x": 0,
    "y": 0,
-   "w": 300.0,
-   "d": 120.0,
-   "h": 125.0,
-   "z": 0.0,
-   "r": 14.4,
+   "w": 300,
+   "d": 120,
+   "z": 0,
+   "h": 10,
+   "r": 8,
    "explode": [
     0,
     0,
-    0
+    0.0
    ],
-   "mass": 312.5,
+   "mass": 108.7,
    "materials": [
     [
      "leder",
-     100
+     90
+    ],
+    [
+     "stahl",
+     10
     ]
    ],
-   "material_id": "leather",
-   "info": "Unpick the seams to get flat pieces."
+   "info": "Doppeltes Leder mit vier Metallfüßchen, die den Boden vor Abrieb schützen. Die Füße aufbiegen und abziehen.",
+   "color": "#5C3A24",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 20,
+     "y": 20,
+     "w": 10,
+     "fill": "#C9A24A"
+    },
+    {
+     "shape": "cyl",
+     "x": 20,
+     "y": 90,
+     "w": 10,
+     "fill": "#C9A24A"
+    },
+    {
+     "shape": "cyl",
+     "x": 270,
+     "y": 20,
+     "w": 10,
+     "fill": "#C9A24A"
+    },
+    {
+     "shape": "cyl",
+     "x": 270,
+     "y": 90,
+     "w": 10,
+     "fill": "#C9A24A"
+    }
+   ]
   }
  ]
 }

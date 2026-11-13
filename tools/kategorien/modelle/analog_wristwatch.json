@@ -1,0 +1,717 @@
+{
+ "parts": [
+  {
+   "id": "glas",
+   "component_id": "watch_glass",
+   "material_id": "special_glass",
+   "name": "Mineralglas",
+   "short": "Glas",
+   "shape": "cyl",
+   "x": 3,
+   "y": 7,
+   "w": 32,
+   "z": 10.5,
+   "h": 1.5,
+   "explode": [
+    0,
+    0,
+    63.2
+   ],
+   "mass": 2.1,
+   "materials": [
+    [
+     "glas",
+     100
+    ]
+   ],
+   "info": "Gehärtetes Mineralglas, in die Lünette eingepresst. Nicht herausdrücken: Es gehört mit zum Gehäuse.",
+   "color": "#C9DEDF",
+   "opacity": 0.6
+  },
+  {
+   "id": "luenette",
+   "component_id": "steel_watch_case",
+   "material_id": "steel",
+   "name": "Lünette",
+   "short": "Lünette",
+   "shape": "cyl",
+   "x": 1,
+   "y": 5,
+   "w": 36,
+   "z": 10,
+   "h": 1.5,
+   "explode": [
+    0,
+    0,
+    52.2
+   ],
+   "mass": 5.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Polierter Edelstahlring um das Glas, auf das Gehäuse gepresst.",
+   "color": "#C3C8CC",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 2,
+     "y": 2,
+     "w": 32,
+     "fill": "#9DA4A9"
+    }
+   ]
+  },
+  {
+   "id": "sekundenzeiger",
+   "component_id": "watch_movement",
+   "material_id": "copper",
+   "name": "Sekundenzeiger",
+   "short": "Sekundenzeiger",
+   "shape": "box",
+   "x": 18.6,
+   "y": 10,
+   "w": 0.8,
+   "d": 16,
+   "z": 9.6,
+   "h": 0.2,
+   "r": 0.3,
+   "explode": [
+    0,
+    0,
+    42.4
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "messing",
+     100
+    ]
+   ],
+   "info": "Dünner Messingzeiger, springt jede Sekunde einen Schritt weiter.",
+   "color": "#C8423A"
+  },
+  {
+   "id": "minutenzeiger",
+   "component_id": "watch_movement",
+   "material_id": "copper",
+   "name": "Minutenzeiger",
+   "short": "Minutenzeiger",
+   "shape": "box",
+   "x": 18.2,
+   "y": 10,
+   "w": 1.6,
+   "d": 14,
+   "z": 9.3,
+   "h": 0.2,
+   "r": 0.6,
+   "explode": [
+    0,
+    0,
+    38.5
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "messing",
+     100
+    ]
+   ],
+   "info": "Langer Zeiger, auf das Minutenrohr gesteckt. Mit einem Zeigerheber vorsichtig abziehen.",
+   "color": "#2A2E31"
+  },
+  {
+   "id": "stundenzeiger",
+   "component_id": "watch_movement",
+   "material_id": "copper",
+   "name": "Stundenzeiger",
+   "short": "Stundenzeiger",
+   "shape": "box",
+   "x": 18,
+   "y": 22,
+   "w": 10,
+   "d": 2,
+   "z": 9,
+   "h": 0.2,
+   "r": 0.8,
+   "explode": [
+    0,
+    0,
+    34.6
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "messing",
+     100
+    ]
+   ],
+   "info": "Kurzer, breiter Zeiger. Er dreht sich in 12 Stunden einmal herum (hier auf 3 Uhr).",
+   "color": "#2A2E31"
+  },
+  {
+   "id": "zifferblatt",
+   "component_id": "watch_movement",
+   "material_id": "copper",
+   "name": "Zifferblatt",
+   "short": "Zifferblatt",
+   "shape": "cyl",
+   "x": 4,
+   "y": 8,
+   "w": 30,
+   "z": 8.6,
+   "h": 0.4,
+   "explode": [
+    0,
+    0,
+    30.6
+   ],
+   "mass": 1.3,
+   "materials": [
+    [
+     "messing",
+     90
+    ],
+    [
+     "druck",
+     10
+    ]
+   ],
+   "info": "Bedrucktes Messingblech mit Stundenmarken, mit zwei Füßchen am Werk eingesteckt.",
+   "color": "#F4F2EE",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 14.25,
+     "y": 1.0,
+     "w": 1.5,
+     "d": 3,
+     "r": 0.3,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 20.25,
+     "y": 3.17,
+     "w": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 24.83,
+     "y": 7.75,
+     "w": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 26.75,
+     "y": 13.5,
+     "w": 1.5,
+     "d": 3,
+     "r": 0.3,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 24.83,
+     "y": 20.25,
+     "w": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 20.25,
+     "y": 24.83,
+     "w": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 14.25,
+     "y": 26.0,
+     "w": 1.5,
+     "d": 3,
+     "r": 0.3,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 7.75,
+     "y": 24.83,
+     "w": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 3.17,
+     "y": 20.25,
+     "w": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 1.75,
+     "y": 13.5,
+     "w": 1.5,
+     "d": 3,
+     "r": 0.3,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 3.17,
+     "y": 7.75,
+     "w": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 7.75,
+     "y": 3.17,
+     "w": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 14,
+     "y": 14,
+     "w": 2,
+     "fill": "#2A2E31"
+    }
+   ]
+  },
+  {
+   "id": "werk",
+   "component_id": "watch_movement",
+   "material_id": "mixed_electronics",
+   "name": "Quarzwerk",
+   "short": "Uhrwerk",
+   "shape": "cyl",
+   "x": 6,
+   "y": 10,
+   "w": 26,
+   "z": 3.6,
+   "h": 5,
+   "explode": [
+    0,
+    0,
+    20.6
+   ],
+   "mass": 4.7,
+   "materials": [
+    [
+     "pcabs",
+     35
+    ],
+    [
+     "messing",
+     25
+    ],
+    [
+     "stahl",
+     15
+    ],
+    [
+     "kupfer",
+     10
+    ],
+    [
+     "chip",
+     10
+    ],
+    [
+     "ferrit",
+     5
+    ]
+   ],
+   "info": "Kunststoffplatine mit Zahnrädern aus Messing. Ein Schwingquarz gibt 32.768 Schwingungen pro Sekunde vor. Herausheben, nachdem die Aufzugswelle gezogen ist.",
+   "color": "#9BA3A8",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 9,
+     "y": 9,
+     "w": 8,
+     "fill": "#B7BCC0"
+    },
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 6,
+     "w": 5,
+     "fill": "#C9A24A"
+    },
+    {
+     "shape": "cyl",
+     "x": 17,
+     "y": 13,
+     "w": 4,
+     "fill": "#C9A24A"
+    }
+   ]
+  },
+  {
+   "id": "spule",
+   "component_id": "watch_movement",
+   "material_id": "mixed_electronics",
+   "name": "Schrittmotor mit Spule",
+   "short": "Spule",
+   "shape": "box",
+   "x": 17,
+   "y": 28,
+   "w": 10,
+   "d": 4,
+   "z": 1.6,
+   "h": 2,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    10.0
+   ],
+   "mass": 0.5,
+   "materials": [
+    [
+     "kupfer",
+     60
+    ],
+    [
+     "stahl",
+     30
+    ],
+    [
+     "ndfeb",
+     10
+    ]
+   ],
+   "info": "Eine Kupferspule bewegt jede Sekunde einen kleinen Magnetrotor. Über Zahnräder treibt er die Zeiger an.",
+   "color": "#C5803D",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 0.8,
+     "w": 6,
+     "d": 2.4,
+     "r": 1,
+     "fill": "#B06F33"
+    }
+   ]
+  },
+  {
+   "id": "quarz",
+   "component_id": "watch_movement",
+   "material_id": "mixed_electronics",
+   "name": "Schwingquarz und Steuerchip",
+   "short": "Quarz",
+   "shape": "box",
+   "x": 10,
+   "y": 27,
+   "w": 6,
+   "d": 3,
+   "z": 1.6,
+   "h": 1.5,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    10.0
+   ],
+   "mass": 0.2,
+   "materials": [
+    [
+     "chip",
+     50
+    ],
+    [
+     "glas",
+     20
+    ],
+    [
+     "stahl",
+     30
+    ]
+   ],
+   "info": "Der winzige Quarz im Metallröhrchen schwingt sehr gleichmäßig, der Chip zählt die Schwingungen.",
+   "color": "#B7BCC0"
+  },
+  {
+   "id": "knopfzelle",
+   "component_id": "button_cell",
+   "material_id": "coin_cell",
+   "name": "Knopfzelle SR626SW",
+   "short": "Knopfzelle",
+   "shape": "cyl",
+   "x": 12,
+   "y": 15,
+   "w": 6.8,
+   "z": 1.5,
+   "h": 2.6,
+   "explode": [
+    0,
+    0,
+    10.1
+   ],
+   "mass": 0.4,
+   "materials": [
+    [
+     "knopfzelle",
+     100
+    ]
+   ],
+   "info": "Silberoxid-Knopfzelle, hält zwei bis drei Jahre. Deckel öffnen, Zelle abkleben und zur Batteriesammlung bringen.",
+   "color": "#B7BCC0",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 1,
+     "y": 1,
+     "w": 4.8,
+     "fill": "#9DA6AD"
+    }
+   ]
+  },
+  {
+   "id": "gehaeuse",
+   "component_id": "steel_watch_case",
+   "material_id": "steel",
+   "name": "Gehäusemittelteil mit Bandanstößen",
+   "short": "Gehäuse",
+   "shape": "cyl",
+   "x": 1,
+   "y": 5,
+   "w": 36,
+   "z": 1.5,
+   "h": 8.5,
+   "explode": [
+    -55,
+    0,
+    0
+   ],
+   "mass": 23.2,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Edelstahlgehäuse aus einem Stück mit den Hörnern für die Federstege. Leer ist es reiner Stahlschrott.",
+   "color": "#C3C8CC",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 3,
+     "w": 30,
+     "fill": "#9DA4A9"
+    }
+   ]
+  },
+  {
+   "id": "krone",
+   "component_id": "steel_watch_case",
+   "material_id": "steel",
+   "name": "Krone mit Aufzugswelle",
+   "short": "Krone",
+   "shape": "box",
+   "x": 34,
+   "y": 21.5,
+   "w": 6,
+   "d": 3,
+   "z": 4.6,
+   "h": 3,
+   "r": 1,
+   "explode": [
+    20,
+    0,
+    0
+   ],
+   "mass": 0.8,
+   "materials": [
+    [
+     "stahl",
+     90
+    ],
+    [
+     "gummi",
+     10
+    ]
+   ],
+   "info": "Ziehen, um die Uhrzeit zu stellen. Zum Ausbau des Werks die Welle nach Drücken eines Hebelchens herausziehen.",
+   "color": "#B7BCC0"
+  },
+  {
+   "id": "dichtung",
+   "component_id": "steel_watch_case",
+   "material_id": "rubber",
+   "name": "Dichtungsring",
+   "short": "Dichtung",
+   "shape": "cyl",
+   "x": 4.5,
+   "y": 8.5,
+   "w": 29,
+   "z": 1.3,
+   "h": 0.3,
+   "explode": [
+    0,
+    0,
+    5.0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "info": "Gummiring zwischen Boden und Gehäuse, hält Wasser und Staub fern.",
+   "color": "#22272B",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 1,
+     "y": 1,
+     "w": 27,
+     "fill": "#3A3F44"
+    }
+   ]
+  },
+  {
+   "id": "boden",
+   "component_id": "steel_watch_case",
+   "material_id": "steel",
+   "name": "Gehäuseboden",
+   "short": "Boden",
+   "shape": "cyl",
+   "x": 4,
+   "y": 8,
+   "w": 30,
+   "z": 0,
+   "h": 1.3,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 6.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Eingedrückter Stahlboden. Mit einem Gehäusemesser an der kleinen Kerbe aufhebeln.",
+   "color": "#C3C8CC",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 28,
+     "y": 13,
+     "w": 2,
+     "d": 4,
+     "r": 0.5,
+     "fill": "#8E969A"
+    },
+    {
+     "shape": "cyl",
+     "x": 7,
+     "y": 7,
+     "w": 16,
+     "fill": "#B0B6BA"
+    }
+   ]
+  },
+  {
+   "id": "band_oben",
+   "component_id": "leather_strap",
+   "material_id": "leather",
+   "name": "Lederarmband oben (Ansatz)",
+   "short": "Armband",
+   "shape": "box",
+   "x": 9,
+   "y": 0,
+   "w": 20,
+   "d": 6,
+   "z": 3,
+   "h": 4,
+   "r": 2,
+   "explode": [
+    0,
+    -18,
+    0
+   ],
+   "mass": 7.4,
+   "materials": [
+    [
+     "leder",
+     85
+    ],
+    [
+     "stahl",
+     15
+    ]
+   ],
+   "info": "Rindslederband mit Dornschließe, mit Federstegen an den Hörnern befestigt. Federsteg eindrücken, dann löst sich das Band.",
+   "color": "#6B4226",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 1,
+     "w": 18,
+     "d": 1,
+     "r": 0.5,
+     "fill": "#4F301B"
+    }
+   ]
+  },
+  {
+   "id": "band_unten",
+   "component_id": "leather_strap",
+   "material_id": "leather",
+   "name": "Lederarmband unten (Ansatz)",
+   "short": "Armband",
+   "shape": "box",
+   "x": 9,
+   "y": 40,
+   "w": 20,
+   "d": 6,
+   "z": 3,
+   "h": 4,
+   "r": 2,
+   "explode": [
+    0,
+    18,
+    0
+   ],
+   "mass": 7.4,
+   "materials": [
+    [
+     "leder",
+     90
+    ],
+    [
+     "stahl",
+     10
+    ]
+   ],
+   "info": "Zweite Bandhälfte mit Löchern. Leder kommt nicht in den Elektroschrott: vorher abnehmen.",
+   "color": "#6B4226",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 4,
+     "w": 18,
+     "d": 1,
+     "r": 0.5,
+     "fill": "#4F301B"
+    }
+   ]
+  }
+ ]
+}

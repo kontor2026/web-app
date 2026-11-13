@@ -1,0 +1,269 @@
+{
+ "parts": [
+  {
+   "id": "spitze",
+   "component_id": "leather_strap",
+   "material_id": "leather",
+   "name": "Riemenspitze mit Löchern (innere Windung)",
+   "short": "Riemenspitze",
+   "shape": "cyl",
+   "x": 27,
+   "y": 30,
+   "w": 40,
+   "z": 0,
+   "h": 38,
+   "explode": [
+    0,
+    0,
+    120.0
+   ],
+   "mass": 31.4,
+   "materials": [
+    [
+     "leder",
+     100
+    ]
+   ],
+   "info": "Das Ende mit den Lochreihen, innen in der Rolle. Rindsleder, pflanzlich oder mit Chromsalzen gegerbt.",
+   "color": "#7A4A2A",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 4,
+     "w": 32,
+     "fill": "#5C3720"
+    },
+    {
+     "shape": "cyl",
+     "x": 7,
+     "y": 7,
+     "w": 26,
+     "fill": "#7A4A2A"
+    }
+   ]
+  },
+  {
+   "id": "windung_mitte",
+   "component_id": "leather_strap",
+   "material_id": "leather",
+   "name": "Riemen, mittlere Windung",
+   "short": "Riemen",
+   "shape": "cyl",
+   "x": 12,
+   "y": 15,
+   "w": 70,
+   "z": 0,
+   "h": 38,
+   "explode": [
+    0,
+    0,
+    60.0
+   ],
+   "mass": 41.9,
+   "materials": [
+    [
+     "leder",
+     100
+    ]
+   ],
+   "info": "Zwei Lagen Leder, an den Kanten verklebt und vernäht. Tragbare Gürtel in die Altkleidersammlung.",
+   "color": "#7A4A2A",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 4,
+     "w": 62,
+     "fill": "#5C3720"
+    },
+    {
+     "shape": "cyl",
+     "x": 7,
+     "y": 7,
+     "w": 56,
+     "fill": "#7A4A2A"
+    }
+   ]
+  },
+  {
+   "id": "windung_aussen",
+   "component_id": "leather_strap",
+   "material_id": "leather",
+   "name": "Riemen, äußere Windung",
+   "short": "Riemen",
+   "shape": "cyl",
+   "x": 0,
+   "y": 3,
+   "w": 94,
+   "z": 0,
+   "h": 38,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 57.6,
+   "materials": [
+    [
+     "leder",
+     100
+    ]
+   ],
+   "info": "Äußere Windung bis zur Schnalle. Leder lässt sich nicht wie Kunststoff einschmelzen; Reste werden zu Lederfaserplatten verarbeitet.",
+   "color": "#7A4A2A",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 4,
+     "w": 86,
+     "fill": "#5C3720"
+    },
+    {
+     "shape": "cyl",
+     "x": 7,
+     "y": 7,
+     "w": 80,
+     "fill": "#7A4A2A"
+    }
+   ]
+  },
+  {
+   "id": "schlaufe",
+   "component_id": "leather_strap",
+   "material_id": "leather",
+   "name": "Lederschlaufe",
+   "short": "Schlaufe",
+   "shape": "box",
+   "x": 93,
+   "y": 78,
+   "w": 7,
+   "d": 10,
+   "z": 0,
+   "h": 40,
+   "r": 2,
+   "explode": [
+    60,
+    4,
+    0
+   ],
+   "mass": 4.2,
+   "materials": [
+    [
+     "leder",
+     100
+    ]
+   ],
+   "info": "Kleine Lederschlaufe hinter der Schnalle, sie hält das freie Riemenende fest.",
+   "color": "#5C3720"
+  },
+  {
+   "id": "schnalle",
+   "component_id": "belt_buckle",
+   "material_id": "steel",
+   "name": "Gürtelschnalle (Rahmen)",
+   "short": "Schnalle",
+   "shape": "box",
+   "x": 94,
+   "y": 26,
+   "w": 6,
+   "d": 48,
+   "z": 0,
+   "h": 40,
+   "r": 3,
+   "explode": [
+    60,
+    0,
+    0
+   ],
+   "mass": 57.6,
+   "materials": [
+    [
+     "stahl",
+     85
+    ],
+    [
+     "nickel",
+     15
+    ]
+   ],
+   "info": "Vernickelter Stahl- oder Zinkdruckguss-Rahmen. Nach dem Lösen der Schraube ab zum Altmetall.",
+   "color": "#B7BCC0"
+  },
+  {
+   "id": "dorn",
+   "component_id": "belt_buckle",
+   "material_id": "steel",
+   "name": "Dorn",
+   "short": "Dorn",
+   "shape": "box",
+   "x": 90,
+   "y": 48,
+   "w": 10,
+   "d": 4,
+   "z": 17,
+   "h": 4,
+   "r": 1,
+   "explode": [
+    95,
+    0,
+    0
+   ],
+   "mass": 4.2,
+   "materials": [
+    [
+     "stahl",
+     85
+    ],
+    [
+     "nickel",
+     15
+    ]
+   ],
+   "info": "Der Dorn greift in die Löcher der Riemenspitze. Er dreht sich auf der Achse des Rahmens.",
+   "color": "#B7BCC0"
+  },
+  {
+   "id": "schraube",
+   "component_id": "belt_buckle",
+   "material_id": "steel",
+   "name": "Buchschraube",
+   "short": "Schraube",
+   "shape": "cyl",
+   "x": 86,
+   "y": 66,
+   "w": 8,
+   "z": 16,
+   "h": 8,
+   "explode": [
+    124,
+    0,
+    0
+   ],
+   "mass": 3.1,
+   "materials": [
+    [
+     "messing",
+     80
+    ],
+    [
+     "stahl",
+     20
+    ]
+   ],
+   "info": "Zweiteilige Schraube, die den umgeschlagenen Riemen um die Schnallenachse hält. Mit einer Münze aufdrehen, dann lässt sich die Schnalle abnehmen.",
+   "color": "#C9A24A",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 2,
+     "y": 2,
+     "w": 4,
+     "fill": "#8A6D2E"
+    }
+   ]
+  }
+ ]
+}

@@ -4,7 +4,7 @@
  "name_en": "Bed Sheet",
  "klasse": "Textilien und Schuhe",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -39,10 +39,11 @@
   "metalle_mg": {},
   "herkunft": {},
   "materialien_g": {
-   "cotton": 600.0
+   "cotton": 599.2,
+   "polyester": 1.0
   },
-  "co2_kg": 0.562,
-  "co2_mit_recyclat_kg": 0.562,
+  "co2_kg": 0.564,
+  "co2_mit_recyclat_kg": 0.564,
   "co2_ersparnis_kg": 0.0,
   "co2_ohne_faktor": [],
   "rohstoffwert_eur": 0,
@@ -93,35 +94,226 @@
   "nicht": "Tragbares nicht in den Restmüll",
   "warnung": "Schuhe paarweise zusammenbinden."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "cotton_fabric",
+   "id": "etikett",
    "component_id": "cotton_fabric",
-   "name": "Fabric",
-   "short": "Fabric",
+   "material_id": "polyester",
+   "name": "Pflegeetikett",
+   "short": "Etikett",
    "shape": "box",
-   "x": 0,
-   "y": 0,
-   "w": 300.0,
-   "d": 400.0,
-   "h": 30.0,
-   "z": 0.0,
-   "r": 36.0,
+   "x": 20,
+   "y": 360,
+   "w": 30,
+   "d": 26,
+   "z": 30,
+   "h": 0.3,
+   "r": 1,
    "explode": [
-    0,
+    310,
     0,
     0
    ],
-   "mass": 600.0,
+   "mass": 1,
+   "materials": [
+    [
+     "polyester",
+     100
+    ]
+   ],
+   "info": "Eingenähtes Polyester-Etikett mit Waschsymbolen (bis 60 °C). Vor dem Recycling abschneiden.",
+   "color": "#F4F2EE",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 5,
+     "w": 22,
+     "d": 3,
+     "r": 0,
+     "fill": "#8E969A"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 12,
+     "w": 22,
+     "d": 3,
+     "r": 0,
+     "fill": "#8E969A"
+    }
+   ]
+  },
+  {
+   "id": "lage_1",
+   "component_id": "cotton_fabric",
+   "material_id": "cotton",
+   "name": "Oberste Faltlagen mit Saum",
+   "short": "Faltlagen oben",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 300,
+   "d": 400,
+   "z": 22,
+   "h": 8,
+   "r": 4,
+   "explode": [
+    0,
+    0,
+    330.0
+   ],
+   "mass": 149.8,
    "materials": [
     [
      "baumwolle",
      100
     ]
    ],
+   "info": "Baumwoll-Perkal oder Linon, glatt gewebt. Gut erhaltene Laken in die Altkleidersammlung, verschlissene als Putz- oder Malerlappen weiterverwenden.",
+   "color": "#E9EEF2",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 375,
+     "w": 300,
+     "d": 5,
+     "r": 0,
+     "fill": "#B9C4CC"
+    },
+    {
+     "shape": "box",
+     "x": 149,
+     "y": 0,
+     "w": 2,
+     "d": 400,
+     "r": 0,
+     "fill": "#CDD6DD"
+    }
+   ]
+  },
+  {
+   "id": "lage_2",
+   "component_id": "cotton_fabric",
    "material_id": "cotton",
-   "info": "Donate if wearable; otherwise use the textile collection."
+   "name": "Faltlagen 2",
+   "short": "Faltlagen",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 300,
+   "d": 400,
+   "z": 15,
+   "h": 7,
+   "r": 4,
+   "explode": [
+    0,
+    0,
+    220.0
+   ],
+   "mass": 149.8,
+   "materials": [
+    [
+     "baumwolle",
+     100
+    ]
+   ],
+   "info": "Jede Faltung legt den Stoff doppelt. So werden aus einem großen Tuch acht Lagen in diesem Paket.",
+   "color": "#E9EEF2",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 199,
+     "w": 300,
+     "d": 2,
+     "r": 0,
+     "fill": "#CDD6DD"
+    }
+   ]
+  },
+  {
+   "id": "lage_3",
+   "component_id": "cotton_fabric",
+   "material_id": "cotton",
+   "name": "Faltlagen 3",
+   "short": "Faltlagen",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 300,
+   "d": 400,
+   "z": 8,
+   "h": 7,
+   "r": 4,
+   "explode": [
+    0,
+    0,
+    110.0
+   ],
+   "mass": 149.8,
+   "materials": [
+    [
+     "baumwolle",
+     100
+    ]
+   ],
+   "info": "Reine Baumwolle, ohne Knöpfe oder Reißverschluss: das Laken kann ganz ins Textilrecycling.",
+   "color": "#E9EEF2",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 149,
+     "y": 0,
+     "w": 2,
+     "d": 400,
+     "r": 0,
+     "fill": "#CDD6DD"
+    }
+   ]
+  },
+  {
+   "id": "lage_4",
+   "component_id": "cotton_fabric",
+   "material_id": "cotton",
+   "name": "Unterste Faltlagen mit Saum",
+   "short": "Faltlagen unten",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 300,
+   "d": 400,
+   "z": 0,
+   "h": 8,
+   "r": 4,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 149.8,
+   "materials": [
+    [
+     "baumwolle",
+     100
+    ]
+   ],
+   "info": "Am Rand ist der Stoff doppelt umgeschlagen und vernäht (Saum), damit er nicht ausfranst.",
+   "color": "#E9EEF2",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 20,
+     "w": 300,
+     "d": 5,
+     "r": 0,
+     "fill": "#B9C4CC"
+    }
+   ]
   }
  ]
 }

@@ -1,0 +1,392 @@
+{
+ "parts": [
+  {
+   "id": "henkel_v",
+   "component_id": "leather_panel",
+   "material_id": "leather",
+   "name": "Henkel vorne",
+   "short": "Henkel",
+   "shape": "box",
+   "x": 75,
+   "y": 106,
+   "w": 150,
+   "d": 8,
+   "z": 200,
+   "h": 50,
+   "r": 4,
+   "explode": [
+    0,
+    0,
+    146.0
+   ],
+   "mass": 61.2,
+   "materials": [
+    [
+     "leder",
+     85
+    ],
+    [
+     "polyester",
+     5
+    ],
+    [
+     "stahl",
+     10
+    ]
+   ],
+   "info": "Zwei verklebte Lederstreifen mit Kunststoffkern, an beiden Enden mit Metallringen oder Nieten befestigt.",
+   "color": "#5C3A24"
+  },
+  {
+   "id": "henkel_h",
+   "component_id": "leather_panel",
+   "material_id": "leather",
+   "name": "Henkel hinten",
+   "short": "Henkel",
+   "shape": "box",
+   "x": 75,
+   "y": 6,
+   "w": 150,
+   "d": 8,
+   "z": 200,
+   "h": 50,
+   "r": 4,
+   "explode": [
+    0,
+    0,
+    146.0
+   ],
+   "mass": 61.2,
+   "materials": [
+    [
+     "leder",
+     85
+    ],
+    [
+     "polyester",
+     5
+    ],
+    [
+     "stahl",
+     10
+    ]
+   ],
+   "info": "Gegenstück am Rückenteil.",
+   "color": "#5C3A24",
+   "label": false
+  },
+  {
+   "id": "schieber",
+   "component_id": "metal_zipper",
+   "material_id": "copper",
+   "name": "Schieber mit Zipper",
+   "short": "Schieber",
+   "shape": "box",
+   "x": 228,
+   "y": 50,
+   "w": 16,
+   "d": 20,
+   "z": 200,
+   "h": 5,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    165.0
+   ],
+   "mass": 6.8,
+   "materials": [
+    [
+     "messing",
+     70
+    ],
+    [
+     "stahl",
+     30
+    ]
+   ],
+   "info": "Gegossener Metallschieber mit Lederanhänger. Er verbindet die beiden Zahnreihen beim Ziehen.",
+   "color": "#C9A24A"
+  },
+  {
+   "id": "reissverschluss",
+   "component_id": "metal_zipper",
+   "material_id": "copper",
+   "name": "Reißverschluss",
+   "short": "Reißverschluss",
+   "shape": "box",
+   "x": 20,
+   "y": 54,
+   "w": 260,
+   "d": 12,
+   "z": 196,
+   "h": 4,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    150.0
+   ],
+   "mass": 20.4,
+   "materials": [
+    [
+     "messing",
+     55
+    ],
+    [
+     "polyester",
+     40
+    ],
+    [
+     "stahl",
+     5
+    ]
+   ],
+   "info": "Metallzähne auf Polyesterband, oben zwischen Futter und Leder eingenäht. Mit der Schere am Band entlang heraustrennen.",
+   "color": "#2A2E31",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 4,
+     "w": 260,
+     "d": 4,
+     "r": 0.5,
+     "fill": "#C9A24A"
+    }
+   ]
+  },
+  {
+   "id": "vorderteil",
+   "component_id": "leather_panel",
+   "material_id": "leather",
+   "name": "Vorderwand",
+   "short": "Vorderwand",
+   "shape": "box",
+   "x": 0,
+   "y": 114,
+   "w": 300,
+   "d": 6,
+   "z": 10,
+   "h": 190,
+   "r": 2,
+   "explode": [
+    0,
+    90,
+    0
+   ],
+   "mass": 203.9,
+   "materials": [
+    [
+     "leder",
+     95
+    ],
+    [
+     "polyester",
+     5
+    ]
+   ],
+   "info": "Rindsleder, an den Kanten eingefasst und mit Polyestergarn vernäht. Nähte auftrennen, dann bleiben flache Lederstücke zum Basteln übrig.",
+   "color": "#8A5A3B"
+  },
+  {
+   "id": "seite_l",
+   "component_id": "leather_panel",
+   "material_id": "leather",
+   "name": "Seitenteil links",
+   "short": "Seitenteil",
+   "shape": "box",
+   "x": 0,
+   "y": 6,
+   "w": 6,
+   "d": 108,
+   "z": 10,
+   "h": 190,
+   "r": 2,
+   "explode": [
+    -90,
+    0,
+    0
+   ],
+   "mass": 61.2,
+   "materials": [
+    [
+     "leder",
+     95
+    ],
+    [
+     "polyester",
+     5
+    ]
+   ],
+   "info": "Schmaler Lederstreifen (Keder), der Vorder- und Rückwand verbindet und der Tasche ihre Tiefe gibt.",
+   "color": "#8A5A3B"
+  },
+  {
+   "id": "seite_r",
+   "component_id": "leather_panel",
+   "material_id": "leather",
+   "name": "Seitenteil rechts",
+   "short": "Seitenteil",
+   "shape": "box",
+   "x": 294,
+   "y": 6,
+   "w": 6,
+   "d": 108,
+   "z": 10,
+   "h": 190,
+   "r": 2,
+   "explode": [
+    90,
+    0,
+    0
+   ],
+   "mass": 61.2,
+   "materials": [
+    [
+     "leder",
+     95
+    ],
+    [
+     "polyester",
+     5
+    ]
+   ],
+   "info": "Gegenstück zum linken Seitenteil.",
+   "color": "#8A5A3B",
+   "label": false
+  },
+  {
+   "id": "futter",
+   "component_id": "polyester_lining",
+   "material_id": "polyester",
+   "name": "Innenfutter mit Innentasche",
+   "short": "Futter",
+   "shape": "box",
+   "x": 8,
+   "y": 8,
+   "w": 284,
+   "d": 104,
+   "z": 13,
+   "h": 183,
+   "r": 4,
+   "explode": [
+    0,
+    0,
+    100.0
+   ],
+   "mass": 81.6,
+   "materials": [
+    [
+     "polyester",
+     100
+    ]
+   ],
+   "info": "Eingenähter Beutel aus Polyester-Satin. An der oberen Naht entlang herausschneiden.",
+   "color": "#C9B48F",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 40,
+     "y": 6,
+     "w": 120,
+     "d": 4,
+     "r": 1,
+     "fill": "#B39E78"
+    }
+   ]
+  },
+  {
+   "id": "bodeneinlage",
+   "component_id": "leather_panel",
+   "material_id": "pp",
+   "name": "Bodeneinlage",
+   "short": "Bodeneinlage",
+   "shape": "box",
+   "x": 10,
+   "y": 10,
+   "w": 280,
+   "d": 100,
+   "z": 10,
+   "h": 3,
+   "r": 6,
+   "explode": [
+    0,
+    0,
+    50.0
+   ],
+   "mass": 34,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Feste Kunststoffplatte, damit der Boden nicht durchhängt. Lose unter dem Futter oder eingeklebt.",
+   "color": "#E8E6E1"
+  },
+  {
+   "id": "boden",
+   "component_id": "leather_panel",
+   "material_id": "leather",
+   "name": "Boden mit Standfüßen",
+   "short": "Boden",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 300,
+   "d": 120,
+   "z": 0,
+   "h": 10,
+   "r": 8,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 108.7,
+   "materials": [
+    [
+     "leder",
+     90
+    ],
+    [
+     "stahl",
+     10
+    ]
+   ],
+   "info": "Doppeltes Leder mit vier Metallfüßchen, die den Boden vor Abrieb schützen. Die Füße aufbiegen und abziehen.",
+   "color": "#5C3A24",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 20,
+     "y": 20,
+     "w": 10,
+     "fill": "#C9A24A"
+    },
+    {
+     "shape": "cyl",
+     "x": 20,
+     "y": 90,
+     "w": 10,
+     "fill": "#C9A24A"
+    },
+    {
+     "shape": "cyl",
+     "x": 270,
+     "y": 20,
+     "w": 10,
+     "fill": "#C9A24A"
+    },
+    {
+     "shape": "cyl",
+     "x": 270,
+     "y": 90,
+     "w": 10,
+     "fill": "#C9A24A"
+    }
+   ]
+  }
+ ]
+}

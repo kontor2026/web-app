@@ -4,7 +4,7 @@
  "name_en": "Leather Belt",
  "klasse": "Textilien und Schuhe",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -26,29 +26,29 @@
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 0,80 kg",
+   "v": "≈ 2,38 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 0,47 kg",
-   "hint": "spart 0,33 kg, wenn recycelte Materialien eingesetzt werden"
+   "v": "≈ 2,26 kg",
+   "hint": "spart 0,12 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Fe": 174999.0
+   "Fe": 63602.0
   },
   "herkunft": {
    "Fe": "Modellmassen (Schätzung)"
   },
   "materialien_g": {
-   "steel": 178.6,
-   "leather": 21.4
+   "leather": 135.1,
+   "steel": 64.9
   },
-  "co2_kg": 0.8,
-  "co2_mit_recyclat_kg": 0.472,
-  "co2_ersparnis_kg": 0.327,
+  "co2_kg": 2.381,
+  "co2_mit_recyclat_kg": 2.262,
+  "co2_ersparnis_kg": 0.119,
   "co2_ohne_faktor": [],
   "rohstoffwert_eur": 0,
   "wert_ohne_preis": [],
@@ -98,61 +98,272 @@
   "nicht": "Tragbares nicht in den Restmüll",
   "warnung": "Schuhe paarweise zusammenbinden."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "leather_strap",
+   "id": "spitze",
    "component_id": "leather_strap",
-   "name": "Strap",
-   "short": "Strap",
-   "shape": "box",
-   "x": 106.0,
-   "y": 5.0,
-   "w": 5.0,
-   "d": 90.0,
-   "h": 3.2,
-   "z": 4.0,
-   "r": 0.6,
+   "material_id": "leather",
+   "name": "Riemenspitze mit Löchern (innere Windung)",
+   "short": "Riemenspitze",
+   "shape": "cyl",
+   "x": 27,
+   "y": 30,
+   "w": 40,
+   "z": 0,
+   "h": 38,
    "explode": [
-    50.0,
     0,
-    12.0
+    0,
+    120.0
    ],
-   "mass": 21.43,
+   "mass": 31.4,
    "materials": [
     [
      "leder",
      100
     ]
    ],
-   "material_id": "leather",
-   "info": "Unscrew the buckle screw or unpick the stitching around it."
+   "info": "Das Ende mit den Lochreihen, innen in der Rolle. Rindsleder, pflanzlich oder mit Chromsalzen gegerbt.",
+   "color": "#7A4A2A",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 4,
+     "w": 32,
+     "fill": "#5C3720"
+    },
+    {
+     "shape": "cyl",
+     "x": 7,
+     "y": 7,
+     "w": 26,
+     "fill": "#7A4A2A"
+    }
+   ]
   },
   {
-   "id": "belt_buckle",
-   "component_id": "belt_buckle",
-   "name": "Buckle",
-   "short": "Buckle",
+   "id": "windung_mitte",
+   "component_id": "leather_strap",
+   "material_id": "leather",
+   "name": "Riemen, mittlere Windung",
+   "short": "Riemen",
    "shape": "cyl",
-   "x": 0,
-   "y": 0,
-   "w": 100.0,
-   "h": 40.0,
-   "z": 0.0,
+   "x": 12,
+   "y": 15,
+   "w": 70,
+   "z": 0,
+   "h": 38,
    "explode": [
     0,
     0,
-    0
+    60.0
    ],
-   "mass": 178.57,
+   "mass": 41.9,
    "materials": [
     [
-     "stahl",
+     "leder",
      100
     ]
    ],
+   "info": "Zwei Lagen Leder, an den Kanten verklebt und vernäht. Tragbare Gürtel in die Altkleidersammlung.",
+   "color": "#7A4A2A",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 4,
+     "w": 62,
+     "fill": "#5C3720"
+    },
+    {
+     "shape": "cyl",
+     "x": 7,
+     "y": 7,
+     "w": 56,
+     "fill": "#7A4A2A"
+    }
+   ]
+  },
+  {
+   "id": "windung_aussen",
+   "component_id": "leather_strap",
+   "material_id": "leather",
+   "name": "Riemen, äußere Windung",
+   "short": "Riemen",
+   "shape": "cyl",
+   "x": 0,
+   "y": 3,
+   "w": 94,
+   "z": 0,
+   "h": 38,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 57.6,
+   "materials": [
+    [
+     "leder",
+     100
+    ]
+   ],
+   "info": "Äußere Windung bis zur Schnalle. Leder lässt sich nicht wie Kunststoff einschmelzen; Reste werden zu Lederfaserplatten verarbeitet.",
+   "color": "#7A4A2A",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 4,
+     "w": 86,
+     "fill": "#5C3720"
+    },
+    {
+     "shape": "cyl",
+     "x": 7,
+     "y": 7,
+     "w": 80,
+     "fill": "#7A4A2A"
+    }
+   ]
+  },
+  {
+   "id": "schlaufe",
+   "component_id": "leather_strap",
+   "material_id": "leather",
+   "name": "Lederschlaufe",
+   "short": "Schlaufe",
+   "shape": "box",
+   "x": 93,
+   "y": 78,
+   "w": 7,
+   "d": 10,
+   "z": 0,
+   "h": 40,
+   "r": 2,
+   "explode": [
+    60,
+    4,
+    0
+   ],
+   "mass": 4.2,
+   "materials": [
+    [
+     "leder",
+     100
+    ]
+   ],
+   "info": "Kleine Lederschlaufe hinter der Schnalle, sie hält das freie Riemenende fest.",
+   "color": "#5C3720"
+  },
+  {
+   "id": "schnalle",
+   "component_id": "belt_buckle",
    "material_id": "steel",
-   "info": "Unscrew it from the strap end."
+   "name": "Gürtelschnalle (Rahmen)",
+   "short": "Schnalle",
+   "shape": "box",
+   "x": 94,
+   "y": 26,
+   "w": 6,
+   "d": 48,
+   "z": 0,
+   "h": 40,
+   "r": 3,
+   "explode": [
+    60,
+    0,
+    0
+   ],
+   "mass": 57.6,
+   "materials": [
+    [
+     "stahl",
+     85
+    ],
+    [
+     "nickel",
+     15
+    ]
+   ],
+   "info": "Vernickelter Stahl- oder Zinkdruckguss-Rahmen. Nach dem Lösen der Schraube ab zum Altmetall.",
+   "color": "#B7BCC0"
+  },
+  {
+   "id": "dorn",
+   "component_id": "belt_buckle",
+   "material_id": "steel",
+   "name": "Dorn",
+   "short": "Dorn",
+   "shape": "box",
+   "x": 90,
+   "y": 48,
+   "w": 10,
+   "d": 4,
+   "z": 17,
+   "h": 4,
+   "r": 1,
+   "explode": [
+    95,
+    0,
+    0
+   ],
+   "mass": 4.2,
+   "materials": [
+    [
+     "stahl",
+     85
+    ],
+    [
+     "nickel",
+     15
+    ]
+   ],
+   "info": "Der Dorn greift in die Löcher der Riemenspitze. Er dreht sich auf der Achse des Rahmens.",
+   "color": "#B7BCC0"
+  },
+  {
+   "id": "schraube",
+   "component_id": "belt_buckle",
+   "material_id": "steel",
+   "name": "Buchschraube",
+   "short": "Schraube",
+   "shape": "cyl",
+   "x": 86,
+   "y": 66,
+   "w": 8,
+   "z": 16,
+   "h": 8,
+   "explode": [
+    124,
+    0,
+    0
+   ],
+   "mass": 3.1,
+   "materials": [
+    [
+     "messing",
+     80
+    ],
+    [
+     "stahl",
+     20
+    ]
+   ],
+   "info": "Zweiteilige Schraube, die den umgeschlagenen Riemen um die Schnallenachse hält. Mit einer Münze aufdrehen, dann lässt sich die Schnalle abnehmen.",
+   "color": "#C9A24A",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 2,
+     "y": 2,
+     "w": 4,
+     "fill": "#8A6D2E"
+    }
+   ]
   }
  ]
 }

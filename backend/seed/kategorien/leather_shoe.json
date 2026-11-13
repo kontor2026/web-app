@@ -4,7 +4,7 @@
  "name_en": "Leather Shoe",
  "klasse": "Textilien und Schuhe",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -26,12 +26,12 @@
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 4,79 kg",
+   "v": "≈ 5,01 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 4,79 kg",
+   "v": "≈ 5,01 kg",
    "hint": "spart 0,00 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
@@ -39,12 +39,14 @@
   "metalle_mg": {},
   "herkunft": {},
   "materialien_g": {
-   "leather": 235.8,
-   "rubber": 235.8,
-   "polyester": 28.3
+   "leather": 259.2,
+   "rubber": 184.4,
+   "cardboard": 35.9,
+   "polyurethane": 15.4,
+   "polyester": 5.1
   },
-  "co2_kg": 4.791,
-  "co2_mit_recyclat_kg": 4.791,
+  "co2_kg": 5.015,
+  "co2_mit_recyclat_kg": 5.015,
   "co2_ersparnis_kg": 0.0,
   "co2_ohne_faktor": [],
   "rohstoffwert_eur": 0,
@@ -95,91 +97,738 @@
   "nicht": "Tragbares nicht in den Restmüll",
   "warnung": "Schuhe paarweise zusammenbinden."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "leather_upper",
-   "component_id": "leather_upper",
-   "name": "Upper",
-   "short": "Upper",
-   "shape": "box",
-   "x": 0,
-   "y": 0,
-   "w": 110.0,
-   "d": 290.0,
-   "h": 55.0,
-   "z": 55.0,
-   "r": 13.2,
-   "explode": [
-    0,
-    0,
-    80.0
-   ],
-   "mass": 235.85,
-   "materials": [
-    [
-     "leder",
-     100
-    ]
-   ],
-   "material_id": "leather",
-   "info": "Bring wearable shoes to a shoe container; otherwise cut the upper away from the sole."
-  },
-  {
-   "id": "shoelaces",
+   "id": "senkel",
    "component_id": "shoelaces",
-   "name": "Laces",
-   "short": "Laces",
+   "material_id": "polyester",
+   "name": "Schnürsenkel",
+   "short": "Schnürsenkel",
    "shape": "box",
-   "x": 116.6,
-   "y": 14.5,
-   "w": 5.5,
-   "d": 261.0,
-   "h": 8.8,
-   "z": 11.0,
-   "r": 0.7,
+   "x": 38,
+   "y": 100,
+   "w": 34,
+   "d": 70,
+   "z": 96,
+   "h": 4,
+   "r": 3,
    "explode": [
-    53.5,
+    130,
     0,
-    24.0
+    40
    ],
-   "mass": 28.3,
+   "mass": 5.1,
    "materials": [
     [
      "polyester",
      100
     ]
    ],
-   "material_id": "polyester",
-   "info": "Unthread them."
+   "info": "Dünne, gewachste Senkel mit Kunststoffenden. Ausfädeln und weiterverwenden.",
+   "color": "#2A2420",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 6,
+     "w": 34,
+     "d": 2.5,
+     "r": 1,
+     "fill": "#4A3F38"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 20,
+     "w": 34,
+     "d": 2.5,
+     "r": 1,
+     "fill": "#4A3F38"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 34,
+     "w": 34,
+     "d": 2.5,
+     "r": 1,
+     "fill": "#4A3F38"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 48,
+     "w": 34,
+     "d": 2.5,
+     "r": 1,
+     "fill": "#4A3F38"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 62,
+     "w": 34,
+     "d": 2.5,
+     "r": 1,
+     "fill": "#4A3F38"
+    }
+   ]
   },
   {
-   "id": "rubber_outsole",
-   "component_id": "rubber_outsole",
-   "name": "Outsole",
-   "short": "Outsole",
+   "id": "zunge",
+   "component_id": "leather_upper",
+   "material_id": "leather",
+   "name": "Zunge",
+   "short": "Zunge",
    "shape": "box",
-   "x": 0,
-   "y": 0,
-   "w": 110.0,
-   "d": 290.0,
-   "h": 55.0,
-   "z": 0.0,
-   "r": 13.2,
+   "x": 32,
+   "y": 90,
+   "w": 46,
+   "d": 90,
+   "z": 72,
+   "h": 24,
+   "r": 18,
    "explode": [
     0,
     0,
+    404.0
+   ],
+   "mass": 18.4,
+   "materials": [
+    [
+     "leder",
+     100
+    ]
+   ],
+   "info": "Weiche Lederlasche unter der Schnürung, am Vorderblatt angenäht.",
+   "color": "#5A3522"
+  },
+  {
+   "id": "fersenteil",
+   "component_id": "leather_upper",
+   "material_id": "leather",
+   "name": "Quartiere mit Schnürleiste",
+   "short": "Quartiere",
+   "shape": "box",
+   "x": 6,
+   "y": 0,
+   "w": 98,
+   "d": 100,
+   "z": 22,
+   "h": 83,
+   "r": 42,
+   "explode": [
+    0,
+    0,
+    331.0
+   ],
+   "mass": 87.1,
+   "materials": [
+    [
+     "leder",
+     100
+    ]
+   ],
+   "info": "Die beiden seitlichen Lederteile mit den Ösen für die Schnürsenkel, hinten an der Ferse zusammengenäht. Tragbare Schuhe paarweise in den Schuhcontainer.",
+   "color": "#5A3522",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 18,
+     "y": 18,
+     "w": 62,
+     "d": 70,
+     "fill": "#B88B62"
+    },
+    {
+     "shape": "cyl",
+     "x": 24,
+     "y": 80.0,
+     "w": 3,
+     "fill": "#B7BCC0"
+    },
+    {
+     "shape": "cyl",
+     "x": 71,
+     "y": 80.0,
+     "w": 3,
+     "fill": "#B7BCC0"
+    },
+    {
+     "shape": "cyl",
+     "x": 24,
+     "y": 84.5,
+     "w": 3,
+     "fill": "#B7BCC0"
+    },
+    {
+     "shape": "cyl",
+     "x": 71,
+     "y": 84.5,
+     "w": 3,
+     "fill": "#B7BCC0"
+    },
+    {
+     "shape": "cyl",
+     "x": 24,
+     "y": 89.0,
+     "w": 3,
+     "fill": "#B7BCC0"
+    },
+    {
+     "shape": "cyl",
+     "x": 71,
+     "y": 89.0,
+     "w": 3,
+     "fill": "#B7BCC0"
+    },
+    {
+     "shape": "cyl",
+     "x": 24,
+     "y": 93.5,
+     "w": 3,
+     "fill": "#B7BCC0"
+    },
+    {
+     "shape": "cyl",
+     "x": 71,
+     "y": 93.5,
+     "w": 3,
+     "fill": "#B7BCC0"
+    }
+   ]
+  },
+  {
+   "id": "vorderblatt",
+   "component_id": "leather_upper",
+   "material_id": "leather",
+   "name": "Vorderblatt mit Kappe",
+   "short": "Vorderblatt",
+   "shape": "box",
+   "x": 4,
+   "y": 95,
+   "w": 102,
+   "d": 195,
+   "z": 10,
+   "h": 60,
+   "r": 48,
+   "explode": [
+    0,
+    0,
+    243.0
+   ],
+   "mass": 97.3,
+   "materials": [
+    [
+     "leder",
+     100
+    ]
+   ],
+   "info": "Ein Stück Glattleder über Zehen und Rist. Der Schaft ist über einen Leisten gezogen und unter die Brandsohle geklebt: zum Trennen rundherum an der Sohlenkante aufschneiden.",
+   "color": "#5A3522",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 6,
+     "y": 120,
+     "w": 90,
+     "d": 3,
+     "r": 1,
+     "fill": "#40261A"
+    },
+    {
+     "shape": "box",
+     "x": 30,
+     "y": 0,
+     "w": 42,
+     "d": 70,
+     "r": 12,
+     "fill": "#40261A"
+    }
+   ]
+  },
+  {
+   "id": "futter",
+   "component_id": "leather_upper",
+   "material_id": "leather",
+   "name": "Innenfutter",
+   "short": "Futter",
+   "shape": "box",
+   "x": 10,
+   "y": 4,
+   "w": 90,
+   "d": 200,
+   "z": 26,
+   "h": 66,
+   "r": 40,
+   "explode": [
+    0,
+    0,
+    121.0
+   ],
+   "mass": 41,
+   "materials": [
+    [
+     "leder",
+     100
+    ]
+   ],
+   "info": "Dünnes, ungefärbtes Leder innen im Schaft. Es nimmt Fußschweiß auf.",
+   "color": "#B88B62"
+  },
+  {
+   "id": "hinterkappe",
+   "component_id": "leather_upper",
+   "material_id": "polyurethane",
+   "name": "Hinterkappe",
+   "short": "Hinterkappe",
+   "shape": "box",
+   "x": 12,
+   "y": 3,
+   "w": 86,
+   "d": 42,
+   "z": 26,
+   "h": 50,
+   "r": 34,
+   "explode": [
+    -130,
+    0,
     0
    ],
-   "mass": 235.85,
+   "mass": 15.4,
+   "materials": [
+    [
+     "tpu",
+     100
+    ]
+   ],
+   "info": "Versteifung aus Kunststoff zwischen Oberleder und Futter. Sie hält die Ferse in Form.",
+   "color": "#B8BCC0"
+  },
+  {
+   "id": "decksohle",
+   "component_id": "leather_upper",
+   "material_id": "leather",
+   "name": "Decksohle",
+   "short": "Decksohle",
+   "shape": "box",
+   "x": 12,
+   "y": 6,
+   "w": 86,
+   "d": 276,
+   "z": 25,
+   "h": 2,
+   "r": 40,
+   "explode": [
+    0,
+    0,
+    80.0
+   ],
+   "mass": 15.4,
+   "materials": [
+    [
+     "leder",
+     100
+    ]
+   ],
+   "info": "Dünne Lederschicht, auf der der Fuß steht. Meist eingeklebt.",
+   "color": "#B88B62",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 20,
+     "y": 20,
+     "w": 46,
+     "d": 30,
+     "r": 8,
+     "fill": "#A07650"
+    }
+   ]
+  },
+  {
+   "id": "brandsohle",
+   "component_id": "leather_upper",
+   "material_id": "cardboard",
+   "name": "Brandsohle mit Gelenkfeder",
+   "short": "Brandsohle",
+   "shape": "box",
+   "x": 8,
+   "y": 4,
+   "w": 94,
+   "d": 282,
+   "z": 22,
+   "h": 3,
+   "r": 42,
+   "explode": [
+    0,
+    0,
+    40.0
+   ],
+   "mass": 35.9,
+   "materials": [
+    [
+     "papier",
+     60
+    ],
+    [
+     "leder",
+     25
+    ],
+    [
+     "stahl",
+     15
+    ]
+   ],
+   "info": "Feste Innensohle aus Lederfaserpappe. Ein Stahlstreifen (Gelenkfeder) stützt den Fußbogen.",
+   "color": "#C9B79C",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 42,
+     "y": 60,
+     "w": 10,
+     "d": 90,
+     "r": 2,
+     "fill": "#8E969A"
+    }
+   ]
+  },
+  {
+   "id": "laufsohle",
+   "component_id": "rubber_outsole",
+   "material_id": "rubber",
+   "name": "Laufsohle",
+   "short": "Laufsohle",
+   "shape": "box",
+   "x": 0,
+   "y": 88,
+   "w": 110,
+   "d": 202,
+   "z": 0,
+   "h": 10,
+   "r": 48,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 112.7,
    "materials": [
     [
      "gummi",
      100
     ]
    ],
+   "info": "Profilierte Gummisohle, auf den Schaft geklebt oder genäht. Nach Erwärmen des Klebers abziehen.",
+   "color": "#2F2A26",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 4,
+     "w": 102,
+     "d": 194,
+     "r": 44,
+     "fill": "#3D3732"
+    },
+    {
+     "shape": "box",
+     "x": 18,
+     "y": 30,
+     "w": 14,
+     "d": 6,
+     "r": 2,
+     "fill": "#221E1B"
+    },
+    {
+     "shape": "box",
+     "x": 38,
+     "y": 30,
+     "w": 14,
+     "d": 6,
+     "r": 2,
+     "fill": "#221E1B"
+    },
+    {
+     "shape": "box",
+     "x": 58,
+     "y": 30,
+     "w": 14,
+     "d": 6,
+     "r": 2,
+     "fill": "#221E1B"
+    },
+    {
+     "shape": "box",
+     "x": 78,
+     "y": 30,
+     "w": 14,
+     "d": 6,
+     "r": 2,
+     "fill": "#221E1B"
+    },
+    {
+     "shape": "box",
+     "x": 18,
+     "y": 52,
+     "w": 14,
+     "d": 6,
+     "r": 2,
+     "fill": "#221E1B"
+    },
+    {
+     "shape": "box",
+     "x": 38,
+     "y": 52,
+     "w": 14,
+     "d": 6,
+     "r": 2,
+     "fill": "#221E1B"
+    },
+    {
+     "shape": "box",
+     "x": 58,
+     "y": 52,
+     "w": 14,
+     "d": 6,
+     "r": 2,
+     "fill": "#221E1B"
+    },
+    {
+     "shape": "box",
+     "x": 78,
+     "y": 52,
+     "w": 14,
+     "d": 6,
+     "r": 2,
+     "fill": "#221E1B"
+    },
+    {
+     "shape": "box",
+     "x": 18,
+     "y": 74,
+     "w": 14,
+     "d": 6,
+     "r": 2,
+     "fill": "#221E1B"
+    },
+    {
+     "shape": "box",
+     "x": 38,
+     "y": 74,
+     "w": 14,
+     "d": 6,
+     "r": 2,
+     "fill": "#221E1B"
+    },
+    {
+     "shape": "box",
+     "x": 58,
+     "y": 74,
+     "w": 14,
+     "d": 6,
+     "r": 2,
+     "fill": "#221E1B"
+    },
+    {
+     "shape": "box",
+     "x": 78,
+     "y": 74,
+     "w": 14,
+     "d": 6,
+     "r": 2,
+     "fill": "#221E1B"
+    },
+    {
+     "shape": "box",
+     "x": 18,
+     "y": 96,
+     "w": 14,
+     "d": 6,
+     "r": 2,
+     "fill": "#221E1B"
+    },
+    {
+     "shape": "box",
+     "x": 38,
+     "y": 96,
+     "w": 14,
+     "d": 6,
+     "r": 2,
+     "fill": "#221E1B"
+    },
+    {
+     "shape": "box",
+     "x": 58,
+     "y": 96,
+     "w": 14,
+     "d": 6,
+     "r": 2,
+     "fill": "#221E1B"
+    },
+    {
+     "shape": "box",
+     "x": 78,
+     "y": 96,
+     "w": 14,
+     "d": 6,
+     "r": 2,
+     "fill": "#221E1B"
+    },
+    {
+     "shape": "box",
+     "x": 18,
+     "y": 118,
+     "w": 14,
+     "d": 6,
+     "r": 2,
+     "fill": "#221E1B"
+    },
+    {
+     "shape": "box",
+     "x": 38,
+     "y": 118,
+     "w": 14,
+     "d": 6,
+     "r": 2,
+     "fill": "#221E1B"
+    },
+    {
+     "shape": "box",
+     "x": 58,
+     "y": 118,
+     "w": 14,
+     "d": 6,
+     "r": 2,
+     "fill": "#221E1B"
+    },
+    {
+     "shape": "box",
+     "x": 78,
+     "y": 118,
+     "w": 14,
+     "d": 6,
+     "r": 2,
+     "fill": "#221E1B"
+    },
+    {
+     "shape": "box",
+     "x": 18,
+     "y": 140,
+     "w": 14,
+     "d": 6,
+     "r": 2,
+     "fill": "#221E1B"
+    },
+    {
+     "shape": "box",
+     "x": 38,
+     "y": 140,
+     "w": 14,
+     "d": 6,
+     "r": 2,
+     "fill": "#221E1B"
+    },
+    {
+     "shape": "box",
+     "x": 58,
+     "y": 140,
+     "w": 14,
+     "d": 6,
+     "r": 2,
+     "fill": "#221E1B"
+    },
+    {
+     "shape": "box",
+     "x": 78,
+     "y": 140,
+     "w": 14,
+     "d": 6,
+     "r": 2,
+     "fill": "#221E1B"
+    },
+    {
+     "shape": "box",
+     "x": 18,
+     "y": 162,
+     "w": 14,
+     "d": 6,
+     "r": 2,
+     "fill": "#221E1B"
+    },
+    {
+     "shape": "box",
+     "x": 38,
+     "y": 162,
+     "w": 14,
+     "d": 6,
+     "r": 2,
+     "fill": "#221E1B"
+    },
+    {
+     "shape": "box",
+     "x": 58,
+     "y": 162,
+     "w": 14,
+     "d": 6,
+     "r": 2,
+     "fill": "#221E1B"
+    },
+    {
+     "shape": "box",
+     "x": 78,
+     "y": 162,
+     "w": 14,
+     "d": 6,
+     "r": 2,
+     "fill": "#221E1B"
+    }
+   ]
+  },
+  {
+   "id": "absatz",
+   "component_id": "rubber_outsole",
    "material_id": "rubber",
-   "info": "Peel it off the midsole after heating the glue."
+   "name": "Absatz",
+   "short": "Absatz",
+   "shape": "box",
+   "x": 6,
+   "y": 0,
+   "w": 98,
+   "d": 88,
+   "z": 0,
+   "h": 22,
+   "r": 42,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 71.7,
+   "materials": [
+    [
+     "gummi",
+     70
+    ],
+    [
+     "leder",
+     30
+    ]
+   ],
+   "info": "Mehrere aufeinandergeklebte Lagen mit einem Gummiflecken unten. Mit kleinen Nägeln befestigt: vorsichtig abhebeln.",
+   "color": "#3A332E",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 6,
+     "y": 6,
+     "w": 86,
+     "d": 74,
+     "r": 36,
+     "fill": "#2F2A26"
+    }
+   ]
   }
  ]
 }

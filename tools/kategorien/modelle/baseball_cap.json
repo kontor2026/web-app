@@ -1,0 +1,409 @@
+{
+ "parts": [
+  {
+   "id": "knopf",
+   "component_id": "cotton_fabric",
+   "material_id": "steel",
+   "name": "Stoffbezogener Knopf",
+   "short": "Knopf",
+   "shape": "cyl",
+   "x": 88,
+   "y": 88,
+   "w": 14,
+   "z": 105,
+   "h": 5,
+   "explode": [
+    0,
+    0,
+    85.0
+   ],
+   "mass": 1.5,
+   "materials": [
+    [
+     "stahl",
+     70
+    ],
+    [
+     "baumwolle",
+     30
+    ]
+   ],
+   "info": "Metallknopf mit Stoffbezug, deckt die Stelle ab, an der die sechs Bahnen oben zusammenlaufen.",
+   "color": "#2F4A6B"
+  },
+  {
+   "id": "krone_oben",
+   "component_id": "cotton_fabric",
+   "material_id": "cotton",
+   "name": "Krone, Spitze",
+   "short": "Krone",
+   "shape": "cyl",
+   "x": 30,
+   "y": 30,
+   "w": 130,
+   "d": 130,
+   "z": 80,
+   "h": 25,
+   "explode": [
+    0,
+    0,
+    60.0
+   ],
+   "mass": 15.3,
+   "materials": [
+    [
+     "baumwolle",
+     100
+    ]
+   ],
+   "info": "Sechs dreieckige Stoffbahnen aus Baumwoll-Twill, mit Ziernähten zusammengenäht.",
+   "color": "#2F4A6B",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 63,
+     "y": 0,
+     "w": 4,
+     "d": 130,
+     "r": 1,
+     "fill": "#243A55"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 63,
+     "w": 130,
+     "d": 4,
+     "r": 1,
+     "fill": "#243A55"
+    },
+    {
+     "shape": "cyl",
+     "x": 28,
+     "y": 28,
+     "w": 6,
+     "fill": "#243A55"
+    },
+    {
+     "shape": "cyl",
+     "x": 96,
+     "y": 28,
+     "w": 6,
+     "fill": "#243A55"
+    },
+    {
+     "shape": "cyl",
+     "x": 28,
+     "y": 96,
+     "w": 6,
+     "fill": "#243A55"
+    },
+    {
+     "shape": "cyl",
+     "x": 96,
+     "y": 96,
+     "w": 6,
+     "fill": "#243A55"
+    }
+   ]
+  },
+  {
+   "id": "krone_mitte",
+   "component_id": "cotton_fabric",
+   "material_id": "cotton",
+   "name": "Krone, Mitte",
+   "short": "Krone",
+   "shape": "cyl",
+   "x": 10,
+   "y": 10,
+   "w": 170,
+   "d": 170,
+   "z": 40,
+   "h": 40,
+   "explode": [
+    0,
+    0,
+    60.0
+   ],
+   "mass": 20.4,
+   "materials": [
+    [
+     "baumwolle",
+     100
+    ]
+   ],
+   "info": "Mittlerer Teil der Stoffbahnen. Die vorderen zwei Bahnen sind innen mit Vlies verstärkt.",
+   "color": "#2F4A6B",
+   "label": false
+  },
+  {
+   "id": "krone_unten",
+   "component_id": "cotton_fabric",
+   "material_id": "cotton",
+   "name": "Krone, Rand",
+   "short": "Krone",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 190,
+   "d": 190,
+   "z": 0,
+   "h": 40,
+   "explode": [
+    0,
+    0,
+    60.0
+   ],
+   "mass": 25.5,
+   "materials": [
+    [
+     "baumwolle",
+     90
+    ],
+    [
+     "polyester",
+     10
+    ]
+   ],
+   "info": "Unterer Rand der Krone, hier sind Schirm und Schweißband angenäht. Tragbare Caps in die Altkleidersammlung.",
+   "color": "#2F4A6B",
+   "label": false
+  },
+  {
+   "id": "etikett",
+   "component_id": "cotton_fabric",
+   "material_id": "polyester",
+   "name": "Pflegeetikett",
+   "short": "Etikett",
+   "shape": "box",
+   "x": 110,
+   "y": 10,
+   "w": 20,
+   "d": 0.3,
+   "z": 8,
+   "h": 30,
+   "r": 0,
+   "explode": [
+    0,
+    -130,
+    0
+   ],
+   "mass": 0.5,
+   "materials": [
+    [
+     "polyester",
+     100
+    ]
+   ],
+   "info": "Polyester-Etikett innen hinten am Schweißband. Vor dem Recycling abschneiden.",
+   "color": "#F4F2EE"
+  },
+  {
+   "id": "schweissband",
+   "component_id": "cotton_fabric",
+   "material_id": "cotton",
+   "name": "Schweißband",
+   "short": "Schweißband",
+   "shape": "cyl",
+   "x": 8,
+   "y": 8,
+   "w": 174,
+   "d": 174,
+   "z": 0,
+   "h": 25,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 8.2,
+   "materials": [
+    [
+     "baumwolle",
+     60
+    ],
+    [
+     "polyester",
+     40
+    ]
+   ],
+   "info": "Stoffband mit Einlage innen am Rand. Es saugt Schweiß auf und lässt sich mit der Schere heraustrennen.",
+   "color": "#3A3F44",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 5,
+     "y": 5,
+     "w": 164,
+     "fill": "#4A5056"
+    }
+   ]
+  },
+  {
+   "id": "verschluss_loch",
+   "component_id": "plastic_buckles",
+   "material_id": "pp",
+   "name": "Verschlussband mit Löchern",
+   "short": "Verschluss",
+   "shape": "box",
+   "x": 50,
+   "y": 0,
+   "w": 45,
+   "d": 3,
+   "z": 6,
+   "h": 18,
+   "r": 1,
+   "explode": [
+    0,
+    -70,
+    0
+   ],
+   "mass": 3.1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Klickverschluss aus Polypropylen. Die Bänder direkt hinter der Naht abschneiden.",
+   "color": "#22272B"
+  },
+  {
+   "id": "verschluss_noppe",
+   "component_id": "plastic_buckles",
+   "material_id": "pp",
+   "name": "Verschlussband mit Noppen",
+   "short": "Noppenband",
+   "shape": "box",
+   "x": 95,
+   "y": 0,
+   "w": 45,
+   "d": 3.5,
+   "z": 6,
+   "h": 18,
+   "r": 1,
+   "explode": [
+    0,
+    -70,
+    0
+   ],
+   "mass": 3.1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Die Noppen rasten in die Löcher des Gegenstücks ein. Reines PP, ab in die Wertstoffsammlung.",
+   "color": "#22272B"
+  },
+  {
+   "id": "schirm_oben",
+   "component_id": "cotton_fabric",
+   "material_id": "cotton",
+   "name": "Schirmbezug oben",
+   "short": "Schirmbezug",
+   "shape": "box",
+   "x": 25,
+   "y": 180,
+   "w": 140,
+   "d": 70,
+   "z": 3.5,
+   "h": 1.5,
+   "r": 34,
+   "explode": [
+    0,
+    120,
+    50
+   ],
+   "mass": 5.1,
+   "materials": [
+    [
+     "baumwolle",
+     100
+    ]
+   ],
+   "info": "Stoff über dem Schirm, mit mehreren parallelen Nähten auf die Einlage gesteppt.",
+   "color": "#2F4A6B",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 58,
+     "w": 120,
+     "d": 1.5,
+     "r": 0,
+     "fill": "#243A55"
+    },
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 62,
+     "w": 120,
+     "d": 1.5,
+     "r": 0,
+     "fill": "#243A55"
+    }
+   ]
+  },
+  {
+   "id": "schirm_einlage",
+   "component_id": "visor_insert",
+   "material_id": "pp",
+   "name": "Schirmeinlage",
+   "short": "Einlage",
+   "shape": "box",
+   "x": 27,
+   "y": 181,
+   "w": 136,
+   "d": 67,
+   "z": 1.5,
+   "h": 2,
+   "r": 32,
+   "explode": [
+    0,
+    120,
+    25
+   ],
+   "mass": 12.2,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Gebogene Platte aus Polypropylen (früher Pappe). Schirmnaht aufschneiden und herausziehen.",
+   "color": "#E8E6E1"
+  },
+  {
+   "id": "schirm_unten",
+   "component_id": "cotton_fabric",
+   "material_id": "cotton",
+   "name": "Schirmbezug unten",
+   "short": "Schirmbezug",
+   "shape": "box",
+   "x": 25,
+   "y": 180,
+   "w": 140,
+   "d": 70,
+   "z": 0,
+   "h": 1.5,
+   "r": 34,
+   "explode": [
+    0,
+    120,
+    0
+   ],
+   "mass": 5.1,
+   "materials": [
+    [
+     "baumwolle",
+     100
+    ]
+   ],
+   "info": "Unterseite des Schirms, oft in einer zweiten Farbe.",
+   "color": "#3F5F84",
+   "label": false
+  }
+ ]
+}

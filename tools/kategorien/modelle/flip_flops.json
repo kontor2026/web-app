@@ -1,0 +1,1167 @@
+{
+ "parts": [
+  {
+   "id": "steg",
+   "component_id": "rubber_strap",
+   "material_id": "rubber",
+   "name": "Zehensteg mit Pfropfen",
+   "short": "Zehensteg",
+   "shape": "cyl",
+   "x": 44,
+   "y": 178,
+   "w": 12,
+   "d": 14,
+   "z": 0,
+   "h": 25,
+   "explode": [
+    0,
+    0,
+    95.0
+   ],
+   "mass": 4,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "info": "Der Steg zwischen großem und zweitem Zeh. Sein verdickter Pfropfen steckt von oben durch die Sohle: von unten durchdrücken, dann ist der Riemen ab.",
+   "color": "#245A85",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 3,
+     "w": 6,
+     "d": 8,
+     "fill": "#1C4566"
+    }
+   ]
+  },
+  {
+   "id": "arm_l_vorn",
+   "component_id": "rubber_strap",
+   "material_id": "rubber",
+   "name": "Riemen links, vorderer Teil",
+   "short": "Riemen",
+   "shape": "box",
+   "x": 28,
+   "y": 148,
+   "w": 16,
+   "d": 36,
+   "z": 15,
+   "h": 10,
+   "r": 5,
+   "explode": [
+    0,
+    0,
+    95.0
+   ],
+   "mass": 2.5,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "info": "Weicher Gummi- oder PVC-Riemen. Er hält den Fuß und ist mit dem Steg in einem Stück gespritzt.",
+   "color": "#2D6FA3",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 2,
+     "w": 10,
+     "d": 32,
+     "r": 4,
+     "fill": "#245A85"
+    }
+   ]
+  },
+  {
+   "id": "arm_l_hinten",
+   "component_id": "rubber_strap",
+   "material_id": "rubber",
+   "name": "Riemen links mit Pfropfen",
+   "short": "Riemen",
+   "shape": "box",
+   "x": 10,
+   "y": 112,
+   "w": 18,
+   "d": 36,
+   "z": 3,
+   "h": 18,
+   "r": 6,
+   "explode": [
+    0,
+    0,
+    95.0
+   ],
+   "mass": 3.5,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "info": "Das hintere Riemenende endet in einem Pfropfen, der in der Sohle steckt.",
+   "color": "#2D6FA3",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 2,
+     "w": 10,
+     "d": 32,
+     "r": 4,
+     "fill": "#245A85"
+    }
+   ]
+  },
+  {
+   "id": "arm_r_vorn",
+   "component_id": "rubber_strap",
+   "material_id": "rubber",
+   "name": "Riemen rechts, vorderer Teil",
+   "short": "Riemen",
+   "shape": "box",
+   "x": 56,
+   "y": 148,
+   "w": 16,
+   "d": 36,
+   "z": 15,
+   "h": 10,
+   "r": 5,
+   "explode": [
+    0,
+    0,
+    95.0
+   ],
+   "mass": 2.5,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "info": "Gegenstück zum linken Riemen.",
+   "color": "#2D6FA3",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 2,
+     "w": 10,
+     "d": 32,
+     "r": 4,
+     "fill": "#245A85"
+    }
+   ]
+  },
+  {
+   "id": "arm_r_hinten",
+   "component_id": "rubber_strap",
+   "material_id": "rubber",
+   "name": "Riemen rechts mit Pfropfen",
+   "short": "Riemen",
+   "shape": "box",
+   "x": 72,
+   "y": 112,
+   "w": 18,
+   "d": 36,
+   "z": 3,
+   "h": 18,
+   "r": 6,
+   "explode": [
+    0,
+    0,
+    95.0
+   ],
+   "mass": 3.5,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "info": "Gegenstück zum linken Riemenende.",
+   "color": "#2D6FA3",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 2,
+     "w": 10,
+     "d": 32,
+     "r": 4,
+     "fill": "#245A85"
+    }
+   ]
+  },
+  {
+   "id": "fussbett",
+   "component_id": "eva_sole",
+   "material_id": "eva_foam",
+   "name": "Fußbett",
+   "short": "Fußbett",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 100,
+   "d": 260,
+   "z": 8,
+   "h": 7,
+   "r": 45,
+   "explode": [
+    0,
+    0,
+    40.0
+   ],
+   "mass": 35.4,
+   "materials": [
+    [
+     "schaum",
+     100
+    ]
+   ],
+   "info": "Weicher EVA-Schaum mit Rillen für besseren Halt. Mit der Laufsohle verklebt oder in einem Stück geschäumt.",
+   "color": "#F2C14E",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 15,
+     "y": 20,
+     "w": 70,
+     "d": 220,
+     "r": 32,
+     "fill": "#E6B23F"
+    },
+    {
+     "shape": "box",
+     "x": 30,
+     "y": 40,
+     "w": 6,
+     "d": 3,
+     "r": 1,
+     "fill": "#D9A535"
+    },
+    {
+     "shape": "box",
+     "x": 45,
+     "y": 40,
+     "w": 6,
+     "d": 3,
+     "r": 1,
+     "fill": "#D9A535"
+    },
+    {
+     "shape": "box",
+     "x": 60,
+     "y": 40,
+     "w": 6,
+     "d": 3,
+     "r": 1,
+     "fill": "#D9A535"
+    },
+    {
+     "shape": "box",
+     "x": 30,
+     "y": 62,
+     "w": 6,
+     "d": 3,
+     "r": 1,
+     "fill": "#D9A535"
+    },
+    {
+     "shape": "box",
+     "x": 45,
+     "y": 62,
+     "w": 6,
+     "d": 3,
+     "r": 1,
+     "fill": "#D9A535"
+    },
+    {
+     "shape": "box",
+     "x": 60,
+     "y": 62,
+     "w": 6,
+     "d": 3,
+     "r": 1,
+     "fill": "#D9A535"
+    },
+    {
+     "shape": "box",
+     "x": 30,
+     "y": 84,
+     "w": 6,
+     "d": 3,
+     "r": 1,
+     "fill": "#D9A535"
+    },
+    {
+     "shape": "box",
+     "x": 45,
+     "y": 84,
+     "w": 6,
+     "d": 3,
+     "r": 1,
+     "fill": "#D9A535"
+    },
+    {
+     "shape": "box",
+     "x": 60,
+     "y": 84,
+     "w": 6,
+     "d": 3,
+     "r": 1,
+     "fill": "#D9A535"
+    },
+    {
+     "shape": "box",
+     "x": 30,
+     "y": 106,
+     "w": 6,
+     "d": 3,
+     "r": 1,
+     "fill": "#D9A535"
+    },
+    {
+     "shape": "box",
+     "x": 45,
+     "y": 106,
+     "w": 6,
+     "d": 3,
+     "r": 1,
+     "fill": "#D9A535"
+    },
+    {
+     "shape": "box",
+     "x": 60,
+     "y": 106,
+     "w": 6,
+     "d": 3,
+     "r": 1,
+     "fill": "#D9A535"
+    },
+    {
+     "shape": "box",
+     "x": 30,
+     "y": 128,
+     "w": 6,
+     "d": 3,
+     "r": 1,
+     "fill": "#D9A535"
+    },
+    {
+     "shape": "box",
+     "x": 45,
+     "y": 128,
+     "w": 6,
+     "d": 3,
+     "r": 1,
+     "fill": "#D9A535"
+    },
+    {
+     "shape": "box",
+     "x": 60,
+     "y": 128,
+     "w": 6,
+     "d": 3,
+     "r": 1,
+     "fill": "#D9A535"
+    },
+    {
+     "shape": "box",
+     "x": 30,
+     "y": 150,
+     "w": 6,
+     "d": 3,
+     "r": 1,
+     "fill": "#D9A535"
+    },
+    {
+     "shape": "box",
+     "x": 45,
+     "y": 150,
+     "w": 6,
+     "d": 3,
+     "r": 1,
+     "fill": "#D9A535"
+    },
+    {
+     "shape": "box",
+     "x": 60,
+     "y": 150,
+     "w": 6,
+     "d": 3,
+     "r": 1,
+     "fill": "#D9A535"
+    },
+    {
+     "shape": "box",
+     "x": 30,
+     "y": 172,
+     "w": 6,
+     "d": 3,
+     "r": 1,
+     "fill": "#D9A535"
+    },
+    {
+     "shape": "box",
+     "x": 45,
+     "y": 172,
+     "w": 6,
+     "d": 3,
+     "r": 1,
+     "fill": "#D9A535"
+    },
+    {
+     "shape": "box",
+     "x": 60,
+     "y": 172,
+     "w": 6,
+     "d": 3,
+     "r": 1,
+     "fill": "#D9A535"
+    },
+    {
+     "shape": "box",
+     "x": 30,
+     "y": 194,
+     "w": 6,
+     "d": 3,
+     "r": 1,
+     "fill": "#D9A535"
+    },
+    {
+     "shape": "box",
+     "x": 45,
+     "y": 194,
+     "w": 6,
+     "d": 3,
+     "r": 1,
+     "fill": "#D9A535"
+    },
+    {
+     "shape": "box",
+     "x": 60,
+     "y": 194,
+     "w": 6,
+     "d": 3,
+     "r": 1,
+     "fill": "#D9A535"
+    }
+   ]
+  },
+  {
+   "id": "laufsohle",
+   "component_id": "eva_sole",
+   "material_id": "eva_foam",
+   "name": "Laufsohle",
+   "short": "Laufsohle",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 100,
+   "d": 260,
+   "z": 0,
+   "h": 8,
+   "r": 45,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 48.5,
+   "materials": [
+    [
+     "schaum",
+     100
+    ]
+   ],
+   "info": "Festerer EVA-Schaum mit Profil. Flip-Flops lassen sich nicht sinnvoll recyceln und gehören in den Restmüll.",
+   "color": "#3A3F44",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 16,
+     "y": 24,
+     "w": 8,
+     "d": 6,
+     "r": 2,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 30,
+     "y": 24,
+     "w": 8,
+     "d": 6,
+     "r": 2,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 44,
+     "y": 24,
+     "w": 8,
+     "d": 6,
+     "r": 2,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 58,
+     "y": 24,
+     "w": 8,
+     "d": 6,
+     "r": 2,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 72,
+     "y": 24,
+     "w": 8,
+     "d": 6,
+     "r": 2,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 16,
+     "y": 38,
+     "w": 8,
+     "d": 6,
+     "r": 2,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 30,
+     "y": 38,
+     "w": 8,
+     "d": 6,
+     "r": 2,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 44,
+     "y": 38,
+     "w": 8,
+     "d": 6,
+     "r": 2,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 58,
+     "y": 38,
+     "w": 8,
+     "d": 6,
+     "r": 2,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 72,
+     "y": 38,
+     "w": 8,
+     "d": 6,
+     "r": 2,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 16,
+     "y": 52,
+     "w": 8,
+     "d": 6,
+     "r": 2,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 30,
+     "y": 52,
+     "w": 8,
+     "d": 6,
+     "r": 2,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 44,
+     "y": 52,
+     "w": 8,
+     "d": 6,
+     "r": 2,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 58,
+     "y": 52,
+     "w": 8,
+     "d": 6,
+     "r": 2,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 72,
+     "y": 52,
+     "w": 8,
+     "d": 6,
+     "r": 2,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 16,
+     "y": 66,
+     "w": 8,
+     "d": 6,
+     "r": 2,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 30,
+     "y": 66,
+     "w": 8,
+     "d": 6,
+     "r": 2,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 44,
+     "y": 66,
+     "w": 8,
+     "d": 6,
+     "r": 2,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 58,
+     "y": 66,
+     "w": 8,
+     "d": 6,
+     "r": 2,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 72,
+     "y": 66,
+     "w": 8,
+     "d": 6,
+     "r": 2,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 16,
+     "y": 80,
+     "w": 8,
+     "d": 6,
+     "r": 2,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 30,
+     "y": 80,
+     "w": 8,
+     "d": 6,
+     "r": 2,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 44,
+     "y": 80,
+     "w": 8,
+     "d": 6,
+     "r": 2,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 58,
+     "y": 80,
+     "w": 8,
+     "d": 6,
+     "r": 2,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 72,
+     "y": 80,
+     "w": 8,
+     "d": 6,
+     "r": 2,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 16,
+     "y": 94,
+     "w": 8,
+     "d": 6,
+     "r": 2,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 30,
+     "y": 94,
+     "w": 8,
+     "d": 6,
+     "r": 2,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 44,
+     "y": 94,
+     "w": 8,
+     "d": 6,
+     "r": 2,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 58,
+     "y": 94,
+     "w": 8,
+     "d": 6,
+     "r": 2,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 72,
+     "y": 94,
+     "w": 8,
+     "d": 6,
+     "r": 2,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 16,
+     "y": 108,
+     "w": 8,
+     "d": 6,
+     "r": 2,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 30,
+     "y": 108,
+     "w": 8,
+     "d": 6,
+     "r": 2,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 44,
+     "y": 108,
+     "w": 8,
+     "d": 6,
+     "r": 2,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 58,
+     "y": 108,
+     "w": 8,
+     "d": 6,
+     "r": 2,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 72,
+     "y": 108,
+     "w": 8,
+     "d": 6,
+     "r": 2,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 16,
+     "y": 122,
+     "w": 8,
+     "d": 6,
+     "r": 2,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 30,
+     "y": 122,
+     "w": 8,
+     "d": 6,
+     "r": 2,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 44,
+     "y": 122,
+     "w": 8,
+     "d": 6,
+     "r": 2,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 58,
+     "y": 122,
+     "w": 8,
+     "d": 6,
+     "r": 2,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 72,
+     "y": 122,
+     "w": 8,
+     "d": 6,
+     "r": 2,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 16,
+     "y": 136,
+     "w": 8,
+     "d": 6,
+     "r": 2,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 30,
+     "y": 136,
+     "w": 8,
+     "d": 6,
+     "r": 2,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 44,
+     "y": 136,
+     "w": 8,
+     "d": 6,
+     "r": 2,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 58,
+     "y": 136,
+     "w": 8,
+     "d": 6,
+     "r": 2,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 72,
+     "y": 136,
+     "w": 8,
+     "d": 6,
+     "r": 2,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 16,
+     "y": 150,
+     "w": 8,
+     "d": 6,
+     "r": 2,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 30,
+     "y": 150,
+     "w": 8,
+     "d": 6,
+     "r": 2,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 44,
+     "y": 150,
+     "w": 8,
+     "d": 6,
+     "r": 2,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 58,
+     "y": 150,
+     "w": 8,
+     "d": 6,
+     "r": 2,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 72,
+     "y": 150,
+     "w": 8,
+     "d": 6,
+     "r": 2,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 16,
+     "y": 164,
+     "w": 8,
+     "d": 6,
+     "r": 2,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 30,
+     "y": 164,
+     "w": 8,
+     "d": 6,
+     "r": 2,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 44,
+     "y": 164,
+     "w": 8,
+     "d": 6,
+     "r": 2,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 58,
+     "y": 164,
+     "w": 8,
+     "d": 6,
+     "r": 2,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 72,
+     "y": 164,
+     "w": 8,
+     "d": 6,
+     "r": 2,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 16,
+     "y": 178,
+     "w": 8,
+     "d": 6,
+     "r": 2,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 30,
+     "y": 178,
+     "w": 8,
+     "d": 6,
+     "r": 2,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 44,
+     "y": 178,
+     "w": 8,
+     "d": 6,
+     "r": 2,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 58,
+     "y": 178,
+     "w": 8,
+     "d": 6,
+     "r": 2,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 72,
+     "y": 178,
+     "w": 8,
+     "d": 6,
+     "r": 2,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 16,
+     "y": 192,
+     "w": 8,
+     "d": 6,
+     "r": 2,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 30,
+     "y": 192,
+     "w": 8,
+     "d": 6,
+     "r": 2,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 44,
+     "y": 192,
+     "w": 8,
+     "d": 6,
+     "r": 2,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 58,
+     "y": 192,
+     "w": 8,
+     "d": 6,
+     "r": 2,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 72,
+     "y": 192,
+     "w": 8,
+     "d": 6,
+     "r": 2,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 16,
+     "y": 206,
+     "w": 8,
+     "d": 6,
+     "r": 2,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 30,
+     "y": 206,
+     "w": 8,
+     "d": 6,
+     "r": 2,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 44,
+     "y": 206,
+     "w": 8,
+     "d": 6,
+     "r": 2,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 58,
+     "y": 206,
+     "w": 8,
+     "d": 6,
+     "r": 2,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 72,
+     "y": 206,
+     "w": 8,
+     "d": 6,
+     "r": 2,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 16,
+     "y": 220,
+     "w": 8,
+     "d": 6,
+     "r": 2,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 30,
+     "y": 220,
+     "w": 8,
+     "d": 6,
+     "r": 2,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 44,
+     "y": 220,
+     "w": 8,
+     "d": 6,
+     "r": 2,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 58,
+     "y": 220,
+     "w": 8,
+     "d": 6,
+     "r": 2,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 72,
+     "y": 220,
+     "w": 8,
+     "d": 6,
+     "r": 2,
+     "fill": "#2A2E31"
+    }
+   ]
+  }
+ ]
+}
