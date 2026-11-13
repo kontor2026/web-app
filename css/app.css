@@ -1,0 +1,34 @@
+/* Layout: Zeichentisch. Links die technische Zeichnung auf Rasterpapier, rechts das Datenblatt. */
+:root {
+  --paper: #EEECE5;
+  --sheet: #F7F6F1;
+  --card: #FFFFFF;
+  --ink: #1D201E;
+  --ink-2: #555A55;
+  --ink-3: #8D918A;
+  --rule: #D2CFC5;
+  --rule-2: #E2DFD6;
+  --accent: #D9480F;
+  --accent-ink: #FFFFFF;
+  --accent-hover: #B83A0A;
+  --accent-soft: #F6DDD0;
+  --accent-tip: #F2A27E;
+  --good: #3D7A55;
+  --vf: #1D201E;
+  --scrim: rgba(29, 32, 30, .42);
+  --sans: 'IBM Plex Sans', system-ui, sans-serif;
+  --mono: 'IBM Plex Mono', ui-monospace, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #141615; --sheet: #1B1D1C; --card: #222524; --ink: #E7E4DB; --ink-2: #AEB1A9; --ink-3: #7C8079;
+    --rule: #3A3D3A; --rule-2: #292C2A; --accent: #EC5A1E; --accent-hover: #F47A45; --accent-soft: #3B2519; --accent-tip: #8A3410;
+    --good: #72B48D; --vf: #0C0E0D; --scrim: rgba(0, 0, 0, .6); color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #141615; --sheet: #1B1D1C; --card: #222524; --ink: #E7E4DB; --ink-2: #AEB1A9; --ink-3: #7C8079;
+  --rule: #3A3D3A; --rule-2: #292C2A; --accent: #EC5A1E; --accent-hover: #F47A45; --accent-soft: #3B2519; --accent-tip: #8A3410;
+  --good: #72B48D; --vf: #0C0E0D; --scrim: rgba(0, 0, 0, .6); color-scheme: dark;
+}
+
