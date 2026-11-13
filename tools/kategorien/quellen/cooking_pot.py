@@ -20,6 +20,10 @@ teile = [
          info='Hitzefester Kunststoff (Bakelit). Von unten mit einer Schraube gehalten: Schraube lösen, dann kann man '
               'Knauf, Glas und Metall getrennt entsorgen.',
          color=GRIFF, marks=[mark('cyl', 6, 6, 28, fill='#3E444A')]),
+    teil('knaufschraube', 'pot_lid_glass', 'Knaufschraube', 'Schraube', 'cyl', material_id='steel',
+         x=107, y=107, w=6, z=110, h=14, mass=3,
+         info='Edelstahlschraube mit Unterlegscheibe, steckt von unten durch das Loch im Glas in den Knauf. Zum Trennen von unten herausdrehen.',
+         color='#9AA2A6', marks=[mark('box', 0.5, 2.5, 5, 1, fill='#5A6268')]),
     teil('glasdeckel', 'pot_lid_glass', 'Glasdeckel', 'Glasdeckel', 'cyl',
          x=18, y=18, w=184, z=113, h=7, mass=330,
          info='Gehärtetes, hitzefestes Glas. Es schmilzt anders als Flaschenglas und gehört deshalb nicht in den '
@@ -30,10 +34,6 @@ teile = [
          x=17, y=17, w=186, z=111, h=3, mass=40,
          info='Schmaler Edelstahlring um das Glas. Die Kerbe darin ist das Dampfloch, damit der Deckel nicht klappert.',
          color=STAHL, marks=[mark('cyl', 4, 4, 178, fill='#D6E4E6'), mark('box', 176, 89, 8, 8, 2, fill='#5A6268')]),
-    teil('knaufschraube', 'pot_lid_glass', 'Knaufschraube', 'Schraube', 'cyl', material_id='steel',
-         x=107, y=107, w=6, z=110, h=14, mass=3,
-         info='Edelstahlschraube mit Unterlegscheibe, steckt von unten durch das Loch im Glas in den Knauf.',
-         color='#9AA2A6', marks=[mark('box', 0.5, 2.5, 5, 1, fill='#5A6268')]),
     teil('koerper', 'stainless_steel_body', 'Topfkörper', 'Topfkörper', 'cyl',
          x=20, y=20, w=180, z=6, h=106, mass=650,
          info='Tiefgezogener Edelstahl mit Chrom und Nickel. Ohne Griffe und Deckel ist er reiner Metallschrott für den '
@@ -50,23 +50,23 @@ teile = [
               'induktionstauglich: Ein Magnet bleibt hier haften.',
          color='#B5BBC0', marks=[mark('cyl', 20, 20, 120, fill='#A9B0B5')]),
     teil('griff_links', 'plastic_handle', 'Seitengriff links', 'Griff links', 'box', material_id='phenolic_resin',
-         x=0, y=88, w=24, d=44, z=88, h=16, r=8, explode=[-70, 0, 0], mass=40,
+         x=0, y=88, w=24, d=44, z=88, h=16, r=8, explode=[-85, 0, 0], mass=40,
          info='Bakelit-Griff auf einem Stahlwinkel, mit zwei Nieten am Topf befestigt. Nieten mit einem Metallbohrer '
               'aufbohren, dann Griff (Restmüll) und Topf (Metall) trennen.',
          color=GRIFF, marks=[mark('box', 4, 6, 12, 32, 5, fill='#3E444A')]),
     teil('griff_rechts', 'plastic_handle', 'Seitengriff rechts', 'Griff rechts', 'box', material_id='phenolic_resin',
-         x=196, y=88, w=24, d=44, z=88, h=16, r=8, explode=[70, 0, 0], mass=40,
+         x=196, y=88, w=24, d=44, z=88, h=16, r=8, explode=[85, 0, 0], mass=40, sortBias=30,
          info='Gegenstück zum linken Griff. Bakelit wird beim Erhitzen nicht weich und kann nicht recycelt werden.',
          color=GRIFF, marks=[mark('box', 8, 6, 12, 32, 5, fill='#3E444A')]),
     teil('nieten_links', 'plastic_handle', 'Nieten links (2 Stück)', 'Nieten', 'box', material_id='steel',
-         x=17, y=96, w=6, d=28, z=93, h=6, r=2, explode=[-35, 0, 0], mass=5,
+         x=17, y=96, w=6, d=28, z=93, h=6, r=2, explode=[-55, 0, 45], mass=5,
          info='Zwei Edelstahlnieten, die den Griffwinkel durch die Topfwand halten. Innen sieht man ihre flachen Köpfe.',
          color='#9AA2A6', marks=[mark('cyl', 1, 1, 4, fill='#5A6268'), mark('cyl', 1, 23, 4, fill='#5A6268')]),
     teil('nieten_rechts', 'plastic_handle', 'Nieten rechts (2 Stück)', 'Nieten', 'box', material_id='steel',
-         x=197, y=96, w=6, d=28, z=93, h=6, r=2, explode=[35, 0, 0], mass=5, label=False,
+         x=197, y=96, w=6, d=28, z=93, h=6, r=2, explode=[55, 0, 45], mass=5, label=False, sortBias=30,
          info='Zwei Edelstahlnieten für den rechten Griff.',
          color='#9AA2A6', marks=[mark('cyl', 1, 1, 4, fill='#5A6268'), mark('cyl', 1, 23, 4, fill='#5A6268')]),
 ]
-explodiere(teile, abstand=22, nach_liste=True)
+explodiere(teile, abstand=30, nach_liste=True, abstaende={'koerper': 60})
 skaliere_masse(teile, oid='cooking_pot')
 schreibe('cooking_pot', teile)

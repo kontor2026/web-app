@@ -161,16 +161,16 @@
      "y": 3,
      "w": 28,
      "d": 24,
-     "fill": "#45484B"
+     "fill": "#EEECE5"
     },
     {
      "shape": "box",
      "x": 0,
-     "y": 16,
-     "w": 9,
-     "d": 14,
-     "r": 3,
-     "fill": "#45484B"
+     "y": 17,
+     "w": 10,
+     "d": 13,
+     "r": 2,
+     "fill": "#EEECE5"
     }
    ]
   },
@@ -287,19 +287,19 @@
    "name": "Schulter links",
    "short": "Schulter",
    "shape": "box",
-   "x": 181.833,
+   "x": 191.533,
    "y": 78,
-   "w": 16.167,
-   "d": 9.5,
+   "w": 6.467,
+   "d": 3.8,
    "z": 0,
    "h": 3,
-   "r": 3,
+   "r": 0.5,
    "explode": [
     -15,
     0,
     0
    ],
-   "mass": 0.75,
+   "mass": 0.3,
    "materials": [
     [
      "stahl",
@@ -317,19 +317,19 @@
    "name": "Schulter links",
    "short": "Schulter",
    "shape": "box",
-   "x": 165.667,
-   "y": 87.5,
-   "w": 16.167,
-   "d": 9.5,
+   "x": 185.067,
+   "y": 81.8,
+   "w": 6.467,
+   "d": 3.8,
    "z": 0,
    "h": 3,
-   "r": 3,
+   "r": 0.5,
    "explode": [
     -15,
     0,
     0
    ],
-   "mass": 0.75,
+   "mass": 0.3,
    "materials": [
     [
      "stahl",
@@ -347,19 +347,19 @@
    "name": "Schulter links",
    "short": "Schulter",
    "shape": "box",
-   "x": 149.5,
-   "y": 97,
-   "w": 16.167,
-   "d": 9.5,
+   "x": 178.6,
+   "y": 85.6,
+   "w": 6.467,
+   "d": 3.8,
    "z": 0,
    "h": 3,
-   "r": 3,
+   "r": 0.5,
    "explode": [
     -15,
     0,
     0
    ],
-   "mass": 0.75,
+   "mass": 0.3,
    "materials": [
     [
      "stahl",
@@ -377,19 +377,19 @@
    "name": "Schulter links",
    "short": "Schulter",
    "shape": "box",
-   "x": 133.333,
-   "y": 106.5,
-   "w": 16.167,
-   "d": 9.5,
+   "x": 172.133,
+   "y": 89.4,
+   "w": 6.467,
+   "d": 3.8,
    "z": 0,
    "h": 3,
-   "r": 3,
+   "r": 0.5,
    "explode": [
     -15,
     0,
     0
    ],
-   "mass": 0.75,
+   "mass": 0.3,
    "materials": [
     [
      "stahl",
@@ -407,19 +407,19 @@
    "name": "Schulter links",
    "short": "Schulter",
    "shape": "box",
-   "x": 117.167,
-   "y": 116,
-   "w": 16.167,
-   "d": 9.5,
+   "x": 165.667,
+   "y": 93.2,
+   "w": 6.467,
+   "d": 3.8,
    "z": 0,
    "h": 3,
-   "r": 3,
+   "r": 0.5,
    "explode": [
     -15,
     0,
     0
    ],
-   "mass": 0.75,
+   "mass": 0.3,
    "materials": [
     [
      "stahl",
@@ -437,19 +437,19 @@
    "name": "Schulter links",
    "short": "Schulter",
    "shape": "box",
-   "x": 101,
-   "y": 125.5,
-   "w": 16.167,
-   "d": 9.5,
+   "x": 159.2,
+   "y": 97,
+   "w": 6.467,
+   "d": 3.8,
    "z": 0,
    "h": 3,
-   "r": 3,
+   "r": 0.5,
    "explode": [
     -15,
     0,
     0
    ],
-   "mass": 0.75,
+   "mass": 0.3,
    "materials": [
     [
      "stahl",
@@ -467,19 +467,19 @@
    "name": "Schulter links",
    "short": "Schulter",
    "shape": "box",
-   "x": 84.833,
-   "y": 135,
-   "w": 16.167,
-   "d": 9.5,
+   "x": 152.733,
+   "y": 100.8,
+   "w": 6.467,
+   "d": 3.8,
    "z": 0,
    "h": 3,
-   "r": 3,
+   "r": 0.5,
    "explode": [
     -15,
     0,
     0
    ],
-   "mass": 0.75,
+   "mass": 0.3,
    "materials": [
     [
      "stahl",
@@ -497,19 +497,19 @@
    "name": "Schulter links",
    "short": "Schulter",
    "shape": "box",
-   "x": 68.667,
-   "y": 144.5,
-   "w": 16.167,
-   "d": 9.5,
+   "x": 146.267,
+   "y": 104.6,
+   "w": 6.467,
+   "d": 3.8,
    "z": 0,
    "h": 3,
-   "r": 3,
+   "r": 0.5,
    "explode": [
     -15,
     0,
     0
    ],
-   "mass": 0.75,
+   "mass": 0.3,
    "materials": [
     [
      "stahl",
@@ -527,19 +527,19 @@
    "name": "Schulter links",
    "short": "Schulter",
    "shape": "box",
-   "x": 52.5,
-   "y": 154,
-   "w": 16.167,
-   "d": 9.5,
+   "x": 139.8,
+   "y": 108.4,
+   "w": 6.467,
+   "d": 3.8,
    "z": 0,
    "h": 3,
-   "r": 3,
+   "r": 0.5,
    "explode": [
     -15,
     0,
     0
    ],
-   "mass": 0.75,
+   "mass": 0.3,
    "materials": [
     [
      "stahl",
@@ -557,19 +557,19 @@
    "name": "Schulter links",
    "short": "Schulter",
    "shape": "box",
-   "x": 36.333,
-   "y": 163.5,
-   "w": 16.167,
-   "d": 9.5,
+   "x": 133.333,
+   "y": 112.2,
+   "w": 6.467,
+   "d": 3.8,
    "z": 0,
    "h": 3,
-   "r": 3,
+   "r": 0.5,
    "explode": [
     -15,
     0,
     0
    ],
-   "mass": 0.75,
+   "mass": 0.3,
    "materials": [
     [
      "stahl",
@@ -587,19 +587,19 @@
    "name": "Schulter links",
    "short": "Schulter",
    "shape": "box",
-   "x": 20.167,
-   "y": 173,
-   "w": 16.167,
-   "d": 9.5,
+   "x": 126.867,
+   "y": 116,
+   "w": 6.467,
+   "d": 3.8,
    "z": 0,
    "h": 3,
-   "r": 3,
+   "r": 0.5,
    "explode": [
     -15,
     0,
     0
    ],
-   "mass": 0.75,
+   "mass": 0.3,
    "materials": [
     [
      "stahl",
@@ -617,19 +617,559 @@
    "name": "Schulter links",
    "short": "Schulter",
    "shape": "box",
-   "x": 4,
-   "y": 182.5,
-   "w": 16.167,
-   "d": 9.5,
+   "x": 120.4,
+   "y": 119.8,
+   "w": 6.467,
+   "d": 3.8,
    "z": 0,
    "h": 3,
-   "r": 3,
+   "r": 0.5,
    "explode": [
     -15,
     0,
     0
    ],
-   "mass": 0.75,
+   "mass": 0.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Abschnitt der schrägen Schulter.",
+   "color": "#AEB5BA",
+   "label": false
+  },
+  {
+   "id": "schulter_l_13",
+   "component_id": "steel_wire",
+   "material_id": "steel",
+   "name": "Schulter links",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 113.933,
+   "y": 123.6,
+   "w": 6.467,
+   "d": 3.8,
+   "z": 0,
+   "h": 3,
+   "r": 0.5,
+   "explode": [
+    -15,
+    0,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Abschnitt der schrägen Schulter.",
+   "color": "#AEB5BA",
+   "label": false
+  },
+  {
+   "id": "schulter_l_14",
+   "component_id": "steel_wire",
+   "material_id": "steel",
+   "name": "Schulter links",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 107.467,
+   "y": 127.4,
+   "w": 6.467,
+   "d": 3.8,
+   "z": 0,
+   "h": 3,
+   "r": 0.5,
+   "explode": [
+    -15,
+    0,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Abschnitt der schrägen Schulter.",
+   "color": "#AEB5BA",
+   "label": false
+  },
+  {
+   "id": "schulter_l_15",
+   "component_id": "steel_wire",
+   "material_id": "steel",
+   "name": "Schulter links",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 101,
+   "y": 131.2,
+   "w": 6.467,
+   "d": 3.8,
+   "z": 0,
+   "h": 3,
+   "r": 0.5,
+   "explode": [
+    -15,
+    0,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Abschnitt der schrägen Schulter.",
+   "color": "#AEB5BA",
+   "label": false
+  },
+  {
+   "id": "schulter_l_16",
+   "component_id": "steel_wire",
+   "material_id": "steel",
+   "name": "Schulter links",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 94.533,
+   "y": 135,
+   "w": 6.467,
+   "d": 3.8,
+   "z": 0,
+   "h": 3,
+   "r": 0.5,
+   "explode": [
+    -15,
+    0,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Abschnitt der schrägen Schulter.",
+   "color": "#AEB5BA",
+   "label": false
+  },
+  {
+   "id": "schulter_l_17",
+   "component_id": "steel_wire",
+   "material_id": "steel",
+   "name": "Schulter links",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 88.067,
+   "y": 138.8,
+   "w": 6.467,
+   "d": 3.8,
+   "z": 0,
+   "h": 3,
+   "r": 0.5,
+   "explode": [
+    -15,
+    0,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Abschnitt der schrägen Schulter.",
+   "color": "#AEB5BA",
+   "label": false
+  },
+  {
+   "id": "schulter_l_18",
+   "component_id": "steel_wire",
+   "material_id": "steel",
+   "name": "Schulter links",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 81.6,
+   "y": 142.6,
+   "w": 6.467,
+   "d": 3.8,
+   "z": 0,
+   "h": 3,
+   "r": 0.5,
+   "explode": [
+    -15,
+    0,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Abschnitt der schrägen Schulter.",
+   "color": "#AEB5BA",
+   "label": false
+  },
+  {
+   "id": "schulter_l_19",
+   "component_id": "steel_wire",
+   "material_id": "steel",
+   "name": "Schulter links",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 75.133,
+   "y": 146.4,
+   "w": 6.467,
+   "d": 3.8,
+   "z": 0,
+   "h": 3,
+   "r": 0.5,
+   "explode": [
+    -15,
+    0,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Abschnitt der schrägen Schulter.",
+   "color": "#AEB5BA",
+   "label": false
+  },
+  {
+   "id": "schulter_l_20",
+   "component_id": "steel_wire",
+   "material_id": "steel",
+   "name": "Schulter links",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 68.667,
+   "y": 150.2,
+   "w": 6.467,
+   "d": 3.8,
+   "z": 0,
+   "h": 3,
+   "r": 0.5,
+   "explode": [
+    -15,
+    0,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Abschnitt der schrägen Schulter.",
+   "color": "#AEB5BA",
+   "label": false
+  },
+  {
+   "id": "schulter_l_21",
+   "component_id": "steel_wire",
+   "material_id": "steel",
+   "name": "Schulter links",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 62.2,
+   "y": 154,
+   "w": 6.467,
+   "d": 3.8,
+   "z": 0,
+   "h": 3,
+   "r": 0.5,
+   "explode": [
+    -15,
+    0,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Abschnitt der schrägen Schulter.",
+   "color": "#AEB5BA",
+   "label": false
+  },
+  {
+   "id": "schulter_l_22",
+   "component_id": "steel_wire",
+   "material_id": "steel",
+   "name": "Schulter links",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 55.733,
+   "y": 157.8,
+   "w": 6.467,
+   "d": 3.8,
+   "z": 0,
+   "h": 3,
+   "r": 0.5,
+   "explode": [
+    -15,
+    0,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Abschnitt der schrägen Schulter.",
+   "color": "#AEB5BA",
+   "label": false
+  },
+  {
+   "id": "schulter_l_23",
+   "component_id": "steel_wire",
+   "material_id": "steel",
+   "name": "Schulter links",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 49.267,
+   "y": 161.6,
+   "w": 6.467,
+   "d": 3.8,
+   "z": 0,
+   "h": 3,
+   "r": 0.5,
+   "explode": [
+    -15,
+    0,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Abschnitt der schrägen Schulter.",
+   "color": "#AEB5BA",
+   "label": false
+  },
+  {
+   "id": "schulter_l_24",
+   "component_id": "steel_wire",
+   "material_id": "steel",
+   "name": "Schulter links",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 42.8,
+   "y": 165.4,
+   "w": 6.467,
+   "d": 3.8,
+   "z": 0,
+   "h": 3,
+   "r": 0.5,
+   "explode": [
+    -15,
+    0,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Abschnitt der schrägen Schulter.",
+   "color": "#AEB5BA",
+   "label": false
+  },
+  {
+   "id": "schulter_l_25",
+   "component_id": "steel_wire",
+   "material_id": "steel",
+   "name": "Schulter links",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 36.333,
+   "y": 169.2,
+   "w": 6.467,
+   "d": 3.8,
+   "z": 0,
+   "h": 3,
+   "r": 0.5,
+   "explode": [
+    -15,
+    0,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Abschnitt der schrägen Schulter.",
+   "color": "#AEB5BA",
+   "label": false
+  },
+  {
+   "id": "schulter_l_26",
+   "component_id": "steel_wire",
+   "material_id": "steel",
+   "name": "Schulter links",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 29.867,
+   "y": 173,
+   "w": 6.467,
+   "d": 3.8,
+   "z": 0,
+   "h": 3,
+   "r": 0.5,
+   "explode": [
+    -15,
+    0,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Abschnitt der schrägen Schulter.",
+   "color": "#AEB5BA",
+   "label": false
+  },
+  {
+   "id": "schulter_l_27",
+   "component_id": "steel_wire",
+   "material_id": "steel",
+   "name": "Schulter links",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 23.4,
+   "y": 176.8,
+   "w": 6.467,
+   "d": 3.8,
+   "z": 0,
+   "h": 3,
+   "r": 0.5,
+   "explode": [
+    -15,
+    0,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Abschnitt der schrägen Schulter.",
+   "color": "#AEB5BA",
+   "label": false
+  },
+  {
+   "id": "schulter_l_28",
+   "component_id": "steel_wire",
+   "material_id": "steel",
+   "name": "Schulter links",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 16.933,
+   "y": 180.6,
+   "w": 6.467,
+   "d": 3.8,
+   "z": 0,
+   "h": 3,
+   "r": 0.5,
+   "explode": [
+    -15,
+    0,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Abschnitt der schrägen Schulter.",
+   "color": "#AEB5BA",
+   "label": false
+  },
+  {
+   "id": "schulter_l_29",
+   "component_id": "steel_wire",
+   "material_id": "steel",
+   "name": "Schulter links",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 10.467,
+   "y": 184.4,
+   "w": 6.467,
+   "d": 3.8,
+   "z": 0,
+   "h": 3,
+   "r": 0.5,
+   "explode": [
+    -15,
+    0,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Abschnitt der schrägen Schulter.",
+   "color": "#AEB5BA",
+   "label": false
+  },
+  {
+   "id": "schulter_l_30",
+   "component_id": "steel_wire",
+   "material_id": "steel",
+   "name": "Schulter links",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 4,
+   "y": 188.2,
+   "w": 6.467,
+   "d": 3.8,
+   "z": 0,
+   "h": 3,
+   "r": 0.5,
+   "explode": [
+    -15,
+    0,
+    0
+   ],
+   "mass": 0.3,
    "materials": [
     [
      "stahl",
@@ -649,17 +1189,17 @@
    "shape": "box",
    "x": 202,
    "y": 78,
-   "w": 16.167,
-   "d": 9.5,
+   "w": 6.467,
+   "d": 3.8,
    "z": 0,
    "h": 3,
-   "r": 3,
+   "r": 0.5,
    "explode": [
     15,
     0,
     0
    ],
-   "mass": 0.75,
+   "mass": 0.3,
    "materials": [
     [
      "stahl",
@@ -677,19 +1217,19 @@
    "name": "Schulter rechts",
    "short": "Schulter",
    "shape": "box",
-   "x": 218.167,
-   "y": 87.5,
-   "w": 16.167,
-   "d": 9.5,
+   "x": 208.467,
+   "y": 81.8,
+   "w": 6.467,
+   "d": 3.8,
    "z": 0,
    "h": 3,
-   "r": 3,
+   "r": 0.5,
    "explode": [
     15,
     0,
     0
    ],
-   "mass": 0.75,
+   "mass": 0.3,
    "materials": [
     [
      "stahl",
@@ -707,19 +1247,19 @@
    "name": "Schulter rechts",
    "short": "Schulter",
    "shape": "box",
-   "x": 234.333,
-   "y": 97,
-   "w": 16.167,
-   "d": 9.5,
+   "x": 214.933,
+   "y": 85.6,
+   "w": 6.467,
+   "d": 3.8,
    "z": 0,
    "h": 3,
-   "r": 3,
+   "r": 0.5,
    "explode": [
     15,
     0,
     0
    ],
-   "mass": 0.75,
+   "mass": 0.3,
    "materials": [
     [
      "stahl",
@@ -737,19 +1277,19 @@
    "name": "Schulter rechts",
    "short": "Schulter",
    "shape": "box",
-   "x": 250.5,
-   "y": 106.5,
-   "w": 16.167,
-   "d": 9.5,
+   "x": 221.4,
+   "y": 89.4,
+   "w": 6.467,
+   "d": 3.8,
    "z": 0,
    "h": 3,
-   "r": 3,
+   "r": 0.5,
    "explode": [
     15,
     0,
     0
    ],
-   "mass": 0.75,
+   "mass": 0.3,
    "materials": [
     [
      "stahl",
@@ -767,19 +1307,19 @@
    "name": "Schulter rechts",
    "short": "Schulter",
    "shape": "box",
-   "x": 266.667,
-   "y": 116,
-   "w": 16.167,
-   "d": 9.5,
+   "x": 227.867,
+   "y": 93.2,
+   "w": 6.467,
+   "d": 3.8,
    "z": 0,
    "h": 3,
-   "r": 3,
+   "r": 0.5,
    "explode": [
     15,
     0,
     0
    ],
-   "mass": 0.75,
+   "mass": 0.3,
    "materials": [
     [
      "stahl",
@@ -797,19 +1337,19 @@
    "name": "Schulter rechts",
    "short": "Schulter",
    "shape": "box",
-   "x": 282.833,
-   "y": 125.5,
-   "w": 16.167,
-   "d": 9.5,
+   "x": 234.333,
+   "y": 97,
+   "w": 6.467,
+   "d": 3.8,
    "z": 0,
    "h": 3,
-   "r": 3,
+   "r": 0.5,
    "explode": [
     15,
     0,
     0
    ],
-   "mass": 0.75,
+   "mass": 0.3,
    "materials": [
     [
      "stahl",
@@ -827,19 +1367,19 @@
    "name": "Schulter rechts",
    "short": "Schulter",
    "shape": "box",
-   "x": 299,
-   "y": 135,
-   "w": 16.167,
-   "d": 9.5,
+   "x": 240.8,
+   "y": 100.8,
+   "w": 6.467,
+   "d": 3.8,
    "z": 0,
    "h": 3,
-   "r": 3,
+   "r": 0.5,
    "explode": [
     15,
     0,
     0
    ],
-   "mass": 0.75,
+   "mass": 0.3,
    "materials": [
     [
      "stahl",
@@ -857,19 +1397,19 @@
    "name": "Schulter rechts",
    "short": "Schulter",
    "shape": "box",
-   "x": 315.167,
-   "y": 144.5,
-   "w": 16.167,
-   "d": 9.5,
+   "x": 247.267,
+   "y": 104.6,
+   "w": 6.467,
+   "d": 3.8,
    "z": 0,
    "h": 3,
-   "r": 3,
+   "r": 0.5,
    "explode": [
     15,
     0,
     0
    ],
-   "mass": 0.75,
+   "mass": 0.3,
    "materials": [
     [
      "stahl",
@@ -887,19 +1427,19 @@
    "name": "Schulter rechts",
    "short": "Schulter",
    "shape": "box",
-   "x": 331.333,
-   "y": 154,
-   "w": 16.167,
-   "d": 9.5,
+   "x": 253.733,
+   "y": 108.4,
+   "w": 6.467,
+   "d": 3.8,
    "z": 0,
    "h": 3,
-   "r": 3,
+   "r": 0.5,
    "explode": [
     15,
     0,
     0
    ],
-   "mass": 0.75,
+   "mass": 0.3,
    "materials": [
     [
      "stahl",
@@ -917,19 +1457,19 @@
    "name": "Schulter rechts",
    "short": "Schulter",
    "shape": "box",
-   "x": 347.5,
-   "y": 163.5,
-   "w": 16.167,
-   "d": 9.5,
+   "x": 260.2,
+   "y": 112.2,
+   "w": 6.467,
+   "d": 3.8,
    "z": 0,
    "h": 3,
-   "r": 3,
+   "r": 0.5,
    "explode": [
     15,
     0,
     0
    ],
-   "mass": 0.75,
+   "mass": 0.3,
    "materials": [
     [
      "stahl",
@@ -947,19 +1487,19 @@
    "name": "Schulter rechts",
    "short": "Schulter",
    "shape": "box",
-   "x": 363.667,
-   "y": 173,
-   "w": 16.167,
-   "d": 9.5,
+   "x": 266.667,
+   "y": 116,
+   "w": 6.467,
+   "d": 3.8,
    "z": 0,
    "h": 3,
-   "r": 3,
+   "r": 0.5,
    "explode": [
     15,
     0,
     0
    ],
-   "mass": 0.75,
+   "mass": 0.3,
    "materials": [
     [
      "stahl",
@@ -977,19 +1517,559 @@
    "name": "Schulter rechts",
    "short": "Schulter",
    "shape": "box",
-   "x": 379.833,
-   "y": 182.5,
-   "w": 16.167,
-   "d": 9.5,
+   "x": 273.133,
+   "y": 119.8,
+   "w": 6.467,
+   "d": 3.8,
    "z": 0,
    "h": 3,
-   "r": 3,
+   "r": 0.5,
    "explode": [
     15,
     0,
     0
    ],
-   "mass": 0.75,
+   "mass": 0.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Abschnitt der schrägen Schulter.",
+   "color": "#AEB5BA",
+   "label": false
+  },
+  {
+   "id": "schulter_r_13",
+   "component_id": "steel_wire",
+   "material_id": "steel",
+   "name": "Schulter rechts",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 279.6,
+   "y": 123.6,
+   "w": 6.467,
+   "d": 3.8,
+   "z": 0,
+   "h": 3,
+   "r": 0.5,
+   "explode": [
+    15,
+    0,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Abschnitt der schrägen Schulter.",
+   "color": "#AEB5BA",
+   "label": false
+  },
+  {
+   "id": "schulter_r_14",
+   "component_id": "steel_wire",
+   "material_id": "steel",
+   "name": "Schulter rechts",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 286.067,
+   "y": 127.4,
+   "w": 6.467,
+   "d": 3.8,
+   "z": 0,
+   "h": 3,
+   "r": 0.5,
+   "explode": [
+    15,
+    0,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Abschnitt der schrägen Schulter.",
+   "color": "#AEB5BA",
+   "label": false
+  },
+  {
+   "id": "schulter_r_15",
+   "component_id": "steel_wire",
+   "material_id": "steel",
+   "name": "Schulter rechts",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 292.533,
+   "y": 131.2,
+   "w": 6.467,
+   "d": 3.8,
+   "z": 0,
+   "h": 3,
+   "r": 0.5,
+   "explode": [
+    15,
+    0,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Abschnitt der schrägen Schulter.",
+   "color": "#AEB5BA",
+   "label": false
+  },
+  {
+   "id": "schulter_r_16",
+   "component_id": "steel_wire",
+   "material_id": "steel",
+   "name": "Schulter rechts",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 299,
+   "y": 135,
+   "w": 6.467,
+   "d": 3.8,
+   "z": 0,
+   "h": 3,
+   "r": 0.5,
+   "explode": [
+    15,
+    0,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Abschnitt der schrägen Schulter.",
+   "color": "#AEB5BA",
+   "label": false
+  },
+  {
+   "id": "schulter_r_17",
+   "component_id": "steel_wire",
+   "material_id": "steel",
+   "name": "Schulter rechts",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 305.467,
+   "y": 138.8,
+   "w": 6.467,
+   "d": 3.8,
+   "z": 0,
+   "h": 3,
+   "r": 0.5,
+   "explode": [
+    15,
+    0,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Abschnitt der schrägen Schulter.",
+   "color": "#AEB5BA",
+   "label": false
+  },
+  {
+   "id": "schulter_r_18",
+   "component_id": "steel_wire",
+   "material_id": "steel",
+   "name": "Schulter rechts",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 311.933,
+   "y": 142.6,
+   "w": 6.467,
+   "d": 3.8,
+   "z": 0,
+   "h": 3,
+   "r": 0.5,
+   "explode": [
+    15,
+    0,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Abschnitt der schrägen Schulter.",
+   "color": "#AEB5BA",
+   "label": false
+  },
+  {
+   "id": "schulter_r_19",
+   "component_id": "steel_wire",
+   "material_id": "steel",
+   "name": "Schulter rechts",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 318.4,
+   "y": 146.4,
+   "w": 6.467,
+   "d": 3.8,
+   "z": 0,
+   "h": 3,
+   "r": 0.5,
+   "explode": [
+    15,
+    0,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Abschnitt der schrägen Schulter.",
+   "color": "#AEB5BA",
+   "label": false
+  },
+  {
+   "id": "schulter_r_20",
+   "component_id": "steel_wire",
+   "material_id": "steel",
+   "name": "Schulter rechts",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 324.867,
+   "y": 150.2,
+   "w": 6.467,
+   "d": 3.8,
+   "z": 0,
+   "h": 3,
+   "r": 0.5,
+   "explode": [
+    15,
+    0,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Abschnitt der schrägen Schulter.",
+   "color": "#AEB5BA",
+   "label": false
+  },
+  {
+   "id": "schulter_r_21",
+   "component_id": "steel_wire",
+   "material_id": "steel",
+   "name": "Schulter rechts",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 331.333,
+   "y": 154,
+   "w": 6.467,
+   "d": 3.8,
+   "z": 0,
+   "h": 3,
+   "r": 0.5,
+   "explode": [
+    15,
+    0,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Abschnitt der schrägen Schulter.",
+   "color": "#AEB5BA",
+   "label": false
+  },
+  {
+   "id": "schulter_r_22",
+   "component_id": "steel_wire",
+   "material_id": "steel",
+   "name": "Schulter rechts",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 337.8,
+   "y": 157.8,
+   "w": 6.467,
+   "d": 3.8,
+   "z": 0,
+   "h": 3,
+   "r": 0.5,
+   "explode": [
+    15,
+    0,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Abschnitt der schrägen Schulter.",
+   "color": "#AEB5BA",
+   "label": false
+  },
+  {
+   "id": "schulter_r_23",
+   "component_id": "steel_wire",
+   "material_id": "steel",
+   "name": "Schulter rechts",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 344.267,
+   "y": 161.6,
+   "w": 6.467,
+   "d": 3.8,
+   "z": 0,
+   "h": 3,
+   "r": 0.5,
+   "explode": [
+    15,
+    0,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Abschnitt der schrägen Schulter.",
+   "color": "#AEB5BA",
+   "label": false
+  },
+  {
+   "id": "schulter_r_24",
+   "component_id": "steel_wire",
+   "material_id": "steel",
+   "name": "Schulter rechts",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 350.733,
+   "y": 165.4,
+   "w": 6.467,
+   "d": 3.8,
+   "z": 0,
+   "h": 3,
+   "r": 0.5,
+   "explode": [
+    15,
+    0,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Abschnitt der schrägen Schulter.",
+   "color": "#AEB5BA",
+   "label": false
+  },
+  {
+   "id": "schulter_r_25",
+   "component_id": "steel_wire",
+   "material_id": "steel",
+   "name": "Schulter rechts",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 357.2,
+   "y": 169.2,
+   "w": 6.467,
+   "d": 3.8,
+   "z": 0,
+   "h": 3,
+   "r": 0.5,
+   "explode": [
+    15,
+    0,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Abschnitt der schrägen Schulter.",
+   "color": "#AEB5BA",
+   "label": false
+  },
+  {
+   "id": "schulter_r_26",
+   "component_id": "steel_wire",
+   "material_id": "steel",
+   "name": "Schulter rechts",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 363.667,
+   "y": 173,
+   "w": 6.467,
+   "d": 3.8,
+   "z": 0,
+   "h": 3,
+   "r": 0.5,
+   "explode": [
+    15,
+    0,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Abschnitt der schrägen Schulter.",
+   "color": "#AEB5BA",
+   "label": false
+  },
+  {
+   "id": "schulter_r_27",
+   "component_id": "steel_wire",
+   "material_id": "steel",
+   "name": "Schulter rechts",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 370.133,
+   "y": 176.8,
+   "w": 6.467,
+   "d": 3.8,
+   "z": 0,
+   "h": 3,
+   "r": 0.5,
+   "explode": [
+    15,
+    0,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Abschnitt der schrägen Schulter.",
+   "color": "#AEB5BA",
+   "label": false
+  },
+  {
+   "id": "schulter_r_28",
+   "component_id": "steel_wire",
+   "material_id": "steel",
+   "name": "Schulter rechts",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 376.6,
+   "y": 180.6,
+   "w": 6.467,
+   "d": 3.8,
+   "z": 0,
+   "h": 3,
+   "r": 0.5,
+   "explode": [
+    15,
+    0,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Abschnitt der schrägen Schulter.",
+   "color": "#AEB5BA",
+   "label": false
+  },
+  {
+   "id": "schulter_r_29",
+   "component_id": "steel_wire",
+   "material_id": "steel",
+   "name": "Schulter rechts",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 383.067,
+   "y": 184.4,
+   "w": 6.467,
+   "d": 3.8,
+   "z": 0,
+   "h": 3,
+   "r": 0.5,
+   "explode": [
+    15,
+    0,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Abschnitt der schrägen Schulter.",
+   "color": "#AEB5BA",
+   "label": false
+  },
+  {
+   "id": "schulter_r_30",
+   "component_id": "steel_wire",
+   "material_id": "steel",
+   "name": "Schulter rechts",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 389.533,
+   "y": 188.2,
+   "w": 6.467,
+   "d": 3.8,
+   "z": 0,
+   "h": 3,
+   "r": 0.5,
+   "explode": [
+    15,
+    0,
+    0
+   ],
+   "mass": 0.3,
    "materials": [
     [
      "stahl",

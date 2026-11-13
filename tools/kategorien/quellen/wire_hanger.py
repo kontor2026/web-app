@@ -7,12 +7,12 @@ from bau import teil, mark, raster, skaliere_masse, schreibe  # noqa: E402
 
 # Drahtkleiderbügel aus der Reinigung, flach liegend (laut CSV 400 × 200 × 5 mm), Haken hinten (y = 0).
 # Ein einziger Stahldraht (Ø ca. 2,2 mm): Haken, verdrillter Hals, zwei schräge Schultern, Unterstange.
-# Da es nur achsparallele Formen gibt, sind die Schultern als Treppe aus Drahtstücken gebaut, die sich an den
-# Ecken berühren. Explodiert: Abschnitte in der Ebene auseinandergezogen, Haken leicht angehoben.
+# Da es nur achsparallele Formen gibt, sind die Schultern als feine Treppe aus 30 Drahtstücken gebaut, die sich an
+# den Ecken berühren. Hakeninneres in Tischfarbe. Explodiert: Abschnitte in der Ebene auseinandergezogen, Haken leicht angehoben.
 STAHL = '#AEB5BA'
-LOCH = '#45484B'
+LOCH = '#EEECE5'
 DRAHT = 3
-N = 12
+N = 30
 
 
 def schulter(seite, dx):
@@ -24,8 +24,8 @@ def schulter(seite, dx):
         erstes = i == 0
         teile.append(teil(f'schulter_{seite}_{i + 1}', 'steel_wire',
                           'Schulter links' if seite == 'l' else 'Schulter rechts', 'Schulter', 'box',
-                          x=round(x, 3), y=round(78 + i * d, 3), w=round(w, 3), d=round(d, 3), z=0, h=DRAHT, r=3,
-                          explode=[dx, 0, 0], mass=0.75, label=erstes,
+                          x=round(x, 3), y=round(78 + i * d, 3), w=round(w, 3), d=round(d, 3), z=0, h=DRAHT, r=0.5,
+                          explode=[dx, 0, 0], mass=0.3, label=erstes,
                           info=('Die schrägen Schultern geben dem Kleidungsstück seine Form. Der Draht ist dünn '
                                 'verzinkt oder lackiert gegen Rost.') if erstes else 'Abschnitt der schrägen Schulter.',
                           color=STAHL))
@@ -37,7 +37,7 @@ teile = [
          x=184, y=0, w=34, d=30, z=1, h=DRAHT, explode=[0, -30, 10], mass=3,
          info='Der Haken ist das Drahtende, zu einem Bogen gebogen. Viele Reinigungen nehmen Drahtbügel zurück '
               'und verwenden sie wieder.',
-         color=STAHL, marks=[mark('cyl', 3, 3, 28, 24, fill=LOCH), mark('box', 0, 16, 9, 14, 3, LOCH)]),
+         color=STAHL, marks=[mark('cyl', 3, 3, 28, 24, fill=LOCH), mark('box', 0, 17, 10, 13, 2, LOCH)]),
     teil('hakenschaft', 'steel_wire', 'Hakenschaft', 'Hakenschaft', 'box',
          x=199.5, y=30, w=3, d=26, z=1, h=DRAHT, r=1.5, explode=[0, -30, 10], mass=1, label=False,
          info='Gerades Drahtstück zwischen Haken und Verdrillung.', color=STAHL),

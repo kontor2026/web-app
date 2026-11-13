@@ -37,18 +37,18 @@
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Fe": 320558.0
+   "Fe": 317716.0
   },
   "herkunft": {
    "Fe": "Modellmassen (Schätzung)"
   },
   "materialien_g": {
-   "steel": 327.1,
-   "pp": 69.1,
+   "steel": 324.2,
+   "pp": 72.2,
    "silicone": 3.7
   },
-  "co2_kg": 0.981,
-  "co2_mit_recyclat_kg": 0.268,
+  "co2_kg": 0.98,
+  "co2_mit_recyclat_kg": 0.267,
   "co2_ersparnis_kg": 0.713,
   "co2_ohne_faktor": [],
   "rohstoffwert_eur": 0,
@@ -144,9 +144,9 @@
    "explode": [
     0,
     0,
-    116.0
+    181.0
    ],
-   "mass": 41.5,
+   "mass": 41.1,
    "materials": [
     [
      "pp",
@@ -162,6 +162,60 @@
      "y": 4,
      "w": 67,
      "fill": "#3E444A"
+    },
+    {
+     "shape": "cyl",
+     "x": 14,
+     "y": 14,
+     "w": 47,
+     "fill": "#353A40"
+    },
+    {
+     "shape": "cyl",
+     "x": 30,
+     "y": 30,
+     "w": 15,
+     "fill": "#454B51"
+    }
+   ]
+  },
+  {
+   "id": "knopf",
+   "component_id": "pp_lid",
+   "material_id": "pp",
+   "name": "Druckknopf mit Feder",
+   "short": "Druckknopf",
+   "shape": "cyl",
+   "x": 27.5,
+   "y": 27.5,
+   "w": 20,
+   "z": 238,
+   "h": 4,
+   "explode": [
+    0,
+    0,
+    99.0
+   ],
+   "mass": 3.7,
+   "materials": [
+    [
+     "pp",
+     85
+    ],
+    [
+     "stahl",
+     15
+    ]
+   ],
+   "info": "Drückt man ihn, öffnet ein kleines Ventil den Ausguss, ohne dass man den Stopfen abschrauben muss. Innen sitzt eine kleine Stahlfeder.",
+   "color": "#D9473A",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 4,
+     "w": 12,
+     "fill": "#E86A5E"
     }
    ]
   },
@@ -180,9 +234,9 @@
    "explode": [
     0,
     0,
-    63.0
+    75.0
    ],
-   "mass": 27.6,
+   "mass": 27.4,
    "materials": [
     [
      "pp",
@@ -194,10 +248,10 @@
    "marks": [
     {
      "shape": "cyl",
-     "x": 11,
-     "y": 11,
-     "w": 20,
-     "fill": "#D9473A"
+     "x": 9,
+     "y": 9,
+     "w": 24,
+     "fill": "#3A3F44"
     },
     {
      "shape": "box",
@@ -225,7 +279,7 @@
    "explode": [
     0,
     0,
-    38.0
+    46.0
    ],
    "mass": 3.7,
    "materials": [
@@ -263,7 +317,7 @@
     0,
     0
    ],
-   "mass": 9.2,
+   "mass": 9.1,
    "materials": [
     [
      "stahl",
@@ -273,6 +327,7 @@
    "info": "Hier sind Innenflasche und Außenmantel miteinander verschweißt. Die Öffnung hat Platz für den Stopfen.",
    "color": "#B5BBC0",
    "label": false,
+   "sortBias": -15,
    "marks": [
     {
      "shape": "cyl",
@@ -294,21 +349,26 @@
    "y": 4,
    "w": 67,
    "z": 8,
-   "h": 197,
+   "h": 192,
    "explode": [
     100,
     0,
     0
    ],
-   "mass": 147.5,
+   "mass": 146.1,
    "materials": [
     [
      "stahl",
-     100
+     98
+    ],
+    [
+     "kupfer",
+     2
     ]
    ],
    "info": "Dünnwandiger Edelstahl, außen oft verkupfert oder verspiegelt. Zwischen ihr und dem Mantel ist ein Vakuum: Ohne Luft kann kaum Wärme hindurch. Nicht aufbohren!",
-   "color": "#B5BBC0"
+   "color": "#C27A4E",
+   "sortBias": -15
   },
   {
    "id": "schulter",
@@ -325,9 +385,9 @@
    "explode": [
     0,
     0,
-    20.0
+    24.0
    ],
-   "mass": 18.4,
+   "mass": 18.3,
    "materials": [
     [
      "stahl",
@@ -362,9 +422,9 @@
    "explode": [
     0,
     0,
-    20.0
+    24.0
    ],
-   "mass": 138.2,
+   "mass": 137,
    "materials": [
     [
      "stahl",
@@ -391,7 +451,7 @@
     0,
     0.0
    ],
-   "mass": 13.8,
+   "mass": 13.7,
    "materials": [
     [
      "stahl",

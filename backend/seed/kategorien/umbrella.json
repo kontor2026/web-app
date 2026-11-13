@@ -26,30 +26,30 @@
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 1,04 kg",
+   "v": "≈ 1,05 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 0,54 kg",
-   "hint": "spart 0,50 kg, wenn recycelte Materialien eingesetzt werden"
+   "v": "≈ 0,57 kg",
+   "hint": "spart 0,48 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Fe": 189140.0
+   "Fe": 184240.0
   },
   "herkunft": {
    "Fe": "Modellmassen (Schätzung)"
   },
   "materialien_g": {
-   "steel": 193.0,
-   "polyester": 116.6,
-   "pp": 90.5
+   "steel": 188.0,
+   "polyester": 128.4,
+   "pp": 83.6
   },
-  "co2_kg": 1.041,
-  "co2_mit_recyclat_kg": 0.538,
-  "co2_ersparnis_kg": 0.502,
+  "co2_kg": 1.054,
+  "co2_mit_recyclat_kg": 0.572,
+  "co2_ersparnis_kg": 0.482,
   "co2_ohne_faktor": [],
   "rohstoffwert_eur": 0,
   "wert_ohne_preis": [],
@@ -136,19 +136,19 @@
    "name": "Halteband mit Druckknopf",
    "short": "Halteband",
    "shape": "box",
-   "x": 10,
-   "y": 400,
-   "w": 70,
-   "d": 30,
-   "z": 74,
+   "x": 13,
+   "y": 470,
+   "w": 64,
+   "d": 26,
+   "z": 82,
    "h": 2,
    "r": 3,
    "explode": [
-    100,
+    110,
     0,
     0
    ],
-   "mass": 6,
+   "mass": 5.7,
    "materials": [
     [
      "polyester",
@@ -160,136 +160,603 @@
     ]
    ],
    "info": "Hält den geschlossenen Schirm zusammen. Der Druckknopf ist aus Metall: Band abschneiden, bevor der Stoff in die Textilsammlung geht.",
-   "color": "#24476B",
+   "color": "#1E3C5A",
    "marks": [
     {
      "shape": "cyl",
-     "x": 54,
-     "y": 9,
+     "x": 46,
+     "y": 7,
      "w": 12,
      "fill": "#C9A24A"
+    },
+    {
+     "shape": "cyl",
+     "x": 49,
+     "y": 10,
+     "w": 6,
+     "fill": "#A8832F"
     }
    ]
   },
   {
-   "id": "dach_mitte",
+   "id": "dach_1o",
    "component_id": "polyester_canopy",
    "material_id": "polyester",
    "name": "Schirmdach (gebündelt)",
    "short": "Schirmdach",
    "shape": "box",
-   "x": 10,
-   "y": 200,
-   "w": 70,
-   "d": 280,
-   "z": 4,
-   "h": 70,
-   "r": 30,
+   "x": 31,
+   "y": 45,
+   "w": 28,
+   "d": 150,
+   "z": 55,
+   "h": 10,
+   "r": 14,
    "explode": [
     0,
     0,
-    110
+    190
    ],
-   "mass": 45.2,
+   "mass": 5.7,
    "materials": [
     [
      "polyester",
      100
     ]
    ],
-   "info": "Wasserabweisendes Polyestergewebe aus acht Bahnen, an den Rippenspitzen und in der Mitte angenäht. Zum Trennen die Nähte an den Rippenenden aufschneiden.",
-   "color": "#24476B",
-   "marks": [
-    {
-     "shape": "box",
-     "x": 34,
-     "y": 0,
-     "w": 2,
-     "d": 280,
-     "r": 1,
-     "fill": "#1B3753"
-    }
-   ]
-  },
-  {
-   "id": "dach_vorne",
-   "component_id": "polyester_canopy",
-   "material_id": "polyester",
-   "name": "Schirmdach (unten, am Schieber)",
-   "short": "Dach unten",
-   "shape": "box",
-   "x": 6,
-   "y": 480,
-   "w": 78,
-   "d": 215,
-   "z": 0,
-   "h": 78,
-   "r": 34,
-   "explode": [
-    0,
-    0,
-    110
-   ],
-   "mass": 50.3,
-   "materials": [
-    [
-     "polyester",
-     100
-    ]
-   ],
-   "info": "Hier ist das Dach am dicksten gebündelt, weil die Bahnen an den Rippen-Enden zusammenlaufen.",
+   "info": "Teil des zusammengefalteten Schirmdachs.",
    "color": "#24476B",
    "label": false,
    "marks": [
     {
      "shape": "box",
-     "x": 38,
+     "x": 13.0,
      "y": 0,
      "w": 2,
-     "d": 215,
+     "d": 150,
+     "r": 1,
+     "fill": "#1B3753"
+    },
+    {
+     "shape": "box",
+     "x": 5.6000000000000005,
+     "y": 0,
+     "w": 1.5,
+     "d": 150,
+     "r": 1,
+     "fill": "#1B3753"
+    },
+    {
+     "shape": "box",
+     "x": 20.900000000000002,
+     "y": 0,
+     "w": 1.5,
+     "d": 150,
      "r": 1,
      "fill": "#1B3753"
     }
    ]
   },
   {
-   "id": "dach_spitze",
+   "id": "dach_1m",
    "component_id": "polyester_canopy",
    "material_id": "polyester",
-   "name": "Schirmdach (an der Spitze)",
-   "short": "Dach oben",
+   "name": "Schirmdach (gebündelt)",
+   "short": "Schirmdach",
    "shape": "box",
-   "x": 22,
-   "y": 30,
-   "w": 46,
+   "x": 25,
+   "y": 45,
+   "w": 40,
+   "d": 150,
+   "z": 35,
+   "h": 20,
+   "r": 6,
+   "explode": [
+    0,
+    0,
+    190
+   ],
+   "mass": 5.7,
+   "materials": [
+    [
+     "polyester",
+     100
+    ]
+   ],
+   "info": "Teil des zusammengefalteten Schirmdachs.",
+   "color": "#24476B",
+   "label": false
+  },
+  {
+   "id": "dach_1u",
+   "component_id": "polyester_canopy",
+   "material_id": "polyester",
+   "name": "Schirmdach (gebündelt)",
+   "short": "Schirmdach",
+   "shape": "box",
+   "x": 31,
+   "y": 45,
+   "w": 28,
+   "d": 150,
+   "z": 25,
+   "h": 10,
+   "r": 14,
+   "explode": [
+    0,
+    0,
+    190
+   ],
+   "mass": 5.7,
+   "materials": [
+    [
+     "polyester",
+     100
+    ]
+   ],
+   "info": "Teil des zusammengefalteten Schirmdachs.",
+   "color": "#24476B",
+   "label": false
+  },
+  {
+   "id": "dach_2o",
+   "component_id": "polyester_canopy",
+   "material_id": "polyester",
+   "name": "Schirmdach (gebündelt)",
+   "short": "Schirmdach",
+   "shape": "box",
+   "x": 24.5,
+   "y": 195,
+   "w": 41,
    "d": 170,
-   "z": 16,
-   "h": 46,
-   "r": 18,
+   "z": 59.5,
+   "h": 14.5,
+   "r": 20,
    "explode": [
     0,
     0,
-    110
+    190
    ],
-   "mass": 15.1,
+   "mass": 9.4,
    "materials": [
     [
      "polyester",
      100
     ]
    ],
-   "info": "Zur Spitze hin liegen die Bahnen eng um die Stange.",
+   "info": "Teil des zusammengefalteten Schirmdachs.",
    "color": "#24476B",
    "label": false,
    "marks": [
     {
      "shape": "box",
-     "x": 22,
+     "x": 19.5,
      "y": 0,
      "w": 2,
      "d": 170,
      "r": 1,
      "fill": "#1B3753"
+    },
+    {
+     "shape": "box",
+     "x": 8.200000000000001,
+     "y": 0,
+     "w": 1.5,
+     "d": 170,
+     "r": 1,
+     "fill": "#1B3753"
+    },
+    {
+     "shape": "box",
+     "x": 31.300000000000004,
+     "y": 0,
+     "w": 1.5,
+     "d": 170,
+     "r": 1,
+     "fill": "#1B3753"
+    }
+   ]
+  },
+  {
+   "id": "dach_2m",
+   "component_id": "polyester_canopy",
+   "material_id": "polyester",
+   "name": "Schirmdach (gebündelt)",
+   "short": "Schirmdach",
+   "shape": "box",
+   "x": 16,
+   "y": 195,
+   "w": 58,
+   "d": 170,
+   "z": 30.5,
+   "h": 29,
+   "r": 6,
+   "explode": [
+    0,
+    0,
+    190
+   ],
+   "mass": 9.4,
+   "materials": [
+    [
+     "polyester",
+     100
+    ]
+   ],
+   "info": "Teil des zusammengefalteten Schirmdachs.",
+   "color": "#24476B",
+   "label": false
+  },
+  {
+   "id": "dach_2u",
+   "component_id": "polyester_canopy",
+   "material_id": "polyester",
+   "name": "Schirmdach (gebündelt)",
+   "short": "Schirmdach",
+   "shape": "box",
+   "x": 24.5,
+   "y": 195,
+   "w": 41,
+   "d": 170,
+   "z": 16,
+   "h": 14.5,
+   "r": 20,
+   "explode": [
+    0,
+    0,
+    190
+   ],
+   "mass": 9.4,
+   "materials": [
+    [
+     "polyester",
+     100
+    ]
+   ],
+   "info": "Teil des zusammengefalteten Schirmdachs.",
+   "color": "#24476B",
+   "label": false
+  },
+  {
+   "id": "dach_3o",
+   "component_id": "polyester_canopy",
+   "material_id": "polyester",
+   "name": "Schirmdach (gebündelt)",
+   "short": "Schirmdach",
+   "shape": "box",
+   "x": 19,
+   "y": 365,
+   "w": 52,
+   "d": 170,
+   "z": 63.5,
+   "h": 18.5,
+   "r": 20,
+   "explode": [
+    0,
+    0,
+    190
+   ],
+   "mass": 11.9,
+   "materials": [
+    [
+     "polyester",
+     100
+    ]
+   ],
+   "info": "Teil des zusammengefalteten Schirmdachs.",
+   "color": "#24476B",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 25.0,
+     "y": 0,
+     "w": 2,
+     "d": 170,
+     "r": 1,
+     "fill": "#1B3753"
+    },
+    {
+     "shape": "box",
+     "x": 10.4,
+     "y": 0,
+     "w": 1.5,
+     "d": 170,
+     "r": 1,
+     "fill": "#1B3753"
+    },
+    {
+     "shape": "box",
+     "x": 40.1,
+     "y": 0,
+     "w": 1.5,
+     "d": 170,
+     "r": 1,
+     "fill": "#1B3753"
+    }
+   ]
+  },
+  {
+   "id": "dach_3m",
+   "component_id": "polyester_canopy",
+   "material_id": "polyester",
+   "name": "Schirmdach (gebündelt)",
+   "short": "Schirmdach",
+   "shape": "box",
+   "x": 8,
+   "y": 365,
+   "w": 74,
+   "d": 170,
+   "z": 26.5,
+   "h": 37,
+   "r": 6,
+   "explode": [
+    0,
+    0,
+    190
+   ],
+   "mass": 11.9,
+   "materials": [
+    [
+     "polyester",
+     100
+    ]
+   ],
+   "info": "Teil des zusammengefalteten Schirmdachs.",
+   "color": "#24476B",
+   "label": false
+  },
+  {
+   "id": "dach_3u",
+   "component_id": "polyester_canopy",
+   "material_id": "polyester",
+   "name": "Schirmdach (gebündelt)",
+   "short": "Schirmdach",
+   "shape": "box",
+   "x": 19,
+   "y": 365,
+   "w": 52,
+   "d": 170,
+   "z": 8,
+   "h": 18.5,
+   "r": 20,
+   "explode": [
+    0,
+    0,
+    190
+   ],
+   "mass": 11.9,
+   "materials": [
+    [
+     "polyester",
+     100
+    ]
+   ],
+   "info": "Teil des zusammengefalteten Schirmdachs.",
+   "color": "#24476B",
+   "label": false
+  },
+  {
+   "id": "dach",
+   "component_id": "polyester_canopy",
+   "material_id": "polyester",
+   "name": "Schirmdach (gebündelt)",
+   "short": "Schirmdach",
+   "shape": "box",
+   "x": 15,
+   "y": 535,
+   "w": 60,
+   "d": 170,
+   "z": 66.5,
+   "h": 21.5,
+   "r": 20,
+   "explode": [
+    0,
+    0,
+    190
+   ],
+   "mass": 13.9,
+   "materials": [
+    [
+     "polyester",
+     100
+    ]
+   ],
+   "info": "Wasserabweisendes Polyestergewebe aus acht Bahnen, an den Rippenspitzen und an der Krone angenäht. Zum Trennen die Nähte an den Rippenenden aufschneiden, dann kann der Stoff in die Textilsammlung.",
+   "color": "#24476B",
+   "label": true,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 29.0,
+     "y": 0,
+     "w": 2,
+     "d": 170,
+     "r": 1,
+     "fill": "#1B3753"
+    },
+    {
+     "shape": "box",
+     "x": 12.0,
+     "y": 0,
+     "w": 1.5,
+     "d": 170,
+     "r": 1,
+     "fill": "#1B3753"
+    },
+    {
+     "shape": "box",
+     "x": 46.5,
+     "y": 0,
+     "w": 1.5,
+     "d": 170,
+     "r": 1,
+     "fill": "#1B3753"
+    }
+   ]
+  },
+  {
+   "id": "dach_4m",
+   "component_id": "polyester_canopy",
+   "material_id": "polyester",
+   "name": "Schirmdach (gebündelt)",
+   "short": "Schirmdach",
+   "shape": "box",
+   "x": 2,
+   "y": 535,
+   "w": 86,
+   "d": 170,
+   "z": 23.5,
+   "h": 43,
+   "r": 6,
+   "explode": [
+    0,
+    0,
+    190
+   ],
+   "mass": 13.9,
+   "materials": [
+    [
+     "polyester",
+     100
+    ]
+   ],
+   "info": "Teil des zusammengefalteten Schirmdachs.",
+   "color": "#24476B",
+   "label": false
+  },
+  {
+   "id": "dach_4u",
+   "component_id": "polyester_canopy",
+   "material_id": "polyester",
+   "name": "Schirmdach (gebündelt)",
+   "short": "Schirmdach",
+   "shape": "box",
+   "x": 15,
+   "y": 535,
+   "w": 60,
+   "d": 170,
+   "z": 2,
+   "h": 21.5,
+   "r": 20,
+   "explode": [
+    0,
+    0,
+    190
+   ],
+   "mass": 13.9,
+   "materials": [
+    [
+     "polyester",
+     100
+    ]
+   ],
+   "info": "Teil des zusammengefalteten Schirmdachs.",
+   "color": "#24476B",
+   "label": false
+  },
+  {
+   "id": "kappen",
+   "component_id": "steel_frame",
+   "material_id": "pp",
+   "name": "Rippenkappen (8 Stück)",
+   "short": "Rippenkappen",
+   "shape": "box",
+   "x": 23,
+   "y": 705,
+   "w": 44,
+   "d": 12,
+   "z": 23,
+   "h": 44,
+   "r": 10,
+   "explode": [
+    0,
+    0,
+    190
+   ],
+   "mass": 7.6,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Kleine Kunststoffkappen auf den Rippenenden. Das Dach ist hier festgenäht, die Kappen schützen vor Stichen.",
+   "color": "#2A2E31",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 6,
+     "y": 2,
+     "w": 6,
+     "d": 8,
+     "r": 3,
+     "fill": "#3E444A"
+    },
+    {
+     "shape": "box",
+     "x": 15,
+     "y": 2,
+     "w": 6,
+     "d": 8,
+     "r": 3,
+     "fill": "#3E444A"
+    },
+    {
+     "shape": "box",
+     "x": 24,
+     "y": 2,
+     "w": 6,
+     "d": 8,
+     "r": 3,
+     "fill": "#3E444A"
+    },
+    {
+     "shape": "box",
+     "x": 33,
+     "y": 2,
+     "w": 6,
+     "d": 8,
+     "r": 3,
+     "fill": "#3E444A"
+    }
+   ]
+  },
+  {
+   "id": "krone",
+   "component_id": "steel_frame",
+   "material_id": "pp",
+   "name": "Krone (Rippenhalter)",
+   "short": "Krone",
+   "shape": "box",
+   "x": 35,
+   "y": 45,
+   "w": 20,
+   "d": 25,
+   "z": 35,
+   "h": 20,
+   "r": 8,
+   "explode": [
+    0,
+    0,
+    95
+   ],
+   "mass": 5.7,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Kunststoffstern oben an der Stange. Hier sind alle Rippen mit einem Draht eingehängt.",
+   "color": "#2A2E31",
+   "sortBias": -5,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 6,
+     "w": 12,
+     "fill": "#3E444A"
     }
    ]
   },
@@ -300,19 +767,19 @@
    "name": "Rippen und Streben",
    "short": "Rippen",
    "shape": "box",
-   "x": 30,
-   "y": 50,
-   "w": 30,
-   "d": 640,
-   "z": 24,
-   "h": 30,
-   "r": 8,
+   "x": 35,
+   "y": 70,
+   "w": 20,
+   "d": 635,
+   "z": 35,
+   "h": 20,
+   "r": 6,
    "explode": [
     0,
     0,
-    35
+    95
    ],
-   "mass": 120.6,
+   "mass": 114,
    "materials": [
     [
      "stahl",
@@ -329,37 +796,38 @@
    ],
    "info": "Acht lange Rippen und acht kurze Streben aus Federstahl, mit Drahtgelenken verbunden. Abgeknickte Rippen sind spitz: vorsichtig anfassen und als Metallschrott abgeben.",
    "color": "#3A3F44",
+   "sortBias": -5,
    "marks": [
     {
      "shape": "box",
-     "x": 3,
-     "y": 10,
-     "w": 2,
-     "d": 620,
+     "x": 2.5,
+     "y": 10.0,
+     "w": 1.5,
+     "d": 615,
      "fill": "#8E969A"
     },
     {
      "shape": "box",
-     "x": 10,
-     "y": 10,
-     "w": 2,
-     "d": 620,
+     "x": 7.0,
+     "y": 10.0,
+     "w": 1.5,
+     "d": 615,
      "fill": "#8E969A"
     },
     {
      "shape": "box",
-     "x": 17,
-     "y": 10,
-     "w": 2,
-     "d": 620,
+     "x": 11.5,
+     "y": 10.0,
+     "w": 1.5,
+     "d": 615,
      "fill": "#8E969A"
     },
     {
      "shape": "box",
-     "x": 24,
-     "y": 10,
-     "w": 2,
-     "d": 620,
+     "x": 16.0,
+     "y": 10.0,
+     "w": 1.5,
+     "d": 615,
      "fill": "#8E969A"
     }
    ]
@@ -371,19 +839,19 @@
    "name": "Schieber (Läufer)",
    "short": "Schieber",
    "shape": "box",
-   "x": 36,
-   "y": 690,
-   "w": 18,
+   "x": 35,
+   "y": 600,
+   "w": 20,
    "d": 40,
-   "z": 30,
-   "h": 18,
+   "z": 35,
+   "h": 20,
    "r": 6,
    "explode": [
     0,
     0,
-    35
+    40
    ],
-   "mass": 12.1,
+   "mass": 11.4,
    "materials": [
     [
      "pp",
@@ -395,72 +863,117 @@
    "marks": [
     {
      "shape": "box",
-     "x": 3,
+     "x": 4,
      "y": 4,
      "w": 12,
      "d": 32,
      "r": 4,
-     "fill": "#3A3F44"
+     "fill": "#3E444A"
     }
    ]
   },
   {
-   "id": "sperrfeder",
+   "id": "feder_oben",
    "component_id": "steel_frame",
    "material_id": "steel",
-   "name": "Sperrfeder",
-   "short": "Feder",
+   "name": "Sperrfeder (offen)",
+   "short": "Federn",
    "shape": "box",
-   "x": 42,
-   "y": 735,
-   "w": 6,
-   "d": 12,
-   "z": 36,
-   "h": 5,
+   "x": 43,
+   "y": 470,
+   "w": 4,
+   "d": 14,
+   "z": 46,
+   "h": 5.5,
    "r": 1,
    "explode": [
     0,
     0,
-    35
+    22
    ],
-   "mass": 2,
+   "mass": 0.9,
    "materials": [
     [
      "stahl",
      100
     ]
    ],
-   "info": "Kleine Blattfeder in der Stange. Sie rastet ein und hält den Schirm offen.",
+   "info": "Zwei kleine Blattfedern in der Stange. Die obere rastet ein und hält den Schirm offen, die untere hält ihn geschlossen.",
    "color": "#B8BEC4"
+  },
+  {
+   "id": "feder_unten",
+   "component_id": "steel_frame",
+   "material_id": "steel",
+   "name": "Sperrfeder (geschlossen)",
+   "short": "Feder",
+   "shape": "box",
+   "x": 43,
+   "y": 660,
+   "w": 4,
+   "d": 14,
+   "z": 46,
+   "h": 5.5,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    22
+   ],
+   "mass": 0.9,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Hält den Schieber unten, solange der Schirm geschlossen ist.",
+   "color": "#B8BEC4",
+   "label": false
   },
   {
    "id": "spitze",
    "component_id": "steel_frame",
-   "material_id": "pp",
+   "material_id": "steel",
    "name": "Schirmspitze",
    "short": "Spitze",
    "shape": "box",
    "x": 41,
    "y": 0,
    "w": 8,
-   "d": 30,
-   "z": 35,
+   "d": 45,
+   "z": 41,
    "h": 8,
    "r": 4,
    "explode": [
     0,
-    0,
+    -40,
     0
    ],
-   "mass": 8,
+   "mass": 5.7,
    "materials": [
     [
+     "stahl",
+     70
+    ],
+    [
      "pp",
-     100
+     30
     ]
    ],
-   "info": "Kunststoffkappe auf dem Ende der Stange. Schützt vor Verletzungen und hält das Dach oben fest.",
-   "color": "#2A2E31"
+   "info": "Vernickelte Metallspitze am Ende der Stange, mit Kunststoffkappe gegen Verletzungen.",
+   "color": "#B8BEC4",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 0,
+     "w": 6,
+     "d": 8,
+     "r": 3,
+     "fill": "#2A2E31"
+    }
+   ]
   },
   {
    "id": "stange",
@@ -470,10 +983,10 @@
    "short": "Stange",
    "shape": "box",
    "x": 40,
-   "y": 30,
+   "y": 45,
    "w": 10,
-   "d": 760,
-   "z": 34,
+   "d": 755,
+   "z": 40,
    "h": 10,
    "r": 5,
    "explode": [
@@ -481,7 +994,7 @@
     0,
     0
    ],
-   "mass": 70.4,
+   "mass": 66.5,
    "materials": [
     [
      "stahl",
@@ -496,71 +1009,29 @@
      "x": 4,
      "y": 0,
      "w": 2,
-     "d": 760,
+     "d": 755,
      "r": 1,
      "fill": "#E3E7EA"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 427,
+     "w": 4,
+     "d": 12,
+     "r": 1,
+     "fill": "#5A6268"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 617,
+     "w": 4,
+     "d": 12,
+     "r": 1,
+     "fill": "#5A6268"
     }
    ]
-  },
-  {
-   "id": "griff_haken",
-   "component_id": "plastic_handle",
-   "material_id": "pp",
-   "name": "Griff: Hakenende",
-   "short": "Haken",
-   "shape": "box",
-   "x": 33,
-   "y": 830,
-   "w": 24,
-   "d": 40,
-   "z": 66,
-   "h": 24,
-   "r": 10,
-   "explode": [
-    0,
-    60,
-    0
-   ],
-   "mass": 15.1,
-   "materials": [
-    [
-     "pp",
-     100
-    ]
-   ],
-   "info": "Das umgebogene Ende des Rundhakens.",
-   "color": "#5A3A26",
-   "label": false
-  },
-  {
-   "id": "griff_bogen",
-   "component_id": "plastic_handle",
-   "material_id": "pp",
-   "name": "Griff: Bogen",
-   "short": "Bogen",
-   "shape": "box",
-   "x": 33,
-   "y": 870,
-   "w": 24,
-   "d": 30,
-   "z": 26,
-   "h": 64,
-   "r": 10,
-   "explode": [
-    0,
-    60,
-    0
-   ],
-   "mass": 20.1,
-   "materials": [
-    [
-     "pp",
-     100
-    ]
-   ],
-   "info": "Die Rundung des Hakengriffs.",
-   "color": "#5A3A26",
-   "label": false
   },
   {
    "id": "griff",
@@ -570,18 +1041,18 @@
    "short": "Griff",
    "shape": "box",
    "x": 32,
-   "y": 780,
+   "y": 770,
    "w": 26,
-   "d": 90,
-   "z": 26,
+   "d": 95,
+   "z": 32,
    "h": 26,
    "r": 12,
    "explode": [
     0,
-    60,
+    70,
     0
    ],
-   "mass": 35.2,
+   "mass": 28.5,
    "materials": [
     [
      "pp",
@@ -592,13 +1063,111 @@
    "color": "#5A3A26",
    "marks": [
     {
+     "shape": "cyl",
+     "x": 9,
+     "y": 4,
+     "w": 8,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "box",
+     "x": 5,
+     "y": 20,
+     "w": 3,
+     "d": 70,
+     "r": 1.5,
+     "fill": "#6B4630"
+    },
+    {
+     "shape": "box",
+     "x": 15,
+     "y": 25,
+     "w": 2,
+     "d": 60,
+     "r": 1,
+     "fill": "#6B4630"
+    }
+   ]
+  },
+  {
+   "id": "griff_bogen",
+   "component_id": "plastic_handle",
+   "material_id": "pp",
+   "name": "Griff: Bogen",
+   "short": "Bogen",
+   "shape": "box",
+   "x": 32,
+   "y": 865,
+   "w": 56,
+   "d": 35,
+   "z": 32,
+   "h": 26,
+   "r": 16,
+   "explode": [
+    0,
+    70,
+    0
+   ],
+   "mass": 19,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Die Rundung des Hakengriffs.",
+   "color": "#5A3A26",
+   "label": false,
+   "marks": [
+    {
      "shape": "box",
      "x": 10,
-     "y": 4,
-     "w": 6,
-     "d": 6,
-     "r": 1,
-     "fill": "#9AA2A6"
+     "y": 6,
+     "w": 36,
+     "d": 3,
+     "r": 1.5,
+     "fill": "#6B4630"
+    }
+   ]
+  },
+  {
+   "id": "griff_haken",
+   "component_id": "plastic_handle",
+   "material_id": "pp",
+   "name": "Griff: Hakenende",
+   "short": "Haken",
+   "shape": "box",
+   "x": 62,
+   "y": 815,
+   "w": 26,
+   "d": 50,
+   "z": 32,
+   "h": 26,
+   "r": 12,
+   "explode": [
+    0,
+    70,
+    0
+   ],
+   "mass": 11.4,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Das zurückgebogene Ende des Rundhakens. Damit hängt man den Schirm auf.",
+   "color": "#5A3A26",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 11,
+     "y": 6,
+     "w": 3,
+     "d": 40,
+     "r": 1.5,
+     "fill": "#6B4630"
     }
    ]
   }

@@ -332,7 +332,7 @@
   "name": "Schere",
   "name_en": "Scissors",
   "klasse": "Metall · Wertstoffhof",
-  "teile": 6,
+  "teile": 13,
   "platzhalter": false
  },
  {
@@ -340,7 +340,7 @@
   "name": "Regenschirm",
   "name_en": "Umbrella",
   "klasse": "Metall · Wertstoffhof",
-  "teile": 12,
+  "teile": 24,
   "platzhalter": false
  },
  {
@@ -1020,7 +1020,7 @@
   "name": "Bratpfanne",
   "name_en": "Frying Pan",
   "klasse": "Metall · Wertstoffhof",
-  "teile": 9,
+  "teile": 11,
   "platzhalter": false
  },
  {
@@ -1044,7 +1044,7 @@
   "name": "Küchenmesser",
   "name_en": "Kitchen Knife",
   "klasse": "Metall · Wertstoffhof",
-  "teile": 5,
+  "teile": 11,
   "platzhalter": false
  },
  {
@@ -1076,7 +1076,7 @@
   "name": "Thermoskanne",
   "name_en": "Thermos Flask",
   "klasse": "Metall · Wertstoffhof",
-  "teile": 8,
+  "teile": 9,
   "platzhalter": false
  },
  {
@@ -1084,7 +1084,7 @@
   "name": "Drahtbügel",
   "name_en": "Wire Hanger",
   "klasse": "Metall · Wertstoffhof",
-  "teile": 28,
+  "teile": 64,
   "platzhalter": false
  },
  {
@@ -1124,7 +1124,7 @@
   "name": "Schlüssel",
   "name_en": "Key",
   "klasse": "Metall · Wertstoffhof",
-  "teile": 4,
+  "teile": 8,
   "platzhalter": false
  },
  {

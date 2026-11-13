@@ -1,43 +1,300 @@
 {
  "parts": [
   {
-   "id": "spitze",
-   "component_id": "knife_blade",
+   "id": "niet",
+   "component_id": "knife_handle",
    "material_id": "steel",
-   "name": "Klingenspitze",
-   "short": "Spitze",
-   "shape": "box",
-   "x": 9,
-   "y": 0,
-   "w": 16,
-   "d": 24,
-   "z": 9,
-   "h": 2,
-   "r": 8,
+   "name": "Griffniete",
+   "short": "Nieten",
+   "shape": "cyl",
+   "x": 9.5,
+   "y": 219,
+   "w": 6,
+   "z": 0,
+   "h": 20.3,
    "explode": [
     0,
-    0,
-    0
+    30,
+    25
    ],
-   "mass": 6.1,
+   "mass": 1,
    "materials": [
     [
      "stahl",
      100
     ]
    ],
-   "info": "Die Schneide läuft hier zum Klingenrücken hoch und endet in der Spitze.",
+   "info": "Drei Edelstahlnieten gehen durch Griffschalen und Angel und halten alles zusammen. Wer den Griff abtrennen will, muss sie aufbohren.",
+   "color": "#B8BEC4",
+   "label": true,
+   "sortBias": -1,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 1,
+     "y": 1,
+     "w": 4,
+     "fill": "#D5DADD"
+    }
+   ]
+  },
+  {
+   "id": "niet_2",
+   "component_id": "knife_handle",
+   "material_id": "steel",
+   "name": "Griffniete",
+   "short": "Nieten",
+   "shape": "cyl",
+   "x": 9.5,
+   "y": 257,
+   "w": 6,
+   "z": 0,
+   "h": 20.3,
+   "explode": [
+    0,
+    30,
+    25
+   ],
+   "mass": 1,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Eine der drei Griffnieten.",
+   "color": "#B8BEC4",
+   "label": false,
+   "sortBias": -1,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 1,
+     "y": 1,
+     "w": 4,
+     "fill": "#D5DADD"
+    }
+   ]
+  },
+  {
+   "id": "niet_3",
+   "component_id": "knife_handle",
+   "material_id": "steel",
+   "name": "Griffniete",
+   "short": "Nieten",
+   "shape": "cyl",
+   "x": 9.5,
+   "y": 295,
+   "w": 6,
+   "z": 0,
+   "h": 20.3,
+   "explode": [
+    0,
+    30,
+    25
+   ],
+   "mass": 1,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Eine der drei Griffnieten.",
+   "color": "#B8BEC4",
+   "label": false,
+   "sortBias": -1,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 1,
+     "y": 1,
+     "w": 4,
+     "fill": "#D5DADD"
+    }
+   ]
+  },
+  {
+   "id": "schale_oben",
+   "component_id": "knife_handle",
+   "material_id": "pp",
+   "name": "Griffschale oben",
+   "short": "Griffschale",
+   "shape": "box",
+   "x": 1,
+   "y": 206,
+   "w": 23,
+   "d": 114,
+   "z": 11,
+   "h": 9,
+   "r": 9,
+   "explode": [
+    -40,
+    30,
+    0
+   ],
+   "mass": 16.6,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Kunststoff (POM oder PP), auf die Angel genietet. Abtrennen nur mit Bohrer oder Säge, sonst das ganze Messer zum Wertstoffhof bringen.",
+   "color": "#2E3338",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 4,
+     "w": 15,
+     "d": 106,
+     "r": 6,
+     "fill": "#3E444A"
+    },
+    {
+     "shape": "cyl",
+     "x": 9.5,
+     "y": 13,
+     "w": 6,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 9.5,
+     "y": 51,
+     "w": 6,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 9.5,
+     "y": 89,
+     "w": 6,
+     "fill": "#B8BEC4"
+    }
+   ]
+  },
+  {
+   "id": "klinge_1",
+   "component_id": "knife_blade",
+   "material_id": "steel",
+   "name": "Klinge",
+   "short": "Klinge",
+   "shape": "box",
+   "x": 18,
+   "y": 0,
+   "w": 7,
+   "d": 22,
+   "z": 9,
+   "h": 2,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 4.1,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Hier wird die Klinge schmaler und läuft in der Spitze aus.",
    "color": "#C3C9CE",
    "label": false,
    "marks": [
     {
      "shape": "box",
      "x": 0,
-     "y": 8,
-     "w": 2,
-     "d": 16,
+     "y": 1,
+     "w": 2.5,
+     "d": 20,
      "r": 1,
-     "fill": "#E3E7EA"
+     "fill": "#E6EAED"
+    }
+   ]
+  },
+  {
+   "id": "klinge_2",
+   "component_id": "knife_blade",
+   "material_id": "steel",
+   "name": "Klinge",
+   "short": "Klinge",
+   "shape": "box",
+   "x": 11,
+   "y": 22,
+   "w": 14,
+   "d": 26,
+   "z": 9,
+   "h": 2,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 9.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Hier wird die Klinge schmaler und läuft in der Spitze aus.",
+   "color": "#C3C9CE",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 1,
+     "w": 2.5,
+     "d": 24,
+     "r": 1,
+     "fill": "#E6EAED"
+    }
+   ]
+  },
+  {
+   "id": "klinge_3",
+   "component_id": "knife_blade",
+   "material_id": "steel",
+   "name": "Klinge",
+   "short": "Klinge",
+   "shape": "box",
+   "x": 5,
+   "y": 48,
+   "w": 20,
+   "d": 32,
+   "z": 9,
+   "h": 2,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 14.5,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Hier wird die Klinge schmaler und läuft in der Spitze aus.",
+   "color": "#C3C9CE",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 1,
+     "w": 2.5,
+     "d": 30,
+     "r": 1,
+     "fill": "#E6EAED"
     }
    ]
   },
@@ -49,44 +306,54 @@
    "short": "Klinge",
    "shape": "box",
    "x": 0,
-   "y": 24,
+   "y": 80,
    "w": 25,
-   "d": 172,
+   "d": 116,
    "z": 9,
    "h": 2,
-   "r": 3,
+   "r": 2,
    "explode": [
     0,
     0,
     0
    ],
-   "mass": 76,
+   "mass": 49.7,
    "materials": [
     [
      "stahl",
      100
     ]
    ],
-   "info": "Rostfreier Messerstahl, an einer Kante scharf geschliffen. Vor dem Wegwerfen in dicke Pappe wickeln und festkleben, dann als Metallschrott zum Wertstoffhof.",
+   "info": "Rostfreier Messerstahl, an der linken Kante scharf geschliffen. Vor dem Wegwerfen in dicke Pappe wickeln und festkleben, dann als Metallschrott zum Wertstoffhof.",
    "color": "#C3C9CE",
+   "label": true,
    "marks": [
     {
      "shape": "box",
      "x": 0,
-     "y": 0,
+     "y": 1,
      "w": 2.5,
-     "d": 172,
+     "d": 114,
      "r": 1,
-     "fill": "#E3E7EA"
+     "fill": "#E6EAED"
     },
     {
      "shape": "box",
-     "x": 8,
-     "y": 140,
-     "w": 12,
-     "d": 20,
+     "x": 6,
+     "y": 70,
+     "w": 14,
+     "d": 26,
      "r": 2,
      "fill": "#B2B8BD"
+    },
+    {
+     "shape": "box",
+     "x": 22,
+     "y": 0,
+     "w": 2,
+     "d": 116,
+     "r": 1,
+     "fill": "#D5DADD"
     }
    ]
   },
@@ -101,23 +368,34 @@
    "y": 196,
    "w": 25,
    "d": 10,
-   "z": 5,
-   "h": 10,
+   "z": 1,
+   "h": 19,
    "r": 3,
    "explode": [
     0,
-    12,
+    0,
     0
    ],
-   "mass": 15.2,
+   "mass": 15.5,
    "materials": [
     [
      "stahl",
      100
     ]
    ],
-   "info": "Verdickung zwischen Klinge und Griff. Sie schützt die Finger davor, auf die Schneide zu rutschen.",
-   "color": "#B2B8BD"
+   "info": "Geschmiedete Verdickung zwischen Klinge und Griff. Sie schützt die Finger davor, auf die Schneide zu rutschen, und gibt dem Messer Gewicht.",
+   "color": "#B2B8BD",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 2,
+     "w": 21,
+     "d": 6,
+     "r": 2,
+     "fill": "#C3C9CE"
+    }
+   ]
   },
   {
    "id": "angel",
@@ -126,81 +404,109 @@
    "name": "Angel (Erl)",
    "short": "Angel",
    "shape": "box",
-   "x": 7,
+   "x": 1,
    "y": 206,
-   "w": 11,
-   "d": 106,
+   "w": 23,
+   "d": 112,
    "z": 9,
-   "h": 2.5,
-   "r": 2,
+   "h": 2,
+   "r": 8,
    "explode": [
     0,
-    26,
+    0,
     0
    ],
-   "mass": 20.3,
+   "mass": 20.7,
    "materials": [
     [
      "stahl",
      100
     ]
    ],
-   "info": "Verlängerung der Klinge, die im Griff steckt. Durchgehende Angeln halten länger.",
+   "info": "Verlängerung der Klinge, die durch den ganzen Griff läuft. Durchgehende Angeln halten länger.",
    "color": "#C3C9CE",
    "marks": [
     {
      "shape": "cyl",
-     "x": 3,
-     "y": 30,
+     "x": 9.5,
+     "y": 13.5,
      "w": 5,
-     "fill": "#8E959B"
+     "fill": "#7E868C"
     },
     {
      "shape": "cyl",
-     "x": 3,
-     "y": 75,
+     "x": 9.5,
+     "y": 51.5,
      "w": 5,
-     "fill": "#8E959B"
+     "fill": "#7E868C"
+    },
+    {
+     "shape": "cyl",
+     "x": 9.5,
+     "y": 89.5,
+     "w": 5,
+     "fill": "#7E868C"
     }
    ]
   },
   {
-   "id": "griff",
+   "id": "schale_unten",
    "component_id": "knife_handle",
    "material_id": "pp",
-   "name": "Kunststoffgriff",
-   "short": "Griff",
+   "name": "Griffschale unten",
+   "short": "Schale unten",
    "shape": "box",
    "x": 1,
-   "y": 204,
+   "y": 206,
    "w": 23,
-   "d": 116,
+   "d": 114,
    "z": 0,
-   "h": 20,
+   "h": 9,
    "r": 9,
    "explode": [
-    45,
+    38,
     0,
     0
    ],
-   "mass": 32.4,
+   "mass": 16.6,
    "materials": [
     [
      "pp",
      100
     ]
    ],
-   "info": "Polypropylen, direkt um die Angel gespritzt. Abtrennen nur mit einer Säge, sonst das ganze Messer zum Wertstoffhof bringen.",
+   "info": "Das Gegenstück auf der anderen Seite der Angel. Beide Schalen sind aus demselben Kunststoff.",
    "color": "#2E3338",
    "marks": [
     {
      "shape": "box",
      "x": 4,
-     "y": 10,
+     "y": 4,
      "w": 15,
-     "d": 96,
+     "d": 106,
      "r": 6,
      "fill": "#3E444A"
+    },
+    {
+     "shape": "cyl",
+     "x": 9.5,
+     "y": 13,
+     "w": 6,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "cyl",
+     "x": 9.5,
+     "y": 51,
+     "w": 6,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "cyl",
+     "x": 9.5,
+     "y": 89,
+     "w": 6,
+     "fill": "#1E2226"
     }
    ]
   }

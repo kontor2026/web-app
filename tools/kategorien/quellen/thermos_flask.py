@@ -20,12 +20,18 @@ teile = [
          x=0, y=0, w=75, z=205, h=65, mass=45,
          info='Polypropylen-Becher, wird über den Hals geschraubt und dient unterwegs als Tasse. Kunststoffteile '
               'abschrauben und getrennt entsorgen.',
-         color=PP, marks=[mark('cyl', 4, 4, 67, fill='#3E444A')]),
+         color=PP, marks=[mark('cyl', 4, 4, 67, fill='#3E444A'), mark('cyl', 14, 14, 47, fill='#353A40'),
+                          mark('cyl', 30, 30, 15, fill='#454B51')]),
+    teil('knopf', 'pp_lid', 'Druckknopf mit Feder', 'Druckknopf', 'cyl',
+         x=27.5, y=27.5, w=20, z=238, h=4, mass=4, materials=[['pp', 85], ['stahl', 15]],
+         info='Drückt man ihn, öffnet ein kleines Ventil den Ausguss, ohne dass man den Stopfen abschrauben muss. '
+              'Innen sitzt eine kleine Stahlfeder.',
+         color='#D9473A', marks=[mark('cyl', 4, 4, 12, fill='#E86A5E')]),
     teil('stopfen', 'pp_lid', 'Verschlussstopfen', 'Stopfen', 'cyl',
          x=16.5, y=16.5, w=42, z=212, h=26, mass=30,
          info='Schraubstopfen aus PP mit Druckknopf und Ausgießöffnung. Innen ist er hohl, damit wenig Wärme '
               'entweicht.',
-         color='#454B51', marks=[mark('cyl', 11, 11, 20, fill='#D9473A'), mark('box', 17, 2, 8, 6, 2, '#1E2226')]),
+         color='#454B51', marks=[mark('cyl', 9, 9, 24, fill='#3A3F44'), mark('box', 17, 2, 8, 6, 2, '#1E2226')]),
     teil('dichtung', 'silicone_seal', 'Silikondichtring', 'Dichtung', 'cyl',
          x=14.5, y=14.5, w=46, z=214, h=3, mass=4,
          info='Weicher Ring um den Stopfen, hält die Flasche dicht. Zum Reinigen abziehen, am Ende in den Restmüll.',
@@ -33,12 +39,12 @@ teile = [
     teil('innen_hals', 'stainless_steel_body', 'Hals der Innenflasche', 'Innenhals', 'cyl',
          x=17.5, y=17.5, w=40, z=205, h=17, explode=[100, 0, 0], mass=10, label=False,
          info='Hier sind Innenflasche und Außenmantel miteinander verschweißt. Die Öffnung hat Platz für den Stopfen.',
-         color=INNEN, marks=[mark('cyl', 3, 3, 34, fill='#8E959B')]),
+         color=INNEN, sortBias=-15, marks=[mark('cyl', 3, 3, 34, fill='#8E959B')]),
     teil('innenflasche', 'stainless_steel_body', 'Innenflasche', 'Innenflasche', 'cyl',
-         x=4, y=4, w=67, z=8, h=197, explode=[100, 0, 0], mass=160,
+         x=4, y=4, w=67, z=8, h=192, explode=[100, 0, 0], mass=160, materials=[['stahl', 98], ['kupfer', 2]],
          info='Dünnwandiger Edelstahl, außen oft verkupfert oder verspiegelt. Zwischen ihr und dem Mantel ist ein '
               'Vakuum: Ohne Luft kann kaum Wärme hindurch. Nicht aufbohren!',
-         color=INNEN),
+         color='#C27A4E', sortBias=-15),
     teil('schulter', 'stainless_steel_body', 'Schulter mit Gewinde', 'Schulter', 'cyl',
          x=9.5, y=9.5, w=56, z=200, h=12, mass=20,
          info='Gewinde, auf das der Becher geschraubt wird.', color=STAHL, label=False,
@@ -53,6 +59,6 @@ teile = [
          info='Deckt die Stelle ab, an der die Luft beim Herstellen abgesaugt und die Flasche dann verschlossen wurde.',
          color='#B5BBC0', marks=[mark('cyl', 26, 26, 20, fill='#9AA2A6')]),
 ]
-explodiere(teile, abstand=20, nach_liste=True, gruppen=[['schulter', 'mantel']])
+explodiere(teile, abstand=24, abstaende={'becher': 45}, nach_liste=True, gruppen=[['schulter', 'mantel']])
 skaliere_masse(teile, oid='thermos_flask')
 schreibe('thermos_flask', teile)

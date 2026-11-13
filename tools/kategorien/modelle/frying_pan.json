@@ -15,9 +15,9 @@
    "explode": [
     0,
     0,
-    76.2
+    170.2
    ],
-   "mass": 12.5,
+   "mass": 12.3,
    "materials": [
     [
      "ptfe",
@@ -58,9 +58,9 @@
    "explode": [
     0,
     0,
-    18.2
+    60.2
    ],
-   "mass": 125.2,
+   "mass": 123.5,
    "materials": [
     [
      "alu",
@@ -75,6 +75,48 @@
      "x": 3,
      "y": 3,
      "w": 230,
+     "fill": "#3A3A3F"
+    },
+    {
+     "shape": "cyl",
+     "x": 12,
+     "y": 12,
+     "w": 212,
+     "fill": "#333337"
+    },
+    {
+     "shape": "cyl",
+     "x": 22,
+     "y": 22,
+     "w": 192,
+     "fill": "#2B2B2E"
+    },
+    {
+     "shape": "cyl",
+     "x": 50,
+     "y": 50,
+     "w": 136,
+     "fill": "#2F2F33"
+    },
+    {
+     "shape": "cyl",
+     "x": 54,
+     "y": 54,
+     "w": 128,
+     "fill": "#2B2B2E"
+    },
+    {
+     "shape": "cyl",
+     "x": 90,
+     "y": 90,
+     "w": 56,
+     "fill": "#2F2F33"
+    },
+    {
+     "shape": "cyl",
+     "x": 94,
+     "y": 94,
+     "w": 48,
      "fill": "#2B2B2E"
     }
    ]
@@ -94,9 +136,9 @@
    "explode": [
     0,
     0,
-    18.2
+    60.2
    ],
-   "mass": 156.5,
+   "mass": 154.3,
    "materials": [
     [
      "alu",
@@ -122,9 +164,9 @@
    "explode": [
     0,
     0,
-    18.2
+    60.2
    ],
-   "mass": 167,
+   "mass": 164.6,
    "materials": [
     [
      "alu",
@@ -139,8 +181,8 @@
    "id": "boden",
    "component_id": "nonstick_pan_body",
    "material_id": "aluminium",
-   "name": "Pfannenboden",
-   "short": "Boden",
+   "name": "Pfannenkörper aus Aluminium",
+   "short": "Pfannenkörper",
    "shape": "cyl",
    "x": 18,
    "y": 18,
@@ -150,16 +192,16 @@
    "explode": [
     0,
     0,
-    18.2
+    60.2
    ],
-   "mass": 344.4,
+   "mass": 339.6,
    "materials": [
     [
      "alu",
      100
     ]
    ],
-   "info": "Dicker Aluminiumboden, etwa 4 mm stark, damit er sich beim Erhitzen nicht verzieht. Aluminium ist leicht und leitet Wärme sehr gut.",
+   "info": "Gepresstes Aluminium mit etwa 4 mm dickem Boden, damit er sich beim Erhitzen nicht verzieht. Aluminium ist leicht und leitet Wärme sehr gut.",
    "color": "#B9BEC3",
    "marks": [
     {
@@ -188,7 +230,7 @@
     0,
     0.0
    ],
-   "mass": 135.7,
+   "mass": 133.8,
    "materials": [
     [
      "stahl",
@@ -293,10 +335,10 @@
    "r": 5,
    "explode": [
     0,
-    40,
-    0
+    25,
+    60.2
    ],
-   "mass": 31.3,
+   "mass": 30.9,
    "materials": [
     [
      "alu",
@@ -323,18 +365,18 @@
    "short": "Schraube",
    "shape": "box",
    "x": 115,
-   "y": 236,
+   "y": 240,
    "w": 6,
    "d": 66,
-   "z": 33.5,
+   "z": 34,
    "h": 6,
    "r": 3,
    "explode": [
     0,
-    70,
-    25
+    80,
+    30
    ],
-   "mass": 12.5,
+   "mass": 12.3,
    "materials": [
     [
      "stahl",
@@ -356,25 +398,65 @@
    ]
   },
   {
+   "id": "huelse",
+   "component_id": "bakelite_handle",
+   "material_id": "steel",
+   "name": "Flammschutz-Hülse",
+   "short": "Hülse",
+   "shape": "box",
+   "x": 105,
+   "y": 236,
+   "w": 26,
+   "d": 12,
+   "z": 28,
+   "h": 20,
+   "r": 6,
+   "explode": [
+    0,
+    40.0,
+    0
+   ],
+   "mass": 15.4,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Edelstahlring zwischen Pfanne und Stiel. Er schützt den Kunststoff vor der Gasflamme.",
+   "color": "#C9CED2",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 3,
+     "w": 20,
+     "d": 6,
+     "r": 3,
+     "fill": "#B5BBC0"
+    }
+   ]
+  },
+  {
    "id": "stiel",
    "component_id": "bakelite_handle",
    "material_id": "phenolic_resin",
    "name": "Bakelit-Stiel",
    "short": "Stiel",
    "shape": "box",
-   "x": 104,
-   "y": 236,
-   "w": 28,
-   "d": 72,
+   "x": 106,
+   "y": 248,
+   "w": 24,
+   "d": 26,
    "z": 28,
-   "h": 22,
-   "r": 10,
+   "h": 20,
+   "r": 6,
    "explode": [
     0,
-    70,
+    80,
     0
    ],
-   "mass": 114.8,
+   "mass": 46.3,
    "materials": [
     [
      "phenolharz",
@@ -386,19 +468,61 @@
    "marks": [
     {
      "shape": "box",
-     "x": 8,
-     "y": 10,
+     "x": 6,
+     "y": 3,
      "w": 12,
-     "d": 50,
-     "r": 6,
+     "d": 22,
+     "r": 5,
+     "fill": "#2E3136"
+    }
+   ]
+  },
+  {
+   "id": "stiel_ende",
+   "component_id": "bakelite_handle",
+   "material_id": "phenolic_resin",
+   "name": "Stielende mit Aufhängeloch",
+   "short": "Stielende",
+   "shape": "box",
+   "x": 102,
+   "y": 274,
+   "w": 32,
+   "d": 34,
+   "z": 29,
+   "h": 21,
+   "r": 12,
+   "explode": [
+    0,
+    80,
+    0
+   ],
+   "mass": 66.9,
+   "materials": [
+    [
+     "phenolharz",
+     100
+    ]
+   ],
+   "info": "Das breite Ende liegt gut in der Hand. Durch das Loch kann man die Pfanne aufhängen.",
+   "color": "#1F2124",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 6,
+     "y": 0,
+     "w": 20,
+     "d": 14,
+     "r": 5,
      "fill": "#2E3136"
     },
     {
      "shape": "cyl",
-     "x": 10,
-     "y": 60,
-     "w": 8,
-     "fill": "#45494E"
+     "x": 9,
+     "y": 17,
+     "w": 14,
+     "d": 11,
+     "fill": "#EEECE5"
     }
    ]
   }
