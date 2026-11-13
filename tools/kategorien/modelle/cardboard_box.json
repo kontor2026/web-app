@@ -1,0 +1,364 @@
+{
+ "parts": [
+  {
+   "id": "etikett",
+   "component_id": "paper_label",
+   "material_id": "paper",
+   "name": "Versandetikett",
+   "short": "Etikett",
+   "shape": "box",
+   "x": 40,
+   "y": 170,
+   "w": 150,
+   "d": 100,
+   "z": 250.1,
+   "h": 0.2,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    270.1
+   ],
+   "mass": 1.7,
+   "materials": [
+    [
+     "papier",
+     90
+    ],
+    [
+     "druck",
+     10
+    ]
+   ],
+   "info": "Thermopapier mit Adresse und Barcode, selbstklebend. Darf beim Altpapier dranbleiben, Adresse vorher schwärzen oder abreißen.",
+   "color": "#F4F2EE",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 8,
+     "y": 8,
+     "w": 80,
+     "d": 6,
+     "r": 0,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 8,
+     "y": 18,
+     "w": 60,
+     "d": 6,
+     "r": 0,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 8,
+     "y": 28,
+     "w": 70,
+     "d": 6,
+     "r": 0,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 8,
+     "y": 60,
+     "w": 134,
+     "d": 30,
+     "r": 0,
+     "fill": "#22272B"
+    }
+   ]
+  },
+  {
+   "id": "klebeband_oben",
+   "component_id": "packing_tape",
+   "material_id": "pp",
+   "name": "Klebeband oben",
+   "short": "Klebeband",
+   "shape": "box",
+   "x": 0,
+   "y": 125,
+   "w": 400,
+   "d": 50,
+   "z": 250.1,
+   "h": 0.1,
+   "r": 0,
+   "explode": [
+    0,
+    0,
+    225.0
+   ],
+   "mass": 2.8,
+   "materials": [
+    [
+     "pp",
+     75
+    ],
+    [
+     "klebstoff",
+     25
+    ]
+   ],
+   "info": "PP-Folie mit Klebstoff, verschließt die Mittelfuge der Deckelklappen. Vor dem Flachfalten abziehen und in die Gelbe Tonne oder den Restmüll geben.",
+   "color": "#C8A15A",
+   "opacity": 0.85
+  },
+  {
+   "id": "klappe_hinten",
+   "component_id": "cardboard_box_body",
+   "material_id": "cardboard",
+   "name": "Deckelklappe hinten",
+   "short": "Klappe hinten",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 400,
+   "d": 150,
+   "z": 246.1,
+   "h": 4,
+   "r": 0,
+   "explode": [
+    0,
+    0,
+    180.0
+   ],
+   "mass": 53.5,
+   "materials": [
+    [
+     "papier",
+     100
+    ]
+   ],
+   "info": "Lange Außenklappe, an der Rückwand angeknickt. Die beiden Außenklappen treffen sich in der Mitte.",
+   "color": "#C49A6C"
+  },
+  {
+   "id": "klappe_vorne",
+   "component_id": "cardboard_box_body",
+   "material_id": "cardboard",
+   "name": "Deckelklappe vorne",
+   "short": "Klappe vorne",
+   "shape": "box",
+   "x": 0,
+   "y": 150,
+   "w": 400,
+   "d": 150,
+   "z": 246.1,
+   "h": 4,
+   "r": 0,
+   "explode": [
+    0,
+    0,
+    180.0
+   ],
+   "mass": 53.5,
+   "materials": [
+    [
+     "papier",
+     100
+    ]
+   ],
+   "info": "Zweite Außenklappe. Darauf kleben Band und Etikett.",
+   "color": "#C49A6C",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 160,
+     "y": 100,
+     "w": 80,
+     "d": 40,
+     "r": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 170,
+     "y": 108,
+     "w": 60,
+     "d": 24,
+     "r": 1,
+     "fill": "#C49A6C"
+    }
+   ]
+  },
+  {
+   "id": "innenklappen",
+   "component_id": "cardboard_box_body",
+   "material_id": "cardboard",
+   "name": "Innenklappen links und rechts",
+   "short": "Innenklappen",
+   "shape": "box",
+   "x": 4,
+   "y": 4,
+   "w": 392,
+   "d": 292,
+   "z": 242.1,
+   "h": 4,
+   "r": 0,
+   "explode": [
+    0,
+    0,
+    135.0
+   ],
+   "mass": 55.7,
+   "materials": [
+    [
+     "papier",
+     100
+    ]
+   ],
+   "info": "Die zwei kurzen Klappen an den Seitenwänden werden zuerst eingeklappt, die langen kommen darüber.",
+   "color": "#B98D5F",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 0,
+     "w": 150,
+     "d": 292,
+     "r": 0,
+     "fill": "#C49A6C"
+    },
+    {
+     "shape": "box",
+     "x": 242,
+     "y": 0,
+     "w": 150,
+     "d": 292,
+     "r": 0,
+     "fill": "#C49A6C"
+    }
+   ]
+  },
+  {
+   "id": "mantel",
+   "component_id": "cardboard_box_body",
+   "material_id": "cardboard",
+   "name": "Mantel aus vier Wänden",
+   "short": "Mantel",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 400,
+   "d": 300,
+   "z": 8.1,
+   "h": 234,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    90.0
+   ],
+   "mass": 211.7,
+   "materials": [
+    [
+     "papier",
+     99
+    ],
+    [
+     "druck",
+     1
+    ]
+   ],
+   "info": "Ein Zuschnitt aus Wellpappe, an einer Ecke zum Ring verklebt. Zwischen zwei glatten Lagen steckt eine gewellte, das macht den Karton leicht und stabil. Flach gefaltet ins Altpapier.",
+   "color": "#C49A6C",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 4,
+     "w": 392,
+     "d": 292,
+     "r": 0,
+     "fill": "#8E6B45"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 0,
+     "w": 4,
+     "d": 4,
+     "r": 0,
+     "fill": "#9E7A52"
+    }
+   ]
+  },
+  {
+   "id": "bodenklappen",
+   "component_id": "cardboard_box_body",
+   "material_id": "cardboard",
+   "name": "Bodenklappen",
+   "short": "Boden",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 400,
+   "d": 300,
+   "z": 0.1,
+   "h": 8,
+   "r": 0,
+   "explode": [
+    0,
+    0,
+    45.0
+   ],
+   "mass": 218.4,
+   "materials": [
+    [
+     "papier",
+     100
+    ]
+   ],
+   "info": "Unten liegen genauso zwei Innen- und zwei Außenklappen übereinander. Nach dem Aufschneiden des Bandes lässt sich der Karton flach falten.",
+   "color": "#C49A6C",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 148,
+     "w": 400,
+     "d": 4,
+     "r": 0,
+     "fill": "#8E6B45"
+    }
+   ]
+  },
+  {
+   "id": "klebeband_unten",
+   "component_id": "packing_tape",
+   "material_id": "pp",
+   "name": "Klebeband unten",
+   "short": "Band unten",
+   "shape": "box",
+   "x": 0,
+   "y": 125,
+   "w": 400,
+   "d": 50,
+   "z": 0,
+   "h": 0.1,
+   "r": 0,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 2.8,
+   "materials": [
+    [
+     "pp",
+     75
+    ],
+    [
+     "klebstoff",
+     25
+    ]
+   ],
+   "info": "Verschließt die Bodenfuge. Ebenfalls abziehen, bevor der Karton ins Altpapier kommt.",
+   "color": "#C8A15A",
+   "opacity": 0.85,
+   "label": false
+  }
+ ]
+}

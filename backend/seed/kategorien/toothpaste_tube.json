@@ -4,7 +4,7 @@
  "name_en": "Toothpaste Tube",
  "klasse": "Verpackung · Gelbe Tonne",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -31,20 +31,21 @@
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 0,02 kg",
-   "hint": "spart 0,00 kg, wenn recycelte Materialien eingesetzt werden"
+   "v": "≈ 0,01 kg",
+   "hint": "spart 0,01 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
   "metalle_mg": {},
   "herkunft": {},
   "materialien_g": {
-   "multilayer_plastic": 9.4,
-   "pp": 0.6
+   "multilayer_plastic": 5.5,
+   "pp": 2.8,
+   "hdpe": 1.7
   },
   "co2_kg": 0.021,
-  "co2_mit_recyclat_kg": 0.021,
-  "co2_ersparnis_kg": 0.001,
+  "co2_mit_recyclat_kg": 0.013,
+  "co2_ersparnis_kg": 0.008,
   "co2_ohne_faktor": [],
   "rohstoffwert_eur": 0,
   "wert_ohne_preis": [],
@@ -94,61 +95,334 @@
   "nicht": "Nicht in Restmüll oder Altpapier",
   "warnung": "Restentleert reicht, nicht ausspülen. Teile aus verschiedenen Materialien trennen."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "pp_flip_cap",
+   "id": "klappdeckel",
    "component_id": "pp_flip_cap",
-   "name": "Flip Cap",
-   "short": "Flip Cap",
-   "shape": "cyl",
-   "x": 17.6,
-   "y": 90.0,
-   "w": 9.9,
-   "h": 4.5,
-   "z": 30.0,
+   "material_id": "pp",
+   "name": "Klappdeckel",
+   "short": "Klappdeckel",
+   "shape": "box",
+   "x": 4.5,
+   "y": 0,
+   "w": 36,
+   "d": 18,
+   "z": 0,
+   "h": 30,
+   "r": 8,
    "explode": [
     0,
-    0,
-    47.0
+    -65,
+    0
    ],
-   "mass": 0.57,
+   "mass": 2.8,
    "materials": [
     [
      "pp",
      100
     ]
    ],
-   "material_id": "pp",
-   "info": "Unscrew it from the bottle or tube."
+   "info": "PP-Klappdeckel, auf den Tubenkopf geschraubt. Darauf kann die Tube stehen. Er darf an der Tube bleiben, beides kommt in die Gelbe Tonne.",
+   "color": "#F4F4F2",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 13,
+     "w": 28,
+     "d": 3,
+     "r": 1.5,
+     "fill": "#D9D9D4"
+    },
+    {
+     "shape": "box",
+     "x": 12,
+     "y": 2,
+     "w": 12,
+     "d": 4,
+     "r": 2,
+     "fill": "#D9D9D4"
+    }
+   ]
   },
   {
-   "id": "toothpaste_tube_body",
+   "id": "tubenkopf",
    "component_id": "toothpaste_tube_body",
-   "name": "Tube",
-   "short": "Tube",
+   "material_id": "hdpe",
+   "name": "Tubenkopf mit Schulter und Gewinde",
+   "short": "Tubenkopf",
    "shape": "box",
-   "x": 0,
-   "y": 0,
-   "w": 45.0,
-   "d": 190.0,
-   "h": 30.0,
-   "z": 0.0,
-   "r": 5.4,
+   "x": 6.5,
+   "y": 18,
+   "w": 32,
+   "d": 14,
+   "z": 2,
+   "h": 26,
+   "r": 10,
+   "explode": [
+    0,
+    -30,
+    0
+   ],
+   "mass": 1.7,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "Gespritzter Kopf aus HDPE mit der kleinen Austrittsöffnung, an den Schlauch angeschweißt. Er lässt sich nicht abtrennen.",
+   "color": "#E9E9E4",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 11,
+     "y": 2,
+     "w": 10,
+     "d": 10,
+     "fill": "#D0D0CA"
+    }
+   ]
+  },
+  {
+   "id": "schlauch_vorn",
+   "component_id": "toothpaste_tube_body",
+   "material_id": "multilayer_plastic",
+   "name": "Tubenschlauch (rund)",
+   "short": "Schlauch",
+   "shape": "box",
+   "x": 3,
+   "y": 32,
+   "w": 39,
+   "d": 60,
+   "z": 2,
+   "h": 26,
+   "r": 12,
    "explode": [
     0,
     0,
     0
    ],
-   "mass": 9.43,
+   "mass": 2.1,
    "materials": [
     [
-     "folien",
-     100
+     "verbundfolie",
+     90
+    ],
+    [
+     "alu",
+     7
+    ],
+    [
+     "druck",
+     3
     ]
    ],
+   "info": "Mehrschichtfolie aus Polyethylen, oft mit einer dünnen Aluminiumschicht gegen Austrocknen. Leer drücken reicht, ausspülen ist nicht nötig.",
+   "color": "#FFFFFF",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 6,
+     "w": 31,
+     "d": 22,
+     "r": 4,
+     "fill": "#2F6DB5"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 34,
+     "w": 31,
+     "d": 10,
+     "r": 3,
+     "fill": "#C8423A"
+    }
+   ]
+  },
+  {
+   "id": "schlauch_mitte",
+   "component_id": "toothpaste_tube_body",
    "material_id": "multilayer_plastic",
-   "info": "Squeeze it empty; there is no need to rinse it."
+   "name": "Tubenschlauch (flacher)",
+   "short": "Schlauch Mitte",
+   "shape": "box",
+   "x": 1.5,
+   "y": 92,
+   "w": 42,
+   "d": 58,
+   "z": 6,
+   "h": 18,
+   "r": 10,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 1.9,
+   "materials": [
+    [
+     "verbundfolie",
+     90
+    ],
+    [
+     "alu",
+     7
+    ],
+    [
+     "druck",
+     3
+    ]
+   ],
+   "info": "Zum Ende hin wird der Schlauch flacher. Von hinten nach vorne aufrollen, dann kommt auch der Rest heraus.",
+   "color": "#FFFFFF",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 6,
+     "w": 34,
+     "d": 40,
+     "r": 6,
+     "fill": "#2F6DB5"
+    },
+    {
+     "shape": "box",
+     "x": 6,
+     "y": 50,
+     "w": 30,
+     "d": 4,
+     "r": 1,
+     "fill": "#8E969A"
+    }
+   ]
+  },
+  {
+   "id": "schlauch_ende",
+   "component_id": "toothpaste_tube_body",
+   "material_id": "multilayer_plastic",
+   "name": "Tubenschlauch (flach)",
+   "short": "Schlauch Ende",
+   "shape": "box",
+   "x": 0.5,
+   "y": 150,
+   "w": 44,
+   "d": 27,
+   "z": 10,
+   "h": 10,
+   "r": 6,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 0.9,
+   "materials": [
+    [
+     "verbundfolie",
+     90
+    ],
+    [
+     "alu",
+     7
+    ],
+    [
+     "druck",
+     3
+    ]
+   ],
+   "info": "Fast flach gedrückt. Die Farbstreifen dienen der Maschine als Markierung zum Abfüllen.",
+   "color": "#FFFFFF",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 4,
+     "w": 36,
+     "d": 14,
+     "r": 4,
+     "fill": "#2F6DB5"
+    },
+    {
+     "shape": "box",
+     "x": 36,
+     "y": 20,
+     "w": 5,
+     "d": 5,
+     "r": 0,
+     "fill": "#22272B"
+    }
+   ]
+  },
+  {
+   "id": "endnaht",
+   "component_id": "toothpaste_tube_body",
+   "material_id": "multilayer_plastic",
+   "name": "Gepresste Endnaht",
+   "short": "Endnaht",
+   "shape": "box",
+   "x": 0,
+   "y": 177,
+   "w": 45,
+   "d": 13,
+   "z": 14,
+   "h": 2,
+   "r": 0,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 0.6,
+   "materials": [
+    [
+     "verbundfolie",
+     90
+    ],
+    [
+     "alu",
+     7
+    ],
+    [
+     "druck",
+     3
+    ]
+   ],
+   "info": "Nach dem Befüllen von hinten heiß zusammengepresst. Darin ist das Herstelldatum geprägt.",
+   "color": "#ECECE8",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 2,
+     "w": 41,
+     "d": 1,
+     "r": 0,
+     "fill": "#C9C9C2"
+    },
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 5,
+     "w": 41,
+     "d": 1,
+     "r": 0,
+     "fill": "#C9C9C2"
+    },
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 8,
+     "w": 41,
+     "d": 1,
+     "r": 0,
+     "fill": "#C9C9C2"
+    }
+   ]
   }
  ]
 }

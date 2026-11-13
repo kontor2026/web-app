@@ -4,7 +4,7 @@
  "name_en": "Cardboard Box",
  "klasse": "Verpackung · Papier",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -26,26 +26,26 @@
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 0,48 kg",
+   "v": "≈ 0,46 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 0,43 kg",
-   "hint": "spart 0,05 kg, wenn recycelte Materialien eingesetzt werden"
+   "v": "≈ 0,45 kg",
+   "hint": "spart 0,01 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
   "metalle_mg": {},
   "herkunft": {},
   "materialien_g": {
-   "cardboard": 535.7,
-   "pp": 32.1,
-   "paper": 32.1
+   "cardboard": 592.8,
+   "pp": 5.6,
+   "paper": 1.7
   },
-  "co2_kg": 0.482,
-  "co2_mit_recyclat_kg": 0.429,
-  "co2_ersparnis_kg": 0.053,
+  "co2_kg": 0.464,
+  "co2_mit_recyclat_kg": 0.454,
+  "co2_ersparnis_kg": 0.009,
   "co2_ohne_faktor": [],
   "rohstoffwert_eur": 0,
   "wert_ohne_preis": [],
@@ -95,91 +95,367 @@
   "nicht": "Nicht in Restmüll, wenn sauber",
   "warnung": "Kartons flach falten. Stark verschmutzte Teile in den Restmüll."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "packing_tape",
-   "component_id": "packing_tape",
-   "name": "Packing Tape",
-   "short": "Packing Tape",
+   "id": "etikett",
+   "component_id": "paper_label",
+   "material_id": "paper",
+   "name": "Versandetikett",
+   "short": "Etikett",
    "shape": "box",
-   "x": 404.0,
-   "y": 60.0,
-   "w": 12.0,
-   "d": 180.0,
-   "h": 150.0,
-   "z": 50.0,
-   "r": 1.4,
+   "x": 40,
+   "y": 170,
+   "w": 150,
+   "d": 100,
+   "z": 250.1,
+   "h": 0.2,
+   "r": 1,
    "explode": [
-    155.0,
     0,
-    42.0
+    0,
+    270.1
    ],
-   "mass": 32.14,
+   "mass": 1.7,
+   "materials": [
+    [
+     "papier",
+     90
+    ],
+    [
+     "druck",
+     10
+    ]
+   ],
+   "info": "Thermopapier mit Adresse und Barcode, selbstklebend. Darf beim Altpapier dranbleiben, Adresse vorher schwärzen oder abreißen.",
+   "color": "#F4F2EE",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 8,
+     "y": 8,
+     "w": 80,
+     "d": 6,
+     "r": 0,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 8,
+     "y": 18,
+     "w": 60,
+     "d": 6,
+     "r": 0,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 8,
+     "y": 28,
+     "w": 70,
+     "d": 6,
+     "r": 0,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 8,
+     "y": 60,
+     "w": 134,
+     "d": 30,
+     "r": 0,
+     "fill": "#22272B"
+    }
+   ]
+  },
+  {
+   "id": "klebeband_oben",
+   "component_id": "packing_tape",
+   "material_id": "pp",
+   "name": "Klebeband oben",
+   "short": "Klebeband",
+   "shape": "box",
+   "x": 0,
+   "y": 125,
+   "w": 400,
+   "d": 50,
+   "z": 250.1,
+   "h": 0.1,
+   "r": 0,
+   "explode": [
+    0,
+    0,
+    225.0
+   ],
+   "mass": 2.8,
    "materials": [
     [
      "pp",
-     100
-    ]
-   ],
-   "material_id": "pp",
-   "info": "Peel it off before flattening the box."
-  },
-  {
-   "id": "paper_label",
-   "component_id": "paper_label",
-   "name": "Paper Label",
-   "short": "Paper Label",
-   "shape": "box",
-   "x": 407.0,
-   "y": 60.0,
-   "w": 12.0,
-   "d": 180.0,
-   "h": 150.0,
-   "z": 50.0,
-   "r": 1.4,
-   "explode": [
-    215.0,
-    0,
-    42.0
-   ],
-   "mass": 32.14,
-   "materials": [
+     75
+    ],
     [
-     "papier",
-     100
+     "klebstoff",
+     25
     ]
    ],
-   "material_id": "paper",
-   "info": "Soak in warm water to peel it off; leaving it on is usually fine."
+   "info": "PP-Folie mit Klebstoff, verschließt die Mittelfuge der Deckelklappen. Vor dem Flachfalten abziehen und in die Gelbe Tonne oder den Restmüll geben.",
+   "color": "#C8A15A",
+   "opacity": 0.85
   },
   {
-   "id": "cardboard_box_body",
+   "id": "klappe_hinten",
    "component_id": "cardboard_box_body",
-   "name": "Box",
-   "short": "Box",
+   "material_id": "cardboard",
+   "name": "Deckelklappe hinten",
+   "short": "Klappe hinten",
    "shape": "box",
    "x": 0,
    "y": 0,
-   "w": 400.0,
-   "d": 300.0,
-   "h": 250.0,
-   "z": 0.0,
-   "r": 36.0,
+   "w": 400,
+   "d": 150,
+   "z": 246.1,
+   "h": 4,
+   "r": 0,
    "explode": [
     0,
     0,
-    0
+    180.0
    ],
-   "mass": 535.71,
+   "mass": 53.5,
    "materials": [
     [
      "papier",
      100
     ]
    ],
+   "info": "Lange Außenklappe, an der Rückwand angeknickt. Die beiden Außenklappen treffen sich in der Mitte.",
+   "color": "#C49A6C"
+  },
+  {
+   "id": "klappe_vorne",
+   "component_id": "cardboard_box_body",
    "material_id": "cardboard",
-   "info": "Flatten it; tear off heavily greasy or food-soiled parts first."
+   "name": "Deckelklappe vorne",
+   "short": "Klappe vorne",
+   "shape": "box",
+   "x": 0,
+   "y": 150,
+   "w": 400,
+   "d": 150,
+   "z": 246.1,
+   "h": 4,
+   "r": 0,
+   "explode": [
+    0,
+    0,
+    180.0
+   ],
+   "mass": 53.5,
+   "materials": [
+    [
+     "papier",
+     100
+    ]
+   ],
+   "info": "Zweite Außenklappe. Darauf kleben Band und Etikett.",
+   "color": "#C49A6C",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 160,
+     "y": 100,
+     "w": 80,
+     "d": 40,
+     "r": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 170,
+     "y": 108,
+     "w": 60,
+     "d": 24,
+     "r": 1,
+     "fill": "#C49A6C"
+    }
+   ]
+  },
+  {
+   "id": "innenklappen",
+   "component_id": "cardboard_box_body",
+   "material_id": "cardboard",
+   "name": "Innenklappen links und rechts",
+   "short": "Innenklappen",
+   "shape": "box",
+   "x": 4,
+   "y": 4,
+   "w": 392,
+   "d": 292,
+   "z": 242.1,
+   "h": 4,
+   "r": 0,
+   "explode": [
+    0,
+    0,
+    135.0
+   ],
+   "mass": 55.7,
+   "materials": [
+    [
+     "papier",
+     100
+    ]
+   ],
+   "info": "Die zwei kurzen Klappen an den Seitenwänden werden zuerst eingeklappt, die langen kommen darüber.",
+   "color": "#B98D5F",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 0,
+     "w": 150,
+     "d": 292,
+     "r": 0,
+     "fill": "#C49A6C"
+    },
+    {
+     "shape": "box",
+     "x": 242,
+     "y": 0,
+     "w": 150,
+     "d": 292,
+     "r": 0,
+     "fill": "#C49A6C"
+    }
+   ]
+  },
+  {
+   "id": "mantel",
+   "component_id": "cardboard_box_body",
+   "material_id": "cardboard",
+   "name": "Mantel aus vier Wänden",
+   "short": "Mantel",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 400,
+   "d": 300,
+   "z": 8.1,
+   "h": 234,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    90.0
+   ],
+   "mass": 211.7,
+   "materials": [
+    [
+     "papier",
+     99
+    ],
+    [
+     "druck",
+     1
+    ]
+   ],
+   "info": "Ein Zuschnitt aus Wellpappe, an einer Ecke zum Ring verklebt. Zwischen zwei glatten Lagen steckt eine gewellte, das macht den Karton leicht und stabil. Flach gefaltet ins Altpapier.",
+   "color": "#C49A6C",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 4,
+     "w": 392,
+     "d": 292,
+     "r": 0,
+     "fill": "#8E6B45"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 0,
+     "w": 4,
+     "d": 4,
+     "r": 0,
+     "fill": "#9E7A52"
+    }
+   ]
+  },
+  {
+   "id": "bodenklappen",
+   "component_id": "cardboard_box_body",
+   "material_id": "cardboard",
+   "name": "Bodenklappen",
+   "short": "Boden",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 400,
+   "d": 300,
+   "z": 0.1,
+   "h": 8,
+   "r": 0,
+   "explode": [
+    0,
+    0,
+    45.0
+   ],
+   "mass": 218.4,
+   "materials": [
+    [
+     "papier",
+     100
+    ]
+   ],
+   "info": "Unten liegen genauso zwei Innen- und zwei Außenklappen übereinander. Nach dem Aufschneiden des Bandes lässt sich der Karton flach falten.",
+   "color": "#C49A6C",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 148,
+     "w": 400,
+     "d": 4,
+     "r": 0,
+     "fill": "#8E6B45"
+    }
+   ]
+  },
+  {
+   "id": "klebeband_unten",
+   "component_id": "packing_tape",
+   "material_id": "pp",
+   "name": "Klebeband unten",
+   "short": "Band unten",
+   "shape": "box",
+   "x": 0,
+   "y": 125,
+   "w": 400,
+   "d": 50,
+   "z": 0,
+   "h": 0.1,
+   "r": 0,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 2.8,
+   "materials": [
+    [
+     "pp",
+     75
+    ],
+    [
+     "klebstoff",
+     25
+    ]
+   ],
+   "info": "Verschließt die Bodenfuge. Ebenfalls abziehen, bevor der Karton ins Altpapier kommt.",
+   "color": "#C8A15A",
+   "opacity": 0.85,
+   "label": false
   }
  ]
 }

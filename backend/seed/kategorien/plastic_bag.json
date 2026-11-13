@@ -4,7 +4,7 @@
  "name_en": "Plastic Bag",
  "klasse": "Verpackung · Gelbe Tonne",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -39,7 +39,7 @@
   "metalle_mg": {},
   "herkunft": {},
   "materialien_g": {
-   "ldpe": 20.0
+   "ldpe": 20.1
   },
   "co2_kg": 0.043,
   "co2_mit_recyclat_kg": 0.006,
@@ -93,35 +93,284 @@
   "nicht": "Nicht in Restmüll oder Altpapier",
   "warnung": "Restentleert reicht, nicht ausspülen. Teile aus verschiedenen Materialien trennen."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "ldpe_film",
+   "id": "vorderlage",
    "component_id": "ldpe_film",
-   "name": "Film",
-   "short": "Film",
+   "material_id": "ldpe",
+   "name": "Vorderlage mit Aufdruck",
+   "short": "Vorderlage",
    "shape": "box",
    "x": 0,
-   "y": 0,
-   "w": 300.0,
-   "d": 450.0,
-   "h": 3.0,
-   "z": 0.0,
-   "r": 36.0,
+   "y": 80,
+   "w": 300,
+   "d": 370,
+   "z": 2,
+   "h": 1,
+   "r": 2,
    "explode": [
     0,
     0,
-    0
+    200.0
    ],
-   "mass": 20.0,
+   "mass": 7.5,
+   "materials": [
+    [
+     "ldpe",
+     98
+    ],
+    [
+     "druck",
+     2
+    ]
+   ],
+   "info": "Etwa 0,03 mm dünne LDPE-Folie (Recyclingcode 4). Der Aufdruck ist nur Farbe auf der Folie und stört beim Recycling kaum.",
+   "color": "#EDEDE8",
+   "opacity": 0.85,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 90,
+     "y": 110,
+     "w": 120,
+     "fill": "#2F8A4E"
+    },
+    {
+     "shape": "box",
+     "x": 70,
+     "y": 250,
+     "w": 160,
+     "d": 20,
+     "r": 4,
+     "fill": "#2F8A4E"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 358,
+     "w": 300,
+     "d": 8,
+     "r": 0,
+     "fill": "#D4D4CE"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 0,
+     "w": 300,
+     "d": 4,
+     "r": 0,
+     "fill": "#D4D4CE"
+    }
+   ]
+  },
+  {
+   "id": "falte_links",
+   "component_id": "ldpe_film",
+   "material_id": "ldpe",
+   "name": "Seitenfalte links",
+   "short": "Seitenfalte",
+   "shape": "box",
+   "x": 0,
+   "y": 80,
+   "w": 50,
+   "d": 370,
+   "z": 1,
+   "h": 1,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    100.0
+   ],
+   "mass": 1.6,
    "materials": [
     [
      "ldpe",
      100
     ]
    ],
+   "info": "Nach innen gefaltete Seitenwand, damit die Tüte voll gepackt breiter wird.",
+   "color": "#E2E2DC",
+   "opacity": 0.85,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 24,
+     "y": 0,
+     "w": 2,
+     "d": 370,
+     "r": 0,
+     "fill": "#C9C9C2"
+    }
+   ]
+  },
+  {
+   "id": "falte_rechts",
+   "component_id": "ldpe_film",
    "material_id": "ldpe",
-   "info": "Empty it and fold or ball it up loosely."
+   "name": "Seitenfalte rechts",
+   "short": "Seitenfalte",
+   "shape": "box",
+   "x": 250,
+   "y": 80,
+   "w": 50,
+   "d": 370,
+   "z": 1,
+   "h": 1,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    100.0
+   ],
+   "mass": 1.6,
+   "materials": [
+    [
+     "ldpe",
+     100
+    ]
+   ],
+   "info": "Gegenstück zur linken Seitenfalte.",
+   "color": "#E2E2DC",
+   "opacity": 0.85,
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 24,
+     "y": 0,
+     "w": 2,
+     "d": 370,
+     "r": 0,
+     "fill": "#C9C9C2"
+    }
+   ]
+  },
+  {
+   "id": "ruecklage",
+   "component_id": "ldpe_film",
+   "material_id": "ldpe",
+   "name": "Rücklage mit Bodennaht",
+   "short": "Rücklage",
+   "shape": "box",
+   "x": 0,
+   "y": 80,
+   "w": 300,
+   "d": 370,
+   "z": 0,
+   "h": 1,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 7,
+   "materials": [
+    [
+     "ldpe",
+     100
+    ]
+   ],
+   "info": "Hinten und vorne sind unten heiß verschweißt. Leere Tüten lieber wiederverwenden, kaputte locker in die Gelbe Tonne geben.",
+   "color": "#EDEDE8",
+   "opacity": 0.9,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 358,
+     "w": 300,
+     "d": 8,
+     "r": 0,
+     "fill": "#D4D4CE"
+    }
+   ]
+  },
+  {
+   "id": "griff_links",
+   "component_id": "ldpe_film",
+   "material_id": "ldpe",
+   "name": "Griffschlaufe links",
+   "short": "Griff",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 70,
+   "d": 80,
+   "z": 0,
+   "h": 3,
+   "r": 10,
+   "explode": [
+    0,
+    -50,
+    0
+   ],
+   "mass": 1.2,
+   "materials": [
+    [
+     "ldpe",
+     100
+    ]
+   ],
+   "info": "Henkel aus derselben Folie, beim Ausstanzen der Griffmulde entstanden. Hier reißen Tüten am häufigsten ein.",
+   "color": "#EDEDE8",
+   "opacity": 0.85,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 0,
+     "w": 70,
+     "d": 6,
+     "r": 3,
+     "fill": "#D4D4CE"
+    }
+   ]
+  },
+  {
+   "id": "griff_rechts",
+   "component_id": "ldpe_film",
+   "material_id": "ldpe",
+   "name": "Griffschlaufe rechts",
+   "short": "Griff",
+   "shape": "box",
+   "x": 230,
+   "y": 0,
+   "w": 70,
+   "d": 80,
+   "z": 0,
+   "h": 3,
+   "r": 10,
+   "explode": [
+    0,
+    -50,
+    0
+   ],
+   "mass": 1.2,
+   "materials": [
+    [
+     "ldpe",
+     100
+    ]
+   ],
+   "info": "Gegenstück zur linken Schlaufe.",
+   "color": "#EDEDE8",
+   "opacity": 0.85,
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 0,
+     "w": 70,
+     "d": 6,
+     "r": 3,
+     "fill": "#D4D4CE"
+    }
+   ]
   }
  ]
 }

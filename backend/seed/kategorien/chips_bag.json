@@ -4,7 +4,7 @@
  "name_en": "Chips Bag",
  "klasse": "Verpackung · Gelbe Tonne",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -93,35 +93,655 @@
   "nicht": "Nicht in Restmüll oder Altpapier",
   "warnung": "Restentleert reicht, nicht ausspülen. Teile aus verschiedenen Materialien trennen."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "multilayer_film",
+   "id": "kopfnaht",
    "component_id": "multilayer_film",
-   "name": "Bag",
-   "short": "Bag",
+   "material_id": "multilayer_plastic",
+   "name": "Kopfnaht (Aufreißkante)",
+   "short": "Kopfnaht",
    "shape": "box",
    "x": 0,
    "y": 0,
-   "w": 200.0,
-   "d": 280.0,
-   "h": 30.0,
-   "z": 0.0,
-   "r": 24.0,
+   "w": 200,
+   "d": 15,
+   "z": 14,
+   "h": 2,
+   "r": 0,
    "explode": [
     0,
     0,
-    0
+    90.0
    ],
-   "mass": 8.0,
+   "mass": 0.7,
    "materials": [
     [
-     "folien",
-     100
+     "verbundfolie",
+     97
+    ],
+    [
+     "druck",
+     2
+    ],
+    [
+     "alu",
+     1
     ]
    ],
+   "info": "Beide Folienlagen sind hier heiß verschweißt. Die Zacken helfen beim Aufreißen.",
+   "color": "#D8342C",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 2,
+     "w": 4,
+     "d": 11,
+     "fill": "#A82822"
+    },
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 2,
+     "w": 4,
+     "d": 11,
+     "fill": "#A82822"
+    },
+    {
+     "shape": "box",
+     "x": 18,
+     "y": 2,
+     "w": 4,
+     "d": 11,
+     "fill": "#A82822"
+    },
+    {
+     "shape": "box",
+     "x": 26,
+     "y": 2,
+     "w": 4,
+     "d": 11,
+     "fill": "#A82822"
+    },
+    {
+     "shape": "box",
+     "x": 34,
+     "y": 2,
+     "w": 4,
+     "d": 11,
+     "fill": "#A82822"
+    },
+    {
+     "shape": "box",
+     "x": 42,
+     "y": 2,
+     "w": 4,
+     "d": 11,
+     "fill": "#A82822"
+    },
+    {
+     "shape": "box",
+     "x": 50,
+     "y": 2,
+     "w": 4,
+     "d": 11,
+     "fill": "#A82822"
+    },
+    {
+     "shape": "box",
+     "x": 58,
+     "y": 2,
+     "w": 4,
+     "d": 11,
+     "fill": "#A82822"
+    },
+    {
+     "shape": "box",
+     "x": 66,
+     "y": 2,
+     "w": 4,
+     "d": 11,
+     "fill": "#A82822"
+    },
+    {
+     "shape": "box",
+     "x": 74,
+     "y": 2,
+     "w": 4,
+     "d": 11,
+     "fill": "#A82822"
+    },
+    {
+     "shape": "box",
+     "x": 82,
+     "y": 2,
+     "w": 4,
+     "d": 11,
+     "fill": "#A82822"
+    },
+    {
+     "shape": "box",
+     "x": 90,
+     "y": 2,
+     "w": 4,
+     "d": 11,
+     "fill": "#A82822"
+    },
+    {
+     "shape": "box",
+     "x": 98,
+     "y": 2,
+     "w": 4,
+     "d": 11,
+     "fill": "#A82822"
+    },
+    {
+     "shape": "box",
+     "x": 106,
+     "y": 2,
+     "w": 4,
+     "d": 11,
+     "fill": "#A82822"
+    },
+    {
+     "shape": "box",
+     "x": 114,
+     "y": 2,
+     "w": 4,
+     "d": 11,
+     "fill": "#A82822"
+    },
+    {
+     "shape": "box",
+     "x": 122,
+     "y": 2,
+     "w": 4,
+     "d": 11,
+     "fill": "#A82822"
+    },
+    {
+     "shape": "box",
+     "x": 130,
+     "y": 2,
+     "w": 4,
+     "d": 11,
+     "fill": "#A82822"
+    },
+    {
+     "shape": "box",
+     "x": 138,
+     "y": 2,
+     "w": 4,
+     "d": 11,
+     "fill": "#A82822"
+    },
+    {
+     "shape": "box",
+     "x": 146,
+     "y": 2,
+     "w": 4,
+     "d": 11,
+     "fill": "#A82822"
+    },
+    {
+     "shape": "box",
+     "x": 154,
+     "y": 2,
+     "w": 4,
+     "d": 11,
+     "fill": "#A82822"
+    },
+    {
+     "shape": "box",
+     "x": 162,
+     "y": 2,
+     "w": 4,
+     "d": 11,
+     "fill": "#A82822"
+    },
+    {
+     "shape": "box",
+     "x": 170,
+     "y": 2,
+     "w": 4,
+     "d": 11,
+     "fill": "#A82822"
+    },
+    {
+     "shape": "box",
+     "x": 178,
+     "y": 2,
+     "w": 4,
+     "d": 11,
+     "fill": "#A82822"
+    },
+    {
+     "shape": "box",
+     "x": 186,
+     "y": 2,
+     "w": 4,
+     "d": 11,
+     "fill": "#A82822"
+    },
+    {
+     "shape": "box",
+     "x": 194,
+     "y": 2,
+     "w": 4,
+     "d": 11,
+     "fill": "#A82822"
+    }
+   ]
+  },
+  {
+   "id": "vorderseite",
+   "component_id": "multilayer_film",
    "material_id": "multilayer_plastic",
-   "info": "Shake it empty; the metallised layer cannot be separated."
+   "name": "Vorderseite (bedruckt)",
+   "short": "Vorderseite",
+   "shape": "box",
+   "x": 0,
+   "y": 15,
+   "w": 200,
+   "d": 250,
+   "z": 15,
+   "h": 15,
+   "r": 20,
+   "explode": [
+    0,
+    0,
+    90.0
+   ],
+   "mass": 3.3,
+   "materials": [
+    [
+     "verbundfolie",
+     97
+    ],
+    [
+     "druck",
+     2
+    ],
+    [
+     "alu",
+     1
+    ]
+   ],
+   "info": "Mehrschichtfolie aus Polypropylen, innen hauchdünn mit Aluminium bedampft. Die Schichten lassen sich nicht trennen. Tüte ausschütteln und in die Gelbe Tonne geben.",
+   "color": "#D8342C",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 30,
+     "y": 50,
+     "w": 140,
+     "d": 110,
+     "fill": "#E3B23C"
+    },
+    {
+     "shape": "box",
+     "x": 25,
+     "y": 175,
+     "w": 150,
+     "d": 26,
+     "r": 6,
+     "fill": "#FFFFFF"
+    },
+    {
+     "shape": "box",
+     "x": 60,
+     "y": 212,
+     "w": 80,
+     "d": 14,
+     "r": 4,
+     "fill": "#7A1B17"
+    }
+   ]
+  },
+  {
+   "id": "bodennaht",
+   "component_id": "multilayer_film",
+   "material_id": "multilayer_plastic",
+   "name": "Bodennaht",
+   "short": "Bodennaht",
+   "shape": "box",
+   "x": 0,
+   "y": 265,
+   "w": 200,
+   "d": 15,
+   "z": 14,
+   "h": 2,
+   "r": 0,
+   "explode": [
+    0,
+    0,
+    90.0
+   ],
+   "mass": 0.7,
+   "materials": [
+    [
+     "verbundfolie",
+     97
+    ],
+    [
+     "druck",
+     2
+    ],
+    [
+     "alu",
+     1
+    ]
+   ],
+   "info": "Zweite Quernaht. Sie wird erst verschweißt, wenn Chips und Stickstoff in der Tüte sind.",
+   "color": "#D8342C",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 2,
+     "w": 4,
+     "d": 11,
+     "fill": "#A82822"
+    },
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 2,
+     "w": 4,
+     "d": 11,
+     "fill": "#A82822"
+    },
+    {
+     "shape": "box",
+     "x": 18,
+     "y": 2,
+     "w": 4,
+     "d": 11,
+     "fill": "#A82822"
+    },
+    {
+     "shape": "box",
+     "x": 26,
+     "y": 2,
+     "w": 4,
+     "d": 11,
+     "fill": "#A82822"
+    },
+    {
+     "shape": "box",
+     "x": 34,
+     "y": 2,
+     "w": 4,
+     "d": 11,
+     "fill": "#A82822"
+    },
+    {
+     "shape": "box",
+     "x": 42,
+     "y": 2,
+     "w": 4,
+     "d": 11,
+     "fill": "#A82822"
+    },
+    {
+     "shape": "box",
+     "x": 50,
+     "y": 2,
+     "w": 4,
+     "d": 11,
+     "fill": "#A82822"
+    },
+    {
+     "shape": "box",
+     "x": 58,
+     "y": 2,
+     "w": 4,
+     "d": 11,
+     "fill": "#A82822"
+    },
+    {
+     "shape": "box",
+     "x": 66,
+     "y": 2,
+     "w": 4,
+     "d": 11,
+     "fill": "#A82822"
+    },
+    {
+     "shape": "box",
+     "x": 74,
+     "y": 2,
+     "w": 4,
+     "d": 11,
+     "fill": "#A82822"
+    },
+    {
+     "shape": "box",
+     "x": 82,
+     "y": 2,
+     "w": 4,
+     "d": 11,
+     "fill": "#A82822"
+    },
+    {
+     "shape": "box",
+     "x": 90,
+     "y": 2,
+     "w": 4,
+     "d": 11,
+     "fill": "#A82822"
+    },
+    {
+     "shape": "box",
+     "x": 98,
+     "y": 2,
+     "w": 4,
+     "d": 11,
+     "fill": "#A82822"
+    },
+    {
+     "shape": "box",
+     "x": 106,
+     "y": 2,
+     "w": 4,
+     "d": 11,
+     "fill": "#A82822"
+    },
+    {
+     "shape": "box",
+     "x": 114,
+     "y": 2,
+     "w": 4,
+     "d": 11,
+     "fill": "#A82822"
+    },
+    {
+     "shape": "box",
+     "x": 122,
+     "y": 2,
+     "w": 4,
+     "d": 11,
+     "fill": "#A82822"
+    },
+    {
+     "shape": "box",
+     "x": 130,
+     "y": 2,
+     "w": 4,
+     "d": 11,
+     "fill": "#A82822"
+    },
+    {
+     "shape": "box",
+     "x": 138,
+     "y": 2,
+     "w": 4,
+     "d": 11,
+     "fill": "#A82822"
+    },
+    {
+     "shape": "box",
+     "x": 146,
+     "y": 2,
+     "w": 4,
+     "d": 11,
+     "fill": "#A82822"
+    },
+    {
+     "shape": "box",
+     "x": 154,
+     "y": 2,
+     "w": 4,
+     "d": 11,
+     "fill": "#A82822"
+    },
+    {
+     "shape": "box",
+     "x": 162,
+     "y": 2,
+     "w": 4,
+     "d": 11,
+     "fill": "#A82822"
+    },
+    {
+     "shape": "box",
+     "x": 170,
+     "y": 2,
+     "w": 4,
+     "d": 11,
+     "fill": "#A82822"
+    },
+    {
+     "shape": "box",
+     "x": 178,
+     "y": 2,
+     "w": 4,
+     "d": 11,
+     "fill": "#A82822"
+    },
+    {
+     "shape": "box",
+     "x": 186,
+     "y": 2,
+     "w": 4,
+     "d": 11,
+     "fill": "#A82822"
+    },
+    {
+     "shape": "box",
+     "x": 194,
+     "y": 2,
+     "w": 4,
+     "d": 11,
+     "fill": "#A82822"
+    }
+   ]
+  },
+  {
+   "id": "rueckseite",
+   "component_id": "multilayer_film",
+   "material_id": "multilayer_plastic",
+   "name": "Rückseite (innen silbern)",
+   "short": "Rückseite",
+   "shape": "box",
+   "x": 0,
+   "y": 15,
+   "w": 200,
+   "d": 250,
+   "z": 1,
+   "h": 14,
+   "r": 20,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 2.8,
+   "materials": [
+    [
+     "verbundfolie",
+     97
+    ],
+    [
+     "druck",
+     2
+    ],
+    [
+     "alu",
+     1
+    ]
+   ],
+   "info": "Die silberne Innenseite ist eine Aluminiumschicht von etwa 0,00004 mm. Sie hält Licht und Sauerstoff ab, damit die Chips nicht ranzig werden.",
+   "color": "#C9CDD0",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 10,
+     "w": 180,
+     "d": 230,
+     "r": 16,
+     "fill": "#DDE0E2"
+    },
+    {
+     "shape": "box",
+     "x": 20,
+     "y": 200,
+     "w": 160,
+     "d": 30,
+     "r": 4,
+     "fill": "#8E969A"
+    }
+   ]
+  },
+  {
+   "id": "laengsnaht",
+   "component_id": "multilayer_film",
+   "material_id": "multilayer_plastic",
+   "name": "Längsnaht (Flossennaht)",
+   "short": "Längsnaht",
+   "shape": "box",
+   "x": 92,
+   "y": 15,
+   "w": 16,
+   "d": 250,
+   "z": 0,
+   "h": 1,
+   "r": 0,
+   "explode": [
+    140,
+    0,
+    0
+   ],
+   "mass": 0.5,
+   "materials": [
+    [
+     "verbundfolie",
+     97
+    ],
+    [
+     "druck",
+     2
+    ],
+    [
+     "alu",
+     1
+    ]
+   ],
+   "info": "Hier wurde die Folie zum Schlauch geschlossen und flach umgelegt. Sie liegt auf der Rückseite.",
+   "color": "#C9CDD0",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 0,
+     "w": 10,
+     "d": 250,
+     "r": 0,
+     "fill": "#AEB3B7"
+    }
+   ]
   }
  ]
 }

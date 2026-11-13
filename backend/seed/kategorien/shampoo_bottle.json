@@ -4,7 +4,7 @@
  "name_en": "Shampoo Bottle",
  "klasse": "Verpackung · Gelbe Tonne",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -32,19 +32,19 @@
   {
    "k": "mit Recyclat",
    "v": "≈ 0,01 kg",
-   "hint": "spart 0,07 kg, wenn recycelte Materialien eingesetzt werden"
+   "hint": "spart 0,06 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
   "metalle_mg": {},
   "herkunft": {},
   "materialien_g": {
-   "hdpe": 31.2,
-   "pp": 3.8
+   "hdpe": 26.3,
+   "pp": 8.8
   },
-  "co2_kg": 0.075,
+  "co2_kg": 0.074,
   "co2_mit_recyclat_kg": 0.01,
-  "co2_ersparnis_kg": 0.065,
+  "co2_ersparnis_kg": 0.064,
   "co2_ohne_faktor": [],
   "rohstoffwert_eur": 0,
   "wert_ohne_preis": [],
@@ -94,89 +94,286 @@
   "nicht": "Nicht in Restmüll oder Altpapier",
   "warnung": "Restentleert reicht, nicht ausspülen. Teile aus verschiedenen Materialien trennen."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "pp_flip_cap",
+   "id": "klappe",
    "component_id": "pp_flip_cap",
-   "name": "Flip Cap",
-   "short": "Flip Cap",
+   "material_id": "pp",
+   "name": "Deckelklappe",
+   "short": "Klappe",
    "shape": "cyl",
-   "x": 24.9,
-   "y": 12.4,
-   "w": 20.2,
-   "h": 22.8,
-   "z": 161.5,
+   "x": 14,
+   "y": 7.5,
+   "w": 42,
+   "d": 30,
+   "z": 180,
+   "h": 10,
    "explode": [
     0,
     0,
-    23.0
+    26
    ],
-   "mass": 1.88,
+   "mass": 2.4,
    "materials": [
     [
      "pp",
      100
     ]
    ],
-   "material_id": "pp",
-   "info": "Unscrew it from the bottle or tube."
+   "info": "Obere Klappe, über ein dünnes Filmscharnier mit dem Unterteil verbunden. Darauf steht die Flasche oft kopfüber, damit der Rest nach unten läuft.",
+   "color": "#3E7CB1",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 15,
+     "y": 0,
+     "w": 12,
+     "d": 4,
+     "r": 2,
+     "fill": "#2E6390"
+    },
+    {
+     "shape": "cyl",
+     "x": 6,
+     "y": 5,
+     "w": 30,
+     "d": 20,
+     "fill": "#4A8AC0"
+    }
+   ]
   },
   {
-   "id": "plastic_label",
-   "component_id": "plastic_label",
-   "name": "Label",
-   "short": "Label",
-   "shape": "box",
-   "x": 70.7,
-   "y": 9.0,
-   "w": 2.1,
-   "d": 27.0,
-   "h": 104.5,
-   "z": 38.0,
-   "r": 0.3,
+   "id": "deckel_unterteil",
+   "component_id": "pp_flip_cap",
+   "material_id": "pp",
+   "name": "Deckel-Unterteil mit Ausgießer",
+   "short": "Deckelunterteil",
+   "shape": "cyl",
+   "x": 14,
+   "y": 7.5,
+   "w": 42,
+   "d": 30,
+   "z": 162,
+   "h": 18,
    "explode": [
-    39.5,
     0,
-    6.9
+    0,
+    26
    ],
-   "mass": 1.88,
+   "mass": 4.4,
    "materials": [
     [
      "pp",
      100
     ]
    ],
-   "material_id": "pp",
-   "info": "Tear along the seam or cut it off."
+   "info": "Wird auf den Hals geschraubt. Zum Entsorgen darf der Deckel draufbleiben: Die Sortieranlage trennt PP und HDPE später im Wasserbad.",
+   "color": "#3E7CB1",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 16,
+     "y": 10,
+     "w": 10,
+     "fill": "#2E6390"
+    },
+    {
+     "shape": "cyl",
+     "x": 19,
+     "y": 13,
+     "w": 4,
+     "fill": "#1F2A33"
+    }
+   ]
   },
   {
-   "id": "hdpe_bottle_body",
+   "id": "hals",
    "component_id": "hdpe_bottle_body",
-   "name": "Bottle",
-   "short": "Bottle",
-   "shape": "box",
-   "x": 0,
-   "y": 0,
-   "w": 70.0,
-   "d": 45.0,
-   "h": 161.5,
-   "z": 0.0,
-   "r": 5.4,
+   "material_id": "hdpe",
+   "name": "Flaschenhals mit Gewinde",
+   "short": "Hals",
+   "shape": "cyl",
+   "x": 24,
+   "y": 11.5,
+   "w": 22,
+   "z": 150,
+   "h": 16,
    "explode": [
     0,
     0,
     0
    ],
-   "mass": 31.25,
+   "mass": 2.7,
    "materials": [
     [
      "hdpe",
      100
     ]
    ],
+   "info": "Dickwandiger Hals mit Gewinde. Hier sitzt nach dem Ausspülen oft noch etwas Shampoo.",
+   "color": "#F2EFEA",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 4,
+     "w": 14,
+     "fill": "#D6D2CA"
+    }
+   ]
+  },
+  {
+   "id": "schulter",
+   "component_id": "hdpe_bottle_body",
    "material_id": "hdpe",
-   "info": "Rinse out the remaining product."
+   "name": "Flaschenschulter",
+   "short": "Schulter",
+   "shape": "cyl",
+   "x": 5,
+   "y": 3,
+   "w": 60,
+   "d": 39,
+   "z": 138,
+   "h": 12,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 3.3,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "Die Flasche wird aus einem Schlauch in einer Form aufgeblasen (Extrusionsblasformen).",
+   "color": "#F2EFEA"
+  },
+  {
+   "id": "rumpf",
+   "component_id": "hdpe_bottle_body",
+   "material_id": "hdpe",
+   "name": "Flaschenrumpf",
+   "short": "Rumpf",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 70,
+   "d": 45,
+   "z": 8,
+   "h": 130,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 15.9,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "HDPE, Recyclingcode 2. Leer drücken reicht, dann mit Deckel in die Gelbe Tonne. HDPE wird gut recycelt, zum Beispiel zu neuen Flaschen oder Rohren.",
+   "color": "#F2EFEA"
+  },
+  {
+   "id": "boden",
+   "component_id": "hdpe_bottle_body",
+   "material_id": "hdpe",
+   "name": "Flaschenboden mit Quetschnaht",
+   "short": "Boden",
+   "shape": "cyl",
+   "x": 3,
+   "y": 2,
+   "w": 64,
+   "d": 41,
+   "z": 0,
+   "h": 8,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 4.4,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "Am Boden sieht man die Quetschnaht vom Blasformen und das Recyclingzeichen 2.",
+   "color": "#F2EFEA"
+  },
+  {
+   "id": "etikett_vorne",
+   "component_id": "plastic_label",
+   "material_id": "pp",
+   "name": "Etikett vorne",
+   "short": "Etikett",
+   "shape": "box",
+   "x": 70,
+   "y": 8,
+   "w": 0.3,
+   "d": 29,
+   "z": 25,
+   "h": 100,
+   "r": 0,
+   "explode": [
+    50,
+    0,
+    0
+   ],
+   "mass": 1.1,
+   "materials": [
+    [
+     "pp",
+     95
+    ],
+    [
+     "druck",
+     5
+    ]
+   ],
+   "info": "Selbstklebende PP-Folie. Sie muss nicht abgezogen werden, weil sie zum Deckel-Kunststoff passt.",
+   "color": "#3E7CB1",
+   "sortBias": 100
+  },
+  {
+   "id": "etikett_hinten",
+   "component_id": "plastic_label",
+   "material_id": "pp",
+   "name": "Etikett hinten",
+   "short": "Etikett",
+   "shape": "box",
+   "x": -0.3,
+   "y": 8,
+   "w": 0.3,
+   "d": 29,
+   "z": 25,
+   "h": 90,
+   "r": 0,
+   "explode": [
+    -50,
+    0,
+    0
+   ],
+   "mass": 0.9,
+   "materials": [
+    [
+     "pp",
+     95
+    ],
+    [
+     "druck",
+     5
+    ]
+   ],
+   "info": "Rückseite mit Inhaltsstoffen und Gebrauchsanweisung.",
+   "color": "#E8EEF4",
+   "label": false
   }
  ]
 }

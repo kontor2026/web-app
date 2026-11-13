@@ -4,7 +4,7 @@
  "name_en": "Paper Coffee Cup",
  "klasse": "Verpackung · Gelbe Tonne",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -39,13 +39,13 @@
   "metalle_mg": {},
   "herkunft": {},
   "materialien_g": {
-   "paper_plastic_composite": 9.7,
-   "ps": 1.2,
-   "cardboard": 1.2
+   "paper_plastic_composite": 6.5,
+   "cardboard": 3.1,
+   "ps": 2.5
   },
-  "co2_kg": 0.01,
+  "co2_kg": 0.012,
   "co2_mit_recyclat_kg": 0.008,
-  "co2_ersparnis_kg": 0.002,
+  "co2_ersparnis_kg": 0.004,
   "co2_ohne_faktor": [],
   "rohstoffwert_eur": 0,
   "wert_ohne_preis": [],
@@ -95,91 +95,304 @@
   "nicht": "Nicht in Restmüll oder Altpapier",
   "warnung": "Restentleert reicht, nicht ausspülen. Teile aus verschiedenen Materialien trennen."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "ps_cup_lid",
+   "id": "kuppel",
    "component_id": "ps_cup_lid",
-   "name": "Lid",
-   "short": "Lid",
+   "material_id": "ps",
+   "name": "Deckelkuppel mit Trinköffnung",
+   "short": "Kuppel",
    "shape": "cyl",
-   "x": 22.0,
-   "y": 22.0,
-   "w": 36.0,
-   "h": 13.2,
-   "z": 93.5,
+   "x": 4,
+   "y": 4,
+   "w": 72,
+   "z": 105,
+   "h": 6,
    "explode": [
     0,
     0,
-    32.0
+    23
    ],
-   "mass": 1.16,
+   "mass": 1.1,
    "materials": [
     [
      "ps",
      100
     ]
    ],
-   "material_id": "ps",
-   "info": "Pull it off the cup rim."
+   "info": "Gewölbtes Oberteil des Deckels aus PS (Recyclingcode 6). Die kleine Öffnung zum Trinken ist vorne, ein Loch dahinter lässt Luft nach.",
+   "color": "#F7F7F5",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 26,
+     "y": 58,
+     "w": 20,
+     "d": 7,
+     "r": 3.5,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 34,
+     "y": 10,
+     "w": 4,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 8,
+     "y": 8,
+     "w": 56,
+     "fill": "#ECECE8"
+    }
+   ]
   },
   {
-   "id": "cardboard_sleeve",
-   "component_id": "cardboard_sleeve",
-   "name": "Cardboard Sleeve",
-   "short": "Cardboard Sleeve",
-   "shape": "box",
-   "x": 80.8,
-   "y": 16.0,
-   "w": 2.4,
-   "d": 48.0,
-   "h": 60.5,
-   "z": 22.0,
-   "r": 0.3,
+   "id": "deckelrand",
+   "component_id": "ps_cup_lid",
+   "material_id": "ps",
+   "name": "Deckelrand zum Aufdrücken",
+   "short": "Deckelrand",
+   "shape": "cyl",
+   "x": -2,
+   "y": -2,
+   "w": 84,
+   "z": 99,
+   "h": 6,
    "explode": [
-    43.0,
     0,
-    9.6
+    0,
+    23
    ],
-   "mass": 1.16,
+   "mass": 1.4,
    "materials": [
     [
-     "papier",
+     "ps",
      100
     ]
    ],
-   "material_id": "cardboard",
-   "info": "Tear along the perforation or slide it off."
+   "info": "Rastet über den gerollten Becherrand. Zum Entsorgen abziehen: Der Deckel ist reiner Kunststoff und kommt getrennt in die Gelbe Tonne.",
+   "color": "#F7F7F5",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 6,
+     "y": 6,
+     "w": 72,
+     "fill": "#E6E6E2"
+    }
+   ]
   },
   {
-   "id": "coated_paper_cup",
+   "id": "rollrand",
    "component_id": "coated_paper_cup",
-   "name": "Cup",
-   "short": "Cup",
+   "material_id": "paper_plastic_composite",
+   "name": "Gerollter Becherrand",
+   "short": "Rollrand",
    "shape": "cyl",
    "x": 0,
    "y": 0,
-   "w": 80.0,
-   "h": 93.5,
-   "z": 0.0,
+   "w": 80,
+   "z": 97,
+   "h": 3,
    "explode": [
     0,
     0,
     0
    ],
-   "mass": 9.68,
+   "mass": 0.4,
    "materials": [
     [
      "papier",
-     85
+     94
     ],
     [
      "ldpe",
-     15
+     6
     ]
    ],
+   "info": "Der obere Rand ist eingerollt, damit der Becher stabil ist und der Deckel einrasten kann.",
+   "color": "#F4F1EA",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 3,
+     "w": 74,
+     "fill": "#5A3A22"
+    }
+   ]
+  },
+  {
+   "id": "wand_oben",
+   "component_id": "coated_paper_cup",
    "material_id": "paper_plastic_composite",
-   "info": "Has a plastic lining, so it does not go in paper recycling."
+   "name": "Becherwand oben",
+   "short": "Becherwand",
+   "shape": "cyl",
+   "x": 2,
+   "y": 2,
+   "w": 76,
+   "z": 66,
+   "h": 31,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 1.9,
+   "materials": [
+    [
+     "papier",
+     94
+    ],
+    [
+     "ldpe",
+     6
+    ]
+   ],
+   "info": "Karton mit einer dünnen Polyethylen-Schicht innen, damit der Kaffee nicht durchweicht. Wegen dieser Schicht gehört der Becher nicht ins Altpapier.",
+   "color": "#F4F1EA"
+  },
+  {
+   "id": "wand_mitte",
+   "component_id": "coated_paper_cup",
+   "material_id": "paper_plastic_composite",
+   "name": "Becherwand Mitte mit Klebenaht",
+   "short": "Wand",
+   "shape": "cyl",
+   "x": 5,
+   "y": 5,
+   "w": 70,
+   "z": 36,
+   "h": 30,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 1.8,
+   "materials": [
+    [
+     "papier",
+     94
+    ],
+    [
+     "ldpe",
+     6
+    ]
+   ],
+   "info": "Die Wand ist aus einem Zuschnitt gerollt und an einer senkrechten Naht heiß verschweißt.",
+   "color": "#F4F1EA",
+   "label": false
+  },
+  {
+   "id": "wand_unten",
+   "component_id": "coated_paper_cup",
+   "material_id": "paper_plastic_composite",
+   "name": "Becherwand unten",
+   "short": "Wand unten",
+   "shape": "cyl",
+   "x": 8,
+   "y": 8,
+   "w": 64,
+   "z": 5,
+   "h": 31,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 1.7,
+   "materials": [
+    [
+     "papier",
+     94
+    ],
+    [
+     "ldpe",
+     6
+    ]
+   ],
+   "info": "Unten ist die Wand nach innen um die Bodenscheibe gebördelt und dicht verpresst.",
+   "color": "#F4F1EA",
+   "label": false
+  },
+  {
+   "id": "boden",
+   "component_id": "coated_paper_cup",
+   "material_id": "paper_plastic_composite",
+   "name": "Eingesetzte Bodenscheibe",
+   "short": "Boden",
+   "shape": "cyl",
+   "x": 10,
+   "y": 10,
+   "w": 60,
+   "z": 0,
+   "h": 5,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 0.7,
+   "materials": [
+    [
+     "papier",
+     94
+    ],
+    [
+     "ldpe",
+     6
+    ]
+   ],
+   "info": "Runde Kartonscheibe, ein paar Millimeter hochgesetzt. Becher ausleeren und mit dem Deckel getrennt in die Gelbe Tonne geben.",
+   "color": "#F4F1EA",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 4,
+     "w": 52,
+     "fill": "#E9E4DA"
+    }
+   ]
+  },
+  {
+   "id": "banderole",
+   "component_id": "cardboard_sleeve",
+   "material_id": "cardboard",
+   "name": "Papp-Banderole (Hitzeschutz)",
+   "short": "Banderole",
+   "shape": "box",
+   "x": 80,
+   "y": 15,
+   "w": 0.5,
+   "d": 50,
+   "z": 30,
+   "h": 55,
+   "r": 0,
+   "explode": [
+    55,
+    0,
+    0
+   ],
+   "mass": 3.1,
+   "materials": [
+    [
+     "papier",
+     98
+    ],
+    [
+     "druck",
+     2
+    ]
+   ],
+   "info": "Wellpappe-Manschette, damit man sich nicht die Finger verbrennt. Abstreifen: Sie ist reines Papier und gehört ins Altpapier.",
+   "color": "#B5835A",
+   "sortBias": 100
   }
  ]
 }

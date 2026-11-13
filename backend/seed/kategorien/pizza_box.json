@@ -4,7 +4,7 @@
  "name_en": "Pizza Box",
  "klasse": "Verpackung · Papier",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -93,35 +93,303 @@
   "nicht": "Nicht in Restmüll, wenn sauber",
   "warnung": "Kartons flach falten. Stark verschmutzte Teile in den Restmüll."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "cardboard_box_body",
+   "id": "deckel",
    "component_id": "cardboard_box_body",
-   "name": "Box",
-   "short": "Box",
+   "material_id": "cardboard",
+   "name": "Deckel",
+   "short": "Deckel",
    "shape": "box",
    "x": 0,
    "y": 0,
-   "w": 330.0,
-   "d": 330.0,
-   "h": 40.0,
-   "z": 0.0,
-   "r": 39.6,
+   "w": 330,
+   "d": 330,
+   "z": 37,
+   "h": 3,
+   "r": 2,
    "explode": [
     0,
     0,
+    150
+   ],
+   "mass": 76,
+   "materials": [
+    [
+     "papier",
+     98
+    ],
+    [
+     "druck",
+     2
+    ]
+   ],
+   "info": "Bedruckte Wellpappe. Ist der Deckel sauber, kommt er ins Altpapier. Meist kann man ihn an der Knickkante abreißen, wenn der Boden fettig ist.",
+   "color": "#C49A6C",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 95,
+     "y": 70,
+     "w": 140,
+     "fill": "#B3423A"
+    },
+    {
+     "shape": "cyl",
+     "x": 115,
+     "y": 90,
+     "w": 100,
+     "fill": "#C49A6C"
+    },
+    {
+     "shape": "box",
+     "x": 85,
+     "y": 240,
+     "w": 160,
+     "d": 18,
+     "r": 4,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 115,
+     "y": 268,
+     "w": 100,
+     "d": 10,
+     "r": 3,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 20,
+     "y": 20,
+     "w": 8,
+     "d": 8,
+     "fill": "#9E7A52"
+    },
+    {
+     "shape": "cyl",
+     "x": 302,
+     "y": 20,
+     "w": 8,
+     "d": 8,
+     "fill": "#9E7A52"
+    }
+   ]
+  },
+  {
+   "id": "wand_hinten",
+   "component_id": "cardboard_box_body",
+   "material_id": "cardboard",
+   "name": "Rückwand mit Deckelscharnier",
+   "short": "Rückwand",
+   "shape": "box",
+   "x": 4,
+   "y": 0,
+   "w": 322,
+   "d": 4,
+   "z": 3,
+   "h": 34,
+   "r": 0,
+   "explode": [
+    0,
+    -70,
     0
    ],
-   "mass": 250.0,
+   "mass": 14.7,
    "materials": [
     [
      "papier",
      100
     ]
    ],
+   "info": "Hier ist der Deckel nur eingeknickt, nicht geklebt. Pizzakartons kommen ganz ohne Klebstoff aus.",
+   "color": "#C49A6C"
+  },
+  {
+   "id": "wand_links",
+   "component_id": "cardboard_box_body",
    "material_id": "cardboard",
-   "info": "Flatten it; tear off heavily greasy or food-soiled parts first."
+   "name": "Seitenwand links (doppelt gelegt)",
+   "short": "Seitenwand",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 4,
+   "d": 330,
+   "z": 3,
+   "h": 34,
+   "r": 0,
+   "explode": [
+    -70,
+    0,
+    0
+   ],
+   "mass": 29.4,
+   "materials": [
+    [
+     "papier",
+     100
+    ]
+   ],
+   "info": "Die Seitenwand ist doppelt gefaltet und mit Laschen im Boden verriegelt. Das macht den Karton stapelbar.",
+   "color": "#C49A6C",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1.5,
+     "y": 0,
+     "w": 1,
+     "d": 330,
+     "r": 0,
+     "fill": "#9E7A52"
+    }
+   ]
+  },
+  {
+   "id": "wand_rechts",
+   "component_id": "cardboard_box_body",
+   "material_id": "cardboard",
+   "name": "Seitenwand rechts (doppelt gelegt)",
+   "short": "Seitenwand",
+   "shape": "box",
+   "x": 326,
+   "y": 0,
+   "w": 4,
+   "d": 330,
+   "z": 3,
+   "h": 34,
+   "r": 0,
+   "explode": [
+    70,
+    0,
+    0
+   ],
+   "mass": 29.4,
+   "materials": [
+    [
+     "papier",
+     100
+    ]
+   ],
+   "info": "Gegenstück zur linken Seitenwand.",
+   "color": "#C49A6C",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1.5,
+     "y": 0,
+     "w": 1,
+     "d": 330,
+     "r": 0,
+     "fill": "#9E7A52"
+    }
+   ]
+  },
+  {
+   "id": "wand_vorne",
+   "component_id": "cardboard_box_body",
+   "material_id": "cardboard",
+   "name": "Vorderwand mit Einstecklasche",
+   "short": "Vorderwand",
+   "shape": "box",
+   "x": 4,
+   "y": 326,
+   "w": 322,
+   "d": 4,
+   "z": 3,
+   "h": 34,
+   "r": 0,
+   "explode": [
+    0,
+    70,
+    0
+   ],
+   "mass": 24.5,
+   "materials": [
+    [
+     "papier",
+     100
+    ]
+   ],
+   "info": "Doppelte Wand, in die die Lasche des Deckels gesteckt wird. Zum Flachmachen alle Wände aufklappen.",
+   "color": "#C49A6C",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 1.5,
+     "w": 322,
+     "d": 1,
+     "r": 0,
+     "fill": "#9E7A52"
+    },
+    {
+     "shape": "box",
+     "x": 141,
+     "y": 0,
+     "w": 40,
+     "d": 4,
+     "r": 1,
+     "fill": "#3A3F44"
+    }
+   ]
+  },
+  {
+   "id": "boden",
+   "component_id": "cardboard_box_body",
+   "material_id": "cardboard",
+   "name": "Boden",
+   "short": "Boden",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 330,
+   "d": 330,
+   "z": 0,
+   "h": 3,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 76,
+   "materials": [
+    [
+     "papier",
+     100
+    ]
+   ],
+   "info": "Hier liegt die Pizza. Stark fettige oder verklebte Stellen abreißen und in den Restmüll geben, der saubere Rest kommt ins Altpapier.",
+   "color": "#C49A6C",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 40,
+     "y": 40,
+     "w": 250,
+     "fill": "#B98C5C"
+    },
+    {
+     "shape": "cyl",
+     "x": 90,
+     "y": 120,
+     "w": 70,
+     "d": 50,
+     "fill": "#8E6B45"
+    },
+    {
+     "shape": "cyl",
+     "x": 180,
+     "y": 190,
+     "w": 55,
+     "d": 40,
+     "fill": "#8E6B45"
+    }
+   ]
   }
  ]
 }
