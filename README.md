@@ -4,7 +4,16 @@ Web-App für eine Scan-Station in der Werkstatt: Gegenstand scannen, Explosionsz
 
 ## Starten
 
-Kein Build nötig, nur ein statischer Server:
+**Komplett mit KI in Docker** (Frontend, Backend, Inferenz): siehe [docs/backend.md](docs/backend.md).
+
+```bash
+cp .env.example .env
+docker compose up -d --build
+```
+
+Dann http://localhost:8080 öffnen. KI-Anbieter in `.env`: `LLM_PROVIDER=lokal` (Ollama im Container) oder `claude` (Anthropic-API, braucht `ANTHROPIC_API_KEY`).
+
+**Nur Oberfläche (Demo-Modus)**, kein Build nötig, nur ein statischer Server:
 
 ```bash
 python -m http.server 5173

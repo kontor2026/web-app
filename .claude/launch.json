@@ -3,6 +3,12 @@
   "configurations": [
     {
       "name": "station",
+      "runtimeExecutable": "backend/.venv/Scripts/python",
+      "runtimeArgs": ["-m", "uvicorn", "backend.app.main:app", "--port", "8000"],
+      "port": 8000
+    },
+    {
+      "name": "frontend-demo",
       "runtimeExecutable": "python",
       "runtimeArgs": ["-m", "http.server", "5173"],
       "port": 5173
