@@ -28,6 +28,7 @@ a { color: inherit; }
 .karte-link { text-decoration: none; color: inherit; }
 .karte-link:hover .letter { color: var(--accent); }
 .karte-link .btn { align-self: flex-start; margin-top: auto; }
+.start .irow { grid-template-columns: 74px 1fr auto; }
 .fortschritt { margin: 2px 6px 10px; }
 .fortschritt b { background: var(--good); }
 @media (max-width: 900px) { .start .ideas { grid-template-columns: minmax(0, 1fr); } }

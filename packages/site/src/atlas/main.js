@@ -81,7 +81,7 @@ function karte(o, i) {
   const laender = new Set(o.rohstoffe.flatMap((r) => Object.keys(ROH[r.key]?.abbau?.anteile ?? {})));
   return `<a class="beispiel" href="#kat=${o.id}">
     <span class="letter">0${i + 1}</span><b>${esc(o.name)}</b>
-    <span class="meta"><span>${gramm(o.gramm)}</span><span>${o.rohstoffe.length} Rohstoffe</span>${laender.size ? `<span>${laender.size} Länder</span>` : ''}</span></a>`;
+    <span class="meta"><span>${gramm(o.gramm)}</span><span>${o.rohstoffe.length} ${o.rohstoffe.length === 1 ? 'Rohstoff' : 'Rohstoffe'}</span>${laender.size ? `<span>${laender.size} Länder</span>` : ''}</span></a>`;
 }
 
 // ---------- 02/03 Gegenstand: Stoffstrom, Globus, Datenblatt ----------
@@ -104,14 +104,14 @@ function zeigeObjekt(o, r) {
         <div class="globus" id="globus" aria-label="Globus: Herkunftsländer"></div>
         <div class="globus-legende" id="globus-legende"></div>
         <div class="strom-flaeche">
-          <div class="strom-kopf"><span class="eyebrow">Stoffstrom</span><span>von links nach rechts gelesen · je breiter, desto mehr Gramm</span></div>
+          <div class="strom-kopf"><span class="eyebrow">Stoffstrom</span><span>von links nach rechts gelesen · je breiter, desto mehr Gramm</span><span class="nur-schmal">· Bauteile siehe 3D-Modelle</span></div>
           <div class="strom" id="strom"></div>
         </div>
         <div class="hint-hover ${ankuendigung ? 'hint-puls' : ''}" id="hinweis" ${ankuendigung ? '' : 'hidden'}>Tippe einen Rohstoff an, im Stoffstrom oder rechts</div>
       </div>
       <aside class="panel" id="panel"></aside>
       <div class="actionbar">
-        <div class="q">${esc(o.name)} <span>· ${gramm(o.gramm)} · ${o.rohstoffe.length} Rohstoffe</span></div>
+        <div class="q">${esc(o.name)} <span>· ${gramm(o.gramm)} · ${o.rohstoffe.length} ${o.rohstoffe.length === 1 ? 'Rohstoff' : 'Rohstoffe'}</span></div>
         <a class="btn ghost" href="#">← Anderen Gegenstand wählen</a>
       </div>
     </section>`;
@@ -159,7 +159,7 @@ function zeigeGlobus(key, fokus = true) {
   const top = Object.entries(werte).sort((a, b) => b[1] - a[1]).slice(0, 5);
   document.getElementById('globus-legende').innerHTML = mitDaten ? `<div class="eyebrow">Höher und dunkler = größerer Anteil</div>
     ${top.map(([l, p], i) => `<button class="gl-zeile" data-land="${l}"><span class="nr">0${i + 1}</span>${esc(land(l))}<b>${zahl(p, 0)} %</b></button>`).join('')}
-    <div class="gl-de"><i></i>Deutschland: hier wird der Gegenstand genutzt</div>` : '';
+    <div class="gl-de"><i></i>DE = Deutschland: hier wird der Gegenstand genutzt</div>` : '';
   document.querySelectorAll('.gl-zeile').forEach((b) => {
     b.addEventListener('pointerenter', () => globus.hebeHervor(b.dataset.land));
     b.addEventListener('pointerleave', () => globus.hebeHervor(null));
@@ -201,7 +201,7 @@ function panelObjekt() {
   const satz = [
     `${o.name} wiegt ${gramm(o.gramm)}.`,
     meist ? `Am meisten steckt ${material(meist.mid).name} drin (${gramm(meist.g)}).` : '',
-    `${o.rohstoffe.length} Rohstoffe${kritisch ? `, davon ${kritisch} kritisch für die EU` : ''}.`,
+    `${o.rohstoffe.length} ${o.rohstoffe.length === 1 ? 'Rohstoff' : 'Rohstoffe'}${kritisch ? `, davon ${kritisch} kritisch für die EU` : ''}.`,
     mitDaten && top.length ? `Beim ${STUFE[stufe].name} kommt das meiste ${ausLand(top[0][0])} (${zahl(top[0][1], 0)} %).` : '',
   ].filter(Boolean).join(' ');
   setzePanel(`

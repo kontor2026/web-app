@@ -1,6 +1,6 @@
 /* KI-Kompass: Kompassrose als technische Zeichnung, gleiche Linien und Ballons wie js/iso.js */
-.kompass .rose-flaeche { position: absolute; inset: 76px 24px 150px; display: grid; place-items: center; }
-.rose { width: 100%; height: 100%; overflow: visible; }
+.kompass .rose-flaeche { position: absolute; inset: 120px 24px 190px; }
+.rose { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
 .rose .ring { fill: var(--sheet); stroke: var(--ink); stroke-width: 1.2; }
 .rose .ring2, .rose .achse { fill: none; stroke: var(--rule); stroke-width: 1; }
 .rose .striche line { stroke: var(--ink-3); stroke-width: 1; }

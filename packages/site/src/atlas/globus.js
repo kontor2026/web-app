@@ -51,14 +51,14 @@ export function erzeugeGlobus(el, laender) {
     .htmlElement((d) => {
       const div = document.createElement('div');
       div.className = `globus-ballon ${d.de ? 'de' : ''}`;
-      div.innerHTML = d.de ? '<b>DE</b><span>Deutschland</span>' : `<b>${d.nr}</b><span>${esc(d.name)} · ${zahl(d.anteil, 0)} %</span>`;
+      div.innerHTML = d.de ? '<b>DE</b>' : `<b>${d.nr}</b><span>${esc(d.name)} · ${zahl(d.anteil, 0)} %</span>`;
       return div;
     })
     .htmlAltitude((d) => d.alt)
     .htmlTransitionDuration(ruhig ? 0 : 500);
   globus.controls().enableZoom = true;
   globus.controls().autoRotate = false;
-  globus.pointOfView({ lat: 25, lng: 15, altitude: 2.3 });
+  globus.pointOfView({ lat: 25, lng: 15, altitude: 2.1 });
   // Graticule in Linienfarbe der Zeichnung
   globus.scene().traverse((o) => { if (o.type === 'LineSegments' && o.material?.color) { o.material.color.set(F.rule); o.material.opacity = 0.9; o.material.transparent = true; } });
 
@@ -74,12 +74,12 @@ export function erzeugeGlobus(el, laender) {
       globus.polygonsData(laenderGeo);
       globus.arcsData(rang.map((f) => ({ startLat: f.lat, startLng: f.lng, endLat: de.lat, endLng: de.lng, anteil: f.anteil })));
       globus.htmlElementsData([
-        ...rang.slice(0, 5).map((f, i) => ({ lat: f.lat, lng: f.lng, alt: hoehe(f) + 0.01, nr: String(i + 1).padStart(2, '0'), name: laender[f.a3]?.name ?? f.properties.name, anteil: f.anteil })),
+        ...rang.slice(0, 3).map((f, i) => ({ lat: f.lat, lng: f.lng, alt: hoehe(f) + 0.01, nr: String(i + 1).padStart(2, '0'), name: laender[f.a3]?.name ?? f.properties.name, anteil: f.anteil })),
         { lat: de.lat, lng: de.lng, alt: 0.03, de: true },
       ]);
       if (fokus) {
         const z = rang[0] ?? de;
-        globus.pointOfView({ lat: (z.lat + de.lat) / 2, lng: (z.lng + de.lng) / 2, altitude: rang.length ? 2.1 : 2.4 }, ruhig ? 0 : 1100);
+        globus.pointOfView({ lat: (z.lat + de.lat) / 2, lng: (z.lng + de.lng) / 2, altitude: rang.length ? 1.75 : 2.1 }, ruhig ? 0 : 1100);
       }
     },
     hebeHervor(a3) { hervor = a3; globus.polygonCapColor(kappe); },

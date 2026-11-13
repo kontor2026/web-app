@@ -15,7 +15,10 @@ const GROESSEN = { desktop: { width: 1440, height: 900 }, handy: { width: 390, h
 mkdirSync(new URL('../shots/', import.meta.url), { recursive: true });
 const server = spawn('npx', ['vite', 'preview', '--port', String(PORT), '--strictPort'], { cwd: new URL('..', import.meta.url), stdio: 'ignore' });
 await new Promise((r) => setTimeout(r, 2500));
-const browser = await chromium.launch({ args: ['--use-angle=swiftshader', '--enable-unsafe-swiftshader'] });
+// Ohne WAYLAND_DISPLAY/DISPLAY (z. B. aus VS Code) verlangt ANGLE sonst Wayland und WebGL fällt aus.
+const env = { ...process.env };
+delete env.WAYLAND_DISPLAY; delete env.DISPLAY;
+const browser = await chromium.launch({ env, args: ['--use-angle=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist'] });
 let fehler = 0;
 try {
   for (const schema of ['light', 'dark']) for (const [g, viewport] of Object.entries(GROESSEN)) {

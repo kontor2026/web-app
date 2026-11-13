@@ -11,9 +11,9 @@
 .krit-i { border: 0 !important; color: var(--accent); font-style: normal; font-size: 10px; line-height: 10px; text-align: center; }
 
 .atlas-sheet .canvas { display: block; }
-.globus { position: absolute; left: 14px; right: 14px; top: 14px; bottom: 41%; }
+.globus { position: absolute; left: 330px; right: 14px; top: 60px; bottom: 41%; }
 .globus canvas { outline: none; }
-.globus-legende { position: absolute; left: 36px; top: 96px; z-index: 2; display: grid; gap: 2px; min-width: 210px; font-size: 13px; }
+.globus-legende { position: absolute; left: 36px; top: 140px; z-index: 2; display: grid; gap: 2px; min-width: 210px; font-size: 13px; }
 .globus-legende .eyebrow { margin-bottom: 6px; }
 .gl-zeile { display: grid; grid-template-columns: 26px 1fr auto; gap: 8px; text-align: left; padding: 3px 6px; background: color-mix(in srgb, var(--sheet) 85%, transparent); border-bottom: 1px solid var(--rule-2); }
 .gl-zeile:hover { background: var(--accent-soft); }
@@ -61,8 +61,12 @@
 .actionbar .btn.ghost { text-decoration: none; }
 @media (max-width: 900px) {
   .beispiele { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .atlas-sheet .canvas { height: auto; min-height: 0; display: grid; grid-template-rows: auto 52vh auto 360px; padding: 70px 0 0; }
-  .globus, .globus-legende, .strom-flaeche { position: relative; inset: auto; left: auto; right: auto; top: auto; bottom: auto; height: auto; }
-  .globus-legende { margin: 0 24px; }
+  .atlas-sheet .canvas { height: auto; min-height: 0; display: flex; flex-direction: column; padding-bottom: 14px; }
+  .atlas-sheet .canvas-head { position: relative; top: auto; left: auto; right: auto; padding: 24px 24px 0; }
+  .globus { position: relative; inset: auto; height: 340px; overflow: hidden; flex: none; }
+  .globus-legende { position: relative; inset: auto; margin: 0 24px; }
+  .strom-flaeche { position: relative; inset: auto; height: 440px; margin: 16px 14px 0; flex: none; }
   .atlas-sheet .hint-hover { display: none; }
 }
+.nur-schmal { display: none; }
+@media (max-width: 620px) { .nur-schmal { display: inline; } .strom-kopf { flex-wrap: wrap; } }

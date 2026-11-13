@@ -18,12 +18,13 @@ export function zeichneStoffstrom(el, obj, { teilName, material, rohstoff, onHov
   el.innerHTML = '';
   if (W < 10 || H < 10) return { markiere() {} };
   const schmal = W < 620;
-  const labelL = schmal ? 96 : 170, labelR = schmal ? 92 : 160, bar = 10, kopf = 22, luecke = 6;
+  const labelL = schmal ? 130 : 170, labelR = schmal ? 130 : 160, bar = 10, kopf = 22, luecke = 6;
 
   const T = buendle(obj.teile.map((t) => ({ id: t.cid, typ: 'teil', name: teilName(t), g: t.g, farbe: 'var(--ink-3)' })), MAX.teil, 'teil', 'Weitere Bauteile');
   const M = buendle(obj.materialien.map((m) => ({ id: m.mid, typ: 'material', name: material(m.mid).name, g: m.g, farbe: material(m.mid).farbe })), MAX.material, 'material', 'Weitere Materialien');
   const R = buendle(obj.rohstoffe.map((r) => ({ id: r.key, typ: 'rohstoff', name: rohstoff(r.key).name, g: r.g, farbe: rohstoff(r.key).farbe, kritisch: rohstoff(r.key).kritisch })), MAX.rohstoff, 'rohstoff', 'Weitere Rohstoffe');
-  const spalten = [T.knoten, M.knoten, R.knoten];
+  // Schmale Bildschirme: nur Materialien → Rohstoffe, damit die Beschriftungen lesbar bleiben
+  const spalten = schmal ? [M.knoten, R.knoten] : [T.knoten, M.knoten, R.knoten];
 
   // Verbindungen, auf gebündelte Knoten umgeschrieben
   const links = new Map();
@@ -35,7 +36,9 @@ export function zeichneStoffstrom(el, obj, { teilName, material, rohstoff, onHov
   const hoehe = H - kopf - 4;
   const summe = (s) => s.reduce((x, k) => x + k.g, 0);
   const skala = Math.min(...spalten.map((s) => (hoehe - luecke * (s.length - 1) - 2 * s.length) / Math.max(summe(s), 1e-9)));
-  const xs = [labelL, (labelL + W - labelR - bar) / 2, W - labelR - bar];
+  const xs = schmal ? [labelL, W - labelR - bar] : [labelL, (labelL + W - labelR - bar) / 2, W - labelR - bar];
+  const titel = schmal ? ['Materialien', 'Rohstoffe'] : ['Bauteile', 'Materialien', 'Rohstoffe'];
+  const letzte = spalten.length - 1;
   const pos = new Map();
   spalten.forEach((s, i) => {
     let y = kopf;
@@ -47,9 +50,10 @@ export function zeichneStoffstrom(el, obj, { teilName, material, rohstoff, onHov
   svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
   svg.setAttribute('role', 'img');
   svg.setAttribute('aria-label', `Stoffstrom von ${obj.name}: Bauteile, Materialien und Rohstoffe nach Gewicht`);
-  let html = ['Bauteile', 'Materialien', 'Rohstoffe'].map((t, i) =>
-    `<text class="spalte" x="${i === 0 ? xs[0] + bar : i === 1 ? xs[1] + bar / 2 : xs[2]}" y="11" text-anchor="${i === 0 ? 'end' : i === 1 ? 'middle' : 'start'}">${t}</text>`).join('');
+  let html = titel.map((t, i) =>
+    `<text class="spalte" x="${i === 0 ? xs[0] + bar : i === letzte ? xs[i] : xs[i] + bar / 2}" y="11" text-anchor="${i === 0 ? 'end' : i === letzte ? 'start' : 'middle'}">${t}</text>`).join('');
 
+  for (const [k, l] of links) if (!pos.has(l.a) || !pos.has(l.b)) links.delete(k);   // ausgeblendete Spalte
   // Bänder: Reihenfolge nach Lage der Gegenseite, damit sich wenig kreuzt
   const sortiert = [...links.values()].sort((p, q) => pos.get(p.b).y - pos.get(q.b).y || pos.get(p.a).y - pos.get(q.a).y);
   const proQuelle = new Map();
@@ -62,13 +66,23 @@ export function zeichneStoffstrom(el, obj, { teilName, material, rohstoff, onHov
     const x0 = a.x + bar, x1 = b.x, m = (x0 + x1) / 2;
     html += `<path class="band" data-a="${l.a}" data-b="${l.b}" style="fill:${a.farbe}" d="M${x0},${y0} C${m},${y0} ${m},${y1} ${x1},${y1} L${x1},${y1 + h} C${m},${y1 + h} ${m},${y0 + h} ${x0},${y0 + h} Z"><title>${esc(a.name)} → ${esc(b.name)}: ${gramm(l.g)}</title></path>`;
   }
+  // Beschriftungen je Spalte mindestens 14 px auseinander, notfalls nach oben verschoben
+  const labelY = new Map();
+  for (const s of spalten) {
+    const ys = s.map((k) => pos.get(k.id).y + pos.get(k.id).h / 2);
+    for (let j = 1; j < ys.length; j++) ys[j] = Math.max(ys[j], ys[j - 1] + 14);
+    const ueber = ys.length ? ys[ys.length - 1] - (H - 6) : 0;
+    if (ueber > 0) for (let j = ys.length - 1; j >= 0; j--) ys[j] = Math.min(ys[j] - ueber, j < ys.length - 1 ? ys[j + 1] - 14 : Infinity);
+    s.forEach((k, j) => labelY.set(k.id, ys[j]));
+  }
   // Knoten mit Beschriftung
   spalten.forEach((s, i) => s.forEach((k) => {
-    const p = pos.get(k.id), links_ = i === 0, ty = p.y + p.h / 2;
+    const p = pos.get(k.id), links_ = i === 0, mitte = p.y + p.h / 2, ty = labelY.get(k.id);
     const tx = links_ ? p.x - 8 : p.x + bar + 8;
     html += `<g class="knoten ${k.typ} ${k.weitere ? 'weitere' : ''}" data-id="${k.id}" data-typ="${k.typ}" tabindex="${k.typ === 'rohstoff' && !k.weitere ? 0 : -1}">
       <rect x="${p.x}" y="${p.y}" width="${bar}" height="${p.h}" style="fill:${k.farbe}"/>
-      <rect class="treffer" x="${links_ ? 0 : p.x}" y="${p.y - 3}" width="${links_ ? p.x + bar : (i === 2 ? labelR + bar : 120)}" height="${p.h + 6}"/>
+      <rect class="treffer" x="${links_ ? 0 : p.x}" y="${p.y - 3}" width="${links_ ? p.x + bar : (i === letzte ? labelR + bar : 120)}" height="${p.h + 6}"/>
+      ${Math.abs(ty - mitte) > 1 ? `<polyline class="fuehrung" points="${links_ ? p.x : p.x + bar},${mitte} ${links_ ? tx + 4 : tx - 4},${ty}"/>` : ''}
       <text x="${tx}" y="${ty}" text-anchor="${links_ ? 'end' : 'start'}">${esc(k.name)}<tspan class="g"> ${gramm(k.g)}</tspan>${k.kritisch ? '<tspan class="krit"> ▲</tspan>' : ''}</text></g>`;
   }));
   svg.innerHTML = html;
