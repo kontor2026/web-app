@@ -340,6 +340,17 @@ svg.iso { width: 100%; height: 100%; display: block; overflow: visible; }
 .tip small { display: block; font: 11px var(--mono); opacity: .65; margin-top: 2px; }
 .tip .n { font: 11px var(--mono); color: var(--accent-tip); margin-right: 6px; }
 
+/* Backend-Anbindung: Warten, Fehler, Entwurfsstatus */
+.busy-bar { position: relative; height: 3px; background: var(--rule-2); overflow: hidden; }
+.busy-bar i { position: absolute; inset: 0 auto 0 0; width: 40%; background: var(--accent); }
+.busy-row { display: flex; justify-content: space-between; align-items: center; }
+.busy-row .mono { font: 500 20px var(--mono); }
+.err { color: var(--accent); font-size: 14px; overflow-wrap: anywhere; }
+.note.warn { border-color: var(--accent); color: var(--ink); }
+.chip { display: inline-block; margin-left: 8px; padding: 1px 7px; border: 1px solid var(--rule); border-radius: 2px; font: 10px var(--mono); letter-spacing: .04em; text-transform: none; }
+.chip.draft { border-color: var(--accent); color: var(--accent); }
+.known { font: 10px var(--mono); color: var(--good); margin-left: 6px; }
+
 /* Schmale Bildschirme: alles untereinander, Seite scrollt */
 @media (max-width: 900px) {
   html, body { height: auto; }

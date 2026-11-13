@@ -7,7 +7,7 @@ src = pathlib.Path(sys.argv[1]); out = pathlib.Path(sys.argv[2])
 
 def strip(code):
     code = re.sub(r"^import .*?;\s*$", "", code, flags=re.M)
-    code = re.sub(r"^export (const|function|class) ", r"\1 ", code, flags=re.M)
+    code = re.sub(r"^export (const|function|class|async function) ", r"\1 ", code, flags=re.M)
     return code
 
 parts = [strip((src / 'js/data/catalog.js').read_text(encoding='utf-8')),
@@ -17,6 +17,7 @@ for name in ['smartphone', 'laptop', 'netzteil', 'flasche']:
     parts.append(f"const {name} = (() => {{\n{body}\n}})();")
 parts.append(strip((src / 'js/data/objects/index.js').read_text(encoding='utf-8')))
 parts.append(strip((src / 'js/iso.js').read_text(encoding='utf-8')))
+parts.append(strip((src / 'js/api.js').read_text(encoding='utf-8')))
 parts.append(strip((src / 'js/main.js').read_text(encoding='utf-8')))
 js = "const { animate, stagger, svg } = anime;\n" + "\n\n".join(parts)
 
@@ -33,7 +34,7 @@ page = f"""<title>Kreislauf-Station</title>
 </style>
 {body}
 <script src="https://cdn.jsdelivr.net/npm/animejs@4.5.0/dist/bundles/anime.umd.min.js"></script>
-<script>
+<script type="module">
 {js}
 </script>
 """

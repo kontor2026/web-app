@@ -3,6 +3,7 @@ import { OBJECTS, getObject } from './data/objects/index.js';
 import { CLASSES, MATERIALS, ELEMENTS } from './data/catalog.js';
 import { INVENTORY, byId } from './data/inventory.js';
 import { ExplodedView, partColor } from './iso.js';
+import { api, toDataUrl } from './api.js';
 
 const app = document.getElementById('app');
 const modalRoot = document.getElementById('modal-root');
@@ -20,11 +21,16 @@ const NEW_FACH = 'E-12';
 const state = {
   obj: null,
   model: null,
-  stock: INVENTORY.filter((i) => i.einheit === 'Stk').reduce((a, i) => a + i.menge, 0),
+  scan: null,           // letzte Antwort von /api/scan
+  inventory: INVENTORY, // wird bei laufendem Backend durch den echten Bestand ersetzt
   view: null,
   explode: null,
   stream: null,
 };
+// Anzeige des KI-Anbieters: lokal (Inferenz-Container) oder Claude (Anthropic-API).
+const kiLabel = () => (api.info?.anbieter === 'claude' ? 'KI Claude · ' : 'KI lokal · ') + (api.info?.modell ?? '');
+const invById = (id) => state.inventory.find((i) => i.id === id) ?? byId(id) ?? { name: id, fach: '?' };
+const stockCount = () => state.inventory.filter((i) => i.einheit === 'Stk').reduce((a, i) => a + i.menge, 0);
 
 const h = (html) => {
   const t = document.createElement('template');
@@ -41,7 +47,39 @@ function setStep(step) {
     s.classList.toggle('active', i === cur);
     s.classList.toggle('done', i < cur);
   });
-  document.getElementById('stock-count').textContent = state.stock;
+  document.getElementById('stock-count').textContent = fmt(stockCount());
+}
+
+// Wartefenster für lange KI-Schritte: Laufzeit sichtbar, abbrechbar.
+function busy(title, text) {
+  const ctl = new AbortController();
+  const t0 = performance.now();
+  const bg = h(`<div class="modal-bg"><div class="modal busy">
+    <div class="eyebrow">${kiLabel()}</div>
+    <h2>${title}</h2><p>${text}</p>
+    <div class="busy-bar"><i></i></div>
+    <div class="busy-row"><span class="mono" id="busy-time">0 s</span><button class="btn ghost" id="busy-x">Abbrechen</button></div>
+  </div></div>`);
+  modalRoot.appendChild(bg);
+  animate(bg.querySelector('.busy-bar i'), { translateX: ['-100%', '250%'], duration: 1400, loop: true, ease: 'inOutSine' });
+  const timer = setInterval(() => {
+    bg.querySelector('#busy-time').textContent = `${Math.round((performance.now() - t0) / 1000)} s`;
+  }, 500);
+  const close = () => { clearInterval(timer); bg.remove(); };
+  bg.querySelector('#busy-x').addEventListener('click', () => { ctl.abort(); close(); });
+  return { signal: ctl.signal, close };
+}
+
+function errorModal(title, msg, actions = []) {
+  modal(`
+    <div class="eyebrow">Das hat nicht geklappt</div>
+    <h2>${title}</h2>
+    <p class="err">${msg}</p>
+    <div class="row">${actions.map((a, i) => `<button class="btn ${i === actions.length - 1 ? 'primary' : 'ghost'}" data-a="${i}">${a.label}</button>`).join('')}</div>
+  `, (bg, close) => bg.querySelectorAll('[data-a]').forEach((b) => b.addEventListener('click', () => {
+    close();
+    actions[+b.dataset.a].run?.();
+  })));
 }
 
 function show(viewEl, step) {
@@ -147,6 +185,7 @@ function stopCamera() {
 
 // Simulierte Erkennung. Später: POST /api/scan mit dem Bild, Antwort = erkennung + Objekt-ID.
 function analyze(v, src, obj) {
+  if (api.online) return analyzeApi(v, src, obj);
   const vf = v.querySelector('#vf');
   v.querySelector('#vf-idle').style.display = 'none';
   vf.querySelectorAll('img, .scanline, .bbox, .vf-log').forEach((n) => n.remove());
@@ -180,6 +219,117 @@ function analyze(v, src, obj) {
       },
     });
   };
+}
+
+// Echte Erkennung über das Backend: Foto-Abgleich, sonst lokales Vision-Modell.
+async function analyzeApi(v, src, sample) {
+  const vf = v.querySelector('#vf');
+  v.querySelector('#vf-idle').style.display = 'none';
+  vf.querySelectorAll('img, .scanline, .bbox, .vf-log').forEach((n) => n.remove());
+  const img = h(`<img src="${src}" alt="">`);
+  const scan = h('<div class="scanline"></div>');
+  const log = h('<div class="vf-log"><div style="opacity:1">› Bild wird analysiert<em id="vf-t">0 s</em></div></div>');
+  vf.prepend(img);
+  vf.append(scan, log);
+  const vfState = v.querySelector('#vf-state');
+  vfState.textContent = 'analysiere';
+  // Auf das Laden warten, aber nie hängen bleiben (img.decode() wartet in Hintergrund-Tabs teils ewig).
+  await new Promise((ok) => { if (img.complete) ok(); img.onload = img.onerror = ok; setTimeout(ok, 1500); });
+
+  const W = vf.clientWidth, H = vf.clientHeight, r = Math.min(W / img.naturalWidth, H / img.naturalHeight);
+  const iw = img.naturalWidth * r, ih = img.naturalHeight * r, ix = (W - iw) / 2, iy = (H - ih) / 2;
+  const sweep = animate(scan, { top: [iy, iy + ih], opacity: [0.2, 1, 0.2], duration: 1800, loop: true, alternate: true, ease: 'inOutSine' });
+  const t0 = performance.now();
+  const tick = setInterval(() => { log.querySelector('#vf-t').textContent = `${Math.round((performance.now() - t0) / 1000)} s`; }, 500);
+
+  let res;
+  try {
+    res = await api.scan(await toDataUrl(src));
+  } catch (e) {
+    clearInterval(tick); sweep.pause(); scan.remove();
+    vfState.textContent = 'Fehler';
+    errorModal('Erkennung fehlgeschlagen', e.message, [
+      { label: 'Aus Liste wählen', run: () => showResult(v, null) },
+      { label: 'Nochmal versuchen', run: () => analyzeApi(v, src, sample) },
+    ]);
+    return;
+  }
+  clearInterval(tick); sweep.pause(); scan.remove();
+  state.scan = res;
+
+  // Protokoll der echten Pipeline-Schritte mit Laufzeiten.
+  log.innerHTML = res.schritte.map((s) => `<div>› ${s.name}<em>${fmt((s.ms / 1000).toFixed(1))} s</em></div>`).join('')
+    + `<div>› ${res.objekt} · ${pct(res.conf)}<em>${fmt((res.dauer_ms / 1000).toFixed(1))} s</em></div>`;
+  animate(log.children, { opacity: [0, 1], translateX: [-6, 0], delay: stagger(140), duration: 300 });
+
+  const hitId = res.kandidaten[0]?.object_id;
+  // Rahmen: vom Backend freigestellter Bereich, sonst bekannte Beispielposition.
+  const [bx, by, bw, bh] = res.bbox ?? SAMPLE_BBOX[sample?.id === hitId ? hitId : ''] ?? [0.15, 0.15, 0.7, 0.7];
+  const box = h(`<div class="bbox"><span>${res.objekt} · ${pct(res.conf)}</span></div>`);
+  Object.assign(box.style, { left: `${ix + bx * iw}px`, top: `${iy + by * ih}px`, width: `${bw * iw}px`, height: `${bh * ih}px` });
+  vf.append(box);
+  animate(box, { opacity: [0, 1], scale: [1.08, 1], duration: 450, ease: 'outBack' });
+  vfState.textContent = res.quelle === 'foto-abgleich' ? 'bekannt' : 'erkannt';
+  showResultApi(v, res);
+}
+
+function showResultApi(v, res) {
+  const side = v.querySelector('#side');
+  const quelle = { 'foto-abgleich': 'Foto-Abgleich mit bekannten Gegenständen', ki: kiLabel(), mock: 'Mock-Modus' }[res.quelle];
+  const cands = res.kandidaten.map((c) => ({ ...c, key: c.name }));
+  cands.push({ key: '', name: 'Anderes Modell / weiß ich nicht', conf: null });
+  state.model = cands[0].name;
+  side.innerHTML = `
+    <div class="result">
+      <div>
+        <div class="eyebrow">${quelle} · ${fmt((res.dauer_ms / 1000).toFixed(1))} s</div>
+        <h1 style="margin-top:8px">${res.objekt}</h1>
+        <div class="conf" style="margin-top:8px">Objektklasse ${pct(res.conf)} · ${res.kategorie}</div>
+      </div>
+      ${res.qualitaet?.ok === false ? `<p class="note warn">${res.qualitaet.hinweis}</p>` : ''}
+      <div>
+        <div class="eyebrow" style="margin-bottom:10px">Welches Modell ist es?</div>
+        <div class="cands">${cands.map((c, i) => `
+          <button class="cand ${i === 0 ? 'sel' : ''}" data-key="${c.key}">
+            <span class="radio"></span><span>${c.name}${c.object_id ? ' <small class="known">bekannt</small>' : ''}</span>
+            <span class="pct">${c.conf == null ? '' : pct(c.conf)}</span>
+            ${c.conf == null ? '' : `<span class="bar"><i style="width:${c.conf * 100}%"></i></span>`}
+          </button>`).join('')}</div>
+      </div>
+      ${res.sichtbarer_text ? `<p class="note">Gelesener Text: „${res.sichtbarer_text}“</p>` : ''}
+      <p class="note">${res.hinweis ?? ''}</p>
+    </div>
+    <div class="actions-col">
+      <button class="btn primary" id="go">Steckbrief öffnen <span class="k">↵</span></button>
+      <button class="btn ghost" id="again">Nochmal scannen</button>
+    </div>`;
+  side.querySelectorAll('.cand').forEach((b) => b.addEventListener('click', () => {
+    side.querySelectorAll('.cand').forEach((x) => x.classList.toggle('sel', x === b));
+    state.model = b.dataset.key || res.objekt;
+  }));
+  side.querySelector('#go').addEventListener('click', () => openSheetApi(res, state.model));
+  side.querySelector('#again').addEventListener('click', viewScan);
+  animate(side.querySelectorAll('.result > *, .cand, .actions-col'), { opacity: [0, 1], translateY: [10, 0], delay: stagger(60), duration: 420, ease: 'outCubic' });
+}
+
+async function openSheetApi(res, modell) {
+  const known = res.kandidaten.some((c) => c.name === modell && c.object_id);
+  const b = known ? null : busy('Steckbrief wird erstellt',
+    `Die KI zerlegt „${modell}“ in Bauteile und ordnet Materialien zu. Die Zeichnung berechnet die Station danach selbst. Auf einem Rechner ohne Grafikkarte dauert das einige Minuten.`);
+  try {
+    const out = await api.steckbrief({ scan_id: res.scan_id, modell, objekt: res.objekt }, b?.signal);
+    b?.close();
+    state.obj = out.object;
+    state.model = modell;
+    viewSheet();
+  } catch (e) {
+    b?.close();
+    if (e.name === 'AbortError') return;
+    errorModal('Kein Steckbrief möglich', e.message, [
+      { label: 'Abbrechen' },
+      { label: 'Nochmal versuchen', run: () => openSheetApi(res, modell) },
+    ]);
+  }
 }
 
 function showResult(v, obj) {
@@ -329,7 +479,7 @@ function viewSheet() {
     v.querySelectorAll('#seg button').forEach((x) => x.classList.toggle('on', x === b));
     view.setExploded(b.dataset.x === '1');
   }));
-  v.querySelector('#build').addEventListener('click', viewCraft);
+  v.querySelector('#build').addEventListener('click', () => viewCraft());
   v.querySelector('#store').addEventListener('click', modalStore);
   v.querySelector('#no').addEventListener('click', modalDispose);
 
@@ -356,7 +506,7 @@ function viewSheet() {
     const mix = materialMix(obj);
     setPanel(`
       <div>
-        <div class="eyebrow">${obj.klasse}</div>
+        <div class="eyebrow">${obj.klasse}${obj.status === 'entwurf' ? ' <span class="chip draft">KI-Entwurf · ungeprüft</span>' : ''}</div>
         <h1 style="margin-top:8px">${state.model}</h1>
         <div class="sub">${obj.name} · erkannt mit ${pct(obj.erkennung.conf)} · ${obj.gewicht}</div>
       </div>
@@ -490,8 +640,27 @@ function moveTip(e) {
 /* 03 Bauen                                                             */
 /* ------------------------------------------------------------------ */
 
-function viewCraft() {
+// Bauideen: mit Backend von der lokalen KI (oder aus dem Cache), sonst die Demo-Ideen aus den Objektdaten.
+async function viewCraft(neu = false) {
   tip.hidden = true;
+  if (api.online) {
+    const b = (state.obj.projekte && !neu) ? null : busy('Bauideen werden erstellt',
+      `Die KI sucht drei Projekte, die dein ${state.obj.name} mit Material aus dem Lager verbinden.`);
+    try {
+      const [res, inv] = await Promise.all([api.ideen(state.obj.id, neu, b?.signal), api.inventory()]);
+      b?.close();
+      state.obj.projekte = res.projekte;
+      state.inventory = inv;
+    } catch (e) {
+      b?.close();
+      if (e.name !== 'AbortError') errorModal('Keine Bauideen möglich', e.message, [{ label: 'Schließen' }]);
+      return;
+    }
+  }
+  renderCraft();
+}
+
+function renderCraft() {
   const obj = state.obj;
   const letters = ['A', 'B', 'C'];
   const dots = (n) => `<span class="dots">${'<b>●</b>'.repeat(n)}${'○'.repeat(3 - n)}</span>`;
@@ -517,7 +686,7 @@ function viewCraft() {
             <div class="goal"><small>Das lernst du</small>${p.lernziel}</div>
             <div><h4>Material</h4><div class="uses">${p.nutzt.map((u) => {
               if (u.neu) return `<div class="use neu"><i></i><span>${u.name}</span><span class="f">${NEW_FACH}</span><span class="q">neu</span></div>`;
-              const it = byId(u.inv);
+              const it = invById(u.inv);
               return `<div class="use"><i></i><span>${it.name}</span><span class="f">${it.fach}</span><span class="q">${u.menge}×</span></div>`;
             }).join('')}</div></div>
             <div><h4>Werkzeug</h4><div class="tools">${p.werkzeug.map((w) => `<span class="tag">${w}</span>`).join('')}</div></div>
@@ -529,7 +698,7 @@ function viewCraft() {
         <h3>Lager der Werkstatt</h3>
         <p>Fahre über eine Idee, um zu sehen, was sie aus dem Lager braucht.</p>
         <div class="irow new" data-inv="__neu"><span class="f">${NEW_FACH}</span><span>${state.model}</span><span class="q">neu</span></div>
-        ${INVENTORY.map((i) => `<div class="irow" data-inv="${i.id}"><span class="f">${i.fach}</span><span>${i.name}</span><span class="q">${fmt(i.menge)} ${i.einheit}</span></div>`).join('')}
+        ${state.inventory.filter((i) => i.menge > 0).map((i) => `<div class="irow" data-inv="${i.id}"><span class="f">${i.fach}</span><span>${i.name}</span><span class="q">${fmt(i.menge)} ${i.einheit}</span></div>`).join('')}
       </aside>
     </section>`);
   show(v, 'craft');
@@ -547,7 +716,8 @@ function viewCraft() {
       inv.querySelectorAll('.irow').forEach((r) => r.classList.remove('used'));
     });
   });
-  v.querySelectorAll('[data-build]').forEach((b) => b.addEventListener('click', () => modalBuild(obj.projekte[+b.dataset.build])));
+  v.querySelectorAll('[data-build]').forEach((b) => b.addEventListener('click', () => modalBuild(obj.projekte[+b.dataset.build], +b.dataset.build)));
+  v.querySelector('#more').addEventListener('click', () => api.online && viewCraft(true));
   v.querySelector('#back').addEventListener('click', viewSheet);
 
   animate(v.querySelectorAll('.idea'), { opacity: [0, 1], translateY: [24, 0], delay: stagger(110, { start: 200 }), duration: 600, ease: 'outCubic' });
@@ -569,32 +739,45 @@ function modal(html, wire) {
   wire(bg, close);
 }
 
-function barcode() {
+function barcode(code) {
   let x = 0, bars = '';
   while (x < 108) {
     const w = 1 + Math.floor(Math.random() * 3);
     if (Math.random() > 0.4) bars += `<rect x="${x}" y="0" width="${w}" height="58" fill="currentColor"/>`;
     x += w + 1;
   }
-  return `<svg viewBox="0 0 110 70" fill="currentColor">${bars}<text x="55" y="69" font-size="8" text-anchor="middle" font-family="IBM Plex Mono">0428 ${NEW_FACH}</text></svg>`;
+  return `<svg viewBox="0 0 110 70" fill="currentColor">${bars}<text x="55" y="69" font-size="8" text-anchor="middle" font-family="IBM Plex Mono">${code}</text></svg>`;
 }
 
-function modalStore() {
+async function modalStore() {
   const obj = state.obj;
+  let item;
+  if (api.online) {
+    try {
+      item = await api.einlagern(obj.id, state.model);
+      state.inventory = await api.inventory();
+    } catch (e) {
+      errorModal('Einlagern fehlgeschlagen', e.message, [{ label: 'Schließen' }]);
+      return;
+    }
+  } else {
+    item = { id: `${obj.id}-428`, name: state.model, fach: NEW_FACH, menge: 1, einheit: 'Stk', nr: 428 };
+    state.inventory = [...state.inventory, item];
+  }
+  const nr = `KS-${String(item.nr).padStart(4, '0')}`;
   modal(`
     <div class="eyebrow">Eingelagert</div>
     <h2>Danke. Dein ${obj.name} liegt jetzt im Lager.</h2>
-    <p>Kleb das Etikett auf den Gegenstand und leg ihn in Fach ${NEW_FACH}. Ab jetzt taucht er in den Bauideen für alle auf.</p>
+    <p>Kleb das Etikett auf den Gegenstand und leg ihn in Fach ${item.fach}. Ab jetzt taucht er in den Bauideen für alle auf.</p>
     <div class="label-card">
       <span class="small">Inventar-Nr.</span>
-      <span class="big">KS-0428</span>
-      <span class="small">${state.model} · Fach ${NEW_FACH} · ${new Date().toLocaleDateString('de-DE')}</span>
-      ${barcode()}
+      <span class="big">${nr}</span>
+      <span class="small">${item.name} · Fach ${item.fach} · ${new Date().toLocaleDateString('de-DE')}</span>
+      ${barcode(`${nr} ${item.fach}`)}
     </div>
     <div class="row"><button class="btn ghost">Etikett drucken</button><button class="btn primary" id="next">Nächster Gegenstand</button></div>
   `, (bg, close) => {
-    state.stock += 1;
-    document.getElementById('stock-count').textContent = state.stock;
+    setStep('sheet');
     animate('#stock-count', { scale: [1.5, 1], duration: 900, ease: 'outExpo' });
     bg.querySelector('#next').addEventListener('click', () => { close(); viewScan(); });
   });
@@ -617,21 +800,67 @@ function modalDispose() {
   });
 }
 
-function modalBuild(p) {
+function modalBuild(p, index) {
+  const rows = p.nutzt.map((u) => {
+    if (u.neu) return `<div class="use neu"><i></i><span>${u.name}</span><span class="f">dein Teil</span><span class="q">neu</span></div>`;
+    const it = invById(u.inv);
+    return `<div class="use"><i></i><span>${it.name}</span><span class="f">${it.fach}</span><span class="q">${u.menge}×</span></div>`;
+  }).join('');
   modal(`
-    <div class="eyebrow">Projekt gestartet</div>
+    <div class="eyebrow">Projekt starten</div>
     <h2>${p.titel}</h2>
     <p>Diese Teile werden aus dem Lager ausgebucht. Hol sie aus den Fächern:</p>
-    <div class="uses">${p.nutzt.map((u) => {
-      if (u.neu) return `<div class="use neu"><i></i><span>${u.name}</span><span class="f">${NEW_FACH}</span><span class="q">neu</span></div>`;
-      const it = byId(u.inv);
-      return `<div class="use"><i></i><span>${it.name}</span><span class="f">${it.fach}</span><span class="q">${u.menge}×</span></div>`;
-    }).join('')}</div>
-    <div class="row"><button class="btn ghost" id="x">Abbrechen</button><button class="btn primary">Bauanleitung öffnen</button></div>
-  `, (bg, close) => bg.querySelector('#x').addEventListener('click', close));
+    <div class="uses">${rows}</div>
+    <p class="err" id="book-err" hidden></p>
+    <div class="row"><button class="btn ghost" id="x">Abbrechen</button><button class="btn primary" id="book">Material ausbuchen</button></div>
+  `, (bg, close) => {
+    bg.querySelector('#x').addEventListener('click', close);
+    bg.querySelector('#book').addEventListener('click', async () => {
+      try {
+        if (api.online) {
+          await api.start(state.obj.id, index);
+          state.inventory = await api.inventory();
+        } else {
+          state.inventory = state.inventory.map((i) => {
+            const u = p.nutzt.find((x) => x.inv === i.id);
+            return u ? { ...i, menge: i.menge - u.menge } : i;
+          });
+        }
+      } catch (e) {
+        const err = bg.querySelector('#book-err');
+        err.textContent = e.message;
+        err.hidden = false;
+        return;
+      }
+      setStep('craft');
+      bg.querySelector('.modal').innerHTML = `
+        <div class="eyebrow">Ausgebucht</div>
+        <h2>Viel Spaß beim Bauen.</h2>
+        <p>Das Material ist aus dem Lagerbestand ausgetragen. ${index === undefined ? '' : 'Die Bauanleitung findest du an der Werkbank.'}</p>
+        <div class="row"><button class="btn primary" id="ok">Fertig</button></div>`;
+      bg.querySelector('#ok').addEventListener('click', () => { close(); renderCraft(); });
+    });
+  });
 }
 
 document.querySelector('.brand').addEventListener('click', viewScan);
+
+// Backend vorhanden? Dann echter Lagerbestand und Status der lokalen KI in der Kopfzeile.
+async function initBackend() {
+  const ki = document.getElementById('ki-status');
+  if (!(await api.init())) {
+    ki.textContent = 'Demo-Modus';
+    ki.title = 'Kein Backend erreichbar. Erkennung und Daten sind simuliert.';
+    return;
+  }
+  ki.textContent = api.info.modus === 'mock' ? 'KI aus (Mock)' : kiLabel();
+  ki.classList.toggle('on', api.info.ok);
+  ki.title = api.info.hinweis ?? '';
+  state.inventory = await api.inventory().catch(() => state.inventory);
+  setStep('scan');
+}
+
+await initBackend();
 
 // Direkteinstieg für Demo und Entwicklung: #sheet=laptop oder #craft=flasche
 const [, mode, id] = location.hash.match(/^#(sheet|craft)=(\w+)/) ?? [];
