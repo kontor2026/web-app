@@ -1,0 +1,17 @@
+/* 3D-Modelle: Ergänzungen zur Steckbrief-Ansicht (.sheet) der Station */
+.modelle .drawing { inset: 76px 24px 64px; }
+.modelle .drawing canvas, .modelle .labels { position: absolute; inset: 0; }
+.ballon {
+  display: grid; place-items: center; width: 22px; height: 22px; border-radius: 50%; padding: 0;
+  background: var(--sheet); border: 1px solid var(--ink); font: 500 10px var(--mono); color: var(--ink);
+  transition: opacity .2s, background .15s; pointer-events: auto;
+}
+.ballon.hot { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.ballon.aus { opacity: .25; }
+.liste-kopf { display: grid; gap: 10px; }
+.liste-kopf .suche-feld { width: 100%; }
+.kat-list a.aktiv { background: var(--ink); color: var(--sheet); border-color: var(--ink); }
+.pruef { display: grid; gap: 8px; }
+.note.ok { border-color: var(--good); }
+.panel .facts dd { font: 13px var(--mono); overflow-wrap: anywhere; }
+.actionbar .q span { color: var(--ink-3); }

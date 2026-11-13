@@ -1,0 +1,68 @@
+/* Rohstoff-Atlas: Ergänzungen zu Katalog (.craft) und Steckbrief (.sheet) der Station */
+.atlas-katalog .craft-head { align-items: flex-end; }
+.beispiele { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--ink); }
+.beispiel { display: grid; gap: 6px; padding: 18px 20px 20px 0; border-bottom: 1px solid var(--rule); text-decoration: none; color: inherit; transition: background .2s; }
+.beispiel:hover { background: var(--sheet); }
+.beispiel .letter { font: 500 28px/1 var(--mono); color: var(--rule); transition: color .2s; }
+.beispiel:hover .letter { color: var(--accent); }
+.beispiel b { font-size: 19px; font-weight: 600; letter-spacing: -.01em; }
+.katalog .gruppe[hidden], .kat-list a[hidden] { display: none; }
+.mix-legend.einspaltig { grid-template-columns: 1fr; margin-top: 12px; }
+.krit-i { border: 0 !important; color: var(--accent); font-style: normal; font-size: 10px; line-height: 10px; text-align: center; }
+
+.atlas-sheet .canvas { display: block; }
+.globus { position: absolute; left: 14px; right: 14px; top: 14px; bottom: 41%; }
+.globus canvas { outline: none; }
+.globus-legende { position: absolute; left: 36px; top: 96px; z-index: 2; display: grid; gap: 2px; min-width: 210px; font-size: 13px; }
+.globus-legende .eyebrow { margin-bottom: 6px; }
+.gl-zeile { display: grid; grid-template-columns: 26px 1fr auto; gap: 8px; text-align: left; padding: 3px 6px; background: color-mix(in srgb, var(--sheet) 85%, transparent); border-bottom: 1px solid var(--rule-2); }
+.gl-zeile:hover { background: var(--accent-soft); }
+.gl-zeile .nr { font: 11px/20px var(--mono); color: var(--ink-3); }
+.gl-zeile b { font: 500 12px/20px var(--mono); }
+.gl-de { display: flex; align-items: center; gap: 8px; margin-top: 8px; font-size: 12px; color: var(--ink-2); }
+.gl-de i { width: 10px; height: 10px; background: var(--ink-3); border: 1px solid var(--ink); }
+.globus-ballon { display: flex; align-items: center; gap: 6px; transform: translate(-11px, -11px); pointer-events: none; white-space: nowrap; }
+.globus-ballon b { display: grid; place-items: center; width: 22px; height: 22px; border-radius: 50%; background: var(--sheet); border: 1px solid var(--ink); font: 500 10px var(--mono); }
+.globus-ballon span { font: 12px var(--sans); color: var(--ink); background: color-mix(in srgb, var(--sheet) 85%, transparent); padding: 0 4px; }
+.globus-ballon.de b { background: var(--ink); color: var(--sheet); font-size: 9px; }
+
+.strom-flaeche { position: absolute; left: 14px; right: 14px; bottom: 14px; height: 41%; border-top: 1px solid var(--rule); background: color-mix(in srgb, var(--paper) 70%, transparent); padding: 12px 22px 10px; display: grid; grid-template-rows: auto 1fr; }
+.strom-kopf { display: flex; gap: 12px; align-items: baseline; font-size: 12px; color: var(--ink-3); }
+.strom { position: relative; min-height: 0; }
+.strom-svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.strom-svg .spalte { font: 500 10px var(--mono); letter-spacing: .08em; text-transform: uppercase; fill: var(--ink-3); }
+.strom-svg .band { opacity: .42; transition: opacity .2s; }
+.strom-svg .knoten rect:first-child { stroke: var(--ink); stroke-width: .9; }
+.strom-svg .knoten text { font: 12px var(--sans); fill: var(--ink-2); dominant-baseline: middle; paint-order: stroke; stroke: var(--paper); stroke-width: 4px; stroke-linejoin: round; }
+.strom-svg .knoten .g { font: 11px var(--mono); fill: var(--ink-3); }
+.strom-svg .knoten .krit { fill: var(--accent); font-size: 9px; }
+.strom-svg .knoten .treffer { fill: transparent; stroke: none; }
+.strom-svg .knoten.rohstoff:not(.weitere) { cursor: pointer; }
+.strom-svg .knoten.rohstoff:not(.weitere) text { fill: var(--ink); font-weight: 500; }
+.strom-svg.has-hot .band:not(.hot) { opacity: .08; }
+.strom-svg.has-hot .knoten:not(.hot) { opacity: .3; }
+.strom-svg .knoten.hot rect:first-child { stroke: var(--accent); stroke-width: 1.6; }
+.strom-svg .knoten:focus-visible { outline: none; }
+.strom-svg .knoten:focus-visible rect:first-child { stroke: var(--accent); stroke-width: 2; }
+
+.atlas-sheet .hint-hover { bottom: calc(41% + 22px); background: var(--sheet); padding: 2px 10px; border: 1px solid var(--rule); }
+.atlas-sheet .elements .el { cursor: pointer; }
+.atlas-sheet .el.ohne { opacity: .55; }
+.atlas-sheet .el-hero .el { cursor: default; }
+.atlas-sheet .el-hero h1 { font-size: 24px; }
+.stufe-wahl { align-self: start; width: max-content; }
+.erklaerung { font-size: 14px; }
+.mrow.land { grid-template-columns: 26px 1fr auto 0; }
+.mrow.land .nr { font: 11px var(--mono); color: var(--ink-3); }
+.mrow.land.rest { color: var(--ink-3); }
+.panel .source a { color: var(--ink-2); }
+.crumbs a { color: var(--ink-2); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--rule); }
+.crumbs a:hover { color: var(--accent); }
+.actionbar .btn.ghost { text-decoration: none; }
+@media (max-width: 900px) {
+  .beispiele { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .atlas-sheet .canvas { height: auto; min-height: 0; display: grid; grid-template-rows: auto 52vh auto 360px; padding: 70px 0 0; }
+  .globus, .globus-legende, .strom-flaeche { position: relative; inset: auto; left: auto; right: auto; top: auto; bottom: auto; height: auto; }
+  .globus-legende { margin: 0 24px; }
+  .atlas-sheet .hint-hover { display: none; }
+}

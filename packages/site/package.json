@@ -1,0 +1,25 @@
+{
+  "name": "@kreislauf/site",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Statische Seite der Kreislauf-Station: Dashboard, Rohstoff-Atlas, 3D-Modelle, KI-Kompass",
+  "scripts": {
+    "daten": "node scripts/daten.mjs",
+    "dev": "npm run daten && vite",
+    "build": "npm run daten && vite build",
+    "preview": "vite preview",
+    "shots": "node scripts/shots.mjs"
+  },
+  "dependencies": {
+    "d3-geo": "3.1.2",
+    "globe.gl": "2.46.2",
+    "three": "0.187.0",
+    "topojson-client": "3.1.0",
+    "world-atlas": "2.0.2"
+  },
+  "devDependencies": {
+    "playwright": "1.65.0",
+    "vite": "8.3.8"
+  }
+}

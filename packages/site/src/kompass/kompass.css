@@ -1,0 +1,47 @@
+/* KI-Kompass: Kompassrose als technische Zeichnung, gleiche Linien und Ballons wie js/iso.js */
+.kompass .rose-flaeche { position: absolute; inset: 76px 24px 150px; display: grid; place-items: center; }
+.rose { width: 100%; height: 100%; overflow: visible; }
+.rose .ring { fill: var(--sheet); stroke: var(--ink); stroke-width: 1.2; }
+.rose .ring2, .rose .achse { fill: none; stroke: var(--rule); stroke-width: 1; }
+.rose .striche line { stroke: var(--ink-3); stroke-width: 1; }
+.rose .nadel { transition: transform .9s cubic-bezier(.65, 0, .35, 1); }
+.rose .nadel .nord { fill: var(--accent); stroke: var(--ink); stroke-width: .9; stroke-linejoin: round; }
+.rose .nadel .sued { fill: var(--sheet); stroke: var(--ink); stroke-width: .9; stroke-linejoin: round; }
+.rose .nadel circle { fill: var(--ink); }
+.rose .richtung { cursor: pointer; outline: none; }
+.rose .ballon-k { fill: var(--sheet); stroke: var(--ink); stroke-width: 1.2; transition: fill .15s; }
+.rose .num { font: 500 15px var(--mono); text-anchor: middle; dominant-baseline: central; fill: var(--ink); pointer-events: none; }
+.rose .lbl { font: 600 17px var(--sans); fill: var(--ink); }
+.rose .richtung:hover .ballon-k, .rose .richtung:focus-visible .ballon-k { fill: var(--accent-soft); stroke: var(--accent); }
+.rose .richtung.sel .ballon-k { fill: var(--accent); stroke: var(--accent); }
+.rose .richtung.sel .num { fill: var(--accent-ink); }
+.rose.has-sel .richtung:not(.sel) { opacity: .4; }
+
+.ablauf { position: absolute; left: 36px; right: 36px; bottom: 30px; z-index: 2; }
+.ablauf ol { list-style: none; display: grid; grid-template-columns: repeat(9, minmax(0, 1fr)); margin-top: 10px; border-top: 1px solid var(--ink); }
+.schritt { width: 100%; min-height: 84px; display: grid; align-content: start; gap: 4px; padding: 10px 8px 8px 0; text-align: left; position: relative; }
+.schritt::before { content: ''; position: absolute; top: -5px; left: 0; width: 9px; height: 9px; border-radius: 50%; border: 1.5px solid var(--ink); background: var(--sheet); }
+.schritt.mensch::before { background: var(--good); border-color: var(--good); }
+.schritt.ki::before { background: var(--accent); border-color: var(--accent); }
+.schritt .nr { font: 11px var(--mono); color: var(--ink-3); }
+.schritt b { font-size: 13px; font-weight: 500; line-height: 1.25; }
+.schritt .wer, .schritt-wer { font: 10px var(--mono); text-transform: uppercase; letter-spacing: .06em; color: var(--ink-3); }
+.schritt.mensch .wer, .schritt-wer.mensch { color: var(--good); }
+.schritt.ki .wer, .schritt-wer.ki { color: var(--accent); }
+.schritt:hover, .schritt.sel { background: var(--accent-soft); }
+.schritt-wer { font-size: 12px; border: 1px solid currentColor; padding: 2px 8px; border-radius: 2px; }
+
+.belege { display: grid; border-top: 1px solid var(--rule); }
+.belege div { padding: 10px 0; border-bottom: 1px solid var(--rule); display: grid; gap: 4px; font-size: 14px; }
+.beleg { font: 11px var(--mono); color: var(--ink-3); }
+.quellen { display: grid; gap: 8px; font-size: 14px; }
+.quellen a { color: var(--ink-2); text-underline-offset: 3px; text-decoration-color: var(--rule); }
+.quellen a:hover { color: var(--accent); }
+.pruef { display: grid; gap: 8px; }
+.row-knoepfe { display: flex; flex-wrap: wrap; gap: 8px; }
+@media (max-width: 900px) {
+  .kompass .canvas { height: auto; min-height: 0; display: grid; padding: 80px 16px 24px; }
+  .kompass .rose-flaeche { position: relative; inset: auto; height: 360px; }
+  .ablauf { position: relative; left: auto; right: auto; bottom: auto; }
+  .ablauf ol { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}

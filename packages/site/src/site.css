@@ -1,0 +1,33 @@
+/* Ergänzungen zur Station (css/app.css). Nur deren Tokens und Formensprache verwenden. */
+a { color: inherit; }
+.brand { text-decoration: none; color: var(--ink); }
+.steps a {
+  display: flex; align-items: center; gap: 8px; padding: 6px 14px; font-size: 13px; color: var(--ink-3); text-decoration: none;
+  border-bottom: 2px solid transparent; transition: color .2s, border-color .2s;
+}
+.steps a:hover { color: var(--ink); }
+.steps a.active { color: var(--ink); border-color: var(--accent); }
+.lead { color: var(--ink-2); max-width: 62ch; }
+.suche-feld {
+  height: 44px; width: min(360px, 100%); padding: 0 14px; border: 1px solid var(--ink); border-radius: 2px; background: var(--card);
+  font: 14px var(--sans); color: var(--ink);
+}
+.suche-feld:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+.btn { text-decoration: none; }
+.hint-puls { animation: puls 1.6s ease-in-out 3; }
+@keyframes puls { 50% { color: var(--accent); } }
+.leer { color: var(--ink-3); font-size: 13px; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+@media (max-width: 900px) {
+  .steps { overflow-x: auto; }
+  .steps a { padding: 4px 8px; white-space: nowrap; }
+}
+
+/* Übersicht */
+.start .ideas { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.karte-link { text-decoration: none; color: inherit; }
+.karte-link:hover .letter { color: var(--accent); }
+.karte-link .btn { align-self: flex-start; margin-top: auto; }
+.fortschritt { margin: 2px 6px 10px; }
+.fortschritt b { background: var(--good); }
+@media (max-width: 900px) { .start .ideas { grid-template-columns: minmax(0, 1fr); } }

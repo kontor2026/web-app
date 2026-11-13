@@ -1,11 +1,12 @@
-# Statische Pakete aus packages/ auf GitHub Pages: https://kontor2026.github.io/web-app/<paket>/
+# Statische Seite aus packages/site auf GitHub Pages: https://kontor2026.github.io/web-app/
+# Übersicht, Rohstoff-Atlas (/atlas/), 3D-Modelle (/modelle/), KI-Kompass (/kompass/).
 # Einmalig nötig: Settings → Pages → Source: "GitHub Actions".
 name: pages
 
 on:
   push:
     branches: [main]
-    paths: ['packages/**', 'data/**', 'backend/seed/**', 'tools/kategorien/**', '.github/workflows/pages.yml']
+    paths: ['packages/**', 'data/**', 'backend/seed/**', 'tools/kategorien/**', 'css/**', 'js/data/**', 'js/iso.js', 'vendor/**', '.github/workflows/pages.yml']
   workflow_dispatch:
 
 permissions:
@@ -25,16 +26,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 24
-      - name: Pakete bauen
-        run: |
-          mkdir -p _site
-          cp packages/index.html _site/
-          for p in packages/*/; do
-            [ -f "$p/package.json" ] || continue
-            name=$(basename "$p")
-            (cd "$p" && npm ci && npm run build)
-            cp -r "$p/dist" "_site/$name"
-          done
+      - name: Seite bauen (packages/site)
+        working-directory: packages/site
+        run: npm ci && npm run build
+      - run: mv packages/site/dist _site
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
