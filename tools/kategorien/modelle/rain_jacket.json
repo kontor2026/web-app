@@ -7,18 +7,18 @@
    "name": "Kordelstopper der Kapuze",
    "short": "Kordelstopper",
    "shape": "cyl",
-   "x": 60,
-   "y": 12,
+   "x": 88,
+   "y": 14,
    "w": 10,
    "d": 14,
-   "z": 30,
+   "z": 26,
    "h": 5,
    "explode": [
     0,
     0,
-    12.0
+    203.7
    ],
-   "mass": 1.6,
+   "mass": 1.7,
    "materials": [
     [
      "pp",
@@ -48,19 +48,19 @@
    "name": "Kapuze, im Kragen eingerollt",
    "short": "Kapuze",
    "shape": "box",
-   "x": 75,
+   "x": 95,
    "y": 0,
-   "w": 150,
-   "d": 45,
-   "z": 20,
-   "h": 10,
-   "r": 12,
+   "w": 110,
+   "d": 42,
+   "z": 16,
+   "h": 14,
+   "r": 14,
    "explode": [
     0,
     0,
-    164.0
+    179.7
    ],
-   "mass": 37.6,
+   "mass": 34,
    "materials": [
     [
      "polyester",
@@ -71,17 +71,109 @@
      15
     ]
    ],
-   "info": "Die Kapuze steckt eingerollt im Kragen und wird bei Regen herausgezogen. Mit Gummizug am Gesicht.",
+   "info": "Die Kapuze steckt eingerollt im Kragen und wird bei Regen herausgezogen. Mit Kordelzug am Gesicht.",
    "color": "#E8B83A",
    "marks": [
     {
      "shape": "box",
      "x": 6,
-     "y": 20,
-     "w": 138,
+     "y": 21,
+     "w": 98,
      "d": 2,
      "r": 1,
      "fill": "#C99A22"
+    },
+    {
+     "shape": "box",
+     "x": 70,
+     "y": 8,
+     "w": 28,
+     "d": 8,
+     "r": 3,
+     "fill": "#D6A82E"
+    }
+   ]
+  },
+  {
+   "id": "leiste",
+   "component_id": "coated_polyester_fabric",
+   "material_id": "polyester",
+   "name": "Abdeckleiste mit Druckknöpfen",
+   "short": "Abdeckleiste",
+   "shape": "box",
+   "x": 139,
+   "y": 40,
+   "w": 24,
+   "d": 360,
+   "z": 23.5,
+   "h": 2.5,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    114.7
+   ],
+   "mass": 13.6,
+   "materials": [
+    [
+     "polyester",
+     80
+    ],
+    [
+     "tpu",
+     10
+    ],
+    [
+     "stahl",
+     10
+    ]
+   ],
+   "info": "Stoffleiste über dem Reißverschluss, die den Regen abhält. Mit Druckknöpfen aus Metall geschlossen.",
+   "color": "#E8B83A",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 0,
+     "w": 1.5,
+     "d": 360,
+     "r": 0,
+     "fill": "#C99A22"
+    },
+    {
+     "shape": "cyl",
+     "x": 7,
+     "y": 30,
+     "w": 10,
+     "fill": "#B7BCC0"
+    },
+    {
+     "shape": "cyl",
+     "x": 7,
+     "y": 110,
+     "w": 10,
+     "fill": "#B7BCC0"
+    },
+    {
+     "shape": "cyl",
+     "x": 7,
+     "y": 190,
+     "w": 10,
+     "fill": "#B7BCC0"
+    },
+    {
+     "shape": "cyl",
+     "x": 7,
+     "y": 270,
+     "w": 10,
+     "fill": "#B7BCC0"
+    },
+    {
+     "shape": "cyl",
+     "x": 7,
+     "y": 340,
+     "w": 10,
+     "fill": "#B7BCC0"
     }
    ]
   },
@@ -89,22 +181,22 @@
    "id": "reissverschluss",
    "component_id": "metal_zipper",
    "material_id": "copper",
-   "name": "Reißverschluss mit Abdeckleiste",
+   "name": "Reißverschluss",
    "short": "Reißverschluss",
    "shape": "box",
    "x": 143,
    "y": 40,
    "w": 14,
    "d": 360,
-   "z": 24,
-   "h": 3,
+   "z": 21.5,
+   "h": 2,
    "r": 1,
    "explode": [
     0,
     0,
-    73.0
+    84.7
    ],
-   "mass": 26.8,
+   "mass": 25,
    "materials": [
     [
      "messing",
@@ -119,7 +211,7 @@
      5
     ]
    ],
-   "info": "Metallreißverschluss unter einer Stoffleiste, die den Regen abhält. Seitlich am Band abschneiden.",
+   "info": "Metallreißverschluss unter der Abdeckleiste. Seitlich am Band abschneiden: Metall gehört nicht ins Textilrecycling.",
    "color": "#2A2E31",
    "marks": [
     {
@@ -134,7 +226,7 @@
     {
      "shape": "box",
      "x": 3,
-     "y": 20,
+     "y": 24,
      "w": 8,
      "d": 14,
      "r": 2,
@@ -149,19 +241,19 @@
    "name": "Vorderteil links",
    "short": "Vorderteil",
    "shape": "box",
-   "x": 0,
-   "y": 40,
-   "w": 143,
-   "d": 360,
-   "z": 17,
-   "h": 7,
+   "x": 60,
+   "y": 30,
+   "w": 90,
+   "d": 370,
+   "z": 10,
+   "h": 11.5,
    "r": 6,
    "explode": [
     0,
     0,
-    80.0
+    54.7
    ],
-   "mass": 48.3,
+   "mass": 45.4,
    "materials": [
     [
      "polyester",
@@ -177,18 +269,27 @@
    "marks": [
     {
      "shape": "box",
-     "x": 25,
+     "x": 15,
      "y": 230,
-     "w": 80,
-     "d": 5,
-     "r": 2,
+     "w": 55,
+     "d": 22,
+     "r": 3,
      "fill": "#C99A22"
     },
     {
      "shape": "box",
+     "x": 15,
+     "y": 230,
+     "w": 55,
+     "d": 3,
+     "r": 1,
+     "fill": "#B88A1E"
+    },
+    {
+     "shape": "box",
      "x": 0,
-     "y": 352,
-     "w": 143,
+     "y": 360,
+     "w": 90,
      "d": 3,
      "r": 0,
      "fill": "#C99A22"
@@ -202,19 +303,19 @@
    "name": "Vorderteil rechts",
    "short": "Vorderteil",
    "shape": "box",
-   "x": 157,
-   "y": 40,
-   "w": 143,
-   "d": 360,
-   "z": 17,
-   "h": 7,
+   "x": 150,
+   "y": 30,
+   "w": 90,
+   "d": 370,
+   "z": 10,
+   "h": 11.5,
    "r": 6,
    "explode": [
     0,
     0,
-    80.0
+    54.7
    ],
-   "mass": 48.3,
+   "mass": 45.4,
    "materials": [
     [
      "polyester",
@@ -231,18 +332,27 @@
    "marks": [
     {
      "shape": "box",
-     "x": 38,
+     "x": 20,
      "y": 230,
-     "w": 80,
-     "d": 5,
-     "r": 2,
+     "w": 55,
+     "d": 22,
+     "r": 3,
      "fill": "#C99A22"
     },
     {
      "shape": "box",
+     "x": 20,
+     "y": 230,
+     "w": 55,
+     "d": 3,
+     "r": 1,
+     "fill": "#B88A1E"
+    },
+    {
+     "shape": "box",
      "x": 0,
-     "y": 352,
-     "w": 143,
+     "y": 360,
+     "w": 90,
      "d": 3,
      "r": 0,
      "fill": "#C99A22"
@@ -256,16 +366,16 @@
    "name": "Pflegeetikett",
    "short": "Etikett",
    "shape": "box",
-   "x": 200,
-   "y": 10,
+   "x": 135,
+   "y": 30,
    "w": 25,
    "d": 32,
-   "z": 16.7,
+   "z": 9.7,
    "h": 0.3,
    "r": 1,
    "explode": [
-    130,
-    -70,
+    0,
+    -110,
     0
    ],
    "mass": 1.1,
@@ -305,19 +415,19 @@
    "name": "Rückenteil mit Nahtband",
    "short": "Rückenteil",
    "shape": "box",
-   "x": 0,
-   "y": 0,
-   "w": 300,
-   "d": 400,
-   "z": 8,
-   "h": 9,
+   "x": 60,
+   "y": 20,
+   "w": 180,
+   "d": 380,
+   "z": 0,
+   "h": 9.7,
    "r": 6,
    "explode": [
     0,
     0,
     0.0
    ],
-   "mass": 107.4,
+   "mass": 102.1,
    "materials": [
     [
      "polyester",
@@ -328,23 +438,41 @@
      15
     ]
    ],
-   "info": "Alle Nähte sind innen mit einem aufgeschweißten Kunststoffband abgedichtet, damit kein Wasser durch die Stiche dringt.",
+   "info": "Alle Nähte sind innen mit einem aufgeschweißten Kunststoffband (TPU) abgedichtet, damit kein Wasser durch die Stiche dringt.",
    "color": "#E8B83A",
    "marks": [
     {
      "shape": "box",
      "x": 0,
-     "y": 120,
-     "w": 300,
-     "d": 8,
+     "y": 90,
+     "w": 180,
+     "d": 6,
      "r": 0,
-     "fill": "#C99A22"
+     "fill": "#EDE6CF"
+    },
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 0,
+     "w": 6,
+     "d": 380,
+     "r": 0,
+     "fill": "#EDE6CF"
+    },
+    {
+     "shape": "box",
+     "x": 172,
+     "y": 0,
+     "w": 6,
+     "d": 380,
+     "r": 0,
+     "fill": "#EDE6CF"
     },
     {
      "shape": "box",
      "x": 0,
-     "y": 392,
-     "w": 300,
+     "y": 368,
+     "w": 180,
      "d": 3,
      "r": 0,
      "fill": "#C99A22"
@@ -352,25 +480,105 @@
    ]
   },
   {
+   "id": "klett_l",
+   "component_id": "coated_polyester_fabric",
+   "material_id": "nylon",
+   "name": "Klettriegel am Ärmel",
+   "short": "Klettriegel",
+   "shape": "box",
+   "x": 10,
+   "y": 338,
+   "w": 40,
+   "d": 18,
+   "z": 20,
+   "h": 2,
+   "r": 4,
+   "explode": [
+    -120,
+    170,
+    20
+   ],
+   "mass": 3.4,
+   "materials": [
+    [
+     "nylon",
+     100
+    ]
+   ],
+   "info": "Klettverschluss aus Polyamid: Haken- und Flauschband. Damit wird der Ärmel am Handgelenk enger gestellt. Vor dem Recycling abschneiden.",
+   "color": "#2A2E31",
+   "label": true,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 4,
+     "w": 3,
+     "d": 10,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 4,
+     "w": 3,
+     "d": 10,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 16,
+     "y": 4,
+     "w": 3,
+     "d": 10,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 22,
+     "y": 4,
+     "w": 3,
+     "d": 10,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 28,
+     "y": 4,
+     "w": 3,
+     "d": 10,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 34,
+     "y": 4,
+     "w": 3,
+     "d": 10,
+     "fill": "#3A3F44"
+    }
+   ]
+  },
+  {
    "id": "aermel_l",
    "component_id": "coated_polyester_fabric",
    "material_id": "polyester",
-   "name": "Ärmel links (eingeschlagen)",
+   "name": "Ärmel links",
    "short": "Ärmel",
    "shape": "box",
-   "x": 15,
-   "y": 30,
-   "w": 125,
-   "d": 350,
+   "x": 0,
+   "y": 50,
+   "w": 60,
+   "d": 320,
    "z": 0,
-   "h": 8,
-   "r": 10,
+   "h": 20,
+   "r": 12,
    "explode": [
-    -190,
-    0,
+    -120,
+    170,
     0
    ],
-   "mass": 64.4,
+   "mass": 62.4,
    "materials": [
     [
      "polyester",
@@ -381,17 +589,107 @@
      15
     ]
    ],
-   "info": "Ärmel mit Klettriegel am Handgelenk, beim Falten unter den Rücken geschlagen.",
+   "info": "Ärmel aus beschichtetem Polyester, am Handgelenk mit Gummizug. Die Naht zum Rumpf ist innen mit Nahtband abgedichtet.",
    "color": "#E8B83A",
+   "label": true,
    "marks": [
     {
      "shape": "box",
-     "x": 20,
-     "y": 320,
-     "w": 85,
-     "d": 22,
-     "r": 3,
+     "x": 0,
+     "y": 290,
+     "w": 60,
+     "d": 3,
+     "r": 0,
      "fill": "#C99A22"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 296,
+     "w": 52,
+     "d": 20,
+     "r": 4,
+     "fill": "#C99A22"
+    }
+   ]
+  },
+  {
+   "id": "klett_r",
+   "component_id": "coated_polyester_fabric",
+   "material_id": "nylon",
+   "name": "Klettriegel am Ärmel",
+   "short": "Klettriegel",
+   "shape": "box",
+   "x": 250,
+   "y": 338,
+   "w": 40,
+   "d": 18,
+   "z": 20,
+   "h": 2,
+   "r": 4,
+   "explode": [
+    120,
+    0,
+    20
+   ],
+   "mass": 3.4,
+   "materials": [
+    [
+     "nylon",
+     100
+    ]
+   ],
+   "info": "Zweiter Klettriegel.",
+   "color": "#2A2E31",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 4,
+     "w": 3,
+     "d": 10,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 4,
+     "w": 3,
+     "d": 10,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 16,
+     "y": 4,
+     "w": 3,
+     "d": 10,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 22,
+     "y": 4,
+     "w": 3,
+     "d": 10,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 28,
+     "y": 4,
+     "w": 3,
+     "d": 10,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 34,
+     "y": 4,
+     "w": 3,
+     "d": 10,
+     "fill": "#3A3F44"
     }
    ]
   },
@@ -399,22 +697,22 @@
    "id": "aermel_r",
    "component_id": "coated_polyester_fabric",
    "material_id": "polyester",
-   "name": "Ärmel rechts (eingeschlagen)",
+   "name": "Ärmel rechts",
    "short": "Ärmel",
    "shape": "box",
-   "x": 160,
-   "y": 30,
-   "w": 125,
-   "d": 350,
+   "x": 240,
+   "y": 50,
+   "w": 60,
+   "d": 320,
    "z": 0,
-   "h": 8,
-   "r": 10,
+   "h": 20,
+   "r": 12,
    "explode": [
-    190,
+    120,
     0,
     0
    ],
-   "mass": 64.4,
+   "mass": 62.4,
    "materials": [
     [
      "polyester",
@@ -431,11 +729,20 @@
    "marks": [
     {
      "shape": "box",
-     "x": 20,
-     "y": 320,
-     "w": 85,
-     "d": 22,
-     "r": 3,
+     "x": 0,
+     "y": 290,
+     "w": 60,
+     "d": 3,
+     "r": 0,
+     "fill": "#C99A22"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 296,
+     "w": 52,
+     "d": 20,
+     "r": 4,
      "fill": "#C99A22"
     }
    ]

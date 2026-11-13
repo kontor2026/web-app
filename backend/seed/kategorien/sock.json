@@ -39,10 +39,11 @@
   "metalle_mg": {},
   "herkunft": {},
   "materialien_g": {
-   "cotton": 40.0
+   "cotton": 39.0,
+   "polyester": 1.0
   },
-  "co2_kg": 0.037,
-  "co2_mit_recyclat_kg": 0.037,
+  "co2_kg": 0.04,
+  "co2_mit_recyclat_kg": 0.04,
   "co2_ersparnis_kg": 0.0,
   "co2_ohne_faktor": [],
   "rohstoffwert_eur": 0,
@@ -124,25 +125,104 @@
  "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
+   "id": "gummifaden",
+   "component_id": "cotton_fabric",
+   "material_id": "polyester",
+   "name": "Elasthan-Gummifaden",
+   "short": "Gummifaden",
+   "shape": "box",
+   "x": 4,
+   "y": 4,
+   "w": 64,
+   "d": 32,
+   "z": 1.5,
+   "h": 1,
+   "r": 2,
+   "explode": [
+    0,
+    -55,
+    22
+   ],
+   "mass": 1,
+   "materials": [
+    [
+     "tpu",
+     100
+    ]
+   ],
+   "info": "Im Bündchen läuft ein umsponnener Elasthanfaden rundherum mit. Er hält die Socke am Bein und lässt sich nicht heraustrennen.",
+   "color": "#E4DED0",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 3,
+     "w": 64,
+     "d": 1.5,
+     "fill": "#B9B2A2"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 8,
+     "w": 64,
+     "d": 1.5,
+     "fill": "#B9B2A2"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 13,
+     "w": 64,
+     "d": 1.5,
+     "fill": "#B9B2A2"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 18,
+     "w": 64,
+     "d": 1.5,
+     "fill": "#B9B2A2"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 23,
+     "w": 64,
+     "d": 1.5,
+     "fill": "#B9B2A2"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 28,
+     "w": 64,
+     "d": 1.5,
+     "fill": "#B9B2A2"
+    }
+   ]
+  },
+  {
    "id": "bund",
    "component_id": "cotton_fabric",
    "material_id": "cotton",
-   "name": "Bündchen",
+   "name": "Rippenbündchen",
    "short": "Bündchen",
    "shape": "box",
-   "x": 5,
+   "x": 0,
    "y": 0,
-   "w": 80,
-   "d": 45,
+   "w": 72,
+   "d": 40,
    "z": 0,
-   "h": 5,
+   "h": 4.5,
    "r": 3,
    "explode": [
     0,
-    -45,
+    -55,
     0
    ],
-   "mass": 7,
+   "mass": 6,
    "materials": [
     [
      "baumwolle",
@@ -153,92 +233,108 @@
      17
     ],
     [
-     "polyester",
+     "tpu",
      3
     ]
    ],
-   "info": "Doppelt gestrickter Rand mit eingestricktem Gummifaden (Elasthan), damit die Socke nicht rutscht.",
-   "color": "#3F484F",
+   "info": "Doppelt gestrickter Rand im Rippenmuster. Rippen und Gummifaden machen ihn dehnbar.",
+   "color": "#9AA3AA",
    "marks": [
     {
      "shape": "box",
-     "x": 4,
-     "y": 2,
-     "w": 4,
-     "d": 41,
-     "fill": "#2F363B"
+     "x": 2,
+     "y": 1,
+     "w": 3,
+     "d": 38,
+     "fill": "#8A939A"
     },
     {
      "shape": "box",
-     "x": 12,
-     "y": 2,
-     "w": 4,
-     "d": 41,
-     "fill": "#2F363B"
+     "x": 8,
+     "y": 1,
+     "w": 3,
+     "d": 38,
+     "fill": "#8A939A"
+    },
+    {
+     "shape": "box",
+     "x": 14,
+     "y": 1,
+     "w": 3,
+     "d": 38,
+     "fill": "#8A939A"
     },
     {
      "shape": "box",
      "x": 20,
-     "y": 2,
-     "w": 4,
-     "d": 41,
-     "fill": "#2F363B"
+     "y": 1,
+     "w": 3,
+     "d": 38,
+     "fill": "#8A939A"
     },
     {
      "shape": "box",
-     "x": 28,
-     "y": 2,
-     "w": 4,
-     "d": 41,
-     "fill": "#2F363B"
+     "x": 26,
+     "y": 1,
+     "w": 3,
+     "d": 38,
+     "fill": "#8A939A"
     },
     {
      "shape": "box",
-     "x": 36,
-     "y": 2,
-     "w": 4,
-     "d": 41,
-     "fill": "#2F363B"
+     "x": 32,
+     "y": 1,
+     "w": 3,
+     "d": 38,
+     "fill": "#8A939A"
+    },
+    {
+     "shape": "box",
+     "x": 38,
+     "y": 1,
+     "w": 3,
+     "d": 38,
+     "fill": "#8A939A"
     },
     {
      "shape": "box",
      "x": 44,
-     "y": 2,
-     "w": 4,
-     "d": 41,
-     "fill": "#2F363B"
+     "y": 1,
+     "w": 3,
+     "d": 38,
+     "fill": "#8A939A"
     },
     {
      "shape": "box",
-     "x": 52,
-     "y": 2,
-     "w": 4,
-     "d": 41,
-     "fill": "#2F363B"
+     "x": 50,
+     "y": 1,
+     "w": 3,
+     "d": 38,
+     "fill": "#8A939A"
     },
     {
      "shape": "box",
-     "x": 60,
-     "y": 2,
-     "w": 4,
-     "d": 41,
-     "fill": "#2F363B"
+     "x": 56,
+     "y": 1,
+     "w": 3,
+     "d": 38,
+     "fill": "#8A939A"
+    },
+    {
+     "shape": "box",
+     "x": 62,
+     "y": 1,
+     "w": 3,
+     "d": 38,
+     "fill": "#8A939A"
     },
     {
      "shape": "box",
      "x": 68,
-     "y": 2,
-     "w": 4,
-     "d": 41,
-     "fill": "#2F363B"
-    },
-    {
-     "shape": "box",
-     "x": 76,
-     "y": 2,
-     "w": 4,
-     "d": 41,
-     "fill": "#2F363B"
+     "y": 1,
+     "w": 3,
+     "d": 38,
+     "fill": "#8A939A"
     }
    ]
   },
@@ -246,19 +342,19 @@
    "id": "schaft",
    "component_id": "cotton_fabric",
    "material_id": "cotton",
-   "name": "Schaft",
+   "name": "Schaft mit Ringeln",
    "short": "Schaft",
    "shape": "box",
-   "x": 5,
-   "y": 45,
-   "w": 80,
+   "x": 0,
+   "y": 40,
+   "w": 72,
    "d": 80,
    "z": 0,
-   "h": 3.5,
+   "h": 4,
    "r": 2,
    "explode": [
     0,
-    -15,
+    -22,
     0
    ],
    "mass": 9,
@@ -272,12 +368,120 @@
      17
     ],
     [
-     "polyester",
+     "tpu",
      3
     ]
    ],
-   "info": "Rundgestrickter Schlauch aus Baumwolle mit etwas Polyamid. Tragbare Socken paarweise in die Altkleidersammlung.",
-   "color": "#5B6770"
+   "info": "Rundgestrickter Schlauch aus Baumwolle mit etwas Polyamid, die Ringel sind mit eingestrickt. Tragbare Socken paarweise in die Altkleidersammlung.",
+   "color": "#9AA3AA",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 1,
+     "w": 1.2,
+     "d": 78,
+     "fill": "#8A939A"
+    },
+    {
+     "shape": "box",
+     "x": 9,
+     "y": 1,
+     "w": 1.2,
+     "d": 78,
+     "fill": "#8A939A"
+    },
+    {
+     "shape": "box",
+     "x": 15,
+     "y": 1,
+     "w": 1.2,
+     "d": 78,
+     "fill": "#8A939A"
+    },
+    {
+     "shape": "box",
+     "x": 21,
+     "y": 1,
+     "w": 1.2,
+     "d": 78,
+     "fill": "#8A939A"
+    },
+    {
+     "shape": "box",
+     "x": 27,
+     "y": 1,
+     "w": 1.2,
+     "d": 78,
+     "fill": "#8A939A"
+    },
+    {
+     "shape": "box",
+     "x": 33,
+     "y": 1,
+     "w": 1.2,
+     "d": 78,
+     "fill": "#8A939A"
+    },
+    {
+     "shape": "box",
+     "x": 39,
+     "y": 1,
+     "w": 1.2,
+     "d": 78,
+     "fill": "#8A939A"
+    },
+    {
+     "shape": "box",
+     "x": 45,
+     "y": 1,
+     "w": 1.2,
+     "d": 78,
+     "fill": "#8A939A"
+    },
+    {
+     "shape": "box",
+     "x": 51,
+     "y": 1,
+     "w": 1.2,
+     "d": 78,
+     "fill": "#8A939A"
+    },
+    {
+     "shape": "box",
+     "x": 57,
+     "y": 1,
+     "w": 1.2,
+     "d": 78,
+     "fill": "#8A939A"
+    },
+    {
+     "shape": "box",
+     "x": 63,
+     "y": 1,
+     "w": 1.2,
+     "d": 78,
+     "fill": "#8A939A"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 8,
+     "w": 72,
+     "d": 5,
+     "r": 0,
+     "fill": "#B8433A"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 17,
+     "w": 72,
+     "d": 5,
+     "r": 0,
+     "fill": "#B8433A"
+    }
+   ]
   },
   {
    "id": "ferse",
@@ -285,16 +489,15 @@
    "material_id": "cotton",
    "name": "Verstärkte Ferse",
    "short": "Ferse",
-   "shape": "box",
-   "x": 55,
-   "y": 112,
-   "w": 35,
-   "d": 55,
-   "z": 0.5,
-   "h": 4.5,
-   "r": 14,
+   "shape": "cyl",
+   "x": 38,
+   "y": 102,
+   "w": 52,
+   "d": 68,
+   "z": 0,
+   "h": 4.3,
    "explode": [
-    60,
+    75,
     0,
     0
    ],
@@ -310,25 +513,35 @@
     ]
    ],
    "info": "Die Ferse ist als Käppchen eingestrickt und mit mehr Polyamid verstärkt, weil sie am stärksten reibt.",
-   "color": "#3F484F"
+   "color": "#4A535A",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 7,
+     "y": 8,
+     "w": 38,
+     "d": 52,
+     "fill": "#424A50"
+    }
+   ]
   },
   {
    "id": "fuss",
    "component_id": "cotton_fabric",
    "material_id": "cotton",
-   "name": "Fußteil",
+   "name": "Fußteil mit Frotteesohle",
    "short": "Fuß",
    "shape": "box",
-   "x": 5,
-   "y": 125,
-   "w": 80,
-   "d": 95,
+   "x": 0,
+   "y": 120,
+   "w": 72,
+   "d": 100,
    "z": 0,
-   "h": 3.5,
+   "h": 4,
    "r": 2,
    "explode": [
     0,
-    15,
+    18,
     0
    ],
    "mass": 13,
@@ -342,140 +555,100 @@
      17
     ],
     [
-     "polyester",
+     "tpu",
      3
     ]
    ],
-   "info": "Unter der Sohle oft als Frottee gestrickt (kleine Schlaufen), das polstert. Löcher lassen sich stopfen.",
-   "color": "#5B6770",
+   "info": "Innen unter der Sohle als Frottee gestrickt (kleine Schlaufen), das polstert. Löcher lassen sich stopfen.",
+   "color": "#9AA3AA",
    "marks": [
     {
-     "shape": "cyl",
-     "x": 10,
-     "y": 10,
-     "w": 10,
-     "d": 10,
-     "fill": "#66737C"
+     "shape": "box",
+     "x": 3,
+     "y": 1,
+     "w": 1.2,
+     "d": 98,
+     "fill": "#8A939A"
     },
     {
-     "shape": "cyl",
-     "x": 28,
-     "y": 10,
-     "w": 10,
-     "d": 10,
-     "fill": "#66737C"
+     "shape": "box",
+     "x": 9,
+     "y": 1,
+     "w": 1.2,
+     "d": 98,
+     "fill": "#8A939A"
     },
     {
-     "shape": "cyl",
-     "x": 46,
-     "y": 10,
-     "w": 10,
-     "d": 10,
-     "fill": "#66737C"
+     "shape": "box",
+     "x": 15,
+     "y": 1,
+     "w": 1.2,
+     "d": 98,
+     "fill": "#8A939A"
     },
     {
-     "shape": "cyl",
-     "x": 64,
-     "y": 10,
-     "w": 10,
-     "d": 10,
-     "fill": "#66737C"
+     "shape": "box",
+     "x": 21,
+     "y": 1,
+     "w": 1.2,
+     "d": 98,
+     "fill": "#8A939A"
     },
     {
-     "shape": "cyl",
-     "x": 10,
-     "y": 29,
-     "w": 10,
-     "d": 10,
-     "fill": "#66737C"
+     "shape": "box",
+     "x": 27,
+     "y": 1,
+     "w": 1.2,
+     "d": 98,
+     "fill": "#8A939A"
     },
     {
-     "shape": "cyl",
-     "x": 28,
-     "y": 29,
-     "w": 10,
-     "d": 10,
-     "fill": "#66737C"
+     "shape": "box",
+     "x": 33,
+     "y": 1,
+     "w": 1.2,
+     "d": 98,
+     "fill": "#8A939A"
     },
     {
-     "shape": "cyl",
-     "x": 46,
-     "y": 29,
-     "w": 10,
-     "d": 10,
-     "fill": "#66737C"
+     "shape": "box",
+     "x": 39,
+     "y": 1,
+     "w": 1.2,
+     "d": 98,
+     "fill": "#8A939A"
     },
     {
-     "shape": "cyl",
-     "x": 64,
-     "y": 29,
-     "w": 10,
-     "d": 10,
-     "fill": "#66737C"
+     "shape": "box",
+     "x": 45,
+     "y": 1,
+     "w": 1.2,
+     "d": 98,
+     "fill": "#8A939A"
     },
     {
-     "shape": "cyl",
-     "x": 10,
-     "y": 48,
-     "w": 10,
-     "d": 10,
-     "fill": "#66737C"
+     "shape": "box",
+     "x": 51,
+     "y": 1,
+     "w": 1.2,
+     "d": 98,
+     "fill": "#8A939A"
     },
     {
-     "shape": "cyl",
-     "x": 28,
-     "y": 48,
-     "w": 10,
-     "d": 10,
-     "fill": "#66737C"
+     "shape": "box",
+     "x": 57,
+     "y": 1,
+     "w": 1.2,
+     "d": 98,
+     "fill": "#8A939A"
     },
     {
-     "shape": "cyl",
-     "x": 46,
-     "y": 48,
-     "w": 10,
-     "d": 10,
-     "fill": "#66737C"
-    },
-    {
-     "shape": "cyl",
-     "x": 64,
-     "y": 48,
-     "w": 10,
-     "d": 10,
-     "fill": "#66737C"
-    },
-    {
-     "shape": "cyl",
-     "x": 10,
-     "y": 67,
-     "w": 10,
-     "d": 10,
-     "fill": "#66737C"
-    },
-    {
-     "shape": "cyl",
-     "x": 28,
-     "y": 67,
-     "w": 10,
-     "d": 10,
-     "fill": "#66737C"
-    },
-    {
-     "shape": "cyl",
-     "x": 46,
-     "y": 67,
-     "w": 10,
-     "d": 10,
-     "fill": "#66737C"
-    },
-    {
-     "shape": "cyl",
-     "x": 64,
-     "y": 67,
-     "w": 10,
-     "d": 10,
-     "fill": "#66737C"
+     "shape": "box",
+     "x": 63,
+     "y": 1,
+     "w": 1.2,
+     "d": 98,
+     "fill": "#8A939A"
     }
    ]
   },
@@ -483,19 +656,19 @@
    "id": "spitze",
    "component_id": "cotton_fabric",
    "material_id": "cotton",
-   "name": "Spitze mit Naht",
+   "name": "Spitze mit Kettelnaht",
    "short": "Spitze",
    "shape": "box",
-   "x": 8,
-   "y": 220,
-   "w": 74,
-   "d": 30,
+   "x": 0,
+   "y": 205,
+   "w": 72,
+   "d": 45,
    "z": 0,
-   "h": 4.5,
-   "r": 13,
+   "h": 4.4,
+   "r": 20,
    "explode": [
     0,
-    45,
+    55,
     0
    ],
    "mass": 6,
@@ -509,16 +682,16 @@
      30
     ]
    ],
-   "info": "Verstärkte Zehenpartie. Die Spitze wird zuletzt zugenäht oder flach zusammengekettelt.",
-   "color": "#3F484F",
+   "info": "Verstärkte Zehenpartie. Sie wird zuletzt flach zusammengekettelt, die Naht drückt so kaum.",
+   "color": "#4A535A",
    "marks": [
     {
      "shape": "box",
-     "x": 6,
-     "y": 4,
-     "w": 62,
-     "d": 2,
-     "r": 1,
+     "x": 2,
+     "y": 30,
+     "w": 68,
+     "d": 1.5,
+     "r": 0.5,
      "fill": "#2F363B"
     }
    ]

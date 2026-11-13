@@ -7,16 +7,16 @@
    "name": "Pflegeetikett",
    "short": "Etikett",
    "shape": "box",
-   "x": 20,
-   "y": 360,
+   "x": 24,
+   "y": 362,
    "w": 30,
    "d": 26,
    "z": 30,
    "h": 0.3,
    "r": 1,
    "explode": [
-    310,
-    0,
+    300,
+    60,
     0
    ],
    "mass": 1,
@@ -46,6 +46,15 @@
      "d": 3,
      "r": 0,
      "fill": "#8E969A"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 19,
+     "w": 12,
+     "d": 3,
+     "r": 0,
+     "fill": "#8E969A"
     }
    ]
   },
@@ -54,19 +63,19 @@
    "component_id": "cotton_fabric",
    "material_id": "cotton",
    "name": "Oberste Faltlagen mit Saum",
-   "short": "Faltlagen oben",
+   "short": "Oberste Lagen",
    "shape": "box",
-   "x": 0,
-   "y": 0,
-   "w": 300,
-   "d": 400,
-   "z": 22,
-   "h": 8,
-   "r": 4,
+   "x": 2,
+   "y": 2,
+   "w": 296,
+   "d": 396,
+   "z": 22.5,
+   "h": 7.5,
+   "r": 6,
    "explode": [
     0,
-    0,
-    330.0
+    -240,
+    180
    ],
    "mass": 149.8,
    "materials": [
@@ -76,25 +85,53 @@
     ]
    ],
    "info": "Baumwoll-Perkal oder Linon, glatt gewebt. Gut erhaltene Laken in die Altkleidersammlung, verschlissene als Putz- oder Malerlappen weiterverwenden.",
-   "color": "#E9EEF2",
+   "color": "#DCE7EF",
+   "label": true,
    "marks": [
     {
      "shape": "box",
      "x": 0,
-     "y": 375,
-     "w": 300,
-     "d": 5,
+     "y": 368,
+     "w": 296,
+     "d": 14,
      "r": 0,
-     "fill": "#B9C4CC"
+     "fill": "#AFC0CD"
     },
     {
      "shape": "box",
-     "x": 149,
+     "x": 0,
+     "y": 374,
+     "w": 296,
+     "d": 1.5,
+     "r": 0,
+     "fill": "#94A7B6"
+    },
+    {
+     "shape": "box",
+     "x": 147,
      "y": 0,
      "w": 2,
-     "d": 400,
+     "d": 368,
      "r": 0,
-     "fill": "#CDD6DD"
+     "fill": "#C3D1DC"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 0,
+     "w": 296,
+     "d": 2,
+     "r": 1,
+     "fill": "#C3D1DC"
+    },
+    {
+     "shape": "box",
+     "x": 294,
+     "y": 0,
+     "w": 2,
+     "d": 396,
+     "r": 1,
+     "fill": "#C3D1DC"
     }
    ]
   },
@@ -105,17 +142,17 @@
    "name": "Faltlagen 2",
    "short": "Faltlagen",
    "shape": "box",
-   "x": 0,
-   "y": 0,
-   "w": 300,
-   "d": 400,
+   "x": 5,
+   "y": -1,
+   "w": 296,
+   "d": 396,
    "z": 15,
-   "h": 7,
-   "r": 4,
+   "h": 7.5,
+   "r": 6,
    "explode": [
     0,
-    0,
-    220.0
+    -160,
+    120
    ],
    "mass": 149.8,
    "materials": [
@@ -124,17 +161,36 @@
      100
     ]
    ],
-   "info": "Jede Faltung legt den Stoff doppelt. So werden aus einem großen Tuch acht Lagen in diesem Paket.",
-   "color": "#E9EEF2",
+   "info": "Jede Faltung legt den Stoff doppelt. So werden aus einem großen Tuch 32 Lagen in diesem Paket.",
+   "color": "#DCE7EF",
+   "label": true,
    "marks": [
     {
      "shape": "box",
      "x": 0,
-     "y": 199,
-     "w": 300,
+     "y": 197,
+     "w": 296,
      "d": 2,
      "r": 0,
-     "fill": "#CDD6DD"
+     "fill": "#C3D1DC"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 0,
+     "w": 296,
+     "d": 2,
+     "r": 1,
+     "fill": "#C3D1DC"
+    },
+    {
+     "shape": "box",
+     "x": 294,
+     "y": 0,
+     "w": 2,
+     "d": 396,
+     "r": 1,
+     "fill": "#C3D1DC"
     }
    ]
   },
@@ -146,16 +202,16 @@
    "short": "Faltlagen",
    "shape": "box",
    "x": 0,
-   "y": 0,
-   "w": 300,
-   "d": 400,
-   "z": 8,
-   "h": 7,
-   "r": 4,
+   "y": 4,
+   "w": 296,
+   "d": 396,
+   "z": 7.5,
+   "h": 7.5,
+   "r": 6,
    "explode": [
     0,
-    0,
-    110.0
+    -80,
+    60
    ],
    "mass": 149.8,
    "materials": [
@@ -164,18 +220,36 @@
      100
     ]
    ],
-   "info": "Reine Baumwolle, ohne Knöpfe oder Reißverschluss: das Laken kann ganz ins Textilrecycling.",
-   "color": "#E9EEF2",
+   "info": "Reine Baumwolle, ohne Knöpfe oder Reißverschluss: Das Laken kann ganz ins Textilrecycling.",
+   "color": "#DCE7EF",
    "label": false,
    "marks": [
     {
      "shape": "box",
-     "x": 149,
+     "x": 147,
      "y": 0,
      "w": 2,
-     "d": 400,
+     "d": 396,
      "r": 0,
-     "fill": "#CDD6DD"
+     "fill": "#C3D1DC"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 0,
+     "w": 296,
+     "d": 2,
+     "r": 1,
+     "fill": "#C3D1DC"
+    },
+    {
+     "shape": "box",
+     "x": 294,
+     "y": 0,
+     "w": 2,
+     "d": 396,
+     "r": 1,
+     "fill": "#C3D1DC"
     }
    ]
   },
@@ -184,19 +258,19 @@
    "component_id": "cotton_fabric",
    "material_id": "cotton",
    "name": "Unterste Faltlagen mit Saum",
-   "short": "Faltlagen unten",
+   "short": "Unterste Lagen",
    "shape": "box",
-   "x": 0,
-   "y": 0,
-   "w": 300,
-   "d": 400,
+   "x": 3,
+   "y": 1,
+   "w": 296,
+   "d": 396,
    "z": 0,
-   "h": 8,
-   "r": 4,
+   "h": 7.5,
+   "r": 6,
    "explode": [
     0,
     0,
-    0.0
+    0
    ],
    "mass": 149.8,
    "materials": [
@@ -205,17 +279,45 @@
      100
     ]
    ],
-   "info": "Am Rand ist der Stoff doppelt umgeschlagen und vernäht (Saum), damit er nicht ausfranst.",
-   "color": "#E9EEF2",
+   "info": "Am Rand ist der Stoff doppelt umgeschlagen und mit Polyestergarn vernäht (Saum), damit er nicht ausfranst.",
+   "color": "#DCE7EF",
+   "label": true,
    "marks": [
     {
      "shape": "box",
      "x": 0,
-     "y": 20,
-     "w": 300,
-     "d": 5,
+     "y": 330,
+     "w": 296,
+     "d": 14,
      "r": 0,
-     "fill": "#B9C4CC"
+     "fill": "#AFC0CD"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 336,
+     "w": 296,
+     "d": 1.5,
+     "r": 0,
+     "fill": "#94A7B6"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 0,
+     "w": 296,
+     "d": 2,
+     "r": 1,
+     "fill": "#C3D1DC"
+    },
+    {
+     "shape": "box",
+     "x": 294,
+     "y": 0,
+     "w": 2,
+     "d": 396,
+     "r": 1,
+     "fill": "#C3D1DC"
     }
    ]
   }

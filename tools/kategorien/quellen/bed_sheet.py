@@ -3,40 +3,48 @@ import sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-from bau import teil, mark, explodiere, skaliere_masse, schreibe  # noqa: E402
+from bau import teil, mark, skaliere_masse, schreibe  # noqa: E402
 
 # Bettlaken (ca. 150 × 250 cm) zu einem Paket von 300 × 400 × 30 mm gefaltet: 32 Stofflagen.
-# Explodiert heben sich vier Faltpakete nach oben ab, das eingenähte Etikett wird zur Seite gezogen.
-STOFF = '#E9EEF2'
-FALTE = '#CDD6DD'
-SAUM = '#B9C4CC'
+# Die vier Faltpakete liegen leicht versetzt wie bei echter Wäsche. Explodiert schieben sie sich treppenartig nach
+# hinten oben, so dass von jedem Paket die Vorderkante und ein Streifen der Oberseite sichtbar bleibt; das
+# eingenähte Etikett wird zur Seite gezogen.
+STOFF = '#DCE7EF'
+FALTE = '#C3D1DC'
+SAUM = '#AFC0CD'
 BW = [['baumwolle', 100]]
+
+
+def lage(nr, name, short, z, dx, info, marks, label=True):
+    k = 4 - nr  # 0 = unten
+    return teil(f'lage_{nr}', 'cotton_fabric', name, short, 'box',
+                x=2 + dx, y=2 - dx, w=296, d=396, z=z, h=7.5, r=6, mass=150, materials=BW, color=STOFF,
+                explode=[0, -80 * k, 60 * k], label=label, info=info,
+                marks=marks + [mark('box', 0, 0, 296, 2, 1, FALTE), mark('box', 294, 0, 2, 396, 1, FALTE)])
+
 
 teile = [
     teil('etikett', 'cotton_fabric', 'Pflegeetikett', 'Etikett', 'box', material_id='polyester',
-         x=20, y=360, w=30, d=26, z=30, h=0.3, r=1, mass=1, materials=[['polyester', 100]], color='#F4F2EE',
-         explode=[310, 0, 0],
+         x=24, y=362, w=30, d=26, z=30, h=0.3, r=1, mass=1, materials=[['polyester', 100]], color='#F4F2EE',
+         explode=[300, 60, 0],
          info='Eingenähtes Polyester-Etikett mit Waschsymbolen (bis 60 °C). Vor dem Recycling abschneiden.',
-         marks=[mark('box', 4, 5, 22, 3, 0, '#8E969A'), mark('box', 4, 12, 22, 3, 0, '#8E969A')]),
-    teil('lage_1', 'cotton_fabric', 'Oberste Faltlagen mit Saum', 'Faltlagen oben', 'box',
-         x=0, y=0, w=300, d=400, z=22, h=8, r=4, mass=150, materials=BW, color=STOFF,
-         info='Baumwoll-Perkal oder Linon, glatt gewebt. Gut erhaltene Laken in die Altkleidersammlung, '
-              'verschlissene als Putz- oder Malerlappen weiterverwenden.',
-         marks=[mark('box', 0, 375, 300, 5, 0, SAUM), mark('box', 149, 0, 2, 400, 0, FALTE)]),
-    teil('lage_2', 'cotton_fabric', 'Faltlagen 2', 'Faltlagen', 'box',
-         x=0, y=0, w=300, d=400, z=15, h=7, r=4, mass=150, materials=BW, color=STOFF,
-         info='Jede Faltung legt den Stoff doppelt. So werden aus einem großen Tuch acht Lagen in diesem Paket.',
-         marks=[mark('box', 0, 199, 300, 2, 0, FALTE)]),
-    teil('lage_3', 'cotton_fabric', 'Faltlagen 3', 'Faltlagen', 'box',
-         x=0, y=0, w=300, d=400, z=8, h=7, r=4, mass=150, materials=BW, color=STOFF, label=False,
-         info='Reine Baumwolle, ohne Knöpfe oder Reißverschluss: das Laken kann ganz ins Textilrecycling.',
-         marks=[mark('box', 149, 0, 2, 400, 0, FALTE)]),
-    teil('lage_4', 'cotton_fabric', 'Unterste Faltlagen mit Saum', 'Faltlagen unten', 'box',
-         x=0, y=0, w=300, d=400, z=0, h=8, r=4, mass=150, materials=BW, color=STOFF,
-         info='Am Rand ist der Stoff doppelt umgeschlagen und vernäht (Saum), damit er nicht ausfranst.',
-         marks=[mark('box', 0, 20, 300, 5, 0, SAUM)]),
+         marks=[mark('box', 4, 5, 22, 3, 0, '#8E969A'), mark('box', 4, 12, 22, 3, 0, '#8E969A'),
+                mark('box', 4, 19, 12, 3, 0, '#8E969A')]),
+    lage(1, 'Oberste Faltlagen mit Saum', 'Oberste Lagen', 22.5, 0,
+         'Baumwoll-Perkal oder Linon, glatt gewebt. Gut erhaltene Laken in die Altkleidersammlung, '
+         'verschlissene als Putz- oder Malerlappen weiterverwenden.',
+         [mark('box', 0, 368, 296, 14, 0, SAUM), mark('box', 0, 374, 296, 1.5, 0, '#94A7B6'),
+          mark('box', 147, 0, 2, 368, 0, FALTE)]),
+    lage(2, 'Faltlagen 2', 'Faltlagen', 15, 3,
+         'Jede Faltung legt den Stoff doppelt. So werden aus einem großen Tuch 32 Lagen in diesem Paket.',
+         [mark('box', 0, 197, 296, 2, 0, FALTE)]),
+    lage(3, 'Faltlagen 3', 'Faltlagen', 7.5, -2,
+         'Reine Baumwolle, ohne Knöpfe oder Reißverschluss: Das Laken kann ganz ins Textilrecycling.',
+         [mark('box', 147, 0, 2, 396, 0, FALTE)], label=False),
+    lage(4, 'Unterste Faltlagen mit Saum', 'Unterste Lagen', 0, 1,
+         'Am Rand ist der Stoff doppelt umgeschlagen und mit Polyestergarn vernäht (Saum), damit er nicht ausfranst.',
+         [mark('box', 0, 330, 296, 14, 0, SAUM), mark('box', 0, 336, 296, 1.5, 0, '#94A7B6')]),
 ]
 
-explodiere(teile, abstand=110)
 skaliere_masse(teile, oid='bed_sheet')
 schreibe('bed_sheet', teile)

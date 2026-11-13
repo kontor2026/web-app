@@ -1356,7 +1356,7 @@
   "name": "Socke",
   "name_en": "Sock",
   "klasse": "Textilien und Schuhe",
-  "teile": 5,
+  "teile": 6,
   "platzhalter": false
  },
  {
@@ -1364,7 +1364,7 @@
   "name": "Basecap",
   "name_en": "Baseball Cap",
   "klasse": "Textilien und Schuhe",
-  "teile": 11,
+  "teile": 14,
   "platzhalter": false
  },
  {
@@ -1372,7 +1372,7 @@
   "name": "Winterjacke",
   "name_en": "Winter Jacket",
   "klasse": "Textilien und Schuhe",
-  "teile": 12,
+  "teile": 16,
   "platzhalter": false
  },
  {
@@ -1396,7 +1396,7 @@
   "name": "Lederhandtasche",
   "name_en": "Leather Handbag",
   "klasse": "Textilien und Schuhe",
-  "teile": 10,
+  "teile": 23,
   "platzhalter": false
  },
  {
@@ -1412,7 +1412,7 @@
   "name": "Regenjacke",
   "name_en": "Rain Jacket",
   "klasse": "Textilien und Schuhe",
-  "teile": 9,
+  "teile": 12,
   "platzhalter": false
  },
  {

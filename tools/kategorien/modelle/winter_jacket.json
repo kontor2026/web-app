@@ -4,22 +4,22 @@
    "id": "kragen",
    "component_id": "nylon_fabric",
    "material_id": "nylon",
-   "name": "Stehkragen",
+   "name": "Stehkragen mit Fleece",
    "short": "Kragen",
    "shape": "box",
-   "x": 110,
+   "x": 135,
    "y": 0,
-   "w": 180,
-   "d": 50,
-   "z": 60,
-   "h": 20,
-   "r": 12,
+   "w": 130,
+   "d": 55,
+   "z": 50,
+   "h": 30,
+   "r": 18,
    "explode": [
     0,
     0,
-    380.0
+    408.0
    ],
-   "mass": 53.1,
+   "mass": 51.3,
    "materials": [
     [
      "nylon",
@@ -30,17 +30,26 @@
      45
     ]
    ],
-   "info": "Hochgestellter, wattierter Kragen mit Fleece innen. In den Kragen ist manchmal eine Kapuze eingerollt.",
+   "info": "Hochgestellter, wattierter Kragen, innen mit Fleece. In manchen Krägen ist eine Kapuze eingerollt.",
    "color": "#2E5B4A",
    "marks": [
     {
      "shape": "box",
-     "x": 10,
-     "y": 22,
-     "w": 160,
-     "d": 2,
+     "x": 8,
+     "y": 24,
+     "w": 114,
+     "d": 2.5,
      "r": 1,
      "fill": "#244A3C"
+    },
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 4,
+     "w": 110,
+     "d": 14,
+     "r": 6,
+     "fill": "#3A4A44"
     }
    ]
   },
@@ -51,18 +60,18 @@
    "name": "Kordelstopper",
    "short": "Kordelstopper",
    "shape": "cyl",
-   "x": 24,
-   "y": 478,
+   "x": 92,
+   "y": 482,
    "w": 12,
    "d": 16,
-   "z": 77,
+   "z": 70,
    "h": 6,
    "explode": [
     0,
-    0,
-    295.0
+    90,
+    0
    ],
-   "mass": 2.1,
+   "mass": 2.3,
    "materials": [
     [
      "pp",
@@ -92,18 +101,18 @@
    "name": "Kordelstopper",
    "short": "Kordelstopper",
    "shape": "cyl",
-   "x": 364,
-   "y": 478,
+   "x": 296,
+   "y": 482,
    "w": 12,
    "d": 16,
-   "z": 77,
+   "z": 70,
    "h": 6,
    "explode": [
     0,
-    0,
-    295.0
+    90,
+    0
    ],
-   "mass": 2.1,
+   "mass": 2.3,
    "materials": [
     [
      "pp",
@@ -128,25 +137,140 @@
    ]
   },
   {
+   "id": "taschen_rv_l",
+   "component_id": "metal_zipper",
+   "material_id": "copper",
+   "name": "Taschenreißverschluss",
+   "short": "Taschen-RV",
+   "shape": "box",
+   "x": 118,
+   "y": 290,
+   "w": 8,
+   "d": 120,
+   "z": 70,
+   "h": 1.5,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    262.0
+   ],
+   "mass": 6.8,
+   "materials": [
+    [
+     "messing",
+     55
+    ],
+    [
+     "polyester",
+     40
+    ],
+    [
+     "stahl",
+     5
+    ]
+   ],
+   "info": "Kleiner Reißverschluss an der Eingrifftasche. Wie der große mit der Schere am Band entlang heraustrennen.",
+   "color": "#2A2E31",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 0,
+     "w": 2,
+     "d": 120,
+     "r": 0,
+     "fill": "#C9A24A"
+    },
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 6,
+     "w": 6,
+     "d": 12,
+     "r": 2,
+     "fill": "#B7BCC0"
+    }
+   ]
+  },
+  {
+   "id": "taschen_rv_r",
+   "component_id": "metal_zipper",
+   "material_id": "copper",
+   "name": "Taschenreißverschluss",
+   "short": "Taschen-RV",
+   "shape": "box",
+   "x": 274,
+   "y": 290,
+   "w": 8,
+   "d": 120,
+   "z": 70,
+   "h": 1.5,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    262.0
+   ],
+   "mass": 6.8,
+   "materials": [
+    [
+     "messing",
+     55
+    ],
+    [
+     "polyester",
+     40
+    ],
+    [
+     "stahl",
+     5
+    ]
+   ],
+   "info": "Zweite Eingrifftasche.",
+   "color": "#2A2E31",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 0,
+     "w": 2,
+     "d": 120,
+     "r": 0,
+     "fill": "#C9A24A"
+    },
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 6,
+     "w": 6,
+     "d": 12,
+     "r": 2,
+     "fill": "#B7BCC0"
+    }
+   ]
+  },
+  {
    "id": "reissverschluss",
    "component_id": "metal_zipper",
    "material_id": "copper",
    "name": "Reißverschluss mit Schieber",
    "short": "Reißverschluss",
    "shape": "box",
-   "x": 193,
+   "x": 190,
    "y": 40,
-   "w": 14,
+   "w": 20,
    "d": 460,
-   "z": 70,
-   "h": 10,
+   "z": 66,
+   "h": 6,
    "r": 1,
    "explode": [
     0,
     0,
-    270.0
+    316.0
    ],
-   "mass": 37.1,
+   "mass": 39.9,
    "materials": [
     [
      "messing",
@@ -166,7 +290,7 @@
    "marks": [
     {
      "shape": "box",
-     "x": 5,
+     "x": 8,
      "y": 0,
      "w": 4,
      "d": 460,
@@ -175,12 +299,21 @@
     },
     {
      "shape": "box",
-     "x": 3,
+     "x": 5,
      "y": 30,
-     "w": 8,
-     "d": 16,
+     "w": 10,
+     "d": 18,
      "r": 2,
      "fill": "#B7BCC0"
+    },
+    {
+     "shape": "box",
+     "x": 8,
+     "y": 48,
+     "w": 4,
+     "d": 22,
+     "r": 1,
+     "fill": "#8E969A"
     }
    ]
   },
@@ -188,64 +321,73 @@
    "id": "aussen_l",
    "component_id": "nylon_fabric",
    "material_id": "nylon",
-   "name": "Obermaterial vorne links",
+   "name": "Vorderteil links (Obermaterial)",
    "short": "Obermaterial",
    "shape": "box",
-   "x": 0,
-   "y": 40,
-   "w": 193,
-   "d": 460,
-   "z": 70,
-   "h": 7,
-   "r": 8,
+   "x": 80,
+   "y": 30,
+   "w": 113,
+   "d": 470,
+   "z": 30,
+   "h": 40,
+   "r": 10,
    "explode": [
     0,
     0,
-    270.0
+    242.0
    ],
-   "mass": 74.3,
+   "mass": 68.4,
    "materials": [
     [
      "nylon",
      100
     ]
    ],
-   "info": "Wasserabweisendes Nylon-Gewebe, mit der Wattierung in Kammern abgesteppt. Tragbare Jacken in die Altkleidersammlung.",
+   "info": "Wasserabweisendes Nylon-Gewebe, das die Wattierung umschließt und in Kammern abgesteppt ist. Tragbare Jacken in die Altkleidersammlung.",
    "color": "#2E5B4A",
    "marks": [
     {
      "shape": "box",
      "x": 0,
-     "y": 60,
-     "w": 186,
-     "d": 2,
+     "y": 30,
+     "w": 113,
+     "d": 2.5,
      "r": 0,
      "fill": "#244A3C"
     },
     {
      "shape": "box",
      "x": 0,
-     "y": 130,
-     "w": 186,
-     "d": 2,
+     "y": 92,
+     "w": 113,
+     "d": 2.5,
      "r": 0,
      "fill": "#244A3C"
     },
     {
      "shape": "box",
      "x": 0,
-     "y": 200,
-     "w": 186,
-     "d": 2,
+     "y": 154,
+     "w": 113,
+     "d": 2.5,
      "r": 0,
      "fill": "#244A3C"
     },
     {
      "shape": "box",
      "x": 0,
-     "y": 270,
-     "w": 186,
-     "d": 2,
+     "y": 216,
+     "w": 113,
+     "d": 2.5,
+     "r": 0,
+     "fill": "#244A3C"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 278,
+     "w": 113,
+     "d": 2.5,
      "r": 0,
      "fill": "#244A3C"
     },
@@ -253,28 +395,28 @@
      "shape": "box",
      "x": 0,
      "y": 340,
-     "w": 186,
-     "d": 2,
+     "w": 113,
+     "d": 2.5,
      "r": 0,
      "fill": "#244A3C"
     },
     {
      "shape": "box",
      "x": 0,
-     "y": 410,
-     "w": 186,
-     "d": 2,
+     "y": 402,
+     "w": 113,
+     "d": 2.5,
      "r": 0,
      "fill": "#244A3C"
     },
     {
      "shape": "box",
-     "x": 30,
-     "y": 300,
-     "w": 90,
-     "d": 6,
-     "r": 2,
-     "fill": "#244A3C"
+     "x": 70,
+     "y": 60,
+     "w": 26,
+     "d": 14,
+     "r": 3,
+     "fill": "#C9D3CE"
     }
    ]
   },
@@ -282,22 +424,22 @@
    "id": "aussen_r",
    "component_id": "nylon_fabric",
    "material_id": "nylon",
-   "name": "Obermaterial vorne rechts",
+   "name": "Vorderteil rechts (Obermaterial)",
    "short": "Obermaterial",
    "shape": "box",
    "x": 207,
-   "y": 40,
-   "w": 193,
-   "d": 460,
-   "z": 70,
-   "h": 7,
-   "r": 8,
+   "y": 30,
+   "w": 113,
+   "d": 470,
+   "z": 30,
+   "h": 40,
+   "r": 10,
    "explode": [
     0,
     0,
-    270.0
+    242.0
    ],
-   "mass": 74.3,
+   "mass": 68.4,
    "materials": [
     [
      "nylon",
@@ -311,36 +453,45 @@
     {
      "shape": "box",
      "x": 0,
-     "y": 60,
-     "w": 186,
-     "d": 2,
+     "y": 30,
+     "w": 113,
+     "d": 2.5,
      "r": 0,
      "fill": "#244A3C"
     },
     {
      "shape": "box",
      "x": 0,
-     "y": 130,
-     "w": 186,
-     "d": 2,
+     "y": 92,
+     "w": 113,
+     "d": 2.5,
      "r": 0,
      "fill": "#244A3C"
     },
     {
      "shape": "box",
      "x": 0,
-     "y": 200,
-     "w": 186,
-     "d": 2,
+     "y": 154,
+     "w": 113,
+     "d": 2.5,
      "r": 0,
      "fill": "#244A3C"
     },
     {
      "shape": "box",
      "x": 0,
-     "y": 270,
-     "w": 186,
-     "d": 2,
+     "y": 216,
+     "w": 113,
+     "d": 2.5,
+     "r": 0,
+     "fill": "#244A3C"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 278,
+     "w": 113,
+     "d": 2.5,
      "r": 0,
      "fill": "#244A3C"
     },
@@ -348,27 +499,18 @@
      "shape": "box",
      "x": 0,
      "y": 340,
-     "w": 186,
-     "d": 2,
+     "w": 113,
+     "d": 2.5,
      "r": 0,
      "fill": "#244A3C"
     },
     {
      "shape": "box",
      "x": 0,
-     "y": 410,
-     "w": 186,
-     "d": 2,
+     "y": 402,
+     "w": 113,
+     "d": 2.5,
      "r": 0,
-     "fill": "#244A3C"
-    },
-    {
-     "shape": "box",
-     "x": 73,
-     "y": 300,
-     "w": 90,
-     "d": 6,
-     "r": 2,
      "fill": "#244A3C"
     }
    ]
@@ -380,19 +522,19 @@
    "name": "Wattierung",
    "short": "Wattierung",
    "shape": "box",
-   "x": 5,
-   "y": 45,
-   "w": 390,
-   "d": 450,
-   "z": 50,
-   "h": 20,
-   "r": 8,
+   "x": 85,
+   "y": 35,
+   "w": 230,
+   "d": 460,
+   "z": 30,
+   "h": 32,
+   "r": 10,
    "explode": [
     0,
     0,
-    180.0
+    140.0
    ],
-   "mass": 127.3,
+   "mass": 125.5,
    "materials": [
     [
      "polyester",
@@ -405,8 +547,8 @@
     {
      "shape": "box",
      "x": 0,
-     "y": 55,
-     "w": 390,
+     "y": 25,
+     "w": 230,
      "d": 3,
      "r": 0,
      "fill": "#DCD8CE"
@@ -414,8 +556,8 @@
     {
      "shape": "box",
      "x": 0,
-     "y": 125,
-     "w": 390,
+     "y": 87,
+     "w": 230,
      "d": 3,
      "r": 0,
      "fill": "#DCD8CE"
@@ -423,8 +565,8 @@
     {
      "shape": "box",
      "x": 0,
-     "y": 195,
-     "w": 390,
+     "y": 149,
+     "w": 230,
      "d": 3,
      "r": 0,
      "fill": "#DCD8CE"
@@ -432,8 +574,17 @@
     {
      "shape": "box",
      "x": 0,
-     "y": 265,
-     "w": 390,
+     "y": 211,
+     "w": 230,
+     "d": 3,
+     "r": 0,
+     "fill": "#DCD8CE"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 273,
+     "w": 230,
      "d": 3,
      "r": 0,
      "fill": "#DCD8CE"
@@ -442,7 +593,7 @@
      "shape": "box",
      "x": 0,
      "y": 335,
-     "w": 390,
+     "w": 230,
      "d": 3,
      "r": 0,
      "fill": "#DCD8CE"
@@ -450,8 +601,8 @@
     {
      "shape": "box",
      "x": 0,
-     "y": 405,
-     "w": 390,
+     "y": 397,
+     "w": 230,
      "d": 3,
      "r": 0,
      "fill": "#DCD8CE"
@@ -465,19 +616,19 @@
    "name": "Innenfutter vorne",
    "short": "Futter",
    "shape": "box",
-   "x": 5,
-   "y": 45,
-   "w": 390,
-   "d": 450,
-   "z": 46,
+   "x": 85,
+   "y": 35,
+   "w": 230,
+   "d": 460,
+   "z": 26,
    "h": 4,
-   "r": 8,
+   "r": 10,
    "explode": [
     0,
     0,
-    90.0
+    70.0
    ],
-   "mass": 63.7,
+   "mass": 57,
    "materials": [
     [
      "nylon",
@@ -493,9 +644,27 @@
    "marks": [
     {
      "shape": "box",
-     "x": 230,
-     "y": 120,
-     "w": 110,
+     "x": 140,
+     "y": 110,
+     "w": 70,
+     "d": 4,
+     "r": 2,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 135,
+     "y": 100,
+     "w": 80,
+     "d": 70,
+     "r": 4,
+     "fill": "#33383D"
+    },
+    {
+     "shape": "box",
+     "x": 140,
+     "y": 110,
+     "w": 70,
      "d": 4,
      "r": 2,
      "fill": "#2A2E31"
@@ -509,26 +678,26 @@
    "name": "Pflegeetikett",
    "short": "Etikett",
    "shape": "box",
-   "x": 230,
-   "y": 10,
+   "x": 185,
+   "y": 40,
    "w": 30,
    "d": 40,
-   "z": 45.7,
+   "z": 25.7,
    "h": 0.3,
    "r": 1,
    "explode": [
-    200,
-    -90,
+    0,
+    -160,
     0
    ],
-   "mass": 2.1,
+   "mass": 2.3,
    "materials": [
     [
      "polyester",
      100
     ]
    ],
-   "info": "Etikett mit Waschsymbolen und Materialangaben, innen an der Seitennaht. Abschneiden: anderes Material.",
+   "info": "Etikett mit Waschsymbolen und Materialangaben, innen am Kragen. Abschneiden: anderes Material.",
    "color": "#F4F2EE",
    "marks": [
     {
@@ -567,19 +736,19 @@
    "name": "Rückenteil (Obermaterial, Wattierung, Futter)",
    "short": "Rückenteil",
    "shape": "box",
-   "x": 0,
-   "y": 0,
-   "w": 400,
-   "d": 500,
-   "z": 20,
+   "x": 80,
+   "y": 30,
+   "w": 240,
+   "d": 470,
+   "z": 0,
    "h": 26,
-   "r": 8,
+   "r": 10,
    "explode": [
     0,
     0,
     0.0
    ],
-   "mass": 403.2,
+   "mass": 376.4,
    "materials": [
     [
      "nylon",
@@ -596,36 +765,45 @@
     {
      "shape": "box",
      "x": 0,
-     "y": 60,
-     "w": 400,
-     "d": 2,
+     "y": 30,
+     "w": 240,
+     "d": 2.5,
      "r": 0,
      "fill": "#244A3C"
     },
     {
      "shape": "box",
      "x": 0,
-     "y": 130,
-     "w": 400,
-     "d": 2,
+     "y": 92,
+     "w": 240,
+     "d": 2.5,
      "r": 0,
      "fill": "#244A3C"
     },
     {
      "shape": "box",
      "x": 0,
-     "y": 200,
-     "w": 400,
-     "d": 2,
+     "y": 154,
+     "w": 240,
+     "d": 2.5,
      "r": 0,
      "fill": "#244A3C"
     },
     {
      "shape": "box",
      "x": 0,
-     "y": 270,
-     "w": 400,
-     "d": 2,
+     "y": 216,
+     "w": 240,
+     "d": 2.5,
+     "r": 0,
+     "fill": "#244A3C"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 278,
+     "w": 240,
+     "d": 2.5,
      "r": 0,
      "fill": "#244A3C"
     },
@@ -633,27 +811,27 @@
      "shape": "box",
      "x": 0,
      "y": 340,
-     "w": 400,
-     "d": 2,
+     "w": 240,
+     "d": 2.5,
      "r": 0,
      "fill": "#244A3C"
     },
     {
      "shape": "box",
      "x": 0,
-     "y": 410,
-     "w": 400,
-     "d": 2,
+     "y": 402,
+     "w": 240,
+     "d": 2.5,
      "r": 0,
      "fill": "#244A3C"
     },
     {
      "shape": "box",
      "x": 0,
-     "y": 480,
-     "w": 400,
-     "d": 2,
-     "r": 0,
+     "y": 450,
+     "w": 240,
+     "d": 20,
+     "r": 4,
      "fill": "#244A3C"
     }
    ]
@@ -662,22 +840,22 @@
    "id": "aermel_l",
    "component_id": "nylon_fabric",
    "material_id": "nylon",
-   "name": "Ärmel links (eingeschlagen)",
+   "name": "Ärmel links",
    "short": "Ärmel",
    "shape": "box",
-   "x": 15,
-   "y": 30,
-   "w": 180,
-   "d": 440,
+   "x": 0,
+   "y": 60,
+   "w": 80,
+   "d": 405,
    "z": 0,
-   "h": 20,
-   "r": 12,
+   "h": 55,
+   "r": 18,
    "explode": [
-    -260,
-    0,
+    -150,
+    230,
     0
    ],
-   "mass": 180.4,
+   "mass": 182.5,
    "materials": [
     [
      "nylon",
@@ -688,62 +866,179 @@
      45
     ]
    ],
-   "info": "Wattierter Ärmel mit Strickbündchen am Handgelenk, beim Falten unter den Rücken geschlagen.",
+   "info": "Gesteppter Ärmel mit Nylon außen, Polyesterwatte und Futter innen, wie der Rumpf aufgebaut.",
    "color": "#2E5B4A",
+   "label": true,
    "marks": [
     {
      "shape": "box",
      "x": 0,
      "y": 40,
-     "w": 180,
-     "d": 2,
+     "w": 80,
+     "d": 2.5,
      "r": 0,
      "fill": "#244A3C"
     },
     {
      "shape": "box",
      "x": 0,
-     "y": 110,
-     "w": 180,
-     "d": 2,
+     "y": 102,
+     "w": 80,
+     "d": 2.5,
      "r": 0,
      "fill": "#244A3C"
     },
     {
      "shape": "box",
      "x": 0,
-     "y": 180,
-     "w": 180,
-     "d": 2,
+     "y": 164,
+     "w": 80,
+     "d": 2.5,
      "r": 0,
      "fill": "#244A3C"
     },
     {
      "shape": "box",
      "x": 0,
-     "y": 250,
-     "w": 180,
-     "d": 2,
+     "y": 226,
+     "w": 80,
+     "d": 2.5,
      "r": 0,
      "fill": "#244A3C"
     },
     {
      "shape": "box",
      "x": 0,
-     "y": 320,
-     "w": 180,
-     "d": 2,
+     "y": 288,
+     "w": 80,
+     "d": 2.5,
      "r": 0,
      "fill": "#244A3C"
     },
     {
      "shape": "box",
-     "x": 20,
-     "y": 400,
-     "w": 140,
-     "d": 40,
-     "r": 4,
-     "fill": "#3A3F44"
+     "x": 0,
+     "y": 350,
+     "w": 80,
+     "d": 2.5,
+     "r": 0,
+     "fill": "#244A3C"
+    }
+   ]
+  },
+  {
+   "id": "buendchen_l",
+   "component_id": "nylon_fabric",
+   "material_id": "polyester",
+   "name": "Strickbündchen",
+   "short": "Bündchen",
+   "shape": "box",
+   "x": 8,
+   "y": 465,
+   "w": 64,
+   "d": 32,
+   "z": 6,
+   "h": 42,
+   "r": 10,
+   "explode": [
+    -150,
+    230,
+    0
+   ],
+   "mass": 13.7,
+   "materials": [
+    [
+     "polyester",
+     95
+    ],
+    [
+     "tpu",
+     5
+    ]
+   ],
+   "info": "Gestricktes Rippenbündchen mit Elasthan, hält die Kälte am Handgelenk draußen. Abschneiden vor dem Recycling.",
+   "color": "#22302A",
+   "label": true,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 2,
+     "w": 2.5,
+     "d": 28,
+     "fill": "#1A241F"
+    },
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 2,
+     "w": 2.5,
+     "d": 28,
+     "fill": "#1A241F"
+    },
+    {
+     "shape": "box",
+     "x": 16,
+     "y": 2,
+     "w": 2.5,
+     "d": 28,
+     "fill": "#1A241F"
+    },
+    {
+     "shape": "box",
+     "x": 22,
+     "y": 2,
+     "w": 2.5,
+     "d": 28,
+     "fill": "#1A241F"
+    },
+    {
+     "shape": "box",
+     "x": 28,
+     "y": 2,
+     "w": 2.5,
+     "d": 28,
+     "fill": "#1A241F"
+    },
+    {
+     "shape": "box",
+     "x": 34,
+     "y": 2,
+     "w": 2.5,
+     "d": 28,
+     "fill": "#1A241F"
+    },
+    {
+     "shape": "box",
+     "x": 40,
+     "y": 2,
+     "w": 2.5,
+     "d": 28,
+     "fill": "#1A241F"
+    },
+    {
+     "shape": "box",
+     "x": 46,
+     "y": 2,
+     "w": 2.5,
+     "d": 28,
+     "fill": "#1A241F"
+    },
+    {
+     "shape": "box",
+     "x": 52,
+     "y": 2,
+     "w": 2.5,
+     "d": 28,
+     "fill": "#1A241F"
+    },
+    {
+     "shape": "box",
+     "x": 58,
+     "y": 2,
+     "w": 2.5,
+     "d": 28,
+     "fill": "#1A241F"
     }
    ]
   },
@@ -751,22 +1046,22 @@
    "id": "aermel_r",
    "component_id": "nylon_fabric",
    "material_id": "nylon",
-   "name": "Ärmel rechts (eingeschlagen)",
+   "name": "Ärmel rechts",
    "short": "Ärmel",
    "shape": "box",
-   "x": 205,
-   "y": 30,
-   "w": 180,
-   "d": 440,
+   "x": 320,
+   "y": 60,
+   "w": 80,
+   "d": 405,
    "z": 0,
-   "h": 20,
-   "r": 12,
+   "h": 55,
+   "r": 18,
    "explode": [
-    260,
+    150,
     0,
     0
    ],
-   "mass": 180.4,
+   "mass": 182.5,
    "materials": [
     [
      "nylon",
@@ -785,55 +1080,171 @@
      "shape": "box",
      "x": 0,
      "y": 40,
-     "w": 180,
-     "d": 2,
+     "w": 80,
+     "d": 2.5,
      "r": 0,
      "fill": "#244A3C"
     },
     {
      "shape": "box",
      "x": 0,
-     "y": 110,
-     "w": 180,
-     "d": 2,
+     "y": 102,
+     "w": 80,
+     "d": 2.5,
      "r": 0,
      "fill": "#244A3C"
     },
     {
      "shape": "box",
      "x": 0,
-     "y": 180,
-     "w": 180,
-     "d": 2,
+     "y": 164,
+     "w": 80,
+     "d": 2.5,
      "r": 0,
      "fill": "#244A3C"
     },
     {
      "shape": "box",
      "x": 0,
-     "y": 250,
-     "w": 180,
-     "d": 2,
+     "y": 226,
+     "w": 80,
+     "d": 2.5,
      "r": 0,
      "fill": "#244A3C"
     },
     {
      "shape": "box",
      "x": 0,
-     "y": 320,
-     "w": 180,
-     "d": 2,
+     "y": 288,
+     "w": 80,
+     "d": 2.5,
      "r": 0,
      "fill": "#244A3C"
     },
     {
      "shape": "box",
-     "x": 20,
-     "y": 400,
-     "w": 140,
-     "d": 40,
-     "r": 4,
-     "fill": "#3A3F44"
+     "x": 0,
+     "y": 350,
+     "w": 80,
+     "d": 2.5,
+     "r": 0,
+     "fill": "#244A3C"
+    }
+   ]
+  },
+  {
+   "id": "buendchen_r",
+   "component_id": "nylon_fabric",
+   "material_id": "polyester",
+   "name": "Strickbündchen",
+   "short": "Bündchen",
+   "shape": "box",
+   "x": 328,
+   "y": 465,
+   "w": 64,
+   "d": 32,
+   "z": 6,
+   "h": 42,
+   "r": 10,
+   "explode": [
+    150,
+    0,
+    0
+   ],
+   "mass": 13.7,
+   "materials": [
+    [
+     "polyester",
+     95
+    ],
+    [
+     "tpu",
+     5
+    ]
+   ],
+   "info": "Zweites Bündchen.",
+   "color": "#22302A",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 2,
+     "w": 2.5,
+     "d": 28,
+     "fill": "#1A241F"
+    },
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 2,
+     "w": 2.5,
+     "d": 28,
+     "fill": "#1A241F"
+    },
+    {
+     "shape": "box",
+     "x": 16,
+     "y": 2,
+     "w": 2.5,
+     "d": 28,
+     "fill": "#1A241F"
+    },
+    {
+     "shape": "box",
+     "x": 22,
+     "y": 2,
+     "w": 2.5,
+     "d": 28,
+     "fill": "#1A241F"
+    },
+    {
+     "shape": "box",
+     "x": 28,
+     "y": 2,
+     "w": 2.5,
+     "d": 28,
+     "fill": "#1A241F"
+    },
+    {
+     "shape": "box",
+     "x": 34,
+     "y": 2,
+     "w": 2.5,
+     "d": 28,
+     "fill": "#1A241F"
+    },
+    {
+     "shape": "box",
+     "x": 40,
+     "y": 2,
+     "w": 2.5,
+     "d": 28,
+     "fill": "#1A241F"
+    },
+    {
+     "shape": "box",
+     "x": 46,
+     "y": 2,
+     "w": 2.5,
+     "d": 28,
+     "fill": "#1A241F"
+    },
+    {
+     "shape": "box",
+     "x": 52,
+     "y": 2,
+     "w": 2.5,
+     "d": 28,
+     "fill": "#1A241F"
+    },
+    {
+     "shape": "box",
+     "x": 58,
+     "y": 2,
+     "w": 2.5,
+     "d": 28,
+     "fill": "#1A241F"
     }
    ]
   }

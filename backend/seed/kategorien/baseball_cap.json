@@ -26,7 +26,7 @@
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 0,12 kg",
+   "v": "≈ 0,11 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
@@ -43,14 +43,14 @@
    "Fe": "Modellmassen (Schätzung)"
   },
   "materialien_g": {
-   "cotton": 79.6,
-   "pp": 18.4,
+   "cotton": 80.4,
+   "pp": 17.6,
    "steel": 1.5,
    "polyester": 0.5
   },
-  "co2_kg": 0.115,
-  "co2_mit_recyclat_kg": 0.082,
-  "co2_ersparnis_kg": 0.033,
+  "co2_kg": 0.114,
+  "co2_mit_recyclat_kg": 0.083,
+  "co2_ersparnis_kg": 0.032,
   "co2_ohne_faktor": [],
   "rohstoffwert_eur": 0,
   "wert_ohne_preis": [],
@@ -138,14 +138,14 @@
    "short": "Knopf",
    "shape": "cyl",
    "x": 88,
-   "y": 88,
+   "y": 105,
    "w": 14,
    "z": 105,
    "h": 5,
    "explode": [
     0,
     0,
-    85.0
+    90.0
    ],
    "mass": 1.5,
    "materials": [
@@ -159,132 +159,278 @@
     ]
    ],
    "info": "Metallknopf mit Stoffbezug, deckt die Stelle ab, an der die sechs Bahnen oben zusammenlaufen.",
-   "color": "#2F4A6B"
-  },
-  {
-   "id": "krone_oben",
-   "component_id": "cotton_fabric",
-   "material_id": "cotton",
-   "name": "Krone, Spitze",
-   "short": "Krone",
-   "shape": "cyl",
-   "x": 30,
-   "y": 30,
-   "w": 130,
-   "d": 130,
-   "z": 80,
-   "h": 25,
-   "explode": [
-    0,
-    0,
-    60.0
-   ],
-   "mass": 15.3,
-   "materials": [
-    [
-     "baumwolle",
-     100
-    ]
-   ],
-   "info": "Sechs dreieckige Stoffbahnen aus Baumwoll-Twill, mit Ziernähten zusammengenäht.",
    "color": "#2F4A6B",
    "marks": [
     {
-     "shape": "box",
-     "x": 63,
-     "y": 0,
-     "w": 4,
-     "d": 130,
-     "r": 1,
-     "fill": "#243A55"
-    },
-    {
-     "shape": "box",
-     "x": 0,
-     "y": 63,
-     "w": 130,
-     "d": 4,
-     "r": 1,
-     "fill": "#243A55"
-    },
-    {
      "shape": "cyl",
-     "x": 28,
-     "y": 28,
-     "w": 6,
-     "fill": "#243A55"
-    },
-    {
-     "shape": "cyl",
-     "x": 96,
-     "y": 28,
-     "w": 6,
-     "fill": "#243A55"
-    },
-    {
-     "shape": "cyl",
-     "x": 28,
-     "y": 96,
-     "w": 6,
-     "fill": "#243A55"
-    },
-    {
-     "shape": "cyl",
-     "x": 96,
-     "y": 96,
-     "w": 6,
+     "x": 3,
+     "y": 3,
+     "w": 8,
      "fill": "#243A55"
     }
    ]
   },
   {
-   "id": "krone_mitte",
+   "id": "krone_6",
    "component_id": "cotton_fabric",
    "material_id": "cotton",
-   "name": "Krone, Mitte",
+   "name": "Krone, Lage 6",
    "short": "Krone",
    "shape": "cyl",
-   "x": 10,
-   "y": 10,
-   "w": 170,
-   "d": 170,
-   "z": 40,
-   "h": 40,
+   "x": 63,
+   "y": 80,
+   "w": 64,
+   "d": 64,
+   "z": 97,
+   "h": 8,
    "explode": [
     0,
     0,
-    60.0
+    65.0
    ],
-   "mass": 20.4,
+   "mass": 2,
    "materials": [
     [
      "baumwolle",
      100
     ]
    ],
-   "info": "Mittlerer Teil der Stoffbahnen. Die vorderen zwei Bahnen sind innen mit Vlies verstärkt.",
+   "info": "Teil der Kuppel aus Stoffbahnen. Oben laufen alle Nähte unter dem Knopf zusammen.",
    "color": "#2F4A6B",
-   "label": false
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 31.25,
+     "y": 0,
+     "w": 1.5,
+     "d": 64,
+     "r": 0,
+     "fill": "#243A55"
+    }
+   ]
   },
   {
-   "id": "krone_unten",
+   "id": "krone_5",
    "component_id": "cotton_fabric",
    "material_id": "cotton",
-   "name": "Krone, Rand",
+   "name": "Krone, Lage 5",
+   "short": "Krone",
+   "shape": "cyl",
+   "x": 40,
+   "y": 56,
+   "w": 110,
+   "d": 104,
+   "z": 85,
+   "h": 12,
+   "explode": [
+    0,
+    0,
+    65.0
+   ],
+   "mass": 4.9,
+   "materials": [
+    [
+     "baumwolle",
+     100
+    ]
+   ],
+   "info": "Teil der Kuppel aus Stoffbahnen.",
+   "color": "#2F4A6B",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 54.25,
+     "y": 0,
+     "w": 1.5,
+     "d": 104,
+     "r": 0,
+     "fill": "#243A55"
+    }
+   ]
+  },
+  {
+   "id": "krone_4",
+   "component_id": "cotton_fabric",
+   "material_id": "cotton",
+   "name": "Krone, Lage 4",
+   "short": "Krone",
+   "shape": "cyl",
+   "x": 23,
+   "y": 34,
+   "w": 144,
+   "d": 138,
+   "z": 70,
+   "h": 15,
+   "explode": [
+    0,
+    0,
+    65.0
+   ],
+   "mass": 7.8,
+   "materials": [
+    [
+     "baumwolle",
+     100
+    ]
+   ],
+   "info": "Teil der Kuppel aus Stoffbahnen.",
+   "color": "#2F4A6B",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 71.25,
+     "y": 0,
+     "w": 1.5,
+     "d": 138,
+     "r": 0,
+     "fill": "#243A55"
+    },
+    {
+     "shape": "cyl",
+     "x": 122.6,
+     "y": 95.7,
+     "w": 6,
+     "fill": "#1C2C40"
+    },
+    {
+     "shape": "cyl",
+     "x": 69.0,
+     "y": 125.3,
+     "w": 6,
+     "fill": "#1C2C40"
+    },
+    {
+     "shape": "cyl",
+     "x": 15.4,
+     "y": 95.7,
+     "w": 6,
+     "fill": "#1C2C40"
+    },
+    {
+     "shape": "cyl",
+     "x": 15.4,
+     "y": 36.3,
+     "w": 6,
+     "fill": "#1C2C40"
+    },
+    {
+     "shape": "cyl",
+     "x": 69.0,
+     "y": 6.7,
+     "w": 6,
+     "fill": "#1C2C40"
+    },
+    {
+     "shape": "cyl",
+     "x": 122.6,
+     "y": 36.3,
+     "w": 6,
+     "fill": "#1C2C40"
+    }
+   ]
+  },
+  {
+   "id": "krone_3",
+   "component_id": "cotton_fabric",
+   "material_id": "cotton",
+   "name": "Krone, Lage 3",
+   "short": "Krone",
+   "shape": "cyl",
+   "x": 11,
+   "y": 18,
+   "w": 168,
+   "d": 162,
+   "z": 52,
+   "h": 18,
+   "explode": [
+    0,
+    0,
+    65.0
+   ],
+   "mass": 10.8,
+   "materials": [
+    [
+     "baumwolle",
+     100
+    ]
+   ],
+   "info": "Teil der Kuppel aus Stoffbahnen.",
+   "color": "#2F4A6B",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 83.25,
+     "y": 0,
+     "w": 1.5,
+     "d": 162,
+     "r": 0,
+     "fill": "#243A55"
+    }
+   ]
+  },
+  {
+   "id": "krone_2",
+   "component_id": "cotton_fabric",
+   "material_id": "cotton",
+   "name": "Krone, Lage 2",
+   "short": "Krone",
+   "shape": "cyl",
+   "x": 3,
+   "y": 6,
+   "w": 184,
+   "d": 178,
+   "z": 30,
+   "h": 22,
+   "explode": [
+    0,
+    0,
+    65.0
+   ],
+   "mass": 15.7,
+   "materials": [
+    [
+     "baumwolle",
+     100
+    ]
+   ],
+   "info": "Teil der Kuppel aus Stoffbahnen.",
+   "color": "#2F4A6B",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 91.25,
+     "y": 0,
+     "w": 1.5,
+     "d": 178,
+     "r": 0,
+     "fill": "#243A55"
+    }
+   ]
+  },
+  {
+   "id": "krone_1",
+   "component_id": "cotton_fabric",
+   "material_id": "cotton",
+   "name": "Krone aus sechs Stoffbahnen",
    "short": "Krone",
    "shape": "cyl",
    "x": 0,
    "y": 0,
    "w": 190,
-   "d": 190,
+   "d": 185,
    "z": 0,
-   "h": 40,
+   "h": 30,
    "explode": [
     0,
     0,
-    60.0
+    65.0
    ],
-   "mass": 25.5,
+   "mass": 21.6,
    "materials": [
     [
      "baumwolle",
@@ -295,9 +441,20 @@
      10
     ]
    ],
-   "info": "Unterer Rand der Krone, hier sind Schirm und Schweißband angenäht. Tragbare Caps in die Altkleidersammlung.",
+   "info": "Sechs dreieckige Bahnen aus Baumwoll-Twill, oben zusammengenäht. Die zwei vorderen Bahnen sind innen mit Vlies versteift. Tragbare Caps in die Altkleidersammlung.",
    "color": "#2F4A6B",
-   "label": false
+   "label": true,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 94.25,
+     "y": 0,
+     "w": 1.5,
+     "d": 185,
+     "r": 0,
+     "fill": "#243A55"
+    }
+   ]
   },
   {
    "id": "etikett",
@@ -306,8 +463,8 @@
    "name": "Pflegeetikett",
    "short": "Etikett",
    "shape": "box",
-   "x": 110,
-   "y": 10,
+   "x": 100,
+   "y": 14,
    "w": 20,
    "d": 0.3,
    "z": 8,
@@ -315,7 +472,7 @@
    "r": 0,
    "explode": [
     0,
-    -130,
+    -140,
     0
    ],
    "mass": 0.5,
@@ -338,7 +495,7 @@
    "x": 8,
    "y": 8,
    "w": 174,
-   "d": 174,
+   "d": 169,
    "z": 0,
    "h": 25,
    "explode": [
@@ -346,7 +503,7 @@
     0,
     0.0
    ],
-   "mass": 8.2,
+   "mass": 7.8,
    "materials": [
     [
      "baumwolle",
@@ -365,6 +522,7 @@
      "x": 5,
      "y": 5,
      "w": 164,
+     "d": 159,
      "fill": "#4A5056"
     }
    ]
@@ -376,19 +534,19 @@
    "name": "Verschlussband mit Löchern",
    "short": "Verschluss",
    "shape": "box",
-   "x": 50,
-   "y": 0,
-   "w": 45,
+   "x": 58,
+   "y": 10,
+   "w": 37,
    "d": 3,
    "z": 6,
-   "h": 18,
+   "h": 16,
    "r": 1,
    "explode": [
     0,
-    -70,
+    -80,
     0
    ],
-   "mass": 3.1,
+   "mass": 2.9,
    "materials": [
     [
      "pp",
@@ -406,18 +564,18 @@
    "short": "Noppenband",
    "shape": "box",
    "x": 95,
-   "y": 0,
-   "w": 45,
+   "y": 10,
+   "w": 37,
    "d": 3.5,
    "z": 6,
-   "h": 18,
+   "h": 16,
    "r": 1,
    "explode": [
     0,
-    -70,
+    -80,
     0
    ],
-   "mass": 3.1,
+   "mass": 2.9,
    "materials": [
     [
      "pp",
@@ -433,20 +591,19 @@
    "material_id": "cotton",
    "name": "Schirmbezug oben",
    "short": "Schirmbezug",
-   "shape": "box",
-   "x": 25,
-   "y": 180,
-   "w": 140,
-   "d": 70,
+   "shape": "cyl",
+   "x": 7,
+   "y": 140,
+   "w": 176,
+   "d": 110,
    "z": 3.5,
    "h": 1.5,
-   "r": 34,
    "explode": [
     0,
-    120,
-    50
+    130,
+    60
    ],
-   "mass": 5.1,
+   "mass": 4.9,
    "materials": [
     [
      "baumwolle",
@@ -457,22 +614,68 @@
    "color": "#2F4A6B",
    "marks": [
     {
-     "shape": "box",
-     "x": 10,
-     "y": 58,
-     "w": 120,
-     "d": 1.5,
-     "r": 0,
+     "shape": "cyl",
+     "x": 6,
+     "y": 6,
+     "w": 164,
+     "d": 98,
      "fill": "#243A55"
     },
     {
-     "shape": "box",
-     "x": 10,
-     "y": 62,
-     "w": 120,
-     "d": 1.5,
-     "r": 0,
+     "shape": "cyl",
+     "x": 7.5,
+     "y": 7.5,
+     "w": 161,
+     "d": 95,
+     "fill": "#2F4A6B"
+    },
+    {
+     "shape": "cyl",
+     "x": 13,
+     "y": 13,
+     "w": 150,
+     "d": 84,
      "fill": "#243A55"
+    },
+    {
+     "shape": "cyl",
+     "x": 14.5,
+     "y": 14.5,
+     "w": 147,
+     "d": 81,
+     "fill": "#2F4A6B"
+    },
+    {
+     "shape": "cyl",
+     "x": 20,
+     "y": 20,
+     "w": 136,
+     "d": 70,
+     "fill": "#243A55"
+    },
+    {
+     "shape": "cyl",
+     "x": 21.5,
+     "y": 21.5,
+     "w": 133,
+     "d": 67,
+     "fill": "#2F4A6B"
+    },
+    {
+     "shape": "cyl",
+     "x": 27,
+     "y": 27,
+     "w": 122,
+     "d": 56,
+     "fill": "#243A55"
+    },
+    {
+     "shape": "cyl",
+     "x": 28.5,
+     "y": 28.5,
+     "w": 119,
+     "d": 53,
+     "fill": "#2F4A6B"
     }
    ]
   },
@@ -482,20 +685,19 @@
    "material_id": "pp",
    "name": "Schirmeinlage",
    "short": "Einlage",
-   "shape": "box",
-   "x": 27,
-   "y": 181,
-   "w": 136,
-   "d": 67,
+   "shape": "cyl",
+   "x": 9,
+   "y": 142,
+   "w": 172,
+   "d": 106,
    "z": 1.5,
    "h": 2,
-   "r": 32,
    "explode": [
     0,
-    120,
-    25
+    130,
+    30
    ],
-   "mass": 12.2,
+   "mass": 11.8,
    "materials": [
     [
      "pp",
@@ -510,30 +712,28 @@
    "component_id": "cotton_fabric",
    "material_id": "cotton",
    "name": "Schirmbezug unten",
-   "short": "Schirmbezug",
-   "shape": "box",
-   "x": 25,
-   "y": 180,
-   "w": 140,
-   "d": 70,
+   "short": "Schirm unten",
+   "shape": "cyl",
+   "x": 7,
+   "y": 140,
+   "w": 176,
+   "d": 110,
    "z": 0,
    "h": 1.5,
-   "r": 34,
    "explode": [
     0,
-    120,
+    130,
     0
    ],
-   "mass": 5.1,
+   "mass": 4.9,
    "materials": [
     [
      "baumwolle",
      100
     ]
    ],
-   "info": "Unterseite des Schirms, oft in einer zweiten Farbe.",
-   "color": "#3F5F84",
-   "label": false
+   "info": "Unterseite des Schirms, oft in einer zweiten Farbe. Mit dem Bezug oben vernäht.",
+   "color": "#3F5F84"
   }
  ]
 }

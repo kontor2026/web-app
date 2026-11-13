@@ -15,9 +15,9 @@
    "h": 2,
    "r": 2,
    "explode": [
-    230,
     0,
-    0
+    -260,
+    175
    ],
    "mass": 3,
    "materials": [
@@ -44,8 +44,8 @@
    "h": 0.3,
    "r": 1,
    "explode": [
-    200,
-    60,
+    260,
+    0,
     0
    ],
    "mass": 1,
@@ -92,7 +92,7 @@
    "component_id": "cotton_fabric",
    "material_id": "cotton",
    "name": "Oberste Faltlage mit Bordüre",
-   "short": "Faltlage oben",
+   "short": "Oberste Lage",
    "shape": "box",
    "x": 0,
    "y": 0,
@@ -103,8 +103,8 @@
    "r": 8,
    "explode": [
     0,
-    0,
-    270.0
+    -210,
+    165
    ],
    "mass": 111.5,
    "materials": [
@@ -1351,11 +1351,47 @@
     {
      "shape": "box",
      "x": 0,
+     "y": 0,
+     "w": 5,
+     "d": 250,
+     "r": 0,
+     "fill": "#A8443B"
+    },
+    {
+     "shape": "box",
+     "x": 295,
+     "y": 0,
+     "w": 5,
+     "d": 250,
+     "r": 0,
+     "fill": "#A8443B"
+    },
+    {
+     "shape": "box",
+     "x": 0,
      "y": 200,
      "w": 300,
      "d": 22,
      "r": 0,
      "fill": "#A8443B"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 206,
+     "w": 300,
+     "d": 2,
+     "r": 0,
+     "fill": "#E0B04A"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 214,
+     "w": 300,
+     "d": 2,
+     "r": 0,
+     "fill": "#E0B04A"
     }
    ]
   },
@@ -1375,8 +1411,8 @@
    "r": 8,
    "explode": [
     0,
-    0,
-    180.0
+    -140,
+    110
    ],
    "mass": 111.5,
    "materials": [
@@ -2619,6 +2655,24 @@
      "w": 4,
      "d": 4,
      "fill": "#B34C42"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 0,
+     "w": 5,
+     "d": 250,
+     "r": 0,
+     "fill": "#A8443B"
+    },
+    {
+     "shape": "box",
+     "x": 295,
+     "y": 0,
+     "w": 5,
+     "d": 250,
+     "r": 0,
+     "fill": "#A8443B"
     }
    ]
   },
@@ -2638,8 +2692,8 @@
    "r": 8,
    "explode": [
     0,
-    0,
-    90.0
+    -70,
+    55
    ],
    "mass": 111.5,
    "materials": [
@@ -3883,6 +3937,24 @@
      "w": 4,
      "d": 4,
      "fill": "#B34C42"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 0,
+     "w": 5,
+     "d": 250,
+     "r": 0,
+     "fill": "#A8443B"
+    },
+    {
+     "shape": "box",
+     "x": 295,
+     "y": 0,
+     "w": 5,
+     "d": 250,
+     "r": 0,
+     "fill": "#A8443B"
     }
    ]
   },
@@ -3891,7 +3963,7 @@
    "component_id": "cotton_fabric",
    "material_id": "cotton",
    "name": "Unterste Faltlage mit Bordüre",
-   "short": "Faltlage unten",
+   "short": "Unterste Lage",
    "shape": "box",
    "x": 0,
    "y": 0,
@@ -3903,7 +3975,7 @@
    "explode": [
     0,
     0,
-    0.0
+    0
    ],
    "mass": 111.5,
    "materials": [
@@ -5150,11 +5222,47 @@
     {
      "shape": "box",
      "x": 0,
+     "y": 0,
+     "w": 5,
+     "d": 250,
+     "r": 0,
+     "fill": "#A8443B"
+    },
+    {
+     "shape": "box",
+     "x": 295,
+     "y": 0,
+     "w": 5,
+     "d": 250,
+     "r": 0,
+     "fill": "#A8443B"
+    },
+    {
+     "shape": "box",
+     "x": 0,
      "y": 28,
      "w": 300,
      "d": 22,
      "r": 0,
      "fill": "#A8443B"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 34,
+     "w": 300,
+     "d": 2,
+     "r": 0,
+     "fill": "#E0B04A"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 42,
+     "w": 300,
+     "d": 2,
+     "r": 0,
+     "fill": "#E0B04A"
     }
    ]
   }

@@ -21,38 +21,41 @@
  "werte": [
   {
    "k": "Rohstoffwert",
-   "v": "≈ 0,34 €",
+   "v": "≈ 0,27 €",
    "hint": "Kupfer zu Preisen vom 13.11."
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 9,58 kg",
+   "v": "≈ 9,73 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 9,44 kg",
+   "v": "≈ 9,59 kg",
    "hint": "spart 0,14 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Cu": 27200.0
+   "Cu": 21700.0,
+   "Fe": 17150.0
   },
   "herkunft": {
-   "Cu": "Modellmassen (Schätzung)"
+   "Cu": "Modellmassen (Schätzung)",
+   "Fe": "Modellmassen (Schätzung)"
   },
   "materialien_g": {
-   "leather": 557.4,
-   "polyester": 81.6,
-   "pp": 34.0,
-   "copper": 27.2
+   "leather": 569.1,
+   "polyester": 65.0,
+   "pp": 27.1,
+   "copper": 21.7,
+   "steel": 17.5
   },
-  "co2_kg": 9.58,
-  "co2_mit_recyclat_kg": 9.442,
-  "co2_ersparnis_kg": 0.138,
+  "co2_kg": 9.729,
+  "co2_mit_recyclat_kg": 9.587,
+  "co2_ersparnis_kg": 0.142,
   "co2_ohne_faktor": [],
-  "rohstoffwert_eur": 0.34,
+  "rohstoffwert_eur": 0.27,
   "wert_ohne_preis": [],
   "preisstand": "2026-11-13",
   "quellen": {
@@ -131,25 +134,25 @@
  "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "henkel_v",
+   "id": "griff_v",
    "component_id": "leather_panel",
    "material_id": "leather",
-   "name": "Henkel vorne",
+   "name": "Henkel",
    "short": "Henkel",
    "shape": "box",
-   "x": 75,
-   "y": 106,
-   "w": 150,
-   "d": 8,
-   "z": 200,
-   "h": 50,
+   "x": 70,
+   "y": 113,
+   "w": 160,
+   "d": 7,
+   "z": 240,
+   "h": 10,
    "r": 4,
    "explode": [
     0,
     0,
-    146.0
+    189.0
    ],
-   "mass": 61.2,
+   "mass": 28.2,
    "materials": [
     [
      "leder",
@@ -164,29 +167,135 @@
      10
     ]
    ],
-   "info": "Zwei verklebte Lederstreifen mit Kunststoffkern, an beiden Enden mit Metallringen oder Nieten befestigt.",
-   "color": "#5C3A24"
+   "info": "Zwei verklebte Lederstreifen mit Kunststoffkern, die Kanten sind eingefärbt. An den Enden mit Metallnieten am Korpus befestigt: Nieten aufbohren, dann löst sich der Henkel.",
+   "color": "#5C3A24",
+   "label": true,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 3,
+     "w": 152,
+     "d": 1,
+     "r": 0,
+     "fill": "#4A2E1C"
+    }
+   ]
   },
   {
-   "id": "henkel_h",
+   "id": "steg_v1",
+   "component_id": "leather_panel",
+   "material_id": "leather",
+   "name": "Henkelsteg",
+   "short": "Henkelsteg",
+   "shape": "box",
+   "x": 70,
+   "y": 113,
+   "w": 12,
+   "d": 7,
+   "z": 203,
+   "h": 37,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    189.0
+   ],
+   "mass": 7.6,
+   "materials": [
+    [
+     "leder",
+     85
+    ],
+    [
+     "polyester",
+     5
+    ],
+    [
+     "stahl",
+     10
+    ]
+   ],
+   "info": "Steg des Henkels mit Niete.",
+   "color": "#5C3A24",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 0.5,
+     "w": 6,
+     "fill": "#C9A24A"
+    }
+   ]
+  },
+  {
+   "id": "steg_v2",
+   "component_id": "leather_panel",
+   "material_id": "leather",
+   "name": "Henkelsteg",
+   "short": "Henkelsteg",
+   "shape": "box",
+   "x": 218,
+   "y": 113,
+   "w": 12,
+   "d": 7,
+   "z": 203,
+   "h": 37,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    189.0
+   ],
+   "mass": 7.6,
+   "materials": [
+    [
+     "leder",
+     85
+    ],
+    [
+     "polyester",
+     5
+    ],
+    [
+     "stahl",
+     10
+    ]
+   ],
+   "info": "Steg des Henkels mit Niete.",
+   "color": "#5C3A24",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 0.5,
+     "w": 6,
+     "fill": "#C9A24A"
+    }
+   ]
+  },
+  {
+   "id": "griff_h",
    "component_id": "leather_panel",
    "material_id": "leather",
    "name": "Henkel hinten",
    "short": "Henkel",
    "shape": "box",
-   "x": 75,
-   "y": 6,
-   "w": 150,
-   "d": 8,
-   "z": 200,
-   "h": 50,
+   "x": 70,
+   "y": 0,
+   "w": 160,
+   "d": 7,
+   "z": 240,
+   "h": 10,
    "r": 4,
    "explode": [
     0,
     0,
-    146.0
+    189.0
    ],
-   "mass": 61.2,
+   "mass": 28.2,
    "materials": [
     [
      "leder",
@@ -201,9 +310,114 @@
      10
     ]
    ],
-   "info": "Gegenstück am Rückenteil.",
+   "info": "Gegenstück an der Rückseite.",
    "color": "#5C3A24",
-   "label": false
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 3,
+     "w": 152,
+     "d": 1,
+     "r": 0,
+     "fill": "#4A2E1C"
+    }
+   ]
+  },
+  {
+   "id": "steg_h1",
+   "component_id": "leather_panel",
+   "material_id": "leather",
+   "name": "Henkelsteg",
+   "short": "Henkelsteg",
+   "shape": "box",
+   "x": 70,
+   "y": 0,
+   "w": 12,
+   "d": 7,
+   "z": 203,
+   "h": 37,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    189.0
+   ],
+   "mass": 7.6,
+   "materials": [
+    [
+     "leder",
+     85
+    ],
+    [
+     "polyester",
+     5
+    ],
+    [
+     "stahl",
+     10
+    ]
+   ],
+   "info": "Steg des Henkels mit Niete.",
+   "color": "#5C3A24",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 0.5,
+     "w": 6,
+     "fill": "#C9A24A"
+    }
+   ]
+  },
+  {
+   "id": "steg_h2",
+   "component_id": "leather_panel",
+   "material_id": "leather",
+   "name": "Henkelsteg",
+   "short": "Henkelsteg",
+   "shape": "box",
+   "x": 218,
+   "y": 0,
+   "w": 12,
+   "d": 7,
+   "z": 203,
+   "h": 37,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    189.0
+   ],
+   "mass": 7.6,
+   "materials": [
+    [
+     "leder",
+     85
+    ],
+    [
+     "polyester",
+     5
+    ],
+    [
+     "stahl",
+     10
+    ]
+   ],
+   "info": "Steg des Henkels mit Niete.",
+   "color": "#5C3A24",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 0.5,
+     "w": 6,
+     "fill": "#C9A24A"
+    }
+   ]
   },
   {
    "id": "schieber",
@@ -212,19 +426,19 @@
    "name": "Schieber mit Zipper",
    "short": "Schieber",
    "shape": "box",
-   "x": 228,
+   "x": 226,
    "y": 50,
    "w": 16,
    "d": 20,
-   "z": 200,
+   "z": 203,
    "h": 5,
    "r": 2,
    "explode": [
     0,
     0,
-    165.0
+    192.0
    ],
-   "mass": 6.8,
+   "mass": 5.4,
    "materials": [
     [
      "messing",
@@ -236,7 +450,18 @@
     ]
    ],
    "info": "Gegossener Metallschieber mit Lederanhänger. Er verbindet die beiden Zahnreihen beim Ziehen.",
-   "color": "#C9A24A"
+   "color": "#C9A24A",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 3,
+     "w": 8,
+     "d": 14,
+     "r": 2,
+     "fill": "#A88638"
+    }
+   ]
   },
   {
    "id": "reissverschluss",
@@ -246,18 +471,18 @@
    "short": "Reißverschluss",
    "shape": "box",
    "x": 20,
-   "y": 54,
+   "y": 52,
    "w": 260,
-   "d": 12,
-   "z": 196,
-   "h": 4,
+   "d": 16,
+   "z": 200,
+   "h": 3,
    "r": 1,
    "explode": [
     0,
     0,
-    150.0
+    177.0
    ],
-   "mass": 20.4,
+   "mass": 16.3,
    "materials": [
     [
      "messing",
@@ -272,19 +497,176 @@
      5
     ]
    ],
-   "info": "Metallzähne auf Polyesterband, oben zwischen Futter und Leder eingenäht. Mit der Schere am Band entlang heraustrennen.",
+   "info": "Metallzähne auf Polyesterband, zwischen Futter und Lederblenden eingenäht. Mit der Schere am Band entlang heraustrennen.",
    "color": "#2A2E31",
    "marks": [
     {
      "shape": "box",
      "x": 0,
-     "y": 4,
+     "y": 6,
      "w": 260,
      "d": 4,
      "r": 0.5,
      "fill": "#C9A24A"
     }
    ]
+  },
+  {
+   "id": "blende_h",
+   "component_id": "leather_panel",
+   "material_id": "leather",
+   "name": "Lederblende hinten",
+   "short": "Blende",
+   "shape": "box",
+   "x": 6,
+   "y": 6,
+   "w": 288,
+   "d": 48,
+   "z": 196,
+   "h": 6,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    150.0
+   ],
+   "mass": 21.7,
+   "materials": [
+    [
+     "leder",
+     95
+    ],
+    [
+     "polyester",
+     5
+    ]
+   ],
+   "info": "Schmaler Lederstreifen, der die Öffnung hinter dem Reißverschluss abdeckt.",
+   "color": "#8A5A3B",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 42,
+     "w": 280,
+     "d": 1.2,
+     "r": 0,
+     "fill": "#5C3A24"
+    }
+   ]
+  },
+  {
+   "id": "blende_v",
+   "component_id": "leather_panel",
+   "material_id": "leather",
+   "name": "Lederblende vorne",
+   "short": "Blende",
+   "shape": "box",
+   "x": 6,
+   "y": 66,
+   "w": 288,
+   "d": 48,
+   "z": 196,
+   "h": 6,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    150.0
+   ],
+   "mass": 21.7,
+   "materials": [
+    [
+     "leder",
+     95
+    ],
+    [
+     "polyester",
+     5
+    ]
+   ],
+   "info": "Lederblenden links und rechts vom Reißverschluss schließen die Tasche oben. Nähte auftrennen.",
+   "color": "#8A5A3B",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 5,
+     "w": 280,
+     "d": 1.2,
+     "r": 0,
+     "fill": "#5C3A24"
+    }
+   ]
+  },
+  {
+   "id": "verschluss",
+   "component_id": "leather_panel",
+   "material_id": "steel",
+   "name": "Drehverschluss",
+   "short": "Drehschloss",
+   "shape": "box",
+   "x": 138,
+   "y": 124,
+   "w": 24,
+   "d": 4,
+   "z": 140,
+   "h": 18,
+   "r": 3,
+   "explode": [
+    0,
+    330,
+    0
+   ],
+   "mass": 8.7,
+   "materials": [
+    [
+     "messing",
+     70
+    ],
+    [
+     "stahl",
+     30
+    ]
+   ],
+   "info": "Metallschloss der Außentasche, innen mit zwei umgebogenen Laschen befestigt. Laschen aufbiegen.",
+   "color": "#C9A24A",
+   "sortBias": 70
+  },
+  {
+   "id": "vortasche",
+   "component_id": "leather_panel",
+   "material_id": "leather",
+   "name": "Außentasche mit Klappe",
+   "short": "Außentasche",
+   "shape": "box",
+   "x": 40,
+   "y": 120,
+   "w": 220,
+   "d": 4,
+   "z": 40,
+   "h": 130,
+   "r": 3,
+   "explode": [
+    0,
+    280,
+    0
+   ],
+   "mass": 48.8,
+   "materials": [
+    [
+     "leder",
+     95
+    ],
+    [
+     "polyester",
+     5
+    ]
+   ],
+   "info": "Aufgenähte Ledertasche für das Handy. Die Klappe wird vom Drehschloss gehalten.",
+   "color": "#7C4F33",
+   "sortBias": 40
   },
   {
    "id": "vorderteil",
@@ -297,15 +679,15 @@
    "y": 114,
    "w": 300,
    "d": 6,
-   "z": 10,
-   "h": 190,
+   "z": 3,
+   "h": 200,
    "r": 2,
    "explode": [
     0,
-    90,
+    230,
     0
    ],
-   "mass": 203.9,
+   "mass": 119.2,
    "materials": [
     [
      "leder",
@@ -320,6 +702,39 @@
    "color": "#8A5A3B"
   },
   {
+   "id": "rueckwand",
+   "component_id": "leather_panel",
+   "material_id": "leather",
+   "name": "Rückwand",
+   "short": "Rückwand",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 300,
+   "d": 6,
+   "z": 3,
+   "h": 200,
+   "r": 2,
+   "explode": [
+    0,
+    -160,
+    0
+   ],
+   "mass": 119.2,
+   "materials": [
+    [
+     "leder",
+     95
+    ],
+    [
+     "polyester",
+     5
+    ]
+   ],
+   "info": "Gleich aufgebaut wie die Vorderwand, innen mit Futter verklebt.",
+   "color": "#8A5A3B"
+  },
+  {
    "id": "seite_l",
    "component_id": "leather_panel",
    "material_id": "leather",
@@ -330,15 +745,15 @@
    "y": 6,
    "w": 6,
    "d": 108,
-   "z": 10,
-   "h": 190,
+   "z": 3,
+   "h": 200,
    "r": 2,
    "explode": [
-    -90,
+    -130,
     0,
     0
    ],
-   "mass": 61.2,
+   "mass": 37.9,
    "materials": [
     [
      "leder",
@@ -363,15 +778,15 @@
    "y": 6,
    "w": 6,
    "d": 108,
-   "z": 10,
-   "h": 190,
+   "z": 3,
+   "h": 200,
    "r": 2,
    "explode": [
-    90,
+    130,
     0,
     0
    ],
-   "mass": 61.2,
+   "mass": 37.9,
    "materials": [
     [
      "leder",
@@ -397,15 +812,15 @@
    "y": 8,
    "w": 284,
    "d": 104,
-   "z": 13,
-   "h": 183,
+   "z": 16,
+   "h": 180,
    "r": 4,
    "explode": [
     0,
     0,
-    100.0
+    110.0
    ],
-   "mass": 81.6,
+   "mass": 65,
    "materials": [
     [
      "polyester",
@@ -423,6 +838,15 @@
      "d": 4,
      "r": 1,
      "fill": "#B39E78"
+    },
+    {
+     "shape": "box",
+     "x": 190,
+     "y": 6,
+     "w": 70,
+     "d": 4,
+     "r": 1,
+     "fill": "#B39E78"
     }
    ]
   },
@@ -437,15 +861,15 @@
    "y": 10,
    "w": 280,
    "d": 100,
-   "z": 10,
+   "z": 13,
    "h": 3,
    "r": 6,
    "explode": [
     0,
     0,
-    50.0
+    70.0
    ],
-   "mass": 34,
+   "mass": 27.1,
    "materials": [
     [
      "pp",
@@ -459,62 +883,207 @@
    "id": "boden",
    "component_id": "leather_panel",
    "material_id": "leather",
-   "name": "Boden mit Standfüßen",
+   "name": "Boden",
    "short": "Boden",
    "shape": "box",
    "x": 0,
    "y": 0,
    "w": 300,
    "d": 120,
-   "z": 0,
+   "z": 3,
    "h": 10,
    "r": 8,
    "explode": [
     0,
     0,
-    0.0
+    40.0
    ],
-   "mass": 108.7,
+   "mass": 75.9,
    "materials": [
     [
      "leder",
-     90
+     95
     ],
     [
-     "stahl",
-     10
+     "polyester",
+     5
     ]
    ],
-   "info": "Doppeltes Leder mit vier Metallfüßchen, die den Boden vor Abrieb schützen. Die Füße aufbiegen und abziehen.",
+   "info": "Doppeltes, besonders festes Leder. Hier sitzen die Metallfüßchen.",
    "color": "#5C3A24",
    "marks": [
     {
-     "shape": "cyl",
-     "x": 20,
-     "y": 20,
-     "w": 10,
-     "fill": "#C9A24A"
-    },
+     "shape": "box",
+     "x": 6,
+     "y": 6,
+     "w": 288,
+     "d": 108,
+     "r": 6,
+     "fill": "#6A4430"
+    }
+   ]
+  },
+  {
+   "id": "fuss_1",
+   "component_id": "leather_panel",
+   "material_id": "steel",
+   "name": "Metallfüßchen",
+   "short": "Füßchen",
+   "shape": "cyl",
+   "x": 15,
+   "y": 15,
+   "w": 10,
+   "z": 0,
+   "h": 3,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 2.2,
+   "materials": [
+    [
+     "messing",
+     60
+    ],
+    [
+     "stahl",
+     40
+    ]
+   ],
+   "info": "Weiteres Füßchen.",
+   "color": "#C9A24A",
+   "label": false,
+   "marks": [
     {
      "shape": "cyl",
-     "x": 20,
-     "y": 90,
-     "w": 10,
-     "fill": "#C9A24A"
-    },
+     "x": 3,
+     "y": 3,
+     "w": 4,
+     "fill": "#A88638"
+    }
+   ]
+  },
+  {
+   "id": "fuss_2",
+   "component_id": "leather_panel",
+   "material_id": "steel",
+   "name": "Metallfüßchen",
+   "short": "Füßchen",
+   "shape": "cyl",
+   "x": 275,
+   "y": 15,
+   "w": 10,
+   "z": 0,
+   "h": 3,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 2.2,
+   "materials": [
+    [
+     "messing",
+     60
+    ],
+    [
+     "stahl",
+     40
+    ]
+   ],
+   "info": "Weiteres Füßchen.",
+   "color": "#C9A24A",
+   "label": false,
+   "marks": [
     {
      "shape": "cyl",
-     "x": 270,
-     "y": 20,
-     "w": 10,
-     "fill": "#C9A24A"
-    },
+     "x": 3,
+     "y": 3,
+     "w": 4,
+     "fill": "#A88638"
+    }
+   ]
+  },
+  {
+   "id": "fuss_3",
+   "component_id": "leather_panel",
+   "material_id": "steel",
+   "name": "Metallfüßchen",
+   "short": "Füßchen",
+   "shape": "cyl",
+   "x": 15,
+   "y": 95,
+   "w": 10,
+   "z": 0,
+   "h": 3,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 2.2,
+   "materials": [
+    [
+     "messing",
+     60
+    ],
+    [
+     "stahl",
+     40
+    ]
+   ],
+   "info": "Weiteres Füßchen.",
+   "color": "#C9A24A",
+   "label": false,
+   "marks": [
     {
      "shape": "cyl",
-     "x": 270,
-     "y": 90,
-     "w": 10,
-     "fill": "#C9A24A"
+     "x": 3,
+     "y": 3,
+     "w": 4,
+     "fill": "#A88638"
+    }
+   ]
+  },
+  {
+   "id": "fuss_4",
+   "component_id": "leather_panel",
+   "material_id": "steel",
+   "name": "Metallfüßchen",
+   "short": "Füßchen",
+   "shape": "cyl",
+   "x": 275,
+   "y": 95,
+   "w": 10,
+   "z": 0,
+   "h": 3,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 2.2,
+   "materials": [
+    [
+     "messing",
+     60
+    ],
+    [
+     "stahl",
+     40
+    ]
+   ],
+   "info": "Vier Füßchen schützen den Boden vor Abrieb. Die Laschen innen aufbiegen und die Füße abziehen.",
+   "color": "#C9A24A",
+   "label": true,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 3,
+     "w": 4,
+     "fill": "#A88638"
     }
    ]
   }
