@@ -1,0 +1,241 @@
+{
+ "parts": [
+  {
+   "id": "schraube",
+   "component_id": "hinge_screws",
+   "material_id": "steel",
+   "name": "Klingenschraube",
+   "short": "Schraube",
+   "shape": "cyl",
+   "x": 10,
+   "y": 8,
+   "w": 5,
+   "z": 18,
+   "h": 2,
+   "explode": [
+    0,
+    0,
+    17.0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Winzige Kreuzschlitzschraube M2. Mit einem Feinmechaniker-Schraubendreher lösen, dann kann man die Klinge tauschen.",
+   "color": "#7B848B",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2.1,
+     "y": 0.8,
+     "w": 0.8,
+     "d": 3.4,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 0.8,
+     "y": 2.1,
+     "w": 3.4,
+     "d": 0.8,
+     "fill": "#3A3F44"
+    }
+   ]
+  },
+  {
+   "id": "klinge",
+   "component_id": "sharpener_blade",
+   "material_id": "steel",
+   "name": "Messerklinge",
+   "short": "Klinge",
+   "shape": "box",
+   "x": 4,
+   "y": 4,
+   "w": 17,
+   "d": 27,
+   "z": 17,
+   "h": 1,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    9.0
+   ],
+   "mass": 1.52,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Gehärteter Stahl mit scharfer Schneide über dem Schlitz. Vorsicht beim Anfassen, alte Klingen eingewickelt zum Metall geben.",
+   "color": "#C3C9CE",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 20,
+     "w": 17,
+     "d": 1.5,
+     "r": 0,
+     "fill": "#E3E7EA"
+    },
+    {
+     "shape": "cyl",
+     "x": 6.5,
+     "y": 4.5,
+     "w": 4,
+     "fill": "#8A9298"
+    }
+   ]
+  },
+  {
+   "id": "korpus",
+   "component_id": "sharpener_body",
+   "material_id": "aluminium",
+   "name": "Anspitzerkörper (Aluminium)",
+   "short": "Körper",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 25,
+   "d": 35,
+   "z": 0,
+   "h": 18,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 13.18,
+   "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "info": "Aluminium-Druckguss mit kegelförmiger Bohrung für den Stift. Ohne Klinge ist es sortenreiner Aluminiumschrott.",
+   "color": "#A9B1B8",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 3,
+     "w": 19,
+     "d": 29,
+     "r": 1,
+     "fill": "#959DA4"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 24,
+     "w": 17,
+     "d": 3,
+     "r": 0.5,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 6,
+     "w": 2,
+     "d": 2,
+     "fill": "#8C949B"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 10,
+     "w": 2,
+     "d": 2,
+     "fill": "#8C949B"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 14,
+     "w": 2,
+     "d": 2,
+     "fill": "#8C949B"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 18,
+     "w": 2,
+     "d": 2,
+     "fill": "#8C949B"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 22,
+     "w": 2,
+     "d": 2,
+     "fill": "#8C949B"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 26,
+     "w": 2,
+     "d": 2,
+     "fill": "#8C949B"
+    },
+    {
+     "shape": "box",
+     "x": 23,
+     "y": 6,
+     "w": 2,
+     "d": 2,
+     "fill": "#8C949B"
+    },
+    {
+     "shape": "box",
+     "x": 23,
+     "y": 10,
+     "w": 2,
+     "d": 2,
+     "fill": "#8C949B"
+    },
+    {
+     "shape": "box",
+     "x": 23,
+     "y": 14,
+     "w": 2,
+     "d": 2,
+     "fill": "#8C949B"
+    },
+    {
+     "shape": "box",
+     "x": 23,
+     "y": 18,
+     "w": 2,
+     "d": 2,
+     "fill": "#8C949B"
+    },
+    {
+     "shape": "box",
+     "x": 23,
+     "y": 22,
+     "w": 2,
+     "d": 2,
+     "fill": "#8C949B"
+    },
+    {
+     "shape": "box",
+     "x": 23,
+     "y": 26,
+     "w": 2,
+     "d": 2,
+     "fill": "#8C949B"
+    }
+   ]
+  }
+ ]
+}

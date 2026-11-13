@@ -4,7 +4,7 @@
  "name_en": "Window Envelope",
  "klasse": "Verpackung · Papier",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -39,8 +39,8 @@
   "metalle_mg": {},
   "herkunft": {},
   "materialien_g": {
-   "paper": 4.7,
-   "pp": 0.3
+   "paper": 4.8,
+   "pp": 0.2
   },
   "co2_kg": 0.002,
   "co2_mit_recyclat_kg": 0.002,
@@ -94,63 +94,302 @@
   "nicht": "Nicht in Restmüll, wenn sauber",
   "warnung": "Kartons flach falten. Stark verschmutzte Teile in den Restmüll."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "window_film",
-   "component_id": "window_film",
-   "name": "Window",
-   "short": "Window",
+   "id": "vorderseite",
+   "component_id": "paper_envelope_body",
+   "material_id": "paper",
+   "name": "Vorderseite mit Fensterausschnitt",
+   "short": "Vorderseite",
    "shape": "box",
-   "x": 11.0,
-   "y": 5.5,
-   "w": 198.0,
-   "d": 99.0,
-   "h": 0.5,
-   "z": 2.0,
-   "r": 11.9,
+   "x": 0,
+   "y": 0,
+   "w": 220,
+   "d": 110,
+   "z": 0.9,
+   "h": 0.3,
+   "r": 0.5,
    "explode": [
     0,
     0,
-    66.0
+    179.8
    ],
-   "mass": 0.28,
+   "mass": 2,
+   "materials": [
+    [
+     "papier",
+     98
+    ],
+    [
+     "druck",
+     2
+    ]
+   ],
+   "info": "Weißes Papier mit ausgestanztem Fenster. Der ganze Umschlag darf ins Altpapier, große Fenster vorher herausreißen.",
+   "color": "#F6F4EE",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 20,
+     "y": 50,
+     "w": 90,
+     "d": 45,
+     "r": 2,
+     "fill": "#DDE7EC"
+    },
+    {
+     "shape": "box",
+     "x": 26,
+     "y": 56,
+     "w": 50,
+     "d": 3,
+     "r": 0,
+     "fill": "#9AA3A8"
+    },
+    {
+     "shape": "box",
+     "x": 26,
+     "y": 64,
+     "w": 60,
+     "d": 4,
+     "r": 0,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 26,
+     "y": 72,
+     "w": 52,
+     "d": 4,
+     "r": 0,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 26,
+     "y": 80,
+     "w": 40,
+     "d": 4,
+     "r": 0,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 180,
+     "y": 8,
+     "w": 30,
+     "d": 24,
+     "r": 1,
+     "fill": "#E7E3D8"
+    }
+   ]
+  },
+  {
+   "id": "fenster",
+   "component_id": "window_film",
+   "material_id": "pp",
+   "name": "Sichtfenster (Folie)",
+   "short": "Fenster",
+   "shape": "box",
+   "x": 17,
+   "y": 47,
+   "w": 96,
+   "d": 51,
+   "z": 0.8,
+   "h": 0.1,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    124.8
+   ],
+   "mass": 0.25,
    "materials": [
     [
      "pp",
      100
     ]
    ],
-   "material_id": "pp",
-   "info": "Tear it out; small windows are usually fine in paper waste."
+   "info": "Dünne Polypropylen- oder Pergaminfolie, innen auf den Rand geklebt. Kleine Fenster stören im Altpapier nicht, man kann sie aber herausreißen und in den Restmüll geben.",
+   "color": "#E3F0F6",
+   "opacity": 0.6
   },
   {
-   "id": "paper_envelope_body",
+   "id": "rueckseite",
    "component_id": "paper_envelope_body",
-   "name": "Envelope",
-   "short": "Envelope",
+   "material_id": "paper",
+   "name": "Rückseite mit Seitenlaschen",
+   "short": "Rückseite",
    "shape": "box",
    "x": 0,
    "y": 0,
-   "w": 220.0,
-   "d": 110.0,
-   "h": 2.0,
-   "z": 0.0,
-   "r": 13.2,
+   "w": 220,
+   "d": 110,
+   "z": 0.5,
+   "h": 0.3,
+   "r": 0.5,
    "explode": [
     0,
     0,
-    0
+    69.8
    ],
-   "mass": 4.72,
+   "mass": 2,
+   "materials": [
+    [
+     "papier",
+     96
+    ],
+    [
+     "druck",
+     4
+    ]
+   ],
+   "info": "Bodenteil und Seitenlaschen sind verklebt. Innen ist ein Sicherheitsdruck, damit man den Brief nicht durchscheinen sieht.",
+   "color": "#EFEDE6",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 44,
+     "w": 212,
+     "d": 62,
+     "r": 0.5,
+     "fill": "#D3D8DF"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 48,
+     "w": 212,
+     "d": 2,
+     "r": 0,
+     "fill": "#BCC3CD"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 56,
+     "w": 212,
+     "d": 2,
+     "r": 0,
+     "fill": "#BCC3CD"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 64,
+     "w": 212,
+     "d": 2,
+     "r": 0,
+     "fill": "#BCC3CD"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 72,
+     "w": 212,
+     "d": 2,
+     "r": 0,
+     "fill": "#BCC3CD"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 80,
+     "w": 212,
+     "d": 2,
+     "r": 0,
+     "fill": "#BCC3CD"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 88,
+     "w": 212,
+     "d": 2,
+     "r": 0,
+     "fill": "#BCC3CD"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 96,
+     "w": 212,
+     "d": 2,
+     "r": 0,
+     "fill": "#BCC3CD"
+    }
+   ]
+  },
+  {
+   "id": "klebestreifen",
+   "component_id": "paper_envelope_body",
+   "material_id": "paper",
+   "name": "Gummierung",
+   "short": "Gummierung",
+   "shape": "box",
+   "x": 8,
+   "y": 4,
+   "w": 204,
+   "d": 10,
+   "z": 0.3,
+   "h": 0.05,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    15.0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "klebstoff",
+     100
+    ]
+   ],
+   "info": "Wasseraktivierter Kleber am Klappenrand. Ist im Altpapier kein Problem.",
+   "color": "#E8DDB5"
+  },
+  {
+   "id": "klappe",
+   "component_id": "paper_envelope_body",
+   "material_id": "paper",
+   "name": "Verschlussklappe",
+   "short": "Klappe",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 220,
+   "d": 40,
+   "z": 0,
+   "h": 0.3,
+   "r": 0.5,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 0.65,
    "materials": [
     [
      "papier",
      100
     ]
    ],
-   "material_id": "paper",
-   "info": "Remove any plastic parts before putting it in paper waste."
+   "info": "Wird über die Rückseite geklappt und angefeuchtet oder angedrückt.",
+   "color": "#F6F4EE",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 0,
+     "w": 220,
+     "d": 3,
+     "r": 0,
+     "fill": "#DDDAD0"
+    }
+   ]
   }
  ]
 }

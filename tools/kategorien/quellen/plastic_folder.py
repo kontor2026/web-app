@@ -1,0 +1,37 @@
+"""3D-Modell: plastic_folder. Erzeugt tools/kategorien/modelle/plastic_folder.json.
+
+Kunststoff-Schnellhefter A4 (220 × 310 mm), geschlossen, Rücken links (x = 0). Vorderdeckel aus transparentem PP,
+Rückendeckel aus gefärbtem PP mit Beschriftungsstreifen, innen links die Heftmechanik: zwei Stahl-Heftbänder
+(Lochabstand 80 mm) und die PP-Deckschiene, die sie festklemmt. Lagen werden nach oben abgehoben.
+"""
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+
+from bau import teil, mark, explodiere, skaliere_masse, schreibe  # noqa: E402
+
+teile = [
+    teil('vorderdeckel', 'pp_sheet', 'Vorderdeckel (transparent)', 'Vorderdeckel', 'box',
+         x=0, y=0, w=218, d=305, z=1.6, h=0.2, r=3, mass=12, color='#E6F0F4', opacity=0.6,
+         info='Klarsichtfolie aus Polypropylen, am Rücken mit dem Rückendeckel verschweißt. Ohne Papier '
+              'und Metall gehört der Hefter in die Wertstofftonne oder den Restmüll, je nach Gemeinde.',
+         marks=[mark('box', 2, 4, 6, 297, 0, '#C8D6DC'), mark('box', 10, 4, 1, 297, 0, '#C8D6DC')]),
+    teil('deckschiene', 'pp_sheet', 'Deckschiene', 'Deckschiene', 'box',
+         x=10, y=85, w=14, d=140, z=1.0, h=0.5, r=2, mass=2,
+         info='Wird über die umgebogenen Heftbänder geschoben und hält die Blätter. Zum Leeren zur Seite schieben.',
+         color='#2C6FB0', marks=[mark('cyl', 4, 21, 6, fill='#245C93'), mark('cyl', 4, 113, 6, fill='#245C93')]),
+    teil('heftbaender', 'pp_sheet', 'Heftbänder aus Stahl', 'Heftbänder', 'box',
+         x=12, y=90, w=10, d=130, z=0.5, h=0.4, r=1, mass=3, material_id='steel', color='#B5BCC2',
+         info='Zwei flache Stahlzungen, die durch die Lochung der Blätter gesteckt werden. Vor dem Entsorgen '
+              'herausziehen, sie gehören zum Metall.',
+         marks=[mark('box', 2, 20, 6, 10, 1, '#8A9298'), mark('box', 2, 100, 6, 10, 1, '#8A9298')]),
+    teil('rueckdeckel', 'pp_sheet', 'Rückendeckel mit Beschriftungsstreifen', 'Rückendeckel', 'box',
+         x=0, y=0, w=220, d=310, z=0, h=0.5, r=3, mass=13, color='#2C6FB0',
+         info='Gefärbtes Polypropylen. Der Beschriftungsstreifen ist ein eingestecktes Papier, das vorher '
+              'ins Altpapier kommt.',
+         marks=[mark('box', 6, 4, 14, 302, 0, '#245C93'), mark('box', 190, 20, 22, 270, 1, '#F4F1EA'),
+                mark('box', 194, 40, 3, 200, 0, '#9AA3A8')]),
+]
+explodiere(teile, abstand=120, abstaende={'heftbaender': 25, 'deckschiene': 25})
+skaliere_masse(teile, oid='plastic_folder')
+schreibe('plastic_folder', teile)

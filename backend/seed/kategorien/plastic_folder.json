@@ -4,7 +4,7 @@
  "name_en": "Plastic Folder",
  "klasse": "Restmüll",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -36,14 +36,19 @@
   }
  ],
  "rohstoffe": {
-  "metalle_mg": {},
-  "herkunft": {},
-  "materialien_g": {
-   "pp": 30.0
+  "metalle_mg": {
+   "Fe": 2940.0
   },
-  "co2_kg": 0.058,
-  "co2_mit_recyclat_kg": 0.008,
-  "co2_ersparnis_kg": 0.049,
+  "herkunft": {
+   "Fe": "Modellmassen (Schätzung)"
+  },
+  "materialien_g": {
+   "pp": 27.0,
+   "steel": 3.0
+  },
+  "co2_kg": 0.059,
+  "co2_mit_recyclat_kg": 0.01,
+  "co2_ersparnis_kg": 0.05,
   "co2_ohne_faktor": [],
   "rohstoffwert_eur": 0,
   "wert_ohne_preis": [],
@@ -93,35 +98,209 @@
   "nicht": "Nicht in die Gelbe Tonne: keine Verpackung",
   "warnung": "Gut Erhaltenes lieber verschenken oder in der Werkstatt abgeben."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "pp_sheet",
+   "id": "vorderdeckel",
    "component_id": "pp_sheet",
-   "name": "Sheet",
-   "short": "Sheet",
+   "material_id": "pp",
+   "name": "Vorderdeckel (transparent)",
+   "short": "Vorderdeckel",
    "shape": "box",
    "x": 0,
    "y": 0,
-   "w": 220.0,
-   "d": 310.0,
-   "h": 2.0,
-   "z": 0.0,
-   "r": 26.4,
+   "w": 218,
+   "d": 305,
+   "z": 1.6,
+   "h": 0.2,
+   "r": 3,
    "explode": [
     0,
     0,
-    0
+    169.8
    ],
-   "mass": 30.0,
+   "mass": 12,
    "materials": [
     [
      "pp",
      100
     ]
    ],
+   "info": "Klarsichtfolie aus Polypropylen, am Rücken mit dem Rückendeckel verschweißt. Ohne Papier und Metall gehört der Hefter in die Wertstofftonne oder den Restmüll, je nach Gemeinde.",
+   "color": "#E6F0F4",
+   "opacity": 0.6,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 4,
+     "w": 6,
+     "d": 297,
+     "r": 0,
+     "fill": "#C8D6DC"
+    },
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 4,
+     "w": 1,
+     "d": 297,
+     "r": 0,
+     "fill": "#C8D6DC"
+    }
+   ]
+  },
+  {
+   "id": "deckschiene",
+   "component_id": "pp_sheet",
    "material_id": "pp",
-   "info": "Remove paper contents; clean sheets go in plastic recycling."
+   "name": "Deckschiene",
+   "short": "Deckschiene",
+   "shape": "box",
+   "x": 10,
+   "y": 85,
+   "w": 14,
+   "d": 140,
+   "z": 1,
+   "h": 0.5,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    49.9
+   ],
+   "mass": 2,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Wird über die umgebogenen Heftbänder geschoben und hält die Blätter. Zum Leeren zur Seite schieben.",
+   "color": "#2C6FB0",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 21,
+     "w": 6,
+     "fill": "#245C93"
+    },
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 113,
+     "w": 6,
+     "fill": "#245C93"
+    }
+   ]
+  },
+  {
+   "id": "heftbaender",
+   "component_id": "pp_sheet",
+   "material_id": "steel",
+   "name": "Heftbänder aus Stahl",
+   "short": "Heftbänder",
+   "shape": "box",
+   "x": 12,
+   "y": 90,
+   "w": 10,
+   "d": 130,
+   "z": 0.5,
+   "h": 0.4,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    25.0
+   ],
+   "mass": 3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Zwei flache Stahlzungen, die durch die Lochung der Blätter gesteckt werden. Vor dem Entsorgen herausziehen, sie gehören zum Metall.",
+   "color": "#B5BCC2",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 20,
+     "w": 6,
+     "d": 10,
+     "r": 1,
+     "fill": "#8A9298"
+    },
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 100,
+     "w": 6,
+     "d": 10,
+     "r": 1,
+     "fill": "#8A9298"
+    }
+   ]
+  },
+  {
+   "id": "rueckdeckel",
+   "component_id": "pp_sheet",
+   "material_id": "pp",
+   "name": "Rückendeckel mit Beschriftungsstreifen",
+   "short": "Rückendeckel",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 220,
+   "d": 310,
+   "z": 0,
+   "h": 0.5,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 13,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Gefärbtes Polypropylen. Der Beschriftungsstreifen ist ein eingestecktes Papier, das vorher ins Altpapier kommt.",
+   "color": "#2C6FB0",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 6,
+     "y": 4,
+     "w": 14,
+     "d": 302,
+     "r": 0,
+     "fill": "#245C93"
+    },
+    {
+     "shape": "box",
+     "x": 190,
+     "y": 20,
+     "w": 22,
+     "d": 270,
+     "r": 1,
+     "fill": "#F4F1EA"
+    },
+    {
+     "shape": "box",
+     "x": 194,
+     "y": 40,
+     "w": 3,
+     "d": 200,
+     "r": 0,
+     "fill": "#9AA3A8"
+    }
+   ]
   }
  ]
 }

@@ -4,7 +4,7 @@
  "name_en": "Tape Dispenser",
  "klasse": "Restmüll",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -32,23 +32,25 @@
   {
    "k": "mit Recyclat",
    "v": "≈ 0,07 kg",
-   "hint": "spart 0,27 kg, wenn recycelte Materialien eingesetzt werden"
+   "hint": "spart 0,26 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Fe": 28449.0
+   "Fe": 54978.0
   },
   "herkunft": {
    "Fe": "Modellmassen (Schätzung)"
   },
   "materialien_g": {
-   "ps": 121.0,
-   "steel": 29.0
+   "ps": 67.0,
+   "steel": 56.1,
+   "pp": 24.6,
+   "cardboard": 2.3
   },
   "co2_kg": 0.334,
-  "co2_mit_recyclat_kg": 0.07,
-  "co2_ersparnis_kg": 0.265,
+  "co2_mit_recyclat_kg": 0.074,
+  "co2_ersparnis_kg": 0.26,
   "co2_ohne_faktor": [],
   "rohstoffwert_eur": 0,
   "wert_ohne_preis": [],
@@ -98,91 +100,609 @@
   "nicht": "Nicht in die Gelbe Tonne: keine Verpackung",
   "warnung": "Gut Erhaltenes lieber verschenken oder in der Werkstatt abgeben."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "ps_dispenser_body_ober",
+   "id": "spule",
    "component_id": "ps_dispenser_body",
-   "name": "Dispenser (Oberteil)",
-   "short": "Dispenser (Obertei",
+   "material_id": "ps",
+   "name": "Spule mit Achse",
+   "short": "Spule",
    "shape": "box",
-   "x": 0,
-   "y": 0,
-   "w": 60.0,
-   "d": 130.0,
-   "h": 14.0,
-   "z": 42.0,
-   "r": 7.2,
+   "x": 3,
+   "y": 50,
+   "w": 54,
+   "d": 10,
+   "z": 40,
+   "h": 10,
+   "r": 4,
    "explode": [
     0,
     0,
-    94.9
+    122.0
    ],
-   "mass": 36.29,
+   "mass": 3.1,
    "materials": [
     [
      "ps",
      100
     ]
    ],
-   "material_id": "ps",
-   "info": "Pull the tape roll out of the holder."
+   "info": "Steckt im Papierkern und läuft in den Kerben der Seitenwangen. Nach oben herausheben, dann lässt sich die leere Rolle abziehen.",
+   "color": "#55626E",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 17,
+     "y": 1,
+     "w": 20,
+     "d": 8,
+     "r": 3,
+     "fill": "#6E7C88"
+    }
+   ]
   },
   {
-   "id": "steel_cutting_blade",
-   "component_id": "steel_cutting_blade",
-   "name": "Blade",
-   "short": "Blade",
+   "id": "kern",
+   "component_id": "ps_dispenser_body",
+   "material_id": "cardboard",
+   "name": "Papierkern der Rolle",
+   "short": "Papierkern",
    "shape": "box",
-   "x": 9.0,
-   "y": 19.5,
-   "w": 42.0,
-   "d": 91.0,
-   "h": 18.9,
-   "z": 8.4,
-   "r": 5.0,
+   "x": 20.5,
+   "y": 39,
+   "w": 19,
+   "d": 32,
+   "z": 29,
+   "h": 32,
+   "r": 8,
    "explode": [
     0,
     0,
-    71.6
+    89.0
    ],
-   "mass": 29.03,
+   "mass": 2.3,
+   "materials": [
+    [
+     "papier",
+     95
+    ],
+    [
+     "klebstoff",
+     5
+    ]
+   ],
+   "info": "Gewickelte Pappe mit 25 mm Innendurchmesser. Leere Kerne gehören ins Altpapier.",
+   "color": "#B98F5A",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 4,
+     "w": 11,
+     "d": 24,
+     "r": 5,
+     "fill": "#8E6A3E"
+    }
+   ]
+  },
+  {
+   "id": "band_oben",
+   "component_id": "ps_dispenser_body",
+   "material_id": "pp",
+   "name": "Klebebandrolle (oberer Teil)",
+   "short": "Band oben",
+   "shape": "box",
+   "x": 20.5,
+   "y": 38.8,
+   "w": 19,
+   "d": 32.4,
+   "z": 58,
+   "h": 12,
+   "r": 10,
+   "explode": [
+    0,
+    0,
+    36.0
+   ],
+   "mass": 5.4,
+   "materials": [
+    [
+     "pp",
+     75
+    ],
+    [
+     "klebstoff",
+     25
+    ]
+   ],
+   "info": "Oberer Teil der Rolle.",
+   "color": "#E9E4D0",
+   "opacity": 0.85,
+   "label": false
+  },
+  {
+   "id": "band_mitte",
+   "component_id": "ps_dispenser_body",
+   "material_id": "pp",
+   "name": "Klebebandrolle (PP-Folie mit Acrylkleber)",
+   "short": "Klebeband",
+   "shape": "box",
+   "x": 20.5,
+   "y": 31,
+   "w": 19,
+   "d": 48,
+   "z": 32,
+   "h": 26,
+   "r": 12,
+   "explode": [
+    0,
+    0,
+    36.0
+   ],
+   "mass": 13.8,
+   "materials": [
+    [
+     "pp",
+     75
+    ],
+    [
+     "klebstoff",
+     25
+    ]
+   ],
+   "info": "Etwa 33 m Polypropylenfolie mit Acrylatkleber. Klebebandreste gehören in den Restmüll, sie verkleben im Recycling die Maschinen.",
+   "color": "#E9E4D0",
+   "opacity": 0.85,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 2,
+     "w": 15,
+     "d": 44,
+     "r": 10,
+     "fill": "#DCD5BC"
+    }
+   ]
+  },
+  {
+   "id": "band_unten",
+   "component_id": "ps_dispenser_body",
+   "material_id": "pp",
+   "name": "Klebebandrolle (unterer Teil)",
+   "short": "Band unten",
+   "shape": "box",
+   "x": 20.5,
+   "y": 38.8,
+   "w": 19,
+   "d": 32.4,
+   "z": 20,
+   "h": 12,
+   "r": 10,
+   "explode": [
+    0,
+    0,
+    36.0
+   ],
+   "mass": 5.4,
+   "materials": [
+    [
+     "pp",
+     75
+    ],
+    [
+     "klebstoff",
+     25
+    ]
+   ],
+   "info": "Unterer Teil der Rolle.",
+   "color": "#E9E4D0",
+   "opacity": 0.85,
+   "label": false
+  },
+  {
+   "id": "klinge",
+   "component_id": "steel_cutting_blade",
+   "material_id": "steel",
+   "name": "Abreißklinge (gezahnt)",
+   "short": "Klinge",
+   "shape": "box",
+   "x": 4,
+   "y": 118,
+   "w": 52,
+   "d": 10,
+   "z": 62,
+   "h": 1,
+   "r": 0.5,
+   "explode": [
+    0,
+    45,
+    30
+   ],
+   "mass": 2.3,
    "materials": [
     [
      "stahl",
      100
     ]
    ],
-   "material_id": "steel",
-   "info": "Pry it out of its slot and wrap it before disposal."
+   "info": "Gezahntes Stahlblech, in einen Schlitz der Nase gesteckt. Mit einem Schraubendreher heraushebeln und vor dem Wegwerfen in Pappe oder Klebeband einwickeln, die Zähne sind scharf.",
+   "color": "#C3C9CE",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 7.5,
+     "w": 1.4,
+     "d": 2.5
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 7.5,
+     "w": 1.4,
+     "d": 2.5
+    },
+    {
+     "shape": "box",
+     "x": 5,
+     "y": 7.5,
+     "w": 1.4,
+     "d": 2.5
+    },
+    {
+     "shape": "box",
+     "x": 7,
+     "y": 7.5,
+     "w": 1.4,
+     "d": 2.5
+    },
+    {
+     "shape": "box",
+     "x": 9,
+     "y": 7.5,
+     "w": 1.4,
+     "d": 2.5
+    },
+    {
+     "shape": "box",
+     "x": 11,
+     "y": 7.5,
+     "w": 1.4,
+     "d": 2.5
+    },
+    {
+     "shape": "box",
+     "x": 13,
+     "y": 7.5,
+     "w": 1.4,
+     "d": 2.5
+    },
+    {
+     "shape": "box",
+     "x": 15,
+     "y": 7.5,
+     "w": 1.4,
+     "d": 2.5
+    },
+    {
+     "shape": "box",
+     "x": 17,
+     "y": 7.5,
+     "w": 1.4,
+     "d": 2.5
+    },
+    {
+     "shape": "box",
+     "x": 19,
+     "y": 7.5,
+     "w": 1.4,
+     "d": 2.5
+    },
+    {
+     "shape": "box",
+     "x": 21,
+     "y": 7.5,
+     "w": 1.4,
+     "d": 2.5
+    },
+    {
+     "shape": "box",
+     "x": 23,
+     "y": 7.5,
+     "w": 1.4,
+     "d": 2.5
+    },
+    {
+     "shape": "box",
+     "x": 25,
+     "y": 7.5,
+     "w": 1.4,
+     "d": 2.5
+    },
+    {
+     "shape": "box",
+     "x": 27,
+     "y": 7.5,
+     "w": 1.4,
+     "d": 2.5
+    },
+    {
+     "shape": "box",
+     "x": 29,
+     "y": 7.5,
+     "w": 1.4,
+     "d": 2.5
+    },
+    {
+     "shape": "box",
+     "x": 31,
+     "y": 7.5,
+     "w": 1.4,
+     "d": 2.5
+    },
+    {
+     "shape": "box",
+     "x": 33,
+     "y": 7.5,
+     "w": 1.4,
+     "d": 2.5
+    },
+    {
+     "shape": "box",
+     "x": 35,
+     "y": 7.5,
+     "w": 1.4,
+     "d": 2.5
+    },
+    {
+     "shape": "box",
+     "x": 37,
+     "y": 7.5,
+     "w": 1.4,
+     "d": 2.5
+    },
+    {
+     "shape": "box",
+     "x": 39,
+     "y": 7.5,
+     "w": 1.4,
+     "d": 2.5
+    },
+    {
+     "shape": "box",
+     "x": 41,
+     "y": 7.5,
+     "w": 1.4,
+     "d": 2.5
+    },
+    {
+     "shape": "box",
+     "x": 43,
+     "y": 7.5,
+     "w": 1.4,
+     "d": 2.5
+    },
+    {
+     "shape": "box",
+     "x": 45,
+     "y": 7.5,
+     "w": 1.4,
+     "d": 2.5
+    },
+    {
+     "shape": "box",
+     "x": 47,
+     "y": 7.5,
+     "w": 1.4,
+     "d": 2.5
+    },
+    {
+     "shape": "box",
+     "x": 49,
+     "y": 7.5,
+     "w": 1.4,
+     "d": 2.5
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 0,
+     "w": 52,
+     "d": 2,
+     "r": 0,
+     "fill": "#9AA2A6"
+    }
+   ]
   },
   {
-   "id": "ps_dispenser_body",
+   "id": "nase",
    "component_id": "ps_dispenser_body",
-   "name": "Dispenser (Unterteil)",
-   "short": "Dispenser (Unterte",
+   "material_id": "ps",
+   "name": "Nase mit Klingenhalter",
+   "short": "Nase",
    "shape": "box",
    "x": 0,
-   "y": 0,
-   "w": 60.0,
-   "d": 130.0,
-   "h": 42.0,
-   "z": 0,
-   "r": 7.2,
+   "y": 95,
+   "w": 60,
+   "d": 35,
+   "z": 20,
+   "h": 42,
+   "r": 4,
    "explode": [
     0,
-    0,
+    45,
     0
    ],
-   "mass": 84.68,
+   "mass": 16.9,
    "materials": [
     [
      "ps",
      100
     ]
    ],
+   "info": "Hier läuft das Band über eine Auflage zur Klinge. Die Klinge steckt in einem Schlitz oben.",
+   "color": "#2F3A45",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 23,
+     "w": 52,
+     "d": 10,
+     "r": 1,
+     "fill": "#1E262E"
+    },
+    {
+     "shape": "box",
+     "x": 6,
+     "y": 4,
+     "w": 48,
+     "d": 16,
+     "r": 2,
+     "fill": "#3D4A57"
+    }
+   ]
+  },
+  {
+   "id": "wange_links",
+   "component_id": "ps_dispenser_body",
    "material_id": "ps",
-   "info": "Pull the tape roll out of the holder."
+   "name": "Seitenwange links",
+   "short": "Wange links",
+   "shape": "box",
+   "x": 0,
+   "y": 20,
+   "w": 5,
+   "d": 75,
+   "z": 20,
+   "h": 38,
+   "r": 2,
+   "explode": [
+    -40,
+    0,
+    0
+   ],
+   "mass": 6.2,
+   "materials": [
+    [
+     "ps",
+     100
+    ]
+   ],
+   "info": "Hält die Spule. Die Kerbe oben ist das Lager für die Achse.",
+   "color": "#2F3A45"
+  },
+  {
+   "id": "wange_rechts",
+   "component_id": "ps_dispenser_body",
+   "material_id": "ps",
+   "name": "Seitenwange rechts",
+   "short": "Wange rechts",
+   "shape": "box",
+   "x": 55,
+   "y": 20,
+   "w": 5,
+   "d": 75,
+   "z": 20,
+   "h": 38,
+   "r": 2,
+   "explode": [
+    40,
+    0,
+    0
+   ],
+   "mass": 6.2,
+   "materials": [
+    [
+     "ps",
+     100
+    ]
+   ],
+   "info": "Gegenstück zur linken Wange.",
+   "color": "#2F3A45",
+   "label": false
+  },
+  {
+   "id": "gewicht",
+   "component_id": "ps_dispenser_body",
+   "material_id": "steel",
+   "name": "Stahlgewicht",
+   "short": "Gewicht",
+   "shape": "box",
+   "x": 6,
+   "y": 10,
+   "w": 48,
+   "d": 110,
+   "z": 2,
+   "h": 12,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    30.0
+   ],
+   "mass": 53.8,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Ein Stahlblock im Sockel macht den Abroller schwer, damit man das Band mit einer Hand abreißen kann. Unten aus dem Sockel herausdrücken und zum Metallschrott geben.",
+   "color": "#7B848B",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 6,
+     "w": 40,
+     "d": 98,
+     "r": 2,
+     "fill": "#8D969D"
+    }
+   ]
+  },
+  {
+   "id": "sockel",
+   "component_id": "ps_dispenser_body",
+   "material_id": "ps",
+   "name": "Sockel (Polystyrol)",
+   "short": "Sockel",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 60,
+   "d": 130,
+   "z": 0,
+   "h": 20,
+   "r": 6,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 34.6,
+   "materials": [
+    [
+     "ps",
+     100
+    ]
+   ],
+   "info": "Hohler Sockel aus schlagfestem Polystyrol. Ohne Gewicht und Klinge kann er in den Wertstoffhof oder Restmüll, er ist keine Verpackung.",
+   "color": "#2F3A45",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 5,
+     "y": 5,
+     "w": 50,
+     "d": 120,
+     "r": 4,
+     "fill": "#3D4A57"
+    }
+   ]
   }
  ]
 }

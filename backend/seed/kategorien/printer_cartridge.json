@@ -4,7 +4,7 @@
  "name_en": "Printer Cartridge",
  "klasse": "Wertstoffhof",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -21,43 +21,47 @@
  "werte": [
   {
    "k": "Rohstoffwert",
-   "v": "≈ 0,08 €",
-   "hint": "Silber, Kupfer zu Preisen vom 13.11."
+   "v": "≈ 0,01 €",
+   "hint": "Kupfer zu Preisen vom 13.11."
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 0,34 kg",
+   "v": "≈ 0,15 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 0,29 kg",
-   "hint": "spart 0,06 kg, wenn recycelte Materialien eingesetzt werden"
+   "v": "≈ 0,10 kg",
+   "hint": "spart 0,05 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Cu": 1622.0,
-   "Ag": 2.03,
-   "Au": 0.49,
-   "Pd": 0.15
+   "Fe": 467.0,
+   "Cu": 290.0,
+   "Ag": 0.17,
+   "Au": 0.04,
+   "Pd": 0.01
   },
   "herkunft": {
+   "Fe": "Modellmassen (Schätzung)",
    "Cu": "Modellmassen (Schätzung)",
-   "Ag": "8 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)",
-   "Au": "8 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)",
-   "Pd": "8 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)"
+   "Ag": "1 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)",
+   "Au": "1 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)",
+   "Pd": "1 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)"
   },
   "materialien_g": {
-   "pp": 33.8,
-   "pu_foam": 8.1,
-   "pcb": 8.1
+   "pp": 29.6,
+   "pu_foam": 18.8,
+   "pcb": 0.7,
+   "mixed_electronics": 0.5,
+   "steel": 0.4
   },
-  "co2_kg": 0.344,
-  "co2_mit_recyclat_kg": 0.289,
-  "co2_ersparnis_kg": 0.055,
+  "co2_kg": 0.147,
+  "co2_mit_recyclat_kg": 0.098,
+  "co2_ersparnis_kg": 0.049,
   "co2_ohne_faktor": [],
-  "rohstoffwert_eur": 0.08,
+  "rohstoffwert_eur": 0.01,
   "wert_ohne_preis": [],
   "preisstand": "2026-11-13",
   "quellen": {
@@ -105,83 +109,677 @@
   "nicht": "Nicht in die Gelbe Tonne",
   "warnung": "Reste von Farben, Klebern oder Chemikalien gehören zur Schadstoffsammlung."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "ink_cartridge_ober",
+   "id": "deckel",
    "component_id": "ink_cartridge",
-   "name": "Ink Cartridge (Oberteil)",
-   "short": "Ink Cartridge (Obe",
+   "material_id": "pp",
+   "name": "Deckel mit Belüftung",
+   "short": "Deckel",
    "shape": "box",
    "x": 0,
    "y": 0,
-   "w": 40.0,
-   "d": 60.0,
-   "h": 14.0,
-   "z": 42.0,
-   "r": 4.8,
+   "w": 40,
+   "d": 60,
+   "z": 62,
+   "h": 8,
+   "r": 4,
    "explode": [
     0,
     0,
-    97.8
+    108.8
    ],
-   "mass": 10.14,
+   "mass": 5.9,
    "materials": [
     [
      "pp",
      100
     ]
    ],
-   "material_id": "pp",
-   "info": "Open the cover and press the cartridge down to release it; many shops take cartridges back."
+   "info": "Mit dem Gehäuse verschweißt. Die Rillen sind ein Labyrinth, das Luft nachströmen lässt, aber keine Tinte heraus. Nicht aufbrechen.",
+   "color": "#2B2E33",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 4,
+     "w": 32,
+     "d": 30,
+     "r": 2,
+     "fill": "#E6E8EA"
+    },
+    {
+     "shape": "box",
+     "x": 7,
+     "y": 8,
+     "w": 18,
+     "d": 4,
+     "r": 0,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 7,
+     "y": 15,
+     "w": 24,
+     "d": 3,
+     "r": 0,
+     "fill": "#9AA3A8"
+    },
+    {
+     "shape": "cyl",
+     "x": 26,
+     "y": 42,
+     "w": 6,
+     "fill": "#111317"
+    },
+    {
+     "shape": "box",
+     "x": 6,
+     "y": 40,
+     "w": 14,
+     "d": 1.2,
+     "fill": "#1C1E22"
+    },
+    {
+     "shape": "box",
+     "x": 6,
+     "y": 43,
+     "w": 14,
+     "d": 1.2,
+     "fill": "#1C1E22"
+    },
+    {
+     "shape": "box",
+     "x": 6,
+     "y": 46,
+     "w": 14,
+     "d": 1.2,
+     "fill": "#1C1E22"
+    },
+    {
+     "shape": "box",
+     "x": 6,
+     "y": 49,
+     "w": 14,
+     "d": 1.2,
+     "fill": "#1C1E22"
+    }
+   ]
   },
   {
-   "id": "ink_sponge",
+   "id": "schwamm",
    "component_id": "ink_sponge",
-   "name": "Ink Sponge",
-   "short": "Ink Sponge",
+   "material_id": "pu_foam",
+   "name": "Tintenschwamm (getränkt)",
+   "short": "Schwamm",
    "shape": "box",
-   "x": 21.6,
-   "y": 5.4,
-   "w": 16.8,
-   "d": 25.2,
-   "h": 18.9,
-   "z": 8.4,
-   "r": 2.0,
+   "x": 3,
+   "y": 3,
+   "w": 34,
+   "d": 54,
+   "z": 12,
+   "h": 48,
+   "r": 3,
    "explode": [
     0,
     0,
-    92.5
+    100.8
    ],
-   "mass": 8.11,
+   "mass": 18.8,
    "materials": [
     [
      "schaum",
-     100
+     45
+    ],
+    [
+     "tinte",
+     55
     ]
    ],
-   "material_id": "pu_foam",
-   "info": "Do not open it, the ink stains; refill or return the cartridge instead."
+   "info": "Polyurethan-Schaum, der die Tinte wie ein Schwamm festhält. Nicht öffnen, die Tinte färbt stark. Leere Patronen im Handel oder bei Sammelboxen zurückgeben.",
+   "color": "#2C3E73",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 4,
+     "w": 4,
+     "d": 4,
+     "fill": "#24345F"
+    },
+    {
+     "shape": "cyl",
+     "x": 11,
+     "y": 4,
+     "w": 4,
+     "d": 4,
+     "fill": "#24345F"
+    },
+    {
+     "shape": "cyl",
+     "x": 18,
+     "y": 4,
+     "w": 4,
+     "d": 4,
+     "fill": "#24345F"
+    },
+    {
+     "shape": "cyl",
+     "x": 25,
+     "y": 4,
+     "w": 4,
+     "d": 4,
+     "fill": "#24345F"
+    },
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 12,
+     "w": 4,
+     "d": 4,
+     "fill": "#24345F"
+    },
+    {
+     "shape": "cyl",
+     "x": 11,
+     "y": 12,
+     "w": 4,
+     "d": 4,
+     "fill": "#24345F"
+    },
+    {
+     "shape": "cyl",
+     "x": 18,
+     "y": 12,
+     "w": 4,
+     "d": 4,
+     "fill": "#24345F"
+    },
+    {
+     "shape": "cyl",
+     "x": 25,
+     "y": 12,
+     "w": 4,
+     "d": 4,
+     "fill": "#24345F"
+    },
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 20,
+     "w": 4,
+     "d": 4,
+     "fill": "#24345F"
+    },
+    {
+     "shape": "cyl",
+     "x": 11,
+     "y": 20,
+     "w": 4,
+     "d": 4,
+     "fill": "#24345F"
+    },
+    {
+     "shape": "cyl",
+     "x": 18,
+     "y": 20,
+     "w": 4,
+     "d": 4,
+     "fill": "#24345F"
+    },
+    {
+     "shape": "cyl",
+     "x": 25,
+     "y": 20,
+     "w": 4,
+     "d": 4,
+     "fill": "#24345F"
+    },
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 28,
+     "w": 4,
+     "d": 4,
+     "fill": "#24345F"
+    },
+    {
+     "shape": "cyl",
+     "x": 11,
+     "y": 28,
+     "w": 4,
+     "d": 4,
+     "fill": "#24345F"
+    },
+    {
+     "shape": "cyl",
+     "x": 18,
+     "y": 28,
+     "w": 4,
+     "d": 4,
+     "fill": "#24345F"
+    },
+    {
+     "shape": "cyl",
+     "x": 25,
+     "y": 28,
+     "w": 4,
+     "d": 4,
+     "fill": "#24345F"
+    },
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 36,
+     "w": 4,
+     "d": 4,
+     "fill": "#24345F"
+    },
+    {
+     "shape": "cyl",
+     "x": 11,
+     "y": 36,
+     "w": 4,
+     "d": 4,
+     "fill": "#24345F"
+    },
+    {
+     "shape": "cyl",
+     "x": 18,
+     "y": 36,
+     "w": 4,
+     "d": 4,
+     "fill": "#24345F"
+    },
+    {
+     "shape": "cyl",
+     "x": 25,
+     "y": 36,
+     "w": 4,
+     "d": 4,
+     "fill": "#24345F"
+    },
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 44,
+     "w": 4,
+     "d": 4,
+     "fill": "#24345F"
+    },
+    {
+     "shape": "cyl",
+     "x": 11,
+     "y": 44,
+     "w": 4,
+     "d": 4,
+     "fill": "#24345F"
+    },
+    {
+     "shape": "cyl",
+     "x": 18,
+     "y": 44,
+     "w": 4,
+     "d": 4,
+     "fill": "#24345F"
+    },
+    {
+     "shape": "cyl",
+     "x": 25,
+     "y": 44,
+     "w": 4,
+     "d": 4,
+     "fill": "#24345F"
+    }
+   ]
   },
   {
-   "id": "cartridge_chip",
-   "component_id": "cartridge_chip",
-   "name": "Chip",
-   "short": "Chip",
+   "id": "gehaeuse",
+   "component_id": "ink_cartridge",
+   "material_id": "pp",
+   "name": "Patronengehäuse (PP)",
+   "short": "Gehäuse",
    "shape": "box",
-   "x": 1.6,
-   "y": 5.4,
-   "w": 16.8,
-   "d": 25.2,
-   "h": 18.9,
-   "z": 8.4,
-   "r": 2.0,
+   "x": 0,
+   "y": 0,
+   "w": 40,
+   "d": 60,
+   "z": 10,
+   "h": 52,
+   "r": 4,
    "explode": [
     0,
     0,
-    53.6
+    40.8
    ],
-   "mass": 8.11,
+   "mass": 20,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Spritzguss aus Polypropylen. Recyclingfirmen reinigen und befüllen es neu, deshalb die Patrone nicht zerlegen, sondern ganz zurückgeben.",
+   "color": "#2B2E33",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2.5,
+     "y": 2.5,
+     "w": 35,
+     "d": 55,
+     "r": 3,
+     "fill": "#16181B"
+    }
+   ]
+  },
+  {
+   "id": "sieb",
+   "component_id": "ink_cartridge",
+   "material_id": "steel",
+   "name": "Tintensieb",
+   "short": "Sieb",
+   "shape": "cyl",
+   "x": 14,
+   "y": 40,
+   "w": 12,
+   "z": 9,
+   "h": 1,
+   "explode": [
+    0,
+    0,
+    30.8
+   ],
+   "mass": 0.4,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Feines Edelstahlgewebe, das Schmutz und Luftblasen von den Düsen fernhält.",
+   "color": "#B5BCC2",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2.0,
+     "y": 2.0,
+     "w": 1,
+     "d": 1,
+     "fill": "#8A9298"
+    },
+    {
+     "shape": "box",
+     "x": 4.2,
+     "y": 2.0,
+     "w": 1,
+     "d": 1,
+     "fill": "#8A9298"
+    },
+    {
+     "shape": "box",
+     "x": 6.4,
+     "y": 2.0,
+     "w": 1,
+     "d": 1,
+     "fill": "#8A9298"
+    },
+    {
+     "shape": "box",
+     "x": 8.6,
+     "y": 2.0,
+     "w": 1,
+     "d": 1,
+     "fill": "#8A9298"
+    },
+    {
+     "shape": "box",
+     "x": 2.0,
+     "y": 4.2,
+     "w": 1,
+     "d": 1,
+     "fill": "#8A9298"
+    },
+    {
+     "shape": "box",
+     "x": 4.2,
+     "y": 4.2,
+     "w": 1,
+     "d": 1,
+     "fill": "#8A9298"
+    },
+    {
+     "shape": "box",
+     "x": 6.4,
+     "y": 4.2,
+     "w": 1,
+     "d": 1,
+     "fill": "#8A9298"
+    },
+    {
+     "shape": "box",
+     "x": 8.6,
+     "y": 4.2,
+     "w": 1,
+     "d": 1,
+     "fill": "#8A9298"
+    },
+    {
+     "shape": "box",
+     "x": 2.0,
+     "y": 6.4,
+     "w": 1,
+     "d": 1,
+     "fill": "#8A9298"
+    },
+    {
+     "shape": "box",
+     "x": 4.2,
+     "y": 6.4,
+     "w": 1,
+     "d": 1,
+     "fill": "#8A9298"
+    },
+    {
+     "shape": "box",
+     "x": 6.4,
+     "y": 6.4,
+     "w": 1,
+     "d": 1,
+     "fill": "#8A9298"
+    },
+    {
+     "shape": "box",
+     "x": 8.6,
+     "y": 6.4,
+     "w": 1,
+     "d": 1,
+     "fill": "#8A9298"
+    },
+    {
+     "shape": "box",
+     "x": 2.0,
+     "y": 8.6,
+     "w": 1,
+     "d": 1,
+     "fill": "#8A9298"
+    },
+    {
+     "shape": "box",
+     "x": 4.2,
+     "y": 8.6,
+     "w": 1,
+     "d": 1,
+     "fill": "#8A9298"
+    },
+    {
+     "shape": "box",
+     "x": 6.4,
+     "y": 8.6,
+     "w": 1,
+     "d": 1,
+     "fill": "#8A9298"
+    },
+    {
+     "shape": "box",
+     "x": 8.6,
+     "y": 8.6,
+     "w": 1,
+     "d": 1,
+     "fill": "#8A9298"
+    }
+   ]
+  },
+  {
+   "id": "kopfteil",
+   "component_id": "ink_cartridge",
+   "material_id": "pp",
+   "name": "Düsenkopf-Träger",
+   "short": "Kopfteil",
+   "shape": "box",
+   "x": 6,
+   "y": 34,
+   "w": 28,
+   "d": 24,
+   "z": 2,
+   "h": 8,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    19.8
+   ],
+   "mass": 3.5,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Schmaler Fuß der Patrone. Ein Kanal führt die Tinte vom Sieb zum Druckkopf.",
+   "color": "#3A3E44"
+  },
+  {
+   "id": "druckkopf",
+   "component_id": "cartridge_chip",
+   "material_id": "mixed_electronics",
+   "name": "Druckkopf mit Düsenplatte",
+   "short": "Druckkopf",
+   "shape": "box",
+   "x": 14,
+   "y": 38,
+   "w": 12,
+   "d": 16,
+   "z": 1,
+   "h": 1,
+   "r": 0.5,
+   "explode": [
+    0,
+    0,
+    9.8
+   ],
+   "mass": 0.5,
+   "materials": [
+    [
+     "chip",
+     60
+    ],
+    [
+     "nickel",
+     25
+    ],
+    [
+     "kupfer",
+     15
+    ]
+   ],
+   "info": "Silizium-Chip mit hunderten winzigen Heizern, darüber eine Platte mit Düsen, feiner als ein Haar. Nicht mit den Fingern berühren, sonst verstopfen die Düsen.",
+   "color": "#C9A94A",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 2,
+     "w": 1,
+     "d": 12,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 8,
+     "y": 2,
+     "w": 1,
+     "d": 12,
+     "fill": "#3A3F44"
+    }
+   ]
+  },
+  {
+   "id": "schutzstreifen",
+   "component_id": "ink_cartridge",
+   "material_id": "pp",
+   "name": "Schutzstreifen der Düsen",
+   "short": "Schutzstreifen",
+   "shape": "box",
+   "x": 6,
+   "y": 36,
+   "w": 28,
+   "d": 20,
+   "z": 0.5,
+   "h": 0.3,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 0.2,
+   "materials": [
+    [
+     "pp",
+     80
+    ],
+    [
+     "klebstoff",
+     20
+    ]
+   ],
+   "info": "Schützt die Düsen vor dem Austrocknen. Vor dem Einsetzen an der Lasche abziehen und in den Restmüll.",
+   "color": "#E4572E",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 2,
+     "w": 24,
+     "d": 3,
+     "r": 0,
+     "fill": "#F2F2F2"
+    }
+   ]
+  },
+  {
+   "id": "kontaktfolie",
+   "component_id": "cartridge_chip",
+   "material_id": "pcb",
+   "name": "Kontaktfolie mit Chip",
+   "short": "Chip",
+   "shape": "box",
+   "x": 6,
+   "y": 60,
+   "w": 28,
+   "d": 0.3,
+   "z": 4,
+   "h": 36,
+   "r": 0,
+   "explode": [
+    0,
+    35,
+    0
+   ],
+   "mass": 0.7,
    "materials": [
     [
      "fr4",
@@ -200,36 +798,8 @@
      10
     ]
    ],
-   "material_id": "pcb",
-   "info": "Glued on the side; leave it, refill stations reuse it."
-  },
-  {
-   "id": "ink_cartridge",
-   "component_id": "ink_cartridge",
-   "name": "Ink Cartridge (Unterteil)",
-   "short": "Ink Cartridge (Unt",
-   "shape": "box",
-   "x": 0,
-   "y": 0,
-   "w": 40.0,
-   "d": 60.0,
-   "h": 42.0,
-   "z": 0,
-   "r": 4.8,
-   "explode": [
-    0,
-    0,
-    0
-   ],
-   "mass": 23.65,
-   "materials": [
-    [
-     "pp",
-     100
-    ]
-   ],
-   "material_id": "pp",
-   "info": "Open the cover and press the cartridge down to release it; many shops take cartridges back."
+   "info": "Biegsame Folie mit vergoldeten Kontakten und einem Speicherchip, der den Füllstand merkt. Dranlassen, Wiederbefüller nutzen ihn weiter.",
+   "color": "#C08A2E"
   }
  ]
 }

@@ -4,7 +4,7 @@
  "name_en": "Pencil Sharpener",
  "klasse": "Restmüll",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -21,38 +21,38 @@
  "werte": [
   {
    "k": "Rohstoffwert",
-   "v": "≈ 0,02 €",
+   "v": "≈ 0,04 €",
    "hint": "Kaum Metalle enthalten."
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 0,12 kg",
+   "v": "≈ 0,16 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
    "k": "mit Recyclat",
    "v": "≈ 0,01 kg",
-   "hint": "spart 0,11 kg, wenn recycelte Materialien eingesetzt werden"
+   "hint": "spart 0,15 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Al": 8620.0,
-   "Fe": 6252.0
+   "Al": 13180.0,
+   "Fe": 1784.0
   },
   "herkunft": {
    "Al": "Modellmassen (Schätzung)",
    "Fe": "Modellmassen (Schätzung)"
   },
   "materialien_g": {
-   "aluminium": 8.6,
-   "steel": 6.4
+   "aluminium": 13.2,
+   "steel": 1.8
   },
-  "co2_kg": 0.118,
-  "co2_mit_recyclat_kg": 0.009,
-  "co2_ersparnis_kg": 0.11,
+  "co2_kg": 0.161,
+  "co2_mit_recyclat_kg": 0.008,
+  "co2_ersparnis_kg": 0.153,
   "co2_ohne_faktor": [],
-  "rohstoffwert_eur": 0.02,
+  "rohstoffwert_eur": 0.04,
   "wert_ohne_preis": [],
   "preisstand": "2026-11-13",
   "quellen": {
@@ -100,91 +100,244 @@
   "nicht": "Nicht in die Gelbe Tonne: keine Verpackung",
   "warnung": "Gut Erhaltenes lieber verschenken oder in der Werkstatt abgeben."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "sharpener_blade",
-   "component_id": "sharpener_blade",
-   "name": "Blade",
-   "short": "Blade",
-   "shape": "box",
-   "x": 3.8,
-   "y": 5.2,
-   "w": 17.5,
-   "d": 24.5,
-   "h": 7.0,
-   "z": 4.0,
-   "r": 2.1,
-   "explode": [
-    0,
-    0,
-    40.0
-   ],
-   "mass": 2.07,
-   "materials": [
-    [
-     "stahl",
-     100
-    ]
-   ],
-   "material_id": "steel",
-   "info": "Replace just the blade when it gets dull."
-  },
-  {
-   "id": "hinge_screws",
+   "id": "schraube",
    "component_id": "hinge_screws",
-   "name": "Hinge Screws",
-   "short": "Hinge Screws",
-   "shape": "box",
-   "x": 0,
-   "y": 0,
-   "w": 25.0,
-   "d": 35.0,
-   "h": 10.0,
-   "z": 10.0,
-   "r": 3.0,
+   "material_id": "steel",
+   "name": "Klingenschraube",
+   "short": "Schraube",
+   "shape": "cyl",
+   "x": 10,
+   "y": 8,
+   "w": 5,
+   "z": 18,
+   "h": 2,
    "explode": [
     0,
     0,
-    12.0
+    17.0
    ],
-   "mass": 4.31,
+   "mass": 0.3,
    "materials": [
     [
      "stahl",
      100
     ]
    ],
-   "material_id": "steel",
-   "info": "Unscrew them with a precision screwdriver."
+   "info": "Winzige Kreuzschlitzschraube M2. Mit einem Feinmechaniker-Schraubendreher lösen, dann kann man die Klinge tauschen.",
+   "color": "#7B848B",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2.1,
+     "y": 0.8,
+     "w": 0.8,
+     "d": 3.4,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 0.8,
+     "y": 2.1,
+     "w": 3.4,
+     "d": 0.8,
+     "fill": "#3A3F44"
+    }
+   ]
   },
   {
-   "id": "sharpener_body",
-   "component_id": "sharpener_body",
-   "name": "Body",
-   "short": "Body",
+   "id": "klinge",
+   "component_id": "sharpener_blade",
+   "material_id": "steel",
+   "name": "Messerklinge",
+   "short": "Klinge",
    "shape": "box",
-   "x": 0,
-   "y": 0,
-   "w": 25.0,
-   "d": 35.0,
-   "h": 10.0,
-   "z": 0.0,
-   "r": 3.0,
+   "x": 4,
+   "y": 4,
+   "w": 17,
+   "d": 27,
+   "z": 17,
+   "h": 1,
+   "r": 1,
    "explode": [
     0,
     0,
-    0
+    9.0
    ],
-   "mass": 8.62,
+   "mass": 1.52,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Gehärteter Stahl mit scharfer Schneide über dem Schlitz. Vorsicht beim Anfassen, alte Klingen eingewickelt zum Metall geben.",
+   "color": "#C3C9CE",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 20,
+     "w": 17,
+     "d": 1.5,
+     "r": 0,
+     "fill": "#E3E7EA"
+    },
+    {
+     "shape": "cyl",
+     "x": 6.5,
+     "y": 4.5,
+     "w": 4,
+     "fill": "#8A9298"
+    }
+   ]
+  },
+  {
+   "id": "korpus",
+   "component_id": "sharpener_body",
+   "material_id": "aluminium",
+   "name": "Anspitzerkörper (Aluminium)",
+   "short": "Körper",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 25,
+   "d": 35,
+   "z": 0,
+   "h": 18,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 13.18,
    "materials": [
     [
      "alu",
      100
     ]
    ],
-   "material_id": "aluminium",
-   "info": "Unscrew the tiny screw to free the blade."
+   "info": "Aluminium-Druckguss mit kegelförmiger Bohrung für den Stift. Ohne Klinge ist es sortenreiner Aluminiumschrott.",
+   "color": "#A9B1B8",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 3,
+     "w": 19,
+     "d": 29,
+     "r": 1,
+     "fill": "#959DA4"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 24,
+     "w": 17,
+     "d": 3,
+     "r": 0.5,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 6,
+     "w": 2,
+     "d": 2,
+     "fill": "#8C949B"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 10,
+     "w": 2,
+     "d": 2,
+     "fill": "#8C949B"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 14,
+     "w": 2,
+     "d": 2,
+     "fill": "#8C949B"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 18,
+     "w": 2,
+     "d": 2,
+     "fill": "#8C949B"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 22,
+     "w": 2,
+     "d": 2,
+     "fill": "#8C949B"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 26,
+     "w": 2,
+     "d": 2,
+     "fill": "#8C949B"
+    },
+    {
+     "shape": "box",
+     "x": 23,
+     "y": 6,
+     "w": 2,
+     "d": 2,
+     "fill": "#8C949B"
+    },
+    {
+     "shape": "box",
+     "x": 23,
+     "y": 10,
+     "w": 2,
+     "d": 2,
+     "fill": "#8C949B"
+    },
+    {
+     "shape": "box",
+     "x": 23,
+     "y": 14,
+     "w": 2,
+     "d": 2,
+     "fill": "#8C949B"
+    },
+    {
+     "shape": "box",
+     "x": 23,
+     "y": 18,
+     "w": 2,
+     "d": 2,
+     "fill": "#8C949B"
+    },
+    {
+     "shape": "box",
+     "x": 23,
+     "y": 22,
+     "w": 2,
+     "d": 2,
+     "fill": "#8C949B"
+    },
+    {
+     "shape": "box",
+     "x": 23,
+     "y": 26,
+     "w": 2,
+     "d": 2,
+     "fill": "#8C949B"
+    }
+   ]
   }
  ]
 }

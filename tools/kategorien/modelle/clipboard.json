@@ -1,0 +1,326 @@
+{
+ "parts": [
+  {
+   "id": "hebel",
+   "component_id": "steel_clip",
+   "material_id": "steel",
+   "name": "Klemmhebel",
+   "short": "Klemmhebel",
+   "shape": "box",
+   "x": 65,
+   "y": 4,
+   "w": 100,
+   "d": 52,
+   "z": 6,
+   "h": 9,
+   "r": 6,
+   "explode": [
+    0,
+    0,
+    69.3
+   ],
+   "mass": 47.7,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Vernickeltes Stahlblech. Drückt man hinten, öffnet sich die Klemme vorne. Das Loch dient zum Aufhängen.",
+   "color": "#C3C9CE",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 44,
+     "y": 6,
+     "w": 12,
+     "d": 8,
+     "fill": "#5A6268"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 38,
+     "w": 92,
+     "d": 10,
+     "r": 4,
+     "fill": "#D3D8DC"
+    },
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 24,
+     "w": 80,
+     "d": 2,
+     "r": 0,
+     "fill": "#9AA2A6"
+    }
+   ]
+  },
+  {
+   "id": "feder",
+   "component_id": "steel_clip",
+   "material_id": "steel",
+   "name": "Spiralfeder",
+   "short": "Feder",
+   "shape": "box",
+   "x": 95,
+   "y": 14,
+   "w": 40,
+   "d": 12,
+   "z": 4.5,
+   "h": 6,
+   "r": 5,
+   "explode": [
+    0,
+    0,
+    49.8
+   ],
+   "mass": 6.4,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Drückt die Klemme zu. Steht unter Spannung, beim Aufbiegen kann sie wegspringen.",
+   "color": "#8A9298",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 1,
+     "w": 1.2,
+     "d": 10,
+     "fill": "#5A6268"
+    },
+    {
+     "shape": "box",
+     "x": 6,
+     "y": 1,
+     "w": 1.2,
+     "d": 10,
+     "fill": "#5A6268"
+    },
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 1,
+     "w": 1.2,
+     "d": 10,
+     "fill": "#5A6268"
+    },
+    {
+     "shape": "box",
+     "x": 14,
+     "y": 1,
+     "w": 1.2,
+     "d": 10,
+     "fill": "#5A6268"
+    },
+    {
+     "shape": "box",
+     "x": 18,
+     "y": 1,
+     "w": 1.2,
+     "d": 10,
+     "fill": "#5A6268"
+    },
+    {
+     "shape": "box",
+     "x": 22,
+     "y": 1,
+     "w": 1.2,
+     "d": 10,
+     "fill": "#5A6268"
+    },
+    {
+     "shape": "box",
+     "x": 26,
+     "y": 1,
+     "w": 1.2,
+     "d": 10,
+     "fill": "#5A6268"
+    },
+    {
+     "shape": "box",
+     "x": 30,
+     "y": 1,
+     "w": 1.2,
+     "d": 10,
+     "fill": "#5A6268"
+    },
+    {
+     "shape": "box",
+     "x": 34,
+     "y": 1,
+     "w": 1.2,
+     "d": 10,
+     "fill": "#5A6268"
+    },
+    {
+     "shape": "box",
+     "x": 38,
+     "y": 1,
+     "w": 1.2,
+     "d": 10,
+     "fill": "#5A6268"
+    }
+   ]
+  },
+  {
+   "id": "grundplatte",
+   "component_id": "steel_clip",
+   "material_id": "steel",
+   "name": "Grundplatte",
+   "short": "Grundplatte",
+   "shape": "box",
+   "x": 70,
+   "y": 6,
+   "w": 90,
+   "d": 28,
+   "z": 3,
+   "h": 1.5,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    34.8
+   ],
+   "mass": 21.2,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Trägt das Gelenk des Hebels und ist mit der Platte vernietet.",
+   "color": "#B5BCC2",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 7,
+     "y": 11,
+     "w": 6,
+     "fill": "#8A9298"
+    },
+    {
+     "shape": "cyl",
+     "x": 77,
+     "y": 11,
+     "w": 6,
+     "fill": "#8A9298"
+    }
+   ]
+  },
+  {
+   "id": "niete_links",
+   "component_id": "steel_clip",
+   "material_id": "steel",
+   "name": "Niete",
+   "short": "Nieten",
+   "shape": "cyl",
+   "x": 77.5,
+   "y": 17.5,
+   "w": 5,
+   "z": 0,
+   "h": 4.8,
+   "explode": [
+    0,
+    0,
+    18
+   ],
+   "mass": 1.1,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Zwei Hohlnieten halten die Klemme. Zum Trennen mit einem 5-mm-Bohrer den Kopf abbohren.",
+   "color": "#9AA2A6"
+  },
+  {
+   "id": "niete_rechts",
+   "component_id": "steel_clip",
+   "material_id": "steel",
+   "name": "Niete",
+   "short": "Niete rechts",
+   "shape": "cyl",
+   "x": 147.5,
+   "y": 17.5,
+   "w": 5,
+   "z": 0,
+   "h": 4.8,
+   "explode": [
+    0,
+    0,
+    18
+   ],
+   "mass": 1.1,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Zweite Niete.",
+   "color": "#9AA2A6",
+   "label": false
+  },
+  {
+   "id": "platte",
+   "component_id": "hardboard_panel",
+   "material_id": "wood",
+   "name": "Hartfaserplatte",
+   "short": "Platte",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 230,
+   "d": 320,
+   "z": 0,
+   "h": 3,
+   "r": 8,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 222.6,
+   "materials": [
+    [
+     "holz",
+     100
+    ]
+   ],
+   "info": "Gepresste Holzfasern mit glatter Oberfläche. Ohne Klemme gehört sie zum Altholz im Wertstoffhof.",
+   "color": "#8B5E3C",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 75,
+     "y": 15,
+     "w": 10,
+     "fill": "#6E4A2F"
+    },
+    {
+     "shape": "cyl",
+     "x": 145,
+     "y": 15,
+     "w": 10,
+     "fill": "#6E4A2F"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 4,
+     "w": 222,
+     "d": 312,
+     "r": 6,
+     "fill": "#94664A"
+    }
+   ]
+  }
+ ]
+}
