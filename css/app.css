@@ -116,3 +116,31 @@ main { position: relative; overflow: hidden; }
 .vf-log div { opacity: 0; }
 .vf-log em { font-style: normal; color: rgba(255,255,255,.45); margin-left: 10px; }
 
+.side { border-left: 1px solid var(--rule); background: var(--sheet); padding: 32px 28px; display: flex; flex-direction: column; gap: 28px; overflow-y: auto; }
+.side h1 { font-size: 30px; line-height: 1.15; font-weight: 600; letter-spacing: -.02em; }
+.side .lead { color: var(--ink-2); }
+.samples { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.sample { position: relative; aspect-ratio: 4/3; overflow: hidden; border: 1px solid var(--rule); background: #ddd; text-align: left; }
+.sample img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(.35); transition: transform .4s, filter .3s; }
+.sample:hover img { transform: scale(1.04); filter: none; }
+.sample span { position: absolute; left: 0; bottom: 0; right: 0; padding: 18px 10px 8px; font: 12px var(--mono);
+  color: #fff; background: linear-gradient(transparent, rgba(0,0,0,.55)); }
+.howto { counter-reset: s; display: grid; gap: 10px; font-size: 14px; color: var(--ink-2); }
+.howto li { list-style: none; display: grid; grid-template-columns: 28px 1fr; }
+.howto li::before { counter-increment: s; content: '0' counter(s); font: 11px/22px var(--mono); color: var(--ink-3); }
+
+.result { display: grid; gap: 22px; }
+.result .conf { font: 13px var(--mono); color: var(--ink-2); }
+.cands { display: grid; gap: 6px; }
+.cand { display: grid; grid-template-columns: 18px 1fr auto; gap: 10px; align-items: center; padding: 12px 14px;
+  border: 1px solid var(--rule); background: var(--card); text-align: left; transition: border-color .15s; }
+.cand:hover { border-color: var(--ink-3); }
+.cand .radio { width: 14px; height: 14px; border-radius: 50%; border: 1px solid var(--ink-3); }
+.cand.sel { border-color: var(--ink); }
+.cand.sel .radio { border: 4px solid var(--accent); }
+.cand .bar { grid-column: 2 / 4; height: 2px; background: var(--rule-2); }
+.cand .bar i { display: block; height: 100%; background: var(--ink); }
+.cand .pct { font: 12px var(--mono); color: var(--ink-2); }
+.note { font-size: 13px; color: var(--ink-2); padding-left: 12px; border-left: 2px solid var(--rule); }
+.actions-col { display: grid; gap: 8px; margin-top: auto; }
+
