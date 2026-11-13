@@ -948,7 +948,7 @@
   "name": "Farbeimer",
   "name_en": "Paint Bucket",
   "klasse": "Wertstoffhof",
-  "teile": 8,
+  "teile": 9,
   "platzhalter": false
  },
  {
@@ -1164,7 +1164,7 @@
   "name": "Gießkanne",
   "name_en": "Watering Can",
   "klasse": "Wertstoffhof",
-  "teile": 11,
+  "teile": 13,
   "platzhalter": false
  },
  {
@@ -1460,7 +1460,7 @@
   "name": "Skateboard",
   "name_en": "Skateboard",
   "klasse": "Wertstoffhof",
-  "teile": 48,
+  "teile": 56,
   "platzhalter": false
  },
  {
@@ -1580,7 +1580,7 @@
   "name": "Silikonkartusche",
   "name_en": "Sealant Cartridge",
   "klasse": "Wertstoffhof",
-  "teile": 8,
+  "teile": 11,
   "platzhalter": false
  },
  {

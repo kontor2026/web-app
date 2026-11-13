@@ -68,18 +68,16 @@ def rad(name, yt, rechts, erste):
     s = -1 if not rechts else 1
     lab = {} if erste else {'label': False}
     rid = f'rad_{name}_{"r" if rechts else "l"}'
-    scheiben = [
-        teil(f'{rid}_oben', 'pu_wheels', 'Rolle (PU, 54 mm)', 'Rolle', 'box', x=spiegel(5, 32, rechts), y=yt - 21,
-             w=32, d=42, z=44, h=10, r=6, mass=20, materials=[['tpu', 100]], color=ROLLE, explode=[s * 80, 0, 0],
-             **lab, info='Gegossenes, hartes Polyurethan. Nach dem Lösen der Achsmutter einfach von der Achse ziehen.',
-             marks=[mark('box', 4, 4, 24, 34, 4, ROLLE_D)]),
-        teil(f'{rid}_mitte', 'pu_wheels', 'Rolle (PU, 54 mm)', 'Rolle', 'box', x=spiegel(5, 32, rechts), y=yt - 27,
-             w=32, d=54, z=10, h=34, r=8, mass=55, materials=[['tpu', 100]], color=ROLLE, explode=[s * 80, 0, 0],
-             label=False, info='Lauffläche der Rolle.'),
-        teil(f'{rid}_unten', 'pu_wheels', 'Rolle (PU, 54 mm)', 'Rolle', 'box', x=spiegel(5, 32, rechts), y=yt - 21,
-             w=32, d=42, z=0, h=10, r=6, mass=20, materials=[['tpu', 100]], color=ROLLE, explode=[s * 80, 0, 0],
-             label=False, info='Lauffläche der Rolle.'),
-    ]
+    scheiben = []
+    for i, (z0, h, d) in enumerate(((0, 4, 26), (4, 7, 44), (11, 32, 54), (43, 7, 44), (50, 4, 26))):
+        oben = i == 4
+        scheiben.append(teil(
+            f'{rid}_{i}', 'pu_wheels', 'Rolle (PU, 54 mm)', 'Rolle', 'box', x=spiegel(5, 32, rechts),
+            y=yt - d / 2, w=32, d=d, z=z0, h=h, r=min(6, d / 4), mass=round(95 * h * d / 2560, 1),
+            materials=[['tpu', 100]], color=ROLLE, explode=[s * 80, 0, 0],
+            label=oben and erste,
+            info='Gegossenes, hartes Polyurethan. Nach dem Lösen der Achsmutter einfach von der Achse ziehen.',
+            marks=[mark('box', 4, 4, 24, d - 8, 3, ROLLE_D)] if oben else None))
     lager = [
         teil(f'lager_{name}_{"r" if rechts else "l"}_{t}', 'steel_bearings', 'Kugellager 608', 'Kugellager', 'box',
              x=spiegel(x0, 7, rechts), y=yt - 11, w=7, d=22, z=16, h=22, r=2.5, mass=12,
@@ -101,7 +99,7 @@ schrauben = []
 for name, yt, _ in ACHSEN:
     for i, (dx, dy) in enumerate(((-20.5, -27), (20.5, -27), (-20.5, 27), (20.5, 27))):
         schrauben.append(teil(f'schraube_{name}_{i}', 'aluminium_trucks', 'Montageschraube mit Mutter', 'Schraube',
-                              'cyl', material_id='steel', x=W / 2 + dx - 4.5, y=yt + dy - 4.5, w=9, z=72, h=29, mass=6,
+                              'cyl', material_id='steel', x=W / 2 + dx - 4.5, y=yt + dy - 4.5, w=9, z=69, h=30, mass=6,
                               materials=[['stahl', 100]], color='#2E3236',
                               label=not schrauben,
                               info='Senkkopfschraube (Kreuz oder Inbus) von oben durch Griptape und Deck, unten mit '
@@ -116,14 +114,15 @@ teile = schrauben + [
          materials=[['keramik', 40], ['pvc', 35], ['klebstoff', 25]], color='#26292C',
          info='Schmirgelartige Folie mit Körnern aus Siliziumcarbid, damit die Schuhe nicht rutschen. Mit dem '
               'Föhn erwärmen und langsam abziehen.',
-         marks=[mark('cyl', m['x'] - 1, m['y'] - 1, 9, fill='#3C4044') for m in loecher]
-         + [mark('box', 20, 340, 158, 118, 40, '#2F3236')]),
+         marks=[mark('cyl', m['x'] - 1, m['y'] - 1, 9, fill='#55595D') for m in loecher]
+         + [mark('box', m['x'] + 2.5, m['y'] + 0.5, 2, 6, 0.5, '#1A1C1E') for m in loecher]
+         + [mark('box', m['x'] + 0.5, m['y'] + 2.5, 6, 2, 0.5, '#1A1C1E') for m in loecher]),
     teil('deck', 'wooden_deck', 'Deck aus Ahornholz', 'Deck', 'box',
          x=0, y=0, w=W, d=L, z=88, h=11, r=95, mass=950,
          materials=[['holz', 92], ['klebstoff', 6], ['druck', 2]], color='#D3B07C',
          info='Sieben verleimte Schichten Ahornfurnier, an den Enden hochgebogen (Nose und Tail). Unten oft '
               'bedruckt. Ohne Achsen und Griptape ist es Altholz.',
-         marks=loecher + [mark('box', 10, 10 + i * 130, 180, 2, 1, '#C29E69') for i in range(6)]),
+         marks=loecher),
 ]
 gruppen = []
 for k, (name, yt, kdy) in enumerate(ACHSEN):
@@ -135,7 +134,7 @@ for k, (name, yt, _) in enumerate(ACHSEN):
         sch, lag, mut = rad(name, yt, rechts, k == 0 and not rechts)
         teile += sch + lag + [mut]
 
-explodiere(teile, abstand=25, nach_liste=True, gruppen=gruppen, abstaende={'griptape': 45, **{
-    p['id']: 35 for p in schrauben}})
+explodiere(teile, abstand=25, nach_liste=True, gruppen=gruppen, abstaende={'griptape': 110, **{
+    p['id']: 50 for p in schrauben}})
 skaliere_masse(teile, oid='skateboard')
 schreibe('skateboard', teile)

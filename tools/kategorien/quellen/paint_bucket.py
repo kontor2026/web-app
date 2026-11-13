@@ -25,31 +25,37 @@ teile = [
          x=0, y=0, w=200, z=196, h=16, mass=85,
          info='Schnappt über den Rand, Originalitätslaschen zeigen, dass der Eimer noch zu ist. Laschen abreißen '
               'und den Deckel mit einem Schraubendreher aufhebeln.',
-         color=EIMER, marks=[mark('cyl', 10, 10, 180, fill='#E6E6E1'), mark('cyl', 50, 50, 100, fill='#DADAD4')]
-         + raster(94, 2, 2, 1, 6, 6, 6, fill='#2F6DB5')),
+         color=EIMER, marks=[mark('cyl', 10, 10, 180, fill='#E6E6E1'), mark('cyl', 50, 50, 100, fill='#DADAD4'),
+                             mark('cyl', 56, 56, 88, fill='#E2E2DC'), mark('box', 62, 96, 76, 8, 2, '#CFCFC8')]
+         + [mark('box', 93, 0, 14, 6, 1, '#2F6DB5'), mark('box', 93, 194, 14, 6, 1, '#2F6DB5'),
+            mark('box', 0, 93, 6, 14, 1, '#2F6DB5'), mark('box', 194, 93, 6, 14, 1, '#2F6DB5')]),
     teil('rand', 'pp_bucket_body', 'Rand mit Ösen', 'Rand', 'cyl',
          x=0, y=0, w=200, z=186, h=14, mass=45,
          info='Verstärkter Rand mit Rastwulst für den Deckel und zwei Ösen für den Bügel.',
          color=EIMER, marks=[mark('cyl', 6, 6, 188, fill='#E2E2DD')]),
     teil('wand_oben', 'pp_bucket_body', 'Eimerwand oben', 'Wand', 'cyl',
-         x=2, y=2, w=196, z=96, h=90, mass=110,
+         x=2, y=2, w=196, z=172, h=14, mass=20,
          info='Spritzgegossenes PP, Recyclingcode 5. Nur ganz leere Eimer mit trockenen Resten in die Gelbe '
               'Tonne. Flüssige Farbreste sind Sondermüll (Schadstoffmobil, Wertstoffhof).',
          color=EIMER),
+    teil('wand_mitte', 'pp_bucket_body', 'Eimerwand', 'Wand', 'cyl',
+         x=4, y=4, w=192, z=32, h=140, mass=160, label=False,
+         info='Die Wand wird nach unten etwas enger, so lassen sich leere Eimer ineinanderstapeln.',
+         color=EIMER),
     teil('wand_unten', 'pp_bucket_body', 'Eimerwand unten', 'Wand', 'cyl',
-         x=6, y=6, w=188, z=8, h=88, mass=95,
+         x=7, y=7, w=186, z=8, h=24, mass=25,
          info='Die Wand wird nach unten etwas enger, so lassen sich leere Eimer ineinanderstapeln.',
          color=EIMER, label=False),
-    teil('boden', 'pp_bucket_body', 'Eimerboden', 'Boden', 'cyl',
+    teil('boden', 'pp_bucket_body', 'Eimerboden mit Standring', 'Boden', 'cyl',
          x=9, y=9, w=182, z=0, h=8, mass=30,
          info='Boden mit Standring und Recyclingzeichen 5.', color=EIMER, label=False),
-    teil('etikett', 'pp_bucket_body', 'In-Mould-Etikett', 'Etikett', 'box',
-         x=198, y=50, w=0.3, d=100, z=30, h=150, r=0, explode=[70, 0, 0], mass=4,
-         materials=[['pp', 92], ['druck', 8]],
-         info='Bedruckte PP-Folie, die beim Spritzgießen mit der Wand verschmolzen wird. Nicht ablösbar, '
+    teil('etikett', 'pp_bucket_body', 'In-Mould-Etikett', 'Etikett', 'cyl',
+         x=3, y=3, w=194, z=36, h=136, explode=[250, 0, -30], mass=4,
+         materials=[['pp', 92], ['druck', 8]], sortBias=1,
+         info='Bedruckte PP-Folie rund um den Eimer, beim Spritzgießen mit der Wand verschmolzen. Nicht ablösbar, '
               'muss aber auch nicht: Sie ist aus demselben Kunststoff.',
-         color='#2F6DB5', sortBias=100),
+         color='#2F6DB5', marks=[mark('cyl', 1, 1, 192, fill='#C9CCD0'), mark('cyl', 40, 60, 140, 128, fill='#DADCDF')]),
 ]
-explodiere(teile, abstand=40, nach_liste=True, gruppen=[['griffstueck', 'buegel'], ['rand', 'wand_oben', 'wand_unten', 'boden']])
+explodiere(teile, abstand=40, nach_liste=True, gruppen=[['griffstueck', 'buegel'], ['rand', 'wand_oben', 'wand_mitte', 'wand_unten', 'boden']])
 skaliere_masse(teile, oid='paint_bucket')
 schreibe('paint_bucket', teile)

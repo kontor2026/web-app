@@ -31,29 +31,29 @@
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 2,56 kg",
-   "hint": "spart 7,20 kg, wenn recycelte Materialien eingesetzt werden"
+   "v": "≈ 2,55 kg",
+   "hint": "spart 7,21 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Al": 580000.0,
-   "Fe": 245392.0
+   "Al": 580400.0,
+   "Fe": 245588.0
   },
   "herkunft": {
    "Al": "Modellmassen (Schätzung)",
    "Fe": "Modellmassen (Schätzung)"
   },
   "materialien_g": {
-   "wood": 966.8,
-   "aluminium": 580.0,
-   "polyurethane": 421.8,
-   "steel": 250.4,
-   "pvc": 81.4
+   "wood": 967.3,
+   "aluminium": 580.4,
+   "polyurethane": 420.6,
+   "steel": 250.6,
+   "pvc": 81.5
   },
-  "co2_kg": 9.759,
-  "co2_mit_recyclat_kg": 2.557,
-  "co2_ersparnis_kg": 7.203,
+  "co2_kg": 9.76,
+  "co2_mit_recyclat_kg": 2.552,
+  "co2_ersparnis_kg": 7.208,
   "co2_ohne_faktor": [],
   "rohstoffwert_eur": 1.66,
   "wert_ohne_preis": [],
@@ -143,12 +143,12 @@
    "x": 75,
    "y": 143.5,
    "w": 9,
-   "z": 72,
-   "h": 29,
+   "z": 69,
+   "h": 30,
    "explode": [
     0,
     0,
-    208.0
+    291.0
    ],
    "mass": 6.1,
    "materials": [
@@ -191,12 +191,12 @@
    "x": 116,
    "y": 143.5,
    "w": 9,
-   "z": 72,
-   "h": 29,
+   "z": 69,
+   "h": 30,
    "explode": [
     0,
     0,
-    208.0
+    291.0
    ],
    "mass": 6.1,
    "materials": [
@@ -239,12 +239,12 @@
    "x": 75,
    "y": 197.5,
    "w": 9,
-   "z": 72,
-   "h": 29,
+   "z": 69,
+   "h": 30,
    "explode": [
     0,
     0,
-    208.0
+    291.0
    ],
    "mass": 6.1,
    "materials": [
@@ -287,12 +287,12 @@
    "x": 116,
    "y": 197.5,
    "w": 9,
-   "z": 72,
-   "h": 29,
+   "z": 69,
+   "h": 30,
    "explode": [
     0,
     0,
-    208.0
+    291.0
    ],
    "mass": 6.1,
    "materials": [
@@ -335,12 +335,12 @@
    "x": 75,
    "y": 593.5,
    "w": 9,
-   "z": 72,
-   "h": 29,
+   "z": 69,
+   "h": 30,
    "explode": [
     0,
     0,
-    208.0
+    291.0
    ],
    "mass": 6.1,
    "materials": [
@@ -383,12 +383,12 @@
    "x": 116,
    "y": 593.5,
    "w": 9,
-   "z": 72,
-   "h": 29,
+   "z": 69,
+   "h": 30,
    "explode": [
     0,
     0,
-    208.0
+    291.0
    ],
    "mass": 6.1,
    "materials": [
@@ -431,12 +431,12 @@
    "x": 75,
    "y": 647.5,
    "w": 9,
-   "z": 72,
-   "h": 29,
+   "z": 69,
+   "h": 30,
    "explode": [
     0,
     0,
-    208.0
+    291.0
    ],
    "mass": 6.1,
    "materials": [
@@ -479,12 +479,12 @@
    "x": 116,
    "y": 647.5,
    "w": 9,
-   "z": 72,
-   "h": 29,
+   "z": 69,
+   "h": 30,
    "explode": [
     0,
     0,
-    208.0
+    291.0
    ],
    "mass": 6.1,
    "materials": [
@@ -534,9 +534,9 @@
    "explode": [
     0,
     0,
-    145.0
+    210.0
    ],
-   "mass": 81.4,
+   "mass": 81.5,
    "materials": [
     [
      "keramik",
@@ -559,65 +559,200 @@
      "x": 74.0,
      "y": 142.5,
      "w": 9,
-     "fill": "#3C4044"
+     "fill": "#55595D"
     },
     {
      "shape": "cyl",
      "x": 74.0,
      "y": 196.5,
      "w": 9,
-     "fill": "#3C4044"
+     "fill": "#55595D"
     },
     {
      "shape": "cyl",
      "x": 115.0,
      "y": 142.5,
      "w": 9,
-     "fill": "#3C4044"
+     "fill": "#55595D"
     },
     {
      "shape": "cyl",
      "x": 115.0,
      "y": 196.5,
      "w": 9,
-     "fill": "#3C4044"
+     "fill": "#55595D"
     },
     {
      "shape": "cyl",
      "x": 74.0,
      "y": 592.5,
      "w": 9,
-     "fill": "#3C4044"
+     "fill": "#55595D"
     },
     {
      "shape": "cyl",
      "x": 74.0,
      "y": 646.5,
      "w": 9,
-     "fill": "#3C4044"
+     "fill": "#55595D"
     },
     {
      "shape": "cyl",
      "x": 115.0,
      "y": 592.5,
      "w": 9,
-     "fill": "#3C4044"
+     "fill": "#55595D"
     },
     {
      "shape": "cyl",
      "x": 115.0,
      "y": 646.5,
      "w": 9,
-     "fill": "#3C4044"
+     "fill": "#55595D"
     },
     {
      "shape": "box",
-     "x": 20,
-     "y": 340,
-     "w": 158,
-     "d": 118,
-     "r": 40,
-     "fill": "#2F3236"
+     "x": 77.5,
+     "y": 144.0,
+     "w": 2,
+     "d": 6,
+     "r": 0.5,
+     "fill": "#1A1C1E"
+    },
+    {
+     "shape": "box",
+     "x": 77.5,
+     "y": 198.0,
+     "w": 2,
+     "d": 6,
+     "r": 0.5,
+     "fill": "#1A1C1E"
+    },
+    {
+     "shape": "box",
+     "x": 118.5,
+     "y": 144.0,
+     "w": 2,
+     "d": 6,
+     "r": 0.5,
+     "fill": "#1A1C1E"
+    },
+    {
+     "shape": "box",
+     "x": 118.5,
+     "y": 198.0,
+     "w": 2,
+     "d": 6,
+     "r": 0.5,
+     "fill": "#1A1C1E"
+    },
+    {
+     "shape": "box",
+     "x": 77.5,
+     "y": 594.0,
+     "w": 2,
+     "d": 6,
+     "r": 0.5,
+     "fill": "#1A1C1E"
+    },
+    {
+     "shape": "box",
+     "x": 77.5,
+     "y": 648.0,
+     "w": 2,
+     "d": 6,
+     "r": 0.5,
+     "fill": "#1A1C1E"
+    },
+    {
+     "shape": "box",
+     "x": 118.5,
+     "y": 594.0,
+     "w": 2,
+     "d": 6,
+     "r": 0.5,
+     "fill": "#1A1C1E"
+    },
+    {
+     "shape": "box",
+     "x": 118.5,
+     "y": 648.0,
+     "w": 2,
+     "d": 6,
+     "r": 0.5,
+     "fill": "#1A1C1E"
+    },
+    {
+     "shape": "box",
+     "x": 75.5,
+     "y": 146.0,
+     "w": 6,
+     "d": 2,
+     "r": 0.5,
+     "fill": "#1A1C1E"
+    },
+    {
+     "shape": "box",
+     "x": 75.5,
+     "y": 200.0,
+     "w": 6,
+     "d": 2,
+     "r": 0.5,
+     "fill": "#1A1C1E"
+    },
+    {
+     "shape": "box",
+     "x": 116.5,
+     "y": 146.0,
+     "w": 6,
+     "d": 2,
+     "r": 0.5,
+     "fill": "#1A1C1E"
+    },
+    {
+     "shape": "box",
+     "x": 116.5,
+     "y": 200.0,
+     "w": 6,
+     "d": 2,
+     "r": 0.5,
+     "fill": "#1A1C1E"
+    },
+    {
+     "shape": "box",
+     "x": 75.5,
+     "y": 596.0,
+     "w": 6,
+     "d": 2,
+     "r": 0.5,
+     "fill": "#1A1C1E"
+    },
+    {
+     "shape": "box",
+     "x": 75.5,
+     "y": 650.0,
+     "w": 6,
+     "d": 2,
+     "r": 0.5,
+     "fill": "#1A1C1E"
+    },
+    {
+     "shape": "box",
+     "x": 116.5,
+     "y": 596.0,
+     "w": 6,
+     "d": 2,
+     "r": 0.5,
+     "fill": "#1A1C1E"
+    },
+    {
+     "shape": "box",
+     "x": 116.5,
+     "y": 650.0,
+     "w": 6,
+     "d": 2,
+     "r": 0.5,
+     "fill": "#1A1C1E"
     }
    ]
   },
@@ -640,7 +775,7 @@
     0,
     100.0
    ],
-   "mass": 966.8,
+   "mass": 967.3,
    "materials": [
     [
      "holz",
@@ -713,60 +848,6 @@
      "y": 647.5,
      "w": 9,
      "fill": "#6B5A44"
-    },
-    {
-     "shape": "box",
-     "x": 10,
-     "y": 10,
-     "w": 180,
-     "d": 2,
-     "r": 1,
-     "fill": "#C29E69"
-    },
-    {
-     "shape": "box",
-     "x": 10,
-     "y": 140,
-     "w": 180,
-     "d": 2,
-     "r": 1,
-     "fill": "#C29E69"
-    },
-    {
-     "shape": "box",
-     "x": 10,
-     "y": 270,
-     "w": 180,
-     "d": 2,
-     "r": 1,
-     "fill": "#C29E69"
-    },
-    {
-     "shape": "box",
-     "x": 10,
-     "y": 400,
-     "w": 180,
-     "d": 2,
-     "r": 1,
-     "fill": "#C29E69"
-    },
-    {
-     "shape": "box",
-     "x": 10,
-     "y": 530,
-     "w": 180,
-     "d": 2,
-     "r": 1,
-     "fill": "#C29E69"
-    },
-    {
-     "shape": "box",
-     "x": 10,
-     "y": 660,
-     "w": 180,
-     "d": 2,
-     "r": 1,
-     "fill": "#C29E69"
     }
    ]
   },
@@ -789,7 +870,7 @@
     0,
     75.0
    ],
-   "mass": 122.1,
+   "mass": 122.2,
    "materials": [
     [
      "alu",
@@ -891,7 +972,7 @@
     0,
     25.0
    ],
-   "mass": 167.9,
+   "mass": 168,
    "materials": [
     [
      "alu",
@@ -1031,7 +1112,7 @@
     70,
     0
    ],
-   "mass": 25.4,
+   "mass": 25.5,
    "materials": [
     [
      "stahl",
@@ -1069,7 +1150,7 @@
     0,
     75.0
    ],
-   "mass": 122.1,
+   "mass": 122.2,
    "materials": [
     [
      "alu",
@@ -1173,7 +1254,7 @@
     0,
     25.0
    ],
-   "mass": 167.9,
+   "mass": 168,
    "materials": [
     [
      "alu",
@@ -1314,7 +1395,7 @@
     -70,
     0
    ],
-   "mass": 25.4,
+   "mass": 25.5,
    "materials": [
     [
      "stahl",
@@ -1335,25 +1416,25 @@
    ]
   },
   {
-   "id": "rad_hinten_l_oben",
+   "id": "rad_hinten_l_0",
    "component_id": "pu_wheels",
    "material_id": "polyurethane",
    "name": "Rolle (PU, 54 mm)",
    "short": "Rolle",
    "shape": "box",
    "x": 5,
-   "y": 154,
+   "y": 162,
    "w": 32,
-   "d": 42,
-   "z": 44,
-   "h": 10,
+   "d": 26,
+   "z": 0,
+   "h": 4,
    "r": 6,
    "explode": [
     -80,
     0,
     0
    ],
-   "mass": 20.4,
+   "mass": 4,
    "materials": [
     [
      "tpu",
@@ -1362,20 +1443,40 @@
    ],
    "info": "Gegossenes, hartes Polyurethan. Nach dem Lösen der Achsmutter einfach von der Achse ziehen.",
    "color": "#F2EEDF",
-   "marks": [
-    {
-     "shape": "box",
-     "x": 4,
-     "y": 4,
-     "w": 24,
-     "d": 34,
-     "r": 4,
-     "fill": "#D9D3BE"
-    }
-   ]
+   "label": false
   },
   {
-   "id": "rad_hinten_l_mitte",
+   "id": "rad_hinten_l_1",
+   "component_id": "pu_wheels",
+   "material_id": "polyurethane",
+   "name": "Rolle (PU, 54 mm)",
+   "short": "Rolle",
+   "shape": "box",
+   "x": 5,
+   "y": 153,
+   "w": 32,
+   "d": 44,
+   "z": 4,
+   "h": 7,
+   "r": 6,
+   "explode": [
+    -80,
+    0,
+    0
+   ],
+   "mass": 11.6,
+   "materials": [
+    [
+     "tpu",
+     100
+    ]
+   ],
+   "info": "Gegossenes, hartes Polyurethan. Nach dem Lösen der Achsmutter einfach von der Achse ziehen.",
+   "color": "#F2EEDF",
+   "label": false
+  },
+  {
+   "id": "rad_hinten_l_2",
    "component_id": "pu_wheels",
    "material_id": "polyurethane",
    "name": "Rolle (PU, 54 mm)",
@@ -1385,54 +1486,95 @@
    "y": 148,
    "w": 32,
    "d": 54,
-   "z": 10,
-   "h": 34,
-   "r": 8,
-   "explode": [
-    -80,
-    0,
-    0
-   ],
-   "mass": 56,
-   "materials": [
-    [
-     "tpu",
-     100
-    ]
-   ],
-   "info": "Lauffläche der Rolle.",
-   "color": "#F2EEDF",
-   "label": false
-  },
-  {
-   "id": "rad_hinten_l_unten",
-   "component_id": "pu_wheels",
-   "material_id": "polyurethane",
-   "name": "Rolle (PU, 54 mm)",
-   "short": "Rolle",
-   "shape": "box",
-   "x": 5,
-   "y": 154,
-   "w": 32,
-   "d": 42,
-   "z": 0,
-   "h": 10,
+   "z": 11,
+   "h": 32,
    "r": 6,
    "explode": [
     -80,
     0,
     0
    ],
-   "mass": 20.4,
+   "mass": 65.3,
    "materials": [
     [
      "tpu",
      100
     ]
    ],
-   "info": "Lauffläche der Rolle.",
+   "info": "Gegossenes, hartes Polyurethan. Nach dem Lösen der Achsmutter einfach von der Achse ziehen.",
    "color": "#F2EEDF",
    "label": false
+  },
+  {
+   "id": "rad_hinten_l_3",
+   "component_id": "pu_wheels",
+   "material_id": "polyurethane",
+   "name": "Rolle (PU, 54 mm)",
+   "short": "Rolle",
+   "shape": "box",
+   "x": 5,
+   "y": 153,
+   "w": 32,
+   "d": 44,
+   "z": 43,
+   "h": 7,
+   "r": 6,
+   "explode": [
+    -80,
+    0,
+    0
+   ],
+   "mass": 11.6,
+   "materials": [
+    [
+     "tpu",
+     100
+    ]
+   ],
+   "info": "Gegossenes, hartes Polyurethan. Nach dem Lösen der Achsmutter einfach von der Achse ziehen.",
+   "color": "#F2EEDF",
+   "label": false
+  },
+  {
+   "id": "rad_hinten_l_4",
+   "component_id": "pu_wheels",
+   "material_id": "polyurethane",
+   "name": "Rolle (PU, 54 mm)",
+   "short": "Rolle",
+   "shape": "box",
+   "x": 5,
+   "y": 162,
+   "w": 32,
+   "d": 26,
+   "z": 50,
+   "h": 4,
+   "r": 6,
+   "explode": [
+    -80,
+    0,
+    0
+   ],
+   "mass": 4,
+   "materials": [
+    [
+     "tpu",
+     100
+    ]
+   ],
+   "info": "Gegossenes, hartes Polyurethan. Nach dem Lösen der Achsmutter einfach von der Achse ziehen.",
+   "color": "#F2EEDF",
+   "label": true,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 4,
+     "w": 24,
+     "d": 18,
+     "r": 3,
+     "fill": "#D9D3BE"
+    }
+   ]
   },
   {
    "id": "lager_hinten_l_a",
@@ -1567,25 +1709,145 @@
    "label": true
   },
   {
-   "id": "rad_hinten_r_oben",
+   "id": "rad_hinten_r_0",
    "component_id": "pu_wheels",
    "material_id": "polyurethane",
    "name": "Rolle (PU, 54 mm)",
    "short": "Rolle",
    "shape": "box",
    "x": 163,
-   "y": 154,
+   "y": 162,
    "w": 32,
-   "d": 42,
-   "z": 44,
-   "h": 10,
+   "d": 26,
+   "z": 0,
+   "h": 4,
    "r": 6,
    "explode": [
     80,
     0,
     0
    ],
-   "mass": 20.4,
+   "mass": 4,
+   "materials": [
+    [
+     "tpu",
+     100
+    ]
+   ],
+   "info": "Gegossenes, hartes Polyurethan. Nach dem Lösen der Achsmutter einfach von der Achse ziehen.",
+   "color": "#F2EEDF",
+   "label": false
+  },
+  {
+   "id": "rad_hinten_r_1",
+   "component_id": "pu_wheels",
+   "material_id": "polyurethane",
+   "name": "Rolle (PU, 54 mm)",
+   "short": "Rolle",
+   "shape": "box",
+   "x": 163,
+   "y": 153,
+   "w": 32,
+   "d": 44,
+   "z": 4,
+   "h": 7,
+   "r": 6,
+   "explode": [
+    80,
+    0,
+    0
+   ],
+   "mass": 11.6,
+   "materials": [
+    [
+     "tpu",
+     100
+    ]
+   ],
+   "info": "Gegossenes, hartes Polyurethan. Nach dem Lösen der Achsmutter einfach von der Achse ziehen.",
+   "color": "#F2EEDF",
+   "label": false
+  },
+  {
+   "id": "rad_hinten_r_2",
+   "component_id": "pu_wheels",
+   "material_id": "polyurethane",
+   "name": "Rolle (PU, 54 mm)",
+   "short": "Rolle",
+   "shape": "box",
+   "x": 163,
+   "y": 148,
+   "w": 32,
+   "d": 54,
+   "z": 11,
+   "h": 32,
+   "r": 6,
+   "explode": [
+    80,
+    0,
+    0
+   ],
+   "mass": 65.3,
+   "materials": [
+    [
+     "tpu",
+     100
+    ]
+   ],
+   "info": "Gegossenes, hartes Polyurethan. Nach dem Lösen der Achsmutter einfach von der Achse ziehen.",
+   "color": "#F2EEDF",
+   "label": false
+  },
+  {
+   "id": "rad_hinten_r_3",
+   "component_id": "pu_wheels",
+   "material_id": "polyurethane",
+   "name": "Rolle (PU, 54 mm)",
+   "short": "Rolle",
+   "shape": "box",
+   "x": 163,
+   "y": 153,
+   "w": 32,
+   "d": 44,
+   "z": 43,
+   "h": 7,
+   "r": 6,
+   "explode": [
+    80,
+    0,
+    0
+   ],
+   "mass": 11.6,
+   "materials": [
+    [
+     "tpu",
+     100
+    ]
+   ],
+   "info": "Gegossenes, hartes Polyurethan. Nach dem Lösen der Achsmutter einfach von der Achse ziehen.",
+   "color": "#F2EEDF",
+   "label": false
+  },
+  {
+   "id": "rad_hinten_r_4",
+   "component_id": "pu_wheels",
+   "material_id": "polyurethane",
+   "name": "Rolle (PU, 54 mm)",
+   "short": "Rolle",
+   "shape": "box",
+   "x": 163,
+   "y": 162,
+   "w": 32,
+   "d": 26,
+   "z": 50,
+   "h": 4,
+   "r": 6,
+   "explode": [
+    80,
+    0,
+    0
+   ],
+   "mass": 4,
    "materials": [
     [
      "tpu",
@@ -1601,71 +1863,11 @@
      "x": 4,
      "y": 4,
      "w": 24,
-     "d": 34,
-     "r": 4,
+     "d": 18,
+     "r": 3,
      "fill": "#D9D3BE"
     }
    ]
-  },
-  {
-   "id": "rad_hinten_r_mitte",
-   "component_id": "pu_wheels",
-   "material_id": "polyurethane",
-   "name": "Rolle (PU, 54 mm)",
-   "short": "Rolle",
-   "shape": "box",
-   "x": 163,
-   "y": 148,
-   "w": 32,
-   "d": 54,
-   "z": 10,
-   "h": 34,
-   "r": 8,
-   "explode": [
-    80,
-    0,
-    0
-   ],
-   "mass": 56,
-   "materials": [
-    [
-     "tpu",
-     100
-    ]
-   ],
-   "info": "Lauffläche der Rolle.",
-   "color": "#F2EEDF",
-   "label": false
-  },
-  {
-   "id": "rad_hinten_r_unten",
-   "component_id": "pu_wheels",
-   "material_id": "polyurethane",
-   "name": "Rolle (PU, 54 mm)",
-   "short": "Rolle",
-   "shape": "box",
-   "x": 163,
-   "y": 154,
-   "w": 32,
-   "d": 42,
-   "z": 0,
-   "h": 10,
-   "r": 6,
-   "explode": [
-    80,
-    0,
-    0
-   ],
-   "mass": 20.4,
-   "materials": [
-    [
-     "tpu",
-     100
-    ]
-   ],
-   "info": "Lauffläche der Rolle.",
-   "color": "#F2EEDF",
-   "label": false
   },
   {
    "id": "lager_hinten_r_a",
@@ -1800,25 +2002,145 @@
    "label": false
   },
   {
-   "id": "rad_vorne_l_oben",
+   "id": "rad_vorne_l_0",
    "component_id": "pu_wheels",
    "material_id": "polyurethane",
    "name": "Rolle (PU, 54 mm)",
    "short": "Rolle",
    "shape": "box",
    "x": 5,
-   "y": 604,
+   "y": 612,
    "w": 32,
-   "d": 42,
-   "z": 44,
-   "h": 10,
+   "d": 26,
+   "z": 0,
+   "h": 4,
    "r": 6,
    "explode": [
     -80,
     0,
     0
    ],
-   "mass": 20.4,
+   "mass": 4,
+   "materials": [
+    [
+     "tpu",
+     100
+    ]
+   ],
+   "info": "Gegossenes, hartes Polyurethan. Nach dem Lösen der Achsmutter einfach von der Achse ziehen.",
+   "color": "#F2EEDF",
+   "label": false
+  },
+  {
+   "id": "rad_vorne_l_1",
+   "component_id": "pu_wheels",
+   "material_id": "polyurethane",
+   "name": "Rolle (PU, 54 mm)",
+   "short": "Rolle",
+   "shape": "box",
+   "x": 5,
+   "y": 603,
+   "w": 32,
+   "d": 44,
+   "z": 4,
+   "h": 7,
+   "r": 6,
+   "explode": [
+    -80,
+    0,
+    0
+   ],
+   "mass": 11.6,
+   "materials": [
+    [
+     "tpu",
+     100
+    ]
+   ],
+   "info": "Gegossenes, hartes Polyurethan. Nach dem Lösen der Achsmutter einfach von der Achse ziehen.",
+   "color": "#F2EEDF",
+   "label": false
+  },
+  {
+   "id": "rad_vorne_l_2",
+   "component_id": "pu_wheels",
+   "material_id": "polyurethane",
+   "name": "Rolle (PU, 54 mm)",
+   "short": "Rolle",
+   "shape": "box",
+   "x": 5,
+   "y": 598,
+   "w": 32,
+   "d": 54,
+   "z": 11,
+   "h": 32,
+   "r": 6,
+   "explode": [
+    -80,
+    0,
+    0
+   ],
+   "mass": 65.3,
+   "materials": [
+    [
+     "tpu",
+     100
+    ]
+   ],
+   "info": "Gegossenes, hartes Polyurethan. Nach dem Lösen der Achsmutter einfach von der Achse ziehen.",
+   "color": "#F2EEDF",
+   "label": false
+  },
+  {
+   "id": "rad_vorne_l_3",
+   "component_id": "pu_wheels",
+   "material_id": "polyurethane",
+   "name": "Rolle (PU, 54 mm)",
+   "short": "Rolle",
+   "shape": "box",
+   "x": 5,
+   "y": 603,
+   "w": 32,
+   "d": 44,
+   "z": 43,
+   "h": 7,
+   "r": 6,
+   "explode": [
+    -80,
+    0,
+    0
+   ],
+   "mass": 11.6,
+   "materials": [
+    [
+     "tpu",
+     100
+    ]
+   ],
+   "info": "Gegossenes, hartes Polyurethan. Nach dem Lösen der Achsmutter einfach von der Achse ziehen.",
+   "color": "#F2EEDF",
+   "label": false
+  },
+  {
+   "id": "rad_vorne_l_4",
+   "component_id": "pu_wheels",
+   "material_id": "polyurethane",
+   "name": "Rolle (PU, 54 mm)",
+   "short": "Rolle",
+   "shape": "box",
+   "x": 5,
+   "y": 612,
+   "w": 32,
+   "d": 26,
+   "z": 50,
+   "h": 4,
+   "r": 6,
+   "explode": [
+    -80,
+    0,
+    0
+   ],
+   "mass": 4,
    "materials": [
     [
      "tpu",
@@ -1834,71 +2156,11 @@
      "x": 4,
      "y": 4,
      "w": 24,
-     "d": 34,
-     "r": 4,
+     "d": 18,
+     "r": 3,
      "fill": "#D9D3BE"
     }
    ]
-  },
-  {
-   "id": "rad_vorne_l_mitte",
-   "component_id": "pu_wheels",
-   "material_id": "polyurethane",
-   "name": "Rolle (PU, 54 mm)",
-   "short": "Rolle",
-   "shape": "box",
-   "x": 5,
-   "y": 598,
-   "w": 32,
-   "d": 54,
-   "z": 10,
-   "h": 34,
-   "r": 8,
-   "explode": [
-    -80,
-    0,
-    0
-   ],
-   "mass": 56,
-   "materials": [
-    [
-     "tpu",
-     100
-    ]
-   ],
-   "info": "Lauffläche der Rolle.",
-   "color": "#F2EEDF",
-   "label": false
-  },
-  {
-   "id": "rad_vorne_l_unten",
-   "component_id": "pu_wheels",
-   "material_id": "polyurethane",
-   "name": "Rolle (PU, 54 mm)",
-   "short": "Rolle",
-   "shape": "box",
-   "x": 5,
-   "y": 604,
-   "w": 32,
-   "d": 42,
-   "z": 0,
-   "h": 10,
-   "r": 6,
-   "explode": [
-    -80,
-    0,
-    0
-   ],
-   "mass": 20.4,
-   "materials": [
-    [
-     "tpu",
-     100
-    ]
-   ],
-   "info": "Lauffläche der Rolle.",
-   "color": "#F2EEDF",
-   "label": false
   },
   {
    "id": "lager_vorne_l_a",
@@ -2033,25 +2295,145 @@
    "label": false
   },
   {
-   "id": "rad_vorne_r_oben",
+   "id": "rad_vorne_r_0",
    "component_id": "pu_wheels",
    "material_id": "polyurethane",
    "name": "Rolle (PU, 54 mm)",
    "short": "Rolle",
    "shape": "box",
    "x": 163,
-   "y": 604,
+   "y": 612,
    "w": 32,
-   "d": 42,
-   "z": 44,
-   "h": 10,
+   "d": 26,
+   "z": 0,
+   "h": 4,
    "r": 6,
    "explode": [
     80,
     0,
     0
    ],
-   "mass": 20.4,
+   "mass": 4,
+   "materials": [
+    [
+     "tpu",
+     100
+    ]
+   ],
+   "info": "Gegossenes, hartes Polyurethan. Nach dem Lösen der Achsmutter einfach von der Achse ziehen.",
+   "color": "#F2EEDF",
+   "label": false
+  },
+  {
+   "id": "rad_vorne_r_1",
+   "component_id": "pu_wheels",
+   "material_id": "polyurethane",
+   "name": "Rolle (PU, 54 mm)",
+   "short": "Rolle",
+   "shape": "box",
+   "x": 163,
+   "y": 603,
+   "w": 32,
+   "d": 44,
+   "z": 4,
+   "h": 7,
+   "r": 6,
+   "explode": [
+    80,
+    0,
+    0
+   ],
+   "mass": 11.6,
+   "materials": [
+    [
+     "tpu",
+     100
+    ]
+   ],
+   "info": "Gegossenes, hartes Polyurethan. Nach dem Lösen der Achsmutter einfach von der Achse ziehen.",
+   "color": "#F2EEDF",
+   "label": false
+  },
+  {
+   "id": "rad_vorne_r_2",
+   "component_id": "pu_wheels",
+   "material_id": "polyurethane",
+   "name": "Rolle (PU, 54 mm)",
+   "short": "Rolle",
+   "shape": "box",
+   "x": 163,
+   "y": 598,
+   "w": 32,
+   "d": 54,
+   "z": 11,
+   "h": 32,
+   "r": 6,
+   "explode": [
+    80,
+    0,
+    0
+   ],
+   "mass": 65.3,
+   "materials": [
+    [
+     "tpu",
+     100
+    ]
+   ],
+   "info": "Gegossenes, hartes Polyurethan. Nach dem Lösen der Achsmutter einfach von der Achse ziehen.",
+   "color": "#F2EEDF",
+   "label": false
+  },
+  {
+   "id": "rad_vorne_r_3",
+   "component_id": "pu_wheels",
+   "material_id": "polyurethane",
+   "name": "Rolle (PU, 54 mm)",
+   "short": "Rolle",
+   "shape": "box",
+   "x": 163,
+   "y": 603,
+   "w": 32,
+   "d": 44,
+   "z": 43,
+   "h": 7,
+   "r": 6,
+   "explode": [
+    80,
+    0,
+    0
+   ],
+   "mass": 11.6,
+   "materials": [
+    [
+     "tpu",
+     100
+    ]
+   ],
+   "info": "Gegossenes, hartes Polyurethan. Nach dem Lösen der Achsmutter einfach von der Achse ziehen.",
+   "color": "#F2EEDF",
+   "label": false
+  },
+  {
+   "id": "rad_vorne_r_4",
+   "component_id": "pu_wheels",
+   "material_id": "polyurethane",
+   "name": "Rolle (PU, 54 mm)",
+   "short": "Rolle",
+   "shape": "box",
+   "x": 163,
+   "y": 612,
+   "w": 32,
+   "d": 26,
+   "z": 50,
+   "h": 4,
+   "r": 6,
+   "explode": [
+    80,
+    0,
+    0
+   ],
+   "mass": 4,
    "materials": [
     [
      "tpu",
@@ -2067,71 +2449,11 @@
      "x": 4,
      "y": 4,
      "w": 24,
-     "d": 34,
-     "r": 4,
+     "d": 18,
+     "r": 3,
      "fill": "#D9D3BE"
     }
    ]
-  },
-  {
-   "id": "rad_vorne_r_mitte",
-   "component_id": "pu_wheels",
-   "material_id": "polyurethane",
-   "name": "Rolle (PU, 54 mm)",
-   "short": "Rolle",
-   "shape": "box",
-   "x": 163,
-   "y": 598,
-   "w": 32,
-   "d": 54,
-   "z": 10,
-   "h": 34,
-   "r": 8,
-   "explode": [
-    80,
-    0,
-    0
-   ],
-   "mass": 56,
-   "materials": [
-    [
-     "tpu",
-     100
-    ]
-   ],
-   "info": "Lauffläche der Rolle.",
-   "color": "#F2EEDF",
-   "label": false
-  },
-  {
-   "id": "rad_vorne_r_unten",
-   "component_id": "pu_wheels",
-   "material_id": "polyurethane",
-   "name": "Rolle (PU, 54 mm)",
-   "short": "Rolle",
-   "shape": "box",
-   "x": 163,
-   "y": 604,
-   "w": 32,
-   "d": 42,
-   "z": 0,
-   "h": 10,
-   "r": 6,
-   "explode": [
-    80,
-    0,
-    0
-   ],
-   "mass": 20.4,
-   "materials": [
-    [
-     "tpu",
-     100
-    ]
-   ],
-   "info": "Lauffläche der Rolle.",
-   "color": "#F2EEDF",
-   "label": false
   },
   {
    "id": "lager_vorne_r_a",

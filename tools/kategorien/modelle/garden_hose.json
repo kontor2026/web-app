@@ -1,6 +1,202 @@
 {
  "parts": [
   {
+   "id": "ueberwurf",
+   "component_id": "hose_connector",
+   "material_id": "pp",
+   "name": "Überwurfmutter",
+   "short": "Überwurf",
+   "shape": "box",
+   "x": 125,
+   "y": 130,
+   "w": 30,
+   "d": 32,
+   "z": 0,
+   "h": 32,
+   "r": 6,
+   "explode": [
+    -40,
+    0,
+    306.0
+   ],
+   "mass": 12,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Wird über die Spreizkrallen geschraubt und presst sie auf den Schlauch. Aufdrehen und abziehen, dann ist der Anschluss vom Schlauch getrennt.",
+   "color": "#F2A23A",
+   "sortBias": 60,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 2,
+     "w": 2,
+     "d": 28,
+     "r": 1,
+     "fill": "#D5892A"
+    },
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 2,
+     "w": 2,
+     "d": 28,
+     "r": 1,
+     "fill": "#D5892A"
+    },
+    {
+     "shape": "box",
+     "x": 16,
+     "y": 2,
+     "w": 2,
+     "d": 28,
+     "r": 1,
+     "fill": "#D5892A"
+    },
+    {
+     "shape": "box",
+     "x": 22,
+     "y": 2,
+     "w": 2,
+     "d": 28,
+     "r": 1,
+     "fill": "#D5892A"
+    }
+   ]
+  },
+  {
+   "id": "kupplung",
+   "component_id": "hose_connector",
+   "material_id": "pp",
+   "name": "Schlauchstück mit Spreizkrallen",
+   "short": "Schlauchstück",
+   "shape": "box",
+   "x": 155,
+   "y": 133,
+   "w": 50,
+   "d": 26,
+   "z": 3,
+   "h": 26,
+   "r": 5,
+   "explode": [
+    0,
+    0,
+    306.0
+   ],
+   "mass": 18.1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "PP-Kupplung, die auf Wasserhahn, Brause oder Spritze klickt. Die Krallen greifen in den Schlauch. Ganz aus Kunststoff, aber keine Verpackung: zum Wertstoffhof.",
+   "color": "#5B6066",
+   "sortBias": 60,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 4,
+     "w": 14,
+     "d": 18,
+     "r": 2,
+     "fill": "#F2A23A"
+    },
+    {
+     "shape": "box",
+     "x": 30,
+     "y": 3,
+     "w": 18,
+     "d": 20,
+     "r": 4,
+     "fill": "#464B50"
+    }
+   ]
+  },
+  {
+   "id": "oring",
+   "component_id": "hose_connector",
+   "material_id": "rubber",
+   "name": "O-Ring-Dichtung",
+   "short": "O-Ring",
+   "shape": "box",
+   "x": 205,
+   "y": 138,
+   "w": 3,
+   "d": 16,
+   "z": 8,
+   "h": 16,
+   "r": 1,
+   "explode": [
+    30,
+    0,
+    306.0
+   ],
+   "mass": 0.5,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "info": "Gummiring vorn in der Kupplung, er dichtet zum Gegenstück ab. Tropft der Anschluss, reicht oft ein neuer O-Ring.",
+   "color": "#1F2224",
+   "sortBias": 60
+  },
+  {
+   "id": "hahnstueck",
+   "component_id": "hose_connector",
+   "material_id": "pp",
+   "name": "Hahnanschluss 3/4 Zoll",
+   "short": "Hahnanschluss",
+   "shape": "cyl",
+   "x": 230,
+   "y": 120,
+   "w": 36,
+   "z": 0,
+   "h": 30,
+   "explode": [
+    70,
+    0,
+    306.0
+   ],
+   "mass": 22.1,
+   "materials": [
+    [
+     "pp",
+     85
+    ],
+    [
+     "gummi",
+     15
+    ]
+   ],
+   "info": "Wird auf den Wasserhahn geschraubt, innen sitzt eine Flachdichtung aus Gummi. Am Hahn lassen, wenn nur der Schlauch entsorgt wird.",
+   "color": "#5B6066",
+   "sortBias": 60,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 4,
+     "w": 28,
+     "fill": "#F2A23A"
+    },
+    {
+     "shape": "cyl",
+     "x": 11,
+     "y": 11,
+     "w": 14,
+     "fill": "#2B2E31"
+    }
+   ]
+  },
+  {
    "id": "mantel",
    "component_id": "pvc_hose",
    "material_id": "pvc",
@@ -74,7 +270,14 @@
      "x": 73.5,
      "y": 73.5,
      "w": 253.0,
-     "fill": "#5E6B60"
+     "fill": "#24522C"
+    },
+    {
+     "shape": "cyl",
+     "x": 145.8,
+     "y": 145.8,
+     "w": 168.4,
+     "fill": "#DCD8CE"
     }
    ]
   },
@@ -152,7 +355,14 @@
      "x": 73.5,
      "y": 73.5,
      "w": 249.0,
-     "fill": "#5E6B60"
+     "fill": "#A9A388"
+    },
+    {
+     "shape": "cyl",
+     "x": 143.4,
+     "y": 143.4,
+     "w": 167.2,
+     "fill": "#DCD8CE"
     }
    ]
   },
@@ -230,199 +440,14 @@
      "x": 73.5,
      "y": 73.5,
      "w": 245.0,
-     "fill": "#5E6B60"
-    }
-   ]
-  },
-  {
-   "id": "ueberwurf",
-   "component_id": "hose_connector",
-   "material_id": "pp",
-   "name": "Überwurfmutter",
-   "short": "Überwurf",
-   "shape": "box",
-   "x": 108,
-   "y": 133,
-   "w": 30,
-   "d": 32,
-   "z": 14,
-   "h": 32,
-   "r": 6,
-   "explode": [
-    312,
-    0,
-    0
-   ],
-   "mass": 12,
-   "materials": [
-    [
-     "pp",
-     100
-    ]
-   ],
-   "info": "Wird über die Spreizkrallen geschraubt und presst sie auf den Schlauch. Aufdrehen und abziehen, dann ist der Anschluss vom Schlauch getrennt.",
-   "color": "#F2A23A",
-   "marks": [
-    {
-     "shape": "box",
-     "x": 4,
-     "y": 2,
-     "w": 2,
-     "d": 28,
-     "r": 1,
-     "fill": "#D5892A"
-    },
-    {
-     "shape": "box",
-     "x": 10,
-     "y": 2,
-     "w": 2,
-     "d": 28,
-     "r": 1,
-     "fill": "#D5892A"
-    },
-    {
-     "shape": "box",
-     "x": 16,
-     "y": 2,
-     "w": 2,
-     "d": 28,
-     "r": 1,
-     "fill": "#D5892A"
-    },
-    {
-     "shape": "box",
-     "x": 22,
-     "y": 2,
-     "w": 2,
-     "d": 28,
-     "r": 1,
-     "fill": "#D5892A"
-    }
-   ]
-  },
-  {
-   "id": "kupplung",
-   "component_id": "hose_connector",
-   "material_id": "pp",
-   "name": "Schlauchstück mit Spreizkrallen",
-   "short": "Schlauchstück",
-   "shape": "box",
-   "x": 138,
-   "y": 136,
-   "w": 50,
-   "d": 26,
-   "z": 17,
-   "h": 26,
-   "r": 5,
-   "explode": [
-    330,
-    0,
-    0
-   ],
-   "mass": 18.1,
-   "materials": [
-    [
-     "pp",
-     100
-    ]
-   ],
-   "info": "PP-Kupplung, die auf Wasserhahn, Brause oder Spritze klickt. Die Krallen greifen in den Schlauch. Ganz aus Kunststoff, aber keine Verpackung: zum Wertstoffhof.",
-   "color": "#5B6066",
-   "marks": [
-    {
-     "shape": "box",
-     "x": 2,
-     "y": 4,
-     "w": 14,
-     "d": 18,
-     "r": 2,
-     "fill": "#F2A23A"
-    },
-    {
-     "shape": "box",
-     "x": 30,
-     "y": 3,
-     "w": 18,
-     "d": 20,
-     "r": 4,
-     "fill": "#464B50"
-    }
-   ]
-  },
-  {
-   "id": "oring",
-   "component_id": "hose_connector",
-   "material_id": "rubber",
-   "name": "O-Ring-Dichtung",
-   "short": "O-Ring",
-   "shape": "box",
-   "x": 188,
-   "y": 141,
-   "w": 3,
-   "d": 16,
-   "z": 22,
-   "h": 16,
-   "r": 1,
-   "explode": [
-    345,
-    0,
-    0
-   ],
-   "mass": 0.5,
-   "materials": [
-    [
-     "gummi",
-     100
-    ]
-   ],
-   "info": "Gummiring vorn in der Kupplung, er dichtet zum Gegenstück ab. Tropft der Anschluss, reicht oft ein neuer O-Ring.",
-   "color": "#1F2224"
-  },
-  {
-   "id": "hahnstueck",
-   "component_id": "hose_connector",
-   "material_id": "pp",
-   "name": "Hahnanschluss 3/4 Zoll",
-   "short": "Hahnanschluss",
-   "shape": "cyl",
-   "x": 150,
-   "y": 225,
-   "w": 36,
-   "z": 10,
-   "h": 30,
-   "explode": [
-    300,
-    20,
-    0
-   ],
-   "mass": 22.1,
-   "materials": [
-    [
-     "pp",
-     85
-    ],
-    [
-     "gummi",
-     15
-    ]
-   ],
-   "info": "Wird auf den Wasserhahn geschraubt, innen sitzt eine Flachdichtung aus Gummi. Am Hahn lassen, wenn nur der Schlauch entsorgt wird.",
-   "color": "#5B6066",
-   "marks": [
-    {
-     "shape": "cyl",
-     "x": 4,
-     "y": 4,
-     "w": 28,
-     "fill": "#F2A23A"
+     "fill": "#1C231F"
     },
     {
      "shape": "cyl",
-     "x": 11,
-     "y": 11,
-     "w": 14,
-     "fill": "#2B2E31"
+     "x": 141.0,
+     "y": 141.0,
+     "w": 166.0,
+     "fill": "#DCD8CE"
     }
    ]
   }

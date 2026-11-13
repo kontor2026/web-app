@@ -17,7 +17,7 @@
    "explode": [
     0,
     0,
-    108.8
+    136.8
    ],
    "mass": 5.9,
    "materials": [
@@ -114,7 +114,7 @@
    "explode": [
     0,
     0,
-    100.8
+    122.8
    ],
    "mass": 18.8,
    "materials": [
@@ -341,7 +341,7 @@
    "explode": [
     0,
     0,
-    40.8
+    56.8
    ],
    "mass": 20,
    "materials": [
@@ -379,7 +379,7 @@
    "explode": [
     0,
     0,
-    30.8
+    40.8
    ],
    "mass": 0.4,
    "materials": [
@@ -538,7 +538,7 @@
    "explode": [
     0,
     0,
-    19.8
+    23.8
    ],
    "mass": 3.5,
    "materials": [
@@ -567,7 +567,7 @@
    "explode": [
     0,
     0,
-    9.8
+    7.8
    ],
    "mass": 0.5,
    "materials": [
@@ -656,17 +656,17 @@
    "name": "Kontaktfolie mit Chip",
    "short": "Chip",
    "shape": "box",
-   "x": 6,
-   "y": 60,
-   "w": 28,
+   "x": 8,
+   "y": 58,
+   "w": 24,
    "d": 0.3,
-   "z": 4,
-   "h": 36,
+   "z": 2.5,
+   "h": 7.5,
    "r": 0,
    "explode": [
     0,
-    35,
-    0
+    30,
+    37.8
    ],
    "mass": 0.7,
    "materials": [
@@ -688,7 +688,8 @@
     ]
    ],
    "info": "Biegsame Folie mit vergoldeten Kontakten und einem Speicherchip, der den Füllstand merkt. Dranlassen, Wiederbefüller nutzen ihn weiter.",
-   "color": "#C08A2E"
+   "color": "#C08A2E",
+   "sortBias": 1
   }
  ]
 }

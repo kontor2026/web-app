@@ -39,8 +39,8 @@
   "metalle_mg": {},
   "herkunft": {},
   "materialien_g": {
-   "hdpe": 567.5,
-   "pp": 32.3
+   "hdpe": 568.3,
+   "pp": 31.4
   },
   "co2_kg": 1.288,
   "co2_mit_recyclat_kg": 0.167,
@@ -131,17 +131,17 @@
    "name": "Lochplatte der Brause",
    "short": "Lochplatte",
    "shape": "cyl",
-   "x": 380,
+   "x": 375,
    "y": 40,
    "w": 70,
-   "z": 272,
+   "z": 270,
    "h": 3,
    "explode": [
     90,
     0,
     70
    ],
-   "mass": 7.8,
+   "mass": 7.6,
    "materials": [
     [
      "pp",
@@ -455,17 +455,17 @@
    "name": "Brausekopf",
    "short": "Brause",
    "shape": "cyl",
-   "x": 380,
+   "x": 375,
    "y": 40,
    "w": 70,
-   "z": 250,
+   "z": 248,
    "h": 22,
    "explode": [
     90,
     0,
     20
    ],
-   "mass": 24.5,
+   "mass": 23.8,
    "materials": [
     [
      "pp",
@@ -503,7 +503,7 @@
     0,
     0
    ],
-   "mass": 39.2,
+   "mass": 38.1,
    "materials": [
     [
      "hdpe",
@@ -543,7 +543,7 @@
     0,
     0
    ],
-   "mass": 7.8,
+   "mass": 7.6,
    "materials": [
     [
      "hdpe",
@@ -573,7 +573,7 @@
     0,
     0
    ],
-   "mass": 7.8,
+   "mass": 7.6,
    "materials": [
     [
      "hdpe",
@@ -602,7 +602,7 @@
     0,
     0
    ],
-   "mass": 14.7,
+   "mass": 14.3,
    "materials": [
     [
      "hdpe",
@@ -623,25 +623,25 @@
    ]
   },
   {
-   "id": "rohr_4",
+   "id": "rohr_5",
    "component_id": "watering_can_body",
    "material_id": "hdpe",
    "name": "Ausgussrohr",
    "short": "Ausgussrohr",
    "shape": "box",
-   "x": 385,
-   "y": 55,
+   "x": 390,
+   "y": 57,
    "w": 40,
-   "d": 40,
-   "z": 190,
-   "h": 60,
+   "d": 36,
+   "z": 210,
+   "h": 38,
    "r": 14,
    "explode": [
     0,
     0,
     0
    ],
-   "mass": 17.6,
+   "mass": 15.2,
    "materials": [
     [
      "hdpe",
@@ -649,7 +649,49 @@
     ]
    ],
    "info": "Das Ausgussrohr ist mit der Kanne aus einem Stück geblasen.",
-   "color": "#3F8F5A"
+   "color": "#3F8F5A",
+   "label": true,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 6,
+     "y": 6,
+     "w": 32,
+     "d": 24,
+     "r": 10,
+     "fill": "#347A4C"
+    }
+   ]
+  },
+  {
+   "id": "rohr_4",
+   "component_id": "watering_can_body",
+   "material_id": "hdpe",
+   "name": "Ausgussrohr",
+   "short": "Ausgussrohr",
+   "shape": "box",
+   "x": 360,
+   "y": 57,
+   "w": 40,
+   "d": 36,
+   "z": 172,
+   "h": 38,
+   "r": 14,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 15.2,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "Das Ausgussrohr ist mit der Kanne aus einem Stück geblasen.",
+   "color": "#3F8F5A",
+   "label": false
   },
   {
    "id": "rohr_3",
@@ -658,19 +700,19 @@
    "name": "Ausgussrohr",
    "short": "Ausgussrohr",
    "shape": "box",
-   "x": 340,
-   "y": 55,
-   "w": 45,
-   "d": 40,
-   "z": 130,
-   "h": 65,
+   "x": 330,
+   "y": 57,
+   "w": 40,
+   "d": 36,
+   "z": 134,
+   "h": 38,
    "r": 14,
    "explode": [
     0,
     0,
     0
    ],
-   "mass": 19.6,
+   "mass": 15.2,
    "materials": [
     [
      "hdpe",
@@ -688,19 +730,19 @@
    "name": "Ausgussrohr",
    "short": "Ausgussrohr",
    "shape": "box",
-   "x": 290,
-   "y": 55,
-   "w": 50,
-   "d": 40,
-   "z": 70,
-   "h": 65,
+   "x": 300,
+   "y": 57,
+   "w": 40,
+   "d": 36,
+   "z": 96,
+   "h": 38,
    "r": 14,
    "explode": [
     0,
     0,
     0
    ],
-   "mass": 19.6,
+   "mass": 15.2,
    "materials": [
     [
      "hdpe",
@@ -718,19 +760,49 @@
    "name": "Ausgussrohr",
    "short": "Ausgussrohr",
    "shape": "box",
-   "x": 240,
-   "y": 55,
-   "w": 50,
-   "d": 40,
-   "z": 20,
-   "h": 55,
+   "x": 270,
+   "y": 57,
+   "w": 40,
+   "d": 36,
+   "z": 58,
+   "h": 38,
    "r": 14,
    "explode": [
     0,
     0,
     0
    ],
-   "mass": 19.6,
+   "mass": 15.2,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "Das Ausgussrohr ist mit der Kanne aus einem Stück geblasen.",
+   "color": "#3F8F5A",
+   "label": false
+  },
+  {
+   "id": "rohr_0",
+   "component_id": "watering_can_body",
+   "material_id": "hdpe",
+   "name": "Ausgussrohr",
+   "short": "Ausgussrohr",
+   "shape": "box",
+   "x": 240,
+   "y": 57,
+   "w": 40,
+   "d": 36,
+   "z": 20,
+   "h": 38,
+   "r": 14,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 15.2,
    "materials": [
     [
      "hdpe",
@@ -760,7 +832,7 @@
     0,
     0
    ],
-   "mass": 421.6,
+   "mass": 409.5,
    "materials": [
     [
      "hdpe",

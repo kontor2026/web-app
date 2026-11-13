@@ -158,19 +158,55 @@
      "fill": "#DADAD4"
     },
     {
+     "shape": "cyl",
+     "x": 56,
+     "y": 56,
+     "w": 88,
+     "fill": "#E2E2DC"
+    },
+    {
      "shape": "box",
-     "x": 94,
-     "y": 2,
-     "w": 6,
+     "x": 62,
+     "y": 96,
+     "w": 76,
+     "d": 8,
+     "r": 2,
+     "fill": "#CFCFC8"
+    },
+    {
+     "shape": "box",
+     "x": 93,
+     "y": 0,
+     "w": 14,
      "d": 6,
+     "r": 1,
      "fill": "#2F6DB5"
     },
     {
      "shape": "box",
-     "x": 100,
-     "y": 2,
-     "w": 6,
+     "x": 93,
+     "y": 194,
+     "w": 14,
      "d": 6,
+     "r": 1,
+     "fill": "#2F6DB5"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 93,
+     "w": 6,
+     "d": 14,
+     "r": 1,
+     "fill": "#2F6DB5"
+    },
+    {
+     "shape": "box",
+     "x": 194,
+     "y": 93,
+     "w": 6,
+     "d": 14,
+     "r": 1,
      "fill": "#2F6DB5"
     }
    ]
@@ -221,14 +257,14 @@
    "x": 2,
    "y": 2,
    "w": 196,
-   "z": 96,
-   "h": 90,
+   "z": 172,
+   "h": 14,
    "explode": [
     0,
     0,
     0.0
    ],
-   "mass": 108.6,
+   "mass": 19.8,
    "materials": [
     [
      "pp",
@@ -239,23 +275,51 @@
    "color": "#F4F4F1"
   },
   {
+   "id": "wand_mitte",
+   "component_id": "pp_bucket_body",
+   "material_id": "pp",
+   "name": "Eimerwand",
+   "short": "Wand",
+   "shape": "cyl",
+   "x": 4,
+   "y": 4,
+   "w": 192,
+   "z": 32,
+   "h": 140,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 158,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Die Wand wird nach unten etwas enger, so lassen sich leere Eimer ineinanderstapeln.",
+   "color": "#F4F4F1",
+   "label": false
+  },
+  {
    "id": "wand_unten",
    "component_id": "pp_bucket_body",
    "material_id": "pp",
    "name": "Eimerwand unten",
    "short": "Wand",
    "shape": "cyl",
-   "x": 6,
-   "y": 6,
-   "w": 188,
+   "x": 7,
+   "y": 7,
+   "w": 186,
    "z": 8,
-   "h": 88,
+   "h": 24,
    "explode": [
     0,
     0,
     0.0
    ],
-   "mass": 93.8,
+   "mass": 24.7,
    "materials": [
     [
      "pp",
@@ -270,7 +334,7 @@
    "id": "boden",
    "component_id": "pp_bucket_body",
    "material_id": "pp",
-   "name": "Eimerboden",
+   "name": "Eimerboden mit Standring",
    "short": "Boden",
    "shape": "cyl",
    "x": 9,
@@ -300,18 +364,16 @@
    "material_id": "pp",
    "name": "In-Mould-Etikett",
    "short": "Etikett",
-   "shape": "box",
-   "x": 198,
-   "y": 50,
-   "w": 0.3,
-   "d": 100,
-   "z": 30,
-   "h": 150,
-   "r": 0,
+   "shape": "cyl",
+   "x": 3,
+   "y": 3,
+   "w": 194,
+   "z": 36,
+   "h": 136,
    "explode": [
-    70,
+    250,
     0,
-    0
+    -30
    ],
    "mass": 4,
    "materials": [
@@ -324,9 +386,26 @@
      8
     ]
    ],
-   "info": "Bedruckte PP-Folie, die beim Spritzgießen mit der Wand verschmolzen wird. Nicht ablösbar, muss aber auch nicht: Sie ist aus demselben Kunststoff.",
+   "info": "Bedruckte PP-Folie rund um den Eimer, beim Spritzgießen mit der Wand verschmolzen. Nicht ablösbar, muss aber auch nicht: Sie ist aus demselben Kunststoff.",
    "color": "#2F6DB5",
-   "sortBias": 100
+   "sortBias": 1,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 1,
+     "y": 1,
+     "w": 192,
+     "fill": "#C9CCD0"
+    },
+    {
+     "shape": "cyl",
+     "x": 40,
+     "y": 60,
+     "w": 140,
+     "d": 128,
+     "fill": "#DADCDF"
+    }
+   ]
   }
  ]
 }
