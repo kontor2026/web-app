@@ -1,0 +1,25 @@
+{
+ "oeko2012": {
+  "titel": "Recycling critical raw materials from waste electronic equipment",
+  "autoren": "Matthias Buchert, Andreas Manhart, Daniel Bleher, Detlef Pingel",
+  "herausgeber": "Öko-Institut e.V., Darmstadt",
+  "jahr": 2012,
+  "url": "https://www.oeko.de/oekodoc/1375/2012-010-en.pdf",
+  "genutzt": "Tabellen 9, 12, 13, 15, 23, 25: Metallgehalte je Gerät und je kg Leiterplatte"
+ },
+ "idemat2026": {
+  "titel": "Idemat 2026 RevB2 (Datei Idemat_2026RevB2.xlsx, Blatt Idemat2026)",
+  "autoren": "Joost Vogtländer u. a., Stichting Sustainability Impact Metrics (SSIM), TU Delft",
+  "jahr": 2026,
+  "url": "https://www.ecocostsvalue.com/data-tools-books/",
+  "lizenz": "CC BY-NC (frei für Bildung, Forschung, Unternehmen; nicht für Anbieter von LCA-Software)",
+  "genutzt": "CO2-Fußabdruck cradle-to-gate (IPCC 2021 GWP100) je kg Material, Neuware und Recyclat"
+ },
+ "westmetall2026": {
+  "titel": "Westmetall Marktdaten (LME, London Fixing, WM-Notiz)",
+  "herausgeber": "Westmetall GmbH & Co. KG",
+  "stand": "2026-11-13",
+  "url": "https://www.westmetall.com/en/markdaten.php",
+  "genutzt": "Metallpreise für den Rohstoffwert"
+ }
+}

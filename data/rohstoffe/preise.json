@@ -1,0 +1,23 @@
+{
+ "_info": "Metallpreise in EUR je Gramm, Quelle westmetall2026, Stand 13.11.2026. USD-Kurse (LME Cash Settlement 12.11.2026) umgerechnet mit dem EZB-Referenzkurs vom 13.11.2026 (1,1052 USD je EUR). Pd und Co: kein Preis gefunden, fließen nicht in den Rohstoffwert ein.",
+ "stand": "2026-11-13",
+ "eur_je_g": {
+  "Au": 111.52,
+  "Ag": 1.4339,
+  "Cu": 0.012622,
+  "Al": 0.002855,
+  "Ni": 0.014486,
+  "Zn": 0.003403,
+  "Sn": 0.042210
+ },
+ "herleitung": {
+  "Au": "Gold in Euro/kg 111.520,00 (13.11.2026)",
+  "Ag": "Fine Silver in Euro/kg 1.433,90 (13.11.2026, niedrigerer Wert)",
+  "Cu": "WM-Notiz Kupfer niedrig 1.262,22 EUR je 100 kg (13.11.2026)",
+  "Al": "LME Cash 3.155,50 USD/t / 1,1052",
+  "Ni": "LME Cash 16.010,00 USD/t / 1,1052",
+  "Zn": "LME Cash 3.760,50 USD/t / 1,1052",
+  "Sn": "LME Cash 46.650,00 USD/t / 1,1052"
+ },
+ "fehlend": ["Pd", "Co", "Pt"]
+}

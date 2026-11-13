@@ -1,0 +1,15 @@
+{
+ "_info": "Metallgehalte von Elektrogeräten. Quelle: oeko2012. Werte in mg je Gerät bzw. mg je kg Leiterplatte, unverändert aus den genannten Tabellen.",
+ "geraete": {
+  "smartphone": {"tabelle": "oeko2012 Tab. 25", "mg": {"Co": 6300, "Ag": 305, "Au": 30, "Pd": 11, "Nd": 50, "Pr": 10}},
+  "laptop": {"tabelle": "oeko2012 Tab. 23 (LED-Hintergrundbeleuchtung)", "mg": {"Co": 65000, "Nd": 2100, "Ta": 1700, "Ag": 440, "Pr": 270, "Au": 100, "Dy": 60, "In": 40, "Pd": 40, "Pt": 4, "Ga": 1.6}},
+  "monitor": {"tabelle": "oeko2012 Tab. 12 (LED-Hintergrundbeleuchtung)", "mg": {"Ag": 520, "Au": 200, "In": 82, "Pd": 40, "Ga": 3.3, "Y": 3.2}},
+  "television": {"tabelle": "oeko2012 Tab. 13 (LED-Hintergrundbeleuchtung)", "mg": {"Ag": 580, "In": 260, "Au": 140, "Pd": 44, "Ga": 4.9, "Y": 4.8}}
+ },
+ "leiterplatte_mg_je_kg": {
+  "it": {"tabelle": "oeko2012 Tab. 15, Motherboard Notebook (Umicore 2011)", "Ag": 800, "Au": 180, "Pd": 80},
+  "unterhaltung": {"tabelle": "oeko2012 Tab. 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)", "Ag": 250, "Au": 60, "Pd": 19}
+ },
+ "it_kategorien": ["smartphone", "tablet", "smartwatch", "e_reader", "desktop_pc", "game_console", "game_controller", "wifi_router", "smart_speaker", "digital_camera", "webcam", "external_hard_drive", "usb_stick", "fitness_tracker", "calculator", "drone", "inkjet_printer", "earbuds", "headphones", "bluetooth_speaker", "power_bank", "keyboard", "computer_mouse", "remote_control"],
+ "akku_kobaltanteil": {"wert": 0.137, "notiz": "Schätzung: Kobalt je kg Lithium-Ionen-Zelle mit LiCoO2-Kathode, abgeleitet aus oeko2012 Tab. 25 (6,3 g Co je Smartphone) bei 46 g Akkumasse"}
+}
