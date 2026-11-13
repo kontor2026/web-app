@@ -75,14 +75,14 @@ def _chat_openai(*, model, system, user, schema, name, images=(), max_tokens=250
 
 def health():
     """Ist der Modellserver erreichbar und das Modell geladen?"""
+    if config.LLM_MODE == 'mock':          # Abschaltschalter hat Vorrang vor dem Anbieter
+        return {'ok': True, 'modus': 'mock', 'modell': None, 'hinweis': 'KI abgeschaltet: nur Kategorien und Foto-Abgleich'}
     if config.LLM_PROVIDER == 'claude':
         from . import llm_claude
         return llm_claude.health()
     if config.LLM_PROVIDER == 'claude-abo':
         from . import llm_claude_abo
         return llm_claude_abo.health()
-    if config.LLM_MODE == 'mock':
-        return {'ok': True, 'modus': 'mock', 'modell': None, 'hinweis': 'Mock-Modus: nur Foto-Abgleich, keine KI'}
     try:
         r = httpx.get(f'{config.LLM_BASE_URL}/models', timeout=3,
                       headers={'Authorization': f'Bearer {config.LLM_API_KEY}'})
