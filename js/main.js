@@ -418,7 +418,33 @@ function viewSheet() {
         <p class="source" style="margin-top:10px">Rote Ecke: von der EU als kritischer Rohstoff eingestuft.</p>
       </div>
     `, crumbs);
+    panel.querySelectorAll('[data-mat]').forEach((b) => b.addEventListener('click', () => renderMaterial(id, b.dataset.mat, crumbs)));
     animate(panel.querySelectorAll('.mbar b'), { scaleX: [0, 1], transformOrigin: ['0% 50%', '0% 50%'], delay: stagger(60, { start: 200 }), duration: 600, ease: 'outExpo' });
+  }
+
+  function renderMaterial(partId, mid, parentCrumbs) {
+    const m = MATERIALS[mid];
+    const crumbs = [...parentCrumbs, { label: m.name, go: () => renderMaterial(partId, mid, parentCrumbs) }];
+    const usedIn = obj.parts.filter((p) => p.materials.some(([x]) => x === mid));
+    setPanel(`
+      <div style="display:flex;justify-content:space-between;gap:16px;align-items:flex-start">
+        <div>
+          <div class="eyebrow">Material · ${CLASSES[m.cls].label}</div>
+          <h1 style="margin-top:8px">${m.name}</h1>
+          <div class="sub">Recycling: ${m.recycling}</div>
+        </div>
+        ${m.code ? `<div class="rcode"><svg viewBox="0 0 54 50"><path d="M27 4 L50 44 L4 44 Z"/></svg><span>${m.code}</span></div>` : ''}
+      </div>
+      <p>${m.text}</p>
+      <div>
+        <h3>Elemente in diesem Material</h3>
+        <div class="elements">${m.elements.map(([s, v]) => elTile(s, v)).join('')}</div>
+      </div>
+      <div>
+        <h3>Steckt auch in</h3>
+        <div class="plist">${usedIn.map((p) => `<button class="prow" data-part="${p.id}"><span class="n">${nums.get(p.id) ?? '··'}</span><span>${p.name}</span><span class="m">${fmt(p.mass)} g</span></button>`).join('')}</div>
+      </div>
+    `, crumbs);
   }
 
 
