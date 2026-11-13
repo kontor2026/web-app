@@ -129,6 +129,12 @@ export const MATERIALS = {
                 text: 'Klebeschicht auf Bändern und Etiketten. Stört im Recycling kaum, wenn sie dünn ist.' },
   organisch:  { name: 'Pflanzenreste (Tee, Kaffee)', cls: 'papier', elements: [['C', 48], ['O', 40], ['H', 6], ['N', 3]], recycling: 'hoch',
                 text: 'Getrocknete Blätter oder gemahlene Bohnen. Gehören in die Biotonne und werden zu Kompost oder Biogas.' },
+  tinte:      { name: 'Tinte / Tintenpaste', cls: 'kunststoff', elements: [['C', 45], ['O', 35], ['H', 8], ['N', 4], ['Cu', 1]], recycling: 'gering',
+                text: 'Farbstoffe in Wasser, Öl oder Glykol. Reste nicht in den Ausguss, sondern eingetrocknet in den Restmüll.' },
+  emaille:    { name: 'Emaille', cls: 'glas', elements: [['Si', 25], ['O', 45], ['B', 5], ['Na', 8], ['Ti', 5]], recycling: 'gering',
+                text: 'Glasartige Schicht, auf Stahl aufgeschmolzen. Hart und kratzfest, platzt bei Schlägen ab.' },
+  zink:       { name: 'Zinklegierung (Zamak)', cls: 'metall', elements: [['Zn', 95], ['Al', 4], ['Cu', 1]], recycling: 'hoch',
+                text: 'Gut gießbares Metall für Reißverschluss-Schieber, Schnallen und Spielzeugautos.' },
 };
 
 // Elemente: Endpunkt der Drill-down-Kette.

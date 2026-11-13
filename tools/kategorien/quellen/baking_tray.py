@@ -19,7 +19,7 @@ teile = [
          color='#9DA4AA', marks=[mark('box', 4, 4, 452, 372, 12, '#C4C9CD')]),
     teil('emaille_innen', 'steel_baking_tray', 'Emaille innen', 'Emaille innen', 'box',
          material_id='special_glass', x=4, y=4, w=452, d=372, z=0.9, h=0.2, r=12, mass=45,
-         materials=[['glas', 100]],
+         materials=[['emaille', 100]],
          info='Glasartige Schicht, bei 800 °C auf den Stahl geschmolzen. Hart und kratzfest; im Metallwerk '
               'schmilzt sie zu Schlacke.',
          color=EMAILLE, marks=[mark('box', 12, 12, 428, 348, 8, '#383B3F')]),
@@ -30,7 +30,7 @@ teile = [
          color='#6E767C', marks=[mark('box', 4, 4, 452, 372, 12, '#5E656A'), mark('box', 16, 16, 428, 348, 8, '#80878D')]),
     teil('emaille_aussen', 'steel_baking_tray', 'Emaille außen', 'Emaille außen', 'box',
          material_id='special_glass', x=0, y=0, w=460, d=380, z=0, h=0.1, r=15, mass=45,
-         materials=[['glas', 100]],
+         materials=[['emaille', 100]],
          info='Dünnere Emailleschicht auf der Unterseite, schützt vor Rost.',
          color=EMAILLE),
 ]

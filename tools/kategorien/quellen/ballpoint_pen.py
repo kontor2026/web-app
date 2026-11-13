@@ -31,7 +31,7 @@ teile = [
          info='Messinghülse mit einer winzigen Kugel aus Hartmetall. Die Kugel rollt über das Papier und nimmt dabei Tinte mit.',
          color='#C9A24A', marks=[mark('cyl', 0.75, 0.75, 1, fill='#8E969A')]),
     teil('mine', 'ink_refill', 'Mine (Tintenröhrchen)', 'Mine', 'cyl',
-         x=3.5, y=3.5, w=3, z=8, h=114, explode=[MINE, 0, 0], mass=1.1, materials=[['pp', 80], ['druck', 20]],
+         x=3.5, y=3.5, w=3, z=8, h=114, explode=[MINE, 0, 0], mass=1.1, materials=[['pp', 80], ['tinte', 20]],
          info='Polypropylen-Röhrchen mit zäher Kugelschreiberpaste. Lieber nur die Mine wechseln als den ganzen Stift wegwerfen.',
          color='#E4E8EA', marks=[mark('cyl', 0.6, 0.6, 1.8, fill='#2F5FA8')]),
     teil('griffstueck', 'pen_barrel', 'Griffstück', 'Griffstück', 'cyl',
