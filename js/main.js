@@ -331,6 +331,7 @@ function viewSheet() {
   }));
   v.querySelector('#build').addEventListener('click', viewCraft);
   v.querySelector('#store').addEventListener('click', modalStore);
+  v.querySelector('#no').addEventListener('click', modalDispose);
 
   function setPanel(html, crumbs) {
     panel.innerHTML = `<div class="panel-inner">
@@ -597,6 +598,37 @@ function modalStore() {
     animate('#stock-count', { scale: [1.5, 1], duration: 900, ease: 'outExpo' });
     bg.querySelector('#next').addEventListener('click', () => { close(); viewScan(); });
   });
+}
+
+function modalDispose() {
+  const obj = state.obj;
+  modal(`
+    <div class="eyebrow">Nicht einlagern</div>
+    <h2>Okay. So entsorgst du es richtig.</h2>
+    <dl class="dispose">
+      <div><dt>Wohin</dt><dd>${obj.entsorgung.wo}</dd></div>
+      <div><dt>Nicht</dt><dd>${obj.entsorgung.nicht}</dd></div>
+      <div class="warn"><dt>Achtung</dt><dd>${obj.entsorgung.warnung}</dd></div>
+    </dl>
+    <div class="row"><button class="btn ghost" id="back">Doch einlagern</button><button class="btn primary" id="next">Nächster Gegenstand</button></div>
+  `, (bg, close) => {
+    bg.querySelector('#back').addEventListener('click', () => { close(); modalStore(); });
+    bg.querySelector('#next').addEventListener('click', () => { close(); viewScan(); });
+  });
+}
+
+function modalBuild(p) {
+  modal(`
+    <div class="eyebrow">Projekt gestartet</div>
+    <h2>${p.titel}</h2>
+    <p>Diese Teile werden aus dem Lager ausgebucht. Hol sie aus den Fächern:</p>
+    <div class="uses">${p.nutzt.map((u) => {
+      if (u.neu) return `<div class="use neu"><i></i><span>${u.name}</span><span class="f">${NEW_FACH}</span><span class="q">neu</span></div>`;
+      const it = byId(u.inv);
+      return `<div class="use"><i></i><span>${it.name}</span><span class="f">${it.fach}</span><span class="q">${u.menge}×</span></div>`;
+    }).join('')}</div>
+    <div class="row"><button class="btn ghost" id="x">Abbrechen</button><button class="btn primary">Bauanleitung öffnen</button></div>
+  `, (bg, close) => bg.querySelector('#x').addEventListener('click', close));
 }
 
 document.querySelector('.brand').addEventListener('click', viewScan);
