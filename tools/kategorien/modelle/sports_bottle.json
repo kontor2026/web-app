@@ -1,0 +1,374 @@
+{
+ "parts": [
+  {
+   "id": "schutzkappe",
+   "component_id": "pp_flip_cap",
+   "material_id": "pp",
+   "name": "Staubschutzkappe",
+   "short": "Schutzkappe",
+   "shape": "cyl",
+   "x": 20,
+   "y": 20,
+   "w": 30,
+   "z": 226,
+   "h": 24,
+   "explode": [
+    0,
+    0,
+    84.0
+   ],
+   "mass": 3,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Durchsichtige Kappe über dem Mundstück, damit kein Schmutz an den Trinkbereich kommt. Nur aufgesteckt.",
+   "color": "#D9E4EA",
+   "opacity": 0.6,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 5,
+     "y": 5,
+     "w": 20,
+     "fill": "#C3D1D8"
+    }
+   ]
+  },
+  {
+   "id": "mundstueck",
+   "component_id": "pp_flip_cap",
+   "material_id": "ldpe",
+   "name": "Push-Pull-Mundstück",
+   "short": "Mundstück",
+   "shape": "cyl",
+   "x": 24,
+   "y": 24,
+   "w": 22,
+   "z": 222,
+   "h": 16,
+   "explode": [
+    0,
+    0,
+    58.0
+   ],
+   "mass": 4,
+   "materials": [
+    [
+     "ldpe",
+     100
+    ]
+   ],
+   "info": "Weiches Ventil zum Herausziehen mit den Zähnen. Es ist nur aufgeschnappt und lässt sich zum Reinigen mit etwas Kraft abziehen.",
+   "color": "#ECEDEE",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 6,
+     "y": 6,
+     "w": 10,
+     "fill": "#BFC3C6"
+    },
+    {
+     "shape": "cyl",
+     "x": 9,
+     "y": 9,
+     "w": 4,
+     "fill": "#3A3F44"
+    }
+   ]
+  },
+  {
+   "id": "deckel",
+   "component_id": "pp_flip_cap",
+   "material_id": "pp",
+   "name": "Schraubdeckel",
+   "short": "Deckel",
+   "shape": "cyl",
+   "x": 11,
+   "y": 11,
+   "w": 48,
+   "z": 205,
+   "h": 21,
+   "explode": [
+    0,
+    0,
+    40.0
+   ],
+   "mass": 16.2,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Schraubdeckel aus PP mit Griffrippen. Abschrauben, Mundstück abziehen: Beides ist PP bzw. PE.",
+   "color": "#2B2F33",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 8,
+     "y": 8,
+     "w": 32,
+     "fill": "#1C1F22"
+    },
+    {
+     "shape": "cyl",
+     "x": 13,
+     "y": 13,
+     "w": 22,
+     "fill": "#4A4F55"
+    },
+    {
+     "shape": "box",
+     "x": 22.5,
+     "y": 0.5,
+     "w": 3,
+     "d": 4,
+     "r": 1,
+     "fill": "#43484E"
+    },
+    {
+     "shape": "box",
+     "x": 22.5,
+     "y": 43.5,
+     "w": 3,
+     "d": 4,
+     "r": 1,
+     "fill": "#43484E"
+    },
+    {
+     "shape": "box",
+     "x": 0.5,
+     "y": 22.5,
+     "w": 4,
+     "d": 3,
+     "r": 1,
+     "fill": "#43484E"
+    },
+    {
+     "shape": "box",
+     "x": 43.5,
+     "y": 22.5,
+     "w": 4,
+     "d": 3,
+     "r": 1,
+     "fill": "#43484E"
+    }
+   ]
+  },
+  {
+   "id": "dichtring",
+   "component_id": "pp_flip_cap",
+   "material_id": "silicone",
+   "name": "Dichtring",
+   "short": "Dichtring",
+   "shape": "cyl",
+   "x": 16,
+   "y": 16,
+   "w": 38,
+   "z": 212,
+   "h": 3,
+   "explode": [
+    0,
+    0,
+    16.0
+   ],
+   "mass": 1,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "info": "Silikonring im Deckel, der den Hals abdichtet. Mit einem Fingernagel herausziehen und gut abspülen.",
+   "color": "#E8E4DA",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 4,
+     "w": 30,
+     "fill": "#8A8F94"
+    }
+   ]
+  },
+  {
+   "id": "hals",
+   "component_id": "ldpe_squeeze_body",
+   "material_id": "ldpe",
+   "name": "Flaschenhals mit Gewinde",
+   "short": "Hals",
+   "shape": "cyl",
+   "x": 15,
+   "y": 15,
+   "w": 40,
+   "z": 198,
+   "h": 16,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 4,
+   "materials": [
+    [
+     "ldpe",
+     100
+    ]
+   ],
+   "info": "Breites Gewinde, damit Eiswürfel hineinpassen.",
+   "color": "#3E8FC9",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 4,
+     "w": 32,
+     "fill": "#2F78AD"
+    }
+   ]
+  },
+  {
+   "id": "schulter",
+   "component_id": "ldpe_squeeze_body",
+   "material_id": "ldpe",
+   "name": "Flaschenschulter",
+   "short": "Schulter",
+   "shape": "cyl",
+   "x": 4,
+   "y": 4,
+   "w": 62,
+   "z": 186,
+   "h": 12,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 6.1,
+   "materials": [
+    [
+     "ldpe",
+     100
+    ]
+   ],
+   "info": "Übergang vom Körper zum Hals.",
+   "color": "#3E8FC9",
+   "label": false
+  },
+  {
+   "id": "rumpf_oben",
+   "component_id": "ldpe_squeeze_body",
+   "material_id": "ldpe",
+   "name": "Flaschenkörper oben",
+   "short": "Körper oben",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 70,
+   "z": 135,
+   "h": 51,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 20.2,
+   "materials": [
+    [
+     "ldpe",
+     100
+    ]
+   ],
+   "info": "Oberer Teil des Flaschenkörpers.",
+   "color": "#3E8FC9",
+   "label": false
+  },
+  {
+   "id": "taille",
+   "component_id": "ldpe_squeeze_body",
+   "material_id": "ldpe",
+   "name": "Griffmulde",
+   "short": "Griffmulde",
+   "shape": "cyl",
+   "x": 3,
+   "y": 3,
+   "w": 64,
+   "z": 100,
+   "h": 35,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 12.1,
+   "materials": [
+    [
+     "ldpe",
+     100
+    ]
+   ],
+   "info": "Schmalere Taille, damit die Flasche gut in der Hand liegt.",
+   "color": "#3E8FC9",
+   "label": false
+  },
+  {
+   "id": "rumpf",
+   "component_id": "ldpe_squeeze_body",
+   "material_id": "ldpe",
+   "name": "Flaschenkörper aus LDPE",
+   "short": "Flasche",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 70,
+   "z": 5,
+   "h": 95,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 28.3,
+   "materials": [
+    [
+     "ldpe",
+     100
+    ]
+   ],
+   "info": "Weiches LDPE, das man zum Trinken zusammendrückt. Lange weiterverwenden. Kaputt gehört sie in den Restmüll, denn eine Trinkflasche ist keine Verpackung.",
+   "color": "#3E8FC9"
+  },
+  {
+   "id": "boden",
+   "component_id": "ldpe_squeeze_body",
+   "material_id": "ldpe",
+   "name": "Flaschenboden",
+   "short": "Boden",
+   "shape": "cyl",
+   "x": 3,
+   "y": 3,
+   "w": 64,
+   "z": 0,
+   "h": 5,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 5.1,
+   "materials": [
+    [
+     "ldpe",
+     100
+    ]
+   ],
+   "info": "Standboden mit Recyclingzeichen 4 für LDPE.",
+   "color": "#3E8FC9",
+   "label": false
+  }
+ ]
+}

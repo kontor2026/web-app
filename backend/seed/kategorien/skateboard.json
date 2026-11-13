@@ -4,7 +4,7 @@
  "name_en": "Skateboard",
  "klasse": "Wertstoffhof",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -21,41 +21,41 @@
  "werte": [
   {
    "k": "Rohstoffwert",
-   "v": "≈ 2,78 €",
+   "v": "≈ 1,66 €",
    "hint": "Kaum Metalle enthalten."
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 12,8 kg",
+   "v": "≈ 9,76 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 1,30 kg",
-   "hint": "spart 11,5 kg, wenn recycelte Materialien eingesetzt werden"
+   "v": "≈ 2,56 kg",
+   "hint": "spart 7,20 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Al": 974580.0,
-   "Fe": 114611.0
+   "Al": 580000.0,
+   "Fe": 245392.0
   },
   "herkunft": {
    "Al": "Modellmassen (Schätzung)",
    "Fe": "Modellmassen (Schätzung)"
   },
   "materialien_g": {
-   "aluminium": 974.6,
-   "wood": 974.6,
-   "polyurethane": 117.0,
-   "steel": 117.0,
-   "pvc": 117.0
+   "wood": 966.8,
+   "aluminium": 580.0,
+   "polyurethane": 421.8,
+   "steel": 250.4,
+   "pvc": 81.4
   },
-  "co2_kg": 12.815,
-  "co2_mit_recyclat_kg": 1.305,
-  "co2_ersparnis_kg": 11.51,
+  "co2_kg": 9.759,
+  "co2_mit_recyclat_kg": 2.557,
+  "co2_ersparnis_kg": 7.203,
   "co2_ohne_faktor": [],
-  "rohstoffwert_eur": 2.78,
+  "rohstoffwert_eur": 1.66,
   "wert_ohne_preis": [],
   "preisstand": "2026-11-13",
   "quellen": {
@@ -103,145 +103,2139 @@
   "nicht": "Nicht in die Gelbe Tonne",
   "warnung": "Reste von Farben, Klebern oder Chemikalien gehören zur Schadstoffsammlung."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "pu_wheels",
-   "component_id": "pu_wheels",
-   "name": "Wheels",
-   "short": "Wheels",
-   "shape": "cyl",
-   "x": 78.0,
-   "y": 378.0,
-   "w": 44.0,
-   "h": 15.0,
-   "z": 100.0,
-   "explode": [
-    0,
-    0,
-    400.0
-   ],
-   "mass": 116.95,
-   "materials": [
-    [
-     "schaum",
-     100
-    ]
-   ],
-   "material_id": "polyurethane",
-   "info": "Pull them off the axles after removing the nuts."
-  },
-  {
-   "id": "aluminium_trucks",
+   "id": "schraube_hinten_0",
    "component_id": "aluminium_trucks",
-   "name": "Trucks",
-   "short": "Trucks",
-   "shape": "box",
-   "x": 0,
-   "y": 0,
-   "w": 200.0,
-   "d": 800.0,
-   "h": 50.0,
-   "z": 50.0,
-   "r": 24.0,
+   "material_id": "steel",
+   "name": "Montageschraube mit Mutter",
+   "short": "Schraube",
+   "shape": "cyl",
+   "x": 75,
+   "y": 143.5,
+   "w": 9,
+   "z": 72,
+   "h": 29,
    "explode": [
     0,
     0,
-    200.0
+    208.0
    ],
-   "mass": 974.58,
-   "materials": [
-    [
-     "alu",
-     100
-    ]
-   ],
-   "material_id": "aluminium",
-   "info": "Remove the axle nuts to take off the wheels."
-  },
-  {
-   "id": "steel_bearings",
-   "component_id": "steel_bearings",
-   "name": "Bearings",
-   "short": "Bearings",
-   "shape": "box",
-   "x": 202.0,
-   "y": 160.0,
-   "w": 6.0,
-   "d": 480.0,
-   "h": 60.0,
-   "z": 20.0,
-   "r": 0.7,
-   "explode": [
-    85.0,
-    0,
-    60.0
-   ],
-   "mass": 116.95,
+   "mass": 6.1,
    "materials": [
     [
      "stahl",
      100
     ]
    ],
-   "material_id": "steel",
-   "info": "Push them out of the wheels with the truck axle."
+   "info": "Senkkopfschraube (Kreuz oder Inbus) von oben durch Griptape und Deck, unten mit Mutter. Mit dem Skate-Tool herausdrehen.",
+   "color": "#2E3236",
+   "label": true,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3.5,
+     "y": 1,
+     "w": 2,
+     "d": 7,
+     "r": 0.5,
+     "fill": "#5C646A"
+    },
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 3.5,
+     "w": 7,
+     "d": 2,
+     "r": 0.5,
+     "fill": "#5C646A"
+    }
+   ]
   },
   {
-   "id": "grip_tape",
-   "component_id": "grip_tape",
-   "name": "Grip Tape",
-   "short": "Grip Tape",
-   "shape": "box",
-   "x": 205.0,
-   "y": 160.0,
-   "w": 6.0,
-   "d": 480.0,
-   "h": 60.0,
-   "z": 20.0,
-   "r": 0.7,
+   "id": "schraube_hinten_1",
+   "component_id": "aluminium_trucks",
+   "material_id": "steel",
+   "name": "Montageschraube mit Mutter",
+   "short": "Schraube",
+   "shape": "cyl",
+   "x": 116,
+   "y": 143.5,
+   "w": 9,
+   "z": 72,
+   "h": 29,
    "explode": [
-    115.0,
     0,
-    60.0
+    0,
+    208.0
    ],
-   "mass": 116.95,
+   "mass": 6.1,
    "materials": [
     [
-     "pvc",
+     "stahl",
      100
     ]
    ],
-   "material_id": "pvc",
-   "info": "Heat it with a hair dryer and peel it off the deck."
+   "info": "Senkkopfschraube (Kreuz oder Inbus) von oben durch Griptape und Deck, unten mit Mutter. Mit dem Skate-Tool herausdrehen.",
+   "color": "#2E3236",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3.5,
+     "y": 1,
+     "w": 2,
+     "d": 7,
+     "r": 0.5,
+     "fill": "#5C646A"
+    },
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 3.5,
+     "w": 7,
+     "d": 2,
+     "r": 0.5,
+     "fill": "#5C646A"
+    }
+   ]
   },
   {
-   "id": "wooden_deck",
+   "id": "schraube_hinten_2",
+   "component_id": "aluminium_trucks",
+   "material_id": "steel",
+   "name": "Montageschraube mit Mutter",
+   "short": "Schraube",
+   "shape": "cyl",
+   "x": 75,
+   "y": 197.5,
+   "w": 9,
+   "z": 72,
+   "h": 29,
+   "explode": [
+    0,
+    0,
+    208.0
+   ],
+   "mass": 6.1,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Senkkopfschraube (Kreuz oder Inbus) von oben durch Griptape und Deck, unten mit Mutter. Mit dem Skate-Tool herausdrehen.",
+   "color": "#2E3236",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3.5,
+     "y": 1,
+     "w": 2,
+     "d": 7,
+     "r": 0.5,
+     "fill": "#5C646A"
+    },
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 3.5,
+     "w": 7,
+     "d": 2,
+     "r": 0.5,
+     "fill": "#5C646A"
+    }
+   ]
+  },
+  {
+   "id": "schraube_hinten_3",
+   "component_id": "aluminium_trucks",
+   "material_id": "steel",
+   "name": "Montageschraube mit Mutter",
+   "short": "Schraube",
+   "shape": "cyl",
+   "x": 116,
+   "y": 197.5,
+   "w": 9,
+   "z": 72,
+   "h": 29,
+   "explode": [
+    0,
+    0,
+    208.0
+   ],
+   "mass": 6.1,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Senkkopfschraube (Kreuz oder Inbus) von oben durch Griptape und Deck, unten mit Mutter. Mit dem Skate-Tool herausdrehen.",
+   "color": "#2E3236",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3.5,
+     "y": 1,
+     "w": 2,
+     "d": 7,
+     "r": 0.5,
+     "fill": "#5C646A"
+    },
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 3.5,
+     "w": 7,
+     "d": 2,
+     "r": 0.5,
+     "fill": "#5C646A"
+    }
+   ]
+  },
+  {
+   "id": "schraube_vorne_0",
+   "component_id": "aluminium_trucks",
+   "material_id": "steel",
+   "name": "Montageschraube mit Mutter",
+   "short": "Schraube",
+   "shape": "cyl",
+   "x": 75,
+   "y": 593.5,
+   "w": 9,
+   "z": 72,
+   "h": 29,
+   "explode": [
+    0,
+    0,
+    208.0
+   ],
+   "mass": 6.1,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Senkkopfschraube (Kreuz oder Inbus) von oben durch Griptape und Deck, unten mit Mutter. Mit dem Skate-Tool herausdrehen.",
+   "color": "#2E3236",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3.5,
+     "y": 1,
+     "w": 2,
+     "d": 7,
+     "r": 0.5,
+     "fill": "#5C646A"
+    },
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 3.5,
+     "w": 7,
+     "d": 2,
+     "r": 0.5,
+     "fill": "#5C646A"
+    }
+   ]
+  },
+  {
+   "id": "schraube_vorne_1",
+   "component_id": "aluminium_trucks",
+   "material_id": "steel",
+   "name": "Montageschraube mit Mutter",
+   "short": "Schraube",
+   "shape": "cyl",
+   "x": 116,
+   "y": 593.5,
+   "w": 9,
+   "z": 72,
+   "h": 29,
+   "explode": [
+    0,
+    0,
+    208.0
+   ],
+   "mass": 6.1,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Senkkopfschraube (Kreuz oder Inbus) von oben durch Griptape und Deck, unten mit Mutter. Mit dem Skate-Tool herausdrehen.",
+   "color": "#2E3236",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3.5,
+     "y": 1,
+     "w": 2,
+     "d": 7,
+     "r": 0.5,
+     "fill": "#5C646A"
+    },
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 3.5,
+     "w": 7,
+     "d": 2,
+     "r": 0.5,
+     "fill": "#5C646A"
+    }
+   ]
+  },
+  {
+   "id": "schraube_vorne_2",
+   "component_id": "aluminium_trucks",
+   "material_id": "steel",
+   "name": "Montageschraube mit Mutter",
+   "short": "Schraube",
+   "shape": "cyl",
+   "x": 75,
+   "y": 647.5,
+   "w": 9,
+   "z": 72,
+   "h": 29,
+   "explode": [
+    0,
+    0,
+    208.0
+   ],
+   "mass": 6.1,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Senkkopfschraube (Kreuz oder Inbus) von oben durch Griptape und Deck, unten mit Mutter. Mit dem Skate-Tool herausdrehen.",
+   "color": "#2E3236",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3.5,
+     "y": 1,
+     "w": 2,
+     "d": 7,
+     "r": 0.5,
+     "fill": "#5C646A"
+    },
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 3.5,
+     "w": 7,
+     "d": 2,
+     "r": 0.5,
+     "fill": "#5C646A"
+    }
+   ]
+  },
+  {
+   "id": "schraube_vorne_3",
+   "component_id": "aluminium_trucks",
+   "material_id": "steel",
+   "name": "Montageschraube mit Mutter",
+   "short": "Schraube",
+   "shape": "cyl",
+   "x": 116,
+   "y": 647.5,
+   "w": 9,
+   "z": 72,
+   "h": 29,
+   "explode": [
+    0,
+    0,
+    208.0
+   ],
+   "mass": 6.1,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Senkkopfschraube (Kreuz oder Inbus) von oben durch Griptape und Deck, unten mit Mutter. Mit dem Skate-Tool herausdrehen.",
+   "color": "#2E3236",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3.5,
+     "y": 1,
+     "w": 2,
+     "d": 7,
+     "r": 0.5,
+     "fill": "#5C646A"
+    },
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 3.5,
+     "w": 7,
+     "d": 2,
+     "r": 0.5,
+     "fill": "#5C646A"
+    }
+   ]
+  },
+  {
+   "id": "griptape",
+   "component_id": "grip_tape",
+   "material_id": "pvc",
+   "name": "Griptape",
+   "short": "Griptape",
+   "shape": "box",
+   "x": 1,
+   "y": 1,
+   "w": 198,
+   "d": 798,
+   "z": 99,
+   "h": 1,
+   "r": 94,
+   "explode": [
+    0,
+    0,
+    145.0
+   ],
+   "mass": 81.4,
+   "materials": [
+    [
+     "keramik",
+     40
+    ],
+    [
+     "pvc",
+     35
+    ],
+    [
+     "klebstoff",
+     25
+    ]
+   ],
+   "info": "Schmirgelartige Folie mit Körnern aus Siliziumcarbid, damit die Schuhe nicht rutschen. Mit dem Föhn erwärmen und langsam abziehen.",
+   "color": "#26292C",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 74.0,
+     "y": 142.5,
+     "w": 9,
+     "fill": "#3C4044"
+    },
+    {
+     "shape": "cyl",
+     "x": 74.0,
+     "y": 196.5,
+     "w": 9,
+     "fill": "#3C4044"
+    },
+    {
+     "shape": "cyl",
+     "x": 115.0,
+     "y": 142.5,
+     "w": 9,
+     "fill": "#3C4044"
+    },
+    {
+     "shape": "cyl",
+     "x": 115.0,
+     "y": 196.5,
+     "w": 9,
+     "fill": "#3C4044"
+    },
+    {
+     "shape": "cyl",
+     "x": 74.0,
+     "y": 592.5,
+     "w": 9,
+     "fill": "#3C4044"
+    },
+    {
+     "shape": "cyl",
+     "x": 74.0,
+     "y": 646.5,
+     "w": 9,
+     "fill": "#3C4044"
+    },
+    {
+     "shape": "cyl",
+     "x": 115.0,
+     "y": 592.5,
+     "w": 9,
+     "fill": "#3C4044"
+    },
+    {
+     "shape": "cyl",
+     "x": 115.0,
+     "y": 646.5,
+     "w": 9,
+     "fill": "#3C4044"
+    },
+    {
+     "shape": "box",
+     "x": 20,
+     "y": 340,
+     "w": 158,
+     "d": 118,
+     "r": 40,
+     "fill": "#2F3236"
+    }
+   ]
+  },
+  {
+   "id": "deck",
    "component_id": "wooden_deck",
-   "name": "Deck",
+   "material_id": "wood",
+   "name": "Deck aus Ahornholz",
    "short": "Deck",
    "shape": "box",
    "x": 0,
    "y": 0,
-   "w": 200.0,
-   "d": 800.0,
-   "h": 50.0,
-   "z": 0.0,
-   "r": 24.0,
+   "w": 200,
+   "d": 800,
+   "z": 88,
+   "h": 11,
+   "r": 95,
    "explode": [
     0,
     0,
-    0
+    100.0
    ],
-   "mass": 974.58,
+   "mass": 966.8,
    "materials": [
     [
      "holz",
+     92
+    ],
+    [
+     "klebstoff",
+     6
+    ],
+    [
+     "druck",
+     2
+    ]
+   ],
+   "info": "Sieben verleimte Schichten Ahornfurnier, an den Enden hochgebogen (Nose und Tail). Unten oft bedruckt. Ohne Achsen und Griptape ist es Altholz.",
+   "color": "#D3B07C",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 75.0,
+     "y": 143.5,
+     "w": 9,
+     "fill": "#6B5A44"
+    },
+    {
+     "shape": "cyl",
+     "x": 75.0,
+     "y": 197.5,
+     "w": 9,
+     "fill": "#6B5A44"
+    },
+    {
+     "shape": "cyl",
+     "x": 116.0,
+     "y": 143.5,
+     "w": 9,
+     "fill": "#6B5A44"
+    },
+    {
+     "shape": "cyl",
+     "x": 116.0,
+     "y": 197.5,
+     "w": 9,
+     "fill": "#6B5A44"
+    },
+    {
+     "shape": "cyl",
+     "x": 75.0,
+     "y": 593.5,
+     "w": 9,
+     "fill": "#6B5A44"
+    },
+    {
+     "shape": "cyl",
+     "x": 75.0,
+     "y": 647.5,
+     "w": 9,
+     "fill": "#6B5A44"
+    },
+    {
+     "shape": "cyl",
+     "x": 116.0,
+     "y": 593.5,
+     "w": 9,
+     "fill": "#6B5A44"
+    },
+    {
+     "shape": "cyl",
+     "x": 116.0,
+     "y": 647.5,
+     "w": 9,
+     "fill": "#6B5A44"
+    },
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 10,
+     "w": 180,
+     "d": 2,
+     "r": 1,
+     "fill": "#C29E69"
+    },
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 140,
+     "w": 180,
+     "d": 2,
+     "r": 1,
+     "fill": "#C29E69"
+    },
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 270,
+     "w": 180,
+     "d": 2,
+     "r": 1,
+     "fill": "#C29E69"
+    },
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 400,
+     "w": 180,
+     "d": 2,
+     "r": 1,
+     "fill": "#C29E69"
+    },
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 530,
+     "w": 180,
+     "d": 2,
+     "r": 1,
+     "fill": "#C29E69"
+    },
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 660,
+     "w": 180,
+     "d": 2,
+     "r": 1,
+     "fill": "#C29E69"
+    }
+   ]
+  },
+  {
+   "id": "grundplatte_hinten",
+   "component_id": "aluminium_trucks",
+   "material_id": "aluminium",
+   "name": "Grundplatte",
+   "short": "Grundplatte",
+   "shape": "box",
+   "x": 65,
+   "y": 135,
+   "w": 70,
+   "d": 80,
+   "z": 72,
+   "h": 16,
+   "r": 8,
+   "explode": [
+    0,
+    0,
+    75.0
+   ],
+   "mass": 122.1,
+   "materials": [
+    [
+     "alu",
      100
     ]
    ],
-   "material_id": "wood",
-   "info": "Unscrew the trucks from the top with a skate tool."
+   "info": "Gegossene Aluminiumplatte, mit vier Schrauben unter das Deck geschraubt. Altmetall für den Wertstoffhof.",
+   "color": "#B9C0C5",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 14,
+     "y": 8,
+     "w": 9,
+     "fill": "#8F989F"
+    },
+    {
+     "shape": "cyl",
+     "x": 47,
+     "y": 8,
+     "w": 9,
+     "fill": "#8F989F"
+    },
+    {
+     "shape": "cyl",
+     "x": 14,
+     "y": 63,
+     "w": 9,
+     "fill": "#8F989F"
+    },
+    {
+     "shape": "cyl",
+     "x": 47,
+     "y": 63,
+     "w": 9,
+     "fill": "#8F989F"
+    },
+    {
+     "shape": "cyl",
+     "x": 26,
+     "y": 30,
+     "w": 18,
+     "fill": "#A3ABB1"
+    }
+   ]
+  },
+  {
+   "id": "gummi_oben_hinten",
+   "component_id": "aluminium_trucks",
+   "material_id": "polyurethane",
+   "name": "Lenkgummi brettseitig",
+   "short": "Lenkgummi",
+   "shape": "cyl",
+   "x": 86,
+   "y": 161,
+   "w": 28,
+   "z": 58,
+   "h": 14,
+   "explode": [
+    0,
+    0,
+    50.0
+   ],
+   "mass": 9.2,
+   "materials": [
+    [
+     "tpu",
+     100
+    ]
+   ],
+   "info": "Lenkgummi (Bushing) aus PU. Je weicher, desto leichter lenkt das Brett. Austauschbar.",
+   "color": "#E0A23A",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 9.5,
+     "y": 9.5,
+     "w": 9,
+     "fill": "#B47C22"
+    }
+   ]
+  },
+  {
+   "id": "achsschenkel_hinten",
+   "component_id": "aluminium_trucks",
+   "material_id": "aluminium",
+   "name": "Achsschenkel (Hanger)",
+   "short": "Achsschenkel",
+   "shape": "box",
+   "x": 40,
+   "y": 158,
+   "w": 120,
+   "d": 34,
+   "z": 22,
+   "h": 36,
+   "r": 10,
+   "explode": [
+    0,
+    0,
+    25.0
+   ],
+   "mass": 167.9,
+   "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "info": "Dreieckiger Aluguss, der beim Lehnen kippt und so lenkt. Die Stahlachse steckt fest darin.",
+   "color": "#B9C0C5",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 50,
+     "y": 7,
+     "w": 20,
+     "fill": "#8F989F"
+    },
+    {
+     "shape": "cyl",
+     "x": 55.5,
+     "y": 12.5,
+     "w": 9,
+     "fill": "#4A5056"
+    }
+   ]
+  },
+  {
+   "id": "achse_hinten_l",
+   "component_id": "aluminium_trucks",
+   "material_id": "steel",
+   "name": "Achse (Stahl)",
+   "short": "Achse",
+   "shape": "box",
+   "x": 2,
+   "y": 171,
+   "w": 38,
+   "d": 8,
+   "z": 23,
+   "h": 8,
+   "r": 3.5,
+   "explode": [
+    0,
+    0,
+    25.0
+   ],
+   "mass": 10.2,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Stahlachse, fest in den Achsschenkel eingepresst. Auf ihr sitzen Lager und Rolle.",
+   "color": "#7D868D",
+   "label": true
+  },
+  {
+   "id": "achse_hinten_r",
+   "component_id": "aluminium_trucks",
+   "material_id": "steel",
+   "name": "Achse (Stahl)",
+   "short": "Achse",
+   "shape": "box",
+   "x": 160,
+   "y": 171,
+   "w": 38,
+   "d": 8,
+   "z": 23,
+   "h": 8,
+   "r": 3.5,
+   "explode": [
+    0,
+    0,
+    25.0
+   ],
+   "mass": 10.2,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Stahlachse, fest in den Achsschenkel eingepresst. Auf ihr sitzen Lager und Rolle.",
+   "color": "#7D868D",
+   "label": false
+  },
+  {
+   "id": "gummi_unten_hinten",
+   "component_id": "aluminium_trucks",
+   "material_id": "polyurethane",
+   "name": "Lenkgummi straßenseitig",
+   "short": "Lenkgummi",
+   "shape": "cyl",
+   "x": 87,
+   "y": 162,
+   "w": 26,
+   "z": 12,
+   "h": 10,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 8.1,
+   "materials": [
+    [
+     "tpu",
+     100
+    ]
+   ],
+   "info": "Zweites, kleineres Lenkgummi unter dem Achsschenkel, mit Unterlegscheibe und Mutter gehalten.",
+   "color": "#E0A23A",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 8.5,
+     "y": 8.5,
+     "w": 9,
+     "fill": "#B47C22"
+    }
+   ]
+  },
+  {
+   "id": "koenigsbolzen_hinten",
+   "component_id": "aluminium_trucks",
+   "material_id": "steel",
+   "name": "Königsbolzen mit Mutter",
+   "short": "Königsbolzen",
+   "shape": "cyl",
+   "x": 95.5,
+   "y": 170.5,
+   "w": 9,
+   "z": 8,
+   "h": 78,
+   "explode": [
+    0,
+    70,
+    0
+   ],
+   "mass": 25.4,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Dicker Stahlbolzen, der Grundplatte, Lenkgummis und Achsschenkel zusammenhält. Mutter mit 14er-Schlüssel lösen.",
+   "color": "#7D868D",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 1.5,
+     "y": 1.5,
+     "w": 6,
+     "fill": "#5C646A"
+    }
+   ]
+  },
+  {
+   "id": "grundplatte_vorne",
+   "component_id": "aluminium_trucks",
+   "material_id": "aluminium",
+   "name": "Grundplatte",
+   "short": "Grundplatte",
+   "shape": "box",
+   "x": 65,
+   "y": 585,
+   "w": 70,
+   "d": 80,
+   "z": 72,
+   "h": 16,
+   "r": 8,
+   "explode": [
+    0,
+    0,
+    75.0
+   ],
+   "mass": 122.1,
+   "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "info": "Gegossene Aluminiumplatte, mit vier Schrauben unter das Deck geschraubt. Altmetall für den Wertstoffhof.",
+   "color": "#B9C0C5",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 14,
+     "y": 8,
+     "w": 9,
+     "fill": "#8F989F"
+    },
+    {
+     "shape": "cyl",
+     "x": 47,
+     "y": 8,
+     "w": 9,
+     "fill": "#8F989F"
+    },
+    {
+     "shape": "cyl",
+     "x": 14,
+     "y": 63,
+     "w": 9,
+     "fill": "#8F989F"
+    },
+    {
+     "shape": "cyl",
+     "x": 47,
+     "y": 63,
+     "w": 9,
+     "fill": "#8F989F"
+    },
+    {
+     "shape": "cyl",
+     "x": 26,
+     "y": 30,
+     "w": 18,
+     "fill": "#A3ABB1"
+    }
+   ]
+  },
+  {
+   "id": "gummi_oben_vorne",
+   "component_id": "aluminium_trucks",
+   "material_id": "polyurethane",
+   "name": "Lenkgummi brettseitig",
+   "short": "Lenkgummi",
+   "shape": "cyl",
+   "x": 86,
+   "y": 611,
+   "w": 28,
+   "z": 58,
+   "h": 14,
+   "explode": [
+    0,
+    0,
+    50.0
+   ],
+   "mass": 9.2,
+   "materials": [
+    [
+     "tpu",
+     100
+    ]
+   ],
+   "info": "Lenkgummi (Bushing) aus PU. Je weicher, desto leichter lenkt das Brett. Austauschbar.",
+   "color": "#E0A23A",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 9.5,
+     "y": 9.5,
+     "w": 9,
+     "fill": "#B47C22"
+    }
+   ]
+  },
+  {
+   "id": "achsschenkel_vorne",
+   "component_id": "aluminium_trucks",
+   "material_id": "aluminium",
+   "name": "Achsschenkel (Hanger)",
+   "short": "Achsschenkel",
+   "shape": "box",
+   "x": 40,
+   "y": 608,
+   "w": 120,
+   "d": 34,
+   "z": 22,
+   "h": 36,
+   "r": 10,
+   "explode": [
+    0,
+    0,
+    25.0
+   ],
+   "mass": 167.9,
+   "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "info": "Dreieckiger Aluguss, der beim Lehnen kippt und so lenkt. Die Stahlachse steckt fest darin.",
+   "color": "#B9C0C5",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 50,
+     "y": 7,
+     "w": 20,
+     "fill": "#8F989F"
+    },
+    {
+     "shape": "cyl",
+     "x": 55.5,
+     "y": 12.5,
+     "w": 9,
+     "fill": "#4A5056"
+    }
+   ]
+  },
+  {
+   "id": "achse_vorne_l",
+   "component_id": "aluminium_trucks",
+   "material_id": "steel",
+   "name": "Achse (Stahl)",
+   "short": "Achse",
+   "shape": "box",
+   "x": 2,
+   "y": 621,
+   "w": 38,
+   "d": 8,
+   "z": 23,
+   "h": 8,
+   "r": 3.5,
+   "explode": [
+    0,
+    0,
+    25.0
+   ],
+   "mass": 10.2,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Stahlachse, fest in den Achsschenkel eingepresst. Auf ihr sitzen Lager und Rolle.",
+   "color": "#7D868D",
+   "label": false
+  },
+  {
+   "id": "achse_vorne_r",
+   "component_id": "aluminium_trucks",
+   "material_id": "steel",
+   "name": "Achse (Stahl)",
+   "short": "Achse",
+   "shape": "box",
+   "x": 160,
+   "y": 621,
+   "w": 38,
+   "d": 8,
+   "z": 23,
+   "h": 8,
+   "r": 3.5,
+   "explode": [
+    0,
+    0,
+    25.0
+   ],
+   "mass": 10.2,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Stahlachse, fest in den Achsschenkel eingepresst. Auf ihr sitzen Lager und Rolle.",
+   "color": "#7D868D",
+   "label": false
+  },
+  {
+   "id": "gummi_unten_vorne",
+   "component_id": "aluminium_trucks",
+   "material_id": "polyurethane",
+   "name": "Lenkgummi straßenseitig",
+   "short": "Lenkgummi",
+   "shape": "cyl",
+   "x": 87,
+   "y": 612,
+   "w": 26,
+   "z": 12,
+   "h": 10,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 8.1,
+   "materials": [
+    [
+     "tpu",
+     100
+    ]
+   ],
+   "info": "Zweites, kleineres Lenkgummi unter dem Achsschenkel, mit Unterlegscheibe und Mutter gehalten.",
+   "color": "#E0A23A",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 8.5,
+     "y": 8.5,
+     "w": 9,
+     "fill": "#B47C22"
+    }
+   ]
+  },
+  {
+   "id": "koenigsbolzen_vorne",
+   "component_id": "aluminium_trucks",
+   "material_id": "steel",
+   "name": "Königsbolzen mit Mutter",
+   "short": "Königsbolzen",
+   "shape": "cyl",
+   "x": 95.5,
+   "y": 620.5,
+   "w": 9,
+   "z": 8,
+   "h": 78,
+   "explode": [
+    0,
+    -70,
+    0
+   ],
+   "mass": 25.4,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Dicker Stahlbolzen, der Grundplatte, Lenkgummis und Achsschenkel zusammenhält. Mutter mit 14er-Schlüssel lösen.",
+   "color": "#7D868D",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 1.5,
+     "y": 1.5,
+     "w": 6,
+     "fill": "#5C646A"
+    }
+   ]
+  },
+  {
+   "id": "rad_hinten_l_oben",
+   "component_id": "pu_wheels",
+   "material_id": "polyurethane",
+   "name": "Rolle (PU, 54 mm)",
+   "short": "Rolle",
+   "shape": "box",
+   "x": 5,
+   "y": 154,
+   "w": 32,
+   "d": 42,
+   "z": 44,
+   "h": 10,
+   "r": 6,
+   "explode": [
+    -80,
+    0,
+    0
+   ],
+   "mass": 20.4,
+   "materials": [
+    [
+     "tpu",
+     100
+    ]
+   ],
+   "info": "Gegossenes, hartes Polyurethan. Nach dem Lösen der Achsmutter einfach von der Achse ziehen.",
+   "color": "#F2EEDF",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 4,
+     "w": 24,
+     "d": 34,
+     "r": 4,
+     "fill": "#D9D3BE"
+    }
+   ]
+  },
+  {
+   "id": "rad_hinten_l_mitte",
+   "component_id": "pu_wheels",
+   "material_id": "polyurethane",
+   "name": "Rolle (PU, 54 mm)",
+   "short": "Rolle",
+   "shape": "box",
+   "x": 5,
+   "y": 148,
+   "w": 32,
+   "d": 54,
+   "z": 10,
+   "h": 34,
+   "r": 8,
+   "explode": [
+    -80,
+    0,
+    0
+   ],
+   "mass": 56,
+   "materials": [
+    [
+     "tpu",
+     100
+    ]
+   ],
+   "info": "Lauffläche der Rolle.",
+   "color": "#F2EEDF",
+   "label": false
+  },
+  {
+   "id": "rad_hinten_l_unten",
+   "component_id": "pu_wheels",
+   "material_id": "polyurethane",
+   "name": "Rolle (PU, 54 mm)",
+   "short": "Rolle",
+   "shape": "box",
+   "x": 5,
+   "y": 154,
+   "w": 32,
+   "d": 42,
+   "z": 0,
+   "h": 10,
+   "r": 6,
+   "explode": [
+    -80,
+    0,
+    0
+   ],
+   "mass": 20.4,
+   "materials": [
+    [
+     "tpu",
+     100
+    ]
+   ],
+   "info": "Lauffläche der Rolle.",
+   "color": "#F2EEDF",
+   "label": false
+  },
+  {
+   "id": "lager_hinten_l_a",
+   "component_id": "steel_bearings",
+   "material_id": "steel",
+   "name": "Kugellager 608",
+   "short": "Kugellager",
+   "shape": "box",
+   "x": 6,
+   "y": 164,
+   "w": 7,
+   "d": 22,
+   "z": 16,
+   "h": 22,
+   "r": 2.5,
+   "explode": [
+    -120,
+    0,
+    0
+   ],
+   "mass": 12.2,
+   "materials": [
+    [
+     "stahl",
+     94
+    ],
+    [
+     "nylon",
+     4
+    ],
+    [
+     "gummi",
+     2
+    ]
+   ],
+   "info": "Zwei Kugellager je Rolle (Typ 608, 22 mm), Stahlkugeln hinter Abdeckscheiben. Mit der Achse aus der Rolle hebeln. Stahlschrott.",
+   "color": "#A7AFB5",
+   "label": true,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 3,
+     "w": 5,
+     "d": 16,
+     "r": 2,
+     "fill": "#5C646A"
+    }
+   ]
+  },
+  {
+   "id": "lager_hinten_l_i",
+   "component_id": "steel_bearings",
+   "material_id": "steel",
+   "name": "Kugellager 608",
+   "short": "Kugellager",
+   "shape": "box",
+   "x": 30,
+   "y": 164,
+   "w": 7,
+   "d": 22,
+   "z": 16,
+   "h": 22,
+   "r": 2.5,
+   "explode": [
+    -60,
+    0,
+    0
+   ],
+   "mass": 12.2,
+   "materials": [
+    [
+     "stahl",
+     94
+    ],
+    [
+     "nylon",
+     4
+    ],
+    [
+     "gummi",
+     2
+    ]
+   ],
+   "info": "Zwei Kugellager je Rolle (Typ 608, 22 mm), Stahlkugeln hinter Abdeckscheiben. Mit der Achse aus der Rolle hebeln. Stahlschrott.",
+   "color": "#A7AFB5",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 3,
+     "w": 5,
+     "d": 16,
+     "r": 2,
+     "fill": "#5C646A"
+    }
+   ]
+  },
+  {
+   "id": "mutter_hinten_l",
+   "component_id": "aluminium_trucks",
+   "material_id": "steel",
+   "name": "Achsmutter",
+   "short": "Achsmutter",
+   "shape": "box",
+   "x": 0,
+   "y": 169,
+   "w": 5,
+   "d": 12,
+   "z": 21,
+   "h": 12,
+   "r": 1.5,
+   "explode": [
+    -150,
+    0,
+    0
+   ],
+   "mass": 3.1,
+   "materials": [
+    [
+     "stahl",
+     95
+    ],
+    [
+     "nylon",
+     5
+    ]
+   ],
+   "info": "Selbstsichernde Mutter mit Nylonring. Mit dem Skate-Tool (13er) lösen.",
+   "color": "#7D868D",
+   "label": true
+  },
+  {
+   "id": "rad_hinten_r_oben",
+   "component_id": "pu_wheels",
+   "material_id": "polyurethane",
+   "name": "Rolle (PU, 54 mm)",
+   "short": "Rolle",
+   "shape": "box",
+   "x": 163,
+   "y": 154,
+   "w": 32,
+   "d": 42,
+   "z": 44,
+   "h": 10,
+   "r": 6,
+   "explode": [
+    80,
+    0,
+    0
+   ],
+   "mass": 20.4,
+   "materials": [
+    [
+     "tpu",
+     100
+    ]
+   ],
+   "info": "Gegossenes, hartes Polyurethan. Nach dem Lösen der Achsmutter einfach von der Achse ziehen.",
+   "color": "#F2EEDF",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 4,
+     "w": 24,
+     "d": 34,
+     "r": 4,
+     "fill": "#D9D3BE"
+    }
+   ]
+  },
+  {
+   "id": "rad_hinten_r_mitte",
+   "component_id": "pu_wheels",
+   "material_id": "polyurethane",
+   "name": "Rolle (PU, 54 mm)",
+   "short": "Rolle",
+   "shape": "box",
+   "x": 163,
+   "y": 148,
+   "w": 32,
+   "d": 54,
+   "z": 10,
+   "h": 34,
+   "r": 8,
+   "explode": [
+    80,
+    0,
+    0
+   ],
+   "mass": 56,
+   "materials": [
+    [
+     "tpu",
+     100
+    ]
+   ],
+   "info": "Lauffläche der Rolle.",
+   "color": "#F2EEDF",
+   "label": false
+  },
+  {
+   "id": "rad_hinten_r_unten",
+   "component_id": "pu_wheels",
+   "material_id": "polyurethane",
+   "name": "Rolle (PU, 54 mm)",
+   "short": "Rolle",
+   "shape": "box",
+   "x": 163,
+   "y": 154,
+   "w": 32,
+   "d": 42,
+   "z": 0,
+   "h": 10,
+   "r": 6,
+   "explode": [
+    80,
+    0,
+    0
+   ],
+   "mass": 20.4,
+   "materials": [
+    [
+     "tpu",
+     100
+    ]
+   ],
+   "info": "Lauffläche der Rolle.",
+   "color": "#F2EEDF",
+   "label": false
+  },
+  {
+   "id": "lager_hinten_r_a",
+   "component_id": "steel_bearings",
+   "material_id": "steel",
+   "name": "Kugellager 608",
+   "short": "Kugellager",
+   "shape": "box",
+   "x": 187,
+   "y": 164,
+   "w": 7,
+   "d": 22,
+   "z": 16,
+   "h": 22,
+   "r": 2.5,
+   "explode": [
+    120,
+    0,
+    0
+   ],
+   "mass": 12.2,
+   "materials": [
+    [
+     "stahl",
+     94
+    ],
+    [
+     "nylon",
+     4
+    ],
+    [
+     "gummi",
+     2
+    ]
+   ],
+   "info": "Zwei Kugellager je Rolle (Typ 608, 22 mm), Stahlkugeln hinter Abdeckscheiben. Mit der Achse aus der Rolle hebeln. Stahlschrott.",
+   "color": "#A7AFB5",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 3,
+     "w": 5,
+     "d": 16,
+     "r": 2,
+     "fill": "#5C646A"
+    }
+   ]
+  },
+  {
+   "id": "lager_hinten_r_i",
+   "component_id": "steel_bearings",
+   "material_id": "steel",
+   "name": "Kugellager 608",
+   "short": "Kugellager",
+   "shape": "box",
+   "x": 163,
+   "y": 164,
+   "w": 7,
+   "d": 22,
+   "z": 16,
+   "h": 22,
+   "r": 2.5,
+   "explode": [
+    60,
+    0,
+    0
+   ],
+   "mass": 12.2,
+   "materials": [
+    [
+     "stahl",
+     94
+    ],
+    [
+     "nylon",
+     4
+    ],
+    [
+     "gummi",
+     2
+    ]
+   ],
+   "info": "Zwei Kugellager je Rolle (Typ 608, 22 mm), Stahlkugeln hinter Abdeckscheiben. Mit der Achse aus der Rolle hebeln. Stahlschrott.",
+   "color": "#A7AFB5",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 3,
+     "w": 5,
+     "d": 16,
+     "r": 2,
+     "fill": "#5C646A"
+    }
+   ]
+  },
+  {
+   "id": "mutter_hinten_r",
+   "component_id": "aluminium_trucks",
+   "material_id": "steel",
+   "name": "Achsmutter",
+   "short": "Achsmutter",
+   "shape": "box",
+   "x": 195,
+   "y": 169,
+   "w": 5,
+   "d": 12,
+   "z": 21,
+   "h": 12,
+   "r": 1.5,
+   "explode": [
+    150,
+    0,
+    0
+   ],
+   "mass": 3.1,
+   "materials": [
+    [
+     "stahl",
+     95
+    ],
+    [
+     "nylon",
+     5
+    ]
+   ],
+   "info": "Selbstsichernde Mutter mit Nylonring. Mit dem Skate-Tool (13er) lösen.",
+   "color": "#7D868D",
+   "label": false
+  },
+  {
+   "id": "rad_vorne_l_oben",
+   "component_id": "pu_wheels",
+   "material_id": "polyurethane",
+   "name": "Rolle (PU, 54 mm)",
+   "short": "Rolle",
+   "shape": "box",
+   "x": 5,
+   "y": 604,
+   "w": 32,
+   "d": 42,
+   "z": 44,
+   "h": 10,
+   "r": 6,
+   "explode": [
+    -80,
+    0,
+    0
+   ],
+   "mass": 20.4,
+   "materials": [
+    [
+     "tpu",
+     100
+    ]
+   ],
+   "info": "Gegossenes, hartes Polyurethan. Nach dem Lösen der Achsmutter einfach von der Achse ziehen.",
+   "color": "#F2EEDF",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 4,
+     "w": 24,
+     "d": 34,
+     "r": 4,
+     "fill": "#D9D3BE"
+    }
+   ]
+  },
+  {
+   "id": "rad_vorne_l_mitte",
+   "component_id": "pu_wheels",
+   "material_id": "polyurethane",
+   "name": "Rolle (PU, 54 mm)",
+   "short": "Rolle",
+   "shape": "box",
+   "x": 5,
+   "y": 598,
+   "w": 32,
+   "d": 54,
+   "z": 10,
+   "h": 34,
+   "r": 8,
+   "explode": [
+    -80,
+    0,
+    0
+   ],
+   "mass": 56,
+   "materials": [
+    [
+     "tpu",
+     100
+    ]
+   ],
+   "info": "Lauffläche der Rolle.",
+   "color": "#F2EEDF",
+   "label": false
+  },
+  {
+   "id": "rad_vorne_l_unten",
+   "component_id": "pu_wheels",
+   "material_id": "polyurethane",
+   "name": "Rolle (PU, 54 mm)",
+   "short": "Rolle",
+   "shape": "box",
+   "x": 5,
+   "y": 604,
+   "w": 32,
+   "d": 42,
+   "z": 0,
+   "h": 10,
+   "r": 6,
+   "explode": [
+    -80,
+    0,
+    0
+   ],
+   "mass": 20.4,
+   "materials": [
+    [
+     "tpu",
+     100
+    ]
+   ],
+   "info": "Lauffläche der Rolle.",
+   "color": "#F2EEDF",
+   "label": false
+  },
+  {
+   "id": "lager_vorne_l_a",
+   "component_id": "steel_bearings",
+   "material_id": "steel",
+   "name": "Kugellager 608",
+   "short": "Kugellager",
+   "shape": "box",
+   "x": 6,
+   "y": 614,
+   "w": 7,
+   "d": 22,
+   "z": 16,
+   "h": 22,
+   "r": 2.5,
+   "explode": [
+    -120,
+    0,
+    0
+   ],
+   "mass": 12.2,
+   "materials": [
+    [
+     "stahl",
+     94
+    ],
+    [
+     "nylon",
+     4
+    ],
+    [
+     "gummi",
+     2
+    ]
+   ],
+   "info": "Zwei Kugellager je Rolle (Typ 608, 22 mm), Stahlkugeln hinter Abdeckscheiben. Mit der Achse aus der Rolle hebeln. Stahlschrott.",
+   "color": "#A7AFB5",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 3,
+     "w": 5,
+     "d": 16,
+     "r": 2,
+     "fill": "#5C646A"
+    }
+   ]
+  },
+  {
+   "id": "lager_vorne_l_i",
+   "component_id": "steel_bearings",
+   "material_id": "steel",
+   "name": "Kugellager 608",
+   "short": "Kugellager",
+   "shape": "box",
+   "x": 30,
+   "y": 614,
+   "w": 7,
+   "d": 22,
+   "z": 16,
+   "h": 22,
+   "r": 2.5,
+   "explode": [
+    -60,
+    0,
+    0
+   ],
+   "mass": 12.2,
+   "materials": [
+    [
+     "stahl",
+     94
+    ],
+    [
+     "nylon",
+     4
+    ],
+    [
+     "gummi",
+     2
+    ]
+   ],
+   "info": "Zwei Kugellager je Rolle (Typ 608, 22 mm), Stahlkugeln hinter Abdeckscheiben. Mit der Achse aus der Rolle hebeln. Stahlschrott.",
+   "color": "#A7AFB5",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 3,
+     "w": 5,
+     "d": 16,
+     "r": 2,
+     "fill": "#5C646A"
+    }
+   ]
+  },
+  {
+   "id": "mutter_vorne_l",
+   "component_id": "aluminium_trucks",
+   "material_id": "steel",
+   "name": "Achsmutter",
+   "short": "Achsmutter",
+   "shape": "box",
+   "x": 0,
+   "y": 619,
+   "w": 5,
+   "d": 12,
+   "z": 21,
+   "h": 12,
+   "r": 1.5,
+   "explode": [
+    -150,
+    0,
+    0
+   ],
+   "mass": 3.1,
+   "materials": [
+    [
+     "stahl",
+     95
+    ],
+    [
+     "nylon",
+     5
+    ]
+   ],
+   "info": "Selbstsichernde Mutter mit Nylonring. Mit dem Skate-Tool (13er) lösen.",
+   "color": "#7D868D",
+   "label": false
+  },
+  {
+   "id": "rad_vorne_r_oben",
+   "component_id": "pu_wheels",
+   "material_id": "polyurethane",
+   "name": "Rolle (PU, 54 mm)",
+   "short": "Rolle",
+   "shape": "box",
+   "x": 163,
+   "y": 604,
+   "w": 32,
+   "d": 42,
+   "z": 44,
+   "h": 10,
+   "r": 6,
+   "explode": [
+    80,
+    0,
+    0
+   ],
+   "mass": 20.4,
+   "materials": [
+    [
+     "tpu",
+     100
+    ]
+   ],
+   "info": "Gegossenes, hartes Polyurethan. Nach dem Lösen der Achsmutter einfach von der Achse ziehen.",
+   "color": "#F2EEDF",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 4,
+     "w": 24,
+     "d": 34,
+     "r": 4,
+     "fill": "#D9D3BE"
+    }
+   ]
+  },
+  {
+   "id": "rad_vorne_r_mitte",
+   "component_id": "pu_wheels",
+   "material_id": "polyurethane",
+   "name": "Rolle (PU, 54 mm)",
+   "short": "Rolle",
+   "shape": "box",
+   "x": 163,
+   "y": 598,
+   "w": 32,
+   "d": 54,
+   "z": 10,
+   "h": 34,
+   "r": 8,
+   "explode": [
+    80,
+    0,
+    0
+   ],
+   "mass": 56,
+   "materials": [
+    [
+     "tpu",
+     100
+    ]
+   ],
+   "info": "Lauffläche der Rolle.",
+   "color": "#F2EEDF",
+   "label": false
+  },
+  {
+   "id": "rad_vorne_r_unten",
+   "component_id": "pu_wheels",
+   "material_id": "polyurethane",
+   "name": "Rolle (PU, 54 mm)",
+   "short": "Rolle",
+   "shape": "box",
+   "x": 163,
+   "y": 604,
+   "w": 32,
+   "d": 42,
+   "z": 0,
+   "h": 10,
+   "r": 6,
+   "explode": [
+    80,
+    0,
+    0
+   ],
+   "mass": 20.4,
+   "materials": [
+    [
+     "tpu",
+     100
+    ]
+   ],
+   "info": "Lauffläche der Rolle.",
+   "color": "#F2EEDF",
+   "label": false
+  },
+  {
+   "id": "lager_vorne_r_a",
+   "component_id": "steel_bearings",
+   "material_id": "steel",
+   "name": "Kugellager 608",
+   "short": "Kugellager",
+   "shape": "box",
+   "x": 187,
+   "y": 614,
+   "w": 7,
+   "d": 22,
+   "z": 16,
+   "h": 22,
+   "r": 2.5,
+   "explode": [
+    120,
+    0,
+    0
+   ],
+   "mass": 12.2,
+   "materials": [
+    [
+     "stahl",
+     94
+    ],
+    [
+     "nylon",
+     4
+    ],
+    [
+     "gummi",
+     2
+    ]
+   ],
+   "info": "Zwei Kugellager je Rolle (Typ 608, 22 mm), Stahlkugeln hinter Abdeckscheiben. Mit der Achse aus der Rolle hebeln. Stahlschrott.",
+   "color": "#A7AFB5",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 3,
+     "w": 5,
+     "d": 16,
+     "r": 2,
+     "fill": "#5C646A"
+    }
+   ]
+  },
+  {
+   "id": "lager_vorne_r_i",
+   "component_id": "steel_bearings",
+   "material_id": "steel",
+   "name": "Kugellager 608",
+   "short": "Kugellager",
+   "shape": "box",
+   "x": 163,
+   "y": 614,
+   "w": 7,
+   "d": 22,
+   "z": 16,
+   "h": 22,
+   "r": 2.5,
+   "explode": [
+    60,
+    0,
+    0
+   ],
+   "mass": 12.2,
+   "materials": [
+    [
+     "stahl",
+     94
+    ],
+    [
+     "nylon",
+     4
+    ],
+    [
+     "gummi",
+     2
+    ]
+   ],
+   "info": "Zwei Kugellager je Rolle (Typ 608, 22 mm), Stahlkugeln hinter Abdeckscheiben. Mit der Achse aus der Rolle hebeln. Stahlschrott.",
+   "color": "#A7AFB5",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 3,
+     "w": 5,
+     "d": 16,
+     "r": 2,
+     "fill": "#5C646A"
+    }
+   ]
+  },
+  {
+   "id": "mutter_vorne_r",
+   "component_id": "aluminium_trucks",
+   "material_id": "steel",
+   "name": "Achsmutter",
+   "short": "Achsmutter",
+   "shape": "box",
+   "x": 195,
+   "y": 619,
+   "w": 5,
+   "d": 12,
+   "z": 21,
+   "h": 12,
+   "r": 1.5,
+   "explode": [
+    150,
+    0,
+    0
+   ],
+   "mass": 3.1,
+   "materials": [
+    [
+     "stahl",
+     95
+    ],
+    [
+     "nylon",
+     5
+    ]
+   ],
+   "info": "Selbstsichernde Mutter mit Nylonring. Mit dem Skate-Tool (13er) lösen.",
+   "color": "#7D868D",
+   "label": false
   }
  ]
 }

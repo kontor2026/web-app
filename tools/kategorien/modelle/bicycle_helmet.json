@@ -1,0 +1,674 @@
+{
+ "parts": [
+  {
+   "id": "schale_0",
+   "component_id": "pc_shell",
+   "material_id": "pc",
+   "name": "Außenschale aus Polycarbonat",
+   "short": "Schale",
+   "shape": "cyl",
+   "x": 39.45,
+   "y": 50.75,
+   "w": 131.1,
+   "d": 168.5,
+   "z": 135,
+   "h": 35,
+   "explode": [
+    0,
+    0,
+    327.0
+   ],
+   "mass": 4.5,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Hauchdünne PC-Schale, im Werk direkt mit dem Schaum verbunden (In-Mold). Sie lässt sich nur mit einem flachen Werkzeug abhebeln.",
+   "color": "#D8473C",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 9.8,
+     "y": 46.3,
+     "w": 11.8,
+     "d": 75.8,
+     "r": 5.9,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 33.4,
+     "y": 32.0,
+     "w": 11.8,
+     "d": 104.5,
+     "r": 5.9,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 59.7,
+     "y": 25.3,
+     "w": 11.8,
+     "d": 117.9,
+     "r": 5.9,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 85.9,
+     "y": 32.0,
+     "w": 11.8,
+     "d": 104.5,
+     "r": 5.9,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 109.5,
+     "y": 46.3,
+     "w": 11.8,
+     "d": 75.8,
+     "r": 5.9,
+     "fill": "#3A3F44"
+    }
+   ]
+  },
+  {
+   "id": "schale_1",
+   "component_id": "pc_shell",
+   "material_id": "pc",
+   "name": "Außenschale aus Polycarbonat",
+   "short": "Schale",
+   "shape": "cyl",
+   "x": 20.5,
+   "y": 26.35,
+   "w": 169,
+   "d": 217.3,
+   "z": 105,
+   "h": 30,
+   "explode": [
+    0,
+    0,
+    327.0
+   ],
+   "mass": 6.5,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Hauchdünne PC-Schale, im Werk direkt mit dem Schaum verbunden (In-Mold). Sie lässt sich nur mit einem flachen Werkzeug abhebeln.",
+   "color": "#D8473C",
+   "label": false
+  },
+  {
+   "id": "schale_2",
+   "component_id": "pc_shell",
+   "material_id": "pc",
+   "name": "Außenschale aus Polycarbonat",
+   "short": "Schale",
+   "shape": "cyl",
+   "x": 5.25,
+   "y": 6.75,
+   "w": 199.5,
+   "d": 256.5,
+   "z": 60,
+   "h": 45,
+   "explode": [
+    0,
+    0,
+    327.0
+   ],
+   "mass": 13.5,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Hauchdünne PC-Schale, im Werk direkt mit dem Schaum verbunden (In-Mold). Sie lässt sich nur mit einem flachen Werkzeug abhebeln.",
+   "color": "#D8473C",
+   "label": false
+  },
+  {
+   "id": "schale_3",
+   "component_id": "pc_shell",
+   "material_id": "pc",
+   "name": "Außenschale aus Polycarbonat",
+   "short": "Schale",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 210,
+   "d": 270,
+   "z": 10,
+   "h": 50,
+   "explode": [
+    0,
+    0,
+    327.0
+   ],
+   "mass": 16.6,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Hauchdünne PC-Schale, im Werk direkt mit dem Schaum verbunden (In-Mold). Sie lässt sich nur mit einem flachen Werkzeug abhebeln.",
+   "color": "#D8473C",
+   "label": false
+  },
+  {
+   "id": "eps_0",
+   "component_id": "eps_liner",
+   "material_id": "eps",
+   "name": "Schaumkern aus EPS",
+   "short": "EPS-Schaum",
+   "shape": "cyl",
+   "x": 42.25,
+   "y": 53.8,
+   "w": 125.5,
+   "d": 162.4,
+   "z": 133,
+   "h": 33,
+   "explode": [
+    0,
+    0,
+    146.0
+   ],
+   "mass": 17.1,
+   "materials": [
+    [
+     "ps",
+     100
+    ]
+   ],
+   "info": "Expandiertes Polystyrol, das bei einem Sturz zusammengedrückt wird und so den Aufprall dämpft. Nach jedem Sturz den Helm ersetzen: Der Schaum erholt sich nicht.",
+   "color": "#ECEBE6",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 9.4,
+     "y": 44.7,
+     "w": 11.3,
+     "d": 73.1,
+     "r": 5.6,
+     "fill": "#B9B7AE"
+    },
+    {
+     "shape": "box",
+     "x": 32.0,
+     "y": 30.9,
+     "w": 11.3,
+     "d": 100.7,
+     "r": 5.6,
+     "fill": "#B9B7AE"
+    },
+    {
+     "shape": "box",
+     "x": 57.1,
+     "y": 24.4,
+     "w": 11.3,
+     "d": 113.7,
+     "r": 5.6,
+     "fill": "#B9B7AE"
+    },
+    {
+     "shape": "box",
+     "x": 82.2,
+     "y": 30.9,
+     "w": 11.3,
+     "d": 100.7,
+     "r": 5.6,
+     "fill": "#B9B7AE"
+    },
+    {
+     "shape": "box",
+     "x": 104.8,
+     "y": 44.7,
+     "w": 11.3,
+     "d": 73.1,
+     "r": 5.6,
+     "fill": "#B9B7AE"
+    }
+   ]
+  },
+  {
+   "id": "eps_1",
+   "component_id": "eps_liner",
+   "material_id": "eps",
+   "name": "Schaumkern aus EPS",
+   "short": "EPS-Schaum",
+   "shape": "cyl",
+   "x": 24.1,
+   "y": 30.3,
+   "w": 161.8,
+   "d": 209.4,
+   "z": 105,
+   "h": 28,
+   "explode": [
+    0,
+    0,
+    146.0
+   ],
+   "mass": 24,
+   "materials": [
+    [
+     "ps",
+     100
+    ]
+   ],
+   "info": "Expandiertes Polystyrol, das bei einem Sturz zusammengedrückt wird und so den Aufprall dämpft. Nach jedem Sturz den Helm ersetzen: Der Schaum erholt sich nicht.",
+   "color": "#ECEBE6",
+   "label": false
+  },
+  {
+   "id": "eps_2",
+   "component_id": "eps_liner",
+   "material_id": "eps",
+   "name": "Schaumkern aus EPS",
+   "short": "EPS-Schaum",
+   "shape": "cyl",
+   "x": 8.4,
+   "y": 9.95,
+   "w": 193.2,
+   "d": 250.1,
+   "z": 60,
+   "h": 45,
+   "explode": [
+    0,
+    0,
+    146.0
+   ],
+   "mass": 55.1,
+   "materials": [
+    [
+     "ps",
+     100
+    ]
+   ],
+   "info": "Expandiertes Polystyrol, das bei einem Sturz zusammengedrückt wird und so den Aufprall dämpft. Nach jedem Sturz den Helm ersetzen: Der Schaum erholt sich nicht.",
+   "color": "#ECEBE6",
+   "label": false
+  },
+  {
+   "id": "eps_3",
+   "component_id": "eps_liner",
+   "material_id": "eps",
+   "name": "Schaumkern aus EPS",
+   "short": "EPS-Schaum",
+   "shape": "cyl",
+   "x": 3,
+   "y": 3,
+   "w": 204,
+   "d": 264,
+   "z": 10,
+   "h": 50,
+   "explode": [
+    0,
+    0,
+    146.0
+   ],
+   "mass": 68.2,
+   "materials": [
+    [
+     "ps",
+     100
+    ]
+   ],
+   "info": "Expandiertes Polystyrol, das bei einem Sturz zusammengedrückt wird und so den Aufprall dämpft. Nach jedem Sturz den Helm ersetzen: Der Schaum erholt sich nicht.",
+   "color": "#ECEBE6",
+   "label": false
+  },
+  {
+   "id": "polster",
+   "component_id": "eps_liner",
+   "material_id": "pu_foam",
+   "name": "Innenpolster",
+   "short": "Polster",
+   "shape": "box",
+   "x": 45,
+   "y": 55,
+   "w": 120,
+   "d": 160,
+   "z": 125,
+   "h": 6,
+   "r": 30,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 10.3,
+   "materials": [
+    [
+     "schaum",
+     70
+    ],
+    [
+     "polyester",
+     25
+    ],
+    [
+     "klebstoff",
+     5
+    ]
+   ],
+   "info": "Weiche Schaumpolster mit Stoffbezug, mit Klett am Schaum befestigt. Abziehen und waschen.",
+   "color": "#3E4349",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 8,
+     "w": 100,
+     "d": 30,
+     "r": 12,
+     "fill": "#565C63"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 55,
+     "w": 30,
+     "d": 70,
+     "r": 12,
+     "fill": "#565C63"
+    },
+    {
+     "shape": "box",
+     "x": 86,
+     "y": 55,
+     "w": 30,
+     "d": 70,
+     "r": 12,
+     "fill": "#565C63"
+    },
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 132,
+     "w": 100,
+     "d": 22,
+     "r": 10,
+     "fill": "#565C63"
+    }
+   ]
+  },
+  {
+   "id": "verstellring",
+   "component_id": "plastic_buckles",
+   "material_id": "pp",
+   "name": "Verstellring",
+   "short": "Verstellring",
+   "shape": "cyl",
+   "x": 25,
+   "y": 20,
+   "w": 160,
+   "d": 200,
+   "z": 45,
+   "h": 18,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 30.8,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Kunststoffband, das um den Hinterkopf läuft und mit dem Drehrad enger gestellt wird. Am Schaum nur eingesteckt.",
+   "color": "#2B2F33",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 8,
+     "y": 8,
+     "w": 144,
+     "d": 184,
+     "fill": "#8C8F92"
+    }
+   ]
+  },
+  {
+   "id": "drehrad",
+   "component_id": "plastic_buckles",
+   "material_id": "pp",
+   "name": "Drehrad",
+   "short": "Drehrad",
+   "shape": "cyl",
+   "x": 90,
+   "y": 8,
+   "w": 30,
+   "z": 45,
+   "h": 14,
+   "explode": [
+    0,
+    -45,
+    0
+   ],
+   "mass": 8.2,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Rad mit Zahnstange im Inneren, das den Verstellring strafft. Mit Schraubenzieher aufclipsen.",
+   "color": "#C8302C",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 5,
+     "y": 5,
+     "w": 20,
+     "fill": "#A12520"
+    },
+    {
+     "shape": "box",
+     "x": 13,
+     "y": 3,
+     "w": 4,
+     "d": 24,
+     "r": 2,
+     "fill": "#7E1C18"
+    }
+   ]
+  },
+  {
+   "id": "gurte",
+   "component_id": "nylon_straps",
+   "material_id": "nylon",
+   "name": "Kinn- und Seitengurte",
+   "short": "Gurte",
+   "shape": "box",
+   "x": 60,
+   "y": 80,
+   "w": 90,
+   "d": 120,
+   "z": 0,
+   "h": 3,
+   "r": 4,
+   "explode": [
+    250,
+    0,
+    0
+   ],
+   "mass": 30.8,
+   "materials": [
+    [
+     "nylon",
+     100
+    ]
+   ],
+   "info": "Nylon-Gurtband, an den Schaumkern geklebt oder eingegossen. Zum Trennen dicht am Helm abschneiden.",
+   "color": "#1F2328",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 0,
+     "w": 16,
+     "d": 120,
+     "r": 2,
+     "fill": "#30353B"
+    },
+    {
+     "shape": "box",
+     "x": 70,
+     "y": 0,
+     "w": 16,
+     "d": 120,
+     "r": 2,
+     "fill": "#30353B"
+    },
+    {
+     "shape": "box",
+     "x": 37,
+     "y": 60,
+     "w": 16,
+     "d": 60,
+     "r": 2,
+     "fill": "#30353B"
+    }
+   ]
+  },
+  {
+   "id": "verteiler_links",
+   "component_id": "plastic_buckles",
+   "material_id": "pp",
+   "name": "Riemenverteiler links",
+   "short": "Verteiler",
+   "shape": "box",
+   "x": 38,
+   "y": 120,
+   "w": 16,
+   "d": 22,
+   "z": 0,
+   "h": 6,
+   "r": 3,
+   "explode": [
+    250,
+    0,
+    0
+   ],
+   "mass": 3.1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Kunststoffschieber unter dem Ohr, an dem sich vorderer und hinterer Gurt treffen.",
+   "color": "#2B2F33",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 4,
+     "w": 8,
+     "d": 14,
+     "r": 2,
+     "fill": "#4A4F55"
+    }
+   ]
+  },
+  {
+   "id": "verteiler_rechts",
+   "component_id": "plastic_buckles",
+   "material_id": "pp",
+   "name": "Riemenverteiler rechts",
+   "short": "Verteiler",
+   "shape": "box",
+   "x": 156,
+   "y": 120,
+   "w": 16,
+   "d": 22,
+   "z": 0,
+   "h": 6,
+   "r": 3,
+   "explode": [
+    250,
+    0,
+    0
+   ],
+   "mass": 3.1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Gegenstück auf der anderen Seite.",
+   "color": "#2B2F33",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 4,
+     "w": 8,
+     "d": 14,
+     "r": 2,
+     "fill": "#4A4F55"
+    }
+   ]
+  },
+  {
+   "id": "schnalle",
+   "component_id": "plastic_buckles",
+   "material_id": "pp",
+   "name": "Kinnschnalle",
+   "short": "Schnalle",
+   "shape": "box",
+   "x": 92,
+   "y": 208,
+   "w": 26,
+   "d": 34,
+   "z": 0,
+   "h": 9,
+   "r": 5,
+   "explode": [
+    250,
+    0,
+    0
+   ],
+   "mass": 8.2,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Steckschnalle aus PP: Zum Öffnen die beiden Seitenlaschen zusammendrücken. Hinter der Schnalle den Gurt abschneiden, wenn man sie getrennt entsorgt.",
+   "color": "#1B1E21",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 5,
+     "y": 4,
+     "w": 16,
+     "d": 12,
+     "r": 3,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 20,
+     "w": 22,
+     "d": 10,
+     "r": 2,
+     "fill": "#2E3237"
+    }
+   ]
+  }
+ ]
+}

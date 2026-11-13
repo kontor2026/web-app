@@ -4,7 +4,7 @@
  "name_en": "Yoga Mat",
  "klasse": "Restmüll",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -26,12 +26,12 @@
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 2,22 kg",
+   "v": "≈ 2,26 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 2,22 kg",
+   "v": "≈ 2,26 kg",
    "hint": "spart 0,00 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
@@ -39,10 +39,11 @@
   "metalle_mg": {},
   "herkunft": {},
   "materialien_g": {
-   "eva_foam": 1000.0
+   "eva_foam": 960.0,
+   "polyester": 40.0
   },
-  "co2_kg": 2.221,
-  "co2_mit_recyclat_kg": 2.221,
+  "co2_kg": 2.264,
+  "co2_mit_recyclat_kg": 2.264,
   "co2_ersparnis_kg": 0.0,
   "co2_ohne_faktor": [],
   "rohstoffwert_eur": 0,
@@ -93,33 +94,230 @@
   "nicht": "Nicht in die Gelbe Tonne: keine Verpackung",
   "warnung": "Gut Erhaltenes lieber verschenken oder in der Werkstatt abgeben."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "foam_mat",
+   "id": "gurt",
    "component_id": "foam_mat",
-   "name": "Mat",
-   "short": "Mat",
+   "material_id": "polyester",
+   "name": "Tragegurt",
+   "short": "Tragegurt",
+   "shape": "box",
+   "x": 150,
+   "y": 60,
+   "w": 3,
+   "d": 30,
+   "z": 120,
+   "h": 395,
+   "r": 1,
+   "explode": [
+    230,
+    0,
+    0
+   ],
+   "mass": 20,
+   "materials": [
+    [
+     "polyester",
+     100
+    ]
+   ],
+   "info": "Gewebtes Polyesterband zum Umhängen. Es wird nur abgestreift und kann weiterbenutzt werden.",
+   "color": "#3B4250"
+  },
+  {
+   "id": "schlaufe_oben",
+   "component_id": "foam_mat",
+   "material_id": "polyester",
+   "name": "Gurtschlaufe oben",
+   "short": "Schlaufe",
+   "shape": "cyl",
+   "x": -3,
+   "y": -3,
+   "w": 156,
+   "z": 470,
+   "h": 25,
+   "explode": [
+    190,
+    0,
+    30
+   ],
+   "mass": 10,
+   "materials": [
+    [
+     "polyester",
+     85
+    ],
+    [
+     "pp",
+     15
+    ]
+   ],
+   "info": "Schlaufe mit Kunststoff-Schiebeschnalle, die die Rolle zusammenhält.",
+   "color": "#3B4250",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 3,
+     "w": 150,
+     "fill": "#7A9E8E"
+    }
+   ]
+  },
+  {
+   "id": "matte",
+   "component_id": "foam_mat",
+   "material_id": "eva_foam",
+   "name": "Matte, aufgerollt",
+   "short": "Matte",
    "shape": "cyl",
    "x": 0,
    "y": 0,
-   "w": 150.0,
-   "h": 610.0,
-   "z": 0.0,
+   "w": 150,
+   "z": 0,
+   "h": 610,
    "explode": [
     0,
     0,
     0
    ],
-   "mass": 1000.0,
+   "mass": 960,
    "materials": [
     [
      "schaum",
      100
     ]
    ],
-   "material_id": "eva_foam",
-   "info": "Cut it into knee pads or drawer liners."
+   "info": "Geschäumter Kunststoff (EVA oder TPE) mit rutschfester Struktur. Nicht recycelbar: lieber in Stücke schneiden und als Knieschoner oder Schubladeneinlage weiternutzen, sonst Restmüll.",
+   "color": "#7A9E8E",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0.0,
+     "y": 0.0,
+     "w": 150,
+     "fill": "#93B6A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 6.0,
+     "y": 6.0,
+     "w": 138,
+     "fill": "#5F8273"
+    },
+    {
+     "shape": "cyl",
+     "x": 12.0,
+     "y": 12.0,
+     "w": 126,
+     "fill": "#93B6A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 18.0,
+     "y": 18.0,
+     "w": 114,
+     "fill": "#5F8273"
+    },
+    {
+     "shape": "cyl",
+     "x": 24.0,
+     "y": 24.0,
+     "w": 102,
+     "fill": "#93B6A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 30.0,
+     "y": 30.0,
+     "w": 90,
+     "fill": "#5F8273"
+    },
+    {
+     "shape": "cyl",
+     "x": 36.0,
+     "y": 36.0,
+     "w": 78,
+     "fill": "#93B6A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 42.0,
+     "y": 42.0,
+     "w": 66,
+     "fill": "#5F8273"
+    },
+    {
+     "shape": "cyl",
+     "x": 48.0,
+     "y": 48.0,
+     "w": 54,
+     "fill": "#93B6A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 54.0,
+     "y": 54.0,
+     "w": 42,
+     "fill": "#5F8273"
+    },
+    {
+     "shape": "cyl",
+     "x": 60.0,
+     "y": 60.0,
+     "w": 30,
+     "fill": "#93B6A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 66,
+     "y": 66,
+     "w": 18,
+     "fill": "#2E3530"
+    }
+   ]
+  },
+  {
+   "id": "schlaufe_unten",
+   "component_id": "foam_mat",
+   "material_id": "polyester",
+   "name": "Gurtschlaufe unten",
+   "short": "Schlaufe",
+   "shape": "cyl",
+   "x": -3,
+   "y": -3,
+   "w": 156,
+   "z": 110,
+   "h": 25,
+   "explode": [
+    190,
+    0,
+    -30
+   ],
+   "mass": 10,
+   "materials": [
+    [
+     "polyester",
+     85
+    ],
+    [
+     "pp",
+     15
+    ]
+   ],
+   "info": "Zweite Schlaufe am anderen Ende der Rolle.",
+   "color": "#3B4250",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 3,
+     "w": 150,
+     "fill": "#7A9E8E"
+    }
+   ]
   }
  ]
 }

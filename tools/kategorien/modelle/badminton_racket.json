@@ -1,0 +1,1083 @@
+{
+ "parts": [
+  {
+   "id": "saiten",
+   "component_id": "nylon_strings",
+   "material_id": "nylon",
+   "name": "Bespannung",
+   "short": "Saiten",
+   "shape": "cyl",
+   "x": 15,
+   "y": 12,
+   "w": 186,
+   "d": 226,
+   "z": 14,
+   "h": 1,
+   "explode": [
+    0,
+    0,
+    45
+   ],
+   "mass": 5,
+   "materials": [
+    [
+     "nylon",
+     100
+    ]
+   ],
+   "info": "Etwa 10 m Nylonsaite, mit rund 9 kg je Saite gespannt. Vor dem Entsorgen quer in der Mitte durchschneiden, damit nichts zurückschnellt.",
+   "color": "#F1EFE6",
+   "opacity": 0.5,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 8.0,
+     "y": 65.9,
+     "w": 1,
+     "d": 94.2,
+     "r": 0,
+     "fill": "#D9D5C6"
+    },
+    {
+     "shape": "box",
+     "x": 16.4,
+     "y": 48.0,
+     "w": 1,
+     "d": 129.9,
+     "r": 0,
+     "fill": "#D9D5C6"
+    },
+    {
+     "shape": "box",
+     "x": 24.9,
+     "y": 35.4,
+     "w": 1,
+     "d": 155.1,
+     "r": 0,
+     "fill": "#D9D5C6"
+    },
+    {
+     "shape": "box",
+     "x": 33.3,
+     "y": 25.8,
+     "w": 1,
+     "d": 174.3,
+     "r": 0,
+     "fill": "#D9D5C6"
+    },
+    {
+     "shape": "box",
+     "x": 41.8,
+     "y": 18.3,
+     "w": 1,
+     "d": 189.4,
+     "r": 0,
+     "fill": "#D9D5C6"
+    },
+    {
+     "shape": "box",
+     "x": 50.2,
+     "y": 12.3,
+     "w": 1,
+     "d": 201.3,
+     "r": 0,
+     "fill": "#D9D5C6"
+    },
+    {
+     "shape": "box",
+     "x": 58.7,
+     "y": 7.7,
+     "w": 1,
+     "d": 210.5,
+     "r": 0,
+     "fill": "#D9D5C6"
+    },
+    {
+     "shape": "box",
+     "x": 67.1,
+     "y": 4.3,
+     "w": 1,
+     "d": 217.4,
+     "r": 0,
+     "fill": "#D9D5C6"
+    },
+    {
+     "shape": "box",
+     "x": 75.6,
+     "y": 1.9,
+     "w": 1,
+     "d": 222.2,
+     "r": 0,
+     "fill": "#D9D5C6"
+    },
+    {
+     "shape": "box",
+     "x": 84.0,
+     "y": 0.5,
+     "w": 1,
+     "d": 225.1,
+     "r": 0,
+     "fill": "#D9D5C6"
+    },
+    {
+     "shape": "box",
+     "x": 92.5,
+     "y": 0.0,
+     "w": 1,
+     "d": 226.0,
+     "r": 0,
+     "fill": "#D9D5C6"
+    },
+    {
+     "shape": "box",
+     "x": 101.0,
+     "y": 0.5,
+     "w": 1,
+     "d": 225.1,
+     "r": 0,
+     "fill": "#D9D5C6"
+    },
+    {
+     "shape": "box",
+     "x": 109.4,
+     "y": 1.9,
+     "w": 1,
+     "d": 222.2,
+     "r": 0,
+     "fill": "#D9D5C6"
+    },
+    {
+     "shape": "box",
+     "x": 117.9,
+     "y": 4.3,
+     "w": 1,
+     "d": 217.4,
+     "r": 0,
+     "fill": "#D9D5C6"
+    },
+    {
+     "shape": "box",
+     "x": 126.3,
+     "y": 7.7,
+     "w": 1,
+     "d": 210.5,
+     "r": 0,
+     "fill": "#D9D5C6"
+    },
+    {
+     "shape": "box",
+     "x": 134.8,
+     "y": 12.3,
+     "w": 1,
+     "d": 201.3,
+     "r": 0,
+     "fill": "#D9D5C6"
+    },
+    {
+     "shape": "box",
+     "x": 143.2,
+     "y": 18.3,
+     "w": 1,
+     "d": 189.4,
+     "r": 0,
+     "fill": "#D9D5C6"
+    },
+    {
+     "shape": "box",
+     "x": 151.7,
+     "y": 25.8,
+     "w": 1,
+     "d": 174.3,
+     "r": 0,
+     "fill": "#D9D5C6"
+    },
+    {
+     "shape": "box",
+     "x": 160.1,
+     "y": 35.4,
+     "w": 1,
+     "d": 155.1,
+     "r": 0,
+     "fill": "#D9D5C6"
+    },
+    {
+     "shape": "box",
+     "x": 168.6,
+     "y": 48.0,
+     "w": 1,
+     "d": 129.9,
+     "r": 0,
+     "fill": "#D9D5C6"
+    },
+    {
+     "shape": "box",
+     "x": 177.0,
+     "y": 65.9,
+     "w": 1,
+     "d": 94.2,
+     "r": 0,
+     "fill": "#D9D5C6"
+    },
+    {
+     "shape": "box",
+     "x": 55.1,
+     "y": 9.3,
+     "w": 75.9,
+     "d": 1,
+     "r": 0,
+     "fill": "#D9D5C6"
+    },
+    {
+     "shape": "box",
+     "x": 40.6,
+     "y": 19.2,
+     "w": 104.8,
+     "d": 1,
+     "r": 0,
+     "fill": "#D9D5C6"
+    },
+    {
+     "shape": "box",
+     "x": 30.4,
+     "y": 29.0,
+     "w": 125.3,
+     "d": 1,
+     "r": 0,
+     "fill": "#D9D5C6"
+    },
+    {
+     "shape": "box",
+     "x": 22.5,
+     "y": 38.8,
+     "w": 141.0,
+     "d": 1,
+     "r": 0,
+     "fill": "#D9D5C6"
+    },
+    {
+     "shape": "box",
+     "x": 16.3,
+     "y": 48.6,
+     "w": 153.4,
+     "d": 1,
+     "r": 0,
+     "fill": "#D9D5C6"
+    },
+    {
+     "shape": "box",
+     "x": 11.3,
+     "y": 58.5,
+     "w": 163.3,
+     "d": 1,
+     "r": 0,
+     "fill": "#D9D5C6"
+    },
+    {
+     "shape": "box",
+     "x": 7.4,
+     "y": 68.3,
+     "w": 171.2,
+     "d": 1,
+     "r": 0,
+     "fill": "#D9D5C6"
+    },
+    {
+     "shape": "box",
+     "x": 4.4,
+     "y": 78.1,
+     "w": 177.2,
+     "d": 1,
+     "r": 0,
+     "fill": "#D9D5C6"
+    },
+    {
+     "shape": "box",
+     "x": 2.2,
+     "y": 87.9,
+     "w": 181.6,
+     "d": 1,
+     "r": 0,
+     "fill": "#D9D5C6"
+    },
+    {
+     "shape": "box",
+     "x": 0.8,
+     "y": 97.8,
+     "w": 184.4,
+     "d": 1,
+     "r": 0,
+     "fill": "#D9D5C6"
+    },
+    {
+     "shape": "box",
+     "x": 0.1,
+     "y": 107.6,
+     "w": 185.8,
+     "d": 1,
+     "r": 0,
+     "fill": "#D9D5C6"
+    },
+    {
+     "shape": "box",
+     "x": 0.1,
+     "y": 117.4,
+     "w": 185.8,
+     "d": 1,
+     "r": 0,
+     "fill": "#D9D5C6"
+    },
+    {
+     "shape": "box",
+     "x": 0.8,
+     "y": 127.2,
+     "w": 184.4,
+     "d": 1,
+     "r": 0,
+     "fill": "#D9D5C6"
+    },
+    {
+     "shape": "box",
+     "x": 2.2,
+     "y": 137.1,
+     "w": 181.6,
+     "d": 1,
+     "r": 0,
+     "fill": "#D9D5C6"
+    },
+    {
+     "shape": "box",
+     "x": 4.4,
+     "y": 146.9,
+     "w": 177.2,
+     "d": 1,
+     "r": 0,
+     "fill": "#D9D5C6"
+    },
+    {
+     "shape": "box",
+     "x": 7.4,
+     "y": 156.7,
+     "w": 171.2,
+     "d": 1,
+     "r": 0,
+     "fill": "#D9D5C6"
+    },
+    {
+     "shape": "box",
+     "x": 11.3,
+     "y": 166.5,
+     "w": 163.3,
+     "d": 1,
+     "r": 0,
+     "fill": "#D9D5C6"
+    },
+    {
+     "shape": "box",
+     "x": 16.3,
+     "y": 176.4,
+     "w": 153.4,
+     "d": 1,
+     "r": 0,
+     "fill": "#D9D5C6"
+    },
+    {
+     "shape": "box",
+     "x": 22.5,
+     "y": 186.2,
+     "w": 141.0,
+     "d": 1,
+     "r": 0,
+     "fill": "#D9D5C6"
+    },
+    {
+     "shape": "box",
+     "x": 30.4,
+     "y": 196.0,
+     "w": 125.3,
+     "d": 1,
+     "r": 0,
+     "fill": "#D9D5C6"
+    },
+    {
+     "shape": "box",
+     "x": 40.6,
+     "y": 205.8,
+     "w": 104.8,
+     "d": 1,
+     "r": 0,
+     "fill": "#D9D5C6"
+    },
+    {
+     "shape": "box",
+     "x": 55.1,
+     "y": 215.7,
+     "w": 75.9,
+     "d": 1,
+     "r": 0,
+     "fill": "#D9D5C6"
+    }
+   ]
+  },
+  {
+   "id": "rahmen",
+   "component_id": "aluminium_racket_frame",
+   "material_id": "aluminium",
+   "name": "Schlägerkopf (Aluminiumrahmen)",
+   "short": "Rahmen",
+   "shape": "cyl",
+   "x": 2,
+   "y": 0,
+   "w": 216,
+   "d": 250,
+   "z": 10,
+   "h": 9,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 42,
+   "materials": [
+    [
+     "alu",
+     94
+    ],
+    [
+     "nylon",
+     6
+    ]
+   ],
+   "info": "Gebogenes Aluminiumprofil mit Kunststoffösen für die Saiten. Ohne Saiten ist der Rahmen Altmetall für den Wertstoffhof.",
+   "color": "#B8C0C6",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 13,
+     "y": 12,
+     "w": 186,
+     "d": 226,
+     "fill": "#E7E5DD"
+    },
+    {
+     "shape": "box",
+     "x": 21.0,
+     "y": 77.9,
+     "w": 1,
+     "d": 94.2,
+     "r": 0,
+     "fill": "#C9C4B3"
+    },
+    {
+     "shape": "box",
+     "x": 29.4,
+     "y": 60.0,
+     "w": 1,
+     "d": 129.9,
+     "r": 0,
+     "fill": "#C9C4B3"
+    },
+    {
+     "shape": "box",
+     "x": 37.9,
+     "y": 47.4,
+     "w": 1,
+     "d": 155.1,
+     "r": 0,
+     "fill": "#C9C4B3"
+    },
+    {
+     "shape": "box",
+     "x": 46.3,
+     "y": 37.8,
+     "w": 1,
+     "d": 174.3,
+     "r": 0,
+     "fill": "#C9C4B3"
+    },
+    {
+     "shape": "box",
+     "x": 54.8,
+     "y": 30.3,
+     "w": 1,
+     "d": 189.4,
+     "r": 0,
+     "fill": "#C9C4B3"
+    },
+    {
+     "shape": "box",
+     "x": 63.2,
+     "y": 24.3,
+     "w": 1,
+     "d": 201.3,
+     "r": 0,
+     "fill": "#C9C4B3"
+    },
+    {
+     "shape": "box",
+     "x": 71.7,
+     "y": 19.7,
+     "w": 1,
+     "d": 210.5,
+     "r": 0,
+     "fill": "#C9C4B3"
+    },
+    {
+     "shape": "box",
+     "x": 80.1,
+     "y": 16.3,
+     "w": 1,
+     "d": 217.4,
+     "r": 0,
+     "fill": "#C9C4B3"
+    },
+    {
+     "shape": "box",
+     "x": 88.6,
+     "y": 13.9,
+     "w": 1,
+     "d": 222.2,
+     "r": 0,
+     "fill": "#C9C4B3"
+    },
+    {
+     "shape": "box",
+     "x": 97.0,
+     "y": 12.5,
+     "w": 1,
+     "d": 225.1,
+     "r": 0,
+     "fill": "#C9C4B3"
+    },
+    {
+     "shape": "box",
+     "x": 105.5,
+     "y": 12.0,
+     "w": 1,
+     "d": 226.0,
+     "r": 0,
+     "fill": "#C9C4B3"
+    },
+    {
+     "shape": "box",
+     "x": 114.0,
+     "y": 12.5,
+     "w": 1,
+     "d": 225.1,
+     "r": 0,
+     "fill": "#C9C4B3"
+    },
+    {
+     "shape": "box",
+     "x": 122.4,
+     "y": 13.9,
+     "w": 1,
+     "d": 222.2,
+     "r": 0,
+     "fill": "#C9C4B3"
+    },
+    {
+     "shape": "box",
+     "x": 130.9,
+     "y": 16.3,
+     "w": 1,
+     "d": 217.4,
+     "r": 0,
+     "fill": "#C9C4B3"
+    },
+    {
+     "shape": "box",
+     "x": 139.3,
+     "y": 19.7,
+     "w": 1,
+     "d": 210.5,
+     "r": 0,
+     "fill": "#C9C4B3"
+    },
+    {
+     "shape": "box",
+     "x": 147.8,
+     "y": 24.3,
+     "w": 1,
+     "d": 201.3,
+     "r": 0,
+     "fill": "#C9C4B3"
+    },
+    {
+     "shape": "box",
+     "x": 156.2,
+     "y": 30.3,
+     "w": 1,
+     "d": 189.4,
+     "r": 0,
+     "fill": "#C9C4B3"
+    },
+    {
+     "shape": "box",
+     "x": 164.7,
+     "y": 37.8,
+     "w": 1,
+     "d": 174.3,
+     "r": 0,
+     "fill": "#C9C4B3"
+    },
+    {
+     "shape": "box",
+     "x": 173.1,
+     "y": 47.4,
+     "w": 1,
+     "d": 155.1,
+     "r": 0,
+     "fill": "#C9C4B3"
+    },
+    {
+     "shape": "box",
+     "x": 181.6,
+     "y": 60.0,
+     "w": 1,
+     "d": 129.9,
+     "r": 0,
+     "fill": "#C9C4B3"
+    },
+    {
+     "shape": "box",
+     "x": 190.0,
+     "y": 77.9,
+     "w": 1,
+     "d": 94.2,
+     "r": 0,
+     "fill": "#C9C4B3"
+    },
+    {
+     "shape": "box",
+     "x": 68.1,
+     "y": 21.3,
+     "w": 75.9,
+     "d": 1,
+     "r": 0,
+     "fill": "#C9C4B3"
+    },
+    {
+     "shape": "box",
+     "x": 53.6,
+     "y": 31.2,
+     "w": 104.8,
+     "d": 1,
+     "r": 0,
+     "fill": "#C9C4B3"
+    },
+    {
+     "shape": "box",
+     "x": 43.4,
+     "y": 41.0,
+     "w": 125.3,
+     "d": 1,
+     "r": 0,
+     "fill": "#C9C4B3"
+    },
+    {
+     "shape": "box",
+     "x": 35.5,
+     "y": 50.8,
+     "w": 141.0,
+     "d": 1,
+     "r": 0,
+     "fill": "#C9C4B3"
+    },
+    {
+     "shape": "box",
+     "x": 29.3,
+     "y": 60.6,
+     "w": 153.4,
+     "d": 1,
+     "r": 0,
+     "fill": "#C9C4B3"
+    },
+    {
+     "shape": "box",
+     "x": 24.3,
+     "y": 70.5,
+     "w": 163.3,
+     "d": 1,
+     "r": 0,
+     "fill": "#C9C4B3"
+    },
+    {
+     "shape": "box",
+     "x": 20.4,
+     "y": 80.3,
+     "w": 171.2,
+     "d": 1,
+     "r": 0,
+     "fill": "#C9C4B3"
+    },
+    {
+     "shape": "box",
+     "x": 17.4,
+     "y": 90.1,
+     "w": 177.2,
+     "d": 1,
+     "r": 0,
+     "fill": "#C9C4B3"
+    },
+    {
+     "shape": "box",
+     "x": 15.2,
+     "y": 99.9,
+     "w": 181.6,
+     "d": 1,
+     "r": 0,
+     "fill": "#C9C4B3"
+    },
+    {
+     "shape": "box",
+     "x": 13.8,
+     "y": 109.8,
+     "w": 184.4,
+     "d": 1,
+     "r": 0,
+     "fill": "#C9C4B3"
+    },
+    {
+     "shape": "box",
+     "x": 13.1,
+     "y": 119.6,
+     "w": 185.8,
+     "d": 1,
+     "r": 0,
+     "fill": "#C9C4B3"
+    },
+    {
+     "shape": "box",
+     "x": 13.1,
+     "y": 129.4,
+     "w": 185.8,
+     "d": 1,
+     "r": 0,
+     "fill": "#C9C4B3"
+    },
+    {
+     "shape": "box",
+     "x": 13.8,
+     "y": 139.2,
+     "w": 184.4,
+     "d": 1,
+     "r": 0,
+     "fill": "#C9C4B3"
+    },
+    {
+     "shape": "box",
+     "x": 15.2,
+     "y": 149.1,
+     "w": 181.6,
+     "d": 1,
+     "r": 0,
+     "fill": "#C9C4B3"
+    },
+    {
+     "shape": "box",
+     "x": 17.4,
+     "y": 158.9,
+     "w": 177.2,
+     "d": 1,
+     "r": 0,
+     "fill": "#C9C4B3"
+    },
+    {
+     "shape": "box",
+     "x": 20.4,
+     "y": 168.7,
+     "w": 171.2,
+     "d": 1,
+     "r": 0,
+     "fill": "#C9C4B3"
+    },
+    {
+     "shape": "box",
+     "x": 24.3,
+     "y": 178.5,
+     "w": 163.3,
+     "d": 1,
+     "r": 0,
+     "fill": "#C9C4B3"
+    },
+    {
+     "shape": "box",
+     "x": 29.3,
+     "y": 188.4,
+     "w": 153.4,
+     "d": 1,
+     "r": 0,
+     "fill": "#C9C4B3"
+    },
+    {
+     "shape": "box",
+     "x": 35.5,
+     "y": 198.2,
+     "w": 141.0,
+     "d": 1,
+     "r": 0,
+     "fill": "#C9C4B3"
+    },
+    {
+     "shape": "box",
+     "x": 43.4,
+     "y": 208.0,
+     "w": 125.3,
+     "d": 1,
+     "r": 0,
+     "fill": "#C9C4B3"
+    },
+    {
+     "shape": "box",
+     "x": 53.6,
+     "y": 217.8,
+     "w": 104.8,
+     "d": 1,
+     "r": 0,
+     "fill": "#C9C4B3"
+    },
+    {
+     "shape": "box",
+     "x": 68.1,
+     "y": 227.7,
+     "w": 75.9,
+     "d": 1,
+     "r": 0,
+     "fill": "#C9C4B3"
+    }
+   ]
+  },
+  {
+   "id": "t_stueck",
+   "component_id": "aluminium_racket_frame",
+   "material_id": "abs",
+   "name": "T-Stück",
+   "short": "T-Stück",
+   "shape": "box",
+   "x": 100,
+   "y": 245,
+   "w": 20,
+   "d": 30,
+   "z": 9,
+   "h": 11,
+   "r": 4,
+   "explode": [
+    0,
+    20,
+    0
+   ],
+   "mass": 5,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Kunststoffverbinder zwischen Kopf und Schaft, verklebt. Mit Heißluft lässt er sich lösen.",
+   "color": "#2B2F33"
+  },
+  {
+   "id": "schaft",
+   "component_id": "aluminium_racket_frame",
+   "material_id": "steel",
+   "name": "Schaft aus Stahl",
+   "short": "Schaft",
+   "shape": "box",
+   "x": 106.5,
+   "y": 275,
+   "w": 7,
+   "d": 195,
+   "z": 11,
+   "h": 7,
+   "r": 3.5,
+   "explode": [
+    0,
+    45,
+    0
+   ],
+   "mass": 18,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Dünnes Stahlrohr, das den Schlag federnd überträgt. Mit einem Magneten erkennt man: Stahl, kein Alu.",
+   "color": "#8E979E"
+  },
+  {
+   "id": "griffband",
+   "component_id": "racket_grip",
+   "material_id": "polyurethane",
+   "name": "Griffband",
+   "short": "Griffband",
+   "shape": "box",
+   "x": 96,
+   "y": 478,
+   "w": 28,
+   "d": 184,
+   "z": 0,
+   "h": 28,
+   "r": 9,
+   "explode": [
+    70,
+    70,
+    0
+   ],
+   "mass": 7,
+   "materials": [
+    [
+     "kunstleder",
+     85
+    ],
+    [
+     "klebstoff",
+     15
+    ]
+   ],
+   "info": "Spiralförmig gewickeltes PU-Band mit Klebestreifen. Am Ende das Klebeband lösen und abwickeln.",
+   "color": "#C8323C",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 10,
+     "w": 24,
+     "d": 2,
+     "r": 1,
+     "fill": "#A32832"
+    },
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 28,
+     "w": 24,
+     "d": 2,
+     "r": 1,
+     "fill": "#A32832"
+    },
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 46,
+     "w": 24,
+     "d": 2,
+     "r": 1,
+     "fill": "#A32832"
+    },
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 64,
+     "w": 24,
+     "d": 2,
+     "r": 1,
+     "fill": "#A32832"
+    },
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 82,
+     "w": 24,
+     "d": 2,
+     "r": 1,
+     "fill": "#A32832"
+    },
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 100,
+     "w": 24,
+     "d": 2,
+     "r": 1,
+     "fill": "#A32832"
+    },
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 118,
+     "w": 24,
+     "d": 2,
+     "r": 1,
+     "fill": "#A32832"
+    },
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 136,
+     "w": 24,
+     "d": 2,
+     "r": 1,
+     "fill": "#A32832"
+    },
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 154,
+     "w": 24,
+     "d": 2,
+     "r": 1,
+     "fill": "#A32832"
+    }
+   ]
+  },
+  {
+   "id": "griff",
+   "component_id": "aluminium_racket_frame",
+   "material_id": "wood",
+   "name": "Griffkern",
+   "short": "Griffkern",
+   "shape": "box",
+   "x": 98.5,
+   "y": 470,
+   "w": 23,
+   "d": 192,
+   "z": 2.5,
+   "h": 23,
+   "r": 6,
+   "explode": [
+    0,
+    70,
+    0
+   ],
+   "mass": 11,
+   "materials": [
+    [
+     "holz",
+     100
+    ]
+   ],
+   "info": "Achteckiger Kern aus Holz oder Schaum, auf den Schaft geklebt. Er gibt dem Griff seine Form.",
+   "color": "#C9A26B"
+  },
+  {
+   "id": "endkappe",
+   "component_id": "aluminium_racket_frame",
+   "material_id": "pp",
+   "name": "Endkappe",
+   "short": "Endkappe",
+   "shape": "box",
+   "x": 96,
+   "y": 662,
+   "w": 28,
+   "d": 8,
+   "z": 0,
+   "h": 28,
+   "r": 6,
+   "explode": [
+    0,
+    100,
+    0
+   ],
+   "mass": 2,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Aufgesteckte Kunststoffkappe am Griffende, oft mit Logo.",
+   "color": "#2B2F33"
+  }
+ ]
+}
