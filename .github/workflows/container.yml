@@ -1,0 +1,38 @@
+# Baut die drei Container und veröffentlicht sie als Packages in der GitHub Container Registry:
+#   ghcr.io/<owner>/<repo>-frontend, -backend, -inferenz
+name: Container-Images
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  bauen:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        dienst: [frontend, backend, inferenz]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: docker/setup-buildx-action@v3
+      - uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: docker/${{ matrix.dienst }}/Dockerfile
+          push: true
+          tags: |
+            ghcr.io/${{ github.repository }}-${{ matrix.dienst }}:latest
+            ghcr.io/${{ github.repository }}-${{ matrix.dienst }}:${{ github.sha }}
+          labels: org.opencontainers.image.source=https://github.com/${{ github.repository }}
+          cache-from: type=gha,scope=${{ matrix.dienst }}
+          cache-to: type=gha,mode=max,scope=${{ matrix.dienst }}
