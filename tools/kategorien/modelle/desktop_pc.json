@@ -19,7 +19,7 @@
     -450,
     0
    ],
-   "mass": 812.3,
+   "mass": 798.8,
    "materials": [
     [
      "stahl",
@@ -48,7 +48,7 @@
     70,
     0
    ],
-   "mass": 487.4,
+   "mass": 479.3,
    "materials": [
     [
      "pcabs",
@@ -86,6 +86,132 @@
    ]
   },
   {
+   "id": "einschalter",
+   "component_id": "plastic_front_panel",
+   "material_id": "abs",
+   "name": "Einschalter",
+   "short": "Einschalter",
+   "shape": "cyl",
+   "x": 90,
+   "y": 420,
+   "w": 16,
+   "d": 4,
+   "z": 400,
+   "h": 16,
+   "explode": [
+    0,
+    110,
+    0
+   ],
+   "mass": 4,
+   "materials": [
+    [
+     "pcabs",
+     80
+    ],
+    [
+     "kupfer",
+     10
+    ],
+    [
+     "led",
+     10
+    ]
+   ],
+   "info": "Runder Taster mit blauer Leuchte. Hinten hängt ein dünnes Kabel, das zum Mainboard führt; einfach abziehen.",
+   "color": "#5DADE2",
+   "sortBias": 500
+  },
+  {
+   "id": "usb_front",
+   "component_id": "plastic_front_panel",
+   "material_id": "abs",
+   "name": "USB-Buchsen vorne",
+   "short": "USB vorne",
+   "shape": "box",
+   "x": 70,
+   "y": 420,
+   "w": 60,
+   "d": 3,
+   "z": 370,
+   "h": 10,
+   "r": 1,
+   "explode": [
+    0,
+    110,
+    0
+   ],
+   "mass": 9.6,
+   "materials": [
+    [
+     "pcabs",
+     50
+    ],
+    [
+     "stahl",
+     30
+    ],
+    [
+     "kupfer",
+     20
+    ]
+   ],
+   "info": "Zwei USB-Buchsen und Kopfhöreranschluss auf einer kleinen Platine, mit Kabeln ans Mainboard gesteckt.",
+   "color": "#1E2226",
+   "sortBias": 500
+  },
+  {
+   "id": "gehaeuseluefter",
+   "component_id": "cpu_cooler",
+   "material_id": "mixed_electronics",
+   "name": "Gehäuselüfter vorne",
+   "short": "Gehäuselüfter",
+   "shape": "box",
+   "x": 40,
+   "y": 374,
+   "w": 120,
+   "d": 25,
+   "z": 250,
+   "h": 120,
+   "r": 4,
+   "explode": [
+    250,
+    110,
+    100
+   ],
+   "mass": 119.8,
+   "materials": [
+    [
+     "pcabs",
+     65
+    ],
+    [
+     "kupfer",
+     20
+    ],
+    [
+     "ferrit",
+     10
+    ],
+    [
+     "stahl",
+     5
+    ]
+   ],
+   "info": "120-mm-Lüfter hinter der Frontblende, saugt kühle Luft an. Vier Schrauben lösen und das Kabel vom Mainboard abziehen.",
+   "color": "#2B2F33",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 6,
+     "y": 2,
+     "w": 108,
+     "d": 21,
+     "fill": "#1E2226"
+    }
+   ]
+  },
+  {
    "id": "kuehlerluefter",
    "component_id": "cpu_cooler",
    "material_id": "mixed_electronics",
@@ -100,11 +226,11 @@
    "h": 120,
    "r": 4,
    "explode": [
-    342.0,
+    330,
     0,
-    0
+    150
    ],
-   "mass": 105.6,
+   "mass": 103.8,
    "materials": [
     [
      "pcabs",
@@ -155,11 +281,11 @@
    "h": 125,
    "r": 2,
    "explode": [
-    342.0,
+    330,
     0,
-    0
+    150
    ],
-   "mass": 446.8,
+   "mass": 439.3,
    "materials": [
     [
      "alu",
@@ -230,11 +356,11 @@
    "h": 133,
    "r": 0.5,
    "explode": [
-    292.0,
+    262,
     0,
     0
    ],
-   "mass": 56.9,
+   "mass": 55.9,
    "materials": [
     [
      "fr4",
@@ -271,11 +397,11 @@
    "h": 40,
    "r": 1,
    "explode": [
-    292.0,
+    262,
     0,
     0
    ],
-   "mass": 24.4,
+   "mass": 24,
    "materials": [
     [
      "chip",
@@ -308,11 +434,11 @@
    "h": 80,
    "r": 0.5,
    "explode": [
-    292.0,
+    262,
     0,
     0
    ],
-   "mass": 6.5,
+   "mass": 6.4,
    "materials": [
     [
      "fr4",
@@ -349,11 +475,11 @@
    "h": 40,
    "r": 3,
    "explode": [
-    292.0,
+    262,
     0,
-    0
+    -30
    ],
-   "mass": 731.1,
+   "mass": 718.9,
    "materials": [
     [
      "alu",
@@ -416,11 +542,11 @@
    "h": 305,
    "r": 0.5,
    "explode": [
-    242,
+    230,
     0,
     0
    ],
-   "mass": 487.4,
+   "mass": 479.3,
    "materials": [
     [
      "fr4",
@@ -465,11 +591,11 @@
    "h": 26,
    "r": 2,
    "explode": [
-    208,
-    0,
-    0
+    260,
+    120,
+    -60
    ],
-   "mass": 519.9,
+   "mass": 511.2,
    "materials": [
     [
      "alu",
@@ -534,11 +660,11 @@
    "h": 86,
    "r": 2,
    "explode": [
-    228,
-    0,
-    0
+    250,
+    -40,
+    -110
    ],
-   "mass": 1381,
+   "mass": 1358,
    "materials": [
     [
      "stahl",
@@ -636,7 +762,7 @@
     0,
     0
    ],
-   "mass": 2762,
+   "mass": 2715.9,
    "materials": [
     [
      "stahl",
@@ -1008,11 +1134,11 @@
    "h": 8,
    "r": 4,
    "explode": [
-    -200,
     0,
+    330,
     0
    ],
-   "mass": 121.9,
+   "mass": 119.8,
    "materials": [
     [
      "pvc",
@@ -1061,11 +1187,11 @@
    "h": 4,
    "r": 1,
    "explode": [
-    -200,
     0,
+    340,
     0
    ],
-   "mass": 56.9,
+   "mass": 55.9,
    "materials": [
     [
      "kupfer",

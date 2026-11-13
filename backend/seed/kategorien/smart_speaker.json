@@ -78,6 +78,22 @@
    "westmetall2026": {
     "titel": "Westmetall Marktdaten (LME, London Fixing, WM-Notiz)",
     "url": "https://www.westmetall.com/en/markdaten.php"
+   },
+   "usgs2026": {
+    "titel": "Mineral Commodity Summaries 2026 (ver. 1.3, May 2026)",
+    "url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf"
+   },
+   "eucrm2023": {
+    "titel": "Study on the Critical Raw Materials for the EU 2023 – Final Report",
+    "url": "https://single-market-economy.ec.europa.eu/publications/study-critical-raw-materials-eu-2023-final-report_en"
+   },
+   "eu2024crma": {
+    "titel": "Verordnung (EU) 2024/1252 zur Schaffung eines Rahmens zur Gewährleistung einer sicheren und nachhaltigen Versorgung mit kritischen Rohstoffen (Critical Raw Materials Act)",
+    "url": "https://op.europa.eu/en/publication-detail/-/publication/aa3c49f7-08e7-11ef-a251-01aa75ed71a1"
+   },
+   "usdapsd2026": {
+    "titel": "Production, Supply and Distribution Online (PSD), Datensatz Cotton (psd_cotton_csv.zip)",
+    "url": "https://apps.fas.usda.gov/psdonline/downloads/psd_cotton_csv.zip"
    }
   }
  },
@@ -128,7 +144,7 @@
    "explode": [
     0,
     0,
-    288.4
+    367.4
    ],
    "mass": 36.7,
    "materials": [
@@ -142,9 +158,16 @@
    "marks": [
     {
      "shape": "cyl",
-     "x": 5,
-     "y": 5,
-     "w": 90,
+     "x": 3,
+     "y": 3,
+     "w": 94,
+     "fill": "#5DADE2"
+    },
+    {
+     "shape": "cyl",
+     "x": 6,
+     "y": 6,
+     "w": 88,
      "fill": "#3A3F44"
     },
     {
@@ -185,7 +208,7 @@
    "explode": [
     0,
     0,
-    263.4
+    335.4
    ],
    "mass": 7.3,
    "materials": [
@@ -240,7 +263,7 @@
    "explode": [
     0,
     0,
-    238.8
+    303.8
    ],
    "mass": 9.2,
    "materials": [
@@ -309,7 +332,7 @@
    "explode": [
     0,
     0,
-    219.8
+    277.8
    ],
    "mass": 36.7,
    "materials": [
@@ -363,7 +386,7 @@
    "explode": [
     0,
     0,
-    200.0
+    251.0
    ],
    "mass": 2.8,
    "materials": [
@@ -392,7 +415,7 @@
    "explode": [
     0,
     0,
-    190
+    241
    ],
    "mass": 32.1,
    "materials": [
@@ -451,7 +474,7 @@
    "explode": [
     0,
     0,
-    173
+    217
    ],
    "mass": 137.8,
    "materials": [
@@ -495,7 +518,7 @@
    "explode": [
     0,
     0,
-    148
+    185
    ],
    "mass": 110.2,
    "materials": [
@@ -554,7 +577,7 @@
    "explode": [
     0,
     0,
-    15
+    45
    ],
    "mass": 229.6,
    "materials": [
@@ -600,7 +623,7 @@
     ]
    ],
    "info": "Polyestergewebe über einem dünnen Gitter. Sockel abhebeln, dann den Stoff nach oben abrollen. Waschbar und wiederverwendbar.",
-   "color": "#6E7579",
+   "color": "#8A9096",
    "marks": [
     {
      "shape": "cyl",
@@ -686,8 +709,8 @@
    "h": 6,
    "r": 3,
    "explode": [
-    -130,
-    130,
+    -150,
+    200,
     0
    ],
    "mass": 36.7,

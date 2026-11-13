@@ -15,7 +15,7 @@
    "explode": [
     0,
     0,
-    129
+    145
    ],
    "mass": 6.2,
    "materials": [
@@ -29,10 +29,31 @@
    "marks": [
     {
      "shape": "cyl",
-     "x": 3,
-     "y": 3,
-     "w": 24,
-     "fill": "#1F2327"
+     "x": 2.5,
+     "y": 2.5,
+     "w": 25,
+     "fill": "#9FB4B8"
+    },
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 4,
+     "w": 22,
+     "fill": "#DCE4E6"
+    },
+    {
+     "shape": "cyl",
+     "x": 9,
+     "y": 9,
+     "w": 12,
+     "fill": "#C4CED1"
+    },
+    {
+     "shape": "cyl",
+     "x": 13,
+     "y": 13,
+     "w": 4,
+     "fill": "#F6D86B"
     }
    ]
   },
@@ -51,7 +72,7 @@
    "explode": [
     0,
     0,
-    115
+    131
    ],
    "mass": 3.1,
    "materials": [
@@ -79,7 +100,7 @@
    "explode": [
     0,
     0,
-    101
+    117
    ],
    "mass": 4.1,
    "materials": [
@@ -133,7 +154,7 @@
    "explode": [
     0,
     0,
-    87
+    103
    ],
    "mass": 2.1,
    "materials": [
@@ -205,7 +226,7 @@
    "explode": [
     0,
     0,
-    73
+    89
    ],
    "mass": 2.1,
    "materials": [
@@ -262,7 +283,7 @@
    "explode": [
     0,
     0,
-    59
+    75
    ],
    "mass": 0.5,
    "materials": [
@@ -302,9 +323,9 @@
    "explode": [
     0,
     0,
-    14
+    30
    ],
-   "mass": 16.5,
+   "mass": 16.4,
    "materials": [
     [
      "alu",
@@ -360,6 +381,42 @@
    ]
   },
   {
+   "id": "oring",
+   "component_id": "aluminium_housing",
+   "material_id": "rubber",
+   "name": "O-Ring-Dichtung",
+   "short": "O-Ring",
+   "shape": "cyl",
+   "x": 3.5,
+   "y": 3.5,
+   "w": 23,
+   "z": 110,
+   "h": 2,
+   "explode": [
+    0,
+    0,
+    16
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "info": "Gummiring auf dem Gewinde zwischen Rohr und Kopf, macht die Lampe spritzwasserdicht. Mit einem Zahnstocher abhebeln.",
+   "color": "#1A1D20",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 2,
+     "y": 2,
+     "w": 19,
+     "fill": "#3B4147"
+    }
+   ]
+  },
+  {
    "id": "batterie_1",
    "component_id": "alkaline_cell",
    "material_id": "alkaline",
@@ -376,7 +433,7 @@
     0,
     -2.5
    ],
-   "mass": 23.7,
+   "mass": 23.6,
    "materials": [
     [
      "zinkmangan",
@@ -389,6 +446,7 @@
    ],
    "info": "Alkali-Mangan-Batterie, 1,5 Volt. Immer herausnehmen, bevor die Lampe entsorgt wird. Leere Batterien in die Sammelbox.",
    "color": "#C8423A",
+   "sortBias": -12,
    "marks": [
     {
      "shape": "cyl",
@@ -416,7 +474,7 @@
     0,
     -16.5
    ],
-   "mass": 23.7,
+   "mass": 23.6,
    "materials": [
     [
      "zinkmangan",
@@ -430,6 +488,7 @@
    "info": "Zweite Batterie in Reihe: zusammen 3 Volt. Plus zeigt zum Kopf.",
    "color": "#C8423A",
    "label": false,
+   "sortBias": -12,
    "marks": [
     {
      "shape": "cyl",

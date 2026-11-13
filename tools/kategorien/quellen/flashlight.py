@@ -26,7 +26,8 @@ teile = [
     teil('lunette', 'aluminium_housing', 'Frontring (Lünette)', 'Frontring', 'cyl', **rund(30), z=145, h=5, mass=6,
          materials=[['alu', 100]], color=ALU,
          info='Aufgeschraubter Aluminiumring, der Glas und Reflektor festhält. Gegen den Uhrzeigersinn abdrehen.',
-         marks=[mark('cyl', 3, 3, 24, fill='#1F2327')]),
+         marks=[mark('cyl', 2.5, 2.5, 25, fill='#9FB4B8'), mark('cyl', 4, 4, 22, fill='#DCE4E6'),
+                mark('cyl', 9, 9, 12, fill='#C4CED1'), mark('cyl', 13, 13, 4, fill='#F6D86B')]),
     teil('linse', 'lens_glass', 'Schutzglas', 'Glas', 'cyl', **rund(26), z=143, h=2, mass=3,
          materials=[['glas', 100]], color='#C9DEDF', opacity=0.65,
          info='Flache, gehärtete Glasscheibe mit Gummi-Dichtring. Kommt nicht ins Altglas, weil es anders zusammengesetzt ist.'),
@@ -56,13 +57,17 @@ teile = [
          materials=[['alu', 100]], color=ALU,
          info='Eloxiertes Aluminiumrohr mit Gewinde an beiden Enden und geriffeltem Griff. Leer ist es reines Aluminium.',
          marks=[mark('cyl', 2, 2, 20, fill='#1F2327')]),
+    teil('oring', 'aluminium_housing', 'O-Ring-Dichtung', 'O-Ring', 'cyl', **rund(23), z=110, h=2,
+         material_id='rubber', mass=0.3, materials=[['gummi', 100]], color='#1A1D20',
+         info='Gummiring auf dem Gewinde zwischen Rohr und Kopf, macht die Lampe spritzwasserdicht. Mit einem Zahnstocher abhebeln.',
+         marks=[mark('cyl', 2, 2, 19, fill='#3B4147')]),
     teil('batterie_1', 'alkaline_cell', 'Batterie AA (vorn)', 'Batterie 1', 'cyl', **rund(14.5), z=67, h=50.5, mass=23,
-         materials=AA, color='#C8423A',
+         materials=AA, color='#C8423A', sortBias=-12,
          info='Alkali-Mangan-Batterie, 1,5 Volt. Immer herausnehmen, bevor die Lampe entsorgt wird. '
               'Leere Batterien in die Sammelbox.',
          marks=[mark('cyl', 4.75, 4.75, 5, fill='#B7BCC0')]),
     teil('batterie_2', 'alkaline_cell', 'Batterie AA (hinten)', 'Batterie 2', 'cyl', **rund(14.5), z=16.5, h=50.5, mass=23,
-         materials=AA, color='#C8423A', label=False,
+         materials=AA, color='#C8423A', label=False, sortBias=-12,
          info='Zweite Batterie in Reihe: zusammen 3 Volt. Plus zeigt zum Kopf.',
          marks=[mark('cyl', 4.75, 4.75, 5, fill='#B7BCC0')]),
     teil('endfeder', 'steel_spring', 'Endfeder', 'Feder hinten', 'cyl', **rund(11), z=10, h=6.5, mass=1,
@@ -99,7 +104,7 @@ explodiere(e, abstand=GAP)
 for p in e:
     p['explode'] = [-36, 0, p['explode'][2]]
 # Kopfteile über dem Rohr stapeln (Rohr steht fest)
-explodiere([by['rohr']] + [by[i] for i in KOPF], abstand=GAP, nach_liste=True)
+explodiere([by['rohr']] + [by[i] for i in KOPF] + [by['oring']], abstand=GAP, nach_liste=True)
 
 skaliere_masse(teile, oid='flashlight')
 schreibe('flashlight', teile)

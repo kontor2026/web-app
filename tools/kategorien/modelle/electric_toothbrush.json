@@ -19,7 +19,7 @@
     0,
     30
    ],
-   "mass": 1.8,
+   "mass": 1.7,
    "materials": [
     [
      "nylon",
@@ -34,63 +34,72 @@
      "x": 1.5,
      "y": 1.5,
      "w": 2,
-     "d": 2
+     "d": 2,
+     "fill": "#4A90C8"
     },
     {
      "shape": "cyl",
      "x": 4.5,
      "y": 1.5,
      "w": 2,
-     "d": 2
+     "d": 2,
+     "fill": "#4A90C8"
     },
     {
      "shape": "cyl",
      "x": 7.5,
      "y": 1.5,
      "w": 2,
-     "d": 2
+     "d": 2,
+     "fill": "#4A90C8"
     },
     {
      "shape": "cyl",
      "x": 1.5,
      "y": 4.5,
      "w": 2,
-     "d": 2
+     "d": 2,
+     "fill": "#4A90C8"
     },
     {
      "shape": "cyl",
      "x": 4.5,
      "y": 4.5,
      "w": 2,
-     "d": 2
+     "d": 2,
+     "fill": "#4A90C8"
     },
     {
      "shape": "cyl",
      "x": 7.5,
      "y": 4.5,
      "w": 2,
-     "d": 2
+     "d": 2,
+     "fill": "#4A90C8"
     },
     {
      "shape": "cyl",
      "x": 1.5,
      "y": 7.5,
      "w": 2,
-     "d": 2
+     "d": 2,
+     "fill": "#4A90C8"
     },
     {
      "shape": "cyl",
      "x": 4.5,
      "y": 7.5,
      "w": 2,
-     "d": 2
+     "d": 2,
+     "fill": "#4A90C8"
     },
     {
      "shape": "cyl",
      "x": 7.5,
      "y": 7.5,
      "w": 2,
-     "d": 2
+     "d": 2,
+     "fill": "#4A90C8"
     }
    ]
   },
@@ -111,7 +120,7 @@
     0,
     30
    ],
-   "mass": 8.4,
+   "mass": 7.9,
    "materials": [
     [
      "pp",
@@ -151,7 +160,7 @@
     0,
     15
    ],
-   "mass": 1,
+   "mass": 0.9,
    "materials": [
     [
      "gummi",
@@ -187,7 +196,7 @@
     0,
     60
    ],
-   "mass": 3.6,
+   "mass": 3.4,
    "materials": [
     [
      "stahl",
@@ -195,7 +204,8 @@
     ]
    ],
    "info": "Edelstahlstift, der die Schwingung des Motors auf die Bürste überträgt. Steckt fest im Motor.",
-   "color": "#B8BEC4"
+   "color": "#B8BEC4",
+   "sortBias": -40
   },
   {
    "id": "motor",
@@ -214,7 +224,7 @@
     0,
     50
    ],
-   "mass": 26.3,
+   "mass": 25,
    "materials": [
     [
      "kupfer",
@@ -270,7 +280,7 @@
     0,
     40
    ],
-   "mass": 7.2,
+   "mass": 6.8,
    "materials": [
     [
      "fr4",
@@ -319,7 +329,7 @@
     0,
     30
    ],
-   "mass": 22.7,
+   "mass": 21.6,
    "materials": [
     [
      "lco",
@@ -371,7 +381,7 @@
     0,
     20
    ],
-   "mass": 7.2,
+   "mass": 6.8,
    "materials": [
     [
      "kupfer",
@@ -420,7 +430,7 @@
     25,
     0
    ],
-   "mass": 1.2,
+   "mass": 1.1,
    "materials": [
     [
      "tpu",
@@ -428,7 +438,39 @@
     ]
    ],
    "info": "Weiche Kunststoff-Kappe über dem Taster der Platine. Dichtet den Griff gegen Wasser ab.",
-   "color": "#4A7FB5"
+   "color": "#4A7FB5",
+   "sortBias": 60
+  },
+  {
+   "id": "ladeanzeige",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Ladeanzeige (LED-Fenster)",
+   "short": "Ladeanzeige",
+   "shape": "box",
+   "x": 11,
+   "y": 26.5,
+   "w": 6,
+   "d": 2.5,
+   "z": 95,
+   "h": 10,
+   "r": 1,
+   "explode": [
+    0,
+    25,
+    0
+   ],
+   "mass": 0.6,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Durchsichtiges Fenster vor einer kleinen LED auf der Platine. Zeigt an, ob der Akku geladen werden muss.",
+   "color": "#9FD18B",
+   "opacity": 0.85,
+   "sortBias": 80
   },
   {
    "id": "griff",
@@ -447,7 +489,7 @@
     0,
     0
    ],
-   "mass": 35.9,
+   "mass": 34,
    "materials": [
     [
      "pcabs",
@@ -459,7 +501,7 @@
     ]
    ],
    "info": "Wasserdichtes Kunststoffrohr mit Gummi-Griffzone. Das Innenleben lässt sich nach oben herausdrücken, oft erst nach Aufschneiden des Bodens.",
-   "color": "#E9EEF2",
+   "color": "#F4F6F7",
    "marks": [
     {
      "shape": "cyl",
@@ -469,6 +511,36 @@
      "fill": "#D5DCE2"
     }
    ]
+  },
+  {
+   "id": "chassis",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Innenchassis",
+   "short": "Chassis",
+   "shape": "box",
+   "x": 8,
+   "y": 6,
+   "w": 12,
+   "d": 3,
+   "z": 20,
+   "h": 148,
+   "r": 1,
+   "explode": [
+    -40,
+    0,
+    0
+   ],
+   "mass": 5.7,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Kunststoffrahmen, in den Motor, Platine und Akku eingeklipst sind. Wird als ganzer Block aus dem Griff geschoben.",
+   "color": "#D8DDE1",
+   "sortBias": -40
   },
   {
    "id": "bodenkappe",
@@ -487,7 +559,7 @@
     0,
     0
    ],
-   "mass": 4.8,
+   "mass": 4.5,
    "materials": [
     [
      "pcabs",

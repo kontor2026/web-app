@@ -17,9 +17,9 @@
    "explode": [
     0,
     0,
-    159.7
+    181.7
    ],
-   "mass": 69.6,
+   "mass": 69,
    "materials": [
     [
      "alu",
@@ -32,6 +32,7 @@
    ],
    "info": "Vorderes Gehäuseteil aus Aluminium mit Öffnung für das Objektiv. Nach dem Lösen der kleinen Schrauben an Seiten und Boden abheben.",
    "color": "#9AA2A8",
+   "sortBias": 1,
    "marks": [
     {
      "shape": "cyl",
@@ -75,7 +76,7 @@
     0,
     110.7
    ],
-   "mass": 4.2,
+   "mass": 4.1,
    "materials": [
     [
      "glas",
@@ -159,7 +160,7 @@
     0,
     68.7
    ],
-   "mass": 55.7,
+   "mass": 55.2,
    "materials": [
     [
      "pcabs",
@@ -198,6 +199,42 @@
    ]
   },
   {
+   "id": "ausloeser",
+   "component_id": "plastic_housing",
+   "material_id": "aluminium",
+   "name": "Auslöser mit Zoomhebel",
+   "short": "Auslöser",
+   "shape": "cyl",
+   "x": 80,
+   "y": 0,
+   "w": 14,
+   "d": 4,
+   "z": 16,
+   "h": 10,
+   "explode": [
+    0,
+    -40,
+    40
+   ],
+   "mass": 2.8,
+   "materials": [
+    [
+     "alu",
+     60
+    ],
+    [
+     "pcabs",
+     30
+    ],
+    [
+     "stahl",
+     10
+    ]
+   ],
+   "info": "Metallknopf auf der Oberseite, darum ein Ring als Zoomhebel. Darunter sitzt ein winziger Taster auf einem Flachbandkabel.",
+   "color": "#C9CED2"
+  },
+  {
    "id": "zoommotor",
    "component_id": "camera_lens_unit",
    "material_id": "mixed_electronics",
@@ -214,7 +251,7 @@
     0,
     56.7
    ],
-   "mass": 7,
+   "mass": 6.9,
    "materials": [
     [
      "stahl",
@@ -234,7 +271,8 @@
     ]
    ],
    "info": "Winziger Elektromotor mit Zahnrädern, der den Tubus aus- und einfährt. Enthält einen Neodym-Magneten.",
-   "color": "#B5BBC0"
+   "color": "#B5BBC0",
+   "sortBias": -8
   },
   {
    "id": "bildsensor",
@@ -255,7 +293,7 @@
     0,
     50.7
    ],
-   "mass": 4.2,
+   "mass": 4.1,
    "materials": [
     [
      "chip",
@@ -299,11 +337,11 @@
    "h": 10,
    "r": 3,
    "explode": [
-    0,
+    -60,
     0,
     37.5
    ],
-   "mass": 20.9,
+   "mass": 20.7,
    "materials": [
     [
      "alu",
@@ -374,7 +412,7 @@
     0,
     41.5
    ],
-   "mass": 25.1,
+   "mass": 24.8,
    "materials": [
     [
      "fr4",
@@ -435,7 +473,7 @@
     80,
     0
    ],
-   "mass": 30.6,
+   "mass": 30.3,
    "materials": [
     [
      "lco",
@@ -543,7 +581,7 @@
     0,
     30.5
    ],
-   "mass": 19.5,
+   "mass": 19.3,
    "materials": [
     [
      "displayglas",
@@ -599,7 +637,7 @@
     0,
     0.0
    ],
-   "mass": 55.7,
+   "mass": 55.2,
    "materials": [
     [
      "pcabs",

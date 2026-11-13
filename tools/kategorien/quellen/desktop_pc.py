@@ -25,6 +25,19 @@ teile = [
          info='Kunststoffblende mit Einschalter, USB-Buchsen und Staubfilter. Unten kräftig ziehen, sie ist nur eingeclipst.',
          marks=[mark('cyl', 90, 4, 12, fill='#5DADE2'), mark('box', 30, 6, 14, 6, 1, '#1E2226'),
                 mark('box', 50, 6, 14, 6, 1, '#1E2226')]),
+    teil('einschalter', 'plastic_front_panel', 'Einschalter', 'Einschalter', 'cyl',
+         x=90, y=420, w=16, d=4, z=400, h=16, explode=[0, 110, 0], mass=5, materials=[['pcabs', 80], ['kupfer', 10], ['led', 10]],
+         color='#5DADE2', sortBias=500,
+         info='Runder Taster mit blauer Leuchte. Hinten hängt ein dünnes Kabel, das zum Mainboard führt; einfach abziehen.'),
+    teil('usb_front', 'plastic_front_panel', 'USB-Buchsen vorne', 'USB vorne', 'box',
+         x=70, y=420, w=60, d=3, z=370, h=10, r=1, explode=[0, 110, 0], mass=12, materials=[['pcabs', 50], ['stahl', 30], ['kupfer', 20]],
+         color='#1E2226', sortBias=500,
+         info='Zwei USB-Buchsen und Kopfhöreranschluss auf einer kleinen Platine, mit Kabeln ans Mainboard gesteckt.'),
+    teil('gehaeuseluefter', 'cpu_cooler', 'Gehäuselüfter vorne', 'Gehäuselüfter', 'box', material_id='mixed_electronics',
+         x=40, y=374, w=120, d=25, z=250, h=120, r=4, mass=150,
+         materials=[['pcabs', 65], ['kupfer', 20], ['ferrit', 10], ['stahl', 5]], color='#2B2F33',
+         info='120-mm-Lüfter hinter der Frontblende, saugt kühle Luft an. Vier Schrauben lösen und das Kabel vom Mainboard abziehen.',
+         marks=[mark('cyl', 6, 2, 108, 21, fill='#1E2226')]),
     teil('kuehlerluefter', 'cpu_cooler', 'Lüfter des CPU-Kühlers', 'Kühlerlüfter', 'box', material_id='mixed_electronics',
          x=22, y=155, w=120, d=25, z=290, h=120, r=4, mass=130,
          materials=[['pcabs', 60], ['kupfer', 20], ['ferrit', 10], ['stahl', 5], ['chip', 5]], color='#2B2F33',
@@ -71,31 +84,26 @@ teile = [
          info='Leeres Gehäuse aus verzinktem Stahlblech mit Laufwerksschächten. Wenn alles ausgebaut ist: ab zum Altmetall.',
          marks=raster(30, 50, 7, 6, 14, 3, 20, 8, fill='#7D858B') + [mark('box', 20, 250, 150, 120, 4, '#7D858B')]),
     teil('kabel', 'cable_insulation', 'Netzkabel (Isolierung)', 'Kabel', 'box',
-         x=20, y=180, w=160, d=10, z=0, h=8, r=4, explode=[-200, 0, 0], mass=150, materials=[['pvc', 90], ['pp', 10]],
+         x=20, y=180, w=160, d=10, z=0, h=8, r=4, explode=[0, 330, 0], mass=150, materials=[['pvc', 90], ['pp', 10]],
          color='#2B2F33', info='1,5 m Kaltgerätekabel mit PVC-Mantel. Stecker abschneiden und längs aufschlitzen.',
          marks=[mark('box', 0, 0, 25, 10, 2, '#4A5156'), mark('box', 135, 0, 25, 10, 2, '#4A5156')]),
     teil('kupferadern', 'cable_copper_core', 'Kupferadern', 'Kupferadern', 'box',
-         x=20, y=205, w=160, d=4, z=0, h=4, r=1, explode=[-200, 0, 0], mass=70, color='#B87333',
+         x=20, y=205, w=160, d=4, z=0, h=4, r=1, explode=[0, 340, 0], mass=70, color='#B87333',
          info='Drei Kupferadern (Phase, Neutralleiter, Schutzleiter). Reines Kupfer ist wertvoll.'),
 ]
 
 
-def explodiere_x(teile, abstand, **kw):
-    """Wie explodiere, aber in x-Richtung: x und z werden vertauscht, gestapelt und zurückgetauscht."""
-    def tausch(p):
-        if p['d'] is None:
-            p['d'] = p['w']
-        p['x'], p['z'], p['w'], p['h'] = p['z'], p['x'], p['h'], p['w']
-    for p in teile:
-        tausch(p)
-    explodiere(teile, abstand, **kw)
-    for p in teile:
-        tausch(p)
-        dx, dy, dz = p['explode']
-        p['explode'] = [dz, dy, dx]
-
-
-innen = [p for p in teile if p['explode'] is None]
-explodiere_x(innen, 50, fest=('gehaeuse',), gruppen=[['kuehler', 'kuehlerluefter']])
+# Explosion von Hand: Mainboard mit allem, was darauf steckt, rechts neben dem Gehäuse; der Kühler hebt sich nach
+# oben ab, damit Prozessor und RAM sichtbar bleiben; Netzteil und Festplatte unten rechts.
+VERSATZ = {
+    'mainboard': [230, 0, 0], 'cpu': [262, 0, 0], 'ram': [262, 0, 0], 'ssd': [262, 0, 0],
+    'grafikkarte': [262, 0, -30], 'kuehler': [330, 0, 150], 'kuehlerluefter': [330, 0, 150],
+    'netzteil': [250, -40, -110], 'festplatte': [260, 120, -60], 'gehaeuseluefter': [250, 110, 100],
+}
+for p in teile:
+    if p['id'] in VERSATZ:
+        p['explode'] = VERSATZ[p['id']]
+    elif p['explode'] is None:
+        p['explode'] = [0, 0, 0]
 skaliere_masse(teile, oid='desktop_pc')
 schreibe('desktop_pc', teile)

@@ -17,9 +17,9 @@
    "explode": [
     0,
     0,
-    230.0
+    276.6
    ],
-   "mass": 11.2,
+   "mass": 10.5,
    "materials": [
     [
      "pcabs",
@@ -63,9 +63,9 @@
    "explode": [
     0,
     0,
-    230.0
+    276.6
    ],
-   "mass": 11.2,
+   "mass": 10.5,
    "materials": [
     [
      "pcabs",
@@ -110,9 +110,9 @@
    "explode": [
     0,
     0,
-    230.0
+    276.6
    ],
-   "mass": 11.2,
+   "mass": 10.5,
    "materials": [
     [
      "pcabs",
@@ -157,9 +157,9 @@
    "explode": [
     0,
     0,
-    230.0
+    276.6
    ],
-   "mass": 11.2,
+   "mass": 10.5,
    "materials": [
     [
      "pcabs",
@@ -204,9 +204,9 @@
    "explode": [
     0,
     0,
-    170.0
+    216.6
    ],
-   "mass": 83.9,
+   "mass": 78.7,
    "materials": [
     [
      "pcabs",
@@ -373,6 +373,102 @@
    ]
   },
   {
+   "id": "lichtleiter",
+   "component_id": "plastic_housing",
+   "material_id": "pc",
+   "name": "Lichtleiter für Anzeigen",
+   "short": "Lichtleiter",
+   "shape": "box",
+   "x": 38,
+   "y": 126,
+   "w": 112,
+   "d": 6,
+   "z": 10,
+   "h": 5,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    127.6
+   ],
+   "mass": 2.6,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Durchsichtiger Kunststoffkamm, der das Licht der kleinen LEDs auf der Platine nach oben zum Deckel leitet.",
+   "color": "#CFE6F2",
+   "opacity": 0.75,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 1,
+     "y": 1,
+     "w": 4,
+     "d": 4,
+     "fill": "#7FC8F0"
+    },
+    {
+     "shape": "cyl",
+     "x": 16,
+     "y": 1,
+     "w": 4,
+     "d": 4,
+     "fill": "#7FC8F0"
+    },
+    {
+     "shape": "cyl",
+     "x": 31,
+     "y": 1,
+     "w": 4,
+     "d": 4,
+     "fill": "#7FC8F0"
+    },
+    {
+     "shape": "cyl",
+     "x": 46,
+     "y": 1,
+     "w": 4,
+     "d": 4,
+     "fill": "#7FC8F0"
+    },
+    {
+     "shape": "cyl",
+     "x": 61,
+     "y": 1,
+     "w": 4,
+     "d": 4,
+     "fill": "#7FC8F0"
+    },
+    {
+     "shape": "cyl",
+     "x": 76,
+     "y": 1,
+     "w": 4,
+     "d": 4,
+     "fill": "#7FC8F0"
+    },
+    {
+     "shape": "cyl",
+     "x": 91,
+     "y": 1,
+     "w": 4,
+     "d": 4,
+     "fill": "#7FC8F0"
+    },
+    {
+     "shape": "cyl",
+     "x": 106,
+     "y": 1,
+     "w": 4,
+     "d": 4,
+     "fill": "#7FC8F0"
+    }
+   ]
+  },
+  {
    "id": "kuehlkoerper",
    "component_id": "circuit_board",
    "material_id": "aluminium",
@@ -391,7 +487,7 @@
     0,
     108.0
    ],
-   "mass": 23.3,
+   "mass": 21.9,
    "materials": [
     [
      "alu",
@@ -494,7 +590,7 @@
     0,
     88.0
    ],
-   "mass": 2.3,
+   "mass": 2.2,
    "materials": [
     [
      "chip",
@@ -523,7 +619,7 @@
     0,
     88.0
    ],
-   "mass": 3.7,
+   "mass": 3.5,
    "materials": [
     [
      "stahl",
@@ -560,7 +656,7 @@
     0,
     88.0
    ],
-   "mass": 3.7,
+   "mass": 3.5,
    "materials": [
     [
      "stahl",
@@ -626,7 +722,7 @@
     0,
     88.0
    ],
-   "mass": 23.3,
+   "mass": 21.9,
    "materials": [
     [
      "stahl",
@@ -714,7 +810,7 @@
     0,
     68.0
    ],
-   "mass": 41.9,
+   "mass": 39.4,
    "materials": [
     [
      "fr4",
@@ -773,7 +869,7 @@
     0,
     0.0
    ],
-   "mass": 83.9,
+   "mass": 78.7,
    "materials": [
     [
      "pcabs",
@@ -894,6 +990,54 @@
    ]
   },
   {
+   "id": "dc_kabel",
+   "component_id": "power_adapter",
+   "material_id": "copper",
+   "name": "Niedervolt-Kabel mit Hohlstecker",
+   "short": "DC-Kabel",
+   "shape": "box",
+   "x": 210,
+   "y": 0,
+   "w": 6,
+   "d": 50,
+   "z": 0,
+   "h": 6,
+   "r": 3,
+   "explode": [
+    45,
+    -40,
+    0
+   ],
+   "mass": 21.9,
+   "materials": [
+    [
+     "pvc",
+     60
+    ],
+    [
+     "kupfer",
+     35
+    ],
+    [
+     "messing",
+     5
+    ]
+   ],
+   "info": "Dünnes Kabel vom Netzteil zum Router, endet in einem Hohlstecker aus Messing. Kupferadern freilegen und getrennt sammeln.",
+   "color": "#1E2226",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0.5,
+     "y": 0,
+     "w": 5,
+     "d": 8,
+     "r": 2,
+     "fill": "#9BA3A8"
+    }
+   ]
+  },
+  {
    "id": "netzteil",
    "component_id": "power_adapter",
    "material_id": "mixed_electronics",
@@ -912,7 +1056,7 @@
     0,
     0
    ],
-   "mass": 88.5,
+   "mass": 83.1,
    "materials": [
     [
      "pcabs",

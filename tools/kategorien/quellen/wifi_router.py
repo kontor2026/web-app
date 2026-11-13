@@ -27,6 +27,10 @@ teile = [
          x=0, y=0, w=190, d=140, z=16, h=16, r=10, mass=90, color=GEH,
          info='Deckel mit Lüftungsschlitzen und Leuchtanzeigen. Schrauben stecken unter den Gummifüßen, danach ringsum aufclipsen.',
          marks=raster(45, 30, 10, 1, 4, 60, 10, r=2, fill='#1E2226') + raster(40, 130, 8, 1, 3, 3, 15, shape='cyl', fill='#7FC8F0')),
+    teil('lichtleiter', 'plastic_housing', 'Lichtleiter für Anzeigen', 'Lichtleiter', 'box', material_id='pc',
+         x=38, y=126, w=112, d=6, z=10, h=5, r=1, mass=3, materials=[['pcabs', 100]], color='#CFE6F2', opacity=0.75,
+         info='Durchsichtiger Kunststoffkamm, der das Licht der kleinen LEDs auf der Platine nach oben zum Deckel leitet.',
+         marks=raster(1, 1, 8, 1, 4, 4, 15, shape='cyl', fill='#7FC8F0')),
     teil('kuehlkoerper', 'circuit_board', 'Kühlkörper', 'Kühlkörper', 'box', material_id='aluminium',
          x=65, y=45, w=45, d=45, z=11, h=7, r=2, mass=25, materials=[['alu', 100]], color='#C9CED2',
          info='Aluminiumblock mit Rippen, leitet die Wärme vom Prozessor ab. Mit Wärmeleitpad aufgeklebt oder geklemmt.',
@@ -55,6 +59,11 @@ teile = [
          x=0, y=0, w=190, d=140, z=0, h=16, r=10, mass=90, color=GEH,
          info='Wanne mit Füßen, Wandhalterungs-Löchern und Lüftungsschlitzen. Ohne Elektronik reiner Kunststoff.',
          marks=raster(20, 40, 12, 1, 3, 60, 13, r=1.5, fill='#1E2226')),
+    teil('dc_kabel', 'power_adapter', 'Niedervolt-Kabel mit Hohlstecker', 'DC-Kabel', 'box', material_id='copper',
+         x=210, y=0, w=6, d=50, z=0, h=6, r=3, mass=25, explode=[45, -40, 0], color='#1E2226',
+         materials=[['pvc', 60], ['kupfer', 35], ['messing', 5]],
+         info='Dünnes Kabel vom Netzteil zum Router, endet in einem Hohlstecker aus Messing. Kupferadern freilegen und getrennt sammeln.',
+         marks=[mark('box', 0.5, 0, 5, 8, 2, '#9BA3A8')]),
     teil('netzteil', 'power_adapter', 'Steckernetzteil 12 V', 'Netzteil', 'box',
          x=196, y=50, w=40, d=60, z=0, h=30, r=5, mass=95, explode=[45, 0, 0], color='#2E3338',
          materials=[['pcabs', 35], ['kupfer', 25], ['ferrit', 15], ['stahl', 10], ['fr4', 10], ['chip', 5]],
@@ -62,7 +71,7 @@ teile = [
          marks=[mark('box', 6, 8, 28, 20, 2, '#E8E8E2'), mark('cyl', 9, 40, 5, fill='#9BA3A8'), mark('cyl', 26, 40, 5, fill='#9BA3A8')]),
 ]
 
-explodiere(teile, abstand=60, abstaende={'soc': 20, 'wlan_24': 20, 'wlan_5': 20, 'ram': 20, 'buchsen': 20, 'kuehlkoerper': 20},
+explodiere(teile, abstand=60, abstaende={'oberschale': 90, 'soc': 20, 'wlan_24': 20, 'wlan_5': 20, 'ram': 20, 'buchsen': 20, 'kuehlkoerper': 20},
            nach_liste=True)
 skaliere_masse(teile, oid='wifi_router')
 schreibe('wifi_router', teile)

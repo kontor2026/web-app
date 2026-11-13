@@ -17,7 +17,7 @@ teile = [
     teil('deckel', 'plastic_housing', 'Deckel mit Tasten', 'Deckel', 'cyl',
          x=0, y=0, w=100, z=140, h=10, mass=40, color=GEH,
          info='Oberer Abschluss mit Laut-, Leise- und Mikrofon-Taste. Nach dem Abnehmen des Stoffbezugs abschrauben.',
-         marks=[mark('cyl', 5, 5, 90, fill='#3A3F44'), mark('cyl', 22, 44, 12, fill='#1E2226'),
+         marks=[mark('cyl', 3, 3, 94, fill='#5DADE2'), mark('cyl', 6, 6, 88, fill='#3A3F44'), mark('cyl', 22, 44, 12, fill='#1E2226'),
                 mark('cyl', 44, 44, 12, fill='#1E2226'), mark('cyl', 66, 44, 12, fill='#C0392B')]),
     teil('ledring', 'circuit_board', 'LED-Ring', 'LED-Ring', 'cyl',
          x=5, y=5, w=90, z=138, h=2, mass=8, materials=[['fr4', 45], ['led', 25], ['kupfer', 20], ['pcabs', 10]], color='#DDE6EA',
@@ -54,7 +54,7 @@ teile = [
          info='Stabiles Kunststoffrohr, in dem alle Teile verschraubt sind. Es bildet den Resonanzraum für den Bass.',
          marks=[mark('cyl', 4, 4, 88, fill='#2B2F33')]),
     teil('stoffbezug', 'speaker_fabric_cover', 'Stoffbezug', 'Stoffbezug', 'cyl',
-         x=0, y=0, w=100, z=10, h=130, explode=[130, -130, 0], mass=25, color='#6E7579',
+         x=0, y=0, w=100, z=10, h=130, explode=[130, -130, 0], mass=25, color='#8A9096',
          info='Polyestergewebe über einem dünnen Gitter. Sockel abhebeln, dann den Stoff nach oben abrollen. Waschbar und wiederverwendbar.',
          marks=[mark('cyl', 2, 2, 96, fill='#5E656A')]),
     teil('netzteil', 'power_adapter', 'Steckernetzteil', 'Netzteil', 'box',
@@ -63,7 +63,7 @@ teile = [
          info='Wandelt 230 Volt in 15 Volt um. Nicht öffnen; zusammen mit dem Lautsprecher als Elektroschrott abgeben.',
          marks=[mark('box', 8, 8, 24, 24, 4, '#E4E6E8')]),
     teil('kabel', 'power_adapter', 'Anschlusskabel', 'Kabel', 'box', material_id='pvc',
-         x=10, y=74, w=80, d=6, z=12, h=6, r=3, explode=[-130, 130, 0], mass=40, materials=[['pvc', 60], ['kupfer', 35], ['pcabs', 5]],
+         x=10, y=74, w=80, d=6, z=12, h=6, r=3, explode=[-150, 200, 0], mass=40, materials=[['pvc', 60], ['kupfer', 35], ['pcabs', 5]],
          color='#F2F2F2', info='1,5 m Kabel mit Rundstecker. PVC-Mantel längs aufschlitzen, um die Kupferadern zu gewinnen.'),
     teil('sockel', 'plastic_housing', 'Sockel mit Gummifuß', 'Sockel', 'cyl',
          x=0, y=0, w=100, z=0, h=10, mass=60, materials=[['pcabs', 80], ['gummi', 20]], color=GEH,
@@ -71,6 +71,6 @@ teile = [
          marks=[mark('cyl', 6, 6, 88, fill='#1E2226'), mark('cyl', 12, 12, 76, fill=GEH)]),
 ]
 
-explodiere(teile, abstand=25, fest=('sockel',), abstaende={'soc': 10, 'innengehaeuse': 15})
+explodiere(teile, abstand=32, fest=('sockel',), abstaende={'soc': 10, 'innengehaeuse': 45})
 skaliere_masse(teile, oid='smart_speaker')
 schreibe('smart_speaker', teile)

@@ -21,49 +21,51 @@
  "werte": [
   {
    "k": "Rohstoffwert",
-   "v": "≈ 1,81 €",
+   "v": "≈ 1,98 €",
    "hint": "Gold, Silber, Palladium zu Preisen vom 13.11. Ohne Palladium (kein Preis)."
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 3,04 kg",
+   "v": "≈ 2,94 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 2,36 kg",
-   "hint": "spart 0,68 kg, wenn recycelte Materialien eingesetzt werden"
+   "v": "≈ 2,24 kg",
+   "hint": "spart 0,70 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Cu": 50450.0,
-   "Fe": 42829.0,
-   "Al": 23300.0,
-   "Ag": 42.0,
-   "Au": 9.41,
-   "Pd": 4.18
+   "Cu": 69290.0,
+   "Fe": 40227.0,
+   "Al": 21900.0,
+   "Ag": 39.0,
+   "Au": 8.87,
+   "Pd": 3.94
   },
   "herkunft": {
    "Cu": "Modellmassen (Schätzung)",
    "Fe": "Modellmassen (Schätzung)",
    "Al": "Modellmassen (Schätzung)",
-   "Ag": "52 g Leiterplatte × oeko2012 Tab, 15, Motherboard Notebook (Umicore 2011)",
-   "Au": "52 g Leiterplatte × oeko2012 Tab, 15, Motherboard Notebook (Umicore 2011)",
-   "Pd": "52 g Leiterplatte × oeko2012 Tab, 15, Motherboard Notebook (Umicore 2011)"
+   "Ag": "49 g Leiterplatte × oeko2012 Tab, 15, Motherboard Notebook (Umicore 2011)",
+   "Au": "49 g Leiterplatte × oeko2012 Tab, 15, Motherboard Notebook (Umicore 2011)",
+   "Pd": "49 g Leiterplatte × oeko2012 Tab, 15, Motherboard Notebook (Umicore 2011)"
   },
   "materialien_g": {
-   "abs": 167.8,
-   "mixed_electronics": 133.3,
-   "pcb": 52.3,
-   "aluminium": 23.3,
-   "steel": 23.3
+   "abs": 157.4,
+   "mixed_electronics": 125.1,
+   "pcb": 49.3,
+   "aluminium": 21.9,
+   "steel": 21.9,
+   "copper": 21.9,
+   "pc": 2.6
   },
-  "co2_kg": 3.038,
-  "co2_mit_recyclat_kg": 2.363,
-  "co2_ersparnis_kg": 0.675,
+  "co2_kg": 2.942,
+  "co2_mit_recyclat_kg": 2.242,
+  "co2_ersparnis_kg": 0.7,
   "co2_ohne_faktor": [],
-  "rohstoffwert_eur": 1.81,
+  "rohstoffwert_eur": 1.98,
   "wert_ohne_preis": [
    "Pd"
   ],
@@ -80,6 +82,22 @@
    "westmetall2026": {
     "titel": "Westmetall Marktdaten (LME, London Fixing, WM-Notiz)",
     "url": "https://www.westmetall.com/en/markdaten.php"
+   },
+   "usgs2026": {
+    "titel": "Mineral Commodity Summaries 2026 (ver. 1.3, May 2026)",
+    "url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf"
+   },
+   "eucrm2023": {
+    "titel": "Study on the Critical Raw Materials for the EU 2023 – Final Report",
+    "url": "https://single-market-economy.ec.europa.eu/publications/study-critical-raw-materials-eu-2023-final-report_en"
+   },
+   "eu2024crma": {
+    "titel": "Verordnung (EU) 2024/1252 zur Schaffung eines Rahmens zur Gewährleistung einer sicheren und nachhaltigen Versorgung mit kritischen Rohstoffen (Critical Raw Materials Act)",
+    "url": "https://op.europa.eu/en/publication-detail/-/publication/aa3c49f7-08e7-11ef-a251-01aa75ed71a1"
+   },
+   "usdapsd2026": {
+    "titel": "Production, Supply and Distribution Online (PSD), Datensatz Cotton (psd_cotton_csv.zip)",
+    "url": "https://apps.fas.usda.gov/psdonline/downloads/psd_cotton_csv.zip"
    }
   }
  },
@@ -132,9 +150,9 @@
    "explode": [
     0,
     0,
-    230.0
+    276.6
    ],
-   "mass": 11.2,
+   "mass": 10.5,
    "materials": [
     [
      "pcabs",
@@ -178,9 +196,9 @@
    "explode": [
     0,
     0,
-    230.0
+    276.6
    ],
-   "mass": 11.2,
+   "mass": 10.5,
    "materials": [
     [
      "pcabs",
@@ -225,9 +243,9 @@
    "explode": [
     0,
     0,
-    230.0
+    276.6
    ],
-   "mass": 11.2,
+   "mass": 10.5,
    "materials": [
     [
      "pcabs",
@@ -272,9 +290,9 @@
    "explode": [
     0,
     0,
-    230.0
+    276.6
    ],
-   "mass": 11.2,
+   "mass": 10.5,
    "materials": [
     [
      "pcabs",
@@ -319,9 +337,9 @@
    "explode": [
     0,
     0,
-    170.0
+    216.6
    ],
-   "mass": 83.9,
+   "mass": 78.7,
    "materials": [
     [
      "pcabs",
@@ -488,6 +506,102 @@
    ]
   },
   {
+   "id": "lichtleiter",
+   "component_id": "plastic_housing",
+   "material_id": "pc",
+   "name": "Lichtleiter für Anzeigen",
+   "short": "Lichtleiter",
+   "shape": "box",
+   "x": 38,
+   "y": 126,
+   "w": 112,
+   "d": 6,
+   "z": 10,
+   "h": 5,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    127.6
+   ],
+   "mass": 2.6,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Durchsichtiger Kunststoffkamm, der das Licht der kleinen LEDs auf der Platine nach oben zum Deckel leitet.",
+   "color": "#CFE6F2",
+   "opacity": 0.75,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 1,
+     "y": 1,
+     "w": 4,
+     "d": 4,
+     "fill": "#7FC8F0"
+    },
+    {
+     "shape": "cyl",
+     "x": 16,
+     "y": 1,
+     "w": 4,
+     "d": 4,
+     "fill": "#7FC8F0"
+    },
+    {
+     "shape": "cyl",
+     "x": 31,
+     "y": 1,
+     "w": 4,
+     "d": 4,
+     "fill": "#7FC8F0"
+    },
+    {
+     "shape": "cyl",
+     "x": 46,
+     "y": 1,
+     "w": 4,
+     "d": 4,
+     "fill": "#7FC8F0"
+    },
+    {
+     "shape": "cyl",
+     "x": 61,
+     "y": 1,
+     "w": 4,
+     "d": 4,
+     "fill": "#7FC8F0"
+    },
+    {
+     "shape": "cyl",
+     "x": 76,
+     "y": 1,
+     "w": 4,
+     "d": 4,
+     "fill": "#7FC8F0"
+    },
+    {
+     "shape": "cyl",
+     "x": 91,
+     "y": 1,
+     "w": 4,
+     "d": 4,
+     "fill": "#7FC8F0"
+    },
+    {
+     "shape": "cyl",
+     "x": 106,
+     "y": 1,
+     "w": 4,
+     "d": 4,
+     "fill": "#7FC8F0"
+    }
+   ]
+  },
+  {
    "id": "kuehlkoerper",
    "component_id": "circuit_board",
    "material_id": "aluminium",
@@ -506,7 +620,7 @@
     0,
     108.0
    ],
-   "mass": 23.3,
+   "mass": 21.9,
    "materials": [
     [
      "alu",
@@ -609,7 +723,7 @@
     0,
     88.0
    ],
-   "mass": 2.3,
+   "mass": 2.2,
    "materials": [
     [
      "chip",
@@ -638,7 +752,7 @@
     0,
     88.0
    ],
-   "mass": 3.7,
+   "mass": 3.5,
    "materials": [
     [
      "stahl",
@@ -675,7 +789,7 @@
     0,
     88.0
    ],
-   "mass": 3.7,
+   "mass": 3.5,
    "materials": [
     [
      "stahl",
@@ -741,7 +855,7 @@
     0,
     88.0
    ],
-   "mass": 23.3,
+   "mass": 21.9,
    "materials": [
     [
      "stahl",
@@ -829,7 +943,7 @@
     0,
     68.0
    ],
-   "mass": 41.9,
+   "mass": 39.4,
    "materials": [
     [
      "fr4",
@@ -888,7 +1002,7 @@
     0,
     0.0
    ],
-   "mass": 83.9,
+   "mass": 78.7,
    "materials": [
     [
      "pcabs",
@@ -1009,6 +1123,54 @@
    ]
   },
   {
+   "id": "dc_kabel",
+   "component_id": "power_adapter",
+   "material_id": "copper",
+   "name": "Niedervolt-Kabel mit Hohlstecker",
+   "short": "DC-Kabel",
+   "shape": "box",
+   "x": 210,
+   "y": 0,
+   "w": 6,
+   "d": 50,
+   "z": 0,
+   "h": 6,
+   "r": 3,
+   "explode": [
+    45,
+    -40,
+    0
+   ],
+   "mass": 21.9,
+   "materials": [
+    [
+     "pvc",
+     60
+    ],
+    [
+     "kupfer",
+     35
+    ],
+    [
+     "messing",
+     5
+    ]
+   ],
+   "info": "Dünnes Kabel vom Netzteil zum Router, endet in einem Hohlstecker aus Messing. Kupferadern freilegen und getrennt sammeln.",
+   "color": "#1E2226",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0.5,
+     "y": 0,
+     "w": 5,
+     "d": 8,
+     "r": 2,
+     "fill": "#9BA3A8"
+    }
+   ]
+  },
+  {
    "id": "netzteil",
    "component_id": "power_adapter",
    "material_id": "mixed_electronics",
@@ -1027,7 +1189,7 @@
     0,
     0
    ],
-   "mass": 88.5,
+   "mass": 83.1,
    "materials": [
     [
      "pcabs",

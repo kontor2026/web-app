@@ -16,7 +16,7 @@ LX, LY = 66, 32.5  # Mitte des Objektivs
 
 teile = [
     teil('frontschale', 'plastic_housing', 'Frontschale (Aluminium)', 'Frontschale', 'box', material_id='aluminium',
-         x=0, y=0, w=110, d=65, z=14, h=14, r=6, mass=50, materials=[['alu', 85], ['pcabs', 15]], color='#9AA2A8',
+         x=0, y=0, w=110, d=65, z=14, h=14, r=6, mass=50, sortBias=1, materials=[['alu', 85], ['pcabs', 15]], color='#9AA2A8',
          info='Vorderes Gehäuseteil aus Aluminium mit Öffnung für das Objektiv. Nach dem Lösen der kleinen Schrauben '
               'an Seiten und Boden abheben.',
          marks=[mark('cyl', LX - 23, LY - 23, 46, fill='#2B2F33'), mark('box', 8, 5, 30, 10, 2, '#E8ECEE'),
@@ -35,9 +35,13 @@ teile = [
          color='#2B2F33',
          info='Ineinander gesteckte Ringe, die beim Einschalten ausfahren. Mit drei Schrauben auf dem Sensor befestigt.',
          marks=[mark('cyl', 4, 4, 36, fill='#3A3F44'), mark('cyl', 12, 12, 20, fill='#1E2226')]),
+    teil('ausloeser', 'plastic_housing', 'Auslöser mit Zoomhebel', 'Auslöser', 'cyl', material_id='aluminium',
+         x=80, y=0, w=14, d=4, z=16, h=10, mass=2, materials=[['alu', 60], ['pcabs', 30], ['stahl', 10]],
+         color='#C9CED2', explode=[0, -40, 40],
+         info='Metallknopf auf der Oberseite, darum ein Ring als Zoomhebel. Darunter sitzt ein winziger Taster auf einem Flachbandkabel.'),
     teil('zoommotor', 'camera_lens_unit', 'Zoommotor', 'Zoommotor', 'cyl',
          x=90, y=44, w=10, z=16, h=12, mass=5, materials=[['stahl', 40], ['kupfer', 35], ['ndfeb', 20], ['pcabs', 5]],
-         color='#B5BBC0',
+         color='#B5BBC0', sortBias=-8,
          info='Winziger Elektromotor mit Zahnrädern, der den Tubus aus- und einfährt. Enthält einen Neodym-Magneten.'),
     teil('bildsensor', 'camera_lens_unit', 'Bildsensor', 'Bildsensor', 'box',
          x=LX - 10, y=LY - 7.5, w=20, d=15, z=14, h=2, r=1, mass=3, materials=[['chip', 50], ['keramik', 30], ['glas', 20]],
@@ -79,6 +83,7 @@ teile = [
 ]
 
 explodiere(teile, abstand=18, nach_liste=True,
-           abstaende={'frontlinse': 12, 'linse_mitte': 12, 'linse_hinten': 12, 'bildsensor': 10})
+           abstaende={'frontschale': 40, 'frontlinse': 12, 'linse_mitte': 12, 'linse_hinten': 12, 'bildsensor': 10})
+next(p for p in teile if p['id'] == 'blitz')['explode'][0] = -60  # Blitz nach links neben den Tubus
 skaliere_masse(teile, oid='digital_camera')
 schreibe('digital_camera', teile)

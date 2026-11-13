@@ -21,52 +21,52 @@
  "werte": [
   {
    "k": "Rohstoffwert",
-   "v": "≈ 1,19 €",
+   "v": "≈ 1,18 €",
    "hint": "Gold, Silber, Palladium zu Preisen vom 13.11. Ohne Kobalt, Palladium (kein Preis)."
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 2,73 kg",
+   "v": "≈ 2,74 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 1,80 kg",
-   "hint": "spart 0,93 kg, wenn recycelte Materialien eingesetzt werden"
+   "v": "≈ 1,78 kg",
+   "hint": "spart 0,96 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Al": 74190.0,
-   "Cu": 35260.0,
-   "Fe": 13590.0,
-   "Co": 4192.0,
+   "Al": 76345.0,
+   "Cu": 34900.0,
+   "Fe": 13455.0,
+   "Co": 4151.0,
    "Ag": 20.0,
-   "Au": 4.52,
-   "Pd": 2.01
+   "Au": 4.46,
+   "Pd": 1.98
   },
   "herkunft": {
    "Al": "Modellmassen (Schätzung)",
    "Cu": "Modellmassen (Schätzung)",
    "Fe": "Modellmassen (Schätzung)",
-   "Co": "31 g Akku × 13,7% Kobalt (Schätzung, oeko2012 Tab, 25)",
+   "Co": "30 g Akku × 13,7% Kobalt (Schätzung, oeko2012 Tab, 25)",
    "Ag": "25 g Leiterplatte × oeko2012 Tab, 15, Motherboard Notebook (Umicore 2011)",
    "Au": "25 g Leiterplatte × oeko2012 Tab, 15, Motherboard Notebook (Umicore 2011)",
    "Pd": "25 g Leiterplatte × oeko2012 Tab, 15, Motherboard Notebook (Umicore 2011)"
   },
   "materialien_g": {
-   "mixed_electronics": 90.6,
-   "aluminium": 69.6,
-   "abs": 55.7,
-   "li_ion": 30.6,
-   "special_glass": 28.6,
-   "pcb": 25.1
+   "mixed_electronics": 89.7,
+   "aluminium": 71.8,
+   "abs": 55.2,
+   "li_ion": 30.3,
+   "special_glass": 28.3,
+   "pcb": 24.8
   },
-  "co2_kg": 2.732,
-  "co2_mit_recyclat_kg": 1.799,
-  "co2_ersparnis_kg": 0.934,
+  "co2_kg": 2.738,
+  "co2_mit_recyclat_kg": 1.781,
+  "co2_ersparnis_kg": 0.957,
   "co2_ohne_faktor": [],
-  "rohstoffwert_eur": 1.19,
+  "rohstoffwert_eur": 1.18,
   "wert_ohne_preis": [
    "Co",
    "Pd"
@@ -84,6 +84,22 @@
    "westmetall2026": {
     "titel": "Westmetall Marktdaten (LME, London Fixing, WM-Notiz)",
     "url": "https://www.westmetall.com/en/markdaten.php"
+   },
+   "usgs2026": {
+    "titel": "Mineral Commodity Summaries 2026 (ver. 1.3, May 2026)",
+    "url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf"
+   },
+   "eucrm2023": {
+    "titel": "Study on the Critical Raw Materials for the EU 2023 – Final Report",
+    "url": "https://single-market-economy.ec.europa.eu/publications/study-critical-raw-materials-eu-2023-final-report_en"
+   },
+   "eu2024crma": {
+    "titel": "Verordnung (EU) 2024/1252 zur Schaffung eines Rahmens zur Gewährleistung einer sicheren und nachhaltigen Versorgung mit kritischen Rohstoffen (Critical Raw Materials Act)",
+    "url": "https://op.europa.eu/en/publication-detail/-/publication/aa3c49f7-08e7-11ef-a251-01aa75ed71a1"
+   },
+   "usdapsd2026": {
+    "titel": "Production, Supply and Distribution Online (PSD), Datensatz Cotton (psd_cotton_csv.zip)",
+    "url": "https://apps.fas.usda.gov/psdonline/downloads/psd_cotton_csv.zip"
    }
   }
  },
@@ -136,9 +152,9 @@
    "explode": [
     0,
     0,
-    159.7
+    181.7
    ],
-   "mass": 69.6,
+   "mass": 69,
    "materials": [
     [
      "alu",
@@ -151,6 +167,7 @@
    ],
    "info": "Vorderes Gehäuseteil aus Aluminium mit Öffnung für das Objektiv. Nach dem Lösen der kleinen Schrauben an Seiten und Boden abheben.",
    "color": "#9AA2A8",
+   "sortBias": 1,
    "marks": [
     {
      "shape": "cyl",
@@ -194,7 +211,7 @@
     0,
     110.7
    ],
-   "mass": 4.2,
+   "mass": 4.1,
    "materials": [
     [
      "glas",
@@ -278,7 +295,7 @@
     0,
     68.7
    ],
-   "mass": 55.7,
+   "mass": 55.2,
    "materials": [
     [
      "pcabs",
@@ -317,6 +334,42 @@
    ]
   },
   {
+   "id": "ausloeser",
+   "component_id": "plastic_housing",
+   "material_id": "aluminium",
+   "name": "Auslöser mit Zoomhebel",
+   "short": "Auslöser",
+   "shape": "cyl",
+   "x": 80,
+   "y": 0,
+   "w": 14,
+   "d": 4,
+   "z": 16,
+   "h": 10,
+   "explode": [
+    0,
+    -40,
+    40
+   ],
+   "mass": 2.8,
+   "materials": [
+    [
+     "alu",
+     60
+    ],
+    [
+     "pcabs",
+     30
+    ],
+    [
+     "stahl",
+     10
+    ]
+   ],
+   "info": "Metallknopf auf der Oberseite, darum ein Ring als Zoomhebel. Darunter sitzt ein winziger Taster auf einem Flachbandkabel.",
+   "color": "#C9CED2"
+  },
+  {
    "id": "zoommotor",
    "component_id": "camera_lens_unit",
    "material_id": "mixed_electronics",
@@ -333,7 +386,7 @@
     0,
     56.7
    ],
-   "mass": 7,
+   "mass": 6.9,
    "materials": [
     [
      "stahl",
@@ -353,7 +406,8 @@
     ]
    ],
    "info": "Winziger Elektromotor mit Zahnrädern, der den Tubus aus- und einfährt. Enthält einen Neodym-Magneten.",
-   "color": "#B5BBC0"
+   "color": "#B5BBC0",
+   "sortBias": -8
   },
   {
    "id": "bildsensor",
@@ -374,7 +428,7 @@
     0,
     50.7
    ],
-   "mass": 4.2,
+   "mass": 4.1,
    "materials": [
     [
      "chip",
@@ -418,11 +472,11 @@
    "h": 10,
    "r": 3,
    "explode": [
-    0,
+    -60,
     0,
     37.5
    ],
-   "mass": 20.9,
+   "mass": 20.7,
    "materials": [
     [
      "alu",
@@ -493,7 +547,7 @@
     0,
     41.5
    ],
-   "mass": 25.1,
+   "mass": 24.8,
    "materials": [
     [
      "fr4",
@@ -554,7 +608,7 @@
     80,
     0
    ],
-   "mass": 30.6,
+   "mass": 30.3,
    "materials": [
     [
      "lco",
@@ -662,7 +716,7 @@
     0,
     30.5
    ],
-   "mass": 19.5,
+   "mass": 19.3,
    "materials": [
     [
      "displayglas",
@@ -718,7 +772,7 @@
     0,
     0.0
    ],
-   "mass": 55.7,
+   "mass": 55.2,
    "materials": [
     [
      "pcabs",

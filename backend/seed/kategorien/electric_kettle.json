@@ -21,25 +21,25 @@
  "werte": [
   {
    "k": "Rohstoffwert",
-   "v": "≈ 2,28 €",
+   "v": "≈ 2,26 €",
    "hint": "Kupfer zu Preisen vom 13.11."
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 4,36 kg",
+   "v": "≈ 4,35 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 0,77 kg",
-   "hint": "spart 3,59 kg, wenn recycelte Materialien eingesetzt werden"
+   "v": "≈ 0,79 kg",
+   "hint": "spart 3,56 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Fe": 597293.0,
-   "Ni": 123840.0,
-   "Cu": 38570.0
+   "Fe": 593245.0,
+   "Ni": 122960.0,
+   "Cu": 38310.0
   },
   "herkunft": {
    "Fe": "Modellmassen (Schätzung)",
@@ -47,19 +47,20 @@
    "Cu": "Modellmassen (Schätzung)"
   },
   "materialien_g": {
-   "steel": 604.6,
-   "pp": 217.6,
-   "nickel_chrome": 154.8,
-   "pvc": 58.0,
-   "mixed_electronics": 31.9,
-   "copper": 29.0,
-   "nylon": 3.9
+   "steel": 600.5,
+   "pp": 216.1,
+   "nickel_chrome": 153.7,
+   "pvc": 57.6,
+   "mixed_electronics": 31.7,
+   "copper": 28.8,
+   "pc": 7.7,
+   "nylon": 3.8
   },
-  "co2_kg": 4.356,
-  "co2_mit_recyclat_kg": 0.767,
-  "co2_ersparnis_kg": 3.588,
+  "co2_kg": 4.352,
+  "co2_mit_recyclat_kg": 0.788,
+  "co2_ersparnis_kg": 3.563,
   "co2_ohne_faktor": [],
-  "rohstoffwert_eur": 2.28,
+  "rohstoffwert_eur": 2.26,
   "wert_ohne_preis": [],
   "preisstand": "2026-11-13",
   "quellen": {
@@ -74,6 +75,22 @@
    "westmetall2026": {
     "titel": "Westmetall Marktdaten (LME, London Fixing, WM-Notiz)",
     "url": "https://www.westmetall.com/en/markdaten.php"
+   },
+   "usgs2026": {
+    "titel": "Mineral Commodity Summaries 2026 (ver. 1.3, May 2026)",
+    "url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf"
+   },
+   "eucrm2023": {
+    "titel": "Study on the Critical Raw Materials for the EU 2023 – Final Report",
+    "url": "https://single-market-economy.ec.europa.eu/publications/study-critical-raw-materials-eu-2023-final-report_en"
+   },
+   "eu2024crma": {
+    "titel": "Verordnung (EU) 2024/1252 zur Schaffung eines Rahmens zur Gewährleistung einer sicheren und nachhaltigen Versorgung mit kritischen Rohstoffen (Critical Raw Materials Act)",
+    "url": "https://op.europa.eu/en/publication-detail/-/publication/aa3c49f7-08e7-11ef-a251-01aa75ed71a1"
+   },
+   "usdapsd2026": {
+    "titel": "Production, Supply and Distribution Online (PSD), Datensatz Cotton (psd_cotton_csv.zip)",
+    "url": "https://apps.fas.usda.gov/psdonline/downloads/psd_cotton_csv.zip"
    }
   }
  },
@@ -124,9 +141,9 @@
    "explode": [
     0,
     0,
-    107
+    217
    ],
-   "mass": 67.7,
+   "mass": 67.2,
    "materials": [
     [
      "stahl",
@@ -179,9 +196,9 @@
    "explode": [
     -45,
     0,
-    87
+    197
    ],
-   "mass": 3.9,
+   "mass": 3.8,
    "materials": [
     [
      "nylon",
@@ -203,9 +220,9 @@
    "name": "Ausguss",
    "short": "Ausguss",
    "shape": "box",
-   "x": 4,
+   "x": 0,
    "y": 70,
-   "w": 16,
+   "w": 16.5,
    "d": 20,
    "z": 186,
    "h": 42,
@@ -213,9 +230,9 @@
    "explode": [
     0,
     0,
-    87
+    197
    ],
-   "mass": 24.2,
+   "mass": 24,
    "materials": [
     [
      "stahl",
@@ -226,31 +243,147 @@
    "color": "#C9CED2"
   },
   {
-   "id": "kanne_oben",
+   "id": "kanne_0",
    "component_id": "stainless_steel_body",
    "material_id": "steel",
-   "name": "Kanne Oberteil",
-   "short": "Kanne oben",
+   "name": "Kanne (Abschnitt 1)",
+   "short": "Kanne",
    "shape": "cyl",
-   "x": 20,
-   "y": 10,
-   "w": 140,
-   "z": 180,
-   "h": 56,
+   "x": 10,
+   "y": 0,
+   "w": 160,
+   "z": 28,
+   "h": 42,
    "explode": [
     0,
     0,
-    87
+    197
    ],
-   "mass": 145.1,
+   "mass": 115.3,
+   "materials": [
+    [
+     "stahl",
+     92
+    ],
+    [
+     "pp",
+     8
+    ]
+   ],
+   "info": "Tiefgezogene Kanne aus Edelstahl (enthält Chrom und Nickel), wird im Metallschrott eingeschmolzen. Der Boden ist dicht mit der Heizplatte verlötet.",
+   "color": "#C9CED2",
+   "label": false
+  },
+  {
+   "id": "kanne_1",
+   "component_id": "stainless_steel_body",
+   "material_id": "steel",
+   "name": "Kanne (Abschnitt 2)",
+   "short": "Kanne",
+   "shape": "cyl",
+   "x": 12,
+   "y": 2,
+   "w": 156,
+   "z": 70,
+   "h": 42,
+   "explode": [
+    0,
+    0,
+    197
+   ],
+   "mass": 110.5,
    "materials": [
     [
      "stahl",
      100
     ]
    ],
-   "info": "Oberer, schmaler Teil der tiefgezogenen Edelstahlkanne. Edelstahl enthält Chrom und Nickel und wird eingeschmolzen.",
+   "info": "Tiefgezogene Kanne aus Edelstahl (enthält Chrom und Nickel), wird im Metallschrott eingeschmolzen. Der Boden ist dicht mit der Heizplatte verlötet.",
    "color": "#C9CED2",
+   "label": false
+  },
+  {
+   "id": "kanne_2",
+   "component_id": "stainless_steel_body",
+   "material_id": "steel",
+   "name": "Kanne aus Edelstahl",
+   "short": "Kanne",
+   "shape": "cyl",
+   "x": 14,
+   "y": 4,
+   "w": 152,
+   "z": 112,
+   "h": 42,
+   "explode": [
+    0,
+    0,
+    197
+   ],
+   "mass": 105.7,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Tiefgezogene Kanne aus Edelstahl (enthält Chrom und Nickel), wird im Metallschrott eingeschmolzen. Der Boden ist dicht mit der Heizplatte verlötet.",
+   "color": "#C9CED2"
+  },
+  {
+   "id": "kanne_3",
+   "component_id": "stainless_steel_body",
+   "material_id": "steel",
+   "name": "Kanne (Abschnitt 4)",
+   "short": "Kanne",
+   "shape": "cyl",
+   "x": 16.5,
+   "y": 6.5,
+   "w": 147,
+   "z": 154,
+   "h": 42,
+   "explode": [
+    0,
+    0,
+    197
+   ],
+   "mass": 96.1,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Tiefgezogene Kanne aus Edelstahl (enthält Chrom und Nickel), wird im Metallschrott eingeschmolzen. Der Boden ist dicht mit der Heizplatte verlötet.",
+   "color": "#C9CED2",
+   "label": false
+  },
+  {
+   "id": "kanne_4",
+   "component_id": "stainless_steel_body",
+   "material_id": "steel",
+   "name": "Kanne (Abschnitt 5)",
+   "short": "Kanne",
+   "shape": "cyl",
+   "x": 19,
+   "y": 9,
+   "w": 142,
+   "z": 196,
+   "h": 40,
+   "explode": [
+    0,
+    0,
+    197
+   ],
+   "mass": 81.7,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Tiefgezogene Kanne aus Edelstahl (enthält Chrom und Nickel), wird im Metallschrott eingeschmolzen. Der Boden ist dicht mit der Heizplatte verlötet.",
+   "color": "#C9CED2",
+   "label": false,
    "marks": [
     {
      "shape": "cyl",
@@ -262,62 +395,35 @@
    ]
   },
   {
-   "id": "kanne_mitte",
+   "id": "fenster",
    "component_id": "stainless_steel_body",
-   "material_id": "steel",
-   "name": "Kanne Mittelteil",
-   "short": "Kanne Mitte",
-   "shape": "cyl",
-   "x": 15,
-   "y": 5,
-   "w": 150,
-   "z": 105,
-   "h": 75,
+   "material_id": "pc",
+   "name": "Wasserstandsanzeige",
+   "short": "Wasserstand",
+   "shape": "box",
+   "x": 107,
+   "y": 146,
+   "w": 10,
+   "d": 6,
+   "z": 60,
+   "h": 140,
+   "r": 3,
    "explode": [
     0,
-    0,
-    87
+    60,
+    197
    ],
-   "mass": 174.1,
+   "mass": 7.7,
    "materials": [
     [
-     "stahl",
+     "pcabs",
      100
     ]
    ],
-   "info": "Mittlerer Teil der Kanne mit eingesetzter Wasserstandsanzeige aus Kunststoff.",
-   "color": "#C9CED2"
-  },
-  {
-   "id": "kanne_unten",
-   "component_id": "stainless_steel_body",
-   "material_id": "steel",
-   "name": "Kanne Unterteil",
-   "short": "Kanne unten",
-   "shape": "cyl",
-   "x": 10,
-   "y": 0,
-   "w": 160,
-   "z": 28,
-   "h": 77,
-   "explode": [
-    0,
-    0,
-    87
-   ],
-   "mass": 193.5,
-   "materials": [
-    [
-     "stahl",
-     92
-    ],
-    [
-     "pp",
-     8
-    ]
-   ],
-   "info": "Breiter Fuß der Kanne mit Kunststoffring unten. Der Boden ist dicht mit der Heizplatte verlötet.",
-   "color": "#C9CED2"
+   "info": "Durchsichtiges Kunststofffenster mit Skala (0,5 bis 1,7 Liter). Ist eingeklebt und lässt sich nur mit Hebeln lösen.",
+   "color": "#9CC9E8",
+   "opacity": 0.75,
+   "sortBias": 60
   },
   {
    "id": "griff",
@@ -326,19 +432,19 @@
    "name": "Griff",
    "short": "Griff",
    "shape": "box",
-   "x": 170,
+   "x": 196,
    "y": 65,
-   "w": 50,
+   "w": 24,
    "d": 30,
    "z": 62,
    "h": 168,
-   "r": 12,
+   "r": 10,
    "explode": [
-    50,
+    70,
     0,
-    87
+    197
    ],
-   "mass": 67.7,
+   "mass": 48,
    "materials": [
     [
      "pp",
@@ -347,10 +453,42 @@
    ],
    "info": "Hohler Kunststoffgriff, oben und unten mit je einer Schraube an der Kanne befestigt.",
    "color": "#2E3338",
+   "sortBias": 30
+  },
+  {
+   "id": "griff_oben",
+   "component_id": "plastic_handle",
+   "material_id": "pp",
+   "name": "Griff-Steg oben",
+   "short": "Griffsteg",
+   "shape": "box",
+   "x": 150,
+   "y": 65,
+   "w": 46,
+   "d": 30,
+   "z": 204,
+   "h": 26,
+   "r": 10,
+   "explode": [
+    70,
+    0,
+    197
+   ],
+   "mass": 11.5,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Oberer Steg des Griffs mit der Halteschraube.",
+   "color": "#2E3338",
+   "label": false,
+   "sortBias": 30,
    "marks": [
     {
      "shape": "box",
-     "x": 12,
+     "x": 10,
      "y": 6,
      "w": 30,
      "d": 18,
@@ -358,6 +496,37 @@
      "fill": "#1E2226"
     }
    ]
+  },
+  {
+   "id": "griff_unten",
+   "component_id": "plastic_handle",
+   "material_id": "pp",
+   "name": "Griff-Steg unten",
+   "short": "Griffsteg unten",
+   "shape": "box",
+   "x": 158,
+   "y": 65,
+   "w": 38,
+   "d": 30,
+   "z": 62,
+   "h": 24,
+   "r": 8,
+   "explode": [
+    70,
+    0,
+    197
+   ],
+   "mass": 7.7,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Unterer Steg des Griffs, darin läuft die Schubstange vom Schalter zum Thermostat.",
+   "color": "#2E3338",
+   "label": false,
+   "sortBias": 30
   },
   {
    "id": "schalter",
@@ -374,9 +543,9 @@
    "h": 12,
    "r": 4,
    "explode": [
-    50,
+    70,
     0,
-    87
+    197
    ],
    "mass": 7.7,
    "materials": [
@@ -430,7 +599,7 @@
     0,
     40
    ],
-   "mass": 24.2,
+   "mass": 24,
    "materials": [
     [
      "bimetall",
@@ -488,7 +657,7 @@
     0,
     67
    ],
-   "mass": 154.8,
+   "mass": 153.7,
    "materials": [
     [
      "alu",
@@ -545,7 +714,7 @@
     0,
     20
    ],
-   "mass": 43.5,
+   "mass": 43.2,
    "materials": [
     [
      "pp",
@@ -581,7 +750,7 @@
     0,
     0
    ],
-   "mass": 106.4,
+   "mass": 105.7,
    "materials": [
     [
      "pp",
@@ -638,7 +807,7 @@
     0,
     0
    ],
-   "mass": 58,
+   "mass": 57.6,
    "materials": [
     [
      "pvc",
@@ -682,7 +851,7 @@
     0,
     15
    ],
-   "mass": 29,
+   "mass": 28.8,
    "materials": [
     [
      "kupfer",

@@ -21,24 +21,24 @@
  "werte": [
   {
    "k": "Rohstoffwert",
-   "v": "≈ 0,75 €",
+   "v": "≈ 0,76 €",
    "hint": "Gold, Silber, Palladium zu Preisen vom 13.11. Ohne Kobalt, Palladium (kein Preis)."
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 1,77 kg",
+   "v": "≈ 1,79 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 1,50 kg",
+   "v": "≈ 1,52 kg",
    "hint": "spart 0,28 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Cu": 18200.0,
-   "Fe": 5100.0,
+   "Cu": 18500.0,
+   "Fe": 5250.0,
    "Al": 4800.0,
    "Co": 4384.0,
    "Ag": 19.0,
@@ -56,16 +56,17 @@
   },
   "materialien_g": {
    "abs": 127.0,
-   "mixed_electronics": 34.0,
+   "mixed_electronics": 35.0,
    "li_ion": 32.0,
    "pcb": 24.0,
-   "rubber": 4.0
+   "rubber": 4.0,
+   "silicone": 2.0
   },
-  "co2_kg": 1.775,
-  "co2_mit_recyclat_kg": 1.496,
+  "co2_kg": 1.794,
+  "co2_mit_recyclat_kg": 1.516,
   "co2_ersparnis_kg": 0.278,
   "co2_ohne_faktor": [],
-  "rohstoffwert_eur": 0.75,
+  "rohstoffwert_eur": 0.76,
   "wert_ohne_preis": [
    "Co",
    "Pd"
@@ -83,6 +84,22 @@
    "westmetall2026": {
     "titel": "Westmetall Marktdaten (LME, London Fixing, WM-Notiz)",
     "url": "https://www.westmetall.com/en/markdaten.php"
+   },
+   "usgs2026": {
+    "titel": "Mineral Commodity Summaries 2026 (ver. 1.3, May 2026)",
+    "url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf"
+   },
+   "eucrm2023": {
+    "titel": "Study on the Critical Raw Materials for the EU 2023 – Final Report",
+    "url": "https://single-market-economy.ec.europa.eu/publications/study-critical-raw-materials-eu-2023-final-report_en"
+   },
+   "eu2024crma": {
+    "titel": "Verordnung (EU) 2024/1252 zur Schaffung eines Rahmens zur Gewährleistung einer sicheren und nachhaltigen Versorgung mit kritischen Rohstoffen (Critical Raw Materials Act)",
+    "url": "https://op.europa.eu/en/publication-detail/-/publication/aa3c49f7-08e7-11ef-a251-01aa75ed71a1"
+   },
+   "usdapsd2026": {
+    "titel": "Production, Supply and Distribution Online (PSD), Datensatz Cotton (psd_cotton_csv.zip)",
+    "url": "https://apps.fas.usda.gov/psdonline/downloads/psd_cotton_csv.zip"
    }
   }
  },
@@ -128,12 +145,12 @@
    "x": 27,
    "y": 11,
    "w": 22,
-   "z": 48,
-   "h": 6,
+   "z": 42,
+   "h": 7,
    "explode": [
     0,
     0,
-    228.0
+    248.0
    ],
    "mass": 2,
    "materials": [
@@ -164,12 +181,12 @@
    "x": 89,
    "y": 39,
    "w": 22,
-   "z": 48,
-   "h": 6,
+   "z": 42,
+   "h": 7,
    "explode": [
     0,
     0,
-    228.0
+    248.0
    ],
    "mass": 2,
    "materials": [
@@ -208,7 +225,7 @@
    "explode": [
     0,
     0,
-    242.0
+    256.0
    ],
    "mass": 3,
    "materials": [
@@ -267,7 +284,7 @@
    "explode": [
     0,
     0,
-    242.0
+    256.0
    ],
    "mass": 2,
    "materials": [
@@ -316,7 +333,7 @@
    "explode": [
     0,
     0,
-    202.0
+    216.0
    ],
    "mass": 48,
    "materials": [
@@ -380,7 +397,7 @@
    "y": 16,
    "w": 12,
    "z": 17.6,
-   "h": 30.4,
+   "h": 24.4,
    "explode": [
     0,
     0,
@@ -405,8 +422,17 @@
      10
     ]
    ],
-   "info": "Zwei Drehwiderstände messen, wie weit der Stick gekippt ist. Verschleißt mit der Zeit („Drift“) und lässt sich auslöten.",
-   "color": "#6E7579"
+   "info": "Hebel mit zwei Drehwiderständen darunter, die messen, wie weit der Stick gekippt ist. Verschleißt mit der Zeit („Drift“) und lässt sich auslöten.",
+   "color": "#2A2E32",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 3,
+     "w": 6,
+     "fill": "#1A1D20"
+    }
+   ]
   },
   {
    "id": "stick_r",
@@ -419,7 +445,7 @@
    "y": 44,
    "w": 12,
    "z": 17.6,
-   "h": 30.4,
+   "h": 24.4,
    "explode": [
     0,
     0,
@@ -445,8 +471,17 @@
     ]
    ],
    "info": "Zweites Stickmodul, gleich aufgebaut.",
-   "color": "#6E7579",
-   "label": false
+   "color": "#2A2E32",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 3,
+     "w": 6,
+     "fill": "#1A1D20"
+    }
+   ]
   },
   {
    "id": "trigger_l",
@@ -464,8 +499,8 @@
    "r": 6,
    "explode": [
     0,
-    -45,
-    30
+    -80,
+    70
    ],
    "mass": 6,
    "materials": [
@@ -512,8 +547,8 @@
    "r": 6,
    "explode": [
     0,
-    -45,
-    30
+    -80,
+    70
    ],
    "mass": 6,
    "materials": [
@@ -542,6 +577,121 @@
      "d": 6,
      "r": 3,
      "fill": "#4C5155"
+    }
+   ]
+  },
+  {
+   "id": "gummimatte",
+   "component_id": "plastic_housing",
+   "material_id": "silicone",
+   "name": "Kontaktmatte (Silikon)",
+   "short": "Kontaktmatte",
+   "shape": "box",
+   "x": 104,
+   "y": 8,
+   "w": 32,
+   "d": 32,
+   "z": 17.6,
+   "h": 2,
+   "r": 10,
+   "explode": [
+    0,
+    0,
+    136.0
+   ],
+   "mass": 2,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "info": "Weiche Silikonmatte mit kleinen Kohlepunkten unter jeder Taste. Drückt man, schließt der Punkt den Kontakt auf der Platine.",
+   "color": "#9AA0A4",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 4,
+     "w": 8,
+     "d": 8,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 20,
+     "y": 4,
+     "w": 8,
+     "d": 8,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 20,
+     "w": 8,
+     "d": 8,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 20,
+     "y": 20,
+     "w": 8,
+     "d": 8,
+     "fill": "#3A3F44"
+    }
+   ]
+  },
+  {
+   "id": "usb_buchse",
+   "component_id": "circuit_board",
+   "material_id": "mixed_electronics",
+   "name": "USB-C-Ladebuchse",
+   "short": "USB-Buchse",
+   "shape": "box",
+   "x": 70,
+   "y": 3,
+   "w": 12,
+   "d": 7,
+   "z": 17.6,
+   "h": 4,
+   "r": 1.5,
+   "explode": [
+    0,
+    0,
+    136.0
+   ],
+   "mass": 1,
+   "materials": [
+    [
+     "stahl",
+     60
+    ],
+    [
+     "kupfer",
+     20
+    ],
+    [
+     "pcabs",
+     15
+    ],
+    [
+     "kontakte",
+     5
+    ]
+   ],
+   "info": "Metallbuchse zum Laden, auf die Platine gelötet. Wackelt sie, ist oft eine Lötstelle gebrochen.",
+   "color": "#B5BBC0",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 2,
+     "w": 8,
+     "d": 3,
+     "r": 1.5,
+     "fill": "#22272B"
     }
    ]
   },

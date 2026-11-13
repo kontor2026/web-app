@@ -21,53 +21,53 @@
  "werte": [
   {
    "k": "Rohstoffwert",
-   "v": "≈ 2,75 €",
+   "v": "≈ 2,69 €",
    "hint": "Gold, Silber, Kupfer zu Preisen vom 13.11."
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 6,20 kg",
+   "v": "≈ 6,13 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 1,93 kg",
-   "hint": "spart 4,27 kg, wenn recycelte Materialien eingesetzt werden"
+   "v": "≈ 1,90 kg",
+   "hint": "spart 4,23 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Fe": 716184.0,
-   "Ni": 123360.0,
-   "Al": 51400.0,
-   "Cu": 42300.0,
-   "Ag": 10.0,
-   "Au": 2.4,
-   "Pd": 0.76
+   "Fe": 725592.0,
+   "Ni": 120720.0,
+   "Al": 50300.0,
+   "Cu": 41420.0,
+   "Ag": 9.78,
+   "Au": 2.35,
+   "Pd": 0.74
   },
   "herkunft": {
    "Fe": "Modellmassen (Schätzung)",
    "Ni": "Modellmassen (Schätzung)",
    "Al": "Modellmassen (Schätzung)",
    "Cu": "Modellmassen (Schätzung)",
-   "Ag": "40 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)",
-   "Au": "40 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)",
-   "Pd": "40 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)"
+   "Ag": "39 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)",
+   "Au": "39 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)",
+   "Pd": "39 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)"
   },
   "materialien_g": {
-   "steel": 730.8,
-   "nickel_chrome": 154.2,
-   "pp": 121.1,
-   "pvc": 68.5,
-   "aluminium": 51.4,
-   "pcb": 40.0,
-   "copper": 34.3
+   "steel": 740.4,
+   "nickel_chrome": 150.9,
+   "pp": 118.5,
+   "pvc": 67.1,
+   "aluminium": 50.3,
+   "pcb": 39.1,
+   "copper": 33.6
   },
-  "co2_kg": 6.2,
-  "co2_mit_recyclat_kg": 1.926,
-  "co2_ersparnis_kg": 4.274,
+  "co2_kg": 6.129,
+  "co2_mit_recyclat_kg": 1.901,
+  "co2_ersparnis_kg": 4.229,
   "co2_ohne_faktor": [],
-  "rohstoffwert_eur": 2.75,
+  "rohstoffwert_eur": 2.69,
   "wert_ohne_preis": [],
   "preisstand": "2026-11-13",
   "quellen": {
@@ -82,6 +82,22 @@
    "westmetall2026": {
     "titel": "Westmetall Marktdaten (LME, London Fixing, WM-Notiz)",
     "url": "https://www.westmetall.com/en/markdaten.php"
+   },
+   "usgs2026": {
+    "titel": "Mineral Commodity Summaries 2026 (ver. 1.3, May 2026)",
+    "url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf"
+   },
+   "eucrm2023": {
+    "titel": "Study on the Critical Raw Materials for the EU 2023 – Final Report",
+    "url": "https://single-market-economy.ec.europa.eu/publications/study-critical-raw-materials-eu-2023-final-report_en"
+   },
+   "eu2024crma": {
+    "titel": "Verordnung (EU) 2024/1252 zur Schaffung eines Rahmens zur Gewährleistung einer sicheren und nachhaltigen Versorgung mit kritischen Rohstoffen (Critical Raw Materials Act)",
+    "url": "https://op.europa.eu/en/publication-detail/-/publication/aa3c49f7-08e7-11ef-a251-01aa75ed71a1"
+   },
+   "usdapsd2026": {
+    "titel": "Production, Supply and Distribution Online (PSD), Datensatz Cotton (psd_cotton_csv.zip)",
+    "url": "https://apps.fas.usda.gov/psdonline/downloads/psd_cotton_csv.zip"
    }
   }
  },
@@ -128,15 +144,15 @@
    "y": 0,
    "w": 250,
    "d": 160,
-   "z": 20,
-   "h": 170,
+   "z": 12,
+   "h": 178,
    "r": 22,
    "explode": [
     0,
-    0,
-    195
+    -230,
+    248
    ],
-   "mass": 376.8,
+   "mass": 369.1,
    "materials": [
     [
      "stahl",
@@ -163,6 +179,24 @@
      "d": 35,
      "r": 6,
      "fill": "#2A2D30"
+    },
+    {
+     "shape": "box",
+     "x": 31,
+     "y": 50,
+     "w": 188,
+     "d": 5,
+     "r": 2,
+     "fill": "#5A4A3C"
+    },
+    {
+     "shape": "box",
+     "x": 31,
+     "y": 105,
+     "w": 188,
+     "d": 5,
+     "r": 2,
+     "fill": "#5A4A3C"
     }
    ]
   },
@@ -182,10 +216,10 @@
    "r": 0.5,
    "explode": [
     0,
-    0,
-    0.0
+    55,
+    -8
    ],
-   "mass": 45.7,
+   "mass": 44.7,
    "materials": [
     [
      "nichrom",
@@ -398,9 +432,9 @@
    "explode": [
     0,
     0,
-    20
+    50
    ],
-   "mass": 62.8,
+   "mass": 61.5,
    "materials": [
     [
      "nichrom",
@@ -601,7 +635,7 @@
    "component_id": "heating_element",
    "material_id": "nickel_chrome",
    "name": "Heizplatte hinten",
-   "short": "Heizplatte hinten",
+   "short": "Heizpl. hinten",
    "shape": "box",
    "x": 25,
    "y": 27,
@@ -612,10 +646,10 @@
    "r": 0.5,
    "explode": [
     0,
-    0,
-    0.0
+    -55,
+    37
    ],
-   "mass": 45.7,
+   "mass": 44.7,
    "materials": [
     [
      "nichrom",
@@ -828,9 +862,9 @@
    "explode": [
     0,
     0,
-    6
+    21
    ],
-   "mass": 102.8,
+   "mass": 100.7,
    "materials": [
     [
      "stahl",
@@ -861,10 +895,90 @@
    ]
   },
   {
+   "id": "feder",
+   "component_id": "stainless_steel_body",
+   "material_id": "steel",
+   "name": "Rückholfeder",
+   "short": "Feder",
+   "shape": "cyl",
+   "x": 230,
+   "y": 36,
+   "w": 6,
+   "z": 30,
+   "h": 90,
+   "explode": [
+    0,
+    -70,
+    77
+   ],
+   "mass": 4.5,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Federstahl-Zugfeder, die den Brotschlitten nach oben schnellen lässt. Steht unter Spannung, beim Ausbau festhalten.",
+   "color": "#8A9399",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 1.5,
+     "y": 1.5,
+     "w": 3,
+     "fill": "#5E666C"
+    }
+   ]
+  },
+  {
+   "id": "magnet",
+   "component_id": "heating_element",
+   "material_id": "steel",
+   "name": "Haltemagnet",
+   "short": "Haltemagnet",
+   "shape": "box",
+   "x": 228,
+   "y": 86,
+   "w": 8,
+   "d": 20,
+   "z": 36,
+   "h": 22,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    11
+   ],
+   "mass": 20.1,
+   "materials": [
+    [
+     "stahl",
+     60
+    ],
+    [
+     "kupfer",
+     40
+    ]
+   ],
+   "info": "Elektromagnet aus Eisenkern und Kupferwicklung. Hält den Hebel unten, bis die Steuerung den Strom abschaltet.",
+   "color": "#6C7378",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 3,
+     "w": 6,
+     "d": 14,
+     "r": 1,
+     "fill": "#B87333"
+    }
+   ]
+  },
+  {
    "id": "steuerplatine",
    "component_id": "heating_element",
    "material_id": "pcb",
-   "name": "Steuerplatine mit Haltemagnet",
+   "name": "Steuerplatine",
    "short": "Steuerplatine",
    "shape": "box",
    "x": 236,
@@ -877,42 +991,37 @@
    "explode": [
     0,
     0,
-    2
+    17
    ],
-   "mass": 40,
+   "mass": 39.1,
    "materials": [
     [
      "fr4",
-     30
+     50
     ],
     [
      "kupfer",
-     30
-    ],
-    [
-     "stahl",
      25
     ],
     [
      "chip",
-     10
+     15
     ],
     [
      "lot",
-     5
+     10
     ]
    ],
-   "info": "Zeitschaltung mit Elektromagnet: Er hält den Schlitten unten, bis die Bräunungszeit um ist. Enthält Kupferspule und Lötstellen.",
+   "info": "Zeitschaltung mit Kondensator und Chip: Sie schaltet nach der eingestellten Röstzeit den Haltemagneten ab. Mit Kupferleiterbahnen und Lötstellen.",
    "color": "#2F6B3A",
    "marks": [
     {
-     "shape": "box",
+     "shape": "cyl",
      "x": 2,
      "y": 10,
      "w": 8,
-     "d": 20,
-     "r": 1,
-     "fill": "#B87333"
+     "d": 8,
+     "fill": "#2B4A8C"
     },
     {
      "shape": "box",
@@ -922,6 +1031,15 @@
      "d": 12,
      "r": 1,
      "fill": "#222"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 80,
+     "w": 6,
+     "d": 20,
+     "r": 1,
+     "fill": "#D9D2BE"
     }
    ]
   },
@@ -933,18 +1051,18 @@
    "short": "Seitenteil",
    "shape": "box",
    "x": 250,
-   "y": 0,
-   "w": 20,
-   "d": 160,
-   "z": 0,
-   "h": 190,
-   "r": 8,
+   "y": 8,
+   "w": 14,
+   "d": 144,
+   "z": 12,
+   "h": 172,
+   "r": 6,
    "explode": [
-    60,
+    120,
     0,
     0
    ],
-   "mass": 102.8,
+   "mass": 100.7,
    "materials": [
     [
      "pp",
@@ -952,14 +1070,15 @@
     ]
    ],
    "info": "Hitzefester Kunststoff, trägt Hebelschlitz, Regler und Tasten. Ist eingeclipst und mit zwei Schrauben gesichert.",
-   "color": "#2E3338",
+   "color": "#5B6268",
+   "sortBias": 10,
    "marks": [
     {
      "shape": "box",
-     "x": 6,
-     "y": 60,
-     "w": 8,
-     "d": 40,
+     "x": 4,
+     "y": 56,
+     "w": 6,
+     "d": 48,
      "r": 3,
      "fill": "#1E2226"
     }
@@ -972,19 +1091,19 @@
    "name": "Absenkhebel",
    "short": "Hebel",
    "shape": "box",
-   "x": 270,
-   "y": 62,
-   "w": 12,
-   "d": 36,
-   "z": 150,
-   "h": 14,
-   "r": 4,
+   "x": 264,
+   "y": 60,
+   "w": 16,
+   "d": 40,
+   "z": 140,
+   "h": 16,
+   "r": 5,
    "explode": [
-    95,
+    200,
     0,
     0
    ],
-   "mass": 9.1,
+   "mass": 8.9,
    "materials": [
     [
      "pp",
@@ -992,7 +1111,19 @@
     ]
    ],
    "info": "Kunststoffgriff auf dem Hebelblech. Gerade abziehen, darunter ist Metall.",
-   "color": "#2E3338"
+   "color": "#1E2226",
+   "sortBias": 150,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 4,
+     "w": 10,
+     "d": 32,
+     "r": 4,
+     "fill": "#2E3338"
+    }
+   ]
   },
   {
    "id": "stopptaste",
@@ -1001,19 +1132,19 @@
    "name": "Stopp-Taste",
    "short": "Stopp-Taste",
    "shape": "box",
-   "x": 270,
-   "y": 112,
+   "x": 264,
+   "y": 58,
    "w": 6,
-   "d": 14,
-   "z": 100,
-   "h": 10,
-   "r": 2,
+   "d": 16,
+   "z": 95,
+   "h": 12,
+   "r": 3,
    "explode": [
-    95,
+    200,
     0,
     0
    ],
-   "mass": 2.3,
+   "mass": 2.2,
    "materials": [
     [
      "pp",
@@ -1021,7 +1152,8 @@
     ]
    ],
    "info": "Unterbricht das Toasten sofort. Die Kappe ist nur aufgesteckt.",
-   "color": "#C0392B"
+   "color": "#C0392B",
+   "sortBias": 150
   },
   {
    "id": "drehregler",
@@ -1030,18 +1162,18 @@
    "name": "Bräunungsregler",
    "short": "Regler",
    "shape": "cyl",
-   "x": 270,
-   "y": 105,
-   "w": 10,
-   "d": 28,
-   "z": 55,
-   "h": 28,
+   "x": 264,
+   "y": 96,
+   "w": 12,
+   "d": 30,
+   "z": 45,
+   "h": 30,
    "explode": [
-    95,
+    200,
     0,
     0
    ],
-   "mass": 6.9,
+   "mass": 6.7,
    "materials": [
     [
      "pp",
@@ -1049,7 +1181,19 @@
     ]
    ],
    "info": "Stellt die Röstzeit von 1 bis 7 ein. Lässt sich von der Achse abziehen.",
-   "color": "#2E3338"
+   "color": "#B9BEC2",
+   "sortBias": 150,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 13,
+     "w": 4,
+     "d": 4,
+     "r": 1,
+     "fill": "#1E2226"
+    }
+   ]
   },
   {
    "id": "kruemelschublade",
@@ -1070,7 +1214,7 @@
     175,
     0
    ],
-   "mass": 51.4,
+   "mass": 50.3,
    "materials": [
     [
      "alu",
@@ -1110,7 +1254,7 @@
     0,
     0
    ],
-   "mass": 251.2,
+   "mass": 246,
    "materials": [
     [
      "stahl",
@@ -1177,11 +1321,11 @@
    "h": 8,
    "r": 4,
    "explode": [
-    110,
-    -40,
+    60,
+    -110,
     0
    ],
-   "mass": 68.5,
+   "mass": 67.1,
    "materials": [
     [
      "pvc",
@@ -1221,11 +1365,11 @@
    "h": 3,
    "r": 1,
    "explode": [
-    110,
-    -65,
+    60,
+    -135,
     0
    ],
-   "mass": 34.3,
+   "mass": 33.6,
    "materials": [
     [
      "kupfer",

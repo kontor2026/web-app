@@ -21,7 +21,7 @@
  "werte": [
   {
    "k": "Rohstoffwert",
-   "v": "≈ 1,21 €",
+   "v": "≈ 1,19 €",
    "hint": "Kupfer zu Preisen vom 13.11."
   },
   {
@@ -31,15 +31,15 @@
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 0,59 kg",
-   "hint": "spart 1,41 kg, wenn recycelte Materialien eingesetzt werden"
+   "v": "≈ 0,61 kg",
+   "hint": "spart 1,39 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Cu": 50100.0,
-   "Ni": 39760.0,
-   "Fe": 14484.0
+   "Cu": 49240.0,
+   "Ni": 39040.0,
+   "Fe": 14304.0
   },
   "herkunft": {
    "Cu": "Modellmassen (Schätzung)",
@@ -47,19 +47,21 @@
    "Fe": "Modellmassen (Schätzung)"
   },
   "materialien_g": {
-   "abs": 256.1,
-   "pvc": 77.3,
-   "mixed_electronics": 75.0,
-   "nickel_chrome": 49.7,
-   "copper": 27.6,
-   "pc": 11.0,
-   "steel": 3.3
+   "abs": 251.6,
+   "pvc": 75.9,
+   "mixed_electronics": 73.8,
+   "nickel_chrome": 48.8,
+   "copper": 27.1,
+   "pc": 10.8,
+   "rubber": 6.5,
+   "steel": 3.3,
+   "pp": 2.2
   },
-  "co2_kg": 2.003,
-  "co2_mit_recyclat_kg": 0.593,
-  "co2_ersparnis_kg": 1.41,
+  "co2_kg": 1.995,
+  "co2_mit_recyclat_kg": 0.606,
+  "co2_ersparnis_kg": 1.389,
   "co2_ohne_faktor": [],
-  "rohstoffwert_eur": 1.21,
+  "rohstoffwert_eur": 1.19,
   "wert_ohne_preis": [],
   "preisstand": "2026-11-13",
   "quellen": {
@@ -74,6 +76,22 @@
    "westmetall2026": {
     "titel": "Westmetall Marktdaten (LME, London Fixing, WM-Notiz)",
     "url": "https://www.westmetall.com/en/markdaten.php"
+   },
+   "usgs2026": {
+    "titel": "Mineral Commodity Summaries 2026 (ver. 1.3, May 2026)",
+    "url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf"
+   },
+   "eucrm2023": {
+    "titel": "Study on the Critical Raw Materials for the EU 2023 – Final Report",
+    "url": "https://single-market-economy.ec.europa.eu/publications/study-critical-raw-materials-eu-2023-final-report_en"
+   },
+   "eu2024crma": {
+    "titel": "Verordnung (EU) 2024/1252 zur Schaffung eines Rahmens zur Gewährleistung einer sicheren und nachhaltigen Versorgung mit kritischen Rohstoffen (Critical Raw Materials Act)",
+    "url": "https://op.europa.eu/en/publication-detail/-/publication/aa3c49f7-08e7-11ef-a251-01aa75ed71a1"
+   },
+   "usdapsd2026": {
+    "titel": "Production, Supply and Distribution Online (PSD), Datensatz Cotton (psd_cotton_csv.zip)",
+    "url": "https://apps.fas.usda.gov/psdonline/downloads/psd_cotton_csv.zip"
    }
   }
  },
@@ -126,9 +144,9 @@
    "explode": [
     0,
     0,
-    120
+    160
    ],
-   "mass": 77.3,
+   "mass": 75.9,
    "materials": [
     [
      "pcabs",
@@ -184,7 +202,8 @@
     ]
    ],
    "info": "Zwei verschweißte Metallstreifen biegen sich bei Hitze und schalten die Heizung ab. Schützt vor Brand, wenn das Gitter verstopft ist.",
-   "color": "#B8BEC4"
+   "color": "#B8BEC4",
+   "sortBias": -60
   },
   {
    "id": "heizelement",
@@ -205,7 +224,7 @@
     0,
     55
    ],
-   "mass": 49.7,
+   "mass": 48.8,
    "materials": [
     [
      "nichrom",
@@ -218,6 +237,7 @@
    ],
    "info": "Gewendelter Nickel-Chrom-Draht auf einem Kreuz aus Glimmer, glüht mit bis zu 2000 Watt. Vor dem Öffnen ganz abkühlen lassen.",
    "color": "#8C7B6B",
+   "sortBias": -60,
    "marks": [
     {
      "shape": "box",
@@ -330,7 +350,7 @@
     0,
     42
    ],
-   "mass": 66.2,
+   "mass": 65.1,
    "materials": [
     [
      "kupfer",
@@ -354,6 +374,7 @@
     ]
    ],
    "info": "Kleiner Motor mit Kupferwicklung und Ferritmagneten, davor Dioden, die den Wechselstrom gleichrichten. Steckt in einer Gummihalterung.",
+   "sortBias": -60,
    "marks": [
     {
      "shape": "box",
@@ -380,19 +401,19 @@
    "name": "Lüfterrad",
    "short": "Lüfterrad",
    "shape": "box",
-   "x": 16,
-   "y": 10,
+   "x": 18,
+   "y": 14,
    "w": 12,
-   "d": 70,
-   "z": 140,
-   "h": 70,
+   "d": 62,
+   "z": 145,
+   "h": 60,
    "r": 5,
    "explode": [
     0,
     0,
-    60
+    55
    ],
-   "mass": 11,
+   "mass": 10.8,
    "materials": [
     [
      "pcabs",
@@ -401,11 +422,12 @@
    ],
    "info": "Saugt die Luft hinten an und drückt sie über den Heizdraht. Sitzt auf der Motorwelle und lässt sich abziehen.",
    "color": "#5F6B75",
+   "sortBias": -60,
    "marks": [
     {
      "shape": "box",
      "x": 2,
-     "y": 4,
+     "y": 3,
      "w": 8,
      "d": 4,
      "r": 1,
@@ -414,7 +436,7 @@
     {
      "shape": "box",
      "x": 2,
-     "y": 12,
+     "y": 11,
      "w": 8,
      "d": 4,
      "r": 1,
@@ -423,7 +445,7 @@
     {
      "shape": "box",
      "x": 2,
-     "y": 20,
+     "y": 19,
      "w": 8,
      "d": 4,
      "r": 1,
@@ -432,7 +454,7 @@
     {
      "shape": "box",
      "x": 2,
-     "y": 28,
+     "y": 27,
      "w": 8,
      "d": 4,
      "r": 1,
@@ -441,7 +463,7 @@
     {
      "shape": "box",
      "x": 2,
-     "y": 36,
+     "y": 35,
      "w": 8,
      "d": 4,
      "r": 1,
@@ -450,7 +472,7 @@
     {
      "shape": "box",
      "x": 2,
-     "y": 44,
+     "y": 43,
      "w": 8,
      "d": 4,
      "r": 1,
@@ -459,16 +481,7 @@
     {
      "shape": "box",
      "x": 2,
-     "y": 52,
-     "w": 8,
-     "d": 4,
-     "r": 1,
-     "fill": "#4A545C"
-    },
-    {
-     "shape": "box",
-     "x": 2,
-     "y": 60,
+     "y": 51,
      "w": 8,
      "d": 4,
      "r": 1,
@@ -484,18 +497,18 @@
    "short": "Ansauggitter",
    "shape": "box",
    "x": 0,
-   "y": 5,
+   "y": 15,
    "w": 8,
-   "d": 80,
-   "z": 135,
-   "h": 80,
+   "d": 60,
+   "z": 145,
+   "h": 60,
    "r": 3,
    "explode": [
     -35,
     0,
     0
    ],
-   "mass": 13.2,
+   "mass": 13,
    "materials": [
     [
      "pcabs",
@@ -512,7 +525,7 @@
     {
      "shape": "box",
      "x": 2,
-     "y": 6,
+     "y": 3,
      "w": 4,
      "d": 4,
      "r": 1,
@@ -521,7 +534,7 @@
     {
      "shape": "box",
      "x": 2,
-     "y": 13,
+     "y": 10,
      "w": 4,
      "d": 4,
      "r": 1,
@@ -530,7 +543,7 @@
     {
      "shape": "box",
      "x": 2,
-     "y": 20,
+     "y": 17,
      "w": 4,
      "d": 4,
      "r": 1,
@@ -539,7 +552,7 @@
     {
      "shape": "box",
      "x": 2,
-     "y": 27,
+     "y": 24,
      "w": 4,
      "d": 4,
      "r": 1,
@@ -548,7 +561,7 @@
     {
      "shape": "box",
      "x": 2,
-     "y": 34,
+     "y": 31,
      "w": 4,
      "d": 4,
      "r": 1,
@@ -557,7 +570,7 @@
     {
      "shape": "box",
      "x": 2,
-     "y": 41,
+     "y": 38,
      "w": 4,
      "d": 4,
      "r": 1,
@@ -566,7 +579,7 @@
     {
      "shape": "box",
      "x": 2,
-     "y": 48,
+     "y": 45,
      "w": 4,
      "d": 4,
      "r": 1,
@@ -575,25 +588,7 @@
     {
      "shape": "box",
      "x": 2,
-     "y": 55,
-     "w": 4,
-     "d": 4,
-     "r": 1,
-     "fill": "#1E2226"
-    },
-    {
-     "shape": "box",
-     "x": 2,
-     "y": 62,
-     "w": 4,
-     "d": 4,
-     "r": 1,
-     "fill": "#1E2226"
-    },
-    {
-     "shape": "box",
-     "x": 2,
-     "y": 69,
+     "y": 52,
      "w": 4,
      "d": 4,
      "r": 1,
@@ -620,7 +615,7 @@
     0,
     0
    ],
-   "mass": 27.6,
+   "mass": 27.1,
    "materials": [
     [
      "pcabs",
@@ -660,7 +655,7 @@
     0,
     0
    ],
-   "mass": 77.3,
+   "mass": 75.9,
    "materials": [
     [
      "pcabs",
@@ -689,7 +684,7 @@
     30,
     0
    ],
-   "mass": 8.8,
+   "mass": 8.7,
    "materials": [
     [
      "pcabs",
@@ -709,7 +704,8 @@
     ]
    ],
    "info": "Schiebeschalter für Gebläse- und Heizstufen mit Messing-Kontakten. Kabel sind angelötet oder gesteckt.",
-   "color": "#9AA2A6",
+   "color": "#B9C0C5",
+   "sortBias": 40,
    "marks": [
     {
      "shape": "box",
@@ -721,6 +717,36 @@
      "fill": "#E0E4E7"
     }
    ]
+  },
+  {
+   "id": "kalttaste",
+   "component_id": "plastic_housing",
+   "material_id": "pp",
+   "name": "Kaltstufen-Taste",
+   "short": "Kalttaste",
+   "shape": "box",
+   "x": 60,
+   "y": 62,
+   "w": 14,
+   "d": 5,
+   "z": 112,
+   "h": 10,
+   "r": 3,
+   "explode": [
+    0,
+    30,
+    0
+   ],
+   "mass": 2.2,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Solange sie gedrückt ist, bleibt die Heizung aus und nur kalte Luft kommt heraus. Die Kappe ist eingeclipst.",
+   "color": "#4A90C8",
+   "sortBias": 90
   },
   {
    "id": "griff",
@@ -741,7 +767,7 @@
     0,
     0
    ],
-   "mass": 60.7,
+   "mass": 59.7,
    "materials": [
     [
      "pcabs",
@@ -762,13 +788,52 @@
    ]
   },
   {
+   "id": "knickschutz",
+   "component_id": "cable_insulation",
+   "material_id": "rubber",
+   "name": "Knickschutz mit Öse",
+   "short": "Knickschutz",
+   "shape": "box",
+   "x": 89,
+   "y": 36,
+   "w": 18,
+   "d": 15,
+   "z": 0,
+   "h": 14,
+   "r": 5,
+   "explode": [
+    35,
+    0,
+    0
+   ],
+   "mass": 6.5,
+   "materials": [
+    [
+     "tpu",
+     100
+    ]
+   ],
+   "info": "Weiche Kunststofftülle, damit das Kabel am Griff nicht bricht. Mit Aufhängeöse; wird mit dem Kabel abgezogen.",
+   "color": "#22262A",
+   "sortBias": 20,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 6,
+     "y": 4,
+     "w": 7,
+     "fill": "#3C4248"
+    }
+   ]
+  },
+  {
    "id": "kabel",
    "component_id": "cable_insulation",
    "material_id": "pvc",
    "name": "Netzkabel (Isolierung)",
    "short": "Kabel",
    "shape": "box",
-   "x": 89,
+   "x": 107,
    "y": 39,
    "w": 80,
    "d": 9,
@@ -780,7 +845,7 @@
     0,
     0
    ],
-   "mass": 77.3,
+   "mass": 75.9,
    "materials": [
     [
      "pvc",
@@ -812,7 +877,7 @@
    "name": "Kupferadern",
    "short": "Kupferadern",
    "shape": "box",
-   "x": 89,
+   "x": 107,
    "y": 42,
    "w": 80,
    "d": 3,
@@ -824,7 +889,7 @@
     0,
     20
    ],
-   "mass": 27.6,
+   "mass": 27.1,
    "materials": [
     [
      "kupfer",
