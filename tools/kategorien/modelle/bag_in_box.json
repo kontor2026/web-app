@@ -1,0 +1,289 @@
+{
+ "parts": [
+  {
+   "id": "deckel",
+   "component_id": "cardboard_box_body",
+   "material_id": "cardboard",
+   "name": "Deckellaschen mit Tragegriff",
+   "short": "Deckel",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 250,
+   "d": 160,
+   "z": 294,
+   "h": 6,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    120
+   ],
+   "mass": 43,
+   "materials": [
+    [
+     "papier",
+     97
+    ],
+    [
+     "druck",
+     3
+    ]
+   ],
+   "info": "Vier verklebte Laschen. Die Grifflöcher sind ausgestanzt; zum Flachmachen die Laschen aufreißen.",
+   "color": "#C49A6C",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 78,
+     "w": 250,
+     "d": 4,
+     "r": 0,
+     "fill": "#9E7A52"
+    },
+    {
+     "shape": "box",
+     "x": 95,
+     "y": 60,
+     "w": 60,
+     "d": 14,
+     "r": 7,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 95,
+     "y": 86,
+     "w": 60,
+     "d": 14,
+     "r": 7,
+     "fill": "#3A3F44"
+    }
+   ]
+  },
+  {
+   "id": "mantel",
+   "component_id": "cardboard_box_body",
+   "material_id": "cardboard",
+   "name": "Karton",
+   "short": "Karton",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 250,
+   "d": 160,
+   "z": 6,
+   "h": 288,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    60
+   ],
+   "mass": 234.9,
+   "materials": [
+    [
+     "papier",
+     97
+    ],
+    [
+     "druck",
+     2
+    ],
+    [
+     "klebstoff",
+     1
+    ]
+   ],
+   "info": "Bedruckte Wellpappe, schützt den weichen Beutel. Leer flach gefaltet ins Altpapier.",
+   "color": "#C49A6C",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 4,
+     "w": 242,
+     "d": 152,
+     "r": 0,
+     "fill": "#8E6B45"
+    }
+   ]
+  },
+  {
+   "id": "klappe",
+   "component_id": "cardboard_box_body",
+   "material_id": "cardboard",
+   "name": "Zapfklappe",
+   "short": "Zapfklappe",
+   "shape": "box",
+   "x": 95,
+   "y": 159.7,
+   "w": 60,
+   "d": 0.3,
+   "z": 15,
+   "h": 60,
+   "r": 0,
+   "explode": [
+    0,
+    50,
+    0
+   ],
+   "mass": 2.7,
+   "materials": [
+    [
+     "papier",
+     100
+    ]
+   ],
+   "info": "Perforiertes Fenster vorne unten. Herausdrücken und den Zapfhahn hindurchziehen.",
+   "color": "#B98D5F",
+   "sortBias": 100
+  },
+  {
+   "id": "boden",
+   "component_id": "cardboard_box_body",
+   "material_id": "cardboard",
+   "name": "Bodenlaschen",
+   "short": "Boden",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 250,
+   "d": 160,
+   "z": 0,
+   "h": 6,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 43,
+   "materials": [
+    [
+     "papier",
+     100
+    ]
+   ],
+   "info": "Verklebte Bodenlaschen, tragen das Gewicht der Flüssigkeit.",
+   "color": "#C49A6C"
+  },
+  {
+   "id": "beutel",
+   "component_id": "multilayer_bag",
+   "material_id": "multilayer_plastic",
+   "name": "Innenbeutel",
+   "short": "Innenbeutel",
+   "shape": "box",
+   "x": 10,
+   "y": 10,
+   "w": 230,
+   "d": 140,
+   "z": 8,
+   "h": 270,
+   "r": 20,
+   "explode": [
+    290,
+    0,
+    0
+   ],
+   "mass": 51,
+   "materials": [
+    [
+     "verbundfolie",
+     100
+    ]
+   ],
+   "info": "Mehrschichtfolie aus PE und metallisiertem PET, hält Luft fern. Die Schichten lassen sich nicht trennen: leer in die Gelbe Tonne.",
+   "color": "#B8BEC4",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 0,
+     "w": 230,
+     "d": 6,
+     "r": 3,
+     "fill": "#9AA1A8"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 134,
+     "w": 230,
+     "d": 6,
+     "r": 3,
+     "fill": "#9AA1A8"
+    }
+   ]
+  },
+  {
+   "id": "stutzen",
+   "component_id": "multilayer_bag",
+   "material_id": "ldpe",
+   "name": "Ausgießstutzen",
+   "short": "Stutzen",
+   "shape": "cyl",
+   "x": 110,
+   "y": 150,
+   "w": 30,
+   "d": 9,
+   "z": 20,
+   "h": 30,
+   "explode": [
+    290,
+    25,
+    0
+   ],
+   "mass": 6.7,
+   "materials": [
+    [
+     "ldpe",
+     100
+    ]
+   ],
+   "info": "In den Beutel eingeschweißter Stutzen aus PE. Bleibt am Beutel.",
+   "color": "#F2F0EA"
+  },
+  {
+   "id": "hahn",
+   "component_id": "pp_tap",
+   "material_id": "pp",
+   "name": "Zapfhahn",
+   "short": "Zapfhahn",
+   "shape": "box",
+   "x": 107,
+   "y": 135,
+   "w": 36,
+   "d": 24,
+   "z": 15,
+   "h": 42,
+   "r": 6,
+   "explode": [
+    290,
+    60,
+    0
+   ],
+   "mass": 18.8,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "PP-Hahn mit Drucktaste, auf den Stutzen gesteckt. Abziehen und ebenfalls in die Gelbe Tonne.",
+   "color": "#2E5E8C",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 8,
+     "y": 4,
+     "w": 20,
+     "d": 16,
+     "fill": "#E8EEF2"
+    }
+   ]
+  }
+ ]
+}

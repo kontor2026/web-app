@@ -4,7 +4,7 @@
  "name_en": "Takeaway Container",
  "klasse": "Verpackung · Gelbe Tonne",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -93,63 +93,165 @@
   "nicht": "Nicht in Restmüll oder Altpapier",
   "warnung": "Restentleert reicht, nicht ausspülen. Teile aus verschiedenen Materialien trennen."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "pp_lid",
+   "id": "deckel",
    "component_id": "pp_lid",
-   "name": "Lid",
-   "short": "Lid",
-   "shape": "box",
-   "x": 9.0,
-   "y": 6.0,
-   "w": 162.0,
-   "d": 108.0,
-   "h": 4.0,
-   "z": 50.0,
-   "r": 13.0,
-   "explode": [
-    0,
-    0,
-    60.0
-   ],
-   "mass": 2.14,
-   "materials": [
-    [
-     "pp",
-     100
-    ]
-   ],
    "material_id": "pp",
-   "info": "Snap it off the rim."
-  },
-  {
-   "id": "pp_food_tray",
-   "component_id": "pp_food_tray",
-   "name": "Tray",
-   "short": "Tray",
+   "name": "Schnappdeckel",
+   "short": "Deckel",
    "shape": "box",
    "x": 0,
    "y": 0,
-   "w": 180.0,
-   "d": 120.0,
-   "h": 50.0,
-   "z": 0.0,
-   "r": 14.4,
+   "w": 180,
+   "d": 120,
+   "z": 40,
+   "h": 10,
+   "r": 14,
    "explode": [
     0,
     0,
-    0
+    55.0
    ],
-   "mass": 17.86,
+   "mass": 6.5,
    "materials": [
     [
      "pp",
      100
     ]
    ],
+   "info": "Klarer PP-Deckel, schnappt über den Rand der Schale. An der Ecklasche abziehen, Deckel und Schale zusammen in die Gelbe Tonne.",
+   "color": "#E6ECEF",
+   "opacity": 0.7,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 6,
+     "y": 6,
+     "w": 168,
+     "d": 108,
+     "r": 11,
+     "fill": "#C9D0D5"
+    },
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 10,
+     "w": 160,
+     "d": 100,
+     "r": 9,
+     "fill": "#E6ECEF"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 0,
+     "w": 14,
+     "d": 14,
+     "r": 6,
+     "fill": "#C9D0D5"
+    }
+   ]
+  },
+  {
+   "id": "rand",
+   "component_id": "pp_food_tray",
    "material_id": "pp",
-   "info": "Scrape out food leftovers; there is no need to rinse it."
+   "name": "Siegelrand",
+   "short": "Rand",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 180,
+   "d": 120,
+   "z": 36,
+   "h": 4,
+   "r": 14,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 3,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Umlaufender Rand, über den der Deckel schnappt.",
+   "color": "#2E3236",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 6,
+     "y": 6,
+     "w": 168,
+     "d": 108,
+     "r": 10,
+     "fill": "#1D2023"
+    }
+   ]
+  },
+  {
+   "id": "wand",
+   "component_id": "pp_food_tray",
+   "material_id": "pp",
+   "name": "Schale oben",
+   "short": "Schale",
+   "shape": "box",
+   "x": 6,
+   "y": 6,
+   "w": 168,
+   "d": 108,
+   "z": 18,
+   "h": 18,
+   "r": 12,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 5.5,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "PP hält die Hitze aus der Mikrowelle aus. Schwarzer Kunststoff wird von Sortieranlagen schlecht erkannt; Essensreste auskratzen, ausspülen ist nicht nötig.",
+   "color": "#2E3236"
+  },
+  {
+   "id": "boden",
+   "component_id": "pp_food_tray",
+   "material_id": "pp",
+   "name": "Schale unten mit Boden",
+   "short": "Boden",
+   "shape": "box",
+   "x": 11,
+   "y": 11,
+   "w": 158,
+   "d": 98,
+   "z": 0,
+   "h": 18,
+   "r": 10,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 5,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Die Schale wird nach unten schmaler, damit sich viele Schalen ineinander stapeln lassen.",
+   "color": "#2E3236",
+   "label": false
   }
  ]
 }

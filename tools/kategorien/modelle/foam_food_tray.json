@@ -1,0 +1,252 @@
+{
+ "parts": [
+  {
+   "id": "etikett",
+   "component_id": "ldpe_film",
+   "material_id": "paper",
+   "name": "Preisetikett",
+   "short": "Etikett",
+   "shape": "box",
+   "x": 120,
+   "y": 80,
+   "w": 65,
+   "d": 45,
+   "z": 20,
+   "h": 0.2,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    183.0
+   ],
+   "mass": 0.4,
+   "materials": [
+    [
+     "papier",
+     85
+    ],
+    [
+     "druck",
+     8
+    ],
+    [
+     "klebstoff",
+     7
+    ]
+   ],
+   "info": "Thermopapier mit Preis und Haltbarkeit, klebt auf der Folie. Kann mit der Folie in die Gelbe Tonne.",
+   "color": "#F4F2EE",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 5,
+     "y": 5,
+     "w": 40,
+     "d": 6,
+     "r": 0,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 5,
+     "y": 15,
+     "w": 55,
+     "d": 5,
+     "r": 0,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 5,
+     "y": 30,
+     "w": 55,
+     "d": 10,
+     "r": 0,
+     "fill": "#22272B"
+    }
+   ]
+  },
+  {
+   "id": "folie",
+   "component_id": "ldpe_film",
+   "material_id": "ldpe",
+   "name": "Stretchfolie",
+   "short": "Folie",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 200,
+   "d": 140,
+   "z": 18,
+   "h": 2,
+   "r": 8,
+   "explode": [
+    0,
+    0,
+    123.0
+   ],
+   "mass": 1.1,
+   "materials": [
+    [
+     "ldpe",
+     100
+    ]
+   ],
+   "info": "Dünne, dehnbare PE-Folie, um die Schale gespannt. Abziehen und locker in die Gelbe Tonne.",
+   "color": "#DCE6EC",
+   "opacity": 0.35
+  },
+  {
+   "id": "saugeinlage",
+   "component_id": "absorbent_pad",
+   "material_id": "paper_plastic_composite",
+   "name": "Saugeinlage",
+   "short": "Saugeinlage",
+   "shape": "box",
+   "x": 45,
+   "y": 30,
+   "w": 110,
+   "d": 80,
+   "z": 3,
+   "h": 3,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    75.0
+   ],
+   "mass": 0.7,
+   "materials": [
+    [
+     "papier",
+     85
+    ],
+    [
+     "ldpe",
+     15
+    ]
+   ],
+   "info": "Zellstoffkissen in Kunststoffhülle, saugt Fleischsaft auf. Herausnehmen und in den Restmüll geben.",
+   "color": "#F7F7F7",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4.0,
+     "y": 4.0,
+     "w": 14,
+     "d": 72,
+     "fill": "#E3E3E3"
+    },
+    {
+     "shape": "box",
+     "x": 21.5,
+     "y": 4.0,
+     "w": 14,
+     "d": 72,
+     "fill": "#E3E3E3"
+    },
+    {
+     "shape": "box",
+     "x": 39.0,
+     "y": 4.0,
+     "w": 14,
+     "d": 72,
+     "fill": "#E3E3E3"
+    },
+    {
+     "shape": "box",
+     "x": 56.5,
+     "y": 4.0,
+     "w": 14,
+     "d": 72,
+     "fill": "#E3E3E3"
+    },
+    {
+     "shape": "box",
+     "x": 74.0,
+     "y": 4.0,
+     "w": 14,
+     "d": 72,
+     "fill": "#E3E3E3"
+    },
+    {
+     "shape": "box",
+     "x": 91.5,
+     "y": 4.0,
+     "w": 14,
+     "d": 72,
+     "fill": "#E3E3E3"
+    }
+   ]
+  },
+  {
+   "id": "rand",
+   "component_id": "eps_tray",
+   "material_id": "eps",
+   "name": "Schalenrand",
+   "short": "Rand",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 200,
+   "d": 140,
+   "z": 14,
+   "h": 4,
+   "r": 10,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 1.4,
+   "materials": [
+    [
+     "ps",
+     100
+    ]
+   ],
+   "info": "Breiter Rand, um den die Folie gespannt wird.",
+   "color": "#F3F1EC",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 8,
+     "y": 8,
+     "w": 184,
+     "d": 124,
+     "r": 8,
+     "fill": "#D8D5CE"
+    }
+   ]
+  },
+  {
+   "id": "schale",
+   "component_id": "eps_tray",
+   "material_id": "eps",
+   "name": "Schaumstoffschale",
+   "short": "Schale",
+   "shape": "box",
+   "x": 8,
+   "y": 8,
+   "w": 184,
+   "d": 124,
+   "z": 0,
+   "h": 14,
+   "r": 9,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 2.4,
+   "materials": [
+    [
+     "ps",
+     100
+    ]
+   ],
+   "info": "Geschäumtes Polystyrol, zu 95 % Luft. Zerbrochen in die Gelbe Tonne, nicht ins Altpapier.",
+   "color": "#F3F1EC"
+  }
+ ]
+}

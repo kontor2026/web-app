@@ -4,7 +4,7 @@
  "name_en": "Foam Meat Tray",
  "klasse": "Verpackung · Gelbe Tonne",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -39,13 +39,14 @@
   "metalle_mg": {},
   "herkunft": {},
   "materialien_g": {
-   "ldpe": 2.7,
-   "eps": 2.7,
-   "paper_plastic_composite": 0.6
+   "eps": 3.8,
+   "ldpe": 1.1,
+   "paper_plastic_composite": 0.7,
+   "paper": 0.4
   },
   "co2_kg": 0.012,
   "co2_mit_recyclat_kg": 0.002,
-  "co2_ersparnis_kg": 0.01,
+  "co2_ersparnis_kg": 0.009,
   "co2_ohne_faktor": [],
   "rohstoffwert_eur": 0,
   "wert_ohne_preis": [],
@@ -95,27 +96,124 @@
   "nicht": "Nicht in Restmüll oder Altpapier",
   "warnung": "Restentleert reicht, nicht ausspülen. Teile aus verschiedenen Materialien trennen."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "absorbent_pad",
-   "component_id": "absorbent_pad",
-   "name": "Absorbent Pad",
-   "short": "Absorbent Pad",
+   "id": "etikett",
+   "component_id": "ldpe_film",
+   "material_id": "paper",
+   "name": "Preisetikett",
+   "short": "Etikett",
    "shape": "box",
-   "x": 30.0,
-   "y": 21.0,
-   "w": 140.0,
-   "d": 98.0,
-   "h": 7.0,
-   "z": 4.0,
-   "r": 11.8,
+   "x": 120,
+   "y": 80,
+   "w": 65,
+   "d": 45,
+   "z": 20,
+   "h": 0.2,
+   "r": 1,
    "explode": [
     0,
     0,
-    152.0
+    183.0
    ],
-   "mass": 0.64,
+   "mass": 0.4,
+   "materials": [
+    [
+     "papier",
+     85
+    ],
+    [
+     "druck",
+     8
+    ],
+    [
+     "klebstoff",
+     7
+    ]
+   ],
+   "info": "Thermopapier mit Preis und Haltbarkeit, klebt auf der Folie. Kann mit der Folie in die Gelbe Tonne.",
+   "color": "#F4F2EE",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 5,
+     "y": 5,
+     "w": 40,
+     "d": 6,
+     "r": 0,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 5,
+     "y": 15,
+     "w": 55,
+     "d": 5,
+     "r": 0,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 5,
+     "y": 30,
+     "w": 55,
+     "d": 10,
+     "r": 0,
+     "fill": "#22272B"
+    }
+   ]
+  },
+  {
+   "id": "folie",
+   "component_id": "ldpe_film",
+   "material_id": "ldpe",
+   "name": "Stretchfolie",
+   "short": "Folie",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 200,
+   "d": 140,
+   "z": 18,
+   "h": 2,
+   "r": 8,
+   "explode": [
+    0,
+    0,
+    123.0
+   ],
+   "mass": 1.1,
+   "materials": [
+    [
+     "ldpe",
+     100
+    ]
+   ],
+   "info": "Dünne, dehnbare PE-Folie, um die Schale gespannt. Abziehen und locker in die Gelbe Tonne.",
+   "color": "#DCE6EC",
+   "opacity": 0.35
+  },
+  {
+   "id": "saugeinlage",
+   "component_id": "absorbent_pad",
+   "material_id": "paper_plastic_composite",
+   "name": "Saugeinlage",
+   "short": "Saugeinlage",
+   "shape": "box",
+   "x": 45,
+   "y": 30,
+   "w": 110,
+   "d": 80,
+   "z": 3,
+   "h": 3,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    75.0
+   ],
+   "mass": 0.7,
    "materials": [
     [
      "papier",
@@ -126,64 +224,127 @@
      15
     ]
    ],
-   "material_id": "paper_plastic_composite",
-   "info": "Pull it out and put it in residual waste."
+   "info": "Zellstoffkissen in Kunststoffhülle, saugt Fleischsaft auf. Herausnehmen und in den Restmüll geben.",
+   "color": "#F7F7F7",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4.0,
+     "y": 4.0,
+     "w": 14,
+     "d": 72,
+     "fill": "#E3E3E3"
+    },
+    {
+     "shape": "box",
+     "x": 21.5,
+     "y": 4.0,
+     "w": 14,
+     "d": 72,
+     "fill": "#E3E3E3"
+    },
+    {
+     "shape": "box",
+     "x": 39.0,
+     "y": 4.0,
+     "w": 14,
+     "d": 72,
+     "fill": "#E3E3E3"
+    },
+    {
+     "shape": "box",
+     "x": 56.5,
+     "y": 4.0,
+     "w": 14,
+     "d": 72,
+     "fill": "#E3E3E3"
+    },
+    {
+     "shape": "box",
+     "x": 74.0,
+     "y": 4.0,
+     "w": 14,
+     "d": 72,
+     "fill": "#E3E3E3"
+    },
+    {
+     "shape": "box",
+     "x": 91.5,
+     "y": 4.0,
+     "w": 14,
+     "d": 72,
+     "fill": "#E3E3E3"
+    }
+   ]
   },
   {
-   "id": "ldpe_film",
-   "component_id": "ldpe_film",
-   "name": "Film",
-   "short": "Film",
-   "shape": "box",
-   "x": 0,
-   "y": 0,
-   "w": 200.0,
-   "d": 140.0,
-   "h": 10.0,
-   "z": 10.0,
-   "r": 16.8,
-   "explode": [
-    0,
-    0,
-    68.0
-   ],
-   "mass": 2.68,
-   "materials": [
-    [
-     "ldpe",
-     100
-    ]
-   ],
-   "material_id": "ldpe",
-   "info": "Empty it and fold or ball it up loosely."
-  },
-  {
-   "id": "eps_tray",
+   "id": "rand",
    "component_id": "eps_tray",
-   "name": "Foam Tray",
-   "short": "Foam Tray",
+   "material_id": "eps",
+   "name": "Schalenrand",
+   "short": "Rand",
    "shape": "box",
    "x": 0,
    "y": 0,
-   "w": 200.0,
-   "d": 140.0,
-   "h": 10.0,
-   "z": 0.0,
-   "r": 16.8,
+   "w": 200,
+   "d": 140,
+   "z": 14,
+   "h": 4,
+   "r": 10,
    "explode": [
     0,
     0,
-    0
+    0.0
    ],
-   "mass": 2.68,
+   "mass": 1.4,
    "materials": [
     [
      "ps",
      100
     ]
    ],
+   "info": "Breiter Rand, um den die Folie gespannt wird.",
+   "color": "#F3F1EC",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 8,
+     "y": 8,
+     "w": 184,
+     "d": 124,
+     "r": 8,
+     "fill": "#D8D5CE"
+    }
+   ]
+  },
+  {
+   "id": "schale",
+   "component_id": "eps_tray",
    "material_id": "eps",
-   "info": "Peel off the film and pad first, then break it up for the bin."
+   "name": "Schaumstoffschale",
+   "short": "Schale",
+   "shape": "box",
+   "x": 8,
+   "y": 8,
+   "w": 184,
+   "d": 124,
+   "z": 0,
+   "h": 14,
+   "r": 9,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 2.4,
+   "materials": [
+    [
+     "ps",
+     100
+    ]
+   ],
+   "info": "Geschäumtes Polystyrol, zu 95 % Luft. Zerbrochen in die Gelbe Tonne, nicht ins Altpapier.",
+   "color": "#F3F1EC"
   }
  ]
 }

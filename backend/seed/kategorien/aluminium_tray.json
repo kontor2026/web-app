@@ -4,7 +4,7 @@
  "name_en": "Aluminium Food Tray",
  "klasse": "Verpackung · Gelbe Tonne",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -21,36 +21,36 @@
  "werte": [
   {
    "k": "Rohstoffwert",
-   "v": "≈ 0,04 €",
+   "v": "≈ 0,03 €",
    "hint": "Kaum Metalle enthalten."
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 0,17 kg",
+   "v": "≈ 0,14 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
    "k": "mit Recyclat",
    "v": "≈ 0,01 kg",
-   "hint": "spart 0,16 kg, wenn recycelte Materialien eingesetzt werden"
+   "hint": "spart 0,13 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Al": 14150.0
+   "Al": 11200.0
   },
   "herkunft": {
    "Al": "Modellmassen (Schätzung)"
   },
   "materialien_g": {
-   "aluminium": 14.2,
-   "paper_plastic_composite": 0.8
+   "aluminium": 11.2,
+   "paper_plastic_composite": 3.8
   },
-  "co2_kg": 0.169,
+  "co2_kg": 0.135,
   "co2_mit_recyclat_kg": 0.008,
-  "co2_ersparnis_kg": 0.161,
+  "co2_ersparnis_kg": 0.127,
   "co2_ohne_faktor": [],
-  "rohstoffwert_eur": 0.04,
+  "rohstoffwert_eur": 0.03,
   "wert_ohne_preis": [],
   "preisstand": "2026-11-13",
   "quellen": {
@@ -98,67 +98,172 @@
   "nicht": "Nicht in Restmüll oder Altpapier",
   "warnung": "Restentleert reicht, nicht ausspülen. Teile aus verschiedenen Materialien trennen."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "cardboard_lid",
+   "id": "deckel",
    "component_id": "cardboard_lid",
-   "name": "Lid",
-   "short": "Lid",
+   "material_id": "paper_plastic_composite",
+   "name": "Kartondeckel",
+   "short": "Deckel",
    "shape": "box",
-   "x": 10.0,
-   "y": 7.5,
-   "w": 180.0,
-   "d": 135.0,
-   "h": 3.2,
-   "z": 40.0,
-   "r": 16.2,
+   "x": 4,
+   "y": 4,
+   "w": 192,
+   "d": 142,
+   "z": 38,
+   "h": 1.5,
+   "r": 8,
    "explode": [
     0,
     0,
-    70.0
+    71.0
    ],
-   "mass": 0.85,
+   "mass": 3.8,
    "materials": [
     [
      "papier",
-     85
+     80
     ],
     [
      "ldpe",
      15
+    ],
+    [
+     "druck",
+     5
     ]
    ],
-   "material_id": "paper_plastic_composite",
-   "info": "Usually laminated on the inside; put it in residual waste."
+   "info": "Karton, innen mit Kunststoff oder Alu beschichtet, damit er nicht durchweicht. In den Restmüll.",
+   "color": "#E8E2D5",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 8,
+     "y": 8,
+     "w": 176,
+     "d": 126,
+     "r": 6,
+     "fill": "#F4F2EE"
+    },
+    {
+     "shape": "box",
+     "x": 20,
+     "y": 20,
+     "w": 100,
+     "d": 8,
+     "r": 0,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 20,
+     "y": 34,
+     "w": 70,
+     "d": 6,
+     "r": 0,
+     "fill": "#3A3F44"
+    }
+   ]
   },
   {
-   "id": "aluminium_tray_body",
+   "id": "rand",
    "component_id": "aluminium_tray_body",
-   "name": "Tray",
-   "short": "Tray",
+   "material_id": "aluminium",
+   "name": "Bördelrand",
+   "short": "Rand",
    "shape": "box",
    "x": 0,
    "y": 0,
-   "w": 200.0,
-   "d": 150.0,
-   "h": 40.0,
-   "z": 0.0,
-   "r": 18.0,
+   "w": 200,
+   "d": 150,
+   "z": 36,
+   "h": 3,
+   "r": 10,
    "explode": [
     0,
     0,
-    0
+    0.0
    ],
-   "mass": 14.15,
+   "mass": 2.3,
    "materials": [
     [
      "alu",
      100
     ]
    ],
+   "info": "Breiter, gerollter Rand. Er wird über den Deckel gedrückt und hält ihn fest.",
+   "color": "#C9CED3",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 7,
+     "y": 7,
+     "w": 186,
+     "d": 136,
+     "r": 8,
+     "fill": "#8E959C"
+    }
+   ]
+  },
+  {
+   "id": "wand",
+   "component_id": "aluminium_tray_body",
    "material_id": "aluminium",
-   "info": "Scrape out leftovers; small food residue is fine."
+   "name": "Schale oben",
+   "short": "Schale",
+   "shape": "box",
+   "x": 6,
+   "y": 6,
+   "w": 188,
+   "d": 138,
+   "z": 18,
+   "h": 18,
+   "r": 12,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 4.7,
+   "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "info": "Etwa 0,08 mm dünnes Aluminium, in die Form gepresst. Die Falten an den Ecken entstehen dabei.",
+   "color": "#C9CED3",
+   "label": false
+  },
+  {
+   "id": "boden",
+   "component_id": "aluminium_tray_body",
+   "material_id": "aluminium",
+   "name": "Schale unten mit Boden",
+   "short": "Schale",
+   "shape": "box",
+   "x": 12,
+   "y": 12,
+   "w": 176,
+   "d": 126,
+   "z": 0,
+   "h": 18,
+   "r": 14,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 4.2,
+   "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "info": "Essensreste auskratzen, dann in die Gelbe Tonne. Aluminium lässt sich ohne Qualitätsverlust einschmelzen.",
+   "color": "#C9CED3"
   }
  ]
 }

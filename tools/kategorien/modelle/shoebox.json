@@ -1,0 +1,189 @@
+{
+ "parts": [
+  {
+   "id": "deckel",
+   "component_id": "cardboard_box_body",
+   "material_id": "cardboard",
+   "name": "Stülpdeckel",
+   "short": "Deckel",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 330,
+   "d": 200,
+   "z": 95,
+   "h": 25,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    225.0
+   ],
+   "mass": 96.2,
+   "materials": [
+    [
+     "papier",
+     97
+    ],
+    [
+     "druck",
+     3
+    ]
+   ],
+   "info": "Wird über das Unterteil gestülpt. An den Ecken geklammert oder geklebt; zum Flachmachen dort aufreißen.",
+   "color": "#3F5C78",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 115,
+     "y": 70,
+     "w": 100,
+     "d": 60,
+     "r": 4,
+     "fill": "#F2F0EA"
+    },
+    {
+     "shape": "box",
+     "x": 130,
+     "y": 88,
+     "w": 70,
+     "d": 24,
+     "r": 2,
+     "fill": "#3F5C78"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 0,
+     "w": 330,
+     "d": 4,
+     "r": 0,
+     "fill": "#33495F"
+    }
+   ]
+  },
+  {
+   "id": "seidenpapier",
+   "component_id": "tissue_paper",
+   "material_id": "paper",
+   "name": "Seidenpapier",
+   "short": "Seidenpapier",
+   "shape": "box",
+   "x": 8,
+   "y": 6,
+   "w": 314,
+   "d": 188,
+   "z": 104,
+   "h": 2,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    114.0
+   ],
+   "mass": 6.1,
+   "materials": [
+    [
+     "papier",
+     100
+    ]
+   ],
+   "info": "Dünnes Papier, das die Schuhe schützt. Wiederverwenden zum Einpacken oder ins Altpapier.",
+   "color": "#FBFAF7",
+   "opacity": 0.85,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 155,
+     "y": 0,
+     "w": 4,
+     "d": 188,
+     "r": 0,
+     "fill": "#ECE9E2"
+    }
+   ]
+  },
+  {
+   "id": "unterteil",
+   "component_id": "cardboard_box_body",
+   "material_id": "cardboard",
+   "name": "Unterteil",
+   "short": "Unterteil",
+   "shape": "box",
+   "x": 2,
+   "y": 2,
+   "w": 326,
+   "d": 196,
+   "z": 0,
+   "h": 118,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 146.8,
+   "materials": [
+    [
+     "papier",
+     98
+    ],
+    [
+     "druck",
+     2
+    ]
+   ],
+   "info": "Graukarton aus Altpapier, außen bedruckt. Sauber und flach gefaltet ins Altpapier.",
+   "color": "#D9D4CB",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 2,
+     "w": 322,
+     "d": 192,
+     "r": 1,
+     "fill": "#A8A196"
+    }
+   ]
+  },
+  {
+   "id": "etikett",
+   "component_id": "cardboard_box_body",
+   "material_id": "paper",
+   "name": "Größenetikett",
+   "short": "Etikett",
+   "shape": "box",
+   "x": 328,
+   "y": 40,
+   "w": 0.3,
+   "d": 120,
+   "z": 15,
+   "h": 70,
+   "r": 0,
+   "explode": [
+    70,
+    0,
+    0
+   ],
+   "mass": 1,
+   "materials": [
+    [
+     "papier",
+     85
+    ],
+    [
+     "druck",
+     8
+    ],
+    [
+     "klebstoff",
+     7
+    ]
+   ],
+   "info": "Aufkleber mit Größe, Farbe und Barcode. Darf beim Altpapier am Karton bleiben.",
+   "color": "#F4F2EE",
+   "sortBias": 100
+  }
+ ]
+}

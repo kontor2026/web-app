@@ -4,7 +4,7 @@
  "name_en": "Shoebox",
  "klasse": "Verpackung · Papier",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -26,12 +26,12 @@
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 0,12 kg",
+   "v": "≈ 0,19 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 0,12 kg",
+   "v": "≈ 0,19 kg",
    "hint": "spart 0,00 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
@@ -39,11 +39,11 @@
   "metalle_mg": {},
   "herkunft": {},
   "materialien_g": {
-   "paper": 168.9,
-   "cardboard": 81.1
+   "cardboard": 243.0,
+   "paper": 7.1
   },
-  "co2_kg": 0.123,
-  "co2_mit_recyclat_kg": 0.123,
+  "co2_kg": 0.188,
+  "co2_mit_recyclat_kg": 0.188,
   "co2_ersparnis_kg": 0.0,
   "co2_ohne_faktor": [],
   "rohstoffwert_eur": 0,
@@ -94,91 +94,192 @@
   "nicht": "Nicht in Restmüll, wenn sauber",
   "warnung": "Kartons flach falten. Stark verschmutzte Teile in den Restmüll."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "tissue_paper_ober",
-   "component_id": "tissue_paper",
-   "name": "Tissue Paper (Oberteil)",
-   "short": "Tissue Paper (Ober",
-   "shape": "box",
-   "x": 0,
-   "y": 0,
-   "w": 330.0,
-   "d": 200.0,
-   "h": 24.0,
-   "z": 72.0,
-   "r": 24.0,
-   "explode": [
-    0,
-    0,
-    244.4
-   ],
-   "mass": 50.68,
-   "materials": [
-    [
-     "papier",
-     100
-    ]
-   ],
-   "material_id": "paper",
-   "info": "Reuse it for wrapping; otherwise put it in paper waste."
-  },
-  {
-   "id": "cardboard_box_body",
+   "id": "deckel",
    "component_id": "cardboard_box_body",
-   "name": "Box",
-   "short": "Box",
+   "material_id": "cardboard",
+   "name": "Stülpdeckel",
+   "short": "Deckel",
    "shape": "box",
-   "x": 49.5,
-   "y": 30.0,
-   "w": 231.0,
-   "d": 140.0,
-   "h": 32.4,
-   "z": 14.4,
-   "r": 16.8,
+   "x": 0,
+   "y": 0,
+   "w": 330,
+   "d": 200,
+   "z": 95,
+   "h": 25,
+   "r": 2,
    "explode": [
     0,
     0,
-    163.6
+    225.0
    ],
-   "mass": 81.08,
+   "mass": 96.2,
+   "materials": [
+    [
+     "papier",
+     97
+    ],
+    [
+     "druck",
+     3
+    ]
+   ],
+   "info": "Wird über das Unterteil gestülpt. An den Ecken geklammert oder geklebt; zum Flachmachen dort aufreißen.",
+   "color": "#3F5C78",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 115,
+     "y": 70,
+     "w": 100,
+     "d": 60,
+     "r": 4,
+     "fill": "#F2F0EA"
+    },
+    {
+     "shape": "box",
+     "x": 130,
+     "y": 88,
+     "w": 70,
+     "d": 24,
+     "r": 2,
+     "fill": "#3F5C78"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 0,
+     "w": 330,
+     "d": 4,
+     "r": 0,
+     "fill": "#33495F"
+    }
+   ]
+  },
+  {
+   "id": "seidenpapier",
+   "component_id": "tissue_paper",
+   "material_id": "paper",
+   "name": "Seidenpapier",
+   "short": "Seidenpapier",
+   "shape": "box",
+   "x": 8,
+   "y": 6,
+   "w": 314,
+   "d": 188,
+   "z": 104,
+   "h": 2,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    114.0
+   ],
+   "mass": 6.1,
    "materials": [
     [
      "papier",
      100
     ]
    ],
-   "material_id": "cardboard",
-   "info": "Flatten it; tear off heavily greasy or food-soiled parts first."
+   "info": "Dünnes Papier, das die Schuhe schützt. Wiederverwenden zum Einpacken oder ins Altpapier.",
+   "color": "#FBFAF7",
+   "opacity": 0.85,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 155,
+     "y": 0,
+     "w": 4,
+     "d": 188,
+     "r": 0,
+     "fill": "#ECE9E2"
+    }
+   ]
   },
   {
-   "id": "tissue_paper",
-   "component_id": "tissue_paper",
-   "name": "Tissue Paper (Unterteil)",
-   "short": "Tissue Paper (Unte",
+   "id": "unterteil",
+   "component_id": "cardboard_box_body",
+   "material_id": "cardboard",
+   "name": "Unterteil",
+   "short": "Unterteil",
    "shape": "box",
-   "x": 0,
-   "y": 0,
-   "w": 330.0,
-   "d": 200.0,
-   "h": 72.0,
+   "x": 2,
+   "y": 2,
+   "w": 326,
+   "d": 196,
    "z": 0,
-   "r": 24.0,
+   "h": 118,
+   "r": 2,
    "explode": [
     0,
+    0,
+    0.0
+   ],
+   "mass": 146.8,
+   "materials": [
+    [
+     "papier",
+     98
+    ],
+    [
+     "druck",
+     2
+    ]
+   ],
+   "info": "Graukarton aus Altpapier, außen bedruckt. Sauber und flach gefaltet ins Altpapier.",
+   "color": "#D9D4CB",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 2,
+     "w": 322,
+     "d": 192,
+     "r": 1,
+     "fill": "#A8A196"
+    }
+   ]
+  },
+  {
+   "id": "etikett",
+   "component_id": "cardboard_box_body",
+   "material_id": "paper",
+   "name": "Größenetikett",
+   "short": "Etikett",
+   "shape": "box",
+   "x": 328,
+   "y": 40,
+   "w": 0.3,
+   "d": 120,
+   "z": 15,
+   "h": 70,
+   "r": 0,
+   "explode": [
+    70,
     0,
     0
    ],
-   "mass": 118.24,
+   "mass": 1,
    "materials": [
     [
      "papier",
-     100
+     85
+    ],
+    [
+     "druck",
+     8
+    ],
+    [
+     "klebstoff",
+     7
     ]
    ],
-   "material_id": "paper",
-   "info": "Reuse it for wrapping; otherwise put it in paper waste."
+   "info": "Aufkleber mit Größe, Farbe und Barcode. Darf beim Altpapier am Karton bleiben.",
+   "color": "#F4F2EE",
+   "sortBias": 100
   }
  ]
 }

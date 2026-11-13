@@ -4,7 +4,7 @@
  "name_en": "Bag-in-Box",
  "klasse": "Verpackung · Gelbe Tonne",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -26,26 +26,27 @@
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 0,69 kg",
+   "v": "≈ 0,41 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 0,64 kg",
-   "hint": "spart 0,05 kg, wenn recycelte Materialien eingesetzt werden"
+   "v": "≈ 0,36 kg",
+   "hint": "spart 0,04 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
   "metalle_mg": {},
   "herkunft": {},
   "materialien_g": {
-   "multilayer_plastic": 250.0,
-   "cardboard": 120.0,
-   "pp": 30.0
+   "cardboard": 323.6,
+   "multilayer_plastic": 51.0,
+   "pp": 18.8,
+   "ldpe": 6.7
   },
-  "co2_kg": 0.689,
-  "co2_mit_recyclat_kg": 0.64,
-  "co2_ersparnis_kg": 0.049,
+  "co2_kg": 0.408,
+  "co2_mit_recyclat_kg": 0.364,
+  "co2_ersparnis_kg": 0.043,
   "co2_ohne_faktor": [],
   "rohstoffwert_eur": 0,
   "wert_ohne_preis": [],
@@ -95,119 +96,292 @@
   "nicht": "Nicht in Restmüll oder Altpapier",
   "warnung": "Restentleert reicht, nicht ausspülen. Teile aus verschiedenen Materialien trennen."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "pp_tap",
-   "component_id": "pp_tap",
-   "name": "Tap",
-   "short": "Tap",
-   "shape": "box",
-   "x": 107.4,
-   "y": 62.4,
-   "w": 35.2,
-   "d": 35.2,
-   "h": 45.0,
-   "z": 240.0,
-   "r": 4.2,
-   "explode": [
-    0,
-    0,
-    327.0
-   ],
-   "mass": 30.0,
-   "materials": [
-    [
-     "pp",
-     100
-    ]
-   ],
-   "material_id": "pp",
-   "info": "Pull it out of the bag spout."
-  },
-  {
-   "id": "multilayer_bag_ober",
-   "component_id": "multilayer_bag",
-   "name": "Inner Bag (Oberteil)",
-   "short": "Inner Bag (Obertei",
+   "id": "deckel",
+   "component_id": "cardboard_box_body",
+   "material_id": "cardboard",
+   "name": "Deckellaschen mit Tragegriff",
+   "short": "Deckel",
    "shape": "box",
    "x": 0,
    "y": 0,
-   "w": 250.0,
-   "d": 160.0,
-   "h": 60.0,
-   "z": 180.0,
-   "r": 19.2,
+   "w": 250,
+   "d": 160,
+   "z": 294,
+   "h": 6,
+   "r": 1,
    "explode": [
     0,
     0,
-    245.0
+    120
    ],
-   "mass": 75.0,
+   "mass": 43,
    "materials": [
     [
-     "folien",
-     100
+     "papier",
+     97
+    ],
+    [
+     "druck",
+     3
     ]
    ],
-   "material_id": "multilayer_plastic",
-   "info": "Pull it out through the tap hole and empty it."
+   "info": "Vier verklebte Laschen. Die Grifflöcher sind ausgestanzt; zum Flachmachen die Laschen aufreißen.",
+   "color": "#C49A6C",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 78,
+     "w": 250,
+     "d": 4,
+     "r": 0,
+     "fill": "#9E7A52"
+    },
+    {
+     "shape": "box",
+     "x": 95,
+     "y": 60,
+     "w": 60,
+     "d": 14,
+     "r": 7,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 95,
+     "y": 86,
+     "w": 60,
+     "d": 14,
+     "r": 7,
+     "fill": "#3A3F44"
+    }
+   ]
   },
   {
-   "id": "cardboard_box_body",
+   "id": "mantel",
    "component_id": "cardboard_box_body",
-   "name": "Box",
-   "short": "Box",
+   "material_id": "cardboard",
+   "name": "Karton",
+   "short": "Karton",
    "shape": "box",
-   "x": 37.5,
-   "y": 24.0,
-   "w": 175.0,
-   "d": 112.0,
-   "h": 81.0,
-   "z": 36.0,
-   "r": 13.4,
+   "x": 0,
+   "y": 0,
+   "w": 250,
+   "d": 160,
+   "z": 6,
+   "h": 288,
+   "r": 1,
    "explode": [
     0,
     0,
-    226.0
+    60
    ],
-   "mass": 120.0,
+   "mass": 234.9,
+   "materials": [
+    [
+     "papier",
+     97
+    ],
+    [
+     "druck",
+     2
+    ],
+    [
+     "klebstoff",
+     1
+    ]
+   ],
+   "info": "Bedruckte Wellpappe, schützt den weichen Beutel. Leer flach gefaltet ins Altpapier.",
+   "color": "#C49A6C",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 4,
+     "w": 242,
+     "d": 152,
+     "r": 0,
+     "fill": "#8E6B45"
+    }
+   ]
+  },
+  {
+   "id": "klappe",
+   "component_id": "cardboard_box_body",
+   "material_id": "cardboard",
+   "name": "Zapfklappe",
+   "short": "Zapfklappe",
+   "shape": "box",
+   "x": 95,
+   "y": 159.7,
+   "w": 60,
+   "d": 0.3,
+   "z": 15,
+   "h": 60,
+   "r": 0,
+   "explode": [
+    0,
+    50,
+    0
+   ],
+   "mass": 2.7,
    "materials": [
     [
      "papier",
      100
     ]
    ],
-   "material_id": "cardboard",
-   "info": "Flatten it; tear off heavily greasy or food-soiled parts first."
+   "info": "Perforiertes Fenster vorne unten. Herausdrücken und den Zapfhahn hindurchziehen.",
+   "color": "#B98D5F",
+   "sortBias": 100
   },
   {
-   "id": "multilayer_bag",
-   "component_id": "multilayer_bag",
-   "name": "Inner Bag (Unterteil)",
-   "short": "Inner Bag (Unterte",
+   "id": "boden",
+   "component_id": "cardboard_box_body",
+   "material_id": "cardboard",
+   "name": "Bodenlaschen",
+   "short": "Boden",
    "shape": "box",
    "x": 0,
    "y": 0,
-   "w": 250.0,
-   "d": 160.0,
-   "h": 180.0,
+   "w": 250,
+   "d": 160,
    "z": 0,
-   "r": 19.2,
+   "h": 6,
+   "r": 1,
    "explode": [
     0,
     0,
     0
    ],
-   "mass": 175.0,
+   "mass": 43,
    "materials": [
     [
-     "folien",
+     "papier",
      100
     ]
    ],
+   "info": "Verklebte Bodenlaschen, tragen das Gewicht der Flüssigkeit.",
+   "color": "#C49A6C"
+  },
+  {
+   "id": "beutel",
+   "component_id": "multilayer_bag",
    "material_id": "multilayer_plastic",
-   "info": "Pull it out through the tap hole and empty it."
+   "name": "Innenbeutel",
+   "short": "Innenbeutel",
+   "shape": "box",
+   "x": 10,
+   "y": 10,
+   "w": 230,
+   "d": 140,
+   "z": 8,
+   "h": 270,
+   "r": 20,
+   "explode": [
+    290,
+    0,
+    0
+   ],
+   "mass": 51,
+   "materials": [
+    [
+     "verbundfolie",
+     100
+    ]
+   ],
+   "info": "Mehrschichtfolie aus PE und metallisiertem PET, hält Luft fern. Die Schichten lassen sich nicht trennen: leer in die Gelbe Tonne.",
+   "color": "#B8BEC4",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 0,
+     "w": 230,
+     "d": 6,
+     "r": 3,
+     "fill": "#9AA1A8"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 134,
+     "w": 230,
+     "d": 6,
+     "r": 3,
+     "fill": "#9AA1A8"
+    }
+   ]
+  },
+  {
+   "id": "stutzen",
+   "component_id": "multilayer_bag",
+   "material_id": "ldpe",
+   "name": "Ausgießstutzen",
+   "short": "Stutzen",
+   "shape": "cyl",
+   "x": 110,
+   "y": 150,
+   "w": 30,
+   "d": 9,
+   "z": 20,
+   "h": 30,
+   "explode": [
+    290,
+    25,
+    0
+   ],
+   "mass": 6.7,
+   "materials": [
+    [
+     "ldpe",
+     100
+    ]
+   ],
+   "info": "In den Beutel eingeschweißter Stutzen aus PE. Bleibt am Beutel.",
+   "color": "#F2F0EA"
+  },
+  {
+   "id": "hahn",
+   "component_id": "pp_tap",
+   "material_id": "pp",
+   "name": "Zapfhahn",
+   "short": "Zapfhahn",
+   "shape": "box",
+   "x": 107,
+   "y": 135,
+   "w": 36,
+   "d": 24,
+   "z": 15,
+   "h": 42,
+   "r": 6,
+   "explode": [
+    290,
+    60,
+    0
+   ],
+   "mass": 18.8,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "PP-Hahn mit Drucktaste, auf den Stutzen gesteckt. Abziehen und ebenfalls in die Gelbe Tonne.",
+   "color": "#2E5E8C",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 8,
+     "y": 4,
+     "w": 20,
+     "d": 16,
+     "fill": "#E8EEF2"
+    }
+   ]
   }
  ]
 }

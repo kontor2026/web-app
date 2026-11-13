@@ -4,7 +4,7 @@
  "name_en": "Egg Carton",
  "klasse": "Verpackung · Papier",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -39,7 +39,8 @@
   "metalle_mg": {},
   "herkunft": {},
   "materialien_g": {
-   "cardboard": 30.0
+   "cardboard": 29.5,
+   "paper": 0.4
   },
   "co2_kg": 0.023,
   "co2_mit_recyclat_kg": 0.023,
@@ -93,35 +94,347 @@
   "nicht": "Nicht in Restmüll, wenn sauber",
   "warnung": "Kartons flach falten. Stark verschmutzte Teile in den Restmüll."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "molded_pulp_tray",
+   "id": "etikett",
    "component_id": "molded_pulp_tray",
-   "name": "Tray",
-   "short": "Tray",
+   "material_id": "paper",
+   "name": "Preisetikett",
+   "short": "Etikett",
    "shape": "box",
-   "x": 0,
-   "y": 0,
-   "w": 160.0,
-   "d": 105.0,
-   "h": 70.0,
-   "z": 0.0,
-   "r": 12.6,
+   "x": 45,
+   "y": 30,
+   "w": 70,
+   "d": 45,
+   "z": 70,
+   "h": 0.2,
+   "r": 1,
    "explode": [
     0,
     0,
-    0
+    175.0
    ],
-   "mass": 30.0,
+   "mass": 0.4,
+   "materials": [
+    [
+     "papier",
+     85
+    ],
+    [
+     "druck",
+     8
+    ],
+    [
+     "klebstoff",
+     7
+    ]
+   ],
+   "info": "Papieraufkleber mit Haltbarkeitsdatum und Erzeugercode. Darf am Karton bleiben.",
+   "color": "#F4F2EE",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 5,
+     "y": 5,
+     "w": 45,
+     "d": 6,
+     "r": 0,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 5,
+     "y": 15,
+     "w": 35,
+     "d": 5,
+     "r": 0,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 5,
+     "y": 30,
+     "w": 60,
+     "d": 9,
+     "r": 0,
+     "fill": "#B3423A"
+    }
+   ]
+  },
+  {
+   "id": "deckel",
+   "component_id": "molded_pulp_tray",
+   "material_id": "cardboard",
+   "name": "Deckel",
+   "short": "Deckel",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 160,
+   "d": 105,
+   "z": 36,
+   "h": 34,
+   "r": 10,
+   "explode": [
+    0,
+    0,
+    130.0
+   ],
+   "mass": 11.6,
    "materials": [
     [
      "papier",
      100
     ]
    ],
+   "info": "Hinten mit der Unterschale verbunden. Die Rippen machen den dünnen Faserguss stabil.",
+   "color": "#B9AE9C",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 6,
+     "y": 6,
+     "w": 148,
+     "d": 93,
+     "r": 8,
+     "fill": "#9C907C"
+    },
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 10,
+     "w": 140,
+     "d": 85,
+     "r": 6,
+     "fill": "#B9AE9C"
+    },
+    {
+     "shape": "box",
+     "x": 14,
+     "y": 8,
+     "w": 32,
+     "d": 6,
+     "fill": "#9C907C"
+    },
+    {
+     "shape": "box",
+     "x": 62,
+     "y": 8,
+     "w": 32,
+     "d": 6,
+     "fill": "#9C907C"
+    },
+    {
+     "shape": "box",
+     "x": 110,
+     "y": 8,
+     "w": 32,
+     "d": 6,
+     "fill": "#9C907C"
+    }
+   ]
+  },
+  {
+   "id": "kegel_links",
+   "component_id": "molded_pulp_tray",
    "material_id": "cardboard",
-   "info": "Tear it into pieces; it goes in paper waste or the compost."
+   "name": "Stützkegel links",
+   "short": "Stützkegel",
+   "shape": "cyl",
+   "x": 48,
+   "y": 45,
+   "w": 15,
+   "z": 20,
+   "h": 40,
+   "explode": [
+    0,
+    0,
+    61.0
+   ],
+   "mass": 0.8,
+   "materials": [
+    [
+     "papier",
+     100
+    ]
+   ],
+   "info": "Stützt den Deckel, damit die Eier beim Stapeln nicht zerdrückt werden.",
+   "color": "#B9AE9C",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 4,
+     "w": 7,
+     "fill": "#9C907C"
+    }
+   ]
+  },
+  {
+   "id": "kegel_rechts",
+   "component_id": "molded_pulp_tray",
+   "material_id": "cardboard",
+   "name": "Stützkegel rechts",
+   "short": "Stützkegel",
+   "shape": "cyl",
+   "x": 97,
+   "y": 45,
+   "w": 15,
+   "z": 20,
+   "h": 40,
+   "explode": [
+    0,
+    0,
+    61.0
+   ],
+   "mass": 0.8,
+   "materials": [
+    [
+     "papier",
+     100
+    ]
+   ],
+   "info": "Gegenstück zum linken Kegel.",
+   "color": "#B9AE9C",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 4,
+     "w": 7,
+     "fill": "#9C907C"
+    }
+   ]
+  },
+  {
+   "id": "schale",
+   "component_id": "molded_pulp_tray",
+   "material_id": "cardboard",
+   "name": "Unterschale mit Eiermulden",
+   "short": "Unterschale",
+   "shape": "box",
+   "x": 2,
+   "y": 2,
+   "w": 156,
+   "d": 101,
+   "z": 0,
+   "h": 36,
+   "r": 8,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 14.7,
+   "materials": [
+    [
+     "papier",
+     100
+    ]
+   ],
+   "info": "Aus Altpapier gepresst und getrocknet. Sauber ins Altpapier, zerrissen auch in den Kompost.",
+   "color": "#B9AE9C",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 2,
+     "w": 152,
+     "d": 97,
+     "r": 6,
+     "fill": "#9C907C"
+    },
+    {
+     "shape": "cyl",
+     "x": 5,
+     "y": 3,
+     "w": 46,
+     "d": 46,
+     "fill": "#857A68"
+    },
+    {
+     "shape": "cyl",
+     "x": 55,
+     "y": 3,
+     "w": 46,
+     "d": 46,
+     "fill": "#857A68"
+    },
+    {
+     "shape": "cyl",
+     "x": 105,
+     "y": 3,
+     "w": 46,
+     "d": 46,
+     "fill": "#857A68"
+    },
+    {
+     "shape": "cyl",
+     "x": 5,
+     "y": 53,
+     "w": 46,
+     "d": 46,
+     "fill": "#857A68"
+    },
+    {
+     "shape": "cyl",
+     "x": 55,
+     "y": 53,
+     "w": 46,
+     "d": 46,
+     "fill": "#857A68"
+    },
+    {
+     "shape": "cyl",
+     "x": 105,
+     "y": 53,
+     "w": 46,
+     "d": 46,
+     "fill": "#857A68"
+    }
+   ]
+  },
+  {
+   "id": "lasche",
+   "component_id": "molded_pulp_tray",
+   "material_id": "cardboard",
+   "name": "Verschlusslasche",
+   "short": "Lasche",
+   "shape": "box",
+   "x": 40,
+   "y": 100,
+   "w": 80,
+   "d": 5,
+   "z": 10,
+   "h": 24,
+   "r": 1,
+   "explode": [
+    0,
+    50,
+    0
+   ],
+   "mass": 1.6,
+   "materials": [
+    [
+     "papier",
+     100
+    ]
+   ],
+   "info": "Wird in die Schlitze des Deckels gesteckt und hält den Karton geschlossen.",
+   "color": "#B9AE9C",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 30,
+     "y": 0,
+     "w": 20,
+     "d": 5,
+     "r": 1,
+     "fill": "#9C907C"
+    }
+   ]
   }
  ]
 }

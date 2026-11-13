@@ -1,0 +1,864 @@
+{
+ "parts": [
+  {
+   "id": "oberrand",
+   "component_id": "hdpe_crate_body",
+   "material_id": "hdpe",
+   "name": "Oberrand mit Griffen",
+   "short": "Oberrand",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 400,
+   "d": 300,
+   "z": 262,
+   "h": 38,
+   "r": 8,
+   "explode": [
+    0,
+    0,
+    325.0
+   ],
+   "mass": 380,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "Verstärkter Rand mit Griffmulden an den Schmalseiten. Der Kasten ist ein einziges Spritzgussteil.",
+   "color": "#2F6E3B",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 10,
+     "w": 380,
+     "d": 280,
+     "r": 5,
+     "fill": "#1F4A27"
+    },
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 110,
+     "w": 6,
+     "d": 80,
+     "r": 3,
+     "fill": "#163A1E"
+    },
+    {
+     "shape": "box",
+     "x": 392,
+     "y": 110,
+     "w": 6,
+     "d": 80,
+     "r": 3,
+     "fill": "#163A1E"
+    }
+   ]
+  },
+  {
+   "id": "gefache",
+   "component_id": "hdpe_crate_body",
+   "material_id": "hdpe",
+   "name": "Gefache",
+   "short": "Gefache",
+   "shape": "box",
+   "x": 10,
+   "y": 10,
+   "w": 380,
+   "d": 280,
+   "z": 12,
+   "h": 160,
+   "r": 4,
+   "explode": [
+    0,
+    0,
+    360.0
+   ],
+   "mass": 430,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "Trennstege für 20 Flaschen, damit sie nicht aneinanderschlagen und zerbrechen.",
+   "color": "#2F6E3B",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 4,
+     "w": 68,
+     "d": 62,
+     "r": 6,
+     "fill": "#1F4A27"
+    },
+    {
+     "shape": "box",
+     "x": 79,
+     "y": 4,
+     "w": 68,
+     "d": 62,
+     "r": 6,
+     "fill": "#1F4A27"
+    },
+    {
+     "shape": "box",
+     "x": 154,
+     "y": 4,
+     "w": 68,
+     "d": 62,
+     "r": 6,
+     "fill": "#1F4A27"
+    },
+    {
+     "shape": "box",
+     "x": 229,
+     "y": 4,
+     "w": 68,
+     "d": 62,
+     "r": 6,
+     "fill": "#1F4A27"
+    },
+    {
+     "shape": "box",
+     "x": 304,
+     "y": 4,
+     "w": 68,
+     "d": 62,
+     "r": 6,
+     "fill": "#1F4A27"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 73,
+     "w": 68,
+     "d": 62,
+     "r": 6,
+     "fill": "#1F4A27"
+    },
+    {
+     "shape": "box",
+     "x": 79,
+     "y": 73,
+     "w": 68,
+     "d": 62,
+     "r": 6,
+     "fill": "#1F4A27"
+    },
+    {
+     "shape": "box",
+     "x": 154,
+     "y": 73,
+     "w": 68,
+     "d": 62,
+     "r": 6,
+     "fill": "#1F4A27"
+    },
+    {
+     "shape": "box",
+     "x": 229,
+     "y": 73,
+     "w": 68,
+     "d": 62,
+     "r": 6,
+     "fill": "#1F4A27"
+    },
+    {
+     "shape": "box",
+     "x": 304,
+     "y": 73,
+     "w": 68,
+     "d": 62,
+     "r": 6,
+     "fill": "#1F4A27"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 142,
+     "w": 68,
+     "d": 62,
+     "r": 6,
+     "fill": "#1F4A27"
+    },
+    {
+     "shape": "box",
+     "x": 79,
+     "y": 142,
+     "w": 68,
+     "d": 62,
+     "r": 6,
+     "fill": "#1F4A27"
+    },
+    {
+     "shape": "box",
+     "x": 154,
+     "y": 142,
+     "w": 68,
+     "d": 62,
+     "r": 6,
+     "fill": "#1F4A27"
+    },
+    {
+     "shape": "box",
+     "x": 229,
+     "y": 142,
+     "w": 68,
+     "d": 62,
+     "r": 6,
+     "fill": "#1F4A27"
+    },
+    {
+     "shape": "box",
+     "x": 304,
+     "y": 142,
+     "w": 68,
+     "d": 62,
+     "r": 6,
+     "fill": "#1F4A27"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 211,
+     "w": 68,
+     "d": 62,
+     "r": 6,
+     "fill": "#1F4A27"
+    },
+    {
+     "shape": "box",
+     "x": 79,
+     "y": 211,
+     "w": 68,
+     "d": 62,
+     "r": 6,
+     "fill": "#1F4A27"
+    },
+    {
+     "shape": "box",
+     "x": 154,
+     "y": 211,
+     "w": 68,
+     "d": 62,
+     "r": 6,
+     "fill": "#1F4A27"
+    },
+    {
+     "shape": "box",
+     "x": 229,
+     "y": 211,
+     "w": 68,
+     "d": 62,
+     "r": 6,
+     "fill": "#1F4A27"
+    },
+    {
+     "shape": "box",
+     "x": 304,
+     "y": 211,
+     "w": 68,
+     "d": 62,
+     "r": 6,
+     "fill": "#1F4A27"
+    }
+   ]
+  },
+  {
+   "id": "wand",
+   "component_id": "hdpe_crate_body",
+   "material_id": "hdpe",
+   "name": "Außenwand",
+   "short": "Außenwand",
+   "shape": "box",
+   "x": 3,
+   "y": 3,
+   "w": 394,
+   "d": 294,
+   "z": 12,
+   "h": 250,
+   "r": 8,
+   "explode": [
+    0,
+    0,
+    55.0
+   ],
+   "mass": 650,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "Rippen und Durchbrüche sparen Material und halten den Kasten trotzdem stabil.",
+   "color": "#2F6E3B",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 7,
+     "y": 7,
+     "w": 380,
+     "d": 280,
+     "r": 4,
+     "fill": "#1F4A27"
+    }
+   ]
+  },
+  {
+   "id": "boden",
+   "component_id": "hdpe_crate_body",
+   "material_id": "hdpe",
+   "name": "Boden mit Ablauflöchern",
+   "short": "Boden",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 400,
+   "d": 300,
+   "z": 0,
+   "h": 12,
+   "r": 8,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 235,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "Gitterboden, damit Wasser ablaufen kann. Die Füße greifen beim Stapeln in den Kasten darunter.",
+   "color": "#2F6E3B",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 18,
+     "y": 18,
+     "w": 22,
+     "d": 22,
+     "r": 3,
+     "fill": "#1F4A27"
+    },
+    {
+     "shape": "box",
+     "x": 60,
+     "y": 18,
+     "w": 22,
+     "d": 22,
+     "r": 3,
+     "fill": "#1F4A27"
+    },
+    {
+     "shape": "box",
+     "x": 102,
+     "y": 18,
+     "w": 22,
+     "d": 22,
+     "r": 3,
+     "fill": "#1F4A27"
+    },
+    {
+     "shape": "box",
+     "x": 144,
+     "y": 18,
+     "w": 22,
+     "d": 22,
+     "r": 3,
+     "fill": "#1F4A27"
+    },
+    {
+     "shape": "box",
+     "x": 186,
+     "y": 18,
+     "w": 22,
+     "d": 22,
+     "r": 3,
+     "fill": "#1F4A27"
+    },
+    {
+     "shape": "box",
+     "x": 228,
+     "y": 18,
+     "w": 22,
+     "d": 22,
+     "r": 3,
+     "fill": "#1F4A27"
+    },
+    {
+     "shape": "box",
+     "x": 270,
+     "y": 18,
+     "w": 22,
+     "d": 22,
+     "r": 3,
+     "fill": "#1F4A27"
+    },
+    {
+     "shape": "box",
+     "x": 312,
+     "y": 18,
+     "w": 22,
+     "d": 22,
+     "r": 3,
+     "fill": "#1F4A27"
+    },
+    {
+     "shape": "box",
+     "x": 354,
+     "y": 18,
+     "w": 22,
+     "d": 22,
+     "r": 3,
+     "fill": "#1F4A27"
+    },
+    {
+     "shape": "box",
+     "x": 18,
+     "y": 64,
+     "w": 22,
+     "d": 22,
+     "r": 3,
+     "fill": "#1F4A27"
+    },
+    {
+     "shape": "box",
+     "x": 60,
+     "y": 64,
+     "w": 22,
+     "d": 22,
+     "r": 3,
+     "fill": "#1F4A27"
+    },
+    {
+     "shape": "box",
+     "x": 102,
+     "y": 64,
+     "w": 22,
+     "d": 22,
+     "r": 3,
+     "fill": "#1F4A27"
+    },
+    {
+     "shape": "box",
+     "x": 144,
+     "y": 64,
+     "w": 22,
+     "d": 22,
+     "r": 3,
+     "fill": "#1F4A27"
+    },
+    {
+     "shape": "box",
+     "x": 186,
+     "y": 64,
+     "w": 22,
+     "d": 22,
+     "r": 3,
+     "fill": "#1F4A27"
+    },
+    {
+     "shape": "box",
+     "x": 228,
+     "y": 64,
+     "w": 22,
+     "d": 22,
+     "r": 3,
+     "fill": "#1F4A27"
+    },
+    {
+     "shape": "box",
+     "x": 270,
+     "y": 64,
+     "w": 22,
+     "d": 22,
+     "r": 3,
+     "fill": "#1F4A27"
+    },
+    {
+     "shape": "box",
+     "x": 312,
+     "y": 64,
+     "w": 22,
+     "d": 22,
+     "r": 3,
+     "fill": "#1F4A27"
+    },
+    {
+     "shape": "box",
+     "x": 354,
+     "y": 64,
+     "w": 22,
+     "d": 22,
+     "r": 3,
+     "fill": "#1F4A27"
+    },
+    {
+     "shape": "box",
+     "x": 18,
+     "y": 110,
+     "w": 22,
+     "d": 22,
+     "r": 3,
+     "fill": "#1F4A27"
+    },
+    {
+     "shape": "box",
+     "x": 60,
+     "y": 110,
+     "w": 22,
+     "d": 22,
+     "r": 3,
+     "fill": "#1F4A27"
+    },
+    {
+     "shape": "box",
+     "x": 102,
+     "y": 110,
+     "w": 22,
+     "d": 22,
+     "r": 3,
+     "fill": "#1F4A27"
+    },
+    {
+     "shape": "box",
+     "x": 144,
+     "y": 110,
+     "w": 22,
+     "d": 22,
+     "r": 3,
+     "fill": "#1F4A27"
+    },
+    {
+     "shape": "box",
+     "x": 186,
+     "y": 110,
+     "w": 22,
+     "d": 22,
+     "r": 3,
+     "fill": "#1F4A27"
+    },
+    {
+     "shape": "box",
+     "x": 228,
+     "y": 110,
+     "w": 22,
+     "d": 22,
+     "r": 3,
+     "fill": "#1F4A27"
+    },
+    {
+     "shape": "box",
+     "x": 270,
+     "y": 110,
+     "w": 22,
+     "d": 22,
+     "r": 3,
+     "fill": "#1F4A27"
+    },
+    {
+     "shape": "box",
+     "x": 312,
+     "y": 110,
+     "w": 22,
+     "d": 22,
+     "r": 3,
+     "fill": "#1F4A27"
+    },
+    {
+     "shape": "box",
+     "x": 354,
+     "y": 110,
+     "w": 22,
+     "d": 22,
+     "r": 3,
+     "fill": "#1F4A27"
+    },
+    {
+     "shape": "box",
+     "x": 18,
+     "y": 156,
+     "w": 22,
+     "d": 22,
+     "r": 3,
+     "fill": "#1F4A27"
+    },
+    {
+     "shape": "box",
+     "x": 60,
+     "y": 156,
+     "w": 22,
+     "d": 22,
+     "r": 3,
+     "fill": "#1F4A27"
+    },
+    {
+     "shape": "box",
+     "x": 102,
+     "y": 156,
+     "w": 22,
+     "d": 22,
+     "r": 3,
+     "fill": "#1F4A27"
+    },
+    {
+     "shape": "box",
+     "x": 144,
+     "y": 156,
+     "w": 22,
+     "d": 22,
+     "r": 3,
+     "fill": "#1F4A27"
+    },
+    {
+     "shape": "box",
+     "x": 186,
+     "y": 156,
+     "w": 22,
+     "d": 22,
+     "r": 3,
+     "fill": "#1F4A27"
+    },
+    {
+     "shape": "box",
+     "x": 228,
+     "y": 156,
+     "w": 22,
+     "d": 22,
+     "r": 3,
+     "fill": "#1F4A27"
+    },
+    {
+     "shape": "box",
+     "x": 270,
+     "y": 156,
+     "w": 22,
+     "d": 22,
+     "r": 3,
+     "fill": "#1F4A27"
+    },
+    {
+     "shape": "box",
+     "x": 312,
+     "y": 156,
+     "w": 22,
+     "d": 22,
+     "r": 3,
+     "fill": "#1F4A27"
+    },
+    {
+     "shape": "box",
+     "x": 354,
+     "y": 156,
+     "w": 22,
+     "d": 22,
+     "r": 3,
+     "fill": "#1F4A27"
+    },
+    {
+     "shape": "box",
+     "x": 18,
+     "y": 202,
+     "w": 22,
+     "d": 22,
+     "r": 3,
+     "fill": "#1F4A27"
+    },
+    {
+     "shape": "box",
+     "x": 60,
+     "y": 202,
+     "w": 22,
+     "d": 22,
+     "r": 3,
+     "fill": "#1F4A27"
+    },
+    {
+     "shape": "box",
+     "x": 102,
+     "y": 202,
+     "w": 22,
+     "d": 22,
+     "r": 3,
+     "fill": "#1F4A27"
+    },
+    {
+     "shape": "box",
+     "x": 144,
+     "y": 202,
+     "w": 22,
+     "d": 22,
+     "r": 3,
+     "fill": "#1F4A27"
+    },
+    {
+     "shape": "box",
+     "x": 186,
+     "y": 202,
+     "w": 22,
+     "d": 22,
+     "r": 3,
+     "fill": "#1F4A27"
+    },
+    {
+     "shape": "box",
+     "x": 228,
+     "y": 202,
+     "w": 22,
+     "d": 22,
+     "r": 3,
+     "fill": "#1F4A27"
+    },
+    {
+     "shape": "box",
+     "x": 270,
+     "y": 202,
+     "w": 22,
+     "d": 22,
+     "r": 3,
+     "fill": "#1F4A27"
+    },
+    {
+     "shape": "box",
+     "x": 312,
+     "y": 202,
+     "w": 22,
+     "d": 22,
+     "r": 3,
+     "fill": "#1F4A27"
+    },
+    {
+     "shape": "box",
+     "x": 354,
+     "y": 202,
+     "w": 22,
+     "d": 22,
+     "r": 3,
+     "fill": "#1F4A27"
+    },
+    {
+     "shape": "box",
+     "x": 18,
+     "y": 248,
+     "w": 22,
+     "d": 22,
+     "r": 3,
+     "fill": "#1F4A27"
+    },
+    {
+     "shape": "box",
+     "x": 60,
+     "y": 248,
+     "w": 22,
+     "d": 22,
+     "r": 3,
+     "fill": "#1F4A27"
+    },
+    {
+     "shape": "box",
+     "x": 102,
+     "y": 248,
+     "w": 22,
+     "d": 22,
+     "r": 3,
+     "fill": "#1F4A27"
+    },
+    {
+     "shape": "box",
+     "x": 144,
+     "y": 248,
+     "w": 22,
+     "d": 22,
+     "r": 3,
+     "fill": "#1F4A27"
+    },
+    {
+     "shape": "box",
+     "x": 186,
+     "y": 248,
+     "w": 22,
+     "d": 22,
+     "r": 3,
+     "fill": "#1F4A27"
+    },
+    {
+     "shape": "box",
+     "x": 228,
+     "y": 248,
+     "w": 22,
+     "d": 22,
+     "r": 3,
+     "fill": "#1F4A27"
+    },
+    {
+     "shape": "box",
+     "x": 270,
+     "y": 248,
+     "w": 22,
+     "d": 22,
+     "r": 3,
+     "fill": "#1F4A27"
+    },
+    {
+     "shape": "box",
+     "x": 312,
+     "y": 248,
+     "w": 22,
+     "d": 22,
+     "r": 3,
+     "fill": "#1F4A27"
+    },
+    {
+     "shape": "box",
+     "x": 354,
+     "y": 248,
+     "w": 22,
+     "d": 22,
+     "r": 3,
+     "fill": "#1F4A27"
+    }
+   ]
+  },
+  {
+   "id": "etikett",
+   "component_id": "hdpe_crate_body",
+   "material_id": "pp",
+   "name": "In-Mould-Etikett",
+   "short": "Etikett",
+   "shape": "box",
+   "x": 120,
+   "y": 299.7,
+   "w": 160,
+   "d": 0.3,
+   "z": 150,
+   "h": 80,
+   "r": 0,
+   "explode": [
+    0,
+    70,
+    0
+   ],
+   "mass": 5,
+   "materials": [
+    [
+     "pp",
+     95
+    ],
+    [
+     "druck",
+     5
+    ]
+   ],
+   "info": "Bedrucktes PP-Etikett, beim Spritzgießen eingeschmolzen. Nicht abreißen: Kästen haben Pfand, werden über Jahre wiederbefüllt und am Ende zu neuen Kästen gemahlen.",
+   "color": "#F2F0EA",
+   "sortBias": 100
+  }
+ ]
+}

@@ -1,0 +1,275 @@
+{
+ "parts": [
+  {
+   "id": "laschen_oben",
+   "component_id": "cardboard_box_body",
+   "material_id": "cardboard",
+   "name": "Verschlusslaschen oben",
+   "short": "Laschen oben",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 190,
+   "d": 70,
+   "z": 284,
+   "h": 6,
+   "r": 0.5,
+   "explode": [
+    0,
+    0,
+    120
+   ],
+   "mass": 8.1,
+   "materials": [
+    [
+     "papier",
+     96
+    ],
+    [
+     "druck",
+     4
+    ]
+   ],
+   "info": "Zwei lange und zwei kurze Laschen, mit Heißleim verklebt. Zum Öffnen an der Lasche aufziehen.",
+   "color": "#D8A440",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 33,
+     "w": 190,
+     "d": 4,
+     "r": 0,
+     "fill": "#B3842E"
+    },
+    {
+     "shape": "box",
+     "x": 80,
+     "y": 33,
+     "w": 30,
+     "d": 4,
+     "r": 1,
+     "fill": "#3A3F44"
+    }
+   ]
+  },
+  {
+   "id": "mantel",
+   "component_id": "cardboard_box_body",
+   "material_id": "cardboard",
+   "name": "Faltschachtel",
+   "short": "Schachtel",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 190,
+   "d": 70,
+   "z": 6,
+   "h": 278,
+   "r": 0.5,
+   "explode": [
+    0,
+    0,
+    60
+   ],
+   "mass": 54.7,
+   "materials": [
+    [
+     "papier",
+     95
+    ],
+    [
+     "druck",
+     4
+    ],
+    [
+     "klebstoff",
+     1
+    ]
+   ],
+   "info": "Bedruckter Karton, an einer Seitenkante verklebt. Leer flach drücken und ins Altpapier.",
+   "color": "#D8A440",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 2,
+     "w": 186,
+     "d": 66,
+     "r": 0,
+     "fill": "#8E6B45"
+    }
+   ]
+  },
+  {
+   "id": "laschen_unten",
+   "component_id": "cardboard_box_body",
+   "material_id": "cardboard",
+   "name": "Bodenlaschen",
+   "short": "Boden",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 190,
+   "d": 70,
+   "z": 0,
+   "h": 6,
+   "r": 0.5,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 10.1,
+   "materials": [
+    [
+     "papier",
+     97
+    ],
+    [
+     "klebstoff",
+     3
+    ]
+   ],
+   "info": "Wie oben, nur fest verklebt. Hier sitzt meist der Code fürs Altpapier.",
+   "color": "#D8A440"
+  },
+  {
+   "id": "beutel",
+   "component_id": "ldpe_film",
+   "material_id": "ldpe",
+   "name": "Innenbeutel",
+   "short": "Innenbeutel",
+   "shape": "box",
+   "x": 8,
+   "y": 5,
+   "w": 174,
+   "d": 60,
+   "z": 8,
+   "h": 270,
+   "r": 6,
+   "explode": [
+    230,
+    0,
+    0
+   ],
+   "mass": 7.1,
+   "materials": [
+    [
+     "ldpe",
+     100
+    ]
+   ],
+   "info": "PE-Beutel, hält das Müsli frisch und trocken. Gehört nicht ins Altpapier: leer in die Gelbe Tonne.",
+   "color": "#E8EEF2",
+   "opacity": 0.6,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 26,
+     "w": 174,
+     "d": 8,
+     "r": 0,
+     "fill": "#C9D0D5"
+    },
+    {
+     "shape": "box",
+     "x": 10.0,
+     "y": 28.0,
+     "w": 6,
+     "d": 4,
+     "fill": "#B5BEC5"
+    },
+    {
+     "shape": "box",
+     "x": 23.5,
+     "y": 28.0,
+     "w": 6,
+     "d": 4,
+     "fill": "#B5BEC5"
+    },
+    {
+     "shape": "box",
+     "x": 37.0,
+     "y": 28.0,
+     "w": 6,
+     "d": 4,
+     "fill": "#B5BEC5"
+    },
+    {
+     "shape": "box",
+     "x": 50.5,
+     "y": 28.0,
+     "w": 6,
+     "d": 4,
+     "fill": "#B5BEC5"
+    },
+    {
+     "shape": "box",
+     "x": 64.0,
+     "y": 28.0,
+     "w": 6,
+     "d": 4,
+     "fill": "#B5BEC5"
+    },
+    {
+     "shape": "box",
+     "x": 77.5,
+     "y": 28.0,
+     "w": 6,
+     "d": 4,
+     "fill": "#B5BEC5"
+    },
+    {
+     "shape": "box",
+     "x": 91.0,
+     "y": 28.0,
+     "w": 6,
+     "d": 4,
+     "fill": "#B5BEC5"
+    },
+    {
+     "shape": "box",
+     "x": 104.5,
+     "y": 28.0,
+     "w": 6,
+     "d": 4,
+     "fill": "#B5BEC5"
+    },
+    {
+     "shape": "box",
+     "x": 118.0,
+     "y": 28.0,
+     "w": 6,
+     "d": 4,
+     "fill": "#B5BEC5"
+    },
+    {
+     "shape": "box",
+     "x": 131.5,
+     "y": 28.0,
+     "w": 6,
+     "d": 4,
+     "fill": "#B5BEC5"
+    },
+    {
+     "shape": "box",
+     "x": 145.0,
+     "y": 28.0,
+     "w": 6,
+     "d": 4,
+     "fill": "#B5BEC5"
+    },
+    {
+     "shape": "box",
+     "x": 158.5,
+     "y": 28.0,
+     "w": 6,
+     "d": 4,
+     "fill": "#B5BEC5"
+    }
+   ]
+  }
+ ]
+}
