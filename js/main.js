@@ -330,6 +330,7 @@ function viewSheet() {
     view.setExploded(b.dataset.x === '1');
   }));
   v.querySelector('#build').addEventListener('click', viewCraft);
+  v.querySelector('#store').addEventListener('click', modalStore);
 
   function setPanel(html, crumbs) {
     panel.innerHTML = `<div class="panel-inner">
@@ -551,6 +552,51 @@ function viewCraft() {
   animate(v.querySelectorAll('.idea'), { opacity: [0, 1], translateY: [24, 0], delay: stagger(110, { start: 200 }), duration: 600, ease: 'outCubic' });
   animate(v.querySelectorAll('.idea .letter'), { opacity: [0, 1], translateX: [-10, 0], delay: stagger(110, { start: 450 }), duration: 500 });
   animate(inv.querySelectorAll('.irow'), { opacity: [0, 1], delay: stagger(25, { start: 300 }), duration: 300 });
+}
+
+/* ------------------------------------------------------------------ */
+/* Dialoge                                                              */
+/* ------------------------------------------------------------------ */
+
+function modal(html, wire) {
+  const bg = h(`<div class="modal-bg"><div class="modal">${html}</div></div>`);
+  modalRoot.appendChild(bg);
+  const close = () => animate(bg, { opacity: 0, duration: 200, onComplete: () => bg.remove() });
+  bg.addEventListener('click', (e) => e.target === bg && close());
+  animate(bg, { opacity: [0, 1], duration: 200 });
+  animate(bg.querySelector('.modal'), { translateY: [16, 0], opacity: [0, 1], duration: 380, ease: 'outCubic' });
+  wire(bg, close);
+}
+
+function barcode() {
+  let x = 0, bars = '';
+  while (x < 108) {
+    const w = 1 + Math.floor(Math.random() * 3);
+    if (Math.random() > 0.4) bars += `<rect x="${x}" y="0" width="${w}" height="58" fill="currentColor"/>`;
+    x += w + 1;
+  }
+  return `<svg viewBox="0 0 110 70" fill="currentColor">${bars}<text x="55" y="69" font-size="8" text-anchor="middle" font-family="IBM Plex Mono">0428 ${NEW_FACH}</text></svg>`;
+}
+
+function modalStore() {
+  const obj = state.obj;
+  modal(`
+    <div class="eyebrow">Eingelagert</div>
+    <h2>Danke. Dein ${obj.name} liegt jetzt im Lager.</h2>
+    <p>Kleb das Etikett auf den Gegenstand und leg ihn in Fach ${NEW_FACH}. Ab jetzt taucht er in den Bauideen für alle auf.</p>
+    <div class="label-card">
+      <span class="small">Inventar-Nr.</span>
+      <span class="big">KS-0428</span>
+      <span class="small">${state.model} · Fach ${NEW_FACH} · ${new Date().toLocaleDateString('de-DE')}</span>
+      ${barcode()}
+    </div>
+    <div class="row"><button class="btn ghost">Etikett drucken</button><button class="btn primary" id="next">Nächster Gegenstand</button></div>
+  `, (bg, close) => {
+    state.stock += 1;
+    document.getElementById('stock-count').textContent = state.stock;
+    animate('#stock-count', { scale: [1.5, 1], duration: 900, ease: 'outExpo' });
+    bg.querySelector('#next').addEventListener('click', () => { close(); viewScan(); });
+  });
 }
 
 document.querySelector('.brand').addEventListener('click', viewScan);
