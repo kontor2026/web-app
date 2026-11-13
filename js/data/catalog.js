@@ -109,6 +109,20 @@ export const MATERIALS = {
                 text: 'Flache Batterie für Uhren und Waagen. Für Kinder gefährlich, wenn verschluckt.' },
   grafitton:  { name: 'Grafit-Ton-Mine', cls: 'akku', elements: [['C', 65], ['Si', 15], ['Al', 8], ['O', 12]], recycling: 'gering',
                 text: 'Bleistiftmine aus Grafit und Ton. Enthält kein Blei.' },
+  messing:    { name: 'Messing', cls: 'metall', elements: [['Cu', 63], ['Zn', 37]], recycling: 'hoch',
+                text: 'Goldfarbene Kupfer-Zink-Legierung für Steckerstifte, Schlüssel und Ventile. Wertvoller Schrott.' },
+  nickel:     { name: 'Nickel', cls: 'metall', elements: [['Ni', 99]], recycling: 'hoch',
+                text: 'Korrosionsfestes Metall für Verbindungsstreifen in Akkus und Kontakte.' },
+  bimetall:   { name: 'Bimetall', cls: 'metall', elements: [['Fe', 70], ['Ni', 25], ['Mn', 5]], recycling: 'hoch',
+                text: 'Zwei verschweißte Metallstreifen, die sich bei Wärme verbiegen. Schalten Wasserkocher und Toaster ab.' },
+  ptfe:       { name: 'PTFE (Teflon)', cls: 'kunststoff', elements: [['F', 76], ['C', 24]], recycling: 'gering',
+                text: 'Sehr glatter, hitzefester Kunststoff für Gleitfüße und Antihaft-Beschichtungen.' },
+  tpu:        { name: 'TPU / TPE (Elastomer)', cls: 'kunststoff', elements: [['C', 64], ['H', 9], ['O', 20], ['N', 5]], recycling: 'mittel',
+                text: 'Gummiartiger, aber schmelzbarer Kunststoff für Fersenkappen, Griffe und Hüllen. Lässt sich 3D-drucken.' },
+  kunstleder: { name: 'Kunstleder (PU-beschichtet)', cls: 'kunststoff', elements: [['C', 60], ['H', 7], ['O', 25], ['N', 5]], recycling: 'gering',
+                text: 'Textil mit Kunststoffschicht für Ohrpolster und Taschen. Wird mit der Zeit rissig.' },
+  glimmer:    { name: 'Glimmer', cls: 'glas', elements: [['Si', 21], ['Al', 20], ['O', 46], ['K', 10], ['Mg', 1]], recycling: 'gering',
+                text: 'Hitzefestes Mineral in dünnen Platten. Trägt die Heizdrähte in Föhn und Toaster.' },
 };
 
 // Elemente: Endpunkt der Drill-down-Kette.

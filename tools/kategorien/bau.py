@@ -106,26 +106,43 @@ def _schnitt_xy(a, b, tol=0.05):
     return all(min(a[i + 3], b[i + 3]) - max(a[i], b[i]) > tol for i in range(2))
 
 
-def explodiere(teile, abstand, fest=()):
+def explodiere(teile, abstand, fest=(), abstaende=None, gruppen=(), nach_liste=False):
     """Setzt dz für alle Teile ohne explode, so dass explodiert nichts überlappt.
 
     Arbeitet von unten nach oben: jedes Teil schwebt mindestens `abstand` mm über der explodierten Oberkante
     aller Teile darunter, deren Grundriss es überlappt. Teile mit eigenem explode (z. B. seitlich herausgezogen)
-    und IDs in `fest` bleiben, wo sie sind. Teile in der Liste weiter oben (Index klein) liegen weiter oben."""
+    und IDs in `fest` bleiben, wo sie sind. Teile in der Liste weiter oben (Index klein) liegen weiter oben.
+    `abstaende` = {id: mm} gibt einzelnen Teilen einen eigenen Abstand, z. B. Chips knapp über der Platine.
+    `gruppen` = [[id, id, ...], ...]: diese Teile bekommen denselben Versatz (z. B. Segmente eines Körpers).
+    `nach_liste=True`: Stapelreihenfolge folgt der Liste (letztes Teil unten) statt der Höhe im Zusammenbau,
+    z. B. damit eine Haube, die tief beginnt, trotzdem über dem Innenleben schwebt."""
+    abstaende = abstaende or {}
     platziert = [p for p in teile if p['explode'] is not None or p['id'] in fest]
     for p in teile:
         if p['id'] in fest and p['explode'] is None:
             p['explode'] = [0, 0, 0]
-    offen = [p for p in reversed(teile) if p['explode'] is None]
-    offen.sort(key=lambda p: p['z'])  # stabil: bei gleichem z bleibt das untere Listenende unten
-    for p in offen:
+    gruppe_von = {i: n for n, g in enumerate(gruppen) for i in g}
+    einheiten, gesehen = [], set()
+    for p in reversed(teile):  # von unten (Listenende) nach oben
+        if p['explode'] is not None or p['id'] in gesehen:
+            continue
+        g = gruppe_von.get(p['id'])
+        e = [q for q in teile if q['explode'] is None and gruppe_von.get(q['id'], -1) == g] if g is not None else [p]
+        gesehen.update(q['id'] for q in e)
+        einheiten.append(e)
+    if not nach_liste:  # stabil: bei gleichem z bleibt das untere Listenende unten
+        einheiten.sort(key=lambda e: min(q['z'] for q in e))
+    for e in einheiten:
         dz = 0.0
-        for q in platziert:
-            a, b = _box(p, 0), _box(q)
-            if _schnitt_xy(a, b) and b[5] + abstand > a[2] + dz:
-                dz = b[5] + abstand - a[2]
-        p['explode'] = [0, 0, round(dz, 1)]
-        platziert.append(p)
+        for p in e:
+            ab = abstaende.get(p['id'], abstand)
+            for q in platziert:
+                a, b = _box(p, 0), _box(q)
+                if _schnitt_xy(a, b) and b[5] + ab > a[2] + dz:
+                    dz = b[5] + ab - a[2]
+        for p in e:
+            p['explode'] = [0, 0, round(dz, 1)]
+        platziert.extend(e)
     return teile
 
 
