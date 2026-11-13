@@ -51,3 +51,22 @@ function hull(points) {
   return lower.slice(0, -1).concat(upper.slice(0, -1));
 }
 
+function shade(hex, f) {
+  const n = parseInt(hex.slice(1), 16);
+  const c = [(n >> 16) & 255, (n >> 8) & 255, n & 255].map((v) => Math.round(v * (1 - f)));
+  return `rgb(${c.join(',')})`;
+}
+
+const el = (tag, attrs = {}, parent) => {
+  const e = document.createElementNS(NS, tag);
+  for (const k in attrs) e.setAttribute(k, attrs[k]);
+  if (parent) parent.appendChild(e);
+  return e;
+};
+
+export function partColor(part) {
+  if (part.color) return part.color;
+  const m = MATERIALS[part.materials?.[0]?.[0]];
+  return CLASSES[m?.cls]?.color ?? '#cccccc';
+}
+
