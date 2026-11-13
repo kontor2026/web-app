@@ -4,7 +4,7 @@
  "name_en": "Squeeze Bottle",
  "klasse": "Verpackung · Gelbe Tonne",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -39,11 +39,12 @@
   "metalle_mg": {},
   "herkunft": {},
   "materialien_g": {
-   "pp": 30.0
+   "pp": 29.4,
+   "silicone": 0.5
   },
-  "co2_kg": 0.058,
-  "co2_mit_recyclat_kg": 0.008,
-  "co2_ersparnis_kg": 0.049,
+  "co2_kg": 0.06,
+  "co2_mit_recyclat_kg": 0.012,
+  "co2_ersparnis_kg": 0.048,
   "co2_ohne_faktor": [],
   "rohstoffwert_eur": 0,
   "wert_ohne_preis": [],
@@ -93,89 +94,340 @@
   "nicht": "Nicht in Restmüll oder Altpapier",
   "warnung": "Restentleert reicht, nicht ausspülen. Teile aus verschiedenen Materialien trennen."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "pp_flip_cap",
+   "id": "klappe",
    "component_id": "pp_flip_cap",
-   "name": "Flip Cap",
-   "short": "Flip Cap",
+   "material_id": "pp",
+   "name": "Deckelklappe",
+   "short": "Klappe",
    "shape": "cyl",
-   "x": 19.9,
-   "y": 12.4,
-   "w": 20.2,
-   "h": 21.6,
-   "z": 153.0,
+   "x": 14,
+   "y": 6.5,
+   "w": 32,
+   "z": 170,
+   "h": 10,
    "explode": [
     0,
     0,
-    21.6
+    56.0
    ],
-   "mass": 1.61,
+   "mass": 2,
    "materials": [
     [
      "pp",
      100
     ]
    ],
-   "material_id": "pp",
-   "info": "Unscrew it from the bottle or tube."
+   "info": "Klappe mit Filmscharnier, ein kleiner Stöpsel innen verschließt die Öffnung.",
+   "color": "#C8302C",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 0,
+     "w": 12,
+     "d": 3,
+     "r": 1.5,
+     "fill": "#A82623"
+    },
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 4,
+     "w": 24,
+     "fill": "#D43A35"
+    }
+   ]
   },
   {
-   "id": "plastic_label",
-   "component_id": "plastic_label",
-   "name": "Label",
-   "short": "Label",
-   "shape": "box",
-   "x": 60.6,
-   "y": 9.0,
-   "w": 1.8,
-   "d": 27.0,
-   "h": 99.0,
-   "z": 36.0,
-   "r": 0.2,
+   "id": "ventil",
+   "component_id": "pp_flip_cap",
+   "material_id": "silicone",
+   "name": "Silikon-Dosierventil",
+   "short": "Ventil",
+   "shape": "cyl",
+   "x": 21,
+   "y": 13.5,
+   "w": 18,
+   "z": 164,
+   "h": 2,
    "explode": [
-    36.0,
     0,
-    6.5
+    0,
+    46.0
    ],
-   "mass": 1.61,
+   "mass": 0.5,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "info": "Weiche Membran mit Kreuzschlitz: Sie öffnet sich nur beim Drücken, danach tropft nichts nach. Bleibt im Deckel.",
+   "color": "#E4E0D2",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 8.5,
+     "y": 4,
+     "w": 1,
+     "d": 10,
+     "r": 0,
+     "fill": "#8A8478"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 8.5,
+     "w": 10,
+     "d": 1,
+     "r": 0,
+     "fill": "#8A8478"
+    }
+   ]
+  },
+  {
+   "id": "deckel_unterteil",
+   "component_id": "pp_flip_cap",
+   "material_id": "pp",
+   "name": "Deckel-Unterteil",
+   "short": "Deckelunterteil",
+   "shape": "cyl",
+   "x": 14,
+   "y": 6.5,
+   "w": 32,
+   "z": 152,
+   "h": 18,
+   "explode": [
+    0,
+    0,
+    26.0
+   ],
+   "mass": 4.1,
    "materials": [
     [
      "pp",
      100
     ]
    ],
-   "material_id": "pp",
-   "info": "Tear along the seam or cut it off."
+   "info": "Wird auf den Hals geschraubt. Der Deckel darf zum Entsorgen auf der Flasche bleiben.",
+   "color": "#C8302C",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 8,
+     "y": 8,
+     "w": 16,
+     "fill": "#A82623"
+    },
+    {
+     "shape": "cyl",
+     "x": 13,
+     "y": 13,
+     "w": 6,
+     "fill": "#1F2A33"
+    }
+   ]
   },
   {
-   "id": "squeeze_bottle_body",
+   "id": "hals",
    "component_id": "squeeze_bottle_body",
-   "name": "Bottle",
-   "short": "Bottle",
-   "shape": "box",
+   "material_id": "pp",
+   "name": "Flaschenhals mit Gewinde",
+   "short": "Hals",
+   "shape": "cyl",
+   "x": 17,
+   "y": 9.5,
+   "w": 26,
+   "z": 150,
+   "h": 14,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 1.5,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Kurzer Gewindehals. Unter dem Deckel klebt beim Kauf oft eine Siegelfolie.",
+   "color": "#E9E2D8",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 4,
+     "w": 18,
+     "fill": "#CFC6B8"
+    }
+   ]
+  },
+  {
+   "id": "schulter",
+   "component_id": "squeeze_bottle_body",
+   "material_id": "pp",
+   "name": "Flaschenschulter",
+   "short": "Schulter",
+   "shape": "cyl",
+   "x": 8,
+   "y": 6,
+   "w": 44,
+   "d": 33,
+   "z": 140,
+   "h": 10,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 2,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Übergang vom ovalen Körper zum runden Hals.",
+   "color": "#E9E2D8",
+   "label": false
+  },
+  {
+   "id": "rumpf",
+   "component_id": "squeeze_bottle_body",
+   "material_id": "pp",
+   "name": "Flaschenkörper",
+   "short": "Flasche",
+   "shape": "cyl",
    "x": 0,
    "y": 0,
-   "w": 60.0,
-   "d": 45.0,
-   "h": 153.0,
-   "z": 0.0,
-   "r": 5.4,
+   "w": 60,
+   "d": 45,
+   "z": 6,
+   "h": 134,
    "explode": [
     0,
+    0,
+    0.0
+   ],
+   "mass": 15.4,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Weiches PP, damit man sie gut drücken kann. Reste mit einem Löffelstiel herauskratzen, ausspülen ist nicht nötig. Mit Deckel in die Gelbe Tonne.",
+   "color": "#E9E2D8"
+  },
+  {
+   "id": "boden",
+   "component_id": "squeeze_bottle_body",
+   "material_id": "pp",
+   "name": "Flaschenboden",
+   "short": "Boden",
+   "shape": "cyl",
+   "x": 3,
+   "y": 2,
+   "w": 54,
+   "d": 41,
+   "z": 0,
+   "h": 6,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 2.6,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Standboden mit Recyclingzeichen 5 für PP.",
+   "color": "#E9E2D8",
+   "label": false
+  },
+  {
+   "id": "etikett_vorne",
+   "component_id": "plastic_label",
+   "material_id": "pp",
+   "name": "Etikett vorne",
+   "short": "Etikett",
+   "shape": "box",
+   "x": 60,
+   "y": 8,
+   "w": 0.3,
+   "d": 29,
+   "z": 20,
+   "h": 100,
+   "r": 0,
+   "explode": [
+    45,
     0,
     0
    ],
-   "mass": 26.79,
+   "mass": 1,
    "materials": [
     [
      "pp",
-     100
+     92
+    ],
+    [
+     "druck",
+     5
+    ],
+    [
+     "klebstoff",
+     3
     ]
    ],
+   "info": "Bedruckte PP-Folie, passt zur Flasche und darf dranbleiben.",
+   "color": "#C8302C",
+   "sortBias": 100
+  },
+  {
+   "id": "etikett_hinten",
+   "component_id": "plastic_label",
    "material_id": "pp",
-   "info": "Unscrew the cap and scrape out leftovers."
+   "name": "Etikett hinten",
+   "short": "Etikett",
+   "shape": "box",
+   "x": -0.3,
+   "y": 8,
+   "w": 0.3,
+   "d": 29,
+   "z": 20,
+   "h": 90,
+   "r": 0,
+   "explode": [
+    -45,
+    0,
+    0
+   ],
+   "mass": 0.8,
+   "materials": [
+    [
+     "pp",
+     92
+    ],
+    [
+     "druck",
+     5
+    ],
+    [
+     "klebstoff",
+     3
+    ]
+   ],
+   "info": "Rückseite mit Zutaten und Nährwerten.",
+   "color": "#F2EEE6",
+   "label": false
   }
  ]
 }

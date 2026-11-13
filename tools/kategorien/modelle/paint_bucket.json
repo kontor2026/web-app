@@ -1,0 +1,332 @@
+{
+ "parts": [
+  {
+   "id": "griffstueck",
+   "component_id": "steel_handle",
+   "material_id": "pp",
+   "name": "Griffstück",
+   "short": "Griffstück",
+   "shape": "box",
+   "x": 80,
+   "y": 93,
+   "w": 40,
+   "d": 14,
+   "z": 215,
+   "h": 5,
+   "r": 6,
+   "explode": [
+    0,
+    0,
+    84.0
+   ],
+   "mass": 5.9,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Kunststoffrolle auf dem Bügel, damit der Draht nicht in die Hand schneidet.",
+   "color": "#2F6DB5",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 6.0,
+     "y": 5.0,
+     "w": 2,
+     "d": 4,
+     "fill": "#285E9C"
+    },
+    {
+     "shape": "box",
+     "x": 10.5,
+     "y": 5.0,
+     "w": 2,
+     "d": 4,
+     "fill": "#285E9C"
+    },
+    {
+     "shape": "box",
+     "x": 15.0,
+     "y": 5.0,
+     "w": 2,
+     "d": 4,
+     "fill": "#285E9C"
+    },
+    {
+     "shape": "box",
+     "x": 19.5,
+     "y": 5.0,
+     "w": 2,
+     "d": 4,
+     "fill": "#285E9C"
+    },
+    {
+     "shape": "box",
+     "x": 24.0,
+     "y": 5.0,
+     "w": 2,
+     "d": 4,
+     "fill": "#285E9C"
+    },
+    {
+     "shape": "box",
+     "x": 28.5,
+     "y": 5.0,
+     "w": 2,
+     "d": 4,
+     "fill": "#285E9C"
+    },
+    {
+     "shape": "box",
+     "x": 33.0,
+     "y": 5.0,
+     "w": 2,
+     "d": 4,
+     "fill": "#285E9C"
+    }
+   ]
+  },
+  {
+   "id": "buegel",
+   "component_id": "steel_handle",
+   "material_id": "steel",
+   "name": "Drahtbügel",
+   "short": "Bügel",
+   "shape": "box",
+   "x": 2,
+   "y": 98,
+   "w": 196,
+   "d": 4,
+   "z": 212,
+   "h": 3,
+   "r": 1.5,
+   "explode": [
+    0,
+    0,
+    84.0
+   ],
+   "mass": 29.6,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Verzinkter Stahldraht, in die Ösen am Rand eingehängt. Zum Trennen aushaken: Er gehört zum Metallschrott oder in die Gelbe Tonne.",
+   "color": "#9DA4AA"
+  },
+  {
+   "id": "deckel",
+   "component_id": "pp_lid",
+   "material_id": "pp",
+   "name": "Schnappdeckel",
+   "short": "Deckel",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 200,
+   "z": 196,
+   "h": 16,
+   "explode": [
+    0,
+    0,
+    44.0
+   ],
+   "mass": 84,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Schnappt über den Rand, Originalitätslaschen zeigen, dass der Eimer noch zu ist. Laschen abreißen und den Deckel mit einem Schraubendreher aufhebeln.",
+   "color": "#F4F4F1",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 10,
+     "y": 10,
+     "w": 180,
+     "fill": "#E6E6E1"
+    },
+    {
+     "shape": "cyl",
+     "x": 50,
+     "y": 50,
+     "w": 100,
+     "fill": "#DADAD4"
+    },
+    {
+     "shape": "box",
+     "x": 94,
+     "y": 2,
+     "w": 6,
+     "d": 6,
+     "fill": "#2F6DB5"
+    },
+    {
+     "shape": "box",
+     "x": 100,
+     "y": 2,
+     "w": 6,
+     "d": 6,
+     "fill": "#2F6DB5"
+    }
+   ]
+  },
+  {
+   "id": "rand",
+   "component_id": "pp_bucket_body",
+   "material_id": "pp",
+   "name": "Rand mit Ösen",
+   "short": "Rand",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 200,
+   "z": 186,
+   "h": 14,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 44.4,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Verstärkter Rand mit Rastwulst für den Deckel und zwei Ösen für den Bügel.",
+   "color": "#F4F4F1",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 6,
+     "y": 6,
+     "w": 188,
+     "fill": "#E2E2DD"
+    }
+   ]
+  },
+  {
+   "id": "wand_oben",
+   "component_id": "pp_bucket_body",
+   "material_id": "pp",
+   "name": "Eimerwand oben",
+   "short": "Wand",
+   "shape": "cyl",
+   "x": 2,
+   "y": 2,
+   "w": 196,
+   "z": 96,
+   "h": 90,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 108.6,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Spritzgegossenes PP, Recyclingcode 5. Nur ganz leere Eimer mit trockenen Resten in die Gelbe Tonne. Flüssige Farbreste sind Sondermüll (Schadstoffmobil, Wertstoffhof).",
+   "color": "#F4F4F1"
+  },
+  {
+   "id": "wand_unten",
+   "component_id": "pp_bucket_body",
+   "material_id": "pp",
+   "name": "Eimerwand unten",
+   "short": "Wand",
+   "shape": "cyl",
+   "x": 6,
+   "y": 6,
+   "w": 188,
+   "z": 8,
+   "h": 88,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 93.8,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Die Wand wird nach unten etwas enger, so lassen sich leere Eimer ineinanderstapeln.",
+   "color": "#F4F4F1",
+   "label": false
+  },
+  {
+   "id": "boden",
+   "component_id": "pp_bucket_body",
+   "material_id": "pp",
+   "name": "Eimerboden",
+   "short": "Boden",
+   "shape": "cyl",
+   "x": 9,
+   "y": 9,
+   "w": 182,
+   "z": 0,
+   "h": 8,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 29.6,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Boden mit Standring und Recyclingzeichen 5.",
+   "color": "#F4F4F1",
+   "label": false
+  },
+  {
+   "id": "etikett",
+   "component_id": "pp_bucket_body",
+   "material_id": "pp",
+   "name": "In-Mould-Etikett",
+   "short": "Etikett",
+   "shape": "box",
+   "x": 198,
+   "y": 50,
+   "w": 0.3,
+   "d": 100,
+   "z": 30,
+   "h": 150,
+   "r": 0,
+   "explode": [
+    70,
+    0,
+    0
+   ],
+   "mass": 4,
+   "materials": [
+    [
+     "pp",
+     92
+    ],
+    [
+     "druck",
+     8
+    ]
+   ],
+   "info": "Bedruckte PP-Folie, die beim Spritzgießen mit der Wand verschmolzen wird. Nicht ablösbar, muss aber auch nicht: Sie ist aus demselben Kunststoff.",
+   "color": "#2F6DB5",
+   "sortBias": 100
+  }
+ ]
+}

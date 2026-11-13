@@ -4,7 +4,7 @@
  "name_en": "Cosmetic Jar",
  "klasse": "Verpackung · Gelbe Tonne",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -39,11 +39,12 @@
   "metalle_mg": {},
   "herkunft": {},
   "materialien_g": {
-   "pp": 80.0
+   "pp": 78.0,
+   "ldpe": 2.0
   },
   "co2_kg": 0.154,
   "co2_mit_recyclat_kg": 0.022,
-  "co2_ersparnis_kg": 0.131,
+  "co2_ersparnis_kg": 0.132,
   "co2_ohne_faktor": [],
   "rohstoffwert_eur": 0,
   "wert_ohne_preis": [],
@@ -93,59 +94,180 @@
   "nicht": "Nicht in Restmüll oder Altpapier",
   "warnung": "Restentleert reicht, nicht ausspülen. Teile aus verschiedenen Materialien trennen."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "pp_lid",
+   "id": "deckel",
    "component_id": "pp_lid",
-   "name": "Lid",
-   "short": "Lid",
-   "shape": "cyl",
-   "x": 3.0,
-   "y": 3.0,
-   "w": 54.0,
-   "h": 3.6,
-   "z": 45.0,
-   "explode": [
-    0,
-    0,
-    24.0
-   ],
-   "mass": 4.53,
-   "materials": [
-    [
-     "pp",
-     100
-    ]
-   ],
    "material_id": "pp",
-   "info": "Snap it off the rim."
-  },
-  {
-   "id": "pp_jar_body",
-   "component_id": "pp_jar_body",
-   "name": "Jar",
-   "short": "Jar",
+   "name": "Schraubdeckel",
+   "short": "Deckel",
    "shape": "cyl",
    "x": 0,
    "y": 0,
-   "w": 60.0,
-   "h": 45.0,
-   "z": 0.0,
+   "w": 60,
+   "z": 30,
+   "h": 15,
    "explode": [
     0,
     0,
-    0
+    84.5
    ],
-   "mass": 75.47,
+   "mass": 22,
    "materials": [
     [
      "pp",
      100
     ]
    ],
+   "info": "Dickwandiger PP-Deckel mit Innengewinde. Abschrauben, beides kommt in die Gelbe Tonne.",
+   "color": "#C9A646",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 4,
+     "w": 52,
+     "fill": "#D8B85A"
+    }
+   ]
+  },
+  {
+   "id": "einlage",
+   "component_id": "pp_lid",
+   "material_id": "ldpe",
+   "name": "Dichteinlage im Deckel",
+   "short": "Einlage",
+   "shape": "cyl",
+   "x": 3,
+   "y": 3,
+   "w": 54,
+   "z": 43,
+   "h": 1,
+   "explode": [
+    0,
+    0,
+    58.5
+   ],
+   "mass": 1,
+   "materials": [
+    [
+     "ldpe",
+     100
+    ]
+   ],
+   "info": "Weiche PE-Scheibe innen im Deckel, die den Tiegel dicht macht. Bleibt im Deckel.",
+   "color": "#ECECE8"
+  },
+  {
+   "id": "schutzscheibe",
+   "component_id": "pp_jar_body",
+   "material_id": "ldpe",
+   "name": "Schutzscheibe",
+   "short": "Schutzscheibe",
+   "shape": "cyl",
+   "x": 8,
+   "y": 8,
+   "w": 44,
+   "z": 35,
+   "h": 0.5,
+   "explode": [
+    0,
+    0,
+    54.0
+   ],
+   "mass": 1,
+   "materials": [
+    [
+     "ldpe",
+     100
+    ]
+   ],
+   "info": "Dünne PE-Scheibe mit Lasche, die direkt auf der Creme liegt. In die Gelbe Tonne.",
+   "color": "#FFFFFF",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 18,
+     "y": 0,
+     "w": 8,
+     "d": 6,
+     "r": 2,
+     "fill": "#E2E2DC"
+    }
+   ]
+  },
+  {
+   "id": "innentiegel",
+   "component_id": "pp_jar_body",
    "material_id": "pp",
-   "info": "Scrape it empty with a spatula; leftover cream goes in residual waste."
+   "name": "Innentiegel mit Gewinde",
+   "short": "Innentiegel",
+   "shape": "cyl",
+   "x": 5,
+   "y": 5,
+   "w": 50,
+   "z": 3,
+   "h": 34,
+   "explode": [
+    0,
+    0,
+    40.0
+   ],
+   "mass": 22,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Eigentlicher Behälter für die Creme. Mit einem Spatel leer kratzen, Cremereste gehören in den Restmüll.",
+   "color": "#F7F5F2",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 3,
+     "w": 44,
+     "fill": "#E9E6E0"
+    }
+   ]
+  },
+  {
+   "id": "aussentiegel",
+   "component_id": "pp_jar_body",
+   "material_id": "pp",
+   "name": "Außentiegel",
+   "short": "Außentiegel",
+   "shape": "cyl",
+   "x": 1,
+   "y": 1,
+   "w": 58,
+   "z": 0,
+   "h": 31,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 34,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Dicke Außenwand, die den Tiegel größer und wertiger wirken lässt als den Inhalt. Mit dem Innentiegel verklebt oder verrastet, beide PP, also gemeinsam in die Gelbe Tonne.",
+   "color": "#E9E2D8",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 3,
+     "w": 52,
+     "fill": "#D9D1C4"
+    }
+   ]
   }
  ]
 }

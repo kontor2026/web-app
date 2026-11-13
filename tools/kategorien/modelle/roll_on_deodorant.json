@@ -1,0 +1,238 @@
+{
+ "parts": [
+  {
+   "id": "kappe",
+   "component_id": "pp_flip_cap",
+   "material_id": "pp",
+   "name": "Schraubkappe",
+   "short": "Kappe",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 45,
+   "z": 72,
+   "h": 48,
+   "explode": [
+    0,
+    0,
+    87.0
+   ],
+   "mass": 7,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Hohe Schraubkappe aus PP, die die Kugel vor dem Austrocknen schützt. Abschrauben und mit der Flasche in die Gelbe Tonne.",
+   "color": "#1E5AA8",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 5,
+     "y": 5,
+     "w": 35,
+     "fill": "#2A6BBE"
+    }
+   ]
+  },
+  {
+   "id": "kugel",
+   "component_id": "roller_ball",
+   "material_id": "pp",
+   "name": "Rollkugel",
+   "short": "Kugel",
+   "shape": "cyl",
+   "x": 10,
+   "y": 10,
+   "w": 25,
+   "z": 87,
+   "h": 25,
+   "explode": [
+    0,
+    0,
+    35.0
+   ],
+   "mass": 3,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Hohlkugel aus PP, die beim Rollen das Deo aufträgt.",
+   "color": "#FFFFFF",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 3,
+     "w": 19,
+     "fill": "#F2F2EE"
+    },
+    {
+     "shape": "cyl",
+     "x": 7,
+     "y": 6,
+     "w": 7,
+     "fill": "#FAFAF8"
+    }
+   ]
+  },
+  {
+   "id": "kugelhalter",
+   "component_id": "roller_ball",
+   "material_id": "ldpe",
+   "name": "Kugelhalter",
+   "short": "Kugelhalter",
+   "shape": "cyl",
+   "x": 7.5,
+   "y": 7.5,
+   "w": 30,
+   "z": 80,
+   "h": 14,
+   "explode": [
+    0,
+    0,
+    16.0
+   ],
+   "mass": 2,
+   "materials": [
+    [
+     "ldpe",
+     100
+    ]
+   ],
+   "info": "Ring aus weichem PE, in den die Kugel einrastet. Mit einem Löffelstiel heraushebeln, dann lässt sich die Flasche ausspülen.",
+   "color": "#E6E9EC",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 2.5,
+     "y": 2.5,
+     "w": 25,
+     "fill": "#C9CED3"
+    }
+   ]
+  },
+  {
+   "id": "hals",
+   "component_id": "deodorant_bottle",
+   "material_id": "pp",
+   "name": "Hals mit Gewinde",
+   "short": "Hals",
+   "shape": "cyl",
+   "x": 6,
+   "y": 6,
+   "w": 33,
+   "z": 72,
+   "h": 12,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 2.5,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Weiter Hals, in dem der Kugelhalter steckt.",
+   "color": "#EEF3F8",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 3,
+     "w": 27,
+     "fill": "#D3DCE5"
+    }
+   ]
+  },
+  {
+   "id": "schulter",
+   "component_id": "deodorant_bottle",
+   "material_id": "pp",
+   "name": "Schulter",
+   "short": "Schulter",
+   "shape": "cyl",
+   "x": 4.5,
+   "y": 4.5,
+   "w": 36,
+   "z": 66,
+   "h": 6,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 2.5,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Übergang vom Rumpf zum Hals.",
+   "color": "#EEF3F8",
+   "label": false
+  },
+  {
+   "id": "rumpf",
+   "component_id": "deodorant_bottle",
+   "material_id": "pp",
+   "name": "Flasche",
+   "short": "Flasche",
+   "shape": "cyl",
+   "x": 1.5,
+   "y": 1.5,
+   "w": 42,
+   "z": 4,
+   "h": 62,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 15,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Dickwandiges PP, Recyclingcode 5. Leer machen, Kugel heraushebeln, ausspülen und in die Gelbe Tonne. Glasflaschen gehören dagegen ins Altglas.",
+   "color": "#EEF3F8"
+  },
+  {
+   "id": "boden",
+   "component_id": "deodorant_bottle",
+   "material_id": "pp",
+   "name": "Boden",
+   "short": "Boden",
+   "shape": "cyl",
+   "x": 2.5,
+   "y": 2.5,
+   "w": 40,
+   "z": 0,
+   "h": 4,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 3,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Standboden mit Recyclingzeichen.",
+   "color": "#EEF3F8",
+   "label": false
+  }
+ ]
+}

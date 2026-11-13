@@ -4,7 +4,7 @@
  "name_en": "Spray Bottle",
  "klasse": "Verpackung · Gelbe Tonne",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -26,7 +26,7 @@
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 0,13 kg",
+   "v": "≈ 0,12 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
@@ -36,15 +36,21 @@
   }
  ],
  "rohstoffe": {
-  "metalle_mg": {},
-  "herkunft": {},
-  "materialien_g": {
-   "hdpe": 53.6,
-   "pp": 6.4
+  "metalle_mg": {
+   "Fe": 588.0
   },
-  "co2_kg": 0.128,
+  "herkunft": {
+   "Fe": "Modellmassen (Schätzung)"
+  },
+  "materialien_g": {
+   "hdpe": 39.0,
+   "pp": 19.8,
+   "ldpe": 0.8,
+   "steel": 0.6
+  },
+  "co2_kg": 0.125,
   "co2_mit_recyclat_kg": 0.017,
-  "co2_ersparnis_kg": 0.111,
+  "co2_ersparnis_kg": 0.108,
   "co2_ohne_faktor": [],
   "rohstoffwert_eur": 0,
   "wert_ohne_preis": [],
@@ -94,91 +100,419 @@
   "nicht": "Nicht in Restmüll oder Altpapier",
   "warnung": "Restentleert reicht, nicht ausspülen. Teile aus verschiedenen Materialien trennen."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "trigger_sprayer",
+   "id": "duese",
    "component_id": "trigger_sprayer",
-   "name": "Trigger Sprayer",
-   "short": "Trigger Sprayer",
+   "material_id": "pp",
+   "name": "Drehdüse",
+   "short": "Düse",
    "shape": "box",
-   "x": 38.8,
-   "y": 13.8,
-   "w": 22.5,
-   "d": 22.5,
-   "h": 31.2,
-   "z": 221.0,
-   "r": 2.7,
+   "x": 84,
+   "y": 18,
+   "w": 16,
+   "d": 14,
+   "z": 240,
+   "h": 14,
+   "r": 3,
    "explode": [
     0,
     0,
-    31.2
+    166.0
    ],
-   "mass": 3.21,
+   "mass": 1.1,
    "materials": [
     [
      "pp",
      100
     ]
    ],
-   "material_id": "pp",
-   "info": "Unscrew it; the spring and dip tube stay attached, so keep it as one piece."
+   "info": "Drehbare Düsenkappe mit den Stellungen Stopp, Strahl und Sprühnebel.",
+   "color": "#E8C547",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 3,
+     "w": 10,
+     "d": 8,
+     "r": 2,
+     "fill": "#D4B23A"
+    }
+   ]
   },
   {
-   "id": "plastic_label",
-   "component_id": "plastic_label",
-   "name": "Label",
-   "short": "Label",
+   "id": "haube",
+   "component_id": "trigger_sprayer",
+   "material_id": "pp",
+   "name": "Sprühkopf-Haube",
+   "short": "Haube",
    "shape": "box",
-   "x": 101.0,
-   "y": 10.0,
-   "w": 3.0,
-   "d": 30.0,
-   "h": 143.0,
-   "z": 52.0,
-   "r": 0.4,
+   "x": 24,
+   "y": 12,
+   "w": 62,
+   "d": 26,
+   "z": 212,
+   "h": 48,
+   "r": 8,
    "explode": [
-    50.0,
     0,
-    9.4
+    0,
+    128.0
    ],
-   "mass": 3.21,
+   "mass": 7.4,
    "materials": [
     [
      "pp",
      100
     ]
    ],
-   "material_id": "pp",
-   "info": "Tear along the seam or cut it off."
+   "info": "Äußere Hülle des Sprühkopfs. Darunter sitzen Pumpe, Feder und Ventile. Den ganzen Sprühkopf abschrauben und mit der Flasche in die Gelbe Tonne geben.",
+   "color": "#2E8B57",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 6,
+     "y": 5,
+     "w": 50,
+     "d": 16,
+     "r": 6,
+     "fill": "#3A9D66"
+    }
+   ]
   },
   {
-   "id": "hdpe_bottle_body",
+   "id": "abzug",
+   "component_id": "trigger_sprayer",
+   "material_id": "pp",
+   "name": "Abzug (Hebel)",
+   "short": "Abzug",
+   "shape": "box",
+   "x": 62,
+   "y": 17,
+   "w": 12,
+   "d": 16,
+   "z": 178,
+   "h": 40,
+   "r": 4,
+   "explode": [
+    0,
+    0,
+    15.0
+   ],
+   "mass": 2.6,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Beim Ziehen drückt der Hebel den Kolben in die Pumpe, die Flüssigkeit schießt aus der Düse.",
+   "color": "#2E8B57"
+  },
+  {
+   "id": "feder",
+   "component_id": "trigger_sprayer",
+   "material_id": "steel",
+   "name": "Rückstellfeder",
+   "short": "Feder",
+   "shape": "cyl",
+   "x": 34,
+   "y": 21,
+   "w": 8,
+   "z": 218,
+   "h": 16,
+   "explode": [
+    0,
+    0,
+    88.0
+   ],
+   "mass": 0.6,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Kleine Edelstahlfeder, die den Abzug nach jedem Sprühstoß zurückdrückt. Sie bleibt im Sprühkopf, Sortieranlagen trennen das Metall heraus.",
+   "color": "#9DA4AA",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 2,
+     "y": 2,
+     "w": 4,
+     "fill": "#6E757B"
+    }
+   ]
+  },
+  {
+   "id": "pumpe",
+   "component_id": "trigger_sprayer",
+   "material_id": "pp",
+   "name": "Kolbenpumpe mit Ventilen",
+   "short": "Pumpe",
+   "shape": "cyl",
+   "x": 30,
+   "y": 17,
+   "w": 16,
+   "z": 205,
+   "h": 30,
+   "explode": [
+    0,
+    0,
+    53.0
+   ],
+   "mass": 3.2,
+   "materials": [
+    [
+     "pp",
+     80
+    ],
+    [
+     "ldpe",
+     15
+    ],
+    [
+     "gummi",
+     5
+    ]
+   ],
+   "info": "Zylinder mit Kolben und zwei kleinen Rückschlagventilen: eines saugt aus dem Steigrohr an, das andere lässt nur zur Düse hin durch.",
+   "color": "#E6E9EC",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 4,
+     "w": 8,
+     "fill": "#C9CED3"
+    }
+   ]
+  },
+  {
+   "id": "verschlussring",
+   "component_id": "trigger_sprayer",
+   "material_id": "pp",
+   "name": "Verschlussring",
+   "short": "Verschluss",
+   "shape": "cyl",
+   "x": 20,
+   "y": 9,
+   "w": 32,
+   "z": 188,
+   "h": 18,
+   "explode": [
+    0,
+    0,
+    34.0
+   ],
+   "mass": 4.2,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Schraubring mit Gewinde, der den Sprühkopf auf der Flasche hält.",
+   "color": "#2E8B57",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 5,
+     "y": 5,
+     "w": 22,
+     "fill": "#257048"
+    }
+   ]
+  },
+  {
+   "id": "hals",
    "component_id": "hdpe_bottle_body",
-   "name": "Bottle",
-   "short": "Bottle",
-   "shape": "box",
-   "x": 0,
-   "y": 0,
-   "w": 100.0,
-   "d": 50.0,
-   "h": 221.0,
-   "z": 0.0,
-   "r": 6.0,
+   "material_id": "hdpe",
+   "name": "Flaschenhals mit Gewinde",
+   "short": "Hals",
+   "shape": "cyl",
+   "x": 22,
+   "y": 11,
+   "w": 28,
+   "z": 188,
+   "h": 16,
    "explode": [
     0,
     0,
-    0
+    0.0
    ],
-   "mass": 53.57,
+   "mass": 3.2,
    "materials": [
     [
      "hdpe",
      100
     ]
    ],
+   "info": "Standardgewinde, auf das der Sprühkopf passt. Deshalb lassen sich Sprühköpfe oft weiterverwenden.",
+   "color": "#F2F4F5",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 4,
+     "w": 20,
+     "fill": "#D6D9DB"
+    }
+   ]
+  },
+  {
+   "id": "schulter",
+   "component_id": "hdpe_bottle_body",
    "material_id": "hdpe",
-   "info": "Rinse out the remaining product."
+   "name": "Flaschenschulter",
+   "short": "Schulter",
+   "shape": "cyl",
+   "x": 12,
+   "y": 5,
+   "w": 48,
+   "d": 40,
+   "z": 175,
+   "h": 13,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 4.2,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "Übergang vom ovalen Körper zum runden Hals.",
+   "color": "#F2F4F5",
+   "label": false
+  },
+  {
+   "id": "rumpf",
+   "component_id": "hdpe_bottle_body",
+   "material_id": "hdpe",
+   "name": "Flaschenkörper",
+   "short": "Flasche",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 72,
+   "d": 50,
+   "z": 6,
+   "h": 169,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 28.4,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "HDPE, Recyclingcode 2. Reiniger restlos aufbrauchen, nicht mit anderen Reinigern mischen. Mit Sprühkopf in die Gelbe Tonne.",
+   "color": "#F2F4F5"
+  },
+  {
+   "id": "boden",
+   "component_id": "hdpe_bottle_body",
+   "material_id": "hdpe",
+   "name": "Flaschenboden",
+   "short": "Boden",
+   "shape": "cyl",
+   "x": 2,
+   "y": 2,
+   "w": 68,
+   "d": 46,
+   "z": 0,
+   "h": 6,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 3.2,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "Am Boden sieht man die Quetschnaht und das Recyclingzeichen.",
+   "color": "#F2F4F5",
+   "label": false
+  },
+  {
+   "id": "steigrohr",
+   "component_id": "trigger_sprayer",
+   "material_id": "ldpe",
+   "name": "Steigrohr",
+   "short": "Steigrohr",
+   "shape": "cyl",
+   "x": 36,
+   "y": 23,
+   "w": 4,
+   "z": 8,
+   "h": 200,
+   "explode": [
+    55,
+    0,
+    0
+   ],
+   "mass": 0.8,
+   "materials": [
+    [
+     "ldpe",
+     100
+    ]
+   ],
+   "info": "Schlauch bis fast zum Boden, durch den die Pumpe die Flüssigkeit ansaugt. Bleibt am Sprühkopf.",
+   "color": "#EDEDE8"
+  },
+  {
+   "id": "etikett",
+   "component_id": "plastic_label",
+   "material_id": "pp",
+   "name": "Etikett",
+   "short": "Etikett",
+   "shape": "box",
+   "x": 72,
+   "y": 8,
+   "w": 0.3,
+   "d": 34,
+   "z": 30,
+   "h": 120,
+   "r": 0,
+   "explode": [
+    70,
+    0,
+    0
+   ],
+   "mass": 1.3,
+   "materials": [
+    [
+     "pp",
+     92
+    ],
+    [
+     "druck",
+     5
+    ],
+    [
+     "klebstoff",
+     3
+    ]
+   ],
+   "info": "PP-Folienetikett mit Gefahrenhinweisen. Passt zum Kunststoffrecycling und darf dranbleiben.",
+   "color": "#2E8B57",
+   "sortBias": 100
   }
  ]
 }

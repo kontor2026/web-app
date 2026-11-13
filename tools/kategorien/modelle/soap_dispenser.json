@@ -1,0 +1,417 @@
+{
+ "parts": [
+  {
+   "id": "pumpkopf",
+   "component_id": "pump_dispenser",
+   "material_id": "pp",
+   "name": "Pumpkopf",
+   "short": "Pumpkopf",
+   "shape": "cyl",
+   "x": 17,
+   "y": 12,
+   "w": 26,
+   "z": 152,
+   "h": 28,
+   "explode": [
+    0,
+    0,
+    174.0
+   ],
+   "mass": 4,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Darauf drückt man mit der Hand. Zum Entsorgen die ganze Pumpe abschrauben: Sie enthält eine Stahlfeder und kommt als Ganzes in die Gelbe Tonne.",
+   "color": "#FFFFFF",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 3,
+     "w": 20,
+     "fill": "#ECECE8"
+    }
+   ]
+  },
+  {
+   "id": "auslauf",
+   "component_id": "pump_dispenser",
+   "material_id": "pp",
+   "name": "Auslauf",
+   "short": "Auslauf",
+   "shape": "box",
+   "x": 43,
+   "y": 21,
+   "w": 27,
+   "d": 8,
+   "z": 168,
+   "h": 8,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    174.0
+   ],
+   "mass": 1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Rohr, aus dem die Seife kommt. Zum Verriegeln für den Transport dreht man den Kopf.",
+   "color": "#FFFFFF",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 21,
+     "y": 2,
+     "w": 4,
+     "fill": "#2A2E31"
+    }
+   ]
+  },
+  {
+   "id": "schaft",
+   "component_id": "pump_dispenser",
+   "material_id": "pp",
+   "name": "Kolbenschaft",
+   "short": "Schaft",
+   "shape": "cyl",
+   "x": 26.5,
+   "y": 21.5,
+   "w": 7,
+   "z": 136,
+   "h": 16,
+   "explode": [
+    0,
+    0,
+    159.0
+   ],
+   "mass": 1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Hohler Schaft mit Kolben am unteren Ende. Durch ihn steigt die Seife in den Kopf.",
+   "color": "#E6E9EC",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 2,
+     "y": 2,
+     "w": 3,
+     "fill": "#2A2E31"
+    }
+   ]
+  },
+  {
+   "id": "feder",
+   "component_id": "pump_dispenser",
+   "material_id": "steel",
+   "name": "Rückstellfeder",
+   "short": "Feder",
+   "shape": "cyl",
+   "x": 25,
+   "y": 20,
+   "w": 10,
+   "z": 100,
+   "h": 30,
+   "explode": [
+    0,
+    0,
+    150.0
+   ],
+   "mass": 0.8,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Edelstahlfeder, die den Pumpkopf nach dem Drücken wieder hochschiebt. Sie bleibt in der Pumpe, Sortieranlagen holen das Metall später heraus.",
+   "color": "#9DA4AA",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 2.5,
+     "y": 2.5,
+     "w": 5,
+     "fill": "#6E757B"
+    }
+   ]
+  },
+  {
+   "id": "zylinder",
+   "component_id": "pump_dispenser",
+   "material_id": "pp",
+   "name": "Pumpenzylinder mit Kugelventil",
+   "short": "Zylinder",
+   "shape": "cyl",
+   "x": 23,
+   "y": 18,
+   "w": 14,
+   "z": 85,
+   "h": 52,
+   "explode": [
+    0,
+    0,
+    98.0
+   ],
+   "mass": 2.5,
+   "materials": [
+    [
+     "pp",
+     85
+    ],
+    [
+     "stahl",
+     10
+    ],
+    [
+     "ldpe",
+     5
+    ]
+   ],
+   "info": "Hier saugt der Kolben die Seife an. Eine kleine Kugel unten wirkt als Ventil, damit nichts zurückläuft.",
+   "color": "#ECECE8",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 3,
+     "w": 8,
+     "fill": "#C9CED3"
+    }
+   ]
+  },
+  {
+   "id": "verschlussring",
+   "component_id": "pump_dispenser",
+   "material_id": "pp",
+   "name": "Verschlussring",
+   "short": "Verschluss",
+   "shape": "cyl",
+   "x": 15,
+   "y": 10,
+   "w": 30,
+   "z": 127,
+   "h": 14,
+   "explode": [
+    0,
+    0,
+    27.0
+   ],
+   "mass": 3,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Schraubring mit Gewinde, der die Pumpe auf der Flasche hält.",
+   "color": "#FFFFFF",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 7,
+     "y": 7,
+     "w": 16,
+     "fill": "#E2E2DC"
+    }
+   ]
+  },
+  {
+   "id": "hals",
+   "component_id": "hdpe_bottle_body",
+   "material_id": "hdpe",
+   "name": "Flaschenhals mit Gewinde",
+   "short": "Hals",
+   "shape": "cyl",
+   "x": 17,
+   "y": 12,
+   "w": 26,
+   "z": 125,
+   "h": 14,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 2.5,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "Gewindehals für die Pumpe. Darum lässt sich der Spender auch nachfüllen.",
+   "color": "#F5F1E8",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 4,
+     "w": 18,
+     "fill": "#DCD7CB"
+    }
+   ]
+  },
+  {
+   "id": "schulter",
+   "component_id": "hdpe_bottle_body",
+   "material_id": "hdpe",
+   "name": "Flaschenschulter",
+   "short": "Schulter",
+   "shape": "cyl",
+   "x": 10,
+   "y": 7,
+   "w": 40,
+   "d": 36,
+   "z": 115,
+   "h": 10,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 3,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "Übergang vom ovalen Körper zum Hals.",
+   "color": "#F5F1E8",
+   "label": false
+  },
+  {
+   "id": "rumpf",
+   "component_id": "hdpe_bottle_body",
+   "material_id": "hdpe",
+   "name": "Flaschenkörper",
+   "short": "Flasche",
+   "shape": "cyl",
+   "x": 0,
+   "y": 1,
+   "w": 60,
+   "d": 48,
+   "z": 5,
+   "h": 110,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 17.8,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "HDPE, Recyclingcode 2. Leer machen, kurz ausspülen und mit Pumpe in die Gelbe Tonne. Besser: nachfüllen statt neu kaufen.",
+   "color": "#F5F1E8"
+  },
+  {
+   "id": "boden",
+   "component_id": "hdpe_bottle_body",
+   "material_id": "hdpe",
+   "name": "Flaschenboden",
+   "short": "Boden",
+   "shape": "cyl",
+   "x": 3,
+   "y": 3,
+   "w": 54,
+   "d": 44,
+   "z": 0,
+   "h": 5,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 3,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "Standboden mit Recyclingzeichen.",
+   "color": "#F5F1E8",
+   "label": false
+  },
+  {
+   "id": "steigrohr",
+   "component_id": "pump_dispenser",
+   "material_id": "ldpe",
+   "name": "Steigrohr",
+   "short": "Steigrohr",
+   "shape": "cyl",
+   "x": 28,
+   "y": 23,
+   "w": 4,
+   "z": 6,
+   "h": 80,
+   "explode": [
+    50,
+    0,
+    0
+   ],
+   "mass": 0.6,
+   "materials": [
+    [
+     "ldpe",
+     100
+    ]
+   ],
+   "info": "Schlauch bis zum Boden, durch den die Pumpe die Seife ansaugt. Steckt unten am Zylinder.",
+   "color": "#EDEDE8"
+  },
+  {
+   "id": "etikett",
+   "component_id": "plastic_label",
+   "material_id": "pp",
+   "name": "Etikett",
+   "short": "Etikett",
+   "shape": "box",
+   "x": 60,
+   "y": 10,
+   "w": 0.3,
+   "d": 30,
+   "z": 20,
+   "h": 80,
+   "r": 0,
+   "explode": [
+    60,
+    0,
+    0
+   ],
+   "mass": 1,
+   "materials": [
+    [
+     "pp",
+     92
+    ],
+    [
+     "druck",
+     5
+    ],
+    [
+     "klebstoff",
+     3
+    ]
+   ],
+   "info": "Bedruckte PP-Folie. Passt zum Kunststoffrecycling und darf dranbleiben.",
+   "color": "#C98BB9",
+   "sortBias": 100
+  }
+ ]
+}

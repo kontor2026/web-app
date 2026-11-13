@@ -1,0 +1,346 @@
+{
+ "parts": [
+  {
+   "id": "kappe",
+   "component_id": "perfume_cap",
+   "material_id": "pp",
+   "name": "Kappe",
+   "short": "Kappe",
+   "shape": "box",
+   "x": 15,
+   "y": 5,
+   "w": 30,
+   "d": 30,
+   "z": 72,
+   "h": 28,
+   "r": 4,
+   "explode": [
+    0,
+    0,
+    118.0
+   ],
+   "mass": 12.1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Schwere Kunststoffkappe, nur aufgesteckt. Abziehen und in die Gelbe Tonne geben.",
+   "color": "#1F2328",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 3,
+     "w": 24,
+     "d": 24,
+     "r": 3,
+     "fill": "#2C3238"
+    }
+   ]
+  },
+  {
+   "id": "spruehkopf",
+   "component_id": "perfume_pump",
+   "material_id": "pp",
+   "name": "Sprühkopf",
+   "short": "Sprühkopf",
+   "shape": "cyl",
+   "x": 24,
+   "y": 14,
+   "w": 12,
+   "z": 82,
+   "h": 10,
+   "explode": [
+    0,
+    0,
+    86.0
+   ],
+   "mass": 1,
+   "materials": [
+    [
+     "pp",
+     70
+    ],
+    [
+     "alu",
+     30
+    ]
+   ],
+   "info": "Kunststoffknopf mit Alu-Hülle und feiner Düse. Er wird nur auf den Pumpenstift gesteckt.",
+   "color": "#C9A646",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 2,
+     "y": 2,
+     "w": 8,
+     "fill": "#B8963A"
+    },
+    {
+     "shape": "cyl",
+     "x": 5,
+     "y": 10,
+     "w": 2,
+     "fill": "#2A2E31"
+    }
+   ]
+  },
+  {
+   "id": "kragen",
+   "component_id": "perfume_pump",
+   "material_id": "aluminium",
+   "name": "Crimp-Kragen",
+   "short": "Kragen",
+   "shape": "cyl",
+   "x": 21.5,
+   "y": 11.5,
+   "w": 17,
+   "z": 72,
+   "h": 10,
+   "explode": [
+    0,
+    0,
+    74.0
+   ],
+   "mass": 1.5,
+   "materials": [
+    [
+     "alu",
+     90
+    ],
+    [
+     "gummi",
+     10
+    ]
+   ],
+   "info": "Aluminiumkappe, die mit einer Gummidichtung fest um den Glashals gepresst ist. Nur mit einer Zange abhebeln, dann kann das Glas ins Altglas.",
+   "color": "#C9A646",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 4,
+     "w": 9,
+     "fill": "#B8963A"
+    }
+   ]
+  },
+  {
+   "id": "feder",
+   "component_id": "perfume_pump",
+   "material_id": "steel",
+   "name": "Pumpenfeder",
+   "short": "Feder",
+   "shape": "cyl",
+   "x": 28,
+   "y": 18,
+   "w": 4,
+   "z": 60,
+   "h": 10,
+   "explode": [
+    0,
+    0,
+    64.0
+   ],
+   "mass": 0.2,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Winzige Edelstahlfeder, die den Sprühkopf zurückdrückt.",
+   "color": "#9DA4AA",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 1,
+     "y": 1,
+     "w": 2,
+     "fill": "#6E757B"
+    }
+   ]
+  },
+  {
+   "id": "pumpe",
+   "component_id": "perfume_pump",
+   "material_id": "pp",
+   "name": "Pumpenkörper",
+   "short": "Pumpe",
+   "shape": "cyl",
+   "x": 26.5,
+   "y": 16.5,
+   "w": 7,
+   "z": 50,
+   "h": 26,
+   "explode": [
+    0,
+    0,
+    36.0
+   ],
+   "mass": 1.2,
+   "materials": [
+    [
+     "pp",
+     70
+    ],
+    [
+     "ldpe",
+     20
+    ],
+    [
+     "gummi",
+     10
+    ]
+   ],
+   "info": "Kleiner Kolben mit Ventil, der bei jedem Druck eine genau abgemessene Menge zerstäubt.",
+   "color": "#ECECE8",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 2,
+     "y": 2,
+     "w": 3,
+     "fill": "#C9CED3"
+    }
+   ]
+  },
+  {
+   "id": "hals",
+   "component_id": "glass_container",
+   "material_id": "glass",
+   "name": "Glashals",
+   "short": "Hals",
+   "shape": "cyl",
+   "x": 22.5,
+   "y": 12.5,
+   "w": 15,
+   "z": 66,
+   "h": 8,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 3,
+   "materials": [
+    [
+     "behaelterglas",
+     100
+    ]
+   ],
+   "info": "Kurzer Hals mit Wulst, unter den der Kragen gepresst wird.",
+   "color": "#E6EEF0",
+   "opacity": 0.65,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 4,
+     "w": 7,
+     "fill": "#C8D6DA"
+    }
+   ]
+  },
+  {
+   "id": "koerper",
+   "component_id": "glass_container",
+   "material_id": "glass",
+   "name": "Glaskörper",
+   "short": "Flakon",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 60,
+   "d": 40,
+   "z": 10,
+   "h": 56,
+   "r": 6,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 100.6,
+   "materials": [
+    [
+     "behaelterglas",
+     100
+    ]
+   ],
+   "info": "Dickes Glas, Recyclingcode GL 70. Leer, mit Pumpe nach Möglichkeit entfernt, ins Weißglas. Parfüm ist brennbar, Reste nicht in den Ausguss kippen.",
+   "color": "#E6EEF0",
+   "opacity": 0.65,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 4,
+     "w": 52,
+     "d": 32,
+     "r": 4
+    }
+   ]
+  },
+  {
+   "id": "boden",
+   "component_id": "glass_container",
+   "material_id": "glass",
+   "name": "Glasboden",
+   "short": "Boden",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 60,
+   "d": 40,
+   "z": 0,
+   "h": 10,
+   "r": 6,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 30.2,
+   "materials": [
+    [
+     "behaelterglas",
+     100
+    ]
+   ],
+   "info": "Massiver Glasboden, er macht den Flakon schwer und standfest.",
+   "color": "#E6EEF0",
+   "opacity": 0.75,
+   "label": false
+  },
+  {
+   "id": "steigrohr",
+   "component_id": "perfume_pump",
+   "material_id": "ldpe",
+   "name": "Steigrohr",
+   "short": "Steigrohr",
+   "shape": "cyl",
+   "x": 29,
+   "y": 19,
+   "w": 2,
+   "z": 11,
+   "h": 40,
+   "explode": [
+    45,
+    0,
+    0
+   ],
+   "mass": 0.2,
+   "materials": [
+    [
+     "ldpe",
+     100
+    ]
+   ],
+   "info": "Dünner Schlauch, durch den die Pumpe das Parfüm vom Boden ansaugt.",
+   "color": "#EDEDE8"
+  }
+ ]
+}

@@ -1,0 +1,334 @@
+{
+ "parts": [
+  {
+   "id": "kappe_aussen",
+   "component_id": "child_safe_cap",
+   "material_id": "pp",
+   "name": "Außenkappe (Kindersicherung)",
+   "short": "Außenkappe",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 40,
+   "z": 52,
+   "h": 18,
+   "explode": [
+    0,
+    0,
+    66.9
+   ],
+   "mass": 2.9,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Die Außenkappe dreht sich frei, bis man sie herunterdrückt. Erst dann greifen Zähne in die Innenkappe: Drücken und gleichzeitig drehen.",
+   "color": "#E9E7E0",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 4,
+     "w": 32,
+     "fill": "#DCDAD2"
+    },
+    {
+     "shape": "box",
+     "x": 17,
+     "y": 8,
+     "w": 6,
+     "d": 16,
+     "r": 2,
+     "fill": "#8A9096"
+    }
+   ]
+  },
+  {
+   "id": "kappe_innen",
+   "component_id": "child_safe_cap",
+   "material_id": "pp",
+   "name": "Innenkappe mit Gewinde",
+   "short": "Innenkappe",
+   "shape": "cyl",
+   "x": 3,
+   "y": 3,
+   "w": 34,
+   "z": 54,
+   "h": 15.5,
+   "explode": [
+    0,
+    0,
+    37.4
+   ],
+   "mass": 1.5,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Trägt das Gewinde und die Zähne, in die die Außenkappe beim Drücken einrastet. Beide Kappen sind aus PP und bleiben zusammen.",
+   "color": "#FFFFFF",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3.0,
+     "y": 15.5,
+     "w": 2,
+     "d": 3,
+     "fill": "#D8D6CE"
+    },
+    {
+     "shape": "box",
+     "x": 6.6,
+     "y": 15.5,
+     "w": 2,
+     "d": 3,
+     "fill": "#D8D6CE"
+    },
+    {
+     "shape": "box",
+     "x": 10.2,
+     "y": 15.5,
+     "w": 2,
+     "d": 3,
+     "fill": "#D8D6CE"
+    },
+    {
+     "shape": "box",
+     "x": 13.8,
+     "y": 15.5,
+     "w": 2,
+     "d": 3,
+     "fill": "#D8D6CE"
+    },
+    {
+     "shape": "box",
+     "x": 17.4,
+     "y": 15.5,
+     "w": 2,
+     "d": 3,
+     "fill": "#D8D6CE"
+    },
+    {
+     "shape": "box",
+     "x": 21.0,
+     "y": 15.5,
+     "w": 2,
+     "d": 3,
+     "fill": "#D8D6CE"
+    },
+    {
+     "shape": "box",
+     "x": 24.6,
+     "y": 15.5,
+     "w": 2,
+     "d": 3,
+     "fill": "#D8D6CE"
+    },
+    {
+     "shape": "box",
+     "x": 28.2,
+     "y": 15.5,
+     "w": 2,
+     "d": 3,
+     "fill": "#D8D6CE"
+    }
+   ]
+  },
+  {
+   "id": "siegel",
+   "component_id": "child_safe_cap",
+   "material_id": "aluminium",
+   "name": "Siegelscheibe",
+   "short": "Siegel",
+   "shape": "cyl",
+   "x": 7,
+   "y": 7,
+   "w": 26,
+   "z": 67,
+   "h": 0.4,
+   "explode": [
+    0,
+    0,
+    12.0
+   ],
+   "mass": 0.2,
+   "materials": [
+    [
+     "alu",
+     40
+    ],
+    [
+     "ldpe",
+     35
+    ],
+    [
+     "papier",
+     25
+    ]
+   ],
+   "info": "Aluminium-Kunststoff-Folie, die beim Abfüllen auf den Hals gesiegelt wird. Zeigt, dass die Dose noch nicht geöffnet war. Abziehen und in die Gelbe Tonne.",
+   "color": "#C9CED3"
+  },
+  {
+   "id": "hals",
+   "component_id": "hdpe_bottle_body",
+   "material_id": "hdpe",
+   "name": "Hals mit Gewinde",
+   "short": "Hals",
+   "shape": "cyl",
+   "x": 6.5,
+   "y": 6.5,
+   "w": 27,
+   "z": 53,
+   "h": 14,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 0.7,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "Weite Öffnung, damit man die Tabletten gut herausschütten kann.",
+   "color": "#F4F2EC",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 3,
+     "w": 21,
+     "fill": "#D6D3CA"
+    }
+   ]
+  },
+  {
+   "id": "schulter",
+   "component_id": "hdpe_bottle_body",
+   "material_id": "hdpe",
+   "name": "Schulter",
+   "short": "Schulter",
+   "shape": "cyl",
+   "x": 4,
+   "y": 4,
+   "w": 32,
+   "z": 48,
+   "h": 5,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 0.5,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "Übergang vom Rumpf zum Hals.",
+   "color": "#F4F2EC",
+   "label": false
+  },
+  {
+   "id": "rumpf",
+   "component_id": "hdpe_bottle_body",
+   "material_id": "hdpe",
+   "name": "Dosenrumpf",
+   "short": "Dose",
+   "shape": "cyl",
+   "x": 1,
+   "y": 1,
+   "w": 38,
+   "z": 3,
+   "h": 45,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 3.2,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "Weißes HDPE schützt die Tabletten vor Licht und Feuchtigkeit. Leer mit Deckel in die Gelbe Tonne, Medikamentenreste gehören nicht hinein.",
+   "color": "#F4F2EC"
+  },
+  {
+   "id": "boden",
+   "component_id": "hdpe_bottle_body",
+   "material_id": "hdpe",
+   "name": "Boden",
+   "short": "Boden",
+   "shape": "cyl",
+   "x": 2,
+   "y": 2,
+   "w": 36,
+   "z": 0,
+   "h": 3,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 0.7,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "Am Boden steht das Recyclingzeichen 2 für HDPE.",
+   "color": "#F4F2EC",
+   "label": false
+  },
+  {
+   "id": "etikett",
+   "component_id": "paper_label",
+   "material_id": "paper",
+   "name": "Papieretikett",
+   "short": "Etikett",
+   "shape": "box",
+   "x": 39,
+   "y": 8,
+   "w": 0.3,
+   "d": 24,
+   "z": 10,
+   "h": 34,
+   "r": 0,
+   "explode": [
+    40,
+    0,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "papier",
+     92
+    ],
+    [
+     "druck",
+     5
+    ],
+    [
+     "klebstoff",
+     3
+    ]
+   ],
+   "info": "Papier mit Aufdruck und Klebstoff. Darf beim Recycling dranbleiben.",
+   "color": "#FFFFFF",
+   "sortBias": 100
+  }
+ ]
+}
