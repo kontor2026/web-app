@@ -21,11 +21,13 @@ services:
       LLM_PROVIDER: ${LLM_PROVIDER:-lokal}          # lokal | claude | claude-abo
       LLM_BASE_URL: http://inferenz:11434/v1
       VISION_MODEL: ${STATION_MODEL:-station-vl}
-      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
-      CLAUDE_CODE_OAUTH_TOKEN: ${CLAUDE_CODE_OAUTH_TOKEN:-}
+      # Zugangsdaten nur als Docker-Secrets (Dateien unter secrets/, nie im Image, nie im Git). Siehe docs/claude-sdk.md
+      ANTHROPIC_API_KEY_FILE: /run/secrets/anthropic_api_key
+      CLAUDE_CODE_OAUTH_TOKEN_FILE: /run/secrets/claude_oauth_token
       CLAUDE_MODEL: ${CLAUDE_MODEL:-claude-opus-5-5}
       VORAUSRECHNEN: ${VORAUSRECHNEN:-auto}          # Steckbrief/Ideen ab Upload: auto | an | aus
       LLM_MODE: ${LLM_MODE:-openai}                  # mock = KI aus, nur Foto-Abgleich
+    secrets: [anthropic_api_key, claude_oauth_token]
     volumes: [station-daten:/data]
     depends_on: [inferenz]
     restart: unless-stopped
@@ -43,6 +45,12 @@ services:
     #   resources:
     #     reservations:
     #       devices: [{ driver: nvidia, count: all, capabilities: [gpu] }]
+
+secrets:
+  anthropic_api_key:
+    file: ./secrets/anthropic_api_key.txt
+  claude_oauth_token:
+    file: ./secrets/claude_oauth_token.txt
 
 volumes:
   station-daten:

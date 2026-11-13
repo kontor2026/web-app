@@ -6,3 +6,5 @@ Thumbs.db
 backend/.venv/
 backend/data/
 .env
+secrets/*
+!secrets/README.md
