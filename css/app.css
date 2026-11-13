@@ -215,3 +215,29 @@ svg.iso { width: 100%; height: 100%; display: block; overflow: visible; }
 .mix-legend i { width: 10px; height: 10px; border: 1px solid var(--ink); }
 .mix-legend b { margin-left: auto; font: 12px var(--mono); color: var(--ink); font-weight: 400; }
 
+.cycle { display: grid; gap: 0; }
+.cycle li { list-style: none; display: grid; grid-template-columns: 16px 96px 1fr; gap: 10px; padding: 7px 0; font-size: 13px; position: relative; }
+.cycle li::before { content: ''; width: 9px; height: 9px; border-radius: 50%; border: 1.5px solid var(--ink); background: var(--sheet); margin-top: 5px; z-index: 1; }
+.cycle li::after { content: ''; position: absolute; left: 5px; top: 0; bottom: 0; width: 1px; background: var(--rule); }
+.cycle li:first-child::after { top: 14px; } .cycle li:last-child::after { bottom: calc(100% - 14px); }
+.cycle b { font-weight: 500; }
+.cycle span { color: var(--ink-2); }
+.cycle .bad::before { border-color: var(--accent); background: var(--accent); }
+.cycle .bad b { color: var(--accent); }
+.cycle .good::before { border-color: var(--good); background: var(--good); }
+.cycle .good b { color: var(--good); }
+
+.plist { display: grid; border-top: 1px solid var(--rule); }
+.prow { display: grid; grid-template-columns: 28px 1fr auto; gap: 10px; align-items: center; padding: 9px 4px; border-bottom: 1px solid var(--rule); text-align: left; font-size: 14px; }
+.prow .n { font: 11px var(--mono); color: var(--ink-3); }
+.prow .m { font: 12px var(--mono); color: var(--ink-3); }
+.prow small { display: block; font-size: 12px; color: var(--ink-3); }
+.prow:hover, .prow.hot { background: var(--accent-soft); }
+.prow:hover .n, .prow.hot .n { color: var(--accent); }
+
+.dispose { border: 1px solid var(--ink); padding: 16px 18px; display: grid; gap: 10px; font-size: 14px; }
+.dispose div { display: grid; grid-template-columns: 70px 1fr; gap: 10px; }
+.dispose dt { font: 11px/21px var(--mono); color: var(--ink-3); text-transform: uppercase; letter-spacing: .06em; }
+.dispose .warn dd { color: var(--accent); }
+.source { font-size: 12px; color: var(--ink-3); }
+
