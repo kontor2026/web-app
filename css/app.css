@@ -275,3 +275,7 @@ svg.iso { width: 100%; height: 100%; display: block; overflow: visible; }
 .rcode svg { position: absolute; inset: 0; width: 100%; height: 100%; fill: none; stroke: var(--ink); stroke-width: 2; }
 .rcode span { margin-top: 8px; }
 
+.actionbar { grid-column: 1 / 3; display: flex; align-items: center; gap: 10px; padding: 0 24px; border-top: 1px solid var(--rule); background: var(--sheet); }
+.actionbar .q { margin-right: auto; font-size: 15px; }
+.actionbar .q span { color: var(--ink-3); }
+
