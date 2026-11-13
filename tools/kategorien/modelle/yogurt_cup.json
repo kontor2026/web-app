@@ -1,0 +1,190 @@
+{
+ "parts": [
+  {
+   "id": "deckel",
+   "component_id": "aluminium_lid_foil",
+   "material_id": "aluminium",
+   "name": "Aluminium-Deckelfolie",
+   "short": "Deckel",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 75,
+   "z": 70,
+   "h": 0.2,
+   "explode": [
+    0,
+    0,
+    25
+   ],
+   "mass": 0.4,
+   "materials": [
+    [
+     "alu",
+     90
+    ],
+    [
+     "pp",
+     10
+    ]
+   ],
+   "info": "Aluminiumfolie mit Siegellack. Ganz abziehen und getrennt in die Gelbe Tonne werfen, sonst erkennt die Anlage den Becher als Metall.",
+   "color": "#D2D6DA",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 4,
+     "w": 67
+    }
+   ]
+  },
+  {
+   "id": "rand",
+   "component_id": "pp_cup_body",
+   "material_id": "pp",
+   "name": "Siegelrand",
+   "short": "Rand",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 75,
+   "z": 68,
+   "h": 2,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 0.5,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Flacher Rand, auf den die Deckelfolie heiß gesiegelt wird.",
+   "color": "#F2EFE8",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 3,
+     "w": 69
+    }
+   ]
+  },
+  {
+   "id": "oben",
+   "component_id": "pp_cup_body",
+   "material_id": "pp",
+   "name": "Becherwand oben",
+   "short": "Becher",
+   "shape": "cyl",
+   "x": 2.5,
+   "y": 2.5,
+   "w": 70,
+   "z": 44,
+   "h": 24,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 1.1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "PP, Recyclingcode 5. Tiefgezogen aus einer dünnen Folie, darum nach oben breiter.",
+   "color": "#F2EFE8"
+  },
+  {
+   "id": "mitte",
+   "component_id": "pp_cup_body",
+   "material_id": "pp",
+   "name": "Becherwand Mitte",
+   "short": "Wand",
+   "shape": "cyl",
+   "x": 5.5,
+   "y": 5.5,
+   "w": 64,
+   "z": 22,
+   "h": 22,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 1.0,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Die Wand ist hier nur etwa 0,3 mm dick. Den Halt gibt die Papp-Banderole.",
+   "color": "#F2EFE8",
+   "label": false
+  },
+  {
+   "id": "boden",
+   "component_id": "pp_cup_body",
+   "material_id": "pp",
+   "name": "Becherboden",
+   "short": "Boden",
+   "shape": "cyl",
+   "x": 8.5,
+   "y": 8.5,
+   "w": 58,
+   "z": 0,
+   "h": 22,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 0.9,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Auskratzen reicht, ausspülen ist nicht nötig. Becher und Deckel getrennt einwerfen.",
+   "color": "#F2EFE8"
+  },
+  {
+   "id": "banderole",
+   "component_id": "cardboard_sleeve",
+   "material_id": "cardboard",
+   "name": "Papp-Banderole",
+   "short": "Banderole",
+   "shape": "box",
+   "x": 75,
+   "y": 12,
+   "w": 0.5,
+   "d": 51,
+   "z": 5,
+   "h": 60,
+   "r": 0,
+   "explode": [
+    55,
+    0,
+    0
+   ],
+   "mass": 2.1,
+   "materials": [
+    [
+     "papier",
+     100
+    ]
+   ],
+   "info": "Bedruckter Karton rund um den Becher. An der Perforation aufreißen und ins Altpapier geben.",
+   "color": "#8FB04A",
+   "sortBias": 100
+  }
+ ]
+}

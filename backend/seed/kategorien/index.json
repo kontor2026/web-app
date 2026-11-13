@@ -180,16 +180,16 @@
   "name": "PET-Flasche",
   "name_en": "PET Bottle",
   "klasse": "Pfandverpackung",
-  "teile": 3,
-  "platzhalter": true
+  "teile": 6,
+  "platzhalter": false
  },
  {
   "id": "glass_bottle",
   "name": "Glasflasche",
   "name_en": "Glass Bottle",
   "klasse": "Verpackung · Glas",
-  "teile": 3,
-  "platzhalter": true
+  "teile": 6,
+  "platzhalter": false
  },
  {
   "id": "wine_bottle",
@@ -212,8 +212,8 @@
   "name": "Getränkedose",
   "name_en": "Aluminium Can",
   "klasse": "Pfandverpackung",
-  "teile": 1,
-  "platzhalter": true
+  "teile": 5,
+  "platzhalter": false
  },
  {
   "id": "tin_can",
@@ -228,16 +228,16 @@
   "name": "Getränkekarton",
   "name_en": "Beverage Carton",
   "klasse": "Verpackung · Gelbe Tonne",
-  "teile": 2,
-  "platzhalter": true
+  "teile": 3,
+  "platzhalter": false
  },
  {
   "id": "yogurt_cup",
   "name": "Joghurtbecher",
   "name_en": "Yogurt Cup",
   "klasse": "Verpackung · Gelbe Tonne",
-  "teile": 3,
-  "platzhalter": true
+  "teile": 6,
+  "platzhalter": false
  },
  {
   "id": "paper_coffee_cup",

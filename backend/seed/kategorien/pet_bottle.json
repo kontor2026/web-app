@@ -4,7 +4,7 @@
  "name_en": "PET Bottle",
  "klasse": "Pfandverpackung",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -26,7 +26,7 @@
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 0,05 kg",
+   "v": "≈ 0,06 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
@@ -40,12 +40,12 @@
   "herkunft": {},
   "materialien_g": {
    "pet": 22.3,
-   "hdpe": 1.3,
-   "pp": 1.3
+   "hdpe": 2.2,
+   "pp": 0.5
   },
-  "co2_kg": 0.054,
+  "co2_kg": 0.055,
   "co2_mit_recyclat_kg": 0.007,
-  "co2_ersparnis_kg": 0.047,
+  "co2_ersparnis_kg": 0.048,
   "co2_ohne_faktor": [],
   "rohstoffwert_eur": 0,
   "wert_ohne_preis": [],
@@ -95,87 +95,199 @@
   "nicht": "Nicht in die Gelbe Tonne, sonst ist das Pfand weg",
   "warnung": "Pfandlogo nicht abreißen."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "hdpe_screw_cap",
+   "id": "deckel",
    "component_id": "hdpe_screw_cap",
-   "name": "Screw Cap",
-   "short": "Screw Cap",
+   "material_id": "hdpe",
+   "name": "Schraubdeckel",
+   "short": "Deckel",
    "shape": "cyl",
-   "x": 17.9,
-   "y": 17.9,
-   "w": 29.2,
-   "h": 27.6,
-   "z": 195.5,
+   "x": 17.5,
+   "y": 17.5,
+   "w": 30,
+   "z": 208,
+   "h": 22,
    "explode": [
     0,
     0,
-    27.6
+    47
    ],
-   "mass": 1.34,
+   "mass": 1.8,
    "materials": [
     [
      "hdpe",
      100
     ]
    ],
-   "material_id": "hdpe",
-   "info": "Twist off; recycle it separately or keep it on as local rules require."
+   "info": "HDPE, Recyclingcode 2. Seit 2024 bleibt er per Lasche an der Flasche hängen, damit er mit ihr recycelt wird.",
+   "color": "#2F6DB5",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 4,
+     "w": 22
+    }
+   ]
   },
   {
-   "id": "plastic_label",
-   "component_id": "plastic_label",
-   "name": "Label",
-   "short": "Label",
-   "shape": "box",
-   "x": 65.7,
-   "y": 13.0,
-   "w": 1.9,
-   "d": 39.0,
-   "h": 126.5,
-   "z": 46.0,
-   "r": 0.2,
+   "id": "ring",
+   "component_id": "hdpe_screw_cap",
+   "material_id": "hdpe",
+   "name": "Sicherungsring",
+   "short": "Ring",
+   "shape": "cyl",
+   "x": 17,
+   "y": 17,
+   "w": 31,
+   "z": 203,
+   "h": 3,
    "explode": [
-    37.8,
     0,
-    8.3
+    0,
+    29
    ],
-   "mass": 1.34,
+   "mass": 0.4,
    "materials": [
     [
-     "pp",
+     "hdpe",
      100
     ]
    ],
-   "material_id": "pp",
-   "info": "Tear along the seam or cut it off."
+   "info": "Reißt beim ersten Öffnen ab und zeigt, dass die Flasche unbenutzt ist. Gehört zum Deckel.",
+   "color": "#2F6DB5"
   },
   {
-   "id": "pet_bottle_body",
+   "id": "hals",
    "component_id": "pet_bottle_body",
-   "name": "Bottle",
-   "short": "Bottle",
+   "material_id": "pet",
+   "name": "Flaschenhals mit Gewinde",
+   "short": "Hals",
    "shape": "cyl",
-   "x": 0,
-   "y": 0,
-   "w": 65.0,
-   "h": 195.5,
-   "z": 0.0,
+   "x": 19,
+   "y": 19,
+   "w": 27,
+   "z": 175,
+   "h": 37,
    "explode": [
     0,
     0,
     0
    ],
-   "mass": 22.32,
+   "mass": 2.5,
    "materials": [
     [
      "pet",
      100
     ]
    ],
+   "info": "Dickwandig und nicht verstreckt, darum der schwerste Teil der Flasche je Zentimeter. Beim Recycling wird alles zusammen geschreddert.",
+   "color": "#CFE3E8",
+   "opacity": 0.6,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 5.5,
+     "y": 5.5,
+     "w": 16
+    }
+   ]
+  },
+  {
+   "id": "schulter",
+   "component_id": "pet_bottle_body",
    "material_id": "pet",
-   "info": "Empty it and flatten lengthwise; return it if it carries a deposit logo."
+   "name": "Flaschenschulter",
+   "short": "Schulter",
+   "shape": "cyl",
+   "x": 8.5,
+   "y": 8.5,
+   "w": 48,
+   "z": 150,
+   "h": 25,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 3.3,
+   "materials": [
+    [
+     "pet",
+     100
+    ]
+   ],
+   "info": "Übergang vom Hals zum Körper. Teil der Flasche, beim Streckblasen aus dem Rohling mitgeformt.",
+   "color": "#CFE3E8",
+   "opacity": 0.6
+  },
+  {
+   "id": "koerper",
+   "component_id": "pet_bottle_body",
+   "material_id": "pet",
+   "name": "Flaschenkörper",
+   "short": "Körper",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 65,
+   "z": 0,
+   "h": 150,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 16.5,
+   "materials": [
+    [
+     "pet",
+     100
+    ]
+   ],
+   "info": "PET, Recyclingcode 1. Wird aus einem reagenzglasgroßen Rohling heiß aufgeblasen. Pfandflaschen werden zu neuen Flaschen recycelt.",
+   "color": "#CFE3E8",
+   "opacity": 0.6,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 8.5,
+     "y": 8.5,
+     "w": 48
+    }
+   ]
+  },
+  {
+   "id": "etikett",
+   "component_id": "plastic_label",
+   "material_id": "pp",
+   "name": "Etikett",
+   "short": "Etikett",
+   "shape": "box",
+   "x": 65,
+   "y": 12,
+   "w": 0.3,
+   "d": 41,
+   "z": 75,
+   "h": 70,
+   "r": 0,
+   "explode": [
+    60,
+    0,
+    0
+   ],
+   "mass": 0.5,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Dünne PP-Folie, rundum geklebt. In der Recyclinganlage wird sie abgetrennt, weil sie leichter ist als PET und im Wasser schwimmt.",
+   "color": "#D9483B",
+   "sortBias": 100
   }
  ]
 }
