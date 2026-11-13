@@ -298,6 +298,7 @@ function showResultApi(v, res) {
       </div>
       ${res.sichtbarer_text ? `<p class="note">Gelesener Text: „${res.sichtbarer_text}“</p>` : ''}
       <p class="note">${res.hinweis ?? ''}</p>
+      ${res.vorbereitung?.steckbrief && res.vorbereitung.steckbrief !== 'aus' ? '<p class="note">Steckbrief und Bauideen werden schon im Hintergrund vorbereitet.</p>' : ''}
     </div>
     <div class="actions-col">
       <button class="btn primary" id="go">Steckbrief öffnen <span class="k">↵</span></button>
@@ -314,8 +315,10 @@ function showResultApi(v, res) {
 
 async function openSheetApi(res, modell) {
   const known = res.kandidaten.some((c) => c.name === modell && c.object_id);
-  const b = known ? null : busy('Steckbrief wird erstellt',
-    `Die KI zerlegt „${modell}“ in Bauteile und ordnet Materialien zu. Die Zeichnung berechnet die Station danach selbst. Auf einem Rechner ohne Grafikkarte dauert das einige Minuten.`);
+  const vorlauf = res.vorbereitung?.steckbrief && res.vorbereitung.steckbrief !== 'aus';
+  const b = known ? null : busy('Steckbrief wird erstellt', vorlauf
+    ? `Die KI arbeitet schon seit dem Scan im Hintergrund an „${modell}“. Gleich fertig.`
+    : `Die KI zerlegt „${modell}“ in Bauteile und ordnet Materialien zu. Die Zeichnung berechnet die Station danach selbst.`);
   try {
     const out = await api.steckbrief({ scan_id: res.scan_id, modell, objekt: res.objekt }, b?.signal);
     b?.close();
@@ -449,12 +452,14 @@ function viewSheet() {
       <aside class="panel" id="panel"></aside>
       <div class="actionbar">
         <div class="q">Wie geht es weiter? <span>Du entscheidest.</span></div>
+        <span class="prep mono" id="prep" hidden></span>
         <button class="btn ghost" id="no">Nicht einlagern</button>
         <button class="btn" id="store">Ins Lager geben</button>
         <button class="btn primary" id="build">Daraus etwas bauen</button>
       </div>
     </section>`);
   show(v, 'sheet');
+  watchPrep(v, obj);
 
   const panel = v.querySelector('#panel');
   const crumbsBase = [{ label: obj.name, go: () => renderOverview() }];
@@ -627,6 +632,23 @@ function viewSheet() {
   }
 
   renderOverview();
+}
+
+// Zeigt im Steckbrief an, ob die Bauideen im Hintergrund schon fertig sind.
+function watchPrep(v, obj) {
+  const el = v.querySelector('#prep');
+  const sid = state.scan?.scan_id;
+  if (!api.online || !sid || obj.projekte) return;
+  const tick = async () => {
+    if (!v.isConnected) return;
+    const st = await api.jobs(sid).catch(() => null);
+    if (!st || st.ideen === 'aus') return;
+    el.hidden = false;
+    el.textContent = { laeuft: 'Bauideen werden vorbereitet …', fertig: 'Bauideen bereit', fehler: 'Bauideen: neuer Versuch beim Öffnen' }[st.ideen];
+    el.classList.toggle('ready', st.ideen === 'fertig');
+    if (st.ideen === 'laeuft') setTimeout(tick, 2000);
+  };
+  tick();
 }
 
 function moveTip(e) {

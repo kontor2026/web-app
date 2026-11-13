@@ -27,6 +27,7 @@ export const api = {
 
   scan: (image, signal) => req('/api/scan', { body: { image }, signal }),
   steckbrief: (body, signal) => req('/api/steckbrief', { body, signal }),
+  jobs: (scanId) => req(`/api/scans/${scanId}/jobs`),
   ideen: (id, neu, signal) => req(`/api/objects/${encodeURIComponent(id)}/ideen${neu ? '?neu=true' : ''}`, { method: 'POST', signal }),
   inventory: () => req('/api/inventory'),
   einlagern: (object_id, modell) => req('/api/inventory/einlagern', { body: { object_id, modell } }),
