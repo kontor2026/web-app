@@ -390,6 +390,38 @@ function viewSheet() {
     animate(panel.querySelectorAll('.mix i'), { scaleX: [0, 1], transformOrigin: ['0% 50%', '0% 50%'], delay: stagger(60, { start: 250 }), duration: 600, ease: 'outExpo' });
   }
 
+  function renderPart(id) {
+    const p = obj.parts.find((x) => x.id === id);
+    view.select(id);
+    const els = partElements(p).slice(0, 10);
+    const crumbs = [...crumbsBase, { label: p.short ?? p.name, go: () => renderPart(id) }];
+    setPanel(`
+      <div>
+        <div class="eyebrow">Bauteil ${nums.get(id) ?? ''}</div>
+        <h1 style="margin-top:8px">${p.name}</h1>
+        <div class="sub">${fmt(p.mass)} g · ${CLASSES[MATERIALS[p.materials[0][0]].cls].label}</div>
+      </div>
+      <p>${p.info}</p>
+      <div>
+        <h3>Woraus es besteht</h3>
+        <div>${p.materials.map(([mid, share]) => {
+          const m = MATERIALS[mid];
+          return `<button class="mrow" data-mat="${mid}" style="width:100%">
+            <i style="background:${CLASSES[m.cls].color}"></i><span>${m.name}</span>
+            <span class="tag ${m.recycling}">Recycling ${m.recycling}</span><span class="pct">${share} %</span>
+            <span class="mbar"><b style="width:${share}%"></b></span></button>`;
+        }).join('')}</div>
+      </div>
+      <div>
+        <h3>Enthaltene Elemente</h3>
+        <div class="elements">${els.map(([s, v]) => elTile(s, v)).join('')}</div>
+        <p class="source" style="margin-top:10px">Rote Ecke: von der EU als kritischer Rohstoff eingestuft.</p>
+      </div>
+    `, crumbs);
+    animate(panel.querySelectorAll('.mbar b'), { scaleX: [0, 1], transformOrigin: ['0% 50%', '0% 50%'], delay: stagger(60, { start: 200 }), duration: 600, ease: 'outExpo' });
+  }
+
+
   renderOverview();
 }
 
