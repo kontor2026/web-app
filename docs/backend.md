@@ -30,6 +30,14 @@ Bei jedem Push auf `main` baut GitHub Actions die drei Images und veröffentlich
 - Strukturierte Ausgaben kennen keine Zahlen- und Längengrenzen. `claude_schema()` verschiebt sie in die Feldbeschreibung, geprüft wird danach wie beim lokalen Modell.
 - Lehnt ein Sicherheitsfilter eine Anfrage ab, übernimmt serverseitig ein Ersatzmodell (`fallbacks: "default"`).
 
+## Claude mit Abo-Zugang (`claude-abo`)
+
+Über das Claude Agent SDK (`backend/app/llm_claude_abo.py`) statt der API. Anthropic erlaubt das für eigene Produkte nur mit vorheriger Freigabe. Hier: privater Test mit Freigabe.
+
+- Lokal nutzt das SDK die Claude-Code-Anmeldung des Rechners. Im Container: einmal `claude setup-token` ausführen und das Token als `CLAUDE_CODE_OAUTH_TOKEN` in `.env` eintragen. Ein gleichzeitig gesetzter `ANTHROPIC_API_KEY` hätte Vorrang und wird in diesem Modus entfernt.
+- Alle Claude-Code-Werkzeuge sind abgeschaltet, `setting_sources=[]` verhindert, dass Einstellungen oder CLAUDE.md des Rechners geladen werden.
+- Gemessen (AirPods-Foto, Claude Opus 5.5): Erkennung 8 s, Steckbrief 34 s, Bauideen 37 s. Ergebnisse deutlich genauer als das lokale 4B-Modell.
+
 ## Ohne Docker starten
 
 ```bash

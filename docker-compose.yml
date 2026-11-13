@@ -18,10 +18,11 @@ services:
     build: { context: ., dockerfile: docker/backend/Dockerfile }
     image: ghcr.io/kontor2026/web-app-backend:latest
     environment:
-      LLM_PROVIDER: ${LLM_PROVIDER:-lokal}          # lokal | claude
+      LLM_PROVIDER: ${LLM_PROVIDER:-lokal}          # lokal | claude | claude-abo
       LLM_BASE_URL: http://inferenz:11434/v1
       VISION_MODEL: ${STATION_MODEL:-station-vl}
       ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+      CLAUDE_CODE_OAUTH_TOKEN: ${CLAUDE_CODE_OAUTH_TOKEN:-}
       CLAUDE_MODEL: ${CLAUDE_MODEL:-claude-opus-5-5}
     volumes: [station-daten:/data]
     depends_on: [inferenz]
