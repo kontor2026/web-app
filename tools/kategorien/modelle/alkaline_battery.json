@@ -1,0 +1,273 @@
+{
+ "parts": [
+  {
+   "id": "minuspol",
+   "component_id": "alkaline_cell",
+   "material_id": "steel",
+   "name": "Minuspol-Deckel",
+   "short": "Minuspol",
+   "shape": "cyl",
+   "x": 0.4,
+   "y": 0.4,
+   "w": 13.4,
+   "z": 49.4,
+   "h": 0.6,
+   "explode": [
+    0,
+    0,
+    32
+   ],
+   "mass": 0.6,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Vernickeltes Stahlblech, der Minuspol. Beim Sammeln die Pole nicht mit anderen Batterien in Kontakt bringen.",
+   "color": "#C9CDD0",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 4.2,
+     "y": 4.2,
+     "w": 5
+    }
+   ]
+  },
+  {
+   "id": "dichtung",
+   "component_id": "alkaline_cell",
+   "material_id": "nylon",
+   "name": "Dichtung",
+   "short": "Dichtung",
+   "shape": "cyl",
+   "x": 0.6,
+   "y": 0.6,
+   "w": 13,
+   "z": 46.4,
+   "h": 3,
+   "explode": [
+    0,
+    0,
+    18
+   ],
+   "mass": 0.5,
+   "materials": [
+    [
+     "nylon",
+     100
+    ]
+   ],
+   "info": "Kunststoffscheibe, die die Zelle dicht verschließt. Hat eine Sollbruchstelle, damit bei Überdruck kein Bersten droht.",
+   "color": "#F2EFE8",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 5.5,
+     "y": 5.5,
+     "w": 2
+    },
+    {
+     "shape": "cyl",
+     "x": 2,
+     "y": 2,
+     "w": 9
+    }
+   ]
+  },
+  {
+   "id": "nagel",
+   "component_id": "alkaline_cell",
+   "material_id": "copper",
+   "name": "Ableiternagel",
+   "short": "Nagel",
+   "shape": "cyl",
+   "x": 6.4,
+   "y": 6.4,
+   "w": 1.4,
+   "z": 8,
+   "h": 41.4,
+   "explode": [
+    0,
+    -24,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "messing",
+     100
+    ]
+   ],
+   "info": "Nagel aus Messing (Kupfer und Zink). Steckt im Zinkgel und leitet den Strom zum Minuspol.",
+   "color": "#D4B464"
+  },
+  {
+   "id": "anode",
+   "component_id": "alkaline_cell",
+   "material_id": "alkaline",
+   "name": "Zinkgel (Anode)",
+   "short": "Zinkgel",
+   "shape": "cyl",
+   "x": 2.8,
+   "y": 2.8,
+   "w": 8.6,
+   "z": 4,
+   "h": 41,
+   "explode": [
+    60,
+    0,
+    0
+   ],
+   "mass": 6,
+   "materials": [
+    [
+     "zinkmangan",
+     100
+    ]
+   ],
+   "info": "Zinkpulver in Kalilauge. Die Lauge ist ätzend: Ausgelaufene Batterien nur mit Handschuhen anfassen.",
+   "color": "#9EA3A8"
+  },
+  {
+   "id": "separator",
+   "component_id": "alkaline_cell",
+   "material_id": "paper",
+   "name": "Separator",
+   "short": "Separator",
+   "shape": "cyl",
+   "x": 2.4,
+   "y": 2.4,
+   "w": 9.4,
+   "z": 3.5,
+   "h": 42.5,
+   "explode": [
+    42,
+    0,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "papier",
+     100
+    ]
+   ],
+   "info": "Saugfähiges Vlies zwischen Anode und Kathode. Trennt beide, lässt aber die Lauge durch.",
+   "color": "#ECE6D6"
+  },
+  {
+   "id": "kathode",
+   "component_id": "alkaline_cell",
+   "material_id": "alkaline",
+   "name": "Mangandioxid-Ring (Kathode)",
+   "short": "Kathode",
+   "shape": "cyl",
+   "x": 0.9,
+   "y": 0.9,
+   "w": 12.4,
+   "z": 3,
+   "h": 42,
+   "explode": [
+    24,
+    0,
+    0
+   ],
+   "mass": 10.5,
+   "materials": [
+    [
+     "zinkmangan",
+     90
+    ],
+    [
+     "graphit",
+     10
+    ]
+   ],
+   "info": "Schwarzer Ring aus Braunstein und Graphit, innen hohl. Liefert zusammen mit dem Zink den Strom.",
+   "color": "#2A2B2D",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 1.5,
+     "y": 1.5,
+     "w": 9.4,
+     "fill": "#3A3D40"
+    }
+   ]
+  },
+  {
+   "id": "etikett",
+   "component_id": "alkaline_cell",
+   "material_id": "pvc",
+   "name": "Etikett (Schrumpffolie)",
+   "short": "Etikett",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 14.2,
+   "z": 0.5,
+   "h": 49,
+   "explode": [
+    -24,
+    0,
+    0
+   ],
+   "mass": 0.4,
+   "materials": [
+    [
+     "pvc",
+     100
+    ]
+   ],
+   "info": "Bedruckte Kunststofffolie. Isoliert den Stahlbecher und zeigt Typ, Spannung (1,5 V) und Haltbarkeit.",
+   "color": "#C8423A",
+   "opacity": 0.85,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0.6,
+     "y": 0.6,
+     "w": 13
+    }
+   ]
+  },
+  {
+   "id": "becher",
+   "component_id": "alkaline_cell",
+   "material_id": "steel",
+   "name": "Stahlbecher mit Pluspol",
+   "short": "Becher",
+   "shape": "cyl",
+   "x": 0.2,
+   "y": 0.2,
+   "w": 13.8,
+   "z": 0,
+   "h": 48.5,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 4.2,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Vernickelter Stahlbecher, unten mit dem Pluspol-Knopf. Im Recycling wird daraus wieder Stahl, aus dem Inhalt Zink und Mangan.",
+   "color": "#B7BCC0",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0.3,
+     "y": 0.3,
+     "w": 13.2,
+     "fill": "#5E656A"
+    }
+   ]
+  }
+ ]
+}

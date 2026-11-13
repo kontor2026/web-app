@@ -1,0 +1,484 @@
+{
+ "parts": [
+  {
+   "id": "oberschale",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Gehäuse-Oberschale",
+   "short": "Oberschale",
+   "shape": "box",
+   "x": 0,
+   "y": 19,
+   "w": 45,
+   "d": 26,
+   "z": 14,
+   "h": 14,
+   "r": 4,
+   "explode": [
+    0,
+    0,
+    71.6
+   ],
+   "mass": 12,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Schwer entflammbares PC/ABS. Die beiden Schalen sind meist verschweißt, nicht verschraubt. Nur mit Werkzeug und Erwachsenen öffnen.",
+   "color": "#F1F2F0",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 6,
+     "y": 5,
+     "w": 33,
+     "d": 16,
+     "r": 2
+    },
+    {
+     "shape": "box",
+     "x": 9,
+     "y": 8,
+     "w": 12,
+     "d": 4,
+     "r": 1,
+     "fill": "#C9CCCA"
+    }
+   ]
+  },
+  {
+   "id": "elko",
+   "component_id": "circuit_board",
+   "material_id": "mixed_electronics",
+   "name": "Elektrolytkondensator (Eingang)",
+   "short": "Elko",
+   "shape": "cyl",
+   "x": 26,
+   "y": 23,
+   "w": 10,
+   "z": 4.6,
+   "h": 16,
+   "explode": [
+    0,
+    0,
+    47.0
+   ],
+   "mass": 3.2,
+   "materials": [
+    [
+     "alu",
+     55
+    ],
+    [
+     "papier",
+     20
+    ],
+    [
+     "pcabs",
+     10
+    ],
+    [
+     "gummi",
+     5
+    ],
+    [
+     "kupfer",
+     10
+    ]
+   ],
+   "info": "Glättet die gleichgerichtete Netzspannung. Kann auch ausgesteckt noch kurz geladen sein, darum die Beinchen nicht berühren.",
+   "color": "#2F4F7A",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 2,
+     "y": 2,
+     "w": 6,
+     "fill": "#B9C0C6"
+    }
+   ]
+  },
+  {
+   "id": "trafo",
+   "component_id": "circuit_board",
+   "material_id": "mixed_electronics",
+   "name": "Übertrager (Trafo)",
+   "short": "Trafo",
+   "shape": "box",
+   "x": 6,
+   "y": 23.5,
+   "w": 16,
+   "d": 14.5,
+   "z": 4.6,
+   "h": 15,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    47.0
+   ],
+   "mass": 15,
+   "materials": [
+    [
+     "ferrit",
+     55
+    ],
+    [
+     "kupfer",
+     35
+    ],
+    [
+     "pcabs",
+     10
+    ]
+   ],
+   "info": "Ferritkern mit Kupferwicklungen. Trennt die Netzspannung sicher vom USB-Ausgang und wandelt sie auf 5 Volt um.",
+   "color": "#3A3F44",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 2,
+     "w": 12,
+     "d": 11,
+     "r": 1,
+     "fill": "#C5803D"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 4,
+     "w": 8,
+     "d": 7,
+     "r": 1
+    },
+    {
+     "shape": "box",
+     "x": 6,
+     "y": 6,
+     "w": 4,
+     "d": 3,
+     "r": 0.5
+    }
+   ]
+  },
+  {
+   "id": "elko_aus",
+   "component_id": "circuit_board",
+   "material_id": "mixed_electronics",
+   "name": "Ausgangskondensator",
+   "short": "Elko Ausgang",
+   "shape": "cyl",
+   "x": 33,
+   "y": 35,
+   "w": 6,
+   "z": 4.6,
+   "h": 9,
+   "explode": [
+    0,
+    0,
+    47.0
+   ],
+   "mass": 0.8,
+   "materials": [
+    [
+     "alu",
+     55
+    ],
+    [
+     "papier",
+     20
+    ],
+    [
+     "pcabs",
+     10
+    ],
+    [
+     "gummi",
+     5
+    ],
+    [
+     "kupfer",
+     10
+    ]
+   ],
+   "info": "Glättet die 5-Volt-Ausgangsspannung für das Handy.",
+   "color": "#3B3B3B"
+  },
+  {
+   "id": "y_kondensator",
+   "component_id": "circuit_board",
+   "material_id": "mixed_electronics",
+   "name": "Y-Kondensator",
+   "short": "Y-Kondensator",
+   "shape": "box",
+   "x": 23.5,
+   "y": 35,
+   "w": 7,
+   "d": 3,
+   "z": 4.6,
+   "h": 8,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    47.0
+   ],
+   "mass": 0.4,
+   "materials": [
+    [
+     "keramik",
+     80
+    ],
+    [
+     "kupfer",
+     10
+    ],
+    [
+     "pcabs",
+     10
+    ]
+   ],
+   "info": "Blaue Keramikscheibe zwischen Netz- und Ausgangsseite. Unterdrückt Funkstörungen.",
+   "color": "#3D6FB6"
+  },
+  {
+   "id": "regler",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "Regler-Chip",
+   "short": "Chip",
+   "shape": "box",
+   "x": 8,
+   "y": 40,
+   "w": 6,
+   "d": 4,
+   "z": 4.6,
+   "h": 1.6,
+   "r": 0.3,
+   "explode": [
+    0,
+    0,
+    47.0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "chip",
+     100
+    ]
+   ],
+   "info": "Schaltet den Strom durch den Trafo viele tausend Mal pro Sekunde ein und aus.",
+   "color": "#22272B",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0.6,
+     "y": 0.6,
+     "w": 1
+    }
+   ]
+  },
+  {
+   "id": "usb_buchse",
+   "component_id": "circuit_board",
+   "material_id": "steel",
+   "name": "USB-A-Buchse",
+   "short": "USB-Buchse",
+   "shape": "box",
+   "x": 16.5,
+   "y": 38.5,
+   "w": 13,
+   "d": 6.5,
+   "z": 4.6,
+   "h": 6,
+   "r": 0.5,
+   "explode": [
+    0,
+    0,
+    47.0
+   ],
+   "mass": 2,
+   "materials": [
+    [
+     "stahl",
+     70
+    ],
+    [
+     "kontakte",
+     15
+    ],
+    [
+     "pcabs",
+     15
+    ]
+   ],
+   "info": "Vernickeltes Stahlblech mit vergoldeten Kontakten. Hier steckt das Ladekabel.",
+   "color": "#B7BCC0",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1.5,
+     "y": 2,
+     "w": 10,
+     "d": 3,
+     "r": 0.3,
+     "fill": "#2A2E31"
+    }
+   ]
+  },
+  {
+   "id": "platine",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "Platine",
+   "short": "Platine",
+   "shape": "box",
+   "x": 1.5,
+   "y": 20.5,
+   "w": 42,
+   "d": 23,
+   "z": 3,
+   "h": 1.6,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    29.0
+   ],
+   "mass": 7,
+   "materials": [
+    [
+     "fr4",
+     55
+    ],
+    [
+     "kupfer",
+     20
+    ],
+    [
+     "chip",
+     15
+    ],
+    [
+     "lot",
+     10
+    ]
+   ],
+   "info": "Leiterplatte aus Glasfaser-Epoxid mit Kupferbahnen. Ein Schlitz in der Mitte trennt Netz- und Niederspannungsseite.",
+   "color": "#2E6B45",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 22.3,
+     "y": 2,
+     "w": 1.2,
+     "d": 12,
+     "r": 0.5,
+     "fill": "#1E3F2A"
+    }
+   ]
+  },
+  {
+   "id": "unterschale",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Gehäuse-Unterschale",
+   "short": "Unterschale",
+   "shape": "box",
+   "x": 0,
+   "y": 19,
+   "w": 45,
+   "d": 26,
+   "z": 0,
+   "h": 14,
+   "r": 4,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 12,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Hält Stifte und Platine. Auf dem Typenschild stehen Ausgangsspannung und Stromstärke.",
+   "color": "#F1F2F0",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 16,
+     "y": 21,
+     "w": 13,
+     "d": 5,
+     "r": 0.5,
+     "fill": "#2A2E31"
+    }
+   ]
+  },
+  {
+   "id": "stift_l",
+   "component_id": "plug_pins",
+   "material_id": "copper",
+   "name": "Steckerstift links",
+   "short": "Stift",
+   "shape": "box",
+   "x": 10.5,
+   "y": 0,
+   "w": 4,
+   "d": 19,
+   "z": 12,
+   "h": 4,
+   "r": 2,
+   "explode": [
+    0,
+    -22,
+    0
+   ],
+   "mass": 2.2,
+   "materials": [
+    [
+     "messing",
+     100
+    ]
+   ],
+   "info": "Vernickeltes Messing (Kupfer und Zink). In die Schale eingepresst, kommt nur beim Aufbrechen heraus.",
+   "color": "#C9CDD0"
+  },
+  {
+   "id": "stift_r",
+   "component_id": "plug_pins",
+   "material_id": "copper",
+   "name": "Steckerstift rechts",
+   "short": "Stift",
+   "shape": "box",
+   "x": 30.5,
+   "y": 0,
+   "w": 4,
+   "d": 19,
+   "z": 12,
+   "h": 4,
+   "r": 2,
+   "explode": [
+    0,
+    -22,
+    0
+   ],
+   "mass": 2.2,
+   "materials": [
+    [
+     "messing",
+     100
+    ]
+   ],
+   "info": "Zweiter Stift des Euro-Steckers, 19 mm Abstand zum ersten.",
+   "color": "#C9CDD0",
+   "label": false
+  }
+ ]
+}

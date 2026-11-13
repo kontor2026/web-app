@@ -1,0 +1,568 @@
+{
+ "parts": [
+  {
+   "id": "kolben_oben",
+   "component_id": "bulb_diffuser",
+   "material_id": "pc",
+   "name": "Streukolben (Kuppe)",
+   "short": "Kolben",
+   "shape": "cyl",
+   "x": 10,
+   "y": 10,
+   "w": 40,
+   "z": 98,
+   "h": 12,
+   "explode": [
+    0,
+    0,
+    80.3
+   ],
+   "mass": 1.6,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Milchiger Kunststoff (Polycarbonat), streut das grelle Licht der LEDs. Ist meist nur eingeklebt und lässt sich mit etwas Drehen abziehen.",
+   "color": "#F4F4F0",
+   "opacity": 0.6
+  },
+  {
+   "id": "kolben_mitte",
+   "component_id": "bulb_diffuser",
+   "material_id": "pc",
+   "name": "Streukolben (Mitte)",
+   "short": "Kolben Mitte",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 60,
+   "z": 72,
+   "h": 26,
+   "explode": [
+    0,
+    0,
+    80.3
+   ],
+   "mass": 3.6,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Die breiteste Stelle der Birne, 60 mm. Aus Kunststoff statt Glas, darum bricht er nicht so leicht.",
+   "color": "#F4F4F0",
+   "opacity": 0.6,
+   "label": false
+  },
+  {
+   "id": "kolben_unten",
+   "component_id": "bulb_diffuser",
+   "material_id": "pc",
+   "name": "Streukolben (Hals)",
+   "short": "Kolben Hals",
+   "shape": "cyl",
+   "x": 4,
+   "y": 4,
+   "w": 52,
+   "z": 56,
+   "h": 16,
+   "explode": [
+    0,
+    0,
+    80.3
+   ],
+   "mass": 2.4,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Unterer Rand des Kolbens, in den Kühlkörper geklebt.",
+   "color": "#F4F4F0",
+   "opacity": 0.6,
+   "label": false
+  },
+  {
+   "id": "led_chips",
+   "component_id": "led_module",
+   "material_id": "mixed_electronics",
+   "name": "LED-Chips",
+   "short": "LEDs",
+   "shape": "cyl",
+   "x": 12,
+   "y": 12,
+   "w": 36,
+   "z": 55.5,
+   "h": 0.8,
+   "explode": [
+    0,
+    0,
+    64.0
+   ],
+   "mass": 0.4,
+   "materials": [
+    [
+     "led",
+     60
+    ],
+    [
+     "keramik",
+     20
+    ],
+    [
+     "kupfer",
+     10
+    ],
+    [
+     "lot",
+     10
+    ]
+   ],
+   "info": "Zwölf Leuchtdioden aus Galliumnitrid mit gelbem Leuchtstoff. Sie machen aus Strom fast ohne Wärme Licht.",
+   "color": "#E8E8E2",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 29.5,
+     "y": 16.5,
+     "w": 3,
+     "d": 3,
+     "r": 0.3,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "box",
+     "x": 27.76,
+     "y": 23.0,
+     "w": 3,
+     "d": 3,
+     "r": 0.3,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "box",
+     "x": 23.0,
+     "y": 27.76,
+     "w": 3,
+     "d": 3,
+     "r": 0.3,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "box",
+     "x": 16.5,
+     "y": 29.5,
+     "w": 3,
+     "d": 3,
+     "r": 0.3,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "box",
+     "x": 10.0,
+     "y": 27.76,
+     "w": 3,
+     "d": 3,
+     "r": 0.3,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "box",
+     "x": 5.24,
+     "y": 23.0,
+     "w": 3,
+     "d": 3,
+     "r": 0.3,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "box",
+     "x": 3.5,
+     "y": 16.5,
+     "w": 3,
+     "d": 3,
+     "r": 0.3,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "box",
+     "x": 5.24,
+     "y": 10.0,
+     "w": 3,
+     "d": 3,
+     "r": 0.3,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "box",
+     "x": 10.0,
+     "y": 5.24,
+     "w": 3,
+     "d": 3,
+     "r": 0.3,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "box",
+     "x": 16.5,
+     "y": 3.5,
+     "w": 3,
+     "d": 3,
+     "r": 0.3,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "box",
+     "x": 23.0,
+     "y": 5.24,
+     "w": 3,
+     "d": 3,
+     "r": 0.3,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "box",
+     "x": 27.76,
+     "y": 10.0,
+     "w": 3,
+     "d": 3,
+     "r": 0.3,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 14,
+     "y": 14,
+     "w": 8,
+     "fill": "#F6D86B"
+    }
+   ]
+  },
+  {
+   "id": "led_platine",
+   "component_id": "led_module",
+   "material_id": "mixed_electronics",
+   "name": "LED-Platine (Aluminiumkern)",
+   "short": "LED-Platine",
+   "shape": "cyl",
+   "x": 9,
+   "y": 9,
+   "w": 42,
+   "z": 54,
+   "h": 1.5,
+   "explode": [
+    0,
+    0,
+    48
+   ],
+   "mass": 4,
+   "materials": [
+    [
+     "alu",
+     75
+    ],
+    [
+     "kupfer",
+     10
+    ],
+    [
+     "fr4",
+     10
+    ],
+    [
+     "lot",
+     5
+    ]
+   ],
+   "info": "Dünne Aluminiumscheibe mit Leiterbahnen. Leitet die Wärme der LEDs in den Kühlkörper. Mit zwei Schrauben oder Wärmeleitkleber befestigt.",
+   "color": "#ECECE6",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 19,
+     "y": 19,
+     "w": 4,
+     "fill": "#9DA6AD"
+    }
+   ]
+  },
+  {
+   "id": "kuehl_oben",
+   "component_id": "aluminium_heat_sink",
+   "material_id": "aluminium",
+   "name": "Kühlkörper (oben)",
+   "short": "Kühlkörper",
+   "shape": "cyl",
+   "x": 2,
+   "y": 2,
+   "w": 56,
+   "z": 40,
+   "h": 14,
+   "explode": [
+    0,
+    0,
+    32
+   ],
+   "mass": 11,
+   "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "info": "Gegossenes Aluminium, oft mit Kunststoff ummantelt. Gibt die Wärme der LEDs an die Luft ab. Wertvoll fürs Recycling.",
+   "color": "#C9CDD0",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 7,
+     "y": 7,
+     "w": 42
+    }
+   ]
+  },
+  {
+   "id": "kuehl_unten",
+   "component_id": "aluminium_heat_sink",
+   "material_id": "aluminium",
+   "name": "Kühlkörper (Hals)",
+   "short": "Kühlkörper Hals",
+   "shape": "cyl",
+   "x": 8,
+   "y": 8,
+   "w": 44,
+   "z": 25,
+   "h": 15,
+   "explode": [
+    0,
+    0,
+    32
+   ],
+   "mass": 7,
+   "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "info": "Verjüngt sich zum Sockel hin. Innen ist Platz für die Treiberplatine.",
+   "color": "#C9CDD0",
+   "label": false
+  },
+  {
+   "id": "elko",
+   "component_id": "circuit_board",
+   "material_id": "mixed_electronics",
+   "name": "Elektrolytkondensator",
+   "short": "Elko",
+   "shape": "cyl",
+   "x": 32,
+   "y": 26,
+   "w": 8,
+   "z": 28,
+   "h": 12,
+   "explode": [
+    62,
+    0,
+    0
+   ],
+   "mass": 1.8,
+   "materials": [
+    [
+     "alu",
+     55
+    ],
+    [
+     "papier",
+     20
+    ],
+    [
+     "pcabs",
+     10
+    ],
+    [
+     "gummi",
+     5
+    ],
+    [
+     "kupfer",
+     10
+    ]
+   ],
+   "info": "Glättet den Strom, damit die Lampe nicht flackert. Fällt er aus, flackert die Lampe oder geht aus.",
+   "color": "#2F4F7A",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 1.5,
+     "y": 1.5,
+     "w": 5,
+     "fill": "#B9C0C6"
+    }
+   ]
+  },
+  {
+   "id": "chips",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "Treiber-Chip und Gleichrichter",
+   "short": "Chips",
+   "shape": "box",
+   "x": 30.8,
+   "y": 21,
+   "w": 1.6,
+   "d": 8,
+   "z": 12,
+   "h": 12,
+   "r": 0.3,
+   "explode": [
+    62,
+    0,
+    0
+   ],
+   "mass": 0.8,
+   "materials": [
+    [
+     "chip",
+     80
+    ],
+    [
+     "kupfer",
+     20
+    ]
+   ],
+   "info": "Wandeln die 230-Volt-Wechselspannung in den gleichmäßigen Strom um, den die LEDs brauchen.",
+   "color": "#22272B"
+  },
+  {
+   "id": "treiber",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "Treiberplatine",
+   "short": "Treiber",
+   "shape": "box",
+   "x": 29.2,
+   "y": 19,
+   "w": 1.6,
+   "d": 22,
+   "z": 6,
+   "h": 47,
+   "r": 0.3,
+   "explode": [
+    50,
+    0,
+    0
+   ],
+   "mass": 5,
+   "materials": [
+    [
+     "fr4",
+     55
+    ],
+    [
+     "kupfer",
+     20
+    ],
+    [
+     "chip",
+     15
+    ],
+    [
+     "lot",
+     10
+    ]
+   ],
+   "info": "Steht senkrecht im Sockel und Kühlkörper. Zwei Drähte führen zum Sockel. Die Lampe als Ganzes zur Sammelstelle bringen.",
+   "color": "#2E6B45"
+  },
+  {
+   "id": "sockel",
+   "component_id": "lamp_base",
+   "material_id": "aluminium",
+   "name": "Schraubsockel E27",
+   "short": "Sockel",
+   "shape": "cyl",
+   "x": 16.5,
+   "y": 16.5,
+   "w": 27,
+   "z": 3,
+   "h": 22,
+   "explode": [
+    0,
+    0,
+    16
+   ],
+   "mass": 4,
+   "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "info": "Gewinde aus Aluminiumblech, in den Kühlkörper gepresst oder geklebt. Es passt in jede normale Lampenfassung.",
+   "color": "#C2C6C9",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 1.5,
+     "y": 1.5,
+     "w": 24
+    },
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 3,
+     "w": 21
+    }
+   ]
+  },
+  {
+   "id": "fusskontakt",
+   "component_id": "lamp_base",
+   "material_id": "copper",
+   "name": "Fußkontakt mit Isolierglas",
+   "short": "Fußkontakt",
+   "shape": "cyl",
+   "x": 24,
+   "y": 24,
+   "w": 12,
+   "z": 0,
+   "h": 3,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 2,
+   "materials": [
+    [
+     "messing",
+     45
+    ],
+    [
+     "behaelterglas",
+     40
+    ],
+    [
+     "lot",
+     15
+    ]
+   ],
+   "info": "Messingkontakt mit Lötpunkt, durch schwarzes Glas vom Gewinde getrennt. Hier fließt der Strom hinein.",
+   "color": "#2A2B2D",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 3,
+     "w": 6,
+     "fill": "#D4B464"
+    }
+   ]
+  }
+ ]
+}

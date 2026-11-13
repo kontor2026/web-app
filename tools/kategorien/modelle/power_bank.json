@@ -1,0 +1,684 @@
+{
+ "parts": [
+  {
+   "id": "oberschale",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Gehäuse-Oberschale",
+   "short": "Oberschale",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 70,
+   "d": 140,
+   "z": 8,
+   "h": 7,
+   "r": 9,
+   "explode": [
+    0,
+    0,
+    157.2
+   ],
+   "mass": 24,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "PC/ABS, meist mit Clips eingerastet und zusätzlich verklebt. Nicht aufhebeln: Ein Schraubendreher kann darunter den Akku beschädigen.",
+   "color": "#2F3438",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 27,
+     "y": 120.5,
+     "w": 2,
+     "d": 2,
+     "fill": "#7FC8F0"
+    },
+    {
+     "shape": "cyl",
+     "x": 32,
+     "y": 120.5,
+     "w": 2,
+     "d": 2,
+     "fill": "#7FC8F0"
+    },
+    {
+     "shape": "cyl",
+     "x": 37,
+     "y": 120.5,
+     "w": 2,
+     "d": 2,
+     "fill": "#7FC8F0"
+    },
+    {
+     "shape": "cyl",
+     "x": 42,
+     "y": 120.5,
+     "w": 2,
+     "d": 2,
+     "fill": "#7FC8F0"
+    },
+    {
+     "shape": "cyl",
+     "x": 54,
+     "y": 122,
+     "w": 6,
+     "fill": "#4A5156"
+    },
+    {
+     "shape": "box",
+     "x": 14,
+     "y": 30,
+     "w": 42,
+     "d": 60,
+     "r": 6
+    }
+   ]
+  },
+  {
+   "id": "leds",
+   "component_id": "circuit_board",
+   "material_id": "mixed_electronics",
+   "name": "Anzeige-LEDs",
+   "short": "LEDs",
+   "shape": "box",
+   "x": 26,
+   "y": 119,
+   "w": 18,
+   "d": 5,
+   "z": 3.2,
+   "h": 1,
+   "r": 0.5,
+   "explode": [
+    0,
+    0,
+    106.0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "led",
+     50
+    ],
+    [
+     "kupfer",
+     20
+    ],
+    [
+     "pcabs",
+     30
+    ]
+   ],
+   "info": "Vier kleine Leuchtdioden zeigen an, wie voll der Akku ist.",
+   "color": "#E8E8E2",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 1.5,
+     "w": 2,
+     "d": 2,
+     "fill": "#7FC8F0"
+    },
+    {
+     "shape": "box",
+     "x": 6,
+     "y": 1.5,
+     "w": 2,
+     "d": 2,
+     "fill": "#7FC8F0"
+    },
+    {
+     "shape": "box",
+     "x": 11,
+     "y": 1.5,
+     "w": 2,
+     "d": 2,
+     "fill": "#7FC8F0"
+    },
+    {
+     "shape": "box",
+     "x": 16,
+     "y": 1.5,
+     "w": 2,
+     "d": 2,
+     "fill": "#7FC8F0"
+    }
+   ]
+  },
+  {
+   "id": "taster",
+   "component_id": "circuit_board",
+   "material_id": "mixed_electronics",
+   "name": "Taster",
+   "short": "Taster",
+   "shape": "box",
+   "x": 53,
+   "y": 121,
+   "w": 8,
+   "d": 8,
+   "z": 3.2,
+   "h": 3.5,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    106.0
+   ],
+   "mass": 0.5,
+   "materials": [
+    [
+     "stahl",
+     50
+    ],
+    [
+     "pcabs",
+     40
+    ],
+    [
+     "kupfer",
+     10
+    ]
+   ],
+   "info": "Kleiner Drucktaster. Ein Druck zeigt den Ladestand an.",
+   "color": "#B7BCC0",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 2,
+     "y": 2,
+     "w": 4,
+     "fill": "#2A2E31"
+    }
+   ]
+  },
+  {
+   "id": "ladechip",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "Lade- und Wandler-Chip",
+   "short": "Ladechip",
+   "shape": "box",
+   "x": 10,
+   "y": 116,
+   "w": 6,
+   "d": 6,
+   "z": 3.2,
+   "h": 1,
+   "r": 0.3,
+   "explode": [
+    0,
+    0,
+    106.0
+   ],
+   "mass": 0.4,
+   "materials": [
+    [
+     "chip",
+     100
+    ]
+   ],
+   "info": "Steuert das Laden der Zellen und wandelt 3,7 Volt in 5 Volt für das Handy um.",
+   "color": "#22272B",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0.6,
+     "y": 0.6,
+     "w": 1
+    }
+   ]
+  },
+  {
+   "id": "spule",
+   "component_id": "circuit_board",
+   "material_id": "mixed_electronics",
+   "name": "Speicherdrossel",
+   "short": "Spule",
+   "shape": "box",
+   "x": 17.5,
+   "y": 115,
+   "w": 7,
+   "d": 7,
+   "z": 3.2,
+   "h": 4,
+   "r": 0.5,
+   "explode": [
+    0,
+    0,
+    106.0
+   ],
+   "mass": 1.5,
+   "materials": [
+    [
+     "ferrit",
+     60
+    ],
+    [
+     "kupfer",
+     40
+    ]
+   ],
+   "info": "Kupferdraht auf einem Ferritkern. Speichert kurz Energie, damit der Spannungswandler arbeiten kann.",
+   "color": "#3A3F44",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 1,
+     "y": 1,
+     "w": 5,
+     "fill": "#C5803D"
+    },
+    {
+     "shape": "cyl",
+     "x": 2.5,
+     "y": 2.5,
+     "w": 2
+    }
+   ]
+  },
+  {
+   "id": "usb_a",
+   "component_id": "circuit_board",
+   "material_id": "steel",
+   "name": "USB-A-Buchse (Ausgang)",
+   "short": "USB-A",
+   "shape": "box",
+   "x": 34,
+   "y": 126,
+   "w": 13.5,
+   "d": 14,
+   "z": 3.2,
+   "h": 6,
+   "r": 0.5,
+   "explode": [
+    0,
+    0,
+    106.0
+   ],
+   "mass": 2.5,
+   "materials": [
+    [
+     "stahl",
+     70
+    ],
+    [
+     "kontakte",
+     15
+    ],
+    [
+     "pcabs",
+     15
+    ]
+   ],
+   "info": "Hier wird das Handy angeschlossen. Stahlblech mit vergoldeten Kontakten.",
+   "color": "#B7BCC0",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1.5,
+     "y": 9,
+     "w": 10.5,
+     "d": 3,
+     "r": 0.3,
+     "fill": "#2A2E31"
+    }
+   ]
+  },
+  {
+   "id": "usb_c",
+   "component_id": "circuit_board",
+   "material_id": "steel",
+   "name": "USB-C-Buchse (Ein- und Ausgang)",
+   "short": "USB-C",
+   "shape": "box",
+   "x": 18,
+   "y": 132,
+   "w": 9,
+   "d": 8,
+   "z": 3.2,
+   "h": 3.2,
+   "r": 1.5,
+   "explode": [
+    0,
+    0,
+    106.0
+   ],
+   "mass": 1,
+   "materials": [
+    [
+     "stahl",
+     70
+    ],
+    [
+     "kontakte",
+     15
+    ],
+    [
+     "pcabs",
+     15
+    ]
+   ],
+   "info": "Zum Aufladen der Powerbank, kann aber auch selbst laden.",
+   "color": "#B7BCC0",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1.5,
+     "y": 5,
+     "w": 6,
+     "d": 1.6,
+     "r": 0.8,
+     "fill": "#2A2E31"
+    }
+   ]
+  },
+  {
+   "id": "platine",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "Platine",
+   "short": "Platine",
+   "shape": "box",
+   "x": 4,
+   "y": 112,
+   "w": 62,
+   "d": 26,
+   "z": 2,
+   "h": 1.2,
+   "r": 1.5,
+   "explode": [
+    0,
+    0,
+    56.0
+   ],
+   "mass": 6,
+   "materials": [
+    [
+     "fr4",
+     55
+    ],
+    [
+     "kupfer",
+     20
+    ],
+    [
+     "chip",
+     15
+    ],
+    [
+     "lot",
+     10
+    ]
+   ],
+   "info": "Leiterplatte mit Kupferbahnen, Lot und Chips. Als Elektroschrott abgeben, dort werden Kupfer und Gold zurückgewonnen.",
+   "color": "#2E6B45",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 2,
+     "w": 10,
+     "d": 6,
+     "r": 0.5
+    },
+    {
+     "shape": "box",
+     "x": 50,
+     "y": 2,
+     "w": 10,
+     "d": 6,
+     "r": 0.5
+    }
+   ]
+  },
+  {
+   "id": "schutz",
+   "component_id": "li_ion_battery",
+   "material_id": "pcb",
+   "name": "Schutzschaltung der Zellen",
+   "short": "Schutzplatine",
+   "shape": "box",
+   "x": 6,
+   "y": 104,
+   "w": 58,
+   "d": 6,
+   "z": 2,
+   "h": 3,
+   "r": 0.5,
+   "explode": [
+    0,
+    0,
+    56.0
+   ],
+   "mass": 2,
+   "materials": [
+    [
+     "fr4",
+     55
+    ],
+    [
+     "kupfer",
+     20
+    ],
+    [
+     "chip",
+     15
+    ],
+    [
+     "lot",
+     10
+    ]
+   ],
+   "info": "Verhindert Überladen, Tiefentladen und Kurzschluss. Über Nickelstreifen mit den Zellen verlötet.",
+   "color": "#2E6B45",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 6,
+     "y": 1.5,
+     "w": 4,
+     "d": 3,
+     "r": 0.3,
+     "fill": "#22272B"
+    },
+    {
+     "shape": "box",
+     "x": 48,
+     "y": 1.5,
+     "w": 4,
+     "d": 3,
+     "r": 0.3,
+     "fill": "#22272B"
+    },
+    {
+     "shape": "box",
+     "x": 13,
+     "y": 1,
+     "w": 32,
+     "d": 4,
+     "r": 0.5,
+     "fill": "#C9CDD0"
+    }
+   ]
+  },
+  {
+   "id": "zelle_1",
+   "component_id": "li_ion_battery",
+   "material_id": "li_ion",
+   "name": "Lithium-Polymer-Zelle 1",
+   "short": "Zelle 1",
+   "shape": "box",
+   "x": 4,
+   "y": 4,
+   "w": 30.5,
+   "d": 99,
+   "z": 2,
+   "h": 10,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    56.0
+   ],
+   "mass": 91,
+   "materials": [
+    [
+     "lco",
+     40
+    ],
+    [
+     "graphit",
+     20
+    ],
+    [
+     "elektrolyt",
+     15
+    ],
+    [
+     "alu",
+     15
+    ],
+    [
+     "kupfer",
+     10
+    ]
+   ],
+   "info": "5.000 mAh in einer Folientasche. Niemals einstechen, biegen oder erhitzen: Beschädigte Zellen können brennen. Pole abkleben.",
+   "color": "#9DA6AD",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 6,
+     "w": 24.5,
+     "d": 80,
+     "r": 2
+    },
+    {
+     "shape": "box",
+     "x": 6,
+     "y": 12,
+     "w": 18.5,
+     "d": 20,
+     "r": 1,
+     "fill": "#C8423A"
+    }
+   ]
+  },
+  {
+   "id": "zelle_2",
+   "component_id": "li_ion_battery",
+   "material_id": "li_ion",
+   "name": "Lithium-Polymer-Zelle 2",
+   "short": "Zelle 2",
+   "shape": "box",
+   "x": 35.5,
+   "y": 4,
+   "w": 30.5,
+   "d": 99,
+   "z": 2,
+   "h": 10,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    56.0
+   ],
+   "mass": 91,
+   "materials": [
+    [
+     "lco",
+     40
+    ],
+    [
+     "graphit",
+     20
+    ],
+    [
+     "elektrolyt",
+     15
+    ],
+    [
+     "alu",
+     15
+    ],
+    [
+     "kupfer",
+     10
+    ]
+   ],
+   "info": "Parallel zur ersten Zelle geschaltet, zusammen 10.000 mAh bei 3,7 Volt.",
+   "color": "#9DA6AD",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 6,
+     "w": 24.5,
+     "d": 80,
+     "r": 2
+    },
+    {
+     "shape": "box",
+     "x": 6,
+     "y": 12,
+     "w": 18.5,
+     "d": 20,
+     "r": 1,
+     "fill": "#C8423A"
+    }
+   ]
+  },
+  {
+   "id": "unterschale",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Gehäuse-Unterschale",
+   "short": "Unterschale",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 70,
+   "d": 140,
+   "z": 0,
+   "h": 8,
+   "r": 9,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 26,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Wanne mit Stegen, in der Zellen und Platine liegen. Oft mit Schaumstoff gepolstert.",
+   "color": "#2F3438",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 18,
+     "y": 132,
+     "w": 9,
+     "d": 8,
+     "r": 1.5
+    },
+    {
+     "shape": "box",
+     "x": 34,
+     "y": 133,
+     "w": 13.5,
+     "d": 7,
+     "r": 0.5
+    }
+   ]
+  }
+ ]
+}

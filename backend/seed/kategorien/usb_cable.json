@@ -4,7 +4,7 @@
  "name_en": "USB Cable",
  "klasse": "Elektroschrott · Kleingerät",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -21,40 +21,45 @@
  "werte": [
   {
    "k": "Rohstoffwert",
-   "v": "≈ 0,02 €",
+   "v": "≈ 0,13 €",
    "hint": "Kupfer zu Preisen vom 13.11."
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 0,08 kg",
+   "v": "≈ 0,09 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
    "k": "mit Recyclat",
    "v": "≈ 0,02 kg",
-   "hint": "spart 0,06 kg, wenn recycelte Materialien eingesetzt werden"
+   "hint": "spart 0,07 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Fe": 13122.0,
-   "Cu": 1610.0
+   "Cu": 10460.0,
+   "Fe": 2450.0,
+   "Ag": 0.07,
+   "Au": 0.02
   },
   "herkunft": {
+   "Cu": "Modellmassen (Schätzung)",
    "Fe": "Modellmassen (Schätzung)",
-   "Cu": "Modellmassen (Schätzung)"
+   "Ag": "0 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)",
+   "Au": "0 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)"
   },
   "materialien_g": {
-   "steel": 13.4,
-   "abs": 13.4,
-   "copper": 1.6,
-   "pvc": 1.6
+   "pvc": 11.0,
+   "copper": 10.4,
+   "abs": 4.3,
+   "steel": 2.5,
+   "pcb": 0.3
   },
-  "co2_kg": 0.079,
-  "co2_mit_recyclat_kg": 0.017,
-  "co2_ersparnis_kg": 0.062,
+  "co2_kg": 0.087,
+  "co2_mit_recyclat_kg": 0.021,
+  "co2_ersparnis_kg": 0.065,
   "co2_ohne_faktor": [],
-  "rohstoffwert_eur": 0.02,
+  "rohstoffwert_eur": 0.13,
   "wert_ohne_preis": [],
   "preisstand": "2026-11-13",
   "quellen": {
@@ -102,115 +107,496 @@
   "nicht": "Nicht in Restmüll oder Gelbe Tonne",
   "warnung": "Kabel und Stecker dranlassen."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "connector_shell",
-   "component_id": "connector_shell",
-   "name": "Connector Shell",
-   "short": "Connector Shell",
+   "id": "mantel",
+   "component_id": "cable_insulation",
+   "material_id": "pvc",
+   "name": "Kabelmantel",
+   "short": "Mantel",
    "shape": "cyl",
    "x": 0,
-   "y": 0,
-   "w": 120.0,
-   "h": 6.0,
-   "z": 6.0,
+   "y": 6,
+   "w": 100,
+   "z": 0,
+   "h": 10.5,
    "explode": [
     0,
     0,
-    48.0
+    0.0
    ],
-   "mass": 13.39,
-   "materials": [
-    [
-     "stahl",
-     100
-    ]
-   ],
-   "material_id": "steel",
-   "info": "Cut the cable just behind the connector."
-  },
-  {
-   "id": "cable_copper_core",
-   "component_id": "cable_copper_core",
-   "name": "Cable Wires",
-   "short": "Cable Wires",
-   "shape": "box",
-   "x": 127.2,
-   "y": 6.0,
-   "w": 6.0,
-   "d": 108.0,
-   "h": 3.0,
-   "z": 1.2,
-   "r": 0.7,
-   "explode": [
-    57.0,
-    0,
-    14.4
-   ],
-   "mass": 1.61,
-   "materials": [
-    [
-     "kupfer",
-     100
-    ]
-   ],
-   "material_id": "copper",
-   "info": "Cut off the plug and strip the insulation to free the copper."
-  },
-  {
-   "id": "cable_insulation",
-   "component_id": "cable_insulation",
-   "name": "Cable Insulation",
-   "short": "Cable Insulation",
-   "shape": "box",
-   "x": 139.2,
-   "y": 6.0,
-   "w": 6.0,
-   "d": 108.0,
-   "h": 3.0,
-   "z": 1.2,
-   "r": 0.7,
-   "explode": [
-    75.0,
-    0,
-    14.4
-   ],
-   "mass": 1.61,
+   "mass": 11,
    "materials": [
     [
      "pvc",
      100
     ]
    ],
-   "material_id": "pvc",
-   "info": "Slit lengthwise with a cable stripper to separate it from the wires."
+   "info": "Außenhülle aus PVC mit Weichmachern. Mit einer Abisolierzange längs aufschlitzen, dann lassen sich die Drähte herausziehen.",
+   "color": "#3A3D40",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0.0,
+     "y": 0.0,
+     "w": 100.0
+    },
+    {
+     "shape": "cyl",
+     "x": 3.5,
+     "y": 3.5,
+     "w": 93.0
+    },
+    {
+     "shape": "cyl",
+     "x": 7.0,
+     "y": 7.0,
+     "w": 86.0
+    },
+    {
+     "shape": "cyl",
+     "x": 10.5,
+     "y": 10.5,
+     "w": 79.0
+    }
+   ]
   },
   {
-   "id": "plastic_housing",
-   "component_id": "plastic_housing",
-   "name": "Plastic Housing",
-   "short": "Plastic Housing",
+   "id": "schirm",
+   "component_id": "cable_copper_core",
+   "material_id": "copper",
+   "name": "Abschirmung (Folie und Geflecht)",
+   "short": "Abschirmung",
    "shape": "cyl",
-   "x": 0,
-   "y": 0,
-   "w": 120.0,
-   "h": 6.0,
-   "z": 0.0,
+   "x": 1.5,
+   "y": 7.5,
+   "w": 97,
+   "z": 0.5,
+   "h": 9.5,
    "explode": [
     0,
     0,
+    50.0
+   ],
+   "mass": 3,
+   "materials": [
+    [
+     "alu",
+     40
+    ],
+    [
+     "kupfer",
+     50
+    ],
+    [
+     "folien",
+     10
+    ]
+   ],
+   "info": "Alufolie und ein feines Drahtgeflecht unter dem Mantel. Halten Störungen von den Datenleitungen fern.",
+   "color": "#C2C6C9",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0.0,
+     "y": 0.0,
+     "w": 97.0
+    },
+    {
+     "shape": "cyl",
+     "x": 3.5,
+     "y": 3.5,
+     "w": 90.0
+    },
+    {
+     "shape": "cyl",
+     "x": 7.0,
+     "y": 7.0,
+     "w": 83.0
+    },
+    {
+     "shape": "cyl",
+     "x": 10.5,
+     "y": 10.5,
+     "w": 76.0
+    }
+   ]
+  },
+  {
+   "id": "adern",
+   "component_id": "cable_copper_core",
+   "material_id": "copper",
+   "name": "Vier Kupferadern",
+   "short": "Adern",
+   "shape": "cyl",
+   "x": 3,
+   "y": 9,
+   "w": 94,
+   "z": 1,
+   "h": 8.5,
+   "explode": [
+    0,
+    0,
+    99.0
+   ],
+   "mass": 7,
+   "materials": [
+    [
+     "kupfer",
+     70
+    ],
+    [
+     "hdpe",
+     30
+    ]
+   ],
+   "info": "Rot und Schwarz leiten den Ladestrom, Grün und Weiß die Daten. Jede Ader ist einzeln isoliert, innen sind feine Kupferlitzen.",
+   "color": "#C5803D",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0.0,
+     "y": 0.0,
+     "w": 94.0
+    },
+    {
+     "shape": "cyl",
+     "x": 3.5,
+     "y": 3.5,
+     "w": 87.0
+    },
+    {
+     "shape": "cyl",
+     "x": 7.0,
+     "y": 7.0,
+     "w": 80.0
+    },
+    {
+     "shape": "cyl",
+     "x": 10.5,
+     "y": 10.5,
+     "w": 73.0
+    },
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 44,
+     "w": 5,
+     "fill": "#C8423A"
+    },
+    {
+     "shape": "cyl",
+     "x": 8.5,
+     "y": 44,
+     "w": 5,
+     "fill": "#2B2B2B"
+    },
+    {
+     "shape": "cyl",
+     "x": 14,
+     "y": 44,
+     "w": 5,
+     "fill": "#3E9A57"
+    },
+    {
+     "shape": "cyl",
+     "x": 19.5,
+     "y": 44,
+     "w": 5,
+     "fill": "#F4F4F2"
+    }
+   ]
+  },
+  {
+   "id": "huelle_a",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Steckergehäuse USB-A",
+   "short": "Gehäuse A",
+   "shape": "box",
+   "x": 103,
+   "y": 12,
+   "w": 16,
+   "d": 28,
+   "z": 0,
+   "h": 8,
+   "r": 3,
+   "explode": [
+    28,
+    0,
     0
    ],
-   "mass": 13.39,
+   "mass": 2.5,
    "materials": [
     [
      "pcabs",
      100
     ]
    ],
+   "info": "Angespritzter Kunststoff mit Knickschutz. Das Kabel direkt dahinter abschneiden, dann sind Stecker und Kabel getrennt.",
+   "color": "#3A3D40",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 24,
+     "w": 10,
+     "d": 3,
+     "r": 1
+    }
+   ]
+  },
+  {
+   "id": "zunge_a",
+   "component_id": "connector_shell",
+   "material_id": "copper",
+   "name": "Kontaktzunge USB-A",
+   "short": "Kontakte A",
+   "shape": "box",
+   "x": 106,
+   "y": 1,
+   "w": 10,
+   "d": 10,
+   "z": 3,
+   "h": 1.8,
+   "r": 0.3,
+   "explode": [
+    28,
+    -16,
+    14
+   ],
+   "mass": 0.4,
+   "materials": [
+    [
+     "pcabs",
+     60
+    ],
+    [
+     "kontakte",
+     40
+    ]
+   ],
+   "info": "Vier vergoldete Kontakte auf einem Kunststoffsteg. Die dünne Goldschicht schützt vor Rost.",
+   "color": "#2C5FA8",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 1,
+     "w": 1.4,
+     "d": 6,
+     "r": 0.3,
+     "fill": "#E1B94F"
+    },
+    {
+     "shape": "box",
+     "x": 3.5,
+     "y": 1,
+     "w": 1.4,
+     "d": 7,
+     "r": 0.3,
+     "fill": "#E1B94F"
+    },
+    {
+     "shape": "box",
+     "x": 5.5,
+     "y": 1,
+     "w": 1.4,
+     "d": 7,
+     "r": 0.3,
+     "fill": "#E1B94F"
+    },
+    {
+     "shape": "box",
+     "x": 8,
+     "y": 1,
+     "w": 1.4,
+     "d": 6,
+     "r": 0.3,
+     "fill": "#E1B94F"
+    }
+   ]
+  },
+  {
+   "id": "blech_a",
+   "component_id": "connector_shell",
+   "material_id": "steel",
+   "name": "Steckerhülse USB-A",
+   "short": "Hülse A",
+   "shape": "box",
+   "x": 105,
+   "y": 0,
+   "w": 12,
+   "d": 12,
+   "z": 1.75,
+   "h": 4.5,
+   "r": 0.3,
+   "explode": [
+    28,
+    -18,
+    0
+   ],
+   "mass": 1.5,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Vernickeltes Stahlblech. Lässt sich mit einem Magneten vom Kunststoff trennen.",
+   "color": "#B7BCC0",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 3,
+     "w": 2.5,
+     "d": 2,
+     "r": 0.3,
+     "fill": "#5E656A"
+    },
+    {
+     "shape": "box",
+     "x": 7.5,
+     "y": 3,
+     "w": 2.5,
+     "d": 2,
+     "r": 0.3,
+     "fill": "#5E656A"
+    }
+   ]
+  },
+  {
+   "id": "huelle_c",
+   "component_id": "plastic_housing",
    "material_id": "abs",
-   "info": "Look for hidden screws under rubber feet or labels, then pry the clips open."
+   "name": "Steckergehäuse USB-C",
+   "short": "Gehäuse C",
+   "shape": "box",
+   "x": 104,
+   "y": 72,
+   "w": 14,
+   "d": 26,
+   "z": 0.75,
+   "h": 6.5,
+   "r": 3,
+   "explode": [
+    28,
+    0,
+    0
+   ],
+   "mass": 1.8,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Kleiner und flacher als USB-A. Wie beim anderen Stecker angespritzt und nicht zerlegbar.",
+   "color": "#3A3D40",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 1,
+     "w": 8,
+     "d": 3,
+     "r": 1
+    }
+   ]
+  },
+  {
+   "id": "platine_c",
+   "component_id": "connector_shell",
+   "material_id": "pcb",
+   "name": "Mini-Platine USB-C",
+   "short": "Platine C",
+   "shape": "box",
+   "x": 107,
+   "y": 96,
+   "w": 8,
+   "d": 6,
+   "z": 3,
+   "h": 0.8,
+   "r": 0.3,
+   "explode": [
+    28,
+    14,
+    14
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "fr4",
+     55
+    ],
+    [
+     "kupfer",
+     20
+    ],
+    [
+     "chip",
+     15
+    ],
+    [
+     "lot",
+     10
+    ]
+   ],
+   "info": "Winzige Leiterplatte mit einem Widerstand. Er sagt dem Handy, wie viel Strom das Kabel verträgt.",
+   "color": "#2E6B45",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 1.5,
+     "w": 2,
+     "d": 1.2,
+     "r": 0.2,
+     "fill": "#22272B"
+    }
+   ]
+  },
+  {
+   "id": "blech_c",
+   "component_id": "connector_shell",
+   "material_id": "steel",
+   "name": "Steckerhülse USB-C",
+   "short": "Hülse C",
+   "shape": "box",
+   "x": 106.8,
+   "y": 98,
+   "w": 8.4,
+   "d": 7,
+   "z": 2.7,
+   "h": 2.6,
+   "r": 1.3,
+   "explode": [
+    28,
+    16,
+    0
+   ],
+   "mass": 1,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Ovale Stahlhülse, beidseitig steckbar. Innen sitzen 24 Kontakte auf einer Zunge.",
+   "color": "#B7BCC0",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1.2,
+     "y": 0.8,
+     "w": 6,
+     "d": 1,
+     "r": 0.5,
+     "fill": "#2A2E31"
+    }
+   ]
   }
  ]
 }
