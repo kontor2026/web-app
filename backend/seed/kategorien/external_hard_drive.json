@@ -4,7 +4,7 @@
  "name_en": "External Hard Drive",
  "klasse": "Elektroschrott · Kleingerät",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -21,45 +21,49 @@
  "werte": [
   {
    "k": "Rohstoffwert",
-   "v": "≈ 0,89 €",
+   "v": "≈ 0,62 €",
    "hint": "Gold, Silber, Palladium zu Preisen vom 13.11. Ohne Palladium (kein Preis)."
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 1,52 kg",
+   "v": "≈ 1,54 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 1,23 kg",
-   "hint": "spart 0,30 kg, wenn recycelte Materialien eingesetzt werden"
+   "v": "≈ 0,68 kg",
+   "hint": "spart 0,86 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Cu": 16215.0,
-   "Fe": 4864.0,
-   "Ag": 26.0,
-   "Au": 5.84,
-   "Pd": 2.59
+   "Al": 56600.0,
+   "Fe": 17229.0,
+   "Cu": 10510.0,
+   "Ag": 12.0,
+   "Au": 2.79,
+   "Pd": 1.24
   },
   "herkunft": {
-   "Cu": "Modellmassen (Schätzung)",
+   "Al": "Modellmassen (Schätzung)",
    "Fe": "Modellmassen (Schätzung)",
-   "Ag": "32 g Leiterplatte × oeko2012 Tab, 15, Motherboard Notebook (Umicore 2011)",
-   "Au": "32 g Leiterplatte × oeko2012 Tab, 15, Motherboard Notebook (Umicore 2011)",
-   "Pd": "32 g Leiterplatte × oeko2012 Tab, 15, Motherboard Notebook (Umicore 2011)"
+   "Cu": "Modellmassen (Schätzung)",
+   "Ag": "16 g Leiterplatte × oeko2012 Tab, 15, Motherboard Notebook (Umicore 2011)",
+   "Au": "16 g Leiterplatte × oeko2012 Tab, 15, Motherboard Notebook (Umicore 2011)",
+   "Pd": "16 g Leiterplatte × oeko2012 Tab, 15, Motherboard Notebook (Umicore 2011)"
   },
   "materialien_g": {
-   "abs": 135.1,
-   "pcb": 32.4,
-   "mixed_electronics": 32.4
+   "abs": 89.5,
+   "aluminium": 56.6,
+   "mixed_electronics": 24.7,
+   "pcb": 15.5,
+   "steel": 13.8
   },
-  "co2_kg": 1.521,
-  "co2_mit_recyclat_kg": 1.225,
-  "co2_ersparnis_kg": 0.296,
+  "co2_kg": 1.544,
+  "co2_mit_recyclat_kg": 0.679,
+  "co2_ersparnis_kg": 0.865,
   "co2_ohne_faktor": [],
-  "rohstoffwert_eur": 0.89,
+  "rohstoffwert_eur": 0.62,
   "wert_ohne_preis": [
    "Pd"
   ],
@@ -109,55 +113,368 @@
   "nicht": "Nicht in Restmüll oder Gelbe Tonne",
   "warnung": "Kabel und Stecker dranlassen."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "plastic_housing_ober",
+   "id": "oberschale",
    "component_id": "plastic_housing",
-   "name": "Plastic Housing (Oberteil)",
-   "short": "Plastic Housing (O",
+   "material_id": "abs",
+   "name": "Gehäuse-Oberteil",
+   "short": "Oberteil",
    "shape": "box",
    "x": 0,
    "y": 0,
-   "w": 80.0,
-   "d": 115.0,
-   "h": 4.0,
-   "z": 12.0,
-   "r": 9.6,
+   "w": 80,
+   "d": 115,
+   "z": 10,
+   "h": 10,
+   "r": 8,
    "explode": [
     0,
     0,
-    127.8
+    366.4
    ],
-   "mass": 40.54,
+   "mass": 43.2,
    "materials": [
     [
      "pcabs",
      100
     ]
    ],
-   "material_id": "abs",
-   "info": "Look for hidden screws under rubber feet or labels, then pry the clips open."
+   "info": "Kunststoffhälfte, nur mit Rastnasen eingeclipst. Mit einem Plektrum an der Fuge entlang aufhebeln.",
+   "color": "#2B2F33",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 37,
+     "y": 105,
+     "w": 3,
+     "fill": "#7FC8F0"
+    }
+   ]
   },
   {
-   "id": "circuit_board",
-   "component_id": "circuit_board",
-   "name": "Circuit Board",
-   "short": "Circuit Board",
+   "id": "hdd_deckel",
+   "component_id": "hard_drive",
+   "material_id": "steel",
+   "name": "Laufwerksdeckel",
+   "short": "Deckel",
    "shape": "box",
-   "x": 43.2,
-   "y": 10.4,
-   "w": 33.6,
-   "d": 48.3,
-   "h": 5.4,
-   "z": 2.4,
-   "r": 4.0,
+   "x": 5,
+   "y": 4,
+   "w": 70,
+   "d": 100,
+   "z": 13,
+   "h": 0.6,
+   "r": 3,
    "explode": [
     0,
     0,
-    93.0
+    312.8
    ],
-   "mass": 32.43,
+   "mass": 12.3,
+   "materials": [
+    [
+     "stahl",
+     95
+    ],
+    [
+     "folien",
+     5
+    ]
+   ],
+   "info": "Dünnes Stahlblech, mit Torx-Schrauben verschraubt (eine steckt oft unter dem Etikett). Innen ist es staubfrei.",
+   "color": "#B9BEC2",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 6,
+     "y": 50,
+     "w": 58,
+     "d": 42,
+     "r": 2,
+     "fill": "#E8E8E2"
+    },
+    {
+     "shape": "cyl",
+     "x": 2,
+     "y": 2,
+     "w": 2.5,
+     "fill": "#5E656A"
+    },
+    {
+     "shape": "cyl",
+     "x": 65.5,
+     "y": 2,
+     "w": 2.5,
+     "fill": "#5E656A"
+    },
+    {
+     "shape": "cyl",
+     "x": 2,
+     "y": 95.5,
+     "w": 2.5,
+     "fill": "#5E656A"
+    },
+    {
+     "shape": "cyl",
+     "x": 65.5,
+     "y": 95.5,
+     "w": 2.5,
+     "fill": "#5E656A"
+    },
+    {
+     "shape": "cyl",
+     "x": 32.2,
+     "y": 31.7,
+     "w": 2.5,
+     "fill": "#5E656A"
+    }
+   ]
+  },
+  {
+   "id": "kopfarm",
+   "component_id": "hard_drive",
+   "material_id": "aluminium",
+   "name": "Kopfarm mit Lese-/Schreibkopf",
+   "short": "Kopfarm",
+   "shape": "box",
+   "x": 42,
+   "y": 36,
+   "w": 10,
+   "d": 50,
+   "z": 10.5,
+   "h": 1.5,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    263.8
+   ],
+   "mass": 4.1,
+   "materials": [
+    [
+     "alu",
+     80
+    ],
+    [
+     "kupfer",
+     15
+    ],
+    [
+     "chip",
+     5
+    ]
+   ],
+   "info": "Schwenkt in Millisekunden über die Scheibe. Der Kopf an der Spitze schwebt nur wenige Nanometer über der Oberfläche.",
+   "color": "#9BA3A8",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3.5,
+     "y": 1,
+     "w": 3,
+     "d": 4,
+     "r": 0.5,
+     "fill": "#5E656A"
+    },
+    {
+     "shape": "cyl",
+     "x": 1,
+     "y": 38,
+     "w": 8,
+     "fill": "#B87333"
+    }
+   ]
+  },
+  {
+   "id": "scheibe",
+   "component_id": "hard_drive",
+   "material_id": "aluminium",
+   "name": "Magnetscheibe (Platter)",
+   "short": "Scheibe",
+   "shape": "cyl",
+   "x": 6,
+   "y": 4.5,
+   "w": 65,
+   "z": 9,
+   "h": 1.3,
+   "explode": [
+    0,
+    0,
+    214.0
+   ],
+   "mass": 9.3,
+   "materials": [
+    [
+     "alu",
+     92
+    ],
+    [
+     "nickel",
+     8
+    ]
+   ],
+   "info": "Aluminiumscheibe mit hauchdünner Magnetschicht, dreht sich 5.400-mal pro Minute. Zum Datenschutz zerkratzen oder verbiegen.",
+   "color": "#D9DDE0",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 26,
+     "y": 26,
+     "w": 13,
+     "fill": "#9BA3A8"
+    }
+   ]
+  },
+  {
+   "id": "spindel",
+   "component_id": "hard_drive",
+   "material_id": "mixed_electronics",
+   "name": "Spindelmotor",
+   "short": "Spindelmotor",
+   "shape": "cyl",
+   "x": 26,
+   "y": 24.5,
+   "w": 25,
+   "z": 5.5,
+   "h": 3.5,
+   "explode": [
+    0,
+    0,
+    164.0
+   ],
+   "mass": 14.4,
+   "materials": [
+    [
+     "stahl",
+     40
+    ],
+    [
+     "kupfer",
+     25
+    ],
+    [
+     "ndfeb",
+     15
+    ],
+    [
+     "alu",
+     20
+    ]
+   ],
+   "info": "Flacher Motor mit Kupferspulen und Ringmagnet, dreht die Scheibe. Steckt fest in der Grundplatte.",
+   "color": "#7C858C",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 7.5,
+     "y": 7.5,
+     "w": 10,
+     "fill": "#5E656A"
+    }
+   ]
+  },
+  {
+   "id": "magnet",
+   "component_id": "hard_drive",
+   "material_id": "mixed_electronics",
+   "name": "Schwingspulen-Magnet",
+   "short": "Magnet",
+   "shape": "box",
+   "x": 50,
+   "y": 78,
+   "w": 21,
+   "d": 20,
+   "z": 6,
+   "h": 4,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    163.5
+   ],
+   "mass": 10.3,
+   "materials": [
+    [
+     "ndfeb",
+     55
+    ],
+    [
+     "stahl",
+     45
+    ]
+   ],
+   "info": "Sehr starker Neodym-Magnet zwischen zwei Stahlplatten, er bewegt den Kopfarm. Finger aufpassen, er schnappt kräftig zu.",
+   "color": "#8A9196"
+  },
+  {
+   "id": "grundplatte",
+   "component_id": "hard_drive",
+   "material_id": "aluminium",
+   "name": "Laufwerks-Grundplatte",
+   "short": "Grundplatte",
+   "shape": "box",
+   "x": 5,
+   "y": 4,
+   "w": 70,
+   "d": 100,
+   "z": 4.5,
+   "h": 8.5,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    106.5
+   ],
+   "mass": 43.2,
+   "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "info": "Gegossenes Aluminium, trägt Motor, Arm und Magnet. Ausgeschlachtet ist sie gut verwertbares Altmetall.",
+   "color": "#C9CED2",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 1,
+     "y": 0.5,
+     "w": 67,
+     "fill": "#AEB4B8"
+    },
+    {
+     "shape": "box",
+     "x": 38,
+     "y": 70,
+     "w": 30,
+     "d": 28,
+     "r": 2,
+     "fill": "#AEB4B8"
+    }
+   ]
+  },
+  {
+   "id": "hdd_platine",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "Laufwerksplatine",
+   "short": "Laufwerksplatine",
+   "shape": "box",
+   "x": 6,
+   "y": 48,
+   "w": 68,
+   "d": 54,
+   "z": 3.5,
+   "h": 1,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    56.5
+   ],
+   "mass": 9.3,
    "materials": [
     [
      "fr4",
@@ -176,76 +493,186 @@
      10
     ]
    ],
-   "material_id": "pcb",
-   "info": "Unscrew and unplug all ribbon cables; hand in at an e-waste collection point."
+   "info": "Steuert Motor und Kopf. An der Unterseite des Laufwerks verschraubt, mit SATA-Stecker zur Brückenplatine.",
+   "color": "#2E6B45",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 12,
+     "w": 14,
+     "d": 14,
+     "r": 0.5,
+     "fill": "#3F4547"
+    },
+    {
+     "shape": "box",
+     "x": 30,
+     "y": 14,
+     "w": 10,
+     "d": 10,
+     "r": 0.5,
+     "fill": "#3F4547"
+    },
+    {
+     "shape": "box",
+     "x": 8,
+     "y": 47,
+     "w": 52,
+     "d": 6,
+     "r": 0.5,
+     "fill": "#D4AF37"
+    }
+   ]
   },
   {
-   "id": "hard_drive",
-   "component_id": "hard_drive",
-   "name": "Hard Drive",
-   "short": "Hard Drive",
+   "id": "usb_buchse",
+   "component_id": "circuit_board",
+   "material_id": "steel",
+   "name": "USB-Micro-B-Buchse",
+   "short": "USB-Buchse",
    "shape": "box",
-   "x": 3.2,
-   "y": 10.4,
-   "w": 33.6,
-   "d": 48.3,
-   "h": 5.4,
-   "z": 2.4,
-   "r": 4.0,
+   "x": 31,
+   "y": 108,
+   "w": 12,
+   "d": 7,
+   "z": 5.2,
+   "h": 3.5,
+   "r": 0.5,
    "explode": [
     0,
     0,
-    48.6
+    106.0
    ],
-   "mass": 32.43,
+   "mass": 1.5,
    "materials": [
     [
-     "chip",
-     30
+     "stahl",
+     70
     ],
     [
-     "kupfer",
-     30
+     "kontakte",
+     15
     ],
     [
      "pcabs",
-     25
-    ],
-    [
-     "stahl",
      15
     ]
    ],
-   "material_id": "mixed_electronics",
-   "info": "Unscrew it from the drive bay; wipe or physically destroy it to protect your data."
+   "info": "Breite USB-3-Buchse für das Kabel zum Computer. Angelötet, wackelt sie oft nach Jahren.",
+   "color": "#C9CED2",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1.5,
+     "y": 4,
+     "w": 9,
+     "d": 2,
+     "r": 0.5,
+     "fill": "#2A2E31"
+    }
+   ]
   },
   {
-   "id": "plastic_housing",
-   "component_id": "plastic_housing",
-   "name": "Plastic Housing (Unterteil)",
-   "short": "Plastic Housing (U",
+   "id": "bruecke",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "USB-SATA-Brückenplatine",
+   "short": "Brückenplatine",
    "shape": "box",
-   "x": 0,
-   "y": 0,
-   "w": 80.0,
-   "d": 115.0,
-   "h": 12.0,
-   "z": 0,
-   "r": 9.6,
+   "x": 8,
+   "y": 104,
+   "w": 64,
+   "d": 10,
+   "z": 4,
+   "h": 1.2,
+   "r": 1,
    "explode": [
     0,
     0,
-    0
+    56.0
    ],
-   "mass": 94.59,
+   "mass": 6.2,
+   "materials": [
+    [
+     "fr4",
+     55
+    ],
+    [
+     "kupfer",
+     20
+    ],
+    [
+     "chip",
+     15
+    ],
+    [
+     "lot",
+     10
+    ]
+   ],
+   "info": "Wandelt USB in SATA um. Ohne sie lässt sich das Laufwerk direkt in einen Laptop einbauen.",
+   "color": "#2E6B45",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 6,
+     "y": 2,
+     "w": 7,
+     "d": 6,
+     "r": 0.3,
+     "fill": "#3F4547"
+    },
+    {
+     "shape": "box",
+     "x": 50,
+     "y": 2,
+     "w": 8,
+     "d": 6,
+     "r": 0.3,
+     "fill": "#3F4547"
+    }
+   ]
+  },
+  {
+   "id": "unterschale",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Gehäuse-Unterteil",
+   "short": "Unterteil",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 80,
+   "d": 115,
+   "z": 0,
+   "h": 10,
+   "r": 8,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 46.3,
    "materials": [
     [
      "pcabs",
      100
     ]
    ],
-   "material_id": "abs",
-   "info": "Look for hidden screws under rubber feet or labels, then pry the clips open."
+   "info": "Wanne mit Gummifüßen, das Laufwerk liegt in Gummi-Puffern. Kunststoff ohne Elektronik.",
+   "color": "#2B2F33",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 3,
+     "w": 72,
+     "d": 102,
+     "r": 6,
+     "fill": "#23272A"
+    }
+   ]
   }
  ]
 }

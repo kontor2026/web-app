@@ -4,7 +4,7 @@
  "name_en": "Fitness Tracker",
  "klasse": "Elektroschrott · Kleingerät",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -21,48 +21,52 @@
  "werte": [
   {
    "k": "Rohstoffwert",
-   "v": "≈ 0,09 €",
-   "hint": "Silber, Kobalt, Kupfer zu Preisen vom 13.11. Ohne Kobalt (kein Preis)."
+   "v": "≈ 0,03 €",
+   "hint": "Kobalt, Kupfer zu Preisen vom 13.11. Ohne Kobalt (kein Preis)."
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 0,26 kg",
+   "v": "≈ 0,20 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 0,23 kg",
-   "hint": "spart 0,03 kg, wenn recycelte Materialien eingesetzt werden"
+   "v": "≈ 0,19 kg",
+   "hint": "spart 0,01 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Cu": 1304.0,
-   "Al": 978.0,
-   "Co": 893.0,
-   "Ag": 2.61,
-   "Au": 0.59,
-   "Pd": 0.26
+   "Cu": 756.0,
+   "Al": 420.0,
+   "Co": 384.0,
+   "Fe": 126.0,
+   "Ag": 0.9,
+   "Au": 0.2,
+   "Pd": 0.09
   },
   "herkunft": {
    "Cu": "Modellmassen (Schätzung)",
    "Al": "Modellmassen (Schätzung)",
-   "Co": "7 g Akku × 13,7% Kobalt (Schätzung, oeko2012 Tab, 25)",
-   "Ag": "3 g Leiterplatte × oeko2012 Tab, 15, Motherboard Notebook (Umicore 2011)",
-   "Au": "3 g Leiterplatte × oeko2012 Tab, 15, Motherboard Notebook (Umicore 2011)",
-   "Pd": "3 g Leiterplatte × oeko2012 Tab, 15, Motherboard Notebook (Umicore 2011)"
+   "Co": "3 g Akku × 13,7% Kobalt (Schätzung, oeko2012 Tab, 25)",
+   "Fe": "Modellmassen (Schätzung)",
+   "Ag": "1 g Leiterplatte × oeko2012 Tab, 15, Motherboard Notebook (Umicore 2011)",
+   "Au": "1 g Leiterplatte × oeko2012 Tab, 15, Motherboard Notebook (Umicore 2011)",
+   "Pd": "1 g Leiterplatte × oeko2012 Tab, 15, Motherboard Notebook (Umicore 2011)"
   },
   "materialien_g": {
-   "abs": 13.6,
-   "li_ion": 6.5,
-   "pcb": 3.3,
-   "silicone": 1.6
+   "silicone": 14.0,
+   "abs": 4.2,
+   "li_ion": 2.8,
+   "special_glass": 2.1,
+   "pcb": 1.1,
+   "mixed_electronics": 0.8
   },
-  "co2_kg": 0.255,
-  "co2_mit_recyclat_kg": 0.225,
-  "co2_ersparnis_kg": 0.03,
+  "co2_kg": 0.205,
+  "co2_mit_recyclat_kg": 0.194,
+  "co2_ersparnis_kg": 0.011,
   "co2_ohne_faktor": [],
-  "rohstoffwert_eur": 0.09,
+  "rohstoffwert_eur": 0.03,
   "wert_ohne_preis": [
    "Co"
   ],
@@ -112,95 +116,199 @@
   "nicht": "Nicht in Restmüll oder Gelbe Tonne",
   "warnung": "Akku oder Batterie nicht beschädigen. Wenn möglich herausnehmen und getrennt abgeben, fest verbaute Akkus drinlassen."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "plastic_housing_ober",
+   "id": "deckglas",
    "component_id": "plastic_housing",
-   "name": "Plastic Housing (Oberteil)",
-   "short": "Plastic Housing (O",
+   "material_id": "special_glass",
+   "name": "Deckglas",
+   "short": "Deckglas",
    "shape": "box",
-   "x": 0,
-   "y": 0,
-   "w": 20.0,
-   "d": 40.0,
-   "h": 2.2,
-   "z": 6.6,
-   "r": 2.4,
+   "x": 0.5,
+   "y": 4,
+   "w": 19,
+   "d": 38,
+   "z": 10,
+   "h": 1,
+   "r": 9,
    "explode": [
     0,
     0,
-    42.0
+    113.6
    ],
-   "mass": 4.08,
+   "mass": 1.12,
+   "materials": [
+    [
+     "glas",
+     100
+    ]
+   ],
+   "info": "Gehärtetes, gewölbtes Glas über dem Display. Mit dem Rahmen verklebt.",
+   "color": "#C9DEDF",
+   "opacity": 0.6
+  },
+  {
+   "id": "display",
+   "component_id": "circuit_board",
+   "material_id": "special_glass",
+   "name": "OLED-Display",
+   "short": "Display",
+   "shape": "box",
+   "x": 3,
+   "y": 8,
+   "w": 14,
+   "d": 30,
+   "z": 9.2,
+   "h": 0.8,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    95.6
+   ],
+   "mass": 0.93,
+   "materials": [
+    [
+     "displayglas",
+     60
+    ],
+    [
+     "folien",
+     25
+    ],
+    [
+     "kupfer",
+     15
+    ]
+   ],
+   "info": "Leuchtende Pixel ohne Hintergrundlicht. Mit einem winzigen Flachbandkabel an der Platine angesteckt.",
+   "color": "#1F2326",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 6,
+     "w": 10,
+     "d": 6,
+     "r": 1,
+     "fill": "#7FC8F0"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 14,
+     "w": 8,
+     "d": 2,
+     "r": 0.5,
+     "fill": "#5F8F4E"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 18,
+     "w": 6,
+     "d": 2,
+     "r": 0.5,
+     "fill": "#C9A227"
+    }
+   ]
+  },
+  {
+   "id": "oberschale",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Gehäuse-Oberteil",
+   "short": "Oberteil",
+   "shape": "box",
+   "x": 0.5,
+   "y": 4,
+   "w": 19,
+   "d": 38,
+   "z": 5,
+   "h": 5,
+   "r": 9,
+   "explode": [
+    0,
+    0,
+    76.8
+   ],
+   "mass": 2.33,
    "materials": [
     [
      "pcabs",
      100
     ]
    ],
-   "material_id": "abs",
-   "info": "Look for hidden screws under rubber feet or labels, then pry the clips open."
+   "info": "Rahmen aus Kunststoff, oft mit dem Glas und dem Unterteil verklebt. Nur mit Wärme zu öffnen.",
+   "color": "#25292D",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2.5,
+     "y": 4,
+     "w": 14,
+     "d": 30,
+     "r": 2,
+     "fill": "#1E2226"
+    }
+   ]
   },
   {
-   "id": "circuit_board",
+   "id": "motor",
    "component_id": "circuit_board",
-   "name": "Circuit Board",
-   "short": "Circuit Board",
-   "shape": "box",
-   "x": 10.8,
-   "y": 3.6,
-   "w": 8.4,
-   "d": 16.8,
-   "h": 2.97,
-   "z": 1.32,
-   "r": 1.0,
+   "material_id": "mixed_electronics",
+   "name": "Vibrationsmotor",
+   "short": "Vibration",
+   "shape": "cyl",
+   "x": 13.5,
+   "y": 12,
+   "w": 4.5,
+   "z": 4.8,
+   "h": 2.7,
    "explode": [
     0,
     0,
-    32.3
+    43.5
    ],
-   "mass": 3.26,
+   "mass": 0.37,
    "materials": [
     [
-     "fr4",
-     55
+     "stahl",
+     40
     ],
     [
      "kupfer",
-     20
+     30
     ],
     [
-     "chip",
-     15
-    ],
-    [
-     "lot",
-     10
+     "ndfeb",
+     30
     ]
    ],
-   "material_id": "pcb",
-   "info": "Unscrew and unplug all ribbon cables; hand in at an e-waste collection point."
+   "info": "Münzgroßer Motor mit Unwucht. Brummt bei Nachrichten und Weckalarm.",
+   "color": "#B7BCC0"
   },
   {
-   "id": "li_ion_battery",
+   "id": "akku",
    "component_id": "li_ion_battery",
-   "name": "Lithium-Ion Battery",
-   "short": "Lithium-Ion Batter",
+   "material_id": "li_ion",
+   "name": "Lithium-Polymer-Akku",
+   "short": "Akku",
    "shape": "box",
-   "x": 0.8,
-   "y": 3.6,
-   "w": 8.4,
-   "d": 16.8,
-   "h": 2.97,
-   "z": 1.32,
-   "r": 1.0,
+   "x": 3,
+   "y": 10,
+   "w": 10,
+   "d": 20,
+   "z": 4.8,
+   "h": 3.5,
+   "r": 1.5,
    "explode": [
     0,
     0,
-    17.3
+    55.5
    ],
-   "mass": 6.52,
+   "mass": 2.8,
    "materials": [
     [
      "lco",
@@ -223,64 +331,312 @@
      10
     ]
    ],
-   "material_id": "li_ion",
-   "info": "Never puncture or bend it; tape the contacts and bring it to a battery collection point."
+   "info": "Kleine Zelle mit etwa 120 mAh. Fest verklebt: nicht aufbiegen, Kontakte abkleben und zur Batterie-Sammelstelle bringen.",
+   "color": "#9DA6AD",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1.5,
+     "y": 2,
+     "w": 7,
+     "d": 14,
+     "r": 1
+    }
+   ]
   },
   {
-   "id": "silicone_strap",
-   "component_id": "silicone_strap",
-   "name": "Strap",
-   "short": "Strap",
+   "id": "soc",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "Prozessor mit Bluetooth",
+   "short": "Prozessor",
    "shape": "box",
-   "x": 21.2,
-   "y": 2.0,
-   "w": 3.0,
-   "d": 36.0,
-   "h": 3.0,
-   "z": 1.1,
-   "r": 0.4,
+   "x": 4,
+   "y": 31,
+   "w": 6,
+   "d": 6,
+   "z": 4.8,
+   "h": 0.8,
+   "r": 0.3,
    "explode": [
-    22.0,
     0,
-    3.6
+    0,
+    43.5
    ],
-   "mass": 1.63,
+   "mass": 0.14,
    "materials": [
     [
-     "gummi",
+     "chip",
      100
     ]
    ],
-   "material_id": "silicone",
-   "info": "Push the quick-release pin or button to detach the strap."
+   "info": "Wertet die Sensoren aus und funkt die Daten per Bluetooth ans Handy.",
+   "color": "#3F4547"
   },
   {
-   "id": "plastic_housing",
-   "component_id": "plastic_housing",
-   "name": "Plastic Housing (Unterteil)",
-   "short": "Plastic Housing (U",
+   "id": "sensorchip",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "Bewegungssensor",
+   "short": "Sensor",
    "shape": "box",
-   "x": 0,
-   "y": 0,
-   "w": 20.0,
-   "d": 40.0,
-   "h": 6.6,
-   "z": 0,
-   "r": 2.4,
+   "x": 11.5,
+   "y": 32,
+   "w": 4,
+   "d": 4,
+   "z": 4.8,
+   "h": 0.8,
+   "r": 0.3,
    "explode": [
     0,
     0,
-    0
+    43.5
    ],
-   "mass": 9.51,
+   "mass": 0.05,
+   "materials": [
+    [
+     "chip",
+     100
+    ]
+   ],
+   "info": "Misst jede Bewegung des Arms und zählt so die Schritte.",
+   "color": "#3F4547"
+  },
+  {
+   "id": "platine",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "Platine",
+   "short": "Platine",
+   "shape": "box",
+   "x": 2.5,
+   "y": 7,
+   "w": 15,
+   "d": 32,
+   "z": 4,
+   "h": 0.8,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    37.5
+   ],
+   "mass": 0.93,
+   "materials": [
+    [
+     "fr4",
+     55
+    ],
+    [
+     "kupfer",
+     20
+    ],
+    [
+     "chip",
+     15
+    ],
+    [
+     "lot",
+     10
+    ]
+   ],
+   "info": "Winzige, mehrlagige Leiterplatte. Mit den anderen Teilen in die Elektro-Sammlung.",
+   "color": "#2E6B45"
+  },
+  {
+   "id": "unterschale",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Gehäuse-Unterteil",
+   "short": "Unterteil",
+   "shape": "box",
+   "x": 0.5,
+   "y": 4,
+   "w": 19,
+   "d": 38,
+   "z": 1,
+   "h": 4,
+   "r": 9,
+   "explode": [
+    0,
+    0,
+    18.5
+   ],
+   "mass": 1.87,
    "materials": [
     [
      "pcabs",
      100
     ]
    ],
-   "material_id": "abs",
-   "info": "Look for hidden screws under rubber feet or labels, then pry the clips open."
+   "info": "Boden mit Fenster für den Pulssensor und zwei Ladekontakten aus Edelstahl.",
+   "color": "#25292D",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 5,
+     "y": 13,
+     "w": 9,
+     "d": 12,
+     "r": 3,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "cyl",
+     "x": 6,
+     "y": 31,
+     "w": 2.5,
+     "fill": "#C9A227"
+    },
+    {
+     "shape": "cyl",
+     "x": 10.5,
+     "y": 31,
+     "w": 2.5,
+     "fill": "#C9A227"
+    }
+   ]
+  },
+  {
+   "id": "pulssensor",
+   "component_id": "circuit_board",
+   "material_id": "mixed_electronics",
+   "name": "Optischer Pulssensor",
+   "short": "Pulssensor",
+   "shape": "box",
+   "x": 5.5,
+   "y": 17,
+   "w": 9,
+   "d": 12,
+   "z": 0,
+   "h": 1.5,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 0.47,
+   "materials": [
+    [
+     "pcabs",
+     40
+    ],
+    [
+     "led",
+     30
+    ],
+    [
+     "chip",
+     30
+    ]
+   ],
+   "info": "Grüne LEDs leuchten in die Haut, eine Fotodiode misst, wie viel Licht zurückkommt. Daraus wird der Puls berechnet.",
+   "color": "#3A3F44",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 1,
+     "y": 4,
+     "w": 3,
+     "fill": "#5FBF6E"
+    },
+    {
+     "shape": "cyl",
+     "x": 5,
+     "y": 4,
+     "w": 3,
+     "fill": "#5FBF6E"
+    },
+    {
+     "shape": "box",
+     "x": 2.5,
+     "y": 8,
+     "w": 4,
+     "d": 2.5,
+     "r": 0.5,
+     "fill": "#22272B"
+    }
+   ]
+  },
+  {
+   "id": "armband_hinten",
+   "component_id": "silicone_strap",
+   "material_id": "silicone",
+   "name": "Armband, hinteres Teil (gekürzt)",
+   "short": "Armband",
+   "shape": "box",
+   "x": 2,
+   "y": 0,
+   "w": 16,
+   "d": 4,
+   "z": 2,
+   "h": 3,
+   "r": 1,
+   "explode": [
+    0,
+    -25,
+    0
+   ],
+   "mass": 6.53,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "info": "Silikonband, hier gekürzt gezeigt. Mit dem Schnellverschluss abziehen; reines Silikon gehört in den Restmüll.",
+   "color": "#3A4148",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 0.5,
+     "w": 12,
+     "d": 1.5,
+     "r": 0.5,
+     "fill": "#2B3035"
+    }
+   ]
+  },
+  {
+   "id": "armband_vorne",
+   "component_id": "silicone_strap",
+   "material_id": "silicone",
+   "name": "Armband, vorderes Teil mit Löchern (gekürzt)",
+   "short": "Armband vorne",
+   "shape": "box",
+   "x": 2,
+   "y": 42,
+   "w": 16,
+   "d": 4,
+   "z": 2,
+   "h": 3,
+   "r": 1,
+   "explode": [
+    0,
+    25,
+    0
+   ],
+   "mass": 7.46,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "info": "Zweite Bandhälfte mit Lochreihe und Schließe. Ein Band wiegt zusammen etwa 15 g.",
+   "color": "#3A4148",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 6.5,
+     "y": 1,
+     "w": 3,
+     "fill": "#2B3035"
+    }
+   ]
   }
  ]
 }

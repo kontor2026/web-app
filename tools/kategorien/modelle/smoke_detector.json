@@ -1,0 +1,646 @@
+{
+ "parts": [
+  {
+   "id": "pruefknopf",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Prüftaste",
+   "short": "Prüftaste",
+   "shape": "cyl",
+   "x": 40,
+   "y": 40,
+   "w": 20,
+   "z": 37,
+   "h": 3,
+   "explode": [
+    0,
+    0,
+    216.6
+   ],
+   "mass": 2.1,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Drücken löst einen Probealarm aus. Einmal im Monat testen, ob Batterie und Summer noch funktionieren.",
+   "color": "#D8DAD6",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 6,
+     "y": 6,
+     "w": 8,
+     "fill": "#C9302C"
+    }
+   ]
+  },
+  {
+   "id": "kuppe",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Haubenkuppe",
+   "short": "Kuppe",
+   "shape": "cyl",
+   "x": 22,
+   "y": 22,
+   "w": 56,
+   "z": 33,
+   "h": 5,
+   "explode": [
+    0,
+    0,
+    195.6
+   ],
+   "mass": 8.4,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Mittlerer, erhöhter Teil der Haube. Ein Stück mit der Haube, im Modell getrennt gezeigt.",
+   "color": "#ECEDEA",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 16,
+     "y": 16,
+     "w": 24,
+     "fill": "#D8DAD6"
+    }
+   ]
+  },
+  {
+   "id": "haube",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Haube mit Raucheinlässen",
+   "short": "Haube",
+   "shape": "cyl",
+   "x": 2,
+   "y": 2,
+   "w": 96,
+   "z": 20,
+   "h": 13,
+   "explode": [
+    0,
+    0,
+    195.6
+   ],
+   "mass": 23.1,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Rauch zieht durch die Schlitze ringsum ein. Haube gegen den Uhrzeigersinn drehen und abnehmen.",
+   "color": "#ECEDEA",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 83.5,
+     "y": 45.5,
+     "w": 5,
+     "fill": "#B9BCB8"
+    },
+    {
+     "shape": "cyl",
+     "x": 80.61,
+     "y": 60.04,
+     "w": 5,
+     "fill": "#B9BCB8"
+    },
+    {
+     "shape": "cyl",
+     "x": 72.37,
+     "y": 72.37,
+     "w": 5,
+     "fill": "#B9BCB8"
+    },
+    {
+     "shape": "cyl",
+     "x": 60.04,
+     "y": 80.61,
+     "w": 5,
+     "fill": "#B9BCB8"
+    },
+    {
+     "shape": "cyl",
+     "x": 45.5,
+     "y": 83.5,
+     "w": 5,
+     "fill": "#B9BCB8"
+    },
+    {
+     "shape": "cyl",
+     "x": 30.96,
+     "y": 80.61,
+     "w": 5,
+     "fill": "#B9BCB8"
+    },
+    {
+     "shape": "cyl",
+     "x": 18.63,
+     "y": 72.37,
+     "w": 5,
+     "fill": "#B9BCB8"
+    },
+    {
+     "shape": "cyl",
+     "x": 10.39,
+     "y": 60.04,
+     "w": 5,
+     "fill": "#B9BCB8"
+    },
+    {
+     "shape": "cyl",
+     "x": 7.5,
+     "y": 45.5,
+     "w": 5,
+     "fill": "#B9BCB8"
+    },
+    {
+     "shape": "cyl",
+     "x": 10.39,
+     "y": 30.96,
+     "w": 5,
+     "fill": "#B9BCB8"
+    },
+    {
+     "shape": "cyl",
+     "x": 18.63,
+     "y": 18.63,
+     "w": 5,
+     "fill": "#B9BCB8"
+    },
+    {
+     "shape": "cyl",
+     "x": 30.96,
+     "y": 10.39,
+     "w": 5,
+     "fill": "#B9BCB8"
+    },
+    {
+     "shape": "cyl",
+     "x": 45.5,
+     "y": 7.5,
+     "w": 5,
+     "fill": "#B9BCB8"
+    },
+    {
+     "shape": "cyl",
+     "x": 60.04,
+     "y": 10.39,
+     "w": 5,
+     "fill": "#B9BCB8"
+    },
+    {
+     "shape": "cyl",
+     "x": 72.37,
+     "y": 18.63,
+     "w": 5,
+     "fill": "#B9BCB8"
+    },
+    {
+     "shape": "cyl",
+     "x": 80.61,
+     "y": 30.96,
+     "w": 5,
+     "fill": "#B9BCB8"
+    }
+   ]
+  },
+  {
+   "id": "rauchkammer",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Rauchkammer (Labyrinth)",
+   "short": "Rauchkammer",
+   "shape": "cyl",
+   "x": 16,
+   "y": 31,
+   "w": 38,
+   "z": 11,
+   "h": 14,
+   "explode": [
+    0,
+    0,
+    150.6
+   ],
+   "mass": 5.3,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Schwarzes Labyrinth mit feinem Insektengitter: Rauch kommt hinein, Licht von außen nicht. Lässt sich abziehen.",
+   "color": "#2B2F33",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 32.5,
+     "y": 17.5,
+     "w": 3,
+     "fill": "#4A5156"
+    },
+    {
+     "shape": "cyl",
+     "x": 30.49,
+     "y": 25.0,
+     "w": 3,
+     "fill": "#4A5156"
+    },
+    {
+     "shape": "cyl",
+     "x": 25.0,
+     "y": 30.49,
+     "w": 3,
+     "fill": "#4A5156"
+    },
+    {
+     "shape": "cyl",
+     "x": 17.5,
+     "y": 32.5,
+     "w": 3,
+     "fill": "#4A5156"
+    },
+    {
+     "shape": "cyl",
+     "x": 10.0,
+     "y": 30.49,
+     "w": 3,
+     "fill": "#4A5156"
+    },
+    {
+     "shape": "cyl",
+     "x": 4.51,
+     "y": 25.0,
+     "w": 3,
+     "fill": "#4A5156"
+    },
+    {
+     "shape": "cyl",
+     "x": 2.5,
+     "y": 17.5,
+     "w": 3,
+     "fill": "#4A5156"
+    },
+    {
+     "shape": "cyl",
+     "x": 4.51,
+     "y": 10.0,
+     "w": 3,
+     "fill": "#4A5156"
+    },
+    {
+     "shape": "cyl",
+     "x": 10.0,
+     "y": 4.51,
+     "w": 3,
+     "fill": "#4A5156"
+    },
+    {
+     "shape": "cyl",
+     "x": 17.5,
+     "y": 2.5,
+     "w": 3,
+     "fill": "#4A5156"
+    },
+    {
+     "shape": "cyl",
+     "x": 25.0,
+     "y": 4.51,
+     "w": 3,
+     "fill": "#4A5156"
+    },
+    {
+     "shape": "cyl",
+     "x": 30.49,
+     "y": 10.0,
+     "w": 3,
+     "fill": "#4A5156"
+    },
+    {
+     "shape": "cyl",
+     "x": 11,
+     "y": 11,
+     "w": 16,
+     "fill": "#1E2226"
+    }
+   ]
+  },
+  {
+   "id": "ir_led",
+   "component_id": "circuit_board",
+   "material_id": "mixed_electronics",
+   "name": "Infrarot-LED",
+   "short": "IR-LED",
+   "shape": "cyl",
+   "x": 22,
+   "y": 46,
+   "w": 5,
+   "z": 9.6,
+   "h": 5,
+   "explode": [
+    0,
+    0,
+    107.0
+   ],
+   "mass": 0.2,
+   "materials": [
+    [
+     "led",
+     60
+    ],
+    [
+     "kupfer",
+     40
+    ]
+   ],
+   "info": "Sendet regelmäßig unsichtbare Lichtblitze in die Kammer.",
+   "color": "#5A5F8C",
+   "opacity": 0.85
+  },
+  {
+   "id": "fotodiode",
+   "component_id": "circuit_board",
+   "material_id": "mixed_electronics",
+   "name": "Fotodiode",
+   "short": "Fotodiode",
+   "shape": "cyl",
+   "x": 42,
+   "y": 46,
+   "w": 5,
+   "z": 9.6,
+   "h": 5,
+   "explode": [
+    0,
+    0,
+    107.0
+   ],
+   "mass": 0.2,
+   "materials": [
+    [
+     "chip",
+     60
+    ],
+    [
+     "kupfer",
+     40
+    ]
+   ],
+   "info": "Steht schräg zur LED und sieht normalerweise kein Licht. Rauchteilchen streuen das Licht zu ihr: Alarm.",
+   "color": "#2B2F33"
+  },
+  {
+   "id": "piezo",
+   "component_id": "piezo_buzzer",
+   "material_id": "mixed_electronics",
+   "name": "Piezo-Summer",
+   "short": "Summer",
+   "shape": "cyl",
+   "x": 37,
+   "y": 73,
+   "w": 20,
+   "z": 9.6,
+   "h": 7,
+   "explode": [
+    0,
+    0,
+    107.0
+   ],
+   "mass": 4.2,
+   "materials": [
+    [
+     "keramik",
+     35
+    ],
+    [
+     "messing",
+     35
+    ],
+    [
+     "pcabs",
+     30
+    ]
+   ],
+   "info": "Keramikplättchen auf Messing schwingt bei Spannung und piept mit 85 dB. Auf der Platine lassen.",
+   "color": "#2B2F33",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 7,
+     "y": 7,
+     "w": 6,
+     "fill": "#B8A060"
+    }
+   ]
+  },
+  {
+   "id": "mikrocontroller",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "Steuerchip",
+   "short": "Chip",
+   "shape": "box",
+   "x": 22,
+   "y": 16,
+   "w": 10,
+   "d": 8,
+   "z": 9.6,
+   "h": 1.4,
+   "r": 0.5,
+   "explode": [
+    0,
+    0,
+    107.0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "chip",
+     100
+    ]
+   ],
+   "info": "Misst alle paar Sekunden, prüft die Batterie und löst den Alarm aus.",
+   "color": "#3F4547"
+  },
+  {
+   "id": "platine",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "Platine",
+   "short": "Platine",
+   "shape": "cyl",
+   "x": 6,
+   "y": 6,
+   "w": 88,
+   "z": 8,
+   "h": 1.6,
+   "explode": [
+    0,
+    0,
+    92.0
+   ],
+   "mass": 10.5,
+   "materials": [
+    [
+     "fr4",
+     55
+    ],
+    [
+     "kupfer",
+     20
+    ],
+    [
+     "chip",
+     15
+    ],
+    [
+     "lot",
+     10
+    ]
+   ],
+   "info": "Runde Leiterplatte, mit zwei Schrauben im Gehäuse. Zusammen mit dem Gehäuse in die Elektro-Sammlung.",
+   "color": "#2E6B45",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 50,
+     "y": 18,
+     "w": 30,
+     "d": 52,
+     "r": 2,
+     "fill": "#3E7D55"
+    }
+   ]
+  },
+  {
+   "id": "batterie",
+   "component_id": "alkaline_cell",
+   "material_id": "alkaline",
+   "name": "9-V-Blockbatterie",
+   "short": "9-V-Block",
+   "shape": "box",
+   "x": 58,
+   "y": 26,
+   "w": 26.5,
+   "d": 48.5,
+   "z": 9.6,
+   "h": 17.5,
+   "r": 2,
+   "explode": [
+    85,
+    0,
+    0
+   ],
+   "mass": 47.3,
+   "materials": [
+    [
+     "zinkmangan",
+     80
+    ],
+    [
+     "stahl",
+     20
+    ]
+   ],
+   "info": "Alkaline-Block für etwa ein Jahr. Piept der Melder kurz, ist sie leer: Pole abkleben und zur Batterie-Sammelbox.",
+   "color": "#3A6EA5",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 1,
+     "w": 6,
+     "fill": "#B9BEC2"
+    },
+    {
+     "shape": "cyl",
+     "x": 16,
+     "y": 1,
+     "w": 6,
+     "fill": "#B9BEC2"
+    }
+   ]
+  },
+  {
+   "id": "gehaeuse",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Gehäuse-Unterteil",
+   "short": "Gehäuse",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 100,
+   "z": 6,
+   "h": 14,
+   "explode": [
+    0,
+    0,
+    40.0
+   ],
+   "mass": 29.4,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Trägt Platine und Batteriefach. Ein Schieber verhindert, dass die Haube ohne Batterie schließt.",
+   "color": "#ECEDEA"
+  },
+  {
+   "id": "sockel",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Montageplatte",
+   "short": "Montageplatte",
+   "shape": "cyl",
+   "x": 4,
+   "y": 4,
+   "w": 92,
+   "z": 0,
+   "h": 6,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 18.9,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Wird an die Decke geschraubt, der Melder rastet mit einer Drehung ein. Reiner Kunststoff.",
+   "color": "#D8DAD6",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 14,
+     "y": 43,
+     "w": 10,
+     "d": 6,
+     "r": 3,
+     "fill": "#B9BCB8"
+    },
+    {
+     "shape": "box",
+     "x": 68,
+     "y": 43,
+     "w": 10,
+     "d": 6,
+     "r": 3,
+     "fill": "#B9BCB8"
+    }
+   ]
+  }
+ ]
+}

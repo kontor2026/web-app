@@ -4,7 +4,7 @@
  "name_en": "USB Stick",
  "klasse": "Elektroschrott · Kleingerät",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -21,42 +21,46 @@
  "werte": [
   {
    "k": "Rohstoffwert",
-   "v": "≈ 0,05 €",
+   "v": "≈ 0,04 €",
    "hint": "Silber, Kupfer zu Preisen vom 13.11."
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 0,08 kg",
+   "v": "≈ 0,07 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 0,06 kg",
+   "v": "≈ 0,05 kg",
    "hint": "spart 0,02 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Cu": 388.0,
-   "Ag": 1.55,
-   "Au": 0.35,
-   "Pd": 0.16
+   "Fe": 1941.0,
+   "Cu": 317.0,
+   "Ag": 1.18,
+   "Au": 0.27,
+   "Pd": 0.12
   },
   "herkunft": {
+   "Fe": "Modellmassen (Schätzung)",
    "Cu": "Modellmassen (Schätzung)",
-   "Ag": "2 g Leiterplatte × oeko2012 Tab, 15, Motherboard Notebook (Umicore 2011)",
-   "Au": "2 g Leiterplatte × oeko2012 Tab, 15, Motherboard Notebook (Umicore 2011)",
-   "Pd": "2 g Leiterplatte × oeko2012 Tab, 15, Motherboard Notebook (Umicore 2011)"
+   "Ag": "1 g Leiterplatte × oeko2012 Tab, 15, Motherboard Notebook (Umicore 2011)",
+   "Au": "1 g Leiterplatte × oeko2012 Tab, 15, Motherboard Notebook (Umicore 2011)",
+   "Pd": "1 g Leiterplatte × oeko2012 Tab, 15, Motherboard Notebook (Umicore 2011)"
   },
   "materialien_g": {
-   "abs": 8.1,
-   "pcb": 1.9
+   "abs": 6.5,
+   "steel": 2.0,
+   "pcb": 1.5,
+   "mixed_electronics": 0.1
   },
-  "co2_kg": 0.082,
-  "co2_mit_recyclat_kg": 0.064,
+  "co2_kg": 0.068,
+  "co2_mit_recyclat_kg": 0.051,
   "co2_ersparnis_kg": 0.018,
   "co2_ohne_faktor": [],
-  "rohstoffwert_eur": 0.05,
+  "rohstoffwert_eur": 0.04,
   "wert_ohne_preis": [],
   "preisstand": "2026-11-13",
   "quellen": {
@@ -104,55 +108,228 @@
   "nicht": "Nicht in Restmüll oder Gelbe Tonne",
   "warnung": "Kabel und Stecker dranlassen."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "plastic_housing_ober",
+   "id": "kappe",
    "component_id": "plastic_housing",
-   "name": "Plastic Housing (Oberteil)",
-   "short": "Plastic Housing (O",
+   "material_id": "abs",
+   "name": "Schutzkappe",
+   "short": "Kappe",
    "shape": "box",
-   "x": 0,
+   "x": 1,
    "y": 0,
-   "w": 20.0,
-   "d": 55.0,
-   "h": 1.6,
-   "z": 4.8,
-   "r": 2.4,
+   "w": 18,
+   "d": 17,
+   "z": 0.5,
+   "h": 7,
+   "r": 2,
    "explode": [
     0,
-    0,
-    32.1
+    -40,
+    0
    ],
-   "mass": 2.42,
+   "mass": 1.64,
    "materials": [
     [
      "pcabs",
      100
     ]
    ],
-   "material_id": "abs",
-   "info": "Look for hidden screws under rubber feet or labels, then pry the clips open."
+   "info": "Schützt den Stecker vor Staub. Geht leicht verloren, ist aber reiner Kunststoff.",
+   "color": "#2F3438"
   },
   {
-   "id": "circuit_board",
-   "component_id": "circuit_board",
-   "name": "Circuit Board",
-   "short": "Circuit Board",
+   "id": "oberschale",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Gehäuse-Oberteil",
+   "short": "Oberteil",
    "shape": "box",
-   "x": 3.0,
-   "y": 8.2,
-   "w": 14.0,
-   "d": 38.5,
-   "h": 2.16,
-   "z": 0.96,
-   "r": 1.7,
+   "x": 0,
+   "y": 15,
+   "w": 20,
+   "d": 40,
+   "z": 4,
+   "h": 4,
+   "r": 3,
    "explode": [
     0,
     0,
-    18.8
+    36.2
    ],
-   "mass": 1.94,
+   "mass": 2.41,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Zwei Kunststoffhälften, verklipst oder verschweißt. Mit einem Messer an der Naht vorsichtig aufhebeln.",
+   "color": "#2F3438",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 7,
+     "y": 33,
+     "w": 6,
+     "fill": "#1E2226"
+    }
+   ]
+  },
+  {
+   "id": "led",
+   "component_id": "circuit_board",
+   "material_id": "mixed_electronics",
+   "name": "Status-LED",
+   "short": "LED",
+   "shape": "box",
+   "x": 8.5,
+   "y": 45,
+   "w": 3,
+   "d": 2,
+   "z": 3.5,
+   "h": 0.8,
+   "r": 0.2,
+   "explode": [
+    0,
+    0,
+    21.5
+   ],
+   "mass": 0.02,
+   "materials": [
+    [
+     "led",
+     60
+    ],
+    [
+     "kupfer",
+     40
+    ]
+   ],
+   "info": "Blinkt, während Daten geschrieben oder gelesen werden. Leuchtet durch das Gehäuse.",
+   "color": "#7FC8F0"
+  },
+  {
+   "id": "controller",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "Controller-Chip",
+   "short": "Controller",
+   "shape": "box",
+   "x": 6.5,
+   "y": 17,
+   "w": 7,
+   "d": 7,
+   "z": 3.5,
+   "h": 0.9,
+   "r": 0.2,
+   "explode": [
+    0,
+    0,
+    21.5
+   ],
+   "mass": 0.16,
+   "materials": [
+    [
+     "chip",
+     100
+    ]
+   ],
+   "info": "Übersetzt zwischen USB und Speicher und verteilt die Daten gleichmäßig auf die Speicherzellen.",
+   "color": "#3F4547"
+  },
+  {
+   "id": "quarz",
+   "component_id": "circuit_board",
+   "material_id": "mixed_electronics",
+   "name": "Quarz",
+   "short": "Quarz",
+   "shape": "box",
+   "x": 14.5,
+   "y": 18,
+   "w": 2.5,
+   "d": 5,
+   "z": 3.5,
+   "h": 1,
+   "r": 0.5,
+   "explode": [
+    0,
+    0,
+    21.5
+   ],
+   "mass": 0.05,
+   "materials": [
+    [
+     "stahl",
+     50
+    ],
+    [
+     "keramik",
+     50
+    ]
+   ],
+   "info": "Gibt den genauen Takt für die USB-Übertragung vor.",
+   "color": "#B7BCC0"
+  },
+  {
+   "id": "flash",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "Flash-Speicherchip",
+   "short": "Speicher",
+   "shape": "box",
+   "x": 4,
+   "y": 26,
+   "w": 12,
+   "d": 17,
+   "z": 3.5,
+   "h": 1.2,
+   "r": 0.3,
+   "explode": [
+    0,
+    0,
+    21.5
+   ],
+   "mass": 0.44,
+   "materials": [
+    [
+     "chip",
+     100
+    ]
+   ],
+   "info": "Hier liegen die Daten, auch ohne Strom. Vor dem Wegwerfen löschen oder den Chip zerstören.",
+   "color": "#3F4547",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 1,
+     "y": 1,
+     "w": 1.2,
+     "fill": "#5E656A"
+    }
+   ]
+  },
+  {
+   "id": "platine",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "Platine mit Steckerkontakten",
+   "short": "Platine",
+   "shape": "box",
+   "x": 4,
+   "y": 4,
+   "w": 12,
+   "d": 46,
+   "z": 2.5,
+   "h": 1,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    15.5
+   ],
+   "mass": 0.88,
    "materials": [
     [
      "fr4",
@@ -171,36 +348,146 @@
      10
     ]
    ],
-   "material_id": "pcb",
-   "info": "Unscrew and unplug all ribbon cables; hand in at an e-waste collection point."
+   "info": "Der vordere Teil der Platine steckt im Stecker, vier vergoldete Kontaktflächen berühren die Buchse.",
+   "color": "#2E6B45",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1.5,
+     "y": 1.0,
+     "w": 1.5,
+     "d": 7,
+     "r": 0.2,
+     "fill": "#D4AF37"
+    },
+    {
+     "shape": "box",
+     "x": 4.1,
+     "y": 1.0,
+     "w": 1.5,
+     "d": 7,
+     "r": 0.2,
+     "fill": "#D4AF37"
+    },
+    {
+     "shape": "box",
+     "x": 6.7,
+     "y": 1.0,
+     "w": 1.5,
+     "d": 7,
+     "r": 0.2,
+     "fill": "#D4AF37"
+    },
+    {
+     "shape": "box",
+     "x": 9.3,
+     "y": 1.0,
+     "w": 1.5,
+     "d": 7,
+     "r": 0.2,
+     "fill": "#D4AF37"
+    }
+   ]
   },
   {
-   "id": "plastic_housing",
+   "id": "stecker",
+   "component_id": "circuit_board",
+   "material_id": "steel",
+   "name": "USB-A-Steckerblech",
+   "short": "Stecker",
+   "shape": "box",
+   "x": 4,
+   "y": 2,
+   "w": 12,
+   "d": 13,
+   "z": 1.75,
+   "h": 4.5,
+   "r": 0.5,
+   "explode": [
+    0,
+    -22,
+    0
+   ],
+   "mass": 1.97,
+   "materials": [
+    [
+     "stahl",
+     95
+    ],
+    [
+     "nickel",
+     5
+    ]
+   ],
+   "info": "Vernickeltes Stahlblech um die Platine. Ist an der Platine angelötet.",
+   "color": "#C9CED2",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2.5,
+     "y": 3,
+     "w": 2,
+     "d": 2,
+     "r": 0.2,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 7.5,
+     "y": 3,
+     "w": 2,
+     "d": 2,
+     "r": 0.2,
+     "fill": "#2A2E31"
+    }
+   ]
+  },
+  {
+   "id": "unterschale",
    "component_id": "plastic_housing",
-   "name": "Plastic Housing (Unterteil)",
-   "short": "Plastic Housing (U",
+   "material_id": "abs",
+   "name": "Gehäuse-Unterteil",
+   "short": "Unterteil",
    "shape": "box",
    "x": 0,
-   "y": 0,
-   "w": 20.0,
-   "d": 55.0,
-   "h": 4.8,
+   "y": 15,
+   "w": 20,
+   "d": 40,
    "z": 0,
-   "r": 2.4,
+   "h": 4,
+   "r": 3,
    "explode": [
     0,
     0,
-    0
+    0.0
    ],
-   "mass": 5.65,
+   "mass": 2.41,
    "materials": [
     [
      "pcabs",
      100
     ]
    ],
-   "material_id": "abs",
-   "info": "Look for hidden screws under rubber feet or labels, then pry the clips open."
+   "info": "Trägt die Platine und hat oft eine Öse für den Schlüsselring.",
+   "color": "#2F3438",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 0,
+     "w": 12,
+     "d": 35,
+     "r": 1,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "cyl",
+     "x": 7,
+     "y": 33,
+     "w": 6,
+     "fill": "#1E2226"
+    }
+   ]
   }
  ]
 }

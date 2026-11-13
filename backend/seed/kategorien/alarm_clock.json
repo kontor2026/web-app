@@ -4,7 +4,7 @@
  "name_en": "Alarm Clock",
  "klasse": "Elektroschrott · Kleingerät",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -21,47 +21,48 @@
  "werte": [
   {
    "k": "Rohstoffwert",
-   "v": "≈ 0,27 €",
+   "v": "≈ 0,22 €",
    "hint": "Gold, Silber, Kupfer zu Preisen vom 13.11."
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 1,12 kg",
+   "v": "≈ 1,05 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 0,91 kg",
-   "hint": "spart 0,21 kg, wenn recycelte Materialien eingesetzt werden"
+   "v": "≈ 0,81 kg",
+   "hint": "spart 0,24 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Cu": 10170.0,
-   "Fe": 3051.0,
-   "Ag": 5.08,
-   "Au": 1.22,
-   "Pd": 0.39
+   "Cu": 7830.0,
+   "Fe": 2145.0,
+   "Ag": 4.42,
+   "Au": 1.06,
+   "Pd": 0.34
   },
   "herkunft": {
    "Cu": "Modellmassen (Schätzung)",
    "Fe": "Modellmassen (Schätzung)",
-   "Ag": "20 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)",
-   "Au": "20 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)",
-   "Pd": "20 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)"
+   "Ag": "18 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)",
+   "Au": "18 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)",
+   "Pd": "18 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)"
   },
   "materialien_g": {
-   "abs": 84.7,
-   "alkaline": 40.7,
-   "special_glass": 33.9,
-   "mixed_electronics": 20.3,
-   "pcb": 20.3
+   "abs": 106.9,
+   "alkaline": 44.0,
+   "pcb": 17.7,
+   "mixed_electronics": 14.3,
+   "special_glass": 9.5,
+   "pc": 7.6
   },
-  "co2_kg": 1.119,
-  "co2_mit_recyclat_kg": 0.91,
-  "co2_ersparnis_kg": 0.209,
+  "co2_kg": 1.053,
+  "co2_mit_recyclat_kg": 0.813,
+  "co2_ersparnis_kg": 0.241,
   "co2_ohne_faktor": [],
-  "rohstoffwert_eur": 0.27,
+  "rohstoffwert_eur": 0.22,
   "wert_ohne_preis": [],
   "preisstand": "2026-11-13",
   "quellen": {
@@ -109,151 +110,231 @@
   "nicht": "Nicht in Restmüll oder Gelbe Tonne",
   "warnung": "Akku oder Batterie nicht beschädigen. Wenn möglich herausnehmen und getrennt abgeben, fest verbaute Akkus drinlassen."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "lcd_panel",
-   "component_id": "lcd_panel",
-   "name": "LCD Panel",
-   "short": "LCD Panel",
+   "id": "schlummertaste",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Schlummertaste",
+   "short": "Schlummertaste",
    "shape": "box",
-   "x": 2.0,
-   "y": 1.2,
-   "w": 96.0,
-   "d": 57.6,
-   "h": 4.8,
-   "z": 64.0,
-   "r": 6.9,
+   "x": 25,
+   "y": 20,
+   "w": 50,
+   "d": 16,
+   "z": 78,
+   "h": 4,
+   "r": 3,
    "explode": [
     0,
     0,
-    224.8
+    45
    ],
-   "mass": 33.9,
+   "mass": 3.8,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Große Taste oben: drücken, und der Wecker klingelt nach ein paar Minuten noch einmal.",
+   "color": "#C9302C",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 4,
+     "w": 42,
+     "d": 8,
+     "r": 2,
+     "fill": "#D9534F"
+    }
+   ]
+  },
+  {
+   "id": "einstelltasten",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Einstelltasten",
+   "short": "Einstelltasten",
+   "shape": "box",
+   "x": 8,
+   "y": 4,
+   "w": 84,
+   "d": 10,
+   "z": 78,
+   "h": 2.5,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    45
+   ],
+   "mass": 2.9,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Gummitasten für Uhrzeit, Weckzeit und Licht. Drücken unten auf Kontaktfelder der Platine.",
+   "color": "#4A5258",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 2,
+     "w": 16,
+     "d": 6,
+     "r": 2,
+     "fill": "#5E656A"
+    },
+    {
+     "shape": "box",
+     "x": 25,
+     "y": 2,
+     "w": 16,
+     "d": 6,
+     "r": 2,
+     "fill": "#5E656A"
+    },
+    {
+     "shape": "box",
+     "x": 46,
+     "y": 2,
+     "w": 16,
+     "d": 6,
+     "r": 2,
+     "fill": "#5E656A"
+    },
+    {
+     "shape": "box",
+     "x": 67,
+     "y": 2,
+     "w": 16,
+     "d": 6,
+     "r": 2,
+     "fill": "#5E656A"
+    }
+   ]
+  },
+  {
+   "id": "frontscheibe",
+   "component_id": "plastic_housing",
+   "material_id": "pc",
+   "name": "Sichtscheibe",
+   "short": "Sichtscheibe",
+   "shape": "box",
+   "x": 10,
+   "y": 57,
+   "w": 80,
+   "d": 2,
+   "z": 26,
+   "h": 44,
+   "r": 0.5,
+   "explode": [
+    0,
+    60,
+    20
+   ],
+   "mass": 7.6,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Klare Kunststoffscheibe vor dem Display, von innen eingeklebt.",
+   "color": "#C9DEDF",
+   "opacity": 0.6
+  },
+  {
+   "id": "lcd",
+   "component_id": "lcd_panel",
+   "material_id": "special_glass",
+   "name": "Flüssigkristall-Anzeige (LCD)",
+   "short": "LCD",
+   "shape": "box",
+   "x": 14,
+   "y": 50,
+   "w": 72,
+   "d": 2.5,
+   "z": 30,
+   "h": 36,
+   "r": 0.5,
+   "explode": [
+    0,
+    32,
+    20
+   ],
+   "mass": 9.5,
    "materials": [
     [
      "glas",
-     100
-    ]
-   ],
-   "material_id": "special_glass",
-   "info": "Remove the back cover screws; handle the panel flat, it breaks easily."
-  },
-  {
-   "id": "plastic_housing_ober",
-   "component_id": "plastic_housing",
-   "name": "Plastic Housing (Oberteil)",
-   "short": "Plastic Housing (O",
-   "shape": "box",
-   "x": 0,
-   "y": 0,
-   "w": 100.0,
-   "d": 60.0,
-   "h": 16.0,
-   "z": 48.0,
-   "r": 7.2,
-   "explode": [
-    0,
-    0,
-    192.8
-   ],
-   "mass": 25.42,
-   "materials": [
-    [
-     "pcabs",
-     100
-    ]
-   ],
-   "material_id": "abs",
-   "info": "Look for hidden screws under rubber feet or labels, then pry the clips open."
-  },
-  {
-   "id": "alkaline_cell",
-   "component_id": "alkaline_cell",
-   "name": "Battery",
-   "short": "Battery",
-   "shape": "cyl",
-   "x": 12.4,
-   "y": 32.4,
-   "w": 25.2,
-   "h": 21.6,
-   "z": 9.6,
-   "explode": [
-    0,
-    0,
-    177.6
-   ],
-   "mass": 40.68,
-   "materials": [
-    [
-     "zinkmangan",
-     80
+     85
     ],
     [
-     "stahl",
-     20
-    ]
-   ],
-   "material_id": "alkaline",
-   "info": "Remove from the device and tape the contacts before handing it in."
-  },
-  {
-   "id": "speaker_driver",
-   "component_id": "speaker_driver",
-   "name": "Speaker",
-   "short": "Speaker",
-   "shape": "cyl",
-   "x": 62.4,
-   "y": 5.4,
-   "w": 25.2,
-   "h": 21.6,
-   "z": 9.6,
-   "explode": [
-    0,
-    0,
-    124.0
-   ],
-   "mass": 20.34,
-   "materials": [
-    [
-     "chip",
-     30
-    ],
-    [
-     "kupfer",
-     30
-    ],
-    [
-     "pcabs",
-     25
-    ],
-    [
-     "stahl",
+     "folien",
      15
     ]
    ],
-   "material_id": "mixed_electronics",
-   "info": "Contains a strong magnet; keep away from cards and other electronics."
+   "info": "Zeigt die großen Ziffern. Zwei Glasplatten mit Flüssigkristall, über Leitgummis mit der Platine verbunden. Bricht leicht.",
+   "color": "#A9B4A2"
   },
   {
-   "id": "circuit_board",
+   "id": "chip",
    "component_id": "circuit_board",
-   "name": "Circuit Board",
-   "short": "Circuit Board",
+   "material_id": "pcb",
+   "name": "Uhrenchip (unter Epoxid)",
+   "short": "Chip",
    "shape": "box",
-   "x": 4.0,
-   "y": 5.4,
-   "w": 42.0,
-   "d": 25.2,
-   "h": 21.6,
-   "z": 9.6,
-   "r": 3.0,
+   "x": 40,
+   "y": 45.6,
+   "w": 14,
+   "d": 2,
+   "z": 16,
+   "h": 10,
+   "r": 0.5,
+   "explode": [
+    0,
+    8,
+    20
+   ],
+   "mass": 0.5,
+   "materials": [
+    [
+     "chip",
+     60
+    ],
+    [
+     "phenolharz",
+     40
+    ]
+   ],
+   "info": "Zählt mithilfe eines Quarzes die Sekunden und steuert Anzeige und Weckton.",
+   "color": "#1E2226"
+  },
+  {
+   "id": "platine",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "Platine",
+   "short": "Platine",
+   "shape": "box",
+   "x": 10,
+   "y": 44,
+   "w": 80,
+   "d": 1.6,
+   "z": 12,
+   "h": 60,
+   "r": 0.5,
    "explode": [
     0,
     0,
-    70.4
+    20
    ],
-   "mass": 20.34,
+   "mass": 17.2,
    "materials": [
     [
      "fr4",
@@ -272,36 +353,236 @@
      10
     ]
    ],
-   "material_id": "pcb",
-   "info": "Unscrew and unplug all ribbon cables; hand in at an e-waste collection point."
+   "info": "Steht hinter dem Display. Mit zwei Schrauben in der Rückschale; in die Elektro-Sammlung geben.",
+   "color": "#2E6B45"
   },
   {
-   "id": "plastic_housing",
-   "component_id": "plastic_housing",
-   "name": "Plastic Housing (Unterteil)",
-   "short": "Plastic Housing (U",
-   "shape": "box",
-   "x": 0,
-   "y": 0,
-   "w": 100.0,
-   "d": 60.0,
-   "h": 48.0,
-   "z": 0,
-   "r": 7.2,
+   "id": "lautsprecher",
+   "component_id": "speaker_driver",
+   "material_id": "mixed_electronics",
+   "name": "Lautsprecher",
+   "short": "Lautsprecher",
+   "shape": "cyl",
+   "x": 63,
+   "y": 10,
+   "w": 34,
+   "z": 3,
+   "h": 10,
    "explode": [
     0,
     0,
     0
    ],
-   "mass": 59.32,
+   "mass": 14.3,
+   "materials": [
+    [
+     "stahl",
+     35
+    ],
+    [
+     "ndfeb",
+     20
+    ],
+    [
+     "kupfer",
+     15
+    ],
+    [
+     "papier",
+     15
+    ],
+    [
+     "pcabs",
+     15
+    ]
+   ],
+   "info": "Kleiner Lautsprecher für den Weckton, mit Magnet und Kupferspule. Von Bankkarten fernhalten.",
+   "color": "#5E656A",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 5,
+     "y": 5,
+     "w": 24,
+     "fill": "#2B2F33"
+    },
+    {
+     "shape": "cyl",
+     "x": 13,
+     "y": 13,
+     "w": 8,
+     "fill": "#9BA3A8"
+    }
+   ]
+  },
+  {
+   "id": "batterie_1",
+   "component_id": "alkaline_cell",
+   "material_id": "alkaline",
+   "name": "Alkaline-Batterie AA",
+   "short": "Batterien",
+   "shape": "box",
+   "x": 8,
+   "y": 8,
+   "w": 50.5,
+   "d": 14.5,
+   "z": 2,
+   "h": 14.5,
+   "r": 7,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 22,
+   "materials": [
+    [
+     "zinkmangan",
+     80
+    ],
+    [
+     "stahl",
+     20
+    ]
+   ],
+   "info": "Zwei AA-Zellen mit je 1,5 V. Herausnehmen und in die Batterie-Sammelbox geben, nie in den Restmüll.",
+   "color": "#3A6EA5",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 44,
+     "y": 1.5,
+     "w": 6,
+     "d": 11.5,
+     "r": 3,
+     "fill": "#C9A227"
+    }
+   ]
+  },
+  {
+   "id": "batterie_2",
+   "component_id": "alkaline_cell",
+   "material_id": "alkaline",
+   "name": "Alkaline-Batterie AA",
+   "short": "Batterie",
+   "shape": "box",
+   "x": 8,
+   "y": 23,
+   "w": 50.5,
+   "d": 14.5,
+   "z": 2,
+   "h": 14.5,
+   "r": 7,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 22,
+   "materials": [
+    [
+     "zinkmangan",
+     80
+    ],
+    [
+     "stahl",
+     20
+    ]
+   ],
+   "info": "Zweite AA-Zelle, umgekehrt eingelegt. Ausgelaufene Batterien hinterlassen weißen Belag an den Federn.",
+   "color": "#3A6EA5",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0.5,
+     "y": 1.5,
+     "w": 6,
+     "d": 11.5,
+     "r": 3,
+     "fill": "#C9A227"
+    }
+   ]
+  },
+  {
+   "id": "vorderschale",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Vorderschale",
+   "short": "Vorderschale",
+   "shape": "box",
+   "x": 0,
+   "y": 30,
+   "w": 100,
+   "d": 30,
+   "z": 0,
+   "h": 78,
+   "r": 6,
+   "explode": [
+    -140,
+    0,
+    0
+   ],
+   "mass": 47.7,
    "materials": [
     [
      "pcabs",
      100
     ]
    ],
+   "info": "Vorderes Gehäuseteil mit Displayfenster. Nach Lösen der Schrauben im Batteriefach abziehbar.",
+   "color": "#2E3338",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 4,
+     "w": 92,
+     "d": 22,
+     "r": 4,
+     "fill": "#23272A"
+    }
+   ]
+  },
+  {
+   "id": "rueckschale",
+   "component_id": "plastic_housing",
    "material_id": "abs",
-   "info": "Look for hidden screws under rubber feet or labels, then pry the clips open."
+   "name": "Rückschale mit Batteriefach",
+   "short": "Rückschale",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 100,
+   "d": 30,
+   "z": 0,
+   "h": 78,
+   "r": 6,
+   "explode": [
+    0,
+    -75,
+    0
+   ],
+   "mass": 52.5,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Hinteres Gehäuseteil mit Batteriefach und Lautsprecher-Löchern. Reiner Kunststoff, wenn alles ausgebaut ist.",
+   "color": "#2E3338",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 4,
+     "w": 92,
+     "d": 22,
+     "r": 4,
+     "fill": "#23272A"
+    }
+   ]
   }
  ]
 }

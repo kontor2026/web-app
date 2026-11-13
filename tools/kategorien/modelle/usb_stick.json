@@ -1,0 +1,383 @@
+{
+ "parts": [
+  {
+   "id": "kappe",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Schutzkappe",
+   "short": "Kappe",
+   "shape": "box",
+   "x": 1,
+   "y": 0,
+   "w": 18,
+   "d": 17,
+   "z": 0.5,
+   "h": 7,
+   "r": 2,
+   "explode": [
+    0,
+    -40,
+    0
+   ],
+   "mass": 1.64,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Schützt den Stecker vor Staub. Geht leicht verloren, ist aber reiner Kunststoff.",
+   "color": "#2F3438"
+  },
+  {
+   "id": "oberschale",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Gehäuse-Oberteil",
+   "short": "Oberteil",
+   "shape": "box",
+   "x": 0,
+   "y": 15,
+   "w": 20,
+   "d": 40,
+   "z": 4,
+   "h": 4,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    36.2
+   ],
+   "mass": 2.41,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Zwei Kunststoffhälften, verklipst oder verschweißt. Mit einem Messer an der Naht vorsichtig aufhebeln.",
+   "color": "#2F3438",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 7,
+     "y": 33,
+     "w": 6,
+     "fill": "#1E2226"
+    }
+   ]
+  },
+  {
+   "id": "led",
+   "component_id": "circuit_board",
+   "material_id": "mixed_electronics",
+   "name": "Status-LED",
+   "short": "LED",
+   "shape": "box",
+   "x": 8.5,
+   "y": 45,
+   "w": 3,
+   "d": 2,
+   "z": 3.5,
+   "h": 0.8,
+   "r": 0.2,
+   "explode": [
+    0,
+    0,
+    21.5
+   ],
+   "mass": 0.02,
+   "materials": [
+    [
+     "led",
+     60
+    ],
+    [
+     "kupfer",
+     40
+    ]
+   ],
+   "info": "Blinkt, während Daten geschrieben oder gelesen werden. Leuchtet durch das Gehäuse.",
+   "color": "#7FC8F0"
+  },
+  {
+   "id": "controller",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "Controller-Chip",
+   "short": "Controller",
+   "shape": "box",
+   "x": 6.5,
+   "y": 17,
+   "w": 7,
+   "d": 7,
+   "z": 3.5,
+   "h": 0.9,
+   "r": 0.2,
+   "explode": [
+    0,
+    0,
+    21.5
+   ],
+   "mass": 0.16,
+   "materials": [
+    [
+     "chip",
+     100
+    ]
+   ],
+   "info": "Übersetzt zwischen USB und Speicher und verteilt die Daten gleichmäßig auf die Speicherzellen.",
+   "color": "#3F4547"
+  },
+  {
+   "id": "quarz",
+   "component_id": "circuit_board",
+   "material_id": "mixed_electronics",
+   "name": "Quarz",
+   "short": "Quarz",
+   "shape": "box",
+   "x": 14.5,
+   "y": 18,
+   "w": 2.5,
+   "d": 5,
+   "z": 3.5,
+   "h": 1,
+   "r": 0.5,
+   "explode": [
+    0,
+    0,
+    21.5
+   ],
+   "mass": 0.05,
+   "materials": [
+    [
+     "stahl",
+     50
+    ],
+    [
+     "keramik",
+     50
+    ]
+   ],
+   "info": "Gibt den genauen Takt für die USB-Übertragung vor.",
+   "color": "#B7BCC0"
+  },
+  {
+   "id": "flash",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "Flash-Speicherchip",
+   "short": "Speicher",
+   "shape": "box",
+   "x": 4,
+   "y": 26,
+   "w": 12,
+   "d": 17,
+   "z": 3.5,
+   "h": 1.2,
+   "r": 0.3,
+   "explode": [
+    0,
+    0,
+    21.5
+   ],
+   "mass": 0.44,
+   "materials": [
+    [
+     "chip",
+     100
+    ]
+   ],
+   "info": "Hier liegen die Daten, auch ohne Strom. Vor dem Wegwerfen löschen oder den Chip zerstören.",
+   "color": "#3F4547",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 1,
+     "y": 1,
+     "w": 1.2,
+     "fill": "#5E656A"
+    }
+   ]
+  },
+  {
+   "id": "platine",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "Platine mit Steckerkontakten",
+   "short": "Platine",
+   "shape": "box",
+   "x": 4,
+   "y": 4,
+   "w": 12,
+   "d": 46,
+   "z": 2.5,
+   "h": 1,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    15.5
+   ],
+   "mass": 0.88,
+   "materials": [
+    [
+     "fr4",
+     55
+    ],
+    [
+     "kupfer",
+     20
+    ],
+    [
+     "chip",
+     15
+    ],
+    [
+     "lot",
+     10
+    ]
+   ],
+   "info": "Der vordere Teil der Platine steckt im Stecker, vier vergoldete Kontaktflächen berühren die Buchse.",
+   "color": "#2E6B45",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1.5,
+     "y": 1.0,
+     "w": 1.5,
+     "d": 7,
+     "r": 0.2,
+     "fill": "#D4AF37"
+    },
+    {
+     "shape": "box",
+     "x": 4.1,
+     "y": 1.0,
+     "w": 1.5,
+     "d": 7,
+     "r": 0.2,
+     "fill": "#D4AF37"
+    },
+    {
+     "shape": "box",
+     "x": 6.7,
+     "y": 1.0,
+     "w": 1.5,
+     "d": 7,
+     "r": 0.2,
+     "fill": "#D4AF37"
+    },
+    {
+     "shape": "box",
+     "x": 9.3,
+     "y": 1.0,
+     "w": 1.5,
+     "d": 7,
+     "r": 0.2,
+     "fill": "#D4AF37"
+    }
+   ]
+  },
+  {
+   "id": "stecker",
+   "component_id": "circuit_board",
+   "material_id": "steel",
+   "name": "USB-A-Steckerblech",
+   "short": "Stecker",
+   "shape": "box",
+   "x": 4,
+   "y": 2,
+   "w": 12,
+   "d": 13,
+   "z": 1.75,
+   "h": 4.5,
+   "r": 0.5,
+   "explode": [
+    0,
+    -22,
+    0
+   ],
+   "mass": 1.97,
+   "materials": [
+    [
+     "stahl",
+     95
+    ],
+    [
+     "nickel",
+     5
+    ]
+   ],
+   "info": "Vernickeltes Stahlblech um die Platine. Ist an der Platine angelötet.",
+   "color": "#C9CED2",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2.5,
+     "y": 3,
+     "w": 2,
+     "d": 2,
+     "r": 0.2,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 7.5,
+     "y": 3,
+     "w": 2,
+     "d": 2,
+     "r": 0.2,
+     "fill": "#2A2E31"
+    }
+   ]
+  },
+  {
+   "id": "unterschale",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Gehäuse-Unterteil",
+   "short": "Unterteil",
+   "shape": "box",
+   "x": 0,
+   "y": 15,
+   "w": 20,
+   "d": 40,
+   "z": 0,
+   "h": 4,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 2.41,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Trägt die Platine und hat oft eine Öse für den Schlüsselring.",
+   "color": "#2F3438",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 0,
+     "w": 12,
+     "d": 35,
+     "r": 1,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "cyl",
+     "x": 7,
+     "y": 33,
+     "w": 6,
+     "fill": "#1E2226"
+    }
+   ]
+  }
+ ]
+}

@@ -4,7 +4,7 @@
  "name_en": "E-Reader",
  "klasse": "Elektroschrott · Kleingerät",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -21,48 +21,52 @@
  "werte": [
   {
    "k": "Rohstoffwert",
-   "v": "≈ 0,55 €",
+   "v": "≈ 0,44 €",
    "hint": "Gold, Silber, Palladium zu Preisen vom 13.11. Ohne Kobalt, Palladium (kein Preis)."
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 1,58 kg",
+   "v": "≈ 1,31 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 1,37 kg",
+   "v": "≈ 1,10 kg",
    "hint": "spart 0,21 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Cu": 8151.0,
-   "Al": 6112.0,
-   "Co": 5583.0,
-   "Ag": 16.0,
-   "Au": 3.67,
-   "Pd": 1.63
+   "Cu": 6440.0,
+   "Al": 4560.0,
+   "Co": 4165.0,
+   "Fe": 1364.0,
+   "Ag": 13.0,
+   "Au": 2.9,
+   "Pd": 1.29
   },
   "herkunft": {
    "Cu": "Modellmassen (Schätzung)",
    "Al": "Modellmassen (Schätzung)",
-   "Co": "41 g Akku × 13,7% Kobalt (Schätzung, oeko2012 Tab, 25)",
-   "Ag": "20 g Leiterplatte × oeko2012 Tab, 15, Motherboard Notebook (Umicore 2011)",
-   "Au": "20 g Leiterplatte × oeko2012 Tab, 15, Motherboard Notebook (Umicore 2011)",
-   "Pd": "20 g Leiterplatte × oeko2012 Tab, 15, Motherboard Notebook (Umicore 2011)"
+   "Co": "30 g Akku × 13,7% Kobalt (Schätzung, oeko2012 Tab, 25)",
+   "Fe": "Modellmassen (Schätzung)",
+   "Ag": "16 g Leiterplatte × oeko2012 Tab, 15, Motherboard Notebook (Umicore 2011)",
+   "Au": "16 g Leiterplatte × oeko2012 Tab, 15, Motherboard Notebook (Umicore 2011)",
+   "Pd": "16 g Leiterplatte × oeko2012 Tab, 15, Motherboard Notebook (Umicore 2011)"
   },
   "materialien_g": {
-   "abs": 84.9,
-   "li_ion": 40.8,
-   "special_glass": 34.0,
-   "pcb": 20.4
+   "abs": 81.0,
+   "special_glass": 50.7,
+   "li_ion": 30.4,
+   "pcb": 16.1,
+   "steel": 1.3,
+   "mixed_electronics": 0.6
   },
-  "co2_kg": 1.583,
-  "co2_mit_recyclat_kg": 1.373,
-  "co2_ersparnis_kg": 0.21,
+  "co2_kg": 1.313,
+  "co2_mit_recyclat_kg": 1.097,
+  "co2_ersparnis_kg": 0.215,
   "co2_ohne_faktor": [],
-  "rohstoffwert_eur": 0.55,
+  "rohstoffwert_eur": 0.44,
   "wert_ohne_preis": [
    "Co",
    "Pd"
@@ -113,83 +117,587 @@
   "nicht": "Nicht in Restmüll oder Gelbe Tonne",
   "warnung": "Akku oder Batterie nicht beschädigen. Wenn möglich herausnehmen und getrennt abgeben, fest verbaute Akkus drinlassen."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "e_ink_display",
-   "component_id": "e_ink_display",
-   "name": "E-Ink Display",
-   "short": "E-Ink Display",
-   "shape": "box",
-   "x": 2.3,
-   "y": 3.2,
-   "w": 110.4,
-   "d": 153.6,
-   "h": 0.5,
-   "z": 6.4,
-   "r": 13.2,
-   "explode": [
-    0,
-    0,
-    224.3
-   ],
-   "mass": 33.96,
-   "materials": [
-    [
-     "glas",
-     100
-    ]
-   ],
-   "material_id": "special_glass",
-   "info": "Heat the bezel edge and lift carefully; the screen is very thin and cracks easily."
-  },
-  {
-   "id": "plastic_housing_ober",
+   "id": "rahmen",
    "component_id": "plastic_housing",
-   "name": "Plastic Housing (Oberteil)",
-   "short": "Plastic Housing (O",
+   "material_id": "abs",
+   "name": "Frontrahmen",
+   "short": "Rahmen",
    "shape": "box",
    "x": 0,
    "y": 0,
-   "w": 115.0,
-   "d": 160.0,
-   "h": 1.6,
-   "z": 4.8,
-   "r": 13.8,
+   "w": 115,
+   "d": 160,
+   "z": 7,
+   "h": 1,
+   "r": 8,
    "explode": [
     0,
     0,
-    169.3
+    282.0
    ],
-   "mass": 25.47,
+   "mass": 17.7,
    "materials": [
     [
      "pcabs",
      100
     ]
    ],
-   "material_id": "abs",
-   "info": "Look for hidden screws under rubber feet or labels, then pry the clips open."
+   "info": "Dünner Kunststoffrahmen um den Bildschirm, rundum verklebt. Mit Wärme und einem Plektrum vorsichtig lösen.",
+   "color": "#2B2F33",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 12,
+     "w": 95,
+     "d": 126,
+     "r": 1,
+     "fill": "#D7D8D0"
+    }
+   ]
   },
   {
-   "id": "circuit_board",
-   "component_id": "circuit_board",
-   "name": "Circuit Board",
-   "short": "Circuit Board",
+   "id": "frontlicht",
+   "component_id": "e_ink_display",
+   "material_id": "special_glass",
+   "name": "Frontlicht mit Touch-Folie",
+   "short": "Frontlicht",
    "shape": "box",
-   "x": 62.1,
-   "y": 14.4,
-   "w": 48.3,
-   "d": 67.2,
-   "h": 2.16,
-   "z": 0.96,
-   "r": 5.8,
+   "x": 10,
+   "y": 12,
+   "w": 95,
+   "d": 126,
+   "z": 6.2,
+   "h": 0.8,
+   "r": 1,
    "explode": [
     0,
     0,
-    116.0
+    217.0
    ],
-   "mass": 20.38,
+   "mass": 12.7,
+   "materials": [
+    [
+     "folien",
+     60
+    ],
+    [
+     "glas",
+     25
+    ],
+    [
+     "led",
+     10
+    ],
+    [
+     "kupfer",
+     5
+    ]
+   ],
+   "info": "Lichtleiter-Folie mit kleinen LEDs am Rand, die den Bildschirm von vorne beleuchten. Darüber die Touch-Schicht.",
+   "color": "#E6ECEC",
+   "opacity": 0.65,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4.0,
+     "y": 123.0,
+     "w": 3,
+     "d": 2,
+     "r": 0.5,
+     "fill": "#F2E3A0"
+    },
+    {
+     "shape": "box",
+     "x": 13.5,
+     "y": 123.0,
+     "w": 3,
+     "d": 2,
+     "r": 0.5,
+     "fill": "#F2E3A0"
+    },
+    {
+     "shape": "box",
+     "x": 23.0,
+     "y": 123.0,
+     "w": 3,
+     "d": 2,
+     "r": 0.5,
+     "fill": "#F2E3A0"
+    },
+    {
+     "shape": "box",
+     "x": 32.5,
+     "y": 123.0,
+     "w": 3,
+     "d": 2,
+     "r": 0.5,
+     "fill": "#F2E3A0"
+    },
+    {
+     "shape": "box",
+     "x": 42.0,
+     "y": 123.0,
+     "w": 3,
+     "d": 2,
+     "r": 0.5,
+     "fill": "#F2E3A0"
+    },
+    {
+     "shape": "box",
+     "x": 51.5,
+     "y": 123.0,
+     "w": 3,
+     "d": 2,
+     "r": 0.5,
+     "fill": "#F2E3A0"
+    },
+    {
+     "shape": "box",
+     "x": 61.0,
+     "y": 123.0,
+     "w": 3,
+     "d": 2,
+     "r": 0.5,
+     "fill": "#F2E3A0"
+    },
+    {
+     "shape": "box",
+     "x": 70.5,
+     "y": 123.0,
+     "w": 3,
+     "d": 2,
+     "r": 0.5,
+     "fill": "#F2E3A0"
+    },
+    {
+     "shape": "box",
+     "x": 80.0,
+     "y": 123.0,
+     "w": 3,
+     "d": 2,
+     "r": 0.5,
+     "fill": "#F2E3A0"
+    },
+    {
+     "shape": "box",
+     "x": 89.5,
+     "y": 123.0,
+     "w": 3,
+     "d": 2,
+     "r": 0.5,
+     "fill": "#F2E3A0"
+    }
+   ]
+  },
+  {
+   "id": "eink",
+   "component_id": "e_ink_display",
+   "material_id": "special_glass",
+   "name": "E-Ink-Bildschirm",
+   "short": "E-Ink",
+   "shape": "box",
+   "x": 10,
+   "y": 12,
+   "w": 95,
+   "d": 126,
+   "z": 5.2,
+   "h": 1,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    152.0
+   ],
+   "mass": 38,
+   "materials": [
+    [
+     "displayglas",
+     60
+    ],
+    [
+     "folien",
+     30
+    ],
+    [
+     "chip",
+     5
+    ],
+    [
+     "kupfer",
+     5
+    ]
+   ],
+   "info": "Winzige Kapseln mit schwarzen und weißen Farbteilchen auf einer Glasplatte. Braucht nur beim Umblättern Strom. Sehr dünn, bricht leicht.",
+   "color": "#D7D8D0",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 10.0,
+     "w": 75,
+     "d": 1.6,
+     "r": 0.3,
+     "fill": "#8E908A"
+    },
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 15.6,
+     "w": 75,
+     "d": 1.6,
+     "r": 0.3,
+     "fill": "#8E908A"
+    },
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 21.2,
+     "w": 75,
+     "d": 1.6,
+     "r": 0.3,
+     "fill": "#8E908A"
+    },
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 26.8,
+     "w": 75,
+     "d": 1.6,
+     "r": 0.3,
+     "fill": "#8E908A"
+    },
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 32.4,
+     "w": 75,
+     "d": 1.6,
+     "r": 0.3,
+     "fill": "#8E908A"
+    },
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 38.0,
+     "w": 75,
+     "d": 1.6,
+     "r": 0.3,
+     "fill": "#8E908A"
+    },
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 43.6,
+     "w": 75,
+     "d": 1.6,
+     "r": 0.3,
+     "fill": "#8E908A"
+    },
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 49.2,
+     "w": 75,
+     "d": 1.6,
+     "r": 0.3,
+     "fill": "#8E908A"
+    },
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 54.8,
+     "w": 75,
+     "d": 1.6,
+     "r": 0.3,
+     "fill": "#8E908A"
+    },
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 60.4,
+     "w": 75,
+     "d": 1.6,
+     "r": 0.3,
+     "fill": "#8E908A"
+    },
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 66.0,
+     "w": 75,
+     "d": 1.6,
+     "r": 0.3,
+     "fill": "#8E908A"
+    },
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 71.6,
+     "w": 75,
+     "d": 1.6,
+     "r": 0.3,
+     "fill": "#8E908A"
+    },
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 77.2,
+     "w": 75,
+     "d": 1.6,
+     "r": 0.3,
+     "fill": "#8E908A"
+    },
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 82.8,
+     "w": 75,
+     "d": 1.6,
+     "r": 0.3,
+     "fill": "#8E908A"
+    },
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 88.4,
+     "w": 75,
+     "d": 1.6,
+     "r": 0.3,
+     "fill": "#8E908A"
+    },
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 94.0,
+     "w": 75,
+     "d": 1.6,
+     "r": 0.3,
+     "fill": "#8E908A"
+    },
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 99.6,
+     "w": 75,
+     "d": 1.6,
+     "r": 0.3,
+     "fill": "#8E908A"
+    },
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 105.2,
+     "w": 75,
+     "d": 1.6,
+     "r": 0.3,
+     "fill": "#8E908A"
+    }
+   ]
+  },
+  {
+   "id": "soc",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "Prozessor",
+   "short": "Prozessor",
+   "shape": "box",
+   "x": 22,
+   "y": 100,
+   "w": 12,
+   "d": 12,
+   "z": 2.2,
+   "h": 1,
+   "r": 0.5,
+   "explode": [
+    0,
+    0,
+    88.8
+   ],
+   "mass": 1.3,
+   "materials": [
+    [
+     "chip",
+     100
+    ]
+   ],
+   "info": "Steuert Bildschirm, Speicher und WLAN. Unter einem Abschirmblech auf der Platine.",
+   "color": "#3F4547"
+  },
+  {
+   "id": "speicher",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "Speicherchip (Bücher)",
+   "short": "Speicher",
+   "shape": "box",
+   "x": 42,
+   "y": 100,
+   "w": 11,
+   "d": 13,
+   "z": 2.2,
+   "h": 1,
+   "r": 0.5,
+   "explode": [
+    0,
+    0,
+    88.8
+   ],
+   "mass": 1.3,
+   "materials": [
+    [
+     "chip",
+     100
+    ]
+   ],
+   "info": "Speichert Tausende Bücher. Vor dem Abgeben das Gerät auf Werkseinstellungen zurücksetzen.",
+   "color": "#3F4547"
+  },
+  {
+   "id": "wlan",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "WLAN-Modul",
+   "short": "WLAN",
+   "shape": "box",
+   "x": 62,
+   "y": 101,
+   "w": 10,
+   "d": 10,
+   "z": 2.2,
+   "h": 1.2,
+   "r": 0.5,
+   "explode": [
+    0,
+    0,
+    88.8
+   ],
+   "mass": 0.8,
+   "materials": [
+    [
+     "stahl",
+     40
+    ],
+    [
+     "chip",
+     40
+    ],
+    [
+     "kupfer",
+     20
+    ]
+   ],
+   "info": "Funkchip unter einem Blechdeckel zum Herunterladen von Büchern.",
+   "color": "#B7BCC0"
+  },
+  {
+   "id": "taster",
+   "component_id": "circuit_board",
+   "material_id": "mixed_electronics",
+   "name": "Ein-/Aus-Taster",
+   "short": "Taster",
+   "shape": "box",
+   "x": 72,
+   "y": 154,
+   "w": 10,
+   "d": 4,
+   "z": 2,
+   "h": 3,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    70.0
+   ],
+   "mass": 0.6,
+   "materials": [
+    [
+     "stahl",
+     50
+    ],
+    [
+     "pcabs",
+     40
+    ],
+    [
+     "kupfer",
+     10
+    ]
+   ],
+   "info": "Kleiner Drucktaster an der Unterkante.",
+   "color": "#B7BCC0"
+  },
+  {
+   "id": "usb_c",
+   "component_id": "circuit_board",
+   "material_id": "steel",
+   "name": "USB-C-Buchse",
+   "short": "USB-C",
+   "shape": "box",
+   "x": 52,
+   "y": 151,
+   "w": 9,
+   "d": 8,
+   "z": 1.5,
+   "h": 3.2,
+   "r": 1.5,
+   "explode": [
+    0,
+    0,
+    70.5
+   ],
+   "mass": 1.3,
+   "materials": [
+    [
+     "stahl",
+     70
+    ],
+    [
+     "kontakte",
+     15
+    ],
+    [
+     "pcabs",
+     15
+    ]
+   ],
+   "info": "Ladebuchse aus Stahlblech mit vergoldeten Kontakten.",
+   "color": "#B7BCC0",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1.5,
+     "y": 5,
+     "w": 6,
+     "d": 1.6,
+     "r": 0.8,
+     "fill": "#2A2E31"
+    }
+   ]
+  },
+  {
+   "id": "platine",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "Hauptplatine",
+   "short": "Platine",
+   "shape": "box",
+   "x": 10,
+   "y": 88,
+   "w": 95,
+   "d": 62,
+   "z": 1.2,
+   "h": 1,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    70.8
+   ],
+   "mass": 12.7,
    "materials": [
     [
      "fr4",
@@ -208,28 +716,85 @@
      10
     ]
    ],
-   "material_id": "pcb",
-   "info": "Unscrew and unplug all ribbon cables; hand in at an e-waste collection point."
+   "info": "Leiterplatte mit Kupferbahnen, Lot und Chips. Mit kleinen Schrauben befestigt; in die Elektro-Sammlung geben.",
+   "color": "#2E6B45",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 70,
+     "y": 6,
+     "w": 8,
+     "d": 6,
+     "r": 0.5,
+     "fill": "#22272B"
+    },
+    {
+     "shape": "box",
+     "x": 81,
+     "y": 6,
+     "w": 8,
+     "d": 6,
+     "r": 0.5,
+     "fill": "#22272B"
+    },
+    {
+     "shape": "box",
+     "x": 70,
+     "y": 15,
+     "w": 8,
+     "d": 6,
+     "r": 0.5,
+     "fill": "#22272B"
+    },
+    {
+     "shape": "box",
+     "x": 81,
+     "y": 15,
+     "w": 8,
+     "d": 6,
+     "r": 0.5,
+     "fill": "#22272B"
+    },
+    {
+     "shape": "box",
+     "x": 70,
+     "y": 24,
+     "w": 8,
+     "d": 6,
+     "r": 0.5,
+     "fill": "#22272B"
+    },
+    {
+     "shape": "box",
+     "x": 81,
+     "y": 24,
+     "w": 8,
+     "d": 6,
+     "r": 0.5,
+     "fill": "#22272B"
+    }
+   ]
   },
   {
-   "id": "li_ion_battery",
+   "id": "akku",
    "component_id": "li_ion_battery",
-   "name": "Lithium-Ion Battery",
-   "short": "Lithium-Ion Batter",
+   "material_id": "li_ion",
+   "name": "Lithium-Polymer-Akku",
+   "short": "Akku",
    "shape": "box",
-   "x": 4.6,
-   "y": 14.4,
-   "w": 48.3,
-   "d": 67.2,
-   "h": 2.16,
-   "z": 0.96,
-   "r": 5.8,
+   "x": 12,
+   "y": 14,
+   "w": 91,
+   "d": 70,
+   "z": 1.2,
+   "h": 3.6,
+   "r": 2,
    "explode": [
     0,
     0,
-    58.8
+    70.8
    ],
-   "mass": 40.75,
+   "mass": 30.4,
    "materials": [
     [
      "lco",
@@ -252,36 +817,67 @@
      10
     ]
    ],
-   "material_id": "li_ion",
-   "info": "Never puncture or bend it; tape the contacts and bring it to a battery collection point."
+   "info": "Etwa 1.500 mAh, hält wochenlang. Flach verklebt: nie biegen oder einstechen, Pole abkleben und zur Batterie-Sammelstelle.",
+   "color": "#9DA6AD",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 4,
+     "w": 83,
+     "d": 62,
+     "r": 2
+    },
+    {
+     "shape": "box",
+     "x": 34,
+     "y": 58,
+     "w": 22,
+     "d": 10,
+     "r": 1,
+     "fill": "#C8423A"
+    }
+   ]
   },
   {
-   "id": "plastic_housing",
+   "id": "rueckschale",
    "component_id": "plastic_housing",
-   "name": "Plastic Housing (Unterteil)",
-   "short": "Plastic Housing (U",
+   "material_id": "abs",
+   "name": "Rückschale",
+   "short": "Rückschale",
    "shape": "box",
    "x": 0,
    "y": 0,
-   "w": 115.0,
-   "d": 160.0,
-   "h": 4.8,
+   "w": 115,
+   "d": 160,
    "z": 0,
-   "r": 13.8,
+   "h": 7,
+   "r": 8,
    "explode": [
     0,
     0,
-    0
+    0.0
    ],
-   "mass": 59.43,
+   "mass": 63.3,
    "materials": [
     [
      "pcabs",
      100
     ]
    ],
-   "material_id": "abs",
-   "info": "Look for hidden screws under rubber feet or labels, then pry the clips open."
+   "info": "Gummierte Kunststoffwanne, in der alle Teile liegen. Leer ausgebaut ist sie reiner Kunststoff.",
+   "color": "#2B2F33",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 3,
+     "w": 109,
+     "d": 154,
+     "r": 6,
+     "fill": "#23272A"
+    }
+   ]
   }
  ]
 }

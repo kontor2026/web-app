@@ -1,0 +1,476 @@
+{
+ "parts": [
+  {
+   "id": "schlummertaste",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Schlummertaste",
+   "short": "Schlummertaste",
+   "shape": "box",
+   "x": 25,
+   "y": 20,
+   "w": 50,
+   "d": 16,
+   "z": 78,
+   "h": 4,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    45
+   ],
+   "mass": 3.8,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Große Taste oben: drücken, und der Wecker klingelt nach ein paar Minuten noch einmal.",
+   "color": "#C9302C",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 4,
+     "w": 42,
+     "d": 8,
+     "r": 2,
+     "fill": "#D9534F"
+    }
+   ]
+  },
+  {
+   "id": "einstelltasten",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Einstelltasten",
+   "short": "Einstelltasten",
+   "shape": "box",
+   "x": 8,
+   "y": 4,
+   "w": 84,
+   "d": 10,
+   "z": 78,
+   "h": 2.5,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    45
+   ],
+   "mass": 2.9,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Gummitasten für Uhrzeit, Weckzeit und Licht. Drücken unten auf Kontaktfelder der Platine.",
+   "color": "#4A5258",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 2,
+     "w": 16,
+     "d": 6,
+     "r": 2,
+     "fill": "#5E656A"
+    },
+    {
+     "shape": "box",
+     "x": 25,
+     "y": 2,
+     "w": 16,
+     "d": 6,
+     "r": 2,
+     "fill": "#5E656A"
+    },
+    {
+     "shape": "box",
+     "x": 46,
+     "y": 2,
+     "w": 16,
+     "d": 6,
+     "r": 2,
+     "fill": "#5E656A"
+    },
+    {
+     "shape": "box",
+     "x": 67,
+     "y": 2,
+     "w": 16,
+     "d": 6,
+     "r": 2,
+     "fill": "#5E656A"
+    }
+   ]
+  },
+  {
+   "id": "frontscheibe",
+   "component_id": "plastic_housing",
+   "material_id": "pc",
+   "name": "Sichtscheibe",
+   "short": "Sichtscheibe",
+   "shape": "box",
+   "x": 10,
+   "y": 57,
+   "w": 80,
+   "d": 2,
+   "z": 26,
+   "h": 44,
+   "r": 0.5,
+   "explode": [
+    0,
+    60,
+    20
+   ],
+   "mass": 7.6,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Klare Kunststoffscheibe vor dem Display, von innen eingeklebt.",
+   "color": "#C9DEDF",
+   "opacity": 0.6
+  },
+  {
+   "id": "lcd",
+   "component_id": "lcd_panel",
+   "material_id": "special_glass",
+   "name": "Flüssigkristall-Anzeige (LCD)",
+   "short": "LCD",
+   "shape": "box",
+   "x": 14,
+   "y": 50,
+   "w": 72,
+   "d": 2.5,
+   "z": 30,
+   "h": 36,
+   "r": 0.5,
+   "explode": [
+    0,
+    32,
+    20
+   ],
+   "mass": 9.5,
+   "materials": [
+    [
+     "glas",
+     85
+    ],
+    [
+     "folien",
+     15
+    ]
+   ],
+   "info": "Zeigt die großen Ziffern. Zwei Glasplatten mit Flüssigkristall, über Leitgummis mit der Platine verbunden. Bricht leicht.",
+   "color": "#A9B4A2"
+  },
+  {
+   "id": "chip",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "Uhrenchip (unter Epoxid)",
+   "short": "Chip",
+   "shape": "box",
+   "x": 40,
+   "y": 45.6,
+   "w": 14,
+   "d": 2,
+   "z": 16,
+   "h": 10,
+   "r": 0.5,
+   "explode": [
+    0,
+    8,
+    20
+   ],
+   "mass": 0.5,
+   "materials": [
+    [
+     "chip",
+     60
+    ],
+    [
+     "phenolharz",
+     40
+    ]
+   ],
+   "info": "Zählt mithilfe eines Quarzes die Sekunden und steuert Anzeige und Weckton.",
+   "color": "#1E2226"
+  },
+  {
+   "id": "platine",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "Platine",
+   "short": "Platine",
+   "shape": "box",
+   "x": 10,
+   "y": 44,
+   "w": 80,
+   "d": 1.6,
+   "z": 12,
+   "h": 60,
+   "r": 0.5,
+   "explode": [
+    0,
+    0,
+    20
+   ],
+   "mass": 17.2,
+   "materials": [
+    [
+     "fr4",
+     55
+    ],
+    [
+     "kupfer",
+     20
+    ],
+    [
+     "chip",
+     15
+    ],
+    [
+     "lot",
+     10
+    ]
+   ],
+   "info": "Steht hinter dem Display. Mit zwei Schrauben in der Rückschale; in die Elektro-Sammlung geben.",
+   "color": "#2E6B45"
+  },
+  {
+   "id": "lautsprecher",
+   "component_id": "speaker_driver",
+   "material_id": "mixed_electronics",
+   "name": "Lautsprecher",
+   "short": "Lautsprecher",
+   "shape": "cyl",
+   "x": 63,
+   "y": 10,
+   "w": 34,
+   "z": 3,
+   "h": 10,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 14.3,
+   "materials": [
+    [
+     "stahl",
+     35
+    ],
+    [
+     "ndfeb",
+     20
+    ],
+    [
+     "kupfer",
+     15
+    ],
+    [
+     "papier",
+     15
+    ],
+    [
+     "pcabs",
+     15
+    ]
+   ],
+   "info": "Kleiner Lautsprecher für den Weckton, mit Magnet und Kupferspule. Von Bankkarten fernhalten.",
+   "color": "#5E656A",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 5,
+     "y": 5,
+     "w": 24,
+     "fill": "#2B2F33"
+    },
+    {
+     "shape": "cyl",
+     "x": 13,
+     "y": 13,
+     "w": 8,
+     "fill": "#9BA3A8"
+    }
+   ]
+  },
+  {
+   "id": "batterie_1",
+   "component_id": "alkaline_cell",
+   "material_id": "alkaline",
+   "name": "Alkaline-Batterie AA",
+   "short": "Batterien",
+   "shape": "box",
+   "x": 8,
+   "y": 8,
+   "w": 50.5,
+   "d": 14.5,
+   "z": 2,
+   "h": 14.5,
+   "r": 7,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 22,
+   "materials": [
+    [
+     "zinkmangan",
+     80
+    ],
+    [
+     "stahl",
+     20
+    ]
+   ],
+   "info": "Zwei AA-Zellen mit je 1,5 V. Herausnehmen und in die Batterie-Sammelbox geben, nie in den Restmüll.",
+   "color": "#3A6EA5",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 44,
+     "y": 1.5,
+     "w": 6,
+     "d": 11.5,
+     "r": 3,
+     "fill": "#C9A227"
+    }
+   ]
+  },
+  {
+   "id": "batterie_2",
+   "component_id": "alkaline_cell",
+   "material_id": "alkaline",
+   "name": "Alkaline-Batterie AA",
+   "short": "Batterie",
+   "shape": "box",
+   "x": 8,
+   "y": 23,
+   "w": 50.5,
+   "d": 14.5,
+   "z": 2,
+   "h": 14.5,
+   "r": 7,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 22,
+   "materials": [
+    [
+     "zinkmangan",
+     80
+    ],
+    [
+     "stahl",
+     20
+    ]
+   ],
+   "info": "Zweite AA-Zelle, umgekehrt eingelegt. Ausgelaufene Batterien hinterlassen weißen Belag an den Federn.",
+   "color": "#3A6EA5",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0.5,
+     "y": 1.5,
+     "w": 6,
+     "d": 11.5,
+     "r": 3,
+     "fill": "#C9A227"
+    }
+   ]
+  },
+  {
+   "id": "vorderschale",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Vorderschale",
+   "short": "Vorderschale",
+   "shape": "box",
+   "x": 0,
+   "y": 30,
+   "w": 100,
+   "d": 30,
+   "z": 0,
+   "h": 78,
+   "r": 6,
+   "explode": [
+    -140,
+    0,
+    0
+   ],
+   "mass": 47.7,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Vorderes Gehäuseteil mit Displayfenster. Nach Lösen der Schrauben im Batteriefach abziehbar.",
+   "color": "#2E3338",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 4,
+     "w": 92,
+     "d": 22,
+     "r": 4,
+     "fill": "#23272A"
+    }
+   ]
+  },
+  {
+   "id": "rueckschale",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Rückschale mit Batteriefach",
+   "short": "Rückschale",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 100,
+   "d": 30,
+   "z": 0,
+   "h": 78,
+   "r": 6,
+   "explode": [
+    0,
+    -75,
+    0
+   ],
+   "mass": 52.5,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Hinteres Gehäuseteil mit Batteriefach und Lautsprecher-Löchern. Reiner Kunststoff, wenn alles ausgebaut ist.",
+   "color": "#2E3338",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 4,
+     "w": 92,
+     "d": 22,
+     "r": 4,
+     "fill": "#23272A"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,535 @@
+{
+ "parts": [
+  {
+   "id": "frontblende",
+   "component_id": "plastic_housing",
+   "material_id": "pc",
+   "name": "Frontblende",
+   "short": "Frontblende",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 92,
+   "d": 30,
+   "z": 26,
+   "h": 2,
+   "r": 12,
+   "explode": [
+    0,
+    0,
+    89.0
+   ],
+   "mass": 6.5,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Glänzende Kunststoffblende mit Fenster für Linse, Mikrofone und Status-LED. Meist eingeclipst und verklebt.",
+   "color": "#1C1F22",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 34,
+     "y": 3,
+     "w": 24,
+     "fill": "#0F1113"
+    },
+    {
+     "shape": "cyl",
+     "x": 64,
+     "y": 12.5,
+     "w": 3,
+     "fill": "#5FBF6E"
+    },
+    {
+     "shape": "box",
+     "x": 8,
+     "y": 13.5,
+     "w": 4,
+     "d": 1.5,
+     "r": 0.5,
+     "fill": "#0F1113"
+    },
+    {
+     "shape": "box",
+     "x": 80,
+     "y": 13.5,
+     "w": 4,
+     "d": 1.5,
+     "r": 0.5,
+     "fill": "#0F1113"
+    }
+   ]
+  },
+  {
+   "id": "linse",
+   "component_id": "webcam_lens",
+   "material_id": "pc",
+   "name": "Objektiv mit Linsen",
+   "short": "Objektiv",
+   "shape": "cyl",
+   "x": 37,
+   "y": 6,
+   "w": 18,
+   "z": 20,
+   "h": 6,
+   "explode": [
+    0,
+    0,
+    71.0
+   ],
+   "mass": 2.2,
+   "materials": [
+    [
+     "pcabs",
+     70
+    ],
+    [
+     "glas",
+     30
+    ]
+   ],
+   "info": "Mehrere kleine Kunststofflinsen in einem Gewinderohr. Lässt sich vom Sensor abschrauben.",
+   "color": "#3A3F44",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 3,
+     "w": 12,
+     "fill": "#2E4A6B"
+    },
+    {
+     "shape": "cyl",
+     "x": 6,
+     "y": 6,
+     "w": 6,
+     "fill": "#4A6E96"
+    }
+   ]
+  },
+  {
+   "id": "bildsensor",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "Bildsensor",
+   "short": "Bildsensor",
+   "shape": "box",
+   "x": 40,
+   "y": 9,
+   "w": 12,
+   "d": 12,
+   "z": 18.6,
+   "h": 1.4,
+   "r": 0.5,
+   "explode": [
+    0,
+    0,
+    53.0
+   ],
+   "mass": 0.5,
+   "materials": [
+    [
+     "chip",
+     80
+    ],
+    [
+     "glas",
+     20
+    ]
+   ],
+   "info": "Lichtempfindlicher Chip mit Millionen Pixeln. Er wandelt das Bild in elektrische Signale um.",
+   "color": "#3F4547",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 2,
+     "w": 8,
+     "d": 8,
+     "r": 0.3,
+     "fill": "#5A4E7A"
+    }
+   ]
+  },
+  {
+   "id": "steuerchip",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "Bildprozessor mit USB",
+   "short": "Prozessor",
+   "shape": "box",
+   "x": 62,
+   "y": 10,
+   "w": 9,
+   "d": 9,
+   "z": 18.6,
+   "h": 1,
+   "r": 0.3,
+   "explode": [
+    0,
+    0,
+    53.0
+   ],
+   "mass": 0.4,
+   "materials": [
+    [
+     "chip",
+     100
+    ]
+   ],
+   "info": "Komprimiert das Video und schickt es über USB an den Computer.",
+   "color": "#3F4547"
+  },
+  {
+   "id": "mikrofon_l",
+   "component_id": "circuit_board",
+   "material_id": "mixed_electronics",
+   "name": "Mikrofon links",
+   "short": "Mikrofon",
+   "shape": "box",
+   "x": 8,
+   "y": 12.5,
+   "w": 4,
+   "d": 3,
+   "z": 18.6,
+   "h": 1.2,
+   "r": 0.3,
+   "explode": [
+    0,
+    0,
+    53.0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "stahl",
+     50
+    ],
+    [
+     "chip",
+     30
+    ],
+    [
+     "kupfer",
+     20
+    ]
+   ],
+   "info": "Winzige MEMS-Mikrofone. Zwei davon filtern Hintergrundgeräusche heraus.",
+   "color": "#B7BCC0"
+  },
+  {
+   "id": "mikrofon_r",
+   "component_id": "circuit_board",
+   "material_id": "mixed_electronics",
+   "name": "Mikrofon rechts",
+   "short": "Mikrofon",
+   "shape": "box",
+   "x": 80,
+   "y": 12.5,
+   "w": 4,
+   "d": 3,
+   "z": 18.6,
+   "h": 1.2,
+   "r": 0.3,
+   "explode": [
+    0,
+    0,
+    53.0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "stahl",
+     50
+    ],
+    [
+     "chip",
+     30
+    ],
+    [
+     "kupfer",
+     20
+    ]
+   ],
+   "info": "Zweites Mikrofon für Stereo-Ton.",
+   "color": "#B7BCC0",
+   "label": false
+  },
+  {
+   "id": "platine",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "Platine",
+   "short": "Platine",
+   "shape": "box",
+   "x": 4,
+   "y": 3,
+   "w": 84,
+   "d": 24,
+   "z": 17,
+   "h": 1.6,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    45.0
+   ],
+   "mass": 6.5,
+   "materials": [
+    [
+     "fr4",
+     55
+    ],
+    [
+     "kupfer",
+     20
+    ],
+    [
+     "chip",
+     15
+    ],
+    [
+     "lot",
+     10
+    ]
+   ],
+   "info": "Leiterplatte mit Sensor, Prozessor und Mikrofonen. Mit zwei Schrauben in der Rückschale; in die Elektro-Sammlung geben.",
+   "color": "#2E6B45",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 18,
+     "y": 4,
+     "w": 3,
+     "d": 2,
+     "r": 0.3,
+     "fill": "#22272B"
+    },
+    {
+     "shape": "box",
+     "x": 22,
+     "y": 4,
+     "w": 3,
+     "d": 2,
+     "r": 0.3,
+     "fill": "#22272B"
+    },
+    {
+     "shape": "box",
+     "x": 26,
+     "y": 4,
+     "w": 3,
+     "d": 2,
+     "r": 0.3,
+     "fill": "#22272B"
+    },
+    {
+     "shape": "box",
+     "x": 30,
+     "y": 4,
+     "w": 3,
+     "d": 2,
+     "r": 0.3,
+     "fill": "#22272B"
+    }
+   ]
+  },
+  {
+   "id": "rueckschale",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Rückschale",
+   "short": "Rückschale",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 92,
+   "d": 30,
+   "z": 8,
+   "h": 18,
+   "r": 12,
+   "explode": [
+    0,
+    0,
+    18.0
+   ],
+   "mass": 19.4,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Hinterer Gehäuseteil mit Kabeldurchführung. Nach Lösen der Schrauben unter dem Clip-Gelenk abnehmbar.",
+   "color": "#25292D",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 3,
+     "w": 86,
+     "d": 24,
+     "r": 10,
+     "fill": "#1E2226"
+    }
+   ]
+  },
+  {
+   "id": "clip",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Monitor-Clip",
+   "short": "Clip",
+   "shape": "box",
+   "x": 21,
+   "y": 2,
+   "w": 50,
+   "d": 26,
+   "z": 0,
+   "h": 8,
+   "r": 4,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 15.1,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Klappbarer Halter für den Bildschirmrand, mit Gummiauflage und Stativgewinde. Am Gelenk abschraubbar.",
+   "color": "#25292D",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 3,
+     "w": 44,
+     "d": 20,
+     "r": 3,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 21,
+     "y": 9,
+     "w": 7,
+     "fill": "#9BA3A8"
+    }
+   ]
+  },
+  {
+   "id": "kabelmantel",
+   "component_id": "cable_insulation",
+   "material_id": "pvc",
+   "name": "Kabelmantel (gekürzt)",
+   "short": "Kabelmantel",
+   "shape": "box",
+   "x": 92,
+   "y": 12.5,
+   "w": 14,
+   "d": 5,
+   "z": 14,
+   "h": 5,
+   "r": 2.5,
+   "explode": [
+    40,
+    0,
+    0
+   ],
+   "mass": 19.4,
+   "materials": [
+    [
+     "pvc",
+     100
+    ]
+   ],
+   "info": "PVC-Hülle des 1,5 m langen USB-Kabels, hier gekürzt gezeigt. Mit einem Abisolierwerkzeug längs aufschlitzen.",
+   "color": "#1E2226",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 1,
+     "w": 4,
+     "d": 3,
+     "r": 1,
+     "fill": "#3A3F44"
+    }
+   ]
+  },
+  {
+   "id": "kupferadern",
+   "component_id": "cable_copper_core",
+   "material_id": "copper",
+   "name": "Kupferadern",
+   "short": "Kupferadern",
+   "shape": "box",
+   "x": 92,
+   "y": 13.5,
+   "w": 14,
+   "d": 3,
+   "z": 15,
+   "h": 3,
+   "r": 1.5,
+   "explode": [
+    40,
+    0,
+    15
+   ],
+   "mass": 9.7,
+   "materials": [
+    [
+     "kupfer",
+     100
+    ]
+   ],
+   "info": "Vier dünne Kupferlitzen für Strom und Daten mit Abschirmgeflecht. Sortenreines Kupfer ist wertvoll.",
+   "color": "#C5803D",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1.0,
+     "y": 0.3,
+     "w": 2.5,
+     "d": 2.4,
+     "r": 1,
+     "fill": "#D9954F"
+    },
+    {
+     "shape": "box",
+     "x": 4.3,
+     "y": 0.3,
+     "w": 2.5,
+     "d": 2.4,
+     "r": 1,
+     "fill": "#D9954F"
+    },
+    {
+     "shape": "box",
+     "x": 7.6,
+     "y": 0.3,
+     "w": 2.5,
+     "d": 2.4,
+     "r": 1,
+     "fill": "#D9954F"
+    },
+    {
+     "shape": "box",
+     "x": 10.9,
+     "y": 0.3,
+     "w": 2.5,
+     "d": 2.4,
+     "r": 1,
+     "fill": "#D9954F"
+    }
+   ]
+  }
+ ]
+}

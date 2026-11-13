@@ -4,7 +4,7 @@
  "name_en": "Wi-Fi Router",
  "klasse": "Elektroschrott · Kleingerät",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -21,45 +21,49 @@
  "werte": [
   {
    "k": "Rohstoffwert",
-   "v": "≈ 1,77 €",
+   "v": "≈ 1,81 €",
    "hint": "Gold, Silber, Palladium zu Preisen vom 13.11. Ohne Palladium (kein Preis)."
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 2,96 kg",
+   "v": "≈ 3,04 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 2,41 kg",
-   "hint": "spart 0,55 kg, wenn recycelte Materialien eingesetzt werden"
+   "v": "≈ 2,36 kg",
+   "hint": "spart 0,68 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Cu": 39000.0,
-   "Fe": 13500.0,
-   "Ag": 48.0,
-   "Au": 11.0,
-   "Pd": 4.8
+   "Cu": 50450.0,
+   "Fe": 42829.0,
+   "Al": 23300.0,
+   "Ag": 42.0,
+   "Au": 9.41,
+   "Pd": 4.18
   },
   "herkunft": {
    "Cu": "Modellmassen (Schätzung)",
    "Fe": "Modellmassen (Schätzung)",
-   "Ag": "60 g Leiterplatte × oeko2012 Tab, 15, Motherboard Notebook (Umicore 2011)",
-   "Au": "60 g Leiterplatte × oeko2012 Tab, 15, Motherboard Notebook (Umicore 2011)",
-   "Pd": "60 g Leiterplatte × oeko2012 Tab, 15, Motherboard Notebook (Umicore 2011)"
+   "Al": "Modellmassen (Schätzung)",
+   "Ag": "52 g Leiterplatte × oeko2012 Tab, 15, Motherboard Notebook (Umicore 2011)",
+   "Au": "52 g Leiterplatte × oeko2012 Tab, 15, Motherboard Notebook (Umicore 2011)",
+   "Pd": "52 g Leiterplatte × oeko2012 Tab, 15, Motherboard Notebook (Umicore 2011)"
   },
   "materialien_g": {
-   "abs": 250.0,
-   "mixed_electronics": 90.0,
-   "pcb": 60.0
+   "abs": 167.8,
+   "mixed_electronics": 133.3,
+   "pcb": 52.3,
+   "aluminium": 23.3,
+   "steel": 23.3
   },
-  "co2_kg": 2.957,
-  "co2_mit_recyclat_kg": 2.409,
-  "co2_ersparnis_kg": 0.548,
+  "co2_kg": 3.038,
+  "co2_mit_recyclat_kg": 2.363,
+  "co2_ersparnis_kg": 0.675,
   "co2_ohne_faktor": [],
-  "rohstoffwert_eur": 1.77,
+  "rohstoffwert_eur": 1.81,
   "wert_ohne_preis": [
    "Pd"
   ],
@@ -109,95 +113,723 @@
   "nicht": "Nicht in Restmüll oder Gelbe Tonne",
   "warnung": "Kabel und Stecker dranlassen."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "plastic_housing_ober",
-   "component_id": "plastic_housing",
-   "name": "Plastic Housing (Oberteil)",
-   "short": "Plastic Housing (O",
+   "id": "antenne_1",
+   "component_id": "router_antennas",
+   "material_id": "mixed_electronics",
+   "name": "Antenne 1",
+   "short": "Antennen",
    "shape": "box",
-   "x": 0,
-   "y": 0,
-   "w": 220.0,
-   "d": 150.0,
-   "h": 8.0,
-   "z": 24.0,
-   "r": 18.0,
+   "x": 15,
+   "y": 8,
+   "w": 12,
+   "d": 125,
+   "z": 32,
+   "h": 8,
+   "r": 5,
    "explode": [
     0,
     0,
-    243.6
+    230.0
    ],
-   "mass": 75.0,
+   "mass": 11.2,
+   "materials": [
+    [
+     "pcabs",
+     75
+    ],
+    [
+     "kupfer",
+     15
+    ],
+    [
+     "messing",
+     10
+    ]
+   ],
+   "info": "Kunststoffstab mit einem Kupferstreifen als Strahler, über ein Gelenk mit Messing-Schraubanschluss. Von Hand abschrauben.",
+   "color": "#23272A",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 2,
+     "y": 2,
+     "w": 8,
+     "fill": "#B8A060"
+    }
+   ]
+  },
+  {
+   "id": "antenne_2",
+   "component_id": "router_antennas",
+   "material_id": "mixed_electronics",
+   "name": "Antenne 2",
+   "short": "Antenne 2",
+   "shape": "box",
+   "x": 60,
+   "y": 8,
+   "w": 12,
+   "d": 125,
+   "z": 32,
+   "h": 8,
+   "r": 5,
+   "explode": [
+    0,
+    0,
+    230.0
+   ],
+   "mass": 11.2,
+   "materials": [
+    [
+     "pcabs",
+     75
+    ],
+    [
+     "kupfer",
+     15
+    ],
+    [
+     "messing",
+     10
+    ]
+   ],
+   "info": "Gleich gebaut wie Antenne 1, sendet in einer eigenen Richtung.",
+   "color": "#23272A",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 2,
+     "y": 2,
+     "w": 8,
+     "fill": "#B8A060"
+    }
+   ]
+  },
+  {
+   "id": "antenne_3",
+   "component_id": "router_antennas",
+   "material_id": "mixed_electronics",
+   "name": "Antenne 3",
+   "short": "Antenne 3",
+   "shape": "box",
+   "x": 118,
+   "y": 8,
+   "w": 12,
+   "d": 125,
+   "z": 32,
+   "h": 8,
+   "r": 5,
+   "explode": [
+    0,
+    0,
+    230.0
+   ],
+   "mass": 11.2,
+   "materials": [
+    [
+     "pcabs",
+     75
+    ],
+    [
+     "kupfer",
+     15
+    ],
+    [
+     "messing",
+     10
+    ]
+   ],
+   "info": "Gleich gebaut wie Antenne 1, sendet in einer eigenen Richtung.",
+   "color": "#23272A",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 2,
+     "y": 2,
+     "w": 8,
+     "fill": "#B8A060"
+    }
+   ]
+  },
+  {
+   "id": "antenne_4",
+   "component_id": "router_antennas",
+   "material_id": "mixed_electronics",
+   "name": "Antenne 4",
+   "short": "Antenne 4",
+   "shape": "box",
+   "x": 163,
+   "y": 8,
+   "w": 12,
+   "d": 125,
+   "z": 32,
+   "h": 8,
+   "r": 5,
+   "explode": [
+    0,
+    0,
+    230.0
+   ],
+   "mass": 11.2,
+   "materials": [
+    [
+     "pcabs",
+     75
+    ],
+    [
+     "kupfer",
+     15
+    ],
+    [
+     "messing",
+     10
+    ]
+   ],
+   "info": "Gleich gebaut wie Antenne 1, sendet in einer eigenen Richtung.",
+   "color": "#23272A",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 2,
+     "y": 2,
+     "w": 8,
+     "fill": "#B8A060"
+    }
+   ]
+  },
+  {
+   "id": "oberschale",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Gehäuse-Oberteil",
+   "short": "Oberteil",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 190,
+   "d": 140,
+   "z": 16,
+   "h": 16,
+   "r": 10,
+   "explode": [
+    0,
+    0,
+    170.0
+   ],
+   "mass": 83.9,
    "materials": [
     [
      "pcabs",
      100
     ]
    ],
-   "material_id": "abs",
-   "info": "Look for hidden screws under rubber feet or labels, then pry the clips open."
+   "info": "Deckel mit Lüftungsschlitzen und Leuchtanzeigen. Schrauben stecken unter den Gummifüßen, danach ringsum aufclipsen.",
+   "color": "#2B2F33",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 45,
+     "y": 30,
+     "w": 4,
+     "d": 60,
+     "r": 2,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "box",
+     "x": 55,
+     "y": 30,
+     "w": 4,
+     "d": 60,
+     "r": 2,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "box",
+     "x": 65,
+     "y": 30,
+     "w": 4,
+     "d": 60,
+     "r": 2,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "box",
+     "x": 75,
+     "y": 30,
+     "w": 4,
+     "d": 60,
+     "r": 2,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "box",
+     "x": 85,
+     "y": 30,
+     "w": 4,
+     "d": 60,
+     "r": 2,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "box",
+     "x": 95,
+     "y": 30,
+     "w": 4,
+     "d": 60,
+     "r": 2,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "box",
+     "x": 105,
+     "y": 30,
+     "w": 4,
+     "d": 60,
+     "r": 2,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "box",
+     "x": 115,
+     "y": 30,
+     "w": 4,
+     "d": 60,
+     "r": 2,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "box",
+     "x": 125,
+     "y": 30,
+     "w": 4,
+     "d": 60,
+     "r": 2,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "box",
+     "x": 135,
+     "y": 30,
+     "w": 4,
+     "d": 60,
+     "r": 2,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "cyl",
+     "x": 40,
+     "y": 130,
+     "w": 3,
+     "d": 3,
+     "fill": "#7FC8F0"
+    },
+    {
+     "shape": "cyl",
+     "x": 55,
+     "y": 130,
+     "w": 3,
+     "d": 3,
+     "fill": "#7FC8F0"
+    },
+    {
+     "shape": "cyl",
+     "x": 70,
+     "y": 130,
+     "w": 3,
+     "d": 3,
+     "fill": "#7FC8F0"
+    },
+    {
+     "shape": "cyl",
+     "x": 85,
+     "y": 130,
+     "w": 3,
+     "d": 3,
+     "fill": "#7FC8F0"
+    },
+    {
+     "shape": "cyl",
+     "x": 100,
+     "y": 130,
+     "w": 3,
+     "d": 3,
+     "fill": "#7FC8F0"
+    },
+    {
+     "shape": "cyl",
+     "x": 115,
+     "y": 130,
+     "w": 3,
+     "d": 3,
+     "fill": "#7FC8F0"
+    },
+    {
+     "shape": "cyl",
+     "x": 130,
+     "y": 130,
+     "w": 3,
+     "d": 3,
+     "fill": "#7FC8F0"
+    },
+    {
+     "shape": "cyl",
+     "x": 145,
+     "y": 130,
+     "w": 3,
+     "d": 3,
+     "fill": "#7FC8F0"
+    }
+   ]
   },
   {
-   "id": "power_adapter",
-   "component_id": "power_adapter",
-   "name": "Power Adapter",
-   "short": "Power Adapter",
+   "id": "kuehlkoerper",
+   "component_id": "circuit_board",
+   "material_id": "aluminium",
+   "name": "Kühlkörper",
+   "short": "Kühlkörper",
    "shape": "box",
-   "x": 118.8,
-   "y": 13.5,
-   "w": 92.4,
-   "d": 63.0,
-   "h": 10.8,
-   "z": 4.8,
-   "r": 7.6,
+   "x": 65,
+   "y": 45,
+   "w": 45,
+   "d": 45,
+   "z": 11,
+   "h": 7,
+   "r": 2,
    "explode": [
     0,
     0,
-    178.0
+    108.0
    ],
-   "mass": 60.0,
+   "mass": 23.3,
    "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "info": "Aluminiumblock mit Rippen, leitet die Wärme vom Prozessor ab. Mit Wärmeleitpad aufgeklebt oder geklemmt.",
+   "color": "#C9CED2",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3.0,
+     "y": 3.0,
+     "w": 2,
+     "d": 39,
+     "r": 0.5,
+     "fill": "#AEB4B8"
+    },
+    {
+     "shape": "box",
+     "x": 8.3,
+     "y": 3.0,
+     "w": 2,
+     "d": 39,
+     "r": 0.5,
+     "fill": "#AEB4B8"
+    },
+    {
+     "shape": "box",
+     "x": 13.6,
+     "y": 3.0,
+     "w": 2,
+     "d": 39,
+     "r": 0.5,
+     "fill": "#AEB4B8"
+    },
+    {
+     "shape": "box",
+     "x": 18.9,
+     "y": 3.0,
+     "w": 2,
+     "d": 39,
+     "r": 0.5,
+     "fill": "#AEB4B8"
+    },
+    {
+     "shape": "box",
+     "x": 24.2,
+     "y": 3.0,
+     "w": 2,
+     "d": 39,
+     "r": 0.5,
+     "fill": "#AEB4B8"
+    },
+    {
+     "shape": "box",
+     "x": 29.5,
+     "y": 3.0,
+     "w": 2,
+     "d": 39,
+     "r": 0.5,
+     "fill": "#AEB4B8"
+    },
+    {
+     "shape": "box",
+     "x": 34.8,
+     "y": 3.0,
+     "w": 2,
+     "d": 39,
+     "r": 0.5,
+     "fill": "#AEB4B8"
+    },
+    {
+     "shape": "box",
+     "x": 40.1,
+     "y": 3.0,
+     "w": 2,
+     "d": 39,
+     "r": 0.5,
+     "fill": "#AEB4B8"
+    }
+   ]
+  },
+  {
+   "id": "soc",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "Netzwerkprozessor",
+   "short": "Prozessor",
+   "shape": "box",
+   "x": 76,
+   "y": 56,
+   "w": 22,
+   "d": 22,
+   "z": 9.6,
+   "h": 1.4,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    88.0
+   ],
+   "mass": 2.3,
+   "materials": [
+    [
+     "chip",
+     100
+    ]
+   ],
+   "info": "Leitet die Datenpakete zwischen Internet, Kabel und WLAN weiter. Wird im Betrieb warm.",
+   "color": "#3F4547"
+  },
+  {
+   "id": "wlan_24",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "WLAN-Chip 2,4 GHz mit Abschirmung",
+   "short": "WLAN 2,4 GHz",
+   "shape": "box",
+   "x": 25,
+   "y": 85,
+   "w": 26,
+   "d": 26,
+   "z": 9.6,
+   "h": 3,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    88.0
+   ],
+   "mass": 3.7,
+   "materials": [
+    [
+     "stahl",
+     60
+    ],
     [
      "chip",
      30
     ],
     [
      "kupfer",
-     30
-    ],
-    [
-     "pcabs",
-     25
-    ],
-    [
-     "stahl",
-     15
+     10
     ]
    ],
-   "material_id": "mixed_electronics",
-   "info": "Unplug it and hand it in together with the device as e-waste."
+   "info": "Funkchip unter einem Blechdeckel, der Störungen abschirmt. Der Deckel lässt sich abhebeln.",
+   "color": "#B7BCC0"
   },
   {
-   "id": "circuit_board",
+   "id": "wlan_5",
    "component_id": "circuit_board",
-   "name": "Circuit Board",
-   "short": "Circuit Board",
+   "material_id": "pcb",
+   "name": "WLAN-Chip 5 GHz mit Abschirmung",
+   "short": "WLAN 5 GHz",
    "shape": "box",
-   "x": 8.8,
-   "y": 13.5,
-   "w": 92.4,
-   "d": 63.0,
-   "h": 10.8,
-   "z": 4.8,
-   "r": 7.6,
+   "x": 135,
+   "y": 85,
+   "w": 26,
+   "d": 26,
+   "z": 9.6,
+   "h": 3,
+   "r": 1,
    "explode": [
     0,
     0,
-    93.2
+    88.0
    ],
-   "mass": 60.0,
+   "mass": 3.7,
+   "materials": [
+    [
+     "stahl",
+     60
+    ],
+    [
+     "chip",
+     30
+    ],
+    [
+     "kupfer",
+     10
+    ]
+   ],
+   "info": "Zweites Funkband: schneller, reicht aber weniger weit durch Wände.",
+   "color": "#B7BCC0"
+  },
+  {
+   "id": "ram",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "Arbeitsspeicher",
+   "short": "RAM",
+   "shape": "box",
+   "x": 120,
+   "y": 55,
+   "w": 10,
+   "d": 14,
+   "z": 9.6,
+   "h": 1.2,
+   "r": 0.5,
+   "explode": [
+    0,
+    0,
+    88.0
+   ],
+   "mass": 0.7,
+   "materials": [
+    [
+     "chip",
+     100
+    ]
+   ],
+   "info": "Merkt sich im Betrieb Verbindungen und Einstellungen. Ohne Strom ist er leer.",
+   "color": "#3F4547"
+  },
+  {
+   "id": "buchsen",
+   "component_id": "circuit_board",
+   "material_id": "steel",
+   "name": "Netzwerk-Buchsen (LAN/WAN)",
+   "short": "LAN-Buchsen",
+   "shape": "box",
+   "x": 40,
+   "y": 4,
+   "w": 90,
+   "d": 18,
+   "z": 9.6,
+   "h": 13.5,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    88.0
+   ],
+   "mass": 23.3,
+   "materials": [
+    [
+     "stahl",
+     50
+    ],
+    [
+     "pcabs",
+     35
+    ],
+    [
+     "kupfer",
+     10
+    ],
+    [
+     "kontakte",
+     5
+    ]
+   ],
+   "info": "Fünf RJ45-Buchsen aus Stahlblech mit Übertragern. Hier wird das Netzwerkkabel eingesteckt.",
+   "color": "#B7BCC0",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3.0,
+     "y": 4.0,
+     "w": 15,
+     "d": 10,
+     "r": 1,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 20.5,
+     "y": 4.0,
+     "w": 15,
+     "d": 10,
+     "r": 1,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 38.0,
+     "y": 4.0,
+     "w": 15,
+     "d": 10,
+     "r": 1,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 55.5,
+     "y": 4.0,
+     "w": 15,
+     "d": 10,
+     "r": 1,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 73.0,
+     "y": 4.0,
+     "w": 15,
+     "d": 10,
+     "r": 1,
+     "fill": "#2A2E31"
+    }
+   ]
+  },
+  {
+   "id": "platine",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "Hauptplatine",
+   "short": "Platine",
+   "shape": "box",
+   "x": 8,
+   "y": 4,
+   "w": 174,
+   "d": 128,
+   "z": 8,
+   "h": 1.6,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    68.0
+   ],
+   "mass": 41.9,
    "materials": [
     [
      "fr4",
@@ -216,76 +848,239 @@
      10
     ]
    ],
-   "material_id": "pcb",
-   "info": "Unscrew and unplug all ribbon cables; hand in at an e-waste collection point."
+   "info": "Große Leiterplatte mit allen Chips. Antennenkabel abziehen, Schrauben lösen und in die Elektro-Sammlung geben.",
+   "color": "#2E6B45",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 140,
+     "y": 2,
+     "w": 12,
+     "d": 10,
+     "r": 1,
+     "fill": "#22272B"
+    },
+    {
+     "shape": "cyl",
+     "x": 160,
+     "y": 3,
+     "w": 8,
+     "fill": "#22272B"
+    }
+   ]
   },
   {
-   "id": "router_antennas",
-   "component_id": "router_antennas",
-   "name": "Antennas",
-   "short": "Antennas",
-   "shape": "box",
-   "x": 233.2,
-   "y": 7.5,
-   "w": 11.0,
-   "d": 135.0,
-   "h": 3.2,
-   "z": 4.0,
-   "r": 1.3,
-   "explode": [
-    92.0,
-    0,
-    22.2
-   ],
-   "mass": 30.0,
-   "materials": [
-    [
-     "chip",
-     30
-    ],
-    [
-     "kupfer",
-     30
-    ],
-    [
-     "pcabs",
-     25
-    ],
-    [
-     "stahl",
-     15
-    ]
-   ],
-   "material_id": "mixed_electronics",
-   "info": "Unscrew external antennas by hand; internal ones are glued to the housing."
-  },
-  {
-   "id": "plastic_housing",
+   "id": "unterschale",
    "component_id": "plastic_housing",
-   "name": "Plastic Housing (Unterteil)",
-   "short": "Plastic Housing (U",
+   "material_id": "abs",
+   "name": "Gehäuse-Unterteil",
+   "short": "Unterteil",
    "shape": "box",
    "x": 0,
    "y": 0,
-   "w": 220.0,
-   "d": 150.0,
-   "h": 24.0,
+   "w": 190,
+   "d": 140,
    "z": 0,
-   "r": 18.0,
+   "h": 16,
+   "r": 10,
    "explode": [
     0,
     0,
-    0
+    0.0
    ],
-   "mass": 175.0,
+   "mass": 83.9,
    "materials": [
     [
      "pcabs",
      100
     ]
    ],
-   "material_id": "abs",
-   "info": "Look for hidden screws under rubber feet or labels, then pry the clips open."
+   "info": "Wanne mit Füßen, Wandhalterungs-Löchern und Lüftungsschlitzen. Ohne Elektronik reiner Kunststoff.",
+   "color": "#2B2F33",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 20,
+     "y": 40,
+     "w": 3,
+     "d": 60,
+     "r": 1.5,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "box",
+     "x": 33,
+     "y": 40,
+     "w": 3,
+     "d": 60,
+     "r": 1.5,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "box",
+     "x": 46,
+     "y": 40,
+     "w": 3,
+     "d": 60,
+     "r": 1.5,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "box",
+     "x": 59,
+     "y": 40,
+     "w": 3,
+     "d": 60,
+     "r": 1.5,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "box",
+     "x": 72,
+     "y": 40,
+     "w": 3,
+     "d": 60,
+     "r": 1.5,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "box",
+     "x": 85,
+     "y": 40,
+     "w": 3,
+     "d": 60,
+     "r": 1.5,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "box",
+     "x": 98,
+     "y": 40,
+     "w": 3,
+     "d": 60,
+     "r": 1.5,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "box",
+     "x": 111,
+     "y": 40,
+     "w": 3,
+     "d": 60,
+     "r": 1.5,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "box",
+     "x": 124,
+     "y": 40,
+     "w": 3,
+     "d": 60,
+     "r": 1.5,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "box",
+     "x": 137,
+     "y": 40,
+     "w": 3,
+     "d": 60,
+     "r": 1.5,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "box",
+     "x": 150,
+     "y": 40,
+     "w": 3,
+     "d": 60,
+     "r": 1.5,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "box",
+     "x": 163,
+     "y": 40,
+     "w": 3,
+     "d": 60,
+     "r": 1.5,
+     "fill": "#1E2226"
+    }
+   ]
+  },
+  {
+   "id": "netzteil",
+   "component_id": "power_adapter",
+   "material_id": "mixed_electronics",
+   "name": "Steckernetzteil 12 V",
+   "short": "Netzteil",
+   "shape": "box",
+   "x": 196,
+   "y": 50,
+   "w": 40,
+   "d": 60,
+   "z": 0,
+   "h": 30,
+   "r": 5,
+   "explode": [
+    45,
+    0,
+    0
+   ],
+   "mass": 88.5,
+   "materials": [
+    [
+     "pcabs",
+     35
+    ],
+    [
+     "kupfer",
+     25
+    ],
+    [
+     "ferrit",
+     15
+    ],
+    [
+     "stahl",
+     10
+    ],
+    [
+     "fr4",
+     10
+    ],
+    [
+     "chip",
+     5
+    ]
+   ],
+   "info": "Wandelt 230 V in 12 V um, mit Trafo und Platine im verklebten Gehäuse. Nicht öffnen: Kondensatoren können geladen sein.",
+   "color": "#2E3338",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 6,
+     "y": 8,
+     "w": 28,
+     "d": 20,
+     "r": 2,
+     "fill": "#E8E8E2"
+    },
+    {
+     "shape": "cyl",
+     "x": 9,
+     "y": 40,
+     "w": 5,
+     "fill": "#9BA3A8"
+    },
+    {
+     "shape": "cyl",
+     "x": 26,
+     "y": 40,
+     "w": 5,
+     "fill": "#9BA3A8"
+    }
+   ]
   }
  ]
 }

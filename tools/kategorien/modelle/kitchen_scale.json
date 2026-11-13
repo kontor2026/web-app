@@ -1,0 +1,689 @@
+{
+ "parts": [
+  {
+   "id": "glasplatte",
+   "component_id": "glass_platform",
+   "material_id": "special_glass",
+   "name": "Glasplatte (Sicherheitsglas)",
+   "short": "Glasplatte",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 150,
+   "d": 200,
+   "z": 15,
+   "h": 4.5,
+   "r": 10,
+   "explode": [
+    0,
+    0,
+    243.7
+   ],
+   "mass": 317.1,
+   "materials": [
+    [
+     "glas",
+     100
+    ]
+   ],
+   "info": "Gehärtetes Glas, auf die Wägezellen geklebt oder geschraubt. Zerspringt bei einem Schlag auf die Kante in viele Krümel.",
+   "color": "#C9DEDF",
+   "opacity": 0.65,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 45,
+     "y": 164,
+     "w": 60,
+     "d": 30,
+     "r": 3,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "cyl",
+     "x": 24,
+     "y": 174,
+     "w": 10,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 116,
+     "y": 174,
+     "w": 10,
+     "fill": "#3A3F44"
+    }
+   ]
+  },
+  {
+   "id": "lcd",
+   "component_id": "lcd_panel",
+   "material_id": "special_glass",
+   "name": "Flüssigkristall-Anzeige (LCD)",
+   "short": "LCD",
+   "shape": "box",
+   "x": 50,
+   "y": 168,
+   "w": 50,
+   "d": 22,
+   "z": 12.5,
+   "h": 2.5,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    163.7
+   ],
+   "mass": 5.9,
+   "materials": [
+    [
+     "glas",
+     85
+    ],
+    [
+     "folien",
+     15
+    ]
+   ],
+   "info": "Zeigt das Gewicht in Gramm. Zwei dünne Glasplatten mit Flüssigkristall, flach anfassen.",
+   "color": "#A9B4A2",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 5,
+     "w": 9,
+     "d": 12,
+     "r": 0.5,
+     "fill": "#7E897A"
+    },
+    {
+     "shape": "box",
+     "x": 15,
+     "y": 5,
+     "w": 9,
+     "d": 12,
+     "r": 0.5,
+     "fill": "#7E897A"
+    },
+    {
+     "shape": "box",
+     "x": 26,
+     "y": 5,
+     "w": 9,
+     "d": 12,
+     "r": 0.5,
+     "fill": "#7E897A"
+    },
+    {
+     "shape": "box",
+     "x": 37,
+     "y": 5,
+     "w": 9,
+     "d": 12,
+     "r": 0.5,
+     "fill": "#7E897A"
+    }
+   ]
+  },
+  {
+   "id": "mikrocontroller",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "Steuerchip",
+   "short": "Steuerchip",
+   "shape": "box",
+   "x": 42.5,
+   "y": 166,
+   "w": 6.5,
+   "d": 8,
+   "z": 11.7,
+   "h": 1,
+   "r": 0.3,
+   "explode": [
+    0,
+    0,
+    104.5
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "chip",
+     100
+    ]
+   ],
+   "info": "Rechnet das Messsignal in Gramm um, steuert Anzeige und Tara-Taste.",
+   "color": "#3F4547"
+  },
+  {
+   "id": "adc",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "Messverstärker (A/D-Wandler)",
+   "short": "A/D-Wandler",
+   "shape": "box",
+   "x": 101,
+   "y": 166,
+   "w": 6.5,
+   "d": 8,
+   "z": 11.7,
+   "h": 1,
+   "r": 0.3,
+   "explode": [
+    0,
+    0,
+    104.5
+   ],
+   "mass": 0.2,
+   "materials": [
+    [
+     "chip",
+     100
+    ]
+   ],
+   "info": "Verstärkt die winzige Spannung der Wägezellen und wandelt sie in Zahlen um.",
+   "color": "#3F4547"
+  },
+  {
+   "id": "platine",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "Platine mit Sensortasten",
+   "short": "Platine",
+   "shape": "box",
+   "x": 42,
+   "y": 160,
+   "w": 66,
+   "d": 36,
+   "z": 10.5,
+   "h": 1.2,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    84.5
+   ],
+   "mass": 9.9,
+   "materials": [
+    [
+     "fr4",
+     55
+    ],
+    [
+     "kupfer",
+     20
+    ],
+    [
+     "chip",
+     15
+    ],
+    [
+     "lot",
+     10
+    ]
+   ],
+   "info": "Die Tasten sind Kupferflächen, die einen Finger durch das Glas spüren. Mit Drähten zu den Wägezellen; Elektro-Sammlung.",
+   "color": "#2E6B45",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 9,
+     "y": 4,
+     "w": 50,
+     "d": 28,
+     "r": 1,
+     "fill": "#3E7D55"
+    }
+   ]
+  },
+  {
+   "id": "waegezelle_1",
+   "component_id": "load_cell",
+   "material_id": "aluminium",
+   "name": "Wägezelle 1",
+   "short": "Wägezellen",
+   "shape": "box",
+   "x": 6,
+   "y": 6,
+   "w": 34,
+   "d": 34,
+   "z": 3,
+   "h": 8,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    92.0
+   ],
+   "mass": 11.9,
+   "materials": [
+    [
+     "alu",
+     95
+    ],
+    [
+     "kupfer",
+     3
+    ],
+    [
+     "folien",
+     2
+    ]
+   ],
+   "info": "Biegebalken aus Aluminium mit aufgeklebten Dehnungsmessstreifen. Wird er durch das Gewicht ein winziges Stück gebogen, ändert sich der elektrische Widerstand. Abschrauben, die dünnen Drähte abknipsen.",
+   "color": "#C9CED2",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 12,
+     "w": 26,
+     "d": 10,
+     "r": 1,
+     "fill": "#AEB4B8"
+    },
+    {
+     "shape": "box",
+     "x": 12,
+     "y": 14,
+     "w": 10,
+     "d": 6,
+     "r": 0.5,
+     "fill": "#C5803D"
+    },
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 3,
+     "w": 5,
+     "fill": "#5E656A"
+    }
+   ]
+  },
+  {
+   "id": "waegezelle_2",
+   "component_id": "load_cell",
+   "material_id": "aluminium",
+   "name": "Wägezelle 2",
+   "short": "Wägezelle 2",
+   "shape": "box",
+   "x": 110,
+   "y": 6,
+   "w": 34,
+   "d": 34,
+   "z": 3,
+   "h": 8,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    92.0
+   ],
+   "mass": 11.9,
+   "materials": [
+    [
+     "alu",
+     95
+    ],
+    [
+     "kupfer",
+     3
+    ],
+    [
+     "folien",
+     2
+    ]
+   ],
+   "info": "Gleich gebaut wie Wägezelle 1. Zusammen messen die vier Zellen das Gesamtgewicht.",
+   "color": "#C9CED2",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 12,
+     "w": 26,
+     "d": 10,
+     "r": 1,
+     "fill": "#AEB4B8"
+    },
+    {
+     "shape": "box",
+     "x": 12,
+     "y": 14,
+     "w": 10,
+     "d": 6,
+     "r": 0.5,
+     "fill": "#C5803D"
+    },
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 3,
+     "w": 5,
+     "fill": "#5E656A"
+    }
+   ]
+  },
+  {
+   "id": "waegezelle_3",
+   "component_id": "load_cell",
+   "material_id": "aluminium",
+   "name": "Wägezelle 3",
+   "short": "Wägezelle 3",
+   "shape": "box",
+   "x": 6,
+   "y": 156,
+   "w": 34,
+   "d": 34,
+   "z": 3,
+   "h": 8,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    92.0
+   ],
+   "mass": 11.9,
+   "materials": [
+    [
+     "alu",
+     95
+    ],
+    [
+     "kupfer",
+     3
+    ],
+    [
+     "folien",
+     2
+    ]
+   ],
+   "info": "Gleich gebaut wie Wägezelle 1. Zusammen messen die vier Zellen das Gesamtgewicht.",
+   "color": "#C9CED2",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 12,
+     "w": 26,
+     "d": 10,
+     "r": 1,
+     "fill": "#AEB4B8"
+    },
+    {
+     "shape": "box",
+     "x": 12,
+     "y": 14,
+     "w": 10,
+     "d": 6,
+     "r": 0.5,
+     "fill": "#C5803D"
+    },
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 3,
+     "w": 5,
+     "fill": "#5E656A"
+    }
+   ]
+  },
+  {
+   "id": "waegezelle_4",
+   "component_id": "load_cell",
+   "material_id": "aluminium",
+   "name": "Wägezelle 4",
+   "short": "Wägezelle 4",
+   "shape": "box",
+   "x": 110,
+   "y": 156,
+   "w": 34,
+   "d": 34,
+   "z": 3,
+   "h": 8,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    92.0
+   ],
+   "mass": 11.9,
+   "materials": [
+    [
+     "alu",
+     95
+    ],
+    [
+     "kupfer",
+     3
+    ],
+    [
+     "folien",
+     2
+    ]
+   ],
+   "info": "Gleich gebaut wie Wägezelle 1. Zusammen messen die vier Zellen das Gesamtgewicht.",
+   "color": "#C9CED2",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 12,
+     "w": 26,
+     "d": 10,
+     "r": 1,
+     "fill": "#AEB4B8"
+    },
+    {
+     "shape": "box",
+     "x": 12,
+     "y": 14,
+     "w": 10,
+     "d": 6,
+     "r": 0.5,
+     "fill": "#C5803D"
+    },
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 3,
+     "w": 5,
+     "fill": "#5E656A"
+    }
+   ]
+  },
+  {
+   "id": "knopfzelle_1",
+   "component_id": "button_cell",
+   "material_id": "coin_cell",
+   "name": "Knopfzelle CR2032",
+   "short": "Knopfzellen",
+   "shape": "cyl",
+   "x": 54,
+   "y": 80,
+   "w": 20,
+   "z": 2,
+   "h": 3.2,
+   "explode": [
+    120,
+    0,
+    8
+   ],
+   "mass": 3,
+   "materials": [
+    [
+     "knopfzelle",
+     100
+    ]
+   ],
+   "info": "Lithium-Knopfzelle mit 3 V. Beide Seiten abkleben, zur Batterie-Sammelbox, und von kleinen Kindern fernhalten.",
+   "color": "#B9BEC2",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 3,
+     "w": 14,
+     "fill": "#D0D4D7"
+    }
+   ]
+  },
+  {
+   "id": "knopfzelle_2",
+   "component_id": "button_cell",
+   "material_id": "coin_cell",
+   "name": "Knopfzelle CR2032",
+   "short": "Knopfzelle",
+   "shape": "cyl",
+   "x": 76,
+   "y": 80,
+   "w": 20,
+   "z": 2,
+   "h": 3.2,
+   "explode": [
+    120,
+    0,
+    8
+   ],
+   "mass": 3,
+   "materials": [
+    [
+     "knopfzelle",
+     100
+    ]
+   ],
+   "info": "Zweite Zelle, in Reihe geschaltet.",
+   "color": "#B9BEC2",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 3,
+     "w": 14,
+     "fill": "#D0D4D7"
+    }
+   ]
+  },
+  {
+   "id": "batteriedeckel",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Batteriefachdeckel",
+   "short": "Batteriedeckel",
+   "shape": "box",
+   "x": 50,
+   "y": 75,
+   "w": 50,
+   "d": 30,
+   "z": 0,
+   "h": 1.5,
+   "r": 3,
+   "explode": [
+    120,
+    0,
+    0
+   ],
+   "mass": 4,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Im Boden, mit einer Rastnase. Zum Öffnen auf die Rillen drücken und schieben.",
+   "color": "#2E3338",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 18,
+     "y": 24.0,
+     "w": 14,
+     "d": 1.2,
+     "r": 0.5,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "box",
+     "x": 18,
+     "y": 26.5,
+     "w": 14,
+     "d": 1.2,
+     "r": 0.5,
+     "fill": "#1E2226"
+    }
+   ]
+  },
+  {
+   "id": "gehaeuse",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Gehäuse-Wanne mit Füßen",
+   "short": "Gehäuse",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 150,
+   "d": 200,
+   "z": 0,
+   "h": 15,
+   "r": 10,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 109,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Flache Kunststoffwanne. Die Wägezellen stehen auf vier Gummifüßen, die durch den Boden ragen.",
+   "color": "#2E3338",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 50,
+     "y": 75,
+     "w": 50,
+     "d": 30,
+     "r": 3,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "cyl",
+     "x": 18,
+     "y": 18,
+     "w": 10,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "cyl",
+     "x": 122,
+     "y": 18,
+     "w": 10,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "cyl",
+     "x": 18,
+     "y": 168,
+     "w": 10,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "cyl",
+     "x": 122,
+     "y": 168,
+     "w": 10,
+     "fill": "#1E2226"
+    }
+   ]
+  }
+ ]
+}
