@@ -11,15 +11,15 @@
    "y": 0,
    "w": 150,
    "d": 200,
-   "z": 15,
+   "z": 17,
    "h": 4.5,
    "r": 10,
    "explode": [
     0,
     0,
-    243.7
+    150
    ],
-   "mass": 317.1,
+   "mass": 310.4,
    "materials": [
     [
      "glas",
@@ -40,18 +40,169 @@
      "fill": "#1E2226"
     },
     {
+     "shape": "box",
+     "x": 49,
+     "y": 168,
+     "w": 52,
+     "d": 22,
+     "r": 1,
+     "fill": "#A9B4A2"
+    },
+    {
+     "shape": "box",
+     "x": 54,
+     "y": 171,
+     "w": 1.4,
+     "d": 16,
+     "r": 0.4,
+     "fill": "#2B302C"
+    },
+    {
+     "shape": "box",
+     "x": 61,
+     "y": 171,
+     "w": 1.4,
+     "d": 16,
+     "r": 0.4,
+     "fill": "#2B302C"
+    },
+    {
+     "shape": "box",
+     "x": 54,
+     "y": 171,
+     "w": 8.4,
+     "d": 1.4,
+     "r": 0.4,
+     "fill": "#2B302C"
+    },
+    {
+     "shape": "box",
+     "x": 54,
+     "y": 185.6,
+     "w": 8.4,
+     "d": 1.4,
+     "r": 0.4,
+     "fill": "#2B302C"
+    },
+    {
+     "shape": "box",
+     "x": 65,
+     "y": 171,
+     "w": 1.4,
+     "d": 16,
+     "r": 0.4,
+     "fill": "#2B302C"
+    },
+    {
+     "shape": "box",
+     "x": 72,
+     "y": 171,
+     "w": 1.4,
+     "d": 16,
+     "r": 0.4,
+     "fill": "#2B302C"
+    },
+    {
+     "shape": "box",
+     "x": 65,
+     "y": 171,
+     "w": 8.4,
+     "d": 1.4,
+     "r": 0.4,
+     "fill": "#2B302C"
+    },
+    {
+     "shape": "box",
+     "x": 65,
+     "y": 185.6,
+     "w": 8.4,
+     "d": 1.4,
+     "r": 0.4,
+     "fill": "#2B302C"
+    },
+    {
+     "shape": "box",
+     "x": 76,
+     "y": 171,
+     "w": 1.4,
+     "d": 16,
+     "r": 0.4,
+     "fill": "#2B302C"
+    },
+    {
+     "shape": "box",
+     "x": 83,
+     "y": 171,
+     "w": 1.4,
+     "d": 16,
+     "r": 0.4,
+     "fill": "#2B302C"
+    },
+    {
+     "shape": "box",
+     "x": 76,
+     "y": 171,
+     "w": 8.4,
+     "d": 1.4,
+     "r": 0.4,
+     "fill": "#2B302C"
+    },
+    {
+     "shape": "box",
+     "x": 76,
+     "y": 185.6,
+     "w": 8.4,
+     "d": 1.4,
+     "r": 0.4,
+     "fill": "#2B302C"
+    },
+    {
+     "shape": "box",
+     "x": 89,
+     "y": 180,
+     "w": 8,
+     "d": 6,
+     "r": 0.5,
+     "fill": "#2B302C"
+    },
+    {
      "shape": "cyl",
-     "x": 24,
-     "y": 174,
-     "w": 10,
+     "x": 22,
+     "y": 172,
+     "w": 14,
      "fill": "#3A3F44"
     },
     {
      "shape": "cyl",
-     "x": 116,
-     "y": 174,
-     "w": 10,
+     "x": 26,
+     "y": 176,
+     "w": 6,
+     "fill": "#9AA2A8"
+    },
+    {
+     "shape": "cyl",
+     "x": 114,
+     "y": 172,
+     "w": 14,
      "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 118,
+     "y": 178,
+     "w": 6,
+     "d": 2,
+     "r": 0.5,
+     "fill": "#9AA2A8"
+    },
+    {
+     "shape": "box",
+     "x": 8,
+     "y": 8,
+     "w": 134,
+     "d": 150,
+     "r": 8,
+     "fill": "#C2D8D9"
     }
    ]
   },
@@ -66,15 +217,15 @@
    "y": 168,
    "w": 50,
    "d": 22,
-   "z": 12.5,
+   "z": 14.5,
    "h": 2.5,
    "r": 1,
    "explode": [
     0,
     0,
-    163.7
+    95
    ],
-   "mass": 5.9,
+   "mass": 5.8,
    "materials": [
     [
      "glas",
@@ -137,13 +288,13 @@
    "y": 166,
    "w": 6.5,
    "d": 8,
-   "z": 11.7,
+   "z": 13.7,
    "h": 1,
    "r": 0.3,
    "explode": [
     0,
     0,
-    104.5
+    75
    ],
    "mass": 0.3,
    "materials": [
@@ -166,13 +317,13 @@
    "y": 166,
    "w": 6.5,
    "d": 8,
-   "z": 11.7,
+   "z": 13.7,
    "h": 1,
    "r": 0.3,
    "explode": [
     0,
     0,
-    104.5
+    75
    ],
    "mass": 0.2,
    "materials": [
@@ -195,15 +346,15 @@
    "y": 160,
    "w": 66,
    "d": 36,
-   "z": 10.5,
+   "z": 12.5,
    "h": 1.2,
    "r": 2,
    "explode": [
     0,
     0,
-    84.5
+    60
    ],
-   "mass": 9.9,
+   "mass": 9.7,
    "materials": [
     [
      "fr4",
@@ -243,19 +394,19 @@
    "name": "Wägezelle 1",
    "short": "Wägezellen",
    "shape": "box",
-   "x": 6,
-   "y": 6,
+   "x": 110,
+   "y": 156,
    "w": 34,
    "d": 34,
-   "z": 3,
+   "z": 5,
    "h": 8,
    "r": 3,
    "explode": [
     0,
     0,
-    92.0
+    40
    ],
-   "mass": 11.9,
+   "mass": 11.6,
    "materials": [
     [
      "alu",
@@ -311,15 +462,15 @@
    "y": 6,
    "w": 34,
    "d": 34,
-   "z": 3,
+   "z": 5,
    "h": 8,
    "r": 3,
    "explode": [
     0,
     0,
-    92.0
+    40
    ],
-   "mass": 11.9,
+   "mass": 11.6,
    "materials": [
     [
      "alu",
@@ -376,15 +527,15 @@
    "y": 156,
    "w": 34,
    "d": 34,
-   "z": 3,
+   "z": 5,
    "h": 8,
    "r": 3,
    "explode": [
     0,
     0,
-    92.0
+    40
    ],
-   "mass": 11.9,
+   "mass": 11.6,
    "materials": [
     [
      "alu",
@@ -437,19 +588,19 @@
    "name": "Wägezelle 4",
    "short": "Wägezelle 4",
    "shape": "box",
-   "x": 110,
-   "y": 156,
+   "x": 6,
+   "y": 6,
    "w": 34,
    "d": 34,
-   "z": 3,
+   "z": 5,
    "h": 8,
    "r": 3,
    "explode": [
     0,
     0,
-    92.0
+    40
    ],
-   "mass": 11.9,
+   "mass": 11.6,
    "materials": [
     [
      "alu",
@@ -505,14 +656,14 @@
    "x": 54,
    "y": 80,
    "w": 20,
-   "z": 2,
+   "z": 4,
    "h": 3.2,
    "explode": [
     120,
     0,
     8
    ],
-   "mass": 3,
+   "mass": 2.9,
    "materials": [
     [
      "knopfzelle",
@@ -541,14 +692,14 @@
    "x": 76,
    "y": 80,
    "w": 20,
-   "z": 2,
+   "z": 4,
    "h": 3.2,
    "explode": [
     120,
     0,
     8
    ],
-   "mass": 3,
+   "mass": 2.9,
    "materials": [
     [
      "knopfzelle",
@@ -579,7 +730,7 @@
    "y": 75,
    "w": 50,
    "d": 30,
-   "z": 0,
+   "z": 2,
    "h": 1.5,
    "r": 3,
    "explode": [
@@ -587,7 +738,7 @@
     0,
     0
    ],
-   "mass": 4,
+   "mass": 3.9,
    "materials": [
     [
      "pcabs",
@@ -618,6 +769,92 @@
    ]
   },
   {
+   "id": "kontakte",
+   "component_id": "button_cell",
+   "material_id": "steel",
+   "name": "Batteriekontakte",
+   "short": "Kontakte",
+   "shape": "box",
+   "x": 52,
+   "y": 78,
+   "w": 46,
+   "d": 4,
+   "z": 4,
+   "h": 3,
+   "r": 0.5,
+   "explode": [
+    120,
+    0,
+    20
+   ],
+   "mass": 1,
+   "materials": [
+    [
+     "stahl",
+     85
+    ],
+    [
+     "nickel",
+     15
+    ]
+   ],
+   "info": "Vernickelte Federbleche, die die Knopfzellen mit der Platine verbinden.",
+   "color": "#C9CDD0"
+  },
+  {
+   "id": "kabel",
+   "component_id": "load_cell",
+   "material_id": "copper",
+   "name": "Verbindungsdrähte der Wägezellen",
+   "short": "Drähte",
+   "shape": "box",
+   "x": 40,
+   "y": 40,
+   "w": 70,
+   "d": 4,
+   "z": 5,
+   "h": 1,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    40
+   ],
+   "mass": 1.9,
+   "materials": [
+    [
+     "kupfer",
+     60
+    ],
+    [
+     "pvc",
+     40
+    ]
+   ],
+   "info": "Dünne bunte Litzen von jeder Wägezelle zur Platine. Kupfer, beim Zerlegen einfach abknipsen.",
+   "color": "#C8423A",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 0,
+     "w": 70,
+     "d": 1,
+     "r": 0.3,
+     "fill": "#E8E2C8"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 2,
+     "w": 70,
+     "d": 1,
+     "r": 0.3,
+     "fill": "#3E9A57"
+    }
+   ]
+  },
+  {
    "id": "gehaeuse",
    "component_id": "plastic_housing",
    "material_id": "abs",
@@ -628,15 +865,15 @@
    "y": 0,
    "w": 150,
    "d": 200,
-   "z": 0,
+   "z": 2,
    "h": 15,
    "r": 10,
    "explode": [
     0,
     0,
-    0.0
+    0
    ],
-   "mass": 109,
+   "mass": 106.7,
    "materials": [
     [
      "pcabs",
@@ -684,6 +921,117 @@
      "fill": "#1E2226"
     }
    ]
+  },
+  {
+   "id": "fuss_1",
+   "component_id": "plastic_housing",
+   "material_id": "rubber",
+   "name": "Gummifüße (4 Stück)",
+   "short": "Gummifüße",
+   "shape": "cyl",
+   "x": 120,
+   "y": 170,
+   "w": 14,
+   "z": 0,
+   "h": 2,
+   "explode": [
+    0,
+    0,
+    -25
+   ],
+   "mass": 1.9,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "info": "Rutschfeste Füße unter den Wägezellen. Lassen sich mit dem Fingernagel abziehen.",
+   "color": "#1A1C1E"
+  },
+  {
+   "id": "fuss_2",
+   "component_id": "plastic_housing",
+   "material_id": "rubber",
+   "name": "Gummifuß",
+   "short": "Gummifuß",
+   "shape": "cyl",
+   "x": 120,
+   "y": 16,
+   "w": 14,
+   "z": 0,
+   "h": 2,
+   "explode": [
+    0,
+    0,
+    -25
+   ],
+   "mass": 1.9,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "info": "Gleich wie die anderen Füße.",
+   "color": "#1A1C1E",
+   "label": false
+  },
+  {
+   "id": "fuss_3",
+   "component_id": "plastic_housing",
+   "material_id": "rubber",
+   "name": "Gummifuß",
+   "short": "Gummifuß",
+   "shape": "cyl",
+   "x": 16,
+   "y": 170,
+   "w": 14,
+   "z": 0,
+   "h": 2,
+   "explode": [
+    0,
+    0,
+    -25
+   ],
+   "mass": 1.9,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "info": "Gleich wie die anderen Füße.",
+   "color": "#1A1C1E",
+   "label": false
+  },
+  {
+   "id": "fuss_4",
+   "component_id": "plastic_housing",
+   "material_id": "rubber",
+   "name": "Gummifuß",
+   "short": "Gummifuß",
+   "shape": "cyl",
+   "x": 16,
+   "y": 16,
+   "w": 14,
+   "z": 0,
+   "h": 2,
+   "explode": [
+    0,
+    0,
+    -25
+   ],
+   "mass": 1.9,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "info": "Gleich wie die anderen Füße.",
+   "color": "#1A1C1E",
+   "label": false
   }
  ]
 }

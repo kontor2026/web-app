@@ -16,11 +16,17 @@ D = 105  # Durchmesser des Knäuels
 KASTEN = '#2B2E31'
 
 
-def windungen(dm, n=5, breite=4):
-    return [mark('cyl', round(i * breite, 2), round(i * breite, 2), round(dm - 2 * i * breite, 2)) for i in range(n)]
+LOCH = '#1A1C1B'  # Innenraum des Knäuels (Ring), dunkel wie ein Schatten
 
 
-def led_kreise(dm, ringe=((0.44, 16), (0.36, 14), (0.28, 10))):
+def windungen(dm, n=6, breite=3.2, farben=None):
+    """Konzentrische Drahtwindungen, innen ein dunkles Loch: das Knäuel ist ein lockerer Ring."""
+    m = [mark('cyl', round(i * breite, 2), round(i * breite, 2), round(dm - 2 * i * breite, 2),
+              fill=farben[i % 2] if farben else None) for i in range(n)]
+    return m + [mark('cyl', round(n * breite, 2), round(n * breite, 2), round(dm - 2 * n * breite, 2), fill=LOCH)]
+
+
+def led_kreise(dm, ringe=((0.46, 16), (0.4, 14), (0.34, 10))):
     out = []
     for f, n in ringe:
         for i in range(n):
@@ -33,22 +39,32 @@ def led_kreise(dm, ringe=((0.44, 16), (0.36, 14), (0.28, 10))):
 AA = [['zinkmangan', 80], ['stahl', 20]]
 teile = [
     teil('leds', 'led_module', '40 Mini-LEDs', 'LEDs', 'cyl',
-         material_id='mixed_electronics', x=3, y=3, w=D - 6, z=30, h=4, mass=8,
+         material_id='mixed_electronics', x=3, y=3, w=D - 6, z=28, h=4, mass=8,
          materials=[['led', 40], ['pcabs', 40], ['kupfer', 10], ['lot', 10]],
          info='Winzige Leuchtdioden, in Tropfen aus Kunstharz eingegossen und direkt auf den Draht gelötet. '
               'Sie lassen sich nicht einzeln abtrennen, die ganze Kette ist Elektroschrott.',
-         color='#F2F2E8', opacity=0.6, marks=led_kreise(D - 6)),
+         color='#E4E6DC', opacity=0.75,
+         marks=[mark('cyl', 19, 19, D - 44, fill=LOCH)]
+         + led_kreise(D - 6)),
     teil('draht', 'cable_copper_core', 'Kupferdraht (lackiert)', 'Kupferdraht', 'cyl',
-         x=2, y=2, w=D - 4, z=1, h=28, mass=30, materials=[['kupfer', 85], ['polyester', 15]],
+         x=2, y=2, w=D - 4, z=1, h=26, mass=30, materials=[['kupfer', 85], ['polyester', 15]],
          info='Zwei dünne, lackisolierte Kupferdrähte, an denen die LEDs hängen. Biegsam, aber bricht bei häufigem Knicken.',
-         color='#C5803D', marks=windungen(D - 4)),
+         color='#C5803D', marks=windungen(D - 4, farben=('#C5803D', '#B06F33'))),
     teil('mantel', 'cable_insulation', 'Kabelisolierung', 'Isolierung', 'cyl',
-         x=0, y=0, w=D, z=0, h=30, mass=22, materials=[['pvc', 100]],
+         x=0, y=0, w=D, z=0, h=28, mass=22, materials=[['pvc', 100]],
          info='Grüne oder durchsichtige PVC-Hülle um den Draht. Zum Recycling muss sie in der Anlage vom Kupfer '
               'getrennt werden.',
-         color='#3E7A4A', opacity=0.8, marks=windungen(D)),
+         color='#3E7A4A', marks=windungen(D, farben=('#3E7A4A', '#336A3F'))),
+    teil('zuleitung', 'cable_insulation', 'Zuleitung zum Batteriekasten', 'Zuleitung', 'box',
+         material_id='pvc', x=86, y=96, w=6, d=14, z=1, h=4, r=2, explode=[-30, 30, 0], mass=3,
+         materials=[['pvc', 60], ['kupfer', 40]], color='#336A3F',
+         info='Etwa 30 cm Kabel ohne LEDs zwischen Kasten und Kette. Hier abschneiden, um den Kasten abzutrennen.'),
+    teil('schieber', 'battery_box', 'Schiebeknopf (AN/AUS/TIMER)', 'Schiebeknopf', 'box',
+         material_id='abs', x=148, y=128, w=2.5, d=8, z=7, h=6, r=0.8, explode=[60, 0, 0], mass=0.5,
+         materials=[['pcabs', 100]], sortBias=20, color='#4A4F54',
+         info='Der Knopf, mit dem man die Kette schaltet. Er steckt auf dem Schalter der kleinen Platine.'),
     teil('schalter', 'battery_box', 'Schiebeschalter mit Timer-Platine', 'Schalter', 'box',
-         material_id='pcb', x=140, y=124, w=8, d=18, z=6, h=10, r=1, explode=[28, 0, 0], mass=3,
+         material_id='pcb', x=139, y=124, w=8, d=18, z=6, h=10, r=1, explode=[32, 0, 0], mass=3,
          materials=[['fr4', 35], ['kupfer', 20], ['chip', 15], ['stahl', 15], ['pcabs', 15]],
          info='Schaltet die Kette ein, aus oder auf Timer (6 Stunden an, 18 aus). Kleine Platine mit Chip und Widerstand.',
          color='#3A3D40', marks=[mark('box', 2, 4, 4, 6, 1, '#7FD36B')]),
@@ -79,5 +95,8 @@ teile = [
          color=KASTEN, marks=[mark('box', 3, 3, 62, 44, 3, '#1E2022')]),
 ]
 explodiere(teile, abstand=26, abstaende={'kontakte': 14})
+for p in teile:  # Batteriekasten samt Inhalt nach rechts vorne, damit er die Kette nicht verdeckt
+    if p['component_id'] in ('battery_box', 'alkaline_cell'):
+        p['explode'] = [p['explode'][0] + 70, p['explode'][1] + 50, p['explode'][2]]
 skaliere_masse(teile, oid='string_lights')
 schreibe('string_lights', teile)

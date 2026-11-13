@@ -10,7 +10,7 @@
    "x": 1,
    "y": 0,
    "w": 38,
-   "d": 74,
+   "d": 64,
    "z": 24,
    "h": 16,
    "r": 10,
@@ -19,7 +19,7 @@
     0,
     153.4
    ],
-   "mass": 12.1,
+   "mass": 11.3,
    "materials": [
     [
      "pcabs",
@@ -31,17 +31,10 @@
    "marks": [
     {
      "shape": "cyl",
-     "x": 12,
-     "y": 26,
-     "w": 14,
-     "fill": "#4A4F54"
-    },
-    {
-     "shape": "cyl",
-     "x": 16,
-     "y": 30,
-     "w": 6,
-     "fill": "#7FD36B"
+     "x": 11,
+     "y": 25,
+     "w": 16,
+     "fill": "#3A3D40"
     },
     {
      "shape": "box",
@@ -51,6 +44,178 @@
      "d": 6,
      "r": 3,
      "fill": "#3A3D40"
+    },
+    {
+     "shape": "cyl",
+     "x": 17,
+     "y": 46,
+     "w": 2.5,
+     "fill": "#7FD36B"
+    },
+    {
+     "shape": "cyl",
+     "x": 21,
+     "y": 46,
+     "w": 2.5,
+     "fill": "#7FD36B"
+    },
+    {
+     "shape": "cyl",
+     "x": 25,
+     "y": 46,
+     "w": 2.5,
+     "fill": "#5E656A"
+    },
+    {
+     "shape": "cyl",
+     "x": 13,
+     "y": 46,
+     "w": 2.5,
+     "fill": "#7FD36B"
+    }
+   ]
+  },
+  {
+   "id": "taster",
+   "component_id": "plastic_housing",
+   "material_id": "rubber",
+   "name": "Gummikappe des Tasters",
+   "short": "Taster",
+   "shape": "cyl",
+   "x": 13,
+   "y": 27,
+   "w": 12,
+   "z": 40,
+   "h": 2,
+   "explode": [
+    0,
+    0,
+    179.4
+   ],
+   "mass": 0.5,
+   "materials": [
+    [
+     "tpe",
+     100
+    ]
+   ],
+   "info": "Weiche Kappe über dem Schalter, dicht gegen Regen. Ein Druck schaltet um: Dauerlicht, Sparmodus, Blinken.",
+   "color": "#3E4348",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 3.5,
+     "y": 3.5,
+     "w": 5,
+     "fill": "#7FD36B"
+    }
+   ]
+  },
+  {
+   "id": "schrauben",
+   "component_id": "plastic_housing",
+   "material_id": "steel",
+   "name": "Gehäuseschrauben (2 Stück)",
+   "short": "Schrauben",
+   "shape": "cyl",
+   "x": 4,
+   "y": 56,
+   "w": 4,
+   "z": 14,
+   "h": 10,
+   "explode": [
+    0,
+    0,
+    88.0
+   ],
+   "mass": 0.6,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Zwei kleine Kreuzschlitzschrauben verbinden Ober- und Unterschale. Mit einem Magneten wiederfinden.",
+   "color": "#9AA0A6",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0.8,
+     "y": 0.8,
+     "w": 2.4,
+     "fill": "#5F666C"
+    }
+   ]
+  },
+  {
+   "id": "seitenfenster",
+   "component_id": "plastic_housing",
+   "material_id": "pc",
+   "name": "Seitliches Lichtfenster",
+   "short": "Seitenfenster",
+   "shape": "box",
+   "x": 38.6,
+   "y": 48,
+   "w": 1.4,
+   "d": 14,
+   "z": 17,
+   "h": 16,
+   "r": 0.5,
+   "explode": [
+    30,
+    0,
+    60
+   ],
+   "mass": 0.5,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Gelbes Fenster an der Seite, damit Autos das Licht auch von der Seite sehen.",
+   "color": "#F2C14E",
+   "opacity": 0.85,
+   "sortBias": 30
+  },
+  {
+   "id": "frontrahmen",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Frontrahmen",
+   "short": "Frontrahmen",
+   "shape": "box",
+   "x": 1,
+   "y": 64,
+   "w": 38,
+   "d": 8,
+   "z": 10,
+   "h": 30,
+   "r": 6,
+   "explode": [
+    0,
+    10,
+    0
+   ],
+   "mass": 3.8,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Kunststoffrahmen, der Reflektor und Streuscheibe hält. Auf das Gehäuse gerastet.",
+   "color": "#1F2224",
+   "sortBias": 2,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 1,
+     "w": 30,
+     "d": 6,
+     "r": 3,
+     "fill": "#34383C"
     }
    ]
   },
@@ -73,7 +238,7 @@
     0,
     125.0
    ],
-   "mass": 1,
+   "mass": 0.9,
    "materials": [
     [
      "stahl",
@@ -158,7 +323,7 @@
     0,
     115.0
    ],
-   "mass": 4,
+   "mass": 3.8,
    "materials": [
     [
      "fr4",
@@ -217,7 +382,7 @@
     0,
     90.0
    ],
-   "mass": 28.3,
+   "mass": 26.4,
    "materials": [
     [
      "lco",
@@ -270,7 +435,7 @@
    "short": "LED-Platine",
    "shape": "box",
    "x": 10,
-   "y": 56,
+   "y": 58,
    "w": 20,
    "d": 1.6,
    "z": 14,
@@ -278,10 +443,10 @@
    "r": 0.3,
    "explode": [
     0,
-    18,
+    34,
     0
    ],
-   "mass": 1.5,
+   "mass": 1.4,
    "materials": [
     [
      "alu",
@@ -311,7 +476,7 @@
    "short": "LED",
    "shape": "box",
    "x": 16,
-   "y": 57.6,
+   "y": 59.6,
    "w": 8,
    "d": 3,
    "z": 20,
@@ -319,7 +484,7 @@
    "r": 0.5,
    "explode": [
     0,
-    26,
+    42,
     0
    ],
    "mass": 0.3,
@@ -342,7 +507,8 @@
     ]
    ],
    "info": "Eine einzige sehr helle Leuchtdiode auf Keramik, gelber Leuchtstoff macht das Licht weiß.",
-   "color": "#F6D86B"
+   "color": "#F6D86B",
+   "sortBias": 10
   },
   {
    "id": "reflektor",
@@ -352,18 +518,18 @@
    "short": "Reflektor",
    "shape": "box",
    "x": 6,
-   "y": 60.6,
+   "y": 62.6,
    "w": 28,
-   "d": 10,
+   "d": 9.4,
    "z": 13,
-   "h": 22,
+   "h": 24,
    "r": 4,
    "explode": [
     0,
-    38,
+    56,
     0
    ],
-   "mass": 3,
+   "mass": 2.8,
    "materials": [
     [
      "pcabs",
@@ -376,13 +542,14 @@
    ],
    "info": "Kunststoff, innen hauchdünn mit Aluminium bedampft. Bündelt das Licht nach vorne auf die Straße.",
    "color": "#D6DADD",
+   "sortBias": 10,
    "marks": [
     {
      "shape": "box",
      "x": 4,
      "y": 1,
      "w": 20,
-     "d": 8,
+     "d": 7.4,
      "r": 3,
      "fill": "#EEF0F1"
     }
@@ -404,10 +571,10 @@
    "r": 3,
    "explode": [
     0,
-    56,
+    76,
     0
    ],
-   "mass": 4,
+   "mass": 3.8,
    "materials": [
     [
      "pcabs",
@@ -417,6 +584,7 @@
    "info": "Klares Polycarbonat, schlagfest. Mit dem Gehäuse verklebt oder verrastet, lässt sich nach vorne abhebeln.",
    "color": "#DDEFF7",
    "opacity": 0.6,
+   "sortBias": 20,
    "marks": [
     {
      "shape": "box",
@@ -438,7 +606,7 @@
    "x": 1,
    "y": 0,
    "w": 38,
-   "d": 74,
+   "d": 64,
    "z": 10,
    "h": 14,
    "r": 10,
@@ -447,7 +615,7 @@
     0,
     52.0
    ],
-   "mass": 12.1,
+   "mass": 11.3,
    "materials": [
     [
      "pcabs",
@@ -487,7 +655,7 @@
     0,
     26.0
    ],
-   "mass": 4,
+   "mass": 3.8,
    "materials": [
     [
      "nylon",
@@ -527,7 +695,7 @@
     0,
     0.0
    ],
-   "mass": 9.1,
+   "mass": 8.5,
    "materials": [
     [
      "gummi",

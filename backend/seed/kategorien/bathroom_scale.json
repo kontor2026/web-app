@@ -21,47 +21,52 @@
  "werte": [
   {
    "k": "Rohstoffwert",
-   "v": "≈ 0,38 €",
+   "v": "≈ 0,43 €",
    "hint": "Silber, Kupfer zu Preisen vom 13.11."
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 4,37 kg",
+   "v": "≈ 4,38 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
    "k": "mit Recyclat",
    "v": "≈ 2,26 kg",
-   "hint": "spart 2,11 kg, wenn recycelte Materialien eingesetzt werden"
+   "hint": "spart 2,12 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Al": 76400.0,
-   "Cu": 3300.0,
-   "Ag": 4.12,
-   "Au": 0.99,
+   "Al": 76000.0,
+   "Cu": 7480.0,
+   "Fe": 2058.0,
+   "Ag": 4.1,
+   "Au": 0.98,
    "Pd": 0.31
   },
   "herkunft": {
    "Al": "Modellmassen (Schätzung)",
    "Cu": "Modellmassen (Schätzung)",
+   "Fe": "Modellmassen (Schätzung)",
    "Ag": "16 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)",
    "Au": "16 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)",
    "Pd": "16 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)"
   },
   "materialien_g": {
-   "special_glass": 1199.6,
-   "abs": 182.9,
-   "aluminium": 76.4,
+   "special_glass": 1193.7,
+   "abs": 182.1,
+   "aluminium": 76.0,
    "alkaline": 24.4,
-   "pcb": 16.5
+   "pcb": 16.4,
+   "copper": 4.2,
+   "steel": 2.1,
+   "rubber": 1.1
   },
-  "co2_kg": 4.373,
-  "co2_mit_recyclat_kg": 2.26,
-  "co2_ersparnis_kg": 2.113,
+  "co2_kg": 4.375,
+  "co2_mit_recyclat_kg": 2.256,
+  "co2_ersparnis_kg": 2.119,
   "co2_ohne_faktor": [],
-  "rohstoffwert_eur": 0.38,
+  "rohstoffwert_eur": 0.43,
   "wert_ohne_preis": [],
   "preisstand": "2026-11-13",
   "quellen": {
@@ -155,10 +160,10 @@
    "r": 14,
    "explode": [
     0,
-    0,
-    190.5
+    -320,
+    70
    ],
-   "mass": 1191.1,
+   "mass": 1185.2,
    "materials": [
     [
      "glas",
@@ -189,7 +194,140 @@
      "w": 72,
      "d": 28,
      "r": 2,
-     "fill": "#55616A"
+     "fill": "#9AA79A"
+    },
+    {
+     "shape": "box",
+     "x": 121,
+     "y": 253,
+     "w": 2,
+     "d": 20,
+     "r": 0.5,
+     "fill": "#2B302C"
+    },
+    {
+     "shape": "box",
+     "x": 131,
+     "y": 253,
+     "w": 2,
+     "d": 20,
+     "r": 0.5,
+     "fill": "#2B302C"
+    },
+    {
+     "shape": "box",
+     "x": 121,
+     "y": 253,
+     "w": 12,
+     "d": 2,
+     "r": 0.5,
+     "fill": "#2B302C"
+    },
+    {
+     "shape": "box",
+     "x": 121,
+     "y": 271,
+     "w": 12,
+     "d": 2,
+     "r": 0.5,
+     "fill": "#2B302C"
+    },
+    {
+     "shape": "box",
+     "x": 137,
+     "y": 253,
+     "w": 2,
+     "d": 20,
+     "r": 0.5,
+     "fill": "#2B302C"
+    },
+    {
+     "shape": "box",
+     "x": 147,
+     "y": 253,
+     "w": 2,
+     "d": 20,
+     "r": 0.5,
+     "fill": "#2B302C"
+    },
+    {
+     "shape": "box",
+     "x": 137,
+     "y": 253,
+     "w": 12,
+     "d": 2,
+     "r": 0.5,
+     "fill": "#2B302C"
+    },
+    {
+     "shape": "box",
+     "x": 137,
+     "y": 271,
+     "w": 12,
+     "d": 2,
+     "r": 0.5,
+     "fill": "#2B302C"
+    },
+    {
+     "shape": "box",
+     "x": 153,
+     "y": 253,
+     "w": 2,
+     "d": 20,
+     "r": 0.5,
+     "fill": "#2B302C"
+    },
+    {
+     "shape": "box",
+     "x": 163,
+     "y": 253,
+     "w": 2,
+     "d": 20,
+     "r": 0.5,
+     "fill": "#2B302C"
+    },
+    {
+     "shape": "box",
+     "x": 153,
+     "y": 253,
+     "w": 12,
+     "d": 2,
+     "r": 0.5,
+     "fill": "#2B302C"
+    },
+    {
+     "shape": "box",
+     "x": 153,
+     "y": 271,
+     "w": 12,
+     "d": 2,
+     "r": 0.5,
+     "fill": "#2B302C"
+    },
+    {
+     "shape": "cyl",
+     "x": 169,
+     "y": 268,
+     "w": 3,
+     "fill": "#2B302C"
+    },
+    {
+     "shape": "box",
+     "x": 175,
+     "y": 262,
+     "w": 7,
+     "d": 10,
+     "r": 0.5,
+     "fill": "#2B302C"
+    },
+    {
+     "shape": "box",
+     "x": 140,
+     "y": 22,
+     "w": 20,
+     "d": 3,
+     "r": 1.5,
+     "fill": "#B5C2C8"
     }
    ]
   },
@@ -209,10 +347,10 @@
    "r": 12,
    "explode": [
     0,
-    0,
-    120.5
+    -320,
+    0
    ],
-   "mass": 127.6,
+   "mass": 127,
    "materials": [
     [
      "pcabs",
@@ -258,8 +396,8 @@
    "r": 1,
    "explode": [
     0,
-    0,
-    29.0
+    60,
+    110
    ],
    "mass": 8.5,
    "materials": [
@@ -318,6 +456,313 @@
    ]
   },
   {
+   "id": "leitgummi",
+   "component_id": "lcd_panel",
+   "material_id": "rubber",
+   "name": "Leitgummi (Zebrastreifen)",
+   "short": "Leitgummi",
+   "shape": "box",
+   "x": 115,
+   "y": 272,
+   "w": 70,
+   "d": 4,
+   "z": 11.6,
+   "h": 1,
+   "r": 0.5,
+   "explode": [
+    0,
+    60,
+    88
+   ],
+   "mass": 1.1,
+   "materials": [
+    [
+     "gummi",
+     90
+    ],
+    [
+     "graphit",
+     10
+    ]
+   ],
+   "info": "Gummistreifen mit vielen leitenden Schichten. Er drückt die Kontakte der Anzeige auf die Platine, ganz ohne Löten.",
+   "color": "#E0DCD2",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 0.5,
+     "w": 1,
+     "d": 3,
+     "fill": "#3A3D40"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 0.5,
+     "w": 1,
+     "d": 3,
+     "fill": "#3A3D40"
+    },
+    {
+     "shape": "box",
+     "x": 5,
+     "y": 0.5,
+     "w": 1,
+     "d": 3,
+     "fill": "#3A3D40"
+    },
+    {
+     "shape": "box",
+     "x": 7,
+     "y": 0.5,
+     "w": 1,
+     "d": 3,
+     "fill": "#3A3D40"
+    },
+    {
+     "shape": "box",
+     "x": 9,
+     "y": 0.5,
+     "w": 1,
+     "d": 3,
+     "fill": "#3A3D40"
+    },
+    {
+     "shape": "box",
+     "x": 11,
+     "y": 0.5,
+     "w": 1,
+     "d": 3,
+     "fill": "#3A3D40"
+    },
+    {
+     "shape": "box",
+     "x": 13,
+     "y": 0.5,
+     "w": 1,
+     "d": 3,
+     "fill": "#3A3D40"
+    },
+    {
+     "shape": "box",
+     "x": 15,
+     "y": 0.5,
+     "w": 1,
+     "d": 3,
+     "fill": "#3A3D40"
+    },
+    {
+     "shape": "box",
+     "x": 17,
+     "y": 0.5,
+     "w": 1,
+     "d": 3,
+     "fill": "#3A3D40"
+    },
+    {
+     "shape": "box",
+     "x": 19,
+     "y": 0.5,
+     "w": 1,
+     "d": 3,
+     "fill": "#3A3D40"
+    },
+    {
+     "shape": "box",
+     "x": 21,
+     "y": 0.5,
+     "w": 1,
+     "d": 3,
+     "fill": "#3A3D40"
+    },
+    {
+     "shape": "box",
+     "x": 23,
+     "y": 0.5,
+     "w": 1,
+     "d": 3,
+     "fill": "#3A3D40"
+    },
+    {
+     "shape": "box",
+     "x": 25,
+     "y": 0.5,
+     "w": 1,
+     "d": 3,
+     "fill": "#3A3D40"
+    },
+    {
+     "shape": "box",
+     "x": 27,
+     "y": 0.5,
+     "w": 1,
+     "d": 3,
+     "fill": "#3A3D40"
+    },
+    {
+     "shape": "box",
+     "x": 29,
+     "y": 0.5,
+     "w": 1,
+     "d": 3,
+     "fill": "#3A3D40"
+    },
+    {
+     "shape": "box",
+     "x": 31,
+     "y": 0.5,
+     "w": 1,
+     "d": 3,
+     "fill": "#3A3D40"
+    },
+    {
+     "shape": "box",
+     "x": 33,
+     "y": 0.5,
+     "w": 1,
+     "d": 3,
+     "fill": "#3A3D40"
+    },
+    {
+     "shape": "box",
+     "x": 35,
+     "y": 0.5,
+     "w": 1,
+     "d": 3,
+     "fill": "#3A3D40"
+    },
+    {
+     "shape": "box",
+     "x": 37,
+     "y": 0.5,
+     "w": 1,
+     "d": 3,
+     "fill": "#3A3D40"
+    },
+    {
+     "shape": "box",
+     "x": 39,
+     "y": 0.5,
+     "w": 1,
+     "d": 3,
+     "fill": "#3A3D40"
+    },
+    {
+     "shape": "box",
+     "x": 41,
+     "y": 0.5,
+     "w": 1,
+     "d": 3,
+     "fill": "#3A3D40"
+    },
+    {
+     "shape": "box",
+     "x": 43,
+     "y": 0.5,
+     "w": 1,
+     "d": 3,
+     "fill": "#3A3D40"
+    },
+    {
+     "shape": "box",
+     "x": 45,
+     "y": 0.5,
+     "w": 1,
+     "d": 3,
+     "fill": "#3A3D40"
+    },
+    {
+     "shape": "box",
+     "x": 47,
+     "y": 0.5,
+     "w": 1,
+     "d": 3,
+     "fill": "#3A3D40"
+    },
+    {
+     "shape": "box",
+     "x": 49,
+     "y": 0.5,
+     "w": 1,
+     "d": 3,
+     "fill": "#3A3D40"
+    },
+    {
+     "shape": "box",
+     "x": 51,
+     "y": 0.5,
+     "w": 1,
+     "d": 3,
+     "fill": "#3A3D40"
+    },
+    {
+     "shape": "box",
+     "x": 53,
+     "y": 0.5,
+     "w": 1,
+     "d": 3,
+     "fill": "#3A3D40"
+    },
+    {
+     "shape": "box",
+     "x": 55,
+     "y": 0.5,
+     "w": 1,
+     "d": 3,
+     "fill": "#3A3D40"
+    },
+    {
+     "shape": "box",
+     "x": 57,
+     "y": 0.5,
+     "w": 1,
+     "d": 3,
+     "fill": "#3A3D40"
+    },
+    {
+     "shape": "box",
+     "x": 59,
+     "y": 0.5,
+     "w": 1,
+     "d": 3,
+     "fill": "#3A3D40"
+    },
+    {
+     "shape": "box",
+     "x": 61,
+     "y": 0.5,
+     "w": 1,
+     "d": 3,
+     "fill": "#3A3D40"
+    },
+    {
+     "shape": "box",
+     "x": 63,
+     "y": 0.5,
+     "w": 1,
+     "d": 3,
+     "fill": "#3A3D40"
+    },
+    {
+     "shape": "box",
+     "x": 65,
+     "y": 0.5,
+     "w": 1,
+     "d": 3,
+     "fill": "#3A3D40"
+    },
+    {
+     "shape": "box",
+     "x": 67,
+     "y": 0.5,
+     "w": 1,
+     "d": 3,
+     "fill": "#3A3D40"
+    }
+   ]
+  },
+  {
    "id": "chip",
    "component_id": "circuit_board",
    "material_id": "pcb",
@@ -333,8 +778,8 @@
    "r": 0.3,
    "explode": [
     0,
-    0,
-    14.0
+    60,
+    70
    ],
    "mass": 0.5,
    "materials": [
@@ -370,10 +815,10 @@
    "r": 2,
    "explode": [
     0,
-    0,
-    0.0
+    60,
+    50
    ],
-   "mass": 16,
+   "mass": 15.9,
    "materials": [
     [
      "fr4",
@@ -450,7 +895,7 @@
    "explode": [
     0,
     0,
-    51.0
+    80
    ],
    "mass": 12.2,
    "materials": [
@@ -494,7 +939,7 @@
    "explode": [
     0,
     0,
-    51.0
+    80
    ],
    "mass": 12.2,
    "materials": [
@@ -529,8 +974,8 @@
    "name": "Wägezelle",
    "short": "Wägezelle",
    "shape": "box",
-   "x": 15,
-   "y": 15,
+   "x": 251,
+   "y": 251,
    "w": 34,
    "d": 34,
    "z": 9,
@@ -539,9 +984,9 @@
    "explode": [
     0,
     0,
-    40.0
+    45
    ],
-   "mass": 19.1,
+   "mass": 19,
    "materials": [
     [
      "alu",
@@ -597,9 +1042,9 @@
    "explode": [
     0,
     0,
-    40.0
+    45
    ],
-   "mass": 19.1,
+   "mass": 19,
    "materials": [
     [
      "alu",
@@ -656,9 +1101,9 @@
    "explode": [
     0,
     0,
-    40.0
+    45
    ],
-   "mass": 19.1,
+   "mass": 19,
    "materials": [
     [
      "alu",
@@ -705,8 +1150,8 @@
    "name": "Wägezelle",
    "short": "Wägezelle",
    "shape": "box",
-   "x": 251,
-   "y": 251,
+   "x": 15,
+   "y": 15,
    "w": 34,
    "d": 34,
    "z": 9,
@@ -715,9 +1160,9 @@
    "explode": [
     0,
     0,
-    40.0
+    45
    ],
-   "mass": 19.1,
+   "mass": 19,
    "materials": [
     [
      "alu",
@@ -758,6 +1203,108 @@
    ]
   },
   {
+   "id": "kabel",
+   "component_id": "load_cell",
+   "material_id": "copper",
+   "name": "Drähte der Wägezellen",
+   "short": "Drähte",
+   "shape": "box",
+   "x": 40,
+   "y": 200,
+   "w": 220,
+   "d": 4,
+   "z": 9,
+   "h": 1,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    40
+   ],
+   "mass": 4.2,
+   "materials": [
+    [
+     "kupfer",
+     60
+    ],
+    [
+     "pvc",
+     40
+    ]
+   ],
+   "info": "Je drei dünne Litzen (rot, weiß, grün) führen von jeder Wägezelle zur Platine. Kupfer, einfach abknipsen.",
+   "color": "#C8423A",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 0,
+     "w": 220,
+     "d": 1,
+     "r": 0.3,
+     "fill": "#E8E2C8"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 2.5,
+     "w": 220,
+     "d": 1,
+     "r": 0.3,
+     "fill": "#3E9A57"
+    }
+   ]
+  },
+  {
+   "id": "kontakte",
+   "component_id": "plastic_housing",
+   "material_id": "steel",
+   "name": "Kontaktfedern",
+   "short": "Kontaktfedern",
+   "shape": "box",
+   "x": 124,
+   "y": 136,
+   "w": 4,
+   "d": 28,
+   "z": 4,
+   "h": 10,
+   "r": 0.5,
+   "explode": [
+    -40,
+    0,
+    50
+   ],
+   "mass": 2.1,
+   "materials": [
+    [
+     "stahl",
+     90
+    ],
+    [
+     "nickel",
+     10
+    ]
+   ],
+   "info": "Spiralfedern und Bleche aus vernickeltem Stahl, die die Batterien verbinden.",
+   "color": "#C9CDD0",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0.5,
+     "y": 4,
+     "w": 3,
+     "fill": "#9AA0A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 0.5,
+     "y": 17,
+     "w": 3,
+     "fill": "#9AA0A6"
+    }
+   ]
+  },
+  {
    "id": "batteriefach",
    "component_id": "plastic_housing",
    "material_id": "abs",
@@ -768,15 +1315,15 @@
    "y": 130,
    "w": 60,
    "d": 40,
-   "z": 0,
-   "h": 15,
+   "z": 1.5,
+   "h": 13.5,
    "r": 3,
    "explode": [
     0,
     0,
-    0.0
+    25
    ],
-   "mass": 21.3,
+   "mass": 16.9,
    "materials": [
     [
      "pcabs",
@@ -798,21 +1345,79 @@
    ]
   },
   {
+   "id": "klappe",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Batterieklappe",
+   "short": "Klappe",
+   "shape": "box",
+   "x": 122,
+   "y": 132,
+   "w": 56,
+   "d": 36,
+   "z": 0,
+   "h": 1.5,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 4.2,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Deckel unten an der Waage. Rastnase drücken und abheben, dann die Batterien herausnehmen.",
+   "color": "#1E2022",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 22,
+     "y": 26.0,
+     "w": 12,
+     "d": 1.2,
+     "r": 0.5,
+     "fill": "#34383C"
+    },
+    {
+     "shape": "box",
+     "x": 22,
+     "y": 28.5,
+     "w": 12,
+     "d": 1.2,
+     "r": 0.5,
+     "fill": "#34383C"
+    },
+    {
+     "shape": "box",
+     "x": 22,
+     "y": 31.0,
+     "w": 12,
+     "d": 1.2,
+     "r": 0.5,
+     "fill": "#34383C"
+    }
+   ]
+  },
+  {
    "id": "fuss_1",
    "component_id": "plastic_housing",
    "material_id": "abs",
    "name": "Fuß mit Gummikappe",
    "short": "Fuß",
    "shape": "cyl",
-   "x": 12,
-   "y": 12,
+   "x": 248,
+   "y": 248,
    "w": 40,
    "z": 0,
    "h": 9,
    "explode": [
     0,
     0,
-    0.0
+    0
    ],
    "mass": 8.5,
    "materials": [
@@ -852,7 +1457,7 @@
    "explode": [
     0,
     0,
-    0.0
+    0
    ],
    "mass": 8.5,
    "materials": [
@@ -893,7 +1498,7 @@
    "explode": [
     0,
     0,
-    0.0
+    0
    ],
    "mass": 8.5,
    "materials": [
@@ -926,15 +1531,15 @@
    "name": "Fuß mit Gummikappe",
    "short": "Fuß",
    "shape": "cyl",
-   "x": 248,
-   "y": 248,
+   "x": 12,
+   "y": 12,
    "w": 40,
    "z": 0,
    "h": 9,
    "explode": [
     0,
     0,
-    0.0
+    0
    ],
    "mass": 8.5,
    "materials": [

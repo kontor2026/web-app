@@ -21,7 +21,7 @@
  "werte": [
   {
    "k": "Rohstoffwert",
-   "v": "≈ 0,26 €",
+   "v": "≈ 0,25 €",
    "hint": "Kupfer zu Preisen vom 13.11."
   },
   {
@@ -31,15 +31,15 @@
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 0,04 kg",
-   "hint": "spart 0,24 kg, wenn recycelte Materialien eingesetzt werden"
+   "v": "≈ 0,05 kg",
+   "hint": "spart 0,23 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Fe": 15680.0,
-   "Cu": 13000.0,
-   "Ni": 6400.0
+   "Fe": 15022.0,
+   "Cu": 12940.0,
+   "Ni": 5920.0
   },
   "herkunft": {
    "Fe": "Modellmassen (Schätzung)",
@@ -47,17 +47,18 @@
    "Ni": "Modellmassen (Schätzung)"
   },
   "materialien_g": {
-   "pp": 25.0,
-   "pvc": 18.0,
-   "steel": 16.0,
-   "copper": 13.0,
-   "nickel_chrome": 8.0
+   "pp": 26.2,
+   "pvc": 16.7,
+   "steel": 14.9,
+   "copper": 12.1,
+   "nickel_chrome": 7.4,
+   "mixed_electronics": 2.8
   },
-  "co2_kg": 0.277,
-  "co2_mit_recyclat_kg": 0.035,
-  "co2_ersparnis_kg": 0.242,
+  "co2_kg": 0.276,
+  "co2_mit_recyclat_kg": 0.046,
+  "co2_ersparnis_kg": 0.229,
   "co2_ohne_faktor": [],
-  "rohstoffwert_eur": 0.26,
+  "rohstoffwert_eur": 0.25,
   "wert_ohne_preis": [],
   "preisstand": "2026-11-13",
   "quellen": {
@@ -154,7 +155,7 @@
     105,
     0
    ],
-   "mass": 6,
+   "mass": 5.6,
    "materials": [
     [
      "kupfer",
@@ -202,7 +203,7 @@
     65,
     0
    ],
-   "mass": 6,
+   "mass": 5.6,
    "materials": [
     [
      "stahl",
@@ -242,7 +243,7 @@
     35,
     22
    ],
-   "mass": 8,
+   "mass": 7.4,
    "materials": [
     [
      "nichrom",
@@ -371,7 +372,7 @@
     35,
     0
    ],
-   "mass": 10,
+   "mass": 9.3,
    "materials": [
     [
      "stahl",
@@ -382,25 +383,25 @@
    "color": "#B5BBC0"
   },
   {
-   "id": "griff",
+   "id": "griff_1",
    "component_id": "plastic_handle",
    "material_id": "pp",
    "name": "Griff",
    "short": "Griff",
    "shape": "box",
-   "x": 0,
+   "x": 5,
    "y": 45,
-   "w": 25,
-   "d": 95,
+   "w": 15,
+   "d": 83,
    "z": 0,
-   "h": 25,
-   "r": 12,
+   "h": 3,
+   "r": 7.5,
    "explode": [
     0,
     0,
     0
    ],
-   "mass": 25,
+   "mass": 4.7,
    "materials": [
     [
      "pp",
@@ -411,44 +412,405 @@
      15
     ]
    ],
-   "info": "Hitzebeständiger Kunststoffgriff mit Kühlrippen vorne. Innen sind die Kabeladern angeschraubt.",
+   "info": "Teil des Griffs.",
    "color": "#3F6E9C",
+   "label": false
+  },
+  {
+   "id": "griff_2",
+   "component_id": "plastic_handle",
+   "material_id": "pp",
+   "name": "Griff",
+   "short": "Griff",
+   "shape": "box",
+   "x": 1.5,
+   "y": 45,
+   "w": 22,
+   "d": 83,
+   "z": 3,
+   "h": 5,
+   "r": 11,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 4.7,
+   "materials": [
+    [
+     "pp",
+     85
+    ],
+    [
+     "tpe",
+     15
+    ]
+   ],
+   "info": "Teil des Griffs.",
+   "color": "#3F6E9C",
+   "label": false
+  },
+  {
+   "id": "griff_3",
+   "component_id": "plastic_handle",
+   "material_id": "pp",
+   "name": "Griff",
+   "short": "Griff",
+   "shape": "box",
+   "x": 0,
+   "y": 45,
+   "w": 25,
+   "d": 83,
+   "z": 8,
+   "h": 9,
+   "r": 12.5,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 4.7,
+   "materials": [
+    [
+     "pp",
+     85
+    ],
+    [
+     "tpe",
+     15
+    ]
+   ],
+   "info": "Teil des Griffs.",
+   "color": "#3F6E9C",
+   "label": false
+  },
+  {
+   "id": "griff_4",
+   "component_id": "plastic_handle",
+   "material_id": "pp",
+   "name": "Griff",
+   "short": "Griff",
+   "shape": "box",
+   "x": 1.5,
+   "y": 45,
+   "w": 22,
+   "d": 83,
+   "z": 17,
+   "h": 5,
+   "r": 11,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 4.7,
+   "materials": [
+    [
+     "pp",
+     85
+    ],
+    [
+     "tpe",
+     15
+    ]
+   ],
+   "info": "Teil des Griffs.",
+   "color": "#3F6E9C",
+   "label": false
+  },
+  {
+   "id": "griff_5",
+   "component_id": "plastic_handle",
+   "material_id": "pp",
+   "name": "Griff",
+   "short": "Griff",
+   "shape": "box",
+   "x": 5,
+   "y": 45,
+   "w": 15,
+   "d": 83,
+   "z": 22,
+   "h": 3,
+   "r": 7.5,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 4.7,
+   "materials": [
+    [
+     "pp",
+     85
+    ],
+    [
+     "tpe",
+     15
+    ]
+   ],
+   "info": "Hitzebeständiger Kunststoffgriff mit gummierter Griffzone. Innen sind die Kabeladern angeschraubt.",
+   "color": "#3F6E9C",
+   "label": true,
    "marks": [
     {
      "shape": "box",
-     "x": 2,
-     "y": 76.0,
-     "w": 21,
-     "d": 2,
-     "r": 1,
-     "fill": "#2F577C"
+     "x": 1,
+     "y": 20,
+     "w": 13,
+     "d": 44,
+     "r": 6.5,
+     "fill": "#2B2F33"
     },
     {
      "shape": "box",
      "x": 2,
-     "y": 80.5,
-     "w": 21,
-     "d": 2,
-     "r": 1,
-     "fill": "#2F577C"
+     "y": 24.0,
+     "w": 11,
+     "d": 1.5,
+     "r": 0.7,
+     "fill": "#3A3F44"
     },
     {
      "shape": "box",
      "x": 2,
-     "y": 85.0,
-     "w": 21,
-     "d": 2,
-     "r": 1,
-     "fill": "#2F577C"
+     "y": 28.5,
+     "w": 11,
+     "d": 1.5,
+     "r": 0.7,
+     "fill": "#3A3F44"
     },
     {
      "shape": "box",
      "x": 2,
-     "y": 89.5,
-     "w": 21,
-     "d": 2,
-     "r": 1,
+     "y": 33.0,
+     "w": 11,
+     "d": 1.5,
+     "r": 0.7,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 37.5,
+     "w": 11,
+     "d": 1.5,
+     "r": 0.7,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 42.0,
+     "w": 11,
+     "d": 1.5,
+     "r": 0.7,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 46.5,
+     "w": 11,
+     "d": 1.5,
+     "r": 0.7,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 51.0,
+     "w": 11,
+     "d": 1.5,
+     "r": 0.7,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 55.5,
+     "w": 11,
+     "d": 1.5,
+     "r": 0.7,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 60.0,
+     "w": 11,
+     "d": 1.5,
+     "r": 0.7,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 71.0,
+     "w": 13,
+     "d": 1.5,
+     "r": 0.7,
      "fill": "#2F577C"
+    },
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 74.5,
+     "w": 13,
+     "d": 1.5,
+     "r": 0.7,
+     "fill": "#2F577C"
+    },
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 78.0,
+     "w": 13,
+     "d": 1.5,
+     "r": 0.7,
+     "fill": "#2F577C"
+    }
+   ]
+  },
+  {
+   "id": "wulst_1",
+   "component_id": "plastic_handle",
+   "material_id": "pp",
+   "name": "Fingerschutz",
+   "short": "Fingerschutz",
+   "shape": "box",
+   "x": 3.5,
+   "y": 128,
+   "w": 18,
+   "d": 7,
+   "z": 0,
+   "h": 4,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 0.9,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Teil des Fingerschutzes.",
+   "color": "#2F577C",
+   "label": false
+  },
+  {
+   "id": "wulst_2",
+   "component_id": "plastic_handle",
+   "material_id": "pp",
+   "name": "Fingerschutz",
+   "short": "Fingerschutz",
+   "shape": "box",
+   "x": -1.5,
+   "y": 128,
+   "w": 28,
+   "d": 7,
+   "z": 4,
+   "h": 17,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 0.9,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Teil des Fingerschutzes.",
+   "color": "#2F577C",
+   "label": false
+  },
+  {
+   "id": "wulst_3",
+   "component_id": "plastic_handle",
+   "material_id": "pp",
+   "name": "Fingerschutz",
+   "short": "Fingerschutz",
+   "shape": "box",
+   "x": 3.5,
+   "y": 128,
+   "w": 18,
+   "d": 7,
+   "z": 21,
+   "h": 4,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 0.9,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Dicker Ring vorne am Griff. Er schützt die Finger vor der heißen Heizhülse.",
+   "color": "#2F577C",
+   "label": true
+  },
+  {
+   "id": "klemme",
+   "component_id": "plastic_handle",
+   "material_id": "mixed_electronics",
+   "name": "Anschlussklemme mit Schrauben",
+   "short": "Klemme",
+   "shape": "box",
+   "x": 7,
+   "y": 60,
+   "w": 11,
+   "d": 16,
+   "z": 8,
+   "h": 8,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    40
+   ],
+   "mass": 2.8,
+   "materials": [
+    [
+     "messing",
+     50
+    ],
+    [
+     "stahl",
+     20
+    ],
+    [
+     "keramik",
+     30
+    ]
+   ],
+   "info": "Keramikklemme im Griff: Hier sind die Kabeladern mit kleinen Schrauben an den Drähten des Heizelements befestigt.",
+   "color": "#E8E2C8",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 1.5,
+     "y": 3,
+     "w": 4,
+     "fill": "#B7BCC0"
+    },
+    {
+     "shape": "cyl",
+     "x": 5.5,
+     "y": 9,
+     "w": 4,
+     "fill": "#B7BCC0"
     }
    ]
   },
@@ -471,7 +833,7 @@
     -30,
     0
    ],
-   "mass": 4,
+   "mass": 3.7,
    "materials": [
     [
      "pvc",
@@ -500,7 +862,7 @@
     -50,
     0
    ],
-   "mass": 14,
+   "mass": 13,
    "materials": [
     [
      "pvc",
@@ -533,7 +895,7 @@
     -50,
     0
    ],
-   "mass": 7,
+   "mass": 6.5,
    "materials": [
     [
      "kupfer",

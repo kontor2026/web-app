@@ -17,23 +17,44 @@ def platte(id, name, short, z):
                 color='#3A3F44', marks=[mark('box', 10, 10, 85, 180, 8, fill='#2A2D30'), mark('box', 105, 10, 85, 180, 8, fill='#2A2D30')])
 
 
+HEIZ_INFO = ('Rohrheizkörper: Heizdraht in Keramikpulver in einem Stahlrohr, als U auf die Rückseite der Platte gepresst. '
+             'Erst ganz abkühlen lassen.')
+
+
 def heizung(id, name, short, z):
-    return teil(id, 'heating_element', name, short, 'box', x=25, y=30, w=180, d=180, z=z, h=6, r=30, mass=80,
-                materials=[['stahl', 55], ['nichrom', 20], ['keramik', 25]],
-                info='Rohrheizkörper: Heizdraht in Keramikpulver in einem Stahlrohr, auf die Rückseite der Platte gepresst. Erst ganz abkühlen lassen.',
-                color='#9AA2A6', marks=[mark('box', 0, 0, 180, 10, 5, fill='#C4672D'), mark('box', 0, 0, 10, 180, 5, fill='#C4672D'),
-                                        mark('box', 170, 0, 10, 180, 5, fill='#C4672D')])
+    """U-förmiges Heizrohr aus drei geraden Stücken (linker Schenkel trägt die Nummer)."""
+    farbe, mats = '#9AA2A6', [['stahl', 55], ['nichrom', 20], ['keramik', 25]]
+    return [
+        teil(f'{id}', 'heating_element', name, short, 'box', x=30, y=30, w=10, d=180, z=z, h=8, r=5, mass=30,
+             materials=mats, info=HEIZ_INFO, color=farbe, marks=[mark('box', 2, 0, 6, 180, 3, '#B5BBC0')]),
+        teil(f'{id}_b', 'heating_element', name, short, 'box', x=40, y=30, w=150, d=10, z=z, h=8, r=5, mass=25,
+             materials=mats, info=HEIZ_INFO, color=farbe, label=False, marks=[mark('box', 0, 2, 150, 6, 3, '#B5BBC0')]),
+        teil(f'{id}_c', 'heating_element', name, short, 'box', x=190, y=30, w=10, d=180, z=z, h=8, r=5, mass=30,
+             materials=mats, info=HEIZ_INFO, color=farbe, label=False,
+             marks=[mark('box', 2, 0, 6, 180, 3, '#B5BBC0'), mark('box', 1, 170, 8, 10, 2, '#C4672D')]),
+    ]
 
 
 teile = [
+    teil('griff', 'plastic_housing', 'Tragegriff', 'Griff', 'box',
+         x=80, y=196, w=70, d=40, z=90, h=10, r=8, mass=30, material_id='phenolic_resin', sortBias=200,
+         materials=[['phenolharz', 60], ['pcabs', 40]], color='#1E2226',
+         marks=[mark('box', 8, 26, 54, 8, 4, fill='#3C4248')],
+         info='Griff vorne auf der Oberschale. Er bleibt kühl, weil er aus hitzefestem Kunststoff ist und Abstand zur Platte hat.'),
     teil('oberschale', 'plastic_housing', 'Obere Gehäuseschale', 'Oberschale', 'box',
-         x=0, y=10, w=230, d=220, z=50, h=50, r=40, mass=180, material_id='phenolic_resin', materials=[['phenolharz', 60], ['pcabs', 40]],
+         x=0, y=10, w=230, d=220, z=50, h=40, r=40, mass=180, material_id='phenolic_resin', materials=[['phenolharz', 60], ['pcabs', 40]],
          info='Hitzefeste Kunststoffschale mit Kontrollleuchten. Die Schrauben sitzen innen unter der Backplatte.',
-         color='#2E3338', marks=[mark('cyl', 95, 185, 10, fill='#E74C3C'), mark('cyl', 125, 185, 10, fill='#2ECC71'), mark('box', 20, 20, 190, 150, 30, fill='#3C4248')]),
-    heizung('heizung_oben', 'Heizelement oben', 'Heizung oben', 62),
+         color='#2E3338', marks=[mark('box', 20, 16, 190, 150, 30, fill='#3C4248'), mark('box', 30, 26, 170, 4, 2, fill='#4A5158'),
+                                 mark('box', 18, 172, 50, 18, 6, fill='#1E2226'), mark('cyl', 28, 177, 8, fill='#E74C3C'),
+                                 mark('cyl', 50, 177, 8, fill='#2ECC71')]),
+    teil('lampen', 'thermostat', 'Kontrollleuchten', 'Leuchten', 'box', material_id='mixed_electronics',
+         x=26, y=188, w=30, d=10, z=80, h=8, r=2, mass=4, materials=[['glas', 40], ['kupfer', 30], ['pcabs', 30]],
+         color='#E8E2C8', marks=[mark('cyl', 2, 1, 8, fill='#E74C3C'), mark('cyl', 20, 1, 8, fill='#2ECC71')],
+         info='Rot heißt Strom an, grün heißt heiß genug. Zwei kleine Lämpchen hinter durchsichtigen Kappen.'),
+    *heizung('heizung_oben', 'Heizelement oben', 'Heizung oben', 62),
     platte('platte_oben', 'Backplatte oben', 'Platte oben', 50),
     platte('platte_unten', 'Backplatte unten', 'Platte unten', 38),
-    heizung('heizung_unten', 'Heizelement unten', 'Heizung unten', 32),
+    *heizung('heizung_unten', 'Heizelement unten', 'Heizung unten', 30),
     teil('thermostat', 'thermostat', 'Thermostat (Bimetall)', 'Thermostat', 'box',
          x=160, y=100, w=30, d=25, z=24, h=8, r=3, mass=15, materials=[['bimetall', 40], ['keramik', 25], ['kupfer', 20], ['kontakte', 15]],
          info='Eine Bimetallscheibe schaltet die Heizung bei etwa 200 Grad ab und lässt die grüne Lampe leuchten. Sitzt unter der unteren Platte.',
@@ -45,9 +66,11 @@ teile = [
     teil('bodenplatte', 'plastic_housing', 'Bodenplatte mit Füßen', 'Bodenplatte', 'box',
          x=5, y=15, w=220, d=210, z=0, h=8, r=36, mass=100, materials=[['stahl', 85], ['gummi', 15]],
          info='Stahlblech mit Gummifüßen und Lüftungsschlitzen. Nach dem Lösen der Schrauben kommt man an den Thermostat.',
-         color='#7C858C', marks=raster(14, 14, 2, 2, 16, 16, 176, 166, shape='cyl', fill='#2E3338')),
+         color='#7C858C', marks=raster(14, 14, 2, 2, 16, 16, 176, 166, shape='cyl', fill='#2E3338')
+         + raster(60, 60, 6, 1, 6, 90, 18, r=3, fill='#5E666C')),
     teil('verschluss', 'plastic_housing', 'Verschlussgriff', 'Verschluss', 'box',
-         x=85, y=222, w=60, d=18, z=40, h=45, r=6, explode=[0, 60, 0], mass=25,
+         x=95, y=230, w=40, d=10, z=36, h=54, r=4, explode=[0, 60, 0], mass=25, sortBias=60,
+         marks=[mark('box', 6, 2, 28, 6, 3, fill='#4A5158')],
          info='Hält beide Schalen zusammen, damit das Sandwich gepresst wird. Mit einem Stift im Gelenk befestigt.',
          color='#3C4248'),
     teil('scharnier', 'plastic_housing', 'Scharnier', 'Scharnier', 'box', material_id='steel',
@@ -64,6 +87,10 @@ teile = [
          color='#B87333'),
 ]
 
-explodiere(teile, abstand=60, fest=('bodenplatte',), nach_liste=True)
+explodiere(teile, abstand=60, fest=('bodenplatte',), nach_liste=True, abstaende={'griff': 70, 'lampen': 30, 'oberschale': 110},
+           gruppen=[['heizung_oben', 'heizung_oben_b', 'heizung_oben_c'], ['heizung_unten', 'heizung_unten_b', 'heizung_unten_c']])
+for p in teile:  # Griff zusätzlich nach links, sonst scheint er auf der Oberschale zu liegen
+    if p['id'] == 'griff':
+        p['explode'][0] = -150
 skaliere_masse(teile, oid='sandwich_maker')
 schreibe('sandwich_maker', teile)

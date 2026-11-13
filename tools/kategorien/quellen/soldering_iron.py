@@ -10,6 +10,36 @@ from bau import teil, mark, raster, explodiere, skaliere_masse, schreibe  # noqa
 # Explosion entlang der Achse: Spitze, Überwurfhülse und Heizhülse nach vorn (dy > 0), Heizelement aus der Hülse
 # nach oben, Kabel und Knickschutz nach hinten, Kupferadern daneben (dx > 0).
 SCHWARZ = '#2B2F33'
+BLAU, BLAU_D = '#3F6E9C', '#2F577C'
+GRIFF_INFO = 'Hitzebeständiger Kunststoffgriff mit gummierter Griffzone. Innen sind die Kabeladern angeschraubt.'
+
+
+def griff_scheiben():
+    """Runder Griff als fünf liegende Scheiben (der Renderer kennt nur senkrechte Körper)."""
+    lagen = [(0, 3, 15), (3, 5, 22), (8, 9, 25), (17, 5, 22), (22, 3, 15)]
+    out = []
+    for i, (z, h, w) in enumerate(lagen):
+        oben = i == len(lagen) - 1
+        out.append(teil(f'griff_{i + 1}', 'plastic_handle', 'Griff', 'Griff', 'box', material_id='pp',
+                        x=12.5 - w / 2, y=45, w=w, d=83, z=z, h=h, r=w / 2, explode=[0, 0, 0], mass=5,
+                        materials=[['pp', 85], ['tpe', 15]], color=BLAU, label=oben,
+                        info=GRIFF_INFO if oben else 'Teil des Griffs.',
+                        marks=([mark('box', 1, 20, w - 2, 44, w / 2 - 1, '#2B2F33')]
+                               + raster(2, 24, 1, 9, w - 4, 1.5, 0, 4.5, r=0.7, fill='#3A3F44')
+                               + raster(1, 71, 1, 3, w - 2, 1.5, 0, 3.5, r=0.7, fill=BLAU_D)) if oben else None))
+    return out
+
+
+def fingerschutz():
+    """Wulst vorne am Griff, etwas dicker als der Griff, damit die Finger nicht nach vorne rutschen."""
+    lagen = [(0, 4, 18), (4, 17, 28), (21, 4, 18)]
+    return [teil(f'wulst_{i + 1}', 'plastic_handle', 'Fingerschutz', 'Fingerschutz', 'box', material_id='pp',
+                 x=12.5 - w / 2, y=128, w=w, d=7, z=z, h=h, r=3, explode=[0, 0, 0], mass=1,
+                 materials=[['pp', 100]], color=BLAU_D, label=i == 2,
+                 info='Dicker Ring vorne am Griff. Er schützt die Finger vor der heißen Heizhülse.' if i == 2 else 'Teil des Fingerschutzes.')
+            for i, (z, h, w) in enumerate(lagen)]
+
+
 
 teile = [
     teil('spitze', 'soldering_tip', 'Lötspitze', 'Spitze', 'box',
@@ -29,10 +59,13 @@ teile = [
     teil('heizhuelse', 'heating_element', 'Heizhülse (Schaft)', 'Heizhülse', 'box', material_id='steel',
          x=8.5, y=130, w=8, d=55, z=8.5, h=8, r=4, explode=[0, 35, 0], mass=10, materials=[['stahl', 100]], color='#B5BBC0',
          info='Dünnes Edelstahlrohr um das Heizelement. Nicht anfassen, solange der Kolben eingesteckt ist.'),
-    teil('griff', 'plastic_handle', 'Griff', 'Griff', 'box',
-         x=0, y=45, w=25, d=95, z=0, h=25, r=12, explode=[0, 0, 0], mass=25, materials=[['pp', 85], ['tpe', 15]], color='#3F6E9C',
-         info='Hitzebeständiger Kunststoffgriff mit Kühlrippen vorne. Innen sind die Kabeladern angeschraubt.',
-         marks=raster(2, 76, 1, 4, 21, 2, 0, 4.5, r=1, fill='#2F577C')),
+    *griff_scheiben(),
+    *fingerschutz(),
+    teil('klemme', 'plastic_handle', 'Anschlussklemme mit Schrauben', 'Klemme', 'box', material_id='mixed_electronics',
+         x=7, y=60, w=11, d=16, z=8, h=8, r=1, explode=[0, 0, 40], mass=3,
+         materials=[['messing', 50], ['stahl', 20], ['keramik', 30]], color='#E8E2C8',
+         marks=[mark('cyl', 1.5, 3, 4, fill='#B7BCC0'), mark('cyl', 5.5, 9, 4, fill='#B7BCC0')],
+         info='Keramikklemme im Griff: Hier sind die Kabeladern mit kleinen Schrauben an den Drähten des Heizelements befestigt.'),
     teil('knickschutz', 'plastic_handle', 'Knickschutz', 'Knickschutz', 'box', material_id='pvc',
          x=7.5, y=22, w=10, d=28, z=7.5, h=10, r=5, explode=[0, -30, 0], mass=4, materials=[['pvc', 100]], color=SCHWARZ,
          info='Weiche Tülle, damit das Kabel am Griff nicht bricht. Wird mit dem Kabel abgezogen.'),

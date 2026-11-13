@@ -16,26 +16,38 @@ DX = 135
 ELKO = [['alu', 55], ['papier', 20], ['pcabs', 10], ['gummi', 5], ['kupfer', 10]]
 
 teile = [
-    teil('kabel_adern', 'cable_copper_core', 'Kupferadern des Ladekabels', 'Adern', 'box',
-         x=12, y=6, w=84, d=38, z=24.5, h=7, r=18, explode=[DX, 0, 6], mass=28,
+    teil('klettband', 'cable_insulation', 'Kabelbinder mit Klettverschluss', 'Klettband', 'box',
+         material_id='pvc', x=48, y=3, w=9, d=44, z=24, h=7, r=2, explode=[DX, 0, 30], mass=2,
+         materials=[['nylon', 100]], sortBias=5,
+         info='Hält das aufgerollte Kabel zusammen. Einfach abziehen, es kommt in den Restmüll oder wird weiterverwendet.',
+         color='#55606A', marks=raster(1.5, 2, 1, 8, 6, 2, 0, 5, fill='#4A535C')),
+    teil('kabel_adern', 'cable_copper_core', 'Kupferadern des Ladekabels', 'Adern', 'cyl',
+         x=20, y=9, w=60, d=32, z=25, h=4, explode=[DX, 0, 14], mass=28,
          materials=[['kupfer', 75], ['pvc', 25]],
          info='Zwei Leiter für Plus und Minus, oft als Innenader mit Kupfergeflecht darum. '
               'Nach dem Abisolieren kommt reines Kupfer zum Vorschein.',
-         color='#C5803D', marks=[mark('box', 4, 4, 76, 30, 14), mark('box', 8, 8, 68, 22, 10)]),
-    teil('kabel_mantel', 'cable_insulation', 'Kabelmantel (Ladekabel, 1,8 m)', 'Kabelmantel', 'box',
-         x=10, y=4, w=88, d=42, z=24, h=8, r=20, explode=[DX, 0, -24], mass=42,
-         info='Schwarzer PVC-Mantel, zu einem Bündel gelegt. Mit Abisolierzange längs aufschlitzen; '
-              'nahe am Gehäuse sitzt meist ein Ferritkern gegen Funkstörungen.',
-         color='#3A3D40', marks=[mark('box', 4, 4, 80, 34, 16), mark('box', 9, 9, 70, 24, 11),
-                                 mark('cyl', 6, 13, 16, 16, fill='#4A4F54')]),
+         color='#C5803D', marks=[mark('cyl', 6, 4, 48, 24, fill='#B06F33'), mark('cyl', 12, 8, 36, 16, fill='#C5803D'),
+                                 mark('cyl', 18, 11, 24, 10, fill='#34383C')]),
+    teil('kabel_mantel', 'cable_insulation', 'Kabelmantel (Ladekabel, 1,8 m, aufgerollt)', 'Kabelmantel', 'cyl',
+         x=14, y=5, w=72, d=40, z=24, h=6, explode=[DX, 0, -24], mass=42,
+         info='Schwarzer PVC-Mantel, hier aufgerollt. Mit Abisolierzange längs aufschlitzen; '
+              'nahe am Stecker sitzt meist ein Ferritkern gegen Funkstörungen.',
+         color='#34373B', marks=[mark('cyl', 3, 2, 66, 36, fill='#2B2E31'), mark('cyl', 7, 4, 58, 32, fill='#34373B'),
+                                 mark('cyl', 11, 6.5, 50, 27, fill='#2B2E31'), mark('cyl', 15, 9, 42, 22, fill='#34373B'),
+                                 mark('cyl', 19, 11.5, 34, 17, fill='#34383C')]),
+    teil('knickschutz', 'cable_insulation', 'Knickschutz am Gehäuse', 'Knickschutz', 'box',
+         material_id='pvc', x=98, y=5, w=7, d=9, z=7, h=9, r=3, explode=[DX - 20, -12, -7], mass=3,
+         materials=[['tpe', 100]], sortBias=5,
+         info='Weiche Tülle, damit das Kabel am Gehäuse nicht abknickt. Hier brechen Kabel am häufigsten.',
+         color='#2B2E31', marks=raster(2, 1.5, 3, 1, 1, 6, 2, fill='#3A3D40')),
     teil('stecker_huelle', 'connector_shell', 'Steckergriff (angespritzt)', 'Steckergriff', 'box',
-         material_id='pvc', x=98, y=19, w=13, d=12, z=0, h=12, r=4, explode=[DX + 5, 0, 0], mass=6,
+         material_id='pvc', x=98, y=19, w=12, d=12, z=0, h=12, r=4, explode=[DX + 5, 30, 0], mass=6,
          materials=[['pvc', 90], ['lot', 10]],
          info='Kunststoff um die Lötstellen gespritzt. Kabel direkt dahinter abschneiden, dann sind Stecker '
               'und Kabel getrennt.',
          color=GEH, marks=raster(3, 2, 3, 1, 1.5, 8, 3, r=0.5, fill='#3A3D40')),
     teil('hohlstecker', 'connector_shell', 'Hohlstecker (5,5 mm)', 'Hohlstecker', 'box',
-         x=111, y=22.25, w=10, d=5.5, z=3.25, h=5.5, r=2.7, explode=[DX + 18, 0, -3.25], mass=3,
+         x=110, y=22.25, w=10, d=5.5, z=3.25, h=5.5, r=2.7, explode=[DX + 18, 30, -3.25], mass=3,
          materials=[['stahl', 70], ['nickel', 10], ['messing', 15], ['pcabs', 5]],
          info='Vernickelte Metallhülse (Minus) mit Kontakt innen (Plus). Ein Magnet zieht den Stahl an.',
          color='#C9CDD0', marks=[mark('box', 6, 1.5, 4, 2.5, 1.2, '#2A2E31')]),
@@ -82,6 +94,20 @@ teile = [
          materials=[['pcabs', 70], ['messing', 30]],
          info='Hier steckt das Netzkabel. Drei Messingkontakte in Kunststoff, auf die Platine gelötet.',
          color='#2B2E31', marks=[mark('cyl', 3, 2.5, 7), mark('cyl', 3, 10.5, 7), mark('cyl', 5, 7, 4, fill='#C9A74A')]),
+    teil('sicherung', 'circuit_board', 'Glasrohrsicherung', 'Sicherung', 'box',
+         material_id='mixed_electronics', x=3, y=38, w=12, d=5, z=4.6, h=5, r=2.4, mass=1,
+         materials=[['glas', 60], ['messing', 30], ['kupfer', 10]], color='#D8E2E6', opacity=0.7,
+         info='Brennt bei einem Kurzschluss durch und trennt das Netzteil vom Stromnetz.',
+         marks=[mark('box', 0, 0, 2.5, 5, 1, '#C9CDD0'), mark('box', 9.5, 0, 2.5, 5, 1, '#C9CDD0')]),
+    teil('gleichrichter', 'circuit_board', 'Brückengleichrichter', 'Gleichrichter', 'box',
+         material_id='mixed_electronics', x=3, y=3, w=10, d=10, z=4.6, h=6, r=1, mass=2,
+         materials=[['chip', 30], ['pcabs', 50], ['kupfer', 20]], color='#22272B',
+         info='Vier Dioden in einem Block machen aus Wechselstrom pulsierenden Gleichstrom.',
+         marks=[mark('box', 1, 1, 3, 3, 0.5, '#B7BCC0')]),
+    teil('ykondensator', 'circuit_board', 'Entstör-Kondensator', 'Y-Kondensator', 'box',
+         material_id='mixed_electronics', x=85, y=38, w=9, d=4, z=4.6, h=9, r=1.8, mass=1,
+         materials=[['keramik', 70], ['kupfer', 20], ['pcabs', 10]], color='#2E6EB8',
+         info='Blauer Scheibenkondensator, der Störsignale zwischen Netz- und Ausgangsseite ableitet.'),
     teil('platine', 'circuit_board', 'Platine', 'Platine', 'box',
          x=2, y=2, w=94, d=46, z=3, h=1.6, r=2, mass=24,
          info='Leiterplatte mit Netz- und Niederspannungsseite. Als Elektroschrott abgeben, dort werden Kupfer, '
@@ -97,6 +123,9 @@ teile = [
               'Elektro-Sammlung bringen.',
          color=GEH, marks=[mark('box', 2, 15, 11, 20, 2, '#1E2022')]),
 ]
+for p in teile:  # Bauteile auf der Platine zusammengebaut vor der Unterschale zeichnen, sonst scheinen sie durch
+    if p['z'] == 4.6:
+        p['sortBias'] = -14
 explodiere(teile, abstand=22)
 skaliere_masse(teile, oid='laptop_charger')
 schreibe('laptop_charger', teile)

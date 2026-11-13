@@ -21,47 +21,48 @@
  "werte": [
   {
    "k": "Rohstoffwert",
-   "v": "≈ 1,24 €",
+   "v": "≈ 1,19 €",
    "hint": "Gold, Silber, Kupfer zu Preisen vom 13.11."
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 4,20 kg",
+   "v": "≈ 4,12 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 3,41 kg",
-   "hint": "spart 0,78 kg, wenn recycelte Materialien eingesetzt werden"
+   "v": "≈ 3,31 kg",
+   "hint": "spart 0,80 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Cu": 69190.0,
-   "Fe": 56365.0,
-   "Ag": 13.0,
-   "Au": 3.11,
-   "Pd": 0.98
+   "Fe": 84789.0,
+   "Cu": 67130.0,
+   "Ag": 12.0,
+   "Au": 2.96,
+   "Pd": 0.94
   },
   "herkunft": {
-   "Cu": "Modellmassen (Schätzung)",
    "Fe": "Modellmassen (Schätzung)",
-   "Ag": "52 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)",
-   "Au": "52 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)",
-   "Pd": "52 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)"
+   "Cu": "Modellmassen (Schätzung)",
+   "Ag": "49 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)",
+   "Au": "49 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)",
+   "Pd": "49 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)"
   },
   "materialien_g": {
-   "abs": 333.7,
-   "alkaline": 290.8,
-   "mixed_electronics": 196.1,
-   "pcb": 51.8,
-   "steel": 27.5
+   "abs": 319.1,
+   "alkaline": 276.8,
+   "mixed_electronics": 190.9,
+   "steel": 57.3,
+   "pcb": 49.3,
+   "pc": 6.3
   },
-  "co2_kg": 4.196,
-  "co2_mit_recyclat_kg": 3.414,
-  "co2_ersparnis_kg": 0.782,
+  "co2_kg": 4.117,
+  "co2_mit_recyclat_kg": 3.313,
+  "co2_ersparnis_kg": 0.804,
   "co2_ohne_faktor": [],
-  "rohstoffwert_eur": 1.24,
+  "rohstoffwert_eur": 1.19,
   "wert_ohne_preis": [],
   "preisstand": "2026-11-13",
   "quellen": {
@@ -158,7 +159,7 @@
     0,
     50
    ],
-   "mass": 33,
+   "mass": 31.5,
    "materials": [
     [
      "pcabs",
@@ -198,7 +199,7 @@
     0,
     50
    ],
-   "mass": 27.5,
+   "mass": 26.2,
    "materials": [
     [
      "stahl",
@@ -273,7 +274,7 @@
     30,
     50
    ],
-   "mass": 8.8,
+   "mass": 8.4,
    "materials": [
     [
      "pcabs",
@@ -309,6 +310,557 @@
    ]
   },
   {
+   "id": "gitter0",
+   "component_id": "plastic_housing",
+   "material_id": "steel",
+   "name": "Lautsprechergitter (Metallstreben)",
+   "short": "Gitter",
+   "shape": "box",
+   "x": 14,
+   "y": 80,
+   "w": 104,
+   "d": 1.5,
+   "z": 12,
+   "h": 7,
+   "r": 0.5,
+   "explode": [
+    -50,
+    185,
+    0
+   ],
+   "mass": 3.1,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Gelochtes Stahlblech schützt die Membran. In die Frontschale geklipst, mit einem Schraubendreher heraushebeln. Wertvoll als Stahlschrott.",
+   "color": "#A7ADB2",
+   "label": true,
+   "sortBias": 150
+  },
+  {
+   "id": "gitter1",
+   "component_id": "plastic_housing",
+   "material_id": "steel",
+   "name": "Lautsprechergitter (Metallstreben)",
+   "short": "Gitter",
+   "shape": "box",
+   "x": 14,
+   "y": 80,
+   "w": 104,
+   "d": 1.5,
+   "z": 23.5,
+   "h": 7,
+   "r": 0.5,
+   "explode": [
+    -50,
+    185,
+    0
+   ],
+   "mass": 3.1,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Gelochtes Stahlblech schützt die Membran. In die Frontschale geklipst, mit einem Schraubendreher heraushebeln. Wertvoll als Stahlschrott.",
+   "color": "#A7ADB2",
+   "label": false,
+   "sortBias": 150
+  },
+  {
+   "id": "gitter2",
+   "component_id": "plastic_housing",
+   "material_id": "steel",
+   "name": "Lautsprechergitter (Metallstreben)",
+   "short": "Gitter",
+   "shape": "box",
+   "x": 14,
+   "y": 80,
+   "w": 104,
+   "d": 1.5,
+   "z": 35,
+   "h": 7,
+   "r": 0.5,
+   "explode": [
+    -50,
+    185,
+    0
+   ],
+   "mass": 3.1,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Gelochtes Stahlblech schützt die Membran. In die Frontschale geklipst, mit einem Schraubendreher heraushebeln. Wertvoll als Stahlschrott.",
+   "color": "#A7ADB2",
+   "label": false,
+   "sortBias": 150
+  },
+  {
+   "id": "gitter3",
+   "component_id": "plastic_housing",
+   "material_id": "steel",
+   "name": "Lautsprechergitter (Metallstreben)",
+   "short": "Gitter",
+   "shape": "box",
+   "x": 14,
+   "y": 80,
+   "w": 104,
+   "d": 1.5,
+   "z": 46.5,
+   "h": 7,
+   "r": 0.5,
+   "explode": [
+    -50,
+    185,
+    0
+   ],
+   "mass": 3.1,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Gelochtes Stahlblech schützt die Membran. In die Frontschale geklipst, mit einem Schraubendreher heraushebeln. Wertvoll als Stahlschrott.",
+   "color": "#A7ADB2",
+   "label": false,
+   "sortBias": 150
+  },
+  {
+   "id": "gitter4",
+   "component_id": "plastic_housing",
+   "material_id": "steel",
+   "name": "Lautsprechergitter (Metallstreben)",
+   "short": "Gitter",
+   "shape": "box",
+   "x": 14,
+   "y": 80,
+   "w": 104,
+   "d": 1.5,
+   "z": 58,
+   "h": 7,
+   "r": 0.5,
+   "explode": [
+    -50,
+    185,
+    0
+   ],
+   "mass": 3.1,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Gelochtes Stahlblech schützt die Membran. In die Frontschale geklipst, mit einem Schraubendreher heraushebeln. Wertvoll als Stahlschrott.",
+   "color": "#A7ADB2",
+   "label": false,
+   "sortBias": 150
+  },
+  {
+   "id": "gitter5",
+   "component_id": "plastic_housing",
+   "material_id": "steel",
+   "name": "Lautsprechergitter (Metallstreben)",
+   "short": "Gitter",
+   "shape": "box",
+   "x": 14,
+   "y": 80,
+   "w": 104,
+   "d": 1.5,
+   "z": 69.5,
+   "h": 7,
+   "r": 0.5,
+   "explode": [
+    -50,
+    185,
+    0
+   ],
+   "mass": 3.1,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Gelochtes Stahlblech schützt die Membran. In die Frontschale geklipst, mit einem Schraubendreher heraushebeln. Wertvoll als Stahlschrott.",
+   "color": "#A7ADB2",
+   "label": false,
+   "sortBias": 150
+  },
+  {
+   "id": "gitter6",
+   "component_id": "plastic_housing",
+   "material_id": "steel",
+   "name": "Lautsprechergitter (Metallstreben)",
+   "short": "Gitter",
+   "shape": "box",
+   "x": 14,
+   "y": 80,
+   "w": 104,
+   "d": 1.5,
+   "z": 81,
+   "h": 7,
+   "r": 0.5,
+   "explode": [
+    -50,
+    185,
+    0
+   ],
+   "mass": 3.1,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Gelochtes Stahlblech schützt die Membran. In die Frontschale geklipst, mit einem Schraubendreher heraushebeln. Wertvoll als Stahlschrott.",
+   "color": "#A7ADB2",
+   "label": false,
+   "sortBias": 150
+  },
+  {
+   "id": "gitter7",
+   "component_id": "plastic_housing",
+   "material_id": "steel",
+   "name": "Lautsprechergitter (Metallstreben)",
+   "short": "Gitter",
+   "shape": "box",
+   "x": 14,
+   "y": 80,
+   "w": 104,
+   "d": 1.5,
+   "z": 92.5,
+   "h": 7,
+   "r": 0.5,
+   "explode": [
+    -50,
+    185,
+    0
+   ],
+   "mass": 3.1,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Gelochtes Stahlblech schützt die Membran. In die Frontschale geklipst, mit einem Schraubendreher heraushebeln. Wertvoll als Stahlschrott.",
+   "color": "#A7ADB2",
+   "label": false,
+   "sortBias": 150
+  },
+  {
+   "id": "skala",
+   "component_id": "plastic_housing",
+   "material_id": "pc",
+   "name": "Senderskala mit Fenster",
+   "short": "Skala",
+   "shape": "box",
+   "x": 132,
+   "y": 80,
+   "w": 78,
+   "d": 1,
+   "z": 58,
+   "h": 38,
+   "r": 1,
+   "explode": [
+    -50,
+    140,
+    0
+   ],
+   "mass": 6.3,
+   "materials": [
+    [
+     "pcabs",
+     90
+    ],
+    [
+     "druck",
+     10
+    ]
+   ],
+   "info": "Bedruckte Skala mit Frequenzen hinter einem Klarsichtfenster. Der Zeiger zeigt den eingestellten Sender.",
+   "color": "#E8E2C8",
+   "sortBias": 150
+  },
+  {
+   "id": "zeiger",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Senderzeiger",
+   "short": "Zeiger",
+   "shape": "box",
+   "x": 168,
+   "y": 81,
+   "w": 1.5,
+   "d": 1,
+   "z": 60,
+   "h": 34,
+   "explode": [
+    -50,
+    140,
+    0
+   ],
+   "mass": 0.5,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Roter Kunststoffzeiger, wird über einen Seilzug vom Senderknopf bewegt.",
+   "color": "#E35A4E",
+   "sortBias": 160
+  },
+  {
+   "id": "strich0",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Skalenstrich",
+   "short": "Strich",
+   "shape": "box",
+   "x": 138,
+   "y": 81,
+   "w": 0.8,
+   "d": 0.5,
+   "z": 84,
+   "h": 8,
+   "explode": [
+    -50,
+    140,
+    0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Aufgedruckter Skalenstrich.",
+   "color": "#55493C",
+   "label": false,
+   "sortBias": 155
+  },
+  {
+   "id": "strich1",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Skalenstrich",
+   "short": "Strich",
+   "shape": "box",
+   "x": 147,
+   "y": 81,
+   "w": 0.8,
+   "d": 0.5,
+   "z": 84,
+   "h": 8,
+   "explode": [
+    -50,
+    140,
+    0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Aufgedruckter Skalenstrich.",
+   "color": "#55493C",
+   "label": false,
+   "sortBias": 155
+  },
+  {
+   "id": "strich2",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Skalenstrich",
+   "short": "Strich",
+   "shape": "box",
+   "x": 156,
+   "y": 81,
+   "w": 0.8,
+   "d": 0.5,
+   "z": 84,
+   "h": 8,
+   "explode": [
+    -50,
+    140,
+    0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Aufgedruckter Skalenstrich.",
+   "color": "#55493C",
+   "label": false,
+   "sortBias": 155
+  },
+  {
+   "id": "strich3",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Skalenstrich",
+   "short": "Strich",
+   "shape": "box",
+   "x": 165,
+   "y": 81,
+   "w": 0.8,
+   "d": 0.5,
+   "z": 84,
+   "h": 8,
+   "explode": [
+    -50,
+    140,
+    0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Aufgedruckter Skalenstrich.",
+   "color": "#55493C",
+   "label": false,
+   "sortBias": 155
+  },
+  {
+   "id": "strich4",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Skalenstrich",
+   "short": "Strich",
+   "shape": "box",
+   "x": 174,
+   "y": 81,
+   "w": 0.8,
+   "d": 0.5,
+   "z": 84,
+   "h": 8,
+   "explode": [
+    -50,
+    140,
+    0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Aufgedruckter Skalenstrich.",
+   "color": "#55493C",
+   "label": false,
+   "sortBias": 155
+  },
+  {
+   "id": "strich5",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Skalenstrich",
+   "short": "Strich",
+   "shape": "box",
+   "x": 183,
+   "y": 81,
+   "w": 0.8,
+   "d": 0.5,
+   "z": 84,
+   "h": 8,
+   "explode": [
+    -50,
+    140,
+    0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Aufgedruckter Skalenstrich.",
+   "color": "#55493C",
+   "label": false,
+   "sortBias": 155
+  },
+  {
+   "id": "strich6",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Skalenstrich",
+   "short": "Strich",
+   "shape": "box",
+   "x": 192,
+   "y": 81,
+   "w": 0.8,
+   "d": 0.5,
+   "z": 84,
+   "h": 8,
+   "explode": [
+    -50,
+    140,
+    0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Aufgedruckter Skalenstrich.",
+   "color": "#55493C",
+   "label": false,
+   "sortBias": 155
+  },
+  {
+   "id": "strich7",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Skalenstrich",
+   "short": "Strich",
+   "shape": "box",
+   "x": 201,
+   "y": 81,
+   "w": 0.8,
+   "d": 0.5,
+   "z": 84,
+   "h": 8,
+   "explode": [
+    -50,
+    140,
+    0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Aufgedruckter Skalenstrich.",
+   "color": "#55493C",
+   "label": false,
+   "sortBias": 155
+  },
+  {
    "id": "frontschale",
    "component_id": "plastic_housing",
    "material_id": "abs",
@@ -323,11 +875,11 @@
    "h": 112,
    "r": 10,
    "explode": [
-    0,
-    70,
+    -50,
+    140,
     0
    ],
-   "mass": 137.7,
+   "mass": 131.1,
    "materials": [
     [
      "pcabs",
@@ -348,12 +900,116 @@
     },
     {
      "shape": "box",
-     "x": 130,
+     "x": 18,
      "y": 8,
-     "w": 80,
-     "d": 10,
+     "w": 40,
+     "d": 8,
+     "r": 3,
+     "fill": "#2B2E31"
+    },
+    {
+     "shape": "box",
+     "x": 30,
+     "y": 9,
+     "w": 10,
+     "d": 6,
      "r": 2,
-     "fill": "#E8E2C8"
+     "fill": "#B7BCC0"
+    },
+    {
+     "shape": "cyl",
+     "x": 112,
+     "y": 9,
+     "w": 5,
+     "fill": "#4CC26A"
+    }
+   ]
+  },
+  {
+   "id": "poti",
+   "component_id": "circuit_board",
+   "material_id": "mixed_electronics",
+   "name": "Lautstärkeregler (Potentiometer)",
+   "short": "Poti",
+   "shape": "cyl",
+   "x": 186,
+   "y": 56,
+   "w": 14,
+   "z": 94,
+   "h": 14,
+   "explode": [
+    0,
+    30,
+    30
+   ],
+   "mass": 4.2,
+   "materials": [
+    [
+     "pcabs",
+     40
+    ],
+    [
+     "stahl",
+     30
+    ],
+    [
+     "messing",
+     15
+    ],
+    [
+     "kupfer",
+     10
+    ],
+    [
+     "graphit",
+     5
+    ]
+   ],
+   "info": "Drehwiderstand unter dem Lautstärkeknopf. Eine Kohlebahn ändert den Widerstand und damit die Lautstärke.",
+   "color": "#5A6066",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 4,
+     "w": 6,
+     "fill": "#C9CDD0"
+    }
+   ]
+  },
+  {
+   "id": "schrauben",
+   "component_id": "plastic_housing",
+   "material_id": "steel",
+   "name": "Gehäuseschrauben (6 Stück)",
+   "short": "Schrauben",
+   "shape": "cyl",
+   "x": 8,
+   "y": 60,
+   "w": 6,
+   "z": 100,
+   "h": 10,
+   "explode": [
+    0,
+    0,
+    40
+   ],
+   "mass": 6.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Halten Front- und Rückschale zusammen. Kreuzschlitz, oft unter dem Batteriedeckel versteckt.",
+   "color": "#9AA0A6",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 1,
+     "y": 1,
+     "w": 4,
+     "fill": "#5F666C"
     }
    ]
   },
@@ -376,7 +1032,7 @@
     0,
     0
    ],
-   "mass": 60.6,
+   "mass": 57.7,
    "materials": [
     [
      "stahl",
@@ -431,7 +1087,7 @@
     0,
     0
    ],
-   "mass": 104.7,
+   "mass": 99.6,
    "materials": [
     [
      "ferrit",
@@ -478,7 +1134,7 @@
     0,
     0
    ],
-   "mass": 19.8,
+   "mass": 18.9,
    "materials": [
     [
      "ferrit",
@@ -535,7 +1191,7 @@
     0,
     0
    ],
-   "mass": 11,
+   "mass": 10.5,
    "materials": [
     [
      "alu",
@@ -585,7 +1241,7 @@
     0,
     0
    ],
-   "mass": 2.2,
+   "mass": 2.1,
    "materials": [
     [
      "chip",
@@ -614,7 +1270,7 @@
     0,
     0
    ],
-   "mass": 49.6,
+   "mass": 47.2,
    "materials": [
     [
      "fr4",
@@ -652,10 +1308,10 @@
    "r": 8,
    "explode": [
     0,
-    0,
+    -45,
     0
    ],
-   "mass": 290.8,
+   "mass": 276.8,
    "materials": [
     [
      "zinkmangan",
@@ -759,10 +1415,10 @@
    "r": 10,
    "explode": [
     0,
-    -75,
+    -110,
     0
    ],
-   "mass": 154.2,
+   "mass": 146.8,
    "materials": [
     [
      "pcabs",

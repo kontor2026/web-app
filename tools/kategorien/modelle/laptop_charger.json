@@ -1,25 +1,120 @@
 {
  "parts": [
   {
+   "id": "klettband",
+   "component_id": "cable_insulation",
+   "material_id": "pvc",
+   "name": "Kabelbinder mit Klettverschluss",
+   "short": "Klettband",
+   "shape": "box",
+   "x": 48,
+   "y": 3,
+   "w": 9,
+   "d": 44,
+   "z": 24,
+   "h": 7,
+   "r": 2,
+   "explode": [
+    135,
+    0,
+    30
+   ],
+   "mass": 2,
+   "materials": [
+    [
+     "nylon",
+     100
+    ]
+   ],
+   "info": "Hält das aufgerollte Kabel zusammen. Einfach abziehen, es kommt in den Restmüll oder wird weiterverwendet.",
+   "color": "#55606A",
+   "sortBias": 5,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1.5,
+     "y": 2,
+     "w": 6,
+     "d": 2,
+     "fill": "#4A535C"
+    },
+    {
+     "shape": "box",
+     "x": 1.5,
+     "y": 7,
+     "w": 6,
+     "d": 2,
+     "fill": "#4A535C"
+    },
+    {
+     "shape": "box",
+     "x": 1.5,
+     "y": 12,
+     "w": 6,
+     "d": 2,
+     "fill": "#4A535C"
+    },
+    {
+     "shape": "box",
+     "x": 1.5,
+     "y": 17,
+     "w": 6,
+     "d": 2,
+     "fill": "#4A535C"
+    },
+    {
+     "shape": "box",
+     "x": 1.5,
+     "y": 22,
+     "w": 6,
+     "d": 2,
+     "fill": "#4A535C"
+    },
+    {
+     "shape": "box",
+     "x": 1.5,
+     "y": 27,
+     "w": 6,
+     "d": 2,
+     "fill": "#4A535C"
+    },
+    {
+     "shape": "box",
+     "x": 1.5,
+     "y": 32,
+     "w": 6,
+     "d": 2,
+     "fill": "#4A535C"
+    },
+    {
+     "shape": "box",
+     "x": 1.5,
+     "y": 37,
+     "w": 6,
+     "d": 2,
+     "fill": "#4A535C"
+    }
+   ]
+  },
+  {
    "id": "kabel_adern",
    "component_id": "cable_copper_core",
    "material_id": "copper",
    "name": "Kupferadern des Ladekabels",
    "short": "Adern",
-   "shape": "box",
-   "x": 12,
-   "y": 6,
-   "w": 84,
-   "d": 38,
-   "z": 24.5,
-   "h": 7,
-   "r": 18,
+   "shape": "cyl",
+   "x": 20,
+   "y": 9,
+   "w": 60,
+   "d": 32,
+   "z": 25,
+   "h": 4,
    "explode": [
     135,
     0,
-    6
+    14
    ],
-   "mass": 28.9,
+   "mass": 28,
    "materials": [
     [
      "kupfer",
@@ -34,20 +129,28 @@
    "color": "#C5803D",
    "marks": [
     {
-     "shape": "box",
-     "x": 4,
+     "shape": "cyl",
+     "x": 6,
      "y": 4,
-     "w": 76,
-     "d": 30,
-     "r": 14
+     "w": 48,
+     "d": 24,
+     "fill": "#B06F33"
     },
     {
-     "shape": "box",
-     "x": 8,
+     "shape": "cyl",
+     "x": 12,
      "y": 8,
-     "w": 68,
-     "d": 22,
-     "r": 10
+     "w": 36,
+     "d": 16,
+     "fill": "#C5803D"
+    },
+    {
+     "shape": "cyl",
+     "x": 18,
+     "y": 11,
+     "w": 24,
+     "d": 10,
+     "fill": "#34383C"
     }
    ]
   },
@@ -55,54 +158,125 @@
    "id": "kabel_mantel",
    "component_id": "cable_insulation",
    "material_id": "pvc",
-   "name": "Kabelmantel (Ladekabel, 1,8 m)",
+   "name": "Kabelmantel (Ladekabel, 1,8 m, aufgerollt)",
    "short": "Kabelmantel",
-   "shape": "box",
-   "x": 10,
-   "y": 4,
-   "w": 88,
-   "d": 42,
+   "shape": "cyl",
+   "x": 14,
+   "y": 5,
+   "w": 72,
+   "d": 40,
    "z": 24,
-   "h": 8,
-   "r": 20,
+   "h": 6,
    "explode": [
     135,
     0,
     -24
    ],
-   "mass": 43.4,
+   "mass": 42.1,
    "materials": [
     [
      "pvc",
      100
     ]
    ],
-   "info": "Schwarzer PVC-Mantel, zu einem Bündel gelegt. Mit Abisolierzange längs aufschlitzen; nahe am Gehäuse sitzt meist ein Ferritkern gegen Funkstörungen.",
-   "color": "#3A3D40",
+   "info": "Schwarzer PVC-Mantel, hier aufgerollt. Mit Abisolierzange längs aufschlitzen; nahe am Stecker sitzt meist ein Ferritkern gegen Funkstörungen.",
+   "color": "#34373B",
    "marks": [
     {
-     "shape": "box",
-     "x": 4,
-     "y": 4,
-     "w": 80,
-     "d": 34,
-     "r": 16
-    },
-    {
-     "shape": "box",
-     "x": 9,
-     "y": 9,
-     "w": 70,
-     "d": 24,
-     "r": 11
+     "shape": "cyl",
+     "x": 3,
+     "y": 2,
+     "w": 66,
+     "d": 36,
+     "fill": "#2B2E31"
     },
     {
      "shape": "cyl",
+     "x": 7,
+     "y": 4,
+     "w": 58,
+     "d": 32,
+     "fill": "#34373B"
+    },
+    {
+     "shape": "cyl",
+     "x": 11,
+     "y": 6.5,
+     "w": 50,
+     "d": 27,
+     "fill": "#2B2E31"
+    },
+    {
+     "shape": "cyl",
+     "x": 15,
+     "y": 9,
+     "w": 42,
+     "d": 22,
+     "fill": "#34373B"
+    },
+    {
+     "shape": "cyl",
+     "x": 19,
+     "y": 11.5,
+     "w": 34,
+     "d": 17,
+     "fill": "#34383C"
+    }
+   ]
+  },
+  {
+   "id": "knickschutz",
+   "component_id": "cable_insulation",
+   "material_id": "pvc",
+   "name": "Knickschutz am Gehäuse",
+   "short": "Knickschutz",
+   "shape": "box",
+   "x": 98,
+   "y": 5,
+   "w": 7,
+   "d": 9,
+   "z": 7,
+   "h": 9,
+   "r": 3,
+   "explode": [
+    115,
+    -12,
+    -7
+   ],
+   "mass": 3,
+   "materials": [
+    [
+     "tpe",
+     100
+    ]
+   ],
+   "info": "Weiche Tülle, damit das Kabel am Gehäuse nicht abknickt. Hier brechen Kabel am häufigsten.",
+   "color": "#2B2E31",
+   "sortBias": 5,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 1.5,
+     "w": 1,
+     "d": 6,
+     "fill": "#3A3D40"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 1.5,
+     "w": 1,
+     "d": 6,
+     "fill": "#3A3D40"
+    },
+    {
+     "shape": "box",
      "x": 6,
-     "y": 13,
-     "w": 16,
-     "d": 16,
-     "fill": "#4A4F54"
+     "y": 1.5,
+     "w": 1,
+     "d": 6,
+     "fill": "#3A3D40"
     }
    ]
   },
@@ -115,17 +289,17 @@
    "shape": "box",
    "x": 98,
    "y": 19,
-   "w": 13,
+   "w": 12,
    "d": 12,
    "z": 0,
    "h": 12,
    "r": 4,
    "explode": [
     140,
-    0,
+    30,
     0
    ],
-   "mass": 6.2,
+   "mass": 6,
    "materials": [
     [
      "pvc",
@@ -175,7 +349,7 @@
    "name": "Hohlstecker (5,5 mm)",
    "short": "Hohlstecker",
    "shape": "box",
-   "x": 111,
+   "x": 110,
    "y": 22.25,
    "w": 10,
    "d": 5.5,
@@ -184,10 +358,10 @@
    "r": 2.7,
    "explode": [
     153,
-    0,
+    30,
     -3.25
    ],
-   "mass": 3.1,
+   "mass": 3,
    "materials": [
     [
      "stahl",
@@ -239,7 +413,7 @@
     0,
     108.0
    ],
-   "mass": 46.5,
+   "mass": 45.1,
    "materials": [
     [
      "pcabs",
@@ -286,7 +460,7 @@
     0,
     75.4
    ],
-   "mass": 16.5,
+   "mass": 16,
    "materials": [
     [
      "alu",
@@ -302,7 +476,8 @@
     ]
    ],
    "info": "Aluminiumblech, an das Schalttransistor und Gleichrichter geschraubt sind. Leitet ihre Wärme ab.",
-   "color": "#C9CDD0"
+   "color": "#C9CDD0",
+   "sortBias": -14
   },
   {
    "id": "elko_gross",
@@ -321,7 +496,7 @@
     0,
     75.4
    ],
-   "mass": 13.4,
+   "mass": 13,
    "materials": [
     [
      "alu",
@@ -346,6 +521,7 @@
    ],
    "info": "Speichert die gleichgerichtete Netzspannung von rund 325 Volt. Kann auch ausgesteckt noch geladen sein, Anschlüsse nie berühren.",
    "color": "#2F4F7A",
+   "sortBias": -14,
    "marks": [
     {
      "shape": "cyl",
@@ -384,7 +560,7 @@
     0,
     75.4
    ],
-   "mass": 10.3,
+   "mass": 10,
    "materials": [
     [
      "ferrit",
@@ -401,6 +577,7 @@
    ],
    "info": "Ringkern aus Ferrit mit zwei Kupferwicklungen. Hält Störungen vom Stromnetz fern.",
    "color": "#3A3F44",
+   "sortBias": -14,
    "marks": [
     {
      "shape": "cyl",
@@ -438,7 +615,7 @@
     0,
     75.4
    ],
-   "mass": 35.1,
+   "mass": 34.1,
    "materials": [
     [
      "ferrit",
@@ -459,6 +636,7 @@
    ],
    "info": "Ferritkern mit Kupferwicklungen, in gelbes Isolierband gewickelt. Trennt die Netzspannung sicher vom 19-Volt-Ausgang.",
    "color": "#E2C34A",
+   "sortBias": -14,
    "marks": [
     {
      "shape": "box",
@@ -497,7 +675,7 @@
     0,
     75.4
    ],
-   "mass": 4.1,
+   "mass": 4,
    "materials": [
     [
      "alu",
@@ -522,6 +700,7 @@
    ],
    "info": "Glätten die 19-Volt-Ausgangsspannung, damit der Laptop gleichmäßig geladen wird.",
    "color": "#3B3B3B",
+   "sortBias": -14,
    "marks": [
     {
      "shape": "cyl",
@@ -549,7 +728,7 @@
     0,
     75.4
    ],
-   "mass": 4.1,
+   "mass": 4,
    "materials": [
     [
      "alu",
@@ -575,6 +754,7 @@
    "info": "Zweiter Ausgangskondensator, parallel zum ersten.",
    "color": "#3B3B3B",
    "label": false,
+   "sortBias": -14,
    "marks": [
     {
      "shape": "cyl",
@@ -613,6 +793,7 @@
    ],
    "info": "Steuert, wie oft der Strom durch den Trafo geschaltet wird, und begrenzt die Leistung auf 65 Watt.",
    "color": "#22272B",
+   "sortBias": -14,
    "marks": [
     {
      "shape": "cyl",
@@ -641,7 +822,7 @@
     0,
     75.4
    ],
-   "mass": 8.3,
+   "mass": 8,
    "materials": [
     [
      "pcabs",
@@ -654,6 +835,7 @@
    ],
    "info": "Hier steckt das Netzkabel. Drei Messingkontakte in Kunststoff, auf die Platine gelötet.",
    "color": "#2B2E31",
+   "sortBias": -14,
    "marks": [
     {
      "shape": "cyl",
@@ -677,6 +859,152 @@
    ]
   },
   {
+   "id": "sicherung",
+   "component_id": "circuit_board",
+   "material_id": "mixed_electronics",
+   "name": "Glasrohrsicherung",
+   "short": "Sicherung",
+   "shape": "box",
+   "x": 3,
+   "y": 38,
+   "w": 12,
+   "d": 5,
+   "z": 4.6,
+   "h": 5,
+   "r": 2.4,
+   "explode": [
+    0,
+    0,
+    75.4
+   ],
+   "mass": 1,
+   "materials": [
+    [
+     "glas",
+     60
+    ],
+    [
+     "messing",
+     30
+    ],
+    [
+     "kupfer",
+     10
+    ]
+   ],
+   "info": "Brennt bei einem Kurzschluss durch und trennt das Netzteil vom Stromnetz.",
+   "color": "#D8E2E6",
+   "opacity": 0.7,
+   "sortBias": -14,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 0,
+     "w": 2.5,
+     "d": 5,
+     "r": 1,
+     "fill": "#C9CDD0"
+    },
+    {
+     "shape": "box",
+     "x": 9.5,
+     "y": 0,
+     "w": 2.5,
+     "d": 5,
+     "r": 1,
+     "fill": "#C9CDD0"
+    }
+   ]
+  },
+  {
+   "id": "gleichrichter",
+   "component_id": "circuit_board",
+   "material_id": "mixed_electronics",
+   "name": "Brückengleichrichter",
+   "short": "Gleichrichter",
+   "shape": "box",
+   "x": 3,
+   "y": 3,
+   "w": 10,
+   "d": 10,
+   "z": 4.6,
+   "h": 6,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    75.4
+   ],
+   "mass": 2,
+   "materials": [
+    [
+     "chip",
+     30
+    ],
+    [
+     "pcabs",
+     50
+    ],
+    [
+     "kupfer",
+     20
+    ]
+   ],
+   "info": "Vier Dioden in einem Block machen aus Wechselstrom pulsierenden Gleichstrom.",
+   "color": "#22272B",
+   "sortBias": -14,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 1,
+     "w": 3,
+     "d": 3,
+     "r": 0.5,
+     "fill": "#B7BCC0"
+    }
+   ]
+  },
+  {
+   "id": "ykondensator",
+   "component_id": "circuit_board",
+   "material_id": "mixed_electronics",
+   "name": "Entstör-Kondensator",
+   "short": "Y-Kondensator",
+   "shape": "box",
+   "x": 85,
+   "y": 38,
+   "w": 9,
+   "d": 4,
+   "z": 4.6,
+   "h": 9,
+   "r": 1.8,
+   "explode": [
+    0,
+    0,
+    75.4
+   ],
+   "mass": 1,
+   "materials": [
+    [
+     "keramik",
+     70
+    ],
+    [
+     "kupfer",
+     20
+    ],
+    [
+     "pcabs",
+     10
+    ]
+   ],
+   "info": "Blauer Scheibenkondensator, der Störsignale zwischen Netz- und Ausgangsseite ableitet.",
+   "color": "#2E6EB8",
+   "sortBias": -14
+  },
+  {
    "id": "platine",
    "component_id": "circuit_board",
    "material_id": "pcb",
@@ -695,7 +1023,7 @@
     0,
     53.4
    ],
-   "mass": 24.8,
+   "mass": 24,
    "materials": [
     [
      "fr4",
@@ -747,7 +1075,7 @@
     0,
     31.6
    ],
-   "mass": 3.1,
+   "mass": 3,
    "materials": [
     [
      "pcabs",
@@ -777,7 +1105,7 @@
     0,
     0.0
    ],
-   "mass": 51.6,
+   "mass": 50.1,
    "materials": [
     [
      "pcabs",

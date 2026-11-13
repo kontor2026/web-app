@@ -628,7 +628,7 @@
   "name": "Kofferradio",
   "name_en": "Portable Radio",
   "klasse": "Elektroschrott · Kleingerät",
-  "teile": 12,
+  "teile": 32,
   "platzhalter": false
  },
  {
@@ -644,7 +644,7 @@
   "name": "Spielkonsole",
   "name_en": "Game Console",
   "klasse": "Elektroschrott · Kleingerät",
-  "teile": 13,
+  "teile": 19,
   "platzhalter": false
  },
  {
@@ -652,7 +652,7 @@
   "name": "Laptop-Netzteil",
   "name_en": "Laptop Charger",
   "klasse": "Elektroschrott · Kleingerät",
-  "teile": 16,
+  "teile": 21,
   "platzhalter": false
  },
  {
@@ -660,7 +660,7 @@
   "name": "Kabel-Kopfhörer",
   "name_en": "Wired Earphones",
   "klasse": "Elektroschrott · Kleingerät",
-  "teile": 10,
+  "teile": 12,
   "platzhalter": false
  },
  {
@@ -668,7 +668,7 @@
   "name": "Fahrradlicht",
   "name_en": "Bike Light",
   "klasse": "Elektroschrott · Kleingerät",
-  "teile": 12,
+  "teile": 16,
   "platzhalter": false
  },
  {
@@ -676,7 +676,7 @@
   "name": "Lichterkette",
   "name_en": "Fairy Lights",
   "klasse": "Elektroschrott · Kleingerät",
-  "teile": 10,
+  "teile": 12,
   "platzhalter": false
  },
  {
@@ -684,7 +684,7 @@
   "name": "Küchenwaage",
   "name_en": "Kitchen Scale",
   "klasse": "Elektroschrott · Kleingerät",
-  "teile": 13,
+  "teile": 19,
   "platzhalter": false
  },
  {
@@ -692,7 +692,7 @@
   "name": "Personenwaage",
   "name_en": "Bathroom Scale",
   "klasse": "Elektroschrott · Kleingerät",
-  "teile": 16,
+  "teile": 20,
   "platzhalter": false
  },
  {
@@ -700,7 +700,7 @@
   "name": "Sandwichmaker",
   "name_en": "Sandwich Maker",
   "klasse": "Elektroschrott · Kleingerät",
-  "teile": 12,
+  "teile": 18,
   "platzhalter": false
  },
  {
@@ -716,7 +716,7 @@
   "name": "Lötkolben",
   "name_en": "Soldering Iron",
   "klasse": "Elektroschrott · Kleingerät",
-  "teile": 8,
+  "teile": 16,
   "platzhalter": false
  },
  {

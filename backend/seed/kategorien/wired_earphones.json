@@ -31,29 +31,30 @@
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 0,02 kg",
-   "hint": "spart 0,03 kg, wenn recycelte Materialien eingesetzt werden"
+   "v": "≈ 0,03 kg",
+   "hint": "spart 0,02 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Cu": 4636.0,
-   "Fe": 483.0
+   "Cu": 4601.0,
+   "Fe": 674.0
   },
   "herkunft": {
    "Cu": "Modellmassen (Schätzung)",
    "Fe": "Modellmassen (Schätzung)"
   },
   "materialien_g": {
-   "pvc": 6.1,
-   "copper": 3.7,
-   "mixed_electronics": 3.2,
-   "abs": 1.7,
-   "silicone": 0.3
+   "pvc": 5.6,
+   "mixed_electronics": 4.2,
+   "copper": 3.4,
+   "abs": 1.5,
+   "silicone": 0.3,
+   "steel": 0.1
   },
-  "co2_kg": 0.048,
-  "co2_mit_recyclat_kg": 0.022,
-  "co2_ersparnis_kg": 0.026,
+  "co2_kg": 0.05,
+  "co2_mit_recyclat_kg": 0.026,
+  "co2_ersparnis_kg": 0.024,
   "co2_ohne_faktor": [],
   "rohstoffwert_eur": 0.06,
   "wert_ohne_preis": [],
@@ -148,9 +149,9 @@
    "explode": [
     0,
     0,
-    24.0
+    32.4
    ],
-   "mass": 0.33,
+   "mass": 0.31,
    "materials": [
     [
      "gummi",
@@ -184,9 +185,9 @@
    "explode": [
     0,
     0,
-    16.0
+    24.4
    ],
-   "mass": 0.44,
+   "mass": 0.41,
    "materials": [
     [
      "pcabs",
@@ -213,6 +214,49 @@
    ]
   },
   {
+   "id": "schutzgitter",
+   "component_id": "speaker_driver",
+   "material_id": "steel",
+   "name": "Schutzgitter (Metallgewebe)",
+   "short": "Schutzgitter",
+   "shape": "cyl",
+   "x": 67,
+   "y": 6,
+   "w": 8,
+   "z": 7.6,
+   "h": 0.4,
+   "explode": [
+    0,
+    0,
+    16.4
+   ],
+   "mass": 0.05,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Feines Edelstahlnetz im Schallrohr, das Ohrenschmalz vom Lautsprecher fernhält.",
+   "color": "#9AA0A6",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 1,
+     "y": 1,
+     "w": 6,
+     "fill": "#7D858B"
+    },
+    {
+     "shape": "cyl",
+     "x": 2.5,
+     "y": 2.5,
+     "w": 3,
+     "fill": "#9AA0A6"
+    }
+   ]
+  },
+  {
    "id": "treiber",
    "component_id": "speaker_driver",
    "material_id": "mixed_electronics",
@@ -229,7 +273,7 @@
     0,
     8.0
    ],
-   "mass": 0.89,
+   "mass": 0.81,
    "materials": [
     [
      "ndfeb",
@@ -288,7 +332,7 @@
     0,
     0.0
    ],
-   "mass": 0.67,
+   "mass": 0.61,
    "materials": [
     [
      "pcabs",
@@ -324,7 +368,7 @@
     0,
     0.0
    ],
-   "mass": 2.33,
+   "mass": 2.14,
    "materials": [
     [
      "pcabs",
@@ -389,7 +433,7 @@
     0,
     0.0
    ],
-   "mass": 0.56,
+   "mass": 0.51,
    "materials": [
     [
      "pcabs",
@@ -429,7 +473,7 @@
     0,
     0.0
    ],
-   "mass": 1.11,
+   "mass": 1.02,
    "materials": [
     [
      "pvc",
@@ -473,7 +517,7 @@
     14,
     0
    ],
-   "mass": 0.89,
+   "mass": 0.81,
    "materials": [
     [
      "messing",
@@ -528,7 +572,7 @@
     0,
     31.5
    ],
-   "mass": 2.78,
+   "mass": 2.54,
    "materials": [
     [
      "kupfer",
@@ -546,39 +590,143 @@
      "shape": "cyl",
      "x": 0.0,
      "y": 0.0,
-     "w": 58.0
+     "w": 58.0,
+     "fill": "#C5803D"
     },
     {
      "shape": "cyl",
-     "x": 2.2,
-     "y": 2.2,
-     "w": 53.6
+     "x": 2.6,
+     "y": 2.6,
+     "w": 52.8,
+     "fill": "#B06F33"
     },
     {
      "shape": "cyl",
-     "x": 4.4,
-     "y": 4.4,
-     "w": 49.2
+     "x": 5.2,
+     "y": 5.2,
+     "w": 47.6,
+     "fill": "#C5803D"
     },
     {
      "shape": "cyl",
-     "x": 6.6,
-     "y": 6.6,
-     "w": 44.8
+     "x": 7.8,
+     "y": 7.8,
+     "w": 42.4,
+     "fill": "#B06F33"
     },
     {
      "shape": "cyl",
-     "x": 2,
+     "x": 10.4,
+     "y": 10.4,
+     "w": 37.2,
+     "fill": "#C5803D"
+    },
+    {
+     "shape": "cyl",
+     "x": 13.0,
+     "y": 13.0,
+     "w": 32.0,
+     "fill": "#B06F33"
+    },
+    {
+     "shape": "cyl",
+     "x": 15.6,
+     "y": 15.6,
+     "w": 26.8,
+     "fill": "#141618"
+    },
+    {
+     "shape": "cyl",
+     "x": 1,
      "y": 27,
-     "w": 2,
+     "w": 1.6,
      "fill": "#C8423A"
     },
     {
      "shape": "cyl",
-     "x": 4.5,
+     "x": 3.4,
      "y": 27,
-     "w": 2,
+     "w": 1.6,
      "fill": "#3E9A57"
+    }
+   ]
+  },
+  {
+   "id": "fernbedienung",
+   "component_id": "plastic_housing",
+   "material_id": "mixed_electronics",
+   "name": "Kabelfernbedienung mit Mikrofon",
+   "short": "Fernbedienung",
+   "shape": "box",
+   "x": 24,
+   "y": 50,
+   "w": 8,
+   "d": 22,
+   "z": 4,
+   "h": 5,
+   "r": 3.5,
+   "explode": [
+    -10,
+    40,
+    -4
+   ],
+   "mass": 1.22,
+   "materials": [
+    [
+     "pcabs",
+     60
+    ],
+    [
+     "fr4",
+     15
+    ],
+    [
+     "kupfer",
+     10
+    ],
+    [
+     "chip",
+     10
+    ],
+    [
+     "stahl",
+     5
+    ]
+   ],
+   "info": "Drei Tasten für Lauter, Leiser und Pause, dazu ein winziges Mikrofon zum Telefonieren. Innen eine kleine Platine, an die das Kabel gelötet ist.",
+   "color": "#2B2E31",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1.5,
+     "y": 3,
+     "w": 5,
+     "d": 4,
+     "r": 1.5,
+     "fill": "#3A3D40"
+    },
+    {
+     "shape": "cyl",
+     "x": 2,
+     "y": 9,
+     "w": 4,
+     "fill": "#4A4F54"
+    },
+    {
+     "shape": "box",
+     "x": 1.5,
+     "y": 15,
+     "w": 5,
+     "d": 4,
+     "r": 1.5,
+     "fill": "#3A3D40"
+    },
+    {
+     "shape": "cyl",
+     "x": 3.3,
+     "y": 20,
+     "w": 1.4,
+     "fill": "#1E2022"
     }
    ]
   },
@@ -599,7 +747,7 @@
     0,
     0.0
    ],
-   "mass": 5,
+   "mass": 4.58,
    "materials": [
     [
      "tpe",
@@ -613,25 +761,50 @@
      "shape": "cyl",
      "x": 0.0,
      "y": 0.0,
-     "w": 60.0
+     "w": 60.0,
+     "fill": "#34373B"
     },
     {
      "shape": "cyl",
-     "x": 2.2,
-     "y": 2.2,
-     "w": 55.6
+     "x": 2.6,
+     "y": 2.6,
+     "w": 54.8,
+     "fill": "#26292C"
     },
     {
      "shape": "cyl",
-     "x": 4.4,
-     "y": 4.4,
-     "w": 51.2
+     "x": 5.2,
+     "y": 5.2,
+     "w": 49.6,
+     "fill": "#34373B"
     },
     {
      "shape": "cyl",
-     "x": 6.6,
-     "y": 6.6,
-     "w": 46.8
+     "x": 7.8,
+     "y": 7.8,
+     "w": 44.4,
+     "fill": "#26292C"
+    },
+    {
+     "shape": "cyl",
+     "x": 10.4,
+     "y": 10.4,
+     "w": 39.2,
+     "fill": "#34373B"
+    },
+    {
+     "shape": "cyl",
+     "x": 13.0,
+     "y": 13.0,
+     "w": 34.0,
+     "fill": "#26292C"
+    },
+    {
+     "shape": "cyl",
+     "x": 15.6,
+     "y": 15.6,
+     "w": 28.8,
+     "fill": "#141618"
     }
    ]
   }

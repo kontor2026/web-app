@@ -13,6 +13,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from bau import teil, mark, raster, skaliere_masse, schreibe  # noqa: E402
 
 GEH = '#3A3D40'
+FRONT = [-50, 140, 0]  # Frontschale nach vorne links, damit das Innenleben frei liegt
+GITTER = [-50, 185, 0]
 OBEN = 50  # Griff, Knöpfe und Antenne heben so weit ab
 C_ZELLE = [['zinkmangan', 80], ['stahl', 20]]
 
@@ -32,11 +34,37 @@ teile = [
          info='Gerändelte Kunststoffknöpfe, nur auf die Achsen gesteckt. Lassen sich mit den Fingern abziehen.',
          color='#2B2E31', marks=[mark('cyl', 2, 2, 18, fill='#4A4F54'), mark('cyl', 34, 2, 18, fill='#4A4F54'),
                                  mark('box', 10, 3, 2, 6, 1, '#E35A4E')]),
+    *[teil(f'gitter{i}', 'plastic_housing', 'Lautsprechergitter (Metallstreben)', 'Gitter', 'box',
+           material_id='steel', x=14, y=80, w=104, d=1.5, z=12 + i * 11.5, h=7, r=0.5, mass=3,
+           materials=[['stahl', 100]], explode=GITTER, sortBias=150, label=i == 0, color='#A7ADB2',
+           info='Gelochtes Stahlblech schützt die Membran. In die Frontschale geklipst, mit einem Schraubendreher '
+                'heraushebeln. Wertvoll als Stahlschrott.') for i in range(8)],
+    teil('skala', 'plastic_housing', 'Senderskala mit Fenster', 'Skala', 'box',
+         material_id='pc', x=132, y=80, w=78, d=1, z=58, h=38, r=1, mass=6, materials=[['pcabs', 90], ['druck', 10]],
+         explode=FRONT, sortBias=150, color='#E8E2C8',
+         info='Bedruckte Skala mit Frequenzen hinter einem Klarsichtfenster. Der Zeiger zeigt den eingestellten Sender.'),
+    teil('zeiger', 'plastic_housing', 'Senderzeiger', 'Zeiger', 'box',
+         x=168, y=81, w=1.5, d=1, z=60, h=34, mass=0.5, explode=FRONT, sortBias=160, color='#E35A4E',
+         info='Roter Kunststoffzeiger, wird über einen Seilzug vom Senderknopf bewegt.'),
+    *[teil(f'strich{i}', 'plastic_housing', 'Skalenstrich', 'Strich', 'box',
+           x=138 + i * 9, y=81, w=0.8, d=0.5, z=84, h=8, mass=0.1, explode=FRONT, sortBias=155, label=False,
+           color='#55493C', info='Aufgedruckter Skalenstrich.') for i in range(8)],
     teil('frontschale', 'plastic_housing', 'Frontschale mit Lautsprechergitter', 'Frontschale', 'box',
-         x=0, y=52, w=220, d=28, z=0, h=112, r=10, explode=[0, 70, 0], mass=125,
+         x=0, y=52, w=220, d=28, z=0, h=112, r=10, mass=125,
          info='Vorderes Gehäuseteil aus ABS mit Lochgitter vor dem Lautsprecher und Senderskala. '
               'Hinten sitzen 4 bis 6 Schrauben, oft im Batteriefach versteckt.',
-         color=GEH, marks=[mark('box', 6, 6, 208, 16, 6, '#34383C'), mark('box', 130, 8, 80, 10, 2, '#E8E2C8')]),
+         explode=FRONT, color=GEH,
+         marks=[mark('box', 6, 6, 208, 16, 6, '#34383C'), mark('box', 18, 8, 40, 8, 3, '#2B2E31'),
+                mark('box', 30, 9, 10, 6, 2, '#B7BCC0'), mark('cyl', 112, 9, 5, fill='#4CC26A')]),
+    teil('poti', 'circuit_board', 'Lautstärkeregler (Potentiometer)', 'Poti', 'cyl',
+         material_id='mixed_electronics', x=186, y=56, w=14, z=94, h=14, mass=4,
+         materials=[['pcabs', 40], ['stahl', 30], ['messing', 15], ['kupfer', 10], ['graphit', 5]],
+         info='Drehwiderstand unter dem Lautstärkeknopf. Eine Kohlebahn ändert den Widerstand und damit die Lautstärke.',
+         explode=[0, 30, 30], color='#5A6066', marks=[mark('cyl', 4, 4, 6, fill='#C9CDD0')]),
+    teil('schrauben', 'plastic_housing', 'Gehäuseschrauben (6 Stück)', 'Schrauben', 'cyl',
+         material_id='steel', x=8, y=60, w=6, z=100, h=10, mass=6, materials=[['stahl', 100]],
+         info='Halten Front- und Rückschale zusammen. Kreuzschlitz, oft unter dem Batteriedeckel versteckt.',
+         explode=[0, 0, 40], color='#9AA0A6', marks=[mark('cyl', 1, 1, 4, fill='#5F666C')]),
     teil('lautsprecher', 'speaker_driver', 'Lautsprecher (100 mm)', 'Lautsprecher', 'box',
          x=15, y=40, w=100, d=12, z=6, h=100, r=6, mass=55,
          materials=[['stahl', 50], ['papier', 25], ['kupfer', 10], ['gummi', 10], ['pcabs', 5]],
@@ -68,13 +96,13 @@ teile = [
               'über Drähte verlötet.',
          color='#2E6B45'),
     teil('batterien', 'alkaline_cell', 'Vier Babyzellen (C)', 'Batterien C', 'box',
-         x=10, y=3, w=200, d=26, z=4, h=26, r=8, mass=264, materials=C_ZELLE,
+         x=10, y=3, w=200, d=26, z=4, h=26, r=8, explode=[0, -45, 0], mass=264, materials=C_ZELLE,
          info='Vier 1,5-Volt-Zellen in Reihe ergeben 6 Volt. Sie sind der schwerste Teil des Radios: '
               'herausnehmen und in die Batteriesammlung geben.',
          color='#C8423A', marks=raster(0, 0, 4, 1, 50, 26, 50, r=8, fill='#C8423A')
                               + raster(44, 6, 4, 1, 6, 14, 50, r=2, fill='#B7BCC0')),
     teil('rueckschale', 'plastic_housing', 'Rückschale mit Batteriefach', 'Rückschale', 'box',
-         x=0, y=0, w=220, d=52, z=0, h=112, r=10, explode=[0, -75, 0], mass=140,
+         x=0, y=0, w=220, d=52, z=0, h=112, r=10, explode=[0, -110, 0], mass=140,
          info='Hinteres Gehäuseteil mit Batteriefach-Deckel und Typenschild. Nach Lösen der Schrauben nach '
               'hinten abziehen.',
          color=GEH, marks=[mark('box', 8, 4, 204, 44, 8, '#34383C')]),

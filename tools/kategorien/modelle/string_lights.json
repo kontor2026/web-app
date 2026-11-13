@@ -10,14 +10,14 @@
    "x": 3,
    "y": 3,
    "w": 99,
-   "z": 30,
+   "z": 28,
    "h": 4,
    "explode": [
     0,
     0,
-    80.0
+    78.0
    ],
-   "mass": 9.8,
+   "mass": 9.6,
    "materials": [
     [
      "led",
@@ -37,286 +37,293 @@
     ]
    ],
    "info": "Winzige Leuchtdioden, in Tropfen aus Kunstharz eingegossen und direkt auf den Draht gelötet. Sie lassen sich nicht einzeln abtrennen, die ganze Kette ist Elektroschrott.",
-   "color": "#F2F2E8",
-   "opacity": 0.6,
+   "color": "#E4E6DC",
+   "opacity": 0.75,
    "marks": [
     {
      "shape": "cyl",
-     "x": 91.06,
+     "x": 19,
+     "y": 19,
+     "w": 61,
+     "fill": "#1A1C1B"
+    },
+    {
+     "shape": "cyl",
+     "x": 93.04,
      "y": 47.5,
      "w": 4,
      "fill": "#F6D86B"
     },
     {
      "shape": "cyl",
-     "x": 87.74,
-     "y": 64.17,
+     "x": 89.57,
+     "y": 64.93,
      "w": 4,
      "fill": "#F6D86B"
     },
     {
      "shape": "cyl",
-     "x": 78.3,
-     "y": 78.3,
+     "x": 79.7,
+     "y": 79.7,
      "w": 4,
      "fill": "#F6D86B"
     },
     {
      "shape": "cyl",
-     "x": 64.17,
-     "y": 87.74,
+     "x": 64.93,
+     "y": 89.57,
      "w": 4,
      "fill": "#F6D86B"
     },
     {
      "shape": "cyl",
      "x": 47.5,
-     "y": 91.06,
+     "y": 93.04,
      "w": 4,
      "fill": "#F6D86B"
     },
     {
      "shape": "cyl",
-     "x": 30.83,
-     "y": 87.74,
+     "x": 30.07,
+     "y": 89.57,
      "w": 4,
      "fill": "#F6D86B"
     },
     {
      "shape": "cyl",
-     "x": 16.7,
-     "y": 78.3,
+     "x": 15.3,
+     "y": 79.7,
      "w": 4,
      "fill": "#F6D86B"
     },
     {
      "shape": "cyl",
-     "x": 7.26,
-     "y": 64.17,
+     "x": 5.43,
+     "y": 64.93,
      "w": 4,
      "fill": "#F6D86B"
     },
     {
      "shape": "cyl",
-     "x": 3.94,
+     "x": 1.96,
      "y": 47.5,
      "w": 4,
      "fill": "#F6D86B"
     },
     {
      "shape": "cyl",
-     "x": 7.26,
-     "y": 30.83,
+     "x": 5.43,
+     "y": 30.07,
      "w": 4,
      "fill": "#F6D86B"
     },
     {
      "shape": "cyl",
-     "x": 16.7,
-     "y": 16.7,
+     "x": 15.3,
+     "y": 15.3,
      "w": 4,
      "fill": "#F6D86B"
     },
     {
      "shape": "cyl",
-     "x": 30.83,
-     "y": 7.26,
+     "x": 30.07,
+     "y": 5.43,
      "w": 4,
      "fill": "#F6D86B"
     },
     {
      "shape": "cyl",
      "x": 47.5,
-     "y": 3.94,
+     "y": 1.96,
      "w": 4,
      "fill": "#F6D86B"
     },
     {
      "shape": "cyl",
-     "x": 64.17,
-     "y": 7.26,
+     "x": 64.93,
+     "y": 5.43,
      "w": 4,
      "fill": "#F6D86B"
     },
     {
      "shape": "cyl",
-     "x": 78.3,
-     "y": 16.7,
+     "x": 79.7,
+     "y": 15.3,
      "w": 4,
      "fill": "#F6D86B"
     },
     {
      "shape": "cyl",
-     "x": 87.74,
-     "y": 30.83,
+     "x": 89.57,
+     "y": 30.07,
      "w": 4,
      "fill": "#F6D86B"
     },
     {
      "shape": "cyl",
-     "x": 83.14,
+     "x": 87.1,
      "y": 47.5,
      "w": 4,
      "fill": "#F6D86B"
     },
     {
      "shape": "cyl",
-     "x": 79.61,
-     "y": 62.96,
+     "x": 83.18,
+     "y": 64.68,
      "w": 4,
      "fill": "#F6D86B"
     },
     {
      "shape": "cyl",
-     "x": 69.72,
-     "y": 75.36,
+     "x": 72.19,
+     "y": 78.46,
      "w": 4,
      "fill": "#F6D86B"
     },
     {
      "shape": "cyl",
-     "x": 55.43,
-     "y": 82.25,
+     "x": 56.31,
+     "y": 86.11,
      "w": 4,
      "fill": "#F6D86B"
     },
     {
      "shape": "cyl",
-     "x": 39.57,
-     "y": 82.25,
+     "x": 38.69,
+     "y": 86.11,
      "w": 4,
      "fill": "#F6D86B"
     },
     {
      "shape": "cyl",
-     "x": 25.28,
-     "y": 75.36,
+     "x": 22.81,
+     "y": 78.46,
      "w": 4,
      "fill": "#F6D86B"
     },
     {
      "shape": "cyl",
-     "x": 15.39,
-     "y": 62.96,
+     "x": 11.82,
+     "y": 64.68,
      "w": 4,
      "fill": "#F6D86B"
     },
     {
      "shape": "cyl",
-     "x": 11.86,
+     "x": 7.9,
      "y": 47.5,
      "w": 4,
      "fill": "#F6D86B"
     },
     {
      "shape": "cyl",
-     "x": 15.39,
-     "y": 32.04,
+     "x": 11.82,
+     "y": 30.32,
      "w": 4,
      "fill": "#F6D86B"
     },
     {
      "shape": "cyl",
-     "x": 25.28,
-     "y": 19.64,
+     "x": 22.81,
+     "y": 16.54,
      "w": 4,
      "fill": "#F6D86B"
     },
     {
      "shape": "cyl",
-     "x": 39.57,
-     "y": 12.75,
+     "x": 38.69,
+     "y": 8.89,
      "w": 4,
      "fill": "#F6D86B"
     },
     {
      "shape": "cyl",
-     "x": 55.43,
-     "y": 12.75,
+     "x": 56.31,
+     "y": 8.89,
      "w": 4,
      "fill": "#F6D86B"
     },
     {
      "shape": "cyl",
-     "x": 69.72,
-     "y": 19.64,
+     "x": 72.19,
+     "y": 16.54,
      "w": 4,
      "fill": "#F6D86B"
     },
     {
      "shape": "cyl",
-     "x": 79.61,
-     "y": 32.04,
+     "x": 83.18,
+     "y": 30.32,
      "w": 4,
      "fill": "#F6D86B"
     },
     {
      "shape": "cyl",
-     "x": 75.22,
+     "x": 81.16,
      "y": 47.5,
      "w": 4,
      "fill": "#F6D86B"
     },
     {
      "shape": "cyl",
-     "x": 69.93,
-     "y": 63.79,
+     "x": 74.73,
+     "y": 67.28,
      "w": 4,
      "fill": "#F6D86B"
     },
     {
      "shape": "cyl",
-     "x": 56.07,
-     "y": 73.86,
+     "x": 57.9,
+     "y": 79.51,
      "w": 4,
      "fill": "#F6D86B"
     },
     {
      "shape": "cyl",
-     "x": 38.93,
-     "y": 73.86,
+     "x": 37.1,
+     "y": 79.51,
      "w": 4,
      "fill": "#F6D86B"
     },
     {
      "shape": "cyl",
-     "x": 25.07,
-     "y": 63.79,
+     "x": 20.27,
+     "y": 67.28,
      "w": 4,
      "fill": "#F6D86B"
     },
     {
      "shape": "cyl",
-     "x": 19.78,
+     "x": 13.84,
      "y": 47.5,
      "w": 4,
      "fill": "#F6D86B"
     },
     {
      "shape": "cyl",
-     "x": 25.07,
-     "y": 31.21,
+     "x": 20.27,
+     "y": 27.72,
      "w": 4,
      "fill": "#F6D86B"
     },
     {
      "shape": "cyl",
-     "x": 38.93,
-     "y": 21.14,
+     "x": 37.1,
+     "y": 15.49,
      "w": 4,
      "fill": "#F6D86B"
     },
     {
      "shape": "cyl",
-     "x": 56.07,
-     "y": 21.14,
+     "x": 57.9,
+     "y": 15.49,
      "w": 4,
      "fill": "#F6D86B"
     },
     {
      "shape": "cyl",
-     "x": 69.93,
-     "y": 31.21,
+     "x": 74.73,
+     "y": 27.72,
      "w": 4,
      "fill": "#F6D86B"
     }
@@ -333,13 +340,13 @@
    "y": 2,
    "w": 101,
    "z": 1,
-   "h": 28,
+   "h": 26,
    "explode": [
     0,
     0,
-    55.0
+    53.0
    ],
-   "mass": 36.8,
+   "mass": 36,
    "materials": [
     [
      "kupfer",
@@ -355,33 +362,52 @@
    "marks": [
     {
      "shape": "cyl",
-     "x": 0,
-     "y": 0,
-     "w": 101
+     "x": 0.0,
+     "y": 0.0,
+     "w": 101.0,
+     "fill": "#C5803D"
     },
     {
      "shape": "cyl",
-     "x": 4,
-     "y": 4,
-     "w": 93
+     "x": 3.2,
+     "y": 3.2,
+     "w": 94.6,
+     "fill": "#B06F33"
     },
     {
      "shape": "cyl",
-     "x": 8,
-     "y": 8,
-     "w": 85
+     "x": 6.4,
+     "y": 6.4,
+     "w": 88.2,
+     "fill": "#C5803D"
     },
     {
      "shape": "cyl",
-     "x": 12,
-     "y": 12,
-     "w": 77
+     "x": 9.6,
+     "y": 9.6,
+     "w": 81.8,
+     "fill": "#B06F33"
     },
     {
      "shape": "cyl",
-     "x": 16,
-     "y": 16,
-     "w": 69
+     "x": 12.8,
+     "y": 12.8,
+     "w": 75.4,
+     "fill": "#C5803D"
+    },
+    {
+     "shape": "cyl",
+     "x": 16.0,
+     "y": 16.0,
+     "w": 69.0,
+     "fill": "#B06F33"
+    },
+    {
+     "shape": "cyl",
+     "x": 19.2,
+     "y": 19.2,
+     "w": 62.6,
+     "fill": "#1A1C1B"
     }
    ]
   },
@@ -396,13 +422,13 @@
    "y": 0,
    "w": 105,
    "z": 0,
-   "h": 30,
+   "h": 28,
    "explode": [
     0,
     0,
     0.0
    ],
-   "mass": 27,
+   "mass": 26.4,
    "materials": [
     [
      "pvc",
@@ -411,39 +437,120 @@
    ],
    "info": "Grüne oder durchsichtige PVC-Hülle um den Draht. Zum Recycling muss sie in der Anlage vom Kupfer getrennt werden.",
    "color": "#3E7A4A",
-   "opacity": 0.8,
    "marks": [
     {
      "shape": "cyl",
-     "x": 0,
-     "y": 0,
-     "w": 105
+     "x": 0.0,
+     "y": 0.0,
+     "w": 105.0,
+     "fill": "#3E7A4A"
     },
     {
      "shape": "cyl",
-     "x": 4,
-     "y": 4,
-     "w": 97
+     "x": 3.2,
+     "y": 3.2,
+     "w": 98.6,
+     "fill": "#336A3F"
     },
     {
      "shape": "cyl",
-     "x": 8,
-     "y": 8,
-     "w": 89
+     "x": 6.4,
+     "y": 6.4,
+     "w": 92.2,
+     "fill": "#3E7A4A"
     },
     {
      "shape": "cyl",
-     "x": 12,
-     "y": 12,
-     "w": 81
+     "x": 9.6,
+     "y": 9.6,
+     "w": 85.8,
+     "fill": "#336A3F"
     },
     {
      "shape": "cyl",
-     "x": 16,
-     "y": 16,
-     "w": 73
+     "x": 12.8,
+     "y": 12.8,
+     "w": 79.4,
+     "fill": "#3E7A4A"
+    },
+    {
+     "shape": "cyl",
+     "x": 16.0,
+     "y": 16.0,
+     "w": 73.0,
+     "fill": "#336A3F"
+    },
+    {
+     "shape": "cyl",
+     "x": 19.2,
+     "y": 19.2,
+     "w": 66.6,
+     "fill": "#1A1C1B"
     }
    ]
+  },
+  {
+   "id": "zuleitung",
+   "component_id": "cable_insulation",
+   "material_id": "pvc",
+   "name": "Zuleitung zum Batteriekasten",
+   "short": "Zuleitung",
+   "shape": "box",
+   "x": 86,
+   "y": 96,
+   "w": 6,
+   "d": 14,
+   "z": 1,
+   "h": 4,
+   "r": 2,
+   "explode": [
+    -30,
+    30,
+    0
+   ],
+   "mass": 3.6,
+   "materials": [
+    [
+     "pvc",
+     60
+    ],
+    [
+     "kupfer",
+     40
+    ]
+   ],
+   "info": "Etwa 30 cm Kabel ohne LEDs zwischen Kasten und Kette. Hier abschneiden, um den Kasten abzutrennen.",
+   "color": "#336A3F"
+  },
+  {
+   "id": "schieber",
+   "component_id": "battery_box",
+   "material_id": "abs",
+   "name": "Schiebeknopf (AN/AUS/TIMER)",
+   "short": "Schiebeknopf",
+   "shape": "box",
+   "x": 148,
+   "y": 128,
+   "w": 2.5,
+   "d": 8,
+   "z": 7,
+   "h": 6,
+   "r": 0.8,
+   "explode": [
+    130,
+    50,
+    0
+   ],
+   "mass": 0.6,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Der Knopf, mit dem man die Kette schaltet. Er steckt auf dem Schalter der kleinen Platine.",
+   "color": "#4A4F54",
+   "sortBias": 20
   },
   {
    "id": "schalter",
@@ -452,7 +559,7 @@
    "name": "Schiebeschalter mit Timer-Platine",
    "short": "Schalter",
    "shape": "box",
-   "x": 140,
+   "x": 139,
    "y": 124,
    "w": 8,
    "d": 18,
@@ -460,11 +567,11 @@
    "h": 10,
    "r": 1,
    "explode": [
-    28,
-    0,
+    102,
+    50,
     0
    ],
-   "mass": 3.7,
+   "mass": 3.6,
    "materials": [
     [
      "fr4",
@@ -516,11 +623,11 @@
    "h": 4,
    "r": 4,
    "explode": [
-    0,
-    0,
+    70,
+    50,
     66.5
    ],
-   "mass": 12.3,
+   "mass": 12,
    "materials": [
     [
      "pp",
@@ -583,11 +690,11 @@
    "h": 14.5,
    "r": 7,
    "explode": [
-    0,
-    0,
+    70,
+    50,
     41.0
    ],
-   "mass": 28.2,
+   "mass": 27.6,
    "materials": [
     [
      "zinkmangan",
@@ -627,11 +734,11 @@
    "h": 14.5,
    "r": 7,
    "explode": [
-    0,
-    0,
+    70,
+    50,
     41.0
    ],
-   "mass": 28.2,
+   "mass": 27.6,
    "materials": [
     [
      "zinkmangan",
@@ -672,11 +779,11 @@
    "h": 14.5,
    "r": 7,
    "explode": [
-    0,
-    0,
+    70,
+    50,
     41.0
    ],
-   "mass": 28.2,
+   "mass": 27.6,
    "materials": [
     [
      "zinkmangan",
@@ -717,11 +824,11 @@
    "h": 14,
    "r": 0.5,
    "explode": [
-    0,
-    0,
+    70,
+    50,
     29.0
    ],
-   "mass": 3.7,
+   "mass": 3.6,
    "materials": [
     [
      "stahl",
@@ -776,11 +883,11 @@
    "h": 18,
    "r": 4,
    "explode": [
-    0,
-    0,
+    70,
+    50,
     0.0
    ],
-   "mass": 22.1,
+   "mass": 21.6,
    "materials": [
     [
      "pp",

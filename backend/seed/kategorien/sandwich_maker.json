@@ -26,21 +26,21 @@
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 11,2 kg",
+   "v": "≈ 11,1 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 1,25 kg",
-   "hint": "spart 9,96 kg, wenn recycelte Materialien eingesetzt werden"
+   "v": "≈ 1,29 kg",
+   "hint": "spart 9,79 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Al": 633800.0,
-   "Ni": 135200.0,
-   "Cu": 47040.0,
-   "Fe": 43824.0
+   "Al": 614800.0,
+   "Ni": 139200.0,
+   "Cu": 46850.0,
+   "Fe": 43105.0
   },
   "herkunft": {
    "Al": "Modellmassen (Schätzung)",
@@ -49,18 +49,18 @@
    "Fe": "Modellmassen (Schätzung)"
   },
   "materialien_g": {
-   "aluminium": 633.8,
-   "phenolic_resin": 380.2,
-   "nickel_chrome": 169.0,
-   "abs": 132.0,
-   "pvc": 84.5,
-   "steel": 42.3,
-   "copper": 42.3,
-   "mixed_electronics": 15.8
+   "aluminium": 614.8,
+   "phenolic_resin": 399.5,
+   "nickel_chrome": 174.0,
+   "abs": 128.1,
+   "pvc": 82.0,
+   "steel": 41.0,
+   "copper": 41.0,
+   "mixed_electronics": 19.5
   },
-  "co2_kg": 11.216,
-  "co2_mit_recyclat_kg": 1.254,
-  "co2_ersparnis_kg": 9.962,
+  "co2_kg": 11.081,
+  "co2_mit_recyclat_kg": 1.292,
+  "co2_ersparnis_kg": 9.789,
   "co2_ohne_faktor": [],
   "rohstoffwert_eur": 4.36,
   "wert_ohne_preis": [],
@@ -141,6 +141,51 @@
  "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
+   "id": "griff",
+   "component_id": "plastic_housing",
+   "material_id": "phenolic_resin",
+   "name": "Tragegriff",
+   "short": "Griff",
+   "shape": "box",
+   "x": 80,
+   "y": 196,
+   "w": 70,
+   "d": 40,
+   "z": 90,
+   "h": 10,
+   "r": 8,
+   "explode": [
+    -150,
+    0,
+    558
+   ],
+   "mass": 30.7,
+   "materials": [
+    [
+     "phenolharz",
+     60
+    ],
+    [
+     "pcabs",
+     40
+    ]
+   ],
+   "info": "Griff vorne auf der Oberschale. Er bleibt kühl, weil er aus hitzefestem Kunststoff ist und Abstand zur Platte hat.",
+   "color": "#1E2226",
+   "sortBias": 200,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 8,
+     "y": 26,
+     "w": 54,
+     "d": 8,
+     "r": 4,
+     "fill": "#3C4248"
+    }
+   ]
+  },
+  {
    "id": "oberschale",
    "component_id": "plastic_housing",
    "material_id": "phenolic_resin",
@@ -152,14 +197,14 @@
    "w": 230,
    "d": 220,
    "z": 50,
-   "h": 50,
+   "h": 40,
    "r": 40,
    "explode": [
     0,
     0,
-    464
+    488
    ],
-   "mass": 190.1,
+   "mass": 184.4,
    "materials": [
     [
      "phenolharz",
@@ -174,27 +219,98 @@
    "color": "#2E3338",
    "marks": [
     {
-     "shape": "cyl",
-     "x": 95,
-     "y": 185,
-     "w": 10,
-     "fill": "#E74C3C"
-    },
-    {
-     "shape": "cyl",
-     "x": 125,
-     "y": 185,
-     "w": 10,
-     "fill": "#2ECC71"
-    },
-    {
      "shape": "box",
      "x": 20,
-     "y": 20,
+     "y": 16,
      "w": 190,
      "d": 150,
      "r": 30,
      "fill": "#3C4248"
+    },
+    {
+     "shape": "box",
+     "x": 30,
+     "y": 26,
+     "w": 170,
+     "d": 4,
+     "r": 2,
+     "fill": "#4A5158"
+    },
+    {
+     "shape": "box",
+     "x": 18,
+     "y": 172,
+     "w": 50,
+     "d": 18,
+     "r": 6,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "cyl",
+     "x": 28,
+     "y": 177,
+     "w": 8,
+     "fill": "#E74C3C"
+    },
+    {
+     "shape": "cyl",
+     "x": 50,
+     "y": 177,
+     "w": 8,
+     "fill": "#2ECC71"
+    }
+   ]
+  },
+  {
+   "id": "lampen",
+   "component_id": "thermostat",
+   "material_id": "mixed_electronics",
+   "name": "Kontrollleuchten",
+   "short": "Leuchten",
+   "shape": "box",
+   "x": 26,
+   "y": 188,
+   "w": 30,
+   "d": 10,
+   "z": 80,
+   "h": 8,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    340
+   ],
+   "mass": 4.1,
+   "materials": [
+    [
+     "glas",
+     40
+    ],
+    [
+     "kupfer",
+     30
+    ],
+    [
+     "pcabs",
+     30
+    ]
+   ],
+   "info": "Rot heißt Strom an, grün heißt heiß genug. Zwei kleine Lämpchen hinter durchsichtigen Kappen.",
+   "color": "#E8E2C8",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 2,
+     "y": 1,
+     "w": 8,
+     "fill": "#E74C3C"
+    },
+    {
+     "shape": "cyl",
+     "x": 20,
+     "y": 1,
+     "w": 8,
+     "fill": "#2ECC71"
     }
    ]
   },
@@ -205,19 +321,19 @@
    "name": "Heizelement oben",
    "short": "Heizung oben",
    "shape": "box",
-   "x": 25,
+   "x": 30,
    "y": 30,
-   "w": 180,
+   "w": 10,
    "d": 180,
    "z": 62,
-   "h": 6,
-   "r": 30,
+   "h": 8,
+   "r": 5,
    "explode": [
     0,
     0,
-    386
+    320
    ],
-   "mass": 84.5,
+   "mass": 30.7,
    "materials": [
     [
      "stahl",
@@ -232,34 +348,123 @@
      25
     ]
    ],
-   "info": "Rohrheizkörper: Heizdraht in Keramikpulver in einem Stahlrohr, auf die Rückseite der Platte gepresst. Erst ganz abkühlen lassen.",
+   "info": "Rohrheizkörper: Heizdraht in Keramikpulver in einem Stahlrohr, als U auf die Rückseite der Platte gepresst. Erst ganz abkühlen lassen.",
    "color": "#9AA2A6",
    "marks": [
     {
      "shape": "box",
-     "x": 0,
+     "x": 2,
      "y": 0,
-     "w": 180,
+     "w": 6,
+     "d": 180,
+     "r": 3,
+     "fill": "#B5BBC0"
+    }
+   ]
+  },
+  {
+   "id": "heizung_oben_b",
+   "component_id": "heating_element",
+   "material_id": "nickel_chrome",
+   "name": "Heizelement oben",
+   "short": "Heizung oben",
+   "shape": "box",
+   "x": 40,
+   "y": 30,
+   "w": 150,
+   "d": 10,
+   "z": 62,
+   "h": 8,
+   "r": 5,
+   "explode": [
+    0,
+    0,
+    320
+   ],
+   "mass": 25.6,
+   "materials": [
+    [
+     "stahl",
+     55
+    ],
+    [
+     "nichrom",
+     20
+    ],
+    [
+     "keramik",
+     25
+    ]
+   ],
+   "info": "Rohrheizkörper: Heizdraht in Keramikpulver in einem Stahlrohr, als U auf die Rückseite der Platte gepresst. Erst ganz abkühlen lassen.",
+   "color": "#9AA2A6",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 2,
+     "w": 150,
+     "d": 6,
+     "r": 3,
+     "fill": "#B5BBC0"
+    }
+   ]
+  },
+  {
+   "id": "heizung_oben_c",
+   "component_id": "heating_element",
+   "material_id": "nickel_chrome",
+   "name": "Heizelement oben",
+   "short": "Heizung oben",
+   "shape": "box",
+   "x": 190,
+   "y": 30,
+   "w": 10,
+   "d": 180,
+   "z": 62,
+   "h": 8,
+   "r": 5,
+   "explode": [
+    0,
+    0,
+    320
+   ],
+   "mass": 30.7,
+   "materials": [
+    [
+     "stahl",
+     55
+    ],
+    [
+     "nichrom",
+     20
+    ],
+    [
+     "keramik",
+     25
+    ]
+   ],
+   "info": "Rohrheizkörper: Heizdraht in Keramikpulver in einem Stahlrohr, als U auf die Rückseite der Platte gepresst. Erst ganz abkühlen lassen.",
+   "color": "#9AA2A6",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 0,
+     "w": 6,
+     "d": 180,
+     "r": 3,
+     "fill": "#B5BBC0"
+    },
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 170,
+     "w": 8,
      "d": 10,
-     "r": 5,
-     "fill": "#C4672D"
-    },
-    {
-     "shape": "box",
-     "x": 0,
-     "y": 0,
-     "w": 10,
-     "d": 180,
-     "r": 5,
-     "fill": "#C4672D"
-    },
-    {
-     "shape": "box",
-     "x": 170,
-     "y": 0,
-     "w": 10,
-     "d": 180,
-     "r": 5,
+     "r": 2,
      "fill": "#C4672D"
     }
    ]
@@ -281,9 +486,9 @@
    "explode": [
     0,
     0,
-    326
+    260
    ],
-   "mass": 316.9,
+   "mass": 307.4,
    "materials": [
     [
      "alu",
@@ -334,9 +539,9 @@
    "explode": [
     0,
     0,
-    266
+    200
    ],
-   "mass": 316.9,
+   "mass": 307.4,
    "materials": [
     [
      "alu",
@@ -377,19 +582,19 @@
    "name": "Heizelement unten",
    "short": "Heizung unten",
    "shape": "box",
-   "x": 25,
+   "x": 30,
    "y": 30,
-   "w": 180,
+   "w": 10,
    "d": 180,
-   "z": 32,
-   "h": 6,
-   "r": 30,
+   "z": 30,
+   "h": 8,
+   "r": 5,
    "explode": [
     0,
     0,
-    206
+    140
    ],
-   "mass": 84.5,
+   "mass": 30.7,
    "materials": [
     [
      "stahl",
@@ -404,34 +609,123 @@
      25
     ]
    ],
-   "info": "Rohrheizkörper: Heizdraht in Keramikpulver in einem Stahlrohr, auf die Rückseite der Platte gepresst. Erst ganz abkühlen lassen.",
+   "info": "Rohrheizkörper: Heizdraht in Keramikpulver in einem Stahlrohr, als U auf die Rückseite der Platte gepresst. Erst ganz abkühlen lassen.",
    "color": "#9AA2A6",
    "marks": [
     {
      "shape": "box",
-     "x": 0,
+     "x": 2,
      "y": 0,
-     "w": 180,
+     "w": 6,
+     "d": 180,
+     "r": 3,
+     "fill": "#B5BBC0"
+    }
+   ]
+  },
+  {
+   "id": "heizung_unten_b",
+   "component_id": "heating_element",
+   "material_id": "nickel_chrome",
+   "name": "Heizelement unten",
+   "short": "Heizung unten",
+   "shape": "box",
+   "x": 40,
+   "y": 30,
+   "w": 150,
+   "d": 10,
+   "z": 30,
+   "h": 8,
+   "r": 5,
+   "explode": [
+    0,
+    0,
+    140
+   ],
+   "mass": 25.6,
+   "materials": [
+    [
+     "stahl",
+     55
+    ],
+    [
+     "nichrom",
+     20
+    ],
+    [
+     "keramik",
+     25
+    ]
+   ],
+   "info": "Rohrheizkörper: Heizdraht in Keramikpulver in einem Stahlrohr, als U auf die Rückseite der Platte gepresst. Erst ganz abkühlen lassen.",
+   "color": "#9AA2A6",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 2,
+     "w": 150,
+     "d": 6,
+     "r": 3,
+     "fill": "#B5BBC0"
+    }
+   ]
+  },
+  {
+   "id": "heizung_unten_c",
+   "component_id": "heating_element",
+   "material_id": "nickel_chrome",
+   "name": "Heizelement unten",
+   "short": "Heizung unten",
+   "shape": "box",
+   "x": 190,
+   "y": 30,
+   "w": 10,
+   "d": 180,
+   "z": 30,
+   "h": 8,
+   "r": 5,
+   "explode": [
+    0,
+    0,
+    140
+   ],
+   "mass": 30.7,
+   "materials": [
+    [
+     "stahl",
+     55
+    ],
+    [
+     "nichrom",
+     20
+    ],
+    [
+     "keramik",
+     25
+    ]
+   ],
+   "info": "Rohrheizkörper: Heizdraht in Keramikpulver in einem Stahlrohr, als U auf die Rückseite der Platte gepresst. Erst ganz abkühlen lassen.",
+   "color": "#9AA2A6",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 0,
+     "w": 6,
+     "d": 180,
+     "r": 3,
+     "fill": "#B5BBC0"
+    },
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 170,
+     "w": 8,
      "d": 10,
-     "r": 5,
-     "fill": "#C4672D"
-    },
-    {
-     "shape": "box",
-     "x": 0,
-     "y": 0,
-     "w": 10,
-     "d": 180,
-     "r": 5,
-     "fill": "#C4672D"
-    },
-    {
-     "shape": "box",
-     "x": 170,
-     "y": 0,
-     "w": 10,
-     "d": 180,
-     "r": 5,
+     "r": 2,
      "fill": "#C4672D"
     }
    ]
@@ -455,7 +749,7 @@
     0,
     146
    ],
-   "mass": 15.8,
+   "mass": 15.4,
    "materials": [
     [
      "bimetall",
@@ -505,7 +799,7 @@
     0,
     60
    ],
-   "mass": 190.1,
+   "mass": 184.4,
    "materials": [
     [
      "phenolharz",
@@ -538,7 +832,7 @@
     0,
     0
    ],
-   "mass": 105.6,
+   "mass": 102.5,
    "materials": [
     [
      "stahl",
@@ -583,6 +877,60 @@
      "w": 16,
      "d": 16,
      "fill": "#2E3338"
+    },
+    {
+     "shape": "box",
+     "x": 60,
+     "y": 60,
+     "w": 6,
+     "d": 90,
+     "r": 3,
+     "fill": "#5E666C"
+    },
+    {
+     "shape": "box",
+     "x": 78,
+     "y": 60,
+     "w": 6,
+     "d": 90,
+     "r": 3,
+     "fill": "#5E666C"
+    },
+    {
+     "shape": "box",
+     "x": 96,
+     "y": 60,
+     "w": 6,
+     "d": 90,
+     "r": 3,
+     "fill": "#5E666C"
+    },
+    {
+     "shape": "box",
+     "x": 114,
+     "y": 60,
+     "w": 6,
+     "d": 90,
+     "r": 3,
+     "fill": "#5E666C"
+    },
+    {
+     "shape": "box",
+     "x": 132,
+     "y": 60,
+     "w": 6,
+     "d": 90,
+     "r": 3,
+     "fill": "#5E666C"
+    },
+    {
+     "shape": "box",
+     "x": 150,
+     "y": 60,
+     "w": 6,
+     "d": 90,
+     "r": 3,
+     "fill": "#5E666C"
     }
    ]
   },
@@ -593,19 +941,19 @@
    "name": "Verschlussgriff",
    "short": "Verschluss",
    "shape": "box",
-   "x": 85,
-   "y": 222,
-   "w": 60,
-   "d": 18,
-   "z": 40,
-   "h": 45,
-   "r": 6,
+   "x": 95,
+   "y": 230,
+   "w": 40,
+   "d": 10,
+   "z": 36,
+   "h": 54,
+   "r": 4,
    "explode": [
     0,
     60,
     0
    ],
-   "mass": 26.4,
+   "mass": 25.6,
    "materials": [
     [
      "pcabs",
@@ -613,7 +961,19 @@
     ]
    ],
    "info": "Hält beide Schalen zusammen, damit das Sandwich gepresst wird. Mit einem Stift im Gelenk befestigt.",
-   "color": "#3C4248"
+   "color": "#3C4248",
+   "sortBias": 60,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 6,
+     "y": 2,
+     "w": 28,
+     "d": 6,
+     "r": 3,
+     "fill": "#4A5158"
+    }
+   ]
   },
   {
    "id": "scharnier",
@@ -634,7 +994,7 @@
     -50,
     0
    ],
-   "mass": 42.3,
+   "mass": 41,
    "materials": [
     [
      "stahl",
@@ -663,7 +1023,7 @@
     0,
     0
    ],
-   "mass": 84.5,
+   "mass": 82,
    "materials": [
     [
      "pvc",
@@ -707,7 +1067,7 @@
     0,
     15
    ],
-   "mass": 42.3,
+   "mass": 41,
    "materials": [
     [
      "kupfer",

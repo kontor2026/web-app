@@ -14,8 +14,11 @@ D = 60  # Durchmesser der Kabelrolle
 SCHWARZ = '#2B2E31'
 
 
-def windungen(dm, n=4, breite=2.2):
-    return [mark('cyl', round(i * breite, 2), round(i * breite, 2), round(dm - 2 * i * breite, 2)) for i in range(n)]
+def windungen(dm, n=6, breite=2.6, farben=('#34373B', '#26292C'), loch='#141618'):
+    """Konzentrische Kabelwindungen im Wechsel hell/dunkel, innen ein dunkles Loch (Rolle ist ein Ring)."""
+    m = [mark('cyl', round(i * breite, 2), round(i * breite, 2), round(dm - 2 * i * breite, 2), fill=farben[i % 2])
+         for i in range(n)]
+    return m + [mark('cyl', round(n * breite, 2), round(n * breite, 2), round(dm - 2 * n * breite, 2), fill=loch)]
 
 
 teile = [
@@ -28,6 +31,10 @@ teile = [
          x=63.5, y=2.5, w=15, z=8, h=3, mass=0.4, color=SCHWARZ,
          info='Kunststoffschale mit kurzem Röhrchen, auf dem der Ohrstöpsel steckt. Mit der Rückschale verklebt.',
          marks=[mark('cyl', 4, 4, 7, fill='#3A3D40'), mark('cyl', 5.5, 5.5, 4, fill='#1E2022')]),
+    teil('schutzgitter', 'speaker_driver', 'Schutzgitter (Metallgewebe)', 'Schutzgitter', 'cyl',
+         material_id='steel', x=67, y=6, w=8, z=7.6, h=0.4, mass=0.05, materials=[['stahl', 100]], color='#9AA0A6',
+         info='Feines Edelstahlnetz im Schallrohr, das Ohrenschmalz vom Lautsprecher fernhält.',
+         marks=[mark('cyl', 1, 1, 6, fill='#7D858B'), mark('cyl', 2.5, 2.5, 3, fill='#9AA0A6')]),
     teil('treiber', 'speaker_driver', 'Lautsprecher (10 mm)', 'Lautsprecher', 'cyl',
          x=64.5, y=3.5, w=13, z=5, h=3, mass=0.8,
          materials=[['ndfeb', 30], ['kupfer', 15], ['stahl', 30], ['folien', 10], ['pcabs', 15]],
@@ -64,8 +71,15 @@ teile = [
          x=1, y=1, w=D - 2, z=0.5, h=3, mass=2.5, materials=[['kupfer', 80], ['polyester', 20]],
          info='Hauchdünne Kupferlitzen, mit farbigem Lack isoliert (rot, grün, kupferfarben). Lack und Kupfer '
               'trennt erst die Recyclinganlage.',
-         color='#C5803D', marks=windungen(D - 2) + [mark('cyl', 2, 27, 2, fill='#C8423A'),
-                                                    mark('cyl', 4.5, 27, 2, fill='#3E9A57')]),
+         color='#C5803D', marks=windungen(D - 2, farben=('#C5803D', '#B06F33'))
+         + [mark('cyl', 1, 27, 1.6, fill='#C8423A'), mark('cyl', 3.4, 27, 1.6, fill='#3E9A57')]),
+    teil('fernbedienung', 'plastic_housing', 'Kabelfernbedienung mit Mikrofon', 'Fernbedienung', 'box',
+         material_id='mixed_electronics', x=24, y=50, w=8, d=22, z=4, h=5, r=3.5, explode=[-10, 40, -4], mass=1.2,
+         materials=[['pcabs', 60], ['fr4', 15], ['kupfer', 10], ['chip', 10], ['stahl', 5]], color=SCHWARZ,
+         info='Drei Tasten für Lauter, Leiser und Pause, dazu ein winziges Mikrofon zum Telefonieren. '
+              'Innen eine kleine Platine, an die das Kabel gelötet ist.',
+         marks=[mark('box', 1.5, 3, 5, 4, 1.5, '#3A3D40'), mark('cyl', 2, 9, 4, fill='#4A4F54'),
+                mark('box', 1.5, 15, 5, 4, 1.5, '#3A3D40'), mark('cyl', 3.3, 20, 1.4, fill='#1E2022')]),
     teil('mantel', 'cable_insulation', 'Kabelmantel', 'Mantel', 'cyl',
          x=0, y=0, w=D, z=0, h=4, mass=4.5, materials=[['tpe', 100]],
          info='Dünner, weicher Mantel aus thermoplastischem Elastomer (früher PVC). Ein Kabel von 1,2 m wiegt nur wenige Gramm.',
