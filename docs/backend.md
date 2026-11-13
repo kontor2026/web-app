@@ -10,7 +10,7 @@ Umschalten mit `LLM_PROVIDER=lokal` bzw. `LLM_PROVIDER=claude`.
 ## Docker (drei Container)
 
 ```bash
-cp .env.example .env          # LLM_PROVIDER und ggf. ANTHROPIC_API_KEY eintragen
+cp .env.example .env          # LLM_PROVIDER wählen; Zugangsdaten als Secrets, siehe claude-sdk.md
 docker compose up -d --build  # oder: docker compose pull && docker compose up -d
 ```
 
@@ -34,7 +34,7 @@ Bei jedem Push auf `main` baut GitHub Actions die drei Images und veröffentlich
 
 Über das Claude Agent SDK (`backend/app/llm_claude_abo.py`) statt der API. Anthropic erlaubt das für eigene Produkte nur mit vorheriger Freigabe. Hier: privater Test mit Freigabe.
 
-- Lokal nutzt das SDK die Claude-Code-Anmeldung des Rechners. Im Container: einmal `claude setup-token` ausführen und das Token als `CLAUDE_CODE_OAUTH_TOKEN` in `.env` eintragen. Ein gleichzeitig gesetzter `ANTHROPIC_API_KEY` hätte Vorrang und wird in diesem Modus entfernt.
+- Zugang nur über ein ausdrücklich hinterlegtes Token aus `claude setup-token`, als Docker-Secret in `secrets/claude_oauth_token.txt`. Persönliche Anmeldungen auf dem Rechner werden nie genutzt. Anleitung und Deployment: [claude-sdk.md](claude-sdk.md).
 - Alle Claude-Code-Werkzeuge sind abgeschaltet, `setting_sources=[]` verhindert, dass Einstellungen oder CLAUDE.md des Rechners geladen werden.
 - Gemessen (AirPods-Foto, Claude Opus 5.5): Erkennung 8 s, Steckbrief 34 s, Bauideen 37 s. Ergebnisse deutlich genauer als das lokale 4B-Modell.
 
