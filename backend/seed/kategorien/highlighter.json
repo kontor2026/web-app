@@ -61,6 +61,34 @@
    "westmetall2026": {
     "titel": "Westmetall Marktdaten (LME, London Fixing, WM-Notiz)",
     "url": "https://www.westmetall.com/en/markdaten.php"
+   },
+   "usgs2026": {
+    "titel": "Mineral Commodity Summaries 2026 (ver. 1.3, May 2026)",
+    "url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf"
+   },
+   "eucrm2023": {
+    "titel": "Study on the Critical Raw Materials for the EU 2023 – Final Report",
+    "url": "https://op.europa.eu/o/opportal-service/download-handler?identifier=57318397-fdd4-11ed-a05c-01aa75ed71a1&format=pdf&language=en&productionSystem=cellar&part="
+   },
+   "eu2024crma": {
+    "titel": "Verordnung (EU) 2024/1252 zur Schaffung eines Rahmens zur Gewährleistung einer sicheren und nachhaltigen Versorgung mit kritischen Rohstoffen (Critical Raw Materials Act)",
+    "url": "https://op.europa.eu/o/opportal-service/download-handler?identifier=aa3c49f7-08e7-11ef-a251-01aa75ed71a1&format=pdf&language=en&productionSystem=cellar&part="
+   },
+   "usdapsd2026": {
+    "titel": "Production, Supply and Distribution Online (PSD), Datensatz Cotton (psd_cotton_csv.zip)",
+    "url": "https://apps.fas.usda.gov/psdonline/downloads/psd_cotton_csv.zip"
+   },
+   "eia2026intl": {
+    "titel": "International Energy Statistics, Bulk-Download INTL.zip",
+    "url": "https://www.eia.gov/opendata/bulk/INTL.zip"
+   },
+   "faostat2025qcl": {
+    "titel": "FAOSTAT Crops and livestock products (QCL), Bulk-Download Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip"
+   },
+   "faostat2026fo": {
+    "titel": "FAOSTAT Forestry Production and Trade (FO), Bulk-Download Forestry_E_All_Data_(Normalized).zip",
+    "url": "https://bulks-faostat.fao.org/production/Forestry_E_All_Data_(Normalized).zip"
    }
   }
  },

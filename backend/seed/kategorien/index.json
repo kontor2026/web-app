@@ -4,7 +4,7 @@
   "name": "Smartphone",
   "name_en": "Smartphone",
   "klasse": "Elektroschrott · Kleingerät",
-  "teile": 13,
+  "teile": 16,
   "platzhalter": false
  },
  {
@@ -28,7 +28,7 @@
   "name": "Smartwatch",
   "name_en": "Smartwatch",
   "klasse": "Elektroschrott · Kleingerät",
-  "teile": 14,
+  "teile": 16,
   "platzhalter": false
  },
  {
@@ -36,7 +36,7 @@
   "name": "Kopfhörer",
   "name_en": "Headphones",
   "klasse": "Elektroschrott · Kleingerät",
-  "teile": 14,
+  "teile": 18,
   "platzhalter": false
  },
  {
@@ -44,7 +44,7 @@
   "name": "Kabellose Ohrhörer",
   "name_en": "Wireless Earbuds",
   "klasse": "Elektroschrott · Kleingerät",
-  "teile": 11,
+  "teile": 16,
   "platzhalter": false
  },
  {
@@ -52,7 +52,7 @@
   "name": "Computermaus",
   "name_en": "Computer Mouse",
   "klasse": "Elektroschrott · Kleingerät",
-  "teile": 13,
+  "teile": 21,
   "platzhalter": false
  },
  {
@@ -60,7 +60,7 @@
   "name": "Tastatur",
   "name_en": "Keyboard",
   "klasse": "Elektroschrott · Kleingerät",
-  "teile": 12,
+  "teile": 17,
   "platzhalter": false
  },
  {
@@ -68,7 +68,7 @@
   "name": "Handy-Ladegerät",
   "name_en": "Phone Charger",
   "klasse": "Elektroschrott · Kleingerät",
-  "teile": 11,
+  "teile": 18,
   "platzhalter": false
  },
  {
@@ -76,7 +76,7 @@
   "name": "USB-Kabel",
   "name_en": "USB Cable",
   "klasse": "Elektroschrott · Kleingerät",
-  "teile": 9,
+  "teile": 13,
   "platzhalter": false
  },
  {
@@ -84,7 +84,7 @@
   "name": "Powerbank",
   "name_en": "Power Bank",
   "klasse": "Elektroschrott · Kleingerät",
-  "teile": 12,
+  "teile": 15,
   "platzhalter": false
  },
  {
@@ -108,7 +108,7 @@
   "name": "Fernbedienung",
   "name_en": "Remote Control",
   "klasse": "Elektroschrott · Kleingerät",
-  "teile": 11,
+  "teile": 15,
   "platzhalter": false
  },
  {
@@ -124,7 +124,7 @@
   "name": "Taschenlampe",
   "name_en": "Flashlight",
   "klasse": "Elektroschrott · Kleingerät",
-  "teile": 14,
+  "teile": 15,
   "platzhalter": false
  },
  {
@@ -140,7 +140,7 @@
   "name": "Elektrische Zahnbürste",
   "name_en": "Electric Toothbrush",
   "klasse": "Elektroschrott · Kleingerät",
-  "teile": 11,
+  "teile": 13,
   "platzhalter": false
  },
  {
@@ -148,7 +148,7 @@
   "name": "Föhn",
   "name_en": "Hair Dryer",
   "klasse": "Elektroschrott · Kleingerät",
-  "teile": 12,
+  "teile": 14,
   "platzhalter": false
  },
  {
@@ -156,7 +156,7 @@
   "name": "Wasserkocher",
   "name_en": "Electric Kettle",
   "klasse": "Elektroschrott · Kleingerät",
-  "teile": 14,
+  "teile": 19,
   "platzhalter": false
  },
  {
@@ -164,7 +164,7 @@
   "name": "Toaster",
   "name_en": "Toaster",
   "klasse": "Elektroschrott · Kleingerät",
-  "teile": 14,
+  "teile": 16,
   "platzhalter": false
  },
  {
@@ -412,7 +412,7 @@
   "name": "Desktop-PC",
   "name_en": "Desktop PC",
   "klasse": "Elektroschrott · Kleingerät",
-  "teile": 14,
+  "teile": 17,
   "platzhalter": false
  },
  {
@@ -420,7 +420,7 @@
   "name": "Gamecontroller",
   "name_en": "Game Controller",
   "klasse": "Elektroschrott · Kleingerät",
-  "teile": 16,
+  "teile": 18,
   "platzhalter": false
  },
  {
@@ -428,7 +428,7 @@
   "name": "WLAN-Router",
   "name_en": "Wi-Fi Router",
   "klasse": "Elektroschrott · Kleingerät",
-  "teile": 14,
+  "teile": 16,
   "platzhalter": false
  },
  {
@@ -444,7 +444,7 @@
   "name": "Digitalkamera",
   "name_en": "Digital Camera",
   "klasse": "Elektroschrott · Kleingerät",
-  "teile": 13,
+  "teile": 14,
   "platzhalter": false
  },
  {
@@ -452,7 +452,7 @@
   "name": "E-Book-Reader",
   "name_en": "E-Reader",
   "klasse": "Elektroschrott · Kleingerät",
-  "teile": 11,
+  "teile": 17,
   "platzhalter": false
  },
  {
@@ -460,7 +460,7 @@
   "name": "Bluetooth-Lautsprecher",
   "name_en": "Bluetooth Speaker",
   "klasse": "Elektroschrott · Kleingerät",
-  "teile": 14,
+  "teile": 39,
   "platzhalter": false
  },
  {
@@ -468,7 +468,7 @@
   "name": "Schreibtischlampe",
   "name_en": "Desk Lamp",
   "klasse": "Elektroschrott · Kleingerät",
-  "teile": 15,
+  "teile": 26,
   "platzhalter": false
  },
  {
@@ -476,7 +476,7 @@
   "name": "Ventilator",
   "name_en": "Electric Fan",
   "klasse": "Elektroschrott · Kleingerät",
-  "teile": 15,
+  "teile": 54,
   "platzhalter": false
  },
  {
@@ -492,7 +492,7 @@
   "name": "Standmixer",
   "name_en": "Blender",
   "klasse": "Elektroschrott · Kleingerät",
-  "teile": 16,
+  "teile": 24,
   "platzhalter": false
  },
  {
@@ -508,7 +508,7 @@
   "name": "Kaffeemaschine",
   "name_en": "Coffee Machine",
   "klasse": "Elektroschrott · Kleingerät",
-  "teile": 13,
+  "teile": 19,
   "platzhalter": false
  },
  {
@@ -516,7 +516,7 @@
   "name": "Handmixer",
   "name_en": "Hand Mixer",
   "klasse": "Elektroschrott · Kleingerät",
-  "teile": 13,
+  "teile": 25,
   "platzhalter": false
  },
  {
@@ -524,7 +524,7 @@
   "name": "Elektrorasierer",
   "name_en": "Electric Shaver",
   "klasse": "Elektroschrott · Kleingerät",
-  "teile": 10,
+  "teile": 15,
   "platzhalter": false
  },
  {
@@ -532,7 +532,7 @@
   "name": "Glätteisen",
   "name_en": "Hair Straightener",
   "klasse": "Elektroschrott · Kleingerät",
-  "teile": 10,
+  "teile": 18,
   "platzhalter": false
  },
  {
@@ -540,7 +540,7 @@
   "name": "Bügeleisen",
   "name_en": "Clothes Iron",
   "klasse": "Elektroschrott · Kleingerät",
-  "teile": 11,
+  "teile": 25,
   "platzhalter": false
  },
  {
@@ -548,7 +548,7 @@
   "name": "Taschenrechner",
   "name_en": "Calculator",
   "klasse": "Elektroschrott · Kleingerät",
-  "teile": 11,
+  "teile": 12,
   "platzhalter": false
  },
  {
@@ -556,7 +556,7 @@
   "name": "Rauchmelder",
   "name_en": "Smoke Detector",
   "klasse": "Elektroschrott · Kleingerät",
-  "teile": 12,
+  "teile": 16,
   "platzhalter": false
  },
  {
@@ -564,7 +564,7 @@
   "name": "Mehrfachsteckdose",
   "name_en": "Power Strip",
   "klasse": "Elektroschrott · Kleingerät",
-  "teile": 12,
+  "teile": 18,
   "platzhalter": false
  },
  {
@@ -572,7 +572,7 @@
   "name": "Webcam",
   "name_en": "Webcam",
   "klasse": "Elektroschrott · Kleingerät",
-  "teile": 11,
+  "teile": 15,
   "platzhalter": false
  },
  {
@@ -580,7 +580,7 @@
   "name": "Tintenstrahldrucker",
   "name_en": "Inkjet Printer",
   "klasse": "Elektroschrott · Kleingerät",
-  "teile": 16,
+  "teile": 19,
   "platzhalter": false
  },
  {
@@ -588,7 +588,7 @@
   "name": "Externe Festplatte",
   "name_en": "External Hard Drive",
   "klasse": "Elektroschrott · Kleingerät",
-  "teile": 11,
+  "teile": 13,
   "platzhalter": false
  },
  {
@@ -596,7 +596,7 @@
   "name": "USB-Stick",
   "name_en": "USB Stick",
   "klasse": "Elektroschrott · Kleingerät",
-  "teile": 9,
+  "teile": 10,
   "platzhalter": false
  },
  {
@@ -604,7 +604,7 @@
   "name": "Fitnessarmband",
   "name_en": "Fitness Tracker",
   "klasse": "Elektroschrott · Kleingerät",
-  "teile": 12,
+  "teile": 14,
   "platzhalter": false
  },
  {
@@ -612,7 +612,7 @@
   "name": "Wecker",
   "name_en": "Alarm Clock",
   "klasse": "Elektroschrott · Kleingerät",
-  "teile": 11,
+  "teile": 17,
   "platzhalter": false
  },
  {
@@ -620,7 +620,7 @@
   "name": "Akkuschrauber",
   "name_en": "Cordless Drill",
   "klasse": "Elektroschrott · Kleingerät",
-  "teile": 14,
+  "teile": 39,
   "platzhalter": false
  },
  {
