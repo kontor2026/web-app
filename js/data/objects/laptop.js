@@ -106,4 +106,22 @@ export default {
       info: 'Mit zehn Schrauben befestigt. Lüftungsschlitze führen kühle Luft zum Lüfter.',
       marks: [{ shape: 'box', x: 240, y: 18, w: 66, d: 66, r: 6 }, { shape: 'cyl', x: 12, y: 12, w: 10 }, { shape: 'cyl', x: 301, y: 12, w: 10 }, { shape: 'cyl', x: 12, y: 196, w: 10 }, { shape: 'cyl', x: 301, y: 196, w: 10 }] },
   ],
+
+  projekte: [
+    { titel: 'USB-Tischventilator', kurz: 'Der 5-Volt-Lüfter läuft direkt an einem USB-Kabel aus dem Lager.',
+      stufe: 1, dauer: '40 min', lernziel: 'Spannung und Strom: Warum passt der Lüfter an USB?',
+      nutzt: [{ neu: true, name: 'Lüfter' }, { inv: 'usb-kabel', menge: 1 }, { inv: 'hdpe-platte', menge: 1 }],
+      werkzeug: ['Abisolierzange', 'Lötkolben', 'Schrumpfschlauch'],
+      schritte: ['Lüfter ausbauen, rotes und schwarzes Kabel finden', 'USB-Kabel aufschneiden, Plus und Minus anlöten', 'Standfuß aus HDPE-Platte zuschneiden'] },
+    { titel: 'Leiterplatten-Uhr', kurz: 'Das Mainboard wird zum Zifferblatt einer Wanduhr.',
+      stufe: 1, dauer: '30 min', lernziel: 'Wo steckt Gold im Gerät? Bauteile benennen.',
+      nutzt: [{ neu: true, name: 'Mainboard' }, { inv: 'uhrwerk', menge: 1 }],
+      werkzeug: ['Bohrer 8 mm', 'Schraubendreher'],
+      schritte: ['Mainboard ausbauen, scharfe Kanten entgraten', 'Mittelloch bohren', 'Uhrwerk einsetzen, Zeiger aufstecken'] },
+    { titel: 'Externer Monitor', kurz: 'Das Display bekommt eine Controller-Platine und ein Holzgehäuse.',
+      stufe: 3, dauer: '3 h', lernziel: 'Wiederverwendung schlägt Recycling: 230 g Display statt Neukauf.',
+      nutzt: [{ neu: true, name: 'Display-Panel' }, { inv: 'controller', menge: 1 }, { inv: 'holzleiste', menge: 4 }, { inv: 'usb-kabel', menge: 1 }],
+      werkzeug: ['Säge', 'Akkuschrauber', 'Heißklebepistole'],
+      schritte: ['Panel-Typenschild ablesen, passenden Controller wählen', 'Rahmen aus Holzleisten bauen', 'Controller anschließen, per USB-C mit Strom versorgen'] },
+  ],
 };

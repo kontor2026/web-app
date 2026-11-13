@@ -90,4 +90,22 @@ export default {
       info: 'Glas statt Metall, damit kabelloses Laden funktioniert. Bricht leicht und ist teuer zu tauschen.',
       marks: [{ shape: 'box', x: 4, y: 4, w: 28, d: 30, r: 6 }] },
   ],
+
+  projekte: [
+    { titel: 'Werkstatt-Kamera', kurz: 'Das alte Handy filmt den 3D-Drucker und schickt das Bild ins Netzwerk.',
+      stufe: 1, dauer: '30 min', lernziel: 'Weiternutzen spart mehr als jedes Recycling.',
+      nutzt: [{ neu: true, name: 'Smartphone (komplett)' }, { inv: 'holzleiste', menge: 2 }, { inv: 'usb-kabel', menge: 1 }],
+      werkzeug: ['Säge', 'Akkuschrauber'],
+      schritte: ['Handy zurücksetzen, Kamera-App installieren', 'Halterung aus zwei Holzleisten schrauben', 'Per USB-Kabel dauerhaft mit Strom versorgen'] },
+    { titel: 'Magnetische Werkzeugleiste', kurz: 'Die Neodym-Magnete aus Lautsprecher und Vibrationsmotor halten Bits und Schrauben.',
+      stufe: 2, dauer: '60 min', lernziel: 'Seltene Erden erkennen und ihren Wert verstehen.',
+      nutzt: [{ neu: true, name: 'Lautsprecher und Vibrationsmotor' }, { inv: 'hdpe-platte', menge: 1 }, { inv: 'magnete', menge: 4 }],
+      werkzeug: ['Pinzette', 'Heißklebepistole'],
+      schritte: ['Magnete unter Aufsicht ausbauen (Akku vorher entnehmen lassen)', 'Taschen in die HDPE-Platte fräsen', 'Magnete einkleben und Leiste an die Wand schrauben'] },
+    { titel: 'Makro-Linse', kurz: 'Die Linse aus dem Kameramodul wird zum Aufsteck-Mikroskop für ein anderes Handy.',
+      stufe: 2, dauer: '45 min', lernziel: 'Optik verstehen: Was macht eine Linse?',
+      nutzt: [{ neu: true, name: 'Kameramodul' }, { inv: 'hdpe-deckel', menge: 1 }],
+      werkzeug: ['Feinmechaniker-Set', 'Bohrer 6 mm'],
+      schritte: ['Kameramodul öffnen, kleinste Linse lösen', 'Loch in einen HDPE-Deckel bohren', 'Linse einsetzen, Deckel als Clip auf ein Handy stecken'] },
+  ],
 };
