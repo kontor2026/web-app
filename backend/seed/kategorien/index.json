@@ -1268,7 +1268,7 @@
   "name": "Klebestift",
   "name_en": "Glue Stick",
   "klasse": "Restmüll",
-  "teile": 6,
+  "teile": 7,
   "platzhalter": false
  },
  {
@@ -1308,7 +1308,7 @@
   "name": "Kunststoff-Hefter",
   "name_en": "Plastic Folder",
   "klasse": "Restmüll",
-  "teile": 4,
+  "teile": 5,
   "platzhalter": false
  },
  {
@@ -1404,7 +1404,7 @@
   "name": "Flip-Flops",
   "name_en": "Flip-Flops",
   "klasse": "Restmüll",
-  "teile": 7,
+  "teile": 9,
   "platzhalter": false
  },
  {
@@ -1436,7 +1436,7 @@
   "name": "Fußball",
   "name_en": "Football",
   "klasse": "Restmüll",
-  "teile": 27,
+  "teile": 35,
   "platzhalter": false
  },
  {
@@ -1444,7 +1444,7 @@
   "name": "Tennisball",
   "name_en": "Tennis Ball",
   "klasse": "Restmüll",
-  "teile": 12,
+  "teile": 18,
   "platzhalter": false
  },
  {
@@ -1452,7 +1452,7 @@
   "name": "Yogamatte",
   "name_en": "Yoga Mat",
   "klasse": "Restmüll",
-  "teile": 4,
+  "teile": 6,
   "platzhalter": false
  },
  {

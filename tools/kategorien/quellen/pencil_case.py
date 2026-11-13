@@ -2,8 +2,8 @@
 
 Schlampermäppchen 80 × 210 × 40 mm, flach liegend, Reißverschluss längs (y) mittig oben. Außenstoff aus Nylon-Gewebe
 in zwei Schalen (unten mit Boden, oben mit den Reißverschluss-Kanten), innen ein Polyesterfutter. Reißverschluss:
-Messing-Zahnreihe auf Polyesterband, Schieber aus Zinkdruckguss, Zuglasche aus Stoff. Explodiert: Lagen nach oben,
-Zuglasche zur Seite.
+Messing-Zahnreihe auf Polyesterband, Schieber aus Zinkdruckguss, Zuglasche aus Stoff. Explodiert: Lagen nach oben, Schieber und
+Zuglasche obenauf.
 """
 import sys
 from pathlib import Path
@@ -15,7 +15,6 @@ STOFF = '#2E5A88'
 teile = [
     teil('zuglasche', 'metal_zipper', 'Zuglasche (Stoffschlaufe)', 'Zuglasche', 'box',
          x=34, y=196, w=12, d=26, z=38, h=2, r=5, mass=1.5, material_id='polyester', color='#E4572E',
-         explode=[60, 0, 0],
          info='Stoffschlaufe am Schieber, damit man den Reißverschluss gut greift. Mit der Schere abschneiden.',
          marks=[mark('box', 3, 3, 6, 18, 3, '#C94524')]),
     teil('schieber', 'metal_zipper', 'Reißverschluss-Schieber', 'Schieber', 'box',
@@ -34,7 +33,7 @@ teile = [
          info='Nylon-Gewebe mit Beschichtung, an der Kante mit dem Unterteil vernäht. Saubere Mäppchen in die '
               'Altkleidersammlung oder weitergeben, kaputte in den Restmüll.',
          color=STOFF, marks=[mark('box', 4, 4, 26, 202, 12, '#2A5280'), mark('box', 50, 4, 26, 202, 12, '#2A5280'),
-                             mark('box', 52, 20, 22, 12, 2, '#E9E6DF')]),
+                             mark('box', 52, 20, 22, 12, 2, '#E9E6DF'), mark('box', 33, 6, 14, 198, 2, '#1A2430')]),
     teil('futter', 'nylon_fabric', 'Innenfutter', 'Futter', 'box',
          x=3, y=3, w=74, d=204, z=2, h=33, r=12, mass=14, material_id='polyester', color='#B9C4CC',
          info='Dünnes Polyesterfutter, an der Reißverschlussnaht mit eingenäht. Lässt sich nur mit der Schere lösen.',
@@ -44,6 +43,6 @@ teile = [
          info='Boden und Seitenwände, innen mit einer dünnen Versteifung, damit das Mäppchen die Form hält.',
          color='#274D75', marks=[mark('box', 3, 3, 74, 204, 12, '#21436A')]),
 ]
-explodiere(teile, abstand=25)
+explodiere(teile, abstand=25, abstaende={'zuglasche': 12, 'schieber': 18, 'reissverschluss': 50})
 skaliere_masse(teile, oid='pencil_case')
 schreibe('pencil_case', teile)

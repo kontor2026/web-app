@@ -138,9 +138,9 @@
    "explode": [
     0,
     0,
-    18
+    30
    ],
-   "mass": 2.81,
+   "mass": 2.78,
    "materials": [
     [
      "pp",
@@ -152,10 +152,24 @@
    "marks": [
     {
      "shape": "cyl",
-     "x": 5,
-     "y": 5,
-     "w": 20,
+     "x": 3,
+     "y": 3,
+     "w": 24,
+     "fill": "#C43F33"
+    },
+    {
+     "shape": "cyl",
+     "x": 7,
+     "y": 7,
+     "w": 16,
      "fill": "#B83A2F"
+    },
+    {
+     "shape": "cyl",
+     "x": 12,
+     "y": 12,
+     "w": 6,
+     "fill": "#A53428"
     }
    ]
   },
@@ -176,7 +190,7 @@
     0,
     42.0
    ],
-   "mass": 19.69,
+   "mass": 19.44,
    "materials": [
     [
      "klebstoff",
@@ -212,7 +226,7 @@
     0,
     32.0
    ],
-   "mass": 0.94,
+   "mass": 0.93,
    "materials": [
     [
      "pp",
@@ -248,7 +262,7 @@
     0,
     0.0
    ],
-   "mass": 0.75,
+   "mass": 0.74,
    "materials": [
     [
      "pp",
@@ -284,7 +298,7 @@
     0,
     0
    ],
-   "mass": 4.22,
+   "mass": 4.17,
    "materials": [
     [
      "pp",
@@ -300,6 +314,43 @@
      "y": 2,
      "w": 24,
      "fill": "#E4E1D8"
+    }
+   ]
+  },
+  {
+   "id": "etikett",
+   "component_id": "glue_stick_tube",
+   "material_id": "pp",
+   "name": "Bedrucktes Etikett",
+   "short": "Etikett",
+   "shape": "cyl",
+   "x": 0.7,
+   "y": 0.7,
+   "w": 28.6,
+   "z": 22,
+   "h": 48,
+   "explode": [
+    -48,
+    0,
+    0
+   ],
+   "mass": 0.37,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Dünne bedruckte PP-Folie, beim Spritzgießen mit der Hülse verschmolzen (In-Mould-Label). Sie muss nicht abgezogen werden, weil sie aus demselben Kunststoff ist.",
+   "color": "#F2C230",
+   "sortBias": 5,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0.4,
+     "y": 0.4,
+     "w": 27.8,
+     "fill": "#D8D4CA"
     }
    ]
   },
@@ -320,7 +371,7 @@
     0,
     0
    ],
-   "mass": 1.59,
+   "mass": 1.57,
    "materials": [
     [
      "pp",

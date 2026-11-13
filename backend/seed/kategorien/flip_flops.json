@@ -132,7 +132,7 @@
    "short": "Zehensteg",
    "shape": "cyl",
    "x": 44,
-   "y": 178,
+   "y": 176,
    "w": 12,
    "d": 14,
    "z": 0,
@@ -163,56 +163,97 @@
    ]
   },
   {
-   "id": "arm_l_vorn",
+   "id": "arm_l1",
    "component_id": "rubber_strap",
    "material_id": "rubber",
-   "name": "Riemen links, vorderer Teil",
+   "name": "Y-Riemen (Gummi)",
    "short": "Riemen",
    "shape": "box",
-   "x": 28,
-   "y": 148,
-   "w": 16,
-   "d": 36,
-   "z": 15,
-   "h": 10,
-   "r": 5,
+   "x": 35,
+   "y": 150,
+   "w": 14,
+   "d": 24,
+   "z": 13,
+   "h": 12,
+   "r": 6,
    "explode": [
     0,
     0,
     95.0
    ],
-   "mass": 2.5,
+   "mass": 2,
    "materials": [
     [
      "gummi",
      100
     ]
    ],
-   "info": "Weicher Gummi- oder PVC-Riemen. Er hält den Fuß und ist mit dem Steg in einem Stück gespritzt.",
+   "info": "Weicher Gummi- oder PVC-Riemen, mit dem Steg in einem Stück gespritzt. Die hinteren Enden stecken als Pfropfen in der Sohle und lassen sich von unten durchdrücken.",
    "color": "#2D6FA3",
    "marks": [
     {
      "shape": "box",
      "x": 3,
-     "y": 2,
-     "w": 10,
-     "d": 32,
+     "y": 3,
+     "w": 8,
+     "d": 18,
      "r": 4,
      "fill": "#245A85"
     }
    ]
   },
   {
-   "id": "arm_l_hinten",
+   "id": "arm_l2",
    "component_id": "rubber_strap",
    "material_id": "rubber",
-   "name": "Riemen links mit Pfropfen",
+   "name": "Riemen l 2",
    "short": "Riemen",
    "shape": "box",
-   "x": 10,
-   "y": 112,
-   "w": 18,
-   "d": 36,
+   "x": 23,
+   "y": 126,
+   "w": 14,
+   "d": 24,
+   "z": 8,
+   "h": 15,
+   "r": 6,
+   "explode": [
+    0,
+    0,
+    95.0
+   ],
+   "mass": 2,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "info": "Weiteres Stück des Y-Riemens.",
+   "color": "#2D6FA3",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 3,
+     "w": 8,
+     "d": 18,
+     "r": 4,
+     "fill": "#245A85"
+    }
+   ]
+  },
+  {
+   "id": "arm_l3",
+   "component_id": "rubber_strap",
+   "material_id": "rubber",
+   "name": "Riemen l 3",
+   "short": "Riemen",
+   "shape": "box",
+   "x": 10.5,
+   "y": 100,
+   "w": 15,
+   "d": 26,
    "z": 3,
    "h": 18,
    "r": 6,
@@ -221,80 +262,121 @@
     0,
     95.0
    ],
-   "mass": 3.5,
+   "mass": 2,
    "materials": [
     [
      "gummi",
      100
     ]
    ],
-   "info": "Das hintere Riemenende endet in einem Pfropfen, der in der Sohle steckt.",
-   "color": "#2D6FA3",
-   "label": false,
-   "marks": [
-    {
-     "shape": "box",
-     "x": 4,
-     "y": 2,
-     "w": 10,
-     "d": 32,
-     "r": 4,
-     "fill": "#245A85"
-    }
-   ]
-  },
-  {
-   "id": "arm_r_vorn",
-   "component_id": "rubber_strap",
-   "material_id": "rubber",
-   "name": "Riemen rechts, vorderer Teil",
-   "short": "Riemen",
-   "shape": "box",
-   "x": 56,
-   "y": 148,
-   "w": 16,
-   "d": 36,
-   "z": 15,
-   "h": 10,
-   "r": 5,
-   "explode": [
-    0,
-    0,
-    95.0
-   ],
-   "mass": 2.5,
-   "materials": [
-    [
-     "gummi",
-     100
-    ]
-   ],
-   "info": "Gegenstück zum linken Riemen.",
+   "info": "Weiteres Stück des Y-Riemens.",
    "color": "#2D6FA3",
    "label": false,
    "marks": [
     {
      "shape": "box",
      "x": 3,
-     "y": 2,
-     "w": 10,
-     "d": 32,
+     "y": 3,
+     "w": 9,
+     "d": 20,
      "r": 4,
      "fill": "#245A85"
     }
    ]
   },
   {
-   "id": "arm_r_hinten",
+   "id": "arm_r1",
    "component_id": "rubber_strap",
    "material_id": "rubber",
-   "name": "Riemen rechts mit Pfropfen",
+   "name": "Riemen r 1",
    "short": "Riemen",
    "shape": "box",
-   "x": 72,
-   "y": 112,
-   "w": 18,
-   "d": 36,
+   "x": 51,
+   "y": 150,
+   "w": 14,
+   "d": 24,
+   "z": 13,
+   "h": 12,
+   "r": 6,
+   "explode": [
+    0,
+    0,
+    95.0
+   ],
+   "mass": 2,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "info": "Weiteres Stück des Y-Riemens.",
+   "color": "#2D6FA3",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 3,
+     "w": 8,
+     "d": 18,
+     "r": 4,
+     "fill": "#245A85"
+    }
+   ]
+  },
+  {
+   "id": "arm_r2",
+   "component_id": "rubber_strap",
+   "material_id": "rubber",
+   "name": "Riemen r 2",
+   "short": "Riemen",
+   "shape": "box",
+   "x": 63,
+   "y": 126,
+   "w": 14,
+   "d": 24,
+   "z": 8,
+   "h": 15,
+   "r": 6,
+   "explode": [
+    0,
+    0,
+    95.0
+   ],
+   "mass": 2,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "info": "Weiteres Stück des Y-Riemens.",
+   "color": "#2D6FA3",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 3,
+     "w": 8,
+     "d": 18,
+     "r": 4,
+     "fill": "#245A85"
+    }
+   ]
+  },
+  {
+   "id": "arm_r3",
+   "component_id": "rubber_strap",
+   "material_id": "rubber",
+   "name": "Riemen r 3",
+   "short": "Riemen",
+   "shape": "box",
+   "x": 74.5,
+   "y": 100,
+   "w": 15,
+   "d": 26,
    "z": 3,
    "h": 18,
    "r": 6,
@@ -303,23 +385,23 @@
     0,
     95.0
    ],
-   "mass": 3.5,
+   "mass": 2,
    "materials": [
     [
      "gummi",
      100
     ]
    ],
-   "info": "Gegenstück zum linken Riemenende.",
+   "info": "Weiteres Stück des Y-Riemens.",
    "color": "#2D6FA3",
    "label": false,
    "marks": [
     {
      "shape": "box",
-     "x": 4,
-     "y": 2,
-     "w": 10,
-     "d": 32,
+     "x": 3,
+     "y": 3,
+     "w": 9,
+     "d": 20,
      "r": 4,
      "fill": "#245A85"
     }

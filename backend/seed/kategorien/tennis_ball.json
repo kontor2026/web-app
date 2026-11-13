@@ -32,7 +32,7 @@
   {
    "k": "mit Recyclat",
    "v": "≈ 0,18 kg",
-   "hint": "spart 0,72 kg, wenn recycelte Materialien eingesetzt werden"
+   "hint": "spart 0,71 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
@@ -42,9 +42,9 @@
    "rubber": 46.0,
    "wool": 12.0
   },
-  "co2_kg": 0.894,
+  "co2_kg": 0.893,
   "co2_mit_recyclat_kg": 0.178,
-  "co2_ersparnis_kg": 0.717,
+  "co2_ersparnis_kg": 0.715,
   "co2_ohne_faktor": [],
   "rohstoffwert_eur": 0,
   "wert_ohne_preis": [],
@@ -131,17 +131,17 @@
    "name": "Filzbezug obere Hälfte",
    "short": "Filz oben",
    "shape": "cyl",
-   "x": 13,
-   "y": 13,
-   "w": 41,
-   "z": 60,
-   "h": 7,
+   "x": 19.65,
+   "y": 19.65,
+   "w": 27.7,
+   "z": 64,
+   "h": 3,
    "explode": [
     0,
     0,
-    97.0
+    133.0
    ],
-   "mass": 0.59,
+   "mass": 0.12,
    "materials": [
     [
      "wolle",
@@ -161,25 +161,18 @@
    "marks": [
     {
      "shape": "box",
-     "x": 0,
-     "y": 18.5,
-     "w": 41,
+     "x": 5,
+     "y": 12.6,
+     "w": 17.7,
      "d": 2.5,
      "r": 1,
      "fill": "#F2F2EC"
     },
     {
      "shape": "cyl",
-     "x": 8,
-     "y": 6,
-     "w": 8,
-     "fill": "#BFCF35"
-    },
-    {
-     "shape": "cyl",
-     "x": 26,
-     "y": 28,
-     "w": 7,
+     "x": 6,
+     "y": 4,
+     "w": 5,
      "fill": "#BFCF35"
     }
    ]
@@ -191,17 +184,17 @@
    "name": "Filzbezug obere Hälfte",
    "short": "Filz oben",
    "shape": "cyl",
-   "x": 4.35,
-   "y": 4.35,
-   "w": 58.3,
-   "z": 50,
-   "h": 10,
+   "x": 11.75,
+   "y": 11.75,
+   "w": 43.5,
+   "z": 59,
+   "h": 5,
    "explode": [
     0,
     0,
-    97.0
+    133.0
    ],
-   "mass": 1.7,
+   "mass": 0.5,
    "materials": [
     [
      "wolle",
@@ -218,10 +211,142 @@
    ],
    "info": "Nadelfilz aus Wolle und Nylon, auf den Kern geklebt. Die weiße Naht ist eine Gummi-Klebenaht. Nach dem Aufschneiden lässt sich der Filz abziehen.",
    "color": "#D4E440",
-   "label": false
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2.43,
+     "y": 16.54,
+     "w": 3.04,
+     "d": 10.43,
+     "r": 0.6,
+     "fill": "#F2F2EC"
+    },
+    {
+     "shape": "box",
+     "x": 38.03,
+     "y": 16.54,
+     "w": 3.04,
+     "d": 10.43,
+     "r": 0.6,
+     "fill": "#F2F2EC"
+    }
+   ]
   },
   {
    "id": "filz_oben_2",
+   "component_id": "felt_cover",
+   "material_id": "wool",
+   "name": "Filzbezug obere Hälfte",
+   "short": "Filz oben",
+   "shape": "cyl",
+   "x": 6.25,
+   "y": 6.25,
+   "w": 54.5,
+   "z": 53,
+   "h": 6,
+   "explode": [
+    0,
+    0,
+    133.0
+   ],
+   "mass": 0.95,
+   "materials": [
+    [
+     "wolle",
+     55
+    ],
+    [
+     "nylon",
+     40
+    ],
+    [
+     "klebstoff",
+     5
+    ]
+   ],
+   "info": "Nadelfilz aus Wolle und Nylon, auf den Kern geklebt. Die weiße Naht ist eine Gummi-Klebenaht. Nach dem Aufschneiden lässt sich der Filz abziehen.",
+   "color": "#D4E440",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1.69,
+     "y": 23.62,
+     "w": 2.12,
+     "d": 7.26,
+     "r": 0.6,
+     "fill": "#F2F2EC"
+    },
+    {
+     "shape": "box",
+     "x": 50.69,
+     "y": 23.62,
+     "w": 2.12,
+     "d": 7.26,
+     "r": 0.6,
+     "fill": "#F2F2EC"
+    }
+   ]
+  },
+  {
+   "id": "filz_oben_3",
+   "component_id": "felt_cover",
+   "material_id": "wool",
+   "name": "Filzbezug obere Hälfte",
+   "short": "Filz oben",
+   "shape": "cyl",
+   "x": 2.05,
+   "y": 2.05,
+   "w": 62.9,
+   "z": 45,
+   "h": 8,
+   "explode": [
+    0,
+    0,
+    133.0
+   ],
+   "mass": 1.68,
+   "materials": [
+    [
+     "wolle",
+     55
+    ],
+    [
+     "nylon",
+     40
+    ],
+    [
+     "klebstoff",
+     5
+    ]
+   ],
+   "info": "Nadelfilz aus Wolle und Nylon, auf den Kern geklebt. Die weiße Naht ist eine Gummi-Klebenaht. Nach dem Aufschneiden lässt sich der Filz abziehen.",
+   "color": "#D4E440",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 28.68,
+     "y": 1.29,
+     "w": 5.54,
+     "d": 1.62,
+     "r": 0.6,
+     "fill": "#F2F2EC"
+    },
+    {
+     "shape": "box",
+     "x": 28.68,
+     "y": 59.99,
+     "w": 5.54,
+     "d": 1.62,
+     "r": 0.6,
+     "fill": "#F2F2EC"
+    }
+   ]
+  },
+  {
+   "id": "filz_oben_4",
    "component_id": "felt_cover",
    "material_id": "wool",
    "name": "Filzbezug obere Hälfte",
@@ -231,13 +356,13 @@
    "y": 0,
    "w": 67,
    "z": 33.5,
-   "h": 16.5,
+   "h": 11.5,
    "explode": [
     0,
     0,
-    97.0
+    133.0
    ],
-   "mass": 3.71,
+   "mass": 2.74,
    "materials": [
     [
      "wolle",
@@ -254,7 +379,27 @@
    ],
    "info": "Nadelfilz aus Wolle und Nylon, auf den Kern geklebt. Die weiße Naht ist eine Gummi-Klebenaht. Nach dem Aufschneiden lässt sich der Filz abziehen.",
    "color": "#D4E440",
-   "label": false
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 31.58,
+     "y": 0.46,
+     "w": 3.84,
+     "d": 1.12,
+     "r": 0.6,
+     "fill": "#F2F2EC"
+    },
+    {
+     "shape": "box",
+     "x": 31.58,
+     "y": 65.41,
+     "w": 3.84,
+     "d": 1.12,
+     "r": 0.6,
+     "fill": "#F2F2EC"
+    }
+   ]
   },
   {
    "id": "kern_oben_0",
@@ -263,44 +408,17 @@
    "name": "Gummikern obere Halbschale",
    "short": "Kern oben",
    "shape": "cyl",
-   "x": 15.35,
-   "y": 15.35,
-   "w": 36.3,
-   "z": 58,
-   "h": 6,
+   "x": 16.75,
+   "y": 16.75,
+   "w": 33.5,
+   "z": 59,
+   "h": 5,
    "explode": [
     0,
     0,
-    54.5
+    78.5
    ],
-   "mass": 2,
-   "materials": [
-    [
-     "gummi",
-     100
-    ]
-   ],
-   "info": "Halbschale aus Naturkautschuk mit Füllstoffen. Beide Hälften sind verklebt und unter Überdruck mit Luft gefüllt, darum springt der Ball.",
-   "color": "#55585A"
-  },
-  {
-   "id": "kern_oben_1",
-   "component_id": "rubber_core",
-   "material_id": "rubber",
-   "name": "Gummikern obere Halbschale",
-   "short": "Kern oben",
-   "shape": "cyl",
-   "x": 6.65,
-   "y": 6.65,
-   "w": 53.7,
-   "z": 48,
-   "h": 10,
-   "explode": [
-    0,
-    0,
-    54.5
-   ],
-   "mass": 7.31,
+   "mass": 1.48,
    "materials": [
     [
      "gummi",
@@ -309,10 +427,68 @@
    ],
    "info": "Halbschale aus Naturkautschuk mit Füllstoffen. Beide Hälften sind verklebt und unter Überdruck mit Luft gefüllt, darum springt der Ball.",
    "color": "#55585A",
-   "label": false
+   "sortBias": -1
+  },
+  {
+   "id": "kern_oben_1",
+   "component_id": "rubber_core",
+   "material_id": "rubber",
+   "name": "Gummikern obere Halbschale",
+   "short": "Kern oben",
+   "shape": "cyl",
+   "x": 10.05,
+   "y": 10.05,
+   "w": 46.9,
+   "z": 53,
+   "h": 6,
+   "explode": [
+    0,
+    0,
+    78.5
+   ],
+   "mass": 3.48,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "info": "Halbschale aus Naturkautschuk mit Füllstoffen. Beide Hälften sind verklebt und unter Überdruck mit Luft gefüllt, darum springt der Ball.",
+   "color": "#55585A",
+   "label": false,
+   "sortBias": -1
   },
   {
    "id": "kern_oben_2",
+   "component_id": "rubber_core",
+   "material_id": "rubber",
+   "name": "Gummikern obere Halbschale",
+   "short": "Kern oben",
+   "shape": "cyl",
+   "x": 5.25,
+   "y": 5.25,
+   "w": 56.5,
+   "z": 45,
+   "h": 8,
+   "explode": [
+    0,
+    0,
+    78.5
+   ],
+   "mass": 6.74,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "info": "Halbschale aus Naturkautschuk mit Füllstoffen. Beide Hälften sind verklebt und unter Überdruck mit Luft gefüllt, darum springt der Ball.",
+   "color": "#55585A",
+   "label": false,
+   "sortBias": -1
+  },
+  {
+   "id": "kern_oben_3",
    "component_id": "rubber_core",
    "material_id": "rubber",
    "name": "Gummikern obere Halbschale",
@@ -322,13 +498,13 @@
    "y": 3,
    "w": 61,
    "z": 33.5,
-   "h": 14.5,
+   "h": 11.5,
    "explode": [
     0,
     0,
-    54.5
+    78.5
    ],
-   "mass": 13.68,
+   "mass": 11.3,
    "materials": [
     [
      "gummi",
@@ -337,7 +513,8 @@
    ],
    "info": "Halbschale aus Naturkautschuk mit Füllstoffen. Beide Hälften sind verklebt und unter Überdruck mit Luft gefüllt, darum springt der Ball.",
    "color": "#55585A",
-   "label": false
+   "label": false,
+   "sortBias": -1
   },
   {
    "id": "kern_unten_0",
@@ -349,14 +526,14 @@
    "x": 3,
    "y": 3,
    "w": 61,
-   "z": 19,
-   "h": 14.5,
+   "z": 22,
+   "h": 11.5,
    "explode": [
     0,
     0,
-    42.5
+    54.5
    ],
-   "mass": 13.68,
+   "mass": 11.3,
    "materials": [
     [
      "gummi",
@@ -365,6 +542,7 @@
    ],
    "info": "Innen hohl, die Wand ist nur gut 3 mm dick. Zum Trennen den Ball mit einer Säge halbieren, dabei entweicht zischend die Luft.",
    "color": "#55585A",
+   "sortBias": -1,
    "marks": [
     {
      "shape": "cyl",
@@ -382,17 +560,17 @@
    "name": "Gummikern untere Halbschale",
    "short": "Kern unten",
    "shape": "cyl",
-   "x": 6.65,
-   "y": 6.65,
-   "w": 53.7,
-   "z": 9,
-   "h": 10,
+   "x": 5.25,
+   "y": 5.25,
+   "w": 56.5,
+   "z": 14,
+   "h": 8,
    "explode": [
     0,
     0,
-    42.5
+    54.5
    ],
-   "mass": 7.31,
+   "mass": 6.74,
    "materials": [
     [
      "gummi",
@@ -401,7 +579,8 @@
    ],
    "info": "Innen hohl, die Wand ist nur gut 3 mm dick. Zum Trennen den Ball mit einer Säge halbieren, dabei entweicht zischend die Luft.",
    "color": "#55585A",
-   "label": false
+   "label": false,
+   "sortBias": -1
   },
   {
    "id": "kern_unten_2",
@@ -410,17 +589,17 @@
    "name": "Gummikern untere Halbschale",
    "short": "Kern unten",
    "shape": "cyl",
-   "x": 15.35,
-   "y": 15.35,
-   "w": 36.3,
-   "z": 3,
+   "x": 10.05,
+   "y": 10.05,
+   "w": 46.9,
+   "z": 8,
    "h": 6,
    "explode": [
     0,
     0,
-    42.5
+    54.5
    ],
-   "mass": 2,
+   "mass": 3.48,
    "materials": [
     [
      "gummi",
@@ -429,7 +608,37 @@
    ],
    "info": "Innen hohl, die Wand ist nur gut 3 mm dick. Zum Trennen den Ball mit einer Säge halbieren, dabei entweicht zischend die Luft.",
    "color": "#55585A",
-   "label": false
+   "label": false,
+   "sortBias": -1
+  },
+  {
+   "id": "kern_unten_3",
+   "component_id": "rubber_core",
+   "material_id": "rubber",
+   "name": "Gummikern untere Halbschale",
+   "short": "Kern unten",
+   "shape": "cyl",
+   "x": 16.75,
+   "y": 16.75,
+   "w": 33.5,
+   "z": 3,
+   "h": 5,
+   "explode": [
+    0,
+    0,
+    54.5
+   ],
+   "mass": 1.48,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "info": "Innen hohl, die Wand ist nur gut 3 mm dick. Zum Trennen den Ball mit einer Säge halbieren, dabei entweicht zischend die Luft.",
+   "color": "#55585A",
+   "label": false,
+   "sortBias": -1
   },
   {
    "id": "filz_unten_0",
@@ -441,14 +650,14 @@
    "x": 0,
    "y": 0,
    "w": 67,
-   "z": 17,
-   "h": 16.5,
+   "z": 22,
+   "h": 11.5,
    "explode": [
     0,
     0,
     0.0
    ],
-   "mass": 3.71,
+   "mass": 2.74,
    "materials": [
     [
      "wolle",
@@ -482,17 +691,17 @@
    "name": "Filzbezug untere Hälfte",
    "short": "Filz unten",
    "shape": "cyl",
-   "x": 4.35,
-   "y": 4.35,
-   "w": 58.3,
-   "z": 7,
-   "h": 10,
+   "x": 2.05,
+   "y": 2.05,
+   "w": 62.9,
+   "z": 14,
+   "h": 8,
    "explode": [
     0,
     0,
     0.0
    ],
-   "mass": 1.7,
+   "mass": 1.68,
    "materials": [
     [
      "wolle",
@@ -518,17 +727,89 @@
    "name": "Filzbezug untere Hälfte",
    "short": "Filz unten",
    "shape": "cyl",
-   "x": 13,
-   "y": 13,
-   "w": 41,
-   "z": 0,
-   "h": 7,
+   "x": 6.25,
+   "y": 6.25,
+   "w": 54.5,
+   "z": 8,
+   "h": 6,
    "explode": [
     0,
     0,
     0.0
    ],
-   "mass": 0.59,
+   "mass": 0.95,
+   "materials": [
+    [
+     "wolle",
+     55
+    ],
+    [
+     "nylon",
+     40
+    ],
+    [
+     "klebstoff",
+     5
+    ]
+   ],
+   "info": "Zweites hantelförmiges Filzstück. Filz und Gummi lassen sich nicht recyceln: Restmüll.",
+   "color": "#D4E440",
+   "label": false
+  },
+  {
+   "id": "filz_unten_3",
+   "component_id": "felt_cover",
+   "material_id": "wool",
+   "name": "Filzbezug untere Hälfte",
+   "short": "Filz unten",
+   "shape": "cyl",
+   "x": 11.75,
+   "y": 11.75,
+   "w": 43.5,
+   "z": 3,
+   "h": 5,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 0.5,
+   "materials": [
+    [
+     "wolle",
+     55
+    ],
+    [
+     "nylon",
+     40
+    ],
+    [
+     "klebstoff",
+     5
+    ]
+   ],
+   "info": "Zweites hantelförmiges Filzstück. Filz und Gummi lassen sich nicht recyceln: Restmüll.",
+   "color": "#D4E440",
+   "label": false
+  },
+  {
+   "id": "filz_unten_4",
+   "component_id": "felt_cover",
+   "material_id": "wool",
+   "name": "Filzbezug untere Hälfte",
+   "short": "Filz unten",
+   "shape": "cyl",
+   "x": 19.65,
+   "y": 19.65,
+   "w": 27.7,
+   "z": 0,
+   "h": 3,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 0.12,
    "materials": [
     [
      "wolle",

@@ -32,7 +32,7 @@ for i in range(3):
     roehren.append(teil(
         f'rohr_{i + 1}', 'abs_brick', 'Hohlröhren (3 Stück)' if i == 0 else f'Röhre {i + 1}', 'Röhren', 'cyl',
         x=round(7.9 + 8 * i - ROHR / 2, 2), y=round(T / 2 - ROHR / 2, 2), w=ROHR, z=0, h=HK, mass=0.12,
-        color=ROT, label=None if i == 0 else False,
+        color=ROT, label=None if i == 0 else False, sortBias=-1,
         info='Röhren an der Unterseite, zwischen die die Noppen eines anderen Steins greifen.' if i == 0
         else 'Weitere Röhre.',
         marks=[mark('cyl', (ROHR - NOPPE) / 2, (ROHR - NOPPE) / 2, NOPPE, fill=DUNKEL)]))

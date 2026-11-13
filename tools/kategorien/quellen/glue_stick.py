@@ -16,7 +16,8 @@ teile = [
     teil('kappe', 'pen_cap', 'Schraub-/Steckkappe', 'Kappe', 'cyl',
          x=0, y=0, w=30, z=70, h=30, mass=3.0,
          info='Dichte Kappe aus Polypropylen, damit der Kleber nicht austrocknet. Gleicher Kunststoff wie die Hülse.',
-         color=DECKEL, marks=[mark('cyl', 5, 5, 20, fill='#B83A2F')]),
+         color=DECKEL, marks=[mark('cyl', 3, 3, 24, fill='#C43F33'), mark('cyl', 7, 7, 16, fill='#B83A2F'),
+                              mark('cyl', 12, 12, 6, fill='#A53428')]),
     teil('klebemasse', 'glue_stick_tube', 'Klebemasse', 'Kleber', 'cyl',
          x=4, y=4, w=22, z=30, h=44, mass=21, materials=[['klebstoff', 100]],
          info='Fester Klebstoff aus Seife, PVP-Kunststoff und Wasser, lösemittelfrei und auswaschbar. Reste herauskratzen; '
@@ -34,6 +35,11 @@ teile = [
          x=1, y=1, w=28, z=10, h=64, mass=4.5,
          info='Bedruckte PP-Hülse. Ganz leer gedreht und ausgekratzt darf sie in die Gelbe Tonne; mit Kleberesten in den Restmüll.',
          color=WEISS, marks=[mark('cyl', 2, 2, 24, fill='#E4E1D8')]),
+    teil('etikett', 'glue_stick_tube', 'Bedrucktes Etikett', 'Etikett', 'cyl',
+         x=0.7, y=0.7, w=28.6, z=22, h=48, mass=0.4, explode=[-48, 0, 0], sortBias=5,
+         info='Dünne bedruckte PP-Folie, beim Spritzgießen mit der Hülse verschmolzen (In-Mould-Label). '
+              'Sie muss nicht abgezogen werden, weil sie aus demselben Kunststoff ist.',
+         color='#F2C230', marks=[mark('cyl', 0.4, 0.4, 27.8, fill='#D8D4CA')]),
     teil('drehknopf', 'glue_stick_tube', 'Drehknopf', 'Drehknopf', 'cyl',
          x=1, y=1, w=28, z=0, h=10, mass=1.7,
          info='Am Boden drehen, dann schraubt sich der Kleber heraus. Er ist in die Hülse eingeschnappt.',
@@ -47,6 +53,6 @@ for p in innen:
 for p in teile:
     if p['id'] in ('huelse', 'drehknopf'):
         p['explode'] = [0, 0, 0]
-explodiere(teile, abstand=14)
+explodiere(teile, abstand=26)
 skaliere_masse(teile, oid='glue_stick', stellen=2)
 schreibe('glue_stick', teile)

@@ -137,8 +137,8 @@
    "name": "Klingenschraube",
    "short": "Schraube",
    "shape": "cyl",
-   "x": 10,
-   "y": 8,
+   "x": 5.5,
+   "y": 13.5,
    "w": 5,
    "z": 18,
    "h": 2,
@@ -156,6 +156,7 @@
    ],
    "info": "Winzige Kreuzschlitzschraube M2. Mit einem Feinmechaniker-Schraubendreher lösen, dann kann man die Klinge tauschen.",
    "color": "#7B848B",
+   "sortBias": 4,
    "marks": [
     {
      "shape": "box",
@@ -182,13 +183,13 @@
    "name": "Messerklinge",
    "short": "Klinge",
    "shape": "box",
-   "x": 4,
+   "x": 3,
    "y": 4,
-   "w": 17,
+   "w": 12,
    "d": 27,
    "z": 17,
    "h": 1,
-   "r": 1,
+   "r": 0.8,
    "explode": [
     0,
     0,
@@ -201,24 +202,34 @@
      100
     ]
    ],
-   "info": "Gehärteter Stahl mit scharfer Schneide über dem Schlitz. Vorsicht beim Anfassen, alte Klingen eingewickelt zum Metall geben.",
+   "info": "Gehärteter Stahl, die Schneide (rechts) steht über dem Spanschlitz. Vorsicht beim Anfassen, alte Klingen eingewickelt zum Metall geben.",
    "color": "#C3C9CE",
+   "sortBias": 2,
    "marks": [
     {
      "shape": "box",
-     "x": 0,
-     "y": 20,
-     "w": 17,
-     "d": 1.5,
+     "x": 10.5,
+     "y": 0.8,
+     "w": 1.2,
+     "d": 25.4,
      "r": 0,
-     "fill": "#E3E7EA"
+     "fill": "#E8ECEF"
     },
     {
      "shape": "cyl",
-     "x": 6.5,
-     "y": 4.5,
+     "x": 3,
+     "y": 10,
      "w": 4,
      "fill": "#8A9298"
+    },
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 1,
+     "w": 8,
+     "d": 2,
+     "r": 0,
+     "fill": "#AEB5BA"
     }
    ]
   },
@@ -253,116 +264,92 @@
    "marks": [
     {
      "shape": "box",
-     "x": 3,
+     "x": 2,
      "y": 3,
-     "w": 19,
+     "w": 14,
      "d": 29,
      "r": 1,
      "fill": "#959DA4"
     },
     {
      "shape": "box",
-     "x": 4,
-     "y": 24,
-     "w": 17,
-     "d": 3,
-     "r": 0.5,
-     "fill": "#3A3F44"
+     "x": 15,
+     "y": 3,
+     "w": 3,
+     "d": 29,
+     "r": 1,
+     "fill": "#2E3236"
+    },
+    {
+     "shape": "cyl",
+     "x": 8,
+     "y": 15,
+     "w": 2,
+     "fill": "#5E666C"
     },
     {
      "shape": "box",
-     "x": 0,
+     "x": 19,
+     "y": 3,
+     "w": 4,
+     "d": 29,
+     "r": 1,
+     "fill": "#B3BBC1"
+    },
+    {
+     "shape": "box",
+     "x": 20,
      "y": 6,
-     "w": 2,
-     "d": 2,
+     "w": 3,
+     "d": 1.2,
      "fill": "#8C949B"
     },
     {
      "shape": "box",
-     "x": 0,
+     "x": 20,
      "y": 10,
-     "w": 2,
-     "d": 2,
+     "w": 3,
+     "d": 1.2,
      "fill": "#8C949B"
     },
     {
      "shape": "box",
-     "x": 0,
+     "x": 20,
      "y": 14,
-     "w": 2,
-     "d": 2,
+     "w": 3,
+     "d": 1.2,
      "fill": "#8C949B"
     },
     {
      "shape": "box",
-     "x": 0,
+     "x": 20,
      "y": 18,
-     "w": 2,
-     "d": 2,
+     "w": 3,
+     "d": 1.2,
      "fill": "#8C949B"
     },
     {
      "shape": "box",
-     "x": 0,
+     "x": 20,
      "y": 22,
-     "w": 2,
-     "d": 2,
+     "w": 3,
+     "d": 1.2,
      "fill": "#8C949B"
     },
     {
      "shape": "box",
-     "x": 0,
+     "x": 20,
      "y": 26,
-     "w": 2,
-     "d": 2,
+     "w": 3,
+     "d": 1.2,
      "fill": "#8C949B"
     },
     {
      "shape": "box",
-     "x": 23,
-     "y": 6,
-     "w": 2,
-     "d": 2,
-     "fill": "#8C949B"
-    },
-    {
-     "shape": "box",
-     "x": 23,
-     "y": 10,
-     "w": 2,
-     "d": 2,
-     "fill": "#8C949B"
-    },
-    {
-     "shape": "box",
-     "x": 23,
-     "y": 14,
-     "w": 2,
-     "d": 2,
-     "fill": "#8C949B"
-    },
-    {
-     "shape": "box",
-     "x": 23,
-     "y": 18,
-     "w": 2,
-     "d": 2,
-     "fill": "#8C949B"
-    },
-    {
-     "shape": "box",
-     "x": 23,
-     "y": 22,
-     "w": 2,
-     "d": 2,
-     "fill": "#8C949B"
-    },
-    {
-     "shape": "box",
-     "x": 23,
-     "y": 26,
-     "w": 2,
-     "d": 2,
+     "x": 20,
+     "y": 30,
+     "w": 3,
+     "d": 1.2,
      "fill": "#8C949B"
     }
    ]

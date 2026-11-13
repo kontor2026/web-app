@@ -350,6 +350,7 @@
    ],
    "info": "Röhren an der Unterseite, zwischen die die Noppen eines anderen Steins greifen.",
    "color": "#C8302A",
+   "sortBias": -1,
    "marks": [
     {
      "shape": "cyl",
@@ -387,6 +388,7 @@
    "info": "Weitere Röhre.",
    "color": "#C8302A",
    "label": false,
+   "sortBias": -1,
    "marks": [
     {
      "shape": "cyl",
@@ -424,6 +426,7 @@
    "info": "Weitere Röhre.",
    "color": "#C8302A",
    "label": false,
+   "sortBias": -1,
    "marks": [
     {
      "shape": "cyl",

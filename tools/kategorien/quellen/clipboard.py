@@ -41,6 +41,6 @@ teile = [
 for p in teile:
     if p['id'] == 'platte':
         p['explode'] = [0, 0, 0]
-explodiere(teile, abstand=15, gruppen=[['niete_links', 'niete_rechts']])
+explodiere(teile, abstand=28, gruppen=[['niete_links', 'niete_rechts']], abstaende={'hebel': 55})
 skaliere_masse(teile, oid='clipboard')
 schreibe('clipboard', teile)
