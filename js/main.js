@@ -419,6 +419,7 @@ function viewSheet() {
       </div>
     `, crumbs);
     panel.querySelectorAll('[data-mat]').forEach((b) => b.addEventListener('click', () => renderMaterial(id, b.dataset.mat, crumbs)));
+    panel.querySelectorAll('[data-el]').forEach((b) => b.addEventListener('click', () => renderElement(b.dataset.el, crumbs)));
     animate(panel.querySelectorAll('.mbar b'), { scaleX: [0, 1], transformOrigin: ['0% 50%', '0% 50%'], delay: stagger(60, { start: 200 }), duration: 600, ease: 'outExpo' });
   }
 
@@ -445,8 +446,32 @@ function viewSheet() {
         <div class="plist">${usedIn.map((p) => `<button class="prow" data-part="${p.id}"><span class="n">${nums.get(p.id) ?? '··'}</span><span>${p.name}</span><span class="m">${fmt(p.mass)} g</span></button>`).join('')}</div>
       </div>
     `, crumbs);
+    panel.querySelectorAll('[data-el]').forEach((b) => b.addEventListener('click', () => renderElement(b.dataset.el, crumbs)));
   }
 
+  function renderElement(sym, parentCrumbs) {
+    const e = ELEMENTS[sym];
+    const crumbs = [...parentCrumbs, { label: e.name, go: () => {} }];
+    const inParts = obj.parts.filter((p) => p.materials.some(([mid]) => MATERIALS[mid].elements.some(([s]) => s === sym)));
+    const krit = e.kritisch === true ? '<span class="yes">Ja, kritischer Rohstoff</span>' : e.kritisch === 'strategisch' ? 'Strategisch wichtig' : 'Nein';
+    setPanel(`
+      <div class="el-hero">
+        <div class="el ${e.kritisch === true ? 'crit' : ''}"><span class="z">${e.z}</span><span class="sym">${sym}</span><span class="nm">${e.name}</span></div>
+        <div><div class="eyebrow">Element</div><h1 style="margin-top:8px">${e.name}</h1></div>
+      </div>
+      <p>${e.fakt}</p>
+      <dl class="facts">
+        <div><dt>Abbau vor allem in</dt><dd>${e.herkunft}</dd></div>
+        <div><dt>EU-Einstufung</dt><dd>${krit}</dd></div>
+        <div><dt>Recycling heute</dt><dd><span class="tag ${e.recycling}">${e.recycling}</span></dd></div>
+      </dl>
+      <div>
+        <h3>In diesem Gegenstand enthalten in</h3>
+        <div class="plist">${inParts.map((p) => `<button class="prow" data-part="${p.id}"><span class="n">${nums.get(p.id) ?? '··'}</span><span>${p.name}</span><span class="m">${fmt(p.mass)} g</span></button>`).join('')}</div>
+      </div>
+      <p class="endnote">Ende der Kette. Ab hier geht es in die Chemie.</p>
+    `, crumbs);
+  }
 
   renderOverview();
 }
