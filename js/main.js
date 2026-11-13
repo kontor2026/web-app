@@ -182,6 +182,68 @@ function analyze(v, src, obj) {
   };
 }
 
+function showResult(v, obj) {
+  const side = v.querySelector('#side');
+  let cands, title, sub, note;
+  if (obj) {
+    state.obj = obj;
+    state.model = obj.erkennung.modelle[0][0];
+    title = obj.name;
+    sub = `Objektklasse ${pct(obj.erkennung.conf)} · ${obj.klasse}`;
+    cands = obj.erkennung.modelle.map(([name, c]) => ({ key: name, name, c }));
+    cands.push({ key: '?', name: 'Anderes Modell / weiß ich nicht', c: null });
+    note = obj.erkennung.hinweis;
+  } else {
+    state.obj = null;
+    title = 'Was liegt auf der Station?';
+    sub = 'Die Erkennung ist sich nicht sicher.';
+    const fake = [0.41, 0.27, 0.18, 0.08];
+    cands = OBJECTS.map((o, i) => ({ key: o.id, name: o.name, c: fake[i] }));
+    note = 'Im Mockup ist die Erkennung simuliert. Wähle den passenden Gegenstand aus.';
+  }
+
+  side.innerHTML = `
+    <div class="result">
+      <div>
+        <div class="eyebrow">${obj ? 'Erkannt' : 'Unsicher'}</div>
+        <h1 style="margin-top:8px">${title}</h1>
+        <div class="conf" style="margin-top:8px">${sub}</div>
+      </div>
+      <div>
+        <div class="eyebrow" style="margin-bottom:10px">${obj ? 'Welches Modell ist es?' : 'Bitte auswählen'}</div>
+        <div class="cands">
+          ${cands.map((c, i) => `
+            <button class="cand ${i === 0 && obj ? 'sel' : ''}" data-key="${c.key}">
+              <span class="radio"></span><span>${c.name}</span><span class="pct">${c.c == null ? '' : pct(c.c)}</span>
+              ${c.c == null ? '' : `<span class="bar"><i style="width:${c.c * 100}%"></i></span>`}
+            </button>`).join('')}
+        </div>
+      </div>
+      <p class="note">${note}</p>
+    </div>
+    <div class="actions-col">
+      <button class="btn primary" id="go" ${obj ? '' : 'disabled style="opacity:.4"'}>Steckbrief öffnen <span class="k">↵</span></button>
+      <button class="btn ghost" id="again">Nochmal scannen</button>
+    </div>`;
+
+  side.querySelectorAll('.cand').forEach((b) => b.addEventListener('click', () => {
+    side.querySelectorAll('.cand').forEach((x) => x.classList.remove('sel'));
+    b.classList.add('sel');
+    if (obj) {
+      state.model = b.dataset.key === '?' ? obj.name : b.dataset.key;
+    } else {
+      state.obj = getObject(b.dataset.key);
+      state.model = state.obj.erkennung.modelle[0][0];
+      const go = side.querySelector('#go');
+      go.disabled = false; go.style.opacity = 1;
+    }
+  }));
+  side.querySelector('#go').addEventListener('click', () => state.obj && viewSheet());
+  side.querySelector('#again').addEventListener('click', viewScan);
+  animate(side.querySelectorAll('.result > *, .cand, .actions-col'), { opacity: [0, 1], translateY: [10, 0], delay: stagger(60), duration: 420, ease: 'outCubic' });
+  animate(side.querySelectorAll('.cand .bar i'), { scaleX: [0, 1], transformOrigin: ['0% 50%', '0% 50%'], delay: stagger(80, { start: 300 }), duration: 700, ease: 'outExpo' });
+}
+
 document.querySelector('.brand').addEventListener('click', viewScan);
 
 // Direkteinstieg für Demo und Entwicklung: #sheet=laptop oder #craft=flasche
