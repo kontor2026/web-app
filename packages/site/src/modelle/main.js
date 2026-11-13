@@ -19,14 +19,17 @@ app.innerHTML = `
   <div class="canvas">
     <div class="canvas-head">
       <div><h2 id="titel">…</h2><p id="masse"></p></div>
+      <div class="kopf-rechts">
+      <button class="nummern-schalter" id="nummern" aria-pressed="true" title="Nummern ein- oder ausblenden (Taste N)">Nummern</button>
       <div class="seg" role="group" aria-label="Ansicht">
         <button data-x="0">Zusammengebaut</button><button data-x="1" class="on">Explodiert</button>
+      </div>
       </div>
     </div>
     <div class="drawing" id="szene" aria-label="3D-Modell, mit der Maus drehbar"></div>
     <div class="legend" id="legende"></div>
     <div class="titleblock" id="titelblock"></div>
-    <div class="hint-hover" id="hinweis">Ziehen dreht · Scrollen zoomt · Teil antippen zeigt Details</div>
+    <div class="hint-hover" id="hinweis">Ziehen dreht · Scrollen zoomt · Teil antippen zeigt Details · N blendet Nummern aus</div>
   </div>
   <aside class="panel" id="panel"></aside>
   <div class="actionbar">
@@ -162,6 +165,17 @@ function setzeExplosion(ziel, animiert = true) {
   schritt(performance.now());
 }
 document.querySelectorAll('.modelle .seg button').forEach((b) => b.addEventListener('click', () => setzeExplosion(+b.dataset.x)));
+
+// ---------- Nummern ein-/ausblenden, Wahl bleibt gespeichert ----------
+const schalter = document.getElementById('nummern');
+function setzeNummern(an) {
+  schalter.setAttribute('aria-pressed', String(an));
+  schalter.classList.toggle('on', an);
+  labels.domElement.classList.toggle('ohne-nummern', !an);
+  localStorage.setItem('modelle-nummern', an ? 'an' : 'aus');
+}
+schalter.addEventListener('click', () => setzeNummern(schalter.getAttribute('aria-pressed') !== 'true'));
+setzeNummern(localStorage.getItem('modelle-nummern') !== 'aus');
 
 // ---------- Hervorheben wie .has-hot in der Station ----------
 function markiere(t) {
@@ -339,6 +353,7 @@ addEventListener('keydown', (e) => {
   if (e.key === 'ArrowRight') blaettere(1);
   if (e.key === 'ArrowLeft') blaettere(-1);
   if (e.key === 'Escape') waehleTeil(null);
+  if (e.key === 'n' || e.key === 'N') schalter.click();
 });
 const ausHash = () => oeffne(location.hash.match(/kat=([\w-]+)/)?.[1] ?? 'smartphone');
 addEventListener('hashchange', ausHash);
