@@ -9,22 +9,32 @@ from bau import teil, mark, raster, explodiere, skaliere_masse, schreibe  # noqa
 # Körper aus ABS (Kopfschale und Griff aus einem Stück) mit Soft-Touch-Einlage im Griff. In der Kopfschale sitzt
 # ein Gummikissen, durch das die Nylonborsten mit Kugelspitzen gesteckt sind. Explodiert: Ebenen nach oben.
 ABS = '#3A3F44'
-PINS = raster(3, 4.5, 9, 15, 2, 2, 5.6, 5.6, shape='cyl', fill='#B8BEC4')
+
+# Stiftpositionen: 6 × 10 Raster im Kissen, Ecken (außerhalb des abgerundeten Kissens) ausgelassen
+POS = []
+for j in range(10):
+    for i in range(6):
+        px, py = 12.7 + i * 9, 13.5 + j * 9
+        dx, dy = abs(px + 1.3 - 35) / 30, abs(py + 1.3 - 53) / 48
+        if not (dx > 0.65 and dy > 0.75):
+            POS.append((px, py))
+
+PINS = [teil(f'borste_{k}', 'nylon_bristles', 'Nylonborste mit Kugelspitze', 'Borsten', 'cyl',
+             x=px, y=py, w=2.6, z=17, h=25, mass=0.25, materials=[['nylon', 85], ['pp', 15]],
+             color='#7A8288', label=(k == 0), marks=[mark('cyl', 0, 0, 2.6, fill='#D9473A')],
+             info='Dicker Nylonstift mit aufgesetzter Kunststoffkugel, die die Kopfhaut schont. Der Fuß steckt im '
+                  'Gummikissen; mit einer Zange lassen sich die Stifte herausziehen.' if k == 0 else
+                  'Eine von vielen Nylonborsten mit Kugelspitze.')
+        for k, (px, py) in enumerate(POS)]
+LOECHER = [mark('cyl', px - 6 - 0.2, py - 6 - 0.2, 3, fill='#3A3F44') for px, py in POS]
 
 teile = [
-    teil('kugelspitzen', 'nylon_bristles', 'Kugelspitzen', 'Kugelspitzen', 'box', material_id='pp',
-         x=9, y=9, w=52, d=88, z=42, h=3, r=22, mass=3, materials=[['pp', 100]],
-         info='Kleine Kunststoffkugeln auf den Borstenenden. Sie schonen die Kopfhaut beim Bürsten.',
-         color='#D9473A', marks=raster(3, 4.5, 9, 15, 2.6, 2.6, 5.6, 5.6, shape='cyl', fill='#B5372C')),
-    teil('borsten', 'nylon_bristles', 'Nylonborsten', 'Borsten', 'box',
-         x=9, y=9, w=52, d=88, z=17, h=25, r=22, mass=12,
-         info='Rund 130 dicke Nylonstifte, mit dem Fuß im Gummikissen verankert. Mit einer Zange lassen sie sich herausziehen.',
-         color='#2B2D2F', opacity=0.85, marks=PINS),
+    *PINS,
     teil('kissen', 'rubber_cushion', 'Gummikissen', 'Kissen', 'box',
          x=6, y=6, w=58, d=94, z=12, h=5, r=25, mass=10,
          info='Elastisches Luftkissen aus Gummi, das beim Bürsten nachgibt. Mit einem flachen Werkzeug '
               'am Rand aus der Schale hebeln, dann sind Gummi und Kunststoff getrennt.',
-         color='#1E2022', marks=raster(6, 7.5, 9, 15, 2, 2, 5.6, 5.6, shape='cyl', fill='#3A3F44') + [mark('cyl', 26, 87, 6, fill='#000000')]),
+         color='#1E2022', marks=LOECHER + [mark('cyl', 26, 88, 5, fill='#000000')]),
     teil('griffeinlage', 'hairbrush_body', 'Soft-Touch-Einlage', 'Griffeinlage', 'box', material_id='rubber',
          x=26, y=140, w=18, d=70, z=12, h=1, r=8, mass=2, materials=[['tpe', 100]],
          info='Weiche, rutschfeste Einlage aus TPE im Griff. Sie ist eingeklebt oder angespritzt.',
@@ -40,6 +50,6 @@ teile = [
          color=ABS, marks=[mark('box', 5, 34, 18, 70, 8, '#6E747A'), mark('cyl', 9, 110, 10, fill='#1E2022')]),
 ]
 
-explodiere(teile, abstand=28, gruppen=[['kopfschale', 'griff']])
+explodiere(teile, abstand=28, gruppen=[['kopfschale', 'griff'], [p['id'] for p in PINS]])
 skaliere_masse(teile, oid='hairbrush')
 schreibe('hairbrush', teile)

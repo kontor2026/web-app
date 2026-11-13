@@ -5723,7 +5723,7 @@
    "component_id": "paper_envelope_body",
    "material_id": "paper",
    "name": "Abdeckstreifen (silikonisiert)",
-   "short": "Abdeckstreifen",
+   "short": "Abdeckpapier",
    "shape": "box",
    "x": 8,
    "y": 8,
@@ -5734,8 +5734,8 @@
    "r": 0,
    "explode": [
     0,
-    0,
-    50.0
+    -70,
+    40
    ],
    "mass": 0.3,
    "materials": [
@@ -5750,6 +5750,7 @@
    ],
    "info": "Silikonbeschichtetes Papier, das den Kleber schützt. Abziehen und in den Restmüll, die Beschichtung stört im Altpapier.",
    "color": "#F2EFE6",
+   "sortBias": 100,
    "marks": [
     {
      "shape": "box",
@@ -5767,7 +5768,7 @@
    "component_id": "paper_envelope_body",
    "material_id": "paper",
    "name": "Haftklebestreifen",
-   "short": "Klebestreifen",
+   "short": "Kleber",
    "shape": "box",
    "x": 10,
    "y": 10,
@@ -5778,8 +5779,8 @@
    "r": 0,
    "explode": [
     0,
-    0,
-    25.0
+    -70,
+    15
    ],
    "mass": 0.2,
    "materials": [
@@ -5789,7 +5790,8 @@
     ]
    ],
    "info": "Druckempfindlicher Kleber auf der Klappe. Klappe umlegen und fest andrücken, dann ist der Umschlag zu.",
-   "color": "#E8DDB5"
+   "color": "#E8DDB5",
+   "sortBias": 100
   },
   {
    "id": "rueckseite",

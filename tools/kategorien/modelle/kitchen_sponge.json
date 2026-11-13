@@ -449,6 +449,259 @@
    "color": "#E8E1C8"
   },
   {
+   "id": "schaum_oben",
+   "component_id": "sponge_foam",
+   "material_id": "pu_foam",
+   "name": "Schaumstoffkörper (oben)",
+   "short": "Schaum",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 70,
+   "d": 100,
+   "z": 15,
+   "h": 8.7,
+   "r": 6,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 2.6,
+   "materials": [
+    [
+     "schaum",
+     100
+    ]
+   ],
+   "info": "Oberer Teil des Schaumstoffs unter dem Vlies.",
+   "color": "#F2CF3B",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 10,
+     "y": 10,
+     "w": 3,
+     "d": 3,
+     "fill": "#E0BC2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 25,
+     "y": 10,
+     "w": 3,
+     "d": 3,
+     "fill": "#E0BC2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 40,
+     "y": 10,
+     "w": 3,
+     "d": 3,
+     "fill": "#E0BC2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 55,
+     "y": 10,
+     "w": 3,
+     "d": 3,
+     "fill": "#E0BC2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 10,
+     "y": 25,
+     "w": 3,
+     "d": 3,
+     "fill": "#E0BC2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 25,
+     "y": 25,
+     "w": 3,
+     "d": 3,
+     "fill": "#E0BC2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 40,
+     "y": 25,
+     "w": 3,
+     "d": 3,
+     "fill": "#E0BC2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 55,
+     "y": 25,
+     "w": 3,
+     "d": 3,
+     "fill": "#E0BC2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 10,
+     "y": 40,
+     "w": 3,
+     "d": 3,
+     "fill": "#E0BC2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 25,
+     "y": 40,
+     "w": 3,
+     "d": 3,
+     "fill": "#E0BC2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 40,
+     "y": 40,
+     "w": 3,
+     "d": 3,
+     "fill": "#E0BC2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 55,
+     "y": 40,
+     "w": 3,
+     "d": 3,
+     "fill": "#E0BC2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 10,
+     "y": 55,
+     "w": 3,
+     "d": 3,
+     "fill": "#E0BC2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 25,
+     "y": 55,
+     "w": 3,
+     "d": 3,
+     "fill": "#E0BC2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 40,
+     "y": 55,
+     "w": 3,
+     "d": 3,
+     "fill": "#E0BC2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 55,
+     "y": 55,
+     "w": 3,
+     "d": 3,
+     "fill": "#E0BC2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 10,
+     "y": 70,
+     "w": 3,
+     "d": 3,
+     "fill": "#E0BC2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 25,
+     "y": 70,
+     "w": 3,
+     "d": 3,
+     "fill": "#E0BC2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 40,
+     "y": 70,
+     "w": 3,
+     "d": 3,
+     "fill": "#E0BC2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 55,
+     "y": 70,
+     "w": 3,
+     "d": 3,
+     "fill": "#E0BC2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 10,
+     "y": 85,
+     "w": 3,
+     "d": 3,
+     "fill": "#E0BC2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 25,
+     "y": 85,
+     "w": 3,
+     "d": 3,
+     "fill": "#E0BC2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 40,
+     "y": 85,
+     "w": 3,
+     "d": 3,
+     "fill": "#E0BC2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 55,
+     "y": 85,
+     "w": 3,
+     "d": 3,
+     "fill": "#E0BC2C"
+    }
+   ]
+  },
+  {
+   "id": "schaum_mitte",
+   "component_id": "sponge_foam",
+   "material_id": "pu_foam",
+   "name": "Griffmulde",
+   "short": "Griffmulde",
+   "shape": "box",
+   "x": 4,
+   "y": 4,
+   "w": 62,
+   "d": 92,
+   "z": 9,
+   "h": 6,
+   "r": 4,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 1.6,
+   "materials": [
+    [
+     "schaum",
+     100
+    ]
+   ],
+   "info": "Die rundum eingeschnittene Mulde: Hier liegen die Finger, damit der nasse Schwamm nicht aus der Hand rutscht.",
+   "color": "#D9B42A"
+  },
+  {
    "id": "schaum",
    "component_id": "sponge_foam",
    "material_id": "pu_foam",
@@ -460,14 +713,14 @@
    "w": 70,
    "d": 100,
    "z": 0,
-   "h": 23.7,
+   "h": 9,
    "r": 6,
    "explode": [
     0,
     0,
     0.0
    ],
-   "mass": 6.6,
+   "mass": 2.4,
    "materials": [
     [
      "schaum",
@@ -477,24 +730,6 @@
    "info": "Offenporiger Polyurethan-Schaum, der viel Wasser aufsaugt. Alte Schwämme gehören in den Restmüll; regelmäßig wechseln, weil sich im feuchten Schaum Keime vermehren.",
    "color": "#F2CF3B",
    "marks": [
-    {
-     "shape": "box",
-     "x": 0,
-     "y": 30,
-     "w": 4,
-     "d": 40,
-     "r": 2,
-     "fill": "#D9B42A"
-    },
-    {
-     "shape": "box",
-     "x": 66,
-     "y": 30,
-     "w": 4,
-     "d": 40,
-     "r": 2,
-     "fill": "#D9B42A"
-    },
     {
      "shape": "cyl",
      "x": 10,

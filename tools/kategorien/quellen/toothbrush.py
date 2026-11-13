@@ -12,10 +12,14 @@ from bau import teil, mark, raster, explodiere, skaliere_masse, schreibe  # noqa
 PP = '#3B7DD8'
 
 teile = [
+    teil('borsten_spitze', 'nylon_bristles', 'Indikatorborsten', 'Indikator', 'box',
+         x=4.5, y=1.5, w=11, d=5, z=9, h=12, r=2.5, mass=0.2, sortBias=-1.5,
+         info='Gefärbte Büschel vorne am Kopf. Wenn die Farbe verblasst, ist es Zeit für eine neue Bürste.',
+         color='#3B9BD8', marks=raster(0.7, 1.3, 4, 1, 2, 2, 2.6, shape='cyl', fill='#2A7FB8')),
     teil('borsten', 'nylon_bristles', 'Borstenfeld', 'Borsten', 'box',
-         x=4.5, y=1.5, w=11, d=25, z=9, h=11, r=4, mass=1.0,
+         x=4.5, y=6.5, w=11, d=20, z=9, h=11, r=3, mass=0.8,
          info='Rund 30 Büschel aus Nylonfäden mit abgerundeten Enden. Wer sauberen Kunststoff will, zieht sie mit einer Zange heraus.',
-         color='#F4F6F8', marks=raster(0.7, 0.5, 4, 8, 2, 2, 2.6, 3.1, shape='cyl', fill='#BFE3F5')),
+         color='#F4F6F8', marks=raster(0.7, 0.6, 4, 6, 2, 2, 2.6, 3.1, shape='cyl', fill='#BFE3F5')),
     teil('anker', 'nylon_bristles', 'Borstenanker', 'Anker', 'box', material_id='copper',
          x=5, y=2, w=10, d=24, z=7.5, h=1.5, r=2, mass=0.2, materials=[['messing', 100]],
          info='Winzige Metallplättchen aus Messingdraht, die jedes Büschel in der Bohrung festklemmen. '
@@ -30,6 +34,10 @@ teile = [
          x=4, y=0, w=12, d=28, z=4, h=5, r=5, mass=1.2,
          info='Der Kopf hat Bohrungen für die Borstenbüschel. Zahnärzte empfehlen, die Bürste alle drei Monate zu wechseln.',
          color=PP),
+    teil('daumenauflage', 'toothbrush_handle', 'Daumenauflage', 'Daumen', 'box', material_id='rubber',
+         x=7.5, y=40, w=5, d=14, z=9, h=1, r=2.5, mass=0.2, materials=[['tpe', 100]],
+         info='Kleines geriffeltes Gummipolster am Hals, auf dem der Daumen liegt. Angespritzt, nicht lösbar.',
+         color='#9CD3F0', marks=raster(1, 1.5, 1, 4, 3, 1.2, 0, 3, r=0.5, fill='#7FBEDF')),
     teil('hals', 'toothbrush_handle', 'Hals', 'Hals', 'box',
          x=6.5, y=28, w=7, d=32, z=3, h=6, r=3, mass=1.1,
          info='Schmaler, leicht federnder Übergang zwischen Kopf und Griff.', color=PP),
@@ -39,6 +47,6 @@ teile = [
          color=PP, marks=[mark('box', 3, 20, 10, 50, 5, '#9CD3F0')]),
 ]
 
-explodiere(teile, abstand=12, gruppen=[['kopf', 'hals', 'griff']])
+explodiere(teile, abstand=12, gruppen=[['kopf', 'hals', 'griff']], abstaende={'daumenauflage': 8})
 skaliere_masse(teile, oid='toothbrush', stellen=2)
 schreibe('toothbrush', teile)

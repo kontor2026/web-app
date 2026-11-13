@@ -19,14 +19,21 @@ teile = [
          x=0.5, y=0.5, w=69, d=99, z=23.7, h=0.3, r=6, mass=0.4, materials=[['klebstoff', 100]],
          info='Dünner Kleberfilm, der Vlies und Schaum fest verbindet. Deshalb lassen sich die beiden Schichten nicht trennen.',
          color='#E8E1C8'),
+    teil('schaum_oben', 'sponge_foam', 'Schaumstoffkörper (oben)', 'Schaum', 'box',
+         x=0, y=0, w=70, d=100, z=15, h=8.7, r=6, mass=2.6, label=False,
+         info='Oberer Teil des Schaumstoffs unter dem Vlies.',
+         color='#F2CF3B', marks=raster(10, 10, 4, 6, 3, 3, 15, 15, shape='cyl', fill='#E0BC2C')),
+    teil('schaum_mitte', 'sponge_foam', 'Griffmulde', 'Griffmulde', 'box',
+         x=4, y=4, w=62, d=92, z=9, h=6, r=4, mass=1.6,
+         info='Die rundum eingeschnittene Mulde: Hier liegen die Finger, damit der nasse Schwamm nicht aus der Hand rutscht.',
+         color='#D9B42A'),
     teil('schaum', 'sponge_foam', 'Schaumstoffkörper', 'Schaum', 'box',
-         x=0, y=0, w=70, d=100, z=0, h=23.7, r=6, mass=6.6,
+         x=0, y=0, w=70, d=100, z=0, h=9, r=6, mass=2.4,
          info='Offenporiger Polyurethan-Schaum, der viel Wasser aufsaugt. Alte Schwämme gehören in den Restmüll; '
               'regelmäßig wechseln, weil sich im feuchten Schaum Keime vermehren.',
-         color='#F2CF3B', marks=[mark('box', 0, 30, 4, 40, 2, '#D9B42A'), mark('box', 66, 30, 4, 40, 2, '#D9B42A')]
-         + raster(10, 10, 4, 6, 3, 3, 15, 15, shape='cyl', fill='#E0BC2C')),
+         color='#F2CF3B', marks=raster(10, 10, 4, 6, 3, 3, 15, 15, shape='cyl', fill='#E0BC2C')),
 ]
 
-explodiere(teile, abstand=35)
+explodiere(teile, abstand=35, gruppen=[['schaum_oben', 'schaum_mitte', 'schaum']])
 skaliere_masse(teile, oid='kitchen_sponge')
 schreibe('kitchen_sponge', teile)

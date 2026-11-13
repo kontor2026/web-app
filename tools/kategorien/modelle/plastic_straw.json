@@ -37,23 +37,23 @@
    ]
   },
   {
-   "id": "gelenk",
+   "id": "gelenk_0",
    "component_id": "pp_straw",
    "material_id": "pp",
    "name": "Faltenbalg (Knickgelenk)",
    "short": "Knickgelenk",
    "shape": "cyl",
-   "x": 0,
-   "y": 0,
-   "w": 6,
-   "z": 140,
-   "h": 20,
+   "x": -0.3999999999999999,
+   "y": -0.3999999999999999,
+   "w": 6.8,
+   "z": 158,
+   "h": 2,
    "explode": [
     0,
     0,
     15.0
    ],
-   "mass": 0.12,
+   "mass": 0.012,
    "materials": [
     [
      "pp",
@@ -62,22 +62,268 @@
    ],
    "info": "Eingeprägte Rillen wie bei einer Ziehharmonika. Dadurch lässt sich der Halm knicken, ohne dass er zusammenfällt.",
    "color": "#F07A83",
+   "label": true,
    "marks": [
     {
      "shape": "cyl",
-     "x": 0.3,
-     "y": 0.3,
-     "w": 5.4,
-     "fill": "#D64550"
-    },
-    {
-     "shape": "cyl",
-     "x": 0.6,
-     "y": 0.6,
+     "x": 1.0,
+     "y": 1.0,
      "w": 4.8,
      "fill": "#7A2A30"
     }
    ]
+  },
+  {
+   "id": "gelenk_1",
+   "component_id": "pp_straw",
+   "material_id": "pp",
+   "name": "Faltenbalg (Knickgelenk)",
+   "short": "Knickgelenk",
+   "shape": "cyl",
+   "x": 0.20000000000000018,
+   "y": 0.20000000000000018,
+   "w": 5.6,
+   "z": 156,
+   "h": 2,
+   "explode": [
+    0,
+    0,
+    15.0
+   ],
+   "mass": 0.012,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Eine Falte des Knickgelenks.",
+   "color": "#D64550",
+   "label": false
+  },
+  {
+   "id": "gelenk_2",
+   "component_id": "pp_straw",
+   "material_id": "pp",
+   "name": "Faltenbalg (Knickgelenk)",
+   "short": "Knickgelenk",
+   "shape": "cyl",
+   "x": -0.3999999999999999,
+   "y": -0.3999999999999999,
+   "w": 6.8,
+   "z": 154,
+   "h": 2,
+   "explode": [
+    0,
+    0,
+    15.0
+   ],
+   "mass": 0.012,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Eine Falte des Knickgelenks.",
+   "color": "#F07A83",
+   "label": false
+  },
+  {
+   "id": "gelenk_3",
+   "component_id": "pp_straw",
+   "material_id": "pp",
+   "name": "Faltenbalg (Knickgelenk)",
+   "short": "Knickgelenk",
+   "shape": "cyl",
+   "x": 0.20000000000000018,
+   "y": 0.20000000000000018,
+   "w": 5.6,
+   "z": 152,
+   "h": 2,
+   "explode": [
+    0,
+    0,
+    15.0
+   ],
+   "mass": 0.012,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Eine Falte des Knickgelenks.",
+   "color": "#D64550",
+   "label": false
+  },
+  {
+   "id": "gelenk_4",
+   "component_id": "pp_straw",
+   "material_id": "pp",
+   "name": "Faltenbalg (Knickgelenk)",
+   "short": "Knickgelenk",
+   "shape": "cyl",
+   "x": -0.3999999999999999,
+   "y": -0.3999999999999999,
+   "w": 6.8,
+   "z": 150,
+   "h": 2,
+   "explode": [
+    0,
+    0,
+    15.0
+   ],
+   "mass": 0.012,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Eine Falte des Knickgelenks.",
+   "color": "#F07A83",
+   "label": false
+  },
+  {
+   "id": "gelenk_5",
+   "component_id": "pp_straw",
+   "material_id": "pp",
+   "name": "Faltenbalg (Knickgelenk)",
+   "short": "Knickgelenk",
+   "shape": "cyl",
+   "x": 0.20000000000000018,
+   "y": 0.20000000000000018,
+   "w": 5.6,
+   "z": 148,
+   "h": 2,
+   "explode": [
+    0,
+    0,
+    15.0
+   ],
+   "mass": 0.012,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Eine Falte des Knickgelenks.",
+   "color": "#D64550",
+   "label": false
+  },
+  {
+   "id": "gelenk_6",
+   "component_id": "pp_straw",
+   "material_id": "pp",
+   "name": "Faltenbalg (Knickgelenk)",
+   "short": "Knickgelenk",
+   "shape": "cyl",
+   "x": -0.3999999999999999,
+   "y": -0.3999999999999999,
+   "w": 6.8,
+   "z": 146,
+   "h": 2,
+   "explode": [
+    0,
+    0,
+    15.0
+   ],
+   "mass": 0.012,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Eine Falte des Knickgelenks.",
+   "color": "#F07A83",
+   "label": false
+  },
+  {
+   "id": "gelenk_7",
+   "component_id": "pp_straw",
+   "material_id": "pp",
+   "name": "Faltenbalg (Knickgelenk)",
+   "short": "Knickgelenk",
+   "shape": "cyl",
+   "x": 0.20000000000000018,
+   "y": 0.20000000000000018,
+   "w": 5.6,
+   "z": 144,
+   "h": 2,
+   "explode": [
+    0,
+    0,
+    15.0
+   ],
+   "mass": 0.012,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Eine Falte des Knickgelenks.",
+   "color": "#D64550",
+   "label": false
+  },
+  {
+   "id": "gelenk_8",
+   "component_id": "pp_straw",
+   "material_id": "pp",
+   "name": "Faltenbalg (Knickgelenk)",
+   "short": "Knickgelenk",
+   "shape": "cyl",
+   "x": -0.3999999999999999,
+   "y": -0.3999999999999999,
+   "w": 6.8,
+   "z": 142,
+   "h": 2,
+   "explode": [
+    0,
+    0,
+    15.0
+   ],
+   "mass": 0.012,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Eine Falte des Knickgelenks.",
+   "color": "#F07A83",
+   "label": false
+  },
+  {
+   "id": "gelenk_9",
+   "component_id": "pp_straw",
+   "material_id": "pp",
+   "name": "Faltenbalg (Knickgelenk)",
+   "short": "Knickgelenk",
+   "shape": "cyl",
+   "x": 0.20000000000000018,
+   "y": 0.20000000000000018,
+   "w": 5.6,
+   "z": 140,
+   "h": 2,
+   "explode": [
+    0,
+    0,
+    15.0
+   ],
+   "mass": 0.012,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Eine Falte des Knickgelenks.",
+   "color": "#D64550",
+   "label": false
   },
   {
    "id": "rohr",

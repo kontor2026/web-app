@@ -141,25 +141,25 @@
    ]
   },
   {
-   "id": "henkel",
+   "id": "henkel_oben",
    "component_id": "ceramic_body",
    "material_id": "ceramic",
    "name": "Henkel",
    "short": "Henkel",
    "shape": "box",
-   "x": 74,
+   "x": 76,
    "y": 33,
-   "w": 21,
+   "w": 19,
    "d": 12,
-   "z": 20,
-   "h": 60,
-   "r": 6,
+   "z": 68,
+   "h": 10,
+   "r": 4,
    "explode": [
     35,
     0,
     0
    ],
-   "mass": 32,
+   "mass": 10,
    "materials": [
     [
      "keramik",
@@ -168,17 +168,80 @@
    ],
    "info": "Separat geformt und vor dem Brennen mit flüssigem Ton (Schlicker) angesetzt. Nach dem Brand ist er fest mit dem Becher verbunden.",
    "color": "#3F7FA6",
+   "sortBias": 40,
    "marks": [
     {
      "shape": "box",
-     "x": 4,
+     "x": 2,
      "y": 2,
-     "w": 13,
+     "w": 15,
      "d": 8,
-     "r": 4,
-     "fill": "#346C8E"
+     "r": 3,
+     "fill": "#4A8DB5"
     }
    ]
+  },
+  {
+   "id": "henkel_griff",
+   "component_id": "ceramic_body",
+   "material_id": "ceramic",
+   "name": "Henkel (Griffbogen)",
+   "short": "Henkel",
+   "shape": "box",
+   "x": 86,
+   "y": 33,
+   "w": 9.5,
+   "d": 12,
+   "z": 26,
+   "h": 42,
+   "r": 4,
+   "explode": [
+    35,
+    0,
+    0
+   ],
+   "mass": 14,
+   "materials": [
+    [
+     "keramik",
+     100
+    ]
+   ],
+   "info": "Der senkrechte Bogen, an dem man den Becher hält.",
+   "color": "#3F7FA6",
+   "label": false,
+   "sortBias": 40
+  },
+  {
+   "id": "henkel_unten",
+   "component_id": "ceramic_body",
+   "material_id": "ceramic",
+   "name": "Henkel (unterer Ansatz)",
+   "short": "Henkel",
+   "shape": "box",
+   "x": 76,
+   "y": 33,
+   "w": 10,
+   "d": 12,
+   "z": 26,
+   "h": 10,
+   "r": 4,
+   "explode": [
+    35,
+    0,
+    0
+   ],
+   "mass": 8,
+   "materials": [
+    [
+     "keramik",
+     100
+    ]
+   ],
+   "info": "Unterer Ansatzpunkt des Henkels. Hier bricht ein Henkel am häufigsten ab.",
+   "color": "#3F7FA6",
+   "label": false,
+   "sortBias": 40
   }
  ]
 }

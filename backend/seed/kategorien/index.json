@@ -316,7 +316,7 @@
   "name": "Kugelschreiber",
   "name_en": "Ballpoint Pen",
   "klasse": "Restmüll",
-  "teile": 7,
+  "teile": 10,
   "platzhalter": false
  },
  {
@@ -324,7 +324,7 @@
   "name": "Bleistift",
   "name_en": "Pencil",
   "klasse": "Restmüll",
-  "teile": 8,
+  "teile": 11,
   "platzhalter": false
  },
  {
@@ -380,7 +380,7 @@
   "name": "Sonnenbrille",
   "name_en": "Sunglasses",
   "klasse": "Restmüll",
-  "teile": 12,
+  "teile": 17,
   "platzhalter": false
  },
  {
@@ -876,7 +876,7 @@
   "name": "Trinkhalm",
   "name_en": "Plastic Straw",
   "klasse": "Restmüll",
-  "teile": 3,
+  "teile": 12,
   "platzhalter": false
  },
  {
@@ -972,7 +972,7 @@
   "name": "Küchenschwamm",
   "name_en": "Kitchen Sponge",
   "klasse": "Restmüll",
-  "teile": 3,
+  "teile": 5,
   "platzhalter": false
  },
  {
@@ -980,7 +980,7 @@
   "name": "Zahnbürste",
   "name_en": "Toothbrush",
   "klasse": "Restmüll",
-  "teile": 6,
+  "teile": 8,
   "platzhalter": false
  },
  {
@@ -988,7 +988,7 @@
   "name": "Einwegrasierer",
   "name_en": "Disposable Razor",
   "klasse": "Restmüll",
-  "teile": 8,
+  "teile": 9,
   "platzhalter": false
  },
  {
@@ -996,7 +996,7 @@
   "name": "Haarbürste",
   "name_en": "Hairbrush",
   "klasse": "Restmüll",
-  "teile": 6,
+  "teile": 60,
   "platzhalter": false
  },
  {
@@ -1004,7 +1004,7 @@
   "name": "Kamm",
   "name_en": "Comb",
   "klasse": "Restmüll",
-  "teile": 3,
+  "teile": 57,
   "platzhalter": false
  },
  {
@@ -1028,7 +1028,7 @@
   "name": "Kaffeebecher (Keramik)",
   "name_en": "Ceramic Mug",
   "klasse": "Restmüll",
-  "teile": 5,
+  "teile": 7,
   "platzhalter": false
  },
  {

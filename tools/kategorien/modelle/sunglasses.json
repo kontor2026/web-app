@@ -7,18 +7,18 @@
    "name": "Brillenglas links",
    "short": "Glas links",
    "shape": "cyl",
-   "x": 8,
-   "y": 4,
-   "w": 58,
-   "d": 42,
-   "z": 34,
+   "x": 10,
+   "y": 5,
+   "w": 54,
+   "d": 40,
+   "z": 36.5,
    "h": 2.5,
    "explode": [
     0,
     0,
-    64.0
+    69.5
    ],
-   "mass": 4.29,
+   "mass": 4.43,
    "materials": [
     [
      "pcabs",
@@ -27,14 +27,15 @@
    ],
    "info": "Getöntes Polycarbonat mit UV-Filter, oft zusätzlich verspiegelt. Von innen aus der Fassung drücken.",
    "color": "#3D3A2C",
-   "opacity": 0.7,
+   "opacity": 0.75,
+   "sortBias": 1,
    "marks": [
     {
      "shape": "cyl",
      "x": 8,
-     "y": 6,
-     "w": 22,
-     "d": 10,
+     "y": 5,
+     "w": 20,
+     "d": 9,
      "fill": "#6E6A55"
     }
    ]
@@ -46,18 +47,18 @@
    "name": "Brillenglas rechts",
    "short": "Glas rechts",
    "shape": "cyl",
-   "x": 74,
-   "y": 4,
-   "w": 58,
-   "d": 42,
-   "z": 34,
+   "x": 76,
+   "y": 5,
+   "w": 54,
+   "d": 40,
+   "z": 36.5,
    "h": 2.5,
    "explode": [
     0,
     0,
-    64.0
+    69.5
    ],
-   "mass": 4.29,
+   "mass": 4.43,
    "materials": [
     [
      "pcabs",
@@ -66,63 +67,134 @@
    ],
    "info": "Gegenstück zum linken Glas.",
    "color": "#3D3A2C",
-   "opacity": 0.7,
+   "opacity": 0.75,
    "label": false,
+   "sortBias": 1,
    "marks": [
     {
      "shape": "cyl",
-     "x": 28,
-     "y": 6,
-     "w": 22,
-     "d": 10,
+     "x": 26,
+     "y": 5,
+     "w": 20,
+     "d": 9,
      "fill": "#6E6A55"
     }
    ]
   },
   {
-   "id": "rahmen",
+   "id": "rand_l",
    "component_id": "plastic_frame",
    "material_id": "pc",
    "name": "Brillenfassung (Front)",
    "short": "Fassung",
-   "shape": "box",
-   "x": 0,
-   "y": 0,
-   "w": 140,
-   "d": 50,
+   "shape": "cyl",
+   "x": 6,
+   "y": 1,
+   "w": 62,
+   "d": 48,
    "z": 33,
-   "h": 7,
-   "r": 14,
+   "h": 6,
    "explode": [
     0,
     0,
-    40.0
+    51.0
    ],
-   "mass": 8.57,
+   "mass": 3.93,
    "materials": [
     [
      "pcabs",
      100
     ]
    ],
-   "info": "Front aus Kunststoff (Polycarbonat oder Nylon) mit Steg über der Nase. Ohne Gläser und Schrauben ist sie sortenrein, aber zu klein für die Gelbe Tonne.",
+   "info": "Front aus Kunststoff (Polycarbonat oder Nylon), die beiden Ränder halten die Gläser in einer Nut. Ohne Gläser und Schrauben ist sie sortenrein, aber zu klein für die Gelbe Tonne.",
    "color": "#2A2E31",
    "marks": [
     {
      "shape": "cyl",
-     "x": 8,
+     "x": 4,
      "y": 4,
-     "w": 58,
-     "d": 42,
-     "fill": "#3D3A2C"
-    },
+     "w": 54,
+     "d": 40,
+     "fill": "#1C1F21"
+    }
+   ]
+  },
+  {
+   "id": "rand_r",
+   "component_id": "plastic_frame",
+   "material_id": "pc",
+   "name": "Brillenfassung rechts",
+   "short": "Fassung",
+   "shape": "cyl",
+   "x": 72,
+   "y": 1,
+   "w": 62,
+   "d": 48,
+   "z": 33,
+   "h": 6,
+   "explode": [
+    0,
+    0,
+    51.0
+   ],
+   "mass": 3.93,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Rechter Glasrand, mit dem linken über den Steg in einem Stück gespritzt.",
+   "color": "#2A2E31",
+   "label": false,
+   "marks": [
     {
      "shape": "cyl",
-     "x": 74,
+     "x": 4,
      "y": 4,
-     "w": 58,
-     "d": 42,
-     "fill": "#3D3A2C"
+     "w": 54,
+     "d": 40,
+     "fill": "#1C1F21"
+    }
+   ]
+  },
+  {
+   "id": "steg",
+   "component_id": "plastic_frame",
+   "material_id": "pc",
+   "name": "Nasensteg",
+   "short": "Steg",
+   "shape": "box",
+   "x": 60,
+   "y": 6,
+   "w": 20,
+   "d": 10,
+   "z": 27,
+   "h": 6,
+   "r": 2,
+   "explode": [
+    0,
+    -20,
+    100
+   ],
+   "mass": 0.79,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Brücke zwischen den Gläsern, liegt auf der Nase. Bricht die Brille, dann meist hier.",
+   "color": "#2A2E31",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 3,
+     "w": 10,
+     "d": 3,
+     "r": 1.5,
+     "fill": "#3A3F44"
     }
    ]
   },
@@ -135,36 +207,26 @@
    "shape": "box",
    "x": 0,
    "y": 12,
-   "w": 9,
-   "d": 20,
+   "w": 11,
+   "d": 14,
    "z": 10,
    "h": 23,
-   "r": 2,
+   "r": 3,
    "explode": [
     0,
     0,
-    40.0
+    51.0
    ],
-   "mass": 1.43,
+   "mass": 1.18,
    "materials": [
     [
      "pcabs",
      100
     ]
    ],
-   "info": "Seitlicher Fortsatz der Fassung mit eingeschmolzenem Metallscharnier.",
+   "info": "Seitlicher Fortsatz der Fassung, in dem die Scharnierhälfte eingeschmolzen ist.",
    "color": "#2A2E31",
-   "marks": [
-    {
-     "shape": "box",
-     "x": 2,
-     "y": 4,
-     "w": 5,
-     "d": 12,
-     "r": 1,
-     "fill": "#8E969A"
-    }
-   ]
+   "label": false
   },
   {
    "id": "backe_r",
@@ -173,85 +235,104 @@
    "name": "Scharnierbacke rechts",
    "short": "Backe",
    "shape": "box",
-   "x": 131,
+   "x": 129,
    "y": 12,
-   "w": 9,
-   "d": 20,
+   "w": 11,
+   "d": 14,
    "z": 10,
    "h": 23,
-   "r": 2,
+   "r": 3,
    "explode": [
     0,
     0,
-    40.0
+    51.0
    ],
-   "mass": 1.43,
+   "mass": 1.18,
    "materials": [
     [
      "pcabs",
      100
     ]
    ],
-   "info": "Gegenstück zur linken Scharnierbacke.",
-   "color": "#2A2E31",
-   "label": false,
-   "marks": [
-    {
-     "shape": "box",
-     "x": 2,
-     "y": 4,
-     "w": 5,
-     "d": 12,
-     "r": 1,
-     "fill": "#8E969A"
-    }
-   ]
+   "info": "Seitlicher Fortsatz der Fassung mit eingeschmolzener Metall-Scharnierhälfte.",
+   "color": "#2A2E31"
   },
   {
-   "id": "nasenpads",
+   "id": "nasenpad_l",
    "component_id": "plastic_frame",
    "material_id": "silicone",
-   "name": "Nasenauflagen",
+   "name": "Nasenauflage links",
    "short": "Nasenpads",
-   "shape": "box",
-   "x": 61,
+   "shape": "cyl",
+   "x": 55,
    "y": 24,
-   "w": 18,
-   "d": 16,
-   "z": 22,
-   "h": 11,
-   "r": 3,
+   "w": 8,
+   "d": 14,
+   "z": 26,
+   "h": 6,
    "explode": [
     0,
-    0,
-    22.0
+    45,
+    0
    ],
-   "mass": 0.57,
+   "mass": 0.3,
    "materials": [
     [
      "gummi",
      100
     ]
    ],
-   "info": "Weiche Silikonpolster am Steg. Sie verhindern, dass die Brille rutscht.",
-   "color": "#C9CDD0",
+   "info": "Weiche Silikonpolster hinter dem Steg. Sie verhindern, dass die Brille rutscht und drückt.",
+   "color": "#D5D9DC",
    "opacity": 0.85,
    "marks": [
     {
-     "shape": "box",
-     "x": 1,
+     "shape": "cyl",
+     "x": 2,
      "y": 2,
-     "w": 5,
-     "d": 12,
-     "r": 2
-    },
+     "w": 4,
+     "d": 10,
+     "fill": "#E8ECEE"
+    }
+   ]
+  },
+  {
+   "id": "nasenpad_r",
+   "component_id": "plastic_frame",
+   "material_id": "silicone",
+   "name": "Nasenauflage rechts",
+   "short": "Nasenpads",
+   "shape": "cyl",
+   "x": 77,
+   "y": 24,
+   "w": 8,
+   "d": 14,
+   "z": 26,
+   "h": 6,
+   "explode": [
+    0,
+    45,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "info": "Gegenstück zum linken Nasenpad.",
+   "color": "#D5D9DC",
+   "opacity": 0.85,
+   "label": false,
+   "marks": [
     {
-     "shape": "box",
-     "x": 12,
+     "shape": "cyl",
+     "x": 2,
      "y": 2,
-     "w": 5,
-     "d": 12,
-     "r": 2
+     "w": 4,
+     "d": 10,
+     "fill": "#E8ECEE"
     }
    ]
   },
@@ -261,35 +342,34 @@
    "material_id": "steel",
    "name": "Scharnierschraube links",
    "short": "Schraube",
-   "shape": "box",
-   "x": 3,
-   "y": 10,
+   "shape": "cyl",
+   "x": 4,
+   "y": 17,
    "w": 3,
-   "d": 6,
-   "z": 6,
-   "h": 3,
-   "r": 1,
+   "z": 4,
+   "h": 6,
    "explode": [
-    -25,
+    -30,
     0,
     0
    ],
-   "mass": 0.14,
+   "mass": 0.15,
    "materials": [
     [
      "stahl",
      100
     ]
    ],
-   "info": "Winzige Edelstahlschraube, verbindet Fassung und Bügel. Mit einem Feinmechaniker-Schraubendreher lösen; geht sie verloren, gibt es Ersatz beim Optiker.",
+   "info": "Gegenstück zur rechten Schraube.",
    "color": "#B8BEC4",
+   "label": false,
    "marks": [
     {
      "shape": "box",
-     "x": 1,
-     "y": 1,
-     "w": 1,
-     "d": 4,
+     "x": 0.4,
+     "y": 1.2,
+     "w": 2.2,
+     "d": 0.6,
      "r": 0,
      "fill": "#5A6268"
     }
@@ -301,37 +381,111 @@
    "material_id": "steel",
    "name": "Scharnierschraube rechts",
    "short": "Schraube",
-   "shape": "box",
-   "x": 134,
-   "y": 10,
+   "shape": "cyl",
+   "x": 133,
+   "y": 17,
    "w": 3,
-   "d": 6,
-   "z": 0,
-   "h": 3,
-   "r": 1,
+   "z": 4,
+   "h": 6,
    "explode": [
-    25,
+    30,
     0,
     0
    ],
-   "mass": 0.14,
+   "mass": 0.15,
    "materials": [
     [
      "stahl",
      100
     ]
    ],
-   "info": "Gegenstück zur linken Schraube.",
+   "info": "Winzige Edelstahlschraube, verbindet Fassung und Bügel. Mit einem Feinmechaniker-Schraubendreher lösen; geht sie verloren, gibt es Ersatz beim Optiker.",
    "color": "#B8BEC4",
-   "label": false,
    "marks": [
     {
      "shape": "box",
-     "x": 1,
-     "y": 1,
-     "w": 1,
-     "d": 4,
+     "x": 0.4,
+     "y": 1.2,
+     "w": 2.2,
+     "d": 0.6,
      "r": 0,
+     "fill": "#5A6268"
+    }
+   ]
+  },
+  {
+   "id": "scharnier_l",
+   "component_id": "hinge_screws",
+   "material_id": "steel",
+   "name": "Scharnier links",
+   "short": "Scharnier",
+   "shape": "box",
+   "x": 1,
+   "y": 13,
+   "w": 9,
+   "d": 12,
+   "z": 6,
+   "h": 4,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    35.0
+   ],
+   "mass": 0.39,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Gegenstück zum rechten Scharnier.",
+   "color": "#8E969A",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 4,
+     "w": 3,
+     "fill": "#5A6268"
+    }
+   ]
+  },
+  {
+   "id": "scharnier_r",
+   "component_id": "hinge_screws",
+   "material_id": "steel",
+   "name": "Scharnier rechts",
+   "short": "Scharnier",
+   "shape": "box",
+   "x": 130,
+   "y": 13,
+   "w": 9,
+   "d": 12,
+   "z": 6,
+   "h": 4,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    35.0
+   ],
+   "mass": 0.39,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Metallgelenk aus Neusilber oder Stahl, eine Hälfte in der Backe, eine im Bügel. Es ist eingeschmolzen und lässt sich nur mit einer Zange herausbrechen.",
+   "color": "#8E969A",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 4,
+     "w": 3,
      "fill": "#5A6268"
     }
    ]
@@ -341,13 +495,13 @@
    "component_id": "plastic_frame",
    "material_id": "pc",
    "name": "Bügel links (eingeklappt)",
-   "short": "Bügel links",
+   "short": "Bügel",
    "shape": "box",
-   "x": 4,
-   "y": 16,
-   "w": 132,
-   "d": 12,
-   "z": 6,
+   "x": 8,
+   "y": 18,
+   "w": 104,
+   "d": 10,
+   "z": 5,
    "h": 4,
    "r": 3,
    "explode": [
@@ -355,7 +509,7 @@
     0,
     16.0
    ],
-   "mass": 3.81,
+   "mass": 3.44,
    "materials": [
     [
      "pcabs",
@@ -368,7 +522,7 @@
     {
      "shape": "box",
      "x": 10,
-     "y": 4,
+     "y": 3,
      "w": 40,
      "d": 4,
      "r": 2,
@@ -383,11 +537,11 @@
    "name": "Bügelende links",
    "short": "Bügelende",
    "shape": "box",
-   "x": 120,
-   "y": 28,
-   "w": 14,
-   "d": 16,
-   "z": 6,
+   "x": 112,
+   "y": 17,
+   "w": 22,
+   "d": 13,
+   "z": 5,
    "h": 4,
    "r": 4,
    "explode": [
@@ -395,7 +549,7 @@
     0,
     16.0
    ],
-   "mass": 0.76,
+   "mass": 0.79,
    "materials": [
     [
      "tpe",
@@ -410,13 +564,13 @@
    "component_id": "plastic_frame",
    "material_id": "pc",
    "name": "Bügel rechts (eingeklappt)",
-   "short": "Bügel rechts",
+   "short": "Bügel",
    "shape": "box",
-   "x": 4,
-   "y": 16,
-   "w": 132,
-   "d": 12,
-   "z": 0,
+   "x": 28,
+   "y": 18,
+   "w": 104,
+   "d": 10,
+   "z": 1,
    "h": 4,
    "r": 3,
    "explode": [
@@ -424,7 +578,7 @@
     0,
     0.0
    ],
-   "mass": 3.81,
+   "mass": 3.44,
    "materials": [
     [
      "pcabs",
@@ -437,8 +591,8 @@
    "marks": [
     {
      "shape": "box",
-     "x": 82,
-     "y": 4,
+     "x": 54,
+     "y": 3,
      "w": 40,
      "d": 4,
      "r": 2,
@@ -454,10 +608,10 @@
    "short": "Bügelende",
    "shape": "box",
    "x": 6,
-   "y": 28,
-   "w": 14,
-   "d": 16,
-   "z": 0,
+   "y": 17,
+   "w": 22,
+   "d": 13,
+   "z": 1,
    "h": 4,
    "r": 4,
    "explode": [
@@ -465,7 +619,7 @@
     0,
     0.0
    ],
-   "mass": 0.76,
+   "mass": 0.79,
    "materials": [
     [
      "tpe",

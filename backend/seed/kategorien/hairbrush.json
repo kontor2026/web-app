@@ -26,12 +26,12 @@
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 0,24 kg",
+   "v": "≈ 0,26 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 0,12 kg",
+   "v": "≈ 0,14 kg",
    "hint": "spart 0,12 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
@@ -39,14 +39,13 @@
   "metalle_mg": {},
   "herkunft": {},
   "materialien_g": {
-   "abs": 53.0,
-   "nylon": 12.0,
-   "rubber": 12.0,
-   "pp": 3.0
+   "abs": 53.7,
+   "nylon": 16.8,
+   "rubber": 12.1
   },
-  "co2_kg": 0.245,
-  "co2_mit_recyclat_kg": 0.124,
-  "co2_ersparnis_kg": 0.121,
+  "co2_kg": 0.263,
+  "co2_mit_recyclat_kg": 0.145,
+  "co2_ersparnis_kg": 0.118,
   "co2_ohne_faktor": [],
   "rohstoffwert_eur": 0,
   "wert_ohne_preis": [],
@@ -127,2225 +126,2298 @@
  "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "kugelspitzen",
-   "component_id": "nylon_bristles",
-   "material_id": "pp",
-   "name": "Kugelspitzen",
-   "short": "Kugelspitzen",
-   "shape": "box",
-   "x": 9,
-   "y": 9,
-   "w": 52,
-   "d": 88,
-   "z": 42,
-   "h": 3,
-   "r": 22,
-   "explode": [
-    0,
-    0,
-    85.0
-   ],
-   "mass": 3,
-   "materials": [
-    [
-     "pp",
-     100
-    ]
-   ],
-   "info": "Kleine Kunststoffkugeln auf den Borstenenden. Sie schonen die Kopfhaut beim Bürsten.",
-   "color": "#D9473A",
-   "marks": [
-    {
-     "shape": "cyl",
-     "x": 3.0,
-     "y": 4.5,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 8.6,
-     "y": 4.5,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 14.2,
-     "y": 4.5,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 19.8,
-     "y": 4.5,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 25.4,
-     "y": 4.5,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 31.0,
-     "y": 4.5,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 36.6,
-     "y": 4.5,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 42.2,
-     "y": 4.5,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 47.8,
-     "y": 4.5,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 3.0,
-     "y": 10.1,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 8.6,
-     "y": 10.1,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 14.2,
-     "y": 10.1,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 19.8,
-     "y": 10.1,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 25.4,
-     "y": 10.1,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 31.0,
-     "y": 10.1,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 36.6,
-     "y": 10.1,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 42.2,
-     "y": 10.1,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 47.8,
-     "y": 10.1,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 3.0,
-     "y": 15.7,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 8.6,
-     "y": 15.7,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 14.2,
-     "y": 15.7,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 19.8,
-     "y": 15.7,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 25.4,
-     "y": 15.7,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 31.0,
-     "y": 15.7,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 36.6,
-     "y": 15.7,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 42.2,
-     "y": 15.7,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 47.8,
-     "y": 15.7,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 3.0,
-     "y": 21.3,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 8.6,
-     "y": 21.3,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 14.2,
-     "y": 21.3,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 19.8,
-     "y": 21.3,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 25.4,
-     "y": 21.3,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 31.0,
-     "y": 21.3,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 36.6,
-     "y": 21.3,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 42.2,
-     "y": 21.3,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 47.8,
-     "y": 21.3,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 3.0,
-     "y": 26.9,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 8.6,
-     "y": 26.9,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 14.2,
-     "y": 26.9,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 19.8,
-     "y": 26.9,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 25.4,
-     "y": 26.9,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 31.0,
-     "y": 26.9,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 36.6,
-     "y": 26.9,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 42.2,
-     "y": 26.9,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 47.8,
-     "y": 26.9,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 3.0,
-     "y": 32.5,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 8.6,
-     "y": 32.5,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 14.2,
-     "y": 32.5,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 19.8,
-     "y": 32.5,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 25.4,
-     "y": 32.5,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 31.0,
-     "y": 32.5,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 36.6,
-     "y": 32.5,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 42.2,
-     "y": 32.5,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 47.8,
-     "y": 32.5,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 3.0,
-     "y": 38.1,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 8.6,
-     "y": 38.1,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 14.2,
-     "y": 38.1,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 19.8,
-     "y": 38.1,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 25.4,
-     "y": 38.1,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 31.0,
-     "y": 38.1,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 36.6,
-     "y": 38.1,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 42.2,
-     "y": 38.1,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 47.8,
-     "y": 38.1,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 3.0,
-     "y": 43.7,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 8.6,
-     "y": 43.7,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 14.2,
-     "y": 43.7,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 19.8,
-     "y": 43.7,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 25.4,
-     "y": 43.7,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 31.0,
-     "y": 43.7,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 36.6,
-     "y": 43.7,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 42.2,
-     "y": 43.7,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 47.8,
-     "y": 43.7,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 3.0,
-     "y": 49.3,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 8.6,
-     "y": 49.3,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 14.2,
-     "y": 49.3,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 19.8,
-     "y": 49.3,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 25.4,
-     "y": 49.3,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 31.0,
-     "y": 49.3,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 36.6,
-     "y": 49.3,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 42.2,
-     "y": 49.3,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 47.8,
-     "y": 49.3,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 3.0,
-     "y": 54.9,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 8.6,
-     "y": 54.9,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 14.2,
-     "y": 54.9,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 19.8,
-     "y": 54.9,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 25.4,
-     "y": 54.9,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 31.0,
-     "y": 54.9,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 36.6,
-     "y": 54.9,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 42.2,
-     "y": 54.9,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 47.8,
-     "y": 54.9,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 3.0,
-     "y": 60.5,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 8.6,
-     "y": 60.5,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 14.2,
-     "y": 60.5,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 19.8,
-     "y": 60.5,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 25.4,
-     "y": 60.5,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 31.0,
-     "y": 60.5,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 36.6,
-     "y": 60.5,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 42.2,
-     "y": 60.5,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 47.8,
-     "y": 60.5,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 3.0,
-     "y": 66.1,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 8.6,
-     "y": 66.1,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 14.2,
-     "y": 66.1,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 19.8,
-     "y": 66.1,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 25.4,
-     "y": 66.1,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 31.0,
-     "y": 66.1,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 36.6,
-     "y": 66.1,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 42.2,
-     "y": 66.1,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 47.8,
-     "y": 66.1,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 3.0,
-     "y": 71.7,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 8.6,
-     "y": 71.7,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 14.2,
-     "y": 71.7,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 19.8,
-     "y": 71.7,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 25.4,
-     "y": 71.7,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 31.0,
-     "y": 71.7,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 36.6,
-     "y": 71.7,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 42.2,
-     "y": 71.7,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 47.8,
-     "y": 71.7,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 3.0,
-     "y": 77.3,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 8.6,
-     "y": 77.3,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 14.2,
-     "y": 77.3,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 19.8,
-     "y": 77.3,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 25.4,
-     "y": 77.3,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 31.0,
-     "y": 77.3,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 36.6,
-     "y": 77.3,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 42.2,
-     "y": 77.3,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 47.8,
-     "y": 77.3,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 3.0,
-     "y": 82.9,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 8.6,
-     "y": 82.9,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 14.2,
-     "y": 82.9,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 19.8,
-     "y": 82.9,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 25.4,
-     "y": 82.9,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 31.0,
-     "y": 82.9,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 36.6,
-     "y": 82.9,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 42.2,
-     "y": 82.9,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    },
-    {
-     "shape": "cyl",
-     "x": 47.8,
-     "y": 82.9,
-     "w": 2.6,
-     "d": 2.6,
-     "fill": "#B5372C"
-    }
-   ]
-  },
-  {
-   "id": "borsten",
+   "id": "borste_0",
    "component_id": "nylon_bristles",
    "material_id": "nylon",
-   "name": "Nylonborsten",
+   "name": "Nylonborste mit Kugelspitze",
    "short": "Borsten",
-   "shape": "box",
-   "x": 9,
-   "y": 9,
-   "w": 52,
-   "d": 88,
+   "shape": "cyl",
+   "x": 21.7,
+   "y": 13.5,
+   "w": 2.6,
    "z": 17,
    "h": 25,
-   "r": 22,
    "explode": [
     0,
     0,
     57.0
    ],
-   "mass": 12,
+   "mass": 0.3,
    "materials": [
     [
      "nylon",
-     100
+     85
+    ],
+    [
+     "pp",
+     15
     ]
    ],
-   "info": "Rund 130 dicke Nylonstifte, mit dem Fuß im Gummikissen verankert. Mit einer Zange lassen sie sich herausziehen.",
-   "color": "#2B2D2F",
-   "opacity": 0.85,
+   "info": "Dicker Nylonstift mit aufgesetzter Kunststoffkugel, die die Kopfhaut schont. Der Fuß steckt im Gummikissen; mit einer Zange lassen sich die Stifte herausziehen.",
+   "color": "#7A8288",
+   "label": true,
    "marks": [
     {
      "shape": "cyl",
-     "x": 3.0,
-     "y": 4.5,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 8.6,
-     "y": 4.5,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 14.2,
-     "y": 4.5,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 19.8,
-     "y": 4.5,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 25.4,
-     "y": 4.5,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 31.0,
-     "y": 4.5,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 36.6,
-     "y": 4.5,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 42.2,
-     "y": 4.5,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 47.8,
-     "y": 4.5,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 3.0,
-     "y": 10.1,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 8.6,
-     "y": 10.1,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 14.2,
-     "y": 10.1,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 19.8,
-     "y": 10.1,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 25.4,
-     "y": 10.1,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 31.0,
-     "y": 10.1,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 36.6,
-     "y": 10.1,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 42.2,
-     "y": 10.1,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 47.8,
-     "y": 10.1,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 3.0,
-     "y": 15.7,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 8.6,
-     "y": 15.7,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 14.2,
-     "y": 15.7,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 19.8,
-     "y": 15.7,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 25.4,
-     "y": 15.7,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 31.0,
-     "y": 15.7,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 36.6,
-     "y": 15.7,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 42.2,
-     "y": 15.7,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 47.8,
-     "y": 15.7,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 3.0,
-     "y": 21.3,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 8.6,
-     "y": 21.3,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 14.2,
-     "y": 21.3,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 19.8,
-     "y": 21.3,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 25.4,
-     "y": 21.3,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 31.0,
-     "y": 21.3,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 36.6,
-     "y": 21.3,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 42.2,
-     "y": 21.3,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 47.8,
-     "y": 21.3,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 3.0,
-     "y": 26.9,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 8.6,
-     "y": 26.9,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 14.2,
-     "y": 26.9,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 19.8,
-     "y": 26.9,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 25.4,
-     "y": 26.9,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 31.0,
-     "y": 26.9,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 36.6,
-     "y": 26.9,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 42.2,
-     "y": 26.9,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 47.8,
-     "y": 26.9,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 3.0,
-     "y": 32.5,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 8.6,
-     "y": 32.5,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 14.2,
-     "y": 32.5,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 19.8,
-     "y": 32.5,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 25.4,
-     "y": 32.5,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 31.0,
-     "y": 32.5,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 36.6,
-     "y": 32.5,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 42.2,
-     "y": 32.5,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 47.8,
-     "y": 32.5,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 3.0,
-     "y": 38.1,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 8.6,
-     "y": 38.1,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 14.2,
-     "y": 38.1,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 19.8,
-     "y": 38.1,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 25.4,
-     "y": 38.1,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 31.0,
-     "y": 38.1,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 36.6,
-     "y": 38.1,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 42.2,
-     "y": 38.1,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 47.8,
-     "y": 38.1,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 3.0,
-     "y": 43.7,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 8.6,
-     "y": 43.7,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 14.2,
-     "y": 43.7,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 19.8,
-     "y": 43.7,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 25.4,
-     "y": 43.7,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 31.0,
-     "y": 43.7,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 36.6,
-     "y": 43.7,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 42.2,
-     "y": 43.7,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 47.8,
-     "y": 43.7,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 3.0,
-     "y": 49.3,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 8.6,
-     "y": 49.3,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 14.2,
-     "y": 49.3,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 19.8,
-     "y": 49.3,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 25.4,
-     "y": 49.3,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 31.0,
-     "y": 49.3,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 36.6,
-     "y": 49.3,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 42.2,
-     "y": 49.3,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 47.8,
-     "y": 49.3,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 3.0,
-     "y": 54.9,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 8.6,
-     "y": 54.9,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 14.2,
-     "y": 54.9,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 19.8,
-     "y": 54.9,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 25.4,
-     "y": 54.9,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 31.0,
-     "y": 54.9,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 36.6,
-     "y": 54.9,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 42.2,
-     "y": 54.9,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 47.8,
-     "y": 54.9,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 3.0,
-     "y": 60.5,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 8.6,
-     "y": 60.5,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 14.2,
-     "y": 60.5,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 19.8,
-     "y": 60.5,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 25.4,
-     "y": 60.5,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 31.0,
-     "y": 60.5,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 36.6,
-     "y": 60.5,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 42.2,
-     "y": 60.5,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 47.8,
-     "y": 60.5,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 3.0,
-     "y": 66.1,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 8.6,
-     "y": 66.1,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 14.2,
-     "y": 66.1,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 19.8,
-     "y": 66.1,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 25.4,
-     "y": 66.1,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 31.0,
-     "y": 66.1,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 36.6,
-     "y": 66.1,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 42.2,
-     "y": 66.1,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 47.8,
-     "y": 66.1,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 3.0,
-     "y": 71.7,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 8.6,
-     "y": 71.7,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 14.2,
-     "y": 71.7,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 19.8,
-     "y": 71.7,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 25.4,
-     "y": 71.7,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 31.0,
-     "y": 71.7,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 36.6,
-     "y": 71.7,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 42.2,
-     "y": 71.7,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 47.8,
-     "y": 71.7,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 3.0,
-     "y": 77.3,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 8.6,
-     "y": 77.3,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 14.2,
-     "y": 77.3,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 19.8,
-     "y": 77.3,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 25.4,
-     "y": 77.3,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 31.0,
-     "y": 77.3,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 36.6,
-     "y": 77.3,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 42.2,
-     "y": 77.3,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 47.8,
-     "y": 77.3,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 3.0,
-     "y": 82.9,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 8.6,
-     "y": 82.9,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 14.2,
-     "y": 82.9,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 19.8,
-     "y": 82.9,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 25.4,
-     "y": 82.9,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 31.0,
-     "y": 82.9,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 36.6,
-     "y": 82.9,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 42.2,
-     "y": 82.9,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
-    },
-    {
-     "shape": "cyl",
-     "x": 47.8,
-     "y": 82.9,
-     "w": 2,
-     "d": 2,
-     "fill": "#B8BEC4"
+     "x": 0,
+     "y": 0,
+     "w": 2.6,
+     "fill": "#D9473A"
+    }
+   ]
+  },
+  {
+   "id": "borste_1",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Nylonborste mit Kugelspitze",
+   "short": "Borsten",
+   "shape": "cyl",
+   "x": 30.7,
+   "y": 13.5,
+   "w": 2.6,
+   "z": 17,
+   "h": 25,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "nylon",
+     85
+    ],
+    [
+     "pp",
+     15
+    ]
+   ],
+   "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
+   "color": "#7A8288",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0,
+     "y": 0,
+     "w": 2.6,
+     "fill": "#D9473A"
+    }
+   ]
+  },
+  {
+   "id": "borste_2",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Nylonborste mit Kugelspitze",
+   "short": "Borsten",
+   "shape": "cyl",
+   "x": 39.7,
+   "y": 13.5,
+   "w": 2.6,
+   "z": 17,
+   "h": 25,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "nylon",
+     85
+    ],
+    [
+     "pp",
+     15
+    ]
+   ],
+   "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
+   "color": "#7A8288",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0,
+     "y": 0,
+     "w": 2.6,
+     "fill": "#D9473A"
+    }
+   ]
+  },
+  {
+   "id": "borste_3",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Nylonborste mit Kugelspitze",
+   "short": "Borsten",
+   "shape": "cyl",
+   "x": 48.7,
+   "y": 13.5,
+   "w": 2.6,
+   "z": 17,
+   "h": 25,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "nylon",
+     85
+    ],
+    [
+     "pp",
+     15
+    ]
+   ],
+   "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
+   "color": "#7A8288",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0,
+     "y": 0,
+     "w": 2.6,
+     "fill": "#D9473A"
+    }
+   ]
+  },
+  {
+   "id": "borste_4",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Nylonborste mit Kugelspitze",
+   "short": "Borsten",
+   "shape": "cyl",
+   "x": 12.7,
+   "y": 22.5,
+   "w": 2.6,
+   "z": 17,
+   "h": 25,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "nylon",
+     85
+    ],
+    [
+     "pp",
+     15
+    ]
+   ],
+   "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
+   "color": "#7A8288",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0,
+     "y": 0,
+     "w": 2.6,
+     "fill": "#D9473A"
+    }
+   ]
+  },
+  {
+   "id": "borste_5",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Nylonborste mit Kugelspitze",
+   "short": "Borsten",
+   "shape": "cyl",
+   "x": 21.7,
+   "y": 22.5,
+   "w": 2.6,
+   "z": 17,
+   "h": 25,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "nylon",
+     85
+    ],
+    [
+     "pp",
+     15
+    ]
+   ],
+   "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
+   "color": "#7A8288",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0,
+     "y": 0,
+     "w": 2.6,
+     "fill": "#D9473A"
+    }
+   ]
+  },
+  {
+   "id": "borste_6",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Nylonborste mit Kugelspitze",
+   "short": "Borsten",
+   "shape": "cyl",
+   "x": 30.7,
+   "y": 22.5,
+   "w": 2.6,
+   "z": 17,
+   "h": 25,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "nylon",
+     85
+    ],
+    [
+     "pp",
+     15
+    ]
+   ],
+   "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
+   "color": "#7A8288",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0,
+     "y": 0,
+     "w": 2.6,
+     "fill": "#D9473A"
+    }
+   ]
+  },
+  {
+   "id": "borste_7",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Nylonborste mit Kugelspitze",
+   "short": "Borsten",
+   "shape": "cyl",
+   "x": 39.7,
+   "y": 22.5,
+   "w": 2.6,
+   "z": 17,
+   "h": 25,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "nylon",
+     85
+    ],
+    [
+     "pp",
+     15
+    ]
+   ],
+   "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
+   "color": "#7A8288",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0,
+     "y": 0,
+     "w": 2.6,
+     "fill": "#D9473A"
+    }
+   ]
+  },
+  {
+   "id": "borste_8",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Nylonborste mit Kugelspitze",
+   "short": "Borsten",
+   "shape": "cyl",
+   "x": 48.7,
+   "y": 22.5,
+   "w": 2.6,
+   "z": 17,
+   "h": 25,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "nylon",
+     85
+    ],
+    [
+     "pp",
+     15
+    ]
+   ],
+   "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
+   "color": "#7A8288",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0,
+     "y": 0,
+     "w": 2.6,
+     "fill": "#D9473A"
+    }
+   ]
+  },
+  {
+   "id": "borste_9",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Nylonborste mit Kugelspitze",
+   "short": "Borsten",
+   "shape": "cyl",
+   "x": 57.7,
+   "y": 22.5,
+   "w": 2.6,
+   "z": 17,
+   "h": 25,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "nylon",
+     85
+    ],
+    [
+     "pp",
+     15
+    ]
+   ],
+   "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
+   "color": "#7A8288",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0,
+     "y": 0,
+     "w": 2.6,
+     "fill": "#D9473A"
+    }
+   ]
+  },
+  {
+   "id": "borste_10",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Nylonborste mit Kugelspitze",
+   "short": "Borsten",
+   "shape": "cyl",
+   "x": 12.7,
+   "y": 31.5,
+   "w": 2.6,
+   "z": 17,
+   "h": 25,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "nylon",
+     85
+    ],
+    [
+     "pp",
+     15
+    ]
+   ],
+   "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
+   "color": "#7A8288",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0,
+     "y": 0,
+     "w": 2.6,
+     "fill": "#D9473A"
+    }
+   ]
+  },
+  {
+   "id": "borste_11",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Nylonborste mit Kugelspitze",
+   "short": "Borsten",
+   "shape": "cyl",
+   "x": 21.7,
+   "y": 31.5,
+   "w": 2.6,
+   "z": 17,
+   "h": 25,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "nylon",
+     85
+    ],
+    [
+     "pp",
+     15
+    ]
+   ],
+   "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
+   "color": "#7A8288",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0,
+     "y": 0,
+     "w": 2.6,
+     "fill": "#D9473A"
+    }
+   ]
+  },
+  {
+   "id": "borste_12",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Nylonborste mit Kugelspitze",
+   "short": "Borsten",
+   "shape": "cyl",
+   "x": 30.7,
+   "y": 31.5,
+   "w": 2.6,
+   "z": 17,
+   "h": 25,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "nylon",
+     85
+    ],
+    [
+     "pp",
+     15
+    ]
+   ],
+   "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
+   "color": "#7A8288",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0,
+     "y": 0,
+     "w": 2.6,
+     "fill": "#D9473A"
+    }
+   ]
+  },
+  {
+   "id": "borste_13",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Nylonborste mit Kugelspitze",
+   "short": "Borsten",
+   "shape": "cyl",
+   "x": 39.7,
+   "y": 31.5,
+   "w": 2.6,
+   "z": 17,
+   "h": 25,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "nylon",
+     85
+    ],
+    [
+     "pp",
+     15
+    ]
+   ],
+   "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
+   "color": "#7A8288",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0,
+     "y": 0,
+     "w": 2.6,
+     "fill": "#D9473A"
+    }
+   ]
+  },
+  {
+   "id": "borste_14",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Nylonborste mit Kugelspitze",
+   "short": "Borsten",
+   "shape": "cyl",
+   "x": 48.7,
+   "y": 31.5,
+   "w": 2.6,
+   "z": 17,
+   "h": 25,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "nylon",
+     85
+    ],
+    [
+     "pp",
+     15
+    ]
+   ],
+   "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
+   "color": "#7A8288",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0,
+     "y": 0,
+     "w": 2.6,
+     "fill": "#D9473A"
+    }
+   ]
+  },
+  {
+   "id": "borste_15",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Nylonborste mit Kugelspitze",
+   "short": "Borsten",
+   "shape": "cyl",
+   "x": 57.7,
+   "y": 31.5,
+   "w": 2.6,
+   "z": 17,
+   "h": 25,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "nylon",
+     85
+    ],
+    [
+     "pp",
+     15
+    ]
+   ],
+   "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
+   "color": "#7A8288",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0,
+     "y": 0,
+     "w": 2.6,
+     "fill": "#D9473A"
+    }
+   ]
+  },
+  {
+   "id": "borste_16",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Nylonborste mit Kugelspitze",
+   "short": "Borsten",
+   "shape": "cyl",
+   "x": 12.7,
+   "y": 40.5,
+   "w": 2.6,
+   "z": 17,
+   "h": 25,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "nylon",
+     85
+    ],
+    [
+     "pp",
+     15
+    ]
+   ],
+   "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
+   "color": "#7A8288",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0,
+     "y": 0,
+     "w": 2.6,
+     "fill": "#D9473A"
+    }
+   ]
+  },
+  {
+   "id": "borste_17",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Nylonborste mit Kugelspitze",
+   "short": "Borsten",
+   "shape": "cyl",
+   "x": 21.7,
+   "y": 40.5,
+   "w": 2.6,
+   "z": 17,
+   "h": 25,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "nylon",
+     85
+    ],
+    [
+     "pp",
+     15
+    ]
+   ],
+   "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
+   "color": "#7A8288",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0,
+     "y": 0,
+     "w": 2.6,
+     "fill": "#D9473A"
+    }
+   ]
+  },
+  {
+   "id": "borste_18",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Nylonborste mit Kugelspitze",
+   "short": "Borsten",
+   "shape": "cyl",
+   "x": 30.7,
+   "y": 40.5,
+   "w": 2.6,
+   "z": 17,
+   "h": 25,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "nylon",
+     85
+    ],
+    [
+     "pp",
+     15
+    ]
+   ],
+   "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
+   "color": "#7A8288",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0,
+     "y": 0,
+     "w": 2.6,
+     "fill": "#D9473A"
+    }
+   ]
+  },
+  {
+   "id": "borste_19",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Nylonborste mit Kugelspitze",
+   "short": "Borsten",
+   "shape": "cyl",
+   "x": 39.7,
+   "y": 40.5,
+   "w": 2.6,
+   "z": 17,
+   "h": 25,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "nylon",
+     85
+    ],
+    [
+     "pp",
+     15
+    ]
+   ],
+   "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
+   "color": "#7A8288",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0,
+     "y": 0,
+     "w": 2.6,
+     "fill": "#D9473A"
+    }
+   ]
+  },
+  {
+   "id": "borste_20",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Nylonborste mit Kugelspitze",
+   "short": "Borsten",
+   "shape": "cyl",
+   "x": 48.7,
+   "y": 40.5,
+   "w": 2.6,
+   "z": 17,
+   "h": 25,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "nylon",
+     85
+    ],
+    [
+     "pp",
+     15
+    ]
+   ],
+   "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
+   "color": "#7A8288",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0,
+     "y": 0,
+     "w": 2.6,
+     "fill": "#D9473A"
+    }
+   ]
+  },
+  {
+   "id": "borste_21",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Nylonborste mit Kugelspitze",
+   "short": "Borsten",
+   "shape": "cyl",
+   "x": 57.7,
+   "y": 40.5,
+   "w": 2.6,
+   "z": 17,
+   "h": 25,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "nylon",
+     85
+    ],
+    [
+     "pp",
+     15
+    ]
+   ],
+   "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
+   "color": "#7A8288",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0,
+     "y": 0,
+     "w": 2.6,
+     "fill": "#D9473A"
+    }
+   ]
+  },
+  {
+   "id": "borste_22",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Nylonborste mit Kugelspitze",
+   "short": "Borsten",
+   "shape": "cyl",
+   "x": 12.7,
+   "y": 49.5,
+   "w": 2.6,
+   "z": 17,
+   "h": 25,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "nylon",
+     85
+    ],
+    [
+     "pp",
+     15
+    ]
+   ],
+   "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
+   "color": "#7A8288",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0,
+     "y": 0,
+     "w": 2.6,
+     "fill": "#D9473A"
+    }
+   ]
+  },
+  {
+   "id": "borste_23",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Nylonborste mit Kugelspitze",
+   "short": "Borsten",
+   "shape": "cyl",
+   "x": 21.7,
+   "y": 49.5,
+   "w": 2.6,
+   "z": 17,
+   "h": 25,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "nylon",
+     85
+    ],
+    [
+     "pp",
+     15
+    ]
+   ],
+   "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
+   "color": "#7A8288",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0,
+     "y": 0,
+     "w": 2.6,
+     "fill": "#D9473A"
+    }
+   ]
+  },
+  {
+   "id": "borste_24",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Nylonborste mit Kugelspitze",
+   "short": "Borsten",
+   "shape": "cyl",
+   "x": 30.7,
+   "y": 49.5,
+   "w": 2.6,
+   "z": 17,
+   "h": 25,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "nylon",
+     85
+    ],
+    [
+     "pp",
+     15
+    ]
+   ],
+   "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
+   "color": "#7A8288",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0,
+     "y": 0,
+     "w": 2.6,
+     "fill": "#D9473A"
+    }
+   ]
+  },
+  {
+   "id": "borste_25",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Nylonborste mit Kugelspitze",
+   "short": "Borsten",
+   "shape": "cyl",
+   "x": 39.7,
+   "y": 49.5,
+   "w": 2.6,
+   "z": 17,
+   "h": 25,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "nylon",
+     85
+    ],
+    [
+     "pp",
+     15
+    ]
+   ],
+   "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
+   "color": "#7A8288",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0,
+     "y": 0,
+     "w": 2.6,
+     "fill": "#D9473A"
+    }
+   ]
+  },
+  {
+   "id": "borste_26",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Nylonborste mit Kugelspitze",
+   "short": "Borsten",
+   "shape": "cyl",
+   "x": 48.7,
+   "y": 49.5,
+   "w": 2.6,
+   "z": 17,
+   "h": 25,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "nylon",
+     85
+    ],
+    [
+     "pp",
+     15
+    ]
+   ],
+   "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
+   "color": "#7A8288",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0,
+     "y": 0,
+     "w": 2.6,
+     "fill": "#D9473A"
+    }
+   ]
+  },
+  {
+   "id": "borste_27",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Nylonborste mit Kugelspitze",
+   "short": "Borsten",
+   "shape": "cyl",
+   "x": 57.7,
+   "y": 49.5,
+   "w": 2.6,
+   "z": 17,
+   "h": 25,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "nylon",
+     85
+    ],
+    [
+     "pp",
+     15
+    ]
+   ],
+   "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
+   "color": "#7A8288",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0,
+     "y": 0,
+     "w": 2.6,
+     "fill": "#D9473A"
+    }
+   ]
+  },
+  {
+   "id": "borste_28",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Nylonborste mit Kugelspitze",
+   "short": "Borsten",
+   "shape": "cyl",
+   "x": 12.7,
+   "y": 58.5,
+   "w": 2.6,
+   "z": 17,
+   "h": 25,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "nylon",
+     85
+    ],
+    [
+     "pp",
+     15
+    ]
+   ],
+   "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
+   "color": "#7A8288",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0,
+     "y": 0,
+     "w": 2.6,
+     "fill": "#D9473A"
+    }
+   ]
+  },
+  {
+   "id": "borste_29",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Nylonborste mit Kugelspitze",
+   "short": "Borsten",
+   "shape": "cyl",
+   "x": 21.7,
+   "y": 58.5,
+   "w": 2.6,
+   "z": 17,
+   "h": 25,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "nylon",
+     85
+    ],
+    [
+     "pp",
+     15
+    ]
+   ],
+   "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
+   "color": "#7A8288",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0,
+     "y": 0,
+     "w": 2.6,
+     "fill": "#D9473A"
+    }
+   ]
+  },
+  {
+   "id": "borste_30",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Nylonborste mit Kugelspitze",
+   "short": "Borsten",
+   "shape": "cyl",
+   "x": 30.7,
+   "y": 58.5,
+   "w": 2.6,
+   "z": 17,
+   "h": 25,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "nylon",
+     85
+    ],
+    [
+     "pp",
+     15
+    ]
+   ],
+   "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
+   "color": "#7A8288",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0,
+     "y": 0,
+     "w": 2.6,
+     "fill": "#D9473A"
+    }
+   ]
+  },
+  {
+   "id": "borste_31",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Nylonborste mit Kugelspitze",
+   "short": "Borsten",
+   "shape": "cyl",
+   "x": 39.7,
+   "y": 58.5,
+   "w": 2.6,
+   "z": 17,
+   "h": 25,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "nylon",
+     85
+    ],
+    [
+     "pp",
+     15
+    ]
+   ],
+   "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
+   "color": "#7A8288",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0,
+     "y": 0,
+     "w": 2.6,
+     "fill": "#D9473A"
+    }
+   ]
+  },
+  {
+   "id": "borste_32",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Nylonborste mit Kugelspitze",
+   "short": "Borsten",
+   "shape": "cyl",
+   "x": 48.7,
+   "y": 58.5,
+   "w": 2.6,
+   "z": 17,
+   "h": 25,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "nylon",
+     85
+    ],
+    [
+     "pp",
+     15
+    ]
+   ],
+   "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
+   "color": "#7A8288",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0,
+     "y": 0,
+     "w": 2.6,
+     "fill": "#D9473A"
+    }
+   ]
+  },
+  {
+   "id": "borste_33",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Nylonborste mit Kugelspitze",
+   "short": "Borsten",
+   "shape": "cyl",
+   "x": 57.7,
+   "y": 58.5,
+   "w": 2.6,
+   "z": 17,
+   "h": 25,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "nylon",
+     85
+    ],
+    [
+     "pp",
+     15
+    ]
+   ],
+   "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
+   "color": "#7A8288",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0,
+     "y": 0,
+     "w": 2.6,
+     "fill": "#D9473A"
+    }
+   ]
+  },
+  {
+   "id": "borste_34",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Nylonborste mit Kugelspitze",
+   "short": "Borsten",
+   "shape": "cyl",
+   "x": 12.7,
+   "y": 67.5,
+   "w": 2.6,
+   "z": 17,
+   "h": 25,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "nylon",
+     85
+    ],
+    [
+     "pp",
+     15
+    ]
+   ],
+   "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
+   "color": "#7A8288",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0,
+     "y": 0,
+     "w": 2.6,
+     "fill": "#D9473A"
+    }
+   ]
+  },
+  {
+   "id": "borste_35",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Nylonborste mit Kugelspitze",
+   "short": "Borsten",
+   "shape": "cyl",
+   "x": 21.7,
+   "y": 67.5,
+   "w": 2.6,
+   "z": 17,
+   "h": 25,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "nylon",
+     85
+    ],
+    [
+     "pp",
+     15
+    ]
+   ],
+   "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
+   "color": "#7A8288",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0,
+     "y": 0,
+     "w": 2.6,
+     "fill": "#D9473A"
+    }
+   ]
+  },
+  {
+   "id": "borste_36",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Nylonborste mit Kugelspitze",
+   "short": "Borsten",
+   "shape": "cyl",
+   "x": 30.7,
+   "y": 67.5,
+   "w": 2.6,
+   "z": 17,
+   "h": 25,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "nylon",
+     85
+    ],
+    [
+     "pp",
+     15
+    ]
+   ],
+   "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
+   "color": "#7A8288",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0,
+     "y": 0,
+     "w": 2.6,
+     "fill": "#D9473A"
+    }
+   ]
+  },
+  {
+   "id": "borste_37",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Nylonborste mit Kugelspitze",
+   "short": "Borsten",
+   "shape": "cyl",
+   "x": 39.7,
+   "y": 67.5,
+   "w": 2.6,
+   "z": 17,
+   "h": 25,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "nylon",
+     85
+    ],
+    [
+     "pp",
+     15
+    ]
+   ],
+   "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
+   "color": "#7A8288",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0,
+     "y": 0,
+     "w": 2.6,
+     "fill": "#D9473A"
+    }
+   ]
+  },
+  {
+   "id": "borste_38",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Nylonborste mit Kugelspitze",
+   "short": "Borsten",
+   "shape": "cyl",
+   "x": 48.7,
+   "y": 67.5,
+   "w": 2.6,
+   "z": 17,
+   "h": 25,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "nylon",
+     85
+    ],
+    [
+     "pp",
+     15
+    ]
+   ],
+   "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
+   "color": "#7A8288",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0,
+     "y": 0,
+     "w": 2.6,
+     "fill": "#D9473A"
+    }
+   ]
+  },
+  {
+   "id": "borste_39",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Nylonborste mit Kugelspitze",
+   "short": "Borsten",
+   "shape": "cyl",
+   "x": 57.7,
+   "y": 67.5,
+   "w": 2.6,
+   "z": 17,
+   "h": 25,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "nylon",
+     85
+    ],
+    [
+     "pp",
+     15
+    ]
+   ],
+   "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
+   "color": "#7A8288",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0,
+     "y": 0,
+     "w": 2.6,
+     "fill": "#D9473A"
+    }
+   ]
+  },
+  {
+   "id": "borste_40",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Nylonborste mit Kugelspitze",
+   "short": "Borsten",
+   "shape": "cyl",
+   "x": 12.7,
+   "y": 76.5,
+   "w": 2.6,
+   "z": 17,
+   "h": 25,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "nylon",
+     85
+    ],
+    [
+     "pp",
+     15
+    ]
+   ],
+   "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
+   "color": "#7A8288",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0,
+     "y": 0,
+     "w": 2.6,
+     "fill": "#D9473A"
+    }
+   ]
+  },
+  {
+   "id": "borste_41",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Nylonborste mit Kugelspitze",
+   "short": "Borsten",
+   "shape": "cyl",
+   "x": 21.7,
+   "y": 76.5,
+   "w": 2.6,
+   "z": 17,
+   "h": 25,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "nylon",
+     85
+    ],
+    [
+     "pp",
+     15
+    ]
+   ],
+   "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
+   "color": "#7A8288",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0,
+     "y": 0,
+     "w": 2.6,
+     "fill": "#D9473A"
+    }
+   ]
+  },
+  {
+   "id": "borste_42",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Nylonborste mit Kugelspitze",
+   "short": "Borsten",
+   "shape": "cyl",
+   "x": 30.7,
+   "y": 76.5,
+   "w": 2.6,
+   "z": 17,
+   "h": 25,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "nylon",
+     85
+    ],
+    [
+     "pp",
+     15
+    ]
+   ],
+   "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
+   "color": "#7A8288",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0,
+     "y": 0,
+     "w": 2.6,
+     "fill": "#D9473A"
+    }
+   ]
+  },
+  {
+   "id": "borste_43",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Nylonborste mit Kugelspitze",
+   "short": "Borsten",
+   "shape": "cyl",
+   "x": 39.7,
+   "y": 76.5,
+   "w": 2.6,
+   "z": 17,
+   "h": 25,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "nylon",
+     85
+    ],
+    [
+     "pp",
+     15
+    ]
+   ],
+   "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
+   "color": "#7A8288",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0,
+     "y": 0,
+     "w": 2.6,
+     "fill": "#D9473A"
+    }
+   ]
+  },
+  {
+   "id": "borste_44",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Nylonborste mit Kugelspitze",
+   "short": "Borsten",
+   "shape": "cyl",
+   "x": 48.7,
+   "y": 76.5,
+   "w": 2.6,
+   "z": 17,
+   "h": 25,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "nylon",
+     85
+    ],
+    [
+     "pp",
+     15
+    ]
+   ],
+   "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
+   "color": "#7A8288",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0,
+     "y": 0,
+     "w": 2.6,
+     "fill": "#D9473A"
+    }
+   ]
+  },
+  {
+   "id": "borste_45",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Nylonborste mit Kugelspitze",
+   "short": "Borsten",
+   "shape": "cyl",
+   "x": 57.7,
+   "y": 76.5,
+   "w": 2.6,
+   "z": 17,
+   "h": 25,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "nylon",
+     85
+    ],
+    [
+     "pp",
+     15
+    ]
+   ],
+   "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
+   "color": "#7A8288",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0,
+     "y": 0,
+     "w": 2.6,
+     "fill": "#D9473A"
+    }
+   ]
+  },
+  {
+   "id": "borste_46",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Nylonborste mit Kugelspitze",
+   "short": "Borsten",
+   "shape": "cyl",
+   "x": 12.7,
+   "y": 85.5,
+   "w": 2.6,
+   "z": 17,
+   "h": 25,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "nylon",
+     85
+    ],
+    [
+     "pp",
+     15
+    ]
+   ],
+   "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
+   "color": "#7A8288",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0,
+     "y": 0,
+     "w": 2.6,
+     "fill": "#D9473A"
+    }
+   ]
+  },
+  {
+   "id": "borste_47",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Nylonborste mit Kugelspitze",
+   "short": "Borsten",
+   "shape": "cyl",
+   "x": 21.7,
+   "y": 85.5,
+   "w": 2.6,
+   "z": 17,
+   "h": 25,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "nylon",
+     85
+    ],
+    [
+     "pp",
+     15
+    ]
+   ],
+   "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
+   "color": "#7A8288",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0,
+     "y": 0,
+     "w": 2.6,
+     "fill": "#D9473A"
+    }
+   ]
+  },
+  {
+   "id": "borste_48",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Nylonborste mit Kugelspitze",
+   "short": "Borsten",
+   "shape": "cyl",
+   "x": 30.7,
+   "y": 85.5,
+   "w": 2.6,
+   "z": 17,
+   "h": 25,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "nylon",
+     85
+    ],
+    [
+     "pp",
+     15
+    ]
+   ],
+   "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
+   "color": "#7A8288",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0,
+     "y": 0,
+     "w": 2.6,
+     "fill": "#D9473A"
+    }
+   ]
+  },
+  {
+   "id": "borste_49",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Nylonborste mit Kugelspitze",
+   "short": "Borsten",
+   "shape": "cyl",
+   "x": 39.7,
+   "y": 85.5,
+   "w": 2.6,
+   "z": 17,
+   "h": 25,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "nylon",
+     85
+    ],
+    [
+     "pp",
+     15
+    ]
+   ],
+   "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
+   "color": "#7A8288",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0,
+     "y": 0,
+     "w": 2.6,
+     "fill": "#D9473A"
+    }
+   ]
+  },
+  {
+   "id": "borste_50",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Nylonborste mit Kugelspitze",
+   "short": "Borsten",
+   "shape": "cyl",
+   "x": 48.7,
+   "y": 85.5,
+   "w": 2.6,
+   "z": 17,
+   "h": 25,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "nylon",
+     85
+    ],
+    [
+     "pp",
+     15
+    ]
+   ],
+   "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
+   "color": "#7A8288",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0,
+     "y": 0,
+     "w": 2.6,
+     "fill": "#D9473A"
+    }
+   ]
+  },
+  {
+   "id": "borste_51",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Nylonborste mit Kugelspitze",
+   "short": "Borsten",
+   "shape": "cyl",
+   "x": 57.7,
+   "y": 85.5,
+   "w": 2.6,
+   "z": 17,
+   "h": 25,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "nylon",
+     85
+    ],
+    [
+     "pp",
+     15
+    ]
+   ],
+   "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
+   "color": "#7A8288",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0,
+     "y": 0,
+     "w": 2.6,
+     "fill": "#D9473A"
+    }
+   ]
+  },
+  {
+   "id": "borste_52",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Nylonborste mit Kugelspitze",
+   "short": "Borsten",
+   "shape": "cyl",
+   "x": 21.7,
+   "y": 94.5,
+   "w": 2.6,
+   "z": 17,
+   "h": 25,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "nylon",
+     85
+    ],
+    [
+     "pp",
+     15
+    ]
+   ],
+   "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
+   "color": "#7A8288",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0,
+     "y": 0,
+     "w": 2.6,
+     "fill": "#D9473A"
+    }
+   ]
+  },
+  {
+   "id": "borste_53",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Nylonborste mit Kugelspitze",
+   "short": "Borsten",
+   "shape": "cyl",
+   "x": 30.7,
+   "y": 94.5,
+   "w": 2.6,
+   "z": 17,
+   "h": 25,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "nylon",
+     85
+    ],
+    [
+     "pp",
+     15
+    ]
+   ],
+   "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
+   "color": "#7A8288",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0,
+     "y": 0,
+     "w": 2.6,
+     "fill": "#D9473A"
+    }
+   ]
+  },
+  {
+   "id": "borste_54",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Nylonborste mit Kugelspitze",
+   "short": "Borsten",
+   "shape": "cyl",
+   "x": 39.7,
+   "y": 94.5,
+   "w": 2.6,
+   "z": 17,
+   "h": 25,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "nylon",
+     85
+    ],
+    [
+     "pp",
+     15
+    ]
+   ],
+   "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
+   "color": "#7A8288",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0,
+     "y": 0,
+     "w": 2.6,
+     "fill": "#D9473A"
+    }
+   ]
+  },
+  {
+   "id": "borste_55",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Nylonborste mit Kugelspitze",
+   "short": "Borsten",
+   "shape": "cyl",
+   "x": 48.7,
+   "y": 94.5,
+   "w": 2.6,
+   "z": 17,
+   "h": 25,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "nylon",
+     85
+    ],
+    [
+     "pp",
+     15
+    ]
+   ],
+   "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
+   "color": "#7A8288",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0,
+     "y": 0,
+     "w": 2.6,
+     "fill": "#D9473A"
     }
    ]
   },
@@ -2368,7 +2440,7 @@
     0,
     29.0
    ],
-   "mass": 10,
+   "mass": 10.1,
    "materials": [
     [
      "gummi",
@@ -2380,1089 +2452,401 @@
    "marks": [
     {
      "shape": "cyl",
-     "x": 6.0,
-     "y": 7.5,
-     "w": 2,
-     "d": 2,
+     "x": 15.5,
+     "y": 7.3,
+     "w": 3,
      "fill": "#3A3F44"
     },
     {
      "shape": "cyl",
-     "x": 11.6,
-     "y": 7.5,
-     "w": 2,
-     "d": 2,
+     "x": 24.5,
+     "y": 7.3,
+     "w": 3,
      "fill": "#3A3F44"
     },
     {
      "shape": "cyl",
-     "x": 17.2,
-     "y": 7.5,
-     "w": 2,
-     "d": 2,
+     "x": 33.5,
+     "y": 7.3,
+     "w": 3,
      "fill": "#3A3F44"
     },
     {
      "shape": "cyl",
-     "x": 22.8,
-     "y": 7.5,
-     "w": 2,
-     "d": 2,
+     "x": 42.5,
+     "y": 7.3,
+     "w": 3,
      "fill": "#3A3F44"
     },
     {
      "shape": "cyl",
-     "x": 28.4,
-     "y": 7.5,
-     "w": 2,
-     "d": 2,
+     "x": 6.499999999999999,
+     "y": 16.3,
+     "w": 3,
      "fill": "#3A3F44"
     },
     {
      "shape": "cyl",
-     "x": 34.0,
-     "y": 7.5,
-     "w": 2,
-     "d": 2,
+     "x": 15.5,
+     "y": 16.3,
+     "w": 3,
      "fill": "#3A3F44"
     },
     {
      "shape": "cyl",
-     "x": 39.6,
-     "y": 7.5,
-     "w": 2,
-     "d": 2,
+     "x": 24.5,
+     "y": 16.3,
+     "w": 3,
      "fill": "#3A3F44"
     },
     {
      "shape": "cyl",
-     "x": 45.2,
-     "y": 7.5,
-     "w": 2,
-     "d": 2,
+     "x": 33.5,
+     "y": 16.3,
+     "w": 3,
      "fill": "#3A3F44"
     },
     {
      "shape": "cyl",
-     "x": 50.8,
-     "y": 7.5,
-     "w": 2,
-     "d": 2,
+     "x": 42.5,
+     "y": 16.3,
+     "w": 3,
      "fill": "#3A3F44"
     },
     {
      "shape": "cyl",
-     "x": 6.0,
-     "y": 13.1,
-     "w": 2,
-     "d": 2,
+     "x": 51.5,
+     "y": 16.3,
+     "w": 3,
      "fill": "#3A3F44"
     },
     {
      "shape": "cyl",
-     "x": 11.6,
-     "y": 13.1,
-     "w": 2,
-     "d": 2,
+     "x": 6.499999999999999,
+     "y": 25.3,
+     "w": 3,
      "fill": "#3A3F44"
     },
     {
      "shape": "cyl",
-     "x": 17.2,
-     "y": 13.1,
-     "w": 2,
-     "d": 2,
+     "x": 15.5,
+     "y": 25.3,
+     "w": 3,
      "fill": "#3A3F44"
     },
     {
      "shape": "cyl",
-     "x": 22.8,
-     "y": 13.1,
-     "w": 2,
-     "d": 2,
+     "x": 24.5,
+     "y": 25.3,
+     "w": 3,
      "fill": "#3A3F44"
     },
     {
      "shape": "cyl",
-     "x": 28.4,
-     "y": 13.1,
-     "w": 2,
-     "d": 2,
+     "x": 33.5,
+     "y": 25.3,
+     "w": 3,
      "fill": "#3A3F44"
     },
     {
      "shape": "cyl",
-     "x": 34.0,
-     "y": 13.1,
-     "w": 2,
-     "d": 2,
+     "x": 42.5,
+     "y": 25.3,
+     "w": 3,
      "fill": "#3A3F44"
     },
     {
      "shape": "cyl",
-     "x": 39.6,
-     "y": 13.1,
-     "w": 2,
-     "d": 2,
+     "x": 51.5,
+     "y": 25.3,
+     "w": 3,
      "fill": "#3A3F44"
     },
     {
      "shape": "cyl",
-     "x": 45.2,
-     "y": 13.1,
-     "w": 2,
-     "d": 2,
+     "x": 6.499999999999999,
+     "y": 34.3,
+     "w": 3,
      "fill": "#3A3F44"
     },
     {
      "shape": "cyl",
-     "x": 50.8,
-     "y": 13.1,
-     "w": 2,
-     "d": 2,
+     "x": 15.5,
+     "y": 34.3,
+     "w": 3,
      "fill": "#3A3F44"
     },
     {
      "shape": "cyl",
-     "x": 6.0,
-     "y": 18.7,
-     "w": 2,
-     "d": 2,
+     "x": 24.5,
+     "y": 34.3,
+     "w": 3,
      "fill": "#3A3F44"
     },
     {
      "shape": "cyl",
-     "x": 11.6,
-     "y": 18.7,
-     "w": 2,
-     "d": 2,
+     "x": 33.5,
+     "y": 34.3,
+     "w": 3,
      "fill": "#3A3F44"
     },
     {
      "shape": "cyl",
-     "x": 17.2,
-     "y": 18.7,
-     "w": 2,
-     "d": 2,
+     "x": 42.5,
+     "y": 34.3,
+     "w": 3,
      "fill": "#3A3F44"
     },
     {
      "shape": "cyl",
-     "x": 22.8,
-     "y": 18.7,
-     "w": 2,
-     "d": 2,
+     "x": 51.5,
+     "y": 34.3,
+     "w": 3,
      "fill": "#3A3F44"
     },
     {
      "shape": "cyl",
-     "x": 28.4,
-     "y": 18.7,
-     "w": 2,
-     "d": 2,
+     "x": 6.499999999999999,
+     "y": 43.3,
+     "w": 3,
      "fill": "#3A3F44"
     },
     {
      "shape": "cyl",
-     "x": 34.0,
-     "y": 18.7,
-     "w": 2,
-     "d": 2,
+     "x": 15.5,
+     "y": 43.3,
+     "w": 3,
      "fill": "#3A3F44"
     },
     {
      "shape": "cyl",
-     "x": 39.6,
-     "y": 18.7,
-     "w": 2,
-     "d": 2,
+     "x": 24.5,
+     "y": 43.3,
+     "w": 3,
      "fill": "#3A3F44"
     },
     {
      "shape": "cyl",
-     "x": 45.2,
-     "y": 18.7,
-     "w": 2,
-     "d": 2,
+     "x": 33.5,
+     "y": 43.3,
+     "w": 3,
      "fill": "#3A3F44"
     },
     {
      "shape": "cyl",
-     "x": 50.8,
-     "y": 18.7,
-     "w": 2,
-     "d": 2,
+     "x": 42.5,
+     "y": 43.3,
+     "w": 3,
      "fill": "#3A3F44"
     },
     {
      "shape": "cyl",
-     "x": 6.0,
-     "y": 24.3,
-     "w": 2,
-     "d": 2,
+     "x": 51.5,
+     "y": 43.3,
+     "w": 3,
      "fill": "#3A3F44"
     },
     {
      "shape": "cyl",
-     "x": 11.6,
-     "y": 24.3,
-     "w": 2,
-     "d": 2,
-     "fill": "#3A3F44"
-    },
-    {
-     "shape": "cyl",
-     "x": 17.2,
-     "y": 24.3,
-     "w": 2,
-     "d": 2,
-     "fill": "#3A3F44"
-    },
-    {
-     "shape": "cyl",
-     "x": 22.8,
-     "y": 24.3,
-     "w": 2,
-     "d": 2,
-     "fill": "#3A3F44"
-    },
-    {
-     "shape": "cyl",
-     "x": 28.4,
-     "y": 24.3,
-     "w": 2,
-     "d": 2,
-     "fill": "#3A3F44"
-    },
-    {
-     "shape": "cyl",
-     "x": 34.0,
-     "y": 24.3,
-     "w": 2,
-     "d": 2,
-     "fill": "#3A3F44"
-    },
-    {
-     "shape": "cyl",
-     "x": 39.6,
-     "y": 24.3,
-     "w": 2,
-     "d": 2,
-     "fill": "#3A3F44"
-    },
-    {
-     "shape": "cyl",
-     "x": 45.2,
-     "y": 24.3,
-     "w": 2,
-     "d": 2,
-     "fill": "#3A3F44"
-    },
-    {
-     "shape": "cyl",
-     "x": 50.8,
-     "y": 24.3,
-     "w": 2,
-     "d": 2,
-     "fill": "#3A3F44"
-    },
-    {
-     "shape": "cyl",
-     "x": 6.0,
-     "y": 29.9,
-     "w": 2,
-     "d": 2,
-     "fill": "#3A3F44"
-    },
-    {
-     "shape": "cyl",
-     "x": 11.6,
-     "y": 29.9,
-     "w": 2,
-     "d": 2,
-     "fill": "#3A3F44"
-    },
-    {
-     "shape": "cyl",
-     "x": 17.2,
-     "y": 29.9,
-     "w": 2,
-     "d": 2,
-     "fill": "#3A3F44"
-    },
-    {
-     "shape": "cyl",
-     "x": 22.8,
-     "y": 29.9,
-     "w": 2,
-     "d": 2,
-     "fill": "#3A3F44"
-    },
-    {
-     "shape": "cyl",
-     "x": 28.4,
-     "y": 29.9,
-     "w": 2,
-     "d": 2,
-     "fill": "#3A3F44"
-    },
-    {
-     "shape": "cyl",
-     "x": 34.0,
-     "y": 29.9,
-     "w": 2,
-     "d": 2,
-     "fill": "#3A3F44"
-    },
-    {
-     "shape": "cyl",
-     "x": 39.6,
-     "y": 29.9,
-     "w": 2,
-     "d": 2,
-     "fill": "#3A3F44"
-    },
-    {
-     "shape": "cyl",
-     "x": 45.2,
-     "y": 29.9,
-     "w": 2,
-     "d": 2,
-     "fill": "#3A3F44"
-    },
-    {
-     "shape": "cyl",
-     "x": 50.8,
-     "y": 29.9,
-     "w": 2,
-     "d": 2,
-     "fill": "#3A3F44"
-    },
-    {
-     "shape": "cyl",
-     "x": 6.0,
-     "y": 35.5,
-     "w": 2,
-     "d": 2,
-     "fill": "#3A3F44"
-    },
-    {
-     "shape": "cyl",
-     "x": 11.6,
-     "y": 35.5,
-     "w": 2,
-     "d": 2,
-     "fill": "#3A3F44"
-    },
-    {
-     "shape": "cyl",
-     "x": 17.2,
-     "y": 35.5,
-     "w": 2,
-     "d": 2,
-     "fill": "#3A3F44"
-    },
-    {
-     "shape": "cyl",
-     "x": 22.8,
-     "y": 35.5,
-     "w": 2,
-     "d": 2,
-     "fill": "#3A3F44"
-    },
-    {
-     "shape": "cyl",
-     "x": 28.4,
-     "y": 35.5,
-     "w": 2,
-     "d": 2,
-     "fill": "#3A3F44"
-    },
-    {
-     "shape": "cyl",
-     "x": 34.0,
-     "y": 35.5,
-     "w": 2,
-     "d": 2,
-     "fill": "#3A3F44"
-    },
-    {
-     "shape": "cyl",
-     "x": 39.6,
-     "y": 35.5,
-     "w": 2,
-     "d": 2,
-     "fill": "#3A3F44"
-    },
-    {
-     "shape": "cyl",
-     "x": 45.2,
-     "y": 35.5,
-     "w": 2,
-     "d": 2,
-     "fill": "#3A3F44"
-    },
-    {
-     "shape": "cyl",
-     "x": 50.8,
-     "y": 35.5,
-     "w": 2,
-     "d": 2,
-     "fill": "#3A3F44"
-    },
-    {
-     "shape": "cyl",
-     "x": 6.0,
-     "y": 41.1,
-     "w": 2,
-     "d": 2,
-     "fill": "#3A3F44"
-    },
-    {
-     "shape": "cyl",
-     "x": 11.6,
-     "y": 41.1,
-     "w": 2,
-     "d": 2,
-     "fill": "#3A3F44"
-    },
-    {
-     "shape": "cyl",
-     "x": 17.2,
-     "y": 41.1,
-     "w": 2,
-     "d": 2,
-     "fill": "#3A3F44"
-    },
-    {
-     "shape": "cyl",
-     "x": 22.8,
-     "y": 41.1,
-     "w": 2,
-     "d": 2,
-     "fill": "#3A3F44"
-    },
-    {
-     "shape": "cyl",
-     "x": 28.4,
-     "y": 41.1,
-     "w": 2,
-     "d": 2,
-     "fill": "#3A3F44"
-    },
-    {
-     "shape": "cyl",
-     "x": 34.0,
-     "y": 41.1,
-     "w": 2,
-     "d": 2,
-     "fill": "#3A3F44"
-    },
-    {
-     "shape": "cyl",
-     "x": 39.6,
-     "y": 41.1,
-     "w": 2,
-     "d": 2,
-     "fill": "#3A3F44"
-    },
-    {
-     "shape": "cyl",
-     "x": 45.2,
-     "y": 41.1,
-     "w": 2,
-     "d": 2,
-     "fill": "#3A3F44"
-    },
-    {
-     "shape": "cyl",
-     "x": 50.8,
-     "y": 41.1,
-     "w": 2,
-     "d": 2,
-     "fill": "#3A3F44"
-    },
-    {
-     "shape": "cyl",
-     "x": 6.0,
-     "y": 46.7,
-     "w": 2,
-     "d": 2,
-     "fill": "#3A3F44"
-    },
-    {
-     "shape": "cyl",
-     "x": 11.6,
-     "y": 46.7,
-     "w": 2,
-     "d": 2,
-     "fill": "#3A3F44"
-    },
-    {
-     "shape": "cyl",
-     "x": 17.2,
-     "y": 46.7,
-     "w": 2,
-     "d": 2,
-     "fill": "#3A3F44"
-    },
-    {
-     "shape": "cyl",
-     "x": 22.8,
-     "y": 46.7,
-     "w": 2,
-     "d": 2,
-     "fill": "#3A3F44"
-    },
-    {
-     "shape": "cyl",
-     "x": 28.4,
-     "y": 46.7,
-     "w": 2,
-     "d": 2,
-     "fill": "#3A3F44"
-    },
-    {
-     "shape": "cyl",
-     "x": 34.0,
-     "y": 46.7,
-     "w": 2,
-     "d": 2,
-     "fill": "#3A3F44"
-    },
-    {
-     "shape": "cyl",
-     "x": 39.6,
-     "y": 46.7,
-     "w": 2,
-     "d": 2,
-     "fill": "#3A3F44"
-    },
-    {
-     "shape": "cyl",
-     "x": 45.2,
-     "y": 46.7,
-     "w": 2,
-     "d": 2,
-     "fill": "#3A3F44"
-    },
-    {
-     "shape": "cyl",
-     "x": 50.8,
-     "y": 46.7,
-     "w": 2,
-     "d": 2,
-     "fill": "#3A3F44"
-    },
-    {
-     "shape": "cyl",
-     "x": 6.0,
+     "x": 6.499999999999999,
      "y": 52.3,
-     "w": 2,
-     "d": 2,
+     "w": 3,
      "fill": "#3A3F44"
     },
     {
      "shape": "cyl",
-     "x": 11.6,
+     "x": 15.5,
      "y": 52.3,
-     "w": 2,
-     "d": 2,
+     "w": 3,
      "fill": "#3A3F44"
     },
     {
      "shape": "cyl",
-     "x": 17.2,
+     "x": 24.5,
      "y": 52.3,
-     "w": 2,
-     "d": 2,
+     "w": 3,
      "fill": "#3A3F44"
     },
     {
      "shape": "cyl",
-     "x": 22.8,
+     "x": 33.5,
      "y": 52.3,
-     "w": 2,
-     "d": 2,
+     "w": 3,
      "fill": "#3A3F44"
     },
     {
      "shape": "cyl",
-     "x": 28.4,
+     "x": 42.5,
      "y": 52.3,
-     "w": 2,
-     "d": 2,
+     "w": 3,
      "fill": "#3A3F44"
     },
     {
      "shape": "cyl",
-     "x": 34.0,
+     "x": 51.5,
      "y": 52.3,
-     "w": 2,
-     "d": 2,
+     "w": 3,
      "fill": "#3A3F44"
     },
     {
      "shape": "cyl",
-     "x": 39.6,
-     "y": 52.3,
-     "w": 2,
-     "d": 2,
+     "x": 6.499999999999999,
+     "y": 61.3,
+     "w": 3,
      "fill": "#3A3F44"
     },
     {
      "shape": "cyl",
-     "x": 45.2,
-     "y": 52.3,
-     "w": 2,
-     "d": 2,
+     "x": 15.5,
+     "y": 61.3,
+     "w": 3,
      "fill": "#3A3F44"
     },
     {
      "shape": "cyl",
-     "x": 50.8,
-     "y": 52.3,
-     "w": 2,
-     "d": 2,
+     "x": 24.5,
+     "y": 61.3,
+     "w": 3,
      "fill": "#3A3F44"
     },
     {
      "shape": "cyl",
-     "x": 6.0,
-     "y": 57.9,
-     "w": 2,
-     "d": 2,
+     "x": 33.5,
+     "y": 61.3,
+     "w": 3,
      "fill": "#3A3F44"
     },
     {
      "shape": "cyl",
-     "x": 11.6,
-     "y": 57.9,
-     "w": 2,
-     "d": 2,
+     "x": 42.5,
+     "y": 61.3,
+     "w": 3,
      "fill": "#3A3F44"
     },
     {
      "shape": "cyl",
-     "x": 17.2,
-     "y": 57.9,
-     "w": 2,
-     "d": 2,
+     "x": 51.5,
+     "y": 61.3,
+     "w": 3,
      "fill": "#3A3F44"
     },
     {
      "shape": "cyl",
-     "x": 22.8,
-     "y": 57.9,
-     "w": 2,
-     "d": 2,
+     "x": 6.499999999999999,
+     "y": 70.3,
+     "w": 3,
      "fill": "#3A3F44"
     },
     {
      "shape": "cyl",
-     "x": 28.4,
-     "y": 57.9,
-     "w": 2,
-     "d": 2,
+     "x": 15.5,
+     "y": 70.3,
+     "w": 3,
      "fill": "#3A3F44"
     },
     {
      "shape": "cyl",
-     "x": 34.0,
-     "y": 57.9,
-     "w": 2,
-     "d": 2,
+     "x": 24.5,
+     "y": 70.3,
+     "w": 3,
      "fill": "#3A3F44"
     },
     {
      "shape": "cyl",
-     "x": 39.6,
-     "y": 57.9,
-     "w": 2,
-     "d": 2,
+     "x": 33.5,
+     "y": 70.3,
+     "w": 3,
      "fill": "#3A3F44"
     },
     {
      "shape": "cyl",
-     "x": 45.2,
-     "y": 57.9,
-     "w": 2,
-     "d": 2,
+     "x": 42.5,
+     "y": 70.3,
+     "w": 3,
      "fill": "#3A3F44"
     },
     {
      "shape": "cyl",
-     "x": 50.8,
-     "y": 57.9,
-     "w": 2,
-     "d": 2,
+     "x": 51.5,
+     "y": 70.3,
+     "w": 3,
      "fill": "#3A3F44"
     },
     {
      "shape": "cyl",
-     "x": 6.0,
-     "y": 63.5,
-     "w": 2,
-     "d": 2,
+     "x": 6.499999999999999,
+     "y": 79.3,
+     "w": 3,
      "fill": "#3A3F44"
     },
     {
      "shape": "cyl",
-     "x": 11.6,
-     "y": 63.5,
-     "w": 2,
-     "d": 2,
+     "x": 15.5,
+     "y": 79.3,
+     "w": 3,
      "fill": "#3A3F44"
     },
     {
      "shape": "cyl",
-     "x": 17.2,
-     "y": 63.5,
-     "w": 2,
-     "d": 2,
+     "x": 24.5,
+     "y": 79.3,
+     "w": 3,
      "fill": "#3A3F44"
     },
     {
      "shape": "cyl",
-     "x": 22.8,
-     "y": 63.5,
-     "w": 2,
-     "d": 2,
+     "x": 33.5,
+     "y": 79.3,
+     "w": 3,
      "fill": "#3A3F44"
     },
     {
      "shape": "cyl",
-     "x": 28.4,
-     "y": 63.5,
-     "w": 2,
-     "d": 2,
+     "x": 42.5,
+     "y": 79.3,
+     "w": 3,
      "fill": "#3A3F44"
     },
     {
      "shape": "cyl",
-     "x": 34.0,
-     "y": 63.5,
-     "w": 2,
-     "d": 2,
+     "x": 51.5,
+     "y": 79.3,
+     "w": 3,
      "fill": "#3A3F44"
     },
     {
      "shape": "cyl",
-     "x": 39.6,
-     "y": 63.5,
-     "w": 2,
-     "d": 2,
+     "x": 15.5,
+     "y": 88.3,
+     "w": 3,
      "fill": "#3A3F44"
     },
     {
      "shape": "cyl",
-     "x": 45.2,
-     "y": 63.5,
-     "w": 2,
-     "d": 2,
+     "x": 24.5,
+     "y": 88.3,
+     "w": 3,
      "fill": "#3A3F44"
     },
     {
      "shape": "cyl",
-     "x": 50.8,
-     "y": 63.5,
-     "w": 2,
-     "d": 2,
+     "x": 33.5,
+     "y": 88.3,
+     "w": 3,
      "fill": "#3A3F44"
     },
     {
      "shape": "cyl",
-     "x": 6.0,
-     "y": 69.1,
-     "w": 2,
-     "d": 2,
-     "fill": "#3A3F44"
-    },
-    {
-     "shape": "cyl",
-     "x": 11.6,
-     "y": 69.1,
-     "w": 2,
-     "d": 2,
-     "fill": "#3A3F44"
-    },
-    {
-     "shape": "cyl",
-     "x": 17.2,
-     "y": 69.1,
-     "w": 2,
-     "d": 2,
-     "fill": "#3A3F44"
-    },
-    {
-     "shape": "cyl",
-     "x": 22.8,
-     "y": 69.1,
-     "w": 2,
-     "d": 2,
-     "fill": "#3A3F44"
-    },
-    {
-     "shape": "cyl",
-     "x": 28.4,
-     "y": 69.1,
-     "w": 2,
-     "d": 2,
-     "fill": "#3A3F44"
-    },
-    {
-     "shape": "cyl",
-     "x": 34.0,
-     "y": 69.1,
-     "w": 2,
-     "d": 2,
-     "fill": "#3A3F44"
-    },
-    {
-     "shape": "cyl",
-     "x": 39.6,
-     "y": 69.1,
-     "w": 2,
-     "d": 2,
-     "fill": "#3A3F44"
-    },
-    {
-     "shape": "cyl",
-     "x": 45.2,
-     "y": 69.1,
-     "w": 2,
-     "d": 2,
-     "fill": "#3A3F44"
-    },
-    {
-     "shape": "cyl",
-     "x": 50.8,
-     "y": 69.1,
-     "w": 2,
-     "d": 2,
-     "fill": "#3A3F44"
-    },
-    {
-     "shape": "cyl",
-     "x": 6.0,
-     "y": 74.7,
-     "w": 2,
-     "d": 2,
-     "fill": "#3A3F44"
-    },
-    {
-     "shape": "cyl",
-     "x": 11.6,
-     "y": 74.7,
-     "w": 2,
-     "d": 2,
-     "fill": "#3A3F44"
-    },
-    {
-     "shape": "cyl",
-     "x": 17.2,
-     "y": 74.7,
-     "w": 2,
-     "d": 2,
-     "fill": "#3A3F44"
-    },
-    {
-     "shape": "cyl",
-     "x": 22.8,
-     "y": 74.7,
-     "w": 2,
-     "d": 2,
-     "fill": "#3A3F44"
-    },
-    {
-     "shape": "cyl",
-     "x": 28.4,
-     "y": 74.7,
-     "w": 2,
-     "d": 2,
-     "fill": "#3A3F44"
-    },
-    {
-     "shape": "cyl",
-     "x": 34.0,
-     "y": 74.7,
-     "w": 2,
-     "d": 2,
-     "fill": "#3A3F44"
-    },
-    {
-     "shape": "cyl",
-     "x": 39.6,
-     "y": 74.7,
-     "w": 2,
-     "d": 2,
-     "fill": "#3A3F44"
-    },
-    {
-     "shape": "cyl",
-     "x": 45.2,
-     "y": 74.7,
-     "w": 2,
-     "d": 2,
-     "fill": "#3A3F44"
-    },
-    {
-     "shape": "cyl",
-     "x": 50.8,
-     "y": 74.7,
-     "w": 2,
-     "d": 2,
-     "fill": "#3A3F44"
-    },
-    {
-     "shape": "cyl",
-     "x": 6.0,
-     "y": 80.3,
-     "w": 2,
-     "d": 2,
-     "fill": "#3A3F44"
-    },
-    {
-     "shape": "cyl",
-     "x": 11.6,
-     "y": 80.3,
-     "w": 2,
-     "d": 2,
-     "fill": "#3A3F44"
-    },
-    {
-     "shape": "cyl",
-     "x": 17.2,
-     "y": 80.3,
-     "w": 2,
-     "d": 2,
-     "fill": "#3A3F44"
-    },
-    {
-     "shape": "cyl",
-     "x": 22.8,
-     "y": 80.3,
-     "w": 2,
-     "d": 2,
-     "fill": "#3A3F44"
-    },
-    {
-     "shape": "cyl",
-     "x": 28.4,
-     "y": 80.3,
-     "w": 2,
-     "d": 2,
-     "fill": "#3A3F44"
-    },
-    {
-     "shape": "cyl",
-     "x": 34.0,
-     "y": 80.3,
-     "w": 2,
-     "d": 2,
-     "fill": "#3A3F44"
-    },
-    {
-     "shape": "cyl",
-     "x": 39.6,
-     "y": 80.3,
-     "w": 2,
-     "d": 2,
-     "fill": "#3A3F44"
-    },
-    {
-     "shape": "cyl",
-     "x": 45.2,
-     "y": 80.3,
-     "w": 2,
-     "d": 2,
-     "fill": "#3A3F44"
-    },
-    {
-     "shape": "cyl",
-     "x": 50.8,
-     "y": 80.3,
-     "w": 2,
-     "d": 2,
-     "fill": "#3A3F44"
-    },
-    {
-     "shape": "cyl",
-     "x": 6.0,
-     "y": 85.9,
-     "w": 2,
-     "d": 2,
-     "fill": "#3A3F44"
-    },
-    {
-     "shape": "cyl",
-     "x": 11.6,
-     "y": 85.9,
-     "w": 2,
-     "d": 2,
-     "fill": "#3A3F44"
-    },
-    {
-     "shape": "cyl",
-     "x": 17.2,
-     "y": 85.9,
-     "w": 2,
-     "d": 2,
-     "fill": "#3A3F44"
-    },
-    {
-     "shape": "cyl",
-     "x": 22.8,
-     "y": 85.9,
-     "w": 2,
-     "d": 2,
-     "fill": "#3A3F44"
-    },
-    {
-     "shape": "cyl",
-     "x": 28.4,
-     "y": 85.9,
-     "w": 2,
-     "d": 2,
-     "fill": "#3A3F44"
-    },
-    {
-     "shape": "cyl",
-     "x": 34.0,
-     "y": 85.9,
-     "w": 2,
-     "d": 2,
-     "fill": "#3A3F44"
-    },
-    {
-     "shape": "cyl",
-     "x": 39.6,
-     "y": 85.9,
-     "w": 2,
-     "d": 2,
-     "fill": "#3A3F44"
-    },
-    {
-     "shape": "cyl",
-     "x": 45.2,
-     "y": 85.9,
-     "w": 2,
-     "d": 2,
-     "fill": "#3A3F44"
-    },
-    {
-     "shape": "cyl",
-     "x": 50.8,
-     "y": 85.9,
-     "w": 2,
-     "d": 2,
+     "x": 42.5,
+     "y": 88.3,
+     "w": 3,
      "fill": "#3A3F44"
     },
     {
      "shape": "cyl",
      "x": 26,
-     "y": 87,
-     "w": 6,
+     "y": 88,
+     "w": 5,
      "fill": "#000000"
     }
    ]
@@ -3515,7 +2899,7 @@
     0,
     0.0
    ],
-   "mass": 30,
+   "mass": 30.4,
    "materials": [
     [
      "pcabs",
@@ -3555,7 +2939,7 @@
     0,
     0.0
    ],
-   "mass": 23,
+   "mass": 23.3,
    "materials": [
     [
      "pcabs",

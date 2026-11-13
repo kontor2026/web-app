@@ -1,6 +1,65 @@
 {
  "parts": [
   {
+   "id": "klammer_l",
+   "component_id": "razor_blade_head",
+   "material_id": "aluminium",
+   "name": "Halteklammer links",
+   "short": "Klammer",
+   "shape": "box",
+   "x": 0.5,
+   "y": 5,
+   "w": 2.5,
+   "d": 10,
+   "z": 13.5,
+   "h": 3.5,
+   "r": 0.8,
+   "explode": [
+    -16,
+    0,
+    54
+   ],
+   "mass": 0.05,
+   "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "info": "Dünner Aluminiumbügel, der die Klingen im Kopf festhält.",
+   "color": "#B0B6BA"
+  },
+  {
+   "id": "klammer_r",
+   "component_id": "razor_blade_head",
+   "material_id": "aluminium",
+   "name": "Halteklammer rechts",
+   "short": "Klammer",
+   "shape": "box",
+   "x": 32,
+   "y": 5,
+   "w": 2.5,
+   "d": 10,
+   "z": 13.5,
+   "h": 3.5,
+   "r": 0.8,
+   "explode": [
+    16,
+    0,
+    54
+   ],
+   "mass": 0.05,
+   "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "info": "Gegenstück zur linken Halteklammer.",
+   "color": "#B0B6BA",
+   "label": false
+  },
+  {
    "id": "gleitstreifen",
    "component_id": "razor_blade_head",
    "material_id": "ps",
@@ -17,9 +76,9 @@
    "explode": [
     0,
     0,
-    10.0
+    42
    ],
-   "mass": 0.43,
+   "mass": 0.41,
    "materials": [
     [
      "ps",
@@ -95,65 +154,6 @@
    ]
   },
   {
-   "id": "klammer_l",
-   "component_id": "razor_blade_head",
-   "material_id": "aluminium",
-   "name": "Halteklammer links",
-   "short": "Klammer",
-   "shape": "box",
-   "x": 0.5,
-   "y": 5,
-   "w": 2.5,
-   "d": 10,
-   "z": 13.5,
-   "h": 3.5,
-   "r": 0.8,
-   "explode": [
-    0,
-    0,
-    10.5
-   ],
-   "mass": 0.05,
-   "materials": [
-    [
-     "alu",
-     100
-    ]
-   ],
-   "info": "Dünner Aluminiumbügel, der die Klingen im Kopf festhält.",
-   "color": "#B0B6BA"
-  },
-  {
-   "id": "klammer_r",
-   "component_id": "razor_blade_head",
-   "material_id": "aluminium",
-   "name": "Halteklammer rechts",
-   "short": "Klammer",
-   "shape": "box",
-   "x": 32,
-   "y": 5,
-   "w": 2.5,
-   "d": 10,
-   "z": 13.5,
-   "h": 3.5,
-   "r": 0.8,
-   "explode": [
-    0,
-    0,
-    10.5
-   ],
-   "mass": 0.05,
-   "materials": [
-    [
-     "alu",
-     100
-    ]
-   ],
-   "info": "Gegenstück zur linken Halteklammer.",
-   "color": "#B0B6BA",
-   "label": false
-  },
-  {
    "id": "klinge_1",
    "component_id": "razor_blade_head",
    "material_id": "steel",
@@ -170,9 +170,9 @@
    "explode": [
     0,
     0,
-    10.0
+    32
    ],
-   "mass": 0.27,
+   "mass": 0.26,
    "materials": [
     [
      "stahl",
@@ -209,9 +209,9 @@
    "explode": [
     0,
     0,
-    10.0
+    23
    ],
-   "mass": 0.27,
+   "mass": 0.26,
    "materials": [
     [
      "stahl",
@@ -249,9 +249,9 @@
    "explode": [
     0,
     0,
-    10.0
+    13
    ],
-   "mass": 0.32,
+   "mass": 0.31,
    "materials": [
     [
      "pp",
@@ -378,9 +378,9 @@
    "explode": [
     0,
     0,
-    0.0
+    0
    ],
-   "mass": 1.73,
+   "mass": 1.66,
    "materials": [
     [
      "pp",
@@ -398,6 +398,91 @@
      "d": 8.5,
      "r": 1,
      "fill": "#1F4F86"
+    }
+   ]
+  },
+  {
+   "id": "griffeinlage",
+   "component_id": "razor_handle",
+   "material_id": "rubber",
+   "name": "Griffeinlage",
+   "short": "Griffeinlage",
+   "shape": "box",
+   "x": 13.5,
+   "y": 36,
+   "w": 8,
+   "d": 40,
+   "z": 9,
+   "h": 0.8,
+   "r": 4,
+   "explode": [
+    0,
+    30,
+    10
+   ],
+   "mass": 0.62,
+   "materials": [
+    [
+     "tpe",
+     100
+    ]
+   ],
+   "info": "Weiche Gummieinlage mit Rillen, damit der nasse Rasierer nicht rutscht. Angespritzt, nicht lösbar.",
+   "color": "#E8ECEE",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 4,
+     "w": 6,
+     "d": 2,
+     "r": 1,
+     "fill": "#C3C9CE"
+    },
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 10,
+     "w": 6,
+     "d": 2,
+     "r": 1,
+     "fill": "#C3C9CE"
+    },
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 16,
+     "w": 6,
+     "d": 2,
+     "r": 1,
+     "fill": "#C3C9CE"
+    },
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 22,
+     "w": 6,
+     "d": 2,
+     "r": 1,
+     "fill": "#C3C9CE"
+    },
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 28,
+     "w": 6,
+     "d": 2,
+     "r": 1,
+     "fill": "#C3C9CE"
+    },
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 34,
+     "w": 6,
+     "d": 2,
+     "r": 1,
+     "fill": "#C3C9CE"
     }
    ]
   },
@@ -420,7 +505,7 @@
     30,
     0
    ],
-   "mass": 11.87,
+   "mass": 11.38,
    "materials": [
     [
      "pp",
@@ -437,61 +522,7 @@
      "w": 8,
      "d": 40,
      "r": 4,
-     "fill": "#E8ECEE"
-    },
-    {
-     "shape": "box",
-     "x": 3,
-     "y": 24,
-     "w": 6,
-     "d": 2,
-     "r": 1,
-     "fill": "#C3C9CE"
-    },
-    {
-     "shape": "box",
-     "x": 3,
-     "y": 30,
-     "w": 6,
-     "d": 2,
-     "r": 1,
-     "fill": "#C3C9CE"
-    },
-    {
-     "shape": "box",
-     "x": 3,
-     "y": 36,
-     "w": 6,
-     "d": 2,
-     "r": 1,
-     "fill": "#C3C9CE"
-    },
-    {
-     "shape": "box",
-     "x": 3,
-     "y": 42,
-     "w": 6,
-     "d": 2,
-     "r": 1,
-     "fill": "#C3C9CE"
-    },
-    {
-     "shape": "box",
-     "x": 3,
-     "y": 48,
-     "w": 6,
-     "d": 2,
-     "r": 1,
-     "fill": "#C3C9CE"
-    },
-    {
-     "shape": "box",
-     "x": 3,
-     "y": 54,
-     "w": 6,
-     "d": 2,
-     "r": 1,
-     "fill": "#C3C9CE"
+     "fill": "#1F4F86"
     }
    ]
   }
