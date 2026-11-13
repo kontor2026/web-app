@@ -88,6 +88,7 @@ export class ExplodedView {
     this.container.appendChild(this.svg);
     this.render(false);
     this.ro.observe(this.container);
+    this.intro();
   }
 
   destroy() {
@@ -217,5 +218,42 @@ export class ExplodedView {
       const n = this.nodes.get(st.id);
       n.g.setAttribute('transform', `translate(${(n.off[0] * st.t).toFixed(2)},${(n.off[1] * st.t).toFixed(2)})`);
     }
+  }
+
+  intro() {
+    const strokes = svg.createDrawable(this.svg.querySelectorAll('.part polygon'));
+    this.svg.querySelectorAll('.part polygon').forEach((p) => (p.style.fillOpacity = 0));
+    this.calloutLayer.style.opacity = 0;
+    animate(strokes, { draw: ['0 0', '0 1'], duration: 1100, delay: stagger(12), ease: 'inOutQuad' });
+    animate(this.svg.querySelectorAll('.part polygon'), {
+      fillOpacity: (t) => t.getAttribute('fill-opacity') ?? 1,
+      duration: 700, delay: stagger(10, { start: 700 }), ease: 'outQuad',
+      onComplete: () => setTimeout(() => this.setExploded(true), 250),
+    });
+  }
+
+  setExploded(on) {
+    this.exploded = on;
+    const leaders = this.calloutLayer.querySelectorAll('.leader');
+    if (!on) animate(this.calloutLayer, { opacity: 0, duration: 200 });
+    const ordered = this.states.slice().sort((a, b) => {
+      const pa = this.obj.parts.find((p) => p.id === a.id), pb = this.obj.parts.find((p) => p.id === b.id);
+      return (pa.explode?.[2] ?? 0) - (pb.explode?.[2] ?? 0);
+    });
+    animate(on ? ordered : ordered.slice().reverse(), {
+      t: on ? 1 : 0,
+      duration: 900,
+      delay: stagger(45),
+      ease: 'inOutCubic',
+      onUpdate: () => this.apply(),
+      onComplete: () => {
+        if (!on) return;
+        this.calloutLayer.style.opacity = 1;
+        animate(svg.createDrawable(leaders), { draw: ['0 0', '0 1'], duration: 600, delay: stagger(25), ease: 'outQuad' });
+        animate(this.calloutLayer.querySelectorAll('.balloon, .num, .lbl, .anchor'), {
+          opacity: [0, 1], duration: 400, delay: stagger(8, { start: 200 }),
+        });
+      },
+    });
   }
 }
