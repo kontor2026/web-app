@@ -324,6 +324,17 @@ svg.iso { width: 100%; height: 100%; display: block; overflow: visible; }
 .inv.focus .irow:not(.used) { opacity: .35; }
 .irow.used { background: var(--rule-2); }
 
+/* Modal */
+.modal-bg { position: fixed; inset: 0; background: var(--scrim); display: grid; place-items: center; z-index: 50; }
+.modal { width: 520px; background: var(--sheet); border: 1px solid var(--ink); padding: 30px; display: grid; gap: 20px; }
+.modal h2 { font-size: 24px; font-weight: 600; letter-spacing: -.01em; }
+.modal p { color: var(--ink-2); }
+.modal .row { display: flex; gap: 10px; justify-content: flex-end; }
+.label-card { border: 1.5px dashed var(--ink-3); background: var(--card); color: var(--ink); padding: 18px 20px; display: grid; grid-template-columns: 1fr auto; gap: 6px 20px; font-family: var(--mono); }
+.label-card .big { font-size: 30px; font-weight: 500; letter-spacing: -.02em; }
+.label-card .small { font-size: 12px; color: var(--ink-2); }
+.label-card svg { grid-row: 1 / 4; grid-column: 2; width: 110px; height: 70px; }
+
 .tip { position: fixed; z-index: 40; pointer-events: none; background: var(--ink); color: var(--sheet); padding: 8px 12px; font-size: 13px; max-width: 280px; border-radius: 2px; }
 .tip b { font-weight: 500; }
 .tip small { display: block; font: 11px var(--mono); opacity: .65; margin-top: 2px; }
