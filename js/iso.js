@@ -157,6 +157,7 @@ export class ExplodedView {
       this.nodes.set(p.id, { g, off: [off[0] * s, off[1] * s], top: top.map(tx) });
     }
 
+    this.buildCallouts(W, H, gutter);
     if (keepState) {
       for (const st of this.states) st.t = this.exploded ? 1 : 0;
       this.apply();
@@ -164,6 +165,44 @@ export class ExplodedView {
     } else {
       this.apply();
     }
+  }
+
+  // Nummerierte Positionsnummern mit Hinweislinien, links und rechts gestapelt.
+  buildCallouts(W, H, gutter) {
+    const items = this.labeled.map((p, i) => {
+      const n = this.nodes.get(p.id);
+      const cx = n.top.reduce((a, q) => a + q[0], 0) / n.top.length + n.off[0];
+      const cy = n.top.reduce((a, q) => a + q[1], 0) / n.top.length + n.off[1];
+      return { p, num: String(i + 1).padStart(2, '0'), ax: cx, ay: cy };
+    });
+    const mid = W / 2;
+    const sides = { L: items.filter((it) => it.ax < mid), R: items.filter((it) => it.ax >= mid) };
+    const gap = 30;
+    for (const [side, list] of Object.entries(sides)) {
+      list.sort((a, b) => a.ay - b.ay);
+      let y = 24;
+      for (const it of list) { it.by = Math.max(it.ay, y); y = it.by + gap; }
+      const overflow = y - gap - (H - 24);
+      if (overflow > 0) list.forEach((it) => (it.by -= overflow));
+      const bx = this.compact ? (side === 'L' ? 14 : W - 14) : (side === 'L' ? gutter - 30 : W - gutter + 30);
+      for (const it of list) {
+        const g = el('g', { class: 'callout', 'data-id': it.p.id }, this.calloutLayer);
+        const elbow = side === 'L' ? bx + 22 : bx - 22;
+        el('polyline', { class: 'leader', points: `${it.ax},${it.ay} ${elbow},${it.by} ${bx + (side === 'L' ? 11 : -11)},${it.by}` }, g);
+        el('circle', { class: 'anchor', cx: it.ax, cy: it.ay, r: 2.5 }, g);
+        el('circle', { class: 'balloon', cx: bx, cy: it.by, r: 11 }, g);
+        const t = el('text', { class: 'num', x: bx, y: it.by + 0.5 }, g);
+        t.textContent = it.num;
+        if (!this.compact) {
+        const lbl = el('text', { class: 'lbl', x: side === 'L' ? bx - 18 : bx + 18, y: it.by + 0.5, 'text-anchor': side === 'L' ? 'end' : 'start' }, g);
+        lbl.textContent = it.p.short ?? it.p.name;
+        }
+        g.addEventListener('pointerenter', (e) => this.hover(it.p.id, e));
+        g.addEventListener('pointerleave', () => this.hover(null));
+        g.addEventListener('click', () => this.onSelect?.(it.p.id));
+      }
+    }
+    this.numbers = new Map(items.map((it) => [it.p.id, it.num]));
   }
 
   apply() {
