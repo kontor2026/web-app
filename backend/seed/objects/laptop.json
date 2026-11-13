@@ -1,0 +1,1670 @@
+{
+  "id": "laptop",
+  "name": "Laptop",
+  "klasse": "Elektroschrott · Bildschirmgerät",
+  "photo": "assets/samples/laptop.jpg",
+  "erkennung": {
+    "conf": 0.99,
+    "modelle": [
+      [
+        "Lenovo ThinkBook 14 G4",
+        0.58
+      ],
+      [
+        "Lenovo ThinkBook 14 G3",
+        0.22
+      ],
+      [
+        "Lenovo ThinkBook 15 G4",
+        0.12
+      ]
+    ],
+    "hinweis": "Schriftzug erkannt. Generation über das Typenschild auf der Unterseite bestätigen."
+  },
+  "masse": "323 × 218 × 18 mm",
+  "gewicht": "≈ 1,4 kg",
+  "werte": [
+    {
+      "k": "Rohstoffwert",
+      "v": "≈ 12 €",
+      "hint": "Aluminium, Kupfer, Gold, Kobalt"
+    },
+    {
+      "k": "Gebrauchtwert",
+      "v": "150–300 €",
+      "hint": "funktionsfähig, mit neuem Akku mehr"
+    },
+    {
+      "k": "CO₂ Herstellung",
+      "v": "≈ 250 kg",
+      "hint": "so viel wie 1.500 km Autofahrt"
+    }
+  ],
+  "wertvoll": "Ein Laptop ist zu großen Teilen aus Aluminium, das sich fast verlustfrei recyceln lässt. Noch wertvoller: Arbeitsspeicher, SSD, Lüfter und Display lassen sich einzeln weiterverwenden.",
+  "kreislauf": [
+    {
+      "t": "Rohstoffe",
+      "d": "Bauxit für Aluminium, Kupfer, Kobalt, Gold"
+    },
+    {
+      "t": "Herstellung",
+      "d": "Platine und Display machen den Großteil des CO₂ aus"
+    },
+    {
+      "t": "Nutzung",
+      "d": "Im Schnitt vier bis fünf Jahre"
+    },
+    {
+      "t": "Heute oft",
+      "d": "Wird als Ganzes geschreddert, Teile gehen verloren",
+      "tone": "bad"
+    },
+    {
+      "t": "Besser",
+      "d": "Daten löschen, Akku tauschen, weitergeben oder Teile ausschlachten",
+      "tone": "good"
+    }
+  ],
+  "entsorgung": {
+    "wo": "Recyclinghof, Sammelstelle für Bildschirmgeräte",
+    "nicht": "Nicht in Restmüll oder Sperrmüll",
+    "warnung": "Vorher Festplatte löschen. Akku nicht beschädigen."
+  },
+  "quelle": "Richtwerte nach Herstellerangaben (Lenovo PCF) und Ökobilanz-Studien. Noch nicht verifiziert.",
+  "parts": [
+    {
+      "id": "deckel",
+      "name": "Displaydeckel (Aluminium)",
+      "short": "Deckel",
+      "shape": "box",
+      "x": 0,
+      "y": 0,
+      "w": 323,
+      "d": 218,
+      "h": 1.6,
+      "z": 15.4,
+      "r": 6,
+      "explode": [
+        0,
+        -300,
+        20
+      ],
+      "mass": 180,
+      "materials": [
+        [
+          "alu",
+          100
+        ]
+      ],
+      "info": "Eloxiertes Aluminium. Gibt dem Display Stabilität und schützt es beim Transport.",
+      "marks": [
+        {
+          "shape": "box",
+          "x": 2,
+          "y": 2,
+          "w": 319,
+          "d": 70,
+          "r": 4,
+          "fill": "#9AA2A6"
+        }
+      ]
+    },
+    {
+      "id": "panel",
+      "name": "Display-Panel (IPS)",
+      "short": "Display",
+      "shape": "box",
+      "x": 8,
+      "y": 10,
+      "w": 307,
+      "d": 196,
+      "h": 3,
+      "z": 12.2,
+      "r": 2,
+      "explode": [
+        0,
+        -300,
+        70
+      ],
+      "color": "#31373B",
+      "mass": 230,
+      "materials": [
+        [
+          "displayglas",
+          50
+        ],
+        [
+          "folien",
+          30
+        ],
+        [
+          "led",
+          10
+        ],
+        [
+          "kupfer",
+          10
+        ]
+      ],
+      "info": "14-Zoll-Flüssigkristallanzeige mit LED-Hintergrundlicht. Mit Controller-Platine als externer Monitor nutzbar.",
+      "marks": [
+        {
+          "shape": "box",
+          "x": 4,
+          "y": 4,
+          "w": 299,
+          "d": 186,
+          "r": 1,
+          "fill": "#3D464C"
+        }
+      ]
+    },
+    {
+      "id": "webcam",
+      "name": "Webcam-Modul",
+      "short": "Webcam",
+      "shape": "box",
+      "x": 150,
+      "y": 2,
+      "w": 24,
+      "d": 6,
+      "h": 2,
+      "z": 12.2,
+      "r": 1,
+      "explode": [
+        0,
+        -300,
+        118
+      ],
+      "color": "#3F4547",
+      "mass": 3,
+      "materials": [
+        [
+          "chip",
+          60
+        ],
+        [
+          "glas",
+          40
+        ]
+      ],
+      "info": "Kleine Kamera mit eigenem Chip. Per USB ansteuerbar."
+    },
+    {
+      "id": "rahmen",
+      "name": "Displayrahmen",
+      "short": "Rahmen",
+      "shape": "box",
+      "x": 0,
+      "y": 0,
+      "w": 323,
+      "d": 218,
+      "h": 1,
+      "z": 11.2,
+      "r": 6,
+      "explode": [
+        0,
+        -300,
+        118
+      ],
+      "color": "#2E3235",
+      "opacity": 0.22,
+      "mass": 40,
+      "materials": [
+        [
+          "pcabs",
+          100
+        ]
+      ],
+      "info": "Kunststoffrahmen um das Display. Meist nur geklipst.",
+      "marks": [
+        {
+          "shape": "box",
+          "x": 8,
+          "y": 10,
+          "w": 307,
+          "d": 196,
+          "r": 2
+        }
+      ]
+    },
+    {
+      "id": "tastatur",
+      "name": "Tastatur",
+      "shape": "box",
+      "x": 22,
+      "y": 28,
+      "w": 279,
+      "d": 108,
+      "h": 1.5,
+      "z": 10,
+      "r": 3,
+      "explode": [
+        -270,
+        0,
+        175
+      ],
+      "color": "#4C5155",
+      "mass": 90,
+      "materials": [
+        [
+          "pcabs",
+          60
+        ],
+        [
+          "gummi",
+          20
+        ],
+        [
+          "folien",
+          15
+        ],
+        [
+          "stahl",
+          5
+        ]
+      ],
+      "info": "Kunststofftasten auf Gummikuppeln, darunter eine Folie mit Leiterbahnen.",
+      "marks": [
+        {
+          "shape": "box",
+          "x": 4,
+          "y": 6,
+          "w": 15.5,
+          "d": 9,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 22,
+          "y": 6,
+          "w": 15.5,
+          "d": 9,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 40,
+          "y": 6,
+          "w": 15.5,
+          "d": 9,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 58,
+          "y": 6,
+          "w": 15.5,
+          "d": 9,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 76,
+          "y": 6,
+          "w": 15.5,
+          "d": 9,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 94,
+          "y": 6,
+          "w": 15.5,
+          "d": 9,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 112,
+          "y": 6,
+          "w": 15.5,
+          "d": 9,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 130,
+          "y": 6,
+          "w": 15.5,
+          "d": 9,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 148,
+          "y": 6,
+          "w": 15.5,
+          "d": 9,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 166,
+          "y": 6,
+          "w": 15.5,
+          "d": 9,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 184,
+          "y": 6,
+          "w": 15.5,
+          "d": 9,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 202,
+          "y": 6,
+          "w": 15.5,
+          "d": 9,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 220,
+          "y": 6,
+          "w": 15.5,
+          "d": 9,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 238,
+          "y": 6,
+          "w": 15.5,
+          "d": 9,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 256,
+          "y": 6,
+          "w": 15.5,
+          "d": 9,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 4,
+          "y": 23,
+          "w": 15.5,
+          "d": 14.5,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 22,
+          "y": 23,
+          "w": 15.5,
+          "d": 14.5,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 40,
+          "y": 23,
+          "w": 15.5,
+          "d": 14.5,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 58,
+          "y": 23,
+          "w": 15.5,
+          "d": 14.5,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 76,
+          "y": 23,
+          "w": 15.5,
+          "d": 14.5,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 94,
+          "y": 23,
+          "w": 15.5,
+          "d": 14.5,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 112,
+          "y": 23,
+          "w": 15.5,
+          "d": 14.5,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 130,
+          "y": 23,
+          "w": 15.5,
+          "d": 14.5,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 148,
+          "y": 23,
+          "w": 15.5,
+          "d": 14.5,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 166,
+          "y": 23,
+          "w": 15.5,
+          "d": 14.5,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 184,
+          "y": 23,
+          "w": 15.5,
+          "d": 14.5,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 202,
+          "y": 23,
+          "w": 15.5,
+          "d": 14.5,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 220,
+          "y": 23,
+          "w": 15.5,
+          "d": 14.5,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 238,
+          "y": 23,
+          "w": 15.5,
+          "d": 14.5,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 256,
+          "y": 23,
+          "w": 15.5,
+          "d": 14.5,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 4,
+          "y": 40,
+          "w": 15.5,
+          "d": 14.5,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 22,
+          "y": 40,
+          "w": 15.5,
+          "d": 14.5,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 40,
+          "y": 40,
+          "w": 15.5,
+          "d": 14.5,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 58,
+          "y": 40,
+          "w": 15.5,
+          "d": 14.5,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 76,
+          "y": 40,
+          "w": 15.5,
+          "d": 14.5,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 94,
+          "y": 40,
+          "w": 15.5,
+          "d": 14.5,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 112,
+          "y": 40,
+          "w": 15.5,
+          "d": 14.5,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 130,
+          "y": 40,
+          "w": 15.5,
+          "d": 14.5,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 148,
+          "y": 40,
+          "w": 15.5,
+          "d": 14.5,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 166,
+          "y": 40,
+          "w": 15.5,
+          "d": 14.5,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 184,
+          "y": 40,
+          "w": 15.5,
+          "d": 14.5,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 202,
+          "y": 40,
+          "w": 15.5,
+          "d": 14.5,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 220,
+          "y": 40,
+          "w": 15.5,
+          "d": 14.5,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 238,
+          "y": 40,
+          "w": 15.5,
+          "d": 14.5,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 256,
+          "y": 40,
+          "w": 15.5,
+          "d": 14.5,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 4,
+          "y": 57,
+          "w": 15.5,
+          "d": 14.5,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 22,
+          "y": 57,
+          "w": 15.5,
+          "d": 14.5,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 40,
+          "y": 57,
+          "w": 15.5,
+          "d": 14.5,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 58,
+          "y": 57,
+          "w": 15.5,
+          "d": 14.5,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 76,
+          "y": 57,
+          "w": 15.5,
+          "d": 14.5,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 94,
+          "y": 57,
+          "w": 15.5,
+          "d": 14.5,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 112,
+          "y": 57,
+          "w": 15.5,
+          "d": 14.5,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 130,
+          "y": 57,
+          "w": 15.5,
+          "d": 14.5,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 148,
+          "y": 57,
+          "w": 15.5,
+          "d": 14.5,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 166,
+          "y": 57,
+          "w": 15.5,
+          "d": 14.5,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 184,
+          "y": 57,
+          "w": 15.5,
+          "d": 14.5,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 202,
+          "y": 57,
+          "w": 15.5,
+          "d": 14.5,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 220,
+          "y": 57,
+          "w": 15.5,
+          "d": 14.5,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 238,
+          "y": 57,
+          "w": 15.5,
+          "d": 14.5,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 256,
+          "y": 57,
+          "w": 15.5,
+          "d": 14.5,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 4,
+          "y": 74,
+          "w": 15.5,
+          "d": 14.5,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 22,
+          "y": 74,
+          "w": 15.5,
+          "d": 14.5,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 40,
+          "y": 74,
+          "w": 15.5,
+          "d": 14.5,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 58,
+          "y": 74,
+          "w": 15.5,
+          "d": 14.5,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 76,
+          "y": 74,
+          "w": 15.5,
+          "d": 14.5,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 94,
+          "y": 74,
+          "w": 15.5,
+          "d": 14.5,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 112,
+          "y": 74,
+          "w": 15.5,
+          "d": 14.5,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 130,
+          "y": 74,
+          "w": 15.5,
+          "d": 14.5,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 148,
+          "y": 74,
+          "w": 15.5,
+          "d": 14.5,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 166,
+          "y": 74,
+          "w": 15.5,
+          "d": 14.5,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 184,
+          "y": 74,
+          "w": 15.5,
+          "d": 14.5,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 202,
+          "y": 74,
+          "w": 15.5,
+          "d": 14.5,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 220,
+          "y": 74,
+          "w": 15.5,
+          "d": 14.5,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 238,
+          "y": 74,
+          "w": 15.5,
+          "d": 14.5,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 256,
+          "y": 74,
+          "w": 15.5,
+          "d": 14.5,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 4,
+          "y": 91,
+          "w": 15.5,
+          "d": 14.5,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 22,
+          "y": 91,
+          "w": 15.5,
+          "d": 14.5,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 40,
+          "y": 91,
+          "w": 15.5,
+          "d": 14.5,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 58,
+          "y": 91,
+          "w": 15.5,
+          "d": 14.5,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 76,
+          "y": 91,
+          "w": 15.5,
+          "d": 14.5,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 94,
+          "y": 91,
+          "w": 15.5,
+          "d": 14.5,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 112,
+          "y": 91,
+          "w": 15.5,
+          "d": 14.5,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 130,
+          "y": 91,
+          "w": 15.5,
+          "d": 14.5,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 148,
+          "y": 91,
+          "w": 15.5,
+          "d": 14.5,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 166,
+          "y": 91,
+          "w": 15.5,
+          "d": 14.5,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 184,
+          "y": 91,
+          "w": 15.5,
+          "d": 14.5,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 202,
+          "y": 91,
+          "w": 15.5,
+          "d": 14.5,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 220,
+          "y": 91,
+          "w": 15.5,
+          "d": 14.5,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 238,
+          "y": 91,
+          "w": 15.5,
+          "d": 14.5,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        },
+        {
+          "shape": "box",
+          "x": 256,
+          "y": 91,
+          "w": 15.5,
+          "d": 14.5,
+          "r": 1.5,
+          "fill": "#3A3F43"
+        }
+      ]
+    },
+    {
+      "id": "touchpad",
+      "name": "Touchpad",
+      "shape": "box",
+      "x": 109,
+      "y": 148,
+      "w": 105,
+      "d": 62,
+      "h": 1,
+      "z": 10,
+      "r": 3,
+      "explode": [
+        -270,
+        0,
+        175
+      ],
+      "color": "#8E969A",
+      "mass": 25,
+      "materials": [
+        [
+          "glas",
+          60
+        ],
+        [
+          "fr4",
+          30
+        ],
+        [
+          "chip",
+          10
+        ]
+      ],
+      "info": "Glasoberfläche über einer Sensorplatine, die Fingerpositionen kapazitiv misst."
+    },
+    {
+      "id": "topcase",
+      "name": "Tastaturdeck",
+      "short": "Oberschale",
+      "shape": "box",
+      "x": 0,
+      "y": 0,
+      "w": 323,
+      "d": 218,
+      "h": 2,
+      "z": 8,
+      "r": 6,
+      "explode": [
+        -270,
+        0,
+        125
+      ],
+      "mass": 250,
+      "materials": [
+        [
+          "alu",
+          85
+        ],
+        [
+          "pcabs",
+          15
+        ]
+      ],
+      "info": "Trägt Tastatur und Touchpad. Bei vielen Modellen ist die Tastatur fest vernietet.",
+      "marks": [
+        {
+          "shape": "box",
+          "x": 20,
+          "y": 26,
+          "w": 283,
+          "d": 112,
+          "r": 4
+        },
+        {
+          "shape": "box",
+          "x": 107,
+          "y": 146,
+          "w": 109,
+          "d": 66,
+          "r": 4
+        }
+      ]
+    },
+    {
+      "id": "heatpipe",
+      "name": "Heatpipe",
+      "shape": "box",
+      "x": 120,
+      "y": 44,
+      "w": 118,
+      "d": 9,
+      "h": 1.5,
+      "z": 5,
+      "r": 4,
+      "explode": [
+        0,
+        0,
+        82
+      ],
+      "color": "#C98F62",
+      "mass": 30,
+      "materials": [
+        [
+          "kupfer",
+          100
+        ]
+      ],
+      "info": "Hohles Kupferrohr mit etwas Flüssigkeit. Leitet die Wärme vom Prozessor zum Lüfter."
+    },
+    {
+      "id": "cpu",
+      "name": "Prozessor",
+      "shape": "box",
+      "x": 121,
+      "y": 40,
+      "w": 24,
+      "d": 20,
+      "h": 1.2,
+      "z": 3,
+      "r": 1,
+      "explode": [
+        0,
+        0,
+        62
+      ],
+      "color": "#3F4547",
+      "mass": 3,
+      "materials": [
+        [
+          "chip",
+          100
+        ]
+      ],
+      "info": "Das Herz des Laptops. Fest verlötet, nur mit dem Mainboard zusammen weiterverwendbar."
+    },
+    {
+      "id": "ram",
+      "name": "Arbeitsspeicher",
+      "short": "RAM",
+      "shape": "box",
+      "x": 58,
+      "y": 28,
+      "w": 30,
+      "d": 68,
+      "h": 1,
+      "z": 3,
+      "r": 1,
+      "explode": [
+        0,
+        0,
+        62
+      ],
+      "color": "#55705A",
+      "mass": 8,
+      "materials": [
+        [
+          "chip",
+          60
+        ],
+        [
+          "fr4",
+          35
+        ],
+        [
+          "kontakte",
+          5
+        ]
+      ],
+      "info": "Steckbares Modul mit vergoldeten Kontakten. Passt in andere Laptops gleicher Generation."
+    },
+    {
+      "id": "ssd",
+      "name": "SSD-Speicher",
+      "short": "SSD",
+      "shape": "box",
+      "x": 160,
+      "y": 72,
+      "w": 80,
+      "d": 22,
+      "h": 1.5,
+      "z": 3,
+      "r": 1,
+      "explode": [
+        0,
+        0,
+        62
+      ],
+      "color": "#3F4547",
+      "mass": 7,
+      "materials": [
+        [
+          "chip",
+          60
+        ],
+        [
+          "fr4",
+          35
+        ],
+        [
+          "kontakte",
+          5
+        ]
+      ],
+      "info": "Datenspeicher im M.2-Format. Vor dem Abgeben sicher löschen, danach als externes Laufwerk nutzbar."
+    },
+    {
+      "id": "luefter",
+      "name": "Lüfter",
+      "shape": "cyl",
+      "x": 244,
+      "y": 22,
+      "w": 58,
+      "h": 6,
+      "z": 1.6,
+      "explode": [
+        0,
+        0,
+        38
+      ],
+      "color": "#6E7579",
+      "mass": 25,
+      "materials": [
+        [
+          "pcabs",
+          60
+        ],
+        [
+          "kupfer",
+          15
+        ],
+        [
+          "stahl",
+          15
+        ],
+        [
+          "ndfeb",
+          10
+        ]
+      ],
+      "info": "5-Volt-Radiallüfter mit kleinem Magnetmotor. Läuft direkt an einem USB-Anschluss.",
+      "marks": [
+        {
+          "shape": "cyl",
+          "x": 19,
+          "y": 19,
+          "w": 20,
+          "fill": "#8C9397"
+        }
+      ]
+    },
+    {
+      "id": "mainboard",
+      "name": "Mainboard",
+      "shape": "box",
+      "x": 40,
+      "y": 12,
+      "w": 196,
+      "d": 92,
+      "h": 1.2,
+      "z": 1.6,
+      "r": 3,
+      "explode": [
+        0,
+        0,
+        38
+      ],
+      "mass": 120,
+      "materials": [
+        [
+          "fr4",
+          45
+        ],
+        [
+          "kupfer",
+          25
+        ],
+        [
+          "chip",
+          20
+        ],
+        [
+          "lot",
+          10
+        ]
+      ],
+      "info": "Zehnlagige Leiterplatte. Hier steckt der größte Teil von Gold, Silber und Tantal."
+    },
+    {
+      "id": "akku",
+      "name": "Lithium-Ionen-Akku",
+      "short": "Akku",
+      "shape": "box",
+      "x": 44,
+      "y": 132,
+      "w": 235,
+      "d": 72,
+      "h": 6,
+      "z": 1.6,
+      "r": 4,
+      "explode": [
+        0,
+        0,
+        38
+      ],
+      "mass": 230,
+      "materials": [
+        [
+          "nmc",
+          40
+        ],
+        [
+          "graphit",
+          18
+        ],
+        [
+          "elektrolyt",
+          13
+        ],
+        [
+          "alu",
+          12
+        ],
+        [
+          "kupfer",
+          10
+        ],
+        [
+          "folien",
+          7
+        ]
+      ],
+      "info": "Vier flache Zellen, verschraubt. Lässt sich bei diesem Modell tauschen.",
+      "marks": [
+        {
+          "shape": "box",
+          "x": 4,
+          "y": 6,
+          "w": 54,
+          "d": 60,
+          "r": 2
+        },
+        {
+          "shape": "box",
+          "x": 62,
+          "y": 6,
+          "w": 54,
+          "d": 60,
+          "r": 2
+        },
+        {
+          "shape": "box",
+          "x": 120,
+          "y": 6,
+          "w": 54,
+          "d": 60,
+          "r": 2
+        },
+        {
+          "shape": "box",
+          "x": 178,
+          "y": 6,
+          "w": 53,
+          "d": 60,
+          "r": 2
+        }
+      ]
+    },
+    {
+      "id": "lautsprecher",
+      "name": "Lautsprecher",
+      "shape": "box",
+      "x": 10,
+      "y": 150,
+      "w": 28,
+      "d": 44,
+      "h": 3,
+      "z": 1.6,
+      "r": 3,
+      "explode": [
+        0,
+        0,
+        38
+      ],
+      "color": "#6E7579",
+      "mass": 10,
+      "materials": [
+        [
+          "pcabs",
+          50
+        ],
+        [
+          "ndfeb",
+          30
+        ],
+        [
+          "kupfer",
+          20
+        ]
+      ],
+      "info": "Zwei Stereo-Lautsprecher mit Neodym-Magneten."
+    },
+    {
+      "id": "lautsprecher2",
+      "name": "Lautsprecher",
+      "label": false,
+      "shape": "box",
+      "x": 285,
+      "y": 150,
+      "w": 28,
+      "d": 44,
+      "h": 3,
+      "z": 1.6,
+      "r": 3,
+      "explode": [
+        0,
+        0,
+        38
+      ],
+      "color": "#6E7579",
+      "mass": 10,
+      "materials": [
+        [
+          "pcabs",
+          50
+        ],
+        [
+          "ndfeb",
+          30
+        ],
+        [
+          "kupfer",
+          20
+        ]
+      ],
+      "info": "Zwei Stereo-Lautsprecher mit Neodym-Magneten."
+    },
+    {
+      "id": "boden",
+      "name": "Bodenschale",
+      "shape": "box",
+      "x": 0,
+      "y": 0,
+      "w": 323,
+      "d": 218,
+      "h": 1.5,
+      "z": 0,
+      "r": 6,
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "mass": 160,
+      "materials": [
+        [
+          "alu",
+          100
+        ]
+      ],
+      "info": "Mit zehn Schrauben befestigt. Lüftungsschlitze führen kühle Luft zum Lüfter.",
+      "marks": [
+        {
+          "shape": "box",
+          "x": 240,
+          "y": 18,
+          "w": 66,
+          "d": 66,
+          "r": 6
+        },
+        {
+          "shape": "cyl",
+          "x": 12,
+          "y": 12,
+          "w": 10
+        },
+        {
+          "shape": "cyl",
+          "x": 301,
+          "y": 12,
+          "w": 10
+        },
+        {
+          "shape": "cyl",
+          "x": 12,
+          "y": 196,
+          "w": 10
+        },
+        {
+          "shape": "cyl",
+          "x": 301,
+          "y": 196,
+          "w": 10
+        }
+      ]
+    }
+  ],
+  "projekte": [
+    {
+      "titel": "USB-Tischventilator",
+      "kurz": "Der 5-Volt-Lüfter läuft direkt an einem USB-Kabel aus dem Lager.",
+      "stufe": 1,
+      "dauer": "40 min",
+      "lernziel": "Spannung und Strom: Warum passt der Lüfter an USB?",
+      "nutzt": [
+        {
+          "neu": true,
+          "name": "Lüfter"
+        },
+        {
+          "inv": "usb-kabel",
+          "menge": 1
+        },
+        {
+          "inv": "hdpe-platte",
+          "menge": 1
+        }
+      ],
+      "werkzeug": [
+        "Abisolierzange",
+        "Lötkolben",
+        "Schrumpfschlauch"
+      ],
+      "schritte": [
+        "Lüfter ausbauen, rotes und schwarzes Kabel finden",
+        "USB-Kabel aufschneiden, Plus und Minus anlöten",
+        "Standfuß aus HDPE-Platte zuschneiden"
+      ]
+    },
+    {
+      "titel": "Leiterplatten-Uhr",
+      "kurz": "Das Mainboard wird zum Zifferblatt einer Wanduhr.",
+      "stufe": 1,
+      "dauer": "30 min",
+      "lernziel": "Wo steckt Gold im Gerät? Bauteile benennen.",
+      "nutzt": [
+        {
+          "neu": true,
+          "name": "Mainboard"
+        },
+        {
+          "inv": "uhrwerk",
+          "menge": 1
+        }
+      ],
+      "werkzeug": [
+        "Bohrer 8 mm",
+        "Schraubendreher"
+      ],
+      "schritte": [
+        "Mainboard ausbauen, scharfe Kanten entgraten",
+        "Mittelloch bohren",
+        "Uhrwerk einsetzen, Zeiger aufstecken"
+      ]
+    },
+    {
+      "titel": "Externer Monitor",
+      "kurz": "Das Display bekommt eine Controller-Platine und ein Holzgehäuse.",
+      "stufe": 3,
+      "dauer": "3 h",
+      "lernziel": "Wiederverwendung schlägt Recycling: 230 g Display statt Neukauf.",
+      "nutzt": [
+        {
+          "neu": true,
+          "name": "Display-Panel"
+        },
+        {
+          "inv": "controller",
+          "menge": 1
+        },
+        {
+          "inv": "holzleiste",
+          "menge": 4
+        },
+        {
+          "inv": "usb-kabel",
+          "menge": 1
+        }
+      ],
+      "werkzeug": [
+        "Säge",
+        "Akkuschrauber",
+        "Heißklebepistole"
+      ],
+      "schritte": [
+        "Panel-Typenschild ablesen, passenden Controller wählen",
+        "Rahmen aus Holzleisten bauen",
+        "Controller anschließen, per USB-C mit Strom versorgen"
+      ]
+    }
+  ]
+}

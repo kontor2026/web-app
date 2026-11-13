@@ -1,0 +1,872 @@
+{
+  "classes": {
+    "metall": {
+      "label": "Metall",
+      "color": "#AEB5B9"
+    },
+    "kunststoff": {
+      "label": "Kunststoff",
+      "color": "#E3D2AE"
+    },
+    "glas": {
+      "label": "Glas",
+      "color": "#C4DADB"
+    },
+    "elektronik": {
+      "label": "Elektronik",
+      "color": "#8AA58E"
+    },
+    "akku": {
+      "label": "Akku / Chemie",
+      "color": "#9C97B5"
+    },
+    "magnet": {
+      "label": "Magnet / Ferrit",
+      "color": "#7F8489"
+    },
+    "papier": {
+      "label": "Druck / Faser",
+      "color": "#D6C3AE"
+    }
+  },
+  "materials": {
+    "alu": {
+      "name": "Aluminium",
+      "cls": "metall",
+      "elements": [
+        [
+          "Al",
+          97
+        ],
+        [
+          "Mg",
+          1
+        ],
+        [
+          "Si",
+          1
+        ]
+      ],
+      "recycling": "hoch",
+      "text": "Leicht und gut formbar. Recyceltes Aluminium braucht nur etwa 5 % der Energie von Primäraluminium."
+    },
+    "stahl": {
+      "name": "Edelstahl",
+      "cls": "metall",
+      "elements": [
+        [
+          "Fe",
+          70
+        ],
+        [
+          "Cr",
+          18
+        ],
+        [
+          "Ni",
+          10
+        ]
+      ],
+      "recycling": "hoch",
+      "text": "Robust und magnetisch je nach Sorte. Wird über Schrottplätze fast vollständig zurückgewonnen."
+    },
+    "kupfer": {
+      "name": "Kupfer",
+      "cls": "metall",
+      "elements": [
+        [
+          "Cu",
+          99
+        ]
+      ],
+      "recycling": "hoch",
+      "text": "Leitet Strom und Wärme sehr gut. Steckt in Leiterbahnen, Spulen und Kabeln."
+    },
+    "lot": {
+      "name": "Lötzinn (bleifrei)",
+      "cls": "metall",
+      "elements": [
+        [
+          "Sn",
+          96
+        ],
+        [
+          "Ag",
+          3
+        ],
+        [
+          "Cu",
+          1
+        ]
+      ],
+      "recycling": "mittel",
+      "text": "Verbindet Bauteile mit der Platine. Seit 2006 in der EU weitgehend bleifrei."
+    },
+    "kontakte": {
+      "name": "Vergoldete Kontakte",
+      "cls": "metall",
+      "elements": [
+        [
+          "Cu",
+          90
+        ],
+        [
+          "Ni",
+          8
+        ],
+        [
+          "Au",
+          2
+        ]
+      ],
+      "recycling": "mittel",
+      "text": "Eine hauchdünne Goldschicht schützt Steckkontakte vor Korrosion."
+    },
+    "glas": {
+      "name": "Alumosilikatglas",
+      "cls": "glas",
+      "elements": [
+        [
+          "Si",
+          30
+        ],
+        [
+          "O",
+          50
+        ],
+        [
+          "Al",
+          10
+        ],
+        [
+          "K",
+          5
+        ]
+      ],
+      "recycling": "gering",
+      "text": "Chemisch gehärtetes Spezialglas. Kratzfest, aber wegen Beschichtungen kaum recycelbar."
+    },
+    "displayglas": {
+      "name": "Displayglas mit ITO",
+      "cls": "glas",
+      "elements": [
+        [
+          "Si",
+          30
+        ],
+        [
+          "O",
+          55
+        ],
+        [
+          "In",
+          0.1
+        ]
+      ],
+      "recycling": "gering",
+      "text": "Trägerglas mit einer leitfähigen Schicht aus Indiumzinnoxid. Indium ist selten."
+    },
+    "folien": {
+      "name": "Polymer-Folien",
+      "cls": "kunststoff",
+      "elements": [
+        [
+          "C",
+          70
+        ],
+        [
+          "H",
+          6
+        ],
+        [
+          "O",
+          24
+        ]
+      ],
+      "recycling": "gering",
+      "text": "Polarisations- und Lichtleiterfolien. Mehrlagig verklebt, daher schwer zu trennen."
+    },
+    "led": {
+      "name": "LED-Hintergrundlicht",
+      "cls": "elektronik",
+      "elements": [
+        [
+          "Ga",
+          40
+        ],
+        [
+          "In",
+          5
+        ],
+        [
+          "Y",
+          2
+        ]
+      ],
+      "recycling": "gering",
+      "text": "Leuchtdioden aus Galliumverbindungen. Gelbe Leuchtstoffe enthalten Seltene Erden."
+    },
+    "fr4": {
+      "name": "Leiterplatte (FR-4)",
+      "cls": "elektronik",
+      "elements": [
+        [
+          "C",
+          30
+        ],
+        [
+          "Si",
+          25
+        ],
+        [
+          "O",
+          30
+        ],
+        [
+          "Br",
+          5
+        ]
+      ],
+      "recycling": "mittel",
+      "text": "Glasfasergewebe mit Epoxidharz. Trägt die Leiterbahnen aus Kupfer."
+    },
+    "chip": {
+      "name": "Halbleiter-Chip",
+      "cls": "elektronik",
+      "elements": [
+        [
+          "Si",
+          40
+        ],
+        [
+          "Cu",
+          20
+        ],
+        [
+          "Au",
+          1
+        ],
+        [
+          "Ta",
+          1
+        ]
+      ],
+      "recycling": "mittel",
+      "text": "Siliziumkristall im Kunststoffgehäuse. Der Wert liegt in Gold, Kupfer und Tantal."
+    },
+    "lco": {
+      "name": "Lithium-Kobalt-Oxid",
+      "cls": "akku",
+      "elements": [
+        [
+          "Co",
+          60
+        ],
+        [
+          "Li",
+          7
+        ],
+        [
+          "O",
+          33
+        ]
+      ],
+      "recycling": "mittel",
+      "text": "Kathodenmaterial im Akku. Kobalt ist der teuerste und kritischste Bestandteil."
+    },
+    "nmc": {
+      "name": "NMC-Kathode",
+      "cls": "akku",
+      "elements": [
+        [
+          "Ni",
+          35
+        ],
+        [
+          "Mn",
+          12
+        ],
+        [
+          "Co",
+          12
+        ],
+        [
+          "Li",
+          7
+        ]
+      ],
+      "recycling": "mittel",
+      "text": "Nickel-Mangan-Kobalt-Mischung. Üblich in Laptop-Akkus."
+    },
+    "graphit": {
+      "name": "Graphit",
+      "cls": "akku",
+      "elements": [
+        [
+          "C",
+          100
+        ]
+      ],
+      "recycling": "gering",
+      "text": "Anodenmaterial im Akku. Speichert Lithium-Ionen beim Laden."
+    },
+    "elektrolyt": {
+      "name": "Elektrolyt",
+      "cls": "akku",
+      "elements": [
+        [
+          "C",
+          40
+        ],
+        [
+          "Li",
+          2
+        ],
+        [
+          "F",
+          10
+        ]
+      ],
+      "recycling": "gering",
+      "text": "Brennbare Flüssigkeit mit Lithiumsalz. Grund, warum beschädigte Akkus brennen können."
+    },
+    "ndfeb": {
+      "name": "Neodym-Magnet",
+      "cls": "magnet",
+      "elements": [
+        [
+          "Nd",
+          30
+        ],
+        [
+          "Fe",
+          66
+        ],
+        [
+          "B",
+          1
+        ]
+      ],
+      "recycling": "gering",
+      "text": "Sehr starke Dauermagnete für Lautsprecher, Vibration und Kamera-Autofokus."
+    },
+    "ferrit": {
+      "name": "Ferrit",
+      "cls": "magnet",
+      "elements": [
+        [
+          "Fe",
+          70
+        ],
+        [
+          "Mn",
+          10
+        ],
+        [
+          "Zn",
+          8
+        ]
+      ],
+      "recycling": "gering",
+      "text": "Keramischer Magnetwerkstoff. Bündelt das Magnetfeld in Trafos und Ladespulen."
+    },
+    "hdpe": {
+      "name": "HDPE (Recyclingcode 2)",
+      "cls": "kunststoff",
+      "elements": [
+        [
+          "C",
+          86
+        ],
+        [
+          "H",
+          14
+        ]
+      ],
+      "recycling": "hoch",
+      "code": 2,
+      "text": "Polyethylen hoher Dichte. Sortenrein gut schredder- und spritzgießbar."
+    },
+    "ldpe": {
+      "name": "LDPE (Recyclingcode 4)",
+      "cls": "kunststoff",
+      "elements": [
+        [
+          "C",
+          86
+        ],
+        [
+          "H",
+          14
+        ]
+      ],
+      "recycling": "mittel",
+      "code": 4,
+      "text": "Weiches Polyethylen. Für Dichtungen und Folien."
+    },
+    "pp": {
+      "name": "PP (Recyclingcode 5)",
+      "cls": "kunststoff",
+      "elements": [
+        [
+          "C",
+          86
+        ],
+        [
+          "H",
+          14
+        ]
+      ],
+      "recycling": "hoch",
+      "code": 5,
+      "text": "Polypropylen. Typisch für Deckel, sortenrein gut verwertbar."
+    },
+    "pcabs": {
+      "name": "PC/ABS",
+      "cls": "kunststoff",
+      "elements": [
+        [
+          "C",
+          80
+        ],
+        [
+          "H",
+          7
+        ],
+        [
+          "O",
+          8
+        ],
+        [
+          "N",
+          3
+        ]
+      ],
+      "recycling": "mittel",
+      "text": "Schlagfestes Gehäuseplastik mit Flammschutz. Oft schwer sortenrein zu trennen."
+    },
+    "tpe": {
+      "name": "TPE-Kabelmantel",
+      "cls": "kunststoff",
+      "elements": [
+        [
+          "C",
+          82
+        ],
+        [
+          "H",
+          12
+        ],
+        [
+          "O",
+          4
+        ]
+      ],
+      "recycling": "gering",
+      "text": "Flexibler Kunststoff als Isolierung um die Kupferadern."
+    },
+    "druck": {
+      "name": "Druckfarbe",
+      "cls": "papier",
+      "elements": [
+        [
+          "C",
+          60
+        ],
+        [
+          "Ti",
+          5
+        ],
+        [
+          "Cu",
+          2
+        ]
+      ],
+      "recycling": "gering",
+      "text": "Pigmente und Bindemittel. Blau oft auf Basis von Kupferphthalocyanin."
+    },
+    "gummi": {
+      "name": "Gummi / Silikon",
+      "cls": "kunststoff",
+      "elements": [
+        [
+          "Si",
+          38
+        ],
+        [
+          "O",
+          22
+        ],
+        [
+          "C",
+          32
+        ]
+      ],
+      "recycling": "gering",
+      "text": "Weiche Teile wie Tastenmatten und Füße."
+    },
+    "pet": {
+      "name": "PET (Recyclingcode 1)",
+      "cls": "kunststoff",
+      "elements": [
+        [
+          "C",
+          62
+        ],
+        [
+          "H",
+          4
+        ],
+        [
+          "O",
+          34
+        ]
+      ],
+      "recycling": "hoch",
+      "code": 1,
+      "text": "Klarer Kunststoff für Getränkeflaschen. Wird zu Fasern oder neuen Flaschen recycelt."
+    },
+    "behaelterglas": {
+      "name": "Behälterglas (Kalk-Natron)",
+      "cls": "glas",
+      "elements": [
+        [
+          "Si",
+          34
+        ],
+        [
+          "O",
+          46
+        ],
+        [
+          "Na",
+          10
+        ],
+        [
+          "Ca",
+          7
+        ]
+      ],
+      "recycling": "hoch",
+      "text": "Glas für Flaschen und Gläser. Lässt sich beliebig oft einschmelzen, wenn es nach Farben getrennt ist."
+    },
+    "papier": {
+      "name": "Papier / Karton",
+      "cls": "papier",
+      "elements": [
+        [
+          "C",
+          44
+        ],
+        [
+          "O",
+          49
+        ],
+        [
+          "H",
+          6
+        ]
+      ],
+      "recycling": "hoch",
+      "text": "Aus Holzfasern. Etiketten und Verpackungen, etwa fünf- bis siebenmal recycelbar."
+    },
+    "weissblech": {
+      "name": "Weißblech",
+      "cls": "metall",
+      "elements": [
+        [
+          "Fe",
+          98
+        ],
+        [
+          "Sn",
+          1
+        ]
+      ],
+      "recycling": "hoch",
+      "text": "Verzinntes Stahlblech für Dosen und Kronkorken. Mit Magneten leicht aussortierbar."
+    },
+    "holz": {
+      "name": "Holz",
+      "cls": "papier",
+      "elements": [
+        [
+          "C",
+          50
+        ],
+        [
+          "O",
+          43
+        ],
+        [
+          "H",
+          6
+        ]
+      ],
+      "recycling": "mittel",
+      "text": "Nachwachsender Rohstoff. Unbehandelt gut wiederverwendbar."
+    },
+    "textil": {
+      "name": "Textilfaser (Baumwolle / Polyester)",
+      "cls": "papier",
+      "elements": [
+        [
+          "C",
+          50
+        ],
+        [
+          "O",
+          40
+        ],
+        [
+          "H",
+          6
+        ]
+      ],
+      "recycling": "gering",
+      "text": "Mischgewebe sind schwer zu trennen. Weitertragen und Umnähen lohnt sich mehr."
+    }
+  },
+  "elements": {
+    "Au": {
+      "name": "Gold",
+      "z": 79,
+      "herkunft": "China, Russland, Australien",
+      "kritisch": false,
+      "recycling": "hoch",
+      "fakt": "In einer Tonne alter Handys steckt deutlich mehr Gold als in einer Tonne Golderz."
+    },
+    "Ag": {
+      "name": "Silber",
+      "z": 47,
+      "herkunft": "Mexiko, Peru, China",
+      "kritisch": false,
+      "recycling": "mittel",
+      "fakt": "Bestes leitendes Metall überhaupt. Steckt im Lötzinn."
+    },
+    "Cu": {
+      "name": "Kupfer",
+      "z": 29,
+      "herkunft": "Chile, Peru, DR Kongo",
+      "kritisch": "strategisch",
+      "recycling": "hoch",
+      "fakt": "Kupfer lässt sich ohne Qualitätsverlust beliebig oft recyceln."
+    },
+    "Co": {
+      "name": "Kobalt",
+      "z": 27,
+      "herkunft": "DR Kongo (rund 70 %)",
+      "kritisch": true,
+      "recycling": "mittel",
+      "fakt": "Der Abbau ist oft mit Kinderarbeit verbunden. Recycling senkt die Abhängigkeit."
+    },
+    "Li": {
+      "name": "Lithium",
+      "z": 3,
+      "herkunft": "Australien, Chile, China",
+      "kritisch": true,
+      "recycling": "gering",
+      "fakt": "Leichtestes Metall. Wird aus Salzseen oder Gestein gewonnen und braucht viel Wasser."
+    },
+    "Ni": {
+      "name": "Nickel",
+      "z": 28,
+      "herkunft": "Indonesien, Philippinen, Russland",
+      "kritisch": "strategisch",
+      "recycling": "hoch",
+      "fakt": "Macht Edelstahl rostfrei und Akkus energiereich."
+    },
+    "Mn": {
+      "name": "Mangan",
+      "z": 25,
+      "herkunft": "Südafrika, Gabun, Australien",
+      "kritisch": false,
+      "recycling": "mittel",
+      "fakt": "Stabilisiert die Kathode in modernen Akkus."
+    },
+    "Al": {
+      "name": "Aluminium",
+      "z": 13,
+      "herkunft": "China, Indien, Russland",
+      "kritisch": false,
+      "recycling": "hoch",
+      "fakt": "Häufigstes Metall der Erdkruste, aber energieintensiv in der Herstellung."
+    },
+    "Fe": {
+      "name": "Eisen",
+      "z": 26,
+      "herkunft": "Australien, Brasilien",
+      "kritisch": false,
+      "recycling": "hoch",
+      "fakt": "Mit Magneten leicht aus dem Schredder zu sortieren."
+    },
+    "Cr": {
+      "name": "Chrom",
+      "z": 24,
+      "herkunft": "Südafrika, Kasachstan",
+      "kritisch": false,
+      "recycling": "hoch",
+      "fakt": "Bildet die Schutzschicht, die Edelstahl rostfrei macht."
+    },
+    "Sn": {
+      "name": "Zinn",
+      "z": 50,
+      "herkunft": "China, Indonesien, Myanmar",
+      "kritisch": false,
+      "recycling": "mittel",
+      "fakt": "Gilt als Konfliktmineral. Hersteller müssen die Herkunft nachweisen."
+    },
+    "Ta": {
+      "name": "Tantal",
+      "z": 73,
+      "herkunft": "DR Kongo, Ruanda, Brasilien",
+      "kritisch": true,
+      "recycling": "gering",
+      "fakt": "Für winzige Kondensatoren. Ebenfalls ein Konfliktmineral."
+    },
+    "Nd": {
+      "name": "Neodym",
+      "z": 60,
+      "herkunft": "China (Großteil der Verarbeitung)",
+      "kritisch": true,
+      "recycling": "gering",
+      "fakt": "Seltene Erde. Unter 1 % wird bisher aus Altgeräten zurückgewonnen."
+    },
+    "In": {
+      "name": "Indium",
+      "z": 49,
+      "herkunft": "China, Südkorea",
+      "kritisch": false,
+      "recycling": "gering",
+      "fakt": "Macht Touchscreens leitfähig und trotzdem durchsichtig."
+    },
+    "Ga": {
+      "name": "Gallium",
+      "z": 31,
+      "herkunft": "China (rund 98 %)",
+      "kritisch": true,
+      "recycling": "gering",
+      "fakt": "Schmilzt schon in der Hand. Grundlage vieler LEDs."
+    },
+    "Y": {
+      "name": "Yttrium",
+      "z": 39,
+      "herkunft": "China",
+      "kritisch": true,
+      "recycling": "gering",
+      "fakt": "Seltene Erde im Leuchtstoff weißer LEDs."
+    },
+    "Si": {
+      "name": "Silizium",
+      "z": 14,
+      "herkunft": "China, Norwegen, Brasilien",
+      "kritisch": true,
+      "recycling": "gering",
+      "fakt": "Aus Quarzsand. Hochrein für Chips, als Oxid im Glas."
+    },
+    "C": {
+      "name": "Kohlenstoff",
+      "z": 6,
+      "herkunft": "Erdöl, Erdgas, Graphitminen",
+      "kritisch": false,
+      "recycling": "mittel",
+      "fakt": "Rückgrat aller Kunststoffe. Graphit für Akkus kommt überwiegend aus China."
+    },
+    "H": {
+      "name": "Wasserstoff",
+      "z": 1,
+      "herkunft": "Erdöl und Erdgas",
+      "kritisch": false,
+      "recycling": "mittel",
+      "fakt": "Bildet mit Kohlenstoff die langen Ketten von Polyethylen."
+    },
+    "O": {
+      "name": "Sauerstoff",
+      "z": 8,
+      "herkunft": "überall",
+      "kritisch": false,
+      "recycling": "hoch",
+      "fakt": "Steckt in Glas als Siliziumdioxid gebunden."
+    },
+    "K": {
+      "name": "Kalium",
+      "z": 19,
+      "herkunft": "Kanada, Russland",
+      "kritisch": false,
+      "recycling": "gering",
+      "fakt": "Härtet Glas: Kaliumionen ersetzen kleinere Natriumionen an der Oberfläche."
+    },
+    "Mg": {
+      "name": "Magnesium",
+      "z": 12,
+      "herkunft": "China",
+      "kritisch": true,
+      "recycling": "mittel",
+      "fakt": "Leichtmetall in Legierungen. Fast nur aus China."
+    },
+    "Br": {
+      "name": "Brom",
+      "z": 35,
+      "herkunft": "Israel, Jordanien, USA",
+      "kritisch": false,
+      "recycling": "gering",
+      "fakt": "Flammschutzmittel in Leiterplatten. Problematisch bei der Verbrennung."
+    },
+    "F": {
+      "name": "Fluor",
+      "z": 9,
+      "herkunft": "China, Mexiko",
+      "kritisch": true,
+      "recycling": "gering",
+      "fakt": "Im Leitsalz des Elektrolyten. Bildet beim Brand giftige Flusssäure."
+    },
+    "B": {
+      "name": "Bor",
+      "z": 5,
+      "herkunft": "Türkei, USA",
+      "kritisch": true,
+      "recycling": "gering",
+      "fakt": "Kleiner Anteil, der Neodym-Magnete so stark macht."
+    },
+    "Zn": {
+      "name": "Zink",
+      "z": 30,
+      "herkunft": "China, Peru, Australien",
+      "kritisch": false,
+      "recycling": "mittel",
+      "fakt": "Bestandteil weichmagnetischer Ferrite."
+    },
+    "Ti": {
+      "name": "Titan",
+      "z": 22,
+      "herkunft": "China, Mosambik, Südafrika",
+      "kritisch": false,
+      "recycling": "gering",
+      "fakt": "Als Titandioxid das weiße Pigment in Farben."
+    },
+    "Na": {
+      "name": "Natrium",
+      "z": 11,
+      "herkunft": "Steinsalz, Soda",
+      "kritisch": false,
+      "recycling": "hoch",
+      "fakt": "Als Soda senkt es die Schmelztemperatur von Glas."
+    },
+    "Ca": {
+      "name": "Calcium",
+      "z": 20,
+      "herkunft": "Kalkstein",
+      "kritisch": false,
+      "recycling": "hoch",
+      "fakt": "Kalk macht Glas wasserbeständig."
+    },
+    "N": {
+      "name": "Stickstoff",
+      "z": 7,
+      "herkunft": "Luft",
+      "kritisch": false,
+      "recycling": "mittel",
+      "fakt": "Teil des Acrylnitrils im ABS-Kunststoff."
+    }
+  }
+}

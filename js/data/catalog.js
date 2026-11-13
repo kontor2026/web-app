@@ -63,6 +63,18 @@ export const MATERIALS = {
                 text: 'Pigmente und Bindemittel. Blau oft auf Basis von Kupferphthalocyanin.' },
   gummi:      { name: 'Gummi / Silikon', cls: 'kunststoff', elements: [['Si', 38], ['O', 22], ['C', 32]], recycling: 'gering',
                 text: 'Weiche Teile wie Tastenmatten und Füße.' },
+  pet:        { name: 'PET (Recyclingcode 1)', cls: 'kunststoff', elements: [['C', 62], ['H', 4], ['O', 34]], recycling: 'hoch', code: 1,
+                text: 'Klarer Kunststoff für Getränkeflaschen. Wird zu Fasern oder neuen Flaschen recycelt.' },
+  behaelterglas: { name: 'Behälterglas (Kalk-Natron)', cls: 'glas', elements: [['Si', 34], ['O', 46], ['Na', 10], ['Ca', 7]], recycling: 'hoch',
+                text: 'Glas für Flaschen und Gläser. Lässt sich beliebig oft einschmelzen, wenn es nach Farben getrennt ist.' },
+  papier:     { name: 'Papier / Karton', cls: 'papier', elements: [['C', 44], ['O', 49], ['H', 6]], recycling: 'hoch',
+                text: 'Aus Holzfasern. Etiketten und Verpackungen, etwa fünf- bis siebenmal recycelbar.' },
+  weissblech: { name: 'Weißblech', cls: 'metall', elements: [['Fe', 98], ['Sn', 1]], recycling: 'hoch',
+                text: 'Verzinntes Stahlblech für Dosen und Kronkorken. Mit Magneten leicht aussortierbar.' },
+  holz:       { name: 'Holz', cls: 'papier', elements: [['C', 50], ['O', 43], ['H', 6]], recycling: 'mittel',
+                text: 'Nachwachsender Rohstoff. Unbehandelt gut wiederverwendbar.' },
+  textil:     { name: 'Textilfaser (Baumwolle / Polyester)', cls: 'papier', elements: [['C', 50], ['O', 40], ['H', 6]], recycling: 'gering',
+                text: 'Mischgewebe sind schwer zu trennen. Weitertragen und Umnähen lohnt sich mehr.' },
 };
 
 // Elemente: Endpunkt der Drill-down-Kette.
@@ -121,6 +133,10 @@ export const ELEMENTS = {
         fakt: 'Bestandteil weichmagnetischer Ferrite.' },
   Ti: { name: 'Titan', z: 22, herkunft: 'China, Mosambik, Südafrika', kritisch: false, recycling: 'gering',
         fakt: 'Als Titandioxid das weiße Pigment in Farben.' },
+  Na: { name: 'Natrium', z: 11, herkunft: 'Steinsalz, Soda', kritisch: false, recycling: 'hoch',
+        fakt: 'Als Soda senkt es die Schmelztemperatur von Glas.' },
+  Ca: { name: 'Calcium', z: 20, herkunft: 'Kalkstein', kritisch: false, recycling: 'hoch',
+        fakt: 'Kalk macht Glas wasserbeständig.' },
   N:  { name: 'Stickstoff', z: 7, herkunft: 'Luft', kritisch: false, recycling: 'mittel',
         fakt: 'Teil des Acrylnitrils im ABS-Kunststoff.' },
 };

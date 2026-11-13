@@ -1,0 +1,647 @@
+{
+  "id": "smartphone",
+  "name": "Smartphone",
+  "klasse": "Elektroschrott · Kleingerät",
+  "photo": "assets/samples/smartphone.jpg",
+  "erkennung": {
+    "conf": 0.97,
+    "modelle": [
+      [
+        "Apple iPhone 11",
+        0.61
+      ],
+      [
+        "Apple iPhone XR",
+        0.24
+      ],
+      [
+        "Apple iPhone 12",
+        0.09
+      ]
+    ],
+    "hinweis": "Front sieht bei mehreren Modellen gleich aus. Rückseite oder Modellnummer erhöht die Sicherheit."
+  },
+  "masse": "151 × 76 × 8,3 mm",
+  "gewicht": "≈ 194 g",
+  "werte": [
+    {
+      "k": "Rohstoffwert",
+      "v": "≈ 2 €",
+      "hint": "Gold, Kupfer, Kobalt zusammen"
+    },
+    {
+      "k": "Gebrauchtwert",
+      "v": "60–120 €",
+      "hint": "funktionsfähig, je nach Zustand"
+    },
+    {
+      "k": "CO₂ Herstellung",
+      "v": "≈ 70 kg",
+      "hint": "rund 80 % des gesamten Fußabdrucks"
+    }
+  ],
+  "wertvoll": "In einem Handy stecken über 40 chemische Elemente. Der Rohstoffwert ist klein, die Energie aus der Herstellung riesig. Am meisten spart, wer es länger nutzt, repariert oder weitergibt.",
+  "kreislauf": [
+    {
+      "t": "Rohstoffe",
+      "d": "Erze aus über zehn Ländern, Kobalt meist aus dem Kongo"
+    },
+    {
+      "t": "Herstellung",
+      "d": "Chips und Display in Asien, viel Energie und Wasser"
+    },
+    {
+      "t": "Nutzung",
+      "d": "Im Schnitt nur zwei bis drei Jahre"
+    },
+    {
+      "t": "Heute oft",
+      "d": "Liegt ungenutzt in der Schublade",
+      "tone": "bad"
+    },
+    {
+      "t": "Besser",
+      "d": "Reparieren, weitergeben, dann fachgerecht recyceln",
+      "tone": "good"
+    }
+  ],
+  "entsorgung": {
+    "wo": "Recyclinghof, Sammelstelle für Elektro-Kleingeräte oder Rücknahme im Handel",
+    "nicht": "Nicht in Restmüll oder gelben Sack",
+    "warnung": "Akku nicht beschädigen oder durchstechen. Brandgefahr."
+  },
+  "quelle": "Richtwerte nach Fairphone 3 LCA (Fraunhofer IZM 2020) und Herstellerangaben. Noch nicht verifiziert.",
+  "parts": [
+    {
+      "id": "deckglas",
+      "name": "Deckglas",
+      "shape": "box",
+      "x": 0,
+      "y": 0,
+      "w": 76,
+      "d": 151,
+      "h": 0.6,
+      "z": 7.9,
+      "r": 10,
+      "explode": [
+        0,
+        0,
+        266.8
+      ],
+      "color": "#C9DEDF",
+      "opacity": 0.6,
+      "mass": 12,
+      "materials": [
+        [
+          "glas",
+          100
+        ]
+      ],
+      "info": "Chemisch gehärtetes Glas. Schützt das Display und ist zugleich die Touch-Oberfläche.",
+      "marks": [
+        {
+          "shape": "box",
+          "x": 30,
+          "y": 4,
+          "w": 16,
+          "d": 1.6,
+          "r": 0.8
+        }
+      ]
+    },
+    {
+      "id": "display",
+      "name": "Display-Einheit (LCD)",
+      "short": "Display",
+      "shape": "box",
+      "x": 0.5,
+      "y": 0.5,
+      "w": 75,
+      "d": 150,
+      "h": 0.8,
+      "z": 7.1,
+      "r": 9.5,
+      "explode": [
+        0,
+        0,
+        216.20000000000002
+      ],
+      "color": "#31373B",
+      "mass": 18,
+      "materials": [
+        [
+          "displayglas",
+          45
+        ],
+        [
+          "folien",
+          35
+        ],
+        [
+          "led",
+          10
+        ],
+        [
+          "kupfer",
+          10
+        ]
+      ],
+      "info": "Mehrere verklebte Schichten: Glas mit leitfähiger Indium-Schicht, Folien, LED-Hintergrundlicht.",
+      "marks": [
+        {
+          "shape": "box",
+          "x": 3,
+          "y": 3,
+          "w": 69,
+          "d": 144,
+          "r": 7,
+          "fill": "#3D464C"
+        },
+        {
+          "shape": "box",
+          "x": 19,
+          "y": 3,
+          "w": 37,
+          "d": 7,
+          "r": 3,
+          "fill": "#31373B"
+        }
+      ]
+    },
+    {
+      "id": "kamera",
+      "name": "Kameramodul",
+      "short": "Kamera",
+      "shape": "box",
+      "x": 6,
+      "y": 6,
+      "w": 24,
+      "d": 38,
+      "h": 4.5,
+      "z": 3,
+      "r": 4,
+      "explode": [
+        0,
+        0,
+        119.60000000000001
+      ],
+      "color": "#5E656A",
+      "mass": 6,
+      "materials": [
+        [
+          "chip",
+          35
+        ],
+        [
+          "alu",
+          30
+        ],
+        [
+          "glas",
+          20
+        ],
+        [
+          "ndfeb",
+          15
+        ]
+      ],
+      "info": "Zwei Kameras mit Bildsensor, Linsen und kleinem Magnetantrieb für den Autofokus.",
+      "marks": [
+        {
+          "shape": "cyl",
+          "x": 5,
+          "y": 5,
+          "w": 14,
+          "fill": "#262B2F"
+        },
+        {
+          "shape": "cyl",
+          "x": 5,
+          "y": 21,
+          "w": 14,
+          "fill": "#262B2F"
+        }
+      ]
+    },
+    {
+      "id": "soc",
+      "name": "Prozessor (SoC)",
+      "short": "Prozessor",
+      "shape": "box",
+      "x": 40,
+      "y": 14,
+      "w": 14,
+      "d": 14,
+      "h": 1,
+      "z": 4.2,
+      "r": 1,
+      "explode": [
+        0,
+        0,
+        151.79999999999998
+      ],
+      "color": "#3F4547",
+      "mass": 1.2,
+      "materials": [
+        [
+          "chip",
+          100
+        ]
+      ],
+      "info": "Rechenkern, Grafik und Arbeitsspeicher in einem Gehäuse. Feinste Golddrähte verbinden den Chip."
+    },
+    {
+      "id": "speicher",
+      "name": "Speicherchip (NAND)",
+      "short": "Speicher",
+      "shape": "box",
+      "x": 56,
+      "y": 14,
+      "w": 11,
+      "d": 16,
+      "h": 1,
+      "z": 4.2,
+      "r": 1,
+      "explode": [
+        0,
+        0,
+        151.79999999999998
+      ],
+      "color": "#3F4547",
+      "mass": 0.8,
+      "materials": [
+        [
+          "chip",
+          100
+        ]
+      ],
+      "info": "Speichert Fotos und Apps. Daten vor dem Abgeben unbedingt löschen."
+    },
+    {
+      "id": "platine",
+      "name": "Hauptplatine",
+      "short": "Platine",
+      "shape": "box",
+      "x": 32,
+      "y": 6,
+      "w": 38,
+      "d": 50,
+      "h": 1.2,
+      "z": 3,
+      "r": 3,
+      "explode": [
+        0,
+        0,
+        119.60000000000001
+      ],
+      "mass": 9,
+      "materials": [
+        [
+          "fr4",
+          45
+        ],
+        [
+          "kupfer",
+          25
+        ],
+        [
+          "chip",
+          20
+        ],
+        [
+          "lot",
+          10
+        ]
+      ],
+      "info": "Zwei gestapelte Leiterplatten mit Funkchips und Stromversorgung. Hier steckt das meiste Gold."
+    },
+    {
+      "id": "akku",
+      "name": "Lithium-Ionen-Akku",
+      "short": "Akku",
+      "shape": "box",
+      "x": 22,
+      "y": 60,
+      "w": 46,
+      "d": 64,
+      "h": 4.2,
+      "z": 3,
+      "r": 3,
+      "explode": [
+        0,
+        0,
+        119.60000000000001
+      ],
+      "mass": 46,
+      "materials": [
+        [
+          "lco",
+          38
+        ],
+        [
+          "graphit",
+          20
+        ],
+        [
+          "elektrolyt",
+          15
+        ],
+        [
+          "kupfer",
+          10
+        ],
+        [
+          "alu",
+          10
+        ],
+        [
+          "folien",
+          7
+        ]
+      ],
+      "info": "Etwa 3.100 mAh. Mit Klebestreifen befestigt. Aufgebläht oder beschädigt gehört er sofort in die Sammlung.",
+      "marks": [
+        {
+          "shape": "box",
+          "x": 4,
+          "y": 4,
+          "w": 38,
+          "d": 56,
+          "r": 2
+        }
+      ]
+    },
+    {
+      "id": "taptic",
+      "name": "Vibrationsmotor",
+      "short": "Vibration",
+      "shape": "box",
+      "x": 8,
+      "y": 128,
+      "w": 30,
+      "d": 13,
+      "h": 3.6,
+      "z": 3,
+      "r": 2,
+      "explode": [
+        0,
+        0,
+        119.60000000000001
+      ],
+      "color": "#9BA3A8",
+      "mass": 3,
+      "materials": [
+        [
+          "stahl",
+          50
+        ],
+        [
+          "ndfeb",
+          30
+        ],
+        [
+          "kupfer",
+          20
+        ]
+      ],
+      "info": "Ein Magnet schwingt in einer Kupferspule hin und her und erzeugt das Klick-Gefühl."
+    },
+    {
+      "id": "lautsprecher",
+      "name": "Lautsprecher",
+      "shape": "box",
+      "x": 44,
+      "y": 131,
+      "w": 22,
+      "d": 12,
+      "h": 3,
+      "z": 3,
+      "r": 2,
+      "explode": [
+        0,
+        0,
+        119.60000000000001
+      ],
+      "color": "#6E7579",
+      "mass": 2,
+      "materials": [
+        [
+          "pcabs",
+          40
+        ],
+        [
+          "ndfeb",
+          40
+        ],
+        [
+          "kupfer",
+          20
+        ]
+      ],
+      "info": "Kleiner Neodym-Magnet mit Schwingspule. Lässt sich ausgebaut weiterverwenden."
+    },
+    {
+      "id": "spule",
+      "name": "Ladespule (kabellos)",
+      "short": "Ladespule",
+      "shape": "cyl",
+      "x": 16,
+      "y": 56,
+      "w": 44,
+      "h": 0.5,
+      "z": 1.5,
+      "explode": [
+        0,
+        0,
+        69
+      ],
+      "color": "#C98F62",
+      "mass": 2,
+      "materials": [
+        [
+          "kupfer",
+          70
+        ],
+        [
+          "ferrit",
+          30
+        ]
+      ],
+      "info": "Flache Kupferspule für kabelloses Laden. Darunter eine Ferritfolie, die das Feld bündelt.",
+      "marks": [
+        {
+          "shape": "cyl",
+          "x": 8,
+          "y": 8,
+          "w": 28
+        },
+        {
+          "shape": "cyl",
+          "x": 15,
+          "y": 15,
+          "w": 14
+        }
+      ]
+    },
+    {
+      "id": "rahmen",
+      "name": "Gehäuserahmen",
+      "short": "Rahmen",
+      "shape": "box",
+      "x": 0,
+      "y": 0,
+      "w": 76,
+      "d": 151,
+      "h": 1.5,
+      "z": 0.3,
+      "r": 10,
+      "explode": [
+        0,
+        0,
+        34.5
+      ],
+      "mass": 30,
+      "materials": [
+        [
+          "alu",
+          100
+        ]
+      ],
+      "info": "Aus einem Aluminiumblock gefräst. Trägt alle Bauteile und dient als Antenne.",
+      "marks": [
+        {
+          "shape": "box",
+          "x": 2.5,
+          "y": 2.5,
+          "w": 71,
+          "d": 146,
+          "r": 8
+        }
+      ]
+    },
+    {
+      "id": "rueckglas",
+      "name": "Rückglas",
+      "shape": "box",
+      "x": 0,
+      "y": 0,
+      "w": 76,
+      "d": 151,
+      "h": 0.8,
+      "z": 0,
+      "r": 10,
+      "explode": [
+        0,
+        0,
+        0
+      ],
+      "color": "#C9DEDF",
+      "mass": 15,
+      "materials": [
+        [
+          "glas",
+          100
+        ]
+      ],
+      "info": "Glas statt Metall, damit kabelloses Laden funktioniert. Bricht leicht und ist teuer zu tauschen.",
+      "marks": [
+        {
+          "shape": "box",
+          "x": 4,
+          "y": 4,
+          "w": 28,
+          "d": 30,
+          "r": 6
+        }
+      ]
+    }
+  ],
+  "projekte": [
+    {
+      "titel": "Werkstatt-Kamera",
+      "kurz": "Das alte Handy filmt den 3D-Drucker und schickt das Bild ins Netzwerk.",
+      "stufe": 1,
+      "dauer": "30 min",
+      "lernziel": "Weiternutzen spart mehr als jedes Recycling.",
+      "nutzt": [
+        {
+          "neu": true,
+          "name": "Smartphone (komplett)"
+        },
+        {
+          "inv": "holzleiste",
+          "menge": 2
+        },
+        {
+          "inv": "usb-kabel",
+          "menge": 1
+        }
+      ],
+      "werkzeug": [
+        "Säge",
+        "Akkuschrauber"
+      ],
+      "schritte": [
+        "Handy zurücksetzen, Kamera-App installieren",
+        "Halterung aus zwei Holzleisten schrauben",
+        "Per USB-Kabel dauerhaft mit Strom versorgen"
+      ]
+    },
+    {
+      "titel": "Magnetische Werkzeugleiste",
+      "kurz": "Die Neodym-Magnete aus Lautsprecher und Vibrationsmotor halten Bits und Schrauben.",
+      "stufe": 2,
+      "dauer": "60 min",
+      "lernziel": "Seltene Erden erkennen und ihren Wert verstehen.",
+      "nutzt": [
+        {
+          "neu": true,
+          "name": "Lautsprecher und Vibrationsmotor"
+        },
+        {
+          "inv": "hdpe-platte",
+          "menge": 1
+        },
+        {
+          "inv": "magnete",
+          "menge": 4
+        }
+      ],
+      "werkzeug": [
+        "Pinzette",
+        "Heißklebepistole"
+      ],
+      "schritte": [
+        "Magnete unter Aufsicht ausbauen (Akku vorher entnehmen lassen)",
+        "Taschen in die HDPE-Platte fräsen",
+        "Magnete einkleben und Leiste an die Wand schrauben"
+      ]
+    },
+    {
+      "titel": "Makro-Linse",
+      "kurz": "Die Linse aus dem Kameramodul wird zum Aufsteck-Mikroskop für ein anderes Handy.",
+      "stufe": 2,
+      "dauer": "45 min",
+      "lernziel": "Optik verstehen: Was macht eine Linse?",
+      "nutzt": [
+        {
+          "neu": true,
+          "name": "Kameramodul"
+        },
+        {
+          "inv": "hdpe-deckel",
+          "menge": 1
+        }
+      ],
+      "werkzeug": [
+        "Feinmechaniker-Set",
+        "Bohrer 6 mm"
+      ],
+      "schritte": [
+        "Kameramodul öffnen, kleinste Linse lösen",
+        "Loch in einen HDPE-Deckel bohren",
+        "Linse einsetzen, Deckel als Clip auf ein Handy stecken"
+      ]
+    }
+  ]
+}
