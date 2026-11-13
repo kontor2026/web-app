@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kreislauf-Station</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5v4M20.5 12h-4M12 20.5v-4M3.5 12h4"/></svg>
+      <span>Kreislauf-Station</span>
+    </div>
+    <nav class="steps" id="steps">
+      <span data-step="scan"><b>01</b>Erfassen</span>
+      <span data-step="sheet"><b>02</b>Steckbrief</span>
+      <span data-step="craft"><b>03</b>Bauen</span>
+    </nav>
+    <div class="status">
+      <span class="sensor on">Kamera</span>
+      <span class="sensor">NIR-Sensor</span>
+      <span class="stock">Lager <b id="stock-count">0</b></span>
+    </div>
+  </header>
+  <main id="app"></main>
+  <div id="modal-root"></div>
+  <div id="tip" class="tip" hidden></div>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
