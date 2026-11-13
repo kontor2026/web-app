@@ -10,88 +10,104 @@
    "x": 0,
    "y": 0,
    "w": 75,
-   "z": 98,
-   "h": 12,
+   "z": 104,
+   "h": 6,
    "explode": [
     0,
     0,
-    36.0
+    56.0
    ],
-   "mass": 21.8,
+   "mass": 12,
    "materials": [
     [
      "glas",
      100
     ]
    ],
-   "info": "Feuerpolierter Rand, nur etwa 1,5 mm dick. Angeschlagene Gläser nicht mehr benutzen: Die Kante ist scharf.",
-   "color": "#DCE8E4",
-   "opacity": 0.65,
+   "info": "Feuerpolierter Rand, nur etwa 1,5 mm dick. Angeschlagene Gläser nicht mehr benutzen: Die Kante ist scharf und kann die Lippe schneiden.",
+   "color": "#DCEAE6",
+   "opacity": 0.4,
    "marks": [
     {
      "shape": "cyl",
      "x": 2,
      "y": 2,
      "w": 71,
-     "fill": "#EEF4F2"
+     "fill": "#CBDCD7"
+    },
+    {
+     "shape": "cyl",
+     "x": 14,
+     "y": 14,
+     "w": 59,
+     "fill": "#D9E7E3"
+    },
+    {
+     "shape": "cyl",
+     "x": 40,
+     "y": 18,
+     "w": 22,
+     "d": 8,
+     "fill": "#F4F9F8"
     }
    ]
   },
   {
-   "id": "wand_oben",
+   "id": "wand_2",
    "component_id": "drinking_glass_body",
    "material_id": "special_glass",
-   "name": "Glaswand oben",
+   "name": "Glaswand",
    "short": "Wand",
    "shape": "cyl",
-   "x": 1.5,
-   "y": 1.5,
-   "w": 72,
-   "z": 55,
-   "h": 43,
+   "x": 1.69,
+   "y": 1.69,
+   "w": 71.62,
+   "z": 58,
+   "h": 46,
    "explode": [
     0,
     0,
-    24.0
+    28.0
    ],
-   "mass": 59.5,
+   "mass": 71.7,
    "materials": [
     [
      "glas",
      100
     ]
    ],
-   "info": "Gepresstes oder geblasenes Trinkglas. Es hat eine andere Zusammensetzung und einen höheren Schmelzpunkt als Flaschenglas.",
-   "color": "#DCE8E4",
-   "opacity": 0.65
+   "info": "Nur etwa 2 mm dünne Wand aus gepresstem oder geblasenem Kalk-Natron-Glas. Trinkglas hat eine andere Zusammensetzung und einen höheren Schmelzpunkt als Flaschenglas.",
+   "color": "#DCEAE6",
+   "opacity": 0.4,
+   "label": true
   },
   {
-   "id": "wand_unten",
+   "id": "wand_1",
    "component_id": "drinking_glass_body",
    "material_id": "special_glass",
-   "name": "Glaswand unten",
-   "short": "Wand unten",
+   "name": "Glaswand",
+   "short": "Wand",
    "shape": "cyl",
-   "x": 3.5,
-   "y": 3.5,
-   "w": 68,
-   "z": 14,
-   "h": 41,
+   "x": 4.56,
+   "y": 4.56,
+   "w": 65.88,
+   "z": 12,
+   "h": 46,
    "explode": [
     0,
     0,
-    12.0
+    28.0
    ],
-   "mass": 59.5,
+   "mass": 71.7,
    "materials": [
     [
      "glas",
      100
     ]
    ],
-   "info": "Unterer, schmalerer Teil der leicht konischen Wand.",
-   "color": "#DCE8E4",
-   "opacity": 0.65,
+   "info": "Abschnitt der leicht konischen Glaswand.",
+   "color": "#DCEAE6",
+   "opacity": 0.4,
    "label": false
   },
   {
@@ -101,33 +117,40 @@
    "name": "Dicker Glasboden",
    "short": "Boden",
    "shape": "cyl",
-   "x": 5.5,
-   "y": 5.5,
-   "w": 64,
+   "x": 6.5,
+   "y": 6.5,
+   "w": 62,
    "z": 0,
-   "h": 14,
+   "h": 12,
    "explode": [
     0,
     0,
     0.0
    ],
-   "mass": 109.1,
+   "mass": 94.6,
    "materials": [
     [
      "glas",
      100
     ]
    ],
-   "info": "Massiver Boden, damit das Glas nicht umkippt. Kaputte Trinkgläser kommen in Zeitungspapier gewickelt in den Restmüll, nicht in den Altglascontainer.",
-   "color": "#DCE8E4",
-   "opacity": 0.75,
+   "info": "Massiver Boden, damit das Glas nicht umkippt. Kaputte Trinkgläser kommen in Zeitungspapier gewickelt in den Restmüll, nicht in den Altglascontainer: Schon ein Stück verdirbt eine ganze Ladung Flaschenglas.",
+   "color": "#CFE0DB",
+   "opacity": 0.7,
    "marks": [
     {
      "shape": "cyl",
-     "x": 4,
-     "y": 4,
+     "x": 3,
+     "y": 3,
      "w": 56,
-     "fill": "#CFDDD8"
+     "fill": "#C2D6D0"
+    },
+    {
+     "shape": "cyl",
+     "x": 16,
+     "y": 16,
+     "w": 30,
+     "fill": "#D5E5E0"
     }
    ]
   }

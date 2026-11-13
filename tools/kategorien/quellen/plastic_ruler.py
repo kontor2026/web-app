@@ -18,7 +18,7 @@ teile = [
     teil('skala', 'ps_ruler', 'Aufgedruckte Skala', 'Skala', 'box',
          x=12, y=0, w=14, d=320, z=2.5, h=0.1, r=0, mass=0.1, materials=[['druck', 100]],
          info='Millimeterskala im Siebdruck. Die Farbe ist fest mit dem Kunststoff verbunden und lässt sich nicht abtrennen.',
-         color='#EEF3F6', opacity=0.7, marks=ticks),
+         color=KLAR, opacity=0.25, marks=ticks),
     teil('koerper', 'ps_ruler', 'Lineal (Polystyrol)', 'Lineal', 'box',
          x=0, y=0, w=26, d=320, z=0, h=2.5, r=2, mass=26,
          info='Glasklares, sprödes Polystyrol. Zerbrochen in den Restmüll; ganz bleibt es lange nutzbar, also lieber weitergeben.',

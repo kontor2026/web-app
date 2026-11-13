@@ -37,7 +37,7 @@
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Fe": 49588.0
+   "Fe": 49686.0
   },
   "herkunft": {
    "Fe": "Modellmassen (Schätzung)"
@@ -45,9 +45,9 @@
   "materialien_g": {
    "pp": 447.9,
    "wood": 301.5,
-   "steel": 50.6
+   "steel": 50.7
   },
-  "co2_kg": 1.041,
+  "co2_kg": 1.042,
   "co2_mit_recyclat_kg": 0.214,
   "co2_ersparnis_kg": 0.828,
   "co2_ohne_faktor": [],
@@ -130,62 +130,6 @@
  "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "stielhalter",
-   "component_id": "broom_head",
-   "material_id": "steel",
-   "name": "Stielhalter",
-   "short": "Stielhalter",
-   "shape": "box",
-   "x": 125,
-   "y": 150,
-   "w": 50,
-   "d": 40,
-   "z": 60,
-   "h": 14,
-   "r": 4,
-   "explode": [
-    0,
-    40,
-    80
-   ],
-   "mass": 37.7,
-   "materials": [
-    [
-     "stahl",
-     98
-    ],
-    [
-     "pp",
-     2
-    ]
-   ],
-   "info": "Verzinktes Blech, mit zwei Schrauben auf den Kopf geschraubt. Es stützt den Stiel, damit er beim Kehren nicht abbricht. Abschrauben und zum Metallschrott.",
-   "color": "#A9AFB4",
-   "marks": [
-    {
-     "shape": "cyl",
-     "x": 5,
-     "y": 14,
-     "w": 8,
-     "fill": "#6E767C"
-    },
-    {
-     "shape": "cyl",
-     "x": 37,
-     "y": 14,
-     "w": 8,
-     "fill": "#6E767C"
-    },
-    {
-     "shape": "cyl",
-     "x": 16,
-     "y": 8,
-     "w": 18,
-     "fill": "#7D858B"
-    }
-   ]
-  },
-  {
    "id": "drahtanker",
    "component_id": "broom_bristles",
    "material_id": "steel",
@@ -193,7 +137,7 @@
    "short": "Drahtanker",
    "shape": "box",
    "x": 10,
-   "y": 104,
+   "y": 101,
    "w": 280,
    "d": 6,
    "z": 20,
@@ -201,8 +145,8 @@
    "r": 1,
    "explode": [
     0,
-    0,
-    90
+    -40,
+    110
    ],
    "mass": 12.9,
    "materials": [
@@ -377,6 +321,109 @@
    ]
   },
   {
+   "id": "schraube_l",
+   "component_id": "broom_head",
+   "material_id": "steel",
+   "name": "Schraube",
+   "short": "Schraube",
+   "shape": "cyl",
+   "x": 129,
+   "y": 160,
+   "w": 8,
+   "z": 56,
+   "h": 19,
+   "explode": [
+    0,
+    30,
+    130
+   ],
+   "mass": 2.2,
+   "materials": [
+    [
+     "stahl",
+     98
+    ],
+    [
+     "zink",
+     2
+    ]
+   ],
+   "info": "Verzinkte Holzschraube, hält den Stielhalter am Kopf. Mit einem Kreuzschlitz-Schraubendreher lösen.",
+   "color": "#C3C9CE",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1.5,
+     "y": 3.5,
+     "w": 5,
+     "d": 1,
+     "r": 0.3,
+     "fill": "#6E767C"
+    },
+    {
+     "shape": "box",
+     "x": 3.5,
+     "y": 1.5,
+     "w": 1,
+     "d": 5,
+     "r": 0.3,
+     "fill": "#6E767C"
+    }
+   ]
+  },
+  {
+   "id": "schraube_r",
+   "component_id": "broom_head",
+   "material_id": "steel",
+   "name": "Schraube",
+   "short": "Schraube",
+   "shape": "cyl",
+   "x": 163,
+   "y": 160,
+   "w": 8,
+   "z": 56,
+   "h": 19,
+   "explode": [
+    0,
+    30,
+    130
+   ],
+   "mass": 2.2,
+   "materials": [
+    [
+     "stahl",
+     98
+    ],
+    [
+     "zink",
+     2
+    ]
+   ],
+   "info": "Zweite Schraube des Stielhalters.",
+   "color": "#C3C9CE",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1.5,
+     "y": 3.5,
+     "w": 5,
+     "d": 1,
+     "r": 0.3,
+     "fill": "#6E767C"
+    },
+    {
+     "shape": "box",
+     "x": 3.5,
+     "y": 1.5,
+     "w": 1,
+     "d": 5,
+     "r": 0.3,
+     "fill": "#6E767C"
+    }
+   ]
+  },
+  {
    "id": "borsten",
    "component_id": "broom_bristles",
    "material_id": "pp",
@@ -387,12 +434,12 @@
    "y": 0,
    "w": 292,
    "d": 104,
-   "z": 0,
-   "h": 80,
+   "z": 6,
+   "h": 68,
    "r": 6,
    "explode": [
     0,
-    -90,
+    -110,
     0
    ],
    "mass": 161.5,
@@ -408,7 +455,7 @@
     {
      "shape": "cyl",
      "x": 8,
-     "y": 8,
+     "y": 6,
      "w": 9,
      "d": 9,
      "fill": "#2A2A2C"
@@ -416,7 +463,7 @@
     {
      "shape": "cyl",
      "x": 22,
-     "y": 8,
+     "y": 6,
      "w": 9,
      "d": 9,
      "fill": "#2A2A2C"
@@ -424,7 +471,7 @@
     {
      "shape": "cyl",
      "x": 36,
-     "y": 8,
+     "y": 6,
      "w": 9,
      "d": 9,
      "fill": "#2A2A2C"
@@ -432,7 +479,7 @@
     {
      "shape": "cyl",
      "x": 50,
-     "y": 8,
+     "y": 6,
      "w": 9,
      "d": 9,
      "fill": "#2A2A2C"
@@ -440,7 +487,7 @@
     {
      "shape": "cyl",
      "x": 64,
-     "y": 8,
+     "y": 6,
      "w": 9,
      "d": 9,
      "fill": "#2A2A2C"
@@ -448,7 +495,7 @@
     {
      "shape": "cyl",
      "x": 78,
-     "y": 8,
+     "y": 6,
      "w": 9,
      "d": 9,
      "fill": "#2A2A2C"
@@ -456,7 +503,7 @@
     {
      "shape": "cyl",
      "x": 92,
-     "y": 8,
+     "y": 6,
      "w": 9,
      "d": 9,
      "fill": "#2A2A2C"
@@ -464,7 +511,7 @@
     {
      "shape": "cyl",
      "x": 106,
-     "y": 8,
+     "y": 6,
      "w": 9,
      "d": 9,
      "fill": "#2A2A2C"
@@ -472,7 +519,7 @@
     {
      "shape": "cyl",
      "x": 120,
-     "y": 8,
+     "y": 6,
      "w": 9,
      "d": 9,
      "fill": "#2A2A2C"
@@ -480,7 +527,7 @@
     {
      "shape": "cyl",
      "x": 134,
-     "y": 8,
+     "y": 6,
      "w": 9,
      "d": 9,
      "fill": "#2A2A2C"
@@ -488,7 +535,7 @@
     {
      "shape": "cyl",
      "x": 148,
-     "y": 8,
+     "y": 6,
      "w": 9,
      "d": 9,
      "fill": "#2A2A2C"
@@ -496,7 +543,7 @@
     {
      "shape": "cyl",
      "x": 162,
-     "y": 8,
+     "y": 6,
      "w": 9,
      "d": 9,
      "fill": "#2A2A2C"
@@ -504,7 +551,7 @@
     {
      "shape": "cyl",
      "x": 176,
-     "y": 8,
+     "y": 6,
      "w": 9,
      "d": 9,
      "fill": "#2A2A2C"
@@ -512,7 +559,7 @@
     {
      "shape": "cyl",
      "x": 190,
-     "y": 8,
+     "y": 6,
      "w": 9,
      "d": 9,
      "fill": "#2A2A2C"
@@ -520,7 +567,7 @@
     {
      "shape": "cyl",
      "x": 204,
-     "y": 8,
+     "y": 6,
      "w": 9,
      "d": 9,
      "fill": "#2A2A2C"
@@ -528,7 +575,7 @@
     {
      "shape": "cyl",
      "x": 218,
-     "y": 8,
+     "y": 6,
      "w": 9,
      "d": 9,
      "fill": "#2A2A2C"
@@ -536,7 +583,7 @@
     {
      "shape": "cyl",
      "x": 232,
-     "y": 8,
+     "y": 6,
      "w": 9,
      "d": 9,
      "fill": "#2A2A2C"
@@ -544,7 +591,7 @@
     {
      "shape": "cyl",
      "x": 246,
-     "y": 8,
+     "y": 6,
      "w": 9,
      "d": 9,
      "fill": "#2A2A2C"
@@ -552,7 +599,7 @@
     {
      "shape": "cyl",
      "x": 260,
-     "y": 8,
+     "y": 6,
      "w": 9,
      "d": 9,
      "fill": "#2A2A2C"
@@ -560,7 +607,7 @@
     {
      "shape": "cyl",
      "x": 274,
-     "y": 8,
+     "y": 6,
      "w": 9,
      "d": 9,
      "fill": "#2A2A2C"
@@ -568,7 +615,7 @@
     {
      "shape": "cyl",
      "x": 8,
-     "y": 32,
+     "y": 30,
      "w": 9,
      "d": 9,
      "fill": "#2A2A2C"
@@ -576,7 +623,7 @@
     {
      "shape": "cyl",
      "x": 22,
-     "y": 32,
+     "y": 30,
      "w": 9,
      "d": 9,
      "fill": "#2A2A2C"
@@ -584,7 +631,7 @@
     {
      "shape": "cyl",
      "x": 36,
-     "y": 32,
+     "y": 30,
      "w": 9,
      "d": 9,
      "fill": "#2A2A2C"
@@ -592,7 +639,7 @@
     {
      "shape": "cyl",
      "x": 50,
-     "y": 32,
+     "y": 30,
      "w": 9,
      "d": 9,
      "fill": "#2A2A2C"
@@ -600,7 +647,7 @@
     {
      "shape": "cyl",
      "x": 64,
-     "y": 32,
+     "y": 30,
      "w": 9,
      "d": 9,
      "fill": "#2A2A2C"
@@ -608,7 +655,7 @@
     {
      "shape": "cyl",
      "x": 78,
-     "y": 32,
+     "y": 30,
      "w": 9,
      "d": 9,
      "fill": "#2A2A2C"
@@ -616,7 +663,7 @@
     {
      "shape": "cyl",
      "x": 92,
-     "y": 32,
+     "y": 30,
      "w": 9,
      "d": 9,
      "fill": "#2A2A2C"
@@ -624,7 +671,7 @@
     {
      "shape": "cyl",
      "x": 106,
-     "y": 32,
+     "y": 30,
      "w": 9,
      "d": 9,
      "fill": "#2A2A2C"
@@ -632,7 +679,7 @@
     {
      "shape": "cyl",
      "x": 120,
-     "y": 32,
+     "y": 30,
      "w": 9,
      "d": 9,
      "fill": "#2A2A2C"
@@ -640,7 +687,7 @@
     {
      "shape": "cyl",
      "x": 134,
-     "y": 32,
+     "y": 30,
      "w": 9,
      "d": 9,
      "fill": "#2A2A2C"
@@ -648,7 +695,7 @@
     {
      "shape": "cyl",
      "x": 148,
-     "y": 32,
+     "y": 30,
      "w": 9,
      "d": 9,
      "fill": "#2A2A2C"
@@ -656,7 +703,7 @@
     {
      "shape": "cyl",
      "x": 162,
-     "y": 32,
+     "y": 30,
      "w": 9,
      "d": 9,
      "fill": "#2A2A2C"
@@ -664,7 +711,7 @@
     {
      "shape": "cyl",
      "x": 176,
-     "y": 32,
+     "y": 30,
      "w": 9,
      "d": 9,
      "fill": "#2A2A2C"
@@ -672,7 +719,7 @@
     {
      "shape": "cyl",
      "x": 190,
-     "y": 32,
+     "y": 30,
      "w": 9,
      "d": 9,
      "fill": "#2A2A2C"
@@ -680,7 +727,7 @@
     {
      "shape": "cyl",
      "x": 204,
-     "y": 32,
+     "y": 30,
      "w": 9,
      "d": 9,
      "fill": "#2A2A2C"
@@ -688,7 +735,7 @@
     {
      "shape": "cyl",
      "x": 218,
-     "y": 32,
+     "y": 30,
      "w": 9,
      "d": 9,
      "fill": "#2A2A2C"
@@ -696,7 +743,7 @@
     {
      "shape": "cyl",
      "x": 232,
-     "y": 32,
+     "y": 30,
      "w": 9,
      "d": 9,
      "fill": "#2A2A2C"
@@ -704,7 +751,7 @@
     {
      "shape": "cyl",
      "x": 246,
-     "y": 32,
+     "y": 30,
      "w": 9,
      "d": 9,
      "fill": "#2A2A2C"
@@ -712,7 +759,7 @@
     {
      "shape": "cyl",
      "x": 260,
-     "y": 32,
+     "y": 30,
      "w": 9,
      "d": 9,
      "fill": "#2A2A2C"
@@ -720,7 +767,7 @@
     {
      "shape": "cyl",
      "x": 274,
-     "y": 32,
+     "y": 30,
      "w": 9,
      "d": 9,
      "fill": "#2A2A2C"
@@ -728,7 +775,7 @@
     {
      "shape": "cyl",
      "x": 8,
-     "y": 56,
+     "y": 54,
      "w": 9,
      "d": 9,
      "fill": "#2A2A2C"
@@ -736,7 +783,7 @@
     {
      "shape": "cyl",
      "x": 22,
-     "y": 56,
+     "y": 54,
      "w": 9,
      "d": 9,
      "fill": "#2A2A2C"
@@ -744,7 +791,7 @@
     {
      "shape": "cyl",
      "x": 36,
-     "y": 56,
+     "y": 54,
      "w": 9,
      "d": 9,
      "fill": "#2A2A2C"
@@ -752,7 +799,7 @@
     {
      "shape": "cyl",
      "x": 50,
-     "y": 56,
+     "y": 54,
      "w": 9,
      "d": 9,
      "fill": "#2A2A2C"
@@ -760,7 +807,7 @@
     {
      "shape": "cyl",
      "x": 64,
-     "y": 56,
+     "y": 54,
      "w": 9,
      "d": 9,
      "fill": "#2A2A2C"
@@ -768,7 +815,7 @@
     {
      "shape": "cyl",
      "x": 78,
-     "y": 56,
+     "y": 54,
      "w": 9,
      "d": 9,
      "fill": "#2A2A2C"
@@ -776,7 +823,7 @@
     {
      "shape": "cyl",
      "x": 92,
-     "y": 56,
+     "y": 54,
      "w": 9,
      "d": 9,
      "fill": "#2A2A2C"
@@ -784,7 +831,7 @@
     {
      "shape": "cyl",
      "x": 106,
-     "y": 56,
+     "y": 54,
      "w": 9,
      "d": 9,
      "fill": "#2A2A2C"
@@ -792,7 +839,7 @@
     {
      "shape": "cyl",
      "x": 120,
-     "y": 56,
+     "y": 54,
      "w": 9,
      "d": 9,
      "fill": "#2A2A2C"
@@ -800,7 +847,7 @@
     {
      "shape": "cyl",
      "x": 134,
-     "y": 56,
+     "y": 54,
      "w": 9,
      "d": 9,
      "fill": "#2A2A2C"
@@ -808,7 +855,7 @@
     {
      "shape": "cyl",
      "x": 148,
-     "y": 56,
+     "y": 54,
      "w": 9,
      "d": 9,
      "fill": "#2A2A2C"
@@ -816,7 +863,7 @@
     {
      "shape": "cyl",
      "x": 162,
-     "y": 56,
+     "y": 54,
      "w": 9,
      "d": 9,
      "fill": "#2A2A2C"
@@ -824,7 +871,7 @@
     {
      "shape": "cyl",
      "x": 176,
-     "y": 56,
+     "y": 54,
      "w": 9,
      "d": 9,
      "fill": "#2A2A2C"
@@ -832,7 +879,7 @@
     {
      "shape": "cyl",
      "x": 190,
-     "y": 56,
+     "y": 54,
      "w": 9,
      "d": 9,
      "fill": "#2A2A2C"
@@ -840,7 +887,7 @@
     {
      "shape": "cyl",
      "x": 204,
-     "y": 56,
+     "y": 54,
      "w": 9,
      "d": 9,
      "fill": "#2A2A2C"
@@ -848,7 +895,7 @@
     {
      "shape": "cyl",
      "x": 218,
-     "y": 56,
+     "y": 54,
      "w": 9,
      "d": 9,
      "fill": "#2A2A2C"
@@ -856,7 +903,7 @@
     {
      "shape": "cyl",
      "x": 232,
-     "y": 56,
+     "y": 54,
      "w": 9,
      "d": 9,
      "fill": "#2A2A2C"
@@ -864,7 +911,7 @@
     {
      "shape": "cyl",
      "x": 246,
-     "y": 56,
+     "y": 54,
      "w": 9,
      "d": 9,
      "fill": "#2A2A2C"
@@ -872,7 +919,7 @@
     {
      "shape": "cyl",
      "x": 260,
-     "y": 56,
+     "y": 54,
      "w": 9,
      "d": 9,
      "fill": "#2A2A2C"
@@ -880,7 +927,7 @@
     {
      "shape": "cyl",
      "x": 274,
-     "y": 56,
+     "y": 54,
      "w": 9,
      "d": 9,
      "fill": "#2A2A2C"
@@ -888,7 +935,7 @@
     {
      "shape": "cyl",
      "x": 8,
-     "y": 80,
+     "y": 78,
      "w": 9,
      "d": 9,
      "fill": "#2A2A2C"
@@ -896,7 +943,7 @@
     {
      "shape": "cyl",
      "x": 22,
-     "y": 80,
+     "y": 78,
      "w": 9,
      "d": 9,
      "fill": "#2A2A2C"
@@ -904,7 +951,7 @@
     {
      "shape": "cyl",
      "x": 36,
-     "y": 80,
+     "y": 78,
      "w": 9,
      "d": 9,
      "fill": "#2A2A2C"
@@ -912,7 +959,7 @@
     {
      "shape": "cyl",
      "x": 50,
-     "y": 80,
+     "y": 78,
      "w": 9,
      "d": 9,
      "fill": "#2A2A2C"
@@ -920,7 +967,7 @@
     {
      "shape": "cyl",
      "x": 64,
-     "y": 80,
+     "y": 78,
      "w": 9,
      "d": 9,
      "fill": "#2A2A2C"
@@ -928,7 +975,7 @@
     {
      "shape": "cyl",
      "x": 78,
-     "y": 80,
+     "y": 78,
      "w": 9,
      "d": 9,
      "fill": "#2A2A2C"
@@ -936,7 +983,7 @@
     {
      "shape": "cyl",
      "x": 92,
-     "y": 80,
+     "y": 78,
      "w": 9,
      "d": 9,
      "fill": "#2A2A2C"
@@ -944,7 +991,7 @@
     {
      "shape": "cyl",
      "x": 106,
-     "y": 80,
+     "y": 78,
      "w": 9,
      "d": 9,
      "fill": "#2A2A2C"
@@ -952,7 +999,7 @@
     {
      "shape": "cyl",
      "x": 120,
-     "y": 80,
+     "y": 78,
      "w": 9,
      "d": 9,
      "fill": "#2A2A2C"
@@ -960,7 +1007,7 @@
     {
      "shape": "cyl",
      "x": 134,
-     "y": 80,
+     "y": 78,
      "w": 9,
      "d": 9,
      "fill": "#2A2A2C"
@@ -968,7 +1015,7 @@
     {
      "shape": "cyl",
      "x": 148,
-     "y": 80,
+     "y": 78,
      "w": 9,
      "d": 9,
      "fill": "#2A2A2C"
@@ -976,7 +1023,7 @@
     {
      "shape": "cyl",
      "x": 162,
-     "y": 80,
+     "y": 78,
      "w": 9,
      "d": 9,
      "fill": "#2A2A2C"
@@ -984,7 +1031,7 @@
     {
      "shape": "cyl",
      "x": 176,
-     "y": 80,
+     "y": 78,
      "w": 9,
      "d": 9,
      "fill": "#2A2A2C"
@@ -992,7 +1039,7 @@
     {
      "shape": "cyl",
      "x": 190,
-     "y": 80,
+     "y": 78,
      "w": 9,
      "d": 9,
      "fill": "#2A2A2C"
@@ -1000,7 +1047,7 @@
     {
      "shape": "cyl",
      "x": 204,
-     "y": 80,
+     "y": 78,
      "w": 9,
      "d": 9,
      "fill": "#2A2A2C"
@@ -1008,7 +1055,7 @@
     {
      "shape": "cyl",
      "x": 218,
-     "y": 80,
+     "y": 78,
      "w": 9,
      "d": 9,
      "fill": "#2A2A2C"
@@ -1016,7 +1063,7 @@
     {
      "shape": "cyl",
      "x": 232,
-     "y": 80,
+     "y": 78,
      "w": 9,
      "d": 9,
      "fill": "#2A2A2C"
@@ -1024,7 +1071,7 @@
     {
      "shape": "cyl",
      "x": 246,
-     "y": 80,
+     "y": 78,
      "w": 9,
      "d": 9,
      "fill": "#2A2A2C"
@@ -1032,7 +1079,7 @@
     {
      "shape": "cyl",
      "x": 260,
-     "y": 80,
+     "y": 78,
      "w": 9,
      "d": 9,
      "fill": "#2A2A2C"
@@ -1040,10 +1087,676 @@
     {
      "shape": "cyl",
      "x": 274,
-     "y": 80,
+     "y": 78,
      "w": 9,
      "d": 9,
      "fill": "#2A2A2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 15,
+     "y": 18,
+     "w": 4,
+     "d": 4,
+     "fill": "#4A4A4D"
+    },
+    {
+     "shape": "cyl",
+     "x": 29,
+     "y": 18,
+     "w": 4,
+     "d": 4,
+     "fill": "#4A4A4D"
+    },
+    {
+     "shape": "cyl",
+     "x": 43,
+     "y": 18,
+     "w": 4,
+     "d": 4,
+     "fill": "#4A4A4D"
+    },
+    {
+     "shape": "cyl",
+     "x": 57,
+     "y": 18,
+     "w": 4,
+     "d": 4,
+     "fill": "#4A4A4D"
+    },
+    {
+     "shape": "cyl",
+     "x": 71,
+     "y": 18,
+     "w": 4,
+     "d": 4,
+     "fill": "#4A4A4D"
+    },
+    {
+     "shape": "cyl",
+     "x": 85,
+     "y": 18,
+     "w": 4,
+     "d": 4,
+     "fill": "#4A4A4D"
+    },
+    {
+     "shape": "cyl",
+     "x": 99,
+     "y": 18,
+     "w": 4,
+     "d": 4,
+     "fill": "#4A4A4D"
+    },
+    {
+     "shape": "cyl",
+     "x": 113,
+     "y": 18,
+     "w": 4,
+     "d": 4,
+     "fill": "#4A4A4D"
+    },
+    {
+     "shape": "cyl",
+     "x": 127,
+     "y": 18,
+     "w": 4,
+     "d": 4,
+     "fill": "#4A4A4D"
+    },
+    {
+     "shape": "cyl",
+     "x": 141,
+     "y": 18,
+     "w": 4,
+     "d": 4,
+     "fill": "#4A4A4D"
+    },
+    {
+     "shape": "cyl",
+     "x": 155,
+     "y": 18,
+     "w": 4,
+     "d": 4,
+     "fill": "#4A4A4D"
+    },
+    {
+     "shape": "cyl",
+     "x": 169,
+     "y": 18,
+     "w": 4,
+     "d": 4,
+     "fill": "#4A4A4D"
+    },
+    {
+     "shape": "cyl",
+     "x": 183,
+     "y": 18,
+     "w": 4,
+     "d": 4,
+     "fill": "#4A4A4D"
+    },
+    {
+     "shape": "cyl",
+     "x": 197,
+     "y": 18,
+     "w": 4,
+     "d": 4,
+     "fill": "#4A4A4D"
+    },
+    {
+     "shape": "cyl",
+     "x": 211,
+     "y": 18,
+     "w": 4,
+     "d": 4,
+     "fill": "#4A4A4D"
+    },
+    {
+     "shape": "cyl",
+     "x": 225,
+     "y": 18,
+     "w": 4,
+     "d": 4,
+     "fill": "#4A4A4D"
+    },
+    {
+     "shape": "cyl",
+     "x": 239,
+     "y": 18,
+     "w": 4,
+     "d": 4,
+     "fill": "#4A4A4D"
+    },
+    {
+     "shape": "cyl",
+     "x": 253,
+     "y": 18,
+     "w": 4,
+     "d": 4,
+     "fill": "#4A4A4D"
+    },
+    {
+     "shape": "cyl",
+     "x": 267,
+     "y": 18,
+     "w": 4,
+     "d": 4,
+     "fill": "#4A4A4D"
+    },
+    {
+     "shape": "cyl",
+     "x": 15,
+     "y": 42,
+     "w": 4,
+     "d": 4,
+     "fill": "#4A4A4D"
+    },
+    {
+     "shape": "cyl",
+     "x": 29,
+     "y": 42,
+     "w": 4,
+     "d": 4,
+     "fill": "#4A4A4D"
+    },
+    {
+     "shape": "cyl",
+     "x": 43,
+     "y": 42,
+     "w": 4,
+     "d": 4,
+     "fill": "#4A4A4D"
+    },
+    {
+     "shape": "cyl",
+     "x": 57,
+     "y": 42,
+     "w": 4,
+     "d": 4,
+     "fill": "#4A4A4D"
+    },
+    {
+     "shape": "cyl",
+     "x": 71,
+     "y": 42,
+     "w": 4,
+     "d": 4,
+     "fill": "#4A4A4D"
+    },
+    {
+     "shape": "cyl",
+     "x": 85,
+     "y": 42,
+     "w": 4,
+     "d": 4,
+     "fill": "#4A4A4D"
+    },
+    {
+     "shape": "cyl",
+     "x": 99,
+     "y": 42,
+     "w": 4,
+     "d": 4,
+     "fill": "#4A4A4D"
+    },
+    {
+     "shape": "cyl",
+     "x": 113,
+     "y": 42,
+     "w": 4,
+     "d": 4,
+     "fill": "#4A4A4D"
+    },
+    {
+     "shape": "cyl",
+     "x": 127,
+     "y": 42,
+     "w": 4,
+     "d": 4,
+     "fill": "#4A4A4D"
+    },
+    {
+     "shape": "cyl",
+     "x": 141,
+     "y": 42,
+     "w": 4,
+     "d": 4,
+     "fill": "#4A4A4D"
+    },
+    {
+     "shape": "cyl",
+     "x": 155,
+     "y": 42,
+     "w": 4,
+     "d": 4,
+     "fill": "#4A4A4D"
+    },
+    {
+     "shape": "cyl",
+     "x": 169,
+     "y": 42,
+     "w": 4,
+     "d": 4,
+     "fill": "#4A4A4D"
+    },
+    {
+     "shape": "cyl",
+     "x": 183,
+     "y": 42,
+     "w": 4,
+     "d": 4,
+     "fill": "#4A4A4D"
+    },
+    {
+     "shape": "cyl",
+     "x": 197,
+     "y": 42,
+     "w": 4,
+     "d": 4,
+     "fill": "#4A4A4D"
+    },
+    {
+     "shape": "cyl",
+     "x": 211,
+     "y": 42,
+     "w": 4,
+     "d": 4,
+     "fill": "#4A4A4D"
+    },
+    {
+     "shape": "cyl",
+     "x": 225,
+     "y": 42,
+     "w": 4,
+     "d": 4,
+     "fill": "#4A4A4D"
+    },
+    {
+     "shape": "cyl",
+     "x": 239,
+     "y": 42,
+     "w": 4,
+     "d": 4,
+     "fill": "#4A4A4D"
+    },
+    {
+     "shape": "cyl",
+     "x": 253,
+     "y": 42,
+     "w": 4,
+     "d": 4,
+     "fill": "#4A4A4D"
+    },
+    {
+     "shape": "cyl",
+     "x": 267,
+     "y": 42,
+     "w": 4,
+     "d": 4,
+     "fill": "#4A4A4D"
+    },
+    {
+     "shape": "cyl",
+     "x": 15,
+     "y": 66,
+     "w": 4,
+     "d": 4,
+     "fill": "#4A4A4D"
+    },
+    {
+     "shape": "cyl",
+     "x": 29,
+     "y": 66,
+     "w": 4,
+     "d": 4,
+     "fill": "#4A4A4D"
+    },
+    {
+     "shape": "cyl",
+     "x": 43,
+     "y": 66,
+     "w": 4,
+     "d": 4,
+     "fill": "#4A4A4D"
+    },
+    {
+     "shape": "cyl",
+     "x": 57,
+     "y": 66,
+     "w": 4,
+     "d": 4,
+     "fill": "#4A4A4D"
+    },
+    {
+     "shape": "cyl",
+     "x": 71,
+     "y": 66,
+     "w": 4,
+     "d": 4,
+     "fill": "#4A4A4D"
+    },
+    {
+     "shape": "cyl",
+     "x": 85,
+     "y": 66,
+     "w": 4,
+     "d": 4,
+     "fill": "#4A4A4D"
+    },
+    {
+     "shape": "cyl",
+     "x": 99,
+     "y": 66,
+     "w": 4,
+     "d": 4,
+     "fill": "#4A4A4D"
+    },
+    {
+     "shape": "cyl",
+     "x": 113,
+     "y": 66,
+     "w": 4,
+     "d": 4,
+     "fill": "#4A4A4D"
+    },
+    {
+     "shape": "cyl",
+     "x": 127,
+     "y": 66,
+     "w": 4,
+     "d": 4,
+     "fill": "#4A4A4D"
+    },
+    {
+     "shape": "cyl",
+     "x": 141,
+     "y": 66,
+     "w": 4,
+     "d": 4,
+     "fill": "#4A4A4D"
+    },
+    {
+     "shape": "cyl",
+     "x": 155,
+     "y": 66,
+     "w": 4,
+     "d": 4,
+     "fill": "#4A4A4D"
+    },
+    {
+     "shape": "cyl",
+     "x": 169,
+     "y": 66,
+     "w": 4,
+     "d": 4,
+     "fill": "#4A4A4D"
+    },
+    {
+     "shape": "cyl",
+     "x": 183,
+     "y": 66,
+     "w": 4,
+     "d": 4,
+     "fill": "#4A4A4D"
+    },
+    {
+     "shape": "cyl",
+     "x": 197,
+     "y": 66,
+     "w": 4,
+     "d": 4,
+     "fill": "#4A4A4D"
+    },
+    {
+     "shape": "cyl",
+     "x": 211,
+     "y": 66,
+     "w": 4,
+     "d": 4,
+     "fill": "#4A4A4D"
+    },
+    {
+     "shape": "cyl",
+     "x": 225,
+     "y": 66,
+     "w": 4,
+     "d": 4,
+     "fill": "#4A4A4D"
+    },
+    {
+     "shape": "cyl",
+     "x": 239,
+     "y": 66,
+     "w": 4,
+     "d": 4,
+     "fill": "#4A4A4D"
+    },
+    {
+     "shape": "cyl",
+     "x": 253,
+     "y": 66,
+     "w": 4,
+     "d": 4,
+     "fill": "#4A4A4D"
+    },
+    {
+     "shape": "cyl",
+     "x": 267,
+     "y": 66,
+     "w": 4,
+     "d": 4,
+     "fill": "#4A4A4D"
+    },
+    {
+     "shape": "cyl",
+     "x": 15,
+     "y": 90,
+     "w": 4,
+     "d": 4,
+     "fill": "#4A4A4D"
+    },
+    {
+     "shape": "cyl",
+     "x": 29,
+     "y": 90,
+     "w": 4,
+     "d": 4,
+     "fill": "#4A4A4D"
+    },
+    {
+     "shape": "cyl",
+     "x": 43,
+     "y": 90,
+     "w": 4,
+     "d": 4,
+     "fill": "#4A4A4D"
+    },
+    {
+     "shape": "cyl",
+     "x": 57,
+     "y": 90,
+     "w": 4,
+     "d": 4,
+     "fill": "#4A4A4D"
+    },
+    {
+     "shape": "cyl",
+     "x": 71,
+     "y": 90,
+     "w": 4,
+     "d": 4,
+     "fill": "#4A4A4D"
+    },
+    {
+     "shape": "cyl",
+     "x": 85,
+     "y": 90,
+     "w": 4,
+     "d": 4,
+     "fill": "#4A4A4D"
+    },
+    {
+     "shape": "cyl",
+     "x": 99,
+     "y": 90,
+     "w": 4,
+     "d": 4,
+     "fill": "#4A4A4D"
+    },
+    {
+     "shape": "cyl",
+     "x": 113,
+     "y": 90,
+     "w": 4,
+     "d": 4,
+     "fill": "#4A4A4D"
+    },
+    {
+     "shape": "cyl",
+     "x": 127,
+     "y": 90,
+     "w": 4,
+     "d": 4,
+     "fill": "#4A4A4D"
+    },
+    {
+     "shape": "cyl",
+     "x": 141,
+     "y": 90,
+     "w": 4,
+     "d": 4,
+     "fill": "#4A4A4D"
+    },
+    {
+     "shape": "cyl",
+     "x": 155,
+     "y": 90,
+     "w": 4,
+     "d": 4,
+     "fill": "#4A4A4D"
+    },
+    {
+     "shape": "cyl",
+     "x": 169,
+     "y": 90,
+     "w": 4,
+     "d": 4,
+     "fill": "#4A4A4D"
+    },
+    {
+     "shape": "cyl",
+     "x": 183,
+     "y": 90,
+     "w": 4,
+     "d": 4,
+     "fill": "#4A4A4D"
+    },
+    {
+     "shape": "cyl",
+     "x": 197,
+     "y": 90,
+     "w": 4,
+     "d": 4,
+     "fill": "#4A4A4D"
+    },
+    {
+     "shape": "cyl",
+     "x": 211,
+     "y": 90,
+     "w": 4,
+     "d": 4,
+     "fill": "#4A4A4D"
+    },
+    {
+     "shape": "cyl",
+     "x": 225,
+     "y": 90,
+     "w": 4,
+     "d": 4,
+     "fill": "#4A4A4D"
+    },
+    {
+     "shape": "cyl",
+     "x": 239,
+     "y": 90,
+     "w": 4,
+     "d": 4,
+     "fill": "#4A4A4D"
+    },
+    {
+     "shape": "cyl",
+     "x": 253,
+     "y": 90,
+     "w": 4,
+     "d": 4,
+     "fill": "#4A4A4D"
+    },
+    {
+     "shape": "cyl",
+     "x": 267,
+     "y": 90,
+     "w": 4,
+     "d": 4,
+     "fill": "#4A4A4D"
+    }
+   ]
+  },
+  {
+   "id": "stielhalter",
+   "component_id": "broom_head",
+   "material_id": "steel",
+   "name": "Stielhalter",
+   "short": "Stielhalter",
+   "shape": "box",
+   "x": 125,
+   "y": 150,
+   "w": 50,
+   "d": 40,
+   "z": 70,
+   "h": 4,
+   "r": 4,
+   "explode": [
+    0,
+    30,
+    80
+   ],
+   "mass": 33.4,
+   "materials": [
+    [
+     "stahl",
+     98
+    ],
+    [
+     "zink",
+     2
+    ]
+   ],
+   "info": "Verzinktes Blech, mit zwei Schrauben auf den Kopf geschraubt. Es stützt den Stiel, damit er beim Kehren nicht abbricht. Abschrauben und zum Metallschrott.",
+   "color": "#A9AFB4",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 9,
+     "w": 10,
+     "fill": "#7D858B"
+    },
+    {
+     "shape": "cyl",
+     "x": 37,
+     "y": 9,
+     "w": 10,
+     "fill": "#7D858B"
+    },
+    {
+     "shape": "box",
+     "x": 15,
+     "y": 2,
+     "w": 20,
+     "d": 36,
+     "r": 6,
+     "fill": "#BAC0C5"
     }
    ]
   },
@@ -1091,6 +1804,38 @@
      "y": 30,
      "w": 24,
      "fill": "#7A2A1C"
+    },
+    {
+     "shape": "cyl",
+     "x": 131,
+     "y": 52,
+     "w": 6,
+     "fill": "#7A2A1C"
+    },
+    {
+     "shape": "cyl",
+     "x": 165,
+     "y": 52,
+     "w": 6,
+     "fill": "#7A2A1C"
+    },
+    {
+     "shape": "box",
+     "x": 20,
+     "y": 12,
+     "w": 40,
+     "d": 6,
+     "r": 3,
+     "fill": "#D35A43"
+    },
+    {
+     "shape": "box",
+     "x": 240,
+     "y": 12,
+     "w": 40,
+     "d": 6,
+     "r": 3,
+     "fill": "#D35A43"
     }
    ]
   },
@@ -1110,7 +1855,7 @@
    "r": 10,
    "explode": [
     0,
-    160,
+    130,
     0
    ],
    "mass": 301.5,
@@ -1125,11 +1870,74 @@
    "marks": [
     {
      "shape": "box",
-     "x": 2,
+     "x": 4,
      "y": 2,
-     "w": 20,
-     "d": 30,
-     "r": 8,
+     "w": 16,
+     "d": 2,
+     "r": 1,
+     "fill": "#A87C48"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 6,
+     "w": 16,
+     "d": 2,
+     "r": 1,
+     "fill": "#A87C48"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 10,
+     "w": 16,
+     "d": 2,
+     "r": 1,
+     "fill": "#A87C48"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 14,
+     "w": 16,
+     "d": 2,
+     "r": 1,
+     "fill": "#A87C48"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 18,
+     "w": 16,
+     "d": 2,
+     "r": 1,
+     "fill": "#A87C48"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 22,
+     "w": 16,
+     "d": 2,
+     "r": 1,
+     "fill": "#A87C48"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 26,
+     "w": 16,
+     "d": 2,
+     "r": 1,
+     "fill": "#A87C48"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 30,
+     "w": 16,
+     "d": 2,
+     "r": 1,
      "fill": "#A87C48"
     },
     {
@@ -1159,7 +1967,7 @@
    "r": 8,
    "explode": [
     0,
-    220,
+    180,
     0
    ],
    "mass": 6.5,

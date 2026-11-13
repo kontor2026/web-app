@@ -9,39 +9,43 @@ from bau import teil, mark, raster, skaliere_masse, schreibe  # noqa: E402
 # Haken hinten (y = 0). Der Körper ist ein Spritzgussteil aus Polystyrol; die schrägen Schultern sind als Treppe
 # aus Stücken gebaut, die sich an den Ecken berühren. Explodiert: Haken herausgedreht und angehoben,
 # Schultern, Enden und Hosenstange in der Ebene auseinandergezogen.
-PS = '#2B2D2F'
+PS = '#33373B'
 STAHL = '#C3C9CE'
 LOCH = '#45484B'
-N = 8
+N = 14
+BAND = 14  # Breite des Schulterbogens in der Ebene
 
 
 def schulter(seite, dx):
     """Schräge Schulter vom Hals (y = 75) bis zum Schulterende (y = 150) als N Stücke."""
-    w, d = 183 / N, 75 / N
+    w, d = 183 / N, (75 - BAND + 4) / N
     teile = []
     for i in range(N):
         x = 195 - (i + 1) * w if seite == 'l' else 225 + i * w
-        erstes = i == 0
+        erstes = i == 0 and seite == 'l'
         teile.append(teil(f'schulter_{seite}_{i + 1}', 'ps_hanger_body',
                           'Schulterbogen links' if seite == 'l' else 'Schulterbogen rechts', 'Schulter', 'box',
-                          x=round(x, 3), y=round(75 + i * d, 3), w=round(w, 3), d=round(d, 3), z=0, h=10, r=3,
-                          explode=[dx, 0, 0], mass=1.6, label=erstes,
+                          x=round(x, 3), y=round(72 + i * d, 3), w=round(w, 3), d=BAND, z=0, h=10, r=2,
+                          explode=[dx, 0, 0], mass=0.9, label=erstes,
                           info=('Die schrägen Arme tragen Hemd oder Jacke. Polystyrol ist hart, kann aber bei Kälte '
                                 'brechen.') if erstes else 'Abschnitt des Schulterbogens.',
-                          color=PS))
+                          color=PS, marks=[mark('box', 1, 3, round(w - 2, 3), 1.2, 0.5, '#454A4F')]))
     return teile
 
 
 teile = [
-    teil('haken', 'steel_hook', 'Haken', 'Haken', 'cyl',
-         x=185, y=0, w=50, d=46, z=3, h=4, explode=[0, -35, 20], mass=6,
+    teil('haken', 'steel_hook', 'Haken', 'Haken', 'box',
+         x=183, y=4, w=24, d=5, z=3, h=4, r=1, explode=[0, -35, 20], mass=3,
          info='Verchromter Stahldraht, im Hals eingedreht, damit er sich drehen lässt. Mit einer Zange '
               'herausdrehen; der Stahl gehört zum Altmetall.',
-         color=STAHL, marks=[mark('cyl', 4, 4, 42, 38, fill=LOCH), mark('box', 0, 26, 12, 20, 4, LOCH)]),
+         color=STAHL, marks=[mark('box', 2, 1.5, 20, 1, 0.5, '#E6EAED')]),
+    teil('haken_bogen', 'steel_hook', 'Hakenbogen', 'Hakenbogen', 'box',
+         x=178, y=4, w=5, d=30, z=3, h=4, r=2.5, explode=[0, -35, 20], mass=2, label=False,
+         info='Herabgebogenes Ende des Hakens, das über die Kleiderstange greift.', color=STAHL),
     teil('hakenschaft', 'steel_hook', 'Hakenschaft mit Gewinde', 'Hakenschaft', 'box',
-         x=208, y=46, w=4, d=30, z=3, h=4, r=2, explode=[0, -35, 20], mass=2, label=False,
-         info='Gerades Ende des Hakens, das im Kunststoff steckt.', color=STAHL,
-         marks=raster(0, 18, 1, 5, 4, 1, 0, 2.4, fill='#8E969A')),
+         x=207, y=4, w=5, d=72, z=3, h=4, r=2.5, explode=[0, -35, 20], mass=3, label=False,
+         info='Gerades Ende des Hakens mit Gewinde, das im Kunststoff steckt.', color=STAHL,
+         marks=raster(0.5, 58, 1, 5, 4, 1, 0, 2.4, fill='#8E969A')),
     teil('hals', 'ps_hanger_body', 'Hals mit Hakenaufnahme', 'Hals', 'box',
          x=195, y=62, w=30, d=26, z=0, h=10, r=5, explode=[0, -10, 0], mass=4,
          info='Verdickter Mittelteil mit Bohrung für den Haken. Oft ist hier die Kunststoffsorte eingeprägt (PS 6).',

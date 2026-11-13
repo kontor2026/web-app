@@ -6,19 +6,20 @@
    "material_id": "steel",
    "name": "Haken",
    "short": "Haken",
-   "shape": "cyl",
-   "x": 185,
-   "y": 0,
-   "w": 50,
-   "d": 46,
+   "shape": "box",
+   "x": 183,
+   "y": 4,
+   "w": 24,
+   "d": 5,
    "z": 3,
    "h": 4,
+   "r": 1,
    "explode": [
     0,
     -35,
     20
    ],
-   "mass": 5.6,
+   "mass": 2.82,
    "materials": [
     [
      "stahl",
@@ -29,23 +30,45 @@
    "color": "#C3C9CE",
    "marks": [
     {
-     "shape": "cyl",
-     "x": 4,
-     "y": 4,
-     "w": 42,
-     "d": 38,
-     "fill": "#45484B"
-    },
-    {
      "shape": "box",
-     "x": 0,
-     "y": 26,
-     "w": 12,
-     "d": 20,
-     "r": 4,
-     "fill": "#45484B"
+     "x": 2,
+     "y": 1.5,
+     "w": 20,
+     "d": 1,
+     "r": 0.5,
+     "fill": "#E6EAED"
     }
    ]
+  },
+  {
+   "id": "haken_bogen",
+   "component_id": "steel_hook",
+   "material_id": "steel",
+   "name": "Hakenbogen",
+   "short": "Hakenbogen",
+   "shape": "box",
+   "x": 178,
+   "y": 4,
+   "w": 5,
+   "d": 30,
+   "z": 3,
+   "h": 4,
+   "r": 2.5,
+   "explode": [
+    0,
+    -35,
+    20
+   ],
+   "mass": 1.88,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Herabgebogenes Ende des Hakens, das über die Kleiderstange greift.",
+   "color": "#C3C9CE",
+   "label": false
   },
   {
    "id": "hakenschaft",
@@ -54,65 +77,65 @@
    "name": "Hakenschaft mit Gewinde",
    "short": "Hakenschaft",
    "shape": "box",
-   "x": 208,
-   "y": 46,
-   "w": 4,
-   "d": 30,
+   "x": 207,
+   "y": 4,
+   "w": 5,
+   "d": 72,
    "z": 3,
    "h": 4,
-   "r": 2,
+   "r": 2.5,
    "explode": [
     0,
     -35,
     20
    ],
-   "mass": 1.87,
+   "mass": 2.82,
    "materials": [
     [
      "stahl",
      100
     ]
    ],
-   "info": "Gerades Ende des Hakens, das im Kunststoff steckt.",
+   "info": "Gerades Ende des Hakens mit Gewinde, das im Kunststoff steckt.",
    "color": "#C3C9CE",
    "label": false,
    "marks": [
     {
      "shape": "box",
-     "x": 0,
-     "y": 18.0,
+     "x": 0.5,
+     "y": 58.0,
      "w": 4,
      "d": 1,
      "fill": "#8E969A"
     },
     {
      "shape": "box",
-     "x": 0,
-     "y": 20.4,
+     "x": 0.5,
+     "y": 60.4,
      "w": 4,
      "d": 1,
      "fill": "#8E969A"
     },
     {
      "shape": "box",
-     "x": 0,
-     "y": 22.8,
+     "x": 0.5,
+     "y": 62.8,
      "w": 4,
      "d": 1,
      "fill": "#8E969A"
     },
     {
      "shape": "box",
-     "x": 0,
-     "y": 25.2,
+     "x": 0.5,
+     "y": 65.2,
      "w": 4,
      "d": 1,
      "fill": "#8E969A"
     },
     {
      "shape": "box",
-     "x": 0,
-     "y": 27.6,
+     "x": 0.5,
+     "y": 67.6,
      "w": 4,
      "d": 1,
      "fill": "#8E969A"
@@ -138,7 +161,7 @@
     -10,
     0
    ],
-   "mass": 3.73,
+   "mass": 3.76,
    "materials": [
     [
      "ps",
@@ -146,7 +169,7 @@
     ]
    ],
    "info": "Verdickter Mittelteil mit Bohrung für den Haken. Oft ist hier die Kunststoffsorte eingeprägt (PS 6).",
-   "color": "#2B2D2F",
+   "color": "#33373B",
    "marks": [
     {
      "shape": "cyl",
@@ -173,19 +196,19 @@
    "name": "Schulterbogen links",
    "short": "Schulter",
    "shape": "box",
-   "x": 172.125,
-   "y": 75,
-   "w": 22.875,
-   "d": 9.375,
+   "x": 181.929,
+   "y": 72,
+   "w": 13.071,
+   "d": 14,
    "z": 0,
    "h": 10,
-   "r": 3,
+   "r": 2,
    "explode": [
     -12,
     0,
     0
    ],
-   "mass": 1.49,
+   "mass": 0.85,
    "materials": [
     [
      "ps",
@@ -193,8 +216,19 @@
     ]
    ],
    "info": "Die schrägen Arme tragen Hemd oder Jacke. Polystyrol ist hart, kann aber bei Kälte brechen.",
-   "color": "#2B2D2F",
-   "label": true
+   "color": "#33373B",
+   "label": true,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 3,
+     "w": 11.071,
+     "d": 1.2,
+     "r": 0.5,
+     "fill": "#454A4F"
+    }
+   ]
   },
   {
    "id": "schulter_l_2",
@@ -203,19 +237,19 @@
    "name": "Schulterbogen links",
    "short": "Schulter",
    "shape": "box",
-   "x": 149.25,
-   "y": 84.375,
-   "w": 22.875,
-   "d": 9.375,
+   "x": 168.857,
+   "y": 76.643,
+   "w": 13.071,
+   "d": 14,
    "z": 0,
    "h": 10,
-   "r": 3,
+   "r": 2,
    "explode": [
     -12,
     0,
     0
    ],
-   "mass": 1.49,
+   "mass": 0.85,
    "materials": [
     [
      "ps",
@@ -223,8 +257,19 @@
     ]
    ],
    "info": "Abschnitt des Schulterbogens.",
-   "color": "#2B2D2F",
-   "label": false
+   "color": "#33373B",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 3,
+     "w": 11.071,
+     "d": 1.2,
+     "r": 0.5,
+     "fill": "#454A4F"
+    }
+   ]
   },
   {
    "id": "schulter_l_3",
@@ -233,19 +278,19 @@
    "name": "Schulterbogen links",
    "short": "Schulter",
    "shape": "box",
-   "x": 126.375,
-   "y": 93.75,
-   "w": 22.875,
-   "d": 9.375,
+   "x": 155.786,
+   "y": 81.286,
+   "w": 13.071,
+   "d": 14,
    "z": 0,
    "h": 10,
-   "r": 3,
+   "r": 2,
    "explode": [
     -12,
     0,
     0
    ],
-   "mass": 1.49,
+   "mass": 0.85,
    "materials": [
     [
      "ps",
@@ -253,8 +298,19 @@
     ]
    ],
    "info": "Abschnitt des Schulterbogens.",
-   "color": "#2B2D2F",
-   "label": false
+   "color": "#33373B",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 3,
+     "w": 11.071,
+     "d": 1.2,
+     "r": 0.5,
+     "fill": "#454A4F"
+    }
+   ]
   },
   {
    "id": "schulter_l_4",
@@ -263,19 +319,19 @@
    "name": "Schulterbogen links",
    "short": "Schulter",
    "shape": "box",
-   "x": 103.5,
-   "y": 103.125,
-   "w": 22.875,
-   "d": 9.375,
+   "x": 142.714,
+   "y": 85.929,
+   "w": 13.071,
+   "d": 14,
    "z": 0,
    "h": 10,
-   "r": 3,
+   "r": 2,
    "explode": [
     -12,
     0,
     0
    ],
-   "mass": 1.49,
+   "mass": 0.85,
    "materials": [
     [
      "ps",
@@ -283,8 +339,19 @@
     ]
    ],
    "info": "Abschnitt des Schulterbogens.",
-   "color": "#2B2D2F",
-   "label": false
+   "color": "#33373B",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 3,
+     "w": 11.071,
+     "d": 1.2,
+     "r": 0.5,
+     "fill": "#454A4F"
+    }
+   ]
   },
   {
    "id": "schulter_l_5",
@@ -293,19 +360,19 @@
    "name": "Schulterbogen links",
    "short": "Schulter",
    "shape": "box",
-   "x": 80.625,
-   "y": 112.5,
-   "w": 22.875,
-   "d": 9.375,
+   "x": 129.643,
+   "y": 90.571,
+   "w": 13.071,
+   "d": 14,
    "z": 0,
    "h": 10,
-   "r": 3,
+   "r": 2,
    "explode": [
     -12,
     0,
     0
    ],
-   "mass": 1.49,
+   "mass": 0.85,
    "materials": [
     [
      "ps",
@@ -313,8 +380,19 @@
     ]
    ],
    "info": "Abschnitt des Schulterbogens.",
-   "color": "#2B2D2F",
-   "label": false
+   "color": "#33373B",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 3,
+     "w": 11.071,
+     "d": 1.2,
+     "r": 0.5,
+     "fill": "#454A4F"
+    }
+   ]
   },
   {
    "id": "schulter_l_6",
@@ -323,19 +401,19 @@
    "name": "Schulterbogen links",
    "short": "Schulter",
    "shape": "box",
-   "x": 57.75,
-   "y": 121.875,
-   "w": 22.875,
-   "d": 9.375,
+   "x": 116.571,
+   "y": 95.214,
+   "w": 13.071,
+   "d": 14,
    "z": 0,
    "h": 10,
-   "r": 3,
+   "r": 2,
    "explode": [
     -12,
     0,
     0
    ],
-   "mass": 1.49,
+   "mass": 0.85,
    "materials": [
     [
      "ps",
@@ -343,8 +421,19 @@
     ]
    ],
    "info": "Abschnitt des Schulterbogens.",
-   "color": "#2B2D2F",
-   "label": false
+   "color": "#33373B",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 3,
+     "w": 11.071,
+     "d": 1.2,
+     "r": 0.5,
+     "fill": "#454A4F"
+    }
+   ]
   },
   {
    "id": "schulter_l_7",
@@ -353,19 +442,19 @@
    "name": "Schulterbogen links",
    "short": "Schulter",
    "shape": "box",
-   "x": 34.875,
-   "y": 131.25,
-   "w": 22.875,
-   "d": 9.375,
+   "x": 103.5,
+   "y": 99.857,
+   "w": 13.071,
+   "d": 14,
    "z": 0,
    "h": 10,
-   "r": 3,
+   "r": 2,
    "explode": [
     -12,
     0,
     0
    ],
-   "mass": 1.49,
+   "mass": 0.85,
    "materials": [
     [
      "ps",
@@ -373,8 +462,19 @@
     ]
    ],
    "info": "Abschnitt des Schulterbogens.",
-   "color": "#2B2D2F",
-   "label": false
+   "color": "#33373B",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 3,
+     "w": 11.071,
+     "d": 1.2,
+     "r": 0.5,
+     "fill": "#454A4F"
+    }
+   ]
   },
   {
    "id": "schulter_l_8",
@@ -383,19 +483,19 @@
    "name": "Schulterbogen links",
    "short": "Schulter",
    "shape": "box",
-   "x": 12,
-   "y": 140.625,
-   "w": 22.875,
-   "d": 9.375,
+   "x": 90.429,
+   "y": 104.5,
+   "w": 13.071,
+   "d": 14,
    "z": 0,
    "h": 10,
-   "r": 3,
+   "r": 2,
    "explode": [
     -12,
     0,
     0
    ],
-   "mass": 1.49,
+   "mass": 0.85,
    "materials": [
     [
      "ps",
@@ -403,8 +503,265 @@
     ]
    ],
    "info": "Abschnitt des Schulterbogens.",
-   "color": "#2B2D2F",
-   "label": false
+   "color": "#33373B",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 3,
+     "w": 11.071,
+     "d": 1.2,
+     "r": 0.5,
+     "fill": "#454A4F"
+    }
+   ]
+  },
+  {
+   "id": "schulter_l_9",
+   "component_id": "ps_hanger_body",
+   "material_id": "ps",
+   "name": "Schulterbogen links",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 77.357,
+   "y": 109.143,
+   "w": 13.071,
+   "d": 14,
+   "z": 0,
+   "h": 10,
+   "r": 2,
+   "explode": [
+    -12,
+    0,
+    0
+   ],
+   "mass": 0.85,
+   "materials": [
+    [
+     "ps",
+     100
+    ]
+   ],
+   "info": "Abschnitt des Schulterbogens.",
+   "color": "#33373B",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 3,
+     "w": 11.071,
+     "d": 1.2,
+     "r": 0.5,
+     "fill": "#454A4F"
+    }
+   ]
+  },
+  {
+   "id": "schulter_l_10",
+   "component_id": "ps_hanger_body",
+   "material_id": "ps",
+   "name": "Schulterbogen links",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 64.286,
+   "y": 113.786,
+   "w": 13.071,
+   "d": 14,
+   "z": 0,
+   "h": 10,
+   "r": 2,
+   "explode": [
+    -12,
+    0,
+    0
+   ],
+   "mass": 0.85,
+   "materials": [
+    [
+     "ps",
+     100
+    ]
+   ],
+   "info": "Abschnitt des Schulterbogens.",
+   "color": "#33373B",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 3,
+     "w": 11.071,
+     "d": 1.2,
+     "r": 0.5,
+     "fill": "#454A4F"
+    }
+   ]
+  },
+  {
+   "id": "schulter_l_11",
+   "component_id": "ps_hanger_body",
+   "material_id": "ps",
+   "name": "Schulterbogen links",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 51.214,
+   "y": 118.429,
+   "w": 13.071,
+   "d": 14,
+   "z": 0,
+   "h": 10,
+   "r": 2,
+   "explode": [
+    -12,
+    0,
+    0
+   ],
+   "mass": 0.85,
+   "materials": [
+    [
+     "ps",
+     100
+    ]
+   ],
+   "info": "Abschnitt des Schulterbogens.",
+   "color": "#33373B",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 3,
+     "w": 11.071,
+     "d": 1.2,
+     "r": 0.5,
+     "fill": "#454A4F"
+    }
+   ]
+  },
+  {
+   "id": "schulter_l_12",
+   "component_id": "ps_hanger_body",
+   "material_id": "ps",
+   "name": "Schulterbogen links",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 38.143,
+   "y": 123.071,
+   "w": 13.071,
+   "d": 14,
+   "z": 0,
+   "h": 10,
+   "r": 2,
+   "explode": [
+    -12,
+    0,
+    0
+   ],
+   "mass": 0.85,
+   "materials": [
+    [
+     "ps",
+     100
+    ]
+   ],
+   "info": "Abschnitt des Schulterbogens.",
+   "color": "#33373B",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 3,
+     "w": 11.071,
+     "d": 1.2,
+     "r": 0.5,
+     "fill": "#454A4F"
+    }
+   ]
+  },
+  {
+   "id": "schulter_l_13",
+   "component_id": "ps_hanger_body",
+   "material_id": "ps",
+   "name": "Schulterbogen links",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 25.071,
+   "y": 127.714,
+   "w": 13.071,
+   "d": 14,
+   "z": 0,
+   "h": 10,
+   "r": 2,
+   "explode": [
+    -12,
+    0,
+    0
+   ],
+   "mass": 0.85,
+   "materials": [
+    [
+     "ps",
+     100
+    ]
+   ],
+   "info": "Abschnitt des Schulterbogens.",
+   "color": "#33373B",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 3,
+     "w": 11.071,
+     "d": 1.2,
+     "r": 0.5,
+     "fill": "#454A4F"
+    }
+   ]
+  },
+  {
+   "id": "schulter_l_14",
+   "component_id": "ps_hanger_body",
+   "material_id": "ps",
+   "name": "Schulterbogen links",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 12,
+   "y": 132.357,
+   "w": 13.071,
+   "d": 14,
+   "z": 0,
+   "h": 10,
+   "r": 2,
+   "explode": [
+    -12,
+    0,
+    0
+   ],
+   "mass": 0.85,
+   "materials": [
+    [
+     "ps",
+     100
+    ]
+   ],
+   "info": "Abschnitt des Schulterbogens.",
+   "color": "#33373B",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 3,
+     "w": 11.071,
+     "d": 1.2,
+     "r": 0.5,
+     "fill": "#454A4F"
+    }
+   ]
   },
   {
    "id": "schulter_r_1",
@@ -414,27 +771,38 @@
    "short": "Schulter",
    "shape": "box",
    "x": 225,
-   "y": 75,
-   "w": 22.875,
-   "d": 9.375,
+   "y": 72,
+   "w": 13.071,
+   "d": 14,
    "z": 0,
    "h": 10,
-   "r": 3,
+   "r": 2,
    "explode": [
     12,
     0,
     0
    ],
-   "mass": 1.49,
+   "mass": 0.85,
    "materials": [
     [
      "ps",
      100
     ]
    ],
-   "info": "Die schrägen Arme tragen Hemd oder Jacke. Polystyrol ist hart, kann aber bei Kälte brechen.",
-   "color": "#2B2D2F",
-   "label": true
+   "info": "Abschnitt des Schulterbogens.",
+   "color": "#33373B",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 3,
+     "w": 11.071,
+     "d": 1.2,
+     "r": 0.5,
+     "fill": "#454A4F"
+    }
+   ]
   },
   {
    "id": "schulter_r_2",
@@ -443,19 +811,19 @@
    "name": "Schulterbogen rechts",
    "short": "Schulter",
    "shape": "box",
-   "x": 247.875,
-   "y": 84.375,
-   "w": 22.875,
-   "d": 9.375,
+   "x": 238.071,
+   "y": 76.643,
+   "w": 13.071,
+   "d": 14,
    "z": 0,
    "h": 10,
-   "r": 3,
+   "r": 2,
    "explode": [
     12,
     0,
     0
    ],
-   "mass": 1.49,
+   "mass": 0.85,
    "materials": [
     [
      "ps",
@@ -463,8 +831,19 @@
     ]
    ],
    "info": "Abschnitt des Schulterbogens.",
-   "color": "#2B2D2F",
-   "label": false
+   "color": "#33373B",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 3,
+     "w": 11.071,
+     "d": 1.2,
+     "r": 0.5,
+     "fill": "#454A4F"
+    }
+   ]
   },
   {
    "id": "schulter_r_3",
@@ -473,19 +852,19 @@
    "name": "Schulterbogen rechts",
    "short": "Schulter",
    "shape": "box",
-   "x": 270.75,
-   "y": 93.75,
-   "w": 22.875,
-   "d": 9.375,
+   "x": 251.143,
+   "y": 81.286,
+   "w": 13.071,
+   "d": 14,
    "z": 0,
    "h": 10,
-   "r": 3,
+   "r": 2,
    "explode": [
     12,
     0,
     0
    ],
-   "mass": 1.49,
+   "mass": 0.85,
    "materials": [
     [
      "ps",
@@ -493,8 +872,19 @@
     ]
    ],
    "info": "Abschnitt des Schulterbogens.",
-   "color": "#2B2D2F",
-   "label": false
+   "color": "#33373B",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 3,
+     "w": 11.071,
+     "d": 1.2,
+     "r": 0.5,
+     "fill": "#454A4F"
+    }
+   ]
   },
   {
    "id": "schulter_r_4",
@@ -503,19 +893,19 @@
    "name": "Schulterbogen rechts",
    "short": "Schulter",
    "shape": "box",
-   "x": 293.625,
-   "y": 103.125,
-   "w": 22.875,
-   "d": 9.375,
+   "x": 264.214,
+   "y": 85.929,
+   "w": 13.071,
+   "d": 14,
    "z": 0,
    "h": 10,
-   "r": 3,
+   "r": 2,
    "explode": [
     12,
     0,
     0
    ],
-   "mass": 1.49,
+   "mass": 0.85,
    "materials": [
     [
      "ps",
@@ -523,8 +913,19 @@
     ]
    ],
    "info": "Abschnitt des Schulterbogens.",
-   "color": "#2B2D2F",
-   "label": false
+   "color": "#33373B",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 3,
+     "w": 11.071,
+     "d": 1.2,
+     "r": 0.5,
+     "fill": "#454A4F"
+    }
+   ]
   },
   {
    "id": "schulter_r_5",
@@ -533,19 +934,19 @@
    "name": "Schulterbogen rechts",
    "short": "Schulter",
    "shape": "box",
-   "x": 316.5,
-   "y": 112.5,
-   "w": 22.875,
-   "d": 9.375,
+   "x": 277.286,
+   "y": 90.571,
+   "w": 13.071,
+   "d": 14,
    "z": 0,
    "h": 10,
-   "r": 3,
+   "r": 2,
    "explode": [
     12,
     0,
     0
    ],
-   "mass": 1.49,
+   "mass": 0.85,
    "materials": [
     [
      "ps",
@@ -553,8 +954,19 @@
     ]
    ],
    "info": "Abschnitt des Schulterbogens.",
-   "color": "#2B2D2F",
-   "label": false
+   "color": "#33373B",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 3,
+     "w": 11.071,
+     "d": 1.2,
+     "r": 0.5,
+     "fill": "#454A4F"
+    }
+   ]
   },
   {
    "id": "schulter_r_6",
@@ -563,19 +975,19 @@
    "name": "Schulterbogen rechts",
    "short": "Schulter",
    "shape": "box",
-   "x": 339.375,
-   "y": 121.875,
-   "w": 22.875,
-   "d": 9.375,
+   "x": 290.357,
+   "y": 95.214,
+   "w": 13.071,
+   "d": 14,
    "z": 0,
    "h": 10,
-   "r": 3,
+   "r": 2,
    "explode": [
     12,
     0,
     0
    ],
-   "mass": 1.49,
+   "mass": 0.85,
    "materials": [
     [
      "ps",
@@ -583,8 +995,19 @@
     ]
    ],
    "info": "Abschnitt des Schulterbogens.",
-   "color": "#2B2D2F",
-   "label": false
+   "color": "#33373B",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 3,
+     "w": 11.071,
+     "d": 1.2,
+     "r": 0.5,
+     "fill": "#454A4F"
+    }
+   ]
   },
   {
    "id": "schulter_r_7",
@@ -593,19 +1016,19 @@
    "name": "Schulterbogen rechts",
    "short": "Schulter",
    "shape": "box",
-   "x": 362.25,
-   "y": 131.25,
-   "w": 22.875,
-   "d": 9.375,
+   "x": 303.429,
+   "y": 99.857,
+   "w": 13.071,
+   "d": 14,
    "z": 0,
    "h": 10,
-   "r": 3,
+   "r": 2,
    "explode": [
     12,
     0,
     0
    ],
-   "mass": 1.49,
+   "mass": 0.85,
    "materials": [
     [
      "ps",
@@ -613,8 +1036,19 @@
     ]
    ],
    "info": "Abschnitt des Schulterbogens.",
-   "color": "#2B2D2F",
-   "label": false
+   "color": "#33373B",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 3,
+     "w": 11.071,
+     "d": 1.2,
+     "r": 0.5,
+     "fill": "#454A4F"
+    }
+   ]
   },
   {
    "id": "schulter_r_8",
@@ -623,19 +1057,19 @@
    "name": "Schulterbogen rechts",
    "short": "Schulter",
    "shape": "box",
-   "x": 385.125,
-   "y": 140.625,
-   "w": 22.875,
-   "d": 9.375,
+   "x": 316.5,
+   "y": 104.5,
+   "w": 13.071,
+   "d": 14,
    "z": 0,
    "h": 10,
-   "r": 3,
+   "r": 2,
    "explode": [
     12,
     0,
     0
    ],
-   "mass": 1.49,
+   "mass": 0.85,
    "materials": [
     [
      "ps",
@@ -643,8 +1077,265 @@
     ]
    ],
    "info": "Abschnitt des Schulterbogens.",
-   "color": "#2B2D2F",
-   "label": false
+   "color": "#33373B",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 3,
+     "w": 11.071,
+     "d": 1.2,
+     "r": 0.5,
+     "fill": "#454A4F"
+    }
+   ]
+  },
+  {
+   "id": "schulter_r_9",
+   "component_id": "ps_hanger_body",
+   "material_id": "ps",
+   "name": "Schulterbogen rechts",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 329.571,
+   "y": 109.143,
+   "w": 13.071,
+   "d": 14,
+   "z": 0,
+   "h": 10,
+   "r": 2,
+   "explode": [
+    12,
+    0,
+    0
+   ],
+   "mass": 0.85,
+   "materials": [
+    [
+     "ps",
+     100
+    ]
+   ],
+   "info": "Abschnitt des Schulterbogens.",
+   "color": "#33373B",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 3,
+     "w": 11.071,
+     "d": 1.2,
+     "r": 0.5,
+     "fill": "#454A4F"
+    }
+   ]
+  },
+  {
+   "id": "schulter_r_10",
+   "component_id": "ps_hanger_body",
+   "material_id": "ps",
+   "name": "Schulterbogen rechts",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 342.643,
+   "y": 113.786,
+   "w": 13.071,
+   "d": 14,
+   "z": 0,
+   "h": 10,
+   "r": 2,
+   "explode": [
+    12,
+    0,
+    0
+   ],
+   "mass": 0.85,
+   "materials": [
+    [
+     "ps",
+     100
+    ]
+   ],
+   "info": "Abschnitt des Schulterbogens.",
+   "color": "#33373B",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 3,
+     "w": 11.071,
+     "d": 1.2,
+     "r": 0.5,
+     "fill": "#454A4F"
+    }
+   ]
+  },
+  {
+   "id": "schulter_r_11",
+   "component_id": "ps_hanger_body",
+   "material_id": "ps",
+   "name": "Schulterbogen rechts",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 355.714,
+   "y": 118.429,
+   "w": 13.071,
+   "d": 14,
+   "z": 0,
+   "h": 10,
+   "r": 2,
+   "explode": [
+    12,
+    0,
+    0
+   ],
+   "mass": 0.85,
+   "materials": [
+    [
+     "ps",
+     100
+    ]
+   ],
+   "info": "Abschnitt des Schulterbogens.",
+   "color": "#33373B",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 3,
+     "w": 11.071,
+     "d": 1.2,
+     "r": 0.5,
+     "fill": "#454A4F"
+    }
+   ]
+  },
+  {
+   "id": "schulter_r_12",
+   "component_id": "ps_hanger_body",
+   "material_id": "ps",
+   "name": "Schulterbogen rechts",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 368.786,
+   "y": 123.071,
+   "w": 13.071,
+   "d": 14,
+   "z": 0,
+   "h": 10,
+   "r": 2,
+   "explode": [
+    12,
+    0,
+    0
+   ],
+   "mass": 0.85,
+   "materials": [
+    [
+     "ps",
+     100
+    ]
+   ],
+   "info": "Abschnitt des Schulterbogens.",
+   "color": "#33373B",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 3,
+     "w": 11.071,
+     "d": 1.2,
+     "r": 0.5,
+     "fill": "#454A4F"
+    }
+   ]
+  },
+  {
+   "id": "schulter_r_13",
+   "component_id": "ps_hanger_body",
+   "material_id": "ps",
+   "name": "Schulterbogen rechts",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 381.857,
+   "y": 127.714,
+   "w": 13.071,
+   "d": 14,
+   "z": 0,
+   "h": 10,
+   "r": 2,
+   "explode": [
+    12,
+    0,
+    0
+   ],
+   "mass": 0.85,
+   "materials": [
+    [
+     "ps",
+     100
+    ]
+   ],
+   "info": "Abschnitt des Schulterbogens.",
+   "color": "#33373B",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 3,
+     "w": 11.071,
+     "d": 1.2,
+     "r": 0.5,
+     "fill": "#454A4F"
+    }
+   ]
+  },
+  {
+   "id": "schulter_r_14",
+   "component_id": "ps_hanger_body",
+   "material_id": "ps",
+   "name": "Schulterbogen rechts",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 394.929,
+   "y": 132.357,
+   "w": 13.071,
+   "d": 14,
+   "z": 0,
+   "h": 10,
+   "r": 2,
+   "explode": [
+    12,
+    0,
+    0
+   ],
+   "mass": 0.85,
+   "materials": [
+    [
+     "ps",
+     100
+    ]
+   ],
+   "info": "Abschnitt des Schulterbogens.",
+   "color": "#33373B",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 3,
+     "w": 11.071,
+     "d": 1.2,
+     "r": 0.5,
+     "fill": "#454A4F"
+    }
+   ]
   },
   {
    "id": "ende_l",
@@ -665,7 +1356,7 @@
     0,
     0
    ],
-   "mass": 3.73,
+   "mass": 3.76,
    "materials": [
     [
      "ps",
@@ -673,7 +1364,7 @@
     ]
    ],
    "info": "Breites Ende mit Kerben, in die man Träger von Kleidern hängt.",
-   "color": "#2B2D2F",
+   "color": "#33373B",
    "marks": [
     {
      "shape": "box",
@@ -723,7 +1414,7 @@
     0,
     0
    ],
-   "mass": 3.73,
+   "mass": 3.76,
    "materials": [
     [
      "ps",
@@ -731,7 +1422,7 @@
     ]
    ],
    "info": "Gegenstück zum linken Schulterende.",
-   "color": "#2B2D2F",
+   "color": "#33373B",
    "label": false,
    "marks": [
     {
@@ -782,7 +1473,7 @@
     20,
     0
    ],
-   "mass": 7.46,
+   "mass": 7.52,
    "materials": [
     [
      "ps",
@@ -790,7 +1481,7 @@
     ]
    ],
    "info": "Gerippte Stange, auf der Hosen nicht rutschen. Kleiderbügel sind keine Verpackung: weiterverwenden oder beim Modehändler abgeben, sonst Restmüll.",
-   "color": "#2B2D2F",
+   "color": "#33373B",
    "marks": [
     {
      "shape": "box",

@@ -20,12 +20,12 @@ teile = [
          info='Polypropylen, wird mit der Zeit in der Sonne spröde und bricht. Zum Trennen die Hälften '
               'gegeneinander verdrehen, dann springt die Feder heraus.',
          color=PP, marks=[mark('box', 1, 3, 7, 18, 1, '#D45780'), mark('box', 3.9, 42, 2.2, 30, 1, '#C04A72')]
-         + raster(1.5, 50, 1, 4, 6, 1, 0, 4, fill='#D45780')),
+         + raster(1.5, 5, 1, 5, 6, 0.8, 0, 3.4, fill='#C04A72') + raster(1.5, 50, 1, 4, 6, 1, 0, 4, fill='#D45780')),
     teil('feder', 'steel_spring', 'Federwindung', 'Feder', 'box',
-         x=0, y=34, w=10, d=8, z=4.5, h=6, r=3, mass=0.5,
+         x=-0.6, y=34, w=11.2, d=8, z=4.5, h=6, r=3, mass=0.5, explode=[18, 0, 6],
          info='Gewickelte Torsionsfeder aus verzinktem Stahldraht. Mit einer Zange herausziehen; '
               'sie gehört zum Altmetall oder taugt als Ersatzfeder.',
-         color=STAHL, marks=raster(0.5, 0.5, 6, 1, 1, 7, 1.6, r=0.5, fill='#7E868C')),
+         color=STAHL, marks=raster(0.7, 0.5, 6, 1, 1, 7, 1.8, r=0.5, fill='#7E868C')),
     teil('haelfte_unten', 'peg_halves', 'Untere Klammerhälfte', 'Hälfte unten', 'box',
          x=0.5, y=0, w=9, d=75, z=1, h=6.5, r=2, mass=2.5, label=False,
          info='Gegenstück zur oberen Hälfte, baugleich. Die Riffelung an den Backen hält die Wäsche fest.',
@@ -35,6 +35,6 @@ teile = [
          info='Zweiter Schenkel der Feder unter dem unteren Griffende.', color=STAHL),
 ]
 
-explodiere(teile, abstand=6, nach_liste=True)
+explodiere(teile, abstand=10, nach_liste=True)
 skaliere_masse(teile, oid='clothes_peg', stellen=2)
 schreibe('clothes_peg', teile)

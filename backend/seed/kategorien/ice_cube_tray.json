@@ -39,11 +39,11 @@
   "metalle_mg": {},
   "herkunft": {},
   "materialien_g": {
-   "silicone": 58.6,
+   "silicone": 58.5,
    "pp": 21.5
   },
-  "co2_kg": 0.484,
-  "co2_mit_recyclat_kg": 0.449,
+  "co2_kg": 0.483,
+  "co2_mit_recyclat_kg": 0.448,
   "co2_ersparnis_kg": 0.035,
   "co2_ohne_faktor": [],
   "rohstoffwert_eur": 0,
@@ -139,9 +139,9 @@
    "h": 4,
    "r": 10,
    "explode": [
+    -125,
     0,
-    0,
-    50.0
+    30
    ],
    "mass": 21.5,
    "materials": [
@@ -152,362 +152,310 @@
    ],
    "info": "Durchsichtiger PP-Deckel, schützt das Eis vor Gerüchen aus dem Gefrierfach. Kunststoff, aber keine Verpackung: kaputt in den Restmüll.",
    "color": "#E4F1F3",
-   "opacity": 0.7,
+   "opacity": 0.4,
    "marks": [
     {
      "shape": "box",
-     "x": 4,
-     "y": 4,
-     "w": 102,
-     "d": 242,
-     "r": 8,
-     "fill": "#D3E6E9"
+     "x": 40,
+     "y": 2,
+     "w": 30,
+     "d": 6,
+     "r": 2,
+     "fill": "#C3DADE"
+    },
+    {
+     "shape": "box",
+     "x": 40,
+     "y": 242,
+     "w": 30,
+     "d": 6,
+     "r": 2,
+     "fill": "#C3DADE"
     }
    ]
   },
   {
-   "id": "rand",
+   "id": "form",
    "component_id": "silicone_tray",
    "material_id": "silicone",
-   "name": "Rand",
-   "short": "Rand",
+   "name": "Silikonform für 14 Würfel",
+   "short": "Silikonform",
    "shape": "box",
    "x": 0,
    "y": 0,
    "w": 110,
    "d": 250,
-   "z": 22,
-   "h": 4,
+   "z": 0,
+   "h": 26,
    "r": 10,
    "explode": [
     0,
     0,
-    0.0
+    0
    ],
-   "mass": 13.7,
+   "mass": 58.5,
    "materials": [
     [
      "gummi",
      100
     ]
    ],
-   "info": "Steifer Rand zum Festhalten. Die Form ist aus einem Stück Silikon gegossen.",
+   "info": "Aus einem Stück Silikon gegossen, mit steifem Rand zum Festhalten. Das Eis löst sich durch Biegen. Silikon gehört nicht in die Gelbe Tonne, sondern in den Restmüll. Lange haltbar: lieber weiterverwenden.",
    "color": "#4FB3BF",
    "marks": [
     {
      "shape": "box",
      "x": 8,
-     "y": 8,
+     "y": 9.0,
      "w": 44,
      "d": 30,
-     "r": 6,
+     "r": 5,
      "fill": "#2F7F89"
     },
     {
      "shape": "box",
+     "x": 16.4,
+     "y": 17.4,
+     "w": 35.6,
+     "d": 21.6,
+     "r": 4,
+     "fill": "#3E9EAA"
+    },
+    {
+     "shape": "box",
      "x": 58,
-     "y": 8,
+     "y": 9.0,
      "w": 44,
      "d": 30,
-     "r": 6,
+     "r": 5,
      "fill": "#2F7F89"
+    },
+    {
+     "shape": "box",
+     "x": 66.4,
+     "y": 17.4,
+     "w": 35.6,
+     "d": 21.6,
+     "r": 4,
+     "fill": "#3E9EAA"
     },
     {
      "shape": "box",
      "x": 8,
-     "y": 41,
+     "y": 42.5,
      "w": 44,
      "d": 30,
-     "r": 6,
+     "r": 5,
      "fill": "#2F7F89"
     },
     {
      "shape": "box",
+     "x": 16.4,
+     "y": 50.9,
+     "w": 35.6,
+     "d": 21.6,
+     "r": 4,
+     "fill": "#3E9EAA"
+    },
+    {
+     "shape": "box",
      "x": 58,
-     "y": 41,
+     "y": 42.5,
      "w": 44,
      "d": 30,
-     "r": 6,
+     "r": 5,
      "fill": "#2F7F89"
+    },
+    {
+     "shape": "box",
+     "x": 66.4,
+     "y": 50.9,
+     "w": 35.6,
+     "d": 21.6,
+     "r": 4,
+     "fill": "#3E9EAA"
     },
     {
      "shape": "box",
      "x": 8,
-     "y": 74,
+     "y": 76.0,
      "w": 44,
      "d": 30,
-     "r": 6,
+     "r": 5,
      "fill": "#2F7F89"
     },
     {
      "shape": "box",
+     "x": 16.4,
+     "y": 84.4,
+     "w": 35.6,
+     "d": 21.6,
+     "r": 4,
+     "fill": "#3E9EAA"
+    },
+    {
+     "shape": "box",
      "x": 58,
-     "y": 74,
+     "y": 76.0,
      "w": 44,
      "d": 30,
-     "r": 6,
+     "r": 5,
      "fill": "#2F7F89"
+    },
+    {
+     "shape": "box",
+     "x": 66.4,
+     "y": 84.4,
+     "w": 35.6,
+     "d": 21.6,
+     "r": 4,
+     "fill": "#3E9EAA"
     },
     {
      "shape": "box",
      "x": 8,
-     "y": 107,
+     "y": 109.5,
      "w": 44,
      "d": 30,
-     "r": 6,
+     "r": 5,
      "fill": "#2F7F89"
     },
     {
      "shape": "box",
+     "x": 16.4,
+     "y": 117.9,
+     "w": 35.6,
+     "d": 21.6,
+     "r": 4,
+     "fill": "#3E9EAA"
+    },
+    {
+     "shape": "box",
      "x": 58,
-     "y": 107,
+     "y": 109.5,
      "w": 44,
      "d": 30,
-     "r": 6,
+     "r": 5,
      "fill": "#2F7F89"
+    },
+    {
+     "shape": "box",
+     "x": 66.4,
+     "y": 117.9,
+     "w": 35.6,
+     "d": 21.6,
+     "r": 4,
+     "fill": "#3E9EAA"
     },
     {
      "shape": "box",
      "x": 8,
-     "y": 140,
+     "y": 143.0,
      "w": 44,
      "d": 30,
-     "r": 6,
+     "r": 5,
      "fill": "#2F7F89"
     },
     {
      "shape": "box",
+     "x": 16.4,
+     "y": 151.4,
+     "w": 35.6,
+     "d": 21.6,
+     "r": 4,
+     "fill": "#3E9EAA"
+    },
+    {
+     "shape": "box",
      "x": 58,
-     "y": 140,
+     "y": 143.0,
      "w": 44,
      "d": 30,
-     "r": 6,
+     "r": 5,
      "fill": "#2F7F89"
+    },
+    {
+     "shape": "box",
+     "x": 66.4,
+     "y": 151.4,
+     "w": 35.6,
+     "d": 21.6,
+     "r": 4,
+     "fill": "#3E9EAA"
     },
     {
      "shape": "box",
      "x": 8,
-     "y": 173,
+     "y": 176.5,
      "w": 44,
      "d": 30,
-     "r": 6,
+     "r": 5,
      "fill": "#2F7F89"
     },
     {
      "shape": "box",
+     "x": 16.4,
+     "y": 184.9,
+     "w": 35.6,
+     "d": 21.6,
+     "r": 4,
+     "fill": "#3E9EAA"
+    },
+    {
+     "shape": "box",
      "x": 58,
-     "y": 173,
+     "y": 176.5,
      "w": 44,
      "d": 30,
-     "r": 6,
+     "r": 5,
      "fill": "#2F7F89"
+    },
+    {
+     "shape": "box",
+     "x": 66.4,
+     "y": 184.9,
+     "w": 35.6,
+     "d": 21.6,
+     "r": 4,
+     "fill": "#3E9EAA"
     },
     {
      "shape": "box",
      "x": 8,
-     "y": 206,
+     "y": 210.0,
      "w": 44,
      "d": 30,
-     "r": 6,
+     "r": 5,
      "fill": "#2F7F89"
     },
     {
      "shape": "box",
+     "x": 16.4,
+     "y": 218.4,
+     "w": 35.6,
+     "d": 21.6,
+     "r": 4,
+     "fill": "#3E9EAA"
+    },
+    {
+     "shape": "box",
      "x": 58,
-     "y": 206,
+     "y": 210.0,
      "w": 44,
      "d": 30,
-     "r": 6,
+     "r": 5,
      "fill": "#2F7F89"
+    },
+    {
+     "shape": "box",
+     "x": 66.4,
+     "y": 218.4,
+     "w": 35.6,
+     "d": 21.6,
+     "r": 4,
+     "fill": "#3E9EAA"
     }
    ]
-  },
-  {
-   "id": "mulden",
-   "component_id": "silicone_tray",
-   "material_id": "silicone",
-   "name": "Mulden für 14 Würfel",
-   "short": "Mulden",
-   "shape": "box",
-   "x": 4,
-   "y": 4,
-   "w": 102,
-   "d": 242,
-   "z": 3,
-   "h": 19,
-   "r": 8,
-   "explode": [
-    0,
-    0,
-    0.0
-   ],
-   "mass": 39,
-   "materials": [
-    [
-     "gummi",
-     100
-    ]
-   ],
-   "info": "Weiches Silikon, das Eis löst sich durch Biegen. Silikon gehört nicht in die Gelbe Tonne, sondern in den Restmüll. Lange haltbar: lieber weiterverwenden.",
-   "color": "#4FB3BF",
-   "marks": [
-    {
-     "shape": "box",
-     "x": 4,
-     "y": 4,
-     "w": 44,
-     "d": 30,
-     "r": 6,
-     "fill": "#3C9AA5"
-    },
-    {
-     "shape": "box",
-     "x": 54,
-     "y": 4,
-     "w": 44,
-     "d": 30,
-     "r": 6,
-     "fill": "#3C9AA5"
-    },
-    {
-     "shape": "box",
-     "x": 4,
-     "y": 37,
-     "w": 44,
-     "d": 30,
-     "r": 6,
-     "fill": "#3C9AA5"
-    },
-    {
-     "shape": "box",
-     "x": 54,
-     "y": 37,
-     "w": 44,
-     "d": 30,
-     "r": 6,
-     "fill": "#3C9AA5"
-    },
-    {
-     "shape": "box",
-     "x": 4,
-     "y": 70,
-     "w": 44,
-     "d": 30,
-     "r": 6,
-     "fill": "#3C9AA5"
-    },
-    {
-     "shape": "box",
-     "x": 54,
-     "y": 70,
-     "w": 44,
-     "d": 30,
-     "r": 6,
-     "fill": "#3C9AA5"
-    },
-    {
-     "shape": "box",
-     "x": 4,
-     "y": 103,
-     "w": 44,
-     "d": 30,
-     "r": 6,
-     "fill": "#3C9AA5"
-    },
-    {
-     "shape": "box",
-     "x": 54,
-     "y": 103,
-     "w": 44,
-     "d": 30,
-     "r": 6,
-     "fill": "#3C9AA5"
-    },
-    {
-     "shape": "box",
-     "x": 4,
-     "y": 136,
-     "w": 44,
-     "d": 30,
-     "r": 6,
-     "fill": "#3C9AA5"
-    },
-    {
-     "shape": "box",
-     "x": 54,
-     "y": 136,
-     "w": 44,
-     "d": 30,
-     "r": 6,
-     "fill": "#3C9AA5"
-    },
-    {
-     "shape": "box",
-     "x": 4,
-     "y": 169,
-     "w": 44,
-     "d": 30,
-     "r": 6,
-     "fill": "#3C9AA5"
-    },
-    {
-     "shape": "box",
-     "x": 54,
-     "y": 169,
-     "w": 44,
-     "d": 30,
-     "r": 6,
-     "fill": "#3C9AA5"
-    },
-    {
-     "shape": "box",
-     "x": 4,
-     "y": 202,
-     "w": 44,
-     "d": 30,
-     "r": 6,
-     "fill": "#3C9AA5"
-    },
-    {
-     "shape": "box",
-     "x": 54,
-     "y": 202,
-     "w": 44,
-     "d": 30,
-     "r": 6,
-     "fill": "#3C9AA5"
-    }
-   ]
-  },
-  {
-   "id": "boden",
-   "component_id": "silicone_tray",
-   "material_id": "silicone",
-   "name": "Boden mit Noppen",
-   "short": "Boden",
-   "shape": "box",
-   "x": 8,
-   "y": 8,
-   "w": 94,
-   "d": 234,
-   "z": 0,
-   "h": 3,
-   "r": 6,
-   "explode": [
-    0,
-    0,
-    0.0
-   ],
-   "mass": 5.9,
-   "materials": [
-    [
-     "gummi",
-     100
-    ]
-   ],
-   "info": "Unterseite der Mulden, kleine Noppen verhindern das Rutschen.",
-   "color": "#4FB3BF",
-   "label": false
   }
  ]
 }

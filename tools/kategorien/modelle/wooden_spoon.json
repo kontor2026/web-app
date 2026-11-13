@@ -12,13 +12,13 @@
    "w": 60,
    "d": 82,
    "z": 0,
-   "h": 15,
+   "h": 13,
    "explode": [
     0,
-    -16,
+    -24,
     0
    ],
-   "mass": 14,
+   "mass": 14.4,
    "materials": [
     [
      "holz",
@@ -26,23 +26,31 @@
     ]
    ],
    "info": "Die flache Mulde zum Rühren und Abschmecken. Dunkle, rissige Stellen sind verbranntes Holz: Dann ist es Zeit für einen neuen Löffel.",
-   "color": "#D9B48A",
+   "color": "#DDB88D",
    "marks": [
     {
      "shape": "cyl",
-     "x": 6,
-     "y": 7,
-     "w": 48,
-     "d": 66,
-     "fill": "#CFA97E"
+     "x": 4,
+     "y": 5,
+     "w": 52,
+     "d": 72,
+     "fill": "#D2AC80"
     },
     {
      "shape": "cyl",
-     "x": 14,
-     "y": 16,
-     "w": 32,
-     "d": 46,
-     "fill": "#C69F73"
+     "x": 9,
+     "y": 11,
+     "w": 42,
+     "d": 58,
+     "fill": "#C8A174"
+    },
+    {
+     "shape": "cyl",
+     "x": 16,
+     "y": 20,
+     "w": 28,
+     "d": 36,
+     "fill": "#BF976A"
     }
    ]
   },
@@ -53,27 +61,56 @@
    "name": "Hals",
    "short": "Hals",
    "shape": "box",
-   "x": 21,
-   "y": 78,
-   "w": 18,
-   "d": 32,
-   "z": 2,
-   "h": 11,
-   "r": 6,
+   "x": 23,
+   "y": 76,
+   "w": 14,
+   "d": 44,
+   "z": 1.5,
+   "h": 10,
+   "r": 5,
    "explode": [
     0,
-    0,
+    -8,
     0
    ],
-   "mass": 4,
+   "mass": 4.4,
    "materials": [
     [
      "holz",
      100
     ]
    ],
-   "info": "Übergang von der Laffe zum Stiel, hier ist der Löffel am stärksten belastet.",
-   "color": "#D3AE84"
+   "info": "Schmaler Übergang von der Laffe zum Stiel. Hier ist der Löffel am stärksten belastet und bricht, wenn man ihn als Hebel benutzt.",
+   "color": "#DDB88D",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2.1,
+     "y": 4,
+     "w": 0.8,
+     "d": 36,
+     "r": 0.4,
+     "fill": "#CBA478"
+    },
+    {
+     "shape": "box",
+     "x": 6.6,
+     "y": 10,
+     "w": 0.8,
+     "d": 24,
+     "r": 0.4,
+     "fill": "#CBA478"
+    },
+    {
+     "shape": "box",
+     "x": 11.1,
+     "y": 4,
+     "w": 0.8,
+     "d": 36,
+     "r": 0.4,
+     "fill": "#CBA478"
+    }
+   ]
   },
   {
    "id": "stiel",
@@ -82,43 +119,146 @@
    "name": "Stiel",
    "short": "Stiel",
    "shape": "box",
-   "x": 23,
-   "y": 110,
-   "w": 14,
-   "d": 190,
-   "z": 3,
+   "x": 22,
+   "y": 120,
+   "w": 16,
+   "d": 100,
+   "z": 2,
    "h": 10,
    "r": 6,
    "explode": [
     0,
-    16,
+    8,
     0
    ],
-   "mass": 22,
+   "mass": 11.1,
    "materials": [
     [
      "holz",
      100
     ]
    ],
-   "info": "Unbehandeltes oder nur mit Speiseöl eingeriebenes Buchenholz. Es darf in die Biotonne oder in den Restmüll; lackierte Löffel nur in den Restmüll.",
-   "color": "#D9B48A",
+   "info": "Unbehandeltes oder nur mit Speiseöl eingeriebenes Buchenholz. Es leitet Wärme schlecht, deshalb wird der Stiel im heißen Topf nicht warm.",
+   "color": "#DDB88D",
    "marks": [
     {
-     "shape": "cyl",
-     "x": 3.5,
-     "y": 172,
-     "w": 7,
-     "fill": "#8E6B47"
+     "shape": "box",
+     "x": 2.1,
+     "y": 4,
+     "w": 0.8,
+     "d": 92,
+     "r": 0.4,
+     "fill": "#CBA478"
     },
     {
      "shape": "box",
-     "x": 5,
+     "x": 5.77,
      "y": 10,
-     "w": 4,
-     "d": 150,
-     "r": 2,
-     "fill": "#CFA97E"
+     "w": 0.8,
+     "d": 80,
+     "r": 0.4,
+     "fill": "#CBA478"
+    },
+    {
+     "shape": "box",
+     "x": 9.43,
+     "y": 4,
+     "w": 0.8,
+     "d": 92,
+     "r": 0.4,
+     "fill": "#CBA478"
+    },
+    {
+     "shape": "box",
+     "x": 13.1,
+     "y": 10,
+     "w": 0.8,
+     "d": 80,
+     "r": 0.4,
+     "fill": "#CBA478"
+    }
+   ]
+  },
+  {
+   "id": "griff",
+   "component_id": "wooden_spoon_body",
+   "material_id": "wood",
+   "name": "Griffende mit Loch",
+   "short": "Griff",
+   "shape": "box",
+   "x": 20.5,
+   "y": 220,
+   "w": 19,
+   "d": 80,
+   "z": 2,
+   "h": 10,
+   "r": 8,
+   "explode": [
+    0,
+    24,
+    0
+   ],
+   "mass": 10,
+   "materials": [
+    [
+     "holz",
+     100
+    ]
+   ],
+   "info": "Breiteres Griffende mit Loch zum Aufhängen. Holz darf in die Biotonne oder in den Restmüll; lackierte Löffel nur in den Restmüll.",
+   "color": "#DDB88D",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2.1,
+     "y": 4,
+     "w": 0.8,
+     "d": 48,
+     "r": 0.4,
+     "fill": "#CBA478"
+    },
+    {
+     "shape": "box",
+     "x": 6.77,
+     "y": 10,
+     "w": 0.8,
+     "d": 36,
+     "r": 0.4,
+     "fill": "#CBA478"
+    },
+    {
+     "shape": "box",
+     "x": 11.43,
+     "y": 4,
+     "w": 0.8,
+     "d": 48,
+     "r": 0.4,
+     "fill": "#CBA478"
+    },
+    {
+     "shape": "box",
+     "x": 16.1,
+     "y": 10,
+     "w": 0.8,
+     "d": 36,
+     "r": 0.4,
+     "fill": "#CBA478"
+    },
+    {
+     "shape": "cyl",
+     "x": 6,
+     "y": 62,
+     "w": 7,
+     "fill": "#7E5C3A"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 20,
+     "w": 11,
+     "d": 4,
+     "r": 1,
+     "fill": "#B98F62"
     }
    ]
   }

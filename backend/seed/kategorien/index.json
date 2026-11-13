@@ -1060,7 +1060,7 @@
   "name": "Kochlöffel",
   "name_en": "Wooden Spoon",
   "klasse": "Restmüll",
-  "teile": 3,
+  "teile": 4,
   "platzhalter": false
  },
  {
@@ -1092,7 +1092,7 @@
   "name": "Kleiderbügel",
   "name_en": "Plastic Hanger",
   "klasse": "Restmüll",
-  "teile": 22,
+  "teile": 35,
   "platzhalter": false
  },
  {
@@ -1108,7 +1108,7 @@
   "name": "Bilderrahmen",
   "name_en": "Picture Frame",
   "klasse": "Restmüll",
-  "teile": 9,
+  "teile": 12,
   "platzhalter": false
  },
  {
@@ -1172,7 +1172,7 @@
   "name": "Besen",
   "name_en": "Broom",
   "klasse": "Restmüll",
-  "teile": 6,
+  "teile": 8,
   "platzhalter": false
  },
  {
@@ -1188,7 +1188,7 @@
   "name": "Eiswürfelform",
   "name_en": "Ice Cube Tray",
   "klasse": "Restmüll",
-  "teile": 4,
+  "teile": 2,
   "platzhalter": false
  },
  {
@@ -1236,7 +1236,7 @@
   "name": "Filzstift",
   "name_en": "Felt-Tip Marker",
   "klasse": "Restmüll",
-  "teile": 7,
+  "teile": 8,
   "platzhalter": false
  },
  {
@@ -1244,7 +1244,7 @@
   "name": "Textmarker",
   "name_en": "Highlighter",
   "klasse": "Restmüll",
-  "teile": 7,
+  "teile": 8,
   "platzhalter": false
  },
  {

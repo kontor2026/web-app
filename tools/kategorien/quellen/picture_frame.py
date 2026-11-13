@@ -15,46 +15,69 @@ HOLZ = '#B98A57'
 METALL = '#A9AFB4'
 KLAMMER_INFO = 'Drehklammer aus Federstahl. Zur Seite drehen, dann lässt sich die Rückwand herausnehmen.'
 
+LEISTE_INFO = 'Rahmenleiste aus Kiefernholz, lackiert.'
+PROFIL = '#A87A4A'
+
+
+def leiste(id, x, y, w, d, mass, **kw):
+    """Eine der vier Rahmenleisten; die Marks zeichnen die Profilkanten auf der Vorderseite."""
+    lang = d > w
+    marks = ([mark('box', 3, 3, w - 6, d - 6, 1, '#C39565'), mark('box', w - 5, 5, 2, d - 10, 0.5, PROFIL)] if lang else
+             [mark('box', 0, 3, w, d - 6, 1, '#C39565'), mark('box', 0, d - 5, w, 2, 0.5, PROFIL)])
+    if id == 'leiste_r':
+        marks[1] = mark('box', 3, 5, 2, d - 10, 0.5, PROFIL)
+    if id == 'leiste_o':
+        marks[1] = mark('box', 0, 3, w, 2, 0.5, PROFIL)
+    return teil(id, 'wooden_frame', 'Holzrahmen', 'Rahmen', 'box', x=x, y=y, w=w, d=d, z=0, h=20, r=1,
+                mass=mass, color=HOLZ, marks=marks, **kw)
+
+
+FOTO = [mark('box', 0, 0, 100, 60, 0, '#A9C9DF'), mark('cyl', 70, 8, 16, fill='#F4E3A1'),
+        mark('box', 0, 60, 100, 90, 0, '#6E9A5E'), mark('box', 0, 60, 100, 6, 0, '#5A8650'),
+        mark('cyl', 18, 40, 30, 26, fill='#4F7A47')]
+
 teile = [
-    teil('rahmen', 'wooden_frame', 'Holzrahmen', 'Rahmen', 'box',
-         x=0, y=0, w=180, d=230, z=0, h=20, r=2, mass=170,
-         info='Leiste aus Kiefernholz, lackiert und an den Ecken auf Gehrung verleimt. Hinten hat sie einen Falz, '
-              'in dem Glas, Bild und Rückwand liegen. Ohne Glas und Metall kann sie zum Altholz.',
-         color=HOLZ, marks=[mark('box', 6, 6, 168, 218, 1, '#A37548'), mark('box', 20, 20, 140, 190, 0.5, '#E9EEF0')]),
+    leiste('leiste_l', 0, 0, 20, 230, 50,
+           info='Leiste aus Kiefernholz, lackiert und an den Ecken auf Gehrung verleimt. Hinten hat sie einen Falz, '
+                'in dem Glas, Bild und Rückwand liegen. Ohne Glas und Metall kann sie zum Altholz.'),
+    leiste('leiste_r', 160, 0, 20, 230, 50, label=False, info=LEISTE_INFO),
+    leiste('leiste_o', 20, 0, 140, 20, 35, label=False, info=LEISTE_INFO),
+    leiste('leiste_u', 20, 210, 140, 20, 35, label=False, info=LEISTE_INFO),
     teil('glas', 'frame_glass', 'Glasscheibe', 'Glas', 'box',
-         x=15, y=15, w=150, d=200, z=6.8, h=2, r=0.5, mass=150,
+         x=15, y=15, w=150, d=200, z=8, h=2, r=0.5, mass=150,
          info='Dünnes Flachglas, 2 mm dick. Gehört nicht in den Altglascontainer: in Zeitungspapier wickeln und in '
               'den Restmüll geben. Vorsicht, die Kanten sind scharf.',
-         color='#CFE3EA', opacity=0.6),
+         color='#D6E8EE', opacity=0.35),
     teil('passepartout', 'cardboard_backing', 'Passepartout', 'Passepartout', 'box',
-         material_id='cardboard', x=15, y=15, w=150, d=200, z=5.3, h=1.5, r=0.5, mass=18,
+         material_id='cardboard', x=15, y=15, w=150, d=200, z=6.5, h=1.5, r=0.5, mass=18,
          info='Karton mit ausgeschnittenem Fenster, er setzt das Bild vom Glas ab. Sauber ins Altpapier.',
-         color='#F3F0E8', marks=[mark('box', 25, 25, 100, 150, 0, '#DCD7CB')]),
+         color='#F3F0E8', marks=[mark('box', 24, 24, 102, 152, 0, '#DCD7CB')]
+         + [dict(m, x=m['x'] + 25, y=m['y'] + 25) for m in FOTO]),
     teil('foto', 'cardboard_backing', 'Fotoabzug', 'Foto', 'box',
-         material_id='paper', x=25, y=30, w=130, d=170, z=5, h=0.3, r=0, mass=4,
+         material_id='paper', x=25, y=30, w=130, d=170, z=6.2, h=0.3, r=0, mass=4,
          materials=[['papier', 90], ['druck', 10]],
          info='Fotopapier mit Kunststoffbeschichtung. Herausnehmen und behalten, das Bild gehört nicht zum Müll.',
-         color='#7FA6C4', marks=[mark('box', 10, 10, 110, 70, 0, '#A9C9DF'), mark('box', 10, 85, 110, 75, 0, '#5E8A5A')]),
+         color='#F7F7F4', marks=[dict(m, x=m['x'] + 15, y=m['y'] + 10) for m in FOTO]),
     teil('rueckwand', 'cardboard_backing', 'Rückwand aus Hartpappe', 'Rückwand', 'box',
-         x=15, y=15, w=150, d=200, z=2.5, h=2.5, r=0.5, mass=55,
-         info='Graue Hartpappe mit einem Aufsteller zum Hinstellen. Nach dem Lösen der Klammern herausheben, '
+         x=15, y=15, w=150, d=200, z=3.2, h=3, r=0.5, mass=55,
+         info='Graue Hartpappe mit einem Aufsteller zum Hinstellen. Nach dem Aufdrehen der Klammern herausheben, '
               'dann ins Altpapier.',
-         color='#8C8478', marks=[mark('box', 60, 90, 30, 100, 2, '#7A7266')]),
+         color='#8C8478', marks=[mark('box', 60, 70, 30, 120, 2, '#7A7266'), mark('box', 70, 72, 10, 3, 1, '#5F584E')]),
     teil('klammer_l', 'wooden_frame', 'Drehklammer', 'Klammer', 'box',
-         material_id='steel', x=9, y=108, w=14, d=14, z=1.5, h=1, r=1, mass=1,
+         material_id='steel', x=9, y=108, w=14, d=14, z=1.5, h=1.5, r=1, mass=1, explode=[0, 130, 0],
          info=KLAMMER_INFO, color=METALL, marks=[mark('cyl', 4, 4, 6, fill='#7D858B')]),
     teil('klammer_r', 'wooden_frame', 'Drehklammer', 'Klammer', 'box',
-         material_id='steel', x=157, y=108, w=14, d=14, z=1.5, h=1, r=1, mass=1, label=False,
+         material_id='steel', x=157, y=108, w=14, d=14, z=1.5, h=1.5, r=1, mass=1, label=False, explode=[0, 130, 0],
          info=KLAMMER_INFO, color=METALL, marks=[mark('cyl', 4, 4, 6, fill='#7D858B')]),
     teil('klammer_u', 'wooden_frame', 'Drehklammer', 'Klammer', 'box',
-         material_id='steel', x=83, y=208, w=14, d=14, z=1.5, h=1, r=1, mass=1, label=False,
+         material_id='steel', x=83, y=208, w=14, d=14, z=1.5, h=1.5, r=1, mass=1, label=False, explode=[0, 30, 0],
          info=KLAMMER_INFO, color=METALL, marks=[mark('cyl', 4, 4, 6, fill='#7D858B')]),
     teil('aufhaenger', 'wooden_frame', 'Zackenaufhänger', 'Aufhänger', 'box',
-         material_id='steel', x=75, y=4, w=30, d=8, z=0, h=1.5, r=0.5, mass=3,
+         material_id='steel', x=75, y=4, w=30, d=8, z=0, h=1.5, r=0.5, mass=3, explode=[0, 256, 0],
          info='Gezacktes Blech, mit zwei kleinen Nägeln auf die Leiste genagelt. Mit einer Zange abziehen, '
               'dann zum Metallschrott.',
          color=METALL, marks=raster(2, 1, 9, 1, 2, 3, 3, fill='#7D858B')),
 ]
-explodiere(teile, abstand=80, nach_liste=True, gruppen=[['klammer_l', 'klammer_r', 'klammer_u']])
+explodiere(teile, abstand=40, nach_liste=True, gruppen=[['leiste_l', 'leiste_r', 'leiste_o', 'leiste_u']])
 skaliere_masse(teile, oid='picture_frame')
 schreibe('picture_frame', teile)
