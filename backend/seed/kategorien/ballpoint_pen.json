@@ -4,7 +4,7 @@
  "name_en": "Ballpoint Pen",
  "klasse": "Restmüll",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -37,17 +37,17 @@
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Fe": 1176.0
+   "Fe": 539.0
   },
   "herkunft": {
    "Fe": "Modellmassen (Schätzung)"
   },
   "materialien_g": {
-   "pp": 6.8,
-   "steel": 1.2
+   "pp": 7.4,
+   "steel": 0.6
   },
   "co2_kg": 0.016,
-  "co2_mit_recyclat_kg": 0.003,
+  "co2_mit_recyclat_kg": 0.002,
   "co2_ersparnis_kg": 0.013,
   "co2_ohne_faktor": [],
   "rohstoffwert_eur": 0,
@@ -98,115 +98,263 @@
   "nicht": "Nicht in die Gelbe Tonne: keine Verpackung",
   "warnung": "Gut Erhaltenes lieber verschenken oder in der Werkstatt abgeben."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "pen_cap",
+   "id": "kappe",
    "component_id": "pen_cap",
-   "name": "Cap",
-   "short": "Cap",
+   "material_id": "pp",
+   "name": "Kappe",
+   "short": "Kappe",
    "shape": "cyl",
-   "x": 2.8,
-   "y": 2.8,
-   "w": 4.5,
-   "h": 17.4,
-   "z": 123.25,
+   "x": -0.5,
+   "y": -0.5,
+   "w": 11,
+   "z": 106,
+   "h": 39,
    "explode": [
     0,
     0,
-    153.8
+    45
    ],
-   "mass": 0.6,
+   "mass": 1.56,
    "materials": [
     [
      "pp",
      100
     ]
    ],
-   "material_id": "pp",
-   "info": "Pull it off the tip."
+   "info": "Schützt die Spitze vor dem Austrocknen. Das kleine Loch oben ist Absicht: Verschluckt man die Kappe, kann man trotzdem atmen.",
+   "color": "#2F5FA8",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 4,
+     "w": 3,
+     "fill": "#1E3F73"
+    }
+   ]
   },
   {
-   "id": "steel_spring",
-   "component_id": "steel_spring",
-   "name": "Spring",
-   "short": "Spring",
+   "id": "clip",
+   "component_id": "pen_cap",
+   "material_id": "pp",
+   "name": "Clip",
+   "short": "Clip",
    "shape": "box",
-   "x": 5.4,
-   "y": 0.9,
-   "w": 4.2,
-   "d": 4.2,
-   "h": 50.75,
-   "z": 24.65,
+   "x": 10.5,
+   "y": 3.5,
+   "w": 1.5,
+   "d": 3,
+   "z": 112,
+   "h": 30,
    "r": 0.5,
    "explode": [
+    6,
     0,
-    0,
-    184.2
+    45
    ],
-   "mass": 1.2,
+   "mass": 0.33,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Federnder Kunststoffclip, an die Kappe angespritzt. Hält den Stift in der Hemdtasche.",
+   "color": "#2F5FA8"
+  },
+  {
+   "id": "feder",
+   "component_id": "steel_spring",
+   "material_id": "steel",
+   "name": "Druckfeder",
+   "short": "Feder",
+   "shape": "cyl",
+   "x": 2.75,
+   "y": 2.75,
+   "w": 4.5,
+   "z": 100,
+   "h": 10,
+   "explode": [
+    22,
+    0,
+    45
+   ],
+   "mass": 0.22,
    "materials": [
     [
      "stahl",
      100
     ]
    ],
-   "material_id": "steel",
-   "info": "Pull it out with pliers."
+   "info": "Kleine Stahlfeder um die Mine. Sie drückt die Mine nach vorne, damit sie beim Schreiben nicht wackelt. Mit einer Pinzette abziehen; sie gehört nicht in die Gelbe Tonne.",
+   "color": "#B8BEC4",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0.75,
+     "y": 0.75,
+     "w": 3
+    }
+   ]
   },
   {
-   "id": "ink_refill",
+   "id": "spitze",
    "component_id": "ink_refill",
-   "name": "Ink Refill",
-   "short": "Ink Refill",
-   "shape": "box",
-   "x": 0.4,
-   "y": 0.9,
-   "w": 4.2,
-   "d": 4.2,
-   "h": 50.75,
-   "z": 24.65,
-   "r": 0.5,
+   "material_id": "steel",
+   "name": "Schreibspitze mit Kugel",
+   "short": "Spitze",
+   "shape": "cyl",
+   "x": 3.75,
+   "y": 3.75,
+   "w": 2.5,
+   "z": 122,
+   "h": 8,
    "explode": [
+    22,
     0,
-    0,
-    116.0
+    8
    ],
-   "mass": 1.2,
+   "mass": 0.33,
+   "materials": [
+    [
+     "messing",
+     95
+    ],
+    [
+     "stahl",
+     5
+    ]
+   ],
+   "info": "Messinghülse mit einer winzigen Kugel aus Hartmetall. Die Kugel rollt über das Papier und nimmt dabei Tinte mit.",
+   "color": "#C9A24A",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0.75,
+     "y": 0.75,
+     "w": 1,
+     "fill": "#8E969A"
+    }
+   ]
+  },
+  {
+   "id": "mine",
+   "component_id": "ink_refill",
+   "material_id": "pp",
+   "name": "Mine (Tintenröhrchen)",
+   "short": "Mine",
+   "shape": "cyl",
+   "x": 3.5,
+   "y": 3.5,
+   "w": 3,
+   "z": 8,
+   "h": 114,
+   "explode": [
+    22,
+    0,
+    0
+   ],
+   "mass": 1.22,
    "materials": [
     [
      "pp",
-     100
+     80
+    ],
+    [
+     "druck",
+     20
     ]
    ],
-   "material_id": "pp",
-   "info": "Replace the refill instead of the whole pen."
+   "info": "Polypropylen-Röhrchen mit zäher Kugelschreiberpaste. Lieber nur die Mine wechseln als den ganzen Stift wegwerfen.",
+   "color": "#E4E8EA",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0.6,
+     "y": 0.6,
+     "w": 1.8,
+     "fill": "#2F5FA8"
+    }
+   ]
   },
   {
-   "id": "pen_barrel",
+   "id": "griffstueck",
    "component_id": "pen_barrel",
-   "name": "Barrel",
-   "short": "Barrel",
+   "material_id": "pp",
+   "name": "Griffstück",
+   "short": "Griffstück",
+   "shape": "cyl",
+   "x": 0.25,
+   "y": 0.25,
+   "w": 9.5,
+   "z": 75,
+   "h": 37,
+   "explode": [
+    0,
+    0,
+    14
+   ],
+   "mass": 1.44,
+   "materials": [
+    [
+     "pp",
+     85
+    ],
+    [
+     "tpe",
+     15
+    ]
+   ],
+   "info": "Vorderer Teil des Schafts, oft mit gummierter Griffzone. Abschrauben, dann lässt sich die Mine herausnehmen.",
+   "color": "#2A2E31",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 3,
+     "w": 3.5,
+     "fill": "#C9A24A"
+    }
+   ]
+  },
+  {
+   "id": "schaft",
+   "component_id": "pen_barrel",
+   "material_id": "pp",
+   "name": "Schaft",
+   "short": "Schaft",
    "shape": "cyl",
    "x": 0,
    "y": 0,
-   "w": 10.0,
-   "h": 123.25,
-   "z": 0.0,
+   "w": 10,
+   "z": 0,
+   "h": 75,
    "explode": [
     0,
     0,
     0
    ],
-   "mass": 5.0,
+   "mass": 2.89,
    "materials": [
     [
      "pp",
      100
     ]
    ],
-   "material_id": "pp",
-   "info": "Unscrew the barrel to release the refill."
+   "info": "Hülse aus Polypropylen mit Gewinde oben. Leer gehört der Stift in den Restmüll, weil Mine, Feder und Kunststoff zu klein zum Sortieren sind.",
+   "color": "#2F5FA8",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 2,
+     "y": 2,
+     "w": 6,
+     "fill": "#E4E8EA"
+    }
+   ]
   }
  ]
 }

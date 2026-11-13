@@ -1,0 +1,276 @@
+{
+ "parts": [
+  {
+   "id": "minenspitze",
+   "component_id": "graphite_core",
+   "material_id": "graphite_clay",
+   "name": "Minenspitze",
+   "short": "Spitze",
+   "shape": "cyl",
+   "x": 3,
+   "y": 3,
+   "w": 2,
+   "z": 171,
+   "h": 4,
+   "explode": [
+    0,
+    0,
+    60
+   ],
+   "mass": 0.02,
+   "materials": [
+    [
+     "grafitton",
+     100
+    ]
+   ],
+   "info": "Die angespitzte Mine. Weiche Minen (B) enthalten mehr Grafit, harte (H) mehr Ton.",
+   "color": "#3A3F44"
+  },
+  {
+   "id": "holzspitze_2",
+   "component_id": "wooden_pencil_body",
+   "material_id": "wood",
+   "name": "Angespitztes Holz (vorne)",
+   "short": "Holzkegel",
+   "shape": "cyl",
+   "x": 2,
+   "y": 2,
+   "w": 4,
+   "z": 166,
+   "h": 5,
+   "explode": [
+    0,
+    0,
+    60
+   ],
+   "mass": 0.05,
+   "materials": [
+    [
+     "holz",
+     100
+    ]
+   ],
+   "info": "Der schmale Teil des Holzkegels, den der Spitzer stehen lässt.",
+   "color": "#D9B07A",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 1,
+     "y": 1,
+     "w": 2,
+     "fill": "#3A3F44"
+    }
+   ]
+  },
+  {
+   "id": "holzspitze_1",
+   "component_id": "wooden_pencil_body",
+   "material_id": "wood",
+   "name": "Angespitztes Holz",
+   "short": "Holzkegel",
+   "shape": "cyl",
+   "x": 1,
+   "y": 1,
+   "w": 6,
+   "z": 160,
+   "h": 6,
+   "explode": [
+    0,
+    0,
+    60
+   ],
+   "mass": 0.15,
+   "materials": [
+    [
+     "holz",
+     100
+    ]
+   ],
+   "info": "Beim Spitzen entsteht ein Kegel aus blankem Holz. Unlackierte Späne dürfen in die Biotonne, lackierte Reste in den Restmüll.",
+   "color": "#D9B07A",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 2,
+     "y": 2,
+     "w": 2,
+     "fill": "#3A3F44"
+    }
+   ]
+  },
+  {
+   "id": "mine",
+   "component_id": "graphite_core",
+   "material_id": "graphite_clay",
+   "name": "Grafitmine",
+   "short": "Mine",
+   "shape": "cyl",
+   "x": 3,
+   "y": 3,
+   "w": 2,
+   "z": 13,
+   "h": 158,
+   "explode": [
+    0,
+    0,
+    40
+   ],
+   "mass": 0.51,
+   "materials": [
+    [
+     "grafitton",
+     100
+    ]
+   ],
+   "info": "Gebrannte Mischung aus Grafit und Ton, kein Blei. Sie ist in die Holzrille eingeleimt und lässt sich nicht herausnehmen.",
+   "color": "#3A3F44"
+  },
+  {
+   "id": "holz_links",
+   "component_id": "wooden_pencil_body",
+   "material_id": "wood",
+   "name": "Holzhälfte links",
+   "short": "Holz links",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 4,
+   "d": 8,
+   "z": 13,
+   "h": 147,
+   "r": 1.5,
+   "explode": [
+    -10,
+    0,
+    40
+   ],
+   "mass": 1.83,
+   "materials": [
+    [
+     "holz",
+     100
+    ]
+   ],
+   "info": "Zwei Brettchen aus Zedern- oder Lindenholz mit Rille für die Mine werden verleimt und sechseckig gefräst. Der Lack macht das Holz ungeeignet für die Biotonne.",
+   "color": "#E8B931",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 3,
+     "w": 1,
+     "d": 2,
+     "fill": "#D9B07A"
+    }
+   ]
+  },
+  {
+   "id": "holz_rechts",
+   "component_id": "wooden_pencil_body",
+   "material_id": "wood",
+   "name": "Holzhälfte rechts",
+   "short": "Holz rechts",
+   "shape": "box",
+   "x": 4,
+   "y": 0,
+   "w": 4,
+   "d": 8,
+   "z": 13,
+   "h": 147,
+   "r": 1.5,
+   "explode": [
+    10,
+    0,
+    40
+   ],
+   "mass": 1.83,
+   "materials": [
+    [
+     "holz",
+     100
+    ]
+   ],
+   "info": "Das zweite Brettchen. Zusammen mit der Mine macht Holz über 80 Prozent des Bleistifts aus.",
+   "color": "#E8B931",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 3,
+     "w": 1,
+     "d": 2,
+     "fill": "#D9B07A"
+    }
+   ]
+  },
+  {
+   "id": "zwinge",
+   "component_id": "pencil_ferrule",
+   "material_id": "aluminium",
+   "name": "Zwinge",
+   "short": "Zwinge",
+   "shape": "cyl",
+   "x": 0.3,
+   "y": 0.3,
+   "w": 7.4,
+   "z": 3,
+   "h": 13,
+   "explode": [
+    0,
+    0,
+    15
+   ],
+   "mass": 0.25,
+   "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "info": "Dünnes Aluminiumröhrchen, auf Holz und Radierer gequetscht. Mit einer Zange abdrehen, dann ist das Metall vom Holz getrennt.",
+   "color": "#C9CDD0",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0.6,
+     "y": 0.6,
+     "w": 6.2,
+     "fill": "#B0B6BA"
+    }
+   ]
+  },
+  {
+   "id": "radierer",
+   "component_id": "rubber_eraser",
+   "material_id": "rubber",
+   "name": "Radiergummi",
+   "short": "Radierer",
+   "shape": "cyl",
+   "x": 0.8,
+   "y": 0.8,
+   "w": 6.4,
+   "z": 0,
+   "h": 9,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 0.36,
+   "materials": [
+    [
+     "gummi",
+     70
+    ],
+    [
+     "tpe",
+     30
+    ]
+   ],
+   "info": "Synthetischer Kautschuk oder PVC-freier Kunststoff. Nach dem Abziehen der Zwinge lässt er sich herausziehen.",
+   "color": "#E58A8A"
+  }
+ ]
+}

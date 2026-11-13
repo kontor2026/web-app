@@ -1,0 +1,1162 @@
+{
+ "parts": [
+  {
+   "id": "seitenwand_oben",
+   "component_id": "tire_rubber",
+   "material_id": "rubber",
+   "name": "Seitenwand oben",
+   "short": "Seitenwand",
+   "shape": "cyl",
+   "x": 2,
+   "y": 2,
+   "w": 646,
+   "z": 45,
+   "h": 5,
+   "explode": [
+    0,
+    0,
+    506.0
+   ],
+   "mass": 87,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "info": "Dünne Gummischicht über der Karkasse. Hier stehen Größe (z. B. 50-559) und der erlaubte Luftdruck. Alte Reifen nimmt der Fahrradladen oder der Wertstoffhof an.",
+   "color": "#3A3D40",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 40.0,
+     "y": 40.0,
+     "w": 566,
+     "fill": "#45484B"
+    },
+    {
+     "shape": "box",
+     "x": 290,
+     "y": 10,
+     "w": 66,
+     "d": 8,
+     "r": 2,
+     "fill": "#8E969A"
+    },
+    {
+     "shape": "box",
+     "x": 290,
+     "y": 628,
+     "w": 66,
+     "d": 8,
+     "r": 2,
+     "fill": "#8E969A"
+    }
+   ]
+  },
+  {
+   "id": "wulst_oben",
+   "component_id": "steel_bead_wire",
+   "material_id": "steel",
+   "name": "Wulstkern oben",
+   "short": "Wulstkern",
+   "shape": "cyl",
+   "x": 38,
+   "y": 38,
+   "w": 574,
+   "z": 42,
+   "h": 4,
+   "explode": [
+    0,
+    0,
+    435.0
+   ],
+   "mass": 32.7,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Ring aus mehreren Windungen Stahldraht an der Innenkante. Er hält den Reifen auf der Felge. Faltreifen haben stattdessen einen Kern aus Aramidfasern.",
+   "color": "#9AA2A6",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 8.0,
+     "y": 8.0,
+     "w": 558,
+     "fill": "#5A6268"
+    }
+   ]
+  },
+  {
+   "id": "laufflaeche",
+   "component_id": "tire_rubber",
+   "material_id": "rubber",
+   "name": "Lauffläche mit Profil",
+   "short": "Lauffläche",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 650,
+   "z": 5,
+   "h": 40,
+   "explode": [
+    0,
+    0,
+    362.0
+   ],
+   "mass": 307,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "info": "Dicke Gummimischung aus Natur- und Synthesekautschuk mit Ruß, außen mit Stollenprofil. Sie nutzt sich ab; ist das Profil weg, wird der Reifen getauscht.",
+   "color": "#2B2D2F",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 25.0,
+     "y": 25.0,
+     "w": 600,
+     "fill": "#45484B"
+    },
+    {
+     "shape": "box",
+     "x": 632.0,
+     "y": 320.0,
+     "w": 10,
+     "d": 10,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 629.3,
+     "y": 360.7,
+     "w": 10,
+     "d": 10,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 621.4,
+     "y": 400.8,
+     "w": 10,
+     "d": 10,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 608.3,
+     "y": 439.4,
+     "w": 10,
+     "d": 10,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 590.2,
+     "y": 476.0,
+     "w": 10,
+     "d": 10,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 567.5,
+     "y": 509.9,
+     "w": 10,
+     "d": 10,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 540.6,
+     "y": 540.6,
+     "w": 10,
+     "d": 10,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 509.9,
+     "y": 567.5,
+     "w": 10,
+     "d": 10,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 476.0,
+     "y": 590.2,
+     "w": 10,
+     "d": 10,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 439.4,
+     "y": 608.3,
+     "w": 10,
+     "d": 10,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 400.8,
+     "y": 621.4,
+     "w": 10,
+     "d": 10,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 360.7,
+     "y": 629.3,
+     "w": 10,
+     "d": 10,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 320.0,
+     "y": 632.0,
+     "w": 10,
+     "d": 10,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 279.3,
+     "y": 629.3,
+     "w": 10,
+     "d": 10,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 239.2,
+     "y": 621.4,
+     "w": 10,
+     "d": 10,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 200.6,
+     "y": 608.3,
+     "w": 10,
+     "d": 10,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 164.0,
+     "y": 590.2,
+     "w": 10,
+     "d": 10,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 130.1,
+     "y": 567.5,
+     "w": 10,
+     "d": 10,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 99.4,
+     "y": 540.6,
+     "w": 10,
+     "d": 10,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 72.5,
+     "y": 509.9,
+     "w": 10,
+     "d": 10,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 49.8,
+     "y": 476.0,
+     "w": 10,
+     "d": 10,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 31.7,
+     "y": 439.4,
+     "w": 10,
+     "d": 10,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 18.6,
+     "y": 400.8,
+     "w": 10,
+     "d": 10,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 10.7,
+     "y": 360.7,
+     "w": 10,
+     "d": 10,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 8.0,
+     "y": 320.0,
+     "w": 10,
+     "d": 10,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 10.7,
+     "y": 279.3,
+     "w": 10,
+     "d": 10,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 18.6,
+     "y": 239.2,
+     "w": 10,
+     "d": 10,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 31.7,
+     "y": 200.6,
+     "w": 10,
+     "d": 10,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 49.8,
+     "y": 164.0,
+     "w": 10,
+     "d": 10,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 72.5,
+     "y": 130.1,
+     "w": 10,
+     "d": 10,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 99.4,
+     "y": 99.4,
+     "w": 10,
+     "d": 10,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 130.1,
+     "y": 72.5,
+     "w": 10,
+     "d": 10,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 164.0,
+     "y": 49.8,
+     "w": 10,
+     "d": 10,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 200.6,
+     "y": 31.7,
+     "w": 10,
+     "d": 10,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 239.2,
+     "y": 18.6,
+     "w": 10,
+     "d": 10,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 279.3,
+     "y": 10.7,
+     "w": 10,
+     "d": 10,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 320.0,
+     "y": 8.0,
+     "w": 10,
+     "d": 10,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 360.7,
+     "y": 10.7,
+     "w": 10,
+     "d": 10,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 400.8,
+     "y": 18.6,
+     "w": 10,
+     "d": 10,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 439.4,
+     "y": 31.7,
+     "w": 10,
+     "d": 10,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 476.0,
+     "y": 49.8,
+     "w": 10,
+     "d": 10,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 509.9,
+     "y": 72.5,
+     "w": 10,
+     "d": 10,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 540.6,
+     "y": 99.4,
+     "w": 10,
+     "d": 10,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 567.5,
+     "y": 130.1,
+     "w": 10,
+     "d": 10,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 590.2,
+     "y": 164.0,
+     "w": 10,
+     "d": 10,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 608.3,
+     "y": 200.6,
+     "w": 10,
+     "d": 10,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 621.4,
+     "y": 239.2,
+     "w": 10,
+     "d": 10,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 629.3,
+     "y": 279.3,
+     "w": 10,
+     "d": 10,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 624.0,
+     "y": 322.0,
+     "w": 6,
+     "d": 6,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 621.4,
+     "y": 361.4,
+     "w": 6,
+     "d": 6,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 613.7,
+     "y": 400.2,
+     "w": 6,
+     "d": 6,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 601.0,
+     "y": 437.6,
+     "w": 6,
+     "d": 6,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 583.5,
+     "y": 473.0,
+     "w": 6,
+     "d": 6,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 561.6,
+     "y": 505.8,
+     "w": 6,
+     "d": 6,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 535.5,
+     "y": 535.5,
+     "w": 6,
+     "d": 6,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 505.8,
+     "y": 561.6,
+     "w": 6,
+     "d": 6,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 473.0,
+     "y": 583.5,
+     "w": 6,
+     "d": 6,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 437.6,
+     "y": 601.0,
+     "w": 6,
+     "d": 6,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 400.2,
+     "y": 613.7,
+     "w": 6,
+     "d": 6,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 361.4,
+     "y": 621.4,
+     "w": 6,
+     "d": 6,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 322.0,
+     "y": 624.0,
+     "w": 6,
+     "d": 6,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 282.6,
+     "y": 621.4,
+     "w": 6,
+     "d": 6,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 243.8,
+     "y": 613.7,
+     "w": 6,
+     "d": 6,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 206.4,
+     "y": 601.0,
+     "w": 6,
+     "d": 6,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 171.0,
+     "y": 583.5,
+     "w": 6,
+     "d": 6,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 138.2,
+     "y": 561.6,
+     "w": 6,
+     "d": 6,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 108.5,
+     "y": 535.5,
+     "w": 6,
+     "d": 6,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 82.4,
+     "y": 505.8,
+     "w": 6,
+     "d": 6,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 60.5,
+     "y": 473.0,
+     "w": 6,
+     "d": 6,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 43.0,
+     "y": 437.6,
+     "w": 6,
+     "d": 6,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 30.3,
+     "y": 400.2,
+     "w": 6,
+     "d": 6,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 22.6,
+     "y": 361.4,
+     "w": 6,
+     "d": 6,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 20.0,
+     "y": 322.0,
+     "w": 6,
+     "d": 6,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 22.6,
+     "y": 282.6,
+     "w": 6,
+     "d": 6,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 30.3,
+     "y": 243.8,
+     "w": 6,
+     "d": 6,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 43.0,
+     "y": 206.4,
+     "w": 6,
+     "d": 6,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 60.5,
+     "y": 171.0,
+     "w": 6,
+     "d": 6,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 82.4,
+     "y": 138.2,
+     "w": 6,
+     "d": 6,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 108.5,
+     "y": 108.5,
+     "w": 6,
+     "d": 6,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 138.2,
+     "y": 82.4,
+     "w": 6,
+     "d": 6,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 171.0,
+     "y": 60.5,
+     "w": 6,
+     "d": 6,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 206.4,
+     "y": 43.0,
+     "w": 6,
+     "d": 6,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 243.8,
+     "y": 30.3,
+     "w": 6,
+     "d": 6,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 282.6,
+     "y": 22.6,
+     "w": 6,
+     "d": 6,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 322.0,
+     "y": 20.0,
+     "w": 6,
+     "d": 6,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 361.4,
+     "y": 22.6,
+     "w": 6,
+     "d": 6,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 400.2,
+     "y": 30.3,
+     "w": 6,
+     "d": 6,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 437.6,
+     "y": 43.0,
+     "w": 6,
+     "d": 6,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 473.0,
+     "y": 60.5,
+     "w": 6,
+     "d": 6,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 505.8,
+     "y": 82.4,
+     "w": 6,
+     "d": 6,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 535.5,
+     "y": 108.5,
+     "w": 6,
+     "d": 6,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 561.6,
+     "y": 138.2,
+     "w": 6,
+     "d": 6,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 583.5,
+     "y": 171.0,
+     "w": 6,
+     "d": 6,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 601.0,
+     "y": 206.4,
+     "w": 6,
+     "d": 6,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 613.7,
+     "y": 243.8,
+     "w": 6,
+     "d": 6,
+     "r": 2,
+     "fill": "#1E2022"
+    },
+    {
+     "shape": "box",
+     "x": 621.4,
+     "y": 282.6,
+     "w": 6,
+     "d": 6,
+     "r": 2,
+     "fill": "#1E2022"
+    }
+   ]
+  },
+  {
+   "id": "pannenschutz",
+   "component_id": "tire_casing_fabric",
+   "material_id": "nylon",
+   "name": "Pannenschutzgürtel",
+   "short": "Pannenschutz",
+   "shape": "cyl",
+   "x": 5,
+   "y": 5,
+   "w": 640,
+   "z": 8,
+   "h": 34,
+   "explode": [
+    0,
+    0,
+    255.0
+   ],
+   "mass": 40.9,
+   "materials": [
+    [
+     "nylon",
+     100
+    ]
+   ],
+   "info": "Ein Streifen aus dichtem Gewebe oder Spezialgummi unter der Lauffläche. Er hält Scherben und Dornen vom Schlauch fern.",
+   "color": "#C9B98A",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 17.0,
+     "y": 17.0,
+     "w": 606,
+     "fill": "#45484B"
+    }
+   ]
+  },
+  {
+   "id": "karkasse",
+   "component_id": "tire_casing_fabric",
+   "material_id": "nylon",
+   "name": "Karkasse (Gewebeunterbau)",
+   "short": "Karkasse",
+   "shape": "cyl",
+   "x": 4,
+   "y": 4,
+   "w": 642,
+   "z": 3,
+   "h": 44,
+   "explode": [
+    0,
+    0,
+    146.0
+   ],
+   "mass": 112.6,
+   "materials": [
+    [
+     "nylon",
+     70
+    ],
+    [
+     "gummi",
+     30
+    ]
+   ],
+   "info": "Nylongewebe, das dem Reifen seine Form gibt, mit Gummi getränkt und einvulkanisiert. Von Hand lässt es sich nicht vom Gummi trennen.",
+   "color": "#D8CBA6",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 40.0,
+     "y": 40.0,
+     "w": 562,
+     "fill": "#45484B"
+    },
+    {
+     "shape": "box",
+     "x": 316,
+     "y": 4,
+     "w": 10,
+     "d": 38,
+     "r": 1,
+     "fill": "#BFAF84"
+    },
+    {
+     "shape": "box",
+     "x": 316,
+     "y": 600,
+     "w": 10,
+     "d": 38,
+     "r": 1,
+     "fill": "#BFAF84"
+    }
+   ]
+  },
+  {
+   "id": "wulst_unten",
+   "component_id": "steel_bead_wire",
+   "material_id": "steel",
+   "name": "Wulstkern unten",
+   "short": "Wulstkern",
+   "shape": "cyl",
+   "x": 38,
+   "y": 38,
+   "w": 574,
+   "z": 4,
+   "h": 4,
+   "explode": [
+    0,
+    0,
+    71.0
+   ],
+   "mass": 32.7,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Zweiter Wulstkern an der unteren Reifenkante.",
+   "color": "#9AA2A6",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 8.0,
+     "y": 8.0,
+     "w": 558,
+     "fill": "#5A6268"
+    }
+   ]
+  },
+  {
+   "id": "seitenwand_unten",
+   "component_id": "tire_rubber",
+   "material_id": "rubber",
+   "name": "Seitenwand unten",
+   "short": "Seitenwand",
+   "shape": "cyl",
+   "x": 2,
+   "y": 2,
+   "w": 646,
+   "z": 0,
+   "h": 5,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 87,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "info": "Gegenstück zur oberen Seitenwand.",
+   "color": "#3A3D40",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 40.0,
+     "y": 40.0,
+     "w": 566,
+     "fill": "#45484B"
+    }
+   ]
+  }
+ ]
+}

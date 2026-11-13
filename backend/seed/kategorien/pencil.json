@@ -4,7 +4,7 @@
  "name_en": "Pencil",
  "klasse": "Restmüll",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -26,31 +26,31 @@
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 0,02 kg",
+   "v": "≈ 0,01 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 0,01 kg",
-   "hint": "spart 0,01 kg, wenn recycelte Materialien eingesetzt werden"
+   "v": "≈ 0,00 kg",
+   "hint": "spart 0,00 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Al": 1180.0
+   "Al": 250.0
   },
   "herkunft": {
    "Al": "Modellmassen (Schätzung)"
   },
   "materialien_g": {
-   "wood": 2.4,
-   "aluminium": 1.2,
-   "rubber": 1.2,
-   "graphite_clay": 0.3
+   "wood": 3.9,
+   "graphite_clay": 0.5,
+   "rubber": 0.4,
+   "aluminium": 0.2
   },
-  "co2_kg": 0.019,
-  "co2_mit_recyclat_kg": 0.005,
-  "co2_ersparnis_kg": 0.013,
+  "co2_kg": 0.005,
+  "co2_mit_recyclat_kg": 0.002,
+  "co2_ersparnis_kg": 0.003,
   "co2_ohne_faktor": [
    "graphite_clay"
   ],
@@ -102,113 +102,279 @@
   "nicht": "Nicht in die Gelbe Tonne: keine Verpackung",
   "warnung": "Gut Erhaltenes lieber verschenken oder in der Werkstatt abgeben."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "graphite_core",
+   "id": "minenspitze",
    "component_id": "graphite_core",
-   "name": "Lead",
-   "short": "Lead",
-   "shape": "box",
-   "x": 1.2,
-   "y": 1.2,
-   "w": 5.6,
-   "d": 5.6,
-   "h": 61.25,
-   "z": 35.0,
-   "r": 0.7,
+   "material_id": "graphite_clay",
+   "name": "Minenspitze",
+   "short": "Spitze",
+   "shape": "cyl",
+   "x": 3,
+   "y": 3,
+   "w": 2,
+   "z": 171,
+   "h": 4,
    "explode": [
     0,
     0,
-    203.0
+    60
    ],
-   "mass": 0.28,
+   "mass": 0.02,
    "materials": [
     [
      "grafitton",
      100
     ]
    ],
-   "material_id": "graphite_clay",
-   "info": "Stays inside the wood."
+   "info": "Die angespitzte Mine. Weiche Minen (B) enthalten mehr Grafit, harte (H) mehr Ton.",
+   "color": "#3A3F44"
   },
   {
-   "id": "pencil_ferrule",
-   "component_id": "pencil_ferrule",
-   "name": "Ferrule",
-   "short": "Ferrule",
-   "shape": "cyl",
-   "x": 0,
-   "y": 0,
-   "w": 8.0,
-   "h": 58.33,
-   "z": 116.67,
-   "explode": [
-    0,
-    0,
-    42.0
-   ],
-   "mass": 1.18,
-   "materials": [
-    [
-     "alu",
-     100
-    ]
-   ],
-   "material_id": "aluminium",
-   "info": "Twist it off with pliers."
-  },
-  {
-   "id": "rubber_eraser",
-   "component_id": "rubber_eraser",
-   "name": "Eraser",
-   "short": "Eraser",
-   "shape": "cyl",
-   "x": 0,
-   "y": 0,
-   "w": 8.0,
-   "h": 58.33,
-   "z": 58.33,
-   "explode": [
-    0,
-    0,
-    21.0
-   ],
-   "mass": 1.18,
-   "materials": [
-    [
-     "gummi",
-     100
-    ]
-   ],
-   "material_id": "rubber",
-   "info": "Pinch the ferrule open with pliers to pull it out."
-  },
-  {
-   "id": "wooden_pencil_body",
+   "id": "holzspitze_2",
    "component_id": "wooden_pencil_body",
-   "name": "Wooden Body",
-   "short": "Wooden Body",
+   "material_id": "wood",
+   "name": "Angespitztes Holz (vorne)",
+   "short": "Holzkegel",
    "shape": "cyl",
-   "x": 0,
-   "y": 0,
-   "w": 8.0,
-   "h": 58.33,
-   "z": 0.0,
+   "x": 2,
+   "y": 2,
+   "w": 4,
+   "z": 166,
+   "h": 5,
    "explode": [
     0,
     0,
-    0
+    60
    ],
-   "mass": 2.36,
+   "mass": 0.05,
    "materials": [
     [
      "holz",
      100
     ]
    ],
+   "info": "Der schmale Teil des Holzkegels, den der Spitzer stehen lässt.",
+   "color": "#D9B07A",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 1,
+     "y": 1,
+     "w": 2,
+     "fill": "#3A3F44"
+    }
+   ]
+  },
+  {
+   "id": "holzspitze_1",
+   "component_id": "wooden_pencil_body",
    "material_id": "wood",
-   "info": "Lacquered wood; do not compost it."
+   "name": "Angespitztes Holz",
+   "short": "Holzkegel",
+   "shape": "cyl",
+   "x": 1,
+   "y": 1,
+   "w": 6,
+   "z": 160,
+   "h": 6,
+   "explode": [
+    0,
+    0,
+    60
+   ],
+   "mass": 0.15,
+   "materials": [
+    [
+     "holz",
+     100
+    ]
+   ],
+   "info": "Beim Spitzen entsteht ein Kegel aus blankem Holz. Unlackierte Späne dürfen in die Biotonne, lackierte Reste in den Restmüll.",
+   "color": "#D9B07A",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 2,
+     "y": 2,
+     "w": 2,
+     "fill": "#3A3F44"
+    }
+   ]
+  },
+  {
+   "id": "mine",
+   "component_id": "graphite_core",
+   "material_id": "graphite_clay",
+   "name": "Grafitmine",
+   "short": "Mine",
+   "shape": "cyl",
+   "x": 3,
+   "y": 3,
+   "w": 2,
+   "z": 13,
+   "h": 158,
+   "explode": [
+    0,
+    0,
+    40
+   ],
+   "mass": 0.51,
+   "materials": [
+    [
+     "grafitton",
+     100
+    ]
+   ],
+   "info": "Gebrannte Mischung aus Grafit und Ton, kein Blei. Sie ist in die Holzrille eingeleimt und lässt sich nicht herausnehmen.",
+   "color": "#3A3F44"
+  },
+  {
+   "id": "holz_links",
+   "component_id": "wooden_pencil_body",
+   "material_id": "wood",
+   "name": "Holzhälfte links",
+   "short": "Holz links",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 4,
+   "d": 8,
+   "z": 13,
+   "h": 147,
+   "r": 1.5,
+   "explode": [
+    -10,
+    0,
+    40
+   ],
+   "mass": 1.83,
+   "materials": [
+    [
+     "holz",
+     100
+    ]
+   ],
+   "info": "Zwei Brettchen aus Zedern- oder Lindenholz mit Rille für die Mine werden verleimt und sechseckig gefräst. Der Lack macht das Holz ungeeignet für die Biotonne.",
+   "color": "#E8B931",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 3,
+     "w": 1,
+     "d": 2,
+     "fill": "#D9B07A"
+    }
+   ]
+  },
+  {
+   "id": "holz_rechts",
+   "component_id": "wooden_pencil_body",
+   "material_id": "wood",
+   "name": "Holzhälfte rechts",
+   "short": "Holz rechts",
+   "shape": "box",
+   "x": 4,
+   "y": 0,
+   "w": 4,
+   "d": 8,
+   "z": 13,
+   "h": 147,
+   "r": 1.5,
+   "explode": [
+    10,
+    0,
+    40
+   ],
+   "mass": 1.83,
+   "materials": [
+    [
+     "holz",
+     100
+    ]
+   ],
+   "info": "Das zweite Brettchen. Zusammen mit der Mine macht Holz über 80 Prozent des Bleistifts aus.",
+   "color": "#E8B931",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 3,
+     "w": 1,
+     "d": 2,
+     "fill": "#D9B07A"
+    }
+   ]
+  },
+  {
+   "id": "zwinge",
+   "component_id": "pencil_ferrule",
+   "material_id": "aluminium",
+   "name": "Zwinge",
+   "short": "Zwinge",
+   "shape": "cyl",
+   "x": 0.3,
+   "y": 0.3,
+   "w": 7.4,
+   "z": 3,
+   "h": 13,
+   "explode": [
+    0,
+    0,
+    15
+   ],
+   "mass": 0.25,
+   "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "info": "Dünnes Aluminiumröhrchen, auf Holz und Radierer gequetscht. Mit einer Zange abdrehen, dann ist das Metall vom Holz getrennt.",
+   "color": "#C9CDD0",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0.6,
+     "y": 0.6,
+     "w": 6.2,
+     "fill": "#B0B6BA"
+    }
+   ]
+  },
+  {
+   "id": "radierer",
+   "component_id": "rubber_eraser",
+   "material_id": "rubber",
+   "name": "Radiergummi",
+   "short": "Radierer",
+   "shape": "cyl",
+   "x": 0.8,
+   "y": 0.8,
+   "w": 6.4,
+   "z": 0,
+   "h": 9,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 0.36,
+   "materials": [
+    [
+     "gummi",
+     70
+    ],
+    [
+     "tpe",
+     30
+    ]
+   ],
+   "info": "Synthetischer Kautschuk oder PVC-freier Kunststoff. Nach dem Abziehen der Zwinge lässt er sich herausziehen.",
+   "color": "#E58A8A"
   }
  ]
 }

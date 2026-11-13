@@ -1,0 +1,477 @@
+{
+ "parts": [
+  {
+   "id": "band",
+   "component_id": "polyester_canopy",
+   "material_id": "polyester",
+   "name": "Halteband mit Druckknopf",
+   "short": "Halteband",
+   "shape": "box",
+   "x": 10,
+   "y": 400,
+   "w": 70,
+   "d": 30,
+   "z": 74,
+   "h": 2,
+   "r": 3,
+   "explode": [
+    100,
+    0,
+    0
+   ],
+   "mass": 6,
+   "materials": [
+    [
+     "polyester",
+     90
+    ],
+    [
+     "messing",
+     10
+    ]
+   ],
+   "info": "Hält den geschlossenen Schirm zusammen. Der Druckknopf ist aus Metall: Band abschneiden, bevor der Stoff in die Textilsammlung geht.",
+   "color": "#24476B",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 54,
+     "y": 9,
+     "w": 12,
+     "fill": "#C9A24A"
+    }
+   ]
+  },
+  {
+   "id": "dach_mitte",
+   "component_id": "polyester_canopy",
+   "material_id": "polyester",
+   "name": "Schirmdach (gebündelt)",
+   "short": "Schirmdach",
+   "shape": "box",
+   "x": 10,
+   "y": 200,
+   "w": 70,
+   "d": 280,
+   "z": 4,
+   "h": 70,
+   "r": 30,
+   "explode": [
+    0,
+    0,
+    110
+   ],
+   "mass": 45.2,
+   "materials": [
+    [
+     "polyester",
+     100
+    ]
+   ],
+   "info": "Wasserabweisendes Polyestergewebe aus acht Bahnen, an den Rippenspitzen und in der Mitte angenäht. Zum Trennen die Nähte an den Rippenenden aufschneiden.",
+   "color": "#24476B",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 34,
+     "y": 0,
+     "w": 2,
+     "d": 280,
+     "r": 1,
+     "fill": "#1B3753"
+    }
+   ]
+  },
+  {
+   "id": "dach_vorne",
+   "component_id": "polyester_canopy",
+   "material_id": "polyester",
+   "name": "Schirmdach (unten, am Schieber)",
+   "short": "Dach unten",
+   "shape": "box",
+   "x": 6,
+   "y": 480,
+   "w": 78,
+   "d": 215,
+   "z": 0,
+   "h": 78,
+   "r": 34,
+   "explode": [
+    0,
+    0,
+    110
+   ],
+   "mass": 50.3,
+   "materials": [
+    [
+     "polyester",
+     100
+    ]
+   ],
+   "info": "Hier ist das Dach am dicksten gebündelt, weil die Bahnen an den Rippen-Enden zusammenlaufen.",
+   "color": "#24476B",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 38,
+     "y": 0,
+     "w": 2,
+     "d": 215,
+     "r": 1,
+     "fill": "#1B3753"
+    }
+   ]
+  },
+  {
+   "id": "dach_spitze",
+   "component_id": "polyester_canopy",
+   "material_id": "polyester",
+   "name": "Schirmdach (an der Spitze)",
+   "short": "Dach oben",
+   "shape": "box",
+   "x": 22,
+   "y": 30,
+   "w": 46,
+   "d": 170,
+   "z": 16,
+   "h": 46,
+   "r": 18,
+   "explode": [
+    0,
+    0,
+    110
+   ],
+   "mass": 15.1,
+   "materials": [
+    [
+     "polyester",
+     100
+    ]
+   ],
+   "info": "Zur Spitze hin liegen die Bahnen eng um die Stange.",
+   "color": "#24476B",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 22,
+     "y": 0,
+     "w": 2,
+     "d": 170,
+     "r": 1,
+     "fill": "#1B3753"
+    }
+   ]
+  },
+  {
+   "id": "rippen",
+   "component_id": "steel_frame",
+   "material_id": "steel",
+   "name": "Rippen und Streben",
+   "short": "Rippen",
+   "shape": "box",
+   "x": 30,
+   "y": 50,
+   "w": 30,
+   "d": 640,
+   "z": 24,
+   "h": 30,
+   "r": 8,
+   "explode": [
+    0,
+    0,
+    35
+   ],
+   "mass": 120.6,
+   "materials": [
+    [
+     "stahl",
+     85
+    ],
+    [
+     "pp",
+     10
+    ],
+    [
+     "messing",
+     5
+    ]
+   ],
+   "info": "Acht lange Rippen und acht kurze Streben aus Federstahl, mit Drahtgelenken verbunden. Abgeknickte Rippen sind spitz: vorsichtig anfassen und als Metallschrott abgeben.",
+   "color": "#3A3F44",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 10,
+     "w": 2,
+     "d": 620,
+     "fill": "#8E969A"
+    },
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 10,
+     "w": 2,
+     "d": 620,
+     "fill": "#8E969A"
+    },
+    {
+     "shape": "box",
+     "x": 17,
+     "y": 10,
+     "w": 2,
+     "d": 620,
+     "fill": "#8E969A"
+    },
+    {
+     "shape": "box",
+     "x": 24,
+     "y": 10,
+     "w": 2,
+     "d": 620,
+     "fill": "#8E969A"
+    }
+   ]
+  },
+  {
+   "id": "schieber",
+   "component_id": "steel_frame",
+   "material_id": "pp",
+   "name": "Schieber (Läufer)",
+   "short": "Schieber",
+   "shape": "box",
+   "x": 36,
+   "y": 690,
+   "w": 18,
+   "d": 40,
+   "z": 30,
+   "h": 18,
+   "r": 6,
+   "explode": [
+    0,
+    0,
+    35
+   ],
+   "mass": 12.1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Kunststoffhülse, an der die Streben hängen. Beim Öffnen wird sie die Stange hinaufgeschoben.",
+   "color": "#2A2E31",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 4,
+     "w": 12,
+     "d": 32,
+     "r": 4,
+     "fill": "#3A3F44"
+    }
+   ]
+  },
+  {
+   "id": "sperrfeder",
+   "component_id": "steel_frame",
+   "material_id": "steel",
+   "name": "Sperrfeder",
+   "short": "Feder",
+   "shape": "box",
+   "x": 42,
+   "y": 735,
+   "w": 6,
+   "d": 12,
+   "z": 36,
+   "h": 5,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    35
+   ],
+   "mass": 2,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Kleine Blattfeder in der Stange. Sie rastet ein und hält den Schirm offen.",
+   "color": "#B8BEC4"
+  },
+  {
+   "id": "spitze",
+   "component_id": "steel_frame",
+   "material_id": "pp",
+   "name": "Schirmspitze",
+   "short": "Spitze",
+   "shape": "box",
+   "x": 41,
+   "y": 0,
+   "w": 8,
+   "d": 30,
+   "z": 35,
+   "h": 8,
+   "r": 4,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 8,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Kunststoffkappe auf dem Ende der Stange. Schützt vor Verletzungen und hält das Dach oben fest.",
+   "color": "#2A2E31"
+  },
+  {
+   "id": "stange",
+   "component_id": "steel_frame",
+   "material_id": "steel",
+   "name": "Schirmstange",
+   "short": "Stange",
+   "shape": "box",
+   "x": 40,
+   "y": 30,
+   "w": 10,
+   "d": 760,
+   "z": 34,
+   "h": 10,
+   "r": 5,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 70.4,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Verchromtes Stahlrohr, das Herzstück des Gestells. Lässt sich als Metallschrott verwerten, wenn Griff und Stoff entfernt sind.",
+   "color": "#B8BEC4",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 0,
+     "w": 2,
+     "d": 760,
+     "r": 1,
+     "fill": "#E3E7EA"
+    }
+   ]
+  },
+  {
+   "id": "griff_haken",
+   "component_id": "plastic_handle",
+   "material_id": "pp",
+   "name": "Griff: Hakenende",
+   "short": "Haken",
+   "shape": "box",
+   "x": 33,
+   "y": 830,
+   "w": 24,
+   "d": 40,
+   "z": 66,
+   "h": 24,
+   "r": 10,
+   "explode": [
+    0,
+    60,
+    0
+   ],
+   "mass": 15.1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Das umgebogene Ende des Rundhakens.",
+   "color": "#5A3A26",
+   "label": false
+  },
+  {
+   "id": "griff_bogen",
+   "component_id": "plastic_handle",
+   "material_id": "pp",
+   "name": "Griff: Bogen",
+   "short": "Bogen",
+   "shape": "box",
+   "x": 33,
+   "y": 870,
+   "w": 24,
+   "d": 30,
+   "z": 26,
+   "h": 64,
+   "r": 10,
+   "explode": [
+    0,
+    60,
+    0
+   ],
+   "mass": 20.1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Die Rundung des Hakengriffs.",
+   "color": "#5A3A26",
+   "label": false
+  },
+  {
+   "id": "griff",
+   "component_id": "plastic_handle",
+   "material_id": "pp",
+   "name": "Hakengriff",
+   "short": "Griff",
+   "shape": "box",
+   "x": 32,
+   "y": 780,
+   "w": 26,
+   "d": 90,
+   "z": 26,
+   "h": 26,
+   "r": 12,
+   "explode": [
+    0,
+    60,
+    0
+   ],
+   "mass": 35.2,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Kunststoff in Holzoptik, mit einer Schraube oder Kleber auf der Stange befestigt. Schraube lösen und Griff abziehen, dann ist er sortenrein.",
+   "color": "#5A3A26",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 4,
+     "w": 6,
+     "d": 6,
+     "r": 1,
+     "fill": "#9AA2A6"
+    }
+   ]
+  }
+ ]
+}

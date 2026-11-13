@@ -1,0 +1,259 @@
+{
+ "parts": [
+  {
+   "id": "schraube",
+   "component_id": "steel_blades",
+   "material_id": "steel",
+   "name": "Gelenkschraube",
+   "short": "Schraube",
+   "shape": "cyl",
+   "x": 31.5,
+   "y": 96.5,
+   "w": 7,
+   "z": 7.5,
+   "h": 2,
+   "explode": [
+    0,
+    0,
+    54.0
+   ],
+   "mass": 2,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Hält beide Klingen zusammen und ist die Drehachse. Mit einem Schraubendreher lösen, dann fallen die Klingen auseinander.",
+   "color": "#9AA2A6",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0.75,
+     "y": 3,
+     "w": 5.5,
+     "d": 1,
+     "fill": "#5A6268"
+    }
+   ]
+  },
+  {
+   "id": "klinge_oben",
+   "component_id": "steel_blades",
+   "material_id": "steel",
+   "name": "Obere Klinge",
+   "short": "Klinge oben",
+   "shape": "box",
+   "x": 27,
+   "y": 0,
+   "w": 16,
+   "d": 135,
+   "z": 5,
+   "h": 2.5,
+   "r": 4,
+   "explode": [
+    0,
+    0,
+    36.0
+   ],
+   "mass": 25.7,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Rostfreier Edelstahl, nur eine Seite ist geschliffen. Vor dem Wegwerfen die Spitze mit Klebeband oder Pappe sichern.",
+   "color": "#C3C9CE",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 13,
+     "y": 4,
+     "w": 2,
+     "d": 92,
+     "r": 1,
+     "fill": "#E3E7EA"
+    },
+    {
+     "shape": "cyl",
+     "x": 4.5,
+     "y": 96.5,
+     "w": 7,
+     "fill": "#9AA2A6"
+    }
+   ]
+  },
+  {
+   "id": "klinge_unten",
+   "component_id": "steel_blades",
+   "material_id": "steel",
+   "name": "Untere Klinge",
+   "short": "Klinge unten",
+   "shape": "box",
+   "x": 27,
+   "y": 2,
+   "w": 16,
+   "d": 133,
+   "z": 2.5,
+   "h": 2.5,
+   "r": 4,
+   "explode": [
+    0,
+    0,
+    18.0
+   ],
+   "mass": 25.7,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Gleitet beim Schneiden an der oberen Klinge vorbei. Die Klingen sind wertvoller Stahlschrott für den Wertstoffhof.",
+   "color": "#C3C9CE",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 4,
+     "w": 2,
+     "d": 90,
+     "r": 1,
+     "fill": "#E3E7EA"
+    },
+    {
+     "shape": "cyl",
+     "x": 4.5,
+     "y": 94.5,
+     "w": 7,
+     "fill": "#9AA2A6"
+    }
+   ]
+  },
+  {
+   "id": "mutter",
+   "component_id": "steel_blades",
+   "material_id": "steel",
+   "name": "Mutter",
+   "short": "Mutter",
+   "shape": "cyl",
+   "x": 32,
+   "y": 97,
+   "w": 6,
+   "z": 0.5,
+   "h": 2,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 1,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Gegenstück zur Gelenkschraube unter der unteren Klinge.",
+   "color": "#9AA2A6",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 2,
+     "y": 2,
+     "w": 2,
+     "fill": "#5A6268"
+    }
+   ]
+  },
+  {
+   "id": "griff_links",
+   "component_id": "plastic_handles",
+   "material_id": "pp",
+   "name": "Griff (kleines Auge)",
+   "short": "Griff links",
+   "shape": "box",
+   "x": 0,
+   "y": 126,
+   "w": 35,
+   "d": 72,
+   "z": 0.5,
+   "h": 9,
+   "r": 15,
+   "explode": [
+    -30,
+    0,
+    0
+   ],
+   "mass": 11.9,
+   "materials": [
+    [
+     "pp",
+     80
+    ],
+    [
+     "tpe",
+     20
+    ]
+   ],
+   "info": "Polypropylen mit weicher Griffzone, fest um das Klingenende gespritzt. Lässt er sich nicht abziehen, mit einer Zange aufbrechen, dann Kunststoff und Stahl getrennt entsorgen.",
+   "color": "#D9473A",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 7,
+     "y": 12,
+     "w": 21,
+     "d": 48,
+     "r": 10,
+     "fill": "#F3F1EC"
+    }
+   ]
+  },
+  {
+   "id": "griff_rechts",
+   "component_id": "plastic_handles",
+   "material_id": "pp",
+   "name": "Griff (großes Auge)",
+   "short": "Griff rechts",
+   "shape": "box",
+   "x": 35,
+   "y": 126,
+   "w": 35,
+   "d": 72,
+   "z": 0.5,
+   "h": 9,
+   "r": 15,
+   "explode": [
+    30,
+    0,
+    0
+   ],
+   "mass": 13.8,
+   "materials": [
+    [
+     "pp",
+     80
+    ],
+    [
+     "tpe",
+     20
+    ]
+   ],
+   "info": "Das größere Auge ist für zwei bis drei Finger. Es gehört zur unteren Klinge.",
+   "color": "#D9473A",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 7,
+     "y": 8,
+     "w": 21,
+     "d": 56,
+     "r": 10,
+     "fill": "#F3F1EC"
+    }
+   ]
+  }
+ ]
+}

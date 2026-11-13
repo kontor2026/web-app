@@ -4,7 +4,7 @@
  "name_en": "Backpack",
  "klasse": "Textilien und Schuhe",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -21,38 +21,39 @@
  "werte": [
   {
    "k": "Rohstoffwert",
-   "v": "≈ 2,73 €",
+   "v": "≈ 0,44 €",
    "hint": "Kupfer zu Preisen vom 13.11."
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 2,32 kg",
+   "v": "≈ 2,93 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 1,31 kg",
-   "hint": "spart 1,01 kg, wenn recycelte Materialien eingesetzt werden"
+   "v": "≈ 2,79 kg",
+   "hint": "spart 0,14 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Cu": 216050.0
+   "Cu": 34900.0
   },
   "herkunft": {
    "Cu": "Modellmassen (Schätzung)"
   },
   "materialien_g": {
-   "pp": 216.1,
-   "copper": 216.1,
-   "nylon": 216.1,
-   "pu_foam": 51.9
+   "nylon": 520.1,
+   "polyester": 76.3,
+   "pu_foam": 49.1,
+   "copper": 34.9,
+   "pp": 19.7
   },
-  "co2_kg": 2.317,
-  "co2_mit_recyclat_kg": 1.311,
-  "co2_ersparnis_kg": 1.006,
+  "co2_kg": 2.93,
+  "co2_mit_recyclat_kg": 2.792,
+  "co2_ersparnis_kg": 0.138,
   "co2_ohne_faktor": [],
-  "rohstoffwert_eur": 2.73,
+  "rohstoffwert_eur": 0.44,
   "wert_ohne_preis": [],
   "preisstand": "2026-11-13",
   "quellen": {
@@ -100,119 +101,661 @@
   "nicht": "Tragbares nicht in den Restmüll",
   "warnung": "Schuhe paarweise zusammenbinden."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "foam_padding",
-   "component_id": "foam_padding",
-   "name": "Padding",
-   "short": "Padding",
-   "shape": "box",
-   "x": 45.0,
-   "y": 22.5,
-   "w": 210.0,
-   "d": 105.0,
-   "h": 157.5,
-   "z": 90.0,
-   "r": 12.6,
-   "explode": [
-    0,
-    0,
-    630.0
-   ],
-   "mass": 51.85,
-   "materials": [
-    [
-     "schaum",
-     100
-    ]
-   ],
-   "material_id": "pu_foam",
-   "info": "Open the inner lining seam to pull it out."
-  },
-  {
-   "id": "plastic_buckles",
-   "component_id": "plastic_buckles",
-   "name": "Buckles",
-   "short": "Buckles",
-   "shape": "box",
-   "x": 0,
-   "y": 0,
-   "w": 300.0,
-   "d": 150.0,
-   "h": 150.0,
-   "z": 300.0,
-   "r": 18.0,
-   "explode": [
-    0,
-    0,
-    180.0
-   ],
-   "mass": 216.05,
-   "materials": [
-    [
-     "pp",
-     100
-    ]
-   ],
-   "material_id": "pp",
-   "info": "Cut the straps just behind the buckle."
-  },
-  {
-   "id": "metal_zipper",
-   "component_id": "metal_zipper",
-   "name": "Zipper",
-   "short": "Zipper",
-   "shape": "box",
-   "x": 0,
-   "y": 0,
-   "w": 300.0,
-   "d": 150.0,
-   "h": 150.0,
-   "z": 150.0,
-   "r": 18.0,
-   "explode": [
-    0,
-    0,
-    90.0
-   ],
-   "mass": 216.05,
-   "materials": [
-    [
-     "kupfer",
-     100
-    ]
-   ],
-   "material_id": "copper",
-   "info": "Cut along both sides of the zipper tape."
-  },
-  {
-   "id": "nylon_fabric",
+   "id": "griff",
    "component_id": "nylon_fabric",
-   "name": "Fabric",
-   "short": "Fabric",
+   "material_id": "nylon",
+   "name": "Tragegriff",
+   "short": "Griff",
    "shape": "box",
-   "x": 0,
-   "y": 0,
-   "w": 300.0,
-   "d": 150.0,
-   "h": 150.0,
-   "z": 0.0,
-   "r": 18.0,
+   "x": 120,
+   "y": 64,
+   "w": 60,
+   "d": 18,
+   "z": 441,
+   "h": 9,
+   "r": 6,
    "explode": [
     0,
     0,
-    0
+    85
    ],
-   "mass": 216.05,
+   "mass": 13.1,
    "materials": [
     [
      "nylon",
      100
     ]
    ],
+   "info": "Gurtband aus Polyamid zum Aufhängen. Mehrfach durch den Stoff genäht, deshalb mit der Schere abtrennen.",
+   "color": "#22374F"
+  },
+  {
+   "id": "rv_haupt",
+   "component_id": "metal_zipper",
+   "material_id": "copper",
+   "name": "Reißverschluss Hauptfach",
+   "short": "Reißverschluss",
+   "shape": "box",
+   "x": 15,
+   "y": 68,
+   "w": 270,
+   "d": 10,
+   "z": 440,
+   "h": 1.5,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    62
+   ],
+   "mass": 24,
+   "materials": [
+    [
+     "polyester",
+     50
+    ],
+    [
+     "messing",
+     35
+    ],
+    [
+     "stahl",
+     15
+    ]
+   ],
+   "info": "Läuft über Deckel und Seiten. Zipper und Schieber sind aus Metall: das Band beidseitig abschneiden, bevor der Stoff in die Textilsammlung geht.",
+   "color": "#2A2E31",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 4,
+     "w": 270,
+     "d": 2,
+     "r": 0,
+     "fill": "#8E969A"
+    },
+    {
+     "shape": "box",
+     "x": 30,
+     "y": 1,
+     "w": 12,
+     "d": 8,
+     "r": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "box",
+     "x": 228,
+     "y": 1,
+     "w": 12,
+     "d": 8,
+     "r": 2,
+     "fill": "#B8BEC4"
+    }
+   ]
+  },
+  {
+   "id": "hauptfach",
+   "component_id": "nylon_fabric",
    "material_id": "nylon",
-   "info": "Remove buckles and zippers first."
+   "name": "Hauptfach",
+   "short": "Hauptfach",
+   "shape": "box",
+   "x": 0,
+   "y": 20,
+   "w": 300,
+   "d": 105,
+   "z": 6,
+   "h": 434,
+   "r": 30,
+   "explode": [
+    0,
+    0,
+    40
+   ],
+   "mass": 261.7,
+   "materials": [
+    [
+     "nylon",
+     100
+    ]
+   ],
+   "info": "Robustes Polyamidgewebe mit wasserdichter PU-Beschichtung auf der Innenseite. Die Beschichtung macht das Recycling schwer, deshalb lieber reparieren oder weitergeben.",
+   "color": "#2F4B6E",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 15,
+     "y": 48,
+     "w": 270,
+     "d": 2,
+     "r": 0,
+     "fill": "#22374F"
+    }
+   ]
+  },
+  {
+   "id": "boden",
+   "component_id": "nylon_fabric",
+   "material_id": "nylon",
+   "name": "Bodenplatte",
+   "short": "Boden",
+   "shape": "box",
+   "x": 0,
+   "y": 20,
+   "w": 300,
+   "d": 105,
+   "z": 0,
+   "h": 6,
+   "r": 30,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 49.1,
+   "materials": [
+    [
+     "nylon",
+     60
+    ],
+    [
+     "pp",
+     40
+    ]
+   ],
+   "info": "Verstärkter Boden mit eingelegter Kunststoffplatte, damit der Rucksack steht. Die Platte vorher herausnehmen.",
+   "color": "#22374F"
+  },
+  {
+   "id": "rv_vorne",
+   "component_id": "metal_zipper",
+   "material_id": "copper",
+   "name": "Reißverschluss Vortasche",
+   "short": "RV Vortasche",
+   "shape": "box",
+   "x": 40,
+   "y": 132,
+   "w": 220,
+   "d": 8,
+   "z": 300,
+   "h": 1.5,
+   "r": 2,
+   "explode": [
+    0,
+    80,
+    22
+   ],
+   "mass": 10.9,
+   "materials": [
+    [
+     "polyester",
+     50
+    ],
+    [
+     "messing",
+     35
+    ],
+    [
+     "stahl",
+     15
+    ]
+   ],
+   "info": "Kleinerer Reißverschluss der Vortasche, ebenfalls mit Metallzähnen.",
+   "color": "#2A2E31",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 3,
+     "w": 220,
+     "d": 2,
+     "r": 0,
+     "fill": "#8E969A"
+    },
+    {
+     "shape": "box",
+     "x": 20,
+     "y": 0,
+     "w": 12,
+     "d": 8,
+     "r": 2,
+     "fill": "#B8BEC4"
+    }
+   ]
+  },
+  {
+   "id": "vortasche",
+   "component_id": "nylon_fabric",
+   "material_id": "nylon",
+   "name": "Vortasche",
+   "short": "Vortasche",
+   "shape": "box",
+   "x": 30,
+   "y": 125,
+   "w": 240,
+   "d": 25,
+   "z": 40,
+   "h": 260,
+   "r": 10,
+   "explode": [
+    0,
+    80,
+    0
+   ],
+   "mass": 65.4,
+   "materials": [
+    [
+     "nylon",
+     100
+    ]
+   ],
+   "info": "Aufgenähte Tasche für Stifte und Kleinkram, mit Organizer-Fächern innen.",
+   "color": "#2F4B6E",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 3,
+     "w": 220,
+     "d": 2,
+     "r": 0,
+     "fill": "#22374F"
+    }
+   ]
+  },
+  {
+   "id": "polster",
+   "component_id": "foam_padding",
+   "material_id": "pu_foam",
+   "name": "Rückenpolster",
+   "short": "Polster",
+   "shape": "box",
+   "x": 30,
+   "y": 8,
+   "w": 240,
+   "d": 10,
+   "z": 80,
+   "h": 320,
+   "r": 8,
+   "explode": [
+    -320,
+    40,
+    0
+   ],
+   "mass": 49.1,
+   "materials": [
+    [
+     "schaum",
+     100
+    ]
+   ],
+   "info": "Weicher PU- oder EVA-Schaum, steckt zwischen Netzstoff und Hauptfach. Naht des Innenfutters öffnen und herausziehen.",
+   "color": "#E5E1C8",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 2,
+     "w": 232,
+     "d": 6,
+     "r": 3,
+     "fill": "#D3CFB4"
+    }
+   ]
+  },
+  {
+   "id": "rueckenteil",
+   "component_id": "nylon_fabric",
+   "material_id": "polyester",
+   "name": "Rückenteil mit Netzstoff",
+   "short": "Rückenteil",
+   "shape": "box",
+   "x": 10,
+   "y": 4,
+   "w": 280,
+   "d": 16,
+   "z": 40,
+   "h": 380,
+   "r": 10,
+   "explode": [
+    -320,
+    0,
+    0
+   ],
+   "mass": 76.3,
+   "materials": [
+    [
+     "polyester",
+     100
+    ]
+   ],
+   "info": "Atmungsaktiver Polyester-Netzstoff über dem Polster. Liegt direkt am Rücken an.",
+   "color": "#4A5156",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 20,
+     "y": 4,
+     "w": 14,
+     "d": 8,
+     "r": 3,
+     "fill": "#3A4045"
+    },
+    {
+     "shape": "box",
+     "x": 40,
+     "y": 4,
+     "w": 14,
+     "d": 8,
+     "r": 3,
+     "fill": "#3A4045"
+    },
+    {
+     "shape": "box",
+     "x": 60,
+     "y": 4,
+     "w": 14,
+     "d": 8,
+     "r": 3,
+     "fill": "#3A4045"
+    },
+    {
+     "shape": "box",
+     "x": 80,
+     "y": 4,
+     "w": 14,
+     "d": 8,
+     "r": 3,
+     "fill": "#3A4045"
+    },
+    {
+     "shape": "box",
+     "x": 100,
+     "y": 4,
+     "w": 14,
+     "d": 8,
+     "r": 3,
+     "fill": "#3A4045"
+    },
+    {
+     "shape": "box",
+     "x": 120,
+     "y": 4,
+     "w": 14,
+     "d": 8,
+     "r": 3,
+     "fill": "#3A4045"
+    },
+    {
+     "shape": "box",
+     "x": 140,
+     "y": 4,
+     "w": 14,
+     "d": 8,
+     "r": 3,
+     "fill": "#3A4045"
+    },
+    {
+     "shape": "box",
+     "x": 160,
+     "y": 4,
+     "w": 14,
+     "d": 8,
+     "r": 3,
+     "fill": "#3A4045"
+    },
+    {
+     "shape": "box",
+     "x": 180,
+     "y": 4,
+     "w": 14,
+     "d": 8,
+     "r": 3,
+     "fill": "#3A4045"
+    },
+    {
+     "shape": "box",
+     "x": 200,
+     "y": 4,
+     "w": 14,
+     "d": 8,
+     "r": 3,
+     "fill": "#3A4045"
+    },
+    {
+     "shape": "box",
+     "x": 220,
+     "y": 4,
+     "w": 14,
+     "d": 8,
+     "r": 3,
+     "fill": "#3A4045"
+    },
+    {
+     "shape": "box",
+     "x": 240,
+     "y": 4,
+     "w": 14,
+     "d": 8,
+     "r": 3,
+     "fill": "#3A4045"
+    }
+   ]
+  },
+  {
+   "id": "brustgurt",
+   "component_id": "plastic_buckles",
+   "material_id": "pp",
+   "name": "Brustgurt-Schnalle",
+   "short": "Brustschnalle",
+   "shape": "box",
+   "x": 120,
+   "y": -16,
+   "w": 60,
+   "d": 12,
+   "z": 280,
+   "h": 22,
+   "r": 4,
+   "explode": [
+    320,
+    0,
+    0
+   ],
+   "mass": 8.7,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Steckschnalle aus Polyacetal oder Polypropylen. Gurtband direkt hinter der Schnalle abschneiden, dann ist der Kunststoff sortenrein.",
+   "color": "#1E2226",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 26,
+     "y": 2,
+     "w": 8,
+     "d": 8,
+     "r": 2,
+     "fill": "#3A3F44"
+    }
+   ]
+  },
+  {
+   "id": "gurt_l",
+   "component_id": "nylon_fabric",
+   "material_id": "nylon",
+   "name": "Schultergurt links",
+   "short": "Schultergurt",
+   "shape": "box",
+   "x": 45,
+   "y": -12,
+   "w": 55,
+   "d": 16,
+   "z": 60,
+   "h": 360,
+   "r": 8,
+   "explode": [
+    320,
+    0,
+    0
+   ],
+   "mass": 65.4,
+   "materials": [
+    [
+     "nylon",
+     75
+    ],
+    [
+     "schaum",
+     25
+    ]
+   ],
+   "info": "Gepolsterter Gurt: außen Polyamid, innen ein Schaumstreifen. Unten über eine Schnalle verstellbar.",
+   "color": "#22374F",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 6,
+     "y": 3,
+     "w": 43,
+     "d": 10,
+     "r": 4,
+     "fill": "#4A5156"
+    }
+   ]
+  },
+  {
+   "id": "gurt_r",
+   "component_id": "nylon_fabric",
+   "material_id": "nylon",
+   "name": "Schultergurt rechts",
+   "short": "Schultergurt",
+   "shape": "box",
+   "x": 200,
+   "y": -12,
+   "w": 55,
+   "d": 16,
+   "z": 60,
+   "h": 360,
+   "r": 8,
+   "explode": [
+    320,
+    0,
+    0
+   ],
+   "mass": 65.4,
+   "materials": [
+    [
+     "nylon",
+     75
+    ],
+    [
+     "schaum",
+     25
+    ]
+   ],
+   "info": "Gegenstück zum linken Schultergurt.",
+   "color": "#22374F",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 6,
+     "y": 3,
+     "w": 43,
+     "d": 10,
+     "r": 4,
+     "fill": "#4A5156"
+    }
+   ]
+  },
+  {
+   "id": "schnalle_l",
+   "component_id": "plastic_buckles",
+   "material_id": "pp",
+   "name": "Leiterschnalle links",
+   "short": "Leiterschnalle",
+   "shape": "box",
+   "x": 52,
+   "y": -12,
+   "w": 40,
+   "d": 12,
+   "z": 36,
+   "h": 18,
+   "r": 3,
+   "explode": [
+    320,
+    0,
+    0
+   ],
+   "mass": 5.5,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Zum Verstellen der Gurtlänge. Kleine Kunststoffteile wie diese gehören in den Restmüll.",
+   "color": "#1E2226",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 4,
+     "w": 32,
+     "d": 4,
+     "r": 1,
+     "fill": "#3A3F44"
+    }
+   ]
+  },
+  {
+   "id": "schnalle_r",
+   "component_id": "plastic_buckles",
+   "material_id": "pp",
+   "name": "Leiterschnalle rechts",
+   "short": "Leiterschnalle",
+   "shape": "box",
+   "x": 207,
+   "y": -12,
+   "w": 40,
+   "d": 12,
+   "z": 36,
+   "h": 18,
+   "r": 3,
+   "explode": [
+    320,
+    0,
+    0
+   ],
+   "mass": 5.5,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Gegenstück zur linken Leiterschnalle.",
+   "color": "#1E2226",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 4,
+     "w": 32,
+     "d": 4,
+     "r": 1,
+     "fill": "#3A3F44"
+    }
+   ]
   }
  ]
 }
