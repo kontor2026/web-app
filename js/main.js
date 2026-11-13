@@ -145,6 +145,43 @@ function stopCamera() {
   state.stream = null;
 }
 
+// Simulierte Erkennung. Später: POST /api/scan mit dem Bild, Antwort = erkennung + Objekt-ID.
+function analyze(v, src, obj) {
+  const vf = v.querySelector('#vf');
+  v.querySelector('#vf-idle').style.display = 'none';
+  vf.querySelectorAll('img, .scanline, .bbox, .vf-log').forEach((n) => n.remove());
+  const img = h(`<img src="${src}" alt="">`);
+  vf.prepend(img);
+  v.querySelector('#vf-state').textContent = 'analysiere';
+
+  const label = obj ? `${obj.name} · ${pct(obj.erkennung.conf)}` : 'Gegenstand · unsicher';
+  const lines = obj
+    ? ['Bild erfasst', 'Kontur gefunden', `Objektklasse: ${obj.name}`, `Modellabgleich: ${obj.erkennung.modelle.length} Kandidaten`]
+    : ['Bild erfasst', 'Kontur gefunden', 'Objektklasse unsicher', 'Bitte Auswahl bestätigen'];
+  const log = h(`<div class="vf-log">${lines.map((l, i) => `<div>› ${l}<em>${(0.3 + i * 0.5).toFixed(1).replace('.', ',')} s</em></div>`).join('')}</div>`);
+  const scan = h('<div class="scanline"></div>');
+  const box = h(`<div class="bbox"><span>${label}</span></div>`);
+  vf.append(scan, box, log);
+
+  img.onload = () => {
+    // Darstellungsrechteck des Bildes (object-fit: contain) bestimmen.
+    const W = vf.clientWidth, H = vf.clientHeight, r = Math.min(W / img.naturalWidth, H / img.naturalHeight);
+    const iw = img.naturalWidth * r, ih = img.naturalHeight * r, ix = (W - iw) / 2, iy = (H - ih) / 2;
+    const [bx, by, bw, bh] = obj ? SAMPLE_BBOX[obj.id] : [0.25, 0.25, 0.5, 0.5];
+    Object.assign(box.style, { left: `${ix + bx * iw}px`, top: `${iy + by * ih}px`, width: `${bw * iw}px`, height: `${bh * ih}px` });
+
+    animate(scan, { top: [iy, iy + ih], opacity: [{ to: 1, duration: 100 }, { to: 1, duration: 1300 }, { to: 0, duration: 200 }], duration: 1600, ease: 'inOutSine' });
+    animate(log.children, { opacity: [0, 1], translateX: [-6, 0], delay: stagger(420, { start: 200 }), duration: 300 });
+    animate(box, {
+      opacity: [0, 1], scale: [1.08, 1], delay: 1500, duration: 450, ease: 'outBack',
+      onComplete: () => {
+        v.querySelector('#vf-state').textContent = 'erkannt';
+        showResult(v, obj);
+      },
+    });
+  };
+}
+
 document.querySelector('.brand').addEventListener('click', viewScan);
 
 // Direkteinstieg für Demo und Entwicklung: #sheet=laptop oder #craft=flasche
