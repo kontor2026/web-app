@@ -340,3 +340,41 @@ svg.iso { width: 100%; height: 100%; display: block; overflow: visible; }
 .tip small { display: block; font: 11px var(--mono); opacity: .65; margin-top: 2px; }
 .tip .n { font: 11px var(--mono); color: var(--accent-tip); margin-right: 6px; }
 
+/* Schmale Bildschirme: alles untereinander, Seite scrollt */
+@media (max-width: 900px) {
+  html, body { height: auto; }
+  body { overflow: auto; grid-template-rows: auto 1fr; }
+  main { overflow: visible; }
+  .view { position: relative; inset: auto; }
+  .view + .view { display: none; }
+  .topbar { grid-template-columns: 1fr auto; gap: 10px; padding-block: 12px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+  .steps { grid-column: 1 / -1; grid-row: 2; }
+  .steps span { padding: 4px 8px; }
+  .status .sensor { display: none; }
+  .stock { border-left: 0; padding-left: 0; }
+  .scan, .sheet, .craft { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto; }
+  .viewfinder { margin: 16px; min-height: 58vh; }
+  .side, .panel, .inv { border-left: 0; border-top: 1px solid var(--rule); }
+  .side { padding: 24px 16px; }
+  .canvas { height: 72vh; min-height: 440px; }
+  .drawing { inset: 92px 8px 56px; }
+  .canvas-head { left: 24px; right: 24px; flex-wrap: wrap; gap: 10px; }
+  .titleblock { display: none; }
+  .legend { left: 24px; right: 24px; bottom: 24px; gap: 10px; }
+  .panel { grid-column: 1; grid-row: auto; overflow: visible; }
+  .panel-inner { padding: 24px 16px 32px; }
+  .stats b { font-size: 16px; }
+  .actionbar { grid-column: 1; flex-wrap: wrap; padding: 12px 16px; position: sticky; bottom: 0; }
+  .actionbar .q { width: 100%; }
+  .actionbar .btn { flex: 1 1 140px; }
+  .craft-main { padding: 24px 16px; }
+  .craft-head { flex-direction: column; align-items: flex-start; }
+  .ideas { grid-template-columns: minmax(0, 1fr); }
+  .idea { border-right: 0; border-bottom: 1px solid var(--rule); padding: 22px 0; }
+  .inv { padding: 24px 16px; }
+  .modal { width: calc(100vw - 32px); padding: 22px; }
+  .el-hero { grid-template-columns: 110px 1fr; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; }
+}

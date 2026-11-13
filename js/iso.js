@@ -88,6 +88,12 @@ export class ExplodedView {
     this.container.appendChild(this.svg);
     this.render(false);
     this.ro.observe(this.container);
+    // ?static überspringt die Animation (Screenshots, langsame Rechner).
+    if (new URLSearchParams(location.search).has('static') || matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      this.exploded = true;
+      this.render(true);
+      return;
+    }
     this.intro();
   }
 
