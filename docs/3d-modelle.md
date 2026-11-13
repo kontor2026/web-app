@@ -124,6 +124,8 @@ Maßstab sind Smartphone und Laptop:
 
 ## Prüfen
 
+Ohne Backend: `node tools/kategorien/foto.cjs <id> [...]` fotografiert Modelle aus `modelle/` (links zusammengebaut, rechts explodiert) nach `<tmp>/modell-fotos/<id>.png`. Braucht Playwright (z. B. `npm ci` in `packages/site`). Im Browser geht dasselbe mit `/tools/kategorien/ansicht.html?static&id=<id>` über einen beliebigen statischen Server im Projektordner.
+
 ```bash
 python tools/kategorien/build.py
 backend/.venv/Scripts/python -m uvicorn backend.app.main:app --port 8000   # neu starten, lädt die Modelle beim Start

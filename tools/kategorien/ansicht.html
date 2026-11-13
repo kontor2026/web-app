@@ -1,0 +1,45 @@
+<!doctype html>
+<!-- Vorschau eines Modells aus tools/kategorien/modelle/: links zusammengebaut, rechts explodiert.
+     Aufruf über tools/kategorien/foto.cjs oder im Browser: /tools/kategorien/ansicht.html?static&id=toaster -->
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../../css/app.css">
+<style>
+  body { margin: 0; background: var(--paper, #fff); font-family: system-ui, sans-serif; }
+  #wrap { display: grid; grid-template-columns: 1fr 1.6fr; width: 1600px; height: 800px; }
+  .box { position: relative; }
+  .box h2 { position: absolute; top: 6px; left: 10px; margin: 0; font: 600 13px system-ui; color: #555; }
+</style>
+</head>
+<body>
+<div id="wrap">
+  <div class="box"><h2 id="t1"></h2><div id="zu" style="width:100%;height:100%"></div></div>
+  <div class="box"><h2>explodiert</h2><div id="ex" style="width:100%;height:100%"></div></div>
+</div>
+<script type="module">
+import { ExplodedView } from '../../js/iso.js';
+
+const id = new URLSearchParams(location.search).get('id');
+try {
+  const obj = await (await fetch(`modelle/${id}.json`, { cache: 'no-store' })).json();
+  document.getElementById('t1').textContent = `${id} · ${obj.parts.length} Teile · zusammengebaut`;
+
+  const ex = new ExplodedView(document.getElementById('ex'), obj);
+  ex.mount();
+
+  // Zusammengebaut ohne Beschriftung: Ansicht von Hand aufbauen, Zustand t = 0.
+  const zu = new ExplodedView(document.getElementById('zu'), obj);
+  zu.svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+  zu.svg.setAttribute('class', 'iso');
+  zu.container.appendChild(zu.svg);
+  zu.render(false);
+  zu.calloutLayer.style.display = 'none';
+  window.__fertig = true;
+} catch (e) {
+  window.__fehler = String(e);
+  window.__fertig = true;
+}
+</script>
+</body>
+</html>
