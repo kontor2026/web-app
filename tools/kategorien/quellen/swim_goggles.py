@@ -57,6 +57,11 @@ teile = [
          x=0, y=30, w=160, d=10, z=0, h=2, r=2, mass=8, color='#2C6FA6', explode=[0, 60, 0],
          info='Elastisches Silikonband, hinten geteilt, damit es am Kopf nicht rutscht. Aus den Clips fädeln.',
          marks=[mark('box', 4, 1, 152, 3, 1.5, '#235C8B'), mark('box', 4, 6, 152, 3, 1.5, '#235C8B')]),
+    teil('bandschieber', 'silicone_head_strap', 'Bandschieber', 'Schieber', 'box',
+         material_id='pp', x=70, y=29, w=20, d=12, z=2, h=3, r=2, mass=1, color=CLIP, explode=[0, 60, 12],
+         info='Kleiner Kunststoffschieber hinten am Kopfband, der die beiden Bandhälften zusammenhält. '
+              'Er lässt sich einfach abziehen.',
+         marks=[mark('box', 3, 3, 14, 2, 1, '#B9BEC2'), mark('box', 3, 7, 14, 2, 1, '#B9BEC2')]),
 ]
 explodiere(teile, abstand=15, fest=('dichtung_links', 'dichtung_rechts'))
 skaliere_masse(teile, oid='swim_goggles', stellen=2)

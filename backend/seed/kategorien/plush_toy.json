@@ -39,11 +39,11 @@
   "metalle_mg": {},
   "herkunft": {},
   "materialien_g": {
-   "polyester": 295.2,
+   "polyester": 295.5,
    "abs": 4.7
   },
-  "co2_kg": 0.982,
-  "co2_mit_recyclat_kg": 0.972,
+  "co2_kg": 0.983,
+  "co2_mit_recyclat_kg": 0.973,
   "co2_ersparnis_kg": 0.01,
   "co2_ohne_faktor": [],
   "rohstoffwert_eur": 0,
@@ -131,16 +131,16 @@
    "name": "Ohren",
    "short": "Ohren",
    "shape": "cyl",
-   "x": 45,
-   "y": 48,
-   "w": 36,
+   "x": 36,
+   "y": 58,
+   "w": 38,
    "d": 18,
-   "z": 225,
-   "h": 25,
+   "z": 212,
+   "h": 34,
    "explode": [
     0,
     0,
-    335.0
+    432.0
    ],
    "mass": 2.9,
    "materials": [
@@ -155,9 +155,9 @@
     {
      "shape": "cyl",
      "x": 7,
-     "y": 4,
-     "w": 22,
-     "d": 10,
+     "y": 5,
+     "w": 24,
+     "d": 9,
      "fill": "#D9B38A"
     }
    ]
@@ -169,16 +169,16 @@
    "name": "Ohr rechts",
    "short": "Ohr",
    "shape": "cyl",
-   "x": 119,
-   "y": 48,
-   "w": 36,
+   "x": 126,
+   "y": 58,
+   "w": 38,
    "d": 18,
-   "z": 225,
-   "h": 25,
+   "z": 212,
+   "h": 34,
    "explode": [
     0,
     0,
-    335.0
+    432.0
    ],
    "mass": 2.9,
    "materials": [
@@ -194,32 +194,32 @@
     {
      "shape": "cyl",
      "x": 7,
-     "y": 4,
-     "w": 22,
-     "d": 10,
+     "y": 5,
+     "w": 24,
+     "d": 9,
      "fill": "#D9B38A"
     }
    ]
   },
   {
-   "id": "kopf",
+   "id": "kopf_0",
    "component_id": "polyester_plush",
    "material_id": "polyester",
    "name": "Kopf (Plüschhülle)",
    "short": "Kopf",
    "shape": "cyl",
-   "x": 40,
-   "y": 28,
-   "w": 120,
-   "d": 100,
-   "z": 140,
-   "h": 85,
+   "x": 67,
+   "y": 43,
+   "w": 66,
+   "d": 58,
+   "z": 222,
+   "h": 10,
    "explode": [
     0,
     0,
-    305.0
+    372.0
    ],
-   "mass": 38.5,
+   "mass": 1.6,
    "materials": [
     [
      "polyester",
@@ -228,16 +228,149 @@
    ],
    "info": "Plüschstoff aus Polyester: ein gewebter Grund mit langen, aufgeschnittenen Fasern. An der Halsnaht mit dem Rumpf vernäht.",
    "color": "#B07A45",
+   "sortBias": 3,
    "marks": [
     {
-     "shape": "cyl",
-     "x": 20,
-     "y": 15,
-     "w": 80,
-     "d": 60,
-     "fill": "#A67142"
+     "shape": "box",
+     "x": 31,
+     "y": 4,
+     "w": 4,
+     "d": 50,
+     "r": 2,
+     "fill": "#9C6A3B"
     }
    ]
+  },
+  {
+   "id": "kopf_1",
+   "component_id": "polyester_plush",
+   "material_id": "polyester",
+   "name": "Kopf (Plüschhülle)",
+   "short": "Kopf",
+   "shape": "cyl",
+   "x": 49,
+   "y": 28,
+   "w": 102,
+   "d": 88,
+   "z": 205,
+   "h": 17,
+   "explode": [
+    0,
+    0,
+    372.0
+   ],
+   "mass": 6.6,
+   "materials": [
+    [
+     "polyester",
+     100
+    ]
+   ],
+   "info": "Plüschstoff aus Polyester: ein gewebter Grund mit langen, aufgeschnittenen Fasern. An der Halsnaht mit dem Rumpf vernäht.",
+   "color": "#B07A45",
+   "label": false,
+   "sortBias": 3,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 49,
+     "y": 2,
+     "w": 4,
+     "d": 14,
+     "r": 2,
+     "fill": "#9C6A3B"
+    }
+   ]
+  },
+  {
+   "id": "kopf_2",
+   "component_id": "polyester_plush",
+   "material_id": "polyester",
+   "name": "Kopf (Plüschhülle)",
+   "short": "Kopf",
+   "shape": "cyl",
+   "x": 40,
+   "y": 20,
+   "w": 120,
+   "d": 104,
+   "z": 170,
+   "h": 35,
+   "explode": [
+    0,
+    0,
+    372.0
+   ],
+   "mass": 18.9,
+   "materials": [
+    [
+     "polyester",
+     100
+    ]
+   ],
+   "info": "Plüschstoff aus Polyester: ein gewebter Grund mit langen, aufgeschnittenen Fasern. An der Halsnaht mit dem Rumpf vernäht.",
+   "color": "#B07A45",
+   "label": false,
+   "sortBias": 3
+  },
+  {
+   "id": "kopf_3",
+   "component_id": "polyester_plush",
+   "material_id": "polyester",
+   "name": "Kopf (Plüschhülle)",
+   "short": "Kopf",
+   "shape": "cyl",
+   "x": 46,
+   "y": 25,
+   "w": 108,
+   "d": 94,
+   "z": 150,
+   "h": 20,
+   "explode": [
+    0,
+    0,
+    372.0
+   ],
+   "mass": 8.8,
+   "materials": [
+    [
+     "polyester",
+     100
+    ]
+   ],
+   "info": "Plüschstoff aus Polyester: ein gewebter Grund mit langen, aufgeschnittenen Fasern. An der Halsnaht mit dem Rumpf vernäht.",
+   "color": "#B07A45",
+   "label": false,
+   "sortBias": 3
+  },
+  {
+   "id": "kopf_4",
+   "component_id": "polyester_plush",
+   "material_id": "polyester",
+   "name": "Kopf (Plüschhülle)",
+   "short": "Kopf",
+   "shape": "cyl",
+   "x": 62,
+   "y": 39,
+   "w": 76,
+   "d": 66,
+   "z": 140,
+   "h": 10,
+   "explode": [
+    0,
+    0,
+    372.0
+   ],
+   "mass": 2.2,
+   "materials": [
+    [
+     "polyester",
+     100
+    ]
+   ],
+   "info": "Plüschstoff aus Polyester: ein gewebter Grund mit langen, aufgeschnittenen Fasern. An der Halsnaht mit dem Rumpf vernäht.",
+   "color": "#B07A45",
+   "label": false,
+   "sortBias": 3
   },
   {
    "id": "schnauze",
@@ -246,18 +379,18 @@
    "name": "Schnauze",
    "short": "Schnauze",
    "shape": "cyl",
-   "x": 73,
-   "y": 128,
-   "w": 54,
-   "d": 22,
-   "z": 160,
-   "h": 34,
+   "x": 72,
+   "y": 124,
+   "w": 56,
+   "d": 24,
+   "z": 163,
+   "h": 30,
    "explode": [
     0,
     0,
-    305.0
+    372.0
    ],
-   "mass": 5.8,
+   "mass": 5.7,
    "materials": [
     [
      "polyester",
@@ -265,7 +398,19 @@
     ]
    ],
    "info": "Kurzfloriger heller Plüsch, eigenes Schnittteil, auf dem Nase und Mundnaht sitzen.",
-   "color": "#D9B38A"
+   "color": "#D9B38A",
+   "sortBias": 4,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 27,
+     "y": 15,
+     "w": 2,
+     "d": 8,
+     "r": 1,
+     "fill": "#6B4A2B"
+    }
+   ]
   },
   {
    "id": "auge_links",
@@ -275,15 +420,15 @@
    "short": "Augen",
    "shape": "cyl",
    "x": 70,
-   "y": 122,
-   "w": 12,
-   "d": 6,
-   "z": 188,
-   "h": 12,
+   "y": 116,
+   "w": 13,
+   "d": 8,
+   "z": 192,
+   "h": 13,
    "explode": [
     0,
-    60,
-    305.0
+    70,
+    372.0
    ],
    "mass": 1.4,
    "materials": [
@@ -294,13 +439,14 @@
    ],
    "info": "Kunststoffaugen mit Schaft, innen mit einer Sicherungsscheibe festgeklemmt, damit Kinder sie nicht abreißen. Zum Trennen den Stoff rundherum aufschneiden.",
    "color": "#1C1D1F",
+   "sortBias": 5,
    "marks": [
     {
      "shape": "cyl",
-     "x": 2,
-     "y": 1,
+     "x": 3,
+     "y": 2,
      "w": 4,
-     "d": 2,
+     "d": 3,
      "fill": "#FFFFFF"
     }
    ]
@@ -312,16 +458,16 @@
    "name": "Auge rechts",
    "short": "Auge",
    "shape": "cyl",
-   "x": 118,
-   "y": 122,
-   "w": 12,
-   "d": 6,
-   "z": 188,
-   "h": 12,
+   "x": 117,
+   "y": 116,
+   "w": 13,
+   "d": 8,
+   "z": 192,
+   "h": 13,
    "explode": [
     0,
-    60,
-    305.0
+    70,
+    372.0
    ],
    "mass": 1.4,
    "materials": [
@@ -333,13 +479,14 @@
    "info": "Zweites Auge.",
    "color": "#1C1D1F",
    "label": false,
+   "sortBias": 5,
    "marks": [
     {
      "shape": "cyl",
-     "x": 2,
-     "y": 1,
+     "x": 3,
+     "y": 2,
      "w": 4,
-     "d": 2,
+     "d": 3,
      "fill": "#FFFFFF"
     }
    ]
@@ -351,16 +498,16 @@
    "name": "Nase",
    "short": "Nase",
    "shape": "cyl",
-   "x": 91,
-   "y": 138,
-   "w": 18,
-   "d": 10,
-   "z": 194,
-   "h": 8,
+   "x": 90,
+   "y": 127,
+   "w": 20,
+   "d": 11,
+   "z": 193,
+   "h": 6,
    "explode": [
     0,
-    60,
-    305.0
+    70,
+    372.0
    ],
    "mass": 1.9,
    "materials": [
@@ -370,27 +517,38 @@
     ]
    ],
    "info": "Ebenfalls Kunststoff mit Sicherungsscheibe. Bei manchen Tieren ist die Nase nur aufgestickt.",
-   "color": "#2B2D2F"
+   "color": "#2B2D2F",
+   "sortBias": 5,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 5,
+     "y": 2,
+     "w": 6,
+     "d": 3,
+     "fill": "#55585C"
+    }
+   ]
   },
   {
-   "id": "kopffuellung",
+   "id": "kopffuellung_0",
    "component_id": "polyester_fill",
    "material_id": "polyester",
    "name": "Füllung Kopf",
    "short": "Füllung Kopf",
    "shape": "cyl",
-   "x": 45,
+   "x": 55,
    "y": 33,
-   "w": 110,
-   "d": 90,
-   "z": 145,
-   "h": 75,
+   "w": 90,
+   "d": 78,
+   "z": 205,
+   "h": 14,
    "explode": [
     0,
     0,
-    195.0
+    223.0
    ],
-   "mass": 48.1,
+   "mass": 7.6,
    "materials": [
     [
      "polyester",
@@ -402,33 +560,99 @@
    "marks": [
     {
      "shape": "cyl",
-     "x": 25,
-     "y": 20,
-     "w": 60,
-     "d": 50,
-     "fill": "#E8E4DA"
+     "x": 15,
+     "y": 12,
+     "w": 34,
+     "d": 24,
+     "fill": "#E3DFD6"
+    },
+    {
+     "shape": "cyl",
+     "x": 46,
+     "y": 36,
+     "w": 30,
+     "d": 26,
+     "fill": "#E3DFD6"
     }
    ]
   },
   {
-   "id": "rumpf",
+   "id": "kopffuellung_1",
+   "component_id": "polyester_fill",
+   "material_id": "polyester",
+   "name": "Füllung Kopf",
+   "short": "Füllung Kopf",
+   "shape": "cyl",
+   "x": 44,
+   "y": 24,
+   "w": 112,
+   "d": 96,
+   "z": 170,
+   "h": 35,
+   "explode": [
+    0,
+    0,
+    223.0
+   ],
+   "mass": 28.9,
+   "materials": [
+    [
+     "polyester",
+     100
+    ]
+   ],
+   "info": "Lockere Polyesterwatte, von Hand oder maschinell durch eine Naht gestopft. Naht auftrennen, herausziehen und als Füllung weiterverwenden.",
+   "color": "#F4F2EE",
+   "label": false
+  },
+  {
+   "id": "kopffuellung_2",
+   "component_id": "polyester_fill",
+   "material_id": "polyester",
+   "name": "Füllung Kopf",
+   "short": "Füllung Kopf",
+   "shape": "cyl",
+   "x": 51,
+   "y": 30,
+   "w": 98,
+   "d": 84,
+   "z": 152,
+   "h": 18,
+   "explode": [
+    0,
+    0,
+    223.0
+   ],
+   "mass": 11.4,
+   "materials": [
+    [
+     "polyester",
+     100
+    ]
+   ],
+   "info": "Lockere Polyesterwatte, von Hand oder maschinell durch eine Naht gestopft. Naht auftrennen, herausziehen und als Füllung weiterverwenden.",
+   "color": "#F4F2EE",
+   "label": false
+  },
+  {
+   "id": "rumpf_0",
    "component_id": "polyester_plush",
    "material_id": "polyester",
    "name": "Rumpf (Plüschhülle)",
    "short": "Rumpf",
    "shape": "cyl",
-   "x": 35,
-   "y": 20,
-   "w": 130,
-   "d": 110,
-   "z": 0,
-   "h": 140,
+   "x": 61,
+   "y": 35,
+   "w": 78,
+   "d": 66,
+   "z": 125,
+   "h": 15,
    "explode": [
     0,
     0,
-    170.0
+    195.0
    ],
-   "mass": 57.7,
+   "mass": 2.7,
    "materials": [
     [
      "polyester",
@@ -437,16 +661,148 @@
    ],
    "info": "Größtes Schnittteil mit der Stopfnaht am Rücken. Saubere Kuscheltiere lieber verschenken; sonst Naht aufschneiden, Füllung und Kunststoffteile trennen, Rest in den Restmüll.",
    "color": "#B07A45",
+   "sortBias": 3
+  },
+  {
+   "id": "rumpf_1",
+   "component_id": "polyester_plush",
+   "material_id": "polyester",
+   "name": "Rumpf (Plüschhülle)",
+   "short": "Rumpf",
+   "shape": "cyl",
+   "x": 48,
+   "y": 24,
+   "w": 104,
+   "d": 88,
+   "z": 100,
+   "h": 25,
+   "explode": [
+    0,
+    0,
+    195.0
+   ],
+   "mass": 7.9,
+   "materials": [
+    [
+     "polyester",
+     100
+    ]
+   ],
+   "info": "Größtes Schnittteil mit der Stopfnaht am Rücken. Saubere Kuscheltiere lieber verschenken; sonst Naht aufschneiden, Füllung und Kunststoffteile trennen, Rest in den Restmüll.",
+   "color": "#B07A45",
+   "label": false,
+   "sortBias": 3,
    "marks": [
     {
      "shape": "cyl",
-     "x": 30,
-     "y": 40,
-     "w": 70,
-     "d": 60,
+     "x": 32,
+     "y": 58,
+     "w": 40,
+     "d": 26,
      "fill": "#D9B38A"
     }
    ]
+  },
+  {
+   "id": "rumpf_2",
+   "component_id": "polyester_plush",
+   "material_id": "polyester",
+   "name": "Rumpf (Plüschhülle)",
+   "short": "Rumpf",
+   "shape": "cyl",
+   "x": 38,
+   "y": 16,
+   "w": 124,
+   "d": 104,
+   "z": 60,
+   "h": 40,
+   "explode": [
+    0,
+    0,
+    195.0
+   ],
+   "mass": 18,
+   "materials": [
+    [
+     "polyester",
+     100
+    ]
+   ],
+   "info": "Größtes Schnittteil mit der Stopfnaht am Rücken. Saubere Kuscheltiere lieber verschenken; sonst Naht aufschneiden, Füllung und Kunststoffteile trennen, Rest in den Restmüll.",
+   "color": "#B07A45",
+   "label": false,
+   "sortBias": 3,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 60,
+     "y": 2,
+     "w": 4,
+     "d": 12,
+     "r": 2,
+     "fill": "#9C6A3B"
+    }
+   ]
+  },
+  {
+   "id": "rumpf_3",
+   "component_id": "polyester_plush",
+   "material_id": "polyester",
+   "name": "Rumpf (Plüschhülle)",
+   "short": "Rumpf",
+   "shape": "cyl",
+   "x": 33,
+   "y": 12,
+   "w": 134,
+   "d": 112,
+   "z": 20,
+   "h": 40,
+   "explode": [
+    0,
+    0,
+    195.0
+   ],
+   "mass": 20.8,
+   "materials": [
+    [
+     "polyester",
+     100
+    ]
+   ],
+   "info": "Größtes Schnittteil mit der Stopfnaht am Rücken. Saubere Kuscheltiere lieber verschenken; sonst Naht aufschneiden, Füllung und Kunststoffteile trennen, Rest in den Restmüll.",
+   "color": "#B07A45",
+   "label": false,
+   "sortBias": 3
+  },
+  {
+   "id": "rumpf_4",
+   "component_id": "polyester_plush",
+   "material_id": "polyester",
+   "name": "Rumpf (Plüschhülle)",
+   "short": "Rumpf",
+   "shape": "cyl",
+   "x": 42,
+   "y": 19,
+   "w": 116,
+   "d": 98,
+   "z": 0,
+   "h": 20,
+   "explode": [
+    0,
+    0,
+    195.0
+   ],
+   "mass": 7.9,
+   "materials": [
+    [
+     "polyester",
+     100
+    ]
+   ],
+   "info": "Größtes Schnittteil mit der Stopfnaht am Rücken. Saubere Kuscheltiere lieber verschenken; sonst Naht aufschneiden, Füllung und Kunststoffteile trennen, Rest in den Restmüll.",
+   "color": "#B07A45",
+   "label": false,
+   "sortBias": 3
   },
   {
    "id": "arm_links",
@@ -455,18 +811,18 @@
    "name": "Arme",
    "short": "Arme",
    "shape": "cyl",
-   "x": 2,
-   "y": 55,
-   "w": 40,
-   "d": 55,
-   "z": 70,
-   "h": 70,
+   "x": 24,
+   "y": 48,
+   "w": 36,
+   "d": 48,
+   "z": 88,
+   "h": 40,
    "explode": [
-    -50,
+    -70,
     0,
-    170.0
+    195.0
    ],
-   "mass": 11.5,
+   "mass": 6.7,
    "materials": [
     [
      "polyester",
@@ -475,13 +831,44 @@
    ],
    "info": "Gefüllte Plüschschläuche, in die Seitennähte des Rumpfs eingenäht.",
    "color": "#B07A45",
+   "sortBias": 4
+  },
+  {
+   "id": "pfote_links",
+   "component_id": "polyester_plush",
+   "material_id": "polyester",
+   "name": "Unterarm mit Pfote links",
+   "short": "Arm",
+   "shape": "cyl",
+   "x": 20,
+   "y": 76,
+   "w": 36,
+   "d": 50,
+   "z": 52,
+   "h": 36,
+   "explode": [
+    -70,
+    0,
+    195.0
+   ],
+   "mass": 4.8,
+   "materials": [
+    [
+     "polyester",
+     100
+    ]
+   ],
+   "info": "Unterarm mit heller Pfote.",
+   "color": "#B07A45",
+   "label": false,
+   "sortBias": 4,
    "marks": [
     {
      "shape": "cyl",
-     "x": 8,
-     "y": 25,
+     "x": 6,
+     "y": 26,
      "w": 24,
-     "d": 26,
+     "d": 20,
      "fill": "#D9B38A"
     }
    ]
@@ -493,18 +880,18 @@
    "name": "Arm rechts",
    "short": "Arm",
    "shape": "cyl",
-   "x": 158,
-   "y": 55,
-   "w": 40,
-   "d": 55,
-   "z": 70,
-   "h": 70,
+   "x": 140,
+   "y": 48,
+   "w": 36,
+   "d": 48,
+   "z": 88,
+   "h": 40,
    "explode": [
-    50,
+    70,
     0,
-    170.0
+    195.0
    ],
-   "mass": 11.5,
+   "mass": 6.7,
    "materials": [
     [
      "polyester",
@@ -514,13 +901,44 @@
    "info": "Zweiter Arm.",
    "color": "#B07A45",
    "label": false,
+   "sortBias": 4
+  },
+  {
+   "id": "pfote_rechts",
+   "component_id": "polyester_plush",
+   "material_id": "polyester",
+   "name": "Unterarm mit Pfote rechts",
+   "short": "Arm",
+   "shape": "cyl",
+   "x": 144,
+   "y": 76,
+   "w": 36,
+   "d": 50,
+   "z": 52,
+   "h": 36,
+   "explode": [
+    70,
+    0,
+    195.0
+   ],
+   "mass": 4.8,
+   "materials": [
+    [
+     "polyester",
+     100
+    ]
+   ],
+   "info": "Unterarm mit heller Pfote.",
+   "color": "#B07A45",
+   "label": false,
+   "sortBias": 4,
    "marks": [
     {
      "shape": "cyl",
-     "x": 8,
-     "y": 25,
+     "x": 6,
+     "y": 26,
      "w": 24,
-     "d": 26,
+     "d": 20,
      "fill": "#D9B38A"
     }
    ]
@@ -532,17 +950,17 @@
    "name": "Pflegeetikett",
    "short": "Etikett",
    "shape": "box",
-   "x": 165,
-   "y": 60,
-   "w": 0.3,
-   "d": 30,
-   "z": 15,
-   "h": 40,
-   "r": 0,
+   "x": 160,
+   "y": 24,
+   "w": 34,
+   "d": 16,
+   "z": 0,
+   "h": 0.6,
+   "r": 1,
    "explode": [
-    100,
+    90,
     0,
-    170.0
+    0
    ],
    "mass": 1,
    "materials": [
@@ -556,7 +974,36 @@
     ]
    ],
    "info": "Eingenähtes Etikett mit Material, Waschhinweis und CE-Zeichen. Es besteht wie der Plüsch aus Polyester und darf dranbleiben.",
-   "color": "#F4F2EE"
+   "color": "#F4F2EE",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 14,
+     "y": 3,
+     "w": 17,
+     "d": 2,
+     "r": 0,
+     "fill": "#9AA0A6"
+    },
+    {
+     "shape": "box",
+     "x": 14,
+     "y": 7,
+     "w": 17,
+     "d": 2,
+     "r": 0,
+     "fill": "#9AA0A6"
+    },
+    {
+     "shape": "box",
+     "x": 14,
+     "y": 11,
+     "w": 12,
+     "d": 2,
+     "r": 0,
+     "fill": "#9AA0A6"
+    }
+   ]
   },
   {
    "id": "bein_links",
@@ -565,18 +1012,18 @@
    "name": "Beine",
    "short": "Beine",
    "shape": "cyl",
-   "x": 38,
-   "y": 75,
-   "w": 52,
-   "d": 75,
+   "x": 40,
+   "y": 74,
+   "w": 54,
+   "d": 42,
    "z": 0,
-   "h": 48,
+   "h": 40,
    "explode": [
     0,
-    85,
-    170.0
+    170,
+    0
    ],
-   "mass": 14.4,
+   "mass": 9.6,
    "materials": [
     [
      "polyester",
@@ -585,16 +1032,68 @@
    ],
    "info": "Gefüllte Beine mit eingesetzter Fußsohle aus hellem Stoff.",
    "color": "#B07A45",
-   "marks": [
-    {
-     "shape": "cyl",
-     "x": 10,
-     "y": 45,
-     "w": 32,
-     "d": 26,
-     "fill": "#D9B38A"
-    }
-   ]
+   "sortBias": 4
+  },
+  {
+   "id": "fuss_links",
+   "component_id": "polyester_plush",
+   "material_id": "polyester",
+   "name": "Fuß links",
+   "short": "Fuß",
+   "shape": "cyl",
+   "x": 42,
+   "y": 116,
+   "w": 50,
+   "d": 29,
+   "z": 0,
+   "h": 50,
+   "explode": [
+    0,
+    170,
+    0
+   ],
+   "mass": 4.8,
+   "materials": [
+    [
+     "polyester",
+     100
+    ]
+   ],
+   "info": "Fuß mit eingesetzter Sohle.",
+   "color": "#B07A45",
+   "label": false,
+   "sortBias": 5
+  },
+  {
+   "id": "sohle_links",
+   "component_id": "polyester_plush",
+   "material_id": "polyester",
+   "name": "Fußsohle links",
+   "short": "Sohle",
+   "shape": "box",
+   "x": 50,
+   "y": 145,
+   "w": 34,
+   "d": 4,
+   "z": 7,
+   "h": 36,
+   "r": 2,
+   "explode": [
+    0,
+    170,
+    0
+   ],
+   "mass": 1,
+   "materials": [
+    [
+     "polyester",
+     100
+    ]
+   ],
+   "info": "Helle Sohle aus kurzflorigem Stoff, rundherum eingenäht.",
+   "color": "#D9B38A",
+   "label": false,
+   "sortBias": 6
   },
   {
    "id": "bein_rechts",
@@ -603,18 +1102,18 @@
    "name": "Bein rechts",
    "short": "Bein",
    "shape": "cyl",
-   "x": 110,
-   "y": 75,
-   "w": 52,
-   "d": 75,
+   "x": 106,
+   "y": 74,
+   "w": 54,
+   "d": 42,
    "z": 0,
-   "h": 48,
+   "h": 40,
    "explode": [
     0,
-    85,
-    170.0
+    170,
+    0
    ],
-   "mass": 14.4,
+   "mass": 9.6,
    "materials": [
     [
      "polyester",
@@ -624,36 +1123,88 @@
    "info": "Zweites Bein.",
    "color": "#B07A45",
    "label": false,
-   "marks": [
-    {
-     "shape": "cyl",
-     "x": 10,
-     "y": 45,
-     "w": 32,
-     "d": 26,
-     "fill": "#D9B38A"
-    }
-   ]
+   "sortBias": 4
   },
   {
-   "id": "rumpffuellung",
+   "id": "fuss_rechts",
+   "component_id": "polyester_plush",
+   "material_id": "polyester",
+   "name": "Fuß rechts",
+   "short": "Fuß",
+   "shape": "cyl",
+   "x": 108,
+   "y": 116,
+   "w": 50,
+   "d": 29,
+   "z": 0,
+   "h": 50,
+   "explode": [
+    0,
+    170,
+    0
+   ],
+   "mass": 4.8,
+   "materials": [
+    [
+     "polyester",
+     100
+    ]
+   ],
+   "info": "Fuß mit eingesetzter Sohle.",
+   "color": "#B07A45",
+   "label": false,
+   "sortBias": 5
+  },
+  {
+   "id": "sohle_rechts",
+   "component_id": "polyester_plush",
+   "material_id": "polyester",
+   "name": "Fußsohle rechts",
+   "short": "Sohle",
+   "shape": "box",
+   "x": 116,
+   "y": 145,
+   "w": 34,
+   "d": 4,
+   "z": 7,
+   "h": 36,
+   "r": 2,
+   "explode": [
+    0,
+    170,
+    0
+   ],
+   "mass": 1,
+   "materials": [
+    [
+     "polyester",
+     100
+    ]
+   ],
+   "info": "Helle Sohle aus kurzflorigem Stoff, rundherum eingenäht.",
+   "color": "#D9B38A",
+   "label": false,
+   "sortBias": 6
+  },
+  {
+   "id": "rumpffuellung_0",
    "component_id": "polyester_fill",
    "material_id": "polyester",
    "name": "Füllung Rumpf",
    "short": "Füllung Rumpf",
    "shape": "cyl",
-   "x": 40,
-   "y": 25,
-   "w": 120,
-   "d": 100,
-   "z": 5,
-   "h": 135,
+   "x": 52,
+   "y": 28,
+   "w": 96,
+   "d": 80,
+   "z": 100,
+   "h": 25,
    "explode": [
     0,
     0,
     0.0
    ],
-   "mass": 86.5,
+   "mass": 12.5,
    "materials": [
     [
      "polyester",
@@ -665,13 +1216,108 @@
    "marks": [
     {
      "shape": "cyl",
-     "x": 25,
-     "y": 20,
-     "w": 70,
-     "d": 60,
-     "fill": "#E8E4DA"
+     "x": 18,
+     "y": 14,
+     "w": 34,
+     "d": 26,
+     "fill": "#E3DFD6"
+    },
+    {
+     "shape": "cyl",
+     "x": 46,
+     "y": 40,
+     "w": 32,
+     "d": 28,
+     "fill": "#E3DFD6"
     }
    ]
+  },
+  {
+   "id": "rumpffuellung_1",
+   "component_id": "polyester_fill",
+   "material_id": "polyester",
+   "name": "Füllung Rumpf",
+   "short": "Füllung Rumpf",
+   "shape": "cyl",
+   "x": 42,
+   "y": 20,
+   "w": 116,
+   "d": 96,
+   "z": 60,
+   "h": 40,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 29.1,
+   "materials": [
+    [
+     "polyester",
+     100
+    ]
+   ],
+   "info": "Der größte Teil der Watte. Manche Kuscheltiere haben unten zusätzlich ein Säckchen mit Kunststoffgranulat, damit sie sitzen.",
+   "color": "#F4F2EE",
+   "label": false
+  },
+  {
+   "id": "rumpffuellung_2",
+   "component_id": "polyester_fill",
+   "material_id": "polyester",
+   "name": "Füllung Rumpf",
+   "short": "Füllung Rumpf",
+   "shape": "cyl",
+   "x": 37,
+   "y": 16,
+   "w": 126,
+   "d": 104,
+   "z": 20,
+   "h": 40,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 34.2,
+   "materials": [
+    [
+     "polyester",
+     100
+    ]
+   ],
+   "info": "Der größte Teil der Watte. Manche Kuscheltiere haben unten zusätzlich ein Säckchen mit Kunststoffgranulat, damit sie sitzen.",
+   "color": "#F4F2EE",
+   "label": false
+  },
+  {
+   "id": "rumpffuellung_3",
+   "component_id": "polyester_fill",
+   "material_id": "polyester",
+   "name": "Füllung Rumpf",
+   "short": "Füllung Rumpf",
+   "shape": "cyl",
+   "x": 46,
+   "y": 23,
+   "w": 108,
+   "d": 90,
+   "z": 4,
+   "h": 16,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 10.1,
+   "materials": [
+    [
+     "polyester",
+     100
+    ]
+   ],
+   "info": "Der größte Teil der Watte. Manche Kuscheltiere haben unten zusätzlich ein Säckchen mit Kunststoffgranulat, damit sie sitzen.",
+   "color": "#F4F2EE",
+   "label": false
   }
  ]
 }

@@ -35,8 +35,11 @@ teile = [
          info='Die flache Oberseite. Ihre Fläche erzeugt beim Fliegen Auftrieb wie ein Flügel; '
               'die feinen Rillen (Flugringe) beruhigen die Luftströmung.',
          marks=[ring(250, 230, '#E2E3DE'), ring(250, 220, FARBE), ring(250, 206, '#E2E3DE'), ring(250, 196, FARBE)]),
+    teil('schulter_oben', 'pp_disc', 'Schulter oben', 'Schulter', 'cyl', label=False,
+         x=mitte(262), y=mitte(262), w=262, z=25, h=2, mass=14, color='#E6E7E2',
+         info='Oberer, stärker gewölbter Teil der Schulter.', marks=[ring(262, 250)]),
     teil('schulter', 'pp_disc', 'Schulter', 'Schulter', 'cyl',
-         x=0, y=0, w=D, z=22, h=5, mass=40, color='#E6E7E2',
+         x=0, y=0, w=D, z=22, h=3, mass=26, color='#E6E7E2',
          info='Gewölbter Übergang zwischen Platte und Rand. Hier ist die Scheibe am stabilsten.',
          marks=[ring(D, 250)]),
     teil('rand', 'pp_disc', 'Rand (Lippe)', 'Rand', 'cyl',
@@ -46,6 +49,6 @@ teile = [
          marks=[ring(D, 258), ring(D, 250, '#B5B8B4')]),
 ]
 
-explodiere(teile, abstand=80, abstaende={'aufdruck': 40})
+explodiere(teile, abstand=80, abstaende={'aufdruck': 40}, gruppen=[['schulter_oben', 'schulter']])
 skaliere_masse(teile, oid='frisbee')
 schreibe('frisbee', teile)

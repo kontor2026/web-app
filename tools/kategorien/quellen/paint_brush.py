@@ -35,16 +35,25 @@ teile = [
          materials=[['klebstoff', 60], ['polyester', 40]],
          info='Harter Kleber hält die Borstenenden in der Zwinge fest. Er lässt sich nicht von den Borsten lösen.',
          color='#8F7A52', marks=[mark('box', 1, 2, 39, 20, 2, '#A68E62')]),
+    teil('borsten_spitze', 'synthetic_bristles', 'Borstenspitzen', 'Borsten', 'box', label=False,
+         x=2, y=214, w=41, d=16, z=3.5, h=8, r=2, explode=[0, 80, 0], mass=2,
+         info='Die Borsten laufen zur Spitze dünner zu, damit der Pinsel eine saubere Kante zieht.',
+         color=BORSTE, marks=raster(2, 1, 10, 1, 2, 14, 4, r=1, fill='#4E4740')),
     teil('borsten', 'synthetic_bristles', 'Kunstborsten', 'Borsten', 'box',
-         x=1, y=180, w=43, d=50, z=1.5, h=12, r=2, explode=[0, 80, 0], mass=9,
+         x=1, y=180, w=43, d=34, z=1.5, h=12, r=2, explode=[0, 80, 0], mass=7,
          info='Feine Polyesterfasern mit gespaltenen Spitzen. Pinsel auswaschen und wiederverwenden; '
               'mit eingetrockneter Farbe gehört er in den Restmüll, nie Farbreste in den Ausguss.',
-         color=BORSTE, marks=raster(2, 2, 10, 1, 2, 46, 4.2, r=1, fill='#4E4740')),
+         color=BORSTE, marks=raster(2, 2, 10, 1, 2, 30, 4.2, r=1, fill='#4E4740')),
+    teil('stiel_hals', 'wooden_handle', 'Stielhals', 'Stiel', 'box', label=False,
+         x=8.5, y=112, w=28, d=48, z=1, h=13, r=6, explode=[0, -40, 0], mass=5, color=HOLZ,
+         info='Verdickter Hals des Stiels, auf dem die Zwinge sitzt.',
+         marks=[mark('box', 4, 2, 20, 30, 6, '#C27646')]),
     teil('stiel', 'wooden_handle', 'Holzstiel', 'Stiel', 'box',
-         x=10, y=0, w=25, d=160, z=1.5, h=12, r=6, explode=[0, -40, 0], mass=18,
+         x=11, y=0, w=23, d=112, z=2, h=11, r=6, explode=[0, -40, 0], mass=13,
          info='Buchenholz, farbig lackiert, mit Loch zum Aufhängen. Nach dem Abtrennen der Zwinge kann das Holz '
               'wiederverwendet werden.',
-         color=HOLZ, marks=[mark('cyl', 9, 10, 7, fill='#5A3A22'), mark('box', 3, 30, 19, 110, 6, '#C27646')]),
+         color=HOLZ, marks=[mark('cyl', 8, 10, 7, fill='#5A3A22'), mark('box', 3, 26, 17, 84, 6, '#C27646'),
+                mark('box', 7, 60, 9, 22, 2, '#E9D9B8')]),
 ]
 
 skaliere_masse(teile, oid='paint_brush')

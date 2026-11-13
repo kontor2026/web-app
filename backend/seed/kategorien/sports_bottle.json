@@ -39,8 +39,8 @@
   "metalle_mg": {},
   "herkunft": {},
   "materialien_g": {
-   "ldpe": 79.8,
-   "pp": 19.2,
+   "ldpe": 79.4,
+   "pp": 19.6,
    "silicone": 1.0
   },
   "co2_kg": 0.217,
@@ -140,9 +140,9 @@
    "explode": [
     0,
     0,
-    84.0
+    116.0
    ],
-   "mass": 3,
+   "mass": 3.1,
    "materials": [
     [
      "pp",
@@ -177,9 +177,9 @@
    "explode": [
     0,
     0,
-    58.0
+    82.0
    ],
-   "mass": 4,
+   "mass": 4.1,
    "materials": [
     [
      "ldpe",
@@ -206,6 +206,43 @@
    ]
   },
   {
+   "id": "deckel_kuppe",
+   "component_id": "pp_flip_cap",
+   "material_id": "pp",
+   "name": "Deckelkuppe",
+   "short": "Deckel",
+   "shape": "cyl",
+   "x": 15,
+   "y": 15,
+   "w": 40,
+   "z": 220,
+   "h": 6,
+   "explode": [
+    0,
+    0,
+    56.0
+   ],
+   "mass": 4.1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Abgeschrägte Oberseite des Deckels, in der das Mundstück steckt.",
+   "color": "#2B2F33",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 6,
+     "y": 6,
+     "w": 28,
+     "fill": "#1C1F22"
+    }
+   ]
+  },
+  {
    "id": "deckel",
    "component_id": "pp_flip_cap",
    "material_id": "pp",
@@ -216,13 +253,13 @@
    "y": 11,
    "w": 48,
    "z": 205,
-   "h": 21,
+   "h": 15,
    "explode": [
     0,
     0,
-    40.0
+    56.0
    ],
-   "mass": 16.2,
+   "mass": 12.4,
    "materials": [
     [
      "pp",
@@ -232,20 +269,6 @@
    "info": "Schraubdeckel aus PP mit Griffrippen. Abschrauben, Mundstück abziehen: Beides ist PP bzw. PE.",
    "color": "#2B2F33",
    "marks": [
-    {
-     "shape": "cyl",
-     "x": 8,
-     "y": 8,
-     "w": 32,
-     "fill": "#1C1F22"
-    },
-    {
-     "shape": "cyl",
-     "x": 13,
-     "y": 13,
-     "w": 22,
-     "fill": "#4A4F55"
-    },
     {
      "shape": "box",
      "x": 22.5,
@@ -281,6 +304,42 @@
      "d": 3,
      "r": 1,
      "fill": "#43484E"
+    },
+    {
+     "shape": "box",
+     "x": 7,
+     "y": 7,
+     "w": 3,
+     "d": 3,
+     "r": 1,
+     "fill": "#43484E"
+    },
+    {
+     "shape": "box",
+     "x": 38,
+     "y": 7,
+     "w": 3,
+     "d": 3,
+     "r": 1,
+     "fill": "#43484E"
+    },
+    {
+     "shape": "box",
+     "x": 7,
+     "y": 38,
+     "w": 3,
+     "d": 3,
+     "r": 1,
+     "fill": "#43484E"
+    },
+    {
+     "shape": "box",
+     "x": 38,
+     "y": 38,
+     "w": 3,
+     "d": 3,
+     "r": 1,
+     "fill": "#43484E"
     }
    ]
   },
@@ -299,7 +358,7 @@
    "explode": [
     0,
     0,
-    16.0
+    24.0
    ],
    "mass": 1,
    "materials": [
@@ -337,7 +396,7 @@
     0,
     0.0
    ],
-   "mass": 4,
+   "mass": 4.1,
    "materials": [
     [
      "ldpe",
@@ -357,30 +416,86 @@
    ]
   },
   {
-   "id": "schulter",
+   "id": "schulter_0",
    "component_id": "ldpe_squeeze_body",
    "material_id": "ldpe",
    "name": "Flaschenschulter",
    "short": "Schulter",
    "shape": "cyl",
-   "x": 4,
-   "y": 4,
-   "w": 62,
-   "z": 186,
-   "h": 12,
+   "x": 11,
+   "y": 11,
+   "w": 48,
+   "z": 194,
+   "h": 4,
    "explode": [
     0,
     0,
     0.0
    ],
-   "mass": 6.1,
+   "mass": 1,
    "materials": [
     [
      "ldpe",
      100
     ]
    ],
-   "info": "Übergang vom Körper zum Hals.",
+   "info": "Gerundeter Übergang vom Körper zum Hals.",
+   "color": "#3E8FC9",
+   "label": false
+  },
+  {
+   "id": "schulter_1",
+   "component_id": "ldpe_squeeze_body",
+   "material_id": "ldpe",
+   "name": "Flaschenschulter",
+   "short": "Schulter",
+   "shape": "cyl",
+   "x": 6,
+   "y": 6,
+   "w": 58,
+   "z": 188,
+   "h": 6,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 2.1,
+   "materials": [
+    [
+     "ldpe",
+     100
+    ]
+   ],
+   "info": "Gerundeter Übergang vom Körper zum Hals.",
+   "color": "#3E8FC9",
+   "label": false
+  },
+  {
+   "id": "schulter_2",
+   "component_id": "ldpe_squeeze_body",
+   "material_id": "ldpe",
+   "name": "Flaschenschulter",
+   "short": "Schulter",
+   "shape": "cyl",
+   "x": 2,
+   "y": 2,
+   "w": 66,
+   "z": 180,
+   "h": 8,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 3.1,
+   "materials": [
+    [
+     "ldpe",
+     100
+    ]
+   ],
+   "info": "Gerundeter Übergang vom Körper zum Hals.",
    "color": "#3E8FC9",
    "label": false
   },
@@ -394,14 +509,14 @@
    "x": 0,
    "y": 0,
    "w": 70,
-   "z": 135,
-   "h": 51,
+   "z": 142,
+   "h": 38,
    "explode": [
     0,
     0,
     0.0
    ],
-   "mass": 20.2,
+   "mass": 16.5,
    "materials": [
     [
      "ldpe",
@@ -413,23 +528,51 @@
    "label": false
   },
   {
+   "id": "taille_oben",
+   "component_id": "ldpe_squeeze_body",
+   "material_id": "ldpe",
+   "name": "Griffmulde",
+   "short": "Griffmulde",
+   "shape": "cyl",
+   "x": 2,
+   "y": 2,
+   "w": 66,
+   "z": 134,
+   "h": 8,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 3.1,
+   "materials": [
+    [
+     "ldpe",
+     100
+    ]
+   ],
+   "info": "Übergang zur Griffmulde.",
+   "color": "#3E8FC9",
+   "label": false
+  },
+  {
    "id": "taille",
    "component_id": "ldpe_squeeze_body",
    "material_id": "ldpe",
    "name": "Griffmulde",
    "short": "Griffmulde",
    "shape": "cyl",
-   "x": 3,
-   "y": 3,
-   "w": 64,
-   "z": 100,
-   "h": 35,
+   "x": 4.5,
+   "y": 4.5,
+   "w": 61,
+   "z": 104,
+   "h": 30,
    "explode": [
     0,
     0,
     0.0
    ],
-   "mass": 12.1,
+   "mass": 10.3,
    "materials": [
     [
      "ldpe",
@@ -437,6 +580,43 @@
     ]
    ],
    "info": "Schmalere Taille, damit die Flasche gut in der Hand liegt.",
+   "color": "#3E8FC9",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 3,
+     "w": 55,
+     "fill": "#2F78AD"
+    }
+   ]
+  },
+  {
+   "id": "taille_unten",
+   "component_id": "ldpe_squeeze_body",
+   "material_id": "ldpe",
+   "name": "Griffmulde",
+   "short": "Griffmulde",
+   "shape": "cyl",
+   "x": 2,
+   "y": 2,
+   "w": 66,
+   "z": 96,
+   "h": 8,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 3.1,
+   "materials": [
+    [
+     "ldpe",
+     100
+    ]
+   ],
+   "info": "Übergang von der Griffmulde zum Körper.",
    "color": "#3E8FC9",
    "label": false
   },
@@ -450,14 +630,14 @@
    "x": 0,
    "y": 0,
    "w": 70,
-   "z": 5,
-   "h": 95,
+   "z": 6,
+   "h": 90,
    "explode": [
     0,
     0,
     0.0
    ],
-   "mass": 28.3,
+   "mass": 26.8,
    "materials": [
     [
      "ldpe",
@@ -478,13 +658,13 @@
    "y": 3,
    "w": 64,
    "z": 0,
-   "h": 5,
+   "h": 6,
    "explode": [
     0,
     0,
     0.0
    ],
-   "mass": 5.1,
+   "mass": 5.2,
    "materials": [
     [
      "ldpe",

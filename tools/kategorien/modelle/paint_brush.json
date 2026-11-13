@@ -181,6 +181,128 @@
    ]
   },
   {
+   "id": "borsten_spitze",
+   "component_id": "synthetic_bristles",
+   "material_id": "polyester",
+   "name": "Borstenspitzen",
+   "short": "Borsten",
+   "shape": "box",
+   "x": 2,
+   "y": 214,
+   "w": 41,
+   "d": 16,
+   "z": 3.5,
+   "h": 8,
+   "r": 2,
+   "explode": [
+    0,
+    80,
+    0
+   ],
+   "mass": 2,
+   "materials": [
+    [
+     "polyester",
+     100
+    ]
+   ],
+   "info": "Die Borsten laufen zur Spitze dünner zu, damit der Pinsel eine saubere Kante zieht.",
+   "color": "#3B3530",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 1,
+     "w": 2,
+     "d": 14,
+     "r": 1,
+     "fill": "#4E4740"
+    },
+    {
+     "shape": "box",
+     "x": 6,
+     "y": 1,
+     "w": 2,
+     "d": 14,
+     "r": 1,
+     "fill": "#4E4740"
+    },
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 1,
+     "w": 2,
+     "d": 14,
+     "r": 1,
+     "fill": "#4E4740"
+    },
+    {
+     "shape": "box",
+     "x": 14,
+     "y": 1,
+     "w": 2,
+     "d": 14,
+     "r": 1,
+     "fill": "#4E4740"
+    },
+    {
+     "shape": "box",
+     "x": 18,
+     "y": 1,
+     "w": 2,
+     "d": 14,
+     "r": 1,
+     "fill": "#4E4740"
+    },
+    {
+     "shape": "box",
+     "x": 22,
+     "y": 1,
+     "w": 2,
+     "d": 14,
+     "r": 1,
+     "fill": "#4E4740"
+    },
+    {
+     "shape": "box",
+     "x": 26,
+     "y": 1,
+     "w": 2,
+     "d": 14,
+     "r": 1,
+     "fill": "#4E4740"
+    },
+    {
+     "shape": "box",
+     "x": 30,
+     "y": 1,
+     "w": 2,
+     "d": 14,
+     "r": 1,
+     "fill": "#4E4740"
+    },
+    {
+     "shape": "box",
+     "x": 34,
+     "y": 1,
+     "w": 2,
+     "d": 14,
+     "r": 1,
+     "fill": "#4E4740"
+    },
+    {
+     "shape": "box",
+     "x": 38,
+     "y": 1,
+     "w": 2,
+     "d": 14,
+     "r": 1,
+     "fill": "#4E4740"
+    }
+   ]
+  },
+  {
    "id": "borsten",
    "component_id": "synthetic_bristles",
    "material_id": "polyester",
@@ -190,7 +312,7 @@
    "x": 1,
    "y": 180,
    "w": 43,
-   "d": 50,
+   "d": 34,
    "z": 1.5,
    "h": 12,
    "r": 2,
@@ -199,7 +321,7 @@
     80,
     0
    ],
-   "mass": 8.9,
+   "mass": 6.9,
    "materials": [
     [
      "polyester",
@@ -214,7 +336,7 @@
      "x": 2.0,
      "y": 2.0,
      "w": 2,
-     "d": 46,
+     "d": 30,
      "r": 1,
      "fill": "#4E4740"
     },
@@ -223,7 +345,7 @@
      "x": 6.2,
      "y": 2.0,
      "w": 2,
-     "d": 46,
+     "d": 30,
      "r": 1,
      "fill": "#4E4740"
     },
@@ -232,7 +354,7 @@
      "x": 10.4,
      "y": 2.0,
      "w": 2,
-     "d": 46,
+     "d": 30,
      "r": 1,
      "fill": "#4E4740"
     },
@@ -241,7 +363,7 @@
      "x": 14.6,
      "y": 2.0,
      "w": 2,
-     "d": 46,
+     "d": 30,
      "r": 1,
      "fill": "#4E4740"
     },
@@ -250,7 +372,7 @@
      "x": 18.8,
      "y": 2.0,
      "w": 2,
-     "d": 46,
+     "d": 30,
      "r": 1,
      "fill": "#4E4740"
     },
@@ -259,7 +381,7 @@
      "x": 23.0,
      "y": 2.0,
      "w": 2,
-     "d": 46,
+     "d": 30,
      "r": 1,
      "fill": "#4E4740"
     },
@@ -268,7 +390,7 @@
      "x": 27.2,
      "y": 2.0,
      "w": 2,
-     "d": 46,
+     "d": 30,
      "r": 1,
      "fill": "#4E4740"
     },
@@ -277,7 +399,7 @@
      "x": 31.4,
      "y": 2.0,
      "w": 2,
-     "d": 46,
+     "d": 30,
      "r": 1,
      "fill": "#4E4740"
     },
@@ -286,7 +408,7 @@
      "x": 35.6,
      "y": 2.0,
      "w": 2,
-     "d": 46,
+     "d": 30,
      "r": 1,
      "fill": "#4E4740"
     },
@@ -295,9 +417,50 @@
      "x": 39.8,
      "y": 2.0,
      "w": 2,
-     "d": 46,
+     "d": 30,
      "r": 1,
      "fill": "#4E4740"
+    }
+   ]
+  },
+  {
+   "id": "stiel_hals",
+   "component_id": "wooden_handle",
+   "material_id": "wood",
+   "name": "Stielhals",
+   "short": "Stiel",
+   "shape": "box",
+   "x": 8.5,
+   "y": 112,
+   "w": 28,
+   "d": 48,
+   "z": 1,
+   "h": 13,
+   "r": 6,
+   "explode": [
+    0,
+    -40,
+    0
+   ],
+   "mass": 5,
+   "materials": [
+    [
+     "holz",
+     100
+    ]
+   ],
+   "info": "Verdickter Hals des Stiels, auf dem die Zwinge sitzt.",
+   "color": "#B5683A",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 2,
+     "w": 20,
+     "d": 30,
+     "r": 6,
+     "fill": "#C27646"
     }
    ]
   },
@@ -308,19 +471,19 @@
    "name": "Holzstiel",
    "short": "Stiel",
    "shape": "box",
-   "x": 10,
+   "x": 11,
    "y": 0,
-   "w": 25,
-   "d": 160,
-   "z": 1.5,
-   "h": 12,
+   "w": 23,
+   "d": 112,
+   "z": 2,
+   "h": 11,
    "r": 6,
    "explode": [
     0,
     -40,
     0
    ],
-   "mass": 17.8,
+   "mass": 12.9,
    "materials": [
     [
      "holz",
@@ -332,7 +495,7 @@
    "marks": [
     {
      "shape": "cyl",
-     "x": 9,
+     "x": 8,
      "y": 10,
      "w": 7,
      "fill": "#5A3A22"
@@ -340,11 +503,20 @@
     {
      "shape": "box",
      "x": 3,
-     "y": 30,
-     "w": 19,
-     "d": 110,
+     "y": 26,
+     "w": 17,
+     "d": 84,
      "r": 6,
      "fill": "#C27646"
+    },
+    {
+     "shape": "box",
+     "x": 7,
+     "y": 60,
+     "w": 9,
+     "d": 22,
+     "r": 2,
+     "fill": "#E9D9B8"
     }
    ]
   }

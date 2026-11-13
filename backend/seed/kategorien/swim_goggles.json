@@ -31,7 +31,7 @@
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 0,15 kg",
+   "v": "≈ 0,14 kg",
    "hint": "spart 0,01 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
@@ -39,13 +39,13 @@
   "metalle_mg": {},
   "herkunft": {},
   "materialien_g": {
-   "silicone": 14.0,
-   "pc": 12.0,
-   "pp": 4.0
+   "silicone": 13.5,
+   "pc": 11.6,
+   "pp": 4.8
   },
-  "co2_kg": 0.154,
-  "co2_mit_recyclat_kg": 0.148,
-  "co2_ersparnis_kg": 0.007,
+  "co2_kg": 0.151,
+  "co2_mit_recyclat_kg": 0.143,
+  "co2_ersparnis_kg": 0.008,
   "co2_ohne_faktor": [],
   "rohstoffwert_eur": 0,
   "wert_ohne_preis": [],
@@ -144,7 +144,7 @@
     0,
     35
    ],
-   "mass": 1,
+   "mass": 0.97,
    "materials": [
     [
      "pp",
@@ -192,7 +192,7 @@
     0,
     15
    ],
-   "mass": 6,
+   "mass": 5.81,
    "materials": [
     [
      "pcabs",
@@ -248,7 +248,7 @@
     0,
     15
    ],
-   "mass": 6,
+   "mass": 5.81,
    "materials": [
     [
      "pcabs",
@@ -305,7 +305,7 @@
     0,
     0
    ],
-   "mass": 1.5,
+   "mass": 1.45,
    "materials": [
     [
      "pp",
@@ -346,7 +346,7 @@
     0,
     0
    ],
-   "mass": 1.5,
+   "mass": 1.45,
    "materials": [
     [
      "pp",
@@ -386,7 +386,7 @@
     0,
     0
    ],
-   "mass": 3,
+   "mass": 2.9,
    "materials": [
     [
      "gummi",
@@ -425,7 +425,7 @@
     0,
     0
    ],
-   "mass": 3,
+   "mass": 2.9,
    "materials": [
     [
      "gummi",
@@ -465,7 +465,7 @@
     60,
     0
    ],
-   "mass": 8,
+   "mass": 7.74,
    "materials": [
     [
      "gummi",
@@ -492,6 +492,55 @@
      "d": 3,
      "r": 1.5,
      "fill": "#235C8B"
+    }
+   ]
+  },
+  {
+   "id": "bandschieber",
+   "component_id": "silicone_head_strap",
+   "material_id": "pp",
+   "name": "Bandschieber",
+   "short": "Schieber",
+   "shape": "box",
+   "x": 70,
+   "y": 29,
+   "w": 20,
+   "d": 12,
+   "z": 2,
+   "h": 3,
+   "r": 2,
+   "explode": [
+    0,
+    60,
+    12
+   ],
+   "mass": 0.97,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Kleiner Kunststoffschieber hinten am Kopfband, der die beiden Bandhälften zusammenhält. Er lässt sich einfach abziehen.",
+   "color": "#E8EAEC",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 3,
+     "w": 14,
+     "d": 2,
+     "r": 1,
+     "fill": "#B9BEC2"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 7,
+     "w": 14,
+     "d": 2,
+     "r": 1,
+     "fill": "#B9BEC2"
     }
    ]
   }

@@ -34,15 +34,24 @@ def saitenbild(ox, oy, fill):
 
 teile = [
     teil('saiten', 'nylon_strings', 'Bespannung', 'Saiten', 'cyl',
-         x=15, y=12, w=SW, d=SD, z=14, h=1, mass=5, color=SAITE, opacity=0.5,
+         x=15, y=12, w=SW, d=SD, z=17, h=1, mass=5, color=SAITE, opacity=0.5, sortBias=6,
          info='Etwa 10 m Nylonsaite, mit rund 9 kg je Saite gespannt. Vor dem Entsorgen quer in der Mitte '
               'durchschneiden, damit nichts zurückschnellt.',
          marks=saitenbild(0, 0, SAITE_D)),
+    teil('oesenband', 'aluminium_racket_frame', 'Ösenband', 'Ösenband', 'cyl',
+         material_id='nylon', x=9, y=6, w=SW + 12, d=SD + 12, z=11, h=6, mass=3, materials=[['nylon', 100]],
+         color='#2B2F33',
+         info='Kunststoffband mit kleinen Röhrchen (Ösen), damit die Saiten nicht am scharfen Alurand reißen. '
+              'Nach dem Ausschneiden der Saiten lässt es sich herausziehen.',
+         marks=[mark('cyl', 6, 6, SW, SD, fill='#E7E5DD')] + [
+             mark('cyl', round(SW / 2 + 6 + (SW / 2 + 3) * math.cos(t) - 1.5, 1),
+                  round(SD / 2 + 6 + (SD / 2 + 3) * math.sin(t) - 1.5, 1), 3, fill='#8A9096')
+             for t in [k * 2 * math.pi / 40 for k in range(40)]]),
     teil('rahmen', 'aluminium_racket_frame', 'Schlägerkopf (Aluminiumrahmen)', 'Rahmen', 'cyl',
          x=2, y=0, w=216, d=250, z=10, h=9, mass=42, materials=[['alu', 94], ['nylon', 6]], color=ALU,
          info='Gebogenes Aluminiumprofil mit Kunststoffösen für die Saiten. Ohne Saiten ist der Rahmen Altmetall '
               'für den Wertstoffhof.',
-         marks=[mark('cyl', 13, 12, SW, SD, fill='#E7E5DD')] + saitenbild(13, 12, '#C9C4B3')),
+         marks=[mark('cyl', 13, 12, SW, SD, fill='#E7E5DD'), mark('box', 98, 2, 20, 4, 2, '#2B2F33')]),
     teil('t_stueck', 'aluminium_racket_frame', 'T-Stück', 'T-Stück', 'box',
          material_id='abs', x=100, y=245, w=20, d=30, z=9, h=11, r=4, mass=5, color='#2B2F33',
          explode=[0, 20, 0],
@@ -50,7 +59,8 @@ teile = [
     teil('schaft', 'aluminium_racket_frame', 'Schaft aus Stahl', 'Schaft', 'box',
          material_id='steel', x=106.5, y=275, w=7, d=195, z=11, h=7, r=3.5, mass=18, color='#8E979E',
          explode=[0, 45, 0],
-         info='Dünnes Stahlrohr, das den Schlag federnd überträgt. Mit einem Magneten erkennt man: Stahl, kein Alu.'),
+         info='Dünnes Stahlrohr, das den Schlag federnd überträgt. Mit einem Magneten erkennt man: Stahl, kein Alu.',
+         marks=[mark('box', 1.5, 60, 4, 50, 2, '#C8323C'), mark('box', 1.5, 115, 4, 12, 2, '#E7E5DD')]),
     teil('griffband', 'racket_grip', 'Griffband', 'Griffband', 'box',
          x=96, y=478, w=28, d=184, z=0, h=28, r=9, mass=7, materials=[['kunstleder', 85], ['klebstoff', 15]],
          color='#C8323C', explode=[70, 70, 0],
@@ -65,6 +75,6 @@ teile = [
          explode=[0, 100, 0],
          info='Aufgesteckte Kunststoffkappe am Griffende, oft mit Logo.'),
 ]
-explodiere(teile, abstand=40, fest=('rahmen',))
+explodiere(teile, abstand=40, fest=('rahmen',), abstaende={'saiten': 60, 'oesenband': 60})
 skaliere_masse(teile, oid='badminton_racket')
 schreibe('badminton_racket', teile)

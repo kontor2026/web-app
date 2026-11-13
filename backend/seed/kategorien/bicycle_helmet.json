@@ -26,28 +26,28 @@
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 0,79 kg",
+   "v": "≈ 0,80 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 0,40 kg",
-   "hint": "spart 0,40 kg, wenn recycelte Materialien eingesetzt werden"
+   "v": "≈ 0,42 kg",
+   "hint": "spart 0,38 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
   "metalle_mg": {},
   "herkunft": {},
   "materialien_g": {
-   "eps": 164.4,
-   "pp": 53.4,
-   "pc": 41.1,
-   "nylon": 30.8,
-   "pu_foam": 10.3
+   "eps": 157.9,
+   "pp": 51.4,
+   "pc": 51.3,
+   "nylon": 29.5,
+   "pu_foam": 9.9
   },
-  "co2_kg": 0.792,
-  "co2_mit_recyclat_kg": 0.397,
-  "co2_ersparnis_kg": 0.395,
+  "co2_kg": 0.801,
+  "co2_mit_recyclat_kg": 0.422,
+  "co2_ersparnis_kg": 0.379,
   "co2_ohne_faktor": [],
   "rohstoffwert_eur": 0,
   "wert_ohne_preis": [],
@@ -134,18 +134,18 @@
    "name": "Außenschale aus Polycarbonat",
    "short": "Schale",
    "shape": "cyl",
-   "x": 39.45,
-   "y": 50.75,
-   "w": 131.1,
-   "d": 168.5,
-   "z": 135,
-   "h": 35,
+   "x": 62.05,
+   "y": 79.75,
+   "w": 85.9,
+   "d": 110.5,
+   "z": 156,
+   "h": 14,
    "explode": [
     0,
     0,
-    327.0
+    504.0
    ],
-   "mass": 4.5,
+   "mass": 0.9,
    "materials": [
     [
      "pcabs",
@@ -154,51 +154,52 @@
    ],
    "info": "Hauchdünne PC-Schale, im Werk direkt mit dem Schaum verbunden (In-Mold). Sie lässt sich nur mit einem flachen Werkzeug abhebeln.",
    "color": "#D8473C",
+   "sortBias": 4,
    "marks": [
     {
      "shape": "box",
-     "x": 9.8,
-     "y": 46.3,
-     "w": 11.8,
-     "d": 75.8,
-     "r": 5.9,
-     "fill": "#3A3F44"
+     "x": 8.6,
+     "y": 33.1,
+     "w": 6.9,
+     "d": 44.2,
+     "r": 3.4,
+     "fill": "#2E3236"
     },
     {
      "shape": "box",
-     "x": 33.4,
-     "y": 32.0,
-     "w": 11.8,
-     "d": 104.5,
-     "r": 5.9,
-     "fill": "#3A3F44"
+     "x": 24.1,
+     "y": 22.1,
+     "w": 6.9,
+     "d": 66.3,
+     "r": 3.4,
+     "fill": "#2E3236"
     },
     {
      "shape": "box",
-     "x": 59.7,
-     "y": 25.3,
-     "w": 11.8,
-     "d": 117.9,
-     "r": 5.9,
-     "fill": "#3A3F44"
+     "x": 39.5,
+     "y": 17.7,
+     "w": 6.9,
+     "d": 75.1,
+     "r": 3.4,
+     "fill": "#2E3236"
     },
     {
      "shape": "box",
-     "x": 85.9,
-     "y": 32.0,
-     "w": 11.8,
-     "d": 104.5,
-     "r": 5.9,
-     "fill": "#3A3F44"
+     "x": 55.0,
+     "y": 22.1,
+     "w": 6.9,
+     "d": 66.3,
+     "r": 3.4,
+     "fill": "#2E3236"
     },
     {
      "shape": "box",
-     "x": 109.5,
-     "y": 46.3,
-     "w": 11.8,
-     "d": 75.8,
-     "r": 5.9,
-     "fill": "#3A3F44"
+     "x": 70.4,
+     "y": 33.1,
+     "w": 6.9,
+     "d": 44.2,
+     "r": 3.4,
+     "fill": "#2E3236"
     }
    ]
   },
@@ -209,18 +210,18 @@
    "name": "Außenschale aus Polycarbonat",
    "short": "Schale",
    "shape": "cyl",
-   "x": 20.5,
-   "y": 26.35,
-   "w": 169,
-   "d": 217.3,
-   "z": 105,
-   "h": 30,
+   "x": 42,
+   "y": 54,
+   "w": 126,
+   "d": 162,
+   "z": 138,
+   "h": 18,
    "explode": [
     0,
     0,
-    327.0
+    504.0
    ],
-   "mass": 6.5,
+   "mass": 2.5,
    "materials": [
     [
      "pcabs",
@@ -229,7 +230,50 @@
    ],
    "info": "Hauchdünne PC-Schale, im Werk direkt mit dem Schaum verbunden (In-Mold). Sie lässt sich nur mit einem flachen Werkzeug abhebeln.",
    "color": "#D8473C",
-   "label": false
+   "label": false,
+   "sortBias": 4,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 100.5,
+     "y": 113.9,
+     "w": 12.9,
+     "d": 10.3,
+     "fill": "#2E3236"
+    },
+    {
+     "shape": "cyl",
+     "x": 81.4,
+     "y": 136.0,
+     "w": 12.9,
+     "d": 10.3,
+     "fill": "#2E3236"
+    },
+    {
+     "shape": "cyl",
+     "x": 56.6,
+     "y": 144.0,
+     "w": 12.9,
+     "d": 10.3,
+     "fill": "#2E3236"
+    },
+    {
+     "shape": "cyl",
+     "x": 31.7,
+     "y": 136.0,
+     "w": 12.9,
+     "d": 10.3,
+     "fill": "#2E3236"
+    },
+    {
+     "shape": "cyl",
+     "x": 12.6,
+     "y": 113.9,
+     "w": 12.9,
+     "d": 10.3,
+     "fill": "#2E3236"
+    }
+   ]
   },
   {
    "id": "schale_2",
@@ -238,18 +282,18 @@
    "name": "Außenschale aus Polycarbonat",
    "short": "Schale",
    "shape": "cyl",
-   "x": 5.25,
-   "y": 6.75,
-   "w": 199.5,
-   "d": 256.5,
-   "z": 60,
-   "h": 45,
+   "x": 26.35,
+   "y": 33.9,
+   "w": 157.3,
+   "d": 202.2,
+   "z": 116,
+   "h": 22,
    "explode": [
     0,
     0,
-    327.0
+    504.0
    ],
-   "mass": 13.5,
+   "mass": 4.7,
    "materials": [
     [
      "pcabs",
@@ -258,7 +302,50 @@
    ],
    "info": "Hauchdünne PC-Schale, im Werk direkt mit dem Schaum verbunden (In-Mold). Sie lässt sich nur mit einem flachen Werkzeug abhebeln.",
    "color": "#D8473C",
-   "label": false
+   "label": false,
+   "sortBias": 4,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 132.3,
+     "y": 148.0,
+     "w": 10.0,
+     "d": 8.0,
+     "fill": "#2E3236"
+    },
+    {
+     "shape": "cyl",
+     "x": 106.9,
+     "y": 177.5,
+     "w": 10.0,
+     "d": 8.0,
+     "fill": "#2E3236"
+    },
+    {
+     "shape": "cyl",
+     "x": 73.6,
+     "y": 188.1,
+     "w": 10.0,
+     "d": 8.0,
+     "fill": "#2E3236"
+    },
+    {
+     "shape": "cyl",
+     "x": 40.4,
+     "y": 177.5,
+     "w": 10.0,
+     "d": 8.0,
+     "fill": "#2E3236"
+    },
+    {
+     "shape": "cyl",
+     "x": 14.9,
+     "y": 148.0,
+     "w": 10.0,
+     "d": 8.0,
+     "fill": "#2E3236"
+    }
+   ]
   },
   {
    "id": "schale_3",
@@ -267,18 +354,18 @@
    "name": "Außenschale aus Polycarbonat",
    "short": "Schale",
    "shape": "cyl",
-   "x": 0,
-   "y": 0,
-   "w": 210,
-   "d": 270,
-   "z": 10,
-   "h": 50,
+   "x": 14.05,
+   "y": 18.1,
+   "w": 181.9,
+   "d": 233.8,
+   "z": 90,
+   "h": 26,
    "explode": [
     0,
     0,
-    327.0
+    504.0
    ],
-   "mass": 16.6,
+   "mass": 7.4,
    "materials": [
     [
      "pcabs",
@@ -287,7 +374,102 @@
    ],
    "info": "Hauchdünne PC-Schale, im Werk direkt mit dem Schaum verbunden (In-Mold). Sie lässt sich nur mit einem flachen Werkzeug abhebeln.",
    "color": "#D8473C",
-   "label": false
+   "label": false,
+   "sortBias": 4,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 154.3,
+     "y": 180.1,
+     "w": 7.9,
+     "d": 6.3,
+     "fill": "#2E3236"
+    },
+    {
+     "shape": "cyl",
+     "x": 112.5,
+     "y": 217.7,
+     "w": 7.9,
+     "d": 6.3,
+     "fill": "#2E3236"
+    },
+    {
+     "shape": "cyl",
+     "x": 61.5,
+     "y": 217.7,
+     "w": 7.9,
+     "d": 6.3,
+     "fill": "#2E3236"
+    },
+    {
+     "shape": "cyl",
+     "x": 19.7,
+     "y": 180.1,
+     "w": 7.9,
+     "d": 6.3,
+     "fill": "#2E3236"
+    }
+   ]
+  },
+  {
+   "id": "schale_4",
+   "component_id": "pc_shell",
+   "material_id": "pc",
+   "name": "Außenschale aus Polycarbonat",
+   "short": "Schale",
+   "shape": "cyl",
+   "x": 4.85,
+   "y": 6.2,
+   "w": 200.3,
+   "d": 257.6,
+   "z": 58,
+   "h": 32,
+   "explode": [
+    0,
+    0,
+    504.0
+   ],
+   "mass": 11.2,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Hauchdünne PC-Schale, im Werk direkt mit dem Schaum verbunden (In-Mold). Sie lässt sich nur mit einem flachen Werkzeug abhebeln.",
+   "color": "#D8473C",
+   "label": false,
+   "sortBias": 4
+  },
+  {
+   "id": "schale_5",
+   "component_id": "pc_shell",
+   "material_id": "pc",
+   "name": "Außenschale aus Polycarbonat",
+   "short": "Schale",
+   "shape": "cyl",
+   "x": 0.4,
+   "y": 0.5,
+   "w": 209.2,
+   "d": 269,
+   "z": 24,
+   "h": 34,
+   "explode": [
+    0,
+    0,
+    504.0
+   ],
+   "mass": 12.8,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Hauchdünne PC-Schale, im Werk direkt mit dem Schaum verbunden (In-Mold). Sie lässt sich nur mit einem flachen Werkzeug abhebeln.",
+   "color": "#D8473C",
+   "label": false,
+   "sortBias": 4
   },
   {
    "id": "eps_0",
@@ -296,18 +478,18 @@
    "name": "Schaumkern aus EPS",
    "short": "EPS-Schaum",
    "shape": "cyl",
-   "x": 42.25,
-   "y": 53.8,
-   "w": 125.5,
-   "d": 162.4,
-   "z": 133,
-   "h": 33,
+   "x": 67.5,
+   "y": 86.45,
+   "w": 75,
+   "d": 97.1,
+   "z": 156,
+   "h": 11,
    "explode": [
     0,
     0,
-    146.0
+    236.0
    ],
-   "mass": 17.1,
+   "mass": 2.1,
    "materials": [
     [
      "ps",
@@ -319,47 +501,47 @@
    "marks": [
     {
      "shape": "box",
-     "x": 9.4,
-     "y": 44.7,
-     "w": 11.3,
-     "d": 73.1,
-     "r": 5.6,
+     "x": 7.5,
+     "y": 29.1,
+     "w": 6.0,
+     "d": 38.8,
+     "r": 3.0,
      "fill": "#B9B7AE"
     },
     {
      "shape": "box",
-     "x": 32.0,
-     "y": 30.9,
-     "w": 11.3,
-     "d": 100.7,
-     "r": 5.6,
+     "x": 21.0,
+     "y": 19.4,
+     "w": 6.0,
+     "d": 58.3,
+     "r": 3.0,
      "fill": "#B9B7AE"
     },
     {
      "shape": "box",
-     "x": 57.1,
-     "y": 24.4,
-     "w": 11.3,
-     "d": 113.7,
-     "r": 5.6,
+     "x": 34.5,
+     "y": 15.5,
+     "w": 6.0,
+     "d": 66.0,
+     "r": 3.0,
      "fill": "#B9B7AE"
     },
     {
      "shape": "box",
-     "x": 82.2,
-     "y": 30.9,
-     "w": 11.3,
-     "d": 100.7,
-     "r": 5.6,
+     "x": 48.0,
+     "y": 19.4,
+     "w": 6.0,
+     "d": 58.3,
+     "r": 3.0,
      "fill": "#B9B7AE"
     },
     {
      "shape": "box",
-     "x": 104.8,
-     "y": 44.7,
-     "w": 11.3,
-     "d": 73.1,
-     "r": 5.6,
+     "x": 61.5,
+     "y": 29.1,
+     "w": 6.0,
+     "d": 38.8,
+     "r": 3.0,
      "fill": "#B9B7AE"
     }
    ]
@@ -371,18 +553,18 @@
    "name": "Schaumkern aus EPS",
    "short": "EPS-Schaum",
    "shape": "cyl",
-   "x": 24.1,
-   "y": 30.3,
-   "w": 161.8,
-   "d": 209.4,
-   "z": 105,
-   "h": 28,
+   "x": 45.95,
+   "y": 58.55,
+   "w": 118.1,
+   "d": 152.9,
+   "z": 138,
+   "h": 18,
    "explode": [
     0,
     0,
-    146.0
+    236.0
    ],
-   "mass": 24,
+   "mass": 8.2,
    "materials": [
     [
      "ps",
@@ -391,7 +573,49 @@
    ],
    "info": "Expandiertes Polystyrol, das bei einem Sturz zusammengedrückt wird und so den Aufprall dämpft. Nach jedem Sturz den Helm ersetzen: Der Schaum erholt sich nicht.",
    "color": "#ECEBE6",
-   "label": false
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 92.1,
+     "y": 105.8,
+     "w": 14.0,
+     "d": 11.2,
+     "fill": "#B9B7AE"
+    },
+    {
+     "shape": "cyl",
+     "x": 74.7,
+     "y": 126.1,
+     "w": 14.0,
+     "d": 11.2,
+     "fill": "#B9B7AE"
+    },
+    {
+     "shape": "cyl",
+     "x": 52.1,
+     "y": 133.4,
+     "w": 14.0,
+     "d": 11.2,
+     "fill": "#B9B7AE"
+    },
+    {
+     "shape": "cyl",
+     "x": 29.4,
+     "y": 126.1,
+     "w": 14.0,
+     "d": 11.2,
+     "fill": "#B9B7AE"
+    },
+    {
+     "shape": "cyl",
+     "x": 12.1,
+     "y": 105.8,
+     "w": 14.0,
+     "d": 11.2,
+     "fill": "#B9B7AE"
+    }
+   ]
   },
   {
    "id": "eps_2",
@@ -400,18 +624,152 @@
    "name": "Schaumkern aus EPS",
    "short": "EPS-Schaum",
    "shape": "cyl",
-   "x": 8.4,
-   "y": 9.95,
-   "w": 193.2,
-   "d": 250.1,
-   "z": 60,
-   "h": 45,
+   "x": 29.75,
+   "y": 37.65,
+   "w": 150.5,
+   "d": 194.7,
+   "z": 116,
+   "h": 22,
    "explode": [
     0,
     0,
-    146.0
+    236.0
    ],
-   "mass": 55.1,
+   "mass": 16.3,
+   "materials": [
+    [
+     "ps",
+     100
+    ]
+   ],
+   "info": "Expandiertes Polystyrol, das bei einem Sturz zusammengedrückt wird und so den Aufprall dämpft. Nach jedem Sturz den Helm ersetzen: Der Schaum erholt sich nicht.",
+   "color": "#ECEBE6",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 125.7,
+     "y": 141.8,
+     "w": 10.4,
+     "d": 8.4,
+     "fill": "#B9B7AE"
+    },
+    {
+     "shape": "cyl",
+     "x": 101.6,
+     "y": 169.9,
+     "w": 10.4,
+     "d": 8.4,
+     "fill": "#B9B7AE"
+    },
+    {
+     "shape": "cyl",
+     "x": 70.0,
+     "y": 180.1,
+     "w": 10.4,
+     "d": 8.4,
+     "fill": "#B9B7AE"
+    },
+    {
+     "shape": "cyl",
+     "x": 38.5,
+     "y": 169.9,
+     "w": 10.4,
+     "d": 8.4,
+     "fill": "#B9B7AE"
+    },
+    {
+     "shape": "cyl",
+     "x": 14.4,
+     "y": 141.8,
+     "w": 10.4,
+     "d": 8.4,
+     "fill": "#B9B7AE"
+    }
+   ]
+  },
+  {
+   "id": "eps_3",
+   "component_id": "eps_liner",
+   "material_id": "eps",
+   "name": "Schaumkern aus EPS",
+   "short": "EPS-Schaum",
+   "shape": "cyl",
+   "x": 17.25,
+   "y": 21.4,
+   "w": 175.5,
+   "d": 227.2,
+   "z": 90,
+   "h": 26,
+   "explode": [
+    0,
+    0,
+    236.0
+   ],
+   "mass": 26.3,
+   "materials": [
+    [
+     "ps",
+     100
+    ]
+   ],
+   "info": "Expandiertes Polystyrol, das bei einem Sturz zusammengedrückt wird und so den Aufprall dämpft. Nach jedem Sturz den Helm ersetzen: Der Schaum erholt sich nicht.",
+   "color": "#ECEBE6",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 148.3,
+     "y": 174.6,
+     "w": 8.1,
+     "d": 6.5,
+     "fill": "#B9B7AE"
+    },
+    {
+     "shape": "cyl",
+     "x": 108.2,
+     "y": 210.9,
+     "w": 8.1,
+     "d": 6.5,
+     "fill": "#B9B7AE"
+    },
+    {
+     "shape": "cyl",
+     "x": 59.2,
+     "y": 210.9,
+     "w": 8.1,
+     "d": 6.5,
+     "fill": "#B9B7AE"
+    },
+    {
+     "shape": "cyl",
+     "x": 19.0,
+     "y": 174.6,
+     "w": 8.1,
+     "d": 6.5,
+     "fill": "#B9B7AE"
+    }
+   ]
+  },
+  {
+   "id": "eps_4",
+   "component_id": "eps_liner",
+   "material_id": "eps",
+   "name": "Schaumkern aus EPS",
+   "short": "EPS-Schaum",
+   "shape": "cyl",
+   "x": 7.9,
+   "y": 9.3,
+   "w": 194.2,
+   "d": 251.4,
+   "z": 58,
+   "h": 32,
+   "explode": [
+    0,
+    0,
+    236.0
+   ],
+   "mass": 39.6,
    "materials": [
     [
      "ps",
@@ -423,7 +781,7 @@
    "label": false
   },
   {
-   "id": "eps_3",
+   "id": "eps_5",
    "component_id": "eps_liner",
    "material_id": "eps",
    "name": "Schaumkern aus EPS",
@@ -434,13 +792,13 @@
    "w": 204,
    "d": 264,
    "z": 10,
-   "h": 50,
+   "h": 48,
    "explode": [
     0,
     0,
-    146.0
+    236.0
    ],
-   "mass": 68.2,
+   "mass": 65.4,
    "materials": [
     [
      "ps",
@@ -450,6 +808,60 @@
    "info": "Expandiertes Polystyrol, das bei einem Sturz zusammengedrückt wird und so den Aufprall dämpft. Nach jedem Sturz den Helm ersetzen: Der Schaum erholt sich nicht.",
    "color": "#ECEBE6",
    "label": false
+  },
+  {
+   "id": "schirm",
+   "component_id": "pc_shell",
+   "material_id": "pc",
+   "name": "Schirm",
+   "short": "Schirm",
+   "shape": "box",
+   "x": 55,
+   "y": 228,
+   "w": 100,
+   "d": 48,
+   "z": 104,
+   "h": 4,
+   "r": 22,
+   "explode": [
+    0,
+    120,
+    0
+   ],
+   "mass": 11.8,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Kleiner Sonnenschirm vorn, nur mit zwei Clips in den Schaum gesteckt. Abziehen und separat entsorgen.",
+   "color": "#2B2F33",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 4,
+     "w": 80,
+     "d": 6,
+     "r": 3,
+     "fill": "#43484E"
+    },
+    {
+     "shape": "cyl",
+     "x": 14,
+     "y": 30,
+     "w": 8,
+     "fill": "#55595E"
+    },
+    {
+     "shape": "cyl",
+     "x": 78,
+     "y": 30,
+     "w": 8,
+     "fill": "#55595E"
+    }
+   ]
   },
   {
    "id": "polster",
@@ -470,7 +882,7 @@
     0,
     0.0
    ],
-   "mass": 10.3,
+   "mass": 9.9,
    "materials": [
     [
      "schaum",
@@ -544,7 +956,7 @@
     0,
     0.0
    ],
-   "mass": 30.8,
+   "mass": 29.6,
    "materials": [
     [
      "pp",
@@ -578,10 +990,10 @@
    "h": 14,
    "explode": [
     0,
-    -45,
+    -60,
     0
    ],
-   "mass": 8.2,
+   "mass": 7.9,
    "materials": [
     [
      "pp",
@@ -610,58 +1022,81 @@
    ]
   },
   {
-   "id": "gurte",
+   "id": "gurt_links",
    "component_id": "nylon_straps",
    "material_id": "nylon",
-   "name": "Kinn- und Seitengurte",
+   "name": "Gurt links (Y-Gurt)",
    "short": "Gurte",
    "shape": "box",
-   "x": 60,
-   "y": 80,
-   "w": 90,
-   "d": 120,
+   "x": 40,
+   "y": 60,
+   "w": 14,
+   "d": 160,
    "z": 0,
-   "h": 3,
-   "r": 4,
+   "h": 2,
+   "r": 3,
    "explode": [
-    250,
+    260,
     0,
     0
    ],
-   "mass": 30.8,
+   "mass": 11.8,
    "materials": [
     [
      "nylon",
      100
     ]
    ],
-   "info": "Nylon-Gurtband, an den Schaumkern geklebt oder eingegossen. Zum Trennen dicht am Helm abschneiden.",
+   "info": "Nylon-Gurtband, vorn und hinten im Schaum verankert. Zum Trennen dicht am Helm abschneiden.",
    "color": "#1F2328",
    "marks": [
     {
      "shape": "box",
-     "x": 4,
-     "y": 0,
-     "w": 16,
-     "d": 120,
+     "x": 3,
+     "y": 4,
+     "w": 8,
+     "d": 152,
      "r": 2,
      "fill": "#30353B"
-    },
+    }
+   ]
+  },
+  {
+   "id": "gurt_rechts",
+   "component_id": "nylon_straps",
+   "material_id": "nylon",
+   "name": "Gurt rechts (Y-Gurt)",
+   "short": "Gurt",
+   "shape": "box",
+   "x": 156,
+   "y": 60,
+   "w": 14,
+   "d": 160,
+   "z": 0,
+   "h": 2,
+   "r": 3,
+   "explode": [
+    260,
+    0,
+    0
+   ],
+   "mass": 11.8,
+   "materials": [
+    [
+     "nylon",
+     100
+    ]
+   ],
+   "info": "Gegenstück auf der anderen Seite.",
+   "color": "#1F2328",
+   "label": false,
+   "marks": [
     {
      "shape": "box",
-     "x": 70,
-     "y": 0,
-     "w": 16,
-     "d": 120,
-     "r": 2,
-     "fill": "#30353B"
-    },
-    {
-     "shape": "box",
-     "x": 37,
-     "y": 60,
-     "w": 16,
-     "d": 60,
+     "x": 3,
+     "y": 4,
+     "w": 8,
+     "d": 152,
      "r": 2,
      "fill": "#30353B"
     }
@@ -674,19 +1109,19 @@
    "name": "Riemenverteiler links",
    "short": "Verteiler",
    "shape": "box",
-   "x": 38,
-   "y": 120,
+   "x": 39,
+   "y": 150,
    "w": 16,
-   "d": 22,
-   "z": 0,
-   "h": 6,
+   "d": 24,
+   "z": 2,
+   "h": 5,
    "r": 3,
    "explode": [
-    250,
+    260,
     0,
     0
    ],
-   "mass": 3.1,
+   "mass": 3,
    "materials": [
     [
      "pp",
@@ -701,7 +1136,7 @@
      "x": 4,
      "y": 4,
      "w": 8,
-     "d": 14,
+     "d": 16,
      "r": 2,
      "fill": "#4A4F55"
     }
@@ -714,19 +1149,19 @@
    "name": "Riemenverteiler rechts",
    "short": "Verteiler",
    "shape": "box",
-   "x": 156,
-   "y": 120,
+   "x": 155,
+   "y": 150,
    "w": 16,
-   "d": 22,
-   "z": 0,
-   "h": 6,
+   "d": 24,
+   "z": 2,
+   "h": 5,
    "r": 3,
    "explode": [
-    250,
+    260,
     0,
     0
    ],
-   "mass": 3.1,
+   "mass": 3,
    "materials": [
     [
      "pp",
@@ -742,9 +1177,49 @@
      "x": 4,
      "y": 4,
      "w": 8,
-     "d": 14,
+     "d": 16,
      "r": 2,
      "fill": "#4A4F55"
+    }
+   ]
+  },
+  {
+   "id": "kinnriemen",
+   "component_id": "nylon_straps",
+   "material_id": "nylon",
+   "name": "Kinnriemen",
+   "short": "Kinnriemen",
+   "shape": "box",
+   "x": 54,
+   "y": 214,
+   "w": 102,
+   "d": 12,
+   "z": 0,
+   "h": 2,
+   "r": 3,
+   "explode": [
+    260,
+    0,
+    0
+   ],
+   "mass": 5.9,
+   "materials": [
+    [
+     "nylon",
+     100
+    ]
+   ],
+   "info": "Verbindet beide Seiten unter dem Kinn. Mit dem Schieber so einstellen, dass ein Finger darunter passt.",
+   "color": "#1F2328",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 3,
+     "w": 94,
+     "d": 6,
+     "r": 2,
+     "fill": "#30353B"
     }
    ]
   },
@@ -755,19 +1230,19 @@
    "name": "Kinnschnalle",
    "short": "Schnalle",
    "shape": "box",
-   "x": 92,
+   "x": 90,
    "y": 208,
-   "w": 26,
-   "d": 34,
-   "z": 0,
-   "h": 9,
+   "w": 30,
+   "d": 24,
+   "z": 2,
+   "h": 8,
    "r": 5,
    "explode": [
-    250,
+    260,
     0,
     0
    ],
-   "mass": 8.2,
+   "mass": 7.9,
    "materials": [
     [
      "pp",
@@ -779,19 +1254,19 @@
    "marks": [
     {
      "shape": "box",
-     "x": 5,
-     "y": 4,
-     "w": 16,
-     "d": 12,
+     "x": 4,
+     "y": 5,
+     "w": 12,
+     "d": 14,
      "r": 3,
      "fill": "#3A3F44"
     },
     {
      "shape": "box",
-     "x": 2,
-     "y": 20,
-     "w": 22,
-     "d": 10,
+     "x": 18,
+     "y": 4,
+     "w": 9,
+     "d": 16,
      "r": 2,
      "fill": "#2E3237"
     }

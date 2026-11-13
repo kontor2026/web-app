@@ -13,6 +13,9 @@ from bau import teil, mark, raster, explodiere, skaliere_masse, schreibe  # noqa
 PAPPE = '#2F5E9E'
 KARTE = '#F6F3EC'
 ROT = '#C8423A'
+# Herz in der Kartenmitte: zwei Kreise oben, darunter Stufen, die zur Spitze schmaler werden
+HERZ = [mark('cyl', 18, 32, 12, 12, fill=ROT), mark('cyl', 28, 32, 12, 12, fill=ROT)] + [
+    mark('box', 19 + i * 2, 38 + i * 3, 20 - i * 4, 3.2, 1, ROT) for i in range(5)]
 
 teile = [
     teil('folie', 'cardboard_box_body', 'Cellophanfolie', 'Folie', 'box', material_id='pp',
@@ -27,7 +30,8 @@ teile = [
          x=1, y=1, w=58, d=88, z=18.7, h=0.3, r=3, mass=1.8, color=KARTE,
          info='Karton, beidseitig bedruckt und mit Kunststoff beschichtet, damit die Karten gleiten und nicht knicken. '
               'Wegen der Beschichtung gehören alte Karten in den Restmüll.',
-         marks=[mark('box', 4, 4, 6, 8, 1, ROT), mark('cyl', 20, 32, 18, 18, fill=ROT), mark('box', 48, 76, 6, 8, 1, ROT)]),
+         marks=[mark('box', 3, 3, 4, 7, 1, ROT), mark('cyl', 3, 11, 4, fill=ROT),
+                mark('box', 51, 78, 4, 7, 1, ROT), mark('cyl', 51, 74, 4, fill=ROT)] + HERZ),
     teil('stapel', 'coated_cards', 'Kartenstapel (54 Karten)', 'Kartenstapel', 'box',
          x=1, y=1, w=58, d=88, z=2.5, h=16.2, r=3, mass=97, color='#E9E4D8',
          info='Gleiche beschichtete Karten, zusammen gut 16 mm hoch. Vollständige Spiele lieber weitergeben, '
@@ -36,7 +40,10 @@ teile = [
     teil('schachtel', 'cardboard_box_body', 'Schachtel', 'Schachtel', 'box',
          x=0, y=0, w=60, d=90, z=0, h=19.5, r=1, mass=10, materials=[['papier', 92], ['druck', 8]], color=PAPPE,
          info='Faltschachtel aus dünnem bedrucktem Karton, an einer Lasche verklebt. Leer flach drücken und ins Altpapier.',
-         marks=[mark('box', 1, 1, 58, 88, 1, '#1E3B66'), mark('box', 20, 2, 20, 8, 4, '#244B80')]),
+         marks=[mark('box', 3, 3, 54, 66, 2, '#F2EEE4'), mark('box', 5, 5, 50, 62, 1.5, PAPPE),
+                mark('cyl', 15, 14, 30, 30, fill='#F2EEE4'), mark('cyl', 18, 17, 24, 24, fill=ROT),
+                mark('box', 10, 50, 40, 5, 1, '#F2EEE4'), mark('box', 16, 58, 28, 3, 1, '#C9D4E4'),
+                mark('box', 20, 2, 20, 6, 3, '#244B80')]),
 ]
 
 explodiere(teile, abstand=40, abstaende={'folie': 30}, nach_liste=True)

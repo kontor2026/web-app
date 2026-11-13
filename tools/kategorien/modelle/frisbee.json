@@ -103,6 +103,43 @@
    ]
   },
   {
+   "id": "schulter_oben",
+   "component_id": "pp_disc",
+   "material_id": "pp",
+   "name": "Schulter oben",
+   "short": "Schulter",
+   "shape": "cyl",
+   "x": 4,
+   "y": 4,
+   "w": 262,
+   "z": 25,
+   "h": 2,
+   "explode": [
+    0,
+    0,
+    80.0
+   ],
+   "mass": 14,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Oberer, stärker gewölbter Teil der Schulter.",
+   "color": "#E6E7E2",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 6.0,
+     "y": 6.0,
+     "w": 250,
+     "fill": "#C9CCC8"
+    }
+   ]
+  },
+  {
    "id": "schulter",
    "component_id": "pp_disc",
    "material_id": "pp",
@@ -113,13 +150,13 @@
    "y": 0,
    "w": 270,
    "z": 22,
-   "h": 5,
+   "h": 3,
    "explode": [
     0,
     0,
     80.0
    ],
-   "mass": 40,
+   "mass": 26,
    "materials": [
     [
      "pp",
