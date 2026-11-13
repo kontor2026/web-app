@@ -70,3 +70,113 @@ export function partColor(part) {
   return CLASSES[m?.cls]?.color ?? '#cccccc';
 }
 
+export class ExplodedView {
+  constructor(container, obj, { onHover, onSelect } = {}) {
+    this.container = container;
+    this.obj = obj;
+    this.onHover = onHover;
+    this.onSelect = onSelect;
+    this.exploded = false;
+    this.labeled = obj.parts.filter((p) => p.label !== false);
+    this.states = obj.parts.map((p) => ({ id: p.id, t: 0 }));
+    this.selected = null;
+    this.ro = new ResizeObserver(() => this.render(true));
+  }
+
+  mount() {
+    this.svg = el('svg', { class: 'iso' });
+    this.container.appendChild(this.svg);
+    this.render(false);
+    this.ro.observe(this.container);
+  }
+
+  destroy() {
+    this.ro.disconnect();
+    this.container.innerHTML = '';
+  }
+
+  // Geometrie in Bildschirmpixel umrechnen und SVG neu aufbauen.
+  render(keepState) {
+    const W = this.container.clientWidth, H = this.container.clientHeight;
+    if (!W || !H) return;
+    const parts = this.obj.parts;
+    const geo = parts.map((p) => {
+      const ex = p.explode ?? [0, 0, 0];
+      const o = outline(p);
+      const top = o.map(([x, y]) => project(x, y, p.z + p.h));
+      const bot = o.map(([x, y]) => project(x, y, p.z));
+      const marks = (p.marks ?? []).map((m) => ({
+        ...m,
+        pts: outline({ ...m, x: p.x + m.x, y: p.y + m.y }).map(([x, y]) => project(x, y, p.z + p.h + (m.lift ?? 0))),
+      }));
+      const off = project(ex[0], ex[1], ex[2]);
+      return {
+        p, top, side: hull(top.concat(bot)), marks, off,
+        // Zeichenreihenfolge (Maleralgorithmus) getrennt für zusammengebaut und explodiert.
+        keyA: p.z + p.h + (p.sortBias ?? 0),
+        keyB: p.z + ex[2] + (ex[0] + ex[1]) * 0.5 + (p.sortBias ?? 0),
+        depth: p.x + p.y + p.w / 2 + (p.d ?? p.w) / 2,
+      };
+    });
+
+    // Bounding Box über zusammengebauten und explodierten Zustand.
+    let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
+    for (const g of geo) for (const t of [0, 1]) for (const [x, y] of g.side) {
+      const X = x + g.off[0] * t, Y = y + g.off[1] * t;
+      minX = Math.min(minX, X); maxX = Math.max(maxX, X); minY = Math.min(minY, Y); maxY = Math.max(maxY, Y);
+    }
+    // Auf schmalen Bildschirmen nur Positionsnummern ohne Beschriftung.
+    this.compact = W < 640;
+    const gutter = this.compact ? 34 : Math.min(175, W * 0.16);
+    const s = Math.min((W - gutter * 2) / (maxX - minX), (H - 70) / (maxY - minY));
+    const ox = (W - (maxX - minX) * s) / 2 - minX * s;
+    const oy = (H - (maxY - minY) * s) / 2 - minY * s;
+    const tx = ([x, y]) => [x * s + ox, y * s + oy];
+    const str = (pts) => pts.map((q) => tx(q).map((n) => n.toFixed(1)).join(',')).join(' ');
+    this.scale = s;
+
+    this.svg.innerHTML = '';
+    this.svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
+    const partsLayer = el('g', { class: 'parts' }, this.svg);
+    this.calloutLayer = el('g', { class: 'callouts' }, this.svg);
+
+    this.nodes = new Map();
+    const sortBy = (k) => geo.map((g, i) => i).sort((a, b) => geo[a][k] - geo[b][k] || geo[a].depth - geo[b].depth).map((i) => geo[i].p.id);
+    this.orders = { A: sortBy('keyA'), B: sortBy('keyB') };
+    this.partsLayer = partsLayer;
+    this.phase = null;
+    for (const i of geo.keys()) {
+      const { p, top, side, marks, off } = geo[i];
+      const color = partColor(p);
+      const g = el('g', { class: 'part', 'data-id': p.id }, partsLayer);
+      el('polygon', { class: 'side', points: str(side), fill: shade(color, 0.22), 'fill-opacity': p.opacity ?? 1 }, g);
+      el('polygon', { class: 'top', points: str(top), fill: color, 'fill-opacity': p.opacity ?? 1 }, g);
+      for (const m of marks) {
+        el('polygon', { class: 'mark', points: str(m.pts), fill: m.fill ?? 'none' }, g);
+      }
+      this.nodes.set(p.id, { g, off: [off[0] * s, off[1] * s], top: top.map(tx) });
+    }
+
+    if (keepState) {
+      for (const st of this.states) st.t = this.exploded ? 1 : 0;
+      this.apply();
+      this.calloutLayer.style.opacity = this.exploded ? 1 : 0;
+    } else {
+      this.apply();
+    }
+  }
+
+  apply() {
+    // Ab halber Strecke auf die Reihenfolge des Zielzustands umschalten.
+    const avg = this.states.reduce((a, s) => a + s.t, 0) / this.states.length;
+    const phase = avg > 0.5 ? 'B' : 'A';
+    if (phase !== this.phase) {
+      this.phase = phase;
+      for (const id of this.orders[phase]) this.partsLayer.appendChild(this.nodes.get(id).g);
+    }
+    for (const st of this.states) {
+      const n = this.nodes.get(st.id);
+      n.g.setAttribute('transform', `translate(${(n.off[0] * st.t).toFixed(2)},${(n.off[1] * st.t).toFixed(2)})`);
+    }
+  }
+}
