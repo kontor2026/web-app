@@ -2,6 +2,8 @@
  "parts": [
   {
    "id": "deckel",
+   "component_id": "aluminium_housing",
+   "material_id": "aluminium",
    "name": "Displaydeckel (Aluminium)",
    "short": "Deckel",
    "shape": "box",
@@ -39,6 +41,8 @@
   },
   {
    "id": "panel",
+   "component_id": "laptop_display",
+   "material_id": "special_glass",
    "name": "Display-Panel (IPS)",
    "short": "Display",
    "shape": "box",
@@ -89,6 +93,8 @@
   },
   {
    "id": "webcam",
+   "component_id": "laptop_display",
+   "material_id": "mixed_electronics",
    "name": "Webcam-Modul",
    "short": "Webcam",
    "shape": "box",
@@ -120,6 +126,8 @@
   },
   {
    "id": "rahmen",
+   "component_id": "laptop_display",
+   "material_id": "abs",
    "name": "Displayrahmen",
    "short": "Rahmen",
    "shape": "box",
@@ -158,6 +166,8 @@
   },
   {
    "id": "tastatur",
+   "component_id": "keycaps",
+   "material_id": "abs",
    "name": "Tastatur",
    "shape": "box",
    "x": 22,
@@ -1004,10 +1014,13 @@
      "r": 1.5,
      "fill": "#3A3F43"
     }
-   ]
+   ],
+   "short": "Tastatur"
   },
   {
    "id": "touchpad",
+   "component_id": "aluminium_housing",
+   "material_id": "special_glass",
    "name": "Touchpad",
    "shape": "box",
    "x": 109,
@@ -1038,10 +1051,13 @@
      10
     ]
    ],
-   "info": "Glasoberfläche über einer Sensorplatine, die Fingerpositionen kapazitiv misst."
+   "info": "Glasoberfläche über einer Sensorplatine, die Fingerpositionen kapazitiv misst.",
+   "short": "Touchpad"
   },
   {
    "id": "topcase",
+   "component_id": "aluminium_housing",
+   "material_id": "aluminium",
    "name": "Tastaturdeck",
    "short": "Oberschale",
    "shape": "box",
@@ -1090,6 +1106,8 @@
   },
   {
    "id": "heatpipe",
+   "component_id": "copper_heat_pipe",
+   "material_id": "copper",
    "name": "Heatpipe",
    "shape": "box",
    "x": 120,
@@ -1112,10 +1130,13 @@
      100
     ]
    ],
-   "info": "Hohles Kupferrohr mit etwas Flüssigkeit. Leitet die Wärme vom Prozessor zum Lüfter."
+   "info": "Hohles Kupferrohr mit etwas Flüssigkeit. Leitet die Wärme vom Prozessor zum Lüfter.",
+   "short": "Heatpipe"
   },
   {
    "id": "cpu",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
    "name": "Prozessor",
    "shape": "box",
    "x": 121,
@@ -1138,10 +1159,13 @@
      100
     ]
    ],
-   "info": "Das Herz des Laptops. Fest verlötet, nur mit dem Mainboard zusammen weiterverwendbar."
+   "info": "Das Herz des Laptops. Fest verlötet, nur mit dem Mainboard zusammen weiterverwendbar.",
+   "short": "Prozessor"
   },
   {
    "id": "ram",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
    "name": "Arbeitsspeicher",
    "short": "RAM",
    "shape": "box",
@@ -1177,6 +1201,8 @@
   },
   {
    "id": "ssd",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
    "name": "SSD-Speicher",
    "short": "SSD",
    "shape": "box",
@@ -1212,6 +1238,8 @@
   },
   {
    "id": "luefter",
+   "component_id": "electric_motor",
+   "material_id": "mixed_electronics",
    "name": "Lüfter",
    "shape": "cyl",
    "x": 244,
@@ -1253,10 +1281,13 @@
      "w": 20,
      "fill": "#8C9397"
     }
-   ]
+   ],
+   "short": "Lüfter"
   },
   {
    "id": "mainboard",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
    "name": "Mainboard",
    "shape": "box",
    "x": 40,
@@ -1290,10 +1321,13 @@
      10
     ]
    ],
-   "info": "Zehnlagige Leiterplatte. Hier steckt der größte Teil von Gold, Silber und Tantal."
+   "info": "Zehnlagige Leiterplatte. Hier steckt der größte Teil von Gold, Silber und Tantal.",
+   "short": "Mainboard"
   },
   {
    "id": "akku",
+   "component_id": "li_ion_battery",
+   "material_id": "li_ion",
    "name": "Lithium-Ionen-Akku",
    "short": "Akku",
    "shape": "box",
@@ -1374,6 +1408,8 @@
   },
   {
    "id": "lautsprecher",
+   "component_id": "circuit_board",
+   "material_id": "mixed_electronics",
    "name": "Lautsprecher",
    "shape": "box",
    "x": 10,
@@ -1404,10 +1440,13 @@
      20
     ]
    ],
-   "info": "Zwei Stereo-Lautsprecher mit Neodym-Magneten."
+   "info": "Zwei Stereo-Lautsprecher mit Neodym-Magneten.",
+   "short": "Lautsprecher"
   },
   {
    "id": "lautsprecher2",
+   "component_id": "circuit_board",
+   "material_id": "mixed_electronics",
    "name": "Lautsprecher",
    "label": false,
    "shape": "box",
@@ -1439,10 +1478,13 @@
      20
     ]
    ],
-   "info": "Zwei Stereo-Lautsprecher mit Neodym-Magneten."
+   "info": "Zwei Stereo-Lautsprecher mit Neodym-Magneten.",
+   "short": "Lautsprecher"
   },
   {
    "id": "boden",
+   "component_id": "aluminium_housing",
+   "material_id": "aluminium",
    "name": "Bodenschale",
    "shape": "box",
    "x": 0,
@@ -1498,7 +1540,8 @@
      "y": 196,
      "w": 10
     }
-   ]
+   ],
+   "short": "Bodenschale"
   }
  ]
 }

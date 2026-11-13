@@ -21,26 +21,26 @@
  "werte": [
   {
    "k": "Rohstoffwert",
-   "v": "≈ 15,6 €",
+   "v": "≈ 14,8 €",
    "hint": "Gold, Silber, Palladium zu Preisen vom 13.11. Ohne Kobalt, Palladium, Platin (kein Preis)."
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 14,8 kg",
+   "v": "≈ 16,2 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 7,40 kg",
-   "hint": "spart 7,39 kg, wenn recycelte Materialien eingesetzt werden"
+   "v": "≈ 8,90 kg",
+   "hint": "spart 7,26 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Al": 604595.0,
-   "Cu": 164090.0,
+   "Al": 624500.0,
+   "Cu": 95000.0,
    "Co": 65000,
-   "Fe": 12810.0,
+   "Fe": 7200.0,
    "Nd": 2100,
    "Ta": 1700,
    "Ag": 440,
@@ -69,22 +69,19 @@
    "Ga": "oeko2012 Tab. 23 (LED-Hintergrundbeleuchtung)"
   },
   "materialien_g": {
-   "aluminium": 580.1,
-   "li_ion": 163.3,
-   "abs": 156.5,
-   "special_glass": 131.2,
-   "pcb": 119.0,
-   "copper": 114.5,
-   "multilayer_plastic": 98.6,
-   "mixed_electronics": 31.5,
-   "silicone": 18.0,
-   "steel": 8.2
+   "aluminium": 590.0,
+   "special_glass": 255.0,
+   "li_ion": 230.0,
+   "pcb": 138.0,
+   "abs": 130.0,
+   "mixed_electronics": 48.0,
+   "copper": 30.0
   },
-  "co2_kg": 14.795,
-  "co2_mit_recyclat_kg": 7.403,
-  "co2_ersparnis_kg": 7.392,
+  "co2_kg": 16.166,
+  "co2_mit_recyclat_kg": 8.902,
+  "co2_ersparnis_kg": 7.264,
   "co2_ohne_faktor": [],
-  "rohstoffwert_eur": 15.58,
+  "rohstoffwert_eur": 14.76,
   "wert_ohne_preis": [
    "Co",
    "Pd",
@@ -140,6 +137,8 @@
  "parts": [
   {
    "id": "deckel",
+   "component_id": "aluminium_housing",
+   "material_id": "aluminium",
    "name": "Displaydeckel (Aluminium)",
    "short": "Deckel",
    "shape": "box",
@@ -177,6 +176,8 @@
   },
   {
    "id": "panel",
+   "component_id": "laptop_display",
+   "material_id": "special_glass",
    "name": "Display-Panel (IPS)",
    "short": "Display",
    "shape": "box",
@@ -227,6 +228,8 @@
   },
   {
    "id": "webcam",
+   "component_id": "laptop_display",
+   "material_id": "mixed_electronics",
    "name": "Webcam-Modul",
    "short": "Webcam",
    "shape": "box",
@@ -258,6 +261,8 @@
   },
   {
    "id": "rahmen",
+   "component_id": "laptop_display",
+   "material_id": "abs",
    "name": "Displayrahmen",
    "short": "Rahmen",
    "shape": "box",
@@ -296,6 +301,8 @@
   },
   {
    "id": "tastatur",
+   "component_id": "keycaps",
+   "material_id": "abs",
    "name": "Tastatur",
    "shape": "box",
    "x": 22,
@@ -1142,10 +1149,13 @@
      "r": 1.5,
      "fill": "#3A3F43"
     }
-   ]
+   ],
+   "short": "Tastatur"
   },
   {
    "id": "touchpad",
+   "component_id": "aluminium_housing",
+   "material_id": "special_glass",
    "name": "Touchpad",
    "shape": "box",
    "x": 109,
@@ -1176,10 +1186,13 @@
      10
     ]
    ],
-   "info": "Glasoberfläche über einer Sensorplatine, die Fingerpositionen kapazitiv misst."
+   "info": "Glasoberfläche über einer Sensorplatine, die Fingerpositionen kapazitiv misst.",
+   "short": "Touchpad"
   },
   {
    "id": "topcase",
+   "component_id": "aluminium_housing",
+   "material_id": "aluminium",
    "name": "Tastaturdeck",
    "short": "Oberschale",
    "shape": "box",
@@ -1228,6 +1241,8 @@
   },
   {
    "id": "heatpipe",
+   "component_id": "copper_heat_pipe",
+   "material_id": "copper",
    "name": "Heatpipe",
    "shape": "box",
    "x": 120,
@@ -1250,10 +1265,13 @@
      100
     ]
    ],
-   "info": "Hohles Kupferrohr mit etwas Flüssigkeit. Leitet die Wärme vom Prozessor zum Lüfter."
+   "info": "Hohles Kupferrohr mit etwas Flüssigkeit. Leitet die Wärme vom Prozessor zum Lüfter.",
+   "short": "Heatpipe"
   },
   {
    "id": "cpu",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
    "name": "Prozessor",
    "shape": "box",
    "x": 121,
@@ -1276,10 +1294,13 @@
      100
     ]
    ],
-   "info": "Das Herz des Laptops. Fest verlötet, nur mit dem Mainboard zusammen weiterverwendbar."
+   "info": "Das Herz des Laptops. Fest verlötet, nur mit dem Mainboard zusammen weiterverwendbar.",
+   "short": "Prozessor"
   },
   {
    "id": "ram",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
    "name": "Arbeitsspeicher",
    "short": "RAM",
    "shape": "box",
@@ -1315,6 +1336,8 @@
   },
   {
    "id": "ssd",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
    "name": "SSD-Speicher",
    "short": "SSD",
    "shape": "box",
@@ -1350,6 +1373,8 @@
   },
   {
    "id": "luefter",
+   "component_id": "electric_motor",
+   "material_id": "mixed_electronics",
    "name": "Lüfter",
    "shape": "cyl",
    "x": 244,
@@ -1391,10 +1416,13 @@
      "w": 20,
      "fill": "#8C9397"
     }
-   ]
+   ],
+   "short": "Lüfter"
   },
   {
    "id": "mainboard",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
    "name": "Mainboard",
    "shape": "box",
    "x": 40,
@@ -1428,10 +1456,13 @@
      10
     ]
    ],
-   "info": "Zehnlagige Leiterplatte. Hier steckt der größte Teil von Gold, Silber und Tantal."
+   "info": "Zehnlagige Leiterplatte. Hier steckt der größte Teil von Gold, Silber und Tantal.",
+   "short": "Mainboard"
   },
   {
    "id": "akku",
+   "component_id": "li_ion_battery",
+   "material_id": "li_ion",
    "name": "Lithium-Ionen-Akku",
    "short": "Akku",
    "shape": "box",
@@ -1512,6 +1543,8 @@
   },
   {
    "id": "lautsprecher",
+   "component_id": "circuit_board",
+   "material_id": "mixed_electronics",
    "name": "Lautsprecher",
    "shape": "box",
    "x": 10,
@@ -1542,10 +1575,13 @@
      20
     ]
    ],
-   "info": "Zwei Stereo-Lautsprecher mit Neodym-Magneten."
+   "info": "Zwei Stereo-Lautsprecher mit Neodym-Magneten.",
+   "short": "Lautsprecher"
   },
   {
    "id": "lautsprecher2",
+   "component_id": "circuit_board",
+   "material_id": "mixed_electronics",
    "name": "Lautsprecher",
    "label": false,
    "shape": "box",
@@ -1577,10 +1613,13 @@
      20
     ]
    ],
-   "info": "Zwei Stereo-Lautsprecher mit Neodym-Magneten."
+   "info": "Zwei Stereo-Lautsprecher mit Neodym-Magneten.",
+   "short": "Lautsprecher"
   },
   {
    "id": "boden",
+   "component_id": "aluminium_housing",
+   "material_id": "aluminium",
    "name": "Bodenschale",
    "shape": "box",
    "x": 0,
@@ -1636,7 +1675,8 @@
      "y": 196,
      "w": 10
     }
-   ]
+   ],
+   "short": "Bodenschale"
   }
  ]
 }
