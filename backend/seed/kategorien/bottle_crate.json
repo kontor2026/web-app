@@ -39,7 +39,7 @@
   "metalle_mg": {},
   "herkunft": {},
   "materialien_g": {
-   "hdpe": 1695.0,
+   "hdpe": 1695.2,
    "pp": 5.0
   },
   "co2_kg": 3.671,
@@ -125,62 +125,509 @@
  "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "oberrand",
+   "id": "rand_v",
    "component_id": "hdpe_crate_body",
    "material_id": "hdpe",
-   "name": "Oberrand mit Griffen",
+   "name": "Oberrand",
    "short": "Oberrand",
    "shape": "box",
    "x": 0,
-   "y": 0,
+   "y": 286,
    "w": 400,
-   "d": 300,
-   "z": 262,
-   "h": 38,
-   "r": 8,
+   "d": 14,
+   "z": 290,
+   "h": 10,
+   "r": 2,
    "explode": [
     0,
     0,
-    325.0
+    370
    ],
-   "mass": 380,
+   "mass": 60.5,
    "materials": [
     [
      "hdpe",
      100
     ]
    ],
-   "info": "Verstärkter Rand mit Griffmulden an den Schmalseiten. Der Kasten ist ein einziges Spritzgussteil.",
+   "info": "Verstärkter, umlaufender Rand. Er trägt beim Stapeln das Gewicht der Kästen darüber.",
    "color": "#2F6E3B",
+   "label": true,
    "marks": [
     {
      "shape": "box",
-     "x": 10,
-     "y": 10,
-     "w": 380,
-     "d": 280,
-     "r": 5,
+     "x": 4,
+     "y": 4,
+     "w": 392,
+     "d": 6,
+     "r": 2,
      "fill": "#1F4A27"
-    },
-    {
-     "shape": "box",
-     "x": 2,
-     "y": 110,
-     "w": 6,
-     "d": 80,
-     "r": 3,
-     "fill": "#163A1E"
-    },
-    {
-     "shape": "box",
-     "x": 392,
-     "y": 110,
-     "w": 6,
-     "d": 80,
-     "r": 3,
-     "fill": "#163A1E"
     }
    ]
+  },
+  {
+   "id": "rand_h",
+   "component_id": "hdpe_crate_body",
+   "material_id": "hdpe",
+   "name": "Oberrand",
+   "short": "Oberrand",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 400,
+   "d": 14,
+   "z": 290,
+   "h": 10,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    370
+   ],
+   "mass": 60.5,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "Teil des Rahmens. Rippen und Durchbrüche sparen Material und halten den Kasten trotzdem stabil.",
+   "color": "#2F6E3B",
+   "label": false,
+   "sortBias": -400,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 4,
+     "w": 392,
+     "d": 6,
+     "r": 2,
+     "fill": "#1F4A27"
+    }
+   ]
+  },
+  {
+   "id": "rand_l",
+   "component_id": "hdpe_crate_body",
+   "material_id": "hdpe",
+   "name": "Oberrand",
+   "short": "Oberrand",
+   "shape": "box",
+   "x": 0,
+   "y": 14,
+   "w": 14,
+   "d": 272,
+   "z": 290,
+   "h": 10,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    370
+   ],
+   "mass": 40.4,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "Teil des Rahmens. Rippen und Durchbrüche sparen Material und halten den Kasten trotzdem stabil.",
+   "color": "#2F6E3B",
+   "label": false,
+   "sortBias": -400,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 0,
+     "w": 6,
+     "d": 272,
+     "r": 0,
+     "fill": "#1F4A27"
+    }
+   ]
+  },
+  {
+   "id": "rand_r",
+   "component_id": "hdpe_crate_body",
+   "material_id": "hdpe",
+   "name": "Oberrand",
+   "short": "Oberrand",
+   "shape": "box",
+   "x": 386,
+   "y": 14,
+   "w": 14,
+   "d": 272,
+   "z": 290,
+   "h": 10,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    370
+   ],
+   "mass": 40.4,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "Teil des Rahmens. Rippen und Durchbrüche sparen Material und halten den Kasten trotzdem stabil.",
+   "color": "#2F6E3B",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 0,
+     "w": 6,
+     "d": 272,
+     "r": 0,
+     "fill": "#1F4A27"
+    }
+   ]
+  },
+  {
+   "id": "griff_r",
+   "component_id": "hdpe_crate_body",
+   "material_id": "hdpe",
+   "name": "Griffleiste",
+   "short": "Griff",
+   "shape": "box",
+   "x": 388,
+   "y": 12,
+   "w": 12,
+   "d": 276,
+   "z": 262,
+   "h": 28,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    370
+   ],
+   "mass": 45.4,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "Über der Griffmulde liegt eine abgerundete Leiste, an der man den vollen Kasten (rund 17 kg) trägt.",
+   "color": "#2F6E3B",
+   "label": true
+  },
+  {
+   "id": "pfosten_r1",
+   "component_id": "hdpe_crate_body",
+   "material_id": "hdpe",
+   "name": "Seitenwand",
+   "short": "Wand",
+   "shape": "box",
+   "x": 388,
+   "y": 12,
+   "w": 12,
+   "d": 83,
+   "z": 215,
+   "h": 47,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    370
+   ],
+   "mass": 20.2,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "Teil des Rahmens. Rippen und Durchbrüche sparen Material und halten den Kasten trotzdem stabil.",
+   "color": "#2F6E3B",
+   "label": false
+  },
+  {
+   "id": "pfosten_r2",
+   "component_id": "hdpe_crate_body",
+   "material_id": "hdpe",
+   "name": "Seitenwand",
+   "short": "Wand",
+   "shape": "box",
+   "x": 388,
+   "y": 205,
+   "w": 12,
+   "d": 83,
+   "z": 215,
+   "h": 47,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    370
+   ],
+   "mass": 20.2,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "Teil des Rahmens. Rippen und Durchbrüche sparen Material und halten den Kasten trotzdem stabil.",
+   "color": "#2F6E3B",
+   "label": false
+  },
+  {
+   "id": "wand_r",
+   "component_id": "hdpe_crate_body",
+   "material_id": "hdpe",
+   "name": "Seitenwand",
+   "short": "Wand",
+   "shape": "box",
+   "x": 388,
+   "y": 12,
+   "w": 12,
+   "d": 276,
+   "z": 12,
+   "h": 203,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    370
+   ],
+   "mass": 121.1,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "Außenwand. Rippen und Durchbrüche sparen Material und halten den Kasten trotzdem stabil.",
+   "color": "#2F6E3B",
+   "label": true
+  },
+  {
+   "id": "griff_l",
+   "component_id": "hdpe_crate_body",
+   "material_id": "hdpe",
+   "name": "Griffleiste",
+   "short": "Griff",
+   "shape": "box",
+   "x": 0,
+   "y": 12,
+   "w": 12,
+   "d": 276,
+   "z": 262,
+   "h": 28,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    370
+   ],
+   "mass": 45.4,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "Teil des Rahmens. Rippen und Durchbrüche sparen Material und halten den Kasten trotzdem stabil.",
+   "color": "#2F6E3B",
+   "label": false,
+   "sortBias": -400
+  },
+  {
+   "id": "pfosten_l1",
+   "component_id": "hdpe_crate_body",
+   "material_id": "hdpe",
+   "name": "Seitenwand",
+   "short": "Wand",
+   "shape": "box",
+   "x": 0,
+   "y": 12,
+   "w": 12,
+   "d": 83,
+   "z": 215,
+   "h": 47,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    370
+   ],
+   "mass": 20.2,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "Teil des Rahmens. Rippen und Durchbrüche sparen Material und halten den Kasten trotzdem stabil.",
+   "color": "#2F6E3B",
+   "label": false,
+   "sortBias": -400
+  },
+  {
+   "id": "pfosten_l2",
+   "component_id": "hdpe_crate_body",
+   "material_id": "hdpe",
+   "name": "Seitenwand",
+   "short": "Wand",
+   "shape": "box",
+   "x": 0,
+   "y": 205,
+   "w": 12,
+   "d": 83,
+   "z": 215,
+   "h": 47,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    370
+   ],
+   "mass": 20.2,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "Teil des Rahmens. Rippen und Durchbrüche sparen Material und halten den Kasten trotzdem stabil.",
+   "color": "#2F6E3B",
+   "label": false,
+   "sortBias": -400
+  },
+  {
+   "id": "wand_l",
+   "component_id": "hdpe_crate_body",
+   "material_id": "hdpe",
+   "name": "Seitenwand",
+   "short": "Wand",
+   "shape": "box",
+   "x": 0,
+   "y": 12,
+   "w": 12,
+   "d": 276,
+   "z": 12,
+   "h": 203,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    370
+   ],
+   "mass": 121.1,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "Teil des Rahmens. Rippen und Durchbrüche sparen Material und halten den Kasten trotzdem stabil.",
+   "color": "#2F6E3B",
+   "label": false,
+   "sortBias": -400
+  },
+  {
+   "id": "wand_v",
+   "component_id": "hdpe_crate_body",
+   "material_id": "hdpe",
+   "name": "Längswand",
+   "short": "Längswand",
+   "shape": "box",
+   "x": 0,
+   "y": 288,
+   "w": 400,
+   "d": 12,
+   "z": 12,
+   "h": 278,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    370
+   ],
+   "mass": 201.8,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "Lange Außenwand. Abgeschabte Stellen zeigen, wie oft der Kasten schon im Umlauf war.",
+   "color": "#2F6E3B",
+   "label": false
+  },
+  {
+   "id": "wand_h",
+   "component_id": "hdpe_crate_body",
+   "material_id": "hdpe",
+   "name": "Längswand",
+   "short": "Längswand",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 400,
+   "d": 12,
+   "z": 12,
+   "h": 278,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    370
+   ],
+   "mass": 201.8,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "Teil des Rahmens. Rippen und Durchbrüche sparen Material und halten den Kasten trotzdem stabil.",
+   "color": "#2F6E3B",
+   "label": false,
+   "sortBias": -400
+  },
+  {
+   "id": "etikett",
+   "component_id": "hdpe_crate_body",
+   "material_id": "pp",
+   "name": "In-Mould-Etikett",
+   "short": "Etikett",
+   "shape": "box",
+   "x": 120,
+   "y": 300,
+   "w": 160,
+   "d": 0.3,
+   "z": 110,
+   "h": 90,
+   "r": 0,
+   "explode": [
+    0,
+    70,
+    370
+   ],
+   "mass": 5,
+   "materials": [
+    [
+     "pp",
+     95
+    ],
+    [
+     "druck",
+     5
+    ]
+   ],
+   "info": "Bedrucktes PP-Etikett, beim Spritzgießen eingeschmolzen. Nicht abreißen: Kästen haben Pfand und werden über Jahre wiederbefüllt.",
+   "color": "#F2F0EA",
+   "sortBias": 120
   },
   {
    "id": "gefache",
@@ -189,19 +636,19 @@
    "name": "Gefache",
    "short": "Gefache",
    "shape": "box",
-   "x": 10,
-   "y": 10,
-   "w": 380,
-   "d": 280,
+   "x": 12,
+   "y": 12,
+   "w": 376,
+   "d": 276,
    "z": 12,
-   "h": 160,
-   "r": 4,
+   "h": 170,
+   "r": 2,
    "explode": [
     0,
     0,
-    360.0
+    30
    ],
-   "mass": 430,
+   "mass": 433.8,
    "materials": [
     [
      "hdpe",
@@ -217,8 +664,8 @@
      "y": 4,
      "w": 68,
      "d": 62,
-     "r": 6,
-     "fill": "#1F4A27"
+     "r": 8,
+     "fill": "#163A1E"
     },
     {
      "shape": "box",
@@ -226,8 +673,8 @@
      "y": 4,
      "w": 68,
      "d": 62,
-     "r": 6,
-     "fill": "#1F4A27"
+     "r": 8,
+     "fill": "#163A1E"
     },
     {
      "shape": "box",
@@ -235,8 +682,8 @@
      "y": 4,
      "w": 68,
      "d": 62,
-     "r": 6,
-     "fill": "#1F4A27"
+     "r": 8,
+     "fill": "#163A1E"
     },
     {
      "shape": "box",
@@ -244,8 +691,8 @@
      "y": 4,
      "w": 68,
      "d": 62,
-     "r": 6,
-     "fill": "#1F4A27"
+     "r": 8,
+     "fill": "#163A1E"
     },
     {
      "shape": "box",
@@ -253,8 +700,8 @@
      "y": 4,
      "w": 68,
      "d": 62,
-     "r": 6,
-     "fill": "#1F4A27"
+     "r": 8,
+     "fill": "#163A1E"
     },
     {
      "shape": "box",
@@ -262,8 +709,8 @@
      "y": 73,
      "w": 68,
      "d": 62,
-     "r": 6,
-     "fill": "#1F4A27"
+     "r": 8,
+     "fill": "#163A1E"
     },
     {
      "shape": "box",
@@ -271,8 +718,8 @@
      "y": 73,
      "w": 68,
      "d": 62,
-     "r": 6,
-     "fill": "#1F4A27"
+     "r": 8,
+     "fill": "#163A1E"
     },
     {
      "shape": "box",
@@ -280,8 +727,8 @@
      "y": 73,
      "w": 68,
      "d": 62,
-     "r": 6,
-     "fill": "#1F4A27"
+     "r": 8,
+     "fill": "#163A1E"
     },
     {
      "shape": "box",
@@ -289,8 +736,8 @@
      "y": 73,
      "w": 68,
      "d": 62,
-     "r": 6,
-     "fill": "#1F4A27"
+     "r": 8,
+     "fill": "#163A1E"
     },
     {
      "shape": "box",
@@ -298,8 +745,8 @@
      "y": 73,
      "w": 68,
      "d": 62,
-     "r": 6,
-     "fill": "#1F4A27"
+     "r": 8,
+     "fill": "#163A1E"
     },
     {
      "shape": "box",
@@ -307,8 +754,8 @@
      "y": 142,
      "w": 68,
      "d": 62,
-     "r": 6,
-     "fill": "#1F4A27"
+     "r": 8,
+     "fill": "#163A1E"
     },
     {
      "shape": "box",
@@ -316,8 +763,8 @@
      "y": 142,
      "w": 68,
      "d": 62,
-     "r": 6,
-     "fill": "#1F4A27"
+     "r": 8,
+     "fill": "#163A1E"
     },
     {
      "shape": "box",
@@ -325,8 +772,8 @@
      "y": 142,
      "w": 68,
      "d": 62,
-     "r": 6,
-     "fill": "#1F4A27"
+     "r": 8,
+     "fill": "#163A1E"
     },
     {
      "shape": "box",
@@ -334,8 +781,8 @@
      "y": 142,
      "w": 68,
      "d": 62,
-     "r": 6,
-     "fill": "#1F4A27"
+     "r": 8,
+     "fill": "#163A1E"
     },
     {
      "shape": "box",
@@ -343,8 +790,8 @@
      "y": 142,
      "w": 68,
      "d": 62,
-     "r": 6,
-     "fill": "#1F4A27"
+     "r": 8,
+     "fill": "#163A1E"
     },
     {
      "shape": "box",
@@ -352,8 +799,8 @@
      "y": 211,
      "w": 68,
      "d": 62,
-     "r": 6,
-     "fill": "#1F4A27"
+     "r": 8,
+     "fill": "#163A1E"
     },
     {
      "shape": "box",
@@ -361,8 +808,8 @@
      "y": 211,
      "w": 68,
      "d": 62,
-     "r": 6,
-     "fill": "#1F4A27"
+     "r": 8,
+     "fill": "#163A1E"
     },
     {
      "shape": "box",
@@ -370,8 +817,8 @@
      "y": 211,
      "w": 68,
      "d": 62,
-     "r": 6,
-     "fill": "#1F4A27"
+     "r": 8,
+     "fill": "#163A1E"
     },
     {
      "shape": "box",
@@ -379,8 +826,8 @@
      "y": 211,
      "w": 68,
      "d": 62,
-     "r": 6,
-     "fill": "#1F4A27"
+     "r": 8,
+     "fill": "#163A1E"
     },
     {
      "shape": "box",
@@ -388,48 +835,8 @@
      "y": 211,
      "w": 68,
      "d": 62,
-     "r": 6,
-     "fill": "#1F4A27"
-    }
-   ]
-  },
-  {
-   "id": "wand",
-   "component_id": "hdpe_crate_body",
-   "material_id": "hdpe",
-   "name": "Außenwand",
-   "short": "Außenwand",
-   "shape": "box",
-   "x": 3,
-   "y": 3,
-   "w": 394,
-   "d": 294,
-   "z": 12,
-   "h": 250,
-   "r": 8,
-   "explode": [
-    0,
-    0,
-    55.0
-   ],
-   "mass": 650,
-   "materials": [
-    [
-     "hdpe",
-     100
-    ]
-   ],
-   "info": "Rippen und Durchbrüche sparen Material und halten den Kasten trotzdem stabil.",
-   "color": "#2F6E3B",
-   "marks": [
-    {
-     "shape": "box",
-     "x": 7,
-     "y": 7,
-     "w": 380,
-     "d": 280,
-     "r": 4,
-     "fill": "#1F4A27"
+     "r": 8,
+     "fill": "#163A1E"
     }
    ]
   },
@@ -444,22 +851,22 @@
    "y": 0,
    "w": 400,
    "d": 300,
-   "z": 0,
-   "h": 12,
-   "r": 8,
+   "z": 4,
+   "h": 8,
+   "r": 4,
    "explode": [
     0,
     0,
-    0.0
+    0
    ],
-   "mass": 235,
+   "mass": 201.8,
    "materials": [
     [
      "hdpe",
      100
     ]
    ],
-   "info": "Gitterboden, damit Wasser ablaufen kann. Die Füße greifen beim Stapeln in den Kasten darunter.",
+   "info": "Gitterboden, damit Wasser ablaufen kann. Am Ende wird der ganze Kasten gemahlen und zu neuen Kästen gespritzt.",
    "color": "#2F6E3B",
    "marks": [
     {
@@ -469,7 +876,7 @@
      "w": 22,
      "d": 22,
      "r": 3,
-     "fill": "#1F4A27"
+     "fill": "#163A1E"
     },
     {
      "shape": "box",
@@ -478,7 +885,7 @@
      "w": 22,
      "d": 22,
      "r": 3,
-     "fill": "#1F4A27"
+     "fill": "#163A1E"
     },
     {
      "shape": "box",
@@ -487,7 +894,7 @@
      "w": 22,
      "d": 22,
      "r": 3,
-     "fill": "#1F4A27"
+     "fill": "#163A1E"
     },
     {
      "shape": "box",
@@ -496,7 +903,7 @@
      "w": 22,
      "d": 22,
      "r": 3,
-     "fill": "#1F4A27"
+     "fill": "#163A1E"
     },
     {
      "shape": "box",
@@ -505,7 +912,7 @@
      "w": 22,
      "d": 22,
      "r": 3,
-     "fill": "#1F4A27"
+     "fill": "#163A1E"
     },
     {
      "shape": "box",
@@ -514,7 +921,7 @@
      "w": 22,
      "d": 22,
      "r": 3,
-     "fill": "#1F4A27"
+     "fill": "#163A1E"
     },
     {
      "shape": "box",
@@ -523,7 +930,7 @@
      "w": 22,
      "d": 22,
      "r": 3,
-     "fill": "#1F4A27"
+     "fill": "#163A1E"
     },
     {
      "shape": "box",
@@ -532,7 +939,7 @@
      "w": 22,
      "d": 22,
      "r": 3,
-     "fill": "#1F4A27"
+     "fill": "#163A1E"
     },
     {
      "shape": "box",
@@ -541,7 +948,7 @@
      "w": 22,
      "d": 22,
      "r": 3,
-     "fill": "#1F4A27"
+     "fill": "#163A1E"
     },
     {
      "shape": "box",
@@ -550,7 +957,7 @@
      "w": 22,
      "d": 22,
      "r": 3,
-     "fill": "#1F4A27"
+     "fill": "#163A1E"
     },
     {
      "shape": "box",
@@ -559,7 +966,7 @@
      "w": 22,
      "d": 22,
      "r": 3,
-     "fill": "#1F4A27"
+     "fill": "#163A1E"
     },
     {
      "shape": "box",
@@ -568,7 +975,7 @@
      "w": 22,
      "d": 22,
      "r": 3,
-     "fill": "#1F4A27"
+     "fill": "#163A1E"
     },
     {
      "shape": "box",
@@ -577,7 +984,7 @@
      "w": 22,
      "d": 22,
      "r": 3,
-     "fill": "#1F4A27"
+     "fill": "#163A1E"
     },
     {
      "shape": "box",
@@ -586,7 +993,7 @@
      "w": 22,
      "d": 22,
      "r": 3,
-     "fill": "#1F4A27"
+     "fill": "#163A1E"
     },
     {
      "shape": "box",
@@ -595,7 +1002,7 @@
      "w": 22,
      "d": 22,
      "r": 3,
-     "fill": "#1F4A27"
+     "fill": "#163A1E"
     },
     {
      "shape": "box",
@@ -604,7 +1011,7 @@
      "w": 22,
      "d": 22,
      "r": 3,
-     "fill": "#1F4A27"
+     "fill": "#163A1E"
     },
     {
      "shape": "box",
@@ -613,7 +1020,7 @@
      "w": 22,
      "d": 22,
      "r": 3,
-     "fill": "#1F4A27"
+     "fill": "#163A1E"
     },
     {
      "shape": "box",
@@ -622,7 +1029,7 @@
      "w": 22,
      "d": 22,
      "r": 3,
-     "fill": "#1F4A27"
+     "fill": "#163A1E"
     },
     {
      "shape": "box",
@@ -631,7 +1038,7 @@
      "w": 22,
      "d": 22,
      "r": 3,
-     "fill": "#1F4A27"
+     "fill": "#163A1E"
     },
     {
      "shape": "box",
@@ -640,7 +1047,7 @@
      "w": 22,
      "d": 22,
      "r": 3,
-     "fill": "#1F4A27"
+     "fill": "#163A1E"
     },
     {
      "shape": "box",
@@ -649,7 +1056,7 @@
      "w": 22,
      "d": 22,
      "r": 3,
-     "fill": "#1F4A27"
+     "fill": "#163A1E"
     },
     {
      "shape": "box",
@@ -658,7 +1065,7 @@
      "w": 22,
      "d": 22,
      "r": 3,
-     "fill": "#1F4A27"
+     "fill": "#163A1E"
     },
     {
      "shape": "box",
@@ -667,7 +1074,7 @@
      "w": 22,
      "d": 22,
      "r": 3,
-     "fill": "#1F4A27"
+     "fill": "#163A1E"
     },
     {
      "shape": "box",
@@ -676,7 +1083,7 @@
      "w": 22,
      "d": 22,
      "r": 3,
-     "fill": "#1F4A27"
+     "fill": "#163A1E"
     },
     {
      "shape": "box",
@@ -685,7 +1092,7 @@
      "w": 22,
      "d": 22,
      "r": 3,
-     "fill": "#1F4A27"
+     "fill": "#163A1E"
     },
     {
      "shape": "box",
@@ -694,7 +1101,7 @@
      "w": 22,
      "d": 22,
      "r": 3,
-     "fill": "#1F4A27"
+     "fill": "#163A1E"
     },
     {
      "shape": "box",
@@ -703,7 +1110,7 @@
      "w": 22,
      "d": 22,
      "r": 3,
-     "fill": "#1F4A27"
+     "fill": "#163A1E"
     },
     {
      "shape": "box",
@@ -712,7 +1119,7 @@
      "w": 22,
      "d": 22,
      "r": 3,
-     "fill": "#1F4A27"
+     "fill": "#163A1E"
     },
     {
      "shape": "box",
@@ -721,7 +1128,7 @@
      "w": 22,
      "d": 22,
      "r": 3,
-     "fill": "#1F4A27"
+     "fill": "#163A1E"
     },
     {
      "shape": "box",
@@ -730,7 +1137,7 @@
      "w": 22,
      "d": 22,
      "r": 3,
-     "fill": "#1F4A27"
+     "fill": "#163A1E"
     },
     {
      "shape": "box",
@@ -739,7 +1146,7 @@
      "w": 22,
      "d": 22,
      "r": 3,
-     "fill": "#1F4A27"
+     "fill": "#163A1E"
     },
     {
      "shape": "box",
@@ -748,7 +1155,7 @@
      "w": 22,
      "d": 22,
      "r": 3,
-     "fill": "#1F4A27"
+     "fill": "#163A1E"
     },
     {
      "shape": "box",
@@ -757,7 +1164,7 @@
      "w": 22,
      "d": 22,
      "r": 3,
-     "fill": "#1F4A27"
+     "fill": "#163A1E"
     },
     {
      "shape": "box",
@@ -766,7 +1173,7 @@
      "w": 22,
      "d": 22,
      "r": 3,
-     "fill": "#1F4A27"
+     "fill": "#163A1E"
     },
     {
      "shape": "box",
@@ -775,7 +1182,7 @@
      "w": 22,
      "d": 22,
      "r": 3,
-     "fill": "#1F4A27"
+     "fill": "#163A1E"
     },
     {
      "shape": "box",
@@ -784,7 +1191,7 @@
      "w": 22,
      "d": 22,
      "r": 3,
-     "fill": "#1F4A27"
+     "fill": "#163A1E"
     },
     {
      "shape": "box",
@@ -793,7 +1200,7 @@
      "w": 22,
      "d": 22,
      "r": 3,
-     "fill": "#1F4A27"
+     "fill": "#163A1E"
     },
     {
      "shape": "box",
@@ -802,7 +1209,7 @@
      "w": 22,
      "d": 22,
      "r": 3,
-     "fill": "#1F4A27"
+     "fill": "#163A1E"
     },
     {
      "shape": "box",
@@ -811,7 +1218,7 @@
      "w": 22,
      "d": 22,
      "r": 3,
-     "fill": "#1F4A27"
+     "fill": "#163A1E"
     },
     {
      "shape": "box",
@@ -820,7 +1227,7 @@
      "w": 22,
      "d": 22,
      "r": 3,
-     "fill": "#1F4A27"
+     "fill": "#163A1E"
     },
     {
      "shape": "box",
@@ -829,7 +1236,7 @@
      "w": 22,
      "d": 22,
      "r": 3,
-     "fill": "#1F4A27"
+     "fill": "#163A1E"
     },
     {
      "shape": "box",
@@ -838,7 +1245,7 @@
      "w": 22,
      "d": 22,
      "r": 3,
-     "fill": "#1F4A27"
+     "fill": "#163A1E"
     },
     {
      "shape": "box",
@@ -847,7 +1254,7 @@
      "w": 22,
      "d": 22,
      "r": 3,
-     "fill": "#1F4A27"
+     "fill": "#163A1E"
     },
     {
      "shape": "box",
@@ -856,7 +1263,7 @@
      "w": 22,
      "d": 22,
      "r": 3,
-     "fill": "#1F4A27"
+     "fill": "#163A1E"
     },
     {
      "shape": "box",
@@ -865,7 +1272,7 @@
      "w": 22,
      "d": 22,
      "r": 3,
-     "fill": "#1F4A27"
+     "fill": "#163A1E"
     },
     {
      "shape": "box",
@@ -874,7 +1281,7 @@
      "w": 22,
      "d": 22,
      "r": 3,
-     "fill": "#1F4A27"
+     "fill": "#163A1E"
     },
     {
      "shape": "box",
@@ -883,7 +1290,7 @@
      "w": 22,
      "d": 22,
      "r": 3,
-     "fill": "#1F4A27"
+     "fill": "#163A1E"
     },
     {
      "shape": "box",
@@ -892,7 +1299,7 @@
      "w": 22,
      "d": 22,
      "r": 3,
-     "fill": "#1F4A27"
+     "fill": "#163A1E"
     },
     {
      "shape": "box",
@@ -901,7 +1308,7 @@
      "w": 22,
      "d": 22,
      "r": 3,
-     "fill": "#1F4A27"
+     "fill": "#163A1E"
     },
     {
      "shape": "box",
@@ -910,7 +1317,7 @@
      "w": 22,
      "d": 22,
      "r": 3,
-     "fill": "#1F4A27"
+     "fill": "#163A1E"
     },
     {
      "shape": "box",
@@ -919,7 +1326,7 @@
      "w": 22,
      "d": 22,
      "r": 3,
-     "fill": "#1F4A27"
+     "fill": "#163A1E"
     },
     {
      "shape": "box",
@@ -928,7 +1335,7 @@
      "w": 22,
      "d": 22,
      "r": 3,
-     "fill": "#1F4A27"
+     "fill": "#163A1E"
     },
     {
      "shape": "box",
@@ -937,7 +1344,7 @@
      "w": 22,
      "d": 22,
      "r": 3,
-     "fill": "#1F4A27"
+     "fill": "#163A1E"
     },
     {
      "shape": "box",
@@ -946,43 +1353,38 @@
      "w": 22,
      "d": 22,
      "r": 3,
-     "fill": "#1F4A27"
+     "fill": "#163A1E"
     }
    ]
   },
   {
-   "id": "etikett",
+   "id": "fuss",
    "component_id": "hdpe_crate_body",
-   "material_id": "pp",
-   "name": "In-Mould-Etikett",
-   "short": "Etikett",
+   "material_id": "hdpe",
+   "name": "Stapelfuß",
+   "short": "Stapelfuß",
    "shape": "box",
-   "x": 120,
-   "y": 299.7,
-   "w": 160,
-   "d": 0.3,
-   "z": 150,
-   "h": 80,
-   "r": 0,
+   "x": 8,
+   "y": 8,
+   "w": 384,
+   "d": 284,
+   "z": 0,
+   "h": 4,
+   "r": 6,
    "explode": [
     0,
-    70,
+    0,
     0
    ],
-   "mass": 5,
+   "mass": 40.4,
    "materials": [
     [
-     "pp",
-     95
-    ],
-    [
-     "druck",
-     5
+     "hdpe",
+     100
     ]
    ],
-   "info": "Bedrucktes PP-Etikett, beim Spritzgießen eingeschmolzen. Nicht abreißen: Kästen haben Pfand, werden über Jahre wiederbefüllt und am Ende zu neuen Kästen gemahlen.",
-   "color": "#F2F0EA",
-   "sortBias": 100
+   "info": "Etwas schmaler als der Kasten. Er greift beim Stapeln in den Rand des Kastens darunter, so rutscht der Stapel nicht.",
+   "color": "#1F4A27"
   }
  ]
 }

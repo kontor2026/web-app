@@ -28,14 +28,18 @@ teile = [
          info='Aluminiumkappe, die mit einer Gummidichtung fest um den Glashals gepresst ist. Nur mit einer Zange '
               'abhebeln, dann kann das Glas ins Altglas.',
          color=GOLD, marks=[mark('cyl', 4, 4, 9, fill='#B8963A')]),
+    teil('dichtung', 'perfume_pump', 'Halsdichtung', 'Dichtung', 'cyl',
+         material_id='rubber', x=22.5, y=12.5, w=15, z=74, h=1, mass=0.1, materials=[['gummi', 100]],
+         info='Dünner Gummiring zwischen Glasrand und Kragen. Er hält den Flakon dicht, damit kein Duft verdunstet.',
+         color='#3A3D40', marks=[mark('cyl', 4, 4, 7, fill='#E6EEF0')]),
     teil('feder', 'perfume_pump', 'Pumpenfeder', 'Feder', 'cyl',
          material_id='steel', x=28, y=18, w=4, z=60, h=10, mass=0.2, materials=[['stahl', 100]],
          info='Winzige Edelstahlfeder, die den Sprühkopf zurückdrückt.',
-         color='#9DA4AA', marks=[mark('cyl', 1, 1, 2, fill='#6E757B')]),
+         color='#9DA4AA', marks=[mark('cyl', 1, 1, 2, fill='#6E757B')], sortBias=-40),
     teil('pumpe', 'perfume_pump', 'Pumpenkörper', 'Pumpe', 'cyl',
          material_id='pp', x=26.5, y=16.5, w=7, z=50, h=26, mass=1.2, materials=[['pp', 70], ['ldpe', 20], ['gummi', 10]],
          info='Kleiner Kolben mit Ventil, der bei jedem Druck eine genau abgemessene Menge zerstäubt.',
-         color='#ECECE8', marks=[mark('cyl', 2, 2, 3, fill='#C9CED3')]),
+         color='#ECECE8', marks=[mark('cyl', 2, 2, 3, fill='#C9CED3')], sortBias=-40),
     teil('hals', 'glass_container', 'Glashals', 'Hals', 'cyl',
          x=22.5, y=12.5, w=15, z=66, h=8, mass=3,
          info='Kurzer Hals mit Wulst, unter den der Kragen gepresst wird.', color=GLAS, opacity=OP,
@@ -49,9 +53,9 @@ teile = [
          x=0, y=0, w=60, d=40, z=0, h=10, r=6, mass=30,
          info='Massiver Glasboden, er macht den Flakon schwer und standfest.', color=GLAS, opacity=0.75, label=False),
     teil('steigrohr', 'perfume_pump', 'Steigrohr', 'Steigrohr', 'cyl',
-         material_id='ldpe', x=29, y=19, w=2, z=11, h=40, explode=[45, 0, 0], mass=0.2, materials=[['ldpe', 100]],
-         info='Dünner Schlauch, durch den die Pumpe das Parfüm vom Boden ansaugt.', color='#EDEDE8'),
+         material_id='ldpe', x=29, y=19, w=2, z=11, h=40, explode=[62, 0, 0], mass=0.2, materials=[['ldpe', 100]],
+         info='Dünner Schlauch, durch den die Pumpe das Parfüm vom Boden ansaugt.', color='#EDEDE8', sortBias=-40),
 ]
-explodiere(teile, abstand=12, nach_liste=True, gruppen=[['hals', 'koerper', 'boden']])
+explodiere(teile, abstand=18, nach_liste=True, gruppen=[['hals', 'koerper', 'boden']])
 skaliere_masse(teile, oid='perfume_bottle')
 schreibe('perfume_bottle', teile)

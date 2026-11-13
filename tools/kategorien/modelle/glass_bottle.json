@@ -10,32 +10,100 @@
    "x": 14,
    "y": 14,
    "w": 32,
-   "z": 224,
-   "h": 6,
+   "z": 223,
+   "h": 7,
    "explode": [
     0,
     0,
-    22
+    28
    ],
-   "mass": 2.2,
+   "mass": 2,
    "materials": [
     [
      "weissblech",
-     90
-    ],
-    [
-     "ldpe",
-     10
+     100
     ]
    ],
-   "info": "Weißblech mit Kunststoffdichtung innen. Mit dem Öffner abhebeln, er gehört in die Metallsammlung.",
+   "info": "Weißblech mit 21 Zacken, auf den Wulst gepresst. Mit dem Öffner abhebeln, er gehört in die Gelbe Tonne oder zum Metall.",
    "color": "#B8BEC4",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 2,
+     "y": 2,
+     "w": 28,
+     "fill": "#C8CDD2"
+    },
+    {
+     "shape": "cyl",
+     "x": 6,
+     "y": 6,
+     "w": 20,
+     "fill": "#C9A646"
+    }
+   ]
+  },
+  {
+   "id": "dichtung",
+   "component_id": "crown_cap",
+   "material_id": "ldpe",
+   "name": "Dichtungseinlage",
+   "short": "Dichtung",
+   "shape": "cyl",
+   "x": 17,
+   "y": 17,
+   "w": 26,
+   "z": 223.6,
+   "h": 0.6,
+   "explode": [
+    0,
+    0,
+    15
+   ],
+   "mass": 0.2,
+   "materials": [
+    [
+     "ldpe",
+     100
+    ]
+   ],
+   "info": "Weiche Kunststoffschicht innen im Kronkorken. Sie dichtet ab, damit die Kohlensäure drinbleibt. Bleibt am Kronkorken.",
+   "color": "#E4E0D2"
+  },
+  {
+   "id": "muendung",
+   "component_id": "glass_container",
+   "material_id": "glass",
+   "name": "Mündung mit Wulst",
+   "short": "Mündung",
+   "shape": "cyl",
+   "x": 15.75,
+   "y": 15.75,
+   "w": 28.5,
+   "z": 216,
+   "h": 10,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 8.9,
+   "materials": [
+    [
+     "behaelterglas",
+     100
+    ]
+   ],
+   "info": "Verdickter Rand, unter den der Kronkorken gepresst wird. Ist er angeschlagen, wird die Flasche aussortiert.",
+   "color": "#6B4A2B",
+   "opacity": 0.75,
    "marks": [
     {
      "shape": "cyl",
      "x": 5,
      "y": 5,
-     "w": 22
+     "w": 18.5,
+     "fill": "#5A3D22"
     }
    ]
   },
@@ -46,62 +114,171 @@
    "name": "Flaschenhals",
    "short": "Hals",
    "shape": "cyl",
-   "x": 17,
-   "y": 17,
-   "w": 26,
-   "z": 170,
-   "h": 56,
-   "explode": [
-    0,
-    0,
-    0
-   ],
-   "mass": 40,
-   "materials": [
-    [
-     "behaelterglas",
-     100
-    ]
-   ],
-   "info": "Langer Hals mit verstärktem Rand für den Kronkorken. Teil der Flasche, in einem Stück geblasen.",
-   "color": "#6B4A2B",
-   "opacity": 0.75,
-   "marks": [
-    {
-     "shape": "cyl",
-     "x": 5,
-     "y": 5,
-     "w": 16
-    }
-   ]
-  },
-  {
-   "id": "schulter",
-   "component_id": "glass_container",
-   "material_id": "glass",
-   "name": "Flaschenschulter",
-   "short": "Schulter",
-   "shape": "cyl",
-   "x": 7,
-   "y": 7,
-   "w": 46,
-   "z": 140,
+   "x": 17.5,
+   "y": 17.5,
+   "w": 25,
+   "z": 186,
    "h": 30,
    "explode": [
     0,
     0,
     0
    ],
-   "mass": 52,
+   "mass": 21.7,
    "materials": [
     [
      "behaelterglas",
      100
     ]
    ],
-   "info": "Übergang zum Hals. Braunes Glas schützt das Getränk vor Licht.",
+   "info": "Langer, schmaler Hals. Daran greifen die Maschinen in der Abfüllanlage.",
    "color": "#6B4A2B",
    "opacity": 0.75
+  },
+  {
+   "id": "halsfuss",
+   "component_id": "glass_container",
+   "material_id": "glass",
+   "name": "Flaschenhals",
+   "short": "Hals",
+   "shape": "cyl",
+   "x": 16,
+   "y": 16,
+   "w": 28,
+   "z": 172,
+   "h": 14,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 11.8,
+   "materials": [
+    [
+     "behaelterglas",
+     100
+    ]
+   ],
+   "info": "Gehört zur Flasche, alles in einem Stück aus Glas geblasen.",
+   "color": "#6B4A2B",
+   "opacity": 0.75,
+   "label": false
+  },
+  {
+   "id": "schulter0",
+   "component_id": "glass_container",
+   "material_id": "glass",
+   "name": "Flaschenschulter",
+   "short": "Schulter",
+   "shape": "cyl",
+   "x": 12.5,
+   "y": 12.5,
+   "w": 35,
+   "z": 164,
+   "h": 8,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 11.8,
+   "materials": [
+    [
+     "behaelterglas",
+     100
+    ]
+   ],
+   "info": "Gehört zur Flasche, alles in einem Stück aus Glas geblasen.",
+   "color": "#6B4A2B",
+   "opacity": 0.75,
+   "label": false
+  },
+  {
+   "id": "schulter1",
+   "component_id": "glass_container",
+   "material_id": "glass",
+   "name": "Flaschenschulter",
+   "short": "Schulter",
+   "shape": "cyl",
+   "x": 8.5,
+   "y": 8.5,
+   "w": 43,
+   "z": 156,
+   "h": 8,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 11.8,
+   "materials": [
+    [
+     "behaelterglas",
+     100
+    ]
+   ],
+   "info": "Gehört zur Flasche, alles in einem Stück aus Glas geblasen.",
+   "color": "#6B4A2B",
+   "opacity": 0.75,
+   "label": false
+  },
+  {
+   "id": "schulter2",
+   "component_id": "glass_container",
+   "material_id": "glass",
+   "name": "Flaschenschulter",
+   "short": "Schulter",
+   "shape": "cyl",
+   "x": 5,
+   "y": 5,
+   "w": 50,
+   "z": 148,
+   "h": 8,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 11.8,
+   "materials": [
+    [
+     "behaelterglas",
+     100
+    ]
+   ],
+   "info": "Gehört zur Flasche, alles in einem Stück aus Glas geblasen.",
+   "color": "#6B4A2B",
+   "opacity": 0.75,
+   "label": false
+  },
+  {
+   "id": "schulter3",
+   "component_id": "glass_container",
+   "material_id": "glass",
+   "name": "Flaschenschulter",
+   "short": "Schulter",
+   "shape": "cyl",
+   "x": 2,
+   "y": 2,
+   "w": 56,
+   "z": 140,
+   "h": 8,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 11.8,
+   "materials": [
+    [
+     "behaelterglas",
+     100
+    ]
+   ],
+   "info": "Übergang zum Hals. Braunes Glas schützt das Bier vor Licht, sonst schmeckt es schnell muffig.",
+   "color": "#6B4A2B",
+   "opacity": 0.75,
+   "label": true
   },
   {
    "id": "koerper",
@@ -113,29 +290,94 @@
    "x": 0,
    "y": 0,
    "w": 60,
-   "z": 0,
-   "h": 140,
+   "z": 6,
+   "h": 134,
    "explode": [
     0,
     0,
     0
    ],
-   "mass": 263,
+   "mass": 226.4,
    "materials": [
     [
      "behaelterglas",
      100
     ]
    ],
-   "info": "Kalk-Natron-Glas aus Sand, Soda und Kalk. Als Mehrwegflasche bis zu 50-mal befüllt, danach nach Farbe getrennt eingeschmolzen.",
+   "info": "Kalk-Natron-Glas aus Sand, Soda und Kalk. Als Mehrwegflasche bis zu 50-mal gespült und neu befüllt, danach nach Farbe getrennt eingeschmolzen.",
    "color": "#6B4A2B",
-   "opacity": 0.75,
+   "opacity": 0.75
+  },
+  {
+   "id": "boden",
+   "component_id": "glass_container",
+   "material_id": "glass",
+   "name": "Boden mit Scheuerring",
+   "short": "Boden",
+   "shape": "cyl",
+   "x": 2,
+   "y": 2,
+   "w": 56,
+   "z": 0,
+   "h": 6,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 39.4,
+   "materials": [
+    [
+     "behaelterglas",
+     100
+    ]
+   ],
+   "info": "Dicker Boden. Der helle, zerkratzte Ring entsteht, wenn Flaschen im Kasten und auf dem Band aneinanderreiben.",
+   "color": "#6B4A2B",
+   "opacity": 0.75
+  },
+  {
+   "id": "halsetikett",
+   "component_id": "paper_label",
+   "material_id": "paper",
+   "name": "Halsschleife",
+   "short": "Halsetikett",
+   "shape": "cyl",
+   "x": 17.2,
+   "y": 17.2,
+   "w": 25.6,
+   "z": 192,
+   "h": 18,
+   "explode": [
+    60,
+    0,
+    0
+   ],
+   "mass": 0.5,
+   "materials": [
+    [
+     "papier",
+     90
+    ],
+    [
+     "druck",
+     5
+    ],
+    [
+     "klebstoff",
+     5
+    ]
+   ],
+   "info": "Papierstreifen rund um den Hals. Darf beim Altglas dranbleiben, er verbrennt in der Schmelze.",
+   "color": "#C9A646",
+   "sortBias": 9,
    "marks": [
     {
      "shape": "cyl",
-     "x": 7,
-     "y": 7,
-     "w": 46
+     "x": 0.8,
+     "y": 0.8,
+     "w": 24,
+     "fill": "#5C3F25"
     }
    ]
   },
@@ -145,16 +387,14 @@
    "material_id": "paper",
    "name": "Bauchetikett",
    "short": "Etikett",
-   "shape": "box",
-   "x": 60,
-   "y": 10,
-   "w": 0.3,
-   "d": 40,
-   "z": 30,
-   "h": 75,
-   "r": 0,
+   "shape": "cyl",
+   "x": -0.3000000000000007,
+   "y": -0.3000000000000007,
+   "w": 60.6,
+   "z": 40,
+   "h": 70,
    "explode": [
-    55,
+    90,
     0,
     0
    ],
@@ -162,42 +402,29 @@
    "materials": [
     [
      "papier",
-     100
-    ]
-   ],
-   "info": "Papier mit wasserlöslichem Leim. In der Spülanlage der Brauerei weicht es ab.",
-   "color": "#E8DDC0",
-   "sortBias": 100
-  },
-  {
-   "id": "halsetikett",
-   "component_id": "paper_label",
-   "material_id": "paper",
-   "name": "Halsetikett",
-   "short": "Halsetikett",
-   "shape": "box",
-   "x": 43,
-   "y": 20,
-   "w": 0.3,
-   "d": 20,
-   "z": 185,
-   "h": 25,
-   "r": 0,
-   "explode": [
-    55,
-    0,
-    0
-   ],
-   "mass": 0.5,
-   "materials": [
+     90
+    ],
     [
-     "papier",
-     100
+     "druck",
+     5
+    ],
+    [
+     "klebstoff",
+     5
     ]
    ],
-   "info": "Kleines Papieretikett am Hals. Beim Altglas darf es dranbleiben, es verbrennt in der Schmelze.",
-   "color": "#C9A646",
-   "sortBias": 100
+   "info": "Papier mit wasserlöslichem Leim. In der Spülanlage der Brauerei weicht es in heißer Lauge ab.",
+   "color": "#E8DDC0",
+   "sortBias": 31,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 1.3,
+     "y": 1.3,
+     "w": 58,
+     "fill": "#5C3F25"
+    }
+   ]
   }
  ]
 }

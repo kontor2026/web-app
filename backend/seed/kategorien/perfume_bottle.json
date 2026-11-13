@@ -45,11 +45,12 @@
    "Fe": "Modellmassen (Schätzung)"
   },
   "materialien_g": {
-   "glass": 133.8,
+   "glass": 133.7,
    "pp": 14.3,
    "aluminium": 1.5,
    "steel": 0.2,
-   "ldpe": 0.2
+   "ldpe": 0.2,
+   "rubber": 0.1
   },
   "co2_kg": 0.266,
   "co2_mit_recyclat_kg": 0.161,
@@ -150,7 +151,7 @@
    "explode": [
     0,
     0,
-    118.0
+    167.0
    ],
    "mass": 12.1,
    "materials": [
@@ -188,7 +189,7 @@
    "explode": [
     0,
     0,
-    86.0
+    129.0
    ],
    "mass": 1,
    "materials": [
@@ -235,7 +236,7 @@
    "explode": [
     0,
     0,
-    74.0
+    111.0
    ],
    "mass": 1.5,
    "materials": [
@@ -261,6 +262,42 @@
    ]
   },
   {
+   "id": "dichtung",
+   "component_id": "perfume_pump",
+   "material_id": "rubber",
+   "name": "Halsdichtung",
+   "short": "Dichtung",
+   "shape": "cyl",
+   "x": 22.5,
+   "y": 12.5,
+   "w": 15,
+   "z": 74,
+   "h": 1,
+   "explode": [
+    0,
+    0,
+    90.0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "info": "Dünner Gummiring zwischen Glasrand und Kragen. Er hält den Flakon dicht, damit kein Duft verdunstet.",
+   "color": "#3A3D40",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 4,
+     "w": 7,
+     "fill": "#E6EEF0"
+    }
+   ]
+  },
+  {
    "id": "feder",
    "component_id": "perfume_pump",
    "material_id": "steel",
@@ -275,7 +312,7 @@
    "explode": [
     0,
     0,
-    64.0
+    76.0
    ],
    "mass": 0.2,
    "materials": [
@@ -286,6 +323,7 @@
    ],
    "info": "Winzige Edelstahlfeder, die den Sprühkopf zurückdrückt.",
    "color": "#9DA4AA",
+   "sortBias": -40,
    "marks": [
     {
      "shape": "cyl",
@@ -311,7 +349,7 @@
    "explode": [
     0,
     0,
-    36.0
+    42.0
    ],
    "mass": 1.2,
    "materials": [
@@ -330,6 +368,7 @@
    ],
    "info": "Kleiner Kolben mit Ventil, der bei jedem Druck eine genau abgemessene Menge zerstäubt.",
    "color": "#ECECE8",
+   "sortBias": -40,
    "marks": [
     {
      "shape": "cyl",
@@ -396,7 +435,7 @@
     0,
     0.0
    ],
-   "mass": 100.6,
+   "mass": 100.5,
    "materials": [
     [
      "behaelterglas",
@@ -461,7 +500,7 @@
    "z": 11,
    "h": 40,
    "explode": [
-    45,
+    62,
     0,
     0
    ],
@@ -473,7 +512,8 @@
     ]
    ],
    "info": "Dünner Schlauch, durch den die Pumpe das Parfüm vom Boden ansaugt.",
-   "color": "#EDEDE8"
+   "color": "#EDEDE8",
+   "sortBias": -40
   }
  ]
 }

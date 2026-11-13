@@ -180,7 +180,7 @@
   "name": "PET-Flasche",
   "name_en": "PET Bottle",
   "klasse": "Pfandverpackung",
-  "teile": 6,
+  "teile": 18,
   "platzhalter": false
  },
  {
@@ -188,7 +188,7 @@
   "name": "Glasflasche",
   "name_en": "Glass Bottle",
   "klasse": "Verpackung · Glas",
-  "teile": 6,
+  "teile": 13,
   "platzhalter": false
  },
  {
@@ -196,7 +196,7 @@
   "name": "Weinflasche",
   "name_en": "Wine Bottle",
   "klasse": "Verpackung · Glas",
-  "teile": 9,
+  "teile": 12,
   "platzhalter": false
  },
  {
@@ -204,7 +204,7 @@
   "name": "Schraubglas",
   "name_en": "Glass Jar",
   "klasse": "Verpackung · Glas",
-  "teile": 6,
+  "teile": 12,
   "platzhalter": false
  },
  {
@@ -212,7 +212,7 @@
   "name": "Getränkedose",
   "name_en": "Aluminium Can",
   "klasse": "Pfandverpackung",
-  "teile": 5,
+  "teile": 10,
   "platzhalter": false
  },
  {
@@ -940,7 +940,7 @@
   "name": "Getränkekiste",
   "name_en": "Bottle Crate",
   "klasse": "Pfandverpackung",
-  "teile": 5,
+  "teile": 18,
   "platzhalter": false
  },
  {
@@ -956,7 +956,7 @@
   "name": "Parfümflakon",
   "name_en": "Perfume Bottle",
   "klasse": "Verpackung · Glas",
-  "teile": 9,
+  "teile": 10,
   "platzhalter": false
  },
  {
@@ -1052,7 +1052,7 @@
   "name": "Schneidebrett",
   "name_en": "Cutting Board",
   "klasse": "Holz",
-  "teile": 8,
+  "teile": 12,
   "platzhalter": false
  },
  {
@@ -1116,7 +1116,7 @@
   "name": "Duftkerze im Glas",
   "name_en": "Jar Candle",
   "klasse": "Verpackung · Glas",
-  "teile": 6,
+  "teile": 8,
   "platzhalter": false
  },
  {

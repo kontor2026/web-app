@@ -1,57 +1,72 @@
 """3D-Modell: wine_bottle. Erzeugt tools/kategorien/modelle/wine_bottle.json.
 
-Typische 0,75-l-Weinflasche (Bordeaux-Form, grünes Glas, 76 × 300 mm, Naturkorken, Kapsel aus Alufolie).
-Glasabschnitte bewegen sich gemeinsam, Korken und Kapsel werden darüber gestapelt (Kapsel ganz oben, weil sie
-zuerst entfernt wird), Etiketten seitlich herausgezogen.
+Typische 0,75-l-Weinflasche (Bordeaux-Form, grünes Glas, Ø 76 × 300 mm, ca. 500 g) mit Naturkorken und
+Kapsel aus Alufolie. Schulter als Stapel schmaler werdender Scheiben, Etiketten als Bänder um Bauch und Hals.
+Glas bleibt stehen, Korken und Kapsel schweben darüber (Kapsel ganz oben, weil sie zuerst ab muss),
+Etiketten werden nach rechts gezogen.
 """
 import sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-from bau import teil, mark, explodiere, skaliere_masse, schreibe  # noqa: E402
+from bau import teil, mark, skaliere_masse, schreibe  # noqa: E402
 
-GLAS = '#2F5E3A'
-OP = 0.7
+GLAS = dict(color='#2F5E3A', opacity=0.7)
+INNEN = '#244A2D'
+C = 38
+
+
+def rund(w, z, h):
+    return dict(x=C - w / 2, y=C - w / 2, w=w, z=z, h=h)
+
+
+INFO_G = 'Gehört zur Flasche, alles in einem Stück aus Glas geformt.'
+glas = []
+
+
+def g(id, name, short, w, z, h, mass, info=INFO_G, **extra):
+    glas.append(teil(id, 'glass_container', name, short, 'cyl', **rund(w, z, h), mass=mass, info=info,
+                     **{**GLAS, **extra}))
+
+
+g('muendung', 'Mündung mit Wulst', 'Mündung', 31, 288, 12, 12,
+  'Verdickter Rand am Flaschenhals. Unter dem Wulst schneidet man die Kapsel rundherum ein.',
+  marks=[mark('cyl', 3.5, 3.5, 24, fill='#C49A63')])
+g('hals', 'Flaschenhals', 'Hals', 29.5, 228, 60, 38, 'Langer, schmaler Hals, in dem der Korken steckt.')
+for i, (w, z, h) in enumerate([(35, 220, 8), (46, 212, 8), (58, 204, 8), (68, 196, 8)]):
+    g(f'schulter{i}', 'Flaschenschulter', 'Schulter', w, z, h, 12,
+      'Die ausgeprägte Schulter der Bordeauxflasche hält beim Einschenken den Weinstein zurück. '
+      'Grünes Glas schützt den Wein vor Licht.' if i == 3 else INFO_G, label=(i == 3))
+g('koerper', 'Flaschenkörper', 'Körper', 76, 6, 190, 330,
+  'Kalk-Natron-Glas aus Sand, Soda und Kalk. Leer und ohne Korken in den Grünglas-Container geben.')
+g('boden', 'Boden mit Einstich', 'Boden', 70, 0, 6, 45,
+  'Der Boden ist nach innen gewölbt (Einstich). Das macht die Flasche stabiler, und der Bodensatz sammelt '
+  'sich am Rand.')
+
 teile = [
-    teil('kapsel', 'aluminium_capsule_foil', 'Kapsel (Flaschenhalsfolie)', 'Kapsel', 'cyl',
-         x=22.5, y=22.5, w=31, z=250, h=50, mass=1.5, materials=[['alu', 80], ['ldpe', 15], ['druck', 5]],
-         info='Dünne Alufolie mit Kunststoff, schützt den Korken. Unter dem Wulst am Hals rundherum einschneiden '
-              'und abziehen. Sie gehört in die Gelbe Tonne, nicht ins Altglas.',
-         color='#7A1F2B', marks=[mark('cyl', 4, 4, 23, fill='#9C3340'), mark('cyl', 12, 12, 7, fill='#5A1620')]),
-    teil('korken', 'cork_stopper', 'Naturkorken', 'Korken', 'cyl',
-         x=26, y=26, w=24, z=254, h=45, mass=4,
+    teil('kapsel', 'aluminium_capsule_foil', 'Kapsel (Flaschenhalsfolie)', 'Kapsel', 'cyl', **rund(32.5, 250, 50),
+         mass=1.5, materials=[['alu', 80], ['ldpe', 15], ['druck', 5]], color='#7A1F2B', sortBias=1,
+         marks=[mark('cyl', 3, 3, 26.5, fill='#9C3340'), mark('cyl', 12.25, 12.25, 8, fill='#5A1620'),
+                mark('cyl', 7, 15, 2, fill='#5A1620'), mark('cyl', 23.5, 15, 2, fill='#5A1620')],
+         info='Dünne Alufolie mit Kunststoff, schützt den Korken. Unter dem Wulst rundherum einschneiden und '
+              'abziehen. Sie gehört in die Gelbe Tonne, nicht ins Altglas.'),
+    teil('korken', 'cork_stopper', 'Naturkorken', 'Korken', 'cyl', **rund(24, 255, 44), mass=4,
+         materials=[['kork', 100]], color='#C49A63', marks=[mark('cyl', 3, 3, 18, fill='#B08550')],
          info='Aus der Rinde der Korkeiche gestanzt. Mit dem Korkenzieher herausziehen. Naturkorken werden '
-              'gesammelt und zu Dämmstoff verarbeitet.',
-         color='#C49A63', marks=[mark('cyl', 3, 3, 18, fill='#B08550')]),
-    teil('mundstueck', 'glass_container', 'Mündung mit Wulst', 'Mündung', 'cyl',
-         x=23, y=23, w=30, z=286, h=12, mass=12,
-         info='Verdickter Rand, an dem die Kapsel sitzt. Teil der Flasche, in einem Stück geformt.',
-         color=GLAS, opacity=OP, marks=[mark('cyl', 3, 3, 24, fill='#C49A63')]),
-    teil('hals', 'glass_container', 'Flaschenhals', 'Hals', 'cyl',
-         x=23.5, y=23.5, w=29, z=240, h=46, mass=40,
-         info='Langer, schmaler Hals, in dem der Korken steckt.', color=GLAS, opacity=OP),
-    teil('schulter_oben', 'glass_container', 'Flaschenschulter (oben)', 'Schulter', 'cyl',
-         x=18, y=18, w=40, z=225, h=15, mass=28,
-         info='Die Schulter hält beim Einschenken den Weinstein zurück.', color=GLAS, opacity=OP, label=False),
-    teil('schulter', 'glass_container', 'Flaschenschulter', 'Schulter', 'cyl',
-         x=6, y=6, w=64, z=205, h=20, mass=45,
-         info='Ausgeprägte Schulter der Bordeauxflasche. Grünes Glas schützt den Wein vor Licht.',
-         color=GLAS, opacity=OP),
-    teil('koerper', 'glass_container', 'Flaschenkörper', 'Körper', 'cyl',
-         x=0, y=0, w=76, z=0, h=205, mass=370,
-         info='Kalk-Natron-Glas aus Sand, Soda und Kalk. Unten mit Einstich (Boden nach innen gewölbt). '
-              'Leer in den Grünglas-Container geben, Korken vorher heraus.',
-         color=GLAS, opacity=OP, marks=[mark('cyl', 6, 6, 64)]),
-    teil('halsschild', 'paper_label', 'Halsschild', 'Halsschild', 'box',
-         x=52.5, y=28, w=0.3, d=20, z=245, h=14, r=0, explode=[55, 0, 0], mass=0.3,
-         info='Kleines Papierschild mit dem Jahrgang. Darf am Glas bleiben.', color='#E9DFC4', sortBias=100),
-    teil('etikett', 'paper_label', 'Bauchetikett', 'Etikett', 'box',
-         x=76, y=13, w=0.3, d=50, z=70, h=95, r=0, explode=[55, 0, 0], mass=2.2,
+              'gesammelt und zu Dämmstoff verarbeitet.'),
+    *glas,
+    teil('halsschild', 'paper_label', 'Halsschild', 'Halsschild', 'cyl', **rund(30.1, 232, 14), mass=0.3,
+         materials=[['papier', 90], ['druck', 5], ['klebstoff', 5]], color='#E9DFC4', sortBias=43,
+         marks=[mark('cyl', 0.6, 0.6, 28.9, fill=INNEN)],
+         info='Schmales Papierband mit dem Jahrgang. Darf am Glas bleiben.'),
+    teil('etikett', 'paper_label', 'Bauchetikett', 'Etikett', 'cyl', **rund(76.6, 60, 95), mass=2.2,
+         materials=[['papier', 90], ['druck', 5], ['klebstoff', 5]], color='#EFE6CF', sortBias=42,
+         marks=[mark('cyl', 1.3, 1.3, 74, fill=INNEN)],
          info='Papier mit Leim. In warmem Wasser lässt es sich ablösen, beim Altglas darf es aber dranbleiben: '
-              'Es verbrennt in der Schmelze.',
-         color='#EFE6CF', sortBias=100),
+              'Es verbrennt in der Schmelze.'),
 ]
-explodiere(teile, abstand=22, nach_liste=True,
-           gruppen=[['mundstueck', 'hals', 'schulter_oben', 'schulter', 'koerper']])
+for p in teile:
+    p['explode'] = {'kapsel': [0, 0, 125], 'korken': [0, 0, 60], 'halsschild': [70, 0, 0],
+                    'etikett': [110, 0, 0]}.get(p['id'], [0, 0, 0])
 skaliere_masse(teile, oid='wine_bottle')
 schreibe('wine_bottle', teile)

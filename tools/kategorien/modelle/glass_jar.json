@@ -7,17 +7,17 @@
    "name": "Twist-off-Deckel",
    "short": "Deckel",
    "shape": "cyl",
-   "x": 4,
-   "y": 4,
-   "w": 67,
+   "x": 3.5,
+   "y": 3.5,
+   "w": 68,
    "z": 91,
    "h": 9,
    "explode": [
     0,
     0,
-    42.5
+    62
    ],
-   "mass": 14.2,
+   "mass": 13.1,
    "materials": [
     [
      "weissblech",
@@ -28,22 +28,36 @@
      4
     ]
    ],
-   "info": "Weißblech, innen lackiert. Vier Nocken greifen ins Gewinde. Abschrauben und in die Gelbe Tonne geben.",
+   "info": "Weißblech, innen lackiert, mit vier Nocken. Der Knopf in der Mitte wölbt sich hoch, wenn das Vakuum weg ist. Abschrauben und in die Gelbe Tonne geben.",
    "color": "#C9A646",
    "marks": [
     {
      "shape": "cyl",
-     "x": 4,
-     "y": 4,
-     "w": 59,
+     "x": 3,
+     "y": 3,
+     "w": 62,
      "fill": "#D8B85A"
     },
     {
      "shape": "cyl",
-     "x": 22.5,
-     "y": 22.5,
+     "x": 8,
+     "y": 8,
+     "w": 52,
+     "fill": "#D8B85A"
+    },
+    {
+     "shape": "cyl",
+     "x": 23,
+     "y": 23,
      "w": 22,
      "fill": "#B8963A"
+    },
+    {
+     "shape": "cyl",
+     "x": 28,
+     "y": 28,
+     "w": 12,
+     "fill": "#C9A646"
     }
    ]
   },
@@ -57,14 +71,14 @@
    "x": 5.5,
    "y": 5.5,
    "w": 64,
-   "z": 94,
-   "h": 1.5,
+   "z": 96,
+   "h": 1.2,
    "explode": [
     0,
     0,
-    20.0
+    28
    ],
-   "mass": 1,
+   "mass": 0.9,
    "materials": [
     [
      "pvc",
@@ -79,35 +93,35 @@
      "x": 5,
      "y": 5,
      "w": 54,
-     "fill": "#C9A646"
+     "fill": "#D8B85A"
     }
    ]
   },
   {
-   "id": "gewinde",
+   "id": "rand",
    "component_id": "glass_container",
    "material_id": "glass",
-   "name": "Gewindehals",
-   "short": "Gewinde",
+   "name": "Glasrand (Mündung)",
+   "short": "Mündung",
    "shape": "cyl",
-   "x": 6,
-   "y": 6,
-   "w": 63,
-   "z": 88,
-   "h": 8,
+   "x": 5.5,
+   "y": 5.5,
+   "w": 64,
+   "z": 93,
+   "h": 3,
    "explode": [
     0,
     0,
-    0.0
+    0
    ],
-   "mass": 14.2,
+   "mass": 2.8,
    "materials": [
     [
      "behaelterglas",
      100
     ]
    ],
-   "info": "Kurze Gewindegänge aus Glas, auf denen der Deckel greift.",
+   "info": "Glatter Rand, auf den die Dichtung des Deckels drückt. Hat er eine Macke, bleibt das Glas nicht dicht.",
    "color": "#DCE8E4",
    "opacity": 0.6,
    "marks": [
@@ -115,9 +129,155 @@
      "shape": "cyl",
      "x": 4,
      "y": 4,
-     "w": 55
+     "w": 56,
+     "fill": "#EEF4F2"
     }
    ]
+  },
+  {
+   "id": "gewinde0",
+   "component_id": "glass_container",
+   "material_id": "glass",
+   "name": "Gewindegang",
+   "short": "Gewinde",
+   "shape": "cyl",
+   "x": 3.75,
+   "y": 3.75,
+   "w": 67.5,
+   "z": 91.5,
+   "h": 1.5,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 2.3,
+   "materials": [
+    [
+     "behaelterglas",
+     100
+    ]
+   ],
+   "info": "Kurze, schräge Gewindegänge aus Glas. Die vier Nocken des Deckels greifen hier ein, schon eine Vierteldrehung macht das Glas zu.",
+   "color": "#DCE8E4",
+   "opacity": 0.6,
+   "label": true
+  },
+  {
+   "id": "gewinde1",
+   "component_id": "glass_container",
+   "material_id": "glass",
+   "name": "Gewindegang",
+   "short": "Gewinde",
+   "shape": "cyl",
+   "x": 5.5,
+   "y": 5.5,
+   "w": 64,
+   "z": 89.5,
+   "h": 2,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 2.3,
+   "materials": [
+    [
+     "behaelterglas",
+     100
+    ]
+   ],
+   "info": "Gehört zum Glas, alles in einem Stück gepresst und geblasen.",
+   "color": "#DCE8E4",
+   "opacity": 0.6,
+   "label": false
+  },
+  {
+   "id": "gewinde2",
+   "component_id": "glass_container",
+   "material_id": "glass",
+   "name": "Gewindegang",
+   "short": "Gewinde",
+   "shape": "cyl",
+   "x": 3.75,
+   "y": 3.75,
+   "w": 67.5,
+   "z": 88,
+   "h": 1.5,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 2.3,
+   "materials": [
+    [
+     "behaelterglas",
+     100
+    ]
+   ],
+   "info": "Gehört zum Glas, alles in einem Stück gepresst und geblasen.",
+   "color": "#DCE8E4",
+   "opacity": 0.6,
+   "label": false
+  },
+  {
+   "id": "gewinde3",
+   "component_id": "glass_container",
+   "material_id": "glass",
+   "name": "Gewindegang",
+   "short": "Gewinde",
+   "shape": "cyl",
+   "x": 5.5,
+   "y": 5.5,
+   "w": 64,
+   "z": 86,
+   "h": 2,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 2.3,
+   "materials": [
+    [
+     "behaelterglas",
+     100
+    ]
+   ],
+   "info": "Gehört zum Glas, alles in einem Stück gepresst und geblasen.",
+   "color": "#DCE8E4",
+   "opacity": 0.6,
+   "label": false
+  },
+  {
+   "id": "halsring",
+   "component_id": "glass_container",
+   "material_id": "glass",
+   "name": "Halsring",
+   "short": "Halsring",
+   "shape": "cyl",
+   "x": 3,
+   "y": 3,
+   "w": 69,
+   "z": 84,
+   "h": 2,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 3.7,
+   "materials": [
+    [
+     "behaelterglas",
+     100
+    ]
+   ],
+   "info": "Wulst unter dem Gewinde. Bis hierhin reicht der Deckel.",
+   "color": "#DCE8E4",
+   "opacity": 0.6,
+   "label": false
   },
   {
    "id": "schulter",
@@ -126,24 +286,24 @@
    "name": "Schulter",
    "short": "Schulter",
    "shape": "cyl",
-   "x": 3,
-   "y": 3,
-   "w": 69,
+   "x": 1.5,
+   "y": 1.5,
+   "w": 72,
    "z": 80,
-   "h": 8,
+   "h": 4,
    "explode": [
     0,
     0,
-    0.0
+    0
    ],
-   "mass": 16.3,
+   "mass": 7.5,
    "materials": [
     [
      "behaelterglas",
      100
     ]
    ],
-   "info": "Übergang vom Körper zum Gewinde.",
+   "info": "Gehört zum Glas, alles in einem Stück gepresst und geblasen.",
    "color": "#DCE8E4",
    "opacity": 0.6,
    "label": false
@@ -158,14 +318,14 @@
    "x": 0,
    "y": 0,
    "w": 75,
-   "z": 0,
-   "h": 80,
+   "z": 5,
+   "h": 75,
    "explode": [
     0,
     0,
-    0.0
+    0
    ],
-   "mass": 152.7,
+   "mass": 140.5,
    "materials": [
     [
      "behaelterglas",
@@ -174,15 +334,35 @@
    ],
    "info": "Weißglas (farblos). Leer, aber ungespült in den Weißglas-Container. Der Deckel gehört nicht ins Altglas.",
    "color": "#DCE8E4",
-   "opacity": 0.6,
-   "marks": [
-    {
-     "shape": "cyl",
-     "x": 4,
-     "y": 4,
-     "w": 67
-    }
-   ]
+   "opacity": 0.6
+  },
+  {
+   "id": "boden",
+   "component_id": "glass_container",
+   "material_id": "glass",
+   "name": "Glasboden",
+   "short": "Boden",
+   "shape": "cyl",
+   "x": 2,
+   "y": 2,
+   "w": 71,
+   "z": 0,
+   "h": 5,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 20.6,
+   "materials": [
+    [
+     "behaelterglas",
+     100
+    ]
+   ],
+   "info": "Dicker Boden mit Prägung: Zahlen und Zeichen verraten Glashütte und Form, aus der das Glas kommt.",
+   "color": "#DCE8E4",
+   "opacity": 0.6
   },
   {
    "id": "etikett",
@@ -190,29 +370,44 @@
    "material_id": "paper",
    "name": "Papieretikett",
    "short": "Etikett",
-   "shape": "box",
-   "x": 75,
-   "y": 12.5,
-   "w": 0.3,
-   "d": 50,
+   "shape": "cyl",
+   "x": -0.29999999999999716,
+   "y": -0.29999999999999716,
+   "w": 75.6,
    "z": 15,
    "h": 55,
-   "r": 0,
    "explode": [
-    50,
+    125,
     0,
     0
    ],
-   "mass": 1.5,
+   "mass": 1.4,
    "materials": [
     [
      "papier",
-     100
+     90
+    ],
+    [
+     "druck",
+     5
+    ],
+    [
+     "klebstoff",
+     5
     ]
    ],
    "info": "Papier mit Leim. Darf beim Altglas dranbleiben, es verbrennt in der Schmelze.",
    "color": "#E8DDC0",
-   "sortBias": 100
+   "sortBias": 11,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 1,
+     "y": 1,
+     "w": 73.6,
+     "fill": "#CCD8D4"
+    }
+   ]
   }
  ]
 }

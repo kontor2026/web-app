@@ -17,9 +17,9 @@
    "explode": [
     -24.0,
     0,
-    26
+    75
    ],
-   "mass": 197.8,
+   "mass": 197.2,
    "materials": [
     [
      "holz",
@@ -57,6 +57,22 @@
      "w": 6,
      "d": 356,
      "fill": "#B88E62"
+    },
+    {
+     "shape": "box",
+     "x": 31,
+     "y": 35,
+     "w": 0.8,
+     "d": 310,
+     "fill": "#C49A6C"
+    },
+    {
+     "shape": "box",
+     "x": 47,
+     "y": 44,
+     "w": 0.8,
+     "d": 292,
+     "fill": "#C49A6C"
     }
    ]
   },
@@ -77,9 +93,9 @@
    "explode": [
     -8.0,
     0,
-    26
+    75
    ],
-   "mass": 197.8,
+   "mass": 197.2,
    "materials": [
     [
      "holz",
@@ -109,6 +125,30 @@
      "w": 62.5,
      "d": 6,
      "fill": "#B88E62"
+    },
+    {
+     "shape": "box",
+     "x": 19,
+     "y": 26,
+     "w": 0.8,
+     "d": 328,
+     "fill": "#C49A6C"
+    },
+    {
+     "shape": "box",
+     "x": 36,
+     "y": 35,
+     "w": 0.8,
+     "d": 310,
+     "fill": "#C49A6C"
+    },
+    {
+     "shape": "box",
+     "x": 52,
+     "y": 44,
+     "w": 0.8,
+     "d": 292,
+     "fill": "#C49A6C"
     }
    ]
   },
@@ -129,9 +169,9 @@
    "explode": [
     8.0,
     0,
-    26
+    75
    ],
-   "mass": 197.8,
+   "mass": 197.2,
    "materials": [
     [
      "holz",
@@ -161,6 +201,30 @@
      "w": 62.5,
      "d": 6,
      "fill": "#B88E62"
+    },
+    {
+     "shape": "box",
+     "x": 15,
+     "y": 26,
+     "w": 0.8,
+     "d": 328,
+     "fill": "#C49A6C"
+    },
+    {
+     "shape": "box",
+     "x": 32,
+     "y": 35,
+     "w": 0.8,
+     "d": 310,
+     "fill": "#C49A6C"
+    },
+    {
+     "shape": "box",
+     "x": 48,
+     "y": 44,
+     "w": 0.8,
+     "d": 292,
+     "fill": "#C49A6C"
     }
    ]
   },
@@ -181,9 +245,9 @@
    "explode": [
     24.0,
     0,
-    26
+    75
    ],
-   "mass": 197.8,
+   "mass": 197.2,
    "materials": [
     [
      "holz",
@@ -221,6 +285,22 @@
      "w": 6,
      "d": 356,
      "fill": "#B88E62"
+    },
+    {
+     "shape": "box",
+     "x": 20,
+     "y": 26,
+     "w": 0.8,
+     "d": 328,
+     "fill": "#C49A6C"
+    },
+    {
+     "shape": "box",
+     "x": 37,
+     "y": 35,
+     "w": 0.8,
+     "d": 310,
+     "fill": "#C49A6C"
     }
    ]
   },
@@ -254,7 +334,7 @@
    ],
    "info": "Rutschfester Gummipuffer, mit einer kleinen Edelstahlschraube festgeschraubt. Vor dem Entsorgen abschrauben: Gummi kommt in den Restmüll.",
    "color": "#3A3D40",
-   "label": true,
+   "label": false,
    "marks": [
     {
      "shape": "cyl",
@@ -377,7 +457,7 @@
    ],
    "info": "Rutschfester Gummipuffer, mit einer kleinen Edelstahlschraube festgeschraubt. Vor dem Entsorgen abschrauben: Gummi kommt in den Restmüll.",
    "color": "#3A3D40",
-   "label": false,
+   "label": true,
    "marks": [
     {
      "shape": "cyl",
@@ -385,6 +465,154 @@
      "y": 6.5,
      "w": 5,
      "fill": "#9AA2A6"
+    }
+   ]
+  },
+  {
+   "id": "schraube_1",
+   "component_id": "wooden_board",
+   "material_id": "steel",
+   "name": "Edelstahlschraube",
+   "short": "Schraube",
+   "shape": "cyl",
+   "x": 22,
+   "y": 27,
+   "w": 4,
+   "z": 1,
+   "h": 12,
+   "explode": [
+    0,
+    0,
+    28
+   ],
+   "mass": 0.6,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Kleine Edelstahlschraube, die den Gummifuß von unten ins Holz hält. Sie rostet nicht, auch wenn das Brett oft nass wird.",
+   "color": "#9DA4AA",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 3,
+     "fill": "#6E757B"
+    }
+   ]
+  },
+  {
+   "id": "schraube_2",
+   "component_id": "wooden_board",
+   "material_id": "steel",
+   "name": "Edelstahlschraube",
+   "short": "Schraube",
+   "shape": "cyl",
+   "x": 224,
+   "y": 27,
+   "w": 4,
+   "z": 1,
+   "h": 12,
+   "explode": [
+    0,
+    0,
+    28
+   ],
+   "mass": 0.6,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Kleine Edelstahlschraube, die den Gummifuß von unten ins Holz hält. Sie rostet nicht, auch wenn das Brett oft nass wird.",
+   "color": "#9DA4AA",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 3,
+     "fill": "#6E757B"
+    }
+   ]
+  },
+  {
+   "id": "schraube_3",
+   "component_id": "wooden_board",
+   "material_id": "steel",
+   "name": "Edelstahlschraube",
+   "short": "Schraube",
+   "shape": "cyl",
+   "x": 22,
+   "y": 349,
+   "w": 4,
+   "z": 1,
+   "h": 12,
+   "explode": [
+    0,
+    0,
+    28
+   ],
+   "mass": 0.6,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Kleine Edelstahlschraube, die den Gummifuß von unten ins Holz hält. Sie rostet nicht, auch wenn das Brett oft nass wird.",
+   "color": "#9DA4AA",
+   "label": true,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 3,
+     "fill": "#6E757B"
+    }
+   ]
+  },
+  {
+   "id": "schraube_4",
+   "component_id": "wooden_board",
+   "material_id": "steel",
+   "name": "Edelstahlschraube",
+   "short": "Schraube",
+   "shape": "cyl",
+   "x": 224,
+   "y": 349,
+   "w": 4,
+   "z": 1,
+   "h": 12,
+   "explode": [
+    0,
+    0,
+    28
+   ],
+   "mass": 0.6,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Kleine Edelstahlschraube, die den Gummifuß von unten ins Holz hält. Sie rostet nicht, auch wenn das Brett oft nass wird.",
+   "color": "#9DA4AA",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 3,
+     "fill": "#6E757B"
     }
    ]
   }

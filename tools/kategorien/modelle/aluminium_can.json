@@ -8,16 +8,16 @@
    "short": "Lasche",
    "shape": "box",
    "x": 26.5,
-   "y": 20,
+   "y": 19,
    "w": 13,
-   "d": 20,
-   "z": 115,
-   "h": 0.5,
-   "r": 4,
+   "d": 22,
+   "z": 115.6,
+   "h": 0.6,
+   "r": 5,
    "explode": [
     0,
     0,
-    35
+    42
    ],
    "mass": 0.25,
    "materials": [
@@ -26,29 +26,57 @@
      100
     ]
    ],
-   "info": "Hebel zum Öffnen, mit einer Niete am Deckel befestigt. Dranlassen: lose fällt sie durch die Sortieranlage.",
+   "info": "Hebel zum Öffnen, mit der Niete am Deckel befestigt. Dranlassen: Lose fällt sie in der Sortieranlage durch und geht verloren.",
    "color": "#B9C0C6",
    "marks": [
     {
      "shape": "box",
-     "x": 3.5,
-     "y": 9,
-     "w": 6,
+     "x": 3,
+     "y": 2.5,
+     "w": 7,
      "d": 8,
-     "r": 3
+     "r": 3.5,
+     "fill": "#8E959B"
     }
    ]
+  },
+  {
+   "id": "niete",
+   "component_id": "aluminium_can_body",
+   "material_id": "aluminium",
+   "name": "Niete",
+   "short": "Niete",
+   "shape": "cyl",
+   "x": 30.75,
+   "y": 28.75,
+   "w": 4.5,
+   "z": 115,
+   "h": 0.6,
+   "explode": [
+    0,
+    0,
+    32
+   ],
+   "mass": 0.02,
+   "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "info": "Aus dem Deckelblech selbst gedrückt, hält die Lasche. So braucht die Dose kein zusätzliches Material.",
+   "color": "#A9B0B6"
   },
   {
    "id": "deckel",
    "component_id": "aluminium_can_body",
    "material_id": "aluminium",
-   "name": "Deckel",
+   "name": "Deckel mit Falz",
    "short": "Deckel",
    "shape": "cyl",
-   "x": 6,
-   "y": 6,
-   "w": 54,
+   "x": 4.5,
+   "y": 4.5,
+   "w": 57,
    "z": 111,
    "h": 4,
    "explode": [
@@ -56,29 +84,37 @@
     0,
     20
    ],
-   "mass": 2.4,
+   "mass": 2.36,
    "materials": [
     [
      "alu",
      100
     ]
    ],
-   "info": "Härtere Aluminiumlegierung mit Magnesium als der Rumpf. Wird nach dem Befüllen auf den Rumpf gefalzt.",
+   "info": "Härtere Legierung mit Magnesium. Nach dem Befüllen wird sein Rand mit dem Rumpf zum Falz zusammengerollt, das macht die Dose dicht.",
    "color": "#C9CED3",
    "marks": [
     {
      "shape": "cyl",
-     "x": 24,
-     "y": 11,
-     "w": 6
+     "x": 3.5,
+     "y": 3.5,
+     "w": 50,
+     "fill": "#B9C0C6"
     },
     {
      "shape": "box",
-     "x": 16,
+     "x": 17.5,
      "y": 34,
      "w": 22,
-     "d": 14,
-     "r": 6
+     "d": 15,
+     "r": 7,
+     "fill": "#AEB5BB"
+    },
+    {
+     "shape": "cyl",
+     "x": 34,
+     "y": 10,
+     "w": 6
     }
    ]
   },
@@ -89,25 +125,81 @@
    "name": "Eingezogener Hals",
    "short": "Hals",
    "shape": "cyl",
-   "x": 4,
-   "y": 4,
-   "w": 58,
-   "z": 103,
-   "h": 8,
+   "x": 5,
+   "y": 5,
+   "w": 56,
+   "z": 107,
+   "h": 4,
    "explode": [
     0,
     0,
     0
    ],
-   "mass": 0.6,
+   "mass": 0.25,
    "materials": [
     [
      "alu",
      100
     ]
    ],
-   "info": "Der Rumpf wird oben enger gerollt, damit ein kleinerer Deckel passt. Das spart Aluminium.",
+   "info": "Der Rumpf wird oben in mehreren Stufen enger gerollt, damit ein kleinerer Deckel passt. Das spart Aluminium.",
    "color": "#C9CED3"
+  },
+  {
+   "id": "hals2",
+   "component_id": "aluminium_can_body",
+   "material_id": "aluminium",
+   "name": "Eingezogener Hals",
+   "short": "Hals",
+   "shape": "cyl",
+   "x": 3,
+   "y": 3,
+   "w": 60,
+   "z": 103.5,
+   "h": 3.5,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 0.25,
+   "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "info": "Gehört zum Rumpf aus Aluminium, in einem Stück gezogen.",
+   "color": "#C9CED3",
+   "label": false
+  },
+  {
+   "id": "hals3",
+   "component_id": "aluminium_can_body",
+   "material_id": "aluminium",
+   "name": "Eingezogener Hals",
+   "short": "Hals",
+   "shape": "cyl",
+   "x": 1.25,
+   "y": 1.25,
+   "w": 63.5,
+   "z": 100,
+   "h": 3.5,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "info": "Gehört zum Rumpf aus Aluminium, in einem Stück gezogen.",
+   "color": "#C9CED3",
+   "label": false
   },
   {
    "id": "rumpf",
@@ -119,47 +211,92 @@
    "x": 0,
    "y": 0,
    "w": 66,
-   "z": 0,
-   "h": 103,
+   "z": 8,
+   "h": 92,
    "explode": [
     0,
     0,
     0
    ],
-   "mass": 9.5,
+   "mass": 8.46,
    "materials": [
     [
      "alu",
      100
     ]
    ],
-   "info": "Aus einer Aluminiumscheibe in einem Stück tiefgezogen, die Wand ist dünner als ein Haar. Innen schützt ein Lack vor dem Getränk.",
-   "color": "#C9CED3",
-   "marks": [
-    {
-     "shape": "cyl",
-     "x": 4,
-     "y": 4,
-     "w": 58
-    }
-   ]
+   "info": "Aus einer Aluminiumscheibe tiefgezogen und gestreckt, die Wand ist dünner als ein Haar. Innen schützt ein Lack das Getränk vor dem Metall.",
+   "color": "#C9CED3"
   },
   {
-   "id": "lack",
+   "id": "schraege",
+   "component_id": "aluminium_can_body",
+   "material_id": "aluminium",
+   "name": "Bodenschräge",
+   "short": "Boden",
+   "shape": "cyl",
+   "x": 3,
+   "y": 3,
+   "w": 60,
+   "z": 3.5,
+   "h": 4.5,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 0.39,
+   "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "info": "Gehört zum Rumpf aus Aluminium, in einem Stück gezogen.",
+   "color": "#C9CED3",
+   "label": false
+  },
+  {
+   "id": "boden",
+   "component_id": "aluminium_can_body",
+   "material_id": "aluminium",
+   "name": "Standring mit Dom",
+   "short": "Boden",
+   "shape": "cyl",
+   "x": 8,
+   "y": 8,
+   "w": 50,
+   "z": 0,
+   "h": 3.5,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 0.49,
+   "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "info": "Der Boden ist nach innen gewölbt (Dom). So hält die dünne Dose den Druck der Kohlensäure aus.",
+   "color": "#C9CED3"
+  },
+  {
+   "id": "druck",
    "component_id": "aluminium_can_body",
    "material_id": "aluminium",
    "name": "Außenlack und Druck",
    "short": "Druck",
-   "shape": "box",
-   "x": 66,
-   "y": 13,
-   "w": 0.3,
-   "d": 40,
-   "z": 8,
-   "h": 90,
-   "r": 0,
+   "shape": "cyl",
+   "x": -0.20000000000000284,
+   "y": -0.20000000000000284,
+   "w": 66.4,
+   "z": 10,
+   "h": 88,
    "explode": [
-    50,
+    100,
     0,
     0
    ],
@@ -170,9 +307,18 @@
      100
     ]
    ],
-   "info": "Farbe und Lack verbrennen beim Einschmelzen. Aluminium lässt sich danach ohne Qualitätsverlust immer wieder recyceln.",
+   "info": "Farbe und Lack verbrennen beim Einschmelzen. Das Aluminium lässt sich danach ohne Qualitätsverlust immer wieder recyceln.",
    "color": "#C8362F",
-   "sortBias": 100
+   "sortBias": 3,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 1.2,
+     "y": 1.2,
+     "w": 64,
+     "fill": "#C9CED3"
+    }
+   ]
   }
  ]
 }

@@ -10,22 +10,60 @@
    "x": 38.75,
    "y": 38.75,
    "w": 2.5,
-   "z": 10,
-   "h": 66,
+   "z": 70,
+   "h": 9,
    "explode": [
     0,
     0,
     194.0
    ],
-   "mass": 0.3,
+   "mass": 0.1,
    "materials": [
     [
      "baumwolle",
      100
     ]
    ],
-   "info": "Geflochtene Baumwolle, mit Wachs getränkt. Aus dem warmen Wachs ziehen; er kommt in den Restmüll.",
-   "color": "#2E2A26"
+   "info": "Geflochtene Baumwolle, mit Wachs getränkt. Die verkohlte Spitze vor dem Anzünden auf 5 mm kürzen. Aus dem warmen Wachs ziehen, er kommt in den Restmüll.",
+   "color": "#2E2A26",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1.5,
+     "fill": "#111"
+    }
+   ]
+  },
+  {
+   "id": "docht_innen",
+   "component_id": "cotton_wick",
+   "material_id": "cotton",
+   "name": "Docht",
+   "short": "Docht",
+   "shape": "cyl",
+   "x": 38.75,
+   "y": 38.75,
+   "w": 2.5,
+   "z": 10,
+   "h": 60,
+   "explode": [
+    0,
+    0,
+    194.0
+   ],
+   "mass": 0.2,
+   "materials": [
+    [
+     "baumwolle",
+     100
+    ]
+   ],
+   "info": "Der Docht steckt bis zum Boden im Wachs. Das geschmolzene Wachs steigt in ihm nach oben und verbrennt.",
+   "color": "#2E2A26",
+   "label": false,
+   "sortBias": -20
   },
   {
    "id": "dochthalter",
@@ -51,18 +89,19 @@
      95
     ],
     [
-     "alu",
+     "klebstoff",
      5
     ]
    ],
-   "info": "Blechplättchen am Glasboden, oft mit einem Klebepunkt festgeklebt. Es hält den Docht gerade. Mit einem Löffel lösen und zum Metall geben.",
+   "info": "Blechplättchen am Glasboden, mit einem Klebepunkt festgeklebt. Es hält den Docht gerade und löscht die Flamme, bevor das Glas zu heiß wird. Mit einem Löffel lösen und zum Metall geben.",
    "color": "#B9BFC4",
+   "sortBias": -20,
    "marks": [
     {
      "shape": "cyl",
-     "x": 6,
-     "y": 6,
-     "w": 4,
+     "x": 5,
+     "y": 5,
+     "w": 6,
      "fill": "#8E959B"
     }
    ]
@@ -100,10 +139,55 @@
    "marks": [
     {
      "shape": "cyl",
-     "x": 32,
-     "y": 32,
-     "w": 8,
+     "x": 6,
+     "y": 6,
+     "w": 60,
+     "fill": "#EDD3DB"
+    },
+    {
+     "shape": "cyl",
+     "x": 31,
+     "y": 31,
+     "w": 10,
      "fill": "#D3AFBA"
+    }
+   ]
+  },
+  {
+   "id": "glas_rand",
+   "component_id": "glass_container",
+   "material_id": "glass",
+   "name": "Glasrand",
+   "short": "Glas",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 80,
+   "z": 70,
+   "h": 20,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 30.5,
+   "materials": [
+    [
+     "behaelterglas",
+     100
+    ]
+   ],
+   "info": "Dickwandiges Behälterglas. Ganz leer und ohne Wachsreste in den Altglascontainer, oder gespült als Vorratsglas oder Stiftebecher weiterverwenden.",
+   "color": "#D7E7EA",
+   "opacity": 0.45,
+   "sortBias": -25,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 4,
+     "w": 72,
+     "fill": "#EEF5F6"
     }
    ]
   },
@@ -118,31 +202,24 @@
    "y": 0,
    "w": 80,
    "z": 8,
-   "h": 82,
+   "h": 62,
    "explode": [
     0,
     0,
     0.0
    ],
-   "mass": 104.6,
+   "mass": 74.1,
    "materials": [
     [
      "behaelterglas",
      100
     ]
    ],
-   "info": "Dickwandiges Behälterglas. Ganz leer und ohne Wachsreste in den Altglascontainer, oder gespült als Vorratsglas oder Stiftebecher weiterverwenden.",
+   "info": "Dickwandiges Behälterglas, es hält die Hitze der Flamme aus.",
    "color": "#D7E7EA",
-   "opacity": 0.65,
-   "marks": [
-    {
-     "shape": "cyl",
-     "x": 4,
-     "y": 4,
-     "w": 72,
-     "fill": "#EAF2F4"
-    }
-   ]
+   "opacity": 0.45,
+   "label": false,
+   "sortBias": -25
   },
   {
    "id": "glas_boden",
@@ -170,7 +247,7 @@
    ],
    "info": "Massiver Boden, damit die Wärme der Flamme den Tisch nicht erreicht.",
    "color": "#D7E7EA",
-   "opacity": 0.7,
+   "opacity": 0.6,
    "label": false
   },
   {
@@ -179,16 +256,14 @@
    "material_id": "paper",
    "name": "Papieretikett",
    "short": "Etikett",
-   "shape": "box",
-   "x": 80,
-   "y": 20,
-   "w": 0.3,
-   "d": 40,
-   "z": 25,
-   "h": 35,
-   "r": 0,
+   "shape": "cyl",
+   "x": -0.29999999999999716,
+   "y": -0.29999999999999716,
+   "w": 80.6,
+   "z": 10,
+   "h": 26,
    "explode": [
-    45,
+    115,
     0,
     0
    ],
@@ -209,7 +284,16 @@
    ],
    "info": "Bedrucktes Papier mit Klebstoff. Darf am Glas bleiben, die Glashütte brennt es ab.",
    "color": "#3F5E4C",
-   "sortBias": 100
+   "sortBias": 40,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0.8,
+     "y": 0.8,
+     "w": 79,
+     "fill": "#B59DA4"
+    }
+   ]
   }
  ]
 }

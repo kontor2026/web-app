@@ -140,23 +140,30 @@
    "explode": [
     0,
     0,
-    47
+    48
    ],
-   "mass": 1.8,
+   "mass": 1.85,
    "materials": [
     [
      "hdpe",
      100
     ]
    ],
-   "info": "HDPE, Recyclingcode 2. Seit 2024 bleibt er per Lasche an der Flasche hängen, damit er mit ihr recycelt wird.",
+   "info": "HDPE, Recyclingcode 2. Seit 2024 hängt er per Lasche an der Flasche, damit er mit ihr recycelt wird. Dran lassen!",
    "color": "#2F6DB5",
    "marks": [
     {
      "shape": "cyl",
-     "x": 4,
-     "y": 4,
-     "w": 22
+     "x": 3,
+     "y": 3,
+     "w": 24,
+     "fill": "#3A7CC6"
+    },
+    {
+     "shape": "cyl",
+     "x": 9,
+     "y": 9,
+     "w": 12
     }
    ]
   },
@@ -164,27 +171,27 @@
    "id": "ring",
    "component_id": "hdpe_screw_cap",
    "material_id": "hdpe",
-   "name": "Sicherungsring",
+   "name": "Sicherungsring mit Lasche",
    "short": "Ring",
    "shape": "cyl",
    "x": 17,
    "y": 17,
    "w": 31,
-   "z": 203,
-   "h": 3,
+   "z": 204,
+   "h": 4,
    "explode": [
     0,
     0,
-    29
+    34
    ],
-   "mass": 0.4,
+   "mass": 0.37,
    "materials": [
     [
      "hdpe",
      100
     ]
    ],
-   "info": "Reißt beim ersten Öffnen ab und zeigt, dass die Flasche unbenutzt ist. Gehört zum Deckel.",
+   "info": "Reißt beim ersten Öffnen teilweise ab und zeigt, dass die Flasche unbenutzt ist. Die Lasche hält den Deckel fest.",
    "color": "#2F6DB5"
   },
   {
@@ -197,59 +204,205 @@
    "x": 19,
    "y": 19,
    "w": 27,
-   "z": 175,
-   "h": 37,
+   "z": 200,
+   "h": 26,
    "explode": [
     0,
     0,
     0
    ],
-   "mass": 2.5,
+   "mass": 1.48,
    "materials": [
     [
      "pet",
      100
     ]
    ],
-   "info": "Dickwandig und nicht verstreckt, darum der schwerste Teil der Flasche je Zentimeter. Beim Recycling wird alles zusammen geschreddert.",
+   "info": "Dickwandig und nicht verstreckt, darum je Zentimeter der schwerste Teil der Flasche. Das Gewinde hält den Deckel.",
    "color": "#CFE3E8",
-   "opacity": 0.6,
+   "opacity": 0.55,
    "marks": [
     {
      "shape": "cyl",
-     "x": 5.5,
-     "y": 5.5,
-     "w": 16
+     "x": 5,
+     "y": 5,
+     "w": 17,
+     "fill": "#B8CFD5"
     }
    ]
   },
   {
-   "id": "schulter",
+   "id": "tragring",
+   "component_id": "pet_bottle_body",
+   "material_id": "pet",
+   "name": "Tragring",
+   "short": "Tragring",
+   "shape": "cyl",
+   "x": 15,
+   "y": 15,
+   "w": 35,
+   "z": 198,
+   "h": 2,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 0.37,
+   "materials": [
+    [
+     "pet",
+     100
+    ]
+   ],
+   "info": "Ring am Hals, an dem die Flasche in der Abfüllanlage hängt und transportiert wird. Gehört zur Flasche.",
+   "color": "#CFE3E8",
+   "opacity": 0.55
+  },
+  {
+   "id": "halsunten",
+   "component_id": "pet_bottle_body",
+   "material_id": "pet",
+   "name": "Flaschenhals",
+   "short": "Hals",
+   "shape": "cyl",
+   "x": 19,
+   "y": 19,
+   "w": 27,
+   "z": 180,
+   "h": 18,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 0.93,
+   "materials": [
+    [
+     "pet",
+     100
+    ]
+   ],
+   "info": "Gehört zur Flasche aus PET (Recyclingcode 1). Wird beim Recycling mit der ganzen Flasche geschreddert.",
+   "color": "#CFE3E8",
+   "opacity": 0.55,
+   "label": false
+  },
+  {
+   "id": "schulter0",
    "component_id": "pet_bottle_body",
    "material_id": "pet",
    "name": "Flaschenschulter",
    "short": "Schulter",
    "shape": "cyl",
-   "x": 8.5,
-   "y": 8.5,
-   "w": 48,
-   "z": 150,
-   "h": 25,
+   "x": 15.5,
+   "y": 15.5,
+   "w": 34,
+   "z": 174,
+   "h": 6,
    "explode": [
     0,
     0,
     0
    ],
-   "mass": 3.3,
+   "mass": 0.74,
    "materials": [
     [
      "pet",
      100
     ]
    ],
-   "info": "Übergang vom Hals zum Körper. Teil der Flasche, beim Streckblasen aus dem Rohling mitgeformt.",
+   "info": "Gehört zur Flasche aus PET (Recyclingcode 1). Wird beim Recycling mit der ganzen Flasche geschreddert.",
    "color": "#CFE3E8",
-   "opacity": 0.6
+   "opacity": 0.55,
+   "label": false
+  },
+  {
+   "id": "schulter1",
+   "component_id": "pet_bottle_body",
+   "material_id": "pet",
+   "name": "Flaschenschulter",
+   "short": "Schulter",
+   "shape": "cyl",
+   "x": 11,
+   "y": 11,
+   "w": 43,
+   "z": 167,
+   "h": 7,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 0.74,
+   "materials": [
+    [
+     "pet",
+     100
+    ]
+   ],
+   "info": "Gehört zur Flasche aus PET (Recyclingcode 1). Wird beim Recycling mit der ganzen Flasche geschreddert.",
+   "color": "#CFE3E8",
+   "opacity": 0.55,
+   "label": false
+  },
+  {
+   "id": "schulter2",
+   "component_id": "pet_bottle_body",
+   "material_id": "pet",
+   "name": "Flaschenschulter",
+   "short": "Schulter",
+   "shape": "cyl",
+   "x": 6.5,
+   "y": 6.5,
+   "w": 52,
+   "z": 160,
+   "h": 7,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 0.74,
+   "materials": [
+    [
+     "pet",
+     100
+    ]
+   ],
+   "info": "Gehört zur Flasche aus PET (Recyclingcode 1). Wird beim Recycling mit der ganzen Flasche geschreddert.",
+   "color": "#CFE3E8",
+   "opacity": 0.55,
+   "label": false
+  },
+  {
+   "id": "schulter3",
+   "component_id": "pet_bottle_body",
+   "material_id": "pet",
+   "name": "Flaschenschulter",
+   "short": "Schulter",
+   "shape": "cyl",
+   "x": 2.5,
+   "y": 2.5,
+   "w": 60,
+   "z": 153,
+   "h": 7,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 0.74,
+   "materials": [
+    [
+     "pet",
+     100
+    ]
+   ],
+   "info": "Übergang vom Hals zum Körper. Beim Streckblasen aus dem Rohling mitgeformt, die Wand wird hier dünner.",
+   "color": "#CFE3E8",
+   "opacity": 0.55,
+   "label": true
   },
   {
    "id": "koerper",
@@ -261,61 +414,262 @@
    "x": 0,
    "y": 0,
    "w": 65,
-   "z": 0,
-   "h": 150,
+   "z": 59,
+   "h": 94,
    "explode": [
     0,
     0,
     0
    ],
-   "mass": 16.5,
+   "mass": 8.8,
    "materials": [
     [
      "pet",
      100
     ]
    ],
-   "info": "PET, Recyclingcode 1. Wird aus einem reagenzglasgroßen Rohling heiß aufgeblasen. Pfandflaschen werden zu neuen Flaschen recycelt.",
+   "info": "PET, Recyclingcode 1. Wird aus einem reagenzglasgroßen Rohling heiß aufgeblasen. Pfandflaschen werden meist wieder zu neuen Flaschen.",
    "color": "#CFE3E8",
-   "opacity": 0.6,
-   "marks": [
-    {
-     "shape": "cyl",
-     "x": 8.5,
-     "y": 8.5,
-     "w": 48
-    }
-   ]
+   "opacity": 0.55
+  },
+  {
+   "id": "rille0",
+   "component_id": "pet_bottle_body",
+   "material_id": "pet",
+   "name": "Griffrille",
+   "short": "Griffrille",
+   "shape": "cyl",
+   "x": 1.75,
+   "y": 1.75,
+   "w": 61.5,
+   "z": 56,
+   "h": 3,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 0.37,
+   "materials": [
+    [
+     "pet",
+     100
+    ]
+   ],
+   "info": "Rillen machen die dünne Wand steifer und die Flasche griffiger.",
+   "color": "#CFE3E8",
+   "opacity": 0.55,
+   "label": true
+  },
+  {
+   "id": "rille1",
+   "component_id": "pet_bottle_body",
+   "material_id": "pet",
+   "name": "Griffrille",
+   "short": "Griffrille",
+   "shape": "cyl",
+   "x": 1.75,
+   "y": 1.75,
+   "w": 61.5,
+   "z": 44,
+   "h": 3,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 0.37,
+   "materials": [
+    [
+     "pet",
+     100
+    ]
+   ],
+   "info": "Gehört zur Flasche aus PET (Recyclingcode 1). Wird beim Recycling mit der ganzen Flasche geschreddert.",
+   "color": "#CFE3E8",
+   "opacity": 0.55,
+   "label": false
+  },
+  {
+   "id": "rille2",
+   "component_id": "pet_bottle_body",
+   "material_id": "pet",
+   "name": "Griffrille",
+   "short": "Griffrille",
+   "shape": "cyl",
+   "x": 1.75,
+   "y": 1.75,
+   "w": 61.5,
+   "z": 32,
+   "h": 3,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 0.37,
+   "materials": [
+    [
+     "pet",
+     100
+    ]
+   ],
+   "info": "Gehört zur Flasche aus PET (Recyclingcode 1). Wird beim Recycling mit der ganzen Flasche geschreddert.",
+   "color": "#CFE3E8",
+   "opacity": 0.55,
+   "label": false
+  },
+  {
+   "id": "band0",
+   "component_id": "pet_bottle_body",
+   "material_id": "pet",
+   "name": "Flaschenkörper",
+   "short": "Körper",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 65,
+   "z": 47,
+   "h": 9,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 1.11,
+   "materials": [
+    [
+     "pet",
+     100
+    ]
+   ],
+   "info": "Gehört zur Flasche aus PET (Recyclingcode 1). Wird beim Recycling mit der ganzen Flasche geschreddert.",
+   "color": "#CFE3E8",
+   "opacity": 0.55,
+   "label": false
+  },
+  {
+   "id": "band1",
+   "component_id": "pet_bottle_body",
+   "material_id": "pet",
+   "name": "Flaschenkörper",
+   "short": "Körper",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 65,
+   "z": 35,
+   "h": 9,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 1.11,
+   "materials": [
+    [
+     "pet",
+     100
+    ]
+   ],
+   "info": "Gehört zur Flasche aus PET (Recyclingcode 1). Wird beim Recycling mit der ganzen Flasche geschreddert.",
+   "color": "#CFE3E8",
+   "opacity": 0.55,
+   "label": false
+  },
+  {
+   "id": "unterteil",
+   "component_id": "pet_bottle_body",
+   "material_id": "pet",
+   "name": "Flaschenkörper",
+   "short": "Körper",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 65,
+   "z": 7,
+   "h": 25,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 2.41,
+   "materials": [
+    [
+     "pet",
+     100
+    ]
+   ],
+   "info": "Gehört zur Flasche aus PET (Recyclingcode 1). Wird beim Recycling mit der ganzen Flasche geschreddert.",
+   "color": "#CFE3E8",
+   "opacity": 0.55,
+   "label": false
+  },
+  {
+   "id": "boden",
+   "component_id": "pet_bottle_body",
+   "material_id": "pet",
+   "name": "Petaloid-Boden",
+   "short": "Boden",
+   "shape": "cyl",
+   "x": 2.5,
+   "y": 2.5,
+   "w": 60,
+   "z": 0,
+   "h": 7,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 2.04,
+   "materials": [
+    [
+     "pet",
+     100
+    ]
+   ],
+   "info": "Der Boden hat fünf Füße (Petaloid), damit er dem Druck der Kohlensäure standhält und die Flasche gerade steht.",
+   "color": "#CFE3E8",
+   "opacity": 0.55
   },
   {
    "id": "etikett",
    "component_id": "plastic_label",
    "material_id": "pp",
-   "name": "Etikett",
+   "name": "Rundum-Etikett",
    "short": "Etikett",
-   "shape": "box",
-   "x": 65,
-   "y": 12,
-   "w": 0.3,
-   "d": 41,
-   "z": 75,
+   "shape": "cyl",
+   "x": -0.5,
+   "y": -0.5,
+   "w": 66,
+   "z": 80,
    "h": 70,
-   "r": 0,
    "explode": [
-    60,
+    95,
     0,
     0
    ],
-   "mass": 0.5,
+   "mass": 0.46,
    "materials": [
     [
      "pp",
      100
     ]
    ],
-   "info": "Dünne PP-Folie, rundum geklebt. In der Recyclinganlage wird sie abgetrennt, weil sie leichter ist als PET und im Wasser schwimmt.",
+   "info": "Dünne bedruckte PP-Folie, rundum geklebt. In der Recyclinganlage schwimmt sie im Wasser oben und wird so vom PET getrennt.",
    "color": "#D9483B",
-   "sortBias": 100
+   "sortBias": 4,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 1,
+     "y": 1,
+     "w": 64,
+     "fill": "#C3D6DB"
+    }
+   ]
   }
  ]
 }
