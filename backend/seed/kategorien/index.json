@@ -1132,7 +1132,7 @@
   "name": "Vorhängeschloss",
   "name_en": "Padlock",
   "klasse": "Metall · Wertstoffhof",
-  "teile": 19,
+  "teile": 22,
   "platzhalter": false
  },
  {
@@ -1196,7 +1196,7 @@
   "name": "Backblech",
   "name_en": "Baking Tray",
   "klasse": "Metall · Wertstoffhof",
-  "teile": 4,
+  "teile": 11,
   "platzhalter": false
  },
  {
@@ -1204,7 +1204,7 @@
   "name": "Gabel",
   "name_en": "Fork",
   "klasse": "Metall · Wertstoffhof",
-  "teile": 7,
+  "teile": 8,
   "platzhalter": false
  },
  {
@@ -1212,7 +1212,7 @@
   "name": "Tacker",
   "name_en": "Stapler",
   "klasse": "Metall · Wertstoffhof",
-  "teile": 12,
+  "teile": 13,
   "platzhalter": false
  },
  {
@@ -1548,7 +1548,7 @@
   "name": "Hammer",
   "name_en": "Hammer",
   "klasse": "Metall · Wertstoffhof",
-  "teile": 8,
+  "teile": 11,
   "platzhalter": false
  },
  {
@@ -1556,7 +1556,7 @@
   "name": "Schraubendreher",
   "name_en": "Screwdriver",
   "klasse": "Metall · Wertstoffhof",
-  "teile": 6,
+  "teile": 11,
   "platzhalter": false
  },
  {
@@ -1604,7 +1604,7 @@
   "name": "Zange",
   "name_en": "Pliers",
   "klasse": "Metall · Wertstoffhof",
-  "teile": 9,
+  "teile": 12,
   "platzhalter": false
  }
 ]

@@ -28,20 +28,41 @@ teile = [
          x=9, y=46, w=12, d=14, z=14, h=2, r=1, mass=3,
          info='Angestauchte Flügel am Schaftende. Sie verhindern, dass sich der Schaft im Griff dreht.',
          color=STAHL),
-    teil('griff_kappe', 'plastic_handle', 'Griffkappe', 'Kappe', 'box',
-         x=1, y=0, w=28, d=18, z=1, h=28, r=12, mass=8,
-         info='Hartes Polypropylen mit Aufhängeloch. Der Griff ist in einem Stück um den Schaft gespritzt.',
-         color=ROT, marks=[mark('cyl', 10, 5, 8, fill='#7E1E19')]),
-    teil('griff_weich', 'plastic_handle', 'Weichgriff', 'Weichgriff', 'box',
-         material_id='rubber', x=0, y=18, w=30, d=72, z=0, h=30, r=14, mass=22, materials=[['tpe', 70], ['pp', 30]],
-         info='Weiche TPE-Zone auf dem harten Kern, damit die Hand nicht abrutscht. Lässt sich nicht vom Kern trennen.',
-         color=GELB, marks=raster(13, 4, 1, 8, 4, 6, 0, 8.5, r=2, fill='#C99A1E')),
+    teil('tpe_oben', 'plastic_handle', 'Weichgriff-Zone oben', 'Weichgriff', 'box',
+         material_id='rubber', x=9.5, y=20, w=11, d=66, z=28, h=2, r=5, mass=4, materials=[['tpe', 100]],
+         info='Weiche TPE-Streifen, im Zwei-Komponenten-Spritzguss auf den harten Kern gespritzt, damit die Hand nicht '
+              'abrutscht. Lassen sich nicht sortenrein trennen: Griff in den Restmüll.',
+         color=GELB, marks=raster(2.5, 4, 1, 8, 6, 4, 0, 8, r=2, fill='#C99A1E')),
+    teil('tpe_rechts', 'plastic_handle', 'Weichgriff-Zone rechts', 'Weichgriff', 'box',
+         material_id='rubber', x=28, y=20, w=2, d=66, z=9, h=12, r=1, explode=[16, 0, 0], mass=3,
+         materials=[['tpe', 100]], label=False, info='Seitlicher TPE-Streifen.', color=GELB, sortBias=6),
+    teil('tpe_links', 'plastic_handle', 'Weichgriff-Zone links', 'Weichgriff', 'box',
+         material_id='rubber', x=0, y=20, w=2, d=66, z=9, h=12, r=1, explode=[-16, 0, 0], mass=3,
+         materials=[['tpe', 100]], label=False, info='Seitlicher TPE-Streifen.', color=GELB),
+    teil('griff_oben', 'plastic_handle', 'Griffkörper oben', 'Griff', 'box',
+         x=6, y=8, w=18, d=84, z=24, h=5, r=8, mass=5, label=False,
+         info='Obere Rundung des Griffkörpers.', color=ROT),
+    teil('griff_mitte', 'plastic_handle', 'Griffkörper (PP)', 'Griff', 'box',
+         x=1, y=8, w=28, d=84, z=6, h=18, r=12, mass=14,
+         info='Harter Kern aus Polypropylen, in einem Stück um den Schaft gespritzt. Zum Trennen mit einer Säge '
+              'aufschneiden.', color=ROT),
+    teil('griff_unten', 'plastic_handle', 'Griffkörper unten', 'Griff', 'box',
+         x=6, y=8, w=18, d=84, z=1, h=5, r=8, mass=5, label=False,
+         info='Untere Rundung des Griffkörpers.', color='#A82822'),
+    teil('griff_kappe', 'plastic_handle', 'Griffende', 'Griffende', 'box',
+         x=4, y=0, w=22, d=8, z=4, h=22, r=8, mass=3,
+         info='Abgerundetes Griffende mit Aufhängeloch, Teil des Griffkörpers.',
+         color=ROT, marks=[mark('box', 3, 2, 16, 6, 3, '#D8443C')]),
     teil('griff_hals', 'plastic_handle', 'Griffhals', 'Griffhals', 'box',
-         x=3, y=90, w=24, d=15, z=3, h=24, r=10, mass=6,
+         x=4, y=92, w=22, d=16, z=4, h=22, r=9, mass=4,
          info='Verjüngter Übergang zum Schaft, hier tritt der Stahl aus dem Griff.',
-         color=ROT, marks=[mark('cyl', 9, 4, 6, fill='#7E1E19')]),
+         color=ROT, marks=[mark('box', 3, 3, 16, 10, 5, '#D8443C')]),
 ]
 
-explodiere(teile, abstand=18, gruppen=[['klinge', 'schaft', 'fluegel']])
+GRIFF = ['griff_oben', 'griff_mitte', 'griff_unten', 'griff_kappe', 'griff_hals']
+for p in teile:
+    if p['id'] in ('klinge', 'schaft', 'fluegel'):
+        p['explode'] = [0, 66, 0]  # Schaft in Achsrichtung aus dem Griff ziehen
+explodiere(teile, abstand=40, fest=GRIFF)
 skaliere_masse(teile, oid='screwdriver')
 schreibe('screwdriver', teile)

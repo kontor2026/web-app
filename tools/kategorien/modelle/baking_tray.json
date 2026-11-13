@@ -1,25 +1,25 @@
 {
  "parts": [
   {
-   "id": "draht",
+   "id": "draht_hinten",
    "component_id": "steel_baking_tray",
    "material_id": "steel",
    "name": "Versteifungsdraht im Rollrand",
    "short": "Randdraht",
    "shape": "box",
-   "x": 0,
-   "y": 0,
-   "w": 460,
-   "d": 380,
-   "z": 16,
-   "h": 4,
-   "r": 15,
+   "x": 1.5,
+   "y": 1.5,
+   "w": 457,
+   "d": 3,
+   "z": 15.5,
+   "h": 3,
+   "r": 1.5,
    "explode": [
     0,
     0,
-    334.2
+    490.0
    ],
-   "mass": 75.5,
+   "mass": 24.8,
    "materials": [
     [
      "stahl",
@@ -28,17 +28,97 @@
    ],
    "info": "Stahldraht, um den der obere Rand eingerollt ist. Er verhindert, dass sich das Blech in der Hitze verzieht.",
    "color": "#9DA4AA",
-   "marks": [
-    {
-     "shape": "box",
-     "x": 4,
-     "y": 4,
-     "w": 452,
-     "d": 372,
-     "r": 12,
-     "fill": "#C4C9CD"
-    }
-   ]
+   "label": true
+  },
+  {
+   "id": "draht_vorne",
+   "component_id": "steel_baking_tray",
+   "material_id": "steel",
+   "name": "Versteifungsdraht im Rollrand",
+   "short": "Randdraht",
+   "shape": "box",
+   "x": 1.5,
+   "y": 375.5,
+   "w": 457,
+   "d": 3,
+   "z": 15.5,
+   "h": 3,
+   "r": 1.5,
+   "explode": [
+    0,
+    0,
+    490.0
+   ],
+   "mass": 24.8,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Weiteres Stück des Randdrahts.",
+   "color": "#9DA4AA",
+   "label": false
+  },
+  {
+   "id": "draht_links",
+   "component_id": "steel_baking_tray",
+   "material_id": "steel",
+   "name": "Versteifungsdraht im Rollrand",
+   "short": "Randdraht",
+   "shape": "box",
+   "x": 1.5,
+   "y": 4.5,
+   "w": 3,
+   "d": 371,
+   "z": 15.5,
+   "h": 3,
+   "r": 1.5,
+   "explode": [
+    0,
+    0,
+    490.0
+   ],
+   "mass": 20.2,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Weiteres Stück des Randdrahts.",
+   "color": "#9DA4AA",
+   "label": false
+  },
+  {
+   "id": "draht_rechts",
+   "component_id": "steel_baking_tray",
+   "material_id": "steel",
+   "name": "Versteifungsdraht im Rollrand",
+   "short": "Randdraht",
+   "shape": "box",
+   "x": 455.5,
+   "y": 4.5,
+   "w": 3,
+   "d": 371,
+   "z": 15.5,
+   "h": 3,
+   "r": 1.5,
+   "explode": [
+    0,
+    0,
+    490.0
+   ],
+   "mass": 20.2,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Weiteres Stück des Randdrahts.",
+   "color": "#9DA4AA",
+   "label": false
   },
   {
    "id": "emaille_innen",
@@ -47,36 +127,456 @@
    "name": "Emaille innen",
    "short": "Emaille innen",
    "shape": "box",
-   "x": 4,
-   "y": 4,
-   "w": 452,
-   "d": 372,
-   "z": 0.9,
-   "h": 0.2,
-   "r": 12,
+   "x": 6,
+   "y": 6,
+   "w": 448,
+   "d": 368,
+   "z": 1.3,
+   "h": 0.3,
+   "r": 3,
    "explode": [
     0,
     0,
-    239.1
+    340.0
    ],
-   "mass": 37.7,
+   "mass": 45,
    "materials": [
     [
      "emaille",
      100
     ]
    ],
-   "info": "Glasartige Schicht, bei 800 °C auf den Stahl geschmolzen. Hart und kratzfest; im Metallwerk schmilzt sie zu Schlacke.",
+   "info": "Glasartige Schicht, bei 800 °C auf den Stahl geschmolzen. Hart und kratzfest; im Metallwerk schmilzt sie zu Schlacke. Abgeplatzte Stellen rosten.",
    "color": "#2E3134",
    "marks": [
     {
      "shape": "box",
-     "x": 12,
-     "y": 12,
-     "w": 428,
-     "d": 348,
-     "r": 8,
-     "fill": "#383B3F"
+     "x": 8,
+     "y": 8,
+     "w": 432,
+     "d": 352,
+     "r": 6,
+     "fill": "#363A3E"
+    },
+    {
+     "shape": "cyl",
+     "x": 20,
+     "y": 20,
+     "w": 2.5,
+     "fill": "#6A7076"
+    },
+    {
+     "shape": "cyl",
+     "x": 73,
+     "y": 57,
+     "w": 2.5,
+     "fill": "#6A7076"
+    },
+    {
+     "shape": "cyl",
+     "x": 126,
+     "y": 94,
+     "w": 2.5,
+     "fill": "#6A7076"
+    },
+    {
+     "shape": "cyl",
+     "x": 179,
+     "y": 131,
+     "w": 2.5,
+     "fill": "#6A7076"
+    },
+    {
+     "shape": "cyl",
+     "x": 232,
+     "y": 168,
+     "w": 2.5,
+     "fill": "#6A7076"
+    },
+    {
+     "shape": "cyl",
+     "x": 285,
+     "y": 205,
+     "w": 2.5,
+     "fill": "#6A7076"
+    },
+    {
+     "shape": "cyl",
+     "x": 338,
+     "y": 242,
+     "w": 2.5,
+     "fill": "#6A7076"
+    },
+    {
+     "shape": "cyl",
+     "x": 391,
+     "y": 279,
+     "w": 2.5,
+     "fill": "#6A7076"
+    },
+    {
+     "shape": "cyl",
+     "x": 34,
+     "y": 316,
+     "w": 2.5,
+     "fill": "#6A7076"
+    },
+    {
+     "shape": "cyl",
+     "x": 87,
+     "y": 23,
+     "w": 2.5,
+     "fill": "#6A7076"
+    },
+    {
+     "shape": "cyl",
+     "x": 140,
+     "y": 60,
+     "w": 2.5,
+     "fill": "#6A7076"
+    },
+    {
+     "shape": "cyl",
+     "x": 193,
+     "y": 97,
+     "w": 2.5,
+     "fill": "#6A7076"
+    },
+    {
+     "shape": "cyl",
+     "x": 246,
+     "y": 134,
+     "w": 2.5,
+     "fill": "#6A7076"
+    },
+    {
+     "shape": "cyl",
+     "x": 299,
+     "y": 171,
+     "w": 2.5,
+     "fill": "#6A7076"
+    },
+    {
+     "shape": "cyl",
+     "x": 352,
+     "y": 208,
+     "w": 2.5,
+     "fill": "#6A7076"
+    },
+    {
+     "shape": "cyl",
+     "x": 405,
+     "y": 245,
+     "w": 2.5,
+     "fill": "#6A7076"
+    },
+    {
+     "shape": "cyl",
+     "x": 48,
+     "y": 282,
+     "w": 2.5,
+     "fill": "#6A7076"
+    },
+    {
+     "shape": "cyl",
+     "x": 101,
+     "y": 319,
+     "w": 2.5,
+     "fill": "#6A7076"
+    },
+    {
+     "shape": "cyl",
+     "x": 154,
+     "y": 26,
+     "w": 2.5,
+     "fill": "#6A7076"
+    },
+    {
+     "shape": "cyl",
+     "x": 207,
+     "y": 63,
+     "w": 2.5,
+     "fill": "#6A7076"
+    },
+    {
+     "shape": "cyl",
+     "x": 260,
+     "y": 100,
+     "w": 2.5,
+     "fill": "#6A7076"
+    },
+    {
+     "shape": "cyl",
+     "x": 313,
+     "y": 137,
+     "w": 2.5,
+     "fill": "#6A7076"
+    },
+    {
+     "shape": "cyl",
+     "x": 366,
+     "y": 174,
+     "w": 2.5,
+     "fill": "#6A7076"
+    },
+    {
+     "shape": "cyl",
+     "x": 419,
+     "y": 211,
+     "w": 2.5,
+     "fill": "#6A7076"
+    },
+    {
+     "shape": "cyl",
+     "x": 62,
+     "y": 248,
+     "w": 2.5,
+     "fill": "#6A7076"
+    },
+    {
+     "shape": "cyl",
+     "x": 115,
+     "y": 285,
+     "w": 2.5,
+     "fill": "#6A7076"
+    },
+    {
+     "shape": "cyl",
+     "x": 168,
+     "y": 322,
+     "w": 2.5,
+     "fill": "#6A7076"
+    },
+    {
+     "shape": "cyl",
+     "x": 221,
+     "y": 29,
+     "w": 2.5,
+     "fill": "#6A7076"
+    },
+    {
+     "shape": "cyl",
+     "x": 274,
+     "y": 66,
+     "w": 2.5,
+     "fill": "#6A7076"
+    },
+    {
+     "shape": "cyl",
+     "x": 327,
+     "y": 103,
+     "w": 2.5,
+     "fill": "#6A7076"
+    },
+    {
+     "shape": "cyl",
+     "x": 380,
+     "y": 140,
+     "w": 2.5,
+     "fill": "#6A7076"
+    },
+    {
+     "shape": "cyl",
+     "x": 23,
+     "y": 177,
+     "w": 2.5,
+     "fill": "#6A7076"
+    },
+    {
+     "shape": "cyl",
+     "x": 76,
+     "y": 214,
+     "w": 2.5,
+     "fill": "#6A7076"
+    },
+    {
+     "shape": "cyl",
+     "x": 129,
+     "y": 251,
+     "w": 2.5,
+     "fill": "#6A7076"
+    },
+    {
+     "shape": "cyl",
+     "x": 182,
+     "y": 288,
+     "w": 2.5,
+     "fill": "#6A7076"
+    },
+    {
+     "shape": "cyl",
+     "x": 235,
+     "y": 325,
+     "w": 2.5,
+     "fill": "#6A7076"
+    },
+    {
+     "shape": "cyl",
+     "x": 288,
+     "y": 32,
+     "w": 2.5,
+     "fill": "#6A7076"
+    },
+    {
+     "shape": "cyl",
+     "x": 341,
+     "y": 69,
+     "w": 2.5,
+     "fill": "#6A7076"
+    },
+    {
+     "shape": "cyl",
+     "x": 394,
+     "y": 106,
+     "w": 2.5,
+     "fill": "#6A7076"
+    },
+    {
+     "shape": "cyl",
+     "x": 37,
+     "y": 143,
+     "w": 2.5,
+     "fill": "#6A7076"
+    },
+    {
+     "shape": "cyl",
+     "x": 90,
+     "y": 180,
+     "w": 2.5,
+     "fill": "#6A7076"
+    },
+    {
+     "shape": "cyl",
+     "x": 143,
+     "y": 217,
+     "w": 2.5,
+     "fill": "#6A7076"
+    },
+    {
+     "shape": "cyl",
+     "x": 196,
+     "y": 254,
+     "w": 2.5,
+     "fill": "#6A7076"
+    },
+    {
+     "shape": "cyl",
+     "x": 249,
+     "y": 291,
+     "w": 2.5,
+     "fill": "#6A7076"
+    },
+    {
+     "shape": "cyl",
+     "x": 302,
+     "y": 328,
+     "w": 2.5,
+     "fill": "#6A7076"
+    },
+    {
+     "shape": "cyl",
+     "x": 355,
+     "y": 35,
+     "w": 2.5,
+     "fill": "#6A7076"
+    },
+    {
+     "shape": "cyl",
+     "x": 408,
+     "y": 72,
+     "w": 2.5,
+     "fill": "#6A7076"
+    },
+    {
+     "shape": "cyl",
+     "x": 51,
+     "y": 109,
+     "w": 2.5,
+     "fill": "#6A7076"
+    },
+    {
+     "shape": "cyl",
+     "x": 104,
+     "y": 146,
+     "w": 2.5,
+     "fill": "#6A7076"
+    },
+    {
+     "shape": "cyl",
+     "x": 157,
+     "y": 183,
+     "w": 2.5,
+     "fill": "#6A7076"
+    },
+    {
+     "shape": "cyl",
+     "x": 210,
+     "y": 220,
+     "w": 2.5,
+     "fill": "#6A7076"
+    },
+    {
+     "shape": "cyl",
+     "x": 263,
+     "y": 257,
+     "w": 2.5,
+     "fill": "#6A7076"
+    },
+    {
+     "shape": "cyl",
+     "x": 316,
+     "y": 294,
+     "w": 2.5,
+     "fill": "#6A7076"
+    },
+    {
+     "shape": "cyl",
+     "x": 369,
+     "y": 331,
+     "w": 2.5,
+     "fill": "#6A7076"
+    },
+    {
+     "shape": "cyl",
+     "x": 422,
+     "y": 38,
+     "w": 2.5,
+     "fill": "#6A7076"
+    },
+    {
+     "shape": "cyl",
+     "x": 65,
+     "y": 75,
+     "w": 2.5,
+     "fill": "#6A7076"
+    },
+    {
+     "shape": "cyl",
+     "x": 118,
+     "y": 112,
+     "w": 2.5,
+     "fill": "#6A7076"
+    },
+    {
+     "shape": "cyl",
+     "x": 171,
+     "y": 149,
+     "w": 2.5,
+     "fill": "#6A7076"
+    },
+    {
+     "shape": "cyl",
+     "x": 224,
+     "y": 186,
+     "w": 2.5,
+     "fill": "#6A7076"
+    },
+    {
+     "shape": "cyl",
+     "x": 277,
+     "y": 223,
+     "w": 2.5,
+     "fill": "#6A7076"
     }
    ]
   },
@@ -84,22 +584,22 @@
    "id": "blech",
    "component_id": "steel_baking_tray",
    "material_id": "steel",
-   "name": "Stahlblech mit Rollrand",
+   "name": "Stahlblech (Boden)",
    "short": "Blech",
    "shape": "box",
    "x": 0,
    "y": 0,
    "w": 460,
    "d": 380,
-   "z": 0.1,
-   "h": 19.9,
-   "r": 15,
+   "z": 0.3,
+   "h": 1,
+   "r": 6,
    "explode": [
     0,
     0,
-    110.0
+    170.0
    ],
-   "mass": 1149,
+   "mass": 740,
    "materials": [
     [
      "stahl",
@@ -107,25 +607,180 @@
     ]
    ],
    "info": "Tiefgezogenes Stahlblech, 1 mm dick. Zum Altmetall auf den Wertstoffhof, nicht in die Gelbe Tonne. Mit Magnet erkennbar: Stahl haftet, Aluminiumbleche nicht.",
-   "color": "#6E767C",
+   "color": "#7A8288",
    "marks": [
     {
      "shape": "box",
-     "x": 4,
-     "y": 4,
-     "w": 452,
-     "d": 372,
-     "r": 12,
-     "fill": "#5E656A"
-    },
+     "x": 10,
+     "y": 10,
+     "w": 440,
+     "d": 360,
+     "r": 6,
+     "fill": "#6E767C"
+    }
+   ]
+  },
+  {
+   "id": "wand_hinten",
+   "component_id": "steel_baking_tray",
+   "material_id": "steel",
+   "name": "Rand mit Rollrand",
+   "short": "Rand",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 460,
+   "d": 6,
+   "z": 1.3,
+   "h": 18.7,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    170.0
+   ],
+   "mass": 105.6,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Hochgezogener Rand des Blechs, oben eingerollt um den Draht.",
+   "color": "#4F555A",
+   "label": false,
+   "marks": [
     {
      "shape": "box",
-     "x": 16,
-     "y": 16,
-     "w": 428,
-     "d": 348,
-     "r": 8,
-     "fill": "#80878D"
+     "x": 1,
+     "y": 1,
+     "w": 458,
+     "d": 4,
+     "r": 1.5,
+     "fill": "#656C72"
+    }
+   ]
+  },
+  {
+   "id": "wand_vorne",
+   "component_id": "steel_baking_tray",
+   "material_id": "steel",
+   "name": "Rand mit Rollrand",
+   "short": "Rand",
+   "shape": "box",
+   "x": 0,
+   "y": 374,
+   "w": 460,
+   "d": 6,
+   "z": 1.3,
+   "h": 18.7,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    170.0
+   ],
+   "mass": 105.6,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Hochgezogener Rand des Blechs, oben eingerollt um den Draht.",
+   "color": "#4F555A",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 1,
+     "w": 458,
+     "d": 4,
+     "r": 1.5,
+     "fill": "#656C72"
+    }
+   ]
+  },
+  {
+   "id": "wand_links",
+   "component_id": "steel_baking_tray",
+   "material_id": "steel",
+   "name": "Rand mit Rollrand",
+   "short": "Rand",
+   "shape": "box",
+   "x": 0,
+   "y": 6,
+   "w": 6,
+   "d": 368,
+   "z": 1.3,
+   "h": 18.7,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    170.0
+   ],
+   "mass": 84.4,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Hochgezogener Rand des Blechs, oben eingerollt um den Draht.",
+   "color": "#4F555A",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 1,
+     "w": 4,
+     "d": 366,
+     "r": 1.5,
+     "fill": "#656C72"
+    }
+   ]
+  },
+  {
+   "id": "wand_rechts",
+   "component_id": "steel_baking_tray",
+   "material_id": "steel",
+   "name": "Rand mit Rollrand",
+   "short": "Rand",
+   "shape": "box",
+   "x": 454,
+   "y": 6,
+   "w": 6,
+   "d": 368,
+   "z": 1.3,
+   "h": 18.7,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    170.0
+   ],
+   "mass": 84.4,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Hochgezogener Rand des Blechs, oben eingerollt um den Draht.",
+   "color": "#4F555A",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 1,
+     "w": 4,
+     "d": 366,
+     "r": 1.5,
+     "fill": "#656C72"
     }
    ]
   },
@@ -141,14 +796,14 @@
    "w": 460,
    "d": 380,
    "z": 0,
-   "h": 0.1,
-   "r": 15,
+   "h": 0.3,
+   "r": 6,
    "explode": [
     0,
     0,
     0.0
    ],
-   "mass": 37.7,
+   "mass": 45,
    "materials": [
     [
      "emaille",

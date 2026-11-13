@@ -1,6 +1,35 @@
 {
  "parts": [
   {
+   "id": "holzkeil",
+   "component_id": "wooden_handle",
+   "material_id": "wood",
+   "name": "Holzkeil",
+   "short": "Holzkeil",
+   "shape": "box",
+   "x": 42,
+   "y": 0,
+   "w": 26,
+   "d": 14,
+   "z": 14,
+   "h": 2,
+   "r": 0.5,
+   "explode": [
+    0,
+    0,
+    148
+   ],
+   "mass": 2.9,
+   "materials": [
+    [
+     "holz",
+     100
+    ]
+   ],
+   "info": "Hartholzkeil, mit Leim in den Schlitz am Stielende getrieben. Er spreizt das Holz im Auge, damit der Kopf nicht abfliegt.",
+   "color": "#B0824A"
+  },
+  {
    "id": "ringkeil",
    "component_id": "steel_hammer_head",
    "material_id": "steel",
@@ -16,7 +45,7 @@
    "explode": [
     0,
     0,
-    84
+    110
    ],
    "mass": 3.8,
    "materials": [
@@ -38,54 +67,25 @@
    ]
   },
   {
-   "id": "holzkeil",
-   "component_id": "wooden_handle",
-   "material_id": "wood",
-   "name": "Holzkeil",
-   "short": "Holzkeil",
-   "shape": "box",
-   "x": 42,
-   "y": 0,
-   "w": 26,
-   "d": 14,
-   "z": 14,
-   "h": 2,
-   "r": 0.5,
-   "explode": [
-    0,
-    0,
-    109
-   ],
-   "mass": 2.9,
-   "materials": [
-    [
-     "holz",
-     100
-    ]
-   ],
-   "info": "Hartholzkeil, mit Leim in den Schlitz am Stielende getrieben. Er spreizt das Holz im Auge, damit der Kopf nicht abfliegt.",
-   "color": "#B0824A"
-  },
-  {
    "id": "finne",
    "component_id": "steel_hammer_head",
    "material_id": "steel",
    "name": "Finne",
    "short": "Finne",
    "shape": "box",
-   "x": 0,
-   "y": 3,
-   "w": 32,
-   "d": 20,
-   "z": 4,
-   "h": 22,
-   "r": 2,
+   "x": 18,
+   "y": 2,
+   "w": 14,
+   "d": 22,
+   "z": 0,
+   "h": 30,
+   "r": 1,
    "explode": [
     0,
     0,
-    45
+    58
    ],
-   "mass": 105.6,
+   "mass": 57.6,
    "materials": [
     [
      "stahl",
@@ -97,10 +97,81 @@
    "marks": [
     {
      "shape": "box",
-     "x": 0,
-     "y": 7,
-     "w": 10,
-     "d": 6,
+     "x": 1,
+     "y": 1,
+     "w": 12,
+     "d": 20,
+     "r": 1,
+     "fill": "#687076"
+    }
+   ]
+  },
+  {
+   "id": "finne_mitte",
+   "component_id": "steel_hammer_head",
+   "material_id": "steel",
+   "name": "Finne (Mitte)",
+   "short": "Finne",
+   "shape": "box",
+   "x": 8,
+   "y": 6,
+   "w": 10,
+   "d": 14,
+   "z": 0,
+   "h": 30,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    58
+   ],
+   "mass": 33.6,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Die Finne wird zur Spitze hin schmaler.",
+   "color": "#5E666C",
+   "label": false
+  },
+  {
+   "id": "finne_spitze",
+   "component_id": "steel_hammer_head",
+   "material_id": "steel",
+   "name": "Finne (Schneide)",
+   "short": "Finne",
+   "shape": "box",
+   "x": 0,
+   "y": 10,
+   "w": 8,
+   "d": 6,
+   "z": 0,
+   "h": 30,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    58
+   ],
+   "mass": 14.4,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Abgerundete Schneide der Finne.",
+   "color": "#5E666C",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0.5,
+     "y": 1.5,
+     "w": 7,
+     "d": 3,
      "r": 1,
      "fill": "#B9C0C5"
     }
@@ -123,7 +194,7 @@
    "explode": [
     0,
     0,
-    45
+    58
    ],
    "mass": 249.6,
    "materials": [
@@ -137,12 +208,12 @@
    "marks": [
     {
      "shape": "box",
-     "x": 8,
-     "y": 4,
-     "w": 32,
-     "d": 18,
-     "r": 6,
-     "fill": "#4C5358"
+     "x": 2,
+     "y": 2,
+     "w": 44,
+     "d": 22,
+     "r": 2,
+     "fill": "#687076"
     }
    ]
   },
@@ -155,7 +226,7 @@
    "shape": "box",
    "x": 80,
    "y": 0,
-   "w": 30,
+   "w": 26,
    "d": 26,
    "z": 0,
    "h": 30,
@@ -163,28 +234,58 @@
    "explode": [
     0,
     0,
-    45
+    58
    ],
-   "mass": 144,
+   "mass": 129.6,
    "materials": [
     [
      "stahl",
      100
     ]
    ],
-   "info": "Quadratische, gehärtete Schlagfläche mit Fase. Hat sie Grate oder Risse, kann Stahl absplittern.",
+   "info": "Quadratische, gehärtete Schlagfläche. Hat sie Grate oder Risse, kann Stahl absplittern.",
    "color": "#5E666C",
    "marks": [
     {
      "shape": "box",
-     "x": 26,
-     "y": 1,
-     "w": 4,
-     "d": 24,
-     "r": 1,
-     "fill": "#B9C0C5"
+     "x": 2,
+     "y": 2,
+     "w": 22,
+     "d": 22,
+     "r": 2,
+     "fill": "#687076"
     }
    ]
+  },
+  {
+   "id": "fase",
+   "component_id": "steel_hammer_head",
+   "material_id": "steel",
+   "name": "Bahn mit Fase",
+   "short": "Bahn",
+   "shape": "box",
+   "x": 106,
+   "y": 2,
+   "w": 4,
+   "d": 22,
+   "z": 2,
+   "h": 26,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    58
+   ],
+   "mass": 14.4,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Abgeschrägte Kante der Schlagfläche, damit sie nicht ausbricht.",
+   "color": "#B9C0C5",
+   "label": false
   },
   {
    "id": "stiel_kopf",
@@ -214,7 +315,6 @@
    ],
    "info": "Das obere Stielende ist geschlitzt und steckt im Auge. Hier sitzen die Keile.",
    "color": "#D2A86E",
-   "label": false,
    "marks": [
     {
      "shape": "box",

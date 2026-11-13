@@ -15,18 +15,29 @@ STAHL = '#5E666C'
 BLANK = '#AEB5BA'
 ROT = '#C8322B'
 GELB = '#E9B92D'
-A = ['backe_links', 'gelenk_oben', 'schenkel_rechts']
-B = ['backe_rechts', 'gelenk_unten', 'schenkel_links']
+A = ['spitze_links', 'backe_links', 'gelenk_oben', 'schenkel_rechts']
+B = ['spitze_rechts', 'backe_rechts', 'gelenk_unten', 'schenkel_links']
 
 teile = [
     teil('niet', 'steel_pliers_jaws', 'Gelenkniet', 'Niet', 'cyl',
-         x=26, y=60, w=8, z=0, h=15, mass=6,
+         x=25, y=59, w=10, z=14, h=1, explode=[0, 0, 60], mass=2,
          info='Hält beide Hälften zusammen und ist die Drehachse. Ist vernietet und lässt sich nicht lösen.',
-         color='#8C949A', marks=[mark('cyl', 2, 2, 4, fill='#6C747A')]),
+         color='#8C949A', marks=[mark('cyl', 2, 2, 6, fill='#A9B0B5')]),
+    teil('niet_schaft', 'steel_pliers_jaws', 'Nietschaft', 'Niet', 'cyl',
+         x=26, y=60, w=8, z=1.5, h=12, explode=[0, 0, 60], mass=4, label=False,
+         info='Schaft des Niets, unten breitgeschlagen.', color='#8C949A'),
+    teil('spitze_links', 'steel_pliers_jaws', 'Backenspitze der oberen Hälfte', 'Spitze A', 'box',
+         x=22, y=0, w=8, d=20, z=3, h=9, r=2, mass=6, label=False,
+         info='Schmale Spitze zum Greifen kleiner Teile.',
+         color=STAHL, marks=raster(3.5, 3, 1, 4, 3.5, 2, 0, 4, r=0.5, fill=BLANK)),
+    teil('spitze_rechts', 'steel_pliers_jaws', 'Backenspitze der unteren Hälfte', 'Spitze B', 'box',
+         x=30, y=0, w=8, d=20, z=3, h=9, r=2, mass=6, label=False,
+         info='Schmale Spitze zum Greifen kleiner Teile.',
+         color=STAHL, marks=raster(0.5, 3, 1, 4, 3.5, 2, 0, 4, r=0.5, fill=BLANK)),
     teil('backe_links', 'steel_pliers_jaws', 'Backe der oberen Hälfte', 'Backe A', 'box',
-         x=19, y=0, w=11, d=50, z=1.5, h=12, r=2, mass=22,
+         x=19, y=20, w=11, d=30, z=1.5, h=12, r=2, mass=16,
          info='Gehärteter Chrom-Vanadium-Stahl mit Riffelung zum Greifen und Schneide zum Drahtschneiden.',
-         color=STAHL, marks=raster(7, 3, 1, 6, 3.5, 2, 0, 4, r=0.5, fill=BLANK) + [mark('box', 9, 30, 2, 16, 0.5, BLANK)]),
+         color=STAHL, marks=raster(7, 2, 1, 3, 3.5, 2, 0, 4, r=0.5, fill=BLANK) + [mark('cyl', 5, 13, 6, 4, fill='#3F464B'), mark('box', 9, 20, 2, 9, 0.5, BLANK)]),
     teil('gelenk_oben', 'steel_pliers_jaws', 'Gelenk der oberen Hälfte', 'Gelenk A', 'box',
          x=16, y=50, w=28, d=28, z=7.5, h=6.5, r=10, mass=24,
          info='Am Gelenk ist jede Hälfte auf halbe Dicke abgeflacht, so liegen beide Hälften übereinander.',
@@ -36,9 +47,9 @@ teile = [
          info='Die Hälfte kreuzt im Gelenk: Die linke Backe gehört zum rechten Griff.',
          color=STAHL, label=False),
     teil('backe_rechts', 'steel_pliers_jaws', 'Backe der unteren Hälfte', 'Backe B', 'box',
-         x=30, y=0, w=11, d=50, z=1.5, h=12, r=2, mass=22,
+         x=30, y=20, w=11, d=30, z=1.5, h=12, r=2, mass=16,
          info='Gegenstück mit Riffelung. Der Stahl ist wertvoller Schrott für den Wertstoffhof.',
-         color=STAHL, marks=raster(0.5, 3, 1, 6, 3.5, 2, 0, 4, r=0.5, fill=BLANK) + [mark('box', 0, 30, 2, 16, 0.5, BLANK)]),
+         color=STAHL, marks=raster(0.5, 2, 1, 3, 3.5, 2, 0, 4, r=0.5, fill=BLANK) + [mark('cyl', 0, 13, 6, 4, fill='#3F464B'), mark('box', 0, 20, 2, 9, 0.5, BLANK)]),
     teil('gelenk_unten', 'steel_pliers_jaws', 'Gelenk der unteren Hälfte', 'Gelenk B', 'box',
          x=16, y=50, w=28, d=28, z=1, h=6.5, r=10, mass=24,
          info='Untere Gelenkplatte mit Bohrung für den Niet.', color=STAHL, label=False,
@@ -57,6 +68,10 @@ teile = [
          color=ROT, marks=[mark('box', 4, 12, 16, 70, 7, GELB)]),
 ]
 
-explodiere(teile, abstand=20, nach_liste=True, gruppen=[A, B])
+for p in teile:
+    if p['id'] in A:
+        p['explode'] = [0, 0, 30]
+    elif p['id'] in B:
+        p['explode'] = [0, 0, 0]
 skaliere_masse(teile, oid='pliers')
 schreibe('pliers', teile)

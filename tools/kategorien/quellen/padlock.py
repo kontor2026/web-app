@@ -72,12 +72,26 @@ teile = [
          x=14.5, y=4.5, w=11, z=3, h=34, explode=[0, 0, 0], mass=8, materials=[['messing', 100]],
          info='Drehbarer Messingkern mit dem Schlüsselkanal. Er lässt sich nur drehen, wenn alle Stifte richtig stehen.',
          color=MESSING, marks=[mark('box', 4.5, 2, 2, 7, 0.5, '#4A3B1E'), mark('cyl', 3.5, 3.5, 4, fill='#B8963E')]),
+    teil('nocke', 'padlock_body', 'Schließnocke', 'Nocke', 'box', material_id='steel',
+         x=16.5, y=7.5, w=7, d=5, z=37, h=5, r=1, explode=[0, 0, 10], mass=1, materials=[['stahl', 100]],
+         info='Flacher Stahlnocken oben am Kern. Dreht der Schlüssel, gibt er die beiden Sperrkugeln frei.',
+         color='#8C949A'),
     *stifte(),
+    teil('buegelfeder', 'steel_shackle', 'Bügelfeder', 'Bügelfeder', 'cyl',
+         x=5.5, y=7.5, w=5, z=4, h=14, explode=[0, 0, 0], mass=0.4, materials=[['stahl', 100]],
+         info='Druckfeder unter dem langen Schenkel. Sie lässt den Bügel aufspringen, sobald die Kugeln ihn freigeben.',
+         color=STAHL, marks=[mark('cyl', 1, 1, 3, fill='#7E868C')]),
+    teil('sicherungsstift', 'padlock_body', 'Sicherungsstift', 'Sicherung', 'cyl', material_id='steel',
+         x=18.5, y=16, w=3, z=0, h=8, explode=[-22, 14, 0], mass=0.3, materials=[['stahl', 100]],
+         info='Eingepresster Stahlstift von unten, der den Zylinder im Körper hält. Zum Zerlegen mit einem Bohrer '
+              'ausbohren.', color='#9AA2A6'),
     teil('koerper', 'padlock_body', 'Schlosskörper', 'Körper', 'box',
          x=0, y=0, w=40, d=20, z=0, h=45, r=3, explode=[-60, 0, 0], mass=110, materials=[['messing', 100]],
          info='Massiver Messingblock mit Bohrungen für Zylinder, Stifte und Bügel. Messing ist wertvoller Schrott: '
               'alte Schlösser beim Schrotthändler oder Wertstoffhof abgeben.',
-         color=MESSING, marks=[mark('cyl', 5, 7, 6, fill='#4A3B1E'), mark('cyl', 29, 7, 6, fill='#4A3B1E')]),
+         color=MESSING, marks=[mark('box', 1.5, 1.5, 37, 17, 2.5, '#D6B85E'),
+                              mark('cyl', 4, 6, 8, fill='#A88A3A'), mark('cyl', 28, 6, 8, fill='#A88A3A'),
+                              mark('cyl', 5, 7, 6, fill='#4A3B1E'), mark('cyl', 29, 7, 6, fill='#4A3B1E')]),
 ]
 
 skaliere_masse(teile, oid='padlock')

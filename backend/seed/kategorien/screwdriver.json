@@ -26,30 +26,30 @@
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 0,27 kg",
+   "v": "≈ 0,24 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 0,14 kg",
-   "hint": "spart 0,13 kg, wenn recycelte Materialien eingesetzt werden"
+   "v": "≈ 0,09 kg",
+   "hint": "spart 0,15 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Fe": 52724.0
+   "Fe": 49588.0
   },
   "herkunft": {
    "Fe": "Modellmassen (Schätzung)"
   },
   "materialien_g": {
-   "steel": 53.8,
-   "rubber": 28.2,
-   "pp": 18.0
+   "steel": 50.6,
+   "pp": 37.3,
+   "rubber": 12.0
   },
-  "co2_kg": 0.268,
-  "co2_mit_recyclat_kg": 0.14,
-  "co2_ersparnis_kg": 0.128,
+  "co2_kg": 0.241,
+  "co2_mit_recyclat_kg": 0.087,
+  "co2_ersparnis_kg": 0.154,
   "co2_ohne_faktor": [],
   "rohstoffwert_eur": 0,
   "wert_ohne_preis": [],
@@ -145,10 +145,10 @@
    "r": 0.3,
    "explode": [
     0,
-    0,
-    36.0
+    66,
+    0
    ],
-   "mass": 3.8,
+   "mass": 3.6,
    "materials": [
     [
      "stahl",
@@ -174,10 +174,10 @@
    "r": 3,
    "explode": [
     0,
-    0,
-    36.0
+    66,
+    0
    ],
-   "mass": 46.2,
+   "mass": 43.4,
    "materials": [
     [
      "stahl",
@@ -214,10 +214,10 @@
    "r": 1,
    "explode": [
     0,
-    0,
-    36.0
+    66,
+    0
    ],
-   "mass": 3.8,
+   "mass": 3.6,
    "materials": [
     [
      "stahl",
@@ -228,147 +228,295 @@
    "color": "#B5BCC1"
   },
   {
-   "id": "griff_kappe",
+   "id": "tpe_oben",
    "component_id": "plastic_handle",
-   "material_id": "pp",
-   "name": "Griffkappe",
-   "short": "Kappe",
+   "material_id": "rubber",
+   "name": "Weichgriff-Zone oben",
+   "short": "Weichgriff",
    "shape": "box",
-   "x": 1,
-   "y": 0,
-   "w": 28,
-   "d": 18,
-   "z": 1,
-   "h": 28,
-   "r": 12,
+   "x": 9.5,
+   "y": 20,
+   "w": 11,
+   "d": 66,
+   "z": 28,
+   "h": 2,
+   "r": 5,
    "explode": [
     0,
     0,
-    0.0
+    41
    ],
-   "mass": 10.3,
+   "mass": 4.8,
+   "materials": [
+    [
+     "tpe",
+     100
+    ]
+   ],
+   "info": "Weiche TPE-Streifen, im Zwei-Komponenten-Spritzguss auf den harten Kern gespritzt, damit die Hand nicht abrutscht. Lassen sich nicht sortenrein trennen: Griff in den Restmüll.",
+   "color": "#F1C232",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2.5,
+     "y": 4,
+     "w": 6,
+     "d": 4,
+     "r": 2,
+     "fill": "#C99A1E"
+    },
+    {
+     "shape": "box",
+     "x": 2.5,
+     "y": 12,
+     "w": 6,
+     "d": 4,
+     "r": 2,
+     "fill": "#C99A1E"
+    },
+    {
+     "shape": "box",
+     "x": 2.5,
+     "y": 20,
+     "w": 6,
+     "d": 4,
+     "r": 2,
+     "fill": "#C99A1E"
+    },
+    {
+     "shape": "box",
+     "x": 2.5,
+     "y": 28,
+     "w": 6,
+     "d": 4,
+     "r": 2,
+     "fill": "#C99A1E"
+    },
+    {
+     "shape": "box",
+     "x": 2.5,
+     "y": 36,
+     "w": 6,
+     "d": 4,
+     "r": 2,
+     "fill": "#C99A1E"
+    },
+    {
+     "shape": "box",
+     "x": 2.5,
+     "y": 44,
+     "w": 6,
+     "d": 4,
+     "r": 2,
+     "fill": "#C99A1E"
+    },
+    {
+     "shape": "box",
+     "x": 2.5,
+     "y": 52,
+     "w": 6,
+     "d": 4,
+     "r": 2,
+     "fill": "#C99A1E"
+    },
+    {
+     "shape": "box",
+     "x": 2.5,
+     "y": 60,
+     "w": 6,
+     "d": 4,
+     "r": 2,
+     "fill": "#C99A1E"
+    }
+   ]
+  },
+  {
+   "id": "tpe_rechts",
+   "component_id": "plastic_handle",
+   "material_id": "rubber",
+   "name": "Weichgriff-Zone rechts",
+   "short": "Weichgriff",
+   "shape": "box",
+   "x": 28,
+   "y": 20,
+   "w": 2,
+   "d": 66,
+   "z": 9,
+   "h": 12,
+   "r": 1,
+   "explode": [
+    16,
+    0,
+    0
+   ],
+   "mass": 3.6,
+   "materials": [
+    [
+     "tpe",
+     100
+    ]
+   ],
+   "info": "Seitlicher TPE-Streifen.",
+   "color": "#F1C232",
+   "label": false,
+   "sortBias": 6
+  },
+  {
+   "id": "tpe_links",
+   "component_id": "plastic_handle",
+   "material_id": "rubber",
+   "name": "Weichgriff-Zone links",
+   "short": "Weichgriff",
+   "shape": "box",
+   "x": 0,
+   "y": 20,
+   "w": 2,
+   "d": 66,
+   "z": 9,
+   "h": 12,
+   "r": 1,
+   "explode": [
+    -16,
+    0,
+    0
+   ],
+   "mass": 3.6,
+   "materials": [
+    [
+     "tpe",
+     100
+    ]
+   ],
+   "info": "Seitlicher TPE-Streifen.",
+   "color": "#F1C232",
+   "label": false
+  },
+  {
+   "id": "griff_oben",
+   "component_id": "plastic_handle",
+   "material_id": "pp",
+   "name": "Griffkörper oben",
+   "short": "Griff",
+   "shape": "box",
+   "x": 6,
+   "y": 8,
+   "w": 18,
+   "d": 84,
+   "z": 24,
+   "h": 5,
+   "r": 8,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 6,
    "materials": [
     [
      "pp",
      100
     ]
    ],
-   "info": "Hartes Polypropylen mit Aufhängeloch. Der Griff ist in einem Stück um den Schaft gespritzt.",
+   "info": "Obere Rundung des Griffkörpers.",
    "color": "#C8322B",
-   "marks": [
-    {
-     "shape": "cyl",
-     "x": 10,
-     "y": 5,
-     "w": 8,
-     "fill": "#7E1E19"
-    }
-   ]
+   "label": false
   },
   {
-   "id": "griff_weich",
+   "id": "griff_mitte",
    "component_id": "plastic_handle",
-   "material_id": "rubber",
-   "name": "Weichgriff",
-   "short": "Weichgriff",
+   "material_id": "pp",
+   "name": "Griffkörper (PP)",
+   "short": "Griff",
    "shape": "box",
-   "x": 0,
-   "y": 18,
-   "w": 30,
-   "d": 72,
-   "z": 0,
-   "h": 30,
-   "r": 14,
+   "x": 1,
+   "y": 8,
+   "w": 28,
+   "d": 84,
+   "z": 6,
+   "h": 18,
+   "r": 12,
    "explode": [
     0,
     0,
-    0.0
+    0
    ],
-   "mass": 28.2,
+   "mass": 16.9,
    "materials": [
     [
-     "tpe",
-     70
-    ],
-    [
      "pp",
-     30
+     100
     ]
    ],
-   "info": "Weiche TPE-Zone auf dem harten Kern, damit die Hand nicht abrutscht. Lässt sich nicht vom Kern trennen.",
-   "color": "#F1C232",
+   "info": "Harter Kern aus Polypropylen, in einem Stück um den Schaft gespritzt. Zum Trennen mit einer Säge aufschneiden.",
+   "color": "#C8322B"
+  },
+  {
+   "id": "griff_unten",
+   "component_id": "plastic_handle",
+   "material_id": "pp",
+   "name": "Griffkörper unten",
+   "short": "Griff",
+   "shape": "box",
+   "x": 6,
+   "y": 8,
+   "w": 18,
+   "d": 84,
+   "z": 1,
+   "h": 5,
+   "r": 8,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 6,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Untere Rundung des Griffkörpers.",
+   "color": "#A82822",
+   "label": false
+  },
+  {
+   "id": "griff_kappe",
+   "component_id": "plastic_handle",
+   "material_id": "pp",
+   "name": "Griffende",
+   "short": "Griffende",
+   "shape": "box",
+   "x": 4,
+   "y": 0,
+   "w": 22,
+   "d": 8,
+   "z": 4,
+   "h": 22,
+   "r": 8,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 3.6,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Abgerundetes Griffende mit Aufhängeloch, Teil des Griffkörpers.",
+   "color": "#C8322B",
    "marks": [
     {
      "shape": "box",
-     "x": 13,
-     "y": 4.0,
-     "w": 4,
+     "x": 3,
+     "y": 2,
+     "w": 16,
      "d": 6,
-     "r": 2,
-     "fill": "#C99A1E"
-    },
-    {
-     "shape": "box",
-     "x": 13,
-     "y": 12.5,
-     "w": 4,
-     "d": 6,
-     "r": 2,
-     "fill": "#C99A1E"
-    },
-    {
-     "shape": "box",
-     "x": 13,
-     "y": 21.0,
-     "w": 4,
-     "d": 6,
-     "r": 2,
-     "fill": "#C99A1E"
-    },
-    {
-     "shape": "box",
-     "x": 13,
-     "y": 29.5,
-     "w": 4,
-     "d": 6,
-     "r": 2,
-     "fill": "#C99A1E"
-    },
-    {
-     "shape": "box",
-     "x": 13,
-     "y": 38.0,
-     "w": 4,
-     "d": 6,
-     "r": 2,
-     "fill": "#C99A1E"
-    },
-    {
-     "shape": "box",
-     "x": 13,
-     "y": 46.5,
-     "w": 4,
-     "d": 6,
-     "r": 2,
-     "fill": "#C99A1E"
-    },
-    {
-     "shape": "box",
-     "x": 13,
-     "y": 55.0,
-     "w": 4,
-     "d": 6,
-     "r": 2,
-     "fill": "#C99A1E"
-    },
-    {
-     "shape": "box",
-     "x": 13,
-     "y": 63.5,
-     "w": 4,
-     "d": 6,
-     "r": 2,
-     "fill": "#C99A1E"
+     "r": 3,
+     "fill": "#D8443C"
     }
    ]
   },
@@ -379,19 +527,19 @@
    "name": "Griffhals",
    "short": "Griffhals",
    "shape": "box",
-   "x": 3,
-   "y": 90,
-   "w": 24,
-   "d": 15,
-   "z": 3,
-   "h": 24,
-   "r": 10,
+   "x": 4,
+   "y": 92,
+   "w": 22,
+   "d": 16,
+   "z": 4,
+   "h": 22,
+   "r": 9,
    "explode": [
     0,
     0,
-    0.0
+    0
    ],
-   "mass": 7.7,
+   "mass": 4.8,
    "materials": [
     [
      "pp",
@@ -402,11 +550,13 @@
    "color": "#C8322B",
    "marks": [
     {
-     "shape": "cyl",
-     "x": 9,
-     "y": 4,
-     "w": 6,
-     "fill": "#7E1E19"
+     "shape": "box",
+     "x": 3,
+     "y": 3,
+     "w": 16,
+     "d": 10,
+     "r": 5,
+     "fill": "#D8443C"
     }
    ]
   }

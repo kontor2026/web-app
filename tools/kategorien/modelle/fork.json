@@ -10,13 +10,13 @@
    "x": 0,
    "y": 0,
    "w": 4,
-   "d": 40,
-   "z": 10,
-   "h": 3,
+   "d": 38,
+   "z": 8.5,
+   "h": 2.5,
    "r": 2,
    "explode": [
     0,
-    -24,
+    -26,
     0
    ],
    "mass": 2,
@@ -33,9 +33,9 @@
     {
      "shape": "box",
      "x": 1.5,
-     "y": 3,
+     "y": 4,
      "w": 1,
-     "d": 34,
+     "d": 30,
      "r": 0.5,
      "fill": "#E3E7EA"
     }
@@ -51,13 +51,13 @@
    "x": 7,
    "y": 0,
    "w": 4,
-   "d": 40,
-   "z": 10,
-   "h": 3,
+   "d": 38,
+   "z": 8.5,
+   "h": 2.5,
    "r": 2,
    "explode": [
     0,
-    -24,
+    -26,
     0
    ],
    "mass": 2,
@@ -74,9 +74,9 @@
     {
      "shape": "box",
      "x": 1.5,
-     "y": 3,
+     "y": 4,
      "w": 1,
-     "d": 34,
+     "d": 30,
      "r": 0.5,
      "fill": "#E3E7EA"
     }
@@ -92,13 +92,13 @@
    "x": 14,
    "y": 0,
    "w": 4,
-   "d": 40,
-   "z": 10,
-   "h": 3,
+   "d": 38,
+   "z": 8.5,
+   "h": 2.5,
    "r": 2,
    "explode": [
     0,
-    -24,
+    -26,
     0
    ],
    "mass": 2,
@@ -115,9 +115,9 @@
     {
      "shape": "box",
      "x": 1.5,
-     "y": 3,
+     "y": 4,
      "w": 1,
-     "d": 34,
+     "d": 30,
      "r": 0.5,
      "fill": "#E3E7EA"
     }
@@ -133,13 +133,13 @@
    "x": 21,
    "y": 0,
    "w": 4,
-   "d": 40,
-   "z": 10,
-   "h": 3,
+   "d": 38,
+   "z": 8.5,
+   "h": 2.5,
    "r": 2,
    "explode": [
     0,
-    -24,
+    -26,
     0
    ],
    "mass": 2,
@@ -156,9 +156,9 @@
     {
      "shape": "box",
      "x": 1.5,
-     "y": 3,
+     "y": 4,
      "w": 1,
-     "d": 34,
+     "d": 30,
      "r": 0.5,
      "fill": "#E3E7EA"
     }
@@ -172,18 +172,18 @@
    "short": "Ansatz",
    "shape": "box",
    "x": 0,
-   "y": 36,
+   "y": 34,
    "w": 25,
    "d": 20,
-   "z": 7,
-   "h": 4,
-   "r": 5,
+   "z": 7.5,
+   "h": 3.5,
+   "r": 7,
    "explode": [
     0,
-    -12,
+    -14,
     0
    ],
-   "mass": 7,
+   "mass": 5.9,
    "materials": [
     [
      "stahl",
@@ -196,9 +196,50 @@
     {
      "shape": "box",
      "x": 3,
-     "y": 4,
+     "y": 3,
      "w": 19,
-     "d": 10,
+     "d": 12,
+     "r": 5,
+     "fill": "#E3E7EA"
+    }
+   ]
+  },
+  {
+   "id": "schulter",
+   "component_id": "steel_cutlery",
+   "material_id": "steel",
+   "name": "Schulter",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 5,
+   "y": 50,
+   "w": 15,
+   "d": 14,
+   "z": 5,
+   "h": 3.5,
+   "r": 6,
+   "explode": [
+    0,
+    -6,
+    0
+   ],
+   "mass": 2.9,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Hier verjüngt sich die Gabel vom Kopf zum Hals.",
+   "color": "#C3C9CE",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 2,
+     "w": 9,
+     "d": 9,
      "r": 4,
      "fill": "#E3E7EA"
     }
@@ -212,18 +253,18 @@
    "short": "Hals",
    "shape": "box",
    "x": 8,
-   "y": 56,
+   "y": 60,
    "w": 9,
-   "d": 44,
-   "z": 3,
-   "h": 5,
-   "r": 3,
+   "d": 46,
+   "z": 2.5,
+   "h": 3.5,
+   "r": 4,
    "explode": [
     0,
     0,
     0
    ],
-   "mass": 8,
+   "mass": 6.8,
    "materials": [
     [
      "stahl",
@@ -231,7 +272,18 @@
     ]
    ],
    "info": "Schmale, gebogene Stelle zwischen Griff und Zinken. Durch die Biegung liegt die Gabel nur hinten und vorne auf.",
-   "color": "#C3C9CE"
+   "color": "#C3C9CE",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 4,
+     "w": 3,
+     "d": 38,
+     "r": 1.5,
+     "fill": "#E3E7EA"
+    }
+   ]
   },
   {
    "id": "griff",
@@ -241,18 +293,18 @@
    "short": "Griff",
    "shape": "box",
    "x": 2,
-   "y": 100,
+   "y": 102,
    "w": 21,
-   "d": 100,
+   "d": 98,
    "z": 0,
-   "h": 3.5,
+   "h": 3,
    "r": 10,
    "explode": [
     0,
     12,
     0
    ],
-   "mass": 22,
+   "mass": 21.5,
    "materials": [
     [
      "stahl",
@@ -264,19 +316,21 @@
    "marks": [
     {
      "shape": "box",
-     "x": 3,
-     "y": 10,
-     "w": 15,
-     "d": 80,
-     "r": 7,
-     "fill": "#E3E7EA"
+     "x": 2,
+     "y": 2,
+     "w": 17,
+     "d": 94,
+     "r": 8,
+     "fill": "#B3BABF"
     },
     {
-     "shape": "cyl",
-     "x": 7.5,
-     "y": 88,
-     "w": 6,
-     "fill": "#A9B0B5"
+     "shape": "box",
+     "x": 4,
+     "y": 12,
+     "w": 13,
+     "d": 74,
+     "r": 6,
+     "fill": "#E3E7EA"
     }
    ]
   }

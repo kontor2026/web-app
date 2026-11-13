@@ -37,18 +37,18 @@
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Fe": 164150.0
+   "Fe": 164248.0
   },
   "herkunft": {
    "Fe": "Modellmassen (Schätzung)"
   },
   "materialien_g": {
-   "steel": 167.5,
+   "steel": 167.6,
    "pp": 32.4
   },
-  "co2_kg": 0.482,
+  "co2_kg": 0.483,
   "co2_mit_recyclat_kg": 0.122,
-  "co2_ersparnis_kg": 0.36,
+  "co2_ersparnis_kg": 0.361,
   "co2_ohne_faktor": [],
   "rohstoffwert_eur": 0,
   "wert_ohne_preis": [],
@@ -135,17 +135,17 @@
    "name": "Gelenkniet",
    "short": "Niet",
    "shape": "cyl",
-   "x": 26,
-   "y": 60,
-   "w": 8,
-   "z": 0,
-   "h": 15,
+   "x": 25,
+   "y": 59,
+   "w": 10,
+   "z": 14,
+   "h": 1,
    "explode": [
     0,
     0,
-    54.0
+    60
    ],
-   "mass": 6.1,
+   "mass": 2,
    "materials": [
     [
      "stahl",
@@ -159,8 +159,172 @@
      "shape": "cyl",
      "x": 2,
      "y": 2,
-     "w": 4,
-     "fill": "#6C747A"
+     "w": 6,
+     "fill": "#A9B0B5"
+    }
+   ]
+  },
+  {
+   "id": "niet_schaft",
+   "component_id": "steel_pliers_jaws",
+   "material_id": "steel",
+   "name": "Nietschaft",
+   "short": "Niet",
+   "shape": "cyl",
+   "x": 26,
+   "y": 60,
+   "w": 8,
+   "z": 1.5,
+   "h": 12,
+   "explode": [
+    0,
+    0,
+    60
+   ],
+   "mass": 4,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Schaft des Niets, unten breitgeschlagen.",
+   "color": "#8C949A",
+   "label": false
+  },
+  {
+   "id": "spitze_links",
+   "component_id": "steel_pliers_jaws",
+   "material_id": "steel",
+   "name": "Backenspitze der oberen Hälfte",
+   "short": "Spitze A",
+   "shape": "box",
+   "x": 22,
+   "y": 0,
+   "w": 8,
+   "d": 20,
+   "z": 3,
+   "h": 9,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    30
+   ],
+   "mass": 6.1,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Schmale Spitze zum Greifen kleiner Teile.",
+   "color": "#5E666C",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3.5,
+     "y": 3,
+     "w": 3.5,
+     "d": 2,
+     "r": 0.5,
+     "fill": "#AEB5BA"
+    },
+    {
+     "shape": "box",
+     "x": 3.5,
+     "y": 7,
+     "w": 3.5,
+     "d": 2,
+     "r": 0.5,
+     "fill": "#AEB5BA"
+    },
+    {
+     "shape": "box",
+     "x": 3.5,
+     "y": 11,
+     "w": 3.5,
+     "d": 2,
+     "r": 0.5,
+     "fill": "#AEB5BA"
+    },
+    {
+     "shape": "box",
+     "x": 3.5,
+     "y": 15,
+     "w": 3.5,
+     "d": 2,
+     "r": 0.5,
+     "fill": "#AEB5BA"
+    }
+   ]
+  },
+  {
+   "id": "spitze_rechts",
+   "component_id": "steel_pliers_jaws",
+   "material_id": "steel",
+   "name": "Backenspitze der unteren Hälfte",
+   "short": "Spitze B",
+   "shape": "box",
+   "x": 30,
+   "y": 0,
+   "w": 8,
+   "d": 20,
+   "z": 3,
+   "h": 9,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 6.1,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Schmale Spitze zum Greifen kleiner Teile.",
+   "color": "#5E666C",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0.5,
+     "y": 3,
+     "w": 3.5,
+     "d": 2,
+     "r": 0.5,
+     "fill": "#AEB5BA"
+    },
+    {
+     "shape": "box",
+     "x": 0.5,
+     "y": 7,
+     "w": 3.5,
+     "d": 2,
+     "r": 0.5,
+     "fill": "#AEB5BA"
+    },
+    {
+     "shape": "box",
+     "x": 0.5,
+     "y": 11,
+     "w": 3.5,
+     "d": 2,
+     "r": 0.5,
+     "fill": "#AEB5BA"
+    },
+    {
+     "shape": "box",
+     "x": 0.5,
+     "y": 15,
+     "w": 3.5,
+     "d": 2,
+     "r": 0.5,
+     "fill": "#AEB5BA"
     }
    ]
   },
@@ -172,18 +336,18 @@
    "short": "Backe A",
    "shape": "box",
    "x": 19,
-   "y": 0,
+   "y": 20,
    "w": 11,
-   "d": 50,
+   "d": 30,
    "z": 1.5,
    "h": 12,
    "r": 2,
    "explode": [
     0,
     0,
-    20.0
+    30
    ],
-   "mass": 22.2,
+   "mass": 16.2,
    "materials": [
     [
      "stahl",
@@ -196,7 +360,7 @@
     {
      "shape": "box",
      "x": 7,
-     "y": 3,
+     "y": 2,
      "w": 3.5,
      "d": 2,
      "r": 0.5,
@@ -205,7 +369,7 @@
     {
      "shape": "box",
      "x": 7,
-     "y": 7,
+     "y": 6,
      "w": 3.5,
      "d": 2,
      "r": 0.5,
@@ -214,45 +378,26 @@
     {
      "shape": "box",
      "x": 7,
-     "y": 11,
+     "y": 10,
      "w": 3.5,
      "d": 2,
      "r": 0.5,
      "fill": "#AEB5BA"
     },
     {
-     "shape": "box",
-     "x": 7,
-     "y": 15,
-     "w": 3.5,
-     "d": 2,
-     "r": 0.5,
-     "fill": "#AEB5BA"
-    },
-    {
-     "shape": "box",
-     "x": 7,
-     "y": 19,
-     "w": 3.5,
-     "d": 2,
-     "r": 0.5,
-     "fill": "#AEB5BA"
-    },
-    {
-     "shape": "box",
-     "x": 7,
-     "y": 23,
-     "w": 3.5,
-     "d": 2,
-     "r": 0.5,
-     "fill": "#AEB5BA"
+     "shape": "cyl",
+     "x": 5,
+     "y": 13,
+     "w": 6,
+     "d": 4,
+     "fill": "#3F464B"
     },
     {
      "shape": "box",
      "x": 9,
-     "y": 30,
+     "y": 20,
      "w": 2,
-     "d": 16,
+     "d": 9,
      "r": 0.5,
      "fill": "#AEB5BA"
     }
@@ -275,7 +420,7 @@
    "explode": [
     0,
     0,
-    20.0
+    30
    ],
    "mass": 24.2,
    "materials": [
@@ -314,7 +459,7 @@
    "explode": [
     0,
     0,
-    20.0
+    30
    ],
    "mass": 34.3,
    "materials": [
@@ -335,18 +480,18 @@
    "short": "Backe B",
    "shape": "box",
    "x": 30,
-   "y": 0,
+   "y": 20,
    "w": 11,
-   "d": 50,
+   "d": 30,
    "z": 1.5,
    "h": 12,
    "r": 2,
    "explode": [
     0,
     0,
-    0.0
+    0
    ],
-   "mass": 22.2,
+   "mass": 16.2,
    "materials": [
     [
      "stahl",
@@ -359,7 +504,7 @@
     {
      "shape": "box",
      "x": 0.5,
-     "y": 3,
+     "y": 2,
      "w": 3.5,
      "d": 2,
      "r": 0.5,
@@ -368,7 +513,7 @@
     {
      "shape": "box",
      "x": 0.5,
-     "y": 7,
+     "y": 6,
      "w": 3.5,
      "d": 2,
      "r": 0.5,
@@ -377,45 +522,26 @@
     {
      "shape": "box",
      "x": 0.5,
-     "y": 11,
+     "y": 10,
      "w": 3.5,
      "d": 2,
      "r": 0.5,
      "fill": "#AEB5BA"
     },
     {
-     "shape": "box",
-     "x": 0.5,
-     "y": 15,
-     "w": 3.5,
-     "d": 2,
-     "r": 0.5,
-     "fill": "#AEB5BA"
-    },
-    {
-     "shape": "box",
-     "x": 0.5,
-     "y": 19,
-     "w": 3.5,
-     "d": 2,
-     "r": 0.5,
-     "fill": "#AEB5BA"
-    },
-    {
-     "shape": "box",
-     "x": 0.5,
-     "y": 23,
-     "w": 3.5,
-     "d": 2,
-     "r": 0.5,
-     "fill": "#AEB5BA"
+     "shape": "cyl",
+     "x": 0,
+     "y": 13,
+     "w": 6,
+     "d": 4,
+     "fill": "#3F464B"
     },
     {
      "shape": "box",
      "x": 0,
-     "y": 30,
+     "y": 20,
      "w": 2,
-     "d": 16,
+     "d": 9,
      "r": 0.5,
      "fill": "#AEB5BA"
     }
@@ -438,7 +564,7 @@
    "explode": [
     0,
     0,
-    0.0
+    0
    ],
    "mass": 24.2,
    "materials": [
@@ -477,7 +603,7 @@
    "explode": [
     0,
     0,
-    0.0
+    0
    ],
    "mass": 34.3,
    "materials": [

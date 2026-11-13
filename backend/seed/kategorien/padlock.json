@@ -21,7 +21,7 @@
  "werte": [
   {
    "k": "Rohstoffwert",
-   "v": "≈ 1,54 €",
+   "v": "≈ 1,52 €",
    "hint": "Kupfer zu Preisen vom 13.11."
   },
   {
@@ -37,22 +37,22 @@
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Cu": 122200.0,
-   "Fe": 27538.0
+   "Cu": 120800.0,
+   "Fe": 28910.0
   },
   "herkunft": {
    "Cu": "Modellmassen (Schätzung)",
    "Fe": "Modellmassen (Schätzung)"
   },
   "materialien_g": {
-   "copper": 122.2,
-   "steel": 28.1
+   "copper": 120.8,
+   "steel": 29.5
   },
-  "co2_kg": 0.492,
-  "co2_mit_recyclat_kg": 0.072,
-  "co2_ersparnis_kg": 0.42,
+  "co2_kg": 0.491,
+  "co2_mit_recyclat_kg": 0.073,
+  "co2_ersparnis_kg": 0.418,
   "co2_ohne_faktor": [],
-  "rohstoffwert_eur": 1.54,
+  "rohstoffwert_eur": 1.52,
   "wert_ohne_preis": [],
   "preisstand": "2026-11-13",
   "quellen": {
@@ -149,7 +149,7 @@
     0,
     35
    ],
-   "mass": 9.2,
+   "mass": 9.1,
    "materials": [
     [
      "stahl",
@@ -176,7 +176,7 @@
     0,
     35
    ],
-   "mass": 11.3,
+   "mass": 11.2,
    "materials": [
     [
      "stahl",
@@ -213,7 +213,7 @@
     0,
     35
    ],
-   "mass": 6.2,
+   "mass": 6.1,
    "materials": [
     [
      "stahl",
@@ -305,7 +305,7 @@
     0,
     0
    ],
-   "mass": 8.2,
+   "mass": 8.1,
    "materials": [
     [
      "messing",
@@ -332,6 +332,35 @@
      "fill": "#B8963E"
     }
    ]
+  },
+  {
+   "id": "nocke",
+   "component_id": "padlock_body",
+   "material_id": "steel",
+   "name": "Schließnocke",
+   "short": "Nocke",
+   "shape": "box",
+   "x": 16.5,
+   "y": 7.5,
+   "w": 7,
+   "d": 5,
+   "z": 37,
+   "h": 5,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    10
+   ],
+   "mass": 1,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Flacher Stahlnocken oben am Kern. Dreht der Schlüssel, gibt er die beiden Sperrkugeln frei.",
+   "color": "#8C949A"
   },
   {
    "id": "kernstift_1",
@@ -830,6 +859,69 @@
    ]
   },
   {
+   "id": "buegelfeder",
+   "component_id": "steel_shackle",
+   "material_id": "steel",
+   "name": "Bügelfeder",
+   "short": "Bügelfeder",
+   "shape": "cyl",
+   "x": 5.5,
+   "y": 7.5,
+   "w": 5,
+   "z": 4,
+   "h": 14,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 0.4,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Druckfeder unter dem langen Schenkel. Sie lässt den Bügel aufspringen, sobald die Kugeln ihn freigeben.",
+   "color": "#B8BEC4",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 1,
+     "y": 1,
+     "w": 3,
+     "fill": "#7E868C"
+    }
+   ]
+  },
+  {
+   "id": "sicherungsstift",
+   "component_id": "padlock_body",
+   "material_id": "steel",
+   "name": "Sicherungsstift",
+   "short": "Sicherung",
+   "shape": "cyl",
+   "x": 18.5,
+   "y": 16,
+   "w": 3,
+   "z": 0,
+   "h": 8,
+   "explode": [
+    -22,
+    14,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Eingepresster Stahlstift von unten, der den Zylinder im Körper hält. Zum Zerlegen mit einem Bohrer ausbohren.",
+   "color": "#9AA2A6"
+  },
+  {
    "id": "koerper",
    "component_id": "padlock_body",
    "material_id": "copper",
@@ -848,7 +940,7 @@
     0,
     0
    ],
-   "mass": 112.8,
+   "mass": 111.5,
    "materials": [
     [
      "messing",
@@ -858,6 +950,29 @@
    "info": "Massiver Messingblock mit Bohrungen für Zylinder, Stifte und Bügel. Messing ist wertvoller Schrott: alte Schlösser beim Schrotthändler oder Wertstoffhof abgeben.",
    "color": "#C9A74C",
    "marks": [
+    {
+     "shape": "box",
+     "x": 1.5,
+     "y": 1.5,
+     "w": 37,
+     "d": 17,
+     "r": 2.5,
+     "fill": "#D6B85E"
+    },
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 6,
+     "w": 8,
+     "fill": "#A88A3A"
+    },
+    {
+     "shape": "cyl",
+     "x": 28,
+     "y": 6,
+     "w": 8,
+     "fill": "#A88A3A"
+    },
     {
      "shape": "cyl",
      "x": 5,
