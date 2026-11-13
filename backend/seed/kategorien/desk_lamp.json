@@ -22,48 +22,48 @@
   {
    "k": "Rohstoffwert",
    "v": "≈ 1,09 €",
-   "hint": "Silber, Kupfer zu Preisen vom 13.11."
+   "hint": "Gold, Silber, Kupfer zu Preisen vom 13.11."
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 4,69 kg",
+   "v": "≈ 4,72 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 1,07 kg",
-   "hint": "spart 3,62 kg, wenn recycelte Materialien eingesetzt werden"
+   "v": "≈ 1,20 kg",
+   "hint": "spart 3,53 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Fe": 565677.0,
-   "Al": 213000.0,
-   "Cu": 30810.0,
-   "Ag": 3.25,
-   "Au": 0.78,
-   "Pd": 0.25
+   "Fe": 561622.0,
+   "Al": 204100.0,
+   "Cu": 30540.0,
+   "Ag": 4.38,
+   "Au": 1.05,
+   "Pd": 0.33
   },
   "herkunft": {
    "Fe": "Modellmassen (Schätzung)",
    "Al": "Modellmassen (Schätzung)",
    "Cu": "Modellmassen (Schätzung)",
-   "Ag": "13 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)",
-   "Au": "13 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)",
-   "Pd": "13 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)"
+   "Ag": "18 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)",
+   "Au": "18 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)",
+   "Pd": "18 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)"
   },
   "materialien_g": {
-   "steel": 573.9,
-   "aluminium": 213.0,
-   "pvc": 43.5,
-   "mixed_electronics": 21.7,
-   "copper": 21.7,
-   "pc": 13.0,
-   "pcb": 13.0
+   "steel": 569.9,
+   "aluminium": 204.1,
+   "pvc": 54.2,
+   "mixed_electronics": 20.8,
+   "copper": 20.8,
+   "pcb": 17.5,
+   "pc": 12.5
   },
-  "co2_kg": 4.686,
-  "co2_mit_recyclat_kg": 1.067,
-  "co2_ersparnis_kg": 3.619,
+  "co2_kg": 4.724,
+  "co2_mit_recyclat_kg": 1.196,
+  "co2_ersparnis_kg": 3.527,
   "co2_ohne_faktor": [],
   "rohstoffwert_eur": 1.09,
   "wert_ohne_preis": [],
@@ -80,6 +80,22 @@
    "westmetall2026": {
     "titel": "Westmetall Marktdaten (LME, London Fixing, WM-Notiz)",
     "url": "https://www.westmetall.com/en/markdaten.php"
+   },
+   "usgs2026": {
+    "titel": "Mineral Commodity Summaries 2026 (ver. 1.3, May 2026)",
+    "url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf"
+   },
+   "eucrm2023": {
+    "titel": "Study on the Critical Raw Materials for the EU 2023 – Final Report",
+    "url": "https://single-market-economy.ec.europa.eu/publications/study-critical-raw-materials-eu-2023-final-report_en"
+   },
+   "eu2024crma": {
+    "titel": "Verordnung (EU) 2024/1252 zur Schaffung eines Rahmens zur Gewährleistung einer sicheren und nachhaltigen Versorgung mit kritischen Rohstoffen (Critical Raw Materials Act)",
+    "url": "https://op.europa.eu/en/publication-detail/-/publication/aa3c49f7-08e7-11ef-a251-01aa75ed71a1"
+   },
+   "usdapsd2026": {
+    "titel": "Production, Supply and Distribution Online (PSD), Datensatz Cotton (psd_cotton_csv.zip)",
+    "url": "https://apps.fas.usda.gov/psdonline/downloads/psd_cotton_csv.zip"
    }
   }
  },
@@ -130,9 +146,9 @@
    "explode": [
     0,
     0,
-    165
+    204.6
    ],
-   "mass": 21.7,
+   "mass": 20.8,
    "materials": [
     [
      "alu",
@@ -165,16 +181,16 @@
    "x": 69,
    "y": 35,
    "w": 12,
-   "d": 65,
+   "d": 62,
    "z": 380,
    "h": 10,
    "r": 5,
    "explode": [
     0,
     0,
-    210
+    246.6
    ],
-   "mass": 21.7,
+   "mass": 20.8,
    "materials": [
     [
      "alu",
@@ -185,40 +201,132 @@
    "color": "#C9CED2"
   },
   {
-   "id": "schirm",
+   "id": "schirm0",
    "component_id": "lamp_shade",
    "material_id": "steel",
    "name": "Lampenschirm",
    "short": "Schirm",
    "shape": "cyl",
-   "x": 20,
-   "y": 40,
-   "w": 110,
-   "z": 341,
-   "h": 39,
+   "x": 47,
+   "y": 67,
+   "w": 56,
+   "z": 372,
+   "h": 8,
    "explode": [
+    -190,
     0,
-    0,
-    52.0
+    182.6
    ],
-   "mass": 104.3,
+   "mass": 15,
    "materials": [
     [
      "stahl",
      100
     ]
    ],
-   "info": "Pulverbeschichtetes Stahlblech, leitet Wärme ab. Den Haltering am Kopfarm abschrauben; ab ins Altmetall.",
+   "info": "Pulverbeschichtetes Stahlblech, leitet die Wärme der LEDs ab. Den Haltering am Kopfarm abschrauben; ab ins Altmetall.",
    "color": "#2B2F33",
+   "label": true,
    "marks": [
     {
      "shape": "cyl",
-     "x": 40,
-     "y": 40,
-     "w": 30,
+     "x": 16.0,
+     "y": 16.0,
+     "w": 24,
      "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 24.0,
+     "y": 24.0,
+     "w": 8,
+     "fill": "#9AA2A8"
     }
    ]
+  },
+  {
+   "id": "schirm1",
+   "component_id": "lamp_shade",
+   "material_id": "steel",
+   "name": "Lampenschirm",
+   "short": "Schirm",
+   "shape": "cyl",
+   "x": 33,
+   "y": 53,
+   "w": 84,
+   "z": 362,
+   "h": 10,
+   "explode": [
+    -190,
+    0,
+    182.6
+   ],
+   "mass": 23.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Teil des kegelförmigen Lampenschirms.",
+   "color": "#2B2F33",
+   "label": false
+  },
+  {
+   "id": "schirm2",
+   "component_id": "lamp_shade",
+   "material_id": "steel",
+   "name": "Lampenschirm",
+   "short": "Schirm",
+   "shape": "cyl",
+   "x": 24,
+   "y": 44,
+   "w": 102,
+   "z": 350,
+   "h": 12,
+   "explode": [
+    -190,
+    0,
+    182.6
+   ],
+   "mass": 30,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Teil des kegelförmigen Lampenschirms.",
+   "color": "#2B2F33",
+   "label": false
+  },
+  {
+   "id": "schirm3",
+   "component_id": "lamp_shade",
+   "material_id": "steel",
+   "name": "Lampenschirm",
+   "short": "Schirm",
+   "shape": "cyl",
+   "x": 19,
+   "y": 39,
+   "w": 112,
+   "z": 341,
+   "h": 9,
+   "explode": [
+    -190,
+    0,
+    182.6
+   ],
+   "mass": 25,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Teil des kegelförmigen Lampenschirms.",
+   "color": "#2B2F33",
+   "label": false
   },
   {
    "id": "ledmodul",
@@ -233,11 +341,11 @@
    "z": 340,
    "h": 3,
    "explode": [
+    -190,
     0,
-    0,
-    25.0
+    137.6
    ],
-   "mass": 21.7,
+   "mass": 20.8,
    "materials": [
     [
      "alu",
@@ -256,136 +364,184 @@
      10
     ]
    ],
-   "info": "Aluminiumplatine mit vielen kleinen weißen LEDs. Hält viele Jahre; sie wird mit zwei Schrauben gelöst.",
+   "info": "Aluminiumplatine mit 24 kleinen weißen LEDs. Hält viele Jahre; sie wird mit zwei Schrauben gelöst.",
    "color": "#ECECE6",
    "marks": [
     {
      "shape": "cyl",
-     "x": 12,
-     "y": 12,
-     "w": 6,
-     "d": 6,
+     "x": 2,
+     "y": 2,
+     "w": 76,
+     "fill": "#DADAD2"
+    },
+    {
+     "shape": "box",
+     "x": 67.5,
+     "y": 37.5,
+     "w": 5,
+     "d": 5,
+     "r": 1,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "box",
+     "x": 63.599999999999994,
+     "y": 52.5,
+     "w": 5,
+     "d": 5,
+     "r": 1,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "box",
+     "x": 52.5,
+     "y": 63.599999999999994,
+     "w": 5,
+     "d": 5,
+     "r": 1,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "box",
+     "x": 37.5,
+     "y": 67.5,
+     "w": 5,
+     "d": 5,
+     "r": 1,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "box",
+     "x": 22.5,
+     "y": 63.599999999999994,
+     "w": 5,
+     "d": 5,
+     "r": 1,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "box",
+     "x": 11.399999999999999,
+     "y": 52.5,
+     "w": 5,
+     "d": 5,
+     "r": 1,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "box",
+     "x": 7.5,
+     "y": 37.5,
+     "w": 5,
+     "d": 5,
+     "r": 1,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "box",
+     "x": 11.399999999999999,
+     "y": 22.5,
+     "w": 5,
+     "d": 5,
+     "r": 1,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "box",
+     "x": 22.5,
+     "y": 11.399999999999999,
+     "w": 5,
+     "d": 5,
+     "r": 1,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "box",
+     "x": 37.5,
+     "y": 7.5,
+     "w": 5,
+     "d": 5,
+     "r": 1,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "box",
+     "x": 52.5,
+     "y": 11.399999999999999,
+     "w": 5,
+     "d": 5,
+     "r": 1,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "box",
+     "x": 63.599999999999994,
+     "y": 22.5,
+     "w": 5,
+     "d": 5,
+     "r": 1,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "box",
+     "x": 53.5,
+     "y": 37.5,
+     "w": 5,
+     "d": 5,
+     "r": 1,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "box",
+     "x": 45.5,
+     "y": 51.42,
+     "w": 5,
+     "d": 5,
+     "r": 1,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "box",
+     "x": 29.5,
+     "y": 51.42,
+     "w": 5,
+     "d": 5,
+     "r": 1,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "box",
+     "x": 21.5,
+     "y": 37.5,
+     "w": 5,
+     "d": 5,
+     "r": 1,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "box",
+     "x": 29.5,
+     "y": 23.58,
+     "w": 5,
+     "d": 5,
+     "r": 1,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "box",
+     "x": 45.5,
+     "y": 23.58,
+     "w": 5,
+     "d": 5,
+     "r": 1,
      "fill": "#F6D86B"
     },
     {
      "shape": "cyl",
-     "x": 26,
-     "y": 12,
-     "w": 6,
-     "d": 6,
-     "fill": "#F6D86B"
-    },
-    {
-     "shape": "cyl",
-     "x": 40,
-     "y": 12,
-     "w": 6,
-     "d": 6,
-     "fill": "#F6D86B"
-    },
-    {
-     "shape": "cyl",
-     "x": 54,
-     "y": 12,
-     "w": 6,
-     "d": 6,
-     "fill": "#F6D86B"
-    },
-    {
-     "shape": "cyl",
-     "x": 12,
-     "y": 26,
-     "w": 6,
-     "d": 6,
-     "fill": "#F6D86B"
-    },
-    {
-     "shape": "cyl",
-     "x": 26,
-     "y": 26,
-     "w": 6,
-     "d": 6,
-     "fill": "#F6D86B"
-    },
-    {
-     "shape": "cyl",
-     "x": 40,
-     "y": 26,
-     "w": 6,
-     "d": 6,
-     "fill": "#F6D86B"
-    },
-    {
-     "shape": "cyl",
-     "x": 54,
-     "y": 26,
-     "w": 6,
-     "d": 6,
-     "fill": "#F6D86B"
-    },
-    {
-     "shape": "cyl",
-     "x": 12,
-     "y": 40,
-     "w": 6,
-     "d": 6,
-     "fill": "#F6D86B"
-    },
-    {
-     "shape": "cyl",
-     "x": 26,
-     "y": 40,
-     "w": 6,
-     "d": 6,
-     "fill": "#F6D86B"
-    },
-    {
-     "shape": "cyl",
-     "x": 40,
-     "y": 40,
-     "w": 6,
-     "d": 6,
-     "fill": "#F6D86B"
-    },
-    {
-     "shape": "cyl",
-     "x": 54,
-     "y": 40,
-     "w": 6,
-     "d": 6,
-     "fill": "#F6D86B"
-    },
-    {
-     "shape": "cyl",
-     "x": 12,
-     "y": 54,
-     "w": 6,
-     "d": 6,
-     "fill": "#F6D86B"
-    },
-    {
-     "shape": "cyl",
-     "x": 26,
-     "y": 54,
-     "w": 6,
-     "d": 6,
-     "fill": "#F6D86B"
-    },
-    {
-     "shape": "cyl",
-     "x": 40,
-     "y": 54,
-     "w": 6,
-     "d": 6,
-     "fill": "#F6D86B"
-    },
-    {
-     "shape": "cyl",
-     "x": 54,
-     "y": 54,
-     "w": 6,
-     "d": 6,
-     "fill": "#F6D86B"
+     "x": 36,
+     "y": 36,
+     "w": 8,
+     "fill": "#2E6B45"
     }
    ]
   },
@@ -399,14 +555,14 @@
    "x": 22,
    "y": 42,
    "w": 106,
-   "z": 338,
-   "h": 2,
+   "z": 337,
+   "h": 3,
    "explode": [
+    -190,
     0,
-    0,
-    0.0
+    92.6
    ],
-   "mass": 13,
+   "mass": 12.5,
    "materials": [
     [
      "pcabs",
@@ -434,9 +590,9 @@
    "explode": [
     0,
     0,
-    140
+    182.6
    ],
-   "mass": 43.5,
+   "mass": 41.7,
    "materials": [
     [
      "alu",
@@ -445,6 +601,43 @@
    ],
    "info": "Aluminiumrohr mit dem Kabel innen. Aluminium lässt sich sehr gut recyceln.",
    "color": "#C9CED2"
+  },
+  {
+   "id": "gelenkschraube",
+   "component_id": "lamp_arm",
+   "material_id": "steel",
+   "name": "Gelenkschraube mit Rändelmutter",
+   "short": "Gelenkschraube",
+   "shape": "cyl",
+   "x": 69,
+   "y": 22,
+   "w": 12,
+   "z": 242,
+   "h": 4,
+   "explode": [
+    0,
+    0,
+    168.6
+   ],
+   "mass": 6.7,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Stahlschraube quer durch das Ellbogengelenk. Mit der Rändelmutter stellt man ein, wie schwer sich der Arm bewegt.",
+   "color": "#9AA2A8",
+   "sortBias": -30,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 3,
+     "w": 6,
+     "fill": "#5E656A"
+    }
+   ]
   },
   {
    "id": "ellbogen",
@@ -461,9 +654,9 @@
    "explode": [
     0,
     0,
-    115
+    146.6
    ],
-   "mass": 21.7,
+   "mass": 20.8,
    "materials": [
     [
      "alu",
@@ -474,7 +667,7 @@
      30
     ]
    ],
-   "info": "Mittleres Gelenk; die Stahlschraube darin kann man mit einem Inbusschlüssel lösen.",
+   "info": "Mittleres Gelenk aus Aluminiumguss. Nach Herausziehen der Gelenkschraube fallen die Armteile auseinander.",
    "color": "#2B2F33",
    "marks": [
     {
@@ -502,10 +695,10 @@
    "r": 3,
    "explode": [
     0,
-    0,
-    70
+    60,
+    124.6
    ],
-   "mass": 17.4,
+   "mass": 16.7,
    "materials": [
     [
      "stahl",
@@ -513,7 +706,18 @@
     ]
    ],
    "info": "Stahlfeder, die den Arm in jeder Stellung hält. Steht unter Spannung: beim Aushängen festhalten.",
-   "color": "#9AA2A8"
+   "color": "#9AA2A8",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 1,
+     "w": 10,
+     "d": 4,
+     "r": 2,
+     "fill": "#7E868C"
+    }
+   ]
   },
   {
    "id": "unterarm",
@@ -532,9 +736,9 @@
    "explode": [
     0,
     0,
-    90
+    124.6
    ],
-   "mass": 69.6,
+   "mass": 66.7,
    "materials": [
     [
      "alu",
@@ -542,7 +746,16 @@
     ]
    ],
    "info": "Längstes Armteil aus Aluminiumrohr. Nach Lösen der Gelenkschrauben vom Fuß abnehmen.",
-   "color": "#C9CED2"
+   "color": "#C9CED2",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 4,
+     "w": 8,
+     "fill": "#4A5156"
+    }
+   ]
   },
   {
    "id": "drehgelenk",
@@ -559,9 +772,9 @@
    "explode": [
     0,
     0,
-    65
+    102.6
    ],
-   "mass": 34.8,
+   "mass": 33.3,
    "materials": [
     [
      "alu",
@@ -589,25 +802,151 @@
    ]
   },
   {
-   "id": "treiber",
+   "id": "standfuss",
+   "component_id": "steel_lamp_base",
+   "material_id": "steel",
+   "name": "Fußgehäuse",
+   "short": "Fuß",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 150,
+   "d": 150,
+   "z": 3,
+   "h": 22,
+   "r": 10,
+   "explode": [
+    0,
+    0,
+    31
+   ],
+   "mass": 150,
+   "materials": [
+    [
+     "stahl",
+     95
+    ],
+    [
+     "pcabs",
+     5
+    ]
+   ],
+   "info": "Stahlblech-Gehäuse mit Touch-Feld zum Ein- und Dimmen. Von unten verschraubt.",
+   "color": "#2B2F33",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 40,
+     "y": 110,
+     "w": 20,
+     "fill": "#3A4046"
+    },
+    {
+     "shape": "cyl",
+     "x": 45,
+     "y": 115,
+     "w": 10,
+     "fill": "#5DADE2"
+    },
+    {
+     "shape": "box",
+     "x": 66,
+     "y": 117,
+     "w": 34,
+     "d": 6,
+     "r": 3,
+     "fill": "#3A4046"
+    },
+    {
+     "shape": "box",
+     "x": 66,
+     "y": 117,
+     "w": 20,
+     "d": 6,
+     "r": 3,
+     "fill": "#9AA2A8"
+    }
+   ]
+  },
+  {
+   "id": "touch",
    "component_id": "led_module",
    "material_id": "pcb",
-   "name": "LED-Treiber mit Dimmer",
-   "short": "Treiber",
+   "name": "Touch-Sensor",
+   "short": "Touch-Sensor",
    "shape": "box",
-   "x": 20,
-   "y": 95,
-   "w": 60,
-   "d": 40,
-   "z": 19,
+   "x": 32,
+   "y": 102,
+   "w": 76,
+   "d": 34,
+   "z": 20,
    "h": 1.6,
    "r": 2,
    "explode": [
     0,
     0,
-    61
+    84
    ],
-   "mass": 13,
+   "mass": 5,
+   "materials": [
+    [
+     "fr4",
+     55
+    ],
+    [
+     "kupfer",
+     20
+    ],
+    [
+     "chip",
+     15
+    ],
+    [
+     "lot",
+     10
+    ]
+   ],
+   "info": "Kleine Platine direkt unter dem Touch-Feld. Sie merkt die Berührung durch das Blech und ist mit einem Flachkabel am Treiber angesteckt.",
+   "color": "#2E6B45",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 8,
+     "y": 8,
+     "w": 18,
+     "fill": "#C5803D"
+    },
+    {
+     "shape": "box",
+     "x": 40,
+     "y": 10,
+     "w": 8,
+     "d": 8,
+     "r": 0.5,
+     "fill": "#22272B"
+    }
+   ]
+  },
+  {
+   "id": "treiber",
+   "component_id": "led_module",
+   "material_id": "pcb",
+   "name": "LED-Treiber",
+   "short": "Treiber",
+   "shape": "box",
+   "x": 20,
+   "y": 40,
+   "w": 60,
+   "d": 40,
+   "z": 18,
+   "h": 1.6,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    86
+   ],
+   "mass": 12.5,
    "materials": [
     [
      "fr4",
@@ -630,16 +969,14 @@
      5
     ]
    ],
-   "info": "Kleine Platine im Fuß: macht aus 230 Volt den Strom für die LEDs und regelt die Helligkeit über die Touch-Taste.",
+   "info": "Kleine Platine im Fuß: macht aus 230 Volt den Strom für die LEDs. Mit zwei Schrauben auf dem Gewicht.",
    "color": "#2E6B45",
    "marks": [
     {
-     "shape": "box",
+     "shape": "cyl",
      "x": 6,
      "y": 8,
      "w": 14,
-     "d": 14,
-     "r": 1,
      "fill": "#C5803D"
     },
     {
@@ -650,6 +987,22 @@
      "d": 10,
      "r": 1,
      "fill": "#22272B"
+    },
+    {
+     "shape": "cyl",
+     "x": 44,
+     "y": 22,
+     "w": 10,
+     "fill": "#3C5A8A"
+    },
+    {
+     "shape": "box",
+     "x": 6,
+     "y": 28,
+     "w": 18,
+     "d": 8,
+     "r": 1,
+     "fill": "#E8E8E8"
     }
    ]
   },
@@ -664,15 +1017,15 @@
    "y": 15,
    "w": 120,
    "d": 120,
-   "z": 3,
-   "h": 15,
+   "z": 4,
+   "h": 14,
    "r": 6,
    "explode": [
     0,
     0,
-    47
+    74
    ],
-   "mass": 278.3,
+   "mass": 266.7,
    "materials": [
     [
      "stahl",
@@ -680,47 +1033,255 @@
     ]
    ],
    "info": "Schwere Stahlplatte, damit die Lampe nicht umkippt. Reines Metall, ab ins Altmetall.",
-   "color": "#5E656A"
+   "color": "#5E656A",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 3,
+     "w": 6,
+     "fill": "#4A5156"
+    },
+    {
+     "shape": "cyl",
+     "x": 111,
+     "y": 3,
+     "w": 6,
+     "fill": "#4A5156"
+    },
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 111,
+     "w": 6,
+     "fill": "#4A5156"
+    },
+    {
+     "shape": "cyl",
+     "x": 111,
+     "y": 111,
+     "w": 6,
+     "fill": "#4A5156"
+    }
+   ]
   },
   {
-   "id": "standfuss",
+   "id": "schraube0",
    "component_id": "steel_lamp_base",
    "material_id": "steel",
-   "name": "Fußgehäuse",
-   "short": "Fuß",
+   "name": "Schraube Bodenplatte",
+   "short": "Schrauben",
+   "shape": "cyl",
+   "x": 18,
+   "y": 18,
+   "w": 6,
+   "z": 3,
+   "h": 1,
+   "explode": [
+    0,
+    0,
+    8
+   ],
+   "mass": 0.8,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Vier Kreuzschlitzschrauben halten Bodenplatte, Gewicht und Fußgehäuse zusammen.",
+   "color": "#9AA2A8",
+   "label": true,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 2.6,
+     "w": 4,
+     "d": 0.8
+    },
+    {
+     "shape": "box",
+     "x": 2.6,
+     "y": 1,
+     "w": 0.8,
+     "d": 4
+    }
+   ]
+  },
+  {
+   "id": "schraube1",
+   "component_id": "steel_lamp_base",
+   "material_id": "steel",
+   "name": "Schraube Bodenplatte",
+   "short": "Schrauben",
+   "shape": "cyl",
+   "x": 126,
+   "y": 18,
+   "w": 6,
+   "z": 3,
+   "h": 1,
+   "explode": [
+    0,
+    0,
+    8
+   ],
+   "mass": 0.8,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Vier Kreuzschlitzschrauben halten Bodenplatte, Gewicht und Fußgehäuse zusammen.",
+   "color": "#9AA2A8",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 2.6,
+     "w": 4,
+     "d": 0.8
+    },
+    {
+     "shape": "box",
+     "x": 2.6,
+     "y": 1,
+     "w": 0.8,
+     "d": 4
+    }
+   ]
+  },
+  {
+   "id": "schraube2",
+   "component_id": "steel_lamp_base",
+   "material_id": "steel",
+   "name": "Schraube Bodenplatte",
+   "short": "Schrauben",
+   "shape": "cyl",
+   "x": 18,
+   "y": 126,
+   "w": 6,
+   "z": 3,
+   "h": 1,
+   "explode": [
+    0,
+    0,
+    8
+   ],
+   "mass": 0.8,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Vier Kreuzschlitzschrauben halten Bodenplatte, Gewicht und Fußgehäuse zusammen.",
+   "color": "#9AA2A8",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 2.6,
+     "w": 4,
+     "d": 0.8
+    },
+    {
+     "shape": "box",
+     "x": 2.6,
+     "y": 1,
+     "w": 0.8,
+     "d": 4
+    }
+   ]
+  },
+  {
+   "id": "schraube3",
+   "component_id": "steel_lamp_base",
+   "material_id": "steel",
+   "name": "Schraube Bodenplatte",
+   "short": "Schrauben",
+   "shape": "cyl",
+   "x": 126,
+   "y": 126,
+   "w": 6,
+   "z": 3,
+   "h": 1,
+   "explode": [
+    0,
+    0,
+    8
+   ],
+   "mass": 0.8,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Vier Kreuzschlitzschrauben halten Bodenplatte, Gewicht und Fußgehäuse zusammen.",
+   "color": "#9AA2A8",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 2.6,
+     "w": 4,
+     "d": 0.8
+    },
+    {
+     "shape": "box",
+     "x": 2.6,
+     "y": 1,
+     "w": 0.8,
+     "d": 4
+    }
+   ]
+  },
+  {
+   "id": "bodenplatte",
+   "component_id": "steel_lamp_base",
+   "material_id": "steel",
+   "name": "Bodenplatte mit Filz",
+   "short": "Bodenplatte",
    "shape": "box",
-   "x": 0,
-   "y": 0,
-   "w": 150,
-   "d": 150,
+   "x": 1,
+   "y": 1,
+   "w": 148,
+   "d": 148,
    "z": 0,
-   "h": 25,
-   "r": 10,
+   "h": 3,
+   "r": 9,
    "explode": [
     0,
     0,
     0
    ],
-   "mass": 173.9,
+   "mass": 33.3,
    "materials": [
     [
      "stahl",
-     90
+     75
     ],
     [
      "textil",
-     10
+     25
     ]
    ],
-   "info": "Stahlblech-Gehäuse mit Filzunterseite und Touch-Taste. Bodenplatte abschrauben, um Kabel und Platine zu lösen.",
-   "color": "#2B2F33",
+   "info": "Stahlblech mit Filz auf der Unterseite, damit der Tisch keine Kratzer bekommt. Filz vor dem Recycling abziehen.",
+   "color": "#3A3F44",
    "marks": [
     {
-     "shape": "cyl",
-     "x": 40,
-     "y": 110,
-     "w": 20,
-     "fill": "#5DADE2"
+     "shape": "box",
+     "x": 6,
+     "y": 6,
+     "w": 136,
+     "d": 136,
+     "r": 7,
+     "fill": "#33383C"
     }
    ]
   },
@@ -739,11 +1300,11 @@
    "h": 8,
    "r": 4,
    "explode": [
-    170,
+    190,
     0,
     0
    ],
-   "mass": 43.5,
+   "mass": 41.7,
    "materials": [
     [
      "pvc",
@@ -754,7 +1315,7 @@
      10
     ]
    ],
-   "info": "1,8 m PVC-Kabel mit Eurostecker. Längs aufschlitzen, um die Kupferadern zu trennen.",
+   "info": "1,8 m PVC-Kabel. Längs aufschlitzen, um die Kupferadern zu trennen.",
    "color": "#2B2F33",
    "marks": [
     {
@@ -765,6 +1326,15 @@
      "d": 8,
      "r": 2,
      "fill": "#4A5156"
+    },
+    {
+     "shape": "box",
+     "x": 60,
+     "y": 0,
+     "w": 22,
+     "d": 8,
+     "r": 3,
+     "fill": "#3A3F44"
     }
    ]
   },
@@ -783,11 +1353,11 @@
    "h": 4,
    "r": 1,
    "explode": [
-    170,
+    190,
     0,
     0
    ],
-   "mass": 21.7,
+   "mass": 20.8,
    "materials": [
     [
      "kupfer",
@@ -796,6 +1366,50 @@
    ],
    "info": "Zwei dünne Kupferadern. Kupfer ist wertvoll und wird eingeschmolzen.",
    "color": "#B87333"
+  },
+  {
+   "id": "stecker",
+   "component_id": "cable_insulation",
+   "material_id": "pvc",
+   "name": "Eurostecker",
+   "short": "Stecker",
+   "shape": "box",
+   "x": 110,
+   "y": 26,
+   "w": 30,
+   "d": 16,
+   "z": 0,
+   "h": 12,
+   "r": 5,
+   "explode": [
+    190,
+    0,
+    0
+   ],
+   "mass": 12.5,
+   "materials": [
+    [
+     "pvc",
+     70
+    ],
+    [
+     "messing",
+     30
+    ]
+   ],
+   "info": "Angespritzter Stecker mit zwei Messingstiften. Nicht zu öffnen: das ganze Kabel zum Elektroschrott.",
+   "color": "#2B2F33",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 22,
+     "y": 4,
+     "w": 8,
+     "d": 8,
+     "r": 3,
+     "fill": "#3A3F44"
+    }
+   ]
   }
  ]
 }

@@ -12,22 +12,26 @@ from bau import teil, mark, raster, explodiere, skaliere_masse, schreibe  # noqa
 # Drehknopf nach vorne (dy > 0), Kabel nach rechts (dx > 0).
 
 teile = [
+    teil('messbecher', 'blender_jar', 'Messbecher', 'Messbecher', 'cyl', material_id='pc',
+         x=60, y=60, w=50, z=372, h=14, mass=25, materials=[['pcabs', 100]], color='#E9EEF2', opacity=0.75,
+         info='Durchsichtiger Becher mit Skala, verschließt die Einfüllöffnung im Deckel. Mit einer Vierteldrehung '
+              'herausnehmen.', marks=[mark('cyl', 5, 5, 40, fill='#C5D3DC'), mark('box', 20, 4, 10, 42, 3, '#B5C3CC')]),
     teil('deckel', 'blender_jar', 'Behälterdeckel', 'Deckel', 'box', material_id='pp',
-         x=15, y=15, w=140, d=140, z=360, h=20, r=24, mass=80, materials=[['pp', 55], ['tpe', 45]],
-         info='Weicher Deckel mit Dichtlippe und eingesetztem Messbecher zum Nachfüllen. Wird nur aufgedrückt; Messbecher herausdrehen und beides zum Kunststoff.',
-         color='#2E3338', marks=[mark('cyl', 40, 40, 60, fill='#C5D3DC'), mark('cyl', 50, 50, 40, fill='#E9EEF2')]),
-    teil('behaelter_oben', 'blender_jar', 'Mixbehälter Oberteil', 'Behälter oben', 'box',
-         x=15, y=15, w=140, d=140, z=260, h=100, r=24, mass=300,
-         info='Bruchfester Kunststoff (Copolyester oder Polycarbonat) mit Skala. Den Materialcode findet man am Behälterboden.',
-         color='#DDE6EC', opacity=0.6, marks=[mark('box', 10, 10, 120, 120, 20, fill='#C5D3DC')]),
+         x=15, y=15, w=140, d=140, z=360, h=14, r=26, mass=70, materials=[['pp', 55], ['tpe', 45]],
+         info='Weicher Deckel mit Dichtlippe. Wird nur aufgedrückt; mit dem Messbecher zusammen zum Kunststoff.',
+         color='#2E3338', marks=[mark('cyl', 41, 41, 58, fill='#1E2226'), mark('box', 6, 60, 10, 20, 4, '#3C4248')]),
+    *[teil(f'behaelter{i}', 'blender_jar', 'Mixbehälter', 'Behälter', 'box',
+           x=85 - w / 2, y=85 - w / 2, w=w, d=w, z=z, h=h, r=w / 6, mass=h * w / 50, label=i == 3,
+           info=('Bruchfester Kunststoff (Copolyester oder Polycarbonat) mit Skala. Er wird nach unten schmaler, '
+                 'damit das Mixgut immer wieder zum Messer fällt. Materialcode steht am Boden.') if i == 3
+           else 'Teil des Mixbehälters.',
+           color='#DDE6EC', opacity=0.55,
+           marks=[mark('box', w / 2 - 15, w - 16, 30, 3, 1, '#9FB0BC')] if i == 0 else None)
+      for i, (w, z, h) in enumerate([(140, 300, 60), (134, 250, 50), (124, 205, 45), (112, 160, 45)])],
     teil('griff', 'blender_jar', 'Behältergriff', 'Griff', 'box',
-         x=155, y=70, w=25, d=30, z=200, h=140, r=8, mass=60,
+         x=155, y=70, w=25, d=30, z=200, h=150, r=10, mass=60,
          info='Angespritzter Griff des Behälters. Er gehört zum Behälter und wird nicht abgetrennt.',
-         color='#2E3338'),
-    teil('behaelter_unten', 'blender_jar', 'Mixbehälter Unterteil', 'Behälter unten', 'box',
-         x=25, y=25, w=120, d=120, z=160, h=100, r=20, mass=220,
-         info='Der Behälter wird nach unten schmaler, damit das Mixgut immer wieder zum Messer fällt.',
-         color='#DDE6EC', opacity=0.6),
+         color='#2E3338', marks=[mark('box', 5, 4, 15, 22, 6, '#3C4248')]),
     teil('messer', 'blender_blade', 'Messereinheit', 'Messer', 'cyl',
          x=40, y=40, w=90, z=160, h=18, mass=110, materials=[['stahl', 90], ['messing', 5], ['gummi', 5]],
          info='Vier Edelstahlklingen auf einer kugelgelagerten Welle. Sehr scharf: vor dem Entsorgen in Zeitungspapier wickeln.',
@@ -54,19 +58,29 @@ teile = [
          materials=[['kupfer', 30], ['stahl', 55], ['graphit', 3], ['pcabs', 7], ['alu', 5]],
          info='Kräftiger Motor mit Kupferwicklungen und Kohlebürsten, bis 1000 Watt. Ist mit vier Schrauben am Gehäuse befestigt.',
          marks=[mark('cyl', 10, 10, 80, fill='#B87333'), mark('cyl', 35, 35, 30, fill='#7C858C')]),
+    teil('sicherung', 'electric_motor', 'Sicherheitsschalter', 'Schutztaster', 'box',
+         material_id='mixed_electronics', x=135, y=30, w=18, d=12, z=110, h=10, r=1, mass=6,
+         materials=[['pcabs', 60], ['kupfer', 25], ['kontakte', 15]], color='#C9CED2',
+         info='Kleiner Taster unter dem Behälter: Der Motor läuft nur, wenn der Behälter richtig eingerastet ist.',
+         marks=[mark('box', 6, 3, 6, 6, 1, '#E8574A')]),
     teil('schalter', 'electric_motor', 'Drehzahlschalter mit Entstörteilen', 'Schalter', 'box', material_id='mixed_electronics',
          x=20, y=148, w=130, d=14, z=30, h=80, r=1, mass=40,
          materials=[['pcabs', 45], ['kupfer', 25], ['kontakte', 10], ['fr4', 15], ['chip', 5]],
          info='Stufenschalter mit Kondensator gegen Funkstörungen. Kabel sind gesteckt und lassen sich abziehen.',
          color='#2F6B3A', marks=[mark('box', 50, 3, 30, 8, 1, fill='#9AA2A6')]),
     teil('drehknopf', 'plastic_housing', 'Drehknopf', 'Drehknopf', 'box',
-         x=65, y=168, w=40, d=14, z=50, h=40, r=4, explode=[0, 50, 0], mass=15,
+         x=65, y=166, w=40, d=12, z=50, h=40, r=4, explode=[0, 80, 0], mass=15, sortBias=60,
          info='Stellt die Stufen und die Puls-Funktion ein. Gerade von der Achse abziehen.',
-         color='#9AA2A6'),
+         color='#9AA2A6', marks=[mark('box', 18, 1, 4, 10, 1, '#E8574A')]),
     teil('luefter', 'electric_motor', 'Lüfterrad', 'Lüfter', 'cyl', material_id='pp',
          x=45, y=45, w=80, z=14, h=14, mass=30, materials=[['pp', 100]],
          info='Sitzt unten auf der Motorwelle und kühlt den Motor. Lässt sich nach dem Lösen der Mutter abziehen.',
          color='#5F6B75', marks=raster(10, 37, 6, 1, 8, 6, 10, r=1, fill='#4A545C')),
+    *[teil(f'schraube{i}', 'plastic_housing', 'Gehäuseschraube', 'Schrauben', 'cyl', material_id='steel',
+           x=x, y=y, w=7, z=12, h=3, mass=1.5, materials=[['stahl', 100]], color='#9AA2A6', label=i == 0,
+           info='Vier lange Schrauben von unten unter den Saugfüßen. Füße abhebeln, dann die Schrauben lösen.',
+           marks=[mark('box', 1, 3, 5, 1), mark('box', 3, 1, 1, 5)])
+      for i, (x, y) in enumerate([(18.5, 18.5), (144.5, 18.5), (18.5, 144.5), (144.5, 144.5)])],
     teil('bodenplatte', 'plastic_housing', 'Bodenplatte mit Saugfüßen', 'Bodenplatte', 'box',
          x=0, y=0, w=170, d=170, z=0, h=12, r=24, mass=150, materials=[['pcabs', 85], ['gummi', 15]],
          info='Unterseite mit Lüftungsschlitzen und Saugfüßen. Unter den Füßen verstecken sich die Gehäuseschrauben.',
@@ -81,6 +95,10 @@ teile = [
          color='#B87333'),
 ]
 
-explodiere(teile, abstand=25, fest=('bodenplatte',), gruppen=[['behaelter_oben', 'griff', 'behaelter_unten']], nach_liste=True)
+# Sockelgehäuse nach links hinten weg, damit Motor, Kupplung und Schalter frei liegen.
+next(p for p in teile if p['id'] == 'gehaeuse')['explode'] = [-260, 0, 0]
+explodiere(teile, abstand=25, fest=('bodenplatte',), nach_liste=True,
+           gruppen=[['behaelter0', 'behaelter1', 'behaelter2', 'behaelter3', 'griff']],
+           abstaende={**{f'schraube{i}': 15 for i in range(4)}, 'sicherung': 15, 'behaelterfuss': 60, 'motor': 70})
 skaliere_masse(teile, oid='blender')
 schreibe('blender', teile)

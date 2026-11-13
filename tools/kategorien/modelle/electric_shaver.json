@@ -502,7 +502,7 @@
     0,
     44
    ],
-   "mass": 15.6,
+   "mass": 15.3,
    "materials": [
     [
      "pcabs",
@@ -546,7 +546,7 @@
     0,
     22
    ],
-   "mass": 11.1,
+   "mass": 10.9,
    "materials": [
     [
      "stahl",
@@ -741,7 +741,7 @@
     0,
     10
    ],
-   "mass": 6.7,
+   "mass": 6.6,
    "materials": [
     [
      "pcabs",
@@ -782,7 +782,7 @@
     0,
     0
    ],
-   "mass": 38.9,
+   "mass": 38.2,
    "materials": [
     [
      "stahl",
@@ -830,7 +830,7 @@
     0,
     0
    ],
-   "mass": 24.4,
+   "mass": 24,
    "materials": [
     [
      "lco",
@@ -881,10 +881,10 @@
    "r": 0.5,
    "explode": [
     0,
-    30,
+    40,
     0
    ],
-   "mass": 13.3,
+   "mass": 13.1,
    "materials": [
     [
      "fr4",
@@ -918,6 +918,105 @@
    ]
   },
   {
+   "id": "ladechip",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "Lade- und Motorchip",
+   "short": "Chip",
+   "shape": "box",
+   "x": 14,
+   "y": 30,
+   "w": 10,
+   "d": 1.5,
+   "z": 40,
+   "h": 10,
+   "r": 0.3,
+   "explode": [
+    0,
+    52,
+    0
+   ],
+   "mass": 0.5,
+   "materials": [
+    [
+     "chip",
+     100
+    ]
+   ],
+   "info": "Steuert das Laden des Akkus und schützt ihn vor Tiefentladung.",
+   "color": "#22272B"
+  },
+  {
+   "id": "schalter",
+   "component_id": "circuit_board",
+   "material_id": "mixed_electronics",
+   "name": "Drucktaster",
+   "short": "Taster",
+   "shape": "box",
+   "x": 26,
+   "y": 30,
+   "w": 8,
+   "d": 2,
+   "z": 76,
+   "h": 8,
+   "r": 0.5,
+   "explode": [
+    0,
+    52,
+    0
+   ],
+   "mass": 0.5,
+   "materials": [
+    [
+     "stahl",
+     50
+    ],
+    [
+     "pcabs",
+     40
+    ],
+    [
+     "kontakte",
+     10
+    ]
+   ],
+   "info": "Kleiner Taster auf der Platine, den die Ein-/Aus-Taste von außen drückt.",
+   "color": "#B7BCC0"
+  },
+  {
+   "id": "led",
+   "component_id": "circuit_board",
+   "material_id": "mixed_electronics",
+   "name": "Ladeanzeige (LED)",
+   "short": "LED",
+   "shape": "box",
+   "x": 26,
+   "y": 30,
+   "w": 8,
+   "d": 2,
+   "z": 46,
+   "h": 4,
+   "r": 0.5,
+   "explode": [
+    0,
+    52,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "led",
+     60
+    ],
+    [
+     "kupfer",
+     40
+    ]
+   ],
+   "info": "Leuchtet beim Laden und zeigt, wann der Akku voll ist. Scheint durch ein Fenster in der Vorderschale.",
+   "color": "#7BD389"
+  },
+  {
    "id": "vorderschale",
    "component_id": "plastic_housing",
    "material_id": "abs",
@@ -933,10 +1032,10 @@
    "r": 8,
    "explode": [
     0,
-    60,
+    110,
     0
    ],
-   "mass": 33.3,
+   "mass": 32.8,
    "materials": [
     [
      "pcabs",
@@ -971,13 +1070,13 @@
    "x": 22,
    "y": 35,
    "w": 16,
-   "d": 3,
+   "d": 2,
    "z": 70,
    "h": 20,
    "r": 1,
    "explode": [
     0,
-    85,
+    140,
     0
    ],
    "mass": 2.2,
@@ -988,7 +1087,39 @@
     ]
    ],
    "info": "Kunststofftaste über dem Schalter auf der Platine. Ist nur eingesetzt.",
-   "color": "#9AA2A6"
+   "color": "#9AA2A6",
+   "sortBias": 90
+  },
+  {
+   "id": "fenster",
+   "component_id": "plastic_housing",
+   "material_id": "pc",
+   "name": "Fenster der Ladeanzeige",
+   "short": "Fenster",
+   "shape": "box",
+   "x": 20,
+   "y": 35,
+   "w": 20,
+   "d": 1,
+   "z": 42,
+   "h": 10,
+   "r": 1,
+   "explode": [
+    0,
+    140,
+    0
+   ],
+   "mass": 0.5,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Durchsichtiges Kunststofffenster mit Akku-Symbol. Eingeklebt.",
+   "color": "#7BD389",
+   "opacity": 0.7,
+   "sortBias": 90
   },
   {
    "id": "rueckschale",
@@ -1009,7 +1140,7 @@
     -50,
     0
    ],
-   "mass": 31.1,
+   "mass": 30.6,
    "materials": [
     [
      "pcabs",
@@ -1027,6 +1158,54 @@
      "d": 10,
      "r": 4,
      "fill": "#2E3338"
+    }
+   ]
+  },
+  {
+   "id": "ladebuchse",
+   "component_id": "circuit_board",
+   "material_id": "steel",
+   "name": "Ladebuchse",
+   "short": "Ladebuchse",
+   "shape": "box",
+   "x": 24,
+   "y": 6,
+   "w": 12,
+   "d": 8,
+   "z": 2,
+   "h": 6,
+   "r": 2,
+   "explode": [
+    0,
+    -50,
+    -40
+   ],
+   "mass": 1.1,
+   "materials": [
+    [
+     "stahl",
+     70
+    ],
+    [
+     "kontakte",
+     15
+    ],
+    [
+     "pcabs",
+     15
+    ]
+   ],
+   "info": "Buchse für das Ladekabel unten am Gerät, mit Drähten an die Platine gelötet.",
+   "color": "#B7BCC0",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 2,
+     "w": 8,
+     "d": 4,
+     "r": 2,
+     "fill": "#2A2E31"
     }
    ]
   }

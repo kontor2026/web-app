@@ -21,26 +21,26 @@
  "werte": [
   {
    "k": "Rohstoffwert",
-   "v": "≈ 3,82 €",
+   "v": "≈ 3,68 €",
    "hint": "Kupfer zu Preisen vom 13.11."
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 8,95 kg",
+   "v": "≈ 8,73 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
    "k": "mit Recyclat",
    "v": "≈ 0,72 kg",
-   "hint": "spart 8,24 kg, wenn recycelte Materialien eingesetzt werden"
+   "hint": "spart 8,01 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Al": 455700.0,
-   "Ni": 121520.0,
-   "Fe": 64144.0,
-   "Cu": 59720.0
+   "Al": 438300.0,
+   "Ni": 116880.0,
+   "Fe": 63857.0,
+   "Cu": 58030.0
   },
   "herkunft": {
    "Al": "Modellmassen (Schätzung)",
@@ -49,20 +49,20 @@
    "Cu": "Modellmassen (Schätzung)"
   },
   "materialien_g": {
-   "aluminium": 455.7,
-   "abs": 253.1,
-   "nickel_chrome": 151.9,
-   "pvc": 101.3,
-   "pp": 96.2,
-   "steel": 60.8,
-   "copper": 50.6,
-   "mixed_electronics": 30.4
+   "aluminium": 438.3,
+   "abs": 277.6,
+   "nickel_chrome": 146.1,
+   "pp": 100.3,
+   "pvc": 97.4,
+   "steel": 60.4,
+   "copper": 48.7,
+   "mixed_electronics": 31.1
   },
-  "co2_kg": 8.953,
-  "co2_mit_recyclat_kg": 0.717,
-  "co2_ersparnis_kg": 8.236,
+  "co2_kg": 8.732,
+  "co2_mit_recyclat_kg": 0.719,
+  "co2_ersparnis_kg": 8.013,
   "co2_ohne_faktor": [],
-  "rohstoffwert_eur": 3.82,
+  "rohstoffwert_eur": 3.68,
   "wert_ohne_preis": [],
   "preisstand": "2026-11-13",
   "quellen": {
@@ -77,6 +77,22 @@
    "westmetall2026": {
     "titel": "Westmetall Marktdaten (LME, London Fixing, WM-Notiz)",
     "url": "https://www.westmetall.com/en/markdaten.php"
+   },
+   "usgs2026": {
+    "titel": "Mineral Commodity Summaries 2026 (ver. 1.3, May 2026)",
+    "url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf"
+   },
+   "eucrm2023": {
+    "titel": "Study on the Critical Raw Materials for the EU 2023 – Final Report",
+    "url": "https://single-market-economy.ec.europa.eu/publications/study-critical-raw-materials-eu-2023-final-report_en"
+   },
+   "eu2024crma": {
+    "titel": "Verordnung (EU) 2024/1252 zur Schaffung eines Rahmens zur Gewährleistung einer sicheren und nachhaltigen Versorgung mit kritischen Rohstoffen (Critical Raw Materials Act)",
+    "url": "https://op.europa.eu/en/publication-detail/-/publication/aa3c49f7-08e7-11ef-a251-01aa75ed71a1"
+   },
+   "usdapsd2026": {
+    "titel": "Production, Supply and Distribution Online (PSD), Datensatz Cotton (psd_cotton_csv.zip)",
+    "url": "https://apps.fas.usda.gov/psdonline/downloads/psd_cotton_csv.zip"
    }
   }
  },
@@ -114,22 +130,22 @@
  "parts": [
   {
    "id": "regler",
-   "component_id": "plastic_housing",
+   "component_id": "thermostat",
    "material_id": "abs",
    "name": "Temperaturregler",
    "short": "Regler",
    "shape": "cyl",
    "x": 40,
-   "y": 190,
+   "y": 60,
    "w": 40,
-   "z": 72,
+   "z": 73,
    "h": 8,
    "explode": [
     0,
     0,
-    188
+    242
    ],
-   "mass": 10.1,
+   "mass": 9.7,
    "materials": [
     [
      "pcabs",
@@ -137,111 +153,268 @@
     ]
    ],
    "info": "Drehknopf, der über eine Achse den Thermostat verstellt. Lässt sich mit einem flachen Schraubendreher abhebeln.",
-   "color": "#9AA2A6",
+   "color": "#E9EEF2",
    "marks": [
     {
      "shape": "box",
      "x": 18,
-     "y": 4,
+     "y": 3,
      "w": 4,
      "d": 14,
      "r": 1,
      "fill": "#2E3338"
+    },
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 18,
+     "w": 3,
+     "d": 3,
+     "fill": "#5DADE2"
+    },
+    {
+     "shape": "cyl",
+     "x": 17,
+     "y": 18,
+     "w": 3,
+     "d": 3,
+     "fill": "#5DADE2"
+    },
+    {
+     "shape": "cyl",
+     "x": 30,
+     "y": 18,
+     "w": 3,
+     "d": 3,
+     "fill": "#5DADE2"
     }
    ]
   },
   {
-   "id": "oberschale",
+   "id": "griff",
    "component_id": "plastic_housing",
    "material_id": "abs",
-   "name": "Gehäuse mit Griff",
-   "short": "Gehäuse",
+   "name": "Bügelgriff",
+   "short": "Griff",
    "shape": "box",
-   "x": 10,
-   "y": 20,
-   "w": 100,
-   "d": 220,
-   "z": 72,
-   "h": 68,
-   "r": 40,
+   "x": 44,
+   "y": 30,
+   "w": 32,
+   "d": 180,
+   "z": 110,
+   "h": 28,
+   "r": 15,
    "explode": [
     0,
     0,
-    100
+    155
    ],
-   "mass": 202.5,
+   "mass": 58.4,
    "materials": [
     [
      "pcabs",
      100
     ]
    ],
-   "info": "Hitzefester Kunststoff mit Griff und Dampftasten. Ist mit Schrauben von unten durch die Sohle befestigt.",
+   "info": "Hohler Griff aus Kunststoff, innen die Dampftasten. Gehört zum Gehäuse und wird mit ihm entsorgt.",
    "color": "#5DADE2",
    "marks": [
     {
      "shape": "box",
-     "x": 30,
-     "y": 40,
-     "w": 40,
+     "x": 6,
+     "y": 20,
+     "w": 20,
      "d": 110,
-     "r": 18,
-     "fill": "#2E3338"
+     "r": 9,
+     "fill": "#4A9BD0"
     },
     {
      "shape": "cyl",
-     "x": 38,
-     "y": 170,
-     "w": 12,
+     "x": 9,
+     "y": 140,
+     "w": 14,
      "fill": "#E9EEF2"
     },
     {
      "shape": "cyl",
-     "x": 52,
-     "y": 170,
-     "w": 12,
+     "x": 9,
+     "y": 158,
+     "w": 14,
      "fill": "#E9EEF2"
     }
    ]
   },
   {
-   "id": "wassertank",
-   "component_id": "water_tank",
-   "material_id": "pp",
-   "name": "Wassertank",
-   "short": "Wassertank",
+   "id": "griffsteg",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Vorderer Griffsteg",
+   "short": "Griffsteg",
    "shape": "box",
-   "x": 12,
-   "y": 30,
-   "w": 96,
-   "d": 225,
-   "z": 36,
-   "h": 36,
-   "r": 45,
+   "x": 44,
+   "y": 180,
+   "w": 32,
+   "d": 30,
+   "z": 69,
+   "h": 41,
+   "r": 12,
    "explode": [
     0,
     0,
-    80
+    155
    ],
-   "mass": 91.1,
+   "mass": 14.6,
    "materials": [
     [
-     "pp",
+     "pcabs",
      100
     ]
    ],
-   "info": "Durchsichtiger Kunststofftank für etwa 300 ml Wasser. Ist eingeklipst; ohne Metall gehört er zum Kunststoff.",
-   "color": "#CFE3EA",
-   "opacity": 0.6,
+   "info": "Verbindet den Griff mit dem Gehäuse vorne, darin die Stange der Sprühpumpe.",
+   "color": "#5DADE2",
+   "label": false
+  },
+  {
+   "id": "heck",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Heckteil",
+   "short": "Heck",
+   "shape": "box",
+   "x": 24,
+   "y": 8,
+   "w": 72,
+   "d": 40,
+   "z": 73,
+   "h": 37,
+   "r": 16,
+   "explode": [
+    0,
+    0,
+    155
+   ],
+   "mass": 39,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Hinterer Teil mit Stellfläche, auf dem man das Bügeleisen abstellt. Darin laufen die Kabeladern.",
+   "color": "#5DADE2"
+  },
+  {
+   "id": "gehaeuse0",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Gehäuseunterteil",
+   "short": "Gehäuse",
+   "shape": "box",
+   "x": 4,
+   "y": 5,
+   "w": 112,
+   "d": 105,
+   "z": 23,
+   "h": 50,
+   "r": 18,
+   "explode": [
+    0,
+    0,
+    133
+   ],
+   "mass": 83.6,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Hitzefester Kunststoff über Thermostat und Heizung. Mit Schrauben von unten durch die Sohle befestigt.",
+   "color": "#5DADE2",
+   "label": true,
    "marks": [
     {
-     "shape": "box",
-     "x": 30,
-     "y": 190,
-     "w": 30,
-     "d": 20,
-     "r": 8,
-     "fill": "#3C4248"
+     "shape": "cyl",
+     "x": 36,
+     "y": 50,
+     "w": 40,
+     "fill": "#4A9BD0"
+    }
+   ]
+  },
+  {
+   "id": "gehaeuse1",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Gehäuseunterteil",
+   "short": "Gehäuse",
+   "shape": "box",
+   "x": 8,
+   "y": 110,
+   "w": 104,
+   "d": 45,
+   "z": 23,
+   "h": 50,
+   "r": 4,
+   "explode": [
+    0,
+    0,
+    133
+   ],
+   "mass": 33.3,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Abschnitt: Gehäuseunterteil.",
+   "color": "#5DADE2",
+   "label": false
+  },
+  {
+   "id": "dampfventil",
+   "component_id": "water_tank",
+   "material_id": "pp",
+   "name": "Dampfventil",
+   "short": "Dampfventil",
+   "shape": "box",
+   "x": 52,
+   "y": 150,
+   "w": 16,
+   "d": 16,
+   "z": 23,
+   "h": 12,
+   "r": 4,
+   "explode": [
+    0,
+    0,
+    66
+   ],
+   "mass": 7.8,
+   "materials": [
+    [
+     "pp",
+     60
+    ],
+    [
+     "stahl",
+     25
+    ],
+    [
+     "gummi",
+     15
+    ]
+   ],
+   "info": "Lässt Wasser aus dem Tank tropfenweise auf die heiße Sohle, wo es zu Dampf wird. Mit Gummidichtung; kann verkalken.",
+   "color": "#E9EEF2",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 4,
+     "w": 8,
+     "fill": "#9AA2A6"
     }
    ]
   },
@@ -253,18 +426,18 @@
    "short": "Thermostat",
    "shape": "box",
    "x": 45,
-   "y": 120,
+   "y": 95,
    "w": 30,
    "d": 30,
-   "z": 26,
+   "z": 23,
    "h": 10,
    "r": 3,
    "explode": [
     0,
     0,
-    60
+    66
    ],
-   "mass": 30.4,
+   "mass": 29.2,
    "materials": [
     [
      "bimetall",
@@ -292,8 +465,54 @@
      "y": 10,
      "w": 10,
      "fill": "#D5DADE"
+    },
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 2,
+     "w": 6,
+     "d": 26,
+     "r": 1,
+     "fill": "#B87333"
     }
    ]
+  },
+  {
+   "id": "thermosicherung",
+   "component_id": "thermostat",
+   "material_id": "mixed_electronics",
+   "name": "Thermosicherung",
+   "short": "Sicherung",
+   "shape": "box",
+   "x": 80,
+   "y": 70,
+   "w": 8,
+   "d": 16,
+   "z": 23,
+   "h": 4,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    56
+   ],
+   "mass": 1.9,
+   "materials": [
+    [
+     "keramik",
+     40
+    ],
+    [
+     "kupfer",
+     40
+    ],
+    [
+     "stahl",
+     20
+    ]
+   ],
+   "info": "Brennt einmalig durch, wenn das Thermostat versagt und die Sohle zu heiß wird. Danach heizt das Bügeleisen nicht mehr.",
+   "color": "#C4672D"
   },
   {
    "id": "hitzeschild",
@@ -302,19 +521,19 @@
    "name": "Hitzeschutzblech",
    "short": "Hitzeschild",
    "shape": "box",
-   "x": 10,
-   "y": 15,
-   "w": 100,
-   "d": 235,
-   "z": 22,
-   "h": 4,
-   "r": 45,
+   "x": 12,
+   "y": 10,
+   "w": 96,
+   "d": 200,
+   "z": 20,
+   "h": 3,
+   "r": 30,
    "explode": [
     0,
     0,
-    40
+    44
    ],
-   "mass": 60.8,
+   "mass": 58.4,
    "materials": [
     [
      "stahl",
@@ -322,7 +541,18 @@
     ]
    ],
    "info": "Dünnes Stahlblech zwischen heißer Sohle und Kunststoffteilen. Kommt zum Altmetall.",
-   "color": "#9AA2A6"
+   "color": "#9AA2A6",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 40,
+     "y": 145,
+     "w": 16,
+     "d": 16,
+     "r": 4,
+     "fill": "#7C858C"
+    }
+   ]
   },
   {
    "id": "heizelement",
@@ -334,16 +564,16 @@
    "x": 15,
    "y": 25,
    "w": 90,
-   "d": 210,
-   "z": 16,
+   "d": 200,
+   "z": 14,
    "h": 6,
-   "r": 40,
+   "r": 30,
    "explode": [
     0,
     0,
-    20
+    22
    ],
-   "mass": 151.9,
+   "mass": 146.1,
    "materials": [
     [
      "stahl",
@@ -363,35 +593,137 @@
    "marks": [
     {
      "shape": "box",
-     "x": 0,
-     "y": 0,
+     "x": 4,
+     "y": 4,
      "w": 10,
-     "d": 200,
+     "d": 170,
      "r": 5,
      "fill": "#C4672D"
     },
     {
      "shape": "box",
+     "x": 76,
+     "y": 4,
+     "w": 10,
+     "d": 170,
+     "r": 5,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 160,
+     "w": 82,
+     "d": 14,
+     "r": 7,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "cyl",
+     "x": 2,
+     "y": 2,
+     "w": 8,
+     "fill": "#B87333"
+    },
+    {
+     "shape": "cyl",
      "x": 80,
-     "y": 0,
-     "w": 10,
-     "d": 200,
-     "r": 5,
-     "fill": "#C4672D"
-    },
-    {
-     "shape": "box",
-     "x": 0,
-     "y": 0,
-     "w": 90,
-     "d": 10,
-     "r": 5,
-     "fill": "#C4672D"
+     "y": 2,
+     "w": 8,
+     "fill": "#B87333"
     }
    ]
   },
   {
-   "id": "sohle",
+   "id": "schraube0",
+   "component_id": "iron_soleplate",
+   "material_id": "steel",
+   "name": "Sohlenschraube",
+   "short": "Schrauben",
+   "shape": "cyl",
+   "x": 57,
+   "y": 12,
+   "w": 6,
+   "z": 14,
+   "h": 4,
+   "explode": [
+    0,
+    0,
+    12
+   ],
+   "mass": 1,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Schrauben halten Sohle und Gehäuse zusammen; die hintere sitzt oft unter der Heckkappe.",
+   "color": "#7C858C",
+   "label": true,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 2.5,
+     "w": 4,
+     "d": 1
+    },
+    {
+     "shape": "box",
+     "x": 2.5,
+     "y": 1,
+     "w": 1,
+     "d": 4
+    }
+   ]
+  },
+  {
+   "id": "schraube1",
+   "component_id": "iron_soleplate",
+   "material_id": "steel",
+   "name": "Sohlenschraube",
+   "short": "Schrauben",
+   "shape": "cyl",
+   "x": 57,
+   "y": 228,
+   "w": 6,
+   "z": 14,
+   "h": 4,
+   "explode": [
+    0,
+    0,
+    12
+   ],
+   "mass": 1,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Schrauben halten Sohle und Gehäuse zusammen; die hintere sitzt oft unter der Heckkappe.",
+   "color": "#7C858C",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 2.5,
+     "w": 4,
+     "d": 1
+    },
+    {
+     "shape": "box",
+     "x": 2.5,
+     "y": 1,
+     "w": 1,
+     "d": 4
+    }
+   ]
+  },
+  {
+   "id": "sohle0",
    "component_id": "iron_soleplate",
    "material_id": "aluminium",
    "name": "Bügelsohle",
@@ -400,16 +732,16 @@
    "x": 0,
    "y": 0,
    "w": 120,
-   "d": 270,
+   "d": 110,
    "z": 0,
-   "h": 16,
-   "r": 55,
+   "h": 14,
+   "r": 18,
    "explode": [
     0,
     0,
     0
    ],
-   "mass": 455.7,
+   "mass": 207.8,
    "materials": [
     [
      "alu",
@@ -422,35 +754,12 @@
    ],
    "info": "Aluminiumguss mit Keramikbeschichtung und Dampflöchern. Wertvolles Aluminium für den Metallschrott.",
    "color": "#C9CED2",
+   "label": true,
    "marks": [
     {
      "shape": "cyl",
-     "x": 30,
-     "y": 40,
-     "w": 4,
-     "d": 4,
-     "fill": "#7C858C"
-    },
-    {
-     "shape": "cyl",
-     "x": 48,
-     "y": 40,
-     "w": 4,
-     "d": 4,
-     "fill": "#7C858C"
-    },
-    {
-     "shape": "cyl",
-     "x": 66,
-     "y": 40,
-     "w": 4,
-     "d": 4,
-     "fill": "#7C858C"
-    },
-    {
-     "shape": "cyl",
-     "x": 84,
-     "y": 40,
+     "x": 14,
+     "y": 50,
      "w": 4,
      "d": 4,
      "fill": "#7C858C"
@@ -458,63 +767,47 @@
     {
      "shape": "cyl",
      "x": 30,
-     "y": 56,
+     "y": 50,
      "w": 4,
      "d": 4,
      "fill": "#7C858C"
     },
     {
      "shape": "cyl",
-     "x": 48,
-     "y": 56,
+     "x": 46,
+     "y": 50,
      "w": 4,
      "d": 4,
      "fill": "#7C858C"
     },
     {
      "shape": "cyl",
-     "x": 66,
-     "y": 56,
+     "x": 62,
+     "y": 50,
      "w": 4,
      "d": 4,
      "fill": "#7C858C"
     },
     {
      "shape": "cyl",
-     "x": 84,
-     "y": 56,
+     "x": 78,
+     "y": 50,
      "w": 4,
      "d": 4,
      "fill": "#7C858C"
     },
     {
      "shape": "cyl",
-     "x": 30,
-     "y": 72,
+     "x": 94,
+     "y": 50,
      "w": 4,
      "d": 4,
      "fill": "#7C858C"
     },
     {
      "shape": "cyl",
-     "x": 48,
-     "y": 72,
-     "w": 4,
-     "d": 4,
-     "fill": "#7C858C"
-    },
-    {
-     "shape": "cyl",
-     "x": 66,
-     "y": 72,
-     "w": 4,
-     "d": 4,
-     "fill": "#7C858C"
-    },
-    {
-     "shape": "cyl",
-     "x": 84,
-     "y": 72,
+     "x": 14,
+     "y": 65,
      "w": 4,
      "d": 4,
      "fill": "#7C858C"
@@ -522,63 +815,47 @@
     {
      "shape": "cyl",
      "x": 30,
-     "y": 88,
+     "y": 65,
      "w": 4,
      "d": 4,
      "fill": "#7C858C"
     },
     {
      "shape": "cyl",
-     "x": 48,
-     "y": 88,
+     "x": 46,
+     "y": 65,
      "w": 4,
      "d": 4,
      "fill": "#7C858C"
     },
     {
      "shape": "cyl",
-     "x": 66,
-     "y": 88,
+     "x": 62,
+     "y": 65,
      "w": 4,
      "d": 4,
      "fill": "#7C858C"
     },
     {
      "shape": "cyl",
-     "x": 84,
-     "y": 88,
+     "x": 78,
+     "y": 65,
      "w": 4,
      "d": 4,
      "fill": "#7C858C"
     },
     {
      "shape": "cyl",
-     "x": 30,
-     "y": 104,
+     "x": 94,
+     "y": 65,
      "w": 4,
      "d": 4,
      "fill": "#7C858C"
     },
     {
      "shape": "cyl",
-     "x": 48,
-     "y": 104,
-     "w": 4,
-     "d": 4,
-     "fill": "#7C858C"
-    },
-    {
-     "shape": "cyl",
-     "x": 66,
-     "y": 104,
-     "w": 4,
-     "d": 4,
-     "fill": "#7C858C"
-    },
-    {
-     "shape": "cyl",
-     "x": 84,
-     "y": 104,
+     "x": 14,
+     "y": 80,
      "w": 4,
      "d": 4,
      "fill": "#7C858C"
@@ -586,63 +863,47 @@
     {
      "shape": "cyl",
      "x": 30,
-     "y": 120,
+     "y": 80,
      "w": 4,
      "d": 4,
      "fill": "#7C858C"
     },
     {
      "shape": "cyl",
-     "x": 48,
-     "y": 120,
+     "x": 46,
+     "y": 80,
      "w": 4,
      "d": 4,
      "fill": "#7C858C"
     },
     {
      "shape": "cyl",
-     "x": 66,
-     "y": 120,
+     "x": 62,
+     "y": 80,
      "w": 4,
      "d": 4,
      "fill": "#7C858C"
     },
     {
      "shape": "cyl",
-     "x": 84,
-     "y": 120,
+     "x": 78,
+     "y": 80,
      "w": 4,
      "d": 4,
      "fill": "#7C858C"
     },
     {
      "shape": "cyl",
-     "x": 30,
-     "y": 136,
+     "x": 94,
+     "y": 80,
      "w": 4,
      "d": 4,
      "fill": "#7C858C"
     },
     {
      "shape": "cyl",
-     "x": 48,
-     "y": 136,
-     "w": 4,
-     "d": 4,
-     "fill": "#7C858C"
-    },
-    {
-     "shape": "cyl",
-     "x": 66,
-     "y": 136,
-     "w": 4,
-     "d": 4,
-     "fill": "#7C858C"
-    },
-    {
-     "shape": "cyl",
-     "x": 84,
-     "y": 136,
+     "x": 14,
+     "y": 95,
      "w": 4,
      "d": 4,
      "fill": "#7C858C"
@@ -650,162 +911,586 @@
     {
      "shape": "cyl",
      "x": 30,
-     "y": 152,
+     "y": 95,
      "w": 4,
      "d": 4,
      "fill": "#7C858C"
     },
     {
      "shape": "cyl",
-     "x": 48,
-     "y": 152,
+     "x": 46,
+     "y": 95,
      "w": 4,
      "d": 4,
      "fill": "#7C858C"
     },
     {
      "shape": "cyl",
-     "x": 66,
-     "y": 152,
+     "x": 62,
+     "y": 95,
      "w": 4,
      "d": 4,
      "fill": "#7C858C"
     },
     {
      "shape": "cyl",
-     "x": 84,
-     "y": 152,
+     "x": 78,
+     "y": 95,
      "w": 4,
      "d": 4,
      "fill": "#7C858C"
     },
     {
      "shape": "cyl",
-     "x": 30,
-     "y": 168,
+     "x": 94,
+     "y": 95,
+     "w": 4,
+     "d": 4,
+     "fill": "#7C858C"
+    }
+   ]
+  },
+  {
+   "id": "sohle1",
+   "component_id": "iron_soleplate",
+   "material_id": "aluminium",
+   "name": "Bügelsohle",
+   "short": "Sohle",
+   "shape": "box",
+   "x": 4,
+   "y": 110,
+   "w": 112,
+   "d": 60,
+   "z": 0,
+   "h": 14,
+   "r": 4,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 105.8,
+   "materials": [
+    [
+     "alu",
+     95
+    ],
+    [
+     "keramik",
+     5
+    ]
+   ],
+   "info": "Abschnitt: Bügelsohle.",
+   "color": "#C9CED2",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 14,
+     "y": 8,
      "w": 4,
      "d": 4,
      "fill": "#7C858C"
     },
     {
      "shape": "cyl",
-     "x": 48,
-     "y": 168,
+     "x": 29,
+     "y": 8,
      "w": 4,
      "d": 4,
      "fill": "#7C858C"
     },
     {
      "shape": "cyl",
-     "x": 66,
-     "y": 168,
+     "x": 44,
+     "y": 8,
      "w": 4,
      "d": 4,
      "fill": "#7C858C"
     },
     {
      "shape": "cyl",
-     "x": 84,
-     "y": 168,
+     "x": 59,
+     "y": 8,
      "w": 4,
      "d": 4,
      "fill": "#7C858C"
     },
     {
      "shape": "cyl",
-     "x": 30,
-     "y": 184,
+     "x": 74,
+     "y": 8,
      "w": 4,
      "d": 4,
      "fill": "#7C858C"
     },
     {
      "shape": "cyl",
-     "x": 48,
-     "y": 184,
+     "x": 89,
+     "y": 8,
      "w": 4,
      "d": 4,
      "fill": "#7C858C"
     },
     {
      "shape": "cyl",
-     "x": 66,
-     "y": 184,
+     "x": 14,
+     "y": 26,
      "w": 4,
      "d": 4,
      "fill": "#7C858C"
     },
     {
      "shape": "cyl",
-     "x": 84,
-     "y": 184,
+     "x": 29,
+     "y": 26,
      "w": 4,
      "d": 4,
      "fill": "#7C858C"
     },
     {
      "shape": "cyl",
-     "x": 30,
-     "y": 200,
+     "x": 44,
+     "y": 26,
      "w": 4,
      "d": 4,
      "fill": "#7C858C"
     },
     {
      "shape": "cyl",
-     "x": 48,
-     "y": 200,
+     "x": 59,
+     "y": 26,
      "w": 4,
      "d": 4,
      "fill": "#7C858C"
     },
     {
      "shape": "cyl",
-     "x": 66,
-     "y": 200,
+     "x": 74,
+     "y": 26,
      "w": 4,
      "d": 4,
      "fill": "#7C858C"
     },
     {
      "shape": "cyl",
-     "x": 84,
-     "y": 200,
+     "x": 89,
+     "y": 26,
      "w": 4,
      "d": 4,
      "fill": "#7C858C"
     },
     {
      "shape": "cyl",
-     "x": 30,
-     "y": 216,
+     "x": 14,
+     "y": 44,
      "w": 4,
      "d": 4,
      "fill": "#7C858C"
     },
     {
      "shape": "cyl",
-     "x": 48,
-     "y": 216,
+     "x": 29,
+     "y": 44,
      "w": 4,
      "d": 4,
      "fill": "#7C858C"
     },
     {
      "shape": "cyl",
-     "x": 66,
-     "y": 216,
+     "x": 44,
+     "y": 44,
      "w": 4,
      "d": 4,
      "fill": "#7C858C"
     },
     {
      "shape": "cyl",
-     "x": 84,
-     "y": 216,
+     "x": 59,
+     "y": 44,
      "w": 4,
      "d": 4,
      "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 74,
+     "y": 44,
+     "w": 4,
+     "d": 4,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 89,
+     "y": 44,
+     "w": 4,
+     "d": 4,
+     "fill": "#7C858C"
+    }
+   ]
+  },
+  {
+   "id": "sohle2",
+   "component_id": "iron_soleplate",
+   "material_id": "aluminium",
+   "name": "Bügelsohle",
+   "short": "Sohle",
+   "shape": "box",
+   "x": 12,
+   "y": 170,
+   "w": 96,
+   "d": 50,
+   "z": 0,
+   "h": 14,
+   "r": 4,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 75.6,
+   "materials": [
+    [
+     "alu",
+     95
+    ],
+    [
+     "keramik",
+     5
+    ]
+   ],
+   "info": "Abschnitt: Bügelsohle.",
+   "color": "#C9CED2",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 16,
+     "y": 8,
+     "w": 4,
+     "d": 4,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 31,
+     "y": 8,
+     "w": 4,
+     "d": 4,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 46,
+     "y": 8,
+     "w": 4,
+     "d": 4,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 61,
+     "y": 8,
+     "w": 4,
+     "d": 4,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 76,
+     "y": 8,
+     "w": 4,
+     "d": 4,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 16,
+     "y": 28,
+     "w": 4,
+     "d": 4,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 31,
+     "y": 28,
+     "w": 4,
+     "d": 4,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 46,
+     "y": 28,
+     "w": 4,
+     "d": 4,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 61,
+     "y": 28,
+     "w": 4,
+     "d": 4,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 76,
+     "y": 28,
+     "w": 4,
+     "d": 4,
+     "fill": "#7C858C"
+    }
+   ]
+  },
+  {
+   "id": "sohle3",
+   "component_id": "iron_soleplate",
+   "material_id": "aluminium",
+   "name": "Bügelsohle",
+   "short": "Sohle",
+   "shape": "box",
+   "x": 24,
+   "y": 220,
+   "w": 72,
+   "d": 35,
+   "z": 0,
+   "h": 14,
+   "r": 4,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 39.7,
+   "materials": [
+    [
+     "alu",
+     95
+    ],
+    [
+     "keramik",
+     5
+    ]
+   ],
+   "info": "Abschnitt: Bügelsohle.",
+   "color": "#C9CED2",
+   "label": false
+  },
+  {
+   "id": "sohle4",
+   "component_id": "iron_soleplate",
+   "material_id": "aluminium",
+   "name": "Bügelsohle",
+   "short": "Sohle",
+   "shape": "box",
+   "x": 40,
+   "y": 255,
+   "w": 40,
+   "d": 15,
+   "z": 0,
+   "h": 14,
+   "r": 7,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 9.4,
+   "materials": [
+    [
+     "alu",
+     95
+    ],
+    [
+     "keramik",
+     5
+    ]
+   ],
+   "info": "Abschnitt: Bügelsohle.",
+   "color": "#C9CED2",
+   "label": false
+  },
+  {
+   "id": "tank0",
+   "component_id": "water_tank",
+   "material_id": "pp",
+   "name": "Wassertank",
+   "short": "Wassertank",
+   "shape": "box",
+   "x": 10,
+   "y": 155,
+   "w": 100,
+   "d": 40,
+   "z": 23,
+   "h": 46,
+   "r": 4,
+   "explode": [
+    0,
+    110,
+    0
+   ],
+   "mass": 42.2,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Durchsichtiger Kunststofftank für etwa 300 ml Wasser, vorne im Gehäuse. Eingeklipst; ohne Metall gehört er zum Kunststoff.",
+   "color": "#CFE3EA",
+   "opacity": 0.6,
+   "label": true,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 12,
+     "y": 14,
+     "w": 12,
+     "d": 2,
+     "r": 1,
+     "fill": "#9FB8C2"
+    },
+    {
+     "shape": "box",
+     "x": 32,
+     "y": 14,
+     "w": 12,
+     "d": 2,
+     "r": 1,
+     "fill": "#9FB8C2"
+    },
+    {
+     "shape": "box",
+     "x": 52,
+     "y": 14,
+     "w": 12,
+     "d": 2,
+     "r": 1,
+     "fill": "#9FB8C2"
+    },
+    {
+     "shape": "box",
+     "x": 72,
+     "y": 14,
+     "w": 12,
+     "d": 2,
+     "r": 1,
+     "fill": "#9FB8C2"
+    }
+   ]
+  },
+  {
+   "id": "tank1",
+   "component_id": "water_tank",
+   "material_id": "pp",
+   "name": "Wassertank",
+   "short": "Wassertank",
+   "shape": "box",
+   "x": 20,
+   "y": 195,
+   "w": 80,
+   "d": 35,
+   "z": 23,
+   "h": 46,
+   "r": 4,
+   "explode": [
+    0,
+    110,
+    0
+   ],
+   "mass": 29.5,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Abschnitt: Wassertank.",
+   "color": "#CFE3EA",
+   "opacity": 0.6,
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 22,
+     "y": 8,
+     "w": 36,
+     "d": 18,
+     "r": 8,
+     "fill": "#3C4248"
+    }
+   ]
+  },
+  {
+   "id": "tank2",
+   "component_id": "water_tank",
+   "material_id": "pp",
+   "name": "Wassertank",
+   "short": "Wassertank",
+   "shape": "box",
+   "x": 32,
+   "y": 230,
+   "w": 56,
+   "d": 27,
+   "z": 23,
+   "h": 46,
+   "r": 10,
+   "explode": [
+    0,
+    110,
+    0
+   ],
+   "mass": 15.9,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Abschnitt: Wassertank.",
+   "color": "#CFE3EA",
+   "opacity": 0.6,
+   "label": false
+  },
+  {
+   "id": "spruehduese",
+   "component_id": "water_tank",
+   "material_id": "pp",
+   "name": "Sprühdüse",
+   "short": "Sprühdüse",
+   "shape": "box",
+   "x": 50,
+   "y": 246,
+   "w": 20,
+   "d": 14,
+   "z": 58,
+   "h": 12,
+   "r": 4,
+   "explode": [
+    0,
+    160,
+    0
+   ],
+   "mass": 4.9,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Kleine Pumpdüse, die Wasser aus dem Tank auf die Wäsche sprüht. Reiner Kunststoff.",
+   "color": "#E9EEF2",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 7,
+     "y": 2,
+     "w": 6,
+     "fill": "#9AA2A6"
     }
    ]
   },
@@ -819,16 +1504,16 @@
    "x": 25,
    "y": 0,
    "w": 70,
-   "d": 22,
-   "z": 20,
-   "h": 70,
-   "r": 8,
+   "d": 8,
+   "z": 14,
+   "h": 59,
+   "r": 4,
    "explode": [
     0,
-    -50,
+    -60,
     0
    ],
-   "mass": 40.5,
+   "mass": 39,
    "materials": [
     [
      "pcabs",
@@ -839,35 +1524,6 @@
    "color": "#2E3338"
   },
   {
-   "id": "spruehduese",
-   "component_id": "water_tank",
-   "material_id": "pp",
-   "name": "Sprühdüse",
-   "short": "Sprühdüse",
-   "shape": "box",
-   "x": 50,
-   "y": 240,
-   "w": 20,
-   "d": 22,
-   "z": 76,
-   "h": 14,
-   "r": 4,
-   "explode": [
-    0,
-    40,
-    0
-   ],
-   "mass": 5.1,
-   "materials": [
-    [
-     "pp",
-     100
-    ]
-   ],
-   "info": "Kleine Pumpdüse, die Wasser aus dem Tank auf die Wäsche sprüht. Reiner Kunststoff.",
-   "color": "#E9EEF2"
-  },
-  {
    "id": "kabel",
    "component_id": "cable_insulation",
    "material_id": "pvc",
@@ -875,7 +1531,7 @@
    "short": "Kabel",
    "shape": "box",
    "x": 40,
-   "y": 4,
+   "y": 0,
    "w": 80,
    "d": 8,
    "z": 30,
@@ -883,10 +1539,10 @@
    "r": 4,
    "explode": [
     80,
-    -50,
+    -70,
     0
    ],
-   "mass": 101.3,
+   "mass": 97.4,
    "materials": [
     [
      "pvc",
@@ -919,7 +1575,7 @@
    "short": "Kupferadern",
    "shape": "box",
    "x": 40,
-   "y": 6.5,
+   "y": 2.5,
    "w": 80,
    "d": 3,
    "z": 32.5,
@@ -927,10 +1583,10 @@
    "r": 1,
    "explode": [
     80,
-    -50,
+    -70,
     15
    ],
-   "mass": 50.6,
+   "mass": 48.7,
    "materials": [
     [
      "kupfer",

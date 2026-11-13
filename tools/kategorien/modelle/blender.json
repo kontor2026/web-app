@@ -1,6 +1,52 @@
 {
  "parts": [
   {
+   "id": "messbecher",
+   "component_id": "blender_jar",
+   "material_id": "pc",
+   "name": "Messbecher",
+   "short": "Messbecher",
+   "shape": "cyl",
+   "x": 60,
+   "y": 60,
+   "w": 50,
+   "z": 372,
+   "h": 14,
+   "explode": [
+    0,
+    0,
+    323
+   ],
+   "mass": 25.1,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Durchsichtiger Becher mit Skala, verschließt die Einfüllöffnung im Deckel. Mit einer Vierteldrehung herausnehmen.",
+   "color": "#E9EEF2",
+   "opacity": 0.75,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 5,
+     "y": 5,
+     "w": 40,
+     "fill": "#C5D3DC"
+    },
+    {
+     "shape": "box",
+     "x": 20,
+     "y": 4,
+     "w": 10,
+     "d": 42,
+     "r": 3,
+     "fill": "#B5C3CC"
+    }
+   ]
+  },
+  {
    "id": "deckel",
    "component_id": "blender_jar",
    "material_id": "pp",
@@ -12,14 +58,14 @@
    "w": 140,
    "d": 140,
    "z": 360,
-   "h": 20,
-   "r": 24,
+   "h": 14,
+   "r": 26,
    "explode": [
     0,
     0,
-    369
+    296
    ],
-   "mass": 80.9,
+   "mass": 70.2,
    "materials": [
     [
      "pp",
@@ -30,65 +76,161 @@
      45
     ]
    ],
-   "info": "Weicher Deckel mit Dichtlippe und eingesetztem Messbecher zum Nachfüllen. Wird nur aufgedrückt; Messbecher herausdrehen und beides zum Kunststoff.",
+   "info": "Weicher Deckel mit Dichtlippe. Wird nur aufgedrückt; mit dem Messbecher zusammen zum Kunststoff.",
    "color": "#2E3338",
    "marks": [
     {
      "shape": "cyl",
-     "x": 40,
-     "y": 40,
-     "w": 60,
-     "fill": "#C5D3DC"
+     "x": 41,
+     "y": 41,
+     "w": 58,
+     "fill": "#1E2226"
     },
     {
-     "shape": "cyl",
-     "x": 50,
-     "y": 50,
-     "w": 40,
-     "fill": "#E9EEF2"
+     "shape": "box",
+     "x": 6,
+     "y": 60,
+     "w": 10,
+     "d": 20,
+     "r": 4,
+     "fill": "#3C4248"
     }
    ]
   },
   {
-   "id": "behaelter_oben",
+   "id": "behaelter0",
    "component_id": "blender_jar",
    "material_id": "pc",
-   "name": "Mixbehälter Oberteil",
-   "short": "Behälter oben",
+   "name": "Mixbehälter",
+   "short": "Behälter",
    "shape": "box",
    "x": 15,
    "y": 15,
    "w": 140,
    "d": 140,
-   "z": 260,
-   "h": 100,
-   "r": 24,
+   "z": 300,
+   "h": 60,
+   "r": 23.333333333333332,
    "explode": [
     0,
     0,
-    344
+    271
    ],
-   "mass": 303.3,
+   "mass": 168.4,
    "materials": [
     [
      "pcabs",
      100
     ]
    ],
-   "info": "Bruchfester Kunststoff (Copolyester oder Polycarbonat) mit Skala. Den Materialcode findet man am Behälterboden.",
+   "info": "Teil des Mixbehälters.",
    "color": "#DDE6EC",
-   "opacity": 0.6,
+   "opacity": 0.55,
+   "label": false,
    "marks": [
     {
      "shape": "box",
-     "x": 10,
-     "y": 10,
-     "w": 120,
-     "d": 120,
-     "r": 20,
-     "fill": "#C5D3DC"
+     "x": 55.0,
+     "y": 124,
+     "w": 30,
+     "d": 3,
+     "r": 1,
+     "fill": "#9FB0BC"
     }
    ]
+  },
+  {
+   "id": "behaelter1",
+   "component_id": "blender_jar",
+   "material_id": "pc",
+   "name": "Mixbehälter",
+   "short": "Behälter",
+   "shape": "box",
+   "x": 18,
+   "y": 18,
+   "w": 134,
+   "d": 134,
+   "z": 250,
+   "h": 50,
+   "r": 22.333333333333332,
+   "explode": [
+    0,
+    0,
+    271
+   ],
+   "mass": 134.3,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Teil des Mixbehälters.",
+   "color": "#DDE6EC",
+   "opacity": 0.55,
+   "label": false
+  },
+  {
+   "id": "behaelter2",
+   "component_id": "blender_jar",
+   "material_id": "pc",
+   "name": "Mixbehälter",
+   "short": "Behälter",
+   "shape": "box",
+   "x": 23,
+   "y": 23,
+   "w": 124,
+   "d": 124,
+   "z": 205,
+   "h": 45,
+   "r": 20.666666666666668,
+   "explode": [
+    0,
+    0,
+    271
+   ],
+   "mass": 111.9,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Teil des Mixbehälters.",
+   "color": "#DDE6EC",
+   "opacity": 0.55,
+   "label": false
+  },
+  {
+   "id": "behaelter3",
+   "component_id": "blender_jar",
+   "material_id": "pc",
+   "name": "Mixbehälter",
+   "short": "Behälter",
+   "shape": "box",
+   "x": 29,
+   "y": 29,
+   "w": 112,
+   "d": 112,
+   "z": 160,
+   "h": 45,
+   "r": 18.666666666666668,
+   "explode": [
+    0,
+    0,
+    271
+   ],
+   "mass": 101,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Bruchfester Kunststoff (Copolyester oder Polycarbonat) mit Skala. Er wird nach unten schmaler, damit das Mixgut immer wieder zum Messer fällt. Materialcode steht am Boden.",
+   "color": "#DDE6EC",
+   "opacity": 0.55,
+   "label": true
   },
   {
    "id": "griff",
@@ -102,14 +244,14 @@
    "w": 25,
    "d": 30,
    "z": 200,
-   "h": 140,
-   "r": 8,
+   "h": 150,
+   "r": 10,
    "explode": [
     0,
     0,
-    344
+    271
    ],
-   "mass": 60.7,
+   "mass": 60.1,
    "materials": [
     [
      "pcabs",
@@ -117,37 +259,18 @@
     ]
    ],
    "info": "Angespritzter Griff des Behälters. Er gehört zum Behälter und wird nicht abgetrennt.",
-   "color": "#2E3338"
-  },
-  {
-   "id": "behaelter_unten",
-   "component_id": "blender_jar",
-   "material_id": "pc",
-   "name": "Mixbehälter Unterteil",
-   "short": "Behälter unten",
-   "shape": "box",
-   "x": 25,
-   "y": 25,
-   "w": 120,
-   "d": 120,
-   "z": 160,
-   "h": 100,
-   "r": 20,
-   "explode": [
-    0,
-    0,
-    344
-   ],
-   "mass": 222.4,
-   "materials": [
-    [
-     "pcabs",
-     100
-    ]
-   ],
-   "info": "Der Behälter wird nach unten schmaler, damit das Mixgut immer wieder zum Messer fällt.",
-   "color": "#DDE6EC",
-   "opacity": 0.6
+   "color": "#2E3338",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 5,
+     "y": 4,
+     "w": 15,
+     "d": 22,
+     "r": 6,
+     "fill": "#3C4248"
+    }
+   ]
   },
   {
    "id": "messer",
@@ -164,9 +287,9 @@
    "explode": [
     0,
     0,
-    301
+    228
    ],
-   "mass": 111.2,
+   "mass": 110.2,
    "materials": [
     [
      "stahl",
@@ -226,9 +349,9 @@
    "explode": [
     0,
     0,
-    276
+    203
    ],
-   "mass": 8.1,
+   "mass": 8,
    "materials": [
     [
      "gummi",
@@ -264,9 +387,9 @@
    "explode": [
     0,
     0,
-    251
+    178
    ],
-   "mass": 91,
+   "mass": 90.2,
    "materials": [
     [
      "pp",
@@ -304,11 +427,11 @@
    "h": 128,
    "r": 24,
    "explode": [
+    -260,
     0,
-    0,
-    226
+    0
    ],
-   "mass": 424.6,
+   "mass": 420.9,
    "materials": [
     [
      "pcabs",
@@ -351,9 +474,9 @@
    "explode": [
     0,
     0,
-    71
+    116
    ],
-   "mass": 30.3,
+   "mass": 30.1,
    "materials": [
     [
      "gummi",
@@ -391,9 +514,9 @@
    "explode": [
     0,
     0,
-    46
+    91
    ],
-   "mass": 808.7,
+   "mass": 801.8,
    "materials": [
     [
      "kupfer",
@@ -435,6 +558,54 @@
    ]
   },
   {
+   "id": "sicherung",
+   "component_id": "electric_motor",
+   "material_id": "mixed_electronics",
+   "name": "Sicherheitsschalter",
+   "short": "Schutztaster",
+   "shape": "box",
+   "x": 135,
+   "y": 30,
+   "w": 18,
+   "d": 12,
+   "z": 110,
+   "h": 10,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 6,
+   "materials": [
+    [
+     "pcabs",
+     60
+    ],
+    [
+     "kupfer",
+     25
+    ],
+    [
+     "kontakte",
+     15
+    ]
+   ],
+   "info": "Kleiner Taster unter dem Behälter: Der Motor läuft nur, wenn der Behälter richtig eingerastet ist.",
+   "color": "#C9CED2",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 6,
+     "y": 3,
+     "w": 6,
+     "d": 6,
+     "r": 1,
+     "fill": "#E8574A"
+    }
+   ]
+  },
+  {
    "id": "schalter",
    "component_id": "electric_motor",
    "material_id": "mixed_electronics",
@@ -451,9 +622,9 @@
    "explode": [
     0,
     0,
-    7
+    25
    ],
-   "mass": 40.4,
+   "mass": 40.1,
    "materials": [
     [
      "pcabs",
@@ -498,18 +669,18 @@
    "short": "Drehknopf",
    "shape": "box",
    "x": 65,
-   "y": 168,
+   "y": 166,
    "w": 40,
-   "d": 14,
+   "d": 12,
    "z": 50,
    "h": 40,
    "r": 4,
    "explode": [
     0,
-    50,
+    80,
     0
    ],
-   "mass": 15.2,
+   "mass": 15,
    "materials": [
     [
      "pcabs",
@@ -517,7 +688,19 @@
     ]
    ],
    "info": "Stellt die Stufen und die Puls-Funktion ein. Gerade von der Achse abziehen.",
-   "color": "#9AA2A6"
+   "color": "#9AA2A6",
+   "sortBias": 60,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 18,
+     "y": 1,
+     "w": 4,
+     "d": 10,
+     "r": 1,
+     "fill": "#E8574A"
+    }
+   ]
   },
   {
    "id": "luefter",
@@ -536,7 +719,7 @@
     0,
     23
    ],
-   "mass": 30.3,
+   "mass": 30.1,
    "materials": [
     [
      "pp",
@@ -603,6 +786,182 @@
    ]
   },
   {
+   "id": "schraube0",
+   "component_id": "plastic_housing",
+   "material_id": "steel",
+   "name": "Gehäuseschraube",
+   "short": "Schrauben",
+   "shape": "cyl",
+   "x": 18.5,
+   "y": 18.5,
+   "w": 7,
+   "z": 12,
+   "h": 3,
+   "explode": [
+    0,
+    0,
+    15
+   ],
+   "mass": 1.5,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Vier lange Schrauben von unten unter den Saugfüßen. Füße abhebeln, dann die Schrauben lösen.",
+   "color": "#9AA2A6",
+   "label": true,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 3,
+     "w": 5,
+     "d": 1
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 1,
+     "w": 1,
+     "d": 5
+    }
+   ]
+  },
+  {
+   "id": "schraube1",
+   "component_id": "plastic_housing",
+   "material_id": "steel",
+   "name": "Gehäuseschraube",
+   "short": "Schrauben",
+   "shape": "cyl",
+   "x": 144.5,
+   "y": 18.5,
+   "w": 7,
+   "z": 12,
+   "h": 3,
+   "explode": [
+    0,
+    0,
+    15
+   ],
+   "mass": 1.5,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Vier lange Schrauben von unten unter den Saugfüßen. Füße abhebeln, dann die Schrauben lösen.",
+   "color": "#9AA2A6",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 3,
+     "w": 5,
+     "d": 1
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 1,
+     "w": 1,
+     "d": 5
+    }
+   ]
+  },
+  {
+   "id": "schraube2",
+   "component_id": "plastic_housing",
+   "material_id": "steel",
+   "name": "Gehäuseschraube",
+   "short": "Schrauben",
+   "shape": "cyl",
+   "x": 18.5,
+   "y": 144.5,
+   "w": 7,
+   "z": 12,
+   "h": 3,
+   "explode": [
+    0,
+    0,
+    15
+   ],
+   "mass": 1.5,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Vier lange Schrauben von unten unter den Saugfüßen. Füße abhebeln, dann die Schrauben lösen.",
+   "color": "#9AA2A6",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 3,
+     "w": 5,
+     "d": 1
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 1,
+     "w": 1,
+     "d": 5
+    }
+   ]
+  },
+  {
+   "id": "schraube3",
+   "component_id": "plastic_housing",
+   "material_id": "steel",
+   "name": "Gehäuseschraube",
+   "short": "Schrauben",
+   "shape": "cyl",
+   "x": 144.5,
+   "y": 144.5,
+   "w": 7,
+   "z": 12,
+   "h": 3,
+   "explode": [
+    0,
+    0,
+    15
+   ],
+   "mass": 1.5,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Vier lange Schrauben von unten unter den Saugfüßen. Füße abhebeln, dann die Schrauben lösen.",
+   "color": "#9AA2A6",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 3,
+     "w": 5,
+     "d": 1
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 1,
+     "w": 1,
+     "d": 5
+    }
+   ]
+  },
+  {
    "id": "bodenplatte",
    "component_id": "plastic_housing",
    "material_id": "abs",
@@ -621,7 +980,7 @@
     0,
     0
    ],
-   "mass": 151.6,
+   "mass": 150.3,
    "materials": [
     [
      "pcabs",
@@ -742,7 +1101,7 @@
     0,
     0
    ],
-   "mass": 80.9,
+   "mass": 80.2,
    "materials": [
     [
      "pvc",
@@ -786,7 +1145,7 @@
     0,
     15
    ],
-   "mass": 40.4,
+   "mass": 40.1,
    "materials": [
     [
      "kupfer",

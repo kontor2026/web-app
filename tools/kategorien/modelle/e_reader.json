@@ -17,9 +17,9 @@
    "explode": [
     0,
     0,
-    282.0
+    347.4
    ],
-   "mass": 17.7,
+   "mass": 16.2,
    "materials": [
     [
      "pcabs",
@@ -37,6 +37,186 @@
      "d": 126,
      "r": 1,
      "fill": "#D7D8D0"
+    },
+    {
+     "shape": "box",
+     "x": 20,
+     "y": 22.0,
+     "w": 75,
+     "d": 1.4,
+     "r": 0.3,
+     "fill": "#9A9C95"
+    },
+    {
+     "shape": "box",
+     "x": 20,
+     "y": 28.4,
+     "w": 75,
+     "d": 1.4,
+     "r": 0.3,
+     "fill": "#9A9C95"
+    },
+    {
+     "shape": "box",
+     "x": 20,
+     "y": 34.8,
+     "w": 75,
+     "d": 1.4,
+     "r": 0.3,
+     "fill": "#9A9C95"
+    },
+    {
+     "shape": "box",
+     "x": 20,
+     "y": 41.2,
+     "w": 75,
+     "d": 1.4,
+     "r": 0.3,
+     "fill": "#9A9C95"
+    },
+    {
+     "shape": "box",
+     "x": 20,
+     "y": 47.6,
+     "w": 75,
+     "d": 1.4,
+     "r": 0.3,
+     "fill": "#9A9C95"
+    },
+    {
+     "shape": "box",
+     "x": 20,
+     "y": 54.0,
+     "w": 75,
+     "d": 1.4,
+     "r": 0.3,
+     "fill": "#9A9C95"
+    },
+    {
+     "shape": "box",
+     "x": 20,
+     "y": 60.4,
+     "w": 75,
+     "d": 1.4,
+     "r": 0.3,
+     "fill": "#9A9C95"
+    },
+    {
+     "shape": "box",
+     "x": 20,
+     "y": 66.8,
+     "w": 75,
+     "d": 1.4,
+     "r": 0.3,
+     "fill": "#9A9C95"
+    },
+    {
+     "shape": "box",
+     "x": 20,
+     "y": 73.2,
+     "w": 75,
+     "d": 1.4,
+     "r": 0.3,
+     "fill": "#9A9C95"
+    },
+    {
+     "shape": "box",
+     "x": 20,
+     "y": 79.6,
+     "w": 75,
+     "d": 1.4,
+     "r": 0.3,
+     "fill": "#9A9C95"
+    },
+    {
+     "shape": "box",
+     "x": 20,
+     "y": 86.0,
+     "w": 75,
+     "d": 1.4,
+     "r": 0.3,
+     "fill": "#9A9C95"
+    },
+    {
+     "shape": "box",
+     "x": 20,
+     "y": 92.4,
+     "w": 75,
+     "d": 1.4,
+     "r": 0.3,
+     "fill": "#9A9C95"
+    },
+    {
+     "shape": "box",
+     "x": 20,
+     "y": 98.8,
+     "w": 75,
+     "d": 1.4,
+     "r": 0.3,
+     "fill": "#9A9C95"
+    },
+    {
+     "shape": "box",
+     "x": 20,
+     "y": 105.2,
+     "w": 75,
+     "d": 1.4,
+     "r": 0.3,
+     "fill": "#9A9C95"
+    },
+    {
+     "shape": "box",
+     "x": 20,
+     "y": 111.6,
+     "w": 75,
+     "d": 1.4,
+     "r": 0.3,
+     "fill": "#9A9C95"
+    },
+    {
+     "shape": "box",
+     "x": 20,
+     "y": 118.0,
+     "w": 75,
+     "d": 1.4,
+     "r": 0.3,
+     "fill": "#9A9C95"
+    },
+    {
+     "shape": "box",
+     "x": 20,
+     "y": 124.4,
+     "w": 75,
+     "d": 1.4,
+     "r": 0.3,
+     "fill": "#9A9C95"
+    },
+    {
+     "shape": "box",
+     "x": 20,
+     "y": 22,
+     "w": 40,
+     "d": 2.6,
+     "r": 0.5,
+     "fill": "#55585A"
+    },
+    {
+     "shape": "box",
+     "x": 50,
+     "y": 129,
+     "w": 15,
+     "d": 1.4,
+     "r": 0.5,
+     "fill": "#9A9C95"
+    },
+    {
+     "shape": "box",
+     "x": 46,
+     "y": 146,
+     "w": 23,
+     "d": 3,
+     "r": 1.5,
+     "fill": "#3A3F43"
     }
    ]
   },
@@ -57,9 +237,9 @@
    "explode": [
     0,
     0,
-    217.0
+    282.4
    ],
-   "mass": 12.7,
+   "mass": 11.6,
    "materials": [
     [
      "folien",
@@ -191,9 +371,9 @@
    "explode": [
     0,
     0,
-    152.0
+    217.4
    ],
-   "mass": 38,
+   "mass": 34.8,
    "materials": [
     [
      "displayglas",
@@ -380,6 +560,181 @@
    ]
   },
   {
+   "id": "traeger",
+   "component_id": "plastic_housing",
+   "material_id": "aluminium",
+   "name": "Display-Trägerplatte",
+   "short": "Trägerplatte",
+   "shape": "box",
+   "x": 8,
+   "y": 10,
+   "w": 99,
+   "d": 140,
+   "z": 4.8,
+   "h": 0.4,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    152.4
+   ],
+   "mass": 13.9,
+   "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "info": "Dünnes Aluminiumblech unter dem Bildschirm. Macht das Gerät steif und schützt das Glas vor Druck von hinten.",
+   "color": "#C3C8CC",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 40,
+     "y": 128,
+     "w": 20,
+     "d": 8,
+     "r": 1,
+     "fill": "#8D9399"
+    },
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 4,
+     "w": 3,
+     "d": 3
+    },
+    {
+     "shape": "cyl",
+     "x": 92,
+     "y": 4,
+     "w": 3,
+     "d": 3
+    },
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 133,
+     "w": 3,
+     "d": 3
+    },
+    {
+     "shape": "cyl",
+     "x": 92,
+     "y": 133,
+     "w": 3,
+     "d": 3
+    }
+   ]
+  },
+  {
+   "id": "flex",
+   "component_id": "e_ink_display",
+   "material_id": "mixed_electronics",
+   "name": "Display-Flachbandkabel",
+   "short": "Flexkabel",
+   "shape": "box",
+   "x": 46,
+   "y": 132,
+   "w": 22,
+   "d": 12,
+   "z": 2.2,
+   "h": 0.4,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    88.8
+   ],
+   "mass": 0.9,
+   "materials": [
+    [
+     "folien",
+     70
+    ],
+    [
+     "kupfer",
+     30
+    ]
+   ],
+   "info": "Biegsame Folie mit Kupferbahnen, verbindet Bildschirm und Platine. Stecker vorsichtig hochklappen, nicht ziehen.",
+   "color": "#C98A2E",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3.0,
+     "y": 2.0,
+     "w": 1.2,
+     "d": 8,
+     "r": 0.2,
+     "fill": "#E0B062"
+    },
+    {
+     "shape": "box",
+     "x": 5.2,
+     "y": 2.0,
+     "w": 1.2,
+     "d": 8,
+     "r": 0.2,
+     "fill": "#E0B062"
+    },
+    {
+     "shape": "box",
+     "x": 7.4,
+     "y": 2.0,
+     "w": 1.2,
+     "d": 8,
+     "r": 0.2,
+     "fill": "#E0B062"
+    },
+    {
+     "shape": "box",
+     "x": 9.6,
+     "y": 2.0,
+     "w": 1.2,
+     "d": 8,
+     "r": 0.2,
+     "fill": "#E0B062"
+    },
+    {
+     "shape": "box",
+     "x": 11.8,
+     "y": 2.0,
+     "w": 1.2,
+     "d": 8,
+     "r": 0.2,
+     "fill": "#E0B062"
+    },
+    {
+     "shape": "box",
+     "x": 14.0,
+     "y": 2.0,
+     "w": 1.2,
+     "d": 8,
+     "r": 0.2,
+     "fill": "#E0B062"
+    },
+    {
+     "shape": "box",
+     "x": 16.2,
+     "y": 2.0,
+     "w": 1.2,
+     "d": 8,
+     "r": 0.2,
+     "fill": "#E0B062"
+    },
+    {
+     "shape": "box",
+     "x": 18.4,
+     "y": 2.0,
+     "w": 1.2,
+     "d": 8,
+     "r": 0.2,
+     "fill": "#E0B062"
+    }
+   ]
+  },
+  {
    "id": "soc",
    "component_id": "circuit_board",
    "material_id": "pcb",
@@ -398,7 +753,7 @@
     0,
     88.8
    ],
-   "mass": 1.3,
+   "mass": 1.2,
    "materials": [
     [
      "chip",
@@ -427,7 +782,7 @@
     0,
     88.8
    ],
-   "mass": 1.3,
+   "mass": 1.2,
    "materials": [
     [
      "chip",
@@ -456,7 +811,7 @@
     0,
     88.8
    ],
-   "mass": 0.8,
+   "mass": 0.7,
    "materials": [
     [
      "stahl",
@@ -530,7 +885,7 @@
     0,
     70.5
    ],
-   "mass": 1.3,
+   "mass": 1.2,
    "materials": [
     [
      "stahl",
@@ -560,6 +915,182 @@
    ]
   },
   {
+   "id": "schraube0",
+   "component_id": "circuit_board",
+   "material_id": "steel",
+   "name": "Kreuzschlitz-Schraube M1,4",
+   "short": "Schrauben",
+   "shape": "cyl",
+   "x": 12.5,
+   "y": 90.5,
+   "w": 2.6,
+   "z": 2.2,
+   "h": 0.8,
+   "explode": [
+    0,
+    0,
+    82.8
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Vier winzige Schrauben halten die Platine in der Rückschale. Mit einem Feinmechaniker-Schraubendreher (PH00) lösen.",
+   "color": "#9AA0A6",
+   "label": true,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0.5,
+     "y": 1.1,
+     "w": 1.6,
+     "d": 0.4
+    },
+    {
+     "shape": "box",
+     "x": 1.1,
+     "y": 0.5,
+     "w": 0.4,
+     "d": 1.6
+    }
+   ]
+  },
+  {
+   "id": "schraube1",
+   "component_id": "circuit_board",
+   "material_id": "steel",
+   "name": "Kreuzschlitz-Schraube M1,4",
+   "short": "Schrauben",
+   "shape": "cyl",
+   "x": 99.5,
+   "y": 90.5,
+   "w": 2.6,
+   "z": 2.2,
+   "h": 0.8,
+   "explode": [
+    0,
+    0,
+    82.8
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Vier winzige Schrauben halten die Platine in der Rückschale. Mit einem Feinmechaniker-Schraubendreher (PH00) lösen.",
+   "color": "#9AA0A6",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0.5,
+     "y": 1.1,
+     "w": 1.6,
+     "d": 0.4
+    },
+    {
+     "shape": "box",
+     "x": 1.1,
+     "y": 0.5,
+     "w": 0.4,
+     "d": 1.6
+    }
+   ]
+  },
+  {
+   "id": "schraube2",
+   "component_id": "circuit_board",
+   "material_id": "steel",
+   "name": "Kreuzschlitz-Schraube M1,4",
+   "short": "Schrauben",
+   "shape": "cyl",
+   "x": 12.5,
+   "y": 143.5,
+   "w": 2.6,
+   "z": 2.2,
+   "h": 0.8,
+   "explode": [
+    0,
+    0,
+    82.8
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Vier winzige Schrauben halten die Platine in der Rückschale. Mit einem Feinmechaniker-Schraubendreher (PH00) lösen.",
+   "color": "#9AA0A6",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0.5,
+     "y": 1.1,
+     "w": 1.6,
+     "d": 0.4
+    },
+    {
+     "shape": "box",
+     "x": 1.1,
+     "y": 0.5,
+     "w": 0.4,
+     "d": 1.6
+    }
+   ]
+  },
+  {
+   "id": "schraube3",
+   "component_id": "circuit_board",
+   "material_id": "steel",
+   "name": "Kreuzschlitz-Schraube M1,4",
+   "short": "Schrauben",
+   "shape": "cyl",
+   "x": 99.5,
+   "y": 143.5,
+   "w": 2.6,
+   "z": 2.2,
+   "h": 0.8,
+   "explode": [
+    0,
+    0,
+    82.8
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Vier winzige Schrauben halten die Platine in der Rückschale. Mit einem Feinmechaniker-Schraubendreher (PH00) lösen.",
+   "color": "#9AA0A6",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0.5,
+     "y": 1.1,
+     "w": 1.6,
+     "d": 0.4
+    },
+    {
+     "shape": "box",
+     "x": 1.1,
+     "y": 0.5,
+     "w": 0.4,
+     "d": 1.6
+    }
+   ]
+  },
+  {
    "id": "platine",
    "component_id": "circuit_board",
    "material_id": "pcb",
@@ -578,7 +1109,7 @@
     0,
     70.8
    ],
-   "mass": 12.7,
+   "mass": 11.6,
    "materials": [
     [
      "fr4",
@@ -675,7 +1206,7 @@
     0,
     70.8
    ],
-   "mass": 30.4,
+   "mass": 27.8,
    "materials": [
     [
      "lco",
@@ -739,7 +1270,7 @@
     0,
     0.0
    ],
-   "mass": 63.3,
+   "mass": 58,
    "materials": [
     [
      "pcabs",
@@ -757,6 +1288,24 @@
      "d": 154,
      "r": 6,
      "fill": "#23272A"
+    },
+    {
+     "shape": "box",
+     "x": 74,
+     "y": 154,
+     "w": 8,
+     "d": 3,
+     "r": 1,
+     "fill": "#14171A"
+    },
+    {
+     "shape": "box",
+     "x": 53,
+     "y": 155,
+     "w": 9,
+     "d": 2,
+     "r": 1,
+     "fill": "#14171A"
     }
    ]
   }

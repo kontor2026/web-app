@@ -31,17 +31,17 @@
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 3,84 kg",
-   "hint": "spart 6,38 kg, wenn recycelte Materialien eingesetzt werden"
+   "v": "≈ 3,89 kg",
+   "hint": "spart 6,34 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Ni": 223280.0,
-   "Cu": 118140.0,
-   "Fe": 62232.0,
+   "Ni": 222400.0,
+   "Cu": 119110.0,
+   "Fe": 76311.0,
    "Ag": 14.0,
-   "Au": 3.35,
+   "Au": 3.34,
    "Pd": 1.06
   },
   "herkunft": {
@@ -53,19 +53,19 @@
    "Pd": "56 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)"
   },
   "materialien_g": {
-   "abs": 958.1,
-   "pp": 306.9,
-   "nickel_chrome": 279.1,
-   "mixed_electronics": 232.6,
-   "pvc": 74.4,
-   "pcb": 55.8,
-   "copper": 37.2,
-   "silicone": 27.9,
-   "steel": 27.9
+   "abs": 926.7,
+   "pp": 316.9,
+   "nickel_chrome": 278.0,
+   "mixed_electronics": 236.3,
+   "pvc": 74.1,
+   "pcb": 55.6,
+   "steel": 41.7,
+   "copper": 37.1,
+   "silicone": 33.4
   },
-  "co2_kg": 10.222,
-  "co2_mit_recyclat_kg": 3.841,
-  "co2_ersparnis_kg": 6.381,
+  "co2_kg": 10.229,
+  "co2_mit_recyclat_kg": 3.89,
+  "co2_ersparnis_kg": 6.339,
   "co2_ohne_faktor": [],
   "rohstoffwert_eur": 5.12,
   "wert_ohne_preis": [
@@ -84,6 +84,22 @@
    "westmetall2026": {
     "titel": "Westmetall Marktdaten (LME, London Fixing, WM-Notiz)",
     "url": "https://www.westmetall.com/en/markdaten.php"
+   },
+   "usgs2026": {
+    "titel": "Mineral Commodity Summaries 2026 (ver. 1.3, May 2026)",
+    "url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf"
+   },
+   "eucrm2023": {
+    "titel": "Study on the Critical Raw Materials for the EU 2023 – Final Report",
+    "url": "https://single-market-economy.ec.europa.eu/publications/study-critical-raw-materials-eu-2023-final-report_en"
+   },
+   "eu2024crma": {
+    "titel": "Verordnung (EU) 2024/1252 zur Schaffung eines Rahmens zur Gewährleistung einer sicheren und nachhaltigen Versorgung mit kritischen Rohstoffen (Critical Raw Materials Act)",
+    "url": "https://op.europa.eu/en/publication-detail/-/publication/aa3c49f7-08e7-11ef-a251-01aa75ed71a1"
+   },
+   "usdapsd2026": {
+    "titel": "Production, Supply and Distribution Online (PSD), Datensatz Cotton (psd_cotton_csv.zip)",
+    "url": "https://apps.fas.usda.gov/psdonline/downloads/psd_cotton_csv.zip"
    }
   }
  },
@@ -130,15 +146,15 @@
    "y": 90,
    "w": 160,
    "d": 150,
-   "z": 296,
-   "h": 34,
+   "z": 284,
+   "h": 46,
    "r": 30,
    "explode": [
     0,
     0,
-    305.0
+    179.0
    ],
-   "mass": 120.9,
+   "mass": 120.5,
    "materials": [
     [
      "pcabs",
@@ -153,15 +169,15 @@
      5
     ]
    ],
-   "info": "Klappdeckel mit Duschsieb und Dichtung, wird mit dem Hebel verriegelt. Das Scharnier hat eine Stahlfeder.",
+   "info": "Klappdeckel, wird mit dem Hebel verriegelt. Das Scharnier hinten hat eine Stahlfeder.",
    "color": "#2E3338",
    "marks": [
     {
      "shape": "box",
-     "x": 50,
-     "y": 120,
+     "x": 20,
+     "y": 122,
      "w": 60,
-     "d": 22,
+     "d": 20,
      "r": 8,
      "fill": "#9AA2A6"
     },
@@ -170,6 +186,500 @@
      "x": 40,
      "y": 20,
      "w": 80,
+     "fill": "#3C4248"
+    },
+    {
+     "shape": "box",
+     "x": 20,
+     "y": 2,
+     "w": 120,
+     "d": 6,
+     "r": 3,
+     "fill": "#24282C"
+    },
+    {
+     "shape": "cyl",
+     "x": 104,
+     "y": 124,
+     "w": 12,
+     "fill": "#5DADE2"
+    },
+    {
+     "shape": "cyl",
+     "x": 124,
+     "y": 124,
+     "w": 12,
+     "fill": "#4A5156"
+    },
+    {
+     "shape": "cyl",
+     "x": 124,
+     "y": 106,
+     "w": 12,
+     "fill": "#4A5156"
+    }
+   ]
+  },
+  {
+   "id": "duschsieb",
+   "component_id": "water_pump",
+   "material_id": "steel",
+   "name": "Duschsieb",
+   "short": "Duschsieb",
+   "shape": "cyl",
+   "x": 60,
+   "y": 125,
+   "w": 80,
+   "z": 282,
+   "h": 2,
+   "explode": [
+    0,
+    0,
+    119.0
+   ],
+   "mass": 13.9,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Edelstahlplatte mit feinen Löchern im Deckel: verteilt das heiße Wasser gleichmäßig über das Pad. Mit einer Schraube in der Mitte befestigt.",
+   "color": "#C9CED2",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 14,
+     "y": 14,
+     "w": 3,
+     "d": 3,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 22,
+     "y": 14,
+     "w": 3,
+     "d": 3,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 30,
+     "y": 14,
+     "w": 3,
+     "d": 3,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 38,
+     "y": 14,
+     "w": 3,
+     "d": 3,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 46,
+     "y": 14,
+     "w": 3,
+     "d": 3,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 54,
+     "y": 14,
+     "w": 3,
+     "d": 3,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 62,
+     "y": 14,
+     "w": 3,
+     "d": 3,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 14,
+     "y": 22,
+     "w": 3,
+     "d": 3,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 22,
+     "y": 22,
+     "w": 3,
+     "d": 3,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 30,
+     "y": 22,
+     "w": 3,
+     "d": 3,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 38,
+     "y": 22,
+     "w": 3,
+     "d": 3,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 46,
+     "y": 22,
+     "w": 3,
+     "d": 3,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 54,
+     "y": 22,
+     "w": 3,
+     "d": 3,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 62,
+     "y": 22,
+     "w": 3,
+     "d": 3,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 14,
+     "y": 30,
+     "w": 3,
+     "d": 3,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 22,
+     "y": 30,
+     "w": 3,
+     "d": 3,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 30,
+     "y": 30,
+     "w": 3,
+     "d": 3,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 38,
+     "y": 30,
+     "w": 3,
+     "d": 3,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 46,
+     "y": 30,
+     "w": 3,
+     "d": 3,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 54,
+     "y": 30,
+     "w": 3,
+     "d": 3,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 62,
+     "y": 30,
+     "w": 3,
+     "d": 3,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 14,
+     "y": 38,
+     "w": 3,
+     "d": 3,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 22,
+     "y": 38,
+     "w": 3,
+     "d": 3,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 30,
+     "y": 38,
+     "w": 3,
+     "d": 3,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 38,
+     "y": 38,
+     "w": 3,
+     "d": 3,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 46,
+     "y": 38,
+     "w": 3,
+     "d": 3,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 54,
+     "y": 38,
+     "w": 3,
+     "d": 3,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 62,
+     "y": 38,
+     "w": 3,
+     "d": 3,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 14,
+     "y": 46,
+     "w": 3,
+     "d": 3,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 22,
+     "y": 46,
+     "w": 3,
+     "d": 3,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 30,
+     "y": 46,
+     "w": 3,
+     "d": 3,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 38,
+     "y": 46,
+     "w": 3,
+     "d": 3,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 46,
+     "y": 46,
+     "w": 3,
+     "d": 3,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 54,
+     "y": 46,
+     "w": 3,
+     "d": 3,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 62,
+     "y": 46,
+     "w": 3,
+     "d": 3,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 14,
+     "y": 54,
+     "w": 3,
+     "d": 3,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 22,
+     "y": 54,
+     "w": 3,
+     "d": 3,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 30,
+     "y": 54,
+     "w": 3,
+     "d": 3,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 38,
+     "y": 54,
+     "w": 3,
+     "d": 3,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 46,
+     "y": 54,
+     "w": 3,
+     "d": 3,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 54,
+     "y": 54,
+     "w": 3,
+     "d": 3,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 62,
+     "y": 54,
+     "w": 3,
+     "d": 3,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 14,
+     "y": 62,
+     "w": 3,
+     "d": 3,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 22,
+     "y": 62,
+     "w": 3,
+     "d": 3,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 30,
+     "y": 62,
+     "w": 3,
+     "d": 3,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 38,
+     "y": 62,
+     "w": 3,
+     "d": 3,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 46,
+     "y": 62,
+     "w": 3,
+     "d": 3,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 54,
+     "y": 62,
+     "w": 3,
+     "d": 3,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 62,
+     "y": 62,
+     "w": 3,
+     "d": 3,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "cyl",
+     "x": 36,
+     "y": 36,
+     "w": 8,
+     "fill": "#9AA2A6"
+    }
+   ]
+  },
+  {
+   "id": "dichtung",
+   "component_id": "water_pump",
+   "material_id": "silicone",
+   "name": "Brühkammerdichtung",
+   "short": "Dichtung",
+   "shape": "cyl",
+   "x": 48,
+   "y": 113,
+   "w": 104,
+   "z": 279,
+   "h": 3,
+   "explode": [
+    0,
+    0,
+    89.0
+   ],
+   "mass": 5.6,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "info": "Silikonring, der die Brühkammer abdichtet. Mit den Fingern herausziehen.",
+   "color": "#E4E1D6",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 8,
+     "y": 8,
+     "w": 88,
      "fill": "#3C4248"
     }
    ]
@@ -184,14 +694,14 @@
    "x": 50,
    "y": 115,
    "w": 100,
-   "z": 280,
-   "h": 16,
+   "z": 266,
+   "h": 13,
    "explode": [
     0,
     0,
-    280.0
+    64.0
    ],
-   "mass": 46.5,
+   "mass": 46.3,
    "materials": [
     [
      "pp",
@@ -221,22 +731,22 @@
    "id": "gehaeuse",
    "component_id": "plastic_housing",
    "material_id": "abs",
-   "name": "Gehäuse",
+   "name": "Gehäuse (Turm)",
    "short": "Gehäuse",
    "shape": "box",
    "x": 0,
    "y": 70,
    "w": 200,
-   "d": 170,
+   "d": 105,
    "z": 20,
    "h": 260,
-   "r": 30,
+   "r": 12,
    "explode": [
+    -300,
     0,
-    0,
-    255.0
+    0
    ],
-   "mass": 558.1,
+   "mass": 389.2,
    "materials": [
     [
      "pcabs",
@@ -248,17 +758,116 @@
    "marks": [
     {
      "shape": "cyl",
-     "x": 50,
-     "y": 45,
-     "w": 100,
+     "x": 64,
+     "y": 5,
+     "w": 11,
      "fill": "#2E3338"
     },
     {
      "shape": "cyl",
-     "x": 90,
-     "y": 150,
-     "w": 14,
+     "x": 94.5,
+     "y": 5,
+     "w": 11,
      "fill": "#5DADE2"
+    },
+    {
+     "shape": "cyl",
+     "x": 125,
+     "y": 5,
+     "w": 11,
+     "fill": "#2E3338"
+    },
+    {
+     "shape": "box",
+     "x": 67,
+     "y": 8,
+     "w": 5,
+     "d": 1.5,
+     "r": 0.5,
+     "fill": "#C9CED2"
+    },
+    {
+     "shape": "box",
+     "x": 126,
+     "y": 8,
+     "w": 9,
+     "d": 1.5,
+     "r": 0.5,
+     "fill": "#C9CED2"
+    }
+   ]
+  },
+  {
+   "id": "kopf",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Gehäuse (Brühkopf)",
+   "short": "Brühkopf",
+   "shape": "box",
+   "x": 0,
+   "y": 175,
+   "w": 200,
+   "d": 65,
+   "z": 200,
+   "h": 80,
+   "r": 12,
+   "explode": [
+    -300,
+    0,
+    0
+   ],
+   "mass": 139,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Vorderer Teil des Gehäuses über der Tasse. Innen läuft das Kaffeewasser vom Padhalter zum Auslauf.",
+   "color": "#3C4248"
+  },
+  {
+   "id": "auslauf",
+   "component_id": "plastic_housing",
+   "material_id": "pp",
+   "name": "Kaffeeauslauf",
+   "short": "Auslauf",
+   "shape": "box",
+   "x": 80,
+   "y": 192,
+   "w": 40,
+   "d": 22,
+   "z": 186,
+   "h": 14,
+   "r": 8,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 11.1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Zwei Röhrchen, durch die der Kaffee in die Tassen läuft. Zum Reinigen nach unten abziehen.",
+   "color": "#24282C",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 7,
+     "y": 6,
+     "w": 10,
+     "fill": "#111"
+    },
+    {
+     "shape": "cyl",
+     "x": 23,
+     "y": 6,
+     "w": 10,
+     "fill": "#111"
     }
    ]
   },
@@ -281,7 +890,7 @@
     0,
     0.0
    ],
-   "mass": 27.9,
+   "mass": 27.8,
    "materials": [
     [
      "gummi",
@@ -295,6 +904,56 @@
    "info": "Verbinden Tank, Pumpe, Erhitzer und Brühkopf. Mit Klemmen gesichert; Klemme aufbiegen und Schlauch abziehen.",
    "color": "#E9EEF2",
    "opacity": 0.8
+  },
+  {
+   "id": "thermosicherung",
+   "component_id": "heating_element",
+   "material_id": "mixed_electronics",
+   "name": "Thermosicherung (Bimetall)",
+   "short": "Thermoschalter",
+   "shape": "box",
+   "x": 58,
+   "y": 96,
+   "w": 16,
+   "d": 12,
+   "z": 170,
+   "h": 6,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    15.0
+   ],
+   "mass": 4.6,
+   "materials": [
+    [
+     "bimetall",
+     50
+    ],
+    [
+     "kupfer",
+     20
+    ],
+    [
+     "keramik",
+     20
+    ],
+    [
+     "stahl",
+     10
+    ]
+   ],
+   "info": "Kleiner Schalter mit einer Bimetall-Scheibe: Wird der Erhitzer zu heiß, biegt sie sich und schaltet ab.",
+   "color": "#9AA2A6",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 1,
+     "w": 10,
+     "fill": "#C9CED2"
+    }
+   ]
   },
   {
    "id": "durchlauferhitzer",
@@ -315,7 +974,7 @@
     0,
     0.0
    ],
-   "mass": 279.1,
+   "mass": 278,
    "materials": [
     [
      "alu",
@@ -380,7 +1039,7 @@
     0,
     15
    ],
-   "mass": 232.6,
+   "mass": 231.7,
    "materials": [
     [
      "kupfer",
@@ -432,7 +1091,7 @@
     0,
     15
    ],
-   "mass": 55.8,
+   "mass": 55.6,
    "materials": [
     [
      "fr4",
@@ -493,7 +1152,7 @@
     0,
     0
    ],
-   "mass": 279.1,
+   "mass": 278,
    "materials": [
     [
      "pcabs",
@@ -542,6 +1201,46 @@
    ]
   },
   {
+   "id": "tankdeckel",
+   "component_id": "water_tank",
+   "material_id": "pp",
+   "name": "Tankdeckel",
+   "short": "Tankdeckel",
+   "shape": "box",
+   "x": 15,
+   "y": 0,
+   "w": 170,
+   "d": 65,
+   "z": 310,
+   "h": 10,
+   "r": 14,
+   "explode": [
+    0,
+    -110,
+    50
+   ],
+   "mass": 27.8,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Klappdeckel aus Polypropylen, hält Staub vom Wasser fern. Einfach abziehen.",
+   "color": "#2E3338",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 70,
+     "y": 20,
+     "w": 30,
+     "d": 10,
+     "r": 5,
+     "fill": "#3C4248"
+    }
+   ]
+  },
+  {
    "id": "wassertank",
    "component_id": "water_tank",
    "material_id": "pp",
@@ -553,32 +1252,32 @@
    "w": 170,
    "d": 65,
    "z": 30,
-   "h": 290,
+   "h": 280,
    "r": 14,
    "explode": [
     0,
-    -100,
+    -110,
     0
    ],
-   "mass": 186,
+   "mass": 157.6,
    "materials": [
     [
      "pp",
      100
     ]
    ],
-   "info": "Durchsichtiger Kunststofftank, wird nach oben herausgehoben. Reines Polypropylen ohne Metall, gehört zum Kunststoff.",
+   "info": "Durchsichtiger Kunststofftank, wird nach oben herausgehoben. Unten sitzt ein federbelastetes Ventil, das beim Abnehmen schließt.",
    "color": "#CFE3EA",
    "opacity": 0.6,
    "marks": [
     {
      "shape": "box",
-     "x": 5,
-     "y": 5,
-     "w": 160,
-     "d": 55,
+     "x": 6,
+     "y": 6,
+     "w": 158,
+     "d": 53,
      "r": 10,
-     "fill": "#3C4248"
+     "fill": "#B5CCD5"
     }
    ]
   },
@@ -601,7 +1300,7 @@
     110,
     0
    ],
-   "mass": 27.9,
+   "mass": 27.8,
    "materials": [
     [
      "stahl",
@@ -695,7 +1394,7 @@
     110,
     0
    ],
-   "mass": 74.4,
+   "mass": 74.1,
    "materials": [
     [
      "pp",
@@ -724,7 +1423,7 @@
     0,
     0
    ],
-   "mass": 74.4,
+   "mass": 74.1,
    "materials": [
     [
      "pvc",
@@ -768,7 +1467,7 @@
     0,
     15
    ],
-   "mass": 37.2,
+   "mass": 37.1,
    "materials": [
     [
      "kupfer",

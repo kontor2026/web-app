@@ -21,43 +21,43 @@
  "werte": [
   {
    "k": "Rohstoffwert",
-   "v": "≈ 1,55 €",
+   "v": "≈ 1,50 €",
    "hint": "Kupfer zu Preisen vom 13.11."
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 3,15 kg",
+   "v": "≈ 3,13 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 2,07 kg",
-   "hint": "spart 1,09 kg, wenn recycelte Materialien eingesetzt werden"
+   "v": "≈ 2,02 kg",
+   "hint": "spart 1,11 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Fe": 146121.0,
-   "Cu": 122450.0
+   "Fe": 145343.0,
+   "Cu": 119010.0
   },
   "herkunft": {
    "Fe": "Modellmassen (Schätzung)",
    "Cu": "Modellmassen (Schätzung)"
   },
   "materialien_g": {
-   "mixed_electronics": 319.5,
-   "abs": 317.4,
-   "steel": 100.2,
-   "nylon": 63.9,
-   "pvc": 63.9,
-   "copper": 26.6,
-   "pp": 8.5
+   "abs": 332.0,
+   "mixed_electronics": 311.7,
+   "steel": 100.6,
+   "nylon": 61.1,
+   "pvc": 61.1,
+   "copper": 25.5,
+   "pp": 8.1
   },
-  "co2_kg": 3.155,
-  "co2_mit_recyclat_kg": 2.066,
-  "co2_ersparnis_kg": 1.089,
+  "co2_kg": 3.135,
+  "co2_mit_recyclat_kg": 2.022,
+  "co2_ersparnis_kg": 1.113,
   "co2_ohne_faktor": [],
-  "rohstoffwert_eur": 1.55,
+  "rohstoffwert_eur": 1.5,
   "wert_ohne_preis": [],
   "preisstand": "2026-11-13",
   "quellen": {
@@ -72,6 +72,22 @@
    "westmetall2026": {
     "titel": "Westmetall Marktdaten (LME, London Fixing, WM-Notiz)",
     "url": "https://www.westmetall.com/en/markdaten.php"
+   },
+   "usgs2026": {
+    "titel": "Mineral Commodity Summaries 2026 (ver. 1.3, May 2026)",
+    "url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf"
+   },
+   "eucrm2023": {
+    "titel": "Study on the Critical Raw Materials for the EU 2023 – Final Report",
+    "url": "https://single-market-economy.ec.europa.eu/publications/study-critical-raw-materials-eu-2023-final-report_en"
+   },
+   "eu2024crma": {
+    "titel": "Verordnung (EU) 2024/1252 zur Schaffung eines Rahmens zur Gewährleistung einer sicheren und nachhaltigen Versorgung mit kritischen Rohstoffen (Critical Raw Materials Act)",
+    "url": "https://op.europa.eu/en/publication-detail/-/publication/aa3c49f7-08e7-11ef-a251-01aa75ed71a1"
+   },
+   "usdapsd2026": {
+    "titel": "Production, Supply and Distribution Online (PSD), Datensatz Cotton (psd_cotton_csv.zip)",
+    "url": "https://apps.fas.usda.gov/psdonline/downloads/psd_cotton_csv.zip"
    }
   }
  },
@@ -114,19 +130,19 @@
    "name": "Auswurftaste",
    "short": "Auswurftaste",
    "shape": "box",
-   "x": 20,
-   "y": 35,
-   "w": 26,
-   "d": 20,
+   "x": 54,
+   "y": 34,
+   "w": 16,
+   "d": 22,
    "z": 150,
-   "h": 6,
+   "h": 4,
    "r": 4,
    "explode": [
     0,
     0,
-    142
+    272
    ],
-   "mass": 8.5,
+   "mass": 6.1,
    "materials": [
     [
      "pcabs",
@@ -137,57 +153,136 @@
      20
     ]
    ],
-   "info": "Drückt über eine Stahlfeder die Besen aus dem Getriebe. Kappe ist nur aufgesteckt.",
-   "color": "#9AA2A6"
+   "info": "Drückt über eine Stahlstange die Besen aus dem Getriebe. Kappe ist nur aufgesteckt.",
+   "color": "#9AA2A6",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 9,
+     "w": 8,
+     "d": 4,
+     "r": 2,
+     "fill": "#5F6B75"
+    }
+   ]
   },
   {
-   "id": "oberschale",
+   "id": "griff",
    "component_id": "plastic_housing",
    "material_id": "abs",
-   "name": "Gehäuse-Oberschale mit Griff",
-   "short": "Oberschale",
+   "name": "Bügelgriff",
+   "short": "Griff",
    "shape": "box",
-   "x": 0,
-   "y": 5,
-   "w": 200,
-   "d": 80,
-   "z": 110,
-   "h": 40,
-   "r": 22,
+   "x": 50,
+   "y": 28,
+   "w": 145,
+   "d": 34,
+   "z": 128,
+   "h": 22,
+   "r": 14,
    "explode": [
     0,
     0,
-    122
+    214
    ],
-   "mass": 159.8,
+   "mass": 61.1,
    "materials": [
     [
      "pcabs",
      100
     ]
    ],
-   "info": "Obere Hälfte mit Handgriff. Die Schrauben sitzen von unten in der Unterschale, eine oft unter dem Typenschild.",
+   "info": "Hohler Kunststoffbügel, in dem Schalter und Kabel verlaufen. Die beiden Hälften sind verschraubt.",
    "color": "#E9EEF2",
    "marks": [
     {
      "shape": "box",
-     "x": 70,
-     "y": 28,
-     "w": 105,
-     "d": 24,
-     "r": 10,
+     "x": 24,
+     "y": 11,
+     "w": 34,
+     "d": 12,
+     "r": 6,
      "fill": "#C5CDD3"
     },
     {
      "shape": "box",
-     "x": 50,
-     "y": 32,
-     "w": 14,
-     "d": 16,
-     "r": 3,
+     "x": 34,
+     "y": 13,
+     "w": 8,
+     "d": 8,
+     "r": 2,
      "fill": "#5F6B75"
+    },
+    {
+     "shape": "box",
+     "x": 70,
+     "y": 4,
+     "w": 66,
+     "d": 26,
+     "r": 12,
+     "fill": "#D5DCE1"
     }
    ]
+  },
+  {
+   "id": "steg_vorne",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Griffsteg vorne",
+   "short": "Griffsteg",
+   "shape": "box",
+   "x": 50,
+   "y": 28,
+   "w": 30,
+   "d": 34,
+   "z": 110,
+   "h": 18,
+   "r": 10,
+   "explode": [
+    0,
+    0,
+    214
+   ],
+   "mass": 15.3,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Vorderer Steg zwischen Körper und Griff, innen läuft das Schalterkabel.",
+   "color": "#E9EEF2",
+   "label": false
+  },
+  {
+   "id": "steg_hinten",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Griffsteg hinten",
+   "short": "Griffsteg",
+   "shape": "box",
+   "x": 165,
+   "y": 28,
+   "w": 30,
+   "d": 34,
+   "z": 110,
+   "h": 18,
+   "r": 10,
+   "explode": [
+    0,
+    0,
+    214
+   ],
+   "mass": 15.3,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Hinterer Steg zwischen Körper und Griff. Griff und Stege gehören zur Oberschale.",
+   "color": "#E9EEF2"
   },
   {
    "id": "schalter",
@@ -196,19 +291,19 @@
    "name": "Stufenschalter mit Entstörkondensator",
    "short": "Schalter",
    "shape": "box",
-   "x": 40,
-   "y": 30,
-   "w": 30,
-   "d": 30,
-   "z": 100,
+   "x": 55,
+   "y": 33,
+   "w": 40,
+   "d": 24,
+   "z": 112,
    "h": 14,
    "r": 2,
    "explode": [
     0,
     0,
-    98
+    274
    ],
-   "mass": 21.3,
+   "mass": 20.4,
    "materials": [
     [
      "pcabs",
@@ -229,24 +324,254 @@
    ],
    "info": "Schiebeschalter für fünf Stufen; der Kondensator verhindert Funkstörungen. Kabel sind gelötet oder gesteckt.",
    "color": "#5F6B75",
+   "sortBias": -40,
    "marks": [
     {
      "shape": "box",
      "x": 4,
-     "y": 8,
-     "w": 10,
+     "y": 5,
+     "w": 12,
      "d": 14,
      "r": 2,
      "fill": "#9AA2A6"
     },
     {
      "shape": "box",
-     "x": 17,
-     "y": 5,
-     "w": 10,
-     "d": 20,
+     "x": 20,
+     "y": 3,
+     "w": 16,
+     "d": 18,
      "r": 2,
      "fill": "#D9B44A"
+    }
+   ]
+  },
+  {
+   "id": "oberschale",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Gehäuse-Oberschale",
+   "short": "Oberschale",
+   "shape": "box",
+   "x": 0,
+   "y": 5,
+   "w": 200,
+   "d": 80,
+   "z": 80,
+   "h": 30,
+   "r": 26,
+   "explode": [
+    0,
+    0,
+    192
+   ],
+   "mass": 112,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Obere Hälfte des Körpers. Die Schrauben sitzen von unten in der Unterschale, eine oft unter dem Typenschild.",
+   "color": "#E9EEF2",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 6,
+     "y": 24,
+     "w": 30,
+     "d": 32,
+     "r": 14,
+     "fill": "#DCE2E6"
+    },
+    {
+     "shape": "box",
+     "x": 100,
+     "y": 6,
+     "w": 4,
+     "d": 14,
+     "r": 1,
+     "fill": "#B5BDC3"
+    },
+    {
+     "shape": "box",
+     "x": 109,
+     "y": 6,
+     "w": 4,
+     "d": 14,
+     "r": 1,
+     "fill": "#B5BDC3"
+    },
+    {
+     "shape": "box",
+     "x": 118,
+     "y": 6,
+     "w": 4,
+     "d": 14,
+     "r": 1,
+     "fill": "#B5BDC3"
+    },
+    {
+     "shape": "box",
+     "x": 127,
+     "y": 6,
+     "w": 4,
+     "d": 14,
+     "r": 1,
+     "fill": "#B5BDC3"
+    },
+    {
+     "shape": "box",
+     "x": 136,
+     "y": 6,
+     "w": 4,
+     "d": 14,
+     "r": 1,
+     "fill": "#B5BDC3"
+    },
+    {
+     "shape": "box",
+     "x": 100,
+     "y": 60,
+     "w": 4,
+     "d": 14,
+     "r": 1,
+     "fill": "#B5BDC3"
+    },
+    {
+     "shape": "box",
+     "x": 109,
+     "y": 60,
+     "w": 4,
+     "d": 14,
+     "r": 1,
+     "fill": "#B5BDC3"
+    },
+    {
+     "shape": "box",
+     "x": 118,
+     "y": 60,
+     "w": 4,
+     "d": 14,
+     "r": 1,
+     "fill": "#B5BDC3"
+    },
+    {
+     "shape": "box",
+     "x": 127,
+     "y": 60,
+     "w": 4,
+     "d": 14,
+     "r": 1,
+     "fill": "#B5BDC3"
+    },
+    {
+     "shape": "box",
+     "x": 136,
+     "y": 60,
+     "w": 4,
+     "d": 14,
+     "r": 1,
+     "fill": "#B5BDC3"
+    }
+   ]
+  },
+  {
+   "id": "kohle1",
+   "component_id": "electric_motor",
+   "material_id": "mixed_electronics",
+   "name": "Kohlebürste",
+   "short": "Kohlebürsten",
+   "shape": "box",
+   "x": 112,
+   "y": 12,
+   "w": 12,
+   "d": 10,
+   "z": 78,
+   "h": 10,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    64
+   ],
+   "mass": 3.1,
+   "materials": [
+    [
+     "graphit",
+     60
+    ],
+    [
+     "kupfer",
+     20
+    ],
+    [
+     "messing",
+     20
+    ]
+   ],
+   "info": "Zwei Graphitklötze, die mit Federn auf den Kollektor drücken und den Strom zum drehenden Teil leiten. Sie nutzen sich ab.",
+   "color": "#3B3B3B",
+   "sortBias": -40,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 2,
+     "w": 6,
+     "d": 6,
+     "r": 1,
+     "fill": "#B08D57"
+    }
+   ]
+  },
+  {
+   "id": "kohle2",
+   "component_id": "electric_motor",
+   "material_id": "mixed_electronics",
+   "name": "Kohlebürste",
+   "short": "Kohlebürsten",
+   "shape": "box",
+   "x": 112,
+   "y": 68,
+   "w": 12,
+   "d": 10,
+   "z": 78,
+   "h": 10,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    64
+   ],
+   "mass": 3.1,
+   "materials": [
+    [
+     "graphit",
+     60
+    ],
+    [
+     "kupfer",
+     20
+    ],
+    [
+     "messing",
+     20
+    ]
+   ],
+   "info": "Zweite Kohlebürste.",
+   "color": "#3B3B3B",
+   "label": false,
+   "sortBias": -40,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 2,
+     "w": 6,
+     "d": 6,
+     "r": 1,
+     "fill": "#B08D57"
     }
    ]
   },
@@ -257,19 +582,19 @@
    "name": "Lüfterrad",
    "short": "Lüfterrad",
    "shape": "box",
-   "x": 154,
+   "x": 156,
    "y": 25,
    "w": 10,
    "d": 40,
-   "z": 78,
-   "h": 36,
+   "z": 56,
+   "h": 40,
    "r": 2,
    "explode": [
     0,
     0,
-    82
+    96
    ],
-   "mass": 8.5,
+   "mass": 8.1,
    "materials": [
     [
      "pp",
@@ -278,6 +603,7 @@
    ],
    "info": "Sitzt auf der Motorwelle und bläst Kühlluft durch die Schlitze im Gehäuse.",
    "color": "#5F6B75",
+   "sortBias": -40,
    "marks": [
     {
      "shape": "box",
@@ -342,19 +668,19 @@
    "name": "Universalmotor",
    "short": "Motor",
    "shape": "box",
-   "x": 90,
+   "x": 92,
    "y": 22,
    "w": 62,
    "d": 46,
-   "z": 76,
+   "z": 56,
    "h": 40,
    "r": 16,
    "explode": [
     0,
     0,
-    84
+    96
    ],
-   "mass": 298.2,
+   "mass": 285.1,
    "materials": [
     [
      "kupfer",
@@ -373,7 +699,8 @@
      10
     ]
    ],
-   "info": "Motor mit Kupferwicklungen und Kohlebürsten, treibt über eine Schnecke beide Besen an. Mit zwei Schrauben befestigt.",
+   "info": "Motor mit Kupferwicklungen, treibt über eine Schnecke beide Besen an. Mit zwei Schrauben befestigt.",
+   "sortBias": -40,
    "marks": [
     {
      "shape": "box",
@@ -402,17 +729,17 @@
    "shape": "box",
    "x": 25,
    "y": 15,
-   "w": 60,
+   "w": 62,
    "d": 60,
-   "z": 82,
+   "z": 58,
    "h": 18,
    "r": 6,
    "explode": [
     0,
     0,
-    78
+    94
    ],
-   "mass": 63.9,
+   "mass": 61.1,
    "materials": [
     [
      "nylon",
@@ -425,29 +752,197 @@
    ],
    "info": "Zwei Kunststoffzahnräder mit Stahlbuchsen drehen die Besen gegenläufig. Sie sind gefettet; Fett mit Papier abwischen.",
    "color": "#E9EEF2",
+   "sortBias": -40,
    "marks": [
     {
      "shape": "cyl",
-     "x": 6,
+     "x": 10,
      "y": 3,
      "w": 24,
      "fill": "#D5DADE"
     },
     {
      "shape": "cyl",
-     "x": 6,
+     "x": 10,
      "y": 33,
      "w": 24,
      "fill": "#D5DADE"
     },
     {
      "shape": "box",
-     "x": 34,
+     "x": 36,
      "y": 25,
      "w": 26,
      "d": 10,
      "r": 3,
      "fill": "#9AA2A6"
+    },
+    {
+     "shape": "box",
+     "x": 12,
+     "y": 5,
+     "w": 2,
+     "d": 2,
+     "fill": "#B5BDC3"
+    },
+    {
+     "shape": "box",
+     "x": 17,
+     "y": 5,
+     "w": 2,
+     "d": 2,
+     "fill": "#B5BDC3"
+    },
+    {
+     "shape": "box",
+     "x": 22,
+     "y": 5,
+     "w": 2,
+     "d": 2,
+     "fill": "#B5BDC3"
+    },
+    {
+     "shape": "box",
+     "x": 27,
+     "y": 5,
+     "w": 2,
+     "d": 2,
+     "fill": "#B5BDC3"
+    }
+   ]
+  },
+  {
+   "id": "schraube0",
+   "component_id": "plastic_housing",
+   "material_id": "steel",
+   "name": "Gehäuseschraube",
+   "short": "Schrauben",
+   "shape": "cyl",
+   "x": 8,
+   "y": 42,
+   "w": 6,
+   "z": 54,
+   "h": 3,
+   "explode": [
+    0,
+    0,
+    88
+   ],
+   "mass": 1,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Drei Schrauben mit Sonderkopf (Dreiflügel) halten Ober- und Unterschale zusammen.",
+   "color": "#9AA2A6",
+   "label": true,
+   "sortBias": -40,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 2.5,
+     "w": 4,
+     "d": 1
+    },
+    {
+     "shape": "box",
+     "x": 2.5,
+     "y": 1,
+     "w": 1,
+     "d": 4
+    }
+   ]
+  },
+  {
+   "id": "schraube1",
+   "component_id": "plastic_housing",
+   "material_id": "steel",
+   "name": "Gehäuseschraube",
+   "short": "Schrauben",
+   "shape": "cyl",
+   "x": 184,
+   "y": 14,
+   "w": 6,
+   "z": 54,
+   "h": 3,
+   "explode": [
+    0,
+    0,
+    88
+   ],
+   "mass": 1,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Drei Schrauben mit Sonderkopf (Dreiflügel) halten Ober- und Unterschale zusammen.",
+   "color": "#9AA2A6",
+   "label": false,
+   "sortBias": -40,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 2.5,
+     "w": 4,
+     "d": 1
+    },
+    {
+     "shape": "box",
+     "x": 2.5,
+     "y": 1,
+     "w": 1,
+     "d": 4
+    }
+   ]
+  },
+  {
+   "id": "schraube2",
+   "component_id": "plastic_housing",
+   "material_id": "steel",
+   "name": "Gehäuseschraube",
+   "short": "Schrauben",
+   "shape": "cyl",
+   "x": 184,
+   "y": 70,
+   "w": 6,
+   "z": 54,
+   "h": 3,
+   "explode": [
+    0,
+    0,
+    88
+   ],
+   "mass": 1,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Drei Schrauben mit Sonderkopf (Dreiflügel) halten Ober- und Unterschale zusammen.",
+   "color": "#9AA2A6",
+   "label": false,
+   "sortBias": -40,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 2.5,
+     "w": 4,
+     "d": 1
+    },
+    {
+     "shape": "box",
+     "x": 2.5,
+     "y": 1,
+     "w": 1,
+     "d": 4
     }
    ]
   },
@@ -462,15 +957,15 @@
    "y": 5,
    "w": 200,
    "d": 80,
-   "z": 72,
-   "h": 38,
-   "r": 22,
+   "z": 50,
+   "h": 30,
+   "r": 26,
    "explode": [
     0,
     0,
-    30
+    50
    ],
-   "mass": 149.1,
+   "mass": 122.2,
    "materials": [
     [
      "pcabs",
@@ -482,16 +977,16 @@
    "marks": [
     {
      "shape": "cyl",
-     "x": 44,
-     "y": 16,
-     "w": 14,
+     "x": 42,
+     "y": 14,
+     "w": 18,
      "fill": "#9AA2A6"
     },
     {
      "shape": "cyl",
-     "x": 44,
-     "y": 50,
-     "w": 14,
+     "x": 42,
+     "y": 48,
+     "w": 18,
      "fill": "#9AA2A6"
     },
     {
@@ -546,19 +1041,19 @@
    "component_id": "mixer_beaters",
    "material_id": "steel",
    "name": "Besenschaft links",
-   "short": "Schaft links",
+   "short": "Schaft",
    "shape": "cyl",
    "x": 47,
    "y": 24,
    "w": 8,
-   "z": 45,
-   "h": 37,
+   "z": 44,
+   "h": 24,
    "explode": [
     0,
     0,
-    0
+    10
    ],
-   "mass": 12.8,
+   "mass": 12.2,
    "materials": [
     [
      "stahl",
@@ -567,53 +1062,153 @@
    ],
    "info": "Edelstahlschaft mit Nut, rastet im Getriebe ein. Auswurftaste drücken, dann lösen sich die Besen.",
    "color": "#B8BEC4",
-   "label": true
+   "label": true,
+   "sortBias": -40
   },
   {
-   "id": "besen_links",
+   "id": "besen_links0",
    "component_id": "mixer_beaters",
    "material_id": "steel",
    "name": "Rührbesen links",
-   "short": "Besen links",
+   "short": "Besen",
    "shape": "cyl",
-   "x": 35,
-   "y": 12,
-   "w": 32,
-   "z": 0,
-   "h": 45,
+   "x": 42,
+   "y": 19,
+   "w": 18,
+   "z": 38,
+   "h": 6,
    "explode": [
     0,
     0,
     0
    ],
-   "mass": 37.3,
+   "mass": 12.2,
    "materials": [
     [
      "stahl",
      100
     ]
    ],
-   "info": "Vier gebogene Edelstahldrähte. Reiner Stahl: kommt zum Altmetall.",
+   "info": "Teil des Rührbesens.",
    "color": "#C9CED2",
+   "opacity": 0.8,
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 8.0,
+     "w": 16,
+     "d": 2,
+     "r": 1,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "box",
+     "x": 8.0,
+     "y": 1,
+     "w": 2,
+     "d": 16,
+     "r": 1,
+     "fill": "#7C858C"
+    }
+   ]
+  },
+  {
+   "id": "besen_links1",
+   "component_id": "mixer_beaters",
+   "material_id": "steel",
+   "name": "Rührbesen links",
+   "short": "Besen",
+   "shape": "cyl",
+   "x": 36,
+   "y": 13,
+   "w": 30,
+   "z": 8,
+   "h": 30,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 12.2,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Vier gebogene Edelstahldrähte, die einen Korb bilden. Reiner Stahl: kommt zum Altmetall.",
+   "color": "#C9CED2",
+   "opacity": 0.8,
    "label": true,
    "marks": [
     {
      "shape": "box",
-     "x": 2,
-     "y": 14,
+     "x": 1,
+     "y": 14.0,
      "w": 28,
-     "d": 4,
+     "d": 2,
      "r": 1,
-     "fill": "#9AA2A6"
+     "fill": "#7C858C"
     },
     {
      "shape": "box",
-     "x": 14,
-     "y": 2,
-     "w": 4,
+     "x": 14.0,
+     "y": 1,
+     "w": 2,
      "d": 28,
      "r": 1,
-     "fill": "#9AA2A6"
+     "fill": "#7C858C"
+    }
+   ]
+  },
+  {
+   "id": "besen_links2",
+   "component_id": "mixer_beaters",
+   "material_id": "steel",
+   "name": "Rührbesen links",
+   "short": "Besen",
+   "shape": "cyl",
+   "x": 41,
+   "y": 18,
+   "w": 20,
+   "z": 0,
+   "h": 8,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 12.2,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Teil des Rührbesens.",
+   "color": "#C9CED2",
+   "opacity": 0.8,
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 9.0,
+     "w": 18,
+     "d": 2,
+     "r": 1,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "box",
+     "x": 9.0,
+     "y": 1,
+     "w": 2,
+     "d": 18,
+     "r": 1,
+     "fill": "#7C858C"
     }
    ]
   },
@@ -622,19 +1217,19 @@
    "component_id": "mixer_beaters",
    "material_id": "steel",
    "name": "Besenschaft rechts",
-   "short": "Schaft rechts",
+   "short": "Schaft",
    "shape": "cyl",
    "x": 47,
    "y": 58,
    "w": 8,
-   "z": 45,
-   "h": 37,
+   "z": 44,
+   "h": 24,
    "explode": [
     0,
     0,
-    0
+    10
    ],
-   "mass": 12.8,
+   "mass": 12.2,
    "materials": [
     [
      "stahl",
@@ -643,53 +1238,153 @@
    ],
    "info": "Edelstahlschaft mit Nut, rastet im Getriebe ein. Auswurftaste drücken, dann lösen sich die Besen.",
    "color": "#B8BEC4",
-   "label": false
+   "label": false,
+   "sortBias": -40
   },
   {
-   "id": "besen_rechts",
+   "id": "besen_rechts0",
    "component_id": "mixer_beaters",
    "material_id": "steel",
    "name": "Rührbesen rechts",
-   "short": "Besen rechts",
+   "short": "Besen",
    "shape": "cyl",
-   "x": 35,
-   "y": 46,
-   "w": 32,
-   "z": 0,
-   "h": 45,
+   "x": 42,
+   "y": 53,
+   "w": 18,
+   "z": 38,
+   "h": 6,
    "explode": [
     0,
     0,
     0
    ],
-   "mass": 37.3,
+   "mass": 12.2,
    "materials": [
     [
      "stahl",
      100
     ]
    ],
-   "info": "Vier gebogene Edelstahldrähte. Reiner Stahl: kommt zum Altmetall.",
+   "info": "Teil des Rührbesens.",
    "color": "#C9CED2",
+   "opacity": 0.8,
    "label": false,
    "marks": [
     {
      "shape": "box",
-     "x": 2,
-     "y": 14,
-     "w": 28,
-     "d": 4,
+     "x": 1,
+     "y": 8.0,
+     "w": 16,
+     "d": 2,
      "r": 1,
-     "fill": "#9AA2A6"
+     "fill": "#7C858C"
     },
     {
      "shape": "box",
-     "x": 14,
-     "y": 2,
-     "w": 4,
+     "x": 8.0,
+     "y": 1,
+     "w": 2,
+     "d": 16,
+     "r": 1,
+     "fill": "#7C858C"
+    }
+   ]
+  },
+  {
+   "id": "besen_rechts1",
+   "component_id": "mixer_beaters",
+   "material_id": "steel",
+   "name": "Rührbesen rechts",
+   "short": "Besen",
+   "shape": "cyl",
+   "x": 36,
+   "y": 47,
+   "w": 30,
+   "z": 8,
+   "h": 30,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 12.2,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Teil des Rührbesens.",
+   "color": "#C9CED2",
+   "opacity": 0.8,
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 14.0,
+     "w": 28,
+     "d": 2,
+     "r": 1,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "box",
+     "x": 14.0,
+     "y": 1,
+     "w": 2,
      "d": 28,
      "r": 1,
-     "fill": "#9AA2A6"
+     "fill": "#7C858C"
+    }
+   ]
+  },
+  {
+   "id": "besen_rechts2",
+   "component_id": "mixer_beaters",
+   "material_id": "steel",
+   "name": "Rührbesen rechts",
+   "short": "Besen",
+   "shape": "cyl",
+   "x": 41,
+   "y": 52,
+   "w": 20,
+   "z": 0,
+   "h": 8,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 12.2,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Teil des Rührbesens.",
+   "color": "#C9CED2",
+   "opacity": 0.8,
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 9.0,
+     "w": 18,
+     "d": 2,
+     "r": 1,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "box",
+     "x": 9.0,
+     "y": 1,
+     "w": 2,
+     "d": 18,
+     "r": 1,
+     "fill": "#7C858C"
     }
    ]
   },
@@ -704,15 +1399,15 @@
    "y": 41,
    "w": 50,
    "d": 8,
-   "z": 74,
+   "z": 60,
    "h": 8,
    "r": 4,
    "explode": [
-    70,
+    90,
     0,
     0
    ],
-   "mass": 63.9,
+   "mass": 61.1,
    "materials": [
     [
      "pvc",
@@ -748,15 +1443,15 @@
    "y": 43.5,
    "w": 50,
    "d": 3,
-   "z": 76.5,
+   "z": 62.5,
    "h": 3,
    "r": 1,
    "explode": [
-    70,
+    90,
     0,
     15
    ],
-   "mass": 26.6,
+   "mass": 25.5,
    "materials": [
     [
      "kupfer",
