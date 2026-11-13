@@ -29,6 +29,12 @@ def chat_json(**kw):
             return llm_claude.chat_json(**kw)
         except llm_claude.ClaudeError as e:
             raise LLMError(str(e)) from e
+    if config.LLM_PROVIDER == 'claude-abo':
+        from . import llm_claude_abo
+        try:
+            return llm_claude_abo.chat_json(**kw)
+        except llm_claude_abo.ClaudeAboError as e:
+            raise LLMError(str(e)) from e
     return _chat_openai(**kw)
 
 
@@ -72,6 +78,9 @@ def health():
     if config.LLM_PROVIDER == 'claude':
         from . import llm_claude
         return llm_claude.health()
+    if config.LLM_PROVIDER == 'claude-abo':
+        from . import llm_claude_abo
+        return llm_claude_abo.health()
     if config.LLM_MODE == 'mock':
         return {'ok': True, 'modus': 'mock', 'modell': None, 'hinweis': 'Mock-Modus: nur Foto-Abgleich, keine KI'}
     try:

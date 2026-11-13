@@ -13,7 +13,8 @@ VISION_MODEL = os.getenv('VISION_MODEL', 'station-vl')  # siehe backend/Modelfil
 TEXT_MODEL = os.getenv('TEXT_MODEL', VISION_MODEL)
 LLM_MODE = os.getenv('LLM_MODE', 'openai')         # 'openai' oder 'mock' (ohne Modell, nur Foto-Abgleich)
 
-# Anbieter: 'lokal' = OpenAI-kompatibler Server (Ollama im Inferenz-Container), 'claude' = Anthropic-API.
+# Anbieter: 'lokal' = OpenAI-kompatibler Server (Ollama im Inferenz-Container), 'claude' = Anthropic-API
+# mit API-Schlüssel, 'claude-abo' = Claude Agent SDK mit Abo-Zugang (CLAUDE_CODE_OAUTH_TOKEN).
 LLM_PROVIDER = os.getenv('LLM_PROVIDER', 'lokal')
 ANTHROPIC_API_KEY = os.getenv('ANTHROPIC_API_KEY', '')
 CLAUDE_MODEL = os.getenv('CLAUDE_MODEL', 'claude-opus-5-5')
