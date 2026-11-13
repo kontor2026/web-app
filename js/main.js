@@ -275,6 +275,124 @@ const elTile = (sym, share) => {
     <span class="sym">${sym}</span><span class="nm">${e.name}</span></button>`;
 };
 
+function viewSheet() {
+  const obj = state.obj;
+  const nums = new Map(obj.parts.filter((p) => p.label !== false).map((p, i) => [p.id, String(i + 1).padStart(2, '0')]));
+  const classes = [...new Set(obj.parts.map((p) => MATERIALS[p.materials[0][0]].cls))];
+
+  const v = h(`
+    <section class="view sheet">
+      <div class="canvas">
+        <div class="canvas-head">
+          <div><h2>Explosionszeichnung · ${state.model}</h2><p>Fahre über ein Bauteil. Klicke für Details.</p></div>
+          <div class="seg" id="seg"><button data-x="1" class="on">Explodiert</button><button data-x="0">Zusammengebaut</button></div>
+        </div>
+        <div class="drawing" id="drawing"></div>
+        <div class="legend">${classes.map((c) => `<span><i style="background:${CLASSES[c].color}"></i>${CLASSES[c].label}</span>`).join('')}</div>
+        <div class="titleblock">
+          <div>Objekt</div><div>${obj.name}</div>
+          <div>Maße</div><div>${obj.masse}</div>
+          <div>Bauteile</div><div>${nums.size}</div>
+          <div>Blatt</div><div>${obj.id.toUpperCase().slice(0, 3)}-${String(obj.parts.length).padStart(3, '0')}</div>
+        </div>
+      </div>
+      <aside class="panel" id="panel"></aside>
+      <div class="actionbar">
+        <div class="q">Wie geht es weiter? <span>Du entscheidest.</span></div>
+        <button class="btn ghost" id="no">Nicht einlagern</button>
+        <button class="btn" id="store">Ins Lager geben</button>
+        <button class="btn primary" id="build">Daraus etwas bauen</button>
+      </div>
+    </section>`);
+  show(v, 'sheet');
+
+  const panel = v.querySelector('#panel');
+  const crumbsBase = [{ label: obj.name, go: () => renderOverview() }];
+
+  const view = new ExplodedView(v.querySelector('#drawing'), obj, {
+    onHover: (id, e) => {
+      if (id === 'move') return moveTip(e);
+      panel.querySelectorAll('.prow').forEach((r) => r.classList.toggle('hot', r.dataset.id === id));
+      if (!id) { tip.hidden = true; return; }
+      const p = obj.parts.find((x) => x.id === id);
+      const m = MATERIALS[p.materials[0][0]];
+      tip.innerHTML = `${nums.get(id) ? `<span class="n">${nums.get(id)}</span>` : ''}<b>${p.name}</b><small>${m.name} · ${fmt(p.mass)} g</small>`;
+      tip.hidden = false;
+      moveTip(e);
+    },
+    onSelect: (id) => renderPart(id),
+  });
+  state.explode = view;
+  requestAnimationFrame(() => view.mount());
+
+  v.querySelectorAll('#seg button').forEach((b) => b.addEventListener('click', () => {
+    v.querySelectorAll('#seg button').forEach((x) => x.classList.toggle('on', x === b));
+    view.setExploded(b.dataset.x === '1');
+  }));
+
+  function setPanel(html, crumbs) {
+    panel.innerHTML = `<div class="panel-inner">
+      ${crumbs ? `<nav class="crumbs">${crumbs.map((c, i) => i < crumbs.length - 1 ? `<button data-c="${i}">${c.label}</button><span></span>` : `<b style="font-weight:500;color:var(--ink)">${c.label}</b>`).join('')}</nav>` : ''}
+      ${html}</div>`;
+    panel.querySelectorAll('.crumbs span').forEach((s) => s.remove());
+    panel.querySelectorAll('.crumbs button').forEach((b) => {
+      b.insertAdjacentHTML('afterend', '<span></span>');
+      b.addEventListener('click', () => crumbs[+b.dataset.c].go());
+    });
+    panel.querySelectorAll('[data-part]').forEach((b) => {
+      b.addEventListener('click', () => renderPart(b.dataset.part));
+      b.addEventListener('pointerenter', () => view.highlight(b.dataset.part));
+      b.addEventListener('pointerleave', () => view.highlight(null));
+    });
+    panel.scrollTop = 0;
+    animate(panel.querySelectorAll('.panel-inner > *'), { opacity: [0, 1], translateY: [8, 0], delay: stagger(45), duration: 380, ease: 'outCubic' });
+  }
+
+  function renderOverview() {
+    view.select(null);
+    const mix = materialMix(obj);
+    setPanel(`
+      <div>
+        <div class="eyebrow">${obj.klasse}</div>
+        <h1 style="margin-top:8px">${state.model}</h1>
+        <div class="sub">${obj.name} · erkannt mit ${pct(obj.erkennung.conf)} · ${obj.gewicht}</div>
+      </div>
+      <div class="stats">${obj.werte.map((w) => `<div><b>${w.v}</b><span>${w.k}</span><small>${w.hint}</small></div>`).join('')}</div>
+      <div><h3>Warum das wertvoll ist</h3><p>${obj.wertvoll}</p></div>
+      <div>
+        <h3>Materialmix nach Gewicht</h3>
+        <div class="mix">${mix.map((m) => `<i style="width:${m.share * 100}%;background:${CLASSES[m.cls].color}"></i>`).join('')}</div>
+        <div class="mix-legend">${mix.map((m) => `<span><i style="background:${CLASSES[m.cls].color}"></i>${CLASSES[m.cls].label}<b>${Math.round(m.share * 100)} %</b></span>`).join('')}</div>
+      </div>
+      <div>
+        <h3>Bauteile</h3>
+        <div class="plist">${obj.parts.filter((p) => p.label !== false).map((p) => `
+          <button class="prow" data-part="${p.id}" data-id="${p.id}">
+            <span class="n">${nums.get(p.id)}</span>
+            <span>${p.name}<small>${MATERIALS[p.materials[0][0]].name}</small></span>
+            <span class="m">${fmt(p.mass)} g</span>
+          </button>`).join('')}</div>
+      </div>
+      <div>
+        <h3>Lebensweg</h3>
+        <ol class="cycle">${obj.kreislauf.map((k) => `<li class="${k.tone ?? ''}"><b>${k.t}</b><span>${k.d}</span></li>`).join('')}</ol>
+      </div>
+      <div>
+        <h3>Wenn du es nur entsorgen willst</h3>
+        <dl class="dispose">
+          <div><dt>Wohin</dt><dd>${obj.entsorgung.wo}</dd></div>
+          <div><dt>Nicht</dt><dd>${obj.entsorgung.nicht}</dd></div>
+          <div class="warn"><dt>Achtung</dt><dd>${obj.entsorgung.warnung}</dd></div>
+        </dl>
+      </div>
+      <p class="source">Quelle: ${obj.quelle}</p>
+    `, null);
+    animate(panel.querySelectorAll('.mix i'), { scaleX: [0, 1], transformOrigin: ['0% 50%', '0% 50%'], delay: stagger(60, { start: 250 }), duration: 600, ease: 'outExpo' });
+  }
+
+  renderOverview();
+}
+
 document.querySelector('.brand').addEventListener('click', viewScan);
 
 // Direkteinstieg für Demo und Entwicklung: #sheet=laptop oder #craft=flasche
