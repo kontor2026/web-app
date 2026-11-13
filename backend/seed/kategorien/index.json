@@ -852,7 +852,7 @@
   "name": "Aluschale",
   "name_en": "Aluminium Food Tray",
   "klasse": "Verpackung · Gelbe Tonne",
-  "teile": 4,
+  "teile": 5,
   "platzhalter": false
  },
  {
@@ -884,7 +884,7 @@
   "name": "Kaffeeverpackung",
   "name_en": "Coffee Bag",
   "klasse": "Verpackung · Gelbe Tonne",
-  "teile": 6,
+  "teile": 8,
   "platzhalter": false
  },
  {
@@ -892,7 +892,7 @@
   "name": "Deoroller",
   "name_en": "Roll-On Deodorant",
   "klasse": "Verpackung · Gelbe Tonne",
-  "teile": 7,
+  "teile": 12,
   "platzhalter": false
  },
  {
@@ -900,7 +900,7 @@
   "name": "Lippenstift",
   "name_en": "Lipstick",
   "klasse": "Verpackung · Gelbe Tonne",
-  "teile": 5,
+  "teile": 11,
   "platzhalter": false
  },
  {
@@ -908,7 +908,7 @@
   "name": "Cremetiegel",
   "name_en": "Cosmetic Jar",
   "klasse": "Verpackung · Gelbe Tonne",
-  "teile": 5,
+  "teile": 7,
   "platzhalter": false
  },
  {
@@ -932,7 +932,7 @@
   "name": "Bag-in-Box",
   "name_en": "Bag-in-Box",
   "klasse": "Verpackung · Gelbe Tonne",
-  "teile": 7,
+  "teile": 9,
   "platzhalter": false
  },
  {
@@ -964,7 +964,7 @@
   "name": "Quetschflasche",
   "name_en": "Squeeze Bottle",
   "klasse": "Verpackung · Gelbe Tonne",
-  "teile": 9,
+  "teile": 10,
   "platzhalter": false
  },
  {
@@ -1156,7 +1156,7 @@
   "name": "Blumentopf",
   "name_en": "Plastic Plant Pot",
   "klasse": "Verpackung · Gelbe Tonne",
-  "teile": 5,
+  "teile": 8,
   "platzhalter": false
  },
  {

@@ -39,7 +39,7 @@
   "metalle_mg": {},
   "herkunft": {},
   "materialien_g": {
-   "pp": 39.6,
+   "pp": 39.5,
    "paper": 0.3
   },
   "co2_kg": 0.076,
@@ -141,7 +141,7 @@
     0,
     0.0
    ],
-   "mass": 6.1,
+   "mass": 6,
    "materials": [
     [
      "pp",
@@ -163,62 +163,226 @@
      "x": 6,
      "y": 6,
      "w": 118,
-     "fill": "#5A4636"
+     "fill": "#1C1D1F"
+    },
+    {
+     "shape": "cyl",
+     "x": 20,
+     "y": 26,
+     "w": 90,
+     "d": 86,
+     "fill": "#252628"
+    },
+    {
+     "shape": "cyl",
+     "x": 60,
+     "y": 64,
+     "w": 10,
+     "fill": "#0E0F10"
+    },
+    {
+     "shape": "cyl",
+     "x": 38,
+     "y": 64,
+     "w": 8,
+     "fill": "#0E0F10"
+    },
+    {
+     "shape": "cyl",
+     "x": 84,
+     "y": 64,
+     "w": 8,
+     "fill": "#0E0F10"
+    },
+    {
+     "shape": "cyl",
+     "x": 61,
+     "y": 42,
+     "w": 8,
+     "fill": "#0E0F10"
+    },
+    {
+     "shape": "cyl",
+     "x": 61,
+     "y": 86,
+     "w": 8,
+     "fill": "#0E0F10"
+    },
+    {
+     "shape": "box",
+     "x": 62,
+     "y": 9,
+     "w": 5,
+     "d": 5,
+     "r": 1.5,
+     "fill": "#3B3D40"
+    },
+    {
+     "shape": "box",
+     "x": 62,
+     "y": 116,
+     "w": 5,
+     "d": 5,
+     "r": 1.5,
+     "fill": "#3B3D40"
+    },
+    {
+     "shape": "box",
+     "x": 9,
+     "y": 62,
+     "w": 5,
+     "d": 5,
+     "r": 1.5,
+     "fill": "#3B3D40"
+    },
+    {
+     "shape": "box",
+     "x": 116,
+     "y": 62,
+     "w": 5,
+     "d": 5,
+     "r": 1.5,
+     "fill": "#3B3D40"
     }
    ]
   },
   {
-   "id": "wand_oben",
+   "id": "wand0",
    "component_id": "pp_plant_pot",
    "material_id": "pp",
-   "name": "Topfwand oben",
+   "name": "Topfwand",
    "short": "Wand",
    "shape": "cyl",
    "x": 3,
    "y": 3,
    "w": 124,
-   "z": 60,
-   "h": 52,
+   "z": 92,
+   "h": 20,
    "explode": [
     0,
     0,
     0.0
    ],
-   "mass": 14.2,
+   "mass": 5.5,
    "materials": [
     [
      "pp",
      100
     ]
    ],
-   "info": "PP, Recyclingcode 5. Erde ausklopfen, dann in die Gelbe Tonne. Schwarze Töpfe erkennt die Sortieranlage oft nicht, besser sind graue, braune oder bunte Töpfe.",
-   "color": "#2E2F31"
+   "info": "PP, Recyclingcode 5. Erde ausklopfen, dann in die Gelbe Tonne. Die Wand wird nach unten enger, so rutscht der Wurzelballen leicht heraus.",
+   "color": "#2E2F31",
+   "label": true
   },
   {
-   "id": "wand_unten",
+   "id": "wand1",
    "component_id": "pp_plant_pot",
    "material_id": "pp",
-   "name": "Topfwand unten",
+   "name": "Topfwand",
    "short": "Wand",
    "shape": "cyl",
-   "x": 10,
-   "y": 10,
-   "w": 110,
-   "z": 5,
-   "h": 55,
+   "x": 6,
+   "y": 6,
+   "w": 118,
+   "z": 72,
+   "h": 20,
    "explode": [
     0,
     0,
     0.0
    ],
-   "mass": 13.2,
+   "mass": 5.5,
    "materials": [
     [
      "pp",
      100
     ]
    ],
-   "info": "Die Wand wird nach unten enger, so rutscht der Wurzelballen beim Umtopfen leicht heraus.",
+   "info": "PP, Recyclingcode 5. Erde ausklopfen, dann in die Gelbe Tonne. Die Wand wird nach unten enger, so rutscht der Wurzelballen leicht heraus.",
+   "color": "#2E2F31",
+   "label": false
+  },
+  {
+   "id": "wand2",
+   "component_id": "pp_plant_pot",
+   "material_id": "pp",
+   "name": "Topfwand",
+   "short": "Wand",
+   "shape": "cyl",
+   "x": 9,
+   "y": 9,
+   "w": 112,
+   "z": 52,
+   "h": 20,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 5.5,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "PP, Recyclingcode 5. Erde ausklopfen, dann in die Gelbe Tonne. Die Wand wird nach unten enger, so rutscht der Wurzelballen leicht heraus.",
+   "color": "#2E2F31",
+   "label": false
+  },
+  {
+   "id": "wand3",
+   "component_id": "pp_plant_pot",
+   "material_id": "pp",
+   "name": "Topfwand",
+   "short": "Wand",
+   "shape": "cyl",
+   "x": 12,
+   "y": 12,
+   "w": 106,
+   "z": 32,
+   "h": 20,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 5.5,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "PP, Recyclingcode 5. Erde ausklopfen, dann in die Gelbe Tonne. Die Wand wird nach unten enger, so rutscht der Wurzelballen leicht heraus.",
+   "color": "#2E2F31",
+   "label": false
+  },
+  {
+   "id": "wand4",
+   "component_id": "pp_plant_pot",
+   "material_id": "pp",
+   "name": "Topfwand",
+   "short": "Wand",
+   "shape": "cyl",
+   "x": 15,
+   "y": 15,
+   "w": 100,
+   "z": 5,
+   "h": 27,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 5.5,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "PP, Recyclingcode 5. Erde ausklopfen, dann in die Gelbe Tonne. Die Wand wird nach unten enger, so rutscht der Wurzelballen leicht heraus.",
    "color": "#2E2F31",
    "label": false
   },
@@ -239,52 +403,16 @@
     0,
     0.0
    ],
-   "mass": 6.1,
+   "mass": 6,
    "materials": [
     [
      "pp",
      100
     ]
    ],
-   "info": "Mehrere Löcher lassen überschüssiges Gießwasser ablaufen, damit die Wurzeln nicht faulen.",
+   "info": "Mehrere Löcher lassen überschüssiges Gießwasser ablaufen, damit die Wurzeln nicht faulen. Schwarze Töpfe erkennt die Sortieranlage oft nicht, besser sind graue, braune oder bunte.",
    "color": "#2E2F31",
-   "marks": [
-    {
-     "shape": "cyl",
-     "x": 43,
-     "y": 43,
-     "w": 10,
-     "fill": "#151617"
-    },
-    {
-     "shape": "cyl",
-     "x": 20,
-     "y": 43,
-     "w": 8,
-     "fill": "#151617"
-    },
-    {
-     "shape": "cyl",
-     "x": 68,
-     "y": 43,
-     "w": 8,
-     "fill": "#151617"
-    },
-    {
-     "shape": "cyl",
-     "x": 44,
-     "y": 20,
-     "w": 8,
-     "fill": "#151617"
-    },
-    {
-     "shape": "cyl",
-     "x": 44,
-     "y": 68,
-     "w": 8,
-     "fill": "#151617"
-    }
-   ]
+   "label": false
   },
   {
    "id": "etikett",
@@ -293,12 +421,12 @@
    "name": "Preisetikett",
    "short": "Etikett",
    "shape": "box",
-   "x": 127,
-   "y": 50,
+   "x": 124,
+   "y": 53,
    "w": 0.3,
-   "d": 30,
-   "z": 70,
-   "h": 25,
+   "d": 24,
+   "z": 60,
+   "h": 22,
    "r": 0,
    "explode": [
     40,
@@ -322,7 +450,18 @@
    ],
    "info": "Aufkleber aus Papier. Darf dranbleiben, er stört das Recycling kaum.",
    "color": "#F4E04D",
-   "sortBias": 100
+   "sortBias": 100,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 3,
+     "w": 0.3,
+     "d": 18,
+     "r": 0,
+     "fill": "#3A3F44"
+    }
+   ]
   }
  ]
 }

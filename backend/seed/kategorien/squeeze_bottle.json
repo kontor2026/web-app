@@ -36,17 +36,22 @@
   }
  ],
  "rohstoffe": {
-  "metalle_mg": {},
-  "herkunft": {},
-  "materialien_g": {
-   "pp": 29.4,
-   "silicone": 0.5
+  "metalle_mg": {
+   "Al": 200.0
   },
-  "co2_kg": 0.06,
+  "herkunft": {
+   "Al": "Modellmassen (Schätzung)"
+  },
+  "materialien_g": {
+   "pp": 29.1,
+   "silicone": 0.5,
+   "aluminium": 0.2
+  },
+  "co2_kg": 0.062,
   "co2_mit_recyclat_kg": 0.012,
-  "co2_ersparnis_kg": 0.048,
+  "co2_ersparnis_kg": 0.05,
   "co2_ohne_faktor": [],
-  "rohstoffwert_eur": 0,
+  "rohstoffwert_eur": 0.0,
   "wert_ohne_preis": [],
   "preisstand": "2026-11-13",
   "quellen": {
@@ -139,7 +144,7 @@
    "explode": [
     0,
     0,
-    56.0
+    70.4
    ],
    "mass": 2,
    "materials": [
@@ -184,7 +189,7 @@
    "explode": [
     0,
     0,
-    46.0
+    60.4
    ],
    "mass": 0.5,
    "materials": [
@@ -221,7 +226,7 @@
    "component_id": "pp_flip_cap",
    "material_id": "pp",
    "name": "Deckel-Unterteil",
-   "short": "Deckelunterteil",
+   "short": "Unterteil",
    "shape": "cyl",
    "x": 14,
    "y": 6.5,
@@ -231,7 +236,7 @@
    "explode": [
     0,
     0,
-    26.0
+    40.4
    ],
    "mass": 4.1,
    "materials": [
@@ -256,6 +261,60 @@
      "y": 13,
      "w": 6,
      "fill": "#1F2A33"
+    }
+   ]
+  },
+  {
+   "id": "siegel",
+   "component_id": "squeeze_bottle_body",
+   "material_id": "aluminium",
+   "name": "Siegelfolie",
+   "short": "Siegelfolie",
+   "shape": "cyl",
+   "x": 19,
+   "y": 11.5,
+   "w": 22,
+   "z": 164,
+   "h": 0.4,
+   "explode": [
+    0,
+    0,
+    14.0
+   ],
+   "mass": 0.2,
+   "materials": [
+    [
+     "alu",
+     60
+    ],
+    [
+     "pet",
+     25
+    ],
+    [
+     "klebstoff",
+     15
+    ]
+   ],
+   "info": "Aufgesiegelte Folie unter dem Deckel, die die Flasche bis zum ersten Öffnen dicht hält. Abziehen und in die Gelbe Tonne.",
+   "color": "#D5D9DD",
+   "sortBias": -8,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 3,
+     "w": 16,
+     "fill": "#C3C8CD"
+    },
+    {
+     "shape": "box",
+     "x": 15.5,
+     "y": 9,
+     "w": 5,
+     "d": 4,
+     "r": 1,
+     "fill": "#AEB4BA"
     }
    ]
   },
@@ -325,6 +384,82 @@
    "label": false
   },
   {
+   "id": "rumpf_oben",
+   "component_id": "squeeze_bottle_body",
+   "material_id": "pp",
+   "name": "Flaschenkörper oben",
+   "short": "Flasche",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 60,
+   "d": 45,
+   "z": 120,
+   "h": 20,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 2.5,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Oberer Teil des Körpers über dem Etikett.",
+   "color": "#E9E2D8",
+   "label": false
+  },
+  {
+   "id": "etikett",
+   "component_id": "plastic_label",
+   "material_id": "pp",
+   "name": "Etiketten vorne und hinten",
+   "short": "Etikett",
+   "shape": "cyl",
+   "x": -0.4,
+   "y": -0.4,
+   "w": 60.8,
+   "d": 45.8,
+   "z": 28,
+   "h": 92,
+   "explode": [
+    80,
+    0,
+    0
+   ],
+   "mass": 1.8,
+   "materials": [
+    [
+     "pp",
+     92
+    ],
+    [
+     "druck",
+     5
+    ],
+    [
+     "klebstoff",
+     3
+    ]
+   ],
+   "info": "Bedruckte PP-Folie mit Name, Zutaten und Nährwerten. Gleicher Kunststoff wie die Flasche, darf also dranbleiben.",
+   "color": "#C8302C",
+   "sortBias": 1,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0.4,
+     "y": 0.4,
+     "w": 60,
+     "d": 45,
+     "fill": "#E9E2D8"
+    }
+   ]
+  },
+  {
    "id": "rumpf",
    "component_id": "squeeze_bottle_body",
    "material_id": "pp",
@@ -336,13 +471,13 @@
    "w": 60,
    "d": 45,
    "z": 6,
-   "h": 134,
+   "h": 114,
    "explode": [
     0,
     0,
     0.0
    ],
-   "mass": 15.4,
+   "mass": 12.7,
    "materials": [
     [
      "pp",
@@ -370,7 +505,7 @@
     0,
     0.0
    ],
-   "mass": 2.6,
+   "mass": 2.5,
    "materials": [
     [
      "pp",
@@ -379,82 +514,6 @@
    ],
    "info": "Standboden mit Recyclingzeichen 5 für PP.",
    "color": "#E9E2D8",
-   "label": false
-  },
-  {
-   "id": "etikett_vorne",
-   "component_id": "plastic_label",
-   "material_id": "pp",
-   "name": "Etikett vorne",
-   "short": "Etikett",
-   "shape": "box",
-   "x": 60,
-   "y": 8,
-   "w": 0.3,
-   "d": 29,
-   "z": 20,
-   "h": 100,
-   "r": 0,
-   "explode": [
-    45,
-    0,
-    0
-   ],
-   "mass": 1,
-   "materials": [
-    [
-     "pp",
-     92
-    ],
-    [
-     "druck",
-     5
-    ],
-    [
-     "klebstoff",
-     3
-    ]
-   ],
-   "info": "Bedruckte PP-Folie, passt zur Flasche und darf dranbleiben.",
-   "color": "#C8302C",
-   "sortBias": 100
-  },
-  {
-   "id": "etikett_hinten",
-   "component_id": "plastic_label",
-   "material_id": "pp",
-   "name": "Etikett hinten",
-   "short": "Etikett",
-   "shape": "box",
-   "x": -0.3,
-   "y": 8,
-   "w": 0.3,
-   "d": 29,
-   "z": 20,
-   "h": 90,
-   "r": 0,
-   "explode": [
-    -45,
-    0,
-    0
-   ],
-   "mass": 0.8,
-   "materials": [
-    [
-     "pp",
-     92
-    ],
-    [
-     "druck",
-     5
-    ],
-    [
-     "klebstoff",
-     3
-    ]
-   ],
-   "info": "Rückseite mit Zutaten und Nährwerten.",
-   "color": "#F2EEE6",
    "label": false
   }
  ]

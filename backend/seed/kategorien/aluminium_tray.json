@@ -37,18 +37,18 @@
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Al": 11200.0
+   "Al": 11500.0
   },
   "herkunft": {
    "Al": "Modellmassen (Schätzung)"
   },
   "materialien_g": {
-   "aluminium": 11.2,
-   "paper_plastic_composite": 3.8
+   "aluminium": 11.5,
+   "paper_plastic_composite": 3.5
   },
-  "co2_kg": 0.135,
+  "co2_kg": 0.139,
   "co2_mit_recyclat_kg": 0.008,
-  "co2_ersparnis_kg": 0.127,
+  "co2_ersparnis_kg": 0.131,
   "co2_ohne_faktor": [],
   "rohstoffwert_eur": 0.03,
   "wert_ohne_preis": [],
@@ -139,30 +139,26 @@
    "y": 4,
    "w": 192,
    "d": 142,
-   "z": 38,
-   "h": 1.5,
+   "z": 38.6,
+   "h": 0.9,
    "r": 8,
    "explode": [
     0,
     0,
-    71.0
+    115.0
    ],
-   "mass": 3.8,
+   "mass": 3.5,
    "materials": [
     [
      "papier",
-     80
-    ],
-    [
-     "ldpe",
-     15
+     92
     ],
     [
      "druck",
-     5
+     8
     ]
    ],
-   "info": "Karton, innen mit Kunststoff oder Alu beschichtet, damit er nicht durchweicht. In den Restmüll.",
+   "info": "Weißer Karton mit Beschriftungsfeld. Weil er innen beschichtet ist, gehört er nicht ins Altpapier, sondern in den Restmüll.",
    "color": "#E8E2D5",
    "marks": [
     {
@@ -191,6 +187,93 @@
      "d": 6,
      "r": 0,
      "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 20,
+     "y": 62,
+     "w": 120,
+     "d": 1.2,
+     "r": 0,
+     "fill": "#9A958C"
+    },
+    {
+     "shape": "box",
+     "x": 20,
+     "y": 80,
+     "w": 120,
+     "d": 1.2,
+     "r": 0,
+     "fill": "#9A958C"
+    },
+    {
+     "shape": "box",
+     "x": 20,
+     "y": 98,
+     "w": 120,
+     "d": 1.2,
+     "r": 0,
+     "fill": "#9A958C"
+    },
+    {
+     "shape": "cyl",
+     "x": 152,
+     "y": 96,
+     "w": 22,
+     "d": 22,
+     "fill": "#D7D2C6"
+    },
+    {
+     "shape": "cyl",
+     "x": 157,
+     "y": 101,
+     "w": 12,
+     "d": 12,
+     "fill": "#F4F2EE"
+    }
+   ]
+  },
+  {
+   "id": "beschichtung",
+   "component_id": "cardboard_lid",
+   "material_id": "aluminium",
+   "name": "Innenbeschichtung des Deckels",
+   "short": "Beschichtung",
+   "shape": "box",
+   "x": 4,
+   "y": 4,
+   "w": 192,
+   "d": 142,
+   "z": 38,
+   "h": 0.6,
+   "r": 8,
+   "explode": [
+    0,
+    0,
+    85.0
+   ],
+   "mass": 1,
+   "materials": [
+    [
+     "alu",
+     55
+    ],
+    [
+     "ldpe",
+     45
+    ]
+   ],
+   "info": "Hauchdünne Alu- oder PE-Schicht auf der Unterseite des Deckels. Sie hält Fett und Dampf ab und lässt sich nicht vom Karton lösen.",
+   "color": "#D9DDE1",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 6,
+     "y": 6,
+     "w": 180,
+     "d": 130,
+     "r": 6,
+     "fill": "#E6E9EC"
     }
    ]
   },
@@ -206,23 +289,41 @@
    "w": 200,
    "d": 150,
    "z": 36,
-   "h": 3,
+   "h": 2,
    "r": 10,
    "explode": [
     0,
     0,
     0.0
    ],
-   "mass": 2.3,
+   "mass": 2.2,
    "materials": [
     [
      "alu",
      100
     ]
    ],
-   "info": "Breiter, gerollter Rand. Er wird über den Deckel gedrückt und hält ihn fest.",
+   "info": "Breiter, gerollter Rand. Er wird über den Deckel gedrückt und hält ihn fest. Vorsicht, die Kante kann scharf sein.",
    "color": "#C9CED3",
    "marks": [
+    {
+     "shape": "box",
+     "x": 1.5,
+     "y": 1.5,
+     "w": 197,
+     "d": 147,
+     "r": 9,
+     "fill": "#B7BDC3"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 3,
+     "w": 194,
+     "d": 144,
+     "r": 8,
+     "fill": "#C9CED3"
+    },
     {
      "shape": "box",
      "x": 7,
@@ -231,6 +332,141 @@
      "d": 136,
      "r": 8,
      "fill": "#8E959C"
+    },
+    {
+     "shape": "box",
+     "x": 20,
+     "y": 20,
+     "w": 160,
+     "d": 110,
+     "r": 10,
+     "fill": "#9AA1A8"
+    },
+    {
+     "shape": "box",
+     "x": 30,
+     "y": 30,
+     "w": 140,
+     "d": 4,
+     "r": 2,
+     "fill": "#868D94"
+    },
+    {
+     "shape": "box",
+     "x": 30,
+     "y": 48,
+     "w": 140,
+     "d": 4,
+     "r": 2,
+     "fill": "#868D94"
+    },
+    {
+     "shape": "box",
+     "x": 30,
+     "y": 66,
+     "w": 140,
+     "d": 4,
+     "r": 2,
+     "fill": "#868D94"
+    },
+    {
+     "shape": "box",
+     "x": 30,
+     "y": 84,
+     "w": 140,
+     "d": 4,
+     "r": 2,
+     "fill": "#868D94"
+    },
+    {
+     "shape": "box",
+     "x": 30,
+     "y": 102,
+     "w": 140,
+     "d": 4,
+     "r": 2,
+     "fill": "#868D94"
+    },
+    {
+     "shape": "box",
+     "x": 30,
+     "y": 120,
+     "w": 140,
+     "d": 4,
+     "r": 2,
+     "fill": "#868D94"
+    },
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 4,
+     "w": 5,
+     "d": 1.2,
+     "r": 0,
+     "fill": "#A9AFB5"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 2,
+     "w": 1.2,
+     "d": 5,
+     "r": 0,
+     "fill": "#A9AFB5"
+    },
+    {
+     "shape": "box",
+     "x": 193,
+     "y": 4,
+     "w": 5,
+     "d": 1.2,
+     "r": 0,
+     "fill": "#A9AFB5"
+    },
+    {
+     "shape": "box",
+     "x": 194.8,
+     "y": 2,
+     "w": 1.2,
+     "d": 5,
+     "r": 0,
+     "fill": "#A9AFB5"
+    },
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 144.8,
+     "w": 5,
+     "d": 1.2,
+     "r": 0,
+     "fill": "#A9AFB5"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 143,
+     "w": 1.2,
+     "d": 5,
+     "r": 0,
+     "fill": "#A9AFB5"
+    },
+    {
+     "shape": "box",
+     "x": 193,
+     "y": 144.8,
+     "w": 5,
+     "d": 1.2,
+     "r": 0,
+     "fill": "#A9AFB5"
+    },
+    {
+     "shape": "box",
+     "x": 194.8,
+     "y": 143,
+     "w": 1.2,
+     "d": 5,
+     "r": 0,
+     "fill": "#A9AFB5"
     }
    ]
   },
@@ -253,7 +489,7 @@
     0,
     0.0
    ],
-   "mass": 4.7,
+   "mass": 4.4,
    "materials": [
     [
      "alu",
@@ -283,7 +519,7 @@
     0,
     0.0
    ],
-   "mass": 4.2,
+   "mass": 3.9,
    "materials": [
     [
      "alu",

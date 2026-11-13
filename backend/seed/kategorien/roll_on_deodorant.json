@@ -39,7 +39,7 @@
   "metalle_mg": {},
   "herkunft": {},
   "materialien_g": {
-   "pp": 33.0,
+   "pp": 33.1,
    "ldpe": 2.0
   },
   "co2_kg": 0.068,
@@ -139,9 +139,9 @@
    "explode": [
     0,
     0,
-    87.0
+    105.0
    ],
-   "mass": 7,
+   "mass": 6.9,
    "materials": [
     [
      "pp",
@@ -153,15 +153,85 @@
    "marks": [
     {
      "shape": "cyl",
+     "x": 2,
+     "y": 2,
+     "w": 41,
+     "fill": "#1A4F95"
+    },
+    {
+     "shape": "cyl",
      "x": 5,
      "y": 5,
      "w": 35,
      "fill": "#2A6BBE"
+    },
+    {
+     "shape": "cyl",
+     "x": 15,
+     "y": 15,
+     "w": 15,
+     "fill": "#E8EEF6"
     }
    ]
   },
   {
-   "id": "kugel",
+   "id": "kugel0",
+   "component_id": "roller_ball",
+   "material_id": "pp",
+   "name": "Rollkugel",
+   "short": "Kugel",
+   "shape": "cyl",
+   "x": 15.5,
+   "y": 15.5,
+   "w": 14,
+   "z": 107,
+   "h": 5,
+   "explode": [
+    0,
+    0,
+    47.0
+   ],
+   "mass": 0.6,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Hohlkugel aus PP, die beim Rollen das Deo aufträgt. Sie sitzt stramm im Kugelhalter.",
+   "color": "#FFFFFF",
+   "label": false
+  },
+  {
+   "id": "kugel1",
+   "component_id": "roller_ball",
+   "material_id": "pp",
+   "name": "Rollkugel",
+   "short": "Kugel",
+   "shape": "cyl",
+   "x": 12,
+   "y": 12,
+   "w": 21,
+   "z": 102,
+   "h": 5,
+   "explode": [
+    0,
+    0,
+    47.0
+   ],
+   "mass": 0.6,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Hohlkugel aus PP, die beim Rollen das Deo aufträgt. Sie sitzt stramm im Kugelhalter.",
+   "color": "#FFFFFF",
+   "label": false
+  },
+  {
+   "id": "kugel2",
    "component_id": "roller_ball",
    "material_id": "pp",
    "name": "Rollkugel",
@@ -170,36 +240,86 @@
    "x": 10,
    "y": 10,
    "w": 25,
-   "z": 87,
-   "h": 25,
+   "z": 97,
+   "h": 5,
    "explode": [
     0,
     0,
-    35.0
+    47.0
    ],
-   "mass": 3,
+   "mass": 0.6,
    "materials": [
     [
      "pp",
      100
     ]
    ],
-   "info": "Hohlkugel aus PP, die beim Rollen das Deo aufträgt.",
+   "info": "Hohlkugel aus PP, die beim Rollen das Deo aufträgt. Sie sitzt stramm im Kugelhalter.",
    "color": "#FFFFFF",
+   "label": true
+  },
+  {
+   "id": "kugel3",
+   "component_id": "roller_ball",
+   "material_id": "pp",
+   "name": "Rollkugel",
+   "short": "Kugel",
+   "shape": "cyl",
+   "x": 12,
+   "y": 12,
+   "w": 21,
+   "z": 92,
+   "h": 5,
+   "explode": [
+    0,
+    0,
+    47.0
+   ],
+   "mass": 0.6,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Hohlkugel aus PP, die beim Rollen das Deo aufträgt. Sie sitzt stramm im Kugelhalter.",
+   "color": "#FFFFFF",
+   "label": false
+  },
+  {
+   "id": "kugel4",
+   "component_id": "roller_ball",
+   "material_id": "pp",
+   "name": "Rollkugel",
+   "short": "Kugel",
+   "shape": "cyl",
+   "x": 15.5,
+   "y": 15.5,
+   "w": 14,
+   "z": 87,
+   "h": 5,
+   "explode": [
+    0,
+    0,
+    47.0
+   ],
+   "mass": 0.6,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Hohlkugel aus PP, die beim Rollen das Deo aufträgt. Sie sitzt stramm im Kugelhalter.",
+   "color": "#FFFFFF",
+   "label": false,
    "marks": [
     {
      "shape": "cyl",
-     "x": 3,
-     "y": 3,
-     "w": 19,
-     "fill": "#F2F2EE"
-    },
-    {
-     "shape": "cyl",
-     "x": 7,
-     "y": 6,
-     "w": 7,
-     "fill": "#FAFAF8"
+     "x": 3.5,
+     "y": 2.8000000000000003,
+     "w": 4.2,
+     "fill": "#F7F7F4"
     }
    ]
   },
@@ -218,7 +338,7 @@
    "explode": [
     0,
     0,
-    16.0
+    22.0
    ],
    "mass": 2,
    "materials": [
@@ -236,6 +356,13 @@
      "y": 2.5,
      "w": 25,
      "fill": "#C9CED3"
+    },
+    {
+     "shape": "cyl",
+     "x": 5,
+     "y": 5,
+     "w": 20,
+     "fill": "#9EA6AE"
     }
    ]
   },
@@ -304,6 +431,51 @@
    "label": false
   },
   {
+   "id": "etikett",
+   "component_id": "deodorant_bottle",
+   "material_id": "pp",
+   "name": "Bedrucktes Etikett",
+   "short": "Etikett",
+   "shape": "cyl",
+   "x": 1.2,
+   "y": 1.2,
+   "w": 42.6,
+   "z": 10,
+   "h": 56,
+   "explode": [
+    60,
+    0,
+    0
+   ],
+   "mass": 0.6,
+   "materials": [
+    [
+     "pp",
+     85
+    ],
+    [
+     "druck",
+     10
+    ],
+    [
+     "klebstoff",
+     5
+    ]
+   ],
+   "info": "Dünne Folie aus dem gleichen Kunststoff wie die Flasche. Sie darf dranbleiben, das stört das Recycling nicht.",
+   "color": "#7FA8D8",
+   "sortBias": 1,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0.3,
+     "y": 0.3,
+     "w": 42,
+     "fill": "#EEF3F8"
+    }
+   ]
+  },
+  {
    "id": "rumpf",
    "component_id": "deodorant_bottle",
    "material_id": "pp",
@@ -320,7 +492,7 @@
     0,
     0.0
    ],
-   "mass": 15,
+   "mass": 14.7,
    "materials": [
     [
      "pp",
@@ -347,7 +519,7 @@
     0,
     0.0
    ],
-   "mass": 3,
+   "mass": 2.9,
    "materials": [
     [
      "pp",

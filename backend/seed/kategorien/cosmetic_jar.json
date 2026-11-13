@@ -21,32 +21,37 @@
  "werte": [
   {
    "k": "Rohstoffwert",
-   "v": "< 0,01 €",
+   "v": "≈ 0,02 €",
    "hint": "Kaum Metalle enthalten."
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 0,15 kg",
+   "v": "≈ 0,23 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
    "k": "mit Recyclat",
    "v": "≈ 0,02 kg",
-   "hint": "spart 0,13 kg, wenn recycelte Materialien eingesetzt werden"
+   "hint": "spart 0,21 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
-  "metalle_mg": {},
-  "herkunft": {},
+  "metalle_mg": {
+   "Al": 8000.0
+  },
+  "herkunft": {
+   "Al": "Modellmassen (Schätzung)"
+  },
   "materialien_g": {
-   "pp": 78.0,
+   "pp": 70.0,
+   "aluminium": 8.0,
    "ldpe": 2.0
   },
-  "co2_kg": 0.154,
-  "co2_mit_recyclat_kg": 0.022,
-  "co2_ersparnis_kg": 0.132,
+  "co2_kg": 0.234,
+  "co2_mit_recyclat_kg": 0.024,
+  "co2_ersparnis_kg": 0.21,
   "co2_ohne_faktor": [],
-  "rohstoffwert_eur": 0,
+  "rohstoffwert_eur": 0.02,
   "wert_ohne_preis": [],
   "preisstand": "2026-11-13",
   "quellen": {
@@ -125,11 +130,11 @@
  "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "deckel",
+   "id": "huelle",
    "component_id": "pp_lid",
-   "material_id": "pp",
-   "name": "Schraubdeckel",
-   "short": "Deckel",
+   "material_id": "aluminium",
+   "name": "Zierhülle des Deckels",
+   "short": "Zierhülle",
    "shape": "cyl",
    "x": 0,
    "y": 0,
@@ -139,24 +144,79 @@
    "explode": [
     0,
     0,
-    84.5
+    190.5
    ],
-   "mass": 22,
+   "mass": 8,
    "materials": [
     [
-     "pp",
-     100
+     "alu",
+     90
+    ],
+    [
+     "druck",
+     10
     ]
    ],
-   "info": "Dickwandiger PP-Deckel mit Innengewinde. Abschrauben, beides kommt in die Gelbe Tonne.",
+   "info": "Dünne, gold eloxierte Aluminiumhülle, die über den Kunststoffdeckel gepresst ist. Lässt sie sich abziehen, kommt sie getrennt in die Gelbe Tonne.",
    "color": "#C9A646",
    "marks": [
+    {
+     "shape": "cyl",
+     "x": 2,
+     "y": 2,
+     "w": 56,
+     "fill": "#B8963A"
+    },
     {
      "shape": "cyl",
      "x": 4,
      "y": 4,
      "w": 52,
      "fill": "#D8B85A"
+    },
+    {
+     "shape": "cyl",
+     "x": 20,
+     "y": 20,
+     "w": 20,
+     "fill": "#E6CB78"
+    }
+   ]
+  },
+  {
+   "id": "deckel",
+   "component_id": "pp_lid",
+   "material_id": "pp",
+   "name": "Innendeckel mit Gewinde",
+   "short": "Innendeckel",
+   "shape": "cyl",
+   "x": 1.5,
+   "y": 1.5,
+   "w": 57,
+   "z": 30.5,
+   "h": 14,
+   "explode": [
+    0,
+    0,
+    148.0
+   ],
+   "mass": 13.9,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Dickwandiger PP-Deckel mit Innengewinde. Abschrauben, er kommt in die Gelbe Tonne.",
+   "color": "#F2F0EC",
+   "sortBias": -3,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 3,
+     "w": 51,
+     "fill": "#E2DFD8"
     }
    ]
   },
@@ -175,7 +235,7 @@
    "explode": [
     0,
     0,
-    58.5
+    106.5
    ],
    "mass": 1,
    "materials": [
@@ -185,7 +245,17 @@
     ]
    ],
    "info": "Weiche PE-Scheibe innen im Deckel, die den Tiegel dicht macht. Bleibt im Deckel.",
-   "color": "#ECECE8"
+   "color": "#ECECE8",
+   "sortBias": -3,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 6,
+     "y": 6,
+     "w": 42,
+     "fill": "#DCDCD6"
+    }
+   ]
   },
   {
    "id": "schutzscheibe",
@@ -202,7 +272,7 @@
    "explode": [
     0,
     0,
-    54.0
+    86.0
    ],
    "mass": 1,
    "materials": [
@@ -240,9 +310,9 @@
    "explode": [
     0,
     0,
-    40.0
+    56.0
    ],
-   "mass": 22,
+   "mass": 21.9,
    "materials": [
     [
      "pp",
@@ -251,6 +321,7 @@
    ],
    "info": "Eigentlicher Behälter für die Creme. Mit einem Spatel leer kratzen, Cremereste gehören in den Restmüll.",
    "color": "#F7F5F2",
+   "sortBias": -8,
    "marks": [
     {
      "shape": "cyl",
@@ -258,6 +329,13 @@
      "y": 3,
      "w": 44,
      "fill": "#E9E6E0"
+    },
+    {
+     "shape": "cyl",
+     "x": 5,
+     "y": 5,
+     "w": 40,
+     "fill": "#F3E3D3"
     }
    ]
   },
@@ -278,7 +356,7 @@
     0,
     0.0
    ],
-   "mass": 34,
+   "mass": 33.9,
    "materials": [
     [
      "pp",
@@ -294,6 +372,70 @@
      "y": 3,
      "w": 52,
      "fill": "#D9D1C4"
+    }
+   ]
+  },
+  {
+   "id": "bodenetikett",
+   "component_id": "pp_jar_body",
+   "material_id": "pp",
+   "name": "Bodenetikett",
+   "short": "Etikett",
+   "shape": "cyl",
+   "x": 10,
+   "y": 10,
+   "w": 40,
+   "z": -0.3,
+   "h": 0.3,
+   "explode": [
+    0,
+    0,
+    -35
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "papier",
+     70
+    ],
+    [
+     "druck",
+     15
+    ],
+    [
+     "klebstoff",
+     15
+    ]
+   ],
+   "info": "Klebeetikett mit Inhaltsstoffen und Haltbarkeit unter dem Boden. Es darf dranbleiben.",
+   "color": "#FFFFFF",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 6,
+     "y": 14,
+     "w": 28,
+     "d": 2,
+     "r": 0,
+     "fill": "#8A8A86"
+    },
+    {
+     "shape": "box",
+     "x": 6,
+     "y": 19,
+     "w": 28,
+     "d": 2,
+     "r": 0,
+     "fill": "#8A8A86"
+    },
+    {
+     "shape": "box",
+     "x": 6,
+     "y": 24,
+     "w": 20,
+     "d": 2,
+     "r": 0,
+     "fill": "#8A8A86"
     }
    ]
   }

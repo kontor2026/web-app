@@ -22,10 +22,16 @@ teile = [
          info='Weiche Membran mit Kreuzschlitz: Sie öffnet sich nur beim Drücken, danach tropft nichts nach. '
               'Bleibt im Deckel.',
          color='#E4E0D2', marks=[mark('box', 8.5, 4, 1, 10, 0, '#8A8478'), mark('box', 4, 8.5, 10, 1, 0, '#8A8478')]),
-    teil('deckel_unterteil', 'pp_flip_cap', 'Deckel-Unterteil', 'Deckelunterteil', 'cyl',
+    teil('deckel_unterteil', 'pp_flip_cap', 'Deckel-Unterteil', 'Unterteil', 'cyl',
          x=14, y=6.5, w=32, z=152, h=18, mass=4,
          info='Wird auf den Hals geschraubt. Der Deckel darf zum Entsorgen auf der Flasche bleiben.',
          color=DECKEL, marks=[mark('cyl', 8, 8, 16, fill='#A82623'), mark('cyl', 13, 13, 6, fill='#1F2A33')]),
+    teil('siegel', 'squeeze_bottle_body', 'Siegelfolie', 'Siegelfolie', 'cyl',
+         material_id='aluminium', x=19, y=11.5, w=22, z=164, h=0.4, mass=0.2,
+         materials=[['alu', 60], ['pet', 25], ['klebstoff', 15]], color='#D5D9DD', sortBias=-8,
+         info='Aufgesiegelte Folie unter dem Deckel, die die Flasche bis zum ersten Öffnen dicht hält. Abziehen '
+              'und in die Gelbe Tonne.',
+         marks=[mark('cyl', 3, 3, 16, fill='#C3C8CD'), mark('box', 15.5, 9, 5, 4, 1, '#AEB4BA')]),
     teil('hals', 'squeeze_bottle_body', 'Flaschenhals mit Gewinde', 'Hals', 'cyl',
          x=17, y=9.5, w=26, z=150, h=14, mass=1.5,
          info='Kurzer Gewindehals. Unter dem Deckel klebt beim Kauf oft eine Siegelfolie.',
@@ -33,24 +39,24 @@ teile = [
     teil('schulter', 'squeeze_bottle_body', 'Flaschenschulter', 'Schulter', 'cyl',
          x=8, y=6, w=44, d=33, z=140, h=10, mass=2,
          info='Übergang vom ovalen Körper zum runden Hals.', color=FLASCHE, label=False),
+    teil('rumpf_oben', 'squeeze_bottle_body', 'Flaschenkörper oben', 'Flasche', 'cyl',
+         x=0, y=0, w=60, d=45, z=120, h=20, mass=2.5, label=False,
+         info='Oberer Teil des Körpers über dem Etikett.', color=FLASCHE),
+    teil('etikett', 'plastic_label', 'Etiketten vorne und hinten', 'Etikett', 'cyl',
+         x=-0.4, y=-0.4, w=60.8, d=45.8, z=28, h=92, explode=[80, 0, 0], mass=1.8, sortBias=1,
+         materials=[['pp', 92], ['druck', 5], ['klebstoff', 3]], color=DECKEL,
+         info='Bedruckte PP-Folie mit Name, Zutaten und Nährwerten. Gleicher Kunststoff wie die Flasche, darf '
+              'also dranbleiben.',
+         marks=[mark('cyl', 0.4, 0.4, 60, 45, fill=FLASCHE)]),
     teil('rumpf', 'squeeze_bottle_body', 'Flaschenkörper', 'Flasche', 'cyl',
-         x=0, y=0, w=60, d=45, z=6, h=134, mass=15,
+         x=0, y=0, w=60, d=45, z=6, h=114, mass=12.5,
          info='Weiches PP, damit man sie gut drücken kann. Reste mit einem Löffelstiel herauskratzen, '
               'ausspülen ist nicht nötig. Mit Deckel in die Gelbe Tonne.',
          color=FLASCHE),
     teil('boden', 'squeeze_bottle_body', 'Flaschenboden', 'Boden', 'cyl',
          x=3, y=2, w=54, d=41, z=0, h=6, mass=2.5,
          info='Standboden mit Recyclingzeichen 5 für PP.', color=FLASCHE, label=False),
-    teil('etikett_vorne', 'plastic_label', 'Etikett vorne', 'Etikett', 'box',
-         x=60, y=8, w=0.3, d=29, z=20, h=100, r=0, explode=[45, 0, 0], mass=1,
-         materials=[['pp', 92], ['druck', 5], ['klebstoff', 3]],
-         info='Bedruckte PP-Folie, passt zur Flasche und darf dranbleiben.',
-         color=DECKEL, sortBias=100),
-    teil('etikett_hinten', 'plastic_label', 'Etikett hinten', 'Etikett', 'box',
-         x=-0.3, y=8, w=0.3, d=29, z=20, h=90, r=0, explode=[-45, 0, 0], mass=0.8,
-         materials=[['pp', 92], ['druck', 5], ['klebstoff', 3]], label=False,
-         info='Rückseite mit Zutaten und Nährwerten.', color='#F2EEE6'),
 ]
-explodiere(teile, abstand=14, nach_liste=True, gruppen=[['hals', 'schulter', 'rumpf', 'boden']])
+explodiere(teile, abstand=14, nach_liste=True, gruppen=[['hals', 'schulter', 'rumpf_oben', 'rumpf', 'boden']])
 skaliere_masse(teile, oid='squeeze_bottle')
 schreibe('squeeze_bottle', teile)

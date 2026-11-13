@@ -17,7 +17,7 @@
     0,
     0
    ],
-   "mass": 5,
+   "mass": 4.9,
    "materials": [
     [
      "pp",
@@ -41,6 +41,132 @@
    ]
   },
   {
+   "id": "spitze3",
+   "component_id": "lipstick_bullet",
+   "material_id": "paraffin_wax",
+   "name": "Schräge Spitze der Mine",
+   "short": "Mine",
+   "shape": "cyl",
+   "x": 4,
+   "y": 11.5,
+   "w": 12,
+   "d": 4.5,
+   "z": 72,
+   "h": 2,
+   "explode": [
+    0,
+    0,
+    103.0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "wachs",
+     100
+    ]
+   ],
+   "info": "Die Spitze ist schräg angeschnitten, damit man die Lippenränder genau trifft.",
+   "color": "#B3263E",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0.8,
+     "y": 0.6,
+     "w": 10.4,
+     "d": 3.3,
+     "fill": "#C93A52"
+    }
+   ]
+  },
+  {
+   "id": "spitze2",
+   "component_id": "lipstick_bullet",
+   "material_id": "paraffin_wax",
+   "name": "Schräge Spitze der Mine",
+   "short": "Mine",
+   "shape": "cyl",
+   "x": 4,
+   "y": 9.5,
+   "w": 12,
+   "d": 6.5,
+   "z": 70,
+   "h": 2,
+   "explode": [
+    0,
+    0,
+    103.0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "wachs",
+     100
+    ]
+   ],
+   "info": "Die Spitze ist schräg angeschnitten, damit man die Lippenränder genau trifft.",
+   "color": "#B3263E",
+   "label": false
+  },
+  {
+   "id": "spitze1",
+   "component_id": "lipstick_bullet",
+   "material_id": "paraffin_wax",
+   "name": "Schräge Spitze der Mine",
+   "short": "Mine",
+   "shape": "cyl",
+   "x": 4,
+   "y": 7.5,
+   "w": 12,
+   "d": 8.5,
+   "z": 68,
+   "h": 2,
+   "explode": [
+    0,
+    0,
+    103.0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "wachs",
+     100
+    ]
+   ],
+   "info": "Die Spitze ist schräg angeschnitten, damit man die Lippenränder genau trifft.",
+   "color": "#B3263E",
+   "label": false
+  },
+  {
+   "id": "spitze0",
+   "component_id": "lipstick_bullet",
+   "material_id": "paraffin_wax",
+   "name": "Schräge Spitze der Mine",
+   "short": "Mine",
+   "shape": "cyl",
+   "x": 4,
+   "y": 5.5,
+   "w": 12,
+   "d": 10.5,
+   "z": 66,
+   "h": 2,
+   "explode": [
+    0,
+    0,
+    103.0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "wachs",
+     100
+    ]
+   ],
+   "info": "Die Spitze ist schräg angeschnitten, damit man die Lippenränder genau trifft.",
+   "color": "#B3263E",
+   "label": false
+  },
+  {
    "id": "mine",
    "component_id": "lipstick_bullet",
    "material_id": "paraffin_wax",
@@ -51,28 +177,27 @@
    "y": 4,
    "w": 12,
    "z": 42,
-   "h": 30,
+   "h": 24,
    "explode": [
     0,
     0,
-    80.0
+    103.0
    ],
-   "mass": 3.8,
+   "mass": 3.1,
    "materials": [
     [
      "wachs",
      100
     ]
    ],
-   "info": "Wachs, Öle und Farbpigmente, schräg angeschnitten. Reste mit einem Wattestäbchen auskratzen und in den Restmüll geben.",
+   "info": "Wachs, Öle und Farbpigmente. Reste mit einem Wattestäbchen auskratzen und in den Restmüll geben.",
    "color": "#B3263E",
    "marks": [
     {
      "shape": "cyl",
-     "x": 1,
-     "y": 1,
-     "w": 10,
-     "d": 7,
+     "x": 0.8,
+     "y": 0.8,
+     "w": 10.4,
      "fill": "#C93A52"
     }
    ]
@@ -92,7 +217,7 @@
    "explode": [
     0,
     0,
-    66.0
+    89.0
    ],
    "mass": 0.8,
    "materials": [
@@ -103,6 +228,7 @@
    ],
    "info": "Kleiner Becher, in dem die Mine steckt. Zwei Zapfen greifen in die Spirale.",
    "color": "#C9A646",
+   "sortBias": -15,
    "marks": [
     {
      "shape": "cyl",
@@ -110,6 +236,24 @@
      "y": 0.5,
      "w": 12,
      "fill": "#B3263E"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 5.5,
+     "w": 1.5,
+     "d": 2,
+     "r": 0.5,
+     "fill": "#8F7530"
+    },
+    {
+     "shape": "box",
+     "x": 11.5,
+     "y": 5.5,
+     "w": 1.5,
+     "d": 2,
+     "r": 0.5,
+     "fill": "#8F7530"
     }
    ]
   },
@@ -128,9 +272,9 @@
    "explode": [
     0,
     0,
-    42.0
+    65.0
    ],
-   "mass": 3.5,
+   "mass": 3.4,
    "materials": [
     [
      "pp",
@@ -139,6 +283,7 @@
    ],
    "info": "Innenrohr mit Längsschlitz und Spirale: Dreht man das Unterteil, schraubt sich der Becher nach oben.",
    "color": "#D8D6CE",
+   "sortBias": -15,
    "marks": [
     {
      "shape": "cyl",
@@ -146,6 +291,88 @@
      "y": 1,
      "w": 12,
      "fill": "#B8B4AA"
+    }
+   ]
+  },
+  {
+   "id": "feder",
+   "component_id": "lipstick_case",
+   "material_id": "steel",
+   "name": "Klemmfeder",
+   "short": "Klemmfeder",
+   "shape": "cyl",
+   "x": 2.5,
+   "y": 2.5,
+   "w": 15,
+   "z": 40,
+   "h": 3,
+   "explode": [
+    0,
+    0,
+    20.0
+   ],
+   "mass": 0.4,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Kleiner Federring aus Stahl, der die Kappe festklemmt. Er ist magnetisch und wird in der Sortieranlage mit dem Magneten aussortiert.",
+   "color": "#9EA3A8",
+   "sortBias": -5,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 1.2,
+     "y": 1.2,
+     "w": 12.6,
+     "fill": "#D8D6CE"
+    },
+    {
+     "shape": "box",
+     "x": 6.5,
+     "y": 0,
+     "w": 2,
+     "d": 1.5,
+     "r": 0,
+     "fill": "#6E7378"
+    }
+   ]
+  },
+  {
+   "id": "zierring",
+   "component_id": "lipstick_case",
+   "material_id": "aluminium",
+   "name": "Zierring",
+   "short": "Zierring",
+   "shape": "cyl",
+   "x": 0.3,
+   "y": 0.3,
+   "w": 19.4,
+   "z": 36,
+   "h": 4,
+   "explode": [
+    0,
+    0,
+    10.0
+   ],
+   "mass": 0.6,
+   "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "info": "Glänzender Ring aus Aluminium als Schmuck und Anschlag für die Kappe. Er ist aufgepresst.",
+   "color": "#E2C766",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 1.5,
+     "y": 1.5,
+     "w": 16.4,
+     "fill": "#C9A646"
     }
    ]
   },
@@ -160,13 +387,13 @@
    "y": 0.5,
    "w": 19,
    "z": 0,
-   "h": 40,
+   "h": 36,
    "explode": [
     0,
     0,
     0.0
    ],
-   "mass": 7,
+   "mass": 6.3,
    "materials": [
     [
      "pp",
