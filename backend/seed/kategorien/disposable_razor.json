@@ -4,7 +4,7 @@
  "name_en": "Disposable Razor",
  "klasse": "Restmüll",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -26,31 +26,35 @@
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 0,04 kg",
+   "v": "≈ 0,03 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 0,01 kg",
+   "v": "≈ 0,00 kg",
    "hint": "spart 0,03 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Fe": 13867.0
+   "Fe": 529.0,
+   "Al": 100.0
   },
   "herkunft": {
-   "Fe": "Modellmassen (Schätzung)"
+   "Fe": "Modellmassen (Schätzung)",
+   "Al": "Modellmassen (Schätzung)"
   },
   "materialien_g": {
-   "steel": 14.2,
-   "pp": 0.8
+   "pp": 13.9,
+   "steel": 0.5,
+   "ps": 0.4,
+   "aluminium": 0.1
   },
-  "co2_kg": 0.037,
-  "co2_mit_recyclat_kg": 0.01,
-  "co2_ersparnis_kg": 0.027,
+  "co2_kg": 0.03,
+  "co2_mit_recyclat_kg": 0.004,
+  "co2_ersparnis_kg": 0.026,
   "co2_ohne_faktor": [],
-  "rohstoffwert_eur": 0,
+  "rohstoffwert_eur": 0.0,
   "wert_ohne_preis": [],
   "preisstand": "2026-11-13",
   "quellen": {
@@ -98,63 +102,502 @@
   "nicht": "Nicht in die Gelbe Tonne: keine Verpackung",
   "warnung": "Gut Erhaltenes lieber verschenken oder in der Werkstatt abgeben."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "razor_handle",
-   "component_id": "razor_handle",
-   "name": "Handle",
-   "short": "Handle",
+   "id": "gleitstreifen",
+   "component_id": "razor_blade_head",
+   "material_id": "ps",
+   "name": "Gleitstreifen",
+   "short": "Gleitstreifen",
    "shape": "box",
-   "x": 37.1,
-   "y": 7.0,
-   "w": 3.0,
-   "d": 126.0,
-   "h": 3.0,
-   "z": 2.0,
-   "r": 0.4,
+   "x": 3,
+   "y": 1,
+   "w": 29,
+   "d": 4.5,
+   "z": 14,
+   "h": 3,
+   "r": 1.5,
    "explode": [
-    27.2,
     0,
-    10.5
+    0,
+    10.0
    ],
-   "mass": 0.85,
+   "mass": 0.43,
    "materials": [
     [
-     "pp",
+     "ps",
      100
     ]
    ],
-   "material_id": "pp",
-   "info": "Snap the head off the handle."
+   "info": "Kunststoffstreifen mit Gleitmittel (z. B. Aloe Vera), das sich beim Nassrasieren löst. Wird er hell, ist der Rasierer verbraucht.",
+   "color": "#7FC7A8",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 1,
+     "w": 3,
+     "d": 2.5,
+     "r": 1,
+     "fill": "#A8DCC4"
+    },
+    {
+     "shape": "box",
+     "x": 5,
+     "y": 1,
+     "w": 3,
+     "d": 2.5,
+     "r": 1,
+     "fill": "#A8DCC4"
+    },
+    {
+     "shape": "box",
+     "x": 9,
+     "y": 1,
+     "w": 3,
+     "d": 2.5,
+     "r": 1,
+     "fill": "#A8DCC4"
+    },
+    {
+     "shape": "box",
+     "x": 13,
+     "y": 1,
+     "w": 3,
+     "d": 2.5,
+     "r": 1,
+     "fill": "#A8DCC4"
+    },
+    {
+     "shape": "box",
+     "x": 17,
+     "y": 1,
+     "w": 3,
+     "d": 2.5,
+     "r": 1,
+     "fill": "#A8DCC4"
+    },
+    {
+     "shape": "box",
+     "x": 21,
+     "y": 1,
+     "w": 3,
+     "d": 2.5,
+     "r": 1,
+     "fill": "#A8DCC4"
+    },
+    {
+     "shape": "box",
+     "x": 25,
+     "y": 1,
+     "w": 3,
+     "d": 2.5,
+     "r": 1,
+     "fill": "#A8DCC4"
+    }
+   ]
   },
   {
-   "id": "razor_blade_head",
+   "id": "klammer_l",
    "component_id": "razor_blade_head",
-   "name": "Blade Head",
-   "short": "Blade Head",
+   "material_id": "aluminium",
+   "name": "Halteklammer links",
+   "short": "Klammer",
    "shape": "box",
-   "x": 0,
-   "y": 0,
-   "w": 35.0,
-   "d": 140.0,
-   "h": 20.0,
-   "z": 0.0,
-   "r": 4.2,
+   "x": 0.5,
+   "y": 5,
+   "w": 2.5,
+   "d": 10,
+   "z": 13.5,
+   "h": 3.5,
+   "r": 0.8,
    "explode": [
     0,
     0,
-    0
+    10.5
    ],
-   "mass": 14.15,
+   "mass": 0.05,
+   "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "info": "Dünner Aluminiumbügel, der die Klingen im Kopf festhält.",
+   "color": "#B0B6BA"
+  },
+  {
+   "id": "klammer_r",
+   "component_id": "razor_blade_head",
+   "material_id": "aluminium",
+   "name": "Halteklammer rechts",
+   "short": "Klammer",
+   "shape": "box",
+   "x": 32,
+   "y": 5,
+   "w": 2.5,
+   "d": 10,
+   "z": 13.5,
+   "h": 3.5,
+   "r": 0.8,
+   "explode": [
+    0,
+    0,
+    10.5
+   ],
+   "mass": 0.05,
+   "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "info": "Gegenstück zur linken Halteklammer.",
+   "color": "#B0B6BA",
+   "label": false
+  },
+  {
+   "id": "klinge_1",
+   "component_id": "razor_blade_head",
+   "material_id": "steel",
+   "name": "Klinge vorne",
+   "short": "Klinge",
+   "shape": "box",
+   "x": 3,
+   "y": 6,
+   "w": 29,
+   "d": 3.5,
+   "z": 14,
+   "h": 0.6,
+   "r": 0.3,
+   "explode": [
+    0,
+    0,
+    10.0
+   ],
+   "mass": 0.27,
    "materials": [
     [
      "stahl",
      100
     ]
    ],
+   "info": "Hauchdünne Edelstahlklinge, extrem scharf. Den Rasierer nie zerlegen, sondern mit Schutzkappe oder in Klebeband gewickelt in den Restmüll geben.",
+   "color": "#C3C9CE",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 0,
+     "w": 29,
+     "d": 0.8,
+     "fill": "#E8ECEE"
+    }
+   ]
+  },
+  {
+   "id": "klinge_2",
+   "component_id": "razor_blade_head",
    "material_id": "steel",
-   "info": "Very sharp: wrap it in tape before putting it in residual waste."
+   "name": "Klinge hinten",
+   "short": "Klinge",
+   "shape": "box",
+   "x": 3,
+   "y": 10,
+   "w": 29,
+   "d": 3.5,
+   "z": 14,
+   "h": 0.6,
+   "r": 0.3,
+   "explode": [
+    0,
+    0,
+    10.0
+   ],
+   "mass": 0.27,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Zweite Klinge, sie schneidet das Haar ein zweites Mal etwas tiefer.",
+   "color": "#C3C9CE",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 0,
+     "w": 29,
+     "d": 0.8,
+     "fill": "#E8ECEE"
+    }
+   ]
+  },
+  {
+   "id": "schutzsteg",
+   "component_id": "razor_blade_head",
+   "material_id": "pp",
+   "name": "Schutzsteg mit Rippen",
+   "short": "Schutzsteg",
+   "shape": "box",
+   "x": 3,
+   "y": 15,
+   "w": 29,
+   "d": 4,
+   "z": 14,
+   "h": 2,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    10.0
+   ],
+   "mass": 0.32,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Gerippter Kunststoffsteg vor den Klingen. Er spannt die Haut, damit die Klingen nicht einschneiden.",
+   "color": "#1F4F86",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 0.5,
+     "w": 1,
+     "d": 3
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 0.5,
+     "w": 1,
+     "d": 3
+    },
+    {
+     "shape": "box",
+     "x": 5,
+     "y": 0.5,
+     "w": 1,
+     "d": 3
+    },
+    {
+     "shape": "box",
+     "x": 7,
+     "y": 0.5,
+     "w": 1,
+     "d": 3
+    },
+    {
+     "shape": "box",
+     "x": 9,
+     "y": 0.5,
+     "w": 1,
+     "d": 3
+    },
+    {
+     "shape": "box",
+     "x": 11,
+     "y": 0.5,
+     "w": 1,
+     "d": 3
+    },
+    {
+     "shape": "box",
+     "x": 13,
+     "y": 0.5,
+     "w": 1,
+     "d": 3
+    },
+    {
+     "shape": "box",
+     "x": 15,
+     "y": 0.5,
+     "w": 1,
+     "d": 3
+    },
+    {
+     "shape": "box",
+     "x": 17,
+     "y": 0.5,
+     "w": 1,
+     "d": 3
+    },
+    {
+     "shape": "box",
+     "x": 19,
+     "y": 0.5,
+     "w": 1,
+     "d": 3
+    },
+    {
+     "shape": "box",
+     "x": 21,
+     "y": 0.5,
+     "w": 1,
+     "d": 3
+    },
+    {
+     "shape": "box",
+     "x": 23,
+     "y": 0.5,
+     "w": 1,
+     "d": 3
+    },
+    {
+     "shape": "box",
+     "x": 25,
+     "y": 0.5,
+     "w": 1,
+     "d": 3
+    },
+    {
+     "shape": "box",
+     "x": 27,
+     "y": 0.5,
+     "w": 1,
+     "d": 3
+    }
+   ]
+  },
+  {
+   "id": "kopf",
+   "component_id": "razor_blade_head",
+   "material_id": "pp",
+   "name": "Klingenkopf",
+   "short": "Kopf",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 35,
+   "d": 20,
+   "z": 8,
+   "h": 6,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 1.73,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Kunststoffrahmen, in dem Klingen, Klammern und Gleitstreifen stecken. Er ist mit dem Griff verschweißt oder aufgesteckt.",
+   "color": "#2F6DB5",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 5.5,
+     "w": 29,
+     "d": 8.5,
+     "r": 1,
+     "fill": "#1F4F86"
+    }
+   ]
+  },
+  {
+   "id": "griff",
+   "component_id": "razor_handle",
+   "material_id": "pp",
+   "name": "Griff",
+   "short": "Griff",
+   "shape": "box",
+   "x": 11.5,
+   "y": 16,
+   "w": 12,
+   "d": 124,
+   "z": 0,
+   "h": 9,
+   "r": 6,
+   "explode": [
+    0,
+    30,
+    0
+   ],
+   "mass": 11.87,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Griff aus Polypropylen. Einwegrasierer erzeugen viel Müll; Rasierer mit Wechselklingen oder aus Metall halten jahrelang.",
+   "color": "#2F6DB5",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 20,
+     "w": 8,
+     "d": 40,
+     "r": 4,
+     "fill": "#E8ECEE"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 24,
+     "w": 6,
+     "d": 2,
+     "r": 1,
+     "fill": "#C3C9CE"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 30,
+     "w": 6,
+     "d": 2,
+     "r": 1,
+     "fill": "#C3C9CE"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 36,
+     "w": 6,
+     "d": 2,
+     "r": 1,
+     "fill": "#C3C9CE"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 42,
+     "w": 6,
+     "d": 2,
+     "r": 1,
+     "fill": "#C3C9CE"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 48,
+     "w": 6,
+     "d": 2,
+     "r": 1,
+     "fill": "#C3C9CE"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 54,
+     "w": 6,
+     "d": 2,
+     "r": 1,
+     "fill": "#C3C9CE"
+    }
+   ]
   }
  ]
 }

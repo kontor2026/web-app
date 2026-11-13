@@ -4,7 +4,7 @@
  "name_en": "Plastic Hanger",
  "klasse": "Restmüll",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -31,24 +31,24 @@
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 0,03 kg",
+   "v": "≈ 0,02 kg",
    "hint": "spart 0,09 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Fe": 16337.0
+   "Fe": 7321.0
   },
   "herkunft": {
    "Fe": "Modellmassen (Schätzung)"
   },
   "materialien_g": {
-   "ps": 33.3,
-   "steel": 16.7
+   "ps": 42.5,
+   "steel": 7.5
   },
-  "co2_kg": 0.114,
-  "co2_mit_recyclat_kg": 0.025,
-  "co2_ersparnis_kg": 0.089,
+  "co2_kg": 0.111,
+  "co2_mit_recyclat_kg": 0.023,
+  "co2_ersparnis_kg": 0.088,
   "co2_ohne_faktor": [],
   "rohstoffwert_eur": 0,
   "wert_ohne_preis": [],
@@ -98,63 +98,1008 @@
   "nicht": "Nicht in die Gelbe Tonne: keine Verpackung",
   "warnung": "Gut Erhaltenes lieber verschenken oder in der Werkstatt abgeben."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "steel_hook",
+   "id": "haken",
    "component_id": "steel_hook",
-   "name": "Hook",
-   "short": "Hook",
-   "shape": "box",
-   "x": 0,
+   "material_id": "steel",
+   "name": "Haken",
+   "short": "Haken",
+   "shape": "cyl",
+   "x": 185,
    "y": 0,
-   "w": 420.0,
-   "d": 200.0,
-   "h": 5.0,
-   "z": 5.0,
-   "r": 24.0,
+   "w": 50,
+   "d": 46,
+   "z": 3,
+   "h": 4,
    "explode": [
     0,
-    0,
-    124.0
+    -35,
+    20
    ],
-   "mass": 16.67,
+   "mass": 5.6,
    "materials": [
     [
      "stahl",
      100
     ]
    ],
-   "material_id": "steel",
-   "info": "Twist it out of the hanger with pliers."
+   "info": "Verchromter Stahldraht, im Hals eingedreht, damit er sich drehen lässt. Mit einer Zange herausdrehen; der Stahl gehört zum Altmetall.",
+   "color": "#C3C9CE",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 4,
+     "w": 42,
+     "d": 38,
+     "fill": "#45484B"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 26,
+     "w": 12,
+     "d": 20,
+     "r": 4,
+     "fill": "#45484B"
+    }
+   ]
   },
   {
-   "id": "ps_hanger_body",
-   "component_id": "ps_hanger_body",
-   "name": "Hanger",
-   "short": "Hanger",
+   "id": "hakenschaft",
+   "component_id": "steel_hook",
+   "material_id": "steel",
+   "name": "Hakenschaft mit Gewinde",
+   "short": "Hakenschaft",
    "shape": "box",
-   "x": 0,
-   "y": 0,
-   "w": 420.0,
-   "d": 200.0,
-   "h": 5.0,
-   "z": 0.0,
-   "r": 24.0,
+   "x": 208,
+   "y": 46,
+   "w": 4,
+   "d": 30,
+   "z": 3,
+   "h": 4,
+   "r": 2,
    "explode": [
     0,
+    -35,
+    20
+   ],
+   "mass": 1.87,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Gerades Ende des Hakens, das im Kunststoff steckt.",
+   "color": "#C3C9CE",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 18.0,
+     "w": 4,
+     "d": 1,
+     "fill": "#8E969A"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 20.4,
+     "w": 4,
+     "d": 1,
+     "fill": "#8E969A"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 22.8,
+     "w": 4,
+     "d": 1,
+     "fill": "#8E969A"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 25.2,
+     "w": 4,
+     "d": 1,
+     "fill": "#8E969A"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 27.6,
+     "w": 4,
+     "d": 1,
+     "fill": "#8E969A"
+    }
+   ]
+  },
+  {
+   "id": "hals",
+   "component_id": "ps_hanger_body",
+   "material_id": "ps",
+   "name": "Hals mit Hakenaufnahme",
+   "short": "Hals",
+   "shape": "box",
+   "x": 195,
+   "y": 62,
+   "w": 30,
+   "d": 26,
+   "z": 0,
+   "h": 10,
+   "r": 5,
+   "explode": [
     0,
+    -10,
     0
    ],
-   "mass": 33.33,
+   "mass": 3.73,
    "materials": [
     [
      "ps",
      100
     ]
    ],
+   "info": "Verdickter Mittelteil mit Bohrung für den Haken. Oft ist hier die Kunststoffsorte eingeprägt (PS 6).",
+   "color": "#2B2D2F",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 12,
+     "y": 1,
+     "w": 6,
+     "fill": "#45484B"
+    },
+    {
+     "shape": "box",
+     "x": 7,
+     "y": 14,
+     "w": 16,
+     "d": 6,
+     "r": 2,
+     "fill": "#3A3F44"
+    }
+   ]
+  },
+  {
+   "id": "schulter_l_1",
+   "component_id": "ps_hanger_body",
    "material_id": "ps",
-   "info": "Reuse it or return it to a clothing store that collects them."
+   "name": "Schulterbogen links",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 172.125,
+   "y": 75,
+   "w": 22.875,
+   "d": 9.375,
+   "z": 0,
+   "h": 10,
+   "r": 3,
+   "explode": [
+    -12,
+    0,
+    0
+   ],
+   "mass": 1.49,
+   "materials": [
+    [
+     "ps",
+     100
+    ]
+   ],
+   "info": "Die schrägen Arme tragen Hemd oder Jacke. Polystyrol ist hart, kann aber bei Kälte brechen.",
+   "color": "#2B2D2F",
+   "label": true
+  },
+  {
+   "id": "schulter_l_2",
+   "component_id": "ps_hanger_body",
+   "material_id": "ps",
+   "name": "Schulterbogen links",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 149.25,
+   "y": 84.375,
+   "w": 22.875,
+   "d": 9.375,
+   "z": 0,
+   "h": 10,
+   "r": 3,
+   "explode": [
+    -12,
+    0,
+    0
+   ],
+   "mass": 1.49,
+   "materials": [
+    [
+     "ps",
+     100
+    ]
+   ],
+   "info": "Abschnitt des Schulterbogens.",
+   "color": "#2B2D2F",
+   "label": false
+  },
+  {
+   "id": "schulter_l_3",
+   "component_id": "ps_hanger_body",
+   "material_id": "ps",
+   "name": "Schulterbogen links",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 126.375,
+   "y": 93.75,
+   "w": 22.875,
+   "d": 9.375,
+   "z": 0,
+   "h": 10,
+   "r": 3,
+   "explode": [
+    -12,
+    0,
+    0
+   ],
+   "mass": 1.49,
+   "materials": [
+    [
+     "ps",
+     100
+    ]
+   ],
+   "info": "Abschnitt des Schulterbogens.",
+   "color": "#2B2D2F",
+   "label": false
+  },
+  {
+   "id": "schulter_l_4",
+   "component_id": "ps_hanger_body",
+   "material_id": "ps",
+   "name": "Schulterbogen links",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 103.5,
+   "y": 103.125,
+   "w": 22.875,
+   "d": 9.375,
+   "z": 0,
+   "h": 10,
+   "r": 3,
+   "explode": [
+    -12,
+    0,
+    0
+   ],
+   "mass": 1.49,
+   "materials": [
+    [
+     "ps",
+     100
+    ]
+   ],
+   "info": "Abschnitt des Schulterbogens.",
+   "color": "#2B2D2F",
+   "label": false
+  },
+  {
+   "id": "schulter_l_5",
+   "component_id": "ps_hanger_body",
+   "material_id": "ps",
+   "name": "Schulterbogen links",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 80.625,
+   "y": 112.5,
+   "w": 22.875,
+   "d": 9.375,
+   "z": 0,
+   "h": 10,
+   "r": 3,
+   "explode": [
+    -12,
+    0,
+    0
+   ],
+   "mass": 1.49,
+   "materials": [
+    [
+     "ps",
+     100
+    ]
+   ],
+   "info": "Abschnitt des Schulterbogens.",
+   "color": "#2B2D2F",
+   "label": false
+  },
+  {
+   "id": "schulter_l_6",
+   "component_id": "ps_hanger_body",
+   "material_id": "ps",
+   "name": "Schulterbogen links",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 57.75,
+   "y": 121.875,
+   "w": 22.875,
+   "d": 9.375,
+   "z": 0,
+   "h": 10,
+   "r": 3,
+   "explode": [
+    -12,
+    0,
+    0
+   ],
+   "mass": 1.49,
+   "materials": [
+    [
+     "ps",
+     100
+    ]
+   ],
+   "info": "Abschnitt des Schulterbogens.",
+   "color": "#2B2D2F",
+   "label": false
+  },
+  {
+   "id": "schulter_l_7",
+   "component_id": "ps_hanger_body",
+   "material_id": "ps",
+   "name": "Schulterbogen links",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 34.875,
+   "y": 131.25,
+   "w": 22.875,
+   "d": 9.375,
+   "z": 0,
+   "h": 10,
+   "r": 3,
+   "explode": [
+    -12,
+    0,
+    0
+   ],
+   "mass": 1.49,
+   "materials": [
+    [
+     "ps",
+     100
+    ]
+   ],
+   "info": "Abschnitt des Schulterbogens.",
+   "color": "#2B2D2F",
+   "label": false
+  },
+  {
+   "id": "schulter_l_8",
+   "component_id": "ps_hanger_body",
+   "material_id": "ps",
+   "name": "Schulterbogen links",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 12,
+   "y": 140.625,
+   "w": 22.875,
+   "d": 9.375,
+   "z": 0,
+   "h": 10,
+   "r": 3,
+   "explode": [
+    -12,
+    0,
+    0
+   ],
+   "mass": 1.49,
+   "materials": [
+    [
+     "ps",
+     100
+    ]
+   ],
+   "info": "Abschnitt des Schulterbogens.",
+   "color": "#2B2D2F",
+   "label": false
+  },
+  {
+   "id": "schulter_r_1",
+   "component_id": "ps_hanger_body",
+   "material_id": "ps",
+   "name": "Schulterbogen rechts",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 225,
+   "y": 75,
+   "w": 22.875,
+   "d": 9.375,
+   "z": 0,
+   "h": 10,
+   "r": 3,
+   "explode": [
+    12,
+    0,
+    0
+   ],
+   "mass": 1.49,
+   "materials": [
+    [
+     "ps",
+     100
+    ]
+   ],
+   "info": "Die schrägen Arme tragen Hemd oder Jacke. Polystyrol ist hart, kann aber bei Kälte brechen.",
+   "color": "#2B2D2F",
+   "label": true
+  },
+  {
+   "id": "schulter_r_2",
+   "component_id": "ps_hanger_body",
+   "material_id": "ps",
+   "name": "Schulterbogen rechts",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 247.875,
+   "y": 84.375,
+   "w": 22.875,
+   "d": 9.375,
+   "z": 0,
+   "h": 10,
+   "r": 3,
+   "explode": [
+    12,
+    0,
+    0
+   ],
+   "mass": 1.49,
+   "materials": [
+    [
+     "ps",
+     100
+    ]
+   ],
+   "info": "Abschnitt des Schulterbogens.",
+   "color": "#2B2D2F",
+   "label": false
+  },
+  {
+   "id": "schulter_r_3",
+   "component_id": "ps_hanger_body",
+   "material_id": "ps",
+   "name": "Schulterbogen rechts",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 270.75,
+   "y": 93.75,
+   "w": 22.875,
+   "d": 9.375,
+   "z": 0,
+   "h": 10,
+   "r": 3,
+   "explode": [
+    12,
+    0,
+    0
+   ],
+   "mass": 1.49,
+   "materials": [
+    [
+     "ps",
+     100
+    ]
+   ],
+   "info": "Abschnitt des Schulterbogens.",
+   "color": "#2B2D2F",
+   "label": false
+  },
+  {
+   "id": "schulter_r_4",
+   "component_id": "ps_hanger_body",
+   "material_id": "ps",
+   "name": "Schulterbogen rechts",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 293.625,
+   "y": 103.125,
+   "w": 22.875,
+   "d": 9.375,
+   "z": 0,
+   "h": 10,
+   "r": 3,
+   "explode": [
+    12,
+    0,
+    0
+   ],
+   "mass": 1.49,
+   "materials": [
+    [
+     "ps",
+     100
+    ]
+   ],
+   "info": "Abschnitt des Schulterbogens.",
+   "color": "#2B2D2F",
+   "label": false
+  },
+  {
+   "id": "schulter_r_5",
+   "component_id": "ps_hanger_body",
+   "material_id": "ps",
+   "name": "Schulterbogen rechts",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 316.5,
+   "y": 112.5,
+   "w": 22.875,
+   "d": 9.375,
+   "z": 0,
+   "h": 10,
+   "r": 3,
+   "explode": [
+    12,
+    0,
+    0
+   ],
+   "mass": 1.49,
+   "materials": [
+    [
+     "ps",
+     100
+    ]
+   ],
+   "info": "Abschnitt des Schulterbogens.",
+   "color": "#2B2D2F",
+   "label": false
+  },
+  {
+   "id": "schulter_r_6",
+   "component_id": "ps_hanger_body",
+   "material_id": "ps",
+   "name": "Schulterbogen rechts",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 339.375,
+   "y": 121.875,
+   "w": 22.875,
+   "d": 9.375,
+   "z": 0,
+   "h": 10,
+   "r": 3,
+   "explode": [
+    12,
+    0,
+    0
+   ],
+   "mass": 1.49,
+   "materials": [
+    [
+     "ps",
+     100
+    ]
+   ],
+   "info": "Abschnitt des Schulterbogens.",
+   "color": "#2B2D2F",
+   "label": false
+  },
+  {
+   "id": "schulter_r_7",
+   "component_id": "ps_hanger_body",
+   "material_id": "ps",
+   "name": "Schulterbogen rechts",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 362.25,
+   "y": 131.25,
+   "w": 22.875,
+   "d": 9.375,
+   "z": 0,
+   "h": 10,
+   "r": 3,
+   "explode": [
+    12,
+    0,
+    0
+   ],
+   "mass": 1.49,
+   "materials": [
+    [
+     "ps",
+     100
+    ]
+   ],
+   "info": "Abschnitt des Schulterbogens.",
+   "color": "#2B2D2F",
+   "label": false
+  },
+  {
+   "id": "schulter_r_8",
+   "component_id": "ps_hanger_body",
+   "material_id": "ps",
+   "name": "Schulterbogen rechts",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 385.125,
+   "y": 140.625,
+   "w": 22.875,
+   "d": 9.375,
+   "z": 0,
+   "h": 10,
+   "r": 3,
+   "explode": [
+    12,
+    0,
+    0
+   ],
+   "mass": 1.49,
+   "materials": [
+    [
+     "ps",
+     100
+    ]
+   ],
+   "info": "Abschnitt des Schulterbogens.",
+   "color": "#2B2D2F",
+   "label": false
+  },
+  {
+   "id": "ende_l",
+   "component_id": "ps_hanger_body",
+   "material_id": "ps",
+   "name": "Schulterende links mit Kerben",
+   "short": "Schulterende",
+   "shape": "box",
+   "x": 0,
+   "y": 150,
+   "w": 22,
+   "d": 36,
+   "z": 0,
+   "h": 10,
+   "r": 6,
+   "explode": [
+    -24,
+    0,
+    0
+   ],
+   "mass": 3.73,
+   "materials": [
+    [
+     "ps",
+     100
+    ]
+   ],
+   "info": "Breites Ende mit Kerben, in die man Träger von Kleidern hängt.",
+   "color": "#2B2D2F",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 6,
+     "w": 16,
+     "d": 3,
+     "r": 1,
+     "fill": "#45484B"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 11,
+     "w": 16,
+     "d": 3,
+     "r": 1,
+     "fill": "#45484B"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 16,
+     "w": 16,
+     "d": 3,
+     "r": 1,
+     "fill": "#45484B"
+    }
+   ]
+  },
+  {
+   "id": "ende_r",
+   "component_id": "ps_hanger_body",
+   "material_id": "ps",
+   "name": "Schulterende rechts mit Kerben",
+   "short": "Schulterende",
+   "shape": "box",
+   "x": 398,
+   "y": 150,
+   "w": 22,
+   "d": 36,
+   "z": 0,
+   "h": 10,
+   "r": 6,
+   "explode": [
+    24,
+    0,
+    0
+   ],
+   "mass": 3.73,
+   "materials": [
+    [
+     "ps",
+     100
+    ]
+   ],
+   "info": "Gegenstück zum linken Schulterende.",
+   "color": "#2B2D2F",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 6,
+     "w": 16,
+     "d": 3,
+     "r": 1,
+     "fill": "#45484B"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 11,
+     "w": 16,
+     "d": 3,
+     "r": 1,
+     "fill": "#45484B"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 16,
+     "w": 16,
+     "d": 3,
+     "r": 1,
+     "fill": "#45484B"
+    }
+   ]
+  },
+  {
+   "id": "hosenstange",
+   "component_id": "ps_hanger_body",
+   "material_id": "ps",
+   "name": "Hosenstange",
+   "short": "Hosenstange",
+   "shape": "box",
+   "x": 0,
+   "y": 186,
+   "w": 420,
+   "d": 12,
+   "z": 1,
+   "h": 8,
+   "r": 4,
+   "explode": [
+    0,
+    20,
+    0
+   ],
+   "mass": 7.46,
+   "materials": [
+    [
+     "ps",
+     100
+    ]
+   ],
+   "info": "Gerippte Stange, auf der Hosen nicht rutschen. Kleiderbügel sind keine Verpackung: weiterverwenden oder beim Modehändler abgeben, sonst Restmüll.",
+   "color": "#2B2D2F",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 40,
+     "y": 3,
+     "w": 3,
+     "d": 6,
+     "r": 1,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 55,
+     "y": 3,
+     "w": 3,
+     "d": 6,
+     "r": 1,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 70,
+     "y": 3,
+     "w": 3,
+     "d": 6,
+     "r": 1,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 85,
+     "y": 3,
+     "w": 3,
+     "d": 6,
+     "r": 1,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 100,
+     "y": 3,
+     "w": 3,
+     "d": 6,
+     "r": 1,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 115,
+     "y": 3,
+     "w": 3,
+     "d": 6,
+     "r": 1,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 130,
+     "y": 3,
+     "w": 3,
+     "d": 6,
+     "r": 1,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 145,
+     "y": 3,
+     "w": 3,
+     "d": 6,
+     "r": 1,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 160,
+     "y": 3,
+     "w": 3,
+     "d": 6,
+     "r": 1,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 175,
+     "y": 3,
+     "w": 3,
+     "d": 6,
+     "r": 1,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 190,
+     "y": 3,
+     "w": 3,
+     "d": 6,
+     "r": 1,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 205,
+     "y": 3,
+     "w": 3,
+     "d": 6,
+     "r": 1,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 220,
+     "y": 3,
+     "w": 3,
+     "d": 6,
+     "r": 1,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 235,
+     "y": 3,
+     "w": 3,
+     "d": 6,
+     "r": 1,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 250,
+     "y": 3,
+     "w": 3,
+     "d": 6,
+     "r": 1,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 265,
+     "y": 3,
+     "w": 3,
+     "d": 6,
+     "r": 1,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 280,
+     "y": 3,
+     "w": 3,
+     "d": 6,
+     "r": 1,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 295,
+     "y": 3,
+     "w": 3,
+     "d": 6,
+     "r": 1,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 310,
+     "y": 3,
+     "w": 3,
+     "d": 6,
+     "r": 1,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 325,
+     "y": 3,
+     "w": 3,
+     "d": 6,
+     "r": 1,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 340,
+     "y": 3,
+     "w": 3,
+     "d": 6,
+     "r": 1,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 355,
+     "y": 3,
+     "w": 3,
+     "d": 6,
+     "r": 1,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 370,
+     "y": 3,
+     "w": 3,
+     "d": 6,
+     "r": 1,
+     "fill": "#3A3F44"
+    }
+   ]
   }
  ]
 }

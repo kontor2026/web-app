@@ -4,7 +4,7 @@
  "name_en": "Clothes Peg",
  "klasse": "Restmüll",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -37,14 +37,14 @@
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Fe": 1137.0
+   "Fe": 823.0
   },
   "herkunft": {
    "Fe": "Modellmassen (Schätzung)"
   },
   "materialien_g": {
-   "pp": 4.8,
-   "steel": 1.2
+   "pp": 5.2,
+   "steel": 0.8
   },
   "co2_kg": 0.012,
   "co2_mit_recyclat_kg": 0.002,
@@ -98,91 +98,282 @@
   "nicht": "Nicht in die Gelbe Tonne: keine Verpackung",
   "warnung": "Gut Erhaltenes lieber verschenken oder in der Werkstatt abgeben."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "peg_halves_ober",
-   "component_id": "peg_halves",
-   "name": "Peg Halves (Oberteil)",
-   "short": "Peg Halves (Oberte",
-   "shape": "box",
-   "x": 0,
-   "y": 0,
-   "w": 10.0,
-   "d": 75.0,
-   "h": 3.0,
-   "z": 9.0,
-   "r": 1.2,
-   "explode": [
-    0,
-    0,
-    38.0
-   ],
-   "mass": 1.45,
-   "materials": [
-    [
-     "pp",
-     100
-    ]
-   ],
-   "material_id": "pp",
-   "info": "Twist the halves apart to release the spring."
-  },
-  {
-   "id": "steel_spring",
+   "id": "schenkel_oben",
    "component_id": "steel_spring",
-   "name": "Spring",
-   "short": "Spring",
+   "material_id": "steel",
+   "name": "Federschenkel oben",
+   "short": "Schenkel",
    "shape": "box",
-   "x": 1.5,
-   "y": 11.2,
-   "w": 7.0,
-   "d": 52.5,
-   "h": 4.05,
-   "z": 1.8,
-   "r": 0.8,
+   "x": 4.4,
+   "y": 42,
+   "w": 1.2,
+   "d": 28,
+   "z": 14,
+   "h": 1.2,
+   "r": 0.6,
    "explode": [
     0,
     0,
-    24.2
+    30.0
    ],
-   "mass": 1.16,
+   "mass": 0.16,
    "materials": [
     [
      "stahl",
      100
     ]
    ],
-   "material_id": "steel",
-   "info": "Pull it out with pliers."
+   "info": "Gerader Drahtschenkel, der auf das obere Griffende drückt.",
+   "color": "#B8BEC4"
   },
   {
-   "id": "peg_halves",
+   "id": "haelfte_oben",
    "component_id": "peg_halves",
-   "name": "Peg Halves (Unterteil)",
-   "short": "Peg Halves (Untert",
+   "material_id": "pp",
+   "name": "Obere Klammerhälfte",
+   "short": "Hälfte oben",
    "shape": "box",
-   "x": 0,
+   "x": 0.5,
    "y": 0,
-   "w": 10.0,
-   "d": 75.0,
-   "h": 9.0,
-   "z": 0,
-   "r": 1.2,
+   "w": 9,
+   "d": 75,
+   "z": 7.5,
+   "h": 6.5,
+   "r": 2,
    "explode": [
     0,
     0,
-    0
+    24.0
    ],
-   "mass": 3.39,
+   "mass": 2.59,
    "materials": [
     [
      "pp",
      100
     ]
    ],
+   "info": "Polypropylen, wird mit der Zeit in der Sonne spröde und bricht. Zum Trennen die Hälften gegeneinander verdrehen, dann springt die Feder heraus.",
+   "color": "#E86A92",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 3,
+     "w": 7,
+     "d": 18,
+     "r": 1,
+     "fill": "#D45780"
+    },
+    {
+     "shape": "box",
+     "x": 3.9,
+     "y": 42,
+     "w": 2.2,
+     "d": 30,
+     "r": 1,
+     "fill": "#C04A72"
+    },
+    {
+     "shape": "box",
+     "x": 1.5,
+     "y": 50,
+     "w": 6,
+     "d": 1,
+     "fill": "#D45780"
+    },
+    {
+     "shape": "box",
+     "x": 1.5,
+     "y": 54,
+     "w": 6,
+     "d": 1,
+     "fill": "#D45780"
+    },
+    {
+     "shape": "box",
+     "x": 1.5,
+     "y": 58,
+     "w": 6,
+     "d": 1,
+     "fill": "#D45780"
+    },
+    {
+     "shape": "box",
+     "x": 1.5,
+     "y": 62,
+     "w": 6,
+     "d": 1,
+     "fill": "#D45780"
+    }
+   ]
+  },
+  {
+   "id": "feder",
+   "component_id": "steel_spring",
+   "material_id": "steel",
+   "name": "Federwindung",
+   "short": "Feder",
+   "shape": "box",
+   "x": 0,
+   "y": 34,
+   "w": 10,
+   "d": 8,
+   "z": 4.5,
+   "h": 6,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    15.0
+   ],
+   "mass": 0.52,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Gewickelte Torsionsfeder aus verzinktem Stahldraht. Mit einer Zange herausziehen; sie gehört zum Altmetall oder taugt als Ersatzfeder.",
+   "color": "#B8BEC4",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1,
+     "d": 7,
+     "r": 0.5,
+     "fill": "#7E868C"
+    },
+    {
+     "shape": "box",
+     "x": 2.1,
+     "y": 0.5,
+     "w": 1,
+     "d": 7,
+     "r": 0.5,
+     "fill": "#7E868C"
+    },
+    {
+     "shape": "box",
+     "x": 3.7,
+     "y": 0.5,
+     "w": 1,
+     "d": 7,
+     "r": 0.5,
+     "fill": "#7E868C"
+    },
+    {
+     "shape": "box",
+     "x": 5.3,
+     "y": 0.5,
+     "w": 1,
+     "d": 7,
+     "r": 0.5,
+     "fill": "#7E868C"
+    },
+    {
+     "shape": "box",
+     "x": 6.9,
+     "y": 0.5,
+     "w": 1,
+     "d": 7,
+     "r": 0.5,
+     "fill": "#7E868C"
+    },
+    {
+     "shape": "box",
+     "x": 8.5,
+     "y": 0.5,
+     "w": 1,
+     "d": 7,
+     "r": 0.5,
+     "fill": "#7E868C"
+    }
+   ]
+  },
+  {
+   "id": "haelfte_unten",
+   "component_id": "peg_halves",
    "material_id": "pp",
-   "info": "Twist the halves apart to release the spring."
+   "name": "Untere Klammerhälfte",
+   "short": "Hälfte unten",
+   "shape": "box",
+   "x": 0.5,
+   "y": 0,
+   "w": 9,
+   "d": 75,
+   "z": 1,
+   "h": 6.5,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    6.0
+   ],
+   "mass": 2.59,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Gegenstück zur oberen Hälfte, baugleich. Die Riffelung an den Backen hält die Wäsche fest.",
+   "color": "#E86A92",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 3,
+     "w": 7,
+     "d": 18,
+     "r": 1,
+     "fill": "#D45780"
+    },
+    {
+     "shape": "box",
+     "x": 3.9,
+     "y": 42,
+     "w": 2.2,
+     "d": 30,
+     "r": 1,
+     "fill": "#C04A72"
+    }
+   ]
+  },
+  {
+   "id": "schenkel_unten",
+   "component_id": "steel_spring",
+   "material_id": "steel",
+   "name": "Federschenkel unten",
+   "short": "Schenkel",
+   "shape": "box",
+   "x": 4.4,
+   "y": 42,
+   "w": 1.2,
+   "d": 28,
+   "z": 0,
+   "h": 1,
+   "r": 0.6,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 0.16,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Zweiter Schenkel der Feder unter dem unteren Griffende.",
+   "color": "#B8BEC4",
+   "label": false
   }
  ]
 }

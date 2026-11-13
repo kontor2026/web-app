@@ -4,7 +4,7 @@
  "name_en": "Padlock",
  "klasse": "Metall · Wertstoffhof",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -21,38 +21,38 @@
  "werte": [
   {
    "k": "Rohstoffwert",
-   "v": "≈ 1,26 €",
+   "v": "≈ 1,54 €",
    "hint": "Kupfer zu Preisen vom 13.11."
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 0,47 kg",
+   "v": "≈ 0,49 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 0,08 kg",
-   "hint": "spart 0,39 kg, wenn recycelte Materialien eingesetzt werden"
+   "v": "≈ 0,07 kg",
+   "hint": "spart 0,42 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Cu": 100000.0,
-   "Fe": 49000.0
+   "Cu": 122200.0,
+   "Fe": 27538.0
   },
   "herkunft": {
    "Cu": "Modellmassen (Schätzung)",
    "Fe": "Modellmassen (Schätzung)"
   },
   "materialien_g": {
-   "copper": 100.0,
-   "steel": 50.0
+   "copper": 122.2,
+   "steel": 28.1
   },
-  "co2_kg": 0.471,
-  "co2_mit_recyclat_kg": 0.077,
-  "co2_ersparnis_kg": 0.393,
+  "co2_kg": 0.492,
+  "co2_mit_recyclat_kg": 0.072,
+  "co2_ersparnis_kg": 0.42,
   "co2_ohne_faktor": [],
-  "rohstoffwert_eur": 1.26,
+  "rohstoffwert_eur": 1.54,
   "wert_ohne_preis": [],
   "preisstand": "2026-11-13",
   "quellen": {
@@ -100,63 +100,751 @@
   "nicht": "Nicht in die Gelbe Tonne: keine Verpackung",
   "warnung": "Scharfe Klingen vorher einwickeln."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "steel_shackle",
+   "id": "buegel_bogen",
    "component_id": "steel_shackle",
-   "name": "Shackle",
-   "short": "Shackle",
+   "material_id": "steel",
+   "name": "Bügel",
+   "short": "Bügel",
    "shape": "box",
-   "x": 0,
-   "y": 0,
-   "w": 40.0,
-   "d": 20.0,
-   "h": 35.0,
-   "z": 35.0,
-   "r": 2.4,
+   "x": 5,
+   "y": 7,
+   "w": 30,
+   "d": 6,
+   "z": 64,
+   "h": 6,
+   "r": 3,
    "explode": [
     0,
     0,
-    12.0
+    35
    ],
-   "mass": 50.0,
+   "mass": 9.2,
    "materials": [
     [
      "stahl",
      100
     ]
    ],
-   "material_id": "steel",
-   "info": "Cut it with bolt cutters only if the key is lost."
+   "info": "Gehärteter, verchromter Stahl, damit man ihn nicht durchsägen kann. Nur mit einem Bolzenschneider aufknipsen, wenn der Schlüssel fehlt.",
+   "color": "#B8BEC4"
   },
   {
-   "id": "padlock_body",
+   "id": "buegel_lang",
+   "component_id": "steel_shackle",
+   "material_id": "steel",
+   "name": "Langer Bügelschenkel",
+   "short": "Schenkel",
+   "shape": "cyl",
+   "x": 5,
+   "y": 7,
+   "w": 6,
+   "z": 18,
+   "h": 46,
+   "explode": [
+    0,
+    0,
+    35
+   ],
+   "mass": 11.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Der lange Schenkel bleibt beim Öffnen im Körper; um ihn dreht sich der Bügel.",
+   "color": "#B8BEC4",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 1,
+     "y": 1,
+     "w": 4,
+     "fill": "#9AA2A6"
+    }
+   ]
+  },
+  {
+   "id": "buegel_kurz",
+   "component_id": "steel_shackle",
+   "material_id": "steel",
+   "name": "Kurzer Bügelschenkel",
+   "short": "Schenkel",
+   "shape": "cyl",
+   "x": 29,
+   "y": 7,
+   "w": 6,
+   "z": 36,
+   "h": 28,
+   "explode": [
+    0,
+    0,
+    35
+   ],
+   "mass": 6.2,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Der kurze Schenkel hat eine Kerbe, in die die Sperrkugel greift.",
+   "color": "#B8BEC4",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 1,
+     "y": 1,
+     "w": 4,
+     "fill": "#9AA2A6"
+    }
+   ]
+  },
+  {
+   "id": "kugel_l",
+   "component_id": "steel_shackle",
+   "material_id": "steel",
+   "name": "Sperrkugeln",
+   "short": "Sperrkugeln",
+   "shape": "cyl",
+   "x": 11,
+   "y": 7.5,
+   "w": 5,
+   "z": 37,
+   "h": 5,
+   "explode": [
+    0,
+    0,
+    10
+   ],
+   "mass": 0.5,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Zwei Stahlkugeln, die in Kerben der Bügelschenkel greifen. Dreht der Schlüssel, fallen sie zurück und der Bügel springt auf.",
+   "color": "#9AA2A6"
+  },
+  {
+   "id": "kugel_r",
+   "component_id": "steel_shackle",
+   "material_id": "steel",
+   "name": "Sperrkugel rechts",
+   "short": "Sperrkugel",
+   "shape": "cyl",
+   "x": 24,
+   "y": 7.5,
+   "w": 5,
+   "z": 37,
+   "h": 5,
+   "explode": [
+    0,
+    0,
+    10
+   ],
+   "mass": 0.5,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Zweite Sperrkugel.",
+   "color": "#9AA2A6",
+   "label": false
+  },
+  {
+   "id": "kern",
    "component_id": "padlock_body",
-   "name": "Body",
-   "short": "Body",
-   "shape": "box",
-   "x": 0,
-   "y": 0,
-   "w": 40.0,
-   "d": 20.0,
-   "h": 35.0,
-   "z": 0.0,
-   "r": 2.4,
+   "material_id": "copper",
+   "name": "Zylinderkern",
+   "short": "Kern",
+   "shape": "cyl",
+   "x": 14.5,
+   "y": 4.5,
+   "w": 11,
+   "z": 3,
+   "h": 34,
    "explode": [
     0,
     0,
     0
    ],
-   "mass": 100.0,
+   "mass": 8.2,
    "materials": [
     [
-     "kupfer",
+     "messing",
      100
     ]
    ],
+   "info": "Drehbarer Messingkern mit dem Schlüsselkanal. Er lässt sich nur drehen, wenn alle Stifte richtig stehen.",
+   "color": "#C9A74C",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4.5,
+     "y": 2,
+     "w": 2,
+     "d": 7,
+     "r": 0.5,
+     "fill": "#4A3B1E"
+    },
+    {
+     "shape": "cyl",
+     "x": 3.5,
+     "y": 3.5,
+     "w": 4,
+     "fill": "#B8963E"
+    }
+   ]
+  },
+  {
+   "id": "kernstift_1",
+   "component_id": "padlock_body",
    "material_id": "copper",
-   "info": "Brass lock body; take it to a scrap metal dealer."
+   "name": "Kernstifte",
+   "short": "Kernstift",
+   "shape": "box",
+   "x": 24,
+   "y": 8.75,
+   "w": 3.5,
+   "d": 2.5,
+   "z": 8,
+   "h": 2.5,
+   "r": 1.2,
+   "explode": [
+    6,
+    0,
+    0
+   ],
+   "mass": 0.2,
+   "materials": [
+    [
+     "messing",
+     100
+    ]
+   ],
+   "info": "Unterschiedlich lange Messingstifte. Nur der passende Schlüssel schiebt jeden genau bis an den Rand des Kerns.",
+   "color": "#D8B85A",
+   "label": true
+  },
+  {
+   "id": "kernstift_2",
+   "component_id": "padlock_body",
+   "material_id": "copper",
+   "name": "Kernstifte",
+   "short": "Kernstift",
+   "shape": "box",
+   "x": 24,
+   "y": 8.75,
+   "w": 5,
+   "d": 2.5,
+   "z": 14,
+   "h": 2.5,
+   "r": 1.2,
+   "explode": [
+    6,
+    0,
+    0
+   ],
+   "mass": 0.2,
+   "materials": [
+    [
+     "messing",
+     100
+    ]
+   ],
+   "info": "Weiterer Kernstift, andere Länge.",
+   "color": "#D8B85A",
+   "label": false
+  },
+  {
+   "id": "kernstift_3",
+   "component_id": "padlock_body",
+   "material_id": "copper",
+   "name": "Kernstifte",
+   "short": "Kernstift",
+   "shape": "box",
+   "x": 24,
+   "y": 8.75,
+   "w": 4,
+   "d": 2.5,
+   "z": 20,
+   "h": 2.5,
+   "r": 1.2,
+   "explode": [
+    6,
+    0,
+    0
+   ],
+   "mass": 0.2,
+   "materials": [
+    [
+     "messing",
+     100
+    ]
+   ],
+   "info": "Weiterer Kernstift, andere Länge.",
+   "color": "#D8B85A",
+   "label": false
+  },
+  {
+   "id": "kernstift_4",
+   "component_id": "padlock_body",
+   "material_id": "copper",
+   "name": "Kernstifte",
+   "short": "Kernstift",
+   "shape": "box",
+   "x": 24,
+   "y": 8.75,
+   "w": 4.5,
+   "d": 2.5,
+   "z": 26,
+   "h": 2.5,
+   "r": 1.2,
+   "explode": [
+    6,
+    0,
+    0
+   ],
+   "mass": 0.2,
+   "materials": [
+    [
+     "messing",
+     100
+    ]
+   ],
+   "info": "Weiterer Kernstift, andere Länge.",
+   "color": "#D8B85A",
+   "label": false
+  },
+  {
+   "id": "gehaeusestift_1",
+   "component_id": "padlock_body",
+   "material_id": "copper",
+   "name": "Gehäusestifte",
+   "short": "Gehäusestift",
+   "shape": "box",
+   "x": 27.5,
+   "y": 8.75,
+   "w": 3.5,
+   "d": 2.5,
+   "z": 8,
+   "h": 2.5,
+   "r": 1.2,
+   "explode": [
+    14,
+    0,
+    0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "messing",
+     100
+    ]
+   ],
+   "info": "Ohne Schlüssel ragen sie in den Kern und blockieren ihn. Mit dem richtigen Schlüssel liegt ihre Trennstelle genau am Kernrand und der Kern dreht sich.",
+   "color": "#B8963E",
+   "label": true
+  },
+  {
+   "id": "gehaeusestift_2",
+   "component_id": "padlock_body",
+   "material_id": "copper",
+   "name": "Gehäusestifte",
+   "short": "Gehäusestift",
+   "shape": "box",
+   "x": 29,
+   "y": 8.75,
+   "w": 3.5,
+   "d": 2.5,
+   "z": 14,
+   "h": 2.5,
+   "r": 1.2,
+   "explode": [
+    14,
+    0,
+    0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "messing",
+     100
+    ]
+   ],
+   "info": "Weiterer Gehäusestift.",
+   "color": "#B8963E",
+   "label": false
+  },
+  {
+   "id": "gehaeusestift_3",
+   "component_id": "padlock_body",
+   "material_id": "copper",
+   "name": "Gehäusestifte",
+   "short": "Gehäusestift",
+   "shape": "box",
+   "x": 28,
+   "y": 8.75,
+   "w": 3.5,
+   "d": 2.5,
+   "z": 20,
+   "h": 2.5,
+   "r": 1.2,
+   "explode": [
+    14,
+    0,
+    0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "messing",
+     100
+    ]
+   ],
+   "info": "Weiterer Gehäusestift.",
+   "color": "#B8963E",
+   "label": false
+  },
+  {
+   "id": "gehaeusestift_4",
+   "component_id": "padlock_body",
+   "material_id": "copper",
+   "name": "Gehäusestifte",
+   "short": "Gehäusestift",
+   "shape": "box",
+   "x": 28.5,
+   "y": 8.75,
+   "w": 3.5,
+   "d": 2.5,
+   "z": 26,
+   "h": 2.5,
+   "r": 1.2,
+   "explode": [
+    14,
+    0,
+    0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "messing",
+     100
+    ]
+   ],
+   "info": "Weiterer Gehäusestift.",
+   "color": "#B8963E",
+   "label": false
+  },
+  {
+   "id": "feder_1",
+   "component_id": "padlock_body",
+   "material_id": "steel",
+   "name": "Zuhaltungsfedern",
+   "short": "Feder",
+   "shape": "box",
+   "x": 31,
+   "y": 8.75,
+   "w": 6,
+   "d": 2.5,
+   "z": 8,
+   "h": 2.5,
+   "r": 1,
+   "explode": [
+    22,
+    0,
+    0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Winzige Stahlfedern drücken die Stifte in den Kern zurück.",
+   "color": "#B8BEC4",
+   "label": true,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0.3,
+     "y": 0.3,
+     "w": 0.5,
+     "d": 1.9,
+     "fill": "#7E868C"
+    },
+    {
+     "shape": "box",
+     "x": 1.5,
+     "y": 0.3,
+     "w": 0.5,
+     "d": 1.9,
+     "fill": "#7E868C"
+    },
+    {
+     "shape": "box",
+     "x": 2.7,
+     "y": 0.3,
+     "w": 0.5,
+     "d": 1.9,
+     "fill": "#7E868C"
+    },
+    {
+     "shape": "box",
+     "x": 3.9,
+     "y": 0.3,
+     "w": 0.5,
+     "d": 1.9,
+     "fill": "#7E868C"
+    },
+    {
+     "shape": "box",
+     "x": 5.1,
+     "y": 0.3,
+     "w": 0.5,
+     "d": 1.9,
+     "fill": "#7E868C"
+    }
+   ]
+  },
+  {
+   "id": "feder_2",
+   "component_id": "padlock_body",
+   "material_id": "steel",
+   "name": "Zuhaltungsfedern",
+   "short": "Feder",
+   "shape": "box",
+   "x": 32.5,
+   "y": 8.75,
+   "w": 4.5,
+   "d": 2.5,
+   "z": 14,
+   "h": 2.5,
+   "r": 1,
+   "explode": [
+    22,
+    0,
+    0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Weitere Zuhaltungsfeder.",
+   "color": "#B8BEC4",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0.3,
+     "y": 0.3,
+     "w": 0.5,
+     "d": 1.9,
+     "fill": "#7E868C"
+    },
+    {
+     "shape": "box",
+     "x": 1.5,
+     "y": 0.3,
+     "w": 0.5,
+     "d": 1.9,
+     "fill": "#7E868C"
+    },
+    {
+     "shape": "box",
+     "x": 2.7,
+     "y": 0.3,
+     "w": 0.5,
+     "d": 1.9,
+     "fill": "#7E868C"
+    }
+   ]
+  },
+  {
+   "id": "feder_3",
+   "component_id": "padlock_body",
+   "material_id": "steel",
+   "name": "Zuhaltungsfedern",
+   "short": "Feder",
+   "shape": "box",
+   "x": 31.5,
+   "y": 8.75,
+   "w": 5.5,
+   "d": 2.5,
+   "z": 20,
+   "h": 2.5,
+   "r": 1,
+   "explode": [
+    22,
+    0,
+    0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Weitere Zuhaltungsfeder.",
+   "color": "#B8BEC4",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0.3,
+     "y": 0.3,
+     "w": 0.5,
+     "d": 1.9,
+     "fill": "#7E868C"
+    },
+    {
+     "shape": "box",
+     "x": 1.5,
+     "y": 0.3,
+     "w": 0.5,
+     "d": 1.9,
+     "fill": "#7E868C"
+    },
+    {
+     "shape": "box",
+     "x": 2.7,
+     "y": 0.3,
+     "w": 0.5,
+     "d": 1.9,
+     "fill": "#7E868C"
+    },
+    {
+     "shape": "box",
+     "x": 3.9,
+     "y": 0.3,
+     "w": 0.5,
+     "d": 1.9,
+     "fill": "#7E868C"
+    }
+   ]
+  },
+  {
+   "id": "feder_4",
+   "component_id": "padlock_body",
+   "material_id": "steel",
+   "name": "Zuhaltungsfedern",
+   "short": "Feder",
+   "shape": "box",
+   "x": 32,
+   "y": 8.75,
+   "w": 5,
+   "d": 2.5,
+   "z": 26,
+   "h": 2.5,
+   "r": 1,
+   "explode": [
+    22,
+    0,
+    0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Weitere Zuhaltungsfeder.",
+   "color": "#B8BEC4",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0.3,
+     "y": 0.3,
+     "w": 0.5,
+     "d": 1.9,
+     "fill": "#7E868C"
+    },
+    {
+     "shape": "box",
+     "x": 1.5,
+     "y": 0.3,
+     "w": 0.5,
+     "d": 1.9,
+     "fill": "#7E868C"
+    },
+    {
+     "shape": "box",
+     "x": 2.7,
+     "y": 0.3,
+     "w": 0.5,
+     "d": 1.9,
+     "fill": "#7E868C"
+    },
+    {
+     "shape": "box",
+     "x": 3.9,
+     "y": 0.3,
+     "w": 0.5,
+     "d": 1.9,
+     "fill": "#7E868C"
+    }
+   ]
+  },
+  {
+   "id": "koerper",
+   "component_id": "padlock_body",
+   "material_id": "copper",
+   "name": "Schlosskörper",
+   "short": "Körper",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 40,
+   "d": 20,
+   "z": 0,
+   "h": 45,
+   "r": 3,
+   "explode": [
+    -60,
+    0,
+    0
+   ],
+   "mass": 112.8,
+   "materials": [
+    [
+     "messing",
+     100
+    ]
+   ],
+   "info": "Massiver Messingblock mit Bohrungen für Zylinder, Stifte und Bügel. Messing ist wertvoller Schrott: alte Schlösser beim Schrotthändler oder Wertstoffhof abgeben.",
+   "color": "#C9A74C",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 5,
+     "y": 7,
+     "w": 6,
+     "fill": "#4A3B1E"
+    },
+    {
+     "shape": "cyl",
+     "x": 29,
+     "y": 7,
+     "w": 6,
+     "fill": "#4A3B1E"
+    }
+   ]
   }
  ]
 }

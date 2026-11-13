@@ -4,7 +4,7 @@
  "name_en": "Comb",
  "klasse": "Restmüll",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -93,35 +93,659 @@
   "nicht": "Nicht in die Gelbe Tonne: keine Verpackung",
   "warnung": "Gut Erhaltenes lieber verschenken oder in der Werkstatt abgeben."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "plastic_comb",
+   "id": "ruecken",
    "component_id": "plastic_comb",
-   "name": "Comb",
-   "short": "Comb",
+   "material_id": "abs",
+   "name": "Kammrücken",
+   "short": "Rücken",
    "shape": "box",
    "x": 0,
    "y": 0,
-   "w": 30.0,
-   "d": 180.0,
-   "h": 4.0,
-   "z": 0.0,
-   "r": 3.6,
+   "w": 9,
+   "d": 180,
+   "z": 0,
+   "h": 4,
+   "r": 3,
    "explode": [
     0,
     0,
     0
    ],
-   "mass": 10.0,
+   "mass": 4,
    "materials": [
     [
      "pcabs",
      100
     ]
    ],
+   "info": "Der dicke Rücken macht den Kamm stabil. Ein Kamm hält viele Jahre; abgebrochene Zinken machen ihn noch nicht unbrauchbar.",
+   "color": "#4A3B33",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1.5,
+     "y": 6,
+     "w": 6,
+     "d": 168,
+     "r": 2,
+     "fill": "#5C4A40"
+    }
+   ]
+  },
+  {
+   "id": "zinken_grob",
+   "component_id": "plastic_comb",
    "material_id": "abs",
-   "info": "Solid plastic; reuse it as long as possible."
+   "name": "Grobe Zinken",
+   "short": "Grobe Zinken",
+   "shape": "box",
+   "x": 9,
+   "y": 2,
+   "w": 21,
+   "d": 88,
+   "z": 0,
+   "h": 3.5,
+   "r": 1,
+   "explode": [
+    14,
+    -8,
+    0
+   ],
+   "mass": 3.2,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Weit auseinanderstehende Zinken zum Entwirren. Der Kamm ist aus einem Kunststoff gespritzt und lässt sich nicht weiter zerlegen.",
+   "color": "#4A3B33",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 1.5,
+     "w": 18,
+     "d": 1.8,
+     "r": 0.5,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 5.4,
+     "w": 18,
+     "d": 1.8,
+     "r": 0.5,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 9.3,
+     "w": 18,
+     "d": 1.8,
+     "r": 0.5,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 13.2,
+     "w": 18,
+     "d": 1.8,
+     "r": 0.5,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 17.1,
+     "w": 18,
+     "d": 1.8,
+     "r": 0.5,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 21.0,
+     "w": 18,
+     "d": 1.8,
+     "r": 0.5,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 24.9,
+     "w": 18,
+     "d": 1.8,
+     "r": 0.5,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 28.8,
+     "w": 18,
+     "d": 1.8,
+     "r": 0.5,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 32.7,
+     "w": 18,
+     "d": 1.8,
+     "r": 0.5,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 36.6,
+     "w": 18,
+     "d": 1.8,
+     "r": 0.5,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 40.5,
+     "w": 18,
+     "d": 1.8,
+     "r": 0.5,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 44.4,
+     "w": 18,
+     "d": 1.8,
+     "r": 0.5,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 48.3,
+     "w": 18,
+     "d": 1.8,
+     "r": 0.5,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 52.2,
+     "w": 18,
+     "d": 1.8,
+     "r": 0.5,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 56.1,
+     "w": 18,
+     "d": 1.8,
+     "r": 0.5,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 60.0,
+     "w": 18,
+     "d": 1.8,
+     "r": 0.5,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 63.9,
+     "w": 18,
+     "d": 1.8,
+     "r": 0.5,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 67.8,
+     "w": 18,
+     "d": 1.8,
+     "r": 0.5,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 71.7,
+     "w": 18,
+     "d": 1.8,
+     "r": 0.5,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 75.6,
+     "w": 18,
+     "d": 1.8,
+     "r": 0.5,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 79.5,
+     "w": 18,
+     "d": 1.8,
+     "r": 0.5,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 83.4,
+     "w": 18,
+     "d": 1.8,
+     "r": 0.5,
+     "fill": "#2A211C"
+    }
+   ]
+  },
+  {
+   "id": "zinken_fein",
+   "component_id": "plastic_comb",
+   "material_id": "abs",
+   "name": "Feine Zinken",
+   "short": "Feine Zinken",
+   "shape": "box",
+   "x": 9,
+   "y": 90,
+   "w": 21,
+   "d": 88,
+   "z": 0,
+   "h": 3.5,
+   "r": 1,
+   "explode": [
+    14,
+    8,
+    0
+   ],
+   "mass": 2.8,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Eng stehende Zinken zum Glätten und Scheiteln. Zwischen ihnen sammeln sich Haare und Talg, deshalb den Kamm ab und zu mit Seifenwasser reinigen.",
+   "color": "#4A3B33",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 1.0,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 2.98,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 4.96,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 6.94,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 8.92,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 10.9,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 12.88,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 14.86,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 16.84,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 18.82,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 20.8,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 22.78,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 24.76,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 26.74,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 28.72,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 30.7,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 32.68,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 34.66,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 36.64,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 38.62,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 40.6,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 42.58,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 44.56,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 46.54,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 48.52,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 50.5,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 52.48,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 54.46,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 56.44,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 58.42,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 60.4,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 62.38,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 64.36,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 66.34,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 68.32,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 70.3,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 72.28,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 74.26,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 76.24,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 78.22,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 80.2,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 82.18,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 84.16,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 86.14,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    }
+   ]
   }
  ]
 }

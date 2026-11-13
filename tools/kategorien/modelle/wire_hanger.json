@@ -1,0 +1,906 @@
+{
+ "parts": [
+  {
+   "id": "haken",
+   "component_id": "steel_wire",
+   "material_id": "steel",
+   "name": "Haken",
+   "short": "Haken",
+   "shape": "cyl",
+   "x": 184,
+   "y": 0,
+   "w": 34,
+   "d": 30,
+   "z": 1,
+   "h": 3,
+   "explode": [
+    0,
+    -30,
+    10
+   ],
+   "mass": 3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Der Haken ist das Drahtende, zu einem Bogen gebogen. Viele Reinigungen nehmen Drahtbügel zurück und verwenden sie wieder.",
+   "color": "#AEB5BA",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 3,
+     "w": 28,
+     "d": 24,
+     "fill": "#45484B"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 16,
+     "w": 9,
+     "d": 14,
+     "r": 3,
+     "fill": "#45484B"
+    }
+   ]
+  },
+  {
+   "id": "hakenschaft",
+   "component_id": "steel_wire",
+   "material_id": "steel",
+   "name": "Hakenschaft",
+   "short": "Hakenschaft",
+   "shape": "box",
+   "x": 199.5,
+   "y": 30,
+   "w": 3,
+   "d": 26,
+   "z": 1,
+   "h": 3,
+   "r": 1.5,
+   "explode": [
+    0,
+    -30,
+    10
+   ],
+   "mass": 1,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Gerades Drahtstück zwischen Haken und Verdrillung.",
+   "color": "#AEB5BA",
+   "label": false
+  },
+  {
+   "id": "verdrillung",
+   "component_id": "steel_wire",
+   "material_id": "steel",
+   "name": "Verdrillter Hals",
+   "short": "Verdrillung",
+   "shape": "box",
+   "x": 196,
+   "y": 56,
+   "w": 10,
+   "d": 22,
+   "z": 0,
+   "h": 5,
+   "r": 3,
+   "explode": [
+    0,
+    -14,
+    5
+   ],
+   "mass": 2,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Hier sind Anfang und Ende des Drahts mehrfach umeinander gedreht. So hält der Bügel ohne Schweißen oder Kleben zusammen.",
+   "color": "#AEB5BA",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 1.5,
+     "w": 8,
+     "d": 2,
+     "r": 1,
+     "fill": "#7E868C"
+    },
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 5.5,
+     "w": 8,
+     "d": 2,
+     "r": 1,
+     "fill": "#7E868C"
+    },
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 9.5,
+     "w": 8,
+     "d": 2,
+     "r": 1,
+     "fill": "#7E868C"
+    },
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 13.5,
+     "w": 8,
+     "d": 2,
+     "r": 1,
+     "fill": "#7E868C"
+    },
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 17.5,
+     "w": 8,
+     "d": 2,
+     "r": 1,
+     "fill": "#7E868C"
+    }
+   ]
+  },
+  {
+   "id": "schulter_l_1",
+   "component_id": "steel_wire",
+   "material_id": "steel",
+   "name": "Schulter links",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 181.833,
+   "y": 78,
+   "w": 16.167,
+   "d": 9.5,
+   "z": 0,
+   "h": 3,
+   "r": 3,
+   "explode": [
+    -15,
+    0,
+    0
+   ],
+   "mass": 0.75,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Die schrägen Schultern geben dem Kleidungsstück seine Form. Der Draht ist dünn verzinkt oder lackiert gegen Rost.",
+   "color": "#AEB5BA",
+   "label": true
+  },
+  {
+   "id": "schulter_l_2",
+   "component_id": "steel_wire",
+   "material_id": "steel",
+   "name": "Schulter links",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 165.667,
+   "y": 87.5,
+   "w": 16.167,
+   "d": 9.5,
+   "z": 0,
+   "h": 3,
+   "r": 3,
+   "explode": [
+    -15,
+    0,
+    0
+   ],
+   "mass": 0.75,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Abschnitt der schrägen Schulter.",
+   "color": "#AEB5BA",
+   "label": false
+  },
+  {
+   "id": "schulter_l_3",
+   "component_id": "steel_wire",
+   "material_id": "steel",
+   "name": "Schulter links",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 149.5,
+   "y": 97,
+   "w": 16.167,
+   "d": 9.5,
+   "z": 0,
+   "h": 3,
+   "r": 3,
+   "explode": [
+    -15,
+    0,
+    0
+   ],
+   "mass": 0.75,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Abschnitt der schrägen Schulter.",
+   "color": "#AEB5BA",
+   "label": false
+  },
+  {
+   "id": "schulter_l_4",
+   "component_id": "steel_wire",
+   "material_id": "steel",
+   "name": "Schulter links",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 133.333,
+   "y": 106.5,
+   "w": 16.167,
+   "d": 9.5,
+   "z": 0,
+   "h": 3,
+   "r": 3,
+   "explode": [
+    -15,
+    0,
+    0
+   ],
+   "mass": 0.75,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Abschnitt der schrägen Schulter.",
+   "color": "#AEB5BA",
+   "label": false
+  },
+  {
+   "id": "schulter_l_5",
+   "component_id": "steel_wire",
+   "material_id": "steel",
+   "name": "Schulter links",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 117.167,
+   "y": 116,
+   "w": 16.167,
+   "d": 9.5,
+   "z": 0,
+   "h": 3,
+   "r": 3,
+   "explode": [
+    -15,
+    0,
+    0
+   ],
+   "mass": 0.75,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Abschnitt der schrägen Schulter.",
+   "color": "#AEB5BA",
+   "label": false
+  },
+  {
+   "id": "schulter_l_6",
+   "component_id": "steel_wire",
+   "material_id": "steel",
+   "name": "Schulter links",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 101,
+   "y": 125.5,
+   "w": 16.167,
+   "d": 9.5,
+   "z": 0,
+   "h": 3,
+   "r": 3,
+   "explode": [
+    -15,
+    0,
+    0
+   ],
+   "mass": 0.75,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Abschnitt der schrägen Schulter.",
+   "color": "#AEB5BA",
+   "label": false
+  },
+  {
+   "id": "schulter_l_7",
+   "component_id": "steel_wire",
+   "material_id": "steel",
+   "name": "Schulter links",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 84.833,
+   "y": 135,
+   "w": 16.167,
+   "d": 9.5,
+   "z": 0,
+   "h": 3,
+   "r": 3,
+   "explode": [
+    -15,
+    0,
+    0
+   ],
+   "mass": 0.75,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Abschnitt der schrägen Schulter.",
+   "color": "#AEB5BA",
+   "label": false
+  },
+  {
+   "id": "schulter_l_8",
+   "component_id": "steel_wire",
+   "material_id": "steel",
+   "name": "Schulter links",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 68.667,
+   "y": 144.5,
+   "w": 16.167,
+   "d": 9.5,
+   "z": 0,
+   "h": 3,
+   "r": 3,
+   "explode": [
+    -15,
+    0,
+    0
+   ],
+   "mass": 0.75,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Abschnitt der schrägen Schulter.",
+   "color": "#AEB5BA",
+   "label": false
+  },
+  {
+   "id": "schulter_l_9",
+   "component_id": "steel_wire",
+   "material_id": "steel",
+   "name": "Schulter links",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 52.5,
+   "y": 154,
+   "w": 16.167,
+   "d": 9.5,
+   "z": 0,
+   "h": 3,
+   "r": 3,
+   "explode": [
+    -15,
+    0,
+    0
+   ],
+   "mass": 0.75,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Abschnitt der schrägen Schulter.",
+   "color": "#AEB5BA",
+   "label": false
+  },
+  {
+   "id": "schulter_l_10",
+   "component_id": "steel_wire",
+   "material_id": "steel",
+   "name": "Schulter links",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 36.333,
+   "y": 163.5,
+   "w": 16.167,
+   "d": 9.5,
+   "z": 0,
+   "h": 3,
+   "r": 3,
+   "explode": [
+    -15,
+    0,
+    0
+   ],
+   "mass": 0.75,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Abschnitt der schrägen Schulter.",
+   "color": "#AEB5BA",
+   "label": false
+  },
+  {
+   "id": "schulter_l_11",
+   "component_id": "steel_wire",
+   "material_id": "steel",
+   "name": "Schulter links",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 20.167,
+   "y": 173,
+   "w": 16.167,
+   "d": 9.5,
+   "z": 0,
+   "h": 3,
+   "r": 3,
+   "explode": [
+    -15,
+    0,
+    0
+   ],
+   "mass": 0.75,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Abschnitt der schrägen Schulter.",
+   "color": "#AEB5BA",
+   "label": false
+  },
+  {
+   "id": "schulter_l_12",
+   "component_id": "steel_wire",
+   "material_id": "steel",
+   "name": "Schulter links",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 4,
+   "y": 182.5,
+   "w": 16.167,
+   "d": 9.5,
+   "z": 0,
+   "h": 3,
+   "r": 3,
+   "explode": [
+    -15,
+    0,
+    0
+   ],
+   "mass": 0.75,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Abschnitt der schrägen Schulter.",
+   "color": "#AEB5BA",
+   "label": false
+  },
+  {
+   "id": "schulter_r_1",
+   "component_id": "steel_wire",
+   "material_id": "steel",
+   "name": "Schulter rechts",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 202,
+   "y": 78,
+   "w": 16.167,
+   "d": 9.5,
+   "z": 0,
+   "h": 3,
+   "r": 3,
+   "explode": [
+    15,
+    0,
+    0
+   ],
+   "mass": 0.75,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Die schrägen Schultern geben dem Kleidungsstück seine Form. Der Draht ist dünn verzinkt oder lackiert gegen Rost.",
+   "color": "#AEB5BA",
+   "label": true
+  },
+  {
+   "id": "schulter_r_2",
+   "component_id": "steel_wire",
+   "material_id": "steel",
+   "name": "Schulter rechts",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 218.167,
+   "y": 87.5,
+   "w": 16.167,
+   "d": 9.5,
+   "z": 0,
+   "h": 3,
+   "r": 3,
+   "explode": [
+    15,
+    0,
+    0
+   ],
+   "mass": 0.75,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Abschnitt der schrägen Schulter.",
+   "color": "#AEB5BA",
+   "label": false
+  },
+  {
+   "id": "schulter_r_3",
+   "component_id": "steel_wire",
+   "material_id": "steel",
+   "name": "Schulter rechts",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 234.333,
+   "y": 97,
+   "w": 16.167,
+   "d": 9.5,
+   "z": 0,
+   "h": 3,
+   "r": 3,
+   "explode": [
+    15,
+    0,
+    0
+   ],
+   "mass": 0.75,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Abschnitt der schrägen Schulter.",
+   "color": "#AEB5BA",
+   "label": false
+  },
+  {
+   "id": "schulter_r_4",
+   "component_id": "steel_wire",
+   "material_id": "steel",
+   "name": "Schulter rechts",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 250.5,
+   "y": 106.5,
+   "w": 16.167,
+   "d": 9.5,
+   "z": 0,
+   "h": 3,
+   "r": 3,
+   "explode": [
+    15,
+    0,
+    0
+   ],
+   "mass": 0.75,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Abschnitt der schrägen Schulter.",
+   "color": "#AEB5BA",
+   "label": false
+  },
+  {
+   "id": "schulter_r_5",
+   "component_id": "steel_wire",
+   "material_id": "steel",
+   "name": "Schulter rechts",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 266.667,
+   "y": 116,
+   "w": 16.167,
+   "d": 9.5,
+   "z": 0,
+   "h": 3,
+   "r": 3,
+   "explode": [
+    15,
+    0,
+    0
+   ],
+   "mass": 0.75,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Abschnitt der schrägen Schulter.",
+   "color": "#AEB5BA",
+   "label": false
+  },
+  {
+   "id": "schulter_r_6",
+   "component_id": "steel_wire",
+   "material_id": "steel",
+   "name": "Schulter rechts",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 282.833,
+   "y": 125.5,
+   "w": 16.167,
+   "d": 9.5,
+   "z": 0,
+   "h": 3,
+   "r": 3,
+   "explode": [
+    15,
+    0,
+    0
+   ],
+   "mass": 0.75,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Abschnitt der schrägen Schulter.",
+   "color": "#AEB5BA",
+   "label": false
+  },
+  {
+   "id": "schulter_r_7",
+   "component_id": "steel_wire",
+   "material_id": "steel",
+   "name": "Schulter rechts",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 299,
+   "y": 135,
+   "w": 16.167,
+   "d": 9.5,
+   "z": 0,
+   "h": 3,
+   "r": 3,
+   "explode": [
+    15,
+    0,
+    0
+   ],
+   "mass": 0.75,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Abschnitt der schrägen Schulter.",
+   "color": "#AEB5BA",
+   "label": false
+  },
+  {
+   "id": "schulter_r_8",
+   "component_id": "steel_wire",
+   "material_id": "steel",
+   "name": "Schulter rechts",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 315.167,
+   "y": 144.5,
+   "w": 16.167,
+   "d": 9.5,
+   "z": 0,
+   "h": 3,
+   "r": 3,
+   "explode": [
+    15,
+    0,
+    0
+   ],
+   "mass": 0.75,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Abschnitt der schrägen Schulter.",
+   "color": "#AEB5BA",
+   "label": false
+  },
+  {
+   "id": "schulter_r_9",
+   "component_id": "steel_wire",
+   "material_id": "steel",
+   "name": "Schulter rechts",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 331.333,
+   "y": 154,
+   "w": 16.167,
+   "d": 9.5,
+   "z": 0,
+   "h": 3,
+   "r": 3,
+   "explode": [
+    15,
+    0,
+    0
+   ],
+   "mass": 0.75,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Abschnitt der schrägen Schulter.",
+   "color": "#AEB5BA",
+   "label": false
+  },
+  {
+   "id": "schulter_r_10",
+   "component_id": "steel_wire",
+   "material_id": "steel",
+   "name": "Schulter rechts",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 347.5,
+   "y": 163.5,
+   "w": 16.167,
+   "d": 9.5,
+   "z": 0,
+   "h": 3,
+   "r": 3,
+   "explode": [
+    15,
+    0,
+    0
+   ],
+   "mass": 0.75,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Abschnitt der schrägen Schulter.",
+   "color": "#AEB5BA",
+   "label": false
+  },
+  {
+   "id": "schulter_r_11",
+   "component_id": "steel_wire",
+   "material_id": "steel",
+   "name": "Schulter rechts",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 363.667,
+   "y": 173,
+   "w": 16.167,
+   "d": 9.5,
+   "z": 0,
+   "h": 3,
+   "r": 3,
+   "explode": [
+    15,
+    0,
+    0
+   ],
+   "mass": 0.75,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Abschnitt der schrägen Schulter.",
+   "color": "#AEB5BA",
+   "label": false
+  },
+  {
+   "id": "schulter_r_12",
+   "component_id": "steel_wire",
+   "material_id": "steel",
+   "name": "Schulter rechts",
+   "short": "Schulter",
+   "shape": "box",
+   "x": 379.833,
+   "y": 182.5,
+   "w": 16.167,
+   "d": 9.5,
+   "z": 0,
+   "h": 3,
+   "r": 3,
+   "explode": [
+    15,
+    0,
+    0
+   ],
+   "mass": 0.75,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Abschnitt der schrägen Schulter.",
+   "color": "#AEB5BA",
+   "label": false
+  },
+  {
+   "id": "unterstange",
+   "component_id": "steel_wire",
+   "material_id": "steel",
+   "name": "Unterstange",
+   "short": "Unterstange",
+   "shape": "box",
+   "x": 2,
+   "y": 192,
+   "w": 396,
+   "d": 4,
+   "z": 0,
+   "h": 3,
+   "r": 2,
+   "explode": [
+    0,
+    20,
+    0
+   ],
+   "mass": 16,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Gerade Stange für Hosen, an den Enden zu den Schultern umgebogen. Ausgediente Bügel gehören zum Altmetall, nicht in die Gelbe Tonne.",
+   "color": "#AEB5BA"
+  }
+ ]
+}

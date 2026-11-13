@@ -1,0 +1,693 @@
+{
+ "parts": [
+  {
+   "id": "vlies",
+   "component_id": "scrub_pad",
+   "material_id": "nylon",
+   "name": "Scheuervlies",
+   "short": "Scheuervlies",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 70,
+   "d": 100,
+   "z": 24,
+   "h": 6,
+   "r": 6,
+   "explode": [
+    0,
+    0,
+    70.0
+   ],
+   "mass": 3,
+   "materials": [
+    [
+     "nylon",
+     70
+    ],
+    [
+     "phenolharz",
+     30
+    ]
+   ],
+   "info": "Wirrfaservlies aus Nylon, mit Harz und feinem Schleifkorn getränkt. Es kratzt Angebranntes ab, zerkratzt aber auch beschichtete Pfannen.",
+   "color": "#3E8E4A",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 5,
+     "y": 6.0,
+     "w": 6,
+     "d": 6,
+     "fill": "#2F7039"
+    },
+    {
+     "shape": "cyl",
+     "x": 16,
+     "y": 6.0,
+     "w": 6,
+     "d": 6,
+     "fill": "#2F7039"
+    },
+    {
+     "shape": "cyl",
+     "x": 27,
+     "y": 6.0,
+     "w": 6,
+     "d": 6,
+     "fill": "#2F7039"
+    },
+    {
+     "shape": "cyl",
+     "x": 38,
+     "y": 6.0,
+     "w": 6,
+     "d": 6,
+     "fill": "#2F7039"
+    },
+    {
+     "shape": "cyl",
+     "x": 49,
+     "y": 6.0,
+     "w": 6,
+     "d": 6,
+     "fill": "#2F7039"
+    },
+    {
+     "shape": "cyl",
+     "x": 60,
+     "y": 6.0,
+     "w": 6,
+     "d": 6,
+     "fill": "#2F7039"
+    },
+    {
+     "shape": "cyl",
+     "x": 5,
+     "y": 17.5,
+     "w": 6,
+     "d": 6,
+     "fill": "#2F7039"
+    },
+    {
+     "shape": "cyl",
+     "x": 16,
+     "y": 17.5,
+     "w": 6,
+     "d": 6,
+     "fill": "#2F7039"
+    },
+    {
+     "shape": "cyl",
+     "x": 27,
+     "y": 17.5,
+     "w": 6,
+     "d": 6,
+     "fill": "#2F7039"
+    },
+    {
+     "shape": "cyl",
+     "x": 38,
+     "y": 17.5,
+     "w": 6,
+     "d": 6,
+     "fill": "#2F7039"
+    },
+    {
+     "shape": "cyl",
+     "x": 49,
+     "y": 17.5,
+     "w": 6,
+     "d": 6,
+     "fill": "#2F7039"
+    },
+    {
+     "shape": "cyl",
+     "x": 60,
+     "y": 17.5,
+     "w": 6,
+     "d": 6,
+     "fill": "#2F7039"
+    },
+    {
+     "shape": "cyl",
+     "x": 5,
+     "y": 29.0,
+     "w": 6,
+     "d": 6,
+     "fill": "#2F7039"
+    },
+    {
+     "shape": "cyl",
+     "x": 16,
+     "y": 29.0,
+     "w": 6,
+     "d": 6,
+     "fill": "#2F7039"
+    },
+    {
+     "shape": "cyl",
+     "x": 27,
+     "y": 29.0,
+     "w": 6,
+     "d": 6,
+     "fill": "#2F7039"
+    },
+    {
+     "shape": "cyl",
+     "x": 38,
+     "y": 29.0,
+     "w": 6,
+     "d": 6,
+     "fill": "#2F7039"
+    },
+    {
+     "shape": "cyl",
+     "x": 49,
+     "y": 29.0,
+     "w": 6,
+     "d": 6,
+     "fill": "#2F7039"
+    },
+    {
+     "shape": "cyl",
+     "x": 60,
+     "y": 29.0,
+     "w": 6,
+     "d": 6,
+     "fill": "#2F7039"
+    },
+    {
+     "shape": "cyl",
+     "x": 5,
+     "y": 40.5,
+     "w": 6,
+     "d": 6,
+     "fill": "#2F7039"
+    },
+    {
+     "shape": "cyl",
+     "x": 16,
+     "y": 40.5,
+     "w": 6,
+     "d": 6,
+     "fill": "#2F7039"
+    },
+    {
+     "shape": "cyl",
+     "x": 27,
+     "y": 40.5,
+     "w": 6,
+     "d": 6,
+     "fill": "#2F7039"
+    },
+    {
+     "shape": "cyl",
+     "x": 38,
+     "y": 40.5,
+     "w": 6,
+     "d": 6,
+     "fill": "#2F7039"
+    },
+    {
+     "shape": "cyl",
+     "x": 49,
+     "y": 40.5,
+     "w": 6,
+     "d": 6,
+     "fill": "#2F7039"
+    },
+    {
+     "shape": "cyl",
+     "x": 60,
+     "y": 40.5,
+     "w": 6,
+     "d": 6,
+     "fill": "#2F7039"
+    },
+    {
+     "shape": "cyl",
+     "x": 5,
+     "y": 52.0,
+     "w": 6,
+     "d": 6,
+     "fill": "#2F7039"
+    },
+    {
+     "shape": "cyl",
+     "x": 16,
+     "y": 52.0,
+     "w": 6,
+     "d": 6,
+     "fill": "#2F7039"
+    },
+    {
+     "shape": "cyl",
+     "x": 27,
+     "y": 52.0,
+     "w": 6,
+     "d": 6,
+     "fill": "#2F7039"
+    },
+    {
+     "shape": "cyl",
+     "x": 38,
+     "y": 52.0,
+     "w": 6,
+     "d": 6,
+     "fill": "#2F7039"
+    },
+    {
+     "shape": "cyl",
+     "x": 49,
+     "y": 52.0,
+     "w": 6,
+     "d": 6,
+     "fill": "#2F7039"
+    },
+    {
+     "shape": "cyl",
+     "x": 60,
+     "y": 52.0,
+     "w": 6,
+     "d": 6,
+     "fill": "#2F7039"
+    },
+    {
+     "shape": "cyl",
+     "x": 5,
+     "y": 63.5,
+     "w": 6,
+     "d": 6,
+     "fill": "#2F7039"
+    },
+    {
+     "shape": "cyl",
+     "x": 16,
+     "y": 63.5,
+     "w": 6,
+     "d": 6,
+     "fill": "#2F7039"
+    },
+    {
+     "shape": "cyl",
+     "x": 27,
+     "y": 63.5,
+     "w": 6,
+     "d": 6,
+     "fill": "#2F7039"
+    },
+    {
+     "shape": "cyl",
+     "x": 38,
+     "y": 63.5,
+     "w": 6,
+     "d": 6,
+     "fill": "#2F7039"
+    },
+    {
+     "shape": "cyl",
+     "x": 49,
+     "y": 63.5,
+     "w": 6,
+     "d": 6,
+     "fill": "#2F7039"
+    },
+    {
+     "shape": "cyl",
+     "x": 60,
+     "y": 63.5,
+     "w": 6,
+     "d": 6,
+     "fill": "#2F7039"
+    },
+    {
+     "shape": "cyl",
+     "x": 5,
+     "y": 75.0,
+     "w": 6,
+     "d": 6,
+     "fill": "#2F7039"
+    },
+    {
+     "shape": "cyl",
+     "x": 16,
+     "y": 75.0,
+     "w": 6,
+     "d": 6,
+     "fill": "#2F7039"
+    },
+    {
+     "shape": "cyl",
+     "x": 27,
+     "y": 75.0,
+     "w": 6,
+     "d": 6,
+     "fill": "#2F7039"
+    },
+    {
+     "shape": "cyl",
+     "x": 38,
+     "y": 75.0,
+     "w": 6,
+     "d": 6,
+     "fill": "#2F7039"
+    },
+    {
+     "shape": "cyl",
+     "x": 49,
+     "y": 75.0,
+     "w": 6,
+     "d": 6,
+     "fill": "#2F7039"
+    },
+    {
+     "shape": "cyl",
+     "x": 60,
+     "y": 75.0,
+     "w": 6,
+     "d": 6,
+     "fill": "#2F7039"
+    },
+    {
+     "shape": "cyl",
+     "x": 5,
+     "y": 86.5,
+     "w": 6,
+     "d": 6,
+     "fill": "#2F7039"
+    },
+    {
+     "shape": "cyl",
+     "x": 16,
+     "y": 86.5,
+     "w": 6,
+     "d": 6,
+     "fill": "#2F7039"
+    },
+    {
+     "shape": "cyl",
+     "x": 27,
+     "y": 86.5,
+     "w": 6,
+     "d": 6,
+     "fill": "#2F7039"
+    },
+    {
+     "shape": "cyl",
+     "x": 38,
+     "y": 86.5,
+     "w": 6,
+     "d": 6,
+     "fill": "#2F7039"
+    },
+    {
+     "shape": "cyl",
+     "x": 49,
+     "y": 86.5,
+     "w": 6,
+     "d": 6,
+     "fill": "#2F7039"
+    },
+    {
+     "shape": "cyl",
+     "x": 60,
+     "y": 86.5,
+     "w": 6,
+     "d": 6,
+     "fill": "#2F7039"
+    }
+   ]
+  },
+  {
+   "id": "kleber",
+   "component_id": "scrub_pad",
+   "material_id": "polyurethane",
+   "name": "Klebeschicht",
+   "short": "Kleber",
+   "shape": "box",
+   "x": 0.5,
+   "y": 0.5,
+   "w": 69,
+   "d": 99,
+   "z": 23.7,
+   "h": 0.3,
+   "r": 6,
+   "explode": [
+    0,
+    0,
+    35.0
+   ],
+   "mass": 0.4,
+   "materials": [
+    [
+     "klebstoff",
+     100
+    ]
+   ],
+   "info": "Dünner Kleberfilm, der Vlies und Schaum fest verbindet. Deshalb lassen sich die beiden Schichten nicht trennen.",
+   "color": "#E8E1C8"
+  },
+  {
+   "id": "schaum",
+   "component_id": "sponge_foam",
+   "material_id": "pu_foam",
+   "name": "Schaumstoffkörper",
+   "short": "Schaum",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 70,
+   "d": 100,
+   "z": 0,
+   "h": 23.7,
+   "r": 6,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 6.6,
+   "materials": [
+    [
+     "schaum",
+     100
+    ]
+   ],
+   "info": "Offenporiger Polyurethan-Schaum, der viel Wasser aufsaugt. Alte Schwämme gehören in den Restmüll; regelmäßig wechseln, weil sich im feuchten Schaum Keime vermehren.",
+   "color": "#F2CF3B",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 30,
+     "w": 4,
+     "d": 40,
+     "r": 2,
+     "fill": "#D9B42A"
+    },
+    {
+     "shape": "box",
+     "x": 66,
+     "y": 30,
+     "w": 4,
+     "d": 40,
+     "r": 2,
+     "fill": "#D9B42A"
+    },
+    {
+     "shape": "cyl",
+     "x": 10,
+     "y": 10,
+     "w": 3,
+     "d": 3,
+     "fill": "#E0BC2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 25,
+     "y": 10,
+     "w": 3,
+     "d": 3,
+     "fill": "#E0BC2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 40,
+     "y": 10,
+     "w": 3,
+     "d": 3,
+     "fill": "#E0BC2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 55,
+     "y": 10,
+     "w": 3,
+     "d": 3,
+     "fill": "#E0BC2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 10,
+     "y": 25,
+     "w": 3,
+     "d": 3,
+     "fill": "#E0BC2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 25,
+     "y": 25,
+     "w": 3,
+     "d": 3,
+     "fill": "#E0BC2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 40,
+     "y": 25,
+     "w": 3,
+     "d": 3,
+     "fill": "#E0BC2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 55,
+     "y": 25,
+     "w": 3,
+     "d": 3,
+     "fill": "#E0BC2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 10,
+     "y": 40,
+     "w": 3,
+     "d": 3,
+     "fill": "#E0BC2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 25,
+     "y": 40,
+     "w": 3,
+     "d": 3,
+     "fill": "#E0BC2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 40,
+     "y": 40,
+     "w": 3,
+     "d": 3,
+     "fill": "#E0BC2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 55,
+     "y": 40,
+     "w": 3,
+     "d": 3,
+     "fill": "#E0BC2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 10,
+     "y": 55,
+     "w": 3,
+     "d": 3,
+     "fill": "#E0BC2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 25,
+     "y": 55,
+     "w": 3,
+     "d": 3,
+     "fill": "#E0BC2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 40,
+     "y": 55,
+     "w": 3,
+     "d": 3,
+     "fill": "#E0BC2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 55,
+     "y": 55,
+     "w": 3,
+     "d": 3,
+     "fill": "#E0BC2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 10,
+     "y": 70,
+     "w": 3,
+     "d": 3,
+     "fill": "#E0BC2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 25,
+     "y": 70,
+     "w": 3,
+     "d": 3,
+     "fill": "#E0BC2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 40,
+     "y": 70,
+     "w": 3,
+     "d": 3,
+     "fill": "#E0BC2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 55,
+     "y": 70,
+     "w": 3,
+     "d": 3,
+     "fill": "#E0BC2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 10,
+     "y": 85,
+     "w": 3,
+     "d": 3,
+     "fill": "#E0BC2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 25,
+     "y": 85,
+     "w": 3,
+     "d": 3,
+     "fill": "#E0BC2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 40,
+     "y": 85,
+     "w": 3,
+     "d": 3,
+     "fill": "#E0BC2C"
+    },
+    {
+     "shape": "cyl",
+     "x": 55,
+     "y": 85,
+     "w": 3,
+     "d": 3,
+     "fill": "#E0BC2C"
+    }
+   ]
+  }
+ ]
+}

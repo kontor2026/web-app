@@ -4,7 +4,7 @@
  "name_en": "Hairbrush",
  "klasse": "Restmüll",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -26,26 +26,27 @@
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 0,23 kg",
+   "v": "≈ 0,24 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 0,09 kg",
-   "hint": "spart 0,15 kg, wenn recycelte Materialien eingesetzt werden"
+   "v": "≈ 0,12 kg",
+   "hint": "spart 0,12 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
   "metalle_mg": {},
   "herkunft": {},
   "materialien_g": {
-   "abs": 67.8,
-   "nylon": 8.1,
-   "rubber": 4.1
+   "abs": 53.0,
+   "nylon": 12.0,
+   "rubber": 12.0,
+   "pp": 3.0
   },
-  "co2_kg": 0.233,
-  "co2_mit_recyclat_kg": 0.085,
-  "co2_ersparnis_kg": 0.149,
+  "co2_kg": 0.245,
+  "co2_mit_recyclat_kg": 0.124,
+  "co2_ersparnis_kg": 0.121,
   "co2_ohne_faktor": [],
   "rohstoffwert_eur": 0,
   "wert_ohne_preis": [],
@@ -95,119 +96,3464 @@
   "nicht": "Nicht in die Gelbe Tonne: keine Verpackung",
   "warnung": "Gut Erhaltenes lieber verschenken oder in der Werkstatt abgeben."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "rubber_cushion",
-   "component_id": "rubber_cushion",
-   "name": "Cushion",
-   "short": "Cushion",
-   "shape": "box",
-   "x": 3.5,
-   "y": 11.5,
-   "w": 63.0,
-   "d": 207.0,
-   "h": 3.6,
-   "z": 36.0,
-   "r": 7.6,
-   "explode": [
-    0,
-    0,
-    192.2
-   ],
-   "mass": 4.07,
-   "materials": [
-    [
-     "gummi",
-     100
-    ]
-   ],
-   "material_id": "rubber",
-   "info": "Pry the edge out of the body with a flat tool."
-  },
-  {
-   "id": "hairbrush_body_ober",
-   "component_id": "hairbrush_body",
-   "name": "Body (Oberteil)",
-   "short": "Body (Oberteil)",
-   "shape": "box",
-   "x": 0,
-   "y": 0,
-   "w": 70.0,
-   "d": 230.0,
-   "h": 9.0,
-   "z": 27.0,
-   "r": 8.4,
-   "explode": [
-    0,
-    0,
-    132.2
-   ],
-   "mass": 20.34,
-   "materials": [
-    [
-     "pcabs",
-     100
-    ]
-   ],
-   "material_id": "abs",
-   "info": "Pull out the rubber cushion with the bristles first."
-  },
-  {
-   "id": "nylon_bristles",
+   "id": "kugelspitzen",
    "component_id": "nylon_bristles",
-   "name": "Bristles",
-   "short": "Bristles",
+   "material_id": "pp",
+   "name": "Kugelspitzen",
+   "short": "Kugelspitzen",
    "shape": "box",
-   "x": 10.5,
-   "y": 34.5,
-   "w": 49.0,
-   "d": 161.0,
-   "h": 12.15,
-   "z": 5.4,
-   "r": 5.9,
+   "x": 9,
+   "y": 9,
+   "w": 52,
+   "d": 88,
+   "z": 42,
+   "h": 3,
+   "r": 22,
    "explode": [
     0,
     0,
-    81.6
+    85.0
    ],
-   "mass": 8.14,
+   "mass": 3,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Kleine Kunststoffkugeln auf den Borstenenden. Sie schonen die Kopfhaut beim Bürsten.",
+   "color": "#D9473A",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 3.0,
+     "y": 4.5,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 8.6,
+     "y": 4.5,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 14.2,
+     "y": 4.5,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 19.8,
+     "y": 4.5,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 25.4,
+     "y": 4.5,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 31.0,
+     "y": 4.5,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 36.6,
+     "y": 4.5,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 42.2,
+     "y": 4.5,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 47.8,
+     "y": 4.5,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 3.0,
+     "y": 10.1,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 8.6,
+     "y": 10.1,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 14.2,
+     "y": 10.1,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 19.8,
+     "y": 10.1,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 25.4,
+     "y": 10.1,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 31.0,
+     "y": 10.1,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 36.6,
+     "y": 10.1,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 42.2,
+     "y": 10.1,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 47.8,
+     "y": 10.1,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 3.0,
+     "y": 15.7,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 8.6,
+     "y": 15.7,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 14.2,
+     "y": 15.7,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 19.8,
+     "y": 15.7,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 25.4,
+     "y": 15.7,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 31.0,
+     "y": 15.7,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 36.6,
+     "y": 15.7,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 42.2,
+     "y": 15.7,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 47.8,
+     "y": 15.7,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 3.0,
+     "y": 21.3,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 8.6,
+     "y": 21.3,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 14.2,
+     "y": 21.3,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 19.8,
+     "y": 21.3,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 25.4,
+     "y": 21.3,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 31.0,
+     "y": 21.3,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 36.6,
+     "y": 21.3,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 42.2,
+     "y": 21.3,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 47.8,
+     "y": 21.3,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 3.0,
+     "y": 26.9,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 8.6,
+     "y": 26.9,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 14.2,
+     "y": 26.9,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 19.8,
+     "y": 26.9,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 25.4,
+     "y": 26.9,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 31.0,
+     "y": 26.9,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 36.6,
+     "y": 26.9,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 42.2,
+     "y": 26.9,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 47.8,
+     "y": 26.9,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 3.0,
+     "y": 32.5,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 8.6,
+     "y": 32.5,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 14.2,
+     "y": 32.5,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 19.8,
+     "y": 32.5,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 25.4,
+     "y": 32.5,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 31.0,
+     "y": 32.5,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 36.6,
+     "y": 32.5,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 42.2,
+     "y": 32.5,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 47.8,
+     "y": 32.5,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 3.0,
+     "y": 38.1,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 8.6,
+     "y": 38.1,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 14.2,
+     "y": 38.1,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 19.8,
+     "y": 38.1,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 25.4,
+     "y": 38.1,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 31.0,
+     "y": 38.1,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 36.6,
+     "y": 38.1,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 42.2,
+     "y": 38.1,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 47.8,
+     "y": 38.1,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 3.0,
+     "y": 43.7,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 8.6,
+     "y": 43.7,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 14.2,
+     "y": 43.7,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 19.8,
+     "y": 43.7,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 25.4,
+     "y": 43.7,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 31.0,
+     "y": 43.7,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 36.6,
+     "y": 43.7,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 42.2,
+     "y": 43.7,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 47.8,
+     "y": 43.7,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 3.0,
+     "y": 49.3,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 8.6,
+     "y": 49.3,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 14.2,
+     "y": 49.3,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 19.8,
+     "y": 49.3,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 25.4,
+     "y": 49.3,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 31.0,
+     "y": 49.3,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 36.6,
+     "y": 49.3,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 42.2,
+     "y": 49.3,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 47.8,
+     "y": 49.3,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 3.0,
+     "y": 54.9,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 8.6,
+     "y": 54.9,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 14.2,
+     "y": 54.9,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 19.8,
+     "y": 54.9,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 25.4,
+     "y": 54.9,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 31.0,
+     "y": 54.9,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 36.6,
+     "y": 54.9,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 42.2,
+     "y": 54.9,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 47.8,
+     "y": 54.9,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 3.0,
+     "y": 60.5,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 8.6,
+     "y": 60.5,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 14.2,
+     "y": 60.5,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 19.8,
+     "y": 60.5,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 25.4,
+     "y": 60.5,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 31.0,
+     "y": 60.5,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 36.6,
+     "y": 60.5,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 42.2,
+     "y": 60.5,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 47.8,
+     "y": 60.5,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 3.0,
+     "y": 66.1,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 8.6,
+     "y": 66.1,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 14.2,
+     "y": 66.1,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 19.8,
+     "y": 66.1,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 25.4,
+     "y": 66.1,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 31.0,
+     "y": 66.1,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 36.6,
+     "y": 66.1,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 42.2,
+     "y": 66.1,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 47.8,
+     "y": 66.1,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 3.0,
+     "y": 71.7,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 8.6,
+     "y": 71.7,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 14.2,
+     "y": 71.7,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 19.8,
+     "y": 71.7,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 25.4,
+     "y": 71.7,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 31.0,
+     "y": 71.7,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 36.6,
+     "y": 71.7,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 42.2,
+     "y": 71.7,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 47.8,
+     "y": 71.7,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 3.0,
+     "y": 77.3,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 8.6,
+     "y": 77.3,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 14.2,
+     "y": 77.3,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 19.8,
+     "y": 77.3,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 25.4,
+     "y": 77.3,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 31.0,
+     "y": 77.3,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 36.6,
+     "y": 77.3,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 42.2,
+     "y": 77.3,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 47.8,
+     "y": 77.3,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 3.0,
+     "y": 82.9,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 8.6,
+     "y": 82.9,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 14.2,
+     "y": 82.9,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 19.8,
+     "y": 82.9,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 25.4,
+     "y": 82.9,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 31.0,
+     "y": 82.9,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 36.6,
+     "y": 82.9,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 42.2,
+     "y": 82.9,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    },
+    {
+     "shape": "cyl",
+     "x": 47.8,
+     "y": 82.9,
+     "w": 2.6,
+     "d": 2.6,
+     "fill": "#B5372C"
+    }
+   ]
+  },
+  {
+   "id": "borsten",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Nylonborsten",
+   "short": "Borsten",
+   "shape": "box",
+   "x": 9,
+   "y": 9,
+   "w": 52,
+   "d": 88,
+   "z": 17,
+   "h": 25,
+   "r": 22,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 12,
    "materials": [
     [
      "nylon",
      100
     ]
    ],
-   "material_id": "nylon",
-   "info": "Anchored with tiny metal staples; pull them out with pliers."
+   "info": "Rund 130 dicke Nylonstifte, mit dem Fuß im Gummikissen verankert. Mit einer Zange lassen sie sich herausziehen.",
+   "color": "#2B2D2F",
+   "opacity": 0.85,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 3.0,
+     "y": 4.5,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 8.6,
+     "y": 4.5,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 14.2,
+     "y": 4.5,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 19.8,
+     "y": 4.5,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 25.4,
+     "y": 4.5,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 31.0,
+     "y": 4.5,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 36.6,
+     "y": 4.5,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 42.2,
+     "y": 4.5,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 47.8,
+     "y": 4.5,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 3.0,
+     "y": 10.1,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 8.6,
+     "y": 10.1,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 14.2,
+     "y": 10.1,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 19.8,
+     "y": 10.1,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 25.4,
+     "y": 10.1,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 31.0,
+     "y": 10.1,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 36.6,
+     "y": 10.1,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 42.2,
+     "y": 10.1,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 47.8,
+     "y": 10.1,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 3.0,
+     "y": 15.7,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 8.6,
+     "y": 15.7,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 14.2,
+     "y": 15.7,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 19.8,
+     "y": 15.7,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 25.4,
+     "y": 15.7,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 31.0,
+     "y": 15.7,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 36.6,
+     "y": 15.7,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 42.2,
+     "y": 15.7,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 47.8,
+     "y": 15.7,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 3.0,
+     "y": 21.3,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 8.6,
+     "y": 21.3,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 14.2,
+     "y": 21.3,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 19.8,
+     "y": 21.3,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 25.4,
+     "y": 21.3,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 31.0,
+     "y": 21.3,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 36.6,
+     "y": 21.3,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 42.2,
+     "y": 21.3,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 47.8,
+     "y": 21.3,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 3.0,
+     "y": 26.9,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 8.6,
+     "y": 26.9,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 14.2,
+     "y": 26.9,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 19.8,
+     "y": 26.9,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 25.4,
+     "y": 26.9,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 31.0,
+     "y": 26.9,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 36.6,
+     "y": 26.9,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 42.2,
+     "y": 26.9,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 47.8,
+     "y": 26.9,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 3.0,
+     "y": 32.5,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 8.6,
+     "y": 32.5,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 14.2,
+     "y": 32.5,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 19.8,
+     "y": 32.5,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 25.4,
+     "y": 32.5,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 31.0,
+     "y": 32.5,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 36.6,
+     "y": 32.5,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 42.2,
+     "y": 32.5,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 47.8,
+     "y": 32.5,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 3.0,
+     "y": 38.1,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 8.6,
+     "y": 38.1,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 14.2,
+     "y": 38.1,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 19.8,
+     "y": 38.1,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 25.4,
+     "y": 38.1,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 31.0,
+     "y": 38.1,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 36.6,
+     "y": 38.1,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 42.2,
+     "y": 38.1,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 47.8,
+     "y": 38.1,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 3.0,
+     "y": 43.7,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 8.6,
+     "y": 43.7,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 14.2,
+     "y": 43.7,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 19.8,
+     "y": 43.7,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 25.4,
+     "y": 43.7,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 31.0,
+     "y": 43.7,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 36.6,
+     "y": 43.7,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 42.2,
+     "y": 43.7,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 47.8,
+     "y": 43.7,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 3.0,
+     "y": 49.3,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 8.6,
+     "y": 49.3,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 14.2,
+     "y": 49.3,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 19.8,
+     "y": 49.3,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 25.4,
+     "y": 49.3,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 31.0,
+     "y": 49.3,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 36.6,
+     "y": 49.3,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 42.2,
+     "y": 49.3,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 47.8,
+     "y": 49.3,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 3.0,
+     "y": 54.9,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 8.6,
+     "y": 54.9,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 14.2,
+     "y": 54.9,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 19.8,
+     "y": 54.9,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 25.4,
+     "y": 54.9,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 31.0,
+     "y": 54.9,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 36.6,
+     "y": 54.9,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 42.2,
+     "y": 54.9,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 47.8,
+     "y": 54.9,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 3.0,
+     "y": 60.5,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 8.6,
+     "y": 60.5,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 14.2,
+     "y": 60.5,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 19.8,
+     "y": 60.5,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 25.4,
+     "y": 60.5,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 31.0,
+     "y": 60.5,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 36.6,
+     "y": 60.5,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 42.2,
+     "y": 60.5,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 47.8,
+     "y": 60.5,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 3.0,
+     "y": 66.1,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 8.6,
+     "y": 66.1,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 14.2,
+     "y": 66.1,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 19.8,
+     "y": 66.1,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 25.4,
+     "y": 66.1,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 31.0,
+     "y": 66.1,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 36.6,
+     "y": 66.1,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 42.2,
+     "y": 66.1,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 47.8,
+     "y": 66.1,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 3.0,
+     "y": 71.7,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 8.6,
+     "y": 71.7,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 14.2,
+     "y": 71.7,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 19.8,
+     "y": 71.7,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 25.4,
+     "y": 71.7,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 31.0,
+     "y": 71.7,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 36.6,
+     "y": 71.7,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 42.2,
+     "y": 71.7,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 47.8,
+     "y": 71.7,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 3.0,
+     "y": 77.3,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 8.6,
+     "y": 77.3,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 14.2,
+     "y": 77.3,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 19.8,
+     "y": 77.3,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 25.4,
+     "y": 77.3,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 31.0,
+     "y": 77.3,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 36.6,
+     "y": 77.3,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 42.2,
+     "y": 77.3,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 47.8,
+     "y": 77.3,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 3.0,
+     "y": 82.9,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 8.6,
+     "y": 82.9,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 14.2,
+     "y": 82.9,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 19.8,
+     "y": 82.9,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 25.4,
+     "y": 82.9,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 31.0,
+     "y": 82.9,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 36.6,
+     "y": 82.9,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 42.2,
+     "y": 82.9,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "cyl",
+     "x": 47.8,
+     "y": 82.9,
+     "w": 2,
+     "d": 2,
+     "fill": "#B8BEC4"
+    }
+   ]
   },
   {
-   "id": "hairbrush_body",
-   "component_id": "hairbrush_body",
-   "name": "Body (Unterteil)",
-   "short": "Body (Unterteil)",
+   "id": "kissen",
+   "component_id": "rubber_cushion",
+   "material_id": "rubber",
+   "name": "Gummikissen",
+   "short": "Kissen",
    "shape": "box",
-   "x": 0,
-   "y": 0,
-   "w": 70.0,
-   "d": 230.0,
-   "h": 27.0,
-   "z": 0,
-   "r": 8.4,
+   "x": 6,
+   "y": 6,
+   "w": 58,
+   "d": 94,
+   "z": 12,
+   "h": 5,
+   "r": 25,
    "explode": [
     0,
     0,
-    0
+    29.0
    ],
-   "mass": 47.46,
+   "mass": 10,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "info": "Elastisches Luftkissen aus Gummi, das beim Bürsten nachgibt. Mit einem flachen Werkzeug am Rand aus der Schale hebeln, dann sind Gummi und Kunststoff getrennt.",
+   "color": "#1E2022",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 6.0,
+     "y": 7.5,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 11.6,
+     "y": 7.5,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 17.2,
+     "y": 7.5,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 22.8,
+     "y": 7.5,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 28.4,
+     "y": 7.5,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 34.0,
+     "y": 7.5,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 39.6,
+     "y": 7.5,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 45.2,
+     "y": 7.5,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 50.8,
+     "y": 7.5,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 6.0,
+     "y": 13.1,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 11.6,
+     "y": 13.1,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 17.2,
+     "y": 13.1,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 22.8,
+     "y": 13.1,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 28.4,
+     "y": 13.1,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 34.0,
+     "y": 13.1,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 39.6,
+     "y": 13.1,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 45.2,
+     "y": 13.1,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 50.8,
+     "y": 13.1,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 6.0,
+     "y": 18.7,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 11.6,
+     "y": 18.7,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 17.2,
+     "y": 18.7,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 22.8,
+     "y": 18.7,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 28.4,
+     "y": 18.7,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 34.0,
+     "y": 18.7,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 39.6,
+     "y": 18.7,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 45.2,
+     "y": 18.7,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 50.8,
+     "y": 18.7,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 6.0,
+     "y": 24.3,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 11.6,
+     "y": 24.3,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 17.2,
+     "y": 24.3,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 22.8,
+     "y": 24.3,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 28.4,
+     "y": 24.3,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 34.0,
+     "y": 24.3,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 39.6,
+     "y": 24.3,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 45.2,
+     "y": 24.3,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 50.8,
+     "y": 24.3,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 6.0,
+     "y": 29.9,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 11.6,
+     "y": 29.9,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 17.2,
+     "y": 29.9,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 22.8,
+     "y": 29.9,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 28.4,
+     "y": 29.9,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 34.0,
+     "y": 29.9,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 39.6,
+     "y": 29.9,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 45.2,
+     "y": 29.9,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 50.8,
+     "y": 29.9,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 6.0,
+     "y": 35.5,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 11.6,
+     "y": 35.5,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 17.2,
+     "y": 35.5,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 22.8,
+     "y": 35.5,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 28.4,
+     "y": 35.5,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 34.0,
+     "y": 35.5,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 39.6,
+     "y": 35.5,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 45.2,
+     "y": 35.5,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 50.8,
+     "y": 35.5,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 6.0,
+     "y": 41.1,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 11.6,
+     "y": 41.1,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 17.2,
+     "y": 41.1,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 22.8,
+     "y": 41.1,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 28.4,
+     "y": 41.1,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 34.0,
+     "y": 41.1,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 39.6,
+     "y": 41.1,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 45.2,
+     "y": 41.1,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 50.8,
+     "y": 41.1,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 6.0,
+     "y": 46.7,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 11.6,
+     "y": 46.7,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 17.2,
+     "y": 46.7,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 22.8,
+     "y": 46.7,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 28.4,
+     "y": 46.7,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 34.0,
+     "y": 46.7,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 39.6,
+     "y": 46.7,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 45.2,
+     "y": 46.7,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 50.8,
+     "y": 46.7,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 6.0,
+     "y": 52.3,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 11.6,
+     "y": 52.3,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 17.2,
+     "y": 52.3,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 22.8,
+     "y": 52.3,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 28.4,
+     "y": 52.3,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 34.0,
+     "y": 52.3,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 39.6,
+     "y": 52.3,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 45.2,
+     "y": 52.3,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 50.8,
+     "y": 52.3,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 6.0,
+     "y": 57.9,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 11.6,
+     "y": 57.9,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 17.2,
+     "y": 57.9,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 22.8,
+     "y": 57.9,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 28.4,
+     "y": 57.9,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 34.0,
+     "y": 57.9,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 39.6,
+     "y": 57.9,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 45.2,
+     "y": 57.9,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 50.8,
+     "y": 57.9,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 6.0,
+     "y": 63.5,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 11.6,
+     "y": 63.5,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 17.2,
+     "y": 63.5,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 22.8,
+     "y": 63.5,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 28.4,
+     "y": 63.5,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 34.0,
+     "y": 63.5,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 39.6,
+     "y": 63.5,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 45.2,
+     "y": 63.5,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 50.8,
+     "y": 63.5,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 6.0,
+     "y": 69.1,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 11.6,
+     "y": 69.1,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 17.2,
+     "y": 69.1,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 22.8,
+     "y": 69.1,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 28.4,
+     "y": 69.1,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 34.0,
+     "y": 69.1,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 39.6,
+     "y": 69.1,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 45.2,
+     "y": 69.1,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 50.8,
+     "y": 69.1,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 6.0,
+     "y": 74.7,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 11.6,
+     "y": 74.7,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 17.2,
+     "y": 74.7,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 22.8,
+     "y": 74.7,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 28.4,
+     "y": 74.7,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 34.0,
+     "y": 74.7,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 39.6,
+     "y": 74.7,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 45.2,
+     "y": 74.7,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 50.8,
+     "y": 74.7,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 6.0,
+     "y": 80.3,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 11.6,
+     "y": 80.3,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 17.2,
+     "y": 80.3,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 22.8,
+     "y": 80.3,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 28.4,
+     "y": 80.3,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 34.0,
+     "y": 80.3,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 39.6,
+     "y": 80.3,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 45.2,
+     "y": 80.3,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 50.8,
+     "y": 80.3,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 6.0,
+     "y": 85.9,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 11.6,
+     "y": 85.9,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 17.2,
+     "y": 85.9,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 22.8,
+     "y": 85.9,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 28.4,
+     "y": 85.9,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 34.0,
+     "y": 85.9,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 39.6,
+     "y": 85.9,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 45.2,
+     "y": 85.9,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 50.8,
+     "y": 85.9,
+     "w": 2,
+     "d": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 26,
+     "y": 87,
+     "w": 6,
+     "fill": "#000000"
+    }
+   ]
+  },
+  {
+   "id": "griffeinlage",
+   "component_id": "hairbrush_body",
+   "material_id": "rubber",
+   "name": "Soft-Touch-Einlage",
+   "short": "Griffeinlage",
+   "shape": "box",
+   "x": 26,
+   "y": 140,
+   "w": 18,
+   "d": 70,
+   "z": 12,
+   "h": 1,
+   "r": 8,
+   "explode": [
+    0,
+    0,
+    28.0
+   ],
+   "mass": 2,
+   "materials": [
+    [
+     "tpe",
+     100
+    ]
+   ],
+   "info": "Weiche, rutschfeste Einlage aus TPE im Griff. Sie ist eingeklebt oder angespritzt.",
+   "color": "#6E747A"
+  },
+  {
+   "id": "kopfschale",
+   "component_id": "hairbrush_body",
+   "material_id": "abs",
+   "name": "Kopfschale",
+   "short": "Kopfschale",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 70,
+   "d": 106,
+   "z": 0,
+   "h": 13,
+   "r": 30,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 30,
    "materials": [
     [
      "pcabs",
      100
     ]
    ],
+   "info": "Schale aus ABS mit einem kleinen Luftloch, damit das Kissen federn kann. Ohne Kissen und Borsten ist der Körper sortenreiner Kunststoff.",
+   "color": "#3A3F44",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 4,
+     "w": 62,
+     "d": 98,
+     "r": 27,
+     "fill": "#2B2D2F"
+    }
+   ]
+  },
+  {
+   "id": "griff",
+   "component_id": "hairbrush_body",
    "material_id": "abs",
-   "info": "Pull out the rubber cushion with the bristles first."
+   "name": "Griff",
+   "short": "Griff",
+   "shape": "box",
+   "x": 21,
+   "y": 106,
+   "w": 28,
+   "d": 124,
+   "z": 1,
+   "h": 11,
+   "r": 12,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 23,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Griff aus ABS, in einem Stück mit der Kopfschale gespritzt.",
+   "color": "#3A3F44",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 5,
+     "y": 34,
+     "w": 18,
+     "d": 70,
+     "r": 8,
+     "fill": "#6E747A"
+    },
+    {
+     "shape": "cyl",
+     "x": 9,
+     "y": 110,
+     "w": 10,
+     "fill": "#1E2022"
+    }
+   ]
   }
  ]
 }

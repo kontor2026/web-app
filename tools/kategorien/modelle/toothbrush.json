@@ -1,0 +1,770 @@
+{
+ "parts": [
+  {
+   "id": "borsten",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Borstenfeld",
+   "short": "Borsten",
+   "shape": "box",
+   "x": 4.5,
+   "y": 1.5,
+   "w": 11,
+   "d": 25,
+   "z": 9,
+   "h": 11,
+   "r": 4,
+   "explode": [
+    0,
+    0,
+    25.5
+   ],
+   "mass": 1,
+   "materials": [
+    [
+     "nylon",
+     100
+    ]
+   ],
+   "info": "Rund 30 Büschel aus Nylonfäden mit abgerundeten Enden. Wer sauberen Kunststoff will, zieht sie mit einer Zange heraus.",
+   "color": "#F4F6F8",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0.7,
+     "y": 0.5,
+     "w": 2,
+     "d": 2,
+     "fill": "#BFE3F5"
+    },
+    {
+     "shape": "cyl",
+     "x": 3.3,
+     "y": 0.5,
+     "w": 2,
+     "d": 2,
+     "fill": "#BFE3F5"
+    },
+    {
+     "shape": "cyl",
+     "x": 5.9,
+     "y": 0.5,
+     "w": 2,
+     "d": 2,
+     "fill": "#BFE3F5"
+    },
+    {
+     "shape": "cyl",
+     "x": 8.5,
+     "y": 0.5,
+     "w": 2,
+     "d": 2,
+     "fill": "#BFE3F5"
+    },
+    {
+     "shape": "cyl",
+     "x": 0.7,
+     "y": 3.6,
+     "w": 2,
+     "d": 2,
+     "fill": "#BFE3F5"
+    },
+    {
+     "shape": "cyl",
+     "x": 3.3,
+     "y": 3.6,
+     "w": 2,
+     "d": 2,
+     "fill": "#BFE3F5"
+    },
+    {
+     "shape": "cyl",
+     "x": 5.9,
+     "y": 3.6,
+     "w": 2,
+     "d": 2,
+     "fill": "#BFE3F5"
+    },
+    {
+     "shape": "cyl",
+     "x": 8.5,
+     "y": 3.6,
+     "w": 2,
+     "d": 2,
+     "fill": "#BFE3F5"
+    },
+    {
+     "shape": "cyl",
+     "x": 0.7,
+     "y": 6.7,
+     "w": 2,
+     "d": 2,
+     "fill": "#BFE3F5"
+    },
+    {
+     "shape": "cyl",
+     "x": 3.3,
+     "y": 6.7,
+     "w": 2,
+     "d": 2,
+     "fill": "#BFE3F5"
+    },
+    {
+     "shape": "cyl",
+     "x": 5.9,
+     "y": 6.7,
+     "w": 2,
+     "d": 2,
+     "fill": "#BFE3F5"
+    },
+    {
+     "shape": "cyl",
+     "x": 8.5,
+     "y": 6.7,
+     "w": 2,
+     "d": 2,
+     "fill": "#BFE3F5"
+    },
+    {
+     "shape": "cyl",
+     "x": 0.7,
+     "y": 9.8,
+     "w": 2,
+     "d": 2,
+     "fill": "#BFE3F5"
+    },
+    {
+     "shape": "cyl",
+     "x": 3.3,
+     "y": 9.8,
+     "w": 2,
+     "d": 2,
+     "fill": "#BFE3F5"
+    },
+    {
+     "shape": "cyl",
+     "x": 5.9,
+     "y": 9.8,
+     "w": 2,
+     "d": 2,
+     "fill": "#BFE3F5"
+    },
+    {
+     "shape": "cyl",
+     "x": 8.5,
+     "y": 9.8,
+     "w": 2,
+     "d": 2,
+     "fill": "#BFE3F5"
+    },
+    {
+     "shape": "cyl",
+     "x": 0.7,
+     "y": 12.9,
+     "w": 2,
+     "d": 2,
+     "fill": "#BFE3F5"
+    },
+    {
+     "shape": "cyl",
+     "x": 3.3,
+     "y": 12.9,
+     "w": 2,
+     "d": 2,
+     "fill": "#BFE3F5"
+    },
+    {
+     "shape": "cyl",
+     "x": 5.9,
+     "y": 12.9,
+     "w": 2,
+     "d": 2,
+     "fill": "#BFE3F5"
+    },
+    {
+     "shape": "cyl",
+     "x": 8.5,
+     "y": 12.9,
+     "w": 2,
+     "d": 2,
+     "fill": "#BFE3F5"
+    },
+    {
+     "shape": "cyl",
+     "x": 0.7,
+     "y": 16.0,
+     "w": 2,
+     "d": 2,
+     "fill": "#BFE3F5"
+    },
+    {
+     "shape": "cyl",
+     "x": 3.3,
+     "y": 16.0,
+     "w": 2,
+     "d": 2,
+     "fill": "#BFE3F5"
+    },
+    {
+     "shape": "cyl",
+     "x": 5.9,
+     "y": 16.0,
+     "w": 2,
+     "d": 2,
+     "fill": "#BFE3F5"
+    },
+    {
+     "shape": "cyl",
+     "x": 8.5,
+     "y": 16.0,
+     "w": 2,
+     "d": 2,
+     "fill": "#BFE3F5"
+    },
+    {
+     "shape": "cyl",
+     "x": 0.7,
+     "y": 19.1,
+     "w": 2,
+     "d": 2,
+     "fill": "#BFE3F5"
+    },
+    {
+     "shape": "cyl",
+     "x": 3.3,
+     "y": 19.1,
+     "w": 2,
+     "d": 2,
+     "fill": "#BFE3F5"
+    },
+    {
+     "shape": "cyl",
+     "x": 5.9,
+     "y": 19.1,
+     "w": 2,
+     "d": 2,
+     "fill": "#BFE3F5"
+    },
+    {
+     "shape": "cyl",
+     "x": 8.5,
+     "y": 19.1,
+     "w": 2,
+     "d": 2,
+     "fill": "#BFE3F5"
+    },
+    {
+     "shape": "cyl",
+     "x": 0.7,
+     "y": 22.2,
+     "w": 2,
+     "d": 2,
+     "fill": "#BFE3F5"
+    },
+    {
+     "shape": "cyl",
+     "x": 3.3,
+     "y": 22.2,
+     "w": 2,
+     "d": 2,
+     "fill": "#BFE3F5"
+    },
+    {
+     "shape": "cyl",
+     "x": 5.9,
+     "y": 22.2,
+     "w": 2,
+     "d": 2,
+     "fill": "#BFE3F5"
+    },
+    {
+     "shape": "cyl",
+     "x": 8.5,
+     "y": 22.2,
+     "w": 2,
+     "d": 2,
+     "fill": "#BFE3F5"
+    }
+   ]
+  },
+  {
+   "id": "anker",
+   "component_id": "nylon_bristles",
+   "material_id": "copper",
+   "name": "Borstenanker",
+   "short": "Anker",
+   "shape": "box",
+   "x": 5,
+   "y": 2,
+   "w": 10,
+   "d": 24,
+   "z": 7.5,
+   "h": 1.5,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    13.5
+   ],
+   "mass": 0.2,
+   "materials": [
+    [
+     "messing",
+     100
+    ]
+   ],
+   "info": "Winzige Metallplättchen aus Messingdraht, die jedes Büschel in der Bohrung festklemmen. Sie gehen beim Herausziehen der Borsten mit.",
+   "color": "#C9A74C",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0.4,
+     "y": 0.8,
+     "w": 1.6,
+     "d": 0.6,
+     "fill": "#8F7430"
+    },
+    {
+     "shape": "box",
+     "x": 3.0,
+     "y": 0.8,
+     "w": 1.6,
+     "d": 0.6,
+     "fill": "#8F7430"
+    },
+    {
+     "shape": "box",
+     "x": 5.6,
+     "y": 0.8,
+     "w": 1.6,
+     "d": 0.6,
+     "fill": "#8F7430"
+    },
+    {
+     "shape": "box",
+     "x": 8.2,
+     "y": 0.8,
+     "w": 1.6,
+     "d": 0.6,
+     "fill": "#8F7430"
+    },
+    {
+     "shape": "box",
+     "x": 0.4,
+     "y": 3.9,
+     "w": 1.6,
+     "d": 0.6,
+     "fill": "#8F7430"
+    },
+    {
+     "shape": "box",
+     "x": 3.0,
+     "y": 3.9,
+     "w": 1.6,
+     "d": 0.6,
+     "fill": "#8F7430"
+    },
+    {
+     "shape": "box",
+     "x": 5.6,
+     "y": 3.9,
+     "w": 1.6,
+     "d": 0.6,
+     "fill": "#8F7430"
+    },
+    {
+     "shape": "box",
+     "x": 8.2,
+     "y": 3.9,
+     "w": 1.6,
+     "d": 0.6,
+     "fill": "#8F7430"
+    },
+    {
+     "shape": "box",
+     "x": 0.4,
+     "y": 7.0,
+     "w": 1.6,
+     "d": 0.6,
+     "fill": "#8F7430"
+    },
+    {
+     "shape": "box",
+     "x": 3.0,
+     "y": 7.0,
+     "w": 1.6,
+     "d": 0.6,
+     "fill": "#8F7430"
+    },
+    {
+     "shape": "box",
+     "x": 5.6,
+     "y": 7.0,
+     "w": 1.6,
+     "d": 0.6,
+     "fill": "#8F7430"
+    },
+    {
+     "shape": "box",
+     "x": 8.2,
+     "y": 7.0,
+     "w": 1.6,
+     "d": 0.6,
+     "fill": "#8F7430"
+    },
+    {
+     "shape": "box",
+     "x": 0.4,
+     "y": 10.1,
+     "w": 1.6,
+     "d": 0.6,
+     "fill": "#8F7430"
+    },
+    {
+     "shape": "box",
+     "x": 3.0,
+     "y": 10.1,
+     "w": 1.6,
+     "d": 0.6,
+     "fill": "#8F7430"
+    },
+    {
+     "shape": "box",
+     "x": 5.6,
+     "y": 10.1,
+     "w": 1.6,
+     "d": 0.6,
+     "fill": "#8F7430"
+    },
+    {
+     "shape": "box",
+     "x": 8.2,
+     "y": 10.1,
+     "w": 1.6,
+     "d": 0.6,
+     "fill": "#8F7430"
+    },
+    {
+     "shape": "box",
+     "x": 0.4,
+     "y": 13.2,
+     "w": 1.6,
+     "d": 0.6,
+     "fill": "#8F7430"
+    },
+    {
+     "shape": "box",
+     "x": 3.0,
+     "y": 13.2,
+     "w": 1.6,
+     "d": 0.6,
+     "fill": "#8F7430"
+    },
+    {
+     "shape": "box",
+     "x": 5.6,
+     "y": 13.2,
+     "w": 1.6,
+     "d": 0.6,
+     "fill": "#8F7430"
+    },
+    {
+     "shape": "box",
+     "x": 8.2,
+     "y": 13.2,
+     "w": 1.6,
+     "d": 0.6,
+     "fill": "#8F7430"
+    },
+    {
+     "shape": "box",
+     "x": 0.4,
+     "y": 16.3,
+     "w": 1.6,
+     "d": 0.6,
+     "fill": "#8F7430"
+    },
+    {
+     "shape": "box",
+     "x": 3.0,
+     "y": 16.3,
+     "w": 1.6,
+     "d": 0.6,
+     "fill": "#8F7430"
+    },
+    {
+     "shape": "box",
+     "x": 5.6,
+     "y": 16.3,
+     "w": 1.6,
+     "d": 0.6,
+     "fill": "#8F7430"
+    },
+    {
+     "shape": "box",
+     "x": 8.2,
+     "y": 16.3,
+     "w": 1.6,
+     "d": 0.6,
+     "fill": "#8F7430"
+    },
+    {
+     "shape": "box",
+     "x": 0.4,
+     "y": 19.4,
+     "w": 1.6,
+     "d": 0.6,
+     "fill": "#8F7430"
+    },
+    {
+     "shape": "box",
+     "x": 3.0,
+     "y": 19.4,
+     "w": 1.6,
+     "d": 0.6,
+     "fill": "#8F7430"
+    },
+    {
+     "shape": "box",
+     "x": 5.6,
+     "y": 19.4,
+     "w": 1.6,
+     "d": 0.6,
+     "fill": "#8F7430"
+    },
+    {
+     "shape": "box",
+     "x": 8.2,
+     "y": 19.4,
+     "w": 1.6,
+     "d": 0.6,
+     "fill": "#8F7430"
+    },
+    {
+     "shape": "box",
+     "x": 0.4,
+     "y": 22.5,
+     "w": 1.6,
+     "d": 0.6,
+     "fill": "#8F7430"
+    },
+    {
+     "shape": "box",
+     "x": 3.0,
+     "y": 22.5,
+     "w": 1.6,
+     "d": 0.6,
+     "fill": "#8F7430"
+    },
+    {
+     "shape": "box",
+     "x": 5.6,
+     "y": 22.5,
+     "w": 1.6,
+     "d": 0.6,
+     "fill": "#8F7430"
+    },
+    {
+     "shape": "box",
+     "x": 8.2,
+     "y": 22.5,
+     "w": 1.6,
+     "d": 0.6,
+     "fill": "#8F7430"
+    }
+   ]
+  },
+  {
+   "id": "griffpolster",
+   "component_id": "toothbrush_handle",
+   "material_id": "rubber",
+   "name": "Weiche Griffzone",
+   "short": "Griffpolster",
+   "shape": "box",
+   "x": 5,
+   "y": 80,
+   "w": 10,
+   "d": 50,
+   "z": 12,
+   "h": 1.5,
+   "r": 5,
+   "explode": [
+    0,
+    0,
+    12.0
+   ],
+   "mass": 1.2,
+   "materials": [
+    [
+     "tpe",
+     100
+    ]
+   ],
+   "info": "Weicher Kunststoff (TPE), direkt auf den Griff gespritzt. Er lässt sich nicht abziehen, deshalb ist die ganze Zahnbürste Restmüll.",
+   "color": "#9CD3F0",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2.5,
+     "y": 4.0,
+     "w": 5,
+     "d": 3,
+     "r": 1.5,
+     "fill": "#7FBEDF"
+    },
+    {
+     "shape": "box",
+     "x": 2.5,
+     "y": 10.5,
+     "w": 5,
+     "d": 3,
+     "r": 1.5,
+     "fill": "#7FBEDF"
+    },
+    {
+     "shape": "box",
+     "x": 2.5,
+     "y": 17.0,
+     "w": 5,
+     "d": 3,
+     "r": 1.5,
+     "fill": "#7FBEDF"
+    },
+    {
+     "shape": "box",
+     "x": 2.5,
+     "y": 23.5,
+     "w": 5,
+     "d": 3,
+     "r": 1.5,
+     "fill": "#7FBEDF"
+    },
+    {
+     "shape": "box",
+     "x": 2.5,
+     "y": 30.0,
+     "w": 5,
+     "d": 3,
+     "r": 1.5,
+     "fill": "#7FBEDF"
+    },
+    {
+     "shape": "box",
+     "x": 2.5,
+     "y": 36.5,
+     "w": 5,
+     "d": 3,
+     "r": 1.5,
+     "fill": "#7FBEDF"
+    },
+    {
+     "shape": "box",
+     "x": 2.5,
+     "y": 43.0,
+     "w": 5,
+     "d": 3,
+     "r": 1.5,
+     "fill": "#7FBEDF"
+    }
+   ]
+  },
+  {
+   "id": "kopf",
+   "component_id": "toothbrush_handle",
+   "material_id": "pp",
+   "name": "Bürstenkopf",
+   "short": "Kopf",
+   "shape": "box",
+   "x": 4,
+   "y": 0,
+   "w": 12,
+   "d": 28,
+   "z": 4,
+   "h": 5,
+   "r": 5,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 1.2,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Der Kopf hat Bohrungen für die Borstenbüschel. Zahnärzte empfehlen, die Bürste alle drei Monate zu wechseln.",
+   "color": "#3B7DD8"
+  },
+  {
+   "id": "hals",
+   "component_id": "toothbrush_handle",
+   "material_id": "pp",
+   "name": "Hals",
+   "short": "Hals",
+   "shape": "box",
+   "x": 6.5,
+   "y": 28,
+   "w": 7,
+   "d": 32,
+   "z": 3,
+   "h": 6,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 1.1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Schmaler, leicht federnder Übergang zwischen Kopf und Griff.",
+   "color": "#3B7DD8"
+  },
+  {
+   "id": "griff",
+   "component_id": "toothbrush_handle",
+   "material_id": "pp",
+   "name": "Griff",
+   "short": "Griff",
+   "shape": "box",
+   "x": 2,
+   "y": 60,
+   "w": 16,
+   "d": 130,
+   "z": 0,
+   "h": 12,
+   "r": 7,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 10.3,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Massiver Griffkörper aus Polypropylen. Es gibt auch Bürsten mit Wechselköpfen oder aus Holz, die weniger Plastikmüll machen.",
+   "color": "#3B7DD8",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 20,
+     "w": 10,
+     "d": 50,
+     "r": 5,
+     "fill": "#9CD3F0"
+    }
+   ]
+  }
+ ]
+}
