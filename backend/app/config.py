@@ -18,6 +18,10 @@ LLM_MODE = os.getenv('LLM_MODE', 'openai')         # 'openai' oder 'mock' (ohne 
 LLM_PROVIDER = os.getenv('LLM_PROVIDER', 'lokal')
 ANTHROPIC_API_KEY = os.getenv('ANTHROPIC_API_KEY', '')
 CLAUDE_MODEL = os.getenv('CLAUDE_MODEL', 'claude-opus-5-5')
+
+# Steckbrief und Bauideen schon beim Upload im Hintergrund starten ('auto': nur bei Claude, weil ein
+# lokales Modell auf CPU Anfragen ohnehin nacheinander abarbeitet). Werte: auto | an | aus
+VORAUSRECHNEN = os.getenv('VORAUSRECHNEN', 'auto')
 LLM_TIMEOUT = float(os.getenv('LLM_TIMEOUT', '600'))
 LLM_REASONING = os.getenv('LLM_REASONING', 'none')  # 'none' schaltet das Denken ab; leer = Feld weglassen
 

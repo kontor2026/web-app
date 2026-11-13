@@ -9,7 +9,7 @@ from PIL import Image
 
 from . import config, images
 
-_lock = threading.Lock()
+_lock = threading.RLock()  # Hintergrund-Jobs greifen parallel zu: jeder Zugriff geht durch die Sperre
 _conn = None
 
 SCHEMA = """
@@ -64,6 +64,16 @@ def _put_object(c, o, status, modell):
               (o['id'], status, json.dumps(o, ensure_ascii=False), modell, time.time()))
 
 
+def _all(sql, args=()):
+    with _lock:
+        return conn().execute(sql, args).fetchall()
+
+
+def _one(sql, args=()):
+    with _lock:
+        return conn().execute(sql, args).fetchone()
+
+
 def put_object(o, status, modell, aliases=(), photo_hash=None):
     with _lock:
         c = conn()
@@ -77,7 +87,7 @@ def put_object(o, status, modell, aliases=(), photo_hash=None):
 
 
 def get_object(oid):
-    row = conn().execute('SELECT * FROM objects WHERE id = ?', (oid,)).fetchone()
+    row = _one('SELECT * FROM objects WHERE id = ?', (oid,))
     if not row:
         return None
     o = json.loads(row['data'])
@@ -87,7 +97,7 @@ def get_object(oid):
 
 def list_objects(status=None):
     q = 'SELECT id, status, modell, created, json_extract(data, "$.name") AS name FROM objects'
-    rows = conn().execute(q + (' WHERE status = ?' if status else '') + ' ORDER BY created DESC', (status,) if status else ())
+    rows = _all(q + (' WHERE status = ?' if status else '') + ' ORDER BY created DESC', (status,) if status else ())
     return [dict(r) for r in rows]
 
 
@@ -109,7 +119,7 @@ def set_status(oid, status):
 
 def find_alias(*names):
     for n in names:
-        row = conn().execute('SELECT object_id FROM aliases WHERE key = ?', (key(n),)).fetchone()
+        row = _one('SELECT object_id FROM aliases WHERE key = ?', (key(n),))
         if row:
             return row['object_id']
     return None
@@ -117,7 +127,7 @@ def find_alias(*names):
 
 def find_photo(h):
     best = None
-    for row in conn().execute('SELECT hash, object_id FROM photo_hashes'):
+    for row in _all('SELECT hash, object_id FROM photo_hashes'):
         d = images.hamming(h, row['hash'])
         if best is None or d < best[0]:
             best = (d, row['object_id'])
@@ -137,9 +147,22 @@ def save_scan(result, h, img, crop=None):
     return sid
 
 
+def update_scan(sid, result):
+    with _lock:
+        conn().execute('UPDATE scans SET result = ? WHERE id = ?', (json.dumps(result, ensure_ascii=False), sid))
+        conn().commit()
+
+
+def add_alias(name, oid):
+    with _lock:
+        if key(name):
+            conn().execute('INSERT OR REPLACE INTO aliases VALUES (?, ?)', (key(name), oid))
+            conn().commit()
+
+
 def get_scan(sid):
     """Scan-Ergebnis und das Bild für die KI (freigestellt, falls vorhanden)."""
-    row = conn().execute('SELECT * FROM scans WHERE id = ?', (sid,)).fetchone()
+    row = _one('SELECT * FROM scans WHERE id = ?', (sid,))
     if not row:
         return None, None
     path = config.DATA / 'scans' / f'{sid}_crop.jpg'
@@ -149,7 +172,7 @@ def get_scan(sid):
 
 
 def inventory():
-    return [dict(r) for r in conn().execute('SELECT * FROM inventory ORDER BY fach')]
+    return [dict(r) for r in _all('SELECT * FROM inventory ORDER BY fach')]
 
 
 def store_item(obj, modell):

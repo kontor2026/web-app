@@ -49,6 +49,12 @@ def scan(body: ScanIn):
     return _run(pipeline.scan, body.image)
 
 
+@app.get('/api/scans/{sid}/jobs')
+def scan_jobs(sid: int):
+    """Stand der Hintergrund-Jobs (Steckbrief, Bauideen) eines Scans."""
+    return pipeline.jobs(sid)
+
+
 @app.post('/api/steckbrief')
 def steckbrief(body: SteckbriefIn):
     return _run(pipeline.steckbrief, body.scan_id, body.modell, body.objekt)
