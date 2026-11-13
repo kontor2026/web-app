@@ -1,0 +1,649 @@
+{
+ "parts": [
+  {
+   "id": "deckglas",
+   "component_id": "smartwatch_display",
+   "material_id": "special_glass",
+   "name": "Deckglas",
+   "short": "Deckglas",
+   "shape": "box",
+   "x": 1,
+   "y": 6,
+   "w": 35,
+   "d": 36,
+   "z": 10,
+   "h": 1,
+   "r": 9,
+   "explode": [
+    0,
+    0,
+    140.9
+   ],
+   "mass": 2.7,
+   "materials": [
+    [
+     "glas",
+     100
+    ]
+   ],
+   "info": "Gehärtetes, leicht gewölbtes Glas, zugleich Touch-Fläche. Mit Wärme lösen und mit einer dünnen Klinge anheben: Direkt darunter liegt der Akku.",
+   "color": "#C9DEDF",
+   "opacity": 0.6
+  },
+  {
+   "id": "display",
+   "component_id": "smartwatch_display",
+   "material_id": "special_glass",
+   "name": "OLED-Display",
+   "short": "Display",
+   "shape": "box",
+   "x": 1.5,
+   "y": 6.5,
+   "w": 34,
+   "d": 35,
+   "z": 9.2,
+   "h": 0.8,
+   "r": 8,
+   "explode": [
+    0,
+    0,
+    122.9
+   ],
+   "mass": 2.2,
+   "materials": [
+    [
+     "displayglas",
+     55
+    ],
+    [
+     "folien",
+     25
+    ],
+    [
+     "chip",
+     10
+    ],
+    [
+     "kupfer",
+     10
+    ]
+   ],
+   "info": "Selbstleuchtende OLED-Anzeige, braucht kein Hintergrundlicht. Ein schmales Flachbandkabel führt zur Platine.",
+   "color": "#31373B",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 2,
+     "w": 30,
+     "d": 31,
+     "r": 7,
+     "fill": "#3D464C"
+    }
+   ]
+  },
+  {
+   "id": "krone",
+   "component_id": "aluminium_housing",
+   "material_id": "steel",
+   "name": "Drehkrone",
+   "short": "Krone",
+   "shape": "box",
+   "x": 37,
+   "y": 17,
+   "w": 3.5,
+   "d": 7,
+   "z": 4.5,
+   "h": 4,
+   "r": 1.5,
+   "explode": [
+    18,
+    0,
+    0
+   ],
+   "mass": 0.6,
+   "materials": [
+    [
+     "stahl",
+     85
+    ],
+    [
+     "gummi",
+     15
+    ]
+   ],
+   "info": "Edelstahlrädchen mit Dichtring zum Scrollen. Sitzt mit einer Achse im Gehäuse, ein Sensor erkennt die Drehung.",
+   "color": "#B7BCC0"
+  },
+  {
+   "id": "taste",
+   "component_id": "aluminium_housing",
+   "material_id": "steel",
+   "name": "Seitentaste",
+   "short": "Taste",
+   "shape": "box",
+   "x": 37,
+   "y": 29,
+   "w": 2.5,
+   "d": 8,
+   "z": 5,
+   "h": 3,
+   "r": 1,
+   "explode": [
+    18,
+    0,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "stahl",
+     80
+    ],
+    [
+     "gummi",
+     20
+    ]
+   ],
+   "info": "Kleine Drucktaste mit Gummidichtung, damit kein Wasser eindringt.",
+   "color": "#B7BCC0"
+  },
+  {
+   "id": "akku",
+   "component_id": "li_ion_battery",
+   "material_id": "li_ion",
+   "name": "Lithium-Ionen-Akku",
+   "short": "Akku",
+   "shape": "box",
+   "x": 6,
+   "y": 10,
+   "w": 25,
+   "d": 24,
+   "z": 5.6,
+   "h": 3.4,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    105.1
+   ],
+   "mass": 5.4,
+   "materials": [
+    [
+     "lco",
+     40
+    ],
+    [
+     "graphit",
+     20
+    ],
+    [
+     "elektrolyt",
+     15
+    ],
+    [
+     "alu",
+     15
+    ],
+    [
+     "kupfer",
+     10
+    ]
+   ],
+   "info": "Etwa 300 mAh, flach in einer Folientasche. Klebt fest: nicht mit Metall hebeln, Pole abkleben und zur Batterie-Sammelstelle bringen.",
+   "color": "#9DA6AD",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 2,
+     "w": 21,
+     "d": 20,
+     "r": 2
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 4,
+     "w": 9,
+     "d": 5,
+     "r": 1,
+     "fill": "#C8423A"
+    }
+   ]
+  },
+  {
+   "id": "soc",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "Prozessor mit Speicher (SiP)",
+   "short": "Prozessor",
+   "shape": "box",
+   "x": 12,
+   "y": 16,
+   "w": 12,
+   "d": 12,
+   "z": 4.6,
+   "h": 1,
+   "r": 0.5,
+   "explode": [
+    0,
+    0,
+    87.1
+   ],
+   "mass": 0.5,
+   "materials": [
+    [
+     "chip",
+     100
+    ]
+   ],
+   "info": "Rechenkern, Arbeitsspeicher und Speicher in einem Baustein. Hier liegen auch Gesundheitsdaten: Uhr vorher zurücksetzen.",
+   "color": "#22272B",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 1,
+     "y": 1,
+     "w": 1.5
+    }
+   ]
+  },
+  {
+   "id": "platine",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "Hauptplatine",
+   "short": "Platine",
+   "shape": "box",
+   "x": 4,
+   "y": 9,
+   "w": 29,
+   "d": 30,
+   "z": 3.6,
+   "h": 1,
+   "r": 6,
+   "explode": [
+    0,
+    0,
+    81.1
+   ],
+   "mass": 2.7,
+   "materials": [
+    [
+     "fr4",
+     55
+    ],
+    [
+     "kupfer",
+     20
+    ],
+    [
+     "chip",
+     15
+    ],
+    [
+     "lot",
+     10
+    ]
+   ],
+   "info": "Kleine, dicht bestückte Leiterplatte mit Funkchips für Bluetooth und WLAN. Mit Gold und Kupfer: ab zur E-Schrott-Sammlung.",
+   "color": "#2E6B45",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 3,
+     "w": 4,
+     "d": 3,
+     "fill": "#22272B"
+    },
+    {
+     "shape": "box",
+     "x": 9,
+     "y": 3,
+     "w": 4,
+     "d": 3,
+     "fill": "#22272B"
+    },
+    {
+     "shape": "box",
+     "x": 15,
+     "y": 3,
+     "w": 4,
+     "d": 3,
+     "fill": "#22272B"
+    },
+    {
+     "shape": "box",
+     "x": 22,
+     "y": 22,
+     "w": 5,
+     "d": 5,
+     "r": 0.5,
+     "fill": "#B7BCC0"
+    }
+   ]
+  },
+  {
+   "id": "motor",
+   "component_id": "circuit_board",
+   "material_id": "mixed_electronics",
+   "name": "Vibrationsmotor",
+   "short": "Vibration",
+   "shape": "box",
+   "x": 26,
+   "y": 34,
+   "w": 8,
+   "d": 6,
+   "z": 2.2,
+   "h": 1.6,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    62.9
+   ],
+   "mass": 1.1,
+   "materials": [
+    [
+     "stahl",
+     40
+    ],
+    [
+     "ndfeb",
+     30
+    ],
+    [
+     "kupfer",
+     30
+    ]
+   ],
+   "info": "Ein kleiner Magnet wird von einer Spule hin und her bewegt, so spürt man Benachrichtigungen am Handgelenk.",
+   "color": "#9BA3A8"
+  },
+  {
+   "id": "ladespule",
+   "component_id": "circuit_board",
+   "material_id": "mixed_electronics",
+   "name": "Ladespule",
+   "short": "Ladespule",
+   "shape": "cyl",
+   "x": 8.5,
+   "y": 13.5,
+   "w": 20,
+   "z": 2.2,
+   "h": 0.6,
+   "explode": [
+    0,
+    0,
+    62.9
+   ],
+   "mass": 0.9,
+   "materials": [
+    [
+     "kupfer",
+     60
+    ],
+    [
+     "ferrit",
+     30
+    ],
+    [
+     "klebstoff",
+     10
+    ]
+   ],
+   "info": "Flache Kupferspule auf einer Ferritfolie. Nimmt die Energie der magnetischen Ladeschale kabellos auf.",
+   "color": "#C5803D",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 3,
+     "w": 14,
+     "fill": "#B06F33"
+    },
+    {
+     "shape": "cyl",
+     "x": 6,
+     "y": 6,
+     "w": 8,
+     "fill": "#3A3F44"
+    }
+   ]
+  },
+  {
+   "id": "gehaeuse",
+   "component_id": "aluminium_housing",
+   "material_id": "aluminium",
+   "name": "Aluminium-Gehäuse",
+   "short": "Gehäuse",
+   "shape": "box",
+   "x": 0,
+   "y": 5,
+   "w": 37,
+   "d": 38,
+   "z": 1.5,
+   "h": 8.5,
+   "r": 10,
+   "explode": [
+    0,
+    0,
+    37.1
+   ],
+   "mass": 9.7,
+   "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "info": "Gefräster Aluminiumrahmen. Erst alle Teile ausbauen, dann ist die leere Schale reines Aluminium.",
+   "color": "#C3C8CC",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1.5,
+     "y": 1.5,
+     "w": 34,
+     "d": 35,
+     "r": 9,
+     "fill": "#9DA4A9"
+    }
+   ]
+  },
+  {
+   "id": "rueckdeckel",
+   "component_id": "aluminium_housing",
+   "material_id": "pc",
+   "name": "Rückdeckel",
+   "short": "Rückdeckel",
+   "shape": "box",
+   "x": 3.5,
+   "y": 8.5,
+   "w": 30,
+   "d": 31,
+   "z": 0.6,
+   "h": 1.4,
+   "r": 9,
+   "explode": [
+    0,
+    0,
+    18.6
+   ],
+   "mass": 2.7,
+   "materials": [
+    [
+     "pcabs",
+     80
+    ],
+    [
+     "glas",
+     20
+    ]
+   ],
+   "info": "Kunststoffboden mit Glasfenster für den Pulssensor, verklebt oder verschraubt. Er liegt beim Tragen auf der Haut.",
+   "color": "#2F3438",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 7,
+     "y": 7.5,
+     "w": 16,
+     "fill": "#454C52"
+    }
+   ]
+  },
+  {
+   "id": "sensor",
+   "component_id": "circuit_board",
+   "material_id": "mixed_electronics",
+   "name": "Pulssensor (LEDs und Fotodioden)",
+   "short": "Pulssensor",
+   "shape": "cyl",
+   "x": 12.5,
+   "y": 18,
+   "w": 12,
+   "z": 0,
+   "h": 1.2,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 0.4,
+   "materials": [
+    [
+     "led",
+     30
+    ],
+    [
+     "chip",
+     30
+    ],
+    [
+     "glas",
+     25
+    ],
+    [
+     "kupfer",
+     15
+    ]
+   ],
+   "info": "Grüne LEDs leuchten in die Haut, Fotodioden messen, wie viel Licht das Blut zurückwirft. Daraus wird der Puls.",
+   "color": "#3A3F44",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 2,
+     "y": 5,
+     "w": 2.5,
+     "fill": "#5FBF6A"
+    },
+    {
+     "shape": "cyl",
+     "x": 7.5,
+     "y": 5,
+     "w": 2.5,
+     "fill": "#5FBF6A"
+    },
+    {
+     "shape": "cyl",
+     "x": 4.5,
+     "y": 1.5,
+     "w": 3,
+     "fill": "#262B2F"
+    },
+    {
+     "shape": "cyl",
+     "x": 4.5,
+     "y": 7.5,
+     "w": 3,
+     "fill": "#262B2F"
+    }
+   ]
+  },
+  {
+   "id": "band_oben",
+   "component_id": "silicone_strap",
+   "material_id": "silicone",
+   "name": "Armband oben (Ansatz)",
+   "short": "Armband",
+   "shape": "box",
+   "x": 7.5,
+   "y": -1,
+   "w": 22,
+   "d": 6,
+   "z": 2.5,
+   "h": 4,
+   "r": 2,
+   "explode": [
+    0,
+    -16,
+    0
+   ],
+   "mass": 5.4,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "info": "Silikonarmband, mit einem Schnellverschluss-Stift im Gehäuse eingehakt. Stift drücken und herausschieben.",
+   "color": "#3A4A5C",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 1,
+     "w": 18,
+     "d": 2,
+     "r": 1,
+     "fill": "#2C3947"
+    }
+   ]
+  },
+  {
+   "id": "band_unten",
+   "component_id": "silicone_strap",
+   "material_id": "silicone",
+   "name": "Armband unten (Ansatz)",
+   "short": "Armband",
+   "shape": "box",
+   "x": 7.5,
+   "y": 43,
+   "w": 22,
+   "d": 6,
+   "z": 2.5,
+   "h": 4,
+   "r": 2,
+   "explode": [
+    0,
+    16,
+    0
+   ],
+   "mass": 5.4,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "info": "Zweite Bandhälfte mit Löchern für die Schließe. Silikon ist kein Elektroschrott und kann abgetrennt werden.",
+   "color": "#3A4A5C",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 3,
+     "w": 18,
+     "d": 2,
+     "r": 1,
+     "fill": "#2C3947"
+    }
+   ]
+  }
+ ]
+}

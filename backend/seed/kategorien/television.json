@@ -4,7 +4,7 @@
  "name_en": "Television",
  "klasse": "Elektroschrott · Bildschirmgerät",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -21,24 +21,24 @@
  "werte": [
   {
    "k": "Rohstoffwert",
-   "v": "≈ 32,9 €",
+   "v": "≈ 22,4 €",
    "hint": "Gold, Silber, Palladium zu Preisen vom 13.11. Ohne Palladium (kein Preis)."
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 68,3 kg",
+   "v": "≈ 53,4 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 47,9 kg",
-   "hint": "spart 20,4 kg, wenn recycelte Materialien eingesetzt werden"
+   "v": "≈ 33,3 kg",
+   "hint": "spart 20,1 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Fe": 4383337.0,
-   "Cu": 1300000.0,
+   "Fe": 4849839.0,
+   "Cu": 473190.0,
    "Ag": 580,
    "In": 260,
    "Au": 140,
@@ -57,19 +57,21 @@
    "Y": "oeko2012 Tab. 13 (LED-Hintergrundbeleuchtung)"
   },
   "materialien_g": {
-   "abs": 4166.7,
-   "steel": 4166.7,
-   "mixed_electronics": 2000.0,
-   "special_glass": 1666.7,
-   "pcb": 1000.0,
-   "copper": 500.0,
-   "pvc": 500.0
+   "steel": 4801.8,
+   "special_glass": 3201.1,
+   "abs": 2600.9,
+   "ps": 1300.5,
+   "mixed_electronics": 960.5,
+   "pcb": 625.2,
+   "pet": 300.1,
+   "pvc": 150.1,
+   "copper": 60.0
   },
-  "co2_kg": 68.254,
-  "co2_mit_recyclat_kg": 47.895,
-  "co2_ersparnis_kg": 20.359,
+  "co2_kg": 53.371,
+  "co2_mit_recyclat_kg": 33.317,
+  "co2_ersparnis_kg": 20.055,
   "co2_ohne_faktor": [],
-  "rohstoffwert_eur": 32.85,
+  "rohstoffwert_eur": 22.42,
   "wert_ohne_preis": [
    "Pd"
   ],
@@ -119,93 +121,1105 @@
   "nicht": "Nicht in Restmüll oder Sperrmüll",
   "warnung": "Bildschirm nicht zerbrechen. Persönliche Daten vorher löschen."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "lcd_panel",
-   "component_id": "lcd_panel",
-   "name": "LCD Panel",
-   "short": "LCD Panel",
+   "id": "rahmen",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Frontrahmen",
+   "short": "Frontrahmen",
    "shape": "box",
-   "x": 24.6,
-   "y": 14.2,
-   "w": 1180.8,
-   "d": 681.6,
-   "h": 3.6,
-   "z": 48.0,
-   "r": 81.8,
+   "x": 0,
+   "y": 0,
+   "w": 1230,
+   "d": 710,
+   "z": 57,
+   "h": 3,
+   "r": 6,
    "explode": [
     0,
-    0,
-    2003.0
+    -790,
+    505.0
    ],
-   "mass": 1666.67,
+   "mass": 600.2,
    "materials": [
     [
-     "glas",
+     "pcabs",
      100
     ]
    ],
-   "material_id": "special_glass",
-   "info": "Remove the back cover screws; handle the panel flat, it breaks easily."
+   "info": "Sehr schmaler Rahmen um das Bild, eingeclipst oder mit kleinen Schrauben von hinten befestigt.",
+   "color": "#2B2F33",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 9,
+     "y": 9,
+     "w": 1212,
+     "d": 682,
+     "r": 1,
+     "fill": "#31373B"
+    },
+    {
+     "shape": "box",
+     "x": 590,
+     "y": 696,
+     "w": 50,
+     "d": 10,
+     "r": 2,
+     "fill": "#4A5156"
+    }
+   ]
   },
   {
-   "id": "speaker_driver",
-   "component_id": "speaker_driver",
-   "name": "Speaker",
-   "short": "Speaker",
-   "shape": "cyl",
-   "x": 158.4,
-   "y": 383.4,
-   "w": 298.2,
-   "h": 21.0,
-   "z": 9.6,
+   "id": "panel",
+   "component_id": "lcd_panel",
+   "material_id": "special_glass",
+   "name": "LCD-Panel",
+   "short": "LCD-Panel",
+   "shape": "box",
+   "x": 8,
+   "y": 8,
+   "w": 1214,
+   "d": 694,
+   "z": 55,
+   "h": 2,
+   "r": 1,
    "explode": [
     0,
-    0,
-    1632.4
+    -790,
+    395.0
    ],
-   "mass": 1000.0,
+   "mass": 3201.1,
    "materials": [
     [
+     "displayglas",
+     82
+    ],
+    [
+     "folien",
+     14
+    ],
+    [
      "chip",
-     30
+     2
     ],
     [
      "kupfer",
-     30
+     2
+    ]
+   ],
+   "info": "Zwei Glasscheiben mit Flüssigkristallen, außen Polarisationsfolien. Die Steuerplatine (T-Con) hängt mit Folienkabeln am Rand. Nur zu zweit und flach tragen: Es bricht sehr leicht.",
+   "color": "#31373B",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 2,
+     "w": 1210,
+     "d": 690,
+     "r": 1,
+     "fill": "#3D464C"
+    },
+    {
+     "shape": "box",
+     "x": 200,
+     "y": 0,
+     "w": 30,
+     "d": 2,
+     "fill": "#C5803D"
+    },
+    {
+     "shape": "box",
+     "x": 310,
+     "y": 0,
+     "w": 30,
+     "d": 2,
+     "fill": "#C5803D"
+    },
+    {
+     "shape": "box",
+     "x": 420,
+     "y": 0,
+     "w": 30,
+     "d": 2,
+     "fill": "#C5803D"
+    },
+    {
+     "shape": "box",
+     "x": 530,
+     "y": 0,
+     "w": 30,
+     "d": 2,
+     "fill": "#C5803D"
+    },
+    {
+     "shape": "box",
+     "x": 640,
+     "y": 0,
+     "w": 30,
+     "d": 2,
+     "fill": "#C5803D"
+    },
+    {
+     "shape": "box",
+     "x": 750,
+     "y": 0,
+     "w": 30,
+     "d": 2,
+     "fill": "#C5803D"
+    },
+    {
+     "shape": "box",
+     "x": 860,
+     "y": 0,
+     "w": 30,
+     "d": 2,
+     "fill": "#C5803D"
+    },
+    {
+     "shape": "box",
+     "x": 970,
+     "y": 0,
+     "w": 30,
+     "d": 2,
+     "fill": "#C5803D"
+    }
+   ]
+  },
+  {
+   "id": "folien",
+   "component_id": "led_backlight",
+   "material_id": "pet",
+   "name": "Optische Folien",
+   "short": "Folien",
+   "shape": "box",
+   "x": 10,
+   "y": 10,
+   "w": 1210,
+   "d": 690,
+   "z": 54,
+   "h": 1,
+   "r": 1,
+   "explode": [
+    0,
+    -790,
+    285.0
+   ],
+   "mass": 300.1,
+   "materials": [
+    [
+     "folien",
+     100
+    ]
+   ],
+   "info": "Prismen- und Streufolien, lose aufgelegt. Sie lenken das Licht nach vorn und machen das Bild heller.",
+   "color": "#EEF2F4",
+   "opacity": 0.75
+  },
+  {
+   "id": "diffusor",
+   "component_id": "led_backlight",
+   "material_id": "ps",
+   "name": "Diffusorplatte",
+   "short": "Diffusor",
+   "shape": "box",
+   "x": 10,
+   "y": 10,
+   "w": 1210,
+   "d": 690,
+   "z": 52,
+   "h": 2,
+   "r": 1,
+   "explode": [
+    0,
+    -790,
+    175.0
+   ],
+   "mass": 1300.5,
+   "materials": [
+    [
+     "ps",
+     100
+    ]
+   ],
+   "info": "Milchige Kunststoffplatte, die aus den einzelnen LED-Punkten eine gleichmäßig helle Fläche macht.",
+   "color": "#F2F4F5",
+   "opacity": 0.8
+  },
+  {
+   "id": "led_leisten",
+   "component_id": "led_backlight",
+   "material_id": "mixed_electronics",
+   "name": "LED-Leisten auf Reflektorfolie",
+   "short": "LED-Leisten",
+   "shape": "box",
+   "x": 12,
+   "y": 12,
+   "w": 1206,
+   "d": 686,
+   "z": 38,
+   "h": 4,
+   "r": 1,
+   "explode": [
+    0,
+    -790,
+    75.0
+   ],
+   "mass": 450.2,
+   "materials": [
+    [
+     "pet",
+     45
+    ],
+    [
+     "alu",
+     20
+    ],
+    [
+     "led",
+     12
+    ],
+    [
+     "kupfer",
+     10
+    ],
+    [
+     "fr4",
+     8
     ],
     [
      "pcabs",
-     25
-    ],
-    [
-     "stahl",
-     15
+     5
     ]
    ],
-   "material_id": "mixed_electronics",
-   "info": "Contains a strong magnet; keep away from cards and other electronics."
+   "info": "Weiße Reflektorfolie mit sechs LED-Leisten, jede LED unter einer kleinen Streulinse. Defekte Leisten sind der häufigste Grund für ein dunkles Bild und lassen sich einzeln tauschen.",
+   "color": "#F4F4F0",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 20,
+     "y": 50,
+     "w": 1166,
+     "d": 14,
+     "r": 2,
+     "fill": "#E3E6E8"
+    },
+    {
+     "shape": "box",
+     "x": 20,
+     "y": 160,
+     "w": 1166,
+     "d": 14,
+     "r": 2,
+     "fill": "#E3E6E8"
+    },
+    {
+     "shape": "box",
+     "x": 20,
+     "y": 270,
+     "w": 1166,
+     "d": 14,
+     "r": 2,
+     "fill": "#E3E6E8"
+    },
+    {
+     "shape": "box",
+     "x": 20,
+     "y": 380,
+     "w": 1166,
+     "d": 14,
+     "r": 2,
+     "fill": "#E3E6E8"
+    },
+    {
+     "shape": "box",
+     "x": 20,
+     "y": 490,
+     "w": 1166,
+     "d": 14,
+     "r": 2,
+     "fill": "#E3E6E8"
+    },
+    {
+     "shape": "box",
+     "x": 20,
+     "y": 600,
+     "w": 1166,
+     "d": 14,
+     "r": 2,
+     "fill": "#E3E6E8"
+    },
+    {
+     "shape": "cyl",
+     "x": 40,
+     "y": 52,
+     "w": 10,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 138,
+     "y": 52,
+     "w": 10,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 236,
+     "y": 52,
+     "w": 10,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 334,
+     "y": 52,
+     "w": 10,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 432,
+     "y": 52,
+     "w": 10,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 530,
+     "y": 52,
+     "w": 10,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 628,
+     "y": 52,
+     "w": 10,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 726,
+     "y": 52,
+     "w": 10,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 824,
+     "y": 52,
+     "w": 10,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 922,
+     "y": 52,
+     "w": 10,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 1020,
+     "y": 52,
+     "w": 10,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 1118,
+     "y": 52,
+     "w": 10,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 40,
+     "y": 162,
+     "w": 10,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 138,
+     "y": 162,
+     "w": 10,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 236,
+     "y": 162,
+     "w": 10,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 334,
+     "y": 162,
+     "w": 10,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 432,
+     "y": 162,
+     "w": 10,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 530,
+     "y": 162,
+     "w": 10,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 628,
+     "y": 162,
+     "w": 10,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 726,
+     "y": 162,
+     "w": 10,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 824,
+     "y": 162,
+     "w": 10,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 922,
+     "y": 162,
+     "w": 10,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 1020,
+     "y": 162,
+     "w": 10,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 1118,
+     "y": 162,
+     "w": 10,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 40,
+     "y": 272,
+     "w": 10,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 138,
+     "y": 272,
+     "w": 10,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 236,
+     "y": 272,
+     "w": 10,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 334,
+     "y": 272,
+     "w": 10,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 432,
+     "y": 272,
+     "w": 10,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 530,
+     "y": 272,
+     "w": 10,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 628,
+     "y": 272,
+     "w": 10,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 726,
+     "y": 272,
+     "w": 10,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 824,
+     "y": 272,
+     "w": 10,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 922,
+     "y": 272,
+     "w": 10,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 1020,
+     "y": 272,
+     "w": 10,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 1118,
+     "y": 272,
+     "w": 10,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 40,
+     "y": 382,
+     "w": 10,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 138,
+     "y": 382,
+     "w": 10,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 236,
+     "y": 382,
+     "w": 10,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 334,
+     "y": 382,
+     "w": 10,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 432,
+     "y": 382,
+     "w": 10,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 530,
+     "y": 382,
+     "w": 10,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 628,
+     "y": 382,
+     "w": 10,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 726,
+     "y": 382,
+     "w": 10,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 824,
+     "y": 382,
+     "w": 10,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 922,
+     "y": 382,
+     "w": 10,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 1020,
+     "y": 382,
+     "w": 10,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 1118,
+     "y": 382,
+     "w": 10,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 40,
+     "y": 492,
+     "w": 10,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 138,
+     "y": 492,
+     "w": 10,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 236,
+     "y": 492,
+     "w": 10,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 334,
+     "y": 492,
+     "w": 10,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 432,
+     "y": 492,
+     "w": 10,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 530,
+     "y": 492,
+     "w": 10,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 628,
+     "y": 492,
+     "w": 10,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 726,
+     "y": 492,
+     "w": 10,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 824,
+     "y": 492,
+     "w": 10,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 922,
+     "y": 492,
+     "w": 10,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 1020,
+     "y": 492,
+     "w": 10,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 1118,
+     "y": 492,
+     "w": 10,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 40,
+     "y": 602,
+     "w": 10,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 138,
+     "y": 602,
+     "w": 10,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 236,
+     "y": 602,
+     "w": 10,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 334,
+     "y": 602,
+     "w": 10,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 432,
+     "y": 602,
+     "w": 10,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 530,
+     "y": 602,
+     "w": 10,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 628,
+     "y": 602,
+     "w": 10,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 726,
+     "y": 602,
+     "w": 10,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 824,
+     "y": 602,
+     "w": 10,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 922,
+     "y": 602,
+     "w": 10,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 1020,
+     "y": 602,
+     "w": 10,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "cyl",
+     "x": 1118,
+     "y": 602,
+     "w": 10,
+     "fill": "#F6D86B"
+    }
+   ]
   },
   {
-   "id": "circuit_board",
-   "component_id": "circuit_board",
-   "name": "Circuit Board",
-   "short": "Circuit Board",
+   "id": "rueckblech",
+   "component_id": "steel_backplate",
+   "material_id": "steel",
+   "name": "Rückblech",
+   "short": "Rückblech",
    "shape": "box",
-   "x": 664.2,
-   "y": 63.9,
-   "w": 516.6,
-   "d": 298.2,
-   "h": 21.0,
-   "z": 9.6,
-   "r": 35.8,
+   "x": 4,
+   "y": 4,
+   "w": 1222,
+   "d": 702,
+   "z": 35,
+   "h": 3,
+   "r": 3,
+   "explode": [
+    0,
+    -790,
+    -35.0
+   ],
+   "mass": 3501.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Großes verzinktes Stahlblech mit Sicken, trägt Beleuchtung und Panel. Mit dem Magneten prüfen: Stahl.",
+   "color": "#9AA2A8",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 300,
+     "y": 150,
+     "w": 12,
+     "d": 12,
+     "fill": "#7D858B"
+    },
+    {
+     "shape": "cyl",
+     "x": 900,
+     "y": 150,
+     "w": 12,
+     "d": 12,
+     "fill": "#7D858B"
+    },
+    {
+     "shape": "cyl",
+     "x": 300,
+     "y": 550,
+     "w": 12,
+     "d": 12,
+     "fill": "#7D858B"
+    },
+    {
+     "shape": "cyl",
+     "x": 900,
+     "y": 550,
+     "w": 12,
+     "d": 12,
+     "fill": "#7D858B"
+    }
+   ]
+  },
+  {
+   "id": "soc",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "Hauptprozessor (SoC)",
+   "short": "Prozessor",
+   "shape": "box",
+   "x": 760,
+   "y": 450,
+   "w": 24,
+   "d": 24,
+   "z": 19.6,
+   "h": 2,
+   "r": 0.5,
    "explode": [
     0,
     0,
-    1223.4
+    135.0
    ],
-   "mass": 1000.0,
+   "mass": 5,
+   "materials": [
+    [
+     "chip",
+     85
+    ],
+    [
+     "alu",
+     15
+    ]
+   ],
+   "info": "Der Rechner des Smart-TV: Er entschlüsselt Sender, Streams und Apps. Unter einem kleinen Alu-Kühlkörper.",
+   "color": "#22272B",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 3,
+     "w": 18,
+     "d": 18,
+     "r": 1,
+     "fill": "#9AA2A8"
+    }
+   ]
+  },
+  {
+   "id": "hauptplatine",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "Hauptplatine mit Anschlüssen",
+   "short": "Hauptplatine",
+   "shape": "box",
+   "x": 700,
+   "y": 400,
+   "w": 260,
+   "d": 170,
+   "z": 18,
+   "h": 1.6,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    100
+   ],
+   "mass": 220.1,
+   "materials": [
+    [
+     "fr4",
+     50
+    ],
+    [
+     "kupfer",
+     18
+    ],
+    [
+     "chip",
+     12
+    ],
+    [
+     "stahl",
+     12
+    ],
+    [
+     "lot",
+     8
+    ]
+   ],
+   "info": "Mit Tuner, HDMI-, USB- und Antennenbuchsen. Hier sind Konten für Streamingdienste gespeichert: vorher auf Werkseinstellungen zurücksetzen.",
+   "color": "#2E6B45",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 240,
+     "y": 10,
+     "w": 16,
+     "d": 18,
+     "fill": "#B7BCC0"
+    },
+    {
+     "shape": "box",
+     "x": 240,
+     "y": 36,
+     "w": 16,
+     "d": 18,
+     "fill": "#B7BCC0"
+    },
+    {
+     "shape": "box",
+     "x": 240,
+     "y": 62,
+     "w": 16,
+     "d": 18,
+     "fill": "#B7BCC0"
+    },
+    {
+     "shape": "box",
+     "x": 240,
+     "y": 88,
+     "w": 16,
+     "d": 18,
+     "fill": "#B7BCC0"
+    },
+    {
+     "shape": "box",
+     "x": 20,
+     "y": 120,
+     "w": 40,
+     "d": 30,
+     "r": 1,
+     "fill": "#22272B"
+    }
+   ]
+  },
+  {
+   "id": "trafo",
+   "component_id": "circuit_board",
+   "material_id": "mixed_electronics",
+   "name": "Transformator",
+   "short": "Trafo",
+   "shape": "box",
+   "x": 420,
+   "y": 440,
+   "w": 40,
+   "d": 36,
+   "z": 19.6,
+   "h": 15,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    135.0
+   ],
+   "mass": 150.1,
+   "materials": [
+    [
+     "ferrit",
+     50
+    ],
+    [
+     "kupfer",
+     40
+    ],
+    [
+     "pcabs",
+     10
+    ]
+   ],
+   "info": "Kupferwicklungen auf einem Ferritkern, trennt die Netzspannung von der übrigen Elektronik.",
+   "color": "#3A3F44",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 5,
+     "y": 5,
+     "w": 30,
+     "d": 26,
+     "r": 2,
+     "fill": "#C5803D"
+    }
+   ]
+  },
+  {
+   "id": "netzteil",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "Netzteilplatine",
+   "short": "Netzteil",
+   "shape": "box",
+   "x": 280,
+   "y": 400,
+   "w": 300,
+   "d": 200,
+   "z": 18,
+   "h": 1.6,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    100
+   ],
+   "mass": 400.1,
    "materials": [
     [
      "fr4",
@@ -224,160 +1238,438 @@
      10
     ]
    ],
-   "material_id": "pcb",
-   "info": "Unscrew and unplug all ribbon cables; hand in at an e-waste collection point."
+   "info": "Versorgt Elektronik und LED-Leisten mit Strom. Die großen Kondensatoren können nach dem Ausstecken noch geladen sein: nicht an die Beinchen fassen.",
+   "color": "#2E6B45",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 200,
+     "y": 20,
+     "w": 80,
+     "d": 30,
+     "r": 2,
+     "fill": "#9AA2A8"
+    },
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 150,
+     "w": 40,
+     "d": 40,
+     "r": 2,
+     "fill": "#2B2F33"
+    },
+    {
+     "shape": "cyl",
+     "x": 40,
+     "y": 50,
+     "w": 30,
+     "fill": "#2F4F7A"
+    },
+    {
+     "shape": "cyl",
+     "x": 80,
+     "y": 50,
+     "w": 22,
+     "fill": "#2F4F7A"
+    }
+   ]
   },
   {
-   "id": "led_backlight",
-   "component_id": "led_backlight",
-   "name": "LED Backlight",
-   "short": "LED Backlight",
+   "id": "lautsprecher_l",
+   "component_id": "speaker_driver",
+   "material_id": "mixed_electronics",
+   "name": "Lautsprecher links",
+   "short": "Lautsprecher",
    "shape": "box",
-   "x": 49.2,
-   "y": 63.9,
-   "w": 516.6,
-   "d": 298.2,
-   "h": 21.0,
-   "z": 9.6,
-   "r": 35.8,
+   "x": 60,
+   "y": 600,
+   "w": 140,
+   "d": 40,
+   "z": 18,
+   "h": 16,
+   "r": 6,
    "explode": [
     0,
     0,
-    814.4
+    100
    ],
-   "mass": 1000.0,
+   "mass": 180.1,
    "materials": [
     [
-     "chip",
-     30
-    ],
-    [
-     "kupfer",
-     30
-    ],
-    [
      "pcabs",
-     25
+     45
+    ],
+    [
+     "ferrit",
+     30
     ],
     [
      "stahl",
-     15
+     10
+    ],
+    [
+     "kupfer",
+     10
+    ],
+    [
+     "papier",
+     5
     ]
    ],
-   "material_id": "mixed_electronics",
-   "info": "LED strips sit behind the diffuser sheets at the panel edges or back."
+   "info": "Kleiner Breitband-Lautsprecher in einer Kunststoffbox, strahlt nach unten ab. Der Magnet zieht Metall an: von Bankkarten fernhalten.",
+   "color": "#4A5156",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 6,
+     "w": 120,
+     "d": 28,
+     "r": 10,
+     "fill": "#2F3438"
+    },
+    {
+     "shape": "cyl",
+     "x": 58,
+     "y": 8,
+     "w": 24,
+     "fill": "#6E7579"
+    }
+   ]
   },
   {
-   "id": "plastic_housing",
-   "component_id": "plastic_housing",
-   "name": "Plastic Housing",
-   "short": "Plastic Housing",
+   "id": "lautsprecher_r",
+   "component_id": "speaker_driver",
+   "material_id": "mixed_electronics",
+   "name": "Lautsprecher rechts",
+   "short": "Lautsprecher",
    "shape": "box",
-   "x": 0,
-   "y": 0,
-   "w": 1230.0,
-   "d": 710.0,
-   "h": 24.0,
-   "z": 24.0,
-   "r": 85.2,
+   "x": 1030,
+   "y": 600,
+   "w": 140,
+   "d": 40,
+   "z": 18,
+   "h": 16,
+   "r": 6,
    "explode": [
     0,
     0,
-    388.0
+    100
    ],
-   "mass": 4166.67,
+   "mass": 180.1,
+   "materials": [
+    [
+     "pcabs",
+     45
+    ],
+    [
+     "ferrit",
+     30
+    ],
+    [
+     "stahl",
+     10
+    ],
+    [
+     "kupfer",
+     10
+    ],
+    [
+     "papier",
+     5
+    ]
+   ],
+   "info": "Zweiter Lautsprecher für Stereo-Ton. Ausgebaut für Bastelprojekte weiter nutzbar.",
+   "color": "#4A5156",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 6,
+     "w": 120,
+     "d": 28,
+     "r": 10,
+     "fill": "#2F3438"
+    },
+    {
+     "shape": "cyl",
+     "x": 58,
+     "y": 8,
+     "w": 24,
+     "fill": "#6E7579"
+    }
+   ]
+  },
+  {
+   "id": "rueckwand",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Rückwand",
+   "short": "Rückwand",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 1230,
+   "d": 710,
+   "z": 10,
+   "h": 8,
+   "r": 6,
+   "explode": [
+    0,
+    0,
+    -10
+   ],
+   "mass": 2000.7,
    "materials": [
     [
      "pcabs",
      100
     ]
    ],
-   "material_id": "abs",
-   "info": "Look for hidden screws under rubber feet or labels, then pry the clips open."
+   "info": "Große Kunststoffschale mit vielen Schrauben, auch unter der VESA-Halterung. Danach rundum vorsichtig aufclipsen.",
+   "color": "#2B2F33",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 465,
+     "y": 205,
+     "w": 300,
+     "d": 300,
+     "r": 6,
+     "fill": "#24282C"
+    },
+    {
+     "shape": "box",
+     "x": 60,
+     "y": 60,
+     "w": 200,
+     "d": 5,
+     "fill": "#24282C"
+    },
+    {
+     "shape": "box",
+     "x": 60,
+     "y": 78,
+     "w": 200,
+     "d": 5,
+     "fill": "#24282C"
+    },
+    {
+     "shape": "box",
+     "x": 60,
+     "y": 96,
+     "w": 200,
+     "d": 5,
+     "fill": "#24282C"
+    },
+    {
+     "shape": "box",
+     "x": 60,
+     "y": 114,
+     "w": 200,
+     "d": 5,
+     "fill": "#24282C"
+    },
+    {
+     "shape": "box",
+     "x": 60,
+     "y": 132,
+     "w": 200,
+     "d": 5,
+     "fill": "#24282C"
+    },
+    {
+     "shape": "box",
+     "x": 60,
+     "y": 150,
+     "w": 200,
+     "d": 5,
+     "fill": "#24282C"
+    },
+    {
+     "shape": "box",
+     "x": 60,
+     "y": 168,
+     "w": 200,
+     "d": 5,
+     "fill": "#24282C"
+    },
+    {
+     "shape": "box",
+     "x": 60,
+     "y": 186,
+     "w": 200,
+     "d": 5,
+     "fill": "#24282C"
+    },
+    {
+     "shape": "box",
+     "x": 60,
+     "y": 204,
+     "w": 200,
+     "d": 5,
+     "fill": "#24282C"
+    },
+    {
+     "shape": "box",
+     "x": 60,
+     "y": 222,
+     "w": 200,
+     "d": 5,
+     "fill": "#24282C"
+    },
+    {
+     "shape": "box",
+     "x": 60,
+     "y": 240,
+     "w": 200,
+     "d": 5,
+     "fill": "#24282C"
+    },
+    {
+     "shape": "box",
+     "x": 60,
+     "y": 258,
+     "w": 200,
+     "d": 5,
+     "fill": "#24282C"
+    },
+    {
+     "shape": "box",
+     "x": 60,
+     "y": 276,
+     "w": 200,
+     "d": 5,
+     "fill": "#24282C"
+    },
+    {
+     "shape": "box",
+     "x": 60,
+     "y": 294,
+     "w": 200,
+     "d": 5,
+     "fill": "#24282C"
+    }
+   ]
   },
   {
-   "id": "cable_copper_core",
-   "component_id": "cable_copper_core",
-   "name": "Cable Wires",
-   "short": "Cable Wires",
+   "id": "standfuss",
+   "component_id": "plastic_housing",
+   "material_id": "steel",
+   "name": "Standfuß",
+   "short": "Standfuß",
    "shape": "box",
-   "x": 1303.8,
-   "y": 35.5,
-   "w": 61.5,
-   "d": 639.0,
-   "h": 4.8,
-   "z": 6.0,
-   "r": 7.4,
+   "x": 415,
+   "y": 200,
+   "w": 400,
+   "d": 250,
+   "z": 0,
+   "h": 10,
+   "r": 30,
    "explode": [
-    445.5,
-    0,
-    116.4
-   ],
-   "mass": 500.0,
-   "materials": [
-    [
-     "kupfer",
-     100
-    ]
-   ],
-   "material_id": "copper",
-   "info": "Cut off the plug and strip the insulation to free the copper."
-  },
-  {
-   "id": "cable_insulation",
-   "component_id": "cable_insulation",
-   "name": "Cable Insulation",
-   "short": "Cable Insulation",
-   "shape": "box",
-   "x": 1426.8,
-   "y": 35.5,
-   "w": 61.5,
-   "d": 639.0,
-   "h": 4.8,
-   "z": 6.0,
-   "r": 7.4,
-   "explode": [
-    630.0,
-    0,
-    116.4
-   ],
-   "mass": 500.0,
-   "materials": [
-    [
-     "pvc",
-     100
-    ]
-   ],
-   "material_id": "pvc",
-   "info": "Slit lengthwise with a cable stripper to separate it from the wires."
-  },
-  {
-   "id": "steel_backplate",
-   "component_id": "steel_backplate",
-   "name": "Metal Backplate",
-   "short": "Metal Backplate",
-   "shape": "box",
-   "x": 0,
-   "y": 0,
-   "w": 1230.0,
-   "d": 710.0,
-   "h": 24.0,
-   "z": 0.0,
-   "r": 85.2,
-   "explode": [
-    0,
+    855,
     0,
     0
    ],
-   "mass": 4166.67,
+   "mass": 1300.5,
    "materials": [
     [
      "stahl",
+     65
+    ],
+    [
+     "pcabs",
+     35
+    ]
+   ],
+   "info": "Mittiger Standfuß aus Stahlblech mit Kunststoffverkleidung, mit vier Schrauben an der Rückwand. Abgeschraubt passt der Fernseher an eine Wandhalterung.",
+   "color": "#3A3F44",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 150,
+     "y": 20,
+     "w": 100,
+     "d": 80,
+     "r": 8,
+     "fill": "#4A5156"
+    }
+   ]
+  },
+  {
+   "id": "kabel",
+   "component_id": "cable_insulation",
+   "material_id": "pvc",
+   "name": "Netzkabel (Isolierung)",
+   "short": "Kabel",
+   "shape": "box",
+   "x": 860,
+   "y": 250,
+   "w": 250,
+   "d": 12,
+   "z": 0,
+   "h": 8,
+   "r": 4,
+   "explode": [
+    855,
+    0,
+    0
+   ],
+   "mass": 150.1,
+   "materials": [
+    [
+     "pvc",
+     90
+    ],
+    [
+     "pp",
+     10
+    ]
+   ],
+   "info": "Zwei-Meter-Kabel mit PVC-Mantel. Stecker abschneiden und den Mantel längs aufschlitzen.",
+   "color": "#2B2F33",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 0,
+     "w": 40,
+     "d": 12,
+     "r": 2,
+     "fill": "#4A5156"
+    }
+   ]
+  },
+  {
+   "id": "kupferadern",
+   "component_id": "cable_copper_core",
+   "material_id": "copper",
+   "name": "Kupferadern",
+   "short": "Kupferadern",
+   "shape": "box",
+   "x": 860,
+   "y": 280,
+   "w": 250,
+   "d": 4,
+   "z": 0,
+   "h": 4,
+   "r": 1,
+   "explode": [
+    855,
+    0,
+    0
+   ],
+   "mass": 60,
+   "materials": [
+    [
+     "kupfer",
      100
     ]
    ],
-   "material_id": "steel",
-   "info": "Remove after taking out the electronics; check with a magnet."
+   "info": "Zwei Kupferadern. Reines Kupfer wird eingeschmolzen und neu verwendet.",
+   "color": "#B87333"
   }
  ]
 }

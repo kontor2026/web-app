@@ -1,0 +1,594 @@
+{
+ "parts": [
+  {
+   "id": "lunette",
+   "component_id": "aluminium_housing",
+   "material_id": "aluminium",
+   "name": "Frontring (Lünette)",
+   "short": "Frontring",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 30,
+   "z": 145,
+   "h": 5,
+   "explode": [
+    0,
+    0,
+    129
+   ],
+   "mass": 6.2,
+   "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "info": "Aufgeschraubter Aluminiumring, der Glas und Reflektor festhält. Gegen den Uhrzeigersinn abdrehen.",
+   "color": "#3B4147",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 3,
+     "w": 24,
+     "fill": "#1F2327"
+    }
+   ]
+  },
+  {
+   "id": "linse",
+   "component_id": "lens_glass",
+   "material_id": "special_glass",
+   "name": "Schutzglas",
+   "short": "Glas",
+   "shape": "cyl",
+   "x": 2,
+   "y": 2,
+   "w": 26,
+   "z": 143,
+   "h": 2,
+   "explode": [
+    0,
+    0,
+    115
+   ],
+   "mass": 3.1,
+   "materials": [
+    [
+     "glas",
+     100
+    ]
+   ],
+   "info": "Flache, gehärtete Glasscheibe mit Gummi-Dichtring. Kommt nicht ins Altglas, weil es anders zusammengesetzt ist.",
+   "color": "#C9DEDF",
+   "opacity": 0.65
+  },
+  {
+   "id": "reflektor",
+   "component_id": "aluminium_housing",
+   "material_id": "aluminium",
+   "name": "Reflektor",
+   "short": "Reflektor",
+   "shape": "cyl",
+   "x": 2,
+   "y": 2,
+   "w": 26,
+   "z": 124,
+   "h": 19,
+   "explode": [
+    0,
+    0,
+    101
+   ],
+   "mass": 4.1,
+   "materials": [
+    [
+     "alu",
+     90
+    ],
+    [
+     "pcabs",
+     10
+    ]
+   ],
+   "info": "Spiegelnder Trichter aus bedampftem Aluminium, bündelt das Licht der LED zu einem Strahl.",
+   "color": "#C9CED2",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 1,
+     "y": 1,
+     "w": 24,
+     "fill": "#E4E8EB"
+    },
+    {
+     "shape": "cyl",
+     "x": 6,
+     "y": 6,
+     "w": 14,
+     "fill": "#D3D8DC"
+    },
+    {
+     "shape": "cyl",
+     "x": 10.5,
+     "y": 10.5,
+     "w": 5,
+     "fill": "#3A3F44"
+    }
+   ]
+  },
+  {
+   "id": "led",
+   "component_id": "led_module",
+   "material_id": "mixed_electronics",
+   "name": "LED auf Alu-Platine",
+   "short": "LED",
+   "shape": "cyl",
+   "x": 7,
+   "y": 7,
+   "w": 16,
+   "z": 121,
+   "h": 3,
+   "explode": [
+    0,
+    0,
+    87
+   ],
+   "mass": 2.1,
+   "materials": [
+    [
+     "led",
+     25
+    ],
+    [
+     "alu",
+     45
+    ],
+    [
+     "kupfer",
+     15
+    ],
+    [
+     "lot",
+     5
+    ],
+    [
+     "keramik",
+     10
+    ]
+   ],
+   "info": "Eine Hochleistungs-LED auf einer runden Aluminiumplatine (Star), die die Wärme an den Kopf abgibt. Aus dem Reflektor herausschrauben.",
+   "color": "#ECECE6",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 5.5,
+     "y": 5.5,
+     "w": 5,
+     "d": 5,
+     "r": 0.5,
+     "fill": "#F6D86B"
+    },
+    {
+     "shape": "box",
+     "x": 1.5,
+     "y": 7,
+     "w": 2,
+     "d": 2,
+     "r": 0.3,
+     "fill": "#B87333"
+    },
+    {
+     "shape": "box",
+     "x": 12.5,
+     "y": 7,
+     "w": 2,
+     "d": 2,
+     "r": 0.3,
+     "fill": "#B87333"
+    }
+   ]
+  },
+  {
+   "id": "treiber",
+   "component_id": "led_module",
+   "material_id": "pcb",
+   "name": "Treiberplatine",
+   "short": "Treiber",
+   "shape": "cyl",
+   "x": 6,
+   "y": 6,
+   "w": 18,
+   "z": 117,
+   "h": 4,
+   "explode": [
+    0,
+    0,
+    73
+   ],
+   "mass": 2.1,
+   "materials": [
+    [
+     "fr4",
+     50
+    ],
+    [
+     "kupfer",
+     20
+    ],
+    [
+     "chip",
+     20
+    ],
+    [
+     "lot",
+     10
+    ]
+   ],
+   "info": "Kleine runde Platine, die den Strom für die LED regelt. Mit Gold und Kupfer: zur Elektro-Sammlung.",
+   "color": "#2E6B45",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 6,
+     "y": 6,
+     "w": 6,
+     "d": 6,
+     "r": 0.3,
+     "fill": "#22272B"
+    },
+    {
+     "shape": "cyl",
+     "x": 2,
+     "y": 7,
+     "w": 3,
+     "fill": "#3A3F44"
+    }
+   ]
+  },
+  {
+   "id": "kontaktfeder",
+   "component_id": "steel_spring",
+   "material_id": "steel",
+   "name": "Kontaktfeder vorn",
+   "short": "Feder vorn",
+   "shape": "cyl",
+   "x": 11.5,
+   "y": 11.5,
+   "w": 7,
+   "z": 114,
+   "h": 3,
+   "explode": [
+    0,
+    0,
+    59
+   ],
+   "mass": 0.5,
+   "materials": [
+    [
+     "stahl",
+     90
+    ],
+    [
+     "nickel",
+     10
+    ]
+   ],
+   "info": "Kleine vernickelte Stahlfeder unter der Treiberplatine, drückt auf den Pluspol der Batterie.",
+   "color": "#B7BCC0",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 1.5,
+     "y": 1.5,
+     "w": 4,
+     "fill": "#8A9095"
+    }
+   ]
+  },
+  {
+   "id": "kopf",
+   "component_id": "aluminium_housing",
+   "material_id": "aluminium",
+   "name": "Lampenkopf",
+   "short": "Kopf",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 30,
+   "z": 112,
+   "h": 33,
+   "explode": [
+    0,
+    0,
+    14
+   ],
+   "mass": 16.5,
+   "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "info": "Breiterer Kopf mit Kühlrippen, auf das Rohr geschraubt. Nimmt Reflektor, LED und Treiber auf.",
+   "color": "#3B4147",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 2,
+     "y": 2,
+     "w": 26,
+     "fill": "#2B3035"
+    }
+   ]
+  },
+  {
+   "id": "rohr",
+   "component_id": "aluminium_housing",
+   "material_id": "aluminium",
+   "name": "Batterierohr",
+   "short": "Rohr",
+   "shape": "cyl",
+   "x": 3,
+   "y": 3,
+   "w": 24,
+   "z": 14,
+   "h": 98,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 24.7,
+   "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "info": "Eloxiertes Aluminiumrohr mit Gewinde an beiden Enden und geriffeltem Griff. Leer ist es reines Aluminium.",
+   "color": "#3B4147",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 2,
+     "y": 2,
+     "w": 20,
+     "fill": "#1F2327"
+    }
+   ]
+  },
+  {
+   "id": "batterie_1",
+   "component_id": "alkaline_cell",
+   "material_id": "alkaline",
+   "name": "Batterie AA (vorn)",
+   "short": "Batterie 1",
+   "shape": "cyl",
+   "x": 7.75,
+   "y": 7.75,
+   "w": 14.5,
+   "z": 67,
+   "h": 50.5,
+   "explode": [
+    34,
+    0,
+    -2.5
+   ],
+   "mass": 23.7,
+   "materials": [
+    [
+     "zinkmangan",
+     80
+    ],
+    [
+     "stahl",
+     20
+    ]
+   ],
+   "info": "Alkali-Mangan-Batterie, 1,5 Volt. Immer herausnehmen, bevor die Lampe entsorgt wird. Leere Batterien in die Sammelbox.",
+   "color": "#C8423A",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 4.75,
+     "y": 4.75,
+     "w": 5,
+     "fill": "#B7BCC0"
+    }
+   ]
+  },
+  {
+   "id": "batterie_2",
+   "component_id": "alkaline_cell",
+   "material_id": "alkaline",
+   "name": "Batterie AA (hinten)",
+   "short": "Batterie 2",
+   "shape": "cyl",
+   "x": 7.75,
+   "y": 7.75,
+   "w": 14.5,
+   "z": 16.5,
+   "h": 50.5,
+   "explode": [
+    34,
+    0,
+    -16.5
+   ],
+   "mass": 23.7,
+   "materials": [
+    [
+     "zinkmangan",
+     80
+    ],
+    [
+     "stahl",
+     20
+    ]
+   ],
+   "info": "Zweite Batterie in Reihe: zusammen 3 Volt. Plus zeigt zum Kopf.",
+   "color": "#C8423A",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 4.75,
+     "y": 4.75,
+     "w": 5,
+     "fill": "#B7BCC0"
+    }
+   ]
+  },
+  {
+   "id": "endfeder",
+   "component_id": "steel_spring",
+   "material_id": "steel",
+   "name": "Endfeder",
+   "short": "Feder hinten",
+   "shape": "cyl",
+   "x": 9.5,
+   "y": 9.5,
+   "w": 11,
+   "z": 10,
+   "h": 6.5,
+   "explode": [
+    -36,
+    0,
+    54.0
+   ],
+   "mass": 1,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Kräftige Stahlfeder in der Endkappe, drückt die Batterien nach vorn. Mit einer Zange herausziehen.",
+   "color": "#B7BCC0",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 1.5,
+     "y": 1.5,
+     "w": 8,
+     "fill": "#8A9095"
+    },
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 3,
+     "w": 5,
+     "fill": "#B7BCC0"
+    }
+   ]
+  },
+  {
+   "id": "schalter",
+   "component_id": "aluminium_housing",
+   "material_id": "mixed_electronics",
+   "name": "Druckschalter",
+   "short": "Schalter",
+   "shape": "cyl",
+   "x": 7,
+   "y": 7,
+   "w": 16,
+   "z": 4,
+   "h": 6,
+   "explode": [
+    -36,
+    0,
+    40.0
+   ],
+   "mass": 3.1,
+   "materials": [
+    [
+     "messing",
+     40
+    ],
+    [
+     "pcabs",
+     40
+    ],
+    [
+     "stahl",
+     20
+    ]
+   ],
+   "info": "Klickschalter mit Messingkontakten, rastet bei jedem Druck ein oder aus. In die Endkappe geschraubt.",
+   "color": "#5E656A",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 4,
+     "w": 8,
+     "fill": "#B08D57"
+    }
+   ]
+  },
+  {
+   "id": "endkappe",
+   "component_id": "aluminium_housing",
+   "material_id": "aluminium",
+   "name": "Endkappe",
+   "short": "Endkappe",
+   "shape": "cyl",
+   "x": 2,
+   "y": 2,
+   "w": 26,
+   "z": 1,
+   "h": 13,
+   "explode": [
+    -36,
+    0,
+    16.0
+   ],
+   "mass": 8.2,
+   "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "info": "Abschraubbarer Deckel am Ende. Hier werden die Batterien gewechselt.",
+   "color": "#3B4147",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 2,
+     "y": 2,
+     "w": 22,
+     "fill": "#2B3035"
+    }
+   ]
+  },
+  {
+   "id": "gummikappe",
+   "component_id": "aluminium_housing",
+   "material_id": "rubber",
+   "name": "Gummikappe",
+   "short": "Gummikappe",
+   "shape": "cyl",
+   "x": 9,
+   "y": 9,
+   "w": 12,
+   "z": 0,
+   "h": 3,
+   "explode": [
+    -36,
+    0,
+    0.0
+   ],
+   "mass": 1,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "info": "Weiche Gummikappe über dem Schalter, hält Wasser und Staub draußen.",
+   "color": "#22262A"
+  }
+ ]
+}
