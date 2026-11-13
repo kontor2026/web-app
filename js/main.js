@@ -476,6 +476,13 @@ function viewSheet() {
   renderOverview();
 }
 
+function moveTip(e) {
+  if (!e) return;
+  const x = Math.min(e.clientX + 16, window.innerWidth - 300);
+  tip.style.left = `${x}px`;
+  tip.style.top = `${e.clientY + 18}px`;
+}
+
 document.querySelector('.brand').addEventListener('click', viewScan);
 
 // Direkteinstieg für Demo und Entwicklung: #sheet=laptop oder #craft=flasche
