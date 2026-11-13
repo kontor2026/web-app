@@ -1,0 +1,230 @@
+{
+ "ARE": {
+  "name": "Vereinigte Arabische Emirate",
+  "num": "784"
+ },
+ "ARG": {
+  "name": "Argentinien",
+  "num": "032"
+ },
+ "AUS": {
+  "name": "Australien",
+  "num": "036"
+ },
+ "BEL": {
+  "name": "Belgien",
+  "num": "056"
+ },
+ "BHR": {
+  "name": "Bahrain",
+  "num": "048"
+ },
+ "BOL": {
+  "name": "Bolivien",
+  "num": "068"
+ },
+ "BRA": {
+  "name": "Brasilien",
+  "num": "076"
+ },
+ "CAN": {
+  "name": "Kanada",
+  "num": "124"
+ },
+ "CHL": {
+  "name": "Chile",
+  "num": "152"
+ },
+ "CHN": {
+  "name": "China",
+  "num": "156"
+ },
+ "CIV": {
+  "name": "Elfenbeinküste",
+  "num": "384"
+ },
+ "COD": {
+  "name": "DR Kongo",
+  "num": "180"
+ },
+ "DEU": {
+  "name": "Deutschland",
+  "num": "276"
+ },
+ "DZA": {
+  "name": "Algerien",
+  "num": "012"
+ },
+ "ESP": {
+  "name": "Spanien",
+  "num": "724"
+ },
+ "FIN": {
+  "name": "Finnland",
+  "num": "246"
+ },
+ "FRA": {
+  "name": "Frankreich",
+  "num": "250"
+ },
+ "GAB": {
+  "name": "Gabun",
+  "num": "266"
+ },
+ "GHA": {
+  "name": "Ghana",
+  "num": "288"
+ },
+ "GIN": {
+  "name": "Guinea",
+  "num": "324"
+ },
+ "IDN": {
+  "name": "Indonesien",
+  "num": "360"
+ },
+ "IND": {
+  "name": "Indien",
+  "num": "356"
+ },
+ "IRN": {
+  "name": "Iran",
+  "num": "364"
+ },
+ "ITA": {
+  "name": "Italien",
+  "num": "380"
+ },
+ "JPN": {
+  "name": "Japan",
+  "num": "392"
+ },
+ "KAZ": {
+  "name": "Kasachstan",
+  "num": "398"
+ },
+ "KOR": {
+  "name": "Südkorea",
+  "num": "410"
+ },
+ "MAR": {
+  "name": "Marokko",
+  "num": "504"
+ },
+ "MDG": {
+  "name": "Madagaskar",
+  "num": "450"
+ },
+ "MEX": {
+  "name": "Mexiko",
+  "num": "484"
+ },
+ "MLI": {
+  "name": "Mali",
+  "num": "466"
+ },
+ "MMR": {
+  "name": "Myanmar",
+  "num": "104"
+ },
+ "MOZ": {
+  "name": "Mosambik",
+  "num": "508"
+ },
+ "MYS": {
+  "name": "Malaysia",
+  "num": "458"
+ },
+ "NCL": {
+  "name": "Neukaledonien",
+  "num": "540"
+ },
+ "NGA": {
+  "name": "Nigeria",
+  "num": "566"
+ },
+ "NLD": {
+  "name": "Niederlande",
+  "num": "528"
+ },
+ "NOR": {
+  "name": "Norwegen",
+  "num": "578"
+ },
+ "PAK": {
+  "name": "Pakistan",
+  "num": "586"
+ },
+ "PER": {
+  "name": "Peru",
+  "num": "604"
+ },
+ "PHL": {
+  "name": "Philippinen",
+  "num": "608"
+ },
+ "POL": {
+  "name": "Polen",
+  "num": "616"
+ },
+ "PRT": {
+  "name": "Portugal",
+  "num": "620"
+ },
+ "RUS": {
+  "name": "Russland",
+  "num": "643"
+ },
+ "RWA": {
+  "name": "Ruanda",
+  "num": "646"
+ },
+ "SWE": {
+  "name": "Schweden",
+  "num": "752"
+ },
+ "THA": {
+  "name": "Thailand",
+  "num": "764"
+ },
+ "TUN": {
+  "name": "Tunesien",
+  "num": "788"
+ },
+ "TUR": {
+  "name": "Türkei",
+  "num": "792"
+ },
+ "TZA": {
+  "name": "Tansania",
+  "num": "834"
+ },
+ "UKR": {
+  "name": "Ukraine",
+  "num": "804"
+ },
+ "USA": {
+  "name": "USA",
+  "num": "840"
+ },
+ "UZB": {
+  "name": "Usbekistan",
+  "num": "860"
+ },
+ "VNM": {
+  "name": "Vietnam",
+  "num": "704"
+ },
+ "ZAF": {
+  "name": "Südafrika",
+  "num": "710"
+ },
+ "ZMB": {
+  "name": "Sambia",
+  "num": "894"
+ },
+ "ZWE": {
+  "name": "Simbabwe",
+  "num": "716"
+ }
+}

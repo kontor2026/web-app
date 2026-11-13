@@ -26,3 +26,11 @@ Neu berechnet wird mit `python tools/kategorien/build.py`. Genauere Modelle (sie
 - CO₂ umfasst nur die Materialien, nicht Montage, Chips und Transport. Herstellerangaben für ganze Geräte liegen deshalb höher (Smartphone laut Apple etwa 70 kg).
 - Ohne Faktor: Knopfzelle, Paraffin, Grafit-Ton-Mine (`null` in `materialien.json`).
 - Idemat steht unter CC BY-NC: frei für Bildung und Forschung, Quelle nennen.
+
+## Herkunft der Rohstoffe (`herkunft.json`, `laender.json`)
+
+Länderanteile je Rohstoff für zwei Stufen: `abbau` (Bergwerk, Feld, Wald) und `verarbeitung` (Raffination, Schmelze, Trennung). Jede Stufe nennt `quelle` (Schlüssel in `quellen.json`), `jahr`, `seite` und in `was`, was genau gezählt wird. Anteile in %, `rest` = übrige Länder, zusammen 100. `kritisch` folgt Verordnung (EU) 2024/1252, Anhang II.
+
+Quellen: USGS Mineral Commodity Summaries 2026 (Förderung 2025), EU-Studie zu kritischen Rohstoffen 2023 (Anhang 7, Mittel 2016–2020), USDA PSD (Baumwolle). Ohne Quelle bleibt eine Stufe leer, es wird nichts geschätzt. Noch offen: Erdöl, Erdgas, Wolle, Leder, Zellstoff sowie die Verarbeitung von Silber, Gold, Tantal, Graphit.
+
+`laender.json` ordnet ISO-3-Codes deutsche Namen und die ISO-Nummer zu (= `id` in world-atlas, für den Globus im Rohstoff-Atlas, `packages/site`).

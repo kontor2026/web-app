@@ -1,0 +1,820 @@
+{
+ "Fe": {
+  "name": "Eisen",
+  "kritisch": false,
+  "kritisch_quelle": "eu2024crma",
+  "abbau": {
+   "was": "Eisenerz-Bergwerksförderung 2025 (geschätzt, Eiseninhalt), Anteil berechnet aus Tonnen (Welt gesamt, gerundet, laut Quelle)",
+   "jahr": 2025,
+   "quelle": "usgs2026",
+   "seite": "S. 109",
+   "anteile": {
+    "AUS": 38,
+    "BRA": 16,
+    "IND": 12,
+    "CHN": 11,
+    "IRN": 4,
+    "RUS": 3
+   },
+   "rest": 16
+  },
+  "verarbeitung": {
+   "was": "Roheisenproduktion 2025 (geschätzt), Anteil berechnet aus Tonnen (Welt gesamt, gerundet, laut Quelle)",
+   "jahr": 2025,
+   "quelle": "usgs2026",
+   "seite": "S. 103",
+   "anteile": {
+    "CHN": 64,
+    "IND": 8,
+    "JPN": 5,
+    "RUS": 4,
+    "KOR": 3,
+    "BRA": 2
+   },
+   "rest": 14
+  }
+ },
+ "Cu": {
+  "name": "Kupfer",
+  "kritisch": true,
+  "kritisch_quelle": "eu2024crma",
+  "abbau": {
+   "was": "Bergwerksförderung 2025 (geschätzt), Anteil berechnet aus Tonnen (Welt gesamt, gerundet, laut Quelle)",
+   "jahr": 2025,
+   "quelle": "usgs2026",
+   "seite": "S. 73",
+   "anteile": {
+    "CHL": 23,
+    "COD": 14,
+    "PER": 12,
+    "CHN": 8,
+    "RUS": 6,
+    "USA": 4,
+    "ZMB": 4,
+    "AUS": 3,
+    "IDN": 3,
+    "KAZ": 3,
+    "MEX": 3
+   },
+   "rest": 17
+  },
+  "verarbeitung": {
+   "was": "Raffinadeproduktion 2025 (geschätzt), Anteil berechnet aus Tonnen (Welt gesamt, gerundet, laut Quelle)",
+   "jahr": 2025,
+   "quelle": "usgs2026",
+   "seite": "S. 73",
+   "anteile": {
+    "CHN": 48,
+    "COD": 10,
+    "CHL": 6,
+    "JPN": 5,
+    "RUS": 3,
+    "USA": 3
+   },
+   "rest": 25
+  }
+ },
+ "Al": {
+  "name": "Aluminium",
+  "kritisch": true,
+  "kritisch_quelle": "eu2024crma",
+  "kritisch_hinweis": "Anhang II: „bauxite/alumina/aluminium“",
+  "abbau": {
+   "was": "Bauxit-Bergwerksförderung 2025 (geschätzt), Anteil berechnet aus Tonnen (Welt gesamt, gerundet, laut Quelle)",
+   "jahr": 2025,
+   "quelle": "usgs2026",
+   "seite": "S. 51",
+   "anteile": {
+    "GIN": 34,
+    "AUS": 22,
+    "CHN": 20,
+    "BRA": 8,
+    "IND": 6,
+    "IDN": 2
+   },
+   "rest": 8
+  },
+  "verarbeitung": {
+   "was": "Primäraluminium (Hütten) 2025 (geschätzt), Anteil berechnet aus Tonnen (Welt gesamt, gerundet, laut Quelle)",
+   "jahr": 2025,
+   "quelle": "usgs2026",
+   "seite": "S. 41",
+   "anteile": {
+    "CHN": 61,
+    "IND": 6,
+    "RUS": 5,
+    "CAN": 4,
+    "ARE": 4,
+    "BHR": 2
+   },
+   "rest": 18
+  }
+ },
+ "Ag": {
+  "name": "Silber",
+  "kritisch": false,
+  "kritisch_quelle": "eu2024crma",
+  "abbau": {
+   "was": "Bergwerksförderung 2025 (geschätzt), Anteil berechnet aus Tonnen (Welt gesamt, gerundet, laut Quelle)",
+   "jahr": 2025,
+   "quelle": "usgs2026",
+   "seite": "S. 173",
+   "anteile": {
+    "MEX": 24,
+    "PER": 14,
+    "CHN": 13,
+    "BOL": 6,
+    "CHL": 5,
+    "POL": 5,
+    "RUS": 5,
+    "USA": 4,
+    "AUS": 4,
+    "ARG": 3,
+    "IND": 3
+   },
+   "rest": 14
+  }
+ },
+ "Au": {
+  "name": "Gold",
+  "kritisch": false,
+  "kritisch_quelle": "eu2024crma",
+  "abbau": {
+   "was": "Bergwerksförderung 2025 (geschätzt), Anteil berechnet aus Tonnen (Welt gesamt, gerundet, laut Quelle)",
+   "jahr": 2025,
+   "quelle": "usgs2026",
+   "seite": "S. 91",
+   "anteile": {
+    "CHN": 12,
+    "RUS": 9,
+    "AUS": 8,
+    "CAN": 6,
+    "USA": 5,
+    "GHA": 5,
+    "MEX": 4,
+    "KAZ": 4,
+    "UZB": 4,
+    "PER": 3
+   },
+   "rest": 40
+  }
+ },
+ "Pd": {
+  "name": "Palladium",
+  "kritisch": true,
+  "kritisch_quelle": "eu2024crma",
+  "kritisch_hinweis": "Anhang II: „platinum group metals“",
+  "abbau": {
+   "was": "Bergwerksförderung 2025 (geschätzt), Anteil berechnet aus Tonnen (Welt gesamt, gerundet, laut Quelle)",
+   "jahr": 2025,
+   "quelle": "usgs2026",
+   "seite": "S. 145",
+   "anteile": {
+    "RUS": 44,
+    "ZAF": 37,
+    "CAN": 8,
+    "ZWE": 8,
+    "USA": 3
+   },
+   "rest": 0
+  },
+  "verarbeitung": {
+   "was": "Raffination, Durchschnitt 2016–2020, globale Angebotsanteile (Annex 7)",
+   "jahr": 2020,
+   "quelle": "eucrm2023",
+   "seite": "S. 89",
+   "anteile": {
+    "RUS": 40,
+    "ZAF": 36,
+    "CAN": 10,
+    "USA": 7,
+    "ZWE": 6,
+    "CHN": 1
+   },
+   "rest": 0
+  }
+ },
+ "Pt": {
+  "name": "Platin",
+  "kritisch": true,
+  "kritisch_quelle": "eu2024crma",
+  "kritisch_hinweis": "Anhang II: „platinum group metals“",
+  "abbau": {
+   "was": "Bergwerksförderung 2025 (geschätzt), Anteil berechnet aus Tonnen (Welt gesamt, gerundet, laut Quelle)",
+   "jahr": 2025,
+   "quelle": "usgs2026",
+   "seite": "S. 145",
+   "anteile": {
+    "ZAF": 71,
+    "RUS": 12,
+    "ZWE": 11,
+    "CAN": 3,
+    "USA": 1
+   },
+   "rest": 2
+  },
+  "verarbeitung": {
+   "was": "Raffination, Durchschnitt 2016–2020, globale Angebotsanteile (Annex 7)",
+   "jahr": 2020,
+   "quelle": "eucrm2023",
+   "seite": "S. 89",
+   "anteile": {
+    "ZAF": 71,
+    "RUS": 12,
+    "ZWE": 8,
+    "CAN": 4,
+    "USA": 2,
+    "CHN": 1
+   },
+   "rest": 2
+  }
+ },
+ "Co": {
+  "name": "Kobalt",
+  "kritisch": true,
+  "kritisch_quelle": "eu2024crma",
+  "abbau": {
+   "was": "Bergwerksförderung 2025 (geschätzt), Anteil berechnet aus Tonnen (Welt gesamt, gerundet, laut Quelle)",
+   "jahr": 2025,
+   "quelle": "usgs2026",
+   "seite": "S. 71",
+   "anteile": {
+    "COD": 74,
+    "IDN": 14,
+    "RUS": 2,
+    "MDG": 1,
+    "AUS": 1,
+    "PHL": 1
+   },
+   "rest": 7
+  },
+  "verarbeitung": {
+   "was": "Raffination, Durchschnitt 2016–2020, globale Angebotsanteile (Annex 7)",
+   "jahr": 2020,
+   "quelle": "eucrm2023",
+   "seite": "S. 81",
+   "anteile": {
+    "CHN": 60,
+    "FIN": 11,
+    "BEL": 5,
+    "CAN": 5,
+    "NOR": 3,
+    "JPN": 3
+   },
+   "rest": 13
+  }
+ },
+ "Ni": {
+  "name": "Nickel",
+  "kritisch": true,
+  "kritisch_quelle": "eu2024crma",
+  "kritisch_hinweis": "Anhang II: „nickel — battery grade“ (nur Batteriequalität)",
+  "abbau": {
+   "was": "Bergwerksförderung 2025 (geschätzt), Anteil berechnet aus Tonnen (Welt gesamt, gerundet, laut Quelle)",
+   "jahr": 2025,
+   "quelle": "usgs2026",
+   "seite": "S. 133",
+   "anteile": {
+    "IDN": 67,
+    "PHL": 7,
+    "RUS": 5,
+    "CAN": 4,
+    "NCL": 4,
+    "CHN": 3
+   },
+   "rest": 10
+  },
+  "verarbeitung": {
+   "was": "Raffination/Verhüttung, Durchschnitt 2016–2020, globale Angebotsanteile (Annex 7)",
+   "jahr": 2020,
+   "quelle": "eucrm2023",
+   "seite": "S. 88",
+   "anteile": {
+    "CHN": 33,
+    "IDN": 12,
+    "JPN": 9,
+    "RUS": 7,
+    "CAN": 6,
+    "AUS": 5,
+    "NOR": 4,
+    "BRA": 3
+   },
+   "rest": 21
+  }
+ },
+ "Li": {
+  "name": "Lithium",
+  "kritisch": true,
+  "kritisch_quelle": "eu2024crma",
+  "abbau": {
+   "was": "Bergwerksförderung 2025 (geschätzt, ohne USA – Daten zurückgehalten), Anteil berechnet aus Tonnen (Welt gesamt, gerundet, laut Quelle)",
+   "jahr": 2025,
+   "quelle": "usgs2026",
+   "seite": "S. 119",
+   "anteile": {
+    "AUS": 32,
+    "CHN": 21,
+    "CHL": 19,
+    "ZWE": 10,
+    "ARG": 8,
+    "BRA": 4,
+    "MLI": 3
+   },
+   "rest": 3
+  },
+  "verarbeitung": {
+   "was": "Lithiumchemikalien (Verarbeitung), Durchschnitt 2016–2020, globale Angebotsanteile (Annex 7)",
+   "jahr": 2020,
+   "quelle": "eucrm2023",
+   "seite": "S. 87",
+   "anteile": {
+    "CHN": 56,
+    "CHL": 32,
+    "ARG": 10,
+    "USA": 1
+   },
+   "rest": 1
+  }
+ },
+ "Mn": {
+  "name": "Mangan",
+  "kritisch": true,
+  "kritisch_quelle": "eu2024crma",
+  "abbau": {
+   "was": "Bergwerksförderung 2025 (geschätzt, Mn-Inhalt), Anteil berechnet aus Tonnen (Welt gesamt, gerundet, laut Quelle)",
+   "jahr": 2025,
+   "quelle": "usgs2026",
+   "seite": "S. 125",
+   "anteile": {
+    "ZAF": 38,
+    "GAB": 25,
+    "GHA": 10,
+    "AUS": 8,
+    "BRA": 4,
+    "IND": 4,
+    "CHN": 4
+   },
+   "rest": 7
+  },
+  "verarbeitung": {
+   "was": "Verarbeitung (Ferrolegierungen/Mn-Metall), Durchschnitt 2016–2020, globale Angebotsanteile (Annex 7)",
+   "jahr": 2020,
+   "quelle": "eucrm2023",
+   "seite": "S. 87",
+   "anteile": {
+    "CHN": 58,
+    "IND": 13,
+    "UKR": 4,
+    "NOR": 3,
+    "JPN": 3,
+    "KOR": 3
+   },
+   "rest": 16
+  }
+ },
+ "Zn": {
+  "name": "Zink",
+  "kritisch": false,
+  "kritisch_quelle": "eu2024crma",
+  "abbau": {
+   "was": "Bergwerksförderung 2025 (geschätzt), Anteil berechnet aus Tonnen (Welt gesamt, gerundet, laut Quelle)",
+   "jahr": 2025,
+   "quelle": "usgs2026",
+   "seite": "S. 213",
+   "anteile": {
+    "CHN": 32,
+    "PER": 12,
+    "AUS": 8,
+    "IND": 7,
+    "MEX": 6,
+    "USA": 5,
+    "BOL": 4,
+    "RUS": 3
+   },
+   "rest": 23
+  },
+  "verarbeitung": {
+   "was": "Raffination (Hütten), Durchschnitt 2016–2020, globale Angebotsanteile (Annex 7)",
+   "jahr": 2020,
+   "quelle": "eucrm2023",
+   "seite": "S. 93",
+   "anteile": {
+    "CHN": 45,
+    "KOR": 7,
+    "IND": 5,
+    "CAN": 5,
+    "JPN": 4,
+    "ESP": 4,
+    "AUS": 3
+   },
+   "rest": 27
+  }
+ },
+ "Cr": {
+  "name": "Chrom",
+  "kritisch": false,
+  "kritisch_quelle": "eu2024crma",
+  "abbau": {
+   "was": "Bergwerksförderung Chromit 2025 (geschätzt), Anteil berechnet aus Tonnen (Welt gesamt, gerundet, laut Quelle)",
+   "jahr": 2025,
+   "quelle": "usgs2026",
+   "seite": "S. 67",
+   "anteile": {
+    "ZAF": 45,
+    "TUR": 18,
+    "KAZ": 14,
+    "IND": 6,
+    "BRA": 4,
+    "ZWE": 4,
+    "FIN": 4
+   },
+   "rest": 5
+  },
+  "verarbeitung": {
+   "was": "Verarbeitung (Ferrochrom/Chrommetall), Durchschnitt 2016–2020, globale Angebotsanteile (Annex 7)",
+   "jahr": 2020,
+   "quelle": "eucrm2023",
+   "seite": "S. 81",
+   "anteile": {
+    "CHN": 40,
+    "ZAF": 24,
+    "KAZ": 14,
+    "IND": 9,
+    "FIN": 3,
+    "RUS": 3
+   },
+   "rest": 7
+  }
+ },
+ "Sn": {
+  "name": "Zinn",
+  "kritisch": false,
+  "kritisch_quelle": "eu2024crma",
+  "abbau": {
+   "was": "Bergwerksförderung 2025 (geschätzt), Anteil berechnet aus Tonnen (Welt gesamt, gerundet, laut Quelle)",
+   "jahr": 2025,
+   "quelle": "usgs2026",
+   "seite": "S. 195",
+   "anteile": {
+    "CHN": 24,
+    "IDN": 21,
+    "PER": 11,
+    "BRA": 10,
+    "COD": 9,
+    "BOL": 5,
+    "AUS": 4,
+    "MMR": 4,
+    "VNM": 4
+   },
+   "rest": 8
+  },
+  "verarbeitung": {
+   "was": "Raffination (Hütten), Durchschnitt 2016–2020, globale Angebotsanteile (Annex 7)",
+   "jahr": 2020,
+   "quelle": "eucrm2023",
+   "seite": "S. 92",
+   "anteile": {
+    "CHN": 50,
+    "IDN": 20,
+    "MYS": 7,
+    "PER": 5,
+    "BRA": 4,
+    "BOL": 4
+   },
+   "rest": 10
+  }
+ },
+ "In": {
+  "name": "Indium",
+  "kritisch": false,
+  "kritisch_quelle": "eu2024crma",
+  "verarbeitung": {
+   "was": "Raffinadeproduktion 2025 (geschätzt; Indium fällt als Nebenprodukt der Zinkverhüttung an), Anteil berechnet aus Tonnen (Welt gesamt, gerundet, laut Quelle)",
+   "jahr": 2025,
+   "quelle": "usgs2026",
+   "seite": "S. 99",
+   "anteile": {
+    "CHN": 69,
+    "KOR": 16,
+    "JPN": 6,
+    "CAN": 4,
+    "FRA": 2,
+    "BEL": 2
+   },
+   "rest": 1
+  }
+ },
+ "Ga": {
+  "name": "Gallium",
+  "kritisch": true,
+  "kritisch_quelle": "eu2024crma",
+  "verarbeitung": {
+   "was": "Primärproduktion (niedrige Reinheit) 2025 (geschätzt; Nebenprodukt der Tonerde-/Zinkverarbeitung), Anteil berechnet aus Tonnen (Welt gesamt, gerundet, laut Quelle)",
+   "jahr": 2025,
+   "quelle": "usgs2026",
+   "seite": "S. 83",
+   "anteile": {
+    "CHN": 99,
+    "RUS": 1
+   },
+   "rest": 0
+  }
+ },
+ "Ta": {
+  "name": "Tantal",
+  "kritisch": true,
+  "kritisch_quelle": "eu2024crma",
+  "abbau": {
+   "was": "Bergwerksförderung 2025 (geschätzt), Anteil berechnet aus Tonnen (Welt gesamt, gerundet, laut Quelle)",
+   "jahr": 2025,
+   "quelle": "usgs2026",
+   "seite": "S. 187",
+   "anteile": {
+    "COD": 52,
+    "RWA": 16,
+    "NGA": 16,
+    "BRA": 8,
+    "CHN": 3,
+    "AUS": 2
+   },
+   "rest": 3
+  }
+ },
+ "Nd": {
+  "name": "Neodym",
+  "kritisch": true,
+  "kritisch_quelle": "eu2024crma",
+  "kritisch_hinweis": "Anhang II: „light rare earth elements“",
+  "abbau": {
+   "was": "Bergwerksförderung Seltene Erden gesamt (SEO) 2025 (geschätzt), Anteil berechnet aus Tonnen (Welt gesamt, gerundet, laut Quelle)",
+   "jahr": 2025,
+   "quelle": "usgs2026",
+   "seite": "S. 153",
+   "anteile": {
+    "CHN": 69,
+    "USA": 13,
+    "AUS": 7,
+    "MMR": 6,
+    "THA": 1,
+    "IND": 1
+   },
+   "rest": 3
+  },
+  "verarbeitung": {
+   "was": "Trennung/Raffination Neodym, Durchschnitt 2016–2020, globale Angebotsanteile (Annex 7)",
+   "jahr": 2020,
+   "quelle": "eucrm2023",
+   "seite": "S. 88",
+   "anteile": {
+    "CHN": 85,
+    "MYS": 10,
+    "RUS": 2,
+    "IND": 2,
+    "VNM": 1
+   },
+   "rest": 0
+  }
+ },
+ "Pr": {
+  "name": "Praseodym",
+  "kritisch": true,
+  "kritisch_quelle": "eu2024crma",
+  "kritisch_hinweis": "Anhang II: „light rare earth elements“",
+  "abbau": {
+   "was": "Bergwerksförderung Seltene Erden gesamt (SEO) 2025 (geschätzt), Anteil berechnet aus Tonnen (Welt gesamt, gerundet, laut Quelle)",
+   "jahr": 2025,
+   "quelle": "usgs2026",
+   "seite": "S. 153",
+   "anteile": {
+    "CHN": 69,
+    "USA": 13,
+    "AUS": 7,
+    "MMR": 6,
+    "THA": 1,
+    "IND": 1
+   },
+   "rest": 3
+  },
+  "verarbeitung": {
+   "was": "Trennung/Raffination Praseodym, Durchschnitt 2016–2020, globale Angebotsanteile (Annex 7)",
+   "jahr": 2020,
+   "quelle": "eucrm2023",
+   "seite": "S. 89",
+   "anteile": {
+    "CHN": 85,
+    "MYS": 10,
+    "RUS": 2,
+    "IND": 2,
+    "VNM": 1
+   },
+   "rest": 0
+  }
+ },
+ "Dy": {
+  "name": "Dysprosium",
+  "kritisch": true,
+  "kritisch_quelle": "eu2024crma",
+  "kritisch_hinweis": "Anhang II: „heavy rare earth elements“",
+  "abbau": {
+   "was": "Gewinnung Dysprosium, Durchschnitt 2016–2020, globale Angebotsanteile (Annex 7)",
+   "jahr": 2020,
+   "quelle": "eucrm2023",
+   "seite": "S. 83",
+   "anteile": {
+    "CHN": 84,
+    "MMR": 9,
+    "RUS": 2,
+    "THA": 1,
+    "IND": 1,
+    "BRA": 1
+   },
+   "rest": 2
+  },
+  "verarbeitung": {
+   "was": "Trennung/Raffination Dysprosium, Durchschnitt 2016–2020, globale Angebotsanteile (Annex 7)",
+   "jahr": 2020,
+   "quelle": "eucrm2023",
+   "seite": "S. 82",
+   "anteile": {
+    "CHN": 100
+   },
+   "rest": 0
+  }
+ },
+ "Y": {
+  "name": "Yttrium",
+  "kritisch": true,
+  "kritisch_quelle": "eu2024crma",
+  "kritisch_hinweis": "Anhang II: „heavy rare earth elements“ (Yttrium zählt laut EU-CRM-Studie 2023 zu den HREE)",
+  "abbau": {
+   "was": "Gewinnung Yttrium, Durchschnitt 2016–2020, globale Angebotsanteile (Annex 7)",
+   "jahr": 2020,
+   "quelle": "eucrm2023",
+   "seite": "S. 105",
+   "anteile": {
+    "CHN": 68,
+    "AUS": 10,
+    "USA": 9,
+    "MMR": 8,
+    "RUS": 2,
+    "THA": 1
+   },
+   "rest": 2
+  },
+  "verarbeitung": {
+   "was": "Trennung/Raffination Yttrium, Durchschnitt 2016–2020, globale Angebotsanteile (Annex 7)",
+   "jahr": 2020,
+   "quelle": "eucrm2023",
+   "seite": "S. 93",
+   "anteile": {
+    "CHN": 100
+   },
+   "rest": 0
+  }
+ },
+ "erdoel": {
+  "name": "Erdöl",
+  "kritisch": false,
+  "kritisch_quelle": "eu2024crma"
+ },
+ "erdgas": {
+  "name": "Erdgas",
+  "kritisch": false,
+  "kritisch_quelle": "eu2024crma"
+ },
+ "naturkautschuk": {
+  "name": "Naturkautschuk",
+  "kritisch": false,
+  "kritisch_quelle": "eu2024crma",
+  "abbau": {
+   "was": "Gewinnung (Zapfung), Durchschnitt 2016–2020, globale Angebotsanteile (Annex 7)",
+   "jahr": 2020,
+   "quelle": "eucrm2023",
+   "seite": "S. 95",
+   "anteile": {
+    "THA": 32,
+    "IDN": 24,
+    "VNM": 8,
+    "IND": 7,
+    "CHN": 6,
+    "CIV": 5,
+    "MYS": 4
+   },
+   "rest": 14
+  }
+ },
+ "holz": {
+  "name": "Holz",
+  "kritisch": false,
+  "kritisch_quelle": "eu2024crma",
+  "abbau": {
+   "was": "Rundholzeinschlag (nicht Zellstoff!), Durchschnitt 2016–2020, globale Angebotsanteile (Annex 7)",
+   "jahr": 2020,
+   "quelle": "eucrm2023",
+   "seite": "S. 98",
+   "anteile": {
+    "USA": 18,
+    "CHN": 16,
+    "RUS": 9,
+    "BRA": 7,
+    "CAN": 7,
+    "IDN": 4,
+    "SWE": 3,
+    "FIN": 3
+   },
+   "rest": 33
+  }
+ },
+ "baumwolle": {
+  "name": "Baumwolle",
+  "kritisch": false,
+  "kritisch_quelle": "eu2024crma",
+  "abbau": {
+   "was": "Baumwollfaser-Erzeugung (Lint), Wirtschaftsjahr 2024/25, Anteil berechnet aus Ballen (Summe aller Länder)",
+   "jahr": 2024,
+   "quelle": "usdapsd2026",
+   "seite": "Datensatz psd_cotton, Attribut Production",
+   "anteile": {
+    "CHN": 27,
+    "IND": 20,
+    "BRA": 14,
+    "USA": 12,
+    "AUS": 5,
+    "PAK": 4,
+    "TUR": 3
+   },
+   "rest": 15
+  }
+ },
+ "wolle": {
+  "name": "Wolle",
+  "kritisch": false,
+  "kritisch_quelle": "eu2024crma"
+ },
+ "quarzsand": {
+  "name": "Quarzsand",
+  "kritisch": false,
+  "kritisch_quelle": "eu2024crma",
+  "abbau": {
+   "was": "Förderung Industriesand und -kies 2025 (geschätzt; alle Verwendungen, nicht nur Glas), Anteil berechnet aus Tonnen (Welt gesamt, gerundet, laut Quelle)",
+   "jahr": 2025,
+   "quelle": "usgs2026",
+   "seite": "S. 165",
+   "anteile": {
+    "USA": 28,
+    "CHN": 21,
+    "NLD": 16,
+    "TUR": 3,
+    "FRA": 3,
+    "ITA": 3
+   },
+   "rest": 26
+  }
+ },
+ "graphit": {
+  "name": "Graphit (Naturgraphit)",
+  "kritisch": true,
+  "kritisch_quelle": "eu2024crma",
+  "kritisch_hinweis": "Anhang II: „graphite“",
+  "abbau": {
+   "was": "Bergwerksförderung 2025 (geschätzt), Anteil berechnet aus Tonnen (Welt gesamt, gerundet, laut Quelle)",
+   "jahr": 2025,
+   "quelle": "usgs2026",
+   "seite": "S. 93",
+   "anteile": {
+    "CHN": 78,
+    "MDG": 4,
+    "TZA": 4,
+    "BRA": 4,
+    "MOZ": 3,
+    "RUS": 1
+   },
+   "rest": 6
+  }
+ },
+ "kork": {
+  "name": "Kork",
+  "kritisch": false,
+  "kritisch_quelle": "eu2024crma",
+  "abbau": {
+   "was": "Gewinnung Naturkork, Durchschnitt 2016–2020, globale Angebotsanteile (Annex 7)",
+   "jahr": 2020,
+   "quelle": "eucrm2023",
+   "seite": "S. 95",
+   "anteile": {
+    "PRT": 48,
+    "ESP": 32,
+    "MAR": 6,
+    "DZA": 5,
+    "TUN": 4,
+    "ITA": 3
+   },
+   "rest": 2
+  }
+ },
+ "leder": {
+  "name": "Leder",
+  "kritisch": false,
+  "kritisch_quelle": "eu2024crma"
+ }
+}

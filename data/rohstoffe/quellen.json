@@ -21,5 +21,38 @@
   "stand": "2026-11-13",
   "url": "https://www.westmetall.com/en/markdaten.php",
   "genutzt": "Metallpreise für den Rohstoffwert"
+ },
+ "usgs2026": {
+  "titel": "Mineral Commodity Summaries 2026 (ver. 1.3, May 2026)",
+  "herausgeber": "U.S. Geological Survey, Reston, Virginia",
+  "jahr": 2026,
+  "url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf",
+  "doi": "https://doi.org/10.3133/mcs2026",
+  "genutzt": "Tabellen „World Mine Production“ / Raffinade-, Hütten- und Roheisenproduktion (Spalte 2025, geschätzt) für Fe, Cu, Al (Bauxit, Hütten), Ag, Au, Pd, Pt, Co, Ni, Li, Mn, Zn, Cr, Sn, In, Ga, Ta, Seltene Erden, Naturgraphit, Industriesand; Länderanteile daraus berechnet"
+ },
+ "eucrm2023": {
+  "titel": "Study on the Critical Raw Materials for the EU 2023 – Final Report",
+  "autoren": "M. Grohol, C. Veeh",
+  "herausgeber": "Europäische Kommission, GD GROW; Amt für Veröffentlichungen der EU, Luxemburg",
+  "jahr": 2023,
+  "url": "https://single-market-economy.ec.europa.eu/publications/study-critical-raw-materials-eu-2023-final-report_en",
+  "doi": "https://data.europa.eu/doi/10.2873/725585",
+  "genutzt": "Annex 7 „Global supply shares“ (S. 78–106, Durchschnitt 2016–2020): Verarbeitungsstufe für Pd, Pt, Co, Ni, Li, Mn, Zn, Cr, Sn, Nd, Pr, Dy, Y; Gewinnungsstufe für Dy, Y, Naturkautschuk, Naturkork, Rundholz"
+ },
+ "eu2024crma": {
+  "titel": "Verordnung (EU) 2024/1252 zur Schaffung eines Rahmens zur Gewährleistung einer sicheren und nachhaltigen Versorgung mit kritischen Rohstoffen (Critical Raw Materials Act)",
+  "herausgeber": "Europäisches Parlament und Rat der EU, ABl. L 2024/1252 vom 3.5.2024",
+  "jahr": 2024,
+  "url": "https://op.europa.eu/en/publication-detail/-/publication/aa3c49f7-08e7-11ef-a251-01aa75ed71a1",
+  "eli": "http://data.europa.eu/eli/reg/2024/1252/oj",
+  "genutzt": "Anhang II Abschnitt 1 (S. 57–58): Liste der kritischen Rohstoffe → Feld „kritisch“"
+ },
+ "usdapsd2026": {
+  "titel": "Production, Supply and Distribution Online (PSD), Datensatz Cotton (psd_cotton_csv.zip)",
+  "herausgeber": "U.S. Department of Agriculture, Foreign Agricultural Service",
+  "jahr": 2026,
+  "stand": "2026-05",
+  "url": "https://apps.fas.usda.gov/psdonline/downloads/psd_cotton_csv.zip",
+  "genutzt": "Baumwollproduktion je Land, Wirtschaftsjahr 2024/25 (1000 Ballen à 480 lb); Länderanteile daraus berechnet"
  }
 }
