@@ -26,34 +26,36 @@
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 0,77 kg",
+   "v": "≈ 0,76 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
    "k": "mit Recyclat",
    "v": "≈ 0,38 kg",
-   "hint": "spart 0,39 kg, wenn recycelte Materialien eingesetzt werden"
+   "hint": "spart 0,38 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Cu": 14920.0,
-   "Fe": 4860.0
+   "Fe": 28637.0,
+   "Cu": 15050.0
   },
   "herkunft": {
-   "Cu": "Modellmassen (Schätzung)",
-   "Fe": "Modellmassen (Schätzung)"
+   "Fe": "Modellmassen (Schätzung)",
+   "Cu": "Modellmassen (Schätzung)"
   },
   "materialien_g": {
-   "abs": 161.2,
-   "pu_foam": 39.7,
-   "mixed_electronics": 32.4,
-   "pvc": 11.5,
-   "copper": 5.2
+   "abs": 137.2,
+   "pu_foam": 38.6,
+   "mixed_electronics": 31.5,
+   "steel": 24.4,
+   "pvc": 12.2,
+   "copper": 5.6,
+   "polyester": 0.5
   },
-  "co2_kg": 0.768,
-  "co2_mit_recyclat_kg": 0.378,
-  "co2_ersparnis_kg": 0.39,
+  "co2_kg": 0.761,
+  "co2_mit_recyclat_kg": 0.376,
+  "co2_ersparnis_kg": 0.384,
   "co2_ohne_faktor": [],
   "rohstoffwert_eur": 0.19,
   "wert_ohne_preis": [],
@@ -70,6 +72,22 @@
    "westmetall2026": {
     "titel": "Westmetall Marktdaten (LME, London Fixing, WM-Notiz)",
     "url": "https://www.westmetall.com/en/markdaten.php"
+   },
+   "usgs2026": {
+    "titel": "Mineral Commodity Summaries 2026 (ver. 1.3, May 2026)",
+    "url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf"
+   },
+   "eucrm2023": {
+    "titel": "Study on the Critical Raw Materials for the EU 2023 – Final Report",
+    "url": "https://single-market-economy.ec.europa.eu/publications/study-critical-raw-materials-eu-2023-final-report_en"
+   },
+   "eu2024crma": {
+    "titel": "Verordnung (EU) 2024/1252 zur Schaffung eines Rahmens zur Gewährleistung einer sicheren und nachhaltigen Versorgung mit kritischen Rohstoffen (Critical Raw Materials Act)",
+    "url": "https://op.europa.eu/en/publication-detail/-/publication/aa3c49f7-08e7-11ef-a251-01aa75ed71a1"
+   },
+   "usdapsd2026": {
+    "titel": "Production, Supply and Distribution Online (PSD), Datensatz Cotton (psd_cotton_csv.zip)",
+    "url": "https://apps.fas.usda.gov/psdonline/downloads/psd_cotton_csv.zip"
    }
   }
  },
@@ -117,13 +135,13 @@
    "w": 70,
    "d": 90,
    "z": 48,
-   "h": 27,
+   "h": 24,
    "explode": [
     0,
     0,
-    134.0
+    177.0
    ],
-   "mass": 14.6,
+   "mass": 14.2,
    "materials": [
     [
      "schaum",
@@ -139,11 +157,19 @@
    "marks": [
     {
      "shape": "cyl",
-     "x": 17,
-     "y": 22,
-     "w": 36,
-     "d": 46,
-     "fill": "#2B2F33"
+     "x": 5,
+     "y": 6,
+     "w": 60,
+     "d": 78,
+     "fill": "#33383C"
+    },
+    {
+     "shape": "cyl",
+     "x": 15,
+     "y": 19,
+     "w": 40,
+     "d": 52,
+     "fill": "#25292C"
     }
    ]
   },
@@ -159,13 +185,13 @@
    "w": 70,
    "d": 90,
    "z": 48,
-   "h": 27,
+   "h": 24,
    "explode": [
     0,
     0,
-    95.0
+    82.0
    ],
-   "mass": 14.6,
+   "mass": 14.2,
    "materials": [
     [
      "schaum",
@@ -176,17 +202,63 @@
      25
     ]
    ],
-   "info": "Gleiches Polster für das rechte Ohr. Verschlissene Polster lieber tauschen als den ganzen Kopfhörer wegzuwerfen.",
+   "info": "Gleiches Polster für das rechte Ohr. Verschlissene Polster lieber tauschen als den ganzen Kopfhörer wegwerfen.",
    "color": "#3A3F44",
    "label": false,
    "marks": [
     {
      "shape": "cyl",
-     "x": 17,
-     "y": 22,
-     "w": 36,
-     "d": 46,
-     "fill": "#2B2F33"
+     "x": 5,
+     "y": 6,
+     "w": 60,
+     "d": 78,
+     "fill": "#33383C"
+    },
+    {
+     "shape": "cyl",
+     "x": 15,
+     "y": 19,
+     "w": 40,
+     "d": 52,
+     "fill": "#25292C"
+    }
+   ]
+  },
+  {
+   "id": "stoff_l",
+   "component_id": "ear_cushions",
+   "material_id": "polyester",
+   "name": "Staubschutz-Stoff",
+   "short": "Staubschutz",
+   "shape": "cyl",
+   "x": 12,
+   "y": 93,
+   "w": 50,
+   "d": 60,
+   "z": 46.5,
+   "h": 1,
+   "explode": [
+    0,
+    0,
+    143.5
+   ],
+   "mass": 0.5,
+   "materials": [
+    [
+     "textil",
+     100
+    ]
+   ],
+   "info": "Dünner Stoff vor dem Lautsprecher. Lässt den Schall durch und hält Staub und Haare fern.",
+   "color": "#45494D",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 5,
+     "y": 6,
+     "w": 40,
+     "d": 48,
+     "fill": "#4E5357"
     }
    ]
   },
@@ -200,14 +272,14 @@
    "x": 17,
    "y": 103,
    "w": 40,
-   "z": 42,
+   "z": 41,
    "h": 5,
    "explode": [
     0,
     0,
-    95.0
+    122.0
    ],
-   "mass": 4.2,
+   "mass": 4.1,
    "materials": [
     [
      "folien",
@@ -227,9 +299,16 @@
    "marks": [
     {
      "shape": "cyl",
-     "x": 5,
-     "y": 5,
-     "w": 30
+     "x": 3,
+     "y": 3,
+     "w": 34,
+     "fill": "#B9BEC2"
+    },
+    {
+     "shape": "cyl",
+     "x": 6,
+     "y": 6,
+     "w": 28
     },
     {
      "shape": "cyl",
@@ -237,6 +316,71 @@
      "y": 13,
      "w": 14,
      "fill": "#C98F62"
+    }
+   ]
+  },
+  {
+   "id": "schallwand_l",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Schallwand mit Schrauben",
+   "short": "Schallwand",
+   "shape": "cyl",
+   "x": 7,
+   "y": 84,
+   "w": 60,
+   "d": 78,
+   "z": 40,
+   "h": 4,
+   "explode": [
+    0,
+    0,
+    85.0
+   ],
+   "mass": 8.1,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Trägt den Lautsprecher und ist mit vier kleinen Kreuzschrauben in der Muschel verschraubt.",
+   "color": "#3A3F44",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 8,
+     "y": 17,
+     "w": 44,
+     "fill": "#25292C"
+    },
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 36,
+     "w": 3.5,
+     "fill": "#8A9095"
+    },
+    {
+     "shape": "cyl",
+     "x": 52,
+     "y": 36,
+     "w": 3.5,
+     "fill": "#8A9095"
+    },
+    {
+     "shape": "cyl",
+     "x": 26,
+     "y": 4,
+     "w": 3.5,
+     "fill": "#8A9095"
+    },
+    {
+     "shape": "cyl",
+     "x": 26,
+     "y": 70,
+     "w": 3.5,
+     "fill": "#8A9095"
     }
    ]
   },
@@ -250,14 +394,14 @@
    "x": 24,
    "y": 110,
    "w": 26,
-   "z": 32,
+   "z": 30,
    "h": 9,
    "explode": [
     0,
     0,
-    56.0
+    52.0
    ],
-   "mass": 10.5,
+   "mass": 10.2,
    "materials": [
     [
      "ndfeb",
@@ -273,12 +417,52 @@
    "marks": [
     {
      "shape": "cyl",
+     "x": 3,
+     "y": 3,
+     "w": 20,
+     "fill": "#9BA3A8"
+    },
+    {
+     "shape": "cyl",
      "x": 8,
      "y": 8,
      "w": 10,
      "fill": "#5A6066"
     }
    ]
+  },
+  {
+   "id": "litzen_innen",
+   "component_id": "cable_copper_core",
+   "material_id": "copper",
+   "name": "Innenverkabelung",
+   "short": "Innenkabel",
+   "shape": "box",
+   "x": 8,
+   "y": 124,
+   "w": 16,
+   "d": 3,
+   "z": 30,
+   "h": 2,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    32.0
+   ],
+   "mass": 0.5,
+   "materials": [
+    [
+     "kupfer",
+     60
+    ],
+    [
+     "pvc",
+     40
+    ]
+   ],
+   "info": "Dünne Kupferlitzen, an den Lautsprecher gelötet. Ein Kabel läuft durch den Bügel zur rechten Seite.",
+   "color": "#C98F62"
   },
   {
    "id": "treiber_r",
@@ -291,13 +475,13 @@
    "y": 103,
    "w": 40,
    "z": 32,
-   "h": 15,
+   "h": 14,
    "explode": [
     0,
     0,
-    56.0
+    50.0
    ],
-   "mass": 14.6,
+   "mass": 14.2,
    "materials": [
     [
      "ndfeb",
@@ -325,9 +509,16 @@
    "marks": [
     {
      "shape": "cyl",
-     "x": 5,
-     "y": 5,
-     "w": 30
+     "x": 3,
+     "y": 3,
+     "w": 34,
+     "fill": "#B9BEC2"
+    },
+    {
+     "shape": "cyl",
+     "x": 6,
+     "y": 6,
+     "w": 28
     },
     {
      "shape": "cyl",
@@ -349,15 +540,15 @@
    "y": 14,
    "w": 80,
    "d": 12,
-   "z": 0,
-   "h": 26,
+   "z": 2,
+   "h": 24,
    "r": 6,
    "explode": [
     0,
     0,
     0.0
    ],
-   "mass": 10.5,
+   "mass": 10.2,
    "materials": [
     [
      "schaum",
@@ -369,7 +560,72 @@
     ]
    ],
    "info": "Polstert den Bügel oben am Kopf. Meist mit Klettband oder Klebstoff befestigt.",
-   "color": "#3A3F44"
+   "color": "#3A3F44",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 6,
+     "y": 4,
+     "w": 6,
+     "d": 4,
+     "r": 2,
+     "fill": "#33383C"
+    },
+    {
+     "shape": "box",
+     "x": 16,
+     "y": 4,
+     "w": 6,
+     "d": 4,
+     "r": 2,
+     "fill": "#33383C"
+    },
+    {
+     "shape": "box",
+     "x": 26,
+     "y": 4,
+     "w": 6,
+     "d": 4,
+     "r": 2,
+     "fill": "#33383C"
+    },
+    {
+     "shape": "box",
+     "x": 36,
+     "y": 4,
+     "w": 6,
+     "d": 4,
+     "r": 2,
+     "fill": "#33383C"
+    },
+    {
+     "shape": "box",
+     "x": 46,
+     "y": 4,
+     "w": 6,
+     "d": 4,
+     "r": 2,
+     "fill": "#33383C"
+    },
+    {
+     "shape": "box",
+     "x": 56,
+     "y": 4,
+     "w": 6,
+     "d": 4,
+     "r": 2,
+     "fill": "#33383C"
+    },
+    {
+     "shape": "box",
+     "x": 66,
+     "y": 4,
+     "w": 6,
+     "d": 4,
+     "r": 2,
+     "fill": "#33383C"
+    }
+   ]
   },
   {
    "id": "schale_l",
@@ -389,22 +645,23 @@
     0,
     0.0
    ],
-   "mass": 47.1,
+   "mass": 42.7,
    "materials": [
     [
      "pcabs",
      100
     ]
    ],
-   "info": "Gehäuse mit Schallwand für den Lautsprecher. Die Schrauben liegen unter dem Ohrpolster.",
+   "info": "Gehäuse aus ABS. Die Schrauben liegen unter dem Ohrpolster. Erst Lautsprecher und Kabel entfernen, dann ist die Schale sortenreiner Kunststoff.",
+   "color": "#2F3338",
    "marks": [
     {
      "shape": "cyl",
-     "x": 10,
-     "y": 12,
-     "w": 50,
-     "d": 66,
-     "fill": "#2B2F33"
+     "x": 4,
+     "y": 5,
+     "w": 62,
+     "d": 80,
+     "fill": "#272B2F"
     }
    ]
   },
@@ -426,7 +683,7 @@
     0,
     0.0
    ],
-   "mass": 47.1,
+   "mass": 45.7,
    "materials": [
     [
      "pcabs",
@@ -434,15 +691,52 @@
     ]
    ],
    "info": "Rechte Ohrmuschel, gleich aufgebaut. Hier kommt das Kabel innen von links über den Bügel an.",
+   "color": "#2F3338",
    "label": false,
    "marks": [
     {
      "shape": "cyl",
-     "x": 10,
-     "y": 12,
-     "w": 50,
-     "d": 66,
-     "fill": "#2B2F33"
+     "x": 4,
+     "y": 5,
+     "w": 62,
+     "d": 80,
+     "fill": "#272B2F"
+    },
+    {
+     "shape": "cyl",
+     "x": 14,
+     "y": 22,
+     "w": 42,
+     "d": 46,
+     "fill": "#25292C"
+    },
+    {
+     "shape": "cyl",
+     "x": 11,
+     "y": 42,
+     "w": 3.5,
+     "fill": "#8A9095"
+    },
+    {
+     "shape": "cyl",
+     "x": 59,
+     "y": 42,
+     "w": 3.5,
+     "fill": "#8A9095"
+    },
+    {
+     "shape": "cyl",
+     "x": 33,
+     "y": 10,
+     "w": 3.5,
+     "fill": "#8A9095"
+    },
+    {
+     "shape": "cyl",
+     "x": 33,
+     "y": 76,
+     "w": 3.5,
+     "fill": "#8A9095"
     }
    ]
   },
@@ -459,13 +753,13 @@
    "d": 14,
    "z": 0,
    "h": 30,
-   "r": 6,
+   "r": 7,
    "explode": [
     0,
     0,
     0.0
    ],
-   "mass": 41.8,
+   "mass": 40.7,
    "materials": [
     [
      "pcabs",
@@ -476,172 +770,227 @@
      45
     ]
    ],
-   "info": "Kunststoffbügel mit eingelegtem Federstahlband, das die Muscheln an den Kopf drückt. Mit einem Magneten findet man den Stahl."
-  },
-  {
-   "id": "gleiter_l",
-   "component_id": "plastic_housing",
-   "material_id": "abs",
-   "name": "Verstellbarer Gleitarm links",
-   "short": "Gleitarm",
-   "shape": "box",
-   "x": 30,
-   "y": 14,
-   "w": 14,
-   "d": 64,
-   "z": 4,
-   "h": 24,
-   "r": 4,
-   "explode": [
-    0,
-    0,
-    0.0
-   ],
-   "mass": 12.6,
-   "materials": [
-    [
-     "pcabs",
-     70
-    ],
-    [
-     "stahl",
-     30
-    ]
-   ],
-   "info": "Lässt sich herausziehen, um die Größe anzupassen. Innen läuft das Kabel zur Ohrmuschel.",
+   "info": "Kunststoffbügel mit eingelegtem Federstahlband, das die Muscheln an den Kopf drückt. Mit einem Magneten findet man den Stahl.",
+   "color": "#2F3338",
    "marks": [
     {
      "shape": "box",
      "x": 3,
+     "y": 3,
+     "w": 114,
+     "d": 8,
+     "r": 4,
+     "fill": "#3A3F44"
+    }
+   ]
+  },
+  {
+   "id": "gleiter_l",
+   "component_id": "plastic_housing",
+   "material_id": "steel",
+   "name": "Verstellbarer Gleitarm links",
+   "short": "Gleitarm",
+   "shape": "box",
+   "x": 31,
+   "y": 14,
+   "w": 12,
+   "d": 64,
+   "z": 6,
+   "h": 20,
+   "r": 4,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 12.2,
+   "materials": [
+    [
+     "stahl",
+     70
+    ],
+    [
+     "pcabs",
+     30
+    ]
+   ],
+   "info": "Ausziehbarer Stahlbügel zum Anpassen der Größe. Innen läuft das Kabel zur Ohrmuschel.",
+   "color": "#B9BEC2",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
      "y": 6,
-     "w": 8,
+     "w": 4,
      "d": 2,
-     "r": 1
+     "r": 1,
+     "fill": "#8A9095"
     },
     {
      "shape": "box",
-     "x": 3,
+     "x": 4,
      "y": 14,
-     "w": 8,
+     "w": 4,
      "d": 2,
-     "r": 1
+     "r": 1,
+     "fill": "#8A9095"
     },
     {
      "shape": "box",
-     "x": 3,
+     "x": 4,
      "y": 22,
-     "w": 8,
+     "w": 4,
      "d": 2,
-     "r": 1
+     "r": 1,
+     "fill": "#8A9095"
     },
     {
      "shape": "box",
-     "x": 3,
+     "x": 4,
      "y": 30,
-     "w": 8,
+     "w": 4,
      "d": 2,
-     "r": 1
+     "r": 1,
+     "fill": "#8A9095"
     },
     {
      "shape": "box",
-     "x": 3,
+     "x": 4,
      "y": 38,
-     "w": 8,
+     "w": 4,
      "d": 2,
-     "r": 1
+     "r": 1,
+     "fill": "#8A9095"
     },
     {
      "shape": "box",
-     "x": 3,
+     "x": 4,
      "y": 46,
-     "w": 8,
+     "w": 4,
      "d": 2,
-     "r": 1
+     "r": 1,
+     "fill": "#8A9095"
     }
    ]
   },
   {
    "id": "gleiter_r",
    "component_id": "plastic_housing",
-   "material_id": "abs",
+   "material_id": "steel",
    "name": "Verstellbarer Gleitarm rechts",
    "short": "Gleitarm",
    "shape": "box",
-   "x": 136,
+   "x": 137,
    "y": 14,
-   "w": 14,
+   "w": 12,
    "d": 64,
-   "z": 4,
-   "h": 24,
+   "z": 6,
+   "h": 20,
    "r": 4,
+   "explode": [
+    45,
+    0,
+    0
+   ],
+   "mass": 12.2,
+   "materials": [
+    [
+     "stahl",
+     70
+    ],
+    [
+     "pcabs",
+     30
+    ]
+   ],
+   "info": "Rechter Gleitarm. Bricht er, gibt es für viele Modelle Ersatzteile.",
+   "color": "#B9BEC2",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 6,
+     "w": 4,
+     "d": 2,
+     "r": 1,
+     "fill": "#8A9095"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 14,
+     "w": 4,
+     "d": 2,
+     "r": 1,
+     "fill": "#8A9095"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 22,
+     "w": 4,
+     "d": 2,
+     "r": 1,
+     "fill": "#8A9095"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 30,
+     "w": 4,
+     "d": 2,
+     "r": 1,
+     "fill": "#8A9095"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 38,
+     "w": 4,
+     "d": 2,
+     "r": 1,
+     "fill": "#8A9095"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 46,
+     "w": 4,
+     "d": 2,
+     "r": 1,
+     "fill": "#8A9095"
+    }
+   ]
+  },
+  {
+   "id": "tuelle",
+   "component_id": "cable_insulation",
+   "material_id": "pvc",
+   "name": "Knickschutz-Tülle",
+   "short": "Knickschutz",
+   "shape": "box",
+   "x": 72,
+   "y": 150,
+   "w": 6,
+   "d": 8,
+   "z": 6,
+   "h": 8,
+   "r": 2,
    "explode": [
     0,
     0,
     0.0
    ],
-   "mass": 12.6,
+   "mass": 1,
    "materials": [
     [
-     "pcabs",
-     70
-    ],
-    [
-     "stahl",
-     30
+     "tpe",
+     100
     ]
    ],
-   "info": "Rechter Gleitarm. Bricht er, gibt es für viele Modelle Ersatzteile.",
-   "label": false,
-   "marks": [
-    {
-     "shape": "box",
-     "x": 3,
-     "y": 6,
-     "w": 8,
-     "d": 2,
-     "r": 1
-    },
-    {
-     "shape": "box",
-     "x": 3,
-     "y": 14,
-     "w": 8,
-     "d": 2,
-     "r": 1
-    },
-    {
-     "shape": "box",
-     "x": 3,
-     "y": 22,
-     "w": 8,
-     "d": 2,
-     "r": 1
-    },
-    {
-     "shape": "box",
-     "x": 3,
-     "y": 30,
-     "w": 8,
-     "d": 2,
-     "r": 1
-    },
-    {
-     "shape": "box",
-     "x": 3,
-     "y": 38,
-     "w": 8,
-     "d": 2,
-     "r": 1
-    },
-    {
-     "shape": "box",
-     "x": 3,
-     "y": 46,
-     "w": 8,
-     "d": 2,
-     "r": 1
-    }
-   ]
+   "info": "Weiche Gummitülle, wo das Kabel aus der Muschel kommt. Verhindert, dass die Adern dort brechen.",
+   "color": "#25292C"
   },
   {
    "id": "kabel",
@@ -650,44 +999,44 @@
    "name": "Kabelmantel (aufgerollt)",
    "short": "Kabel",
    "shape": "cyl",
-   "x": 62,
-   "y": 30,
-   "w": 46,
+   "x": 76,
+   "y": 120,
+   "w": 28,
    "z": 0,
-   "h": 6,
+   "h": 8,
    "explode": [
-    150,
+    130,
     0,
     0
    ],
-   "mass": 11.5,
+   "mass": 11.2,
    "materials": [
     [
      "pvc",
      100
     ]
    ],
-   "info": "Etwa 1,2 m PVC-Kabel mit 3,5-mm-Stecker. Mit einer Abisolierzange lässt sich der Mantel vom Kupfer trennen.",
-   "color": "#2B2F33",
+   "info": "Etwa 1,2 m PVC-Kabel. Mit einer Abisolierzange lässt sich der Mantel vom Kupfer trennen.",
+   "color": "#25292C",
    "marks": [
     {
      "shape": "cyl",
-     "x": 5,
-     "y": 5,
-     "w": 36
+     "x": 3,
+     "y": 3,
+     "w": 22
     },
     {
      "shape": "cyl",
-     "x": 10,
-     "y": 10,
-     "w": 26
+     "x": 6,
+     "y": 6,
+     "w": 16
     },
     {
      "shape": "cyl",
-     "x": 15,
-     "y": 15,
-     "w": 16,
-     "fill": "#F2EFE8"
+     "x": 9,
+     "y": 9,
+     "w": 10,
+     "fill": "#3A3F44"
     }
    ]
   },
@@ -698,17 +1047,17 @@
    "name": "Kupferlitzen",
    "short": "Kupferlitzen",
    "shape": "cyl",
-   "x": 67,
-   "y": 35,
-   "w": 36,
+   "x": 79,
+   "y": 123,
+   "w": 22,
    "z": 1,
-   "h": 4,
+   "h": 6,
    "explode": [
-    150,
+    160,
     0,
-    30
+    0
    ],
-   "mass": 5.2,
+   "mass": 5.1,
    "materials": [
     [
      "kupfer",
@@ -720,16 +1069,16 @@
    "marks": [
     {
      "shape": "cyl",
-     "x": 5,
-     "y": 5,
-     "w": 26
+     "x": 3,
+     "y": 3,
+     "w": 16
     },
     {
      "shape": "cyl",
-     "x": 10,
-     "y": 10,
-     "w": 16,
-     "fill": "#F2EFE8"
+     "x": 6,
+     "y": 6,
+     "w": 10,
+     "fill": "#B9805A"
     }
    ]
   },
@@ -740,10 +1089,10 @@
    "name": "Klinkenstecker 3,5 mm",
    "short": "Klinkenstecker",
    "shape": "box",
-   "x": 112,
-   "y": 38,
-   "w": 24,
-   "d": 6,
+   "x": 84,
+   "y": 150,
+   "w": 6,
+   "d": 24,
    "z": 0,
    "h": 6,
    "r": 3,
@@ -752,7 +1101,7 @@
     0,
     0
    ],
-   "mass": 3.1,
+   "mass": 3,
    "materials": [
     [
      "messing",
@@ -772,19 +1121,28 @@
    "marks": [
     {
      "shape": "box",
-     "x": 13,
-     "y": 1.5,
-     "w": 1,
-     "d": 3,
+     "x": 0.5,
+     "y": 0,
+     "w": 5,
+     "d": 12,
+     "r": 2.5,
+     "fill": "#25292C"
+    },
+    {
+     "shape": "box",
+     "x": 1.5,
+     "y": 15,
+     "w": 3,
+     "d": 1,
      "r": 0.5,
      "fill": "#2B2F33"
     },
     {
      "shape": "box",
-     "x": 17,
-     "y": 1.5,
-     "w": 1,
-     "d": 3,
+     "x": 1.5,
+     "y": 19,
+     "w": 3,
+     "d": 1,
      "r": 0.5,
      "fill": "#2B2F33"
     }

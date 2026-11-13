@@ -17,9 +17,9 @@
    "explode": [
     0,
     0,
-    143.0
+    141.6
    ],
-   "mass": 25.3,
+   "mass": 24.9,
    "materials": [
     [
      "pcabs",
@@ -27,15 +27,43 @@
     ]
    ],
    "info": "Hat Löcher für die Gummitasten. Meist nur mit Rastnasen verklipst: mit einem Plektrum an der Fuge entlang aufhebeln.",
+   "color": "#2F3337",
    "marks": [
     {
      "shape": "box",
-     "x": 4,
-     "y": 18,
-     "w": 37,
-     "d": 128,
-     "r": 6,
-     "fill": "#2B2F33"
+     "x": 3.5,
+     "y": 17.5,
+     "w": 38,
+     "d": 129,
+     "r": 6.5,
+     "fill": "#1E2124"
+    },
+    {
+     "shape": "box",
+     "x": 13,
+     "y": 1.5,
+     "w": 19,
+     "d": 6,
+     "r": 3,
+     "fill": "#4A2A30"
+    },
+    {
+     "shape": "box",
+     "x": 12,
+     "y": 160,
+     "w": 21,
+     "d": 1,
+     "r": 0.5,
+     "fill": "#5A5F64"
+    },
+    {
+     "shape": "box",
+     "x": 15,
+     "y": 164,
+     "w": 15,
+     "d": 1,
+     "r": 0.5,
+     "fill": "#5A5F64"
     }
    ]
   },
@@ -51,14 +79,14 @@
    "w": 37,
    "d": 128,
    "z": 7.6,
-   "h": 12.4,
+   "h": 11,
    "r": 6,
    "explode": [
     0,
     0,
     103.0
    ],
-   "mass": 14.7,
+   "mass": 14.5,
    "materials": [
     [
      "gummi",
@@ -66,7 +94,7 @@
     ]
    ],
    "info": "Alle Tasten sind eine einzige Silikonmatte. Unter jeder Taste klebt eine schwarze Kohle-Pille, die den Kontakt schließt.",
-   "color": "#4A5258",
+   "color": "#3E4449",
    "marks": [
     {
      "shape": "cyl",
@@ -81,7 +109,8 @@
      "y": 15,
      "w": 8,
      "d": 6,
-     "r": 2
+     "r": 2,
+     "fill": "#5A6268"
     },
     {
      "shape": "box",
@@ -89,7 +118,8 @@
      "y": 15,
      "w": 8,
      "d": 6,
-     "r": 2
+     "r": 2,
+     "fill": "#5A6268"
     },
     {
      "shape": "box",
@@ -97,7 +127,8 @@
      "y": 15,
      "w": 8,
      "d": 6,
-     "r": 2
+     "r": 2,
+     "fill": "#5A6268"
     },
     {
      "shape": "box",
@@ -105,7 +136,8 @@
      "y": 24,
      "w": 8,
      "d": 6,
-     "r": 2
+     "r": 2,
+     "fill": "#5A6268"
     },
     {
      "shape": "box",
@@ -113,7 +145,8 @@
      "y": 24,
      "w": 8,
      "d": 6,
-     "r": 2
+     "r": 2,
+     "fill": "#5A6268"
     },
     {
      "shape": "box",
@@ -121,7 +154,8 @@
      "y": 24,
      "w": 8,
      "d": 6,
-     "r": 2
+     "r": 2,
+     "fill": "#5A6268"
     },
     {
      "shape": "box",
@@ -129,7 +163,8 @@
      "y": 33,
      "w": 8,
      "d": 6,
-     "r": 2
+     "r": 2,
+     "fill": "#5A6268"
     },
     {
      "shape": "box",
@@ -137,7 +172,8 @@
      "y": 33,
      "w": 8,
      "d": 6,
-     "r": 2
+     "r": 2,
+     "fill": "#5A6268"
     },
     {
      "shape": "box",
@@ -145,7 +181,8 @@
      "y": 33,
      "w": 8,
      "d": 6,
-     "r": 2
+     "r": 2,
+     "fill": "#5A6268"
     },
     {
      "shape": "box",
@@ -153,7 +190,8 @@
      "y": 42,
      "w": 8,
      "d": 6,
-     "r": 2
+     "r": 2,
+     "fill": "#5A6268"
     },
     {
      "shape": "box",
@@ -161,7 +199,8 @@
      "y": 42,
      "w": 8,
      "d": 6,
-     "r": 2
+     "r": 2,
+     "fill": "#5A6268"
     },
     {
      "shape": "box",
@@ -169,18 +208,20 @@
      "y": 42,
      "w": 8,
      "d": 6,
-     "r": 2
+     "r": 2,
+     "fill": "#5A6268"
     },
     {
      "shape": "cyl",
-     "x": 9,
-     "y": 54,
-     "w": 21
+     "x": 8,
+     "y": 53,
+     "w": 21,
+     "fill": "#5A6268"
     },
     {
      "shape": "cyl",
-     "x": 15,
-     "y": 60,
+     "x": 14,
+     "y": 59,
      "w": 9,
      "fill": "#2B2F33"
     },
@@ -190,7 +231,8 @@
      "y": 81,
      "w": 6,
      "d": 8,
-     "r": 2
+     "r": 2,
+     "fill": "#5A6268"
     },
     {
      "shape": "box",
@@ -198,7 +240,8 @@
      "y": 81,
      "w": 6,
      "d": 8,
-     "r": 2
+     "r": 2,
+     "fill": "#5A6268"
     },
     {
      "shape": "box",
@@ -206,7 +249,8 @@
      "y": 91,
      "w": 6,
      "d": 8,
-     "r": 2
+     "r": 2,
+     "fill": "#5A6268"
     },
     {
      "shape": "box",
@@ -214,7 +258,8 @@
      "y": 91,
      "w": 6,
      "d": 8,
-     "r": 2
+     "r": 2,
+     "fill": "#5A6268"
     },
     {
      "shape": "box",
@@ -222,7 +267,8 @@
      "y": 101,
      "w": 6,
      "d": 8,
-     "r": 2
+     "r": 2,
+     "fill": "#5A6268"
     },
     {
      "shape": "box",
@@ -230,7 +276,8 @@
      "y": 101,
      "w": 6,
      "d": 8,
-     "r": 2
+     "r": 2,
+     "fill": "#5A6268"
     },
     {
      "shape": "box",
@@ -365,6 +412,91 @@
    "opacity": 0.85
   },
   {
+   "id": "elko",
+   "component_id": "circuit_board",
+   "material_id": "mixed_electronics",
+   "name": "Elektrolytkondensator",
+   "short": "Kondensator",
+   "shape": "cyl",
+   "x": 6,
+   "y": 150,
+   "w": 6,
+   "z": 7.6,
+   "h": 5,
+   "explode": [
+    0,
+    0,
+    103.0
+   ],
+   "mass": 0.4,
+   "materials": [
+    [
+     "alu",
+     55
+    ],
+    [
+     "papier",
+     20
+    ],
+    [
+     "pcabs",
+     15
+    ],
+    [
+     "kupfer",
+     10
+    ]
+   ],
+   "info": "Speichert kurz Energie, damit die IR-LED kräftige Lichtblitze abgeben kann, ohne dass die Batteriespannung einbricht.",
+   "color": "#2F4F7A",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 1,
+     "y": 1,
+     "w": 4,
+     "fill": "#B9C0C6"
+    }
+   ]
+  },
+  {
+   "id": "transistor",
+   "component_id": "circuit_board",
+   "material_id": "mixed_electronics",
+   "name": "Transistor",
+   "short": "Transistor",
+   "shape": "box",
+   "x": 36.5,
+   "y": 150,
+   "w": 4,
+   "d": 3,
+   "z": 7.6,
+   "h": 4,
+   "r": 0.5,
+   "explode": [
+    0,
+    0,
+    103.0
+   ],
+   "mass": 0.2,
+   "materials": [
+    [
+     "chip",
+     40
+    ],
+    [
+     "pcabs",
+     40
+    ],
+    [
+     "kupfer",
+     20
+    ]
+   ],
+   "info": "Elektronischer Schalter: Der Chip allein ist zu schwach, der Transistor schaltet den großen Strom für die LED.",
+   "color": "#22272B"
+  },
+  {
    "id": "platine",
    "component_id": "circuit_board",
    "material_id": "pcb",
@@ -383,7 +515,7 @@
     0,
     73.0
    ],
-   "mass": 9.5,
+   "mass": 9.3,
    "materials": [
     [
      "fr4",
@@ -603,6 +735,85 @@
    "color": "#B9BEC2"
   },
   {
+   "id": "schraube",
+   "component_id": "plastic_housing",
+   "material_id": "steel",
+   "name": "Gehäuseschraube",
+   "short": "Schraube",
+   "shape": "cyl",
+   "x": 20.5,
+   "y": 168,
+   "w": 4,
+   "z": 1.5,
+   "h": 13,
+   "explode": [
+    0,
+    0,
+    38.5
+   ],
+   "mass": 0.4,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Eine Kreuzschlitzschraube im Batteriefach hält die Schalen zusätzlich zu den Rastnasen zusammen.",
+   "color": "#9BA3A8",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1.6,
+     "y": 0.6,
+     "w": 0.8,
+     "d": 2.8,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 0.6,
+     "y": 1.6,
+     "w": 2.8,
+     "d": 0.8,
+     "fill": "#3A3F44"
+    }
+   ]
+  },
+  {
+   "id": "kontakte_2",
+   "component_id": "circuit_board",
+   "material_id": "steel",
+   "name": "Batteriekontakte vorne",
+   "short": "Batteriefedern",
+   "shape": "box",
+   "x": 6,
+   "y": 163.5,
+   "w": 13,
+   "d": 2.5,
+   "z": 1.5,
+   "h": 9,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    38.5
+   ],
+   "mass": 0.5,
+   "materials": [
+    [
+     "stahl",
+     85
+    ],
+    [
+     "kupfer",
+     15
+    ]
+   ],
+   "info": "Gegenkontakt mit Feder am anderen Ende des Batteriefachs.",
+   "color": "#B9BEC2",
+   "label": false
+  },
+  {
    "id": "unterschale",
    "component_id": "plastic_housing",
    "material_id": "abs",
@@ -621,7 +832,7 @@
     0,
     0.0
    ],
-   "mass": 29.5,
+   "mass": 29.1,
    "materials": [
     [
      "pcabs",
@@ -629,6 +840,8 @@
     ]
    ],
    "info": "Trägt Platine und Batteriefach. Kunststoffe ohne Elektronik ließen sich gut recyceln, sind aber oft dunkel und schwer sortierbar.",
+   "color": "#26292C",
+   "sortBias": 5,
    "marks": [
     {
      "shape": "box",
@@ -660,7 +873,7 @@
     0,
     20
    ],
-   "mass": 12.1,
+   "mass": 11.9,
    "materials": [
     [
      "zinkmangan",
@@ -704,7 +917,7 @@
     0,
     20
    ],
-   "mass": 12.1,
+   "mass": 11.9,
    "materials": [
     [
      "zinkmangan",
@@ -757,6 +970,7 @@
     ]
    ],
    "info": "Wird aufgeschoben und rastet mit einer Nase ein. Zum Öffnen auf die Rillen drücken und schieben.",
+   "color": "#26292C",
    "marks": [
     {
      "shape": "box",

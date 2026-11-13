@@ -17,7 +17,7 @@
    "explode": [
     0,
     0,
-    266.8
+    304.1
    ],
    "mass": 15,
    "materials": [
@@ -28,7 +28,7 @@
    ],
    "info": "Chemisch gehärtetes Glas. Schützt das Display und ist zugleich die Touch-Oberfläche.",
    "color": "#C9DEDF",
-   "opacity": 0.6,
+   "opacity": 0.3,
    "marks": [
     {
      "shape": "box",
@@ -36,7 +36,8 @@
      "y": 4,
      "w": 16,
      "d": 1.6,
-     "r": 0.8
+     "r": 0.8,
+     "fill": "#8A9499"
     }
    ]
   },
@@ -44,7 +45,7 @@
    "id": "display",
    "component_id": "smartphone_display",
    "material_id": "special_glass",
-   "name": "Display-Einheit (LCD)",
+   "name": "Display-Einheit (OLED)",
    "short": "Display",
    "shape": "box",
    "x": 0.5,
@@ -57,7 +58,7 @@
    "explode": [
     0,
     0,
-    216.20000000000002
+    254.1
    ],
    "mass": 28,
    "materials": [
@@ -78,7 +79,7 @@
      10
     ]
    ],
-   "info": "Mehrere verklebte Schichten: Glas mit leitfähiger Indium-Schicht, Folien, LED-Hintergrundlicht.",
+   "info": "Mehrere verklebte Schichten: Glas mit leitfähiger Indium-Schicht, Folien und selbstleuchtende Pixel. Ein Flachbandkabel steckt auf der Platine.",
    "color": "#31373B",
    "marks": [
     {
@@ -88,37 +89,163 @@
      "w": 69,
      "d": 144,
      "r": 7,
-     "fill": "#3D464C"
+     "fill": "#232A2F"
     },
     {
      "shape": "box",
-     "x": 19,
-     "y": 3,
-     "w": 37,
-     "d": 7,
-     "r": 3,
-     "fill": "#31373B"
+     "x": 28,
+     "y": 6,
+     "w": 19,
+     "d": 5,
+     "r": 2.5,
+     "fill": "#0E1113"
+    },
+    {
+     "shape": "cyl",
+     "x": 40,
+     "y": 7,
+     "w": 3,
+     "fill": "#2B3A4A"
     }
    ]
+  },
+  {
+   "id": "frontkamera",
+   "component_id": "circuit_board",
+   "material_id": "mixed_electronics",
+   "name": "Frontkamera",
+   "short": "Frontkamera",
+   "shape": "box",
+   "x": 36,
+   "y": 5,
+   "w": 10,
+   "d": 8,
+   "z": 4.6,
+   "h": 2.4,
+   "r": 1.5,
+   "explode": [
+    0,
+    0,
+    204.2
+   ],
+   "mass": 1,
+   "materials": [
+    [
+     "chip",
+     40
+    ],
+    [
+     "glas",
+     25
+    ],
+    [
+     "alu",
+     20
+    ],
+    [
+     "kupfer",
+     15
+    ]
+   ],
+   "info": "Kleine Selfie-Kamera, schaut durch ein Loch im Display. Hängt an einem eigenen Flachbandkabel.",
+   "color": "#5E656A",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 3.5,
+     "y": 2.5,
+     "w": 3,
+     "fill": "#1A1D20"
+    }
+   ]
+  },
+  {
+   "id": "soc",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "Prozessor (SoC)",
+   "short": "Prozessor",
+   "shape": "box",
+   "x": 42,
+   "y": 20,
+   "w": 14,
+   "d": 14,
+   "z": 4.2,
+   "h": 1,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    168.6
+   ],
+   "mass": 1.2,
+   "materials": [
+    [
+     "chip",
+     100
+    ]
+   ],
+   "info": "Rechenkern, Grafik und Arbeitsspeicher in einem Gehäuse. Feinste Golddrähte verbinden den Chip.",
+   "color": "#3F4547",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1.5,
+     "y": 1.5,
+     "w": 11,
+     "d": 11,
+     "r": 0.5,
+     "fill": "#4E565A"
+    }
+   ]
+  },
+  {
+   "id": "speicher",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "Speicherchip (NAND)",
+   "short": "Speicher",
+   "shape": "box",
+   "x": 58,
+   "y": 20,
+   "w": 10,
+   "d": 14,
+   "z": 4.2,
+   "h": 1,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    168.6
+   ],
+   "mass": 0.8,
+   "materials": [
+    [
+     "chip",
+     100
+    ]
+   ],
+   "info": "Speichert Fotos und Apps. Daten vor dem Abgeben unbedingt löschen.",
+   "color": "#3F4547"
   },
   {
    "id": "kamera",
    "component_id": "circuit_board",
    "material_id": "mixed_electronics",
-   "name": "Kameramodul",
+   "name": "Hauptkameras",
    "short": "Kamera",
    "shape": "box",
    "x": 6,
    "y": 6,
    "w": 24,
    "d": 38,
-   "z": 3,
-   "h": 4.5,
+   "z": 2,
+   "h": 5,
    "r": 4,
    "explode": [
     0,
     0,
-    119.60000000000001
+    155.6
    ],
    "mass": 9,
    "materials": [
@@ -144,77 +271,33 @@
    "marks": [
     {
      "shape": "cyl",
-     "x": 5,
-     "y": 5,
-     "w": 14,
-     "fill": "#262B2F"
+     "x": 4,
+     "y": 4,
+     "w": 16,
+     "fill": "#3A3F44"
     },
     {
      "shape": "cyl",
-     "x": 5,
+     "x": 7,
+     "y": 7,
+     "w": 10,
+     "fill": "#1A1D20"
+    },
+    {
+     "shape": "cyl",
+     "x": 4,
      "y": 21,
-     "w": 14,
-     "fill": "#262B2F"
+     "w": 16,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 7,
+     "y": 24,
+     "w": 10,
+     "fill": "#1A1D20"
     }
    ]
-  },
-  {
-   "id": "soc",
-   "component_id": "circuit_board",
-   "material_id": "pcb",
-   "name": "Prozessor (SoC)",
-   "short": "Prozessor",
-   "shape": "box",
-   "x": 40,
-   "y": 14,
-   "w": 14,
-   "d": 14,
-   "z": 4.2,
-   "h": 1,
-   "r": 1,
-   "explode": [
-    0,
-    0,
-    151.79999999999998
-   ],
-   "mass": 1.2,
-   "materials": [
-    [
-     "chip",
-     100
-    ]
-   ],
-   "info": "Rechenkern, Grafik und Arbeitsspeicher in einem Gehäuse. Feinste Golddrähte verbinden den Chip.",
-   "color": "#3F4547"
-  },
-  {
-   "id": "speicher",
-   "component_id": "circuit_board",
-   "material_id": "pcb",
-   "name": "Speicherchip (NAND)",
-   "short": "Speicher",
-   "shape": "box",
-   "x": 56,
-   "y": 14,
-   "w": 11,
-   "d": 16,
-   "z": 4.2,
-   "h": 1,
-   "r": 1,
-   "explode": [
-    0,
-    0,
-    151.79999999999998
-   ],
-   "mass": 0.8,
-   "materials": [
-    [
-     "chip",
-     100
-    ]
-   ],
-   "info": "Speichert Fotos und Apps. Daten vor dem Abgeben unbedingt löschen.",
-   "color": "#3F4547"
   },
   {
    "id": "platine",
@@ -223,7 +306,7 @@
    "name": "Hauptplatine",
    "short": "Platine",
    "shape": "box",
-   "x": 32,
+   "x": 33,
    "y": 6,
    "w": 38,
    "d": 50,
@@ -233,7 +316,7 @@
    "explode": [
     0,
     0,
-    119.60000000000001
+    154.6
    ],
    "mass": 12,
    "materials": [
@@ -254,7 +337,64 @@
      10
     ]
    ],
-   "info": "Zwei gestapelte Leiterplatten mit Funkchips und Stromversorgung. Hier steckt das meiste Gold."
+   "info": "Zwei gestapelte Leiterplatten mit Funkchips und Stromversorgung. Hier steckt das meiste Gold.",
+   "color": "#2E6B45",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 32,
+     "w": 5,
+     "d": 4,
+     "r": 0.5,
+     "fill": "#2B2F33"
+    },
+    {
+     "shape": "box",
+     "x": 11,
+     "y": 32,
+     "w": 5,
+     "d": 4,
+     "r": 0.5,
+     "fill": "#2B2F33"
+    },
+    {
+     "shape": "box",
+     "x": 19,
+     "y": 32,
+     "w": 5,
+     "d": 4,
+     "r": 0.5,
+     "fill": "#2B2F33"
+    },
+    {
+     "shape": "box",
+     "x": 27,
+     "y": 32,
+     "w": 5,
+     "d": 4,
+     "r": 0.5,
+     "fill": "#2B2F33"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 40,
+     "w": 14,
+     "d": 6,
+     "r": 0.5,
+     "fill": "#B9BEC2"
+    },
+    {
+     "shape": "box",
+     "x": 22,
+     "y": 40,
+     "w": 12,
+     "d": 6,
+     "r": 0.5,
+     "fill": "#B9BEC2"
+    }
+   ]
   },
   {
    "id": "akku",
@@ -263,17 +403,17 @@
    "name": "Lithium-Ionen-Akku",
    "short": "Akku",
    "shape": "box",
-   "x": 22,
+   "x": 15,
    "y": 60,
    "w": 46,
    "d": 64,
-   "z": 3,
-   "h": 4.2,
+   "z": 2,
+   "h": 4.6,
    "r": 3,
    "explode": [
     0,
     0,
-    119.60000000000001
+    155.6
    ],
    "mass": 48,
    "materials": [
@@ -302,15 +442,34 @@
      7
     ]
    ],
-   "info": "Etwa 3.100 mAh. Mit Klebestreifen befestigt. Aufgebläht oder beschädigt gehört er sofort in die Sammlung.",
+   "info": "Etwa 3.100 mAh, mit Zuglaschen festgeklebt. Aufgebläht oder beschädigt gehört er sofort in die Sammlung.",
+   "color": "#9DA6AD",
    "marks": [
     {
      "shape": "box",
-     "x": 4,
-     "y": 4,
-     "w": 38,
-     "d": 56,
+     "x": 3,
+     "y": 3,
+     "w": 40,
+     "d": 58,
      "r": 2
+    },
+    {
+     "shape": "box",
+     "x": 6,
+     "y": 6,
+     "w": 18,
+     "d": 10,
+     "r": 1,
+     "fill": "#E8E8E2"
+    },
+    {
+     "shape": "box",
+     "x": 30,
+     "y": 62,
+     "w": 8,
+     "d": 2,
+     "r": 0.5,
+     "fill": "#2B2F33"
     }
    ]
   },
@@ -321,17 +480,17 @@
    "name": "Vibrationsmotor",
    "short": "Vibration",
    "shape": "box",
-   "x": 8,
+   "x": 6,
    "y": 128,
    "w": 30,
-   "d": 13,
-   "z": 3,
+   "d": 12,
+   "z": 2,
    "h": 3.6,
    "r": 2,
    "explode": [
     0,
     0,
-    119.60000000000001
+    155.6
    ],
    "mass": 4,
    "materials": [
@@ -352,23 +511,75 @@
    "color": "#9BA3A8"
   },
   {
+   "id": "buchse",
+   "component_id": "circuit_board",
+   "material_id": "mixed_electronics",
+   "name": "USB-C-Ladebuchse mit Flexkabel",
+   "short": "Ladebuchse",
+   "shape": "box",
+   "x": 29,
+   "y": 141,
+   "w": 18,
+   "d": 7,
+   "z": 2.5,
+   "h": 3.2,
+   "r": 1.5,
+   "explode": [
+    0,
+    0,
+    155.1
+   ],
+   "mass": 1.5,
+   "materials": [
+    [
+     "stahl",
+     50
+    ],
+    [
+     "kupfer",
+     25
+    ],
+    [
+     "kontakte",
+     10
+    ],
+    [
+     "folien",
+     15
+    ]
+   ],
+   "info": "Buchse mit Mikrofon auf einem flexiblen Kabel. Geht sie kaputt, lässt sie sich einzeln tauschen.",
+   "color": "#B9BEC2",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 3.5,
+     "w": 12,
+     "d": 2.4,
+     "r": 1.2,
+     "fill": "#2A2E31"
+    }
+   ]
+  },
+  {
    "id": "lautsprecher",
    "component_id": "circuit_board",
    "material_id": "mixed_electronics",
    "name": "Lautsprecher",
    "short": "Lautsprecher",
    "shape": "box",
-   "x": 44,
-   "y": 131,
+   "x": 48,
+   "y": 128,
    "w": 22,
-   "d": 12,
-   "z": 3,
-   "h": 3,
+   "d": 14,
+   "z": 2,
+   "h": 3.4,
    "r": 2,
    "explode": [
     0,
     0,
-    119.60000000000001
+    155.6
    ],
    "mass": 3,
    "materials": [
@@ -386,7 +597,333 @@
     ]
    ],
    "info": "Kleiner Neodym-Magnet mit Schwingspule. Lässt sich ausgebaut weiterverwenden.",
-   "color": "#6E7579"
+   "color": "#6E7579",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 3.0,
+     "y": 3.0,
+     "w": 1.4,
+     "d": 1.4,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 5.8,
+     "y": 3.0,
+     "w": 1.4,
+     "d": 1.4,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 8.6,
+     "y": 3.0,
+     "w": 1.4,
+     "d": 1.4,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 11.4,
+     "y": 3.0,
+     "w": 1.4,
+     "d": 1.4,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 14.2,
+     "y": 3.0,
+     "w": 1.4,
+     "d": 1.4,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 17.0,
+     "y": 3.0,
+     "w": 1.4,
+     "d": 1.4,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 3.0,
+     "y": 5.8,
+     "w": 1.4,
+     "d": 1.4,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 5.8,
+     "y": 5.8,
+     "w": 1.4,
+     "d": 1.4,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 8.6,
+     "y": 5.8,
+     "w": 1.4,
+     "d": 1.4,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 11.4,
+     "y": 5.8,
+     "w": 1.4,
+     "d": 1.4,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 14.2,
+     "y": 5.8,
+     "w": 1.4,
+     "d": 1.4,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 17.0,
+     "y": 5.8,
+     "w": 1.4,
+     "d": 1.4,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 3.0,
+     "y": 8.6,
+     "w": 1.4,
+     "d": 1.4,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 5.8,
+     "y": 8.6,
+     "w": 1.4,
+     "d": 1.4,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 8.6,
+     "y": 8.6,
+     "w": 1.4,
+     "d": 1.4,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 11.4,
+     "y": 8.6,
+     "w": 1.4,
+     "d": 1.4,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 14.2,
+     "y": 8.6,
+     "w": 1.4,
+     "d": 1.4,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 17.0,
+     "y": 8.6,
+     "w": 1.4,
+     "d": 1.4,
+     "fill": "#3A3F44"
+    }
+   ]
+  },
+  {
+   "id": "sim",
+   "component_id": "sim_tray",
+   "material_id": "steel",
+   "name": "SIM-Kartenschlitten",
+   "short": "SIM-Schlitten",
+   "shape": "box",
+   "x": 72.5,
+   "y": 40,
+   "w": 3.5,
+   "d": 24,
+   "z": 3,
+   "h": 1,
+   "r": 1,
+   "explode": [
+    40,
+    0,
+    100.5
+   ],
+   "mass": 1,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Hält die SIM-Karte. Mit einer Büroklammer in das kleine Loch neben dem Schlitten drücken, dann springt er heraus.",
+   "color": "#B9BEC2",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0.5,
+     "y": 4,
+     "w": 2.5,
+     "d": 15,
+     "r": 0.5,
+     "fill": "#D8B04A"
+    }
+   ]
+  },
+  {
+   "id": "rahmen",
+   "component_id": "aluminium_frame",
+   "material_id": "aluminium",
+   "name": "Gehäuserahmen",
+   "short": "Rahmen",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 76,
+   "d": 151,
+   "z": 0.8,
+   "h": 6.3,
+   "r": 10,
+   "explode": [
+    0,
+    0,
+    100.5
+   ],
+   "mass": 43,
+   "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "info": "Aus einem Aluminiumblock gefräst. Trägt alle Bauteile und dient mit seinen Kunststofffugen als Antenne.",
+   "color": "#B4BABE",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2.5,
+     "y": 2.5,
+     "w": 71,
+     "d": 146,
+     "r": 8,
+     "fill": "#8E969B"
+    },
+    {
+     "shape": "cyl",
+     "x": 17.0,
+     "y": 147.5,
+     "w": 1.4,
+     "d": 1.4,
+     "fill": "#5E656A"
+    },
+    {
+     "shape": "cyl",
+     "x": 19.4,
+     "y": 147.5,
+     "w": 1.4,
+     "d": 1.4,
+     "fill": "#5E656A"
+    },
+    {
+     "shape": "cyl",
+     "x": 21.8,
+     "y": 147.5,
+     "w": 1.4,
+     "d": 1.4,
+     "fill": "#5E656A"
+    },
+    {
+     "shape": "cyl",
+     "x": 24.2,
+     "y": 147.5,
+     "w": 1.4,
+     "d": 1.4,
+     "fill": "#5E656A"
+    },
+    {
+     "shape": "cyl",
+     "x": 26.6,
+     "y": 147.5,
+     "w": 1.4,
+     "d": 1.4,
+     "fill": "#5E656A"
+    },
+    {
+     "shape": "cyl",
+     "x": 29.0,
+     "y": 147.5,
+     "w": 1.4,
+     "d": 1.4,
+     "fill": "#5E656A"
+    },
+    {
+     "shape": "cyl",
+     "x": 31.4,
+     "y": 147.5,
+     "w": 1.4,
+     "d": 1.4,
+     "fill": "#5E656A"
+    },
+    {
+     "shape": "cyl",
+     "x": 33.8,
+     "y": 147.5,
+     "w": 1.4,
+     "d": 1.4,
+     "fill": "#5E656A"
+    }
+   ]
+  },
+  {
+   "id": "schrauben",
+   "component_id": "aluminium_frame",
+   "material_id": "steel",
+   "name": "Schrauben (Pentalobe)",
+   "short": "Schrauben",
+   "shape": "cyl",
+   "x": 23,
+   "y": 143,
+   "w": 2.4,
+   "z": 2.5,
+   "h": 2.5,
+   "explode": [
+    0,
+    0,
+    155.1
+   ],
+   "mass": 0.2,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Zwei winzige Spezialschrauben neben der Ladebuchse. Man braucht einen Fünfstern-Schraubendreher.",
+   "color": "#8A9095",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1,
+     "fill": "#3A3F44"
+    }
+   ]
   },
   {
    "id": "spule",
@@ -398,12 +935,12 @@
    "x": 16,
    "y": 56,
    "w": 44,
-   "z": 1.5,
+   "z": 0.8,
    "h": 0.5,
    "explode": [
     0,
     0,
-    69
+    25.0
    ],
    "mass": 3,
    "materials": [
@@ -421,81 +958,30 @@
    "marks": [
     {
      "shape": "cyl",
+     "x": 4,
+     "y": 4,
+     "w": 36,
+     "fill": "#B9805A"
+    },
+    {
+     "shape": "cyl",
      "x": 8,
      "y": 8,
      "w": 28
     },
     {
      "shape": "cyl",
+     "x": 12,
+     "y": 12,
+     "w": 20,
+     "fill": "#B9805A"
+    },
+    {
+     "shape": "cyl",
      "x": 15,
      "y": 15,
-     "w": 14
-    }
-   ]
-  },
-  {
-   "id": "sim",
-   "component_id": "sim_tray",
-   "material_id": "steel",
-   "name": "SIM-Kartenschlitten",
-   "short": "SIM-Schlitten",
-   "shape": "box",
-   "x": 71,
-   "y": 40,
-   "w": 4,
-   "d": 24,
-   "z": 3,
-   "h": 1,
-   "r": 1,
-   "explode": [
-    45,
-    0,
-    0
-   ],
-   "mass": 1,
-   "materials": [
-    [
-     "stahl",
-     100
-    ]
-   ],
-   "info": "Hält die SIM-Karte. Mit einer Büroklammer in das kleine Loch neben dem Schlitten drücken, dann springt er heraus."
-  },
-  {
-   "id": "rahmen",
-   "component_id": "aluminium_frame",
-   "material_id": "aluminium",
-   "name": "Gehäuserahmen",
-   "short": "Rahmen",
-   "shape": "box",
-   "x": 0,
-   "y": 0,
-   "w": 76,
-   "d": 151,
-   "z": 0.3,
-   "h": 1.5,
-   "r": 10,
-   "explode": [
-    0,
-    0,
-    34.5
-   ],
-   "mass": 45,
-   "materials": [
-    [
-     "alu",
-     100
-    ]
-   ],
-   "info": "Aus einem Aluminiumblock gefräst. Trägt alle Bauteile und dient als Antenne.",
-   "marks": [
-    {
-     "shape": "box",
-     "x": 2.5,
-     "y": 2.5,
-     "w": 71,
-     "d": 146,
-     "r": 8
+     "w": 14,
+     "fill": "#3A3F44"
     }
    ]
   },
@@ -516,7 +1002,7 @@
    "explode": [
     0,
     0,
-    0
+    0.0
    ],
    "mass": 20,
    "materials": [
@@ -533,8 +1019,9 @@
      "x": 4,
      "y": 4,
      "w": 28,
-     "d": 30,
-     "r": 6
+     "d": 40,
+     "r": 6,
+     "fill": "#B5CACB"
     }
    ]
   }

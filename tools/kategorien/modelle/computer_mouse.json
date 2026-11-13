@@ -1,6 +1,274 @@
 {
  "parts": [
   {
+   "id": "oberschale_6",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Oberschale mit Tasten",
+   "short": "Oberschale",
+   "shape": "box",
+   "x": 17,
+   "y": 44,
+   "w": 29,
+   "d": 42,
+   "z": 36,
+   "h": 2,
+   "r": 13,
+   "explode": [
+    0,
+    0,
+    181.7
+   ],
+   "mass": 4.6,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Die beiden Maustasten sind federnde Zungen der Oberschale. Sie ist mit einer Schraube unter dem Gleitfuß und vorn mit Rastnasen befestigt.",
+   "color": "#34383C",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 14,
+     "y": 0,
+     "w": 1,
+     "d": 1,
+     "r": 0.4,
+     "fill": "#1C1F22"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 1,
+     "w": 29,
+     "d": 0.8,
+     "r": 0.4,
+     "fill": "#1C1F22"
+    },
+    {
+     "shape": "box",
+     "x": 9,
+     "y": 22,
+     "w": 11,
+     "d": 6,
+     "r": 3,
+     "fill": "#3C4146"
+    }
+   ]
+  },
+  {
+   "id": "oberschale_5",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Oberschale mit Tasten",
+   "short": "Oberschale",
+   "shape": "box",
+   "x": 11,
+   "y": 20,
+   "w": 41,
+   "d": 72,
+   "z": 33,
+   "h": 3,
+   "r": 17,
+   "explode": [
+    0,
+    0,
+    181.7
+   ],
+   "mass": 4.6,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Die beiden Maustasten sind federnde Zungen der Oberschale. Sie ist mit einer Schraube unter dem Gleitfuß und vorn mit Rastnasen befestigt.",
+   "color": "#34383C",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 20,
+     "y": 0,
+     "w": 1,
+     "d": 25,
+     "r": 0.4,
+     "fill": "#1C1F22"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 25,
+     "w": 41,
+     "d": 0.8,
+     "r": 0.4,
+     "fill": "#1C1F22"
+    },
+    {
+     "shape": "box",
+     "x": 16,
+     "y": 0,
+     "w": 9,
+     "d": 22.5,
+     "r": 3,
+     "fill": "#1C1F22"
+    }
+   ]
+  },
+  {
+   "id": "oberschale_4",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Oberschale mit Tasten",
+   "short": "Oberschale",
+   "shape": "box",
+   "x": 7,
+   "y": 11,
+   "w": 49,
+   "d": 88,
+   "z": 30,
+   "h": 3,
+   "r": 20,
+   "explode": [
+    0,
+    0,
+    181.7
+   ],
+   "mass": 4.6,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Die beiden Maustasten sind federnde Zungen der Oberschale. Sie ist mit einer Schraube unter dem Gleitfuß und vorn mit Rastnasen befestigt.",
+   "color": "#34383C",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 24,
+     "y": 0,
+     "w": 1,
+     "d": 34,
+     "r": 0.4,
+     "fill": "#1C1F22"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 34,
+     "w": 49,
+     "d": 0.8,
+     "r": 0.4,
+     "fill": "#1C1F22"
+    }
+   ]
+  },
+  {
+   "id": "oberschale_3",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Oberschale mit Tasten",
+   "short": "Oberschale",
+   "shape": "box",
+   "x": 4,
+   "y": 6,
+   "w": 55,
+   "d": 100,
+   "z": 26,
+   "h": 4,
+   "r": 23,
+   "explode": [
+    0,
+    0,
+    181.7
+   ],
+   "mass": 4.6,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Die beiden Maustasten sind federnde Zungen der Oberschale. Sie ist mit einer Schraube unter dem Gleitfuß und vorn mit Rastnasen befestigt.",
+   "color": "#34383C",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 27,
+     "y": 0,
+     "w": 1,
+     "d": 39,
+     "r": 0.4,
+     "fill": "#1C1F22"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 39,
+     "w": 55,
+     "d": 0.8,
+     "r": 0.4,
+     "fill": "#1C1F22"
+    }
+   ]
+  },
+  {
+   "id": "oberschale_2",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Oberschale mit Tasten",
+   "short": "Oberschale",
+   "shape": "box",
+   "x": 1.5,
+   "y": 2,
+   "w": 60,
+   "d": 110,
+   "z": 20,
+   "h": 6,
+   "r": 25,
+   "explode": [
+    0,
+    0,
+    181.7
+   ],
+   "mass": 4.6,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Die beiden Maustasten sind federnde Zungen der Oberschale. Sie ist mit einer Schraube unter dem Gleitfuß und vorn mit Rastnasen befestigt.",
+   "color": "#34383C",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 29.5,
+     "y": 0,
+     "w": 1,
+     "d": 43,
+     "r": 0.4,
+     "fill": "#1C1F22"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 43,
+     "w": 60,
+     "d": 0.8,
+     "r": 0.4,
+     "fill": "#1C1F22"
+    }
+   ]
+  },
+  {
    "id": "oberschale",
    "component_id": "plastic_housing",
    "material_id": "abs",
@@ -12,14 +280,14 @@
    "w": 63,
    "d": 115,
    "z": 10,
-   "h": 28,
+   "h": 10,
    "r": 26,
    "explode": [
     0,
     0,
-    116.1
+    181.7
    ],
-   "mass": 23.7,
+   "mass": 4.6,
    "materials": [
     [
      "pcabs",
@@ -27,31 +295,25 @@
     ]
    ],
    "info": "Die beiden Maustasten sind federnde Zungen der Oberschale. Sie ist mit einer Schraube unter dem Gleitfuß und vorn mit Rastnasen befestigt.",
+   "color": "#34383C",
    "marks": [
     {
      "shape": "box",
-     "x": 4,
-     "y": 4,
-     "w": 26,
-     "d": 40,
-     "r": 10
+     "x": 31,
+     "y": 0,
+     "w": 1,
+     "d": 45,
+     "r": 0.4,
+     "fill": "#1C1F22"
     },
     {
      "shape": "box",
-     "x": 33,
-     "y": 4,
-     "w": 26,
-     "d": 40,
-     "r": 10
-    },
-    {
-     "shape": "box",
-     "x": 27.5,
-     "y": 18,
-     "w": 8,
-     "d": 24,
-     "r": 4,
-     "fill": "#2B2F33"
+     "x": 0,
+     "y": 45,
+     "w": 63,
+     "d": 0.8,
+     "r": 0.4,
+     "fill": "#1C1F22"
     }
    ]
   },
@@ -66,15 +328,15 @@
    "y": 19,
    "w": 7,
    "d": 22,
-   "z": 16,
-   "h": 22,
+   "z": 14,
+   "h": 23.5,
    "r": 3.5,
    "explode": [
     0,
     0,
-    164.1
+    229.7
    ],
-   "mass": 3,
+   "mass": 2.7,
    "materials": [
     [
      "gummi",
@@ -91,6 +353,7 @@
    ],
    "info": "Kunststoffrad mit aufgezogenem Gummiring und Stahlachse. Lässt sich nach dem Öffnen einfach aus der Halterung heben.",
    "color": "#3A3F44",
+   "sortBias": -1.6,
    "marks": [
     {
      "shape": "box",
@@ -120,9 +383,9 @@
    "explode": [
     0,
     0,
-    86.5
+    113.1
    ],
-   "mass": 1,
+   "mass": 0.9,
    "materials": [
     [
      "pcabs",
@@ -172,9 +435,9 @@
    "explode": [
     0,
     0,
-    86.5
+    113.1
    ],
-   "mass": 1,
+   "mass": 0.9,
    "materials": [
     [
      "pcabs",
@@ -225,9 +488,9 @@
    "explode": [
     0,
     0,
-    86.5
+    113.1
    ],
-   "mass": 1,
+   "mass": 0.9,
    "materials": [
     [
      "pcabs",
@@ -262,9 +525,9 @@
    "explode": [
     0,
     0,
-    86.5
+    113.1
    ],
-   "mass": 1,
+   "mass": 0.9,
    "materials": [
     [
      "chip",
@@ -304,7 +567,7 @@
    "explode": [
     0,
     0,
-    86.5
+    113.1
    ],
    "mass": 0.2,
    "materials": [
@@ -337,9 +600,9 @@
    "explode": [
     0,
     0,
-    60.5
+    87.1
    ],
-   "mass": 5.9,
+   "mass": 5.5,
    "materials": [
     [
      "fr4",
@@ -389,9 +652,9 @@
    "explode": [
     0,
     0,
-    34.5
+    61.1
    ],
-   "mass": 1,
+   "mass": 0.9,
    "materials": [
     [
      "pcabs",
@@ -433,34 +696,26 @@
    "explode": [
     0,
     0,
-    0.0
+    26.6
    ],
-   "mass": 19.7,
+   "mass": 18.3,
    "materials": [
     [
      "pcabs",
      100
     ]
    ],
-   "info": "Bodenplatte mit Sensoröffnung. Unter den Gleitfüßen aus Teflon versteckt sich oft die Schraube.",
+   "info": "Bodenplatte mit Sensoröffnung und Schraubendom. Nach dem Ausbau der Elektronik ist sie reiner Kunststoff.",
+   "color": "#26292C",
    "marks": [
     {
      "shape": "box",
-     "x": 10,
+     "x": 4,
      "y": 4,
-     "w": 43,
-     "d": 8,
-     "r": 4,
-     "fill": "#E8E8E8"
-    },
-    {
-     "shape": "box",
-     "x": 10,
-     "y": 101,
-     "w": 43,
-     "d": 8,
-     "r": 4,
-     "fill": "#E8E8E8"
+     "w": 55,
+     "d": 107,
+     "r": 22,
+     "fill": "#2F3336"
     },
     {
      "shape": "cyl",
@@ -468,8 +723,134 @@
      "y": 56,
      "w": 8,
      "fill": "#1A1D20"
+    },
+    {
+     "shape": "cyl",
+     "x": 28.5,
+     "y": 94.5,
+     "w": 6,
+     "fill": "#3A3F44"
     }
    ]
+  },
+  {
+   "id": "schraube",
+   "component_id": "plastic_housing",
+   "material_id": "steel",
+   "name": "Gehäuseschraube",
+   "short": "Schraube",
+   "shape": "cyl",
+   "x": 29.5,
+   "y": 95.5,
+   "w": 4,
+   "z": 1,
+   "h": 12,
+   "explode": [
+    0,
+    0,
+    49.6
+   ],
+   "mass": 0.5,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Kreuzschlitzschraube, die Ober- und Unterschale zusammenhält. Sie steckt unter dem hinteren Gleitfuß.",
+   "color": "#9BA3A8",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 3,
+     "fill": "#7A8288"
+    },
+    {
+     "shape": "box",
+     "x": 1.6,
+     "y": 0.8,
+     "w": 0.8,
+     "d": 2.4,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 0.8,
+     "y": 1.6,
+     "w": 2.4,
+     "d": 0.8,
+     "fill": "#3A3F44"
+    }
+   ]
+  },
+  {
+   "id": "gleitfuss_v",
+   "component_id": "plastic_housing",
+   "material_id": "pp",
+   "name": "Gleitfüße (PTFE)",
+   "short": "Gleitfüße",
+   "shape": "box",
+   "x": 10,
+   "y": 4,
+   "w": 43,
+   "d": 8,
+   "z": 0,
+   "h": 0.6,
+   "r": 4,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "ptfe",
+     85
+    ],
+    [
+     "klebstoff",
+     15
+    ]
+   ],
+   "info": "Glatte Teflon-Aufkleber, damit die Maus leicht gleitet. Mit dem Fingernagel abziehen, darunter sitzt die Schraube.",
+   "color": "#ECECE8"
+  },
+  {
+   "id": "gleitfuss_h",
+   "component_id": "plastic_housing",
+   "material_id": "pp",
+   "name": "Gleitfuß hinten",
+   "short": "Gleitfuß",
+   "shape": "box",
+   "x": 10,
+   "y": 92,
+   "w": 43,
+   "d": 12,
+   "z": 0,
+   "h": 0.6,
+   "r": 5,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 0.4,
+   "materials": [
+    [
+     "ptfe",
+     85
+    ],
+    [
+     "klebstoff",
+     15
+    ]
+   ],
+   "info": "Hinterer Gleitfuß, verdeckt die Gehäuseschraube.",
+   "color": "#ECECE8",
+   "label": false
   },
   {
    "id": "kabel",
@@ -490,7 +871,7 @@
     -20,
     0
    ],
-   "mass": 21.7,
+   "mass": 20.1,
    "materials": [
     [
      "pvc",
@@ -519,7 +900,7 @@
     -20,
     0
    ],
-   "mass": 5.9,
+   "mass": 5.5,
    "materials": [
     [
      "kupfer",
@@ -548,7 +929,7 @@
     -20,
     0
    ],
-   "mass": 4.9,
+   "mass": 4.6,
    "materials": [
     [
      "stahl",

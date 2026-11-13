@@ -17,9 +17,9 @@
    "explode": [
     0,
     0,
-    140.9
+    158.5
    ],
-   "mass": 2.7,
+   "mass": 2.6,
    "materials": [
     [
      "glas",
@@ -28,7 +28,7 @@
    ],
    "info": "Gehärtetes, leicht gewölbtes Glas, zugleich Touch-Fläche. Mit Wärme lösen und mit einer dünnen Klinge anheben: Direkt darunter liegt der Akku.",
    "color": "#C9DEDF",
-   "opacity": 0.6
+   "opacity": 0.3
   },
   {
    "id": "display",
@@ -47,9 +47,9 @@
    "explode": [
     0,
     0,
-    122.9
+    140.5
    ],
-   "mass": 2.2,
+   "mass": 2.1,
    "materials": [
     [
      "displayglas",
@@ -78,7 +78,89 @@
      "w": 30,
      "d": 31,
      "r": 7,
-     "fill": "#3D464C"
+     "fill": "#1C2124"
+    },
+    {
+     "shape": "box",
+     "x": 8,
+     "y": 5,
+     "w": 18,
+     "d": 6,
+     "r": 1.5,
+     "fill": "#E8E8E2"
+    },
+    {
+     "shape": "cyl",
+     "x": 10,
+     "y": 14,
+     "w": 14,
+     "fill": "#D9445A"
+    },
+    {
+     "shape": "cyl",
+     "x": 12,
+     "y": 16,
+     "w": 10,
+     "fill": "#1C2124"
+    },
+    {
+     "shape": "cyl",
+     "x": 13,
+     "y": 17,
+     "w": 8,
+     "fill": "#7FD36B"
+    },
+    {
+     "shape": "cyl",
+     "x": 15,
+     "y": 19,
+     "w": 4,
+     "fill": "#1C2124"
+    }
+   ]
+  },
+  {
+   "id": "dichtung",
+   "component_id": "smartwatch_display",
+   "material_id": "silicone",
+   "name": "Klebedichtung",
+   "short": "Dichtung",
+   "shape": "box",
+   "x": 1.5,
+   "y": 6.5,
+   "w": 34,
+   "d": 35,
+   "z": 9,
+   "h": 0.2,
+   "r": 8,
+   "explode": [
+    0,
+    0,
+    122.5
+   ],
+   "mass": 0.2,
+   "materials": [
+    [
+     "klebstoff",
+     60
+    ],
+    [
+     "folien",
+     40
+    ]
+   ],
+   "info": "Dünner Klebering zwischen Display und Gehäuse. Hält das Glas fest und macht die Uhr wasserdicht. Nach dem Öffnen muss er erneuert werden.",
+   "color": "#E8E8E2",
+   "opacity": 0.8,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 2,
+     "w": 30,
+     "d": 31,
+     "r": 7,
+     "fill": "#2F3438"
     }
    ]
   },
@@ -99,7 +181,7 @@
    "explode": [
     18,
     0,
-    0
+    37.1
    ],
    "mass": 0.6,
    "materials": [
@@ -132,7 +214,7 @@
    "explode": [
     18,
     0,
-    0
+    37.1
    ],
    "mass": 0.3,
    "materials": [
@@ -165,9 +247,9 @@
    "explode": [
     0,
     0,
-    105.1
+    104.5
    ],
-   "mass": 5.4,
+   "mass": 5.2,
    "materials": [
     [
      "lco",
@@ -229,7 +311,7 @@
    "explode": [
     0,
     0,
-    87.1
+    86.5
    ],
    "mass": 0.5,
    "materials": [
@@ -266,9 +348,9 @@
    "explode": [
     0,
     0,
-    81.1
+    80.5
    ],
-   "mass": 2.7,
+   "mass": 2.6,
    "materials": [
     [
      "fr4",
@@ -342,9 +424,9 @@
    "explode": [
     0,
     0,
-    62.9
+    61.9
    ],
-   "mass": 1.1,
+   "mass": 1,
    "materials": [
     [
      "stahl",
@@ -377,9 +459,9 @@
    "explode": [
     0,
     0,
-    62.9
+    61.9
    ],
-   "mass": 0.9,
+   "mass": 0.8,
    "materials": [
     [
      "kupfer",
@@ -414,6 +496,129 @@
    ]
   },
   {
+   "id": "lautsprecher",
+   "component_id": "circuit_board",
+   "material_id": "mixed_electronics",
+   "name": "Lautsprecher und Mikrofon",
+   "short": "Lautsprecher",
+   "shape": "box",
+   "x": 4,
+   "y": 35,
+   "w": 14,
+   "d": 6,
+   "z": 2.2,
+   "h": 2,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    61.9
+   ],
+   "mass": 0.8,
+   "materials": [
+    [
+     "ndfeb",
+     30
+    ],
+    [
+     "kupfer",
+     20
+    ],
+    [
+     "pcabs",
+     40
+    ],
+    [
+     "stahl",
+     10
+    ]
+   ],
+   "info": "Winziger Lautsprecher für Anrufe und Wecker, daneben ein Mikrofon. Sitzt hinter Öffnungen in der Gehäuseseite.",
+   "color": "#6E7579",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 1.5,
+     "y": 1.5,
+     "w": 1,
+     "d": 1,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 3.7,
+     "y": 1.5,
+     "w": 1,
+     "d": 1,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 5.9,
+     "y": 1.5,
+     "w": 1,
+     "d": 1,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 8.1,
+     "y": 1.5,
+     "w": 1,
+     "d": 1,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 10.3,
+     "y": 1.5,
+     "w": 1,
+     "d": 1,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 1.5,
+     "y": 3.5,
+     "w": 1,
+     "d": 1,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 3.7,
+     "y": 3.5,
+     "w": 1,
+     "d": 1,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 5.9,
+     "y": 3.5,
+     "w": 1,
+     "d": 1,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 8.1,
+     "y": 3.5,
+     "w": 1,
+     "d": 1,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 10.3,
+     "y": 3.5,
+     "w": 1,
+     "d": 1,
+     "fill": "#3A3F44"
+    }
+   ]
+  },
+  {
    "id": "gehaeuse",
    "component_id": "aluminium_housing",
    "material_id": "aluminium",
@@ -425,14 +630,14 @@
    "w": 37,
    "d": 38,
    "z": 1.5,
-   "h": 8.5,
+   "h": 7.5,
    "r": 10,
    "explode": [
     0,
     0,
     37.1
    ],
-   "mass": 9.7,
+   "mass": 9.4,
    "materials": [
     [
      "alu",
@@ -472,7 +677,7 @@
     0,
     18.6
    ],
-   "mass": 2.7,
+   "mass": 2.6,
    "materials": [
     [
      "pcabs",
@@ -580,10 +785,10 @@
    "r": 2,
    "explode": [
     0,
-    -16,
-    0
+    -20,
+    37.1
    ],
-   "mass": 5.4,
+   "mass": 5.2,
    "materials": [
     [
      "gummi",
@@ -620,10 +825,10 @@
    "r": 2,
    "explode": [
     0,
-    16,
-    0
+    20,
+    37.1
    ],
-   "mass": 5.4,
+   "mass": 5.2,
    "materials": [
     [
      "gummi",

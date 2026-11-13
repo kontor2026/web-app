@@ -18,14 +18,21 @@ ZELLE = [['lco', 40], ['graphit', 20], ['elektrolyt', 15], ['alu', 15], ['kupfer
 
 teile = [
     teil('deckglas', 'smartwatch_display', 'Deckglas', 'Deckglas', 'box',
-         x=1, y=6, w=35, d=36, z=10, h=1, r=9, mass=2.5, materials=[['glas', 100]], color='#C9DEDF', opacity=0.6,
+         x=1, y=6, w=35, d=36, z=10, h=1, r=9, mass=2.5, materials=[['glas', 100]], color='#C9DEDF', opacity=0.3,
          info='Gehärtetes, leicht gewölbtes Glas, zugleich Touch-Fläche. Mit Wärme lösen und mit einer dünnen Klinge '
               'anheben: Direkt darunter liegt der Akku.'),
     teil('display', 'smartwatch_display', 'OLED-Display', 'Display', 'box',
          x=1.5, y=6.5, w=34, d=35, z=9.2, h=0.8, r=8, mass=2,
          materials=[['displayglas', 55], ['folien', 25], ['chip', 10], ['kupfer', 10]], color='#31373B',
          info='Selbstleuchtende OLED-Anzeige, braucht kein Hintergrundlicht. Ein schmales Flachbandkabel führt zur Platine.',
-         marks=[mark('box', 2, 2, 30, 31, 7, '#3D464C')]),
+         marks=[mark('box', 2, 2, 30, 31, 7, '#1C2124'), mark('box', 8, 5, 18, 6, 1.5, '#E8E8E2'),
+                mark('cyl', 10, 14, 14, fill='#D9445A'), mark('cyl', 12, 16, 10, fill='#1C2124'),
+                mark('cyl', 13, 17, 8, fill='#7FD36B'), mark('cyl', 15, 19, 4, fill='#1C2124')]),
+    teil('dichtung', 'smartwatch_display', 'Klebedichtung', 'Dichtung', 'box', material_id='silicone',
+         x=1.5, y=6.5, w=34, d=35, z=9, h=0.2, r=8, mass=0.2, materials=[['klebstoff', 60], ['folien', 40]],
+         color='#E8E8E2', opacity=0.8,
+         info='Dünner Klebering zwischen Display und Gehäuse. Hält das Glas fest und macht die Uhr wasserdicht. '
+              'Nach dem Öffnen muss er erneuert werden.', marks=[mark('box', 2, 2, 30, 31, 7, '#2F3438')]),
     teil('krone', 'aluminium_housing', 'Drehkrone', 'Krone', 'box', material_id='steel',
          x=37, y=17, w=3.5, d=7, z=4.5, h=4, r=1.5, explode=[18, 0, 0], mass=0.6, materials=[['stahl', 85], ['gummi', 15]],
          info='Edelstahlrädchen mit Dichtring zum Scrollen. Sitzt mit einer Achse im Gehäuse, ein Sensor erkennt die Drehung.',
@@ -55,8 +62,13 @@ teile = [
          x=8.5, y=13.5, w=20, z=2.2, h=0.6, mass=0.8, materials=[['kupfer', 60], ['ferrit', 30], ['klebstoff', 10]],
          info='Flache Kupferspule auf einer Ferritfolie. Nimmt die Energie der magnetischen Ladeschale kabellos auf.',
          color='#C5803D', marks=[mark('cyl', 3, 3, 14, fill='#B06F33'), mark('cyl', 6, 6, 8, fill='#3A3F44')]),
+    teil('lautsprecher', 'circuit_board', 'Lautsprecher und Mikrofon', 'Lautsprecher', 'box',
+         material_id='mixed_electronics', x=4, y=35, w=14, d=6, z=2.2, h=2, r=1, mass=0.8,
+         materials=[['ndfeb', 30], ['kupfer', 20], ['pcabs', 40], ['stahl', 10]], color='#6E7579',
+         info='Winziger Lautsprecher für Anrufe und Wecker, daneben ein Mikrofon. Sitzt hinter Öffnungen in der Gehäuseseite.',
+         marks=raster(1.5, 1.5, 5, 2, 1, 1, 2.2, 2, shape='cyl', fill='#3A3F44')),
     teil('gehaeuse', 'aluminium_housing', 'Aluminium-Gehäuse', 'Gehäuse', 'box',
-         x=0, y=5, w=37, d=38, z=1.5, h=8.5, r=10, mass=9, materials=[['alu', 100]], color=ALU,
+         x=0, y=5, w=37, d=38, z=1.5, h=7.5, r=10, mass=9, materials=[['alu', 100]], color=ALU,
          info='Gefräster Aluminiumrahmen. Erst alle Teile ausbauen, dann ist die leere Schale reines Aluminium.',
          marks=[mark('box', 1.5, 1.5, 34, 35, 9, '#9DA4A9')]),
     teil('rueckdeckel', 'aluminium_housing', 'Rückdeckel', 'Rückdeckel', 'box', material_id='pc',
@@ -69,15 +81,19 @@ teile = [
          color='#3A3F44', marks=[mark('cyl', 2, 5, 2.5, fill='#5FBF6A'), mark('cyl', 7.5, 5, 2.5, fill='#5FBF6A'),
                                 mark('cyl', 4.5, 1.5, 3, fill='#262B2F'), mark('cyl', 4.5, 7.5, 3, fill='#262B2F')]),
     teil('band_oben', 'silicone_strap', 'Armband oben (Ansatz)', 'Armband', 'box',
-         x=7.5, y=-1, w=22, d=6, z=2.5, h=4, r=2, explode=[0, -16, 0], mass=5, color=BAND,
+         x=7.5, y=-1, w=22, d=6, z=2.5, h=4, r=2, explode=[0, -20, 0], mass=5, color=BAND,
          info='Silikonarmband, mit einem Schnellverschluss-Stift im Gehäuse eingehakt. Stift drücken und herausschieben.',
          marks=[mark('box', 2, 1, 18, 2, 1, '#2C3947')]),
     teil('band_unten', 'silicone_strap', 'Armband unten (Ansatz)', 'Armband', 'box',
-         x=7.5, y=43, w=22, d=6, z=2.5, h=4, r=2, explode=[0, 16, 0], mass=5, color=BAND, label=False,
+         x=7.5, y=43, w=22, d=6, z=2.5, h=4, r=2, explode=[0, 20, 0], mass=5, color=BAND, label=False,
          info='Zweite Bandhälfte mit Löchern für die Schließe. Silikon ist kein Elektroschrott und kann abgetrennt werden.',
          marks=[mark('box', 2, 3, 18, 2, 1, '#2C3947')]),
 ]
 
 explodiere(teile, abstand=18, abstaende={'soc': 6})
+dz = next(p for p in teile if p['id'] == 'gehaeuse')['explode'][2]
+for p in teile:   # Krone, Taste und Armband auf Höhe des Gehäuses herausziehen
+    if p['id'] in ('krone', 'taste', 'band_oben', 'band_unten'):
+        p['explode'][2] = dz
 skaliere_masse(teile, oid='smartwatch')
 schreibe('smartwatch', teile)

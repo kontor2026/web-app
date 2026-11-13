@@ -18,6 +18,15 @@ teile = [
               'Ein Schraubendreher kann darunter den Akku beschädigen.',
          color=GEH, marks=raster(27, 120.5, 4, 1, 2, 2, 5, shape='cyl', fill='#7FC8F0')
                          + [mark('cyl', 54, 122, 6, fill='#4A5156'), mark('box', 14, 30, 42, 60, 6)]),
+    teil('polster', 'plastic_housing', 'Schaumstoff-Klebepads', 'Schaumpolster', 'box', material_id='pu_foam',
+         x=10, y=20, w=50, d=70, z=12, h=1, r=3, mass=2, sortBias=-6, materials=[['schaum', 70], ['klebstoff', 30]],
+         color='#3F4448', info='Doppelseitig klebender Schaum hält die Zellen fest und dämpft Stöße. Beim Öffnen '
+                               'kleben die Zellen oft am Deckel: langsam und ohne Werkzeug lösen.',
+         marks=[mark('box', 2, 2, 20, 66, 2, '#4A5054'), mark('box', 28, 2, 20, 66, 2, '#4A5054')]),
+    teil('lichtleiter', 'plastic_housing', 'Lichtleiter', 'Lichtleiter', 'box', material_id='pc',
+         x=25, y=118, w=20, d=7, z=4.5, h=3, r=1, mass=0.4, materials=[['pcabs', 100]], color='#DCEAF0', opacity=0.6,
+         info='Klarer Kunststoffsteg, der das Licht der LEDs zu den kleinen Fenstern im Gehäuse leitet.',
+         marks=raster(1.5, 2.5, 4, 1, 2, 2, 5, shape='cyl', fill='#BFD7E2')),
     teil('leds', 'circuit_board', 'Anzeige-LEDs', 'LEDs', 'box',
          material_id='mixed_electronics', x=26, y=119, w=18, d=5, z=3.2, h=1, r=0.5, mass=0.3,
          materials=[['led', 50], ['kupfer', 20], ['pcabs', 30]],
@@ -57,13 +66,17 @@ teile = [
          info='Verhindert Überladen, Tiefentladen und Kurzschluss. Über Nickelstreifen mit den Zellen verlötet.',
          color='#2E6B45', marks=[mark('box', 6, 1.5, 4, 3, 0.3, '#22272B'), mark('box', 48, 1.5, 4, 3, 0.3, '#22272B'),
                                 mark('box', 13, 1, 32, 4, 0.5, '#C9CDD0')]),
+    teil('nickel', 'li_ion_battery', 'Nickelstreifen (Zellverbinder)', 'Nickelstreifen', 'box', material_id='steel',
+         x=8, y=100, w=54, d=4, z=11.5, h=0.3, r=0.5, mass=1, sortBias=-5, materials=[['nickel', 100]], color='#C9CDD0',
+         info='Dünne Nickelbleche, an die Pole der Zellen geschweißt. Sie verbinden beide Zellen parallel mit der Schutzplatine.',
+         marks=[mark('box', 4, 1, 6, 2, 0.5, '#A8AEB3'), mark('box', 36, 1, 6, 2, 0.5, '#A8AEB3')]),
     teil('zelle_1', 'li_ion_battery', 'Lithium-Polymer-Zelle 1', 'Zelle 1', 'box',
-         x=4, y=4, w=30.5, d=99, z=2, h=10, r=2, mass=91, materials=ZELLE,
+         x=4, y=4, w=30.5, d=99, z=2, h=10, r=2, mass=91, sortBias=-5, materials=ZELLE,
          info='5.000 mAh in einer Folientasche. Niemals einstechen, biegen oder erhitzen: '
               'Beschädigte Zellen können brennen. Pole abkleben.',
          color='#9DA6AD', marks=[mark('box', 3, 6, 24.5, 80, 2), mark('box', 6, 12, 18.5, 20, 1, '#C8423A')]),
     teil('zelle_2', 'li_ion_battery', 'Lithium-Polymer-Zelle 2', 'Zelle 2', 'box',
-         x=35.5, y=4, w=30.5, d=99, z=2, h=10, r=2, mass=91, materials=ZELLE,
+         x=35.5, y=4, w=30.5, d=99, z=2, h=10, r=2, mass=91, sortBias=-5, materials=ZELLE,
          info='Parallel zur ersten Zelle geschaltet, zusammen 10.000 mAh bei 3,7 Volt.',
          color='#9DA6AD', marks=[mark('box', 3, 6, 24.5, 80, 2), mark('box', 6, 12, 18.5, 20, 1, '#C8423A')]),
     teil('unterschale', 'plastic_housing', 'Gehäuse-Unterschale', 'Unterschale', 'box',
@@ -71,5 +84,5 @@ teile = [
          info='Wanne mit Stegen, in der Zellen und Platine liegen. Oft mit Schaumstoff gepolstert.',
          color=GEH, marks=[mark('box', 18, 132, 9, 8, 1.5), mark('box', 34, 133, 13.5, 7, 0.5)]),
 ]
-explodiere(teile, abstand=50)
+explodiere(teile, abstand=45, abstaende={'nickel': 20, 'ladechip': 12, 'spule': 12}, nach_liste=True)
 schreibe('power_bank', teile)

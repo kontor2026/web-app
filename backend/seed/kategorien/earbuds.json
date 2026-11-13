@@ -37,33 +37,34 @@
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Cu": 3850.0,
-   "Al": 1620.0,
-   "Co": 1480.0,
-   "Fe": 1035.0,
+   "Cu": 4130.0,
+   "Fe": 2542.0,
+   "Al": 1635.0,
+   "Co": 1493.0,
    "Ag": 2.8,
    "Au": 0.63,
    "Pd": 0.28
   },
   "herkunft": {
    "Cu": "Modellmassen (Schätzung)",
+   "Fe": "Modellmassen (Schätzung)",
    "Al": "Modellmassen (Schätzung)",
    "Co": "11 g Akku × 13,7% Kobalt (Schätzung, oeko2012 Tab, 25)",
-   "Fe": "Modellmassen (Schätzung)",
    "Ag": "4 g Leiterplatte × oeko2012 Tab, 15, Motherboard Notebook (Umicore 2011)",
    "Au": "4 g Leiterplatte × oeko2012 Tab, 15, Motherboard Notebook (Umicore 2011)",
    "Pd": "4 g Leiterplatte × oeko2012 Tab, 15, Motherboard Notebook (Umicore 2011)"
   },
   "materialien_g": {
-   "pc": 28.3,
-   "li_ion": 10.8,
-   "mixed_electronics": 6.9,
+   "pc": 25.8,
+   "li_ion": 10.9,
+   "mixed_electronics": 7.8,
    "pcb": 3.5,
+   "steel": 1.4,
    "silicone": 0.4
   },
-  "co2_kg": 0.414,
-  "co2_mit_recyclat_kg": 0.414,
-  "co2_ersparnis_kg": 0.0,
+  "co2_kg": 0.415,
+  "co2_mit_recyclat_kg": 0.412,
+  "co2_ersparnis_kg": 0.003,
   "co2_ohne_faktor": [],
   "rohstoffwert_eur": 0.13,
   "wert_ohne_preis": [
@@ -82,6 +83,22 @@
    "westmetall2026": {
     "titel": "Westmetall Marktdaten (LME, London Fixing, WM-Notiz)",
     "url": "https://www.westmetall.com/en/markdaten.php"
+   },
+   "usgs2026": {
+    "titel": "Mineral Commodity Summaries 2026 (ver. 1.3, May 2026)",
+    "url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf"
+   },
+   "eucrm2023": {
+    "titel": "Study on the Critical Raw Materials for the EU 2023 – Final Report",
+    "url": "https://single-market-economy.ec.europa.eu/publications/study-critical-raw-materials-eu-2023-final-report_en"
+   },
+   "eu2024crma": {
+    "titel": "Verordnung (EU) 2024/1252 zur Schaffung eines Rahmens zur Gewährleistung einer sicheren und nachhaltigen Versorgung mit kritischen Rohstoffen (Critical Raw Materials Act)",
+    "url": "https://op.europa.eu/en/publication-detail/-/publication/aa3c49f7-08e7-11ef-a251-01aa75ed71a1"
+   },
+   "usdapsd2026": {
+    "titel": "Production, Supply and Distribution Online (PSD), Datensatz Cotton (psd_cotton_csv.zip)",
+    "url": "https://apps.fas.usda.gov/psdonline/downloads/psd_cotton_csv.zip"
    }
   }
  },
@@ -134,27 +151,90 @@
    "explode": [
     0,
     0,
-    73.5
+    70.2
    ],
-   "mass": 9.2,
+   "mass": 8.2,
    "materials": [
     [
      "pcabs",
      100
     ]
    ],
-   "info": "Klappdeckel mit kleinem Magnet, der ihn geschlossen hält. Das Scharnier ist meist ein Stahlstift.",
+   "info": "Klappdeckel aus Polycarbonat. Ein kleiner Magnet vorne hält ihn geschlossen.",
    "color": "#F2F2F0",
    "marks": [
     {
-     "shape": "cyl",
-     "x": 27,
-     "y": 41,
-     "w": 6,
-     "d": 4,
-     "fill": "#7FD36B"
+     "shape": "box",
+     "x": 3,
+     "y": 3,
+     "w": 55,
+     "d": 41,
+     "r": 14,
+     "fill": "#F7F7F5"
     }
    ]
+  },
+  {
+   "id": "magnet_deckel",
+   "component_id": "plastic_housing",
+   "material_id": "mixed_electronics",
+   "name": "Deckelmagnete",
+   "short": "Magnete",
+   "shape": "box",
+   "x": 24,
+   "y": 41,
+   "w": 13,
+   "d": 3,
+   "z": 15.5,
+   "h": 2,
+   "r": 0.5,
+   "explode": [
+    0,
+    0,
+    51.7
+   ],
+   "mass": 0.6,
+   "materials": [
+    [
+     "ndfeb",
+     90
+    ],
+    [
+     "nickel",
+     10
+    ]
+   ],
+   "info": "Neodym-Magnete im Deckel und im Unterteil. Sie halten den Deckel zu und ziehen die Ohrhörer in die Mulden. Stark: nicht verschlucken!",
+   "color": "#8A9095"
+  },
+  {
+   "id": "scharnier",
+   "component_id": "plastic_housing",
+   "material_id": "steel",
+   "name": "Scharnier mit Feder",
+   "short": "Scharnier",
+   "shape": "box",
+   "x": 22,
+   "y": 0,
+   "w": 17,
+   "d": 3,
+   "z": 13,
+   "h": 4,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    18.0
+   ],
+   "mass": 0.8,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Edelstahlstift mit kleiner Feder, die den Deckel aufschnappen lässt. Bricht oft als Erstes.",
+   "color": "#B9BEC2"
   },
   {
    "id": "ohrhoerer_r",
@@ -163,19 +243,19 @@
    "name": "Ohrhörer rechts (komplett)",
    "short": "Ohrhörer",
    "shape": "box",
-   "x": 33,
-   "y": 7,
-   "w": 22,
-   "d": 33,
-   "z": 5,
-   "h": 10,
-   "r": 10,
+   "x": 34,
+   "y": 9,
+   "w": 20,
+   "d": 26,
+   "z": 6,
+   "h": 8.5,
+   "r": 9,
    "explode": [
     0,
     0,
-    53.5
+    44.0
    ],
-   "mass": 6.1,
+   "mass": 5.8,
    "materials": [
     [
      "pcabs",
@@ -206,22 +286,86 @@
      5
     ]
    ],
-   "info": "Gleich aufgebaut wie der linke Ohrhörer: Lautsprecher, Akku und Platine in einem verklebten Gehäuse.",
+   "info": "Gleich aufgebaut wie der linke Ohrhörer: Lautsprecher, Akku und Platine in einem verklebten Gehäuse. Ganz zur Elektro-Sammlung geben.",
    "color": "#F2F2F0",
    "marks": [
     {
-     "shape": "cyl",
-     "x": 3,
-     "y": 3,
-     "w": 16,
-     "fill": "#E6E6E6"
+     "shape": "box",
+     "x": 4,
+     "y": 4,
+     "w": 12,
+     "d": 14,
+     "r": 5,
+     "fill": "#E6E6E2"
     },
     {
      "shape": "cyl",
-     "x": 5,
-     "y": 5,
-     "w": 12,
-     "fill": "#C9CDD1"
+     "x": 8.5,
+     "y": 21,
+     "w": 3,
+     "fill": "#5A6066"
+    }
+   ]
+  },
+  {
+   "id": "federkontakte",
+   "component_id": "circuit_board",
+   "material_id": "mixed_electronics",
+   "name": "Federkontakte und Haltemagnete",
+   "short": "Federkontakte",
+   "shape": "box",
+   "x": 10,
+   "y": 11,
+   "w": 14,
+   "d": 4,
+   "z": 4.5,
+   "h": 1.5,
+   "r": 0.5,
+   "explode": [
+    0,
+    0,
+    45.5
+   ],
+   "mass": 0.6,
+   "materials": [
+    [
+     "ndfeb",
+     50
+    ],
+    [
+     "messing",
+     30
+    ],
+    [
+     "kontakte",
+     20
+    ]
+   ],
+   "info": "Vergoldete Stifte in jeder Mulde laden den Ohrhörer, ein Magnet daneben hält ihn fest.",
+   "color": "#B9BEC2",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 1,
+     "y": 1,
+     "w": 2,
+     "fill": "#D8B04A"
+    },
+    {
+     "shape": "cyl",
+     "x": 11,
+     "y": 1,
+     "w": 2,
+     "fill": "#D8B04A"
+    },
+    {
+     "shape": "box",
+     "x": 4.5,
+     "y": 0.5,
+     "w": 5,
+     "d": 3,
+     "r": 0.5,
+     "fill": "#8A9095"
     }
    ]
   },
@@ -232,8 +376,8 @@
    "name": "Lade-Chip",
    "short": "Lade-Chip",
    "shape": "box",
-   "x": 24,
-   "y": 40,
+   "x": 12,
+   "y": 39,
    "w": 7,
    "d": 5,
    "z": 4.5,
@@ -242,7 +386,7 @@
    "explode": [
     0,
     0,
-    51.5
+    43.5
    ],
    "mass": 0.3,
    "materials": [
@@ -255,23 +399,71 @@
    "color": "#2B2F33"
   },
   {
+   "id": "usb_c",
+   "component_id": "circuit_board",
+   "material_id": "steel",
+   "name": "USB-C-Ladebuchse",
+   "short": "USB-C",
+   "shape": "box",
+   "x": 26,
+   "y": 41,
+   "w": 9,
+   "d": 5.8,
+   "z": 2,
+   "h": 3.2,
+   "r": 1.5,
+   "explode": [
+    0,
+    0,
+    46.0
+   ],
+   "mass": 0.6,
+   "materials": [
+    [
+     "stahl",
+     70
+    ],
+    [
+     "kontakte",
+     15
+    ],
+    [
+     "pcabs",
+     15
+    ]
+   ],
+   "info": "Ladebuchse aus Stahlblech mit vergoldeten Kontakten, an die Platine gelötet.",
+   "color": "#B9BEC2",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1.5,
+     "y": 3.8,
+     "w": 6,
+     "d": 1.4,
+     "r": 0.7,
+     "fill": "#2A2E31"
+    }
+   ]
+  },
+  {
    "id": "platine_etui",
    "component_id": "circuit_board",
    "material_id": "pcb",
-   "name": "Etui-Platine mit USB-C-Buchse",
+   "name": "Etui-Platine",
    "short": "Etui-Platine",
    "shape": "box",
    "x": 8,
-   "y": 38,
+   "y": 37,
    "w": 45,
    "d": 8,
-   "z": 3.5,
+   "z": 1,
    "h": 1,
    "r": 1,
    "explode": [
     0,
     0,
-    31.5
+    30.0
    ],
    "mass": 2.6,
    "materials": [
@@ -292,24 +484,39 @@
      10
     ]
    ],
-   "info": "Leiterplatte mit Ladebuchse, LED und Federkontakten, über die die Ohrhörer geladen werden.",
+   "info": "Leiterplatte mit Ladebuchse, LED und Leiterbahnen zu den Federkontakten.",
    "color": "#2E6B45",
    "marks": [
     {
-     "shape": "box",
-     "x": 34,
-     "y": 1,
-     "w": 9,
-     "d": 5,
-     "r": 1,
-     "fill": "#B9BEC2"
-    },
-    {
      "shape": "cyl",
-     "x": 19,
-     "y": 2,
+     "x": 20,
+     "y": 1,
      "w": 2.5,
      "fill": "#7FD36B"
+    },
+    {
+     "shape": "box",
+     "x": 30,
+     "y": 1.5,
+     "w": 1.5,
+     "d": 1,
+     "fill": "#2B2F33"
+    },
+    {
+     "shape": "box",
+     "x": 33,
+     "y": 1.5,
+     "w": 1.5,
+     "d": 1,
+     "fill": "#2B2F33"
+    },
+    {
+     "shape": "box",
+     "x": 36,
+     "y": 1.5,
+     "w": 1.5,
+     "d": 1,
+     "fill": "#2B2F33"
     }
    ]
   },
@@ -321,18 +528,18 @@
    "short": "Etui-Akku",
    "shape": "box",
    "x": 10,
-   "y": 8,
+   "y": 9,
    "w": 41,
-   "d": 28,
+   "d": 26,
    "z": 1.5,
-   "h": 3.5,
+   "h": 3,
    "r": 2,
    "explode": [
     0,
     0,
-    33.5
+    29.5
    ],
-   "mass": 9.2,
+   "mass": 9.3,
    "materials": [
     [
      "lco",
@@ -367,8 +574,17 @@
      "x": 2,
      "y": 2,
      "w": 37,
-     "d": 24,
+     "d": 22,
      "r": 1.5
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 4,
+     "w": 12,
+     "d": 6,
+     "r": 1,
+     "fill": "#E8E8E2"
     }
    ]
   },
@@ -391,7 +607,7 @@
     0,
     0.0
    ],
-   "mass": 16.4,
+   "mass": 15.4,
    "materials": [
     [
      "pcabs",
@@ -404,56 +620,207 @@
     {
      "shape": "box",
      "x": 5,
-     "y": 6,
+     "y": 7,
      "w": 24,
-     "d": 35,
-     "r": 11,
+     "d": 30,
+     "r": 10,
      "fill": "#E0E0DC"
     },
     {
      "shape": "box",
      "x": 32,
-     "y": 6,
+     "y": 7,
      "w": 24,
-     "d": 35,
-     "r": 11,
+     "d": 30,
+     "r": 10,
      "fill": "#E0E0DC"
+    },
+    {
+     "shape": "cyl",
+     "x": 29,
+     "y": 41,
+     "w": 3,
+     "fill": "#7FD36B"
     }
    ]
   },
   {
-   "id": "ohrpolster",
-   "component_id": "silicone_ear_tips",
-   "material_id": "silicone",
-   "name": "Silikon-Ohrstöpsel",
-   "short": "Ohrstöpsel",
-   "shape": "cyl",
-   "x": 11,
+   "id": "rueckschale",
+   "component_id": "plastic_housing",
+   "material_id": "pc",
+   "name": "Ohrhörer-Außenschale (Touchfläche)",
+   "short": "Außenschale",
+   "shape": "box",
+   "x": 7,
    "y": 9,
-   "w": 12,
-   "z": 13,
-   "h": 5,
+   "w": 20,
+   "d": 26,
+   "z": 11,
+   "h": 3.5,
+   "r": 9,
    "explode": [
-    70,
+    85,
     0,
-    29.5
+    60.4
    ],
-   "mass": 0.4,
+   "mass": 1,
    "materials": [
     [
-     "gummi",
+     "pcabs",
      100
     ]
    ],
-   "info": "Weiche Silikonkappe in S, M oder L. Lässt sich von Hand vom Schallrohr abziehen und waschen.",
-   "color": "#E6E6E6",
+   "info": "Außen liegende Kunststoffschale mit Touch-Sensor und Mikrofonöffnung. Mit der Innenschale verklebt.",
+   "color": "#F2F2F0",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 4,
+     "w": 12,
+     "d": 14,
+     "r": 5,
+     "fill": "#E6E6E2"
+    },
+    {
+     "shape": "cyl",
+     "x": 8.5,
+     "y": 21,
+     "w": 3,
+     "fill": "#5A6066"
+    }
+   ]
+  },
+  {
+   "id": "platine_l",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "Platine mit Bluetooth-Chip",
+   "short": "Platine",
+   "shape": "box",
+   "x": 9,
+   "y": 11,
+   "w": 16,
+   "d": 21,
+   "z": 12.5,
+   "h": 1,
+   "r": 5,
+   "explode": [
+    85,
+    0,
+    47.9
+   ],
+   "mass": 0.6,
+   "materials": [
+    [
+     "fr4",
+     55
+    ],
+    [
+     "kupfer",
+     20
+    ],
+    [
+     "chip",
+     15
+    ],
+    [
+     "lot",
+     10
+    ]
+   ],
+   "info": "Funkchip, zwei Mikrofone und Ladeelektronik auf kleinstem Raum. Die Antenne ist eine dünne Kupferbahn am Rand.",
+   "color": "#2E6B45",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 5,
+     "w": 8,
+     "d": 7,
+     "r": 0.5,
+     "fill": "#2B2F33"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 14,
+     "w": 4,
+     "d": 3,
+     "r": 0.5,
+     "fill": "#2B2F33"
+    },
+    {
+     "shape": "cyl",
+     "x": 10,
+     "y": 15,
+     "w": 3,
+     "fill": "#B9BEC2"
+    }
+   ]
+  },
+  {
+   "id": "akku_l",
+   "component_id": "li_ion_battery",
+   "material_id": "li_ion",
+   "name": "Knopfzellen-Akku",
+   "short": "Akku",
+   "shape": "cyl",
+   "x": 11,
+   "y": 12,
+   "w": 12,
+   "z": 9,
+   "h": 5.4,
+   "explode": [
+    85,
+    0,
+    36.0
+   ],
+   "mass": 1.6,
+   "materials": [
+    [
+     "lco",
+     40
+    ],
+    [
+     "graphit",
+     20
+    ],
+    [
+     "elektrolyt",
+     15
+    ],
+    [
+     "alu",
+     10
+    ],
+    [
+     "kupfer",
+     10
+    ],
+    [
+     "folien",
+     5
+    ]
+   ],
+   "info": "Wiederaufladbare Lithium-Knopfzelle mit etwa 60 mAh. Sie ist eingeklebt und darf nicht angebohrt oder gequetscht werden.",
+   "color": "#9BA3A8",
    "marks": [
     {
      "shape": "cyl",
-     "x": 3.5,
-     "y": 3.5,
-     "w": 5,
-     "fill": "#9BA3A8"
+     "x": 1.5,
+     "y": 1.5,
+     "w": 9,
+     "fill": "#B9BEC2"
+    },
+    {
+     "shape": "box",
+     "x": 5,
+     "y": 1,
+     "w": 2,
+     "d": 3,
+     "r": 0.5,
+     "fill": "#C8423A"
     }
    ]
   },
@@ -465,14 +832,14 @@
    "short": "Lautsprecher",
    "shape": "cyl",
    "x": 12,
-   "y": 10,
+   "y": 21,
    "w": 10,
-   "z": 10,
+   "z": 7,
    "h": 3.5,
    "explode": [
-    70,
+    85,
     0,
-    17.0
+    24.5
    ],
    "mass": 0.8,
    "materials": [
@@ -502,9 +869,9 @@
    "marks": [
     {
      "shape": "cyl",
-     "x": 2,
-     "y": 2,
-     "w": 6,
+     "x": 1.5,
+     "y": 1.5,
+     "w": 7,
      "fill": "#C98F62"
     },
     {
@@ -517,162 +884,104 @@
    ]
   },
   {
-   "id": "platine_l",
-   "component_id": "circuit_board",
-   "material_id": "pcb",
-   "name": "Platine mit Bluetooth-Chip",
-   "short": "Platine",
-   "shape": "box",
-   "x": 9,
-   "y": 21,
-   "w": 16,
-   "d": 16,
-   "z": 9,
-   "h": 1.2,
-   "r": 3,
-   "explode": [
-    70,
-    0,
-    35.4
-   ],
-   "mass": 0.6,
-   "materials": [
-    [
-     "fr4",
-     55
-    ],
-    [
-     "kupfer",
-     20
-    ],
-    [
-     "chip",
-     15
-    ],
-    [
-     "lot",
-     10
-    ]
-   ],
-   "info": "Funkchip, Mikrofon und Ladeelektronik auf kleinstem Raum. Die Antenne ist eine dünne Kupferbahn.",
-   "color": "#2E6B45",
-   "marks": [
-    {
-     "shape": "box",
-     "x": 3,
-     "y": 3,
-     "w": 7,
-     "d": 7,
-     "r": 0.5,
-     "fill": "#2B2F33"
-    },
-    {
-     "shape": "cyl",
-     "x": 11,
-     "y": 11,
-     "w": 3,
-     "fill": "#B9BEC2"
-    }
-   ]
-  },
-  {
-   "id": "akku_l",
-   "component_id": "li_ion_battery",
-   "material_id": "li_ion",
-   "name": "Knopfzellen-Akku",
-   "short": "Akku",
-   "shape": "cyl",
-   "x": 11,
-   "y": 23,
-   "w": 12,
-   "z": 7,
-   "h": 5.4,
-   "explode": [
-    70,
-    0,
-    20.0
-   ],
-   "mass": 1.6,
-   "materials": [
-    [
-     "lco",
-     40
-    ],
-    [
-     "graphit",
-     20
-    ],
-    [
-     "elektrolyt",
-     15
-    ],
-    [
-     "alu",
-     10
-    ],
-    [
-     "kupfer",
-     10
-    ],
-    [
-     "folien",
-     5
-    ]
-   ],
-   "info": "Wiederaufladbare Lithium-Knopfzelle mit etwa 60 mAh. Sie ist oft eingeklebt und darf nicht angebohrt oder gequetscht werden.",
-   "color": "#9BA3A8",
-   "marks": [
-    {
-     "shape": "cyl",
-     "x": 2,
-     "y": 2,
-     "w": 8,
-     "fill": "#B9BEC2"
-    }
-   ]
-  },
-  {
-   "id": "gehaeuse_l",
+   "id": "innenschale",
    "component_id": "plastic_housing",
    "material_id": "pc",
-   "name": "Ohrhörer-Gehäuse",
-   "short": "Gehäuse",
+   "name": "Innenschale mit Schallröhrchen",
+   "short": "Innenschale",
    "shape": "box",
-   "x": 6,
-   "y": 7,
-   "w": 22,
-   "d": 33,
-   "z": 5,
-   "h": 10,
-   "r": 10,
+   "x": 7,
+   "y": 9,
+   "w": 20,
+   "d": 26,
+   "z": 6,
+   "h": 5,
+   "r": 9,
    "explode": [
-    70,
+    85,
     0,
-    0.0
+    10.5
    ],
-   "mass": 2.7,
+   "mass": 1.2,
    "materials": [
     [
      "pcabs",
      100
     ]
    ],
-   "info": "Zwei verklebte Kunststoffschalen. Öffnen geht nur mit Wärme und Hebelwerkzeug, darum ganz zur Elektro-Sammlung geben.",
-   "color": "#F2F2F0",
+   "info": "Zeigt ins Ohr. Unten sitzen das Schallröhrchen mit Gitter und zwei Ladekontakte aus vergoldetem Metall.",
+   "color": "#E6E6E2",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 5,
+     "y": 12,
+     "w": 10,
+     "fill": "#D6D6D2"
+    },
+    {
+     "shape": "cyl",
+     "x": 8,
+     "y": 15,
+     "w": 4,
+     "fill": "#5A6066"
+    },
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 3,
+     "w": 2.5,
+     "fill": "#D8B04A"
+    },
+    {
+     "shape": "cyl",
+     "x": 13.5,
+     "y": 3,
+     "w": 2.5,
+     "fill": "#D8B04A"
+    }
+   ]
+  },
+  {
+   "id": "ohrpolster",
+   "component_id": "silicone_ear_tips",
+   "material_id": "silicone",
+   "name": "Silikon-Ohrstöpsel",
+   "short": "Ohrstöpsel",
+   "shape": "cyl",
+   "x": 11,
+   "y": 20,
+   "w": 12,
+   "z": 3.5,
+   "h": 3,
+   "explode": [
+    85,
+    0,
+    0.0
+   ],
+   "mass": 0.4,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "info": "Weiche Silikonkappe in S, M oder L. Lässt sich von Hand vom Schallröhrchen abziehen und waschen.",
+   "color": "#DCDCD8",
    "marks": [
     {
      "shape": "cyl",
      "x": 3,
      "y": 3,
-     "w": 16,
-     "fill": "#E6E6E6"
+     "w": 6,
+     "fill": "#C4C4C0"
     },
     {
      "shape": "cyl",
-     "x": 9,
-     "y": 26,
-     "w": 4,
-     "fill": "#B9BEC2"
+     "x": 4.5,
+     "y": 4.5,
+     "w": 3,
+     "fill": "#5A6066"
     }
    ]
   }

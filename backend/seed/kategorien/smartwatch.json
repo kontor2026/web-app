@@ -31,19 +31,19 @@
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 0,30 kg",
-   "hint": "spart 0,12 kg, wenn recycelte Materialien eingesetzt werden"
+   "v": "≈ 0,29 kg",
+   "hint": "spart 0,11 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Al": 10510.0,
-   "Cu": 1900.0,
-   "Fe": 1242.0,
-   "Co": 740.0,
-   "Ag": 2.56,
-   "Au": 0.58,
-   "Pd": 0.26
+   "Al": 10180.0,
+   "Cu": 2040.0,
+   "Fe": 1332.0,
+   "Co": 712.0,
+   "Ag": 2.48,
+   "Au": 0.56,
+   "Pd": 0.25
   },
   "herkunft": {
    "Al": "Modellmassen (Schätzung)",
@@ -55,18 +55,18 @@
    "Pd": "3 g Leiterplatte × oeko2012 Tab, 15, Motherboard Notebook (Umicore 2011)"
   },
   "materialien_g": {
-   "silicone": 10.8,
-   "aluminium": 9.7,
-   "li_ion": 5.4,
-   "special_glass": 4.9,
-   "pcb": 3.2,
-   "pc": 2.7,
-   "mixed_electronics": 2.4,
+   "silicone": 10.6,
+   "aluminium": 9.4,
+   "li_ion": 5.2,
+   "special_glass": 4.7,
+   "pcb": 3.1,
+   "mixed_electronics": 3.0,
+   "pc": 2.6,
    "steel": 0.9
   },
-  "co2_kg": 0.415,
-  "co2_mit_recyclat_kg": 0.3,
-  "co2_ersparnis_kg": 0.115,
+  "co2_kg": 0.406,
+  "co2_mit_recyclat_kg": 0.294,
+  "co2_ersparnis_kg": 0.112,
   "co2_ohne_faktor": [],
   "rohstoffwert_eur": 0.12,
   "wert_ohne_preis": [
@@ -85,6 +85,22 @@
    "westmetall2026": {
     "titel": "Westmetall Marktdaten (LME, London Fixing, WM-Notiz)",
     "url": "https://www.westmetall.com/en/markdaten.php"
+   },
+   "usgs2026": {
+    "titel": "Mineral Commodity Summaries 2026 (ver. 1.3, May 2026)",
+    "url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf"
+   },
+   "eucrm2023": {
+    "titel": "Study on the Critical Raw Materials for the EU 2023 – Final Report",
+    "url": "https://single-market-economy.ec.europa.eu/publications/study-critical-raw-materials-eu-2023-final-report_en"
+   },
+   "eu2024crma": {
+    "titel": "Verordnung (EU) 2024/1252 zur Schaffung eines Rahmens zur Gewährleistung einer sicheren und nachhaltigen Versorgung mit kritischen Rohstoffen (Critical Raw Materials Act)",
+    "url": "https://op.europa.eu/en/publication-detail/-/publication/aa3c49f7-08e7-11ef-a251-01aa75ed71a1"
+   },
+   "usdapsd2026": {
+    "titel": "Production, Supply and Distribution Online (PSD), Datensatz Cotton (psd_cotton_csv.zip)",
+    "url": "https://apps.fas.usda.gov/psdonline/downloads/psd_cotton_csv.zip"
    }
   }
  },
@@ -137,9 +153,9 @@
    "explode": [
     0,
     0,
-    140.9
+    158.5
    ],
-   "mass": 2.7,
+   "mass": 2.6,
    "materials": [
     [
      "glas",
@@ -148,7 +164,7 @@
    ],
    "info": "Gehärtetes, leicht gewölbtes Glas, zugleich Touch-Fläche. Mit Wärme lösen und mit einer dünnen Klinge anheben: Direkt darunter liegt der Akku.",
    "color": "#C9DEDF",
-   "opacity": 0.6
+   "opacity": 0.3
   },
   {
    "id": "display",
@@ -167,9 +183,9 @@
    "explode": [
     0,
     0,
-    122.9
+    140.5
    ],
-   "mass": 2.2,
+   "mass": 2.1,
    "materials": [
     [
      "displayglas",
@@ -198,7 +214,89 @@
      "w": 30,
      "d": 31,
      "r": 7,
-     "fill": "#3D464C"
+     "fill": "#1C2124"
+    },
+    {
+     "shape": "box",
+     "x": 8,
+     "y": 5,
+     "w": 18,
+     "d": 6,
+     "r": 1.5,
+     "fill": "#E8E8E2"
+    },
+    {
+     "shape": "cyl",
+     "x": 10,
+     "y": 14,
+     "w": 14,
+     "fill": "#D9445A"
+    },
+    {
+     "shape": "cyl",
+     "x": 12,
+     "y": 16,
+     "w": 10,
+     "fill": "#1C2124"
+    },
+    {
+     "shape": "cyl",
+     "x": 13,
+     "y": 17,
+     "w": 8,
+     "fill": "#7FD36B"
+    },
+    {
+     "shape": "cyl",
+     "x": 15,
+     "y": 19,
+     "w": 4,
+     "fill": "#1C2124"
+    }
+   ]
+  },
+  {
+   "id": "dichtung",
+   "component_id": "smartwatch_display",
+   "material_id": "silicone",
+   "name": "Klebedichtung",
+   "short": "Dichtung",
+   "shape": "box",
+   "x": 1.5,
+   "y": 6.5,
+   "w": 34,
+   "d": 35,
+   "z": 9,
+   "h": 0.2,
+   "r": 8,
+   "explode": [
+    0,
+    0,
+    122.5
+   ],
+   "mass": 0.2,
+   "materials": [
+    [
+     "klebstoff",
+     60
+    ],
+    [
+     "folien",
+     40
+    ]
+   ],
+   "info": "Dünner Klebering zwischen Display und Gehäuse. Hält das Glas fest und macht die Uhr wasserdicht. Nach dem Öffnen muss er erneuert werden.",
+   "color": "#E8E8E2",
+   "opacity": 0.8,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 2,
+     "w": 30,
+     "d": 31,
+     "r": 7,
+     "fill": "#2F3438"
     }
    ]
   },
@@ -219,7 +317,7 @@
    "explode": [
     18,
     0,
-    0
+    37.1
    ],
    "mass": 0.6,
    "materials": [
@@ -252,7 +350,7 @@
    "explode": [
     18,
     0,
-    0
+    37.1
    ],
    "mass": 0.3,
    "materials": [
@@ -285,9 +383,9 @@
    "explode": [
     0,
     0,
-    105.1
+    104.5
    ],
-   "mass": 5.4,
+   "mass": 5.2,
    "materials": [
     [
      "lco",
@@ -349,7 +447,7 @@
    "explode": [
     0,
     0,
-    87.1
+    86.5
    ],
    "mass": 0.5,
    "materials": [
@@ -386,9 +484,9 @@
    "explode": [
     0,
     0,
-    81.1
+    80.5
    ],
-   "mass": 2.7,
+   "mass": 2.6,
    "materials": [
     [
      "fr4",
@@ -462,9 +560,9 @@
    "explode": [
     0,
     0,
-    62.9
+    61.9
    ],
-   "mass": 1.1,
+   "mass": 1,
    "materials": [
     [
      "stahl",
@@ -497,9 +595,9 @@
    "explode": [
     0,
     0,
-    62.9
+    61.9
    ],
-   "mass": 0.9,
+   "mass": 0.8,
    "materials": [
     [
      "kupfer",
@@ -534,6 +632,129 @@
    ]
   },
   {
+   "id": "lautsprecher",
+   "component_id": "circuit_board",
+   "material_id": "mixed_electronics",
+   "name": "Lautsprecher und Mikrofon",
+   "short": "Lautsprecher",
+   "shape": "box",
+   "x": 4,
+   "y": 35,
+   "w": 14,
+   "d": 6,
+   "z": 2.2,
+   "h": 2,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    61.9
+   ],
+   "mass": 0.8,
+   "materials": [
+    [
+     "ndfeb",
+     30
+    ],
+    [
+     "kupfer",
+     20
+    ],
+    [
+     "pcabs",
+     40
+    ],
+    [
+     "stahl",
+     10
+    ]
+   ],
+   "info": "Winziger Lautsprecher für Anrufe und Wecker, daneben ein Mikrofon. Sitzt hinter Öffnungen in der Gehäuseseite.",
+   "color": "#6E7579",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 1.5,
+     "y": 1.5,
+     "w": 1,
+     "d": 1,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 3.7,
+     "y": 1.5,
+     "w": 1,
+     "d": 1,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 5.9,
+     "y": 1.5,
+     "w": 1,
+     "d": 1,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 8.1,
+     "y": 1.5,
+     "w": 1,
+     "d": 1,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 10.3,
+     "y": 1.5,
+     "w": 1,
+     "d": 1,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 1.5,
+     "y": 3.5,
+     "w": 1,
+     "d": 1,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 3.7,
+     "y": 3.5,
+     "w": 1,
+     "d": 1,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 5.9,
+     "y": 3.5,
+     "w": 1,
+     "d": 1,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 8.1,
+     "y": 3.5,
+     "w": 1,
+     "d": 1,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "cyl",
+     "x": 10.3,
+     "y": 3.5,
+     "w": 1,
+     "d": 1,
+     "fill": "#3A3F44"
+    }
+   ]
+  },
+  {
    "id": "gehaeuse",
    "component_id": "aluminium_housing",
    "material_id": "aluminium",
@@ -545,14 +766,14 @@
    "w": 37,
    "d": 38,
    "z": 1.5,
-   "h": 8.5,
+   "h": 7.5,
    "r": 10,
    "explode": [
     0,
     0,
     37.1
    ],
-   "mass": 9.7,
+   "mass": 9.4,
    "materials": [
     [
      "alu",
@@ -592,7 +813,7 @@
     0,
     18.6
    ],
-   "mass": 2.7,
+   "mass": 2.6,
    "materials": [
     [
      "pcabs",
@@ -700,10 +921,10 @@
    "r": 2,
    "explode": [
     0,
-    -16,
-    0
+    -20,
+    37.1
    ],
-   "mass": 5.4,
+   "mass": 5.2,
    "materials": [
     [
      "gummi",
@@ -740,10 +961,10 @@
    "r": 2,
    "explode": [
     0,
-    16,
-    0
+    20,
+    37.1
    ],
-   "mass": 5.4,
+   "mass": 5.2,
    "materials": [
     [
      "gummi",

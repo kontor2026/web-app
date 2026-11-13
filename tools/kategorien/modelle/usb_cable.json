@@ -50,6 +50,13 @@
      "x": 10.5,
      "y": 10.5,
      "w": 79.0
+    },
+    {
+     "shape": "cyl",
+     "x": 11.5,
+     "y": 11.5,
+     "w": 77.0,
+     "fill": "#26292B"
     }
    ]
   },
@@ -111,6 +118,13 @@
      "x": 10.5,
      "y": 10.5,
      "w": 76.0
+    },
+    {
+     "shape": "cyl",
+     "x": 11.5,
+     "y": 11.5,
+     "w": 74.0,
+     "fill": "#8E9498"
     }
    ]
   },
@@ -168,6 +182,13 @@
      "x": 10.5,
      "y": 10.5,
      "w": 73.0
+    },
+    {
+     "shape": "cyl",
+     "x": 11.5,
+     "y": 11.5,
+     "w": 71.0,
+     "fill": "#8F5A2A"
     },
     {
      "shape": "cyl",
@@ -359,6 +380,140 @@
    ]
   },
   {
+   "id": "knick_a",
+   "component_id": "plastic_housing",
+   "material_id": "rubber",
+   "name": "Knickschutz USB-A",
+   "short": "Knickschutz",
+   "shape": "box",
+   "x": 107,
+   "y": 40,
+   "w": 8,
+   "d": 8,
+   "z": 1,
+   "h": 6,
+   "r": 3,
+   "explode": [
+    28,
+    8,
+    0
+   ],
+   "mass": 0.6,
+   "materials": [
+    [
+     "tpe",
+     100
+    ]
+   ],
+   "info": "Weiche Gummitülle am Steckerende. Sie verhindert, dass die Adern beim Biegen brechen.",
+   "color": "#2E3134",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 1.5,
+     "w": 6,
+     "d": 0.6,
+     "fill": "#232628"
+    },
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 3.5,
+     "w": 6,
+     "d": 0.6,
+     "fill": "#232628"
+    },
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 5.5,
+     "w": 6,
+     "d": 0.6,
+     "fill": "#232628"
+    }
+   ]
+  },
+  {
+   "id": "klett",
+   "component_id": "cable_insulation",
+   "material_id": "nylon",
+   "name": "Klettband",
+   "short": "Klettband",
+   "shape": "box",
+   "x": 44,
+   "y": 4,
+   "w": 12,
+   "d": 14,
+   "z": 0,
+   "h": 11.2,
+   "r": 2,
+   "explode": [
+    0,
+    -40,
+    0
+   ],
+   "mass": 0.5,
+   "materials": [
+    [
+     "nylon",
+     100
+    ]
+   ],
+   "info": "Kleines Klettband, das die Rolle zusammenhält. Vor dem Recyceln abnehmen und weiterverwenden.",
+   "color": "#4B5560",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 1.5,
+     "w": 10,
+     "d": 0.5,
+     "fill": "#3E4750"
+    },
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 3.5,
+     "w": 10,
+     "d": 0.5,
+     "fill": "#3E4750"
+    },
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 5.5,
+     "w": 10,
+     "d": 0.5,
+     "fill": "#3E4750"
+    },
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 7.5,
+     "w": 10,
+     "d": 0.5,
+     "fill": "#3E4750"
+    },
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 9.5,
+     "w": 10,
+     "d": 0.5,
+     "fill": "#3E4750"
+    },
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 11.5,
+     "w": 10,
+     "d": 0.5,
+     "fill": "#3E4750"
+    }
+   ]
+  },
+  {
    "id": "huelle_c",
    "component_id": "plastic_housing",
    "material_id": "abs",
@@ -394,6 +549,145 @@
      "w": 8,
      "d": 3,
      "r": 1
+    }
+   ]
+  },
+  {
+   "id": "knick_c",
+   "component_id": "plastic_housing",
+   "material_id": "rubber",
+   "name": "Knickschutz USB-C",
+   "short": "Knickschutz C",
+   "shape": "box",
+   "x": 107.5,
+   "y": 64,
+   "w": 7,
+   "d": 8,
+   "z": 1.5,
+   "h": 5.5,
+   "r": 2.5,
+   "explode": [
+    28,
+    -8,
+    0
+   ],
+   "mass": 0.5,
+   "materials": [
+    [
+     "tpe",
+     100
+    ]
+   ],
+   "info": "Gummitülle am USB-C-Ende, gleiche Aufgabe wie am anderen Stecker.",
+   "color": "#2E3134",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 1.5,
+     "w": 5,
+     "d": 0.6,
+     "fill": "#232628"
+    },
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 3.5,
+     "w": 5,
+     "d": 0.6,
+     "fill": "#232628"
+    },
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 5.5,
+     "w": 5,
+     "d": 0.6,
+     "fill": "#232628"
+    }
+   ]
+  },
+  {
+   "id": "zunge_c",
+   "component_id": "connector_shell",
+   "material_id": "copper",
+   "name": "Kontaktzunge USB-C",
+   "short": "Kontakte C",
+   "shape": "box",
+   "x": 108,
+   "y": 99,
+   "w": 6,
+   "d": 5,
+   "z": 3.5,
+   "h": 0.7,
+   "r": 0.3,
+   "explode": [
+    28,
+    22,
+    8
+   ],
+   "mass": 0.2,
+   "materials": [
+    [
+     "pcabs",
+     60
+    ],
+    [
+     "kontakte",
+     40
+    ]
+   ],
+   "info": "Kunststoffzunge mit 24 winzigen vergoldeten Kontakten, je 12 oben und unten. Deshalb passt der Stecker in beide Richtungen.",
+   "color": "#2B2F33",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0.4,
+     "y": 2.5,
+     "w": 0.5,
+     "d": 2,
+     "fill": "#E1B94F"
+    },
+    {
+     "shape": "box",
+     "x": 1.35,
+     "y": 2.5,
+     "w": 0.5,
+     "d": 2,
+     "fill": "#E1B94F"
+    },
+    {
+     "shape": "box",
+     "x": 2.3,
+     "y": 2.5,
+     "w": 0.5,
+     "d": 2,
+     "fill": "#E1B94F"
+    },
+    {
+     "shape": "box",
+     "x": 3.25,
+     "y": 2.5,
+     "w": 0.5,
+     "d": 2,
+     "fill": "#E1B94F"
+    },
+    {
+     "shape": "box",
+     "x": 4.2,
+     "y": 2.5,
+     "w": 0.5,
+     "d": 2,
+     "fill": "#E1B94F"
+    },
+    {
+     "shape": "box",
+     "x": 5.15,
+     "y": 2.5,
+     "w": 0.5,
+     "d": 2,
+     "fill": "#E1B94F"
     }
    ]
   },

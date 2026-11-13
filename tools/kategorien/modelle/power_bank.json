@@ -17,7 +17,7 @@
    "explode": [
     0,
     0,
-    157.2
+    185.2
    ],
    "mass": 24,
    "materials": [
@@ -79,6 +79,124 @@
    ]
   },
   {
+   "id": "polster",
+   "component_id": "plastic_housing",
+   "material_id": "pu_foam",
+   "name": "Schaumstoff-Klebepads",
+   "short": "Schaumpolster",
+   "shape": "box",
+   "x": 10,
+   "y": 20,
+   "w": 50,
+   "d": 70,
+   "z": 12,
+   "h": 1,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    96.0
+   ],
+   "mass": 2,
+   "materials": [
+    [
+     "schaum",
+     70
+    ],
+    [
+     "klebstoff",
+     30
+    ]
+   ],
+   "info": "Doppelseitig klebender Schaum hält die Zellen fest und dämpft Stöße. Beim Öffnen kleben die Zellen oft am Deckel: langsam und ohne Werkzeug lösen.",
+   "color": "#3F4448",
+   "sortBias": -6,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 2,
+     "w": 20,
+     "d": 66,
+     "r": 2,
+     "fill": "#4A5054"
+    },
+    {
+     "shape": "box",
+     "x": 28,
+     "y": 2,
+     "w": 20,
+     "d": 66,
+     "r": 2,
+     "fill": "#4A5054"
+    }
+   ]
+  },
+  {
+   "id": "lichtleiter",
+   "component_id": "plastic_housing",
+   "material_id": "pc",
+   "name": "Lichtleiter",
+   "short": "Lichtleiter",
+   "shape": "box",
+   "x": 25,
+   "y": 118,
+   "w": 20,
+   "d": 7,
+   "z": 4.5,
+   "h": 3,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    140.7
+   ],
+   "mass": 0.4,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Klarer Kunststoffsteg, der das Licht der LEDs zu den kleinen Fenstern im Gehäuse leitet.",
+   "color": "#DCEAF0",
+   "opacity": 0.6,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 1.5,
+     "y": 2.5,
+     "w": 2,
+     "d": 2,
+     "fill": "#BFD7E2"
+    },
+    {
+     "shape": "cyl",
+     "x": 6.5,
+     "y": 2.5,
+     "w": 2,
+     "d": 2,
+     "fill": "#BFD7E2"
+    },
+    {
+     "shape": "cyl",
+     "x": 11.5,
+     "y": 2.5,
+     "w": 2,
+     "d": 2,
+     "fill": "#BFD7E2"
+    },
+    {
+     "shape": "cyl",
+     "x": 16.5,
+     "y": 2.5,
+     "w": 2,
+     "d": 2,
+     "fill": "#BFD7E2"
+    }
+   ]
+  },
+  {
    "id": "leds",
    "component_id": "circuit_board",
    "material_id": "mixed_electronics",
@@ -95,7 +213,7 @@
    "explode": [
     0,
     0,
-    106.0
+    96.0
    ],
    "mass": 0.3,
    "materials": [
@@ -166,7 +284,7 @@
    "explode": [
     0,
     0,
-    106.0
+    96.0
    ],
    "mass": 0.5,
    "materials": [
@@ -212,7 +330,7 @@
    "explode": [
     0,
     0,
-    106.0
+    63.0
    ],
    "mass": 0.4,
    "materials": [
@@ -249,7 +367,7 @@
    "explode": [
     0,
     0,
-    106.0
+    63.0
    ],
    "mass": 1.5,
    "materials": [
@@ -297,7 +415,7 @@
    "explode": [
     0,
     0,
-    106.0
+    96.0
    ],
    "mass": 2.5,
    "materials": [
@@ -345,7 +463,7 @@
    "explode": [
     0,
     0,
-    106.0
+    96.0
    ],
    "mass": 1,
    "materials": [
@@ -393,7 +511,7 @@
    "explode": [
     0,
     0,
-    56.0
+    51.0
    ],
    "mass": 6,
    "materials": [
@@ -452,7 +570,7 @@
    "explode": [
     0,
     0,
-    56.0
+    51.0
    ],
    "mass": 2,
    "materials": [
@@ -506,6 +624,56 @@
    ]
   },
   {
+   "id": "nickel",
+   "component_id": "li_ion_battery",
+   "material_id": "steel",
+   "name": "Nickelstreifen (Zellverbinder)",
+   "short": "Nickelstreifen",
+   "shape": "box",
+   "x": 8,
+   "y": 100,
+   "w": 54,
+   "d": 4,
+   "z": 11.5,
+   "h": 0.3,
+   "r": 0.5,
+   "explode": [
+    0,
+    0,
+    71.5
+   ],
+   "mass": 1,
+   "materials": [
+    [
+     "nickel",
+     100
+    ]
+   ],
+   "info": "Dünne Nickelbleche, an die Pole der Zellen geschweißt. Sie verbinden beide Zellen parallel mit der Schutzplatine.",
+   "color": "#C9CDD0",
+   "sortBias": -5,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 1,
+     "w": 6,
+     "d": 2,
+     "r": 0.5,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "box",
+     "x": 36,
+     "y": 1,
+     "w": 6,
+     "d": 2,
+     "r": 0.5,
+     "fill": "#A8AEB3"
+    }
+   ]
+  },
+  {
    "id": "zelle_1",
    "component_id": "li_ion_battery",
    "material_id": "li_ion",
@@ -522,7 +690,7 @@
    "explode": [
     0,
     0,
-    56.0
+    51.0
    ],
    "mass": 91,
    "materials": [
@@ -549,6 +717,7 @@
    ],
    "info": "5.000 mAh in einer Folientasche. Niemals einstechen, biegen oder erhitzen: Beschädigte Zellen können brennen. Pole abkleben.",
    "color": "#9DA6AD",
+   "sortBias": -5,
    "marks": [
     {
      "shape": "box",
@@ -586,7 +755,7 @@
    "explode": [
     0,
     0,
-    56.0
+    51.0
    ],
    "mass": 91,
    "materials": [
@@ -613,6 +782,7 @@
    ],
    "info": "Parallel zur ersten Zelle geschaltet, zusammen 10.000 mAh bei 3,7 Volt.",
    "color": "#9DA6AD",
+   "sortBias": -5,
    "marks": [
     {
      "shape": "box",

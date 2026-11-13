@@ -21,47 +21,48 @@
  "werte": [
   {
    "k": "Rohstoffwert",
-   "v": "≈ 0,20 €",
+   "v": "≈ 0,21 €",
    "hint": "Silber, Kupfer zu Preisen vom 13.11."
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 0,40 kg",
+   "v": "≈ 0,42 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 0,33 kg",
+   "v": "≈ 0,35 kg",
    "hint": "spart 0,07 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Cu": 11680.0,
-   "Fe": 4870.0,
-   "Ag": 1.82,
-   "Au": 0.44,
-   "Pd": 0.14
+   "Cu": 12670.0,
+   "Fe": 4915.0,
+   "Ag": 1.95,
+   "Au": 0.47,
+   "Pd": 0.15
   },
   "herkunft": {
    "Cu": "Modellmassen (Schätzung)",
    "Fe": "Modellmassen (Schätzung)",
-   "Ag": "7 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)",
-   "Au": "7 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)",
-   "Pd": "7 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)"
+   "Ag": "8 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)",
+   "Au": "8 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)",
+   "Pd": "8 g Leiterplatte × oeko2012 Tab, 9, Leiterplatte LCD-Fernseher (FEM & IUTA 2011)"
   },
   "materialien_g": {
    "abs": 24.0,
-   "mixed_electronics": 19.4,
-   "pcb": 7.3,
-   "copper": 4.4,
-   "steel": 2.0
+   "mixed_electronics": 19.7,
+   "pcb": 7.8,
+   "copper": 5.2,
+   "steel": 2.0,
+   "pc": 0.6
   },
-  "co2_kg": 0.403,
-  "co2_mit_recyclat_kg": 0.333,
-  "co2_ersparnis_kg": 0.07,
+  "co2_kg": 0.424,
+  "co2_mit_recyclat_kg": 0.353,
+  "co2_ersparnis_kg": 0.072,
   "co2_ohne_faktor": [],
-  "rohstoffwert_eur": 0.2,
+  "rohstoffwert_eur": 0.21,
   "wert_ohne_preis": [],
   "preisstand": "2026-11-13",
   "quellen": {
@@ -76,6 +77,22 @@
    "westmetall2026": {
     "titel": "Westmetall Marktdaten (LME, London Fixing, WM-Notiz)",
     "url": "https://www.westmetall.com/en/markdaten.php"
+   },
+   "usgs2026": {
+    "titel": "Mineral Commodity Summaries 2026 (ver. 1.3, May 2026)",
+    "url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf"
+   },
+   "eucrm2023": {
+    "titel": "Study on the Critical Raw Materials for the EU 2023 – Final Report",
+    "url": "https://single-market-economy.ec.europa.eu/publications/study-critical-raw-materials-eu-2023-final-report_en"
+   },
+   "eu2024crma": {
+    "titel": "Verordnung (EU) 2024/1252 zur Schaffung eines Rahmens zur Gewährleistung einer sicheren und nachhaltigen Versorgung mit kritischen Rohstoffen (Critical Raw Materials Act)",
+    "url": "https://op.europa.eu/en/publication-detail/-/publication/aa3c49f7-08e7-11ef-a251-01aa75ed71a1"
+   },
+   "usdapsd2026": {
+    "titel": "Production, Supply and Distribution Online (PSD), Datensatz Cotton (psd_cotton_csv.zip)",
+    "url": "https://apps.fas.usda.gov/psdonline/downloads/psd_cotton_csv.zip"
    }
   }
  },
@@ -128,7 +145,7 @@
    "explode": [
     0,
     0,
-    71.6
+    104.6
    ],
    "mass": 12,
    "materials": [
@@ -142,20 +159,66 @@
    "marks": [
     {
      "shape": "box",
-     "x": 6,
-     "y": 5,
-     "w": 33,
-     "d": 16,
-     "r": 2
+     "x": 5,
+     "y": 4,
+     "w": 35,
+     "d": 18,
+     "r": 2,
+     "fill": "#E9EAE8"
     },
     {
      "shape": "box",
-     "x": 9,
-     "y": 8,
-     "w": 12,
-     "d": 4,
-     "r": 1,
-     "fill": "#C9CCCA"
+     "x": 8,
+     "y": 7,
+     "w": 14,
+     "d": 1.2,
+     "r": 0.4,
+     "fill": "#9DA1A0"
+    },
+    {
+     "shape": "box",
+     "x": 8,
+     "y": 10,
+     "w": 22,
+     "d": 0.8,
+     "r": 0.4,
+     "fill": "#B5B8B6"
+    },
+    {
+     "shape": "box",
+     "x": 8,
+     "y": 12.5,
+     "w": 18,
+     "d": 0.8,
+     "r": 0.4,
+     "fill": "#B5B8B6"
+    },
+    {
+     "shape": "box",
+     "x": 8,
+     "y": 15,
+     "w": 8,
+     "d": 3,
+     "r": 0.5,
+     "fill": "#9DA1A0"
+    },
+    {
+     "shape": "box",
+     "x": 18,
+     "y": 15,
+     "w": 6,
+     "d": 3,
+     "r": 0.5,
+     "fill": "#9DA1A0"
+    },
+    {
+     "shape": "box",
+     "x": 27,
+     "y": 15,
+     "w": 9,
+     "d": 3,
+     "r": 1.5,
+     "fill": "#9DA1A0"
     }
    ]
   },
@@ -174,7 +237,7 @@
    "explode": [
     0,
     0,
-    47.0
+    51.0
    ],
    "mass": 3.2,
    "materials": [
@@ -228,7 +291,7 @@
    "explode": [
     0,
     0,
-    47.0
+    51.0
    ],
    "mass": 15,
    "materials": [
@@ -290,7 +353,7 @@
    "explode": [
     0,
     0,
-    47.0
+    51.0
    ],
    "mass": 0.8,
    "materials": [
@@ -335,7 +398,7 @@
    "explode": [
     0,
     0,
-    47.0
+    51.0
    ],
    "mass": 0.4,
    "materials": [
@@ -372,7 +435,7 @@
    "explode": [
     0,
     0,
-    47.0
+    51.0
    ],
    "mass": 0.3,
    "materials": [
@@ -409,7 +472,7 @@
    "explode": [
     0,
     0,
-    47.0
+    51.0
    ],
    "mass": 2,
    "materials": [
@@ -441,6 +504,221 @@
    ]
   },
   {
+   "id": "sicherung",
+   "component_id": "circuit_board",
+   "material_id": "mixed_electronics",
+   "name": "Sicherungswiderstand",
+   "short": "Sicherung",
+   "shape": "box",
+   "x": 37,
+   "y": 21.5,
+   "w": 5,
+   "d": 8,
+   "z": 4.6,
+   "h": 4,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    51.0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "keramik",
+     50
+    ],
+    [
+     "kupfer",
+     30
+    ],
+    [
+     "nichrom",
+     10
+    ],
+    [
+     "pcabs",
+     10
+    ]
+   ],
+   "info": "Brennt bei einem Kurzschluss durch und trennt das Netzteil vom Strom. Danach ist das Gerät kaputt, aber sicher.",
+   "color": "#5C8FC8",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0.5,
+     "y": 2,
+     "w": 4,
+     "d": 0.8,
+     "fill": "#C8423A"
+    },
+    {
+     "shape": "box",
+     "x": 0.5,
+     "y": 4,
+     "w": 4,
+     "d": 0.8,
+     "fill": "#2B2B2B"
+    }
+   ]
+  },
+  {
+   "id": "gleichrichter",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "Brückengleichrichter",
+   "short": "Gleichrichter",
+   "shape": "box",
+   "x": 37.5,
+   "y": 30.5,
+   "w": 5,
+   "d": 4,
+   "z": 4.6,
+   "h": 2,
+   "r": 0.3,
+   "explode": [
+    0,
+    0,
+    51.0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "chip",
+     80
+    ],
+    [
+     "kupfer",
+     20
+    ]
+   ],
+   "info": "Vier Dioden in einem Baustein. Sie machen aus dem Wechselstrom der Steckdose Gleichstrom.",
+   "color": "#22272B",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1,
+     "d": 0.6,
+     "fill": "#B9BEC2"
+    }
+   ]
+  },
+  {
+   "id": "optokoppler",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "Optokoppler",
+   "short": "Optokoppler",
+   "shape": "box",
+   "x": 30.5,
+   "y": 41.5,
+   "w": 5,
+   "d": 3.5,
+   "z": 4.6,
+   "h": 2.5,
+   "r": 0.3,
+   "explode": [
+    0,
+    0,
+    51.0
+   ],
+   "mass": 0.2,
+   "materials": [
+    [
+     "chip",
+     70
+    ],
+    [
+     "led",
+     15
+    ],
+    [
+     "kupfer",
+     15
+    ]
+   ],
+   "info": "Meldet die Ausgangsspannung mit Licht über den Sicherheitsspalt zurück. So gibt es keine elektrische Verbindung zur Netzseite.",
+   "color": "#EDEDE9",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0.5,
+     "y": 0.5,
+     "w": 1,
+     "fill": "#2A2E31"
+    }
+   ]
+  },
+  {
+   "id": "feder_l",
+   "component_id": "plug_pins",
+   "material_id": "copper",
+   "name": "Kontaktfeder",
+   "short": "Kontaktfedern",
+   "shape": "box",
+   "x": 10,
+   "y": 19.5,
+   "w": 5,
+   "d": 3.5,
+   "z": 4.6,
+   "h": 8,
+   "r": 0.5,
+   "explode": [
+    0,
+    0,
+    61.0
+   ],
+   "mass": 0.4,
+   "materials": [
+    [
+     "messing",
+     90
+    ],
+    [
+     "nickel",
+     10
+    ]
+   ],
+   "info": "Federnde Messingbleche drücken auf die Steckerstifte und leiten den Strom zur Platine.",
+   "color": "#C9A04A"
+  },
+  {
+   "id": "feder_r",
+   "component_id": "plug_pins",
+   "material_id": "copper",
+   "name": "Kontaktfeder rechts",
+   "short": "Kontaktfeder",
+   "shape": "box",
+   "x": 30,
+   "y": 19.5,
+   "w": 5,
+   "d": 3.5,
+   "z": 4.6,
+   "h": 8,
+   "r": 0.5,
+   "explode": [
+    0,
+    0,
+    61.0
+   ],
+   "mass": 0.4,
+   "materials": [
+    [
+     "messing",
+     90
+    ],
+    [
+     "nickel",
+     10
+    ]
+   ],
+   "info": "Zweite Kontaktfeder für den anderen Stift.",
+   "color": "#C9A04A",
+   "label": false
+  },
+  {
    "id": "platine",
    "component_id": "circuit_board",
    "material_id": "pcb",
@@ -457,7 +735,7 @@
    "explode": [
     0,
     0,
-    29.0
+    31.0
    ],
    "mass": 7,
    "materials": [
@@ -520,17 +798,66 @@
    ],
    "info": "Hält Stifte und Platine. Auf dem Typenschild stehen Ausgangsspannung und Stromstärke.",
    "color": "#F1F2F0",
-   "marks": [
-    {
-     "shape": "box",
-     "x": 16,
-     "y": 21,
-     "w": 13,
-     "d": 5,
-     "r": 0.5,
-     "fill": "#2A2E31"
-    }
-   ]
+   "sortBias": 10
+  },
+  {
+   "id": "kragen_l",
+   "component_id": "plug_pins",
+   "material_id": "pc",
+   "name": "Isolierhülse am Stift",
+   "short": "Isolierhülse",
+   "shape": "box",
+   "x": 10,
+   "y": 9,
+   "w": 5,
+   "d": 10,
+   "z": 11.5,
+   "h": 5,
+   "r": 2.5,
+   "explode": [
+    0,
+    -24,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Kunststoffkragen am Stiftansatz. Schützt die Finger, wenn der Stecker halb in der Dose steckt.",
+   "color": "#E4E5E2"
+  },
+  {
+   "id": "kragen_r",
+   "component_id": "plug_pins",
+   "material_id": "pc",
+   "name": "Isolierhülse rechts",
+   "short": "Isolierhülse",
+   "shape": "box",
+   "x": 30,
+   "y": 9,
+   "w": 5,
+   "d": 10,
+   "z": 11.5,
+   "h": 5,
+   "r": 2.5,
+   "explode": [
+    0,
+    -24,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Isolierhülse am zweiten Stift.",
+   "color": "#E4E5E2",
+   "label": false
   },
   {
    "id": "stift_l",
@@ -548,7 +875,7 @@
    "r": 2,
    "explode": [
     0,
-    -22,
+    -48,
     0
    ],
    "mass": 2.2,
@@ -559,7 +886,8 @@
     ]
    ],
    "info": "Vernickeltes Messing (Kupfer und Zink). In die Schale eingepresst, kommt nur beim Aufbrechen heraus.",
-   "color": "#C9CDD0"
+   "color": "#C9CDD0",
+   "sortBias": -1
   },
   {
    "id": "stift_r",
@@ -577,7 +905,7 @@
    "r": 2,
    "explode": [
     0,
-    -22,
+    -48,
     0
    ],
    "mass": 2.2,
@@ -589,7 +917,8 @@
    ],
    "info": "Zweiter Stift des Euro-Steckers, 19 mm Abstand zum ersten.",
    "color": "#C9CDD0",
-   "label": false
+   "label": false,
+   "sortBias": -1
   }
  ]
 }

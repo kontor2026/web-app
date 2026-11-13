@@ -6,13 +6,40 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from bau import teil, mark, explodiere, skaliere_masse, schreibe  # noqa: E402
 
 # Typische kabelgebundene Büromaus, 63 × 115 × 38 mm, Kabel hinten (y = 0) herausgeführt.
-teile = [
-    teil('oberschale', 'plastic_housing', 'Oberschale mit Tasten', 'Oberschale', 'box',
-         x=0, y=0, w=63, d=115, z=10, h=28, r=26, mass=24,
-         info='Die beiden Maustasten sind federnde Zungen der Oberschale. Sie ist mit einer Schraube unter dem Gleitfuß und vorn mit Rastnasen befestigt.',
-         marks=[mark('box', 4, 4, 26, 40, 10), mark('box', 33, 4, 26, 40, 10), mark('box', 27.5, 18, 8, 24, 4, '#2B2F33')]),
+SCHALE = '#34383C'
+NAHT = '#1C1F22'
+# Oberschale als gestapelte Scheiben (gewölbter Rücken), höchster Punkt hinten über dem Handballen
+SCHEIBEN = [  # x, y, w, d, z, h, r  (unten nach oben)
+    (0, 0, 63, 115, 10, 10, 26), (1.5, 2, 60, 110, 20, 6, 25), (4, 6, 55, 100, 26, 4, 23),
+    (7, 11, 49, 88, 30, 3, 20), (11, 20, 41, 72, 33, 3, 17), (17, 44, 29, 42, 36, 2, 13)]
+TASTE_Y = 45          # Trennfuge Tasten / Rücken
+RAD = (28, 19, 7, 22)  # x, y, w, d des Mausrads
+
+
+def fugen(x, y, w, d, oben):
+    """Mittelfuge zwischen den Tasten und Querfuge, relativ zur Scheibe; auf der obersten Scheibe am Rad den Schlitz."""
+    m = []
+    lang = TASTE_Y - y
+    if lang > 0:
+        m.append(mark('box', 31 - x, 0, 1, lang, 0.4, NAHT))
+        m.append(mark('box', 0, lang, w, 0.8, 0.4, NAHT))
+    if oben:
+        ry = max(RAD[1] - 1.5 - y, 0)
+        m.append(mark('box', RAD[0] - 1 - x, ry, RAD[2] + 2, RAD[1] + RAD[3] + 1.5 - y - ry, 3, NAHT))
+    return m
+
+
+teile = []
+for i, (x, y, w, d, z, h, r) in reversed(list(enumerate(SCHEIBEN))):
+    teile.append(teil('oberschale' if i == 0 else f'oberschale_{i + 1}', 'plastic_housing',
+                      'Oberschale mit Tasten', 'Oberschale', 'box', x=x, y=y, w=w, d=d, z=z, h=h, r=r, mass=5,
+                      color=SCHALE, label=None if i == 0 else False,
+                      info=('Die beiden Maustasten sind federnde Zungen der Oberschale. Sie ist mit einer Schraube '
+                            'unter dem Gleitfuß und vorn mit Rastnasen befestigt.'),
+                      marks=fugen(x, y, w, d, i == 4) + ([mark('box', 9, 22, 11, 6, 3, '#3C4146')] if i == 5 else [])))
+teile += [
     teil('mausrad', 'rubber_scroll_wheel', 'Mausrad mit Gummiring', 'Mausrad', 'box',
-         x=28, y=19, w=7, d=22, z=16, h=22, r=3.5, mass=3, materials=[['gummi', 45], ['pcabs', 40], ['stahl', 15]],
+         x=28, y=19, w=7, d=22, z=14, h=23.5, r=3.5, mass=3, sortBias=-1.6, materials=[['gummi', 45], ['pcabs', 40], ['stahl', 15]],
          color='#3A3F44', info='Kunststoffrad mit aufgezogenem Gummiring und Stahlachse. Lässt sich nach dem Öffnen einfach aus der Halterung heben.',
          marks=[mark('box', 1, 2, 5, 18, 2, '#2B2F33')]),
     teil('taster_l', 'circuit_board', 'Mikroschalter links', 'Mikroschalter', 'box',
@@ -47,10 +74,21 @@ teile = [
          info='Klares Polycarbonat. Bündelt das LED-Licht auf den Tisch und das Bild zurück auf den Sensor.',
          marks=[mark('cyl', 6, 7, 7), mark('cyl', 15, 8, 6)]),
     teil('unterschale', 'plastic_housing', 'Unterschale mit Gleitfüßen', 'Unterschale', 'box',
-         x=0, y=0, w=63, d=115, z=0, h=10, r=26, mass=20,
-         info='Bodenplatte mit Sensoröffnung. Unter den Gleitfüßen aus Teflon versteckt sich oft die Schraube.',
-         marks=[mark('box', 10, 4, 43, 8, 4, '#E8E8E8'), mark('box', 10, 101, 43, 8, 4, '#E8E8E8'),
-                mark('cyl', 28, 56, 8, fill='#1A1D20')]),
+         x=0, y=0, w=63, d=115, z=0, h=10, r=26, mass=20, color='#26292C',
+         info='Bodenplatte mit Sensoröffnung und Schraubendom. Nach dem Ausbau der Elektronik ist sie reiner Kunststoff.',
+         marks=[mark('box', 4, 4, 55, 107, 22, '#2F3336'), mark('cyl', 28, 56, 8, fill='#1A1D20'),
+                mark('cyl', 28.5, 94.5, 6, fill='#3A3F44')]),
+    teil('schraube', 'plastic_housing', 'Gehäuseschraube', 'Schraube', 'cyl', material_id='steel',
+         x=29.5, y=95.5, w=4, z=1, h=12, mass=0.5, materials=[['stahl', 100]], color='#9BA3A8',
+         info='Kreuzschlitzschraube, die Ober- und Unterschale zusammenhält. Sie steckt unter dem hinteren Gleitfuß.',
+         marks=[mark('cyl', 0.5, 0.5, 3, fill='#7A8288'), mark('box', 1.6, 0.8, 0.8, 2.4, fill='#3A3F44'),
+                mark('box', 0.8, 1.6, 2.4, 0.8, fill='#3A3F44')]),
+    teil('gleitfuss_v', 'plastic_housing', 'Gleitfüße (PTFE)', 'Gleitfüße', 'box', material_id='pp',
+         x=10, y=4, w=43, d=8, z=0, h=0.6, r=4, mass=0.3, materials=[['ptfe', 85], ['klebstoff', 15]], color='#ECECE8',
+         info='Glatte Teflon-Aufkleber, damit die Maus leicht gleitet. Mit dem Fingernagel abziehen, darunter sitzt die Schraube.'),
+    teil('gleitfuss_h', 'plastic_housing', 'Gleitfuß hinten', 'Gleitfuß', 'box', material_id='pp',
+         x=10, y=92, w=43, d=12, z=0, h=0.6, r=5, mass=0.4, materials=[['ptfe', 85], ['klebstoff', 15]], color='#ECECE8',
+         label=False, info='Hinterer Gleitfuß, verdeckt die Gehäuseschraube.'),
     teil('kabel', 'cable_insulation', 'Kabelmantel mit Knickschutz', 'Kabel', 'box',
          x=29, y=-13, w=5, d=13, z=3, h=5, r=2.5, mass=22, explode=[60, -20, 0], color='#2B2F33',
          info='Etwa 1,8 m PVC-Kabel. Zum Recycling lassen sich Mantel und Kupfer mit einer Abisolierzange trennen.'),
@@ -64,6 +102,7 @@ teile = [
          marks=[mark('box', 1.5, 1, 4, 11, 0.5, '#B9BEC2')]),
 ]
 
-explodiere(teile, abstand=26)
+explodiere(teile, abstand=26, gruppen=[['oberschale'] + [f'oberschale_{i}' for i in range(2, 7)]],
+           abstaende={'schraube': 14, **{p['id']: 65 for p in teile if p['id'].startswith('oberschale')}})
 skaliere_masse(teile, oid='computer_mouse')
 schreibe('computer_mouse', teile)
