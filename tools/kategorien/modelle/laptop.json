@@ -11,8 +11,8 @@
    "y": 0,
    "w": 323,
    "d": 218,
-   "h": 1.6,
    "z": 15.4,
+   "h": 1.6,
    "r": 6,
    "explode": [
     0,
@@ -50,15 +50,14 @@
    "y": 10,
    "w": 307,
    "d": 196,
-   "h": 3,
    "z": 12.2,
+   "h": 3,
    "r": 2,
    "explode": [
     0,
     -300,
     70
    ],
-   "color": "#31373B",
    "mass": 230,
    "materials": [
     [
@@ -79,6 +78,7 @@
     ]
    ],
    "info": "14-Zoll-Flüssigkristallanzeige mit LED-Hintergrundlicht. Mit Controller-Platine als externer Monitor nutzbar.",
+   "color": "#31373B",
    "marks": [
     {
      "shape": "box",
@@ -102,15 +102,14 @@
    "y": 2,
    "w": 24,
    "d": 6,
-   "h": 2,
    "z": 12.2,
+   "h": 2,
    "r": 1,
    "explode": [
     0,
     -300,
     118
    ],
-   "color": "#3F4547",
    "mass": 3,
    "materials": [
     [
@@ -122,7 +121,8 @@
      40
     ]
    ],
-   "info": "Kleine Kamera mit eigenem Chip. Per USB ansteuerbar."
+   "info": "Kleine Kamera mit eigenem Chip. Per USB ansteuerbar.",
+   "color": "#3F4547"
   },
   {
    "id": "rahmen",
@@ -135,16 +135,14 @@
    "y": 0,
    "w": 323,
    "d": 218,
-   "h": 1,
    "z": 11.2,
+   "h": 1,
    "r": 6,
    "explode": [
     0,
     -300,
     118
    ],
-   "color": "#2E3235",
-   "opacity": 0.22,
    "mass": 40,
    "materials": [
     [
@@ -153,6 +151,8 @@
     ]
    ],
    "info": "Kunststoffrahmen um das Display. Meist nur geklipst.",
+   "color": "#2E3235",
+   "opacity": 0.22,
    "marks": [
     {
      "shape": "box",
@@ -169,20 +169,20 @@
    "component_id": "keycaps",
    "material_id": "abs",
    "name": "Tastatur",
+   "short": "Tastatur",
    "shape": "box",
    "x": 22,
    "y": 28,
    "w": 279,
    "d": 108,
-   "h": 1.5,
    "z": 10,
+   "h": 1.5,
    "r": 3,
    "explode": [
     -270,
     0,
     175
    ],
-   "color": "#4C5155",
    "mass": 90,
    "materials": [
     [
@@ -203,6 +203,7 @@
     ]
    ],
    "info": "Kunststofftasten auf Gummikuppeln, darunter eine Folie mit Leiterbahnen.",
+   "color": "#4C5155",
    "marks": [
     {
      "shape": "box",
@@ -1014,28 +1015,27 @@
      "r": 1.5,
      "fill": "#3A3F43"
     }
-   ],
-   "short": "Tastatur"
+   ]
   },
   {
    "id": "touchpad",
    "component_id": "aluminium_housing",
    "material_id": "special_glass",
    "name": "Touchpad",
+   "short": "Touchpad",
    "shape": "box",
    "x": 109,
    "y": 148,
    "w": 105,
    "d": 62,
-   "h": 1,
    "z": 10,
+   "h": 1,
    "r": 3,
    "explode": [
     -270,
     0,
     175
    ],
-   "color": "#8E969A",
    "mass": 25,
    "materials": [
     [
@@ -1052,7 +1052,7 @@
     ]
    ],
    "info": "Glasoberfläche über einer Sensorplatine, die Fingerpositionen kapazitiv misst.",
-   "short": "Touchpad"
+   "color": "#8E969A"
   },
   {
    "id": "topcase",
@@ -1065,8 +1065,8 @@
    "y": 0,
    "w": 323,
    "d": 218,
-   "h": 2,
    "z": 8,
+   "h": 2,
    "r": 6,
    "explode": [
     -270,
@@ -1109,20 +1109,20 @@
    "component_id": "copper_heat_pipe",
    "material_id": "copper",
    "name": "Heatpipe",
+   "short": "Heatpipe",
    "shape": "box",
    "x": 120,
    "y": 44,
    "w": 118,
    "d": 9,
-   "h": 1.5,
    "z": 5,
+   "h": 1.5,
    "r": 4,
    "explode": [
     0,
     0,
     82
    ],
-   "color": "#C98F62",
    "mass": 30,
    "materials": [
     [
@@ -1131,27 +1131,27 @@
     ]
    ],
    "info": "Hohles Kupferrohr mit etwas Flüssigkeit. Leitet die Wärme vom Prozessor zum Lüfter.",
-   "short": "Heatpipe"
+   "color": "#C98F62"
   },
   {
    "id": "cpu",
    "component_id": "circuit_board",
    "material_id": "pcb",
    "name": "Prozessor",
+   "short": "Prozessor",
    "shape": "box",
    "x": 121,
    "y": 40,
    "w": 24,
    "d": 20,
-   "h": 1.2,
    "z": 3,
+   "h": 1.2,
    "r": 1,
    "explode": [
     0,
     0,
     62
    ],
-   "color": "#3F4547",
    "mass": 3,
    "materials": [
     [
@@ -1160,7 +1160,7 @@
     ]
    ],
    "info": "Das Herz des Laptops. Fest verlötet, nur mit dem Mainboard zusammen weiterverwendbar.",
-   "short": "Prozessor"
+   "color": "#3F4547"
   },
   {
    "id": "ram",
@@ -1173,15 +1173,14 @@
    "y": 28,
    "w": 30,
    "d": 68,
-   "h": 1,
    "z": 3,
+   "h": 1,
    "r": 1,
    "explode": [
     0,
     0,
     62
    ],
-   "color": "#55705A",
    "mass": 8,
    "materials": [
     [
@@ -1197,7 +1196,8 @@
      5
     ]
    ],
-   "info": "Steckbares Modul mit vergoldeten Kontakten. Passt in andere Laptops gleicher Generation."
+   "info": "Steckbares Modul mit vergoldeten Kontakten. Passt in andere Laptops gleicher Generation.",
+   "color": "#55705A"
   },
   {
    "id": "ssd",
@@ -1210,15 +1210,14 @@
    "y": 72,
    "w": 80,
    "d": 22,
-   "h": 1.5,
    "z": 3,
+   "h": 1.5,
    "r": 1,
    "explode": [
     0,
     0,
     62
    ],
-   "color": "#3F4547",
    "mass": 7,
    "materials": [
     [
@@ -1234,25 +1233,26 @@
      5
     ]
    ],
-   "info": "Datenspeicher im M.2-Format. Vor dem Abgeben sicher löschen, danach als externes Laufwerk nutzbar."
+   "info": "Datenspeicher im M.2-Format. Vor dem Abgeben sicher löschen, danach als externes Laufwerk nutzbar.",
+   "color": "#3F4547"
   },
   {
    "id": "luefter",
    "component_id": "electric_motor",
    "material_id": "mixed_electronics",
    "name": "Lüfter",
+   "short": "Lüfter",
    "shape": "cyl",
    "x": 244,
    "y": 22,
    "w": 58,
-   "h": 6,
    "z": 1.6,
+   "h": 6,
    "explode": [
     0,
     0,
     38
    ],
-   "color": "#6E7579",
    "mass": 25,
    "materials": [
     [
@@ -1273,6 +1273,7 @@
     ]
    ],
    "info": "5-Volt-Radiallüfter mit kleinem Magnetmotor. Läuft direkt an einem USB-Anschluss.",
+   "color": "#6E7579",
    "marks": [
     {
      "shape": "cyl",
@@ -1281,21 +1282,21 @@
      "w": 20,
      "fill": "#8C9397"
     }
-   ],
-   "short": "Lüfter"
+   ]
   },
   {
    "id": "mainboard",
    "component_id": "circuit_board",
    "material_id": "pcb",
    "name": "Mainboard",
+   "short": "Mainboard",
    "shape": "box",
    "x": 40,
    "y": 12,
    "w": 196,
    "d": 92,
-   "h": 1.2,
    "z": 1.6,
+   "h": 1.2,
    "r": 3,
    "explode": [
     0,
@@ -1321,8 +1322,7 @@
      10
     ]
    ],
-   "info": "Zehnlagige Leiterplatte. Hier steckt der größte Teil von Gold, Silber und Tantal.",
-   "short": "Mainboard"
+   "info": "Zehnlagige Leiterplatte. Hier steckt der größte Teil von Gold, Silber und Tantal."
   },
   {
    "id": "akku",
@@ -1335,8 +1335,8 @@
    "y": 132,
    "w": 235,
    "d": 72,
-   "h": 6,
    "z": 1.6,
+   "h": 6,
    "r": 4,
    "explode": [
     0,
@@ -1411,20 +1411,20 @@
    "component_id": "circuit_board",
    "material_id": "mixed_electronics",
    "name": "Lautsprecher",
+   "short": "Lautsprecher",
    "shape": "box",
    "x": 10,
    "y": 150,
    "w": 28,
    "d": 44,
-   "h": 3,
    "z": 1.6,
+   "h": 3,
    "r": 3,
    "explode": [
     0,
     0,
     38
    ],
-   "color": "#6E7579",
    "mass": 10,
    "materials": [
     [
@@ -1441,28 +1441,27 @@
     ]
    ],
    "info": "Zwei Stereo-Lautsprecher mit Neodym-Magneten.",
-   "short": "Lautsprecher"
+   "color": "#6E7579"
   },
   {
    "id": "lautsprecher2",
    "component_id": "circuit_board",
    "material_id": "mixed_electronics",
    "name": "Lautsprecher",
-   "label": false,
+   "short": "Lautsprecher",
    "shape": "box",
    "x": 285,
    "y": 150,
    "w": 28,
    "d": 44,
-   "h": 3,
    "z": 1.6,
+   "h": 3,
    "r": 3,
    "explode": [
     0,
     0,
     38
    ],
-   "color": "#6E7579",
    "mass": 10,
    "materials": [
     [
@@ -1479,20 +1478,22 @@
     ]
    ],
    "info": "Zwei Stereo-Lautsprecher mit Neodym-Magneten.",
-   "short": "Lautsprecher"
+   "color": "#6E7579",
+   "label": false
   },
   {
    "id": "boden",
    "component_id": "aluminium_housing",
    "material_id": "aluminium",
    "name": "Bodenschale",
+   "short": "Bodenschale",
    "shape": "box",
    "x": 0,
    "y": 0,
    "w": 323,
    "d": 218,
-   "h": 1.5,
    "z": 0,
+   "h": 1.5,
    "r": 6,
    "explode": [
     0,
@@ -1540,8 +1541,7 @@
      "y": 196,
      "w": 10
     }
-   ],
-   "short": "Bodenschale"
+   ]
   }
  ]
 }

@@ -33,6 +33,23 @@ Der Generator übernimmt `parts` aus `modelle/<id>.json` und ergänzt Name, Klas
 - `tools/kategorien/modelle/smartphone.json` (12 Teile) und `laptop.json` (17 Teile) sind fertige Beispiele im Zielformat.
 - Die Originale mit Kommentaren: `js/data/objects/smartphone.js`, `laptop.js`, `netzteil.js`, `flasche.js`. Dort sieht man auch, wie man Details wie Tastenraster per Schleife erzeugt. In JSON müssen die Werte ausgeschrieben sein, ein kleines Node-Skript darf sie aber erzeugen.
 
+## Quellskripte und Bausteine
+
+Jedes Modell hat ein Quellskript `tools/kategorien/quellen/<id>.py`, das `modelle/<id>.json` erzeugt und sofort mit `pruefe.py` prüft:
+
+```bash
+python tools/kategorien/quellen/<id>.py
+```
+
+Die Bausteine stehen in `tools/kategorien/bau.py` (nur Standardbibliothek):
+
+- `teil(...)`: ein Bauteil; `material_id` kommt aus der Komponente, `materials` aus der Tabelle `MATERIAL` in `build.py`, beides überschreibbar.
+- `explodiere(teile, abstand)`: setzt `explode` für alle Teile ohne eigenen Versatz, so dass explodiert nichts überlappt.
+- `raster(...)`, `mark(...)`: Details wie Tastenraster, Lüftungsschlitze, Akkuzellen.
+- `skaliere_masse(teile, oid=...)`, `masse(oid)`, `komponenten(oid)`: Gewicht und Maße aus `kategorien.csv`, Komponenten aus `classifier.json`.
+
+Änderungen am Modell immer im Quellskript machen, nicht in der JSON-Datei.
+
 ## Format eines Bauteils
 
 Koordinaten in **Millimetern**. `x` = Breite, `y` = Tiefe (nach hinten = 0, vorne = groß), `z` = Höhe über dem Tisch. Jedes Teil ist ein senkrecht extrudierter Grundriss: ein abgerundetes Rechteck (`box`) oder eine Ellipse (`cyl`). Der Gegenstand liegt so, wie man ihn auf die Station legen würde.

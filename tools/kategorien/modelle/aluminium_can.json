@@ -147,6 +147,7 @@
   {
    "id": "lack",
    "component_id": "aluminium_can_body",
+   "material_id": "aluminium",
    "name": "Außenlack und Druck",
    "short": "Druck",
    "shape": "box",

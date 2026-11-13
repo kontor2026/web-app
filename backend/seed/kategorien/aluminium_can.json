@@ -32,23 +32,22 @@
   {
    "k": "mit Recyclat",
    "v": "≈ 0,01 kg",
-   "hint": "spart 0,14 kg, wenn recycelte Materialien eingesetzt werden"
+   "hint": "spart 0,15 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Al": 12750.0
+   "Al": 13000.0
   },
   "herkunft": {
    "Al": "Modellmassen (Schätzung)"
   },
   "materialien_g": {
-   "aluminium": 12.8,
-   "paper": 0.2
+   "aluminium": 13.0
   },
-  "co2_kg": 0.151,
+  "co2_kg": 0.154,
   "co2_mit_recyclat_kg": 0.006,
-  "co2_ersparnis_kg": 0.145,
+  "co2_ersparnis_kg": 0.148,
   "co2_ohne_faktor": [],
   "rohstoffwert_eur": 0.04,
   "wert_ohne_preis": [],
@@ -247,6 +246,7 @@
   {
    "id": "lack",
    "component_id": "aluminium_can_body",
+   "material_id": "aluminium",
    "name": "Außenlack und Druck",
    "short": "Druck",
    "shape": "box",
