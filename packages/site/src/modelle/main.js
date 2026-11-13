@@ -92,6 +92,9 @@ const farbeVon = (p) => p.color ?? CLASSES[MATERIALS[p.materials?.[0]?.[0]]?.cls
 let teile = [], aktuell = null, explodiert = 1, hot = null, gewaehlt = null;
 
 function baue(obj) {
+  // Alte Nummern-Ballons selbst entfernen: CSS2DRenderer räumt nur direkte Kinder auf, unsere hängen in Gruppen
+  modell.traverse((o) => { if (o.isCSS2DObject) o.element.remove(); });
+  modell.traverse((o) => { o.geometry?.dispose(); o.material?.dispose?.(); });
   modell.clear();
   teile = [];
   let nr = 0;
@@ -270,7 +273,7 @@ function zeigeModell() {
     <div class="stats">
       <div><b>${obj.parts.length}</b><span>Teile</span><small>so viele Teile hat die Zeichnung</small></div>
       <div><b>${gramm(summe)}</b><span>Masse der Teile</span><small>laut Tabelle ${gramm(soll)}</small></div>
-      <div><b>${abw > 0 ? '+' : ''}${zahl(abw * 100, 0)} %</b><span>Abweichung</span><small>bis ±15 % ist in Ordnung</small></div>
+      <div><b>${Math.round(abw * 100) > 0 ? '+' : ''}${Math.round(abw * 100) || 0} %</b><span>Abweichung</span><small>bis ±15 % ist in Ordnung</small></div>
     </div>
     <div><h3>Prüfhinweise</h3><div class="pruef">${h.map((x) => `<p class="note ${x.warn ? 'warn' : ''} ${x.ok ? 'ok' : ''}">${esc(x.text)}</p>`).join('')}</div></div>
     <div><h3>Teile · antippen für Details</h3><div class="plist">${teile.map((t, i) => `
