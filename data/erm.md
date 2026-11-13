@@ -38,7 +38,8 @@ erDiagram
         float density
         string typical_applications
         Recyclability recyclability
-        TreatmentMethod treatment_method
+        ProcessingMethod[] processing_methods
+        ManufacturingMethod[] manufacturing_methods
         float co2e_primary
         float co2e_recycled
         string limitations
@@ -78,9 +79,34 @@ Recyclability
   medium
   high
 
-TreatmentMethod
-  energy_recovery
-  mechanical_recycling
-  paper_recycling
-  remelting
+ManufacturingMethod
+  3d_printing
+  cad
+  extrusion
+  injection_molding
+  laser_processing
+  photogrammetry
+
+ProcessingMethod
+  angle_grinding
+  cut_off_grinding
+  drilling
+  filing
+  gluing_contact_adhesive
+  gluing_double_sided_tape
+  gluing_hot_glue
+  gluing_super_glue
+  gluing_two_component
+  gluing_wood_glue
+  milling
+  riveting
+  rough_grinding
+  sawing
+  screwing
+  shredding_bike_shredder
+  shredding_granulator
+  soldering
+  solvent_welding
+  turning
+  welding
 ```
