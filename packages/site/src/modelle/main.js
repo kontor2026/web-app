@@ -89,7 +89,7 @@ function koerper(t, farbe, opacity) {
 }
 const farbeVon = (p) => p.color ?? CLASSES[MATERIALS[p.materials?.[0]?.[0]]?.cls]?.color ?? '#cccccc';
 
-let teile = [], aktuell = null, explodiert = 1, hot = null, gewaehlt = null;
+let teile = [], aktuell = null, explodiert = 1, hot = null, gewaehlt = null, animationNr = 0;
 
 function baue(obj) {
   // Alte Nummern-Ballons selbst entfernen: CSS2DRenderer räumt nur direkte Kinder auf, unsere hängen in Gruppen
@@ -148,11 +148,15 @@ function baue(obj) {
 function setzeExplosion(ziel, animiert = true) {
   explodiert = ziel;
   document.querySelectorAll('.modelle .seg button').forEach((b) => b.classList.toggle('on', +b.dataset.x === ziel));
-  const start = teile.map((t) => t.g.position.clone()), t0 = performance.now(), dauer = animiert ? 900 : 0;
+  // Eigene Teileliste festhalten und laufende Animation ablösen: beim Blättern kommt sonst
+  // die Animation des alten Modells mit den Teilen des neuen durcheinander.
+  const eigene = teile, lauf = ++animationNr;
+  const start = eigene.map((t) => t.g.position.clone()), t0 = performance.now(), dauer = animiert ? 900 : 0;
   const schritt = (jetzt) => {
+    if (lauf !== animationNr) return;
     const k = dauer ? Math.min(1, (jetzt - t0) / dauer) : 1;
     const e = k < 0.5 ? 4 * k ** 3 : 1 - (-2 * k + 2) ** 3 / 2;       // inOutCubic wie in der Station
-    teile.forEach((t, i) => t.g.position.lerpVectors(start[i], t.basis.clone().addScaledVector(t.ex, ziel), e));
+    eigene.forEach((t, i) => t.g.position.lerpVectors(start[i], t.basis.clone().addScaledVector(t.ex, ziel), e));
     if (k < 1) requestAnimationFrame(schritt);
   };
   schritt(performance.now());
