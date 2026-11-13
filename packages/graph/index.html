@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stoffgraph · Kreislauf-Station</title>
+  <meta name="description" content="Was steckt drin? 201 Alltagsgegenstände, ihre Bauteile und Materialien als 3D-Graph.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="graph" aria-label="3D-Graph der Gegenstände, Bauteile und Materialien"></div>
+
+  <header class="karte kopf">
+    <p class="ueber">Kreislauf-Station · Stoffgraph</p>
+    <h1>Was steckt drin?</h1>
+    <p class="zahlen" id="zahlen"></p>
+
+    <div class="suche">
+      <input id="suche" type="search" placeholder="Gegenstand, Bauteil oder Material suchen" autocomplete="off"
+             role="combobox" aria-expanded="false" aria-controls="treffer" aria-autocomplete="list">
+      <ul id="treffer" role="listbox" hidden></ul>
+    </div>
+
+    <div class="filter" role="radiogroup" aria-label="Gegenstände filtern" id="filter">
+      <button role="radio" aria-checked="true" data-gruppe="alle">Alle</button>
+      <button role="radio" aria-checked="false" data-gruppe="elektro">Elektro</button>
+      <button role="radio" aria-checked="false" data-gruppe="verpackung">Verpackung</button>
+      <button role="radio" aria-checked="false" data-gruppe="textil">Textil</button>
+      <button role="radio" aria-checked="false" data-gruppe="alltag">Alltag</button>
+    </div>
+  </header>
+
+  <aside class="karte legende" aria-label="Legende">
+    <div class="ebenen">
+      <span><i class="punkt gross objekt"></i>Gegenstand</span>
+      <span><i class="punkt klein bauteil"></i>Bauteil</span>
+      <span><i class="punkt mittel material"></i>Material</span>
+    </div>
+    <ul id="klassen"></ul>
+  </aside>
+
+  <aside class="karte detail" id="detail" hidden aria-live="polite"></aside>
+
+  <p class="hinweis" id="hinweis">Ziehen dreht · Scrollen zoomt · Klick wählt aus · Esc hebt auf</p>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
