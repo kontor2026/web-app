@@ -1,0 +1,1122 @@
+{
+ "parts": [
+  {
+   "id": "mantel",
+   "component_id": "stainless_steel_body",
+   "material_id": "steel",
+   "name": "Gehäusemantel (Edelstahl)",
+   "short": "Mantel",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 250,
+   "d": 160,
+   "z": 20,
+   "h": 170,
+   "r": 22,
+   "explode": [
+    0,
+    0,
+    195
+   ],
+   "mass": 376.8,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Ein gebogenes Edelstahlblech mit zwei Brotschlitzen. Nach Lösen der Bodenschrauben nach oben abziehen; Kanten sind scharf.",
+   "color": "#C9CED2",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 25,
+     "y": 35,
+     "w": 200,
+     "d": 35,
+     "r": 6,
+     "fill": "#2A2D30"
+    },
+    {
+     "shape": "box",
+     "x": 25,
+     "y": 90,
+     "w": 200,
+     "d": 35,
+     "r": 6,
+     "fill": "#2A2D30"
+    }
+   ]
+  },
+  {
+   "id": "heizplatte_vorne",
+   "component_id": "heating_element",
+   "material_id": "nickel_chrome",
+   "name": "Heizplatte vorne",
+   "short": "Heizplatte vorne",
+   "shape": "box",
+   "x": 25,
+   "y": 129,
+   "w": 200,
+   "d": 4,
+   "z": 40,
+   "h": 130,
+   "r": 0.5,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 45.7,
+   "materials": [
+    [
+     "nichrom",
+     40
+    ],
+    [
+     "glimmer",
+     60
+    ]
+   ],
+   "info": "Glimmerplatte, um die ein flaches Nickel-Chrom-Band gewickelt ist. Glüht rot und röstet das Brot von einer Seite.",
+   "color": "#8C7B6B",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 0.5,
+     "w": 4,
+     "d": 3,
+     "r": 0.5,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 14,
+     "y": 0.5,
+     "w": 4,
+     "d": 3,
+     "r": 0.5,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 24,
+     "y": 0.5,
+     "w": 4,
+     "d": 3,
+     "r": 0.5,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 34,
+     "y": 0.5,
+     "w": 4,
+     "d": 3,
+     "r": 0.5,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 44,
+     "y": 0.5,
+     "w": 4,
+     "d": 3,
+     "r": 0.5,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 54,
+     "y": 0.5,
+     "w": 4,
+     "d": 3,
+     "r": 0.5,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 64,
+     "y": 0.5,
+     "w": 4,
+     "d": 3,
+     "r": 0.5,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 74,
+     "y": 0.5,
+     "w": 4,
+     "d": 3,
+     "r": 0.5,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 84,
+     "y": 0.5,
+     "w": 4,
+     "d": 3,
+     "r": 0.5,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 94,
+     "y": 0.5,
+     "w": 4,
+     "d": 3,
+     "r": 0.5,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 104,
+     "y": 0.5,
+     "w": 4,
+     "d": 3,
+     "r": 0.5,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 114,
+     "y": 0.5,
+     "w": 4,
+     "d": 3,
+     "r": 0.5,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 124,
+     "y": 0.5,
+     "w": 4,
+     "d": 3,
+     "r": 0.5,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 134,
+     "y": 0.5,
+     "w": 4,
+     "d": 3,
+     "r": 0.5,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 144,
+     "y": 0.5,
+     "w": 4,
+     "d": 3,
+     "r": 0.5,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 154,
+     "y": 0.5,
+     "w": 4,
+     "d": 3,
+     "r": 0.5,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 164,
+     "y": 0.5,
+     "w": 4,
+     "d": 3,
+     "r": 0.5,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 174,
+     "y": 0.5,
+     "w": 4,
+     "d": 3,
+     "r": 0.5,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 184,
+     "y": 0.5,
+     "w": 4,
+     "d": 3,
+     "r": 0.5,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 194,
+     "y": 0.5,
+     "w": 4,
+     "d": 3,
+     "r": 0.5,
+     "fill": "#C4672D"
+    }
+   ]
+  },
+  {
+   "id": "heizplatte_mitte",
+   "component_id": "heating_element",
+   "material_id": "nickel_chrome",
+   "name": "Heizplatte Mitte (doppelseitig)",
+   "short": "Heizplatte Mitte",
+   "shape": "box",
+   "x": 25,
+   "y": 77,
+   "w": 200,
+   "d": 6,
+   "z": 40,
+   "h": 130,
+   "r": 0.5,
+   "explode": [
+    0,
+    0,
+    20
+   ],
+   "mass": 62.8,
+   "materials": [
+    [
+     "nichrom",
+     45
+    ],
+    [
+     "glimmer",
+     55
+    ]
+   ],
+   "info": "Heizt beide Schlitze gleichzeitig, deshalb doppelt bewickelt. Der Draht ist dünn und bricht leicht.",
+   "color": "#8C7B6B",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 1,
+     "w": 4,
+     "d": 4,
+     "r": 0.5,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 14,
+     "y": 1,
+     "w": 4,
+     "d": 4,
+     "r": 0.5,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 24,
+     "y": 1,
+     "w": 4,
+     "d": 4,
+     "r": 0.5,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 34,
+     "y": 1,
+     "w": 4,
+     "d": 4,
+     "r": 0.5,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 44,
+     "y": 1,
+     "w": 4,
+     "d": 4,
+     "r": 0.5,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 54,
+     "y": 1,
+     "w": 4,
+     "d": 4,
+     "r": 0.5,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 64,
+     "y": 1,
+     "w": 4,
+     "d": 4,
+     "r": 0.5,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 74,
+     "y": 1,
+     "w": 4,
+     "d": 4,
+     "r": 0.5,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 84,
+     "y": 1,
+     "w": 4,
+     "d": 4,
+     "r": 0.5,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 94,
+     "y": 1,
+     "w": 4,
+     "d": 4,
+     "r": 0.5,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 104,
+     "y": 1,
+     "w": 4,
+     "d": 4,
+     "r": 0.5,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 114,
+     "y": 1,
+     "w": 4,
+     "d": 4,
+     "r": 0.5,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 124,
+     "y": 1,
+     "w": 4,
+     "d": 4,
+     "r": 0.5,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 134,
+     "y": 1,
+     "w": 4,
+     "d": 4,
+     "r": 0.5,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 144,
+     "y": 1,
+     "w": 4,
+     "d": 4,
+     "r": 0.5,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 154,
+     "y": 1,
+     "w": 4,
+     "d": 4,
+     "r": 0.5,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 164,
+     "y": 1,
+     "w": 4,
+     "d": 4,
+     "r": 0.5,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 174,
+     "y": 1,
+     "w": 4,
+     "d": 4,
+     "r": 0.5,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 184,
+     "y": 1,
+     "w": 4,
+     "d": 4,
+     "r": 0.5,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 194,
+     "y": 1,
+     "w": 4,
+     "d": 4,
+     "r": 0.5,
+     "fill": "#C4672D"
+    }
+   ]
+  },
+  {
+   "id": "heizplatte_hinten",
+   "component_id": "heating_element",
+   "material_id": "nickel_chrome",
+   "name": "Heizplatte hinten",
+   "short": "Heizplatte hinten",
+   "shape": "box",
+   "x": 25,
+   "y": 27,
+   "w": 200,
+   "d": 4,
+   "z": 40,
+   "h": 130,
+   "r": 0.5,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 45.7,
+   "materials": [
+    [
+     "nichrom",
+     40
+    ],
+    [
+     "glimmer",
+     60
+    ]
+   ],
+   "info": "Wie die vordere Platte. Die Glimmerplatten isolieren den heißen Draht vom Blechgehäuse.",
+   "color": "#8C7B6B",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 0.5,
+     "w": 4,
+     "d": 3,
+     "r": 0.5,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 14,
+     "y": 0.5,
+     "w": 4,
+     "d": 3,
+     "r": 0.5,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 24,
+     "y": 0.5,
+     "w": 4,
+     "d": 3,
+     "r": 0.5,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 34,
+     "y": 0.5,
+     "w": 4,
+     "d": 3,
+     "r": 0.5,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 44,
+     "y": 0.5,
+     "w": 4,
+     "d": 3,
+     "r": 0.5,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 54,
+     "y": 0.5,
+     "w": 4,
+     "d": 3,
+     "r": 0.5,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 64,
+     "y": 0.5,
+     "w": 4,
+     "d": 3,
+     "r": 0.5,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 74,
+     "y": 0.5,
+     "w": 4,
+     "d": 3,
+     "r": 0.5,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 84,
+     "y": 0.5,
+     "w": 4,
+     "d": 3,
+     "r": 0.5,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 94,
+     "y": 0.5,
+     "w": 4,
+     "d": 3,
+     "r": 0.5,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 104,
+     "y": 0.5,
+     "w": 4,
+     "d": 3,
+     "r": 0.5,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 114,
+     "y": 0.5,
+     "w": 4,
+     "d": 3,
+     "r": 0.5,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 124,
+     "y": 0.5,
+     "w": 4,
+     "d": 3,
+     "r": 0.5,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 134,
+     "y": 0.5,
+     "w": 4,
+     "d": 3,
+     "r": 0.5,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 144,
+     "y": 0.5,
+     "w": 4,
+     "d": 3,
+     "r": 0.5,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 154,
+     "y": 0.5,
+     "w": 4,
+     "d": 3,
+     "r": 0.5,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 164,
+     "y": 0.5,
+     "w": 4,
+     "d": 3,
+     "r": 0.5,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 174,
+     "y": 0.5,
+     "w": 4,
+     "d": 3,
+     "r": 0.5,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 184,
+     "y": 0.5,
+     "w": 4,
+     "d": 3,
+     "r": 0.5,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 194,
+     "y": 0.5,
+     "w": 4,
+     "d": 3,
+     "r": 0.5,
+     "fill": "#C4672D"
+    }
+   ]
+  },
+  {
+   "id": "brotschlitten",
+   "component_id": "stainless_steel_body",
+   "material_id": "steel",
+   "name": "Brotschlitten mit Führungsgittern",
+   "short": "Brotschlitten",
+   "shape": "box",
+   "x": 25,
+   "y": 35,
+   "w": 200,
+   "d": 90,
+   "z": 26,
+   "h": 8,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    6
+   ],
+   "mass": 102.8,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Verzinktes Stahlgestell, das die Scheiben hebt und senkt. Eine Feder zieht es nach dem Toasten wieder nach oben.",
+   "color": "#9AA2A6",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 4,
+     "w": 192,
+     "d": 27,
+     "r": 2,
+     "fill": "#7C858C"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 59,
+     "w": 192,
+     "d": 27,
+     "r": 2,
+     "fill": "#7C858C"
+    }
+   ]
+  },
+  {
+   "id": "steuerplatine",
+   "component_id": "heating_element",
+   "material_id": "pcb",
+   "name": "Steuerplatine mit Haltemagnet",
+   "short": "Steuerplatine",
+   "shape": "box",
+   "x": 236,
+   "y": 20,
+   "w": 12,
+   "d": 120,
+   "z": 30,
+   "h": 110,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    2
+   ],
+   "mass": 40,
+   "materials": [
+    [
+     "fr4",
+     30
+    ],
+    [
+     "kupfer",
+     30
+    ],
+    [
+     "stahl",
+     25
+    ],
+    [
+     "chip",
+     10
+    ],
+    [
+     "lot",
+     5
+    ]
+   ],
+   "info": "Zeitschaltung mit Elektromagnet: Er hält den Schlitten unten, bis die Bräunungszeit um ist. Enthält Kupferspule und Lötstellen.",
+   "color": "#2F6B3A",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 10,
+     "w": 8,
+     "d": 20,
+     "r": 1,
+     "fill": "#B87333"
+    },
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 50,
+     "w": 8,
+     "d": 12,
+     "r": 1,
+     "fill": "#222"
+    }
+   ]
+  },
+  {
+   "id": "seitenteil",
+   "component_id": "stainless_steel_body",
+   "material_id": "pp",
+   "name": "Seitenteil mit Bedienfeld",
+   "short": "Seitenteil",
+   "shape": "box",
+   "x": 250,
+   "y": 0,
+   "w": 20,
+   "d": 160,
+   "z": 0,
+   "h": 190,
+   "r": 8,
+   "explode": [
+    60,
+    0,
+    0
+   ],
+   "mass": 102.8,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Hitzefester Kunststoff, trägt Hebelschlitz, Regler und Tasten. Ist eingeclipst und mit zwei Schrauben gesichert.",
+   "color": "#2E3338",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 6,
+     "y": 60,
+     "w": 8,
+     "d": 40,
+     "r": 3,
+     "fill": "#1E2226"
+    }
+   ]
+  },
+  {
+   "id": "hebel",
+   "component_id": "plastic_knobs",
+   "material_id": "pp",
+   "name": "Absenkhebel",
+   "short": "Hebel",
+   "shape": "box",
+   "x": 270,
+   "y": 62,
+   "w": 12,
+   "d": 36,
+   "z": 150,
+   "h": 14,
+   "r": 4,
+   "explode": [
+    95,
+    0,
+    0
+   ],
+   "mass": 9.1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Kunststoffgriff auf dem Hebelblech. Gerade abziehen, darunter ist Metall.",
+   "color": "#2E3338"
+  },
+  {
+   "id": "stopptaste",
+   "component_id": "plastic_knobs",
+   "material_id": "pp",
+   "name": "Stopp-Taste",
+   "short": "Stopp-Taste",
+   "shape": "box",
+   "x": 270,
+   "y": 112,
+   "w": 6,
+   "d": 14,
+   "z": 100,
+   "h": 10,
+   "r": 2,
+   "explode": [
+    95,
+    0,
+    0
+   ],
+   "mass": 2.3,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Unterbricht das Toasten sofort. Die Kappe ist nur aufgesteckt.",
+   "color": "#C0392B"
+  },
+  {
+   "id": "drehregler",
+   "component_id": "plastic_knobs",
+   "material_id": "pp",
+   "name": "Bräunungsregler",
+   "short": "Regler",
+   "shape": "cyl",
+   "x": 270,
+   "y": 105,
+   "w": 10,
+   "d": 28,
+   "z": 55,
+   "h": 28,
+   "explode": [
+    95,
+    0,
+    0
+   ],
+   "mass": 6.9,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Stellt die Röstzeit von 1 bis 7 ein. Lässt sich von der Achse abziehen.",
+   "color": "#2E3338"
+  },
+  {
+   "id": "kruemelschublade",
+   "component_id": "crumb_tray",
+   "material_id": "aluminium",
+   "name": "Krümelschublade",
+   "short": "Krümelschublade",
+   "shape": "box",
+   "x": 20,
+   "y": 10,
+   "w": 215,
+   "d": 145,
+   "z": 13,
+   "h": 4,
+   "r": 2,
+   "explode": [
+    0,
+    175,
+    0
+   ],
+   "mass": 51.4,
+   "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "info": "Aluminiumblech, das herabfallende Krümel auffängt. Nach vorne herausziehen und regelmäßig leeren, sonst kann es brennen.",
+   "color": "#D4D8DB",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 90,
+     "y": 137,
+     "w": 35,
+     "d": 8,
+     "r": 2,
+     "fill": "#2E3338"
+    }
+   ]
+  },
+  {
+   "id": "bodenplatte",
+   "component_id": "stainless_steel_body",
+   "material_id": "steel",
+   "name": "Bodenplatte mit Füßen",
+   "short": "Bodenplatte",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 250,
+   "d": 160,
+   "z": 0,
+   "h": 12,
+   "r": 22,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 251.2,
+   "materials": [
+    [
+     "stahl",
+     85
+    ],
+    [
+     "gummi",
+     5
+    ],
+    [
+     "pp",
+     10
+    ]
+   ],
+   "info": "Verzinktes Stahlblech mit Gummifüßen und Kabelaufwicklung. Nach dem Ausschrauben liegen Heizplatten und Mechanik frei.",
+   "color": "#7C858C",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 12,
+     "y": 12,
+     "w": 16,
+     "d": 16,
+     "fill": "#2E3338"
+    },
+    {
+     "shape": "cyl",
+     "x": 222,
+     "y": 12,
+     "w": 16,
+     "d": 16,
+     "fill": "#2E3338"
+    },
+    {
+     "shape": "cyl",
+     "x": 12,
+     "y": 132,
+     "w": 16,
+     "d": 16,
+     "fill": "#2E3338"
+    },
+    {
+     "shape": "cyl",
+     "x": 222,
+     "y": 132,
+     "w": 16,
+     "d": 16,
+     "fill": "#2E3338"
+    }
+   ]
+  },
+  {
+   "id": "kabel",
+   "component_id": "cable_insulation",
+   "material_id": "pvc",
+   "name": "Netzkabel (Isolierung)",
+   "short": "Kabel",
+   "shape": "box",
+   "x": 170,
+   "y": 0,
+   "w": 80,
+   "d": 8,
+   "z": 2,
+   "h": 8,
+   "r": 4,
+   "explode": [
+    110,
+    -40,
+    0
+   ],
+   "mass": 68.5,
+   "materials": [
+    [
+     "pvc",
+     90
+    ],
+    [
+     "pp",
+     10
+    ]
+   ],
+   "info": "Etwa 1 m PVC-Mantel mit Schutzkontaktstecker. Längs aufschlitzen, um Kupfer und PVC zu trennen.",
+   "color": "#2E3338",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 1,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#555"
+    }
+   ]
+  },
+  {
+   "id": "kupferadern",
+   "component_id": "cable_copper_core",
+   "material_id": "copper",
+   "name": "Kupferadern",
+   "short": "Kupferadern",
+   "shape": "box",
+   "x": 170,
+   "y": 2.5,
+   "w": 80,
+   "d": 3,
+   "z": 4.5,
+   "h": 3,
+   "r": 1,
+   "explode": [
+    110,
+    -65,
+    0
+   ],
+   "mass": 34.3,
+   "materials": [
+    [
+     "kupfer",
+     100
+    ]
+   ],
+   "info": "Drei Kupferadern (Phase, Neutralleiter, Schutzleiter). Wertvollster Rohstoff des Toasters nach Gewicht.",
+   "color": "#B87333"
+  }
+ ]
+}

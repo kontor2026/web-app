@@ -4,7 +4,7 @@
  "name_en": "Electric Kettle",
  "klasse": "Elektroschrott · Kleingerät",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -21,25 +21,25 @@
  "werte": [
   {
    "k": "Rohstoffwert",
-   "v": "≈ 2,85 €",
+   "v": "≈ 2,28 €",
    "hint": "Kupfer zu Preisen vom 13.11."
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 4,77 kg",
+   "v": "≈ 4,36 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 1,04 kg",
-   "hint": "spart 3,72 kg, wenn recycelte Materialien eingesetzt werden"
+   "v": "≈ 0,77 kg",
+   "hint": "spart 3,59 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Fe": 712861.0,
-   "Ni": 137144.0,
-   "Cu": 68573.0
+   "Fe": 597293.0,
+   "Ni": 123840.0,
+   "Cu": 38570.0
   },
   "herkunft": {
    "Fe": "Modellmassen (Schätzung)",
@@ -47,18 +47,19 @@
    "Cu": "Modellmassen (Schätzung)"
   },
   "materialien_g": {
-   "steel": 714.3,
-   "nickel_chrome": 171.4,
-   "mixed_electronics": 85.7,
-   "pp": 42.9,
-   "copper": 42.9,
-   "pvc": 42.9
+   "steel": 604.6,
+   "pp": 217.6,
+   "nickel_chrome": 154.8,
+   "pvc": 58.0,
+   "mixed_electronics": 31.9,
+   "copper": 29.0,
+   "nylon": 3.9
   },
-  "co2_kg": 4.766,
-  "co2_mit_recyclat_kg": 1.042,
-  "co2_ersparnis_kg": 3.724,
+  "co2_kg": 4.356,
+  "co2_mit_recyclat_kg": 0.767,
+  "co2_ersparnis_kg": 3.588,
   "co2_ohne_faktor": [],
-  "rohstoffwert_eur": 2.85,
+  "rohstoffwert_eur": 2.28,
   "wert_ohne_preis": [],
   "preisstand": "2026-11-13",
   "quellen": {
@@ -106,215 +107,590 @@
   "nicht": "Nicht in Restmüll oder Gelbe Tonne",
   "warnung": "Kabel und Stecker dranlassen."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "stainless_steel_body_ober",
+   "id": "deckel",
    "component_id": "stainless_steel_body",
-   "name": "Body (Oberteil)",
-   "short": "Body (Oberteil)",
-   "shape": "box",
-   "x": 0,
-   "y": 0,
-   "w": 220.0,
-   "d": 160.0,
-   "h": 50.0,
-   "z": 150.0,
-   "r": 19.2,
-   "explode": [
-    0,
-    0,
-    363.0
-   ],
-   "mass": 214.29,
-   "materials": [
-    [
-     "stahl",
-     100
-    ]
-   ],
    "material_id": "steel",
-   "info": "Remains after removing plastic parts, base and electronics."
-  },
-  {
-   "id": "thermostat",
-   "component_id": "thermostat",
-   "name": "Thermostat",
-   "short": "Thermostat",
-   "shape": "box",
-   "x": 118.8,
-   "y": 14.4,
-   "w": 92.4,
-   "d": 67.2,
-   "h": 67.5,
-   "z": 30.0,
-   "r": 8.1,
+   "name": "Klappdeckel",
+   "short": "Deckel",
+   "shape": "cyl",
+   "x": 40,
+   "y": 30,
+   "w": 100,
+   "z": 236,
+   "h": 12,
    "explode": [
     0,
     0,
-    339.5
+    107
    ],
-   "mass": 85.71,
+   "mass": 67.7,
    "materials": [
-    [
-     "chip",
-     30
-    ],
-    [
-     "kupfer",
-     30
-    ],
-    [
-     "pcabs",
-     25
-    ],
     [
      "stahl",
-     15
+     55
+    ],
+    [
+     "pp",
+     40
+    ],
+    [
+     "gummi",
+     5
     ]
    ],
-   "material_id": "mixed_electronics",
-   "info": "Located under the base plate; unscrew the bottom cover to reach it."
+   "info": "Edelstahlscheibe in Kunststoffrahmen mit Silikondichtung. Das Scharnier hat eine kleine Stahlfeder.",
+   "color": "#C9CED2",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 10,
+     "y": 10,
+     "w": 80,
+     "fill": "#B5BBC0"
+    },
+    {
+     "shape": "box",
+     "x": 70,
+     "y": 40,
+     "w": 24,
+     "d": 20,
+     "r": 6,
+     "fill": "#2E3338"
+    }
+   ]
   },
   {
-   "id": "heating_element",
-   "component_id": "heating_element",
-   "name": "Heating Element",
-   "short": "Heating Element",
+   "id": "kalkfilter",
+   "component_id": "stainless_steel_body",
+   "material_id": "nylon",
+   "name": "Kalkfilter",
+   "short": "Kalkfilter",
    "shape": "box",
-   "x": 8.8,
-   "y": 14.4,
-   "w": 92.4,
-   "d": 67.2,
-   "h": 67.5,
-   "z": 30.0,
-   "r": 8.1,
+   "x": 20,
+   "y": 70,
+   "w": 6,
+   "d": 20,
+   "z": 188,
+   "h": 36,
+   "r": 1,
+   "explode": [
+    -45,
+    0,
+    87
+   ],
+   "mass": 3.9,
+   "materials": [
+    [
+     "nylon",
+     70
+    ],
+    [
+     "pp",
+     30
+    ]
+   ],
+   "info": "Feines Kunststoffnetz im Ausguss, hält Kalkflocken zurück. Nach oben herausziehen und ausspülen.",
+   "color": "#E9EEF2",
+   "opacity": 0.8
+  },
+  {
+   "id": "ausguss",
+   "component_id": "stainless_steel_body",
+   "material_id": "steel",
+   "name": "Ausguss",
+   "short": "Ausguss",
+   "shape": "box",
+   "x": 4,
+   "y": 70,
+   "w": 16,
+   "d": 20,
+   "z": 186,
+   "h": 42,
+   "r": 6,
    "explode": [
     0,
     0,
-    196.0
+    87
    ],
-   "mass": 171.43,
+   "mass": 24.2,
    "materials": [
     [
-     "nichrom",
+     "stahl",
      100
     ]
    ],
-   "material_id": "nickel_chrome",
-   "info": "Unplug and let it cool down fully before opening the housing."
+   "info": "Angeschweißte Tülle aus Edelstahl. Gehört zur Kanne und kommt mit ihr in den Metallschrott.",
+   "color": "#C9CED2"
   },
   {
-   "id": "plastic_handle",
-   "component_id": "plastic_handle",
-   "name": "Handle",
-   "short": "Handle",
-   "shape": "box",
-   "x": 233.2,
-   "y": 8.0,
-   "w": 11.0,
-   "d": 144.0,
-   "h": 20.0,
-   "z": 25.0,
-   "r": 1.3,
+   "id": "kanne_oben",
+   "component_id": "stainless_steel_body",
+   "material_id": "steel",
+   "name": "Kanne Oberteil",
+   "short": "Kanne oben",
+   "shape": "cyl",
+   "x": 20,
+   "y": 10,
+   "w": 140,
+   "z": 180,
+   "h": 56,
    "explode": [
-    92.0,
     0,
-    22.8
+    0,
+    87
    ],
-   "mass": 42.86,
+   "mass": 145.1,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Oberer, schmaler Teil der tiefgezogenen Edelstahlkanne. Edelstahl enthält Chrom und Nickel und wird eingeschmolzen.",
+   "color": "#C9CED2",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 20,
+     "y": 20,
+     "w": 100,
+     "fill": "#9AA2A6"
+    }
+   ]
+  },
+  {
+   "id": "kanne_mitte",
+   "component_id": "stainless_steel_body",
+   "material_id": "steel",
+   "name": "Kanne Mittelteil",
+   "short": "Kanne Mitte",
+   "shape": "cyl",
+   "x": 15,
+   "y": 5,
+   "w": 150,
+   "z": 105,
+   "h": 75,
+   "explode": [
+    0,
+    0,
+    87
+   ],
+   "mass": 174.1,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Mittlerer Teil der Kanne mit eingesetzter Wasserstandsanzeige aus Kunststoff.",
+   "color": "#C9CED2"
+  },
+  {
+   "id": "kanne_unten",
+   "component_id": "stainless_steel_body",
+   "material_id": "steel",
+   "name": "Kanne Unterteil",
+   "short": "Kanne unten",
+   "shape": "cyl",
+   "x": 10,
+   "y": 0,
+   "w": 160,
+   "z": 28,
+   "h": 77,
+   "explode": [
+    0,
+    0,
+    87
+   ],
+   "mass": 193.5,
+   "materials": [
+    [
+     "stahl",
+     92
+    ],
+    [
+     "pp",
+     8
+    ]
+   ],
+   "info": "Breiter Fuß der Kanne mit Kunststoffring unten. Der Boden ist dicht mit der Heizplatte verlötet.",
+   "color": "#C9CED2"
+  },
+  {
+   "id": "griff",
+   "component_id": "plastic_handle",
+   "material_id": "pp",
+   "name": "Griff",
+   "short": "Griff",
+   "shape": "box",
+   "x": 170,
+   "y": 65,
+   "w": 50,
+   "d": 30,
+   "z": 62,
+   "h": 168,
+   "r": 12,
+   "explode": [
+    50,
+    0,
+    87
+   ],
+   "mass": 67.7,
    "materials": [
     [
      "pp",
      100
     ]
    ],
-   "material_id": "pp",
-   "info": "Usually held by one or two screws."
+   "info": "Hohler Kunststoffgriff, oben und unten mit je einer Schraube an der Kanne befestigt.",
+   "color": "#2E3338",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 12,
+     "y": 6,
+     "w": 30,
+     "d": 18,
+     "r": 8,
+     "fill": "#1E2226"
+    }
+   ]
   },
   {
-   "id": "cable_copper_core",
-   "component_id": "cable_copper_core",
-   "name": "Cable Wires",
-   "short": "Cable Wires",
+   "id": "schalter",
+   "component_id": "thermostat",
+   "material_id": "mixed_electronics",
+   "name": "Ein-/Aus-Schalter mit Leuchte",
+   "short": "Schalter",
    "shape": "box",
-   "x": 255.2,
-   "y": 8.0,
-   "w": 11.0,
-   "d": 144.0,
-   "h": 20.0,
-   "z": 25.0,
-   "r": 1.3,
+   "x": 172,
+   "y": 68,
+   "w": 36,
+   "d": 24,
+   "z": 48,
+   "h": 12,
+   "r": 4,
    "explode": [
-    125.0,
+    50,
     0,
-    22.8
+    87
    ],
-   "mass": 42.86,
+   "mass": 7.7,
+   "materials": [
+    [
+     "pcabs",
+     60
+    ],
+    [
+     "kupfer",
+     20
+    ],
+    [
+     "led",
+     10
+    ],
+    [
+     "kontakte",
+     10
+    ]
+   ],
+   "info": "Kippschalter mit Kontrolllampe. Eine Schubstange verbindet ihn mit dem Thermostat im Boden.",
+   "color": "#2E3338",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 6,
+     "y": 6,
+     "w": 14,
+     "d": 12,
+     "r": 3,
+     "fill": "#5DADE2"
+    }
+   ]
+  },
+  {
+   "id": "thermostat",
+   "component_id": "thermostat",
+   "material_id": "mixed_electronics",
+   "name": "Thermostat mit Bimetall",
+   "short": "Thermostat",
+   "shape": "box",
+   "x": 125,
+   "y": 60,
+   "w": 40,
+   "d": 40,
+   "z": 19,
+   "h": 8,
+   "r": 4,
+   "explode": [
+    0,
+    0,
+    40
+   ],
+   "mass": 24.2,
+   "materials": [
+    [
+     "bimetall",
+     35
+    ],
+    [
+     "kupfer",
+     20
+    ],
+    [
+     "kontakte",
+     10
+    ],
+    [
+     "pcabs",
+     35
+    ]
+   ],
+   "info": "Eine Bimetallscheibe schnappt um, wenn Dampf sie erhitzt, und schaltet ab. Ein zweites Bimetall schützt vor Trockengehen.",
+   "color": "#9AA2A6",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 10,
+     "y": 10,
+     "w": 20,
+     "fill": "#B8BEC4"
+    },
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 30,
+     "w": 36,
+     "d": 6,
+     "r": 1,
+     "fill": "#B87333"
+    }
+   ]
+  },
+  {
+   "id": "heizelement",
+   "component_id": "heating_element",
+   "material_id": "nickel_chrome",
+   "name": "Rohrheizkörper mit Wärmeleitplatte",
+   "short": "Heizelement",
+   "shape": "cyl",
+   "x": 20,
+   "y": 5,
+   "w": 140,
+   "d": 150,
+   "z": 20,
+   "h": 8,
+   "explode": [
+    0,
+    0,
+    67
+   ],
+   "mass": 154.8,
+   "materials": [
+    [
+     "alu",
+     45
+    ],
+    [
+     "stahl",
+     30
+    ],
+    [
+     "nichrom",
+     10
+    ],
+    [
+     "keramik",
+     15
+    ]
+   ],
+   "info": "Ein Stahlrohr mit Heizdraht in Keramikpulver, angelötet an eine Aluplatte unter dem Kannenboden. Nicht zerlegbar, kommt komplett ins Metallrecycling.",
+   "color": "#B5BBC0",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 15,
+     "y": 15,
+     "w": 110,
+     "d": 120,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "cyl",
+     "x": 23,
+     "y": 23,
+     "w": 94,
+     "d": 104,
+     "fill": "#B5BBC0"
+    }
+   ]
+  },
+  {
+   "id": "bodenabdeckung",
+   "component_id": "plastic_handle",
+   "material_id": "pp",
+   "name": "Bodenabdeckung",
+   "short": "Boden",
+   "shape": "cyl",
+   "x": 12,
+   "y": 2,
+   "w": 156,
+   "z": 14,
+   "h": 5,
+   "explode": [
+    0,
+    0,
+    20
+   ],
+   "mass": 43.5,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Kunststoffdeckel unter der Kanne mit dem Steckkontakt in der Mitte. Mit Sicherheitsschrauben befestigt.",
+   "color": "#2E3338",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 63,
+     "y": 63,
+     "w": 30,
+     "fill": "#1E2226"
+    }
+   ]
+  },
+  {
+   "id": "sockel",
+   "component_id": "cable_insulation",
+   "material_id": "pp",
+   "name": "Sockel mit Steckkontakt",
+   "short": "Sockel",
+   "shape": "cyl",
+   "x": 10,
+   "y": 0,
+   "w": 160,
+   "z": 0,
+   "h": 14,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 106.4,
+   "materials": [
+    [
+     "pp",
+     75
+    ],
+    [
+     "kupfer",
+     10
+    ],
+    [
+     "kontakte",
+     10
+    ],
+    [
+     "stahl",
+     5
+    ]
+   ],
+   "info": "Die Kanne steht drehbar auf diesem Sockel; der Mittelkontakt leitet den Strom weiter. Darunter ist das Kabel aufgewickelt.",
+   "color": "#2E3338",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 65,
+     "y": 65,
+     "w": 30,
+     "fill": "#9AA2A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 75,
+     "y": 75,
+     "w": 10,
+     "fill": "#1E2226"
+    }
+   ]
+  },
+  {
+   "id": "kabel",
+   "component_id": "cable_insulation",
+   "material_id": "pvc",
+   "name": "Netzkabel (Isolierung)",
+   "short": "Kabel",
+   "shape": "box",
+   "x": 120,
+   "y": 76,
+   "w": 70,
+   "d": 8,
+   "z": 3,
+   "h": 8,
+   "r": 4,
+   "explode": [
+    80,
+    0,
+    0
+   ],
+   "mass": 58,
+   "materials": [
+    [
+     "pvc",
+     90
+    ],
+    [
+     "pp",
+     10
+    ]
+   ],
+   "info": "Etwa 75 cm PVC-Mantel mit Stecker. Längs aufschlitzen, um die Kupferadern freizulegen.",
+   "color": "#2E3338",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 60,
+     "y": 1,
+     "w": 10,
+     "d": 6,
+     "r": 2,
+     "fill": "#555"
+    }
+   ]
+  },
+  {
+   "id": "kupferadern",
+   "component_id": "cable_copper_core",
+   "material_id": "copper",
+   "name": "Kupferadern",
+   "short": "Kupferadern",
+   "shape": "box",
+   "x": 120,
+   "y": 78.5,
+   "w": 70,
+   "d": 3,
+   "z": 5.5,
+   "h": 3,
+   "r": 1,
+   "explode": [
+    80,
+    0,
+    15
+   ],
+   "mass": 29,
    "materials": [
     [
      "kupfer",
      100
     ]
    ],
-   "material_id": "copper",
-   "info": "Cut off the plug and strip the insulation to free the copper."
-  },
-  {
-   "id": "cable_insulation",
-   "component_id": "cable_insulation",
-   "name": "Cable Insulation",
-   "short": "Cable Insulation",
-   "shape": "box",
-   "x": 277.2,
-   "y": 8.0,
-   "w": 11.0,
-   "d": 144.0,
-   "h": 20.0,
-   "z": 25.0,
-   "r": 1.3,
-   "explode": [
-    158.0,
-    0,
-    22.8
-   ],
-   "mass": 42.86,
-   "materials": [
-    [
-     "pvc",
-     100
-    ]
-   ],
-   "material_id": "pvc",
-   "info": "Slit lengthwise with a cable stripper to separate it from the wires."
-  },
-  {
-   "id": "stainless_steel_body",
-   "component_id": "stainless_steel_body",
-   "name": "Body (Unterteil)",
-   "short": "Body (Unterteil)",
-   "shape": "box",
-   "x": 0,
-   "y": 0,
-   "w": 220.0,
-   "d": 160.0,
-   "h": 150.0,
-   "z": 0,
-   "r": 19.2,
-   "explode": [
-    0,
-    0,
-    0
-   ],
-   "mass": 500.0,
-   "materials": [
-    [
-     "stahl",
-     100
-    ]
-   ],
-   "material_id": "steel",
-   "info": "Remains after removing plastic parts, base and electronics."
+   "info": "Drei Kupferadern für bis zu 3000 Watt, deshalb dicker als bei kleinen Geräten.",
+   "color": "#B87333"
   }
  ]
 }

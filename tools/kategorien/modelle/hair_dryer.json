@@ -1,0 +1,729 @@
+{
+ "parts": [
+  {
+   "id": "oberschale",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Gehäuse-Oberschale",
+   "short": "Oberschale",
+   "shape": "box",
+   "x": 8,
+   "y": 0,
+   "w": 192,
+   "d": 90,
+   "z": 175,
+   "h": 45,
+   "r": 40,
+   "explode": [
+    0,
+    0,
+    120
+   ],
+   "mass": 77.3,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Obere Hälfte des Laufs aus hitzefestem Kunststoff. Schrauben sitzen oft unter dem Typenschild oder im Griff.",
+   "color": "#3C4248",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 150,
+     "y": 25,
+     "w": 30,
+     "d": 40,
+     "r": 8,
+     "fill": "#2E3338"
+    }
+   ]
+  },
+  {
+   "id": "thermoschutz",
+   "component_id": "heating_element",
+   "material_id": "steel",
+   "name": "Überhitzungsschutz (Bimetall)",
+   "short": "Bimetall",
+   "shape": "box",
+   "x": 160,
+   "y": 38,
+   "w": 12,
+   "d": 14,
+   "z": 166,
+   "h": 6,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    34
+   ],
+   "mass": 3.3,
+   "materials": [
+    [
+     "bimetall",
+     60
+    ],
+    [
+     "kupfer",
+     30
+    ],
+    [
+     "pcabs",
+     10
+    ]
+   ],
+   "info": "Zwei verschweißte Metallstreifen biegen sich bei Hitze und schalten die Heizung ab. Schützt vor Brand, wenn das Gitter verstopft ist.",
+   "color": "#B8BEC4"
+  },
+  {
+   "id": "heizelement",
+   "component_id": "heating_element",
+   "material_id": "nickel_chrome",
+   "name": "Heizdraht auf Glimmerträger",
+   "short": "Heizelement",
+   "shape": "box",
+   "x": 72,
+   "y": 15,
+   "w": 84,
+   "d": 60,
+   "z": 145,
+   "h": 60,
+   "r": 26,
+   "explode": [
+    0,
+    0,
+    55
+   ],
+   "mass": 49.7,
+   "materials": [
+    [
+     "nichrom",
+     55
+    ],
+    [
+     "glimmer",
+     45
+    ]
+   ],
+   "info": "Gewendelter Nickel-Chrom-Draht auf einem Kreuz aus Glimmer, glüht mit bis zu 2000 Watt. Vor dem Öffnen ganz abkühlen lassen.",
+   "color": "#8C7B6B",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 6,
+     "w": 4,
+     "d": 48,
+     "r": 1,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 12,
+     "y": 6,
+     "w": 4,
+     "d": 48,
+     "r": 1,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 20,
+     "y": 6,
+     "w": 4,
+     "d": 48,
+     "r": 1,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 28,
+     "y": 6,
+     "w": 4,
+     "d": 48,
+     "r": 1,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 36,
+     "y": 6,
+     "w": 4,
+     "d": 48,
+     "r": 1,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 44,
+     "y": 6,
+     "w": 4,
+     "d": 48,
+     "r": 1,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 52,
+     "y": 6,
+     "w": 4,
+     "d": 48,
+     "r": 1,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 60,
+     "y": 6,
+     "w": 4,
+     "d": 48,
+     "r": 1,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 68,
+     "y": 6,
+     "w": 4,
+     "d": 48,
+     "r": 1,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 76,
+     "y": 6,
+     "w": 4,
+     "d": 48,
+     "r": 1,
+     "fill": "#C4672D"
+    }
+   ]
+  },
+  {
+   "id": "motor",
+   "component_id": "electric_motor",
+   "material_id": "mixed_electronics",
+   "name": "Gleichstrommotor mit Gleichrichter",
+   "short": "Motor",
+   "shape": "box",
+   "x": 34,
+   "y": 28,
+   "w": 32,
+   "d": 34,
+   "z": 158,
+   "h": 34,
+   "r": 14,
+   "explode": [
+    0,
+    0,
+    42
+   ],
+   "mass": 66.2,
+   "materials": [
+    [
+     "kupfer",
+     30
+    ],
+    [
+     "stahl",
+     40
+    ],
+    [
+     "ferrit",
+     15
+    ],
+    [
+     "chip",
+     5
+    ],
+    [
+     "pcabs",
+     10
+    ]
+   ],
+   "info": "Kleiner Motor mit Kupferwicklung und Ferritmagneten, davor Dioden, die den Wechselstrom gleichrichten. Steckt in einer Gummihalterung.",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 4,
+     "w": 24,
+     "d": 26,
+     "r": 10,
+     "fill": "#B87333"
+    },
+    {
+     "shape": "cyl",
+     "x": 12,
+     "y": 13,
+     "w": 8,
+     "fill": "#9AA2A6"
+    }
+   ]
+  },
+  {
+   "id": "luefterrad",
+   "component_id": "electric_motor",
+   "material_id": "pc",
+   "name": "Lüfterrad",
+   "short": "Lüfterrad",
+   "shape": "box",
+   "x": 16,
+   "y": 10,
+   "w": 12,
+   "d": 70,
+   "z": 140,
+   "h": 70,
+   "r": 5,
+   "explode": [
+    0,
+    0,
+    60
+   ],
+   "mass": 11,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Saugt die Luft hinten an und drückt sie über den Heizdraht. Sitzt auf der Motorwelle und lässt sich abziehen.",
+   "color": "#5F6B75",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 4,
+     "w": 8,
+     "d": 4,
+     "r": 1,
+     "fill": "#4A545C"
+    },
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 12,
+     "w": 8,
+     "d": 4,
+     "r": 1,
+     "fill": "#4A545C"
+    },
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 20,
+     "w": 8,
+     "d": 4,
+     "r": 1,
+     "fill": "#4A545C"
+    },
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 28,
+     "w": 8,
+     "d": 4,
+     "r": 1,
+     "fill": "#4A545C"
+    },
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 36,
+     "w": 8,
+     "d": 4,
+     "r": 1,
+     "fill": "#4A545C"
+    },
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 44,
+     "w": 8,
+     "d": 4,
+     "r": 1,
+     "fill": "#4A545C"
+    },
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 52,
+     "w": 8,
+     "d": 4,
+     "r": 1,
+     "fill": "#4A545C"
+    },
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 60,
+     "w": 8,
+     "d": 4,
+     "r": 1,
+     "fill": "#4A545C"
+    }
+   ]
+  },
+  {
+   "id": "ansauggitter",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Ansauggitter mit Flusensieb",
+   "short": "Ansauggitter",
+   "shape": "box",
+   "x": 0,
+   "y": 5,
+   "w": 8,
+   "d": 80,
+   "z": 135,
+   "h": 80,
+   "r": 3,
+   "explode": [
+    -35,
+    0,
+    0
+   ],
+   "mass": 13.2,
+   "materials": [
+    [
+     "pcabs",
+     80
+    ],
+    [
+     "stahl",
+     20
+    ]
+   ],
+   "info": "Abnehmbares Gitter mit feinem Metallsieb. Regelmäßig von Haaren befreien, sonst überhitzt der Föhn.",
+   "color": "#2E3338",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 6,
+     "w": 4,
+     "d": 4,
+     "r": 1,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 13,
+     "w": 4,
+     "d": 4,
+     "r": 1,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 20,
+     "w": 4,
+     "d": 4,
+     "r": 1,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 27,
+     "w": 4,
+     "d": 4,
+     "r": 1,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 34,
+     "w": 4,
+     "d": 4,
+     "r": 1,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 41,
+     "w": 4,
+     "d": 4,
+     "r": 1,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 48,
+     "w": 4,
+     "d": 4,
+     "r": 1,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 55,
+     "w": 4,
+     "d": 4,
+     "r": 1,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 62,
+     "w": 4,
+     "d": 4,
+     "r": 1,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 69,
+     "w": 4,
+     "d": 4,
+     "r": 1,
+     "fill": "#1E2226"
+    }
+   ]
+  },
+  {
+   "id": "duese",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Stylingdüse",
+   "short": "Düse",
+   "shape": "box",
+   "x": 200,
+   "y": 15,
+   "w": 30,
+   "d": 60,
+   "z": 150,
+   "h": 60,
+   "r": 8,
+   "explode": [
+    40,
+    0,
+    0
+   ],
+   "mass": 27.6,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Bündelt den Luftstrom. Nur aufgesteckt und schnell abgezogen; sie ist reiner Kunststoff.",
+   "color": "#3C4248",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 20,
+     "y": 22,
+     "w": 9,
+     "d": 16,
+     "r": 3,
+     "fill": "#1E2226"
+    }
+   ]
+  },
+  {
+   "id": "unterschale",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Gehäuse-Unterschale",
+   "short": "Unterschale",
+   "shape": "box",
+   "x": 8,
+   "y": 0,
+   "w": 192,
+   "d": 90,
+   "z": 130,
+   "h": 45,
+   "r": 40,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 77.3,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Untere Hälfte des Laufs, trägt Motor und Heizelement. Die Schalen sind verschraubt und zusätzlich verclipst.",
+   "color": "#3C4248"
+  },
+  {
+   "id": "schalter",
+   "component_id": "plastic_housing",
+   "material_id": "mixed_electronics",
+   "name": "Stufenschalter",
+   "short": "Schalter",
+   "shape": "box",
+   "x": 60,
+   "y": 62,
+   "w": 14,
+   "d": 6,
+   "z": 70,
+   "h": 36,
+   "r": 2,
+   "explode": [
+    0,
+    30,
+    0
+   ],
+   "mass": 8.8,
+   "materials": [
+    [
+     "pcabs",
+     55
+    ],
+    [
+     "kupfer",
+     25
+    ],
+    [
+     "kontakte",
+     10
+    ],
+    [
+     "stahl",
+     10
+    ]
+   ],
+   "info": "Schiebeschalter für Gebläse- und Heizstufen mit Messing-Kontakten. Kabel sind angelötet oder gesteckt.",
+   "color": "#9AA2A6",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 1,
+     "w": 10,
+     "d": 4,
+     "r": 1,
+     "fill": "#E0E4E7"
+    }
+   ]
+  },
+  {
+   "id": "griff",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Griff",
+   "short": "Griff",
+   "shape": "box",
+   "x": 45,
+   "y": 25,
+   "w": 44,
+   "d": 37,
+   "z": 0,
+   "h": 130,
+   "r": 16,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 60.7,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Hohler Griff, durch den das Kabel zum Schalter läuft. Unten sitzt der Knickschutz und eine Aufhängeöse.",
+   "color": "#3C4248",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 14,
+     "y": 10,
+     "w": 16,
+     "d": 16,
+     "fill": "#2E3338"
+    }
+   ]
+  },
+  {
+   "id": "kabel",
+   "component_id": "cable_insulation",
+   "material_id": "pvc",
+   "name": "Netzkabel (Isolierung)",
+   "short": "Kabel",
+   "shape": "box",
+   "x": 89,
+   "y": 39,
+   "w": 80,
+   "d": 9,
+   "z": 2,
+   "h": 9,
+   "r": 4,
+   "explode": [
+    60,
+    0,
+    0
+   ],
+   "mass": 77.3,
+   "materials": [
+    [
+     "pvc",
+     90
+    ],
+    [
+     "pp",
+     10
+    ]
+   ],
+   "info": "1,8 m Gummi- oder PVC-Mantel mit Stecker. Mit einem Kabelschäler längs aufschlitzen, um die Kupferadern freizulegen.",
+   "color": "#2E3338",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 70,
+     "y": 1,
+     "w": 10,
+     "d": 7,
+     "r": 2,
+     "fill": "#555"
+    }
+   ]
+  },
+  {
+   "id": "kupferadern",
+   "component_id": "cable_copper_core",
+   "material_id": "copper",
+   "name": "Kupferadern",
+   "short": "Kupferadern",
+   "shape": "box",
+   "x": 89,
+   "y": 42,
+   "w": 80,
+   "d": 3,
+   "z": 5,
+   "h": 3,
+   "r": 1,
+   "explode": [
+    60,
+    0,
+    20
+   ],
+   "mass": 27.6,
+   "materials": [
+    [
+     "kupfer",
+     100
+    ]
+   ],
+   "info": "Zwei Adern aus feinen Kupferlitzen. Kupfer lässt sich fast verlustfrei wiederverwerten.",
+   "color": "#B87333"
+  }
+ ]
+}

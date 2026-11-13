@@ -4,7 +4,7 @@
  "name_en": "Hair Dryer",
  "klasse": "Elektroschrott · Kleingerät",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -21,43 +21,45 @@
  "werte": [
   {
    "k": "Rohstoffwert",
-   "v": "≈ 2,02 €",
+   "v": "≈ 1,21 €",
    "hint": "Kupfer zu Preisen vom 13.11."
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 2,71 kg",
+   "v": "≈ 2,00 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 0,72 kg",
-   "hint": "spart 1,99 kg, wenn recycelte Materialien eingesetzt werden"
+   "v": "≈ 0,59 kg",
+   "hint": "spart 1,41 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Ni": 87272.0,
-   "Cu": 59997.0,
-   "Fe": 16363.0
+   "Cu": 50100.0,
+   "Ni": 39760.0,
+   "Fe": 14484.0
   },
   "herkunft": {
-   "Ni": "Modellmassen (Schätzung)",
    "Cu": "Modellmassen (Schätzung)",
+   "Ni": "Modellmassen (Schätzung)",
    "Fe": "Modellmassen (Schätzung)"
   },
   "materialien_g": {
-   "abs": 227.3,
-   "mixed_electronics": 109.1,
-   "nickel_chrome": 109.1,
-   "copper": 27.3,
-   "pvc": 27.3
+   "abs": 256.1,
+   "pvc": 77.3,
+   "mixed_electronics": 75.0,
+   "nickel_chrome": 49.7,
+   "copper": 27.6,
+   "pc": 11.0,
+   "steel": 3.3
   },
-  "co2_kg": 2.71,
-  "co2_mit_recyclat_kg": 0.721,
-  "co2_ersparnis_kg": 1.99,
+  "co2_kg": 2.003,
+  "co2_mit_recyclat_kg": 0.593,
+  "co2_ersparnis_kg": 1.41,
   "co2_ohne_faktor": [],
-  "rohstoffwert_eur": 2.02,
+  "rohstoffwert_eur": 1.21,
   "wert_ohne_preis": [],
   "preisstand": "2026-11-13",
   "quellen": {
@@ -105,57 +107,72 @@
   "nicht": "Nicht in Restmüll oder Gelbe Tonne",
   "warnung": "Kabel und Stecker dranlassen."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "plastic_housing_ober",
+   "id": "oberschale",
    "component_id": "plastic_housing",
-   "name": "Plastic Housing (Oberteil)",
-   "short": "Plastic Housing (O",
+   "material_id": "abs",
+   "name": "Gehäuse-Oberschale",
+   "short": "Oberschale",
    "shape": "box",
-   "x": 0,
+   "x": 8,
    "y": 0,
-   "w": 230.0,
-   "d": 90.0,
-   "h": 44.0,
-   "z": 132.0,
-   "r": 10.8,
+   "w": 192,
+   "d": 90,
+   "z": 175,
+   "h": 45,
+   "r": 40,
    "explode": [
     0,
     0,
-    310.8
+    120
    ],
-   "mass": 68.18,
+   "mass": 77.3,
    "materials": [
     [
      "pcabs",
      100
     ]
    ],
-   "material_id": "abs",
-   "info": "Look for hidden screws under rubber feet or labels, then pry the clips open."
+   "info": "Obere Hälfte des Laufs aus hitzefestem Kunststoff. Schrauben sitzen oft unter dem Typenschild oder im Griff.",
+   "color": "#3C4248",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 150,
+     "y": 25,
+     "w": 30,
+     "d": 40,
+     "r": 8,
+     "fill": "#2E3338"
+    }
+   ]
   },
   {
-   "id": "electric_motor",
-   "component_id": "electric_motor",
-   "name": "Electric Motor",
-   "short": "Electric Motor",
-   "shape": "cyl",
-   "x": 153.6,
-   "y": 8.1,
-   "w": 37.8,
-   "h": 59.4,
-   "z": 26.4,
+   "id": "thermoschutz",
+   "component_id": "heating_element",
+   "material_id": "steel",
+   "name": "Überhitzungsschutz (Bimetall)",
+   "short": "Bimetall",
+   "shape": "box",
+   "x": 160,
+   "y": 38,
+   "w": 12,
+   "d": 14,
+   "z": 166,
+   "h": 6,
+   "r": 1,
    "explode": [
     0,
     0,
-    293.0
+    34
    ],
-   "mass": 109.09,
+   "mass": 3.3,
    "materials": [
     [
-     "chip",
-     30
+     "bimetall",
+     60
     ],
     [
      "kupfer",
@@ -163,127 +180,659 @@
     ],
     [
      "pcabs",
-     25
-    ],
-    [
-     "stahl",
-     15
+     10
     ]
    ],
-   "material_id": "mixed_electronics",
-   "info": "Unscrew from the housing and cut the wires; contains copper windings and magnets."
+   "info": "Zwei verschweißte Metallstreifen biegen sich bei Hitze und schalten die Heizung ab. Schützt vor Brand, wenn das Gitter verstopft ist.",
+   "color": "#B8BEC4"
   },
   {
-   "id": "heating_element",
+   "id": "heizelement",
    "component_id": "heating_element",
-   "name": "Heating Element",
-   "short": "Heating Element",
+   "material_id": "nickel_chrome",
+   "name": "Heizdraht auf Glimmerträger",
+   "short": "Heizelement",
    "shape": "box",
-   "x": 9.2,
-   "y": 8.1,
-   "w": 96.6,
-   "d": 37.8,
-   "h": 59.4,
-   "z": 26.4,
-   "r": 4.5,
+   "x": 72,
+   "y": 15,
+   "w": 84,
+   "d": 60,
+   "z": 145,
+   "h": 60,
+   "r": 26,
    "explode": [
     0,
     0,
-    169.6
+    55
    ],
-   "mass": 109.09,
+   "mass": 49.7,
    "materials": [
     [
      "nichrom",
-     100
+     55
+    ],
+    [
+     "glimmer",
+     45
     ]
    ],
-   "material_id": "nickel_chrome",
-   "info": "Unplug and let it cool down fully before opening the housing."
+   "info": "Gewendelter Nickel-Chrom-Draht auf einem Kreuz aus Glimmer, glüht mit bis zu 2000 Watt. Vor dem Öffnen ganz abkühlen lassen.",
+   "color": "#8C7B6B",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 6,
+     "w": 4,
+     "d": 48,
+     "r": 1,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 12,
+     "y": 6,
+     "w": 4,
+     "d": 48,
+     "r": 1,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 20,
+     "y": 6,
+     "w": 4,
+     "d": 48,
+     "r": 1,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 28,
+     "y": 6,
+     "w": 4,
+     "d": 48,
+     "r": 1,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 36,
+     "y": 6,
+     "w": 4,
+     "d": 48,
+     "r": 1,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 44,
+     "y": 6,
+     "w": 4,
+     "d": 48,
+     "r": 1,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 52,
+     "y": 6,
+     "w": 4,
+     "d": 48,
+     "r": 1,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 60,
+     "y": 6,
+     "w": 4,
+     "d": 48,
+     "r": 1,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 68,
+     "y": 6,
+     "w": 4,
+     "d": 48,
+     "r": 1,
+     "fill": "#C4672D"
+    },
+    {
+     "shape": "box",
+     "x": 76,
+     "y": 6,
+     "w": 4,
+     "d": 48,
+     "r": 1,
+     "fill": "#C4672D"
+    }
+   ]
   },
   {
-   "id": "cable_copper_core",
-   "component_id": "cable_copper_core",
-   "name": "Cable Wires",
-   "short": "Cable Wires",
+   "id": "motor",
+   "component_id": "electric_motor",
+   "material_id": "mixed_electronics",
+   "name": "Gleichstrommotor mit Gleichrichter",
+   "short": "Motor",
    "shape": "box",
-   "x": 243.8,
-   "y": 4.5,
-   "w": 11.5,
-   "d": 81.0,
-   "h": 17.6,
-   "z": 22.0,
-   "r": 1.4,
+   "x": 34,
+   "y": 28,
+   "w": 32,
+   "d": 34,
+   "z": 158,
+   "h": 34,
+   "r": 14,
    "explode": [
-    95.5,
     0,
-    19.2
+    0,
+    42
    ],
-   "mass": 27.27,
+   "mass": 66.2,
    "materials": [
     [
      "kupfer",
-     100
+     30
+    ],
+    [
+     "stahl",
+     40
+    ],
+    [
+     "ferrit",
+     15
+    ],
+    [
+     "chip",
+     5
+    ],
+    [
+     "pcabs",
+     10
     ]
    ],
-   "material_id": "copper",
-   "info": "Cut off the plug and strip the insulation to free the copper."
+   "info": "Kleiner Motor mit Kupferwicklung und Ferritmagneten, davor Dioden, die den Wechselstrom gleichrichten. Steckt in einer Gummihalterung.",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 4,
+     "w": 24,
+     "d": 26,
+     "r": 10,
+     "fill": "#B87333"
+    },
+    {
+     "shape": "cyl",
+     "x": 12,
+     "y": 13,
+     "w": 8,
+     "fill": "#9AA2A6"
+    }
+   ]
   },
   {
-   "id": "cable_insulation",
-   "component_id": "cable_insulation",
-   "name": "Cable Insulation",
-   "short": "Cable Insulation",
+   "id": "luefterrad",
+   "component_id": "electric_motor",
+   "material_id": "pc",
+   "name": "Lüfterrad",
+   "short": "Lüfterrad",
    "shape": "box",
-   "x": 266.8,
-   "y": 4.5,
-   "w": 11.5,
-   "d": 81.0,
-   "h": 17.6,
-   "z": 22.0,
-   "r": 1.4,
+   "x": 16,
+   "y": 10,
+   "w": 12,
+   "d": 70,
+   "z": 140,
+   "h": 70,
+   "r": 5,
    "explode": [
-    130.0,
     0,
-    19.2
+    0,
+    60
    ],
-   "mass": 27.27,
+   "mass": 11,
    "materials": [
     [
-     "pvc",
+     "pcabs",
      100
     ]
    ],
-   "material_id": "pvc",
-   "info": "Slit lengthwise with a cable stripper to separate it from the wires."
+   "info": "Saugt die Luft hinten an und drückt sie über den Heizdraht. Sitzt auf der Motorwelle und lässt sich abziehen.",
+   "color": "#5F6B75",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 4,
+     "w": 8,
+     "d": 4,
+     "r": 1,
+     "fill": "#4A545C"
+    },
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 12,
+     "w": 8,
+     "d": 4,
+     "r": 1,
+     "fill": "#4A545C"
+    },
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 20,
+     "w": 8,
+     "d": 4,
+     "r": 1,
+     "fill": "#4A545C"
+    },
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 28,
+     "w": 8,
+     "d": 4,
+     "r": 1,
+     "fill": "#4A545C"
+    },
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 36,
+     "w": 8,
+     "d": 4,
+     "r": 1,
+     "fill": "#4A545C"
+    },
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 44,
+     "w": 8,
+     "d": 4,
+     "r": 1,
+     "fill": "#4A545C"
+    },
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 52,
+     "w": 8,
+     "d": 4,
+     "r": 1,
+     "fill": "#4A545C"
+    },
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 60,
+     "w": 8,
+     "d": 4,
+     "r": 1,
+     "fill": "#4A545C"
+    }
+   ]
   },
   {
-   "id": "plastic_housing",
+   "id": "ansauggitter",
    "component_id": "plastic_housing",
-   "name": "Plastic Housing (Unterteil)",
-   "short": "Plastic Housing (U",
+   "material_id": "abs",
+   "name": "Ansauggitter mit Flusensieb",
+   "short": "Ansauggitter",
    "shape": "box",
    "x": 0,
+   "y": 5,
+   "w": 8,
+   "d": 80,
+   "z": 135,
+   "h": 80,
+   "r": 3,
+   "explode": [
+    -35,
+    0,
+    0
+   ],
+   "mass": 13.2,
+   "materials": [
+    [
+     "pcabs",
+     80
+    ],
+    [
+     "stahl",
+     20
+    ]
+   ],
+   "info": "Abnehmbares Gitter mit feinem Metallsieb. Regelmäßig von Haaren befreien, sonst überhitzt der Föhn.",
+   "color": "#2E3338",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 6,
+     "w": 4,
+     "d": 4,
+     "r": 1,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 13,
+     "w": 4,
+     "d": 4,
+     "r": 1,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 20,
+     "w": 4,
+     "d": 4,
+     "r": 1,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 27,
+     "w": 4,
+     "d": 4,
+     "r": 1,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 34,
+     "w": 4,
+     "d": 4,
+     "r": 1,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 41,
+     "w": 4,
+     "d": 4,
+     "r": 1,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 48,
+     "w": 4,
+     "d": 4,
+     "r": 1,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 55,
+     "w": 4,
+     "d": 4,
+     "r": 1,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 62,
+     "w": 4,
+     "d": 4,
+     "r": 1,
+     "fill": "#1E2226"
+    },
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 69,
+     "w": 4,
+     "d": 4,
+     "r": 1,
+     "fill": "#1E2226"
+    }
+   ]
+  },
+  {
+   "id": "duese",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Stylingdüse",
+   "short": "Düse",
+   "shape": "box",
+   "x": 200,
+   "y": 15,
+   "w": 30,
+   "d": 60,
+   "z": 150,
+   "h": 60,
+   "r": 8,
+   "explode": [
+    40,
+    0,
+    0
+   ],
+   "mass": 27.6,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Bündelt den Luftstrom. Nur aufgesteckt und schnell abgezogen; sie ist reiner Kunststoff.",
+   "color": "#3C4248",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 20,
+     "y": 22,
+     "w": 9,
+     "d": 16,
+     "r": 3,
+     "fill": "#1E2226"
+    }
+   ]
+  },
+  {
+   "id": "unterschale",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Gehäuse-Unterschale",
+   "short": "Unterschale",
+   "shape": "box",
+   "x": 8,
    "y": 0,
-   "w": 230.0,
-   "d": 90.0,
-   "h": 132.0,
-   "z": 0,
-   "r": 10.8,
+   "w": 192,
+   "d": 90,
+   "z": 130,
+   "h": 45,
+   "r": 40,
    "explode": [
     0,
     0,
     0
    ],
-   "mass": 159.09,
+   "mass": 77.3,
    "materials": [
     [
      "pcabs",
      100
     ]
    ],
+   "info": "Untere Hälfte des Laufs, trägt Motor und Heizelement. Die Schalen sind verschraubt und zusätzlich verclipst.",
+   "color": "#3C4248"
+  },
+  {
+   "id": "schalter",
+   "component_id": "plastic_housing",
+   "material_id": "mixed_electronics",
+   "name": "Stufenschalter",
+   "short": "Schalter",
+   "shape": "box",
+   "x": 60,
+   "y": 62,
+   "w": 14,
+   "d": 6,
+   "z": 70,
+   "h": 36,
+   "r": 2,
+   "explode": [
+    0,
+    30,
+    0
+   ],
+   "mass": 8.8,
+   "materials": [
+    [
+     "pcabs",
+     55
+    ],
+    [
+     "kupfer",
+     25
+    ],
+    [
+     "kontakte",
+     10
+    ],
+    [
+     "stahl",
+     10
+    ]
+   ],
+   "info": "Schiebeschalter für Gebläse- und Heizstufen mit Messing-Kontakten. Kabel sind angelötet oder gesteckt.",
+   "color": "#9AA2A6",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 1,
+     "w": 10,
+     "d": 4,
+     "r": 1,
+     "fill": "#E0E4E7"
+    }
+   ]
+  },
+  {
+   "id": "griff",
+   "component_id": "plastic_housing",
    "material_id": "abs",
-   "info": "Look for hidden screws under rubber feet or labels, then pry the clips open."
+   "name": "Griff",
+   "short": "Griff",
+   "shape": "box",
+   "x": 45,
+   "y": 25,
+   "w": 44,
+   "d": 37,
+   "z": 0,
+   "h": 130,
+   "r": 16,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 60.7,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Hohler Griff, durch den das Kabel zum Schalter läuft. Unten sitzt der Knickschutz und eine Aufhängeöse.",
+   "color": "#3C4248",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 14,
+     "y": 10,
+     "w": 16,
+     "d": 16,
+     "fill": "#2E3338"
+    }
+   ]
+  },
+  {
+   "id": "kabel",
+   "component_id": "cable_insulation",
+   "material_id": "pvc",
+   "name": "Netzkabel (Isolierung)",
+   "short": "Kabel",
+   "shape": "box",
+   "x": 89,
+   "y": 39,
+   "w": 80,
+   "d": 9,
+   "z": 2,
+   "h": 9,
+   "r": 4,
+   "explode": [
+    60,
+    0,
+    0
+   ],
+   "mass": 77.3,
+   "materials": [
+    [
+     "pvc",
+     90
+    ],
+    [
+     "pp",
+     10
+    ]
+   ],
+   "info": "1,8 m Gummi- oder PVC-Mantel mit Stecker. Mit einem Kabelschäler längs aufschlitzen, um die Kupferadern freizulegen.",
+   "color": "#2E3338",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 70,
+     "y": 1,
+     "w": 10,
+     "d": 7,
+     "r": 2,
+     "fill": "#555"
+    }
+   ]
+  },
+  {
+   "id": "kupferadern",
+   "component_id": "cable_copper_core",
+   "material_id": "copper",
+   "name": "Kupferadern",
+   "short": "Kupferadern",
+   "shape": "box",
+   "x": 89,
+   "y": 42,
+   "w": 80,
+   "d": 3,
+   "z": 5,
+   "h": 3,
+   "r": 1,
+   "explode": [
+    60,
+    0,
+    20
+   ],
+   "mass": 27.6,
+   "materials": [
+    [
+     "kupfer",
+     100
+    ]
+   ],
+   "info": "Zwei Adern aus feinen Kupferlitzen. Kupfer lässt sich fast verlustfrei wiederverwerten.",
+   "color": "#B87333"
   }
  ]
 }

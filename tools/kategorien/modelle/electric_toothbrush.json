@@ -1,0 +1,501 @@
+{
+ "parts": [
+  {
+   "id": "borsten",
+   "component_id": "brush_head",
+   "material_id": "nylon",
+   "name": "Borstenfeld (Nylon)",
+   "short": "Borsten",
+   "shape": "box",
+   "x": 9,
+   "y": 20,
+   "w": 10,
+   "d": 10,
+   "z": 204,
+   "h": 24,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    30
+   ],
+   "mass": 1.8,
+   "materials": [
+    [
+     "nylon",
+     100
+    ]
+   ],
+   "info": "Abgerundete Nylonborsten, in den Bürstenkopf eingeschmolzen. Nach drei Monaten ist der Kopf abgenutzt und gehört in den Restmüll.",
+   "color": "#F2F4F5",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 1.5,
+     "y": 1.5,
+     "w": 2,
+     "d": 2
+    },
+    {
+     "shape": "cyl",
+     "x": 4.5,
+     "y": 1.5,
+     "w": 2,
+     "d": 2
+    },
+    {
+     "shape": "cyl",
+     "x": 7.5,
+     "y": 1.5,
+     "w": 2,
+     "d": 2
+    },
+    {
+     "shape": "cyl",
+     "x": 1.5,
+     "y": 4.5,
+     "w": 2,
+     "d": 2
+    },
+    {
+     "shape": "cyl",
+     "x": 4.5,
+     "y": 4.5,
+     "w": 2,
+     "d": 2
+    },
+    {
+     "shape": "cyl",
+     "x": 7.5,
+     "y": 4.5,
+     "w": 2,
+     "d": 2
+    },
+    {
+     "shape": "cyl",
+     "x": 1.5,
+     "y": 7.5,
+     "w": 2,
+     "d": 2
+    },
+    {
+     "shape": "cyl",
+     "x": 4.5,
+     "y": 7.5,
+     "w": 2,
+     "d": 2
+    },
+    {
+     "shape": "cyl",
+     "x": 7.5,
+     "y": 7.5,
+     "w": 2,
+     "d": 2
+    }
+   ]
+  },
+  {
+   "id": "aufsteckhals",
+   "component_id": "brush_head",
+   "material_id": "pp",
+   "name": "Aufsteckbürste mit Hals",
+   "short": "Aufsteckbürste",
+   "shape": "cyl",
+   "x": 8,
+   "y": 8,
+   "w": 12,
+   "z": 182,
+   "h": 48,
+   "explode": [
+    0,
+    0,
+    30
+   ],
+   "mass": 8.4,
+   "materials": [
+    [
+     "pp",
+     90
+    ],
+    [
+     "stahl",
+     10
+    ]
+   ],
+   "info": "Polypropylen mit kleiner Metallfeder innen. Gerade nach oben abziehen; wegen der Feder nicht in die Gelbe Tonne.",
+   "color": "#E9EEF2",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 3,
+     "w": 6,
+     "fill": "#9AA2A6"
+    }
+   ]
+  },
+  {
+   "id": "dichtring",
+   "component_id": "plastic_housing",
+   "material_id": "silicone",
+   "name": "Dichtring",
+   "short": "Dichtring",
+   "shape": "cyl",
+   "x": 5,
+   "y": 5,
+   "w": 18,
+   "z": 178,
+   "h": 4,
+   "explode": [
+    0,
+    0,
+    15
+   ],
+   "mass": 1,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "info": "Silikonring, hält Wasser und Zahnpasta aus dem Griff fern. Ist er rissig, rostet der Motor.",
+   "color": "#5A6670",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 5,
+     "y": 5,
+     "w": 8,
+     "fill": "#3A444C"
+    }
+   ]
+  },
+  {
+   "id": "welle",
+   "component_id": "electric_motor",
+   "material_id": "steel",
+   "name": "Antriebswelle",
+   "short": "Welle",
+   "shape": "cyl",
+   "x": 12,
+   "y": 12,
+   "w": 4,
+   "z": 168,
+   "h": 28,
+   "explode": [
+    45,
+    0,
+    60
+   ],
+   "mass": 3.6,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Edelstahlstift, der die Schwingung des Motors auf die Bürste überträgt. Steckt fest im Motor.",
+   "color": "#B8BEC4"
+  },
+  {
+   "id": "motor",
+   "component_id": "electric_motor",
+   "material_id": "mixed_electronics",
+   "name": "Schwingmotor",
+   "short": "Motor",
+   "shape": "cyl",
+   "x": 6,
+   "y": 6,
+   "w": 16,
+   "z": 126,
+   "h": 40,
+   "explode": [
+    45,
+    0,
+    50
+   ],
+   "mass": 26.3,
+   "materials": [
+    [
+     "kupfer",
+     30
+    ],
+    [
+     "stahl",
+     40
+    ],
+    [
+     "ndfeb",
+     20
+    ],
+    [
+     "pcabs",
+     10
+    ]
+   ],
+   "info": "Kupferspulen und Neodym-Magnete bringen die Welle zum Schwingen. Magnete sind wertvoll, aber zerbrechlich.",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 2,
+     "y": 2,
+     "w": 12,
+     "fill": "#B87333"
+    },
+    {
+     "shape": "cyl",
+     "x": 6,
+     "y": 6,
+     "w": 4,
+     "fill": "#9AA2A6"
+    }
+   ]
+  },
+  {
+   "id": "platine",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "Steuerplatine",
+   "short": "Platine",
+   "shape": "box",
+   "x": 7,
+   "y": 13,
+   "w": 14,
+   "d": 2,
+   "z": 74,
+   "h": 50,
+   "r": 0.5,
+   "explode": [
+    45,
+    0,
+    40
+   ],
+   "mass": 7.2,
+   "materials": [
+    [
+     "fr4",
+     55
+    ],
+    [
+     "kupfer",
+     20
+    ],
+    [
+     "chip",
+     15
+    ],
+    [
+     "lot",
+     10
+    ]
+   ],
+   "info": "Steuert Putzmodi, Timer und Ladung. Ist mit dem Akku verlötet, deshalb nur mit Zange trennen.",
+   "color": "#2F6B3A",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 0.3,
+     "w": 4,
+     "d": 1.4,
+     "fill": "#222"
+    }
+   ]
+  },
+  {
+   "id": "akku",
+   "component_id": "li_ion_battery",
+   "material_id": "li_ion",
+   "name": "Lithium-Ionen-Akku (14500)",
+   "short": "Akku",
+   "shape": "cyl",
+   "x": 7,
+   "y": 7,
+   "w": 14,
+   "z": 21,
+   "h": 50,
+   "explode": [
+    45,
+    0,
+    30
+   ],
+   "mass": 22.7,
+   "materials": [
+    [
+     "lco",
+     40
+    ],
+    [
+     "graphit",
+     20
+    ],
+    [
+     "elektrolyt",
+     15
+    ],
+    [
+     "alu",
+     15
+    ],
+    [
+     "kupfer",
+     10
+    ]
+   ],
+   "info": "Rundzelle mit etwa 800 mAh, an die Platine gelötet. Pole abkleben und zur Batteriesammelstelle bringen.",
+   "color": "#3B6EA5",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 4,
+     "w": 6,
+     "fill": "#C9CDD0"
+    }
+   ]
+  },
+  {
+   "id": "ladespule",
+   "component_id": "circuit_board",
+   "material_id": "copper",
+   "name": "Ladespule (induktiv)",
+   "short": "Ladespule",
+   "shape": "cyl",
+   "x": 5,
+   "y": 5,
+   "w": 18,
+   "z": 11,
+   "h": 8,
+   "explode": [
+    45,
+    0,
+    20
+   ],
+   "mass": 7.2,
+   "materials": [
+    [
+     "kupfer",
+     60
+    ],
+    [
+     "ferrit",
+     40
+    ]
+   ],
+   "info": "Kupferspule auf Ferritkern. Nimmt die Energie der Ladestation ohne Kontakt auf, deshalb ist der Griff ganz dicht.",
+   "color": "#B87333",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 2,
+     "y": 2,
+     "w": 14,
+     "fill": "#C98A4B"
+    },
+    {
+     "shape": "cyl",
+     "x": 5,
+     "y": 5,
+     "w": 8,
+     "fill": "#555"
+    }
+   ]
+  },
+  {
+   "id": "taste",
+   "component_id": "plastic_housing",
+   "material_id": "rubber",
+   "name": "Ein-/Aus-Taste",
+   "short": "Taste",
+   "shape": "box",
+   "x": 10,
+   "y": 26,
+   "w": 8,
+   "d": 3,
+   "z": 118,
+   "h": 16,
+   "r": 1.5,
+   "explode": [
+    0,
+    25,
+    0
+   ],
+   "mass": 1.2,
+   "materials": [
+    [
+     "tpu",
+     100
+    ]
+   ],
+   "info": "Weiche Kunststoff-Kappe über dem Taster der Platine. Dichtet den Griff gegen Wasser ab.",
+   "color": "#4A7FB5"
+  },
+  {
+   "id": "griff",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Griffgehäuse",
+   "short": "Griff",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 28,
+   "z": 10,
+   "h": 168,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 35.9,
+   "materials": [
+    [
+     "pcabs",
+     85
+    ],
+    [
+     "tpu",
+     15
+    ]
+   ],
+   "info": "Wasserdichtes Kunststoffrohr mit Gummi-Griffzone. Das Innenleben lässt sich nach oben herausdrücken, oft erst nach Aufschneiden des Bodens.",
+   "color": "#E9EEF2",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 3,
+     "w": 22,
+     "fill": "#D5DCE2"
+    }
+   ]
+  },
+  {
+   "id": "bodenkappe",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Bodenkappe",
+   "short": "Boden",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 28,
+   "z": 0,
+   "h": 10,
+   "explode": [
+    45,
+    0,
+    0
+   ],
+   "mass": 4.8,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Verschließt den Griff unten und sitzt auf der Ladestation. Meist verklebt oder mit Bajonett verschlossen.",
+   "color": "#C9D1D8"
+  }
+ ]
+}
