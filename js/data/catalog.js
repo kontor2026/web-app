@@ -13,3 +13,17 @@ export const CLASSES = {
   papier:     { label: 'Druck / Faser',   color: '#D6C3AE' },
 };
 
+// elements: [Symbol, Anteil in % des Materials]
+export const MATERIALS = {
+  alu:        { name: 'Aluminium', cls: 'metall', elements: [['Al', 97], ['Mg', 1], ['Si', 1]], recycling: 'hoch',
+                text: 'Leicht und gut formbar. Recyceltes Aluminium braucht nur etwa 5 % der Energie von Primäraluminium.' },
+  stahl:      { name: 'Edelstahl', cls: 'metall', elements: [['Fe', 70], ['Cr', 18], ['Ni', 10]], recycling: 'hoch',
+                text: 'Robust und magnetisch je nach Sorte. Wird über Schrottplätze fast vollständig zurückgewonnen.' },
+  kupfer:     { name: 'Kupfer', cls: 'metall', elements: [['Cu', 99]], recycling: 'hoch',
+                text: 'Leitet Strom und Wärme sehr gut. Steckt in Leiterbahnen, Spulen und Kabeln.' },
+  lot:        { name: 'Lötzinn (bleifrei)', cls: 'metall', elements: [['Sn', 96], ['Ag', 3], ['Cu', 1]], recycling: 'mittel',
+                text: 'Verbindet Bauteile mit der Platine. Seit 2006 in der EU weitgehend bleifrei.' },
+  kontakte:   { name: 'Vergoldete Kontakte', cls: 'metall', elements: [['Cu', 90], ['Ni', 8], ['Au', 2]], recycling: 'mittel',
+                text: 'Eine hauchdünne Goldschicht schützt Steckkontakte vor Korrosion.' },
+};
+
