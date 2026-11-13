@@ -144,3 +144,35 @@ main { position: relative; overflow: hidden; }
 .note { font-size: 13px; color: var(--ink-2); padding-left: 12px; border-left: 2px solid var(--rule); }
 .actions-col { display: grid; gap: 8px; margin-top: auto; }
 
+/* ---------- 02 Steckbrief ---------- */
+.sheet { display: grid; grid-template-columns: 1fr 460px; grid-template-rows: 1fr 76px; }
+.canvas {
+  grid-column: 1; grid-row: 1;
+  position: relative; overflow: hidden;
+  background-color: var(--paper);
+  background-image:
+    linear-gradient(var(--rule-2) 1px, transparent 1px), linear-gradient(90deg, var(--rule-2) 1px, transparent 1px);
+  background-size: 24px 24px; background-position: -1px -1px;
+}
+.canvas::after { content: ''; position: absolute; inset: 14px; border: 1px solid var(--rule); pointer-events: none; }
+.drawing { position: absolute; inset: 70px 24px 70px; }
+svg.iso { width: 100%; height: 100%; display: block; overflow: visible; }
+.iso .part { cursor: pointer; transition: opacity .2s; }
+.iso .part polygon { stroke: var(--ink); stroke-width: .9; stroke-linejoin: round; }
+.iso .part .mark { stroke-width: .6; stroke-opacity: .7; }
+.iso.has-hot .part:not(.hot) { opacity: .28; }
+.iso .part.hot polygon.top, .iso .part.sel polygon.top { stroke: var(--accent); stroke-width: 1.6; }
+.iso .part.hot polygon.side, .iso .part.sel polygon.side { stroke: var(--accent); stroke-width: 1.6; }
+.iso .callout { cursor: pointer; }
+.iso .leader { fill: none; stroke: var(--ink); stroke-width: .8; }
+.iso .anchor { fill: var(--ink); }
+.iso .balloon { fill: var(--sheet); stroke: var(--ink); stroke-width: 1; }
+.iso .num { font: 500 10px var(--mono); text-anchor: middle; dominant-baseline: middle; fill: var(--ink); }
+.iso .lbl { font: 13px var(--sans); dominant-baseline: middle; fill: var(--ink-2); }
+.iso.has-hot .callout:not(.hot) { opacity: .3; }
+.iso .callout.hot .balloon, .iso .callout.sel .balloon { fill: var(--accent); stroke: var(--accent); }
+.iso .callout.hot .num, .iso .callout.sel .num { fill: var(--accent-ink); }
+.iso .callout.hot .leader, .iso .callout.sel .leader { stroke: var(--accent); }
+.iso .callout.hot .anchor, .iso .callout.sel .anchor { fill: var(--accent); }
+.iso .callout.hot .lbl, .iso .callout.sel .lbl { fill: var(--ink); font-weight: 500; }
+
