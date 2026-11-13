@@ -329,6 +329,7 @@ function viewSheet() {
     v.querySelectorAll('#seg button').forEach((x) => x.classList.toggle('on', x === b));
     view.setExploded(b.dataset.x === '1');
   }));
+  v.querySelector('#build').addEventListener('click', viewCraft);
 
   function setPanel(html, crumbs) {
     panel.innerHTML = `<div class="panel-inner">
@@ -481,6 +482,75 @@ function moveTip(e) {
   const x = Math.min(e.clientX + 16, window.innerWidth - 300);
   tip.style.left = `${x}px`;
   tip.style.top = `${e.clientY + 18}px`;
+}
+
+/* ------------------------------------------------------------------ */
+/* 03 Bauen                                                             */
+/* ------------------------------------------------------------------ */
+
+function viewCraft() {
+  tip.hidden = true;
+  const obj = state.obj;
+  const letters = ['A', 'B', 'C'];
+  const dots = (n) => `<span class="dots">${'<b>●</b>'.repeat(n)}${'○'.repeat(3 - n)}</span>`;
+  const v = h(`
+    <section class="view craft">
+      <div class="craft-main">
+        <div class="craft-head">
+          <div>
+            <div class="eyebrow">Schritt 03 · Bauen</div>
+            <h1 style="margin-top:8px">Drei Ideen für dein ${obj.name}</h1>
+            <p>Jede Idee nutzt deinen Gegenstand und Material aus dem Lager. Vorgeschlagen von der KI, geprüft von der Werkstatt.</p>
+          </div>
+          <div class="row">
+            <button class="btn ghost" id="back">Zurück zum Steckbrief</button>
+            <button class="btn" id="more">Andere Ideen</button>
+          </div>
+        </div>
+        <div class="ideas">${obj.projekte.map((p, i) => `
+          <article class="idea" data-i="${i}">
+            <div class="letter">${letters[i]}</div>
+            <div><h2>${p.titel}</h2><p class="kurz">${p.kurz}</p></div>
+            <div class="meta"><span>Schwierigkeit ${dots(p.stufe)}</span><span>${p.dauer}</span></div>
+            <div class="goal"><small>Das lernst du</small>${p.lernziel}</div>
+            <div><h4>Material</h4><div class="uses">${p.nutzt.map((u) => {
+              if (u.neu) return `<div class="use neu"><i></i><span>${u.name}</span><span class="f">${NEW_FACH}</span><span class="q">neu</span></div>`;
+              const it = byId(u.inv);
+              return `<div class="use"><i></i><span>${it.name}</span><span class="f">${it.fach}</span><span class="q">${u.menge}×</span></div>`;
+            }).join('')}</div></div>
+            <div><h4>Werkzeug</h4><div class="tools">${p.werkzeug.map((w) => `<span class="tag">${w}</span>`).join('')}</div></div>
+            <div><h4>So geht's</h4><ol class="steps-list">${p.schritte.map((s) => `<li>${s}</li>`).join('')}</ol></div>
+            <button class="btn primary" data-build="${i}">Dieses Projekt bauen</button>
+          </article>`).join('')}</div>
+      </div>
+      <aside class="inv" id="inv">
+        <h3>Lager der Werkstatt</h3>
+        <p>Fahre über eine Idee, um zu sehen, was sie aus dem Lager braucht.</p>
+        <div class="irow new" data-inv="__neu"><span class="f">${NEW_FACH}</span><span>${state.model}</span><span class="q">neu</span></div>
+        ${INVENTORY.map((i) => `<div class="irow" data-inv="${i.id}"><span class="f">${i.fach}</span><span>${i.name}</span><span class="q">${fmt(i.menge)} ${i.einheit}</span></div>`).join('')}
+      </aside>
+    </section>`);
+  show(v, 'craft');
+
+  const inv = v.querySelector('#inv');
+  v.querySelectorAll('.idea').forEach((card) => {
+    const p = obj.projekte[+card.dataset.i];
+    const used = new Set(p.nutzt.map((u) => (u.neu ? '__neu' : u.inv)));
+    card.addEventListener('pointerenter', () => {
+      inv.classList.add('focus');
+      inv.querySelectorAll('.irow').forEach((r) => r.classList.toggle('used', used.has(r.dataset.inv)));
+    });
+    card.addEventListener('pointerleave', () => {
+      inv.classList.remove('focus');
+      inv.querySelectorAll('.irow').forEach((r) => r.classList.remove('used'));
+    });
+  });
+  v.querySelectorAll('[data-build]').forEach((b) => b.addEventListener('click', () => modalBuild(obj.projekte[+b.dataset.build])));
+  v.querySelector('#back').addEventListener('click', viewSheet);
+
+  animate(v.querySelectorAll('.idea'), { opacity: [0, 1], translateY: [24, 0], delay: stagger(110, { start: 200 }), duration: 600, ease: 'outCubic' });
+  animate(v.querySelectorAll('.idea .letter'), { opacity: [0, 1], translateX: [-10, 0], delay: stagger(110, { start: 450 }), duration: 500 });
+  animate(inv.querySelectorAll('.irow'), { opacity: [0, 1], delay: stagger(25, { start: 300 }), duration: 300 });
 }
 
 document.querySelector('.brand').addEventListener('click', viewScan);
