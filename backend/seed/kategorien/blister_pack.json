@@ -37,18 +37,18 @@
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Al": 700.0
+   "Al": 900.0
   },
   "herkunft": {
    "Al": "Modellmassen (Schätzung)"
   },
   "materialien_g": {
-   "pvc": 4.3,
-   "aluminium": 0.7
+   "pvc": 3.7,
+   "aluminium": 0.9
   },
-  "co2_kg": 0.018,
+  "co2_kg": 0.019,
   "co2_mit_recyclat_kg": 0.002,
-  "co2_ersparnis_kg": 0.016,
+  "co2_ersparnis_kg": 0.017,
   "co2_ohne_faktor": [],
   "rohstoffwert_eur": 0.0,
   "wert_ohne_preis": [],
@@ -129,114 +129,492 @@
  "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "naepfe",
+   "id": "napf0",
    "component_id": "pvc_blister",
    "material_id": "pvc",
-   "name": "Tablettennäpfe",
-   "short": "Näpfe",
-   "shape": "box",
-   "x": 4,
-   "y": 6,
-   "w": 92,
-   "d": 48,
+   "name": "Tablettennapf",
+   "short": "Napf",
+   "shape": "cyl",
+   "x": 5,
+   "y": 12,
+   "w": 16,
+   "d": 12,
    "z": 0.4,
-   "h": 6,
-   "r": 4,
+   "h": 5.3,
    "explode": [
     0,
     0,
-    25.0
+    44.0
    ],
-   "mass": 1.2,
+   "mass": 0.1,
    "materials": [
     [
      "pvc",
      100
     ]
    ],
-   "info": "Tiefgezogene Mulden, je eine pro Tablette. Alle Tabletten herausdrücken; Reste von Medikamenten gehören in die Apotheke, nicht in den Müll.",
+   "info": "Tiefgezogene Mulde, je eine pro Tablette. Alle Tabletten herausdrücken; Medikamentenreste gehören in die Apotheke oder den Restmüll, nicht in die Gelbe Tonne.",
    "color": "#E4EBEF",
-   "opacity": 0.6,
+   "opacity": 0.55,
+   "label": true,
    "marks": [
     {
      "shape": "cyl",
-     "x": 4.0,
+     "x": 1.5,
+     "y": 2,
+     "w": 13,
+     "d": 8,
+     "fill": "#FFFFFF"
+    },
+    {
+     "shape": "box",
+     "x": 7.6,
      "y": 3,
-     "w": 12,
-     "d": 18,
+     "w": 0.6,
+     "d": 6,
+     "r": 0,
+     "fill": "#D5D9DC"
+    }
+   ]
+  },
+  {
+   "id": "napf1",
+   "component_id": "pvc_blister",
+   "material_id": "pvc",
+   "name": "Tablettennapf",
+   "short": "Napf",
+   "shape": "cyl",
+   "x": 23.5,
+   "y": 12,
+   "w": 16,
+   "d": 12,
+   "z": 0.4,
+   "h": 5.3,
+   "explode": [
+    0,
+    0,
+    44.0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "pvc",
+     100
+    ]
+   ],
+   "info": "Napf aus PVC, gehört zur Blisterfolie.",
+   "color": "#E4EBEF",
+   "opacity": 0.55,
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 1.5,
+     "y": 2,
+     "w": 13,
+     "d": 8,
      "fill": "#FFFFFF"
     },
     {
-     "shape": "cyl",
-     "x": 22.5,
+     "shape": "box",
+     "x": 7.6,
      "y": 3,
-     "w": 12,
-     "d": 18,
+     "w": 0.6,
+     "d": 6,
+     "r": 0,
+     "fill": "#D5D9DC"
+    }
+   ]
+  },
+  {
+   "id": "napf2",
+   "component_id": "pvc_blister",
+   "material_id": "pvc",
+   "name": "Tablettennapf",
+   "short": "Napf",
+   "shape": "cyl",
+   "x": 42,
+   "y": 12,
+   "w": 16,
+   "d": 12,
+   "z": 0.4,
+   "h": 5.3,
+   "explode": [
+    0,
+    0,
+    44.0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "pvc",
+     100
+    ]
+   ],
+   "info": "Napf aus PVC, gehört zur Blisterfolie.",
+   "color": "#E4EBEF",
+   "opacity": 0.55,
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 1.5,
+     "y": 2,
+     "w": 13,
+     "d": 8,
      "fill": "#FFFFFF"
     },
     {
-     "shape": "cyl",
-     "x": 41.0,
+     "shape": "box",
+     "x": 7.6,
      "y": 3,
-     "w": 12,
-     "d": 18,
+     "w": 0.6,
+     "d": 6,
+     "r": 0,
+     "fill": "#D5D9DC"
+    }
+   ]
+  },
+  {
+   "id": "napf3",
+   "component_id": "pvc_blister",
+   "material_id": "pvc",
+   "name": "Tablettennapf",
+   "short": "Napf",
+   "shape": "cyl",
+   "x": 60.5,
+   "y": 12,
+   "w": 16,
+   "d": 12,
+   "z": 0.4,
+   "h": 5.3,
+   "explode": [
+    0,
+    0,
+    44.0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "pvc",
+     100
+    ]
+   ],
+   "info": "Napf aus PVC, gehört zur Blisterfolie.",
+   "color": "#E4EBEF",
+   "opacity": 0.55,
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 1.5,
+     "y": 2,
+     "w": 13,
+     "d": 8,
      "fill": "#FFFFFF"
     },
     {
-     "shape": "cyl",
-     "x": 59.5,
+     "shape": "box",
+     "x": 7.6,
      "y": 3,
-     "w": 12,
-     "d": 18,
+     "w": 0.6,
+     "d": 6,
+     "r": 0,
+     "fill": "#D5D9DC"
+    }
+   ]
+  },
+  {
+   "id": "napf4",
+   "component_id": "pvc_blister",
+   "material_id": "pvc",
+   "name": "Tablettennapf",
+   "short": "Napf",
+   "shape": "cyl",
+   "x": 79,
+   "y": 12,
+   "w": 16,
+   "d": 12,
+   "z": 0.4,
+   "h": 5.3,
+   "explode": [
+    0,
+    0,
+    44.0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "pvc",
+     100
+    ]
+   ],
+   "info": "Napf aus PVC, gehört zur Blisterfolie.",
+   "color": "#E4EBEF",
+   "opacity": 0.55,
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 1.5,
+     "y": 2,
+     "w": 13,
+     "d": 8,
      "fill": "#FFFFFF"
     },
     {
-     "shape": "cyl",
-     "x": 78.0,
+     "shape": "box",
+     "x": 7.6,
      "y": 3,
-     "w": 12,
-     "d": 18,
+     "w": 0.6,
+     "d": 6,
+     "r": 0,
+     "fill": "#D5D9DC"
+    }
+   ]
+  },
+  {
+   "id": "napf5",
+   "component_id": "pvc_blister",
+   "material_id": "pvc",
+   "name": "Tablettennapf",
+   "short": "Napf",
+   "shape": "cyl",
+   "x": 5,
+   "y": 36,
+   "w": 16,
+   "d": 12,
+   "z": 0.4,
+   "h": 5.3,
+   "explode": [
+    0,
+    0,
+    44.0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "pvc",
+     100
+    ]
+   ],
+   "info": "Napf aus PVC, gehört zur Blisterfolie.",
+   "color": "#E4EBEF",
+   "opacity": 0.55,
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 1.5,
+     "y": 2,
+     "w": 13,
+     "d": 8,
      "fill": "#FFFFFF"
     },
     {
+     "shape": "box",
+     "x": 7.6,
+     "y": 3,
+     "w": 0.6,
+     "d": 6,
+     "r": 0,
+     "fill": "#D5D9DC"
+    }
+   ]
+  },
+  {
+   "id": "napf6",
+   "component_id": "pvc_blister",
+   "material_id": "pvc",
+   "name": "Tablettennapf",
+   "short": "Napf",
+   "shape": "cyl",
+   "x": 23.5,
+   "y": 36,
+   "w": 16,
+   "d": 12,
+   "z": 0.4,
+   "h": 5.3,
+   "explode": [
+    0,
+    0,
+    44.0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "pvc",
+     100
+    ]
+   ],
+   "info": "Napf aus PVC, gehört zur Blisterfolie.",
+   "color": "#E4EBEF",
+   "opacity": 0.55,
+   "label": false,
+   "marks": [
+    {
      "shape": "cyl",
-     "x": 4.0,
-     "y": 28,
-     "w": 12,
-     "d": 18,
+     "x": 1.5,
+     "y": 2,
+     "w": 13,
+     "d": 8,
      "fill": "#FFFFFF"
     },
     {
+     "shape": "box",
+     "x": 7.6,
+     "y": 3,
+     "w": 0.6,
+     "d": 6,
+     "r": 0,
+     "fill": "#D5D9DC"
+    }
+   ]
+  },
+  {
+   "id": "napf7",
+   "component_id": "pvc_blister",
+   "material_id": "pvc",
+   "name": "Tablettennapf",
+   "short": "Napf",
+   "shape": "cyl",
+   "x": 42,
+   "y": 36,
+   "w": 16,
+   "d": 12,
+   "z": 0.4,
+   "h": 5.3,
+   "explode": [
+    0,
+    0,
+    44.0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "pvc",
+     100
+    ]
+   ],
+   "info": "Napf aus PVC, gehört zur Blisterfolie.",
+   "color": "#E4EBEF",
+   "opacity": 0.55,
+   "label": false,
+   "marks": [
+    {
      "shape": "cyl",
-     "x": 22.5,
-     "y": 28,
-     "w": 12,
-     "d": 18,
+     "x": 1.5,
+     "y": 2,
+     "w": 13,
+     "d": 8,
      "fill": "#FFFFFF"
     },
     {
+     "shape": "box",
+     "x": 7.6,
+     "y": 3,
+     "w": 0.6,
+     "d": 6,
+     "r": 0,
+     "fill": "#D5D9DC"
+    }
+   ]
+  },
+  {
+   "id": "napf8",
+   "component_id": "pvc_blister",
+   "material_id": "pvc",
+   "name": "Tablettennapf",
+   "short": "Napf",
+   "shape": "cyl",
+   "x": 60.5,
+   "y": 36,
+   "w": 16,
+   "d": 12,
+   "z": 0.4,
+   "h": 5.3,
+   "explode": [
+    0,
+    0,
+    44.0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "pvc",
+     100
+    ]
+   ],
+   "info": "Napf aus PVC, gehört zur Blisterfolie.",
+   "color": "#E4EBEF",
+   "opacity": 0.55,
+   "label": false,
+   "marks": [
+    {
      "shape": "cyl",
-     "x": 41.0,
-     "y": 28,
-     "w": 12,
-     "d": 18,
+     "x": 1.5,
+     "y": 2,
+     "w": 13,
+     "d": 8,
      "fill": "#FFFFFF"
     },
     {
+     "shape": "box",
+     "x": 7.6,
+     "y": 3,
+     "w": 0.6,
+     "d": 6,
+     "r": 0,
+     "fill": "#D5D9DC"
+    }
+   ]
+  },
+  {
+   "id": "napf9",
+   "component_id": "pvc_blister",
+   "material_id": "pvc",
+   "name": "Tablettennapf",
+   "short": "Napf",
+   "shape": "cyl",
+   "x": 79,
+   "y": 36,
+   "w": 16,
+   "d": 12,
+   "z": 0.4,
+   "h": 5.3,
+   "explode": [
+    0,
+    0,
+    44.0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "pvc",
+     100
+    ]
+   ],
+   "info": "Napf aus PVC, gehört zur Blisterfolie.",
+   "color": "#E4EBEF",
+   "opacity": 0.55,
+   "label": false,
+   "marks": [
+    {
      "shape": "cyl",
-     "x": 59.5,
-     "y": 28,
-     "w": 12,
-     "d": 18,
+     "x": 1.5,
+     "y": 2,
+     "w": 13,
+     "d": 8,
      "fill": "#FFFFFF"
     },
     {
-     "shape": "cyl",
-     "x": 78.0,
-     "y": 28,
-     "w": 12,
-     "d": 18,
-     "fill": "#FFFFFF"
+     "shape": "box",
+     "x": 7.6,
+     "y": 3,
+     "w": 0.6,
+     "d": 6,
+     "r": 0,
+     "fill": "#D5D9DC"
     }
    ]
   },
@@ -257,60 +635,104 @@
    "explode": [
     0,
     0,
-    25.0
+    44.0
    ],
-   "mass": 3.1,
+   "mass": 2.7,
    "materials": [
     [
      "pvc",
      100
     ]
    ],
-   "info": "Glasklares PVC, etwa 0,25 mm dick, auf die Alufolie gesiegelt. Der leere Blister kommt als Ganzes in die Gelbe Tonne.",
+   "info": "Glasklares PVC, etwa 0,25 mm dick, mit der Alufolie verschweißt. PVC und Alu lassen sich nicht trennen; der leere Blister kommt als Ganzes in die Gelbe Tonne.",
    "color": "#E4EBEF",
    "opacity": 0.6,
    "marks": [
     {
      "shape": "box",
-     "x": 1.0,
-     "y": 30.0,
-     "w": 18.5,
-     "d": 0.5,
+     "x": 2.5,
+     "y": 29.5,
+     "w": 95,
+     "d": 1,
+     "r": 0,
      "fill": "#BFC8CE"
     },
     {
      "shape": "box",
-     "x": 19.5,
-     "y": 30.0,
-     "w": 18.5,
-     "d": 0.5,
+     "x": 22.2,
+     "y": 2,
+     "w": 0.6,
+     "d": 56,
+     "r": 0,
      "fill": "#BFC8CE"
     },
     {
      "shape": "box",
-     "x": 38.0,
-     "y": 30.0,
-     "w": 18.5,
-     "d": 0.5,
+     "x": 40.7,
+     "y": 2,
+     "w": 0.6,
+     "d": 56,
+     "r": 0,
      "fill": "#BFC8CE"
     },
     {
      "shape": "box",
-     "x": 56.5,
-     "y": 30.0,
-     "w": 18.5,
-     "d": 0.5,
+     "x": 59.2,
+     "y": 2,
+     "w": 0.6,
+     "d": 56,
+     "r": 0,
      "fill": "#BFC8CE"
     },
     {
      "shape": "box",
-     "x": 75.0,
-     "y": 30.0,
-     "w": 18.5,
-     "d": 0.5,
+     "x": 77.7,
+     "y": 2,
+     "w": 0.6,
+     "d": 56,
+     "r": 0,
      "fill": "#BFC8CE"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 3,
+     "w": 6,
+     "d": 6,
+     "r": 1.5,
+     "fill": "#D2DADE"
     }
    ]
+  },
+  {
+   "id": "siegellack",
+   "component_id": "aluminium_lid_foil",
+   "material_id": "aluminium",
+   "name": "Heißsiegellack",
+   "short": "Siegellack",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 100,
+   "d": 60,
+   "z": 0.08,
+   "h": 0.02,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    22.0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "klebstoff",
+     100
+    ]
+   ],
+   "info": "Hauchdünne Lackschicht auf der Alufolie. Beim Erhitzen schmilzt sie und klebt die PVC-Folie fest.",
+   "color": "#E8E2C8",
+   "opacity": 0.8
   },
   {
    "id": "alufolie",
@@ -324,110 +746,115 @@
    "w": 100,
    "d": 60,
    "z": 0,
-   "h": 0.1,
+   "h": 0.08,
    "r": 3,
    "explode": [
     0,
     0,
     0
    ],
-   "mass": 0.7,
+   "mass": 0.8,
    "materials": [
     [
      "alu",
-     88
-    ],
-    [
-     "klebstoff",
-     8
+     92
     ],
     [
      "druck",
-     4
+     8
     ]
    ],
-   "info": "Hauchdünne Aluminiumfolie mit Siegellack und Aufdruck. Die Tablette drückt man durch sie hindurch.",
+   "info": "Hauchdünne Aluminiumfolie (0,02 mm) mit Aufdruck. Die Tablette drückt man durch sie hindurch.",
    "color": "#D2D6DA",
    "marks": [
     {
      "shape": "cyl",
-     "x": 7.0,
-     "y": 11,
+     "x": 6.0,
+     "y": 12,
      "w": 14,
-     "d": 14,
+     "d": 12,
      "fill": "#B5BBC0"
     },
     {
      "shape": "cyl",
-     "x": 25.5,
-     "y": 11,
+     "x": 24.5,
+     "y": 12,
      "w": 14,
-     "d": 14,
+     "d": 12,
      "fill": "#B5BBC0"
     },
     {
      "shape": "cyl",
-     "x": 44.0,
-     "y": 11,
+     "x": 43.0,
+     "y": 12,
      "w": 14,
-     "d": 14,
+     "d": 12,
      "fill": "#B5BBC0"
     },
     {
      "shape": "cyl",
-     "x": 62.5,
-     "y": 11,
+     "x": 61.5,
+     "y": 12,
      "w": 14,
-     "d": 14,
+     "d": 12,
      "fill": "#B5BBC0"
     },
     {
      "shape": "cyl",
-     "x": 81.0,
-     "y": 11,
+     "x": 80.0,
+     "y": 12,
      "w": 14,
-     "d": 14,
+     "d": 12,
      "fill": "#B5BBC0"
     },
     {
      "shape": "cyl",
-     "x": 7.0,
+     "x": 6.0,
      "y": 36,
      "w": 14,
-     "d": 14,
+     "d": 12,
      "fill": "#B5BBC0"
     },
     {
      "shape": "cyl",
-     "x": 25.5,
+     "x": 24.5,
      "y": 36,
      "w": 14,
-     "d": 14,
+     "d": 12,
      "fill": "#B5BBC0"
     },
     {
      "shape": "cyl",
-     "x": 44.0,
+     "x": 43.0,
      "y": 36,
      "w": 14,
-     "d": 14,
+     "d": 12,
      "fill": "#B5BBC0"
     },
     {
      "shape": "cyl",
-     "x": 62.5,
+     "x": 61.5,
      "y": 36,
      "w": 14,
-     "d": 14,
+     "d": 12,
      "fill": "#B5BBC0"
     },
     {
      "shape": "cyl",
-     "x": 81.0,
+     "x": 80.0,
      "y": 36,
      "w": 14,
-     "d": 14,
+     "d": 12,
      "fill": "#B5BBC0"
+    },
+    {
+     "shape": "box",
+     "x": 2.5,
+     "y": 29.5,
+     "w": 95,
+     "d": 1,
+     "r": 0,
+     "fill": "#A9B0B6"
     },
     {
      "shape": "box",
@@ -437,6 +864,15 @@
      "d": 5,
      "r": 0,
      "fill": "#4A6FA5"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 2,
+     "w": 40,
+     "d": 4,
+     "r": 0,
+     "fill": "#7C8790"
     }
    ]
   }

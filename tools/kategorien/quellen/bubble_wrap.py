@@ -13,7 +13,8 @@ from bau import teil, mark, raster, explodiere, skaliere_masse, schreibe  # noqa
 FOLIE = '#E4EEF1'
 NOPPE = '#CFE0E6'
 LDPE = [['ldpe', 100]]
-NOPPEN = raster(5, 5, 12, 16, 20, 20, 24.2, 24.5, shape='cyl', fill=NOPPE)  # 20-mm-Noppen auf 300 × 394 mm
+NOPPEN = (raster(5, 5, 12, 16, 20, 20, 24.2, 24.5, shape='cyl', fill=NOPPE)  # 20-mm-Noppen auf 300 × 394 mm
+          + raster(9, 8, 12, 16, 6, 5, 24.2, 24.5, shape='cyl', fill='#F7FBFC'))  # Glanzlicht je Noppe
 teile = [
     teil('traeger_oben', 'ldpe_film', 'Trägerfolie (obere Hälfte)', 'Trägerfolie', 'box',
          x=0, y=6, w=300, d=394, z=9.5, h=0.5, r=1, mass=2.4, materials=LDPE, color=FOLIE, opacity=0.6,
@@ -38,6 +39,6 @@ teile = [
          info='Hier ist der Zuschnitt umgeklappt. Die Noppen am Knick werden oft zerdrückt.',
          marks=raster(5, 1, 12, 1, 20, 4, 24.2, fill=NOPPE)),
 ]
-explodiere(teile, abstand=120)
+explodiere(teile, abstand=100)
 skaliere_masse(teile, oid='bubble_wrap')
 schreibe('bubble_wrap', teile)

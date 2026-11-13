@@ -2,7 +2,7 @@
 
 Typische Haushaltsrolle Frischhaltefolie (30 cm breit, ca. 30 m LDPE-Folie, 40 mm Durchmesser) liegend auf dem
 Papphülsenkern. Die runde Rolle ist aus waagrechten Scheiben (Kreissehnen) aufgebaut, der Kern ragt an beiden
-Enden 2 mm heraus. Explodiert wird der Kern seitlich herausgezogen, das lose Folienende nach vorne abgehoben.
+Enden 2 mm heraus. Explodiert wird der Kern seitlich herausgezogen, die Rolle hebt aus dem Spenderkarton, der Deckel darüber.
 """
 import math
 import sys
@@ -49,9 +49,36 @@ for i, (z, h, d) in enumerate(reversed(kern)):
                            'kommt die Hülse ins Altpapier.',
                       marks=[mark('box', 0, 0, 300, d, 0, '#A27B50'), mark('box', 0, round(d / 2 - 1, 1), 300, 2, 0, '#8E6A42')]
                       if oben else None))
-teile.insert(1, teil('folienende', 'ldpe_film', 'Loses Folienende', 'Folienende', 'box',
-                     x=2, y=40, w=296, d=0.3, z=6, h=24, r=0, explode=[0, 45, 0], mass=0.5,
-                     materials=[['ldpe', 100]], color=FOLIE, opacity=0.7,
-                     info='Hier zieht man die Folie ab. Sie haftet an sich selbst, deshalb sucht man den Anfang oft lange.'))
+# Spenderkarton mit Klappdeckel: Rolle liegt innen (zusammengebaut verdeckt), hebt explodiert heraus.
+KOMP = teile[0]['component_id']
+ROLLE = [0, 0, 90]
+DECKEL = [0, 0, 180]
+for p in teile:
+    p['x'] += 3
+    p['y'] += 2
+    p['z'] += 2
+    p['sortBias'] = -20
+    p['explode'] = [330, 0, 90] if p['id'].startswith('kern') else ROLLE
+KARTON = '#2E7D6B'
+KARTONINFO = dict(material_id='cardboard', materials=[['papier', 90], ['druck', 5], ['klebstoff', 5]])
+teile[:0] = [
+    teil('deckel', KOMP, 'Klappdeckel', 'Deckel', 'box', x=0, y=0, w=306, d=44, z=40, h=4, r=1, explode=DECKEL,
+         mass=6, color=KARTON, **KARTONINFO,
+         info='Deckel des Spenderkartons, er hält die Rolle beim Abreißen fest. Leeren Karton flach falten und ins Altpapier.',
+         marks=[mark('box', 0, 12, 306, 20, 0, '#F4F6F5'), mark('box', 20, 16, 90, 12, 2, KARTON),
+                mark('box', 2, 2, 302, 40, 1)]),
+    teil('klappe', KOMP, 'Vordere Klappe', 'Klappe', 'box', x=0, y=44, w=306, d=0.6, z=30, h=14, r=0,
+         explode=DECKEL, mass=3, color=KARTON, sortBias=30, label=False, **KARTONINFO,
+         info='Die Klappe wird beim Abreißen auf die Folie gedrückt, damit sie gerade abreißt.'),
+    teil('schneide', KOMP, 'Abreißschiene aus Metall', 'Schneide', 'box', material_id='steel',
+         x=3, y=44.6, w=300, d=0.4, z=27, h=4, r=0, explode=DECKEL, mass=4, materials=[['stahl', 100]],
+         color='#9DA4AA', sortBias=32,
+         info='Gezahnte Stahlschiene zum Abreißen der Folie. Vorsicht, scharf! Vor dem Altpapier abziehen, '
+              'sie gehört in die Gelbe Tonne.'),
+]
+teile.append(teil('karton', KOMP, 'Spenderkarton', 'Karton', 'box', x=0, y=0, w=306, d=44, z=0, h=40, r=1,
+                  explode=[0, 0, 0], mass=24, color=KARTON, **KARTONINFO,
+                  info='Bedruckter Faltkarton, schützt die Rolle. Pappe ins Altpapier, Folie und Rolle getrennt entsorgen.',
+                  marks=[mark('box', 2, 2, 302, 40, 1, '#3B3B38')]))
 skaliere_masse(teile, oid='cling_film', stellen=2)
 schreibe('cling_film', teile)

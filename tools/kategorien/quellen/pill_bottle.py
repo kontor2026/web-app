@@ -22,7 +22,7 @@ teile = [
          x=3, y=3, w=34, z=54, h=15.5, mass=1.6,
          info='Trägt das Gewinde und die Zähne, in die die Außenkappe beim Drücken einrastet. '
               'Beide Kappen sind aus PP und bleiben zusammen.',
-         color='#FFFFFF', marks=raster(3, 15.5, 8, 1, 2, 3, 3.6, fill='#D8D6CE')),
+         color='#FFFFFF', marks=[mark('cyl', 3, 3, 28, fill='#EFEFEA')] + raster(6, 15.5, 7, 1, 1.6, 3, 3.6, fill='#C8C6BE')),
     teil('siegel', 'child_safe_cap', 'Siegelscheibe', 'Siegel', 'cyl',
          material_id='aluminium', x=7, y=7, w=26, z=67, h=0.4, mass=0.2,
          materials=[['alu', 40], ['ldpe', 35], ['papier', 25]],
@@ -43,12 +43,12 @@ teile = [
     teil('boden', 'hdpe_bottle_body', 'Boden', 'Boden', 'cyl',
          x=2, y=2, w=36, z=0, h=3, mass=0.8,
          info='Am Boden steht das Recyclingzeichen 2 für HDPE.', color=DOSE, label=False),
-    teil('etikett', 'paper_label', 'Papieretikett', 'Etikett', 'box',
-         x=39, y=8, w=0.3, d=24, z=10, h=34, r=0, explode=[40, 0, 0], mass=0.3,
+    teil('etikett', 'paper_label', 'Papieretikett', 'Etikett', 'cyl',
+         x=0.5, y=0.5, w=39, z=8, h=40, explode=[58, 0, 0], mass=0.3,
          materials=[['papier', 92], ['druck', 5], ['klebstoff', 3]],
-         info='Papier mit Aufdruck und Klebstoff. Darf beim Recycling dranbleiben.',
-         color='#FFFFFF', sortBias=100),
+         info='Papier mit Name, Dosierung und Haltbarkeit, rundum geklebt. Darf beim Recycling dranbleiben.',
+         color='#CFE0EE', sortBias=1, marks=[mark('cyl', 0.8, 0.8, 37.4, fill=DOSE)]),
 ]
-explodiere(teile, abstand=12, nach_liste=True, gruppen=[['hals', 'schulter', 'rumpf', 'boden']])
+explodiere(teile, abstand=16, nach_liste=True, gruppen=[['hals', 'schulter', 'rumpf', 'boden']])
 skaliere_masse(teile, oid='pill_bottle')
 schreibe('pill_bottle', teile)

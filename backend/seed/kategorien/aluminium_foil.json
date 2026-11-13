@@ -21,36 +21,36 @@
  "werte": [
   {
    "k": "Rohstoffwert",
-   "v": "≈ 0,34 €",
+   "v": "≈ 0,27 €",
    "hint": "Kaum Metalle enthalten."
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 1,44 kg",
+   "v": "≈ 1,18 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 0,08 kg",
-   "hint": "spart 1,36 kg, wenn recycelte Materialien eingesetzt werden"
+   "v": "≈ 0,09 kg",
+   "hint": "spart 1,09 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Al": 119740.0
+   "Al": 95930.0
   },
   "herkunft": {
    "Al": "Modellmassen (Schätzung)"
   },
   "materialien_g": {
-   "aluminium": 119.7,
-   "cardboard": 30.3
+   "aluminium": 95.9,
+   "cardboard": 54.1
   },
-  "co2_kg": 1.444,
-  "co2_mit_recyclat_kg": 0.083,
-  "co2_ersparnis_kg": 1.362,
+  "co2_kg": 1.18,
+  "co2_mit_recyclat_kg": 0.089,
+  "co2_ersparnis_kg": 1.091,
   "co2_ohne_faktor": [],
-  "rohstoffwert_eur": 0.34,
+  "rohstoffwert_eur": 0.27,
   "wert_ohne_preis": [],
   "preisstand": "2026-11-13",
   "quellen": {
@@ -129,25 +129,163 @@
  "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
+   "id": "deckel",
+   "component_id": "aluminium_foil_sheet",
+   "material_id": "cardboard",
+   "name": "Klappdeckel",
+   "short": "Deckel",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 306,
+   "d": 44,
+   "z": 40,
+   "h": 4,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    180
+   ],
+   "mass": 5.23,
+   "materials": [
+    [
+     "papier",
+     90
+    ],
+    [
+     "druck",
+     5
+    ],
+    [
+     "klebstoff",
+     5
+    ]
+   ],
+   "info": "Deckel des Spenderkartons, er hält die Rolle beim Abreißen fest. Leeren Karton flach falten und ins Altpapier.",
+   "color": "#24508F",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 12,
+     "w": 306,
+     "d": 20,
+     "r": 0,
+     "fill": "#C9CED3"
+    },
+    {
+     "shape": "box",
+     "x": 20,
+     "y": 16,
+     "w": 90,
+     "d": 12,
+     "r": 2,
+     "fill": "#24508F"
+    },
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 2,
+     "w": 302,
+     "d": 40,
+     "r": 1
+    }
+   ]
+  },
+  {
+   "id": "klappe",
+   "component_id": "aluminium_foil_sheet",
+   "material_id": "cardboard",
+   "name": "Vordere Klappe",
+   "short": "Klappe",
+   "shape": "box",
+   "x": 0,
+   "y": 44,
+   "w": 306,
+   "d": 0.6,
+   "z": 30,
+   "h": 14,
+   "r": 0,
+   "explode": [
+    0,
+    0,
+    180
+   ],
+   "mass": 2.62,
+   "materials": [
+    [
+     "papier",
+     90
+    ],
+    [
+     "druck",
+     5
+    ],
+    [
+     "klebstoff",
+     5
+    ]
+   ],
+   "info": "Die Klappe wird beim Abreißen auf die Folie gedrückt, damit sie gerade abreißt.",
+   "color": "#24508F",
+   "label": false,
+   "sortBias": 30
+  },
+  {
+   "id": "schneide",
+   "component_id": "aluminium_foil_sheet",
+   "material_id": "cardboard",
+   "name": "Sägezahnkante aus Pappe",
+   "short": "Sägezahn",
+   "shape": "box",
+   "x": 3,
+   "y": 44.6,
+   "w": 300,
+   "d": 0.4,
+   "z": 27,
+   "h": 4,
+   "r": 0,
+   "explode": [
+    0,
+    0,
+    180
+   ],
+   "mass": 0.87,
+   "materials": [
+    [
+     "papier",
+     97
+    ],
+    [
+     "klebstoff",
+     3
+    ]
+   ],
+   "info": "Gezahnte Kante aus fester Pappe zum Abreißen der Folie. Bleibt am Karton und kommt mit ins Altpapier.",
+   "color": "#D9C7A4",
+   "sortBias": 32
+  },
+  {
    "id": "folie_1",
    "component_id": "aluminium_foil_sheet",
    "material_id": "aluminium",
    "name": "Aufgewickelte Alufolie",
    "short": "Alufolie",
    "shape": "box",
-   "x": 2,
-   "y": 8,
+   "x": 5,
+   "y": 10,
    "w": 296,
    "d": 24,
-   "z": 32,
+   "z": 34,
    "h": 8,
    "r": 0,
    "explode": [
     0,
     0,
-    0
+    90
    ],
-   "mass": 17.68,
+   "mass": 14.27,
    "materials": [
     [
      "alu",
@@ -157,6 +295,7 @@
    "info": "Gewalztes Aluminium, nur etwa 0,01 mm dick: eine Seite glänzt, die andere ist matt. Saubere Reste zu einer faustgroßen Kugel knüllen, dann erkennt die Sortieranlage sie.",
    "color": "#C9CED3",
    "label": true,
+   "sortBias": -20,
    "marks": [
     {
      "shape": "box",
@@ -170,54 +309,25 @@
    ]
   },
   {
-   "id": "folienende",
-   "component_id": "aluminium_foil_sheet",
-   "material_id": "aluminium",
-   "name": "Loses Folienende",
-   "short": "Folienende",
-   "shape": "box",
-   "x": 2,
-   "y": 40,
-   "w": 296,
-   "d": 0.3,
-   "z": 6,
-   "h": 24,
-   "r": 0,
-   "explode": [
-    0,
-    45,
-    0
-   ],
-   "mass": 0.86,
-   "materials": [
-    [
-     "alu",
-     100
-    ]
-   ],
-   "info": "Hier wird die Folie abgerollt und an der Kante abgerissen. Benutzte Folie mit Essensresten gehört in den Restmüll, saubere in die Gelbe Tonne.",
-   "color": "#C9CED3"
-  },
-  {
    "id": "folie_2",
    "component_id": "aluminium_foil_sheet",
    "material_id": "aluminium",
    "name": "Aufgewickelte Alufolie (Schnitt)",
    "short": "Alufolie",
    "shape": "box",
-   "x": 2,
-   "y": 1.65,
+   "x": 5,
+   "y": 3.65,
    "w": 296,
    "d": 36.7,
-   "z": 24,
+   "z": 26,
    "h": 8,
    "r": 0,
    "explode": [
     0,
     0,
-    0
+    90
    ],
-   "mass": 27.03,
+   "mass": 21.81,
    "materials": [
     [
      "alu",
@@ -226,7 +336,8 @@
    ],
    "info": "Gewalztes Aluminium, nur etwa 0,01 mm dick: eine Seite glänzt, die andere ist matt. Saubere Reste zu einer faustgroßen Kugel knüllen, dann erkennt die Sortieranlage sie.",
    "color": "#C9CED3",
-   "label": false
+   "label": false,
+   "sortBias": -20
   },
   {
    "id": "folie_3",
@@ -235,19 +346,19 @@
    "name": "Aufgewickelte Alufolie (Schnitt)",
    "short": "Alufolie",
    "shape": "box",
-   "x": 2,
-   "y": 0,
+   "x": 5,
+   "y": 2,
    "w": 296,
    "d": 40,
-   "z": 16,
+   "z": 18,
    "h": 8,
    "r": 0,
    "explode": [
     0,
     0,
-    0
+    90
    ],
-   "mass": 29.46,
+   "mass": 23.77,
    "materials": [
     [
      "alu",
@@ -256,7 +367,8 @@
    ],
    "info": "Gewalztes Aluminium, nur etwa 0,01 mm dick: eine Seite glänzt, die andere ist matt. Saubere Reste zu einer faustgroßen Kugel knüllen, dann erkennt die Sortieranlage sie.",
    "color": "#C9CED3",
-   "label": false
+   "label": false,
+   "sortBias": -20
   },
   {
    "id": "folie_4",
@@ -265,19 +377,19 @@
    "name": "Aufgewickelte Alufolie (Schnitt)",
    "short": "Alufolie",
    "shape": "box",
-   "x": 2,
-   "y": 1.65,
+   "x": 5,
+   "y": 3.65,
    "w": 296,
    "d": 36.7,
-   "z": 8,
+   "z": 10,
    "h": 8,
    "r": 0,
    "explode": [
     0,
     0,
-    0
+    90
    ],
-   "mass": 27.03,
+   "mass": 21.81,
    "materials": [
     [
      "alu",
@@ -286,7 +398,8 @@
    ],
    "info": "Gewalztes Aluminium, nur etwa 0,01 mm dick: eine Seite glänzt, die andere ist matt. Saubere Reste zu einer faustgroßen Kugel knüllen, dann erkennt die Sortieranlage sie.",
    "color": "#C9CED3",
-   "label": false
+   "label": false,
+   "sortBias": -20
   },
   {
    "id": "folie_5",
@@ -295,19 +408,19 @@
    "name": "Aufgewickelte Alufolie (Schnitt)",
    "short": "Alufolie",
    "shape": "box",
-   "x": 2,
-   "y": 8,
+   "x": 5,
+   "y": 10,
    "w": 296,
    "d": 24,
-   "z": 0,
+   "z": 2,
    "h": 8,
    "r": 0,
    "explode": [
     0,
     0,
-    0
+    90
    ],
-   "mass": 17.68,
+   "mass": 14.27,
    "materials": [
     [
      "alu",
@@ -316,7 +429,8 @@
    ],
    "info": "Gewalztes Aluminium, nur etwa 0,01 mm dick: eine Seite glänzt, die andere ist matt. Saubere Reste zu einer faustgroßen Kugel knüllen, dann erkennt die Sortieranlage sie.",
    "color": "#C9CED3",
-   "label": false
+   "label": false,
+   "sortBias": -20
   },
   {
    "id": "kern_1",
@@ -325,19 +439,19 @@
    "name": "Papphülse (Wickelkern)",
    "short": "Papphülse",
    "shape": "box",
-   "x": 0,
-   "y": 8.8,
+   "x": 3,
+   "y": 10.8,
    "w": 300,
    "d": 22.4,
-   "z": 25,
+   "z": 27,
    "h": 10,
    "r": 0,
    "explode": [
     330,
     0,
-    0
+    90
    ],
-   "mass": 9.07,
+   "mass": 7.32,
    "materials": [
     [
      "papier",
@@ -351,6 +465,7 @@
    "info": "Gewickelte Pappe, auf der die Folie aufgerollt ist. Wenn die Rolle leer ist, kommt die Hülse ins Altpapier.",
    "color": "#B58C5E",
    "label": true,
+   "sortBias": -20,
    "marks": [
     {
      "shape": "box",
@@ -379,19 +494,19 @@
    "name": "Papphülse (Wickelkern)",
    "short": "Papphülse",
    "shape": "box",
-   "x": 0,
-   "y": 5,
+   "x": 3,
+   "y": 7,
    "w": 300,
    "d": 30,
-   "z": 15,
+   "z": 17,
    "h": 10,
    "r": 0,
    "explode": [
     330,
     0,
-    0
+    90
    ],
-   "mass": 12.14,
+   "mass": 9.79,
    "materials": [
     [
      "papier",
@@ -404,7 +519,8 @@
    ],
    "info": "Gewickelte Pappe, auf der die Folie aufgerollt ist. Wenn die Rolle leer ist, kommt die Hülse ins Altpapier.",
    "color": "#B58C5E",
-   "label": false
+   "label": false,
+   "sortBias": -20
   },
   {
    "id": "kern_3",
@@ -413,19 +529,19 @@
    "name": "Papphülse (Wickelkern)",
    "short": "Papphülse",
    "shape": "box",
-   "x": 0,
-   "y": 8.8,
+   "x": 3,
+   "y": 10.8,
    "w": 300,
    "d": 22.4,
-   "z": 5,
+   "z": 7,
    "h": 10,
    "r": 0,
    "explode": [
     330,
     0,
-    0
+    90
    ],
-   "mass": 9.07,
+   "mass": 7.32,
    "materials": [
     [
      "papier",
@@ -438,7 +554,56 @@
    ],
    "info": "Gewickelte Pappe, auf der die Folie aufgerollt ist. Wenn die Rolle leer ist, kommt die Hülse ins Altpapier.",
    "color": "#B58C5E",
-   "label": false
+   "label": false,
+   "sortBias": -20
+  },
+  {
+   "id": "karton",
+   "component_id": "aluminium_foil_sheet",
+   "material_id": "cardboard",
+   "name": "Spenderkarton",
+   "short": "Karton",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 306,
+   "d": 44,
+   "z": 0,
+   "h": 40,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 20.93,
+   "materials": [
+    [
+     "papier",
+     90
+    ],
+    [
+     "druck",
+     5
+    ],
+    [
+     "klebstoff",
+     5
+    ]
+   ],
+   "info": "Bedruckter Faltkarton, schützt die Rolle. Pappe ins Altpapier, Folie und Rolle getrennt entsorgen.",
+   "color": "#24508F",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 2,
+     "w": 302,
+     "d": 40,
+     "r": 1,
+     "fill": "#3B3B38"
+    }
+   ]
   }
  ]
 }

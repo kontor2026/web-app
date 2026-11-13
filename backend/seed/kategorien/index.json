@@ -740,7 +740,7 @@
   "name": "Plastikbecher",
   "name_en": "Plastic Cup",
   "klasse": "Verpackung · Gelbe Tonne",
-  "teile": 5,
+  "teile": 7,
   "platzhalter": false
  },
  {
@@ -748,7 +748,7 @@
   "name": "Einwegbox",
   "name_en": "Takeaway Container",
   "klasse": "Verpackung · Gelbe Tonne",
-  "teile": 4,
+  "teile": 5,
   "platzhalter": false
  },
  {
@@ -764,7 +764,7 @@
   "name": "Frischhaltefolie",
   "name_en": "Cling Film",
   "klasse": "Verpackung · Gelbe Tonne",
-  "teile": 9,
+  "teile": 12,
   "platzhalter": false
  },
  {
@@ -772,7 +772,7 @@
   "name": "Alufolie",
   "name_en": "Aluminium Foil",
   "klasse": "Verpackung · Gelbe Tonne",
-  "teile": 9,
+  "teile": 12,
   "platzhalter": false
  },
  {
@@ -780,7 +780,7 @@
   "name": "Blisterverpackung",
   "name_en": "Blister Pack",
   "klasse": "Verpackung · Gelbe Tonne",
-  "teile": 3,
+  "teile": 13,
   "platzhalter": false
  },
  {
@@ -796,7 +796,7 @@
   "name": "Waschmittelflasche",
   "name_en": "Detergent Bottle",
   "klasse": "Verpackung · Gelbe Tonne",
-  "teile": 9,
+  "teile": 11,
   "platzhalter": false
  },
  {

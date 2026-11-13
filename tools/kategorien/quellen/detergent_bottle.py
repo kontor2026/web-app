@@ -28,10 +28,16 @@ teile = [
          info='Weiter Hals mit grobem Gewinde für die Dosierkappe.', color=FLASCHE,
          marks=[mark('cyl', 4, 4, 30, fill='#D6D3CA')]),
     teil('griff', 'hdpe_bottle_body', 'Angeformter Griff', 'Griff', 'box',
-         x=60, y=25, w=34, d=20, z=198, h=38, r=8, mass=8,
-         info='Hohler Griff, beim Blasformen in einem Stück mit der Flasche geformt. Durch die Griffmulde läuft '
-              'die Flüssigkeit beim Ausgießen mit.',
-         color=FLASCHE, marks=[mark('box', 6, 6, 22, 8, 4, '#D6D3CA')]),
+         x=54, y=24, w=42, d=20, z=228, h=12, r=6, mass=4,
+         info='Hohler Tragegriff, beim Blasformen in einem Stück mit der Flasche geformt. Durch das Griffloch '
+              'passen vier Finger.',
+         color=FLASCHE, marks=[mark('box', 4, 5, 34, 10, 5, '#E2DFD7')]),
+    teil('griff_vorne', 'hdpe_bottle_body', 'Griffsteg', 'Griffsteg', 'box',
+         x=54, y=24, w=8, d=20, z=198, h=30, r=3, mass=2, label=False, color=FLASCHE,
+         info='Hohler Steg des Griffs. Beim Ausgießen läuft Luft hindurch, damit es nicht gluckert.'),
+    teil('griff_hinten', 'hdpe_bottle_body', 'Griffsteg', 'Griffsteg', 'box',
+         x=88, y=24, w=8, d=20, z=198, h=30, r=3, mass=2, label=False, color=FLASCHE,
+         info='Hohler Steg des Griffs, gehört zur Flasche.'),
     teil('schulter', 'hdpe_bottle_body', 'Flaschenschulter', 'Schulter', 'box',
          x=3, y=3, w=94, d=64, z=172, h=26, r=20, mass=12,
          info='Die Schulter verjüngt sich zum Hals und zum Griff.', color=FLASCHE, label=False),
@@ -44,16 +50,17 @@ teile = [
          x=3, y=3, w=94, d=64, z=0, h=8, r=16, mass=8,
          info='Leicht eingezogener Standboden mit Quetschnaht und Recyclingzeichen.', color=FLASCHE, label=False),
     teil('etikett_vorne', 'plastic_label', 'Etikett vorne', 'Etikett', 'box',
-         x=100, y=8, w=0.3, d=54, z=30, h=130, r=0, explode=[60, 0, 0], mass=2,
+         x=14, y=70, w=72, d=0.4, z=28, h=130, r=0, explode=[0, 90, 0], mass=2,
          materials=[['pp', 92], ['druck', 5], ['klebstoff', 3]],
          info='Bedruckte PP-Folie mit Klebstoff. Passt zum Kunststoffrecycling und darf dranbleiben.',
          color=KAPPE, sortBias=100),
-    teil('etikett_hinten', 'plastic_label', 'Etikett hinten', 'Etikett', 'box',
-         x=-0.3, y=8, w=0.3, d=54, z=30, h=120, r=0, explode=[-60, 0, 0], mass=1.5,
-         materials=[['pp', 92], ['druck', 5], ['klebstoff', 3]], label=False,
-         info='Rückseite mit Dosiertabelle, Inhaltsstoffen und Gefahrenhinweisen.',
+    teil('etikett_hinten', 'plastic_label', 'Etikett hinten mit Dosiertabelle', 'Rückenetikett', 'box',
+         x=14, y=-0.4, w=72, d=0.4, z=28, h=120, r=0, explode=[0, -90, 0], mass=1.5,
+         materials=[['pp', 92], ['druck', 5], ['klebstoff', 3]],
+         info='Rückseite mit Dosiertabelle, Inhaltsstoffen und Gefahrenhinweisen. Vor dem Wegwerfen kurz lesen: '
+              'Waschmittel gehört nicht in Kinderhände.',
          color='#E8EEF4'),
 ]
-explodiere(teile, abstand=25, nach_liste=True, gruppen=[['hals', 'griff', 'schulter', 'rumpf', 'boden']])
+explodiere(teile, abstand=25, nach_liste=True, gruppen=[['hals', 'griff', 'griff_vorne', 'griff_hinten', 'schulter', 'rumpf', 'boden']])
 skaliere_masse(teile, oid='detergent_bottle')
 schreibe('detergent_bottle', teile)

@@ -145,7 +145,7 @@
    "explode": [
     0,
     0,
-    174.0
+    163
    ],
    "mass": 4,
    "materials": [
@@ -183,7 +183,7 @@
    "explode": [
     0,
     0,
-    174.0
+    163
    ],
    "mass": 1,
    "materials": [
@@ -219,7 +219,7 @@
    "explode": [
     0,
     0,
-    159.0
+    151
    ],
    "mass": 1,
    "materials": [
@@ -255,7 +255,7 @@
    "explode": [
     0,
     0,
-    150.0
+    145
    ],
    "mass": 0.8,
    "materials": [
@@ -266,6 +266,7 @@
    ],
    "info": "Edelstahlfeder, die den Pumpkopf nach dem Drücken wieder hochschiebt. Sie bleibt in der Pumpe, Sortieranlagen holen das Metall später heraus.",
    "color": "#9DA4AA",
+   "sortBias": -60,
    "marks": [
     {
      "shape": "cyl",
@@ -291,7 +292,7 @@
    "explode": [
     0,
     0,
-    98.0
+    96
    ],
    "mass": 2.5,
    "materials": [
@@ -310,6 +311,7 @@
    ],
    "info": "Hier saugt der Kolben die Seife an. Eine kleine Kugel unten wirkt als Ventil, damit nichts zurückläuft.",
    "color": "#ECECE8",
+   "sortBias": -60,
    "marks": [
     {
      "shape": "cyl",
@@ -335,7 +337,7 @@
    "explode": [
     0,
     0,
-    27.0
+    28
    ],
    "mass": 3,
    "materials": [
@@ -371,7 +373,7 @@
    "explode": [
     0,
     0,
-    0.0
+    0
    ],
    "mass": 2.5,
    "materials": [
@@ -408,7 +410,7 @@
    "explode": [
     0,
     0,
-    0.0
+    0
    ],
    "mass": 3,
    "materials": [
@@ -437,7 +439,7 @@
    "explode": [
     0,
     0,
-    0.0
+    0
    ],
    "mass": 17.8,
    "materials": [
@@ -465,7 +467,7 @@
    "explode": [
     0,
     0,
-    0.0
+    0
    ],
    "mass": 3,
    "materials": [
@@ -491,8 +493,8 @@
    "z": 6,
    "h": 80,
    "explode": [
-    50,
-    0,
+    -45,
+    45,
     0
    ],
    "mass": 0.6,
@@ -503,7 +505,8 @@
     ]
    ],
    "info": "Schlauch bis zum Boden, durch den die Pumpe die Seife ansaugt. Steckt unten am Zylinder.",
-   "color": "#EDEDE8"
+   "color": "#EDEDE8",
+   "sortBias": -60
   },
   {
    "id": "etikett",
@@ -511,16 +514,15 @@
    "material_id": "pp",
    "name": "Etikett",
    "short": "Etikett",
-   "shape": "box",
-   "x": 60,
-   "y": 10,
-   "w": 0.3,
-   "d": 30,
-   "z": 20,
-   "h": 80,
-   "r": 0,
+   "shape": "cyl",
+   "x": -0.5,
+   "y": 0.5,
+   "w": 61,
+   "d": 49,
+   "z": 25,
+   "h": 90,
    "explode": [
-    60,
+    80,
     0,
     0
    ],
@@ -539,9 +541,19 @@
      3
     ]
    ],
-   "info": "Bedruckte PP-Folie. Passt zum Kunststoffrecycling und darf dranbleiben.",
+   "info": "Bedruckte PP-Folie rundum. Passt zum Kunststoffrecycling und darf dranbleiben.",
    "color": "#C98BB9",
-   "sortBias": 100
+   "sortBias": 1,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 1,
+     "y": 1,
+     "w": 59,
+     "d": 47,
+     "fill": "#F5F1E8"
+    }
+   ]
   }
  ]
 }

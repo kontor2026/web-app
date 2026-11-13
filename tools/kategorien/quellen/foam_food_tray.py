@@ -25,15 +25,17 @@ teile = [
          x=45, y=30, w=110, d=80, z=3, h=3, r=3, mass=0.8,
          info='Zellstoffkissen in Kunststoffhülle, saugt Fleischsaft auf. Herausnehmen und in den Restmüll geben.',
          color='#F7F7F7', marks=raster(4, 4, 6, 1, 14, 72, 17.5, fill='#E3E3E3')),
-    teil('rand', 'eps_tray', 'Schalenrand', 'Rand', 'box',
+    teil('rand', 'eps_tray', 'Schaumstoffschale', 'Schale', 'box',
          x=0, y=0, w=200, d=140, z=14, h=4, r=10, mass=1.5,
-         info='Breiter Rand, um den die Folie gespannt wird.',
-         color=WEISS, marks=[mark('box', 8, 8, 184, 124, 8, '#D8D5CE')]),
-    teil('schale', 'eps_tray', 'Schaumstoffschale', 'Schale', 'box',
-         x=8, y=8, w=184, d=124, z=0, h=14, r=9, mass=2.6,
-         info='Geschäumtes Polystyrol, zu 95 % Luft. Zerbrochen in die Gelbe Tonne, nicht ins Altpapier.',
+         info='Geschäumtes Polystyrol, zu 95 % Luft. Folie und Saugeinlage abziehen, die Schale in die Gelbe Tonne, '
+              'nicht ins Altpapier.',
+         color=WEISS, marks=[mark('box', 8, 8, 184, 124, 8, '#E2DFD8'), mark('box', 16, 16, 168, 108, 6, '#D8D5CE')]
+         + raster(26, 22, 1, 6, 148, 2, 0, 19.5, fill='#CAC6BE')),
+    teil('schale', 'eps_tray', 'Schalenboden', 'Boden', 'box',
+         x=8, y=8, w=184, d=124, z=0, h=14, r=9, mass=2.6, label=False,
+         info='Rillen im Boden machen die Schale steif und halten Fleischsaft unter der Ware.',
          color=WEISS),
 ]
-explodiere(teile, abstand=60, gruppen=[['rand', 'schale']])
+explodiere(teile, abstand=75, abstaende={'folie': 125}, gruppen=[['rand', 'schale']])
 skaliere_masse(teile, oid='foam_food_tray')
 schreibe('foam_food_tray', teile)

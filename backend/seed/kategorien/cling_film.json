@@ -26,25 +26,30 @@
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 0,22 kg",
+   "v": "≈ 0,19 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 0,05 kg",
-   "hint": "spart 0,17 kg, wenn recycelte Materialien eingesetzt werden"
+   "v": "≈ 0,06 kg",
+   "hint": "spart 0,14 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
-  "metalle_mg": {},
-  "herkunft": {},
-  "materialien_g": {
-   "ldpe": 91.6,
-   "cardboard": 28.4
+  "metalle_mg": {
+   "Fe": 3038.0
   },
-  "co2_kg": 0.22,
-  "co2_mit_recyclat_kg": 0.047,
-  "co2_ersparnis_kg": 0.172,
+  "herkunft": {
+   "Fe": "Modellmassen (Schätzung)"
+  },
+  "materialien_g": {
+   "ldpe": 69.7,
+   "cardboard": 47.2,
+   "steel": 3.1
+  },
+  "co2_kg": 0.194,
+  "co2_mit_recyclat_kg": 0.058,
+  "co2_ersparnis_kg": 0.137,
   "co2_ohne_faktor": [],
   "rohstoffwert_eur": 0,
   "wert_ohne_preis": [],
@@ -125,25 +130,159 @@
  "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
+   "id": "deckel",
+   "component_id": "ldpe_film",
+   "material_id": "cardboard",
+   "name": "Klappdeckel",
+   "short": "Deckel",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 306,
+   "d": 44,
+   "z": 40,
+   "h": 4,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    180
+   ],
+   "mass": 4.65,
+   "materials": [
+    [
+     "papier",
+     90
+    ],
+    [
+     "druck",
+     5
+    ],
+    [
+     "klebstoff",
+     5
+    ]
+   ],
+   "info": "Deckel des Spenderkartons, er hält die Rolle beim Abreißen fest. Leeren Karton flach falten und ins Altpapier.",
+   "color": "#2E7D6B",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 12,
+     "w": 306,
+     "d": 20,
+     "r": 0,
+     "fill": "#F4F6F5"
+    },
+    {
+     "shape": "box",
+     "x": 20,
+     "y": 16,
+     "w": 90,
+     "d": 12,
+     "r": 2,
+     "fill": "#2E7D6B"
+    },
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 2,
+     "w": 302,
+     "d": 40,
+     "r": 1
+    }
+   ]
+  },
+  {
+   "id": "klappe",
+   "component_id": "ldpe_film",
+   "material_id": "cardboard",
+   "name": "Vordere Klappe",
+   "short": "Klappe",
+   "shape": "box",
+   "x": 0,
+   "y": 44,
+   "w": 306,
+   "d": 0.6,
+   "z": 30,
+   "h": 14,
+   "r": 0,
+   "explode": [
+    0,
+    0,
+    180
+   ],
+   "mass": 2.32,
+   "materials": [
+    [
+     "papier",
+     90
+    ],
+    [
+     "druck",
+     5
+    ],
+    [
+     "klebstoff",
+     5
+    ]
+   ],
+   "info": "Die Klappe wird beim Abreißen auf die Folie gedrückt, damit sie gerade abreißt.",
+   "color": "#2E7D6B",
+   "label": false,
+   "sortBias": 30
+  },
+  {
+   "id": "schneide",
+   "component_id": "ldpe_film",
+   "material_id": "steel",
+   "name": "Abreißschiene aus Metall",
+   "short": "Schneide",
+   "shape": "box",
+   "x": 3,
+   "y": 44.6,
+   "w": 300,
+   "d": 0.4,
+   "z": 27,
+   "h": 4,
+   "r": 0,
+   "explode": [
+    0,
+    0,
+    180
+   ],
+   "mass": 3.1,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Gezahnte Stahlschiene zum Abreißen der Folie. Vorsicht, scharf! Vor dem Altpapier abziehen, sie gehört in die Gelbe Tonne.",
+   "color": "#9DA4AA",
+   "sortBias": 32
+  },
+  {
    "id": "folie_1",
    "component_id": "ldpe_film",
    "material_id": "ldpe",
    "name": "Aufgewickelte Folie",
    "short": "Folienwickel",
    "shape": "box",
-   "x": 2,
-   "y": 8,
+   "x": 5,
+   "y": 10,
    "w": 296,
    "d": 24,
-   "z": 32,
+   "z": 34,
    "h": 8,
    "r": 0,
    "explode": [
     0,
     0,
-    0
+    90
    ],
-   "mass": 13.55,
+   "mass": 10.36,
    "materials": [
     [
      "ldpe",
@@ -154,6 +293,7 @@
    "color": "#DDE9EC",
    "opacity": 0.8,
    "label": true,
+   "sortBias": -20,
    "marks": [
     {
      "shape": "box",
@@ -167,55 +307,25 @@
    ]
   },
   {
-   "id": "folienende",
-   "component_id": "ldpe_film",
-   "material_id": "ldpe",
-   "name": "Loses Folienende",
-   "short": "Folienende",
-   "shape": "box",
-   "x": 2,
-   "y": 40,
-   "w": 296,
-   "d": 0.3,
-   "z": 6,
-   "h": 24,
-   "r": 0,
-   "explode": [
-    0,
-    45,
-    0
-   ],
-   "mass": 0.51,
-   "materials": [
-    [
-     "ldpe",
-     100
-    ]
-   ],
-   "info": "Hier zieht man die Folie ab. Sie haftet an sich selbst, deshalb sucht man den Anfang oft lange.",
-   "color": "#DDE9EC",
-   "opacity": 0.7
-  },
-  {
    "id": "folie_2",
    "component_id": "ldpe_film",
    "material_id": "ldpe",
    "name": "Aufgewickelte Folie (Schnitt)",
    "short": "Folienwickel",
    "shape": "box",
-   "x": 2,
-   "y": 1.65,
+   "x": 5,
+   "y": 3.65,
    "w": 296,
    "d": 36.7,
-   "z": 24,
+   "z": 26,
    "h": 8,
    "r": 0,
    "explode": [
     0,
     0,
-    0
+    90
    ],
-   "mass": 20.72,
+   "mass": 15.84,
    "materials": [
     [
      "ldpe",
@@ -225,7 +335,8 @@
    "info": "Etwa 30 m hauchdünne LDPE-Folie (0,01 mm), die durch ihre Haftkraft an Schüsseln klebt. Saubere Folienreste locker in die Gelbe Tonne, verschmutzte in den Restmüll.",
    "color": "#DDE9EC",
    "opacity": 0.8,
-   "label": false
+   "label": false,
+   "sortBias": -20
   },
   {
    "id": "folie_3",
@@ -234,19 +345,19 @@
    "name": "Aufgewickelte Folie (Schnitt)",
    "short": "Folienwickel",
    "shape": "box",
-   "x": 2,
-   "y": 0,
+   "x": 5,
+   "y": 2,
    "w": 296,
    "d": 40,
-   "z": 16,
+   "z": 18,
    "h": 8,
    "r": 0,
    "explode": [
     0,
     0,
-    0
+    90
    ],
-   "mass": 22.58,
+   "mass": 17.27,
    "materials": [
     [
      "ldpe",
@@ -256,7 +367,8 @@
    "info": "Etwa 30 m hauchdünne LDPE-Folie (0,01 mm), die durch ihre Haftkraft an Schüsseln klebt. Saubere Folienreste locker in die Gelbe Tonne, verschmutzte in den Restmüll.",
    "color": "#DDE9EC",
    "opacity": 0.8,
-   "label": false
+   "label": false,
+   "sortBias": -20
   },
   {
    "id": "folie_4",
@@ -265,19 +377,19 @@
    "name": "Aufgewickelte Folie (Schnitt)",
    "short": "Folienwickel",
    "shape": "box",
-   "x": 2,
-   "y": 1.65,
+   "x": 5,
+   "y": 3.65,
    "w": 296,
    "d": 36.7,
-   "z": 8,
+   "z": 10,
    "h": 8,
    "r": 0,
    "explode": [
     0,
     0,
-    0
+    90
    ],
-   "mass": 20.72,
+   "mass": 15.84,
    "materials": [
     [
      "ldpe",
@@ -287,7 +399,8 @@
    "info": "Etwa 30 m hauchdünne LDPE-Folie (0,01 mm), die durch ihre Haftkraft an Schüsseln klebt. Saubere Folienreste locker in die Gelbe Tonne, verschmutzte in den Restmüll.",
    "color": "#DDE9EC",
    "opacity": 0.8,
-   "label": false
+   "label": false,
+   "sortBias": -20
   },
   {
    "id": "folie_5",
@@ -296,19 +409,19 @@
    "name": "Aufgewickelte Folie (Schnitt)",
    "short": "Folienwickel",
    "shape": "box",
-   "x": 2,
-   "y": 8,
+   "x": 5,
+   "y": 10,
    "w": 296,
    "d": 24,
-   "z": 0,
+   "z": 2,
    "h": 8,
    "r": 0,
    "explode": [
     0,
     0,
-    0
+    90
    ],
-   "mass": 13.55,
+   "mass": 10.36,
    "materials": [
     [
      "ldpe",
@@ -318,7 +431,8 @@
    "info": "Etwa 30 m hauchdünne LDPE-Folie (0,01 mm), die durch ihre Haftkraft an Schüsseln klebt. Saubere Folienreste locker in die Gelbe Tonne, verschmutzte in den Restmüll.",
    "color": "#DDE9EC",
    "opacity": 0.8,
-   "label": false
+   "label": false,
+   "sortBias": -20
   },
   {
    "id": "kern_1",
@@ -327,19 +441,19 @@
    "name": "Papphülse (Wickelkern)",
    "short": "Papphülse",
    "shape": "box",
-   "x": 0,
-   "y": 8.8,
+   "x": 3,
+   "y": 10.8,
    "w": 300,
    "d": 22.4,
-   "z": 25,
+   "z": 27,
    "h": 10,
    "r": 0,
    "explode": [
     330,
     0,
-    0
+    90
    ],
-   "mass": 8.5,
+   "mass": 6.5,
    "materials": [
     [
      "papier",
@@ -353,6 +467,7 @@
    "info": "Gewickelte Pappe, auf der die Folie aufgerollt ist. Wenn die Rolle leer ist, kommt die Hülse ins Altpapier.",
    "color": "#B58C5E",
    "label": true,
+   "sortBias": -20,
    "marks": [
     {
      "shape": "box",
@@ -381,19 +496,19 @@
    "name": "Papphülse (Wickelkern)",
    "short": "Papphülse",
    "shape": "box",
-   "x": 0,
-   "y": 5,
+   "x": 3,
+   "y": 7,
    "w": 300,
    "d": 30,
-   "z": 15,
+   "z": 17,
    "h": 10,
    "r": 0,
    "explode": [
     330,
     0,
-    0
+    90
    ],
-   "mass": 11.37,
+   "mass": 8.69,
    "materials": [
     [
      "papier",
@@ -406,7 +521,8 @@
    ],
    "info": "Gewickelte Pappe, auf der die Folie aufgerollt ist. Wenn die Rolle leer ist, kommt die Hülse ins Altpapier.",
    "color": "#B58C5E",
-   "label": false
+   "label": false,
+   "sortBias": -20
   },
   {
    "id": "kern_3",
@@ -415,19 +531,19 @@
    "name": "Papphülse (Wickelkern)",
    "short": "Papphülse",
    "shape": "box",
-   "x": 0,
-   "y": 8.8,
+   "x": 3,
+   "y": 10.8,
    "w": 300,
    "d": 22.4,
-   "z": 5,
+   "z": 7,
    "h": 10,
    "r": 0,
    "explode": [
     330,
     0,
-    0
+    90
    ],
-   "mass": 8.5,
+   "mass": 6.5,
    "materials": [
     [
      "papier",
@@ -440,7 +556,56 @@
    ],
    "info": "Gewickelte Pappe, auf der die Folie aufgerollt ist. Wenn die Rolle leer ist, kommt die Hülse ins Altpapier.",
    "color": "#B58C5E",
-   "label": false
+   "label": false,
+   "sortBias": -20
+  },
+  {
+   "id": "karton",
+   "component_id": "ldpe_film",
+   "material_id": "cardboard",
+   "name": "Spenderkarton",
+   "short": "Karton",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 306,
+   "d": 44,
+   "z": 0,
+   "h": 40,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 18.58,
+   "materials": [
+    [
+     "papier",
+     90
+    ],
+    [
+     "druck",
+     5
+    ],
+    [
+     "klebstoff",
+     5
+    ]
+   ],
+   "info": "Bedruckter Faltkarton, schützt die Rolle. Pappe ins Altpapier, Folie und Rolle getrennt entsorgen.",
+   "color": "#2E7D6B",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 2,
+     "w": 302,
+     "d": 40,
+     "r": 1,
+     "fill": "#3B3B38"
+    }
+   ]
   }
  ]
 }

@@ -15,7 +15,7 @@
    "explode": [
     0,
     0,
-    66.9
+    78.9
    ],
    "mass": 2.9,
    "materials": [
@@ -60,7 +60,7 @@
    "explode": [
     0,
     0,
-    37.4
+    45.4
    ],
    "mass": 1.5,
    "materials": [
@@ -73,68 +73,67 @@
    "color": "#FFFFFF",
    "marks": [
     {
-     "shape": "box",
-     "x": 3.0,
-     "y": 15.5,
-     "w": 2,
-     "d": 3,
-     "fill": "#D8D6CE"
+     "shape": "cyl",
+     "x": 3,
+     "y": 3,
+     "w": 28,
+     "fill": "#EFEFEA"
     },
     {
      "shape": "box",
-     "x": 6.6,
+     "x": 6.0,
      "y": 15.5,
-     "w": 2,
+     "w": 1.6,
      "d": 3,
-     "fill": "#D8D6CE"
+     "fill": "#C8C6BE"
     },
     {
      "shape": "box",
-     "x": 10.2,
+     "x": 9.6,
      "y": 15.5,
-     "w": 2,
+     "w": 1.6,
      "d": 3,
-     "fill": "#D8D6CE"
+     "fill": "#C8C6BE"
     },
     {
      "shape": "box",
-     "x": 13.8,
+     "x": 13.2,
      "y": 15.5,
-     "w": 2,
+     "w": 1.6,
      "d": 3,
-     "fill": "#D8D6CE"
+     "fill": "#C8C6BE"
     },
     {
      "shape": "box",
-     "x": 17.4,
+     "x": 16.8,
      "y": 15.5,
-     "w": 2,
+     "w": 1.6,
      "d": 3,
-     "fill": "#D8D6CE"
+     "fill": "#C8C6BE"
     },
     {
      "shape": "box",
-     "x": 21.0,
+     "x": 20.4,
      "y": 15.5,
-     "w": 2,
+     "w": 1.6,
      "d": 3,
-     "fill": "#D8D6CE"
+     "fill": "#C8C6BE"
     },
     {
      "shape": "box",
-     "x": 24.6,
+     "x": 24.0,
      "y": 15.5,
-     "w": 2,
+     "w": 1.6,
      "d": 3,
-     "fill": "#D8D6CE"
+     "fill": "#C8C6BE"
     },
     {
      "shape": "box",
-     "x": 28.2,
+     "x": 27.6,
      "y": 15.5,
-     "w": 2,
+     "w": 1.6,
      "d": 3,
-     "fill": "#D8D6CE"
+     "fill": "#C8C6BE"
     }
    ]
   },
@@ -153,7 +152,7 @@
    "explode": [
     0,
     0,
-    12.0
+    16.0
    ],
    "mass": 0.2,
    "materials": [
@@ -298,16 +297,14 @@
    "material_id": "paper",
    "name": "Papieretikett",
    "short": "Etikett",
-   "shape": "box",
-   "x": 39,
-   "y": 8,
-   "w": 0.3,
-   "d": 24,
-   "z": 10,
-   "h": 34,
-   "r": 0,
+   "shape": "cyl",
+   "x": 0.5,
+   "y": 0.5,
+   "w": 39,
+   "z": 8,
+   "h": 40,
    "explode": [
-    40,
+    58,
     0,
     0
    ],
@@ -326,9 +323,18 @@
      3
     ]
    ],
-   "info": "Papier mit Aufdruck und Klebstoff. Darf beim Recycling dranbleiben.",
-   "color": "#FFFFFF",
-   "sortBias": 100
+   "info": "Papier mit Name, Dosierung und Haltbarkeit, rundum geklebt. Darf beim Recycling dranbleiben.",
+   "color": "#CFE0EE",
+   "sortBias": 1,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0.8,
+     "y": 0.8,
+     "w": 37.4,
+     "fill": "#F4F2EC"
+    }
+   ]
   }
  ]
 }

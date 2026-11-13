@@ -2,7 +2,7 @@
 
 Typischer 300-ml-Flüssigseifenspender: ovale HDPE-Flasche (60 × 48 mm) mit PP-Pumpe aus Pumpkopf und
 Auslauf, Kolbenschaft, Stahlfeder, Pumpenzylinder mit Kugelventil, Verschlussring und Steigrohr.
-Die Flasche bleibt stehen, die Pumpenteile stapeln darüber, Steigrohr und Etikett werden seitlich gezogen.
+Die Flasche bleibt stehen, die Pumpenteile stapeln darüber, Steigrohr nach links, Etikett nach rechts.
 """
 import sys
 from pathlib import Path
@@ -59,13 +59,19 @@ teile = [
          material_id='ldpe', x=28, y=23, w=4, z=6, h=80, explode=[50, 0, 0], mass=0.6, materials=[['ldpe', 100]],
          info='Schlauch bis zum Boden, durch den die Pumpe die Seife ansaugt. Steckt unten am Zylinder.',
          color='#EDEDE8'),
-    teil('etikett', 'plastic_label', 'Etikett', 'Etikett', 'box',
-         x=60, y=10, w=0.3, d=30, z=20, h=80, r=0, explode=[60, 0, 0], mass=1,
+    teil('etikett', 'plastic_label', 'Etikett', 'Etikett', 'cyl',
+         x=-0.5, y=0.5, w=61, d=49, z=25, h=90, mass=1,
          materials=[['pp', 92], ['druck', 5], ['klebstoff', 3]],
-         info='Bedruckte PP-Folie. Passt zum Kunststoffrecycling und darf dranbleiben.',
-         color='#C98BB9', sortBias=100),
+         info='Bedruckte PP-Folie rundum. Passt zum Kunststoffrecycling und darf dranbleiben.',
+         color='#C98BB9', sortBias=1, marks=[mark('cyl', 1, 1, 59, 47, fill=FLASCHE)]),
 ]
-explodiere(teile, abstand=15, nach_liste=True,
-           gruppen=[['pumpkopf', 'auslauf'], ['hals', 'schulter', 'rumpf', 'boden']])
+# Innenteile zusammengebaut hinter Flasche und Verschluss zeichnen
+for p in teile:
+    if p['id'] in ('steigrohr', 'zylinder', 'feder'):
+        p['sortBias'] = -60
+EX = {'pumpkopf': [0, 0, 163], 'auslauf': [0, 0, 163], 'schaft': [0, 0, 151], 'feder': [0, 0, 145],
+      'zylinder': [0, 0, 96], 'verschlussring': [0, 0, 28], 'steigrohr': [-45, 45, 0], 'etikett': [80, 0, 0]}
+for p in teile:
+    p['explode'] = EX.get(p['id'], [0, 0, 0])
 skaliere_masse(teile, oid='soap_dispenser')
 schreibe('soap_dispenser', teile)

@@ -2,7 +2,7 @@
 
 Typische 500-ml-Sprühflasche für Reiniger: ovaler HDPE-Körper (72 × 50 mm) und Pistolen-Sprühkopf
 (Trigger) aus PP mit Haube, Düse, Abzug, Kolbenpumpe, Stahlfeder, Verschlussring und Steigrohr.
-Die Flasche bleibt stehen, die Triggerteile stapeln darüber, Steigrohr und Etikett werden seitlich gezogen.
+Die Flasche bleibt stehen, die Triggerteile stapeln darüber, Steigrohr nach links, Etikett nach rechts.
 """
 import sys
 from pathlib import Path
@@ -22,10 +22,6 @@ teile = [
          info='Äußere Hülle des Sprühkopfs. Darunter sitzen Pumpe, Feder und Ventile. '
               'Den ganzen Sprühkopf abschrauben und mit der Flasche in die Gelbe Tonne geben.',
          color=TRIGGER, marks=[mark('box', 6, 5, 50, 16, 6, '#3A9D66')]),
-    teil('abzug', 'trigger_sprayer', 'Abzug (Hebel)', 'Abzug', 'box',
-         x=62, y=17, w=12, d=16, z=178, h=40, r=4, mass=2.5,
-         info='Beim Ziehen drückt der Hebel den Kolben in die Pumpe, die Flüssigkeit schießt aus der Düse.',
-         color=TRIGGER),
     teil('feder', 'trigger_sprayer', 'Rückstellfeder', 'Feder', 'cyl',
          material_id='steel', x=34, y=21, w=8, z=218, h=16, mass=0.6, materials=[['stahl', 100]],
          info='Kleine Edelstahlfeder, die den Abzug nach jedem Sprühstoß zurückdrückt. '
@@ -36,6 +32,10 @@ teile = [
          info='Zylinder mit Kolben und zwei kleinen Rückschlagventilen: eines saugt aus dem Steigrohr an, '
               'das andere lässt nur zur Düse hin durch.',
          color='#E6E9EC', marks=[mark('cyl', 4, 4, 8, fill='#C9CED3')]),
+    teil('abzug', 'trigger_sprayer', 'Abzug (Hebel)', 'Abzug', 'box',
+         x=62, y=17, w=12, d=16, z=178, h=40, r=4, mass=2.5,
+         info='Beim Ziehen drückt der Hebel den Kolben in die Pumpe, die Flüssigkeit schießt aus der Düse.',
+         color=TRIGGER),
     teil('verschlussring', 'trigger_sprayer', 'Verschlussring', 'Verschluss', 'cyl',
          x=20, y=9, w=32, z=188, h=18, mass=4,
          info='Schraubring mit Gewinde, der den Sprühkopf auf der Flasche hält.',
@@ -59,12 +59,19 @@ teile = [
          material_id='ldpe', x=36, y=23, w=4, z=8, h=200, explode=[55, 0, 0], mass=0.8, materials=[['ldpe', 100]],
          info='Schlauch bis fast zum Boden, durch den die Pumpe die Flüssigkeit ansaugt. Bleibt am Sprühkopf.',
          color='#EDEDE8'),
-    teil('etikett', 'plastic_label', 'Etikett', 'Etikett', 'box',
-         x=72, y=8, w=0.3, d=34, z=30, h=120, r=0, explode=[70, 0, 0], mass=1.2,
+    teil('etikett', 'plastic_label', 'Etikett', 'Etikett', 'cyl',
+         x=-0.5, y=-0.5, w=73, d=51, z=40, h=135, mass=1.2,
          materials=[['pp', 92], ['druck', 5], ['klebstoff', 3]],
-         info='PP-Folienetikett mit Gefahrenhinweisen. Passt zum Kunststoffrecycling und darf dranbleiben.',
-         color=TRIGGER, sortBias=100),
+         info='PP-Folienetikett rundum mit Gefahrenhinweisen. Passt zum Kunststoffrecycling und darf dranbleiben.',
+         color=TRIGGER, sortBias=1, marks=[mark('cyl', 1, 1, 71, 49, fill=FLASCHE)]),
 ]
-explodiere(teile, abstand=18, nach_liste=True, gruppen=[['hals', 'schulter', 'rumpf', 'boden']])
+# Innenteile zusammengebaut hinter Haube und Flasche zeichnen
+for p in teile:
+    if p['id'] in ('steigrohr', 'pumpe', 'feder'):
+        p['sortBias'] = -60
+EX = {'duese': [30, 0, 150], 'haube': [0, 0, 150], 'feder': [0, 0, 92], 'pumpe': [0, 0, 62],
+      'abzug': [45, 0, 70], 'verschlussring': [0, 0, 36], 'steigrohr': [-50, 50, 0], 'etikett': [95, 0, 0]}
+for p in teile:
+    p['explode'] = EX.get(p['id'], [0, 0, 0])
 skaliere_masse(teile, oid='spray_bottle')
 schreibe('spray_bottle', teile)

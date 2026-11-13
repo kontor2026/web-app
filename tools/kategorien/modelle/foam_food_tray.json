@@ -17,7 +17,7 @@
    "explode": [
     0,
     0,
-    183.0
+    278.0
    ],
    "mass": 0.4,
    "materials": [
@@ -83,7 +83,7 @@
    "explode": [
     0,
     0,
-    123.0
+    203.0
    ],
    "mass": 1.1,
    "materials": [
@@ -113,7 +113,7 @@
    "explode": [
     0,
     0,
-    75.0
+    90.0
    ],
    "mass": 0.7,
    "materials": [
@@ -183,8 +183,8 @@
    "id": "rand",
    "component_id": "eps_tray",
    "material_id": "eps",
-   "name": "Schalenrand",
-   "short": "Rand",
+   "name": "Schaumstoffschale",
+   "short": "Schale",
    "shape": "box",
    "x": 0,
    "y": 0,
@@ -205,7 +205,7 @@
      100
     ]
    ],
-   "info": "Breiter Rand, um den die Folie gespannt wird.",
+   "info": "Geschäumtes Polystyrol, zu 95 % Luft. Folie und Saugeinlage abziehen, die Schale in die Gelbe Tonne, nicht ins Altpapier.",
    "color": "#F3F1EC",
    "marks": [
     {
@@ -215,7 +215,64 @@
      "w": 184,
      "d": 124,
      "r": 8,
+     "fill": "#E2DFD8"
+    },
+    {
+     "shape": "box",
+     "x": 16,
+     "y": 16,
+     "w": 168,
+     "d": 108,
+     "r": 6,
      "fill": "#D8D5CE"
+    },
+    {
+     "shape": "box",
+     "x": 26,
+     "y": 22.0,
+     "w": 148,
+     "d": 2,
+     "fill": "#CAC6BE"
+    },
+    {
+     "shape": "box",
+     "x": 26,
+     "y": 41.5,
+     "w": 148,
+     "d": 2,
+     "fill": "#CAC6BE"
+    },
+    {
+     "shape": "box",
+     "x": 26,
+     "y": 61.0,
+     "w": 148,
+     "d": 2,
+     "fill": "#CAC6BE"
+    },
+    {
+     "shape": "box",
+     "x": 26,
+     "y": 80.5,
+     "w": 148,
+     "d": 2,
+     "fill": "#CAC6BE"
+    },
+    {
+     "shape": "box",
+     "x": 26,
+     "y": 100.0,
+     "w": 148,
+     "d": 2,
+     "fill": "#CAC6BE"
+    },
+    {
+     "shape": "box",
+     "x": 26,
+     "y": 119.5,
+     "w": 148,
+     "d": 2,
+     "fill": "#CAC6BE"
     }
    ]
   },
@@ -223,8 +280,8 @@
    "id": "schale",
    "component_id": "eps_tray",
    "material_id": "eps",
-   "name": "Schaumstoffschale",
-   "short": "Schale",
+   "name": "Schalenboden",
+   "short": "Boden",
    "shape": "box",
    "x": 8,
    "y": 8,
@@ -245,8 +302,9 @@
      100
     ]
    ],
-   "info": "Geschäumtes Polystyrol, zu 95 % Luft. Zerbrochen in die Gelbe Tonne, nicht ins Altpapier.",
-   "color": "#F3F1EC"
+   "info": "Rillen im Boden machen die Schale steif und halten Fleischsaft unter der Ware.",
+   "color": "#F3F1EC",
+   "label": false
   }
  ]
 }

@@ -15,9 +15,9 @@
    "h": 14,
    "r": 3,
    "explode": [
+    30,
     0,
-    0,
-    166.0
+    150
    ],
    "mass": 1.1,
    "materials": [
@@ -57,7 +57,7 @@
    "explode": [
     0,
     0,
-    128.0
+    150
    ],
    "mass": 7.4,
    "materials": [
@@ -81,35 +81,6 @@
    ]
   },
   {
-   "id": "abzug",
-   "component_id": "trigger_sprayer",
-   "material_id": "pp",
-   "name": "Abzug (Hebel)",
-   "short": "Abzug",
-   "shape": "box",
-   "x": 62,
-   "y": 17,
-   "w": 12,
-   "d": 16,
-   "z": 178,
-   "h": 40,
-   "r": 4,
-   "explode": [
-    0,
-    0,
-    15.0
-   ],
-   "mass": 2.6,
-   "materials": [
-    [
-     "pp",
-     100
-    ]
-   ],
-   "info": "Beim Ziehen drückt der Hebel den Kolben in die Pumpe, die Flüssigkeit schießt aus der Düse.",
-   "color": "#2E8B57"
-  },
-  {
    "id": "feder",
    "component_id": "trigger_sprayer",
    "material_id": "steel",
@@ -124,7 +95,7 @@
    "explode": [
     0,
     0,
-    88.0
+    92
    ],
    "mass": 0.6,
    "materials": [
@@ -135,6 +106,7 @@
    ],
    "info": "Kleine Edelstahlfeder, die den Abzug nach jedem Sprühstoß zurückdrückt. Sie bleibt im Sprühkopf, Sortieranlagen trennen das Metall heraus.",
    "color": "#9DA4AA",
+   "sortBias": -60,
    "marks": [
     {
      "shape": "cyl",
@@ -160,7 +132,7 @@
    "explode": [
     0,
     0,
-    53.0
+    62
    ],
    "mass": 3.2,
    "materials": [
@@ -179,6 +151,7 @@
    ],
    "info": "Zylinder mit Kolben und zwei kleinen Rückschlagventilen: eines saugt aus dem Steigrohr an, das andere lässt nur zur Düse hin durch.",
    "color": "#E6E9EC",
+   "sortBias": -60,
    "marks": [
     {
      "shape": "cyl",
@@ -188,6 +161,35 @@
      "fill": "#C9CED3"
     }
    ]
+  },
+  {
+   "id": "abzug",
+   "component_id": "trigger_sprayer",
+   "material_id": "pp",
+   "name": "Abzug (Hebel)",
+   "short": "Abzug",
+   "shape": "box",
+   "x": 62,
+   "y": 17,
+   "w": 12,
+   "d": 16,
+   "z": 178,
+   "h": 40,
+   "r": 4,
+   "explode": [
+    45,
+    0,
+    70
+   ],
+   "mass": 2.6,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Beim Ziehen drückt der Hebel den Kolben in die Pumpe, die Flüssigkeit schießt aus der Düse.",
+   "color": "#2E8B57"
   },
   {
    "id": "verschlussring",
@@ -204,7 +206,7 @@
    "explode": [
     0,
     0,
-    34.0
+    36
    ],
    "mass": 4.2,
    "materials": [
@@ -240,7 +242,7 @@
    "explode": [
     0,
     0,
-    0.0
+    0
    ],
    "mass": 3.2,
    "materials": [
@@ -277,7 +279,7 @@
    "explode": [
     0,
     0,
-    0.0
+    0
    ],
    "mass": 4.2,
    "materials": [
@@ -306,7 +308,7 @@
    "explode": [
     0,
     0,
-    0.0
+    0
    ],
    "mass": 28.4,
    "materials": [
@@ -334,7 +336,7 @@
    "explode": [
     0,
     0,
-    0.0
+    0
    ],
    "mass": 3.2,
    "materials": [
@@ -360,8 +362,8 @@
    "z": 8,
    "h": 200,
    "explode": [
-    55,
-    0,
+    -50,
+    50,
     0
    ],
    "mass": 0.8,
@@ -372,7 +374,8 @@
     ]
    ],
    "info": "Schlauch bis fast zum Boden, durch den die Pumpe die Flüssigkeit ansaugt. Bleibt am Sprühkopf.",
-   "color": "#EDEDE8"
+   "color": "#EDEDE8",
+   "sortBias": -60
   },
   {
    "id": "etikett",
@@ -380,16 +383,15 @@
    "material_id": "pp",
    "name": "Etikett",
    "short": "Etikett",
-   "shape": "box",
-   "x": 72,
-   "y": 8,
-   "w": 0.3,
-   "d": 34,
-   "z": 30,
-   "h": 120,
-   "r": 0,
+   "shape": "cyl",
+   "x": -0.5,
+   "y": -0.5,
+   "w": 73,
+   "d": 51,
+   "z": 40,
+   "h": 135,
    "explode": [
-    70,
+    95,
     0,
     0
    ],
@@ -408,9 +410,19 @@
      3
     ]
    ],
-   "info": "PP-Folienetikett mit Gefahrenhinweisen. Passt zum Kunststoffrecycling und darf dranbleiben.",
+   "info": "PP-Folienetikett rundum mit Gefahrenhinweisen. Passt zum Kunststoffrecycling und darf dranbleiben.",
    "color": "#2E8B57",
-   "sortBias": 100
+   "sortBias": 1,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 1,
+     "y": 1,
+     "w": 71,
+     "d": 49,
+     "fill": "#F2F4F5"
+    }
+   ]
   }
  ]
 }

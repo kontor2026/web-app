@@ -122,38 +122,98 @@
    "name": "Angeformter Griff",
    "short": "Griff",
    "shape": "box",
-   "x": 60,
-   "y": 25,
-   "w": 34,
+   "x": 54,
+   "y": 24,
+   "w": 42,
    "d": 20,
-   "z": 198,
-   "h": 38,
-   "r": 8,
+   "z": 228,
+   "h": 12,
+   "r": 6,
    "explode": [
     0,
     0,
     0.0
    ],
-   "mass": 7.4,
+   "mass": 3.7,
    "materials": [
     [
      "hdpe",
      100
     ]
    ],
-   "info": "Hohler Griff, beim Blasformen in einem Stück mit der Flasche geformt. Durch die Griffmulde läuft die Flüssigkeit beim Ausgießen mit.",
+   "info": "Hohler Tragegriff, beim Blasformen in einem Stück mit der Flasche geformt. Durch das Griffloch passen vier Finger.",
    "color": "#F3F1EC",
    "marks": [
     {
      "shape": "box",
-     "x": 6,
-     "y": 6,
-     "w": 22,
-     "d": 8,
-     "r": 4,
-     "fill": "#D6D3CA"
+     "x": 4,
+     "y": 5,
+     "w": 34,
+     "d": 10,
+     "r": 5,
+     "fill": "#E2DFD7"
     }
    ]
+  },
+  {
+   "id": "griff_vorne",
+   "component_id": "hdpe_bottle_body",
+   "material_id": "hdpe",
+   "name": "Griffsteg",
+   "short": "Griffsteg",
+   "shape": "box",
+   "x": 54,
+   "y": 24,
+   "w": 8,
+   "d": 20,
+   "z": 198,
+   "h": 30,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 1.8,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "Hohler Steg des Griffs. Beim Ausgießen läuft Luft hindurch, damit es nicht gluckert.",
+   "color": "#F3F1EC",
+   "label": false
+  },
+  {
+   "id": "griff_hinten",
+   "component_id": "hdpe_bottle_body",
+   "material_id": "hdpe",
+   "name": "Griffsteg",
+   "short": "Griffsteg",
+   "shape": "box",
+   "x": 88,
+   "y": 24,
+   "w": 8,
+   "d": 20,
+   "z": 198,
+   "h": 30,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 1.8,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "Hohler Steg des Griffs, gehört zur Flasche.",
+   "color": "#F3F1EC",
+   "label": false
   },
   {
    "id": "schulter",
@@ -251,16 +311,16 @@
    "name": "Etikett vorne",
    "short": "Etikett",
    "shape": "box",
-   "x": 100,
-   "y": 8,
-   "w": 0.3,
-   "d": 54,
-   "z": 30,
+   "x": 14,
+   "y": 70,
+   "w": 72,
+   "d": 0.4,
+   "z": 28,
    "h": 130,
    "r": 0,
    "explode": [
-    60,
     0,
+    90,
     0
    ],
    "mass": 1.8,
@@ -286,19 +346,19 @@
    "id": "etikett_hinten",
    "component_id": "plastic_label",
    "material_id": "pp",
-   "name": "Etikett hinten",
-   "short": "Etikett",
+   "name": "Etikett hinten mit Dosiertabelle",
+   "short": "Rückenetikett",
    "shape": "box",
-   "x": -0.3,
-   "y": 8,
-   "w": 0.3,
-   "d": 54,
-   "z": 30,
+   "x": 14,
+   "y": -0.4,
+   "w": 72,
+   "d": 0.4,
+   "z": 28,
    "h": 120,
    "r": 0,
    "explode": [
-    -60,
     0,
+    -90,
     0
    ],
    "mass": 1.4,
@@ -316,9 +376,8 @@
      3
     ]
    ],
-   "info": "Rückseite mit Dosiertabelle, Inhaltsstoffen und Gefahrenhinweisen.",
-   "color": "#E8EEF4",
-   "label": false
+   "info": "Rückseite mit Dosiertabelle, Inhaltsstoffen und Gefahrenhinweisen. Vor dem Wegwerfen kurz lesen: Waschmittel gehört nicht in Kinderhände.",
+   "color": "#E8EEF4"
   }
  ]
 }

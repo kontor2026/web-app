@@ -17,9 +17,9 @@
    "explode": [
     0,
     0,
-    55.0
+    110.0
    ],
-   "mass": 6.5,
+   "mass": 6.4,
    "materials": [
     [
      "pp",
@@ -50,6 +50,32 @@
     },
     {
      "shape": "box",
+     "x": 24,
+     "y": 22,
+     "w": 132,
+     "d": 76,
+     "r": 7,
+     "fill": "#D5DCE0"
+    },
+    {
+     "shape": "box",
+     "x": 28,
+     "y": 26,
+     "w": 124,
+     "d": 68,
+     "r": 5,
+     "fill": "#E6ECEF"
+    },
+    {
+     "shape": "cyl",
+     "x": 150,
+     "y": 86,
+     "w": 14,
+     "d": 10,
+     "fill": "#C9D0D5"
+    },
+    {
+     "shape": "box",
      "x": 0,
      "y": 0,
      "w": 14,
@@ -60,11 +86,49 @@
    ]
   },
   {
+   "id": "siegel",
+   "component_id": "pp_lid",
+   "material_id": "paper",
+   "name": "Siegelaufkleber",
+   "short": "Aufkleber",
+   "shape": "box",
+   "x": 80,
+   "y": 120,
+   "w": 24,
+   "d": 0.3,
+   "z": 28,
+   "h": 20,
+   "r": 0,
+   "explode": [
+    -30,
+    55,
+    50
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "papier",
+     85
+    ],
+    [
+     "druck",
+     5
+    ],
+    [
+     "klebstoff",
+     10
+    ]
+   ],
+   "info": "Papieraufkleber über Deckel und Schale, zeigt dass die Box seit dem Einpacken zu ist. Kleine Papierreste dürfen dranbleiben.",
+   "color": "#E2574C",
+   "sortBias": 60
+  },
+  {
    "id": "rand",
    "component_id": "pp_food_tray",
    "material_id": "pp",
-   "name": "Siegelrand",
-   "short": "Rand",
+   "name": "Schale mit Siegelrand",
+   "short": "Schale",
    "shape": "box",
    "x": 0,
    "y": 0,
@@ -85,7 +149,7 @@
      100
     ]
    ],
-   "info": "Umlaufender Rand, über den der Deckel schnappt.",
+   "info": "PP hält die Hitze aus der Mikrowelle aus. Schwarzer Kunststoff wird von Sortieranlagen schlecht erkannt; Essensreste auskratzen, ausspülen ist nicht nötig.",
    "color": "#2E3236",
    "marks": [
     {
@@ -96,6 +160,24 @@
      "d": 108,
      "r": 10,
      "fill": "#1D2023"
+    },
+    {
+     "shape": "box",
+     "x": 18,
+     "y": 16,
+     "w": 144,
+     "d": 88,
+     "r": 8,
+     "fill": "#25292D"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 0,
+     "w": 14,
+     "d": 14,
+     "r": 6,
+     "fill": "#3A3F44"
     }
    ]
   },
@@ -118,15 +200,16 @@
     0,
     0.0
    ],
-   "mass": 5.5,
+   "mass": 5.4,
    "materials": [
     [
      "pp",
      100
     ]
    ],
-   "info": "PP hält die Hitze aus der Mikrowelle aus. Schwarzer Kunststoff wird von Sortieranlagen schlecht erkannt; Essensreste auskratzen, ausspülen ist nicht nötig.",
-   "color": "#2E3236"
+   "info": "Die Wand ist nur etwa 0,5 mm dick. Rillen in der Wand machen die Schale steif.",
+   "color": "#2E3236",
+   "label": false
   },
   {
    "id": "boden",
@@ -147,7 +230,7 @@
     0,
     0.0
    ],
-   "mass": 5,
+   "mass": 4.9,
    "materials": [
     [
      "pp",
