@@ -65,3 +65,28 @@ export const MATERIALS = {
                 text: 'Weiche Teile wie Tastenmatten und Füße.' },
 };
 
+// Elemente: Endpunkt der Drill-down-Kette.
+export const ELEMENTS = {
+  Au: { name: 'Gold', z: 79, herkunft: 'China, Russland, Australien', kritisch: false, recycling: 'hoch',
+        fakt: 'In einer Tonne alter Handys steckt deutlich mehr Gold als in einer Tonne Golderz.' },
+  Ag: { name: 'Silber', z: 47, herkunft: 'Mexiko, Peru, China', kritisch: false, recycling: 'mittel',
+        fakt: 'Bestes leitendes Metall überhaupt. Steckt im Lötzinn.' },
+  Cu: { name: 'Kupfer', z: 29, herkunft: 'Chile, Peru, DR Kongo', kritisch: 'strategisch', recycling: 'hoch',
+        fakt: 'Kupfer lässt sich ohne Qualitätsverlust beliebig oft recyceln.' },
+  Co: { name: 'Kobalt', z: 27, herkunft: 'DR Kongo (rund 70 %)', kritisch: true, recycling: 'mittel',
+        fakt: 'Der Abbau ist oft mit Kinderarbeit verbunden. Recycling senkt die Abhängigkeit.' },
+  Li: { name: 'Lithium', z: 3, herkunft: 'Australien, Chile, China', kritisch: true, recycling: 'gering',
+        fakt: 'Leichtestes Metall. Wird aus Salzseen oder Gestein gewonnen und braucht viel Wasser.' },
+  Ni: { name: 'Nickel', z: 28, herkunft: 'Indonesien, Philippinen, Russland', kritisch: 'strategisch', recycling: 'hoch',
+        fakt: 'Macht Edelstahl rostfrei und Akkus energiereich.' },
+  Mn: { name: 'Mangan', z: 25, herkunft: 'Südafrika, Gabun, Australien', kritisch: false, recycling: 'mittel',
+        fakt: 'Stabilisiert die Kathode in modernen Akkus.' },
+  Al: { name: 'Aluminium', z: 13, herkunft: 'China, Indien, Russland', kritisch: false, recycling: 'hoch',
+        fakt: 'Häufigstes Metall der Erdkruste, aber energieintensiv in der Herstellung.' },
+  Fe: { name: 'Eisen', z: 26, herkunft: 'Australien, Brasilien', kritisch: false, recycling: 'hoch',
+        fakt: 'Mit Magneten leicht aus dem Schredder zu sortieren.' },
+  Cr: { name: 'Chrom', z: 24, herkunft: 'Südafrika, Kasachstan', kritisch: false, recycling: 'hoch',
+        fakt: 'Bildet die Schutzschicht, die Edelstahl rostfrei macht.' },
+  Sn: { name: 'Zinn', z: 50, herkunft: 'China, Indonesien, Myanmar', kritisch: false, recycling: 'mittel',
+        fakt: 'Gilt als Konfliktmineral. Hersteller müssen die Herkunft nachweisen.' },
+};
