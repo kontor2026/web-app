@@ -48,7 +48,7 @@ jeans;Jeans;TX;350;400;40;600;eckig
 backpack;Rucksack;TX;300;150;450;700;eckig
 sunglasses;Sonnenbrille;RM;140;50;45;30;eckig
 bicycle_tire;Fahrradreifen;WH;650;650;50;700;rund
-compact_disc;CD;WH;120;120;2;16;rund
+compact_disc;CD;WH;142;125;10;95;eckig
 tea_light;Teelicht;VK;38;38;16;12;rund
 desktop_pc;Desktop-PC;EK;200;420;450;8000;eckig
 game_controller;Gamecontroller;EK;155;105;60;220;eckig

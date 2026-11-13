@@ -4,7 +4,7 @@
  "name_en": "Compact Disc",
  "klasse": "Wertstoffhof",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -16,8 +16,8 @@
   ],
   "hinweis": "Kategorie-Modell, kein bestimmtes Produkt."
  },
- "masse": "120 × 120 × 2 mm",
- "gewicht": "≈ 16 g",
+ "masse": "142 × 125 × 10 mm",
+ "gewicht": "≈ 95 g",
  "werte": [
   {
    "k": "Rohstoffwert",
@@ -26,28 +26,33 @@
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 0,05 kg",
+   "v": "≈ 0,21 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 0,04 kg",
-   "hint": "spart 0,01 kg, wenn recycelte Materialien eingesetzt werden"
+   "v": "≈ 0,08 kg",
+   "hint": "spart 0,12 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
-  "metalle_mg": {},
-  "herkunft": {},
-  "materialien_g": {
-   "pc": 10.3,
-   "ps": 5.1,
-   "paper": 0.6
+  "metalle_mg": {
+   "Al": 100.0
   },
-  "co2_kg": 0.046,
-  "co2_mit_recyclat_kg": 0.037,
-  "co2_ersparnis_kg": 0.009,
+  "herkunft": {
+   "Al": "Modellmassen (Schätzung)"
+  },
+  "materialien_g": {
+   "ps": 69.1,
+   "pc": 15.2,
+   "paper": 10.7,
+   "aluminium": 0.1
+  },
+  "co2_kg": 0.206,
+  "co2_mit_recyclat_kg": 0.084,
+  "co2_ersparnis_kg": 0.122,
   "co2_ohne_faktor": [],
-  "rohstoffwert_eur": 0,
+  "rohstoffwert_eur": 0.0,
   "wert_ohne_preis": [],
   "preisstand": "2026-11-13",
   "quellen": {
@@ -95,87 +100,643 @@
   "nicht": "Nicht in die Gelbe Tonne",
   "warnung": "Reste von Farben, Klebern oder Chemikalien gehören zur Schadstoffsammlung."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "cd_case",
+   "id": "deckel",
    "component_id": "cd_case",
-   "name": "Jewel Case",
-   "short": "Jewel Case",
-   "shape": "cyl",
+   "material_id": "ps",
+   "name": "Deckel",
+   "short": "Deckel",
+   "shape": "box",
    "x": 0,
    "y": 0,
-   "w": 120.0,
-   "h": 1.0,
-   "z": 1.0,
+   "w": 142,
+   "d": 125,
+   "z": 6,
+   "h": 4,
+   "r": 1,
    "explode": [
     0,
-    0,
-    48.0
+    -150,
+    -6.0
    ],
-   "mass": 5.13,
+   "mass": 28.8,
    "materials": [
     [
      "ps",
      100
     ]
    ],
-   "material_id": "ps",
-   "info": "Take out the booklet and the disc."
+   "info": "Glasklares Polystyrol, am linken Rand mit zwei Zapfen eingehängt. Etwas aufbiegen, dann lässt er sich abnehmen. Bricht leicht und splittert scharfkantig.",
+   "color": "#E4ECF0",
+   "opacity": 0.45,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 2,
+     "w": 5,
+     "d": 121,
+     "r": 0.5,
+     "fill": "#D3DDE2"
+    },
+    {
+     "shape": "box",
+     "x": 6,
+     "y": 4,
+     "w": 6,
+     "d": 12,
+     "r": 1,
+     "fill": "#C9D3D8"
+    },
+    {
+     "shape": "box",
+     "x": 6,
+     "y": 109,
+     "w": 6,
+     "d": 12,
+     "r": 1,
+     "fill": "#C9D3D8"
+    },
+    {
+     "shape": "box",
+     "x": 134,
+     "y": 20,
+     "w": 6,
+     "d": 16,
+     "r": 1,
+     "fill": "#C9D3D8"
+    },
+    {
+     "shape": "box",
+     "x": 134,
+     "y": 89,
+     "w": 6,
+     "d": 16,
+     "r": 1,
+     "fill": "#C9D3D8"
+    }
+   ]
   },
   {
-   "id": "paper_booklet",
+   "id": "booklet",
    "component_id": "paper_booklet",
+   "material_id": "paper",
    "name": "Booklet",
    "short": "Booklet",
    "shape": "box",
-   "x": 121.2,
-   "y": 24.0,
-   "w": 3.6,
-   "d": 72.0,
-   "h": 1.2,
-   "z": 0.4,
-   "r": 0.4,
+   "x": 11,
+   "y": 2.5,
+   "w": 120,
+   "d": 120,
+   "z": 6.6,
+   "h": 1,
+   "r": 0.5,
    "explode": [
-    57.0,
     0,
-    14.4
+    -150,
+    42.4
    ],
-   "mass": 0.62,
+   "mass": 7.7,
    "materials": [
     [
      "papier",
-     100
+     93
+    ],
+    [
+     "druck",
+     7
     ]
    ],
-   "material_id": "paper",
-   "info": "Slide it out from under the clips."
+   "info": "Geheftetes Heftchen mit Liedtexten, von Laschen im Deckel gehalten. Unter den Laschen herausziehen, die Heftklammern stören im Altpapier nicht.",
+   "color": "#E9D9B8",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 8,
+     "y": 8,
+     "w": 104,
+     "d": 70,
+     "r": 2,
+     "fill": "#C8423A"
+    },
+    {
+     "shape": "box",
+     "x": 8,
+     "y": 88,
+     "w": 70,
+     "d": 6,
+     "r": 1,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 8,
+     "y": 100,
+     "w": 50,
+     "d": 4,
+     "r": 1,
+     "fill": "#3A3F44"
+    }
+   ]
   },
   {
-   "id": "disc_body",
+   "id": "druck",
    "component_id": "disc_body",
-   "name": "Disc",
-   "short": "Disc",
+   "material_id": "paper",
+   "name": "Etikettendruck",
+   "short": "Druck",
    "shape": "cyl",
-   "x": 0,
-   "y": 0,
-   "w": 120.0,
-   "h": 1.0,
-   "z": 0.0,
+   "x": 13,
+   "y": 4.5,
+   "w": 116,
+   "z": 5.95,
+   "h": 0.05,
    "explode": [
     0,
     0,
-    0
+    216.3
    ],
-   "mass": 10.26,
+   "mass": 0.1,
+   "materials": [
+    [
+     "druck",
+     100
+    ]
+   ],
+   "info": "Farbe, direkt auf die Scheibe gedruckt (kein Papier). Wird beim Recycling mit dem Lack abgelöst.",
+   "color": "#F0F0EA",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 16,
+     "y": 16,
+     "w": 84,
+     "fill": "#4A7BB7"
+    },
+    {
+     "shape": "cyl",
+     "x": 41.0,
+     "y": 41.0,
+     "w": 34,
+     "fill": "#5B6166"
+    }
+   ]
+  },
+  {
+   "id": "lack",
+   "component_id": "disc_body",
+   "material_id": "pc",
+   "name": "Schutzlack",
+   "short": "Schutzlack",
+   "shape": "cyl",
+   "x": 12,
+   "y": 3.5,
+   "w": 118,
+   "z": 5.9,
+   "h": 0.05,
+   "explode": [
+    0,
+    0,
+    191.3
+   ],
+   "mass": 0.3,
    "materials": [
     [
      "pcabs",
      100
     ]
    ],
+   "info": "Hauchdünne Lackschicht aus Acrylharz. Sie schützt die Spiegelschicht, denn die Daten liegen direkt darunter: Ein Kratzer auf der Oberseite zerstört die CD eher als einer unten.",
+   "color": "#E6ECEF",
+   "opacity": 0.7,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 42.0,
+     "y": 42.0,
+     "w": 34,
+     "fill": "#5B6166"
+    }
+   ]
+  },
+  {
+   "id": "spiegel",
+   "component_id": "disc_body",
+   "material_id": "aluminium",
+   "name": "Aluminium-Spiegelschicht",
+   "short": "Alu-Schicht",
+   "shape": "cyl",
+   "x": 12,
+   "y": 3.5,
+   "w": 118,
+   "z": 5.85,
+   "h": 0.05,
+   "explode": [
+    0,
+    0,
+    166.3
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "info": "Weniger als ein Tausendstel Millimeter Aluminium. Es spiegelt den Laser des CD-Spielers zurück.",
+   "color": "#D5DADE",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 10,
+     "y": 10,
+     "w": 98,
+     "fill": "#C2C8CD"
+    },
+    {
+     "shape": "cyl",
+     "x": 39.0,
+     "y": 39.0,
+     "w": 40,
+     "fill": "#5B6166"
+    }
+   ]
+  },
+  {
+   "id": "scheibe",
+   "component_id": "disc_body",
    "material_id": "pc",
-   "info": "Scratch it to make the data unreadable; some shops collect CDs."
+   "name": "Polycarbonat-Scheibe",
+   "short": "Scheibe",
+   "shape": "cyl",
+   "x": 11,
+   "y": 2.5,
+   "w": 120,
+   "z": 4.7,
+   "h": 1.15,
+   "explode": [
+    0,
+    0,
+    141.3
+   ],
+   "mass": 14.9,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Glasklarer Kunststoff, in den die Daten als winzige Vertiefungen (Pits) gepresst sind. Zum Unlesbarmachen zerkratzen; manche Wertstoffhöfe sammeln CDs getrennt.",
+   "color": "#DDE6EA",
+   "opacity": 0.75,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 38,
+     "y": 38,
+     "w": 44,
+     "fill": "#C9D3D8"
+    },
+    {
+     "shape": "cyl",
+     "x": 52.5,
+     "y": 52.5,
+     "w": 15,
+     "fill": "#5B6166"
+    }
+   ]
+  },
+  {
+   "id": "tray",
+   "component_id": "cd_case",
+   "material_id": "ps",
+   "name": "Einsatz (Tray) mit Haltestern",
+   "short": "Tray",
+   "shape": "box",
+   "x": 3,
+   "y": 2,
+   "w": 136,
+   "d": 121,
+   "z": 1.3,
+   "h": 4.7,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    95.0
+   ],
+   "mass": 19.2,
+   "materials": [
+    [
+     "ps",
+     100
+    ]
+   ],
+   "info": "Schwarzer PS-Einsatz. Der Stern in der Mitte hält die CD am Loch fest: zum Herausnehmen in der Mitte drücken. Der Tray lässt sich aus dem Unterteil heraushebeln.",
+   "color": "#2F3438",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 7,
+     "y": 0.0,
+     "w": 122,
+     "d": 121,
+     "fill": "#262A2E"
+    },
+    {
+     "shape": "cyl",
+     "x": 55,
+     "y": 47.5,
+     "w": 26,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 75.5,
+     "y": 59.0,
+     "w": 3,
+     "d": 3,
+     "r": 0.8,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 74.29,
+     "y": 63.5,
+     "w": 3,
+     "d": 3,
+     "r": 0.8,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 71.0,
+     "y": 66.79,
+     "w": 3,
+     "d": 3,
+     "r": 0.8,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 66.5,
+     "y": 68.0,
+     "w": 3,
+     "d": 3,
+     "r": 0.8,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 62.0,
+     "y": 66.79,
+     "w": 3,
+     "d": 3,
+     "r": 0.8,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 58.71,
+     "y": 63.5,
+     "w": 3,
+     "d": 3,
+     "r": 0.8,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 57.5,
+     "y": 59.0,
+     "w": 3,
+     "d": 3,
+     "r": 0.8,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 58.71,
+     "y": 54.5,
+     "w": 3,
+     "d": 3,
+     "r": 0.8,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 62.0,
+     "y": 51.21,
+     "w": 3,
+     "d": 3,
+     "r": 0.8,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 66.5,
+     "y": 50.0,
+     "w": 3,
+     "d": 3,
+     "r": 0.8,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 71.0,
+     "y": 51.21,
+     "w": 3,
+     "d": 3,
+     "r": 0.8,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 74.29,
+     "y": 54.5,
+     "w": 3,
+     "d": 3,
+     "r": 0.8,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 50,
+     "w": 4,
+     "d": 22,
+     "r": 1,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 130,
+     "y": 50,
+     "w": 4,
+     "d": 22,
+     "r": 1,
+     "fill": "#3A3F44"
+    }
+   ]
+  },
+  {
+   "id": "inlay",
+   "component_id": "paper_booklet",
+   "material_id": "paper",
+   "name": "Rückseiten-Karte (Inlay)",
+   "short": "Inlay",
+   "shape": "box",
+   "x": 2,
+   "y": 1.5,
+   "w": 138,
+   "d": 122,
+   "z": 1,
+   "h": 0.3,
+   "r": 0.5,
+   "explode": [
+    0,
+    0,
+    50.0
+   ],
+   "mass": 2.9,
+   "materials": [
+    [
+     "papier",
+     93
+    ],
+    [
+     "druck",
+     7
+    ]
+   ],
+   "info": "Papierkarte unter dem Tray mit der Titelliste und dem Rücken. Erst nach dem Tray herausnehmen, dann ins Altpapier.",
+   "color": "#D9C9A8",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 0,
+     "w": 6,
+     "d": 122,
+     "r": 0.3,
+     "fill": "#C8423A"
+    },
+    {
+     "shape": "box",
+     "x": 132,
+     "y": 0,
+     "w": 6,
+     "d": 122,
+     "r": 0.3,
+     "fill": "#C8423A"
+    },
+    {
+     "shape": "box",
+     "x": 20,
+     "y": 20,
+     "w": 90,
+     "d": 4,
+     "fill": "#5B6166"
+    },
+    {
+     "shape": "box",
+     "x": 20,
+     "y": 30,
+     "w": 90,
+     "d": 4,
+     "fill": "#5B6166"
+    },
+    {
+     "shape": "box",
+     "x": 20,
+     "y": 40,
+     "w": 90,
+     "d": 4,
+     "fill": "#5B6166"
+    },
+    {
+     "shape": "box",
+     "x": 20,
+     "y": 50,
+     "w": 90,
+     "d": 4,
+     "fill": "#5B6166"
+    },
+    {
+     "shape": "box",
+     "x": 20,
+     "y": 60,
+     "w": 90,
+     "d": 4,
+     "fill": "#5B6166"
+    },
+    {
+     "shape": "box",
+     "x": 20,
+     "y": 70,
+     "w": 90,
+     "d": 4,
+     "fill": "#5B6166"
+    },
+    {
+     "shape": "box",
+     "x": 20,
+     "y": 80,
+     "w": 90,
+     "d": 4,
+     "fill": "#5B6166"
+    },
+    {
+     "shape": "box",
+     "x": 20,
+     "y": 90,
+     "w": 90,
+     "d": 4,
+     "fill": "#5B6166"
+    }
+   ]
+  },
+  {
+   "id": "unterteil",
+   "component_id": "cd_case",
+   "material_id": "ps",
+   "name": "Unterteil",
+   "short": "Unterteil",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 142,
+   "d": 125,
+   "z": 0,
+   "h": 6,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 21.1,
+   "materials": [
+    [
+     "ps",
+     100
+    ]
+   ],
+   "info": "Klare PS-Schale mit Scharnier. Ganze, saubere Hüllen nehmen manche Wertstoffhöfe an, sonst Restmüll: Die Gelbe Tonne ist nur für Verpackungen.",
+   "color": "#E4ECF0",
+   "opacity": 0.45,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 1.5,
+     "w": 138,
+     "d": 122,
+     "r": 0.5,
+     "fill": "#D3DDE2"
+    }
+   ]
   }
  ]
 }
