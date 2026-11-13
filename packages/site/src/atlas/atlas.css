@@ -70,3 +70,7 @@
 }
 .nur-schmal { display: none; }
 @media (max-width: 620px) { .nur-schmal { display: inline; } .strom-kopf { flex-wrap: wrap; } }
+.quelle { display: grid; gap: 6px; }
+.quelle h3 { margin-bottom: 0; }
+.quelle-link { justify-self: start; height: 36px; padding: 0 14px; font-size: 13px; margin-top: 4px; }
+.facts dd a { color: var(--ink-2); text-underline-offset: 3px; }

@@ -113,7 +113,8 @@ for (const [oid, o] of Object.entries(cls.objects)) {
 const rohstoffe = {};
 for (const [key, r] of Object.entries(ROHSTOFF)) {
   const h = herkunft[key] ?? {};
-  rohstoffe[key] = { ...r, z: Z[key] ?? null, kritisch: h.kritisch ?? null, abbau: h.abbau ?? null, verarbeitung: h.verarbeitung ?? null };
+  rohstoffe[key] = { ...r, z: Z[key] ?? null, kritisch: h.kritisch ?? null, kritisch_quelle: h.kritisch_quelle ?? null,
+    kritisch_pdf_seite: h.kritisch_pdf_seite ?? null, abbau: h.abbau ?? null, verarbeitung: h.verarbeitung ?? null };
 }
 const haeufigste = (o) => Object.entries(o ?? {}).sort((a, b) => b[1] - a[1])[0]?.[0] ?? null;
 const materialien = Object.fromEntries(Object.keys(cls.materials).map((mid) => [mid, { en: cls.materials[mid].name ?? mid, kat: haeufigste(katalogVon[mid]) }]));

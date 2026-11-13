@@ -1,6 +1,6 @@
 // KI-Kompass: vier Richtungen für verantwortungsvollen Umgang mit KI, belegt aus dem Code (inhalt.js).
 // Links eine Kompassrose als technische Zeichnung, darunter der Ablauf; rechts das Datenblatt wie im Steckbrief.
-import { shell, esc } from '../shell.js';
+import { shell, esc, repoLink } from '../shell.js';
 import { KOMPASS } from './inhalt.js';
 import './kompass.css';
 
@@ -64,7 +64,7 @@ function setzePanel(html, crumbs) {
   panel.querySelectorAll('[data-r]').forEach((b) => b.addEventListener('click', () => (location.hash = b.dataset.r)));
   panel.scrollTop = 0;
 }
-const beleg = (b) => `<span class="beleg">${esc(b)}</span>`;
+const beleg = (b) => `<span class="beleg">${repoLink(b)}</span>`;
 const start = { label: 'KI-Kompass', go: () => (location.hash = '') };
 
 function uebersicht() {
@@ -76,7 +76,7 @@ function uebersicht() {
       <button class="prow" data-r="${r.id}"><span class="n">${r.himmelsrichtung}</span>
         <span>${esc(r.titel)}<small>${esc(r.frage)}</small></span><span class="m">${r.offen.length} offen →</span></button>`).join('')}</div></div>
     <div><h3>Bevor du selbst KI nutzt</h3><ol class="howto">${KOMPASS.checkliste.map((c) => `<li>${esc(c)}</li>`).join('')}</ol></div>
-    <div><h3>Zum Nachlesen</h3><div class="quellen">${KOMPASS.quellen.map((q) => `<a href="${esc(q.url)}" target="_blank" rel="noopener">${esc(q.titel)} ↗</a>`).join('')}</div></div>
+    <div><h3>Zum Nachlesen</h3><div class="quellen">${KOMPASS.quellen.map((q) => `<a href="${esc(q.url)}" target="_blank" rel="noopener">${esc(q.titel)} →</a>`).join('')}</div></div>
     <p class="source">Jede Aussage im Kompass ist mit der Datei belegt, aus der sie stammt.</p>`, null);
 }
 

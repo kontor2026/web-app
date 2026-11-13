@@ -1,6 +1,6 @@
 // Rohstoff-Atlas: Gegenstand wählen → Stoffstrom (Bauteile → Materialien → Rohstoffe) → Herkunft auf dem Globus.
 // Layout und Bausteine wie in der Station: Katalog wie #katalog, Objektansicht wie der Steckbrief (.sheet).
-import { shell, esc, zahl, gramm } from '../shell.js';
+import { shell, esc, zahl, gramm, quelleA, repoLink } from '../shell.js';
 import { CLASSES, MATERIALS } from '../../../../js/data/catalog.js';
 import daten from '../daten/atlas.json';
 import { zeichneStoffstrom } from './stoffstrom.js';
@@ -64,7 +64,9 @@ function zeigeKatalog() {
       <h3 style="margin-top:28px">Farben</h3>
       <div class="mix-legend einspaltig">${Object.values(CLASSES).map((c) => `<span><i style="background:${c.color}"></i>${esc(c.label)}</span>`).join('')}
         <span><i class="krit-i">▲</i>kritischer Rohstoff für die EU</span></div>
-      <p class="source" style="margin-top:28px">Herkunft: ${['usgs2026', 'eucrm2023', 'usdapsd2026'].filter((q) => QUELLE[q]).map((q) => esc(QUELLE[q].titel)).join(' · ') || 'noch keine Daten'}.</p>
+      <h3 style="margin-top:28px">Quellen</h3>
+      <ul class="quellen-liste">${Object.keys(QUELLE).map((k) => `<li>${quelleA(QUELLE, k)}</li>`).join('')}
+        <li>${repoLink('data/classifier.json', 'Bauteile und Materialien: data/classifier.json')}</li></ul>
     </aside>
   </section>`;
   const suche = document.getElementById('suche');
@@ -173,6 +175,16 @@ function aktualisiere() {
   gewaehlt ? panelRohstoff(gewaehlt) : panelObjekt();
 }
 
+// Link direkt auf die Fundstelle: bei PDFs mit #page=N (Seitenindex im PDF), daneben die gedruckte Seite
+function quelleLink(key, st = {}) {
+  const q = QUELLE[key];
+  if (!q?.url) return '';
+  const pdf = /\.pdf($|[?#])|format=pdf/i.test(q.url);
+  const href = pdf && st.pdf_seite ? `${q.url.split('#')[0]}#page=${st.pdf_seite}` : q.url;
+  const text = pdf ? `PDF öffnen${st.pdf_seite ? ` auf Seite ${st.pdf_seite}` : ''}` : 'Quelle öffnen';
+  return `<a class="btn ghost quelle-link" href="${esc(href)}" target="_blank" rel="noopener">${text} →</a>${st.seite ? `<span class="source">${esc(st.seite)} (gedruckte Seitenzahl)</span>` : ''}`;
+}
+
 // ---------- Datenblatt rechts ----------
 const panel = () => document.getElementById('panel');
 function setzePanel(html, crumbs) {
@@ -217,7 +229,7 @@ function panelObjekt() {
     <div><h3>Materialmix nach Gewicht</h3>
       <div class="mix">${mix.map(([c, g]) => `<i style="width:${(g / gesamt) * 100}%;background:${CLASSES[c]?.color}"></i>`).join('')}</div>
       <div class="mix-legend">${mix.map(([c, g]) => `<span><i style="background:${CLASSES[c]?.color}"></i>${esc(CLASSES[c]?.label)}<b>${zahl((g / gesamt) * 100, 0)} %</b></span>`).join('')}</div></div>
-    <p class="source">Bauteile und Massen: ${o.handgebaut ? 'handgebautes 3D-Modell' : 'automatischer Platzhalter'} · Metallgehalte: Öko-Institut 2012 · Herkunft: siehe einzelne Rohstoffe.</p>`, null);
+    <p class="source">Bauteile und Massen: ${repoLink(`tools/kategorien/modelle/${o.id}.json`, o.handgebaut ? 'handgebautes 3D-Modell' : 'Platzhalter-Modell')} · Metallgehalte: ${quelleA(QUELLE, 'oeko2012', 'Öko-Institut 2012')} · Herkunft: beim Rohstoff, mit Link zur Seite in der Quelle.</p>`, null);
 }
 
 function panelRohstoff(key) {
@@ -236,10 +248,11 @@ function panelRohstoff(key) {
       ${zeilen.map(([l, p], i) => `<div class="mrow land" data-land="${l}"><span class="nr">${String(i + 1).padStart(2, '0')}</span><span>${esc(land(l))}</span>
         <span class="pct">${p} %</span><span></span><div class="mbar"><b style="width:${p}%"></b></div></div>`).join('')}
       ${st.rest ? `<div class="mrow land rest"><span class="nr">··</span><span>Übrige Länder</span><span class="pct">${st.rest} %</span><span></span><div class="mbar"><b style="width:${st.rest}%"></b></div></div>` : ''}</div>
-      <p class="source">Quelle: ${esc(q?.titel ?? st.quelle)}${st.seite ? `, ${esc(st.seite)}` : ''}. ${esc(st.was ?? '')}${q?.url ? ` <a href="${esc(q.url)}" target="_blank" rel="noopener">Öffnen ↗</a>` : ''}</p>`
+      <div class="quelle"><h3>Quelle</h3><p>${quelleA(QUELLE, st.quelle)}${q?.herausgeber ? ` · ${esc(q.herausgeber)}` : ''}</p>
+        <p class="source">${esc(st.was ?? '')}</p>${quelleLink(st.quelle, st)}</div>`
     : `<p class="note warn">Für ${esc(r.name)} haben wir beim ${STUFE[stufe].name} noch keine Länderdaten mit Quelle. Wir zeigen nichts Geschätztes.${ROH[key]?.[andere] ? ` Für die ${STUFE[andere].name} gibt es Daten.` : ''}</p>`}
     <dl class="facts">
-      <div><dt>Kritisch für die EU</dt><dd class="${r.kritisch ? 'yes' : ''}">${r.kritisch ? 'ja, laut Verordnung (EU) 2024/1252' : r.kritisch === false ? 'nein' : 'unbekannt'}</dd></div>
+      <div><dt>Kritisch für die EU</dt><dd class="${r.kritisch ? 'yes' : ''}">${r.kritisch ? 'ja, laut Verordnung (EU) 2024/1252' : r.kritisch === false ? 'nein' : 'unbekannt'}${ROH[key]?.kritisch_quelle && QUELLE[ROH[key].kritisch_quelle]?.url ? ` · <a href="${esc(QUELLE[ROH[key].kritisch_quelle].url)}${ROH[key].kritisch_pdf_seite ? `#page=${ROH[key].kritisch_pdf_seite}` : ''}" target="_blank" rel="noopener">Verordnung →</a>` : ''}</dd></div>
       <div><dt>Farbe im Bild</dt><dd>${esc(CLASSES[r.art]?.label ?? '')}</dd></div>
     </dl>`, [{ label: obj.name, href: `#kat=${obj.id}` }, { label: r.name }]);
   document.querySelectorAll('[data-stufe2]').forEach((b) => b.addEventListener('click', () => { stufe = b.dataset.stufe2; aktualisiere(); }));

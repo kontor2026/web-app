@@ -1,5 +1,5 @@
 // Übersicht: drei Bereiche als Karten, rechts der Stand der Daten. Layout wie „Bauen“ in der Station (.craft).
-import { shell, esc } from './shell.js';
+import { shell, esc, quelleA, repoLink } from './shell.js';
 import index from '../../../backend/seed/kategorien/index.json';
 import atlas from './daten/atlas.json';
 import { KOMPASS } from './kompass/inhalt.js';
@@ -53,7 +53,9 @@ app.innerHTML = `
     <div class="irow"><span class="f">Herkunft</span><span>Rohstoffe mit Länderdaten</span><span class="q">${mitHerkunft} / ${Object.keys(atlas.rohstoffe).length}</span></div>
     <div class="irow"><span class="f">KI</span><span>offene Punkte im Kompass</span><span class="q">${offen}</span></div>
     <h3 style="margin-top:28px">Quellen</h3>
-    <p class="source">Bauteile und Materialien: data/classifier.json. Metallgehalte: Öko-Institut 2012. CO₂: Idemat 2026.
-      ${mitHerkunft ? 'Herkunft: siehe Rohstoff-Atlas.' : 'Herkunft der Rohstoffe: wird gerade aus USGS, EU und FAO zusammengetragen.'}</p>
+    <ul class="quellen-liste">
+      <li>${repoLink('data/classifier.json', 'Bauteile und Materialien (data/classifier.json)')}</li>
+      ${Object.keys(atlas.quellen).map((k) => `<li>${quelleA(atlas.quellen, k)}</li>`).join('')}
+    </ul>
   </aside>
 </section>`;

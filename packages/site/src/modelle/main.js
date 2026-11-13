@@ -3,7 +3,8 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { CSS2DRenderer, CSS2DObject } from 'three/addons/renderers/CSS2DRenderer.js';
-import { shell, esc, zahl, gramm, ruhig } from '../shell.js';
+import { shell, esc, zahl, gramm, ruhig, quelleA, repoLink } from '../shell.js';
+import QUELLEN from '../../../../data/rohstoffe/quellen.json';
 import { CLASSES, MATERIALS } from '../../../../js/data/catalog.js';
 import index from '../../../../backend/seed/kategorien/index.json';
 import './modelle.css';
@@ -298,7 +299,12 @@ function zeigeModell() {
       <button class="prow" data-i="${i}"><span class="n">${t.nr ?? '–'}</span>
         <span>${esc(t.p.name)}<small>${esc(MATERIALS[t.p.materials?.[0]?.[0]]?.name ?? '')}</small></span>
         <span class="m">${gramm(t.p.mass)}</span></button>`).join('')}</div></div>
-    <p class="source">${esc(obj.quelle)}</p>`, [{ label: 'Alle Modelle', go: zeigeListe }, { label: obj.name, go: zeigeModell }]);
+    <div><h3>Quellen</h3><ul class="quellen-liste">
+      <li>${repoLink(`tools/kategorien/modelle/${obj.id}.json`, `3D-Modell (tools/kategorien/modelle/${obj.id}.json)`)}</li>
+      <li>${repoLink('data/classifier.json', 'Bauteile und Materialien (data/classifier.json)')}</li>
+      <li>${repoLink('tools/kategorien/kategorien.csv', 'Maße und Gewicht (tools/kategorien/kategorien.csv)')}</li>
+      ${['oeko2012', 'idemat2026', 'westmetall2026'].filter((k) => QUELLEN[k]).map((k) => `<li>${quelleA(QUELLEN, k)}</li>`).join('')}
+    </ul></div>`, [{ label: 'Alle Modelle', go: zeigeListe }, { label: obj.name, go: zeigeModell }]);
   panel.querySelectorAll('.prow').forEach((r) => {
     const t = teile[+r.dataset.i];
     r.addEventListener('pointerenter', () => markiere(t));

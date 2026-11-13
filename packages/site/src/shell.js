@@ -28,4 +28,16 @@ export function shell(aktiv, root, status = '') {
 export const zahl = (v, s = 1) => Number(v).toLocaleString('de-DE', { maximumFractionDigits: s });
 export const gramm = (g) => (g >= 1000 ? `${zahl(g / 1000)} kg` : g >= 10 ? `${zahl(g, 0)} g` : g >= 0.1 ? `${zahl(g)} g` : `${zahl(g * 1000, 0)} mg`);
 export const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
+// Quellen immer verlinkt: Zitate aus data/rohstoffe/quellen.json und Dateien im Repo auf GitHub
+const REPO = 'https://github.com/kontor2026';
+export const repoLink = (pfad, text = pfad) => {
+  const url = pfad.startsWith('deployment/') ? `${REPO}/deployment/blob/main/${pfad.slice(11)}` : `${REPO}/web-app/blob/main/${pfad}`;
+  return `<a class="ql" href="${esc(url)}" target="_blank" rel="noopener">${esc(text)} →</a>`;
+};
+export const quelleA = (quellen, key, text) => {
+  const q = quellen[key];
+  if (!q) return esc(text ?? key);
+  const url = q.url ?? q.landingpage;
+  return url ? `<a class="ql" href="${esc(url)}" target="_blank" rel="noopener">${esc(text ?? q.titel)} →</a>` : esc(text ?? q.titel);
+};
 export const ruhig = matchMedia('(prefers-reduced-motion: reduce)').matches || new URLSearchParams(location.search).has('static');

@@ -71,6 +71,10 @@
   "name": "Gabun",
   "num": "266"
  },
+ "GBR": {
+  "name": "Vereinigtes Königreich",
+  "num": "826"
+ },
  "GHA": {
   "name": "Ghana",
   "num": "288"
@@ -91,6 +95,10 @@
   "name": "Iran",
   "num": "364"
  },
+ "IRQ": {
+  "name": "Irak",
+  "num": "368"
+ },
  "ITA": {
   "name": "Italien",
   "num": "380"
@@ -106,6 +114,10 @@
  "KOR": {
   "name": "Südkorea",
   "num": "410"
+ },
+ "KWT": {
+  "name": "Kuwait",
+  "num": "414"
  },
  "MAR": {
   "name": "Marokko",
@@ -151,6 +163,10 @@
   "name": "Norwegen",
   "num": "578"
  },
+ "NZL": {
+  "name": "Neuseeland",
+  "num": "554"
+ },
  "PAK": {
   "name": "Pakistan",
   "num": "586"
@@ -171,6 +187,10 @@
   "name": "Portugal",
   "num": "620"
  },
+ "QAT": {
+  "name": "Katar",
+  "num": "634"
+ },
  "RUS": {
   "name": "Russland",
   "num": "643"
@@ -178,6 +198,10 @@
  "RWA": {
   "name": "Ruanda",
   "num": "646"
+ },
+ "SAU": {
+  "name": "Saudi-Arabien",
+  "num": "682"
  },
  "SWE": {
   "name": "Schweden",

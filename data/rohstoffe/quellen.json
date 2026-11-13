@@ -35,17 +35,19 @@
   "autoren": "M. Grohol, C. Veeh",
   "herausgeber": "Europäische Kommission, GD GROW; Amt für Veröffentlichungen der EU, Luxemburg",
   "jahr": 2023,
-  "url": "https://single-market-economy.ec.europa.eu/publications/study-critical-raw-materials-eu-2023-final-report_en",
+  "url": "https://op.europa.eu/o/opportal-service/download-handler?identifier=57318397-fdd4-11ed-a05c-01aa75ed71a1&format=pdf&language=en&productionSystem=cellar&part=",
   "doi": "https://data.europa.eu/doi/10.2873/725585",
-  "genutzt": "Annex 7 „Global supply shares“ (S. 78–106, Durchschnitt 2016–2020): Verarbeitungsstufe für Pd, Pt, Co, Ni, Li, Mn, Zn, Cr, Sn, Nd, Pr, Dy, Y; Gewinnungsstufe für Dy, Y, Naturkautschuk, Naturkork, Rundholz"
+  "genutzt": "Annex 7 „Global supply shares“ (S. 78–106, Durchschnitt 2016–2020): Verarbeitungsstufe für Pd, Pt, Co, Ni, Li, Mn, Zn, Cr, Sn, Nd, Pr, Dy, Y; Gewinnungsstufe für Dy, Y, Naturkautschuk, Naturkork, Rundholz",
+  "landingpage": "https://single-market-economy.ec.europa.eu/publications/study-critical-raw-materials-eu-2023-final-report_en"
  },
  "eu2024crma": {
   "titel": "Verordnung (EU) 2024/1252 zur Schaffung eines Rahmens zur Gewährleistung einer sicheren und nachhaltigen Versorgung mit kritischen Rohstoffen (Critical Raw Materials Act)",
   "herausgeber": "Europäisches Parlament und Rat der EU, ABl. L 2024/1252 vom 3.5.2024",
   "jahr": 2024,
-  "url": "https://op.europa.eu/en/publication-detail/-/publication/aa3c49f7-08e7-11ef-a251-01aa75ed71a1",
+  "url": "https://op.europa.eu/o/opportal-service/download-handler?identifier=aa3c49f7-08e7-11ef-a251-01aa75ed71a1&format=pdf&language=en&productionSystem=cellar&part=",
   "eli": "http://data.europa.eu/eli/reg/2024/1252/oj",
-  "genutzt": "Anhang II Abschnitt 1 (S. 57–58): Liste der kritischen Rohstoffe → Feld „kritisch“"
+  "genutzt": "Anhang II Abschnitt 1 (S. 57–58): Liste der kritischen Rohstoffe → Feld „kritisch“",
+  "landingpage": "https://op.europa.eu/en/publication-detail/-/publication/aa3c49f7-08e7-11ef-a251-01aa75ed71a1"
  },
  "usdapsd2026": {
   "titel": "Production, Supply and Distribution Online (PSD), Datensatz Cotton (psd_cotton_csv.zip)",
@@ -54,5 +56,29 @@
   "stand": "2026-05",
   "url": "https://apps.fas.usda.gov/psdonline/downloads/psd_cotton_csv.zip",
   "genutzt": "Baumwollproduktion je Land, Wirtschaftsjahr 2024/25 (1000 Ballen à 480 lb); Länderanteile daraus berechnet"
+ },
+ "eia2026intl": {
+  "titel": "International Energy Statistics, Bulk-Download INTL.zip",
+  "herausgeber": "U.S. Energy Information Administration (EIA)",
+  "jahr": 2026,
+  "stand": "2026-11-09",
+  "url": "https://www.eia.gov/opendata/bulk/INTL.zip",
+  "genutzt": "Rohölförderung inkl. Lease-Kondensat 2025 (57-1), Förderung trockenes Erdgas 2024 (26-1), Produktion raffinierter Erdölprodukte 2014 (54-1); Länderanteile berechnet"
+ },
+ "faostat2025qcl": {
+  "titel": "FAOSTAT Crops and livestock products (QCL), Bulk-Download Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+  "herausgeber": "Food and Agriculture Organization of the United Nations (FAO)",
+  "jahr": 2025,
+  "stand": "2025-12-23",
+  "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip",
+  "genutzt": "Produktion 2024: Schurwolle roh (Item 987), Rohhäute Rinder (Item 919); Länderanteile berechnet (China = China, mainland)"
+ },
+ "faostat2026fo": {
+  "titel": "FAOSTAT Forestry Production and Trade (FO), Bulk-Download Forestry_E_All_Data_(Normalized).zip",
+  "herausgeber": "Food and Agriculture Organization of the United Nations (FAO)",
+  "jahr": 2026,
+  "stand": "2026-04-01",
+  "url": "https://bulks-faostat.fao.org/production/Forestry_E_All_Data_(Normalized).zip",
+  "genutzt": "Produktion Holzzellstoff 2024 (Item 1875 Wood pulp); Länderanteile berechnet (China = China, mainland)"
  }
 }
