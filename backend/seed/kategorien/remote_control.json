@@ -4,7 +4,7 @@
  "name_en": "Remote Control",
  "klasse": "Elektroschrott · Kleingerät",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -21,47 +21,49 @@
  "werte": [
   {
    "k": "Rohstoffwert",
-   "v": "≈ 0,34 €",
-   "hint": "Gold, Silber, Palladium zu Preisen vom 13.11. Ohne Palladium (kein Preis)."
+   "v": "≈ 0,24 €",
+   "hint": "Gold, Silber, Kupfer zu Preisen vom 13.11."
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 0,73 kg",
+   "v": "≈ 0,64 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 0,60 kg",
+   "v": "≈ 0,51 kg",
    "hint": "spart 0,13 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Cu": 2870.0,
-   "Ag": 11.0,
-   "Au": 2.58,
-   "Pd": 1.15
+   "Cu": 2160.0,
+   "Fe": 1658.0,
+   "Ag": 7.92,
+   "Au": 1.78,
+   "Pd": 0.79
   },
   "herkunft": {
    "Cu": "Modellmassen (Schätzung)",
-   "Ag": "14 g Leiterplatte × oeko2012 Tab, 15, Motherboard Notebook (Umicore 2011)",
-   "Au": "14 g Leiterplatte × oeko2012 Tab, 15, Motherboard Notebook (Umicore 2011)",
-   "Pd": "14 g Leiterplatte × oeko2012 Tab, 15, Motherboard Notebook (Umicore 2011)"
+   "Fe": "Modellmassen (Schätzung)",
+   "Ag": "10 g Leiterplatte × oeko2012 Tab, 15, Motherboard Notebook (Umicore 2011)",
+   "Au": "10 g Leiterplatte × oeko2012 Tab, 15, Motherboard Notebook (Umicore 2011)",
+   "Pd": "10 g Leiterplatte × oeko2012 Tab, 15, Motherboard Notebook (Umicore 2011)"
   },
   "materialien_g": {
-   "abs": 59.8,
-   "alkaline": 28.7,
-   "pcb": 14.3,
-   "silicone": 7.2
+   "abs": 59.0,
+   "alkaline": 24.2,
+   "silicone": 14.7,
+   "pcb": 9.9,
+   "steel": 1.6,
+   "mixed_electronics": 0.6
   },
-  "co2_kg": 0.728,
-  "co2_mit_recyclat_kg": 0.597,
-  "co2_ersparnis_kg": 0.131,
+  "co2_kg": 0.641,
+  "co2_mit_recyclat_kg": 0.509,
+  "co2_ersparnis_kg": 0.132,
   "co2_ohne_faktor": [],
-  "rohstoffwert_eur": 0.34,
-  "wert_ohne_preis": [
-   "Pd"
-  ],
+  "rohstoffwert_eur": 0.24,
+  "wert_ohne_preis": [],
   "preisstand": "2026-11-13",
   "quellen": {
    "oeko2012": {
@@ -108,113 +110,392 @@
   "nicht": "Nicht in Restmüll oder Gelbe Tonne",
   "warnung": "Akku oder Batterie nicht beschädigen. Wenn möglich herausnehmen und getrennt abgeben, fest verbaute Akkus drinlassen."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "silicone_keypad",
-   "component_id": "silicone_keypad",
-   "name": "Keypad",
-   "short": "Keypad",
-   "shape": "box",
-   "x": 2.2,
-   "y": 9.0,
-   "w": 40.5,
-   "d": 162.0,
-   "h": 1.6,
-   "z": 16.0,
-   "r": 4.9,
-   "explode": [
-    0,
-    0,
-    190.8
-   ],
-   "mass": 7.17,
-   "materials": [
-    [
-     "gummi",
-     100
-    ]
-   ],
-   "material_id": "silicone",
-   "info": "Lifts out as a single mat once the housing is opened."
-  },
-  {
-   "id": "plastic_housing_ober",
+   "id": "oberschale",
    "component_id": "plastic_housing",
-   "name": "Plastic Housing (Oberteil)",
-   "short": "Plastic Housing (O",
+   "material_id": "abs",
+   "name": "Oberschale",
+   "short": "Oberschale",
    "shape": "box",
    "x": 0,
    "y": 0,
-   "w": 45.0,
-   "d": 180.0,
-   "h": 4.0,
-   "z": 12.0,
-   "r": 5.4,
+   "w": 45,
+   "d": 180,
+   "z": 10,
+   "h": 7,
+   "r": 10,
    "explode": [
     0,
     0,
-    145.8
+    143.0
    ],
-   "mass": 17.93,
+   "mass": 25.3,
    "materials": [
     [
      "pcabs",
      100
     ]
    ],
-   "material_id": "abs",
-   "info": "Look for hidden screws under rubber feet or labels, then pry the clips open."
+   "info": "Hat Löcher für die Gummitasten. Meist nur mit Rastnasen verklipst: mit einem Plektrum an der Fuge entlang aufhebeln.",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 18,
+     "w": 37,
+     "d": 128,
+     "r": 6,
+     "fill": "#2B2F33"
+    }
+   ]
   },
   {
-   "id": "alkaline_cell",
-   "component_id": "alkaline_cell",
-   "name": "Battery",
-   "short": "Battery",
-   "shape": "cyl",
-   "x": 24.3,
-   "y": 44.5,
-   "w": 18.9,
-   "h": 5.4,
-   "z": 2.4,
+   "id": "tastenmatte",
+   "component_id": "silicone_keypad",
+   "material_id": "silicone",
+   "name": "Silikon-Tastenmatte",
+   "short": "Tastenmatte",
+   "shape": "box",
+   "x": 4,
+   "y": 18,
+   "w": 37,
+   "d": 128,
+   "z": 7.6,
+   "h": 12.4,
+   "r": 6,
    "explode": [
     0,
     0,
-    105.0
+    103.0
    ],
-   "mass": 28.7,
+   "mass": 14.7,
    "materials": [
     [
-     "zinkmangan",
-     80
-    ],
-    [
-     "stahl",
-     20
+     "gummi",
+     100
     ]
    ],
-   "material_id": "alkaline",
-   "info": "Remove from the device and tape the contacts before handing it in."
+   "info": "Alle Tasten sind eine einzige Silikonmatte. Unter jeder Taste klebt eine schwarze Kohle-Pille, die den Kontakt schließt.",
+   "color": "#4A5258",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 3,
+     "w": 7,
+     "fill": "#C9302C"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 15,
+     "w": 8,
+     "d": 6,
+     "r": 2
+    },
+    {
+     "shape": "box",
+     "x": 16,
+     "y": 15,
+     "w": 8,
+     "d": 6,
+     "r": 2
+    },
+    {
+     "shape": "box",
+     "x": 28,
+     "y": 15,
+     "w": 8,
+     "d": 6,
+     "r": 2
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 24,
+     "w": 8,
+     "d": 6,
+     "r": 2
+    },
+    {
+     "shape": "box",
+     "x": 16,
+     "y": 24,
+     "w": 8,
+     "d": 6,
+     "r": 2
+    },
+    {
+     "shape": "box",
+     "x": 28,
+     "y": 24,
+     "w": 8,
+     "d": 6,
+     "r": 2
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 33,
+     "w": 8,
+     "d": 6,
+     "r": 2
+    },
+    {
+     "shape": "box",
+     "x": 16,
+     "y": 33,
+     "w": 8,
+     "d": 6,
+     "r": 2
+    },
+    {
+     "shape": "box",
+     "x": 28,
+     "y": 33,
+     "w": 8,
+     "d": 6,
+     "r": 2
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 42,
+     "w": 8,
+     "d": 6,
+     "r": 2
+    },
+    {
+     "shape": "box",
+     "x": 16,
+     "y": 42,
+     "w": 8,
+     "d": 6,
+     "r": 2
+    },
+    {
+     "shape": "box",
+     "x": 28,
+     "y": 42,
+     "w": 8,
+     "d": 6,
+     "r": 2
+    },
+    {
+     "shape": "cyl",
+     "x": 9,
+     "y": 54,
+     "w": 21
+    },
+    {
+     "shape": "cyl",
+     "x": 15,
+     "y": 60,
+     "w": 9,
+     "fill": "#2B2F33"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 81,
+     "w": 6,
+     "d": 8,
+     "r": 2
+    },
+    {
+     "shape": "box",
+     "x": 28,
+     "y": 81,
+     "w": 6,
+     "d": 8,
+     "r": 2
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 91,
+     "w": 6,
+     "d": 8,
+     "r": 2
+    },
+    {
+     "shape": "box",
+     "x": 28,
+     "y": 91,
+     "w": 6,
+     "d": 8,
+     "r": 2
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 101,
+     "w": 6,
+     "d": 8,
+     "r": 2
+    },
+    {
+     "shape": "box",
+     "x": 28,
+     "y": 101,
+     "w": 6,
+     "d": 8,
+     "r": 2
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 113,
+     "w": 6,
+     "d": 5,
+     "r": 2,
+     "fill": "#5F8F4E"
+    },
+    {
+     "shape": "box",
+     "x": 12,
+     "y": 113,
+     "w": 6,
+     "d": 5,
+     "r": 2,
+     "fill": "#5F8F4E"
+    },
+    {
+     "shape": "box",
+     "x": 20,
+     "y": 113,
+     "w": 6,
+     "d": 5,
+     "r": 2,
+     "fill": "#5F8F4E"
+    },
+    {
+     "shape": "box",
+     "x": 28,
+     "y": 113,
+     "w": 6,
+     "d": 5,
+     "r": 2,
+     "fill": "#5F8F4E"
+    }
+   ]
   },
   {
-   "id": "circuit_board",
+   "id": "chip",
    "component_id": "circuit_board",
-   "name": "Circuit Board",
-   "short": "Circuit Board",
+   "material_id": "pcb",
+   "name": "Steuer-Chip",
+   "short": "Chip",
    "shape": "box",
-   "x": 1.8,
-   "y": 16.2,
-   "w": 18.9,
-   "d": 75.6,
-   "h": 5.4,
-   "z": 2.4,
-   "r": 2.3,
+   "x": 17,
+   "y": 150,
+   "w": 10,
+   "d": 8,
+   "z": 7.6,
+   "h": 1.4,
+   "r": 0.5,
    "explode": [
     0,
     0,
-    54.6
+    103.0
    ],
-   "mass": 14.35,
+   "mass": 0.4,
+   "materials": [
+    [
+     "chip",
+     100
+    ]
+   ],
+   "info": "Erkennt die gedrückte Taste und schaltet die Infrarot-LED in einem bestimmten Blinkmuster an und aus.",
+   "color": "#2B2F33"
+  },
+  {
+   "id": "quarz",
+   "component_id": "circuit_board",
+   "material_id": "mixed_electronics",
+   "name": "Keramik-Resonator",
+   "short": "Resonator",
+   "shape": "box",
+   "x": 29,
+   "y": 150,
+   "w": 7,
+   "d": 4,
+   "z": 7.6,
+   "h": 3,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    103.0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "keramik",
+     70
+    ],
+    [
+     "kupfer",
+     30
+    ]
+   ],
+   "info": "Gibt den Takt vor, mit dem die LED blinkt (meist 38.000-mal pro Sekunde).",
+   "color": "#3E7FB6"
+  },
+  {
+   "id": "ir_led",
+   "component_id": "circuit_board",
+   "material_id": "mixed_electronics",
+   "name": "Infrarot-LED",
+   "short": "IR-LED",
+   "shape": "cyl",
+   "x": 18,
+   "y": 0,
+   "w": 5,
+   "z": 9,
+   "h": 5,
+   "explode": [
+    0,
+    0,
+    101.6
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "led",
+     50
+    ],
+    [
+     "kupfer",
+     50
+    ]
+   ],
+   "info": "Sendet für unser Auge unsichtbares Licht zum Fernseher. Mit einer Handykamera sieht man sie beim Drücken leuchten.",
+   "color": "#5A5F8C",
+   "opacity": 0.85
+  },
+  {
+   "id": "platine",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "Leiterplatte mit Kontaktfeldern",
+   "short": "Platine",
+   "shape": "box",
+   "x": 4,
+   "y": 4,
+   "w": 37,
+   "d": 158,
+   "z": 6,
+   "h": 1.6,
+   "r": 4,
+   "explode": [
+    0,
+    0,
+    73.0
+   ],
+   "mass": 9.5,
    "materials": [
     [
      "fr4",
@@ -233,36 +514,387 @@
      10
     ]
    ],
-   "material_id": "pcb",
-   "info": "Unscrew and unplug all ribbon cables; hand in at an e-waste collection point."
+   "info": "Unter den Tasten liegen kammartige Kontaktfelder. Meist nur eingelegt, Platine in die Elektro-Sammlung geben.",
+   "color": "#2E6B45",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 16,
+     "w": 7,
+     "d": 6,
+     "r": 1,
+     "fill": "#D9D2B8"
+    },
+    {
+     "shape": "box",
+     "x": 16,
+     "y": 16,
+     "w": 7,
+     "d": 6,
+     "r": 1,
+     "fill": "#D9D2B8"
+    },
+    {
+     "shape": "box",
+     "x": 28,
+     "y": 16,
+     "w": 7,
+     "d": 6,
+     "r": 1,
+     "fill": "#D9D2B8"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 25,
+     "w": 7,
+     "d": 6,
+     "r": 1,
+     "fill": "#D9D2B8"
+    },
+    {
+     "shape": "box",
+     "x": 16,
+     "y": 25,
+     "w": 7,
+     "d": 6,
+     "r": 1,
+     "fill": "#D9D2B8"
+    },
+    {
+     "shape": "box",
+     "x": 28,
+     "y": 25,
+     "w": 7,
+     "d": 6,
+     "r": 1,
+     "fill": "#D9D2B8"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 34,
+     "w": 7,
+     "d": 6,
+     "r": 1,
+     "fill": "#D9D2B8"
+    },
+    {
+     "shape": "box",
+     "x": 16,
+     "y": 34,
+     "w": 7,
+     "d": 6,
+     "r": 1,
+     "fill": "#D9D2B8"
+    },
+    {
+     "shape": "box",
+     "x": 28,
+     "y": 34,
+     "w": 7,
+     "d": 6,
+     "r": 1,
+     "fill": "#D9D2B8"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 43,
+     "w": 7,
+     "d": 6,
+     "r": 1,
+     "fill": "#D9D2B8"
+    },
+    {
+     "shape": "box",
+     "x": 16,
+     "y": 43,
+     "w": 7,
+     "d": 6,
+     "r": 1,
+     "fill": "#D9D2B8"
+    },
+    {
+     "shape": "box",
+     "x": 28,
+     "y": 43,
+     "w": 7,
+     "d": 6,
+     "r": 1,
+     "fill": "#D9D2B8"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 80,
+     "w": 6,
+     "d": 6,
+     "r": 1,
+     "fill": "#D9D2B8"
+    },
+    {
+     "shape": "box",
+     "x": 29,
+     "y": 80,
+     "w": 6,
+     "d": 6,
+     "r": 1,
+     "fill": "#D9D2B8"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 90,
+     "w": 6,
+     "d": 6,
+     "r": 1,
+     "fill": "#D9D2B8"
+    },
+    {
+     "shape": "box",
+     "x": 29,
+     "y": 90,
+     "w": 6,
+     "d": 6,
+     "r": 1,
+     "fill": "#D9D2B8"
+    },
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 100,
+     "w": 6,
+     "d": 6,
+     "r": 1,
+     "fill": "#D9D2B8"
+    },
+    {
+     "shape": "box",
+     "x": 29,
+     "y": 100,
+     "w": 6,
+     "d": 6,
+     "r": 1,
+     "fill": "#D9D2B8"
+    }
+   ]
   },
   {
-   "id": "plastic_housing",
-   "component_id": "plastic_housing",
-   "name": "Plastic Housing (Unterteil)",
-   "short": "Plastic Housing (U",
+   "id": "kontakte",
+   "component_id": "circuit_board",
+   "material_id": "steel",
+   "name": "Batteriekontakte und Federn",
+   "short": "Batteriefedern",
    "shape": "box",
-   "x": 0,
-   "y": 0,
-   "w": 45.0,
-   "d": 180.0,
-   "h": 12.0,
-   "z": 0,
-   "r": 5.4,
+   "x": 6,
+   "y": 112,
+   "w": 33,
+   "d": 4,
+   "z": 1.5,
+   "h": 9,
+   "r": 1,
    "explode": [
     0,
     0,
-    0
+    38.5
    ],
-   "mass": 41.85,
+   "mass": 1.6,
+   "materials": [
+    [
+     "stahl",
+     85
+    ],
+    [
+     "kupfer",
+     15
+    ]
+   ],
+   "info": "Vernickelter Federstahl, verbindet die Batterien. Ausgelaufene Batterien hinterlassen hier weißen Belag.",
+   "color": "#B9BEC2"
+  },
+  {
+   "id": "unterschale",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Unterschale mit Batteriefach",
+   "short": "Unterschale",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 45,
+   "d": 180,
+   "z": 0,
+   "h": 10,
+   "r": 10,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 29.5,
    "materials": [
     [
      "pcabs",
      100
     ]
    ],
+   "info": "Trägt Platine und Batteriefach. Kunststoffe ohne Elektronik ließen sich gut recyceln, sind aber oft dunkel und schwer sortierbar.",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 6,
+     "y": 108,
+     "w": 33,
+     "d": 66,
+     "r": 4,
+     "fill": "#2B2F33"
+    }
+   ]
+  },
+  {
+   "id": "batterie_l",
+   "component_id": "alkaline_cell",
+   "material_id": "alkaline",
+   "name": "Alkaline-Batterie AAA",
+   "short": "Batterien",
+   "shape": "box",
+   "x": 10,
+   "y": 118,
+   "w": 10.5,
+   "d": 44.5,
+   "z": 1.5,
+   "h": 10.5,
+   "r": 5,
+   "explode": [
+    60,
+    0,
+    20
+   ],
+   "mass": 12.1,
+   "materials": [
+    [
+     "zinkmangan",
+     80
+    ],
+    [
+     "stahl",
+     20
+    ]
+   ],
+   "info": "Zwei AAA-Zellen mit je 1,5 V. Herausnehmen und in die Batterie-Sammelbox geben, nie in den Restmüll.",
+   "color": "#3A6EA5",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 1,
+     "w": 8.5,
+     "d": 6,
+     "r": 3,
+     "fill": "#C9A227"
+    }
+   ]
+  },
+  {
+   "id": "batterie_r",
+   "component_id": "alkaline_cell",
+   "material_id": "alkaline",
+   "name": "Alkaline-Batterie AAA",
+   "short": "Batterie",
+   "shape": "box",
+   "x": 24.5,
+   "y": 118,
+   "w": 10.5,
+   "d": 44.5,
+   "z": 1.5,
+   "h": 10.5,
+   "r": 5,
+   "explode": [
+    60,
+    0,
+    20
+   ],
+   "mass": 12.1,
+   "materials": [
+    [
+     "zinkmangan",
+     80
+    ],
+    [
+     "stahl",
+     20
+    ]
+   ],
+   "info": "Zweite AAA-Zelle, eingelegt mit umgekehrter Polung. Batterien können auslaufen, darum bei längerer Pause herausnehmen.",
+   "color": "#3A6EA5",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 37.5,
+     "w": 8.5,
+     "d": 6,
+     "r": 3,
+     "fill": "#C9A227"
+    }
+   ]
+  },
+  {
+   "id": "deckel",
+   "component_id": "plastic_housing",
    "material_id": "abs",
-   "info": "Look for hidden screws under rubber feet or labels, then pry the clips open."
+   "name": "Batteriefachdeckel",
+   "short": "Batteriedeckel",
+   "shape": "box",
+   "x": 6,
+   "y": 110,
+   "w": 33,
+   "d": 64,
+   "z": 0,
+   "h": 1.5,
+   "r": 4,
+   "explode": [
+    60,
+    0,
+    0
+   ],
+   "mass": 4.2,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Wird aufgeschoben und rastet mit einer Nase ein. Zum Öffnen auf die Rillen drücken und schieben.",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 52,
+     "w": 13,
+     "d": 1.5,
+     "r": 0.5
+    },
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 55,
+     "w": 13,
+     "d": 1.5,
+     "r": 0.5
+    },
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 58,
+     "w": 13,
+     "d": 1.5,
+     "r": 0.5
+    }
+   ]
   }
  ]
 }

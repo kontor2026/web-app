@@ -4,7 +4,7 @@
  "name_en": "Headphones",
  "klasse": "Elektroschrott · Kleingerät",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -21,7 +21,7 @@
  "werte": [
   {
    "k": "Rohstoffwert",
-   "v": "≈ 0,38 €",
+   "v": "≈ 0,19 €",
    "hint": "Kupfer zu Preisen vom 13.11."
   },
   {
@@ -31,31 +31,31 @@
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 0,34 kg",
-   "hint": "spart 0,43 kg, wenn recycelte Materialien eingesetzt werden"
+   "v": "≈ 0,38 kg",
+   "hint": "spart 0,39 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Cu": 30000.0,
-   "Fe": 5625.0
+   "Cu": 14920.0,
+   "Fe": 4860.0
   },
   "herkunft": {
    "Cu": "Modellmassen (Schätzung)",
    "Fe": "Modellmassen (Schätzung)"
   },
   "materialien_g": {
-   "abs": 156.3,
-   "mixed_electronics": 37.5,
-   "pu_foam": 18.8,
-   "copper": 18.8,
-   "pvc": 18.8
+   "abs": 161.2,
+   "pu_foam": 39.7,
+   "mixed_electronics": 32.4,
+   "pvc": 11.5,
+   "copper": 5.2
   },
   "co2_kg": 0.768,
-  "co2_mit_recyclat_kg": 0.335,
-  "co2_ersparnis_kg": 0.433,
+  "co2_mit_recyclat_kg": 0.378,
+  "co2_ersparnis_kg": 0.39,
   "co2_ohne_faktor": [],
-  "rohstoffwert_eur": 0.38,
+  "rohstoffwert_eur": 0.19,
   "wert_ohne_preis": [],
   "preisstand": "2026-11-13",
   "quellen": {
@@ -103,185 +103,692 @@
   "nicht": "Nicht in Restmüll oder Gelbe Tonne",
   "warnung": "Kabel und Stecker dranlassen."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "ear_cushions",
+   "id": "polster_l",
    "component_id": "ear_cushions",
-   "name": "Ear Cushions",
-   "short": "Ear Cushions",
-   "shape": "box",
-   "x": 9.0,
-   "y": 8.5,
-   "w": 162.0,
-   "d": 153.0,
-   "h": 6.4,
-   "z": 64.0,
-   "r": 18.4,
+   "material_id": "pu_foam",
+   "name": "Ohrpolster links",
+   "short": "Ohrpolster",
+   "shape": "cyl",
+   "x": 2,
+   "y": 78,
+   "w": 70,
+   "d": 90,
+   "z": 48,
+   "h": 27,
    "explode": [
     0,
     0,
-    231.6
+    134.0
    ],
-   "mass": 18.75,
+   "mass": 14.6,
    "materials": [
     [
      "schaum",
-     100
+     75
+    ],
+    [
+     "kunstleder",
+     25
     ]
    ],
+   "info": "Schaumstoff mit Kunstleder-Bezug. Meist nur eingeklipst oder eingedreht: am Rand greifen und abziehen. Ersatzpolster gibt es günstig.",
+   "color": "#3A3F44",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 17,
+     "y": 22,
+     "w": 36,
+     "d": 46,
+     "fill": "#2B2F33"
+    }
+   ]
+  },
+  {
+   "id": "polster_r",
+   "component_id": "ear_cushions",
    "material_id": "pu_foam",
-   "info": "Twist or pull them off the ear cups; most are clipped in."
-  },
-  {
-   "id": "plastic_housing_ober",
-   "component_id": "plastic_housing",
-   "name": "Plastic Housing (Oberteil)",
-   "short": "Plastic Housing (O",
-   "shape": "box",
-   "x": 0,
-   "y": 0,
-   "w": 180.0,
-   "d": 170.0,
-   "h": 16.0,
-   "z": 48.0,
-   "r": 20.4,
+   "name": "Ohrpolster rechts",
+   "short": "Ohrpolster",
+   "shape": "cyl",
+   "x": 108,
+   "y": 78,
+   "w": 70,
+   "d": 90,
+   "z": 48,
+   "h": 27,
    "explode": [
     0,
     0,
-    161.6
+    95.0
    ],
-   "mass": 46.88,
+   "mass": 14.6,
    "materials": [
     [
-     "pcabs",
-     100
+     "schaum",
+     75
+    ],
+    [
+     "kunstleder",
+     25
     ]
    ],
-   "material_id": "abs",
-   "info": "Look for hidden screws under rubber feet or labels, then pry the clips open."
+   "info": "Gleiches Polster für das rechte Ohr. Verschlissene Polster lieber tauschen als den ganzen Kopfhörer wegzuwerfen.",
+   "color": "#3A3F44",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 17,
+     "y": 22,
+     "w": 36,
+     "d": 46,
+     "fill": "#2B2F33"
+    }
+   ]
   },
   {
-   "id": "speaker_driver",
+   "id": "membran_l",
    "component_id": "speaker_driver",
-   "name": "Speaker",
-   "short": "Speaker",
+   "material_id": "mixed_electronics",
+   "name": "Lautsprecher-Membran mit Schwingspule",
+   "short": "Membran",
    "shape": "cyl",
-   "x": 30.5,
-   "y": 25.5,
-   "w": 119.0,
-   "h": 21.6,
-   "z": 9.6,
+   "x": 17,
+   "y": 103,
+   "w": 40,
+   "z": 42,
+   "h": 5,
    "explode": [
     0,
     0,
-    108.4
+    95.0
    ],
-   "mass": 37.5,
+   "mass": 4.2,
    "materials": [
     [
-     "chip",
-     30
-    ],
-    [
-     "kupfer",
-     30
-    ],
-    [
-     "pcabs",
+     "folien",
      25
     ],
     [
-     "stahl",
-     15
+     "kupfer",
+     35
+    ],
+    [
+     "pcabs",
+     40
     ]
    ],
-   "material_id": "mixed_electronics",
-   "info": "Contains a strong magnet; keep away from cards and other electronics."
+   "info": "40-mm-Membran aus dünner Kunststofffolie. Hinten klebt eine Kupferspule, die im Magnetfeld hin und her schwingt.",
+   "color": "#C9CDD1",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 5,
+     "y": 5,
+     "w": 30
+    },
+    {
+     "shape": "cyl",
+     "x": 13,
+     "y": 13,
+     "w": 14,
+     "fill": "#C98F62"
+    }
+   ]
   },
   {
-   "id": "cable_copper_core",
-   "component_id": "cable_copper_core",
-   "name": "Cable Wires",
-   "short": "Cable Wires",
-   "shape": "box",
-   "x": 190.8,
-   "y": 8.5,
-   "w": 9.0,
-   "d": 153.0,
-   "h": 6.4,
-   "z": 8.0,
-   "r": 1.1,
+   "id": "magnet_l",
+   "component_id": "speaker_driver",
+   "material_id": "mixed_electronics",
+   "name": "Neodym-Magnet mit Polplatte",
+   "short": "Magnet",
+   "shape": "cyl",
+   "x": 24,
+   "y": 110,
+   "w": 26,
+   "z": 32,
+   "h": 9,
    "explode": [
-    78.0,
     0,
-    21.0
+    0,
+    56.0
    ],
-   "mass": 18.75,
+   "mass": 10.5,
    "materials": [
     [
+     "ndfeb",
+     55
+    ],
+    [
+     "stahl",
+     45
+    ]
+   ],
+   "info": "Starker Neodym-Magnet in einem Stahltopf. Von Bankkarten und Handys fernhalten, er kann Finger einklemmen.",
+   "color": "#8A9095",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 8,
+     "y": 8,
+     "w": 10,
+     "fill": "#5A6066"
+    }
+   ]
+  },
+  {
+   "id": "treiber_r",
+   "component_id": "speaker_driver",
+   "material_id": "mixed_electronics",
+   "name": "Lautsprecher rechts",
+   "short": "Lautsprecher",
+   "shape": "cyl",
+   "x": 123,
+   "y": 103,
+   "w": 40,
+   "z": 32,
+   "h": 15,
+   "explode": [
+    0,
+    0,
+    56.0
+   ],
+   "mass": 14.6,
+   "materials": [
+    [
+     "ndfeb",
+     30
+    ],
+    [
+     "stahl",
+     25
+    ],
+    [
      "kupfer",
+     15
+    ],
+    [
+     "folien",
+     10
+    ],
+    [
+     "pcabs",
+     20
+    ]
+   ],
+   "info": "Kompletter Lautsprecher der rechten Seite mit Magnet, Spule und Membran. Gehört mit dem Magneten in die Elektro-Sammlung.",
+   "color": "#C9CDD1",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 5,
+     "y": 5,
+     "w": 30
+    },
+    {
+     "shape": "cyl",
+     "x": 13,
+     "y": 13,
+     "w": 14,
+     "fill": "#C98F62"
+    }
+   ]
+  },
+  {
+   "id": "kopfpolster",
+   "component_id": "plastic_housing",
+   "material_id": "pu_foam",
+   "name": "Kopfpolster",
+   "short": "Kopfpolster",
+   "shape": "box",
+   "x": 50,
+   "y": 14,
+   "w": 80,
+   "d": 12,
+   "z": 0,
+   "h": 26,
+   "r": 6,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 10.5,
+   "materials": [
+    [
+     "schaum",
+     75
+    ],
+    [
+     "kunstleder",
+     25
+    ]
+   ],
+   "info": "Polstert den Bügel oben am Kopf. Meist mit Klettband oder Klebstoff befestigt.",
+   "color": "#3A3F44"
+  },
+  {
+   "id": "schale_l",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Ohrmuschel links",
+   "short": "Ohrmuschel",
+   "shape": "cyl",
+   "x": 2,
+   "y": 78,
+   "w": 70,
+   "d": 90,
+   "z": 0,
+   "h": 48,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 47.1,
+   "materials": [
+    [
+     "pcabs",
      100
     ]
    ],
-   "material_id": "copper",
-   "info": "Cut off the plug and strip the insulation to free the copper."
+   "info": "Gehäuse mit Schallwand für den Lautsprecher. Die Schrauben liegen unter dem Ohrpolster.",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 10,
+     "y": 12,
+     "w": 50,
+     "d": 66,
+     "fill": "#2B2F33"
+    }
+   ]
   },
   {
-   "id": "cable_insulation",
-   "component_id": "cable_insulation",
-   "name": "Cable Insulation",
-   "short": "Cable Insulation",
-   "shape": "box",
-   "x": 208.8,
-   "y": 8.5,
-   "w": 9.0,
-   "d": 153.0,
-   "h": 6.4,
-   "z": 8.0,
-   "r": 1.1,
+   "id": "schale_r",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Ohrmuschel rechts",
+   "short": "Ohrmuschel",
+   "shape": "cyl",
+   "x": 108,
+   "y": 78,
+   "w": 70,
+   "d": 90,
+   "z": 0,
+   "h": 48,
    "explode": [
-    105.0,
     0,
-    21.0
+    0,
+    0.0
    ],
-   "mass": 18.75,
+   "mass": 47.1,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Rechte Ohrmuschel, gleich aufgebaut. Hier kommt das Kabel innen von links über den Bügel an.",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 10,
+     "y": 12,
+     "w": 50,
+     "d": 66,
+     "fill": "#2B2F33"
+    }
+   ]
+  },
+  {
+   "id": "buegel",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Kopfbügel mit Federstahl",
+   "short": "Kopfbügel",
+   "shape": "box",
+   "x": 30,
+   "y": 0,
+   "w": 120,
+   "d": 14,
+   "z": 0,
+   "h": 30,
+   "r": 6,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 41.8,
+   "materials": [
+    [
+     "pcabs",
+     55
+    ],
+    [
+     "stahl",
+     45
+    ]
+   ],
+   "info": "Kunststoffbügel mit eingelegtem Federstahlband, das die Muscheln an den Kopf drückt. Mit einem Magneten findet man den Stahl."
+  },
+  {
+   "id": "gleiter_l",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Verstellbarer Gleitarm links",
+   "short": "Gleitarm",
+   "shape": "box",
+   "x": 30,
+   "y": 14,
+   "w": 14,
+   "d": 64,
+   "z": 4,
+   "h": 24,
+   "r": 4,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 12.6,
+   "materials": [
+    [
+     "pcabs",
+     70
+    ],
+    [
+     "stahl",
+     30
+    ]
+   ],
+   "info": "Lässt sich herausziehen, um die Größe anzupassen. Innen läuft das Kabel zur Ohrmuschel.",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 6,
+     "w": 8,
+     "d": 2,
+     "r": 1
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 14,
+     "w": 8,
+     "d": 2,
+     "r": 1
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 22,
+     "w": 8,
+     "d": 2,
+     "r": 1
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 30,
+     "w": 8,
+     "d": 2,
+     "r": 1
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 38,
+     "w": 8,
+     "d": 2,
+     "r": 1
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 46,
+     "w": 8,
+     "d": 2,
+     "r": 1
+    }
+   ]
+  },
+  {
+   "id": "gleiter_r",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Verstellbarer Gleitarm rechts",
+   "short": "Gleitarm",
+   "shape": "box",
+   "x": 136,
+   "y": 14,
+   "w": 14,
+   "d": 64,
+   "z": 4,
+   "h": 24,
+   "r": 4,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 12.6,
+   "materials": [
+    [
+     "pcabs",
+     70
+    ],
+    [
+     "stahl",
+     30
+    ]
+   ],
+   "info": "Rechter Gleitarm. Bricht er, gibt es für viele Modelle Ersatzteile.",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 6,
+     "w": 8,
+     "d": 2,
+     "r": 1
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 14,
+     "w": 8,
+     "d": 2,
+     "r": 1
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 22,
+     "w": 8,
+     "d": 2,
+     "r": 1
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 30,
+     "w": 8,
+     "d": 2,
+     "r": 1
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 38,
+     "w": 8,
+     "d": 2,
+     "r": 1
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 46,
+     "w": 8,
+     "d": 2,
+     "r": 1
+    }
+   ]
+  },
+  {
+   "id": "kabel",
+   "component_id": "cable_insulation",
+   "material_id": "pvc",
+   "name": "Kabelmantel (aufgerollt)",
+   "short": "Kabel",
+   "shape": "cyl",
+   "x": 62,
+   "y": 30,
+   "w": 46,
+   "z": 0,
+   "h": 6,
+   "explode": [
+    150,
+    0,
+    0
+   ],
+   "mass": 11.5,
    "materials": [
     [
      "pvc",
      100
     ]
    ],
-   "material_id": "pvc",
-   "info": "Slit lengthwise with a cable stripper to separate it from the wires."
+   "info": "Etwa 1,2 m PVC-Kabel mit 3,5-mm-Stecker. Mit einer Abisolierzange lässt sich der Mantel vom Kupfer trennen.",
+   "color": "#2B2F33",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 5,
+     "y": 5,
+     "w": 36
+    },
+    {
+     "shape": "cyl",
+     "x": 10,
+     "y": 10,
+     "w": 26
+    },
+    {
+     "shape": "cyl",
+     "x": 15,
+     "y": 15,
+     "w": 16,
+     "fill": "#F2EFE8"
+    }
+   ]
   },
   {
-   "id": "plastic_housing",
-   "component_id": "plastic_housing",
-   "name": "Plastic Housing (Unterteil)",
-   "short": "Plastic Housing (U",
-   "shape": "box",
-   "x": 0,
-   "y": 0,
-   "w": 180.0,
-   "d": 170.0,
-   "h": 48.0,
-   "z": 0,
-   "r": 20.4,
+   "id": "litzen",
+   "component_id": "cable_copper_core",
+   "material_id": "copper",
+   "name": "Kupferlitzen",
+   "short": "Kupferlitzen",
+   "shape": "cyl",
+   "x": 67,
+   "y": 35,
+   "w": 36,
+   "z": 1,
+   "h": 4,
    "explode": [
+    150,
     0,
-    0,
-    0
+    30
    ],
-   "mass": 109.38,
+   "mass": 5.2,
    "materials": [
     [
-     "pcabs",
+     "kupfer",
      100
     ]
    ],
-   "material_id": "abs",
-   "info": "Look for hidden screws under rubber feet or labels, then pry the clips open."
+   "info": "Drei sehr dünne lackierte Kupferlitzen für links, rechts und Masse. Kupfer ist fast beliebig oft recycelbar.",
+   "color": "#C98F62",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 5,
+     "y": 5,
+     "w": 26
+    },
+    {
+     "shape": "cyl",
+     "x": 10,
+     "y": 10,
+     "w": 16,
+     "fill": "#F2EFE8"
+    }
+   ]
+  },
+  {
+   "id": "stecker",
+   "component_id": "cable_copper_core",
+   "material_id": "mixed_electronics",
+   "name": "Klinkenstecker 3,5 mm",
+   "short": "Klinkenstecker",
+   "shape": "box",
+   "x": 112,
+   "y": 38,
+   "w": 24,
+   "d": 6,
+   "z": 0,
+   "h": 6,
+   "r": 3,
+   "explode": [
+    150,
+    0,
+    0
+   ],
+   "mass": 3.1,
+   "materials": [
+    [
+     "messing",
+     60
+    ],
+    [
+     "pcabs",
+     30
+    ],
+    [
+     "kontakte",
+     10
+    ]
+   ],
+   "info": "Vergoldeter Messingstift mit drei Kontakten. Zum Recyceln einfach am Kabel lassen.",
+   "color": "#B9BEC2",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 13,
+     "y": 1.5,
+     "w": 1,
+     "d": 3,
+     "r": 0.5,
+     "fill": "#2B2F33"
+    },
+    {
+     "shape": "box",
+     "x": 17,
+     "y": 1.5,
+     "w": 1,
+     "d": 3,
+     "r": 0.5,
+     "fill": "#2B2F33"
+    }
+   ]
   }
  ]
 }

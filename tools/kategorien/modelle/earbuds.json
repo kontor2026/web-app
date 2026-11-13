@@ -1,0 +1,563 @@
+{
+ "parts": [
+  {
+   "id": "deckel",
+   "component_id": "plastic_housing",
+   "material_id": "pc",
+   "name": "Etui-Deckel",
+   "short": "Deckel",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 61,
+   "d": 47,
+   "z": 15,
+   "h": 7,
+   "r": 16,
+   "explode": [
+    0,
+    0,
+    73.5
+   ],
+   "mass": 9.2,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Klappdeckel mit kleinem Magnet, der ihn geschlossen hält. Das Scharnier ist meist ein Stahlstift.",
+   "color": "#F2F2F0",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 27,
+     "y": 41,
+     "w": 6,
+     "d": 4,
+     "fill": "#7FD36B"
+    }
+   ]
+  },
+  {
+   "id": "ohrhoerer_r",
+   "component_id": "speaker_driver",
+   "material_id": "mixed_electronics",
+   "name": "Ohrhörer rechts (komplett)",
+   "short": "Ohrhörer",
+   "shape": "box",
+   "x": 33,
+   "y": 7,
+   "w": 22,
+   "d": 33,
+   "z": 5,
+   "h": 10,
+   "r": 10,
+   "explode": [
+    0,
+    0,
+    53.5
+   ],
+   "mass": 6.1,
+   "materials": [
+    [
+     "pcabs",
+     45
+    ],
+    [
+     "lco",
+     12
+    ],
+    [
+     "graphit",
+     6
+    ],
+    [
+     "ndfeb",
+     10
+    ],
+    [
+     "kupfer",
+     12
+    ],
+    [
+     "chip",
+     10
+    ],
+    [
+     "gummi",
+     5
+    ]
+   ],
+   "info": "Gleich aufgebaut wie der linke Ohrhörer: Lautsprecher, Akku und Platine in einem verklebten Gehäuse.",
+   "color": "#F2F2F0",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 3,
+     "w": 16,
+     "fill": "#E6E6E6"
+    },
+    {
+     "shape": "cyl",
+     "x": 5,
+     "y": 5,
+     "w": 12,
+     "fill": "#C9CDD1"
+    }
+   ]
+  },
+  {
+   "id": "chip_etui",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "Lade-Chip",
+   "short": "Lade-Chip",
+   "shape": "box",
+   "x": 24,
+   "y": 40,
+   "w": 7,
+   "d": 5,
+   "z": 4.5,
+   "h": 1,
+   "r": 0.5,
+   "explode": [
+    0,
+    0,
+    51.5
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "chip",
+     100
+    ]
+   ],
+   "info": "Steuert das Laden von Etui-Akku und Ohrhörern und schaltet die Status-LED.",
+   "color": "#2B2F33"
+  },
+  {
+   "id": "platine_etui",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "Etui-Platine mit USB-C-Buchse",
+   "short": "Etui-Platine",
+   "shape": "box",
+   "x": 8,
+   "y": 38,
+   "w": 45,
+   "d": 8,
+   "z": 3.5,
+   "h": 1,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    31.5
+   ],
+   "mass": 2.6,
+   "materials": [
+    [
+     "fr4",
+     55
+    ],
+    [
+     "kupfer",
+     20
+    ],
+    [
+     "chip",
+     15
+    ],
+    [
+     "lot",
+     10
+    ]
+   ],
+   "info": "Leiterplatte mit Ladebuchse, LED und Federkontakten, über die die Ohrhörer geladen werden.",
+   "color": "#2E6B45",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 34,
+     "y": 1,
+     "w": 9,
+     "d": 5,
+     "r": 1,
+     "fill": "#B9BEC2"
+    },
+    {
+     "shape": "cyl",
+     "x": 19,
+     "y": 2,
+     "w": 2.5,
+     "fill": "#7FD36B"
+    }
+   ]
+  },
+  {
+   "id": "akku_etui",
+   "component_id": "li_ion_battery",
+   "material_id": "li_ion",
+   "name": "Lithium-Polymer-Akku (Etui)",
+   "short": "Etui-Akku",
+   "shape": "box",
+   "x": 10,
+   "y": 8,
+   "w": 41,
+   "d": 28,
+   "z": 1.5,
+   "h": 3.5,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    33.5
+   ],
+   "mass": 9.2,
+   "materials": [
+    [
+     "lco",
+     40
+    ],
+    [
+     "graphit",
+     20
+    ],
+    [
+     "elektrolyt",
+     15
+    ],
+    [
+     "alu",
+     10
+    ],
+    [
+     "kupfer",
+     10
+    ],
+    [
+     "folien",
+     5
+    ]
+   ],
+   "info": "Etwa 400 mAh, reicht für drei bis vier Ladungen der Ohrhörer. Flacher Akku im Folienbeutel, nicht knicken oder durchstechen.",
+   "color": "#9BA3A8",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 2,
+     "w": 37,
+     "d": 24,
+     "r": 1.5
+    }
+   ]
+  },
+  {
+   "id": "unterschale",
+   "component_id": "plastic_housing",
+   "material_id": "pc",
+   "name": "Etui-Unterteil",
+   "short": "Etui",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 61,
+   "d": 47,
+   "z": 0,
+   "h": 15,
+   "r": 16,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 16.4,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Unterteil mit zwei Mulden für die Ohrhörer. Ist der Etui-Akku nicht ausbaubar, das ganze Etui zur Elektro-Sammlung bringen.",
+   "color": "#F2F2F0",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 5,
+     "y": 6,
+     "w": 24,
+     "d": 35,
+     "r": 11,
+     "fill": "#E0E0DC"
+    },
+    {
+     "shape": "box",
+     "x": 32,
+     "y": 6,
+     "w": 24,
+     "d": 35,
+     "r": 11,
+     "fill": "#E0E0DC"
+    }
+   ]
+  },
+  {
+   "id": "ohrpolster",
+   "component_id": "silicone_ear_tips",
+   "material_id": "silicone",
+   "name": "Silikon-Ohrstöpsel",
+   "short": "Ohrstöpsel",
+   "shape": "cyl",
+   "x": 11,
+   "y": 9,
+   "w": 12,
+   "z": 13,
+   "h": 5,
+   "explode": [
+    70,
+    0,
+    29.5
+   ],
+   "mass": 0.4,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "info": "Weiche Silikonkappe in S, M oder L. Lässt sich von Hand vom Schallrohr abziehen und waschen.",
+   "color": "#E6E6E6",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 3.5,
+     "y": 3.5,
+     "w": 5,
+     "fill": "#9BA3A8"
+    }
+   ]
+  },
+  {
+   "id": "treiber",
+   "component_id": "speaker_driver",
+   "material_id": "mixed_electronics",
+   "name": "Lautsprecher (10 mm)",
+   "short": "Lautsprecher",
+   "shape": "cyl",
+   "x": 12,
+   "y": 10,
+   "w": 10,
+   "z": 10,
+   "h": 3.5,
+   "explode": [
+    70,
+    0,
+    17.0
+   ],
+   "mass": 0.8,
+   "materials": [
+    [
+     "ndfeb",
+     35
+    ],
+    [
+     "kupfer",
+     20
+    ],
+    [
+     "stahl",
+     20
+    ],
+    [
+     "folien",
+     10
+    ],
+    [
+     "pcabs",
+     15
+    ]
+   ],
+   "info": "Winziger Lautsprecher mit Neodym-Magnet und Schwingspule. Der Magnet ist stark, nicht in die Nähe von Bankkarten bringen.",
+   "color": "#C9CDD1",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 2,
+     "y": 2,
+     "w": 6,
+     "fill": "#C98F62"
+    },
+    {
+     "shape": "cyl",
+     "x": 3.5,
+     "y": 3.5,
+     "w": 3,
+     "fill": "#5A6066"
+    }
+   ]
+  },
+  {
+   "id": "platine_l",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "Platine mit Bluetooth-Chip",
+   "short": "Platine",
+   "shape": "box",
+   "x": 9,
+   "y": 21,
+   "w": 16,
+   "d": 16,
+   "z": 9,
+   "h": 1.2,
+   "r": 3,
+   "explode": [
+    70,
+    0,
+    35.4
+   ],
+   "mass": 0.6,
+   "materials": [
+    [
+     "fr4",
+     55
+    ],
+    [
+     "kupfer",
+     20
+    ],
+    [
+     "chip",
+     15
+    ],
+    [
+     "lot",
+     10
+    ]
+   ],
+   "info": "Funkchip, Mikrofon und Ladeelektronik auf kleinstem Raum. Die Antenne ist eine dünne Kupferbahn.",
+   "color": "#2E6B45",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 3,
+     "w": 7,
+     "d": 7,
+     "r": 0.5,
+     "fill": "#2B2F33"
+    },
+    {
+     "shape": "cyl",
+     "x": 11,
+     "y": 11,
+     "w": 3,
+     "fill": "#B9BEC2"
+    }
+   ]
+  },
+  {
+   "id": "akku_l",
+   "component_id": "li_ion_battery",
+   "material_id": "li_ion",
+   "name": "Knopfzellen-Akku",
+   "short": "Akku",
+   "shape": "cyl",
+   "x": 11,
+   "y": 23,
+   "w": 12,
+   "z": 7,
+   "h": 5.4,
+   "explode": [
+    70,
+    0,
+    20.0
+   ],
+   "mass": 1.6,
+   "materials": [
+    [
+     "lco",
+     40
+    ],
+    [
+     "graphit",
+     20
+    ],
+    [
+     "elektrolyt",
+     15
+    ],
+    [
+     "alu",
+     10
+    ],
+    [
+     "kupfer",
+     10
+    ],
+    [
+     "folien",
+     5
+    ]
+   ],
+   "info": "Wiederaufladbare Lithium-Knopfzelle mit etwa 60 mAh. Sie ist oft eingeklebt und darf nicht angebohrt oder gequetscht werden.",
+   "color": "#9BA3A8",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 2,
+     "y": 2,
+     "w": 8,
+     "fill": "#B9BEC2"
+    }
+   ]
+  },
+  {
+   "id": "gehaeuse_l",
+   "component_id": "plastic_housing",
+   "material_id": "pc",
+   "name": "Ohrhörer-Gehäuse",
+   "short": "Gehäuse",
+   "shape": "box",
+   "x": 6,
+   "y": 7,
+   "w": 22,
+   "d": 33,
+   "z": 5,
+   "h": 10,
+   "r": 10,
+   "explode": [
+    70,
+    0,
+    0.0
+   ],
+   "mass": 2.7,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Zwei verklebte Kunststoffschalen. Öffnen geht nur mit Wärme und Hebelwerkzeug, darum ganz zur Elektro-Sammlung geben.",
+   "color": "#F2F2F0",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 3,
+     "y": 3,
+     "w": 16,
+     "fill": "#E6E6E6"
+    },
+    {
+     "shape": "cyl",
+     "x": 9,
+     "y": 26,
+     "w": 4,
+     "fill": "#B9BEC2"
+    }
+   ]
+  }
+ ]
+}

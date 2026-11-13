@@ -1,0 +1,3031 @@
+{
+ "parts": [
+  {
+   "id": "tastenkappen",
+   "component_id": "keycaps",
+   "material_id": "abs",
+   "name": "Tastenkappen (105 Stück)",
+   "short": "Tastenkappen",
+   "shape": "box",
+   "x": 10,
+   "y": 10,
+   "w": 420,
+   "d": 115,
+   "z": 14,
+   "h": 11,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    369.3
+   ],
+   "mass": 104.8,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Die Kappen sind nur aufgesteckt und lassen sich mit einem Tastenzieher oder einer gebogenen Büroklammer senkrecht abziehen.",
+   "color": "#3A3F44",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 0,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 38,
+     "y": 0,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 57,
+     "y": 0,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 76,
+     "y": 0,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 95,
+     "y": 0,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 123.5,
+     "y": 0,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 142.5,
+     "y": 0,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 161.5,
+     "y": 0,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 180.5,
+     "y": 0,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 209,
+     "y": 0,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 228,
+     "y": 0,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 247,
+     "y": 0,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 266,
+     "y": 0,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 22,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 19,
+     "y": 22,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 38,
+     "y": 22,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 57,
+     "y": 22,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 76,
+     "y": 22,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 95,
+     "y": 22,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 114,
+     "y": 22,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 133,
+     "y": 22,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 152,
+     "y": 22,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 171,
+     "y": 22,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 190,
+     "y": 22,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 209,
+     "y": 22,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 228,
+     "y": 22,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 247,
+     "y": 22,
+     "w": 36,
+     "d": 17,
+     "r": 2
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 41,
+     "w": 26,
+     "d": 17,
+     "r": 2
+    },
+    {
+     "shape": "box",
+     "x": 28.5,
+     "y": 41,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 47.5,
+     "y": 41,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 66.5,
+     "y": 41,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 85.5,
+     "y": 41,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 104.5,
+     "y": 41,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 123.5,
+     "y": 41,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 142.5,
+     "y": 41,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 161.5,
+     "y": 41,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 180.5,
+     "y": 41,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 199.5,
+     "y": 41,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 218.5,
+     "y": 41,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 237.5,
+     "y": 41,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 257,
+     "y": 41,
+     "w": 26,
+     "d": 17,
+     "r": 2
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 60,
+     "w": 31,
+     "d": 17,
+     "r": 2
+    },
+    {
+     "shape": "box",
+     "x": 33,
+     "y": 60,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 52,
+     "y": 60,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 71,
+     "y": 60,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 90,
+     "y": 60,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 109,
+     "y": 60,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 128,
+     "y": 60,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 147,
+     "y": 60,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 166,
+     "y": 60,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 185,
+     "y": 60,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 204,
+     "y": 60,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 223,
+     "y": 60,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 242,
+     "y": 60,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 262,
+     "y": 60,
+     "w": 21,
+     "d": 17,
+     "r": 2
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 79,
+     "w": 41,
+     "d": 17,
+     "r": 2
+    },
+    {
+     "shape": "box",
+     "x": 43,
+     "y": 79,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 62,
+     "y": 79,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 81,
+     "y": 79,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 100,
+     "y": 79,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 119,
+     "y": 79,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 138,
+     "y": 79,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 157,
+     "y": 79,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 176,
+     "y": 79,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 195,
+     "y": 79,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 214,
+     "y": 79,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 233,
+     "y": 79,
+     "w": 50,
+     "d": 17,
+     "r": 2
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 98,
+     "w": 21,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 24,
+     "y": 98,
+     "w": 21,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 48,
+     "y": 98,
+     "w": 21,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 72,
+     "y": 98,
+     "w": 115,
+     "d": 17,
+     "r": 2
+    },
+    {
+     "shape": "box",
+     "x": 190.0,
+     "y": 98.0,
+     "w": 21,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 213.5,
+     "y": 98.0,
+     "w": 21,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 237.0,
+     "y": 98.0,
+     "w": 21,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 260.5,
+     "y": 98.0,
+     "w": 21,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 290,
+     "y": 0,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 309,
+     "y": 0,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 328,
+     "y": 0,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 290,
+     "y": 22,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 309,
+     "y": 22,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 328,
+     "y": 22,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 290,
+     "y": 41,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 309,
+     "y": 41,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 328,
+     "y": 41,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 309,
+     "y": 79,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 290,
+     "y": 98,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 309,
+     "y": 98,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 328,
+     "y": 98,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 345,
+     "y": 22,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 364,
+     "y": 22,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 383,
+     "y": 22,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 402,
+     "y": 22,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 345,
+     "y": 41,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 364,
+     "y": 41,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 383,
+     "y": 41,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 345,
+     "y": 60,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 364,
+     "y": 60,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 383,
+     "y": 60,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 345,
+     "y": 79,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 364,
+     "y": 79,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 383,
+     "y": 79,
+     "w": 17,
+     "d": 17
+    },
+    {
+     "shape": "box",
+     "x": 402,
+     "y": 41,
+     "w": 17,
+     "d": 36,
+     "r": 2
+    },
+    {
+     "shape": "box",
+     "x": 402,
+     "y": 79,
+     "w": 17,
+     "d": 36,
+     "r": 2
+    },
+    {
+     "shape": "box",
+     "x": 345,
+     "y": 98,
+     "w": 36,
+     "d": 17,
+     "r": 2
+    },
+    {
+     "shape": "box",
+     "x": 383,
+     "y": 98,
+     "w": 17,
+     "d": 17,
+     "r": 2
+    }
+   ]
+  },
+  {
+   "id": "stabilisator",
+   "component_id": "keycaps",
+   "material_id": "steel",
+   "name": "Stabilisatoren aus Stahldraht",
+   "short": "Stabilisatoren",
+   "shape": "box",
+   "x": 82,
+   "y": 111,
+   "w": 115,
+   "d": 4,
+   "z": 12.5,
+   "h": 1.5,
+   "r": 0.75,
+   "explode": [
+    0,
+    0,
+    309.3
+   ],
+   "mass": 5.7,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Gebogene Stahldrähte unter Leertaste, Shift und Enter. Sie sorgen dafür, dass lange Tasten nicht kippen.",
+   "color": "#B9BEC2"
+  },
+  {
+   "id": "oberschale",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Oberschale (Tastenrahmen)",
+   "short": "Oberschale",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 440,
+   "d": 135,
+   "z": 10,
+   "h": 6,
+   "r": 8,
+   "explode": [
+    0,
+    0,
+    245.8
+   ],
+   "mass": 123.8,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Rahmen mit den Führungen der Tasten. Mit vielen kleinen Schrauben von unten befestigt, manche stecken unter Aufklebern.",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 9,
+     "y": 9,
+     "w": 290,
+     "d": 117,
+     "r": 3,
+     "fill": "#2B2F33"
+    },
+    {
+     "shape": "box",
+     "x": 353,
+     "y": 9,
+     "w": 78,
+     "d": 117,
+     "r": 3,
+     "fill": "#2B2F33"
+    },
+    {
+     "shape": "box",
+     "x": 302,
+     "y": 30,
+     "w": 48,
+     "d": 96,
+     "r": 3,
+     "fill": "#2B2F33"
+    },
+    {
+     "shape": "cyl",
+     "x": 380,
+     "y": 2.5,
+     "w": 4,
+     "d": 4,
+     "fill": "#7FD36B"
+    },
+    {
+     "shape": "cyl",
+     "x": 395,
+     "y": 2.5,
+     "w": 4,
+     "d": 4,
+     "fill": "#7FD36B"
+    },
+    {
+     "shape": "cyl",
+     "x": 410,
+     "y": 2.5,
+     "w": 4,
+     "d": 4,
+     "fill": "#7FD36B"
+    }
+   ]
+  },
+  {
+   "id": "gummimatte",
+   "component_id": "circuit_board",
+   "material_id": "silicone",
+   "name": "Gummimatte mit Tastenkuppeln",
+   "short": "Gummimatte",
+   "shape": "box",
+   "x": 10,
+   "y": 10,
+   "w": 420,
+   "d": 115,
+   "z": 7,
+   "h": 4,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    184.8
+   ],
+   "mass": 26.7,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "info": "Unter jeder Taste sitzt eine kleine Gummikuppel. Sie federt die Taste zurück und drückt beim Tippen auf die Folie.",
+   "color": "#4A5258",
+   "opacity": 0.85,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 4,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 23,
+     "y": 4,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 42,
+     "y": 4,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 61,
+     "y": 4,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 80,
+     "y": 4,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 99,
+     "y": 4,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 118,
+     "y": 4,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 137,
+     "y": 4,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 156,
+     "y": 4,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 175,
+     "y": 4,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 194,
+     "y": 4,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 213,
+     "y": 4,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 232,
+     "y": 4,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 251,
+     "y": 4,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 270,
+     "y": 4,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 23,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 23,
+     "y": 23,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 42,
+     "y": 23,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 61,
+     "y": 23,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 80,
+     "y": 23,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 99,
+     "y": 23,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 118,
+     "y": 23,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 137,
+     "y": 23,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 156,
+     "y": 23,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 175,
+     "y": 23,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 194,
+     "y": 23,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 213,
+     "y": 23,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 232,
+     "y": 23,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 251,
+     "y": 23,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 270,
+     "y": 23,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 42,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 23,
+     "y": 42,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 42,
+     "y": 42,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 61,
+     "y": 42,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 80,
+     "y": 42,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 99,
+     "y": 42,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 118,
+     "y": 42,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 137,
+     "y": 42,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 156,
+     "y": 42,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 175,
+     "y": 42,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 194,
+     "y": 42,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 213,
+     "y": 42,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 232,
+     "y": 42,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 251,
+     "y": 42,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 270,
+     "y": 42,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 61,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 23,
+     "y": 61,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 42,
+     "y": 61,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 61,
+     "y": 61,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 80,
+     "y": 61,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 99,
+     "y": 61,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 118,
+     "y": 61,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 137,
+     "y": 61,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 156,
+     "y": 61,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 175,
+     "y": 61,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 194,
+     "y": 61,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 213,
+     "y": 61,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 232,
+     "y": 61,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 251,
+     "y": 61,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 270,
+     "y": 61,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 80,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 23,
+     "y": 80,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 42,
+     "y": 80,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 61,
+     "y": 80,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 80,
+     "y": 80,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 99,
+     "y": 80,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 118,
+     "y": 80,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 137,
+     "y": 80,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 156,
+     "y": 80,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 175,
+     "y": 80,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 194,
+     "y": 80,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 213,
+     "y": 80,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 232,
+     "y": 80,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 251,
+     "y": 80,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 270,
+     "y": 80,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 4,
+     "y": 99,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 23,
+     "y": 99,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 42,
+     "y": 99,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 61,
+     "y": 99,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 80,
+     "y": 99,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 99,
+     "y": 99,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 118,
+     "y": 99,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 137,
+     "y": 99,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 156,
+     "y": 99,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 175,
+     "y": 99,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 194,
+     "y": 99,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 213,
+     "y": 99,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 232,
+     "y": 99,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 251,
+     "y": 99,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 270,
+     "y": 99,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 298,
+     "y": 23,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 317,
+     "y": 23,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 336,
+     "y": 23,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 298,
+     "y": 42,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 317,
+     "y": 42,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 336,
+     "y": 42,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 298,
+     "y": 61,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 317,
+     "y": 61,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 336,
+     "y": 61,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 298,
+     "y": 80,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 317,
+     "y": 80,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 336,
+     "y": 80,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 298,
+     "y": 99,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 317,
+     "y": 99,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 336,
+     "y": 99,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 353,
+     "y": 23,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 372,
+     "y": 23,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 391,
+     "y": 23,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 410,
+     "y": 23,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 353,
+     "y": 42,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 372,
+     "y": 42,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 391,
+     "y": 42,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 410,
+     "y": 42,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 353,
+     "y": 61,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 372,
+     "y": 61,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 391,
+     "y": 61,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 410,
+     "y": 61,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 353,
+     "y": 80,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 372,
+     "y": 80,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 391,
+     "y": 80,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 410,
+     "y": 80,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 353,
+     "y": 99,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 372,
+     "y": 99,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 391,
+     "y": 99,
+     "w": 10,
+     "d": 10
+    },
+    {
+     "shape": "cyl",
+     "x": 410,
+     "y": 99,
+     "w": 10,
+     "d": 10
+    }
+   ]
+  },
+  {
+   "id": "chip",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "Tastatur-Controller (Chip)",
+   "short": "Controller",
+   "shape": "box",
+   "x": 394,
+   "y": 3,
+   "w": 10,
+   "d": 5,
+   "z": 7.6,
+   "h": 1.2,
+   "r": 0.5,
+   "explode": [
+    0,
+    0,
+    184.8
+   ],
+   "mass": 0.5,
+   "materials": [
+    [
+     "chip",
+     100
+    ]
+   ],
+   "info": "Fragt die Tasten-Matrix tausendmal pro Sekunde ab und schickt die gedrückten Tasten per USB zum Computer.",
+   "color": "#2B2F33"
+  },
+  {
+   "id": "platine",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "Controller-Platine mit LEDs",
+   "short": "Platine",
+   "shape": "box",
+   "x": 370,
+   "y": 1,
+   "w": 60,
+   "d": 9,
+   "z": 6,
+   "h": 1.6,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    124.8
+   ],
+   "mass": 6.7,
+   "materials": [
+    [
+     "fr4",
+     55
+    ],
+    [
+     "kupfer",
+     20
+    ],
+    [
+     "chip",
+     15
+    ],
+    [
+     "lot",
+     10
+    ]
+   ],
+   "info": "Kleine Leiterplatte mit Chip, Status-LEDs und Kabelanschluss. Die Tastenfolie steckt in einem Klemmstecker.",
+   "color": "#2E6B45",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 11,
+     "y": 2,
+     "w": 4,
+     "d": 4,
+     "fill": "#7FD36B"
+    },
+    {
+     "shape": "cyl",
+     "x": 26,
+     "y": 2,
+     "w": 4,
+     "d": 4,
+     "fill": "#7FD36B"
+    },
+    {
+     "shape": "cyl",
+     "x": 41,
+     "y": 2,
+     "w": 4,
+     "d": 4,
+     "fill": "#7FD36B"
+    }
+   ]
+  },
+  {
+   "id": "folie",
+   "component_id": "circuit_board",
+   "material_id": "multilayer_plastic",
+   "name": "Schaltfolie (Membran)",
+   "short": "Schaltfolie",
+   "shape": "box",
+   "x": 10,
+   "y": 10,
+   "w": 420,
+   "d": 115,
+   "z": 5.5,
+   "h": 1,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    125.3
+   ],
+   "mass": 21,
+   "materials": [
+    [
+     "folien",
+     92
+    ],
+    [
+     "kontakte",
+     8
+    ]
+   ],
+   "info": "Drei PET-Folien mit aufgedruckten Silberbahnen. Drückt eine Kuppel darauf, berühren sich die Bahnen und schließen den Kontakt.",
+   "color": "#D9DEE2",
+   "opacity": 0.85,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 9,
+     "y": 9,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 28,
+     "y": 9,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 47,
+     "y": 9,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 66,
+     "y": 9,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 85,
+     "y": 9,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 104,
+     "y": 9,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 123,
+     "y": 9,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 142,
+     "y": 9,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 161,
+     "y": 9,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 180,
+     "y": 9,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 199,
+     "y": 9,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 218,
+     "y": 9,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 237,
+     "y": 9,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 256,
+     "y": 9,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 275,
+     "y": 9,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 9,
+     "y": 28,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 28,
+     "y": 28,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 47,
+     "y": 28,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 66,
+     "y": 28,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 85,
+     "y": 28,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 104,
+     "y": 28,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 123,
+     "y": 28,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 142,
+     "y": 28,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 161,
+     "y": 28,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 180,
+     "y": 28,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 199,
+     "y": 28,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 218,
+     "y": 28,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 237,
+     "y": 28,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 256,
+     "y": 28,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 275,
+     "y": 28,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 9,
+     "y": 47,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 28,
+     "y": 47,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 47,
+     "y": 47,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 66,
+     "y": 47,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 85,
+     "y": 47,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 104,
+     "y": 47,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 123,
+     "y": 47,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 142,
+     "y": 47,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 161,
+     "y": 47,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 180,
+     "y": 47,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 199,
+     "y": 47,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 218,
+     "y": 47,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 237,
+     "y": 47,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 256,
+     "y": 47,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 275,
+     "y": 47,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 9,
+     "y": 66,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 28,
+     "y": 66,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 47,
+     "y": 66,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 66,
+     "y": 66,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 85,
+     "y": 66,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 104,
+     "y": 66,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 123,
+     "y": 66,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 142,
+     "y": 66,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 161,
+     "y": 66,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 180,
+     "y": 66,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 199,
+     "y": 66,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 218,
+     "y": 66,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 237,
+     "y": 66,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 256,
+     "y": 66,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 275,
+     "y": 66,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 9,
+     "y": 85,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 28,
+     "y": 85,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 47,
+     "y": 85,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 66,
+     "y": 85,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 85,
+     "y": 85,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 104,
+     "y": 85,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 123,
+     "y": 85,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 142,
+     "y": 85,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 161,
+     "y": 85,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 180,
+     "y": 85,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 199,
+     "y": 85,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 218,
+     "y": 85,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 237,
+     "y": 85,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 256,
+     "y": 85,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 275,
+     "y": 85,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 9,
+     "y": 104,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 28,
+     "y": 104,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 47,
+     "y": 104,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 66,
+     "y": 104,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 85,
+     "y": 104,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 104,
+     "y": 104,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 123,
+     "y": 104,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 142,
+     "y": 104,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 161,
+     "y": 104,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 180,
+     "y": 104,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 199,
+     "y": 104,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 218,
+     "y": 104,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 237,
+     "y": 104,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 256,
+     "y": 104,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    },
+    {
+     "shape": "cyl",
+     "x": 275,
+     "y": 104,
+     "w": 3,
+     "d": 3,
+     "fill": "#A8AEB3"
+    }
+   ]
+  },
+  {
+   "id": "stahlplatte",
+   "component_id": "steel_backplate",
+   "material_id": "steel",
+   "name": "Stahlplatte",
+   "short": "Stahlplatte",
+   "shape": "box",
+   "x": 8,
+   "y": 8,
+   "w": 424,
+   "d": 119,
+   "z": 4.5,
+   "h": 0.8,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    65.5
+   ],
+   "mass": 181,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Dünnes verzinktes Stahlblech, macht die Tastatur steif und schwer. Mit einem Magneten erkennt man es leicht.",
+   "color": "#9BA3A8",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 20,
+     "y": 15,
+     "w": 30,
+     "d": 6,
+     "r": 3
+    },
+    {
+     "shape": "box",
+     "x": 70,
+     "y": 15,
+     "w": 30,
+     "d": 6,
+     "r": 3
+    },
+    {
+     "shape": "box",
+     "x": 120,
+     "y": 15,
+     "w": 30,
+     "d": 6,
+     "r": 3
+    },
+    {
+     "shape": "box",
+     "x": 170,
+     "y": 15,
+     "w": 30,
+     "d": 6,
+     "r": 3
+    },
+    {
+     "shape": "box",
+     "x": 220,
+     "y": 15,
+     "w": 30,
+     "d": 6,
+     "r": 3
+    },
+    {
+     "shape": "box",
+     "x": 270,
+     "y": 15,
+     "w": 30,
+     "d": 6,
+     "r": 3
+    },
+    {
+     "shape": "box",
+     "x": 320,
+     "y": 15,
+     "w": 30,
+     "d": 6,
+     "r": 3
+    },
+    {
+     "shape": "box",
+     "x": 370,
+     "y": 15,
+     "w": 30,
+     "d": 6,
+     "r": 3
+    },
+    {
+     "shape": "box",
+     "x": 20,
+     "y": 55,
+     "w": 30,
+     "d": 6,
+     "r": 3
+    },
+    {
+     "shape": "box",
+     "x": 70,
+     "y": 55,
+     "w": 30,
+     "d": 6,
+     "r": 3
+    },
+    {
+     "shape": "box",
+     "x": 120,
+     "y": 55,
+     "w": 30,
+     "d": 6,
+     "r": 3
+    },
+    {
+     "shape": "box",
+     "x": 170,
+     "y": 55,
+     "w": 30,
+     "d": 6,
+     "r": 3
+    },
+    {
+     "shape": "box",
+     "x": 220,
+     "y": 55,
+     "w": 30,
+     "d": 6,
+     "r": 3
+    },
+    {
+     "shape": "box",
+     "x": 270,
+     "y": 55,
+     "w": 30,
+     "d": 6,
+     "r": 3
+    },
+    {
+     "shape": "box",
+     "x": 320,
+     "y": 55,
+     "w": 30,
+     "d": 6,
+     "r": 3
+    },
+    {
+     "shape": "box",
+     "x": 370,
+     "y": 55,
+     "w": 30,
+     "d": 6,
+     "r": 3
+    },
+    {
+     "shape": "box",
+     "x": 20,
+     "y": 95,
+     "w": 30,
+     "d": 6,
+     "r": 3
+    },
+    {
+     "shape": "box",
+     "x": 70,
+     "y": 95,
+     "w": 30,
+     "d": 6,
+     "r": 3
+    },
+    {
+     "shape": "box",
+     "x": 120,
+     "y": 95,
+     "w": 30,
+     "d": 6,
+     "r": 3
+    },
+    {
+     "shape": "box",
+     "x": 170,
+     "y": 95,
+     "w": 30,
+     "d": 6,
+     "r": 3
+    },
+    {
+     "shape": "box",
+     "x": 220,
+     "y": 95,
+     "w": 30,
+     "d": 6,
+     "r": 3
+    },
+    {
+     "shape": "box",
+     "x": 270,
+     "y": 95,
+     "w": 30,
+     "d": 6,
+     "r": 3
+    },
+    {
+     "shape": "box",
+     "x": 320,
+     "y": 95,
+     "w": 30,
+     "d": 6,
+     "r": 3
+    },
+    {
+     "shape": "box",
+     "x": 370,
+     "y": 95,
+     "w": 30,
+     "d": 6,
+     "r": 3
+    }
+   ]
+  },
+  {
+   "id": "unterschale",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Unterschale mit Klappfüßen",
+   "short": "Unterschale",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 440,
+   "d": 135,
+   "z": 0,
+   "h": 10,
+   "r": 8,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 142.9,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Bodenwanne mit ausklappbaren Füßen und Gummipuffern. Die Schrauben sitzen von unten.",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 25,
+     "y": 5,
+     "w": 50,
+     "d": 12,
+     "r": 3,
+     "fill": "#2B2F33"
+    },
+    {
+     "shape": "box",
+     "x": 365,
+     "y": 5,
+     "w": 50,
+     "d": 12,
+     "r": 3,
+     "fill": "#2B2F33"
+    }
+   ]
+  },
+  {
+   "id": "kabel",
+   "component_id": "cable_insulation",
+   "material_id": "pvc",
+   "name": "Kabelmantel mit Knickschutz",
+   "short": "Kabel",
+   "shape": "box",
+   "x": 216,
+   "y": -14,
+   "w": 8,
+   "d": 14,
+   "z": 3,
+   "h": 6,
+   "r": 3,
+   "explode": [
+    260,
+    -30,
+    0
+   ],
+   "mass": 24.8,
+   "materials": [
+    [
+     "pvc",
+     100
+    ]
+   ],
+   "info": "Etwa 1,5 m PVC-Kabel. Mantel und Kupferadern lassen sich mit einer Abisolierzange trennen.",
+   "color": "#2B2F33"
+  },
+  {
+   "id": "litzen",
+   "component_id": "cable_copper_core",
+   "material_id": "copper",
+   "name": "Kupferlitzen",
+   "short": "Kupferlitzen",
+   "shape": "box",
+   "x": 218,
+   "y": -14,
+   "w": 4,
+   "d": 14,
+   "z": 4,
+   "h": 4,
+   "r": 2,
+   "explode": [
+    280,
+    -30,
+    0
+   ],
+   "mass": 7.6,
+   "materials": [
+    [
+     "kupfer",
+     100
+    ]
+   ],
+   "info": "Vier Kupferadern für Strom und Daten. Kupfer lässt sich ohne Qualitätsverlust immer wieder einschmelzen.",
+   "color": "#C98F62"
+  },
+  {
+   "id": "usb",
+   "component_id": "cable_copper_core",
+   "material_id": "mixed_electronics",
+   "name": "USB-Stecker",
+   "short": "USB-Stecker",
+   "shape": "box",
+   "x": 216,
+   "y": -14,
+   "w": 8,
+   "d": 14,
+   "z": 1,
+   "h": 9,
+   "r": 1,
+   "explode": [
+    300,
+    -30,
+    0
+   ],
+   "mass": 4.8,
+   "materials": [
+    [
+     "stahl",
+     40
+    ],
+    [
+     "pcabs",
+     35
+    ],
+    [
+     "kupfer",
+     20
+    ],
+    [
+     "kontakte",
+     5
+    ]
+   ],
+   "info": "Am anderen Kabelende. Blechhülle aus Stahl, darin vergoldete Kontakte im Kunststoffträger.",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 1,
+     "w": 4,
+     "d": 12,
+     "r": 0.5,
+     "fill": "#B9BEC2"
+    }
+   ]
+  }
+ ]
+}

@@ -4,7 +4,7 @@
  "name_en": "Computer Mouse",
  "klasse": "Elektroschrott · Kleingerät",
  "kategorie": true,
- "platzhalter": true,
+ "platzhalter": false,
  "photo": null,
  "erkennung": {
   "conf": 1.0,
@@ -21,48 +21,50 @@
  "werte": [
   {
    "k": "Rohstoffwert",
-   "v": "≈ 0,41 €",
-   "hint": "Gold, Silber, Palladium zu Preisen vom 13.11. Ohne Palladium (kein Preis)."
+   "v": "≈ 0,27 €",
+   "hint": "Gold, Silber, Kupfer zu Preisen vom 13.11."
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 0,63 kg",
+   "v": "≈ 0,45 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 0,47 kg",
-   "hint": "spart 0,16 kg, wenn recycelte Materialien eingesetzt werden"
+   "v": "≈ 0,30 kg",
+   "hint": "spart 0,15 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Cu": 9450.0,
-   "Ag": 11.0,
-   "Au": 2.43,
-   "Pd": 1.08
+   "Cu": 9710.0,
+   "Fe": 1215.0,
+   "Ag": 5.52,
+   "Au": 1.24,
+   "Pd": 0.55
   },
   "herkunft": {
    "Cu": "Modellmassen (Schätzung)",
-   "Ag": "14 g Leiterplatte × oeko2012 Tab, 15, Motherboard Notebook (Umicore 2011)",
-   "Au": "14 g Leiterplatte × oeko2012 Tab, 15, Motherboard Notebook (Umicore 2011)",
-   "Pd": "14 g Leiterplatte × oeko2012 Tab, 15, Motherboard Notebook (Umicore 2011)"
+   "Fe": "Modellmassen (Schätzung)",
+   "Ag": "7 g Leiterplatte × oeko2012 Tab, 15, Motherboard Notebook (Umicore 2011)",
+   "Au": "7 g Leiterplatte × oeko2012 Tab, 15, Motherboard Notebook (Umicore 2011)",
+   "Pd": "7 g Leiterplatte × oeko2012 Tab, 15, Motherboard Notebook (Umicore 2011)"
   },
   "materialien_g": {
-   "abs": 56.3,
-   "pcb": 13.5,
-   "rubber": 6.8,
-   "copper": 6.8,
-   "pvc": 6.8
+   "abs": 43.4,
+   "pvc": 21.7,
+   "mixed_electronics": 8.1,
+   "pcb": 6.9,
+   "copper": 5.9,
+   "rubber": 3.0,
+   "pc": 1.0
   },
-  "co2_kg": 0.631,
-  "co2_mit_recyclat_kg": 0.475,
-  "co2_ersparnis_kg": 0.156,
+  "co2_kg": 0.45,
+  "co2_mit_recyclat_kg": 0.297,
+  "co2_ersparnis_kg": 0.152,
   "co2_ohne_faktor": [],
-  "rohstoffwert_eur": 0.41,
-  "wert_ohne_preis": [
-   "Pd"
-  ],
+  "rohstoffwert_eur": 0.27,
+  "wert_ohne_preis": [],
   "preisstand": "2026-11-13",
   "quellen": {
    "oeko2012": {
@@ -109,81 +111,348 @@
   "nicht": "Nicht in Restmüll oder Gelbe Tonne",
   "warnung": "Kabel und Stecker dranlassen."
  },
- "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: automatischer Platzhalter. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
+ "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "rubber_scroll_wheel",
-   "component_id": "rubber_scroll_wheel",
-   "name": "Scroll Wheel",
-   "short": "Scroll Wheel",
-   "shape": "cyl",
-   "x": 24.6,
-   "y": 50.6,
-   "w": 13.9,
-   "h": 5.7,
-   "z": 30.4,
-   "explode": [
-    0,
-    0,
-    117.0
-   ],
-   "mass": 6.75,
-   "materials": [
-    [
-     "gummi",
-     100
-    ]
-   ],
-   "material_id": "rubber",
-   "info": "Lift the wheel out of its axle once the housing is open."
-  },
-  {
-   "id": "plastic_housing_ober",
+   "id": "oberschale",
    "component_id": "plastic_housing",
-   "name": "Plastic Housing (Oberteil)",
-   "short": "Plastic Housing (O",
+   "material_id": "abs",
+   "name": "Oberschale mit Tasten",
+   "short": "Oberschale",
    "shape": "box",
    "x": 0,
    "y": 0,
-   "w": 63.0,
-   "d": 115.0,
-   "h": 7.6,
-   "z": 22.8,
-   "r": 7.6,
+   "w": 63,
+   "d": 115,
+   "z": 10,
+   "h": 28,
+   "r": 26,
    "explode": [
     0,
     0,
-    81.4
+    116.1
    ],
-   "mass": 16.88,
+   "mass": 23.7,
    "materials": [
     [
      "pcabs",
      100
     ]
    ],
-   "material_id": "abs",
-   "info": "Look for hidden screws under rubber feet or labels, then pry the clips open."
+   "info": "Die beiden Maustasten sind federnde Zungen der Oberschale. Sie ist mit einer Schraube unter dem Gleitfuß und vorn mit Rastnasen befestigt.",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 4,
+     "y": 4,
+     "w": 26,
+     "d": 40,
+     "r": 10
+    },
+    {
+     "shape": "box",
+     "x": 33,
+     "y": 4,
+     "w": 26,
+     "d": 40,
+     "r": 10
+    },
+    {
+     "shape": "box",
+     "x": 27.5,
+     "y": 18,
+     "w": 8,
+     "d": 24,
+     "r": 4,
+     "fill": "#2B2F33"
+    }
+   ]
   },
   {
-   "id": "circuit_board",
-   "component_id": "circuit_board",
-   "name": "Circuit Board",
-   "short": "Circuit Board",
+   "id": "mausrad",
+   "component_id": "rubber_scroll_wheel",
+   "material_id": "rubber",
+   "name": "Mausrad mit Gummiring",
+   "short": "Mausrad",
    "shape": "box",
-   "x": 9.5,
-   "y": 17.2,
-   "w": 44.1,
-   "d": 80.5,
-   "h": 10.26,
-   "z": 4.56,
-   "r": 5.3,
+   "x": 28,
+   "y": 19,
+   "w": 7,
+   "d": 22,
+   "z": 16,
+   "h": 22,
+   "r": 3.5,
    "explode": [
     0,
     0,
-    53.8
+    164.1
    ],
-   "mass": 13.5,
+   "mass": 3,
+   "materials": [
+    [
+     "gummi",
+     45
+    ],
+    [
+     "pcabs",
+     40
+    ],
+    [
+     "stahl",
+     15
+    ]
+   ],
+   "info": "Kunststoffrad mit aufgezogenem Gummiring und Stahlachse. Lässt sich nach dem Öffnen einfach aus der Halterung heben.",
+   "color": "#3A3F44",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 2,
+     "w": 5,
+     "d": 18,
+     "r": 2,
+     "fill": "#2B2F33"
+    }
+   ]
+  },
+  {
+   "id": "taster_l",
+   "component_id": "circuit_board",
+   "material_id": "mixed_electronics",
+   "name": "Mikroschalter links",
+   "short": "Mikroschalter",
+   "shape": "box",
+   "x": 12,
+   "y": 24,
+   "w": 6,
+   "d": 13,
+   "z": 5.6,
+   "h": 6,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    86.5
+   ],
+   "mass": 1,
+   "materials": [
+    [
+     "pcabs",
+     55
+    ],
+    [
+     "kupfer",
+     25
+    ],
+    [
+     "stahl",
+     15
+    ],
+    [
+     "kontakte",
+     5
+    ]
+   ],
+   "info": "Kleiner Schalter unter der Taste, der hörbar klickt. Innen schnappt eine Kupferfeder mit silbernem Kontakt um.",
+   "color": "#2F3236",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 2,
+     "w": 2,
+     "d": 3,
+     "r": 0.5,
+     "fill": "#C9302C"
+    }
+   ]
+  },
+  {
+   "id": "taster_r",
+   "component_id": "circuit_board",
+   "material_id": "mixed_electronics",
+   "name": "Mikroschalter rechts",
+   "short": "Mikroschalter",
+   "shape": "box",
+   "x": 45,
+   "y": 24,
+   "w": 6,
+   "d": 13,
+   "z": 5.6,
+   "h": 6,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    86.5
+   ],
+   "mass": 1,
+   "materials": [
+    [
+     "pcabs",
+     55
+    ],
+    [
+     "kupfer",
+     25
+    ],
+    [
+     "stahl",
+     15
+    ],
+    [
+     "kontakte",
+     5
+    ]
+   ],
+   "info": "Gleicher Mikroschalter für die rechte Taste. Geht er kaputt, lässt er sich mit dem Lötkolben tauschen.",
+   "color": "#2F3236",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 2,
+     "w": 2,
+     "d": 3,
+     "r": 0.5,
+     "fill": "#C9302C"
+    }
+   ]
+  },
+  {
+   "id": "encoder",
+   "component_id": "circuit_board",
+   "material_id": "mixed_electronics",
+   "name": "Drehgeber für das Mausrad",
+   "short": "Drehgeber",
+   "shape": "box",
+   "x": 37,
+   "y": 22,
+   "w": 6,
+   "d": 14,
+   "z": 5.6,
+   "h": 8,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    86.5
+   ],
+   "mass": 1,
+   "materials": [
+    [
+     "pcabs",
+     50
+    ],
+    [
+     "kupfer",
+     25
+    ],
+    [
+     "stahl",
+     25
+    ]
+   ],
+   "info": "Zählt die Rastungen des Mausrads mit kleinen Schleifkontakten und meldet sie dem Sensor-Chip.",
+   "color": "#5A6066"
+  },
+  {
+   "id": "sensor",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "Optischer Sensor-Chip",
+   "short": "Sensor",
+   "shape": "box",
+   "x": 25,
+   "y": 52,
+   "w": 13,
+   "d": 16,
+   "z": 5.6,
+   "h": 3,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    86.5
+   ],
+   "mass": 1,
+   "materials": [
+    [
+     "chip",
+     80
+    ],
+    [
+     "kupfer",
+     20
+    ]
+   ],
+   "info": "Eine winzige Kamera, die tausende Bilder pro Sekunde vom Tisch macht und daraus die Bewegung berechnet.",
+   "color": "#2B2F33",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 4.5,
+     "y": 6,
+     "w": 4,
+     "fill": "#1A1D20"
+    }
+   ]
+  },
+  {
+   "id": "led",
+   "component_id": "circuit_board",
+   "material_id": "mixed_electronics",
+   "name": "Leuchtdiode (LED)",
+   "short": "LED",
+   "shape": "box",
+   "x": 40,
+   "y": 56,
+   "w": 4,
+   "d": 6,
+   "z": 5.6,
+   "h": 5,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    86.5
+   ],
+   "mass": 0.2,
+   "materials": [
+    [
+     "led",
+     60
+    ],
+    [
+     "kupfer",
+     40
+    ]
+   ],
+   "info": "Beleuchtet die Tischfläche schräg von der Seite, damit der Sensor die feine Struktur erkennt.",
+   "color": "#D63C3C"
+  },
+  {
+   "id": "platine",
+   "component_id": "circuit_board",
+   "material_id": "pcb",
+   "name": "Leiterplatte",
+   "short": "Platine",
+   "shape": "box",
+   "x": 8,
+   "y": 16,
+   "w": 47,
+   "d": 78,
+   "z": 4,
+   "h": 1.6,
+   "r": 4,
+   "explode": [
+    0,
+    0,
+    60.5
+   ],
+   "mass": 5.9,
    "materials": [
     [
      "fr4",
@@ -202,92 +471,227 @@
      10
     ]
    ],
-   "material_id": "pcb",
-   "info": "Unscrew and unplug all ribbon cables; hand in at an e-waste collection point."
+   "info": "Trägt Schalter, Sensor und den Kabelanschluss. Mit einer Schraube befestigt, gehört in die Elektro-Sammlung.",
+   "color": "#2E6B45",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 18,
+     "y": 70,
+     "w": 11,
+     "d": 5,
+     "r": 1,
+     "fill": "#D9D2B8"
+    }
+   ]
   },
   {
-   "id": "cable_copper_core",
-   "component_id": "cable_copper_core",
-   "name": "Cable Wires",
-   "short": "Cable Wires",
-   "shape": "box",
-   "x": 66.8,
-   "y": 5.8,
-   "w": 3.2,
-   "d": 103.5,
-   "h": 3.04,
-   "z": 3.8,
-   "r": 0.4,
-   "explode": [
-    37.0,
-    0,
-    10.7
-   ],
-   "mass": 6.75,
-   "materials": [
-    [
-     "kupfer",
-     100
-    ]
-   ],
-   "material_id": "copper",
-   "info": "Cut off the plug and strip the insulation to free the copper."
-  },
-  {
-   "id": "cable_insulation",
-   "component_id": "cable_insulation",
-   "name": "Cable Insulation",
-   "short": "Cable Insulation",
-   "shape": "box",
-   "x": 73.1,
-   "y": 5.8,
-   "w": 3.2,
-   "d": 103.5,
-   "h": 3.04,
-   "z": 3.8,
-   "r": 0.4,
-   "explode": [
-    46.5,
-    0,
-    10.7
-   ],
-   "mass": 6.75,
-   "materials": [
-    [
-     "pvc",
-     100
-    ]
-   ],
-   "material_id": "pvc",
-   "info": "Slit lengthwise with a cable stripper to separate it from the wires."
-  },
-  {
-   "id": "plastic_housing",
+   "id": "linse",
    "component_id": "plastic_housing",
-   "name": "Plastic Housing (Unterteil)",
-   "short": "Plastic Housing (U",
+   "material_id": "pc",
+   "name": "Linse und Lichtleiter",
+   "short": "Linse",
    "shape": "box",
-   "x": 0,
-   "y": 0,
-   "w": 63.0,
-   "d": 115.0,
-   "h": 22.8,
-   "z": 0,
-   "r": 7.6,
+   "x": 22,
+   "y": 48,
+   "w": 24,
+   "d": 24,
+   "z": 1.5,
+   "h": 2.5,
+   "r": 3,
    "explode": [
     0,
     0,
-    0
+    34.5
    ],
-   "mass": 39.38,
+   "mass": 1,
    "materials": [
     [
      "pcabs",
      100
     ]
    ],
+   "info": "Klares Polycarbonat. Bündelt das LED-Licht auf den Tisch und das Bild zurück auf den Sensor.",
+   "color": "#C9DEDF",
+   "opacity": 0.7,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 6,
+     "y": 7,
+     "w": 7
+    },
+    {
+     "shape": "cyl",
+     "x": 15,
+     "y": 8,
+     "w": 6
+    }
+   ]
+  },
+  {
+   "id": "unterschale",
+   "component_id": "plastic_housing",
    "material_id": "abs",
-   "info": "Look for hidden screws under rubber feet or labels, then pry the clips open."
+   "name": "Unterschale mit Gleitfüßen",
+   "short": "Unterschale",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 63,
+   "d": 115,
+   "z": 0,
+   "h": 10,
+   "r": 26,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 19.7,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Bodenplatte mit Sensoröffnung. Unter den Gleitfüßen aus Teflon versteckt sich oft die Schraube.",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 4,
+     "w": 43,
+     "d": 8,
+     "r": 4,
+     "fill": "#E8E8E8"
+    },
+    {
+     "shape": "box",
+     "x": 10,
+     "y": 101,
+     "w": 43,
+     "d": 8,
+     "r": 4,
+     "fill": "#E8E8E8"
+    },
+    {
+     "shape": "cyl",
+     "x": 28,
+     "y": 56,
+     "w": 8,
+     "fill": "#1A1D20"
+    }
+   ]
+  },
+  {
+   "id": "kabel",
+   "component_id": "cable_insulation",
+   "material_id": "pvc",
+   "name": "Kabelmantel mit Knickschutz",
+   "short": "Kabel",
+   "shape": "box",
+   "x": 29,
+   "y": -13,
+   "w": 5,
+   "d": 13,
+   "z": 3,
+   "h": 5,
+   "r": 2.5,
+   "explode": [
+    60,
+    -20,
+    0
+   ],
+   "mass": 21.7,
+   "materials": [
+    [
+     "pvc",
+     100
+    ]
+   ],
+   "info": "Etwa 1,8 m PVC-Kabel. Zum Recycling lassen sich Mantel und Kupfer mit einer Abisolierzange trennen.",
+   "color": "#2B2F33"
+  },
+  {
+   "id": "litzen",
+   "component_id": "cable_copper_core",
+   "material_id": "copper",
+   "name": "Kupferlitzen",
+   "short": "Kupferlitzen",
+   "shape": "box",
+   "x": 30,
+   "y": -13,
+   "w": 3,
+   "d": 13,
+   "z": 4,
+   "h": 3,
+   "r": 1.5,
+   "explode": [
+    75,
+    -20,
+    0
+   ],
+   "mass": 5.9,
+   "materials": [
+    [
+     "kupfer",
+     100
+    ]
+   ],
+   "info": "Vier dünne Kupferadern für Strom und Daten. Kupfer ist wertvoll und fast beliebig oft recycelbar.",
+   "color": "#C98F62"
+  },
+  {
+   "id": "usb",
+   "component_id": "cable_copper_core",
+   "material_id": "mixed_electronics",
+   "name": "USB-Stecker",
+   "short": "USB-Stecker",
+   "shape": "box",
+   "x": 28,
+   "y": -13,
+   "w": 7,
+   "d": 13,
+   "z": 1,
+   "h": 9,
+   "r": 1,
+   "explode": [
+    90,
+    -20,
+    0
+   ],
+   "mass": 4.9,
+   "materials": [
+    [
+     "stahl",
+     40
+    ],
+    [
+     "pcabs",
+     35
+    ],
+    [
+     "kupfer",
+     20
+    ],
+    [
+     "kontakte",
+     5
+    ]
+   ],
+   "info": "Am anderen Kabelende. Blechhülle aus Stahl, darin vergoldete Kontakte im Kunststoffträger.",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 1.5,
+     "y": 1,
+     "w": 4,
+     "d": 11,
+     "r": 0.5,
+     "fill": "#B9BEC2"
+    }
+   ]
   }
  ]
 }
