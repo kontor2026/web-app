@@ -14,8 +14,15 @@ app.innerHTML = `
     <div class="canvas-head">
       <div><h2 id="titel">…</h2><p id="masse"></p></div>
       <div class="kopf-rechts">
-        <button class="nummern-schalter" id="foto" aria-pressed="true" title="Foto oder Zeichnung, Taste F">Foto</button>
-        <button class="nummern-schalter" id="nummern" aria-pressed="true" title="Taste N">Nummern</button>
+        <div class="einstellungen">
+          <button class="zahnrad" id="zahnrad" aria-label="Einstellungen" aria-expanded="false" aria-controls="menue" title="Einstellungen">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M19.4 13a7.6 7.6 0 0 0 0-2l2.1-1.6-2-3.5-2.5 1a7.4 7.4 0 0 0-1.7-1L14.9 3h-4l-.4 2.9a7.4 7.4 0 0 0-1.7 1l-2.5-1-2 3.5L6.4 11a7.6 7.6 0 0 0 0 2l-2.1 1.6 2 3.5 2.5-1c.5.4 1.1.7 1.7 1l.4 2.9h4l.4-2.9c.6-.3 1.2-.6 1.7-1l2.5 1 2-3.5zM12.9 15.5a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7z"/></svg>
+          </button>
+          <div class="menue" id="menue" role="menu" hidden>
+            <button class="kipp" id="nummern" role="menuitemcheckbox" aria-checked="true"><span>Nummern</span><kbd>N</kbd><i></i></button>
+            <button class="kipp" id="foto" role="menuitemcheckbox" aria-checked="true"><span>Schatten</span><kbd>F</kbd><i></i></button>
+          </div>
+        </div>
         <div class="seg" role="group" aria-label="Ansicht"><button data-x="0">Zusammen</button><button data-x="1" class="on">Explodiert</button></div>
       </div>
     </div>
@@ -43,17 +50,22 @@ document.querySelectorAll('.modelle .seg button').forEach((b) => b.addEventListe
 }));
 const schalter = document.getElementById('nummern');
 function setzeNummern(an) {
-  schalter.setAttribute('aria-pressed', String(an)); schalter.classList.toggle('on', an);
+  schalter.setAttribute('aria-checked', String(an));
   viewer.nummern(an); localStorage.setItem('modelle-nummern', an ? 'an' : 'aus');
 }
-schalter.addEventListener('click', () => setzeNummern(schalter.getAttribute('aria-pressed') !== 'true'));
+schalter.addEventListener('click', () => setzeNummern(schalter.getAttribute('aria-checked') !== 'true'));
 setzeNummern(localStorage.getItem('modelle-nummern') !== 'aus');
 const fotoSchalter = document.getElementById('foto');
 function setzeFoto(an) {
-  fotoSchalter.setAttribute('aria-pressed', String(an)); fotoSchalter.classList.toggle('on', an);
+  fotoSchalter.setAttribute('aria-checked', String(an));
   viewer.foto(an); localStorage.setItem('modelle-foto', an ? 'an' : 'aus');
 }
-fotoSchalter.addEventListener('click', () => setzeFoto(fotoSchalter.getAttribute('aria-pressed') !== 'true'));
+fotoSchalter.addEventListener('click', () => setzeFoto(fotoSchalter.getAttribute('aria-checked') !== 'true'));
+// Zahnrad öffnet das kleine Einstellungsmenü; Klick daneben oder Esc schließt es
+const zahnrad = document.getElementById('zahnrad'), menue = document.getElementById('menue');
+const menueAuf = (an) => { menue.hidden = !an; zahnrad.setAttribute('aria-expanded', String(an)); };
+zahnrad.addEventListener('click', (e) => { e.stopPropagation(); menueAuf(menue.hidden); });
+document.addEventListener('click', (e) => { if (!menue.hidden && !e.target.closest('.einstellungen')) menueAuf(false); });
 setzeFoto(localStorage.getItem('modelle-foto') !== 'aus');
 
 // ---------- Prüfung wie tools/kategorien/pruefe.py ----------
@@ -170,7 +182,7 @@ addEventListener('keydown', (e) => {
   if (e.target.closest('input')) return;
   if (e.key === 'ArrowRight') blaettere(1);
   if (e.key === 'ArrowLeft') blaettere(-1);
-  if (e.key === 'Escape') { viewer.waehle(null); zeigeModell(); }
+  if (e.key === 'Escape') { if (!menue.hidden) { menueAuf(false); return; } viewer.waehle(null); zeigeModell(); }
   if (e.key === 'n' || e.key === 'N') schalter.click();
   if (e.key === 'f' || e.key === 'F') fotoSchalter.click();
 });
