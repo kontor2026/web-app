@@ -15,6 +15,7 @@ app.innerHTML = `
       <div><p id="masse"></p></div>
       <div class="kopf-rechts">
         <button class="kipp-schalter" id="explodiert" role="switch" aria-checked="true"><span>Zerlegt</span><i></i></button>
+        <button class="kipp-schalter" id="nummern" role="switch" aria-checked="true"><span>Nummern</span><i></i></button>
       </div>
     </div>
     <div class="drawing" id="szene" aria-label="3D-Modell, mit der Maus drehbar"></div>
@@ -43,7 +44,13 @@ function setzeExplosion(an) {
 }
 exKnopf.addEventListener('click', () => setzeExplosion(exKnopf.getAttribute('aria-checked') !== 'true'));
 let nummernAn = localStorage.getItem('modelle-nummern') !== 'aus', drehenAn = localStorage.getItem('modelle-drehen') ? localStorage.getItem('modelle-drehen') === 'an' : !ruhig;
-viewer.nummern(nummernAn);
+const nrKnopf = document.getElementById('nummern');
+function setzeNummern(an) {
+  nummernAn = an; nrKnopf.setAttribute('aria-checked', String(an));
+  viewer.nummern(an); localStorage.setItem('modelle-nummern', an ? 'an' : 'aus');
+}
+nrKnopf.addEventListener('click', () => setzeNummern(!nummernAn));
+setzeNummern(nummernAn);
 viewer.drehen(drehenAn);
 viewer.foto(true);   // immer Foto-Ansicht mit Schatten
 
@@ -161,7 +168,13 @@ addEventListener('keydown', (e) => {
   if (e.key === 'ArrowRight') blaettere(1);
   if (e.key === 'ArrowLeft') blaettere(-1);
   if (e.key === 'Escape') { viewer.waehle(null); zeigeModell(); }
-  if (e.key === 'n' || e.key === 'N') { nummernAn = !nummernAn; viewer.nummern(nummernAn); localStorage.setItem('modelle-nummern', nummernAn ? 'an' : 'aus'); }
+  if (e.key === 'n' || e.key === 'N') { nummernAn = !nummernAn; const nrKnopf = document.getElementById('nummern');
+function setzeNummern(an) {
+  nummernAn = an; nrKnopf.setAttribute('aria-checked', String(an));
+  viewer.nummern(an); localStorage.setItem('modelle-nummern', an ? 'an' : 'aus');
+}
+nrKnopf.addEventListener('click', () => setzeNummern(!nummernAn));
+setzeNummern(nummernAn); localStorage.setItem('modelle-nummern', nummernAn ? 'an' : 'aus'); }
   if (e.key === 'e' || e.key === 'E') exKnopf.click();
   if (e.key === 'd' || e.key === 'D') { drehenAn = !drehenAn; viewer.drehen(drehenAn); localStorage.setItem('modelle-drehen', drehenAn ? 'an' : 'aus'); }
 });
