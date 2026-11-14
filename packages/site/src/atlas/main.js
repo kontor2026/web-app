@@ -81,6 +81,7 @@ function baueGeruest() {
     const auf = document.querySelector('.lw').classList.toggle('strom-offen');
     e.currentTarget.setAttribute('aria-expanded', String(auf));
     e.currentTarget.lastChild.textContent = auf ? 'Materialfluss ausblenden' : 'Materialfluss zeigen';
+    requestAnimationFrame(() => zeichneStrom());   // war versteckt und daher ohne Größe gezeichnet
   });
   // Wischen über dem Datenblatt wechselt die Station (das Bild darüber bleibt drehbar)
   let wisch = null;

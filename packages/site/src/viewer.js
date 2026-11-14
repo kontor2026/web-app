@@ -305,6 +305,8 @@ export function erzeugeViewer(el, { onHover, onSelect, tip } = {}) {
   return {
     lade, explosion, faerbe, markiere, waehle, foto,
     drehen: (an) => { steuerung.autoRotate = an; },
+    // Standbild für Vorschauen: sofort zeichnen und im selben Schritt auslesen (sonst ist der Puffer leer)
+    bild(typ = 'image/webp') { steuerung.update(); if (fotoAn) nach.render(); else renderer.render(scene, kamera); return renderer.domElement.toDataURL(typ, 0.86); },
     nummern: (an) => flaeche.classList.toggle('ohne-nummern', !an),
     get teile() { return teile; },
   };

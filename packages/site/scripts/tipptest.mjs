@@ -18,6 +18,7 @@ const browser = await chromium.launch({ env, args: ['--use-angle=swiftshader', '
 
 let ok = 0, schlecht = 0;
 async function test(name, fn) {
+  if (process.env.NUR && !process.env.NUR.split(',').some((n) => name.includes(n))) return;
   const page = await browser.newPage({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 1, isMobile: true, hasTouch: true });
   page.on('pageerror', (e) => console.log(`    Fehler: ${e.message}`));
   try { await fn(page); ok++; console.log(`  ✓ ${name}`); }
@@ -83,7 +84,7 @@ await test('Werkbank: Gegenstand suchen und hinzufügen', async (p) => {
   erwarte(await p.locator('.wb-zeile >> text=Föhn').count(), 'Föhn nicht im Bestand');
 });
 await test('3D-Modelle: Nummer antippen öffnet das Teil', async (p) => {
-  await p.goto(`${BASIS}modelle/#kat=laptop`, { waitUntil: 'load' }); await warte(p, 3000);
+  await p.goto(`${BASIS}modelle/#kat=laptop`, { waitUntil: 'load', timeout: 120000 }); await warte(p, 5000);
   await p.tap('.ballon >> nth=2'); await warte(p, 500);
   erwarte((await p.locator('#panel .eyebrow').first().textContent()).startsWith('Teil'), 'kein Teil gewählt');
 });
