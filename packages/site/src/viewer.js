@@ -85,6 +85,7 @@ export function erzeugeViewer(el, { onHover, onSelect, tip } = {}) {
           metalness: e.m ?? 0, roughness: Math.max(0.25, e.r), clearcoat: e.cc ?? 0, side: THREE.DoubleSide, transparent: o < 0.98, opacity: o,
           polygonOffset: true, polygonOffsetFactor: -1, polygonOffsetUnits: -1 }));
         mm.receiveShadow = true;
+        if (m.zeichnung) mm.userData.kante = true;            // nur in der Zeichnung, z. B. aufgemalte Öffnung
         marks.push({ mesh: mm, farbe: mm.material.color.clone() });
         const ml = new THREE.LineSegments(new THREE.EdgesGeometry(mg), new THREE.LineBasicMaterial({ color: INK, transparent: true, opacity: 0.6 }));
         ml.userData.kante = true;

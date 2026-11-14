@@ -7,6 +7,7 @@ import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
 import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
 import { GTAOPass } from 'three/addons/postprocessing/GTAOPass.js';
 import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
+import { mergeGeometries } from 'three/addons/utils/BufferGeometryUtils.js';
 import { MATERIALS } from '../../../js/data/catalog.js';
 
 // ---------- Oberflächen-Texturen (prozedural, einmal erzeugt, in mm gekachelt) ----------
@@ -144,7 +145,28 @@ function grundriss(x0, y0, w, d, r, rund) {
   s.lineTo(x0 + r, y0 + d); s.quadraticCurveTo(x0, y0 + d, x0, y0 + d - r); s.lineTo(x0, y0 + r); s.quadraticCurveTo(x0, y0, x0 + r, y0);
   return s;
 }
+// Hohles Teil (Feld wand, mm): Wände oben offen, Boden mit Dicke boden (Standard = wand, 0 = unten offen)
+function hohlGeometrie(t) {
+  const w = t.w, d = t.d ?? t.w, h = t.h, rund = t.shape === 'cyl', r = t.r ?? 0;
+  const wa = Math.min(t.wand, w / 2 - 0.1, d / 2 - 0.1), bo = Math.min(t.boden ?? wa, h - 0.1);
+  const aussen = grundriss(0, 0, w, d, r, rund);
+  aussen.holes.push(grundriss(wa, wa, w - 2 * wa, d - 2 * wa, Math.max(0, r - wa), rund));
+  const teile = [];
+  const wand = new THREE.ExtrudeGeometry(aussen, { depth: h - bo, bevelEnabled: false, curveSegments: 48 });
+  wand.rotateX(Math.PI / 2); wand.translate(0, h, 0);
+  teile.push(wand);
+  if (bo > 0) {
+    const boden = new THREE.ExtrudeGeometry(grundriss(0, 0, w, d, r, rund), { depth: bo, bevelEnabled: false, curveSegments: 48 });
+    boden.rotateX(Math.PI / 2); boden.translate(0, bo, 0);
+    teile.push(boden);
+  }
+  const geo = mergeGeometries(teile);
+  geo.computeVertexNormals();
+  return geo;
+}
+
 export function koerperGeometrie(t) {
+  if (t.wand > 0) return hohlGeometrie(t);
   const w = t.w, d = t.d ?? t.w, h = t.h;
   const b = Math.min(1.2, 0.12 * Math.min(w, d), 0.3 * h);
   const rund = t.shape === 'cyl';

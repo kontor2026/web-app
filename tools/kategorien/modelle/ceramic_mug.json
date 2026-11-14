@@ -67,12 +67,15 @@
    ],
    "info": "Abgerundete Lippe, rundum glasiert. Hier platzen oft kleine Stücke ab: dann lieber nicht mehr daraus trinken.",
    "color": "#3F7FA6",
+   "wand": 4,
+   "boden": 0,
    "marks": [
     {
      "shape": "cyl",
      "x": 4,
      "y": 4,
      "w": 70,
+     "zeichnung": true,
      "fill": "#F1EEE6"
     }
    ]
@@ -102,7 +105,9 @@
     ]
    ],
    "info": "Gebrannter Ton (Steingut), etwa 5 mm dick. Keramik gehört nicht ins Altglas, weil sie dort die neue Glasschmelze verdirbt. Ganze Becher spenden, Scherben in den Restmüll.",
-   "color": "#3F7FA6"
+   "color": "#3F7FA6",
+   "wand": 5,
+   "boden": 0
   },
   {
    "id": "standring",

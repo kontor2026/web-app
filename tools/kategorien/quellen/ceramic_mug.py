@@ -24,12 +24,12 @@ teile = [
          x=0, y=0, w=78, z=85, h=10, mass=35,
          info='Abgerundete Lippe, rundum glasiert. Hier platzen oft kleine Stücke ab: dann lieber nicht mehr daraus '
               'trinken.',
-         color=FARBE, marks=[mark('cyl', 4, 4, 70, fill=INNEN)]),
+         color=FARBE, wand=4, boden=0, marks=[mark('cyl', 4, 4, 70, fill=INNEN, zeichnung=True)]),
     teil('wand', 'ceramic_body', 'Becherwand', 'Wand', 'cyl',
          x=0, y=0, w=78, z=6, h=79, mass=200,
          info='Gebrannter Ton (Steingut), etwa 5 mm dick. Keramik gehört nicht ins Altglas, weil sie dort die neue '
               'Glasschmelze verdirbt. Ganze Becher spenden, Scherben in den Restmüll.',
-         color=FARBE),
+         color=FARBE, wand=5, boden=0),
     teil('standring', 'ceramic_body', 'Standring (unglasiert)', 'Standring', 'cyl',
          x=4, y=4, w=70, z=0, h=6, mass=45,
          info='Unten bleibt ein Ring ohne Glasur, damit der Becher beim Brennen nicht am Ofen festklebt. Man sieht '

@@ -34,7 +34,7 @@ ZEILEN = {r['id']: r for r in csv.DictReader((SRC / 'kategorien.csv').open(encod
 
 # Reihenfolge der Felder wie in den Vorlagen
 REIHENFOLGE = ('id', 'component_id', 'material_id', 'name', 'short', 'shape', 'x', 'y', 'w', 'd', 'z', 'h', 'r',
-               'explode', 'mass', 'materials', 'info', 'color', 'opacity', 'label', 'sortBias', 'marks')
+               'explode', 'mass', 'materials', 'info', 'color', 'opacity', 'label', 'sortBias', 'wand', 'boden', 'marks')
 
 
 def masse(oid):
@@ -53,7 +53,9 @@ def teil(id, component_id, name, short, shape, *, x, y, w, z, h, d=None, r=None,
          material_id=None, materials=None, explode=None, **extra):
     """Ein Bauteil. material_id kommt aus der Komponente, materials aus build.MATERIAL, beides überschreibbar.
 
-    extra: color, opacity, label, sortBias, marks."""
+    extra: color, opacity, label, sortBias, marks, wand, boden.
+    wand (mm): Teil ist in der Foto-Ansicht hohl mit dieser Wandstärke, oben offen; boden (mm): Bodendicke
+    (Standard = wand, 0 = auch unten offen, z. B. Ring, Reifen). Die Station zeichnet es weiter massiv."""
     if component_id not in CLS['components']:
         raise ValueError(f'{id}: unbekannte component_id {component_id}')
     mid = material_id or CLS['components'][component_id]['material_id']
@@ -76,9 +78,16 @@ def teil(id, component_id, name, short, shape, *, x, y, w, z, h, d=None, r=None,
     return p
 
 
-def mark(shape, x, y, w, d=None, r=None, fill=None):
-    """Ein Detail auf der Oberseite eines Teils, Koordinaten relativ zum Teil."""
+def mark(shape, x, y, w, d=None, r=None, fill=None, lift=None, zeichnung=False):
+    """Ein Detail auf der Oberseite eines Teils, Koordinaten relativ zum Teil.
+
+    lift: mm über der Oberseite (Station). zeichnung=True: nur in der Zeichnung (Station, Foto aus), nicht in der
+    Foto-Ansicht, z. B. aufgemalte Öffnungen, die dort ein hohles Teil (wand) ersetzt."""
     m = {'shape': shape, 'x': x, 'y': y, 'w': w}
+    if lift is not None:
+        m['lift'] = lift
+    if zeichnung:
+        m['zeichnung'] = True
     if d is not None:
         m['d'] = d
     if r is not None:
