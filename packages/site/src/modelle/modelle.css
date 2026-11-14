@@ -32,3 +32,6 @@
 .lw-link { justify-self: start; }
 .modelle .stats .chip-q, .modelle .stats .schaetzung { margin-left: 4px; }
 @media (max-width: 900px) { .modelle .actionbar .btn { min-width: 0; flex: 1; } .modelle .actionbar .q { display: none; } }
+.ansicht-knopf { height: 44px; gap: 8px; background: var(--sheet); }
+.ansicht-knopf .icon { width: 18px; height: 18px; }
+@media (max-width: 900px) { .modelle .canvas-head { justify-content: flex-end; } .modelle .canvas-head #masse { display: none; } }

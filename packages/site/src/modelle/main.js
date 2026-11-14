@@ -1,5 +1,5 @@
 // 3D-Modelle prüfen: jedes Kategorie-Modell aus backend/seed/kategorien/ in echtem 3D (gemeinsame Ansicht viewer.js).
-import { shell, esc, zahl, gramm, chip, schaetzung, repoUrl, ruhig } from '../shell.js';
+import { shell, icon, esc, zahl, gramm, chip, schaetzung, repoUrl, ruhig } from '../shell.js';
 import { CLASSES, MATERIALS } from '../../../../js/data/catalog.js';
 import index from '../../../../backend/seed/kategorien/index.json';
 import { erzeugeViewer, ladeModell, hatModell, materialVon } from '../viewer.js';
@@ -14,16 +14,7 @@ app.innerHTML = `
     <div class="canvas-head">
       <div><p id="masse"></p></div>
       <div class="kopf-rechts">
-        <div class="einstellungen">
-          <button class="zahnrad" id="zahnrad" aria-label="Einstellungen" aria-expanded="false" aria-controls="menue" title="Einstellungen">
-            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M19.4 13a7.6 7.6 0 0 0 0-2l2.1-1.6-2-3.5-2.5 1a7.4 7.4 0 0 0-1.7-1L14.9 3h-4l-.4 2.9a7.4 7.4 0 0 0-1.7 1l-2.5-1-2 3.5L6.4 11a7.6 7.6 0 0 0 0 2l-2.1 1.6 2 3.5 2.5-1c.5.4 1.1.7 1.7 1l.4 2.9h4l.4-2.9c.6-.3 1.2-.6 1.7-1l2.5 1 2-3.5zM12.9 15.5a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7z"/></svg>
-          </button>
-          <div class="menue" id="menue" role="menu" hidden>
-            <button class="kipp" id="drehen" role="menuitemcheckbox" aria-checked="true"><span>Drehen</span><kbd>D</kbd><i></i></button>
-            <button class="kipp" id="explodiert" role="menuitemcheckbox" aria-checked="true"><span>Explodiert</span><kbd>E</kbd><i></i></button>
-            <button class="kipp" id="nummern" role="menuitemcheckbox" aria-checked="true"><span>Nummern</span><kbd>N</kbd><i></i></button>
-          </div>
-        </div>
+        <button class="btn ghost ansicht-knopf" id="explodiert" aria-pressed="true">${icon('gegenstand')}<span>Zusammenbauen</span></button>
       </div>
     </div>
     <div class="drawing" id="szene" aria-label="3D-Modell, mit der Maus drehbar"></div>
@@ -44,29 +35,17 @@ const viewer = erzeugeViewer(document.getElementById('szene'), {
   onSelect: (i) => (i == null ? zeigeModell() : zeigeTeil(i)),
 });
 
-// Langsames Kreisen um das Objekt, Wahl bleibt gespeichert
-const drehSchalter = document.getElementById('drehen');
-function setzeDrehen(an) {
-  drehSchalter.setAttribute('aria-checked', String(an));
-  viewer.drehen(an); localStorage.setItem('modelle-drehen', an ? 'an' : 'aus');
-}
-drehSchalter.addEventListener('click', () => setzeDrehen(drehSchalter.getAttribute('aria-checked') !== 'true'));
-setzeDrehen(localStorage.getItem('modelle-drehen') ? localStorage.getItem('modelle-drehen') === 'an' : !ruhig);
-
-// Zusammengebaut oder explodiert, als Schalter im Zahnrad-Menü
-const exSchalter = document.getElementById('explodiert');
-exSchalter.addEventListener('click', () => {
-  const an = exSchalter.getAttribute('aria-checked') !== 'true';
-  exSchalter.setAttribute('aria-checked', String(an));
+// Ein Knopf: zusammengebaut oder zerlegt. Tasten: E umschalten, N Nummern, D Drehen (ohne eigene Knöpfe)
+const exKnopf = document.getElementById('explodiert');
+function setzeExplosion(an) {
+  exKnopf.setAttribute('aria-pressed', String(an));
+  exKnopf.querySelector('span').textContent = an ? 'Zusammenbauen' : 'Zerlegen';
   viewer.explosion(an ? 1 : 0);
-});
-const schalter = document.getElementById('nummern');
-function setzeNummern(an) {
-  schalter.setAttribute('aria-checked', String(an));
-  viewer.nummern(an); localStorage.setItem('modelle-nummern', an ? 'an' : 'aus');
 }
-schalter.addEventListener('click', () => setzeNummern(schalter.getAttribute('aria-checked') !== 'true'));
-setzeNummern(localStorage.getItem('modelle-nummern') !== 'aus');
+exKnopf.addEventListener('click', () => setzeExplosion(exKnopf.getAttribute('aria-pressed') !== 'true'));
+let nummernAn = localStorage.getItem('modelle-nummern') !== 'aus', drehenAn = localStorage.getItem('modelle-drehen') ? localStorage.getItem('modelle-drehen') === 'an' : !ruhig;
+viewer.nummern(nummernAn);
+viewer.drehen(drehenAn);
 viewer.foto(true);   // immer Foto-Ansicht mit Schatten
 
 // ---------- Prüfung wie tools/kategorien/pruefe.py ----------
@@ -182,10 +161,10 @@ addEventListener('keydown', (e) => {
   if (e.target.closest('input')) return;
   if (e.key === 'ArrowRight') blaettere(1);
   if (e.key === 'ArrowLeft') blaettere(-1);
-  if (e.key === 'Escape') { if (!menue.hidden) { menueAuf(false); return; } viewer.waehle(null); zeigeModell(); }
-  if (e.key === 'n' || e.key === 'N') schalter.click();
-  if (e.key === 'e' || e.key === 'E') exSchalter.click();
-  if (e.key === 'd' || e.key === 'D') drehSchalter.click();
+  if (e.key === 'Escape') { viewer.waehle(null); zeigeModell(); }
+  if (e.key === 'n' || e.key === 'N') { nummernAn = !nummernAn; viewer.nummern(nummernAn); localStorage.setItem('modelle-nummern', nummernAn ? 'an' : 'aus'); }
+  if (e.key === 'e' || e.key === 'E') exKnopf.click();
+  if (e.key === 'd' || e.key === 'D') { drehenAn = !drehenAn; viewer.drehen(drehenAn); localStorage.setItem('modelle-drehen', drehenAn ? 'an' : 'aus'); }
 });
 const ausHash = () => oeffne(location.hash.match(/kat=([\w-]+)/)?.[1] ?? 'smartphone');
 addEventListener('hashchange', ausHash);
