@@ -230,3 +230,5 @@
 
 .lw .actionbar { display: none; }
 .lw.sheet { grid-template-rows: 1fr; }
+/* Kein Springen: Datenblatt auf dem Handy mit fester Höhe */
+@media (max-width: 900px) { .lw .panel { flex: 0 0 46%; max-height: none; } }

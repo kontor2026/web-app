@@ -267,3 +267,7 @@ html { scroll-padding-bottom: calc(var(--tabs) + 88px); }
 /* Kreis: nur die hervorgehobene Station trägt ihren Namen */
 .kreis-punkt text { opacity: 0; transition: opacity .4s; }
 .kreis-punkt circle.mitte ~ text { opacity: 1; fill: var(--ink); }
+
+/* Kein Springen beim Blättern: Frage mit fester Höhe */
+.lw-frage { min-height: calc(1.15em + 24px); }
+@media (max-width: 900px) { .lw-frage { min-height: calc(2 * 1.15em + 10px); align-items: flex-start; } }

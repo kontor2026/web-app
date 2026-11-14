@@ -85,3 +85,5 @@
   .kompass-kern { font-size: 16px; }
   .kompass .goal { margin: 0; }
 }
+/* Kein Springen: Datenblatt auf dem Handy mit fester Höhe */
+@media (max-width: 900px) { .kompass .panel { flex: 0 0 42%; max-height: none; } }
