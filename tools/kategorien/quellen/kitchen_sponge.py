@@ -14,7 +14,7 @@ teile = [
          materials=[['nylon', 70], ['phenolharz', 30]],
          info='Wirrfaservlies aus Nylon, mit Harz und feinem Schleifkorn getränkt. Es kratzt Angebranntes ab, '
               'zerkratzt aber auch beschichtete Pfannen.',
-         color='#3E8E4A', marks=raster(5, 6, 6, 8, 6, 6, 11, 11.5, shape='cyl', fill='#2F7039')),
+         color='#3E8E4A', marks=[dict(m, zeichnung=True) for m in raster(5, 6, 6, 8, 6, 6, 11, 11.5, shape='cyl', fill='#2F7039')]),
     teil('kleber', 'scrub_pad', 'Klebeschicht', 'Kleber', 'box', material_id='polyurethane',
          x=0.5, y=0.5, w=69, d=99, z=23.7, h=0.3, r=6, mass=0.4, materials=[['klebstoff', 100]],
          info='Dünner Kleberfilm, der Vlies und Schaum fest verbindet. Deshalb lassen sich die beiden Schichten nicht trennen.',

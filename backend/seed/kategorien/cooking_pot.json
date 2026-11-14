@@ -275,12 +275,15 @@
    ],
    "info": "Schmaler Edelstahlring um das Glas. Die Kerbe darin ist das Dampfloch, damit der Deckel nicht klappert.",
    "color": "#C9CED2",
+   "wand": 3,
+   "boden": 0,
    "marks": [
     {
      "shape": "cyl",
      "x": 4,
      "y": 4,
      "w": 178,
+     "zeichnung": true,
      "fill": "#D6E4E6"
     },
     {
@@ -320,12 +323,14 @@
    ],
    "info": "Tiefgezogener Edelstahl mit Chrom und Nickel. Ohne Griffe und Deckel ist er reiner Metallschrott für den Wertstoffhof.",
    "color": "#C9CED2",
+   "wand": 1.5,
    "marks": [
     {
      "shape": "cyl",
      "x": 2,
      "y": 2,
      "w": 176,
+     "zeichnung": true,
      "fill": "#B5BBC0"
     },
     {
@@ -333,6 +338,7 @@
      "x": 30,
      "y": 30,
      "w": 120,
+     "zeichnung": true,
      "fill": "#A9B0B5"
     }
    ]
@@ -437,6 +443,7 @@
    ],
    "info": "Bakelit-Griff auf einem Stahlwinkel, mit zwei Nieten am Topf befestigt. Nieten mit einem Metallbohrer aufbohren, dann Griff (Restmüll) und Topf (Metall) trennen.",
    "color": "#2E3338",
+   "form": "liegend_y",
    "marks": [
     {
      "shape": "box",
@@ -478,6 +485,7 @@
    "info": "Gegenstück zum linken Griff. Bakelit wird beim Erhitzen nicht weich und kann nicht recycelt werden.",
    "color": "#2E3338",
    "sortBias": 30,
+   "form": "liegend_y",
    "marks": [
     {
      "shape": "box",
