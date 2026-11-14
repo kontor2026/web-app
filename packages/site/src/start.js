@@ -50,7 +50,7 @@ if (!ruhig) setInterval(() => {
 
 // ---------- Bilderwechsel: Kreislauf → Weltkarte → 3D-Modell ----------
 // Globus und 3D laden erst, wenn sie gezeigt werden. Stopp bei Berührung, ohne Automatik bei reduzierter Bewegung.
-let aktiv = 0, globus = null, modell = null, pause = false;
+let aktiv = 0, globus = null, modell = null, pause = false, atmen = null;
 async function bereite(n) {
   if (n === 1 && !globus) {
     const { erzeugeGlobus } = await import('./atlas/globus.js');
@@ -64,6 +64,9 @@ async function bereite(n) {
     modell.lade(await ladeModell('smartphone'));
     modell.drehen?.(true);
   }
+  // 3D-Modell im Wechsel: zusammenbauen und zerlegen, solange es zu sehen ist
+  clearInterval(atmen);
+  if (n === 2 && modell && !ruhig) { let zu = false; atmen = setInterval(() => { zu = !zu; modell.explosion(zu ? 0 : 1); }, 2000); }
 }
 function zeigeBild(n) {
   aktiv = n;
