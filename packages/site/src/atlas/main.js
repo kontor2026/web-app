@@ -55,6 +55,7 @@ function baueGeruest() {
       <nav class="lw-schritte" aria-label="Lebensweg">${SCHRITTE.map((s, i) => `
         <a href="#" data-s="${s.id}" title="${s.name}" aria-label="${i + 1}. ${s.name}"><span class="lw-nr">${i + 1}</span>${icon(s.id)}<span class="lw-name">${s.name}</span></a>`).join('')}
       </nav>
+      <h1 class="lw-frage" id="frage"></h1>
       <div class="lw-buehne">
         <div class="lw-globus" id="globus"></div>
         <div class="lw-szene" id="szene"></div>
@@ -125,8 +126,8 @@ async function zeige(o, s, r) {
 const panel = () => document.getElementById('panel');
 function setzePanel(html) {
   const s = SCHRITTE.find((x) => x.id === schritt);
-  panel().innerHTML = `<div class="panel-inner"><div class="lw-kopf">
-      <div class="eyebrow">${icon(schritt)}${s.name}</div><h1>${esc(s.frage)}</h1></div>${html}</div>`;
+  document.getElementById('frage').innerHTML = `${icon(schritt)}<span>${esc(s.frage)}</span>`;
+  panel().innerHTML = `<div class="panel-inner">${html}</div>`;
   panel().scrollTop = 0;
 }
 const legende = (eintraege) => { document.getElementById('legende').innerHTML = eintraege.map(([f, t]) => `<span><i style="background:${f}"></i>${esc(t)}</span>`).join(''); };

@@ -6,7 +6,7 @@
 .lw-wahl h1 { font-size: 32px; font-weight: 600; letter-spacing: -.02em; }
 
 /* Stationen: Zahl, Symbol, Name. Aktive Station mit Akzentlinie wie die Kopfzeile. */
-.lw .canvas { display: grid; grid-template-rows: auto 1fr; }
+.lw .canvas { display: grid; grid-template-rows: auto auto 1fr; }
 .lw .canvas::after { display: none; }
 .lw-schritte {
   position: relative; z-index: 3; display: grid; grid-template-columns: repeat(7, minmax(0, 1fr));
@@ -179,3 +179,8 @@
 }
 
 .lw-chip { height: 40px; }
+
+/* Frage der Station oben, direkt unter der Leiste */
+.lw-frage { display: flex; align-items: center; gap: 12px; margin: 0; padding: 18px 28px 6px; font-size: 26px; line-height: 1.15; font-weight: 600; letter-spacing: -.02em; }
+.lw-frage .icon { width: 26px; height: 26px; color: var(--accent); flex: none; }
+@media (max-width: 900px) { .lw-frage { padding: 14px 16px 4px; font-size: 22px; } .lw-frage .icon { width: 22px; height: 22px; } }
