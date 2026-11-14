@@ -95,7 +95,7 @@ export function stoff(p, farbe, opacity) {
   const durchsichtig = opacity < 0.98;
   const mat = new THREE.MeshPhysicalMaterial({
     color: farbe, metalness: e.m ?? 0, roughness: e.r, clearcoat: e.cc ?? 0, clearcoatRoughness: 0.15,
-    sheen: e.sh ?? 0, sheenRoughness: 0.6, sheenColor: farbe.clone().lerp(new THREE.Color(1, 1, 1), 0.4),
+    sheen: (e.sh ?? 0) * 0.45, sheenRoughness: 0.8, sheenColor: farbe.clone(),
     transparent: opacity < 0.98, opacity, envMapIntensity: e.m ? 2.4 : 1,
     polygonOffset: true, polygonOffsetFactor: 1, polygonOffsetUnits: 1,
   });
@@ -168,7 +168,7 @@ function hohlGeometrie(t) {
   return geo;
 }
 
-const WEICH = new Set(['textil', 'baumwolle', 'wolle', 'polyester', 'leder', 'kunstleder', 'gummi', 'schaum', 'tpe', 'tpu']);
+const WEICH = new Set(['textil', 'baumwolle', 'wolle', 'polyester', 'nylon', 'leder', 'kunstleder', 'gummi', 'schaum', 'tpe', 'tpu']);
 const SCHARF = new Set(['metall', 'glas', 'elektronik', 'magnet']);
 export function haerte(t) {
   const id = t.materials?.[0]?.[0], cls = MATERIALS[id]?.cls;
