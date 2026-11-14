@@ -136,15 +136,15 @@
    "name": "Seitenwand oben",
    "short": "Seitenwand",
    "shape": "cyl",
-   "x": 2,
-   "y": 2,
-   "w": 646,
-   "z": 45,
-   "h": 5,
+   "x": 3,
+   "y": 3,
+   "w": 644,
+   "z": 1,
+   "h": 48,
    "explode": [
     0,
     0,
-    566.0
+    666.0
    ],
    "mass": 87,
    "materials": [
@@ -155,12 +155,14 @@
    ],
    "info": "Dünne Gummischicht über der Karkasse. Hier stehen Größe (z. B. 50-559) und der erlaubte Luftdruck. Alte Reifen nimmt der Fahrradladen oder der Wertstoffhof an.",
    "color": "#3A3D40",
+   "form": "torus",
    "marks": [
     {
      "shape": "cyl",
      "x": 40.0,
      "y": 40.0,
      "w": 566,
+     "zeichnung": true,
      "fill": "#232527"
     },
     {
@@ -168,6 +170,7 @@
      "x": 100.2,
      "y": 100.2,
      "w": 495.5,
+     "zeichnung": true,
      "fill": "#DCD8CE"
     },
     {
@@ -175,6 +178,7 @@
      "x": 290,
      "y": 10,
      "w": 66,
+     "zeichnung": true,
      "d": 8,
      "r": 2,
      "fill": "#8E969A"
@@ -184,6 +188,7 @@
      "x": 290,
      "y": 628,
      "w": 66,
+     "zeichnung": true,
      "d": 8,
      "r": 2,
      "fill": "#8E969A"
@@ -205,7 +210,7 @@
    "explode": [
     0,
     0,
-    485.0
+    541.0
    ],
    "mass": 32.7,
    "materials": [
@@ -215,13 +220,15 @@
     ]
    ],
    "info": "Ring aus mehreren Windungen Stahldraht an der Innenkante. Er hält den Reifen auf der Felge. Faltreifen haben stattdessen einen Kern aus Aramidfasern.",
-   "color": "#9AA2A6",
+   "color": "#B8BEC2",
+   "form": "torus",
    "marks": [
     {
      "shape": "cyl",
      "x": 8.0,
      "y": 8.0,
      "w": 558,
+     "zeichnung": true,
      "fill": "#5A6268"
     },
     {
@@ -229,6 +236,7 @@
      "x": 12.8,
      "y": 12.8,
      "w": 552.4,
+     "zeichnung": true,
      "fill": "#DCD8CE"
     }
    ]
@@ -243,12 +251,12 @@
    "x": 0,
    "y": 0,
    "w": 650,
-   "z": 5,
-   "h": 40,
+   "z": 0,
+   "h": 50,
    "explode": [
     0,
     0,
-    402.0
+    453.0
    ],
    "mass": 307,
    "materials": [
@@ -260,12 +268,14 @@
    "info": "Dicke Gummimischung aus Natur- und Synthesekautschuk mit Ruß, außen mit Stollenprofil. Sie nutzt sich ab; ist das Profil weg, wird der Reifen getauscht.",
    "color": "#2B2D2F",
    "sortBias": 4,
+   "form": "torus",
    "marks": [
     {
      "shape": "cyl",
      "x": 25.0,
      "y": 25.0,
      "w": 600,
+     "zeichnung": true,
      "fill": "#1E2022"
     },
     {
@@ -273,6 +283,7 @@
      "x": 73.2,
      "y": 73.2,
      "w": 543.6,
+     "zeichnung": true,
      "fill": "#DCD8CE"
     },
     {
@@ -280,6 +291,7 @@
      "x": 632.0,
      "y": 320.0,
      "w": 10,
+     "zeichnung": true,
      "d": 10,
      "r": 2,
      "fill": "#1E2022"
@@ -289,6 +301,7 @@
      "x": 629.3,
      "y": 360.7,
      "w": 10,
+     "zeichnung": true,
      "d": 10,
      "r": 2,
      "fill": "#1E2022"
@@ -298,6 +311,7 @@
      "x": 621.4,
      "y": 400.8,
      "w": 10,
+     "zeichnung": true,
      "d": 10,
      "r": 2,
      "fill": "#1E2022"
@@ -307,6 +321,7 @@
      "x": 608.3,
      "y": 439.4,
      "w": 10,
+     "zeichnung": true,
      "d": 10,
      "r": 2,
      "fill": "#1E2022"
@@ -316,6 +331,7 @@
      "x": 590.2,
      "y": 476.0,
      "w": 10,
+     "zeichnung": true,
      "d": 10,
      "r": 2,
      "fill": "#1E2022"
@@ -325,6 +341,7 @@
      "x": 567.5,
      "y": 509.9,
      "w": 10,
+     "zeichnung": true,
      "d": 10,
      "r": 2,
      "fill": "#1E2022"
@@ -334,6 +351,7 @@
      "x": 540.6,
      "y": 540.6,
      "w": 10,
+     "zeichnung": true,
      "d": 10,
      "r": 2,
      "fill": "#1E2022"
@@ -343,6 +361,7 @@
      "x": 509.9,
      "y": 567.5,
      "w": 10,
+     "zeichnung": true,
      "d": 10,
      "r": 2,
      "fill": "#1E2022"
@@ -352,6 +371,7 @@
      "x": 476.0,
      "y": 590.2,
      "w": 10,
+     "zeichnung": true,
      "d": 10,
      "r": 2,
      "fill": "#1E2022"
@@ -361,6 +381,7 @@
      "x": 439.4,
      "y": 608.3,
      "w": 10,
+     "zeichnung": true,
      "d": 10,
      "r": 2,
      "fill": "#1E2022"
@@ -370,6 +391,7 @@
      "x": 400.8,
      "y": 621.4,
      "w": 10,
+     "zeichnung": true,
      "d": 10,
      "r": 2,
      "fill": "#1E2022"
@@ -379,6 +401,7 @@
      "x": 360.7,
      "y": 629.3,
      "w": 10,
+     "zeichnung": true,
      "d": 10,
      "r": 2,
      "fill": "#1E2022"
@@ -388,6 +411,7 @@
      "x": 320.0,
      "y": 632.0,
      "w": 10,
+     "zeichnung": true,
      "d": 10,
      "r": 2,
      "fill": "#1E2022"
@@ -397,6 +421,7 @@
      "x": 279.3,
      "y": 629.3,
      "w": 10,
+     "zeichnung": true,
      "d": 10,
      "r": 2,
      "fill": "#1E2022"
@@ -406,6 +431,7 @@
      "x": 239.2,
      "y": 621.4,
      "w": 10,
+     "zeichnung": true,
      "d": 10,
      "r": 2,
      "fill": "#1E2022"
@@ -415,6 +441,7 @@
      "x": 200.6,
      "y": 608.3,
      "w": 10,
+     "zeichnung": true,
      "d": 10,
      "r": 2,
      "fill": "#1E2022"
@@ -424,6 +451,7 @@
      "x": 164.0,
      "y": 590.2,
      "w": 10,
+     "zeichnung": true,
      "d": 10,
      "r": 2,
      "fill": "#1E2022"
@@ -433,6 +461,7 @@
      "x": 130.1,
      "y": 567.5,
      "w": 10,
+     "zeichnung": true,
      "d": 10,
      "r": 2,
      "fill": "#1E2022"
@@ -442,6 +471,7 @@
      "x": 99.4,
      "y": 540.6,
      "w": 10,
+     "zeichnung": true,
      "d": 10,
      "r": 2,
      "fill": "#1E2022"
@@ -451,6 +481,7 @@
      "x": 72.5,
      "y": 509.9,
      "w": 10,
+     "zeichnung": true,
      "d": 10,
      "r": 2,
      "fill": "#1E2022"
@@ -460,6 +491,7 @@
      "x": 49.8,
      "y": 476.0,
      "w": 10,
+     "zeichnung": true,
      "d": 10,
      "r": 2,
      "fill": "#1E2022"
@@ -469,6 +501,7 @@
      "x": 31.7,
      "y": 439.4,
      "w": 10,
+     "zeichnung": true,
      "d": 10,
      "r": 2,
      "fill": "#1E2022"
@@ -478,6 +511,7 @@
      "x": 18.6,
      "y": 400.8,
      "w": 10,
+     "zeichnung": true,
      "d": 10,
      "r": 2,
      "fill": "#1E2022"
@@ -487,6 +521,7 @@
      "x": 10.7,
      "y": 360.7,
      "w": 10,
+     "zeichnung": true,
      "d": 10,
      "r": 2,
      "fill": "#1E2022"
@@ -496,6 +531,7 @@
      "x": 8.0,
      "y": 320.0,
      "w": 10,
+     "zeichnung": true,
      "d": 10,
      "r": 2,
      "fill": "#1E2022"
@@ -505,6 +541,7 @@
      "x": 10.7,
      "y": 279.3,
      "w": 10,
+     "zeichnung": true,
      "d": 10,
      "r": 2,
      "fill": "#1E2022"
@@ -514,6 +551,7 @@
      "x": 18.6,
      "y": 239.2,
      "w": 10,
+     "zeichnung": true,
      "d": 10,
      "r": 2,
      "fill": "#1E2022"
@@ -523,6 +561,7 @@
      "x": 31.7,
      "y": 200.6,
      "w": 10,
+     "zeichnung": true,
      "d": 10,
      "r": 2,
      "fill": "#1E2022"
@@ -532,6 +571,7 @@
      "x": 49.8,
      "y": 164.0,
      "w": 10,
+     "zeichnung": true,
      "d": 10,
      "r": 2,
      "fill": "#1E2022"
@@ -541,6 +581,7 @@
      "x": 72.5,
      "y": 130.1,
      "w": 10,
+     "zeichnung": true,
      "d": 10,
      "r": 2,
      "fill": "#1E2022"
@@ -550,6 +591,7 @@
      "x": 99.4,
      "y": 99.4,
      "w": 10,
+     "zeichnung": true,
      "d": 10,
      "r": 2,
      "fill": "#1E2022"
@@ -559,6 +601,7 @@
      "x": 130.1,
      "y": 72.5,
      "w": 10,
+     "zeichnung": true,
      "d": 10,
      "r": 2,
      "fill": "#1E2022"
@@ -568,6 +611,7 @@
      "x": 164.0,
      "y": 49.8,
      "w": 10,
+     "zeichnung": true,
      "d": 10,
      "r": 2,
      "fill": "#1E2022"
@@ -577,6 +621,7 @@
      "x": 200.6,
      "y": 31.7,
      "w": 10,
+     "zeichnung": true,
      "d": 10,
      "r": 2,
      "fill": "#1E2022"
@@ -586,6 +631,7 @@
      "x": 239.2,
      "y": 18.6,
      "w": 10,
+     "zeichnung": true,
      "d": 10,
      "r": 2,
      "fill": "#1E2022"
@@ -595,6 +641,7 @@
      "x": 279.3,
      "y": 10.7,
      "w": 10,
+     "zeichnung": true,
      "d": 10,
      "r": 2,
      "fill": "#1E2022"
@@ -604,6 +651,7 @@
      "x": 320.0,
      "y": 8.0,
      "w": 10,
+     "zeichnung": true,
      "d": 10,
      "r": 2,
      "fill": "#1E2022"
@@ -613,6 +661,7 @@
      "x": 360.7,
      "y": 10.7,
      "w": 10,
+     "zeichnung": true,
      "d": 10,
      "r": 2,
      "fill": "#1E2022"
@@ -622,6 +671,7 @@
      "x": 400.8,
      "y": 18.6,
      "w": 10,
+     "zeichnung": true,
      "d": 10,
      "r": 2,
      "fill": "#1E2022"
@@ -631,6 +681,7 @@
      "x": 439.4,
      "y": 31.7,
      "w": 10,
+     "zeichnung": true,
      "d": 10,
      "r": 2,
      "fill": "#1E2022"
@@ -640,6 +691,7 @@
      "x": 476.0,
      "y": 49.8,
      "w": 10,
+     "zeichnung": true,
      "d": 10,
      "r": 2,
      "fill": "#1E2022"
@@ -649,6 +701,7 @@
      "x": 509.9,
      "y": 72.5,
      "w": 10,
+     "zeichnung": true,
      "d": 10,
      "r": 2,
      "fill": "#1E2022"
@@ -658,6 +711,7 @@
      "x": 540.6,
      "y": 99.4,
      "w": 10,
+     "zeichnung": true,
      "d": 10,
      "r": 2,
      "fill": "#1E2022"
@@ -667,6 +721,7 @@
      "x": 567.5,
      "y": 130.1,
      "w": 10,
+     "zeichnung": true,
      "d": 10,
      "r": 2,
      "fill": "#1E2022"
@@ -676,6 +731,7 @@
      "x": 590.2,
      "y": 164.0,
      "w": 10,
+     "zeichnung": true,
      "d": 10,
      "r": 2,
      "fill": "#1E2022"
@@ -685,6 +741,7 @@
      "x": 608.3,
      "y": 200.6,
      "w": 10,
+     "zeichnung": true,
      "d": 10,
      "r": 2,
      "fill": "#1E2022"
@@ -694,6 +751,7 @@
      "x": 621.4,
      "y": 239.2,
      "w": 10,
+     "zeichnung": true,
      "d": 10,
      "r": 2,
      "fill": "#1E2022"
@@ -703,6 +761,7 @@
      "x": 629.3,
      "y": 279.3,
      "w": 10,
+     "zeichnung": true,
      "d": 10,
      "r": 2,
      "fill": "#1E2022"
@@ -712,6 +771,7 @@
      "x": 624.0,
      "y": 322.0,
      "w": 6,
+     "zeichnung": true,
      "d": 6,
      "r": 2,
      "fill": "#1E2022"
@@ -721,6 +781,7 @@
      "x": 621.4,
      "y": 361.4,
      "w": 6,
+     "zeichnung": true,
      "d": 6,
      "r": 2,
      "fill": "#1E2022"
@@ -730,6 +791,7 @@
      "x": 613.7,
      "y": 400.2,
      "w": 6,
+     "zeichnung": true,
      "d": 6,
      "r": 2,
      "fill": "#1E2022"
@@ -739,6 +801,7 @@
      "x": 601.0,
      "y": 437.6,
      "w": 6,
+     "zeichnung": true,
      "d": 6,
      "r": 2,
      "fill": "#1E2022"
@@ -748,6 +811,7 @@
      "x": 583.5,
      "y": 473.0,
      "w": 6,
+     "zeichnung": true,
      "d": 6,
      "r": 2,
      "fill": "#1E2022"
@@ -757,6 +821,7 @@
      "x": 561.6,
      "y": 505.8,
      "w": 6,
+     "zeichnung": true,
      "d": 6,
      "r": 2,
      "fill": "#1E2022"
@@ -766,6 +831,7 @@
      "x": 535.5,
      "y": 535.5,
      "w": 6,
+     "zeichnung": true,
      "d": 6,
      "r": 2,
      "fill": "#1E2022"
@@ -775,6 +841,7 @@
      "x": 505.8,
      "y": 561.6,
      "w": 6,
+     "zeichnung": true,
      "d": 6,
      "r": 2,
      "fill": "#1E2022"
@@ -784,6 +851,7 @@
      "x": 473.0,
      "y": 583.5,
      "w": 6,
+     "zeichnung": true,
      "d": 6,
      "r": 2,
      "fill": "#1E2022"
@@ -793,6 +861,7 @@
      "x": 437.6,
      "y": 601.0,
      "w": 6,
+     "zeichnung": true,
      "d": 6,
      "r": 2,
      "fill": "#1E2022"
@@ -802,6 +871,7 @@
      "x": 400.2,
      "y": 613.7,
      "w": 6,
+     "zeichnung": true,
      "d": 6,
      "r": 2,
      "fill": "#1E2022"
@@ -811,6 +881,7 @@
      "x": 361.4,
      "y": 621.4,
      "w": 6,
+     "zeichnung": true,
      "d": 6,
      "r": 2,
      "fill": "#1E2022"
@@ -820,6 +891,7 @@
      "x": 322.0,
      "y": 624.0,
      "w": 6,
+     "zeichnung": true,
      "d": 6,
      "r": 2,
      "fill": "#1E2022"
@@ -829,6 +901,7 @@
      "x": 282.6,
      "y": 621.4,
      "w": 6,
+     "zeichnung": true,
      "d": 6,
      "r": 2,
      "fill": "#1E2022"
@@ -838,6 +911,7 @@
      "x": 243.8,
      "y": 613.7,
      "w": 6,
+     "zeichnung": true,
      "d": 6,
      "r": 2,
      "fill": "#1E2022"
@@ -847,6 +921,7 @@
      "x": 206.4,
      "y": 601.0,
      "w": 6,
+     "zeichnung": true,
      "d": 6,
      "r": 2,
      "fill": "#1E2022"
@@ -856,6 +931,7 @@
      "x": 171.0,
      "y": 583.5,
      "w": 6,
+     "zeichnung": true,
      "d": 6,
      "r": 2,
      "fill": "#1E2022"
@@ -865,6 +941,7 @@
      "x": 138.2,
      "y": 561.6,
      "w": 6,
+     "zeichnung": true,
      "d": 6,
      "r": 2,
      "fill": "#1E2022"
@@ -874,6 +951,7 @@
      "x": 108.5,
      "y": 535.5,
      "w": 6,
+     "zeichnung": true,
      "d": 6,
      "r": 2,
      "fill": "#1E2022"
@@ -883,6 +961,7 @@
      "x": 82.4,
      "y": 505.8,
      "w": 6,
+     "zeichnung": true,
      "d": 6,
      "r": 2,
      "fill": "#1E2022"
@@ -892,6 +971,7 @@
      "x": 60.5,
      "y": 473.0,
      "w": 6,
+     "zeichnung": true,
      "d": 6,
      "r": 2,
      "fill": "#1E2022"
@@ -901,6 +981,7 @@
      "x": 43.0,
      "y": 437.6,
      "w": 6,
+     "zeichnung": true,
      "d": 6,
      "r": 2,
      "fill": "#1E2022"
@@ -910,6 +991,7 @@
      "x": 30.3,
      "y": 400.2,
      "w": 6,
+     "zeichnung": true,
      "d": 6,
      "r": 2,
      "fill": "#1E2022"
@@ -919,6 +1001,7 @@
      "x": 22.6,
      "y": 361.4,
      "w": 6,
+     "zeichnung": true,
      "d": 6,
      "r": 2,
      "fill": "#1E2022"
@@ -928,6 +1011,7 @@
      "x": 20.0,
      "y": 322.0,
      "w": 6,
+     "zeichnung": true,
      "d": 6,
      "r": 2,
      "fill": "#1E2022"
@@ -937,6 +1021,7 @@
      "x": 22.6,
      "y": 282.6,
      "w": 6,
+     "zeichnung": true,
      "d": 6,
      "r": 2,
      "fill": "#1E2022"
@@ -946,6 +1031,7 @@
      "x": 30.3,
      "y": 243.8,
      "w": 6,
+     "zeichnung": true,
      "d": 6,
      "r": 2,
      "fill": "#1E2022"
@@ -955,6 +1041,7 @@
      "x": 43.0,
      "y": 206.4,
      "w": 6,
+     "zeichnung": true,
      "d": 6,
      "r": 2,
      "fill": "#1E2022"
@@ -964,6 +1051,7 @@
      "x": 60.5,
      "y": 171.0,
      "w": 6,
+     "zeichnung": true,
      "d": 6,
      "r": 2,
      "fill": "#1E2022"
@@ -973,6 +1061,7 @@
      "x": 82.4,
      "y": 138.2,
      "w": 6,
+     "zeichnung": true,
      "d": 6,
      "r": 2,
      "fill": "#1E2022"
@@ -982,6 +1071,7 @@
      "x": 108.5,
      "y": 108.5,
      "w": 6,
+     "zeichnung": true,
      "d": 6,
      "r": 2,
      "fill": "#1E2022"
@@ -991,6 +1081,7 @@
      "x": 138.2,
      "y": 82.4,
      "w": 6,
+     "zeichnung": true,
      "d": 6,
      "r": 2,
      "fill": "#1E2022"
@@ -1000,6 +1091,7 @@
      "x": 171.0,
      "y": 60.5,
      "w": 6,
+     "zeichnung": true,
      "d": 6,
      "r": 2,
      "fill": "#1E2022"
@@ -1009,6 +1101,7 @@
      "x": 206.4,
      "y": 43.0,
      "w": 6,
+     "zeichnung": true,
      "d": 6,
      "r": 2,
      "fill": "#1E2022"
@@ -1018,6 +1111,7 @@
      "x": 243.8,
      "y": 30.3,
      "w": 6,
+     "zeichnung": true,
      "d": 6,
      "r": 2,
      "fill": "#1E2022"
@@ -1027,6 +1121,7 @@
      "x": 282.6,
      "y": 22.6,
      "w": 6,
+     "zeichnung": true,
      "d": 6,
      "r": 2,
      "fill": "#1E2022"
@@ -1036,6 +1131,7 @@
      "x": 322.0,
      "y": 20.0,
      "w": 6,
+     "zeichnung": true,
      "d": 6,
      "r": 2,
      "fill": "#1E2022"
@@ -1045,6 +1141,7 @@
      "x": 361.4,
      "y": 22.6,
      "w": 6,
+     "zeichnung": true,
      "d": 6,
      "r": 2,
      "fill": "#1E2022"
@@ -1054,6 +1151,7 @@
      "x": 400.2,
      "y": 30.3,
      "w": 6,
+     "zeichnung": true,
      "d": 6,
      "r": 2,
      "fill": "#1E2022"
@@ -1063,6 +1161,7 @@
      "x": 437.6,
      "y": 43.0,
      "w": 6,
+     "zeichnung": true,
      "d": 6,
      "r": 2,
      "fill": "#1E2022"
@@ -1072,6 +1171,7 @@
      "x": 473.0,
      "y": 60.5,
      "w": 6,
+     "zeichnung": true,
      "d": 6,
      "r": 2,
      "fill": "#1E2022"
@@ -1081,6 +1181,7 @@
      "x": 505.8,
      "y": 82.4,
      "w": 6,
+     "zeichnung": true,
      "d": 6,
      "r": 2,
      "fill": "#1E2022"
@@ -1090,6 +1191,7 @@
      "x": 535.5,
      "y": 108.5,
      "w": 6,
+     "zeichnung": true,
      "d": 6,
      "r": 2,
      "fill": "#1E2022"
@@ -1099,6 +1201,7 @@
      "x": 561.6,
      "y": 138.2,
      "w": 6,
+     "zeichnung": true,
      "d": 6,
      "r": 2,
      "fill": "#1E2022"
@@ -1108,6 +1211,7 @@
      "x": 583.5,
      "y": 171.0,
      "w": 6,
+     "zeichnung": true,
      "d": 6,
      "r": 2,
      "fill": "#1E2022"
@@ -1117,6 +1221,7 @@
      "x": 601.0,
      "y": 206.4,
      "w": 6,
+     "zeichnung": true,
      "d": 6,
      "r": 2,
      "fill": "#1E2022"
@@ -1126,6 +1231,7 @@
      "x": 613.7,
      "y": 243.8,
      "w": 6,
+     "zeichnung": true,
      "d": 6,
      "r": 2,
      "fill": "#1E2022"
@@ -1135,6 +1241,7 @@
      "x": 621.4,
      "y": 282.6,
      "w": 6,
+     "zeichnung": true,
      "d": 6,
      "r": 2,
      "fill": "#1E2022"
@@ -1156,7 +1263,7 @@
    "explode": [
     0,
     0,
-    285.0
+    331.0
    ],
    "mass": 40.9,
    "materials": [
@@ -1167,12 +1274,14 @@
    ],
    "info": "Ein Streifen aus dichtem Gewebe oder Spezialgummi unter der Lauffläche. Er hält Scherben und Dornen vom Schlauch fern.",
    "color": "#C9B98A",
+   "form": "torus",
    "marks": [
     {
      "shape": "cyl",
      "x": 17.0,
      "y": 17.0,
      "w": 606,
+     "zeichnung": true,
      "fill": "#A89A70"
     },
     {
@@ -1180,6 +1289,7 @@
      "x": 58.0,
      "y": 58.0,
      "w": 558.1,
+     "zeichnung": true,
      "fill": "#DCD8CE"
     }
    ]
@@ -1194,12 +1304,12 @@
    "x": 4,
    "y": 4,
    "w": 642,
-   "z": 3,
-   "h": 44,
+   "z": 2,
+   "h": 46,
    "explode": [
     0,
     0,
-    166.0
+    211.0
    ],
    "mass": 112.6,
    "materials": [
@@ -1214,12 +1324,14 @@
    ],
    "info": "Nylongewebe, das dem Reifen seine Form gibt, mit Gummi getränkt und einvulkanisiert. Von Hand lässt es sich nicht vom Gummi trennen.",
    "color": "#D8CBA6",
+   "form": "torus",
    "marks": [
     {
      "shape": "cyl",
      "x": 40.0,
      "y": 40.0,
      "w": 562,
+     "zeichnung": true,
      "fill": "#B3A57E"
     },
     {
@@ -1227,6 +1339,7 @@
      "x": 93.0,
      "y": 93.0,
      "w": 500.0,
+     "zeichnung": true,
      "fill": "#DCD8CE"
     },
     {
@@ -1234,6 +1347,7 @@
      "x": 316,
      "y": 4,
      "w": 10,
+     "zeichnung": true,
      "d": 38,
      "r": 1,
      "fill": "#BFAF84"
@@ -1243,6 +1357,7 @@
      "x": 316,
      "y": 600,
      "w": 10,
+     "zeichnung": true,
      "d": 38,
      "r": 1,
      "fill": "#BFAF84"
@@ -1264,7 +1379,7 @@
    "explode": [
     0,
     0,
-    81.0
+    125.0
    ],
    "mass": 32.7,
    "materials": [
@@ -1274,14 +1389,16 @@
     ]
    ],
    "info": "Zweiter Wulstkern an der unteren Reifenkante.",
-   "color": "#9AA2A6",
+   "color": "#B8BEC2",
    "label": false,
+   "form": "torus",
    "marks": [
     {
      "shape": "cyl",
      "x": 8.0,
      "y": 8.0,
      "w": 558,
+     "zeichnung": true,
      "fill": "#5A6268"
     },
     {
@@ -1289,6 +1406,7 @@
      "x": 12.8,
      "y": 12.8,
      "w": 552.4,
+     "zeichnung": true,
      "fill": "#DCD8CE"
     }
    ]
@@ -1300,11 +1418,11 @@
    "name": "Seitenwand unten",
    "short": "Seitenwand",
    "shape": "cyl",
-   "x": 2,
-   "y": 2,
-   "w": 646,
-   "z": 0,
-   "h": 5,
+   "x": 3,
+   "y": 3,
+   "w": 644,
+   "z": 1,
+   "h": 48,
    "explode": [
     0,
     0,
@@ -1320,12 +1438,14 @@
    "info": "Gegenstück zur oberen Seitenwand.",
    "color": "#3A3D40",
    "label": false,
+   "form": "torus",
    "marks": [
     {
      "shape": "cyl",
      "x": 40.0,
      "y": 40.0,
      "w": 566,
+     "zeichnung": true,
      "fill": "#232527"
     },
     {
@@ -1333,6 +1453,7 @@
      "x": 46.0,
      "y": 46.0,
      "w": 559.0,
+     "zeichnung": true,
      "fill": "#DCD8CE"
     }
    ]

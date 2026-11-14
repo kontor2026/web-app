@@ -782,6 +782,7 @@
    ],
    "info": "Dünnes Polyesterfutter, an der Reißverschlussnaht mit eingenäht. Lässt sich nur mit der Schere lösen.",
    "color": "#B9C4CC",
+   "sortBias": -30,
    "marks": [
     {
      "shape": "box",

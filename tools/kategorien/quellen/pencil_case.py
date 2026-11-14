@@ -41,7 +41,7 @@ teile = [
          x=0, y=0, w=80, d=210, z=20, h=6, r=14, mass=12, label=False,
          info='Unterer Rand der Oberschale an der Naht.', color=STOFF),
     teil('futter', 'nylon_fabric', 'Innenfutter', 'Futter', 'box',
-         x=7, y=7, w=66, d=196, z=4, h=30, r=12, mass=14, material_id='polyester', color='#B9C4CC',
+         x=7, y=7, w=66, d=196, z=4, h=30, r=12, mass=14, sortBias=-30, material_id='polyester', color='#B9C4CC',
          info='Dünnes Polyesterfutter, an der Reißverschlussnaht mit eingenäht. Lässt sich nur mit der Schere lösen.',
          marks=[mark('box', 4, 30, 58, 80, 4, '#A9B5BE')]),
     teil('unterteil', 'nylon_fabric', 'Unterschale mit Boden', 'Unterschale', 'box',
