@@ -356,7 +356,7 @@
     ]
    ],
    "info": "Pappstreifen innen am Rand, an den die Griffenden geklebt sind. Er verteilt das Gewicht, damit die Tasche nicht einreißt.",
-   "color": "#A9814F"
+   "color": "#A8865F"
   },
   {
    "id": "verstaerkung_hinten",
@@ -389,7 +389,7 @@
     ]
    ],
    "info": "Gegenstück an der Rückwand.",
-   "color": "#A9814F",
+   "color": "#A8865F",
    "label": false
   },
   {
@@ -427,7 +427,7 @@
     ]
    ],
    "info": "Kraftpapier aus langen Holzfasern, oft mit hohem Altpapieranteil. Am oberen Rand nach innen umgeschlagen, damit die Kante stabil ist.",
-   "color": "#C49A6C"
+   "color": "#B8946A"
   },
   {
    "id": "wand_hinten",
@@ -464,7 +464,7 @@
     ]
    ],
    "info": "Die ganze Tasche ist aus einem Papierschlauch gefaltet. Seine Längsnaht ist hinten verklebt.",
-   "color": "#C49A6C"
+   "color": "#B8946A"
   },
   {
    "id": "seite_links",
@@ -501,7 +501,7 @@
     ]
    ],
    "info": "Seitenwand mit Mittelknick. Leer faltet sie sich nach innen, so liegt die Tasche flach.",
-   "color": "#A9814F"
+   "color": "#A8865F"
   },
   {
    "id": "seite_rechts",
@@ -538,7 +538,7 @@
     ]
    ],
    "info": "Gegenstück zur linken Seitenfalte.",
-   "color": "#A9814F",
+   "color": "#A8865F",
    "label": false
   },
   {
@@ -612,7 +612,7 @@
     ]
    ],
    "info": "Das Schlauchende ist zu einem rechteckigen Boden gefaltet und verklebt. Er trägt das ganze Gewicht.",
-   "color": "#C49A6C",
+   "color": "#B8946A",
    "marks": [
     {
      "shape": "box",
@@ -621,7 +621,7 @@
      "w": 258,
      "d": 34,
      "r": 0,
-     "fill": "#A9814F"
+     "fill": "#A8865F"
     },
     {
      "shape": "box",
@@ -630,7 +630,7 @@
      "w": 258,
      "d": 34,
      "r": 0,
-     "fill": "#A9814F"
+     "fill": "#A8865F"
     },
     {
      "shape": "box",

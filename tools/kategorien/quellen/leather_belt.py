@@ -11,7 +11,7 @@ from bau import teil, mark, explodiere, skaliere_masse, schreibe  # noqa: E402
 # Schnalle, Dorn, Schraube und Schlaufe werden nach rechts gezogen.
 LEDER = '#7A4A2A'
 KANTE = '#5C3720'
-STAHL = '#B7BCC0'
+STAHL = '#C9CDD0'
 
 teile = [
     teil('spitze', 'leather_strap', 'Riemenspitze mit Löchern (innere Windung)', 'Riemenspitze', 'cyl',
@@ -19,7 +19,7 @@ teile = [
          info='Das Ende mit den Lochreihen, innen in der Rolle. Rindsleder, pflanzlich oder mit Chromsalzen gegerbt.',
          marks=[mark('cyl', 4, 4, 54, fill=KANTE, zeichnung=True), mark('cyl', 10, 10, 42, fill='#3A2416', zeichnung=True)]),
     teil('windung_mitte', 'leather_strap', 'Riemen, mittlere Windung', 'Riemen', 'cyl',
-         x=8, y=11, w=78, z=0, h=38, wand=8, boden=0, mass=40, materials=[['leder', 100]], color=LEDER,
+         x=8, y=11, w=78, z=0, h=38, wand=8, boden=0, mass=40, materials=[['leder', 100]], color='#6E4126',
          info='Zwei Lagen Leder, an den Kanten verklebt und vernäht. Tragbare Gürtel in die Altkleidersammlung.',
          marks=[mark('cyl', 4, 4, 70, fill=KANTE, zeichnung=True), mark('cyl', 8, 8, 62, fill=LEDER, zeichnung=True)]),
     teil('windung_aussen', 'leather_strap', 'Riemen, äußere Windung', 'Riemen', 'cyl',

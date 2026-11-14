@@ -149,7 +149,7 @@
    ],
    "info": "Der gerollte Rand macht den dünnen Becher steif und angenehm zum Trinken.",
    "color": "#EEF1F3",
-   "opacity": 0.85,
+   "opacity": 0.6,
    "wand": 2.5,
    "boden": 0,
    "marks": [
@@ -198,7 +198,7 @@
    ],
    "info": "PP, Recyclingcode 5, tiefgezogen aus einer dünnen Folie (etwa 0,2 mm). Weil der Becher nach unten schmaler wird, lassen sich viele ineinander stapeln.",
    "color": "#EEF1F3",
-   "opacity": 0.85,
+   "opacity": 0.6,
    "label": true,
    "wand": 0.8,
    "boden": 0,
@@ -239,7 +239,7 @@
    ],
    "info": "Gehört zur Becherwand aus PP. Leicht geriffelt, damit der Becher besser in der Hand liegt.",
    "color": "#EEF1F3",
-   "opacity": 0.85,
+   "opacity": 0.6,
    "label": false,
    "wand": 0.85,
    "boden": 0
@@ -270,7 +270,7 @@
    ],
    "info": "Gehört zur Becherwand aus PP. Leicht geriffelt, damit der Becher besser in der Hand liegt.",
    "color": "#EEF1F3",
-   "opacity": 0.85,
+   "opacity": 0.6,
    "label": false,
    "wand": 0.9,
    "boden": 0
@@ -301,7 +301,7 @@
    ],
    "info": "Gehört zur Becherwand aus PP. Leicht geriffelt, damit der Becher besser in der Hand liegt.",
    "color": "#EEF1F3",
-   "opacity": 0.85,
+   "opacity": 0.6,
    "label": false,
    "wand": 0.95,
    "boden": 0
@@ -332,7 +332,7 @@
    ],
    "info": "Gehört zur Becherwand aus PP. Leicht geriffelt, damit der Becher besser in der Hand liegt.",
    "color": "#EEF1F3",
-   "opacity": 0.85,
+   "opacity": 0.6,
    "label": false,
    "wand": 1,
    "boden": 0
@@ -363,7 +363,7 @@
    ],
    "info": "Hier steht das Recyclingzeichen 5. Leer gemacht kommt der ganze Becher in die Gelbe Tonne, Becher nicht ineinanderstecken, sonst sortiert die Anlage sie schlechter.",
    "color": "#EEF1F3",
-   "opacity": 0.85,
+   "opacity": 0.6,
    "wand": 0.8,
    "marks": [
     {

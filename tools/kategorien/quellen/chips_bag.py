@@ -10,6 +10,26 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from bau import teil, mark, raster, explodiere, skaliere_masse, schreibe  # noqa: E402
 
+
+def kissen(teile, pid, einzug):
+    """Foto-Ansicht: Teil in waagrechte Scheiben mit Einzug (mm je Seite, von unten nach oben) teilen; der Stapel
+    wird dort zu einer glatten, gewölbten Fläche wie bei einer prall gefüllten Tüte. Marks bleiben auf der obersten."""
+    i = next(k for k, p in enumerate(teile) if p['id'] == pid)
+    p, n = teile[i], len(einzug)
+    zs = [round(p['z'] + k * p['h'] / n, 2) for k in range(n)] + [p['z'] + p['h']]
+    neu = []
+    for k, e in enumerate(einzug):
+        q = dict(p, x=p['x'] + e, y=p['y'] + e, w=p['w'] - 2 * e, d=p['d'] - 2 * e, z=zs[k],
+                 h=round(zs[k + 1] - zs[k], 2), mass=round(p['mass'] / n, 3))
+        if k < n - 1:
+            q.update(id=f'{pid}_{k + 1}', label=False)
+            q.pop('marks', None)
+        elif q.get('marks'):
+            q['marks'] = [dict(m, x=round(m['x'] - e, 2), y=round(m['y'] - e, 2)) for m in q['marks']]
+        neu.append(q)
+    teile[i:i + 1] = neu[::-1]
+
+
 DRUCK = '#D8342C'
 SILBER = '#C9CDD0'
 FOLIE = [['verbundfolie', 97], ['druck', 2], ['alu', 1]]  # OPP/PP-Verbund, mit Aluminium bedampft
@@ -39,5 +59,7 @@ teile = [
          color=SILBER, marks=[mark('box', 3, 0, 10, 250, 0, '#AEB3B7')]),
 ]
 explodiere(teile, abstand=90, gruppen=[['kopfnaht', 'vorderseite', 'bodennaht']])
+kissen(teile, 'vorderseite', [0, 4, 10, 22])
+kissen(teile, 'rueckseite', [16, 6, 2, 0])
 skaliere_masse(teile, oid='chips_bag')
 schreibe('chips_bag', teile)

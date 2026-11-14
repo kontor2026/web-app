@@ -200,7 +200,7 @@
     ]
    ],
    "info": "Zwei Lagen Leder, an den Kanten verklebt und vernäht. Tragbare Gürtel in die Altkleidersammlung.",
-   "color": "#7A4A2A",
+   "color": "#6E4126",
    "wand": 8,
    "boden": 0,
    "marks": [
@@ -330,7 +330,7 @@
     ]
    ],
    "info": "Vernickelter Stahl- oder Zinkdruckguss-Rahmen. Nach dem Lösen der Schraube ab zum Altmetall.",
-   "color": "#B7BCC0"
+   "color": "#C9CDD0"
   },
   {
    "id": "dorn",
@@ -363,7 +363,7 @@
     ]
    ],
    "info": "Der Dorn greift in die Löcher der Riemenspitze. Er dreht sich auf der Achse des Rahmens.",
-   "color": "#B7BCC0"
+   "color": "#C9CDD0"
   },
   {
    "id": "schraube",

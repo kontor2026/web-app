@@ -30,7 +30,7 @@
     ]
    ],
    "info": "Rippstrick, rund an den Halsausschnitt gekettelt. Ein wenig Kunstfaser hält ihn elastisch.",
-   "color": "#6E2D2D",
+   "color": "#561B1E",
    "form": "torus",
    "marks": [
     {
@@ -121,7 +121,7 @@
     0,
     100.0
    ],
-   "mass": 30.2,
+   "mass": 24.1,
    "materials": [
     [
      "wolle",
@@ -129,34 +129,37 @@
     ]
    ],
    "info": "Gestrickte Schafwolle. Tragbare Pullover in die Altkleidersammlung, kaputte kann man aufribbeln und das Garn neu verstricken.",
-   "color": "#8C3B3B",
+   "color": "#6A2326",
    "marks": [
     {
      "shape": "box",
      "x": 48,
      "y": 20,
      "w": 22,
+     "zeichnung": true,
      "d": 290,
      "r": 8,
-     "fill": "#6E2D2D"
+     "fill": "#561B1E"
     },
     {
      "shape": "box",
      "x": 152,
      "y": 20,
      "w": 22,
+     "zeichnung": true,
      "d": 290,
      "r": 8,
-     "fill": "#6E2D2D"
+     "fill": "#561B1E"
     },
     {
      "shape": "box",
      "x": 256,
      "y": 20,
      "w": 22,
+     "zeichnung": true,
      "d": 290,
      "r": 8,
-     "fill": "#6E2D2D"
+     "fill": "#561B1E"
     }
    ]
   },
@@ -187,7 +190,7 @@
     ]
    ],
    "info": "Gestrickte Schafwolle. Tragbare Pullover in die Altkleidersammlung, kaputte kann man aufribbeln und das Garn neu verstricken.",
-   "color": "#8C3B3B",
+   "color": "#6A2326",
    "label": false
   },
   {
@@ -217,8 +220,98 @@
     ]
    ],
    "info": "Gestrickte Schafwolle. Tragbare Pullover in die Altkleidersammlung, kaputte kann man aufribbeln und das Garn neu verstricken.",
-   "color": "#8C3B3B",
+   "color": "#6A2326",
    "label": false
+  },
+  {
+   "id": "zopf_1",
+   "component_id": "wool_fabric",
+   "material_id": "wool",
+   "name": "Zopfmuster",
+   "short": "Zopf",
+   "shape": "box",
+   "x": 61,
+   "y": 52,
+   "w": 20,
+   "d": 286,
+   "z": 36,
+   "h": 4,
+   "explode": [
+    0,
+    0,
+    100.0
+   ],
+   "mass": 2,
+   "materials": [
+    [
+     "wolle",
+     100
+    ]
+   ],
+   "info": "Erhabene Zöpfe: Maschen werden beim Stricken über Kreuz gelegt. Sie gehören zum Vorderteil.",
+   "color": "#561B1E",
+   "label": true,
+   "form": "liegend_y"
+  },
+  {
+   "id": "zopf_2",
+   "component_id": "wool_fabric",
+   "material_id": "wool",
+   "name": "Zopfmuster",
+   "short": "Zopf",
+   "shape": "box",
+   "x": 165,
+   "y": 52,
+   "w": 20,
+   "d": 286,
+   "z": 36,
+   "h": 4,
+   "explode": [
+    0,
+    0,
+    100.0
+   ],
+   "mass": 2,
+   "materials": [
+    [
+     "wolle",
+     100
+    ]
+   ],
+   "info": "Erhabene Zöpfe: Maschen werden beim Stricken über Kreuz gelegt. Sie gehören zum Vorderteil.",
+   "color": "#561B1E",
+   "label": false,
+   "form": "liegend_y"
+  },
+  {
+   "id": "zopf_3",
+   "component_id": "wool_fabric",
+   "material_id": "wool",
+   "name": "Zopfmuster",
+   "short": "Zopf",
+   "shape": "box",
+   "x": 269,
+   "y": 52,
+   "w": 20,
+   "d": 286,
+   "z": 36,
+   "h": 4,
+   "explode": [
+    0,
+    0,
+    100.0
+   ],
+   "mass": 2,
+   "materials": [
+    [
+     "wolle",
+     100
+    ]
+   ],
+   "info": "Erhabene Zöpfe: Maschen werden beim Stricken über Kreuz gelegt. Sie gehören zum Vorderteil.",
+   "color": "#561B1E",
+   "label": false,
+   "form": "liegend_y"
   },
   {
    "id": "bund",
@@ -251,7 +344,7 @@
     ]
    ],
    "info": "Elastischer Rippstrick am unteren Rand, er hält den Pullover an der Hüfte.",
-   "color": "#6E2D2D",
+   "color": "#561B1E",
    "marks": [
     {
      "shape": "box",
@@ -259,7 +352,8 @@
      "y": 2,
      "w": 4,
      "d": 24,
-     "fill": "#4F2020"
+     "fill": "#4F2020",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -267,7 +361,8 @@
      "y": 2,
      "w": 4,
      "d": 24,
-     "fill": "#4F2020"
+     "fill": "#4F2020",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -275,7 +370,8 @@
      "y": 2,
      "w": 4,
      "d": 24,
-     "fill": "#4F2020"
+     "fill": "#4F2020",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -283,7 +379,8 @@
      "y": 2,
      "w": 4,
      "d": 24,
-     "fill": "#4F2020"
+     "fill": "#4F2020",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -291,7 +388,8 @@
      "y": 2,
      "w": 4,
      "d": 24,
-     "fill": "#4F2020"
+     "fill": "#4F2020",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -299,7 +397,8 @@
      "y": 2,
      "w": 4,
      "d": 24,
-     "fill": "#4F2020"
+     "fill": "#4F2020",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -307,7 +406,8 @@
      "y": 2,
      "w": 4,
      "d": 24,
-     "fill": "#4F2020"
+     "fill": "#4F2020",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -315,7 +415,8 @@
      "y": 2,
      "w": 4,
      "d": 24,
-     "fill": "#4F2020"
+     "fill": "#4F2020",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -323,7 +424,8 @@
      "y": 2,
      "w": 4,
      "d": 24,
-     "fill": "#4F2020"
+     "fill": "#4F2020",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -331,7 +433,8 @@
      "y": 2,
      "w": 4,
      "d": 24,
-     "fill": "#4F2020"
+     "fill": "#4F2020",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -339,7 +442,8 @@
      "y": 2,
      "w": 4,
      "d": 24,
-     "fill": "#4F2020"
+     "fill": "#4F2020",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -347,7 +451,8 @@
      "y": 2,
      "w": 4,
      "d": 24,
-     "fill": "#4F2020"
+     "fill": "#4F2020",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -355,7 +460,8 @@
      "y": 2,
      "w": 4,
      "d": 24,
-     "fill": "#4F2020"
+     "fill": "#4F2020",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -363,7 +469,8 @@
      "y": 2,
      "w": 4,
      "d": 24,
-     "fill": "#4F2020"
+     "fill": "#4F2020",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -371,7 +478,8 @@
      "y": 2,
      "w": 4,
      "d": 24,
-     "fill": "#4F2020"
+     "fill": "#4F2020",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -379,7 +487,8 @@
      "y": 2,
      "w": 4,
      "d": 24,
-     "fill": "#4F2020"
+     "fill": "#4F2020",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -387,7 +496,8 @@
      "y": 2,
      "w": 4,
      "d": 24,
-     "fill": "#4F2020"
+     "fill": "#4F2020",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -395,7 +505,8 @@
      "y": 2,
      "w": 4,
      "d": 24,
-     "fill": "#4F2020"
+     "fill": "#4F2020",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -403,7 +514,8 @@
      "y": 2,
      "w": 4,
      "d": 24,
-     "fill": "#4F2020"
+     "fill": "#4F2020",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -411,7 +523,8 @@
      "y": 2,
      "w": 4,
      "d": 24,
-     "fill": "#4F2020"
+     "fill": "#4F2020",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -419,7 +532,8 @@
      "y": 2,
      "w": 4,
      "d": 24,
-     "fill": "#4F2020"
+     "fill": "#4F2020",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -427,7 +541,8 @@
      "y": 2,
      "w": 4,
      "d": 24,
-     "fill": "#4F2020"
+     "fill": "#4F2020",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -435,7 +550,8 @@
      "y": 2,
      "w": 4,
      "d": 24,
-     "fill": "#4F2020"
+     "fill": "#4F2020",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -443,7 +559,8 @@
      "y": 2,
      "w": 4,
      "d": 24,
-     "fill": "#4F2020"
+     "fill": "#4F2020",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -451,7 +568,8 @@
      "y": 2,
      "w": 4,
      "d": 24,
-     "fill": "#4F2020"
+     "fill": "#4F2020",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -459,7 +577,8 @@
      "y": 2,
      "w": 4,
      "d": 24,
-     "fill": "#4F2020"
+     "fill": "#4F2020",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -467,7 +586,8 @@
      "y": 2,
      "w": 4,
      "d": 24,
-     "fill": "#4F2020"
+     "fill": "#4F2020",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -475,7 +595,8 @@
      "y": 2,
      "w": 4,
      "d": 24,
-     "fill": "#4F2020"
+     "fill": "#4F2020",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -483,7 +604,8 @@
      "y": 2,
      "w": 4,
      "d": 24,
-     "fill": "#4F2020"
+     "fill": "#4F2020",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -491,7 +613,8 @@
      "y": 2,
      "w": 4,
      "d": 24,
-     "fill": "#4F2020"
+     "fill": "#4F2020",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -499,7 +622,8 @@
      "y": 2,
      "w": 4,
      "d": 24,
-     "fill": "#4F2020"
+     "fill": "#4F2020",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -507,7 +631,8 @@
      "y": 2,
      "w": 4,
      "d": 24,
-     "fill": "#4F2020"
+     "fill": "#4F2020",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -515,7 +640,8 @@
      "y": 2,
      "w": 4,
      "d": 24,
-     "fill": "#4F2020"
+     "fill": "#4F2020",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -523,7 +649,8 @@
      "y": 2,
      "w": 4,
      "d": 24,
-     "fill": "#4F2020"
+     "fill": "#4F2020",
+     "zeichnung": true
     }
    ]
   },
@@ -554,16 +681,17 @@
     ]
    ],
    "info": "Glatt rechts gestrickt, an Schultern und Seiten mit Wollgarn zusammengekettelt. Ein Faden aufgezogen, löst sich die ganze Masche.",
-   "color": "#8C3B3B",
+   "color": "#6A2326",
    "marks": [
     {
      "shape": "box",
      "x": 0,
      "y": 386,
      "w": 350,
+     "zeichnung": true,
      "d": 3,
      "r": 0,
-     "fill": "#6E2D2D"
+     "fill": "#561B1E"
     }
    ]
   },
@@ -594,7 +722,7 @@
     ]
    ],
    "info": "Langer Ärmel, beim Falten unter das Rückenteil geschlagen. Er ist an der Schulter angestrickt.",
-   "color": "#8C3B3B"
+   "color": "#6A2326"
   },
   {
    "id": "manschette_l",
@@ -627,7 +755,7 @@
     ]
    ],
    "info": "Rippstrick am Handgelenk, damit der Ärmel nicht rutscht.",
-   "color": "#6E2D2D",
+   "color": "#561B1E",
    "marks": [
     {
      "shape": "box",
@@ -635,7 +763,8 @@
      "y": 4,
      "w": 4,
      "d": 52,
-     "fill": "#4F2020"
+     "fill": "#4F2020",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -643,7 +772,8 @@
      "y": 4,
      "w": 4,
      "d": 52,
-     "fill": "#4F2020"
+     "fill": "#4F2020",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -651,7 +781,8 @@
      "y": 4,
      "w": 4,
      "d": 52,
-     "fill": "#4F2020"
+     "fill": "#4F2020",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -659,7 +790,8 @@
      "y": 4,
      "w": 4,
      "d": 52,
-     "fill": "#4F2020"
+     "fill": "#4F2020",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -667,7 +799,8 @@
      "y": 4,
      "w": 4,
      "d": 52,
-     "fill": "#4F2020"
+     "fill": "#4F2020",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -675,7 +808,8 @@
      "y": 4,
      "w": 4,
      "d": 52,
-     "fill": "#4F2020"
+     "fill": "#4F2020",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -683,7 +817,8 @@
      "y": 4,
      "w": 4,
      "d": 52,
-     "fill": "#4F2020"
+     "fill": "#4F2020",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -691,7 +826,8 @@
      "y": 4,
      "w": 4,
      "d": 52,
-     "fill": "#4F2020"
+     "fill": "#4F2020",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -699,7 +835,8 @@
      "y": 4,
      "w": 4,
      "d": 52,
-     "fill": "#4F2020"
+     "fill": "#4F2020",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -707,7 +844,8 @@
      "y": 4,
      "w": 4,
      "d": 52,
-     "fill": "#4F2020"
+     "fill": "#4F2020",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -715,7 +853,8 @@
      "y": 4,
      "w": 4,
      "d": 52,
-     "fill": "#4F2020"
+     "fill": "#4F2020",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -723,7 +862,8 @@
      "y": 4,
      "w": 4,
      "d": 52,
-     "fill": "#4F2020"
+     "fill": "#4F2020",
+     "zeichnung": true
     }
    ]
   },
@@ -754,7 +894,7 @@
     ]
    ],
    "info": "Gegenstück zum linken Ärmel.",
-   "color": "#8C3B3B",
+   "color": "#6A2326",
    "label": false
   },
   {
@@ -788,7 +928,7 @@
     ]
    ],
    "info": "Gegenstück zum linken Ärmelbündchen.",
-   "color": "#6E2D2D",
+   "color": "#561B1E",
    "label": false,
    "marks": [
     {
@@ -797,7 +937,8 @@
      "y": 4,
      "w": 4,
      "d": 52,
-     "fill": "#4F2020"
+     "fill": "#4F2020",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -805,7 +946,8 @@
      "y": 4,
      "w": 4,
      "d": 52,
-     "fill": "#4F2020"
+     "fill": "#4F2020",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -813,7 +955,8 @@
      "y": 4,
      "w": 4,
      "d": 52,
-     "fill": "#4F2020"
+     "fill": "#4F2020",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -821,7 +964,8 @@
      "y": 4,
      "w": 4,
      "d": 52,
-     "fill": "#4F2020"
+     "fill": "#4F2020",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -829,7 +973,8 @@
      "y": 4,
      "w": 4,
      "d": 52,
-     "fill": "#4F2020"
+     "fill": "#4F2020",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -837,7 +982,8 @@
      "y": 4,
      "w": 4,
      "d": 52,
-     "fill": "#4F2020"
+     "fill": "#4F2020",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -845,7 +991,8 @@
      "y": 4,
      "w": 4,
      "d": 52,
-     "fill": "#4F2020"
+     "fill": "#4F2020",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -853,7 +1000,8 @@
      "y": 4,
      "w": 4,
      "d": 52,
-     "fill": "#4F2020"
+     "fill": "#4F2020",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -861,7 +1009,8 @@
      "y": 4,
      "w": 4,
      "d": 52,
-     "fill": "#4F2020"
+     "fill": "#4F2020",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -869,7 +1018,8 @@
      "y": 4,
      "w": 4,
      "d": 52,
-     "fill": "#4F2020"
+     "fill": "#4F2020",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -877,7 +1027,8 @@
      "y": 4,
      "w": 4,
      "d": 52,
-     "fill": "#4F2020"
+     "fill": "#4F2020",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -885,7 +1036,8 @@
      "y": 4,
      "w": 4,
      "d": 52,
-     "fill": "#4F2020"
+     "fill": "#4F2020",
+     "zeichnung": true
     }
    ]
   }

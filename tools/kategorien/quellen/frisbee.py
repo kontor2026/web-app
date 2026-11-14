@@ -27,14 +27,15 @@ def ring(aussen, innen, fill=INNEN, zeichnung=False):
 
 teile = [
     teil('aufdruck', 'pp_disc', 'Aufdruck', 'Aufdruck', 'cyl',
-         x=mitte(170), y=mitte(170), w=170, z=30, h=0.05, mass=0.2, materials=[['druck', 100]], color='#3E6FA8',
+         x=mitte(170), y=mitte(170), w=170, z=29.7, h=0.3, mass=0.2, materials=[['druck', 100]], color='#3E6FA8',
          info='Farbe, direkt auf die Scheibe gedruckt. Sie lässt sich nicht abtrennen und stört beim Wiederverwenden nicht.',
          marks=[mark('cyl', 25, 25, 120, fill='#F2E6C8'), mark('box', 45, 75, 80, 20, 4, '#C8423A')]),
     teil('flugplatte', 'pp_disc', 'Flugplatte', 'Flugplatte', 'cyl',
-         x=mitte(250), y=mitte(250), w=250, z=27, h=3, mass=70, color=FARBE,
+         x=mitte(250), y=mitte(250), w=250, z=27, h=2.7, mass=70, color=FARBE,
          info='Die flache Oberseite. Ihre Fläche erzeugt beim Fliegen Auftrieb wie ein Flügel; '
               'die feinen Rillen (Flugringe) beruhigen die Luftströmung.',
-         marks=[ring(250, 230, '#E2E3DE'), ring(250, 220, FARBE), ring(250, 206, '#E2E3DE'), ring(250, 196, FARBE)]),
+         marks=[ring(250, 230, '#E2E3DE', True), ring(250, 220, FARBE, True), ring(250, 206, '#E2E3DE', True),
+                ring(250, 196, FARBE, True)]),  # Foto: die gefüllten Ringe würden den Aufdruck überdecken
     teil('schulter_oben', 'pp_disc', 'Schulter oben', 'Schulter', 'cyl', label=False,
          x=mitte(262), y=mitte(262), w=262, z=25, h=2, mass=14, color=FARBE,
          info='Oberer, stärker gewölbter Teil der Schulter.', marks=[ring(262, 250, zeichnung=True)]),

@@ -17,11 +17,11 @@ teile = [
     teil('glas_l', 'tinted_lenses', 'Brillenglas links', 'Glas links', 'cyl',
          x=10, y=5, w=54, d=40, z=36.5, h=2.5, mass=4.5, sortBias=1,
          info='Getöntes Polycarbonat mit UV-Filter, oft zusätzlich verspiegelt. Von innen aus der Fassung drücken.',
-         color=GLAS, opacity=0.75, marks=[mark('cyl', 8, 5, 20, 9, fill='#6E6A55')]),
+         color=GLAS, opacity=0.75, marks=[mark('cyl', 8, 5, 20, 9, fill='#6E6A55', zeichnung=True)]),
     teil('glas_r', 'tinted_lenses', 'Brillenglas rechts', 'Glas rechts', 'cyl',
          x=76, y=5, w=54, d=40, z=36.5, h=2.5, mass=4.5, label=False, sortBias=1,
          info='Gegenstück zum linken Glas.',
-         color=GLAS, opacity=0.75, marks=[mark('cyl', 26, 5, 20, 9, fill='#6E6A55')]),
+         color=GLAS, opacity=0.75, marks=[mark('cyl', 26, 5, 20, 9, fill='#6E6A55', zeichnung=True)]),
     teil('rand_l', 'plastic_frame', 'Brillenfassung (Front)', 'Fassung', 'cyl',
          x=6, y=1, w=62, d=48, z=33, h=6, mass=4,
          info='Front aus Kunststoff (Polycarbonat oder Nylon), die beiden Ränder halten die Gläser in einer Nut. '

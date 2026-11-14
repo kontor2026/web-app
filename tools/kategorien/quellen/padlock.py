@@ -9,8 +9,8 @@ from bau import teil, mark, raster, skaliere_masse, schreibe  # noqa: E402
 # Im Körper sitzt senkrecht der Schließzylinder (Kern Ø 11 mm, Schlüsselloch unten) mit vier waagrechten
 # Stiftzuhaltungen: Kernstift, Gehäusestift, Feder. Zwei Stahlkugeln sperren den Bügel.
 # Explodiert: Körper zur Seite, Bügel nach oben, Kugeln leicht angehoben, Stifte und Federn reihenweise nach rechts.
-MESSING = '#C9A74C'
-STAHL = '#B8BEC4'
+MESSING = '#DDBE68'
+STAHL = '#D3D8DC'
 STIFTE = [(8, 3.5), (14, 5), (20, 4), (26, 4.5)]   # (z, Länge Kernstift)
 X0 = 24          # Kernstifte beginnen im Kern
 ENDE = 37        # Ende der Stiftbohrung

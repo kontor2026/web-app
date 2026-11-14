@@ -26,7 +26,7 @@ teile = [
     teil('deckel_oben', 'molded_pulp_tray', 'Deckel, Oberseite mit Rippen', 'Deckel', 'box',
          x=8, y=8, w=144, d=89, z=56, h=14, r=12, mass=5,
          info='Hinten mit der Unterschale verbunden. Die Rippen und Schrägen machen den dünnen Faserguss stabil.',
-         color=FASER, marks=[mark('box', 4, 4, 136, 81, 10, DUNKEL), mark('box', 7, 7, 130, 75, 8, FASER)]
+         color=FASER, marks=[mark('box', 4, 4, 136, 81, 10, DUNKEL, zeichnung=True), mark('box', 7, 7, 130, 75, 8, FASER, zeichnung=True)]
                             + raster(10, 2, 3, 1, 26, 3, 46, fill=DUNKEL) + raster(10, 84, 3, 1, 26, 3, 46, fill=DUNKEL)),
     teil('deckel', 'molded_pulp_tray', 'Deckel, Seitenwände', 'Deckelwand', 'box',
          x=0, y=0, w=160, d=103, z=34, h=22, r=12, mass=6, label=False,
@@ -43,7 +43,7 @@ teile = [
     teil('schale', 'molded_pulp_tray', 'Unterschale (Rand)', 'Unterschale', 'box',
          x=2, y=2, w=156, d=101, z=28, h=6, r=8, mass=5,
          info='Aus Altpapier gepresst und getrocknet. Sauber ins Altpapier, zerrissen auch in den Kompost.',
-         color=FASER, marks=[mark('box', 2, 2, 152, 97, 6, DUNKEL)]
+         color=FASER, marks=[mark('box', 2, 2, 152, 97, 6, DUNKEL, zeichnung=True)]
                             + [mark('cyl', cx - 2 - 21, cy - 2 - 20, 42, 40, fill=MULDE) for cy in MITTE_Y for cx in MITTE_X]),
 ]
 # Jede Mulde als Stapel von Scheiben, unten schmal, oben breit: in der Foto-Ansicht eine runde Schale

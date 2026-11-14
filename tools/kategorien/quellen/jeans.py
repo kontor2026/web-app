@@ -8,8 +8,8 @@ from bau import teil, mark, explodiere, skaliere_masse, schreibe  # noqa: E402
 # Jeans flach gelegt, Vorderseite oben, Bund hinten (y = 0). Die Unterschenkel sind auf Kniehöhe nach hinten
 # unter die Hose geschlagen, so passt sie auf 350 × 400 mm. Stoffebenen werden nach oben abgehoben,
 # das Pflegeetikett zur Seite gezogen.
-DENIM = '#3C5A82'
-DUNKEL = '#2E4766'
+DENIM = '#2B4569'
+DUNKEL = '#21365A'
 NAHT = '#C98A3D'
 DENIM_MAT = [['baumwolle', 98], ['polyester', 2]]
 NIETE = [['messing', 85], ['kupfer', 15]]
@@ -77,10 +77,10 @@ teile = [
     teil('bein_l', 'denim_fabric', 'Unterschenkel links (umgeschlagen)', 'Bein links', 'box',
          x=8, y=120, w=164, d=280, z=0, h=10, r=8, mass=90, materials=DENIM_MAT,
          info='Der untere Teil des Hosenbeins, unter die Hose geschlagen. Hier liegen vier Lagen Stoff übereinander.',
-         color=DUNKEL, marks=[mark('box', 0, 268, 164, 3, 0, NAHT)]),
+         color=DUNKEL, marks=[mark('box', 0, 268, 164, 3, 0, NAHT, zeichnung=True)]),
     teil('bein_r', 'denim_fabric', 'Unterschenkel rechts (umgeschlagen)', 'Bein rechts', 'box',
          x=178, y=120, w=164, d=280, z=0, h=10, r=8, mass=90, materials=DENIM_MAT, label=False,
-         info='Gegenstück zum linken Unterschenkel.', color=DUNKEL, marks=[mark('box', 0, 268, 164, 3, 0, NAHT)]),
+         info='Gegenstück zum linken Unterschenkel.', color=DUNKEL, marks=[mark('box', 0, 268, 164, 3, 0, NAHT, zeichnung=True)]),
 ]
 
 explodiere(teile, abstand=70, gruppen=[['vorderteil', 'vorderteil_1', 'vorderteil_2']], abstaende={f'niete_{i}': 25 for i in range(1, 5)}, nach_liste=True)

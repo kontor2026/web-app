@@ -11,7 +11,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from bau import teil, mark, raster, explodiere, skaliere_masse, schreibe  # noqa: E402
 
 FOLIE = '#E4EEF1'
-NOPPE = '#CFE0E6'
+NOPPE = '#AFCAD4'
 LDPE = [['ldpe', 100]]
 NOPPEN = (raster(5, 5, 12, 16, 20, 20, 24.2, 24.5, shape='cyl', fill=NOPPE)  # 20-mm-Noppen auf 300 × 394 mm
           + [dict(m, zeichnung=True) for m in raster(9, 8, 12, 16, 6, 5, 24.2, 24.5, shape='cyl', fill='#F7FBFC')])  # Glanzlicht je Noppe
@@ -19,7 +19,7 @@ teile = [
     teil('traeger_oben', 'ldpe_film', 'Trägerfolie (obere Hälfte)', 'Trägerfolie', 'box',
          x=0, y=6, w=300, d=394, z=9.5, h=0.5, r=1, mass=2.4, materials=LDPE, color=FOLIE, opacity=0.6,
          info='Glatte LDPE-Folie, auf die die Noppenfolie warm aufgeschweißt ist. Durch sie sieht man die Noppen.',
-         marks=raster(5, 5, 12, 16, 20, 20, 24.2, 24.5, shape='cyl', fill='#D9E6EA')),
+         marks=raster(5, 5, 12, 16, 20, 20, 24.2, 24.5, shape='cyl', fill='#C2D7DE')),
     teil('noppen_oben', 'ldpe_film', 'Noppenfolie (obere Hälfte)', 'Noppenfolie', 'box',
          x=0, y=6, w=300, d=394, z=5, h=4.5, r=1, mass=3.6, materials=LDPE, color=FOLIE, opacity=0.55,
          info='Tiefgezogene Folie mit Luftblasen. Die eingeschlossene Luft federt Stöße ab. Umgeklappt zeigen die '

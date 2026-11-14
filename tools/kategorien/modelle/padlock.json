@@ -27,7 +27,7 @@
     ]
    ],
    "info": "Gehärteter, verchromter Stahl, damit man ihn nicht durchsägen kann. Nur mit einem Bolzenschneider aufknipsen, wenn der Schlüssel fehlt.",
-   "color": "#B8BEC4",
+   "color": "#D3D8DC",
    "form": "liegend_x"
   },
   {
@@ -55,7 +55,7 @@
     ]
    ],
    "info": "Der lange Schenkel bleibt beim Öffnen im Körper; um ihn dreht sich der Bügel.",
-   "color": "#B8BEC4",
+   "color": "#D3D8DC",
    "label": false,
    "marks": [
     {
@@ -92,7 +92,7 @@
     ]
    ],
    "info": "Der kurze Schenkel hat eine Kerbe, in die die Sperrkugel greift.",
-   "color": "#B8BEC4",
+   "color": "#D3D8DC",
    "label": false,
    "marks": [
     {
@@ -184,7 +184,7 @@
     ]
    ],
    "info": "Drehbarer Messingkern mit dem Schlüsselkanal. Er lässt sich nur drehen, wenn alle Stifte richtig stehen.",
-   "color": "#C9A74C",
+   "color": "#DDBE68",
    "marks": [
     {
      "shape": "box",
@@ -508,7 +508,7 @@
     ]
    ],
    "info": "Winzige Stahlfedern drücken die Stifte in den Kern zurück.",
-   "color": "#B8BEC4",
+   "color": "#D3D8DC",
    "label": true,
    "form": "liegend_x",
    "marks": [
@@ -586,7 +586,7 @@
     ]
    ],
    "info": "Weitere Zuhaltungsfeder.",
-   "color": "#B8BEC4",
+   "color": "#D3D8DC",
    "label": false,
    "form": "liegend_x",
    "marks": [
@@ -646,7 +646,7 @@
     ]
    ],
    "info": "Weitere Zuhaltungsfeder.",
-   "color": "#B8BEC4",
+   "color": "#D3D8DC",
    "label": false,
    "form": "liegend_x",
    "marks": [
@@ -715,7 +715,7 @@
     ]
    ],
    "info": "Weitere Zuhaltungsfeder.",
-   "color": "#B8BEC4",
+   "color": "#D3D8DC",
    "label": false,
    "form": "liegend_x",
    "marks": [
@@ -782,7 +782,7 @@
     ]
    ],
    "info": "Druckfeder unter dem langen Schenkel. Sie lässt den Bügel aufspringen, sobald die Kugeln ihn freigeben.",
-   "color": "#B8BEC4",
+   "color": "#D3D8DC",
    "marks": [
     {
      "shape": "cyl",
@@ -847,7 +847,7 @@
     ]
    ],
    "info": "Massiver Messingblock mit Bohrungen für Zylinder, Stifte und Bügel. Messing ist wertvoller Schrott: alte Schlösser beim Schrotthändler oder Wertstoffhof abgeben.",
-   "color": "#C9A74C",
+   "color": "#DDBE68",
    "marks": [
     {
      "shape": "box",

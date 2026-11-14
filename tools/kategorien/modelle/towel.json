@@ -27,7 +27,7 @@
     ]
    ],
    "info": "Gewebtes Baumwollband als Schlaufe in den Saum genäht, zum Aufhängen am Haken.",
-   "color": "#A8443B"
+   "color": "#8C3129"
   },
   {
    "id": "etikett",
@@ -114,7 +114,7 @@
     ]
    ],
    "info": "Frottee: Auf einem Grundgewebe stehen tausende kleine Baumwollschlingen, die viel Wasser aufsaugen.",
-   "color": "#C2554A",
+   "color": "#A8433B",
    "marks": [
     {
      "shape": "cyl",
@@ -1507,42 +1507,44 @@
      "x": 0,
      "y": 0,
      "w": 5,
+     "zeichnung": true,
      "d": 250,
      "r": 0,
-     "fill": "#A8443B"
+     "fill": "#8C3129"
     },
     {
      "shape": "box",
      "x": 295,
      "y": 0,
      "w": 5,
+     "zeichnung": true,
      "d": 250,
      "r": 0,
-     "fill": "#A8443B"
+     "fill": "#8C3129"
     },
     {
      "shape": "box",
-     "x": 0,
+     "x": 6,
      "y": 200,
-     "w": 300,
+     "w": 288,
      "d": 22,
      "r": 0,
-     "fill": "#A8443B"
+     "fill": "#8C3129"
     },
     {
      "shape": "box",
-     "x": 0,
+     "x": 6,
      "y": 206,
-     "w": 300,
+     "w": 288,
      "d": 2,
      "r": 0,
      "fill": "#E0B04A"
     },
     {
      "shape": "box",
-     "x": 0,
+     "x": 6,
      "y": 214,
-     "w": 300,
+     "w": 288,
      "d": 2,
      "r": 0,
      "fill": "#E0B04A"
@@ -1576,7 +1578,7 @@
     ]
    ],
    "info": "Gut erhaltene Handtücher in die Altkleidersammlung, alte als Putzlappen oder für das Tierheim.",
-   "color": "#C2554A",
+   "color": "#A8433B",
    "marks": [
     {
      "shape": "cyl",
@@ -2969,18 +2971,20 @@
      "x": 0,
      "y": 0,
      "w": 5,
+     "zeichnung": true,
      "d": 250,
      "r": 0,
-     "fill": "#A8443B"
+     "fill": "#8C3129"
     },
     {
      "shape": "box",
      "x": 295,
      "y": 0,
      "w": 5,
+     "zeichnung": true,
      "d": 250,
      "r": 0,
-     "fill": "#A8443B"
+     "fill": "#8C3129"
     }
    ]
   },
@@ -3011,7 +3015,7 @@
     ]
    ],
    "info": "Reine Baumwolle: ohne Etikett und Aufhänger lässt sich das Tuch komplett zu Fasern reißen.",
-   "color": "#C2554A",
+   "color": "#A8433B",
    "label": false,
    "marks": [
     {
@@ -4405,18 +4409,20 @@
      "x": 0,
      "y": 0,
      "w": 5,
+     "zeichnung": true,
      "d": 250,
      "r": 0,
-     "fill": "#A8443B"
+     "fill": "#8C3129"
     },
     {
      "shape": "box",
      "x": 295,
      "y": 0,
      "w": 5,
+     "zeichnung": true,
      "d": 250,
      "r": 0,
-     "fill": "#A8443B"
+     "fill": "#8C3129"
     }
    ]
   },
@@ -4447,7 +4453,7 @@
     ]
    ],
    "info": "Die glatt gewebte Bordüre und die umgenähten Kanten verhindern, dass sich Schlingen herausziehen.",
-   "color": "#C2554A",
+   "color": "#A8433B",
    "marks": [
     {
      "shape": "cyl",
@@ -5840,42 +5846,44 @@
      "x": 0,
      "y": 0,
      "w": 5,
+     "zeichnung": true,
      "d": 250,
      "r": 0,
-     "fill": "#A8443B"
+     "fill": "#8C3129"
     },
     {
      "shape": "box",
      "x": 295,
      "y": 0,
      "w": 5,
+     "zeichnung": true,
      "d": 250,
      "r": 0,
-     "fill": "#A8443B"
+     "fill": "#8C3129"
     },
     {
      "shape": "box",
-     "x": 0,
+     "x": 6,
      "y": 28,
-     "w": 300,
+     "w": 288,
      "d": 22,
      "r": 0,
-     "fill": "#A8443B"
+     "fill": "#8C3129"
     },
     {
      "shape": "box",
-     "x": 0,
+     "x": 6,
      "y": 34,
-     "w": 300,
+     "w": 288,
      "d": 2,
      "r": 0,
      "fill": "#E0B04A"
     },
     {
      "shape": "box",
-     "x": 0,
+     "x": 6,
      "y": 42,
-     "w": 300,
+     "w": 288,
      "d": 2,
      "r": 0,
      "fill": "#E0B04A"

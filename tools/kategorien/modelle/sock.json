@@ -35,7 +35,8 @@
      "y": 3,
      "w": 64,
      "d": 1.5,
-     "fill": "#B9B2A2"
+     "fill": "#B9B2A2",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -43,7 +44,8 @@
      "y": 8,
      "w": 64,
      "d": 1.5,
-     "fill": "#B9B2A2"
+     "fill": "#B9B2A2",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -51,7 +53,8 @@
      "y": 13,
      "w": 64,
      "d": 1.5,
-     "fill": "#B9B2A2"
+     "fill": "#B9B2A2",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -59,7 +62,8 @@
      "y": 18,
      "w": 64,
      "d": 1.5,
-     "fill": "#B9B2A2"
+     "fill": "#B9B2A2",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -67,7 +71,8 @@
      "y": 23,
      "w": 64,
      "d": 1.5,
-     "fill": "#B9B2A2"
+     "fill": "#B9B2A2",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -75,7 +80,8 @@
      "y": 28,
      "w": 64,
      "d": 1.5,
-     "fill": "#B9B2A2"
+     "fill": "#B9B2A2",
+     "zeichnung": true
     }
    ]
   },
@@ -122,7 +128,8 @@
      "y": 1,
      "w": 3,
      "d": 38,
-     "fill": "#8A939A"
+     "fill": "#8A939A",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -130,7 +137,8 @@
      "y": 1,
      "w": 3,
      "d": 38,
-     "fill": "#8A939A"
+     "fill": "#8A939A",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -138,7 +146,8 @@
      "y": 1,
      "w": 3,
      "d": 38,
-     "fill": "#8A939A"
+     "fill": "#8A939A",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -146,7 +155,8 @@
      "y": 1,
      "w": 3,
      "d": 38,
-     "fill": "#8A939A"
+     "fill": "#8A939A",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -154,7 +164,8 @@
      "y": 1,
      "w": 3,
      "d": 38,
-     "fill": "#8A939A"
+     "fill": "#8A939A",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -162,7 +173,8 @@
      "y": 1,
      "w": 3,
      "d": 38,
-     "fill": "#8A939A"
+     "fill": "#8A939A",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -170,7 +182,8 @@
      "y": 1,
      "w": 3,
      "d": 38,
-     "fill": "#8A939A"
+     "fill": "#8A939A",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -178,7 +191,8 @@
      "y": 1,
      "w": 3,
      "d": 38,
-     "fill": "#8A939A"
+     "fill": "#8A939A",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -186,7 +200,8 @@
      "y": 1,
      "w": 3,
      "d": 38,
-     "fill": "#8A939A"
+     "fill": "#8A939A",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -194,7 +209,8 @@
      "y": 1,
      "w": 3,
      "d": 38,
-     "fill": "#8A939A"
+     "fill": "#8A939A",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -202,7 +218,8 @@
      "y": 1,
      "w": 3,
      "d": 38,
-     "fill": "#8A939A"
+     "fill": "#8A939A",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -210,7 +227,8 @@
      "y": 1,
      "w": 3,
      "d": 38,
-     "fill": "#8A939A"
+     "fill": "#8A939A",
+     "zeichnung": true
     }
    ]
   },
@@ -257,7 +275,8 @@
      "y": 1,
      "w": 1.2,
      "d": 78,
-     "fill": "#8A939A"
+     "fill": "#8A939A",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -265,7 +284,8 @@
      "y": 1,
      "w": 1.2,
      "d": 78,
-     "fill": "#8A939A"
+     "fill": "#8A939A",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -273,7 +293,8 @@
      "y": 1,
      "w": 1.2,
      "d": 78,
-     "fill": "#8A939A"
+     "fill": "#8A939A",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -281,7 +302,8 @@
      "y": 1,
      "w": 1.2,
      "d": 78,
-     "fill": "#8A939A"
+     "fill": "#8A939A",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -289,7 +311,8 @@
      "y": 1,
      "w": 1.2,
      "d": 78,
-     "fill": "#8A939A"
+     "fill": "#8A939A",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -297,7 +320,8 @@
      "y": 1,
      "w": 1.2,
      "d": 78,
-     "fill": "#8A939A"
+     "fill": "#8A939A",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -305,7 +329,8 @@
      "y": 1,
      "w": 1.2,
      "d": 78,
-     "fill": "#8A939A"
+     "fill": "#8A939A",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -313,7 +338,8 @@
      "y": 1,
      "w": 1.2,
      "d": 78,
-     "fill": "#8A939A"
+     "fill": "#8A939A",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -321,7 +347,8 @@
      "y": 1,
      "w": 1.2,
      "d": 78,
-     "fill": "#8A939A"
+     "fill": "#8A939A",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -329,7 +356,8 @@
      "y": 1,
      "w": 1.2,
      "d": 78,
-     "fill": "#8A939A"
+     "fill": "#8A939A",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -337,22 +365,23 @@
      "y": 1,
      "w": 1.2,
      "d": 78,
-     "fill": "#8A939A"
+     "fill": "#8A939A",
+     "zeichnung": true
     },
     {
      "shape": "box",
-     "x": 0,
+     "x": 3,
      "y": 8,
-     "w": 72,
+     "w": 66,
      "d": 5,
      "r": 0,
      "fill": "#B8433A"
     },
     {
      "shape": "box",
-     "x": 0,
+     "x": 3,
      "y": 17,
-     "w": 72,
+     "w": 66,
      "d": 5,
      "r": 0,
      "fill": "#B8433A"
@@ -444,7 +473,8 @@
      "y": 1,
      "w": 1.2,
      "d": 98,
-     "fill": "#8A939A"
+     "fill": "#8A939A",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -452,7 +482,8 @@
      "y": 1,
      "w": 1.2,
      "d": 98,
-     "fill": "#8A939A"
+     "fill": "#8A939A",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -460,7 +491,8 @@
      "y": 1,
      "w": 1.2,
      "d": 98,
-     "fill": "#8A939A"
+     "fill": "#8A939A",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -468,7 +500,8 @@
      "y": 1,
      "w": 1.2,
      "d": 98,
-     "fill": "#8A939A"
+     "fill": "#8A939A",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -476,7 +509,8 @@
      "y": 1,
      "w": 1.2,
      "d": 98,
-     "fill": "#8A939A"
+     "fill": "#8A939A",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -484,7 +518,8 @@
      "y": 1,
      "w": 1.2,
      "d": 98,
-     "fill": "#8A939A"
+     "fill": "#8A939A",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -492,7 +527,8 @@
      "y": 1,
      "w": 1.2,
      "d": 98,
-     "fill": "#8A939A"
+     "fill": "#8A939A",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -500,7 +536,8 @@
      "y": 1,
      "w": 1.2,
      "d": 98,
-     "fill": "#8A939A"
+     "fill": "#8A939A",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -508,7 +545,8 @@
      "y": 1,
      "w": 1.2,
      "d": 98,
-     "fill": "#8A939A"
+     "fill": "#8A939A",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -516,7 +554,8 @@
      "y": 1,
      "w": 1.2,
      "d": 98,
-     "fill": "#8A939A"
+     "fill": "#8A939A",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -524,7 +563,8 @@
      "y": 1,
      "w": 1.2,
      "d": 98,
-     "fill": "#8A939A"
+     "fill": "#8A939A",
+     "zeichnung": true
     }
    ]
   },

@@ -31,7 +31,7 @@ teile = [
          info='Dünnes Holzplättchen mitten im Borstenpaket. Es spreizt die Borsten und macht den Pinsel dicker.',
          color='#C9A27A'),
     teil('klebepfropfen', 'synthetic_bristles', 'Klebepfropfen (Epoxid)', 'Klebepfropfen', 'box',
-         material_id='polyester', x=2, y=156, w=41, d=24, z=1.5, h=12, r=3, explode=[0, 48, 0], mass=4,
+         material_id='polyester', x=2, y=156, w=41, d=24, z=1.5, h=12, r=3, explode=[0, 48, 0], mass=4, form='liegend_y',
          materials=[['klebstoff', 60], ['polyester', 40]],
          info='Harter Kleber hält die Borstenenden in der Zwinge fest. Er lässt sich nicht von den Borsten lösen.',
          color='#8F7A52', marks=[mark('box', 1, 2, 39, 20, 2, '#A68E62')]),

@@ -207,7 +207,7 @@
     ]
    ],
    "info": "Doppelt gelegter Denim mit Einlage. Die Gürtelschlaufen sind mehrfach übernäht.",
-   "color": "#3C5A82",
+   "color": "#2B4569",
    "marks": [
     {
      "shape": "box",
@@ -225,7 +225,7 @@
      "w": 10,
      "d": 42,
      "r": 1,
-     "fill": "#2E4766"
+     "fill": "#21365A"
     },
     {
      "shape": "box",
@@ -234,7 +234,7 @@
      "w": 10,
      "d": 42,
      "r": 1,
-     "fill": "#2E4766"
+     "fill": "#21365A"
     },
     {
      "shape": "box",
@@ -243,7 +243,7 @@
      "w": 10,
      "d": 42,
      "r": 1,
-     "fill": "#2E4766"
+     "fill": "#21365A"
     },
     {
      "shape": "box",
@@ -252,7 +252,7 @@
      "w": 10,
      "d": 42,
      "r": 1,
-     "fill": "#2E4766"
+     "fill": "#21365A"
     },
     {
      "shape": "box",
@@ -261,7 +261,7 @@
      "w": 6,
      "d": 26,
      "r": 1,
-     "fill": "#2E4766"
+     "fill": "#21365A"
     }
    ]
   },
@@ -353,7 +353,7 @@
     ]
    ],
    "info": "Baumwoll-Denim, das Vorderteil beider Hosenbeine. Tragbare Jeans in die Altkleidersammlung, kaputte zum Textilrecycling: Dort werden sie zu Fasern für Dämmstoff gerissen.",
-   "color": "#3C5A82",
+   "color": "#2B4569",
    "marks": [
     {
      "shape": "box",
@@ -389,7 +389,7 @@
      "w": 2,
      "d": 182,
      "r": 0,
-     "fill": "#2E4766"
+     "fill": "#21365A"
     },
     {
      "shape": "box",
@@ -398,7 +398,7 @@
      "w": 40,
      "d": 36,
      "r": 3,
-     "fill": "#2E4766"
+     "fill": "#21365A"
     }
    ]
   },
@@ -433,7 +433,7 @@
     ]
    ],
    "info": "Baumwoll-Denim, das Vorderteil beider Hosenbeine. Tragbare Jeans in die Altkleidersammlung, kaputte zum Textilrecycling: Dort werden sie zu Fasern für Dämmstoff gerissen.",
-   "color": "#3C5A82",
+   "color": "#2B4569",
    "label": false
   },
   {
@@ -467,7 +467,7 @@
     ]
    ],
    "info": "Baumwoll-Denim, das Vorderteil beider Hosenbeine. Tragbare Jeans in die Altkleidersammlung, kaputte zum Textilrecycling: Dort werden sie zu Fasern für Dämmstoff gerissen.",
-   "color": "#3C5A82",
+   "color": "#2B4569",
    "label": false
   },
   {
@@ -626,7 +626,7 @@
     ]
    ],
    "info": "Hinterer Stoff beider Beine mit aufgenähten Gesäßtaschen. Oft ist hinten am Bund ein Patch aus Leder oder Kunstleder, der ebenfalls abgeschnitten wird.",
-   "color": "#3C5A82",
+   "color": "#2B4569",
    "marks": [
     {
      "shape": "box",
@@ -670,13 +670,14 @@
     ]
    ],
    "info": "Der untere Teil des Hosenbeins, unter die Hose geschlagen. Hier liegen vier Lagen Stoff übereinander.",
-   "color": "#2E4766",
+   "color": "#21365A",
    "marks": [
     {
      "shape": "box",
      "x": 0,
      "y": 268,
      "w": 164,
+     "zeichnung": true,
      "d": 3,
      "r": 0,
      "fill": "#C98A3D"
@@ -714,7 +715,7 @@
     ]
    ],
    "info": "Gegenstück zum linken Unterschenkel.",
-   "color": "#2E4766",
+   "color": "#21365A",
    "label": false,
    "marks": [
     {
@@ -722,6 +723,7 @@
      "x": 0,
      "y": 268,
      "w": 164,
+     "zeichnung": true,
      "d": 3,
      "r": 0,
      "fill": "#C98A3D"

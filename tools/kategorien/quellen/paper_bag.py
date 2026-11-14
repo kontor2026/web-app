@@ -10,8 +10,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from bau import teil, mark, skaliere_masse, schreibe  # noqa: E402
 
-KRAFT = '#C49A6C'
-DUNKEL = '#A9814F'
+KRAFT = '#B8946A'
+DUNKEL = '#A8865F'
 WAND = [['papier', 97], ['druck', 2], ['klebstoff', 1]]
 GRIFF = [['papier', 96], ['klebstoff', 4]]
 H = 270  # Korpushöhe, darüber die Griffe bis 320 mm

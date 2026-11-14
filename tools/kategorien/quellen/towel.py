@@ -8,11 +8,11 @@ from bau import teil, mark, raster, skaliere_masse, schreibe  # noqa: E402
 # Frottee-Handtuch (50 × 100 cm) gefaltet zu 300 × 250 × 40 mm, Aufhänger hinten (y = 0).
 # Explodiert schieben sich die vier Faltlagen treppenartig nach hinten oben, der Aufhänger schwebt über der
 # obersten Lage, das Etikett wird nach rechts gezogen.
-FROTTEE = '#C2554A'
-BORTE = '#A8443B'
+FROTTEE = '#A8433B'
+BORTE = '#8C3129'
 BW = [['baumwolle', 100]]
 SCHLINGEN = [dict(m, zeichnung=True) for m in raster(15, 15, 14, 11, 4, 4, 20, 20, shape='cyl', fill='#B34C42')]  # Foto: Stoffstruktur
-KANTEN = [mark('box', 0, 0, 5, 250, 0, BORTE), mark('box', 295, 0, 5, 250, 0, BORTE)]  # umgenähte Webkanten
+KANTEN = [mark('box', 0, 0, 5, 250, 0, BORTE, zeichnung=True), mark('box', 295, 0, 5, 250, 0, BORTE, zeichnung=True)]  # umgenähte Webkanten
 
 teile = [
     teil('aufhaenger', 'cotton_fabric', 'Aufhänger', 'Aufhänger', 'box',
@@ -26,7 +26,7 @@ teile = [
     teil('lage_1', 'cotton_fabric', 'Oberste Faltlage mit Bordüre', 'Oberste Lage', 'box',
          x=0, y=0, w=300, d=250, z=30, h=10, r=8, mass=110, materials=BW, color=FROTTEE,
          info='Frottee: Auf einem Grundgewebe stehen tausende kleine Baumwollschlingen, die viel Wasser aufsaugen.',
-         explode=[0, -210, 165], marks=SCHLINGEN + KANTEN + [mark('box', 0, 200, 300, 22, 0, BORTE), mark('box', 0, 206, 300, 2, 0, '#E0B04A'), mark('box', 0, 214, 300, 2, 0, '#E0B04A')]),
+         explode=[0, -210, 165], marks=SCHLINGEN + KANTEN + [mark('box', 6, 200, 288, 22, 0, BORTE), mark('box', 6, 206, 288, 2, 0, '#E0B04A'), mark('box', 6, 214, 288, 2, 0, '#E0B04A')]),
     teil('lage_2', 'cotton_fabric', 'Faltlage 2', 'Faltlage', 'box',
          x=0, y=0, w=300, d=250, z=20, h=10, r=8, mass=110, materials=BW, color=FROTTEE,
          info='Gut erhaltene Handtücher in die Altkleidersammlung, alte als Putzlappen oder für das Tierheim.',
@@ -38,7 +38,7 @@ teile = [
     teil('lage_4', 'cotton_fabric', 'Unterste Faltlage mit Bordüre', 'Unterste Lage', 'box',
          x=0, y=0, w=300, d=250, z=0, h=10, r=8, mass=110, materials=BW, color=FROTTEE,
          info='Die glatt gewebte Bordüre und die umgenähten Kanten verhindern, dass sich Schlingen herausziehen.',
-         explode=[0, 0, 0], marks=SCHLINGEN + KANTEN + [mark('box', 0, 28, 300, 22, 0, BORTE), mark('box', 0, 34, 300, 2, 0, '#E0B04A'), mark('box', 0, 42, 300, 2, 0, '#E0B04A')]),
+         explode=[0, 0, 0], marks=SCHLINGEN + KANTEN + [mark('box', 6, 28, 288, 22, 0, BORTE), mark('box', 6, 34, 288, 2, 0, '#E0B04A'), mark('box', 6, 42, 288, 2, 0, '#E0B04A')]),
 ]
 
 skaliere_masse(teile, oid='towel')

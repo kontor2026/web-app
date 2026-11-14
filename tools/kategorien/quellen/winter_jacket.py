@@ -91,7 +91,7 @@ teile = [
                info='Gegenstück zur linken Vorderseite, mit Eingrifftasche.'),
           materials=SCHALE, color=HUELLE) + [
     teil('wattierung', 'polyester_fill', 'Wattierung', 'Wattierung', 'box',
-         x=85, y=35, w=230, d=460, z=30, h=32, r=10, mass=110, color=WATTE,
+         x=85, y=35, w=230, d=460, z=30, h=18, r=10, mass=110, color=WATTE,
          info='Polyester-Hohlfasern halten die warme Luft fest. Futter aufschneiden und die Watte als Füllmaterial '
               'für Kissen weiterverwenden.',
          marks=[mark('box', 0, y, 230, 3, 0, '#DCD8CE') for y in range(25, 450, 62)]),

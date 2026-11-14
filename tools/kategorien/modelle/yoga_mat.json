@@ -59,13 +59,16 @@
    ],
    "info": "Schlaufe mit Kunststoff-Schiebeschnalle, die die Rolle zusammenhält.",
    "color": "#3B4250",
+   "wand": 3,
+   "boden": 0,
    "marks": [
     {
      "shape": "cyl",
      "x": 3,
      "y": 3,
      "w": 150,
-     "fill": "#7A9E8E"
+     "zeichnung": true,
+     "fill": "#93B6A6"
     }
    ]
   },
@@ -79,14 +82,14 @@
    "x": 0,
    "y": 0,
    "w": 150,
-   "z": 0,
-   "h": 610,
+   "z": 482.5,
+   "h": 127.5,
    "explode": [
     0,
     0,
     0
    ],
-   "mass": 960,
+   "mass": 200.7,
    "materials": [
     [
      "schaum",
@@ -95,6 +98,234 @@
    ],
    "info": "Geschäumter Kunststoff (EVA oder TPE) mit rutschfester Struktur. Nicht recycelbar: lieber in Stücke schneiden und als Knieschoner oder Schubladeneinlage weiternutzen, sonst Restmüll.",
    "color": "#7A9E8E",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0.0,
+     "y": 0.0,
+     "w": 150,
+     "fill": "#93B6A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 6.0,
+     "y": 6.0,
+     "w": 138,
+     "fill": "#5F8273"
+    },
+    {
+     "shape": "cyl",
+     "x": 12.0,
+     "y": 12.0,
+     "w": 126,
+     "fill": "#93B6A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 18.0,
+     "y": 18.0,
+     "w": 114,
+     "fill": "#5F8273"
+    },
+    {
+     "shape": "cyl",
+     "x": 24.0,
+     "y": 24.0,
+     "w": 102,
+     "fill": "#93B6A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 30.0,
+     "y": 30.0,
+     "w": 90,
+     "fill": "#5F8273"
+    },
+    {
+     "shape": "cyl",
+     "x": 36.0,
+     "y": 36.0,
+     "w": 78,
+     "fill": "#93B6A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 42.0,
+     "y": 42.0,
+     "w": 66,
+     "fill": "#5F8273"
+    },
+    {
+     "shape": "cyl",
+     "x": 48.0,
+     "y": 48.0,
+     "w": 54,
+     "fill": "#93B6A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 54.0,
+     "y": 54.0,
+     "w": 42,
+     "fill": "#5F8273"
+    },
+    {
+     "shape": "cyl",
+     "x": 60.0,
+     "y": 60.0,
+     "w": 30,
+     "fill": "#93B6A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 66,
+     "y": 66,
+     "w": 18,
+     "fill": "#2E3530"
+    }
+   ]
+  },
+  {
+   "id": "matte_mitte",
+   "component_id": "foam_mat",
+   "material_id": "eva_foam",
+   "name": "Matte (Abschnitt)",
+   "short": "Matte",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 150,
+   "z": 122.5,
+   "h": 360,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 566.5,
+   "materials": [
+    [
+     "schaum",
+     100
+    ]
+   ],
+   "info": "Teil der aufgerollten Matte.",
+   "color": "#7A9E8E",
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 0.0,
+     "y": 0.0,
+     "w": 150,
+     "fill": "#93B6A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 6.0,
+     "y": 6.0,
+     "w": 138,
+     "fill": "#5F8273"
+    },
+    {
+     "shape": "cyl",
+     "x": 12.0,
+     "y": 12.0,
+     "w": 126,
+     "fill": "#93B6A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 18.0,
+     "y": 18.0,
+     "w": 114,
+     "fill": "#5F8273"
+    },
+    {
+     "shape": "cyl",
+     "x": 24.0,
+     "y": 24.0,
+     "w": 102,
+     "fill": "#93B6A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 30.0,
+     "y": 30.0,
+     "w": 90,
+     "fill": "#5F8273"
+    },
+    {
+     "shape": "cyl",
+     "x": 36.0,
+     "y": 36.0,
+     "w": 78,
+     "fill": "#93B6A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 42.0,
+     "y": 42.0,
+     "w": 66,
+     "fill": "#5F8273"
+    },
+    {
+     "shape": "cyl",
+     "x": 48.0,
+     "y": 48.0,
+     "w": 54,
+     "fill": "#93B6A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 54.0,
+     "y": 54.0,
+     "w": 42,
+     "fill": "#5F8273"
+    },
+    {
+     "shape": "cyl",
+     "x": 60.0,
+     "y": 60.0,
+     "w": 30,
+     "fill": "#93B6A6"
+    },
+    {
+     "shape": "cyl",
+     "x": 66,
+     "y": 66,
+     "w": 18,
+     "fill": "#2E3530"
+    }
+   ]
+  },
+  {
+   "id": "matte_unten",
+   "component_id": "foam_mat",
+   "material_id": "eva_foam",
+   "name": "Matte (Abschnitt)",
+   "short": "Matte",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 150,
+   "z": 0,
+   "h": 122.5,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 192.8,
+   "materials": [
+    [
+     "schaum",
+     100
+    ]
+   ],
+   "info": "Teil der aufgerollten Matte.",
+   "color": "#7A9E8E",
+   "label": false,
    "marks": [
     {
      "shape": "cyl",
@@ -213,13 +444,16 @@
    "info": "Zweite Schlaufe am anderen Ende der Rolle.",
    "color": "#3B4250",
    "label": false,
+   "wand": 3,
+   "boden": 0,
    "marks": [
     {
      "shape": "cyl",
      "x": 3,
      "y": 3,
      "w": 150,
-     "fill": "#7A9E8E"
+     "zeichnung": true,
+     "fill": "#93B6A6"
     }
    ]
   }

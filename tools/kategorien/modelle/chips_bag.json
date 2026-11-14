@@ -246,19 +246,19 @@
    "name": "Vorderseite (bedruckt)",
    "short": "Vorderseite",
    "shape": "box",
-   "x": 0,
-   "y": 15,
-   "w": 200,
-   "d": 250,
-   "z": 15,
-   "h": 15,
+   "x": 22,
+   "y": 37,
+   "w": 156,
+   "d": 206,
+   "z": 26.25,
+   "h": 3.75,
    "r": 20,
    "explode": [
     0,
     0,
     90.0
    ],
-   "mass": 3.3,
+   "mass": 0.8,
    "materials": [
     [
      "verbundfolie",
@@ -278,16 +278,16 @@
    "marks": [
     {
      "shape": "cyl",
-     "x": 30,
-     "y": 50,
+     "x": 8,
+     "y": 28,
      "w": 140,
      "d": 110,
      "fill": "#E3B23C"
     },
     {
      "shape": "box",
-     "x": 25,
-     "y": 175,
+     "x": 3,
+     "y": 153,
      "w": 150,
      "d": 26,
      "r": 6,
@@ -295,14 +295,128 @@
     },
     {
      "shape": "box",
-     "x": 60,
-     "y": 212,
+     "x": 38,
+     "y": 190,
      "w": 80,
      "d": 14,
      "r": 4,
      "fill": "#7A1B17"
     }
    ]
+  },
+  {
+   "id": "vorderseite_3",
+   "component_id": "multilayer_film",
+   "material_id": "multilayer_plastic",
+   "name": "Vorderseite (bedruckt)",
+   "short": "Vorderseite",
+   "shape": "box",
+   "x": 10,
+   "y": 25,
+   "w": 180,
+   "d": 230,
+   "z": 22.5,
+   "h": 3.75,
+   "r": 20,
+   "explode": [
+    0,
+    0,
+    90.0
+   ],
+   "mass": 0.8,
+   "materials": [
+    [
+     "verbundfolie",
+     97
+    ],
+    [
+     "druck",
+     2
+    ],
+    [
+     "alu",
+     1
+    ]
+   ],
+   "info": "Mehrschichtfolie aus Polypropylen, innen hauchdünn mit Aluminium bedampft. Die Schichten lassen sich nicht trennen. Tüte ausschütteln und in die Gelbe Tonne geben.",
+   "color": "#D8342C",
+   "label": false
+  },
+  {
+   "id": "vorderseite_2",
+   "component_id": "multilayer_film",
+   "material_id": "multilayer_plastic",
+   "name": "Vorderseite (bedruckt)",
+   "short": "Vorderseite",
+   "shape": "box",
+   "x": 4,
+   "y": 19,
+   "w": 192,
+   "d": 242,
+   "z": 18.75,
+   "h": 3.75,
+   "r": 20,
+   "explode": [
+    0,
+    0,
+    90.0
+   ],
+   "mass": 0.8,
+   "materials": [
+    [
+     "verbundfolie",
+     97
+    ],
+    [
+     "druck",
+     2
+    ],
+    [
+     "alu",
+     1
+    ]
+   ],
+   "info": "Mehrschichtfolie aus Polypropylen, innen hauchdünn mit Aluminium bedampft. Die Schichten lassen sich nicht trennen. Tüte ausschütteln und in die Gelbe Tonne geben.",
+   "color": "#D8342C",
+   "label": false
+  },
+  {
+   "id": "vorderseite_1",
+   "component_id": "multilayer_film",
+   "material_id": "multilayer_plastic",
+   "name": "Vorderseite (bedruckt)",
+   "short": "Vorderseite",
+   "shape": "box",
+   "x": 0,
+   "y": 15,
+   "w": 200,
+   "d": 250,
+   "z": 15,
+   "h": 3.75,
+   "r": 20,
+   "explode": [
+    0,
+    0,
+    90.0
+   ],
+   "mass": 0.8,
+   "materials": [
+    [
+     "verbundfolie",
+     97
+    ],
+    [
+     "druck",
+     2
+    ],
+    [
+     "alu",
+     1
+    ]
+   ],
+   "info": "Mehrschichtfolie aus Polypropylen, innen hauchdünn mit Aluminium bedampft. Die Schichten lassen sich nicht trennen. Tüte ausschütteln und in die Gelbe Tonne geben.",
+   "color": "#D8342C",
+   "label": false
   },
   {
    "id": "bodennaht",
@@ -554,15 +668,15 @@
    "y": 15,
    "w": 200,
    "d": 250,
-   "z": 1,
-   "h": 14,
+   "z": 11.5,
+   "h": 3.5,
    "r": 20,
    "explode": [
     0,
     0,
     0.0
    ],
-   "mass": 2.8,
+   "mass": 0.7,
    "materials": [
     [
      "verbundfolie",
@@ -599,6 +713,120 @@
      "fill": "#8E969A"
     }
    ]
+  },
+  {
+   "id": "rueckseite_3",
+   "component_id": "multilayer_film",
+   "material_id": "multilayer_plastic",
+   "name": "Rückseite (innen silbern)",
+   "short": "Rückseite",
+   "shape": "box",
+   "x": 2,
+   "y": 17,
+   "w": 196,
+   "d": 246,
+   "z": 8,
+   "h": 3.5,
+   "r": 20,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 0.7,
+   "materials": [
+    [
+     "verbundfolie",
+     97
+    ],
+    [
+     "druck",
+     2
+    ],
+    [
+     "alu",
+     1
+    ]
+   ],
+   "info": "Die silberne Innenseite ist eine Aluminiumschicht von etwa 0,00004 mm. Sie hält Licht und Sauerstoff ab, damit die Chips nicht ranzig werden.",
+   "color": "#C9CDD0",
+   "label": false
+  },
+  {
+   "id": "rueckseite_2",
+   "component_id": "multilayer_film",
+   "material_id": "multilayer_plastic",
+   "name": "Rückseite (innen silbern)",
+   "short": "Rückseite",
+   "shape": "box",
+   "x": 6,
+   "y": 21,
+   "w": 188,
+   "d": 238,
+   "z": 4.5,
+   "h": 3.5,
+   "r": 20,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 0.7,
+   "materials": [
+    [
+     "verbundfolie",
+     97
+    ],
+    [
+     "druck",
+     2
+    ],
+    [
+     "alu",
+     1
+    ]
+   ],
+   "info": "Die silberne Innenseite ist eine Aluminiumschicht von etwa 0,00004 mm. Sie hält Licht und Sauerstoff ab, damit die Chips nicht ranzig werden.",
+   "color": "#C9CDD0",
+   "label": false
+  },
+  {
+   "id": "rueckseite_1",
+   "component_id": "multilayer_film",
+   "material_id": "multilayer_plastic",
+   "name": "Rückseite (innen silbern)",
+   "short": "Rückseite",
+   "shape": "box",
+   "x": 16,
+   "y": 31,
+   "w": 168,
+   "d": 218,
+   "z": 1,
+   "h": 3.5,
+   "r": 20,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 0.7,
+   "materials": [
+    [
+     "verbundfolie",
+     97
+    ],
+    [
+     "druck",
+     2
+    ],
+    [
+     "alu",
+     1
+    ]
+   ],
+   "info": "Die silberne Innenseite ist eine Aluminiumschicht von etwa 0,00004 mm. Sie hält Licht und Sauerstoff ab, damit die Chips nicht ranzig werden.",
+   "color": "#C9CDD0",
+   "label": false
   },
   {
    "id": "laengsnaht",

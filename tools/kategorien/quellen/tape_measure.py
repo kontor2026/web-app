@@ -16,7 +16,7 @@ BAND = '#F4D24A'
 
 teile = [
     teil('schraube', 'plastic_housing', 'Gehäuseschraube', 'Schraube', 'cyl',
-         material_id='steel', x=28, y=29, w=5, z=28, h=2, mass=0.6, materials=[['stahl', 100]],
+         material_id='steel', x=28, y=29, w=5, z=27.5, h=2, mass=0.6, materials=[['stahl', 100]],
          info='Hält beide Gehäusehälften zusammen. Vorsicht: Beim Öffnen kann die Feder herausspringen.',
          color='#9AA2A6', marks=[mark('box', 0.5, 2, 4, 1, fill='#5A6268')]),
     teil('deckel', 'plastic_housing', 'Gehäusehälfte oben', 'Gehäuse oben', 'box',

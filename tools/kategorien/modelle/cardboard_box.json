@@ -17,7 +17,7 @@
    "explode": [
     0,
     0,
-    270.1
+    400
    ],
    "mass": 1.7,
    "materials": [
@@ -88,7 +88,7 @@
    "explode": [
     0,
     0,
-    225.0
+    370
    ],
    "mass": 2.8,
    "materials": [
@@ -104,6 +104,42 @@
    "info": "PP-Folie mit Klebstoff, verschließt die Mittelfuge der Deckelklappen. Vor dem Flachfalten abziehen und in die Gelbe Tonne oder den Restmüll geben.",
    "color": "#C8A15A",
    "opacity": 0.85
+  },
+  {
+   "id": "band_seite_oben",
+   "component_id": "packing_tape",
+   "material_id": "pp",
+   "name": "Klebeband, Seitenende oben",
+   "short": "Band",
+   "shape": "box",
+   "x": 400,
+   "y": 125,
+   "w": 0.2,
+   "d": 50,
+   "z": 190,
+   "h": 60.2,
+   "r": 0,
+   "explode": [
+    0,
+    0,
+    370
+   ],
+   "mass": 0.7,
+   "materials": [
+    [
+     "pp",
+     75
+    ],
+    [
+     "klebstoff",
+     25
+    ]
+   ],
+   "info": "Das Band läuft an den Seiten etwa 6 cm herunter, damit es sich nicht von der Fuge löst.",
+   "color": "#C8A15A",
+   "opacity": 0.9,
+   "label": false,
+   "sortBias": 12
   },
   {
    "id": "klappe_hinten",
@@ -122,9 +158,9 @@
    "explode": [
     0,
     0,
-    180.0
+    230
    ],
-   "mass": 53.5,
+   "mass": 53.4,
    "materials": [
     [
      "papier",
@@ -132,7 +168,18 @@
     ]
    ],
    "info": "Lange Außenklappe, an der Rückwand angeknickt. Die beiden Außenklappen treffen sich in der Mitte.",
-   "color": "#C49A6C"
+   "color": "#B8946A",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 0,
+     "w": 400,
+     "d": 2,
+     "r": 0,
+     "fill": "#9E7A52"
+    }
+   ]
   },
   {
    "id": "klappe_vorne",
@@ -151,9 +198,9 @@
    "explode": [
     0,
     0,
-    180.0
+    230
    ],
-   "mass": 53.5,
+   "mass": 53.4,
    "materials": [
     [
      "papier",
@@ -161,7 +208,7 @@
     ]
    ],
    "info": "Zweite Außenklappe. Darauf kleben Band und Etikett.",
-   "color": "#C49A6C",
+   "color": "#B8946A",
    "marks": [
     {
      "shape": "box",
@@ -179,30 +226,57 @@
      "w": 60,
      "d": 24,
      "r": 1,
-     "fill": "#C49A6C"
+     "fill": "#B8946A"
+    },
+    {
+     "shape": "box",
+     "x": 300,
+     "y": 95,
+     "w": 22,
+     "d": 30,
+     "r": 2,
+     "fill": "#3A3F44"
+    },
+    {
+     "shape": "box",
+     "x": 305,
+     "y": 100,
+     "w": 12,
+     "d": 14,
+     "r": 6,
+     "fill": "#B8946A"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 148,
+     "w": 400,
+     "d": 2,
+     "r": 0,
+     "fill": "#9E7A52"
     }
    ]
   },
   {
-   "id": "innenklappen",
+   "id": "innenklappe_links",
    "component_id": "cardboard_box_body",
    "material_id": "cardboard",
-   "name": "Innenklappen links und rechts",
+   "name": "Innenklappe links",
    "short": "Innenklappen",
    "shape": "box",
    "x": 4,
    "y": 4,
-   "w": 392,
+   "w": 150,
    "d": 292,
    "z": 242.1,
    "h": 4,
    "r": 0,
    "explode": [
+    -200,
     0,
-    0,
-    135.0
+    110
    ],
-   "mass": 55.7,
+   "mass": 27.8,
    "materials": [
     [
      "papier",
@@ -216,19 +290,51 @@
      "shape": "box",
      "x": 0,
      "y": 0,
-     "w": 150,
+     "w": 2,
      "d": 292,
      "r": 0,
-     "fill": "#C49A6C"
-    },
+     "fill": "#8E6B45"
+    }
+   ]
+  },
+  {
+   "id": "innenklappe_rechts",
+   "component_id": "cardboard_box_body",
+   "material_id": "cardboard",
+   "name": "Innenklappe rechts",
+   "short": "Innenklappe",
+   "shape": "box",
+   "x": 246,
+   "y": 4,
+   "w": 150,
+   "d": 292,
+   "z": 242.1,
+   "h": 4,
+   "r": 0,
+   "explode": [
+    200,
+    0,
+    110
+   ],
+   "mass": 27.8,
+   "materials": [
+    [
+     "papier",
+     100
+    ]
+   ],
+   "info": "Gegenstück zur linken Innenklappe.",
+   "color": "#B98D5F",
+   "label": false,
+   "marks": [
     {
      "shape": "box",
-     "x": 242,
+     "x": 148,
      "y": 0,
-     "w": 150,
+     "w": 2,
      "d": 292,
      "r": 0,
-     "fill": "#C49A6C"
+     "fill": "#8E6B45"
     }
    ]
   },
@@ -249,9 +355,9 @@
    "explode": [
     0,
     0,
-    90.0
+    60
    ],
-   "mass": 211.7,
+   "mass": 211.2,
    "materials": [
     [
      "papier",
@@ -263,7 +369,7 @@
     ]
    ],
    "info": "Ein Zuschnitt aus Wellpappe, an einer Ecke zum Ring verklebt. Zwischen zwei glatten Lagen steckt eine gewellte, das macht den Karton leicht und stabil. Flach gefaltet ins Altpapier.",
-   "color": "#C49A6C",
+   "color": "#B8946A",
    "marks": [
     {
      "shape": "box",
@@ -302,9 +408,9 @@
    "explode": [
     0,
     0,
-    45.0
+    0
    ],
-   "mass": 218.4,
+   "mass": 217.9,
    "materials": [
     [
      "papier",
@@ -312,7 +418,7 @@
     ]
    ],
    "info": "Unten liegen genauso zwei Innen- und zwei Außenklappen übereinander. Nach dem Aufschneiden des Bandes lässt sich der Karton flach falten.",
-   "color": "#C49A6C",
+   "color": "#B8946A",
    "marks": [
     {
      "shape": "box",
@@ -324,6 +430,42 @@
      "fill": "#8E6B45"
     }
    ]
+  },
+  {
+   "id": "band_seite_unten",
+   "component_id": "packing_tape",
+   "material_id": "pp",
+   "name": "Klebeband, Seitenende unten",
+   "short": "Band",
+   "shape": "box",
+   "x": 400,
+   "y": 125,
+   "w": 0.2,
+   "d": 50,
+   "z": 0,
+   "h": 60,
+   "r": 0,
+   "explode": [
+    0,
+    0,
+    -45
+   ],
+   "mass": 0.7,
+   "materials": [
+    [
+     "pp",
+     75
+    ],
+    [
+     "klebstoff",
+     25
+    ]
+   ],
+   "info": "Unteres Bandende an der Seitenwand.",
+   "color": "#C8A15A",
+   "opacity": 0.9,
+   "label": false,
+   "sortBias": 200
   },
   {
    "id": "klebeband_unten",
@@ -342,7 +484,7 @@
    "explode": [
     0,
     0,
-    0.0
+    -45
    ],
    "mass": 2.8,
    "materials": [

@@ -19,7 +19,7 @@ def lochung(fill):
 
 teile = [
     teil('deckel', 'cardboard_cover', 'Deckblatt (Karton)', 'Deckblatt', 'box',
-         x=6, y=0, w=204, d=297, z=8.1, h=0.4, r=2, mass=19, materials=[['papier', 95], ['druck', 5]],
+         x=6, y=0, w=204, d=297, z=8.1, h=1.2, r=2, mass=19, materials=[['papier', 95], ['druck', 5]],
          info='Bedruckter Karton als Schutzumschlag. Ins Altpapier, wenn er nicht mit Folie beschichtet ist.',
          color='#3E8E7E', marks=[mark('box', 40, 60, 130, 40, 3, '#F3F1EC'), mark('box', 50, 72, 90, 3, 0, '#9AA3A8'),
                                          mark('box', 50, 84, 70, 3, 0, '#9AA3A8'), mark('box', 40, 250, 130, 14, 3, '#2F7062')]

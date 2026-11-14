@@ -32,25 +32,25 @@ def schichten(pid, comp, name, short, z0, lagen, mass, info, marks=None, **kw):
 
 
 vorderblatt = schichten('vorderblatt', 'leather_upper', 'Vorderblatt mit Kappe', 'Vorderblatt', 10, [
-    (4, 96, 102, 192, 12, 48),
-    (4, 2, 102, 286, 10, 46),
-    (5, 3, 100, 282, 10, 46),
-    (7, 4, 96, 268, 10, 44),
-    (10, 5, 90, 240, 10, 42),
-    (12, 5, 86, 200, 10, 40),
+    (4, 96, 102, 192, 12, 36),
+    (4, 2, 102, 286, 10, 34),
+    (5, 3, 100, 282, 10, 33),
+    (7, 4, 96, 268, 10, 32),
+    (10, 5, 90, 240, 10, 30),
+    (12, 5, 86, 200, 10, 29),
 ], 95,
     'Ein Stück Glattleder über Zehen und Rist. Der Schaft ist über einen Leisten gezogen und unter die '
     'Brandsohle geklebt: zum Trennen rundherum an der Sohlenkante aufschneiden.',
     materials=[['leder', 100]], color=LEDER, wand=2.5, boden=12)
 quartiere = schichten('fersenteil', 'leather_upper', 'Quartiere mit Schnürleiste', 'Quartiere', 72, [
-    (14, 4, 82, 150, 10, 38),
-    (15, 3, 80, 112, 10, 38),
-    (16, 2, 78, 98, 12, 38),
+    (14, 4, 82, 150, 10, 28),
+    (15, 3, 80, 112, 10, 28),
+    (16, 2, 78, 98, 12, 28),
 ], 85,
     'Die beiden seitlichen Lederteile mit den Ösen für die Schnürsenkel, hinten an der Ferse zusammengenäht. '
     'Tragbare Schuhe paarweise in den Schuhcontainer.',
     materials=[['leder', 100]], color=LEDER, wand=2.5,
-    marks=[mark('box', 0, 0, 78, 98, 38, HELL, zeichnung=True)])
+    marks=[mark('box', 0, 0, 78, 98, 28, HELL, zeichnung=True)])
 
 REIHEN = [(108, 95), (120, 90), (132, 86), (144, 82), (156, 78)]
 senkel = [teil(f'senkel_{i}', 'shoelaces', 'Schnürsenkel', 'Schnürsenkel', 'box', form='liegend_x',
@@ -70,18 +70,18 @@ teile = senkel + oesen + [
          info='Weiche Lederlasche unter der Schnürung, am Vorderblatt angenäht.'),
 ] + quartiere + vorderblatt + [
     teil('futter', 'leather_upper', 'Innenfutter', 'Futter', 'box',
-         x=19, y=5, w=72, d=92, z=26, h=77, r=34, wand=1.5, boden=0, sortBias=-40, mass=40, materials=[['leder', 100]], color=HELL,
+         x=25, y=11, w=60, d=82, z=26, h=77, r=30, wand=1.5, boden=0, sortBias=-40, mass=40, materials=[['leder', 100]], color=HELL,
          info='Dünnes, ungefärbtes Leder innen im Schaft. Es nimmt Fußschweiß auf.'),
     teil('hinterkappe', 'leather_upper', 'Hinterkappe', 'Hinterkappe', 'box',
-         material_id='polyurethane', x=15, y=6, w=80, d=40, z=26, h=46, r=32, sortBias=-40, mass=15, materials=[['tpu', 100]],
+         material_id='polyurethane', x=24, y=14, w=62, d=30, z=28, h=38, r=30, sortBias=-40, mass=15, materials=[['tpu', 100]],
          color='#B8BCC0', explode=[-130, 0, 0],
          info='Versteifung aus Kunststoff zwischen Oberleder und Futter. Sie hält die Ferse in Form.'),
     teil('decksohle', 'leather_upper', 'Decksohle', 'Decksohle', 'box',
-         x=12, y=6, w=86, d=276, z=25, h=2, r=40, mass=15, materials=[['leder', 100]], color=HELL,
+         x=18, y=16, w=74, d=256, z=25, h=2, r=34, mass=15, materials=[['leder', 100]], color=HELL,
          info='Dünne Lederschicht, auf der der Fuß steht. Meist eingeklebt.',
          marks=[mark('box', 20, 20, 46, 30, 8, '#A07650')]),
     teil('brandsohle', 'leather_upper', 'Brandsohle mit Gelenkfeder', 'Brandsohle', 'box',
-         material_id='cardboard', x=8, y=4, w=94, d=282, z=22, h=3, r=42, mass=35,
+         material_id='cardboard', x=18, y=16, w=74, d=256, z=22, h=3, r=34, mass=35,
          materials=[['papier', 60], ['leder', 25], ['stahl', 15]], color='#C9B79C',
          info='Feste Innensohle aus Lederfaserpappe. Ein Stahlstreifen (Gelenkfeder) stützt den Fußbogen.',
          marks=[mark('box', 42, 60, 10, 90, 2, '#8E969A')]),

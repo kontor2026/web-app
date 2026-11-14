@@ -20,7 +20,7 @@ VERST_GARN = [['baumwolle', 70], ['nylon', 30]]
 def rippen(w, d, fill=RIPPE, abstand=6):
     """Feine Maschenrippen in Längsrichtung (y)."""
     n = int((w - 4) // abstand)
-    return raster(3, 1, n, 1, 1.2, d - 2, abstand, fill=fill)
+    return [dict(m, zeichnung=True) for m in raster(3, 1, n, 1, 1.2, d - 2, abstand, fill=fill)]  # Foto: Strickstruktur
 
 
 teile = [
@@ -29,16 +29,16 @@ teile = [
          explode=[0, -55, 22],
          info='Im Bündchen läuft ein umsponnener Elasthanfaden rundherum mit. Er hält die Socke am Bein und '
               'lässt sich nicht heraustrennen.',
-         marks=raster(0, 3, 1, 6, 64, 1.5, 0, 5, fill='#B9B2A2')),
+         marks=[dict(m, zeichnung=True) for m in raster(0, 3, 1, 6, 64, 1.5, 0, 5, fill='#B9B2A2')]),
     teil('bund', 'cotton_fabric', 'Rippenbündchen', 'Bündchen', 'box',
          x=0, y=0, w=72, d=40, z=0, h=5, r=3, mass=6, materials=GARN, color=STOFF, explode=[0, -55, 0],
          info='Doppelt gestrickter Rand im Rippenmuster. Rippen und Gummifaden machen ihn dehnbar.',
-         marks=raster(2, 1, 12, 1, 3, 38, 6, fill=RIPPE)),
+         marks=[dict(m, zeichnung=True) for m in raster(2, 1, 12, 1, 3, 38, 6, fill=RIPPE)]),
     teil('schaft', 'cotton_fabric', 'Schaft mit Ringeln', 'Schaft', 'box',
          x=0, y=40, w=72, d=80, z=0, h=5, r=2, mass=9, materials=GARN, color=STOFF, explode=[0, -22, 0],
          info='Rundgestrickter Schlauch aus Baumwolle mit etwas Polyamid, die Ringel sind mit eingestrickt. '
               'Tragbare Socken paarweise in die Altkleidersammlung.',
-         marks=rippen(72, 80) + [mark('box', 0, 8, 72, 5, 0, STREIFEN), mark('box', 0, 17, 72, 5, 0, STREIFEN)]),
+         marks=rippen(72, 80) + [mark('box', 3, 8, 66, 5, 0, STREIFEN), mark('box', 3, 17, 66, 5, 0, STREIFEN)]),
     teil('ferse', 'cotton_fabric', 'Verstärkte Ferse', 'Ferse', 'cyl',
          x=38, y=102, w=52, d=68, z=0, h=5, mass=5, materials=VERST_GARN, color=VERST, explode=[75, 0, 0],
          info='Die Ferse ist als Käppchen eingestrickt und mit mehr Polyamid verstärkt, weil sie am stärksten reibt.',

@@ -32,20 +32,20 @@ def schichten(pid, comp, name, short, z0, lagen, mass, info, marks=None, **kw):
 SCHAFT = [['polyester', 80], ['tpu', 15], ['schaum', 5]]
 # Vorderschaft: Zehenkappe und Rist, nach oben kürzer (die Spitze fällt ab)
 vorfuss = schichten('vorfuss', 'textile_upper', 'Obermaterial Vorfuß', 'Obermaterial', 32, [
-    (5, 3, 100, 285, 10, 46),
-    (6, 4, 98, 280, 10, 45),
-    (8, 6, 94, 266, 10, 44),
-    (10, 8, 90, 240, 10, 42),
-    (12, 8, 86, 206, 10, 40),
+    (5, 3, 100, 285, 10, 36),
+    (6, 4, 98, 280, 10, 35),
+    (8, 6, 94, 266, 10, 34),
+    (10, 8, 90, 240, 10, 32),
+    (12, 8, 86, 206, 10, 31),
 ], 62,
     'Atmungsaktives Polyester-Netzgewebe mit aufgeschweißten Kunststoff-Verstärkungen. Mit dem Messer entlang der '
     'Sohlennaht abtrennen.', materials=SCHAFT, color=OBER, wand=3)
 # Fersenteil: um den Knöchel, oben offen (Einstieg)
 ferse = schichten('ferse', 'textile_upper', 'Fersenteil mit Kragen', 'Fersenteil', 82, [
-    (13, 6, 84, 170, 10, 40),
-    (14, 5, 82, 130, 10, 40),
-    (15, 4, 80, 106, 12, 38),
-    (16, 3, 78, 96, 12, 38),
+    (13, 6, 84, 170, 10, 30),
+    (14, 5, 82, 130, 10, 30),
+    (15, 4, 80, 106, 12, 30),
+    (16, 3, 78, 96, 12, 30),
 ], 50,
     'Gepolsterter Schaft rund um Knöchel und Ferse. Mit dem Vorderschaft vernäht und an die Sohle geklebt.',
     materials=[['polyester', 65], ['schaum', 25], ['tpu', 10]], color=OBER, wand=3,
@@ -79,11 +79,11 @@ teile = senkel + oesen + [
          info='Schaumgepolsterter Rand um den Einstieg, innen mit Futterstoff bezogen.'),
 ] + ferse + vorfuss + [
     teil('fersenkappe', 'textile_upper', 'Fersenkappe', 'Fersenkappe', 'box',
-         material_id='polyurethane', x=20, y=15, w=70, d=34, z=38, h=40, r=34, sortBias=-40, mass=14, materials=[['tpu', 100]],
+         material_id='polyurethane', x=24, y=16, w=62, d=30, z=38, h=36, r=30, sortBias=-40, mass=14, materials=[['tpu', 100]],
          color='#B8BCC0', explode=[-130, 0, 0],
          info='Feste Kunststoffschale zwischen Futter und Obermaterial. Sie hält die Ferse im Schuh stabil.'),
     teil('einlegesohle', 'foam_midsole', 'Einlegesohle', 'Einlegesohle', 'box',
-         material_id='pu_foam', x=12, y=8, w=86, d=272, z=35, h=4, r=40, mass=22,
+         material_id='pu_foam', x=16, y=14, w=78, d=262, z=35, h=4, r=36, mass=22,
          materials=[['schaum', 85], ['polyester', 15]], color='#5E656A',
          info='Weicher Schaumstoff mit Stoffbezug. Lose eingelegt: einfach herausziehen.',
          marks=[mark('box', 10, 4, 66, 60, 30, '#6E7579')]),

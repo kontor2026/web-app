@@ -172,6 +172,7 @@
    ],
    "info": "Harter Kleber hält die Borstenenden in der Zwinge fest. Er lässt sich nicht von den Borsten lösen.",
    "color": "#8F7A52",
+   "form": "liegend_y",
    "marks": [
     {
      "shape": "box",
@@ -180,7 +181,8 @@
      "w": 39,
      "d": 20,
      "r": 2,
-     "fill": "#A68E62"
+     "fill": "#A68E62",
+     "zeichnung": true
     }
    ]
   },

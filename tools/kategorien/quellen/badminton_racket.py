@@ -34,7 +34,7 @@ def saitenbild(ox, oy, fill):
 
 teile = [
     teil('saiten', 'nylon_strings', 'Bespannung', 'Saiten', 'cyl',
-         x=15, y=12, w=SW, d=SD, z=17, h=1, mass=5, color=SAITE, opacity=0.5, sortBias=6,
+         x=15, y=12, w=SW, d=SD, z=17, h=1, mass=5, color=SAITE, opacity=0.2, sortBias=6,
          info='Etwa 10 m Nylonsaite, mit rund 9 kg je Saite gespannt. Vor dem Entsorgen quer in der Mitte '
               'durchschneiden, damit nichts zurückschnellt.',
          marks=saitenbild(0, 0, SAITE_D)),

@@ -59,11 +59,11 @@ teile = [
         (36, 228, 20, 48, 22, 10, 6), (44, 212, 12, 40, 8, 6, 2)])
 ] + [
     teil('polster', 'foam_padding', 'Rückenpolster', 'Polster', 'box',
-         x=30, y=8, w=240, d=10, z=80, h=320, r=8, explode=[LINKS, 40, 0], mass=45,
+         x=30, y=8, w=240, d=10, z=80, h=280, r=8, explode=[LINKS, 40, 0], mass=45,
          info='Weicher PU- oder EVA-Schaum, steckt zwischen Netzstoff und Hauptfach. Naht des Innenfutters öffnen und herausziehen.',
          color='#E5E1C8', marks=[mark('box', 4, 2, 232, 6, 3, '#D3CFB4')]),
     teil('rueckenteil', 'nylon_fabric', 'Rückenteil mit Netzstoff', 'Rückenteil', 'box', material_id='polyester',
-         x=10, y=4, w=280, d=16, z=40, h=380, r=10, explode=[LINKS, 0, 0], mass=70, materials=[['polyester', 100]],
+         x=14, y=4, w=272, d=16, z=40, h=335, r=10, explode=[LINKS, 0, 0], mass=70, materials=[['polyester', 100]],
          info='Atmungsaktiver Polyester-Netzstoff über dem Polster. Liegt direkt am Rücken an.',
          color=NETZ, marks=raster(20, 4, 12, 1, 14, 8, 20, r=3, fill='#3A4045')),
     teil('brustgurt', 'plastic_buckles', 'Brustgurt-Schnalle', 'Brustschnalle', 'box',
