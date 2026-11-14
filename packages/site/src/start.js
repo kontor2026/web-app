@@ -1,6 +1,7 @@
 // Start: Der Kreislauf als Bild, darunter sofort die Wahl des Gegenstands. Wenig Text, eine Hauptaktion.
 import { shell, SCHRITTE, icon, ruhig } from './shell.js';
 import { waehlerHtml, verbindeWaehler } from './waehler.js';
+import { zeigeIntro } from './intro.js';
 import atlas from './daten/atlas.json';
 
 const app = shell('start', './');
@@ -28,6 +29,7 @@ app.innerHTML = `
       <h1>Wo kommt es her?<br>Wo geht es hin?</h1>
       <p class="lead">Wähle einen Gegenstand und folge seinem Weg.</p>
       ${waehlerHtml(atlas.objekte, (id) => `atlas/#kat=${id}`, { alle: false })}
+      <button class="intro-wieder" id="intro-wieder">Wie funktioniert’s?</button>
     </div>
   </div>
 </section>`;
@@ -42,3 +44,6 @@ if (!ruhig) setInterval(() => {
   station = (station + 1) % kreise.length;
   kreise[station]?.classList.add('mitte');
 }, 2600);
+
+document.getElementById('intro-wieder').addEventListener('click', () => zeigeIntro({ erzwingen: true }));
+zeigeIntro();

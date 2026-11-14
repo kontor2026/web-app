@@ -293,3 +293,29 @@ details > summary:hover::after { color: var(--accent); }
 .start-inhalt { align-items: center; min-height: calc(100svh - 56px - 48px); }
 .kreis { justify-self: center; align-self: center; width: 100%; }
 @media (max-width: 900px) { .start-inhalt { min-height: 0; } .kreis { width: min(380px, 100%); } }
+
+/* ---------- Einführung: drei Karten, Handy zuerst ---------- */
+.intro { position: fixed; inset: 0; z-index: 100; display: grid; place-items: end center; background: var(--scrim); animation: intro-ein .25s ease-out; }
+.intro.weg { opacity: 0; transition: opacity .25s; }
+@keyframes intro-ein { from { opacity: 0; } }
+.intro-karte { width: min(440px, 100%); display: grid; gap: 20px; padding: 28px 24px calc(20px + env(safe-area-inset-bottom, 0px)); background: var(--sheet); border-top: 1px solid var(--ink); }
+.intro-buehne { display: grid; }
+.intro-seite { grid-area: 1 / 1; display: grid; justify-items: center; gap: 10px; text-align: center; opacity: 0; visibility: hidden; transform: translateX(16px); transition: opacity .3s, transform .3s, visibility .3s; }
+.intro-seite.on { opacity: 1; visibility: visible; transform: none; }
+.intro-bild { width: 112px; height: 112px; display: grid; place-items: center; color: var(--ink); margin-bottom: 6px; }
+.intro-bild .icon { width: 72px; height: 72px; stroke-width: 1.2; }
+.intro-kreis { width: 112px; height: 112px; }
+.intro-kreis circle[r="7"] { fill: var(--sheet); stroke: currentColor; stroke-width: 1.2; }
+.intro-kreis circle.an { fill: var(--accent); stroke: var(--accent); }
+.intro-seite h2 { font-size: 24px; line-height: 1.2; font-weight: 600; letter-spacing: -.01em; }
+.intro-seite p { color: var(--ink-2); font-size: 16px; max-width: 30ch; }
+.intro-punkte { display: flex; justify-content: center; gap: 6px; }
+.intro-punkte i { width: 8px; height: 8px; border-radius: 4px; background: var(--rule); transition: width .2s, background .2s; }
+.intro-punkte i.on { width: 22px; background: var(--accent); }
+.intro-knoepfe { display: grid; grid-template-columns: auto 1fr; gap: 10px; }
+.intro-knoepfe .btn { height: 48px; }
+.intro-knoepfe .btn.primary { justify-content: space-between; }
+.intro-wieder { margin-top: 16px; font-size: 13px; color: var(--ink-3); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--rule); min-height: 40px; }
+.intro-wieder:hover { color: var(--accent); }
+@media (min-width: 901px) { .intro { place-items: center; } .intro-karte { border: 1px solid var(--ink); } }
+@media (max-width: 900px) { .intro-wieder { order: 5; justify-self: center; } }
