@@ -204,3 +204,7 @@ html { scroll-padding-bottom: calc(var(--tabs) + 88px); }
 .haken { display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; background: var(--good); color: #fff; flex: none; }
 .haken .icon { width: 18px; height: 18px; stroke-width: 2.5; }
 .lw-rezept-kopf, .idee-kopf { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
+
+/* Quellen-Chip: überall gleich, Symbol + Wort */
+.chip-q { display: inline-flex; align-items: center; gap: 4px; }
+.chip-q .icon { width: 12px; height: 12px; stroke-width: 1.8; }

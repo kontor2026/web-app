@@ -12,7 +12,9 @@ export const SEITEN = [
 ];
 
 // root: relativer Weg zur Startseite ('./' auf der Startseite, '../' in den Unterseiten)
+let WURZEL = './';
 export function shell(aktiv, root) {
+  WURZEL = root;
   document.body.insertAdjacentHTML('afterbegin', `
   <header class="topbar">
     <a class="brand" href="${root}">
@@ -29,6 +31,8 @@ export function shell(aktiv, root) {
 
 // Der Lebensweg eines Gegenstands: sieben Stationen, überall gleich benannt und gleich gezeichnet
 const ICON = {
+  beleg: '<path d="M7 3h7l4 4v14H7Z"/><path d="M14 3v4h4M10 12h5M10 16h5"/>',
+  schaetzung: '<circle cx="12" cy="12" r="8.5" stroke-dasharray="3 2.5"/><path d="M9.5 10a2.5 2.5 0 1 1 3.3 2.4c-.5.2-.8.6-.8 1.1V14M12 17v.5"/>',
   haken: '<path d="m5 12.5 4.5 4.5L19 7.5"/>',
   // Beispiel-Gegenstände
   smartphone: '<rect x="7" y="3" width="10" height="18" rx="2"/><path d="M11 18h2"/>',
@@ -99,7 +103,9 @@ export const quelleA = (quellen, key, text) => {
   return url ? `<a class="ql" href="${esc(url)}" target="_blank" rel="noopener">${esc(t)} →</a>` : esc(t);
 };
 // Kleiner Chip direkt an der Zahl: „Quelle“ (belegt) oder „Schätzung“ (eigene Annahme, mit Link auf die Datei)
-export const chip = (url, titel, text = 'Quelle') =>
-  url ? `<a class="chip-q" href="${esc(url)}" target="_blank" rel="noopener" title="${esc(titel ?? '')}">${esc(text)}</a>` : '';
+// Quelle: überall derselbe Chip. Er führt auf die Zwischenseite /quelle/, die zeigt, wohin es geht und was belegt wird.
+const zwischen = (o) => `${WURZEL}quelle/?${new URLSearchParams(Object.entries(o).filter(([, v]) => v != null && v !== '')).toString()}`;
+export const chip = (url, titel, text = 'Quelle', mehr = {}) =>
+  url ? `<a class="chip-q" href="${esc(zwischen({ u: url, t: titel, w: mehr.was, h: mehr.von, j: mehr.jahr, s: mehr.seite }))}" title="${esc(titel ?? '')}">${icon('beleg')}${esc(text)}</a>` : '';
 export const schaetzung = (_pfad, titel = 'Eigene Schätzung') =>
-  `<span class="chip-q schaetzung" title="${esc(titel)}">Schätzung</span>`;
+  `<a class="chip-q schaetzung" href="${esc(zwischen({ t: 'Eigene Schätzung', w: titel }))}" title="${esc(titel)}">${icon('schaetzung')}Schätzung</a>`;

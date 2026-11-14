@@ -125,7 +125,7 @@ function zeigeIdeen() {
         <div class="tools">${(r.werkzeug ?? []).map((w) => `<span class="tag">${esc(WERKZEUG[w] ?? w)}</span>`).join('')}</div>
         <ol class="steps-list">${(r.schritte ?? []).map((x) => `<li>${esc(x)}</li>`).join('')}</ol>
         ${r.sicherheit ? `<p class="note warn">${esc(r.sicherheit)}</p>` : ''}
-        <p class="wb-quelle">${chip(r.quelle?.url, r.quelle?.titel)}${s.posten.some(geschaetzt) ? '<span class="chip-q schaetzung" title="Mengen mit ≈ sind geschätzt">≈ Schätzung</span>' : ''}</p></details>
+        <p class="wb-quelle">${chip(r.quelle?.url, r.quelle?.titel, 'Quelle', { was: `Anleitung: ${r.titel}` })}${s.posten.some(geschaetzt) ? '<span class="chip-q schaetzung" title="Mengen mit ≈ sind geschätzt">≈ Schätzung</span>' : ''}</p></details>
     </article>`).join('');
   beobachte(document.getElementById('ideen'));
 }

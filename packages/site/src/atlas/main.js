@@ -21,7 +21,8 @@ const material = (mid) => {
 const rohstoff = (key) => ({ ...ROH[key], key, farbe: CLASSES[ROH[key]?.art]?.color ?? '#cccccc' });
 const land = (a3) => LAND[a3]?.name ?? a3;
 const stufeDaten = (key, stufe) => ROH[key]?.[stufe] ?? null;
-const belegStufe = (st) => chip(quelleUrl(QUELLE, st.quelle, st.pdf_seite), `${QUELLE[st.quelle]?.titel ?? st.quelle}${st.seite ? `, ${st.seite}` : ''}`);
+const belegStufe = (st, was) => chip(quelleUrl(QUELLE, st.quelle, st.pdf_seite), QUELLE[st.quelle]?.titel ?? st.quelle, 'Quelle',
+  { was, von: QUELLE[st.quelle]?.herausgeber, jahr: st.jahr, seite: st.seite });
 const CSV = 'tools/kategorien/kategorien.csv';
 
 // Farben der Entsorgungswege: nur zur Unterscheidung im Bild, keine Tonnenfarben
@@ -172,8 +173,8 @@ function zeigeRohstoffe() {
       return `<a href="${link(schritt, x.key)}" class="lw-chip ${x.key === gewaehlt ? 'on' : ''} ${da ? '' : 'leer'}" title="${da ? '' : 'Keine Länderdaten'}">
         <i style="background:${y.farbe}"></i>${esc(y.name)}</a>`;
     }).join('')}</div>
-    ${r ? `<div class="lw-zahl"><b>${gramm(menge)}</b><span>${esc(r.name)} im Gegenstand${st && spitze(st.anteile) ? ` · meist aus ${esc(land(spitze(st.anteile)[0]))} (${spitze(st.anteile)[1]} %)` : ''}${r.kritisch ? ` · <em class="krit">▲ kritisch für die EU</em>${chip(quelleUrl(QUELLE, ROH[gewaehlt].kritisch_quelle, ROH[gewaehlt].kritisch_pdf_seite), 'Verordnung (EU) 2024/1252, Anhang II')}` : ''}</span>${schaetzung('tools/kategorien/rohstoffe.py', 'Aus dem 3D-Modell berechnet')}</div>` : ''}
-    ${st ? block(`Länder ${belegStufe(st)}`, `${alleLaender(st.anteile, st.rest)}<p class="lw-fuss">${esc(st.jahr ?? '')} · ${esc(QUELLE[st.quelle]?.herausgeber ?? QUELLE[st.quelle]?.titel ?? '')}</p>`)
+    ${r ? `<div class="lw-zahl"><b>${gramm(menge)}</b><span>${esc(r.name)} im Gegenstand${st && spitze(st.anteile) ? ` · meist aus ${esc(land(spitze(st.anteile)[0]))} (${spitze(st.anteile)[1]} %)` : ''}${r.kritisch ? ` · <em class="krit">▲ kritisch für die EU</em>${chip(quelleUrl(QUELLE, ROH[gewaehlt].kritisch_quelle, ROH[gewaehlt].kritisch_pdf_seite), 'Verordnung (EU) 2024/1252, Anhang II', 'Quelle', { was: `${r.name} steht auf der EU-Liste kritischer Rohstoffe`, jahr: 2024 })}` : ''}</span>${schaetzung('tools/kategorien/rohstoffe.py', 'Aus dem 3D-Modell berechnet')}</div>` : ''}
+    ${st ? block(`Länder ${belegStufe(st, `${r.name} · ${SCHRITTE.find((x) => x.id === schritt).name}: ${land(spitze(st.anteile)[0])} ${spitze(st.anteile)[1]} %`)}`, `${alleLaender(st.anteile, st.rest)}<p class="lw-fuss">${esc(st.jahr ?? '')} · ${esc(QUELLE[st.quelle]?.herausgeber ?? QUELLE[st.quelle]?.titel ?? '')}</p>`)
     : `<p class="note">Keine Länderdaten mit Quelle.</p>`}
     <details class="lw-fluss lw-block" id="fluss"><summary>Woher kommt was?</summary><div class="lw-fluss-ort"></div></details>`);
   verbindeLaender();
@@ -192,7 +193,7 @@ function zeigeHerstellung() {
   globus.zeige(im?.anteile ?? {});
   legende([]);
   setzePanel(im?.anteile ? `
-    <div class="lw-zahl"><b>${spitze(im.anteile)[1]} %</b><span>aus ${esc(land(spitze(im.anteile)[0]))}, nach Wert der Importe nach Deutschland</span>${chip(im.api_url ?? IMP.quelle?.url, IMP.quelle?.titel ?? 'UN Comtrade')}</div>
+    <div class="lw-zahl"><b>${spitze(im.anteile)[1]} %</b><span>aus ${esc(land(spitze(im.anteile)[0]))}, nach Wert der Importe nach Deutschland</span>${chip(im.api_url ?? IMP.quelle?.url, IMP.quelle?.titel ?? 'UN Comtrade', 'Quelle', { was: `Importe nach Deutschland: ${land(spitze(im.anteile)[0])} ${spitze(im.anteile)[1]} %`, von: IMP.quelle?.herausgeber, jahr: im.jahr })}</div>
     ${block('Länder', `${alleLaender(im.anteile, im.rest)}<p class="lw-fuss">${esc(im.jahr)} · nach Wert der Importe</p>`)}
       ${im.zuordnung === 'breit' ? `<p class="note">Die Zahlen gelten für eine größere Warengruppe, zu der dieser Gegenstand gehört.</p>` : ''}</div>`
     : `<p class="note">${IMP ? 'Für diesen Gegenstand gibt es keine passende Zollnummer.' : 'Die Importdaten werden gerade zusammengestellt.'}</p>`);
@@ -255,7 +256,7 @@ function zeigeUpcycling() {
   setzePanel(passend.length ? `<div class="lw-rezepte">${passend.map(({ r, s }) => `
     <article class="lw-rezept"><div class="lw-rezept-kopf"><h2>${esc(r.titel)}</h2>${s.baubar ? `<span class="haken" title="Alles da">${icon('haken')}</span>` : ''}</div>
       <div class="uses">${s.posten.map((p) => `<div class="use ${p.ok ? 'da' : 'fehlt'}"><i></i><span title="${esc(postenName(p, mitDiesem, name).alle)}">${esc(postenName(p, mitDiesem, name).text)}${postenName(p, mitDiesem, name).mehr ? ` <small>+${postenName(p, mitDiesem, name).mehr}</small>` : ''}</span><span class="q">${p.soll > 1 ? `${geschaetzt(p) ? '≈' : ''}${p.soll}×` : ''}</span></div>`).join('')}</div>
-      <p class="lw-fuss">${esc(r.dauer ?? '')}${chip(r.quelle?.url, r.quelle?.titel)}</p></article>`).join('')}</div>
+      <p class="lw-fuss">${esc(r.dauer ?? '')}${chip(r.quelle?.url, r.quelle?.titel, 'Quelle', { was: `Anleitung: ${r.titel}` })}</p></article>`).join('')}</div>
     <a class="btn ghost" href="../werkbank/#bauen">${icon('werkbank')}Werkbank<span class="pfeil">→</span></a>`
     : `<p class="note">${REZEPTE?.length ? 'Noch keine Bauidee nutzt Teile dieses Gegenstands.' : 'Die Bauideen werden gerade geschrieben.'}</p>`);
 }
@@ -274,11 +275,11 @@ function zeigeEntsorgung() {
   // Orientierung auf der Karte (keine Daten): Lübeck und Hamburg grenzen an das AWSH-Gebiet
   globus.region(AWSH.recyclinghoefe, [{ name: 'Lübeck', lat: 53.8655, lng: 10.6866 }, { name: 'Hamburg', lat: 53.5511, lng: 9.9937 }]);
   setzePanel(`
-    <div class="lw-tonne" style="--f:${WEG_FARBE[e.weg]}"><i>${icon(WEG_ICON[e.weg] ?? 'tonne')}</i><div><b>${esc(w?.name ?? e.weg)}${chip(e.url, 'AWSH Abfall-ABC')}</b><span>${esc(w?.kurz ?? '')}</span></div></div>
+    <div class="lw-tonne" style="--f:${WEG_FARBE[e.weg]}"><i>${icon(WEG_ICON[e.weg] ?? 'tonne')}</i><div><b>${esc(w?.name ?? e.weg)}${chip(e.url, 'AWSH Abfall-ABC', 'Quelle', { was: `${obj.name}: ${w?.name ?? e.weg}`, von: 'Abfallwirtschaft Südholstein (AWSH)' })}</b><span>${esc(w?.kurz ?? '')}</span></div></div>
     ${e.hinweis ? `<p class="lw-hinweis">${esc(e.hinweis)}</p>` : ''}
     ${(e.teile ?? []).length ? block('Getrennt entsorgen', `${e.teile.map((t) => `<div class="lw-teil" style="--f:${WEG_FARBE[t.weg]}"><i>${icon(WEG_ICON[t.weg] ?? 'tonne')}</i><span>${esc(obj.teile.find((x) => x.cid === t.component_id)?.name ?? daten.komponenten?.[t.component_id]?.name ?? t.component_id)}</span><b>${esc(AWSH.wege[t.weg]?.name ?? t.weg)}</b></div>`).join('')}`) : ''}
     ${e.unsicher ? `<p class="note">AWSH nennt den Gegenstand nicht direkt. Zuordnung nach der Regel für sein Material.</p>` : ''}
-    ${hof ? `<details class="lw-block lw-hof"><summary>${AWSH.recyclinghoefe.length} Recyclinghöfe ${chip('https://www.awsh.de/recyclinghoefe/uebersicht/', 'AWSH Recyclinghöfe')}</summary><div class="lw-hoefe">${AWSH.recyclinghoefe.map((h) => `
+    ${hof ? `<details class="lw-block lw-hof"><summary>${AWSH.recyclinghoefe.length} Recyclinghöfe ${chip('https://www.awsh.de/recyclinghoefe/uebersicht/', 'AWSH Recyclinghöfe', 'Quelle', { was: 'Adressen der Recyclinghöfe', von: 'Abfallwirtschaft Südholstein (AWSH)' })}</summary><div class="lw-hoefe">${AWSH.recyclinghoefe.map((h) => `
       <a href="${esc(h.lat ? `https://www.openstreetmap.org/?mlat=${h.lat}&mlon=${h.lng}#map=16/${h.lat}/${h.lng}` : h.url)}" target="_blank" rel="noopener">
         <b>${esc(h.name.replace('Recyclinghof ', ''))}</b><span>${esc(h.adresse)}</span>${h.hinweis ? `<em>${esc(h.hinweis)}</em>` : ''}</a>`).join('')}</div></details>` : ''}
     <p class="lw-fuss">${esc(AWSH.gebiet)} · Stand ${esc(datum(AWSH.stand))}</p>`);
@@ -298,7 +299,7 @@ function zeigeVerwertung() {
         .map(([v, n, f, k]) => { const m = unten + v / 2; unten += v; return `<p class="${k}" style="--f:${f};bottom:${m}%"><b>${zahl(v)} %</b>${n}</p>`; }).join(''); })()}</div></div>`
     : '<p class="lw-leer">Keine amtliche Zahl</p>';
   setzePanel(s ? `
-    <div class="lw-zahl"><b>${zahl(s.recycelt ?? s.sammelquote ?? 0)} %</b><span>${s.recycelt != null ? 'recycelt' : 'gesammelt'} · gilt für: ${esc(s.name)}</span>${chip(s.url ?? q?.url, q?.titel)}</div>
+    <div class="lw-zahl"><b>${zahl(s.recycelt ?? s.sammelquote ?? 0)} %</b><span>${s.recycelt != null ? 'recycelt' : 'gesammelt'} · gilt für: ${esc(s.name)}</span>${chip(s.url ?? q?.url, q?.titel, 'Quelle', { was: `${s.name}: ${zahl(s.recycelt ?? s.sammelquote ?? 0)} % ${s.recycelt != null ? 'recycelt' : 'gesammelt'}`, von: q?.herausgeber, jahr: s.jahr })}</div>
     ${e.weg === 'pfand' ? `<p class="note">Pfandflaschen und -dosen werden getrennt zurückgenommen. Eine eigene amtliche Quote dafür enthält diese Quelle nicht.</p>` : ''}
     ${s.sammelquote != null && s.recycelt != null ? `<p class="lw-hinweis">Aber nur ${zahl(s.sammelquote)} % werden überhaupt gesammelt.</p>` : ''}
     <p class="lw-fuss">Deutschland · ${esc(s.jahr)} · ${esc(q?.herausgeber ?? '')}</p>

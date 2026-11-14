@@ -1,0 +1,10 @@
+/* Zwischenseite Quelle: eine schlanke Karte in der Mitte */
+.quelle-seite { overflow-y: auto; display: grid; place-items: center; padding: 24px 16px; }
+.quelle-karte { width: min(520px, 100%); display: grid; gap: 18px; padding: 28px; background: var(--sheet); border: 1px solid var(--ink); }
+.quelle-karte .eyebrow { display: flex; align-items: center; gap: 8px; }
+.quelle-karte .eyebrow .icon { width: 16px; height: 16px; color: var(--accent); }
+.quelle-karte h1 { font-size: 24px; line-height: 1.2; font-weight: 600; letter-spacing: -.01em; }
+.quelle-was { font: 500 16px var(--sans); padding-left: 12px; border-left: 3px solid var(--accent); }
+.quelle-ziel { font: 500 14px var(--mono); }
+.quelle-knoepfe { display: flex; gap: 10px; justify-content: space-between; flex-wrap: wrap; }
+.quelle-knoepfe .btn { flex: 1 1 160px; }
