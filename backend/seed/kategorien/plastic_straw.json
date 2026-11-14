@@ -149,12 +149,15 @@
    ],
    "info": "Kurzes oberes Rohrstück aus Polypropylen. Einweg-Trinkhalme aus Kunststoff sind in der EU seit 2021 verboten, Reste bitte in den Restmüll.",
    "color": "#E8505B",
+   "wand": 0.4,
+   "boden": 0,
    "marks": [
     {
      "shape": "cyl",
      "x": 0.6,
      "y": 0.6,
      "w": 4.8,
+     "zeichnung": true,
      "fill": "#7A2A30"
     }
    ]
@@ -184,7 +187,7 @@
     ]
    ],
    "info": "Eingeprägte Rillen wie bei einer Ziehharmonika. Dadurch lässt sich der Halm knicken, ohne dass er zusammenfällt.",
-   "color": "#F07A83",
+   "color": "#E8505B",
    "label": true,
    "marks": [
     {
@@ -192,6 +195,7 @@
      "x": 1.0,
      "y": 1.0,
      "w": 4.8,
+     "zeichnung": true,
      "fill": "#7A2A30"
     }
    ]
@@ -221,7 +225,7 @@
     ]
    ],
    "info": "Eine Falte des Knickgelenks.",
-   "color": "#D64550",
+   "color": "#E8505B",
    "label": false
   },
   {
@@ -249,7 +253,7 @@
     ]
    ],
    "info": "Eine Falte des Knickgelenks.",
-   "color": "#F07A83",
+   "color": "#E8505B",
    "label": false
   },
   {
@@ -277,7 +281,7 @@
     ]
    ],
    "info": "Eine Falte des Knickgelenks.",
-   "color": "#D64550",
+   "color": "#E8505B",
    "label": false
   },
   {
@@ -305,7 +309,7 @@
     ]
    ],
    "info": "Eine Falte des Knickgelenks.",
-   "color": "#F07A83",
+   "color": "#E8505B",
    "label": false
   },
   {
@@ -333,7 +337,7 @@
     ]
    ],
    "info": "Eine Falte des Knickgelenks.",
-   "color": "#D64550",
+   "color": "#E8505B",
    "label": false
   },
   {
@@ -361,7 +365,7 @@
     ]
    ],
    "info": "Eine Falte des Knickgelenks.",
-   "color": "#F07A83",
+   "color": "#E8505B",
    "label": false
   },
   {
@@ -389,7 +393,7 @@
     ]
    ],
    "info": "Eine Falte des Knickgelenks.",
-   "color": "#D64550",
+   "color": "#E8505B",
    "label": false
   },
   {
@@ -417,7 +421,7 @@
     ]
    ],
    "info": "Eine Falte des Knickgelenks.",
-   "color": "#F07A83",
+   "color": "#E8505B",
    "label": false
   },
   {
@@ -445,7 +449,7 @@
     ]
    ],
    "info": "Eine Falte des Knickgelenks.",
-   "color": "#D64550",
+   "color": "#E8505B",
    "label": false
   },
   {
@@ -474,12 +478,15 @@
    ],
    "info": "Dünnwandiges Rohr. Für die Sortieranlage ist es zu klein und leicht, es landet meist im Restmüll. Besser: Halme aus Glas oder Edelstahl wiederverwenden.",
    "color": "#E8505B",
+   "wand": 0.4,
+   "boden": 0,
    "marks": [
     {
      "shape": "cyl",
      "x": 0.6,
      "y": 0.6,
      "w": 4.8,
+     "zeichnung": true,
      "fill": "#7A2A30"
     }
    ]
