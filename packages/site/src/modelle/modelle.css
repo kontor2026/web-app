@@ -45,3 +45,21 @@
 @media (min-width: 901px) { .teile-klappe > summary { pointer-events: none; } .teile-klappe > summary::before { display: none; } }
 .kopf-rechts { display: flex; gap: 8px; }
 @media (max-width: 900px) { .kipp-schalter { padding: 0 10px; font-size: 13px; } }
+
+/* Wenden: nur auf dem Handy; vorne Modell, hinten Infos */
+.wenden { display: none; width: 44px; height: 44px; place-items: center; border: 1px solid var(--rule); background: var(--sheet); color: var(--ink); }
+.wenden .icon { width: 20px; height: 20px; }
+.wenden:hover { border-color: var(--accent); color: var(--accent); }
+@media (max-width: 900px) {
+  .wenden { display: grid; }
+  .wenden-zurueck { justify-self: end; }
+  .modelle.sheet { display: grid; grid-template-rows: minmax(0, 1fr) auto; height: calc(100svh - 52px - var(--tabs)); perspective: 1600px; overflow: hidden; }
+  .modelle .canvas, .modelle .panel { grid-area: 1 / 1; height: auto; min-height: 0; backface-visibility: hidden; transition: transform .6s cubic-bezier(.65, 0, .35, 1); }
+  .modelle .canvas { transform: rotateY(0); }
+  .modelle .panel { transform: rotateY(180deg); overflow-y: auto; border: 0; }
+  .modelle.gewendet .canvas { transform: rotateY(-180deg); }
+  .modelle.gewendet .panel { transform: rotateY(0); }
+  .modelle .actionbar { grid-row: 2; position: static; }
+  .modelle .canvas-head { flex-wrap: nowrap; }
+}
+@media (prefers-reduced-motion: reduce) { .modelle .canvas, .modelle .panel { transition: none; } }

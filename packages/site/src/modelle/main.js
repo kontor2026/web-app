@@ -14,6 +14,7 @@ app.innerHTML = `
     <div class="canvas-head">
       <div><p id="masse"></p></div>
       <div class="kopf-rechts">
+        <button class="wenden" data-wenden aria-label="Infos zum Modell" title="Infos"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7h11l-3-3M17 17H6l3 3"/></svg></button>
         <button class="kipp-schalter" id="explodiert" role="switch" aria-checked="true"><span>Zerlegt</span><i></i></button>
         <button class="kipp-schalter" id="nummern" role="switch" aria-checked="true"><span>Nummern</span><i></i></button>
       </div>
@@ -30,6 +31,10 @@ app.innerHTML = `
 </section>`;
 
 let aktuell = null;
+// Handy: Karte wenden – vorne das 3D-Modell, hinten die Infos (keine lange Seite zum Scrollen)
+document.querySelector('.modelle').addEventListener('click', (e) => {
+  if (e.target.closest('[data-wenden]')) document.querySelector('.modelle').classList.toggle('gewendet');
+});
 const viewer = erzeugeViewer(document.getElementById('szene'), {
   tip: document.getElementById('tip'),
   onHover: (i) => document.querySelectorAll('#panel .prow').forEach((r) => r.classList.toggle('hot', +r.dataset.i === i)),
@@ -77,7 +82,7 @@ function pruefe(obj) {
 // ---------- Datenblatt ----------
 const panel = document.getElementById('panel');
 function setzePanel(html, crumbs) {
-  panel.innerHTML = `<div class="panel-inner">${crumbs ? `<nav class="crumbs">${crumbs.map((c, i) => (i < crumbs.length - 1
+  panel.innerHTML = `<div class="panel-inner"><button class="wenden wenden-zurueck" data-wenden aria-label="Zurück zum Modell" title="Modell"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7h11l-3-3M17 17H6l3 3"/></svg></button>${crumbs ? `<nav class="crumbs">${crumbs.map((c, i) => (i < crumbs.length - 1
     ? `<button data-c="${i}">${esc(c.label)}</button><span></span>` : `<b style="font-weight:500;color:var(--ink)">${esc(c.label)}</b>`)).join('')}</nav>` : ''}${html}</div>`;
   panel.querySelectorAll('.crumbs button').forEach((b) => b.addEventListener('click', () => crumbs[+b.dataset.c].go()));
   panel.scrollTop = 0;
