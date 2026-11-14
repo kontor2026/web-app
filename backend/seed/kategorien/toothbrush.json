@@ -921,7 +921,8 @@
     ]
    ],
    "info": "Schmaler, leicht federnder Übergang zwischen Kopf und Griff.",
-   "color": "#3B7DD8"
+   "color": "#3B7DD8",
+   "form": "liegend_y"
   },
   {
    "id": "griff",
@@ -951,12 +952,14 @@
    ],
    "info": "Massiver Griffkörper aus Polypropylen. Es gibt auch Bürsten mit Wechselköpfen oder aus Holz, die weniger Plastikmüll machen.",
    "color": "#3B7DD8",
+   "form": "liegend_y",
    "marks": [
     {
      "shape": "box",
      "x": 3,
      "y": 20,
      "w": 10,
+     "zeichnung": true,
      "d": 50,
      "r": 5,
      "fill": "#9CD3F0"

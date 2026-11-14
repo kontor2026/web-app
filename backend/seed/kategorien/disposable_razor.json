@@ -647,12 +647,14 @@
    ],
    "info": "Griff aus Polypropylen. Einwegrasierer erzeugen viel Müll; Rasierer mit Wechselklingen oder aus Metall halten jahrelang.",
    "color": "#2F6DB5",
+   "form": "liegend_y",
    "marks": [
     {
      "shape": "box",
      "x": 2,
      "y": 20,
      "w": 8,
+     "zeichnung": true,
      "d": 40,
      "r": 4,
      "fill": "#1F4F86"

@@ -238,12 +238,15 @@
    ],
    "info": "Front aus Kunststoff (Polycarbonat oder Nylon), die beiden Ränder halten die Gläser in einer Nut. Ohne Gläser und Schrauben ist sie sortenrein, aber zu klein für die Gelbe Tonne.",
    "color": "#2A2E31",
+   "wand": 4,
+   "boden": 0,
    "marks": [
     {
      "shape": "cyl",
      "x": 4,
      "y": 4,
      "w": 54,
+     "zeichnung": true,
      "d": 40,
      "fill": "#1C1F21"
     }
@@ -277,12 +280,15 @@
    "info": "Rechter Glasrand, mit dem linken über den Steg in einem Stück gespritzt.",
    "color": "#2A2E31",
    "label": false,
+   "wand": 4,
+   "boden": 0,
    "marks": [
     {
      "shape": "cyl",
      "x": 4,
      "y": 4,
      "w": 54,
+     "zeichnung": true,
      "d": 40,
      "fill": "#1C1F21"
     }
