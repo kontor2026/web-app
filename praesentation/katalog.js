@@ -47,19 +47,23 @@ export function baueModell(obj, { pivot = 'boden', schatten = true, glasEinfach 
     mesh.castShadow = schatten;
     mesh.receiveShadow = true;
     g.add(mesh);
-    for (const m of p.marks ?? []) {
-      if (m.zeichnung) continue;
+    // Marks often lie flush on top of each other (label + text lines, lens ring + lens, coil + centre). In one plane
+    // the depth test cannot decide between them and they flicker. So marks write no depth and are drawn after all
+    // solid geometry in list order: the later mark always paints over the earlier one, the depth test against the
+    // part (pulled forward by polygonOffset) and against anything in front of it still works.
+    (p.marks ?? []).filter((m) => !m.zeichnung).forEach((m, i) => {
       const mg = new THREE.ShapeGeometry(grundriss(m), 24);
       mg.rotateX(Math.PI / 2);
       mg.translate(0, p.h + 0.04, 0);
       const e = eigenschaften(p);
       const mm = new THREE.Mesh(mg, new THREE.MeshPhysicalMaterial({
         color: new THREE.Color(m.fill ?? farbe.clone().multiplyScalar(0.78)), metalness: e.m ?? 0, roughness: Math.max(0.25, e.r),
-        clearcoat: e.cc ?? 0, side: THREE.DoubleSide, polygonOffset: true, polygonOffsetFactor: -1, polygonOffsetUnits: -1,
+        clearcoat: e.cc ?? 0, side: THREE.DoubleSide, polygonOffset: true, polygonOffsetFactor: -1, polygonOffsetUnits: -2, depthWrite: false,
       }));
+      mm.renderOrder = 1 + i;
       mm.receiveShadow = true;
       g.add(mm);
-    }
+    });
     g.position.set(p.x, p.z, p.y);
     const t = {
       p, g, mesh, name: p.name,

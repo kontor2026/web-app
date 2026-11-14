@@ -15,7 +15,10 @@ export const smoother = (x) => { x = clamp01(x); return x * x * x * (x * (x * 6 
 export const sm = (t, a, b) => smoother((t - a) / (b - a));
 export const lerp = (a, b, k) => a + (b - a) * k;
 
-const PIXEL_BUDGET = 6.2e6;          // höchstens so viele Pixel pro Frame (bei 1080p: Faktor ≈ 1,8)
+// At most this many pixels per frame. Rendering is fill-bound (4x MSAA, physical materials, bloom): on an M1 MacBook
+// at 1440 x 900 a Retina frame (factor 2, 5.2 Mpx) took ~31 ms, factor 1 ~11 ms. 2.4 Mpx keeps 1080p at factor 1
+// and a Retina laptop screen at factor ~1.35, which with 4x MSAA still looks sharp.
+const PIXEL_BUDGET = 2.4e6;
 const BG = new THREE.Color('#0a0c0f');
 
 export function createEngine(canvas) {
