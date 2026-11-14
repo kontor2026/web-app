@@ -5,7 +5,7 @@ export const BEISPIELE = ['smartphone', 'pet_bottle', 'laptop', 't_shirt', 'alum
 
 // Karte mit Piktogramm: eigenes, sonst das der Gruppe
 const GRUPPE_ICON = { Elektro: 'gruppe_elektro', Verpackung: 'gruppe_verpackung', Textil: 'gruppe_textil', Alltag: 'gruppe_alltag' };
-const karte = (o, href) => `<a class="beispiel" href="${href(o.id)}">${icon(BEISPIELE.includes(o.id) ? o.id : GRUPPE_ICON[o.gruppe] ?? 'gruppe_alltag', 'gross')}<b>${esc(o.name)}</b><span>${gramm(o.gramm)}</span></a>`;
+const karte = (o, href) => `<a class="beispiel" href="${href(o.id)}">${icon(BEISPIELE.includes(o.id) ? o.id : GRUPPE_ICON[o.gruppe] ?? 'gruppe_alltag', 'gross')}<b>${esc(o.name)}</b></a>`;
 
 export function waehlerHtml(objekte, href, { alle = true } = {}) {
   const gruppen = new Map();
