@@ -117,6 +117,11 @@ async function zeige(o, s, r) {
 }
 
 // ---------- Datenblatt ----------
+// Aufklappbarer Block: auf dem Handy zu (nur die Antwort ist sichtbar), auf großen Bildschirmen immer offen
+const breit = matchMedia('(min-width: 901px)');
+const block = (titel, inhalt, k = '') => `<details class="lw-block ${k}" data-block><summary>${titel}</summary><div class="lw-block-inhalt">${inhalt}</div></details>`;
+const alleLaender = (anteile, rest) => `${Object.entries(anteile).sort((a, b) => b[1] - a[1]).map(landZeile).join('')}${rest ? `<div class="lw-land rest"><span class="nr">··</span><span>Andere</span><b>${rest} %</b><div class="mbar"><b style="width:${rest}%"></b></div></div>` : ''}`;
+const spitze = (anteile) => Object.entries(anteile ?? {}).sort((a, b) => b[1] - a[1])[0];
 const panel = () => document.getElementById('panel');
 function setzePanel(html) {
   const s = SCHRITTE.find((x) => x.id === schritt);
@@ -126,6 +131,7 @@ function setzePanel(html) {
   const i = IDS.indexOf(schritt), naechste = SCHRITTE[(i + 1) % IDS.length];
   panel().innerHTML = `<div class="panel-inner">${html}<a class="lw-weiter" href="${link(naechste.id, null)}">${icon(naechste.id)}<span>${i < IDS.length - 1 ? 'Weiter' : 'Von vorn'}: ${naechste.name}</span><span class="pfeil">→</span></a></div>`;
   panel().scrollTop = 0;
+  if (breit.matches) panel().querySelectorAll('[data-block]').forEach((d) => { d.open = true; });
 }
 const legende = (eintraege) => { document.getElementById('legende').innerHTML = eintraege.map(([f, t]) => `<span><i style="background:${f}"></i>${esc(t)}</span>`).join(''); };
 const landZeile = ([l, p], i) => `
@@ -166,11 +172,10 @@ function zeigeRohstoffe() {
       return `<a href="${link(schritt, x.key)}" class="lw-chip ${x.key === gewaehlt ? 'on' : ''} ${da ? '' : 'leer'}" title="${da ? '' : 'Keine Länderdaten'}">
         <i style="background:${y.farbe}"></i>${esc(y.name)}</a>`;
     }).join('')}</div>
-    ${r ? `<div class="lw-zahl"><b>${gramm(menge)}</b><span>${esc(r.name)} im Gegenstand${r.kritisch ? ` · <em class="krit">▲ kritisch für die EU</em>${chip(quelleUrl(QUELLE, ROH[gewaehlt].kritisch_quelle, ROH[gewaehlt].kritisch_pdf_seite), 'Verordnung (EU) 2024/1252, Anhang II')}` : ''}</span>${schaetzung('tools/kategorien/rohstoffe.py', 'Aus dem 3D-Modell berechnet')}</div>` : ''}
-    ${st ? `<div><h3>Nach Land ${belegStufe(st)}</h3>${laenderListe(st.anteile, st.rest)}
-      <p class="lw-fuss">${esc(st.jahr ?? '')} · ${esc(QUELLE[st.quelle]?.herausgeber ?? QUELLE[st.quelle]?.titel ?? '')}</p></div>`
+    ${r ? `<div class="lw-zahl"><b>${gramm(menge)}</b><span>${esc(r.name)} im Gegenstand${st && spitze(st.anteile) ? ` · meist aus ${esc(land(spitze(st.anteile)[0]))} (${spitze(st.anteile)[1]} %)` : ''}${r.kritisch ? ` · <em class="krit">▲ kritisch für die EU</em>${chip(quelleUrl(QUELLE, ROH[gewaehlt].kritisch_quelle, ROH[gewaehlt].kritisch_pdf_seite), 'Verordnung (EU) 2024/1252, Anhang II')}` : ''}</span>${schaetzung('tools/kategorien/rohstoffe.py', 'Aus dem 3D-Modell berechnet')}</div>` : ''}
+    ${st ? block(`Länder ${belegStufe(st)}`, `${alleLaender(st.anteile, st.rest)}<p class="lw-fuss">${esc(st.jahr ?? '')} · ${esc(QUELLE[st.quelle]?.herausgeber ?? QUELLE[st.quelle]?.titel ?? '')}</p>`)
     : `<p class="note">Keine Länderdaten mit Quelle.</p>`}
-    <details class="lw-fluss" id="fluss"><summary>Woher kommt was?</summary><div class="lw-fluss-ort"></div></details>`);
+    <details class="lw-fluss lw-block" id="fluss"><summary>Woher kommt was?</summary><div class="lw-fluss-ort"></div></details>`);
   verbindeLaender();
   document.getElementById('rohstoff-wahl').addEventListener('change', (e) => { location.hash = link(schritt, e.target.value); });
   const fluss = document.getElementById('fluss');
@@ -187,8 +192,8 @@ function zeigeHerstellung() {
   globus.zeige(im?.anteile ?? {});
   legende([]);
   setzePanel(im?.anteile ? `
-    <div><h3>Importe nach Deutschland ${chip(im.api_url ?? IMP.quelle?.url, IMP.quelle?.titel ?? 'UN Comtrade')}</h3>${laenderListe(im.anteile, im.rest)}
-      <p class="lw-fuss">${esc(im.jahr)} · nach Wert der Importe</p>
+    <div class="lw-zahl"><b>${spitze(im.anteile)[1]} %</b><span>aus ${esc(land(spitze(im.anteile)[0]))}, nach Wert der Importe nach Deutschland</span>${chip(im.api_url ?? IMP.quelle?.url, IMP.quelle?.titel ?? 'UN Comtrade')}</div>
+    ${block('Länder', `${alleLaender(im.anteile, im.rest)}<p class="lw-fuss">${esc(im.jahr)} · nach Wert der Importe</p>`)}
       ${im.zuordnung === 'breit' ? `<p class="note">Die Zahlen gelten für eine größere Warengruppe, zu der dieser Gegenstand gehört.</p>` : ''}</div>`
     : `<p class="note">${IMP ? 'Für diesen Gegenstand gibt es keine passende Zollnummer.' : 'Die Importdaten werden gerade zusammengestellt.'}</p>`);
   verbindeLaender();
@@ -210,9 +215,8 @@ function zeigeGegenstand() {
       : '<button class="btn ghost lw-habich" id="habich"><span class="pfeil">+</span>Hab ich, auf die Werkbank</button>'}
     <div><div class="mix">${sortiert.map(([c, g]) => `<i style="width:${(g / gesamt) * 100}%;background:${CLASSES[c]?.color}"></i>`).join('')}</div>
       <div class="mix-legend">${sortiert.map(([c, g]) => `<span><i style="background:${CLASSES[c]?.color}"></i>${esc(CLASSES[c]?.label)}<b>${zahl((g / gesamt) * 100, 0)} %</b></span>`).join('')}</div></div>
-    <div><h3>${seed.parts.length} Teile</h3>
-      <div class="plist">${viewer.teile.map((t) => `<button class="prow" data-i="${t.i}"><span class="n">${t.nr ?? '–'}</span>
-        <span>${esc(t.p.name)}<small>${esc(materialVon(t.p)?.name ?? '')}</small></span><span class="m">${gramm(t.p.mass)}</span></button>`).join('')}</div></div>`);
+    ${block(`${seed.parts.length} Teile`, `<div class="plist">${viewer.teile.map((t) => `<button class="prow" data-i="${t.i}"><span class="n">${t.nr ?? '–'}</span>
+        <span>${esc(t.p.name)}<small>${esc(materialVon(t.p)?.name ?? '')}</small></span><span class="m">${gramm(t.p.mass)}</span></button>`).join('')}</div>`)}`);
   document.getElementById('habich')?.addEventListener('click', () => { plus(obj.id); zeigeGegenstand(); });
   panel().querySelectorAll('.lw-habich-da button').forEach((b) => b.addEventListener('click', () => { plus(obj.id, +b.dataset.d); zeigeGegenstand(); }));
   panel().querySelectorAll('.prow').forEach((b) => {
@@ -272,9 +276,9 @@ function zeigeEntsorgung() {
   setzePanel(`
     <div class="lw-tonne" style="--f:${WEG_FARBE[e.weg]}"><i>${icon(WEG_ICON[e.weg] ?? 'tonne')}</i><div><b>${esc(w?.name ?? e.weg)}${chip(e.url, 'AWSH Abfall-ABC')}</b><span>${esc(w?.kurz ?? '')}</span></div></div>
     ${e.hinweis ? `<p class="lw-hinweis">${esc(e.hinweis)}</p>` : ''}
-    ${(e.teile ?? []).length ? `<div><h3>Getrennt entsorgen</h3>${e.teile.map((t) => `<div class="lw-teil" style="--f:${WEG_FARBE[t.weg]}"><i>${icon(WEG_ICON[t.weg] ?? 'tonne')}</i><span>${esc(obj.teile.find((x) => x.cid === t.component_id)?.name ?? daten.komponenten?.[t.component_id]?.name ?? t.component_id)}</span><b>${esc(AWSH.wege[t.weg]?.name ?? t.weg)}</b></div>`).join('')}</div>` : ''}
+    ${(e.teile ?? []).length ? block('Getrennt entsorgen', `${e.teile.map((t) => `<div class="lw-teil" style="--f:${WEG_FARBE[t.weg]}"><i>${icon(WEG_ICON[t.weg] ?? 'tonne')}</i><span>${esc(obj.teile.find((x) => x.cid === t.component_id)?.name ?? daten.komponenten?.[t.component_id]?.name ?? t.component_id)}</span><b>${esc(AWSH.wege[t.weg]?.name ?? t.weg)}</b></div>`).join('')}`) : ''}
     ${e.unsicher ? `<p class="note">AWSH nennt den Gegenstand nicht direkt. Zuordnung nach der Regel für sein Material.</p>` : ''}
-    ${hof ? `<details class="lw-mehr lw-hof"><summary>${AWSH.recyclinghoefe.length} Recyclinghöfe ${chip('https://www.awsh.de/recyclinghoefe/uebersicht/', 'AWSH Recyclinghöfe')}</summary><div class="lw-hoefe">${AWSH.recyclinghoefe.map((h) => `
+    ${hof ? `<details class="lw-block lw-hof"><summary>${AWSH.recyclinghoefe.length} Recyclinghöfe ${chip('https://www.awsh.de/recyclinghoefe/uebersicht/', 'AWSH Recyclinghöfe')}</summary><div class="lw-hoefe">${AWSH.recyclinghoefe.map((h) => `
       <a href="${esc(h.lat ? `https://www.openstreetmap.org/?mlat=${h.lat}&mlon=${h.lng}#map=16/${h.lat}/${h.lng}` : h.url)}" target="_blank" rel="noopener">
         <b>${esc(h.name.replace('Recyclinghof ', ''))}</b><span>${esc(h.adresse)}</span>${h.hinweis ? `<em>${esc(h.hinweis)}</em>` : ''}</a>`).join('')}</div></details>` : ''}
     <p class="lw-fuss">${esc(AWSH.gebiet)} · Stand ${esc(datum(AWSH.stand))}</p>`);
@@ -298,7 +302,7 @@ function zeigeVerwertung() {
     ${e.weg === 'pfand' ? `<p class="note">Pfandflaschen und -dosen werden getrennt zurückgenommen. Eine eigene amtliche Quote dafür enthält diese Quelle nicht.</p>` : ''}
     ${s.sammelquote != null && s.recycelt != null ? `<p class="lw-hinweis">Aber nur ${zahl(s.sammelquote)} % werden überhaupt gesammelt.</p>` : ''}
     <p class="lw-fuss">Deutschland · ${esc(s.jahr)} · ${esc(q?.herausgeber ?? '')}</p>
-    <details class="lw-mehr"><summary>Was genau gezählt wird</summary><p>${esc(s.was ?? '')}</p></details>`
+    ${block('Was genau gezählt wird', `<p>${esc(s.was ?? '')}</p>`)}`
     : `<p class="note">${e ? 'Für diesen Entsorgungsweg gibt es keine amtliche Zahl.' : 'Keine Daten.'}</p>`);
 }
 

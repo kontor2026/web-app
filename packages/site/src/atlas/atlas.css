@@ -192,3 +192,31 @@
   .lw-weiter .pfeil { margin-left: auto; }
   .lw .panel-inner { padding-bottom: 24px; }
 }
+
+/* ---------- Blöcke: Handy aufklappbar, Bildschirm immer offen ---------- */
+.lw-block > summary { font: 500 11px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); }
+@media (min-width: 901px) {
+  .lw-block > summary { pointer-events: none; min-height: 0; margin-bottom: 12px; }
+  .lw-block > summary::before { display: none; }
+  .lw-fluss { display: none; }
+}
+
+/* ---------- Handy: eine Bildschirmhöhe, kein Scrollen der Seite ---------- */
+@media (max-width: 900px) {
+  .lw { height: calc(100svh - 52px - var(--tabs)); display: flex; flex-direction: column; overflow: hidden; }
+  .lw .canvas { flex: 1 1 auto; min-height: 0; height: auto; display: grid; grid-template-rows: auto auto minmax(0, 1fr); }
+  .lw .lw-buehne, .lw[data-schritt] .lw-buehne { height: auto !important; min-height: 0; }
+  .lw .legend { display: none; }
+  .lw .panel { flex: 0 1 auto; max-height: 52%; overflow-y: auto; border-top: 1px solid var(--rule); }
+  .lw .panel-inner { gap: 10px; padding: 12px 16px 12px; }
+  .lw-zahl { border-top: 0; padding-top: 0; }
+  .lw-zahl b { font-size: 28px; }
+  .lw-block { border-top: 1px solid var(--rule-2); }
+  .lw-block > summary { min-height: 44px; }
+  .lw-block-inhalt { padding-bottom: 8px; }
+  .lw-weiter { min-height: 48px; margin-top: 4px; }
+  .lw-frage { padding: 10px 16px 0; font-size: 20px; }
+  .lw-habich, .lw-habich-da { height: 44px; }
+  .lw .mix-legend { display: none; }
+  .lw-tonne b { font-size: 19px; }
+}
