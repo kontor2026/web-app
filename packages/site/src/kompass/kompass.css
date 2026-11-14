@@ -51,3 +51,16 @@
 .kompass .actionbar .q { margin: 0 auto; }
 .kompass .actionbar .q b { font-weight: 500; }
 @media (max-width: 900px) { .actionbar { z-index: 10; } .kompass .actionbar .q { display: none; } }
+
+/* KI-Kompass wie Lebensweg: Leiste oben, Frage, Rose, Ablauf; unten nur „Weiter“ im Datenblatt */
+.kompass.sheet { grid-template-rows: 1fr; }
+.kompass .canvas { grid-template-rows: auto auto minmax(0, 1fr) auto; padding: 0 0 24px; gap: 0; }
+.kompass .canvas::after { display: none; }
+.kompass .rose-flaeche { margin: 0 24px; }
+.kompass .ablauf { margin: 0 28px; }
+.kompass-schritte .lw-nr { width: 22px; height: 22px; display: grid; place-items: center; border: 1px solid currentColor; border-radius: 50%; }
+@media (max-width: 900px) { .kompass-schritte .lw-name { display: none; } .kompass-schritte a.on .lw-name { display: inline; } .kompass .canvas { padding: 0 0 16px; } }
+
+.ablauf.lw-block > summary { font: 500 11px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); }
+@media (min-width: 901px) { .ablauf.lw-block > summary { pointer-events: none; } .ablauf.lw-block > summary::before { display: none; } }
+@media (max-width: 900px) { .kompass .rose-flaeche { height: 230px; min-height: 0; } }

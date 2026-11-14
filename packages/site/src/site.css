@@ -231,3 +231,21 @@ html { scroll-padding-bottom: calc(var(--tabs) + 88px); }
 .lw-tonne { grid-template-columns: 52px 1fr auto; }
 .lw-fuss { display: flex; align-items: center; }
 .lw-fuss .chip-q { margin-left: auto; }
+
+/* ---------- Leiste oben, Frage, „Weiter“ unten: gleich in Lebensweg und KI-Kompass ---------- */
+.lw-schritte { position: relative; z-index: 3; display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); border-bottom: 1px solid var(--rule); background: var(--sheet); }
+.lw-schritte a { display: flex; align-items: center; justify-content: center; gap: 8px; height: 56px; padding: 0 8px; text-decoration: none; color: var(--ink-3); font-size: 13px; border-bottom: 2px solid transparent; margin-bottom: -1px; transition: color .15s, border-color .15s; }
+.lw-schritte a:hover { color: var(--ink); }
+.lw-schritte a.on { color: var(--ink); border-bottom-color: var(--accent); }
+.lw-schritte a.on .icon, .lw-schritte a.on .lw-nr { color: var(--accent); }
+.lw-schritte a + a { border-left: 1px solid var(--rule-2); }
+.lw-nr { font: 500 11px var(--mono); }
+.lw-frage { display: flex; align-items: center; gap: 12px; margin: 0; padding: 18px 28px 6px; font-size: 26px; line-height: 1.15; font-weight: 600; letter-spacing: -.02em; }
+.lw-weiter { display: flex; align-items: center; gap: 12px; min-height: 52px; padding: 0 16px; margin-top: 8px; border: 1px solid var(--ink); background: var(--sheet); color: var(--ink); text-decoration: none; font-weight: 500; }
+.lw-weiter:hover { border-color: var(--accent); color: var(--accent); }
+.lw-weiter .icon { width: 20px; height: 20px; }
+.lw-weiter .pfeil { margin-left: auto; }
+@media (max-width: 900px) {
+  .lw-schritte a { height: 48px; }
+  .lw-frage { padding: 10px 16px 0; font-size: 20px; }
+}

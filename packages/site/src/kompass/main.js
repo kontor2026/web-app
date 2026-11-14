@@ -30,9 +30,9 @@ const richtungen = KOMPASS.richtungen.map((r) => {
 app.innerHTML = `
 <section class="view sheet kompass">
   <div class="canvas">
-    <div class="canvas-head">
-      <div><h2>${esc(KOMPASS.titel)}</h2><p>Tippe eine Himmelsrichtung oder einen Schritt an</p></div>
-    </div>
+    <nav class="lw-schritte kompass-schritte" aria-label="Richtungen">${KOMPASS.richtungen.map((r) => `
+      <a href="#${r.id}" data-id="${r.id}" title="${esc(r.titel)}"><span class="lw-nr">${r.himmelsrichtung}</span><span class="lw-name">${esc(r.titel)}</span></a>`).join('')}</nav>
+    <h1 class="lw-frage" id="frage"></h1>
     <div class="rose-flaeche">
       <svg class="rose" viewBox="-300 -250 600 500" role="group" aria-label="Kompassrose mit vier Richtungen">
         <circle class="ring" r="150"/><circle class="ring2" r="120"/><circle class="ring2" r="60"/>
@@ -42,21 +42,16 @@ app.innerHTML = `
         ${richtungen}
       </svg>
     </div>
-    <div class="ablauf">
-      <div class="eyebrow">Ablauf in der Station · Mensch ${zaehle('Mensch')} · KI ${zaehle('KI')} · Datenbank ${zaehle('Datenbank')}</div>
+    <details class="ablauf lw-block" id="ablauf"><summary>Ablauf in der Station · Mensch ${zaehle('Mensch')} · KI ${zaehle('KI')} · Datenbank ${zaehle('Datenbank')}</summary>
       <ol>${KOMPASS.ablauf.map((a, i) => `<li><button data-schritt="${i}" class="schritt ${WER[a.wer]}">
         <span class="nr">${String(i + 1).padStart(2, '0')}</span><b>${esc(a.schritt)}</b><span class="wer">${esc(a.wer)}</span></button></li>`).join('')}</ol>
-    </div>
+    </details>
   </div>
   <aside class="panel" id="panel"></aside>
-  <div class="actionbar">
-    <div class="q" id="ort"></div>
-    <button class="btn ghost" id="zurueck">← Richtung</button>
-    <button class="btn" id="weiter">Richtung →</button>
-  </div>
 </section>`;
 
 const panel = document.getElementById('panel');
+if (matchMedia('(min-width: 901px)').matches) document.getElementById('ablauf').open = true;
 function setzePanel(html, crumbs) {
   panel.innerHTML = `<div class="panel-inner">${crumbs ? `<nav class="crumbs">${crumbs.map((c, i) => (i < crumbs.length - 1
     ? `<button data-c="${i}">${esc(c.label)}</button><span></span>` : `<b style="font-weight:500;color:var(--ink)">${esc(c.label)}</b>`)).join('')}</nav>` : ''}${html}</div>`;
@@ -70,9 +65,7 @@ const start = { label: 'KI-Kompass', go: () => (location.hash = '') };
 function uebersicht() {
   markiere(null);
   setzePanel(`
-    <div><div class="eyebrow">Verantwortungsvoller Umgang mit KI</div><h1 style="margin-top:8px">${esc(KOMPASS.frage)}</h1>
-</div>
-    <div><h3>Vier Richtungen · tippe eine an</h3><div class="plist">${KOMPASS.richtungen.map((r) => `
+    <div><h3>Vier Richtungen</h3><div class="plist">${KOMPASS.richtungen.map((r) => `
       <button class="prow" data-r="${r.id}"><span class="n">${r.himmelsrichtung}</span>
         <span>${esc(r.titel)}<small>${esc(r.frage)}</small></span><span class="m">→</span></button>`).join('')}</div></div>
     <div><h3>Zum Nachlesen</h3><ul class="quellen-liste">${KOMPASS.quellen.map((q) => `<li><a class="ql" href="${esc(q.url)}" target="_blank" rel="noopener">${esc(q.titel)} →</a></li>`).join('')}</ul></div>
@@ -82,10 +75,8 @@ function uebersicht() {
 function richtung(r) {
   markiere(r);
   setzePanel(`
-    <div><div class="eyebrow">${r.himmelsrichtung} · ${NAME[r.himmelsrichtung]}</div><h1 style="margin-top:8px">${esc(r.titel)}</h1>
-      <p class="sub">${esc(r.frage)}</p></div>
     <div><h3>So machen wir es</h3><dl class="belege">${r.so_machen_wirs.slice(0, 2).map((s) => `<div><dd>${esc(s.text)}${beleg(s.beleg)}</dd></div>`).join('')}</dl></div>
-    <div class="goal"><small>Tipp für dich</small>${esc(r.tipp_fuer_dich)}</div>`, [start, { label: r.titel, go: () => richtung(r) }]);
+    <div class="goal"><small>Tipp für dich</small>${esc(r.tipp_fuer_dich)}</div>`, null);
 }
 
 function schritt(i) {
@@ -121,23 +112,21 @@ document.querySelectorAll('.richtung').forEach((g) => {
 });
 document.querySelectorAll('.schritt').forEach((b) => b.addEventListener('click', () => (location.hash = `schritt-${+b.dataset.schritt + 1}`)));
 const ids = KOMPASS.richtungen.map((r) => r.id);
-const dreh = (d) => { const i = ids.indexOf(location.hash.slice(1)); location.hash = ids[(i + d + ids.length) % ids.length]; };
-document.getElementById('zurueck').addEventListener('click', () => dreh(-1));
-document.getElementById('weiter').addEventListener('click', () => dreh(1));
 
-// Fußleiste wie überall: Ziel auf den Knöpfen, Ort in der Mitte
+
+// Oben Ort und Frage, unten nur „Weiter“ zur nächsten Richtung (wie im Lebensweg)
 function fuss() {
   const i = ids.indexOf(location.hash.slice(1)), n = ids.length;
-  const vor = KOMPASS.richtungen[(i - 1 + n) % n], nach = KOMPASS.richtungen[(i + 1) % n];
-  document.getElementById('zurueck').innerHTML = `<span class="pfeil">←</span>${esc(i < 0 ? KOMPASS.richtungen[n - 1].titel : vor.titel)}`;
-  document.getElementById('weiter').innerHTML = `${esc(i < 0 ? KOMPASS.richtungen[0].titel : nach.titel)}<span class="pfeil">→</span>`;
-  document.getElementById('ort').innerHTML = i < 0 ? '<b>KI-Kompass</b>' : `<b>${esc(KOMPASS.richtungen[i].titel)}</b> <span>· ${i + 1} / ${n}</span>`;
+  document.querySelectorAll('.kompass-schritte a').forEach((a) => { const on = a.dataset.id === ids[i]; a.classList.toggle('on', on); a.toggleAttribute('aria-current', on); });
+  document.getElementById('frage').textContent = i < 0 ? KOMPASS.frage : KOMPASS.richtungen[i].frage;
+  const nach = KOMPASS.richtungen[(i + 1) % n];
+  document.querySelector('#panel .panel-inner')?.insertAdjacentHTML('beforeend',
+    `<a class="lw-weiter" href="#${nach.id}"><span class="lw-nr">${nach.himmelsrichtung}</span><span>Weiter: ${esc(nach.titel)}</span><span class="pfeil">→</span></a>`);
 }
-addEventListener('hashchange', fuss);
 function ausHash() {
   const h = location.hash.slice(1), r = KOMPASS.richtungen.find((x) => x.id === h), s = h.match(/^schritt-(\d+)$/);
   if (r) richtung(r); else if (s && KOMPASS.ablauf[s[1] - 1]) schritt(s[1] - 1); else uebersicht();
+  fuss();   // nach dem Datenblatt, damit „Weiter“ angehängt wird
 }
 addEventListener('hashchange', ausHash);
 ausHash();
-fuss();

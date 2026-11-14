@@ -174,7 +174,6 @@
 /* ---------- Handy zuerst: weniger auf einmal ---------- */
 .lw-wahl-liste { display: none; }
 .lw-fluss { display: none; }
-.lw-weiter { display: none; }
 .lw-alle > summary { min-height: 40px; }
 @media (max-width: 900px) {
   .lw .actionbar { display: none; }
@@ -187,9 +186,6 @@
   .lw[data-schritt="abbau"] .lw-globus, .lw[data-schritt="verarbeitung"] .lw-globus { inset: 0; }
   .lw-fluss { display: block; border-top: 1px solid var(--rule); }
   .lw-fluss .lw-fluss-ort .strom { position: relative; height: 380px; display: block; }
-  .lw-weiter { display: flex; align-items: center; gap: 12px; min-height: 56px; padding: 0 16px; margin-top: 8px; background: var(--ink); color: var(--sheet); text-decoration: none; font-weight: 500; }
-  .lw-weiter .icon { width: 20px; height: 20px; }
-  .lw-weiter .pfeil { margin-left: auto; }
   .lw .panel-inner { padding-bottom: 24px; }
 }
 
@@ -231,3 +227,6 @@
   .lw-saeule-text p { position: static; transform: none; }
   .lw-saeule-text b { font-size: 18px; }
 }
+
+.lw .actionbar { display: none; }
+.lw.sheet { grid-template-rows: 1fr; }
