@@ -1,0 +1,64 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended",
+    "abandonments:recommended",
+    ":configMigration",
+    "helpers:pinGitHubActionDigestsToSemver"
+  ],
+  "timezone": "Europe/Berlin",
+  "schedule": ["before 6am on monday"],
+  "labels": ["dependencies"],
+  "semanticCommits": "enabled",
+  "semanticCommitScope": "deps",
+  "minimumReleaseAge": "3 days",
+  "ignorePaths": ["**/node_modules/**", "vendor/**", "praesentation/assets/**", "praesentation/technik/**"],
+  "prBodyColumns": ["Package", "Type", "Update", "Change", "Age"],
+  "prBodyDefinitions": {
+    "Age": "{{#if newVersion}}{{{newVersionAgeInDays}}} days{{/if}}"
+  },
+  "vulnerabilityAlerts": {
+    "addLabels": ["security"],
+    "schedule": ["at any time"]
+  },
+  "packageRules": [
+    {
+      "description": "Commit CI tooling bumps with the chore type.",
+      "matchManagers": ["github-actions"],
+      "semanticCommitType": "chore"
+    },
+    {
+      "description": "Group GitHub Action updates into a single pull request.",
+      "matchManagers": ["github-actions"],
+      "groupName": "GitHub Actions"
+    },
+    {
+      "description": "Group the commitlint tooling the CI runs.",
+      "matchFileNames": [".github/tools/**"],
+      "groupName": "CI tools",
+      "semanticCommitType": "chore"
+    },
+    {
+      "description": "Group the 3D stack of the static site (three.js and globe.gl move together).",
+      "matchFileNames": ["packages/site/package.json"],
+      "matchPackageNames": ["three", "globe.gl"],
+      "groupName": "three.js"
+    },
+    {
+      "description": "Group non-major backend Python updates.",
+      "matchManagers": ["pip_requirements"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "groupName": "backend Python (non-major)"
+    },
+    {
+      "description": "Pin container base images (nginx, python, ollama) to digests for reproducible builds.",
+      "matchManagers": ["dockerfile"],
+      "pinDigests": true
+    },
+    {
+      "description": "Label major updates so they get a deliberate review.",
+      "matchUpdateTypes": ["major"],
+      "addLabels": ["breaking"]
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+# Checks on every pull request and push to main: backend imports, 3D models against their rules,
+# app scripts parse, and the static site builds.
+name: Check
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  backend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+      # same dependencies as the backend image
+      - run: pip install -r backend/requirements.txt
+      # every backend module imports (catches syntax errors and missing names)
+      - run: python -c "import backend.app.main"
+      # 3D category models against docs/3d-modelle.md (fields, IDs, materials, mass, no overlaps)
+      - run: python tools/kategorien/pruefe.py
+
+  app:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 24
+      # the scan app has no build step: make sure every module parses
+      - run: for f in js/*.js js/data/*.js js/data/objects/*.js; do node --input-type=module --check < "$f" || exit 1; done
+      # the static site builds (the pages workflow deploys it from main)
+      - working-directory: packages/site
+        run: npm ci --no-audit --no-fund && npm run build
