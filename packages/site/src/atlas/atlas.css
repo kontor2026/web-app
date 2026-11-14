@@ -258,11 +258,21 @@
   /* Bauideen dicht untereinander */
   .lw-rezepte { gap: 8px; }
   .lw-rezept { border-top: 0; padding-top: 0; gap: 6px; }
-  /* Datenblatt so hoch wie nötig (zwischen 46 und 58 % der Fläche), das Bild darüber nimmt den Rest */
-  .lw .panel, .lw[data-schritt] .panel { flex: 0 1 auto; min-height: 46%; max-height: 58%; }
+  /* Datenblatt so hoch wie nötig (zwischen 40 und 58 % der Fläche), das Bild darüber nimmt den Rest */
+  .lw .panel, .lw[data-schritt] .panel { flex: 0 1 auto; min-height: 40%; max-height: 58%; }
   .lw-paar summary .chip-q { font-size: 0; gap: 0; padding: 0 5px; margin-left: auto; }
   .lw-paar summary .chip-q .icon { width: 13px; height: 13px; }
   .lw-zahl span { font-size: 13px; line-height: 1.35; }
 }
 /* Platz für den Stoffstrom sofort reservieren, damit die Ansicht beim Rohstoff-Wechsel nicht springt */
 @media (max-width: 900px) { .lw-fluss[open] .lw-fluss-ort { min-height: 380px; } }
+/* Handy: ohne Nummern im Bild auch keine Nummern-Spalte in der Teileliste */
+@media (max-width: 900px) { .lw .prow { grid-template-columns: minmax(0, 1fr) auto; } .lw .prow .n { display: none; } }
+/* Gewicht und „Auf die Werkbank“ in einem Block: rechts unter dem Beleg, spart auf dem Handy eine Zeile */
+.lw-zahl-wb .lw-habich, .lw-zahl-wb .lw-habich-da { grid-column: 2; grid-row: 2 / span 2; justify-self: end; align-self: end; }
+.lw-zahl-wb .lw-habich { height: 38px; padding: 0 12px; font-size: 13px; white-space: nowrap; }
+.lw-zahl-wb .lw-habich-da { display: flex; align-items: center; gap: 8px; color: var(--ink-3); height: auto; }
+.lw-zahl-wb .lw-habich-da > .icon { width: 18px; height: 18px; }
+.lw-zahl-wb .wb-stepper button { width: 36px; height: 36px; }
+/* Handy: 3D-Bild und Säule nutzen die ganze Bühne (die Legende darunter ist hier ausgeblendet) */
+@media (max-width: 900px) { .lw .lw-szene, .lw .lw-balken { inset: 0; } }

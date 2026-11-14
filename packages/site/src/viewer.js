@@ -108,8 +108,27 @@ export function erzeugeViewer(el, { onHover, onSelect, tip } = {}) {
     renderer.setSize(w, h); labels.setSize(w, h); nach.setSize(w, h); neu();
     const a = w / Math.max(h, 1);
     kamera.left = -a; kamera.right = a; kamera.top = 1; kamera.bottom = -1;
+    // Handy: Bühne hat sich verändert und niemand hat selbst gezoomt → wieder passend einpassen
+    if (passung && handy.matches && Math.abs(kamera.zoom - passung.zoom) < 1e-9) kamera.zoom = passung.zoom = passendZoom(passung.a);
     kamera.updateProjectionMatrix();
   }).observe(el);
+
+  // Wie groß das Modell erscheint. Groß: Hüllkugel (sicher, aber mit viel Rand).
+  // Handy: echte Ausdehnung der Ecken in Kamerasicht, über eine volle Drehung (das Modell kreist), mit etwas Luft.
+  const handy = matchMedia('(max-width: 900px)');
+  let passung = null;
+  function passendZoom(a) {
+    if (!handy.matches) return 1 / (a.r * 1.08);
+    const oben = new THREE.Vector3(0, 1, 0), richtung = new THREE.Vector3(1, 0.95, 1.25).normalize(), b = a.box, ecken = [];
+    for (const x of [b.min.x, b.max.x]) for (const y of [b.min.y, b.max.y]) for (const z of [b.min.z, b.max.z]) ecken.push(new THREE.Vector3(x, y, z).sub(a.mitte));
+    let halbB = 1e-6, halbH = 1e-6;
+    for (let k = 0; k < 24; k++) {
+      const d = richtung.clone().applyAxisAngle(oben, (k / 24) * Math.PI * 2);
+      const rechts = new THREE.Vector3().crossVectors(oben, d).normalize(), hoch = new THREE.Vector3().crossVectors(d, rechts);
+      for (const c of ecken) { halbB = Math.max(halbB, Math.abs(c.dot(rechts))); halbH = Math.max(halbH, Math.abs(c.dot(hoch))); }
+    }
+    return Math.min((kamera.right || 1) / halbB, 1 / halbH) * 0.94;
+  }
 
   let teile = [], explodiert = 1, hot = null, gewaehlt = null, animationNr = 0, farbFn = null;
 
@@ -194,7 +213,8 @@ export function erzeugeViewer(el, { onHover, onSelect, tip } = {}) {
     modell.position.copy(ausschnitt[1].mitte).negate();
     ausschnitt.forEach((x) => x.blick = x.mitte.clone().sub(ausschnitt[1].mitte));
     kamera.position.set(1, 0.95, 1.25).normalize().multiplyScalar(r * 4).add(a.blick);
-    kamera.zoom = 1 / (a.r * 1.08);
+    kamera.zoom = passendZoom(a);
+    passung = { a, zoom: kamera.zoom };
     kamera.near = r * 0.5; kamera.far = r * 8;                // enger Tiefenbereich für die Umgebungsverdeckung
     kamera.updateProjectionMatrix();
     modell.updateMatrixWorld(true);

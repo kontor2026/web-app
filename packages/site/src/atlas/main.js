@@ -113,7 +113,7 @@ async function zeige(o, s, r) {
   localStorage.setItem('lebensweg-letzt', o.id);
   document.getElementById('ort').innerHTML = `<b>${esc(o.name)}</b> <span>· ${i + 1} / ${IDS.length}</span>`;
   if (neu || !seed) { seed = await ladeModell(o.id); viewer.lade(seed); }
-  viewer.nummern(s === 'gegenstand');
+  viewer.nummern(s === 'gegenstand' && breit.matches);   // Handy: Nummern wären zu klein, Teile lassen sich direkt antippen
   ({ abbau: zeigeRohstoffe, verarbeitung: zeigeRohstoffe, herstellung: zeigeHerstellung, gegenstand: zeigeGegenstand,
     upcycling: zeigeUpcycling, entsorgung: zeigeEntsorgung, verwertung: zeigeVerwertung })[s]();
 }
@@ -144,6 +144,7 @@ function setzePanel(html) {
   // „Weiter“ steht außerhalb des Inhalts: auf dem Handy immer unten sichtbar, egal was aufgeklappt ist
   panel().innerHTML = `<div class="panel-inner">${html}</div><div class="lw-weiter-zeile">${weiter}</div>`;
   const neu = panel().querySelector('.panel-inner');
+  if (!bleibt) haltePanelHoehe();
   neu.querySelectorAll('details').forEach((d) => { if (offen.has(schluessel(d))) d.open = true; });
   neu.scrollTop = oben; panel().scrollTop = obenPanel;
   // Aufgeklappte Inhalte (Stoffstrom) zeichnen sich erst im nächsten Bild; dann den Scrollstand noch einmal setzen
@@ -152,6 +153,15 @@ function setzePanel(html) {
     setTimeout(zurueck, 0); setTimeout(zurueck, 80); requestAnimationFrame(() => requestAnimationFrame(zurueck));
   }
 }
+// Handy: Datenblatt so hoch wie sein zugeklappter Inhalt (CSS begrenzt auf 40–58 %), dann festhalten.
+// Sonst wächst es beim Aufklappen und drückt Globus und 3D-Bild darüber zusammen; so scrollt nur der Inhalt.
+function haltePanelHoehe() {
+  const p = panel();
+  p.style.flex = '';
+  if (breit.matches) return;
+  p.style.flex = `0 0 ${p.getBoundingClientRect().height}px`;
+}
+addEventListener('resize', () => { if (panel()) haltePanelHoehe(); });
 const legende = (eintraege) => { document.getElementById('legende').innerHTML = eintraege.map(([f, t]) => `<span><i style="background:${f}"></i>${esc(t)}</span>`).join(''); };
 const landZeile = ([l, p], i) => `
   <div class="lw-land" data-land="${l}"><span class="nr">${String(i + 1).padStart(2, '0')}</span><span>${esc(land(l))}</span><b>${p} %</b><div class="mbar"><b style="width:${p}%"></b></div></div>`;
@@ -229,9 +239,9 @@ function zeigeGegenstand() {
   for (const m of obj.materialien) { const c = material(m.mid).cls ?? 'metall'; mix.set(c, (mix.get(c) ?? 0) + m.g); }
   const sortiert = [...mix].sort((a, b) => b[1] - a[1]);
   setzePanel(`
-    <div class="lw-zahl"><b>${gramm(obj.gramm)}</b><span>${esc(obj.name)}</span>${schaetzung(CSV, 'Typisches Gewicht, eigene Schätzung')}</div>
-    ${bestand()[obj.id] ? `<div class="lw-habich-da"><span>Auf deiner Werkbank</span><span class="wb-stepper"><button data-d="-1" aria-label="weniger">−</button><b>${bestand()[obj.id]}</b><button data-d="1" aria-label="mehr">+</button></span></div>`
-      : '<button class="btn ghost lw-habich" id="habich"><span class="pfeil">+</span>Hab ich, auf die Werkbank</button>'}
+    <div class="lw-zahl lw-zahl-wb"><b>${gramm(obj.gramm)}</b><span>${esc(obj.name)}</span>${schaetzung(CSV, 'Typisches Gewicht, eigene Schätzung')}
+    ${bestand()[obj.id] ? `<div class="lw-habich-da" title="Auf deiner Werkbank">${icon('werkbank')}<span class="wb-stepper"><button data-d="-1" aria-label="weniger">−</button><b>${bestand()[obj.id]}</b><button data-d="1" aria-label="mehr">+</button></span></div>`
+      : '<button class="btn ghost lw-habich" id="habich"><span class="pfeil">+</span>Auf die Werkbank</button>'}</div>
     <div><div class="mix">${sortiert.map(([c, g]) => `<i style="width:${(g / gesamt) * 100}%;background:${CLASSES[c]?.color}"></i>`).join('')}</div>
       <div class="mix-legend">${sortiert.map(([c, g]) => `<span><i style="background:${CLASSES[c]?.color}"></i>${esc(CLASSES[c]?.label)}<b>${zahl((g / gesamt) * 100, 0)} %</b></span>`).join('')}</div></div>
     ${block(`${seed.parts.length} Teile`, `<div class="plist">${viewer.teile.map((t) => `<button class="prow" data-i="${t.i}"><span class="n">${t.nr ?? '–'}</span>
