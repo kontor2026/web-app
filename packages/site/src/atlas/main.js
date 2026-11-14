@@ -133,10 +133,24 @@ function setzePanel(html) {
   const i = IDS.indexOf(schritt), naechste = SCHRITTE[i + 1];
   const weiter = naechste ? `<a class="lw-weiter" href="${link(naechste.id, null)}">${icon(naechste.id)}<span>Weiter: ${naechste.name}</span><span class="pfeil">→</span></a>`
     : `<a class="lw-weiter" href="../modelle/#kat=${obj.id}">${icon('gegenstand')}<span>3D-Modell ansehen</span><span class="pfeil">→</span></a>`;
+  // Neuaufbau in derselben Station (z. B. anderer Rohstoff im Stoffstrom gewählt): Aufklapper und Scrollstand bleiben,
+  // sonst springt die Ansicht beim Tippen zurück nach oben und „Woher kommt was?“ klappt zu
+  const ort = `${obj.id}|${schritt}`, alt = panel().querySelector('.panel-inner');
+  const bleibt = panel().dataset.ort === ort && alt;
+  const schluessel = (d) => d.id || d.querySelector(':scope > summary')?.textContent.replace(/[\d.,]+/g, '').trim();
+  const offen = new Set(bleibt ? [...alt.querySelectorAll('details[open]')].map(schluessel) : []);
+  const oben = bleibt ? alt.scrollTop : 0, obenPanel = bleibt ? panel().scrollTop : 0;
+  panel().dataset.ort = ort;
   // „Weiter“ steht außerhalb des Inhalts: auf dem Handy immer unten sichtbar, egal was aufgeklappt ist
   panel().innerHTML = `<div class="panel-inner">${html}</div><div class="lw-weiter-zeile">${weiter}</div>`;
-  panel().querySelector('.panel-inner').scrollTop = 0;
-  panel().scrollTop = 0;
+  const neu = panel().querySelector('.panel-inner');
+  neu.querySelectorAll('details').forEach((d) => { if (offen.has(schluessel(d))) d.open = true; });
+  neu.scrollTop = oben; panel().scrollTop = obenPanel;
+  // Aufgeklappte Inhalte (Stoffstrom) zeichnen sich erst im nächsten Bild; dann den Scrollstand noch einmal setzen
+  if (oben || obenPanel) {
+    const zurueck = () => { neu.scrollTop = oben; panel().scrollTop = obenPanel; };
+    setTimeout(zurueck, 0); setTimeout(zurueck, 80); requestAnimationFrame(() => requestAnimationFrame(zurueck));
+  }
 }
 const legende = (eintraege) => { document.getElementById('legende').innerHTML = eintraege.map(([f, t]) => `<span><i style="background:${f}"></i>${esc(t)}</span>`).join(''); };
 const landZeile = ([l, p], i) => `
