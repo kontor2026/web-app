@@ -276,3 +276,13 @@
 .lw-zahl-wb .wb-stepper button { width: 36px; height: 36px; }
 /* Handy: 3D-Bild und Säule nutzen die ganze Bühne (die Legende darunter ist hier ausgeblendet) */
 @media (max-width: 900px) { .lw .lw-szene, .lw .lw-balken { inset: 0; } }
+/* Handy: Rohstoffe als Chip-Reihe statt Auswahlfeld (das iPhone-Auswahlmenü brachte die Ansicht durcheinander) */
+@media (max-width: 900px) {
+  .lw .lw-wahl-liste { display: none; }
+  .lw .lw-chips { display: flex; flex-wrap: nowrap; gap: 6px; overflow-x: auto; overscroll-behavior-x: contain; scrollbar-width: none;
+    margin: 0 -16px; padding: 2px 16px; -webkit-mask-image: linear-gradient(90deg, transparent, #000 14px, #000 calc(100% - 22px), transparent); mask-image: linear-gradient(90deg, transparent, #000 14px, #000 calc(100% - 22px), transparent); }
+  .lw .lw-chips::-webkit-scrollbar { display: none; }
+  .lw .lw-chip { flex: none; height: 40px; border-radius: 20px; padding: 0 14px; white-space: nowrap; }
+  .lw .lw-chip.on { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+  .lw .lw-chip.on i { border-color: var(--accent-ink); }
+}

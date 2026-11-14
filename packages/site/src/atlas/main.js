@@ -81,13 +81,26 @@ function baueGeruest() {
   });
   new ResizeObserver(() => { if (schritt === 'abbau' || schritt === 'verarbeitung') zeichneStrom(); }).observe(document.getElementById('strom'));
   // Wischen über dem Datenblatt wechselt die Station (das Bild darüber bleibt drehbar)
+  // Nur ein echtes Wischen zählt: ein Finger, auf freier Fläche begonnen (nicht auf Knopf, Feld, Chip, Aufklapper),
+  // mit Bewegung dazwischen und zügig. Sonst löst z. B. das iPhone-Auswahlmenü, dessen Option woanders liegt, einen Stationswechsel aus.
   let wisch = null;
   const pan = document.getElementById('panel');
-  pan.addEventListener('touchstart', (e) => { wisch = [e.touches[0].clientX, e.touches[0].clientY]; }, { passive: true });
+  const BEDIENT = 'a, button, select, input, label, summary, .lw-chips, .prow, .chip-q, [data-wischen="nein"]';
+  pan.addEventListener('touchstart', (e) => {
+    const t = e.touches[0];
+    wisch = e.touches.length === 1 && !e.target.closest(BEDIENT) ? { id: t.identifier, x: t.clientX, y: t.clientY, zeit: performance.now(), bewegt: false } : null;
+  }, { passive: true });
+  pan.addEventListener('touchmove', (e) => {
+    const t = wisch && [...e.touches].find((x) => x.identifier === wisch.id);
+    if (!t) { wisch = null; return; }
+    if (Math.hypot(t.clientX - wisch.x, t.clientY - wisch.y) > 12) wisch.bewegt = true;
+  }, { passive: true });
+  pan.addEventListener('touchcancel', () => { wisch = null; }, { passive: true });
   pan.addEventListener('touchend', (e) => {
-    if (!wisch) return;
-    const dx = e.changedTouches[0].clientX - wisch[0], dy = e.changedTouches[0].clientY - wisch[1];
-    wisch = null;
+    const t = wisch && [...e.changedTouches].find((x) => x.identifier === wisch.id);
+    const w = wisch; wisch = null;
+    if (!t || !w.bewegt || performance.now() - w.zeit > 700) return;
+    const dx = t.clientX - w.x, dy = t.clientY - w.y;
     if (Math.abs(dx) < 60 || Math.abs(dx) < Math.abs(dy) * 1.5) return;
     const i = IDS.indexOf(schritt), j = i + (dx < 0 ? 1 : -1);
     if (j >= 0 && j < IDS.length) location.hash = link(IDS[j], null);
@@ -207,6 +220,9 @@ function zeigeRohstoffe() {
     <details class="lw-fluss lw-block" id="fluss"><summary>Woher kommt was?</summary><div class="lw-fluss-ort"></div></details></div>`);
   verbindeLaender();
   document.getElementById('rohstoff-wahl').addEventListener('change', (e) => { location.hash = link(schritt, e.target.value); });
+  // Gewählten Chip in der Reihe sichtbar machen (nur waagerecht, nichts anderes verschieben)
+  const reihe = panel().querySelector('.lw-chips'), an = reihe?.querySelector('.lw-chip.on');
+  if (reihe && an) reihe.scrollLeft = Math.max(0, an.offsetLeft - reihe.offsetLeft - 16);
   const fluss = document.getElementById('fluss');
   fluss.addEventListener('toggle', () => {
     if (!fluss.open) return;
