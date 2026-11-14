@@ -46,10 +46,10 @@ teile = [
          info='Weiche Gummieinlage mit Rillen, damit der nasse Rasierer nicht rutscht. Angespritzt, nicht lösbar.',
          color='#E8ECEE', marks=raster(1, 4, 1, 6, 6, 2, 0, 6, r=1, fill='#C3C9CE')),
     teil('griff', 'razor_handle', 'Griff', 'Griff', 'box',
-         x=11.5, y=16, w=12, d=124, z=0, h=9, r=6, explode=[0, 30, 0], mass=11,
+         x=11.5, y=16, w=12, d=124, z=0, h=9, r=6, form='liegend_y', explode=[0, 30, 0], mass=11,
          info='Griff aus Polypropylen. Einwegrasierer erzeugen viel Müll; Rasierer mit Wechselklingen '
               'oder aus Metall halten jahrelang.',
-         color=PP, marks=[mark('box', 2, 20, 8, 40, 4, '#1F4F86')]),
+         color=PP, marks=[mark('box', 2, 20, 8, 40, 4, '#1F4F86', zeichnung=True)]),
 ]
 
 skaliere_masse(teile, oid='disposable_razor', stellen=2)

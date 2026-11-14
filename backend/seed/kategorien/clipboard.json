@@ -212,7 +212,8 @@
     ]
    ],
    "info": "Drückt die Klemme zu. Steht unter Spannung, beim Aufbiegen kann sie wegspringen.",
-   "color": "#8A9298",
+   "color": "#9AA2A8",
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
@@ -220,7 +221,8 @@
      "y": 1,
      "w": 1.2,
      "d": 10,
-     "fill": "#5A6268"
+     "fill": "#5A6268",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -228,7 +230,8 @@
      "y": 1,
      "w": 1.2,
      "d": 10,
-     "fill": "#5A6268"
+     "fill": "#5A6268",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -236,7 +239,8 @@
      "y": 1,
      "w": 1.2,
      "d": 10,
-     "fill": "#5A6268"
+     "fill": "#5A6268",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -244,7 +248,8 @@
      "y": 1,
      "w": 1.2,
      "d": 10,
-     "fill": "#5A6268"
+     "fill": "#5A6268",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -252,7 +257,8 @@
      "y": 1,
      "w": 1.2,
      "d": 10,
-     "fill": "#5A6268"
+     "fill": "#5A6268",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -260,7 +266,8 @@
      "y": 1,
      "w": 1.2,
      "d": 10,
-     "fill": "#5A6268"
+     "fill": "#5A6268",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -268,7 +275,8 @@
      "y": 1,
      "w": 1.2,
      "d": 10,
-     "fill": "#5A6268"
+     "fill": "#5A6268",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -276,7 +284,8 @@
      "y": 1,
      "w": 1.2,
      "d": 10,
-     "fill": "#5A6268"
+     "fill": "#5A6268",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -284,7 +293,8 @@
      "y": 1,
      "w": 1.2,
      "d": 10,
-     "fill": "#5A6268"
+     "fill": "#5A6268",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -292,7 +302,8 @@
      "y": 1,
      "w": 1.2,
      "d": 10,
-     "fill": "#5A6268"
+     "fill": "#5A6268",
+     "zeichnung": true
     }
    ]
   },

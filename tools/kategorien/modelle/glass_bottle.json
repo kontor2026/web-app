@@ -292,13 +292,13 @@
    "y": 0,
    "w": 60,
    "z": 6,
-   "h": 134,
+   "h": 33.5,
    "explode": [
     0,
     0,
     0
    ],
-   "mass": 226.4,
+   "mass": 56.6,
    "materials": [
     [
      "behaelterglas",
@@ -307,7 +307,95 @@
    ],
    "info": "Kalk-Natron-Glas aus Sand, Soda und Kalk. Als Mehrwegflasche bis zu 50-mal gespült und neu befüllt, danach nach Farbe getrennt eingeschmolzen.",
    "color": "#5C3A1E",
-   "opacity": 0.75
+   "opacity": 0.75,
+   "label": true
+  },
+  {
+   "id": "koerper2",
+   "component_id": "glass_container",
+   "material_id": "glass",
+   "name": "Flaschenkörper",
+   "short": "Körper",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 60,
+   "z": 39.5,
+   "h": 33.5,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 56.6,
+   "materials": [
+    [
+     "behaelterglas",
+     100
+    ]
+   ],
+   "info": "Gehört zur Flasche, alles in einem Stück aus Glas geblasen.",
+   "color": "#5C3A1E",
+   "opacity": 0.75,
+   "label": false
+  },
+  {
+   "id": "koerper3",
+   "component_id": "glass_container",
+   "material_id": "glass",
+   "name": "Flaschenkörper",
+   "short": "Körper",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 60,
+   "z": 73,
+   "h": 33.5,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 56.6,
+   "materials": [
+    [
+     "behaelterglas",
+     100
+    ]
+   ],
+   "info": "Gehört zur Flasche, alles in einem Stück aus Glas geblasen.",
+   "color": "#5C3A1E",
+   "opacity": 0.75,
+   "label": false
+  },
+  {
+   "id": "koerper4",
+   "component_id": "glass_container",
+   "material_id": "glass",
+   "name": "Flaschenkörper",
+   "short": "Körper",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 60,
+   "z": 106.5,
+   "h": 33.5,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 56.6,
+   "materials": [
+    [
+     "behaelterglas",
+     100
+    ]
+   ],
+   "info": "Gehört zur Flasche, alles in einem Stück aus Glas geblasen.",
+   "color": "#5C3A1E",
+   "opacity": 0.75,
+   "label": false
   },
   {
    "id": "boden",

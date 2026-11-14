@@ -156,12 +156,14 @@
    ],
    "info": "Verchromter Stahldraht, im Hals eingedreht, damit er sich drehen lässt. Mit einer Zange herausdrehen; der Stahl gehört zum Altmetall.",
    "color": "#C3C9CE",
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
      "x": 2,
      "y": 1.5,
      "w": 20,
+     "zeichnung": true,
      "d": 1,
      "r": 0.5,
      "fill": "#E6EAED"
@@ -196,7 +198,8 @@
    ],
    "info": "Herabgebogenes Ende des Hakens, das über die Kleiderstange greift.",
    "color": "#C3C9CE",
-   "label": false
+   "label": false,
+   "form": "liegend_y"
   },
   {
    "id": "hakenschaft",
@@ -227,6 +230,7 @@
    "info": "Gerades Ende des Hakens mit Gewinde, das im Kunststoff steckt.",
    "color": "#C3C9CE",
    "label": false,
+   "form": "liegend_y",
    "marks": [
     {
      "shape": "box",
@@ -346,12 +350,14 @@
    "info": "Die schrägen Arme tragen Hemd oder Jacke. Polystyrol ist hart, kann aber bei Kälte brechen.",
    "color": "#33373B",
    "label": true,
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
      "x": 1,
      "y": 3,
      "w": 11.071,
+     "zeichnung": true,
      "d": 1.2,
      "r": 0.5,
      "fill": "#454A4F"
@@ -387,12 +393,14 @@
    "info": "Abschnitt des Schulterbogens.",
    "color": "#33373B",
    "label": false,
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
      "x": 1,
      "y": 3,
      "w": 11.071,
+     "zeichnung": true,
      "d": 1.2,
      "r": 0.5,
      "fill": "#454A4F"
@@ -428,12 +436,14 @@
    "info": "Abschnitt des Schulterbogens.",
    "color": "#33373B",
    "label": false,
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
      "x": 1,
      "y": 3,
      "w": 11.071,
+     "zeichnung": true,
      "d": 1.2,
      "r": 0.5,
      "fill": "#454A4F"
@@ -469,12 +479,14 @@
    "info": "Abschnitt des Schulterbogens.",
    "color": "#33373B",
    "label": false,
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
      "x": 1,
      "y": 3,
      "w": 11.071,
+     "zeichnung": true,
      "d": 1.2,
      "r": 0.5,
      "fill": "#454A4F"
@@ -510,12 +522,14 @@
    "info": "Abschnitt des Schulterbogens.",
    "color": "#33373B",
    "label": false,
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
      "x": 1,
      "y": 3,
      "w": 11.071,
+     "zeichnung": true,
      "d": 1.2,
      "r": 0.5,
      "fill": "#454A4F"
@@ -551,12 +565,14 @@
    "info": "Abschnitt des Schulterbogens.",
    "color": "#33373B",
    "label": false,
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
      "x": 1,
      "y": 3,
      "w": 11.071,
+     "zeichnung": true,
      "d": 1.2,
      "r": 0.5,
      "fill": "#454A4F"
@@ -592,12 +608,14 @@
    "info": "Abschnitt des Schulterbogens.",
    "color": "#33373B",
    "label": false,
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
      "x": 1,
      "y": 3,
      "w": 11.071,
+     "zeichnung": true,
      "d": 1.2,
      "r": 0.5,
      "fill": "#454A4F"
@@ -633,12 +651,14 @@
    "info": "Abschnitt des Schulterbogens.",
    "color": "#33373B",
    "label": false,
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
      "x": 1,
      "y": 3,
      "w": 11.071,
+     "zeichnung": true,
      "d": 1.2,
      "r": 0.5,
      "fill": "#454A4F"
@@ -674,12 +694,14 @@
    "info": "Abschnitt des Schulterbogens.",
    "color": "#33373B",
    "label": false,
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
      "x": 1,
      "y": 3,
      "w": 11.071,
+     "zeichnung": true,
      "d": 1.2,
      "r": 0.5,
      "fill": "#454A4F"
@@ -715,12 +737,14 @@
    "info": "Abschnitt des Schulterbogens.",
    "color": "#33373B",
    "label": false,
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
      "x": 1,
      "y": 3,
      "w": 11.071,
+     "zeichnung": true,
      "d": 1.2,
      "r": 0.5,
      "fill": "#454A4F"
@@ -756,12 +780,14 @@
    "info": "Abschnitt des Schulterbogens.",
    "color": "#33373B",
    "label": false,
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
      "x": 1,
      "y": 3,
      "w": 11.071,
+     "zeichnung": true,
      "d": 1.2,
      "r": 0.5,
      "fill": "#454A4F"
@@ -797,12 +823,14 @@
    "info": "Abschnitt des Schulterbogens.",
    "color": "#33373B",
    "label": false,
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
      "x": 1,
      "y": 3,
      "w": 11.071,
+     "zeichnung": true,
      "d": 1.2,
      "r": 0.5,
      "fill": "#454A4F"
@@ -838,12 +866,14 @@
    "info": "Abschnitt des Schulterbogens.",
    "color": "#33373B",
    "label": false,
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
      "x": 1,
      "y": 3,
      "w": 11.071,
+     "zeichnung": true,
      "d": 1.2,
      "r": 0.5,
      "fill": "#454A4F"
@@ -879,12 +909,14 @@
    "info": "Abschnitt des Schulterbogens.",
    "color": "#33373B",
    "label": false,
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
      "x": 1,
      "y": 3,
      "w": 11.071,
+     "zeichnung": true,
      "d": 1.2,
      "r": 0.5,
      "fill": "#454A4F"
@@ -920,12 +952,14 @@
    "info": "Abschnitt des Schulterbogens.",
    "color": "#33373B",
    "label": false,
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
      "x": 1,
      "y": 3,
      "w": 11.071,
+     "zeichnung": true,
      "d": 1.2,
      "r": 0.5,
      "fill": "#454A4F"
@@ -961,12 +995,14 @@
    "info": "Abschnitt des Schulterbogens.",
    "color": "#33373B",
    "label": false,
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
      "x": 1,
      "y": 3,
      "w": 11.071,
+     "zeichnung": true,
      "d": 1.2,
      "r": 0.5,
      "fill": "#454A4F"
@@ -1002,12 +1038,14 @@
    "info": "Abschnitt des Schulterbogens.",
    "color": "#33373B",
    "label": false,
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
      "x": 1,
      "y": 3,
      "w": 11.071,
+     "zeichnung": true,
      "d": 1.2,
      "r": 0.5,
      "fill": "#454A4F"
@@ -1043,12 +1081,14 @@
    "info": "Abschnitt des Schulterbogens.",
    "color": "#33373B",
    "label": false,
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
      "x": 1,
      "y": 3,
      "w": 11.071,
+     "zeichnung": true,
      "d": 1.2,
      "r": 0.5,
      "fill": "#454A4F"
@@ -1084,12 +1124,14 @@
    "info": "Abschnitt des Schulterbogens.",
    "color": "#33373B",
    "label": false,
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
      "x": 1,
      "y": 3,
      "w": 11.071,
+     "zeichnung": true,
      "d": 1.2,
      "r": 0.5,
      "fill": "#454A4F"
@@ -1125,12 +1167,14 @@
    "info": "Abschnitt des Schulterbogens.",
    "color": "#33373B",
    "label": false,
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
      "x": 1,
      "y": 3,
      "w": 11.071,
+     "zeichnung": true,
      "d": 1.2,
      "r": 0.5,
      "fill": "#454A4F"
@@ -1166,12 +1210,14 @@
    "info": "Abschnitt des Schulterbogens.",
    "color": "#33373B",
    "label": false,
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
      "x": 1,
      "y": 3,
      "w": 11.071,
+     "zeichnung": true,
      "d": 1.2,
      "r": 0.5,
      "fill": "#454A4F"
@@ -1207,12 +1253,14 @@
    "info": "Abschnitt des Schulterbogens.",
    "color": "#33373B",
    "label": false,
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
      "x": 1,
      "y": 3,
      "w": 11.071,
+     "zeichnung": true,
      "d": 1.2,
      "r": 0.5,
      "fill": "#454A4F"
@@ -1248,12 +1296,14 @@
    "info": "Abschnitt des Schulterbogens.",
    "color": "#33373B",
    "label": false,
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
      "x": 1,
      "y": 3,
      "w": 11.071,
+     "zeichnung": true,
      "d": 1.2,
      "r": 0.5,
      "fill": "#454A4F"
@@ -1289,12 +1339,14 @@
    "info": "Abschnitt des Schulterbogens.",
    "color": "#33373B",
    "label": false,
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
      "x": 1,
      "y": 3,
      "w": 11.071,
+     "zeichnung": true,
      "d": 1.2,
      "r": 0.5,
      "fill": "#454A4F"
@@ -1330,12 +1382,14 @@
    "info": "Abschnitt des Schulterbogens.",
    "color": "#33373B",
    "label": false,
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
      "x": 1,
      "y": 3,
      "w": 11.071,
+     "zeichnung": true,
      "d": 1.2,
      "r": 0.5,
      "fill": "#454A4F"
@@ -1371,12 +1425,14 @@
    "info": "Abschnitt des Schulterbogens.",
    "color": "#33373B",
    "label": false,
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
      "x": 1,
      "y": 3,
      "w": 11.071,
+     "zeichnung": true,
      "d": 1.2,
      "r": 0.5,
      "fill": "#454A4F"
@@ -1412,12 +1468,14 @@
    "info": "Abschnitt des Schulterbogens.",
    "color": "#33373B",
    "label": false,
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
      "x": 1,
      "y": 3,
      "w": 11.071,
+     "zeichnung": true,
      "d": 1.2,
      "r": 0.5,
      "fill": "#454A4F"
@@ -1453,12 +1511,14 @@
    "info": "Abschnitt des Schulterbogens.",
    "color": "#33373B",
    "label": false,
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
      "x": 1,
      "y": 3,
      "w": 11.071,
+     "zeichnung": true,
      "d": 1.2,
      "r": 0.5,
      "fill": "#454A4F"
@@ -1610,6 +1670,7 @@
    ],
    "info": "Gerippte Stange, auf der Hosen nicht rutschen. Kleiderbügel sind keine Verpackung: weiterverwenden oder beim Modehändler abgeben, sonst Restmüll.",
    "color": "#33373B",
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
@@ -1618,7 +1679,8 @@
      "w": 3,
      "d": 6,
      "r": 1,
-     "fill": "#3A3F44"
+     "fill": "#3A3F44",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -1627,7 +1689,8 @@
      "w": 3,
      "d": 6,
      "r": 1,
-     "fill": "#3A3F44"
+     "fill": "#3A3F44",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -1636,7 +1699,8 @@
      "w": 3,
      "d": 6,
      "r": 1,
-     "fill": "#3A3F44"
+     "fill": "#3A3F44",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -1645,7 +1709,8 @@
      "w": 3,
      "d": 6,
      "r": 1,
-     "fill": "#3A3F44"
+     "fill": "#3A3F44",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -1654,7 +1719,8 @@
      "w": 3,
      "d": 6,
      "r": 1,
-     "fill": "#3A3F44"
+     "fill": "#3A3F44",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -1663,7 +1729,8 @@
      "w": 3,
      "d": 6,
      "r": 1,
-     "fill": "#3A3F44"
+     "fill": "#3A3F44",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -1672,7 +1739,8 @@
      "w": 3,
      "d": 6,
      "r": 1,
-     "fill": "#3A3F44"
+     "fill": "#3A3F44",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -1681,7 +1749,8 @@
      "w": 3,
      "d": 6,
      "r": 1,
-     "fill": "#3A3F44"
+     "fill": "#3A3F44",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -1690,7 +1759,8 @@
      "w": 3,
      "d": 6,
      "r": 1,
-     "fill": "#3A3F44"
+     "fill": "#3A3F44",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -1699,7 +1769,8 @@
      "w": 3,
      "d": 6,
      "r": 1,
-     "fill": "#3A3F44"
+     "fill": "#3A3F44",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -1708,7 +1779,8 @@
      "w": 3,
      "d": 6,
      "r": 1,
-     "fill": "#3A3F44"
+     "fill": "#3A3F44",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -1717,7 +1789,8 @@
      "w": 3,
      "d": 6,
      "r": 1,
-     "fill": "#3A3F44"
+     "fill": "#3A3F44",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -1726,7 +1799,8 @@
      "w": 3,
      "d": 6,
      "r": 1,
-     "fill": "#3A3F44"
+     "fill": "#3A3F44",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -1735,7 +1809,8 @@
      "w": 3,
      "d": 6,
      "r": 1,
-     "fill": "#3A3F44"
+     "fill": "#3A3F44",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -1744,7 +1819,8 @@
      "w": 3,
      "d": 6,
      "r": 1,
-     "fill": "#3A3F44"
+     "fill": "#3A3F44",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -1753,7 +1829,8 @@
      "w": 3,
      "d": 6,
      "r": 1,
-     "fill": "#3A3F44"
+     "fill": "#3A3F44",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -1762,7 +1839,8 @@
      "w": 3,
      "d": 6,
      "r": 1,
-     "fill": "#3A3F44"
+     "fill": "#3A3F44",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -1771,7 +1849,8 @@
      "w": 3,
      "d": 6,
      "r": 1,
-     "fill": "#3A3F44"
+     "fill": "#3A3F44",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -1780,7 +1859,8 @@
      "w": 3,
      "d": 6,
      "r": 1,
-     "fill": "#3A3F44"
+     "fill": "#3A3F44",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -1789,7 +1869,8 @@
      "w": 3,
      "d": 6,
      "r": 1,
-     "fill": "#3A3F44"
+     "fill": "#3A3F44",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -1798,7 +1879,8 @@
      "w": 3,
      "d": 6,
      "r": 1,
-     "fill": "#3A3F44"
+     "fill": "#3A3F44",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -1807,7 +1889,8 @@
      "w": 3,
      "d": 6,
      "r": 1,
-     "fill": "#3A3F44"
+     "fill": "#3A3F44",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -1816,7 +1899,8 @@
      "w": 3,
      "d": 6,
      "r": 1,
-     "fill": "#3A3F44"
+     "fill": "#3A3F44",
+     "zeichnung": true
     }
    ]
   }

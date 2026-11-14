@@ -44,6 +44,16 @@ g('koerper', 'Flaschenkörper', 'Körper', 60, 6, 134, 230,
 g('boden', 'Boden mit Scheuerring', 'Boden', 56, 0, 6, 40,
   'Dicker Boden. Der helle, zerkratzte Ring entsteht, wenn Flaschen im Kasten und auf dem Band aneinanderreiben.')
 
+# Körper in 4 gleich breite Abschnitte teilen: die Foto-Ansicht verbindet die Scheiben zu einer glatten Hülle,
+# so bleibt die Wand gerade statt fassförmig
+_i = next(i for i, p in enumerate(glas) if p['id'] == 'koerper')
+_k = glas.pop(_i)
+for _n in range(4):
+    _p = dict(_k, id='koerper' if _n == 0 else f'koerper{_n + 1}', z=_k['z'] + _k['h'] * _n / 4, h=_k['h'] / 4,
+              mass=_k['mass'] / 4, label=_k.get('label', True) if _n == 0 else False,
+              info=_k['info'] if _n == 0 else INFO_G, marks=_k.get('marks') if _n == 4 - 1 else None)
+    glas.insert(_i + _n, _p)
+
 teile = [
     teil('kronkorken', 'crown_cap', 'Kronkorken', 'Kronkorken', 'cyl', **rund(32, 223, 7), mass=2.0,
          materials=[['weissblech', 100]], color='#B8BEC4',

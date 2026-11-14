@@ -36,10 +36,10 @@ teile = [
          info='Bedruckte PP-Hülse. Ganz leer gedreht und ausgekratzt darf sie in die Gelbe Tonne; mit Kleberesten in den Restmüll.',
          color=WEISS, marks=[mark('cyl', 2, 2, 24, fill='#E4E1D8')]),
     teil('etikett', 'glue_stick_tube', 'Bedrucktes Etikett', 'Etikett', 'cyl',
-         x=0.7, y=0.7, w=28.6, z=22, h=48, mass=0.4, explode=[-48, 0, 0], sortBias=5,
+         x=0.7, y=0.7, w=28.6, z=22, h=48, mass=0.4, explode=[-48, 0, 0], sortBias=5, wand=0.5, boden=0,
          info='Dünne bedruckte PP-Folie, beim Spritzgießen mit der Hülse verschmolzen (In-Mould-Label). '
               'Sie muss nicht abgezogen werden, weil sie aus demselben Kunststoff ist.',
-         color='#F2C230', marks=[mark('cyl', 0.4, 0.4, 27.8, fill='#D8D4CA')]),
+         color='#F2C230', marks=[mark('cyl', 0.4, 0.4, 27.8, fill='#D8D4CA', zeichnung=True)]),
     teil('drehknopf', 'glue_stick_tube', 'Drehknopf', 'Drehknopf', 'cyl',
          x=1, y=1, w=28, z=0, h=10, mass=1.7,
          info='Am Boden drehen, dann schraubt sich der Kleber heraus. Er ist in die Hülse eingeschnappt.',

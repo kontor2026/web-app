@@ -425,13 +425,13 @@
    "y": 0,
    "w": 76,
    "z": 6,
-   "h": 190,
+   "h": 38,
    "explode": [
     0,
     0,
     0
    ],
-   "mass": 343,
+   "mass": 68.6,
    "materials": [
     [
      "behaelterglas",
@@ -440,7 +440,124 @@
    ],
    "info": "Kalk-Natron-Glas aus Sand, Soda und Kalk. Leer und ohne Korken in den Grünglas-Container geben.",
    "color": "#2F5E3A",
-   "opacity": 0.7
+   "opacity": 0.7,
+   "label": true
+  },
+  {
+   "id": "koerper2",
+   "component_id": "glass_container",
+   "material_id": "glass",
+   "name": "Flaschenkörper",
+   "short": "Körper",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 76,
+   "z": 44,
+   "h": 38,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 68.6,
+   "materials": [
+    [
+     "behaelterglas",
+     100
+    ]
+   ],
+   "info": "Gehört zur Flasche, alles in einem Stück aus Glas geformt.",
+   "color": "#2F5E3A",
+   "opacity": 0.7,
+   "label": false
+  },
+  {
+   "id": "koerper3",
+   "component_id": "glass_container",
+   "material_id": "glass",
+   "name": "Flaschenkörper",
+   "short": "Körper",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 76,
+   "z": 82,
+   "h": 38,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 68.6,
+   "materials": [
+    [
+     "behaelterglas",
+     100
+    ]
+   ],
+   "info": "Gehört zur Flasche, alles in einem Stück aus Glas geformt.",
+   "color": "#2F5E3A",
+   "opacity": 0.7,
+   "label": false
+  },
+  {
+   "id": "koerper4",
+   "component_id": "glass_container",
+   "material_id": "glass",
+   "name": "Flaschenkörper",
+   "short": "Körper",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 76,
+   "z": 120,
+   "h": 38,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 68.6,
+   "materials": [
+    [
+     "behaelterglas",
+     100
+    ]
+   ],
+   "info": "Gehört zur Flasche, alles in einem Stück aus Glas geformt.",
+   "color": "#2F5E3A",
+   "opacity": 0.7,
+   "label": false
+  },
+  {
+   "id": "koerper5",
+   "component_id": "glass_container",
+   "material_id": "glass",
+   "name": "Flaschenkörper",
+   "short": "Körper",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 76,
+   "z": 158,
+   "h": 38,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 68.6,
+   "materials": [
+    [
+     "behaelterglas",
+     100
+    ]
+   ],
+   "info": "Gehört zur Flasche, alles in einem Stück aus Glas geformt.",
+   "color": "#2F5E3A",
+   "opacity": 0.7,
+   "label": false
   },
   {
    "id": "boden",

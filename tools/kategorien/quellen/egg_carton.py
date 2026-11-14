@@ -46,19 +46,29 @@ teile = [
          color=FASER, marks=[mark('box', 2, 2, 152, 97, 6, DUNKEL)]
                             + [mark('cyl', cx - 2 - 21, cy - 2 - 20, 42, 40, fill=MULDE) for cy in MITTE_Y for cx in MITTE_X]),
 ]
+# Jede Mulde als Stapel von Scheiben, unten schmal, oben breit: in der Foto-Ansicht eine runde Schale
+PROFIL = ((26, 4), (36, 5), (42, 6), (46, 11))   # (Breite, Höhe) von unten nach oben, zusammen z = 2 … 28
+MULDEN = []
 n = 0
 for cy in MITTE_Y:
     for cx in MITTE_X:
         n += 1
-        teile.append(teil(f'mulde_{n}', 'molded_pulp_tray', 'Eiermulde', 'Eiermulde', 'cyl',
-                          x=cx - 23, y=cy - 22, w=46, d=44, z=2, h=26, mass=1.5, label=None if n == 1 else False,
-                          info='Eine von sechs Mulden. Sie federt Stöße ab, weil die Fasern leicht nachgeben.' if n == 1
-                          else 'Weitere Mulde.', color=FASER if n != 1 else FASER))
+        z = 2
+        for k, (w, h) in enumerate(PROFIL):
+            d = w * 44 / 46
+            MULDEN.append(teil(f'mulde_{n}' if k == len(PROFIL) - 1 else f'mulde_{n}_{k}', 'molded_pulp_tray',
+                               'Eiermulde', 'Eiermulde', 'cyl', x=cx - w / 2, y=cy - d / 2, w=w, d=d, z=z, h=h,
+                               mass=1.5 * w * d * h / (46 * 44 * 26),
+                               label=None if (n == 1 and k == len(PROFIL) - 1) else False,
+                               info='Eine von sechs Mulden. Sie federt Stöße ab, weil die Fasern leicht nachgeben.'
+                               if n == 1 else 'Weitere Mulde.', color=FASER))
+            z += h
+teile += MULDEN
 teile.append(teil('lasche', 'molded_pulp_tray', 'Verschlusslasche', 'Lasche', 'box',
                   x=62, y=103, w=36, d=2, z=30, h=18, r=1, explode=[0, 70, 0], mass=0.8, sortBias=25,
                   info='Hängt vorne am Deckel. Ihre Nasen rasten in Schlitze der Unterschale ein und halten den Karton zu.',
                   color=FASER, marks=[mark('box', 8, 0, 20, 2, 1, DUNKEL)]))
-explodiere(teile, abstand=40, fest=[f'mulde_{i}' for i in range(1, 7)] + ['schale'],
+explodiere(teile, abstand=40, fest=[p['id'] for p in MULDEN] + ['schale'],
            gruppen=[['deckel_oben', 'deckel']])
 skaliere_masse(teile, oid='egg_carton')
 schreibe('egg_carton', teile)

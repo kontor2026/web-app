@@ -126,6 +126,1630 @@
  "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
+   "id": "kugel_0",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Kugelspitze",
+   "short": "Kugelspitzen",
+   "shape": "cyl",
+   "x": 20.75,
+   "y": 12.55,
+   "w": 4.5,
+   "z": 40.5,
+   "h": 4.5,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Aufgesetzte Kunststoffkugel, schont die Kopfhaut.",
+   "color": "#D9473A",
+   "label": false,
+   "form": "kugel"
+  },
+  {
+   "id": "kugel_1",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Kugelspitze",
+   "short": "Kugelspitzen",
+   "shape": "cyl",
+   "x": 29.75,
+   "y": 12.55,
+   "w": 4.5,
+   "z": 40.5,
+   "h": 4.5,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Aufgesetzte Kunststoffkugel, schont die Kopfhaut.",
+   "color": "#D9473A",
+   "label": false,
+   "form": "kugel"
+  },
+  {
+   "id": "kugel_2",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Kugelspitze",
+   "short": "Kugelspitzen",
+   "shape": "cyl",
+   "x": 38.75,
+   "y": 12.55,
+   "w": 4.5,
+   "z": 40.5,
+   "h": 4.5,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Aufgesetzte Kunststoffkugel, schont die Kopfhaut.",
+   "color": "#D9473A",
+   "label": false,
+   "form": "kugel"
+  },
+  {
+   "id": "kugel_3",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Kugelspitze",
+   "short": "Kugelspitzen",
+   "shape": "cyl",
+   "x": 47.75,
+   "y": 12.55,
+   "w": 4.5,
+   "z": 40.5,
+   "h": 4.5,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Aufgesetzte Kunststoffkugel, schont die Kopfhaut.",
+   "color": "#D9473A",
+   "label": false,
+   "form": "kugel"
+  },
+  {
+   "id": "kugel_4",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Kugelspitze",
+   "short": "Kugelspitzen",
+   "shape": "cyl",
+   "x": 11.75,
+   "y": 21.55,
+   "w": 4.5,
+   "z": 40.5,
+   "h": 4.5,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Aufgesetzte Kunststoffkugel, schont die Kopfhaut.",
+   "color": "#D9473A",
+   "label": false,
+   "form": "kugel"
+  },
+  {
+   "id": "kugel_5",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Kugelspitze",
+   "short": "Kugelspitzen",
+   "shape": "cyl",
+   "x": 20.75,
+   "y": 21.55,
+   "w": 4.5,
+   "z": 40.5,
+   "h": 4.5,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Aufgesetzte Kunststoffkugel, schont die Kopfhaut.",
+   "color": "#D9473A",
+   "label": false,
+   "form": "kugel"
+  },
+  {
+   "id": "kugel_6",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Kugelspitze",
+   "short": "Kugelspitzen",
+   "shape": "cyl",
+   "x": 29.75,
+   "y": 21.55,
+   "w": 4.5,
+   "z": 40.5,
+   "h": 4.5,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Aufgesetzte Kunststoffkugel, schont die Kopfhaut.",
+   "color": "#D9473A",
+   "label": false,
+   "form": "kugel"
+  },
+  {
+   "id": "kugel_7",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Kugelspitze",
+   "short": "Kugelspitzen",
+   "shape": "cyl",
+   "x": 38.75,
+   "y": 21.55,
+   "w": 4.5,
+   "z": 40.5,
+   "h": 4.5,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Aufgesetzte Kunststoffkugel, schont die Kopfhaut.",
+   "color": "#D9473A",
+   "label": false,
+   "form": "kugel"
+  },
+  {
+   "id": "kugel_8",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Kugelspitze",
+   "short": "Kugelspitzen",
+   "shape": "cyl",
+   "x": 47.75,
+   "y": 21.55,
+   "w": 4.5,
+   "z": 40.5,
+   "h": 4.5,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Aufgesetzte Kunststoffkugel, schont die Kopfhaut.",
+   "color": "#D9473A",
+   "label": false,
+   "form": "kugel"
+  },
+  {
+   "id": "kugel_9",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Kugelspitze",
+   "short": "Kugelspitzen",
+   "shape": "cyl",
+   "x": 56.75,
+   "y": 21.55,
+   "w": 4.5,
+   "z": 40.5,
+   "h": 4.5,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Aufgesetzte Kunststoffkugel, schont die Kopfhaut.",
+   "color": "#D9473A",
+   "label": false,
+   "form": "kugel"
+  },
+  {
+   "id": "kugel_10",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Kugelspitze",
+   "short": "Kugelspitzen",
+   "shape": "cyl",
+   "x": 11.75,
+   "y": 30.55,
+   "w": 4.5,
+   "z": 40.5,
+   "h": 4.5,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Aufgesetzte Kunststoffkugel, schont die Kopfhaut.",
+   "color": "#D9473A",
+   "label": false,
+   "form": "kugel"
+  },
+  {
+   "id": "kugel_11",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Kugelspitze",
+   "short": "Kugelspitzen",
+   "shape": "cyl",
+   "x": 20.75,
+   "y": 30.55,
+   "w": 4.5,
+   "z": 40.5,
+   "h": 4.5,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Aufgesetzte Kunststoffkugel, schont die Kopfhaut.",
+   "color": "#D9473A",
+   "label": false,
+   "form": "kugel"
+  },
+  {
+   "id": "kugel_12",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Kugelspitze",
+   "short": "Kugelspitzen",
+   "shape": "cyl",
+   "x": 29.75,
+   "y": 30.55,
+   "w": 4.5,
+   "z": 40.5,
+   "h": 4.5,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Aufgesetzte Kunststoffkugel, schont die Kopfhaut.",
+   "color": "#D9473A",
+   "label": false,
+   "form": "kugel"
+  },
+  {
+   "id": "kugel_13",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Kugelspitze",
+   "short": "Kugelspitzen",
+   "shape": "cyl",
+   "x": 38.75,
+   "y": 30.55,
+   "w": 4.5,
+   "z": 40.5,
+   "h": 4.5,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Aufgesetzte Kunststoffkugel, schont die Kopfhaut.",
+   "color": "#D9473A",
+   "label": false,
+   "form": "kugel"
+  },
+  {
+   "id": "kugel_14",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Kugelspitze",
+   "short": "Kugelspitzen",
+   "shape": "cyl",
+   "x": 47.75,
+   "y": 30.55,
+   "w": 4.5,
+   "z": 40.5,
+   "h": 4.5,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Aufgesetzte Kunststoffkugel, schont die Kopfhaut.",
+   "color": "#D9473A",
+   "label": false,
+   "form": "kugel"
+  },
+  {
+   "id": "kugel_15",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Kugelspitze",
+   "short": "Kugelspitzen",
+   "shape": "cyl",
+   "x": 56.75,
+   "y": 30.55,
+   "w": 4.5,
+   "z": 40.5,
+   "h": 4.5,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Aufgesetzte Kunststoffkugel, schont die Kopfhaut.",
+   "color": "#D9473A",
+   "label": false,
+   "form": "kugel"
+  },
+  {
+   "id": "kugel_16",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Kugelspitze",
+   "short": "Kugelspitzen",
+   "shape": "cyl",
+   "x": 11.75,
+   "y": 39.55,
+   "w": 4.5,
+   "z": 40.5,
+   "h": 4.5,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Aufgesetzte Kunststoffkugel, schont die Kopfhaut.",
+   "color": "#D9473A",
+   "label": false,
+   "form": "kugel"
+  },
+  {
+   "id": "kugel_17",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Kugelspitze",
+   "short": "Kugelspitzen",
+   "shape": "cyl",
+   "x": 20.75,
+   "y": 39.55,
+   "w": 4.5,
+   "z": 40.5,
+   "h": 4.5,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Aufgesetzte Kunststoffkugel, schont die Kopfhaut.",
+   "color": "#D9473A",
+   "label": false,
+   "form": "kugel"
+  },
+  {
+   "id": "kugel_18",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Kugelspitze",
+   "short": "Kugelspitzen",
+   "shape": "cyl",
+   "x": 29.75,
+   "y": 39.55,
+   "w": 4.5,
+   "z": 40.5,
+   "h": 4.5,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Aufgesetzte Kunststoffkugel, schont die Kopfhaut.",
+   "color": "#D9473A",
+   "label": false,
+   "form": "kugel"
+  },
+  {
+   "id": "kugel_19",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Kugelspitze",
+   "short": "Kugelspitzen",
+   "shape": "cyl",
+   "x": 38.75,
+   "y": 39.55,
+   "w": 4.5,
+   "z": 40.5,
+   "h": 4.5,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Aufgesetzte Kunststoffkugel, schont die Kopfhaut.",
+   "color": "#D9473A",
+   "label": false,
+   "form": "kugel"
+  },
+  {
+   "id": "kugel_20",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Kugelspitze",
+   "short": "Kugelspitzen",
+   "shape": "cyl",
+   "x": 47.75,
+   "y": 39.55,
+   "w": 4.5,
+   "z": 40.5,
+   "h": 4.5,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Aufgesetzte Kunststoffkugel, schont die Kopfhaut.",
+   "color": "#D9473A",
+   "label": false,
+   "form": "kugel"
+  },
+  {
+   "id": "kugel_21",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Kugelspitze",
+   "short": "Kugelspitzen",
+   "shape": "cyl",
+   "x": 56.75,
+   "y": 39.55,
+   "w": 4.5,
+   "z": 40.5,
+   "h": 4.5,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Aufgesetzte Kunststoffkugel, schont die Kopfhaut.",
+   "color": "#D9473A",
+   "label": false,
+   "form": "kugel"
+  },
+  {
+   "id": "kugel_22",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Kugelspitze",
+   "short": "Kugelspitzen",
+   "shape": "cyl",
+   "x": 11.75,
+   "y": 48.55,
+   "w": 4.5,
+   "z": 40.5,
+   "h": 4.5,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Aufgesetzte Kunststoffkugel, schont die Kopfhaut.",
+   "color": "#D9473A",
+   "label": false,
+   "form": "kugel"
+  },
+  {
+   "id": "kugel_23",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Kugelspitze",
+   "short": "Kugelspitzen",
+   "shape": "cyl",
+   "x": 20.75,
+   "y": 48.55,
+   "w": 4.5,
+   "z": 40.5,
+   "h": 4.5,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Aufgesetzte Kunststoffkugel, schont die Kopfhaut.",
+   "color": "#D9473A",
+   "label": false,
+   "form": "kugel"
+  },
+  {
+   "id": "kugel_24",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Kugelspitze",
+   "short": "Kugelspitzen",
+   "shape": "cyl",
+   "x": 29.75,
+   "y": 48.55,
+   "w": 4.5,
+   "z": 40.5,
+   "h": 4.5,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Aufgesetzte Kunststoffkugel, schont die Kopfhaut.",
+   "color": "#D9473A",
+   "label": false,
+   "form": "kugel"
+  },
+  {
+   "id": "kugel_25",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Kugelspitze",
+   "short": "Kugelspitzen",
+   "shape": "cyl",
+   "x": 38.75,
+   "y": 48.55,
+   "w": 4.5,
+   "z": 40.5,
+   "h": 4.5,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Aufgesetzte Kunststoffkugel, schont die Kopfhaut.",
+   "color": "#D9473A",
+   "label": false,
+   "form": "kugel"
+  },
+  {
+   "id": "kugel_26",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Kugelspitze",
+   "short": "Kugelspitzen",
+   "shape": "cyl",
+   "x": 47.75,
+   "y": 48.55,
+   "w": 4.5,
+   "z": 40.5,
+   "h": 4.5,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Aufgesetzte Kunststoffkugel, schont die Kopfhaut.",
+   "color": "#D9473A",
+   "label": false,
+   "form": "kugel"
+  },
+  {
+   "id": "kugel_27",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Kugelspitze",
+   "short": "Kugelspitzen",
+   "shape": "cyl",
+   "x": 56.75,
+   "y": 48.55,
+   "w": 4.5,
+   "z": 40.5,
+   "h": 4.5,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Aufgesetzte Kunststoffkugel, schont die Kopfhaut.",
+   "color": "#D9473A",
+   "label": false,
+   "form": "kugel"
+  },
+  {
+   "id": "kugel_28",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Kugelspitze",
+   "short": "Kugelspitzen",
+   "shape": "cyl",
+   "x": 11.75,
+   "y": 57.55,
+   "w": 4.5,
+   "z": 40.5,
+   "h": 4.5,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Aufgesetzte Kunststoffkugel, schont die Kopfhaut.",
+   "color": "#D9473A",
+   "label": false,
+   "form": "kugel"
+  },
+  {
+   "id": "kugel_29",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Kugelspitze",
+   "short": "Kugelspitzen",
+   "shape": "cyl",
+   "x": 20.75,
+   "y": 57.55,
+   "w": 4.5,
+   "z": 40.5,
+   "h": 4.5,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Aufgesetzte Kunststoffkugel, schont die Kopfhaut.",
+   "color": "#D9473A",
+   "label": false,
+   "form": "kugel"
+  },
+  {
+   "id": "kugel_30",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Kugelspitze",
+   "short": "Kugelspitzen",
+   "shape": "cyl",
+   "x": 29.75,
+   "y": 57.55,
+   "w": 4.5,
+   "z": 40.5,
+   "h": 4.5,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Aufgesetzte Kunststoffkugel, schont die Kopfhaut.",
+   "color": "#D9473A",
+   "label": false,
+   "form": "kugel"
+  },
+  {
+   "id": "kugel_31",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Kugelspitze",
+   "short": "Kugelspitzen",
+   "shape": "cyl",
+   "x": 38.75,
+   "y": 57.55,
+   "w": 4.5,
+   "z": 40.5,
+   "h": 4.5,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Aufgesetzte Kunststoffkugel, schont die Kopfhaut.",
+   "color": "#D9473A",
+   "label": false,
+   "form": "kugel"
+  },
+  {
+   "id": "kugel_32",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Kugelspitze",
+   "short": "Kugelspitzen",
+   "shape": "cyl",
+   "x": 47.75,
+   "y": 57.55,
+   "w": 4.5,
+   "z": 40.5,
+   "h": 4.5,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Aufgesetzte Kunststoffkugel, schont die Kopfhaut.",
+   "color": "#D9473A",
+   "label": false,
+   "form": "kugel"
+  },
+  {
+   "id": "kugel_33",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Kugelspitze",
+   "short": "Kugelspitzen",
+   "shape": "cyl",
+   "x": 56.75,
+   "y": 57.55,
+   "w": 4.5,
+   "z": 40.5,
+   "h": 4.5,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Aufgesetzte Kunststoffkugel, schont die Kopfhaut.",
+   "color": "#D9473A",
+   "label": false,
+   "form": "kugel"
+  },
+  {
+   "id": "kugel_34",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Kugelspitze",
+   "short": "Kugelspitzen",
+   "shape": "cyl",
+   "x": 11.75,
+   "y": 66.55,
+   "w": 4.5,
+   "z": 40.5,
+   "h": 4.5,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Aufgesetzte Kunststoffkugel, schont die Kopfhaut.",
+   "color": "#D9473A",
+   "label": false,
+   "form": "kugel"
+  },
+  {
+   "id": "kugel_35",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Kugelspitze",
+   "short": "Kugelspitzen",
+   "shape": "cyl",
+   "x": 20.75,
+   "y": 66.55,
+   "w": 4.5,
+   "z": 40.5,
+   "h": 4.5,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Aufgesetzte Kunststoffkugel, schont die Kopfhaut.",
+   "color": "#D9473A",
+   "label": false,
+   "form": "kugel"
+  },
+  {
+   "id": "kugel_36",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Kugelspitze",
+   "short": "Kugelspitzen",
+   "shape": "cyl",
+   "x": 29.75,
+   "y": 66.55,
+   "w": 4.5,
+   "z": 40.5,
+   "h": 4.5,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Aufgesetzte Kunststoffkugel, schont die Kopfhaut.",
+   "color": "#D9473A",
+   "label": false,
+   "form": "kugel"
+  },
+  {
+   "id": "kugel_37",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Kugelspitze",
+   "short": "Kugelspitzen",
+   "shape": "cyl",
+   "x": 38.75,
+   "y": 66.55,
+   "w": 4.5,
+   "z": 40.5,
+   "h": 4.5,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Aufgesetzte Kunststoffkugel, schont die Kopfhaut.",
+   "color": "#D9473A",
+   "label": false,
+   "form": "kugel"
+  },
+  {
+   "id": "kugel_38",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Kugelspitze",
+   "short": "Kugelspitzen",
+   "shape": "cyl",
+   "x": 47.75,
+   "y": 66.55,
+   "w": 4.5,
+   "z": 40.5,
+   "h": 4.5,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Aufgesetzte Kunststoffkugel, schont die Kopfhaut.",
+   "color": "#D9473A",
+   "label": false,
+   "form": "kugel"
+  },
+  {
+   "id": "kugel_39",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Kugelspitze",
+   "short": "Kugelspitzen",
+   "shape": "cyl",
+   "x": 56.75,
+   "y": 66.55,
+   "w": 4.5,
+   "z": 40.5,
+   "h": 4.5,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Aufgesetzte Kunststoffkugel, schont die Kopfhaut.",
+   "color": "#D9473A",
+   "label": false,
+   "form": "kugel"
+  },
+  {
+   "id": "kugel_40",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Kugelspitze",
+   "short": "Kugelspitzen",
+   "shape": "cyl",
+   "x": 11.75,
+   "y": 75.55,
+   "w": 4.5,
+   "z": 40.5,
+   "h": 4.5,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Aufgesetzte Kunststoffkugel, schont die Kopfhaut.",
+   "color": "#D9473A",
+   "label": false,
+   "form": "kugel"
+  },
+  {
+   "id": "kugel_41",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Kugelspitze",
+   "short": "Kugelspitzen",
+   "shape": "cyl",
+   "x": 20.75,
+   "y": 75.55,
+   "w": 4.5,
+   "z": 40.5,
+   "h": 4.5,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Aufgesetzte Kunststoffkugel, schont die Kopfhaut.",
+   "color": "#D9473A",
+   "label": false,
+   "form": "kugel"
+  },
+  {
+   "id": "kugel_42",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Kugelspitze",
+   "short": "Kugelspitzen",
+   "shape": "cyl",
+   "x": 29.75,
+   "y": 75.55,
+   "w": 4.5,
+   "z": 40.5,
+   "h": 4.5,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Aufgesetzte Kunststoffkugel, schont die Kopfhaut.",
+   "color": "#D9473A",
+   "label": false,
+   "form": "kugel"
+  },
+  {
+   "id": "kugel_43",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Kugelspitze",
+   "short": "Kugelspitzen",
+   "shape": "cyl",
+   "x": 38.75,
+   "y": 75.55,
+   "w": 4.5,
+   "z": 40.5,
+   "h": 4.5,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Aufgesetzte Kunststoffkugel, schont die Kopfhaut.",
+   "color": "#D9473A",
+   "label": false,
+   "form": "kugel"
+  },
+  {
+   "id": "kugel_44",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Kugelspitze",
+   "short": "Kugelspitzen",
+   "shape": "cyl",
+   "x": 47.75,
+   "y": 75.55,
+   "w": 4.5,
+   "z": 40.5,
+   "h": 4.5,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Aufgesetzte Kunststoffkugel, schont die Kopfhaut.",
+   "color": "#D9473A",
+   "label": false,
+   "form": "kugel"
+  },
+  {
+   "id": "kugel_45",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Kugelspitze",
+   "short": "Kugelspitzen",
+   "shape": "cyl",
+   "x": 56.75,
+   "y": 75.55,
+   "w": 4.5,
+   "z": 40.5,
+   "h": 4.5,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Aufgesetzte Kunststoffkugel, schont die Kopfhaut.",
+   "color": "#D9473A",
+   "label": false,
+   "form": "kugel"
+  },
+  {
+   "id": "kugel_46",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Kugelspitze",
+   "short": "Kugelspitzen",
+   "shape": "cyl",
+   "x": 11.75,
+   "y": 84.55,
+   "w": 4.5,
+   "z": 40.5,
+   "h": 4.5,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Aufgesetzte Kunststoffkugel, schont die Kopfhaut.",
+   "color": "#D9473A",
+   "label": false,
+   "form": "kugel"
+  },
+  {
+   "id": "kugel_47",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Kugelspitze",
+   "short": "Kugelspitzen",
+   "shape": "cyl",
+   "x": 20.75,
+   "y": 84.55,
+   "w": 4.5,
+   "z": 40.5,
+   "h": 4.5,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Aufgesetzte Kunststoffkugel, schont die Kopfhaut.",
+   "color": "#D9473A",
+   "label": false,
+   "form": "kugel"
+  },
+  {
+   "id": "kugel_48",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Kugelspitze",
+   "short": "Kugelspitzen",
+   "shape": "cyl",
+   "x": 29.75,
+   "y": 84.55,
+   "w": 4.5,
+   "z": 40.5,
+   "h": 4.5,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Aufgesetzte Kunststoffkugel, schont die Kopfhaut.",
+   "color": "#D9473A",
+   "label": false,
+   "form": "kugel"
+  },
+  {
+   "id": "kugel_49",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Kugelspitze",
+   "short": "Kugelspitzen",
+   "shape": "cyl",
+   "x": 38.75,
+   "y": 84.55,
+   "w": 4.5,
+   "z": 40.5,
+   "h": 4.5,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Aufgesetzte Kunststoffkugel, schont die Kopfhaut.",
+   "color": "#D9473A",
+   "label": false,
+   "form": "kugel"
+  },
+  {
+   "id": "kugel_50",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Kugelspitze",
+   "short": "Kugelspitzen",
+   "shape": "cyl",
+   "x": 47.75,
+   "y": 84.55,
+   "w": 4.5,
+   "z": 40.5,
+   "h": 4.5,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Aufgesetzte Kunststoffkugel, schont die Kopfhaut.",
+   "color": "#D9473A",
+   "label": false,
+   "form": "kugel"
+  },
+  {
+   "id": "kugel_51",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Kugelspitze",
+   "short": "Kugelspitzen",
+   "shape": "cyl",
+   "x": 56.75,
+   "y": 84.55,
+   "w": 4.5,
+   "z": 40.5,
+   "h": 4.5,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Aufgesetzte Kunststoffkugel, schont die Kopfhaut.",
+   "color": "#D9473A",
+   "label": false,
+   "form": "kugel"
+  },
+  {
+   "id": "kugel_52",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Kugelspitze",
+   "short": "Kugelspitzen",
+   "shape": "cyl",
+   "x": 20.75,
+   "y": 93.55,
+   "w": 4.5,
+   "z": 40.5,
+   "h": 4.5,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Aufgesetzte Kunststoffkugel, schont die Kopfhaut.",
+   "color": "#D9473A",
+   "label": false,
+   "form": "kugel"
+  },
+  {
+   "id": "kugel_53",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Kugelspitze",
+   "short": "Kugelspitzen",
+   "shape": "cyl",
+   "x": 29.75,
+   "y": 93.55,
+   "w": 4.5,
+   "z": 40.5,
+   "h": 4.5,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Aufgesetzte Kunststoffkugel, schont die Kopfhaut.",
+   "color": "#D9473A",
+   "label": false,
+   "form": "kugel"
+  },
+  {
+   "id": "kugel_54",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Kugelspitze",
+   "short": "Kugelspitzen",
+   "shape": "cyl",
+   "x": 38.75,
+   "y": 93.55,
+   "w": 4.5,
+   "z": 40.5,
+   "h": 4.5,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Aufgesetzte Kunststoffkugel, schont die Kopfhaut.",
+   "color": "#D9473A",
+   "label": false,
+   "form": "kugel"
+  },
+  {
+   "id": "kugel_55",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Kugelspitze",
+   "short": "Kugelspitzen",
+   "shape": "cyl",
+   "x": 47.75,
+   "y": 93.55,
+   "w": 4.5,
+   "z": 40.5,
+   "h": 4.5,
+   "explode": [
+    0,
+    0,
+    57.0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Aufgesetzte Kunststoffkugel, schont die Kopfhaut.",
+   "color": "#D9473A",
+   "label": false,
+   "form": "kugel"
+  },
+  {
    "id": "borste_0",
    "component_id": "nylon_bristles",
    "material_id": "nylon",
@@ -136,21 +1760,17 @@
    "y": 13.5,
    "w": 2.6,
    "z": 17,
-   "h": 25,
+   "h": 23.5,
    "explode": [
     0,
     0,
     57.0
    ],
-   "mass": 0.3,
+   "mass": 0.2,
    "materials": [
     [
      "nylon",
-     85
-    ],
-    [
-     "pp",
-     15
+     100
     ]
    ],
    "info": "Dicker Nylonstift mit aufgesetzter Kunststoffkugel, die die Kopfhaut schont. Der Fuß steckt im Gummikissen; mit einer Zange lassen sich die Stifte herausziehen.",
@@ -162,6 +1782,7 @@
      "x": 0,
      "y": 0,
      "w": 2.6,
+     "zeichnung": true,
      "fill": "#D9473A"
     }
    ]
@@ -177,21 +1798,17 @@
    "y": 13.5,
    "w": 2.6,
    "z": 17,
-   "h": 25,
+   "h": 23.5,
    "explode": [
     0,
     0,
     57.0
    ],
-   "mass": 0.3,
+   "mass": 0.2,
    "materials": [
     [
      "nylon",
-     85
-    ],
-    [
-     "pp",
-     15
+     100
     ]
    ],
    "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
@@ -203,6 +1820,7 @@
      "x": 0,
      "y": 0,
      "w": 2.6,
+     "zeichnung": true,
      "fill": "#D9473A"
     }
    ]
@@ -218,21 +1836,17 @@
    "y": 13.5,
    "w": 2.6,
    "z": 17,
-   "h": 25,
+   "h": 23.5,
    "explode": [
     0,
     0,
     57.0
    ],
-   "mass": 0.3,
+   "mass": 0.2,
    "materials": [
     [
      "nylon",
-     85
-    ],
-    [
-     "pp",
-     15
+     100
     ]
    ],
    "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
@@ -244,6 +1858,7 @@
      "x": 0,
      "y": 0,
      "w": 2.6,
+     "zeichnung": true,
      "fill": "#D9473A"
     }
    ]
@@ -259,21 +1874,17 @@
    "y": 13.5,
    "w": 2.6,
    "z": 17,
-   "h": 25,
+   "h": 23.5,
    "explode": [
     0,
     0,
     57.0
    ],
-   "mass": 0.3,
+   "mass": 0.2,
    "materials": [
     [
      "nylon",
-     85
-    ],
-    [
-     "pp",
-     15
+     100
     ]
    ],
    "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
@@ -285,6 +1896,7 @@
      "x": 0,
      "y": 0,
      "w": 2.6,
+     "zeichnung": true,
      "fill": "#D9473A"
     }
    ]
@@ -300,21 +1912,17 @@
    "y": 22.5,
    "w": 2.6,
    "z": 17,
-   "h": 25,
+   "h": 23.5,
    "explode": [
     0,
     0,
     57.0
    ],
-   "mass": 0.3,
+   "mass": 0.2,
    "materials": [
     [
      "nylon",
-     85
-    ],
-    [
-     "pp",
-     15
+     100
     ]
    ],
    "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
@@ -326,6 +1934,7 @@
      "x": 0,
      "y": 0,
      "w": 2.6,
+     "zeichnung": true,
      "fill": "#D9473A"
     }
    ]
@@ -341,21 +1950,17 @@
    "y": 22.5,
    "w": 2.6,
    "z": 17,
-   "h": 25,
+   "h": 23.5,
    "explode": [
     0,
     0,
     57.0
    ],
-   "mass": 0.3,
+   "mass": 0.2,
    "materials": [
     [
      "nylon",
-     85
-    ],
-    [
-     "pp",
-     15
+     100
     ]
    ],
    "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
@@ -367,6 +1972,7 @@
      "x": 0,
      "y": 0,
      "w": 2.6,
+     "zeichnung": true,
      "fill": "#D9473A"
     }
    ]
@@ -382,21 +1988,17 @@
    "y": 22.5,
    "w": 2.6,
    "z": 17,
-   "h": 25,
+   "h": 23.5,
    "explode": [
     0,
     0,
     57.0
    ],
-   "mass": 0.3,
+   "mass": 0.2,
    "materials": [
     [
      "nylon",
-     85
-    ],
-    [
-     "pp",
-     15
+     100
     ]
    ],
    "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
@@ -408,6 +2010,7 @@
      "x": 0,
      "y": 0,
      "w": 2.6,
+     "zeichnung": true,
      "fill": "#D9473A"
     }
    ]
@@ -423,21 +2026,17 @@
    "y": 22.5,
    "w": 2.6,
    "z": 17,
-   "h": 25,
+   "h": 23.5,
    "explode": [
     0,
     0,
     57.0
    ],
-   "mass": 0.3,
+   "mass": 0.2,
    "materials": [
     [
      "nylon",
-     85
-    ],
-    [
-     "pp",
-     15
+     100
     ]
    ],
    "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
@@ -449,6 +2048,7 @@
      "x": 0,
      "y": 0,
      "w": 2.6,
+     "zeichnung": true,
      "fill": "#D9473A"
     }
    ]
@@ -464,21 +2064,17 @@
    "y": 22.5,
    "w": 2.6,
    "z": 17,
-   "h": 25,
+   "h": 23.5,
    "explode": [
     0,
     0,
     57.0
    ],
-   "mass": 0.3,
+   "mass": 0.2,
    "materials": [
     [
      "nylon",
-     85
-    ],
-    [
-     "pp",
-     15
+     100
     ]
    ],
    "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
@@ -490,6 +2086,7 @@
      "x": 0,
      "y": 0,
      "w": 2.6,
+     "zeichnung": true,
      "fill": "#D9473A"
     }
    ]
@@ -505,21 +2102,17 @@
    "y": 22.5,
    "w": 2.6,
    "z": 17,
-   "h": 25,
+   "h": 23.5,
    "explode": [
     0,
     0,
     57.0
    ],
-   "mass": 0.3,
+   "mass": 0.2,
    "materials": [
     [
      "nylon",
-     85
-    ],
-    [
-     "pp",
-     15
+     100
     ]
    ],
    "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
@@ -531,6 +2124,7 @@
      "x": 0,
      "y": 0,
      "w": 2.6,
+     "zeichnung": true,
      "fill": "#D9473A"
     }
    ]
@@ -546,21 +2140,17 @@
    "y": 31.5,
    "w": 2.6,
    "z": 17,
-   "h": 25,
+   "h": 23.5,
    "explode": [
     0,
     0,
     57.0
    ],
-   "mass": 0.3,
+   "mass": 0.2,
    "materials": [
     [
      "nylon",
-     85
-    ],
-    [
-     "pp",
-     15
+     100
     ]
    ],
    "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
@@ -572,6 +2162,7 @@
      "x": 0,
      "y": 0,
      "w": 2.6,
+     "zeichnung": true,
      "fill": "#D9473A"
     }
    ]
@@ -587,21 +2178,17 @@
    "y": 31.5,
    "w": 2.6,
    "z": 17,
-   "h": 25,
+   "h": 23.5,
    "explode": [
     0,
     0,
     57.0
    ],
-   "mass": 0.3,
+   "mass": 0.2,
    "materials": [
     [
      "nylon",
-     85
-    ],
-    [
-     "pp",
-     15
+     100
     ]
    ],
    "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
@@ -613,6 +2200,7 @@
      "x": 0,
      "y": 0,
      "w": 2.6,
+     "zeichnung": true,
      "fill": "#D9473A"
     }
    ]
@@ -628,21 +2216,17 @@
    "y": 31.5,
    "w": 2.6,
    "z": 17,
-   "h": 25,
+   "h": 23.5,
    "explode": [
     0,
     0,
     57.0
    ],
-   "mass": 0.3,
+   "mass": 0.2,
    "materials": [
     [
      "nylon",
-     85
-    ],
-    [
-     "pp",
-     15
+     100
     ]
    ],
    "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
@@ -654,6 +2238,7 @@
      "x": 0,
      "y": 0,
      "w": 2.6,
+     "zeichnung": true,
      "fill": "#D9473A"
     }
    ]
@@ -669,21 +2254,17 @@
    "y": 31.5,
    "w": 2.6,
    "z": 17,
-   "h": 25,
+   "h": 23.5,
    "explode": [
     0,
     0,
     57.0
    ],
-   "mass": 0.3,
+   "mass": 0.2,
    "materials": [
     [
      "nylon",
-     85
-    ],
-    [
-     "pp",
-     15
+     100
     ]
    ],
    "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
@@ -695,6 +2276,7 @@
      "x": 0,
      "y": 0,
      "w": 2.6,
+     "zeichnung": true,
      "fill": "#D9473A"
     }
    ]
@@ -710,21 +2292,17 @@
    "y": 31.5,
    "w": 2.6,
    "z": 17,
-   "h": 25,
+   "h": 23.5,
    "explode": [
     0,
     0,
     57.0
    ],
-   "mass": 0.3,
+   "mass": 0.2,
    "materials": [
     [
      "nylon",
-     85
-    ],
-    [
-     "pp",
-     15
+     100
     ]
    ],
    "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
@@ -736,6 +2314,7 @@
      "x": 0,
      "y": 0,
      "w": 2.6,
+     "zeichnung": true,
      "fill": "#D9473A"
     }
    ]
@@ -751,21 +2330,17 @@
    "y": 31.5,
    "w": 2.6,
    "z": 17,
-   "h": 25,
+   "h": 23.5,
    "explode": [
     0,
     0,
     57.0
    ],
-   "mass": 0.3,
+   "mass": 0.2,
    "materials": [
     [
      "nylon",
-     85
-    ],
-    [
-     "pp",
-     15
+     100
     ]
    ],
    "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
@@ -777,6 +2352,7 @@
      "x": 0,
      "y": 0,
      "w": 2.6,
+     "zeichnung": true,
      "fill": "#D9473A"
     }
    ]
@@ -792,21 +2368,17 @@
    "y": 40.5,
    "w": 2.6,
    "z": 17,
-   "h": 25,
+   "h": 23.5,
    "explode": [
     0,
     0,
     57.0
    ],
-   "mass": 0.3,
+   "mass": 0.2,
    "materials": [
     [
      "nylon",
-     85
-    ],
-    [
-     "pp",
-     15
+     100
     ]
    ],
    "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
@@ -818,6 +2390,7 @@
      "x": 0,
      "y": 0,
      "w": 2.6,
+     "zeichnung": true,
      "fill": "#D9473A"
     }
    ]
@@ -833,21 +2406,17 @@
    "y": 40.5,
    "w": 2.6,
    "z": 17,
-   "h": 25,
+   "h": 23.5,
    "explode": [
     0,
     0,
     57.0
    ],
-   "mass": 0.3,
+   "mass": 0.2,
    "materials": [
     [
      "nylon",
-     85
-    ],
-    [
-     "pp",
-     15
+     100
     ]
    ],
    "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
@@ -859,6 +2428,7 @@
      "x": 0,
      "y": 0,
      "w": 2.6,
+     "zeichnung": true,
      "fill": "#D9473A"
     }
    ]
@@ -874,21 +2444,17 @@
    "y": 40.5,
    "w": 2.6,
    "z": 17,
-   "h": 25,
+   "h": 23.5,
    "explode": [
     0,
     0,
     57.0
    ],
-   "mass": 0.3,
+   "mass": 0.2,
    "materials": [
     [
      "nylon",
-     85
-    ],
-    [
-     "pp",
-     15
+     100
     ]
    ],
    "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
@@ -900,6 +2466,7 @@
      "x": 0,
      "y": 0,
      "w": 2.6,
+     "zeichnung": true,
      "fill": "#D9473A"
     }
    ]
@@ -915,21 +2482,17 @@
    "y": 40.5,
    "w": 2.6,
    "z": 17,
-   "h": 25,
+   "h": 23.5,
    "explode": [
     0,
     0,
     57.0
    ],
-   "mass": 0.3,
+   "mass": 0.2,
    "materials": [
     [
      "nylon",
-     85
-    ],
-    [
-     "pp",
-     15
+     100
     ]
    ],
    "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
@@ -941,6 +2504,7 @@
      "x": 0,
      "y": 0,
      "w": 2.6,
+     "zeichnung": true,
      "fill": "#D9473A"
     }
    ]
@@ -956,21 +2520,17 @@
    "y": 40.5,
    "w": 2.6,
    "z": 17,
-   "h": 25,
+   "h": 23.5,
    "explode": [
     0,
     0,
     57.0
    ],
-   "mass": 0.3,
+   "mass": 0.2,
    "materials": [
     [
      "nylon",
-     85
-    ],
-    [
-     "pp",
-     15
+     100
     ]
    ],
    "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
@@ -982,6 +2542,7 @@
      "x": 0,
      "y": 0,
      "w": 2.6,
+     "zeichnung": true,
      "fill": "#D9473A"
     }
    ]
@@ -997,21 +2558,17 @@
    "y": 40.5,
    "w": 2.6,
    "z": 17,
-   "h": 25,
+   "h": 23.5,
    "explode": [
     0,
     0,
     57.0
    ],
-   "mass": 0.3,
+   "mass": 0.2,
    "materials": [
     [
      "nylon",
-     85
-    ],
-    [
-     "pp",
-     15
+     100
     ]
    ],
    "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
@@ -1023,6 +2580,7 @@
      "x": 0,
      "y": 0,
      "w": 2.6,
+     "zeichnung": true,
      "fill": "#D9473A"
     }
    ]
@@ -1038,21 +2596,17 @@
    "y": 49.5,
    "w": 2.6,
    "z": 17,
-   "h": 25,
+   "h": 23.5,
    "explode": [
     0,
     0,
     57.0
    ],
-   "mass": 0.3,
+   "mass": 0.2,
    "materials": [
     [
      "nylon",
-     85
-    ],
-    [
-     "pp",
-     15
+     100
     ]
    ],
    "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
@@ -1064,6 +2618,7 @@
      "x": 0,
      "y": 0,
      "w": 2.6,
+     "zeichnung": true,
      "fill": "#D9473A"
     }
    ]
@@ -1079,21 +2634,17 @@
    "y": 49.5,
    "w": 2.6,
    "z": 17,
-   "h": 25,
+   "h": 23.5,
    "explode": [
     0,
     0,
     57.0
    ],
-   "mass": 0.3,
+   "mass": 0.2,
    "materials": [
     [
      "nylon",
-     85
-    ],
-    [
-     "pp",
-     15
+     100
     ]
    ],
    "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
@@ -1105,6 +2656,7 @@
      "x": 0,
      "y": 0,
      "w": 2.6,
+     "zeichnung": true,
      "fill": "#D9473A"
     }
    ]
@@ -1120,21 +2672,17 @@
    "y": 49.5,
    "w": 2.6,
    "z": 17,
-   "h": 25,
+   "h": 23.5,
    "explode": [
     0,
     0,
     57.0
    ],
-   "mass": 0.3,
+   "mass": 0.2,
    "materials": [
     [
      "nylon",
-     85
-    ],
-    [
-     "pp",
-     15
+     100
     ]
    ],
    "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
@@ -1146,6 +2694,7 @@
      "x": 0,
      "y": 0,
      "w": 2.6,
+     "zeichnung": true,
      "fill": "#D9473A"
     }
    ]
@@ -1161,21 +2710,17 @@
    "y": 49.5,
    "w": 2.6,
    "z": 17,
-   "h": 25,
+   "h": 23.5,
    "explode": [
     0,
     0,
     57.0
    ],
-   "mass": 0.3,
+   "mass": 0.2,
    "materials": [
     [
      "nylon",
-     85
-    ],
-    [
-     "pp",
-     15
+     100
     ]
    ],
    "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
@@ -1187,6 +2732,7 @@
      "x": 0,
      "y": 0,
      "w": 2.6,
+     "zeichnung": true,
      "fill": "#D9473A"
     }
    ]
@@ -1202,21 +2748,17 @@
    "y": 49.5,
    "w": 2.6,
    "z": 17,
-   "h": 25,
+   "h": 23.5,
    "explode": [
     0,
     0,
     57.0
    ],
-   "mass": 0.3,
+   "mass": 0.2,
    "materials": [
     [
      "nylon",
-     85
-    ],
-    [
-     "pp",
-     15
+     100
     ]
    ],
    "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
@@ -1228,6 +2770,7 @@
      "x": 0,
      "y": 0,
      "w": 2.6,
+     "zeichnung": true,
      "fill": "#D9473A"
     }
    ]
@@ -1243,21 +2786,17 @@
    "y": 49.5,
    "w": 2.6,
    "z": 17,
-   "h": 25,
+   "h": 23.5,
    "explode": [
     0,
     0,
     57.0
    ],
-   "mass": 0.3,
+   "mass": 0.2,
    "materials": [
     [
      "nylon",
-     85
-    ],
-    [
-     "pp",
-     15
+     100
     ]
    ],
    "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
@@ -1269,6 +2808,7 @@
      "x": 0,
      "y": 0,
      "w": 2.6,
+     "zeichnung": true,
      "fill": "#D9473A"
     }
    ]
@@ -1284,21 +2824,17 @@
    "y": 58.5,
    "w": 2.6,
    "z": 17,
-   "h": 25,
+   "h": 23.5,
    "explode": [
     0,
     0,
     57.0
    ],
-   "mass": 0.3,
+   "mass": 0.2,
    "materials": [
     [
      "nylon",
-     85
-    ],
-    [
-     "pp",
-     15
+     100
     ]
    ],
    "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
@@ -1310,6 +2846,7 @@
      "x": 0,
      "y": 0,
      "w": 2.6,
+     "zeichnung": true,
      "fill": "#D9473A"
     }
    ]
@@ -1325,21 +2862,17 @@
    "y": 58.5,
    "w": 2.6,
    "z": 17,
-   "h": 25,
+   "h": 23.5,
    "explode": [
     0,
     0,
     57.0
    ],
-   "mass": 0.3,
+   "mass": 0.2,
    "materials": [
     [
      "nylon",
-     85
-    ],
-    [
-     "pp",
-     15
+     100
     ]
    ],
    "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
@@ -1351,6 +2884,7 @@
      "x": 0,
      "y": 0,
      "w": 2.6,
+     "zeichnung": true,
      "fill": "#D9473A"
     }
    ]
@@ -1366,21 +2900,17 @@
    "y": 58.5,
    "w": 2.6,
    "z": 17,
-   "h": 25,
+   "h": 23.5,
    "explode": [
     0,
     0,
     57.0
    ],
-   "mass": 0.3,
+   "mass": 0.2,
    "materials": [
     [
      "nylon",
-     85
-    ],
-    [
-     "pp",
-     15
+     100
     ]
    ],
    "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
@@ -1392,6 +2922,7 @@
      "x": 0,
      "y": 0,
      "w": 2.6,
+     "zeichnung": true,
      "fill": "#D9473A"
     }
    ]
@@ -1407,21 +2938,17 @@
    "y": 58.5,
    "w": 2.6,
    "z": 17,
-   "h": 25,
+   "h": 23.5,
    "explode": [
     0,
     0,
     57.0
    ],
-   "mass": 0.3,
+   "mass": 0.2,
    "materials": [
     [
      "nylon",
-     85
-    ],
-    [
-     "pp",
-     15
+     100
     ]
    ],
    "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
@@ -1433,6 +2960,7 @@
      "x": 0,
      "y": 0,
      "w": 2.6,
+     "zeichnung": true,
      "fill": "#D9473A"
     }
    ]
@@ -1448,21 +2976,17 @@
    "y": 58.5,
    "w": 2.6,
    "z": 17,
-   "h": 25,
+   "h": 23.5,
    "explode": [
     0,
     0,
     57.0
    ],
-   "mass": 0.3,
+   "mass": 0.2,
    "materials": [
     [
      "nylon",
-     85
-    ],
-    [
-     "pp",
-     15
+     100
     ]
    ],
    "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
@@ -1474,6 +2998,7 @@
      "x": 0,
      "y": 0,
      "w": 2.6,
+     "zeichnung": true,
      "fill": "#D9473A"
     }
    ]
@@ -1489,21 +3014,17 @@
    "y": 58.5,
    "w": 2.6,
    "z": 17,
-   "h": 25,
+   "h": 23.5,
    "explode": [
     0,
     0,
     57.0
    ],
-   "mass": 0.3,
+   "mass": 0.2,
    "materials": [
     [
      "nylon",
-     85
-    ],
-    [
-     "pp",
-     15
+     100
     ]
    ],
    "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
@@ -1515,6 +3036,7 @@
      "x": 0,
      "y": 0,
      "w": 2.6,
+     "zeichnung": true,
      "fill": "#D9473A"
     }
    ]
@@ -1530,21 +3052,17 @@
    "y": 67.5,
    "w": 2.6,
    "z": 17,
-   "h": 25,
+   "h": 23.5,
    "explode": [
     0,
     0,
     57.0
    ],
-   "mass": 0.3,
+   "mass": 0.2,
    "materials": [
     [
      "nylon",
-     85
-    ],
-    [
-     "pp",
-     15
+     100
     ]
    ],
    "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
@@ -1556,6 +3074,7 @@
      "x": 0,
      "y": 0,
      "w": 2.6,
+     "zeichnung": true,
      "fill": "#D9473A"
     }
    ]
@@ -1571,21 +3090,17 @@
    "y": 67.5,
    "w": 2.6,
    "z": 17,
-   "h": 25,
+   "h": 23.5,
    "explode": [
     0,
     0,
     57.0
    ],
-   "mass": 0.3,
+   "mass": 0.2,
    "materials": [
     [
      "nylon",
-     85
-    ],
-    [
-     "pp",
-     15
+     100
     ]
    ],
    "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
@@ -1597,6 +3112,7 @@
      "x": 0,
      "y": 0,
      "w": 2.6,
+     "zeichnung": true,
      "fill": "#D9473A"
     }
    ]
@@ -1612,21 +3128,17 @@
    "y": 67.5,
    "w": 2.6,
    "z": 17,
-   "h": 25,
+   "h": 23.5,
    "explode": [
     0,
     0,
     57.0
    ],
-   "mass": 0.3,
+   "mass": 0.2,
    "materials": [
     [
      "nylon",
-     85
-    ],
-    [
-     "pp",
-     15
+     100
     ]
    ],
    "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
@@ -1638,6 +3150,7 @@
      "x": 0,
      "y": 0,
      "w": 2.6,
+     "zeichnung": true,
      "fill": "#D9473A"
     }
    ]
@@ -1653,21 +3166,17 @@
    "y": 67.5,
    "w": 2.6,
    "z": 17,
-   "h": 25,
+   "h": 23.5,
    "explode": [
     0,
     0,
     57.0
    ],
-   "mass": 0.3,
+   "mass": 0.2,
    "materials": [
     [
      "nylon",
-     85
-    ],
-    [
-     "pp",
-     15
+     100
     ]
    ],
    "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
@@ -1679,6 +3188,7 @@
      "x": 0,
      "y": 0,
      "w": 2.6,
+     "zeichnung": true,
      "fill": "#D9473A"
     }
    ]
@@ -1694,21 +3204,17 @@
    "y": 67.5,
    "w": 2.6,
    "z": 17,
-   "h": 25,
+   "h": 23.5,
    "explode": [
     0,
     0,
     57.0
    ],
-   "mass": 0.3,
+   "mass": 0.2,
    "materials": [
     [
      "nylon",
-     85
-    ],
-    [
-     "pp",
-     15
+     100
     ]
    ],
    "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
@@ -1720,6 +3226,7 @@
      "x": 0,
      "y": 0,
      "w": 2.6,
+     "zeichnung": true,
      "fill": "#D9473A"
     }
    ]
@@ -1735,21 +3242,17 @@
    "y": 67.5,
    "w": 2.6,
    "z": 17,
-   "h": 25,
+   "h": 23.5,
    "explode": [
     0,
     0,
     57.0
    ],
-   "mass": 0.3,
+   "mass": 0.2,
    "materials": [
     [
      "nylon",
-     85
-    ],
-    [
-     "pp",
-     15
+     100
     ]
    ],
    "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
@@ -1761,6 +3264,7 @@
      "x": 0,
      "y": 0,
      "w": 2.6,
+     "zeichnung": true,
      "fill": "#D9473A"
     }
    ]
@@ -1776,21 +3280,17 @@
    "y": 76.5,
    "w": 2.6,
    "z": 17,
-   "h": 25,
+   "h": 23.5,
    "explode": [
     0,
     0,
     57.0
    ],
-   "mass": 0.3,
+   "mass": 0.2,
    "materials": [
     [
      "nylon",
-     85
-    ],
-    [
-     "pp",
-     15
+     100
     ]
    ],
    "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
@@ -1802,6 +3302,7 @@
      "x": 0,
      "y": 0,
      "w": 2.6,
+     "zeichnung": true,
      "fill": "#D9473A"
     }
    ]
@@ -1817,21 +3318,17 @@
    "y": 76.5,
    "w": 2.6,
    "z": 17,
-   "h": 25,
+   "h": 23.5,
    "explode": [
     0,
     0,
     57.0
    ],
-   "mass": 0.3,
+   "mass": 0.2,
    "materials": [
     [
      "nylon",
-     85
-    ],
-    [
-     "pp",
-     15
+     100
     ]
    ],
    "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
@@ -1843,6 +3340,7 @@
      "x": 0,
      "y": 0,
      "w": 2.6,
+     "zeichnung": true,
      "fill": "#D9473A"
     }
    ]
@@ -1858,21 +3356,17 @@
    "y": 76.5,
    "w": 2.6,
    "z": 17,
-   "h": 25,
+   "h": 23.5,
    "explode": [
     0,
     0,
     57.0
    ],
-   "mass": 0.3,
+   "mass": 0.2,
    "materials": [
     [
      "nylon",
-     85
-    ],
-    [
-     "pp",
-     15
+     100
     ]
    ],
    "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
@@ -1884,6 +3378,7 @@
      "x": 0,
      "y": 0,
      "w": 2.6,
+     "zeichnung": true,
      "fill": "#D9473A"
     }
    ]
@@ -1899,21 +3394,17 @@
    "y": 76.5,
    "w": 2.6,
    "z": 17,
-   "h": 25,
+   "h": 23.5,
    "explode": [
     0,
     0,
     57.0
    ],
-   "mass": 0.3,
+   "mass": 0.2,
    "materials": [
     [
      "nylon",
-     85
-    ],
-    [
-     "pp",
-     15
+     100
     ]
    ],
    "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
@@ -1925,6 +3416,7 @@
      "x": 0,
      "y": 0,
      "w": 2.6,
+     "zeichnung": true,
      "fill": "#D9473A"
     }
    ]
@@ -1940,21 +3432,17 @@
    "y": 76.5,
    "w": 2.6,
    "z": 17,
-   "h": 25,
+   "h": 23.5,
    "explode": [
     0,
     0,
     57.0
    ],
-   "mass": 0.3,
+   "mass": 0.2,
    "materials": [
     [
      "nylon",
-     85
-    ],
-    [
-     "pp",
-     15
+     100
     ]
    ],
    "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
@@ -1966,6 +3454,7 @@
      "x": 0,
      "y": 0,
      "w": 2.6,
+     "zeichnung": true,
      "fill": "#D9473A"
     }
    ]
@@ -1981,21 +3470,17 @@
    "y": 76.5,
    "w": 2.6,
    "z": 17,
-   "h": 25,
+   "h": 23.5,
    "explode": [
     0,
     0,
     57.0
    ],
-   "mass": 0.3,
+   "mass": 0.2,
    "materials": [
     [
      "nylon",
-     85
-    ],
-    [
-     "pp",
-     15
+     100
     ]
    ],
    "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
@@ -2007,6 +3492,7 @@
      "x": 0,
      "y": 0,
      "w": 2.6,
+     "zeichnung": true,
      "fill": "#D9473A"
     }
    ]
@@ -2022,21 +3508,17 @@
    "y": 85.5,
    "w": 2.6,
    "z": 17,
-   "h": 25,
+   "h": 23.5,
    "explode": [
     0,
     0,
     57.0
    ],
-   "mass": 0.3,
+   "mass": 0.2,
    "materials": [
     [
      "nylon",
-     85
-    ],
-    [
-     "pp",
-     15
+     100
     ]
    ],
    "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
@@ -2048,6 +3530,7 @@
      "x": 0,
      "y": 0,
      "w": 2.6,
+     "zeichnung": true,
      "fill": "#D9473A"
     }
    ]
@@ -2063,21 +3546,17 @@
    "y": 85.5,
    "w": 2.6,
    "z": 17,
-   "h": 25,
+   "h": 23.5,
    "explode": [
     0,
     0,
     57.0
    ],
-   "mass": 0.3,
+   "mass": 0.2,
    "materials": [
     [
      "nylon",
-     85
-    ],
-    [
-     "pp",
-     15
+     100
     ]
    ],
    "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
@@ -2089,6 +3568,7 @@
      "x": 0,
      "y": 0,
      "w": 2.6,
+     "zeichnung": true,
      "fill": "#D9473A"
     }
    ]
@@ -2104,21 +3584,17 @@
    "y": 85.5,
    "w": 2.6,
    "z": 17,
-   "h": 25,
+   "h": 23.5,
    "explode": [
     0,
     0,
     57.0
    ],
-   "mass": 0.3,
+   "mass": 0.2,
    "materials": [
     [
      "nylon",
-     85
-    ],
-    [
-     "pp",
-     15
+     100
     ]
    ],
    "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
@@ -2130,6 +3606,7 @@
      "x": 0,
      "y": 0,
      "w": 2.6,
+     "zeichnung": true,
      "fill": "#D9473A"
     }
    ]
@@ -2145,21 +3622,17 @@
    "y": 85.5,
    "w": 2.6,
    "z": 17,
-   "h": 25,
+   "h": 23.5,
    "explode": [
     0,
     0,
     57.0
    ],
-   "mass": 0.3,
+   "mass": 0.2,
    "materials": [
     [
      "nylon",
-     85
-    ],
-    [
-     "pp",
-     15
+     100
     ]
    ],
    "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
@@ -2171,6 +3644,7 @@
      "x": 0,
      "y": 0,
      "w": 2.6,
+     "zeichnung": true,
      "fill": "#D9473A"
     }
    ]
@@ -2186,21 +3660,17 @@
    "y": 85.5,
    "w": 2.6,
    "z": 17,
-   "h": 25,
+   "h": 23.5,
    "explode": [
     0,
     0,
     57.0
    ],
-   "mass": 0.3,
+   "mass": 0.2,
    "materials": [
     [
      "nylon",
-     85
-    ],
-    [
-     "pp",
-     15
+     100
     ]
    ],
    "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
@@ -2212,6 +3682,7 @@
      "x": 0,
      "y": 0,
      "w": 2.6,
+     "zeichnung": true,
      "fill": "#D9473A"
     }
    ]
@@ -2227,21 +3698,17 @@
    "y": 85.5,
    "w": 2.6,
    "z": 17,
-   "h": 25,
+   "h": 23.5,
    "explode": [
     0,
     0,
     57.0
    ],
-   "mass": 0.3,
+   "mass": 0.2,
    "materials": [
     [
      "nylon",
-     85
-    ],
-    [
-     "pp",
-     15
+     100
     ]
    ],
    "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
@@ -2253,6 +3720,7 @@
      "x": 0,
      "y": 0,
      "w": 2.6,
+     "zeichnung": true,
      "fill": "#D9473A"
     }
    ]
@@ -2268,21 +3736,17 @@
    "y": 94.5,
    "w": 2.6,
    "z": 17,
-   "h": 25,
+   "h": 23.5,
    "explode": [
     0,
     0,
     57.0
    ],
-   "mass": 0.3,
+   "mass": 0.2,
    "materials": [
     [
      "nylon",
-     85
-    ],
-    [
-     "pp",
-     15
+     100
     ]
    ],
    "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
@@ -2294,6 +3758,7 @@
      "x": 0,
      "y": 0,
      "w": 2.6,
+     "zeichnung": true,
      "fill": "#D9473A"
     }
    ]
@@ -2309,21 +3774,17 @@
    "y": 94.5,
    "w": 2.6,
    "z": 17,
-   "h": 25,
+   "h": 23.5,
    "explode": [
     0,
     0,
     57.0
    ],
-   "mass": 0.3,
+   "mass": 0.2,
    "materials": [
     [
      "nylon",
-     85
-    ],
-    [
-     "pp",
-     15
+     100
     ]
    ],
    "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
@@ -2335,6 +3796,7 @@
      "x": 0,
      "y": 0,
      "w": 2.6,
+     "zeichnung": true,
      "fill": "#D9473A"
     }
    ]
@@ -2350,21 +3812,17 @@
    "y": 94.5,
    "w": 2.6,
    "z": 17,
-   "h": 25,
+   "h": 23.5,
    "explode": [
     0,
     0,
     57.0
    ],
-   "mass": 0.3,
+   "mass": 0.2,
    "materials": [
     [
      "nylon",
-     85
-    ],
-    [
-     "pp",
-     15
+     100
     ]
    ],
    "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
@@ -2376,6 +3834,7 @@
      "x": 0,
      "y": 0,
      "w": 2.6,
+     "zeichnung": true,
      "fill": "#D9473A"
     }
    ]
@@ -2391,21 +3850,17 @@
    "y": 94.5,
    "w": 2.6,
    "z": 17,
-   "h": 25,
+   "h": 23.5,
    "explode": [
     0,
     0,
     57.0
    ],
-   "mass": 0.3,
+   "mass": 0.2,
    "materials": [
     [
      "nylon",
-     85
-    ],
-    [
-     "pp",
-     15
+     100
     ]
    ],
    "info": "Eine von vielen Nylonborsten mit Kugelspitze.",
@@ -2417,6 +3872,7 @@
      "x": 0,
      "y": 0,
      "w": 2.6,
+     "zeichnung": true,
      "fill": "#D9473A"
     }
    ]
@@ -2948,12 +4404,14 @@
    ],
    "info": "Griff aus ABS, in einem Stück mit der Kopfschale gespritzt.",
    "color": "#3A3F44",
+   "form": "liegend_y",
    "marks": [
     {
      "shape": "box",
      "x": 5,
      "y": 34,
      "w": 18,
+     "zeichnung": true,
      "d": 70,
      "r": 8,
      "fill": "#6E747A"
@@ -2963,6 +4421,7 @@
      "x": 9,
      "y": 110,
      "w": 10,
+     "zeichnung": true,
      "fill": "#1E2022"
     }
    ]

@@ -34,11 +34,11 @@ teile = [
          x=6, y=0, w=204, d=297, z=1.5, h=1, r=2, mass=30,
          info='Steife Graupappe als Schreibunterlage. Reine Pappe aus Altpapier.',
          color='#8C8A84', marks=raster(2, 4, 1, 36, 3, 3, 0, 8, 'cyl', fill='#6E6C66') + lochung('#6E6C66')),
-    teil('spirale', 'steel_spiral', 'Drahtspirale', 'Spirale', 'box',
-         x=0, y=2, w=12, d=293, z=0, h=10, r=3, explode=[-170, 0, 0], mass=9,
-         info='Lackierter Stahldraht, durch die Löcher gefädelt. Ein Ende aufbiegen und herausdrehen, '
-              'dann darf der Block ins Altpapier und der Draht zum Metall.',
-         color='#8E969A', marks=raster(1, 1.5, 1, 36, 10, 1.2, 0, 8, r=0.6, fill='#5A6268')),
+    *[teil(f'spirale_{k}' if k else 'spirale', 'steel_spiral', 'Drahtspirale', 'Spirale', 'box', form='liegend_x',
+           x=0, y=4.8 + 8 * k, w=12, d=1.4, z=0, h=10, explode=[-170, 0, 0], mass=0.25, label=(k == 0),
+           info='Lackierter Stahldraht, durch die Löcher gefädelt. Ein Ende aufbiegen und herausdrehen, '
+                'dann darf der Block ins Altpapier und der Draht zum Metall.' if k == 0 else 'Eine Windung der Drahtspirale.',
+           color='#B8BEC4') for k in range(36)],
 ]
 
 explodiere(teile, abstand=100)

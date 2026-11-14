@@ -351,12 +351,15 @@
    "info": "Röhren an der Unterseite, zwischen die die Noppen eines anderen Steins greifen.",
    "color": "#C8302A",
    "sortBias": -1,
+   "wand": 0.85,
+   "boden": 0,
    "marks": [
     {
      "shape": "cyl",
      "x": 0.855,
      "y": 0.855,
      "w": 4.8,
+     "zeichnung": true,
      "fill": "#8E1E1A"
     }
    ]
@@ -389,12 +392,15 @@
    "color": "#C8302A",
    "label": false,
    "sortBias": -1,
+   "wand": 0.85,
+   "boden": 0,
    "marks": [
     {
      "shape": "cyl",
      "x": 0.855,
      "y": 0.855,
      "w": 4.8,
+     "zeichnung": true,
      "fill": "#8E1E1A"
     }
    ]
@@ -427,12 +433,15 @@
    "color": "#C8302A",
    "label": false,
    "sortBias": -1,
+   "wand": 0.85,
+   "boden": 0,
    "marks": [
     {
      "shape": "cyl",
      "x": 0.855,
      "y": 0.855,
      "w": 4.8,
+     "zeichnung": true,
      "fill": "#8E1E1A"
     }
    ]
@@ -465,12 +474,15 @@
    ],
    "info": "Vier dünne Wände, unten offen. Gemeinsam mit den Röhren klemmen sie die Noppen des Steins darunter.",
    "color": "#C8302A",
+   "wand": 1.2,
+   "boden": 0,
    "marks": [
     {
      "shape": "box",
      "x": 1.2,
      "y": 1.2,
      "w": 29.400000000000002,
+     "zeichnung": true,
      "d": 13.4,
      "r": 0.2,
      "fill": "#8E1E1A"

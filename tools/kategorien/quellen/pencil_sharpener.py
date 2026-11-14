@@ -23,7 +23,7 @@ teile = [
          marks=[mark('box', 10.5, 0.8, 1.2, 25.4, 0, '#E8ECEF'), mark('cyl', 3, 10, 4, fill='#8A9298'),
                 mark('box', 1, 1, 8, 2, 0, '#AEB5BA')]),
     teil('korpus', 'sharpener_body', 'Anspitzerkörper (Aluminium)', 'Körper', 'box',
-         x=0, y=0, w=25, d=35, z=0, h=18, r=2, mass=13, color='#A9B1B8',
+         x=0, y=0, w=25, d=35, z=0, h=18, r=2, mass=13, color='#CDD1D5',
          info='Aluminium-Druckguss mit kegelförmiger Bohrung für den Stift. Ohne Klinge ist es sortenreiner '
               'Aluminiumschrott.',
          marks=[mark('box', 2, 3, 14, 29, 1, '#959DA4'), mark('box', 15, 3, 3, 29, 1, '#2E3236'),

@@ -20,15 +20,20 @@ for j in range(10):
             POS.append((px, py))
 
 PINS = [teil(f'borste_{k}', 'nylon_bristles', 'Nylonborste mit Kugelspitze', 'Borsten', 'cyl',
-             x=px, y=py, w=2.6, z=17, h=25, mass=0.25, materials=[['nylon', 85], ['pp', 15]],
-             color='#7A8288', label=(k == 0), marks=[mark('cyl', 0, 0, 2.6, fill='#D9473A')],
+             x=px, y=py, w=2.6, z=17, h=23.5, mass=0.22, materials=[['nylon', 100]],
+             color='#7A8288', label=(k == 0), marks=[mark('cyl', 0, 0, 2.6, fill='#D9473A', zeichnung=True)],
              info='Dicker Nylonstift mit aufgesetzter Kunststoffkugel, die die Kopfhaut schont. Der Fuß steckt im '
                   'Gummikissen; mit einer Zange lassen sich die Stifte herausziehen.' if k == 0 else
                   'Eine von vielen Nylonborsten mit Kugelspitze.')
         for k, (px, py) in enumerate(POS)]
+KUGELN = [teil(f'kugel_{k}', 'nylon_bristles', 'Kugelspitze', 'Kugelspitzen', 'cyl', form='kugel',
+               x=px - 0.95, y=py - 0.95, w=4.5, z=40.5, h=4.5, mass=0.03, materials=[['pp', 100]],
+               color='#D9473A', label=False, info='Aufgesetzte Kunststoffkugel, schont die Kopfhaut.')
+          for k, (px, py) in enumerate(POS)]
 LOECHER = [mark('cyl', px - 6 - 0.2, py - 6 - 0.2, 3, fill='#3A3F44') for px, py in POS]
 
 teile = [
+    *KUGELN,
     *PINS,
     teil('kissen', 'rubber_cushion', 'Gummikissen', 'Kissen', 'box',
          x=6, y=6, w=58, d=94, z=12, h=5, r=25, mass=10,
@@ -45,11 +50,11 @@ teile = [
               'Ohne Kissen und Borsten ist der Körper sortenreiner Kunststoff.',
          color=ABS, marks=[mark('box', 4, 4, 62, 98, 27, '#2B2D2F')]),
     teil('griff', 'hairbrush_body', 'Griff', 'Griff', 'box',
-         x=21, y=106, w=28, d=124, z=1, h=11, r=12, mass=23,
+         x=21, y=106, w=28, d=124, z=1, h=11, r=12, form='liegend_y', mass=23,
          info='Griff aus ABS, in einem Stück mit der Kopfschale gespritzt.',
-         color=ABS, marks=[mark('box', 5, 34, 18, 70, 8, '#6E747A'), mark('cyl', 9, 110, 10, fill='#1E2022')]),
+         color=ABS, marks=[mark('box', 5, 34, 18, 70, 8, '#6E747A', zeichnung=True), mark('cyl', 9, 110, 10, fill='#1E2022', zeichnung=True)]),
 ]
 
-explodiere(teile, abstand=28, gruppen=[['kopfschale', 'griff'], [p['id'] for p in PINS]])
+explodiere(teile, abstand=28, gruppen=[['kopfschale', 'griff'], [p['id'] for p in PINS + KUGELN]])
 skaliere_masse(teile, oid='hairbrush')
 schreibe('hairbrush', teile)

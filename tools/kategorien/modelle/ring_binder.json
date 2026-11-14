@@ -100,25 +100,23 @@
    "color": "#8C9AA6"
   },
   {
-   "id": "ring_vorne",
+   "id": "ring_0_links",
    "component_id": "ring_mechanism",
    "material_id": "steel",
    "name": "Bügel vorne",
-   "short": "Bügel vorne",
-   "shape": "box",
+   "short": "Bügel",
+   "shape": "cyl",
    "x": 28,
-   "y": 112,
-   "w": 30,
-   "d": 8,
+   "y": 113,
+   "w": 6,
    "z": 6.6,
-   "h": 68,
-   "r": 3,
+   "h": 60,
    "explode": [
     0,
     0,
     100
    ],
-   "mass": 16.5,
+   "mass": 5.9,
    "materials": [
     [
      "stahl",
@@ -129,25 +127,81 @@
    "color": "#B8BEC4"
   },
   {
-   "id": "ring_hinten",
+   "id": "ring_0_rechts",
    "component_id": "ring_mechanism",
    "material_id": "steel",
-   "name": "Bügel hinten",
-   "short": "Bügel hinten",
-   "shape": "box",
-   "x": 28,
-   "y": 192,
-   "w": 30,
-   "d": 8,
+   "name": "Bügel (Gegenstück)",
+   "short": "Bügel",
+   "shape": "cyl",
+   "x": 52,
+   "y": 113,
+   "w": 6,
    "z": 6.6,
-   "h": 68,
-   "r": 3,
+   "h": 60,
    "explode": [
     0,
     0,
     100
    ],
-   "mass": 16.5,
+   "mass": 5.9,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Die zweite Hälfte des Bügels. Oben treffen sich beide Hälften und schließen den Ring.",
+   "color": "#B8BEC4",
+   "label": false
+  },
+  {
+   "id": "ring_0_oben",
+   "component_id": "ring_mechanism",
+   "material_id": "steel",
+   "name": "Bügel (Bogen)",
+   "short": "Bügel",
+   "shape": "box",
+   "x": 28,
+   "y": 113,
+   "w": 30,
+   "d": 6,
+   "z": 66.6,
+   "h": 8,
+   "explode": [
+    0,
+    0,
+    100
+   ],
+   "mass": 4.7,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Oberer Bogen des Bügels.",
+   "color": "#B8BEC4",
+   "label": false,
+   "form": "liegend_x"
+  },
+  {
+   "id": "ring_1_links",
+   "component_id": "ring_mechanism",
+   "material_id": "steel",
+   "name": "Bügel hinten",
+   "short": "Bügel",
+   "shape": "cyl",
+   "x": 28,
+   "y": 193,
+   "w": 6,
+   "z": 6.6,
+   "h": 60,
+   "explode": [
+    0,
+    0,
+    100
+   ],
+   "mass": 5.9,
    "materials": [
     [
      "stahl",
@@ -157,6 +211,64 @@
    "info": "Zweiter Bügel im Abstand von 8 cm, genau passend zur Zweifachlochung.",
    "color": "#B8BEC4",
    "label": false
+  },
+  {
+   "id": "ring_1_rechts",
+   "component_id": "ring_mechanism",
+   "material_id": "steel",
+   "name": "Bügel (Gegenstück)",
+   "short": "Bügel",
+   "shape": "cyl",
+   "x": 52,
+   "y": 193,
+   "w": 6,
+   "z": 6.6,
+   "h": 60,
+   "explode": [
+    0,
+    0,
+    100
+   ],
+   "mass": 5.9,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Die zweite Hälfte des Bügels. Oben treffen sich beide Hälften und schließen den Ring.",
+   "color": "#B8BEC4",
+   "label": false
+  },
+  {
+   "id": "ring_1_oben",
+   "component_id": "ring_mechanism",
+   "material_id": "steel",
+   "name": "Bügel (Bogen)",
+   "short": "Bügel",
+   "shape": "box",
+   "x": 28,
+   "y": 193,
+   "w": 30,
+   "d": 6,
+   "z": 66.6,
+   "h": 8,
+   "explode": [
+    0,
+    0,
+    100
+   ],
+   "mass": 4.7,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Oberer Bogen des Bügels.",
+   "color": "#B8BEC4",
+   "label": false,
+   "form": "liegend_x"
   },
   {
    "id": "hebel",

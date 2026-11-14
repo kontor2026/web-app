@@ -50,6 +50,16 @@ k('unterteil', 'Flaschenkörper', 'Körper', 65, 7, 25, 2.6, INFO_K, label=False
 k('boden', 'Petaloid-Boden', 'Boden', 60, 0, 7, 2.2,
   'Der Boden hat fünf Füße (Petaloid), damit er dem Druck der Kohlensäure standhält und die Flasche gerade steht.')
 
+# Körper in 3 gleich breite Abschnitte teilen: die Foto-Ansicht verbindet die Scheiben zu einer glatten Hülle,
+# so bleibt die Wand gerade statt fassförmig
+_i = next(i for i, p in enumerate(koerper) if p['id'] == 'koerper')
+_k = koerper.pop(_i)
+for _n in range(3):
+    _p = dict(_k, id='koerper' if _n == 0 else f'koerper{_n + 1}', z=_k['z'] + _k['h'] * _n / 3, h=_k['h'] / 3,
+              mass=_k['mass'] / 3, label=_k.get('label', True) if _n == 0 else False,
+              info=_k['info'] if _n == 0 else INFO_K, marks=_k.get('marks') if _n == 3 - 1 else None)
+    koerper.insert(_i + _n, _p)
+
 teile = [
     teil('deckel', 'hdpe_screw_cap', 'Schraubdeckel', 'Deckel', 'cyl', **rund(30, 208, 22), mass=2.0,
          info='HDPE, Recyclingcode 2. Seit 2024 hängt er per Lasche an der Flasche, damit er mit ihr recycelt wird. '

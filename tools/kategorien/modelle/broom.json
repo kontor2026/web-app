@@ -1738,6 +1738,7 @@
    ],
    "info": "Buchen- oder Kiefernholz, lackiert, vorn mit Gewinde. Aus dem Kopf herausdrehen: Der Stiel passt auf einen neuen Kopf oder kommt zum Altholz.",
    "color": "#C99A62",
+   "form": "liegend_y",
    "marks": [
     {
      "shape": "box",
@@ -1746,7 +1747,8 @@
      "w": 16,
      "d": 2,
      "r": 1,
-     "fill": "#A87C48"
+     "fill": "#A87C48",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -1755,7 +1757,8 @@
      "w": 16,
      "d": 2,
      "r": 1,
-     "fill": "#A87C48"
+     "fill": "#A87C48",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -1764,7 +1767,8 @@
      "w": 16,
      "d": 2,
      "r": 1,
-     "fill": "#A87C48"
+     "fill": "#A87C48",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -1773,7 +1777,8 @@
      "w": 16,
      "d": 2,
      "r": 1,
-     "fill": "#A87C48"
+     "fill": "#A87C48",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -1782,7 +1787,8 @@
      "w": 16,
      "d": 2,
      "r": 1,
-     "fill": "#A87C48"
+     "fill": "#A87C48",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -1791,7 +1797,8 @@
      "w": 16,
      "d": 2,
      "r": 1,
-     "fill": "#A87C48"
+     "fill": "#A87C48",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -1800,7 +1807,8 @@
      "w": 16,
      "d": 2,
      "r": 1,
-     "fill": "#A87C48"
+     "fill": "#A87C48",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -1809,7 +1817,8 @@
      "w": 16,
      "d": 2,
      "r": 1,
-     "fill": "#A87C48"
+     "fill": "#A87C48",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -1818,7 +1827,8 @@
      "w": 12,
      "d": 970,
      "r": 6,
-     "fill": "#D7AC76"
+     "fill": "#D7AC76",
+     "zeichnung": true
     }
    ]
   },
@@ -1850,12 +1860,14 @@
    ],
    "info": "Kunststoffkappe mit Loch zum Aufhängen am Stielende. Abziehen und getrennt entsorgen.",
    "color": "#C8462F",
+   "form": "liegend_y",
    "marks": [
     {
      "shape": "cyl",
      "x": 8,
      "y": 4,
      "w": 12,
+     "zeichnung": true,
      "fill": "#7A2A1C"
     }
    ]

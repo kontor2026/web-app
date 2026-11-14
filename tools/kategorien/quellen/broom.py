@@ -50,16 +50,16 @@ teile = [
                             mark('cyl', 131, 52, 6, fill='#7A2A1C'), mark('cyl', 165, 52, 6, fill='#7A2A1C')]
          + raster(20, 12, 2, 1, 40, 6, 220, r=3, fill='#D35A43')),
     teil('stiel', 'wooden_handle', 'Holzstiel mit Gewinde', 'Stiel', 'box',
-         x=138, y=160, w=24, d=1020, z=28, h=24, r=10, explode=[0, 130, 0], mass=280,
+         x=138, y=160, w=24, d=1020, z=28, h=24, r=10, explode=[0, 130, 0], mass=280, form='liegend_y',
          info='Buchen- oder Kiefernholz, lackiert, vorn mit Gewinde. Aus dem Kopf herausdrehen: Der Stiel passt '
               'auf einen neuen Kopf oder kommt zum Altholz.',
-         color='#C99A62', marks=raster(4, 2, 1, 8, 16, 2, 0, 4, r=1, fill='#A87C48')
-         + [mark('box', 6, 40, 12, 970, 6, '#D7AC76')]),
+         color='#C99A62', marks=[dict(m, zeichnung=True) for m in raster(4, 2, 1, 8, 16, 2, 0, 4, r=1, fill='#A87C48')
+                                 + [mark('box', 6, 40, 12, 970, 6, '#D7AC76')]]),
     teil('kappe', 'wooden_handle', 'Aufhängekappe', 'Kappe', 'box',
-         material_id='pp', x=136, y=1180, w=28, d=20, z=26, h=28, r=8, explode=[0, 180, 0], mass=6,
+         material_id='pp', x=136, y=1180, w=28, d=20, z=26, h=28, r=8, explode=[0, 180, 0], mass=6, form='liegend_y',
          materials=[['pp', 100]],
          info='Kunststoffkappe mit Loch zum Aufhängen am Stielende. Abziehen und getrennt entsorgen.',
-         color=KOPF, marks=[mark('cyl', 8, 4, 12, fill='#7A2A1C')]),
+         color=KOPF, marks=[mark('cyl', 8, 4, 12, fill='#7A2A1C', zeichnung=True)]),
 ]
 skaliere_masse(teile, oid='broom')
 schreibe('broom', teile)

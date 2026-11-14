@@ -26,7 +26,7 @@ teile = [
     teil('schaum_mitte', 'sponge_foam', 'Griffmulde', 'Griffmulde', 'box',
          x=4, y=4, w=62, d=92, z=9, h=6, r=4, mass=1.6,
          info='Die rundum eingeschnittene Mulde: Hier liegen die Finger, damit der nasse Schwamm nicht aus der Hand rutscht.',
-         color='#D9B42A'),
+         color='#F2CF3B'),
     teil('schaum', 'sponge_foam', 'Schaumstoffkörper', 'Schaum', 'box',
          x=0, y=0, w=70, d=100, z=0, h=9, r=6, mass=2.4,
          info='Offenporiger Polyurethan-Schaum, der viel Wasser aufsaugt. Alte Schwämme gehören in den Restmüll; '

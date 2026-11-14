@@ -155,7 +155,8 @@
     ]
    ],
    "info": "Gedrehte Papierkordel, innen mit einem Pappstreifen angeklebt. Ist der Kleber aus Kunststoff, Griffe abreißen, der Rest darf ins Altpapier.",
-   "color": "#B88C5A"
+   "color": "#B88C5A",
+   "form": "liegend_x"
   },
   {
    "id": "griff_vorne_l",
@@ -255,7 +256,8 @@
    ],
    "info": "Zweiter Griff, genauso eingeklebt.",
    "color": "#B88C5A",
-   "label": false
+   "label": false,
+   "form": "liegend_x"
   },
   {
    "id": "griff_hinten_l",

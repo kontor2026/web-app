@@ -44,13 +44,18 @@ teile = [
          info='Zweiter Kartenstapel.',
          marks=[mark('box', 4, 4, 50, 80, 2, '#3E6FA8'), mark('cyl', 17, 32, 24, fill='#F2E6C8')]),
 ]
+# Figur als gedrechselter Kegel: Fuß, Körper, Hals, Kopf (Scheiben, in der Foto-Ansicht eine glatte Hülle)
+PROFIL = ((16, 4), (13, 4), (9.5, 5), (7, 3), (9, 2), (11, 3), (12, 2.5), (8, 1.5))
 for n, f in enumerate(FIGUR):
-    teile.append(teil(f'figur_{n + 1}', 'wooden_pieces', 'Spielfiguren (4 Stück)' if n == 0 else f'Spielfigur {n + 1}',
-                      'Figuren', 'cyl', x=110 + 26 * n, y=40, w=16, z=20, h=25, mass=4, color=f,
-                      materials=[['holz', 98], ['druck', 2]], label=None if n == 0 else False,
-                      info='Gedrechseltes, farbig lackiertes Buchenholz. Als Ersatzfiguren für andere Spiele aufheben.'
-                      if n == 0 else 'Weitere Figur.',
-                      marks=[mark('cyl', 3, 3, 10, fill='#FFFFFF')]))
+    z = 20
+    for k, (w, h) in enumerate(PROFIL):
+        teile.append(teil(f'figur_{n + 1}' if k == 0 else f'figur_{n + 1}_{k}', 'wooden_pieces',
+                          ('Spielfiguren (4 Stück)' if n == 0 else f'Spielfigur {n + 1}'), 'Figuren', 'cyl',
+                          x=110 + 26 * n + (16 - w) / 2, y=40 + (16 - w) / 2, w=w, z=z, h=h, mass=4 * w * w * h / 2700,
+                          color=f, materials=[['holz', 98], ['druck', 2]], label=None if n == 0 and k == 0 else False,
+                          info='Gedrechseltes, farbig lackiertes Buchenholz. Als Ersatzfiguren für andere Spiele aufheben.'
+                          if n == 0 and k == 0 else 'Weitere Figur.' if k == 0 else 'Teil der gedrechselten Figur.'))
+        z += h
 for n in range(2):
     teile.append(teil(f'wuerfel_{n + 1}', 'wooden_pieces', 'Würfel (2 Stück)' if n == 0 else 'Würfel 2', 'Würfel', 'box',
                       x=120 + 40 * n, y=150, w=16, d=16, z=29, h=16, r=2, mass=3, color='#F2E6C8',
@@ -78,7 +83,7 @@ by['unterteil']['explode'] = [0, 0, 0]
 by['einsatz']['explode'] = [0, 0, 75]
 for p in teile:
     if p['id'].startswith(('figur', 'wuerfel', 'karten')):
-        p['explode'] = [0, 0, round(75 + 45 + 35 - p['z'] + 1, 1)]
+        p['explode'] = [0, 0, round(75 + 45 + 35 - (20 if p['id'].startswith('figur') else p['z']) + 1, 1)]
 by['spielplan']['explode'] = [310, 0, -45]
 by['anleitung']['explode'] = [-330, 60, -50]
 skaliere_masse(teile, oid='board_game')

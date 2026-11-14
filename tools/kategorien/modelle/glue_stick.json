@@ -221,12 +221,15 @@
    "info": "Dünne bedruckte PP-Folie, beim Spritzgießen mit der Hülse verschmolzen (In-Mould-Label). Sie muss nicht abgezogen werden, weil sie aus demselben Kunststoff ist.",
    "color": "#F2C230",
    "sortBias": 5,
+   "wand": 0.5,
+   "boden": 0,
    "marks": [
     {
      "shape": "cyl",
      "x": 0.4,
      "y": 0.4,
      "w": 27.8,
+     "zeichnung": true,
      "fill": "#D8D4CA"
     }
    ]

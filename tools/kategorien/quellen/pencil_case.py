@@ -29,20 +29,33 @@ teile = [
               'neben den Zähnen entlang schneiden.',
          marks=[mark('box', 6, 0, 4, 198, 0, '#C2A564')] + raster(5, 2, 1, 49, 6, 1.2, 0, 4, fill='#A88A4C')),
     teil('oberteil', 'nylon_fabric', 'Oberschale (Außenstoff)', 'Oberschale', 'box',
-         x=0, y=0, w=80, d=210, z=20, h=16, r=14, mass=28,
+         x=6, y=6, w=68, d=198, z=31, h=5, r=22, mass=6,
          info='Nylon-Gewebe mit Beschichtung, an der Kante mit dem Unterteil vernäht. Saubere Mäppchen in die '
               'Altkleidersammlung oder weitergeben, kaputte in den Restmüll.',
-         color=STOFF, marks=[mark('box', 4, 4, 26, 202, 12, '#2A5280'), mark('box', 50, 4, 26, 202, 12, '#2A5280'),
-                             mark('box', 52, 20, 22, 12, 2, '#E9E6DF'), mark('box', 33, 6, 14, 198, 2, '#1A2430')]),
+         color=STOFF, marks=[mark('box', 46, 14, 22, 12, 2, '#E9E6DF'), mark('box', 27, 0, 14, 198, 2, '#1A2430')]),
+    # Die Oberschale ist gewölbt: Scheiben werden in der Foto-Ansicht zu einer weichen Hülle verbunden
+    teil('oberteil_mitte', 'nylon_fabric', 'Oberschale (Wölbung)', 'Oberschale', 'box',
+         x=2, y=2, w=76, d=206, z=26, h=5, r=18, mass=10, label=False,
+         info='Gewölbter Teil der Oberschale.', color=STOFF),
+    teil('oberteil_rand', 'nylon_fabric', 'Oberschale (Rand)', 'Oberschale', 'box',
+         x=0, y=0, w=80, d=210, z=20, h=6, r=14, mass=12, label=False,
+         info='Unterer Rand der Oberschale an der Naht.', color=STOFF),
     teil('futter', 'nylon_fabric', 'Innenfutter', 'Futter', 'box',
-         x=3, y=3, w=74, d=204, z=2, h=33, r=12, mass=14, material_id='polyester', color='#B9C4CC',
+         x=7, y=7, w=66, d=196, z=4, h=30, r=12, mass=14, material_id='polyester', color='#B9C4CC',
          info='Dünnes Polyesterfutter, an der Reißverschlussnaht mit eingenäht. Lässt sich nur mit der Schere lösen.',
-         marks=[mark('box', 6, 30, 62, 80, 4, '#A9B5BE')]),
+         marks=[mark('box', 4, 30, 58, 80, 4, '#A9B5BE')]),
     teil('unterteil', 'nylon_fabric', 'Unterschale mit Boden', 'Unterschale', 'box',
-         x=0, y=0, w=80, d=210, z=0, h=20, r=14, mass=36,
+         x=0, y=0, w=80, d=210, z=12, h=8, r=14, mass=16,
          info='Boden und Seitenwände, innen mit einer dünnen Versteifung, damit das Mäppchen die Form hält.',
-         color='#274D75', marks=[mark('box', 3, 3, 74, 204, 12, '#21436A')]),
+         color=STOFF, marks=[mark('box', 3, 3, 74, 204, 12, '#21436A', zeichnung=True)]),
+    teil('unterteil_mitte', 'nylon_fabric', 'Unterschale (Wölbung)', 'Unterschale', 'box',
+         x=2, y=2, w=76, d=206, z=5, h=7, r=18, mass=12, label=False,
+         info='Gewölbter Teil der Unterschale.', color=STOFF),
+    teil('unterteil_boden', 'nylon_fabric', 'Unterschale (Boden)', 'Unterschale', 'box',
+         x=7, y=7, w=66, d=196, z=0, h=5, r=22, mass=8, label=False,
+         info='Flacher Boden, auf dem das Mäppchen liegt.', color=STOFF),
 ]
-explodiere(teile, abstand=25, abstaende={'zuglasche': 12, 'schieber': 18, 'reissverschluss': 50})
+explodiere(teile, abstand=25, abstaende={'zuglasche': 12, 'schieber': 18, 'reissverschluss': 50},
+           gruppen=[['oberteil', 'oberteil_mitte', 'oberteil_rand'], ['unterteil', 'unterteil_mitte', 'unterteil_boden']])
 skaliere_masse(teile, oid='pencil_case')
 schreibe('pencil_case', teile)

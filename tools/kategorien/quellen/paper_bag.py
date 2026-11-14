@@ -26,7 +26,7 @@ def griff(seite, y, dy, mit_label):
             'Griffe abreißen, der Rest darf ins Altpapier.') if mit_label else 'Zweiter Griff, genauso eingeklebt.'
     return [
         teil(f'griff_{seite}', 'paper_bag_body', f'Kordelgriff {seite}', 'Griff', 'box',
-             x=85, y=y, w=90, d=4, z=H + 42, h=6, r=2, explode=ex, mass=1.2, materials=GRIFF, color=farbe,
+             x=85, y=y, w=90, d=4, z=H + 42, h=6, r=2, form='liegend_x', explode=ex, mass=1.2, materials=GRIFF, color=farbe,
              label=None if mit_label else False, info=info),
         teil(f'griff_{seite}_l', 'paper_bag_body', 'Kordel, Schenkel', 'Kordel', 'cyl',
              x=85, y=y, w=5, d=4, z=H - 2, h=44, explode=ex, mass=0.65, materials=GRIFF, color=farbe, label=False,

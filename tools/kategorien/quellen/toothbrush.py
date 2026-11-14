@@ -39,12 +39,12 @@ teile = [
          info='Kleines geriffeltes Gummipolster am Hals, auf dem der Daumen liegt. Angespritzt, nicht lösbar.',
          color='#9CD3F0', marks=raster(1, 1.5, 1, 4, 3, 1.2, 0, 3, r=0.5, fill='#7FBEDF')),
     teil('hals', 'toothbrush_handle', 'Hals', 'Hals', 'box',
-         x=6.5, y=28, w=7, d=32, z=3, h=6, r=3, mass=1.1,
+         x=6.5, y=28, w=7, d=32, z=3, h=6, r=3, form='liegend_y', mass=1.1,
          info='Schmaler, leicht federnder Übergang zwischen Kopf und Griff.', color=PP),
     teil('griff', 'toothbrush_handle', 'Griff', 'Griff', 'box',
-         x=2, y=60, w=16, d=130, z=0, h=12, r=7, mass=10.3,
+         x=2, y=60, w=16, d=130, z=0, h=12, r=7, form='liegend_y', mass=10.3,
          info='Massiver Griffkörper aus Polypropylen. Es gibt auch Bürsten mit Wechselköpfen oder aus Holz, die weniger Plastikmüll machen.',
-         color=PP, marks=[mark('box', 3, 20, 10, 50, 5, '#9CD3F0')]),
+         color=PP, marks=[mark('box', 3, 20, 10, 50, 5, '#9CD3F0', zeichnung=True)]),
 ]
 
 explodiere(teile, abstand=12, gruppen=[['kopf', 'hals', 'griff']], abstaende={'daumenauflage': 8})

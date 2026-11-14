@@ -37,7 +37,7 @@
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Fe": 8918.0
+   "Fe": 10584.0
   },
   "herkunft": {
    "Fe": "Modellmassen (Schätzung)"
@@ -45,11 +45,11 @@
   "materialien_g": {
    "paper": 191.5,
    "cardboard": 49.4,
-   "steel": 9.1
+   "steel": 10.8
   },
-  "co2_kg": 0.129,
-  "co2_mit_recyclat_kg": 0.113,
-  "co2_ersparnis_kg": 0.017,
+  "co2_kg": 0.134,
+  "co2_mit_recyclat_kg": 0.114,
+  "co2_ersparnis_kg": 0.02,
   "co2_ohne_faktor": [],
   "rohstoffwert_eur": 0,
   "wert_ohne_preis": [],
@@ -1519,18 +1519,17 @@
    "short": "Spirale",
    "shape": "box",
    "x": 0,
-   "y": 2,
+   "y": 4.8,
    "w": 12,
-   "d": 293,
+   "d": 1.4,
    "z": 0,
    "h": 10,
-   "r": 3,
    "explode": [
     -170,
     0,
     0
    ],
-   "mass": 9.1,
+   "mass": 0.3,
    "materials": [
     [
      "stahl",
@@ -1538,333 +1537,1059 @@
     ]
    ],
    "info": "Lackierter Stahldraht, durch die Löcher gefädelt. Ein Ende aufbiegen und herausdrehen, dann darf der Block ins Altpapier und der Draht zum Metall.",
-   "color": "#8E969A",
-   "marks": [
-    {
-     "shape": "box",
-     "x": 1,
-     "y": 1.5,
-     "w": 10,
-     "d": 1.2,
-     "r": 0.6,
-     "fill": "#5A6268"
-    },
-    {
-     "shape": "box",
-     "x": 1,
-     "y": 9.5,
-     "w": 10,
-     "d": 1.2,
-     "r": 0.6,
-     "fill": "#5A6268"
-    },
-    {
-     "shape": "box",
-     "x": 1,
-     "y": 17.5,
-     "w": 10,
-     "d": 1.2,
-     "r": 0.6,
-     "fill": "#5A6268"
-    },
-    {
-     "shape": "box",
-     "x": 1,
-     "y": 25.5,
-     "w": 10,
-     "d": 1.2,
-     "r": 0.6,
-     "fill": "#5A6268"
-    },
-    {
-     "shape": "box",
-     "x": 1,
-     "y": 33.5,
-     "w": 10,
-     "d": 1.2,
-     "r": 0.6,
-     "fill": "#5A6268"
-    },
-    {
-     "shape": "box",
-     "x": 1,
-     "y": 41.5,
-     "w": 10,
-     "d": 1.2,
-     "r": 0.6,
-     "fill": "#5A6268"
-    },
-    {
-     "shape": "box",
-     "x": 1,
-     "y": 49.5,
-     "w": 10,
-     "d": 1.2,
-     "r": 0.6,
-     "fill": "#5A6268"
-    },
-    {
-     "shape": "box",
-     "x": 1,
-     "y": 57.5,
-     "w": 10,
-     "d": 1.2,
-     "r": 0.6,
-     "fill": "#5A6268"
-    },
-    {
-     "shape": "box",
-     "x": 1,
-     "y": 65.5,
-     "w": 10,
-     "d": 1.2,
-     "r": 0.6,
-     "fill": "#5A6268"
-    },
-    {
-     "shape": "box",
-     "x": 1,
-     "y": 73.5,
-     "w": 10,
-     "d": 1.2,
-     "r": 0.6,
-     "fill": "#5A6268"
-    },
-    {
-     "shape": "box",
-     "x": 1,
-     "y": 81.5,
-     "w": 10,
-     "d": 1.2,
-     "r": 0.6,
-     "fill": "#5A6268"
-    },
-    {
-     "shape": "box",
-     "x": 1,
-     "y": 89.5,
-     "w": 10,
-     "d": 1.2,
-     "r": 0.6,
-     "fill": "#5A6268"
-    },
-    {
-     "shape": "box",
-     "x": 1,
-     "y": 97.5,
-     "w": 10,
-     "d": 1.2,
-     "r": 0.6,
-     "fill": "#5A6268"
-    },
-    {
-     "shape": "box",
-     "x": 1,
-     "y": 105.5,
-     "w": 10,
-     "d": 1.2,
-     "r": 0.6,
-     "fill": "#5A6268"
-    },
-    {
-     "shape": "box",
-     "x": 1,
-     "y": 113.5,
-     "w": 10,
-     "d": 1.2,
-     "r": 0.6,
-     "fill": "#5A6268"
-    },
-    {
-     "shape": "box",
-     "x": 1,
-     "y": 121.5,
-     "w": 10,
-     "d": 1.2,
-     "r": 0.6,
-     "fill": "#5A6268"
-    },
-    {
-     "shape": "box",
-     "x": 1,
-     "y": 129.5,
-     "w": 10,
-     "d": 1.2,
-     "r": 0.6,
-     "fill": "#5A6268"
-    },
-    {
-     "shape": "box",
-     "x": 1,
-     "y": 137.5,
-     "w": 10,
-     "d": 1.2,
-     "r": 0.6,
-     "fill": "#5A6268"
-    },
-    {
-     "shape": "box",
-     "x": 1,
-     "y": 145.5,
-     "w": 10,
-     "d": 1.2,
-     "r": 0.6,
-     "fill": "#5A6268"
-    },
-    {
-     "shape": "box",
-     "x": 1,
-     "y": 153.5,
-     "w": 10,
-     "d": 1.2,
-     "r": 0.6,
-     "fill": "#5A6268"
-    },
-    {
-     "shape": "box",
-     "x": 1,
-     "y": 161.5,
-     "w": 10,
-     "d": 1.2,
-     "r": 0.6,
-     "fill": "#5A6268"
-    },
-    {
-     "shape": "box",
-     "x": 1,
-     "y": 169.5,
-     "w": 10,
-     "d": 1.2,
-     "r": 0.6,
-     "fill": "#5A6268"
-    },
-    {
-     "shape": "box",
-     "x": 1,
-     "y": 177.5,
-     "w": 10,
-     "d": 1.2,
-     "r": 0.6,
-     "fill": "#5A6268"
-    },
-    {
-     "shape": "box",
-     "x": 1,
-     "y": 185.5,
-     "w": 10,
-     "d": 1.2,
-     "r": 0.6,
-     "fill": "#5A6268"
-    },
-    {
-     "shape": "box",
-     "x": 1,
-     "y": 193.5,
-     "w": 10,
-     "d": 1.2,
-     "r": 0.6,
-     "fill": "#5A6268"
-    },
-    {
-     "shape": "box",
-     "x": 1,
-     "y": 201.5,
-     "w": 10,
-     "d": 1.2,
-     "r": 0.6,
-     "fill": "#5A6268"
-    },
-    {
-     "shape": "box",
-     "x": 1,
-     "y": 209.5,
-     "w": 10,
-     "d": 1.2,
-     "r": 0.6,
-     "fill": "#5A6268"
-    },
-    {
-     "shape": "box",
-     "x": 1,
-     "y": 217.5,
-     "w": 10,
-     "d": 1.2,
-     "r": 0.6,
-     "fill": "#5A6268"
-    },
-    {
-     "shape": "box",
-     "x": 1,
-     "y": 225.5,
-     "w": 10,
-     "d": 1.2,
-     "r": 0.6,
-     "fill": "#5A6268"
-    },
-    {
-     "shape": "box",
-     "x": 1,
-     "y": 233.5,
-     "w": 10,
-     "d": 1.2,
-     "r": 0.6,
-     "fill": "#5A6268"
-    },
-    {
-     "shape": "box",
-     "x": 1,
-     "y": 241.5,
-     "w": 10,
-     "d": 1.2,
-     "r": 0.6,
-     "fill": "#5A6268"
-    },
-    {
-     "shape": "box",
-     "x": 1,
-     "y": 249.5,
-     "w": 10,
-     "d": 1.2,
-     "r": 0.6,
-     "fill": "#5A6268"
-    },
-    {
-     "shape": "box",
-     "x": 1,
-     "y": 257.5,
-     "w": 10,
-     "d": 1.2,
-     "r": 0.6,
-     "fill": "#5A6268"
-    },
-    {
-     "shape": "box",
-     "x": 1,
-     "y": 265.5,
-     "w": 10,
-     "d": 1.2,
-     "r": 0.6,
-     "fill": "#5A6268"
-    },
-    {
-     "shape": "box",
-     "x": 1,
-     "y": 273.5,
-     "w": 10,
-     "d": 1.2,
-     "r": 0.6,
-     "fill": "#5A6268"
-    },
-    {
-     "shape": "box",
-     "x": 1,
-     "y": 281.5,
-     "w": 10,
-     "d": 1.2,
-     "r": 0.6,
-     "fill": "#5A6268"
-    }
-   ]
+   "color": "#B8BEC4",
+   "label": true,
+   "form": "liegend_x"
+  },
+  {
+   "id": "spirale_1",
+   "component_id": "steel_spiral",
+   "material_id": "steel",
+   "name": "Drahtspirale",
+   "short": "Spirale",
+   "shape": "box",
+   "x": 0,
+   "y": 12.8,
+   "w": 12,
+   "d": 1.4,
+   "z": 0,
+   "h": 10,
+   "explode": [
+    -170,
+    0,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Eine Windung der Drahtspirale.",
+   "color": "#B8BEC4",
+   "label": false,
+   "form": "liegend_x"
+  },
+  {
+   "id": "spirale_2",
+   "component_id": "steel_spiral",
+   "material_id": "steel",
+   "name": "Drahtspirale",
+   "short": "Spirale",
+   "shape": "box",
+   "x": 0,
+   "y": 20.8,
+   "w": 12,
+   "d": 1.4,
+   "z": 0,
+   "h": 10,
+   "explode": [
+    -170,
+    0,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Eine Windung der Drahtspirale.",
+   "color": "#B8BEC4",
+   "label": false,
+   "form": "liegend_x"
+  },
+  {
+   "id": "spirale_3",
+   "component_id": "steel_spiral",
+   "material_id": "steel",
+   "name": "Drahtspirale",
+   "short": "Spirale",
+   "shape": "box",
+   "x": 0,
+   "y": 28.8,
+   "w": 12,
+   "d": 1.4,
+   "z": 0,
+   "h": 10,
+   "explode": [
+    -170,
+    0,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Eine Windung der Drahtspirale.",
+   "color": "#B8BEC4",
+   "label": false,
+   "form": "liegend_x"
+  },
+  {
+   "id": "spirale_4",
+   "component_id": "steel_spiral",
+   "material_id": "steel",
+   "name": "Drahtspirale",
+   "short": "Spirale",
+   "shape": "box",
+   "x": 0,
+   "y": 36.8,
+   "w": 12,
+   "d": 1.4,
+   "z": 0,
+   "h": 10,
+   "explode": [
+    -170,
+    0,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Eine Windung der Drahtspirale.",
+   "color": "#B8BEC4",
+   "label": false,
+   "form": "liegend_x"
+  },
+  {
+   "id": "spirale_5",
+   "component_id": "steel_spiral",
+   "material_id": "steel",
+   "name": "Drahtspirale",
+   "short": "Spirale",
+   "shape": "box",
+   "x": 0,
+   "y": 44.8,
+   "w": 12,
+   "d": 1.4,
+   "z": 0,
+   "h": 10,
+   "explode": [
+    -170,
+    0,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Eine Windung der Drahtspirale.",
+   "color": "#B8BEC4",
+   "label": false,
+   "form": "liegend_x"
+  },
+  {
+   "id": "spirale_6",
+   "component_id": "steel_spiral",
+   "material_id": "steel",
+   "name": "Drahtspirale",
+   "short": "Spirale",
+   "shape": "box",
+   "x": 0,
+   "y": 52.8,
+   "w": 12,
+   "d": 1.4,
+   "z": 0,
+   "h": 10,
+   "explode": [
+    -170,
+    0,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Eine Windung der Drahtspirale.",
+   "color": "#B8BEC4",
+   "label": false,
+   "form": "liegend_x"
+  },
+  {
+   "id": "spirale_7",
+   "component_id": "steel_spiral",
+   "material_id": "steel",
+   "name": "Drahtspirale",
+   "short": "Spirale",
+   "shape": "box",
+   "x": 0,
+   "y": 60.8,
+   "w": 12,
+   "d": 1.4,
+   "z": 0,
+   "h": 10,
+   "explode": [
+    -170,
+    0,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Eine Windung der Drahtspirale.",
+   "color": "#B8BEC4",
+   "label": false,
+   "form": "liegend_x"
+  },
+  {
+   "id": "spirale_8",
+   "component_id": "steel_spiral",
+   "material_id": "steel",
+   "name": "Drahtspirale",
+   "short": "Spirale",
+   "shape": "box",
+   "x": 0,
+   "y": 68.8,
+   "w": 12,
+   "d": 1.4,
+   "z": 0,
+   "h": 10,
+   "explode": [
+    -170,
+    0,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Eine Windung der Drahtspirale.",
+   "color": "#B8BEC4",
+   "label": false,
+   "form": "liegend_x"
+  },
+  {
+   "id": "spirale_9",
+   "component_id": "steel_spiral",
+   "material_id": "steel",
+   "name": "Drahtspirale",
+   "short": "Spirale",
+   "shape": "box",
+   "x": 0,
+   "y": 76.8,
+   "w": 12,
+   "d": 1.4,
+   "z": 0,
+   "h": 10,
+   "explode": [
+    -170,
+    0,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Eine Windung der Drahtspirale.",
+   "color": "#B8BEC4",
+   "label": false,
+   "form": "liegend_x"
+  },
+  {
+   "id": "spirale_10",
+   "component_id": "steel_spiral",
+   "material_id": "steel",
+   "name": "Drahtspirale",
+   "short": "Spirale",
+   "shape": "box",
+   "x": 0,
+   "y": 84.8,
+   "w": 12,
+   "d": 1.4,
+   "z": 0,
+   "h": 10,
+   "explode": [
+    -170,
+    0,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Eine Windung der Drahtspirale.",
+   "color": "#B8BEC4",
+   "label": false,
+   "form": "liegend_x"
+  },
+  {
+   "id": "spirale_11",
+   "component_id": "steel_spiral",
+   "material_id": "steel",
+   "name": "Drahtspirale",
+   "short": "Spirale",
+   "shape": "box",
+   "x": 0,
+   "y": 92.8,
+   "w": 12,
+   "d": 1.4,
+   "z": 0,
+   "h": 10,
+   "explode": [
+    -170,
+    0,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Eine Windung der Drahtspirale.",
+   "color": "#B8BEC4",
+   "label": false,
+   "form": "liegend_x"
+  },
+  {
+   "id": "spirale_12",
+   "component_id": "steel_spiral",
+   "material_id": "steel",
+   "name": "Drahtspirale",
+   "short": "Spirale",
+   "shape": "box",
+   "x": 0,
+   "y": 100.8,
+   "w": 12,
+   "d": 1.4,
+   "z": 0,
+   "h": 10,
+   "explode": [
+    -170,
+    0,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Eine Windung der Drahtspirale.",
+   "color": "#B8BEC4",
+   "label": false,
+   "form": "liegend_x"
+  },
+  {
+   "id": "spirale_13",
+   "component_id": "steel_spiral",
+   "material_id": "steel",
+   "name": "Drahtspirale",
+   "short": "Spirale",
+   "shape": "box",
+   "x": 0,
+   "y": 108.8,
+   "w": 12,
+   "d": 1.4,
+   "z": 0,
+   "h": 10,
+   "explode": [
+    -170,
+    0,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Eine Windung der Drahtspirale.",
+   "color": "#B8BEC4",
+   "label": false,
+   "form": "liegend_x"
+  },
+  {
+   "id": "spirale_14",
+   "component_id": "steel_spiral",
+   "material_id": "steel",
+   "name": "Drahtspirale",
+   "short": "Spirale",
+   "shape": "box",
+   "x": 0,
+   "y": 116.8,
+   "w": 12,
+   "d": 1.4,
+   "z": 0,
+   "h": 10,
+   "explode": [
+    -170,
+    0,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Eine Windung der Drahtspirale.",
+   "color": "#B8BEC4",
+   "label": false,
+   "form": "liegend_x"
+  },
+  {
+   "id": "spirale_15",
+   "component_id": "steel_spiral",
+   "material_id": "steel",
+   "name": "Drahtspirale",
+   "short": "Spirale",
+   "shape": "box",
+   "x": 0,
+   "y": 124.8,
+   "w": 12,
+   "d": 1.4,
+   "z": 0,
+   "h": 10,
+   "explode": [
+    -170,
+    0,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Eine Windung der Drahtspirale.",
+   "color": "#B8BEC4",
+   "label": false,
+   "form": "liegend_x"
+  },
+  {
+   "id": "spirale_16",
+   "component_id": "steel_spiral",
+   "material_id": "steel",
+   "name": "Drahtspirale",
+   "short": "Spirale",
+   "shape": "box",
+   "x": 0,
+   "y": 132.8,
+   "w": 12,
+   "d": 1.4,
+   "z": 0,
+   "h": 10,
+   "explode": [
+    -170,
+    0,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Eine Windung der Drahtspirale.",
+   "color": "#B8BEC4",
+   "label": false,
+   "form": "liegend_x"
+  },
+  {
+   "id": "spirale_17",
+   "component_id": "steel_spiral",
+   "material_id": "steel",
+   "name": "Drahtspirale",
+   "short": "Spirale",
+   "shape": "box",
+   "x": 0,
+   "y": 140.8,
+   "w": 12,
+   "d": 1.4,
+   "z": 0,
+   "h": 10,
+   "explode": [
+    -170,
+    0,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Eine Windung der Drahtspirale.",
+   "color": "#B8BEC4",
+   "label": false,
+   "form": "liegend_x"
+  },
+  {
+   "id": "spirale_18",
+   "component_id": "steel_spiral",
+   "material_id": "steel",
+   "name": "Drahtspirale",
+   "short": "Spirale",
+   "shape": "box",
+   "x": 0,
+   "y": 148.8,
+   "w": 12,
+   "d": 1.4,
+   "z": 0,
+   "h": 10,
+   "explode": [
+    -170,
+    0,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Eine Windung der Drahtspirale.",
+   "color": "#B8BEC4",
+   "label": false,
+   "form": "liegend_x"
+  },
+  {
+   "id": "spirale_19",
+   "component_id": "steel_spiral",
+   "material_id": "steel",
+   "name": "Drahtspirale",
+   "short": "Spirale",
+   "shape": "box",
+   "x": 0,
+   "y": 156.8,
+   "w": 12,
+   "d": 1.4,
+   "z": 0,
+   "h": 10,
+   "explode": [
+    -170,
+    0,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Eine Windung der Drahtspirale.",
+   "color": "#B8BEC4",
+   "label": false,
+   "form": "liegend_x"
+  },
+  {
+   "id": "spirale_20",
+   "component_id": "steel_spiral",
+   "material_id": "steel",
+   "name": "Drahtspirale",
+   "short": "Spirale",
+   "shape": "box",
+   "x": 0,
+   "y": 164.8,
+   "w": 12,
+   "d": 1.4,
+   "z": 0,
+   "h": 10,
+   "explode": [
+    -170,
+    0,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Eine Windung der Drahtspirale.",
+   "color": "#B8BEC4",
+   "label": false,
+   "form": "liegend_x"
+  },
+  {
+   "id": "spirale_21",
+   "component_id": "steel_spiral",
+   "material_id": "steel",
+   "name": "Drahtspirale",
+   "short": "Spirale",
+   "shape": "box",
+   "x": 0,
+   "y": 172.8,
+   "w": 12,
+   "d": 1.4,
+   "z": 0,
+   "h": 10,
+   "explode": [
+    -170,
+    0,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Eine Windung der Drahtspirale.",
+   "color": "#B8BEC4",
+   "label": false,
+   "form": "liegend_x"
+  },
+  {
+   "id": "spirale_22",
+   "component_id": "steel_spiral",
+   "material_id": "steel",
+   "name": "Drahtspirale",
+   "short": "Spirale",
+   "shape": "box",
+   "x": 0,
+   "y": 180.8,
+   "w": 12,
+   "d": 1.4,
+   "z": 0,
+   "h": 10,
+   "explode": [
+    -170,
+    0,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Eine Windung der Drahtspirale.",
+   "color": "#B8BEC4",
+   "label": false,
+   "form": "liegend_x"
+  },
+  {
+   "id": "spirale_23",
+   "component_id": "steel_spiral",
+   "material_id": "steel",
+   "name": "Drahtspirale",
+   "short": "Spirale",
+   "shape": "box",
+   "x": 0,
+   "y": 188.8,
+   "w": 12,
+   "d": 1.4,
+   "z": 0,
+   "h": 10,
+   "explode": [
+    -170,
+    0,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Eine Windung der Drahtspirale.",
+   "color": "#B8BEC4",
+   "label": false,
+   "form": "liegend_x"
+  },
+  {
+   "id": "spirale_24",
+   "component_id": "steel_spiral",
+   "material_id": "steel",
+   "name": "Drahtspirale",
+   "short": "Spirale",
+   "shape": "box",
+   "x": 0,
+   "y": 196.8,
+   "w": 12,
+   "d": 1.4,
+   "z": 0,
+   "h": 10,
+   "explode": [
+    -170,
+    0,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Eine Windung der Drahtspirale.",
+   "color": "#B8BEC4",
+   "label": false,
+   "form": "liegend_x"
+  },
+  {
+   "id": "spirale_25",
+   "component_id": "steel_spiral",
+   "material_id": "steel",
+   "name": "Drahtspirale",
+   "short": "Spirale",
+   "shape": "box",
+   "x": 0,
+   "y": 204.8,
+   "w": 12,
+   "d": 1.4,
+   "z": 0,
+   "h": 10,
+   "explode": [
+    -170,
+    0,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Eine Windung der Drahtspirale.",
+   "color": "#B8BEC4",
+   "label": false,
+   "form": "liegend_x"
+  },
+  {
+   "id": "spirale_26",
+   "component_id": "steel_spiral",
+   "material_id": "steel",
+   "name": "Drahtspirale",
+   "short": "Spirale",
+   "shape": "box",
+   "x": 0,
+   "y": 212.8,
+   "w": 12,
+   "d": 1.4,
+   "z": 0,
+   "h": 10,
+   "explode": [
+    -170,
+    0,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Eine Windung der Drahtspirale.",
+   "color": "#B8BEC4",
+   "label": false,
+   "form": "liegend_x"
+  },
+  {
+   "id": "spirale_27",
+   "component_id": "steel_spiral",
+   "material_id": "steel",
+   "name": "Drahtspirale",
+   "short": "Spirale",
+   "shape": "box",
+   "x": 0,
+   "y": 220.8,
+   "w": 12,
+   "d": 1.4,
+   "z": 0,
+   "h": 10,
+   "explode": [
+    -170,
+    0,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Eine Windung der Drahtspirale.",
+   "color": "#B8BEC4",
+   "label": false,
+   "form": "liegend_x"
+  },
+  {
+   "id": "spirale_28",
+   "component_id": "steel_spiral",
+   "material_id": "steel",
+   "name": "Drahtspirale",
+   "short": "Spirale",
+   "shape": "box",
+   "x": 0,
+   "y": 228.8,
+   "w": 12,
+   "d": 1.4,
+   "z": 0,
+   "h": 10,
+   "explode": [
+    -170,
+    0,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Eine Windung der Drahtspirale.",
+   "color": "#B8BEC4",
+   "label": false,
+   "form": "liegend_x"
+  },
+  {
+   "id": "spirale_29",
+   "component_id": "steel_spiral",
+   "material_id": "steel",
+   "name": "Drahtspirale",
+   "short": "Spirale",
+   "shape": "box",
+   "x": 0,
+   "y": 236.8,
+   "w": 12,
+   "d": 1.4,
+   "z": 0,
+   "h": 10,
+   "explode": [
+    -170,
+    0,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Eine Windung der Drahtspirale.",
+   "color": "#B8BEC4",
+   "label": false,
+   "form": "liegend_x"
+  },
+  {
+   "id": "spirale_30",
+   "component_id": "steel_spiral",
+   "material_id": "steel",
+   "name": "Drahtspirale",
+   "short": "Spirale",
+   "shape": "box",
+   "x": 0,
+   "y": 244.8,
+   "w": 12,
+   "d": 1.4,
+   "z": 0,
+   "h": 10,
+   "explode": [
+    -170,
+    0,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Eine Windung der Drahtspirale.",
+   "color": "#B8BEC4",
+   "label": false,
+   "form": "liegend_x"
+  },
+  {
+   "id": "spirale_31",
+   "component_id": "steel_spiral",
+   "material_id": "steel",
+   "name": "Drahtspirale",
+   "short": "Spirale",
+   "shape": "box",
+   "x": 0,
+   "y": 252.8,
+   "w": 12,
+   "d": 1.4,
+   "z": 0,
+   "h": 10,
+   "explode": [
+    -170,
+    0,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Eine Windung der Drahtspirale.",
+   "color": "#B8BEC4",
+   "label": false,
+   "form": "liegend_x"
+  },
+  {
+   "id": "spirale_32",
+   "component_id": "steel_spiral",
+   "material_id": "steel",
+   "name": "Drahtspirale",
+   "short": "Spirale",
+   "shape": "box",
+   "x": 0,
+   "y": 260.8,
+   "w": 12,
+   "d": 1.4,
+   "z": 0,
+   "h": 10,
+   "explode": [
+    -170,
+    0,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Eine Windung der Drahtspirale.",
+   "color": "#B8BEC4",
+   "label": false,
+   "form": "liegend_x"
+  },
+  {
+   "id": "spirale_33",
+   "component_id": "steel_spiral",
+   "material_id": "steel",
+   "name": "Drahtspirale",
+   "short": "Spirale",
+   "shape": "box",
+   "x": 0,
+   "y": 268.8,
+   "w": 12,
+   "d": 1.4,
+   "z": 0,
+   "h": 10,
+   "explode": [
+    -170,
+    0,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Eine Windung der Drahtspirale.",
+   "color": "#B8BEC4",
+   "label": false,
+   "form": "liegend_x"
+  },
+  {
+   "id": "spirale_34",
+   "component_id": "steel_spiral",
+   "material_id": "steel",
+   "name": "Drahtspirale",
+   "short": "Spirale",
+   "shape": "box",
+   "x": 0,
+   "y": 276.8,
+   "w": 12,
+   "d": 1.4,
+   "z": 0,
+   "h": 10,
+   "explode": [
+    -170,
+    0,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Eine Windung der Drahtspirale.",
+   "color": "#B8BEC4",
+   "label": false,
+   "form": "liegend_x"
+  },
+  {
+   "id": "spirale_35",
+   "component_id": "steel_spiral",
+   "material_id": "steel",
+   "name": "Drahtspirale",
+   "short": "Spirale",
+   "shape": "box",
+   "x": 0,
+   "y": 284.8,
+   "w": 12,
+   "d": 1.4,
+   "z": 0,
+   "h": 10,
+   "explode": [
+    -170,
+    0,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Eine Windung der Drahtspirale.",
+   "color": "#B8BEC4",
+   "label": false,
+   "form": "liegend_x"
   }
  ]
 }

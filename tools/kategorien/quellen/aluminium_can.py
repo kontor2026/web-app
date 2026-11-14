@@ -44,10 +44,12 @@ teile = [
          **A, color=ALU, label=False, info=INFO_R),
     teil('hals3', 'aluminium_can_body', 'Eingezogener Hals', 'Hals', 'cyl', **rund(63.5, 100, 3.5), mass=0.3,
          **A, color=ALU, label=False, info=INFO_R),
-    teil('rumpf', 'aluminium_can_body', 'Dosenrumpf', 'Rumpf', 'cyl', **rund(66, 8, 92), mass=8.6, **A,
-         color=ALU,
-         info='Aus einer Aluminiumscheibe tiefgezogen und gestreckt, die Wand ist dünner als ein Haar. '
-              'Innen schützt ein Lack das Getränk vor dem Metall.'),
+    # Rumpf in vier gleich breiten Abschnitten, damit die Foto-Ansicht die glatte Hülle gerade hält (kein Fass)
+    *[teil('rumpf' if k == 0 else f'rumpf{k + 1}', 'aluminium_can_body', 'Dosenrumpf', 'Rumpf', 'cyl',
+           **rund(66, 8 + 23 * k, 23), mass=2.15, **A, color=ALU, label=k == 0,
+           info='Aus einer Aluminiumscheibe tiefgezogen und gestreckt, die Wand ist dünner als ein Haar. '
+                'Innen schützt ein Lack das Getränk vor dem Metall.' if k == 0 else INFO_R)
+      for k in range(4)],
     teil('schraege', 'aluminium_can_body', 'Bodenschräge', 'Boden', 'cyl', **rund(60, 3.5, 4.5), mass=0.4, **A,
          color=ALU, label=False, info=INFO_R),
     teil('boden', 'aluminium_can_body', 'Standring mit Dom', 'Boden', 'cyl', **rund(50, 0, 3.5), mass=0.5, **A,

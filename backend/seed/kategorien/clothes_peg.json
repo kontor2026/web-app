@@ -155,7 +155,8 @@
     ]
    ],
    "info": "Gerader Drahtschenkel, der auf das obere Griffende drückt.",
-   "color": "#B8BEC4"
+   "color": "#B8BEC4",
+   "form": "liegend_y"
   },
   {
    "id": "haelfte_oben",
@@ -306,6 +307,7 @@
    ],
    "info": "Gewickelte Torsionsfeder aus verzinktem Stahldraht. Mit einer Zange herausziehen; sie gehört zum Altmetall oder taugt als Ersatzfeder.",
    "color": "#B8BEC4",
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
@@ -314,7 +316,8 @@
      "w": 1,
      "d": 7,
      "r": 0.5,
-     "fill": "#7E868C"
+     "fill": "#7E868C",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -323,7 +326,8 @@
      "w": 1,
      "d": 7,
      "r": 0.5,
-     "fill": "#7E868C"
+     "fill": "#7E868C",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -332,7 +336,8 @@
      "w": 1,
      "d": 7,
      "r": 0.5,
-     "fill": "#7E868C"
+     "fill": "#7E868C",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -341,7 +346,8 @@
      "w": 1,
      "d": 7,
      "r": 0.5,
-     "fill": "#7E868C"
+     "fill": "#7E868C",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -350,7 +356,8 @@
      "w": 1,
      "d": 7,
      "r": 0.5,
-     "fill": "#7E868C"
+     "fill": "#7E868C",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -359,7 +366,8 @@
      "w": 1,
      "d": 7,
      "r": 0.5,
-     "fill": "#7E868C"
+     "fill": "#7E868C",
+     "zeichnung": true
     }
    ]
   },
@@ -441,7 +449,8 @@
    ],
    "info": "Zweiter Schenkel der Feder unter dem unteren Griffende.",
    "color": "#B8BEC4",
-   "label": false
+   "label": false,
+   "form": "liegend_y"
   }
  ]
 }

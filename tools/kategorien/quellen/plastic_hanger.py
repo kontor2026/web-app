@@ -26,24 +26,24 @@ def schulter(seite, dx):
         teile.append(teil(f'schulter_{seite}_{i + 1}', 'ps_hanger_body',
                           'Schulterbogen links' if seite == 'l' else 'Schulterbogen rechts', 'Schulter', 'box',
                           x=round(x, 3), y=round(72 + i * d, 3), w=round(w, 3), d=BAND, z=0, h=10, r=2,
-                          explode=[dx, 0, 0], mass=0.9, label=erstes,
+                          explode=[dx, 0, 0], mass=0.9, label=erstes, form='liegend_x',
                           info=('Die schrägen Arme tragen Hemd oder Jacke. Polystyrol ist hart, kann aber bei Kälte '
                                 'brechen.') if erstes else 'Abschnitt des Schulterbogens.',
-                          color=PS, marks=[mark('box', 1, 3, round(w - 2, 3), 1.2, 0.5, '#454A4F')]))
+                          color=PS, marks=[mark('box', 1, 3, round(w - 2, 3), 1.2, 0.5, '#454A4F', zeichnung=True)]))
     return teile
 
 
 teile = [
     teil('haken', 'steel_hook', 'Haken', 'Haken', 'box',
-         x=183, y=4, w=24, d=5, z=3, h=4, r=1, explode=[0, -35, 20], mass=3,
+         x=183, y=4, w=24, d=5, z=3, h=4, r=1, explode=[0, -35, 20], mass=3, form='liegend_x',
          info='Verchromter Stahldraht, im Hals eingedreht, damit er sich drehen lässt. Mit einer Zange '
               'herausdrehen; der Stahl gehört zum Altmetall.',
-         color=STAHL, marks=[mark('box', 2, 1.5, 20, 1, 0.5, '#E6EAED')]),
+         color=STAHL, marks=[mark('box', 2, 1.5, 20, 1, 0.5, '#E6EAED', zeichnung=True)]),
     teil('haken_bogen', 'steel_hook', 'Hakenbogen', 'Hakenbogen', 'box',
-         x=178, y=4, w=5, d=30, z=3, h=4, r=2.5, explode=[0, -35, 20], mass=2, label=False,
+         x=178, y=4, w=5, d=30, z=3, h=4, r=2.5, explode=[0, -35, 20], mass=2, label=False, form='liegend_y',
          info='Herabgebogenes Ende des Hakens, das über die Kleiderstange greift.', color=STAHL),
     teil('hakenschaft', 'steel_hook', 'Hakenschaft mit Gewinde', 'Hakenschaft', 'box',
-         x=207, y=4, w=5, d=72, z=3, h=4, r=2.5, explode=[0, -35, 20], mass=3, label=False,
+         x=207, y=4, w=5, d=72, z=3, h=4, r=2.5, explode=[0, -35, 20], mass=3, label=False, form='liegend_y',
          info='Gerades Ende des Hakens mit Gewinde, das im Kunststoff steckt.', color=STAHL,
          marks=raster(0.5, 58, 1, 5, 4, 1, 0, 2.4, fill='#8E969A')),
     teil('hals', 'ps_hanger_body', 'Hals mit Hakenaufnahme', 'Hals', 'box',
@@ -61,10 +61,10 @@ teile = [
          info='Gegenstück zum linken Schulterende.',
          color=PS, marks=raster(3, 6, 1, 3, 16, 3, 0, 5, r=1, fill=LOCH)),
     teil('hosenstange', 'ps_hanger_body', 'Hosenstange', 'Hosenstange', 'box',
-         x=0, y=186, w=420, d=12, z=1, h=8, r=4, explode=[0, 20, 0], mass=8,
+         x=0, y=186, w=420, d=12, z=1, h=8, r=4, explode=[0, 20, 0], mass=8, form='liegend_x',
          info='Gerippte Stange, auf der Hosen nicht rutschen. Kleiderbügel sind keine Verpackung: '
               'weiterverwenden oder beim Modehändler abgeben, sonst Restmüll.',
-         color=PS, marks=raster(40, 3, 23, 1, 3, 6, 15, r=1, fill='#3A3F44')),
+         color=PS, marks=[dict(m, zeichnung=True) for m in raster(40, 3, 23, 1, 3, 6, 15, r=1, fill='#3A3F44')]),
 ]
 
 skaliere_masse(teile, oid='plastic_hanger', stellen=2)

@@ -2,7 +2,7 @@
 
 Typischer Tisch-Klebebandabroller 60 × 130 × 70 mm: Sockel aus Polystyrol mit eingelegtem Stahlgewicht, zwei
 Seitenwangen, in denen die Spule mit der Klebebandrolle (19 mm × 33 m auf 1-Zoll-Papierkern) läuft, vorne die Nase mit
-der gezahnten Abreißklinge. Die Rolle (Achse quer, x) ist aus drei liegenden Scheiben angenähert. Explodiert:
+der gezahnten Abreißklinge. Die Rolle (Achse quer, x) ist ein liegender Zylinder (in der Zeichnung ein Quader). Explodiert:
 Wangen zur Seite, Nase mit Klinge nach vorne, Gewicht, Rolle, Kern und Spule nach oben.
 """
 import sys
@@ -15,29 +15,21 @@ PS = '#2F3A45'
 BAND = '#E9E4D0'
 teile = [
     teil('spule', 'ps_dispenser_body', 'Spule mit Achse', 'Spule', 'box',
-         x=3, y=50, w=54, d=10, z=40, h=10, r=4, mass=4,
+         x=3, y=50, w=54, d=10, z=40, h=10, r=4, mass=4, form='liegend_x',
          info='Steckt im Papierkern und läuft in den Kerben der Seitenwangen. Nach oben herausheben, '
               'dann lässt sich die leere Rolle abziehen.',
-         color='#55626E', marks=[mark('box', 17, 1, 20, 8, 3, '#6E7C88')]),
+         color='#55626E', marks=[mark('box', 17, 1, 20, 8, 3, '#6E7C88', zeichnung=True)]),
     teil('kern', 'ps_dispenser_body', 'Papierkern der Rolle', 'Papierkern', 'box',
-         x=20.5, y=39, w=19, d=32, z=29, h=32, r=8, mass=3, material_id='cardboard',
+         x=20.5, y=39, w=19, d=32, z=29, h=32, r=8, mass=3, material_id='cardboard', form='liegend_x',
          materials=[['papier', 95], ['klebstoff', 5]], color='#B98F5A', sortBias=-20,
          info='Gewickelte Pappe mit 25 mm Innendurchmesser. Leere Kerne gehören ins Altpapier.',
-         marks=[mark('box', 4, 4, 11, 24, 5, '#8E6A3E')]),
-    teil('band_oben', 'ps_dispenser_body', 'Klebebandrolle (oberer Teil)', 'Band oben', 'box',
-         x=20.5, y=38.8, w=19, d=32.4, z=58, h=12, r=10, mass=7, material_id='pp',
-         materials=[['pp', 75], ['klebstoff', 25]], color=BAND, opacity=0.85, label=False,
-         info='Oberer Teil der Rolle.'),
+         marks=[mark('box', 4, 4, 11, 24, 5, '#8E6A3E', zeichnung=True)]),
     teil('band_mitte', 'ps_dispenser_body', 'Klebebandrolle (PP-Folie mit Acrylkleber)', 'Klebeband', 'box',
-         x=20.5, y=31, w=19, d=48, z=32, h=26, r=12, mass=18, material_id='pp',
+         x=20.5, y=30, w=19, d=50, z=20, h=50, r=12, mass=32, material_id='pp', form='liegend_x',
          materials=[['pp', 75], ['klebstoff', 25]], color=BAND, opacity=0.85,
          info='Etwa 33 m Polypropylenfolie mit Acrylatkleber. Klebebandreste gehören in den Restmüll, '
               'sie verkleben im Recycling die Maschinen.',
-         marks=[mark('box', 2, 2, 15, 44, 10, '#DCD5BC')]),
-    teil('band_unten', 'ps_dispenser_body', 'Klebebandrolle (unterer Teil)', 'Band unten', 'box',
-         x=20.5, y=38.8, w=19, d=32.4, z=20, h=12, r=10, mass=7, material_id='pp',
-         materials=[['pp', 75], ['klebstoff', 25]], color=BAND, opacity=0.85, label=False,
-         info='Unterer Teil der Rolle.'),
+         marks=[mark('box', 2, 2, 15, 46, 10, '#DCD5BC', zeichnung=True)]),
     teil('klinge', 'steel_cutting_blade', 'Abreißklinge (gezahnt)', 'Klinge', 'box',
          x=4, y=118, w=52, d=10, z=62, h=1, r=0.5, mass=3, explode=[0, 70, 30],
          info='Gezahntes Stahlblech, in einen Schlitz der Nase gesteckt. Mit einem Schraubendreher heraushebeln '
@@ -66,6 +58,6 @@ teile = [
               'oder Restmüll, er ist keine Verpackung.',
          color=PS, marks=[mark('box', 5, 5, 50, 120, 4, '#3D4A57')]),
 ]
-explodiere(teile, abstand=12, gruppen=[['band_oben', 'band_mitte', 'band_unten']])
+explodiere(teile, abstand=12)
 skaliere_masse(teile, oid='tape_dispenser')
 schreibe('tape_dispenser', teile)

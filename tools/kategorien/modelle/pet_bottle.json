@@ -293,13 +293,13 @@
    "y": 0,
    "w": 65,
    "z": 59,
-   "h": 94,
+   "h": 31.333333333333332,
    "explode": [
     0,
     0,
     0
    ],
-   "mass": 8.8,
+   "mass": 2.93,
    "materials": [
     [
      "pet",
@@ -308,7 +308,66 @@
    ],
    "info": "PET, Recyclingcode 1. Wird aus einem reagenzglasgroßen Rohling heiß aufgeblasen. Pfandflaschen werden meist wieder zu neuen Flaschen.",
    "color": "#CFE3E8",
-   "opacity": 0.55
+   "opacity": 0.55,
+   "label": true
+  },
+  {
+   "id": "koerper2",
+   "component_id": "pet_bottle_body",
+   "material_id": "pet",
+   "name": "Flaschenkörper",
+   "short": "Körper",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 65,
+   "z": 90.33333333333333,
+   "h": 31.333333333333332,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 2.93,
+   "materials": [
+    [
+     "pet",
+     100
+    ]
+   ],
+   "info": "Gehört zur Flasche aus PET (Recyclingcode 1). Wird beim Recycling mit der ganzen Flasche geschreddert.",
+   "color": "#CFE3E8",
+   "opacity": 0.55,
+   "label": false
+  },
+  {
+   "id": "koerper3",
+   "component_id": "pet_bottle_body",
+   "material_id": "pet",
+   "name": "Flaschenkörper",
+   "short": "Körper",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 65,
+   "z": 121.66666666666666,
+   "h": 31.333333333333332,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 2.93,
+   "materials": [
+    [
+     "pet",
+     100
+    ]
+   ],
+   "info": "Gehört zur Flasche aus PET (Recyclingcode 1). Wird beim Recycling mit der ganzen Flasche geschreddert.",
+   "color": "#CFE3E8",
+   "opacity": 0.55,
+   "label": false
   },
   {
    "id": "rille0",

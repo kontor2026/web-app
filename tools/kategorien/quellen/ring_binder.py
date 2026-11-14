@@ -25,14 +25,17 @@ teile = [
          x=3, y=0, w=282, d=320, z=77, h=2.6, r=2, mass=165,
          info='Feste Graupappe aus Altpapier. Ohne Folie und Metall gehört sie ins Altpapier.',
          color=PAPPE),
-    teil('ring_vorne', 'ring_mechanism', 'Bügel vorne', 'Bügel vorne', 'box',
-         x=28, y=112, w=30, d=8, z=6.6, h=68, r=3, mass=14,
-         info='Halbrunder Stahlbügel, der durch die Lochung der Blätter greift. Er öffnet sich mit dem Hebel.',
-         color=STAHL),
-    teil('ring_hinten', 'ring_mechanism', 'Bügel hinten', 'Bügel hinten', 'box',
-         x=28, y=192, w=30, d=8, z=6.6, h=68, r=3, mass=14, label=False,
-         info='Zweiter Bügel im Abstand von 8 cm, genau passend zur Zweifachlochung.',
-         color=STAHL),
+    *[q for n, y0 in enumerate((112, 192)) for q in (
+        teil(f'ring_{n}_links', 'ring_mechanism', 'Bügel vorne' if n == 0 else 'Bügel hinten', 'Bügel', 'cyl',
+             x=28, y=y0 + 1, w=6, z=6.6, h=60, mass=5, label=None if n == 0 else False,
+             info='Halbrunder Stahlbügel, der durch die Lochung der Blätter greift. Er öffnet sich mit dem Hebel.'
+             if n == 0 else 'Zweiter Bügel im Abstand von 8 cm, genau passend zur Zweifachlochung.', color=STAHL),
+        teil(f'ring_{n}_rechts', 'ring_mechanism', 'Bügel (Gegenstück)', 'Bügel', 'cyl',
+             x=52, y=y0 + 1, w=6, z=6.6, h=60, mass=5, label=False,
+             info='Die zweite Hälfte des Bügels. Oben treffen sich beide Hälften und schließen den Ring.', color=STAHL),
+        teil(f'ring_{n}_oben', 'ring_mechanism', 'Bügel (Bogen)', 'Bügel', 'box', form='liegend_x',
+             x=28, y=y0 + 1, w=30, d=6, z=66.6, h=8, mass=4, label=False,
+             info='Oberer Bogen des Bügels.', color=STAHL))],
     teil('hebel', 'ring_mechanism', 'Hebel', 'Hebel', 'box',
          x=30, y=215, w=40, d=50, z=6.6, h=8, r=6, mass=18,
          info='Stahlhebel, der die Bügel öffnet und schließt. Mit dem Niederhalter zusammen hält er das Papier fest.',
@@ -69,7 +72,7 @@ teile = [
 ]
 
 EX = {'folie_vorne': [0, -370, -10], 'kante_vorne': [0, -370, -10], 'deckel_vorne': [0, -370, -60],
-      'ring_vorne': [0, 0, 100], 'ring_hinten': [0, 0, 100], 'hebel': [0, 0, 100], 'grundplatte': [0, 0, 55],
+      **{f'ring_{n}_{t}': [0, 0, 100] for n in (0, 1) for t in ('links', 'rechts', 'oben')}, 'hebel': [0, 0, 100], 'grundplatte': [0, 0, 55],
       'niete': [0, 0, 22], 'deckel_hinten': [0, 0, 0], 'kante_hinten': [0, 0, -45], 'folie_hinten': [0, 0, -45],
       'ruecken': [-90, 0, 0], 'rueckenschild': [-210, 0, 70]}
 for p in teile:

@@ -26,11 +26,11 @@ teile = [
          x=6, y=1, w=62, d=48, z=33, h=6, mass=4,
          info='Front aus Kunststoff (Polycarbonat oder Nylon), die beiden Ränder halten die Gläser in einer Nut. '
               'Ohne Gläser und Schrauben ist sie sortenrein, aber zu klein für die Gelbe Tonne.',
-         color=RAHMEN, marks=[mark('cyl', 4, 4, 54, 40, fill='#1C1F21')]),
+         color=RAHMEN, wand=4, boden=0, marks=[mark('cyl', 4, 4, 54, 40, fill='#1C1F21', zeichnung=True)]),
     teil('rand_r', 'plastic_frame', 'Brillenfassung rechts', 'Fassung', 'cyl',
          x=72, y=1, w=62, d=48, z=33, h=6, mass=4, label=False,
          info='Rechter Glasrand, mit dem linken über den Steg in einem Stück gespritzt.',
-         color=RAHMEN, marks=[mark('cyl', 4, 4, 54, 40, fill='#1C1F21')]),
+         color=RAHMEN, wand=4, boden=0, marks=[mark('cyl', 4, 4, 54, 40, fill='#1C1F21', zeichnung=True)]),
     teil('steg', 'plastic_frame', 'Nasensteg', 'Steg', 'box',
          x=60, y=6, w=20, d=10, z=27, h=6, r=2, mass=0.8, explode=[0, -20, 100],
          info='Brücke zwischen den Gläsern, liegt auf der Nase. Bricht die Brille, dann meist hier.',

@@ -29,7 +29,7 @@
     ]
    ],
    "info": "Vernickeltes Stahlblech, der Minuspol. Vor dem Abgeben beide Seiten mit Klebeband abkleben, damit es keinen Kurzschluss gibt.",
-   "color": "#C9CDD0",
+   "color": "#E2E5E7",
    "marks": [
     {
      "shape": "cyl",
@@ -202,7 +202,7 @@
     ]
    ],
    "info": "Flacher Becher aus vernickeltem Stahl, der Pluspol mit der Aufschrift „CR2032“. Knopfzellen gehören in die Batteriesammlung und außer Reichweite kleiner Kinder: Verschluckt sind sie lebensgefährlich.",
-   "color": "#C9CDD0",
+   "color": "#E2E5E7",
    "wand": 0.3,
    "marks": [
     {

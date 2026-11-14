@@ -19,7 +19,7 @@
     0,
     142
    ],
-   "mass": 0.4,
+   "mass": 0.5,
    "materials": [
     [
      "papier",
@@ -92,7 +92,7 @@
     0,
     102
    ],
-   "mass": 5.4,
+   "mass": 5.8,
    "materials": [
     [
      "papier",
@@ -189,7 +189,7 @@
     0,
     102
    ],
-   "mass": 6.5,
+   "mass": 7,
    "materials": [
     [
      "papier",
@@ -303,7 +303,7 @@
     0,
     0
    ],
-   "mass": 5.4,
+   "mass": 5.8,
    "materials": [
     [
      "papier",
@@ -373,6 +373,93 @@
    ]
   },
   {
+   "id": "mulde_1_0",
+   "component_id": "molded_pulp_tray",
+   "material_id": "cardboard",
+   "name": "Eiermulde",
+   "short": "Eiermulde",
+   "shape": "cyl",
+   "x": 17,
+   "y": 15.565217391304348,
+   "w": 26,
+   "d": 24.869565217391305,
+   "z": 2,
+   "h": 4,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "papier",
+     100
+    ]
+   ],
+   "info": "Eine von sechs Mulden. Sie federt Stöße ab, weil die Fasern leicht nachgeben.",
+   "color": "#B9AE9C",
+   "label": false
+  },
+  {
+   "id": "mulde_1_1",
+   "component_id": "molded_pulp_tray",
+   "material_id": "cardboard",
+   "name": "Eiermulde",
+   "short": "Eiermulde",
+   "shape": "cyl",
+   "x": 12,
+   "y": 10.782608695652176,
+   "w": 36,
+   "d": 34.43478260869565,
+   "z": 6,
+   "h": 5,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 0.2,
+   "materials": [
+    [
+     "papier",
+     100
+    ]
+   ],
+   "info": "Eine von sechs Mulden. Sie federt Stöße ab, weil die Fasern leicht nachgeben.",
+   "color": "#B9AE9C",
+   "label": false
+  },
+  {
+   "id": "mulde_1_2",
+   "component_id": "molded_pulp_tray",
+   "material_id": "cardboard",
+   "name": "Eiermulde",
+   "short": "Eiermulde",
+   "shape": "cyl",
+   "x": 9,
+   "y": 7.913043478260871,
+   "w": 42,
+   "d": 40.17391304347826,
+   "z": 11,
+   "h": 6,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "papier",
+     100
+    ]
+   ],
+   "info": "Eine von sechs Mulden. Sie federt Stöße ab, weil die Fasern leicht nachgeben.",
+   "color": "#B9AE9C",
+   "label": false
+  },
+  {
    "id": "mulde_1",
    "component_id": "molded_pulp_tray",
    "material_id": "cardboard",
@@ -383,14 +470,14 @@
    "y": 6,
    "w": 46,
    "d": 44,
-   "z": 2,
-   "h": 26,
+   "z": 17,
+   "h": 11,
    "explode": [
     0,
     0,
     0
    ],
-   "mass": 1.6,
+   "mass": 0.7,
    "materials": [
     [
      "papier",
@@ -399,6 +486,93 @@
    ],
    "info": "Eine von sechs Mulden. Sie federt Stöße ab, weil die Fasern leicht nachgeben.",
    "color": "#B9AE9C"
+  },
+  {
+   "id": "mulde_2_0",
+   "component_id": "molded_pulp_tray",
+   "material_id": "cardboard",
+   "name": "Eiermulde",
+   "short": "Eiermulde",
+   "shape": "cyl",
+   "x": 67,
+   "y": 15.565217391304348,
+   "w": 26,
+   "d": 24.869565217391305,
+   "z": 2,
+   "h": 4,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "papier",
+     100
+    ]
+   ],
+   "info": "Weitere Mulde.",
+   "color": "#B9AE9C",
+   "label": false
+  },
+  {
+   "id": "mulde_2_1",
+   "component_id": "molded_pulp_tray",
+   "material_id": "cardboard",
+   "name": "Eiermulde",
+   "short": "Eiermulde",
+   "shape": "cyl",
+   "x": 62,
+   "y": 10.782608695652176,
+   "w": 36,
+   "d": 34.43478260869565,
+   "z": 6,
+   "h": 5,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 0.2,
+   "materials": [
+    [
+     "papier",
+     100
+    ]
+   ],
+   "info": "Weitere Mulde.",
+   "color": "#B9AE9C",
+   "label": false
+  },
+  {
+   "id": "mulde_2_2",
+   "component_id": "molded_pulp_tray",
+   "material_id": "cardboard",
+   "name": "Eiermulde",
+   "short": "Eiermulde",
+   "shape": "cyl",
+   "x": 59,
+   "y": 7.913043478260871,
+   "w": 42,
+   "d": 40.17391304347826,
+   "z": 11,
+   "h": 6,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "papier",
+     100
+    ]
+   ],
+   "info": "Weitere Mulde.",
+   "color": "#B9AE9C",
+   "label": false
   },
   {
    "id": "mulde_2",
@@ -411,14 +585,101 @@
    "y": 6,
    "w": 46,
    "d": 44,
-   "z": 2,
-   "h": 26,
+   "z": 17,
+   "h": 11,
    "explode": [
     0,
     0,
     0
    ],
-   "mass": 1.6,
+   "mass": 0.7,
+   "materials": [
+    [
+     "papier",
+     100
+    ]
+   ],
+   "info": "Weitere Mulde.",
+   "color": "#B9AE9C",
+   "label": false
+  },
+  {
+   "id": "mulde_3_0",
+   "component_id": "molded_pulp_tray",
+   "material_id": "cardboard",
+   "name": "Eiermulde",
+   "short": "Eiermulde",
+   "shape": "cyl",
+   "x": 117,
+   "y": 15.565217391304348,
+   "w": 26,
+   "d": 24.869565217391305,
+   "z": 2,
+   "h": 4,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "papier",
+     100
+    ]
+   ],
+   "info": "Weitere Mulde.",
+   "color": "#B9AE9C",
+   "label": false
+  },
+  {
+   "id": "mulde_3_1",
+   "component_id": "molded_pulp_tray",
+   "material_id": "cardboard",
+   "name": "Eiermulde",
+   "short": "Eiermulde",
+   "shape": "cyl",
+   "x": 112,
+   "y": 10.782608695652176,
+   "w": 36,
+   "d": 34.43478260869565,
+   "z": 6,
+   "h": 5,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 0.2,
+   "materials": [
+    [
+     "papier",
+     100
+    ]
+   ],
+   "info": "Weitere Mulde.",
+   "color": "#B9AE9C",
+   "label": false
+  },
+  {
+   "id": "mulde_3_2",
+   "component_id": "molded_pulp_tray",
+   "material_id": "cardboard",
+   "name": "Eiermulde",
+   "short": "Eiermulde",
+   "shape": "cyl",
+   "x": 109,
+   "y": 7.913043478260871,
+   "w": 42,
+   "d": 40.17391304347826,
+   "z": 11,
+   "h": 6,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 0.3,
    "materials": [
     [
      "papier",
@@ -440,14 +701,101 @@
    "y": 6,
    "w": 46,
    "d": 44,
-   "z": 2,
-   "h": 26,
+   "z": 17,
+   "h": 11,
    "explode": [
     0,
     0,
     0
    ],
-   "mass": 1.6,
+   "mass": 0.7,
+   "materials": [
+    [
+     "papier",
+     100
+    ]
+   ],
+   "info": "Weitere Mulde.",
+   "color": "#B9AE9C",
+   "label": false
+  },
+  {
+   "id": "mulde_4_0",
+   "component_id": "molded_pulp_tray",
+   "material_id": "cardboard",
+   "name": "Eiermulde",
+   "short": "Eiermulde",
+   "shape": "cyl",
+   "x": 17,
+   "y": 64.56521739130434,
+   "w": 26,
+   "d": 24.869565217391305,
+   "z": 2,
+   "h": 4,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "papier",
+     100
+    ]
+   ],
+   "info": "Weitere Mulde.",
+   "color": "#B9AE9C",
+   "label": false
+  },
+  {
+   "id": "mulde_4_1",
+   "component_id": "molded_pulp_tray",
+   "material_id": "cardboard",
+   "name": "Eiermulde",
+   "short": "Eiermulde",
+   "shape": "cyl",
+   "x": 12,
+   "y": 59.78260869565217,
+   "w": 36,
+   "d": 34.43478260869565,
+   "z": 6,
+   "h": 5,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 0.2,
+   "materials": [
+    [
+     "papier",
+     100
+    ]
+   ],
+   "info": "Weitere Mulde.",
+   "color": "#B9AE9C",
+   "label": false
+  },
+  {
+   "id": "mulde_4_2",
+   "component_id": "molded_pulp_tray",
+   "material_id": "cardboard",
+   "name": "Eiermulde",
+   "short": "Eiermulde",
+   "shape": "cyl",
+   "x": 9,
+   "y": 56.913043478260875,
+   "w": 42,
+   "d": 40.17391304347826,
+   "z": 11,
+   "h": 6,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 0.3,
    "materials": [
     [
      "papier",
@@ -469,14 +817,101 @@
    "y": 55,
    "w": 46,
    "d": 44,
-   "z": 2,
-   "h": 26,
+   "z": 17,
+   "h": 11,
    "explode": [
     0,
     0,
     0
    ],
-   "mass": 1.6,
+   "mass": 0.7,
+   "materials": [
+    [
+     "papier",
+     100
+    ]
+   ],
+   "info": "Weitere Mulde.",
+   "color": "#B9AE9C",
+   "label": false
+  },
+  {
+   "id": "mulde_5_0",
+   "component_id": "molded_pulp_tray",
+   "material_id": "cardboard",
+   "name": "Eiermulde",
+   "short": "Eiermulde",
+   "shape": "cyl",
+   "x": 67,
+   "y": 64.56521739130434,
+   "w": 26,
+   "d": 24.869565217391305,
+   "z": 2,
+   "h": 4,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "papier",
+     100
+    ]
+   ],
+   "info": "Weitere Mulde.",
+   "color": "#B9AE9C",
+   "label": false
+  },
+  {
+   "id": "mulde_5_1",
+   "component_id": "molded_pulp_tray",
+   "material_id": "cardboard",
+   "name": "Eiermulde",
+   "short": "Eiermulde",
+   "shape": "cyl",
+   "x": 62,
+   "y": 59.78260869565217,
+   "w": 36,
+   "d": 34.43478260869565,
+   "z": 6,
+   "h": 5,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 0.2,
+   "materials": [
+    [
+     "papier",
+     100
+    ]
+   ],
+   "info": "Weitere Mulde.",
+   "color": "#B9AE9C",
+   "label": false
+  },
+  {
+   "id": "mulde_5_2",
+   "component_id": "molded_pulp_tray",
+   "material_id": "cardboard",
+   "name": "Eiermulde",
+   "short": "Eiermulde",
+   "shape": "cyl",
+   "x": 59,
+   "y": 56.913043478260875,
+   "w": 42,
+   "d": 40.17391304347826,
+   "z": 11,
+   "h": 6,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 0.3,
    "materials": [
     [
      "papier",
@@ -498,14 +933,101 @@
    "y": 55,
    "w": 46,
    "d": 44,
-   "z": 2,
-   "h": 26,
+   "z": 17,
+   "h": 11,
    "explode": [
     0,
     0,
     0
    ],
-   "mass": 1.6,
+   "mass": 0.7,
+   "materials": [
+    [
+     "papier",
+     100
+    ]
+   ],
+   "info": "Weitere Mulde.",
+   "color": "#B9AE9C",
+   "label": false
+  },
+  {
+   "id": "mulde_6_0",
+   "component_id": "molded_pulp_tray",
+   "material_id": "cardboard",
+   "name": "Eiermulde",
+   "short": "Eiermulde",
+   "shape": "cyl",
+   "x": 117,
+   "y": 64.56521739130434,
+   "w": 26,
+   "d": 24.869565217391305,
+   "z": 2,
+   "h": 4,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "papier",
+     100
+    ]
+   ],
+   "info": "Weitere Mulde.",
+   "color": "#B9AE9C",
+   "label": false
+  },
+  {
+   "id": "mulde_6_1",
+   "component_id": "molded_pulp_tray",
+   "material_id": "cardboard",
+   "name": "Eiermulde",
+   "short": "Eiermulde",
+   "shape": "cyl",
+   "x": 112,
+   "y": 59.78260869565217,
+   "w": 36,
+   "d": 34.43478260869565,
+   "z": 6,
+   "h": 5,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 0.2,
+   "materials": [
+    [
+     "papier",
+     100
+    ]
+   ],
+   "info": "Weitere Mulde.",
+   "color": "#B9AE9C",
+   "label": false
+  },
+  {
+   "id": "mulde_6_2",
+   "component_id": "molded_pulp_tray",
+   "material_id": "cardboard",
+   "name": "Eiermulde",
+   "short": "Eiermulde",
+   "shape": "cyl",
+   "x": 109,
+   "y": 56.913043478260875,
+   "w": 42,
+   "d": 40.17391304347826,
+   "z": 11,
+   "h": 6,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 0.3,
    "materials": [
     [
      "papier",
@@ -527,14 +1049,14 @@
    "y": 55,
    "w": 46,
    "d": 44,
-   "z": 2,
-   "h": 26,
+   "z": 17,
+   "h": 11,
    "explode": [
     0,
     0,
     0
    ],
-   "mass": 1.6,
+   "mass": 0.7,
    "materials": [
     [
      "papier",

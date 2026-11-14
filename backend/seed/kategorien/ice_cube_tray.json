@@ -31,7 +31,7 @@
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 0,45 kg",
+   "v": "≈ 0,44 kg",
    "hint": "spart 0,04 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
@@ -39,11 +39,11 @@
   "metalle_mg": {},
   "herkunft": {},
   "materialien_g": {
-   "silicone": 58.5,
+   "silicone": 58.0,
    "pp": 21.5
   },
-  "co2_kg": 0.483,
-  "co2_mit_recyclat_kg": 0.448,
+  "co2_kg": 0.479,
+  "co2_mit_recyclat_kg": 0.444,
   "co2_ersparnis_kg": 0.035,
   "co2_ohne_faktor": [],
   "rohstoffwert_eur": 0,
@@ -183,17 +183,17 @@
    "shape": "box",
    "x": 0,
    "y": 0,
-   "w": 110,
+   "w": 8,
    "d": 250,
-   "z": 0,
-   "h": 26,
-   "r": 10,
+   "z": 22,
+   "h": 4,
+   "r": 3,
    "explode": [
     0,
     0,
     0
    ],
-   "mass": 58.5,
+   "mass": 3.9,
    "materials": [
     [
      "gummi",
@@ -201,257 +201,848 @@
     ]
    ],
    "info": "Aus einem Stück Silikon gegossen, mit steifem Rand zum Festhalten. Das Eis löst sich durch Biegen. Silikon gehört nicht in die Gelbe Tonne, sondern in den Restmüll. Lange haltbar: lieber weiterverwenden.",
+   "color": "#4FB3BF"
+  },
+  {
+   "id": "rand_rechts",
+   "component_id": "silicone_tray",
+   "material_id": "silicone",
+   "name": "Rand",
+   "short": "Rand",
+   "shape": "box",
+   "x": 102,
+   "y": 0,
+   "w": 8,
+   "d": 250,
+   "z": 22,
+   "h": 4,
+   "r": 3,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 3.9,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "info": "Steifer Rand der Silikonform.",
    "color": "#4FB3BF",
+   "label": false
+  },
+  {
+   "id": "rand_hinten",
+   "component_id": "silicone_tray",
+   "material_id": "silicone",
+   "name": "Rand",
+   "short": "Rand",
+   "shape": "box",
+   "x": 8,
+   "y": 0,
+   "w": 94,
+   "d": 8,
+   "z": 22,
+   "h": 4,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 2,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "info": "Steifer Rand der Silikonform.",
+   "color": "#4FB3BF",
+   "label": false
+  },
+  {
+   "id": "rand_vorne",
+   "component_id": "silicone_tray",
+   "material_id": "silicone",
+   "name": "Rand",
+   "short": "Rand",
+   "shape": "box",
+   "x": 8,
+   "y": 242,
+   "w": 94,
+   "d": 8,
+   "z": 22,
+   "h": 4,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 2,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "info": "Steifer Rand der Silikonform.",
+   "color": "#4FB3BF",
+   "label": false
+  },
+  {
+   "id": "mulde_1",
+   "component_id": "silicone_tray",
+   "material_id": "silicone",
+   "name": "Mulden (14 Stück)",
+   "short": "Mulden",
+   "shape": "box",
+   "x": 8,
+   "y": 8,
+   "w": 47,
+   "d": 33.43,
+   "z": 0,
+   "h": 26,
+   "r": 5,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 3.3,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "info": "Jede Mulde ist ein dünnwandiger Silikonbecher, der beim Biegen nachgibt und den Würfel freigibt.",
+   "color": "#4FB3BF",
+   "wand": 1.6,
+   "boden": 1.6,
    "marks": [
     {
      "shape": "box",
-     "x": 8,
-     "y": 9.0,
-     "w": 44,
-     "d": 30,
+     "x": 0.8,
+     "y": 0.8,
+     "w": 45.4,
+     "zeichnung": true,
+     "d": 31.83,
      "r": 5,
      "fill": "#2F7F89"
     },
     {
      "shape": "box",
-     "x": 16.4,
-     "y": 17.4,
-     "w": 35.6,
-     "d": 21.6,
+     "x": 9.2,
+     "y": 9.2,
+     "w": 37.0,
+     "zeichnung": true,
+     "d": 23.43,
      "r": 4,
      "fill": "#3E9EAA"
-    },
+    }
+   ]
+  },
+  {
+   "id": "mulde_2",
+   "component_id": "silicone_tray",
+   "material_id": "silicone",
+   "name": "Mulde 2",
+   "short": "Mulden",
+   "shape": "box",
+   "x": 55,
+   "y": 8,
+   "w": 47,
+   "d": 33.43,
+   "z": 0,
+   "h": 26,
+   "r": 5,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 3.3,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "info": "Weitere Mulde.",
+   "color": "#4FB3BF",
+   "label": false,
+   "wand": 1.6,
+   "boden": 1.6,
+   "marks": [
     {
      "shape": "box",
-     "x": 58,
-     "y": 9.0,
-     "w": 44,
-     "d": 30,
+     "x": 0.8,
+     "y": 0.8,
+     "w": 45.4,
+     "zeichnung": true,
+     "d": 31.83,
      "r": 5,
      "fill": "#2F7F89"
     },
     {
      "shape": "box",
-     "x": 66.4,
-     "y": 17.4,
-     "w": 35.6,
-     "d": 21.6,
+     "x": 9.2,
+     "y": 9.2,
+     "w": 37.0,
+     "zeichnung": true,
+     "d": 23.43,
      "r": 4,
      "fill": "#3E9EAA"
-    },
+    }
+   ]
+  },
+  {
+   "id": "mulde_3",
+   "component_id": "silicone_tray",
+   "material_id": "silicone",
+   "name": "Mulde 3",
+   "short": "Mulden",
+   "shape": "box",
+   "x": 8,
+   "y": 41.43,
+   "w": 47,
+   "d": 33.43,
+   "z": 0,
+   "h": 26,
+   "r": 5,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 3.3,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "info": "Weitere Mulde.",
+   "color": "#4FB3BF",
+   "label": false,
+   "wand": 1.6,
+   "boden": 1.6,
+   "marks": [
     {
      "shape": "box",
-     "x": 8,
-     "y": 42.5,
-     "w": 44,
-     "d": 30,
+     "x": 0.8,
+     "y": 0.8,
+     "w": 45.4,
+     "zeichnung": true,
+     "d": 31.83,
      "r": 5,
      "fill": "#2F7F89"
     },
     {
      "shape": "box",
-     "x": 16.4,
-     "y": 50.9,
-     "w": 35.6,
-     "d": 21.6,
+     "x": 9.2,
+     "y": 9.2,
+     "w": 37.0,
+     "zeichnung": true,
+     "d": 23.43,
      "r": 4,
      "fill": "#3E9EAA"
-    },
+    }
+   ]
+  },
+  {
+   "id": "mulde_4",
+   "component_id": "silicone_tray",
+   "material_id": "silicone",
+   "name": "Mulde 4",
+   "short": "Mulden",
+   "shape": "box",
+   "x": 55,
+   "y": 41.43,
+   "w": 47,
+   "d": 33.43,
+   "z": 0,
+   "h": 26,
+   "r": 5,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 3.3,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "info": "Weitere Mulde.",
+   "color": "#4FB3BF",
+   "label": false,
+   "wand": 1.6,
+   "boden": 1.6,
+   "marks": [
     {
      "shape": "box",
-     "x": 58,
-     "y": 42.5,
-     "w": 44,
-     "d": 30,
+     "x": 0.8,
+     "y": 0.8,
+     "w": 45.4,
+     "zeichnung": true,
+     "d": 31.83,
      "r": 5,
      "fill": "#2F7F89"
     },
     {
      "shape": "box",
-     "x": 66.4,
-     "y": 50.9,
-     "w": 35.6,
-     "d": 21.6,
+     "x": 9.2,
+     "y": 9.2,
+     "w": 37.0,
+     "zeichnung": true,
+     "d": 23.43,
      "r": 4,
      "fill": "#3E9EAA"
-    },
+    }
+   ]
+  },
+  {
+   "id": "mulde_5",
+   "component_id": "silicone_tray",
+   "material_id": "silicone",
+   "name": "Mulde 5",
+   "short": "Mulden",
+   "shape": "box",
+   "x": 8,
+   "y": 74.86,
+   "w": 47,
+   "d": 33.43,
+   "z": 0,
+   "h": 26,
+   "r": 5,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 3.3,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "info": "Weitere Mulde.",
+   "color": "#4FB3BF",
+   "label": false,
+   "wand": 1.6,
+   "boden": 1.6,
+   "marks": [
     {
      "shape": "box",
-     "x": 8,
-     "y": 76.0,
-     "w": 44,
-     "d": 30,
+     "x": 0.8,
+     "y": 0.8,
+     "w": 45.4,
+     "zeichnung": true,
+     "d": 31.83,
      "r": 5,
      "fill": "#2F7F89"
     },
     {
      "shape": "box",
-     "x": 16.4,
-     "y": 84.4,
-     "w": 35.6,
-     "d": 21.6,
+     "x": 9.2,
+     "y": 9.2,
+     "w": 37.0,
+     "zeichnung": true,
+     "d": 23.43,
      "r": 4,
      "fill": "#3E9EAA"
-    },
+    }
+   ]
+  },
+  {
+   "id": "mulde_6",
+   "component_id": "silicone_tray",
+   "material_id": "silicone",
+   "name": "Mulde 6",
+   "short": "Mulden",
+   "shape": "box",
+   "x": 55,
+   "y": 74.86,
+   "w": 47,
+   "d": 33.43,
+   "z": 0,
+   "h": 26,
+   "r": 5,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 3.3,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "info": "Weitere Mulde.",
+   "color": "#4FB3BF",
+   "label": false,
+   "wand": 1.6,
+   "boden": 1.6,
+   "marks": [
     {
      "shape": "box",
-     "x": 58,
-     "y": 76.0,
-     "w": 44,
-     "d": 30,
+     "x": 0.8,
+     "y": 0.8,
+     "w": 45.4,
+     "zeichnung": true,
+     "d": 31.83,
      "r": 5,
      "fill": "#2F7F89"
     },
     {
      "shape": "box",
-     "x": 66.4,
-     "y": 84.4,
-     "w": 35.6,
-     "d": 21.6,
+     "x": 9.2,
+     "y": 9.2,
+     "w": 37.0,
+     "zeichnung": true,
+     "d": 23.43,
      "r": 4,
      "fill": "#3E9EAA"
-    },
+    }
+   ]
+  },
+  {
+   "id": "mulde_7",
+   "component_id": "silicone_tray",
+   "material_id": "silicone",
+   "name": "Mulde 7",
+   "short": "Mulden",
+   "shape": "box",
+   "x": 8,
+   "y": 108.29,
+   "w": 47,
+   "d": 33.43,
+   "z": 0,
+   "h": 26,
+   "r": 5,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 3.3,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "info": "Weitere Mulde.",
+   "color": "#4FB3BF",
+   "label": false,
+   "wand": 1.6,
+   "boden": 1.6,
+   "marks": [
     {
      "shape": "box",
-     "x": 8,
-     "y": 109.5,
-     "w": 44,
-     "d": 30,
+     "x": 0.8,
+     "y": 0.8,
+     "w": 45.4,
+     "zeichnung": true,
+     "d": 31.83,
      "r": 5,
      "fill": "#2F7F89"
     },
     {
      "shape": "box",
-     "x": 16.4,
-     "y": 117.9,
-     "w": 35.6,
-     "d": 21.6,
+     "x": 9.2,
+     "y": 9.2,
+     "w": 37.0,
+     "zeichnung": true,
+     "d": 23.43,
      "r": 4,
      "fill": "#3E9EAA"
-    },
+    }
+   ]
+  },
+  {
+   "id": "mulde_8",
+   "component_id": "silicone_tray",
+   "material_id": "silicone",
+   "name": "Mulde 8",
+   "short": "Mulden",
+   "shape": "box",
+   "x": 55,
+   "y": 108.29,
+   "w": 47,
+   "d": 33.43,
+   "z": 0,
+   "h": 26,
+   "r": 5,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 3.3,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "info": "Weitere Mulde.",
+   "color": "#4FB3BF",
+   "label": false,
+   "wand": 1.6,
+   "boden": 1.6,
+   "marks": [
     {
      "shape": "box",
-     "x": 58,
-     "y": 109.5,
-     "w": 44,
-     "d": 30,
+     "x": 0.8,
+     "y": 0.8,
+     "w": 45.4,
+     "zeichnung": true,
+     "d": 31.83,
      "r": 5,
      "fill": "#2F7F89"
     },
     {
      "shape": "box",
-     "x": 66.4,
-     "y": 117.9,
-     "w": 35.6,
-     "d": 21.6,
+     "x": 9.2,
+     "y": 9.2,
+     "w": 37.0,
+     "zeichnung": true,
+     "d": 23.43,
      "r": 4,
      "fill": "#3E9EAA"
-    },
+    }
+   ]
+  },
+  {
+   "id": "mulde_9",
+   "component_id": "silicone_tray",
+   "material_id": "silicone",
+   "name": "Mulde 9",
+   "short": "Mulden",
+   "shape": "box",
+   "x": 8,
+   "y": 141.71,
+   "w": 47,
+   "d": 33.43,
+   "z": 0,
+   "h": 26,
+   "r": 5,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 3.3,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "info": "Weitere Mulde.",
+   "color": "#4FB3BF",
+   "label": false,
+   "wand": 1.6,
+   "boden": 1.6,
+   "marks": [
     {
      "shape": "box",
-     "x": 8,
-     "y": 143.0,
-     "w": 44,
-     "d": 30,
+     "x": 0.8,
+     "y": 0.8,
+     "w": 45.4,
+     "zeichnung": true,
+     "d": 31.83,
      "r": 5,
      "fill": "#2F7F89"
     },
     {
      "shape": "box",
-     "x": 16.4,
-     "y": 151.4,
-     "w": 35.6,
-     "d": 21.6,
+     "x": 9.2,
+     "y": 9.2,
+     "w": 37.0,
+     "zeichnung": true,
+     "d": 23.43,
      "r": 4,
      "fill": "#3E9EAA"
-    },
+    }
+   ]
+  },
+  {
+   "id": "mulde_10",
+   "component_id": "silicone_tray",
+   "material_id": "silicone",
+   "name": "Mulde 10",
+   "short": "Mulden",
+   "shape": "box",
+   "x": 55,
+   "y": 141.71,
+   "w": 47,
+   "d": 33.43,
+   "z": 0,
+   "h": 26,
+   "r": 5,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 3.3,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "info": "Weitere Mulde.",
+   "color": "#4FB3BF",
+   "label": false,
+   "wand": 1.6,
+   "boden": 1.6,
+   "marks": [
     {
      "shape": "box",
-     "x": 58,
-     "y": 143.0,
-     "w": 44,
-     "d": 30,
+     "x": 0.8,
+     "y": 0.8,
+     "w": 45.4,
+     "zeichnung": true,
+     "d": 31.83,
      "r": 5,
      "fill": "#2F7F89"
     },
     {
      "shape": "box",
-     "x": 66.4,
-     "y": 151.4,
-     "w": 35.6,
-     "d": 21.6,
+     "x": 9.2,
+     "y": 9.2,
+     "w": 37.0,
+     "zeichnung": true,
+     "d": 23.43,
      "r": 4,
      "fill": "#3E9EAA"
-    },
+    }
+   ]
+  },
+  {
+   "id": "mulde_11",
+   "component_id": "silicone_tray",
+   "material_id": "silicone",
+   "name": "Mulde 11",
+   "short": "Mulden",
+   "shape": "box",
+   "x": 8,
+   "y": 175.14,
+   "w": 47,
+   "d": 33.43,
+   "z": 0,
+   "h": 26,
+   "r": 5,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 3.3,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "info": "Weitere Mulde.",
+   "color": "#4FB3BF",
+   "label": false,
+   "wand": 1.6,
+   "boden": 1.6,
+   "marks": [
     {
      "shape": "box",
-     "x": 8,
-     "y": 176.5,
-     "w": 44,
-     "d": 30,
+     "x": 0.8,
+     "y": 0.8,
+     "w": 45.4,
+     "zeichnung": true,
+     "d": 31.83,
      "r": 5,
      "fill": "#2F7F89"
     },
     {
      "shape": "box",
-     "x": 16.4,
-     "y": 184.9,
-     "w": 35.6,
-     "d": 21.6,
+     "x": 9.2,
+     "y": 9.2,
+     "w": 37.0,
+     "zeichnung": true,
+     "d": 23.43,
      "r": 4,
      "fill": "#3E9EAA"
-    },
+    }
+   ]
+  },
+  {
+   "id": "mulde_12",
+   "component_id": "silicone_tray",
+   "material_id": "silicone",
+   "name": "Mulde 12",
+   "short": "Mulden",
+   "shape": "box",
+   "x": 55,
+   "y": 175.14,
+   "w": 47,
+   "d": 33.43,
+   "z": 0,
+   "h": 26,
+   "r": 5,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 3.3,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "info": "Weitere Mulde.",
+   "color": "#4FB3BF",
+   "label": false,
+   "wand": 1.6,
+   "boden": 1.6,
+   "marks": [
     {
      "shape": "box",
-     "x": 58,
-     "y": 176.5,
-     "w": 44,
-     "d": 30,
+     "x": 0.8,
+     "y": 0.8,
+     "w": 45.4,
+     "zeichnung": true,
+     "d": 31.83,
      "r": 5,
      "fill": "#2F7F89"
     },
     {
      "shape": "box",
-     "x": 66.4,
-     "y": 184.9,
-     "w": 35.6,
-     "d": 21.6,
+     "x": 9.2,
+     "y": 9.2,
+     "w": 37.0,
+     "zeichnung": true,
+     "d": 23.43,
      "r": 4,
      "fill": "#3E9EAA"
-    },
+    }
+   ]
+  },
+  {
+   "id": "mulde_13",
+   "component_id": "silicone_tray",
+   "material_id": "silicone",
+   "name": "Mulde 13",
+   "short": "Mulden",
+   "shape": "box",
+   "x": 8,
+   "y": 208.57,
+   "w": 47,
+   "d": 33.43,
+   "z": 0,
+   "h": 26,
+   "r": 5,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 3.3,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "info": "Weitere Mulde.",
+   "color": "#4FB3BF",
+   "label": false,
+   "wand": 1.6,
+   "boden": 1.6,
+   "marks": [
     {
      "shape": "box",
-     "x": 8,
-     "y": 210.0,
-     "w": 44,
-     "d": 30,
+     "x": 0.8,
+     "y": 0.8,
+     "w": 45.4,
+     "zeichnung": true,
+     "d": 31.83,
      "r": 5,
      "fill": "#2F7F89"
     },
     {
      "shape": "box",
-     "x": 16.4,
-     "y": 218.4,
-     "w": 35.6,
-     "d": 21.6,
+     "x": 9.2,
+     "y": 9.2,
+     "w": 37.0,
+     "zeichnung": true,
+     "d": 23.43,
      "r": 4,
      "fill": "#3E9EAA"
-    },
+    }
+   ]
+  },
+  {
+   "id": "mulde_14",
+   "component_id": "silicone_tray",
+   "material_id": "silicone",
+   "name": "Mulde 14",
+   "short": "Mulden",
+   "shape": "box",
+   "x": 55,
+   "y": 208.57,
+   "w": 47,
+   "d": 33.43,
+   "z": 0,
+   "h": 26,
+   "r": 5,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 3.3,
+   "materials": [
+    [
+     "gummi",
+     100
+    ]
+   ],
+   "info": "Weitere Mulde.",
+   "color": "#4FB3BF",
+   "label": false,
+   "wand": 1.6,
+   "boden": 1.6,
+   "marks": [
     {
      "shape": "box",
-     "x": 58,
-     "y": 210.0,
-     "w": 44,
-     "d": 30,
+     "x": 0.8,
+     "y": 0.8,
+     "w": 45.4,
+     "zeichnung": true,
+     "d": 31.83,
      "r": 5,
      "fill": "#2F7F89"
     },
     {
      "shape": "box",
-     "x": 66.4,
-     "y": 218.4,
-     "w": 35.6,
-     "d": 21.6,
+     "x": 9.2,
+     "y": 9.2,
+     "w": 37.0,
+     "zeichnung": true,
+     "d": 23.43,
      "r": 4,
      "fill": "#3E9EAA"
     }

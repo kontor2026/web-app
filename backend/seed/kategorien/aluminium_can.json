@@ -37,7 +37,7 @@
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Al": 13020.0
+   "Al": 13000.0
   },
   "herkunft": {
    "Al": "Modellmassen (Schätzung)"
@@ -45,7 +45,7 @@
   "materialien_g": {
    "aluminium": 13.0
   },
-  "co2_kg": 0.155,
+  "co2_kg": 0.154,
   "co2_mit_recyclat_kg": 0.006,
   "co2_ersparnis_kg": 0.148,
   "co2_ohne_faktor": [],
@@ -339,13 +339,13 @@
    "y": 0,
    "w": 66,
    "z": 8,
-   "h": 92,
+   "h": 23,
    "explode": [
     0,
     0,
     0
    ],
-   "mass": 8.46,
+   "mass": 2.11,
    "materials": [
     [
      "alu",
@@ -353,7 +353,92 @@
     ]
    ],
    "info": "Aus einer Aluminiumscheibe tiefgezogen und gestreckt, die Wand ist dünner als ein Haar. Innen schützt ein Lack das Getränk vor dem Metall.",
-   "color": "#DDE1E4"
+   "color": "#DDE1E4",
+   "label": true
+  },
+  {
+   "id": "rumpf2",
+   "component_id": "aluminium_can_body",
+   "material_id": "aluminium",
+   "name": "Dosenrumpf",
+   "short": "Rumpf",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 66,
+   "z": 31,
+   "h": 23,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 2.11,
+   "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "info": "Gehört zum Rumpf aus Aluminium, in einem Stück gezogen.",
+   "color": "#DDE1E4",
+   "label": false
+  },
+  {
+   "id": "rumpf3",
+   "component_id": "aluminium_can_body",
+   "material_id": "aluminium",
+   "name": "Dosenrumpf",
+   "short": "Rumpf",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 66,
+   "z": 54,
+   "h": 23,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 2.11,
+   "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "info": "Gehört zum Rumpf aus Aluminium, in einem Stück gezogen.",
+   "color": "#DDE1E4",
+   "label": false
+  },
+  {
+   "id": "rumpf4",
+   "component_id": "aluminium_can_body",
+   "material_id": "aluminium",
+   "name": "Dosenrumpf",
+   "short": "Rumpf",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 66,
+   "z": 77,
+   "h": 23,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 2.11,
+   "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "info": "Gehört zum Rumpf aus Aluminium, in einem Stück gezogen.",
+   "color": "#DDE1E4",
+   "label": false
   },
   {
    "id": "schraege",

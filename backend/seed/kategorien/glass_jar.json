@@ -43,7 +43,7 @@
    "Fe": "Modellmassen (Schätzung)"
   },
   "materialien_g": {
-   "glass": 184.3,
+   "glass": 184.2,
    "steel": 13.1,
    "paper": 1.4,
    "pvc": 0.9
@@ -450,13 +450,13 @@
    "y": 0,
    "w": 75,
    "z": 5,
-   "h": 75,
+   "h": 25,
    "explode": [
     0,
     0,
     0
    ],
-   "mass": 140.5,
+   "mass": 46.8,
    "materials": [
     [
      "behaelterglas",
@@ -465,7 +465,66 @@
    ],
    "info": "Weißglas (farblos). Leer, aber ungespült in den Weißglas-Container. Der Deckel gehört nicht ins Altglas.",
    "color": "#DCE8E4",
-   "opacity": 0.6
+   "opacity": 0.6,
+   "label": true
+  },
+  {
+   "id": "koerper2",
+   "component_id": "glass_container",
+   "material_id": "glass",
+   "name": "Glaskörper",
+   "short": "Glaskörper",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 75,
+   "z": 30,
+   "h": 25,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 46.8,
+   "materials": [
+    [
+     "behaelterglas",
+     100
+    ]
+   ],
+   "info": "Gehört zum Glas, alles in einem Stück gepresst und geblasen.",
+   "color": "#DCE8E4",
+   "opacity": 0.6,
+   "label": false
+  },
+  {
+   "id": "koerper3",
+   "component_id": "glass_container",
+   "material_id": "glass",
+   "name": "Glaskörper",
+   "short": "Glaskörper",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 75,
+   "z": 55,
+   "h": 25,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 46.8,
+   "materials": [
+    [
+     "behaelterglas",
+     100
+    ]
+   ],
+   "info": "Gehört zum Glas, alles in einem Stück gepresst und geblasen.",
+   "color": "#DCE8E4",
+   "opacity": 0.6,
+   "label": false
   },
   {
    "id": "boden",

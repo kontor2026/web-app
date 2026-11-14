@@ -39,12 +39,12 @@
   "metalle_mg": {},
   "herkunft": {},
   "materialien_g": {
-   "cardboard": 952.6,
-   "wood": 24.8,
+   "cardboard": 949.0,
+   "wood": 28.8,
    "paper": 22.5
   },
-  "co2_kg": 0.739,
-  "co2_mit_recyclat_kg": 0.739,
+  "co2_kg": 0.737,
+  "co2_mit_recyclat_kg": 0.737,
   "co2_ersparnis_kg": 0.0,
   "co2_ohne_faktor": [],
   "rohstoffwert_eur": 0,
@@ -144,7 +144,7 @@
     -310,
     -3
    ],
-   "mass": 152.2,
+   "mass": 151.6,
    "materials": [
     [
      "papier",
@@ -330,7 +330,7 @@
     0,
     -45
    ],
-   "mass": 360.8,
+   "mass": 359.4,
    "materials": [
     [
      "papier",
@@ -671,7 +671,7 @@
     0,
     129
    ],
-   "mass": 112.7,
+   "mass": 112.3,
    "materials": [
     [
      "papier",
@@ -722,7 +722,7 @@
     0,
     129
    ],
-   "mass": 112.7,
+   "mass": 112.3,
    "materials": [
     [
      "papier",
@@ -766,13 +766,13 @@
    "y": 40,
    "w": 16,
    "z": 20,
-   "h": 25,
+   "h": 4,
    "explode": [
     0,
     0,
     136
    ],
-   "mass": 4.5,
+   "mass": 1.7,
    "materials": [
     [
      "holz",
@@ -784,16 +784,231 @@
     ]
    ],
    "info": "Gedrechseltes, farbig lackiertes Buchenholz. Als Ersatzfiguren für andere Spiele aufheben.",
+   "color": "#C8423A"
+  },
+  {
+   "id": "figur_1_1",
+   "component_id": "wooden_pieces",
+   "material_id": "wood",
+   "name": "Spielfiguren (4 Stück)",
+   "short": "Figuren",
+   "shape": "cyl",
+   "x": 111.5,
+   "y": 41.5,
+   "w": 13,
+   "z": 24,
+   "h": 4,
+   "explode": [
+    0,
+    0,
+    136
+   ],
+   "mass": 1.1,
+   "materials": [
+    [
+     "holz",
+     98
+    ],
+    [
+     "druck",
+     2
+    ]
+   ],
+   "info": "Teil der gedrechselten Figur.",
    "color": "#C8423A",
-   "marks": [
-    {
-     "shape": "cyl",
-     "x": 3,
-     "y": 3,
-     "w": 10,
-     "fill": "#FFFFFF"
-    }
-   ]
+   "label": false
+  },
+  {
+   "id": "figur_1_2",
+   "component_id": "wooden_pieces",
+   "material_id": "wood",
+   "name": "Spielfiguren (4 Stück)",
+   "short": "Figuren",
+   "shape": "cyl",
+   "x": 113.25,
+   "y": 43.25,
+   "w": 9.5,
+   "z": 28,
+   "h": 5,
+   "explode": [
+    0,
+    0,
+    136
+   ],
+   "mass": 0.8,
+   "materials": [
+    [
+     "holz",
+     98
+    ],
+    [
+     "druck",
+     2
+    ]
+   ],
+   "info": "Teil der gedrechselten Figur.",
+   "color": "#C8423A",
+   "label": false
+  },
+  {
+   "id": "figur_1_3",
+   "component_id": "wooden_pieces",
+   "material_id": "wood",
+   "name": "Spielfiguren (4 Stück)",
+   "short": "Figuren",
+   "shape": "cyl",
+   "x": 114.5,
+   "y": 44.5,
+   "w": 7,
+   "z": 33,
+   "h": 3,
+   "explode": [
+    0,
+    0,
+    136
+   ],
+   "mass": 0.2,
+   "materials": [
+    [
+     "holz",
+     98
+    ],
+    [
+     "druck",
+     2
+    ]
+   ],
+   "info": "Teil der gedrechselten Figur.",
+   "color": "#C8423A",
+   "label": false
+  },
+  {
+   "id": "figur_1_4",
+   "component_id": "wooden_pieces",
+   "material_id": "wood",
+   "name": "Spielfiguren (4 Stück)",
+   "short": "Figuren",
+   "shape": "cyl",
+   "x": 113.5,
+   "y": 43.5,
+   "w": 9,
+   "z": 36,
+   "h": 2,
+   "explode": [
+    0,
+    0,
+    136
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "holz",
+     98
+    ],
+    [
+     "druck",
+     2
+    ]
+   ],
+   "info": "Teil der gedrechselten Figur.",
+   "color": "#C8423A",
+   "label": false
+  },
+  {
+   "id": "figur_1_5",
+   "component_id": "wooden_pieces",
+   "material_id": "wood",
+   "name": "Spielfiguren (4 Stück)",
+   "short": "Figuren",
+   "shape": "cyl",
+   "x": 112.5,
+   "y": 42.5,
+   "w": 11,
+   "z": 38,
+   "h": 3,
+   "explode": [
+    0,
+    0,
+    136
+   ],
+   "mass": 0.6,
+   "materials": [
+    [
+     "holz",
+     98
+    ],
+    [
+     "druck",
+     2
+    ]
+   ],
+   "info": "Teil der gedrechselten Figur.",
+   "color": "#C8423A",
+   "label": false
+  },
+  {
+   "id": "figur_1_6",
+   "component_id": "wooden_pieces",
+   "material_id": "wood",
+   "name": "Spielfiguren (4 Stück)",
+   "short": "Figuren",
+   "shape": "cyl",
+   "x": 112,
+   "y": 42,
+   "w": 12,
+   "z": 41,
+   "h": 2.5,
+   "explode": [
+    0,
+    0,
+    136
+   ],
+   "mass": 0.6,
+   "materials": [
+    [
+     "holz",
+     98
+    ],
+    [
+     "druck",
+     2
+    ]
+   ],
+   "info": "Teil der gedrechselten Figur.",
+   "color": "#C8423A",
+   "label": false
+  },
+  {
+   "id": "figur_1_7",
+   "component_id": "wooden_pieces",
+   "material_id": "wood",
+   "name": "Spielfiguren (4 Stück)",
+   "short": "Figuren",
+   "shape": "cyl",
+   "x": 114,
+   "y": 44,
+   "w": 8,
+   "z": 43.5,
+   "h": 1.5,
+   "explode": [
+    0,
+    0,
+    136
+   ],
+   "mass": 0.2,
+   "materials": [
+    [
+     "holz",
+     98
+    ],
+    [
+     "druck",
+     2
+    ]
+   ],
+   "info": "Teil der gedrechselten Figur.",
+   "color": "#C8423A",
+   "label": false
   },
   {
    "id": "figur_2",
@@ -806,13 +1021,13 @@
    "y": 40,
    "w": 16,
    "z": 20,
-   "h": 25,
+   "h": 4,
    "explode": [
     0,
     0,
     136
    ],
-   "mass": 4.5,
+   "mass": 1.7,
    "materials": [
     [
      "holz",
@@ -825,16 +1040,231 @@
    ],
    "info": "Weitere Figur.",
    "color": "#2F8F5B",
-   "label": false,
-   "marks": [
-    {
-     "shape": "cyl",
-     "x": 3,
-     "y": 3,
-     "w": 10,
-     "fill": "#FFFFFF"
-    }
-   ]
+   "label": false
+  },
+  {
+   "id": "figur_2_1",
+   "component_id": "wooden_pieces",
+   "material_id": "wood",
+   "name": "Spielfigur 2",
+   "short": "Figuren",
+   "shape": "cyl",
+   "x": 137.5,
+   "y": 41.5,
+   "w": 13,
+   "z": 24,
+   "h": 4,
+   "explode": [
+    0,
+    0,
+    136
+   ],
+   "mass": 1.1,
+   "materials": [
+    [
+     "holz",
+     98
+    ],
+    [
+     "druck",
+     2
+    ]
+   ],
+   "info": "Teil der gedrechselten Figur.",
+   "color": "#2F8F5B",
+   "label": false
+  },
+  {
+   "id": "figur_2_2",
+   "component_id": "wooden_pieces",
+   "material_id": "wood",
+   "name": "Spielfigur 2",
+   "short": "Figuren",
+   "shape": "cyl",
+   "x": 139.25,
+   "y": 43.25,
+   "w": 9.5,
+   "z": 28,
+   "h": 5,
+   "explode": [
+    0,
+    0,
+    136
+   ],
+   "mass": 0.8,
+   "materials": [
+    [
+     "holz",
+     98
+    ],
+    [
+     "druck",
+     2
+    ]
+   ],
+   "info": "Teil der gedrechselten Figur.",
+   "color": "#2F8F5B",
+   "label": false
+  },
+  {
+   "id": "figur_2_3",
+   "component_id": "wooden_pieces",
+   "material_id": "wood",
+   "name": "Spielfigur 2",
+   "short": "Figuren",
+   "shape": "cyl",
+   "x": 140.5,
+   "y": 44.5,
+   "w": 7,
+   "z": 33,
+   "h": 3,
+   "explode": [
+    0,
+    0,
+    136
+   ],
+   "mass": 0.2,
+   "materials": [
+    [
+     "holz",
+     98
+    ],
+    [
+     "druck",
+     2
+    ]
+   ],
+   "info": "Teil der gedrechselten Figur.",
+   "color": "#2F8F5B",
+   "label": false
+  },
+  {
+   "id": "figur_2_4",
+   "component_id": "wooden_pieces",
+   "material_id": "wood",
+   "name": "Spielfigur 2",
+   "short": "Figuren",
+   "shape": "cyl",
+   "x": 139.5,
+   "y": 43.5,
+   "w": 9,
+   "z": 36,
+   "h": 2,
+   "explode": [
+    0,
+    0,
+    136
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "holz",
+     98
+    ],
+    [
+     "druck",
+     2
+    ]
+   ],
+   "info": "Teil der gedrechselten Figur.",
+   "color": "#2F8F5B",
+   "label": false
+  },
+  {
+   "id": "figur_2_5",
+   "component_id": "wooden_pieces",
+   "material_id": "wood",
+   "name": "Spielfigur 2",
+   "short": "Figuren",
+   "shape": "cyl",
+   "x": 138.5,
+   "y": 42.5,
+   "w": 11,
+   "z": 38,
+   "h": 3,
+   "explode": [
+    0,
+    0,
+    136
+   ],
+   "mass": 0.6,
+   "materials": [
+    [
+     "holz",
+     98
+    ],
+    [
+     "druck",
+     2
+    ]
+   ],
+   "info": "Teil der gedrechselten Figur.",
+   "color": "#2F8F5B",
+   "label": false
+  },
+  {
+   "id": "figur_2_6",
+   "component_id": "wooden_pieces",
+   "material_id": "wood",
+   "name": "Spielfigur 2",
+   "short": "Figuren",
+   "shape": "cyl",
+   "x": 138,
+   "y": 42,
+   "w": 12,
+   "z": 41,
+   "h": 2.5,
+   "explode": [
+    0,
+    0,
+    136
+   ],
+   "mass": 0.6,
+   "materials": [
+    [
+     "holz",
+     98
+    ],
+    [
+     "druck",
+     2
+    ]
+   ],
+   "info": "Teil der gedrechselten Figur.",
+   "color": "#2F8F5B",
+   "label": false
+  },
+  {
+   "id": "figur_2_7",
+   "component_id": "wooden_pieces",
+   "material_id": "wood",
+   "name": "Spielfigur 2",
+   "short": "Figuren",
+   "shape": "cyl",
+   "x": 140,
+   "y": 44,
+   "w": 8,
+   "z": 43.5,
+   "h": 1.5,
+   "explode": [
+    0,
+    0,
+    136
+   ],
+   "mass": 0.2,
+   "materials": [
+    [
+     "holz",
+     98
+    ],
+    [
+     "druck",
+     2
+    ]
+   ],
+   "info": "Teil der gedrechselten Figur.",
+   "color": "#2F8F5B",
+   "label": false
   },
   {
    "id": "figur_3",
@@ -847,13 +1277,13 @@
    "y": 40,
    "w": 16,
    "z": 20,
-   "h": 25,
+   "h": 4,
    "explode": [
     0,
     0,
     136
    ],
-   "mass": 4.5,
+   "mass": 1.7,
    "materials": [
     [
      "holz",
@@ -866,16 +1296,231 @@
    ],
    "info": "Weitere Figur.",
    "color": "#E2B33C",
-   "label": false,
-   "marks": [
-    {
-     "shape": "cyl",
-     "x": 3,
-     "y": 3,
-     "w": 10,
-     "fill": "#FFFFFF"
-    }
-   ]
+   "label": false
+  },
+  {
+   "id": "figur_3_1",
+   "component_id": "wooden_pieces",
+   "material_id": "wood",
+   "name": "Spielfigur 3",
+   "short": "Figuren",
+   "shape": "cyl",
+   "x": 163.5,
+   "y": 41.5,
+   "w": 13,
+   "z": 24,
+   "h": 4,
+   "explode": [
+    0,
+    0,
+    136
+   ],
+   "mass": 1.1,
+   "materials": [
+    [
+     "holz",
+     98
+    ],
+    [
+     "druck",
+     2
+    ]
+   ],
+   "info": "Teil der gedrechselten Figur.",
+   "color": "#E2B33C",
+   "label": false
+  },
+  {
+   "id": "figur_3_2",
+   "component_id": "wooden_pieces",
+   "material_id": "wood",
+   "name": "Spielfigur 3",
+   "short": "Figuren",
+   "shape": "cyl",
+   "x": 165.25,
+   "y": 43.25,
+   "w": 9.5,
+   "z": 28,
+   "h": 5,
+   "explode": [
+    0,
+    0,
+    136
+   ],
+   "mass": 0.8,
+   "materials": [
+    [
+     "holz",
+     98
+    ],
+    [
+     "druck",
+     2
+    ]
+   ],
+   "info": "Teil der gedrechselten Figur.",
+   "color": "#E2B33C",
+   "label": false
+  },
+  {
+   "id": "figur_3_3",
+   "component_id": "wooden_pieces",
+   "material_id": "wood",
+   "name": "Spielfigur 3",
+   "short": "Figuren",
+   "shape": "cyl",
+   "x": 166.5,
+   "y": 44.5,
+   "w": 7,
+   "z": 33,
+   "h": 3,
+   "explode": [
+    0,
+    0,
+    136
+   ],
+   "mass": 0.2,
+   "materials": [
+    [
+     "holz",
+     98
+    ],
+    [
+     "druck",
+     2
+    ]
+   ],
+   "info": "Teil der gedrechselten Figur.",
+   "color": "#E2B33C",
+   "label": false
+  },
+  {
+   "id": "figur_3_4",
+   "component_id": "wooden_pieces",
+   "material_id": "wood",
+   "name": "Spielfigur 3",
+   "short": "Figuren",
+   "shape": "cyl",
+   "x": 165.5,
+   "y": 43.5,
+   "w": 9,
+   "z": 36,
+   "h": 2,
+   "explode": [
+    0,
+    0,
+    136
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "holz",
+     98
+    ],
+    [
+     "druck",
+     2
+    ]
+   ],
+   "info": "Teil der gedrechselten Figur.",
+   "color": "#E2B33C",
+   "label": false
+  },
+  {
+   "id": "figur_3_5",
+   "component_id": "wooden_pieces",
+   "material_id": "wood",
+   "name": "Spielfigur 3",
+   "short": "Figuren",
+   "shape": "cyl",
+   "x": 164.5,
+   "y": 42.5,
+   "w": 11,
+   "z": 38,
+   "h": 3,
+   "explode": [
+    0,
+    0,
+    136
+   ],
+   "mass": 0.6,
+   "materials": [
+    [
+     "holz",
+     98
+    ],
+    [
+     "druck",
+     2
+    ]
+   ],
+   "info": "Teil der gedrechselten Figur.",
+   "color": "#E2B33C",
+   "label": false
+  },
+  {
+   "id": "figur_3_6",
+   "component_id": "wooden_pieces",
+   "material_id": "wood",
+   "name": "Spielfigur 3",
+   "short": "Figuren",
+   "shape": "cyl",
+   "x": 164,
+   "y": 42,
+   "w": 12,
+   "z": 41,
+   "h": 2.5,
+   "explode": [
+    0,
+    0,
+    136
+   ],
+   "mass": 0.6,
+   "materials": [
+    [
+     "holz",
+     98
+    ],
+    [
+     "druck",
+     2
+    ]
+   ],
+   "info": "Teil der gedrechselten Figur.",
+   "color": "#E2B33C",
+   "label": false
+  },
+  {
+   "id": "figur_3_7",
+   "component_id": "wooden_pieces",
+   "material_id": "wood",
+   "name": "Spielfigur 3",
+   "short": "Figuren",
+   "shape": "cyl",
+   "x": 166,
+   "y": 44,
+   "w": 8,
+   "z": 43.5,
+   "h": 1.5,
+   "explode": [
+    0,
+    0,
+    136
+   ],
+   "mass": 0.2,
+   "materials": [
+    [
+     "holz",
+     98
+    ],
+    [
+     "druck",
+     2
+    ]
+   ],
+   "info": "Teil der gedrechselten Figur.",
+   "color": "#E2B33C",
+   "label": false
   },
   {
    "id": "figur_4",
@@ -888,13 +1533,13 @@
    "y": 40,
    "w": 16,
    "z": 20,
-   "h": 25,
+   "h": 4,
    "explode": [
     0,
     0,
     136
    ],
-   "mass": 4.5,
+   "mass": 1.7,
    "materials": [
     [
      "holz",
@@ -907,16 +1552,231 @@
    ],
    "info": "Weitere Figur.",
    "color": "#3E6FA8",
-   "label": false,
-   "marks": [
-    {
-     "shape": "cyl",
-     "x": 3,
-     "y": 3,
-     "w": 10,
-     "fill": "#FFFFFF"
-    }
-   ]
+   "label": false
+  },
+  {
+   "id": "figur_4_1",
+   "component_id": "wooden_pieces",
+   "material_id": "wood",
+   "name": "Spielfigur 4",
+   "short": "Figuren",
+   "shape": "cyl",
+   "x": 189.5,
+   "y": 41.5,
+   "w": 13,
+   "z": 24,
+   "h": 4,
+   "explode": [
+    0,
+    0,
+    136
+   ],
+   "mass": 1.1,
+   "materials": [
+    [
+     "holz",
+     98
+    ],
+    [
+     "druck",
+     2
+    ]
+   ],
+   "info": "Teil der gedrechselten Figur.",
+   "color": "#3E6FA8",
+   "label": false
+  },
+  {
+   "id": "figur_4_2",
+   "component_id": "wooden_pieces",
+   "material_id": "wood",
+   "name": "Spielfigur 4",
+   "short": "Figuren",
+   "shape": "cyl",
+   "x": 191.25,
+   "y": 43.25,
+   "w": 9.5,
+   "z": 28,
+   "h": 5,
+   "explode": [
+    0,
+    0,
+    136
+   ],
+   "mass": 0.8,
+   "materials": [
+    [
+     "holz",
+     98
+    ],
+    [
+     "druck",
+     2
+    ]
+   ],
+   "info": "Teil der gedrechselten Figur.",
+   "color": "#3E6FA8",
+   "label": false
+  },
+  {
+   "id": "figur_4_3",
+   "component_id": "wooden_pieces",
+   "material_id": "wood",
+   "name": "Spielfigur 4",
+   "short": "Figuren",
+   "shape": "cyl",
+   "x": 192.5,
+   "y": 44.5,
+   "w": 7,
+   "z": 33,
+   "h": 3,
+   "explode": [
+    0,
+    0,
+    136
+   ],
+   "mass": 0.2,
+   "materials": [
+    [
+     "holz",
+     98
+    ],
+    [
+     "druck",
+     2
+    ]
+   ],
+   "info": "Teil der gedrechselten Figur.",
+   "color": "#3E6FA8",
+   "label": false
+  },
+  {
+   "id": "figur_4_4",
+   "component_id": "wooden_pieces",
+   "material_id": "wood",
+   "name": "Spielfigur 4",
+   "short": "Figuren",
+   "shape": "cyl",
+   "x": 191.5,
+   "y": 43.5,
+   "w": 9,
+   "z": 36,
+   "h": 2,
+   "explode": [
+    0,
+    0,
+    136
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "holz",
+     98
+    ],
+    [
+     "druck",
+     2
+    ]
+   ],
+   "info": "Teil der gedrechselten Figur.",
+   "color": "#3E6FA8",
+   "label": false
+  },
+  {
+   "id": "figur_4_5",
+   "component_id": "wooden_pieces",
+   "material_id": "wood",
+   "name": "Spielfigur 4",
+   "short": "Figuren",
+   "shape": "cyl",
+   "x": 190.5,
+   "y": 42.5,
+   "w": 11,
+   "z": 38,
+   "h": 3,
+   "explode": [
+    0,
+    0,
+    136
+   ],
+   "mass": 0.6,
+   "materials": [
+    [
+     "holz",
+     98
+    ],
+    [
+     "druck",
+     2
+    ]
+   ],
+   "info": "Teil der gedrechselten Figur.",
+   "color": "#3E6FA8",
+   "label": false
+  },
+  {
+   "id": "figur_4_6",
+   "component_id": "wooden_pieces",
+   "material_id": "wood",
+   "name": "Spielfigur 4",
+   "short": "Figuren",
+   "shape": "cyl",
+   "x": 190,
+   "y": 42,
+   "w": 12,
+   "z": 41,
+   "h": 2.5,
+   "explode": [
+    0,
+    0,
+    136
+   ],
+   "mass": 0.6,
+   "materials": [
+    [
+     "holz",
+     98
+    ],
+    [
+     "druck",
+     2
+    ]
+   ],
+   "info": "Teil der gedrechselten Figur.",
+   "color": "#3E6FA8",
+   "label": false
+  },
+  {
+   "id": "figur_4_7",
+   "component_id": "wooden_pieces",
+   "material_id": "wood",
+   "name": "Spielfigur 4",
+   "short": "Figuren",
+   "shape": "cyl",
+   "x": 192,
+   "y": 44,
+   "w": 8,
+   "z": 43.5,
+   "h": 1.5,
+   "explode": [
+    0,
+    0,
+    136
+   ],
+   "mass": 0.2,
+   "materials": [
+    [
+     "holz",
+     98
+    ],
+    [
+     "druck",
+     2
+    ]
+   ],
+   "info": "Teil der gedrechselten Figur.",
+   "color": "#3E6FA8",
+   "label": false
   },
   {
    "id": "wuerfel_1",
@@ -1050,7 +1910,7 @@
     0,
     75
    ],
-   "mass": 67.6,
+   "mass": 67.4,
    "materials": [
     [
      "papier",
@@ -1117,7 +1977,7 @@
     0,
     0
    ],
-   "mass": 146.6,
+   "mass": 146,
    "materials": [
     [
      "papier",

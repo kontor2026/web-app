@@ -43,6 +43,16 @@ g('boden', 'Boden mit Einstich', 'Boden', 70, 0, 6, 45,
   'Der Boden ist nach innen gewölbt (Einstich). Das macht die Flasche stabiler, und der Bodensatz sammelt '
   'sich am Rand.')
 
+# Körper in 5 gleich breite Abschnitte teilen: die Foto-Ansicht verbindet die Scheiben zu einer glatten Hülle,
+# so bleibt die Wand gerade statt fassförmig
+_i = next(i for i, p in enumerate(glas) if p['id'] == 'koerper')
+_k = glas.pop(_i)
+for _n in range(5):
+    _p = dict(_k, id='koerper' if _n == 0 else f'koerper{_n + 1}', z=_k['z'] + _k['h'] * _n / 5, h=_k['h'] / 5,
+              mass=_k['mass'] / 5, label=_k.get('label', True) if _n == 0 else False,
+              info=_k['info'] if _n == 0 else INFO_G, marks=_k.get('marks') if _n == 5 - 1 else None)
+    glas.insert(_i + _n, _p)
+
 teile = [
     teil('kapsel', 'aluminium_capsule_foil', 'Kapsel (Flaschenhalsfolie)', 'Kapsel', 'cyl', **rund(32.5, 250, 50),
          mass=1.5, materials=[['alu', 80], ['ldpe', 15], ['druck', 5]], color='#A3303F', sortBias=1,

@@ -32,10 +32,11 @@ for i in range(3):
     roehren.append(teil(
         f'rohr_{i + 1}', 'abs_brick', 'Hohlröhren (3 Stück)' if i == 0 else f'Röhre {i + 1}', 'Röhren', 'cyl',
         x=round(7.9 + 8 * i - ROHR / 2, 2), y=round(T / 2 - ROHR / 2, 2), w=ROHR, z=0, h=HK, mass=0.12,
+        wand=round((ROHR - NOPPE) / 2, 2), boden=0,
         color=ROT, label=None if i == 0 else False, sortBias=-1,
         info='Röhren an der Unterseite, zwischen die die Noppen eines anderen Steins greifen.' if i == 0
         else 'Weitere Röhre.',
-        marks=[mark('cyl', (ROHR - NOPPE) / 2, (ROHR - NOPPE) / 2, NOPPE, fill=DUNKEL)]))
+        marks=[mark('cyl', (ROHR - NOPPE) / 2, (ROHR - NOPPE) / 2, NOPPE, fill=DUNKEL, zeichnung=True)]))
 
 teile = noppen + [
     teil('deckplatte', 'abs_brick', 'Deckplatte', 'Deckplatte', 'box',
@@ -44,9 +45,9 @@ teile = noppen + [
               'Jahrzehnte: Steine weitergeben statt wegwerfen, im Restmüll werden sie verbrannt.'),
 ] + roehren + [
     teil('waende', 'abs_brick', 'Außenwände', 'Wände', 'box',
-         x=0, y=0, w=B, d=T, z=0, h=HK, r=0.2, mass=1.1, color=ROT,
+         x=0, y=0, w=B, d=T, z=0, h=HK, r=0.2, mass=1.1, color=ROT, wand=WAND, boden=0,
          info='Vier dünne Wände, unten offen. Gemeinsam mit den Röhren klemmen sie die Noppen des Steins darunter.',
-         marks=[mark('box', WAND, WAND, B - 2 * WAND, T - 2 * WAND, 0.2, DUNKEL)]),
+         marks=[mark('box', WAND, WAND, B - 2 * WAND, T - 2 * WAND, 0.2, DUNKEL, zeichnung=True)]),
 ]
 
 explodiere(teile, abstand=7, gruppen=[[p['id'] for p in noppen], [p['id'] for p in roehren]])

@@ -11,14 +11,14 @@
    "y": 0,
    "w": 60,
    "d": 82,
-   "z": 0,
-   "h": 13,
+   "z": 8,
+   "h": 5,
    "explode": [
     0,
     -24,
     0
    ],
-   "mass": 14.4,
+   "mass": 6.7,
    "materials": [
     [
      "holz",
@@ -55,6 +55,64 @@
    ]
   },
   {
+   "id": "laffe_mitte",
+   "component_id": "wooden_spoon_body",
+   "material_id": "wood",
+   "name": "Laffe (Wölbung)",
+   "short": "Laffe",
+   "shape": "cyl",
+   "x": 3,
+   "y": 4,
+   "w": 54,
+   "d": 74,
+   "z": 4,
+   "h": 4,
+   "explode": [
+    0,
+    -24,
+    0
+   ],
+   "mass": 4.4,
+   "materials": [
+    [
+     "holz",
+     100
+    ]
+   ],
+   "info": "Gewölbte Unterseite der Laffe.",
+   "color": "#DDB88D",
+   "label": false
+  },
+  {
+   "id": "laffe_unten",
+   "component_id": "wooden_spoon_body",
+   "material_id": "wood",
+   "name": "Laffe (Unterseite)",
+   "short": "Laffe",
+   "shape": "cyl",
+   "x": 10,
+   "y": 13,
+   "w": 40,
+   "d": 56,
+   "z": 0,
+   "h": 4,
+   "explode": [
+    0,
+    -24,
+    0
+   ],
+   "mass": 3.3,
+   "materials": [
+    [
+     "holz",
+     100
+    ]
+   ],
+   "info": "Tiefster Punkt der gewölbten Laffe.",
+   "color": "#DDB88D",
+   "label": false
+  },
+  {
    "id": "hals",
    "component_id": "wooden_spoon_body",
    "material_id": "wood",
@@ -82,12 +140,14 @@
    ],
    "info": "Schmaler Übergang von der Laffe zum Stiel. Hier ist der Löffel am stärksten belastet und bricht, wenn man ihn als Hebel benutzt.",
    "color": "#DDB88D",
+   "form": "liegend_y",
    "marks": [
     {
      "shape": "box",
      "x": 2.1,
      "y": 4,
      "w": 0.8,
+     "zeichnung": true,
      "d": 36,
      "r": 0.4,
      "fill": "#CBA478"
@@ -97,6 +157,7 @@
      "x": 6.6,
      "y": 10,
      "w": 0.8,
+     "zeichnung": true,
      "d": 24,
      "r": 0.4,
      "fill": "#CBA478"
@@ -106,6 +167,7 @@
      "x": 11.1,
      "y": 4,
      "w": 0.8,
+     "zeichnung": true,
      "d": 36,
      "r": 0.4,
      "fill": "#CBA478"
@@ -140,12 +202,14 @@
    ],
    "info": "Unbehandeltes oder nur mit Speiseöl eingeriebenes Buchenholz. Es leitet Wärme schlecht, deshalb wird der Stiel im heißen Topf nicht warm.",
    "color": "#DDB88D",
+   "form": "liegend_y",
    "marks": [
     {
      "shape": "box",
      "x": 2.1,
      "y": 4,
      "w": 0.8,
+     "zeichnung": true,
      "d": 92,
      "r": 0.4,
      "fill": "#CBA478"
@@ -155,6 +219,7 @@
      "x": 5.77,
      "y": 10,
      "w": 0.8,
+     "zeichnung": true,
      "d": 80,
      "r": 0.4,
      "fill": "#CBA478"
@@ -164,6 +229,7 @@
      "x": 9.43,
      "y": 4,
      "w": 0.8,
+     "zeichnung": true,
      "d": 92,
      "r": 0.4,
      "fill": "#CBA478"
@@ -173,6 +239,7 @@
      "x": 13.1,
      "y": 10,
      "w": 0.8,
+     "zeichnung": true,
      "d": 80,
      "r": 0.4,
      "fill": "#CBA478"
@@ -207,12 +274,14 @@
    ],
    "info": "Breiteres Griffende mit Loch zum Aufhängen. Holz darf in die Biotonne oder in den Restmüll; lackierte Löffel nur in den Restmüll.",
    "color": "#DDB88D",
+   "form": "liegend_y",
    "marks": [
     {
      "shape": "box",
      "x": 2.1,
      "y": 4,
      "w": 0.8,
+     "zeichnung": true,
      "d": 48,
      "r": 0.4,
      "fill": "#CBA478"
@@ -222,6 +291,7 @@
      "x": 6.77,
      "y": 10,
      "w": 0.8,
+     "zeichnung": true,
      "d": 36,
      "r": 0.4,
      "fill": "#CBA478"
@@ -231,6 +301,7 @@
      "x": 11.43,
      "y": 4,
      "w": 0.8,
+     "zeichnung": true,
      "d": 48,
      "r": 0.4,
      "fill": "#CBA478"
@@ -240,6 +311,7 @@
      "x": 16.1,
      "y": 10,
      "w": 0.8,
+     "zeichnung": true,
      "d": 36,
      "r": 0.4,
      "fill": "#CBA478"
@@ -256,6 +328,7 @@
      "x": 4,
      "y": 20,
      "w": 11,
+     "zeichnung": true,
      "d": 4,
      "r": 1,
      "fill": "#B98F62"
