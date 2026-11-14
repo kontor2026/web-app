@@ -25,8 +25,8 @@ app.innerHTML = `
           <text x="${(p.cx * 46).toFixed(1)}" y="${(p.cy * 46 + 4.5).toFixed(1)}" text-anchor="${p.cx > 0.3 ? 'start' : p.cx < -0.3 ? 'end' : 'middle'}">${p.name}</text></g></g>`).join('')}
       </svg>
     </figure>
-    <figure class="wechsel-bild" data-n="1" aria-label="Woher Kobalt im Smartphone kommt"><div class="wechsel-flaeche" id="start-globus"></div><figcaption>Kobalt im Smartphone: Abbau nach Land</figcaption></figure>
-    <figure class="wechsel-bild" data-n="2" aria-label="Smartphone in Einzelteilen"><div class="wechsel-flaeche" id="start-modell"></div><figcaption>Smartphone in 13 Teilen</figcaption></figure>
+    <figure class="wechsel-bild" data-n="1" aria-label="Woher Kobalt im Smartphone kommt"><div class="wechsel-flaeche" id="start-globus"></div></figure>
+    <figure class="wechsel-bild" data-n="2" aria-label="Smartphone in Einzelteilen"><div class="wechsel-flaeche" id="start-modell"></div></figure>
     <div class="wechsel-punkte" role="tablist">${['Kreislauf', 'Weltkarte', '3D-Modell'].map((t, i) => `<button role="tab" data-n="${i}" aria-label="${t}" class="${i ? '' : 'on'}"></button>`).join('')}</div>
     </div>
     <div class="start-text">
@@ -37,6 +37,16 @@ app.innerHTML = `
   </div>
 </section>`;
 if (ruhig) document.querySelector('.kreis').classList.add('ruhig');
+
+// ---------- Kreis in Bewegung: die hervorgehobene Station wandert weiter ----------
+let station = SCHRITTE.findIndex((x) => x.id === 'gegenstand');
+if (!ruhig) setInterval(() => {
+  if (document.hidden) return;
+  const kreise = document.querySelectorAll('.kreis-punkt > circle');
+  kreise[station]?.classList.remove('mitte');
+  station = (station + 1) % kreise.length;
+  kreise[station]?.classList.add('mitte');
+}, 1100);
 
 // ---------- Bilderwechsel: Kreislauf → Weltkarte → 3D-Modell ----------
 // Globus und 3D laden erst, wenn sie gezeigt werden. Stopp bei Berührung, ohne Automatik bei reduzierter Bewegung.

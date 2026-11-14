@@ -70,7 +70,9 @@ a { color: inherit; }
 .kreis-punkt { opacity: 0; transform-box: view-box; transform-origin: 0 0; animation: punkt .45s cubic-bezier(.2, .8, .2, 1) forwards; animation-delay: calc(.2s + var(--i) * .12s); }
 .kreis-punkt circle { fill: var(--sheet); stroke: var(--ink); stroke-width: 1; }
 .kreis-punkt circle.mitte { fill: var(--accent); stroke: var(--accent); }
+.kreis-punkt circle { transition: fill .4s, stroke .4s; }
 .kreis-punkt circle.mitte + g .icon { stroke: var(--accent-ink); }
+.kreis-punkt .icon { transition: stroke .4s; }
 .kreis-punkt .icon { fill: none; stroke: var(--ink); stroke-width: 1.5; stroke-linejoin: round; stroke-linecap: round; }
 .kreis-punkt text { font: 500 14px var(--sans); fill: var(--ink-2); }
 .kreis.ruhig .kreis-ring { animation: none; stroke-dashoffset: 0; }
@@ -251,7 +253,7 @@ html { scroll-padding-bottom: calc(var(--tabs) + 88px); }
 
 /* Start: Bilderwechsel Kreislauf → Weltkarte → 3D-Modell */
 .wechsel { position: relative; display: grid; aspect-ratio: 580 / 430; }
-.wechsel-bild { grid-area: 1 / 1; margin: 0; opacity: 0; visibility: hidden; transition: opacity .6s, visibility .6s; display: grid; grid-template-rows: minmax(0, 1fr) auto; }
+.wechsel-bild { grid-area: 1 / 1; margin: 0; opacity: 0; visibility: hidden; transition: opacity .6s, visibility .6s; display: grid; }
 .wechsel-bild.on { opacity: 1; visibility: visible; }
 .wechsel-flaeche { position: relative; min-height: 0; }
 .wechsel-flaeche canvas, .wechsel-flaeche .labels { position: absolute; inset: 0; }
