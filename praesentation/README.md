@@ -8,16 +8,16 @@ Fünf Minuten nach AIDA in einer durchgehenden Three.js-Welt. Ein altes Handy is
 node tools/serve.cjs            # http://localhost:5181/  (leitet auf /praesentation/ weiter)
 ```
 
-Der Server liefert das ganze Repo aus, weil die Präsentation die **echten Kategorie-Modelle** (`backend/seed/kategorien`) und die Material- und Formfunktionen der App (`packages/site/src/foto.js`, `js/data/catalog.js`) lädt. Präsentation und App zeigen damit dieselben Modelle.
+Der Server liefert das ganze Repo aus, weil die Präsentation die **echten Kategorie-Modelle** (`backend/seed/kategorien`) und die Material- und Formfunktionen der App (`packages/site/src/foto.js`, `js/data/catalog.js`) lädt. Präsentation und App zeigen damit dieselben Modelle. Die Stations-App liegt unter `/index.html`, Anfragen an `/api/` gehen an das Backend (`API_URL`, Standard `http://127.0.0.1:8000`). Läuft kein Backend, zeigt die App ihren Demo-Modus.
 
-### Öffentlich erreichbar
+### Mit Backend und öffentlich per HTTPS
 
 ```bash
-node tools/serve.cjs 5181 --public        # lauscht auf 0.0.0.0
-cloudflared tunnel --url http://localhost:5181
+backend/.venv/bin/python -m uvicorn backend.app.main:app --port 8000     # Backend mit KI, siehe docs/backend.md
+node tools/serve.cjs 5181 --tunnel                                       # Präsentation + App + /api, dazu Cloudflare-Tunnel
 ```
 
-`cloudflared` ist auf diesem Rechner noch nicht installiert (`winget install Cloudflare.cloudflared`). Der Tunnel gibt eine HTTPS-Adresse aus, die von überall erreichbar ist. Der Server sperrt `.git`, `.env`, `secrets/`, `node_modules/` und `.claude/`. Alles andere im Repo ist öffentlich lesbar, solange er läuft.
+`--tunnel` startet `cloudflared` (macOS `brew install cloudflared`, Windows `winget install Cloudflare.cloudflared`) und gibt eine zufällige Adresse `https://….trycloudflare.com/` aus. Präsentation, App und API laufen über diese eine Adresse, also gleiche Herkunft: Die Tasten X und F wirken auch aus der App heraus, und die Kamera in der App funktioniert, weil die Seite HTTPS hat. Der Server sperrt `.git`, `.env`, `secrets/`, `node_modules/`, `.claude/`, `.venv/` und `backend/data/` (Datenbank und gescannte Fotos). Alles andere im Repo ist öffentlich lesbar, solange er läuft. Wer die Adresse kennt, kann auch scannen und damit die KI des Backends nutzen.
 
 ## Ablauf (AIDA, 5:00)
 
@@ -70,11 +70,11 @@ In der laufenden App gehen Pfeiltasten und Leertaste an die App. **X, F, Bild↓
 
 ## Die echte App einbinden
 
-Bis die App feststeht, läuft eine **Mock-App** (`mock-app/`): Beispielfoto → Kandidaten → Steckbrief mit Explosionsansicht und echten Werten aus dem Repo → Bauideen. Umstellen ohne Codeänderung:
+Im Monitor läuft die **echte Stations-App** aus diesem Repo (`APP_URL = '../index.html'`), mit Backend live, sonst im Demo-Modus. Die frühere Platzhalter-App (`mock-app/`) bleibt als Rückfall. Umstellen ohne Codeänderung:
 
 ```text
+http://localhost:5181/praesentation/?app=./mock-app/          (Platzhalter-App)
 http://localhost:5181/praesentation/?app=https://adresse-der-app/
-http://localhost:5181/praesentation/?app=/          (Stations-App aus diesem Repo im Demo-Modus)
 ```
 
 Dauerhaft: `APP_URL` in `content.js`. Damit **X** und **F** auch aus der App heraus funktionieren:
@@ -99,7 +99,7 @@ Dauerhaft: `APP_URL` in `content.js`. Damit **X** und **F** auch aus der App her
 | `content.js` | Folien, Texte, Sprechertext, `APP_URL`, `PRODUKTNAME`, QR-Ziel, Gegenstände für das Finale |
 | `app.js` | Navigation, Tasten, iframe per Homografie (CSS `matrix3d`) exakt auf dem Monitor |
 | `werkstaetten.js` | Orte auf der Deutschlandkarte, Start (Lübeck) |
-| `mock-app/` | Platzhalter-App |
+| `mock-app/` | frühere Platzhalter-App (Rückfall per `?app=./mock-app/`) |
 | `assets/` | Three.js r170 mit Addons (lokal, kein CDN), Deutschland-Umriss (Natural Earth über `world-atlas`), QR-Code |
 
 Damit nichts ruckelt:

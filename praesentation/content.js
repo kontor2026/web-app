@@ -2,9 +2,9 @@
 // Jede Folie hat Schritte. Ein Schritt = eine Kamerastation plus die Animation, die dort läuft (world.js).
 // caption: der einzige Satz auf dem Bild (leer = kein Text). notes: Sprechertext, Taste T.
 
-// Web-App im Bildschirm. Platzhalter ist die Mock-App, bis die echte App feststeht.
-// Ohne Codeänderung umstellen: ?app=https://… an die URL hängen (z. B. ?app=/ für die Stations-App im Demo-Modus).
-export const APP_URL = new URLSearchParams(location.search).get('app') || './mock-app/';
+// Web-App im Bildschirm: die echte Stations-App aus diesem Repo, same origin via tools/serve.cjs (with /api to the backend).
+// Override without a code change: ?app=https://… (another address) or ?app=./mock-app/ (old placeholder app).
+export const APP_URL = new URLSearchParams(location.search).get('app') || '../index.html';
 
 // Name auf der letzten Folie (steht noch nicht fest) und Ziel des QR-Codes (assets/qr-app.svg, neu erzeugen bei Änderung)
 export const PRODUKTNAME = 'ReSource Scanner';
