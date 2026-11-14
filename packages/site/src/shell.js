@@ -9,7 +9,6 @@ export const SEITEN = [
   { id: 'modelle', pfad: 'modelle/', name: '3D-Modelle', kurz: 'Modelle', icon: 'gegenstand' },
   { id: 'werkbank', pfad: 'werkbank/', name: 'Werkbank', icon: 'werkbank' },
   { id: 'kompass', pfad: 'kompass/', name: 'KI-Kompass', kurz: 'KI', icon: 'kompass' },
-  { id: 'qr', pfad: 'qr/', name: 'QR-Codes', kurz: 'QR' },
 ];
 
 // root: relativer Weg zur Startseite ('./' auf der Startseite, '../' in den Unterseiten)
