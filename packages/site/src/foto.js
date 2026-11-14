@@ -243,7 +243,7 @@ export function studio(renderer, scene) {
   const hemi = new THREE.HemisphereLight(0xffffff, 0x6f6a60, 0.25);
   const sonne = new THREE.DirectionalLight(0xfff6ea, 2.2);
   sonne.castShadow = true;
-  sonne.shadow.mapSize.set(1024, 1024);
+  sonne.shadow.mapSize.set(2048, 2048);
   sonne.shadow.bias = -0.0004;
   const fuell = new THREE.DirectionalLight(0xe8f0ff, 0.35);
   const boden = new THREE.Mesh(new THREE.PlaneGeometry(1, 1), new THREE.ShadowMaterial({ opacity: 0.22 }));
