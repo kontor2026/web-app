@@ -14,6 +14,7 @@ app.innerHTML = `
     <div class="canvas-head">
       <div><h2 id="titel">…</h2><p id="masse"></p></div>
       <div class="kopf-rechts">
+        <button class="nummern-schalter" id="foto" aria-pressed="true" title="Foto oder Zeichnung, Taste F">Foto</button>
         <button class="nummern-schalter" id="nummern" aria-pressed="true" title="Taste N">Nummern</button>
         <div class="seg" role="group" aria-label="Ansicht"><button data-x="0">Zusammen</button><button data-x="1" class="on">Explodiert</button></div>
       </div>
@@ -47,6 +48,13 @@ function setzeNummern(an) {
 }
 schalter.addEventListener('click', () => setzeNummern(schalter.getAttribute('aria-pressed') !== 'true'));
 setzeNummern(localStorage.getItem('modelle-nummern') !== 'aus');
+const fotoSchalter = document.getElementById('foto');
+function setzeFoto(an) {
+  fotoSchalter.setAttribute('aria-pressed', String(an)); fotoSchalter.classList.toggle('on', an);
+  viewer.foto(an); localStorage.setItem('modelle-foto', an ? 'an' : 'aus');
+}
+fotoSchalter.addEventListener('click', () => setzeFoto(fotoSchalter.getAttribute('aria-pressed') !== 'true'));
+setzeFoto(localStorage.getItem('modelle-foto') !== 'aus');
 
 // ---------- Prüfung wie tools/kategorien/pruefe.py ----------
 const zahlAus = (s) => parseFloat(String(s).replace(/[^\d,.]/g, '').replace(',', '.'));
@@ -164,6 +172,7 @@ addEventListener('keydown', (e) => {
   if (e.key === 'ArrowLeft') blaettere(-1);
   if (e.key === 'Escape') { viewer.waehle(null); zeigeModell(); }
   if (e.key === 'n' || e.key === 'N') schalter.click();
+  if (e.key === 'f' || e.key === 'F') fotoSchalter.click();
 });
 const ausHash = () => oeffne(location.hash.match(/kat=([\w-]+)/)?.[1] ?? 'smartphone');
 addEventListener('hashchange', ausHash);
