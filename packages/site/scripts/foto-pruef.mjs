@@ -12,9 +12,9 @@ try {
   p.on('pageerror', (e) => console.log(`FEHLER: ${e.message}`));
   await p.goto(`http://localhost:5190/modelle/?t=${Date.now()}#kat=${id}`, { waitUntil: 'networkidle' });
   await p.waitForTimeout(2500);
-  await p.locator('#szene').screenshot({ path: `${out}/${id}-ex.png`, timeout: 240000 });
+  await p.locator('#szene').screenshot({ path: `${out}/${id}-ex.png`, timeout: 600000, animations: 'disabled' });
   await p.evaluate(() => document.getElementById('explodiert').click());
-  await p.waitForTimeout(2000);
-  await p.locator('#szene').screenshot({ path: `${out}/${id}-zu.png`, timeout: 240000 });
+  await p.waitForTimeout(3500);
+  await p.locator('#szene').screenshot({ path: `${out}/${id}-zu.png`, timeout: 600000, animations: 'disabled' });
   console.log(`${out}/${id}-ex.png\n${out}/${id}-zu.png`);
 } finally { await b.close(); }

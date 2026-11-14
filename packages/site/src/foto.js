@@ -61,7 +61,7 @@ function textur(art) {
 
 // ---------- Materialeigenschaften je Katalog-Material ----------
 // r = Rauheit, m = metallisch, cc = Klarlack, sh = Glanz bei Stoffen, tx = Textur, b = Relieftiefe
-const METALL = { m: 1, r: 0.3, tx: 'gebuerstet', b: 0.02 };
+const METALL = { m: 0.85, r: 0.34, tx: 'gebuerstet', b: 0.02 };
 const EIGEN = {
   alu: { ...METALL, r: 0.34 }, stahl: { ...METALL, r: 0.26 }, weissblech: { ...METALL, r: 0.22 },
   kupfer: { ...METALL, r: 0.3 }, messing: { ...METALL, r: 0.28 }, nickel: { ...METALL, r: 0.25 },
@@ -96,7 +96,7 @@ export function stoff(p, farbe, opacity) {
   const mat = new THREE.MeshPhysicalMaterial({
     color: farbe, metalness: e.m ?? 0, roughness: e.r, clearcoat: e.cc ?? 0, clearcoatRoughness: 0.15,
     sheen: e.sh ?? 0, sheenRoughness: 0.6, sheenColor: farbe.clone().lerp(new THREE.Color(1, 1, 1), 0.4),
-    transparent: opacity < 0.98, opacity, envMapIntensity: e.m ? 1.9 : 1,
+    transparent: opacity < 0.98, opacity, envMapIntensity: e.m ? 2.4 : 1,
     polygonOffset: true, polygonOffsetFactor: 1, polygonOffsetUnits: 1,
   });
   // Dunkle Metalle (eloxiert, brüniert) spiegeln sonst fast nur Schwarz: Mindesthelligkeit
@@ -104,8 +104,8 @@ export function stoff(p, farbe, opacity) {
   if (e.holz) { mat.map = farbTextur('holz', farbe); mat.color.set(0xffffff); }
   if (e.tx) { mat.bumpMap = textur(e.tx); mat.bumpScale = e.b ?? 0.1; if (e.m) mat.roughnessMap = textur(e.tx); }
   // Glas und klare Kunststoffe: echte Lichtbrechung statt bloßer Transparenz
-  if (durchsichtig && (e.glas || ['pet', 'ps', 'folien', 'pcabs', 'ldpe'].includes(p.materials?.[0]?.[0]))) {
-    Object.assign(mat, { transmission: 1 - opacity * 0.6, opacity: 1, ior: 1.5, thickness: 1.5, roughness: e.r ?? 0.05,
+  if (durchsichtig && (e.glas || ['pet', 'ps', 'folien', 'pcabs', 'ldpe', 'pp', 'hdpe', 'pvc'].includes(p.materials?.[0]?.[0]))) {
+    Object.assign(mat, { transmission: 1 - opacity * 0.6, opacity: 1, ior: 1.5, thickness: 1.5, roughness: e.glas ? e.r : Math.min(e.r ?? 0.1, 0.08),
       specularIntensity: 1, attenuationColor: farbe, attenuationDistance: 60 });
     mat.userData.glas = true;
     mat.transparent = false;
