@@ -14,7 +14,7 @@ app.innerHTML = `
     <div class="canvas-head">
       <div><p id="masse"></p></div>
       <div class="kopf-rechts">
-        <button class="btn ghost ansicht-knopf" id="explodiert" aria-pressed="true">${icon('gegenstand')}<span>Zusammenbauen</span></button>
+        <button class="kipp-schalter" id="explodiert" role="switch" aria-checked="true"><span>Zerlegt</span><i></i></button>
       </div>
     </div>
     <div class="drawing" id="szene" aria-label="3D-Modell, mit der Maus drehbar"></div>
@@ -38,11 +38,10 @@ const viewer = erzeugeViewer(document.getElementById('szene'), {
 // Ein Knopf: zusammengebaut oder zerlegt. Tasten: E umschalten, N Nummern, D Drehen (ohne eigene Knöpfe)
 const exKnopf = document.getElementById('explodiert');
 function setzeExplosion(an) {
-  exKnopf.setAttribute('aria-pressed', String(an));
-  exKnopf.querySelector('span').textContent = an ? 'Zusammenbauen' : 'Zerlegen';
+  exKnopf.setAttribute('aria-checked', String(an));
   viewer.explosion(an ? 1 : 0);
 }
-exKnopf.addEventListener('click', () => setzeExplosion(exKnopf.getAttribute('aria-pressed') !== 'true'));
+exKnopf.addEventListener('click', () => setzeExplosion(exKnopf.getAttribute('aria-checked') !== 'true'));
 let nummernAn = localStorage.getItem('modelle-nummern') !== 'aus', drehenAn = localStorage.getItem('modelle-drehen') ? localStorage.getItem('modelle-drehen') === 'an' : !ruhig;
 viewer.nummern(nummernAn);
 viewer.drehen(drehenAn);
@@ -109,9 +108,9 @@ function zeigeModell() {
       <div><b>${gramm(soll)}</b><span>Typisch${schaetzung('', 'Typisches Gewicht, eigene Schätzung')}</span></div>
     </div>
     ${h.length ? `<div class="pruef">${h.map((x) => `<p class="note ${x.warn ? 'warn' : ''}">${esc(x.text)}</p>`).join('')}</div>` : ''}
-    <div><h3>Teile</h3><div class="plist">${viewer.teile.map((t) => `
+    <details class="lw-block teile-klappe" data-block ${matchMedia('(min-width: 901px)').matches ? 'open' : ''}><summary>${viewer.teile.length} Teile</summary><div class="plist">${viewer.teile.map((t) => `
       <button class="prow" data-i="${t.i}"><span class="n">${t.nr ?? '–'}</span>
-        <span>${esc(t.p.name)}<small>${esc(materialVon(t.p)?.name ?? '')}</small></span><span class="m">${gramm(t.p.mass)}</span></button>`).join('')}</div></div>
+        <span>${esc(t.p.name)}<small>${esc(materialVon(t.p)?.name ?? '')}</small></span><span class="m">${gramm(t.p.mass)}</span></button>`).join('')}</div></details>
     <a class="btn ghost lw-link" href="../atlas/#kat=${obj.id}">Lebensweg ansehen →</a>`,
   [{ label: 'Alle Modelle', go: zeigeListe }, { label: obj.name, go: zeigeModell }]);
   panel.querySelectorAll('.prow').forEach((r) => {
