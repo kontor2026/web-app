@@ -11,9 +11,7 @@ const sicher = ziel && ziel.protocol === 'https:';   // nur https-Ziele werden v
 const app = shell('', '../');
 app.innerHTML = `
 <section class="view quelle-seite"><div class="quelle-karte">
-  <p class="eyebrow">${icon(ziel ? 'beleg' : 'schaetzung')}${ziel ? 'Quelle prüfen' : 'Eigene Schätzung'}</p>
-  <h1>${esc(titel)}</h1>
-  <dl class="facts">${[['Belegt', was], ['Von', von], ['Jahr', jahr], ['Seite', seite], ['Ziel', sicher ? ziel.hostname : null]]
+  <dl class="facts">${[[ziel ? 'Quelle' : 'Art', titel], ['Belegt', was], ['Von', von], ['Jahr', jahr], ['Seite', seite], ['Ziel', sicher ? ziel.hostname : null]]
     .filter(([, v]) => v).map(([k, v]) => `<div><dt>${k}</dt><dd>${esc(v)}</dd></div>`).join('')}</dl>
   <div class="quelle-knoepfe">
     <button class="btn ghost" id="zurueck"><span class="pfeil">←</span>Zurück</button>
