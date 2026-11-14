@@ -168,13 +168,7 @@ addEventListener('keydown', (e) => {
   if (e.key === 'ArrowRight') blaettere(1);
   if (e.key === 'ArrowLeft') blaettere(-1);
   if (e.key === 'Escape') { viewer.waehle(null); zeigeModell(); }
-  if (e.key === 'n' || e.key === 'N') { nummernAn = !nummernAn; const nrKnopf = document.getElementById('nummern');
-function setzeNummern(an) {
-  nummernAn = an; nrKnopf.setAttribute('aria-checked', String(an));
-  viewer.nummern(an); localStorage.setItem('modelle-nummern', an ? 'an' : 'aus');
-}
-nrKnopf.addEventListener('click', () => setzeNummern(!nummernAn));
-setzeNummern(nummernAn); localStorage.setItem('modelle-nummern', nummernAn ? 'an' : 'aus'); }
+  if (e.key === 'n' || e.key === 'N') setzeNummern(!nummernAn);
   if (e.key === 'e' || e.key === 'E') exKnopf.click();
   if (e.key === 'd' || e.key === 'D') { drehenAn = !drehenAn; viewer.drehen(drehenAn); localStorage.setItem('modelle-drehen', drehenAn ? 'an' : 'aus'); }
 });
