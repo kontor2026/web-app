@@ -57,7 +57,7 @@ def teil(id, component_id, name, short, shape, *, x, y, w, z, h, d=None, r=None,
     wand (mm): Teil ist in der Foto-Ansicht hohl mit dieser Wandstärke, oben offen; boden (mm): Bodendicke
     (Standard = wand, 0 = auch unten offen, z. B. Ring, Reifen). Die Station zeichnet es weiter massiv.
     offen: 'unten' dreht ein hohles Teil um: offen nach unten (Helmschale, Kappe, Deckel); Standard oben.
-    form: echte Form in der Foto-Ansicht, füllt den Quader des Teils: 'kugel', 'torus' (Ring, Kabelrolle, Reifen),
+    form: echte Form in der Foto-Ansicht, füllt den Quader des Teils: 'kugel', 'torus' (liegender Ring: Kabelrolle, Reifen), 'torus_x' / 'torus_y' (stehender Ring, Achse entlang x bzw. y: Ordnerring, Spiraldraht, Henkel),
     'liegend_x' / 'liegend_y' (liegender Zylinder entlang x bzw. y: Kabel, Rolle, Griff, Rad, Stift)."""
     if component_id not in CLS['components']:
         raise ValueError(f'{id}: unbekannte component_id {component_id}')
@@ -75,8 +75,8 @@ def teil(id, component_id, name, short, shape, *, x, y, w, z, h, d=None, r=None,
     p = dict(id=id, component_id=component_id, material_id=mid, name=name, short=short, shape=shape,
              x=x, y=y, w=w, d=d, z=z, h=h, r=r, explode=list(explode) if explode else None,
              mass=mass, materials=mats, info=info, **extra)
-    if p.get('form') not in (None, 'kugel', 'torus', 'liegend_x', 'liegend_y'):
-        raise ValueError(f"{id}: form {p['form']} unbekannt (kugel, torus, liegend_x, liegend_y)")
+    if p.get('form') not in (None, 'kugel', 'torus', 'torus_x', 'torus_y', 'liegend_x', 'liegend_y'):
+        raise ValueError(f"{id}: form {p['form']} unbekannt (kugel, torus, torus_x, torus_y, liegend_x, liegend_y)")
     if p.get('offen') not in (None, 'oben', 'unten'):
         raise ValueError(f"{id}: offen {p['offen']} unbekannt (oben, unten)")
     unbekannt = set(p) - set(REIHENFOLGE)

@@ -188,6 +188,16 @@ function formGeometrie(t) {
   if (t.form === 'kugel') {
     geo = new THREE.SphereGeometry(0.5, 64, 40);
     geo.scale(w, h, d);
+  } else if (t.form === 'torus_x' || t.form === 'torus_y') {
+    // Stehender Ring (Ordnerring, Spiraldraht, Henkel): Achse entlang x bzw. y, füllt den Quader
+    const quer = t.form === 'torus_x' ? d : w, rohr = Math.min(t.form === 'torus_x' ? w : d, Math.min(quer, h) / 2) / 2;
+    const R = Math.max(rohr * 1.2, Math.min(quer, h) / 2 - rohr);
+    geo = new THREE.TorusGeometry(R, rohr, 24, 72);
+    if (t.form === 'torus_x') geo.rotateY(Math.PI / 2);
+    geo.computeBoundingBox();
+    const b = geo.boundingBox;
+    geo.translate(-(b.min.x + b.max.x) / 2, -(b.min.y + b.max.y) / 2, -(b.min.z + b.max.z) / 2);
+    geo.scale(w / (b.max.x - b.min.x), h / (b.max.y - b.min.y), d / (b.max.z - b.min.z));
   } else if (t.form === 'torus') {
     const rohr = Math.min(h / 2, Math.min(w, d) / 4), R = Math.min(w, d) / 2 - rohr;
     geo = new THREE.TorusGeometry(R, rohr, 32, 96);
