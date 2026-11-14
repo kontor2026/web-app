@@ -1,116 +1,137 @@
-// Rundgang mit Mo, dem Holz-Mannequin. Erscheint beim ersten Besuch auf der Startseite (und über das Menü erneut).
-// Kurz halten: eine Frage, dann vier Sprechblasen. Ein Spotlight hebt hervor, worauf Mo mit dem Arm zeigt.
+// Rundgang mit Mo, dem Holz-Mannequin. Sechs Schritte, ein Durchgang über Start und Lebensweg:
+// Mo fragt, erzählt die Eckdaten (echte Zahlen aus der Datenbank) und lässt dich dann selbst tippen:
+// Das Ziel leuchtet, alles andere ist gesperrt. Der Schritt wird in sessionStorage gemerkt und überlebt den Seitenwechsel.
 import { ruhig } from './shell.js';
 import { moSvg } from './mo.js';
 
-const SCHLUESSEL = 'intro-gesehen';
-// ziel: CSS-Selektor des Elements, auf das Mo zeigt (null = nichts hervorheben)
+const GESEHEN = 'intro-gesehen', LAUFT = 'rundgang-schritt';
+const z = (n) => n.toLocaleString('de-DE');
+// seite: auf welcher Seite der Schritt läuft; ziel: Selektor, auf den getippt werden muss (tap) oder der nur leuchtet
 const SCHRITTE = [
-  { frage: true, text: 'Hey! Dich hab ich hier noch nicht gesehen. Schön, dass dich Nachhaltigkeit interessiert. Soll ich dir kurz zeigen, wie das hier geht?' },
-  { text: 'Ich bin Mo. Das hier ist eine Datenbank, die wir für einen Hackathon gebaut haben: Woraus besteht ein Gegenstand, woher kommt er, wohin geht er? Jede Zahl hat eine Quelle.', ziel: null },
-  { text: 'Such dir einen Gegenstand aus. Ein Tipp auf die Karte, und du folgst seinem Weg.', ziel: '.waehler' },
-  { text: 'Hier öffnest du das Menü: Lebensweg, 3D-Modelle, Werkbank und KI-Kompass.', ziel: '.menue-knopf' },
-  { text: 'Alles mit › lässt sich aufklappen. „Weiter“ führt dich immer zum nächsten Schritt. Tief gehen kannst du, musst du aber nicht.', ziel: null, ende: true },
+  { seite: 'start', frage: true, text: () => 'Hey! Dich hab ich hier noch nicht gesehen. Schön, dass dich Nachhaltigkeit interessiert. Soll ich dir kurz zeigen, wie das hier geht?' },
+  { seite: 'start', weiter: true, text: (d) => `Ich bin Mo. Das hier ist eine Datenbank für einen Hackathon: ${z(d.objekte)} Alltagsgegenstände, ${z(d.rohstoffe)} Rohstoffe, ${z(d.rezepte)} Bauideen. Jede Zahl hat eine Quelle.` },
+  { seite: 'start', tap: true, ziel: '.beispiel[href*="smartphone"]', text: () => 'Probieren wir’s aus: Tipp auf das Smartphone. Ich zeig dir, wo es herkommt.' },
+  { seite: 'atlas', tap: true, ziel: '.lw-schritte a:nth-child(4)', text: () => 'Das ist sein Lebensweg in sieben Stationen, vom Rohstoff bis zum Recycling. Tipp oben aufs Würfel-Symbol: Woraus besteht es?' },
+  { seite: 'atlas', tap: true, ziel: '.menue-knopf', text: () => 'So sieht er zerlegt aus. Jede Zahl hat einen Quellen-Link, alles mit › klappt auf. Jetzt tipp aufs Menü.' },
+  { seite: 'atlas', weiter: true, ende: true, ziel: '.steps a:nth-child(5)', verzoegert: 400, text: (d) => `Die Werkbank sammelt deine Gegenstände und zeigt, was du daraus bauen kannst (${z(d.rezepte)} Bauideen). Der Rest ist deins. Viel Spaß!` },
 ];
 
-export function zeigeIntro({ erzwingen = false } = {}) {
-  if (!erzwingen && localStorage.getItem(SCHLUESSEL)) return;
-  let i = 0, tipper = 0;
+export function zeigeIntro({ seite, zahlen, erzwingen = false }) {
+  const gespeichert = sessionStorage.getItem(LAUFT);
+  let i = gespeichert == null ? null : +gespeichert;
+  if (i == null) {
+    if (seite !== 'start' || (!erzwingen && localStorage.getItem(GESEHEN))) return;
+    i = 0;
+  }
+  if (!SCHRITTE[i] || SCHRITTE[i].seite !== seite) { sessionStorage.removeItem(LAUFT); return; }
+
+  let tipper = 0, suche = 0, zielEl = null;
   const el = document.createElement('div');
   el.className = 'rundgang';
   el.setAttribute('role', 'dialog');
-  el.setAttribute('aria-modal', 'true');
   el.setAttribute('aria-label', 'Rundgang mit Mo');
-  el.innerHTML = `<div class="rg-spot"></div>
+  el.innerHTML = `<div class="rg-block"></div><div class="rg-spot"></div>
     <div class="rg-karte">
       <div class="rg-mo">${moSvg()}</div>
-      <div class="rg-blase">
-        <p class="rg-text" aria-live="polite"></p>
-        <div class="rg-punkte">${SCHRITTE.slice(1).map((_, n) => `<i data-n="${n + 1}"></i>`).join('')}</div>
-        <div class="rg-knoepfe"></div>
-      </div>
+      <div class="rg-blase"><p class="rg-text" aria-live="polite"></p><div class="rg-punkte">${SCHRITTE.slice(1).map((_, n) => `<i data-n="${n + 1}"></i>`).join('')}</div><div class="rg-knoepfe"></div></div>
     </div>`;
   document.body.append(el);
-  const spot = el.querySelector('.rg-spot'), karte = el.querySelector('.rg-karte'), mo = el.querySelector('.mo'), text = el.querySelector('.rg-text');
-  const knoepfe = el.querySelector('.rg-knoepfe');
+  const [block, spot, mo, text, knoepfe, blase] = ['.rg-block', '.rg-spot', '.mo', '.rg-text', '.rg-knoepfe', '.rg-blase'].map((s) => el.querySelector(s));
 
-  const schliesse = () => {
-    localStorage.setItem(SCHLUESSEL, '1');
-    clearInterval(tipper);
+  const ende = () => {
+    sessionStorage.removeItem(LAUFT);
+    localStorage.setItem(GESEHEN, '1');
+    clearInterval(tipper); clearInterval(suche);
+    document.removeEventListener('click', beiTipp, true);
+    removeEventListener('resize', ausrichten);
+    document.body.classList.remove('menue-offen');
     el.classList.add('weg');
-    removeEventListener('resize', zeigeZiel);
     setTimeout(() => el.remove(), ruhig ? 0 : 300);
-    document.querySelector('.beispiel')?.focus({ preventScroll: true });
   };
 
-  // Schreibmaschine: Text erscheint Zeichen für Zeichen, Tippen auf die Blase zeigt ihn sofort ganz
   const sprich = (s) => {
     clearInterval(tipper);
     text.textContent = '';
+    if (ruhig) { text.textContent = s; return; }
     mo.classList.add('spricht');
-    if (ruhig) { text.textContent = s; mo.classList.remove('spricht'); return; }
     let n = 0;
-    tipper = setInterval(() => {
-      n += 2;
-      text.textContent = s.slice(0, n);
-      if (n >= s.length) { clearInterval(tipper); mo.classList.remove('spricht'); }
-    }, 22);
-    el.querySelector('.rg-blase').onclick = () => { clearInterval(tipper); text.textContent = s; mo.classList.remove('spricht'); };
+    tipper = setInterval(() => { n += 2; text.textContent = s.slice(0, n); if (n >= s.length) { clearInterval(tipper); mo.classList.remove('spricht'); } }, 20);
+    blase.onclick = () => { clearInterval(tipper); text.textContent = s; mo.classList.remove('spricht'); };
   };
 
-  // Spotlight auf das Ziel, Arm zeigt hin, Karte liegt auf der anderen Bildschirmhälfte
-  const zeigeZiel = () => {
-    const s = SCHRITTE[i], ziel = s.ziel ? document.querySelector(s.ziel) : null;
-    mo.style.setProperty('--arm-l', '0deg');
-    mo.style.setProperty('--arm-r', '0deg');
-    mo.classList.toggle('winkt', i === 0 || !!s.ende);
-    if (!ziel) {
-      Object.assign(spot.style, { width: '0px', height: '0px', transform: `translate(${innerWidth / 2}px, ${innerHeight / 2}px)`, opacity: '1' });
-      el.classList.remove('oben');
+  // Loch in der Sperrschicht genau über dem Ziel: nur dort kommen Tipps durch
+  const ausrichten = () => {
+    const s = SCHRITTE[i];
+    mo.style.setProperty('--arm-l', '0deg'); mo.style.setProperty('--arm-r', '0deg');
+    if (!zielEl?.isConnected) {
+      Object.assign(spot.style, { width: '0px', height: '0px', transform: `translate(${innerWidth / 2}px, ${innerHeight / 2}px)` });
+      block.style.clipPath = 'none';
+      el.classList.remove('oben', 'leuchtet');
       return;
     }
-    const r = ziel.getBoundingClientRect(), pad = 8;
-    Object.assign(spot.style, { width: `${r.width + 2 * pad}px`, height: `${r.height + 2 * pad}px`, transform: `translate(${r.left - pad}px, ${r.top - pad}px)`, opacity: '1' });
+    const r = zielEl.getBoundingClientRect(), p = 8, x = r.left - p, y = r.top - p, w = r.width + 2 * p, h = r.height + 2 * p;
+    Object.assign(spot.style, { width: `${w}px`, height: `${h}px`, transform: `translate(${x}px, ${y}px)` });
+    block.style.clipPath = s.tap ? `polygon(evenodd, 0 0, 100% 0, 100% 100%, 0 100%, 0 0, ${x}px ${y}px, ${x}px ${y + h}px, ${x + w}px ${y + h}px, ${x + w}px ${y}px, ${x}px ${y}px)` : 'none';
+    el.classList.toggle('leuchtet', !!s.tap);
     el.classList.toggle('oben', r.top + r.height / 2 > innerHeight * 0.5);
-    // Arm nach dem Umlegen der Karte ausrichten
     requestAnimationFrame(() => {
       const m = mo.getBoundingClientRect(), links = r.left + r.width / 2 < m.left + m.width / 2;
-      const sx = m.left + ((links ? 28 : 72) / 100) * m.width, sy = m.top + (50 / 112) * m.height;
+      const sx = m.left + ((links ? 29 : 71) / 100) * m.width, sy = m.top + (52 / 112) * m.height;
       const winkel = (Math.atan2(r.top + r.height / 2 - sy, r.left + r.width / 2 - sx) * 180) / Math.PI - 90;
       mo.style.setProperty(links ? '--arm-l' : '--arm-r', `${winkel.toFixed(0)}deg`);
     });
   };
 
-  const zeige = () => {
+  // Tipp aufs Ziel: Schritt merken (die Seite kann gleich wechseln), danach weiter
+  const beiTipp = (e) => {
     const s = SCHRITTE[i];
+    if (!s.tap || !zielEl || !zielEl.contains(e.target)) return;
+    sessionStorage.setItem(LAUFT, String(i + 1));
+    setTimeout(() => { if (el.isConnected) gehe(i + 1); }, 60);
+  };
+  document.addEventListener('click', beiTipp, true);
+
+  function gehe(n) {
+    if (n >= SCHRITTE.length) return ende();
+    i = n;
+    sessionStorage.setItem(LAUFT, String(i));
+    if (SCHRITTE[i].seite !== seite) {  // läuft auf der nächsten Seite weiter (dort liest zeigeIntro den gemerkten Schritt)
+      clearInterval(tipper); clearInterval(suche); document.removeEventListener('click', beiTipp, true); removeEventListener('resize', ausrichten); el.remove(); return;
+    }
+    const s = SCHRITTE[i];
+    zielEl = null;
     el.querySelectorAll('.rg-punkte i').forEach((p) => p.classList.toggle('on', +p.dataset.n <= i));
     el.classList.toggle('frage', !!s.frage);
-    knoepfe.innerHTML = s.frage
-      ? '<button class="btn primary" data-ja>Ja, zeig’s mir<span class="pfeil">→</span></button><button class="btn ghost" data-nein>Nein, danke</button>'
-      : `<button class="btn primary" data-weiter>${s.ende ? 'Los geht’s' : 'Weiter'}<span class="pfeil">→</span></button>${s.ende ? '' : '<button class="btn ghost" data-weg>Überspringen</button>'}`;
-    knoepfe.querySelector('.primary').focus({ preventScroll: true });
-    zeigeZiel();
-    sprich(s.text);
-  };
-  const weiter = () => { if (i + 1 >= SCHRITTE.length) return schliesse(); i += 1; zeige(); };
+    mo.classList.toggle('winkt', !!s.frage || !!s.ende);
+    knoepfe.innerHTML = s.frage ? '<button class="btn primary" data-ja>Ja, zeig’s mir<span class="pfeil">→</span></button><button class="btn ghost" data-nein>Nein, danke</button>'
+      : s.tap ? '<p class="rg-hinweis"><i></i>Tipp auf das leuchtende Feld</p><button class="btn ghost" data-weg>Beenden</button>'
+      : `<button class="btn primary" data-weiter>${s.ende ? 'Los geht’s' : 'Weiter'}<span class="pfeil">→</span></button>${s.ende ? '' : '<button class="btn ghost" data-weg>Beenden</button>'}`;
+    knoepfe.querySelector('.primary')?.focus({ preventScroll: true });
+    sprich(s.text(zahlen));
+    ausrichten();
+    clearInterval(suche);
+    if (s.ziel) {
+      let versuche = 0;
+      suche = setInterval(() => {
+        const t = document.querySelector(s.ziel);
+        if (t && t.getBoundingClientRect().width > 0) { clearInterval(suche); setTimeout(() => { zielEl = t; ausrichten(); }, s.verzoegert ?? 0); }
+        else if (++versuche > 40) { clearInterval(suche); ende(); }
+      }, 120);
+      if (s.ende) document.body.classList.add('menue-offen');
+    }
+  }
 
   knoepfe.addEventListener('click', (e) => {
     const b = e.target.closest('button');
     if (!b) return;
-    if (b.hasAttribute('data-ja') || b.hasAttribute('data-weiter')) weiter();
-    else if (b.hasAttribute('data-weg')) schliesse();
+    if (b.hasAttribute('data-ja') || b.hasAttribute('data-weiter')) gehe(i + 1);
+    else if (b.hasAttribute('data-weg')) ende();
     else if (b.hasAttribute('data-nein')) {
-      knoepfe.innerHTML = '';
-      el.classList.remove('frage');
-      mo.classList.remove('winkt');
+      knoepfe.innerHTML = ''; mo.classList.remove('winkt');
       sprich('Alles klar! Du findest mich jederzeit im Menü oben links.');
-      setTimeout(schliesse, 2600);
+      setTimeout(ende, 2600);
     }
   });
-  addEventListener('resize', zeigeZiel);
-  addEventListener('keydown', function taste(e) {
-    if (!el.isConnected) return removeEventListener('keydown', taste);
-    if (e.key === 'Escape') schliesse();
-  });
-  zeige();
+  addEventListener('resize', ausrichten);
+  gehe(i);
 }

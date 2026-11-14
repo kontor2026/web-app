@@ -44,4 +44,4 @@ if (!ruhig) setInterval(() => {
   kreise[station]?.classList.add('mitte');
 }, 2600);
 
-zeigeIntro({ erzwingen: new URLSearchParams(location.search).has('rundgang') });
+zeigeIntro({ seite: 'start', erzwingen: new URLSearchParams(location.search).has('rundgang'), zahlen: { objekte: atlas.objekte.length, rohstoffe: Object.keys(atlas.rohstoffe).length, rezepte: atlas.rezepte.length } });

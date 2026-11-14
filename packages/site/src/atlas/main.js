@@ -8,6 +8,7 @@ import { zeichneStoffstrom } from './stoffstrom.js';
 import { erzeugeGlobus } from './globus.js';
 import { erzeugeViewer, ladeModell, materialVon } from '../viewer.js';
 import { bestand, plus, bauteile, stand, postenName, geschaetzt } from '../werkbank.js';
+import { zeigeIntro } from '../intro.js';
 import './atlas.css';
 
 const { objekte, rohstoffe: ROH, materialien: MAT, laender: LAND, quellen: QUELLE, awsh: AWSH, verwertung: VW, importe: IMP, rezepte: REZEPTE } = daten;
@@ -334,3 +335,4 @@ addEventListener('keydown', (e) => {
   if (e.key === 'ArrowLeft' && i > 0) location.hash = link(IDS[i - 1], null);
 });
 ausHash();
+zeigeIntro({ seite: 'atlas', zahlen: { objekte: objekte.length, rohstoffe: Object.keys(ROH).length, rezepte: REZEPTE.length } });
