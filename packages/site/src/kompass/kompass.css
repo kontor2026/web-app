@@ -64,3 +64,15 @@
 .ablauf.lw-block > summary { font: 500 11px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); }
 @media (min-width: 901px) { .ablauf.lw-block > summary { pointer-events: none; } .ablauf.lw-block > summary::before { display: none; } }
 @media (max-width: 900px) { .kompass .rose-flaeche { height: 230px; min-height: 0; } }
+
+.kompass-kern { font-size: 18px; line-height: 1.4; color: var(--ink); }
+.kompass-quellen { display: flex; flex-wrap: wrap; gap: 6px; }
+.kompass-quellen .chip-q { margin-left: 0; }
+@media (max-width: 900px) {
+  .kompass { height: calc(100svh - 52px - var(--tabs)); display: flex; flex-direction: column; overflow: hidden; }
+  .kompass .canvas { flex: 1 1 auto; min-height: 0; height: auto; display: grid; grid-template-rows: auto auto minmax(0, 1fr) auto; }
+  .kompass .rose-flaeche { height: auto; min-height: 0; }
+  .kompass .panel { flex: 0 1 auto; max-height: 50%; overflow-y: auto; border-top: 1px solid var(--rule); }
+  .kompass .panel-inner { gap: 12px; padding: 12px 16px; }
+  .kompass .plist .prow small { display: none; }
+}

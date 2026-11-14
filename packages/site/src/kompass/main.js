@@ -68,14 +68,14 @@ function uebersicht() {
     <div><h3>Vier Richtungen</h3><div class="plist">${KOMPASS.richtungen.map((r) => `
       <button class="prow" data-r="${r.id}"><span class="n">${r.himmelsrichtung}</span>
         <span>${esc(r.titel)}<small>${esc(r.frage)}</small></span><span class="m">→</span></button>`).join('')}</div></div>
-    <div><h3>Zum Nachlesen</h3><ul class="quellen-liste">${KOMPASS.quellen.map((q) => `<li><a class="ql" href="${esc(q.url)}" target="_blank" rel="noopener">${esc(q.titel)} →</a></li>`).join('')}</ul></div>
+    <p class="kompass-quellen">${KOMPASS.quellen.map((q) => chip(q.url, q.titel, q.titel.split(' (')[0].replace('EU-Gesetz über KI', 'KI-Verordnung').replace('EU-Gesetz zum Datenschutz', 'DSGVO').split(':')[0], { was: q.titel })).join('')}</p>
 `, null);
 }
 
 function richtung(r) {
   markiere(r);
   setzePanel(`
-    <div><h3>So machen wir es</h3><dl class="belege">${r.so_machen_wirs.slice(0, 2).map((s) => `<div><dd>${esc(s.text)}${beleg(s.beleg)}</dd></div>`).join('')}</dl></div>
+    <p class="kompass-kern">${esc(r.so_machen_wirs[0]?.text ?? '')}</p>
     <div class="goal"><small>Tipp für dich</small>${esc(r.tipp_fuer_dich)}</div>`, null);
 }
 
