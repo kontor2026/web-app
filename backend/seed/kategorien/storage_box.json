@@ -403,13 +403,15 @@
    ],
    "info": "Verstärkter Rand mit Griffmulden an den Schmalseiten. Hier sind die Verschlüsse eingehängt.",
    "color": "#E8ECEE",
-   "opacity": 0.85,
+   "opacity": 0.8,
+   "wand": 3,
    "marks": [
     {
      "shape": "box",
      "x": 8,
      "y": 8,
      "w": 374,
+     "zeichnung": true,
      "d": 274,
      "r": 16,
      "fill": "#D5DADD"
@@ -445,7 +447,8 @@
    "info": "Durchsichtiges PP, Recyclingcode 5. Große Hartkunststoffteile gehören zum Wertstoffhof, nicht in die Gelbe Tonne: Sie sind keine Verpackung.",
    "color": "#E8ECEE",
    "opacity": 0.8,
-   "label": true
+   "label": true,
+   "wand": 3
   },
   {
    "id": "wand_unten",
@@ -476,7 +479,8 @@
    "info": "Die Wand wird nach unten schmaler, so passen leere Boxen ineinander.",
    "color": "#E8ECEE",
    "opacity": 0.8,
-   "label": false
+   "label": false,
+   "wand": 3
   },
   {
    "id": "boden",
@@ -508,6 +512,7 @@
    "color": "#E8ECEE",
    "opacity": 0.8,
    "label": false,
+   "wand": 3,
    "marks": [
     {
      "shape": "box",

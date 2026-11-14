@@ -28,6 +28,7 @@
    ],
    "info": "Kunststoffrolle auf dem Bügel, damit der Draht nicht in die Hand schneidet.",
    "color": "#2F6DB5",
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
@@ -35,7 +36,8 @@
      "y": 5.0,
      "w": 2,
      "d": 4,
-     "fill": "#285E9C"
+     "fill": "#285E9C",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -43,7 +45,8 @@
      "y": 5.0,
      "w": 2,
      "d": 4,
-     "fill": "#285E9C"
+     "fill": "#285E9C",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -51,7 +54,8 @@
      "y": 5.0,
      "w": 2,
      "d": 4,
-     "fill": "#285E9C"
+     "fill": "#285E9C",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -59,7 +63,8 @@
      "y": 5.0,
      "w": 2,
      "d": 4,
-     "fill": "#285E9C"
+     "fill": "#285E9C",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -67,7 +72,8 @@
      "y": 5.0,
      "w": 2,
      "d": 4,
-     "fill": "#285E9C"
+     "fill": "#285E9C",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -75,7 +81,8 @@
      "y": 5.0,
      "w": 2,
      "d": 4,
-     "fill": "#285E9C"
+     "fill": "#285E9C",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -83,7 +90,8 @@
      "y": 5.0,
      "w": 2,
      "d": 4,
-     "fill": "#285E9C"
+     "fill": "#285E9C",
+     "zeichnung": true
     }
    ]
   },
@@ -114,7 +122,8 @@
     ]
    ],
    "info": "Verzinkter Stahldraht, in die Ösen am Rand eingehängt. Zum Trennen aushaken: Er gehört zum Metallschrott oder in die Gelbe Tonne.",
-   "color": "#9DA4AA"
+   "color": "#B5BBC0",
+   "form": "liegend_x"
   },
   {
    "id": "deckel",
@@ -237,12 +246,14 @@
    ],
    "info": "Verstärkter Rand mit Rastwulst für den Deckel und zwei Ösen für den Bügel.",
    "color": "#F4F4F1",
+   "wand": 3,
    "marks": [
     {
      "shape": "cyl",
      "x": 6,
      "y": 6,
      "w": 188,
+     "zeichnung": true,
      "fill": "#E2E2DD"
     }
    ]
@@ -272,7 +283,8 @@
     ]
    ],
    "info": "Spritzgegossenes PP, Recyclingcode 5. Nur ganz leere Eimer mit trockenen Resten in die Gelbe Tonne. Flüssige Farbreste sind Sondermüll (Schadstoffmobil, Wertstoffhof).",
-   "color": "#F4F4F1"
+   "color": "#F4F4F1",
+   "wand": 3
   },
   {
    "id": "wand_mitte",
@@ -300,7 +312,8 @@
    ],
    "info": "Die Wand wird nach unten etwas enger, so lassen sich leere Eimer ineinanderstapeln.",
    "color": "#F4F4F1",
-   "label": false
+   "label": false,
+   "wand": 3
   },
   {
    "id": "wand_unten",
@@ -328,7 +341,8 @@
    ],
    "info": "Die Wand wird nach unten etwas enger, so lassen sich leere Eimer ineinanderstapeln.",
    "color": "#F4F4F1",
-   "label": false
+   "label": false,
+   "wand": 3
   },
   {
    "id": "boden",
@@ -356,7 +370,8 @@
    ],
    "info": "Boden mit Standring und Recyclingzeichen 5.",
    "color": "#F4F4F1",
-   "label": false
+   "label": false,
+   "wand": 3
   },
   {
    "id": "etikett",
@@ -389,12 +404,15 @@
    "info": "Bedruckte PP-Folie rund um den Eimer, beim Spritzgießen mit der Wand verschmolzen. Nicht ablösbar, muss aber auch nicht: Sie ist aus demselben Kunststoff.",
    "color": "#2F6DB5",
    "sortBias": 1,
+   "wand": 1,
+   "boden": 0,
    "marks": [
     {
      "shape": "cyl",
      "x": 1,
      "y": 1,
      "w": 192,
+     "zeichnung": true,
      "fill": "#C9CCD0"
     },
     {
@@ -402,6 +420,7 @@
      "x": 40,
      "y": 60,
      "w": 140,
+     "zeichnung": true,
      "d": 128,
      "fill": "#DADCDF"
     }

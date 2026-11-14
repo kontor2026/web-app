@@ -76,7 +76,7 @@ teile = [
          info='Schlauch bis zum Boden, durch den die Pumpe die Seife ansaugt. Steckt unten am Zylinder.',
          color='#EDEDE8'),
     teil('etikett', 'plastic_label', 'Etikett', 'Etikett', 'cyl',
-         x=-1.2, y=-0.2, w=62.4, d=50.4, z=25, h=90, mass=1,
+         x=-1.2, y=-0.2, w=62.4, d=50.4, z=22, h=82, mass=1,
          materials=[['pp', 92], ['druck', 5], ['klebstoff', 3]],
          info='Bedruckte PP-Folie rundum. Passt zum Kunststoffrecycling und darf dranbleiben.',
          color='#C98BB9', sortBias=1, wand=0.4, boden=0, marks=[mark('cyl', 1.7, 1.7, 59, 47, fill=FLASCHE, zeichnung=True)]),
@@ -89,6 +89,6 @@ EX = {'pumpkopf': [0, 0, 163], 'auslauf': [0, 0, 163], 'schaft': [0, 0, 151], 'f
       'zylinder': [0, 0, 96], 'verschlussring': [0, 0, 28], 'steigrohr': [-45, 45, 0], 'etikett': [80, 0, 0]}
 for p in teile:
     p['explode'] = EX.get(p['id'], [0, 0, 0])
-scheiben(teile, 'rumpf', 3)
+scheiben(teile, 'rumpf', 5)
 skaliere_masse(teile, oid='soap_dispenser')
 schreibe('soap_dispenser', teile)

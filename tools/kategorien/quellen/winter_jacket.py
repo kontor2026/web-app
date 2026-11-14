@@ -39,13 +39,13 @@ def kammern(pid, n, x, y, w, d, z, h, mass, erste, **kw):
 def aermel(seite, x, dx, dy):
     links = seite == 'l'
     return [
-        *kammern(f'aermel_{seite}', 7, x, 60, 80, 405, 0, 55, 160,
+        *kammern(f'aermel_{seite}', 7, x, 60, 80, 405, 0, 38, 160,
                  dict(name=f'Ärmel {"links" if links else "rechts"}', short='Ärmel', label=links,
                       info='Gesteppter Ärmel mit Nylon außen, Polyesterwatte und Futter innen, wie der Rumpf aufgebaut.'
                       if links else 'Gegenstück zum linken Ärmel.'),
                  materials=KOMPLETT, color=HUELLE, explode=[dx, dy, 0]),
         teil(f'buendchen_{seite}', 'nylon_fabric', 'Strickbündchen', 'Bündchen', 'box', material_id='polyester',
-             x=x + 8, y=465, w=64, d=32, z=6, h=42, r=10, mass=12, materials=[['polyester', 95], ['tpu', 5]],
+             x=x + 8, y=465, w=64, d=32, z=4, h=30, r=10, mass=12, materials=[['polyester', 95], ['tpu', 5]],
              color=STRICK, explode=[dx, dy, 0], label=links,
              info='Gestricktes Rippenbündchen mit Elasthan, hält die Kälte am Handgelenk draußen. Abschneiden vor dem Recycling.'
              if links else 'Zweites Bündchen.',
@@ -81,17 +81,17 @@ teile = [
               'abschneiden: Das Metall darf nicht ins Textilrecycling.',
          marks=[mark('box', 8, 0, 4, 460, 0.5, '#C9A24A'), mark('box', 5, 30, 10, 18, 2, '#B7BCC0'),
                 mark('box', 8, 48, 4, 22, 1, '#8E969A')]),
-] + kammern('aussen_l', 8, 80, 30, 113, 470, 30, 40, 60,
+] + kammern('aussen_l', 8, 80, 30, 113, 470, 44, 26, 60,
           dict(name='Vorderteil links (Obermaterial)', short='Obermaterial', marks_bei=1,
                marks=[mark('box', 70, 22, 26, 14, 3, '#C9D3CE')],
                info='Wasserabweisendes Nylon-Gewebe, das die Wattierung umschließt und in Kammern abgesteppt ist. '
                     'Tragbare Jacken in die Altkleidersammlung.'),
-          materials=SCHALE, color=HUELLE) + kammern('aussen_r', 8, 207, 30, 113, 470, 30, 40, 60,
+          materials=SCHALE, color=HUELLE) + kammern('aussen_r', 8, 207, 30, 113, 470, 44, 26, 60,
           dict(name='Vorderteil rechts (Obermaterial)', short='Obermaterial', label=False,
                info='Gegenstück zur linken Vorderseite, mit Eingrifftasche.'),
           materials=SCHALE, color=HUELLE) + [
     teil('wattierung', 'polyester_fill', 'Wattierung', 'Wattierung', 'box',
-         x=85, y=35, w=230, d=460, z=30, h=18, r=10, mass=110, color=WATTE,
+         x=85, y=35, w=230, d=460, z=30, h=14, r=10, mass=110, color=WATTE,
          info='Polyester-Hohlfasern halten die warme Luft fest. Futter aufschneiden und die Watte als Füllmaterial '
               'für Kissen weiterverwenden.',
          marks=[mark('box', 0, y, 230, 3, 0, '#DCD8CE') for y in range(25, 450, 62)]),

@@ -25,12 +25,12 @@ teile = [
          color='#2C3E73',
          info='Polyurethan-Schaum, der die Tinte wie ein Schwamm festhält. Nicht öffnen, die Tinte färbt stark. '
               'Leere Patronen im Handel oder bei Sammelboxen zurückgeben.',
-         marks=raster(4, 4, 4, 6, 4, 4, 7, 8, shape='cyl', fill='#24345F')),
+         marks=[{**m, 'zeichnung': True} for m in raster(4, 4, 4, 6, 4, 4, 7, 8, shape='cyl', fill='#24345F')]),
     teil('gehaeuse', 'ink_cartridge', 'Patronengehäuse (PP)', 'Gehäuse', 'box',
          x=0, y=0, w=40, d=60, z=10, h=52, r=4, mass=17,
          info='Spritzguss aus Polypropylen. Recyclingfirmen reinigen und befüllen es neu, deshalb die Patrone '
               'nicht zerlegen, sondern ganz zurückgeben.',
-         color=GEH, marks=[mark('box', 2.5, 2.5, 35, 55, 3, '#16181B')]),
+         color=GEH, wand=2.5, marks=[mark('box', 2.5, 2.5, 35, 55, 3, '#16181B', zeichnung=True)]),
     teil('sieb', 'ink_cartridge', 'Tintensieb', 'Sieb', 'cyl',
          x=14, y=40, w=12, z=9, h=1, mass=0.3, material_id='steel', color='#B5BCC2',
          info='Feines Edelstahlgewebe, das Schmutz und Luftblasen von den Düsen fernhält.',

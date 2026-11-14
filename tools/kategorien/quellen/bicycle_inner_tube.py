@@ -1,7 +1,7 @@
 """3D-Modell: bicycle_inner_tube. Erzeugt tools/kategorien/modelle/bicycle_inner_tube.json.
 
-Typischer Fahrradschlauch 28 Zoll mit Autoventil (Schrader), zusammengelegt zu einem flachen Ring (Ø 300 mm,
-Innenloch Ø 200 mm, etwa 22 mm hoch). Das Ventil steht senkrecht aus dem Ring. Explodiert stapeln Kappe,
+Typischer Fahrradschlauch 28 Zoll mit Autoventil (Schrader), zusammengelegt zu einem Ring (Ø 300 mm,
+etwa 22 mm hoch; in der Foto-Ansicht ein echter Ring, form='torus'). Das Ventil steht senkrecht aus dem Ring. Explodiert stapeln Kappe,
 Ventileinsatz, Rändelmutter, Ventilschaft und Gummifuß über dem Schlauch.
 """
 import sys
@@ -13,7 +13,12 @@ from bau import teil, mark, explodiere, skaliere_masse, schreibe  # noqa: E402
 D = 300
 GUMMI = '#2B2D2F'
 MESSING = '#C9A548'
-VX, VY = 150, 25   # Mitte des Ventils auf dem Ring
+VX, VY = 150, 12   # Mitte des Ventils auf dem Ring (über der Rohrmitte des Torus)
+
+
+def nur_zeichnung(ms):
+    """marks nur für die Zeichnung (in der Foto-Ansicht ist der Schlauch ein echter Ring, form='torus')."""
+    return [{**m, 'zeichnung': True} for m in ms]
 
 
 def rund(w, cx=VX, cy=VY):
@@ -50,11 +55,11 @@ teile = [
          x=0, y=0, w=D, z=0, h=21, mass=130,
          info='Luftdichter Butylkautschuk mit Ruß, zusammengelegt. Ein Loch lässt sich flicken. Alte Schläuche '
               'eignen sich als Spanngummi oder Bastelmaterial, sonst Wertstoffhof oder Fahrradladen.',
-         color=GUMMI, marks=[mark('cyl', 8, 8, 284, fill='#323538'), mark('cyl', 20, 20, 260, fill='#2B2D2F'),
+         color=GUMMI, form='torus', marks=nur_zeichnung([mark('cyl', 8, 8, 284, fill='#323538'), mark('cyl', 20, 20, 260, fill='#2B2D2F'),
                              mark('cyl', 42, 42, 216, fill='#323538'),
                              mark('cyl', 50, 50, 200, fill='#1C1E20'),  # Innenwand des Lochs
                              mark('cyl', 75.5, 75.5, 170, fill='#DCD8CE'),  # Tisch, durch das Loch gesehen
-                             mark('box', 126, 280, 48, 6, 2, '#8E969A'), mark('box', 120, 4, 8, 4, 1, '#8E969A')]),
+                             mark('box', 126, 280, 48, 6, 2, '#8E969A'), mark('box', 120, 4, 8, 4, 1, '#8E969A')])),
 ]
 explodiere(teile, abstand=25, nach_liste=True)
 skaliere_masse(teile, oid='bicycle_inner_tube')

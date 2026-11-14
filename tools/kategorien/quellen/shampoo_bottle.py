@@ -61,7 +61,7 @@ teile = [
          info='Selbstklebende PP-Folie. Sie muss nicht abgezogen werden, weil sie zum Deckel-Kunststoff passt.',
          color='#3E7CB1', wand=0.3, boden=0),
     teil('etikett_hinten', 'plastic_label', 'Etikett hinten', 'Etikett', 'box',
-         x=15, y=-1.3, w=40, d=0.3, z=35, h=80, r=0, explode=[0, -45, 0], mass=0.8,
+         x=15, y=-4, w=40, d=0.3, z=35, h=80, r=0, explode=[0, -45, 0], mass=0.8,
          materials=[['pp', 95], ['druck', 5]], label=False,
          info='Rückseite mit Inhaltsstoffen und Gebrauchsanweisung.',
          color='#E8EEF4'),

@@ -80,7 +80,8 @@
     ]
    ],
    "info": "Ungebleichter Baumwollfaden, durch Etikett und Beutel geknotet oder geklammert. Er verrottet im Kompost.",
-   "color": "#F7F4EC"
+   "color": "#F7F4EC",
+   "form": "liegend_y"
   },
   {
    "id": "klammer",
@@ -133,8 +134,8 @@
    "y": 8,
    "w": 55,
    "d": 62,
-   "z": 4.4,
-   "h": 0.2,
+   "z": 0.1,
+   "h": 4.5,
    "r": 2,
    "explode": [
     0,
@@ -154,7 +155,7 @@
    ],
    "info": "Dünnes Papier aus Zellstoff und Hanf- oder Abacafasern. Viele Beutel enthalten etwas Kunststoff zum Heißsiegeln, darum kommen nicht alle in den Kompost.",
    "color": "#EFE9DC",
-   "opacity": 0.85,
+   "form": "kugel",
    "marks": [
     {
      "shape": "box",
@@ -163,7 +164,8 @@
      "w": 55,
      "d": 2,
      "r": 0,
-     "fill": "#E0D8C6"
+     "fill": "#E0D8C6",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -171,7 +173,8 @@
      "y": 4.0,
      "w": 4,
      "d": 2,
-     "fill": "#E0D8C6"
+     "fill": "#E0D8C6",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -179,7 +182,8 @@
      "y": 4.0,
      "w": 4,
      "d": 2,
-     "fill": "#E0D8C6"
+     "fill": "#E0D8C6",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -187,7 +191,8 @@
      "y": 4.0,
      "w": 4,
      "d": 2,
-     "fill": "#E0D8C6"
+     "fill": "#E0D8C6",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -195,7 +200,8 @@
      "y": 4.0,
      "w": 4,
      "d": 2,
-     "fill": "#E0D8C6"
+     "fill": "#E0D8C6",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -203,7 +209,8 @@
      "y": 4.0,
      "w": 4,
      "d": 2,
-     "fill": "#E0D8C6"
+     "fill": "#E0D8C6",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -211,7 +218,8 @@
      "y": 4.0,
      "w": 4,
      "d": 2,
-     "fill": "#E0D8C6"
+     "fill": "#E0D8C6",
+     "zeichnung": true
     }
    ]
   },
@@ -243,6 +251,7 @@
    ],
    "info": "Etwa 2 g fein geschnittener Tee. Nach dem Aufbrühen gehört er in den Biomüll oder auf den Kompost.",
    "color": "#5A4632",
+   "form": "kugel",
    "marks": [
     {
      "shape": "cyl",
@@ -250,7 +259,8 @@
      "y": 4,
      "w": 3,
      "d": 3,
-     "fill": "#3F3022"
+     "fill": "#3F3022",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -258,7 +268,8 @@
      "y": 4,
      "w": 3,
      "d": 3,
-     "fill": "#3F3022"
+     "fill": "#3F3022",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -266,7 +277,8 @@
      "y": 4,
      "w": 3,
      "d": 3,
-     "fill": "#3F3022"
+     "fill": "#3F3022",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -274,7 +286,8 @@
      "y": 4,
      "w": 3,
      "d": 3,
-     "fill": "#3F3022"
+     "fill": "#3F3022",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -282,7 +295,8 @@
      "y": 4,
      "w": 3,
      "d": 3,
-     "fill": "#3F3022"
+     "fill": "#3F3022",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -290,7 +304,8 @@
      "y": 4,
      "w": 3,
      "d": 3,
-     "fill": "#3F3022"
+     "fill": "#3F3022",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -298,7 +313,8 @@
      "y": 12,
      "w": 3,
      "d": 3,
-     "fill": "#3F3022"
+     "fill": "#3F3022",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -306,7 +322,8 @@
      "y": 12,
      "w": 3,
      "d": 3,
-     "fill": "#3F3022"
+     "fill": "#3F3022",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -314,7 +331,8 @@
      "y": 12,
      "w": 3,
      "d": 3,
-     "fill": "#3F3022"
+     "fill": "#3F3022",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -322,7 +340,8 @@
      "y": 12,
      "w": 3,
      "d": 3,
-     "fill": "#3F3022"
+     "fill": "#3F3022",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -330,7 +349,8 @@
      "y": 12,
      "w": 3,
      "d": 3,
-     "fill": "#3F3022"
+     "fill": "#3F3022",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -338,7 +358,8 @@
      "y": 12,
      "w": 3,
      "d": 3,
-     "fill": "#3F3022"
+     "fill": "#3F3022",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -346,7 +367,8 @@
      "y": 20,
      "w": 3,
      "d": 3,
-     "fill": "#3F3022"
+     "fill": "#3F3022",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -354,7 +376,8 @@
      "y": 20,
      "w": 3,
      "d": 3,
-     "fill": "#3F3022"
+     "fill": "#3F3022",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -362,7 +385,8 @@
      "y": 20,
      "w": 3,
      "d": 3,
-     "fill": "#3F3022"
+     "fill": "#3F3022",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -370,7 +394,8 @@
      "y": 20,
      "w": 3,
      "d": 3,
-     "fill": "#3F3022"
+     "fill": "#3F3022",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -378,7 +403,8 @@
      "y": 20,
      "w": 3,
      "d": 3,
-     "fill": "#3F3022"
+     "fill": "#3F3022",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -386,7 +412,8 @@
      "y": 20,
      "w": 3,
      "d": 3,
-     "fill": "#3F3022"
+     "fill": "#3F3022",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -394,7 +421,8 @@
      "y": 28,
      "w": 3,
      "d": 3,
-     "fill": "#3F3022"
+     "fill": "#3F3022",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -402,7 +430,8 @@
      "y": 28,
      "w": 3,
      "d": 3,
-     "fill": "#3F3022"
+     "fill": "#3F3022",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -410,7 +439,8 @@
      "y": 28,
      "w": 3,
      "d": 3,
-     "fill": "#3F3022"
+     "fill": "#3F3022",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -418,7 +448,8 @@
      "y": 28,
      "w": 3,
      "d": 3,
-     "fill": "#3F3022"
+     "fill": "#3F3022",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -426,7 +457,8 @@
      "y": 28,
      "w": 3,
      "d": 3,
-     "fill": "#3F3022"
+     "fill": "#3F3022",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -434,7 +466,8 @@
      "y": 28,
      "w": 3,
      "d": 3,
-     "fill": "#3F3022"
+     "fill": "#3F3022",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -442,7 +475,8 @@
      "y": 36,
      "w": 3,
      "d": 3,
-     "fill": "#3F3022"
+     "fill": "#3F3022",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -450,7 +484,8 @@
      "y": 36,
      "w": 3,
      "d": 3,
-     "fill": "#3F3022"
+     "fill": "#3F3022",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -458,7 +493,8 @@
      "y": 36,
      "w": 3,
      "d": 3,
-     "fill": "#3F3022"
+     "fill": "#3F3022",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -466,7 +502,8 @@
      "y": 36,
      "w": 3,
      "d": 3,
-     "fill": "#3F3022"
+     "fill": "#3F3022",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -474,7 +511,8 @@
      "y": 36,
      "w": 3,
      "d": 3,
-     "fill": "#3F3022"
+     "fill": "#3F3022",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -482,7 +520,8 @@
      "y": 36,
      "w": 3,
      "d": 3,
-     "fill": "#3F3022"
+     "fill": "#3F3022",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -490,7 +529,8 @@
      "y": 44,
      "w": 3,
      "d": 3,
-     "fill": "#3F3022"
+     "fill": "#3F3022",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -498,7 +538,8 @@
      "y": 44,
      "w": 3,
      "d": 3,
-     "fill": "#3F3022"
+     "fill": "#3F3022",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -506,7 +547,8 @@
      "y": 44,
      "w": 3,
      "d": 3,
-     "fill": "#3F3022"
+     "fill": "#3F3022",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -514,7 +556,8 @@
      "y": 44,
      "w": 3,
      "d": 3,
-     "fill": "#3F3022"
+     "fill": "#3F3022",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -522,7 +565,8 @@
      "y": 44,
      "w": 3,
      "d": 3,
-     "fill": "#3F3022"
+     "fill": "#3F3022",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -530,7 +574,8 @@
      "y": 44,
      "w": 3,
      "d": 3,
-     "fill": "#3F3022"
+     "fill": "#3F3022",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -538,7 +583,8 @@
      "y": 52,
      "w": 3,
      "d": 3,
-     "fill": "#3F3022"
+     "fill": "#3F3022",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -546,7 +592,8 @@
      "y": 52,
      "w": 3,
      "d": 3,
-     "fill": "#3F3022"
+     "fill": "#3F3022",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -554,7 +601,8 @@
      "y": 52,
      "w": 3,
      "d": 3,
-     "fill": "#3F3022"
+     "fill": "#3F3022",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -562,7 +610,8 @@
      "y": 52,
      "w": 3,
      "d": 3,
-     "fill": "#3F3022"
+     "fill": "#3F3022",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -570,7 +619,8 @@
      "y": 52,
      "w": 3,
      "d": 3,
-     "fill": "#3F3022"
+     "fill": "#3F3022",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -578,7 +628,8 @@
      "y": 52,
      "w": 3,
      "d": 3,
-     "fill": "#3F3022"
+     "fill": "#3F3022",
+     "zeichnung": true
     }
    ]
   },

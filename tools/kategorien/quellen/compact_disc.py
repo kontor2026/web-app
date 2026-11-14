@@ -19,7 +19,7 @@ CX, CY = 71, 62.5  # Mitte der Scheibe
 
 
 def loch(w, d_loch=15, fill=LOCH):
-    return mark('cyl', (w - d_loch) / 2, (w - d_loch) / 2, d_loch, fill=fill)
+    return mark('cyl', (w - d_loch) / 2, (w - d_loch) / 2, d_loch, fill=fill, zeichnung=True)
 
 
 def rosette(px, py, n=12, rad=9, groesse=3):
@@ -46,20 +46,20 @@ teile = [
          marks=[mark('box', 8, 8, 104, 70, 2, '#C8423A'), mark('box', 8, 88, 70, 6, 1, '#3A3F44'),
                 mark('box', 8, 100, 50, 4, 1, '#3A3F44')]),
     teil('druck', 'disc_body', 'Etikettendruck', 'Druck', 'cyl', material_id='paper',
-         x=CX - 58, y=CY - 58, w=116, z=5.95, h=0.05, mass=0.1, materials=[['druck', 100]], color='#F0F0EA',
+         x=CX - 58, y=CY - 58, w=116, z=5.95, h=0.05, mass=0.1, materials=[['druck', 100]], color='#F0F0EA', wand=41, boden=0,
          info='Farbe, direkt auf die Scheibe gedruckt (kein Papier). Wird beim Recycling mit dem Lack abgelöst.',
          marks=[mark('cyl', 16, 16, 84, fill='#4A7BB7'), loch(116, 34)]),
     teil('lack', 'disc_body', 'Schutzlack', 'Schutzlack', 'cyl', material_id='pc',
-         x=CX - 59, y=CY - 59, w=118, z=5.9, h=0.05, mass=0.3, materials=[['pcabs', 100]], color='#E6ECEF', opacity=0.7,
+         x=CX - 59, y=CY - 59, w=118, z=5.9, h=0.05, mass=0.3, materials=[['pcabs', 100]], color='#E6ECEF', opacity=0.7, wand=42, boden=0,
          info='Hauchdünne Lackschicht aus Acrylharz. Sie schützt die Spiegelschicht, denn die Daten liegen direkt darunter: '
               'Ein Kratzer auf der Oberseite zerstört die CD eher als einer unten.',
          marks=[loch(118, 34)]),
     teil('spiegel', 'disc_body', 'Aluminium-Spiegelschicht', 'Alu-Schicht', 'cyl', material_id='aluminium',
-         x=CX - 59, y=CY - 59, w=118, z=5.85, h=0.05, mass=0.1, materials=[['alu', 100]], color='#D5DADE',
+         x=CX - 59, y=CY - 59, w=118, z=5.85, h=0.05, mass=0.1, materials=[['alu', 100]], color='#D5DADE', wand=39, boden=0,
          info='Weniger als ein Tausendstel Millimeter Aluminium. Es spiegelt den Laser des CD-Spielers zurück.',
          marks=[mark('cyl', 10, 10, 98, fill='#C2C8CD'), loch(118, 40)]),
     teil('scheibe', 'disc_body', 'Polycarbonat-Scheibe', 'Scheibe', 'cyl',
-         x=CX - 60, y=CY - 60, w=120, z=4.7, h=1.15, mass=15.5, materials=[['pcabs', 100]], color='#DDE6EA', opacity=0.75,
+         x=CX - 60, y=CY - 60, w=120, z=4.7, h=1.15, mass=15.5, materials=[['pcabs', 100]], color='#DDE6EA', opacity=0.75, wand=52.5, boden=0,
          info='Glasklarer Kunststoff, in den die Daten als winzige Vertiefungen (Pits) gepresst sind. '
               'Zum Unlesbarmachen zerkratzen; manche Wertstoffhöfe sammeln CDs getrennt.',
          marks=[mark('cyl', 38, 38, 44, fill='#C9D3D8'), loch(120)]),
@@ -75,10 +75,10 @@ teile = [
          marks=[mark('box', 0, 0, 6, 122, 0.3, '#C8423A'), mark('box', 132, 0, 6, 122, 0.3, '#C8423A')]
          + raster(20, 20, 1, 8, 90, 4, 0, 10, fill='#5B6166')),
     teil('unterteil', 'cd_case', 'Unterteil', 'Unterteil', 'box',
-         x=0, y=0, w=142, d=125, z=0, h=6, r=1, mass=22, color=KLAR, opacity=0.45,
+         x=0, y=0, w=142, d=125, z=0, h=6, r=1, mass=22, color=KLAR, opacity=0.45, wand=1.5,
          info='Klare PS-Schale mit Scharnier. Ganze, saubere Hüllen nehmen manche Wertstoffhöfe an, sonst Restmüll: '
               'Die Gelbe Tonne ist nur für Verpackungen.',
-         marks=[mark('box', 2, 1.5, 138, 122, 0.5, '#D3DDE2')]),
+         marks=[mark('box', 2, 1.5, 138, 122, 0.5, '#D3DDE2', zeichnung=True)]),
 ]
 
 by = {p['id']: p for p in teile}

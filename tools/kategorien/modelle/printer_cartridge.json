@@ -136,7 +136,8 @@
      "y": 4,
      "w": 4,
      "d": 4,
-     "fill": "#24345F"
+     "fill": "#24345F",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -144,7 +145,8 @@
      "y": 4,
      "w": 4,
      "d": 4,
-     "fill": "#24345F"
+     "fill": "#24345F",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -152,7 +154,8 @@
      "y": 4,
      "w": 4,
      "d": 4,
-     "fill": "#24345F"
+     "fill": "#24345F",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -160,7 +163,8 @@
      "y": 4,
      "w": 4,
      "d": 4,
-     "fill": "#24345F"
+     "fill": "#24345F",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -168,7 +172,8 @@
      "y": 12,
      "w": 4,
      "d": 4,
-     "fill": "#24345F"
+     "fill": "#24345F",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -176,7 +181,8 @@
      "y": 12,
      "w": 4,
      "d": 4,
-     "fill": "#24345F"
+     "fill": "#24345F",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -184,7 +190,8 @@
      "y": 12,
      "w": 4,
      "d": 4,
-     "fill": "#24345F"
+     "fill": "#24345F",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -192,7 +199,8 @@
      "y": 12,
      "w": 4,
      "d": 4,
-     "fill": "#24345F"
+     "fill": "#24345F",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -200,7 +208,8 @@
      "y": 20,
      "w": 4,
      "d": 4,
-     "fill": "#24345F"
+     "fill": "#24345F",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -208,7 +217,8 @@
      "y": 20,
      "w": 4,
      "d": 4,
-     "fill": "#24345F"
+     "fill": "#24345F",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -216,7 +226,8 @@
      "y": 20,
      "w": 4,
      "d": 4,
-     "fill": "#24345F"
+     "fill": "#24345F",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -224,7 +235,8 @@
      "y": 20,
      "w": 4,
      "d": 4,
-     "fill": "#24345F"
+     "fill": "#24345F",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -232,7 +244,8 @@
      "y": 28,
      "w": 4,
      "d": 4,
-     "fill": "#24345F"
+     "fill": "#24345F",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -240,7 +253,8 @@
      "y": 28,
      "w": 4,
      "d": 4,
-     "fill": "#24345F"
+     "fill": "#24345F",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -248,7 +262,8 @@
      "y": 28,
      "w": 4,
      "d": 4,
-     "fill": "#24345F"
+     "fill": "#24345F",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -256,7 +271,8 @@
      "y": 28,
      "w": 4,
      "d": 4,
-     "fill": "#24345F"
+     "fill": "#24345F",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -264,7 +280,8 @@
      "y": 36,
      "w": 4,
      "d": 4,
-     "fill": "#24345F"
+     "fill": "#24345F",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -272,7 +289,8 @@
      "y": 36,
      "w": 4,
      "d": 4,
-     "fill": "#24345F"
+     "fill": "#24345F",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -280,7 +298,8 @@
      "y": 36,
      "w": 4,
      "d": 4,
-     "fill": "#24345F"
+     "fill": "#24345F",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -288,7 +307,8 @@
      "y": 36,
      "w": 4,
      "d": 4,
-     "fill": "#24345F"
+     "fill": "#24345F",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -296,7 +316,8 @@
      "y": 44,
      "w": 4,
      "d": 4,
-     "fill": "#24345F"
+     "fill": "#24345F",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -304,7 +325,8 @@
      "y": 44,
      "w": 4,
      "d": 4,
-     "fill": "#24345F"
+     "fill": "#24345F",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -312,7 +334,8 @@
      "y": 44,
      "w": 4,
      "d": 4,
-     "fill": "#24345F"
+     "fill": "#24345F",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -320,7 +343,8 @@
      "y": 44,
      "w": 4,
      "d": 4,
-     "fill": "#24345F"
+     "fill": "#24345F",
+     "zeichnung": true
     }
    ]
   },
@@ -352,12 +376,14 @@
    ],
    "info": "Spritzguss aus Polypropylen. Recyclingfirmen reinigen und befüllen es neu, deshalb die Patrone nicht zerlegen, sondern ganz zurückgeben.",
    "color": "#2B2E33",
+   "wand": 2.5,
    "marks": [
     {
      "shape": "box",
      "x": 2.5,
      "y": 2.5,
      "w": 35,
+     "zeichnung": true,
      "d": 55,
      "r": 3,
      "fill": "#16181B"

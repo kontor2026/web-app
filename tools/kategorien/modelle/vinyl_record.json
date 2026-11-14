@@ -60,6 +60,8 @@
    ],
    "info": "Bedrucktes Papier mit Titel und Seite, beim Pressen fest ins Vinyl eingepresst. Es lässt sich nicht ablösen.",
    "color": "#C8423A",
+   "wand": 46.4,
+   "boden": 0,
    "marks": [
     {
      "shape": "box",
@@ -84,6 +86,7 @@
      "x": 46.4,
      "y": 46.4,
      "w": 7.2,
+     "zeichnung": true,
      "fill": "#E8E4DA"
     }
    ]
@@ -118,6 +121,8 @@
    ],
    "info": "PVC mit Ruß gefärbt. In der spiralförmigen Rille steckt der Ton als feine Wellen, die die Nadel abtastet. Weitergeben oder verkaufen; über die Hausmülltonnen wird PVC nicht recycelt.",
    "color": "#1C1D1F",
+   "wand": 147.4,
+   "boden": 0,
    "marks": [
     {
      "shape": "cyl",
@@ -187,6 +192,7 @@
      "x": 147.4,
      "y": 147.4,
      "w": 7.2,
+     "zeichnung": true,
      "fill": "#E8E4DA"
     }
    ]
@@ -222,12 +228,15 @@
    "info": "Etikett der Rückseite, ebenfalls eingepresst.",
    "color": "#3E6FA8",
    "label": false,
+   "wand": 46.4,
+   "boden": 0,
    "marks": [
     {
      "shape": "cyl",
      "x": 46.4,
      "y": 46.4,
      "w": 7.2,
+     "zeichnung": true,
      "fill": "#E8E4DA"
     }
    ]

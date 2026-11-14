@@ -388,12 +388,14 @@
    ],
    "info": "Hohl geblasener Griff, zum Tragen der vollen Kanne. Er ist mit der Kanne aus einem Stück.",
    "color": "#3F8F5A",
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
      "x": 30,
      "y": 8,
      "w": 70,
+     "zeichnung": true,
      "d": 14,
      "r": 6,
      "fill": "#347A4C"
@@ -499,7 +501,7 @@
    ]
   },
   {
-   "id": "rohr_5",
+   "id": "rohr_17",
    "component_id": "watering_can_body",
    "material_id": "hdpe",
    "name": "Ausgussrohr",
@@ -509,15 +511,15 @@
    "y": 57,
    "w": 40,
    "d": 36,
-   "z": 210,
-   "h": 38,
+   "z": 235.333,
+   "h": 12.667,
    "r": 14,
    "explode": [
     0,
     0,
     0
    ],
-   "mass": 15.2,
+   "mass": 5.1,
    "materials": [
     [
      "hdpe",
@@ -532,12 +534,373 @@
      "shape": "box",
      "x": 6,
      "y": 6,
-     "w": 32,
+     "w": 28,
+     "zeichnung": true,
      "d": 24,
      "r": 10,
      "fill": "#347A4C"
     }
    ]
+  },
+  {
+   "id": "rohr_16",
+   "component_id": "watering_can_body",
+   "material_id": "hdpe",
+   "name": "Ausgussrohr",
+   "short": "Ausgussrohr",
+   "shape": "box",
+   "x": 381.18,
+   "y": 57,
+   "w": 40,
+   "d": 36,
+   "z": 222.667,
+   "h": 12.667,
+   "r": 14,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 5.1,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "Das Ausgussrohr ist mit der Kanne aus einem Stück geblasen.",
+   "color": "#3F8F5A",
+   "label": false
+  },
+  {
+   "id": "rohr_15",
+   "component_id": "watering_can_body",
+   "material_id": "hdpe",
+   "name": "Ausgussrohr",
+   "short": "Ausgussrohr",
+   "shape": "box",
+   "x": 372.35,
+   "y": 57,
+   "w": 40,
+   "d": 36,
+   "z": 210,
+   "h": 12.667,
+   "r": 14,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 5.1,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "Das Ausgussrohr ist mit der Kanne aus einem Stück geblasen.",
+   "color": "#3F8F5A",
+   "label": false
+  },
+  {
+   "id": "rohr_14",
+   "component_id": "watering_can_body",
+   "material_id": "hdpe",
+   "name": "Ausgussrohr",
+   "short": "Ausgussrohr",
+   "shape": "box",
+   "x": 363.53,
+   "y": 57,
+   "w": 40,
+   "d": 36,
+   "z": 197.333,
+   "h": 12.667,
+   "r": 14,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 5.1,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "Das Ausgussrohr ist mit der Kanne aus einem Stück geblasen.",
+   "color": "#3F8F5A",
+   "label": false
+  },
+  {
+   "id": "rohr_13",
+   "component_id": "watering_can_body",
+   "material_id": "hdpe",
+   "name": "Ausgussrohr",
+   "short": "Ausgussrohr",
+   "shape": "box",
+   "x": 354.71,
+   "y": 57,
+   "w": 40,
+   "d": 36,
+   "z": 184.667,
+   "h": 12.667,
+   "r": 14,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 5.1,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "Das Ausgussrohr ist mit der Kanne aus einem Stück geblasen.",
+   "color": "#3F8F5A",
+   "label": false
+  },
+  {
+   "id": "rohr_12",
+   "component_id": "watering_can_body",
+   "material_id": "hdpe",
+   "name": "Ausgussrohr",
+   "short": "Ausgussrohr",
+   "shape": "box",
+   "x": 345.88,
+   "y": 57,
+   "w": 40,
+   "d": 36,
+   "z": 172,
+   "h": 12.667,
+   "r": 14,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 5.1,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "Das Ausgussrohr ist mit der Kanne aus einem Stück geblasen.",
+   "color": "#3F8F5A",
+   "label": false
+  },
+  {
+   "id": "rohr_11",
+   "component_id": "watering_can_body",
+   "material_id": "hdpe",
+   "name": "Ausgussrohr",
+   "short": "Ausgussrohr",
+   "shape": "box",
+   "x": 337.06,
+   "y": 57,
+   "w": 40,
+   "d": 36,
+   "z": 159.333,
+   "h": 12.667,
+   "r": 14,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 5.1,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "Das Ausgussrohr ist mit der Kanne aus einem Stück geblasen.",
+   "color": "#3F8F5A",
+   "label": false
+  },
+  {
+   "id": "rohr_10",
+   "component_id": "watering_can_body",
+   "material_id": "hdpe",
+   "name": "Ausgussrohr",
+   "short": "Ausgussrohr",
+   "shape": "box",
+   "x": 328.24,
+   "y": 57,
+   "w": 40,
+   "d": 36,
+   "z": 146.667,
+   "h": 12.667,
+   "r": 14,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 5.1,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "Das Ausgussrohr ist mit der Kanne aus einem Stück geblasen.",
+   "color": "#3F8F5A",
+   "label": false
+  },
+  {
+   "id": "rohr_9",
+   "component_id": "watering_can_body",
+   "material_id": "hdpe",
+   "name": "Ausgussrohr",
+   "short": "Ausgussrohr",
+   "shape": "box",
+   "x": 319.41,
+   "y": 57,
+   "w": 40,
+   "d": 36,
+   "z": 134,
+   "h": 12.667,
+   "r": 14,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 5.1,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "Das Ausgussrohr ist mit der Kanne aus einem Stück geblasen.",
+   "color": "#3F8F5A",
+   "label": false
+  },
+  {
+   "id": "rohr_8",
+   "component_id": "watering_can_body",
+   "material_id": "hdpe",
+   "name": "Ausgussrohr",
+   "short": "Ausgussrohr",
+   "shape": "box",
+   "x": 310.59,
+   "y": 57,
+   "w": 40,
+   "d": 36,
+   "z": 121.333,
+   "h": 12.667,
+   "r": 14,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 5.1,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "Das Ausgussrohr ist mit der Kanne aus einem Stück geblasen.",
+   "color": "#3F8F5A",
+   "label": false
+  },
+  {
+   "id": "rohr_7",
+   "component_id": "watering_can_body",
+   "material_id": "hdpe",
+   "name": "Ausgussrohr",
+   "short": "Ausgussrohr",
+   "shape": "box",
+   "x": 301.76,
+   "y": 57,
+   "w": 40,
+   "d": 36,
+   "z": 108.667,
+   "h": 12.667,
+   "r": 14,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 5.1,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "Das Ausgussrohr ist mit der Kanne aus einem Stück geblasen.",
+   "color": "#3F8F5A",
+   "label": false
+  },
+  {
+   "id": "rohr_6",
+   "component_id": "watering_can_body",
+   "material_id": "hdpe",
+   "name": "Ausgussrohr",
+   "short": "Ausgussrohr",
+   "shape": "box",
+   "x": 292.94,
+   "y": 57,
+   "w": 40,
+   "d": 36,
+   "z": 96,
+   "h": 12.667,
+   "r": 14,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 5.1,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "Das Ausgussrohr ist mit der Kanne aus einem Stück geblasen.",
+   "color": "#3F8F5A",
+   "label": false
+  },
+  {
+   "id": "rohr_5",
+   "component_id": "watering_can_body",
+   "material_id": "hdpe",
+   "name": "Ausgussrohr",
+   "short": "Ausgussrohr",
+   "shape": "box",
+   "x": 284.12,
+   "y": 57,
+   "w": 40,
+   "d": 36,
+   "z": 83.333,
+   "h": 12.667,
+   "r": 14,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 5.1,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "Das Ausgussrohr ist mit der Kanne aus einem Stück geblasen.",
+   "color": "#3F8F5A",
+   "label": false
   },
   {
    "id": "rohr_4",
@@ -546,19 +909,19 @@
    "name": "Ausgussrohr",
    "short": "Ausgussrohr",
    "shape": "box",
-   "x": 360,
+   "x": 275.29,
    "y": 57,
    "w": 40,
    "d": 36,
-   "z": 172,
-   "h": 38,
+   "z": 70.667,
+   "h": 12.667,
    "r": 14,
    "explode": [
     0,
     0,
     0
    ],
-   "mass": 15.2,
+   "mass": 5.1,
    "materials": [
     [
      "hdpe",
@@ -576,19 +939,19 @@
    "name": "Ausgussrohr",
    "short": "Ausgussrohr",
    "shape": "box",
-   "x": 330,
+   "x": 266.47,
    "y": 57,
    "w": 40,
    "d": 36,
-   "z": 134,
-   "h": 38,
+   "z": 58,
+   "h": 12.667,
    "r": 14,
    "explode": [
     0,
     0,
     0
    ],
-   "mass": 15.2,
+   "mass": 5.1,
    "materials": [
     [
      "hdpe",
@@ -606,19 +969,19 @@
    "name": "Ausgussrohr",
    "short": "Ausgussrohr",
    "shape": "box",
-   "x": 300,
+   "x": 257.65,
    "y": 57,
    "w": 40,
    "d": 36,
-   "z": 96,
-   "h": 38,
+   "z": 45.333,
+   "h": 12.667,
    "r": 14,
    "explode": [
     0,
     0,
     0
    ],
-   "mass": 15.2,
+   "mass": 5.1,
    "materials": [
     [
      "hdpe",
@@ -636,19 +999,19 @@
    "name": "Ausgussrohr",
    "short": "Ausgussrohr",
    "shape": "box",
-   "x": 270,
+   "x": 248.82,
    "y": 57,
    "w": 40,
    "d": 36,
-   "z": 58,
-   "h": 38,
+   "z": 32.667,
+   "h": 12.667,
    "r": 14,
    "explode": [
     0,
     0,
     0
    ],
-   "mass": 15.2,
+   "mass": 5.1,
    "materials": [
     [
      "hdpe",
@@ -671,14 +1034,14 @@
    "w": 40,
    "d": 36,
    "z": 20,
-   "h": 38,
+   "h": 12.667,
    "r": 14,
    "explode": [
     0,
     0,
     0
    ],
-   "mass": 15.2,
+   "mass": 5.1,
    "materials": [
     [
      "hdpe",
@@ -708,7 +1071,7 @@
     0,
     0
    ],
-   "mass": 409.5,
+   "mass": 409.6,
    "materials": [
     [
      "hdpe",

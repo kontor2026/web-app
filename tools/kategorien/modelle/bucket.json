@@ -28,6 +28,7 @@
    ],
    "info": "Kunststoffgriff auf dem Bügel, damit der Draht nicht in die Hand schneidet. Lässt sich meist nur abschneiden; kleine Kunststoffreste stören beim Metallrecycling nicht.",
    "color": "#2B2E31",
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
@@ -35,7 +36,8 @@
      "y": 4,
      "w": 4,
      "d": 12,
-     "fill": "#1E2022"
+     "fill": "#1E2022",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -43,7 +45,8 @@
      "y": 4,
      "w": 4,
      "d": 12,
-     "fill": "#1E2022"
+     "fill": "#1E2022",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -51,7 +54,8 @@
      "y": 4,
      "w": 4,
      "d": 12,
-     "fill": "#1E2022"
+     "fill": "#1E2022",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -59,7 +63,8 @@
      "y": 4,
      "w": 4,
      "d": 12,
-     "fill": "#1E2022"
+     "fill": "#1E2022",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -67,7 +72,8 @@
      "y": 4,
      "w": 4,
      "d": 12,
-     "fill": "#1E2022"
+     "fill": "#1E2022",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -75,7 +81,8 @@
      "y": 4,
      "w": 4,
      "d": 12,
-     "fill": "#1E2022"
+     "fill": "#1E2022",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -83,7 +90,8 @@
      "y": 4,
      "w": 4,
      "d": 12,
-     "fill": "#1E2022"
+     "fill": "#1E2022",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -91,7 +99,8 @@
      "y": 4,
      "w": 4,
      "d": 12,
-     "fill": "#1E2022"
+     "fill": "#1E2022",
+     "zeichnung": true
     }
    ]
   },
@@ -122,7 +131,8 @@
     ]
    ],
    "info": "Verzinkter Stahldraht, in die Ösen am Rand eingehängt. Zum Trennen aus den Ösen biegen und zum Metallschrott geben.",
-   "color": "#9DA4AA"
+   "color": "#B5BBC0",
+   "form": "liegend_x"
   },
   {
    "id": "rand",
@@ -150,20 +160,23 @@
    ],
    "info": "Verstärkter Wulstrand, vorn mit Ausguss, seitlich zwei Ösen für den Bügel.",
    "color": "#3C7DC4",
+   "wand": 3,
    "marks": [
     {
      "shape": "cyl",
      "x": 8,
      "y": 8,
      "w": 284,
-     "fill": "#24548A"
+     "fill": "#24548A",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 80,
      "y": 80,
      "w": 200,
-     "fill": "#1E4877"
+     "fill": "#1E4877",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -172,7 +185,8 @@
      "w": 30,
      "d": 12,
      "r": 5,
-     "fill": "#5893D1"
+     "fill": "#5893D1",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -181,7 +195,8 @@
      "w": 10,
      "d": 2,
      "r": 1,
-     "fill": "#6FA3DB"
+     "fill": "#6FA3DB",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -190,7 +205,8 @@
      "w": 10,
      "d": 2,
      "r": 1,
-     "fill": "#6FA3DB"
+     "fill": "#6FA3DB",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -199,7 +215,8 @@
      "w": 10,
      "d": 2,
      "r": 1,
-     "fill": "#6FA3DB"
+     "fill": "#6FA3DB",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -208,7 +225,8 @@
      "w": 10,
      "d": 2,
      "r": 1,
-     "fill": "#6FA3DB"
+     "fill": "#6FA3DB",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -217,7 +235,8 @@
      "w": 10,
      "d": 2,
      "r": 1,
-     "fill": "#6FA3DB"
+     "fill": "#6FA3DB",
+     "zeichnung": true
     }
    ]
   },
@@ -247,12 +266,14 @@
    ],
    "info": "PP, Recyclingcode 5. Innen eine eingeprägte Literskala. Ein Eimer ist keine Verpackung: kaputte Eimer zum Wertstoffhof. Farb- und Gipsreste vorher ganz austrocknen lassen.",
    "color": "#3C7DC4",
+   "wand": 3,
    "marks": [
     {
      "shape": "box",
      "x": 140,
      "y": 8,
      "w": 4,
+     "zeichnung": true,
      "d": 30,
      "r": 1,
      "fill": "#5893D1"
@@ -285,7 +306,8 @@
    ],
    "info": "Die Wand wird nach unten enger, so lassen sich Eimer ineinanderstapeln.",
    "color": "#3C7DC4",
-   "label": false
+   "label": false,
+   "wand": 3
   },
   {
    "id": "boden",
@@ -313,7 +335,8 @@
    ],
    "info": "Boden mit Standring und eingeprägtem Recyclingzeichen.",
    "color": "#3C7DC4",
-   "label": false
+   "label": false,
+   "wand": 3
   }
  ]
 }

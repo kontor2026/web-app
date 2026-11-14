@@ -812,7 +812,7 @@
   "name": "Seifenspender",
   "name_en": "Liquid Soap Dispenser",
   "klasse": "Verpackung · Gelbe Tonne",
-  "teile": 14,
+  "teile": 16,
   "platzhalter": false
  },
  {
@@ -1164,7 +1164,7 @@
   "name": "Gießkanne",
   "name_en": "Watering Can",
   "klasse": "Wertstoffhof",
-  "teile": 13,
+  "teile": 25,
   "platzhalter": false
  },
  {

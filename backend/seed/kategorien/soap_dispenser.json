@@ -26,7 +26,7 @@
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 0,08 kg",
+   "v": "≈ 0,09 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
@@ -43,14 +43,14 @@
    "Fe": "Modellmassen (Schätzung)"
   },
   "materialien_g": {
-   "hdpe": 26.2,
+   "hdpe": 26.5,
    "pp": 12.5,
    "steel": 0.8,
    "ldpe": 0.6
   },
-  "co2_kg": 0.084,
+  "co2_kg": 0.085,
   "co2_mit_recyclat_kg": 0.012,
-  "co2_ersparnis_kg": 0.072,
+  "co2_ersparnis_kg": 0.073,
   "co2_ohne_faktor": [],
   "rohstoffwert_eur": 0,
   "wert_ohne_preis": [],
@@ -439,14 +439,14 @@
    "y": 1,
    "w": 60,
    "d": 48,
-   "z": 78.33,
-   "h": 36.67,
+   "z": 93,
+   "h": 22,
    "explode": [
     0,
     0,
     0
    ],
-   "mass": 5.9,
+   "mass": 3.6,
    "materials": [
     [
      "hdpe",
@@ -455,6 +455,64 @@
    ],
    "info": "HDPE, Recyclingcode 2. Leer machen, kurz ausspülen und mit Pumpe in die Gelbe Tonne. Besser: nachfüllen statt neu kaufen.",
    "color": "#F5F1E8"
+  },
+  {
+   "id": "rumpf_4",
+   "component_id": "hdpe_bottle_body",
+   "material_id": "hdpe",
+   "name": "Flaschenkörper",
+   "short": "Flasche",
+   "shape": "cyl",
+   "x": 0,
+   "y": 1,
+   "w": 60,
+   "d": 48,
+   "z": 71,
+   "h": 22,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 3.6,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "HDPE, Recyclingcode 2. Leer machen, kurz ausspülen und mit Pumpe in die Gelbe Tonne. Besser: nachfüllen statt neu kaufen.",
+   "color": "#F5F1E8",
+   "label": false
+  },
+  {
+   "id": "rumpf_3",
+   "component_id": "hdpe_bottle_body",
+   "material_id": "hdpe",
+   "name": "Flaschenkörper",
+   "short": "Flasche",
+   "shape": "cyl",
+   "x": 0,
+   "y": 1,
+   "w": 60,
+   "d": 48,
+   "z": 49,
+   "h": 22,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 3.6,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "HDPE, Recyclingcode 2. Leer machen, kurz ausspülen und mit Pumpe in die Gelbe Tonne. Besser: nachfüllen statt neu kaufen.",
+   "color": "#F5F1E8",
+   "label": false
   },
   {
    "id": "rumpf_2",
@@ -467,14 +525,14 @@
    "y": 1,
    "w": 60,
    "d": 48,
-   "z": 41.67,
-   "h": 36.66,
+   "z": 27,
+   "h": 22,
    "explode": [
     0,
     0,
     0
    ],
-   "mass": 5.9,
+   "mass": 3.6,
    "materials": [
     [
      "hdpe",
@@ -497,13 +555,13 @@
    "w": 60,
    "d": 48,
    "z": 5,
-   "h": 36.67,
+   "h": 22,
    "explode": [
     0,
     0,
     0
    ],
-   "mass": 5.9,
+   "mass": 3.6,
    "materials": [
     [
      "hdpe",
@@ -582,8 +640,8 @@
    "y": -0.2,
    "w": 62.4,
    "d": 50.4,
-   "z": 25,
-   "h": 90,
+   "z": 22,
+   "h": 82,
    "explode": [
     80,
     0,

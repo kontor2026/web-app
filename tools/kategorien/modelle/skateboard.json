@@ -893,7 +893,8 @@
    ],
    "info": "Stahlachse, fest in den Achsschenkel eingepresst. Auf ihr sitzen Lager und Rolle.",
    "color": "#7D868D",
-   "label": true
+   "label": true,
+   "form": "liegend_x"
   },
   {
    "id": "achse_hinten_r",
@@ -923,7 +924,8 @@
    ],
    "info": "Stahlachse, fest in den Achsschenkel eingepresst. Auf ihr sitzen Lager und Rolle.",
    "color": "#7D868D",
-   "label": false
+   "label": false,
+   "form": "liegend_x"
   },
   {
    "id": "gummi_unten_hinten",
@@ -1176,7 +1178,8 @@
    ],
    "info": "Stahlachse, fest in den Achsschenkel eingepresst. Auf ihr sitzen Lager und Rolle.",
    "color": "#7D868D",
-   "label": false
+   "label": false,
+   "form": "liegend_x"
   },
   {
    "id": "achse_vorne_r",
@@ -1206,7 +1209,8 @@
    ],
    "info": "Stahlachse, fest in den Achsschenkel eingepresst. Auf ihr sitzen Lager und Rolle.",
    "color": "#7D868D",
-   "label": false
+   "label": false,
+   "form": "liegend_x"
   },
   {
    "id": "gummi_unten_vorne",
@@ -1480,12 +1484,14 @@
    "info": "Zwei Kugellager je Rolle (Typ 608, 22 mm), Stahlkugeln hinter Abdeckscheiben. Mit der Achse aus der Rolle hebeln. Stahlschrott.",
    "color": "#A7AFB5",
    "label": true,
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
      "x": 1,
      "y": 3,
      "w": 5,
+     "zeichnung": true,
      "d": 16,
      "r": 2,
      "fill": "#5C646A"
@@ -1529,12 +1535,14 @@
    "info": "Zwei Kugellager je Rolle (Typ 608, 22 mm), Stahlkugeln hinter Abdeckscheiben. Mit der Achse aus der Rolle hebeln. Stahlschrott.",
    "color": "#A7AFB5",
    "label": false,
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
      "x": 1,
      "y": 3,
      "w": 5,
+     "zeichnung": true,
      "d": 16,
      "r": 2,
      "fill": "#5C646A"
@@ -1573,7 +1581,8 @@
    ],
    "info": "Selbstsichernde Mutter mit Nylonring. Mit dem Skate-Tool (13er) lösen.",
    "color": "#7D868D",
-   "label": true
+   "label": true,
+   "form": "liegend_x"
   },
   {
    "id": "rad_hinten_r_0",
@@ -1773,12 +1782,14 @@
    "info": "Zwei Kugellager je Rolle (Typ 608, 22 mm), Stahlkugeln hinter Abdeckscheiben. Mit der Achse aus der Rolle hebeln. Stahlschrott.",
    "color": "#A7AFB5",
    "label": false,
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
      "x": 1,
      "y": 3,
      "w": 5,
+     "zeichnung": true,
      "d": 16,
      "r": 2,
      "fill": "#5C646A"
@@ -1822,12 +1833,14 @@
    "info": "Zwei Kugellager je Rolle (Typ 608, 22 mm), Stahlkugeln hinter Abdeckscheiben. Mit der Achse aus der Rolle hebeln. Stahlschrott.",
    "color": "#A7AFB5",
    "label": false,
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
      "x": 1,
      "y": 3,
      "w": 5,
+     "zeichnung": true,
      "d": 16,
      "r": 2,
      "fill": "#5C646A"
@@ -1866,7 +1879,8 @@
    ],
    "info": "Selbstsichernde Mutter mit Nylonring. Mit dem Skate-Tool (13er) lösen.",
    "color": "#7D868D",
-   "label": false
+   "label": false,
+   "form": "liegend_x"
   },
   {
    "id": "rad_vorne_l_0",
@@ -2066,12 +2080,14 @@
    "info": "Zwei Kugellager je Rolle (Typ 608, 22 mm), Stahlkugeln hinter Abdeckscheiben. Mit der Achse aus der Rolle hebeln. Stahlschrott.",
    "color": "#A7AFB5",
    "label": false,
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
      "x": 1,
      "y": 3,
      "w": 5,
+     "zeichnung": true,
      "d": 16,
      "r": 2,
      "fill": "#5C646A"
@@ -2115,12 +2131,14 @@
    "info": "Zwei Kugellager je Rolle (Typ 608, 22 mm), Stahlkugeln hinter Abdeckscheiben. Mit der Achse aus der Rolle hebeln. Stahlschrott.",
    "color": "#A7AFB5",
    "label": false,
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
      "x": 1,
      "y": 3,
      "w": 5,
+     "zeichnung": true,
      "d": 16,
      "r": 2,
      "fill": "#5C646A"
@@ -2159,7 +2177,8 @@
    ],
    "info": "Selbstsichernde Mutter mit Nylonring. Mit dem Skate-Tool (13er) lösen.",
    "color": "#7D868D",
-   "label": false
+   "label": false,
+   "form": "liegend_x"
   },
   {
    "id": "rad_vorne_r_0",
@@ -2359,12 +2378,14 @@
    "info": "Zwei Kugellager je Rolle (Typ 608, 22 mm), Stahlkugeln hinter Abdeckscheiben. Mit der Achse aus der Rolle hebeln. Stahlschrott.",
    "color": "#A7AFB5",
    "label": false,
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
      "x": 1,
      "y": 3,
      "w": 5,
+     "zeichnung": true,
      "d": 16,
      "r": 2,
      "fill": "#5C646A"
@@ -2408,12 +2429,14 @@
    "info": "Zwei Kugellager je Rolle (Typ 608, 22 mm), Stahlkugeln hinter Abdeckscheiben. Mit der Achse aus der Rolle hebeln. Stahlschrott.",
    "color": "#A7AFB5",
    "label": false,
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
      "x": 1,
      "y": 3,
      "w": 5,
+     "zeichnung": true,
      "d": 16,
      "r": 2,
      "fill": "#5C646A"
@@ -2452,7 +2475,8 @@
    ],
    "info": "Selbstsichernde Mutter mit Nylonring. Mit dem Skate-Tool (13er) lösen.",
    "color": "#7D868D",
-   "label": false
+   "label": false,
+   "form": "liegend_x"
   }
  ]
 }

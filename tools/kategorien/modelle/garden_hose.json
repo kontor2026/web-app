@@ -29,12 +29,14 @@
    "info": "Wird über die Spreizkrallen geschraubt und presst sie auf den Schlauch. Aufdrehen und abziehen, dann ist der Anschluss vom Schlauch getrennt.",
    "color": "#F2A23A",
    "sortBias": 60,
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
      "x": 4,
      "y": 2,
      "w": 2,
+     "zeichnung": true,
      "d": 28,
      "r": 1,
      "fill": "#D5892A"
@@ -44,6 +46,7 @@
      "x": 10,
      "y": 2,
      "w": 2,
+     "zeichnung": true,
      "d": 28,
      "r": 1,
      "fill": "#D5892A"
@@ -53,6 +56,7 @@
      "x": 16,
      "y": 2,
      "w": 2,
+     "zeichnung": true,
      "d": 28,
      "r": 1,
      "fill": "#D5892A"
@@ -62,6 +66,7 @@
      "x": 22,
      "y": 2,
      "w": 2,
+     "zeichnung": true,
      "d": 28,
      "r": 1,
      "fill": "#D5892A"
@@ -97,12 +102,14 @@
    "info": "PP-Kupplung, die auf Wasserhahn, Brause oder Spritze klickt. Die Krallen greifen in den Schlauch. Ganz aus Kunststoff, aber keine Verpackung: zum Wertstoffhof.",
    "color": "#5B6066",
    "sortBias": 60,
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
      "x": 2,
      "y": 4,
      "w": 14,
+     "zeichnung": true,
      "d": 18,
      "r": 2,
      "fill": "#F2A23A"
@@ -112,6 +119,7 @@
      "x": 30,
      "y": 3,
      "w": 18,
+     "zeichnung": true,
      "d": 20,
      "r": 4,
      "fill": "#464B50"
@@ -146,7 +154,8 @@
    ],
    "info": "Gummiring vorn in der Kupplung, er dichtet zum Gegenstück ab. Tropft der Anschluss, reicht oft ein neuer O-Ring.",
    "color": "#1F2224",
-   "sortBias": 60
+   "sortBias": 60,
+   "form": "liegend_x"
   },
   {
    "id": "hahnstueck",
@@ -222,54 +231,63 @@
    ],
    "info": "Grünes Weich-PVC mit Weichmachern und UV-Schutz. Für den Wertstoffhof in Stücke schneiden; alte Stücke taugen als Kantenschutz oder Griffpolster.",
    "color": "#3E8E4A",
+   "form": "torus",
    "marks": [
     {
      "shape": "cyl",
      "x": 0.0,
      "y": 0.0,
-     "w": 400.0
+     "w": 400.0,
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 10.5,
      "y": 10.5,
-     "w": 379.0
+     "w": 379.0,
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 21.0,
      "y": 21.0,
-     "w": 358.0
+     "w": 358.0,
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 31.5,
      "y": 31.5,
-     "w": 337.0
+     "w": 337.0,
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 42.0,
      "y": 42.0,
-     "w": 316.0
+     "w": 316.0,
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 52.5,
      "y": 52.5,
-     "w": 295.0
+     "w": 295.0,
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 63.0,
      "y": 63.0,
-     "w": 274.0
+     "w": 274.0,
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 73.5,
      "y": 73.5,
      "w": 253.0,
+     "zeichnung": true,
      "fill": "#24522C"
     },
     {
@@ -277,6 +295,7 @@
      "x": 145.8,
      "y": 145.8,
      "w": 168.4,
+     "zeichnung": true,
      "fill": "#DCD8CE"
     }
    ]
@@ -307,54 +326,63 @@
    ],
    "info": "Kreuzgewebe aus Polyesterfäden zwischen den PVC-Schichten. Es verhindert, dass der Schlauch unter Wasserdruck platzt oder abknickt. Lässt sich nicht vom PVC trennen.",
    "color": "#E9E3C8",
+   "form": "torus",
    "marks": [
     {
      "shape": "cyl",
      "x": 0.0,
      "y": 0.0,
-     "w": 396.0
+     "w": 396.0,
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 10.5,
      "y": 10.5,
-     "w": 375.0
+     "w": 375.0,
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 21.0,
      "y": 21.0,
-     "w": 354.0
+     "w": 354.0,
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 31.5,
      "y": 31.5,
-     "w": 333.0
+     "w": 333.0,
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 42.0,
      "y": 42.0,
-     "w": 312.0
+     "w": 312.0,
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 52.5,
      "y": 52.5,
-     "w": 291.0
+     "w": 291.0,
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 63.0,
      "y": 63.0,
-     "w": 270.0
+     "w": 270.0,
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 73.5,
      "y": 73.5,
      "w": 249.0,
+     "zeichnung": true,
      "fill": "#A9A388"
     },
     {
@@ -362,6 +390,7 @@
      "x": 143.4,
      "y": 143.4,
      "w": 167.2,
+     "zeichnung": true,
      "fill": "#DCD8CE"
     }
    ]
@@ -392,54 +421,63 @@
    ],
    "info": "Glatte Innenschicht aus PVC, durch die das Wasser fließt. Kein Trinkwasser aus Gartenschläuchen trinken: Weichmacher können sich lösen.",
    "color": "#2F3A33",
+   "form": "torus",
    "marks": [
     {
      "shape": "cyl",
      "x": 0.0,
      "y": 0.0,
-     "w": 392.0
+     "w": 392.0,
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 10.5,
      "y": 10.5,
-     "w": 371.0
+     "w": 371.0,
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 21.0,
      "y": 21.0,
-     "w": 350.0
+     "w": 350.0,
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 31.5,
      "y": 31.5,
-     "w": 329.0
+     "w": 329.0,
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 42.0,
      "y": 42.0,
-     "w": 308.0
+     "w": 308.0,
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 52.5,
      "y": 52.5,
-     "w": 287.0
+     "w": 287.0,
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 63.0,
      "y": 63.0,
-     "w": 266.0
+     "w": 266.0,
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 73.5,
      "y": 73.5,
      "w": 245.0,
+     "zeichnung": true,
      "fill": "#1C231F"
     },
     {
@@ -447,6 +485,7 @@
      "x": 141.0,
      "y": 141.0,
      "w": 166.0,
+     "zeichnung": true,
      "fill": "#DCD8CE"
     }
    ]

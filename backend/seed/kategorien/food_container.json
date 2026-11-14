@@ -321,12 +321,15 @@
    "info": "Weicher Silikonring in der Nut des Deckels, macht die Dose auslaufsicher. Mit einem stumpfen Messer herausziehen: Silikon kommt in den Restmüll.",
    "color": "#F2F2F2",
    "opacity": 0.85,
+   "wand": 3,
+   "boden": 0,
    "marks": [
     {
      "shape": "box",
      "x": 4,
      "y": 4,
      "w": 164,
+     "zeichnung": true,
      "d": 104,
      "r": 9,
      "fill": "#4A90B8"
@@ -362,12 +365,15 @@
    "info": "Verstärkter Rand mit Wulst, unter den die Laschen greifen.",
    "color": "#E8EEF0",
    "opacity": 0.85,
+   "wand": 4,
+   "boden": 0,
    "marks": [
     {
      "shape": "box",
      "x": 4,
      "y": 4,
      "w": 168,
+     "zeichnung": true,
      "d": 108,
      "r": 10,
      "fill": "#D8E0E3"
@@ -403,12 +409,14 @@
    "info": "Leicht konische Schale, damit man mehrere Dosen ineinanderstapeln kann. Essensreste auskratzen, Ausspülen ist für die Gelbe Tonne nicht nötig.",
    "color": "#E8EEF0",
    "opacity": 0.85,
+   "wand": 2,
    "marks": [
     {
      "shape": "box",
      "x": 6,
      "y": 6,
      "w": 156,
+     "zeichnung": true,
      "d": 96,
      "r": 9,
      "fill": "#D8E0E3"

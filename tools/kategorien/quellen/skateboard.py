@@ -28,7 +28,7 @@ def spiegel(x, w, rechts):
 def achse(name, yt, kdy, erste):
     lab = {} if erste else {'label': False}
     stummel = [teil(f'achse_{name}_{s}', 'aluminium_trucks', 'Achse (Stahl)', 'Achse', 'box',
-                    material_id='steel', x=spiegel(2, 38, s == 'r'), y=yt - 4, w=38, d=8, z=23, h=8, r=3.5, mass=10,
+                    material_id='steel', x=spiegel(2, 38, s == 'r'), y=yt - 4, w=38, d=8, z=23, h=8, r=3.5, mass=10, form='liegend_x',
                     materials=[['stahl', 100]], color=STAHL, label=erste and s == 'l',
                     info='Stahlachse, fest in den Achsschenkel eingepresst. Auf ihr sitzen Lager und Rolle.')
                for s in ('l', 'r')]
@@ -80,16 +80,16 @@ def rad(name, yt, rechts, erste):
             marks=[mark('box', 4, 4, 24, d - 8, 3, ROLLE_D)] if oben else None))
     lager = [
         teil(f'lager_{name}_{"r" if rechts else "l"}_{t}', 'steel_bearings', 'Kugellager 608', 'Kugellager', 'box',
-             x=spiegel(x0, 7, rechts), y=yt - 11, w=7, d=22, z=16, h=22, r=2.5, mass=12,
+             x=spiegel(x0, 7, rechts), y=yt - 11, w=7, d=22, z=16, h=22, r=2.5, mass=12, form='liegend_x',
              materials=[['stahl', 94], ['nylon', 4], ['gummi', 2]], color='#A7AFB5', explode=[s * dx, 0, 0],
              label=erste and t == 'a',
              info='Zwei Kugellager je Rolle (Typ 608, 22 mm), Stahlkugeln hinter Abdeckscheiben. Mit der Achse '
                   'aus der Rolle hebeln. Stahlschrott.',
-             marks=[mark('box', 1, 3, 5, 16, 2, STAHL_D)])
+             marks=[mark('box', 1, 3, 5, 16, 2, STAHL_D, zeichnung=True)])
         for t, x0, dx in (('a', 6, 120), ('i', 30, 60))
     ]
     mutter = teil(f'mutter_{name}_{"r" if rechts else "l"}', 'aluminium_trucks', 'Achsmutter', 'Achsmutter', 'box',
-                  material_id='steel', x=spiegel(0, 5, rechts), y=yt - 6, w=5, d=12, z=21, h=12, r=1.5, mass=3,
+                  material_id='steel', x=spiegel(0, 5, rechts), y=yt - 6, w=5, d=12, z=21, h=12, r=1.5, mass=3, form='liegend_x',
                   materials=[['stahl', 95], ['nylon', 5]], color=STAHL, explode=[s * 150, 0, 0], label=erste,
                   info='Selbstsichernde Mutter mit Nylonring. Mit dem Skate-Tool (13er) lösen.')
     return scheiben, lager, mutter

@@ -38,19 +38,19 @@ teile = [
     teil('rand', 'pp_storage_box', 'Rand mit Griffleisten', 'Rand', 'box',
          x=0, y=0, w=390, d=290, z=188, h=16, r=20, mass=180,
          info='Verstärkter Rand mit Griffmulden an den Schmalseiten. Hier sind die Verschlüsse eingehängt.',
-         color=BOX, opacity=0.85, marks=[mark('box', 8, 8, 374, 274, 16, '#D5DADD')]),
+         color=BOX, opacity=0.8, wand=3, marks=[mark('box', 8, 8, 374, 274, 16, '#D5DADD', zeichnung=True)]),
     teil('wand_oben', 'pp_storage_box', 'Boxwand oben', 'Box', 'box',
          x=8, y=8, w=374, d=274, z=100, h=88, r=18, mass=260,
          info='Durchsichtiges PP, Recyclingcode 5. Große Hartkunststoffteile gehören zum Wertstoffhof, '
               'nicht in die Gelbe Tonne: Sie sind keine Verpackung.',
-         color=BOX, opacity=0.8, label=True),
+         color=BOX, opacity=0.8, label=True, wand=3),
     teil('wand_unten', 'pp_storage_box', 'Boxwand unten', 'Box unten', 'box',
          x=14, y=14, w=362, d=262, z=12, h=88, r=16, mass=240,
          info='Die Wand wird nach unten schmaler, so passen leere Boxen ineinander.',
-         color=BOX, opacity=0.8, label=False),
+         color=BOX, opacity=0.8, label=False, wand=3),
     teil('boden', 'pp_storage_box', 'Boden mit Standfüßen', 'Boden', 'box',
          x=20, y=20, w=350, d=250, z=0, h=12, r=14, mass=150,
-         info='Boden mit Stapelnoppen und Recyclingzeichen 5.', color=BOX, opacity=0.8, label=False,
+         info='Boden mit Stapelnoppen und Recyclingzeichen 5.', color=BOX, opacity=0.8, label=False, wand=3,
          marks=raster(20, 20, 2, 2, 30, 30, 280, 180, r=6, fill='#CDD3D6')),
 ]
 

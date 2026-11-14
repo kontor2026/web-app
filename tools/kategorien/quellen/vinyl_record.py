@@ -27,7 +27,7 @@ def rillen(w):
     for i, dm in enumerate((288, 262, 236, 210, 184, 158, 130)):
         ms.append(mark('cyl', mitte(w, dm), mitte(w, dm), dm, fill='#232427' if i % 2 else '#303134'))
     ms.append(mark('cyl', mitte(w, 120), mitte(w, 120), 120, fill='#18191B'))
-    ms.append(mark('cyl', mitte(w, 7.2), mitte(w, 7.2), 7.2, fill='#E8E4DA'))
+    ms.append(mark('cyl', mitte(w, 7.2), mitte(w, 7.2), 7.2, fill='#E8E4DA', zeichnung=True))
     return ms
 
 
@@ -38,20 +38,20 @@ teile = [
               'nicht ins Altpapier.'),
     teil('etikett_oben', 'pvc_record', 'Etikett Seite A', 'Etikett A', 'cyl', material_id='paper',
          x=O + mitte(P, LBL), y=O + mitte(P, LBL), w=LBL, z=2.4, h=0.05, mass=0.5,
-         materials=[['papier', 90], ['druck', 10]], color='#C8423A',
+         materials=[['papier', 90], ['druck', 10]], color='#C8423A', wand=(LBL - 7.2) / 2, boden=0,
          info='Bedrucktes Papier mit Titel und Seite, beim Pressen fest ins Vinyl eingepresst. Es lässt sich nicht ablösen.',
          marks=[mark('box', 22, 28, 56, 6, 1, '#F2E6C8'), mark('box', 30, 66, 40, 4, 1, '#F2E6C8'),
-                mark('cyl', mitte(LBL, 7.2), mitte(LBL, 7.2), 7.2, fill='#E8E4DA')]),
+                mark('cyl', mitte(LBL, 7.2), mitte(LBL, 7.2), 7.2, fill='#E8E4DA', zeichnung=True)]),
     teil('platte', 'pvc_record', 'Schallplatte aus Vinyl', 'Platte', 'cyl',
-         x=O, y=O, w=P, z=0.9, h=1.5, mass=140, materials=[['pvc', 99], ['druck', 1]], color=VINYL,
+         x=O, y=O, w=P, z=0.9, h=1.5, mass=140, materials=[['pvc', 99], ['druck', 1]], color=VINYL, wand=(P - 7.2) / 2, boden=0,
          info='PVC mit Ruß gefärbt. In der spiralförmigen Rille steckt der Ton als feine Wellen, die die Nadel abtastet. '
               'Weitergeben oder verkaufen; über die Hausmülltonnen wird PVC nicht recycelt.',
          marks=rillen(P)),
     teil('etikett_unten', 'pvc_record', 'Etikett Seite B', 'Etikett B', 'cyl', material_id='paper',
          x=O + mitte(P, LBL), y=O + mitte(P, LBL), w=LBL, z=0.85, h=0.05, mass=0.5, label=False,
-         materials=[['papier', 90], ['druck', 10]], color='#3E6FA8',
+         materials=[['papier', 90], ['druck', 10]], color='#3E6FA8', wand=(LBL - 7.2) / 2, boden=0,
          info='Etikett der Rückseite, ebenfalls eingepresst.',
-         marks=[mark('cyl', mitte(LBL, 7.2), mitte(LBL, 7.2), 7.2, fill='#E8E4DA')]),
+         marks=[mark('cyl', mitte(LBL, 7.2), mitte(LBL, 7.2), 7.2, fill='#E8E4DA', zeichnung=True)]),
     teil('innenhuelle', 'cardboard_sleeve', 'Papier-Innenhülle', 'Innenhülle', 'box', material_id='paper',
          x=O - 1, y=O - 1, w=P + 2, d=P + 2, z=0.6, h=0.25, r=1, mass=9, materials=[['papier', 97], ['druck', 3]],
          color='#EFEBE0',

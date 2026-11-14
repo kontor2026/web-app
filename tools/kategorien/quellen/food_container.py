@@ -38,16 +38,16 @@ teile = [
          x=4, y=4, w=172, d=112, z=61, h=3, r=12, mass=5,
          info='Weicher Silikonring in der Nut des Deckels, macht die Dose auslaufsicher. Mit einem stumpfen Messer '
               'herausziehen: Silikon kommt in den Restmüll.',
-         color='#F2F2F2', opacity=0.85, marks=[mark('box', 4, 4, 164, 104, 9, DECKEL)]),
+         color='#F2F2F2', opacity=0.85, wand=3, boden=0, marks=[mark('box', 4, 4, 164, 104, 9, DECKEL, zeichnung=True)]),
     teil('rand', 'pp_food_tray', 'Dosenrand', 'Rand', 'box',
          x=2, y=2, w=176, d=116, z=55, h=6, r=13, mass=12,
          info='Verstärkter Rand mit Wulst, unter den die Laschen greifen.',
-         color=DOSE, opacity=0.85, marks=[mark('box', 4, 4, 168, 108, 10, '#D8E0E3')]),
+         color=DOSE, opacity=0.85, wand=4, boden=0, marks=[mark('box', 4, 4, 168, 108, 10, '#D8E0E3', zeichnung=True)]),
     teil('schale', 'pp_food_tray', 'Dose', 'Dose', 'box',
          x=6, y=6, w=168, d=108, z=0, h=55, r=12, mass=58,
          info='Leicht konische Schale, damit man mehrere Dosen ineinanderstapeln kann. Essensreste auskratzen, '
               'Ausspülen ist für die Gelbe Tonne nicht nötig.',
-         color=DOSE, opacity=0.85, marks=[mark('box', 6, 6, 156, 96, 9, '#D8E0E3')]),
+         color=DOSE, opacity=0.85, wand=2, marks=[mark('box', 6, 6, 156, 96, 9, '#D8E0E3', zeichnung=True)]),
 ]
 explodiere(teile, abstand=16, nach_liste=True, gruppen=[['rand', 'schale']])
 assert teile[0]['explode'][2] == DZ, teile[0]['explode']

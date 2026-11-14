@@ -26,7 +26,7 @@ teile = [
          x=0, y=0, w=50, z=186, h=14, mass=3,
          info='Steifes HDPE-Rohr. Restinhalt aushärten lassen; die leere Kartusche gehört in die Gelbe Tonne, '
               'eine noch volle zur Schadstoffsammlung oder zum Wertstoffhof.',
-         color=ROHR, marks=[mark('cyl', 2, 2, 46, fill='#E4E2DA')]),
+         color=ROHR, marks=[mark('cyl', 2, 2, 46, fill='#E4E2DA', zeichnung=True)]),
     teil('rohr_mitte', 'hdpe_cartridge_tube', 'Kartuschenrohr', 'Rohr', 'cyl',
          x=0.5, y=0.5, w=49, z=14, h=172, mass=30, label=False,
          info='Steifes HDPE-Rohr, unter dem Etikett.', color=ROHR),
@@ -39,7 +39,7 @@ teile = [
          materials=[['gummi', 100]],
          info='Pastöses Silikon, das an der Luft mit Feuchtigkeit aushärtet. Nicht in den Ausguss: '
               'Reste in der Kartusche aushärten lassen.',
-         color='#FAFAFA', marks=[mark('cyl', 8, 8, 31, fill='#F0F0F0')]),
+         color='#FAFAFA', marks=[mark('cyl', 8, 8, 31, fill='#F0F0F0', zeichnung=True)]),
     teil('kolben', 'hdpe_cartridge_tube', 'Kolben', 'Kolben', 'cyl',
          x=1.5, y=1.5, w=47, z=2, h=10, explode=[-150, 0, 0], sortBias=-40, mass=4,
          info='Beweglicher HDPE-Boden. Die Pistole schiebt ihn nach oben und presst so die Masse heraus.',
@@ -57,7 +57,7 @@ teile = [
          material_id='paper', x=0, y=0, w=50, z=14, h=172, explode=[0, -150, 0], mass=3,
          materials=[['papier', 80], ['druck', 10], ['klebstoff', 10]], sortBias=1,
          info='Bedrucktes Papieretikett rund um das Rohr, mit Gefahrenhinweisen. Kann an der Kartusche bleiben.',
-         color='#2F6DB5', marks=[mark('cyl', 1, 1, 48, fill='#D9DBDF')]),
+         color='#2F6DB5', wand=0.6, boden=0, marks=[mark('cyl', 1, 1, 48, fill='#D9DBDF', zeichnung=True)]),
 ]
 
 explodiere(teile, abstand=20, gruppen=[['spitze', 'schulter', 'rohr_oben', 'rohr_mitte', 'rohr_unten']])

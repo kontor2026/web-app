@@ -295,6 +295,8 @@
    ],
    "info": "Farbe, direkt auf die Scheibe gedruckt (kein Papier). Wird beim Recycling mit dem Lack abgelöst.",
    "color": "#F0F0EA",
+   "wand": 41,
+   "boden": 0,
    "marks": [
     {
      "shape": "cyl",
@@ -308,6 +310,7 @@
      "x": 41.0,
      "y": 41.0,
      "w": 34,
+     "zeichnung": true,
      "fill": "#5B6166"
     }
    ]
@@ -339,12 +342,15 @@
    "info": "Hauchdünne Lackschicht aus Acrylharz. Sie schützt die Spiegelschicht, denn die Daten liegen direkt darunter: Ein Kratzer auf der Oberseite zerstört die CD eher als einer unten.",
    "color": "#E6ECEF",
    "opacity": 0.7,
+   "wand": 42,
+   "boden": 0,
    "marks": [
     {
      "shape": "cyl",
      "x": 42.0,
      "y": 42.0,
      "w": 34,
+     "zeichnung": true,
      "fill": "#5B6166"
     }
    ]
@@ -375,6 +381,8 @@
    ],
    "info": "Weniger als ein Tausendstel Millimeter Aluminium. Es spiegelt den Laser des CD-Spielers zurück.",
    "color": "#D5DADE",
+   "wand": 39,
+   "boden": 0,
    "marks": [
     {
      "shape": "cyl",
@@ -388,6 +396,7 @@
      "x": 39.0,
      "y": 39.0,
      "w": 40,
+     "zeichnung": true,
      "fill": "#5B6166"
     }
    ]
@@ -419,6 +428,8 @@
    "info": "Glasklarer Kunststoff, in den die Daten als winzige Vertiefungen (Pits) gepresst sind. Zum Unlesbarmachen zerkratzen; manche Wertstoffhöfe sammeln CDs getrennt.",
    "color": "#DDE6EA",
    "opacity": 0.75,
+   "wand": 52.5,
+   "boden": 0,
    "marks": [
     {
      "shape": "cyl",
@@ -432,6 +443,7 @@
      "x": 52.5,
      "y": 52.5,
      "w": 15,
+     "zeichnung": true,
      "fill": "#5B6166"
     }
    ]
@@ -754,12 +766,14 @@
    "info": "Klare PS-Schale mit Scharnier. Ganze, saubere Hüllen nehmen manche Wertstoffhöfe an, sonst Restmüll: Die Gelbe Tonne ist nur für Verpackungen.",
    "color": "#E4ECF0",
    "opacity": 0.45,
+   "wand": 1.5,
    "marks": [
     {
      "shape": "box",
      "x": 2,
      "y": 1.5,
      "w": 138,
+     "zeichnung": true,
      "d": 122,
      "r": 0.5,
      "fill": "#D3DDE2"
