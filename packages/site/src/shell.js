@@ -31,6 +31,12 @@ export function shell(aktiv, root) {
 
 // Der Lebensweg eines Gegenstands: sieben Stationen, überall gleich benannt und gleich gezeichnet
 const ICON = {
+  // Gruppen (Ersatz-Piktogramm für Gegenstände ohne eigenes) und Neu-Würfeln
+  gruppe_elektro: '<path d="M9 3v5M15 3v5M6 8h12v3a6 6 0 0 1-12 0Z"/><path d="M12 17v4"/>',
+  gruppe_verpackung: '<path d="m12 3 8 4.5v9L12 21l-8-4.5v-9Z"/><path d="m4 7.5 8 4.5 8-4.5M12 12v9M8 5.3l8 4.4"/>',
+  gruppe_textil: '<path d="M8 3 3 6l2 4 2-1v12h10V9l2 1 2-4-5-3a4 4 0 0 1-8 0Z"/>',
+  gruppe_alltag: '<path d="M4 9h16l-1.5 11h-13Z"/><path d="M8 9V7a4 4 0 0 1 8 0v2"/>',
+  wuerfeln: '<path d="M4 7h11l-3-3M20 17H9l3 3"/><path d="M15 7a5 5 0 0 1 5 5M9 17a5 5 0 0 1-5-5"/>',
   beleg: '<path d="M7 3h7l4 4v14H7Z"/><path d="M14 3v4h4M10 12h5M10 16h5"/>',
   schaetzung: '<circle cx="12" cy="12" r="8.5" stroke-dasharray="3 2.5"/><path d="M9.5 10a2.5 2.5 0 1 1 3.3 2.4c-.5.2-.8.6-.8 1.1V14M12 17v.5"/>',
   haken: '<path d="m5 12.5 4.5 4.5L19 7.5"/>',

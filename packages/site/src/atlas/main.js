@@ -132,7 +132,6 @@ function setzePanel(html) {
   const i = IDS.indexOf(schritt), naechste = SCHRITTE[(i + 1) % IDS.length];
   panel().innerHTML = `<div class="panel-inner">${html}<a class="lw-weiter" href="${link(naechste.id, null)}">${icon(naechste.id)}<span>${i < IDS.length - 1 ? 'Weiter' : 'Von vorn'}: ${naechste.name}</span><span class="pfeil">→</span></a></div>`;
   panel().scrollTop = 0;
-  if (breit.matches) panel().querySelectorAll('[data-block]').forEach((d) => { d.open = true; });
 }
 const legende = (eintraege) => { document.getElementById('legende').innerHTML = eintraege.map(([f, t]) => `<span><i style="background:${f}"></i>${esc(t)}</span>`).join(''); };
 const landZeile = ([l, p], i) => `
@@ -254,9 +253,9 @@ function zeigeUpcycling() {
     .map((r) => ({ r, s: stand(r, mitDiesem) })).sort((a, b) => b.s.ok / b.s.alle - a.s.ok / a.s.alle);
   const name = (cid) => daten.komponenten?.[cid]?.name ?? cid;
   setzePanel(passend.length ? `<div class="lw-rezepte">${passend.map(({ r, s }) => `
-    <article class="lw-rezept"><div class="lw-rezept-kopf"><h2>${esc(r.titel)}</h2>${s.baubar ? `<span class="haken" title="Alles da">${icon('haken')}</span>` : ''}</div>
+    <details class="lw-block lw-rezept"><summary><span class="lw-rezept-titel">${esc(r.titel)}</span>${s.baubar ? `<span class="haken" title="Alles da">${icon('haken')}</span>` : ''}</summary>
       <div class="uses">${s.posten.map((p) => `<div class="use ${p.ok ? 'da' : 'fehlt'}"><i></i><span title="${esc(postenName(p, mitDiesem, name).alle)}">${esc(postenName(p, mitDiesem, name).text)}${postenName(p, mitDiesem, name).mehr ? ` <small>+${postenName(p, mitDiesem, name).mehr}</small>` : ''}</span><span class="q">${p.soll > 1 ? `${geschaetzt(p) ? '≈' : ''}${p.soll}×` : ''}</span></div>`).join('')}</div>
-      <p class="lw-fuss">${esc(r.dauer ?? '')}${chip(r.quelle?.url, r.quelle?.titel, 'Quelle', { was: `Anleitung: ${r.titel}` })}</p></article>`).join('')}</div>
+      <p class="lw-fuss">${esc(r.dauer ?? '')}${chip(r.quelle?.url, r.quelle?.titel, 'Quelle', { was: `Anleitung: ${r.titel}` })}</p></details>`).join('')}</div>
     <a class="btn ghost" href="../werkbank/#bauen">${icon('werkbank')}Werkbank<span class="pfeil">→</span></a>`
     : `<p class="note">${REZEPTE?.length ? 'Noch keine Bauidee nutzt Teile dieses Gegenstands.' : 'Die Bauideen werden gerade geschrieben.'}</p>`);
 }

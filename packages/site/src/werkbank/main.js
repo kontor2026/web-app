@@ -101,7 +101,7 @@ function zeigeKorb() {
       <div class="korb-zeile">${bild(id, 'klein')}<span>${esc(objektVon.get(id)?.name ?? id)}</span>
         <span class="wb-stepper"><button data-id="${id}" data-d="-1" aria-label="weniger">−</button><b>${b[id]}</b><button data-id="${id}" data-d="1" aria-label="mehr">+</button></span></div>`).join('')
       || '<p class="leer">Tippe auf +, was du hast.</p>'}</div>
-    ${ids.length ? `<button class="btn primary korb-los" data-a="bauen">${baubar ? `${baubar} baubar` : 'Ideen ansehen'}<span class="pfeil">→</span></button>` : ''}`;
+    ${ids.length ? `<div class="korb-knoepfe"><button class="btn ghost korb-leeren" data-leeren="1" aria-label="Werkbank leeren">${icon('entsorgung')}Leeren</button><button class="btn primary korb-los" data-a="bauen">${baubar ? `${baubar} baubar` : 'Ideen ansehen'}<span class="pfeil">→</span></button></div>` : ''}`;
   beobachte(document.getElementById('korb'));
 }
 
@@ -140,6 +140,7 @@ function zeige() {
 app.addEventListener('click', (e) => {
   const x = e.target.closest('button');
   if (!x) return;
+  if (x.dataset.leeren) { for (const id of Object.keys(bestand())) plus(id, -bestand()[id]); return; }
   if (x.dataset.d) plus(x.dataset.id, +x.dataset.d);
   else if (x.dataset.a) { ansicht = x.dataset.a; history.replaceState(null, '', ansicht === 'bauen' ? '#bauen' : location.pathname); zeige(); scrollTo(0, 0); }
   else if (x.dataset.g !== undefined) { gruppe = x.dataset.g || null; zeigeRaster(); }

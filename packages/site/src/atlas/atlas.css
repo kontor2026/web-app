@@ -195,11 +195,12 @@
 
 /* ---------- Blöcke: Handy aufklappbar, Bildschirm immer offen ---------- */
 .lw-block > summary { font: 500 11px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); }
-@media (min-width: 901px) {
-  .lw-block > summary { pointer-events: none; min-height: 0; margin-bottom: 12px; }
-  .lw-block > summary::before { display: none; }
-  .lw-fluss { display: none; }
-}
+@media (min-width: 901px) { .lw-fluss { display: none; } }
+.lw-block { border-top: 1px solid var(--rule-2); }
+.lw-block > summary { min-height: 44px; }
+.lw-rezept > summary { font: 500 15px var(--sans); letter-spacing: 0; text-transform: none; color: var(--ink); }
+.lw-rezept-titel { flex: 1; }
+.lw-rezept .haken { width: 22px; height: 22px; } .lw-rezept .haken .icon { width: 14px; height: 14px; }
 
 /* ---------- Handy: eine Bildschirmhöhe, kein Scrollen der Seite ---------- */
 @media (max-width: 900px) {
@@ -219,4 +220,14 @@
   .lw-habich, .lw-habich-da { height: 44px; }
   .lw .mix-legend { display: none; }
   .lw-tonne b { font-size: 19px; }
+}
+/* Verwertung auf dem Handy: waagerechter Balken, Beschriftung als Liste darunter */
+@media (max-width: 900px) {
+  .lw[data-schritt="verwertung"] .lw-balken { place-items: center stretch; padding: 0 16px; }
+  .lw-balken-bild { grid-template-columns: minmax(0, 1fr); height: auto; gap: 14px; width: 100%; }
+  .lw-saeule { flex-direction: row; height: 36px; }
+  .lw-saeule i + i { border-bottom: 0; border-left: 1px solid var(--ink); }
+  .lw-saeule-text { position: static; width: auto; display: grid; gap: 8px; }
+  .lw-saeule-text p { position: static; transform: none; }
+  .lw-saeule-text b { font-size: 18px; }
 }

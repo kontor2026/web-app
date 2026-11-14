@@ -217,3 +217,17 @@ html { scroll-padding-bottom: calc(var(--tabs) + 88px); }
 }
 .chip-q.schaetzung { border-style: dashed; }
 .chip-q:hover { border-color: var(--accent); color: var(--accent); }
+
+/* Start: Suche mit Würfel-Knopf, zwei Vorschläge */
+.suche-zeile { position: relative; }
+.wuerfel { position: absolute; right: 4px; top: 50%; transform: translateY(-50%); width: 40px; height: 40px; display: grid; place-items: center; color: var(--ink-2); }
+.wuerfel:hover { color: var(--accent); }
+.wuerfel .icon { width: 20px; height: 20px; }
+.start .beispiele { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+/* Quellen-Chips rechtsbündig: bilden eine senkrechte Linie */
+.lw-block > summary, .panel h3 { display: flex; align-items: center; }
+.lw-block > summary .chip-q, .panel h3 .chip-q { margin-left: auto; }
+.lw-zahl .chip-q { justify-self: end; }
+.lw-tonne { grid-template-columns: 52px 1fr auto; }
+.lw-fuss { display: flex; align-items: center; }
+.lw-fuss .chip-q { margin-left: auto; }

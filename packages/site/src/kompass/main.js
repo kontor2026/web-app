@@ -85,7 +85,6 @@ function richtung(r) {
     <div><div class="eyebrow">${r.himmelsrichtung} · ${NAME[r.himmelsrichtung]}</div><h1 style="margin-top:8px">${esc(r.titel)}</h1>
       <p class="sub">${esc(r.frage)}</p></div>
     <div><h3>So machen wir es</h3><dl class="belege">${r.so_machen_wirs.slice(0, 2).map((s) => `<div><dd>${esc(s.text)}${beleg(s.beleg)}</dd></div>`).join('')}</dl></div>
-    <div><h3>Noch offen</h3><div class="pruef">${r.offen.slice(0, 1).map((o) => `<p class="note warn">${esc(o)}</p>`).join('')}</div></div>
     <div class="goal"><small>Tipp für dich</small>${esc(r.tipp_fuer_dich)}</div>`, [start, { label: r.titel, go: () => richtung(r) }]);
 }
 
