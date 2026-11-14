@@ -5,7 +5,6 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { CSS2DRenderer, CSS2DObject } from 'three/addons/renderers/CSS2DRenderer.js';
 import { CLASSES, MATERIALS } from '../../../js/data/catalog.js';
 import { esc, gramm, ruhig } from './shell.js';
-import { stoff, koerperGeometrie, studio, eigenschaften, nachbearbeitung, stapelSuchen, huellenMesh } from './foto.js';
 
 const LADE = import.meta.glob('../../../backend/seed/kategorien/*.json', { import: 'default' });
 export const ladeModell = (id) => LADE[`../../../backend/seed/kategorien/${id}.json`]?.();
@@ -27,9 +26,7 @@ function grundriss(t) {
 
 /**
  * el: Container. Optionen: onHover(index|null), onSelect(index|null), tip (Element für Tooltip).
- * Rückgabe: lade(obj), explosion(0|1), nummern(bool), foto(bool), markiere(i), waehle(i), faerbe(fn(part)→Farbe|null)
- * Foto-Ansicht (Standard): physikalische Materialien, Studiolicht, Schatten, Umgebungsverdeckung (foto.js).
- * Gezeichnet wird nur, wenn sich etwas ändert, damit langsame Rechner flüssig bleiben.
+ * Rückgabe: lade(obj), explosion(0|1), nummern(bool), markiere(i), waehle(i), faerbe(fn(part)→Farbe|null)
  */
 export function erzeugeViewer(el, { onHover, onSelect, tip } = {}) {
   const INK = new THREE.Color(css('--ink')), AKZENT = new THREE.Color(css('--accent'));
@@ -41,22 +38,19 @@ export function erzeugeViewer(el, { onHover, onSelect, tip } = {}) {
   el.append(labels.domElement);
 
   const scene = new THREE.Scene();
-  const licht = studio(renderer, scene);
+  scene.add(new THREE.AmbientLight(0xffffff, 1.9));
+  const sonne = new THREE.DirectionalLight(0xffffff, 1.5);
+  sonne.position.set(0.4, 1, 0.25);
+  scene.add(sonne);
   const kamera = new THREE.OrthographicCamera(-1, 1, 1, -1, -10000, 10000);
-  const nach = nachbearbeitung(renderer, scene, kamera);
-  let geaendert = true, fotoAn = true;
-  const neu = () => { geaendert = true; };
   const steuerung = new OrbitControls(kamera, labels.domElement);
   steuerung.enableDamping = true;
-  // Langsam um das Objekt kreisen (eine Runde in etwa 50 s); bei „weniger Bewegung“ aus
-  steuerung.autoRotate = !ruhig;
-  steuerung.autoRotateSpeed = 1.2;
   const modell = new THREE.Group();
   scene.add(modell);
 
   new ResizeObserver(() => {
     const { width: w, height: h } = el.getBoundingClientRect();
-    renderer.setSize(w, h); labels.setSize(w, h); nach.setSize(w, h); neu();
+    renderer.setSize(w, h); labels.setSize(w, h);
     const a = w / Math.max(h, 1);
     kamera.left = -a; kamera.right = a; kamera.top = 1; kamera.bottom = -1;
     kamera.updateProjectionMatrix();
@@ -73,26 +67,18 @@ export function erzeugeViewer(el, { onHover, onSelect, tip } = {}) {
     let nr = 0;
     for (const p of obj.parts) {
       const farbe = new THREE.Color(farbeVon(p)), g = new THREE.Group();
-      const geo = koerperGeometrie(p);                          // Station: x Breite, y Tiefe, z Höhe → three: X, Z, Y
-      const mesh = new THREE.Mesh(geo, stoff(p, farbe, p.opacity ?? 1));
-      mesh.castShadow = mesh.receiveShadow = true;
-      const kanten = new THREE.LineSegments(new THREE.EdgesGeometry(geo, 30), new THREE.LineBasicMaterial({ color: INK, transparent: true }));
-      kanten.userData.kante = true;
-      g.add(mesh, kanten);
+      const geo = new THREE.ExtrudeGeometry(grundriss(p), { depth: p.h, bevelEnabled: false, curveSegments: 24 });
+      geo.rotateX(Math.PI / 2); geo.translate(0, p.h, 0);      // Station: x Breite, y Tiefe, z Höhe → three: X, Z, Y
+      const mesh = new THREE.Mesh(geo, new THREE.MeshLambertMaterial({ color: farbe, transparent: true, opacity: p.opacity ?? 1,
+        polygonOffset: true, polygonOffsetFactor: 1, polygonOffsetUnits: 1 }));
+      g.add(mesh, new THREE.LineSegments(new THREE.EdgesGeometry(geo, 30), new THREE.LineBasicMaterial({ color: INK, transparent: true })));
       const marks = [];
       for (const m of p.marks ?? []) {
         const mg = new THREE.ShapeGeometry(grundriss(m), 24);
         mg.rotateX(Math.PI / 2); mg.translate(m.x, p.h + 0.04, m.y);
-        const e = eigenschaften(p), o = p.opacity ?? 1;
-        const mm = new THREE.Mesh(mg, new THREE.MeshPhysicalMaterial({ color: new THREE.Color(m.fill ?? farbe.clone().multiplyScalar(0.78)),
-          metalness: e.m ?? 0, roughness: Math.max(0.25, e.r), clearcoat: e.cc ?? 0, side: THREE.DoubleSide, transparent: o < 0.98, opacity: o,
-          polygonOffset: true, polygonOffsetFactor: -1, polygonOffsetUnits: -1 }));
-        mm.receiveShadow = true;
-        if (m.zeichnung) mm.userData.kante = true;            // nur in der Zeichnung, z. B. aufgemalte Öffnung
+        const mm = new THREE.Mesh(mg, new THREE.MeshBasicMaterial({ color: new THREE.Color(m.fill ?? farbe.clone().multiplyScalar(0.78)), side: THREE.DoubleSide, transparent: true, opacity: p.opacity ?? 1 }));
         marks.push({ mesh: mm, farbe: mm.material.color.clone() });
-        const ml = new THREE.LineSegments(new THREE.EdgesGeometry(mg), new THREE.LineBasicMaterial({ color: INK, transparent: true, opacity: 0.6 }));
-        ml.userData.kante = true;
-        g.add(mm, ml);
+        g.add(mm, new THREE.LineSegments(new THREE.EdgesGeometry(mg), new THREE.LineBasicMaterial({ color: INK, transparent: true, opacity: 0.6 })));
       }
       g.position.set(p.x, p.z, p.y);
       const t = { p, g, mesh, marks, farbe, i: teile.length, ex: new THREE.Vector3(p.explode?.[0] ?? 0, p.explode?.[2] ?? 0, p.explode?.[1] ?? 0),
@@ -101,7 +87,8 @@ export function erzeugeViewer(el, { onHover, onSelect, tip } = {}) {
       if (t.nr) {
         const b = document.createElement('button');
         b.className = 'ballon'; b.innerHTML = `<b>${t.nr}</b>`; b.title = p.name;
-        b.addEventListener('click', () => waehle(t.i, true));
+        b.addEventListener('pointerdown', (e) => e.stopPropagation());   // sonst fängt OrbitControls den Tap ab
+        b.addEventListener('click', (e) => { e.stopPropagation(); waehle(t.i, true); });
         b.addEventListener('pointerenter', () => markiere(t.i, true));
         b.addEventListener('pointerleave', () => markiere(null, true));
         const l = new CSS2DObject(b);
@@ -110,33 +97,14 @@ export function erzeugeViewer(el, { onHover, onSelect, tip } = {}) {
       }
       modell.add(g); teile.push(t);
     }
-    // Foto-Ansicht: gestapelte Scheiben (Flaschenschulter, Schuh, Ball) als eine glatte Hülle zeigen
-    for (const kette of stapelSuchen(obj.parts, farbeVon)) {
-      const unten = teile[kette[0]], p0 = unten.p;
-      const h = huellenMesh(kette.map((i) => obj.parts[i]), unten.mesh.material.clone());
-      h.geometry.translate(-p0.x, -p0.z, -p0.y);
-      h.userData.nurFoto = true;
-      unten.g.add(h);
-      unten.huelle = h;
-      kette.forEach((i, n) => {
-        teile[i].mesh.userData.ersetzt = true;
-        if (n < kette.length - 1) teile[i].marks.forEach((m) => { m.mesh.userData.ersetzt = true; });
-      });
-    }
     explosion(1, false);
     modell.position.set(0, 0, 0); modell.updateMatrixWorld(true);
     const box = new THREE.Box3().setFromObject(modell);
     modell.position.copy(box.getCenter(new THREE.Vector3()).negate());
     const r = box.getBoundingSphere(new THREE.Sphere()).radius;
     kamera.position.set(1, 0.95, 1.25).normalize().multiplyScalar(r * 4);
-    kamera.zoom = 1 / (r * 1.08);
-    kamera.near = r * 0.5; kamera.far = r * 8;                // enger Tiefenbereich für die Umgebungsverdeckung
-    kamera.updateProjectionMatrix();
-    modell.updateMatrixWorld(true);
-    licht.passe(new THREE.Box3().setFromObject(modell));
-    nach.radius(r);
-    foto(fotoAn);
-    steuerung.target.set(0, 0, 0); steuerung.update();
+    kamera.zoom = 1 / (r * 1.08); kamera.updateProjectionMatrix();
+    steuerung.target.set(0, 0, 0); steuerung.update(); steuerung.saveState();
     faerbe(farbFn);
     explosion(explodiert, !ruhig);
   }
@@ -151,7 +119,6 @@ export function erzeugeViewer(el, { onHover, onSelect, tip } = {}) {
       const k = dauer ? Math.min(1, (jetzt - t0) / dauer) : 1;
       const e = k < 0.5 ? 4 * k ** 3 : 1 - (-2 * k + 2) ** 3 / 2;
       eigene.forEach((t, i) => t.g.position.lerpVectors(start[i], t.basis.clone().addScaledVector(t.ex, ziel), e));
-      neu();
       if (k < 1) requestAnimationFrame(schritt);
     };
     schritt(performance.now());
@@ -162,33 +129,9 @@ export function erzeugeViewer(el, { onHover, onSelect, tip } = {}) {
     farbFn = fn;
     for (const t of teile) {
       const c = fn?.(t.p);
-      const m = t.mesh.material;
-      m.userData.map ??= m.map;                                 // Holzmaserung nur in Materialfarbe
-      if (m.map !== (c ? null : m.userData.map)) { m.map = c ? null : m.userData.map; m.needsUpdate = true; }
-      m.color.set(c ?? (m.map ? 0xffffff : t.farbe));
-      t.huelle?.material.color.set(c ?? t.farbe);
+      t.mesh.material.color.set(c ?? t.farbe);
       t.marks.forEach((m) => m.mesh.material.color.copy(c ? new THREE.Color(c).multiplyScalar(0.85) : m.farbe));
     }
-    neu();
-  }
-
-  // Abblenden: nur transparent zeichnen, wenn nötig. Sonst sieht Glas (Transmission) die Teile dahinter nicht.
-  function blende(m, an) {
-    m.userData.o0 ??= m.opacity;
-    m.opacity = m.userData.o0 * (an ? 1 : 0.22);
-    const tr = m.opacity < 0.98;
-    if (m.transparent !== tr) { m.transparent = tr; m.needsUpdate = true; }
-  }
-
-  // Foto (Standard) oder Zeichnung mit Kanten wie die Station
-  function foto(an) {
-    fotoAn = an;
-    licht.an(an);
-    modell.traverse((o) => {
-      if (o.userData.kante || o.userData.ersetzt) o.visible = !an;
-      if (o.userData.nurFoto) o.visible = an;
-    });
-    neu();
   }
 
   function markiere(i, vonHier = false) {
@@ -196,14 +139,13 @@ export function erzeugeViewer(el, { onHover, onSelect, tip } = {}) {
     const aktiv = hot ?? gewaehlt;
     for (const x of teile) {
       const an = !aktiv || x === aktiv;
-      blende(x.mesh.material, an);
+      x.mesh.material.opacity = x.opacity * (an ? 1 : 0.22);
       x.g.children.forEach((c) => {
         if (c.isLineSegments) { c.material.color.copy(x === aktiv ? AKZENT : INK); c.material.opacity = an ? 1 : 0.2; }
-        else if (c !== x.mesh && c.material) blende(c.material, an);
+        else if (c !== x.mesh && c.material) c.material.opacity = x.opacity * (an ? 1 : 0.22);
         if (c.isCSS2DObject) { c.element.classList.toggle('aus', !an); c.element.classList.toggle('hot', x === aktiv); }
       });
     }
-    neu();
     if (vonHier) onHover?.(hot?.i ?? null);
   }
   function waehle(i, vonHier = false) {
@@ -215,38 +157,37 @@ export function erzeugeViewer(el, { onHover, onSelect, tip } = {}) {
   const ray = new THREE.Raycaster(), maus = new THREE.Vector2();
   let gezogen = false;
   const flaeche = labels.domElement;
-  flaeche.addEventListener('pointerdown', () => { gezogen = false; });
-  flaeche.addEventListener('pointermove', (e) => {
-    gezogen = gezogen || e.buttons > 0;
-    if (e.buttons) return;
+  let start = null;
+  const treffer = (e) => {
     const r = flaeche.getBoundingClientRect();
     maus.set(((e.clientX - r.left) / r.width) * 2 - 1, -((e.clientY - r.top) / r.height) * 2 + 1);
     ray.setFromCamera(maus, kamera);
-    const treffer = ray.intersectObjects(teile.map((t) => t.mesh))[0]?.object.userData.teil ?? null;
-    if (treffer !== hot) markiere(treffer?.i ?? null, true);
-    flaeche.style.cursor = treffer ? 'pointer' : '';
+    return ray.intersectObjects(teile.map((t) => t.mesh))[0]?.object.userData.teil ?? null;
+  };
+  flaeche.addEventListener('pointerdown', (e) => { gezogen = false; start = [e.clientX, e.clientY]; });
+  flaeche.addEventListener('pointermove', (e) => {
+    if (e.buttons && start && Math.hypot(e.clientX - start[0], e.clientY - start[1]) > 6) gezogen = true;
+    if (e.buttons) return;
+    if (e.pointerType !== 'mouse') return;
+    const t = treffer(e);
+    if (t !== hot) markiere(t?.i ?? null, true);
+    flaeche.style.cursor = t ? 'pointer' : '';
     if (!tip) return;
-    tip.hidden = !treffer;
-    if (treffer) {
-      tip.innerHTML = `${treffer.nr ? `<span class="n">${treffer.nr}</span>` : ''}<b>${esc(treffer.p.name)}</b><small>${esc(materialVon(treffer.p)?.name ?? '')} · ${gramm(treffer.p.mass)}</small>`;
+    tip.hidden = !t;
+    if (t) {
+      tip.innerHTML = `${t.nr ? `<span class="n">${t.nr}</span>` : ''}<b>${esc(t.p.name)}</b><small>${esc(materialVon(t.p)?.name ?? '')} · ${gramm(t.p.mass)}</small>`;
       tip.style.left = `${e.clientX + 14}px`; tip.style.top = `${e.clientY + 14}px`;
     }
   });
   flaeche.addEventListener('pointerleave', () => { markiere(null, true); if (tip) tip.hidden = true; });
-  flaeche.addEventListener('click', () => { if (!gezogen) waehle(hot?.i ?? null, true); });
+  flaeche.addEventListener('click', (e) => { if (!gezogen) waehle(treffer(e)?.i ?? null, true); });
+  // Doppeltippen setzt die Ansicht zurück
+  flaeche.addEventListener('dblclick', () => steuerung.reset());
 
-  steuerung.addEventListener('change', neu);
-  renderer.setAnimationLoop(() => {
-    steuerung.update();
-    if (!geaendert) return;
-    geaendert = false;
-    if (fotoAn) nach.render(); else renderer.render(scene, kamera);
-    labels.render(scene, kamera);
-  });
+  renderer.setAnimationLoop(() => { steuerung.update(); renderer.render(scene, kamera); labels.render(scene, kamera); });
 
   return {
-    lade, explosion, faerbe, markiere, waehle, foto,
-    drehen: (an) => { steuerung.autoRotate = an; },
+    lade, explosion, faerbe, markiere, waehle,
     nummern: (an) => flaeche.classList.toggle('ohne-nummern', !an),
     get teile() { return teile; },
   };

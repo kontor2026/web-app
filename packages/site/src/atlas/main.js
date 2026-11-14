@@ -1,6 +1,6 @@
 // Lebensweg: ein Gegenstand, sieben Stationen. Links das Bild (Globus, 3D-Modell, Balken), rechts das Datenblatt.
 // Regel: Jede Zahl trägt einen Beleg (Chip „Quelle“) oder ist als „Schätzung“ markiert.
-import { shell, esc, zahl, gramm, datum, SCHRITTE, icon, chip, schaetzung, quelleUrl, repoUrl } from '../shell.js';
+import { shell, esc, zahl, gramm, datum, SCHRITTE, icon, chip, schaetzung, quelleUrl, WEG_ICON } from '../shell.js';
 import { CLASSES, MATERIALS } from '../../../../js/data/catalog.js';
 import daten from '../daten/atlas.json';
 import { waehlerHtml, verbindeWaehler } from '../waehler.js';
@@ -59,7 +59,7 @@ function baueGeruest() {
         <div class="lw-globus" id="globus"></div>
         <div class="lw-szene" id="szene"></div>
         <div class="lw-balken" id="balken"></div>
-        <div class="lw-strom"><div class="strom" id="strom"></div></div>
+        <div class="lw-strom"><button class="lw-strom-auf" id="strom-auf" aria-expanded="false">${icon('weg')}Materialfluss zeigen</button><div class="strom" id="strom"></div></div>
       </div>
       <div class="legend" id="legende"></div>
     </div>
@@ -77,6 +77,23 @@ function baueGeruest() {
     onSelect: (i) => { if (schritt === 'gegenstand') zeigeTeil(i); },
   });
   new ResizeObserver(() => { if (schritt === 'abbau' || schritt === 'verarbeitung') zeichneStrom(); }).observe(document.getElementById('strom'));
+  document.getElementById('strom-auf').addEventListener('click', (e) => {
+    const auf = document.querySelector('.lw').classList.toggle('strom-offen');
+    e.currentTarget.setAttribute('aria-expanded', String(auf));
+    e.currentTarget.lastChild.textContent = auf ? 'Materialfluss ausblenden' : 'Materialfluss zeigen';
+  });
+  // Wischen über dem Datenblatt wechselt die Station (das Bild darüber bleibt drehbar)
+  let wisch = null;
+  const pan = document.getElementById('panel');
+  pan.addEventListener('touchstart', (e) => { wisch = [e.touches[0].clientX, e.touches[0].clientY]; }, { passive: true });
+  pan.addEventListener('touchend', (e) => {
+    if (!wisch) return;
+    const dx = e.changedTouches[0].clientX - wisch[0], dy = e.changedTouches[0].clientY - wisch[1];
+    wisch = null;
+    if (Math.abs(dx) < 60 || Math.abs(dx) < Math.abs(dy) * 1.5) return;
+    const i = IDS.indexOf(schritt), j = i + (dx < 0 ? 1 : -1);
+    if (j >= 0 && j < IDS.length) location.hash = link(IDS[j], null);
+  }, { passive: true });
 }
 
 const link = (s = schritt, r = gewaehlt) => `#kat=${obj.id}&s=${s}${r ? `&r=${r}` : ''}`;
@@ -91,10 +108,11 @@ async function zeige(o, s, r) {
     a.href = link(IDS[j], null); a.classList.toggle('on', j === i); a.toggleAttribute('aria-current', j === i);
   });
   document.querySelector('.lw').dataset.schritt = s;
-  document.getElementById('zurueck').href = i > 0 ? link(IDS[i - 1], null) : '#';
-  document.getElementById('zurueck').innerHTML = i > 0 ? `← ${SCHRITTE[i - 1].name}` : '← Gegenstand wählen';
+  document.getElementById('zurueck').href = i > 0 ? link(IDS[i - 1], null) : '../';
+  document.getElementById('zurueck').innerHTML = `<span class="pfeil">←</span>${i > 0 ? SCHRITTE[i - 1].name : 'Anderer Gegenstand'}`;
   document.getElementById('weiter').href = i < IDS.length - 1 ? link(IDS[i + 1], null) : link(IDS[0], null);
-  document.getElementById('weiter').innerHTML = i < IDS.length - 1 ? `${SCHRITTE[i + 1].name} →` : 'Von vorn →';
+  document.getElementById('weiter').innerHTML = `${i < IDS.length - 1 ? SCHRITTE[i + 1].name : 'Von vorn'}<span class="pfeil">→</span>`;
+  localStorage.setItem('lebensweg-letzt', o.id);
   document.getElementById('ort').innerHTML = `<b>${esc(o.name)}</b> <span>· ${i + 1} / ${IDS.length}</span>`;
   if (neu || !seed) { seed = await ladeModell(o.id); viewer.lade(seed); }
   viewer.nummern(s === 'gegenstand');
@@ -143,7 +161,7 @@ function zeigeRohstoffe() {
       return `<a href="${link(schritt, x.key)}" class="lw-chip ${x.key === gewaehlt ? 'on' : ''} ${da ? '' : 'leer'}" title="${da ? '' : 'Keine Länderdaten'}">
         <i style="background:${y.farbe}"></i>${esc(y.name)}</a>`;
     }).join('')}</div>
-    ${r ? `<div class="lw-zahl"><b>${gramm(menge)}</b><span>${esc(r.name)} im Gegenstand${r.kritisch ? ` · <em class="krit">▲ kritisch für die EU</em>${chip(quelleUrl(QUELLE, ROH[gewaehlt].kritisch_quelle, ROH[gewaehlt].kritisch_pdf_seite), 'Verordnung (EU) 2024/1252, Anhang II')}` : ''}</span>${schaetzung('tools/kategorien/rohstoffe.py', 'Aus den Massen des 3D-Modells berechnet')}</div>` : ''}
+    ${r ? `<div class="lw-zahl"><b>${gramm(menge)}</b><span>${esc(r.name)} im Gegenstand${r.kritisch ? ` · <em class="krit">▲ kritisch für die EU</em>${chip(quelleUrl(QUELLE, ROH[gewaehlt].kritisch_quelle, ROH[gewaehlt].kritisch_pdf_seite), 'Verordnung (EU) 2024/1252, Anhang II')}` : ''}</span>${schaetzung('tools/kategorien/rohstoffe.py', 'Aus dem 3D-Modell berechnet')}</div>` : ''}
     ${st ? `<div><h3>Nach Land ${belegStufe(st)}</h3>${laenderListe(st.anteile, st.rest)}
       <p class="lw-fuss">${esc(st.jahr ?? '')} · ${esc(QUELLE[st.quelle]?.herausgeber ?? QUELLE[st.quelle]?.titel ?? '')}</p></div>`
     : `<p class="note">Keine Länderdaten mit Quelle.</p>`}`);
@@ -156,10 +174,9 @@ function zeigeHerstellung() {
   globus.zeige(im?.anteile ?? {});
   legende([]);
   setzePanel(im?.anteile ? `
-    <div><h3>Importe nach Deutschland ${chip(im.api_url ?? IMP.quelle?.url, `${IMP.quelle?.titel ?? 'UN Comtrade'}, HS ${im.hs}`)}</h3>${laenderListe(im.anteile, im.rest)}
-      <p class="lw-fuss">${esc(im.jahr)} · nach Importwert · HS ${esc(im.hs)}</p>
-      ${im.zuordnung === 'breit' ? `<p class="note">Die Zollnummer umfasst auch andere Waren. Die Länder gelten für die ganze Warengruppe.</p>` : ''}
-      ${im.hinweis ? `<details class="lw-mehr"><summary>Zur Zollnummer</summary><p>${esc(im.hinweis)}</p><p>HS ${esc(im.hs)}: ${esc(im.hs_text ?? '')}</p></details>` : ''}</div>`
+    <div><h3>Importe nach Deutschland ${chip(im.api_url ?? IMP.quelle?.url, IMP.quelle?.titel ?? 'UN Comtrade')}</h3>${laenderListe(im.anteile, im.rest)}
+      <p class="lw-fuss">${esc(im.jahr)} · nach Wert der Importe</p>
+      ${im.zuordnung === 'breit' ? `<p class="note">Die Zahlen gelten für eine größere Warengruppe, zu der dieser Gegenstand gehört.</p>` : ''}</div>`
     : `<p class="note">${IMP ? 'Für diesen Gegenstand gibt es keine passende Zollnummer.' : 'Die Importdaten werden gerade zusammengestellt.'}</p>`);
   verbindeLaender();
 }
@@ -176,13 +193,15 @@ function zeigeGegenstand() {
   const sortiert = [...mix].sort((a, b) => b[1] - a[1]);
   setzePanel(`
     <div class="lw-zahl"><b>${gramm(obj.gramm)}</b><span>${esc(obj.name)}</span>${schaetzung(CSV, 'Typisches Gewicht, eigene Schätzung')}</div>
-    <button class="btn ghost lw-habich" id="habich">${bestand()[obj.id] ? `Auf der Werkbank: ${bestand()[obj.id]}× · noch einer +` : '+ Hab ich, auf die Werkbank'}</button>
+    ${bestand()[obj.id] ? `<div class="lw-habich-da"><span>Auf deiner Werkbank</span><span class="wb-stepper"><button data-d="-1" aria-label="weniger">−</button><b>${bestand()[obj.id]}</b><button data-d="1" aria-label="mehr">+</button></span></div>`
+      : '<button class="btn ghost lw-habich" id="habich"><span class="pfeil">+</span>Hab ich, auf die Werkbank</button>'}
     <div><div class="mix">${sortiert.map(([c, g]) => `<i style="width:${(g / gesamt) * 100}%;background:${CLASSES[c]?.color}"></i>`).join('')}</div>
       <div class="mix-legend">${sortiert.map(([c, g]) => `<span><i style="background:${CLASSES[c]?.color}"></i>${esc(CLASSES[c]?.label)}<b>${zahl((g / gesamt) * 100, 0)} %</b></span>`).join('')}</div></div>
-    <div><h3>${seed.parts.length} Teile ${chip(repoUrl(`tools/kategorien/modelle/${obj.id}.json`), '3D-Modell im Repository', 'Modell')}</h3>
+    <div><h3>${seed.parts.length} Teile</h3>
       <div class="plist">${viewer.teile.map((t) => `<button class="prow" data-i="${t.i}"><span class="n">${t.nr ?? '–'}</span>
         <span>${esc(t.p.name)}<small>${esc(materialVon(t.p)?.name ?? '')}</small></span><span class="m">${gramm(t.p.mass)}</span></button>`).join('')}</div></div>`);
-  document.getElementById('habich').addEventListener('click', () => { plus(obj.id); zeigeGegenstand(); });
+  document.getElementById('habich')?.addEventListener('click', () => { plus(obj.id); zeigeGegenstand(); });
+  panel().querySelectorAll('.lw-habich-da button').forEach((b) => b.addEventListener('click', () => { plus(obj.id, +b.dataset.d); zeigeGegenstand(); }));
   panel().querySelectorAll('.prow').forEach((b) => {
     b.addEventListener('pointerenter', () => viewer.markiere(+b.dataset.i));
     b.addEventListener('pointerleave', () => viewer.markiere(null));
@@ -194,7 +213,7 @@ function zeigeTeil(i) {
   const p = viewer.teile[i].p;
   setzePanel(`
     <nav class="crumbs"><button id="zu">${esc(obj.name)}</button><span></span><b style="font-weight:500;color:var(--ink)">${esc(p.name)}</b></nav>
-    <div class="lw-zahl"><b>${gramm(p.mass)}</b><span>${esc(p.name)}</span>${chip(repoUrl(`tools/kategorien/modelle/${obj.id}.json`), '3D-Modell im Repository', 'Modell')}</div>
+    <div class="lw-zahl"><b>${gramm(p.mass)}</b><span>${esc(p.name)}</span></div>
     <div><h3>Material</h3>${(p.materials ?? []).map(([m, a]) => `
       <div class="mrow"><i style="background:${CLASSES[MATERIALS[m]?.cls]?.color ?? '#ccc'}"></i><span>${esc(MATERIALS[m]?.name ?? m)}</span>
         <span class="pct">${a} %</span><span></span><div class="mbar"><b style="width:${a}%"></b></div></div>`).join('')}</div>`);
@@ -217,9 +236,9 @@ function zeigeUpcycling() {
     .map((r) => ({ r, s: stand(r, mitDiesem) })).sort((a, b) => b.s.ok / b.s.alle - a.s.ok / a.s.alle);
   const name = (cid) => daten.komponenten?.[cid]?.name ?? cid;
   setzePanel(passend.length ? `<div class="lw-rezepte">${passend.map(({ r, s }) => `
-    <article class="lw-rezept"><div class="lw-rezept-kopf"><h2>${esc(r.titel)}</h2><span class="wb-status ${s.baubar ? 'ok' : ''}">${s.baubar ? 'Baubar' : `${s.ok} von ${s.alle}`}</span></div>
+    <article class="lw-rezept"><div class="lw-rezept-kopf"><h2>${esc(r.titel)}</h2><span class="wb-status ${s.baubar ? 'ok' : ''}">${s.baubar ? 'Baubar' : 'Fehlt noch'}</span></div>
       <p class="lw-hinweis">${esc(r.kurz ?? '')}</p>
-      <div class="uses">${s.posten.map((p) => `<div class="use ${p.ok ? 'da' : 'fehlt'}"><i></i><span title="${esc(postenName(p, mitDiesem, name).alle)}">${esc(postenName(p, mitDiesem, name).text)}${postenName(p, mitDiesem, name).mehr ? ` <small>+${postenName(p, mitDiesem, name).mehr}</small>` : ''}</span><span class="q">${Math.min(p.da, p.soll)}/${geschaetzt(p) ? '≈' : ''}${p.soll}</span></div>`).join('')}</div>
+      <div class="uses">${s.posten.map((p) => `<div class="use ${p.ok ? 'da' : 'fehlt'}"><i></i><span title="${esc(postenName(p, mitDiesem, name).alle)}">${esc(postenName(p, mitDiesem, name).text)}${postenName(p, mitDiesem, name).mehr ? ` <small>+${postenName(p, mitDiesem, name).mehr}</small>` : ''}</span><span class="q">${Math.min(p.da, p.soll)} von ${geschaetzt(p) ? '≈' : ''}${p.soll}</span></div>`).join('')}</div>
       <p class="lw-fuss">${esc(r.dauer ?? '')}${chip(r.quelle?.url, r.quelle?.titel)}</p></article>`).join('')}</div>
     <a class="btn ghost" href="../werkbank/">Zur Werkbank →</a>`
     : `<p class="note">${REZEPTE?.length ? 'Noch keine Bauidee nutzt Teile dieses Gegenstands.' : 'Die Bauideen werden gerade geschrieben.'}</p>`);
@@ -239,9 +258,9 @@ function zeigeEntsorgung() {
   // Orientierung auf der Karte (keine Daten): Lübeck und Hamburg grenzen an das AWSH-Gebiet
   globus.region(AWSH.recyclinghoefe, [{ name: 'Lübeck', lat: 53.8655, lng: 10.6866 }, { name: 'Hamburg', lat: 53.5511, lng: 9.9937 }]);
   setzePanel(`
-    <div class="lw-tonne" style="--f:${WEG_FARBE[e.weg]}"><i></i><div><b>${esc(w?.name ?? e.weg)}${chip(e.url, 'AWSH Abfall-ABC')}</b><span>${esc(w?.kurz ?? '')}</span></div></div>
+    <div class="lw-tonne" style="--f:${WEG_FARBE[e.weg]}"><i>${icon(WEG_ICON[e.weg] ?? 'tonne')}</i><div><b>${esc(w?.name ?? e.weg)}${chip(e.url, 'AWSH Abfall-ABC')}</b><span>${esc(w?.kurz ?? '')}</span></div></div>
     ${e.hinweis ? `<p class="lw-hinweis">${esc(e.hinweis)}</p>` : ''}
-    ${(e.teile ?? []).length ? `<div><h3>Getrennt entsorgen</h3>${e.teile.map((t) => `<div class="lw-teil" style="--f:${WEG_FARBE[t.weg]}"><i></i><span>${esc(obj.teile.find((x) => x.cid === t.component_id)?.name ?? daten.komponenten?.[t.component_id]?.name ?? t.component_id)}</span><b>${esc(AWSH.wege[t.weg]?.name ?? t.weg)}</b></div>`).join('')}</div>` : ''}
+    ${(e.teile ?? []).length ? `<div><h3>Getrennt entsorgen</h3>${e.teile.map((t) => `<div class="lw-teil" style="--f:${WEG_FARBE[t.weg]}"><i>${icon(WEG_ICON[t.weg] ?? 'tonne')}</i><span>${esc(obj.teile.find((x) => x.cid === t.component_id)?.name ?? daten.komponenten?.[t.component_id]?.name ?? t.component_id)}</span><b>${esc(AWSH.wege[t.weg]?.name ?? t.weg)}</b></div>`).join('')}</div>` : ''}
     ${e.unsicher ? `<p class="note">AWSH nennt den Gegenstand nicht direkt. Zuordnung nach der Regel für sein Material.</p>` : ''}
     ${hof ? `<details class="lw-mehr lw-hof"><summary>${AWSH.recyclinghoefe.length} Recyclinghöfe ${chip('https://www.awsh.de/recyclinghoefe/uebersicht/', 'AWSH Recyclinghöfe')}</summary><div class="lw-hoefe">${AWSH.recyclinghoefe.map((h) => `
       <a href="${esc(h.lat ? `https://www.openstreetmap.org/?mlat=${h.lat}&mlon=${h.lng}#map=16/${h.lat}/${h.lng}` : h.url)}" target="_blank" rel="noopener">
@@ -258,8 +277,8 @@ function zeigeVerwertung() {
   const rest = s ? Math.max(0, 100 - teile.reduce((x, [k]) => x + s[k], 0)) : 0;
   const q = s && VW.quellen?.[s.quelle];
   document.getElementById('balken').innerHTML = s ? `<div class="lw-balken-bild">
-      <div class="lw-saeule">${teile.map(([k, , f]) => `<i style="flex-basis:${s[k]}%;background:${f}"></i>`).join('')}${rest > 0.5 ? `<i class="rest" style="flex-basis:${rest}%"></i>` : ''}</div>
-      <div class="lw-saeule-text">${(() => { let unten = 0; return [...teile.map(([k, n, f]) => [s[k], n, f, '']), ...(rest > 0.5 ? [[rest, 'nicht ausgewiesen', 'var(--rule)', 'rest']] : [])]
+      <div class="lw-saeule">${teile.map(([k, , f]) => `<i style="flex-basis:${s[k]}%;background:${f}"></i>`).join('')}${rest >= 0.1 ? `<i class="rest" style="flex-basis:${rest}%"></i>` : ''}</div>
+      <div class="lw-saeule-text">${(() => { let unten = 0; return [...teile.map(([k, n, f]) => [s[k], n, f, '']), ...(rest >= 0.1 ? [[rest, 'sonstiges, nicht ausgewiesen', 'var(--rule)', 'rest']] : [])]
         .map(([v, n, f, k]) => { const m = unten + v / 2; unten += v; return `<p class="${k}" style="--f:${f};bottom:${m}%"><b>${zahl(v)} %</b>${n}</p>`; }).join(''); })()}</div></div>`
     : '<p class="lw-leer">Keine amtliche Zahl</p>';
   setzePanel(s ? `
@@ -267,7 +286,7 @@ function zeigeVerwertung() {
     ${e.weg === 'pfand' ? `<p class="note">Pfandflaschen und -dosen werden getrennt zurückgenommen. Eine eigene amtliche Quote dafür enthält diese Quelle nicht.</p>` : ''}
     ${s.sammelquote != null && s.recycelt != null ? `<p class="lw-hinweis">Aber nur ${zahl(s.sammelquote)} % werden überhaupt gesammelt.</p>` : ''}
     <p class="lw-fuss">Deutschland · ${esc(s.jahr)} · ${esc(q?.herausgeber ?? '')}</p>
-    <details class="lw-mehr"><summary>Was genau gezählt wird</summary><p>${esc(s.was ?? '')}</p>${s.hinweis ? `<p>${esc(s.hinweis)}</p>` : ''}</details>`
+    <details class="lw-mehr"><summary>Was genau gezählt wird</summary><p>${esc(s.was ?? '')}</p></details>`
     : `<p class="note">${e ? 'Für diesen Entsorgungsweg gibt es keine amtliche Zahl.' : 'Keine Daten.'}</p>`);
 }
 
@@ -275,7 +294,7 @@ function zeigeVerwertung() {
 function ausHash() {
   const p = new URLSearchParams(location.hash.slice(1));
   const o = objektVon.get(p.get('kat'));
-  if (!o) return zeigeWahl();
+  if (!o) return location.replace(`#kat=${objektVon.has(localStorage.getItem('lebensweg-letzt')) ? localStorage.getItem('lebensweg-letzt') : 'smartphone'}`);
   zeige(o, IDS.includes(p.get('s')) ? p.get('s') : 'gegenstand', p.get('r'));
 }
 addEventListener('hashchange', ausHash);

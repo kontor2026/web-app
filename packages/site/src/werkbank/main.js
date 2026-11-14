@@ -16,7 +16,7 @@ const WERKZEUG = {
   gluing_contact_adhesive: 'Kontaktkleber', gluing_double_sided_tape: 'Doppelseitiges Klebeband',
 };
 const name = (cid) => K[cid]?.name ?? cid;
-let filter = 'alle', offen = new Set();
+let filter = null, offen = new Set();   // null = automatisch: Baubar, wenn es etwas gibt
 
 const app = shell('werkbank', '../');
 app.innerHTML = `
@@ -29,16 +29,19 @@ app.innerHTML = `
     <div class="ideas" id="ideen"></div>
   </div>
   <aside class="inv">
-    <h3>Deine Werkbank</h3>
-    <p>Was du zuhause hast.</p>
+    <details class="wb-bestand" id="bestand-klapp"><summary><b>Deine Werkbank</b><span id="bestand-kurz"></span></summary>
     <div class="wb-suche"><input class="suche-feld" id="suche" type="search" placeholder="Gegenstand hinzufügen" autocomplete="off" aria-label="Gegenstand hinzufügen"><ul id="treffer" hidden></ul></div>
-    <div id="liste"></div>
+    <div id="liste"></div></details>
   </aside>
 </section>`;
 
 // ---------- Bestand rechts ----------
+const breit = matchMedia('(min-width: 901px)');
 function zeigeBestand() {
   const b = bestand(), ids = Object.keys(b);
+  const klapp = document.getElementById('bestand-klapp');
+  if (breit.matches || !ids.length) klapp.open = true;
+  document.getElementById('bestand-kurz').textContent = ids.length ? `${Object.values(b).reduce((s, n) => s + n, 0)} Gegenstände` : 'leer';
   const teile = bauteile(objektVon);
   document.getElementById('liste').innerHTML = ids.length ? `
     ${ids.map((id) => `<div class="irow wb-zeile"><a class="f" href="../atlas/#kat=${id}" title="Lebensweg">${esc(objektVon.get(id)?.name ?? id)}</a>
@@ -67,7 +70,7 @@ function zeigeIdeen() {
   const alle = (REZEPTE ?? []).map((r) => ({ r, s: stand(r, teile) }))
     .sort((a, b) => b.s.baubar - a.s.baubar || b.s.ok / b.s.alle - a.s.ok / a.s.alle || a.r.titel.localeCompare(b.r.titel, 'de'));
   const zahl = { baubar: alle.filter((x) => x.s.baubar).length, fast: alle.filter((x) => !x.s.baubar && x.s.teilweise).length, alle: alle.length };
-  if (filter !== 'alle' && !zahl[filter]) filter = 'alle';
+  if (!filter || !zahl[filter]) filter = zahl.baubar ? 'baubar' : zahl.fast ? 'fast' : 'alle';
   document.getElementById('filter').innerHTML = [['baubar', 'Baubar'], ['fast', 'Fast'], ['alle', 'Alle']]
     .map(([k, t]) => `<button data-f="${k}" class="${filter === k ? 'on' : ''}" ${zahl[k] ? '' : 'disabled'}>${t} ${zahl[k]}</button>`).join('');
   document.querySelectorAll('#filter button').forEach((x) => x.addEventListener('click', () => { filter = x.dataset.f; zeigeIdeen(); }));
@@ -76,19 +79,19 @@ function zeigeIdeen() {
   const sichtbar = alle.filter((x) => filter === 'alle' || (filter === 'baubar' ? x.s.baubar : !x.s.baubar && x.s.teilweise));
   document.getElementById('ideen').innerHTML = sichtbar.map(({ r, s }, i) => `
     <article class="idea wb-idee ${s.baubar ? 'baubar' : ''}" id="r-${r.id}">
-      <div class="wb-kopf"><span class="letter">${String.fromCharCode(65 + (i % 26))}</span>
-        <span class="wb-status">${s.baubar ? 'Baubar' : `${s.ok} von ${s.alle}`}</span></div>
+      <div class="wb-kopf"><span class="lw-nr">${String(i + 1).padStart(2, '0')}</span>
+        <span class="wb-status ${s.baubar ? 'ok' : ''}">${s.baubar ? 'Baubar' : 'Fehlt noch'}</span></div>
       <div><h2>${esc(r.titel)}</h2><p class="kurz">${esc(r.kurz ?? '')}</p></div>
       <div class="meta"><span>${esc(r.dauer ?? '')}</span><span class="dots">${'●'.repeat(r.stufe ?? 1)}${'○'.repeat(3 - (r.stufe ?? 1))}</span></div>
       <div><h4>Du brauchst</h4><div class="uses">${s.posten.map((p) => `
-        <div class="use ${p.ok ? 'da' : 'fehlt'}"><i></i><span title="${esc(postenName(p, teile, name).alle)}">${esc(postenName(p, teile, name).text)}${postenName(p, teile, name).mehr ? ` <small>+${postenName(p, teile, name).mehr}</small>` : ''}${p.hinweis ? `<small class="wb-hinweis">${esc(p.hinweis)}</small>` : ''}</span><span class="q">${Math.min(p.da, p.soll)}/${geschaetzt(p) ? '≈' : ''}${p.soll}</span>
+        <div class="use ${p.ok ? 'da' : 'fehlt'}"><i></i><span title="${esc(postenName(p, teile, name).alle)}">${esc(postenName(p, teile, name).text)}${postenName(p, teile, name).mehr ? ` <small>+${postenName(p, teile, name).mehr}</small>` : ''}${p.hinweis ? `<small class="wb-hinweis">${esc(p.hinweis)}</small>` : ''}</span><span class="q">${Math.min(p.da, p.soll)} von ${geschaetzt(p) ? '≈' : ''}${p.soll}</span>
           ${p.ok ? '<span></span>' : `<button class="wb-wo" data-k="${r.id}:${p.component_id}" aria-expanded="${offen.has(`${r.id}:${p.component_id}`)}">Wo?</button>`}</div>
         ${!p.ok && offen.has(`${r.id}:${p.component_id}`) ? `<div class="wb-quellen">${p.ids.flatMap((id) => K[id]?.in ?? []).filter((v, j, a) => a.indexOf(v) === j).slice(0, 8).map((oid) => `
           <div><a href="../atlas/#kat=${oid}">${esc(objektVon.get(oid)?.name ?? oid)}</a><button data-plus="${oid}" aria-label="Hab ich">+ Hab ich</button></div>`).join('')}</div>` : ''}`).join('')}</div></div>
-      <div class="tools">${(r.werkzeug ?? []).map((w) => `<span class="tag">${esc(WERKZEUG[w] ?? w)}</span>`).join('')}</div>
-      <details class="wb-anleitung"><summary>Anleitung</summary><ol class="steps-list">${(r.schritte ?? []).map((x) => `<li>${esc(x)}</li>`).join('')}</ol>
+      <details class="wb-anleitung" ${breit.matches ? '' : ''}><summary>Werkzeug und Anleitung</summary>
+        <div class="tools">${(r.werkzeug ?? []).map((w) => `<span class="tag">${esc(WERKZEUG[w] ?? w)}</span>`).join('')}</div><ol class="steps-list">${(r.schritte ?? []).map((x) => `<li>${esc(x)}</li>`).join('')}</ol>
         ${r.sicherheit ? `<p class="note warn">${esc(r.sicherheit)}</p>` : ''}</details>
-      <p class="wb-quelle">${esc(r.quelle?.titel ?? '')}${chip(r.quelle?.url, r.quelle?.titel)}${s.posten.some(geschaetzt) ? `<a class="chip-q schaetzung" href="${esc(repoUrl(`data/rezepte/${r.id}.json`))}" target="_blank" rel="noopener" title="Mengen mit ≈ sind geschätzt">≈ Schätzung</a>` : ''}</p>
+      <p class="wb-quelle">${esc(r.quelle?.titel ?? '')}${chip(r.quelle?.url, r.quelle?.titel)}${s.posten.some(geschaetzt) ? `<span class="chip-q schaetzung" title="Mengen mit ≈ sind geschätzt">≈ Schätzung</span>` : ''}</p>
     </article>`).join('') || '<p class="leer">Keine Bauideen in dieser Auswahl.</p>';
   document.querySelectorAll('.wb-wo').forEach((x) => x.addEventListener('click', () => { offen.has(x.dataset.k) ? offen.delete(x.dataset.k) : offen.add(x.dataset.k); zeigeIdeen(); }));
   document.querySelectorAll('[data-plus]').forEach((x) => x.addEventListener('click', () => plus(x.dataset.plus)));

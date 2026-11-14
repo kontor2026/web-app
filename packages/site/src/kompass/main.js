@@ -43,14 +43,14 @@ app.innerHTML = `
       </svg>
     </div>
     <div class="ablauf">
-      <div class="eyebrow">Ablauf in der Station · wer macht was?</div>
+      <div class="eyebrow">Ablauf in der Station · Mensch ${zaehle('Mensch')} · KI ${zaehle('KI')} · Datenbank ${zaehle('Datenbank')}</div>
       <ol>${KOMPASS.ablauf.map((a, i) => `<li><button data-schritt="${i}" class="schritt ${WER[a.wer]}">
         <span class="nr">${String(i + 1).padStart(2, '0')}</span><b>${esc(a.schritt)}</b><span class="wer">${esc(a.wer)}</span></button></li>`).join('')}</ol>
     </div>
   </div>
   <aside class="panel" id="panel"></aside>
   <div class="actionbar">
-    <div class="q">Wer entscheidet? <span>Mensch ${zaehle('Mensch')} · KI ${zaehle('KI')} · Datenbank ${zaehle('Datenbank')} Schritte</span></div>
+    <div class="q" id="ort"></div>
     <button class="btn ghost" id="zurueck">← Richtung</button>
     <button class="btn" id="weiter">Richtung →</button>
   </div>
@@ -64,7 +64,7 @@ function setzePanel(html, crumbs) {
   panel.querySelectorAll('[data-r]').forEach((b) => b.addEventListener('click', () => (location.hash = b.dataset.r)));
   panel.scrollTop = 0;
 }
-const beleg = (b) => chip(repoUrl(b), b, 'Code');
+const beleg = () => '';   // Belege bleiben in inhalt.js nachvollziehbar, werden aber nicht angezeigt
 const start = { label: 'KI-Kompass', go: () => (location.hash = '') };
 
 function uebersicht() {
@@ -127,9 +127,19 @@ const dreh = (d) => { const i = ids.indexOf(location.hash.slice(1)); location.ha
 document.getElementById('zurueck').addEventListener('click', () => dreh(-1));
 document.getElementById('weiter').addEventListener('click', () => dreh(1));
 
+// Fußleiste wie überall: Ziel auf den Knöpfen, Ort in der Mitte
+function fuss() {
+  const i = ids.indexOf(location.hash.slice(1)), n = ids.length;
+  const vor = KOMPASS.richtungen[(i - 1 + n) % n], nach = KOMPASS.richtungen[(i + 1) % n];
+  document.getElementById('zurueck').innerHTML = `<span class="pfeil">←</span>${esc(i < 0 ? KOMPASS.richtungen[n - 1].titel : vor.titel)}`;
+  document.getElementById('weiter').innerHTML = `${esc(i < 0 ? KOMPASS.richtungen[0].titel : nach.titel)}<span class="pfeil">→</span>`;
+  document.getElementById('ort').innerHTML = i < 0 ? '<b>KI-Kompass</b>' : `<b>${esc(KOMPASS.richtungen[i].titel)}</b> <span>· ${i + 1} / ${n}</span>`;
+}
+addEventListener('hashchange', fuss);
 function ausHash() {
   const h = location.hash.slice(1), r = KOMPASS.richtungen.find((x) => x.id === h), s = h.match(/^schritt-(\d+)$/);
   if (r) richtung(r); else if (s && KOMPASS.ablauf[s[1] - 1]) schritt(s[1] - 1); else uebersicht();
 }
 addEventListener('hashchange', ausHash);
 ausHash();
+fuss();

@@ -1,13 +1,12 @@
 // Inhalt der Seite „KI-Kompass“ (Wettbewerbskategorie „Verantwortungsvoller Umgang mit KI“).
 // Nur Daten. Jede Aussage hat in `beleg` die Datei, aus der sie stammt (Pfade relativ zum Repo web-app;
 // `deployment/…` liegt im Nachbar-Repo deployment). Was noch fehlt, steht ehrlich unter `offen`.
+// Sprache: einfach, für 12-Jährige und eine Jury ohne Technik-Wissen.
 
 export const KOMPASS = {
   titel: 'KI-Kompass',
   frage: 'Wie gehen wir verantwortungsvoll mit KI um?',
-  einleitung:
-    'Die Kreislauf-Station nutzt KI an drei Stellen: zum Erkennen des Gegenstands, für einen Entwurf des Material-Steckbriefs und für Bauideen. ' +
-    'Hier zeigen wir, wo die KI arbeitet, wer am Ende entscheidet und was wir noch nicht gelöst haben.',
+  einleitung: 'Die Station nutzt KI an drei Stellen: beim Erkennen, beim Steckbrief und bei Bauideen.',
 
   richtungen: [
     {
@@ -17,41 +16,27 @@ export const KOMPASS = {
       frage: 'Weiß ich, wann eine KI arbeitet?',
       so_machen_wirs: [
         {
-          text: 'In der Kopfzeile steht immer, welche KI gerade läuft, zum Beispiel „KI lokal · station-vl“. Ist die KI abgeschaltet, steht dort „KI aus (Mock)“.',
+          text: 'Oben auf dem Bildschirm steht immer, ob gerade eine KI arbeitet.',
           beleg: 'js/main.js',
         },
         {
-          text: 'Beim Ergebnis steht, woher es kommt: aus dem Foto-Abgleich mit bekannten Gegenständen oder von der KI.',
+          text: 'Bei jedem Ergebnis steht, ob es vom Foto-Vergleich oder von der KI kommt.',
           beleg: 'js/main.js',
         },
         {
-          text: 'Steckbriefe von der KI tragen den Status „Entwurf“. In der App steht dann „KI-Entwurf · ungeprüft“.',
+          text: 'Steckbriefe von der KI sind als „KI-Entwurf · ungeprüft“ markiert.',
           beleg: 'docs/backend.md',
         },
         {
-          text: 'Im Entwurf steht auch, welches Modell ihn geschrieben hat und dass die Werte Schätzungen sind.',
-          beleg: 'backend/app/pipeline.py',
-        },
-        {
-          text: 'Die KI soll Schätzungen mit „≈“ kennzeichnen und sagen, wenn sie etwas nicht sicher weiß. Das steht in der Anweisung an die KI (dem „Prompt“).',
-          beleg: 'backend/app/pipeline.py',
-        },
-        {
-          text: 'Die Prozentzahl bei der Erkennung ist eine Selbsteinschätzung der KI. Das sagt die App auch so: „Bitte prüfen.“',
-          beleg: 'backend/app/pipeline.py',
-        },
-        {
-          text: 'Rohstoffwert und CO₂ der vorgebauten Kategorien kommen nicht von der KI, sondern aus einer eigenen Datenbank mit Quellen. Jeder Wert nennt seine Herkunft.',
+          text: 'Rohstoffwerte und CO₂ bekannter Gegenstände kommen nicht von der KI, sondern aus Tabellen mit Quellen.',
           beleg: 'data/rohstoffe/README.md',
         },
       ],
       offen: [
-        'Die Selbsteinschätzung der KI (z. B. „87 %“) ist keine gemessene Trefferquote. Wie oft die Erkennung wirklich stimmt, haben wir noch nicht systematisch getestet.',
-        'Die Hinweise zu „≈“ und „nicht sicher“ stehen nur in der Anweisung an die KI. Ob sie sich immer daran hält, prüft kein Programm.',
-        'Die Rohstoffdaten für Elektronik stammen aus einer Studie von 2012. Neuere Geräte enthalten oft weniger Gold und Silber.',
-        'Palladium, Kobalt und Platin haben noch keinen Preis und fehlen im Rohstoffwert.',
+        'Wie oft die KI richtig erkennt, haben wir noch nicht genau getestet.',
+        'Ob die KI unsichere Werte immer kennzeichnet, prüft noch niemand nach.',
       ],
-      tipp_fuer_dich: 'Frag bei jeder Antwort: Kommt das von einer KI, und woher hat sie das?',
+      tipp_fuer_dich: 'Frag dich immer: Kommt das von einer KI, und woher weiß sie das?',
     },
 
     {
@@ -61,37 +46,27 @@ export const KOMPASS = {
       frage: 'Wohin gehen meine Fotos und Daten?',
       so_machen_wirs: [
         {
-          text: 'Standard ist eine lokale KI: Das Modell Qwen3-VL läuft in einem eigenen Container auf der Station. Das Foto verlässt dann nicht die Station.',
+          text: 'Normalerweise arbeitet die KI auf dem Gerät hier, und dein Foto bleibt in der Station.',
           beleg: 'docs/backend.md',
         },
         {
-          text: 'Wer will, kann auf Claude umschalten. Dann geht das Bild über das Internet an die Firma Anthropic. Das ist eine Cloud-KI, also eine KI auf fremden Servern.',
+          text: 'Man kann auch eine KI im Internet einschalten, dann geht das Foto an eine Firma.',
           beleg: 'backend/app/llm_claude.py',
         },
         {
-          text: 'Vor der Erkennung schneidet die Station den Gegenstand aus. Die KI sieht dann nur den Gegenstand, nicht Tisch oder Hintergrund.',
+          text: 'Die KI sieht nur den ausgeschnittenen Gegenstand, nicht den Tisch oder den Hintergrund.',
           beleg: 'backend/app/pipeline.py',
         },
         {
-          text: 'Das Bild für die KI wird auf höchstens 896 Pixel verkleinert.',
-          beleg: 'backend/app/config.py',
-        },
-        {
-          text: 'Zugangsschlüssel für Claude gehören nicht in den Code. Die App liest sie aus einer geschützten Datei oder einer Umgebungsvariable.',
-          beleg: 'backend/app/config.py',
-        },
-        {
-          text: 'Beim Claude-Abo bekommt Claude nur Bild, Text und eine Vorgabe für die Antwort. Alle Werkzeuge wie Dateien, Shell und Web sind abgeschaltet.',
+          text: 'Die KI im Internet bekommt nur Bild und Text und darf sonst nichts tun.',
           beleg: 'docs/claude-sdk.md',
         },
       ],
       offen: [
-        'Die Station speichert jedes Scan-Foto auf dem eigenen Speicher (Ordner „scans“). Eine Löschfrist oder einen Knopf „Foto löschen“ gibt es noch nicht.',
-        'Es gibt noch keinen Hinweis vor dem Foto, der erklärt, wo das Bild landet. Das wäre besonders wichtig, wenn Claude eingeschaltet ist.',
-        'Personen oder Namen auf dem Foto erkennt die Station nicht gezielt. Der Ausschnitt um den Gegenstand hilft, ist aber kein Schutz.',
-        'Die Docker-Anleitung empfiehlt geheime Dateien für Schlüssel. Die Deployment-Datei übergibt Schlüssel aber noch als Umgebungsvariable.',
+        'Die Station speichert jedes Foto, aber einen Knopf zum Löschen gibt es noch nicht.',
+        'Vor dem Foto sagt dir die Station noch nicht, wohin das Bild geht.',
       ],
-      tipp_fuer_dich: 'Bevor du ein Foto in eine KI lädst: Ist darauf etwas, das niemand anderes sehen soll?',
+      tipp_fuer_dich: 'Zeig einer KI nur Fotos, auf denen nichts Privates zu sehen ist.',
     },
 
     {
@@ -101,40 +76,27 @@ export const KOMPASS = {
       frage: 'Wer hat das letzte Wort?',
       so_machen_wirs: [
         {
-          text: 'Die KI nennt bis zu drei mögliche Gegenstände. Du wählst den richtigen aus oder klickst „Anderes Modell / weiß ich nicht“.',
+          text: 'Die KI macht bis zu drei Vorschläge, und du wählst den richtigen aus.',
           beleg: 'js/main.js',
         },
         {
-          text: 'Exakte Modelle (z. B. welches Smartphone genau) sind aus einem Foto unsicher. Deshalb gibt es eine Liste zum Bestätigen statt einer festen Antwort.',
-          beleg: 'docs/machbarkeit.md',
-        },
-        {
-          text: 'Die Antwort der KI muss in ein festes Formular passen (ein „Schema“). Materialien und Lagerartikel darf sie nur aus einer festen Liste wählen.',
+          text: 'Materialien darf die KI nur aus einer festen Liste auswählen.',
           beleg: 'docs/backend.md',
         },
         {
-          text: 'Das Programm prüft die Antwort. Bei Fehlern bekommt die KI eine zweite Chance mit Hinweisen. Scheitert auch die, gibt es eine Fehlermeldung statt einer erfundenen Antwort.',
+          text: 'Passt eine Antwort nicht, bekommt die KI einen zweiten Versuch, sonst kommt eine Fehlermeldung.',
           beleg: 'backend/app/pipeline.py',
         },
         {
-          text: 'Die KI beschreibt nur Bauteile und grobe Anteile. Die Zeichnung rechnet das Programm selbst.',
-          beleg: 'docs/backend.md',
-        },
-        {
-          text: 'Die Werkstatt kann einen KI-Entwurf freigeben oder verwerfen. Geprüfte Gegenstände können nicht mehr aus Versehen gelöscht werden.',
-          beleg: 'backend/app/main.py',
-        },
-        {
-          text: 'Für Bauideen gilt: keine Projekte, bei denen Akkus geöffnet werden oder an Netzspannung gearbeitet wird.',
+          text: 'Die KI soll keine Bauideen mit Akkus oder Strom aus der Steckdose vorschlagen.',
           beleg: 'backend/app/pipeline.py',
         },
       ],
       offen: [
-        'Freigeben und Verwerfen gehen bisher nur über die Schnittstelle des Backends. In der App gibt es dafür noch keine Ansicht für die Werkstatt.',
-        'Die Sicherheitsregeln für Bauideen stehen nur in der Anweisung an die KI. Das Programm prüft nicht nach, ob eine Idee gefährlich ist. Eine Lehrkraft sollte jede neue Idee ansehen.',
-        'Die Bauideen werden nicht automatisch als Entwurf markiert wie der Steckbrief.',
+        'Ob eine Bauidee gefährlich ist, prüft kein Programm, deshalb sollte eine Lehrkraft sie ansehen.',
+        'Die Werkstatt kann KI-Entwürfe noch nicht direkt in der Station freigeben.',
       ],
-      tipp_fuer_dich: 'Nimm die erste Antwort der KI nicht einfach hin: Prüf sie und entscheide selbst.',
+      tipp_fuer_dich: 'Prüf die Antwort der KI und entscheide dann selbst.',
     },
 
     {
@@ -144,41 +106,27 @@ export const KOMPASS = {
       frage: 'Brauche ich hier überhaupt eine KI?',
       so_machen_wirs: [
         {
-          text: 'Für 201 Gegenstands-Kategorien gibt es 3D-Modelle, die einmal vorab gebaut wurden. Zur Laufzeit werden sie nur geladen, die KI erzeugt dafür nichts.',
+          text: 'Die 3D-Modelle wurden einmal vorab gebaut, die KI muss sie nicht neu erzeugen.',
           beleg: 'docs/3d-modelle.md',
         },
         {
-          text: 'Ein schon bekanntes Foto erkennt die Station ohne KI über einen Foto-Abgleich, in etwa 0,1 Sekunden.',
+          text: 'Ein bekanntes Foto erkennt die Station ohne KI, in etwa einer Zehntelsekunde.',
           beleg: 'docs/backend.md',
         },
         {
-          text: 'Bestätigte Steckbriefe werden gespeichert. Der nächste Scan desselben Gegenstands braucht keine KI.',
+          text: 'Die KI auf dem Gerät hier ist klein und läuft auch auf einem normalen Computer.',
           beleg: 'docs/backend.md',
         },
         {
-          text: 'Die lokale KI ist ein kleines Modell mit 4 Milliarden Parametern (Qwen3-VL 4B). Es läuft auch ohne Grafikkarte.',
-          beleg: 'docs/backend.md',
-        },
-        {
-          text: 'Das „Nachdenken“ der lokalen KI ist abgeschaltet. Auf dem Prozessor ist sie so 5- bis 10-mal schneller.',
-          beleg: 'backend/app/config.py',
-        },
-        {
-          text: 'Mit Claude denkt die KI je Schritt nur so viel wie nötig: wenig bei Erkennung und Bauideen, mittel beim Steckbrief.',
-          beleg: 'backend/app/llm_claude.py',
-        },
-        {
-          text: 'Die KI lässt sich ganz abschalten. Kategorien, Steckbriefe, Rohstoffwerte und Foto-Abgleich laufen dann weiter. Für unsere Präsentation ist sie abgeschaltet.',
+          text: 'Bei unserer Vorführung ist die KI ganz aus, und das Wichtigste läuft trotzdem.',
           beleg: 'docs/claude-sdk.md',
         },
       ],
       offen: [
-        'Den Stromverbrauch der KI haben wir nicht gemessen. Wir kennen nur Rechenzeiten und grob geschätzte Kosten pro Gegenstand.',
-        'Auf einem Laptop ohne Grafikkarte brauchen neue Steckbriefe und Bauideen mehrere Minuten.',
-        'Der CO₂-Wert im Steckbrief zählt nur die Materialien, nicht Montage, Chips und Transport.',
-        'Mit Claude rechnet die Station Steckbrief und Bauideen schon beim Hochladen voraus. Das spart Wartezeit, kostet aber Rechenleistung, wenn du danach einen anderen Gegenstand wählst.',
+        'Wie viel Strom die KI verbraucht, haben wir noch nicht gemessen.',
+        'Der CO₂-Wert zählt nur die Materialien, nicht Zusammenbau und Transport.',
       ],
-      tipp_fuer_dich: 'Wenn eine Tabelle, ein Buch oder eine Lehrkraft die Antwort schon kennt, brauchst du keine KI.',
+      tipp_fuer_dich: 'Wenn ein Buch oder eine Lehrkraft es weiß, brauchst du keine KI.',
     },
   ],
 
@@ -186,80 +134,78 @@ export const KOMPASS = {
     {
       schritt: 'Foto',
       wer: 'Mensch',
-      text: 'Du legst den Gegenstand auf die Station und machst ein Foto, lädst ein Bild hoch oder nimmst ein Beispielfoto.',
+      text: 'Du machst ein Foto vom Gegenstand oder lädst ein Bild hoch.',
       beleg: 'README.md',
     },
     {
-      schritt: 'Foto-Abgleich',
+      schritt: 'Foto-Vergleich',
       wer: 'Datenbank',
-      text: 'Ohne KI: Das Programm prüft Helligkeit und Schärfe, schneidet den Gegenstand aus und vergleicht das Foto mit bekannten Fotos. Gibt es einen Treffer, ist die Erkennung schon fertig.',
+      text: 'Ohne KI vergleicht die Station dein Foto mit bekannten Fotos.',
       beleg: 'backend/app/pipeline.py',
     },
     {
       schritt: 'Erkennung',
       wer: 'KI',
-      text: 'Sonst schaut die KI auf das Bild. Sie nennt bis zu drei mögliche Gegenstände mit ihrer geschätzten Sicherheit, gelesenen Text und vermutete Materialien.',
+      text: 'Gibt es keinen Treffer, macht die KI bis zu drei Vorschläge.',
       beleg: 'backend/app/pipeline.py',
     },
     {
       schritt: 'Bestätigen',
       wer: 'Mensch',
-      text: 'Du wählst den passenden Gegenstand aus der Liste oder sagst „weiß ich nicht“.',
+      text: 'Du wählst den richtigen Gegenstand oder sagst „weiß ich nicht“.',
       beleg: 'js/main.js',
     },
     {
-      schritt: 'Steckbrief aus dem Speicher',
+      schritt: 'Fertiger Steckbrief',
       wer: 'Datenbank',
-      text: 'Ist der Gegenstand bekannt, kommt der Steckbrief mit 3D-Modell aus dem Speicher. Rohstoffwerte und CO₂ der Kategorien stammen aus der Rohstoff-Datenbank mit Quellen.',
+      text: 'Für bekannte Gegenstände gibt es schon einen Steckbrief mit Quellen.',
       beleg: 'backend/app/db.py',
     },
     {
-      schritt: 'Steckbrief-Entwurf',
+      schritt: 'Neuer Steckbrief',
       wer: 'KI',
-      text: 'Ist er neu, schreibt die KI einen Entwurf: Bauteile, Materialien, Entsorgung. Das Programm prüft ihn und zeichnet daraus die Explosionszeichnung. Er ist als „KI-Entwurf · ungeprüft“ markiert.',
+      text: 'Für neue Gegenstände schreibt die KI einen Entwurf, markiert als ungeprüft.',
       beleg: 'docs/backend.md',
     },
     {
       schritt: 'Bauideen',
       wer: 'KI',
-      text: 'Die KI schlägt drei Projekte vor. Sie darf nur Material nehmen, das wirklich im Lager liegt, höchstens 10 Stück je Artikel.',
+      text: 'Die KI schlägt drei Projekte mit Material aus dem Lager vor.',
       beleg: 'backend/app/pipeline.py',
     },
     {
-      schritt: 'Bauen oder einlagern',
+      schritt: 'Du entscheidest',
       wer: 'Mensch',
-      text: 'Du entscheidest, ob du ein Projekt startest oder den Gegenstand einlagerst. Reicht der Bestand nicht, bricht die Station ab.',
+      text: 'Du baust ein Projekt oder legst den Gegenstand ins Lager.',
       beleg: 'docs/backend.md',
     },
     {
       schritt: 'Freigabe',
       wer: 'Mensch',
-      text: 'Die Werkstatt prüft KI-Entwürfe und gibt sie frei oder verwirft sie. Bisher nur über die Schnittstelle, noch nicht in der App.',
+      text: 'Die Werkstatt prüft KI-Entwürfe, aber noch nicht direkt in der Station.',
       beleg: 'backend/app/main.py',
     },
   ],
 
   checkliste: [
-    'Brauche ich hier wirklich eine KI, oder finde ich die Antwort auch ohne?',
-    'Was gebe ich der KI: Ist auf dem Foto oder im Text etwas Privates?',
-    'Läuft die KI bei mir vor Ort oder schicke ich meine Daten an eine Firma?',
-    'Woran erkenne ich, welcher Teil der Antwort von der KI stammt?',
-    'Wie kann ich die Antwort prüfen: mit einer Quelle, einem Messwert oder einer Person, die sich auskennt?',
-    'Könnte die Antwort gefährlich sein, zum Beispiel bei Akkus oder Strom? Dann frage ich eine Lehrkraft.',
+    'Brauche ich hier wirklich eine KI?',
+    'Ist auf meinem Foto etwas Privates, und wohin geht es?',
+    'Wie kann ich die Antwort prüfen?',
+    'Könnte es gefährlich sein? Dann frage ich eine Lehrkraft.',
     'Sage ich anderen, dass ich KI benutzt habe?',
   ],
 
   quellen: [
     {
-      titel: 'EU-Verordnung über künstliche Intelligenz (KI-Verordnung, Verordnung (EU) 2024/1689)',
+      titel: 'EU-Gesetz über KI (KI-Verordnung)',
       url: 'https://eur-lex.europa.eu/eli/reg/2024/1689/oj',
     },
     {
-      titel: 'Datenschutz-Grundverordnung (DSGVO, Verordnung (EU) 2016/679)',
+      titel: 'EU-Gesetz zum Datenschutz (DSGVO)',
       url: 'https://eur-lex.europa.eu/eli/reg/2016/679/oj',
     },
     {
-      titel: 'UNESCO: Empfehlung zur Ethik der künstlichen Intelligenz (2021)',
+      titel: 'UNESCO: Empfehlung für einen guten Umgang mit KI (2021)',
       url: 'https://www.unesco.org/en/artificial-intelligence/recommendation-ethics',
     },
   ],

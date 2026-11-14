@@ -35,17 +35,17 @@ delete env.WAYLAND_DISPLAY; delete env.DISPLAY;
 const browser = await chromium.launch({ env, args: ['--use-angle=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist'] });
 let fehler = 0;
 try {
-  for (const schema of SCHEMAS) for (const [g, viewport] of Object.entries(GROESSEN)) {
-    const page = await browser.newPage({ viewport, colorScheme: schema, deviceScaleFactor: 1 });
+  // Je Bild ein neuer Tab: viele WebGL-Seiten in einem Tab erschöpfen den Software-Renderer
+  for (const schema of SCHEMAS) for (const [g, viewport] of Object.entries(GROESSEN)) for (const [name, pfad] of SEITEN) {
+    const handy = +g <= 768;   // wie ein echtes Gerät: Touch, mobiler Modus
+    const page = await browser.newPage({ viewport, colorScheme: schema, deviceScaleFactor: handy ? 2 : 1, isMobile: handy, hasTouch: handy });
     // Beispiel-Werkbank, damit Shop und Zähler gefüllt sind
     await page.addInitScript(() => localStorage.setItem('werkbank', JSON.stringify({ smartphone: 1, pet_bottle: 3, laptop: 1, yogurt_cup: 4, hair_dryer: 1 })));
     page.on('pageerror', (e) => { fehler++; console.log(`  FEHLER ${page.url()}: ${e.message}`); });
     page.on('console', (m) => { if (m.type() === 'error') { fehler++; console.log(`  console ${page.url()}: ${m.text()}`); } });
-    for (const [name, pfad] of SEITEN) {
-      await page.goto(BASIS + pfad, { waitUntil: 'load', timeout: 60000 });
-      await page.waitForTimeout(+(process.env.WARTE ?? 2200));
-      await page.screenshot({ path: `shots/${name}-${g}-${schema}.png`, fullPage: +g <= 768, timeout: 120000 });
-    }
+    await page.goto(BASIS + pfad, { waitUntil: 'load', timeout: 60000 });
+    await page.waitForTimeout(+(process.env.WARTE ?? 2200));
+    await page.screenshot({ path: `shots/${name}-${g}-${schema}.png`, fullPage: +g <= 768, timeout: 120000 });
     await page.close();
   }
 } finally {

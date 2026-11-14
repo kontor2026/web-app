@@ -70,9 +70,9 @@ export function zeichneStoffstrom(el, obj, { teilName, material, rohstoff, onHov
   const labelY = new Map();
   for (const s of spalten) {
     const ys = s.map((k) => pos.get(k.id).y + pos.get(k.id).h / 2);
-    for (let j = 1; j < ys.length; j++) ys[j] = Math.max(ys[j], ys[j - 1] + 14);
+    for (let j = 1; j < ys.length; j++) ys[j] = Math.max(ys[j], ys[j - 1] + 16);
     const ueber = ys.length ? ys[ys.length - 1] - (H - 6) : 0;
-    if (ueber > 0) for (let j = ys.length - 1; j >= 0; j--) ys[j] = Math.min(ys[j] - ueber, j < ys.length - 1 ? ys[j + 1] - 14 : Infinity);
+    if (ueber > 0) for (let j = ys.length - 1; j >= 0; j--) ys[j] = Math.min(ys[j] - ueber, j < ys.length - 1 ? ys[j + 1] - 16 : Infinity);
     s.forEach((k, j) => labelY.set(k.id, ys[j]));
   }
   // Knoten mit Beschriftung

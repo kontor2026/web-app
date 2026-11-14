@@ -44,6 +44,10 @@
 .row-knoepfe { display: flex; flex-wrap: wrap; gap: 8px; }
 @media (max-width: 900px) {
   .kompass .canvas { height: auto; min-height: 0; padding: 80px 16px 24px; }
-  .kompass .rose-flaeche { height: 340px; }
+  .kompass .rose-flaeche { height: 260px; }
   .ablauf ol { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
+.kompass .actionbar { justify-content: space-between; }
+.kompass .actionbar .q { margin: 0 auto; }
+.kompass .actionbar .q b { font-weight: 500; }
+@media (max-width: 900px) { .actionbar { z-index: 10; } .kompass .actionbar .q { display: none; } }

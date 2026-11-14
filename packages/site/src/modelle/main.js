@@ -1,5 +1,5 @@
 // 3D-Modelle prüfen: jedes Kategorie-Modell aus backend/seed/kategorien/ in echtem 3D (gemeinsame Ansicht viewer.js).
-import { shell, esc, zahl, gramm, chip, schaetzung, repoUrl, ruhig } from '../shell.js';
+import { shell, esc, zahl, gramm, chip, schaetzung, repoUrl } from '../shell.js';
 import { CLASSES, MATERIALS } from '../../../../js/data/catalog.js';
 import index from '../../../../backend/seed/kategorien/index.json';
 import { erzeugeViewer, ladeModell, hatModell, materialVon } from '../viewer.js';
@@ -12,18 +12,10 @@ app.innerHTML = `
 <section class="view sheet modelle">
   <div class="canvas">
     <div class="canvas-head">
-      <div><h2 id="titel">…</h2><p id="masse"></p></div>
+      <div><p id="masse"></p></div>
       <div class="kopf-rechts">
-        <div class="einstellungen">
-          <button class="zahnrad" id="zahnrad" aria-label="Einstellungen" aria-expanded="false" aria-controls="menue" title="Einstellungen">
-            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M19.4 13a7.6 7.6 0 0 0 0-2l2.1-1.6-2-3.5-2.5 1a7.4 7.4 0 0 0-1.7-1L14.9 3h-4l-.4 2.9a7.4 7.4 0 0 0-1.7 1l-2.5-1-2 3.5L6.4 11a7.6 7.6 0 0 0 0 2l-2.1 1.6 2 3.5 2.5-1c.5.4 1.1.7 1.7 1l.4 2.9h4l.4-2.9c.6-.3 1.2-.6 1.7-1l2.5 1 2-3.5zM12.9 15.5a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7z"/></svg>
-          </button>
-          <div class="menue" id="menue" role="menu" hidden>
-            <button class="kipp" id="drehen" role="menuitemcheckbox" aria-checked="true"><span>Drehen</span><kbd>D</kbd><i></i></button>
-            <button class="kipp" id="explodiert" role="menuitemcheckbox" aria-checked="true"><span>Explodiert</span><kbd>E</kbd><i></i></button>
-            <button class="kipp" id="nummern" role="menuitemcheckbox" aria-checked="true"><span>Nummern</span><kbd>N</kbd><i></i></button>
-          </div>
-        </div>
+        <button class="nummern-schalter" id="nummern" aria-pressed="true" title="Taste N">Nummern</button>
+        <div class="seg" role="group" aria-label="Ansicht"><button data-x="0">Zusammen</button><button data-x="1" class="on">Explodiert</button></div>
       </div>
     </div>
     <div class="drawing" id="szene" aria-label="3D-Modell, mit der Maus drehbar"></div>
@@ -44,30 +36,17 @@ const viewer = erzeugeViewer(document.getElementById('szene'), {
   onSelect: (i) => (i == null ? zeigeModell() : zeigeTeil(i)),
 });
 
-// Langsames Kreisen um das Objekt, Wahl bleibt gespeichert
-const drehSchalter = document.getElementById('drehen');
-function setzeDrehen(an) {
-  drehSchalter.setAttribute('aria-checked', String(an));
-  viewer.drehen(an); localStorage.setItem('modelle-drehen', an ? 'an' : 'aus');
-}
-drehSchalter.addEventListener('click', () => setzeDrehen(drehSchalter.getAttribute('aria-checked') !== 'true'));
-setzeDrehen(localStorage.getItem('modelle-drehen') ? localStorage.getItem('modelle-drehen') === 'an' : !ruhig);
-
-// Zusammengebaut oder explodiert, als Schalter im Zahnrad-Menü
-const exSchalter = document.getElementById('explodiert');
-exSchalter.addEventListener('click', () => {
-  const an = exSchalter.getAttribute('aria-checked') !== 'true';
-  exSchalter.setAttribute('aria-checked', String(an));
-  viewer.explosion(an ? 1 : 0);
-});
+document.querySelectorAll('.modelle .seg button').forEach((b) => b.addEventListener('click', () => {
+  viewer.explosion(+b.dataset.x);
+  document.querySelectorAll('.modelle .seg button').forEach((x) => x.classList.toggle('on', x === b));
+}));
 const schalter = document.getElementById('nummern');
 function setzeNummern(an) {
-  schalter.setAttribute('aria-checked', String(an));
+  schalter.setAttribute('aria-pressed', String(an)); schalter.classList.toggle('on', an);
   viewer.nummern(an); localStorage.setItem('modelle-nummern', an ? 'an' : 'aus');
 }
-schalter.addEventListener('click', () => setzeNummern(schalter.getAttribute('aria-checked') !== 'true'));
+schalter.addEventListener('click', () => setzeNummern(schalter.getAttribute('aria-pressed') !== 'true'));
 setzeNummern(localStorage.getItem('modelle-nummern') !== 'aus');
-viewer.foto(true);   // immer Foto-Ansicht mit Schatten
 
 // ---------- Prüfung wie tools/kategorien/pruefe.py ----------
 const zahlAus = (s) => parseFloat(String(s).replace(/[^\d,.]/g, '').replace(',', '.'));
@@ -126,10 +105,10 @@ function zeigeModell() {
     <div><div class="eyebrow">${esc(obj.klasse)}</div><h1 style="margin-top:8px">${esc(obj.name)}</h1></div>
     <div class="stats">
       <div><b>${obj.parts.length}</b><span>Teile</span></div>
-      <div><b>${gramm(summe)}</b><span>Modell${chip(repoUrl(`tools/kategorien/modelle/${obj.id}.json`), '3D-Modell im Repository', 'Datei')}</span></div>
-      <div><b>${gramm(soll)}</b><span>Tabelle${schaetzung('tools/kategorien/kategorien.csv', 'Typisches Gewicht, eigene Schätzung')}</span></div>
+      <div><b>${gramm(summe)}</b><span>Modell</span></div>
+      <div><b>${gramm(soll)}</b><span>Typisch${schaetzung('', 'Typisches Gewicht, eigene Schätzung')}</span></div>
     </div>
-    <div class="pruef">${h.length ? h.map((x) => `<p class="note ${x.warn ? 'warn' : ''}">${esc(x.text)}</p>`).join('') : '<p class="note ok">Gewicht, Maße und Explosion passen.</p>'}</div>
+    ${h.length ? `<div class="pruef">${h.map((x) => `<p class="note ${x.warn ? 'warn' : ''}">${esc(x.text)}</p>`).join('')}</div>` : ''}
     <div><h3>Teile</h3><div class="plist">${viewer.teile.map((t) => `
       <button class="prow" data-i="${t.i}"><span class="n">${t.nr ?? '–'}</span>
         <span>${esc(t.p.name)}<small>${esc(materialVon(t.p)?.name ?? '')}</small></span><span class="m">${gramm(t.p.mass)}</span></button>`).join('')}</div></div>
@@ -162,12 +141,11 @@ async function oeffne(id) {
   if (!hatModell(id)) return;
   aktuell = await ladeModell(id);
   const i = liste.findIndex((k) => k.id === id);
-  document.getElementById('titel').textContent = aktuell.name;
   document.getElementById('masse').textContent = `${aktuell.masse}`;
-  document.getElementById('position').innerHTML = `${i + 1} / ${liste.length}`;
+  document.getElementById('position').innerHTML = `<b>${esc(aktuell.name)}</b> <span>· ${i + 1} / ${liste.length}</span>`;
   const vor = liste[(i - 1 + liste.length) % liste.length], nach = liste[(i + 1) % liste.length];
-  document.getElementById('zurueck').textContent = `← ${vor.name}`;
-  document.getElementById('weiter').textContent = `${nach.name} →`;
+  document.getElementById('zurueck').innerHTML = `<span class="pfeil">←</span>${esc(vor.name)}`;
+  document.getElementById('weiter').innerHTML = `${esc(nach.name)}<span class="pfeil">→</span>`;
   const klassen = [...new Set(aktuell.parts.map((p) => materialVon(p)?.cls).filter(Boolean))];
   document.getElementById('legende').innerHTML = klassen.map((c) => `<span><i style="background:${CLASSES[c].color}"></i>${CLASSES[c].label}</span>`).join('');
   viewer.lade(aktuell);
@@ -183,10 +161,8 @@ addEventListener('keydown', (e) => {
   if (e.target.closest('input')) return;
   if (e.key === 'ArrowRight') blaettere(1);
   if (e.key === 'ArrowLeft') blaettere(-1);
-  if (e.key === 'Escape') { if (!menue.hidden) { menueAuf(false); return; } viewer.waehle(null); zeigeModell(); }
+  if (e.key === 'Escape') { viewer.waehle(null); zeigeModell(); }
   if (e.key === 'n' || e.key === 'N') schalter.click();
-  if (e.key === 'e' || e.key === 'E') exSchalter.click();
-  if (e.key === 'd' || e.key === 'D') drehSchalter.click();
 });
 const ausHash = () => oeffne(location.hash.match(/kat=([\w-]+)/)?.[1] ?? 'smartphone');
 addEventListener('hashchange', ausHash);

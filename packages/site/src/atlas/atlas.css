@@ -36,7 +36,7 @@
 .lw[data-schritt="verwertung"] .lw-balken { display: block; }
 /* Entsorgung: Karte der Region, das nach Tonnen gefärbte Modell als Einschub */
 .lw[data-schritt="entsorgung"] .lw-globus { display: block; inset: 0 0 56px 0; }
-.lw[data-schritt="entsorgung"] .lw-szene { inset: auto 20px 64px auto; width: min(300px, 40%); height: min(300px, 45%);
+.lw[data-schritt="entsorgung"] .lw-szene { inset: auto 20px 64px auto; width: min(220px, 28%); height: min(220px, 34%);
   background: var(--sheet); border: 1px solid var(--rule); z-index: 2; }
 .globus-ballon.hof { gap: 5px; transform: translate(-5px, -5px); }
 .globus-ballon.hof i { width: 10px; height: 10px; border-radius: 50%; background: var(--accent); border: 1.5px solid var(--sheet); box-shadow: 0 0 0 1px var(--accent); }
@@ -77,7 +77,8 @@
 .strom-svg .knoten.rohstoff:not(.weitere) { cursor: pointer; }
 .strom-svg .knoten.rohstoff:not(.weitere) text { fill: var(--ink); font-weight: 500; }
 .strom-svg.has-hot .band:not(.hot) { opacity: .08; }
-.strom-svg.has-hot .knoten:not(.hot) { opacity: .3; }
+.strom-svg.has-hot .knoten:not(.hot) rect { opacity: .3; }
+.strom-svg.has-hot .knoten:not(.hot) text { fill: var(--ink-3); }
 .strom-svg .knoten.hot rect:first-child { stroke: var(--accent); stroke-width: 1.6; }
 .strom-svg .knoten:focus-visible { outline: none; }
 .strom-svg .knoten:focus-visible rect:first-child { stroke: var(--accent); stroke-width: 2; }
@@ -108,13 +109,14 @@
 .lw-land .mbar { grid-column: 2 / 4; }
 .lw-land.rest { color: var(--ink-3); }
 .lw-land[data-land]:hover { background: var(--accent-soft); }
-.lw-tonne { display: grid; grid-template-columns: 44px 1fr; gap: 14px; align-items: center; border-top: 1px solid var(--ink); padding-top: 14px; }
-.lw-tonne > i { width: 44px; height: 52px; background: var(--f); border: 1px solid var(--ink); border-radius: 2px 2px 6px 6px; position: relative; }
-.lw-tonne > i::before { content: ''; position: absolute; left: -5px; right: -5px; top: -7px; height: 6px; background: var(--f); border: 1px solid var(--ink); }
+.lw-tonne { display: grid; grid-template-columns: 52px 1fr; gap: 14px; align-items: center; border-top: 1px solid var(--ink); padding-top: 14px; }
+.lw-tonne > i { width: 52px; height: 52px; display: grid; place-items: center; background: var(--f); border: 1px solid var(--ink); border-radius: 2px; color: var(--ink); }
+.lw-tonne > i .icon { width: 30px; height: 30px; }
 .lw-tonne b { display: block; font-size: 22px; font-weight: 600; letter-spacing: -.01em; }
 .lw-tonne span { font-size: 14px; color: var(--ink-2); }
-.lw-teil { display: grid; grid-template-columns: 12px 1fr auto; gap: 10px; align-items: center; padding: 10px 2px; border-bottom: 1px solid var(--rule); font-size: 14px; }
-.lw-teil i { width: 12px; height: 12px; background: var(--f); border: 1px solid var(--ink); }
+.lw-teil { display: grid; grid-template-columns: 28px 1fr auto; gap: 10px; align-items: center; padding: 10px 2px; border-bottom: 1px solid var(--rule); font-size: 14px; }
+.lw-teil i { width: 28px; height: 28px; display: grid; place-items: center; background: var(--f); border: 1px solid var(--ink); }
+.lw-teil i .icon { width: 18px; height: 18px; }
 .lw-teil b { font-weight: 500; }
 .lw-hoefe { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
 .lw-hoefe a { display: grid; padding: 9px 11px; border: 1px solid var(--rule); background: var(--card); text-decoration: none; font-size: 13px; }
@@ -138,11 +140,15 @@
   .lw .canvas { height: auto; min-height: 0; }
   .lw-schritte { position: sticky; top: 0; }
   .lw-schritte a { height: 48px; gap: 4px; }
-  .lw-schritte a .lw-nr, .lw-schritte a.on .lw-name { display: none; }
-  .lw-buehne { height: 62vh; min-height: 420px; }
-  .lw[data-schritt="abbau"] .lw-buehne, .lw[data-schritt="verarbeitung"] .lw-buehne { height: 780px; }
-  .lw-globus { inset: 0 0 420px 0; }
-  .lw-strom { height: 420px; padding: 12px 14px; }
+  .lw-schritte a .lw-nr { display: none; }
+  .lw-schritte { grid-template-columns: repeat(7, auto); }
+  .lw-schritte a.on { padding: 0 12px; }
+  .lw-schritte a.on .lw-name { display: inline; }
+  .lw-buehne { height: 44svh; min-height: 300px; }
+  .lw[data-schritt="abbau"] .lw-buehne, .lw[data-schritt="verarbeitung"] .lw-buehne { height: calc(44svh + 360px); }
+  .lw-globus { inset: 0 0 360px 0; }
+  .lw-strom { height: 360px; padding: 12px 14px; }
+  .lw[data-schritt="entsorgung"] .lw-szene { display: none; }
   .lw .legend { left: 16px; right: 16px; bottom: 12px; }
   .lw .actionbar .btn { min-width: 0; flex: 1; }
   .lw .actionbar .q { display: none; }
@@ -157,3 +163,25 @@
 .wb-status.ok { color: var(--good); border-color: var(--good); }
 .use.fehlt { color: var(--ink-3); }
 .use.fehlt i { background: transparent; border: 1px dashed var(--ink-3); }
+
+.lw-habich-da { display: flex; justify-content: space-between; align-items: center; gap: 12px; font-size: 14px; color: var(--ink-2); }
+.wb-stepper { display: inline-flex; align-items: center; border: 1px solid var(--rule); }
+.wb-stepper button { width: 40px; height: 40px; font-size: 16px; color: var(--ink-2); }
+.wb-stepper button:hover { background: var(--rule-2); color: var(--ink); }
+.wb-stepper b { min-width: 28px; text-align: center; font: 500 13px var(--mono); }
+.lw-chip { height: 40px; }
+
+.lw-strom-auf { display: none; }
+@media (max-width: 900px) {
+  .lw[data-schritt="abbau"] .lw-buehne, .lw[data-schritt="verarbeitung"] .lw-buehne { height: calc(44svh + 56px); }
+  .lw-globus { inset: 0 0 56px 0; }
+  .lw-strom { height: 56px; padding: 8px 14px; overflow: hidden; }
+  .lw-strom .strom { display: none; }
+  .lw-strom-auf { display: inline-flex; align-items: center; gap: 8px; height: 40px; padding: 0 14px; border: 1px solid var(--rule); background: var(--sheet); font-size: 14px; }
+  .lw-strom-auf .icon { width: 18px; height: 18px; }
+  .lw.strom-offen .lw-buehne { height: calc(44svh + 420px); }
+  .lw.strom-offen .lw-globus { inset: 0 0 420px 0; }
+  .lw.strom-offen .lw-strom { height: 420px; }
+  .lw.strom-offen .lw-strom .strom { display: block; height: calc(100% - 52px); margin-top: 8px; }
+  .lw .actionbar .btn { height: 44px; }
+}

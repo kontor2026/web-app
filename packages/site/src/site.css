@@ -116,3 +116,57 @@ a { color: inherit; }
 .use .wb-hinweis { display: block; font-size: 11px; line-height: 1.35; margin-top: 2px; }
 .steps .zaehler { font: 500 11px var(--mono); color: var(--sheet); background: var(--ink-3); border-radius: 8px; padding: 0 6px; line-height: 16px; }
 .steps a.active .zaehler { background: var(--accent); }
+
+/* ---------- Durchgang nach Design-Prüfung: gemeinsame Regeln ---------- */
+/* Chips nie in Großbuchstaben, auch in Zwischenüberschriften */
+.chip-q { text-transform: none; letter-spacing: 0; position: relative; }
+.chip-q::after { content: ''; position: absolute; inset: -12px -6px; }          /* größere Trefferfläche */
+/* Zähler im Menü immer ruhig grau */
+.steps .zaehler, .steps a.active .zaehler { background: var(--ink-3); }
+/* Fußleiste: zurück und weiter gleich breit, Pfeil mit Abstand */
+.actionbar .btn { min-width: 184px; }
+.pfeil { font-family: var(--mono); }
+/* Ausklapper: ein Stil, eigener Pfeil statt Browser-Dreieck */
+details > summary { list-style: none; display: flex; align-items: center; gap: 8px; min-height: 40px; cursor: pointer; font: 13px var(--sans); color: var(--ink-2); letter-spacing: 0; text-transform: none; }
+details > summary::-webkit-details-marker { display: none; }
+details > summary::before { content: '+'; font: 500 14px var(--mono); width: 14px; color: var(--ink-3); }
+details[open] > summary::before { content: '–'; }
+details > summary:hover { color: var(--accent); }
+/* Überschriften ohne hässliche Trennungen */
+h1, h2, .lw-rezept h2, .schritt b { text-wrap: balance; hyphens: manual; }
+@media (max-width: 600px) {
+  .steps a { padding: 4px 6px; font-size: 12px; }
+  .actionbar .btn { min-width: 0; flex: 1; }
+}
+.steps .kurz { display: none; }
+
+.actionbar .q span { color: var(--ink-3); }
+@media (max-width: 900px) { .actionbar { z-index: 10; } }
+
+/* ---------- Navigation: oben auf großen Bildschirmen, unten als Tab-Leiste auf dem Handy ---------- */
+.steps a .icon { width: 16px; height: 16px; }
+:root { --tabs: 0px; }
+@media (max-width: 900px) {
+  :root { --tabs: calc(60px + env(safe-area-inset-bottom, 0px)); }
+  .topbar { grid-template-columns: 1fr; padding-block: 0; height: 52px; position: sticky; top: 0; z-index: 30; }
+  .status { display: none; }
+  .steps {
+    position: fixed; z-index: 40; left: 0; right: 0; bottom: 0; height: var(--tabs); padding-bottom: env(safe-area-inset-bottom, 0px);
+    display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; overflow: visible; background: var(--sheet); border-top: 1px solid var(--rule);
+  }
+  .steps a { flex-direction: column; justify-content: center; gap: 3px; padding: 0; font-size: 11px; border-bottom: 0; border-top: 2px solid transparent; position: relative; }
+  .steps a.active { border-top-color: var(--accent); color: var(--ink); }
+  .steps a.active .icon { color: var(--accent); }
+  .steps a .icon { width: 22px; height: 22px; }
+  .steps .lang { display: none; }
+  .steps .kurz { display: inline; }
+  .steps .zaehler { position: absolute; top: 6px; left: calc(50% + 8px); }
+  main { padding-bottom: var(--tabs); }
+  .actionbar { bottom: var(--tabs) !important; }
+}
+
+@media (max-width: 900px) {
+  .start-text { order: -1; }
+  .start-text h1 { font-size: 30px; }
+  .kreis { width: min(320px, 90%); }
+}
