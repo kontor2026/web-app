@@ -13,8 +13,8 @@ app.innerHTML = `
 <section class="view quelle-seite"><div class="quelle-karte">
   <p class="eyebrow">${icon(ziel ? 'beleg' : 'schaetzung')}${ziel ? 'Quelle prüfen' : 'Eigene Schätzung'}</p>
   <h1>${esc(titel)}</h1>
-  ${was ? `<p class="quelle-was">${esc(was)}</p>` : ''}
-  <p class="quelle-zeile">${[von, jahr, seite, sicher ? ziel.hostname : null].filter(Boolean).map(esc).join(' · ')}</p>
+  <dl class="facts">${[['Belegt', was], ['Von', von], ['Jahr', jahr], ['Seite', seite], ['Ziel', sicher ? ziel.hostname : null]]
+    .filter(([, v]) => v).map(([k, v]) => `<div><dt>${k}</dt><dd>${esc(v)}</dd></div>`).join('')}</dl>
   <div class="quelle-knoepfe">
     <button class="btn ghost" id="zurueck"><span class="pfeil">←</span>Zurück</button>
     ${sicher ? `<a class="btn primary" href="${esc(ziel.href)}" rel="noopener noreferrer">Zur Quelle<span class="pfeil">→</span></a>` : ''}
