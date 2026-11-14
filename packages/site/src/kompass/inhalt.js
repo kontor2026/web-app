@@ -66,7 +66,7 @@ export const KOMPASS = {
         'Die Station speichert jedes Foto, aber einen Knopf zum Löschen gibt es noch nicht.',
         'Vor dem Foto sagt dir die Station noch nicht, wohin das Bild geht.',
       ],
-      tipp_fuer_dich: 'Zeig einer KI nur Fotos, auf denen nichts Privates zu sehen ist.',
+      tipp_fuer_dich: 'Zeig einer KI Fotos, auf denen nur der Gegenstand zu sehen ist.',
     },
 
     {
@@ -103,10 +103,10 @@ export const KOMPASS = {
       id: 'ressourcen',
       himmelsrichtung: 'W',
       titel: 'Ressourcen',
-      frage: 'Brauche ich hier überhaupt eine KI?',
+      frage: 'Wann lohnt sich eine KI?',
       so_machen_wirs: [
         {
-          text: 'Die 3D-Modelle wurden einmal vorab gebaut, die KI muss sie nicht neu erzeugen.',
+          text: 'Die 3D-Modelle sind einmal vorab gebaut und werden nur noch geladen.',
           beleg: 'docs/3d-modelle.md',
         },
         {
@@ -126,7 +126,7 @@ export const KOMPASS = {
         'Wie viel Strom die KI verbraucht, haben wir noch nicht gemessen.',
         'Der CO₂-Wert zählt nur die Materialien, nicht Zusammenbau und Transport.',
       ],
-      tipp_fuer_dich: 'Wenn ein Buch oder eine Lehrkraft es weiß, brauchst du keine KI.',
+      tipp_fuer_dich: 'Frag zuerst ein Buch oder eine Lehrkraft, die KI hilft beim Rest.',
     },
   ],
 
@@ -140,13 +140,13 @@ export const KOMPASS = {
     {
       schritt: 'Foto-Vergleich',
       wer: 'Datenbank',
-      text: 'Ohne KI vergleicht die Station dein Foto mit bekannten Fotos.',
+      text: 'Die Station vergleicht dein Foto mit bekannten Fotos.',
       beleg: 'backend/app/pipeline.py',
     },
     {
       schritt: 'Erkennung',
       wer: 'KI',
-      text: 'Gibt es keinen Treffer, macht die KI bis zu drei Vorschläge.',
+      text: 'Bei neuen Gegenständen macht die KI bis zu drei Vorschläge.',
       beleg: 'backend/app/pipeline.py',
     },
     {
@@ -164,7 +164,7 @@ export const KOMPASS = {
     {
       schritt: 'Neuer Steckbrief',
       wer: 'KI',
-      text: 'Für neue Gegenstände schreibt die KI einen Entwurf, markiert als ungeprüft.',
+      text: 'Für neue Gegenstände schreibt die KI einen Entwurf und markiert ihn als Entwurf.',
       beleg: 'docs/backend.md',
     },
     {
@@ -182,7 +182,7 @@ export const KOMPASS = {
     {
       schritt: 'Freigabe',
       wer: 'Mensch',
-      text: 'Die Werkstatt prüft KI-Entwürfe, aber noch nicht direkt in der Station.',
+      text: 'Die Werkstatt prüft KI-Entwürfe und gibt sie frei.',
       beleg: 'backend/app/main.py',
     },
   ],
