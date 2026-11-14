@@ -64,12 +64,12 @@ teile = [
               'alte Stücke taugen als Kantenschutz oder Griffpolster.',
          color=GRUEN, marks=windungen(D, fill='#24522C')),
     teil('gewebe', 'pvc_hose', 'Polyestergewebe', 'Gewebe', 'cyl',
-         material_id='polyester', x=2, y=2, w=D - 4, z=1, h=58, mass=110, form='torus', materials=[['polyester', 100]],
+         material_id='polyester', x=2, y=2, w=D - 4, z=2, h=56, mass=110, form='torus', materials=[['polyester', 100]],
          info='Kreuzgewebe aus Polyesterfäden zwischen den PVC-Schichten. Es verhindert, dass der Schlauch unter '
               'Wasserdruck platzt oder abknickt. Lässt sich nicht vom PVC trennen.',
          color='#E9E3C8', marks=windungen(D - 4, fill='#A9A388', tiefe=58)),
     teil('seele', 'pvc_hose', 'Innenschlauch', 'Innenschlauch', 'cyl',
-         x=4, y=4, w=D - 8, z=2, h=56, mass=880, form='torus',
+         x=4, y=4, w=D - 8, z=4, h=52, mass=880, form='torus',
          info='Glatte Innenschicht aus PVC, durch die das Wasser fließt. Kein Trinkwasser aus Gartenschläuchen '
               'trinken: Weichmacher können sich lösen.',
          color='#2F3A33', marks=windungen(D - 8, fill='#1C231F', tiefe=56)),

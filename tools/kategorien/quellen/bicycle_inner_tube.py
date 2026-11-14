@@ -13,7 +13,7 @@ from bau import teil, mark, explodiere, skaliere_masse, schreibe  # noqa: E402
 D = 300
 GUMMI = '#2B2D2F'
 MESSING = '#C9A548'
-VX, VY = 150, 12   # Mitte des Ventils auf dem Ring (über der Rohrmitte des Torus)
+VX, VY = 150, 288  # Mitte des Ventils auf dem Ring (über der Rohrmitte des Torus)
 
 
 def nur_zeichnung(ms):
@@ -61,6 +61,6 @@ teile = [
                              mark('cyl', 75.5, 75.5, 170, fill='#DCD8CE'),  # Tisch, durch das Loch gesehen
                              mark('box', 126, 280, 48, 6, 2, '#8E969A'), mark('box', 120, 4, 8, 4, 1, '#8E969A')])),
 ]
-explodiere(teile, abstand=25, nach_liste=True)
+explodiere(teile, abstand=40, nach_liste=True)
 skaliere_masse(teile, oid='bicycle_inner_tube')
 schreibe('bicycle_inner_tube', teile)

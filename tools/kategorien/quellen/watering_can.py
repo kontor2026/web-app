@@ -3,7 +3,7 @@
 Typische 10-l-Gießkanne aus HDPE (450 × 150 × 300 mm): geblasener Kanister mit Bügelgriff, Einfüllöffnung und
 schräg ansteigendem Ausgussrohr (Stapel dünner Scheiben, in der Foto-Ansicht ein glattes Rohr), oben eine aufgesteckte Brause mit
 Lochplatte. Kanne, Griff und Rohr sind ein Stück und bleiben stehen; die Brause wird seitlich abgezogen.
-Der Griff ist ein Bügel aus Griffstange und zwei Stegen.
+Der Griff ist ein Bügel aus Griffstange und zwei Stegen, die Griffstange ist in der Foto-Ansicht rund.
 """
 import sys
 from pathlib import Path
@@ -31,7 +31,7 @@ teile = [
     teil('griff', 'watering_can_body', 'Bügelgriff', 'Griff', 'box',
          x=20, y=60, w=130, d=30, z=275, h=25, r=12, mass=40, form='liegend_x',
          info='Hohl geblasener Griff, zum Tragen der vollen Kanne. Er ist mit der Kanne aus einem Stück.',
-         color=KANNE, marks=[mark('box', 30, 8, 70, 14, 6, DUNKEL, zeichnung=True)]),
+         color=KANNE),
     teil('steg_hinten', 'watering_can_body', 'Griffsteg', 'Griffsteg', 'box',
          x=20, y=60, w=25, d=30, z=242, h=33, r=10, mass=8, label=False,
          info='Hinterer Steg des Griffs, hier hält man die Kanne zum Kippen.', color=KANNE),

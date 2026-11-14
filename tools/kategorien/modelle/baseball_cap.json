@@ -29,14 +29,14 @@
     ]
    ],
    "info": "Metallknopf mit Stoffbezug, deckt die Stelle ab, an der die sechs Bahnen oben zusammenlaufen.",
-   "color": "#2F4A6B",
+   "color": "#22385A",
    "marks": [
     {
      "shape": "cyl",
      "x": 3,
      "y": 3,
      "w": 8,
-     "fill": "#243A55"
+     "fill": "#1A2C47"
     }
    ]
   },
@@ -66,7 +66,7 @@
     ]
    ],
    "info": "Teil der Kuppel aus Stoffbahnen. Oben laufen alle Nähte unter dem Knopf zusammen.",
-   "color": "#2F4A6B",
+   "color": "#22385A",
    "label": false,
    "marks": [
     {
@@ -77,7 +77,7 @@
      "zeichnung": true,
      "d": 36.1,
      "r": 0,
-     "fill": "#243A55"
+     "fill": "#1A2C47"
     }
    ]
   },
@@ -107,7 +107,7 @@
     ]
    ],
    "info": "Teil der Kuppel aus Stoffbahnen.",
-   "color": "#2F4A6B",
+   "color": "#22385A",
    "label": false,
    "marks": [
     {
@@ -118,7 +118,7 @@
      "zeichnung": true,
      "d": 58.5,
      "r": 0,
-     "fill": "#243A55"
+     "fill": "#1A2C47"
     }
    ]
   },
@@ -148,7 +148,7 @@
     ]
    ],
    "info": "Teil der Kuppel aus Stoffbahnen.",
-   "color": "#2F4A6B",
+   "color": "#22385A",
    "label": false,
    "marks": [
     {
@@ -159,7 +159,7 @@
      "zeichnung": true,
      "d": 78.0,
      "r": 0,
-     "fill": "#243A55"
+     "fill": "#1A2C47"
     }
    ]
   },
@@ -189,7 +189,7 @@
     ]
    ],
    "info": "Teil der Kuppel aus Stoffbahnen.",
-   "color": "#2F4A6B",
+   "color": "#22385A",
    "label": false,
    "marks": [
     {
@@ -200,7 +200,7 @@
      "zeichnung": true,
      "d": 95.9,
      "r": 0,
-     "fill": "#243A55"
+     "fill": "#1A2C47"
     }
    ]
   },
@@ -230,7 +230,7 @@
     ]
    ],
    "info": "Teil der Kuppel aus Stoffbahnen.",
-   "color": "#2F4A6B",
+   "color": "#22385A",
    "label": false,
    "marks": [
     {
@@ -241,7 +241,7 @@
      "zeichnung": true,
      "d": 112.3,
      "r": 0,
-     "fill": "#243A55"
+     "fill": "#1A2C47"
     }
    ]
   },
@@ -271,7 +271,7 @@
     ]
    ],
    "info": "Teil der Kuppel aus Stoffbahnen.",
-   "color": "#2F4A6B",
+   "color": "#22385A",
    "label": false,
    "marks": [
     {
@@ -282,7 +282,7 @@
      "zeichnung": true,
      "d": 127.4,
      "r": 0,
-     "fill": "#243A55"
+     "fill": "#1A2C47"
     }
    ]
   },
@@ -312,7 +312,7 @@
     ]
    ],
    "info": "Teil der Kuppel aus Stoffbahnen.",
-   "color": "#2F4A6B",
+   "color": "#22385A",
    "label": false,
    "marks": [
     {
@@ -323,7 +323,7 @@
      "zeichnung": true,
      "d": 141.9,
      "r": 0,
-     "fill": "#243A55"
+     "fill": "#1A2C47"
     }
    ]
   },
@@ -353,7 +353,7 @@
     ]
    ],
    "info": "Teil der Kuppel aus Stoffbahnen.",
-   "color": "#2F4A6B",
+   "color": "#22385A",
    "label": false,
    "marks": [
     {
@@ -364,7 +364,7 @@
      "zeichnung": true,
      "d": 154.9,
      "r": 0,
-     "fill": "#243A55"
+     "fill": "#1A2C47"
     },
     {
      "shape": "cyl",
@@ -442,7 +442,7 @@
     ]
    ],
    "info": "Teil der Kuppel aus Stoffbahnen.",
-   "color": "#2F4A6B",
+   "color": "#22385A",
    "label": false,
    "marks": [
     {
@@ -453,7 +453,7 @@
      "zeichnung": true,
      "d": 166.1,
      "r": 0,
-     "fill": "#243A55"
+     "fill": "#1A2C47"
     }
    ]
   },
@@ -483,7 +483,7 @@
     ]
    ],
    "info": "Teil der Kuppel aus Stoffbahnen.",
-   "color": "#2F4A6B",
+   "color": "#22385A",
    "label": false,
    "marks": [
     {
@@ -494,7 +494,7 @@
      "zeichnung": true,
      "d": 175.3,
      "r": 0,
-     "fill": "#243A55"
+     "fill": "#1A2C47"
     }
    ]
   },
@@ -524,7 +524,7 @@
     ]
    ],
    "info": "Teil der Kuppel aus Stoffbahnen.",
-   "color": "#2F4A6B",
+   "color": "#22385A",
    "label": false,
    "marks": [
     {
@@ -535,7 +535,7 @@
      "zeichnung": true,
      "d": 181.7,
      "r": 0,
-     "fill": "#243A55"
+     "fill": "#1A2C47"
     }
    ]
   },
@@ -569,7 +569,7 @@
     ]
    ],
    "info": "Sechs dreieckige Bahnen aus Baumwoll-Twill, oben zusammengenäht. Die zwei vorderen Bahnen sind innen mit Vlies versteift. Tragbare Caps in die Altkleidersammlung.",
-   "color": "#2F4A6B",
+   "color": "#22385A",
    "label": true,
    "marks": [
     {
@@ -580,7 +580,7 @@
      "zeichnung": true,
      "d": 184.8,
      "r": 0,
-     "fill": "#243A55"
+     "fill": "#1A2C47"
     }
    ]
   },
@@ -739,7 +739,7 @@
     ]
    ],
    "info": "Stoff über dem Schirm, mit mehreren parallelen Nähten auf die Einlage gesteppt.",
-   "color": "#2F4A6B",
+   "color": "#22385A",
    "marks": [
     {
      "shape": "cyl",
@@ -748,7 +748,7 @@
      "w": 164,
      "zeichnung": true,
      "d": 98,
-     "fill": "#243A55"
+     "fill": "#1A2C47"
     },
     {
      "shape": "cyl",
@@ -757,7 +757,7 @@
      "w": 161,
      "zeichnung": true,
      "d": 95,
-     "fill": "#2F4A6B"
+     "fill": "#22385A"
     },
     {
      "shape": "cyl",
@@ -766,7 +766,7 @@
      "w": 150,
      "zeichnung": true,
      "d": 84,
-     "fill": "#243A55"
+     "fill": "#1A2C47"
     },
     {
      "shape": "cyl",
@@ -775,7 +775,7 @@
      "w": 147,
      "zeichnung": true,
      "d": 81,
-     "fill": "#2F4A6B"
+     "fill": "#22385A"
     },
     {
      "shape": "cyl",
@@ -784,7 +784,7 @@
      "w": 136,
      "zeichnung": true,
      "d": 70,
-     "fill": "#243A55"
+     "fill": "#1A2C47"
     },
     {
      "shape": "cyl",
@@ -793,7 +793,7 @@
      "w": 133,
      "zeichnung": true,
      "d": 67,
-     "fill": "#2F4A6B"
+     "fill": "#22385A"
     },
     {
      "shape": "cyl",
@@ -802,7 +802,7 @@
      "w": 122,
      "zeichnung": true,
      "d": 56,
-     "fill": "#243A55"
+     "fill": "#1A2C47"
     },
     {
      "shape": "cyl",
@@ -811,7 +811,7 @@
      "w": 119,
      "zeichnung": true,
      "d": 53,
-     "fill": "#2F4A6B"
+     "fill": "#22385A"
     }
    ]
   },

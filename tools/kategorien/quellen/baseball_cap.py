@@ -11,8 +11,8 @@ from bau import teil, mark, explodiere, skaliere_masse, schreibe  # noqa: E402
 # hinten. Sie hebt sich als Ganzes ab, darunter liegt das Schweißband. Der Schirm (Ellipse, hintere Hälfte unter
 # der Krone) wird nach vorne gezogen und in Bezug, Einlage und Unterseite aufgefächert, der Klickverschluss nach
 # hinten.
-STOFF = '#2F4A6B'
-NAHT = '#243A55'
+STOFF = '#22385A'
+NAHT = '#1A2C47'
 OESE = '#1C2C40'
 BW = [['baumwolle', 100]]
 CX = 95  # Mitte in x

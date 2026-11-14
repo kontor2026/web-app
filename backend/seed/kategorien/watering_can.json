@@ -512,19 +512,7 @@
    ],
    "info": "Hohl geblasener Griff, zum Tragen der vollen Kanne. Er ist mit der Kanne aus einem Stück.",
    "color": "#3F8F5A",
-   "form": "liegend_x",
-   "marks": [
-    {
-     "shape": "box",
-     "x": 30,
-     "y": 8,
-     "w": 70,
-     "zeichnung": true,
-     "d": 14,
-     "r": 6,
-     "fill": "#347A4C"
-    }
-   ]
+   "form": "liegend_x"
   },
   {
    "id": "steg_hinten",

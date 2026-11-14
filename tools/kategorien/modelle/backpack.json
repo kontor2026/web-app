@@ -8,12 +8,12 @@
    "short": "Griff",
    "shape": "box",
    "x": 120,
-   "y": 64,
+   "y": 66,
    "w": 60,
-   "d": 18,
-   "z": 441,
-   "h": 9,
-   "r": 6,
+   "d": 10,
+   "z": 430,
+   "h": 24,
+   "r": 4,
    "explode": [
     0,
     0,
@@ -27,7 +27,8 @@
     ]
    ],
    "info": "Gurtband aus Polyamid zum Aufhängen. Mehrfach durch den Stoff genäht, deshalb mit der Schere abtrennen.",
-   "color": "#22374F"
+   "color": "#22374F",
+   "form": "torus_y"
   },
   {
    "id": "rv_haupt",

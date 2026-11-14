@@ -34,8 +34,8 @@ teile = [
     lage(1, 'Oberste Faltlagen mit Saum', 'Oberste Lagen', 22.5, 0,
          'Baumwoll-Perkal oder Linon, glatt gewebt. Gut erhaltene Laken in die Altkleidersammlung, '
          'verschlissene als Putz- oder Malerlappen weiterverwenden.',
-         [mark('box', 6, 368, 284, 14, 0, SAUM), mark('box', 6, 374, 284, 1.5, 0, '#94A7B6'),
-          mark('box', 147, 6, 2, 356, 0, FALTE)]),
+         [mark('box', 36, 350, 224, 14, 0, SAUM), mark('box', 36, 356, 224, 1.5, 0, '#94A7B6'),
+          mark('box', 147, 20, 2, 330, 0, FALTE)]),
     lage(2, 'Faltlagen 2', 'Faltlagen', 15, 3,
          'Jede Faltung legt den Stoff doppelt. So werden aus einem großen Tuch 32 Lagen in diesem Paket.',
          [mark('box', 6, 197, 284, 2, 0, FALTE)]),
@@ -44,7 +44,7 @@ teile = [
          [mark('box', 147, 6, 2, 384, 0, FALTE)], label=False),
     lage(4, 'Unterste Faltlagen mit Saum', 'Unterste Lagen', 0, 1,
          'Am Rand ist der Stoff doppelt umgeschlagen und mit Polyestergarn vernäht (Saum), damit er nicht ausfranst.',
-         [mark('box', 6, 330, 284, 14, 0, SAUM), mark('box', 6, 336, 284, 1.5, 0, '#94A7B6')]),
+         [mark('box', 30, 320, 236, 14, 0, SAUM), mark('box', 30, 326, 236, 1.5, 0, '#94A7B6')]),
 ]
 
 skaliere_masse(teile, oid='bed_sheet')

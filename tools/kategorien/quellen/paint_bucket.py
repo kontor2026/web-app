@@ -57,7 +57,7 @@ teile = [
          x=9, y=9, w=182, z=0, h=8, mass=30,
          info='Boden mit Standring und Recyclingzeichen 5.', color=EIMER, label=False, wand=3),
     teil('etikett', 'pp_bucket_body', 'In-Mould-Etikett', 'Etikett', 'cyl',
-         x=3, y=3, w=194, z=36, h=136, explode=[250, 0, -30], mass=4,
+         x=1.5, y=1.5, w=197, z=38, h=130, explode=[250, 0, -30], mass=4,
          materials=[['pp', 92], ['druck', 8]], sortBias=1,
          info='Bedruckte PP-Folie rund um den Eimer, beim Spritzgießen mit der Wand verschmolzen. Nicht ablösbar, '
               'muss aber auch nicht: Sie ist aus demselben Kunststoff.',

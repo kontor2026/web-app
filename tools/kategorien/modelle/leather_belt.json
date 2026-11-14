@@ -169,7 +169,8 @@
     ]
    ],
    "info": "Kleine Lederschlaufe hinter der Schnalle, sie hält das freie Riemenende fest.",
-   "color": "#5C3720"
+   "color": "#5C3720",
+   "form": "torus_y"
   },
   {
    "id": "schnalle",
@@ -202,7 +203,8 @@
     ]
    ],
    "info": "Vernickelter Stahl- oder Zinkdruckguss-Rahmen. Nach dem Lösen der Schraube ab zum Altmetall.",
-   "color": "#C9CDD0"
+   "color": "#C9CDD0",
+   "form": "torus_x"
   },
   {
    "id": "dorn",

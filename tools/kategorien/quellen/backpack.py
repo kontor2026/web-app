@@ -18,7 +18,7 @@ GURT = [['nylon', 75], ['schaum', 25]]
 
 teile = [
     teil('griff', 'nylon_fabric', 'Tragegriff', 'Griff', 'box',
-         x=120, y=64, w=60, d=18, z=441, h=9, r=6, explode=[0, 0, 85], mass=12,
+         x=120, y=66, w=60, d=10, z=430, h=24, r=4, form='torus_y', explode=[0, 0, 85], mass=12,
          info='Gurtband aus Polyamid zum Aufhängen. Mehrfach durch den Stoff genäht, deshalb mit der Schere abtrennen.',
          color=DUNKEL),
     teil('rv_haupt', 'metal_zipper', 'Reißverschluss Hauptfach', 'Reißverschluss', 'box',
