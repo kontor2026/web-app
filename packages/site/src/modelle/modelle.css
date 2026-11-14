@@ -29,7 +29,7 @@
 .modelle .actionbar .q { margin: 0 auto; }
 .modelle .actionbar .q b { font-weight: 500; }
 
-.lw-link { justify-self: start; }
+.lw-link { justify-self: stretch; width: 100%; }
 .modelle .stats .chip-q, .modelle .stats .schaetzung { margin-left: 4px; }
 @media (max-width: 900px) { .modelle .actionbar .btn { min-width: 0; flex: 1; } .modelle .actionbar .q { display: none; } }
 .ansicht-knopf { height: 44px; gap: 8px; background: var(--sheet); }
