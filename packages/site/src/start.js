@@ -27,7 +27,6 @@ app.innerHTML = `
     </figure>
     <figure class="wechsel-bild" data-n="1" aria-label="Woher Kobalt im Smartphone kommt"><div class="wechsel-flaeche" id="start-globus"></div></figure>
     <figure class="wechsel-bild" data-n="2" aria-label="Smartphone in Einzelteilen"><div class="wechsel-flaeche" id="start-modell"></div></figure>
-    <div class="wechsel-punkte" role="tablist">${['Kreislauf', 'Weltkarte', '3D-Modell'].map((t, i) => `<button role="tab" data-n="${i}" aria-label="${t}" class="${i ? '' : 'on'}"></button>`).join('')}</div>
     </div>
     <div class="start-text">
       <h1>Wo kommt es her?<br>Wo geht es hin?</h1>
@@ -79,11 +78,7 @@ async function zeigeBild(n) {
   if (aktiv !== n) return;
   atme(n);
   document.querySelectorAll('.wechsel-bild').forEach((f) => f.classList.toggle('on', +f.dataset.n === n));
-  document.querySelectorAll('.wechsel-punkte button').forEach((b) => { b.classList.toggle('on', +b.dataset.n === n); b.setAttribute('aria-selected', String(+b.dataset.n === n)); });
 }
-document.querySelectorAll('.wechsel-punkte button').forEach((b) => b.addEventListener('click', () => { pause = true; zeigeBild(+b.dataset.n); }));
-const wechsel = document.getElementById('wechsel');
-wechsel.addEventListener('pointerdown', () => { pause = true; });
 // Weltkarte und 3D-Modell schon im Hintergrund laden, damit der Wechsel ohne Warten klappt
 (window.requestIdleCallback ?? ((f) => setTimeout(f, 800)))(() => { bereite(1).then(() => bereite(2)); });
 if (!ruhig) setInterval(() => { if (!pause && !document.hidden) zeigeBild((aktiv + 1) % 3); }, 5000);

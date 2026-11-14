@@ -271,3 +271,8 @@ html { scroll-padding-bottom: calc(var(--tabs) + 88px); }
 /* Kein Springen beim Blättern: Frage mit fester Höhe */
 .lw-frage { min-height: calc(1.15em + 24px); }
 @media (max-width: 900px) { .lw-frage { min-height: calc(2 * 1.15em + 10px); align-items: flex-start; } }
+/* Diashow mittig: in der Spalte waagerecht und senkrecht zentriert, Inhalt jedes Bildes ebenfalls */
+.wechsel { width: 100%; justify-self: center; align-self: center; }
+.wechsel-bild { place-items: center; }
+.wechsel-bild > svg, .wechsel-flaeche { width: 100%; height: 100%; }
+.wechsel-punkte { bottom: -32px; }
