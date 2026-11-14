@@ -5,7 +5,7 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { CSS2DRenderer, CSS2DObject } from 'three/addons/renderers/CSS2DRenderer.js';
 import { CLASSES, MATERIALS } from '../../../js/data/catalog.js';
 import { esc, gramm, ruhig } from './shell.js';
-import { stoff, koerperGeometrie, studio, eigenschaften, nachbearbeitung, stapelSuchen, huellenMesh } from './foto.js';
+import { etikettGeometrie, stoff, koerperGeometrie, studio, eigenschaften, nachbearbeitung, stapelSuchen, huellenMesh } from './foto.js';
 
 const LADE = import.meta.glob('../../../backend/seed/kategorien/*.json', { import: 'default' });
 export const ladeModell = (id) => LADE[`../../../backend/seed/kategorien/${id}.json`]?.();
@@ -23,6 +23,55 @@ function grundriss(t) {
   s.moveTo(r, 0); s.lineTo(w - r, 0); s.quadraticCurveTo(w, 0, w, r); s.lineTo(w, d - r); s.quadraticCurveTo(w, d, w - r, d);
   s.lineTo(r, d); s.quadraticCurveTo(0, d, 0, d - r); s.lineTo(0, r); s.quadraticCurveTo(0, 0, r, 0);
   return s;
+}
+
+// Etiketten, Banderolen, Manschetten, Ringe: ein rundes Teil, das zusammengebaut ein anderes rundes Teil umschließt
+// (Grundriss enthält dessen Grundriss, Höhen überlappen), wird in der Foto-Ansicht als dünne, unten und oben offene
+// Hülle gezeigt statt als volle Scheibe. Rückgabe: Map Teil → Teil mit wand/boden.
+function umhuellungen(parts) {
+  const m = new Map();
+  for (const p of parts) {
+    if (p.shape !== 'cyl' || p.wand > 0 || p.form) continue;
+    const pd = p.d ?? p.w;
+    let wand = Infinity;
+    const stuecke = [];
+    for (const q of parts) {
+      if (q === p || q.shape !== 'cyl') continue;
+      const qd = q.d ?? q.w;
+      const innen = q.x >= p.x - 0.2 && q.y >= p.y - 0.2 && q.x + q.w <= p.x + p.w + 0.2 && q.y + qd <= p.y + pd + 0.2;
+      const von = Math.max(p.z, q.z), bis = Math.min(p.z + p.h, q.z + q.h);
+      if (!innen || q.w < p.w * 0.6 || bis <= von) continue;
+      stuecke.push([von, bis]);
+      wand = Math.min(wand, (p.w - q.w) / 2, (pd - qd) / 2);
+    }
+    // Nur echte Umhüllung: der Körper darin reicht über die ganze Höhe (sonst z. B. Deckel über dem Hals, der oben zu ist)
+    stuecke.sort((a, b) => a[0] - b[0]);
+    let bedeckt = 0, ende = p.z;
+    for (const [von, bis] of stuecke) { if (bis > ende) { bedeckt += bis - Math.max(von, ende); ende = bis; } }
+    if (wand < Infinity && bedeckt >= p.h * 0.95) m.set(p, { ...p, wand: Math.max(0.35, wand), boden: 0 });
+  }
+  return m;
+}
+
+// Dünne, senkrechte Etiketten (unter 1,5 mm), die zusammengebaut seitlich an einem runden Körper anliegen:
+// Map Etikett → Körper. Sie werden in der Foto-Ansicht um den Körper gebogen.
+function flacheEtiketten(parts) {
+  const m = new Map();
+  for (const p of parts) {
+    const pd = p.d ?? p.w;
+    if (p.shape !== 'box' || Math.min(p.w, pd) > 1.5 || p.h < 3 * Math.min(p.w, pd)) continue;
+    let best = null, bestH = 0;
+    for (const q of parts) {
+      if (q === p || q.shape !== 'cyl') continue;
+      const qd = q.d ?? q.w, tol = 2;
+      const anX = (Math.abs(p.x - (q.x + q.w)) < tol || Math.abs(p.x + p.w - q.x) < tol) && p.y >= q.y - tol && p.y + pd <= q.y + qd + tol;
+      const anY = (Math.abs(p.y - (q.y + qd)) < tol || Math.abs(p.y + pd - q.y) < tol) && p.x >= q.x - tol && p.x + p.w <= q.x + q.w + tol;
+      const ueber = Math.min(p.z + p.h, q.z + q.h) - Math.max(p.z, q.z);
+      if ((anX || anY) && ueber > bestH) { best = q; bestH = ueber; }
+    }
+    if (best && bestH > p.h * 0.5) m.set(p, best);
+  }
+  return m;
 }
 
 /**
@@ -71,16 +120,17 @@ export function erzeugeViewer(el, { onHover, onSelect, tip } = {}) {
     modell.clear();
     teile = []; hot = null; gewaehlt = null;
     let nr = 0;
+    const huellen = umhuellungen(obj.parts), etiketten = flacheEtiketten(obj.parts);
     for (const p of obj.parts) {
       const farbe = new THREE.Color(farbeVon(p)), g = new THREE.Group();
-      const geo = koerperGeometrie(p);                          // Station: x Breite, y Tiefe, z Höhe → three: X, Z, Y
+      const geo = etiketten.has(p) ? etikettGeometrie(p, etiketten.get(p)) : koerperGeometrie(huellen.get(p) ?? p);                          // Station: x Breite, y Tiefe, z Höhe → three: X, Z, Y
       const mesh = new THREE.Mesh(geo, stoff(p, farbe, p.opacity ?? 1));
       mesh.castShadow = mesh.receiveShadow = true;
       const kanten = new THREE.LineSegments(new THREE.EdgesGeometry(geo, 30), new THREE.LineBasicMaterial({ color: INK, transparent: true }));
       kanten.userData.kante = true;
       g.add(mesh, kanten);
       const marks = [];
-      for (const m of p.marks ?? []) {
+      for (const m of huellen.has(p) || etiketten.has(p) ? [] : p.marks ?? []) {   // Banderolen: aufgemalte Ringe entfallen, die Hülle ist echt
         const mg = new THREE.ShapeGeometry(grundriss(m), 24);
         mg.rotateX(Math.PI / 2); mg.translate(m.x, p.h + 0.04, m.y);
         const e = eigenschaften(p), o = p.opacity ?? 1;

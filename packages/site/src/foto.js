@@ -99,6 +99,8 @@ export function stoff(p, farbe, opacity) {
     transparent: opacity < 0.98, opacity, envMapIntensity: e.m ? 1.9 : 1,
     polygonOffset: true, polygonOffsetFactor: 1, polygonOffsetUnits: 1,
   });
+  // Dunkle Metalle (eloxiert, brüniert) spiegeln sonst fast nur Schwarz: Mindesthelligkeit
+  if (e.m) { const hsl = {}; mat.color.getHSL(hsl); if (hsl.l < 0.22) mat.color.setHSL(hsl.h, hsl.s, 0.22); }
   if (e.holz) { mat.map = farbTextur('holz', farbe); mat.color.set(0xffffff); }
   if (e.tx) { mat.bumpMap = textur(e.tx); mat.bumpScale = e.b ?? 0.1; if (e.m) mat.roughnessMap = textur(e.tx); }
   // Glas und klare Kunststoffe: echte Lichtbrechung statt bloßer Transparenz
@@ -385,4 +387,22 @@ export function huellenMesh(stapelTeile, material) {
   const mesh = new THREE.Mesh(huelle(stapelTeile), material);
   mesh.castShadow = mesh.receiveShadow = true;
   return mesh;
+}
+
+// ---------- Flache Etiketten an runden Körpern als gebogener Streifen ----------
+// p: dünnes, senkrechtes Etikett (Quader), q: runder Körper, an dem es anliegt. Ergebnis in Teil-Koordinaten von p.
+export function etikettGeometrie(p, q) {
+  const qd = q.d ?? q.w, rx = q.w / 2, ry = qd / 2, cx = q.x + rx, cy = q.y + ry;
+  const pd = p.d ?? p.w, px = p.x + p.w / 2, py = p.y + pd / 2;
+  const mitte = Math.atan2((py - cy) / ry, (px - cx) / rx);         // Richtung, in der das Etikett liegt
+  const breite = Math.max(p.w, pd), t = Math.max(0.3, Math.min(p.w, pd));
+  const span = Math.min(Math.PI * 0.95, breite / ((rx + ry) / 2));
+  const s = new THREE.Shape(), N = 48;
+  for (let i = 0; i <= N; i++) { const a = mitte - span / 2 + (span * i) / N; const pt = [cx + Math.cos(a) * (rx + t), cy + Math.sin(a) * (ry + t)]; i ? s.lineTo(...pt) : s.moveTo(...pt); }
+  for (let i = N; i >= 0; i--) { const a = mitte - span / 2 + (span * i) / N; s.lineTo(cx + Math.cos(a) * (rx + 0.05), cy + Math.sin(a) * (ry + 0.05)); }
+  const geo = new THREE.ExtrudeGeometry(s, { depth: p.h, bevelEnabled: false, curveSegments: 4 });
+  geo.rotateX(Math.PI / 2);
+  geo.translate(-p.x, p.h, -p.y);                                   // Gruppe von p sitzt bei (p.x, p.z, p.y)
+  geo.computeVertexNormals();
+  return geo;
 }
