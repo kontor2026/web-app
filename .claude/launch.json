@@ -12,6 +12,12 @@
       "runtimeExecutable": "python",
       "runtimeArgs": ["-m", "http.server", "5173"],
       "port": 5173
+    },
+    {
+      "name": "praesentation",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["tools/serve.cjs", "5181"],
+      "port": 5181
     }
   ]
 }

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kreislauf-Station (Mock)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="mock.css">
+<script type="importmap">{ "imports": { "three": "../assets/three.module.js", "three/addons/": "../assets/addons/" } }</script>
+</head>
+<body data-view="erfassen">
+  <!-- Platzhalter für die echte Web-App. Daten (Bauteile, Werte, Entsorgung) und 3D-Modelle kommen aus dem Repo. -->
+  <header class="top">
+    <div class="brand"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5v4M20.5 12h-4M12 20.5v-4M3.5 12h4"/></svg>Kreislauf-Station</div>
+    <nav class="steps">
+      <button data-go="erfassen"><b>01</b>Erfassen</button>
+      <button data-go="steckbrief" disabled><b>02</b>Steckbrief</button>
+      <button data-go="bauen" disabled><b>03</b>Bauen</button>
+    </nav>
+    <div class="status"><i></i>Mock · Platzhalter</div>
+  </header>
+
+  <main>
+    <section class="view erfassen">
+      <div class="kamera">
+        <div class="ecken"><i></i><i></i><i></i><i></i></div>
+        <div class="bild" id="bild"></div>
+        <div class="scan"></div>
+        <p class="hinweis">Gegenstand auf die Scan-Fläche legen<br><small>oder ein Beispielfoto wählen</small></p>
+      </div>
+      <aside class="seite">
+        <h2>Beispielfotos</h2>
+        <div class="beispiele" id="beispiele"></div>
+        <div class="kandidaten" id="kandidaten" hidden>
+          <h2>Erkannt</h2>
+          <ol id="liste"></ol>
+          <button class="primary" id="bestaetigen">Bestätigen</button>
+        </div>
+      </aside>
+    </section>
+
+    <section class="view steckbrief">
+      <div class="viewer" id="viewer"><p class="tipp">Ziehen zum Drehen · Teil anklicken</p></div>
+      <aside class="blatt" id="blatt"></aside>
+    </section>
+
+    <section class="view bauen">
+      <h1 id="bauen-titel">Was baust du daraus?</h1>
+      <div class="ideen" id="ideen"></div>
+    </section>
+  </main>
+  <script type="module" src="mock.js"></script>
+</body>
+</html>

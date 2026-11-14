@@ -3,34 +3,45 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Kreislauf-Station – Präsentation</title>
+<title>Kreislauf-Station</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:,">
 <link rel="stylesheet" href="styles.css">
-<script type="importmap">{ "imports": { "three": "./assets/three.module.js" } }</script>
+<script type="importmap">{ "imports": { "three": "./assets/three.module.js", "three/addons/": "./assets/addons/" } }</script>
 </head>
-<body data-mode="praesi">
-  <canvas id="world" aria-label="3D-Werkstatt"></canvas>
-  <div id="overlay">
-    <div id="labels"></div>
-    <section id="slide" class="slide"></section>
-    <iframe id="app" title="Kreislauf-Station (live)" allow="camera; microphone; fullscreen"></iframe>
-    <button id="next" type="button" aria-label="Weiter">Weiter ›</button>
-    <aside id="notes" hidden></aside>
-    <div id="help" hidden>
-      <h3>Tasten</h3>
-      <dl>
-        <dt>→ ↓ Leertaste Bild↓</dt><dd>weiter</dd>
-        <dt>← ↑ Bild↑</dt><dd>zurück</dd>
-        <dt>1–9</dt><dd>direkt zur Folie</dd>
-        <dt>F</dt><dd>Vollbild</dd>
-        <dt>T</dt><dd>Sprechertext</dd>
-        <dt>R</dt><dd>Kamera zurücksetzen</dd>
-        <dt>H</dt><dd>diese Hilfe</dd>
-        <dt>Maus ziehen, Mausrad</dt><dd>frei drehen und zoomen</dd>
-        <dt>In der App</dt><dd>Klick daneben oder „Weiter“ holt die Tasten zurück</dd>
-      </dl>
-    </div>
-    <footer id="footer"></footer>
+<body data-app="">
+  <canvas id="world" aria-label="3D-Präsentation"></canvas>
+  <div id="labels"></div>
+  <div id="caption" class="caption" aria-live="polite"></div>
+  <div id="qr" class="qr"><img src="assets/qr-app.svg" alt="QR-Code zur Web-App"><span class="text"></span><span class="url"></span></div>
+  <div id="messwerte" class="messwerte"><div><b>93 %</b><span>erkannt · 28 von 30 Testfotos</span></div><div><b>≤ 5 s</b><span>vom Foto zum Ergebnis</span></div></div>
+  <iframe id="app" title="Kreislauf-Station (live)" allow="camera; microphone; fullscreen; clipboard-write"></iframe>
+  <button id="apphint" type="button" title="Zurück in die Präsentation (X)"><kbd>X</kbd> zurück</button>
+  <footer id="footer">
+    <span class="brand"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5v4M20.5 12h-4M12 20.5v-4M3.5 12h4"/></svg><span class="produktname"></span></span>
+    <span id="dots"></span>
+    <b id="mode"></b>
+  </footer>
+  <aside id="notes" hidden></aside>
+  <div id="help" hidden>
+    <h3>Tasten</h3>
+    <dl>
+      <dt>→ ↓ Leertaste Bild↓</dt><dd>weiter</dd>
+      <dt>← ↑ Bild↑</dt><dd>zurück</dd>
+      <dt>X</dt><dd>in die App und wieder heraus (von jeder Folie aus, für Rückfragen)</dd>
+      <dt>F</dt><dd>Vollbild</dd>
+      <dt>1–5</dt><dd>direkt zur Folie</dd>
+      <dt>Z</dt><dd>Animation des Schritts von vorn</dd>
+      <dt>B oder .</dt><dd>Bild schwarz</dd>
+      <dt>T</dt><dd>Sprechertext</dd>
+      <dt>R</dt><dd>Kamera zurück</dd>
+      <dt>Maus ziehen, Mausrad</dt><dd>frei umsehen</dd>
+    </dl>
   </div>
+  <div id="black"></div>
+  <div id="loader"><div class="brand"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5v4M20.5 12h-4M12 20.5v-4M3.5 12h4"/></svg><span class="produktname"></span></div><div class="bar"><i></i></div><p class="msg">Lade Modelle</p></div>
   <script type="module" src="app.js"></script>
 </body>
 </html>
