@@ -42,7 +42,6 @@
 .kipp-schalter[aria-checked="true"] i { background: var(--ink); }
 .kipp-schalter[aria-checked="true"] i::after { background: var(--sheet); transform: translateX(18px); }
 .teile-klappe > summary { font: 500 11px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); }
-@media (min-width: 901px) { .teile-klappe > summary { pointer-events: none; } .teile-klappe > summary::before { display: none; } }
 .kopf-rechts { display: flex; gap: 8px; }
 @media (max-width: 900px) { .kipp-schalter { padding: 0 10px; font-size: 13px; } }
 

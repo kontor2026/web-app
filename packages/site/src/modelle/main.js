@@ -120,7 +120,7 @@ function zeigeModell() {
       <div><b>${gramm(soll)}</b><span>Typisch${schaetzung('', 'Typisches Gewicht, eigene Schätzung')}</span></div>
     </div>
     ${h.length ? `<div class="pruef">${h.map((x) => `<p class="note ${x.warn ? 'warn' : ''}">${esc(x.text)}</p>`).join('')}</div>` : ''}
-    <details class="lw-block teile-klappe" data-block ${matchMedia('(min-width: 901px)').matches ? 'open' : ''}><summary>${viewer.teile.length} Teile</summary><div class="plist">${viewer.teile.map((t) => `
+    <details class="lw-block teile-klappe" data-block><summary>${viewer.teile.length} Teile</summary><div class="plist">${viewer.teile.map((t) => `
       <button class="prow" data-i="${t.i}"><span class="n">${t.nr ?? '–'}</span>
         <span>${esc(t.p.name)}<small>${esc(materialVon(t.p)?.name ?? '')}</small></span><span class="m">${gramm(t.p.mass)}</span></button>`).join('')}</div></details>
     <a class="btn ghost lw-link" href="../atlas/#kat=${obj.id}">Lebensweg ansehen →</a>`,

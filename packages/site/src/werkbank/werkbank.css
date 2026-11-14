@@ -97,3 +97,15 @@
 .idee-klappen > details + details { border-top: 1px solid var(--rule-2); }
 .idee-klappen .wb-quellen { padding: 2px 0 8px; }
 .idee-klappen .wb-quellen > b { font: 500 12px var(--sans); color: var(--ink-2); padding-top: 4px; }
+
+/* Seiten statt Scrollen */
+.laden-haupt { overflow: hidden; grid-template-rows: auto auto minmax(0, 1fr) auto; height: 100%; }
+.laden-raster, .laden-ideen { align-content: start; }
+.laden [hidden] { display: none !important; }
+.blaettern { display: flex; justify-content: center; align-items: center; gap: 12px; min-height: 48px; font: 13px var(--mono); color: var(--ink-2); }
+.blaettern button { width: 44px; height: 44px; border: 1px solid var(--ink); background: var(--sheet); font-size: 20px; }
+.blaettern button:disabled { border-color: var(--rule); color: var(--rule); }
+@media (max-width: 900px) {
+  .laden { height: calc(100svh - 52px - var(--tabs)); display: flex; flex-direction: column; overflow: hidden; }
+  .laden-haupt { flex: 1; min-height: 0; padding: 12px 16px 72px; gap: 10px; }
+}

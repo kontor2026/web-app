@@ -15,7 +15,7 @@ const WERKZEUG = {
   gluing_wood_glue: 'Holzleim', gluing_double_sided_tape: 'Klebeband',
 };
 const name = (cid) => K[cid]?.name ?? cid;
-let ansicht = location.hash === '#bauen' ? 'bauen' : 'sammeln', gruppe = null;
+let ansicht = location.hash === '#bauen' ? 'bauen' : 'sammeln', gruppe = null, seite = 0;
 const offen = new Set();
 
 const app = shell('werkbank', '../');
@@ -31,6 +31,7 @@ app.innerHTML = `
     <div class="laden-chips" id="chips"></div>
     <div class="laden-raster" id="raster"></div>
     <div class="laden-ideen" id="ideen"></div>
+    <nav class="blaettern" id="blaettern" aria-label="Seiten"></nav>
   </div>
   <aside class="korb" id="korb" aria-label="Deine Werkbank"></aside>
 </section>
@@ -77,7 +78,7 @@ function zeigeRaster() {
   document.getElementById('chips').innerHTML = [null, ...GRUPPEN].map((g) =>
     `<button class="lw-chip ${gruppe === g ? 'on' : ''}" data-g="${g ?? ''}">${g ?? 'Alle'}</button>`).join('')
     + `<select class="laden-gruppe" aria-label="Kategorie">${[null, ...GRUPPEN].map((g) => `<option value="${g ?? ''}" ${gruppe === g ? 'selected' : ''}>${g ?? 'Alle Kategorien'}</option>`).join('')}</select>`;
-  document.querySelector('.laden-gruppe').onchange = (e) => { gruppe = e.target.value || null; zeigeRaster(); };
+  document.querySelector('.laden-gruppe').onchange = (e) => { gruppe = e.target.value || null; seite = 0; zeigeRaster(); };
   const liste = objekte.filter((o) => (!gruppe || o.gruppe === gruppe) && (!q || o.name.toLowerCase().includes(q)))
     .sort((a, c) => a.name.localeCompare(c.name, 'de'));
   document.getElementById('raster').innerHTML = liste.map((o) => `
@@ -87,8 +88,28 @@ function zeigeRaster() {
       ${b[o.id] ? `<span class="wb-stepper"><button data-id="${o.id}" data-d="-1" aria-label="weniger">−</button><b>${b[o.id]}</b><button data-id="${o.id}" data-d="1" aria-label="mehr">+</button></span>`
         : `<button class="ware-plus" data-id="${o.id}" data-d="1" aria-label="${esc(o.name)} hinzufügen">+</button>`}
     </article>`).join('') || '<p class="leer">Nichts gefunden.</p>';
-  beobachte(document.getElementById('raster'));
+  seitenweise(document.getElementById('raster'));
 }
+
+// ---------- Seiten statt Scrollen: so viele Karten, wie in die Fläche passen ----------
+function seitenweise(liste) {
+  const karten = [...liste.children].filter((k) => k.matches('article'));
+  const nav = document.getElementById('blaettern');
+  karten.forEach((k) => { k.hidden = false; });
+  if (!karten.length) { nav.innerHTML = ''; return; }
+  const haupt = document.querySelector('.laden-haupt'), oben = liste.getBoundingClientRect().top - haupt.getBoundingClientRect().top;
+  const frei = haupt.clientHeight - oben - 72;
+  const stil = getComputedStyle(liste), luecke = parseFloat(stil.rowGap) || 0;
+  const hoch = Math.max(...karten.slice(0, 6).map((k) => k.getBoundingClientRect().height));
+  const spalten = Math.max(1, stil.gridTemplateColumns.split(' ').length);
+  const zeilen = Math.max(1, Math.floor((frei + luecke) / (hoch + luecke)));
+  const proSeite = spalten * zeilen, seiten = Math.ceil(karten.length / proSeite);
+  seite = Math.max(0, Math.min(seite, seiten - 1));
+  karten.forEach((k, i) => { k.hidden = Math.floor(i / proSeite) !== seite; });
+  nav.innerHTML = seiten > 1 ? `<button data-seite="-1" aria-label="Vorherige Seite" ${seite ? '' : 'disabled'}>‹</button><span>${seite + 1} / ${seiten}</span><button data-seite="1" aria-label="Nächste Seite" ${seite < seiten - 1 ? '' : 'disabled'}>›</button>` : '';
+  beobachte(liste);
+}
+addEventListener('resize', () => seitenweise(document.getElementById(ansicht === 'sammeln' ? 'raster' : 'ideen')));
 
 // ---------- Korb: was ich habe ----------
 function zeigeKorb() {
@@ -130,7 +151,7 @@ function zeigeIdeen() {
         <p class="wb-quelle">${chip(r.quelle?.url, r.quelle?.titel, 'Quelle', { was: `Anleitung: ${r.titel}` })}${s.posten.some(geschaetzt) ? '<span class="chip-q schaetzung" title="Mengen mit ≈ sind geschätzt">≈ Schätzung</span>' : ''}</p></details>
       </div>
     </article>`).join('');
-  beobachte(document.getElementById('ideen'));
+  seitenweise(document.getElementById('ideen'));
 }
 
 // ---------- Steuerung ----------
@@ -143,13 +164,14 @@ function zeige() {
 app.addEventListener('click', (e) => {
   const x = e.target.closest('button');
   if (!x) return;
+  if (x.dataset.seite) { seite += +x.dataset.seite; if (ansicht === 'sammeln') zeigeRaster(); else zeigeIdeen(); return; }
   if (x.dataset.leeren) { for (const id of Object.keys(bestand())) plus(id, -bestand()[id]); return; }
   if (x.dataset.d) plus(x.dataset.id, +x.dataset.d);
-  else if (x.dataset.a) { ansicht = x.dataset.a; history.replaceState(null, '', ansicht === 'bauen' ? '#bauen' : location.pathname); zeige(); scrollTo(0, 0); }
-  else if (x.dataset.g !== undefined) { gruppe = x.dataset.g || null; zeigeRaster(); }
+  else if (x.dataset.a) { seite = 0; ansicht = x.dataset.a; history.replaceState(null, '', ansicht === 'bauen' ? '#bauen' : location.pathname); zeige(); scrollTo(0, 0); }
+  else if (x.dataset.g !== undefined) { gruppe = x.dataset.g || null; seite = 0; zeigeRaster(); }
 
 });
-document.getElementById('suche').addEventListener('input', () => { if (ansicht !== 'sammeln') { ansicht = 'sammeln'; zeige(); } else zeigeRaster(); });
+document.getElementById('suche').addEventListener('input', () => { seite = 0; if (ansicht !== 'sammeln') { ansicht = 'sammeln'; zeige(); } else zeigeRaster(); });
 // Offene „Wo finde ich das?“ merken, damit sie nach dem Hinzufügen offen bleiben
 app.addEventListener('toggle', (e) => { const k = e.target.dataset?.k; if (k) { if (e.target.open) offen.add(k); else offen.delete(k); } }, true);
 addEventListener('werkbank', zeige);
