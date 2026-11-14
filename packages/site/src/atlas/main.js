@@ -120,7 +120,7 @@ async function zeige(o, s, r) {
 const panel = () => document.getElementById('panel');
 function setzePanel(html) {
   const s = SCHRITTE.find((x) => x.id === schritt);
-  document.getElementById('frage').innerHTML = `${icon(schritt)}<span>${esc(s.frage)}</span>`;
+  document.getElementById('frage').textContent = s.frage;
   const strom = document.getElementById('strom');
   if (strom && panel().contains(strom)) document.querySelector('.lw-strom').append(strom);
   const i = IDS.indexOf(schritt), naechste = SCHRITTE[(i + 1) % IDS.length];
