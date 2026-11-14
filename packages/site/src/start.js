@@ -51,7 +51,9 @@ if (!ruhig) setInterval(() => {
 // ---------- Bilderwechsel: Kreislauf → Weltkarte → 3D-Modell ----------
 // Globus und 3D laden erst, wenn sie gezeigt werden. Stopp bei Berührung, ohne Automatik bei reduzierter Bewegung.
 let aktiv = 0, globus = null, modell = null, pause = false, atmen = null;
-async function bereite(n) {
+const fertig = {};
+function bereite(n) { return (fertig[n] ??= lade(n)); }
+async function lade(n) {
   if (n === 1 && !globus) {
     const { erzeugeGlobus } = await import('./atlas/globus.js');
     globus = erzeugeGlobus(document.getElementById('start-globus'), atlas.laender);
@@ -65,18 +67,24 @@ async function bereite(n) {
     modell.lade(await ladeModell('smartphone'));
     modell.drehen?.(true);
   }
-  // 3D-Modell im Wechsel: zusammenbauen und zerlegen, solange es zu sehen ist
-  clearInterval(atmen);
-  if (n === 2 && modell && !ruhig) { let zu = true; atmen = setInterval(() => { zu = !zu; modell.explosion(zu ? 0 : 1); }, 2000); }
 }
-function zeigeBild(n) {
+// 3D-Modell im Wechsel: zusammenbauen und zerlegen, solange es zu sehen ist
+function atme(n) {
+  clearInterval(atmen);
+  if (n === 2 && modell && !ruhig) { let zu = true; modell.explosion(0, false); atmen = setInterval(() => { zu = !zu; modell.explosion(zu ? 0 : 1); }, 2000); }
+}
+async function zeigeBild(n) {
   aktiv = n;
-  bereite(n);
+  await bereite(n);              // erst wechseln, wenn das Bild fertig geladen ist
+  if (aktiv !== n) return;
+  atme(n);
   document.querySelectorAll('.wechsel-bild').forEach((f) => f.classList.toggle('on', +f.dataset.n === n));
   document.querySelectorAll('.wechsel-punkte button').forEach((b) => { b.classList.toggle('on', +b.dataset.n === n); b.setAttribute('aria-selected', String(+b.dataset.n === n)); });
 }
 document.querySelectorAll('.wechsel-punkte button').forEach((b) => b.addEventListener('click', () => { pause = true; zeigeBild(+b.dataset.n); }));
 const wechsel = document.getElementById('wechsel');
 wechsel.addEventListener('pointerdown', () => { pause = true; });
+// Weltkarte und 3D-Modell schon im Hintergrund laden, damit der Wechsel ohne Warten klappt
+(window.requestIdleCallback ?? ((f) => setTimeout(f, 800)))(() => { bereite(1).then(() => bereite(2)); });
 if (!ruhig) setInterval(() => { if (!pause && !document.hidden) zeigeBild((aktiv + 1) % 3); }, 5000);
 verbindeWaehler(app.querySelector('.waehler'));
