@@ -27,7 +27,9 @@ const state = {
   explode: null,
   stream: null,
   gewicht: null,        // Gramm von der Waage, gilt für den aktuellen Scan
+  scanCtl: null,        // AbortController of the running scan request
 };
+let scanNr = 0;         // number of the current scan, older answers are dropped
 // Anzeige des gewählten Modus: souverän (Inferenz-Container) oder Cloud (Claude).
 const kiLabel = () => (api.modus === 'cloud' ? 'KI Cloud · ' : 'KI souverän · ') + (api.mode?.modell ?? '');
 const invById = (id) => state.inventory.find((i) => i.id === id) ?? byId(id) ?? { name: id, fach: '?' };
@@ -121,6 +123,8 @@ function show(viewEl, step) {
 /* ------------------------------------------------------------------ */
 
 function viewScan() {
+  state.scanCtl?.abort();                          // a scan still running on the old screen must not report back
+  scanNr++;
   state.gewicht = null;
   const v = h(`
     <section class="view scan">
@@ -187,7 +191,7 @@ async function startCamera(v) {
   const video = h('<video autoplay playsinline muted></video>');
   video.srcObject = state.stream;
   vf.prepend(video);
-  const shot = h('<button class="btn primary" style="position:absolute;bottom:28px;left:50%;transform:translateX(-50%)">Foto aufnehmen</button>');
+  const shot = h('<button class="btn primary shot" style="position:absolute;bottom:28px;left:50%;transform:translateX(-50%)">Foto aufnehmen</button>');
   vf.appendChild(shot);
   v.querySelector('#vf-state').textContent = 'live';
   shot.addEventListener('click', () => {
@@ -204,12 +208,22 @@ function stopCamera() {
   state.stream = null;
 }
 
+// Every new scan replaces the running one (e.g. "Beispiel: Handy" while the AI is still busy): the old request is
+// aborted and an answer that still arrives is dropped, so only one result ends up in the viewfinder.
+function newScan(v) {
+  state.scanCtl?.abort();
+  state.scanCtl = new AbortController();
+  stopCamera();
+  v.querySelector('#vf-idle').style.display = 'none';
+  v.querySelectorAll('#vf img, #vf video, #vf .shot, #vf .scanline, #vf .bbox, #vf .vf-log').forEach((n) => n.remove());
+  return { nr: ++scanNr, signal: state.scanCtl.signal };
+}
+
 // Simulierte Erkennung. Später: POST /api/scan mit dem Bild, Antwort = erkennung + Objekt-ID.
 function analyze(v, src, obj) {
   if (api.online) return analyzeApi(v, src, obj);
+  const { nr } = newScan(v);
   const vf = v.querySelector('#vf');
-  v.querySelector('#vf-idle').style.display = 'none';
-  vf.querySelectorAll('img, .scanline, .bbox, .vf-log').forEach((n) => n.remove());
   const img = h(`<img src="${src}" alt="">`);
   vf.prepend(img);
   v.querySelector('#vf-state').textContent = 'analysiere';
@@ -235,6 +249,7 @@ function analyze(v, src, obj) {
     animate(box, {
       opacity: [0, 1], scale: [1.08, 1], delay: 1500, duration: 450, ease: 'outBack',
       onComplete: () => {
+        if (nr !== scanNr) return;
         v.querySelector('#vf-state').textContent = 'erkannt';
         showResult(v, obj);
       },
@@ -244,9 +259,8 @@ function analyze(v, src, obj) {
 
 // Echte Erkennung über das Backend: Foto-Abgleich, sonst lokales Vision-Modell.
 async function analyzeApi(v, src, sample) {
+  const { nr, signal } = newScan(v);
   const vf = v.querySelector('#vf');
-  v.querySelector('#vf-idle').style.display = 'none';
-  vf.querySelectorAll('img, .scanline, .bbox, .vf-log').forEach((n) => n.remove());
   const img = h(`<img src="${src}" alt="">`);
   const scan = h('<div class="scanline"></div>');
   const log = h('<div class="vf-log"><div style="opacity:1">› Bild wird analysiert<em id="vf-t">0 s</em></div></div>');
@@ -256,6 +270,7 @@ async function analyzeApi(v, src, sample) {
   vfState.textContent = 'analysiere';
   // Auf das Laden warten, aber nie hängen bleiben (img.decode() wartet in Hintergrund-Tabs teils ewig).
   await new Promise((ok) => { if (img.complete) ok(); img.onload = img.onerror = ok; setTimeout(ok, 1500); });
+  if (nr !== scanNr) return;
 
   const W = vf.clientWidth, H = vf.clientHeight, r = Math.min(W / img.naturalWidth, H / img.naturalHeight);
   const iw = img.naturalWidth * r, ih = img.naturalHeight * r, ix = (W - iw) / 2, iy = (H - ih) / 2;
@@ -265,9 +280,10 @@ async function analyzeApi(v, src, sample) {
 
   let res;
   try {
-    res = await api.scan(await toDataUrl(src));
+    res = await api.scan(await toDataUrl(src), signal);
   } catch (e) {
     clearInterval(tick); sweep.pause(); scan.remove();
+    if (nr !== scanNr) return;                     // replaced by a newer scan, nothing to report
     vfState.textContent = 'Fehler';
     errorModal('Erkennung fehlgeschlagen', e.message, [
       { label: 'Aus Liste wählen', run: () => showResult(v, null) },
@@ -276,6 +292,7 @@ async function analyzeApi(v, src, sample) {
     return;
   }
   clearInterval(tick); sweep.pause(); scan.remove();
+  if (nr !== scanNr) return;                       // a newer scan took over meanwhile
   state.scan = res;
 
   // Protokoll der echten Pipeline-Schritte mit Laufzeiten.
