@@ -27,13 +27,9 @@ app.innerHTML = `
     <div class="start-text">
       <h1>Wo kommt es her?<br>Wo geht es hin?</h1>
       <p class="lead">Wähle einen Gegenstand und folge seinem Weg.</p>
-      ${waehlerHtml(atlas.objekte, (id) => `atlas/#kat=${id}`)}
+      ${waehlerHtml(atlas.objekte, (id) => `atlas/#kat=${id}`, { alle: false })}
     </div>
   </div>
-  <nav class="start-mehr" aria-label="Weitere Bereiche">
-    <a href="modelle/">${icon('gegenstand')}<span><b>3D-Modelle</b><small>Alle ${atlas.objekte.length} Modelle prüfen</small></span><i>→</i></a>
-    <a href="kompass/"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="m15 9-2 4-4 2 2-4Z"/></svg><span><b>KI-Kompass</b><small>Wie wir KI verantwortungsvoll nutzen</small></span><i>→</i></a>
-  </nav>
 </section>`;
 if (ruhig) document.querySelector('.kreis').classList.add('ruhig');
 verbindeWaehler(app.querySelector('.waehler'));
