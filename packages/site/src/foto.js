@@ -167,7 +167,7 @@ function hohlGeometrie(t) {
   return geo;
 }
 
-const WEICH = new Set(['textil', 'baumwolle', 'wolle', 'polyester', 'leder', 'kunstleder', 'gummi', 'schaum', 'tpe', 'tpu', 'wachs', 'organisch', 'kork']);
+const WEICH = new Set(['textil', 'baumwolle', 'wolle', 'polyester', 'leder', 'kunstleder', 'gummi', 'schaum', 'tpe', 'tpu']);
 const SCHARF = new Set(['metall', 'glas', 'elektronik', 'magnet']);
 export function haerte(t) {
   const id = t.materials?.[0]?.[0], cls = MATERIALS[id]?.cls;
@@ -315,13 +315,18 @@ function umriss(t) {           // N_UM Punkte auf dem Umriss, nach Winkel um die
 const cr = (p0, p1, p2, p3, u) => 0.5 * (2 * p1 + (-p0 + p2) * u + (2 * p0 - 5 * p1 + 4 * p2 - p3) * u * u + (-p0 + 3 * p1 - 3 * p2 + p3) * u * u * u);
 
 function huelle(stapel) {      // stapel: Teile von unten nach oben
+  // Ebenen an Unter- und Oberkante jeder Scheibe; an Fugen wird der Mittelwert genommen. So bleiben gerade Wände gerade
+  // (kein Fass-Bauch) und Stufen werden zu weichen Übergängen.
+  const roh = [];
+  for (const t of stapel) { const u = umriss(t); roh.push({ z: t.z, pts: u }, { z: t.z + t.h, pts: u }); }
   const ebenen = [];
-  const u0 = umriss(stapel[0]), u1 = umriss(stapel.at(-1));
-  ebenen.push({ z: stapel[0].z, pts: u0 });
-  for (const t of stapel) ebenen.push({ z: t.z + t.h / 2, pts: umriss(t) });
-  ebenen.push({ z: stapel.at(-1).z + stapel.at(-1).h, pts: u1 });
+  for (const e of roh) {
+    const l = ebenen.at(-1);
+    if (l && Math.abs(l.z - e.z) < 0.05) l.pts = l.pts.map((p, j) => [(p[0] + e.pts[j][0]) / 2, (p[1] + e.pts[j][1]) / 2]);
+    else ebenen.push({ z: e.z, pts: e.pts.map((p) => [...p]) });
+  }
   const fein = [];
-  const SCHRITT = 6;
+  const SCHRITT = 5;
   for (let i = 0; i < ebenen.length - 1; i++) {
     const a = ebenen[Math.max(0, i - 1)], b = ebenen[i], c = ebenen[i + 1], e = ebenen[Math.min(ebenen.length - 1, i + 2)];
     for (let k = 0; k < SCHRITT; k++) {
@@ -332,21 +337,46 @@ function huelle(stapel) {      // stapel: Teile von unten nach oben
   fein.push(ebenen.at(-1));
   const pos = [];
   const v = (x, y, z) => pos.push(x, z, y);              // Station x, y, z → three X, Z(=Tiefe), Y(=Höhe)
-  for (let i = 0; i < fein.length - 1; i++) {
-    const A = fein[i], B = fein[i + 1];
-    for (let j = 0; j < N_UM; j++) {
-      const j2 = (j + 1) % N_UM;
-      v(A.pts[j][0], A.pts[j][1], A.z); v(B.pts[j][0], B.pts[j][1], B.z); v(A.pts[j2][0], A.pts[j2][1], A.z);
-      v(A.pts[j2][0], A.pts[j2][1], A.z); v(B.pts[j][0], B.pts[j][1], B.z); v(B.pts[j2][0], B.pts[j2][1], B.z);
+  const mantel = (F, innen) => {
+    for (let i = 0; i < F.length - 1; i++) {
+      const A = F[i], B = F[i + 1];
+      for (let j = 0; j < N_UM; j++) {
+        const j2 = (j + 1) % N_UM;
+        const q = [[A.pts[j], A.z], [B.pts[j], B.z], [A.pts[j2], A.z], [A.pts[j2], A.z], [B.pts[j], B.z], [B.pts[j2], B.z]];
+        if (innen) [q[1], q[2]] = [q[2], q[1]], [q[4], q[5]] = [q[5], q[4]];
+        for (const [p, z] of q) v(p[0], p[1], z);
+      }
     }
-  }
-  for (const [E, oben] of [[fein[0], false], [fein.at(-1), true]]) {     // Deckel unten und oben
+  };
+  const deckel = (E, oben) => {
     const mx = E.pts.reduce((s, p) => s + p[0], 0) / N_UM, my = E.pts.reduce((s, p) => s + p[1], 0) / N_UM;
     for (let j = 0; j < N_UM; j++) {
       const j2 = (j + 1) % N_UM;
       if (oben) { v(mx, my, E.z); v(E.pts[j2][0], E.pts[j2][1], E.z); v(E.pts[j][0], E.pts[j][1], E.z); }
       else { v(mx, my, E.z); v(E.pts[j][0], E.pts[j][1], E.z); v(E.pts[j2][0], E.pts[j2][1], E.z); }
     }
+  };
+  mantel(fein, false);
+  const wand = stapel[0].wand;
+  if (wand > 0) {
+    // Hohl: Innenwand um wand nach innen versetzt, oben ein Rand, unten Boden (Dicke boden, Standard = wand, 0 = offen)
+    const ein = (E) => {
+      const mx = E.pts.reduce((s, p) => s + p[0], 0) / N_UM, my = E.pts.reduce((s, p) => s + p[1], 0) / N_UM;
+      return E.pts.map(([x, y]) => { const dx = x - mx, dy = y - my, l = Math.hypot(dx, dy) || 1, k = Math.max(0, l - wand) / l; return [mx + dx * k, my + dy * k]; });
+    };
+    const boden = stapel[0].boden ?? wand, z0 = fein[0].z + boden;
+    const innen = fein.filter((E) => E.z >= z0 - 1e-6).map((E) => ({ z: E.z, pts: ein(E) }));
+    if (boden > 0 && innen[0].z > z0 + 1e-6) innen.unshift({ z: z0, pts: ein(fein.find((E) => E.z >= z0) ?? fein[0]) });
+    mantel(innen, true);
+    const O = fein.at(-1), I = innen.at(-1);
+    for (let j = 0; j < N_UM; j++) {                      // Rand oben
+      const j2 = (j + 1) % N_UM;
+      v(O.pts[j][0], O.pts[j][1], O.z); v(O.pts[j2][0], O.pts[j2][1], O.z); v(I.pts[j][0], I.pts[j][1], O.z);
+      v(I.pts[j][0], I.pts[j][1], O.z); v(O.pts[j2][0], O.pts[j2][1], O.z); v(I.pts[j2][0], I.pts[j2][1], O.z);
+    }
+    if (boden > 0) { deckel(fein[0], false); deckel(innen[0], true); }
+  } else {
+    deckel(fein[0], false); deckel(fein.at(-1), true);
   }
   let geo = new THREE.BufferGeometry();
   geo.setAttribute('position', new THREE.Float32BufferAttribute(pos, 3));
