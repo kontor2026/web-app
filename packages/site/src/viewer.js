@@ -177,26 +177,42 @@ export function erzeugeViewer(el, { onHover, onSelect, tip } = {}) {
         if (n < kette.length - 1) teile[i].marks.forEach((m) => { m.mesh.userData.ersetzt = true; });
       });
     }
-    explosion(explodiert ? 1 : 0, false);   // Ausschnitt passend zum gewünschten Zustand (Vorschau: zusammengebaut)
-    modell.position.set(0, 0, 0); modell.updateMatrixWorld(true);
-    const box = new THREE.Box3().setFromObject(modell);
-    modell.position.copy(box.getCenter(new THREE.Vector3()).negate());
-    const r = box.getBoundingSphere(new THREE.Sphere()).radius;
-    kamera.position.set(1, 0.95, 1.25).normalize().multiplyScalar(r * 4);
-    kamera.zoom = 1 / (r * 1.08);
+    // Ausschnitt für beide Zustände messen: Mitte und Größe, damit die Kamera beim Umschalten mitgeht
+    modell.position.set(0, 0, 0);
+    ausschnitt = null;
+    ausschnitt = [0, 1].map((x) => {
+      explosion(x, false); modell.updateMatrixWorld(true);
+      const b = new THREE.Box3().setFromObject(modell);
+      return { mitte: b.getCenter(new THREE.Vector3()), r: b.getBoundingSphere(new THREE.Sphere()).radius, box: b };
+    });
+    explosion(explodiert ? 1 : 0, false);
+    gezeigt = explodiert ? 1 : 0;
+    const a = ausschnitt[gezeigt], r = ausschnitt[1].r;
+    // Modell auf die Mitte des explodierten Zustands, die Kamera blickt auf den gezeigten Zustand
+    modell.position.copy(ausschnitt[1].mitte).negate();
+    ausschnitt.forEach((x) => x.blick = x.mitte.clone().sub(ausschnitt[1].mitte));
+    kamera.position.set(1, 0.95, 1.25).normalize().multiplyScalar(r * 4).add(a.blick);
+    kamera.zoom = 1 / (a.r * 1.08);
     kamera.near = r * 0.5; kamera.far = r * 8;                // enger Tiefenbereich für die Umgebungsverdeckung
     kamera.updateProjectionMatrix();
     modell.updateMatrixWorld(true);
     licht.passe(new THREE.Box3().setFromObject(modell));
-    nach.radius(r);
+    nach.radius(ausschnitt[0].r);                              // Kontaktschatten nach Größe des Gegenstands, nicht der Explosion
     foto(fotoAn);
-    steuerung.target.set(0, 0, 0); steuerung.update(); steuerung.saveState();   // Doppeltippen kehrt hierher zurück
+    steuerung.target.copy(a.blick); steuerung.update(); steuerung.saveState();   // Doppeltippen kehrt hierher zurück
     faerbe(farbFn);
     explosion(explodiert, !ruhig);
   }
 
+  let ausschnitt = null, gezeigt = 1;
   function explosion(ziel, animiert = true) {
     explodiert = ziel;
+    // Kamera folgt: Blickpunkt und Zoom gleiten zum Ausschnitt des Zielzustands, eigener Zoom des Nutzers bleibt erhalten
+    const vonZiel = steuerung.target.clone(), vonKam = kamera.position.clone(), vonZoom = kamera.zoom;
+    const quelle = ausschnitt?.[gezeigt], dahin = ausschnitt?.[ziel ? 1 : 0];
+    const nachZiel = dahin?.blick ? dahin.blick.clone() : vonZiel;
+    const nachZoom = dahin ? vonZoom * (quelle.r / dahin.r) : vonZoom;
+    if (ausschnitt?.[0].blick && animiert) gezeigt = ziel ? 1 : 0;
     // Eigene Teileliste und Laufnummer: eine neue Animation löst die alte ab (sonst Fehler beim schnellen Blättern)
     const eigene = teile, lauf = ++animationNr;
     const start = eigene.map((t) => t.g.position.clone()), t0 = performance.now(), dauer = animiert ? 900 : 0;
@@ -205,6 +221,11 @@ export function erzeugeViewer(el, { onHover, onSelect, tip } = {}) {
       const k = dauer ? Math.min(1, (jetzt - t0) / dauer) : 1;
       const e = k < 0.5 ? 4 * k ** 3 : 1 - (-2 * k + 2) ** 3 / 2;
       eigene.forEach((t, i) => t.g.position.lerpVectors(start[i], t.basis.clone().addScaledVector(t.ex, ziel), e));
+      if (ausschnitt?.[0].blick && animiert) {
+        const d = vonZiel.clone().lerp(nachZiel, e).sub(steuerung.target);
+        steuerung.target.add(d); kamera.position.add(d);
+        kamera.zoom = vonZoom + (nachZoom - vonZoom) * e; kamera.updateProjectionMatrix();
+      }
       neu();
       if (k < 1) requestAnimationFrame(schritt);
     };

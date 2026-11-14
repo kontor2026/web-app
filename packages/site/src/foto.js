@@ -245,6 +245,7 @@ export function studio(renderer, scene) {
   sonne.castShadow = true;
   sonne.shadow.mapSize.set(2048, 2048);
   sonne.shadow.bias = -0.0004;
+  sonne.shadow.radius = 4;                                  // weiche Kanten, flimmern beim Drehen weniger
   const fuell = new THREE.DirectionalLight(0xe8f0ff, 0.35);
   const boden = new THREE.Mesh(new THREE.PlaneGeometry(1, 1), new THREE.ShadowMaterial({ opacity: 0.22 }));
   boden.rotation.x = -Math.PI / 2;
@@ -282,13 +283,13 @@ export function nachbearbeitung(renderer, scene, kamera) {
   const composer = new EffectComposer(renderer);
   composer.addPass(new RenderPass(scene, kamera));
   const ao = new GTAOPass(scene, kamera, 1, 1);
-  ao.blendIntensity = 0.85;
+  ao.blendIntensity = 0.7;
   composer.addPass(ao);
   composer.addPass(new OutputPass());
   return {
     setSize(w, h) { composer.setPixelRatio(renderer.getPixelRatio()); composer.setSize(w, h); },
     // Radius in mm passend zur Modellgröße
-    radius(r) { ao.updateGtaoMaterial({ radius: Math.max(4, r * 0.06), distanceExponent: 1.5, thickness: Math.max(2, r * 0.03), scale: 1, samples: 16 }); },
+    radius(r) { ao.updateGtaoMaterial({ radius: r * 0.05, distanceExponent: 1.5, thickness: r * 0.025, scale: 1, samples: 24 }); },
     render() { composer.render(); },
   };
 }
