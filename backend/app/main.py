@@ -3,25 +3,30 @@
 Start (aus dem Projektordner):  uvicorn backend.app.main:app --port 8000
 """
 import json
+from typing import Literal
 
 from fastapi import FastAPI, HTTPException
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 from . import config, db, llm, pipeline
 
 app = FastAPI(title='Kreislauf-Station')
+Modus = Literal['souveraen', 'cloud'] | None   # Umschalter Souverän/Cloud, None = LLM_PROVIDER
 
 
 class ScanIn(BaseModel):
     image: str                     # data:image/jpeg;base64,...
+    modus: Modus = None
 
 
 class SteckbriefIn(BaseModel):
     scan_id: int | None = None
     modell: str | None = None      # bestätigter Kandidat
     objekt: str | None = None      # Gattung als Rückfall
+    modus: Modus = None
+    gewicht_g: float | None = Field(None, gt=0, lt=1_000_000)   # von der Waage der Station
 
 
 class StoreIn(BaseModel):
@@ -48,7 +53,7 @@ def health():
 
 @app.post('/api/scan')
 def scan(body: ScanIn):
-    return _run(pipeline.scan, body.image)
+    return _run(pipeline.scan, body.image, body.modus)
 
 
 @app.get('/api/scans/{sid}/jobs')
@@ -59,7 +64,7 @@ def scan_jobs(sid: int):
 
 @app.post('/api/steckbrief')
 def steckbrief(body: SteckbriefIn):
-    return _run(pipeline.steckbrief, body.scan_id, body.modell, body.objekt)
+    return _run(pipeline.steckbrief, body.scan_id, body.modell, body.objekt, body.modus, body.gewicht_g)
 
 
 @app.get('/api/kategorien')
@@ -102,8 +107,8 @@ def discard(oid: str):
 
 
 @app.post('/api/objects/{oid}/ideen')
-def ideas(oid: str, neu: bool = False):
-    return _run(pipeline.ideen, oid, neu)
+def ideas(oid: str, neu: bool = False, modus: Modus = None):
+    return _run(pipeline.ideen, oid, neu, modus)
 
 
 @app.get('/api/inventory')

@@ -5,6 +5,9 @@ COPY backend/requirements.txt backend/requirements.txt
 RUN pip install --no-cache-dir -r backend/requirements.txt
 COPY backend/app backend/app
 COPY backend/seed backend/seed
+# Belegte Bauideen und Bauteil-Zuordnung, dieselben Daten wie die Werkbank der Website.
+COPY data/rezepte data/rezepte
+COPY data/classifier.json data/bauteile_de.json data/
 # Beispielfotos: für den Foto-Abgleich der Demo-Objekte beim ersten Start.
 COPY assets/samples assets/samples
 ENV STATION_DATA=/data

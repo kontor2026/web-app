@@ -12,23 +12,37 @@ async function req(path, { body, method = body ? 'POST' : 'GET', signal } = {}) 
   return data;
 }
 
+// Umschalter in der Kopfzeile: 'souveraen' = lokales Modell, nichts verlässt die Station; 'cloud' = Claude.
+const MODUS_KEY = 'station-modus';
+
 export const api = {
   online: false,
   info: null,
+  modus: localStorage.getItem(MODUS_KEY) ?? null,   // null: Standard des Backends
+
+  setModus(m) { this.modus = m; localStorage.setItem(MODUS_KEY, m); },
+  // Stand des gewählten Modus (Modell, bereit, Hinweis), sonst der Standard des Backends.
+  get mode() { return this.info?.modi?.[this.modus] ?? this.info; },
 
   async init() {
     try {
       // Großzügig: Während einer Generierung antwortet der Modellserver langsamer.
       const r = await fetch('/api/health', { signal: AbortSignal.timeout(8000) });
-      if (r.ok) { this.info = await r.json(); this.online = true; }
+      if (r.ok) {
+        this.info = await r.json(); this.online = true;
+        this.modus ??= this.info.standard ?? 'souveraen';
+      }
     } catch { /* kein Backend: Demo-Modus */ }
     return this.online;
   },
 
-  scan: (image, signal) => req('/api/scan', { body: { image }, signal }),
-  steckbrief: (body, signal) => req('/api/steckbrief', { body, signal }),
+  scan(image, signal) { return req('/api/scan', { body: { image, modus: this.modus }, signal }); },
+  steckbrief(body, signal) { return req('/api/steckbrief', { body: { ...body, modus: this.modus }, signal }); },
   jobs: (scanId) => req(`/api/scans/${scanId}/jobs`),
-  ideen: (id, neu, signal) => req(`/api/objects/${encodeURIComponent(id)}/ideen${neu ? '?neu=true' : ''}`, { method: 'POST', signal }),
+  ideen(id, neu, signal) {
+    const q = new URLSearchParams({ ...(neu && { neu: 'true' }), ...(this.modus && { modus: this.modus }) });
+    return req(`/api/objects/${encodeURIComponent(id)}/ideen?${q}`, { method: 'POST', signal });
+  },
   inventory: () => req('/api/inventory'),
   kategorien: () => req('/api/kategorien'),
   objekt: (id) => req(`/api/objects/${encodeURIComponent(id)}`),

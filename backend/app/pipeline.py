@@ -15,8 +15,8 @@ import threading
 import time
 from concurrent.futures import ThreadPoolExecutor
 
-from . import config, db, images, llm, schemas
-from .layout import build_object, slug
+from . import config, db, images, llm, rezepte, schemas
+from .layout import build_object, gewicht_text, slug
 
 SYSTEM = ('Du arbeitest an einer Scan-Station in einer offenen Upcycling-Werkstatt für Schülerinnen und Schüler. '
           'Antworte auf Deutsch, in kurzen, klaren Sätzen ohne Fachjargon. Erfinde keine genauen Zahlen: '
@@ -55,12 +55,16 @@ _letzter_scan = {}               # object_id -> scan_id that last opened it (cat
 _jobs_lock = threading.Lock()
 
 
-def _start_ideen(scan_id, object_id):
-    """Bauideen für object_id im Hintergrund rechnen, während der Steckbrief angeschaut wird."""
+def _start_ideen(scan_id, object_id, modus=None):
+    """Bauideen für object_id im Hintergrund rechnen, während der Steckbrief angeschaut wird.
+    Entfällt, wenn schon drei belegte Rezepte (data/rezepte) passen: dann braucht es keine KI."""
     if config.VORAUSRECHNEN == 'aus' or config.LLM_MODE == 'mock':
         return
+    obj = db.get_object(object_id)
+    if obj and len(rezepte.passend(obj)) >= 3:
+        return
     with _jobs_lock:
-        _jobs.setdefault(scan_id, {})['ideen'] = _pool.submit(_ideen_ki, object_id, scan_id)
+        _jobs.setdefault(scan_id, {})['ideen'] = _pool.submit(_ideen_ki, object_id, scan_id, modus)
         _ziel[scan_id] = object_id
         for alt in sorted(_jobs)[:-50]:          # nur die letzten 50 Scans merken
             _jobs.pop(alt, None)
@@ -119,7 +123,7 @@ def _check_scan(d):
     return [f'nur Namen aus der Kategorienliste, nicht {", ".join(fremd)}'] if fremd else []
 
 
-def scan(data_url):
+def scan(data_url, modus=None):
     t0 = time.perf_counter()
     img = images.decode(data_url)
     q = images.quality(img)
@@ -148,7 +152,7 @@ def scan(data_url):
         }
     else:
         data, info = _with_retry(
-            lambda f: llm.chat_json(model=config.VISION_MODEL, system=SYSTEM,
+            lambda f: llm.chat_json(modus=modus, model=config.VISION_MODEL, system=SYSTEM,
                                     user=SCAN_PROMPT + (f'\nKorrigiere: {f}' if f else ''),
                                     schema=schemas.SCAN, name='scan', images=[images.to_data_url(obj_img)], max_tokens=600),
             _check_scan)
@@ -171,10 +175,11 @@ def scan(data_url):
     result['bbox'] = [round(v, 3) for v in box] if box else None
     result['dauer_ms'] = round((time.perf_counter() - t0) * 1000)
     result['scan_id'] = sid
+    result['modus'] = modus
     db.update_scan(sid, result)
     top_id = result['kandidaten'][0]['object_id'] if result['quelle'] != 'mock' and result['kandidaten'] else None
     if top_id and not (db.get_object(top_id) or {}).get('projekte'):
-        _start_ideen(sid, top_id)
+        _start_ideen(sid, top_id, modus)
     result['vorbereitung'] = jobs(sid)
     return result
 
@@ -216,16 +221,18 @@ STECKBRIEF_REGELN = (
     'rohstoffwert, gebrauchtwert und co2_kg als kurze Schätzung mit "≈".')
 
 
-def _steckbrief_ki(scan_id, name, objekt=None):
+def _steckbrief_ki(scan_id, name, objekt=None, modus=None, gewicht_g=None):
     """Steckbrief mit KI erzeugen und als Entwurf speichern. Nur für Gegenstände außerhalb der 201 Kategorien
     ("weiß ich nicht"), alle anderen kommen sofort aus der Datenbank."""
     row, img = db.get_scan(scan_id) if scan_id else (None, None)
     scan_res = row['result'] if row else {}
     kopf = (f'Gegenstand: {name}\nAllgemein: {scan_res.get("objekt") or objekt or "unbekannt"}\n'
             f'Sichtbarer Text auf dem Foto: {scan_res.get("sichtbarer_text") or "keiner"}\n')
+    if gewicht_g:
+        kopf += f'Auf der Waage der Station gewogen: {gewicht_g:g} g. Nutze genau diesen Wert als gewicht_g.\n'
     imgs = [images.to_data_url(img)] if img else []
     data, info = _with_retry(
-        lambda f: llm.chat_json(model=config.VISION_MODEL if imgs else config.TEXT_MODEL, system=SYSTEM,
+        lambda f: llm.chat_json(modus=modus, model=config.VISION_MODEL if imgs else config.TEXT_MODEL, system=SYSTEM,
                                 user=kopf + STECKBRIEF_REGELN + (f'\nDeine letzte Antwort hatte Fehler, korrigiere: {f}' if f else ''),
                                 schema=schemas.STECKBRIEF, name='steckbrief', images=imgs, max_tokens=3500),
         _check_steckbrief)
@@ -236,28 +243,36 @@ def _steckbrief_ki(scan_id, name, objekt=None):
     quelle = f'KI-Entwurf mit {info["modell"]}, noch nicht von der Werkstatt geprüft. Werte sind Schätzungen.'
     obj = build_object(data, oid=oid, modell=name, scan=scan_res, quelle=quelle)
     obj['scan_id'] = scan_id
+    _gewogen(obj, gewicht_g)
     db.put_object(obj, 'entwurf', info['modell'], aliases=[name], photo_hash=row['hash'] if row else None)
     obj['status'] = 'entwurf'
     if scan_id:
         # Bauideen für den neuen Entwurf im Hintergrund, während die Explosionszeichnung angeschaut wird.
-        _start_ideen(scan_id, obj['id'])
+        _start_ideen(scan_id, obj['id'], modus)
     return obj
 
 
-def steckbrief(scan_id, modell, objekt=None):
+def _gewogen(obj, gewicht_g):
+    """Gewicht von der Waage hat Vorrang vor der Schätzung (gilt nur für diesen Scan, nicht für den Katalog)."""
+    if gewicht_g:
+        obj['gewicht'] = gewicht_text(gewicht_g, gewogen=True)
+    return obj
+
+
+def steckbrief(scan_id, modell, objekt=None, modus=None, gewicht_g=None):
     t0 = time.perf_counter()
     cached = db.find_alias(modell) if modell else None
     if cached:
         if scan_id is not None:
             with _jobs_lock:
                 _letzter_scan[cached] = scan_id   # lets ideen() find the ideas job of this scan
-        return {'object': db.get_object(cached), 'quelle': 'cache', 'dauer_ms': round((time.perf_counter() - t0) * 1000)}
+        return {'object': _gewogen(db.get_object(cached), gewicht_g), 'quelle': 'cache', 'dauer_ms': round((time.perf_counter() - t0) * 1000)}
     if config.LLM_MODE == 'mock':
         raise PipelineError('Die KI ist gerade abgeschaltet. Für neue Gegenstände ist kein Steckbrief möglich.')
 
     row, _ = db.get_scan(scan_id) if scan_id else (None, None)
     scan_res = row['result'] if row else {}
-    obj = _steckbrief_ki(scan_id, modell or scan_res.get('objekt') or objekt or 'Gegenstand', objekt)
+    obj = _steckbrief_ki(scan_id, modell or scan_res.get('objekt') or objekt or 'Gegenstand', objekt, modus, gewicht_g)
     return {'object': obj, 'quelle': 'ki', 'dauer_ms': round((time.perf_counter() - t0) * 1000)}
 
 
@@ -271,7 +286,7 @@ def _bestand(ausser=None):
     return {i['id']: i for i in db.inventory() if i['menge'] > 0 and (ausser is None or i['object_id'] != ausser)}
 
 
-def _ideen_ki(object_id, scan_id=None):
+def _ideen_ki(object_id, scan_id=None, modus=None):
     """Drei Bauideen erzeugen. Mit object_id aus den Bauteilen des Steckbriefs, sonst nur aus dem Bild
     (Vorausrechnen parallel zum Steckbrief). Rückgabe: Rohdaten nach Schema."""
     obj = db.get_object(object_id) if object_id else None
@@ -296,7 +311,8 @@ def _ideen_ki(object_id, scan_id=None):
             'höchstens 10 Stück je Lagerartikel. '
             'Keine Projekte, bei denen Akkus geöffnet werden oder an Netzspannung gearbeitet wird. '
             'Ein Projekt soll leicht sein (stufe 1). lernziel: was man über Material oder Kreislauf lernt.\n'
-            f'Beispiele für Stil und Umfang: {json.dumps(beispiele, ensure_ascii=False)}')
+            f'Beispiele für Stil und Umfang: {json.dumps(beispiele, ensure_ascii=False)}\n'
+            f'Geprüfte Rezepte der Werkstatt, gern als Anregung: {rezepte.als_beispiel()}')
 
     def check(d):
         f = []
@@ -309,7 +325,7 @@ def _ideen_ki(object_id, scan_id=None):
 
     schema = schemas.projekte_schema(list(bestand) or ['keins'])
     data, _ = _with_retry(
-        lambda f: llm.chat_json(model=config.VISION_MODEL if imgs else config.TEXT_MODEL, system=SYSTEM,
+        lambda f: llm.chat_json(modus=modus, model=config.VISION_MODEL if imgs else config.TEXT_MODEL, system=SYSTEM,
                                 user=user + (f'\nKorrigiere: {f}' if f else ''), schema=schema, name='projekte',
                                 images=imgs, max_tokens=2500, temperature=0.5),
         check, lambda d: d)
@@ -336,22 +352,27 @@ def _projekte(data, obj):
     return projekte
 
 
-def ideen(object_id, neu=False):
+def ideen(object_id, neu=False, modus=None):
     t0 = time.perf_counter()
     obj = db.get_object(object_id)
     if not obj:
         raise PipelineError('Unbekanntes Objekt')
     if obj.get('projekte') and not neu:
         return {'projekte': obj['projekte'], 'quelle': 'cache', 'dauer_ms': 0}
-    if config.LLM_MODE == 'mock':
+    # Belegte Rezepte (data/rezepte) zuerst; die KI füllt nur die übrigen Plätze. "Andere Ideen" = nur KI.
+    belegt = [] if neu else rezepte.passend(obj)[:3]
+    if len(belegt) == 3 or (belegt and config.LLM_MODE == 'mock'):
+        projekte, quelle = belegt, 'rezepte'
+    elif config.LLM_MODE == 'mock':
         raise PipelineError('Die KI ist gerade abgeschaltet. Bauideen sind nur für bekannte Gegenstände da.')
-
-    vorlauf = _ideen_job(object_id, obj.get('scan_id')) if not neu else None
-    data = _warte(vorlauf) if vorlauf else None
-    quelle = 'vorausberechnet' if data else 'ki'
-    if not data:
-        data = _ideen_ki(object_id)
-    projekte = _projekte(data, obj)
+    else:
+        vorlauf = _ideen_job(object_id, obj.get('scan_id')) if not neu else None
+        data = _warte(vorlauf) if vorlauf else None
+        quelle = 'vorausberechnet' if data else 'ki'
+        if not data:
+            data = _ideen_ki(object_id, None, modus)
+        titel = {p['titel'].lower() for p in belegt}
+        projekte = belegt + [p for p in _projekte(data, obj) if p['titel'].lower() not in titel][:3 - len(belegt)]
     obj['projekte'] = projekte
     status = obj.pop('status', 'entwurf')
     db.put_object(obj, status, 'ideen')

@@ -58,7 +58,11 @@ export function erzeugeGlobus(el, laender) {
     .htmlAltitude((d) => d.alt)
     .htmlTransitionDuration(ruhig ? 0 : 500);
   globus.controls().enableZoom = true;
-  globus.controls().autoRotate = false;
+  // Weltansicht dreht sich langsam, sobald sie gezeigt wird; anfassen stoppt die Drehung.
+  const drehe = (an) => { globus.controls().autoRotate = an && !ruhig; };
+  globus.controls().autoRotateSpeed = 0.4;
+  drehe(false);
+  globus.controls().addEventListener('start', () => drehe(false));
   globus.pointOfView({ lat: 25, lng: 15, altitude: 2.1 });
   // Graticule in Linienfarbe der Zeichnung
   globus.scene().traverse((o) => { if (o.type === 'LineSegments' && o.material?.color) { o.material.color.set(F.rule); o.material.opacity = 0.9; o.material.transparent = true; } });
@@ -82,7 +86,9 @@ export function erzeugeGlobus(el, laender) {
       ]);
       if (fokus) {
         const z = rang[0] ?? de;
+        drehe(false);
         globus.pointOfView({ lat: (z.lat + de.lat) / 2, lng: (z.lng + de.lng) / 2, altitude: rang.length ? 1.75 : 2.1 }, ruhig ? 0 : 1100);
+        flug = setTimeout(() => drehe(true), 1150);   // erst nach dem Anflug drehen
       }
     },
     hebeHervor(a3) { hervor = a3; globus.polygonCapColor(kappe); },
@@ -95,6 +101,7 @@ export function erzeugeGlobus(el, laender) {
           .filter((f) => { const [lng, lat] = geoCentroid(f); return lat > 40 && lat < 66 && lng > -12 && lng < 32; })
           .map((f) => ({ ...f, region: true, anteil: 0 }));
       }
+      drehe(false);                                  // Region bleibt ruhig stehen
       globus.polygonsData(feinGeo).arcsData([]);
       globus.htmlElementsData(!namen ? [] : [
         ...orte.map((o) => ({ ...o, typ: 'ort', alt: 0.0008 })),

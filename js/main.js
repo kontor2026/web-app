@@ -26,9 +26,10 @@ const state = {
   view: null,
   explode: null,
   stream: null,
+  gewicht: null,        // Gramm von der Waage, gilt für den aktuellen Scan
 };
-// Anzeige des KI-Anbieters: lokal (Inferenz-Container) oder Claude (Anthropic-API).
-const kiLabel = () => (api.info?.anbieter === 'claude' ? 'KI Claude · ' : 'KI lokal · ') + (api.info?.modell ?? '');
+// Anzeige des gewählten Modus: souverän (Inferenz-Container) oder Cloud (Claude).
+const kiLabel = () => (api.modus === 'cloud' ? 'KI Cloud · ' : 'KI souverän · ') + (api.mode?.modell ?? '');
 const invById = (id) => state.inventory.find((i) => i.id === id) ?? byId(id) ?? { name: id, fach: '?' };
 const stockCount = () => state.inventory.filter((i) => i.einheit === 'Stk').reduce((a, i) => a + i.menge, 0);
 
@@ -39,6 +40,25 @@ const h = (html) => {
 };
 const pct = (v) => `${Math.round(v * 100)} %`;
 const fmt = (n) => String(n).replace('.', ',');
+const gewichtText = (g) => (g >= 1000 ? `${fmt(+(g / 1000).toFixed(2))} kg` : `${fmt(Math.round(g))} g`) + ' gewogen';
+
+// Eingabe für das Gewicht von der Waage, im Ergebnis des Scans.
+function weightField() {
+  return `
+    <div>
+      <label class="eyebrow" for="gewicht" style="display:block;margin-bottom:10px">Gewicht von der Waage</label>
+      <div class="weigh">
+        <input id="gewicht" type="number" inputmode="decimal" min="0" step="any" placeholder="z. B. 194" value="${state.gewicht ?? ''}">
+        <span>g</span>
+      </div>
+    </div>`;
+}
+function wireWeight(root) {
+  root.querySelector('#gewicht').addEventListener('input', (e) => {
+    const g = parseFloat(e.target.value.replace(',', '.'));
+    state.gewicht = g > 0 ? g : null;
+  });
+}
 
 function setStep(step) {
   const order = ['scan', 'sheet', 'craft'];
@@ -101,6 +121,7 @@ function show(viewEl, step) {
 /* ------------------------------------------------------------------ */
 
 function viewScan() {
+  state.gewicht = null;
   const v = h(`
     <section class="view scan">
       <div class="viewfinder" id="vf">
@@ -296,6 +317,7 @@ function showResultApi(v, res) {
             ${c.conf == null ? '' : `<span class="bar"><i style="width:${c.conf * 100}%"></i></span>`}
           </button>`).join('')}</div>
       </div>
+      ${weightField()}
       ${res.sichtbarer_text ? `<p class="note">Gelesener Text: „${res.sichtbarer_text}“</p>` : ''}
       <p class="note">${res.hinweis ?? ''}</p>
       ${res.vorbereitung?.steckbrief && res.vorbereitung.steckbrief !== 'aus' ? '<p class="note">Steckbrief und Bauideen werden schon im Hintergrund vorbereitet.</p>' : ''}
@@ -308,6 +330,7 @@ function showResultApi(v, res) {
     side.querySelectorAll('.cand').forEach((x) => x.classList.toggle('sel', x === b));
     state.model = b.dataset.key || res.objekt;
   }));
+  wireWeight(side);
   side.querySelector('#go').addEventListener('click', () => openSheetApi(res, state.model));
   side.querySelector('#again').addEventListener('click', viewScan);
   animate(side.querySelectorAll('.result > *, .cand, .actions-col'), { opacity: [0, 1], translateY: [10, 0], delay: stagger(60), duration: 420, ease: 'outCubic' });
@@ -320,7 +343,7 @@ async function openSheetApi(res, modell) {
     ? `Die KI arbeitet schon seit dem Scan im Hintergrund an „${modell}“. Gleich fertig.`
     : `Die KI zerlegt „${modell}“ in Bauteile und ordnet Materialien zu. Die Zeichnung berechnet die Station danach selbst.`);
   try {
-    const out = await api.steckbrief({ scan_id: res.scan_id, modell, objekt: res.objekt }, b?.signal);
+    const out = await api.steckbrief({ scan_id: res.scan_id, modell, objekt: res.objekt, gewicht_g: state.gewicht }, b?.signal);
     b?.close();
     state.obj = out.object;
     state.model = modell;
@@ -372,6 +395,7 @@ function showResult(v, obj) {
             </button>`).join('')}
         </div>
       </div>
+      ${weightField()}
       <p class="note">${note}</p>
     </div>
     <div class="actions-col">
@@ -391,7 +415,13 @@ function showResult(v, obj) {
       go.disabled = false; go.style.opacity = 1;
     }
   }));
-  side.querySelector('#go').addEventListener('click', () => state.obj && viewSheet());
+  wireWeight(side);
+  side.querySelector('#go').addEventListener('click', () => {
+    if (!state.obj) return;
+    // Demo: Gewicht nur für diesen Scan überschreiben, die Beispieldaten bleiben unverändert.
+    if (state.gewicht) state.obj = { ...state.obj, gewicht: gewichtText(state.gewicht) };
+    viewSheet();
+  });
   side.querySelector('#again').addEventListener('click', viewScan);
   animate(side.querySelectorAll('.result > *, .cand, .actions-col'), { opacity: [0, 1], translateY: [10, 0], delay: stagger(60), duration: 420, ease: 'outCubic' });
   animate(side.querySelectorAll('.cand .bar i'), { scaleX: [0, 1], transformOrigin: ['0% 50%', '0% 50%'], delay: stagger(80, { start: 300 }), duration: 700, ease: 'outExpo' });
@@ -708,7 +738,7 @@ function renderCraft() {
           <div>
             <div class="eyebrow">Schritt 03 · Bauen</div>
             <h1 style="margin-top:8px">Drei Ideen für dein ${obj.name}</h1>
-            <p>Jede Idee nutzt deinen Gegenstand und Material aus dem Lager. Vorgeschlagen von der KI, geprüft von der Werkstatt.</p>
+            <p>${obj.projekte.some((p) => p.quelle) ? 'Jede Idee nutzt ein Teil deines Gegenstands. Ideen mit Quelle stammen aus der Rezeptsammlung der Werkstatt, die übrigen schlägt die KI vor.' : 'Jede Idee nutzt deinen Gegenstand und Material aus dem Lager. Vorgeschlagen von der KI, geprüft von der Werkstatt.'}</p>
           </div>
           <div class="row">
             <button class="btn ghost" id="back">Zurück zum Steckbrief</button>
@@ -723,11 +753,14 @@ function renderCraft() {
             <div class="goal"><small>Das lernst du</small>${p.lernziel}</div>
             <div><h4>Material</h4><div class="uses">${p.nutzt.map((u) => {
               if (u.neu) return `<div class="use neu"><i></i><span>${u.name}</span><span class="f">${NEW_FACH}</span><span class="q">neu</span></div>`;
+              if (u.extra) return `<div class="use"><i></i><span>${u.extra}</span><span class="f">dazu</span><span class="q">${u.menge}×</span></div>`;
               const it = invById(u.inv);
               return `<div class="use"><i></i><span>${it.name}</span><span class="f">${it.fach}</span><span class="q">${u.menge}×</span></div>`;
             }).join('')}</div></div>
             <div><h4>Werkzeug</h4><div class="tools">${p.werkzeug.map((w) => `<span class="tag">${w}</span>`).join('')}</div></div>
             <div><h4>So geht's</h4><ol class="steps-list">${p.schritte.map((s) => `<li>${s}</li>`).join('')}</ol></div>
+            ${p.sicherheit ? `<p class="note warn">${p.sicherheit}</p>` : ''}
+            ${p.quelle ? `<p class="source">Quelle: <a href="${p.quelle.url}" target="_blank" rel="noopener">${p.quelle.titel}</a></p>` : ''}
             <button class="btn primary" data-build="${i}">Dieses Projekt bauen</button>
           </article>`).join('')}</div>
       </div>
@@ -743,7 +776,7 @@ function renderCraft() {
   const inv = v.querySelector('#inv');
   v.querySelectorAll('.idea').forEach((card) => {
     const p = obj.projekte[+card.dataset.i];
-    const used = new Set(p.nutzt.map((u) => (u.neu ? '__neu' : u.inv)));
+    const used = new Set(p.nutzt.map((u) => (u.neu ? '__neu' : u.inv)).filter(Boolean));
     card.addEventListener('pointerenter', () => {
       inv.classList.add('focus');
       inv.querySelectorAll('.irow').forEach((r) => r.classList.toggle('used', used.has(r.dataset.inv)));
@@ -840,6 +873,7 @@ function modalDispose() {
 function modalBuild(p, index) {
   const rows = p.nutzt.map((u) => {
     if (u.neu) return `<div class="use neu"><i></i><span>${u.name}</span><span class="f">dein Teil</span><span class="q">neu</span></div>`;
+    if (u.extra) return `<div class="use"><i></i><span>${u.extra}</span><span class="f">dazu</span><span class="q">${u.menge}×</span></div>`;
     const it = invById(u.inv);
     return `<div class="use"><i></i><span>${it.name}</span><span class="f">${it.fach}</span><span class="q">${u.menge}×</span></div>`;
   }).join('');
@@ -882,17 +916,33 @@ function modalBuild(p, index) {
 
 document.querySelector('.brand').addEventListener('click', viewScan);
 
-// Backend vorhanden? Dann echter Lagerbestand und Status der lokalen KI in der Kopfzeile.
-async function initBackend() {
+// Umschalter Souverän/Cloud und KI-Status in der Kopfzeile.
+function renderMode() {
   const ki = document.getElementById('ki-status');
-  if (!(await api.init())) {
+  const modus = api.modus ?? 'souveraen';
+  document.querySelectorAll('#ki-mode button').forEach((b) => {
+    b.classList.toggle('on', b.dataset.m === modus);
+    b.setAttribute('aria-checked', b.dataset.m === modus);
+  });
+  if (!api.online) {
     ki.textContent = 'Demo-Modus';
     ki.title = 'Kein Backend erreichbar. Erkennung und Daten sind simuliert.';
     return;
   }
   ki.textContent = api.info.modus === 'mock' ? 'KI aus (Mock)' : kiLabel();
-  ki.classList.toggle('on', api.info.ok);
-  ki.title = api.info.hinweis ?? '';
+  ki.classList.toggle('on', !!api.mode?.ok);
+  ki.title = api.mode?.hinweis ?? '';
+}
+document.querySelectorAll('#ki-mode button').forEach((b) => b.addEventListener('click', () => {
+  api.setModus(b.dataset.m);
+  renderMode();
+}));
+
+// Backend vorhanden? Dann echter Lagerbestand und Status der KI in der Kopfzeile.
+async function initBackend() {
+  await api.init();
+  renderMode();
+  if (!api.online) return;
   state.inventory = await api.inventory().catch(() => state.inventory);
   setStep('scan');
 }

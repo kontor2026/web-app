@@ -21,15 +21,17 @@ def _strip(text: str) -> str:
     return text
 
 
-def chat_json(**kw):
-    """Ein KI-Aufruf mit erzwungenem JSON-Schema. Rückgabe (daten, info) mit Dauer und Token-Zahlen."""
-    if config.LLM_PROVIDER == 'claude':
+def chat_json(modus=None, **kw):
+    """Ein KI-Aufruf mit erzwungenem JSON-Schema. Rückgabe (daten, info) mit Dauer und Token-Zahlen.
+    modus: 'souveraen' (lokal) oder 'cloud' (Claude) aus der Oberfläche, None = LLM_PROVIDER."""
+    anbieter = config.provider(modus)
+    if anbieter == 'claude':
         from . import llm_claude
         try:
             return llm_claude.chat_json(**kw)
         except llm_claude.ClaudeError as e:
             raise LLMError(str(e)) from e
-    if config.LLM_PROVIDER == 'claude-abo':
+    if anbieter == 'claude-abo':
         from . import llm_claude_abo
         try:
             return llm_claude_abo.chat_json(**kw)
@@ -74,13 +76,18 @@ def _chat_openai(*, model, system, user, schema, name, images=(), max_tokens=250
 
 
 def health():
-    """Ist der Modellserver erreichbar und das Modell geladen?"""
+    """Stand beider Modi für den Umschalter in der Oberfläche, plus der Standardmodus vorne."""
     if config.LLM_MODE == 'mock':          # Abschaltschalter hat Vorrang vor dem Anbieter
         return {'ok': True, 'modus': 'mock', 'modell': None, 'hinweis': 'KI abgeschaltet: nur Kategorien und Foto-Abgleich'}
-    if config.LLM_PROVIDER == 'claude':
+    modi = {m: _health(config.provider(m)) for m in ('souveraen', 'cloud')}
+    return {**modi[config.STANDARD_MODUS], 'standard': config.STANDARD_MODUS, 'modi': modi}
+
+
+def _health(anbieter):
+    if anbieter == 'claude':
         from . import llm_claude
         return llm_claude.health()
-    if config.LLM_PROVIDER == 'claude-abo':
+    if anbieter == 'claude-abo':
         from . import llm_claude_abo
         return llm_claude_abo.health()
     try:

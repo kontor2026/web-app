@@ -30,6 +30,17 @@ ANTHROPIC_API_KEY = secret('ANTHROPIC_API_KEY')
 CLAUDE_CODE_OAUTH_TOKEN = secret('CLAUDE_CODE_OAUTH_TOKEN')
 CLAUDE_MODEL = os.getenv('CLAUDE_MODEL', 'claude-opus-5-5')
 
+# Umschalter in der Oberfläche: 'souveraen' = lokales Modell (nichts verlässt die Station),
+# 'cloud' = Claude. Welcher Claude-Zugang genutzt wird, ergibt sich aus LLM_PROVIDER bzw. den Secrets.
+CLOUD_PROVIDER = (LLM_PROVIDER if LLM_PROVIDER.startswith('claude')
+                  else 'claude-abo' if CLAUDE_CODE_OAUTH_TOKEN and not ANTHROPIC_API_KEY else 'claude')
+STANDARD_MODUS = 'cloud' if LLM_PROVIDER.startswith('claude') else 'souveraen'
+
+
+def provider(modus=None):
+    """Anbieter für einen Modus aus der Oberfläche; ohne Angabe gilt LLM_PROVIDER."""
+    return {'souveraen': 'lokal', 'cloud': CLOUD_PROVIDER}.get(modus, LLM_PROVIDER)
+
 # Precompute the build ideas for the recognized category right after recognition. 'aus' turns it off,
 # 'auto' and 'an' both turn it on (the data sheet itself always comes from the database).
 VORAUSRECHNEN = os.getenv('VORAUSRECHNEN', 'auto')

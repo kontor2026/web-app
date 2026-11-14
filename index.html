@@ -21,6 +21,10 @@
       <span data-step="craft"><b>03</b>Bauen</span>
     </nav>
     <div class="status">
+      <div class="seg mode" id="ki-mode" role="radiogroup" aria-label="Wo die KI rechnet">
+        <button role="radio" data-m="souveraen" title="Lokales Modell auf der Station. Fotos verlassen die Werkstatt nicht.">Souverän</button>
+        <button role="radio" data-m="cloud" title="Claude über das Internet. Schneller und genauer, Fotos gehen an Anthropic.">Cloud</button>
+      </div>
       <span class="sensor on">Kamera</span>
       <span class="sensor">NIR-Sensor</span>
       <span class="sensor" id="ki-status">KI</span>

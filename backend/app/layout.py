@@ -96,6 +96,14 @@ def dedupe(text):
     return ' '.join(out)
 
 
+def gewicht_text(g, gewogen=False):
+    """Gewicht für die Anzeige: geschätzt mit "≈", von der Waage exakt."""
+    fmt = lambda v: f'{v:g}'.replace('.', ',')
+    if gewogen:
+        return (f'{fmt(round(g / 1000, 2))} kg' if g >= 1000 else f'{fmt(round(g))} g') + ' gewogen'
+    return f'≈ {fmt(round(g / 1000, 1))} kg' if g >= 1000 else f'≈ {fmt(round(g))} g'
+
+
 def build_object(spec, *, oid, modell, scan, quelle):
     for key in ('wertvoll',):
         spec[key] = dedupe(spec[key])
@@ -115,7 +123,7 @@ def build_object(spec, *, oid, modell, scan, quelle):
             'hinweis': 'Von der KI erstellt. Werte sind Schätzungen und noch nicht von der Werkstatt geprüft.',
         },
         'masse': f'{fmt(round(W))} × {fmt(round(D))} × {fmt(round(H, 1))} mm',
-        'gewicht': f'≈ {fmt(round(gewicht / 1000, 1))} kg' if gewicht >= 1000 else f'≈ {fmt(round(gewicht))} g',
+        'gewicht': gewicht_text(gewicht),
         'werte': [
             {'k': 'Rohstoffwert', 'v': spec['rohstoffwert'], 'hint': 'Schätzung der KI'},
             {'k': 'Gebrauchtwert', 'v': spec['gebrauchtwert'], 'hint': 'Schätzung der KI'},
