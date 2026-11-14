@@ -32,6 +32,7 @@ app.innerHTML = `
     </div>
   </div>
 </section>`;
+verbindeWaehler(document.querySelector('.waehler'));
 if (ruhig) document.querySelector('.kreis').classList.add('ruhig');
 
 // ---------- Kreis in Bewegung: die hervorgehobene Station wandert weiter ----------

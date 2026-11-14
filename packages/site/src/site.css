@@ -451,3 +451,12 @@ details[open] > summary:hover::after { color: var(--accent-ink); }
 @media (min-width: 901px) { .steps a.menue-rundgang { display: none; } }
 /* Schritt „Zeigen“: Mo zeigt nur, wo man tippen könnte; kein Fingerhinweis, weiter geht es per Knopf */
 .rundgang.zeigen .rg-finger { display: none; }
+
+/* Vorschläge beim Tippen */
+.vorschlaege { position: absolute; z-index: 30; left: 0; right: 0; top: calc(100% + 4px); margin: 0; padding: 4px 0; list-style: none; background: var(--card); border: 1px solid var(--ink); box-shadow: 0 6px 18px rgba(29, 32, 30, .12); text-align: left; }
+.vorschlaege a { display: flex; align-items: center; gap: 10px; min-height: 44px; padding: 0 14px; color: var(--ink); text-decoration: none; font-size: 15px; }
+.vorschlaege a b { font-weight: 700; }
+.vorschlaege .icon { width: 20px; height: 20px; flex: none; color: var(--ink-3); }
+.vorschlaege a:hover, .vorschlaege [aria-selected="true"] a { background: var(--rule-2); }
+.vorschlaege [aria-selected="true"] .icon { color: var(--accent); }
+.vorschlaege .leer { padding: 12px 14px; font-size: 14px; color: var(--ink-3); }

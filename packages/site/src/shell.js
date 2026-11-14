@@ -31,7 +31,7 @@ export function shell(aktiv, root) {
       ${SEITEN.map((s) => `<a href="${root}${s.pfad}" class="${s.id === aktiv ? 'active' : ''}" ${s.id === aktiv ? 'aria-current="page"' : ''}>${icon(s.icon)}<span class="lang">${s.name}</span><span class="kurz">${s.kurz ?? s.name}</span><small class="wozu">${s.wozu}</small></a>`).join('')}
       <a class="menue-rundgang" href="${root}?rundgang">${moSvg({ nurKopf: true })}<span>Rundgang mit Mo wiederholen</span></a>
     </nav>
-    <div class="status"><span class="seite-name">${icon(hier.icon)}${hier.name}</span></div>
+    <div class="status">${hier ? `<span class="seite-name">${icon(hier.icon)}${hier.name}</span>` : ""}</div>
     <button class="menue-scrim" type="button" tabindex="-1" aria-hidden="true"></button>
   </header>`);
   const zu = () => { document.body.classList.remove('menue-offen'); knopf.setAttribute('aria-expanded', 'false'); };
