@@ -125,7 +125,9 @@ function fuss() {
 }
 function ausHash() {
   const h = location.hash.slice(1), r = KOMPASS.richtungen.find((x) => x.id === h), s = h.match(/^schritt-(\d+)$/);
-  if (r) richtung(r); else if (s && KOMPASS.ablauf[s[1] - 1]) schritt(s[1] - 1); else uebersicht();
+  // Ohne Übersicht: immer eine der vier Richtungen (Start bei Transparenz)
+  if (!r && !(s && KOMPASS.ablauf[s[1] - 1])) return location.replace(`#${KOMPASS.richtungen[0].id}`);
+  if (r) richtung(r); else schritt(s[1] - 1);
   fuss();   // nach dem Datenblatt, damit „Weiter“ angehängt wird
 }
 addEventListener('hashchange', ausHash);
