@@ -1,57 +1,79 @@
-/* Werkbank: Layout „Bauen“ der Station (.craft, .ideas, .inv), ergänzt um Stand je Bauidee */
-.werkbank .craft-head h1 { font-size: 30px; }
-.werkbank .craft-head p { color: var(--ink-2); margin-top: 6px; }
-.werkbank .ideas { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); align-content: start; border-top: 1px solid var(--ink); }
-.wb-idee { border-bottom: 1px solid var(--rule); }
-.wb-kopf { display: flex; justify-content: space-between; align-items: flex-start; }
+/* Werkbank als Laden: Raster mit Bildern, Korb rechts (Handy: Leiste unten), Bauideen als zweiter Reiter */
+.laden { display: grid; grid-template-columns: minmax(0, 1fr) 320px; overflow: hidden; }
+.laden-haupt { overflow-y: auto; padding: 24px 32px 48px; display: grid; gap: 16px; align-content: start; }
+.laden-kopf { display: flex; gap: 12px; align-items: center; }
+.laden-kopf .seg button { height: 42px; padding: 0 18px; }
+.laden-kopf .seg b { font: 500 11px var(--mono); margin-left: 4px; }
+.laden-kopf .suche-feld { max-width: 360px; }
+.laden-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.laden[data-ansicht="bauen"] .laden-chips, .laden[data-ansicht="bauen"] .laden-raster, .laden[data-ansicht="sammeln"] .laden-ideen { display: none; }
+
+/* Ware: Bild, Name, Gewicht, Plus */
+.laden-raster { display: grid; grid-template-columns: repeat(auto-fill, minmax(168px, 1fr)); gap: 12px; }
+.ware { display: grid; grid-template-rows: auto 1fr; grid-template-columns: 1fr auto; align-items: end; gap: 8px 6px; padding: 10px; background: var(--card); border: 1px solid var(--rule); transition: border-color .15s; }
+.ware:hover { border-color: var(--ink-3); }
+.ware.drin { border-color: var(--ink); }
+.ware-bild { grid-column: 1 / -1; display: block; aspect-ratio: 1; background: var(--sheet); }
+.laden-bild { width: 100%; height: 100%; object-fit: contain; display: block; opacity: 0; transition: opacity .3s; }
+.laden-bild.da { opacity: 1; }
+.ware-text { display: grid; min-width: 0; }
+.ware-text b { font-weight: 500; font-size: 14px; line-height: 1.25; }
+.ware-text span { font: 12px var(--mono); color: var(--ink-3); }
+.ware-plus { width: 40px; height: 40px; border: 1px solid var(--ink); font: 400 20px var(--sans); }
+.ware-plus:hover { background: var(--ink); color: var(--sheet); }
+.wb-stepper { display: inline-flex; align-items: center; border: 1px solid var(--ink); background: var(--card); }
+.wb-stepper button { width: 36px; height: 40px; font-size: 16px; color: var(--ink); }
+.wb-stepper button:hover { background: var(--rule-2); }
+.wb-stepper b { min-width: 22px; text-align: center; font: 500 13px var(--mono); }
+
+/* Korb */
+.korb { border-left: 1px solid var(--rule); background: var(--sheet); display: grid; grid-template-rows: auto 1fr auto; min-height: 0; }
+.korb-kopf { display: flex; align-items: center; gap: 10px; padding: 20px 20px 14px; border-bottom: 1px solid var(--rule); }
+.korb-kopf b { font-weight: 600; }
+.korb-kopf span { margin-left: auto; font: 500 13px var(--mono); color: var(--ink-2); }
+.korb-liste { overflow-y: auto; padding: 4px 20px; }
+.korb-zeile { display: grid; grid-template-columns: 44px 1fr auto; gap: 10px; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--rule-2); font-size: 14px; }
+.laden-bild.klein { width: 44px; height: 44px; background: var(--card); border: 1px solid var(--rule-2); }
+.korb .leer { padding: 16px 0; }
+.korb-los { margin: 16px 20px 20px; height: 48px; justify-content: space-between; }
+
+/* Bauideen */
+.laden-ideen { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px; align-content: start; }
+.idee { display: grid; gap: 12px; align-content: start; padding: 16px; background: var(--card); border: 1px solid var(--rule); }
+.idee.baubar { border-color: var(--good); }
+.idee h2 { font-size: 18px; font-weight: 600; line-height: 1.25; }
+.idee-kopf { display: flex; justify-content: space-between; align-items: center; }
+.idee-kopf .lw-nr { font: 500 11px var(--mono); color: var(--ink-3); }
 .wb-status { font: 500 11px var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--ink-3); border: 1px solid var(--rule); padding: 2px 8px; }
 .wb-status.ok { color: var(--good); border-color: var(--good); }
-.wb-kopf .lw-nr { font: 500 11px var(--mono); color: var(--ink-3); }
-.use.fehlt { color: var(--ink-3); }
-.use.fehlt i { background: transparent; border: 1px dashed var(--ink-3); }
-.use .q { min-width: 56px; text-align: right; white-space: nowrap; }
-.wb-wo { font: 11px var(--mono); color: var(--accent); padding: 2px 4px; }
-.wb-wo:hover { text-decoration: underline; }
-.wb-quellen { display: grid; gap: 2px; padding: 6px 0 8px 20px; border-bottom: 1px solid var(--rule); font-size: 13px; }
-.wb-quellen div { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.use .q { min-width: 64px; text-align: right; white-space: nowrap; }
+.wb-wo { font: 12px var(--mono); color: var(--accent); min-height: 32px; padding: 0 6px; }
+.wb-quellen { display: grid; gap: 4px; padding: 6px 0 8px 20px; border-bottom: 1px solid var(--rule); font-size: 13px; }
+.wb-quellen div { display: grid; grid-template-columns: 32px 1fr auto; gap: 8px; align-items: center; }
+.laden-bild.mini { width: 32px; height: 32px; background: var(--sheet); }
 .wb-quellen a { color: var(--ink-2); text-underline-offset: 3px; text-decoration-color: var(--rule); }
-.wb-quellen button { font: 11px var(--mono); color: var(--ink-2); border: 1px solid var(--rule); padding: 2px 8px; }
+.wb-quellen button { width: 32px; height: 32px; border: 1px solid var(--rule); font-size: 16px; }
 .wb-quellen button:hover { border-color: var(--accent); color: var(--accent); }
-.wb-anleitung summary { cursor: pointer; font-size: 13px; color: var(--ink-2); }
-.wb-anleitung[open] summary { margin-bottom: 8px; }
-.wb-quelle { font-size: 12px; color: var(--ink-3); margin-top: auto; }
-.werkbank .idea .btn { margin-top: 0; }
+.wb-anleitung .tools { margin: 4px 0 10px; display: flex; flex-wrap: wrap; gap: 6px; }
+.wb-quelle { margin-top: 10px; }
 
-.wb-suche { position: relative; margin-bottom: 14px; }
-#treffer { position: absolute; z-index: 5; top: calc(100% + 4px); left: 0; right: 0; list-style: none; background: var(--card); border: 1px solid var(--ink); }
-#treffer button { width: 100%; display: flex; justify-content: space-between; padding: 9px 12px; font-size: 14px; text-align: left; }
-#treffer button:hover { background: var(--accent-soft); }
-#treffer span { font: 13px var(--mono); color: var(--accent); }
-.wb-zeile { grid-template-columns: 1fr auto; align-items: center; }
-.wb-zeile .f { font: 14px var(--sans); color: var(--ink); text-decoration: none; }
-.wb-zeile .f:hover { color: var(--accent); }
-.wb-stepper { display: inline-flex; align-items: center; border: 1px solid var(--rule); }
-.wb-stepper button { width: 40px; height: 40px; font-size: 16px; color: var(--ink-2); }
-.wb-stepper button:hover { background: var(--rule-2); color: var(--ink); }
-.wb-stepper b { min-width: 24px; text-align: center; font: 500 13px var(--mono); }
-.wb-teile { margin-top: 14px; }
-.wb-teile summary { cursor: pointer; font: 500 11px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-2); padding: 6px 0; }
-.wb-leeren { margin-top: 16px; height: 36px; font-size: 13px; }
-@media (max-width: 900px) {
-  .werkbank { display: flex; flex-direction: column; }
-  .werkbank .inv { order: -1; border-top: 0; border-bottom: 1px solid var(--rule); }
-  .werkbank .craft-head .seg { align-self: stretch; }
-  .werkbank .craft-head .seg button { flex: 1; }
-}
+/* Unsichtbare Bühne für die Vorschaubilder */
+.vorschau-buehne { position: fixed; left: 0; top: 0; width: 320px; height: 320px; opacity: 0; pointer-events: none; z-index: -1; }
+.vorschau-buehne canvas, .vorschau-buehne .labels { position: absolute; inset: 0; }
 
-.wb-bestand > summary { display: flex; justify-content: space-between; font: inherit; color: var(--ink); min-height: 44px; }
-.wb-bestand > summary::before { display: none; }
-.wb-bestand > summary b { font: 500 11px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); }
-.wb-bestand > summary span { font: 12px var(--mono); color: var(--ink-2); }
-@media (min-width: 901px) { .wb-bestand > summary { pointer-events: none; } .wb-bestand > summary span { display: none; } }
-.wb-anleitung .tools { margin-bottom: 10px; }
 @media (max-width: 900px) {
-  .werkbank .inv { padding: 12px 16px; }
-  .wb-idee { gap: 12px; padding: 18px 0; }
-  .wb-idee .kurz { display: none; }
+  .laden { display: block; overflow: visible; }
+  .laden-haupt { padding: 16px 16px 120px; overflow: visible; }
+  .laden-kopf { flex-wrap: wrap; }
+  .laden-kopf .seg { flex: 1 1 100%; }
+  .laden-kopf .seg button { flex: 1; }
+  .laden-kopf .suche-feld { max-width: none; }
+  .laden-raster { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .laden-chips { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; }
+  /* Korb als Leiste über der Tab-Leiste */
+  .korb { position: fixed; z-index: 35; left: 0; right: 0; bottom: var(--tabs); border: 0; border-top: 1px solid var(--rule); display: flex; align-items: center; gap: 12px; padding: 8px 16px; }
+  .korb-kopf { padding: 0; border: 0; gap: 8px; }
+  .korb-liste { display: none; }
+  .korb-los { margin: 0 0 0 auto; height: 44px; }
+  .korb .leer { padding: 0; font-size: 13px; }
 }

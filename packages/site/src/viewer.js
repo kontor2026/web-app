@@ -174,7 +174,7 @@ export function erzeugeViewer(el, { onHover, onSelect, tip } = {}) {
         if (n < kette.length - 1) teile[i].marks.forEach((m) => { m.mesh.userData.ersetzt = true; });
       });
     }
-    explosion(1, false);
+    explosion(explodiert ? 1 : 0, false);   // Ausschnitt passend zum gewünschten Zustand (Vorschau: zusammengebaut)
     modell.position.set(0, 0, 0); modell.updateMatrixWorld(true);
     const box = new THREE.Box3().setFromObject(modell);
     modell.position.copy(box.getCenter(new THREE.Vector3()).negate());

@@ -96,13 +96,6 @@
 .lw-zahl .krit { font-style: normal; color: var(--accent); }
 .lw-hinweis { font-size: 15px; color: var(--ink); }
 .lw-fuss { font: 12px var(--mono); color: var(--ink-3); margin-top: 8px; }
-.lw-chips { display: flex; flex-wrap: wrap; gap: 6px; }
-.lw-chip { display: inline-flex; align-items: center; gap: 7px; height: 32px; padding: 0 12px; border: 1px solid var(--rule); background: var(--card); font-size: 13px; text-decoration: none; }
-.lw-chip i { width: 9px; height: 9px; border: 1px solid var(--ink); }
-.lw-chip:hover { border-color: var(--ink-3); }
-.lw-chip.on { background: var(--ink); color: var(--sheet); border-color: var(--ink); }
-.lw-chip.on i { border-color: var(--sheet); }
-.lw-chip.leer { color: var(--ink-3); border-style: dashed; }
 .lw-land { display: grid; grid-template-columns: 28px 1fr auto; gap: 4px 10px; align-items: baseline; padding: 9px 2px 7px; border-bottom: 1px solid var(--rule); font-size: 15px; }
 .lw-land .nr { font: 11px var(--mono); color: var(--ink-3); }
 .lw-land > b { font: 500 13px var(--mono); }
@@ -169,7 +162,6 @@
 .wb-stepper button { width: 40px; height: 40px; font-size: 16px; color: var(--ink-2); }
 .wb-stepper button:hover { background: var(--rule-2); color: var(--ink); }
 .wb-stepper b { min-width: 28px; text-align: center; font: 500 13px var(--mono); }
-.lw-chip { height: 40px; }
 
 .lw-strom-auf { display: none; }
 @media (max-width: 900px) {
@@ -185,3 +177,5 @@
   .lw.strom-offen .lw-strom .strom { display: block; height: calc(100% - 52px); margin-top: 8px; }
   .lw .actionbar .btn { height: 44px; }
 }
+
+.lw-chip { height: 40px; }

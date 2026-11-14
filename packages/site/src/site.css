@@ -173,3 +173,13 @@ h1, h2, .lw-rezept h2, .schritt b { text-wrap: balance; hyphens: manual; }
 
 /* Beim Scrollen zu einem Element Platz für die festen Leisten unten lassen */
 html { scroll-padding-bottom: calc(var(--tabs) + 88px); }
+
+/* Auswahl-Chips (Rohstoffe, Kategorien) */
+.lw-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.lw-chip { display: inline-flex; align-items: center; gap: 7px; height: 32px; padding: 0 12px; border: 1px solid var(--rule); background: var(--card); font-size: 13px; text-decoration: none; }
+.lw-chip i { width: 9px; height: 9px; border: 1px solid var(--ink); }
+.lw-chip:hover { border-color: var(--ink-3); }
+.lw-chip.on { background: var(--ink); color: var(--sheet); border-color: var(--ink); }
+.lw-chip.on i { border-color: var(--sheet); }
+.lw-chip.leer { color: var(--ink-3); border-style: dashed; }
+.lw-chip { height: 40px; }
