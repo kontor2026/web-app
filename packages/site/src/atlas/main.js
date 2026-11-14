@@ -228,6 +228,8 @@ function zeigeEntsorgung() {
   legende(wege.map((w) => [WEG_FARBE[w], AWSH.wege[w]?.name ?? w]));
   const w = AWSH.wege[e.weg];
   const hof = ['elektro', 'lampen', 'batterie', 'schadstoff', 'sperrmuell', 'recyclinghof'].includes(e.weg);
+  // Orientierung auf der Karte (keine Daten): Lübeck und Hamburg grenzen an das AWSH-Gebiet
+  globus.region(AWSH.recyclinghoefe, [{ name: 'Lübeck', lat: 53.8655, lng: 10.6866 }, { name: 'Hamburg', lat: 53.5511, lng: 9.9937 }]);
   setzePanel(`
     <div class="lw-tonne" style="--f:${WEG_FARBE[e.weg]}"><i></i><div><b>${esc(w?.name ?? e.weg)}${chip(e.url, 'AWSH Abfall-ABC')}</b><span>${esc(w?.kurz ?? '')}</span></div></div>
     ${e.hinweis ? `<p class="lw-hinweis">${esc(e.hinweis)}</p>` : ''}

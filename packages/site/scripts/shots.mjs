@@ -8,7 +8,7 @@ import { chromium } from 'playwright';
 const PORT = 4175, BASIS = `http://localhost:${PORT}/`;
 const SEITEN = [
   ['start', ''], ['lebensweg-wahl', 'atlas/'], ['gegenstand', 'atlas/#kat=smartphone'], ['abbau', 'atlas/#kat=smartphone&s=abbau&r=Co'],
-  ['herstellung', 'atlas/#kat=t_shirt&s=herstellung'], ['upcycling', 'atlas/#kat=pet_bottle&s=upcycling'], ['entsorgung', 'atlas/#kat=glass_bottle&s=entsorgung'],
+  ['herstellung', 'atlas/#kat=t_shirt&s=herstellung'], ['upcycling', 'atlas/#kat=pet_bottle&s=upcycling'], ['entsorgung', 'atlas/#kat=glass_bottle&s=entsorgung'], ['entsorgung-handy', 'atlas/#kat=smartphone&s=entsorgung'],
   ['verwertung', 'atlas/#kat=pet_bottle&s=verwertung'], ['modelle', 'modelle/#kat=laptop'], ['kompass', 'kompass/'], ['kompass-n', 'kompass/#transparenz'],
 ];
 const GROESSEN = { 390: { width: 390, height: 844 }, 768: { width: 768, height: 1024 }, 1024: { width: 1024, height: 768 },
@@ -41,7 +41,7 @@ try {
     page.on('console', (m) => { if (m.type() === 'error') { fehler++; console.log(`  console ${page.url()}: ${m.text()}`); } });
     for (const [name, pfad] of SEITEN) {
       await page.goto(BASIS + pfad, { waitUntil: 'load', timeout: 60000 });
-      await page.waitForTimeout(2200);
+      await page.waitForTimeout(+(process.env.WARTE ?? 2200));
       await page.screenshot({ path: `shots/${name}-${g}-${schema}.png`, fullPage: +g <= 768 });
     }
     await page.close();

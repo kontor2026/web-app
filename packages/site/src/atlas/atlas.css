@@ -34,6 +34,15 @@
 .lw[data-schritt="abbau"] .lw-strom, .lw[data-schritt="verarbeitung"] .lw-strom,
 .lw[data-schritt="gegenstand"] .lw-szene, .lw[data-schritt="upcycling"] .lw-szene, .lw[data-schritt="entsorgung"] .lw-szene,
 .lw[data-schritt="verwertung"] .lw-balken { display: block; }
+/* Entsorgung: Karte der Region, das nach Tonnen gefärbte Modell als Einschub */
+.lw[data-schritt="entsorgung"] .lw-globus { display: block; inset: 0 0 56px 0; }
+.lw[data-schritt="entsorgung"] .lw-szene { inset: auto 20px 64px auto; width: min(300px, 40%); height: min(300px, 45%);
+  background: var(--sheet); border: 1px solid var(--rule); z-index: 2; }
+.globus-ballon.hof { gap: 5px; transform: translate(-5px, -5px); }
+.globus-ballon.hof i { width: 10px; height: 10px; border-radius: 50%; background: var(--accent); border: 1.5px solid var(--sheet); box-shadow: 0 0 0 1px var(--accent); }
+.globus-ballon.hof span { font-size: 11px; }
+.globus-ballon.ort { transform: translate(-50%, -50%); }
+.globus-ballon.ort span { background: none; color: var(--ink-3); font: 500 12px var(--mono); letter-spacing: .06em; text-transform: uppercase; }
 .lw[data-schritt="herstellung"] .lw-globus { inset: 0 0 56px 0; }
 .lw .legend { left: 28px; bottom: 22px; }
 .lw .legend i { border-radius: 0; }

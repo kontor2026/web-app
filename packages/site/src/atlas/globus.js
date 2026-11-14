@@ -27,10 +27,10 @@ export function erzeugeGlobus(el, laender) {
     return { ...f, a3: zuNum[f.id] ?? null, lat, lng, anteil: 0 };
   });
   const de = laenderGeo.find((f) => f.id === DEUTSCHLAND);
-  let hervor = null, maxAnteil = 1;
+  let hervor = null, maxAnteil = 1, feinGeo = null, flug = null;
 
-  const hoehe = (f) => (f.anteil ? 0.012 + 0.22 * (f.anteil / 100) : f === de ? 0.012 : 0.004);
-  const kappe = (f) => (f.a3 && f.a3 === hervor ? F.ink : f.anteil ? mische(F.soft, F.accent, 0.25 + 0.75 * (f.anteil / maxAnteil)) : f === de ? F.ink3 : F.sheet);
+  const hoehe = (f) => (f.region ? 0.0006 : f.anteil ? 0.012 + 0.22 * (f.anteil / 100) : f === de ? 0.012 : 0.004);
+  const kappe = (f) => (f.region ? (f.id === DEUTSCHLAND ? F.card : F.sheet) : f.a3 && f.a3 === hervor ? F.ink : f.anteil ? mische(F.soft, F.accent, 0.25 + 0.75 * (f.anteil / maxAnteil)) : f === de ? F.ink3 : F.sheet);
 
   const globus = new Globe(el, { animateIn: false })
     .backgroundColor('rgba(0,0,0,0)')
@@ -50,8 +50,9 @@ export function erzeugeGlobus(el, laender) {
     .arcDashLength(0.4).arcDashGap(0.2).arcDashAnimateTime(ruhig ? 0 : 2800)
     .htmlElement((d) => {
       const div = document.createElement('div');
-      div.className = `globus-ballon ${d.de ? 'de' : ''}`;
-      div.innerHTML = d.de ? '<b>DE</b>' : `<b>${d.nr}</b><span>${esc(d.name)} · ${zahl(d.anteil, 0)} %</span>`;
+      div.className = `globus-ballon ${d.de ? 'de' : ''} ${d.typ ?? ''}`;
+      div.innerHTML = d.typ === 'hof' ? `<i></i><span>${esc(d.name)}</span>` : d.typ === 'ort' ? `<span>${esc(d.name)}</span>`
+        : d.de ? '<b>DE</b>' : `<b>${d.nr}</b><span>${esc(d.name)} · ${zahl(d.anteil, 0)} %</span>`;
       return div;
     })
     .htmlAltitude((d) => d.alt)
@@ -63,10 +64,12 @@ export function erzeugeGlobus(el, laender) {
   globus.scene().traverse((o) => { if (o.type === 'LineSegments' && o.material?.color) { o.material.color.set(F.rule); o.material.opacity = 0.9; o.material.transparent = true; } });
 
   new ResizeObserver(() => { const r = el.getBoundingClientRect(); globus.width(r.width).height(r.height); }).observe(el);
+  el.blickpunkt = () => globus.pointOfView();   // zum Prüfen (Screenshots)
 
   return {
     // anteile: { ISO3: Prozent } — leer = nur Deutschland zeigen
     zeige(anteile = {}, { fokus = true } = {}) {
+      clearTimeout(flug);
       const werte = Object.values(anteile);
       maxAnteil = Math.max(1, ...werte);
       for (const f of laenderGeo) f.anteil = (f.a3 && anteile[f.a3]) || 0;
@@ -83,5 +86,25 @@ export function erzeugeGlobus(el, laender) {
       }
     },
     hebeHervor(a3) { hervor = a3; globus.polygonCapColor(kappe); },
+
+    // Entsorgung: Flug von der Welt über Deutschland in die Region; Länder fein (1:50 Mio.), Recyclinghöfe als Punkte
+    async region(hoefe, orte = []) {
+      if (!feinGeo) {
+        const fein = (await import('world-atlas/countries-50m.json')).default;
+        feinGeo = feature(fein, fein.objects.countries).features
+          .filter((f) => { const [lng, lat] = geoCentroid(f); return lat > 40 && lat < 66 && lng > -12 && lng < 32; })
+          .map((f) => ({ ...f, region: true, anteil: 0 }));
+      }
+      globus.polygonsData(feinGeo).arcsData([]);
+      globus.htmlElementsData([
+        ...orte.map((o) => ({ ...o, typ: 'ort', alt: 0.0008 })),
+        ...hoefe.filter((h) => h.lat).map((h) => ({ lat: h.lat, lng: h.lng, name: h.name.replace('Recyclinghof ', ''), typ: 'hof', alt: 0.0008 })),
+      ]);
+      const mitte = hoefe.filter((h) => h.lat).reduce((s, h, _, a) => ({ lat: s.lat + h.lat / a.length, lng: s.lng + h.lng / a.length }), { lat: 0, lng: 0 });
+      if (ruhig) return globus.pointOfView({ ...mitte, altitude: 0.017 });
+      globus.pointOfView({ lat: 51.2, lng: 10.4, altitude: 0.9 }, 1300);
+      clearTimeout(flug);
+      flug = setTimeout(() => globus.pointOfView({ ...mitte, altitude: 0.017 }, 1700), 1350);
+    },
   };
 }

@@ -38,7 +38,7 @@ app.innerHTML = `
         <circle class="ring" r="150"/><circle class="ring2" r="120"/><circle class="ring2" r="60"/>
         <g class="striche">${striche}</g>
         <line class="achse" x1="-150" y1="0" x2="150" y2="0"/><line class="achse" x1="0" y1="-150" x2="0" y2="150"/>
-        <g class="nadel" id="nadel"><polygon class="nord" points="0,-112 13,0 -13,0"/><polygon class="sued" points="0,112 13,0 -13,0"/><circle r="5"/></g>
+        <g class="nadel" id="nadel" style="transform: rotate(45deg)"><polygon class="nord" points="0,-112 13,0 -13,0"/><polygon class="sued" points="0,112 13,0 -13,0"/><circle r="5"/></g>
         ${richtungen}
       </svg>
     </div>
@@ -105,8 +105,12 @@ function schritt(i) {
   panel.querySelectorAll('[data-s]').forEach((b) => b.addEventListener('click', () => (location.hash = `schritt-${+b.dataset.s + 1}`)));
 }
 
+let nadelWinkel = 45;
 function markiere(r, s = null) {
-  document.getElementById('nadel').style.transform = `rotate(${r ? WINKEL[r.himmelsrichtung] : 0}deg)`;
+  // Nadel dreht immer auf kürzestem Weg; ohne Auswahl zeigt sie zwischen zwei Richtungen (45°), damit jede Wahl sichtbar ausschlägt
+  const ziel = r ? WINKEL[r.himmelsrichtung] : 45;
+  nadelWinkel += ((((ziel - nadelWinkel) % 360) + 540) % 360) - 180;
+  document.getElementById('nadel').style.transform = `rotate(${nadelWinkel}deg)`;
   document.querySelectorAll('.richtung').forEach((g) => g.classList.toggle('sel', g.dataset.id === r?.id));
   document.querySelector('.rose').classList.toggle('has-sel', !!r);
   document.querySelectorAll('.schritt').forEach((b) => b.classList.toggle('sel', +b.dataset.schritt === s));
