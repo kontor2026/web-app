@@ -200,7 +200,7 @@
 
 /* ---------- Handy: eine Bildschirmhöhe, kein Scrollen der Seite ---------- */
 @media (max-width: 900px) {
-  .lw { height: calc(100svh - 52px - var(--tabs)); display: flex; flex-direction: column; overflow: hidden; }
+  .lw { height: calc(100dvh - var(--kopf)); display: flex; flex-direction: column; overflow: hidden; }
   .lw .canvas { flex: 1 1 auto; min-height: 0; height: auto; display: grid; grid-template-rows: auto auto minmax(0, 1fr); }
   .lw .lw-buehne, .lw[data-schritt] .lw-buehne { height: auto !important; min-height: 0; }
   .lw .legend { display: none; }

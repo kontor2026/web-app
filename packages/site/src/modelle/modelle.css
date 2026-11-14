@@ -52,7 +52,7 @@
 @media (max-width: 900px) {
   .wenden { display: grid; }
   .wenden-zurueck { justify-self: end; }
-  .modelle.sheet { display: grid; grid-template-rows: minmax(0, 1fr) auto; height: calc(100svh - 52px - var(--tabs)); perspective: 1600px; overflow: hidden; }
+  .modelle.sheet { display: grid; grid-template-rows: minmax(0, 1fr) auto; height: calc(100dvh - var(--kopf)); perspective: 1600px; overflow: hidden; }
   .modelle .canvas, .modelle .panel { grid-area: 1 / 1; height: auto; min-height: 0; backface-visibility: hidden; transition: transform .6s cubic-bezier(.65, 0, .35, 1); }
   .modelle .canvas { transform: rotateY(0); }
   .modelle .panel { transform: rotateY(180deg); overflow-y: auto; border: 0; }

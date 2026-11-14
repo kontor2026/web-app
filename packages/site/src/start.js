@@ -29,7 +29,6 @@ app.innerHTML = `
       <h1>Wo kommt es her?<br>Wo geht es hin?</h1>
       <p class="lead">Wähle einen Gegenstand und folge seinem Weg.</p>
       ${waehlerHtml(atlas.objekte, (id) => `atlas/#kat=${id}`, { alle: false })}
-      <button class="intro-wieder" id="intro-wieder">Wie funktioniert’s?</button>
     </div>
   </div>
 </section>`;
@@ -45,5 +44,4 @@ if (!ruhig) setInterval(() => {
   kreise[station]?.classList.add('mitte');
 }, 2600);
 
-document.getElementById('intro-wieder').addEventListener('click', () => zeigeIntro({ erzwingen: true }));
-zeigeIntro();
+zeigeIntro({ erzwingen: new URLSearchParams(location.search).has('rundgang') });

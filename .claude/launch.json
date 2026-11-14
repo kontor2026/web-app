@@ -18,6 +18,12 @@
       "runtimeExecutable": "node",
       "runtimeArgs": ["tools/serve.cjs", "5181"],
       "port": 5181
+    },
+    {
+      "name": "site",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["--prefix", "packages/site", "vite", "packages/site", "--port", "5190", "--host", "127.0.0.1"],
+      "port": 5190
     }
   ]
 }

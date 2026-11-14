@@ -145,26 +145,54 @@ h1, h2, .lw-rezept h2, .schritt b { text-wrap: balance; hyphens: manual; }
 .actionbar .q span { color: var(--ink-3); }
 @media (max-width: 900px) { .actionbar { z-index: 10; } }
 
-/* ---------- Navigation: oben auf großen Bildschirmen, unten als Tab-Leiste auf dem Handy ---------- */
+/* ---------- Navigation: oben auf großen Bildschirmen, auf dem Handy eine Seitenleiste hinter dem Menü-Knopf ---------- */
 .steps a .icon { width: 16px; height: 16px; }
-:root { --tabs: 0px; }
+:root { --tabs: 0px; --kopf: 52px; }
+.menue-knopf, .menue-scrim, .menue-kopf, .menue-rundgang, .steps .wozu { display: none; }
+.seite-name { display: none; }
 @media (max-width: 900px) {
-  :root { --tabs: calc(60px + env(safe-area-inset-bottom, 0px)); }
-  .topbar { grid-template-columns: 1fr; padding-block: 0; height: 52px; position: sticky; top: 0; z-index: 30; }
-  .status { display: none; }
+  :root { --kopf: 48px; }
+  html, body { height: 100dvh; overflow: hidden; overscroll-behavior: none; }
+  body { grid-template-rows: var(--kopf) minmax(0, 1fr); }
+  .topbar { grid-template-columns: auto minmax(0, 1fr) auto; gap: 4px; padding: 0 12px 0 4px; height: var(--kopf); position: relative; z-index: 30; }
+  .menue-knopf { display: grid; align-content: center; justify-items: center; gap: 5px; width: 44px; height: 44px; }
+  .menue-knopf span { width: 20px; height: 2px; background: var(--ink); border-radius: 1px; transition: transform .25s, opacity .2s; }
+  .brand span { font-size: 14px; }
+  .brand svg { width: 20px; height: 20px; }
+  .status { display: flex; justify-self: end; min-width: 0; }
+  .seite-name { display: inline-flex; align-items: center; gap: 6px; font: 500 12px var(--mono); letter-spacing: .02em; color: var(--accent); white-space: nowrap; }
+  .seite-name .icon { width: 15px; height: 15px; }
+  .brand span { display: none; }
   .steps {
-    position: fixed; z-index: 40; left: 0; right: 0; bottom: 0; height: var(--tabs); padding-bottom: env(safe-area-inset-bottom, 0px);
-    display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; overflow: visible; background: var(--sheet); border-top: 1px solid var(--rule);
+    position: fixed; z-index: 60; top: 0; bottom: 0; left: 0; width: min(310px, 86vw); height: auto; display: flex; flex-direction: column; gap: 2px; overflow-y: auto;
+    padding: 0 0 max(12px, env(safe-area-inset-bottom, 0px)); background: var(--sheet); border-right: 1px solid var(--rule); border-top: 0;
+    transform: translateX(-104%); transition: transform .28s cubic-bezier(.2, .8, .2, 1); box-shadow: none; visibility: hidden;
   }
-  .steps a { flex-direction: column; justify-content: center; gap: 3px; padding: 0; font-size: 11px; border-bottom: 0; border-top: 2px solid transparent; position: relative; }
-  .steps a.active { border-top-color: var(--accent); color: var(--ink); }
+  .menue-offen .steps { transform: none; visibility: visible; box-shadow: 8px 0 32px rgba(0, 0, 0, .35); }
+  .menue-offen .menue-knopf span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .menue-offen .menue-knopf span:nth-child(2) { opacity: 0; }
+  .menue-offen .menue-knopf span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  .menue-scrim { display: block; position: fixed; inset: 0; z-index: 50; background: rgba(0, 0, 0, .55); opacity: 0; pointer-events: none; transition: opacity .25s; }
+  .menue-offen .menue-scrim { opacity: 1; pointer-events: auto; }
+  .menue-kopf { display: flex; align-items: center; gap: 12px; padding: 16px 12px 14px 18px; margin-bottom: 8px; border-bottom: 1px solid var(--rule); }
+  .menue-kopf .mo-kopf { width: 46px; height: 42px; flex: none; }
+  .menue-kopf span { display: grid; flex: 1; line-height: 1.25; }
+  .steps .menue-kopf b { display: block; font: 600 15px var(--sans); }
+  .steps a span, .menue-kopf span { padding: 0; }
+  .menue-kopf small { font-size: 12px; color: var(--ink-3); }
+  .menue-zu { width: 44px; height: 44px; font-size: 28px; line-height: 1; color: var(--ink-2); }
+  .steps a { display: grid; grid-template-columns: 24px 1fr auto; grid-template-areas: 'i n z' 'i w w'; align-items: center; column-gap: 14px; row-gap: 0; margin: 0 10px; padding: 11px 12px; min-height: 56px; border: 1px solid transparent; border-radius: 8px; font-size: 16px; color: var(--ink); }
+  .steps a .icon { grid-area: i; width: 22px; height: 22px; color: var(--ink-2); }
+  .steps .lang { display: inline; grid-area: n; font-weight: 500; }
+  .steps .kurz { display: none; }
+  .steps .wozu { display: block; grid-area: w; font-size: 12.5px; color: var(--ink-3); }
+  .steps a.active { background: var(--accent-soft); border-color: var(--accent); }
   .steps a.active .icon { color: var(--accent); }
-  .steps a .icon { width: 22px; height: 22px; }
-  .steps .lang { display: none; }
-  .steps .kurz { display: inline; }
-  .steps .zaehler { position: absolute; top: 6px; left: calc(50% + 8px); }
-  main { padding-bottom: var(--tabs); }
-  .actionbar { bottom: var(--tabs) !important; }
+  .steps .zaehler { grid-area: z; position: static; }
+  .menue-rundgang { display: flex !important; align-items: center; gap: 12px; margin-top: auto !important; border: 1px dashed var(--rule) !important; font-size: 14px !important; color: var(--ink-2) !important; min-height: 52px !important; }
+  .menue-rundgang .mo-kopf { width: 30px; height: 28px; }
+  main { padding-bottom: 0; }
+  .actionbar { bottom: 0 !important; }
 }
 
 @media (max-width: 900px) {
@@ -174,7 +202,7 @@ h1, h2, .lw-rezept h2, .schritt b { text-wrap: balance; hyphens: manual; }
 }
 
 /* Beim Scrollen zu einem Element Platz für die festen Leisten unten lassen */
-html { scroll-padding-bottom: calc(var(--tabs) + 88px); }
+html { scroll-padding-bottom: 88px; }
 
 /* Auswahl-Chips (Rohstoffe, Kategorien) */
 .lw-chips { display: flex; flex-wrap: wrap; gap: 6px; }
@@ -294,33 +322,61 @@ details > summary:hover::after { color: var(--accent); }
 .kreis { justify-self: center; align-self: center; width: 100%; }
 @media (max-width: 900px) { .start-inhalt { min-height: 0; } .kreis { width: min(380px, 100%); } }
 
-/* ---------- Einführung: Rundgang mit Pfeil auf den Menüpunkt ---------- */
-.intro { position: fixed; inset: 0; z-index: 100; display: grid; place-items: center; animation: intro-ein .25s ease-out; }
-.intro.weg { opacity: 0; transition: opacity .25s; }
-@keyframes intro-ein { from { opacity: 0; } }
-.intro-schicht { position: absolute; inset: 0; width: 100%; height: 100%; color: var(--sheet); }
-.intro-dunkel { fill: rgba(29, 32, 30, .62); }
-.intro-rahmen { fill: none; stroke: var(--accent); stroke-width: 2; }
-.intro-pfeil { fill: none; stroke: var(--sheet); stroke-width: 1.8; stroke-linecap: round; stroke-dasharray: 1; stroke-dashoffset: 1; animation: pfeil-zeichnen .6s ease-out .1s forwards; }
-@keyframes pfeil-zeichnen { to { stroke-dashoffset: 0; } }
-.intro-karte { position: relative; width: min(400px, calc(100% - 32px)); display: grid; gap: 18px; padding: 24px 22px 20px; background: var(--sheet); border: 1px solid var(--ink); }
-.intro-buehne { display: grid; }
-.intro-seite { grid-area: 1 / 1; display: grid; justify-items: center; gap: 8px; text-align: center; opacity: 0; visibility: hidden; transform: translateX(16px); transition: opacity .3s, transform .3s, visibility .3s; }
-.intro-seite.on { opacity: 1; visibility: visible; transform: none; }
-.intro-bild { width: 72px; height: 72px; display: grid; place-items: center; color: var(--accent); }
-.intro-bild .icon { width: 52px; height: 52px; stroke-width: 1.3; }
-.intro-seite h2 { font-size: 22px; line-height: 1.2; font-weight: 600; letter-spacing: -.01em; }
-.intro-seite p { color: var(--ink-2); font-size: 15px; max-width: 30ch; }
-.intro-punkte { display: flex; justify-content: center; gap: 6px; }
-.intro-punkte i { width: 8px; height: 8px; border-radius: 4px; background: var(--rule); transition: width .2s, background .2s; }
-.intro-punkte i.on { width: 22px; background: var(--accent); }
-.intro-knoepfe { display: grid; grid-template-columns: auto 1fr; gap: 10px; }
-.intro-knoepfe .btn { height: 48px; }
-.intro-knoepfe .btn.primary { justify-content: space-between; }
-@media (max-width: 900px) { .intro { place-items: end center; padding-bottom: calc(var(--tabs) + 72px); } }
-@media (min-width: 901px) { .intro { place-items: start center; padding-top: 150px; } }
-@media (prefers-reduced-motion: reduce) { .intro-pfeil { animation: none; stroke-dashoffset: 0; } }
-.intro-wieder { margin-top: 16px; font-size: 13px; color: var(--ink-3); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--rule); min-height: 40px; }
-.intro-wieder:hover { color: var(--accent); }
-@media (min-width: 901px) { .intro { place-items: center; } .intro-karte { border: 1px solid var(--ink); } }
-@media (max-width: 900px) { .intro-wieder { order: 5; justify-self: center; } }
+/* ---------- Rundgang mit Mo: Spotlight auf das Ziel, Karte mit Mannequin und Sprechblase ---------- */
+.rundgang { position: fixed; inset: 0; z-index: 100; display: flex; flex-direction: column; justify-content: flex-end; padding: 0 12px max(14px, env(safe-area-inset-bottom, 0px)); animation: rg-ein .3s ease-out; }
+.rundgang.oben { justify-content: flex-start; padding: calc(var(--kopf) + 10px) 12px 0; }
+.rundgang.weg { opacity: 0; transition: opacity .3s; }
+@keyframes rg-ein { from { opacity: 0; } }
+/* Das Spotlight dunkelt per Schatten alles außerhalb ab; Größe und Ort wandern weich zum nächsten Ziel */
+.rg-spot { position: fixed; left: 0; top: 0; border-radius: 12px; box-shadow: 0 0 0 100vmax rgba(14, 16, 15, .72); transition: transform .5s cubic-bezier(.2, .8, .2, 1), width .5s cubic-bezier(.2, .8, .2, 1), height .5s cubic-bezier(.2, .8, .2, 1); pointer-events: none; }
+.rg-spot::after { content: ''; position: absolute; inset: 0; border-radius: inherit; border: 2px solid var(--accent); animation: rg-puls 1.6s ease-in-out infinite; }
+@keyframes rg-puls { 50% { box-shadow: 0 0 0 6px color-mix(in srgb, var(--accent) 35%, transparent); } }
+.rg-karte { position: relative; display: grid; grid-template-columns: 104px minmax(0, 1fr); gap: 2px; align-items: end; max-width: 460px; width: 100%; margin: 0 auto; animation: rg-hoch .5s cubic-bezier(.2, 1.2, .3, 1) .1s backwards; }
+@keyframes rg-hoch { from { opacity: 0; transform: translateY(28px); } }
+.rg-mo { align-self: end; margin-bottom: -2px; }
+.rg-mo .mo { width: 104px; height: auto; display: block; overflow: visible; }
+.rg-blase { position: relative; display: grid; gap: 12px; padding: 14px 14px 12px; background: var(--sheet); border: 1px solid var(--ink); border-radius: 14px; box-shadow: 0 10px 30px rgba(0, 0, 0, .35); min-height: 150px; align-content: space-between; }
+.rg-blase::before { content: ''; position: absolute; left: -7px; bottom: 34px; width: 12px; height: 12px; background: var(--sheet); border-left: 1px solid var(--ink); border-bottom: 1px solid var(--ink); transform: rotate(45deg); }
+.rg-text { font-size: 15px; line-height: 1.45; min-height: 88px; }
+.rg-punkte { display: flex; gap: 5px; }
+.rg-punkte i { width: 7px; height: 7px; border-radius: 4px; background: var(--rule); transition: width .25s, background .25s; }
+.rg-punkte i.on { background: var(--accent); }
+.rundgang.frage .rg-punkte { visibility: hidden; }
+.rg-knoepfe { display: flex; gap: 8px; }
+.rg-knoepfe .btn { height: 46px; padding: 0 16px; font-size: 14px; }
+.rg-knoepfe .btn.primary { flex: 1; justify-content: space-between; }
+.rundgang.frage .rg-knoepfe { flex-direction: column; }
+.rundgang.frage .rg-knoepfe .btn { width: 100%; }
+
+/* Mo: Holzpuppe. Atmet, blinzelt, wippt beim Sprechen, winkt zur Begrüßung; die Arme zeigt rg.js per --arm-l / --arm-r. */
+.mo { overflow: visible; }
+.mo-koerper { animation: mo-atmen 3.6s ease-in-out infinite; transform-origin: 50px 100px; }
+@keyframes mo-atmen { 50% { transform: translateY(-1.5px) scaleY(1.01); } }
+.mo-arm { transition: transform .55s cubic-bezier(.3, 1.4, .5, 1); }
+.mo-hals { transform-origin: 50px 42px; animation: mo-nicken 5s ease-in-out infinite; }
+@keyframes mo-nicken { 0%, 100% { transform: rotate(0); } 30% { transform: rotate(-3deg); } 65% { transform: rotate(3deg); } }
+.mo-augen { transform-origin: 50px 25px; animation: mo-blinzeln 4.2s infinite; }
+@keyframes mo-blinzeln { 0%, 94%, 100% { transform: scaleY(1); } 96.5% { transform: scaleY(.1); } }
+.mo.spricht .mo-hals { animation: mo-spricht .34s ease-in-out infinite; }
+@keyframes mo-spricht { 50% { transform: translateY(1.2px) rotate(1.5deg); } }
+.mo.winkt .mo-arm.r { transition: none; animation: mo-winken .7s ease-in-out infinite alternate; }
+@keyframes mo-winken { from { transform: rotate(158deg); } to { transform: rotate(202deg); } }
+.mo-kopf .mo-hals, .mo-kopf .mo-augen { animation: none; }
+@media (prefers-reduced-motion: reduce) { .mo *, .rg-spot::after { animation: none !important; } }
+@media (min-width: 901px) { .rundgang { align-items: center; justify-content: flex-end; padding-right: 32px; } .rundgang.oben { justify-content: flex-start; } .rg-karte { margin: 0; } }
+
+/* ---------- Aufklappbar muss nach Knopf aussehen: Rahmen, Pfeil im Kreis, Akzent wenn offen ---------- */
+details > summary, .lw-hof > summary { border: 1px solid var(--rule); background: var(--card); border-radius: 8px; padding: 0 8px 0 14px; min-height: 46px; color: var(--ink); }
+details > summary::after { content: '›'; display: grid; place-items: center; width: 28px; height: 28px; padding: 0 0 2px; border: 1px solid var(--rule); border-radius: 50%; font: 400 20px/1 var(--sans); color: var(--ink-2); flex: none; transition: transform .2s, color .2s, border-color .2s, background .2s; }
+details > summary:hover { border-color: var(--ink-3); color: var(--ink); }
+details[open] > summary { border-color: var(--accent); }
+details[open] > summary::after { transform: rotate(90deg); color: var(--accent-ink); background: var(--accent); border-color: var(--accent); }
+details > summary:hover::after { border-color: var(--accent); color: var(--accent); }
+details[open] > summary:hover::after { color: var(--accent-ink); }
+.lw-block { border-top: 0; }
+.lw .lw-block > summary, .kompass .lw-block > summary, .ablauf.lw-block > summary { color: var(--ink); text-transform: none; letter-spacing: 0; font: 500 15px var(--sans); }
+/* „Weiter“ ist die Hauptaktion: gefüllt, mit Pfeil */
+.lw-weiter { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); border-radius: 8px; min-height: 52px; }
+.lw-weiter:hover { background: var(--accent-hover); border-color: var(--accent-hover); color: var(--accent-ink); }
+.lw-weiter .icon { color: var(--accent-ink); }
+@media (min-width: 901px) { .ablauf.lw-block > summary { border-color: transparent; background: transparent; padding-left: 0; } .ablauf.lw-block > summary::after { display: none; } }

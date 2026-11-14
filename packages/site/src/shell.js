@@ -2,30 +2,44 @@
 // Lebensweg-Schritte mit Symbolen, Quellen-Chips, Formatierung.
 import '../../../css/app.css';
 import './site.css';
+import { moSvg } from './mo.js';
 
 export const SEITEN = [
-  { id: 'start', pfad: '', name: 'Start', icon: 'start' },
-  { id: 'atlas', pfad: 'atlas/', name: 'Lebensweg', kurz: 'Weg', icon: 'weg' },
-  { id: 'modelle', pfad: 'modelle/', name: '3D-Modelle', kurz: 'Modelle', icon: 'gegenstand' },
-  { id: 'werkbank', pfad: 'werkbank/', name: 'Werkbank', icon: 'werkbank' },
-  { id: 'kompass', pfad: 'kompass/', name: 'KI-Kompass', kurz: 'KI', icon: 'kompass' },
+  { id: 'start', pfad: '', name: 'Start', icon: 'start', wozu: 'Gegenstand wählen' },
+  { id: 'atlas', pfad: 'atlas/', name: 'Lebensweg', kurz: 'Weg', icon: 'weg', wozu: 'Vom Rohstoff bis zum Recycling' },
+  { id: 'modelle', pfad: 'modelle/', name: '3D-Modelle', kurz: 'Modelle', icon: 'gegenstand', wozu: 'Der Gegenstand zerlegt' },
+  { id: 'werkbank', pfad: 'werkbank/', name: 'Werkbank', icon: 'werkbank', wozu: 'Sammeln und daraus bauen' },
+  { id: 'kompass', pfad: 'kompass/', name: 'KI-Kompass', kurz: 'KI', icon: 'kompass', wozu: 'Wo hier eine KI arbeitet' },
 ];
 
 // root: relativer Weg zur Startseite ('./' auf der Startseite, '../' in den Unterseiten)
+// Handy: Kopfzeile mit Menü-Knopf, die Bereiche liegen in einer Seitenleiste (dieselbe <nav>, nur anders gestellt).
 let WURZEL = './';
 export function shell(aktiv, root) {
   WURZEL = root;
+  const hier = SEITEN.find((s) => s.id === aktiv);
   document.body.insertAdjacentHTML('afterbegin', `
   <header class="topbar">
+    <button class="menue-knopf" type="button" aria-label="Menü öffnen" aria-expanded="false" aria-controls="bereiche"><span></span><span></span><span></span></button>
     <a class="brand" href="${root}">
       <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5v4M20.5 12h-4M12 20.5v-4M3.5 12h4"/></svg>
       <span>Kreislauf-Station</span>
     </a>
-    <nav class="steps" aria-label="Bereiche">
-      ${SEITEN.map((s) => `<a href="${root}${s.pfad}" class="${s.id === aktiv ? 'active' : ''}" ${s.id === aktiv ? 'aria-current="page"' : ''}>${icon(s.icon)}<span class="lang">${s.name}</span><span class="kurz">${s.kurz ?? s.name}</span></a>`).join('')}
+    <nav class="steps" id="bereiche" aria-label="Bereiche">
+      <div class="menue-kopf">${moSvg({ nurKopf: true })}<span><b>Kreislauf-Station</b><small>Datenbank zum Hackathon</small></span>
+        <button class="menue-zu" type="button" aria-label="Menü schließen">×</button></div>
+      ${SEITEN.map((s) => `<a href="${root}${s.pfad}" class="${s.id === aktiv ? 'active' : ''}" ${s.id === aktiv ? 'aria-current="page"' : ''}>${icon(s.icon)}<span class="lang">${s.name}</span><span class="kurz">${s.kurz ?? s.name}</span><small class="wozu">${s.wozu}</small></a>`).join('')}
+      <a class="menue-rundgang" href="${root}?rundgang">${moSvg({ nurKopf: true })}<span>Rundgang mit Mo wiederholen</span></a>
     </nav>
-    <div class="status"></div>
+    <div class="status"><span class="seite-name">${icon(hier.icon)}${hier.name}</span></div>
+    <button class="menue-scrim" type="button" tabindex="-1" aria-hidden="true"></button>
   </header>`);
+  const zu = () => { document.body.classList.remove('menue-offen'); knopf.setAttribute('aria-expanded', 'false'); };
+  const knopf = document.querySelector('.menue-knopf');
+  knopf.addEventListener('click', () => { const auf = document.body.classList.toggle('menue-offen'); knopf.setAttribute('aria-expanded', String(auf)); });
+  document.querySelector('.menue-scrim').addEventListener('click', zu);
+  document.querySelector('.menue-zu').addEventListener('click', zu);
+  addEventListener('keydown', (e) => { if (e.key === 'Escape') zu(); });
   return document.getElementById('app');
 }
 
