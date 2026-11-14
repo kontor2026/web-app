@@ -7,19 +7,24 @@ from bau import teil, mark, explodiere, skaliere_masse, schreibe  # noqa: E402
 
 # Textmarker mit Keilspitze, aufrecht (laut CSV 20 × 20 × 120 mm), Spitze oben. Ovaler Schaft 17 × 15 mm,
 # Kappe mit Clip. Fasertank und Keilspitze werden seitlich (dx > 0) herausgezogen, Kappe und Spitzenhalter schweben oben.
-GELB = '#F2E23A'
-GRAU = '#3A3F44'
+GELB = '#F7E83A'
+GRAU = '#E9D21E'  # Kappe und Endstopfen etwas dunkler als der Schaft
 TANK = 30
 
 teile = [
     teil('kappe', 'pen_cap', 'Kappe', 'Kappe', 'cyl',
-         x=0, y=1.5, w=18, d=17, z=84, h=36, mass=2.6,
+         x=0, y=1.5, w=18, d=17, z=80, h=40, mass=2.6,
          info='Hält die Spitze feucht. Die neonfarbene Tinte trocknet offen in wenigen Stunden ein.',
-         color=GRAU, marks=[mark('cyl', 7, 6.5, 4, fill='#2A2E31')]),
+         color=GRAU, marks=[mark('cyl', 7, 6.5, 4, fill='#9C8A10')]),
     teil('clip', 'pen_cap', 'Clip', 'Clip', 'box',
          x=18, y=8.5, w=2, d=3, z=90, h=28, r=0.6, mass=0.4,
          info='Angespritzter Clip aus Polypropylen, wie die Kappe.',
          color=GRAU),
+    teil('innenkappe', 'pen_cap', 'Innenkappe', 'Innenkappe', 'cyl',
+         x=4.5, y=5.5, w=10, d=9, z=96, h=18, mass=0.3,
+         info='Dichtbecher in der Kappe, der die Keilspitze luftdicht umschließt, damit die Leuchttinte nicht '
+              'eintrocknet.',
+         color='#F3EFC8', marks=[mark('cyl', 2, 2, 6, 5, fill='#CFC67A')]),
     teil('spitze', 'marker_nib', 'Keilspitze', 'Keilspitze', 'box',
          x=7, y=8, w=5, d=4, z=90, h=20, r=0.5, explode=[TANK, 0, 10], mass=0.4,
          info='Schräg geschnittene Polyesterfaser: breit für Zeilen, schmal für feine Striche. Mit einer Zange herausziehen.',
@@ -42,6 +47,6 @@ teile = [
          color=GRAU),
 ]
 
-explodiere(teile, abstand=10, gruppen=[['kappe', 'clip']])
+explodiere(teile, abstand=10, nach_liste=True, gruppen=[['kappe', 'clip']])
 skaliere_masse(teile, oid='highlighter', stellen=2)
 schreibe('highlighter', teile)

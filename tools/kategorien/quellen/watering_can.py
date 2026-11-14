@@ -17,13 +17,13 @@ ROHR_INFO = 'Das Ausgussrohr ist mit der Kanne aus einem Stück geblasen.'
 
 teile = [
     teil('lochplatte', 'watering_rose', 'Lochplatte der Brause', 'Lochplatte', 'cyl',
-         x=380, y=40, w=70, z=272, h=3, explode=[90, 0, 70], mass=8,
+         x=375, y=40, w=70, z=270, h=3, explode=[90, 0, 70], mass=8,
          info='Gelochte Platte, die das Wasser in feine Strahlen teilt. Verstopfte Löcher mit einer Nadel '
               'freimachen statt die Brause wegzuwerfen.',
          color='#2F6DB5', marks=[mark('cyl', 3, 3, 64, fill='#285E9C')]
          + raster(13, 13, 6, 6, 3, 3, 8, shape='cyl', fill='#173B66')),
     teil('brause', 'watering_rose', 'Brausekopf', 'Brause', 'cyl',
-         x=380, y=40, w=70, z=250, h=22, explode=[90, 0, 20], mass=25,
+         x=375, y=40, w=70, z=248, h=22, explode=[90, 0, 20], mass=25,
          info='Aufgesteckter Kopf aus PP. Vor dem Entsorgen vom Rohr abziehen: Er ist oft aus anderem '
               'Kunststoff und nützlich als Ersatzteil.',
          color='#2F6DB5', marks=[mark('cyl', 22, 22, 26, fill='#285E9C')]),
@@ -41,14 +41,11 @@ teile = [
          x=152, y=40, w=80, d=70, z=242, h=12, mass=15,
          info='Breite Öffnung zum Füllen am Wasserhahn oder in der Regentonne.',
          color=KANNE, marks=[mark('cyl', 6, 6, 68, 58, fill='#1F3B2A')]),
-    teil('rohr_4', 'watering_can_body', 'Ausgussrohr', 'Ausgussrohr', 'box',
-         x=385, y=55, w=40, d=40, z=190, h=60, r=14, mass=18, info=ROHR_INFO, color=KANNE),
-    teil('rohr_3', 'watering_can_body', 'Ausgussrohr', 'Ausgussrohr', 'box',
-         x=340, y=55, w=45, d=40, z=130, h=65, r=14, mass=20, info=ROHR_INFO, color=KANNE, label=False),
-    teil('rohr_2', 'watering_can_body', 'Ausgussrohr', 'Ausgussrohr', 'box',
-         x=290, y=55, w=50, d=40, z=70, h=65, r=14, mass=20, info=ROHR_INFO, color=KANNE, label=False),
-    teil('rohr_1', 'watering_can_body', 'Ausgussrohr', 'Ausgussrohr', 'box',
-         x=240, y=55, w=50, d=40, z=20, h=55, r=14, mass=20, info=ROHR_INFO, color=KANNE, label=False),
+    *[teil(f'rohr_{i}', 'watering_can_body', 'Ausgussrohr', 'Ausgussrohr', 'box',
+           x=240 + i * 30, y=57, w=40, d=36, z=20 + i * 38, h=38, r=14,
+           mass=16, info=ROHR_INFO, color=KANNE, label=i == 5,
+           marks=[mark('box', 6, 6, 32, 24, 10, DUNKEL)] if i == 5 else None)
+      for i in range(5, -1, -1)],
     teil('kanne', 'watering_can_body', 'Kannenkörper', 'Kanne', 'box',
          x=0, y=0, w=240, d=150, z=0, h=242, r=35, mass=430,
          info='Blasgeformtes HDPE, Recyclingcode 2. Keine Verpackung, also nicht in die Gelbe Tonne: kaputte '

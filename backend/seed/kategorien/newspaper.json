@@ -36,10 +36,15 @@
   }
  ],
  "rohstoffe": {
-  "metalle_mg": {},
-  "herkunft": {},
+  "metalle_mg": {
+   "Fe": 196.0
+  },
+  "herkunft": {
+   "Fe": "Modellmassen (Schätzung)"
+  },
   "materialien_g": {
-   "paper": 200.1
+   "paper": 199.8,
+   "steel": 0.2
   },
   "co2_kg": 0.072,
   "co2_mit_recyclat_kg": 0.072,
@@ -134,15 +139,15 @@
    "y": 0,
    "w": 290,
    "d": 400,
-   "z": 7,
-   "h": 3,
+   "z": 8,
+   "h": 2,
    "r": 0,
    "explode": [
     0,
     0,
-    330.0
+    482.7
    ],
-   "mass": 67.3,
+   "mass": 57.5,
    "materials": [
     [
      "papier",
@@ -167,8 +172,26 @@
     },
     {
      "shape": "box",
+     "x": 60,
+     "y": 20,
+     "w": 170,
+     "d": 18,
+     "r": 0,
+     "fill": "#ECE8DF"
+    },
+    {
+     "shape": "box",
      "x": 12,
-     "y": 56,
+     "y": 50,
+     "w": 266,
+     "d": 3,
+     "r": 0,
+     "fill": "#2A2E31"
+    },
+    {
+     "shape": "box",
+     "x": 12,
+     "y": 58,
      "w": 266,
      "d": 14,
      "r": 0,
@@ -286,15 +309,15 @@
    "y": 50,
    "w": 210,
    "d": 297,
-   "z": 5,
-   "h": 2,
+   "z": 6.8,
+   "h": 1.2,
    "r": 0,
    "explode": [
     0,
     0,
-    220.0
+    387.7
    ],
-   "mass": 38.5,
+   "mass": 32.9,
    "materials": [
     [
      "papier",
@@ -365,6 +388,208 @@
    ]
   },
   {
+   "id": "heftklammern",
+   "component_id": "paper_sheets",
+   "material_id": "steel",
+   "name": "Heftklammern der Beilage",
+   "short": "Heftklammern",
+   "shape": "box",
+   "x": 48,
+   "y": 110,
+   "w": 4,
+   "d": 16,
+   "z": 6.5,
+   "h": 1.5,
+   "r": 0.5,
+   "explode": [
+    -60,
+    330,
+    293.0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Zwei Drahtklammern halten das Heft zusammen. Sie dürfen mit ins Altpapier, die Papierfabrik siebt sie mit Magneten aus.",
+   "color": "#9AA2A6"
+  },
+  {
+   "id": "heftklammer_2",
+   "component_id": "paper_sheets",
+   "material_id": "steel",
+   "name": "Zweite Heftklammer",
+   "short": "Heftklammer",
+   "shape": "box",
+   "x": 48,
+   "y": 264,
+   "w": 4,
+   "d": 16,
+   "z": 6.5,
+   "h": 1.5,
+   "r": 0.5,
+   "explode": [
+    -60,
+    330,
+    293.0
+   ],
+   "mass": 0.1,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Zweite Klammer.",
+   "color": "#9AA2A6",
+   "label": false
+  },
+  {
+   "id": "beilage",
+   "component_id": "paper_sheets",
+   "material_id": "paper",
+   "name": "Fernsehbeilage (geheftet)",
+   "short": "TV-Beilage",
+   "shape": "box",
+   "x": 45,
+   "y": 60,
+   "w": 200,
+   "d": 280,
+   "z": 4.5,
+   "h": 2,
+   "r": 0,
+   "explode": [
+    0,
+    0,
+    293.0
+   ],
+   "mass": 28.8,
+   "materials": [
+    [
+     "papier",
+     94
+    ],
+    [
+     "druck",
+     6
+    ]
+   ],
+   "info": "Wochenheft mit Fernsehprogramm aus dünnem, leicht glänzendem Papier. Mit den Klammern ins Altpapier.",
+   "color": "#F7F5F0",
+   "marks": [
+    {
+     "shape": "box",
+     "x": 8,
+     "y": 8,
+     "w": 184,
+     "d": 28,
+     "r": 0,
+     "fill": "#7A3E8E"
+    },
+    {
+     "shape": "box",
+     "x": 8,
+     "y": 44,
+     "w": 120,
+     "d": 120,
+     "r": 0,
+     "fill": "#D98C4A"
+    },
+    {
+     "shape": "box",
+     "x": 136,
+     "y": 44,
+     "w": 56,
+     "d": 56,
+     "r": 0,
+     "fill": "#4C7FB5"
+    },
+    {
+     "shape": "box",
+     "x": 136,
+     "y": 108,
+     "w": 56,
+     "d": 56,
+     "r": 0,
+     "fill": "#5C9E5A"
+    },
+    {
+     "shape": "box",
+     "x": 8,
+     "y": 176,
+     "w": 184,
+     "d": 6,
+     "r": 0,
+     "fill": "#9A9890"
+    },
+    {
+     "shape": "box",
+     "x": 8,
+     "y": 188,
+     "w": 184,
+     "d": 6,
+     "r": 0,
+     "fill": "#9A9890"
+    },
+    {
+     "shape": "box",
+     "x": 8,
+     "y": 200,
+     "w": 184,
+     "d": 6,
+     "r": 0,
+     "fill": "#9A9890"
+    },
+    {
+     "shape": "box",
+     "x": 8,
+     "y": 212,
+     "w": 184,
+     "d": 6,
+     "r": 0,
+     "fill": "#9A9890"
+    },
+    {
+     "shape": "box",
+     "x": 8,
+     "y": 224,
+     "w": 184,
+     "d": 6,
+     "r": 0,
+     "fill": "#9A9890"
+    },
+    {
+     "shape": "box",
+     "x": 8,
+     "y": 236,
+     "w": 184,
+     "d": 6,
+     "r": 0,
+     "fill": "#9A9890"
+    },
+    {
+     "shape": "box",
+     "x": 8,
+     "y": 248,
+     "w": 184,
+     "d": 6,
+     "r": 0,
+     "fill": "#9A9890"
+    },
+    {
+     "shape": "box",
+     "x": 8,
+     "y": 260,
+     "w": 184,
+     "d": 6,
+     "r": 0,
+     "fill": "#9A9890"
+    }
+   ]
+  },
+  {
    "id": "lokalteil",
    "component_id": "paper_sheets",
    "material_id": "paper",
@@ -375,15 +600,15 @@
    "y": 0,
    "w": 290,
    "d": 400,
-   "z": 3,
+   "z": 2.5,
    "h": 2,
    "r": 0,
    "explode": [
     0,
     0,
-    110.0
+    198.0
    ],
-   "mass": 48.1,
+   "mass": 41.1,
    "materials": [
     [
      "papier",
@@ -465,14 +690,14 @@
    "w": 290,
    "d": 400,
    "z": 0,
-   "h": 3,
+   "h": 2.5,
    "r": 0,
    "explode": [
     0,
     0,
-    0.0
+    103.0
    ],
-   "mass": 46.2,
+   "mass": 39.5,
    "materials": [
     [
      "papier",

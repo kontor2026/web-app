@@ -39,8 +39,8 @@
   "metalle_mg": {},
   "herkunft": {},
   "materialien_g": {
-   "pp": 11.1,
-   "polyester": 3.9
+   "pp": 11.2,
+   "polyester": 3.8
   },
   "co2_kg": 0.034,
   "co2_mit_recyclat_kg": 0.016,
@@ -135,14 +135,14 @@
    "y": 1.5,
    "w": 18,
    "d": 17,
-   "z": 84,
-   "h": 36,
+   "z": 80,
+   "h": 40,
    "explode": [
     0,
     0,
-    24.0
+    76.0
    ],
-   "mass": 2.79,
+   "mass": 2.73,
    "materials": [
     [
      "pp",
@@ -150,14 +150,14 @@
     ]
    ],
    "info": "Hält die Spitze feucht. Die neonfarbene Tinte trocknet offen in wenigen Stunden ein.",
-   "color": "#3A3F44",
+   "color": "#E9D21E",
    "marks": [
     {
      "shape": "cyl",
      "x": 7,
      "y": 6.5,
      "w": 4,
-     "fill": "#2A2E31"
+     "fill": "#9C8A10"
     }
    ]
   },
@@ -178,9 +178,9 @@
    "explode": [
     0,
     0,
-    24.0
+    76.0
    ],
-   "mass": 0.43,
+   "mass": 0.42,
    "materials": [
     [
      "pp",
@@ -188,7 +188,45 @@
     ]
    ],
    "info": "Angespritzter Clip aus Polypropylen, wie die Kappe.",
-   "color": "#3A3F44"
+   "color": "#E9D21E"
+  },
+  {
+   "id": "innenkappe",
+   "component_id": "pen_cap",
+   "material_id": "pp",
+   "name": "Innenkappe",
+   "short": "Innenkappe",
+   "shape": "cyl",
+   "x": 4.5,
+   "y": 5.5,
+   "w": 10,
+   "d": 9,
+   "z": 96,
+   "h": 18,
+   "explode": [
+    0,
+    0,
+    32.0
+   ],
+   "mass": 0.31,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Dichtbecher in der Kappe, der die Keilspitze luftdicht umschließt, damit die Leuchttinte nicht eintrocknet.",
+   "color": "#F3EFC8",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 2,
+     "y": 2,
+     "w": 6,
+     "d": 5,
+     "fill": "#CFC67A"
+    }
+   ]
   },
   {
    "id": "spitze",
@@ -209,7 +247,7 @@
     0,
     10
    ],
-   "mass": 0.43,
+   "mass": 0.42,
    "materials": [
     [
      "polyester",
@@ -217,7 +255,7 @@
     ]
    ],
    "info": "Schräg geschnittene Polyesterfaser: breit für Zeilen, schmal für feine Striche. Mit einer Zange herausziehen.",
-   "color": "#F2E23A",
+   "color": "#F7E83A",
    "marks": [
     {
      "shape": "box",
@@ -246,9 +284,9 @@
    "explode": [
     0,
     0,
-    66.0
+    20.0
    ],
-   "mass": 1.07,
+   "mass": 1.05,
    "materials": [
     [
      "pp",
@@ -256,7 +294,7 @@
     ]
    ],
    "info": "Vorderteil mit Schlitz für die Keilspitze, in den Schaft eingepresst.",
-   "color": "#F2E23A",
+   "color": "#F7E83A",
    "marks": [
     {
      "shape": "box",
@@ -287,7 +325,7 @@
     0,
     0
    ],
-   "mass": 3.43,
+   "mass": 3.36,
    "materials": [
     [
      "polyester",
@@ -310,7 +348,7 @@
      "x": 2,
      "y": 2,
      "w": 8,
-     "fill": "#F2E23A"
+     "fill": "#F7E83A"
     }
    ]
   },
@@ -332,7 +370,7 @@
     0,
     10.0
    ],
-   "mass": 6,
+   "mass": 5.87,
    "materials": [
     [
      "pp",
@@ -340,7 +378,7 @@
     ]
    ],
    "info": "Ovaler Polypropylen-Schaft, damit der Stift nicht wegrollt. Ausgetrocknet in den Restmüll.",
-   "color": "#F2E23A",
+   "color": "#F7E83A",
    "marks": [
     {
      "shape": "cyl",
@@ -370,7 +408,7 @@
     0,
     0.0
    ],
-   "mass": 0.86,
+   "mass": 0.84,
    "materials": [
     [
      "pp",
@@ -378,7 +416,7 @@
     ]
    ],
    "info": "Hinterer Stopfen. Abziehen, dann lässt sich der Tank nachfüllen oder herausnehmen.",
-   "color": "#3A3F44"
+   "color": "#E9D21E"
   }
  ]
 }

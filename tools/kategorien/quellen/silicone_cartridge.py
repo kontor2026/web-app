@@ -1,8 +1,8 @@
 """3D-Modell: silicone_cartridge. Erzeugt tools/kategorien/modelle/silicone_cartridge.json.
 
 Volle 310-ml-Kartusche Sanitärsilikon, stehend (Ø 50 mm, 230 mm hoch ohne Düse). Die Spritzdüse liegt wie im Handel
-lose bei und ist hier schräg an der Kartusche angelegt, damit die Maße der CSV (ohne aufgeschraubte Düse) passen.
-Explodiert: Kartuschenrohr bleibt stehen, Dichtmasse und Kolben links heraus (dx < 0), Düse und Etikett rechts.
+lose bei und steht hier vorn rechts an der Kartusche (aus drei Kegelstufen), damit die Maße der CSV passen.
+Explodiert: Kartuschenrohr bleibt stehen, Dichtmasse und Kolben links, Etikett nach hinten, Düse rechts.
 """
 import sys
 from pathlib import Path
@@ -23,36 +23,43 @@ teile = [
          x=3, y=3, w=44, z=200, h=8, mass=4,
          info='Übergang vom Rohr zur Spitze.', color=ROHR, label=False),
     teil('rohr_oben', 'hdpe_cartridge_tube', 'Kartuschenrohr', 'Kartusche', 'cyl',
-         x=0, y=0, w=50, z=100, h=100, mass=18,
+         x=0, y=0, w=50, z=186, h=14, mass=3,
          info='Steifes HDPE-Rohr. Restinhalt aushärten lassen; die leere Kartusche gehört in die Gelbe Tonne, '
               'eine noch volle zur Schadstoffsammlung oder zum Wertstoffhof.',
-         color=ROHR, opacity=0.85, marks=[mark('cyl', 2, 2, 46, fill='#E4E2DA')]),
+         color=ROHR, marks=[mark('cyl', 2, 2, 46, fill='#E4E2DA')]),
+    teil('rohr_mitte', 'hdpe_cartridge_tube', 'Kartuschenrohr', 'Rohr', 'cyl',
+         x=0.5, y=0.5, w=49, z=14, h=172, mass=30, label=False,
+         info='Steifes HDPE-Rohr, unter dem Etikett.', color=ROHR),
     teil('rohr_unten', 'hdpe_cartridge_tube', 'Kartuschenrohr unten', 'Rohr unten', 'cyl',
-         x=0, y=0, w=50, z=0, h=100, mass=18,
+         x=0, y=0, w=50, z=0, h=14, mass=3,
          info='Unten offen: Hier drückt die Kartuschenpistole den Kolben nach oben.',
-         color=ROHR, opacity=0.85, label=False),
+         color=ROHR, label=False),
     teil('dichtmasse', 'hdpe_cartridge_tube', 'Silikon-Dichtmasse', 'Silikon', 'cyl',
-         material_id='silicone', x=1.5, y=1.5, w=47, z=14, h=186, explode=[-70, 0, 0], mass=310,
+         material_id='silicone', x=1.5, y=1.5, w=47, z=14, h=186, explode=[-150, 0, 0], sortBias=-20, mass=310,
          materials=[['gummi', 100]],
          info='Pastöses Silikon, das an der Luft mit Feuchtigkeit aushärtet. Nicht in den Ausguss: '
               'Reste in der Kartusche aushärten lassen.',
          color='#FAFAFA', marks=[mark('cyl', 8, 8, 31, fill='#F0F0F0')]),
     teil('kolben', 'hdpe_cartridge_tube', 'Kolben', 'Kolben', 'cyl',
-         x=1.5, y=1.5, w=47, z=2, h=10, explode=[-70, 0, 0], mass=4,
+         x=1.5, y=1.5, w=47, z=2, h=10, explode=[-150, 0, 0], sortBias=-40, mass=4,
          info='Beweglicher HDPE-Boden. Die Pistole schiebt ihn nach oben und presst so die Masse heraus.',
          color='#E0DED6', marks=[mark('cyl', 13.5, 13.5, 20, fill='#CFCCC2')]),
-    teil('duese', 'pp_nozzle', 'Spritzdüse', 'Düse', 'cyl',
-         x=41, y=41, w=12, z=30, h=110, explode=[60, 0, 0], mass=5,
-         info='Kegelförmige PP-Düse zum Aufschrauben. Die Spitze schräg anschneiden, je nach Fugenbreite. '
-              'Mit ausgehärtetem Silikon in den Restmüll.',
-         color=DUESE, marks=[mark('cyl', 3, 3, 6, fill='#CFCFC6'), mark('cyl', 5, 5, 2, fill='#9A9A92')]),
-    teil('etikett', 'hdpe_cartridge_tube', 'Etikett', 'Etikett', 'box',
-         material_id='paper', x=49.7, y=5, w=0.3, d=30, z=20, h=170, r=0, explode=[35, 0, 0], mass=3,
-         materials=[['papier', 80], ['druck', 10], ['klebstoff', 10]],
-         info='Bedrucktes Papieretikett mit Gefahrenhinweisen. Kann an der Kartusche bleiben.',
-         color='#2F6DB5', sortBias=100),
+    *[teil(f'duese_{i}', 'pp_nozzle', 'Spritzdüse', 'Düse', 'cyl',
+           x=46 - w / 2, y=46 - w / 2, w=w, z=z, h=h, explode=[80, 0, 0], mass=m, sortBias=200, label=i == 2,
+           info='Kegelförmige PP-Düse zum Aufschrauben, lose beigelegt. Die Spitze schräg anschneiden, je nach '
+                'Fugenbreite. Mit ausgehärtetem Silikon in den Restmüll.',
+           color=DUESE, marks=mk)
+      for i, (w, z, h, m, mk) in reversed(list(enumerate((
+          (14, 0, 22, 2.5, [mark('cyl', 2, 2, 10, fill='#DADAD2')]),
+          (10, 22, 40, 1.5, None),
+          (6, 62, 40, 1, [mark('cyl', 2, 2, 2, fill='#9A9A92')])))))],
+    teil('etikett', 'hdpe_cartridge_tube', 'Etikett', 'Etikett', 'cyl',
+         material_id='paper', x=0, y=0, w=50, z=14, h=172, explode=[0, -150, 0], mass=3,
+         materials=[['papier', 80], ['druck', 10], ['klebstoff', 10]], sortBias=1,
+         info='Bedrucktes Papieretikett rund um das Rohr, mit Gefahrenhinweisen. Kann an der Kartusche bleiben.',
+         color='#2F6DB5', marks=[mark('cyl', 1, 1, 48, fill='#D9DBDF')]),
 ]
 
-explodiere(teile, abstand=20, gruppen=[['spitze', 'schulter', 'rohr_oben', 'rohr_unten']])
+explodiere(teile, abstand=20, gruppen=[['spitze', 'schulter', 'rohr_oben', 'rohr_mitte', 'rohr_unten']])
 skaliere_masse(teile, oid='silicone_cartridge')
 schreibe('silicone_cartridge', teile)

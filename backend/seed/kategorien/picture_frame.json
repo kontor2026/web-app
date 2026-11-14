@@ -132,7 +132,7 @@
  "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "rahmen",
+   "id": "leiste_l",
    "component_id": "wooden_frame",
    "material_id": "wood",
    "name": "Holzrahmen",
@@ -140,17 +140,17 @@
    "shape": "box",
    "x": 0,
    "y": 0,
-   "w": 180,
+   "w": 20,
    "d": 230,
    "z": 0,
    "h": 20,
-   "r": 2,
+   "r": 1,
    "explode": [
     0,
     0,
-    408.8
+    170.0
    ],
-   "mass": 147.6,
+   "mass": 43.4,
    "materials": [
     [
      "holz",
@@ -162,21 +162,171 @@
    "marks": [
     {
      "shape": "box",
-     "x": 6,
-     "y": 6,
-     "w": 168,
-     "d": 218,
+     "x": 3,
+     "y": 3,
+     "w": 14,
+     "d": 224,
      "r": 1,
-     "fill": "#A37548"
+     "fill": "#C39565"
     },
     {
      "shape": "box",
-     "x": 20,
-     "y": 20,
-     "w": 140,
-     "d": 190,
+     "x": 15,
+     "y": 5,
+     "w": 2,
+     "d": 220,
      "r": 0.5,
-     "fill": "#E9EEF0"
+     "fill": "#A87A4A"
+    }
+   ]
+  },
+  {
+   "id": "leiste_r",
+   "component_id": "wooden_frame",
+   "material_id": "wood",
+   "name": "Holzrahmen",
+   "short": "Rahmen",
+   "shape": "box",
+   "x": 160,
+   "y": 0,
+   "w": 20,
+   "d": 230,
+   "z": 0,
+   "h": 20,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    170.0
+   ],
+   "mass": 43.4,
+   "materials": [
+    [
+     "holz",
+     100
+    ]
+   ],
+   "info": "Rahmenleiste aus Kiefernholz, lackiert.",
+   "color": "#B98A57",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 3,
+     "w": 14,
+     "d": 224,
+     "r": 1,
+     "fill": "#C39565"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 5,
+     "w": 2,
+     "d": 220,
+     "r": 0.5,
+     "fill": "#A87A4A"
+    }
+   ]
+  },
+  {
+   "id": "leiste_o",
+   "component_id": "wooden_frame",
+   "material_id": "wood",
+   "name": "Holzrahmen",
+   "short": "Rahmen",
+   "shape": "box",
+   "x": 20,
+   "y": 0,
+   "w": 140,
+   "d": 20,
+   "z": 0,
+   "h": 20,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    170.0
+   ],
+   "mass": 30.4,
+   "materials": [
+    [
+     "holz",
+     100
+    ]
+   ],
+   "info": "Rahmenleiste aus Kiefernholz, lackiert.",
+   "color": "#B98A57",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 3,
+     "w": 140,
+     "d": 14,
+     "r": 1,
+     "fill": "#C39565"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 3,
+     "w": 140,
+     "d": 2,
+     "r": 0.5,
+     "fill": "#A87A4A"
+    }
+   ]
+  },
+  {
+   "id": "leiste_u",
+   "component_id": "wooden_frame",
+   "material_id": "wood",
+   "name": "Holzrahmen",
+   "short": "Rahmen",
+   "shape": "box",
+   "x": 20,
+   "y": 210,
+   "w": 140,
+   "d": 20,
+   "z": 0,
+   "h": 20,
+   "r": 1,
+   "explode": [
+    0,
+    0,
+    170.0
+   ],
+   "mass": 30.4,
+   "materials": [
+    [
+     "holz",
+     100
+    ]
+   ],
+   "info": "Rahmenleiste aus Kiefernholz, lackiert.",
+   "color": "#B98A57",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 3,
+     "w": 140,
+     "d": 14,
+     "r": 1,
+     "fill": "#C39565"
+    },
+    {
+     "shape": "box",
+     "x": 0,
+     "y": 15,
+     "w": 140,
+     "d": 2,
+     "r": 0.5,
+     "fill": "#A87A4A"
     }
    ]
   },
@@ -191,13 +341,13 @@
    "y": 15,
    "w": 150,
    "d": 200,
-   "z": 6.8,
+   "z": 8,
    "h": 2,
    "r": 0.5,
    "explode": [
     0,
     0,
-    320.0
+    120.0
    ],
    "mass": 130.3,
    "materials": [
@@ -207,8 +357,8 @@
     ]
    ],
    "info": "Dünnes Flachglas, 2 mm dick. Gehört nicht in den Altglascontainer: in Zeitungspapier wickeln und in den Restmüll geben. Vorsicht, die Kanten sind scharf.",
-   "color": "#CFE3EA",
-   "opacity": 0.6
+   "color": "#D6E8EE",
+   "opacity": 0.35
   },
   {
    "id": "passepartout",
@@ -221,13 +371,13 @@
    "y": 15,
    "w": 150,
    "d": 200,
-   "z": 5.3,
+   "z": 6.5,
    "h": 1.5,
    "r": 0.5,
    "explode": [
     0,
     0,
-    240.0
+    80.0
    ],
    "mass": 15.6,
    "materials": [
@@ -241,12 +391,54 @@
    "marks": [
     {
      "shape": "box",
+     "x": 24,
+     "y": 24,
+     "w": 102,
+     "d": 152,
+     "r": 0,
+     "fill": "#DCD7CB"
+    },
+    {
+     "shape": "box",
      "x": 25,
      "y": 25,
      "w": 100,
-     "d": 150,
+     "d": 60,
      "r": 0,
-     "fill": "#DCD7CB"
+     "fill": "#A9C9DF"
+    },
+    {
+     "shape": "cyl",
+     "x": 95,
+     "y": 33,
+     "w": 16,
+     "fill": "#F4E3A1"
+    },
+    {
+     "shape": "box",
+     "x": 25,
+     "y": 85,
+     "w": 100,
+     "d": 90,
+     "r": 0,
+     "fill": "#6E9A5E"
+    },
+    {
+     "shape": "box",
+     "x": 25,
+     "y": 85,
+     "w": 100,
+     "d": 6,
+     "r": 0,
+     "fill": "#5A8650"
+    },
+    {
+     "shape": "cyl",
+     "x": 43,
+     "y": 65,
+     "w": 30,
+     "d": 26,
+     "fill": "#4F7A47"
     }
    ]
   },
@@ -261,13 +453,13 @@
    "y": 30,
    "w": 130,
    "d": 170,
-   "z": 5,
+   "z": 6.2,
    "h": 0.3,
    "r": 0,
    "explode": [
     0,
     0,
-    160.0
+    40.0
    ],
    "mass": 3.5,
    "materials": [
@@ -281,25 +473,49 @@
     ]
    ],
    "info": "Fotopapier mit Kunststoffbeschichtung. Herausnehmen und behalten, das Bild gehört nicht zum Müll.",
-   "color": "#7FA6C4",
+   "color": "#F7F7F4",
    "marks": [
     {
      "shape": "box",
-     "x": 10,
+     "x": 15,
      "y": 10,
-     "w": 110,
-     "d": 70,
+     "w": 100,
+     "d": 60,
      "r": 0,
      "fill": "#A9C9DF"
     },
     {
+     "shape": "cyl",
+     "x": 85,
+     "y": 18,
+     "w": 16,
+     "fill": "#F4E3A1"
+    },
+    {
      "shape": "box",
-     "x": 10,
-     "y": 85,
-     "w": 110,
-     "d": 75,
+     "x": 15,
+     "y": 70,
+     "w": 100,
+     "d": 90,
      "r": 0,
-     "fill": "#5E8A5A"
+     "fill": "#6E9A5E"
+    },
+    {
+     "shape": "box",
+     "x": 15,
+     "y": 70,
+     "w": 100,
+     "d": 6,
+     "r": 0,
+     "fill": "#5A8650"
+    },
+    {
+     "shape": "cyl",
+     "x": 33,
+     "y": 50,
+     "w": 30,
+     "d": 26,
+     "fill": "#4F7A47"
     }
    ]
   },
@@ -314,13 +530,13 @@
    "y": 15,
    "w": 150,
    "d": 200,
-   "z": 2.5,
-   "h": 2.5,
+   "z": 3.2,
+   "h": 3,
    "r": 0.5,
    "explode": [
     0,
     0,
-    80.0
+    0.0
    ],
    "mass": 47.8,
    "materials": [
@@ -329,17 +545,26 @@
      100
     ]
    ],
-   "info": "Graue Hartpappe mit einem Aufsteller zum Hinstellen. Nach dem Lösen der Klammern herausheben, dann ins Altpapier.",
+   "info": "Graue Hartpappe mit einem Aufsteller zum Hinstellen. Nach dem Aufdrehen der Klammern herausheben, dann ins Altpapier.",
    "color": "#8C8478",
    "marks": [
     {
      "shape": "box",
      "x": 60,
-     "y": 90,
+     "y": 70,
      "w": 30,
-     "d": 100,
+     "d": 120,
      "r": 2,
      "fill": "#7A7266"
+    },
+    {
+     "shape": "box",
+     "x": 70,
+     "y": 72,
+     "w": 10,
+     "d": 3,
+     "r": 1,
+     "fill": "#5F584E"
     }
    ]
   },
@@ -355,12 +580,12 @@
    "w": 14,
    "d": 14,
    "z": 1.5,
-   "h": 1,
+   "h": 1.5,
    "r": 1,
    "explode": [
     0,
-    0,
-    0.0
+    130,
+    0
    ],
    "mass": 0.9,
    "materials": [
@@ -393,12 +618,12 @@
    "w": 14,
    "d": 14,
    "z": 1.5,
-   "h": 1,
+   "h": 1.5,
    "r": 1,
    "explode": [
     0,
-    0,
-    0.0
+    130,
+    0
    ],
    "mass": 0.9,
    "materials": [
@@ -432,12 +657,12 @@
    "w": 14,
    "d": 14,
    "z": 1.5,
-   "h": 1,
+   "h": 1.5,
    "r": 1,
    "explode": [
     0,
-    0,
-    0.0
+    30,
+    0
    ],
    "mass": 0.9,
    "materials": [
@@ -475,8 +700,8 @@
    "r": 0.5,
    "explode": [
     0,
-    0,
-    0.0
+    256,
+    0
    ],
    "mass": 2.6,
    "materials": [

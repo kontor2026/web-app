@@ -38,6 +38,9 @@ teile = [
          info='Wird über die Rückseite geklappt und angefeuchtet oder angedrückt.',
          marks=[mark('box', 0, 0, 220, 3, 0, '#DDDAD0')]),
 ]
-explodiere(teile, abstand=55, abstaende={'klebestreifen': 15})
+by = {p['id']: p for p in teile}
+by['klappe']['explode'] = [0, -150, -60]
+by['klebestreifen']['explode'] = [0, -150, -45]
+explodiere(teile, abstand=55)
 skaliere_masse(teile, oid='envelope', stellen=2)
 schreibe('envelope', teile)

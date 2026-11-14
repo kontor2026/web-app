@@ -26,8 +26,10 @@ teile = [
          x=0, y=0, w=150, d=40, z=4.2, h=0.3, r=1, mass=0.6, materials=[['pp', 94], ['druck', 6]], color='#F4F1EA',
          info='Bedruckter PP-Streifen mit Sorte, Herkunft und Gewicht, um das Netz herum verschweißt. Mit der Schere '
               'abschneiden oder an der Naht aufreißen.',
-         marks=[mark('box', 6, 5, 60, 30, 3, '#E2672E'), mark('box', 74, 6, 66, 6, 0, '#3A3F44'),
-                mark('box', 74, 16, 50, 5, 0, '#3A3F44'), mark('box', 74, 26, 66, 9, 0, '#22272B')]),
+         marks=[mark('box', 6, 5, 44, 30, 3, '#E2672E'), mark('cyl', 14, 9, 22, 22, fill='#F29A3C'),
+                mark('box', 58, 11, 34, 14, 7, '#B9B4A8'),
+                mark('box', 100, 6, 44, 5, 0, '#3A3F44'), mark('box', 100, 15, 34, 4, 0, '#3A3F44'),
+                mark('box', 100, 25, 44, 9, 1, '#22272B')]),
     teil('netz_oben', 'fruit_net_mesh', 'Netz (obere Lage)', 'Netz', 'box',
          x=0, y=30, w=150, d=220, z=2.2, h=2, r=2, mass=1.5, color=NETZ, opacity=0.35,
          info='Gewirkter Schlauch aus dünnen LDPE-Fäden. Leer in die Gelbe Tonne. Sind Metallklammern dran, '
@@ -46,8 +48,12 @@ teile = [
          label=False,
          info='Rückseite der Banderole mit Barcode. Netz und Etikett sind verschiedene Kunststoffe, kommen aber '
               'beide in die Gelbe Tonne.',
-         marks=[mark('box', 10, 8, 60, 24, 0, '#22272B')]),
+         marks=[mark('box', 58, 11, 34, 14, 7, '#B9B4A8'),
+                *[mark('box', 100 + i * 2.2, 8, 1.2 if i % 3 else 0.6, 22, 0, '#22272B') for i in range(18)]]),
 ]
-explodiere(teile, abstand=100)
+ex = {'etikett_vorne': [0, -30, 200], 'netz_oben': [0, 0, 110], 'bodennaht': [0, 0, 110],
+      'netz_unten': [0, 0, 0], 'etikett_hinten': [0, -45, 0]}
+for p in teile:
+    p['explode'] = ex[p['id']]
 skaliere_masse(teile, oid='fruit_net')
 schreibe('fruit_net', teile)

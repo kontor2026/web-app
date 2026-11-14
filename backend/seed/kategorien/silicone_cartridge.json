@@ -200,14 +200,14 @@
    "x": 0,
    "y": 0,
    "w": 50,
-   "z": 100,
-   "h": 100,
+   "z": 186,
+   "h": 14,
    "explode": [
     0,
     0,
     0.0
    ],
-   "mass": 17.3,
+   "mass": 2.9,
    "materials": [
     [
      "hdpe",
@@ -216,7 +216,6 @@
    ],
    "info": "Steifes HDPE-Rohr. Restinhalt aushärten lassen; die leere Kartusche gehört in die Gelbe Tonne, eine noch volle zur Schadstoffsammlung oder zum Wertstoffhof.",
    "color": "#F2F1EC",
-   "opacity": 0.85,
    "marks": [
     {
      "shape": "cyl",
@@ -226,6 +225,34 @@
      "fill": "#E4E2DA"
     }
    ]
+  },
+  {
+   "id": "rohr_mitte",
+   "component_id": "hdpe_cartridge_tube",
+   "material_id": "hdpe",
+   "name": "Kartuschenrohr",
+   "short": "Rohr",
+   "shape": "cyl",
+   "x": 0.5,
+   "y": 0.5,
+   "w": 49,
+   "z": 14,
+   "h": 172,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 28.8,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "Steifes HDPE-Rohr, unter dem Etikett.",
+   "color": "#F2F1EC",
+   "label": false
   },
   {
    "id": "rohr_unten",
@@ -238,13 +265,13 @@
    "y": 0,
    "w": 50,
    "z": 0,
-   "h": 100,
+   "h": 14,
    "explode": [
     0,
     0,
     0.0
    ],
-   "mass": 17.3,
+   "mass": 2.9,
    "materials": [
     [
      "hdpe",
@@ -253,7 +280,6 @@
    ],
    "info": "Unten offen: Hier drückt die Kartuschenpistole den Kolben nach oben.",
    "color": "#F2F1EC",
-   "opacity": 0.85,
    "label": false
   },
   {
@@ -269,7 +295,7 @@
    "z": 14,
    "h": 186,
    "explode": [
-    -70,
+    -150,
     0,
     0
    ],
@@ -282,6 +308,7 @@
    ],
    "info": "Pastöses Silikon, das an der Luft mit Feuchtigkeit aushärtet. Nicht in den Ausguss: Reste in der Kartusche aushärten lassen.",
    "color": "#FAFAFA",
+   "sortBias": -20,
    "marks": [
     {
      "shape": "cyl",
@@ -305,7 +332,7 @@
    "z": 2,
    "h": 10,
    "explode": [
-    -70,
+    -150,
     0,
     0
    ],
@@ -318,6 +345,7 @@
    ],
    "info": "Beweglicher HDPE-Boden. Die Pistole schiebt ihn nach oben und presst so die Masse heraus.",
    "color": "#E0DED6",
+   "sortBias": -40,
    "marks": [
     {
      "shape": "cyl",
@@ -329,7 +357,45 @@
    ]
   },
   {
-   "id": "duese",
+   "id": "duese_2",
+   "component_id": "pp_nozzle",
+   "material_id": "pp",
+   "name": "Spritzdüse",
+   "short": "Düse",
+   "shape": "cyl",
+   "x": 43,
+   "y": 43,
+   "w": 6,
+   "z": 62,
+   "h": 40,
+   "explode": [
+    80,
+    0,
+    0
+   ],
+   "mass": 1,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Kegelförmige PP-Düse zum Aufschrauben, lose beigelegt. Die Spitze schräg anschneiden, je nach Fugenbreite. Mit ausgehärtetem Silikon in den Restmüll.",
+   "color": "#EDEDE6",
+   "label": true,
+   "sortBias": 200,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 2,
+     "y": 2,
+     "w": 2,
+     "fill": "#9A9A92"
+    }
+   ]
+  },
+  {
+   "id": "duese_1",
    "component_id": "pp_nozzle",
    "material_id": "pp",
    "name": "Spritzdüse",
@@ -337,37 +403,61 @@
    "shape": "cyl",
    "x": 41,
    "y": 41,
-   "w": 12,
-   "z": 30,
-   "h": 110,
+   "w": 10,
+   "z": 22,
+   "h": 40,
    "explode": [
-    60,
+    80,
     0,
     0
    ],
-   "mass": 4.8,
+   "mass": 1.4,
    "materials": [
     [
      "pp",
      100
     ]
    ],
-   "info": "Kegelförmige PP-Düse zum Aufschrauben. Die Spitze schräg anschneiden, je nach Fugenbreite. Mit ausgehärtetem Silikon in den Restmüll.",
+   "info": "Kegelförmige PP-Düse zum Aufschrauben, lose beigelegt. Die Spitze schräg anschneiden, je nach Fugenbreite. Mit ausgehärtetem Silikon in den Restmüll.",
    "color": "#EDEDE6",
+   "label": false,
+   "sortBias": 200
+  },
+  {
+   "id": "duese_0",
+   "component_id": "pp_nozzle",
+   "material_id": "pp",
+   "name": "Spritzdüse",
+   "short": "Düse",
+   "shape": "cyl",
+   "x": 39,
+   "y": 39,
+   "w": 14,
+   "z": 0,
+   "h": 22,
+   "explode": [
+    80,
+    0,
+    0
+   ],
+   "mass": 2.4,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Kegelförmige PP-Düse zum Aufschrauben, lose beigelegt. Die Spitze schräg anschneiden, je nach Fugenbreite. Mit ausgehärtetem Silikon in den Restmüll.",
+   "color": "#EDEDE6",
+   "label": false,
+   "sortBias": 200,
    "marks": [
     {
      "shape": "cyl",
-     "x": 3,
-     "y": 3,
-     "w": 6,
-     "fill": "#CFCFC6"
-    },
-    {
-     "shape": "cyl",
-     "x": 5,
-     "y": 5,
-     "w": 2,
-     "fill": "#9A9A92"
+     "x": 2,
+     "y": 2,
+     "w": 10,
+     "fill": "#DADAD2"
     }
    ]
   },
@@ -377,17 +467,15 @@
    "material_id": "paper",
    "name": "Etikett",
    "short": "Etikett",
-   "shape": "box",
-   "x": 49.7,
-   "y": 5,
-   "w": 0.3,
-   "d": 30,
-   "z": 20,
-   "h": 170,
-   "r": 0,
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 50,
+   "z": 14,
+   "h": 172,
    "explode": [
-    35,
     0,
+    -150,
     0
    ],
    "mass": 2.9,
@@ -405,9 +493,18 @@
      10
     ]
    ],
-   "info": "Bedrucktes Papieretikett mit Gefahrenhinweisen. Kann an der Kartusche bleiben.",
+   "info": "Bedrucktes Papieretikett rund um das Rohr, mit Gefahrenhinweisen. Kann an der Kartusche bleiben.",
    "color": "#2F6DB5",
-   "sortBias": 100
+   "sortBias": 1,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 1,
+     "y": 1,
+     "w": 48,
+     "fill": "#D9DBDF"
+    }
+   ]
   }
  ]
 }

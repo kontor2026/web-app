@@ -21,25 +21,25 @@
  "werte": [
   {
    "k": "Rohstoffwert",
-   "v": "≈ 0,04 €",
+   "v": "≈ 0,02 €",
    "hint": "Kupfer zu Preisen vom 13.11."
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 0,09 kg",
+   "v": "≈ 0,08 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
    "k": "mit Recyclat",
    "v": "≈ 0,04 kg",
-   "hint": "spart 0,06 kg, wenn recycelte Materialien eingesetzt werden"
+   "hint": "spart 0,04 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Al": 2790.0,
-   "Cu": 2368.0,
-   "Fe": 69.0
+   "Al": 1620.0,
+   "Cu": 1295.0,
+   "Fe": 38.0
   },
   "herkunft": {
    "Al": "Modellmassen (Schätzung)",
@@ -47,17 +47,17 @@
    "Fe": "Modellmassen (Schätzung)"
   },
   "materialien_g": {
-   "special_glass": 22.9,
-   "aluminium": 2.8,
-   "copper": 2.2,
-   "ceramic": 1.7,
-   "mixed_electronics": 0.5
+   "special_glass": 26.0,
+   "aluminium": 1.6,
+   "copper": 1.2,
+   "ceramic": 0.9,
+   "mixed_electronics": 0.2
   },
-  "co2_kg": 0.09,
-  "co2_mit_recyclat_kg": 0.035,
-  "co2_ersparnis_kg": 0.055,
+  "co2_kg": 0.077,
+  "co2_mit_recyclat_kg": 0.037,
+  "co2_ersparnis_kg": 0.04,
   "co2_ohne_faktor": [],
-  "rohstoffwert_eur": 0.04,
+  "rohstoffwert_eur": 0.02,
   "wert_ohne_preis": [],
   "preisstand": "2026-11-13",
   "quellen": {
@@ -136,23 +136,23 @@
  "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "kolben_kuppe",
+   "id": "kolben_0",
    "component_id": "bulb_glass",
    "material_id": "special_glass",
-   "name": "Glaskolben (Kuppe)",
+   "name": "Glaskolben",
    "short": "Kolben",
    "shape": "cyl",
-   "x": 14,
-   "y": 14,
-   "w": 32,
+   "x": 15,
+   "y": 15,
+   "w": 30,
    "z": 100,
    "h": 5,
    "explode": [
     0,
     0,
-    94.0
+    90.0
    ],
-   "mass": 1.67,
+   "mass": 0.91,
    "materials": [
     [
      "behaelterglas",
@@ -161,122 +161,180 @@
    ],
    "info": "Dünnes Kalk-Natron-Glas, nur etwa 0,5 mm dick. Innen Vakuum oder Edelgas, damit die Wendel nicht verbrennt. Glühbirnen gehören in den Restmüll, nicht ins Altglas.",
    "color": "#E9F1F4",
-   "opacity": 0.6
+   "opacity": 0.55
   },
   {
-   "id": "kolben_oben",
+   "id": "kolben_1",
    "component_id": "bulb_glass",
    "material_id": "special_glass",
-   "name": "Glaskolben (oben)",
-   "short": "Kolben oben",
+   "name": "Glaskolben",
+   "short": "Kolben",
    "shape": "cyl",
-   "x": 4,
-   "y": 4,
-   "w": 52,
-   "z": 88,
-   "h": 12,
+   "x": 7,
+   "y": 7,
+   "w": 46,
+   "z": 94,
+   "h": 6,
    "explode": [
     0,
     0,
-    94.0
+    90.0
    ],
-   "mass": 3.9,
+   "mass": 1.68,
    "materials": [
     [
      "behaelterglas",
      100
     ]
    ],
-   "info": "Gewölbter oberer Teil des Kolbens.",
+   "info": "Teil des Glaskolbens. Zerbricht leicht: Scherben mit Handschuhen aufsammeln.",
    "color": "#E9F1F4",
-   "opacity": 0.6,
+   "opacity": 0.55,
    "label": false
   },
   {
-   "id": "kolben_mitte",
+   "id": "kolben_2",
    "component_id": "bulb_glass",
    "material_id": "special_glass",
-   "name": "Glaskolben (Mitte)",
-   "short": "Kolben Mitte",
+   "name": "Glaskolben",
+   "short": "Kolben",
+   "shape": "cyl",
+   "x": 2,
+   "y": 2,
+   "w": 56,
+   "z": 84,
+   "h": 10,
+   "explode": [
+    0,
+    0,
+    90.0
+   ],
+   "mass": 3.4,
+   "materials": [
+    [
+     "behaelterglas",
+     100
+    ]
+   ],
+   "info": "Teil des Glaskolbens. Zerbricht leicht: Scherben mit Handschuhen aufsammeln.",
+   "color": "#E9F1F4",
+   "opacity": 0.55,
+   "label": false
+  },
+  {
+   "id": "kolben_3",
+   "component_id": "bulb_glass",
+   "material_id": "special_glass",
+   "name": "Glaskolben",
+   "short": "Kolben",
    "shape": "cyl",
    "x": 0,
    "y": 0,
    "w": 60,
-   "z": 60,
-   "h": 28,
+   "z": 58,
+   "h": 26,
    "explode": [
     0,
     0,
-    94.0
+    90.0
    ],
-   "mass": 6.69,
+   "mass": 9.49,
    "materials": [
     [
      "behaelterglas",
      100
     ]
    ],
-   "info": "Breiteste Stelle, 60 mm. Zerbricht leicht: Scherben mit Handschuhen aufsammeln.",
+   "info": "Teil des Glaskolbens. Zerbricht leicht: Scherben mit Handschuhen aufsammeln.",
    "color": "#E9F1F4",
-   "opacity": 0.6,
+   "opacity": 0.55,
    "label": false
   },
   {
-   "id": "kolben_unten",
+   "id": "kolben_4",
    "component_id": "bulb_glass",
    "material_id": "special_glass",
-   "name": "Glaskolben (unten)",
-   "short": "Kolben unten",
+   "name": "Glaskolben",
+   "short": "Kolben",
    "shape": "cyl",
-   "x": 5,
-   "y": 5,
-   "w": 50,
-   "z": 42,
-   "h": 18,
+   "x": 3,
+   "y": 3,
+   "w": 54,
+   "z": 48,
+   "h": 10,
    "explode": [
     0,
     0,
-    94.0
+    90.0
    ],
-   "mass": 4.46,
+   "mass": 3.28,
    "materials": [
     [
      "behaelterglas",
      100
     ]
    ],
-   "info": "Der Kolben verjüngt sich zum Hals.",
+   "info": "Teil des Glaskolbens. Zerbricht leicht: Scherben mit Handschuhen aufsammeln.",
    "color": "#E9F1F4",
-   "opacity": 0.6,
+   "opacity": 0.55,
    "label": false
   },
   {
-   "id": "kolben_hals",
+   "id": "kolben_5",
    "component_id": "bulb_glass",
    "material_id": "special_glass",
-   "name": "Glaskolben (Hals)",
-   "short": "Kolbenhals",
+   "name": "Glaskolben",
+   "short": "Kolben",
    "shape": "cyl",
-   "x": 14,
-   "y": 14,
-   "w": 32,
+   "x": 8,
+   "y": 8,
+   "w": 44,
+   "z": 38,
+   "h": 10,
+   "explode": [
+    0,
+    0,
+    90.0
+   ],
+   "mass": 2.68,
+   "materials": [
+    [
+     "behaelterglas",
+     100
+    ]
+   ],
+   "info": "Teil des Glaskolbens. Zerbricht leicht: Scherben mit Handschuhen aufsammeln.",
+   "color": "#E9F1F4",
+   "opacity": 0.55,
+   "label": false
+  },
+  {
+   "id": "kolben_6",
+   "component_id": "bulb_glass",
+   "material_id": "special_glass",
+   "name": "Glaskolben",
+   "short": "Kolben",
+   "shape": "cyl",
+   "x": 14.5,
+   "y": 14.5,
+   "w": 31,
    "z": 22,
-   "h": 20,
+   "h": 16,
    "explode": [
     0,
     0,
-    94.0
+    90.0
    ],
-   "mass": 3.34,
+   "mass": 3.02,
    "materials": [
     [
      "behaelterglas",
      100
     ]
    ],
-   "info": "Der Hals steckt im Sockel und ist dort mit Kitt eingeklebt.",
+   "info": "Teil des Glaskolbens. Zerbricht leicht: Scherben mit Handschuhen aufsammeln.",
    "color": "#E9F1F4",
-   "opacity": 0.6,
+   "opacity": 0.55,
    "label": false
   },
   {
@@ -294,9 +352,9 @@
    "explode": [
     0,
     0,
-    42.0
+    38.0
    ],
-   "mass": 2.79,
+   "mass": 1.52,
    "materials": [
     [
      "behaelterglas",
@@ -319,6 +377,13 @@
      "d": 3,
      "r": 1,
      "fill": "#C7D6DC"
+    },
+    {
+     "shape": "cyl",
+     "x": 4.5,
+     "y": 4.5,
+     "w": 3,
+     "fill": "#C7D6DC"
     }
    ]
   },
@@ -339,9 +404,9 @@
    "explode": [
     55,
     0,
-    22
+    30
    ],
-   "mass": 0.02,
+   "mass": 0.01,
    "materials": [
     [
      "nichrom",
@@ -426,25 +491,25 @@
    ]
   },
   {
-   "id": "haltedraehte",
+   "id": "haltedraht_1",
    "component_id": "bulb_filament",
    "material_id": "mixed_electronics",
    "name": "Haltedrähte (Molybdän)",
    "short": "Haltedrähte",
    "shape": "box",
-   "x": 19,
-   "y": 29.5,
-   "w": 22,
-   "d": 1,
-   "z": 64,
-   "h": 12,
-   "r": 0.3,
+   "x": 26,
+   "y": 29.7,
+   "w": 0.6,
+   "d": 0.6,
+   "z": 62,
+   "h": 14.5,
+   "r": 0.2,
    "explode": [
     55,
     0,
-    12
+    15
    ],
-   "mass": 0.11,
+   "mass": 0.03,
    "materials": [
     [
      "nickel",
@@ -452,62 +517,58 @@
     ]
    ],
    "info": "Feine Molybdänhaken im Glasknopf halten die Wendel, damit sie nicht durchhängt.",
-   "color": "#8D949A",
-   "marks": [
-    {
-     "shape": "box",
-     "x": 0.5,
-     "y": 0.1,
-     "w": 0.8,
-     "d": 0.8,
-     "fill": "#5A6268"
-    },
-    {
-     "shape": "box",
-     "x": 7.3,
-     "y": 0.1,
-     "w": 0.8,
-     "d": 0.8,
-     "fill": "#5A6268"
-    },
-    {
-     "shape": "box",
-     "x": 14.1,
-     "y": 0.1,
-     "w": 0.8,
-     "d": 0.8,
-     "fill": "#5A6268"
-    },
-    {
-     "shape": "box",
-     "x": 20.9,
-     "y": 0.1,
-     "w": 0.8,
-     "d": 0.8,
-     "fill": "#5A6268"
-    }
-   ]
+   "color": "#8D949A"
   },
   {
-   "id": "zuleitungen",
+   "id": "haltedraht_2",
+   "component_id": "bulb_filament",
+   "material_id": "mixed_electronics",
+   "name": "Haltedraht",
+   "short": "Haltedraht",
+   "shape": "box",
+   "x": 33.4,
+   "y": 29.7,
+   "w": 0.6,
+   "d": 0.6,
+   "z": 62,
+   "h": 14.5,
+   "r": 0.2,
+   "explode": [
+    55,
+    0,
+    15
+   ],
+   "mass": 0.03,
+   "materials": [
+    [
+     "nickel",
+     100
+    ]
+   ],
+   "info": "Zweiter Haltedraht.",
+   "color": "#8D949A",
+   "label": false
+  },
+  {
+   "id": "zuleitung_1",
    "component_id": "bulb_filament",
    "material_id": "mixed_electronics",
    "name": "Zuleitungsdrähte",
    "short": "Zuleitungen",
    "shape": "box",
-   "x": 25,
-   "y": 29.5,
-   "w": 10,
-   "d": 1,
-   "z": 16,
-   "h": 60,
+   "x": 21,
+   "y": 29.6,
+   "w": 0.8,
+   "d": 0.8,
+   "z": 28,
+   "h": 48.5,
    "r": 0.3,
    "explode": [
     55,
     0,
     0
    ],
-   "mass": 0.33,
+   "mass": 0.09,
    "materials": [
     [
      "kupfer",
@@ -522,23 +583,57 @@
    "color": "#B87333"
   },
   {
+   "id": "zuleitung_2",
+   "component_id": "bulb_filament",
+   "material_id": "mixed_electronics",
+   "name": "Zuleitungsdraht",
+   "short": "Zuleitung",
+   "shape": "box",
+   "x": 38.2,
+   "y": 29.6,
+   "w": 0.8,
+   "d": 0.8,
+   "z": 28,
+   "h": 48.5,
+   "r": 0.3,
+   "explode": [
+    55,
+    0,
+    0
+   ],
+   "mass": 0.09,
+   "materials": [
+    [
+     "kupfer",
+     60
+    ],
+    [
+     "nickel",
+     40
+    ]
+   ],
+   "info": "Zweiter Zuleitungsdraht, im Sockel mit einer dünnen Sicherung.",
+   "color": "#B87333",
+   "label": false
+  },
+  {
    "id": "kitt",
    "component_id": "bulb_screw_base",
    "material_id": "ceramic",
    "name": "Sockelkitt",
    "short": "Kitt",
    "shape": "cyl",
-   "x": 15,
-   "y": 15,
-   "w": 30,
-   "z": 20,
-   "h": 6,
+   "x": 15.5,
+   "y": 15.5,
+   "w": 29,
+   "z": 26,
+   "h": 2,
    "explode": [
     0,
     0,
-    30.0
+    24.0
    ],
-   "mass": 1.67,
+   "mass": 0.91,
    "materials": [
     [
      "keramik",
@@ -556,13 +651,13 @@
      "shape": "cyl",
      "x": 7,
      "y": 7,
-     "w": 16,
+     "w": 15,
      "fill": "#B5A57C"
     }
    ]
   },
   {
-   "id": "sockel",
+   "id": "sockel_0",
    "component_id": "bulb_screw_base",
    "material_id": "aluminium",
    "name": "Schraubsockel E27",
@@ -571,14 +666,14 @@
    "x": 16.5,
    "y": 16.5,
    "w": 27,
-   "z": 3,
-   "h": 23,
+   "z": 21,
+   "h": 5,
    "explode": [
     0,
     0,
     12.0
    ],
-   "mass": 2.79,
+   "mass": 0.27,
    "materials": [
     [
      "alu",
@@ -604,23 +699,163 @@
    ]
   },
   {
+   "id": "sockel_1",
+   "component_id": "bulb_screw_base",
+   "material_id": "aluminium",
+   "name": "Schraubsockel E27",
+   "short": "Sockel",
+   "shape": "cyl",
+   "x": 17.5,
+   "y": 17.5,
+   "w": 25,
+   "z": 18,
+   "h": 3,
+   "explode": [
+    0,
+    0,
+    12.0
+   ],
+   "mass": 0.27,
+   "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "info": "Gewindegang des Sockels.",
+   "color": "#A9AFB3",
+   "label": false
+  },
+  {
+   "id": "sockel_2",
+   "component_id": "bulb_screw_base",
+   "material_id": "aluminium",
+   "name": "Schraubsockel E27",
+   "short": "Sockel",
+   "shape": "cyl",
+   "x": 16.5,
+   "y": 16.5,
+   "w": 27,
+   "z": 14,
+   "h": 4,
+   "explode": [
+    0,
+    0,
+    12.0
+   ],
+   "mass": 0.27,
+   "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "info": "Gewindegang des Sockels.",
+   "color": "#C2C6C9",
+   "label": false
+  },
+  {
+   "id": "sockel_3",
+   "component_id": "bulb_screw_base",
+   "material_id": "aluminium",
+   "name": "Schraubsockel E27",
+   "short": "Sockel",
+   "shape": "cyl",
+   "x": 17.5,
+   "y": 17.5,
+   "w": 25,
+   "z": 11,
+   "h": 3,
+   "explode": [
+    0,
+    0,
+    12.0
+   ],
+   "mass": 0.27,
+   "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "info": "Gewindegang des Sockels.",
+   "color": "#A9AFB3",
+   "label": false
+  },
+  {
+   "id": "sockel_4",
+   "component_id": "bulb_screw_base",
+   "material_id": "aluminium",
+   "name": "Schraubsockel E27",
+   "short": "Sockel",
+   "shape": "cyl",
+   "x": 16.5,
+   "y": 16.5,
+   "w": 27,
+   "z": 7,
+   "h": 4,
+   "explode": [
+    0,
+    0,
+    12.0
+   ],
+   "mass": 0.27,
+   "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "info": "Gewindegang des Sockels.",
+   "color": "#C2C6C9",
+   "label": false
+  },
+  {
+   "id": "sockel_5",
+   "component_id": "bulb_screw_base",
+   "material_id": "aluminium",
+   "name": "Schraubsockel E27",
+   "short": "Sockel",
+   "shape": "cyl",
+   "x": 17.5,
+   "y": 17.5,
+   "w": 25,
+   "z": 4,
+   "h": 3,
+   "explode": [
+    0,
+    0,
+    12.0
+   ],
+   "mass": 0.27,
+   "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "info": "Gewindegang des Sockels.",
+   "color": "#A9AFB3",
+   "label": false
+  },
+  {
    "id": "fusskontakt",
    "component_id": "bulb_screw_base",
    "material_id": "copper",
    "name": "Fußkontakt mit Isolierglas",
    "short": "Fußkontakt",
    "shape": "cyl",
-   "x": 22,
-   "y": 22,
-   "w": 16,
+   "x": 20,
+   "y": 20,
+   "w": 20,
    "z": 0,
-   "h": 3,
+   "h": 4,
    "explode": [
     0,
     0,
     0.0
    ],
-   "mass": 2.23,
+   "mass": 1.22,
    "materials": [
     [
      "behaelterglas",
@@ -640,10 +875,17 @@
    "marks": [
     {
      "shape": "cyl",
-     "x": 5,
-     "y": 5,
-     "w": 6,
+     "x": 6,
+     "y": 6,
+     "w": 8,
      "fill": "#C9CDD0"
+    },
+    {
+     "shape": "cyl",
+     "x": 8,
+     "y": 8,
+     "w": 4,
+     "fill": "#9EA4A8"
     }
    ]
   }

@@ -2,7 +2,7 @@
 
 Typische Tintenpatrone mit integriertem Druckkopf (40 × 60 × 70 mm, aufrecht, Düse unten). Gehäuse aus PP mit
 verschweißtem Deckel, innen ein Schaumstoffschwamm, der die Tinte hält. Unten führt ein Sieb aus Edelstahl die Tinte
-zum Druckkopf; dessen Düsenplatte ist mit einem Schutzstreifen abgeklebt. An der Vorderseite (y = 60) klebt die
+zum Druckkopf; dessen Düsenplatte ist mit einem Schutzstreifen abgeklebt. Vorn am Kopfteil (y = 58) klebt die
 Kontaktfolie mit Chip, explodiert nach vorne gezogen. Sonst wird von unten nach oben gestapelt.
 """
 import sys
@@ -51,10 +51,12 @@ teile = [
          info='Schützt die Düsen vor dem Austrocknen. Vor dem Einsetzen an der Lasche abziehen und in den Restmüll.',
          marks=[mark('box', 2, 2, 24, 3, 0, '#F2F2F2')]),
     teil('kontaktfolie', 'cartridge_chip', 'Kontaktfolie mit Chip', 'Chip', 'box',
-         x=6, y=60, w=28, d=0.3, z=4, h=36, r=0, mass=0.6, explode=[0, 35, 0], color='#C08A2E',
+         x=8, y=58, w=24, d=0.3, z=2.5, h=7.5, r=0, mass=0.6, color='#C08A2E', sortBias=1,
          info='Biegsame Folie mit vergoldeten Kontakten und einem Speicherchip, der den Füllstand merkt. '
               'Dranlassen, Wiederbefüller nutzen ihn weiter.'),
 ]
-explodiere(teile, abstand=10)
+explodiere([p for p in teile if p['id'] != 'kontaktfolie'], abstand=16, abstaende={'druckkopf': 8, 'schutzstreifen': 10})
+by = {p['id']: p for p in teile}
+by['kontaktfolie']['explode'] = [0, 30, by['kopfteil']['explode'][2] + 14]  # mit dem Kopfteil, nach vorn gezogen
 skaliere_masse(teile, oid='printer_cartridge')
 schreibe('printer_cartridge', teile)

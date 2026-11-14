@@ -268,7 +268,7 @@
   "name": "Zeitung",
   "name_en": "Newspaper",
   "klasse": "Verpackung · Papier",
-  "teile": 4,
+  "teile": 7,
   "platzhalter": false
  },
  {
@@ -316,7 +316,7 @@
   "name": "Kugelschreiber",
   "name_en": "Ballpoint Pen",
   "klasse": "Restmüll",
-  "teile": 7,
+  "teile": 10,
   "platzhalter": false
  },
  {
@@ -324,7 +324,7 @@
   "name": "Bleistift",
   "name_en": "Pencil",
   "klasse": "Restmüll",
-  "teile": 8,
+  "teile": 11,
   "platzhalter": false
  },
  {
@@ -860,7 +860,7 @@
   "name": "Müslipackung",
   "name_en": "Cereal Box",
   "klasse": "Verpackung · Papier",
-  "teile": 4,
+  "teile": 6,
   "platzhalter": false
  },
  {
@@ -884,7 +884,7 @@
   "name": "Kaffeeverpackung",
   "name_en": "Coffee Bag",
   "klasse": "Verpackung · Gelbe Tonne",
-  "teile": 6,
+  "teile": 8,
   "platzhalter": false
  },
  {
@@ -948,7 +948,7 @@
   "name": "Farbeimer",
   "name_en": "Paint Bucket",
   "klasse": "Wertstoffhof",
-  "teile": 8,
+  "teile": 9,
   "platzhalter": false
  },
  {
@@ -1004,7 +1004,7 @@
   "name": "Kamm",
   "name_en": "Comb",
   "klasse": "Restmüll",
-  "teile": 3,
+  "teile": 57,
   "platzhalter": false
  },
  {
@@ -1028,7 +1028,7 @@
   "name": "Kaffeebecher (Keramik)",
   "name_en": "Ceramic Mug",
   "klasse": "Restmüll",
-  "teile": 5,
+  "teile": 7,
   "platzhalter": false
  },
  {
@@ -1108,7 +1108,7 @@
   "name": "Bilderrahmen",
   "name_en": "Picture Frame",
   "klasse": "Restmüll",
-  "teile": 9,
+  "teile": 12,
   "platzhalter": false
  },
  {
@@ -1124,7 +1124,7 @@
   "name": "Schlüssel",
   "name_en": "Key",
   "klasse": "Metall · Wertstoffhof",
-  "teile": 4,
+  "teile": 8,
   "platzhalter": false
  },
  {
@@ -1164,7 +1164,7 @@
   "name": "Gießkanne",
   "name_en": "Watering Can",
   "klasse": "Wertstoffhof",
-  "teile": 11,
+  "teile": 13,
   "platzhalter": false
  },
  {
@@ -1212,7 +1212,7 @@
   "name": "Tacker",
   "name_en": "Stapler",
   "klasse": "Metall · Wertstoffhof",
-  "teile": 12,
+  "teile": 13,
   "platzhalter": false
  },
  {
@@ -1236,7 +1236,7 @@
   "name": "Filzstift",
   "name_en": "Felt-Tip Marker",
   "klasse": "Restmüll",
-  "teile": 7,
+  "teile": 8,
   "platzhalter": false
  },
  {
@@ -1244,7 +1244,7 @@
   "name": "Textmarker",
   "name_en": "Highlighter",
   "klasse": "Restmüll",
-  "teile": 7,
+  "teile": 8,
   "platzhalter": false
  },
  {
@@ -1308,7 +1308,7 @@
   "name": "Kunststoff-Hefter",
   "name_en": "Plastic Folder",
   "klasse": "Restmüll",
-  "teile": 4,
+  "teile": 5,
   "platzhalter": false
  },
  {
@@ -1436,7 +1436,7 @@
   "name": "Fußball",
   "name_en": "Football",
   "klasse": "Restmüll",
-  "teile": 27,
+  "teile": 35,
   "platzhalter": false
  },
  {
@@ -1444,7 +1444,7 @@
   "name": "Tennisball",
   "name_en": "Tennis Ball",
   "klasse": "Restmüll",
-  "teile": 12,
+  "teile": 18,
   "platzhalter": false
  },
  {
@@ -1460,7 +1460,7 @@
   "name": "Skateboard",
   "name_en": "Skateboard",
   "klasse": "Wertstoffhof",
-  "teile": 48,
+  "teile": 56,
   "platzhalter": false
  },
  {
@@ -1508,7 +1508,7 @@
   "name": "Spielzeugauto",
   "name_en": "Toy Car",
   "klasse": "Restmüll",
-  "teile": 13,
+  "teile": 33,
   "platzhalter": false
  },
  {
@@ -1580,7 +1580,7 @@
   "name": "Silikonkartusche",
   "name_en": "Sealant Cartridge",
   "klasse": "Wertstoffhof",
-  "teile": 8,
+  "teile": 11,
   "platzhalter": false
  },
  {
@@ -1588,7 +1588,7 @@
   "name": "Glühbirne",
   "name_en": "Incandescent Bulb",
   "klasse": "Restmüll",
-  "teile": 12,
+  "teile": 21,
   "platzhalter": false
  },
  {
