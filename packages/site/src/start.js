@@ -17,7 +17,12 @@ app.innerHTML = `
   <div class="start-inhalt">
     <figure class="kreis" aria-label="Der Lebensweg eines Gegenstands in sieben Stationen">
       <svg viewBox="-290 -215 580 430" class="kreis-svg">
-        <circle class="kreis-ring" r="${R}" pathLength="1"/>
+        <circle class="kreis-ring" r="${R}" pathLength="1" transform="rotate(-90)"/>
+        ${punkte.map((_, i) => {
+          // Pfeil in der Mitte zwischen zwei Stationen, zeigt im Uhrzeigersinn zur nächsten
+          const a = ((i + 0.5) / SCHRITTE.length) * Math.PI * 2 - Math.PI / 2;
+          return `<path class="kreis-pfeil" style="--i:${i}" d="M-4 -5 3 0-4 5" transform="translate(${(Math.cos(a) * R).toFixed(1)} ${(Math.sin(a) * R).toFixed(1)}) rotate(${((a * 180) / Math.PI + 90).toFixed(1)})"/>`;
+        }).join('')}
         ${punkte.map((p, i) => `<g transform="translate(${p.x.toFixed(1)} ${p.y.toFixed(1)})"><g class="kreis-punkt" style="--i:${i}">
           <circle r="30" class="${p.id === 'gegenstand' ? 'mitte' : ''}"/>
           <g transform="translate(-13 -13) scale(1.0833)">${icon(p.id).replace('<svg class="icon "', '<svg width="24" height="24" class="icon"')}</g>
