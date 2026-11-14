@@ -149,19 +149,19 @@ function viewScan() {
           <li>Scannen und Ergebnis kurz prüfen</li>
           <li>Steckbrief ansehen, dann einlagern oder bauen</li>
         </ol>
-        <div>
-          <div class="eyebrow" style="margin-bottom:10px">Beispiele zum Ausprobieren</div>
-          <div class="samples">
-            ${OBJECTS.map((o) => `<button class="sample" data-id="${o.id}"><img src="${o.photo}" alt=""><span>${o.name}</span></button>`).join('')}
-          </div>
-        </div>
+        <button class="fallback" id="fallback" title="Nimmt das Beispielfoto eines Handys und macht damit weiter">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2.2"/><path d="M10.5 18.5h3"/></svg>
+          <span class="t"><b>Beispiel: Handy</b></span>
+          <span class="k">→</span>
+        </button>
       </aside>
     </section>`);
 
-  v.querySelectorAll('.sample').forEach((b) => b.addEventListener('click', () => {
-    const o = getObject(b.dataset.id);
+  // Fallback when camera or upload fails: take the phone sample photo and carry on as if it had been scanned
+  v.querySelector('#fallback').addEventListener('click', () => {
+    const o = getObject('smartphone');
     analyze(v, o.photo, o);
-  }));
+  });
   const file = v.querySelector('#file');
   v.querySelector('#upl').addEventListener('click', () => file.click());
   file.addEventListener('change', () => {
