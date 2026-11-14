@@ -39,19 +39,26 @@ app.innerHTML = `
 // ---------- Bilder der Gegenstände: ein unsichtbarer 3D-Viewer zeichnet sie nacheinander ----------
 const bilder = new Map(), warte = [];
 let maler = null, malt = false;
+// Zwischenspeicher im Browser: Bild bleibt, bis sich das Modell ändert (Kennung aus Teilezahl und Masse)
+const kennung = (seed) => `${seed.parts.length}-${Math.round(seed.parts.reduce((s, p) => s + p.mass * 10 + p.w + p.h, 0))}`;
+const ausSpeicher = (id) => { try { return JSON.parse(localStorage.getItem(`vorschau:${id}`)); } catch { return null; } };
+for (const o of objekte) { const v = ausSpeicher(o.id); if (v?.bild) bilder.set(o.id, v.bild); }
 async function male() {
   if (malt) return;
   malt = true;
   maler ??= erzeugeViewer(document.getElementById('buehne'));
   while (warte.length) {
     const id = warte.shift();
-    if (bilder.has(id)) continue;
     try {
+      const seed = await ladeModell(id), k = kennung(seed);
+      if (ausSpeicher(id)?.k === k && bilder.get(id)) continue;   // Bild aus dem Speicher ist aktuell
       maler.nummern(false);
+      maler.foto(false);                      // Zeichnungsansicht: viel schneller als die Foto-Ansicht
       maler.explosion(0, false);              // zusammengebaut, Ausschnitt passt sich an
-      maler.lade(await ladeModell(id));
+      maler.lade(seed);
       await new Promise((r) => requestAnimationFrame(() => requestAnimationFrame(r)));
       bilder.set(id, maler.bild());
+      try { localStorage.setItem(`vorschau:${id}`, JSON.stringify({ k, bild: bilder.get(id) })); } catch { /* Speicher voll: nur ohne Zwischenspeicher */ }
       document.querySelectorAll(`img[data-bild="${id}"]`).forEach((img) => { img.src = bilder.get(id); img.classList.add('da'); });
     } catch { bilder.set(id, ''); }
   }
@@ -62,7 +69,7 @@ const beobachter = new IntersectionObserver((eintraege) => {
   male();
 }, { rootMargin: '200px' });
 const bild = (id, k = '') => `<img class="laden-bild ${k} ${bilder.get(id) ? 'da' : ''}" data-bild="${id}" alt="" ${bilder.get(id) ? `src="${bilder.get(id)}"` : ''}>`;
-function beobachte(wurzel) { wurzel.querySelectorAll('img[data-bild]:not(.da)').forEach((img) => beobachter.observe(img)); }
+function beobachte(wurzel) { wurzel.querySelectorAll('img[data-bild]').forEach((img) => beobachter.observe(img)); }   // auch gespeicherte prüfen
 
 // ---------- Sammeln: Raster aller Gegenstände ----------
 function zeigeRaster() {
