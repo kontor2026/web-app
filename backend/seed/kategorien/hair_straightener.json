@@ -418,7 +418,7 @@
     ]
    ],
    "info": "Kleine Stahlfedern drücken die Platten nach außen, damit sie sich dem Haar anpassen.",
-   "color": "#9AA2A6",
+   "color": "#C9CDD0",
    "label": true,
    "marks": [
     {
@@ -455,7 +455,7 @@
     ]
    ],
    "info": "Kleine Stahlfedern drücken die Platten nach außen, damit sie sich dem Haar anpassen.",
-   "color": "#9AA2A6",
+   "color": "#C9CDD0",
    "label": false,
    "marks": [
     {
@@ -749,7 +749,7 @@
     ]
    ],
    "info": "Kleine Stahlfedern drücken die Platten nach außen, damit sie sich dem Haar anpassen.",
-   "color": "#9AA2A6",
+   "color": "#C9CDD0",
    "label": false,
    "marks": [
     {
@@ -786,7 +786,7 @@
     ]
    ],
    "info": "Kleine Stahlfedern drücken die Platten nach außen, damit sie sich dem Haar anpassen.",
-   "color": "#9AA2A6",
+   "color": "#C9CDD0",
    "label": false,
    "marks": [
     {
@@ -823,7 +823,7 @@
     ]
    ],
    "info": "Kleine Kreuzschlitzschrauben halten die Armschalen zusammen. Oft unter Gummistopfen versteckt.",
-   "color": "#9AA2A6",
+   "color": "#C9CDD0",
    "label": true,
    "marks": [
     {
@@ -867,7 +867,7 @@
     ]
    ],
    "info": "Kleine Kreuzschlitzschrauben halten die Armschalen zusammen. Oft unter Gummistopfen versteckt.",
-   "color": "#9AA2A6",
+   "color": "#C9CDD0",
    "label": false,
    "marks": [
     {
@@ -970,7 +970,7 @@
     ]
    ],
    "info": "Achse mit Stahlfeder, die die Arme aufdrückt. Feder kann beim Ausbau herausspringen.",
-   "color": "#9AA2A6",
+   "color": "#C9CDD0",
    "marks": [
     {
      "shape": "cyl",
@@ -1013,6 +1013,7 @@
    ],
    "info": "Etwa 2 m Kabel mit 360-Grad-Drehgelenk, damit es sich nicht verdreht. Längs aufschlitzen, um die Kupferadern freizulegen.",
    "color": "#2E3338",
+   "form": "liegend_y",
    "marks": [
     {
      "shape": "box",
@@ -1021,7 +1022,8 @@
      "w": 6,
      "d": 10,
      "r": 2,
-     "fill": "#555"
+     "fill": "#555",
+     "zeichnung": true
     }
    ]
   },
@@ -1052,7 +1054,8 @@
     ]
    ],
    "info": "Zwei Kupferadern aus feiner Litze. Kupfer lässt sich fast verlustfrei wiederverwerten.",
-   "color": "#B87333"
+   "color": "#B87333",
+   "form": "liegend_y"
   }
  ]
 }

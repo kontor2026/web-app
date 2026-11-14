@@ -25,13 +25,16 @@ for j, (y, dy) in enumerate(((0, -AUS), (90, AUS))):
         nr += 1
         erster = nr == 1
         teile.append(teil(f'ring_{nr}', 'ldpe_rings', 'Haltering' if erster else f'Haltering {nr}', 'Ring', 'box',
-                          x=x, y=y, w=82, d=80, r=22, z=0, h=1.5, explode=[dx, dy, 0], mass=0.7, color=FOLIE,
+                          x=x, y=y, w=82, d=80, r=30, z=0, h=1.5, explode=[dx, dy, 0], mass=0.7, color=FOLIE,
+                          wand=8, boden=0,
                           opacity=0.85, label=erster,
                           info='Dehnbarer LDPE-Ring, der sich um den Dosenrand spannt. Jeden Ring vor dem Wegwerfen '
                                'durchschneiden, damit sich keine Tiere darin verfangen. Dann in die Gelbe Tonne.'
                           if erster else 'Gleicher Ring wie Ring 1, ebenfalls aufschneiden.',
-                          marks=[mark('box', 3, 3, 76, 74, 20, '#D3DBDE'), mark('box', 5, 5, 72, 70, 19, FOLIE),
-                                 mark('cyl', 9, 8, 64, 64, fill='#C4CDD1'), mark('cyl', 11, 10, 60, 60, fill=LOCH),
+                          marks=[mark('box', 3, 3, 76, 74, 20, '#D3DBDE', zeichnung=True),
+                                 mark('box', 5, 5, 72, 70, 19, FOLIE, zeichnung=True),
+                                 mark('cyl', 9, 8, 64, 64, fill='#C4CDD1', zeichnung=True),
+                                 mark('cyl', 11, 10, 60, 60, fill=LOCH, zeichnung=True),
                                  mark('box', 38, 1 if j == 0 else 73, 6, 6, 3, '#C4CDD1')]))
 skaliere_masse(teile, oid='can_carrier', stellen=2)
 schreibe('can_carrier', teile)

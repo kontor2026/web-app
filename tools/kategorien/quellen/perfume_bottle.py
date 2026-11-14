@@ -13,7 +13,7 @@ from bau import teil, mark, explodiere, skaliere_masse, schreibe  # noqa: E402
 
 GLAS = '#E6EEF0'
 OP = 0.65
-GOLD = '#C9A646'
+GOLD = '#E6CC80'
 teile = [
     teil('kappe', 'perfume_cap', 'Kappe', 'Kappe', 'box',
          x=15, y=5, w=30, d=30, z=72, h=28, r=4, mass=12,
@@ -43,12 +43,12 @@ teile = [
     teil('hals', 'glass_container', 'Glashals', 'Hals', 'cyl',
          x=22.5, y=12.5, w=15, z=66, h=8, mass=3,
          info='Kurzer Hals mit Wulst, unter den der Kragen gepresst wird.', color=GLAS, opacity=OP,
-         marks=[mark('cyl', 4, 4, 7, fill='#C8D6DA')]),
+         wand=3.5, boden=0, marks=[mark('cyl', 4, 4, 7, fill='#C8D6DA', zeichnung=True)]),
     teil('koerper', 'glass_container', 'Glaskörper', 'Flakon', 'box',
          x=0, y=0, w=60, d=40, z=10, h=56, r=6, mass=100,
          info='Dickes Glas, Recyclingcode GL 70. Leer, mit Pumpe nach Möglichkeit entfernt, ins Weißglas. '
               'Parfüm ist brennbar, Reste nicht in den Ausguss kippen.',
-         color=GLAS, opacity=OP, marks=[mark('box', 4, 4, 52, 32, 4)]),
+         color=GLAS, opacity=OP, wand=5, boden=0, marks=[mark('box', 4, 4, 52, 32, 4, zeichnung=True)]),
     teil('boden', 'glass_container', 'Glasboden', 'Boden', 'box',
          x=0, y=0, w=60, d=40, z=0, h=10, r=6, mass=30,
          info='Massiver Glasboden, er macht den Flakon schwer und standfest.', color=GLAS, opacity=0.75, label=False),

@@ -850,12 +850,14 @@
    ],
    "info": "Bodenplatte mit Sensoröffnung und Schraubendom. Nach dem Ausbau der Elektronik ist sie reiner Kunststoff.",
    "color": "#26292C",
+   "wand": 2,
    "marks": [
     {
      "shape": "box",
      "x": 4,
      "y": 4,
      "w": 55,
+     "zeichnung": true,
      "d": 107,
      "r": 22,
      "fill": "#2F3336"
@@ -865,6 +867,7 @@
      "x": 28,
      "y": 56,
      "w": 8,
+     "zeichnung": true,
      "fill": "#1A1D20"
     },
     {
@@ -872,6 +875,7 @@
      "x": 28.5,
      "y": 94.5,
      "w": 6,
+     "zeichnung": true,
      "fill": "#3A3F44"
     }
    ]
@@ -1022,7 +1026,8 @@
     ]
    ],
    "info": "Etwa 1,8 m PVC-Kabel. Zum Recycling lassen sich Mantel und Kupfer mit einer Abisolierzange trennen.",
-   "color": "#2B2F33"
+   "color": "#2B2F33",
+   "form": "liegend_y"
   },
   {
    "id": "litzen",
@@ -1051,7 +1056,8 @@
     ]
    ],
    "info": "Vier dünne Kupferadern für Strom und Daten. Kupfer ist wertvoll und fast beliebig oft recycelbar.",
-   "color": "#C98F62"
+   "color": "#C98F62",
+   "form": "liegend_y"
   },
   {
    "id": "usb",

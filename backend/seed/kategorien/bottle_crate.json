@@ -39,10 +39,10 @@
   "metalle_mg": {},
   "herkunft": {},
   "materialien_g": {
-   "hdpe": 1695.2,
+   "hdpe": 1695.4,
    "pp": 5.0
   },
-  "co2_kg": 3.671,
+  "co2_kg": 3.672,
   "co2_mit_recyclat_kg": 0.474,
   "co2_ersparnis_kg": 3.197,
   "co2_ohne_faktor": [],
@@ -638,8 +638,8 @@
    "shape": "box",
    "x": 12,
    "y": 12,
-   "w": 376,
-   "d": 276,
+   "w": 75.2,
+   "d": 69,
    "z": 12,
    "h": 170,
    "r": 2,
@@ -648,7 +648,7 @@
     0,
     30
    ],
-   "mass": 433.8,
+   "mass": 21.7,
    "materials": [
     [
      "hdpe",
@@ -657,183 +657,852 @@
    ],
    "info": "Trennstege für 20 Flaschen, damit sie nicht aneinanderschlagen und zerbrechen.",
    "color": "#2F6E3B",
+   "label": true,
+   "wand": 3.5,
+   "boden": 0,
    "marks": [
     {
      "shape": "box",
-     "x": 4,
-     "y": 4,
+     "x": 3.6,
+     "y": 3.5,
      "w": 68,
+     "zeichnung": true,
      "d": 62,
      "r": 8,
      "fill": "#163A1E"
-    },
+    }
+   ]
+  },
+  {
+   "id": "gefache_2",
+   "component_id": "hdpe_crate_body",
+   "material_id": "hdpe",
+   "name": "Gefache",
+   "short": "Gefache",
+   "shape": "box",
+   "x": 87.2,
+   "y": 12,
+   "w": 75.2,
+   "d": 69,
+   "z": 12,
+   "h": 170,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    30
+   ],
+   "mass": 21.7,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "Eine der 20 Flaschenzellen des Gefaches.",
+   "color": "#2F6E3B",
+   "label": false,
+   "wand": 3.5,
+   "boden": 0,
+   "marks": [
     {
      "shape": "box",
-     "x": 79,
-     "y": 4,
+     "x": 3.6,
+     "y": 3.5,
      "w": 68,
+     "zeichnung": true,
      "d": 62,
      "r": 8,
      "fill": "#163A1E"
-    },
+    }
+   ]
+  },
+  {
+   "id": "gefache_3",
+   "component_id": "hdpe_crate_body",
+   "material_id": "hdpe",
+   "name": "Gefache",
+   "short": "Gefache",
+   "shape": "box",
+   "x": 162.4,
+   "y": 12,
+   "w": 75.2,
+   "d": 69,
+   "z": 12,
+   "h": 170,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    30
+   ],
+   "mass": 21.7,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "Eine der 20 Flaschenzellen des Gefaches.",
+   "color": "#2F6E3B",
+   "label": false,
+   "wand": 3.5,
+   "boden": 0,
+   "marks": [
     {
      "shape": "box",
-     "x": 154,
-     "y": 4,
+     "x": 3.6,
+     "y": 3.5,
      "w": 68,
+     "zeichnung": true,
      "d": 62,
      "r": 8,
      "fill": "#163A1E"
-    },
+    }
+   ]
+  },
+  {
+   "id": "gefache_4",
+   "component_id": "hdpe_crate_body",
+   "material_id": "hdpe",
+   "name": "Gefache",
+   "short": "Gefache",
+   "shape": "box",
+   "x": 237.60000000000002,
+   "y": 12,
+   "w": 75.2,
+   "d": 69,
+   "z": 12,
+   "h": 170,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    30
+   ],
+   "mass": 21.7,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "Eine der 20 Flaschenzellen des Gefaches.",
+   "color": "#2F6E3B",
+   "label": false,
+   "wand": 3.5,
+   "boden": 0,
+   "marks": [
     {
      "shape": "box",
-     "x": 229,
-     "y": 4,
+     "x": 3.6,
+     "y": 3.5,
      "w": 68,
+     "zeichnung": true,
      "d": 62,
      "r": 8,
      "fill": "#163A1E"
-    },
+    }
+   ]
+  },
+  {
+   "id": "gefache_5",
+   "component_id": "hdpe_crate_body",
+   "material_id": "hdpe",
+   "name": "Gefache",
+   "short": "Gefache",
+   "shape": "box",
+   "x": 312.8,
+   "y": 12,
+   "w": 75.2,
+   "d": 69,
+   "z": 12,
+   "h": 170,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    30
+   ],
+   "mass": 21.7,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "Eine der 20 Flaschenzellen des Gefaches.",
+   "color": "#2F6E3B",
+   "label": false,
+   "wand": 3.5,
+   "boden": 0,
+   "marks": [
     {
      "shape": "box",
-     "x": 304,
-     "y": 4,
+     "x": 3.6,
+     "y": 3.5,
      "w": 68,
+     "zeichnung": true,
      "d": 62,
      "r": 8,
      "fill": "#163A1E"
-    },
+    }
+   ]
+  },
+  {
+   "id": "gefache_6",
+   "component_id": "hdpe_crate_body",
+   "material_id": "hdpe",
+   "name": "Gefache",
+   "short": "Gefache",
+   "shape": "box",
+   "x": 12,
+   "y": 81,
+   "w": 75.2,
+   "d": 69,
+   "z": 12,
+   "h": 170,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    30
+   ],
+   "mass": 21.7,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "Eine der 20 Flaschenzellen des Gefaches.",
+   "color": "#2F6E3B",
+   "label": false,
+   "wand": 3.5,
+   "boden": 0,
+   "marks": [
     {
      "shape": "box",
-     "x": 4,
-     "y": 73,
+     "x": 3.6,
+     "y": 3.5,
      "w": 68,
+     "zeichnung": true,
      "d": 62,
      "r": 8,
      "fill": "#163A1E"
-    },
+    }
+   ]
+  },
+  {
+   "id": "gefache_7",
+   "component_id": "hdpe_crate_body",
+   "material_id": "hdpe",
+   "name": "Gefache",
+   "short": "Gefache",
+   "shape": "box",
+   "x": 87.2,
+   "y": 81,
+   "w": 75.2,
+   "d": 69,
+   "z": 12,
+   "h": 170,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    30
+   ],
+   "mass": 21.7,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "Eine der 20 Flaschenzellen des Gefaches.",
+   "color": "#2F6E3B",
+   "label": false,
+   "wand": 3.5,
+   "boden": 0,
+   "marks": [
     {
      "shape": "box",
-     "x": 79,
-     "y": 73,
+     "x": 3.6,
+     "y": 3.5,
      "w": 68,
+     "zeichnung": true,
      "d": 62,
      "r": 8,
      "fill": "#163A1E"
-    },
+    }
+   ]
+  },
+  {
+   "id": "gefache_8",
+   "component_id": "hdpe_crate_body",
+   "material_id": "hdpe",
+   "name": "Gefache",
+   "short": "Gefache",
+   "shape": "box",
+   "x": 162.4,
+   "y": 81,
+   "w": 75.2,
+   "d": 69,
+   "z": 12,
+   "h": 170,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    30
+   ],
+   "mass": 21.7,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "Eine der 20 Flaschenzellen des Gefaches.",
+   "color": "#2F6E3B",
+   "label": false,
+   "wand": 3.5,
+   "boden": 0,
+   "marks": [
     {
      "shape": "box",
-     "x": 154,
-     "y": 73,
+     "x": 3.6,
+     "y": 3.5,
      "w": 68,
+     "zeichnung": true,
      "d": 62,
      "r": 8,
      "fill": "#163A1E"
-    },
+    }
+   ]
+  },
+  {
+   "id": "gefache_9",
+   "component_id": "hdpe_crate_body",
+   "material_id": "hdpe",
+   "name": "Gefache",
+   "short": "Gefache",
+   "shape": "box",
+   "x": 237.60000000000002,
+   "y": 81,
+   "w": 75.2,
+   "d": 69,
+   "z": 12,
+   "h": 170,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    30
+   ],
+   "mass": 21.7,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "Eine der 20 Flaschenzellen des Gefaches.",
+   "color": "#2F6E3B",
+   "label": false,
+   "wand": 3.5,
+   "boden": 0,
+   "marks": [
     {
      "shape": "box",
-     "x": 229,
-     "y": 73,
+     "x": 3.6,
+     "y": 3.5,
      "w": 68,
+     "zeichnung": true,
      "d": 62,
      "r": 8,
      "fill": "#163A1E"
-    },
+    }
+   ]
+  },
+  {
+   "id": "gefache_10",
+   "component_id": "hdpe_crate_body",
+   "material_id": "hdpe",
+   "name": "Gefache",
+   "short": "Gefache",
+   "shape": "box",
+   "x": 312.8,
+   "y": 81,
+   "w": 75.2,
+   "d": 69,
+   "z": 12,
+   "h": 170,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    30
+   ],
+   "mass": 21.7,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "Eine der 20 Flaschenzellen des Gefaches.",
+   "color": "#2F6E3B",
+   "label": false,
+   "wand": 3.5,
+   "boden": 0,
+   "marks": [
     {
      "shape": "box",
-     "x": 304,
-     "y": 73,
+     "x": 3.6,
+     "y": 3.5,
      "w": 68,
+     "zeichnung": true,
      "d": 62,
      "r": 8,
      "fill": "#163A1E"
-    },
+    }
+   ]
+  },
+  {
+   "id": "gefache_11",
+   "component_id": "hdpe_crate_body",
+   "material_id": "hdpe",
+   "name": "Gefache",
+   "short": "Gefache",
+   "shape": "box",
+   "x": 12,
+   "y": 150,
+   "w": 75.2,
+   "d": 69,
+   "z": 12,
+   "h": 170,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    30
+   ],
+   "mass": 21.7,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "Eine der 20 Flaschenzellen des Gefaches.",
+   "color": "#2F6E3B",
+   "label": false,
+   "wand": 3.5,
+   "boden": 0,
+   "marks": [
     {
      "shape": "box",
-     "x": 4,
-     "y": 142,
+     "x": 3.6,
+     "y": 3.5,
      "w": 68,
+     "zeichnung": true,
      "d": 62,
      "r": 8,
      "fill": "#163A1E"
-    },
+    }
+   ]
+  },
+  {
+   "id": "gefache_12",
+   "component_id": "hdpe_crate_body",
+   "material_id": "hdpe",
+   "name": "Gefache",
+   "short": "Gefache",
+   "shape": "box",
+   "x": 87.2,
+   "y": 150,
+   "w": 75.2,
+   "d": 69,
+   "z": 12,
+   "h": 170,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    30
+   ],
+   "mass": 21.7,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "Eine der 20 Flaschenzellen des Gefaches.",
+   "color": "#2F6E3B",
+   "label": false,
+   "wand": 3.5,
+   "boden": 0,
+   "marks": [
     {
      "shape": "box",
-     "x": 79,
-     "y": 142,
+     "x": 3.6,
+     "y": 3.5,
      "w": 68,
+     "zeichnung": true,
      "d": 62,
      "r": 8,
      "fill": "#163A1E"
-    },
+    }
+   ]
+  },
+  {
+   "id": "gefache_13",
+   "component_id": "hdpe_crate_body",
+   "material_id": "hdpe",
+   "name": "Gefache",
+   "short": "Gefache",
+   "shape": "box",
+   "x": 162.4,
+   "y": 150,
+   "w": 75.2,
+   "d": 69,
+   "z": 12,
+   "h": 170,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    30
+   ],
+   "mass": 21.7,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "Eine der 20 Flaschenzellen des Gefaches.",
+   "color": "#2F6E3B",
+   "label": false,
+   "wand": 3.5,
+   "boden": 0,
+   "marks": [
     {
      "shape": "box",
-     "x": 154,
-     "y": 142,
+     "x": 3.6,
+     "y": 3.5,
      "w": 68,
+     "zeichnung": true,
      "d": 62,
      "r": 8,
      "fill": "#163A1E"
-    },
+    }
+   ]
+  },
+  {
+   "id": "gefache_14",
+   "component_id": "hdpe_crate_body",
+   "material_id": "hdpe",
+   "name": "Gefache",
+   "short": "Gefache",
+   "shape": "box",
+   "x": 237.60000000000002,
+   "y": 150,
+   "w": 75.2,
+   "d": 69,
+   "z": 12,
+   "h": 170,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    30
+   ],
+   "mass": 21.7,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "Eine der 20 Flaschenzellen des Gefaches.",
+   "color": "#2F6E3B",
+   "label": false,
+   "wand": 3.5,
+   "boden": 0,
+   "marks": [
     {
      "shape": "box",
-     "x": 229,
-     "y": 142,
+     "x": 3.6,
+     "y": 3.5,
      "w": 68,
+     "zeichnung": true,
      "d": 62,
      "r": 8,
      "fill": "#163A1E"
-    },
+    }
+   ]
+  },
+  {
+   "id": "gefache_15",
+   "component_id": "hdpe_crate_body",
+   "material_id": "hdpe",
+   "name": "Gefache",
+   "short": "Gefache",
+   "shape": "box",
+   "x": 312.8,
+   "y": 150,
+   "w": 75.2,
+   "d": 69,
+   "z": 12,
+   "h": 170,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    30
+   ],
+   "mass": 21.7,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "Eine der 20 Flaschenzellen des Gefaches.",
+   "color": "#2F6E3B",
+   "label": false,
+   "wand": 3.5,
+   "boden": 0,
+   "marks": [
     {
      "shape": "box",
-     "x": 304,
-     "y": 142,
+     "x": 3.6,
+     "y": 3.5,
      "w": 68,
+     "zeichnung": true,
      "d": 62,
      "r": 8,
      "fill": "#163A1E"
-    },
+    }
+   ]
+  },
+  {
+   "id": "gefache_16",
+   "component_id": "hdpe_crate_body",
+   "material_id": "hdpe",
+   "name": "Gefache",
+   "short": "Gefache",
+   "shape": "box",
+   "x": 12,
+   "y": 219,
+   "w": 75.2,
+   "d": 69,
+   "z": 12,
+   "h": 170,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    30
+   ],
+   "mass": 21.7,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "Eine der 20 Flaschenzellen des Gefaches.",
+   "color": "#2F6E3B",
+   "label": false,
+   "wand": 3.5,
+   "boden": 0,
+   "marks": [
     {
      "shape": "box",
-     "x": 4,
-     "y": 211,
+     "x": 3.6,
+     "y": 3.5,
      "w": 68,
+     "zeichnung": true,
      "d": 62,
      "r": 8,
      "fill": "#163A1E"
-    },
+    }
+   ]
+  },
+  {
+   "id": "gefache_17",
+   "component_id": "hdpe_crate_body",
+   "material_id": "hdpe",
+   "name": "Gefache",
+   "short": "Gefache",
+   "shape": "box",
+   "x": 87.2,
+   "y": 219,
+   "w": 75.2,
+   "d": 69,
+   "z": 12,
+   "h": 170,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    30
+   ],
+   "mass": 21.7,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "Eine der 20 Flaschenzellen des Gefaches.",
+   "color": "#2F6E3B",
+   "label": false,
+   "wand": 3.5,
+   "boden": 0,
+   "marks": [
     {
      "shape": "box",
-     "x": 79,
-     "y": 211,
+     "x": 3.6,
+     "y": 3.5,
      "w": 68,
+     "zeichnung": true,
      "d": 62,
      "r": 8,
      "fill": "#163A1E"
-    },
+    }
+   ]
+  },
+  {
+   "id": "gefache_18",
+   "component_id": "hdpe_crate_body",
+   "material_id": "hdpe",
+   "name": "Gefache",
+   "short": "Gefache",
+   "shape": "box",
+   "x": 162.4,
+   "y": 219,
+   "w": 75.2,
+   "d": 69,
+   "z": 12,
+   "h": 170,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    30
+   ],
+   "mass": 21.7,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "Eine der 20 Flaschenzellen des Gefaches.",
+   "color": "#2F6E3B",
+   "label": false,
+   "wand": 3.5,
+   "boden": 0,
+   "marks": [
     {
      "shape": "box",
-     "x": 154,
-     "y": 211,
+     "x": 3.6,
+     "y": 3.5,
      "w": 68,
+     "zeichnung": true,
      "d": 62,
      "r": 8,
      "fill": "#163A1E"
-    },
+    }
+   ]
+  },
+  {
+   "id": "gefache_19",
+   "component_id": "hdpe_crate_body",
+   "material_id": "hdpe",
+   "name": "Gefache",
+   "short": "Gefache",
+   "shape": "box",
+   "x": 237.60000000000002,
+   "y": 219,
+   "w": 75.2,
+   "d": 69,
+   "z": 12,
+   "h": 170,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    30
+   ],
+   "mass": 21.7,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "Eine der 20 Flaschenzellen des Gefaches.",
+   "color": "#2F6E3B",
+   "label": false,
+   "wand": 3.5,
+   "boden": 0,
+   "marks": [
     {
      "shape": "box",
-     "x": 229,
-     "y": 211,
+     "x": 3.6,
+     "y": 3.5,
      "w": 68,
+     "zeichnung": true,
      "d": 62,
      "r": 8,
      "fill": "#163A1E"
-    },
+    }
+   ]
+  },
+  {
+   "id": "gefache_20",
+   "component_id": "hdpe_crate_body",
+   "material_id": "hdpe",
+   "name": "Gefache",
+   "short": "Gefache",
+   "shape": "box",
+   "x": 312.8,
+   "y": 219,
+   "w": 75.2,
+   "d": 69,
+   "z": 12,
+   "h": 170,
+   "r": 2,
+   "explode": [
+    0,
+    0,
+    30
+   ],
+   "mass": 21.7,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "Eine der 20 Flaschenzellen des Gefaches.",
+   "color": "#2F6E3B",
+   "label": false,
+   "wand": 3.5,
+   "boden": 0,
+   "marks": [
     {
      "shape": "box",
-     "x": 304,
-     "y": 211,
+     "x": 3.6,
+     "y": 3.5,
      "w": 68,
+     "zeichnung": true,
      "d": 62,
      "r": 8,
      "fill": "#163A1E"

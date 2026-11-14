@@ -16,7 +16,7 @@ teile = [
          x=0, y=0, w=60, z=30, h=15, mass=8, material_id='aluminium', materials=[['alu', 90], ['druck', 10]],
          info='Dünne, gold eloxierte Aluminiumhülle, die über den Kunststoffdeckel gepresst ist. Lässt sie sich '
               'abziehen, kommt sie getrennt in die Gelbe Tonne.',
-         color='#C9A646', marks=[mark('cyl', 2, 2, 56, fill='#B8963A'), mark('cyl', 4, 4, 52, fill='#D8B85A'),
+         color='#E8CF86', marks=[mark('cyl', 2, 2, 56, fill='#B8963A'), mark('cyl', 4, 4, 52, fill='#D8B85A'),
                                  mark('cyl', 20, 20, 20, fill='#E6CB78')]),
     teil('deckel', 'pp_lid', 'Innendeckel mit Gewinde', 'Innendeckel', 'cyl',
          x=1.5, y=1.5, w=57, z=30.5, h=14, mass=14, sortBias=-3,
@@ -34,12 +34,13 @@ teile = [
          x=5, y=5, w=50, z=3, h=34, mass=22,
          info='Eigentlicher Behälter für die Creme. Mit einem Spatel leer kratzen, Cremereste gehören in den '
               'Restmüll.',
-         color=WEISS, sortBias=-8, marks=[mark('cyl', 3, 3, 44, fill='#E9E6E0'), mark('cyl', 5, 5, 40, fill='#F3E3D3')]),
+         color=WEISS, sortBias=-8, wand=2.5,
+         marks=[mark('cyl', 3, 3, 44, fill='#E9E6E0', zeichnung=True), mark('cyl', 5, 5, 40, fill='#F3E3D3', zeichnung=True)]),
     teil('aussentiegel', 'pp_jar_body', 'Außentiegel', 'Außentiegel', 'cyl',
          x=1, y=1, w=58, z=0, h=31, mass=34,
          info='Dicke Außenwand, die den Tiegel größer und wertiger wirken lässt als den Inhalt. '
               'Mit dem Innentiegel verklebt oder verrastet, beide PP, also gemeinsam in die Gelbe Tonne.',
-         color='#E9E2D8', marks=[mark('cyl', 3, 3, 52, fill='#D9D1C4')]),
+         color='#E9E2D8', wand=3, marks=[mark('cyl', 3, 3, 52, fill='#D9D1C4', zeichnung=True)]),
     teil('bodenetikett', 'pp_jar_body', 'Bodenetikett', 'Etikett', 'cyl',
          x=10, y=10, w=40, z=-0.3, h=0.3, mass=0.3, materials=[['papier', 70], ['druck', 15], ['klebstoff', 15]],
          color='#FFFFFF', explode=[0, 0, -35],

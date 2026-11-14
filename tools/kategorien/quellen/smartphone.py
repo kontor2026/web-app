@@ -75,11 +75,11 @@ teile = [
          info='Hält die SIM-Karte. Mit einer Büroklammer in das kleine Loch neben dem Schlitten drücken, '
               'dann springt er heraus.', marks=[mark('box', 0.5, 4, 2.5, 15, 0.5, '#D8B04A')]),
     teil('rahmen', 'aluminium_frame', 'Gehäuserahmen', 'Rahmen', 'box',
-         material_id='aluminium', x=0, y=0, w=76, d=151, z=0.8, h=6.3, r=10, color='#B4BABE', mass=43,
-         materials=[['alu', 100]],
+         material_id='aluminium', x=0, y=0, w=76, d=151, z=0.8, h=6.3, r=10, color='#C4C9CD', mass=43,
+         materials=[['alu', 100]], wand=2.5, boden=0,
          info='Aus einem Aluminiumblock gefräst. Trägt alle Bauteile und dient mit seinen Kunststofffugen als Antenne.',
-         marks=[mark('box', 2.5, 2.5, 71, 146, 8, '#8E969B')] + raster(17, 147.5, 8, 1, 1.4, 1.4, 2.4, shape='cyl',
-                                                                     fill='#5E656A')),
+         marks=[dict(m, zeichnung=True) for m in [mark('box', 2.5, 2.5, 71, 146, 8, '#8E969B')]
+                + raster(17, 147.5, 8, 1, 1.4, 1.4, 2.4, shape='cyl', fill='#5E656A')]),
     teil('schrauben', 'aluminium_frame', 'Schrauben (Pentalobe)', 'Schrauben', 'cyl',
          material_id='steel', x=23, y=143, w=2.4, z=2.5, h=2.5, color='#8A9095', mass=0.2, materials=[['stahl', 100]],
          info='Zwei winzige Spezialschrauben neben der Ladebuchse. Man braucht einen Fünfstern-Schraubendreher.',
@@ -91,10 +91,10 @@ teile = [
          marks=[mark('cyl', 4, 4, 36, fill='#B9805A'), mark('cyl', 8, 8, 28), mark('cyl', 12, 12, 20, fill='#B9805A'),
                 mark('cyl', 15, 15, 14, fill='#3A3F44')]),
     teil('rueckglas', 'smartphone_back_cover', 'Rückglas', 'Rückglas', 'box',
-         material_id='special_glass', x=0, y=0, w=76, d=151, z=0, h=0.8, r=10, color='#C9DEDF', mass=20,
+         material_id='special_glass', x=0, y=0, w=76, d=151, z=0, h=0.8, r=10, color='#3B4146', mass=20,
          materials=[['glas', 100]],
          info='Glas statt Metall, damit kabelloses Laden funktioniert. Bricht leicht und ist teuer zu tauschen.',
-         marks=[mark('box', 4, 4, 28, 40, 6, '#B5CACB')]),
+         marks=[mark('box', 4, 4, 28, 40, 6, '#2E3338')]),
 ]
 explodiere(teile, abstand=50, abstaende={'soc': 14, 'speicher': 14, 'spule': 25, 'rahmen': 75})
 rahmen = next(p for p in teile if p['id'] == 'rahmen')

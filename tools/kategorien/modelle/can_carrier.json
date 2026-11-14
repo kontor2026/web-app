@@ -72,7 +72,7 @@
    "d": 80,
    "z": 0,
    "h": 1.5,
-   "r": 22,
+   "r": 30,
    "explode": [
     -25,
     -25,
@@ -89,12 +89,15 @@
    "color": "#E6ECEE",
    "opacity": 0.85,
    "label": true,
+   "wand": 8,
+   "boden": 0,
    "marks": [
     {
      "shape": "box",
      "x": 3,
      "y": 3,
      "w": 76,
+     "zeichnung": true,
      "d": 74,
      "r": 20,
      "fill": "#D3DBDE"
@@ -104,6 +107,7 @@
      "x": 5,
      "y": 5,
      "w": 72,
+     "zeichnung": true,
      "d": 70,
      "r": 19,
      "fill": "#E6ECEE"
@@ -113,6 +117,7 @@
      "x": 9,
      "y": 8,
      "w": 64,
+     "zeichnung": true,
      "d": 64,
      "fill": "#C4CDD1"
     },
@@ -121,6 +126,7 @@
      "x": 11,
      "y": 10,
      "w": 60,
+     "zeichnung": true,
      "d": 60,
      "fill": "#EDE9E1"
     },
@@ -148,7 +154,7 @@
    "d": 80,
    "z": 0,
    "h": 1.5,
-   "r": 22,
+   "r": 30,
    "explode": [
     0,
     -25,
@@ -165,12 +171,15 @@
    "color": "#E6ECEE",
    "opacity": 0.85,
    "label": false,
+   "wand": 8,
+   "boden": 0,
    "marks": [
     {
      "shape": "box",
      "x": 3,
      "y": 3,
      "w": 76,
+     "zeichnung": true,
      "d": 74,
      "r": 20,
      "fill": "#D3DBDE"
@@ -180,6 +189,7 @@
      "x": 5,
      "y": 5,
      "w": 72,
+     "zeichnung": true,
      "d": 70,
      "r": 19,
      "fill": "#E6ECEE"
@@ -189,6 +199,7 @@
      "x": 9,
      "y": 8,
      "w": 64,
+     "zeichnung": true,
      "d": 64,
      "fill": "#C4CDD1"
     },
@@ -197,6 +208,7 @@
      "x": 11,
      "y": 10,
      "w": 60,
+     "zeichnung": true,
      "d": 60,
      "fill": "#EDE9E1"
     },
@@ -224,7 +236,7 @@
    "d": 80,
    "z": 0,
    "h": 1.5,
-   "r": 22,
+   "r": 30,
    "explode": [
     25,
     -25,
@@ -241,12 +253,15 @@
    "color": "#E6ECEE",
    "opacity": 0.85,
    "label": false,
+   "wand": 8,
+   "boden": 0,
    "marks": [
     {
      "shape": "box",
      "x": 3,
      "y": 3,
      "w": 76,
+     "zeichnung": true,
      "d": 74,
      "r": 20,
      "fill": "#D3DBDE"
@@ -256,6 +271,7 @@
      "x": 5,
      "y": 5,
      "w": 72,
+     "zeichnung": true,
      "d": 70,
      "r": 19,
      "fill": "#E6ECEE"
@@ -265,6 +281,7 @@
      "x": 9,
      "y": 8,
      "w": 64,
+     "zeichnung": true,
      "d": 64,
      "fill": "#C4CDD1"
     },
@@ -273,6 +290,7 @@
      "x": 11,
      "y": 10,
      "w": 60,
+     "zeichnung": true,
      "d": 60,
      "fill": "#EDE9E1"
     },
@@ -300,7 +318,7 @@
    "d": 80,
    "z": 0,
    "h": 1.5,
-   "r": 22,
+   "r": 30,
    "explode": [
     -25,
     25,
@@ -317,12 +335,15 @@
    "color": "#E6ECEE",
    "opacity": 0.85,
    "label": false,
+   "wand": 8,
+   "boden": 0,
    "marks": [
     {
      "shape": "box",
      "x": 3,
      "y": 3,
      "w": 76,
+     "zeichnung": true,
      "d": 74,
      "r": 20,
      "fill": "#D3DBDE"
@@ -332,6 +353,7 @@
      "x": 5,
      "y": 5,
      "w": 72,
+     "zeichnung": true,
      "d": 70,
      "r": 19,
      "fill": "#E6ECEE"
@@ -341,6 +363,7 @@
      "x": 9,
      "y": 8,
      "w": 64,
+     "zeichnung": true,
      "d": 64,
      "fill": "#C4CDD1"
     },
@@ -349,6 +372,7 @@
      "x": 11,
      "y": 10,
      "w": 60,
+     "zeichnung": true,
      "d": 60,
      "fill": "#EDE9E1"
     },
@@ -376,7 +400,7 @@
    "d": 80,
    "z": 0,
    "h": 1.5,
-   "r": 22,
+   "r": 30,
    "explode": [
     0,
     25,
@@ -393,12 +417,15 @@
    "color": "#E6ECEE",
    "opacity": 0.85,
    "label": false,
+   "wand": 8,
+   "boden": 0,
    "marks": [
     {
      "shape": "box",
      "x": 3,
      "y": 3,
      "w": 76,
+     "zeichnung": true,
      "d": 74,
      "r": 20,
      "fill": "#D3DBDE"
@@ -408,6 +435,7 @@
      "x": 5,
      "y": 5,
      "w": 72,
+     "zeichnung": true,
      "d": 70,
      "r": 19,
      "fill": "#E6ECEE"
@@ -417,6 +445,7 @@
      "x": 9,
      "y": 8,
      "w": 64,
+     "zeichnung": true,
      "d": 64,
      "fill": "#C4CDD1"
     },
@@ -425,6 +454,7 @@
      "x": 11,
      "y": 10,
      "w": 60,
+     "zeichnung": true,
      "d": 60,
      "fill": "#EDE9E1"
     },
@@ -452,7 +482,7 @@
    "d": 80,
    "z": 0,
    "h": 1.5,
-   "r": 22,
+   "r": 30,
    "explode": [
     25,
     25,
@@ -469,12 +499,15 @@
    "color": "#E6ECEE",
    "opacity": 0.85,
    "label": false,
+   "wand": 8,
+   "boden": 0,
    "marks": [
     {
      "shape": "box",
      "x": 3,
      "y": 3,
      "w": 76,
+     "zeichnung": true,
      "d": 74,
      "r": 20,
      "fill": "#D3DBDE"
@@ -484,6 +517,7 @@
      "x": 5,
      "y": 5,
      "w": 72,
+     "zeichnung": true,
      "d": 70,
      "r": 19,
      "fill": "#E6ECEE"
@@ -493,6 +527,7 @@
      "x": 9,
      "y": 8,
      "w": 64,
+     "zeichnung": true,
      "d": 64,
      "fill": "#C4CDD1"
     },
@@ -501,6 +536,7 @@
      "x": 11,
      "y": 10,
      "w": 60,
+     "zeichnung": true,
      "d": 60,
      "fill": "#EDE9E1"
     },

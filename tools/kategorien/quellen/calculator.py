@@ -52,7 +52,7 @@ teile = [
          info='Mit einer kleinen Schraube befestigt. Darunter liegt die Knopfzelle.',
          marks=[mark('cyl', 9, 9, 4, fill='#9BA3A8')]),
     teil('schrauben', 'plastic_housing', 'Gehäuseschrauben (4 Stück)', 'Schrauben', 'cyl', material_id='steel',
-         x=6, y=150, w=3, z=1, h=8, mass=1, explode=[-60, 0, 0], color='#9BA3A8',
+         x=6, y=150, w=3, z=1, h=8, mass=1, explode=[-60, 0, 0], color='#C9CDD0',
          info='Kleine Kreuzschlitzschrauben von unten, oft unter den Gummifüßen versteckt. Füße vorsichtig abziehen.',
          marks=[mark('cyl', 0.75, 0.75, 1.5, fill='#5E656A')]),
     teil('unterschale', 'plastic_housing', 'Gehäuse-Unterteil', 'Unterteil', 'box',

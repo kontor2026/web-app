@@ -163,7 +163,7 @@
     ]
    ],
    "info": "Dünne Alufolie mit Kunststoff, schützt den Korken. Unter dem Wulst rundherum einschneiden und abziehen. Sie gehört in die Gelbe Tonne, nicht ins Altglas.",
-   "color": "#7A1F2B",
+   "color": "#A3303F",
    "sortBias": 1,
    "marks": [
     {
@@ -265,6 +265,7 @@
      "x": 3.5,
      "y": 3.5,
      "w": 24,
+     "zeichnung": true,
      "fill": "#C49A63"
     }
    ]
@@ -504,12 +505,15 @@
    "info": "Schmales Papierband mit dem Jahrgang. Darf am Glas bleiben.",
    "color": "#E9DFC4",
    "sortBias": 43,
+   "wand": 0.3,
+   "boden": 0,
    "marks": [
     {
      "shape": "cyl",
      "x": 0.6,
      "y": 0.6,
      "w": 28.9,
+     "zeichnung": true,
      "fill": "#244A2D"
     }
    ]
@@ -549,12 +553,15 @@
    "info": "Papier mit Leim. In warmem Wasser lässt es sich ablösen, beim Altglas darf es aber dranbleiben: Es verbrennt in der Schmelze.",
    "color": "#EFE6CF",
    "sortBias": 42,
+   "wand": 0.3,
+   "boden": 0,
    "marks": [
     {
      "shape": "cyl",
      "x": 1.3,
      "y": 1.3,
      "w": 74,
+     "zeichnung": true,
      "fill": "#244A2D"
     }
    ]

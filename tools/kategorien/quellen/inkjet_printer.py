@@ -56,7 +56,7 @@ teile = [
          info='Polierte Stahlstange, auf der der Schlitten fährt. An den Seitenteilen verschraubt; reiner Stahl fürs Altmetall.'),
     teil('motor_schlitten', 'electric_motor', 'Schlittenmotor', 'Schlittenmotor', 'cyl',
          x=392, y=200, w=28, z=55, h=38, mass=90, materials=[['stahl', 45], ['kupfer', 30], ['ferrit', 20], ['pcabs', 5]],
-         color='#9AA2A8',
+         color='#C9CDD0',
          info='Gleichstrommotor mit Kupferwicklung und Magnet, treibt den Zahnriemen an. Drähte abschneiden, ausschrauben.',
          marks=[mark('cyl', 9, 9, 10, fill='#5E656A')]),
     teil('walze', 'steel_rail', 'Papiereinzugswalze', 'Walze', 'box', material_id='steel',
@@ -65,7 +65,7 @@ teile = [
          marks=raster(30, 2, 5, 1, 30, 16, 65, r=8, fill='#2B2F33')),
     teil('motor_papier', 'electric_motor', 'Papiervorschubmotor', 'Vorschubmotor', 'cyl',
          x=14, y=270, w=34, z=15, h=40, mass=150, materials=[['stahl', 45], ['kupfer', 30], ['ferrit', 20], ['pcabs', 5]],
-         color='#9AA2A8',
+         color='#C9CDD0',
          info='Schrittmotor mit Zahnrad, dreht die Papierwalze in genauen kleinen Schritten.',
          marks=[mark('cyl', 11, 11, 12, fill='#F2F2F2')]),
     teil('parkstation', 'ink_cartridge', 'Reinigungs- und Parkstation', 'Parkstation', 'box', material_id='abs',
@@ -91,9 +91,9 @@ teile = [
          info='Ausziehbares Fach, das die bedruckten Blätter auffängt. Steckt in Führungen und lässt sich herausziehen.',
          marks=[mark('box', 100, 52, 50, 8, 3, '#C2C6CA'), mark('box', 6, 42, 238, 2, 1, '#C2C6CA')]),
     teil('unterschale', 'plastic_housing', 'Unterschale mit Chassis', 'Unterschale', 'box',
-         x=0, y=0, w=430, d=360, z=0, h=40, r=8, mass=1600, materials=[['pcabs', 75], ['stahl', 25]], color='#CDD1D4',
+         x=0, y=0, w=430, d=360, z=0, h=40, r=8, mass=1600, materials=[['pcabs', 75], ['stahl', 25]], color='#CDD1D4', wand=3,
          info='Kunststoffwanne mit eingelegtem Stahlblech als Rahmen. Trägt alle Teile; zuletzt Stahl und Kunststoff trennen.',
-         marks=raster(15, 15, 2, 2, 20, 20, 380, 310, shape='cyl', fill='#9AA2A8')),
+         marks=[dict(m, zeichnung=True) for m in raster(15, 15, 2, 2, 20, 20, 380, 310, shape='cyl', fill='#9AA2A8')]),
     teil('kabel', 'cable_insulation', 'Netzkabel (Isolierung)', 'Kabel', 'box',
          x=260, y=340, w=150, d=10, z=0, h=8, r=4, explode=[200, 60, 0], mass=110, materials=[['pvc', 90], ['pp', 10]],
          color=DUNKEL, info='1,5 m Netzkabel mit PVC-Mantel. Stecker abschneiden und längs aufschlitzen.',
@@ -105,5 +105,14 @@ teile = [
 
 explodiere(teile, abstand=60, nach_liste=True,
            abstaende={'patrone_schwarz': 20, 'patrone_farbe': 20, 'zahnriemen': 15, 'encoder': 15, 'druckkopf': 15})
+# Foto-Ansicht: echte Formen (Kabel liegend, Spulen als Ring); Details darauf nur in der Zeichnung
+FORMEN = {'kabel': ('liegend_x', 1), 'kupferadern': ('liegend_x', 1), 'walze': ('liegend_x', 1)}
+for p in teile:
+    if p['id'] in FORMEN:
+        p['form'], nur_zeichnung = FORMEN[p['id']]
+        p.pop('wand', None)
+        p.pop('boden', None)
+        for m in (p.get('marks') or []) if nur_zeichnung else []:
+            m['zeichnung'] = True
 skaliere_masse(teile, oid='inkjet_printer')
 schreibe('inkjet_printer', teile)

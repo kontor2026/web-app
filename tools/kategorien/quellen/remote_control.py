@@ -59,14 +59,14 @@ teile = [
          material_id='steel', x=6, y=163.5, w=13, d=2.5, z=1.5, h=9, r=1, mass=0.5, materials=[['stahl', 85], ['kupfer', 15]],
          color='#B9BEC2', label=False, info='Gegenkontakt mit Feder am anderen Ende des Batteriefachs.'),
     teil('unterschale', 'plastic_housing', 'Unterschale mit Batteriefach', 'Unterschale', 'box',
-         x=0, y=0, w=45, d=180, z=0, h=10, r=10, mass=28, color='#26292C', sortBias=5,
+         x=0, y=0, w=45, d=180, z=0, h=10, r=10, mass=28, color='#26292C', sortBias=5, wand=2,
          info='Trägt Platine und Batteriefach. Kunststoffe ohne Elektronik ließen sich gut recyceln, sind aber oft dunkel und schwer sortierbar.',
-         marks=[mark('box', 6, 108, 33, 66, 4, '#2B2F33')]),
-    teil('batterie_l', 'alkaline_cell', 'Alkaline-Batterie AAA', 'Batterien', 'box',
+         marks=[mark('box', 6, 108, 33, 66, 4, '#2B2F33', zeichnung=True)]),
+    teil('batterie_l', 'alkaline_cell', 'Alkaline-Batterie AAA', 'Batterien', 'box', form='liegend_y',
          x=10, y=118, w=10.5, d=44.5, z=1.5, h=10.5, r=5, mass=11.5, explode=[60, 0, 20], color='#3A6EA5',
          info='Zwei AAA-Zellen mit je 1,5 V. Herausnehmen und in die Batterie-Sammelbox geben, nie in den Restmüll.',
          marks=[mark('box', 1, 1, 8.5, 6, 3, '#C9A227')]),
-    teil('batterie_r', 'alkaline_cell', 'Alkaline-Batterie AAA', 'Batterie', 'box',
+    teil('batterie_r', 'alkaline_cell', 'Alkaline-Batterie AAA', 'Batterie', 'box', form='liegend_y',
          x=24.5, y=118, w=10.5, d=44.5, z=1.5, h=10.5, r=5, mass=11.5, explode=[60, 0, 20], color='#3A6EA5', label=False,
          info='Zweite AAA-Zelle, eingelegt mit umgekehrter Polung. Batterien können auslaufen, darum bei längerer Pause herausnehmen.',
          marks=[mark('box', 1, 37.5, 8.5, 6, 3, '#C9A227')]),
@@ -78,4 +78,7 @@ teile = [
 
 explodiere(teile, abstand=30)
 skaliere_masse(teile, oid='remote_control')
+for p in teile:   # Foto-Ansicht: echte Formen (form) tragen keine aufgemalten Details
+    if p.get('form') and p.get('marks'):
+        p['marks'] = [dict(k, zeichnung=True) for k in p['marks']]
 schreibe('remote_control', teile)

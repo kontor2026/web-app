@@ -42,13 +42,13 @@ teile = [
          info='Leiterplatte mit Sensor, Prozessor und Mikrofonen. Mit zwei Schrauben in der Rückschale; in die Elektro-Sammlung geben.',
          marks=raster(18, 4, 4, 1, 3, 2, 4, r=0.3, fill='#22272B')),
     teil('schrauben', 'plastic_housing', 'Gehäuseschrauben (2 Stück)', 'Schrauben', 'cyl', material_id='steel',
-         x=12, y=13.5, w=3, z=9, h=8, mass=0.4, explode=[-45, 0, 0], color='#9BA3A8',
+         x=12, y=13.5, w=3, z=9, h=8, mass=0.4, explode=[-45, 0, 0], color='#C9CDD0',
          info='Halten Platine und Rückschale. Sie sitzen oft unter einem Aufkleber oder unter dem Gummipad.',
          marks=[mark('cyl', 0.75, 0.75, 1.5, fill='#5E656A')]),
     teil('rueckschale', 'plastic_housing', 'Rückschale', 'Rückschale', 'box',
-         x=0, y=0, w=92, d=30, z=8, h=18, r=12, mass=18, color=GEH,
+         x=0, y=0, w=92, d=30, z=8, h=18, r=12, wand=1.5, mass=18, color=GEH,
          info='Hinterer Gehäuseteil mit Kabeldurchführung. Nach Lösen der Schrauben unter dem Clip-Gelenk abnehmbar.',
-         marks=[mark('box', 3, 3, 86, 24, 10, '#1E2226')]),
+         marks=[mark('box', 3, 3, 86, 24, 10, '#1E2226', zeichnung=True)]),
     teil('clip', 'plastic_housing', 'Monitor-Clip', 'Clip', 'box',
          x=21, y=2, w=50, d=26, z=0, h=8, r=4, mass=12, color=GEH,
          info='Klappbarer Halter für den Bildschirmrand, mit Gummiauflage und Stativgewinde. Am Gelenk abschraubbar.',
@@ -72,5 +72,14 @@ teile = [
 ]
 
 explodiere(teile, abstand=18, abstaende={'bildsensor': 8, 'steuerchip': 8, 'mikrofon_l': 8, 'mikrofon_r': 8, 'ir_filter': 6}, nach_liste=True)
+# Foto-Ansicht: echte Formen (Kabel liegend, Spulen als Ring); Details darauf nur in der Zeichnung
+FORMEN = {'kabelmantel': ('liegend_x', 1), 'kupferadern': ('liegend_x', 1)}
+for p in teile:
+    if p['id'] in FORMEN:
+        p['form'], nur_zeichnung = FORMEN[p['id']]
+        p.pop('wand', None)
+        p.pop('boden', None)
+        for m in (p.get('marks') or []) if nur_zeichnung else []:
+            m['zeichnung'] = True
 skaliere_masse(teile, oid='webcam')
 schreibe('webcam', teile)

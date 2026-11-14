@@ -30,7 +30,7 @@ def g(id, name, short, w, z, h, mass, info=INFO_G, **extra):
 
 g('rand', 'Glasrand (Mündung)', 'Mündung', 64, 93, 3, 3,
   'Glatter Rand, auf den die Dichtung des Deckels drückt. Hat er eine Macke, bleibt das Glas nicht dicht.',
-  marks=[mark('cyl', 4, 4, 56, fill='#EEF4F2')])
+  marks=[mark('cyl', 4, 4, 56, fill='#EEF4F2', zeichnung=True)])
 for i, (w, z, h) in enumerate([(67.5, 91.5, 1.5), (64, 89.5, 2), (67.5, 88, 1.5), (64, 86, 2)]):
     g(f'gewinde{i}', 'Gewindegang', 'Gewinde', w, z, h, 2.5,
       'Kurze, schräge Gewindegänge aus Glas. Die vier Nocken des Deckels greifen hier ein, '
@@ -44,7 +44,7 @@ g('boden', 'Glasboden', 'Boden', 71, 0, 5, 22,
 
 teile = [
     teil('deckel', 'twist_off_lid', 'Twist-off-Deckel', 'Deckel', 'cyl', **rund(68, 91, 9), mass=14,
-         materials=[['weissblech', 96], ['druck', 4]], color=GOLD,
+         materials=[['weissblech', 96], ['druck', 4]], color='#E3C77A',
          info='Weißblech, innen lackiert, mit vier Nocken. Der Knopf in der Mitte wölbt sich hoch, wenn das '
               'Vakuum weg ist. Abschrauben und in die Gelbe Tonne geben.',
          marks=[mark('cyl', 3, 3, 62, fill=GOLD_H), mark('cyl', 8, 8, 52, fill=GOLD_H),
@@ -57,7 +57,7 @@ teile = [
     *glas,
     teil('etikett', 'paper_label', 'Papieretikett', 'Etikett', 'cyl', **rund(75.6, 15, 55), mass=1.5,
          materials=[['papier', 90], ['druck', 5], ['klebstoff', 5]], color='#E8DDC0', sortBias=11,
-         marks=[mark('cyl', 1, 1, 73.6, fill='#CCD8D4')],
+         wand=0.3, boden=0, marks=[mark('cyl', 1, 1, 73.6, fill='#CCD8D4', zeichnung=True)],
          info='Papier mit Leim. Darf beim Altglas dranbleiben, es verbrennt in der Schmelze.'),
 ]
 for p in teile:

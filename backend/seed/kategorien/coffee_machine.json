@@ -1094,7 +1094,7 @@
    "x": 15,
    "y": 80,
    "w": 18,
-   "d": 100,
+   "d": 92,
    "z": 30,
    "h": 120,
    "r": 1,
@@ -1279,14 +1279,16 @@
     ]
    ],
    "info": "Durchsichtiger Kunststofftank, wird nach oben herausgehoben. Unten sitzt ein federbelastetes Ventil, das beim Abnehmen schließt.",
-   "color": "#CFE3EA",
-   "opacity": 0.6,
+   "color": "#D6E6EC",
+   "opacity": 0.35,
+   "wand": 2.5,
    "marks": [
     {
      "shape": "box",
      "x": 6,
      "y": 6,
      "w": 158,
+     "zeichnung": true,
      "d": 53,
      "r": 10,
      "fill": "#B5CCD5"
@@ -1414,7 +1416,8 @@
     ]
    ],
    "info": "Fängt Tropfen und Restwasser auf. Nach vorne herausziehen und regelmäßig leeren.",
-   "color": "#2E3338"
+   "color": "#2E3338",
+   "wand": 2
   },
   {
    "id": "kabel",
@@ -1448,6 +1451,7 @@
    ],
    "info": "Etwa 80 cm PVC-Mantel mit Stecker. Längs aufschlitzen, um die Kupferadern freizulegen.",
    "color": "#2E3338",
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
@@ -1456,7 +1460,8 @@
      "w": 10,
      "d": 6,
      "r": 2,
-     "fill": "#555"
+     "fill": "#555",
+     "zeichnung": true
     }
    ]
   },
@@ -1487,7 +1492,8 @@
     ]
    ],
    "info": "Drei Kupferadern aus feiner Litze. Kupfer lässt sich fast verlustfrei wiederverwerten.",
-   "color": "#B87333"
+   "color": "#B87333",
+   "form": "liegend_x"
   }
  ]
 }

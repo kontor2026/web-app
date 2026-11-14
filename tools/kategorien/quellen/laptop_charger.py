@@ -22,21 +22,26 @@ teile = [
          info='Hält das aufgerollte Kabel zusammen. Einfach abziehen, es kommt in den Restmüll oder wird weiterverwendet.',
          color='#55606A', marks=raster(1.5, 2, 1, 8, 6, 2, 0, 5, fill='#4A535C')),
     teil('kabel_adern', 'cable_copper_core', 'Kupferadern des Ladekabels', 'Adern', 'cyl',
-         x=20, y=9, w=60, d=32, z=25, h=4, explode=[DX, 0, 14], mass=28,
+         x=20, y=9, w=60, d=32, z=25, h=4, explode=[DX, 0, 14], form='torus', mass=28,
          materials=[['kupfer', 75], ['pvc', 25]],
          info='Zwei Leiter für Plus und Minus, oft als Innenader mit Kupfergeflecht darum. '
               'Nach dem Abisolieren kommt reines Kupfer zum Vorschein.',
-         color='#C5803D', marks=[mark('cyl', 6, 4, 48, 24, fill='#B06F33'), mark('cyl', 12, 8, 36, 16, fill='#C5803D'),
-                                 mark('cyl', 18, 11, 24, 10, fill='#34383C')]),
+         color='#D08A52',
+         marks=[mark('cyl', 6, 4, 48, 24, fill='#B06F33', zeichnung=True),
+                mark('cyl', 12, 8, 36, 16, fill='#C5803D', zeichnung=True),
+                mark('cyl', 18, 11, 24, 10, fill='#34383C', zeichnung=True)]),
     teil('kabel_mantel', 'cable_insulation', 'Kabelmantel (Ladekabel, 1,8 m, aufgerollt)', 'Kabelmantel', 'cyl',
-         x=14, y=5, w=72, d=40, z=24, h=6, explode=[DX, 0, -24], mass=42,
+         x=14, y=5, w=72, d=40, z=24, h=6, explode=[DX, 0, -24], form='torus', mass=42,
          info='Schwarzer PVC-Mantel, hier aufgerollt. Mit Abisolierzange längs aufschlitzen; '
               'nahe am Stecker sitzt meist ein Ferritkern gegen Funkstörungen.',
-         color='#34373B', marks=[mark('cyl', 3, 2, 66, 36, fill='#2B2E31'), mark('cyl', 7, 4, 58, 32, fill='#34373B'),
-                                 mark('cyl', 11, 6.5, 50, 27, fill='#2B2E31'), mark('cyl', 15, 9, 42, 22, fill='#34373B'),
-                                 mark('cyl', 19, 11.5, 34, 17, fill='#34383C')]),
+         color='#34373B',  # Ring; die gemalten Windungen nur in der Zeichnung
+         marks=[mark('cyl', 3, 2, 66, 36, fill='#2B2E31', zeichnung=True),
+                mark('cyl', 7, 4, 58, 32, fill='#34373B', zeichnung=True),
+                mark('cyl', 11, 6.5, 50, 27, fill='#2B2E31', zeichnung=True),
+                mark('cyl', 15, 9, 42, 22, fill='#34373B', zeichnung=True),
+                mark('cyl', 19, 11.5, 34, 17, fill='#34383C', zeichnung=True)]),
     teil('knickschutz', 'cable_insulation', 'Knickschutz am Gehäuse', 'Knickschutz', 'box',
-         material_id='pvc', x=98, y=5, w=7, d=9, z=7, h=9, r=3, explode=[DX - 20, -12, -7], mass=3,
+         material_id='pvc', x=98, y=5, w=7, d=9, z=7, h=9, r=3, explode=[DX - 20, -12, -7], form='liegend_x', mass=3,
          materials=[['tpe', 100]], sortBias=5,
          info='Weiche Tülle, damit das Kabel am Gehäuse nicht abknickt. Hier brechen Kabel am häufigsten.',
          color='#2B2E31', marks=raster(2, 1.5, 3, 1, 1, 6, 2, fill='#3A3D40')),
@@ -47,7 +52,7 @@ teile = [
               'und Kabel getrennt.',
          color=GEH, marks=raster(3, 2, 3, 1, 1.5, 8, 3, r=0.5, fill='#3A3D40')),
     teil('hohlstecker', 'connector_shell', 'Hohlstecker (5,5 mm)', 'Hohlstecker', 'box',
-         x=110, y=22.25, w=10, d=5.5, z=3.25, h=5.5, r=2.7, explode=[DX + 18, 30, -3.25], mass=3,
+         x=110, y=22.25, w=10, d=5.5, z=3.25, h=5.5, r=2.7, explode=[DX + 18, 30, -3.25], form='liegend_x', mass=3,
          materials=[['stahl', 70], ['nickel', 10], ['messing', 15], ['pcabs', 5]],
          info='Vernickelte Metallhülse (Minus) mit Kontakt innen (Plus). Ein Magnet zieht den Stahl an.',
          color='#C9CDD0', marks=[mark('box', 6, 1.5, 4, 2.5, 1.2, '#2A2E31')]),
@@ -128,4 +133,7 @@ for p in teile:  # Bauteile auf der Platine zusammengebaut vor der Unterschale z
         p['sortBias'] = -14
 explodiere(teile, abstand=22)
 skaliere_masse(teile, oid='laptop_charger')
+for p in teile:  # gerundete Formen (form): marks nur in der Zeichnung, oben flach würden sie schweben
+    if p.get('form'):
+        p['marks'] = [dict(m, zeichnung=True) for m in p.get('marks') or []]
 schreibe('laptop_charger', teile)

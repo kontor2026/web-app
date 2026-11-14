@@ -150,12 +150,15 @@
    ],
    "info": "Umgebogener Rand, der den dünnen Topf stabil macht. Leere Töpfe stapeln sich ineinander und lassen sich in der Gärtnerei zurückgeben.",
    "color": "#2E2F31",
+   "wand": 3,
+   "boden": 0,
    "marks": [
     {
      "shape": "cyl",
      "x": 3,
      "y": 3,
      "w": 124,
+     "zeichnung": true,
      "fill": "#3B3D40"
     },
     {
@@ -163,6 +166,7 @@
      "x": 6,
      "y": 6,
      "w": 118,
+     "zeichnung": true,
      "fill": "#1C1D1F"
     },
     {
@@ -170,6 +174,7 @@
      "x": 20,
      "y": 26,
      "w": 90,
+     "zeichnung": true,
      "d": 86,
      "fill": "#252628"
     },
@@ -178,6 +183,7 @@
      "x": 60,
      "y": 64,
      "w": 10,
+     "zeichnung": true,
      "fill": "#0E0F10"
     },
     {
@@ -185,6 +191,7 @@
      "x": 38,
      "y": 64,
      "w": 8,
+     "zeichnung": true,
      "fill": "#0E0F10"
     },
     {
@@ -192,6 +199,7 @@
      "x": 84,
      "y": 64,
      "w": 8,
+     "zeichnung": true,
      "fill": "#0E0F10"
     },
     {
@@ -199,6 +207,7 @@
      "x": 61,
      "y": 42,
      "w": 8,
+     "zeichnung": true,
      "fill": "#0E0F10"
     },
     {
@@ -206,6 +215,7 @@
      "x": 61,
      "y": 86,
      "w": 8,
+     "zeichnung": true,
      "fill": "#0E0F10"
     },
     {
@@ -213,6 +223,7 @@
      "x": 62,
      "y": 9,
      "w": 5,
+     "zeichnung": true,
      "d": 5,
      "r": 1.5,
      "fill": "#3B3D40"
@@ -222,6 +233,7 @@
      "x": 62,
      "y": 116,
      "w": 5,
+     "zeichnung": true,
      "d": 5,
      "r": 1.5,
      "fill": "#3B3D40"
@@ -231,6 +243,7 @@
      "x": 9,
      "y": 62,
      "w": 5,
+     "zeichnung": true,
      "d": 5,
      "r": 1.5,
      "fill": "#3B3D40"
@@ -240,6 +253,7 @@
      "x": 116,
      "y": 62,
      "w": 5,
+     "zeichnung": true,
      "d": 5,
      "r": 1.5,
      "fill": "#3B3D40"
@@ -272,7 +286,9 @@
    ],
    "info": "PP, Recyclingcode 5. Erde ausklopfen, dann in die Gelbe Tonne. Die Wand wird nach unten enger, so rutscht der Wurzelballen leicht heraus.",
    "color": "#2E2F31",
-   "label": true
+   "label": true,
+   "wand": 1.5,
+   "boden": 0
   },
   {
    "id": "wand1",
@@ -300,7 +316,9 @@
    ],
    "info": "PP, Recyclingcode 5. Erde ausklopfen, dann in die Gelbe Tonne. Die Wand wird nach unten enger, so rutscht der Wurzelballen leicht heraus.",
    "color": "#2E2F31",
-   "label": false
+   "label": false,
+   "wand": 1.6,
+   "boden": 0
   },
   {
    "id": "wand2",
@@ -328,7 +346,9 @@
    ],
    "info": "PP, Recyclingcode 5. Erde ausklopfen, dann in die Gelbe Tonne. Die Wand wird nach unten enger, so rutscht der Wurzelballen leicht heraus.",
    "color": "#2E2F31",
-   "label": false
+   "label": false,
+   "wand": 1.5,
+   "boden": 0
   },
   {
    "id": "wand3",
@@ -356,7 +376,9 @@
    ],
    "info": "PP, Recyclingcode 5. Erde ausklopfen, dann in die Gelbe Tonne. Die Wand wird nach unten enger, so rutscht der Wurzelballen leicht heraus.",
    "color": "#2E2F31",
-   "label": false
+   "label": false,
+   "wand": 1.6,
+   "boden": 0
   },
   {
    "id": "wand4",
@@ -384,7 +406,9 @@
    ],
    "info": "PP, Recyclingcode 5. Erde ausklopfen, dann in die Gelbe Tonne. Die Wand wird nach unten enger, so rutscht der Wurzelballen leicht heraus.",
    "color": "#2E2F31",
-   "label": false
+   "label": false,
+   "wand": 1.5,
+   "boden": 0
   },
   {
    "id": "boden",
@@ -412,7 +436,44 @@
    ],
    "info": "Mehrere Löcher lassen überschüssiges Gießwasser ablaufen, damit die Wurzeln nicht faulen. Schwarze Töpfe erkennt die Sortieranlage oft nicht, besser sind graue, braune oder bunte.",
    "color": "#2E2F31",
-   "label": false
+   "label": false,
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 43,
+     "y": 47,
+     "w": 10,
+     "fill": "#0E0F10"
+    },
+    {
+     "shape": "cyl",
+     "x": 21,
+     "y": 47,
+     "w": 8,
+     "fill": "#0E0F10"
+    },
+    {
+     "shape": "cyl",
+     "x": 67,
+     "y": 47,
+     "w": 8,
+     "fill": "#0E0F10"
+    },
+    {
+     "shape": "cyl",
+     "x": 44,
+     "y": 25,
+     "w": 8,
+     "fill": "#0E0F10"
+    },
+    {
+     "shape": "cyl",
+     "x": 44,
+     "y": 69,
+     "w": 8,
+     "fill": "#0E0F10"
+    }
+   ]
   },
   {
    "id": "etikett",

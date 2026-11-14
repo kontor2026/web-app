@@ -12,7 +12,7 @@ GEH = '#25292D'
 CHIP = '#3F4547'
 teile = [
     teil('deckglas', 'plastic_housing', 'Deckglas', 'Deckglas', 'box', material_id='special_glass',
-         x=0.5, y=4, w=19, d=38, z=10, h=1, r=9, mass=1.2, materials=[['glas', 100]], color='#9FB4BA', opacity=0.3,
+         x=0.5, y=4, w=19, d=38, z=10, h=1, r=9, mass=1.2, materials=[['glas', 100]], color='#E8EFF1', opacity=0.3,
          info='Gehärtetes, gewölbtes Glas über dem Display. Mit dem Rahmen verklebt.'),
     teil('display', 'circuit_board', 'OLED-Display', 'Display', 'box', material_id='special_glass',
          x=3, y=8, w=14, d=30, z=9.2, h=0.8, r=2, mass=1, materials=[['displayglas', 60], ['folien', 25], ['kupfer', 15]],
@@ -25,9 +25,9 @@ teile = [
          info='Hauchdünne Folie mit Kupferbahnen. Verbindet das Display mit der Platine; reißt beim Öffnen leicht.',
          marks=raster(1, 1.8, 6, 1, 0.5, 1, 1.1, fill='#E3B04B')),
     teil('oberschale', 'plastic_housing', 'Gehäuse-Oberteil', 'Oberteil', 'box',
-         x=0.5, y=4, w=19, d=38, z=5, h=5, r=9, mass=2.5, color=GEH,
+         x=0.5, y=4, w=19, d=38, z=5, h=5, r=9, wand=2, boden=0, mass=2.5, color=GEH,
          info='Rahmen aus Kunststoff, oft mit dem Glas und dem Unterteil verklebt. Nur mit Wärme zu öffnen.',
-         marks=[mark('box', 2.5, 4, 14, 30, 2, '#1E2226')]),
+         marks=[mark('box', 2.5, 4, 14, 30, 2, '#1E2226', zeichnung=True)]),
     teil('motor', 'circuit_board', 'Vibrationsmotor', 'Vibration', 'cyl', material_id='mixed_electronics',
          x=13.5, y=12, w=4.5, z=4.8, h=2.7, mass=0.4, materials=[['stahl', 40], ['kupfer', 30], ['ndfeb', 30]],
          color='#B7BCC0', info='Münzgroßer Motor mit Unwucht. Brummt bei Nachrichten und Weckalarm.'),

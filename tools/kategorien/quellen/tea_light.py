@@ -27,7 +27,7 @@ teile = [
     teil('schale', 'aluminium_cup', 'Aluminiumschale', 'Schale', 'cyl',
          x=0, y=0, w=38, z=0, h=15, mass=0.5,
          info='Dünnes Aluminium, schützt den Tisch vor heißem Wachs. Leer und ohne Wachs in die Gelbe Tonne.',
-         color='#C9CED3', marks=[mark('cyl', 0.5, 0.5, 37, fill='#B9BFC4')]),
+         color='#D5D8DB', wand=0.5, marks=[mark('cyl', 0.5, 0.5, 37, fill='#B9BFC4', zeichnung=True)]),
 ]
 explodiere(teile, abstand=12, nach_liste=True, gruppen=[['docht', 'dochthalter']])
 skaliere_masse(teile, oid='tea_light', stellen=2)

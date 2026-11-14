@@ -550,7 +550,7 @@
     ]
    ],
    "info": "Halten Platine und Rückschale. Sie sitzen oft unter einem Aufkleber oder unter dem Gummipad.",
-   "color": "#9BA3A8",
+   "color": "#C9CDD0",
    "marks": [
     {
      "shape": "cyl",
@@ -589,12 +589,14 @@
    ],
    "info": "Hinterer Gehäuseteil mit Kabeldurchführung. Nach Lösen der Schrauben unter dem Clip-Gelenk abnehmbar.",
    "color": "#25292D",
+   "wand": 1.5,
    "marks": [
     {
      "shape": "box",
      "x": 3,
      "y": 3,
      "w": 86,
+     "zeichnung": true,
      "d": 24,
      "r": 10,
      "fill": "#1E2226"
@@ -808,6 +810,7 @@
    ],
    "info": "PVC-Hülle des 1,5 m langen USB-Kabels, hier gekürzt gezeigt. Mit einem Abisolierwerkzeug längs aufschlitzen.",
    "color": "#1E2226",
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
@@ -816,7 +819,8 @@
      "w": 4,
      "d": 3,
      "r": 1,
-     "fill": "#3A3F44"
+     "fill": "#3A3F44",
+     "zeichnung": true
     }
    ]
   },
@@ -848,6 +852,7 @@
    ],
    "info": "Vier dünne Kupferlitzen für Strom und Daten mit Abschirmgeflecht. Sortenreines Kupfer ist wertvoll.",
    "color": "#C5803D",
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
@@ -856,7 +861,8 @@
      "w": 2.5,
      "d": 2.4,
      "r": 1,
-     "fill": "#D9954F"
+     "fill": "#D9954F",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -865,7 +871,8 @@
      "w": 2.5,
      "d": 2.4,
      "r": 1,
-     "fill": "#D9954F"
+     "fill": "#D9954F",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -874,7 +881,8 @@
      "w": 2.5,
      "d": 2.4,
      "r": 1,
-     "fill": "#D9954F"
+     "fill": "#D9954F",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -883,7 +891,8 @@
      "w": 2.5,
      "d": 2.4,
      "r": 1,
-     "fill": "#D9954F"
+     "fill": "#D9954F",
+     "zeichnung": true
     }
    ]
   }

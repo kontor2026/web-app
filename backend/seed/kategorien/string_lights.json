@@ -181,12 +181,14 @@
    "info": "Winzige Leuchtdioden, in Tropfen aus Kunstharz eingegossen und direkt auf den Draht gelötet. Sie lassen sich nicht einzeln abtrennen, die ganze Kette ist Elektroschrott.",
    "color": "#E4E6DC",
    "opacity": 0.75,
+   "form": "torus",
    "marks": [
     {
      "shape": "cyl",
      "x": 19,
      "y": 19,
      "w": 61,
+     "zeichnung": true,
      "fill": "#1A1C1B"
     },
     {
@@ -194,280 +196,320 @@
      "x": 93.04,
      "y": 47.5,
      "w": 4,
-     "fill": "#F6D86B"
+     "fill": "#F6D86B",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 89.57,
      "y": 64.93,
      "w": 4,
-     "fill": "#F6D86B"
+     "fill": "#F6D86B",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 79.7,
      "y": 79.7,
      "w": 4,
-     "fill": "#F6D86B"
+     "fill": "#F6D86B",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 64.93,
      "y": 89.57,
      "w": 4,
-     "fill": "#F6D86B"
+     "fill": "#F6D86B",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 47.5,
      "y": 93.04,
      "w": 4,
-     "fill": "#F6D86B"
+     "fill": "#F6D86B",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 30.07,
      "y": 89.57,
      "w": 4,
-     "fill": "#F6D86B"
+     "fill": "#F6D86B",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 15.3,
      "y": 79.7,
      "w": 4,
-     "fill": "#F6D86B"
+     "fill": "#F6D86B",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 5.43,
      "y": 64.93,
      "w": 4,
-     "fill": "#F6D86B"
+     "fill": "#F6D86B",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 1.96,
      "y": 47.5,
      "w": 4,
-     "fill": "#F6D86B"
+     "fill": "#F6D86B",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 5.43,
      "y": 30.07,
      "w": 4,
-     "fill": "#F6D86B"
+     "fill": "#F6D86B",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 15.3,
      "y": 15.3,
      "w": 4,
-     "fill": "#F6D86B"
+     "fill": "#F6D86B",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 30.07,
      "y": 5.43,
      "w": 4,
-     "fill": "#F6D86B"
+     "fill": "#F6D86B",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 47.5,
      "y": 1.96,
      "w": 4,
-     "fill": "#F6D86B"
+     "fill": "#F6D86B",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 64.93,
      "y": 5.43,
      "w": 4,
-     "fill": "#F6D86B"
+     "fill": "#F6D86B",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 79.7,
      "y": 15.3,
      "w": 4,
-     "fill": "#F6D86B"
+     "fill": "#F6D86B",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 89.57,
      "y": 30.07,
      "w": 4,
-     "fill": "#F6D86B"
+     "fill": "#F6D86B",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 87.1,
      "y": 47.5,
      "w": 4,
-     "fill": "#F6D86B"
+     "fill": "#F6D86B",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 83.18,
      "y": 64.68,
      "w": 4,
-     "fill": "#F6D86B"
+     "fill": "#F6D86B",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 72.19,
      "y": 78.46,
      "w": 4,
-     "fill": "#F6D86B"
+     "fill": "#F6D86B",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 56.31,
      "y": 86.11,
      "w": 4,
-     "fill": "#F6D86B"
+     "fill": "#F6D86B",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 38.69,
      "y": 86.11,
      "w": 4,
-     "fill": "#F6D86B"
+     "fill": "#F6D86B",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 22.81,
      "y": 78.46,
      "w": 4,
-     "fill": "#F6D86B"
+     "fill": "#F6D86B",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 11.82,
      "y": 64.68,
      "w": 4,
-     "fill": "#F6D86B"
+     "fill": "#F6D86B",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 7.9,
      "y": 47.5,
      "w": 4,
-     "fill": "#F6D86B"
+     "fill": "#F6D86B",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 11.82,
      "y": 30.32,
      "w": 4,
-     "fill": "#F6D86B"
+     "fill": "#F6D86B",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 22.81,
      "y": 16.54,
      "w": 4,
-     "fill": "#F6D86B"
+     "fill": "#F6D86B",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 38.69,
      "y": 8.89,
      "w": 4,
-     "fill": "#F6D86B"
+     "fill": "#F6D86B",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 56.31,
      "y": 8.89,
      "w": 4,
-     "fill": "#F6D86B"
+     "fill": "#F6D86B",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 72.19,
      "y": 16.54,
      "w": 4,
-     "fill": "#F6D86B"
+     "fill": "#F6D86B",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 83.18,
      "y": 30.32,
      "w": 4,
-     "fill": "#F6D86B"
+     "fill": "#F6D86B",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 81.16,
      "y": 47.5,
      "w": 4,
-     "fill": "#F6D86B"
+     "fill": "#F6D86B",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 74.73,
      "y": 67.28,
      "w": 4,
-     "fill": "#F6D86B"
+     "fill": "#F6D86B",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 57.9,
      "y": 79.51,
      "w": 4,
-     "fill": "#F6D86B"
+     "fill": "#F6D86B",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 37.1,
      "y": 79.51,
      "w": 4,
-     "fill": "#F6D86B"
+     "fill": "#F6D86B",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 20.27,
      "y": 67.28,
      "w": 4,
-     "fill": "#F6D86B"
+     "fill": "#F6D86B",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 13.84,
      "y": 47.5,
      "w": 4,
-     "fill": "#F6D86B"
+     "fill": "#F6D86B",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 20.27,
      "y": 27.72,
      "w": 4,
-     "fill": "#F6D86B"
+     "fill": "#F6D86B",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 37.1,
      "y": 15.49,
      "w": 4,
-     "fill": "#F6D86B"
+     "fill": "#F6D86B",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 57.9,
      "y": 15.49,
      "w": 4,
-     "fill": "#F6D86B"
+     "fill": "#F6D86B",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 74.73,
      "y": 27.72,
      "w": 4,
-     "fill": "#F6D86B"
+     "fill": "#F6D86B",
+     "zeichnung": true
     }
    ]
   },
@@ -500,13 +542,15 @@
     ]
    ],
    "info": "Zwei dünne, lackisolierte Kupferdrähte, an denen die LEDs hängen. Biegsam, aber bricht bei häufigem Knicken.",
-   "color": "#C5803D",
+   "color": "#D08A52",
+   "form": "torus",
    "marks": [
     {
      "shape": "cyl",
      "x": 0.0,
      "y": 0.0,
      "w": 101.0,
+     "zeichnung": true,
      "fill": "#C5803D"
     },
     {
@@ -514,6 +558,7 @@
      "x": 3.2,
      "y": 3.2,
      "w": 94.6,
+     "zeichnung": true,
      "fill": "#B06F33"
     },
     {
@@ -521,6 +566,7 @@
      "x": 6.4,
      "y": 6.4,
      "w": 88.2,
+     "zeichnung": true,
      "fill": "#C5803D"
     },
     {
@@ -528,6 +574,7 @@
      "x": 9.6,
      "y": 9.6,
      "w": 81.8,
+     "zeichnung": true,
      "fill": "#B06F33"
     },
     {
@@ -535,6 +582,7 @@
      "x": 12.8,
      "y": 12.8,
      "w": 75.4,
+     "zeichnung": true,
      "fill": "#C5803D"
     },
     {
@@ -542,6 +590,7 @@
      "x": 16.0,
      "y": 16.0,
      "w": 69.0,
+     "zeichnung": true,
      "fill": "#B06F33"
     },
     {
@@ -549,6 +598,7 @@
      "x": 19.2,
      "y": 19.2,
      "w": 62.6,
+     "zeichnung": true,
      "fill": "#1A1C1B"
     }
    ]
@@ -579,12 +629,14 @@
    ],
    "info": "Grüne oder durchsichtige PVC-Hülle um den Draht. Zum Recycling muss sie in der Anlage vom Kupfer getrennt werden.",
    "color": "#3E7A4A",
+   "form": "torus",
    "marks": [
     {
      "shape": "cyl",
      "x": 0.0,
      "y": 0.0,
      "w": 105.0,
+     "zeichnung": true,
      "fill": "#3E7A4A"
     },
     {
@@ -592,6 +644,7 @@
      "x": 3.2,
      "y": 3.2,
      "w": 98.6,
+     "zeichnung": true,
      "fill": "#336A3F"
     },
     {
@@ -599,6 +652,7 @@
      "x": 6.4,
      "y": 6.4,
      "w": 92.2,
+     "zeichnung": true,
      "fill": "#3E7A4A"
     },
     {
@@ -606,6 +660,7 @@
      "x": 9.6,
      "y": 9.6,
      "w": 85.8,
+     "zeichnung": true,
      "fill": "#336A3F"
     },
     {
@@ -613,6 +668,7 @@
      "x": 12.8,
      "y": 12.8,
      "w": 79.4,
+     "zeichnung": true,
      "fill": "#3E7A4A"
     },
     {
@@ -620,6 +676,7 @@
      "x": 16.0,
      "y": 16.0,
      "w": 73.0,
+     "zeichnung": true,
      "fill": "#336A3F"
     },
     {
@@ -627,6 +684,7 @@
      "x": 19.2,
      "y": 19.2,
      "w": 66.6,
+     "zeichnung": true,
      "fill": "#1A1C1B"
     }
    ]
@@ -849,6 +907,7 @@
    ],
    "info": "Drei 1,5-Volt-Zellen in Reihe ergeben 4,5 Volt. Vor dem Wegwerfen herausnehmen und in die Batteriesammlung geben.",
    "color": "#C8423A",
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
@@ -857,7 +916,8 @@
      "w": 6,
      "d": 14.5,
      "r": 3,
-     "fill": "#B7BCC0"
+     "fill": "#B7BCC0",
+     "zeichnung": true
     }
    ]
   },
@@ -894,6 +954,7 @@
    "info": "Zweite Zelle, liegt umgekehrt zur ersten.",
    "color": "#C8423A",
    "label": false,
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
@@ -902,7 +963,8 @@
      "w": 6,
      "d": 14.5,
      "r": 3,
-     "fill": "#B7BCC0"
+     "fill": "#B7BCC0",
+     "zeichnung": true
     }
    ]
   },
@@ -939,6 +1001,7 @@
    "info": "Dritte Zelle.",
    "color": "#C8423A",
    "label": false,
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
@@ -947,7 +1010,8 @@
      "w": 6,
      "d": 14.5,
      "r": 3,
-     "fill": "#B7BCC0"
+     "fill": "#B7BCC0",
+     "zeichnung": true
     }
    ]
   },
@@ -1038,12 +1102,14 @@
    ],
    "info": "Gehäuse aus Polypropylen mit drei Mulden. Erst die Batterien herausnehmen, dann den Kasten mit Kette zur Elektro-Sammlung bringen.",
    "color": "#2B2E31",
+   "wand": 2.5,
    "marks": [
     {
      "shape": "box",
      "x": 3,
      "y": 3,
      "w": 62,
+     "zeichnung": true,
      "d": 44,
      "r": 3,
      "fill": "#1E2022"

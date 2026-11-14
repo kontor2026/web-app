@@ -314,12 +314,15 @@
    "color": "#D7E7EA",
    "opacity": 0.45,
    "sortBias": -25,
+   "wand": 4,
+   "boden": 0,
    "marks": [
     {
      "shape": "cyl",
      "x": 4,
      "y": 4,
      "w": 72,
+     "zeichnung": true,
      "fill": "#EEF5F6"
     }
    ]
@@ -352,7 +355,9 @@
    "color": "#D7E7EA",
    "opacity": 0.45,
    "label": false,
-   "sortBias": -25
+   "sortBias": -25,
+   "wand": 4,
+   "boden": 0
   },
   {
    "id": "glas_boden",
@@ -418,12 +423,15 @@
    "info": "Bedrucktes Papier mit Klebstoff. Darf am Glas bleiben, die Glashütte brennt es ab.",
    "color": "#3F5E4C",
    "sortBias": 40,
+   "wand": 0.3,
+   "boden": 0,
    "marks": [
     {
      "shape": "cyl",
      "x": 0.8,
      "y": 0.8,
      "w": 79,
+     "zeichnung": true,
      "fill": "#B59DA4"
     }
    ]

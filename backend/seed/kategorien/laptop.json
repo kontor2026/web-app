@@ -190,6 +190,7 @@
     ]
    ],
    "info": "Eloxiertes Aluminium. Gibt dem Display Stabilität und schützt es beim Transport.",
+   "color": "#C9CCCF",
    "marks": [
     {
      "shape": "box",
@@ -198,7 +199,8 @@
      "w": 319,
      "d": 70,
      "r": 4,
-     "fill": "#9AA2A6"
+     "fill": "#9AA2A6",
+     "zeichnung": true
     }
    ]
   },
@@ -315,7 +317,8 @@
    ],
    "info": "Kunststoffrahmen um das Display. Meist nur geklipst.",
    "color": "#2E3235",
-   "opacity": 0.22,
+   "wand": 8,
+   "boden": 0,
    "marks": [
     {
      "shape": "box",
@@ -323,7 +326,8 @@
      "y": 10,
      "w": 307,
      "d": 196,
-     "r": 2
+     "r": 2,
+     "zeichnung": true
     }
    ]
   },
@@ -1248,6 +1252,7 @@
     ]
    ],
    "info": "Trägt Tastatur und Touchpad. Bei vielen Modellen ist die Tastatur fest vernietet.",
+   "color": "#C9CCCF",
    "marks": [
     {
      "shape": "box",
@@ -1671,6 +1676,7 @@
     ]
    ],
    "info": "Mit zehn Schrauben befestigt. Lüftungsschlitze führen kühle Luft zum Lüfter.",
+   "color": "#BFC3C6",
    "marks": [
     {
      "shape": "box",

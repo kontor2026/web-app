@@ -32,23 +32,24 @@ teile = [
     teil('spiralhuelse', 'lipstick_case', 'Spiralhülse (Drehmechanik)', 'Spiralhülse', 'cyl',
          x=3, y=3, w=14, z=8, h=40, mass=3.5,
          info='Innenrohr mit Längsschlitz und Spirale: Dreht man das Unterteil, schraubt sich der Becher nach oben.',
-         color='#D8D6CE', marks=[mark('cyl', 1, 1, 12, fill='#B8B4AA')], sortBias=-15),
+         color='#D8D6CE', wand=1, marks=[mark('cyl', 1, 1, 12, fill='#B8B4AA', zeichnung=True)], sortBias=-15),
     teil('feder', 'lipstick_case', 'Klemmfeder', 'Klemmfeder', 'cyl',
          x=2.5, y=2.5, w=15, z=40, h=3, mass=0.4, material_id='steel', materials=[['stahl', 100]], color='#9EA3A8',
          sortBias=-5,
          info='Kleiner Federring aus Stahl, der die Kappe festklemmt. Er ist magnetisch und wird in der Sortieranlage '
               'mit dem Magneten aussortiert.',
-         marks=[mark('cyl', 1.2, 1.2, 12.6, fill='#D8D6CE'), mark('box', 6.5, 0, 2, 1.5, 0, '#6E7378')]),
+         wand=1.2, boden=0,
+         marks=[mark('cyl', 1.2, 1.2, 12.6, fill='#D8D6CE', zeichnung=True), mark('box', 6.5, 0, 2, 1.5, 0, '#6E7378')]),
     teil('zierring', 'lipstick_case', 'Zierring', 'Zierring', 'cyl',
          x=0.3, y=0.3, w=19.4, z=36, h=4, mass=0.6, material_id='aluminium', materials=[['alu', 100]],
-         color='#E2C766',
+         color='#F0DC9A', wand=1.5, boden=0,
          info='Glänzender Ring aus Aluminium als Schmuck und Anschlag für die Kappe. Er ist aufgepresst.',
-         marks=[mark('cyl', 1.5, 1.5, 16.4, fill='#C9A646')]),
+         marks=[mark('cyl', 1.5, 1.5, 16.4, fill='#C9A646', zeichnung=True)]),
     teil('unterteil', 'lipstick_case', 'Unterteil', 'Unterteil', 'cyl',
          x=0.5, y=0.5, w=19, z=0, h=36, mass=6.5, materials=[['pp', 90], ['alu', 10]],
          info='Drehbarer Fuß der Hülse. Kunststoff mit dünner Metallschicht, Gelbe Tonne. Echte Metallhülsen '
               'gehören auch hinein.',
-         color=GOLD, marks=[mark('cyl', 2, 2, 15, fill='#B8963A')]),
+         color='#D4B04E', wand=2, marks=[mark('cyl', 2, 2, 15, fill='#B8963A', zeichnung=True)]),
 ]
 explodiere(teile, abstand=10, nach_liste=True, gruppen=[['mine', 'spitze0', 'spitze1', 'spitze2', 'spitze3']])
 skaliere_masse(teile, oid='lipstick')

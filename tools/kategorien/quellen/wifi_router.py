@@ -14,7 +14,7 @@ ANT = [['pcabs', 75], ['kupfer', 15], ['messing', 10]]
 
 
 def antenne(i, x):
-    return teil(f'antenne_{i}', 'router_antennas', f'Antenne {i}', 'Antennen' if i == 1 else f'Antenne {i}', 'box',
+    return teil(f'antenne_{i}', 'router_antennas', f'Antenne {i}', 'Antennen' if i == 1 else f'Antenne {i}', 'box', form='liegend_y',
                 x=x, y=8, w=12, d=125, z=32, h=8, r=5, mass=12, materials=ANT, color='#23272A', label=None if i == 1 else False,
                 info='Kunststoffstab mit einem Kupferstreifen als Strahler, über ein Gelenk mit Messing-Schraubanschluss. '
                      'Von Hand abschrauben.' if i == 1 else 'Gleich gebaut wie Antenne 1, sendet in einer eigenen Richtung.',
@@ -56,10 +56,10 @@ teile = [
          info='Große Leiterplatte mit allen Chips. Antennenkabel abziehen, Schrauben lösen und in die Elektro-Sammlung geben.',
          marks=[mark('box', 140, 2, 12, 10, 1, '#22272B'), mark('cyl', 160, 3, 8, fill='#22272B')]),
     teil('unterschale', 'plastic_housing', 'Gehäuse-Unterteil', 'Unterteil', 'box',
-         x=0, y=0, w=190, d=140, z=0, h=16, r=10, mass=90, color=GEH,
+         x=0, y=0, w=190, d=140, z=0, h=16, r=10, mass=90, color=GEH, wand=2,
          info='Wanne mit Füßen, Wandhalterungs-Löchern und Lüftungsschlitzen. Ohne Elektronik reiner Kunststoff.',
-         marks=raster(20, 40, 12, 1, 3, 60, 13, r=1.5, fill='#1E2226')),
-    teil('dc_kabel', 'power_adapter', 'Niedervolt-Kabel mit Hohlstecker', 'DC-Kabel', 'box', material_id='copper',
+         marks=[dict(m, zeichnung=True) for m in raster(20, 40, 12, 1, 3, 60, 13, r=1.5, fill='#1E2226')]),
+    teil('dc_kabel', 'power_adapter', 'Niedervolt-Kabel mit Hohlstecker', 'DC-Kabel', 'box', form='liegend_y', material_id='copper',
          x=210, y=0, w=6, d=50, z=0, h=6, r=3, mass=25, explode=[45, -40, 0], color='#1E2226',
          materials=[['pvc', 60], ['kupfer', 35], ['messing', 5]],
          info='Dünnes Kabel vom Netzteil zum Router, endet in einem Hohlstecker aus Messing. Kupferadern freilegen und getrennt sammeln.',
@@ -74,4 +74,7 @@ teile = [
 explodiere(teile, abstand=60, abstaende={'oberschale': 90, 'soc': 20, 'wlan_24': 20, 'wlan_5': 20, 'ram': 20, 'buchsen': 20, 'kuehlkoerper': 20},
            nach_liste=True)
 skaliere_masse(teile, oid='wifi_router')
+for p in teile:   # Foto-Ansicht: echte Formen (form) tragen keine aufgemalten Details
+    if p.get('form') and p.get('marks'):
+        p['marks'] = [dict(k, zeichnung=True) for k in p['marks']]
 schreibe('wifi_router', teile)

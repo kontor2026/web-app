@@ -10,8 +10,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from bau import teil, mark, raster, explodiere, skaliere_masse, schreibe  # noqa: E402
 
-ALU = '#3B4147'      # schwarz eloxiertes Aluminium
-ALU_HELL = '#C9CED2'
+ALU = '#5A6068'      # schwarz eloxiertes Aluminium (Metall rendert dunkler)
+ALU_HELL = '#DDE1E4'   # bedampfter Spiegel
 GAP = 14
 M = 15  # Mittelachse x = y = 15
 
@@ -24,17 +24,18 @@ def rund(w):
 AA = [['zinkmangan', 80], ['stahl', 20]]
 teile = [
     teil('lunette', 'aluminium_housing', 'Frontring (Lünette)', 'Frontring', 'cyl', **rund(30), z=145, h=5, mass=6,
-         materials=[['alu', 100]], color=ALU,
+         materials=[['alu', 100]], color=ALU, wand=2.5, boden=0,
          info='Aufgeschraubter Aluminiumring, der Glas und Reflektor festhält. Gegen den Uhrzeigersinn abdrehen.',
-         marks=[mark('cyl', 2.5, 2.5, 25, fill='#9FB4B8'), mark('cyl', 4, 4, 22, fill='#DCE4E6'),
-                mark('cyl', 9, 9, 12, fill='#C4CED1'), mark('cyl', 13, 13, 4, fill='#F6D86B')]),
+         marks=[dict(m, zeichnung=True) for m in [mark('cyl', 2.5, 2.5, 25, fill='#9FB4B8'), mark('cyl', 4, 4, 22, fill='#DCE4E6'),
+                mark('cyl', 9, 9, 12, fill='#C4CED1'), mark('cyl', 13, 13, 4, fill='#F6D86B')]]),
     teil('linse', 'lens_glass', 'Schutzglas', 'Glas', 'cyl', **rund(26), z=143, h=2, mass=3,
          materials=[['glas', 100]], color='#C9DEDF', opacity=0.65,
          info='Flache, gehärtete Glasscheibe mit Gummi-Dichtring. Kommt nicht ins Altglas, weil es anders zusammengesetzt ist.'),
     teil('reflektor', 'aluminium_housing', 'Reflektor', 'Reflektor', 'cyl', **rund(26), z=124, h=19, mass=4,
-         materials=[['alu', 90], ['pcabs', 10]], color=ALU_HELL,
+         materials=[['alu', 90], ['pcabs', 10]], color=ALU_HELL, wand=1, boden=1,
          info='Spiegelnder Trichter aus bedampftem Aluminium, bündelt das Licht der LED zu einem Strahl.',
-         marks=[mark('cyl', 1, 1, 24, fill='#E4E8EB'), mark('cyl', 6, 6, 14, fill='#D3D8DC'), mark('cyl', 10.5, 10.5, 5, fill='#3A3F44')]),
+         marks=[dict(m, zeichnung=True) for m in [mark('cyl', 1, 1, 24, fill='#E4E8EB'), mark('cyl', 6, 6, 14, fill='#D3D8DC'),
+                                                  mark('cyl', 10.5, 10.5, 5, fill='#3A3F44')]]),
     teil('led', 'led_module', 'LED auf Alu-Platine', 'LED', 'cyl', **rund(16), z=121, h=3, mass=2,
          materials=[['led', 25], ['alu', 45], ['kupfer', 15], ['lot', 5], ['keramik', 10]], color='#ECECE6',
          info='Eine Hochleistungs-LED auf einer runden Aluminiumplatine (Star), die die Wärme an den Kopf abgibt. '
@@ -46,21 +47,21 @@ teile = [
          info='Kleine runde Platine, die den Strom für die LED regelt. Mit Gold und Kupfer: zur Elektro-Sammlung.',
          marks=[mark('box', 6, 6, 6, 6, 0.3, '#22272B'), mark('cyl', 2, 7, 3, fill='#3A3F44')]),
     teil('kontaktfeder', 'steel_spring', 'Kontaktfeder vorn', 'Feder vorn', 'cyl', **rund(7), z=114, h=3, mass=0.5,
-         materials=[['stahl', 90], ['nickel', 10]], color='#B7BCC0',
+         materials=[['stahl', 90], ['nickel', 10]], color='#C9CDD0', wand=1, boden=0,
          info='Kleine vernickelte Stahlfeder unter der Treiberplatine, drückt auf den Pluspol der Batterie.',
-         marks=[mark('cyl', 1.5, 1.5, 4, fill='#8A9095')]),
+         marks=[mark('cyl', 1.5, 1.5, 4, fill='#8A9095', zeichnung=True)]),
     teil('kopf', 'aluminium_housing', 'Lampenkopf', 'Kopf', 'cyl', **rund(30), z=112, h=33, mass=16,
-         materials=[['alu', 100]], color=ALU,
+         materials=[['alu', 100]], color=ALU, wand=2, boden=0,
          info='Breiterer Kopf mit Kühlrippen, auf das Rohr geschraubt. Nimmt Reflektor, LED und Treiber auf.',
-         marks=[mark('cyl', 2, 2, 26, fill='#2B3035')]),
+         marks=[mark('cyl', 2, 2, 26, fill='#2B3035', zeichnung=True)]),
     teil('rohr', 'aluminium_housing', 'Batterierohr', 'Rohr', 'cyl', **rund(24), z=14, h=98, explode=[0, 0, 0], mass=24,
-         materials=[['alu', 100]], color=ALU,
+         materials=[['alu', 100]], color=ALU, wand=1.5, boden=0,
          info='Eloxiertes Aluminiumrohr mit Gewinde an beiden Enden und geriffeltem Griff. Leer ist es reines Aluminium.',
-         marks=[mark('cyl', 2, 2, 20, fill='#1F2327')]),
-    teil('oring', 'aluminium_housing', 'O-Ring-Dichtung', 'O-Ring', 'cyl', **rund(23), z=110, h=2,
+         marks=[mark('cyl', 2, 2, 20, fill='#1F2327', zeichnung=True)]),
+    teil('oring', 'aluminium_housing', 'O-Ring-Dichtung', 'O-Ring', 'cyl', form='torus', **rund(23), z=110, h=2,
          material_id='rubber', mass=0.3, materials=[['gummi', 100]], color='#1A1D20',
          info='Gummiring auf dem Gewinde zwischen Rohr und Kopf, macht die Lampe spritzwasserdicht. Mit einem Zahnstocher abhebeln.',
-         marks=[mark('cyl', 2, 2, 19, fill='#3B4147')]),
+         marks=[mark('cyl', 2, 2, 19, fill='#3B4147', zeichnung=True)]),
     teil('batterie_1', 'alkaline_cell', 'Batterie AA (vorn)', 'Batterie 1', 'cyl', **rund(14.5), z=67, h=50.5, mass=23,
          materials=AA, color='#C8423A', sortBias=-12,
          info='Alkali-Mangan-Batterie, 1,5 Volt. Immer herausnehmen, bevor die Lampe entsorgt wird. '
@@ -71,18 +72,18 @@ teile = [
          info='Zweite Batterie in Reihe: zusammen 3 Volt. Plus zeigt zum Kopf.',
          marks=[mark('cyl', 4.75, 4.75, 5, fill='#B7BCC0')]),
     teil('endfeder', 'steel_spring', 'Endfeder', 'Feder hinten', 'cyl', **rund(11), z=10, h=6.5, mass=1,
-         materials=[['stahl', 100]], color='#B7BCC0',
+         materials=[['stahl', 100]], color='#C9CDD0', wand=1.2, boden=0,
          info='Kräftige Stahlfeder in der Endkappe, drückt die Batterien nach vorn. Mit einer Zange herausziehen.',
-         marks=[mark('cyl', 1.5, 1.5, 8, fill='#8A9095'), mark('cyl', 3, 3, 5, fill='#B7BCC0')]),
+         marks=[mark('cyl', 1.5, 1.5, 8, fill='#8A9095', zeichnung=True), mark('cyl', 3, 3, 5, fill='#B7BCC0', zeichnung=True)]),
     teil('schalter', 'aluminium_housing', 'Druckschalter', 'Schalter', 'cyl', **rund(16), z=4, h=6,
          material_id='mixed_electronics', mass=3, materials=[['messing', 40], ['pcabs', 40], ['stahl', 20]],
          color='#5E656A',
          info='Klickschalter mit Messingkontakten, rastet bei jedem Druck ein oder aus. In die Endkappe geschraubt.',
          marks=[mark('cyl', 4, 4, 8, fill='#B08D57')]),
     teil('endkappe', 'aluminium_housing', 'Endkappe', 'Endkappe', 'cyl', **rund(26), z=1, h=13, mass=8,
-         materials=[['alu', 100]], color=ALU,
+         materials=[['alu', 100]], color=ALU, wand=2,
          info='Abschraubbarer Deckel am Ende. Hier werden die Batterien gewechselt.',
-         marks=[mark('cyl', 2, 2, 22, fill='#2B3035')]),
+         marks=[mark('cyl', 2, 2, 22, fill='#2B3035', zeichnung=True)]),
     teil('gummikappe', 'aluminium_housing', 'Gummikappe', 'Gummikappe', 'cyl', **rund(12), z=0, h=3,
          material_id='rubber', mass=1, materials=[['gummi', 100]], color='#22262A',
          info='Weiche Gummikappe über dem Schalter, hält Wasser und Staub draußen.'),
@@ -107,4 +108,7 @@ for p in e:
 explodiere([by['rohr']] + [by[i] for i in KOPF] + [by['oring']], abstand=GAP, nach_liste=True)
 
 skaliere_masse(teile, oid='flashlight')
+for p in teile:   # Foto-Ansicht: echte Formen (form) tragen keine aufgemalten Details
+    if p.get('form') and p.get('marks'):
+        p['marks'] = [dict(k, zeichnung=True) for k in p['marks']]
 schreibe('flashlight', teile)

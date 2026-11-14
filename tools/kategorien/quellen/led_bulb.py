@@ -11,7 +11,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from bau import teil, mark, raster, schreibe  # noqa: E402
 
 KOLBEN = '#F4F4F0'
-ALU = '#C9CDD0'
+ALU = '#DCDFE2'
 
 
 def led_ring(n, rad, mitte, groesse=3):
@@ -23,17 +23,28 @@ def led_ring(n, rad, mitte, groesse=3):
 
 
 teile = [
+    # Kolben als sechs Scheiben, die die Foto-Ansicht zu einer glatten Birnenform verbindet (A60-Profil)
     teil('kolben_oben', 'bulb_diffuser', 'Streukolben (Kuppe)', 'Kolben', 'cyl',
-         x=10, y=10, w=40, z=98, h=12, mass=1.6,
+         x=12, y=12, w=36, z=104, h=6, mass=0.6,
          info='Milchiger Kunststoff (Polycarbonat), streut das grelle Licht der LEDs. Ist meist nur eingeklebt '
               'und lässt sich mit etwas Drehen abziehen.',
          color=KOLBEN, opacity=0.6),
+    teil('kolben_schulter', 'bulb_diffuser', 'Streukolben (Schulter)', 'Kolben Schulter', 'cyl',
+         x=4, y=4, w=52, z=96, h=8, mass=1.0,
+         info='Hier rundet sich der Kolben zur Kuppe.', color=KOLBEN, opacity=0.6, label=False),
     teil('kolben_mitte', 'bulb_diffuser', 'Streukolben (Mitte)', 'Kolben Mitte', 'cyl',
-         x=0, y=0, w=60, z=72, h=26, mass=3.6,
+         x=0, y=0, w=60, z=84, h=12, mass=2.0,
          info='Die breiteste Stelle der Birne, 60 mm. Aus Kunststoff statt Glas, darum bricht er nicht so leicht.',
          color=KOLBEN, opacity=0.6, label=False),
-    teil('kolben_unten', 'bulb_diffuser', 'Streukolben (Hals)', 'Kolben Hals', 'cyl',
-         x=4, y=4, w=52, z=56, h=16, mass=2.4,
+    teil('kolben_bauch', 'bulb_diffuser', 'Streukolben (Bauch)', 'Kolben Bauch', 'cyl',
+         x=1, y=1, w=58, z=72, h=12, mass=1.8,
+         info='Unter der breitesten Stelle wird der Kolben wieder schmaler.', color=KOLBEN, opacity=0.6,
+         label=False),
+    teil('kolben_unten', 'bulb_diffuser', 'Streukolben (unten)', 'Kolben unten', 'cyl',
+         x=4, y=4, w=52, z=63, h=9, mass=1.3,
+         info='Unterer Teil des Kolbens über dem Kühlkörper.', color=KOLBEN, opacity=0.6, label=False),
+    teil('kolben_hals', 'bulb_diffuser', 'Streukolben (Hals)', 'Kolben Hals', 'cyl',
+         x=7, y=7, w=46, z=56, h=7, mass=0.9,
          info='Unterer Rand des Kolbens, in den Kühlkörper geklebt.', color=KOLBEN, opacity=0.6, label=False),
     teil('led_chips', 'led_module', 'LED-Chips', 'LEDs', 'cyl',
          material_id='mixed_electronics', x=12, y=12, w=36, z=55.5, h=0.8, mass=0.4,
@@ -74,7 +85,7 @@ teile = [
          x=16.5, y=16.5, w=27, z=3, h=22, mass=4,
          info='Gewinde aus Aluminiumblech, in den Kühlkörper gepresst oder geklebt. Es passt in jede normale '
               'Lampenfassung.',
-         color='#C2C6C9', marks=[mark('cyl', 1.5, 1.5, 24), mark('cyl', 3, 3, 21)]),
+         color='#E2E5E7', marks=[mark('cyl', 1.5, 1.5, 24), mark('cyl', 3, 3, 21)]),
     teil('fusskontakt', 'lamp_base', 'Fußkontakt mit Isolierglas', 'Fußkontakt', 'cyl',
          material_id='copper', x=24, y=24, w=12, z=0, h=3, mass=2,
          materials=[['messing', 45], ['behaelterglas', 40], ['lot', 15]],
@@ -86,7 +97,7 @@ teile = [
 # Senkrecht stapeln: Gruppen von unten nach oben, jede schwebt ABSTAND über der explodierten Oberkante der darunter.
 ABSTAND = 16
 gruppen = [['fusskontakt'], ['sockel'], ['kuehl_unten', 'kuehl_oben'], ['led_platine'], ['led_chips'],
-           ['kolben_unten', 'kolben_mitte', 'kolben_oben']]
+           ['kolben_hals', 'kolben_unten', 'kolben_bauch', 'kolben_mitte', 'kolben_schulter', 'kolben_oben']]
 nach_id = {p['id']: p for p in teile}
 oben = None
 for g in gruppen:

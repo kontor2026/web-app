@@ -680,16 +680,16 @@
    "mass": 2.8,
    "materials": [
     [
-     "pcabs",
-     95
-    ],
-    [
      "alu",
      5
+    ],
+    [
+     "pcabs",
+     95
     ]
    ],
    "info": "Kunststoff, innen hauchdünn mit Aluminium bedampft. Bündelt das Licht nach vorne auf die Straße.",
-   "color": "#D6DADD",
+   "color": "#DCDFE2",
    "sortBias": 10,
    "marks": [
     {
@@ -772,12 +772,14 @@
    ],
    "info": "Wanne für Akku und Platine, unten mit Schiene für die Halterung.",
    "color": "#2B2E31",
+   "wand": 2,
    "marks": [
     {
      "shape": "box",
      "x": 3,
      "y": 4,
      "w": 32,
+     "zeichnung": true,
      "d": 52,
      "r": 6,
      "fill": "#34383C"

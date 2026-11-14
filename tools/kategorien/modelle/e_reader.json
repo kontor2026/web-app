@@ -939,7 +939,7 @@
     ]
    ],
    "info": "Vier winzige Schrauben halten die Platine in der Rückschale. Mit einem Feinmechaniker-Schraubendreher (PH00) lösen.",
-   "color": "#9AA0A6",
+   "color": "#C9CDD0",
    "label": true,
    "marks": [
     {
@@ -983,7 +983,7 @@
     ]
    ],
    "info": "Vier winzige Schrauben halten die Platine in der Rückschale. Mit einem Feinmechaniker-Schraubendreher (PH00) lösen.",
-   "color": "#9AA0A6",
+   "color": "#C9CDD0",
    "label": false,
    "marks": [
     {
@@ -1027,7 +1027,7 @@
     ]
    ],
    "info": "Vier winzige Schrauben halten die Platine in der Rückschale. Mit einem Feinmechaniker-Schraubendreher (PH00) lösen.",
-   "color": "#9AA0A6",
+   "color": "#C9CDD0",
    "label": false,
    "marks": [
     {
@@ -1071,7 +1071,7 @@
     ]
    ],
    "info": "Vier winzige Schrauben halten die Platine in der Rückschale. Mit einem Feinmechaniker-Schraubendreher (PH00) lösen.",
-   "color": "#9AA0A6",
+   "color": "#C9CDD0",
    "label": false,
    "marks": [
     {
@@ -1279,12 +1279,15 @@
    ],
    "info": "Gummierte Kunststoffwanne, in der alle Teile liegen. Leer ausgebaut ist sie reiner Kunststoff.",
    "color": "#2B2F33",
+   "wand": 1.5,
+   "boden": 1.5,
    "marks": [
     {
      "shape": "box",
      "x": 3,
      "y": 3,
      "w": 109,
+     "zeichnung": true,
      "d": 154,
      "r": 6,
      "fill": "#23272A"
@@ -1294,6 +1297,7 @@
      "x": 74,
      "y": 154,
      "w": 8,
+     "zeichnung": true,
      "d": 3,
      "r": 1,
      "fill": "#14171A"
@@ -1303,6 +1307,7 @@
      "x": 53,
      "y": 155,
      "w": 9,
+     "zeichnung": true,
      "d": 2,
      "r": 1,
      "fill": "#14171A"

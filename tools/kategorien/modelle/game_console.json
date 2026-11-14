@@ -1240,6 +1240,8 @@
    ],
    "info": "Untere Gehäusehälfte aus Kunststoff mit Gummifüßen. Trägt Platine und Netzteil; leer ab in die Elektro-Sammlung.",
    "color": "#2B2F33",
+   "wand": 3,
+   "boden": 2.5,
    "marks": [
     {
      "shape": "cyl",
@@ -1247,7 +1249,8 @@
      "y": 20,
      "w": 20,
      "d": 20,
-     "fill": "#1E2226"
+     "fill": "#1E2226",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -1255,7 +1258,8 @@
      "y": 20,
      "w": 20,
      "d": 20,
-     "fill": "#1E2226"
+     "fill": "#1E2226",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -1263,7 +1267,8 @@
      "y": 220,
      "w": 20,
      "d": 20,
-     "fill": "#1E2226"
+     "fill": "#1E2226",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -1271,7 +1276,8 @@
      "y": 220,
      "w": 20,
      "d": 20,
-     "fill": "#1E2226"
+     "fill": "#1E2226",
+     "zeichnung": true
     }
    ]
   }

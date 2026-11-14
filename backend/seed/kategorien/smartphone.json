@@ -963,7 +963,9 @@
     ]
    ],
    "info": "Aus einem Aluminiumblock gefräst. Trägt alle Bauteile und dient mit seinen Kunststofffugen als Antenne.",
-   "color": "#B4BABE",
+   "color": "#C4C9CD",
+   "wand": 2.5,
+   "boden": 0,
    "marks": [
     {
      "shape": "box",
@@ -972,7 +974,8 @@
      "w": 71,
      "d": 146,
      "r": 8,
-     "fill": "#8E969B"
+     "fill": "#8E969B",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -980,7 +983,8 @@
      "y": 147.5,
      "w": 1.4,
      "d": 1.4,
-     "fill": "#5E656A"
+     "fill": "#5E656A",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -988,7 +992,8 @@
      "y": 147.5,
      "w": 1.4,
      "d": 1.4,
-     "fill": "#5E656A"
+     "fill": "#5E656A",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -996,7 +1001,8 @@
      "y": 147.5,
      "w": 1.4,
      "d": 1.4,
-     "fill": "#5E656A"
+     "fill": "#5E656A",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -1004,7 +1010,8 @@
      "y": 147.5,
      "w": 1.4,
      "d": 1.4,
-     "fill": "#5E656A"
+     "fill": "#5E656A",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -1012,7 +1019,8 @@
      "y": 147.5,
      "w": 1.4,
      "d": 1.4,
-     "fill": "#5E656A"
+     "fill": "#5E656A",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -1020,7 +1028,8 @@
      "y": 147.5,
      "w": 1.4,
      "d": 1.4,
-     "fill": "#5E656A"
+     "fill": "#5E656A",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -1028,7 +1037,8 @@
      "y": 147.5,
      "w": 1.4,
      "d": 1.4,
-     "fill": "#5E656A"
+     "fill": "#5E656A",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -1036,7 +1046,8 @@
      "y": 147.5,
      "w": 1.4,
      "d": 1.4,
-     "fill": "#5E656A"
+     "fill": "#5E656A",
+     "zeichnung": true
     }
    ]
   },
@@ -1163,7 +1174,7 @@
     ]
    ],
    "info": "Glas statt Metall, damit kabelloses Laden funktioniert. Bricht leicht und ist teuer zu tauschen.",
-   "color": "#C9DEDF",
+   "color": "#3B4146",
    "marks": [
     {
      "shape": "box",
@@ -1172,7 +1183,7 @@
      "w": 28,
      "d": 40,
      "r": 6,
-     "fill": "#B5CACB"
+     "fill": "#2E3338"
     }
    ]
   }

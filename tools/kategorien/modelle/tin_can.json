@@ -69,7 +69,7 @@
     ]
    ],
    "info": "Weißblech mit eingeprägter Ritzlinie. Die Kante ist scharf: in die leere Dose drücken und mit ihr in die Gelbe Tonne geben.",
-   "color": "#C3C8CC",
+   "color": "#E2E5E8",
    "marks": [
     {
      "shape": "cyl",
@@ -122,13 +122,16 @@
     ]
    ],
    "info": "Stahlblech, dünn verzinnt (Weißblech), zu einem Rohr gerollt und verschweißt. Die Sicken machen ihn stabil. Ein Magnet bleibt daran hängen, so erkennt man Stahl.",
-   "color": "#C3C8CC",
+   "color": "#E2E5E8",
+   "wand": 1,
+   "boden": 0,
    "marks": [
     {
      "shape": "cyl",
      "x": 2,
      "y": 2,
      "w": 68,
+     "zeichnung": true,
      "fill": "#E6E2D6"
     }
    ]
@@ -162,7 +165,7 @@
     ]
    ],
    "info": "Wie der Deckel auf den Rumpf gefalzt, aber ohne Aufreißlinie. Bleibt an der Dose.",
-   "color": "#C3C8CC",
+   "color": "#E2E5E8",
    "marks": [
     {
      "shape": "cyl",
@@ -185,16 +188,14 @@
    "material_id": "paper",
    "name": "Papierbanderole",
    "short": "Etikett",
-   "shape": "box",
-   "x": 73,
-   "y": 11.5,
-   "w": 0.3,
-   "d": 50,
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 73,
    "z": 10,
    "h": 90,
-   "r": 0,
    "explode": [
-    50,
+    100,
     0,
     0
    ],
@@ -207,7 +208,8 @@
    ],
    "info": "Rundum geklebtes Papier. Darf dranbleiben, beim Einschmelzen verbrennt es.",
    "color": "#D9503F",
-   "sortBias": 100
+   "wand": 0.4,
+   "boden": 0
   }
  ]
 }

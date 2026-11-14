@@ -10,8 +10,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from bau import teil, mark, skaliere_masse, schreibe  # noqa: E402
 
-ALU = '#C9CED3'
-DEK = '#B9C0C6'
+ALU = '#DDE1E4'
+DEK = '#CDD3D8'
 A = dict(material_id='aluminium', materials=[['alu', 100]])
 C = 33
 
@@ -55,7 +55,7 @@ teile = [
          info='Der Boden ist nach innen gewölbt (Dom). So hält die dünne Dose den Druck der Kohlensäure aus.'),
     teil('druck', 'aluminium_can_body', 'Außenlack und Druck', 'Druck', 'cyl', **rund(66.4, 10, 88), mass=0.25,
          materials=[['druck', 100]], color='#C8362F', sortBias=3,
-         marks=[mark('cyl', 1.2, 1.2, 64, fill=ALU)],
+         wand=0.2, boden=0, marks=[mark('cyl', 1.2, 1.2, 64, fill=ALU, zeichnung=True)],
          info='Farbe und Lack verbrennen beim Einschmelzen. Das Aluminium lässt sich danach ohne Qualitätsverlust '
               'immer wieder recyceln.'),
 ]

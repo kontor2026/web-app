@@ -80,9 +80,9 @@ teile = [
          info='Parallel zur ersten Zelle geschaltet, zusammen 10.000 mAh bei 3,7 Volt.',
          color='#9DA6AD', marks=[mark('box', 3, 6, 24.5, 80, 2), mark('box', 6, 12, 18.5, 20, 1, '#C8423A')]),
     teil('unterschale', 'plastic_housing', 'Gehäuse-Unterschale', 'Unterschale', 'box',
-         x=0, y=0, w=70, d=140, z=0, h=8, r=9, mass=26,
+         x=0, y=0, w=70, d=140, z=0, h=8, r=9, mass=26, wand=1.8,
          info='Wanne mit Stegen, in der Zellen und Platine liegen. Oft mit Schaumstoff gepolstert.',
-         color=GEH, marks=[mark('box', 18, 132, 9, 8, 1.5), mark('box', 34, 133, 13.5, 7, 0.5)]),
+         color=GEH, marks=[mark('box', 18, 132, 9, 8, 1.5, zeichnung=True), mark('box', 34, 133, 13.5, 7, 0.5, zeichnung=True)]),
 ]
 explodiere(teile, abstand=45, abstaende={'nickel': 20, 'ladechip': 12, 'spule': 12}, nach_liste=True)
 schreibe('power_bank', teile)

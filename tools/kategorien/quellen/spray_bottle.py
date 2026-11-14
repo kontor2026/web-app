@@ -10,6 +10,22 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from bau import teil, mark, explodiere, skaliere_masse, schreibe  # noqa: E402
 
+
+def scheiben(teile, pid, n):
+    """Foto-Ansicht: hohes Teil in n Scheiben teilen, damit die glatte Hülle (Stapel) nur oben einzieht."""
+    i = next(k for k, p in enumerate(teile) if p['id'] == pid)
+    p = teile[i]
+    zs = [round(p['z'] + k * p['h'] / n, 2) for k in range(n)] + [p['z'] + p['h']]
+    neu = []
+    for k in range(n):
+        q = dict(p, z=zs[k], h=round(zs[k + 1] - zs[k], 2), mass=round(p['mass'] / n, 3))
+        if k < n - 1:
+            q.update(id=f'{pid}_{k + 1}', label=False, marks=None)
+            q = {f: v for f, v in q.items() if v is not None}
+        neu.append(q)
+    teile[i:i + 1] = neu[::-1]
+
+
 FLASCHE = '#F2F4F5'
 TRIGGER = '#2E8B57'
 teile = [
@@ -43,7 +59,7 @@ teile = [
     teil('hals', 'hdpe_bottle_body', 'Flaschenhals mit Gewinde', 'Hals', 'cyl',
          x=22, y=11, w=28, z=188, h=16, mass=3,
          info='Standardgewinde, auf das der Sprühkopf passt. Deshalb lassen sich Sprühköpfe oft weiterverwenden.',
-         color=FLASCHE, marks=[mark('cyl', 4, 4, 20, fill='#D6D9DB')]),
+         color=FLASCHE, wand=2.5, boden=0, marks=[mark('cyl', 4, 4, 20, fill='#D6D9DB', zeichnung=True)]),
     teil('schulter', 'hdpe_bottle_body', 'Flaschenschulter', 'Schulter', 'cyl',
          x=12, y=5, w=48, d=40, z=175, h=13, mass=4,
          info='Übergang vom ovalen Körper zum runden Hals.', color=FLASCHE, label=False),
@@ -60,10 +76,10 @@ teile = [
          info='Schlauch bis fast zum Boden, durch den die Pumpe die Flüssigkeit ansaugt. Bleibt am Sprühkopf.',
          color='#EDEDE8'),
     teil('etikett', 'plastic_label', 'Etikett', 'Etikett', 'cyl',
-         x=-0.5, y=-0.5, w=73, d=51, z=40, h=135, mass=1.2,
+         x=-1.2, y=-1.2, w=74.4, d=52.4, z=40, h=135, mass=1.2,
          materials=[['pp', 92], ['druck', 5], ['klebstoff', 3]],
          info='PP-Folienetikett rundum mit Gefahrenhinweisen. Passt zum Kunststoffrecycling und darf dranbleiben.',
-         color=TRIGGER, sortBias=1, marks=[mark('cyl', 1, 1, 71, 49, fill=FLASCHE)]),
+         color=TRIGGER, sortBias=1, wand=0.4, boden=0, marks=[mark('cyl', 1.7, 1.7, 71, 49, fill=FLASCHE, zeichnung=True)]),
 ]
 # Innenteile zusammengebaut hinter Haube und Flasche zeichnen
 for p in teile:
@@ -73,5 +89,6 @@ EX = {'duese': [30, 0, 150], 'haube': [0, 0, 150], 'feder': [0, 0, 92], 'pumpe':
       'abzug': [45, 0, 70], 'verschlussring': [0, 0, 36], 'steigrohr': [-50, 50, 0], 'etikett': [95, 0, 0]}
 for p in teile:
     p['explode'] = EX.get(p['id'], [0, 0, 0])
+scheiben(teile, 'rumpf', 4)
 skaliere_masse(teile, oid='spray_bottle')
 schreibe('spray_bottle', teile)

@@ -210,6 +210,7 @@
    ],
    "info": "Rohrheizkörper: Heizdraht in Keramikpulver in einem Stahlrohr, als U auf die Rückseite der Platte gepresst. Erst ganz abkühlen lassen.",
    "color": "#9AA2A6",
+   "form": "liegend_y",
    "marks": [
     {
      "shape": "box",
@@ -218,7 +219,8 @@
      "w": 6,
      "d": 180,
      "r": 3,
-     "fill": "#B5BBC0"
+     "fill": "#B5BBC0",
+     "zeichnung": true
     }
    ]
   },
@@ -259,6 +261,7 @@
    "info": "Rohrheizkörper: Heizdraht in Keramikpulver in einem Stahlrohr, als U auf die Rückseite der Platte gepresst. Erst ganz abkühlen lassen.",
    "color": "#9AA2A6",
    "label": false,
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
@@ -267,7 +270,8 @@
      "w": 150,
      "d": 6,
      "r": 3,
-     "fill": "#B5BBC0"
+     "fill": "#B5BBC0",
+     "zeichnung": true
     }
    ]
   },
@@ -308,6 +312,7 @@
    "info": "Rohrheizkörper: Heizdraht in Keramikpulver in einem Stahlrohr, als U auf die Rückseite der Platte gepresst. Erst ganz abkühlen lassen.",
    "color": "#9AA2A6",
    "label": false,
+   "form": "liegend_y",
    "marks": [
     {
      "shape": "box",
@@ -316,7 +321,8 @@
      "w": 6,
      "d": 180,
      "r": 3,
-     "fill": "#B5BBC0"
+     "fill": "#B5BBC0",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -325,7 +331,8 @@
      "w": 8,
      "d": 10,
      "r": 2,
-     "fill": "#C4672D"
+     "fill": "#C4672D",
+     "zeichnung": true
     }
    ]
   },
@@ -471,6 +478,7 @@
    ],
    "info": "Rohrheizkörper: Heizdraht in Keramikpulver in einem Stahlrohr, als U auf die Rückseite der Platte gepresst. Erst ganz abkühlen lassen.",
    "color": "#9AA2A6",
+   "form": "liegend_y",
    "marks": [
     {
      "shape": "box",
@@ -479,7 +487,8 @@
      "w": 6,
      "d": 180,
      "r": 3,
-     "fill": "#B5BBC0"
+     "fill": "#B5BBC0",
+     "zeichnung": true
     }
    ]
   },
@@ -520,6 +529,7 @@
    "info": "Rohrheizkörper: Heizdraht in Keramikpulver in einem Stahlrohr, als U auf die Rückseite der Platte gepresst. Erst ganz abkühlen lassen.",
    "color": "#9AA2A6",
    "label": false,
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
@@ -528,7 +538,8 @@
      "w": 150,
      "d": 6,
      "r": 3,
-     "fill": "#B5BBC0"
+     "fill": "#B5BBC0",
+     "zeichnung": true
     }
    ]
   },
@@ -569,6 +580,7 @@
    "info": "Rohrheizkörper: Heizdraht in Keramikpulver in einem Stahlrohr, als U auf die Rückseite der Platte gepresst. Erst ganz abkühlen lassen.",
    "color": "#9AA2A6",
    "label": false,
+   "form": "liegend_y",
    "marks": [
     {
      "shape": "box",
@@ -577,7 +589,8 @@
      "w": 6,
      "d": 180,
      "r": 3,
-     "fill": "#B5BBC0"
+     "fill": "#B5BBC0",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -586,7 +599,8 @@
      "w": 8,
      "d": 10,
      "r": 2,
-     "fill": "#C4672D"
+     "fill": "#C4672D",
+     "zeichnung": true
     }
    ]
   },
@@ -896,6 +910,7 @@
    ],
    "info": "Etwa 80 cm PVC-Mantel mit Stecker. Längs aufschlitzen, um die Kupferadern freizulegen.",
    "color": "#2E3338",
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
@@ -904,7 +919,8 @@
      "w": 10,
      "d": 6,
      "r": 2,
-     "fill": "#555"
+     "fill": "#555",
+     "zeichnung": true
     }
    ]
   },
@@ -935,7 +951,8 @@
     ]
    ],
    "info": "Drei Kupferadern. Kupfer lässt sich fast verlustfrei wiederverwerten.",
-   "color": "#B87333"
+   "color": "#B87333",
+   "form": "liegend_x"
   }
  ]
 }

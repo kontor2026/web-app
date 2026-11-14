@@ -1736,6 +1736,7 @@
    ],
    "info": "1,5 m Kaltgerätekabel mit PVC-Mantel. Stecker abschneiden und längs aufschlitzen.",
    "color": "#2B2F33",
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
@@ -1744,7 +1745,8 @@
      "w": 30,
      "d": 10,
      "r": 2,
-     "fill": "#4A5156"
+     "fill": "#4A5156",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -1753,7 +1755,8 @@
      "w": 30,
      "d": 10,
      "r": 2,
-     "fill": "#4A5156"
+     "fill": "#4A5156",
+     "zeichnung": true
     }
    ]
   },
@@ -1784,7 +1787,8 @@
     ]
    ],
    "info": "Drei Kupferadern (Phase, Neutralleiter, Schutzleiter). Reines Kupfer lohnt sich beim Schrotthändler.",
-   "color": "#B87333"
+   "color": "#B87333",
+   "form": "liegend_x"
   }
  ]
 }

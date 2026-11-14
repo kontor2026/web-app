@@ -50,19 +50,19 @@ teile = [
          info='Großer Lautsprecher für den Bass, strahlt nach unten. Stahlkorb mit Papiermembran und Gummisicke.',
          marks=[mark('cyl', 6, 6, 64, fill='#2B2F33'), mark('cyl', 26, 26, 24, fill='#9AA2A8')]),
     teil('innengehaeuse', 'plastic_housing', 'Innengehäuse', 'Innengehäuse', 'cyl',
-         x=2, y=2, w=96, z=10, h=128, mass=250, color='#3A3F44',
+         x=2, y=2, w=96, z=10, h=128, mass=250, color='#3A3F44', wand=3, boden=0,
          info='Stabiles Kunststoffrohr, in dem alle Teile verschraubt sind. Es bildet den Resonanzraum für den Bass.',
-         marks=[mark('cyl', 4, 4, 88, fill='#2B2F33')]),
+         marks=[mark('cyl', 4, 4, 88, fill='#2B2F33', zeichnung=True)]),
     teil('stoffbezug', 'speaker_fabric_cover', 'Stoffbezug', 'Stoffbezug', 'cyl',
-         x=0, y=0, w=100, z=10, h=130, explode=[130, -130, 0], mass=25, color='#8A9096',
+         x=0, y=0, w=100, z=10, h=130, explode=[130, -130, 0], mass=25, color='#8A9096', wand=1.5, boden=0,
          info='Polyestergewebe über einem dünnen Gitter. Sockel abhebeln, dann den Stoff nach oben abrollen. Waschbar und wiederverwendbar.',
-         marks=[mark('cyl', 2, 2, 96, fill='#5E656A')]),
+         marks=[mark('cyl', 2, 2, 96, fill='#5E656A', zeichnung=True)]),
     teil('netzteil', 'power_adapter', 'Steckernetzteil', 'Netzteil', 'box',
          x=30, y=30, w=40, d=40, z=14, h=30, r=6, explode=[-130, 130, 0], mass=90,
          materials=[['pcabs', 35], ['kupfer', 25], ['ferrit', 15], ['fr4', 15], ['chip', 5], ['elektrolyt', 5]], color='#F2F2F2',
          info='Wandelt 230 Volt in 15 Volt um. Nicht öffnen; zusammen mit dem Lautsprecher als Elektroschrott abgeben.',
          marks=[mark('box', 8, 8, 24, 24, 4, '#E4E6E8')]),
-    teil('kabel', 'power_adapter', 'Anschlusskabel', 'Kabel', 'box', material_id='pvc',
+    teil('kabel', 'power_adapter', 'Anschlusskabel', 'Kabel', 'box', form='liegend_x', material_id='pvc',
          x=10, y=74, w=80, d=6, z=12, h=6, r=3, explode=[-150, 200, 0], mass=40, materials=[['pvc', 60], ['kupfer', 35], ['pcabs', 5]],
          color='#F2F2F2', info='1,5 m Kabel mit Rundstecker. PVC-Mantel längs aufschlitzen, um die Kupferadern zu gewinnen.'),
     teil('sockel', 'plastic_housing', 'Sockel mit Gummifuß', 'Sockel', 'cyl',
@@ -73,4 +73,7 @@ teile = [
 
 explodiere(teile, abstand=32, fest=('sockel',), abstaende={'soc': 10, 'innengehaeuse': 45})
 skaliere_masse(teile, oid='smart_speaker')
+for p in teile:   # Foto-Ansicht: echte Formen (form) tragen keine aufgemalten Details
+    if p.get('form') and p.get('marks'):
+        p['marks'] = [dict(k, zeichnung=True) for k in p['marks']]
 schreibe('smart_speaker', teile)

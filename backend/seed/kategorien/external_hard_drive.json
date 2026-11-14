@@ -213,7 +213,7 @@
     ]
    ],
    "info": "Dünnes Stahlblech, mit Torx-Schrauben verschraubt (eine steckt oft unter dem Etikett). Innen ist es staubfrei.",
-   "color": "#B9BEC2",
+   "color": "#D9DCDF",
    "marks": [
     {
      "shape": "box",
@@ -296,7 +296,7 @@
     ]
    ],
    "info": "Schwenkt in Millisekunden über die Scheibe. Der Kopf an der Spitze schwebt nur wenige Nanometer über der Oberfläche.",
-   "color": "#9BA3A8",
+   "color": "#C9CDD0",
    "marks": [
     {
      "shape": "box",
@@ -345,7 +345,7 @@
     ]
    ],
    "info": "Aluminiumscheibe mit hauchdünner Magnetschicht, dreht sich 5.400-mal pro Minute. Zum Datenschutz zerkratzen oder verbiegen.",
-   "color": "#D9DDE0",
+   "color": "#EEF0F2",
    "marks": [
     {
      "shape": "cyl",
@@ -393,7 +393,7 @@
     ]
    ],
    "info": "Flacher Motor mit Kupferspulen und Ringmagnet, dreht die Scheibe. Steckt fest in der Grundplatte.",
-   "color": "#7C858C",
+   "color": "#C9CDD0",
    "marks": [
     {
      "shape": "cyl",
@@ -464,7 +464,7 @@
     ]
    ],
    "info": "Gegossenes Aluminium, trägt Motor, Arm und Magnet. Ausgeschlachtet ist sie gut verwertbares Altmetall.",
-   "color": "#C9CED2",
+   "color": "#DADDE0",
    "marks": [
     {
      "shape": "cyl",
@@ -753,12 +753,14 @@
    ],
    "info": "Wanne mit Gummifüßen, das Laufwerk liegt in Gummi-Puffern. Kunststoff ohne Elektronik.",
    "color": "#2B2F33",
+   "wand": 1.5,
    "marks": [
     {
      "shape": "box",
      "x": 4,
      "y": 3,
      "w": 72,
+     "zeichnung": true,
      "d": 102,
      "r": 6,
      "fill": "#23272A"

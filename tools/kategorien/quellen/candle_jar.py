@@ -39,18 +39,19 @@ teile = [
          info='Paraffin mit Duftöl und Farbe. Reste im warmen Wasserbad schmelzen und ausgießen, daraus lassen '
               'sich neue Kerzen machen. Wachs nie in den Ausguss kippen.'),
     teil('glas_rand', 'glass_container', 'Glasrand', 'Glas', 'cyl', **rund(80, 70, 20), mass=35,
-         color=GLAS, opacity=0.45, sortBias=-25, marks=[mark('cyl', 4, 4, 72, fill='#EEF5F6')],
+         color=GLAS, opacity=0.45, sortBias=-25, wand=4, boden=0,
+         marks=[mark('cyl', 4, 4, 72, fill='#EEF5F6', zeichnung=True)],
          info='Dickwandiges Behälterglas. Ganz leer und ohne Wachsreste in den Altglascontainer, oder gespült '
               'als Vorratsglas oder Stiftebecher weiterverwenden.'),
     teil('glas_wand', 'glass_container', 'Glaswand', 'Glas', 'cyl', **rund(80, 8, 62), mass=85,
-         color=GLAS, opacity=0.45, sortBias=-25, label=False,
+         color=GLAS, opacity=0.45, sortBias=-25, label=False, wand=4, boden=0,
          info='Dickwandiges Behälterglas, es hält die Hitze der Flamme aus.'),
     teil('glas_boden', 'glass_container', 'Glasboden', 'Boden', 'cyl', **rund(80, 0, 8), mass=60,
          color=GLAS, opacity=0.6, label=False,
          info='Massiver Boden, damit die Wärme der Flamme den Tisch nicht erreicht.'),
     teil('etikett', 'glass_container', 'Papieretikett', 'Etikett', 'cyl', **rund(80.6, 10, 26), explode=[115, 0, 0],
          material_id='paper', mass=0.5, materials=[['papier', 85], ['druck', 8], ['klebstoff', 7]],
-         color='#3F5E4C', sortBias=40, marks=[mark('cyl', 0.8, 0.8, 79, fill='#B59DA4')],
+         color='#3F5E4C', sortBias=40, wand=0.3, boden=0, marks=[mark('cyl', 0.8, 0.8, 79, fill='#B59DA4', zeichnung=True)],
          info='Bedrucktes Papier mit Klebstoff. Darf am Glas bleiben, die Glashütte brennt es ab.'),
 ]
 explodiere(teile, abstand=25, nach_liste=True,

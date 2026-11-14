@@ -253,12 +253,15 @@
    ],
    "info": "Standardgewinde, auf das der Sprühkopf passt. Deshalb lassen sich Sprühköpfe oft weiterverwenden.",
    "color": "#F2F4F5",
+   "wand": 2.5,
+   "boden": 0,
    "marks": [
     {
      "shape": "cyl",
      "x": 4,
      "y": 4,
      "w": 20,
+     "zeichnung": true,
      "fill": "#D6D9DB"
     }
    ]
@@ -303,14 +306,14 @@
    "y": 0,
    "w": 72,
    "d": 50,
-   "z": 6,
-   "h": 169,
+   "z": 132.75,
+   "h": 42.25,
    "explode": [
     0,
     0,
     0
    ],
-   "mass": 28.4,
+   "mass": 7.1,
    "materials": [
     [
      "hdpe",
@@ -319,6 +322,93 @@
    ],
    "info": "HDPE, Recyclingcode 2. Reiniger restlos aufbrauchen, nicht mit anderen Reinigern mischen. Mit Sprühkopf in die Gelbe Tonne.",
    "color": "#F2F4F5"
+  },
+  {
+   "id": "rumpf_3",
+   "component_id": "hdpe_bottle_body",
+   "material_id": "hdpe",
+   "name": "Flaschenkörper",
+   "short": "Flasche",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 72,
+   "d": 50,
+   "z": 90.5,
+   "h": 42.25,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 7.1,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "HDPE, Recyclingcode 2. Reiniger restlos aufbrauchen, nicht mit anderen Reinigern mischen. Mit Sprühkopf in die Gelbe Tonne.",
+   "color": "#F2F4F5",
+   "label": false
+  },
+  {
+   "id": "rumpf_2",
+   "component_id": "hdpe_bottle_body",
+   "material_id": "hdpe",
+   "name": "Flaschenkörper",
+   "short": "Flasche",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 72,
+   "d": 50,
+   "z": 48.25,
+   "h": 42.25,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 7.1,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "HDPE, Recyclingcode 2. Reiniger restlos aufbrauchen, nicht mit anderen Reinigern mischen. Mit Sprühkopf in die Gelbe Tonne.",
+   "color": "#F2F4F5",
+   "label": false
+  },
+  {
+   "id": "rumpf_1",
+   "component_id": "hdpe_bottle_body",
+   "material_id": "hdpe",
+   "name": "Flaschenkörper",
+   "short": "Flasche",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 72,
+   "d": 50,
+   "z": 6,
+   "h": 42.25,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 7.1,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "HDPE, Recyclingcode 2. Reiniger restlos aufbrauchen, nicht mit anderen Reinigern mischen. Mit Sprühkopf in die Gelbe Tonne.",
+   "color": "#F2F4F5",
+   "label": false
   },
   {
    "id": "boden",
@@ -384,10 +474,10 @@
    "name": "Etikett",
    "short": "Etikett",
    "shape": "cyl",
-   "x": -0.5,
-   "y": -0.5,
-   "w": 73,
-   "d": 51,
+   "x": -1.2,
+   "y": -1.2,
+   "w": 74.4,
+   "d": 52.4,
    "z": 40,
    "h": 135,
    "explode": [
@@ -413,12 +503,15 @@
    "info": "PP-Folienetikett rundum mit Gefahrenhinweisen. Passt zum Kunststoffrecycling und darf dranbleiben.",
    "color": "#2E8B57",
    "sortBias": 1,
+   "wand": 0.4,
+   "boden": 0,
    "marks": [
     {
      "shape": "cyl",
-     "x": 1,
-     "y": 1,
+     "x": 1.7,
+     "y": 1.7,
      "w": 71,
+     "zeichnung": true,
      "d": 49,
      "fill": "#F2F4F5"
     }

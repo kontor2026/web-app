@@ -150,13 +150,16 @@
     ]
    ],
    "info": "PP hält die Hitze aus der Mikrowelle aus. Schwarzer Kunststoff wird von Sortieranlagen schlecht erkannt; Essensreste auskratzen, ausspülen ist nicht nötig.",
-   "color": "#2E3236",
+   "color": "#2A2C2E",
+   "wand": 6,
+   "boden": 0,
    "marks": [
     {
      "shape": "box",
      "x": 6,
      "y": 6,
      "w": 168,
+     "zeichnung": true,
      "d": 108,
      "r": 10,
      "fill": "#1D2023"
@@ -166,6 +169,7 @@
      "x": 18,
      "y": 16,
      "w": 144,
+     "zeichnung": true,
      "d": 88,
      "r": 8,
      "fill": "#25292D"
@@ -208,8 +212,10 @@
     ]
    ],
    "info": "Die Wand ist nur etwa 0,5 mm dick. Rillen in der Wand machen die Schale steif.",
-   "color": "#2E3236",
-   "label": false
+   "color": "#2A2C2E",
+   "label": false,
+   "wand": 1,
+   "boden": 0
   },
   {
    "id": "boden",
@@ -238,8 +244,9 @@
     ]
    ],
    "info": "Die Schale wird nach unten schmaler, damit sich viele Schalen ineinander stapeln lassen.",
-   "color": "#2E3236",
-   "label": false
+   "color": "#2A2C2E",
+   "label": false,
+   "wand": 1
   }
  ]
 }

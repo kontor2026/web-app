@@ -43,21 +43,21 @@ def fingerschutz():
 
 teile = [
     teil('spitze', 'soldering_tip', 'Lötspitze', 'Spitze', 'box',
-         x=10, y=155, w=5, d=65, z=10, h=5, r=2.5, explode=[0, 105, 0], mass=6,
+         x=10, y=155, w=5, d=65, z=10, h=5, r=2.5, explode=[0, 105, 0], form='liegend_y', mass=6,
          materials=[['kupfer', 85], ['stahl', 10], ['nickel', 5]], color='#A8AEB2',
          info='Kupferkern mit Eisen- und Nickelschicht, damit das Lot nicht das Kupfer auflöst. Abkühlen lassen, dann nach vorn herausziehen.',
          marks=[mark('box', 0.5, 52, 4, 12, 2, '#C8CDD0')]),
     teil('ueberwurf', 'soldering_tip', 'Überwurfhülse mit Mutter', 'Überwurfhülse', 'box', material_id='steel',
-         x=7.5, y=165, w=10, d=25, z=7.5, h=10, r=5, explode=[0, 65, 0], mass=6, materials=[['stahl', 100]], color='#9AA2A8',
+         x=7.5, y=165, w=10, d=25, z=7.5, h=10, r=5, explode=[0, 65, 0], form='liegend_y', mass=6, materials=[['stahl', 100]], color='#C9CDD0',
          info='Edelstahlhülse, die die Spitze festhält. Die Rändelmutter am Griff aufschrauben, erst wenn alles kalt ist.',
          marks=[mark('box', 1, 20, 8, 5, 2, '#7D858B')]),
     teil('heizelement', 'heating_element', 'Heizelement', 'Heizelement', 'box',
-         x=9.5, y=135, w=6, d=45, z=9.5, h=6, r=3, explode=[0, 35, 22], mass=8,
+         x=9.5, y=135, w=6, d=45, z=9.5, h=6, r=3, explode=[0, 35, 22], form='liegend_y', mass=8,
          materials=[['nichrom', 30], ['keramik', 50], ['glimmer', 20]], color='#C4672D',
          info='Nickel-Chrom-Draht auf einem Keramikrohr, mit Glimmer isoliert. Wird über 350 Grad heiß.',
          marks=raster(0.5, 2, 1, 10, 5, 2, 0, 4.2, r=1, fill='#8C7B6B')),
     teil('heizhuelse', 'heating_element', 'Heizhülse (Schaft)', 'Heizhülse', 'box', material_id='steel',
-         x=8.5, y=130, w=8, d=55, z=8.5, h=8, r=4, explode=[0, 35, 0], mass=10, materials=[['stahl', 100]], color='#B5BBC0',
+         x=8.5, y=130, w=8, d=55, z=8.5, h=8, r=4, explode=[0, 35, 0], form='liegend_y', mass=10, materials=[['stahl', 100]], color='#D5D9DC',
          info='Dünnes Edelstahlrohr um das Heizelement. Nicht anfassen, solange der Kolben eingesteckt ist.'),
     *griff_scheiben(),
     *fingerschutz(),
@@ -67,16 +67,19 @@ teile = [
          marks=[mark('cyl', 1.5, 3, 4, fill='#B7BCC0'), mark('cyl', 5.5, 9, 4, fill='#B7BCC0')],
          info='Keramikklemme im Griff: Hier sind die Kabeladern mit kleinen Schrauben an den Drähten des Heizelements befestigt.'),
     teil('knickschutz', 'plastic_handle', 'Knickschutz', 'Knickschutz', 'box', material_id='pvc',
-         x=7.5, y=22, w=10, d=28, z=7.5, h=10, r=5, explode=[0, -30, 0], mass=4, materials=[['pvc', 100]], color=SCHWARZ,
+         x=7.5, y=22, w=10, d=28, z=7.5, h=10, r=5, explode=[0, -30, 0], form='liegend_y', mass=4, materials=[['pvc', 100]], color=SCHWARZ,
          info='Weiche Tülle, damit das Kabel am Griff nicht bricht. Wird mit dem Kabel abgezogen.'),
     teil('kabel', 'cable_insulation', 'Netzkabel (Isolierung)', 'Kabel', 'box',
-         x=9, y=0, w=7, d=25, z=9, h=7, r=3.5, explode=[0, -50, 0], mass=14, materials=[['pvc', 90], ['pp', 10]],
+         x=9, y=0, w=7, d=25, z=9, h=7, r=3.5, explode=[0, -50, 0], form='liegend_y', mass=14, materials=[['pvc', 90], ['pp', 10]],
          color=SCHWARZ,
          info='Etwa 1,5 m Kabel, hier als Stück gezeigt. PVC-Mantel längs aufschlitzen; der Eurostecker ist eingespritzt.'),
     teil('kupferadern', 'cable_copper_core', 'Kupferadern', 'Kupferadern', 'box',
-         x=10.5, y=0, w=4, d=40, z=10.5, h=4, r=1, explode=[25, -50, 0], mass=7, color='#B87333',
+         x=10.5, y=0, w=4, d=40, z=10.5, h=4, r=1, explode=[25, -50, 0], form='liegend_y', mass=7, color='#B87333',
          info='Zwei Kupferadern versorgen das Heizelement. Kupfer ist wertvoll.'),
 ]
 
 skaliere_masse(teile, oid='soldering_iron')
+for p in teile:  # gerundete Formen (form): marks nur in der Zeichnung, oben flach würden sie schweben
+    if p.get('form'):
+        p['marks'] = [dict(m, zeichnung=True) for m in p.get('marks') or []]
 schreibe('soldering_iron', teile)

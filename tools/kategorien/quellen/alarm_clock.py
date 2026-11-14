@@ -23,7 +23,7 @@ teile = [
          info='Gummitasten für Uhrzeit, Weckzeit und Alarm an/aus. Drücken unten auf Kontaktfelder der Platine.',
          marks=raster(4, 2, 4, 1, 16, 6, 21, r=2, fill='#6E767C')),
     teil('schrauben', 'plastic_housing', 'Gehäuseschrauben (4 Stück)', 'Schrauben', 'cyl', material_id='steel',
-         x=48, y=12, w=4, z=30, h=12, mass=2, explode=[0, -75, 100], color='#9AA2A8',
+         x=48, y=12, w=4, z=30, h=12, mass=2, explode=[0, -75, 100], color='#C9CDD0',
          info='Kleine Kreuzschlitzschrauben im Batteriefach halten beide Schalen zusammen.',
          marks=[mark('cyl', 1, 1, 2, fill='#5E656A')]),
     teil('sichtscheibe', 'plastic_housing', 'Sichtscheibe', 'Sichtscheibe', 'box', material_id='pc',
@@ -84,5 +84,14 @@ teile = [
          info='Rastet hinten unten ein. Mit dem Daumen auf den Pfeil drücken und herunterschieben.'),
 ]
 
+# Foto-Ansicht: echte Formen (Kabel liegend, Spulen als Ring); Details darauf nur in der Zeichnung
+FORMEN = {'batterie_1': ('liegend_x', 1), 'batterie_2': ('liegend_x', 1)}
+for p in teile:
+    if p['id'] in FORMEN:
+        p['form'], nur_zeichnung = FORMEN[p['id']]
+        p.pop('wand', None)
+        p.pop('boden', None)
+        for m in (p.get('marks') or []) if nur_zeichnung else []:
+            m['zeichnung'] = True
 skaliere_masse(teile, oid='alarm_clock')
 schreibe('alarm_clock', teile)

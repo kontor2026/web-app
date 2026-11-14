@@ -35,7 +35,7 @@ teile = [
     teil('hals', 'squeeze_bottle_body', 'Flaschenhals mit Gewinde', 'Hals', 'cyl',
          x=17, y=9.5, w=26, z=150, h=14, mass=1.5,
          info='Kurzer Gewindehals. Unter dem Deckel klebt beim Kauf oft eine Siegelfolie.',
-         color=FLASCHE, marks=[mark('cyl', 4, 4, 18, fill='#CFC6B8')]),
+         color=FLASCHE, wand=2.5, boden=0, marks=[mark('cyl', 4, 4, 18, fill='#CFC6B8', zeichnung=True)]),
     teil('schulter', 'squeeze_bottle_body', 'Flaschenschulter', 'Schulter', 'cyl',
          x=8, y=6, w=44, d=33, z=140, h=10, mass=2,
          info='Übergang vom ovalen Körper zum runden Hals.', color=FLASCHE, label=False),
@@ -47,7 +47,7 @@ teile = [
          materials=[['pp', 92], ['druck', 5], ['klebstoff', 3]], color=DECKEL,
          info='Bedruckte PP-Folie mit Name, Zutaten und Nährwerten. Gleicher Kunststoff wie die Flasche, darf '
               'also dranbleiben.',
-         marks=[mark('cyl', 0.4, 0.4, 60, 45, fill=FLASCHE)]),
+         wand=0.4, boden=0, marks=[mark('cyl', 0.4, 0.4, 60, 45, fill=FLASCHE, zeichnung=True)]),
     teil('rumpf', 'squeeze_bottle_body', 'Flaschenkörper', 'Flasche', 'cyl',
          x=0, y=0, w=60, d=45, z=6, h=114, mass=12.5,
          info='Weiches PP, damit man sie gut drücken kann. Reste mit einem Löffelstiel herauskratzen, '

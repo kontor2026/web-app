@@ -25,11 +25,11 @@ def heizung(id, name, short, z):
     """U-förmiges Heizrohr aus drei geraden Stücken (linker Schenkel trägt die Nummer)."""
     farbe, mats = '#9AA2A6', [['stahl', 55], ['nichrom', 20], ['keramik', 25]]
     return [
-        teil(f'{id}', 'heating_element', name, short, 'box', x=30, y=30, w=10, d=180, z=z, h=8, r=5, mass=30,
+        teil(f'{id}', 'heating_element', name, short, 'box', x=30, y=30, w=10, d=180, z=z, h=8, r=5, form='liegend_y', mass=30,
              materials=mats, info=HEIZ_INFO, color=farbe, marks=[mark('box', 2, 0, 6, 180, 3, '#B5BBC0')]),
-        teil(f'{id}_b', 'heating_element', name, short, 'box', x=40, y=30, w=150, d=10, z=z, h=8, r=5, mass=25,
+        teil(f'{id}_b', 'heating_element', name, short, 'box', x=40, y=30, w=150, d=10, z=z, h=8, r=5, form='liegend_x', mass=25,
              materials=mats, info=HEIZ_INFO, color=farbe, label=False, marks=[mark('box', 0, 2, 150, 6, 3, '#B5BBC0')]),
-        teil(f'{id}_c', 'heating_element', name, short, 'box', x=190, y=30, w=10, d=180, z=z, h=8, r=5, mass=30,
+        teil(f'{id}_c', 'heating_element', name, short, 'box', x=190, y=30, w=10, d=180, z=z, h=8, r=5, form='liegend_y', mass=30,
              materials=mats, info=HEIZ_INFO, color=farbe, label=False,
              marks=[mark('box', 2, 0, 6, 180, 3, '#B5BBC0'), mark('box', 1, 170, 8, 10, 2, '#C4672D')]),
     ]
@@ -78,11 +78,11 @@ teile = [
          info='Stahlscharnier, das beide Schalen verbindet. Abschrauben und zum Altmetall geben.',
          color='#9AA2A6'),
     teil('kabel', 'cable_insulation', 'Netzkabel (Isolierung)', 'Kabel', 'box',
-         x=160, y=14, w=70, d=8, z=2, h=8, r=4, explode=[70, 0, 0], mass=80, materials=[['pvc', 90], ['pp', 10]],
+         x=160, y=14, w=70, d=8, z=2, h=8, r=4, explode=[70, 0, 0], form='liegend_x', mass=80, materials=[['pvc', 90], ['pp', 10]],
          info='Etwa 80 cm PVC-Mantel mit Stecker. Längs aufschlitzen, um die Kupferadern freizulegen.',
          color='#2E3338', marks=[mark('box', 60, 1, 10, 6, 2, fill='#555')]),
     teil('kupferadern', 'cable_copper_core', 'Kupferadern', 'Kupferadern', 'box',
-         x=160, y=16.5, w=70, d=3, z=4.5, h=3, r=1, explode=[70, 0, 15], mass=40,
+         x=160, y=16.5, w=70, d=3, z=4.5, h=3, r=1, explode=[70, 0, 15], form='liegend_x', mass=40,
          info='Drei Kupferadern. Kupfer lässt sich fast verlustfrei wiederverwerten.',
          color='#B87333'),
 ]
@@ -93,4 +93,7 @@ for p in teile:  # Griff zusätzlich nach links, sonst scheint er auf der Obersc
     if p['id'] == 'griff':
         p['explode'][0] = -150
 skaliere_masse(teile, oid='sandwich_maker')
+for p in teile:  # gerundete Formen (form): marks nur in der Zeichnung, oben flach würden sie schweben
+    if p.get('form'):
+        p['marks'] = [dict(m, zeichnung=True) for m in p.get('marks') or []]
 schreibe('sandwich_maker', teile)

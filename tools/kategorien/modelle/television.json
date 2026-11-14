@@ -1507,6 +1507,7 @@
    ],
    "info": "Zwei-Meter-Kabel mit PVC-Mantel. Stecker abschneiden und den Mantel längs aufschlitzen.",
    "color": "#2B2F33",
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
@@ -1515,7 +1516,8 @@
      "w": 40,
      "d": 12,
      "r": 2,
-     "fill": "#4A5156"
+     "fill": "#4A5156",
+     "zeichnung": true
     }
    ]
   },
@@ -1546,7 +1548,8 @@
     ]
    ],
    "info": "Zwei Kupferadern. Reines Kupfer wird eingeschmolzen und neu verwendet.",
-   "color": "#B87333"
+   "color": "#B87333",
+   "form": "liegend_x"
   }
  ]
 }

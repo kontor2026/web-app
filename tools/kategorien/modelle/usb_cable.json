@@ -26,37 +26,43 @@
    ],
    "info": "Außenhülle aus PVC mit Weichmachern. Mit einer Abisolierzange längs aufschlitzen, dann lassen sich die Drähte herausziehen.",
    "color": "#3A3D40",
+   "form": "torus",
    "marks": [
     {
      "shape": "cyl",
      "x": 0.0,
      "y": 0.0,
-     "w": 100.0
+     "w": 100.0,
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 3.5,
      "y": 3.5,
-     "w": 93.0
+     "w": 93.0,
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 7.0,
      "y": 7.0,
-     "w": 86.0
+     "w": 86.0,
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 10.5,
      "y": 10.5,
-     "w": 79.0
+     "w": 79.0,
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 11.5,
      "y": 11.5,
      "w": 77.0,
-     "fill": "#26292B"
+     "fill": "#26292B",
+     "zeichnung": true
     }
    ]
   },
@@ -94,37 +100,43 @@
    ],
    "info": "Alufolie und ein feines Drahtgeflecht unter dem Mantel. Halten Störungen von den Datenleitungen fern.",
    "color": "#C2C6C9",
+   "form": "torus",
    "marks": [
     {
      "shape": "cyl",
      "x": 0.0,
      "y": 0.0,
-     "w": 97.0
+     "w": 97.0,
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 3.5,
      "y": 3.5,
-     "w": 90.0
+     "w": 90.0,
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 7.0,
      "y": 7.0,
-     "w": 83.0
+     "w": 83.0,
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 10.5,
      "y": 10.5,
-     "w": 76.0
+     "w": 76.0,
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 11.5,
      "y": 11.5,
      "w": 74.0,
-     "fill": "#8E9498"
+     "fill": "#8E9498",
+     "zeichnung": true
     }
    ]
   },
@@ -158,43 +170,50 @@
    ],
    "info": "Rot und Schwarz leiten den Ladestrom, Grün und Weiß die Daten. Jede Ader ist einzeln isoliert, innen sind feine Kupferlitzen.",
    "color": "#C5803D",
+   "form": "torus",
    "marks": [
     {
      "shape": "cyl",
      "x": 0.0,
      "y": 0.0,
-     "w": 94.0
+     "w": 94.0,
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 3.5,
      "y": 3.5,
-     "w": 87.0
+     "w": 87.0,
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 7.0,
      "y": 7.0,
-     "w": 80.0
+     "w": 80.0,
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 10.5,
      "y": 10.5,
-     "w": 73.0
+     "w": 73.0,
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 11.5,
      "y": 11.5,
      "w": 71.0,
-     "fill": "#8F5A2A"
+     "fill": "#8F5A2A",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 3,
      "y": 44,
      "w": 5,
+     "zeichnung": true,
      "fill": "#C8423A"
     },
     {
@@ -202,6 +221,7 @@
      "x": 8.5,
      "y": 44,
      "w": 5,
+     "zeichnung": true,
      "fill": "#2B2B2B"
     },
     {
@@ -209,6 +229,7 @@
      "x": 14,
      "y": 44,
      "w": 5,
+     "zeichnung": true,
      "fill": "#3E9A57"
     },
     {
@@ -216,6 +237,7 @@
      "x": 19.5,
      "y": 44,
      "w": 5,
+     "zeichnung": true,
      "fill": "#F4F4F2"
     }
    ]
@@ -407,6 +429,7 @@
    ],
    "info": "Weiche Gummitülle am Steckerende. Sie verhindert, dass die Adern beim Biegen brechen.",
    "color": "#2E3134",
+   "form": "liegend_y",
    "marks": [
     {
      "shape": "box",
@@ -414,7 +437,8 @@
      "y": 1.5,
      "w": 6,
      "d": 0.6,
-     "fill": "#232628"
+     "fill": "#232628",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -422,7 +446,8 @@
      "y": 3.5,
      "w": 6,
      "d": 0.6,
-     "fill": "#232628"
+     "fill": "#232628",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -430,7 +455,8 @@
      "y": 5.5,
      "w": 6,
      "d": 0.6,
-     "fill": "#232628"
+     "fill": "#232628",
+     "zeichnung": true
     }
    ]
   },
@@ -581,6 +607,7 @@
    "info": "Gummitülle am USB-C-Ende, gleiche Aufgabe wie am anderen Stecker.",
    "color": "#2E3134",
    "label": false,
+   "form": "liegend_y",
    "marks": [
     {
      "shape": "box",
@@ -588,7 +615,8 @@
      "y": 1.5,
      "w": 5,
      "d": 0.6,
-     "fill": "#232628"
+     "fill": "#232628",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -596,7 +624,8 @@
      "y": 3.5,
      "w": 5,
      "d": 0.6,
-     "fill": "#232628"
+     "fill": "#232628",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -604,7 +633,8 @@
      "y": 5.5,
      "w": 5,
      "d": 0.6,
-     "fill": "#232628"
+     "fill": "#232628",
+     "zeichnung": true
     }
    ]
   },

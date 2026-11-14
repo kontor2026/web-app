@@ -168,35 +168,41 @@
     ]
    ],
    "info": "Aufgeschraubter Aluminiumring, der Glas und Reflektor festhält. Gegen den Uhrzeigersinn abdrehen.",
-   "color": "#3B4147",
+   "color": "#5A6068",
+   "wand": 2.5,
+   "boden": 0,
    "marks": [
     {
      "shape": "cyl",
      "x": 2.5,
      "y": 2.5,
      "w": 25,
-     "fill": "#9FB4B8"
+     "fill": "#9FB4B8",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 4,
      "y": 4,
      "w": 22,
-     "fill": "#DCE4E6"
+     "fill": "#DCE4E6",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 9,
      "y": 9,
      "w": 12,
-     "fill": "#C4CED1"
+     "fill": "#C4CED1",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 13,
      "y": 13,
      "w": 4,
-     "fill": "#F6D86B"
+     "fill": "#F6D86B",
+     "zeichnung": true
     }
    ]
   },
@@ -257,28 +263,33 @@
     ]
    ],
    "info": "Spiegelnder Trichter aus bedampftem Aluminium, bündelt das Licht der LED zu einem Strahl.",
-   "color": "#C9CED2",
+   "color": "#DDE1E4",
+   "wand": 1,
+   "boden": 1,
    "marks": [
     {
      "shape": "cyl",
      "x": 1,
      "y": 1,
      "w": 24,
-     "fill": "#E4E8EB"
+     "fill": "#E4E8EB",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 6,
      "y": 6,
      "w": 14,
-     "fill": "#D3D8DC"
+     "fill": "#D3D8DC",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 10.5,
      "y": 10.5,
      "w": 5,
-     "fill": "#3A3F44"
+     "fill": "#3A3F44",
+     "zeichnung": true
     }
    ]
   },
@@ -440,13 +451,16 @@
     ]
    ],
    "info": "Kleine vernickelte Stahlfeder unter der Treiberplatine, drückt auf den Pluspol der Batterie.",
-   "color": "#B7BCC0",
+   "color": "#C9CDD0",
+   "wand": 1,
+   "boden": 0,
    "marks": [
     {
      "shape": "cyl",
      "x": 1.5,
      "y": 1.5,
      "w": 4,
+     "zeichnung": true,
      "fill": "#8A9095"
     }
    ]
@@ -476,13 +490,16 @@
     ]
    ],
    "info": "Breiterer Kopf mit Kühlrippen, auf das Rohr geschraubt. Nimmt Reflektor, LED und Treiber auf.",
-   "color": "#3B4147",
+   "color": "#5A6068",
+   "wand": 2,
+   "boden": 0,
    "marks": [
     {
      "shape": "cyl",
      "x": 2,
      "y": 2,
      "w": 26,
+     "zeichnung": true,
      "fill": "#2B3035"
     }
    ]
@@ -512,13 +529,16 @@
     ]
    ],
    "info": "Eloxiertes Aluminiumrohr mit Gewinde an beiden Enden und geriffeltem Griff. Leer ist es reines Aluminium.",
-   "color": "#3B4147",
+   "color": "#5A6068",
+   "wand": 1.5,
+   "boden": 0,
    "marks": [
     {
      "shape": "cyl",
      "x": 2,
      "y": 2,
      "w": 20,
+     "zeichnung": true,
      "fill": "#1F2327"
     }
    ]
@@ -549,12 +569,14 @@
    ],
    "info": "Gummiring auf dem Gewinde zwischen Rohr und Kopf, macht die Lampe spritzwasserdicht. Mit einem Zahnstocher abhebeln.",
    "color": "#1A1D20",
+   "form": "torus",
    "marks": [
     {
      "shape": "cyl",
      "x": 2,
      "y": 2,
      "w": 19,
+     "zeichnung": true,
      "fill": "#3B4147"
     }
    ]
@@ -667,13 +689,16 @@
     ]
    ],
    "info": "Kräftige Stahlfeder in der Endkappe, drückt die Batterien nach vorn. Mit einer Zange herausziehen.",
-   "color": "#B7BCC0",
+   "color": "#C9CDD0",
+   "wand": 1.2,
+   "boden": 0,
    "marks": [
     {
      "shape": "cyl",
      "x": 1.5,
      "y": 1.5,
      "w": 8,
+     "zeichnung": true,
      "fill": "#8A9095"
     },
     {
@@ -681,6 +706,7 @@
      "x": 3,
      "y": 3,
      "w": 5,
+     "zeichnung": true,
      "fill": "#B7BCC0"
     }
    ]
@@ -754,13 +780,15 @@
     ]
    ],
    "info": "Abschraubbarer Deckel am Ende. Hier werden die Batterien gewechselt.",
-   "color": "#3B4147",
+   "color": "#5A6068",
+   "wand": 2,
    "marks": [
     {
      "shape": "cyl",
      "x": 2,
      "y": 2,
      "w": 22,
+     "zeichnung": true,
      "fill": "#2B3035"
     }
    ]

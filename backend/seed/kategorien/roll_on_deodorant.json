@@ -391,13 +391,16 @@
     ]
    ],
    "info": "Weiter Hals, in dem der Kugelhalter steckt.",
-   "color": "#EEF3F8",
+   "color": "#ECEBE6",
+   "wand": 3,
+   "boden": 0,
    "marks": [
     {
      "shape": "cyl",
      "x": 3,
      "y": 3,
      "w": 27,
+     "zeichnung": true,
      "fill": "#D3DCE5"
     }
    ]
@@ -427,7 +430,7 @@
     ]
    ],
    "info": "Übergang vom Rumpf zum Hals.",
-   "color": "#EEF3F8",
+   "color": "#ECEBE6",
    "label": false
   },
   {
@@ -465,13 +468,16 @@
    "info": "Dünne Folie aus dem gleichen Kunststoff wie die Flasche. Sie darf dranbleiben, das stört das Recycling nicht.",
    "color": "#7FA8D8",
    "sortBias": 1,
+   "wand": 0.4,
+   "boden": 0,
    "marks": [
     {
      "shape": "cyl",
      "x": 0.3,
      "y": 0.3,
      "w": 42,
-     "fill": "#EEF3F8"
+     "zeichnung": true,
+     "fill": "#ECEBE6"
     }
    ]
   },
@@ -500,7 +506,7 @@
     ]
    ],
    "info": "Dickwandiges PP, Recyclingcode 5. Leer machen, Kugel heraushebeln, ausspülen und in die Gelbe Tonne. Glasflaschen gehören dagegen ins Altglas.",
-   "color": "#EEF3F8"
+   "color": "#ECEBE6"
   },
   {
    "id": "boden",
@@ -527,7 +533,7 @@
     ]
    ],
    "info": "Standboden mit Recyclingzeichen.",
-   "color": "#EEF3F8",
+   "color": "#ECEBE6",
    "label": false
   }
  ]

@@ -16,7 +16,7 @@ LX, LY = 66, 32.5  # Mitte des Objektivs
 
 teile = [
     teil('frontschale', 'plastic_housing', 'Frontschale (Aluminium)', 'Frontschale', 'box', material_id='aluminium',
-         x=0, y=0, w=110, d=65, z=14, h=14, r=6, mass=50, sortBias=1, materials=[['alu', 85], ['pcabs', 15]], color='#9AA2A8',
+         x=0, y=0, w=110, d=65, z=14, h=14, r=6, mass=50, sortBias=1, materials=[['alu', 85], ['pcabs', 15]], color='#C4C8CC',
          info='Vorderes Gehäuseteil aus Aluminium mit Öffnung für das Objektiv. Nach dem Lösen der kleinen Schrauben '
               'an Seiten und Boden abheben.',
          marks=[mark('cyl', LX - 23, LY - 23, 46, fill='#2B2F33'), mark('box', 8, 5, 30, 10, 2, '#E8ECEE'),
@@ -32,9 +32,9 @@ teile = [
          info='Stellt scharf, indem sie sich ein winziges Stück vor oder zurück bewegt.'),
     teil('tubus', 'camera_lens_unit', 'Objektivtubus', 'Tubus', 'cyl',
          x=LX - 22, y=LY - 22, w=44, z=16, h=26, mass=40, materials=[['pcabs', 60], ['alu', 25], ['stahl', 10], ['kupfer', 5]],
-         color='#2B2F33',
+         color='#2B2F33', wand=3, boden=0,
          info='Ineinander gesteckte Ringe, die beim Einschalten ausfahren. Mit drei Schrauben auf dem Sensor befestigt.',
-         marks=[mark('cyl', 4, 4, 36, fill='#3A3F44'), mark('cyl', 12, 12, 20, fill='#1E2226')]),
+         marks=[mark('cyl', 4, 4, 36, fill='#3A3F44', zeichnung=True), mark('cyl', 12, 12, 20, fill='#1E2226', zeichnung=True)]),
     teil('ausloeser', 'plastic_housing', 'Auslöser mit Zoomhebel', 'Auslöser', 'cyl', material_id='aluminium',
          x=80, y=0, w=14, d=4, z=16, h=10, mass=2, materials=[['alu', 60], ['pcabs', 30], ['stahl', 10]],
          color='#C9CED2', explode=[0, -40, 40],
@@ -77,9 +77,9 @@ teile = [
          info='3-Zoll-Bildschirm mit Hintergrundlicht, zeigt nach hinten. Flach anfassen, das Glas bricht leicht.',
          marks=[mark('box', 6, 2, 62, 45, 1, '#9AA2A8')]),
     teil('rueckschale', 'plastic_housing', 'Rückschale mit Tasten', 'Rückschale', 'box',
-         x=0, y=0, w=110, d=65, z=0, h=14, r=6, mass=40, color=GEH,
+         x=0, y=0, w=110, d=65, z=0, h=14, r=6, mass=40, color=GEH, wand=1.5,
          info='Hinteres Gehäuseteil mit Displayfenster, Tasten und Stativgewinde. Kunststoff mit kleinen Metallteilen.',
-         marks=[mark('box', 4, 6, 78, 53, 3, '#2B2F33'), mark('cyl', 88, 20, 14, fill='#4A5156')]),
+         marks=[mark('box', 4, 6, 78, 53, 3, '#2B2F33', zeichnung=True), mark('cyl', 88, 20, 14, fill='#4A5156', zeichnung=True)]),
 ]
 
 explodiere(teile, abstand=18, nach_liste=True,

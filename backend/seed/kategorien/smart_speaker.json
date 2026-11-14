@@ -600,12 +600,15 @@
    ],
    "info": "Stabiles Kunststoffrohr, in dem alle Teile verschraubt sind. Es bildet den Resonanzraum für den Bass.",
    "color": "#3A3F44",
+   "wand": 3,
+   "boden": 0,
    "marks": [
     {
      "shape": "cyl",
      "x": 4,
      "y": 4,
      "w": 88,
+     "zeichnung": true,
      "fill": "#2B2F33"
     }
    ]
@@ -636,12 +639,15 @@
    ],
    "info": "Polyestergewebe über einem dünnen Gitter. Sockel abhebeln, dann den Stoff nach oben abrollen. Waschbar und wiederverwendbar.",
    "color": "#8A9096",
+   "wand": 1.5,
+   "boden": 0,
    "marks": [
     {
      "shape": "cyl",
      "x": 2,
      "y": 2,
      "w": 96,
+     "zeichnung": true,
      "fill": "#5E656A"
     }
    ]
@@ -741,7 +747,8 @@
     ]
    ],
    "info": "1,5 m Kabel mit Rundstecker. PVC-Mantel längs aufschlitzen, um die Kupferadern zu gewinnen.",
-   "color": "#F2F2F2"
+   "color": "#F2F2F2",
+   "form": "liegend_x"
   },
   {
    "id": "sockel",

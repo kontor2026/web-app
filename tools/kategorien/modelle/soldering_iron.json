@@ -36,6 +36,7 @@
    ],
    "info": "Kupferkern mit Eisen- und Nickelschicht, damit das Lot nicht das Kupfer auflöst. Abkühlen lassen, dann nach vorn herausziehen.",
    "color": "#A8AEB2",
+   "form": "liegend_y",
    "marks": [
     {
      "shape": "box",
@@ -44,7 +45,8 @@
      "w": 4,
      "d": 12,
      "r": 2,
-     "fill": "#C8CDD0"
+     "fill": "#C8CDD0",
+     "zeichnung": true
     }
    ]
   },
@@ -75,7 +77,8 @@
     ]
    ],
    "info": "Edelstahlhülse, die die Spitze festhält. Die Rändelmutter am Griff aufschrauben, erst wenn alles kalt ist.",
-   "color": "#9AA2A8",
+   "color": "#C9CDD0",
+   "form": "liegend_y",
    "marks": [
     {
      "shape": "box",
@@ -84,7 +87,8 @@
      "w": 8,
      "d": 5,
      "r": 2,
-     "fill": "#7D858B"
+     "fill": "#7D858B",
+     "zeichnung": true
     }
    ]
   },
@@ -124,6 +128,7 @@
    ],
    "info": "Nickel-Chrom-Draht auf einem Keramikrohr, mit Glimmer isoliert. Wird über 350 Grad heiß.",
    "color": "#C4672D",
+   "form": "liegend_y",
    "marks": [
     {
      "shape": "box",
@@ -132,7 +137,8 @@
      "w": 5,
      "d": 2,
      "r": 1,
-     "fill": "#8C7B6B"
+     "fill": "#8C7B6B",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -141,7 +147,8 @@
      "w": 5,
      "d": 2,
      "r": 1,
-     "fill": "#8C7B6B"
+     "fill": "#8C7B6B",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -150,7 +157,8 @@
      "w": 5,
      "d": 2,
      "r": 1,
-     "fill": "#8C7B6B"
+     "fill": "#8C7B6B",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -159,7 +167,8 @@
      "w": 5,
      "d": 2,
      "r": 1,
-     "fill": "#8C7B6B"
+     "fill": "#8C7B6B",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -168,7 +177,8 @@
      "w": 5,
      "d": 2,
      "r": 1,
-     "fill": "#8C7B6B"
+     "fill": "#8C7B6B",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -177,7 +187,8 @@
      "w": 5,
      "d": 2,
      "r": 1,
-     "fill": "#8C7B6B"
+     "fill": "#8C7B6B",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -186,7 +197,8 @@
      "w": 5,
      "d": 2,
      "r": 1,
-     "fill": "#8C7B6B"
+     "fill": "#8C7B6B",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -195,7 +207,8 @@
      "w": 5,
      "d": 2,
      "r": 1,
-     "fill": "#8C7B6B"
+     "fill": "#8C7B6B",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -204,7 +217,8 @@
      "w": 5,
      "d": 2,
      "r": 1,
-     "fill": "#8C7B6B"
+     "fill": "#8C7B6B",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -213,7 +227,8 @@
      "w": 5,
      "d": 2,
      "r": 1,
-     "fill": "#8C7B6B"
+     "fill": "#8C7B6B",
+     "zeichnung": true
     }
    ]
   },
@@ -244,7 +259,8 @@
     ]
    ],
    "info": "Dünnes Edelstahlrohr um das Heizelement. Nicht anfassen, solange der Kolben eingesteckt ist.",
-   "color": "#B5BBC0"
+   "color": "#D5D9DC",
+   "form": "liegend_y"
   },
   {
    "id": "griff_1",
@@ -705,7 +721,8 @@
     ]
    ],
    "info": "Weiche Tülle, damit das Kabel am Griff nicht bricht. Wird mit dem Kabel abgezogen.",
-   "color": "#2B2F33"
+   "color": "#2B2F33",
+   "form": "liegend_y"
   },
   {
    "id": "kabel",
@@ -738,7 +755,8 @@
     ]
    ],
    "info": "Etwa 1,5 m Kabel, hier als Stück gezeigt. PVC-Mantel längs aufschlitzen; der Eurostecker ist eingespritzt.",
-   "color": "#2B2F33"
+   "color": "#2B2F33",
+   "form": "liegend_y"
   },
   {
    "id": "kupferadern",
@@ -767,7 +785,8 @@
     ]
    ],
    "info": "Zwei Kupferadern versorgen das Heizelement. Kupfer ist wertvoll.",
-   "color": "#B87333"
+   "color": "#B87333",
+   "form": "liegend_y"
   }
  ]
 }

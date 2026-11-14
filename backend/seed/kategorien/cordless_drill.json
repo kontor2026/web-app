@@ -449,7 +449,7 @@
     ]
    ],
    "info": "Halten die beiden Schalen zusammen. Man braucht einen Torx-Schraubendreher T10 oder T15.",
-   "color": "#7D858B",
+   "color": "#C9CDD0",
    "marks": [
     {
      "shape": "cyl",
@@ -532,16 +532,16 @@
    "mass": 32.8,
    "materials": [
     [
-     "stahl",
-     85
-    ],
-    [
      "pcabs",
      15
+    ],
+    [
+     "stahl",
+     85
     ]
    ],
    "info": "Spannt Bohrer und Bits mit drei Stahlbacken. Ganz öffnen, die Linksschraube innen lösen, dann abschrauben.",
-   "color": "#3A3F44",
+   "color": "#2A2C2E",
    "label": false
   },
   {
@@ -566,16 +566,16 @@
    "mass": 32.8,
    "materials": [
     [
-     "stahl",
-     85
-    ],
-    [
      "pcabs",
      15
+    ],
+    [
+     "stahl",
+     85
     ]
    ],
    "info": "Spannt Bohrer und Bits mit drei Stahlbacken. Ganz öffnen, die Linksschraube innen lösen, dann abschrauben.",
-   "color": "#3A3F44",
+   "color": "#2A2C2E",
    "label": false
   },
   {
@@ -600,16 +600,16 @@
    "mass": 32.8,
    "materials": [
     [
-     "stahl",
-     85
-    ],
-    [
      "pcabs",
      15
+    ],
+    [
+     "stahl",
+     85
     ]
    ],
    "info": "Spannt Bohrer und Bits mit drei Stahlbacken. Ganz öffnen, die Linksschraube innen lösen, dann abschrauben.",
-   "color": "#3A3F44"
+   "color": "#2A2C2E"
   },
   {
    "id": "bohrfutter_3",
@@ -633,16 +633,16 @@
    "mass": 32.8,
    "materials": [
     [
-     "stahl",
-     85
-    ],
-    [
      "pcabs",
      15
+    ],
+    [
+     "stahl",
+     85
     ]
    ],
    "info": "Spannt Bohrer und Bits mit drei Stahlbacken. Ganz öffnen, die Linksschraube innen lösen, dann abschrauben.",
-   "color": "#3A3F44",
+   "color": "#2A2C2E",
    "label": false
   },
   {
@@ -667,16 +667,16 @@
    "mass": 32.8,
    "materials": [
     [
-     "stahl",
-     85
-    ],
-    [
      "pcabs",
      15
+    ],
+    [
+     "stahl",
+     85
     ]
    ],
    "info": "Spannt Bohrer und Bits mit drei Stahlbacken. Ganz öffnen, die Linksschraube innen lösen, dann abschrauben.",
-   "color": "#3A3F44",
+   "color": "#2A2C2E",
    "label": false,
    "marks": [
     {
@@ -1460,6 +1460,7 @@
    ],
    "info": "Sitzt auf der Motorwelle und saugt Kühlluft durch die Schlitze im Gehäuse.",
    "color": "#3A3F44",
+   "form": "liegend_y",
    "marks": [
     {
      "shape": "box",
@@ -1467,7 +1468,8 @@
      "y": 2.0,
      "w": 2,
      "d": 4,
-     "fill": "#1E2226"
+     "fill": "#1E2226",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -1475,7 +1477,8 @@
      "y": 2.0,
      "w": 2,
      "d": 4,
-     "fill": "#1E2226"
+     "fill": "#1E2226",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -1483,7 +1486,8 @@
      "y": 2.0,
      "w": 2,
      "d": 4,
-     "fill": "#1E2226"
+     "fill": "#1E2226",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -1491,7 +1495,8 @@
      "y": 2.0,
      "w": 2,
      "d": 4,
-     "fill": "#1E2226"
+     "fill": "#1E2226",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -1499,7 +1504,8 @@
      "y": 2.0,
      "w": 2,
      "d": 4,
-     "fill": "#1E2226"
+     "fill": "#1E2226",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -1507,7 +1513,8 @@
      "y": 2.0,
      "w": 2,
      "d": 4,
-     "fill": "#1E2226"
+     "fill": "#1E2226",
+     "zeichnung": true
     }
    ]
   },

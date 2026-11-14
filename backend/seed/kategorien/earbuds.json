@@ -628,12 +628,14 @@
    ],
    "info": "Unterteil mit zwei Mulden für die Ohrhörer. Ist der Etui-Akku nicht ausbaubar, das ganze Etui zur Elektro-Sammlung bringen.",
    "color": "#F2F2F0",
+   "wand": 2,
    "marks": [
     {
      "shape": "box",
      "x": 5,
      "y": 7,
      "w": 24,
+     "zeichnung": true,
      "d": 30,
      "r": 10,
      "fill": "#E0E0DC"
@@ -643,6 +645,7 @@
      "x": 32,
      "y": 7,
      "w": 24,
+     "zeichnung": true,
      "d": 30,
      "r": 10,
      "fill": "#E0E0DC"
@@ -652,6 +655,7 @@
      "x": 29,
      "y": 41,
      "w": 3,
+     "zeichnung": true,
      "fill": "#7FD36B"
     }
    ]
@@ -980,12 +984,15 @@
    ],
    "info": "Weiche Silikonkappe in S, M oder L. Lässt sich von Hand vom Schallröhrchen abziehen und waschen.",
    "color": "#DCDCD8",
+   "wand": 2,
+   "boden": 0,
    "marks": [
     {
      "shape": "cyl",
      "x": 3,
      "y": 3,
      "w": 6,
+     "zeichnung": true,
      "fill": "#C4C4C0"
     },
     {
@@ -993,6 +1000,7 @@
      "x": 4.5,
      "y": 4.5,
      "w": 3,
+     "zeichnung": true,
      "fill": "#5A6066"
     }
    ]

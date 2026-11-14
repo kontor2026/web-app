@@ -694,6 +694,7 @@
    ],
    "info": "Etwa 75 cm PVC-Mantel mit Stecker. Längs aufschlitzen, um die Kupferadern freizulegen.",
    "color": "#2E3338",
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
@@ -702,7 +703,8 @@
      "w": 10,
      "d": 6,
      "r": 2,
-     "fill": "#555"
+     "fill": "#555",
+     "zeichnung": true
     }
    ]
   },
@@ -733,7 +735,8 @@
     ]
    ],
    "info": "Drei Kupferadern für bis zu 3000 Watt, deshalb dicker als bei kleinen Geräten.",
-   "color": "#B87333"
+   "color": "#B87333",
+   "form": "liegend_x"
   }
  ]
 }

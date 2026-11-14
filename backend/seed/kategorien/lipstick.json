@@ -418,12 +418,14 @@
    "info": "Innenrohr mit Längsschlitz und Spirale: Dreht man das Unterteil, schraubt sich der Becher nach oben.",
    "color": "#D8D6CE",
    "sortBias": -15,
+   "wand": 1,
    "marks": [
     {
      "shape": "cyl",
      "x": 1,
      "y": 1,
      "w": 12,
+     "zeichnung": true,
      "fill": "#B8B4AA"
     }
    ]
@@ -455,12 +457,15 @@
    "info": "Kleiner Federring aus Stahl, der die Kappe festklemmt. Er ist magnetisch und wird in der Sortieranlage mit dem Magneten aussortiert.",
    "color": "#9EA3A8",
    "sortBias": -5,
+   "wand": 1.2,
+   "boden": 0,
    "marks": [
     {
      "shape": "cyl",
      "x": 1.2,
      "y": 1.2,
      "w": 12.6,
+     "zeichnung": true,
      "fill": "#D8D6CE"
     },
     {
@@ -499,13 +504,16 @@
     ]
    ],
    "info": "Glänzender Ring aus Aluminium als Schmuck und Anschlag für die Kappe. Er ist aufgepresst.",
-   "color": "#E2C766",
+   "color": "#F0DC9A",
+   "wand": 1.5,
+   "boden": 0,
    "marks": [
     {
      "shape": "cyl",
      "x": 1.5,
      "y": 1.5,
      "w": 16.4,
+     "zeichnung": true,
      "fill": "#C9A646"
     }
    ]
@@ -539,13 +547,15 @@
     ]
    ],
    "info": "Drehbarer Fuß der Hülse. Kunststoff mit dünner Metallschicht, Gelbe Tonne. Echte Metallhülsen gehören auch hinein.",
-   "color": "#C9A646",
+   "color": "#D4B04E",
+   "wand": 2,
    "marks": [
     {
      "shape": "cyl",
      "x": 2,
      "y": 2,
      "w": 15,
+     "zeichnung": true,
      "fill": "#B8963A"
     }
    ]

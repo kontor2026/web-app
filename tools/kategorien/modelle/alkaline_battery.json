@@ -25,7 +25,7 @@
     ]
    ],
    "info": "Vernickeltes Stahlblech, der Minuspol. Beim Sammeln die Pole nicht mit anderen Batterien in Kontakt bringen.",
-   "color": "#C9CDD0",
+   "color": "#E2E5E7",
    "marks": [
     {
      "shape": "cyl",
@@ -155,7 +155,8 @@
     ]
    ],
    "info": "Saugfähiges Vlies zwischen Anode und Kathode. Trennt beide, lässt aber die Lauge durch.",
-   "color": "#ECE6D6"
+   "color": "#ECE6D6",
+   "wand": 0.4
   },
   {
    "id": "kathode",
@@ -187,12 +188,15 @@
    ],
    "info": "Schwarzer Ring aus Braunstein und Graphit, innen hohl. Liefert zusammen mit dem Zink den Strom.",
    "color": "#2A2B2D",
+   "wand": 1.6,
+   "boden": 0,
    "marks": [
     {
      "shape": "cyl",
      "x": 1.5,
      "y": 1.5,
      "w": 9.4,
+     "zeichnung": true,
      "fill": "#3A3D40"
     }
    ]
@@ -223,13 +227,15 @@
    ],
    "info": "Bedruckte Kunststofffolie. Isoliert den Stahlbecher und zeigt Typ, Spannung (1,5 V) und Haltbarkeit.",
    "color": "#C8423A",
-   "opacity": 0.85,
+   "wand": 0.25,
+   "boden": 0,
    "marks": [
     {
      "shape": "cyl",
      "x": 0.6,
      "y": 0.6,
-     "w": 13
+     "w": 13,
+     "zeichnung": true
     }
    ]
   },
@@ -258,13 +264,15 @@
     ]
    ],
    "info": "Vernickelter Stahlbecher, unten mit dem Pluspol-Knopf. Im Recycling wird daraus wieder Stahl, aus dem Inhalt Zink und Mangan.",
-   "color": "#B7BCC0",
+   "color": "#E2E5E7",
+   "wand": 0.3,
    "marks": [
     {
      "shape": "cyl",
      "x": 0.3,
      "y": 0.3,
      "w": 13.2,
+     "zeichnung": true,
      "fill": "#5E656A"
     }
    ]

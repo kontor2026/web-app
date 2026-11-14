@@ -158,7 +158,7 @@
     ]
    ],
    "info": "Vier verklebte Laschen. Die Grifflöcher sind ausgestanzt; zum Flachmachen die Laschen aufreißen.",
-   "color": "#C49A6C",
+   "color": "#B8946A",
    "marks": [
     {
      "shape": "box",
@@ -224,13 +224,16 @@
     ]
    ],
    "info": "Bedruckte Wellpappe, schützt den weichen Beutel. Leer flach gefaltet ins Altpapier.",
-   "color": "#C49A6C",
+   "color": "#B8946A",
+   "wand": 4,
+   "boden": 0,
    "marks": [
     {
      "shape": "box",
      "x": 4,
      "y": 4,
      "w": 242,
+     "zeichnung": true,
      "d": 152,
      "r": 0,
      "fill": "#8E6B45"
@@ -299,7 +302,7 @@
     ]
    ],
    "info": "Perforiertes Fenster vorne unten. Herausdrücken und den Zapfhahn hindurchziehen.",
-   "color": "#B98D5F",
+   "color": "#AD8960",
    "sortBias": 260
   },
   {
@@ -329,7 +332,7 @@
     ]
    ],
    "info": "Verklebte Bodenlaschen, tragen das Gewicht der Flüssigkeit.",
-   "color": "#C49A6C"
+   "color": "#B8946A"
   },
   {
    "id": "beutel",

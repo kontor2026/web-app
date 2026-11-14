@@ -818,12 +818,14 @@
    ],
    "info": "Untere Gehäusehälfte aus ABS. Leer ausgebaut sortenreiner Kunststoff.",
    "color": "#3A3F44",
+   "wand": 2,
    "marks": [
     {
      "shape": "box",
      "x": 3,
      "y": 3,
      "w": 69,
+     "zeichnung": true,
      "d": 56,
      "r": 11,
      "fill": "#30353A"
@@ -862,12 +864,14 @@
    ],
    "info": "Teil der Unterschale. Die Griffflächen sind oft mit weichem Kunststoff überzogen.",
    "color": "#3A3F44",
+   "wand": 2,
    "marks": [
     {
      "shape": "box",
      "x": 4,
      "y": 4,
      "w": 32,
+     "zeichnung": true,
      "d": 73,
      "r": 16,
      "fill": "#30353A"
@@ -907,12 +911,14 @@
    "info": "Rechter Griff, Gegenstück zum linken.",
    "color": "#3A3F44",
    "label": false,
+   "wand": 2,
    "marks": [
     {
      "shape": "box",
      "x": 4,
      "y": 4,
      "w": 32,
+     "zeichnung": true,
      "d": 73,
      "r": 16,
      "fill": "#30353A"

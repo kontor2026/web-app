@@ -37,13 +37,13 @@
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Al": 95930.0
+   "Al": 95960.0
   },
   "herkunft": {
    "Al": "Modellmassen (Schätzung)"
   },
   "materialien_g": {
-   "aluminium": 95.9,
+   "aluminium": 96.0,
    "cardboard": 54.1
   },
   "co2_kg": 1.18,
@@ -274,18 +274,18 @@
    "short": "Alufolie",
    "shape": "box",
    "x": 5,
-   "y": 10,
+   "y": 12.3,
    "w": 296,
-   "d": 24,
-   "z": 34,
-   "h": 8,
+   "d": 19.4,
+   "z": 37,
+   "h": 5,
    "r": 0,
    "explode": [
     0,
     0,
     90
    ],
-   "mass": 14.27,
+   "mass": 7.31,
    "materials": [
     [
      "alu",
@@ -293,16 +293,16 @@
     ]
    ],
    "info": "Gewalztes Aluminium, nur etwa 0,01 mm dick: eine Seite glänzt, die andere ist matt. Saubere Reste zu einer faustgroßen Kugel knüllen, dann erkennt die Sortieranlage sie.",
-   "color": "#C9CED3",
+   "color": "#D5D8DB",
    "label": true,
    "sortBias": -20,
    "marks": [
     {
      "shape": "box",
      "x": 0,
-     "y": 6.0,
+     "y": 4.8,
      "w": 296,
-     "d": 4.8,
+     "d": 3.9,
      "r": 0,
      "fill": "#E4E7EA"
     }
@@ -316,18 +316,18 @@
    "short": "Alufolie",
    "shape": "box",
    "x": 5,
-   "y": 3.65,
+   "y": 6.4,
    "w": 296,
-   "d": 36.7,
-   "z": 26,
-   "h": 8,
+   "d": 31.2,
+   "z": 32,
+   "h": 5,
    "r": 0,
    "explode": [
     0,
     0,
     90
    ],
-   "mass": 21.81,
+   "mass": 11.75,
    "materials": [
     [
      "alu",
@@ -335,7 +335,7 @@
     ]
    ],
    "info": "Gewalztes Aluminium, nur etwa 0,01 mm dick: eine Seite glänzt, die andere ist matt. Saubere Reste zu einer faustgroßen Kugel knüllen, dann erkennt die Sortieranlage sie.",
-   "color": "#C9CED3",
+   "color": "#D5D8DB",
    "label": false,
    "sortBias": -20
   },
@@ -347,18 +347,18 @@
    "short": "Alufolie",
    "shape": "box",
    "x": 5,
-   "y": 2,
+   "y": 3.45,
    "w": 296,
-   "d": 40,
-   "z": 18,
-   "h": 8,
+   "d": 37.1,
+   "z": 27,
+   "h": 5,
    "r": 0,
    "explode": [
     0,
     0,
     90
    ],
-   "mass": 23.77,
+   "mass": 13.97,
    "materials": [
     [
      "alu",
@@ -366,7 +366,7 @@
     ]
    ],
    "info": "Gewalztes Aluminium, nur etwa 0,01 mm dick: eine Seite glänzt, die andere ist matt. Saubere Reste zu einer faustgroßen Kugel knüllen, dann erkennt die Sortieranlage sie.",
-   "color": "#C9CED3",
+   "color": "#D5D8DB",
    "label": false,
    "sortBias": -20
   },
@@ -378,18 +378,18 @@
    "short": "Alufolie",
    "shape": "box",
    "x": 5,
-   "y": 3.65,
+   "y": 2.15,
    "w": 296,
-   "d": 36.7,
-   "z": 10,
-   "h": 8,
+   "d": 39.7,
+   "z": 22,
+   "h": 5,
    "r": 0,
    "explode": [
     0,
     0,
     90
    ],
-   "mass": 21.81,
+   "mass": 14.95,
    "materials": [
     [
      "alu",
@@ -397,7 +397,7 @@
     ]
    ],
    "info": "Gewalztes Aluminium, nur etwa 0,01 mm dick: eine Seite glänzt, die andere ist matt. Saubere Reste zu einer faustgroßen Kugel knüllen, dann erkennt die Sortieranlage sie.",
-   "color": "#C9CED3",
+   "color": "#D5D8DB",
    "label": false,
    "sortBias": -20
   },
@@ -409,18 +409,18 @@
    "short": "Alufolie",
    "shape": "box",
    "x": 5,
-   "y": 10,
+   "y": 2.15,
    "w": 296,
-   "d": 24,
-   "z": 2,
-   "h": 8,
+   "d": 39.7,
+   "z": 17,
+   "h": 5,
    "r": 0,
    "explode": [
     0,
     0,
     90
    ],
-   "mass": 14.27,
+   "mass": 14.95,
    "materials": [
     [
      "alu",
@@ -428,7 +428,100 @@
     ]
    ],
    "info": "Gewalztes Aluminium, nur etwa 0,01 mm dick: eine Seite glänzt, die andere ist matt. Saubere Reste zu einer faustgroßen Kugel knüllen, dann erkennt die Sortieranlage sie.",
-   "color": "#C9CED3",
+   "color": "#D5D8DB",
+   "label": false,
+   "sortBias": -20
+  },
+  {
+   "id": "folie_6",
+   "component_id": "aluminium_foil_sheet",
+   "material_id": "aluminium",
+   "name": "Aufgewickelte Alufolie (Schnitt)",
+   "short": "Alufolie",
+   "shape": "box",
+   "x": 5,
+   "y": 3.45,
+   "w": 296,
+   "d": 37.1,
+   "z": 12,
+   "h": 5,
+   "r": 0,
+   "explode": [
+    0,
+    0,
+    90
+   ],
+   "mass": 13.97,
+   "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "info": "Gewalztes Aluminium, nur etwa 0,01 mm dick: eine Seite glänzt, die andere ist matt. Saubere Reste zu einer faustgroßen Kugel knüllen, dann erkennt die Sortieranlage sie.",
+   "color": "#D5D8DB",
+   "label": false,
+   "sortBias": -20
+  },
+  {
+   "id": "folie_7",
+   "component_id": "aluminium_foil_sheet",
+   "material_id": "aluminium",
+   "name": "Aufgewickelte Alufolie (Schnitt)",
+   "short": "Alufolie",
+   "shape": "box",
+   "x": 5,
+   "y": 6.4,
+   "w": 296,
+   "d": 31.2,
+   "z": 7,
+   "h": 5,
+   "r": 0,
+   "explode": [
+    0,
+    0,
+    90
+   ],
+   "mass": 11.75,
+   "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "info": "Gewalztes Aluminium, nur etwa 0,01 mm dick: eine Seite glänzt, die andere ist matt. Saubere Reste zu einer faustgroßen Kugel knüllen, dann erkennt die Sortieranlage sie.",
+   "color": "#D5D8DB",
+   "label": false,
+   "sortBias": -20
+  },
+  {
+   "id": "folie_8",
+   "component_id": "aluminium_foil_sheet",
+   "material_id": "aluminium",
+   "name": "Aufgewickelte Alufolie (Schnitt)",
+   "short": "Alufolie",
+   "shape": "box",
+   "x": 5,
+   "y": 12.3,
+   "w": 296,
+   "d": 19.4,
+   "z": 2,
+   "h": 5,
+   "r": 0,
+   "explode": [
+    0,
+    0,
+    90
+   ],
+   "mass": 7.31,
+   "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "info": "Gewalztes Aluminium, nur etwa 0,01 mm dick: eine Seite glänzt, die andere ist matt. Saubere Reste zu einer faustgroßen Kugel knüllen, dann erkennt die Sortieranlage sie.",
+   "color": "#D5D8DB",
    "label": false,
    "sortBias": -20
   },
@@ -440,18 +533,18 @@
    "short": "Papphülse",
    "shape": "box",
    "x": 3,
-   "y": 10.8,
+   "y": 13,
    "w": 300,
-   "d": 22.4,
-   "z": 27,
-   "h": 10,
+   "d": 18,
+   "z": 31,
+   "h": 6,
    "r": 0,
    "explode": [
     330,
     0,
     90
    ],
-   "mass": 7.32,
+   "mass": 3.64,
    "materials": [
     [
      "papier",
@@ -472,14 +565,14 @@
      "x": 0,
      "y": 0,
      "w": 300,
-     "d": 22.4,
+     "d": 18.0,
      "r": 0,
      "fill": "#A27B50"
     },
     {
      "shape": "box",
      "x": 0,
-     "y": 10.2,
+     "y": 8.0,
      "w": 300,
      "d": 2,
      "r": 0,
@@ -495,18 +588,18 @@
    "short": "Papphülse",
    "shape": "box",
    "x": 3,
-   "y": 7,
+   "y": 8.25,
    "w": 300,
-   "d": 30,
-   "z": 17,
-   "h": 10,
+   "d": 27.5,
+   "z": 25,
+   "h": 6,
    "r": 0,
    "explode": [
     330,
     0,
     90
    ],
-   "mass": 9.79,
+   "mass": 5.55,
    "materials": [
     [
      "papier",
@@ -530,18 +623,88 @@
    "short": "Papphülse",
    "shape": "box",
    "x": 3,
-   "y": 10.8,
+   "y": 7,
    "w": 300,
-   "d": 22.4,
-   "z": 7,
-   "h": 10,
+   "d": 30,
+   "z": 19,
+   "h": 6,
    "r": 0,
    "explode": [
     330,
     0,
     90
    ],
-   "mass": 7.32,
+   "mass": 6.05,
+   "materials": [
+    [
+     "papier",
+     97
+    ],
+    [
+     "klebstoff",
+     3
+    ]
+   ],
+   "info": "Gewickelte Pappe, auf der die Folie aufgerollt ist. Wenn die Rolle leer ist, kommt die Hülse ins Altpapier.",
+   "color": "#B58C5E",
+   "label": false,
+   "sortBias": -20
+  },
+  {
+   "id": "kern_4",
+   "component_id": "aluminium_foil_sheet",
+   "material_id": "cardboard",
+   "name": "Papphülse (Wickelkern)",
+   "short": "Papphülse",
+   "shape": "box",
+   "x": 3,
+   "y": 8.25,
+   "w": 300,
+   "d": 27.5,
+   "z": 13,
+   "h": 6,
+   "r": 0,
+   "explode": [
+    330,
+    0,
+    90
+   ],
+   "mass": 5.55,
+   "materials": [
+    [
+     "papier",
+     97
+    ],
+    [
+     "klebstoff",
+     3
+    ]
+   ],
+   "info": "Gewickelte Pappe, auf der die Folie aufgerollt ist. Wenn die Rolle leer ist, kommt die Hülse ins Altpapier.",
+   "color": "#B58C5E",
+   "label": false,
+   "sortBias": -20
+  },
+  {
+   "id": "kern_5",
+   "component_id": "aluminium_foil_sheet",
+   "material_id": "cardboard",
+   "name": "Papphülse (Wickelkern)",
+   "short": "Papphülse",
+   "shape": "box",
+   "x": 3,
+   "y": 13,
+   "w": 300,
+   "d": 18,
+   "z": 7,
+   "h": 6,
+   "r": 0,
+   "explode": [
+    330,
+    0,
+    90
+   ],
+   "mass": 3.64,
    "materials": [
     [
      "papier",
@@ -593,12 +756,14 @@
    ],
    "info": "Bedruckter Faltkarton, schützt die Rolle. Pappe ins Altpapier, Folie und Rolle getrennt entsorgen.",
    "color": "#24508F",
+   "wand": 1,
    "marks": [
     {
      "shape": "box",
      "x": 2,
      "y": 2,
      "w": 302,
+     "zeichnung": true,
      "d": 40,
      "r": 1,
      "fill": "#3B3B38"

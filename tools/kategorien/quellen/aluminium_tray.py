@@ -9,7 +9,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from bau import teil, mark, raster, explodiere, skaliere_masse, schreibe  # noqa: E402
 
-ALU = '#C9CED3'
+ALU = '#EEF0F2'
 FALTE = '#A9AFB5'
 teile = [
     teil('deckel', 'cardboard_lid', 'Kartondeckel', 'Deckel', 'box',
@@ -31,22 +31,23 @@ teile = [
          x=0, y=0, w=200, d=150, z=36, h=2, r=10, mass=2.5,
          info='Breiter, gerollter Rand. Er wird über den Deckel gedrückt und hält ihn fest. Vorsicht, die Kante kann '
               'scharf sein.',
-         color=ALU, marks=[mark('box', 1.5, 1.5, 197, 147, 9, '#B7BDC3'), mark('box', 3, 3, 194, 144, 8, ALU),
-                           mark('box', 7, 7, 186, 136, 8, '#8E959C'),
-                           # Bodenrippen, durch die Öffnung sichtbar
-                           mark('box', 20, 20, 160, 110, 10, '#9AA1A8'),
-                           *[mark('box', 30, 30 + i * 18, 140, 4, 2, '#868D94') for i in range(6)],
+         color=ALU, wand=6, boden=0,
+         marks=[mark('box', 1.5, 1.5, 197, 147, 9, '#B7BDC3', zeichnung=True), mark('box', 3, 3, 194, 144, 8, ALU, zeichnung=True),
+                           mark('box', 7, 7, 186, 136, 8, '#8E959C', zeichnung=True),
+                           # Bodenrippen, durch die Öffnung sichtbar (nur Zeichnung)
+                           mark('box', 20, 20, 160, 110, 10, '#9AA1A8', zeichnung=True),
+                           *[mark('box', 30, 30 + i * 18, 140, 4, 2, '#868D94', zeichnung=True) for i in range(6)],
                            # Stauchfalten in den Ecken
                            mark('box', 2, 4, 5, 1.2, 0, FALTE), mark('box', 4, 2, 1.2, 5, 0, FALTE),
                            mark('box', 193, 4, 5, 1.2, 0, FALTE), mark('box', 194.8, 2, 1.2, 5, 0, FALTE),
                            mark('box', 2, 144.8, 5, 1.2, 0, FALTE), mark('box', 4, 143, 1.2, 5, 0, FALTE),
                            mark('box', 193, 144.8, 5, 1.2, 0, FALTE), mark('box', 194.8, 143, 1.2, 5, 0, FALTE)]),
     teil('wand', 'aluminium_tray_body', 'Schale oben', 'Schale', 'box',
-         x=6, y=6, w=188, d=138, z=18, h=18, r=12, mass=5, label=False,
+         x=6, y=6, w=188, d=138, z=18, h=18, r=12, mass=5, label=False, wand=1, boden=0,
          info='Etwa 0,08 mm dünnes Aluminium, in die Form gepresst. Die Falten an den Ecken entstehen dabei.',
          color=ALU),
     teil('boden', 'aluminium_tray_body', 'Schale unten mit Boden', 'Schale', 'box',
-         x=12, y=12, w=176, d=126, z=0, h=18, r=14, mass=4.5,
+         x=12, y=12, w=176, d=126, z=0, h=18, r=14, mass=4.5, wand=1,
          info='Essensreste auskratzen, dann in die Gelbe Tonne. Aluminium lässt sich ohne Qualitätsverlust einschmelzen.',
          color=ALU),
 ]

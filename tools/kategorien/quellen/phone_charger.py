@@ -75,24 +75,27 @@ teile = [
               'Netz- und Niederspannungsseite.',
          color='#2E6B45', marks=[mark('box', 22.3, 2, 1.2, 12, 0.5, '#1E3F2A')]),
     teil('unterschale', 'plastic_housing', 'Gehäuse-Unterschale', 'Unterschale', 'box',
-         x=0, y=19, w=45, d=26, z=0, h=14, r=4, mass=12, sortBias=10,
+         x=0, y=19, w=45, d=26, z=0, h=14, r=4, mass=12, sortBias=10, wand=1.5,
          info='Hält Stifte und Platine. Auf dem Typenschild stehen Ausgangsspannung und Stromstärke.',
          color=GEH),
-    teil('kragen_l', 'plug_pins', 'Isolierhülse am Stift', 'Isolierhülse', 'box', material_id='pc',
+    teil('kragen_l', 'plug_pins', 'Isolierhülse am Stift', 'Isolierhülse', 'box', form='liegend_y', material_id='pc',
          x=10, y=9, w=5, d=10, z=11.5, h=5, r=2.5, explode=[0, -24, 0], mass=0.3, materials=[['pcabs', 100]],
          color='#E4E5E2', info='Kunststoffkragen am Stiftansatz. Schützt die Finger, wenn der Stecker halb in der Dose steckt.'),
-    teil('kragen_r', 'plug_pins', 'Isolierhülse rechts', 'Isolierhülse', 'box', material_id='pc',
+    teil('kragen_r', 'plug_pins', 'Isolierhülse rechts', 'Isolierhülse', 'box', form='liegend_y', material_id='pc',
          x=30, y=9, w=5, d=10, z=11.5, h=5, r=2.5, explode=[0, -24, 0], mass=0.3, materials=[['pcabs', 100]],
          color='#E4E5E2', label=False, info='Isolierhülse am zweiten Stift.'),
-    teil('stift_l', 'plug_pins', 'Steckerstift links', 'Stift', 'box',
+    teil('stift_l', 'plug_pins', 'Steckerstift links', 'Stift', 'box', form='liegend_y',
          x=10.5, y=0, w=4, d=19, z=12, h=4, r=2, explode=[0, -48, 0], mass=2.2, sortBias=-1,
          materials=[['messing', 100]],
          info='Vernickeltes Messing (Kupfer und Zink). In die Schale eingepresst, kommt nur beim Aufbrechen heraus.',
-         color='#C9CDD0'),
-    teil('stift_r', 'plug_pins', 'Steckerstift rechts', 'Stift', 'box',
+         color='#DCDFE2'),
+    teil('stift_r', 'plug_pins', 'Steckerstift rechts', 'Stift', 'box', form='liegend_y',
          x=30.5, y=0, w=4, d=19, z=12, h=4, r=2, explode=[0, -48, 0], mass=2.2, sortBias=-1,
          materials=[['messing', 100]], info='Zweiter Stift des Euro-Steckers, 19 mm Abstand zum ersten.',
-         color='#C9CDD0', label=False),
+         color='#DCDFE2', label=False),
 ]
 explodiere(teile, abstand=20, abstaende={'feder_l': 30, 'feder_r': 30, 'oberschale': 45})
+for p in teile:   # Foto-Ansicht: echte Formen (form) tragen keine aufgemalten Details
+    if p.get('form') and p.get('marks'):
+        p['marks'] = [dict(k, zeichnung=True) for k in p['marks']]
 schreibe('phone_charger', teile)

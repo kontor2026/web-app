@@ -10,7 +10,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from bau import teil, mark, explodiere, skaliere_masse, schreibe  # noqa: E402
 
-FLASCHE = '#EEF3F8'
+FLASCHE = '#ECEBE6'
 KAPPE = '#1E5AA8'
 teile = [
     teil('kappe', 'pp_flip_cap', 'Schraubkappe', 'Kappe', 'cyl',
@@ -32,13 +32,13 @@ teile = [
     teil('hals', 'deodorant_bottle', 'Hals mit Gewinde', 'Hals', 'cyl',
          x=6, y=6, w=33, z=72, h=12, mass=2.5,
          info='Weiter Hals, in dem der Kugelhalter steckt.', color=FLASCHE,
-         marks=[mark('cyl', 3, 3, 27, fill='#D3DCE5')]),
+         wand=3, boden=0, marks=[mark('cyl', 3, 3, 27, fill='#D3DCE5', zeichnung=True)]),
     teil('schulter', 'deodorant_bottle', 'Schulter', 'Schulter', 'cyl',
          x=4.5, y=4.5, w=36, z=66, h=6, mass=2.5, info='Übergang vom Rumpf zum Hals.', color=FLASCHE, label=False),
     teil('etikett', 'deodorant_bottle', 'Bedrucktes Etikett', 'Etikett', 'cyl',
          x=1.2, y=1.2, w=42.6, z=10, h=56, mass=0.6, materials=[['pp', 85], ['druck', 10], ['klebstoff', 5]],
          color='#7FA8D8', sortBias=1, explode=[60, 0, 0],
-         marks=[mark('cyl', 0.3, 0.3, 42, fill=FLASCHE)],
+         wand=0.4, boden=0, marks=[mark('cyl', 0.3, 0.3, 42, fill=FLASCHE, zeichnung=True)],
          info='Dünne Folie aus dem gleichen Kunststoff wie die Flasche. Sie darf dranbleiben, das stört das Recycling nicht.'),
     teil('rumpf', 'deodorant_bottle', 'Flasche', 'Flasche', 'cyl',
          x=1.5, y=1.5, w=42, z=4, h=62, mass=15,

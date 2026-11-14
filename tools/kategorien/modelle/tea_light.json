@@ -128,13 +128,15 @@
     ]
    ],
    "info": "Dünnes Aluminium, schützt den Tisch vor heißem Wachs. Leer und ohne Wachs in die Gelbe Tonne.",
-   "color": "#C9CED3",
+   "color": "#D5D8DB",
+   "wand": 0.5,
    "marks": [
     {
      "shape": "cyl",
      "x": 0.5,
      "y": 0.5,
      "w": 37,
+     "zeichnung": true,
      "fill": "#B9BFC4"
     }
    ]

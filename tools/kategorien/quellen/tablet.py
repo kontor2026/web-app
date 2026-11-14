@@ -10,7 +10,7 @@ from bau import teil, mark, raster, explodiere, schreibe  # noqa: E402
 CHIP = '#3F4547'
 teile = [
     teil('deckglas', 'tablet_display', 'Deckglas', 'Deckglas', 'box',
-         x=0, y=0, w=178, d=248, z=6.4, h=0.6, r=12, mass=58, materials=[['glas', 100]], color='#C9DEDF', opacity=0.6,
+         x=0, y=0, w=178, d=248, z=6.4, h=0.6, r=12, mass=58, materials=[['glas', 100]], color='#353B40', opacity=0.8,
          info='Chemisch gehärtetes Glas, zugleich die Touch-Fläche. Mit Wärme und Kunststoff-Plektren vom Rahmen lösen, '
               'dabei Schutzbrille tragen: Es kann splittern.',
          marks=[mark('cyl', 84, 5, 10, fill='#262B2F')]),
@@ -66,7 +66,7 @@ teile = [
          info='Ladebuchse auf einer eigenen kleinen Platine, mit Flachbandkabel verbunden. Lässt sich einzeln tauschen.',
          marks=[mark('box', 4, 9, 12, 4, 2, '#262B2F')]),
     teil('gehaeuse', 'aluminium_housing', 'Aluminium-Gehäuse', 'Gehäuse', 'box',
-         x=0, y=0, w=178, d=248, z=0, h=1, r=12, mass=150, materials=[['alu', 100]],
+         x=0, y=0, w=178, d=248, z=0, h=1, r=12, mass=150, materials=[['alu', 100]], color='#C9CCCF',
          info='Aus einem Aluminiumblock gefräst. Erst alle Bauteile ausbauen, dann ist die leere Schale reines Aluminium.',
          marks=[mark('box', 3, 3, 172, 242, 10), mark('cyl', 12, 12, 14, fill='#262B2F')]),
 ]

@@ -230,6 +230,7 @@
    ],
    "info": "Hohler Griff aus Kunststoff, innen die Dampftasten. Gehört zum Gehäuse und wird mit ihm entsorgt.",
    "color": "#5DADE2",
+   "form": "liegend_y",
    "marks": [
     {
      "shape": "box",
@@ -553,7 +554,7 @@
     ]
    ],
    "info": "Dünnes Stahlblech zwischen heißer Sohle und Kunststoffteilen. Kommt zum Altmetall.",
-   "color": "#9AA2A6",
+   "color": "#C9CDD0",
    "marks": [
     {
      "shape": "box",
@@ -671,7 +672,7 @@
     ]
    ],
    "info": "Schrauben halten Sohle und Gehäuse zusammen; die hintere sitzt oft unter der Heckkappe.",
-   "color": "#7C858C",
+   "color": "#C9CDD0",
    "label": true,
    "marks": [
     {
@@ -715,7 +716,7 @@
     ]
    ],
    "info": "Schrauben halten Sohle und Gehäuse zusammen; die hintere sitzt oft unter der Heckkappe.",
-   "color": "#7C858C",
+   "color": "#C9CDD0",
    "label": false,
    "marks": [
     {
@@ -765,7 +766,7 @@
     ]
    ],
    "info": "Aluminiumguss mit Keramikbeschichtung und Dampflöchern. Wertvolles Aluminium für den Metallschrott.",
-   "color": "#C9CED2",
+   "color": "#E2E5E8",
    "label": true,
    "marks": [
     {
@@ -993,7 +994,7 @@
     ]
    ],
    "info": "Abschnitt: Bügelsohle.",
-   "color": "#C9CED2",
+   "color": "#E2E5E8",
    "label": false,
    "marks": [
     {
@@ -1173,7 +1174,7 @@
     ]
    ],
    "info": "Abschnitt: Bügelsohle.",
-   "color": "#C9CED2",
+   "color": "#E2E5E8",
    "label": false,
    "marks": [
     {
@@ -1289,7 +1290,7 @@
     ]
    ],
    "info": "Abschnitt: Bügelsohle.",
-   "color": "#C9CED2",
+   "color": "#E2E5E8",
    "label": false
   },
   {
@@ -1323,7 +1324,7 @@
     ]
    ],
    "info": "Abschnitt: Bügelsohle.",
-   "color": "#C9CED2",
+   "color": "#E2E5E8",
    "label": false
   },
   {
@@ -1353,8 +1354,8 @@
     ]
    ],
    "info": "Durchsichtiger Kunststofftank für etwa 300 ml Wasser, vorne im Gehäuse. Eingeklipst; ohne Metall gehört er zum Kunststoff.",
-   "color": "#CFE3EA",
-   "opacity": 0.6,
+   "color": "#D6E6EC",
+   "opacity": 0.4,
    "label": true,
    "marks": [
     {
@@ -1422,8 +1423,8 @@
     ]
    ],
    "info": "Abschnitt: Wassertank.",
-   "color": "#CFE3EA",
-   "opacity": 0.6,
+   "color": "#D6E6EC",
+   "opacity": 0.4,
    "label": false,
    "marks": [
     {
@@ -1464,8 +1465,8 @@
     ]
    ],
    "info": "Abschnitt: Wassertank.",
-   "color": "#CFE3EA",
-   "opacity": 0.6,
+   "color": "#D6E6EC",
+   "opacity": 0.4,
    "label": false
   },
   {
@@ -1567,6 +1568,7 @@
    ],
    "info": "Etwa 2 m Kabel mit Stoffummantelung oder PVC. Längs aufschlitzen, um die Kupferadern freizulegen.",
    "color": "#2E3338",
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
@@ -1575,7 +1577,8 @@
      "w": 10,
      "d": 6,
      "r": 2,
-     "fill": "#555"
+     "fill": "#555",
+     "zeichnung": true
     }
    ]
   },
@@ -1606,7 +1609,8 @@
     ]
    ],
    "info": "Drei Kupferadern für bis zu 2400 Watt. Kupfer lässt sich fast verlustfrei wiederverwerten.",
-   "color": "#B87333"
+   "color": "#B87333",
+   "form": "liegend_x"
   }
  ]
 }

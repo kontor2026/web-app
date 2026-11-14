@@ -158,7 +158,7 @@
     ]
    ],
    "info": "Dünne, gold eloxierte Aluminiumhülle, die über den Kunststoffdeckel gepresst ist. Lässt sie sich abziehen, kommt sie getrennt in die Gelbe Tonne.",
-   "color": "#C9A646",
+   "color": "#E8CF86",
    "marks": [
     {
      "shape": "cyl",
@@ -322,12 +322,14 @@
    "info": "Eigentlicher Behälter für die Creme. Mit einem Spatel leer kratzen, Cremereste gehören in den Restmüll.",
    "color": "#F7F5F2",
    "sortBias": -8,
+   "wand": 2.5,
    "marks": [
     {
      "shape": "cyl",
      "x": 3,
      "y": 3,
      "w": 44,
+     "zeichnung": true,
      "fill": "#E9E6E0"
     },
     {
@@ -335,6 +337,7 @@
      "x": 5,
      "y": 5,
      "w": 40,
+     "zeichnung": true,
      "fill": "#F3E3D3"
     }
    ]
@@ -365,12 +368,14 @@
    ],
    "info": "Dicke Außenwand, die den Tiegel größer und wertiger wirken lässt als den Inhalt. Mit dem Innentiegel verklebt oder verrastet, beide PP, also gemeinsam in die Gelbe Tonne.",
    "color": "#E9E2D8",
+   "wand": 3,
    "marks": [
     {
      "shape": "cyl",
      "x": 3,
      "y": 3,
      "w": 52,
+     "zeichnung": true,
      "fill": "#D9D1C4"
     }
    ]

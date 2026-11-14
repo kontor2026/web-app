@@ -25,20 +25,21 @@
     ]
    ],
    "info": "Dünne Aluminiumfolie, auf den Kragen gesiegelt. In der Maschine wird sie durchstochen. Ganz abziehen und mit der Kapsel in die Gelbe Tonne geben.",
-   "color": "#D3D7DA",
+   "color": "#E2E5E8",
    "marks": [
     {
      "shape": "cyl",
      "x": 4,
      "y": 4,
-     "w": 29
+     "w": 29,
+     "fill": "#D6DADE"
     },
     {
      "shape": "cyl",
      "x": 15.5,
      "y": 15.5,
      "w": 6,
-     "fill": "#B9BFC4"
+     "fill": "#C4C9CE"
     }
    ]
   },
@@ -67,7 +68,7 @@
     ]
    ],
    "info": "Umgebogener Rand, auf dem die Folie klebt. Die Maschine klemmt die Kapsel hier dicht ein.",
-   "color": "#7A4B8C",
+   "color": "#B488C6",
    "marks": [
     {
      "shape": "cyl",
@@ -103,7 +104,7 @@
     ]
    ],
    "info": "Aus einer Aluminiumscheibe tiefgezogen. Darin stecken etwa 5 g Kaffeepulver: den Kaffeesatz in den Bio-Müll leeren, dann wird das Aluminium recycelt.",
-   "color": "#7A4B8C"
+   "color": "#A97BBD"
   },
   {
    "id": "koerper_unten",
@@ -130,7 +131,7 @@
     ]
    ],
    "info": "Verjüngt sich nach unten, damit die Kapsel in die Brühkammer passt.",
-   "color": "#7A4B8C",
+   "color": "#A97BBD",
    "label": false
   },
   {
@@ -158,7 +159,7 @@
     ]
    ],
    "info": "Hier sticht die Maschine Löcher hinein, durch die heißes Wasser mit Druck einströmt.",
-   "color": "#7A4B8C"
+   "color": "#A97BBD"
   },
   {
    "id": "lack",
@@ -166,16 +167,14 @@
    "material_id": "aluminium",
    "name": "Farblack",
    "short": "Farblack",
-   "shape": "box",
-   "x": 33.5,
-   "y": 8.5,
-   "w": 0.3,
-   "d": 20,
-   "z": 6,
-   "h": 19,
-   "r": 0,
+   "shape": "cyl",
+   "x": 3.2,
+   "y": 3.2,
+   "w": 30.6,
+   "z": 19,
+   "h": 7.6,
    "explode": [
-    30,
+    42,
     0,
     0
    ],
@@ -187,8 +186,9 @@
     ]
    ],
    "info": "Die Farbe zeigt die Kaffeesorte. Der Lack verbrennt beim Einschmelzen, das Aluminium bleibt übrig.",
-   "color": "#7A4B8C",
-   "sortBias": 100
+   "color": "#6A3A7C",
+   "wand": 0.3,
+   "boden": 0
   }
  ]
 }

@@ -13,7 +13,7 @@ from bau import teil, mark, raster, explodiere, skaliere_masse, schreibe  # noqa
 
 def rad(seite, x, dx):
     return teil(f'rad_{seite}', 'plastic_housing', f'Laufrad {seite}', f'Rad {seite}', 'box', material_id='pp',
-                x=x, y=20, w=25, d=180, z=0, h=180, r=8, explode=[dx, 0, 0], mass=150, materials=[['pp', 85], ['gummi', 10], ['stahl', 5]],
+                x=x, y=20, w=25, d=180, z=0, h=180, r=8, explode=[dx, 0, 0], form='liegend_x', mass=150, materials=[['pp', 85], ['gummi', 10], ['stahl', 5]],
                 info='Großes Kunststoffrad mit Gummilauffläche auf einer Stahlachse. Abhebeln und zum Kunststoff geben.',
                 color='#2E3338', label=seite == 'links', marks=[mark('box', 4, 70, 17, 40, 4, fill='#9AA2A6')])
 
@@ -38,7 +38,7 @@ teile = [
          color='#F2F4F5', marks=raster(4, 2, 24, 1, 4, 8, 8, r=1, fill='#D5DADE')),
     teil('motor', 'electric_motor', 'Saugmotor', 'Motor', 'cyl',
          x=140, y=40, w=130, z=30, h=130, mass=1400,
-         materials=[['kupfer', 25], ['stahl', 45], ['alu', 10], ['pcabs', 15], ['graphit', 5]],
+         materials=[['stahl', 45], ['kupfer', 25], ['alu', 10], ['pcabs', 15], ['graphit', 5]],
          info='Schnell drehender Motor mit Kupferwicklung, Kohlebürsten und Lüfterrad aus Aluminium. Sitzt in Gummilagern, die Kabel sind gesteckt.',
          marks=[mark('cyl', 15, 15, 100, fill='#B87333'), mark('cyl', 45, 45, 40, fill='#9AA2A6')]),
     teil('kabeltrommel', 'cable_insulation', 'Kabeltrommel', 'Kabeltrommel', 'cyl', material_id='pp',
@@ -62,17 +62,20 @@ teile = [
     teil('schlauch', 'vacuum_hose', 'Saugschlauch mit Anschlussstück', 'Schlauch', 'box',
          x=125, y=380, w=50, d=50, z=140, h=50, r=20, explode=[0, 80, 0], mass=450,
          info='Gerippter Kunststoffschlauch (etwa 1,8 m, hier verkürzt) mit Drehanschluss. Drehen und abziehen; ohne Metallspirale gehört er zum Kunststoff.',
-         color='#5A6670', marks=[mark('cyl', 10, 10, 30, fill='#1E2226')]),
+         color='#5A6670', wand=5, boden=0, marks=[mark('cyl', 10, 10, 30, fill='#1E2226', zeichnung=True)]),
     teil('kabel', 'cable_insulation', 'Netzkabel (Isolierung)', 'Kabel', 'box',
-         x=150, y=210, w=100, d=8, z=30, h=8, r=4, explode=[180, 0, 0], mass=350, materials=[['pvc', 90], ['pp', 10]],
+         x=150, y=210, w=100, d=8, z=30, h=8, r=4, explode=[180, 0, 0], form='liegend_x', mass=350, materials=[['pvc', 90], ['pp', 10]],
          info='Etwa 7 m PVC-Kabel auf der Trommel. Am Stecker herausziehen und längs aufschlitzen, um die Kupferadern freizulegen.',
          color='#2E3338', marks=[mark('box', 90, 1, 10, 6, 2, fill='#555')]),
     teil('kupferadern', 'cable_copper_core', 'Kupferadern', 'Kupferadern', 'box',
-         x=150, y=212.5, w=100, d=3, z=32.5, h=3, r=1, explode=[180, 0, 15], mass=250,
+         x=150, y=212.5, w=100, d=3, z=32.5, h=3, r=1, explode=[180, 0, 15], form='liegend_x', mass=250,
          info='Zwei Kupferadern über die ganze Kabellänge. Kupfer lässt sich fast verlustfrei wiederverwerten.',
          color='#B87333'),
 ]
 
 explodiere(teile, abstand=30, fest=('unterschale', 'lenkrolle'))
 skaliere_masse(teile, oid='vacuum_cleaner')
+for p in teile:  # gerundete Formen (form): marks nur in der Zeichnung, oben flach würden sie schweben
+    if p.get('form'):
+        p['marks'] = [dict(m, zeichnung=True) for m in p.get('marks') or []]
 schreibe('vacuum_cleaner', teile)

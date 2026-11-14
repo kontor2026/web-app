@@ -31,7 +31,7 @@ def g(id, name, short, w, z, h, mass, info=INFO_G, **extra):
 
 g('muendung', 'Mündung mit Wulst', 'Mündung', 31, 288, 12, 12,
   'Verdickter Rand am Flaschenhals. Unter dem Wulst schneidet man die Kapsel rundherum ein.',
-  marks=[mark('cyl', 3.5, 3.5, 24, fill='#C49A63')])
+  marks=[mark('cyl', 3.5, 3.5, 24, fill='#C49A63', zeichnung=True)])
 g('hals', 'Flaschenhals', 'Hals', 29.5, 228, 60, 38, 'Langer, schmaler Hals, in dem der Korken steckt.')
 for i, (w, z, h) in enumerate([(35, 220, 8), (46, 212, 8), (58, 204, 8), (68, 196, 8)]):
     g(f'schulter{i}', 'Flaschenschulter', 'Schulter', w, z, h, 12,
@@ -45,7 +45,7 @@ g('boden', 'Boden mit Einstich', 'Boden', 70, 0, 6, 45,
 
 teile = [
     teil('kapsel', 'aluminium_capsule_foil', 'Kapsel (Flaschenhalsfolie)', 'Kapsel', 'cyl', **rund(32.5, 250, 50),
-         mass=1.5, materials=[['alu', 80], ['ldpe', 15], ['druck', 5]], color='#7A1F2B', sortBias=1,
+         mass=1.5, materials=[['alu', 80], ['ldpe', 15], ['druck', 5]], color='#A3303F', sortBias=1,
          marks=[mark('cyl', 3, 3, 26.5, fill='#9C3340'), mark('cyl', 12.25, 12.25, 8, fill='#5A1620'),
                 mark('cyl', 7, 15, 2, fill='#5A1620'), mark('cyl', 23.5, 15, 2, fill='#5A1620')],
          info='Dünne Alufolie mit Kunststoff, schützt den Korken. Unter dem Wulst rundherum einschneiden und '
@@ -57,11 +57,11 @@ teile = [
     *glas,
     teil('halsschild', 'paper_label', 'Halsschild', 'Halsschild', 'cyl', **rund(30.1, 232, 14), mass=0.3,
          materials=[['papier', 90], ['druck', 5], ['klebstoff', 5]], color='#E9DFC4', sortBias=43,
-         marks=[mark('cyl', 0.6, 0.6, 28.9, fill=INNEN)],
+         wand=0.3, boden=0, marks=[mark('cyl', 0.6, 0.6, 28.9, fill=INNEN, zeichnung=True)],
          info='Schmales Papierband mit dem Jahrgang. Darf am Glas bleiben.'),
     teil('etikett', 'paper_label', 'Bauchetikett', 'Etikett', 'cyl', **rund(76.6, 60, 95), mass=2.2,
          materials=[['papier', 90], ['druck', 5], ['klebstoff', 5]], color='#EFE6CF', sortBias=42,
-         marks=[mark('cyl', 1.3, 1.3, 74, fill=INNEN)],
+         wand=0.3, boden=0, marks=[mark('cyl', 1.3, 1.3, 74, fill=INNEN, zeichnung=True)],
          info='Papier mit Leim. In warmem Wasser lässt es sich ablösen, beim Altglas darf es aber dranbleiben: '
               'Es verbrennt in der Schmelze.'),
 ]

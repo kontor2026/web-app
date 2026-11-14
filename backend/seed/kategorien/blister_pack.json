@@ -157,12 +157,14 @@
    "color": "#E4EBEF",
    "opacity": 0.55,
    "label": true,
+   "form": "kugel",
    "marks": [
     {
      "shape": "cyl",
      "x": 1.5,
      "y": 2,
      "w": 13,
+     "zeichnung": true,
      "d": 8,
      "fill": "#FFFFFF"
     },
@@ -171,6 +173,7 @@
      "x": 7.6,
      "y": 3,
      "w": 0.6,
+     "zeichnung": true,
      "d": 6,
      "r": 0,
      "fill": "#D5D9DC"
@@ -206,12 +209,14 @@
    "color": "#E4EBEF",
    "opacity": 0.55,
    "label": false,
+   "form": "kugel",
    "marks": [
     {
      "shape": "cyl",
      "x": 1.5,
      "y": 2,
      "w": 13,
+     "zeichnung": true,
      "d": 8,
      "fill": "#FFFFFF"
     },
@@ -220,6 +225,7 @@
      "x": 7.6,
      "y": 3,
      "w": 0.6,
+     "zeichnung": true,
      "d": 6,
      "r": 0,
      "fill": "#D5D9DC"
@@ -255,12 +261,14 @@
    "color": "#E4EBEF",
    "opacity": 0.55,
    "label": false,
+   "form": "kugel",
    "marks": [
     {
      "shape": "cyl",
      "x": 1.5,
      "y": 2,
      "w": 13,
+     "zeichnung": true,
      "d": 8,
      "fill": "#FFFFFF"
     },
@@ -269,6 +277,7 @@
      "x": 7.6,
      "y": 3,
      "w": 0.6,
+     "zeichnung": true,
      "d": 6,
      "r": 0,
      "fill": "#D5D9DC"
@@ -304,12 +313,14 @@
    "color": "#E4EBEF",
    "opacity": 0.55,
    "label": false,
+   "form": "kugel",
    "marks": [
     {
      "shape": "cyl",
      "x": 1.5,
      "y": 2,
      "w": 13,
+     "zeichnung": true,
      "d": 8,
      "fill": "#FFFFFF"
     },
@@ -318,6 +329,7 @@
      "x": 7.6,
      "y": 3,
      "w": 0.6,
+     "zeichnung": true,
      "d": 6,
      "r": 0,
      "fill": "#D5D9DC"
@@ -353,12 +365,14 @@
    "color": "#E4EBEF",
    "opacity": 0.55,
    "label": false,
+   "form": "kugel",
    "marks": [
     {
      "shape": "cyl",
      "x": 1.5,
      "y": 2,
      "w": 13,
+     "zeichnung": true,
      "d": 8,
      "fill": "#FFFFFF"
     },
@@ -367,6 +381,7 @@
      "x": 7.6,
      "y": 3,
      "w": 0.6,
+     "zeichnung": true,
      "d": 6,
      "r": 0,
      "fill": "#D5D9DC"
@@ -402,12 +417,14 @@
    "color": "#E4EBEF",
    "opacity": 0.55,
    "label": false,
+   "form": "kugel",
    "marks": [
     {
      "shape": "cyl",
      "x": 1.5,
      "y": 2,
      "w": 13,
+     "zeichnung": true,
      "d": 8,
      "fill": "#FFFFFF"
     },
@@ -416,6 +433,7 @@
      "x": 7.6,
      "y": 3,
      "w": 0.6,
+     "zeichnung": true,
      "d": 6,
      "r": 0,
      "fill": "#D5D9DC"
@@ -451,12 +469,14 @@
    "color": "#E4EBEF",
    "opacity": 0.55,
    "label": false,
+   "form": "kugel",
    "marks": [
     {
      "shape": "cyl",
      "x": 1.5,
      "y": 2,
      "w": 13,
+     "zeichnung": true,
      "d": 8,
      "fill": "#FFFFFF"
     },
@@ -465,6 +485,7 @@
      "x": 7.6,
      "y": 3,
      "w": 0.6,
+     "zeichnung": true,
      "d": 6,
      "r": 0,
      "fill": "#D5D9DC"
@@ -500,12 +521,14 @@
    "color": "#E4EBEF",
    "opacity": 0.55,
    "label": false,
+   "form": "kugel",
    "marks": [
     {
      "shape": "cyl",
      "x": 1.5,
      "y": 2,
      "w": 13,
+     "zeichnung": true,
      "d": 8,
      "fill": "#FFFFFF"
     },
@@ -514,6 +537,7 @@
      "x": 7.6,
      "y": 3,
      "w": 0.6,
+     "zeichnung": true,
      "d": 6,
      "r": 0,
      "fill": "#D5D9DC"
@@ -549,12 +573,14 @@
    "color": "#E4EBEF",
    "opacity": 0.55,
    "label": false,
+   "form": "kugel",
    "marks": [
     {
      "shape": "cyl",
      "x": 1.5,
      "y": 2,
      "w": 13,
+     "zeichnung": true,
      "d": 8,
      "fill": "#FFFFFF"
     },
@@ -563,6 +589,7 @@
      "x": 7.6,
      "y": 3,
      "w": 0.6,
+     "zeichnung": true,
      "d": 6,
      "r": 0,
      "fill": "#D5D9DC"
@@ -598,12 +625,14 @@
    "color": "#E4EBEF",
    "opacity": 0.55,
    "label": false,
+   "form": "kugel",
    "marks": [
     {
      "shape": "cyl",
      "x": 1.5,
      "y": 2,
      "w": 13,
+     "zeichnung": true,
      "d": 8,
      "fill": "#FFFFFF"
     },
@@ -612,6 +641,7 @@
      "x": 7.6,
      "y": 3,
      "w": 0.6,
+     "zeichnung": true,
      "d": 6,
      "r": 0,
      "fill": "#D5D9DC"

@@ -35,7 +35,7 @@ teile = [
          + [mark('box', 89, 180, 8, 6, 0.5, '#2B302C'),
             mark('cyl', 22, 172, 14, fill='#3A3F44'), mark('cyl', 26, 176, 6, fill='#9AA2A8'),
             mark('cyl', 114, 172, 14, fill='#3A3F44'), mark('box', 118, 178, 6, 2, 0.5, '#9AA2A8'),
-            mark('box', 8, 8, 134, 150, 8, '#C2D8D9')]),
+            mark('box', 8, 8, 134, 150, 8, '#C2D8D9', zeichnung=True)]),
     teil('lcd', 'lcd_panel', 'Flüssigkristall-Anzeige (LCD)', 'LCD', 'box',
          x=50, y=168, w=50, d=22, z=12.5, h=2.5, r=1, mass=6, color='#A9B4A2', materials=[['glas', 85], ['folien', 15]],
          info='Zeigt das Gewicht in Gramm. Zwei dünne Glasplatten mit Flüssigkristall, flach anfassen.',
@@ -72,9 +72,10 @@ teile = [
          marks=[mark('box', 0, 0, 70, 1, 0.3, '#E8E2C8'), mark('box', 0, 2, 70, 1, 0.3, '#3E9A57')],
          info='Dünne bunte Litzen von jeder Wägezelle zur Platine. Kupfer, beim Zerlegen einfach abknipsen.'),
     teil('gehaeuse', 'plastic_housing', 'Gehäuse-Wanne mit Füßen', 'Gehäuse', 'box',
-         x=0, y=0, w=150, d=200, z=0, h=15, r=10, mass=110, color=GEH,
+         x=0, y=0, w=150, d=200, z=0, h=15, r=10, mass=110, color=GEH, wand=2.5, boden=2,
          info='Flache Kunststoffwanne. Die Wägezellen stehen auf vier Gummifüßen, die durch den Boden ragen.',
-         marks=[mark('box', 50, 75, 50, 30, 3, '#1E2226')] + [mark('cyl', x, y, 10, fill='#1E2226')
+         marks=[mark('box', 50, 75, 50, 30, 3, '#1E2226', zeichnung=True)]
+         + [mark('cyl', x, y, 10, fill='#1E2226', zeichnung=True)
                                                                for x, y in ((18, 18), (122, 18), (18, 168), (122, 168))]),
 ]
 

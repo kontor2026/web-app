@@ -27,12 +27,15 @@
    "info": "Der gerollte Rand macht den dünnen Becher steif und angenehm zum Trinken.",
    "color": "#EEF1F3",
    "opacity": 0.85,
+   "wand": 2.5,
+   "boden": 0,
    "marks": [
     {
      "shape": "cyl",
      "x": 2.5,
      "y": 2.5,
      "w": 70,
+     "zeichnung": true,
      "fill": "#D3D9DD"
     },
     {
@@ -40,6 +43,7 @@
      "x": 13,
      "y": 15,
      "w": 50,
+     "zeichnung": true,
      "d": 46,
      "fill": "#BCC4CA"
     }
@@ -73,12 +77,15 @@
    "color": "#EEF1F3",
    "opacity": 0.85,
    "label": true,
+   "wand": 0.8,
+   "boden": 0,
    "marks": [
     {
      "shape": "cyl",
      "x": 1.5,
      "y": 1.5,
      "w": 69,
+     "zeichnung": true,
      "fill": "#D3D9DD"
     }
    ]
@@ -110,7 +117,9 @@
    "info": "Gehört zur Becherwand aus PP. Leicht geriffelt, damit der Becher besser in der Hand liegt.",
    "color": "#EEF1F3",
    "opacity": 0.85,
-   "label": false
+   "label": false,
+   "wand": 0.85,
+   "boden": 0
   },
   {
    "id": "wand2",
@@ -139,7 +148,9 @@
    "info": "Gehört zur Becherwand aus PP. Leicht geriffelt, damit der Becher besser in der Hand liegt.",
    "color": "#EEF1F3",
    "opacity": 0.85,
-   "label": false
+   "label": false,
+   "wand": 0.9,
+   "boden": 0
   },
   {
    "id": "wand3",
@@ -168,7 +179,9 @@
    "info": "Gehört zur Becherwand aus PP. Leicht geriffelt, damit der Becher besser in der Hand liegt.",
    "color": "#EEF1F3",
    "opacity": 0.85,
-   "label": false
+   "label": false,
+   "wand": 0.95,
+   "boden": 0
   },
   {
    "id": "wand4",
@@ -197,7 +210,9 @@
    "info": "Gehört zur Becherwand aus PP. Leicht geriffelt, damit der Becher besser in der Hand liegt.",
    "color": "#EEF1F3",
    "opacity": 0.85,
-   "label": false
+   "label": false,
+   "wand": 1,
+   "boden": 0
   },
   {
    "id": "boden",
@@ -226,12 +241,14 @@
    "info": "Hier steht das Recyclingzeichen 5. Leer gemacht kommt der ganze Becher in die Gelbe Tonne, Becher nicht ineinanderstecken, sonst sortiert die Anlage sie schlechter.",
    "color": "#EEF1F3",
    "opacity": 0.85,
+   "wand": 0.8,
    "marks": [
     {
      "shape": "cyl",
      "x": 4,
      "y": 4,
      "w": 42,
+     "zeichnung": true,
      "fill": "#D3D9DD"
     }
    ]

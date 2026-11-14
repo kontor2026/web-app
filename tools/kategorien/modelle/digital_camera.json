@@ -31,7 +31,7 @@
     ]
    ],
    "info": "Vorderes Gehäuseteil aus Aluminium mit Öffnung für das Objektiv. Nach dem Lösen der kleinen Schrauben an Seiten und Boden abheben.",
-   "color": "#9AA2A8",
+   "color": "#C4C8CC",
    "sortBias": 1,
    "marks": [
     {
@@ -181,12 +181,15 @@
    ],
    "info": "Ineinander gesteckte Ringe, die beim Einschalten ausfahren. Mit drei Schrauben auf dem Sensor befestigt.",
    "color": "#2B2F33",
+   "wand": 3,
+   "boden": 0,
    "marks": [
     {
      "shape": "cyl",
      "x": 4,
      "y": 4,
      "w": 36,
+     "zeichnung": true,
      "fill": "#3A3F44"
     },
     {
@@ -194,6 +197,7 @@
      "x": 12,
      "y": 12,
      "w": 20,
+     "zeichnung": true,
      "fill": "#1E2226"
     }
    ]
@@ -646,12 +650,14 @@
    ],
    "info": "Hinteres Gehäuseteil mit Displayfenster, Tasten und Stativgewinde. Kunststoff mit kleinen Metallteilen.",
    "color": "#3A3F44",
+   "wand": 1.5,
    "marks": [
     {
      "shape": "box",
      "x": 4,
      "y": 6,
      "w": 78,
+     "zeichnung": true,
      "d": 53,
      "r": 3,
      "fill": "#2B2F33"
@@ -661,6 +667,7 @@
      "x": 88,
      "y": 20,
      "w": 14,
+     "zeichnung": true,
      "fill": "#4A5156"
     }
    ]

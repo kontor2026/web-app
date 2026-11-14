@@ -27,8 +27,8 @@
     ]
    ],
    "info": "Chemisch gehärtetes Glas, zugleich die Touch-Fläche. Mit Wärme und Kunststoff-Plektren vom Rahmen lösen, dabei Schutzbrille tragen: Es kann splittern.",
-   "color": "#C9DEDF",
-   "opacity": 0.6,
+   "color": "#353B40",
+   "opacity": 0.8,
    "marks": [
     {
      "shape": "cyl",
@@ -716,6 +716,7 @@
     ]
    ],
    "info": "Aus einem Aluminiumblock gefräst. Erst alle Bauteile ausbauen, dann ist die leere Schale reines Aluminium.",
+   "color": "#C9CCCF",
    "marks": [
     {
      "shape": "box",

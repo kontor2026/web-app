@@ -67,7 +67,9 @@
     ]
    ],
    "info": "Reißt beim ersten Öffnen teilweise ab und zeigt, dass die Flasche unbenutzt ist. Die Lasche hält den Deckel fest.",
-   "color": "#2F6DB5"
+   "color": "#2F6DB5",
+   "wand": 2,
+   "boden": 0
   },
   {
    "id": "hals",
@@ -102,6 +104,7 @@
      "x": 5,
      "y": 5,
      "w": 17,
+     "zeichnung": true,
      "fill": "#B8CFD5"
     }
    ]
@@ -536,12 +539,15 @@
    "info": "Dünne bedruckte PP-Folie, rundum geklebt. In der Recyclinganlage schwimmt sie im Wasser oben und wird so vom PET getrennt.",
    "color": "#D9483B",
    "sortBias": 4,
+   "wand": 0.3,
+   "boden": 0,
    "marks": [
     {
      "shape": "cyl",
      "x": 1,
      "y": 1,
      "w": 64,
+     "zeichnung": true,
      "fill": "#C3D6DB"
     }
    ]

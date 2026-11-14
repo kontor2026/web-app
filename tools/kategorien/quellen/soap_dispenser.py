@@ -10,6 +10,22 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from bau import teil, mark, explodiere, skaliere_masse, schreibe  # noqa: E402
 
+
+def scheiben(teile, pid, n):
+    """Foto-Ansicht: hohes Teil in n Scheiben teilen, damit die glatte Hülle (Stapel) nur oben einzieht."""
+    i = next(k for k, p in enumerate(teile) if p['id'] == pid)
+    p = teile[i]
+    zs = [round(p['z'] + k * p['h'] / n, 2) for k in range(n)] + [p['z'] + p['h']]
+    neu = []
+    for k in range(n):
+        q = dict(p, z=zs[k], h=round(zs[k + 1] - zs[k], 2), mass=round(p['mass'] / n, 3))
+        if k < n - 1:
+            q.update(id=f'{pid}_{k + 1}', label=False, marks=None)
+            q = {f: v for f, v in q.items() if v is not None}
+        neu.append(q)
+    teile[i:i + 1] = neu[::-1]
+
+
 FLASCHE = '#F5F1E8'
 PUMPE = '#FFFFFF'
 teile = [
@@ -19,9 +35,9 @@ teile = [
               'Stahlfeder und kommt als Ganzes in die Gelbe Tonne.',
          color=PUMPE, marks=[mark('cyl', 3, 3, 20, fill='#ECECE8')]),
     teil('auslauf', 'pump_dispenser', 'Auslauf', 'Auslauf', 'box',
-         x=43, y=21, w=27, d=8, z=168, h=8, r=3, mass=1,
+         x=43, y=21, w=27, d=8, z=168, h=8, r=3, mass=1, form='liegend_x',
          info='Rohr, aus dem die Seife kommt. Zum Verriegeln für den Transport dreht man den Kopf.',
-         color=PUMPE, marks=[mark('cyl', 21, 2, 4, fill='#2A2E31')]),
+         color=PUMPE, marks=[mark('cyl', 21, 2, 4, fill='#2A2E31', zeichnung=True)]),
     teil('schaft', 'pump_dispenser', 'Kolbenschaft', 'Schaft', 'cyl',
          x=26.5, y=21.5, w=7, z=136, h=16, mass=1,
          info='Hohler Schaft mit Kolben am unteren Ende. Durch ihn steigt die Seife in den Kopf.',
@@ -43,7 +59,7 @@ teile = [
     teil('hals', 'hdpe_bottle_body', 'Flaschenhals mit Gewinde', 'Hals', 'cyl',
          x=17, y=12, w=26, z=125, h=14, mass=2.5,
          info='Gewindehals für die Pumpe. Darum lässt sich der Spender auch nachfüllen.',
-         color=FLASCHE, marks=[mark('cyl', 4, 4, 18, fill='#DCD7CB')]),
+         color=FLASCHE, wand=2.5, boden=0, marks=[mark('cyl', 4, 4, 18, fill='#DCD7CB', zeichnung=True)]),
     teil('schulter', 'hdpe_bottle_body', 'Flaschenschulter', 'Schulter', 'cyl',
          x=10, y=7, w=40, d=36, z=115, h=10, mass=3,
          info='Übergang vom ovalen Körper zum Hals.', color=FLASCHE, label=False),
@@ -60,10 +76,10 @@ teile = [
          info='Schlauch bis zum Boden, durch den die Pumpe die Seife ansaugt. Steckt unten am Zylinder.',
          color='#EDEDE8'),
     teil('etikett', 'plastic_label', 'Etikett', 'Etikett', 'cyl',
-         x=-0.5, y=0.5, w=61, d=49, z=25, h=90, mass=1,
+         x=-1.2, y=-0.2, w=62.4, d=50.4, z=25, h=90, mass=1,
          materials=[['pp', 92], ['druck', 5], ['klebstoff', 3]],
          info='Bedruckte PP-Folie rundum. Passt zum Kunststoffrecycling und darf dranbleiben.',
-         color='#C98BB9', sortBias=1, marks=[mark('cyl', 1, 1, 59, 47, fill=FLASCHE)]),
+         color='#C98BB9', sortBias=1, wand=0.4, boden=0, marks=[mark('cyl', 1.7, 1.7, 59, 47, fill=FLASCHE, zeichnung=True)]),
 ]
 # Innenteile zusammengebaut hinter Flasche und Verschluss zeichnen
 for p in teile:
@@ -73,5 +89,6 @@ EX = {'pumpkopf': [0, 0, 163], 'auslauf': [0, 0, 163], 'schaft': [0, 0, 151], 'f
       'zylinder': [0, 0, 96], 'verschlussring': [0, 0, 28], 'steigrohr': [-45, 45, 0], 'etikett': [80, 0, 0]}
 for p in teile:
     p['explode'] = EX.get(p['id'], [0, 0, 0])
+scheiben(teile, 'rumpf', 3)
 skaliere_masse(teile, oid='soap_dispenser')
 schreibe('soap_dispenser', teile)

@@ -10,6 +10,22 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from bau import teil, mark, explodiere, skaliere_masse, schreibe  # noqa: E402
 
+
+def scheiben(teile, pid, n):
+    """Foto-Ansicht: hohes Teil in n Scheiben teilen, damit die glatte Hülle (Stapel) nur oben einzieht."""
+    i = next(k for k, p in enumerate(teile) if p['id'] == pid)
+    p = teile[i]
+    zs = [round(p['z'] + k * p['h'] / n, 2) for k in range(n)] + [p['z'] + p['h']]
+    neu = []
+    for k in range(n):
+        q = dict(p, z=zs[k], h=round(zs[k + 1] - zs[k], 2), mass=round(p['mass'] / n, 3))
+        if k < n - 1:
+            q.update(id=f'{pid}_{k + 1}', label=False, marks=None)
+            q = {f: v for f, v in q.items() if v is not None}
+        neu.append(q)
+    teile[i:i + 1] = neu[::-1]
+
+
 FLASCHE = '#F2EFEA'
 DECKEL = '#3E7CB1'
 teile = [
@@ -26,7 +42,7 @@ teile = [
     teil('hals', 'hdpe_bottle_body', 'Flaschenhals mit Gewinde', 'Hals', 'cyl',
          x=24, y=11.5, w=22, z=150, h=16, mass=2.5,
          info='Dickwandiger Hals mit Gewinde. Hier sitzt nach dem Ausspülen oft noch etwas Shampoo.',
-         color=FLASCHE, marks=[mark('cyl', 4, 4, 14, fill='#D6D2CA')]),
+         color=FLASCHE, wand=2.5, marks=[mark('cyl', 4, 4, 14, fill='#D6D2CA', zeichnung=True)]),
     teil('schulter', 'hdpe_bottle_body', 'Flaschenschulter', 'Schulter', 'cyl',
          x=5, y=3, w=60, d=39, z=138, h=12, mass=3.0,
          info='Die Flasche wird aus einem Schlauch in einer Form aufgeblasen (Extrusionsblasformen).',
@@ -40,16 +56,17 @@ teile = [
          x=3, y=2, w=64, d=41, z=0, h=8, mass=4.0,
          info='Am Boden sieht man die Quetschnaht vom Blasformen und das Recyclingzeichen 2.',
          color=FLASCHE),
-    teil('etikett_vorne', 'plastic_label', 'Etikett vorne', 'Etikett', 'box',
-         x=70, y=8, w=0.3, d=29, z=25, h=100, r=0, explode=[50, 0, 0], mass=1.0, materials=[['pp', 95], ['druck', 5]],
+    teil('etikett_vorne', 'plastic_label', 'Etikett vorne', 'Etikett', 'cyl',
+         x=-1, y=-1, w=72, d=47, z=28, h=95, explode=[100, 0, 0], mass=1.0, materials=[['pp', 95], ['druck', 5]],
          info='Selbstklebende PP-Folie. Sie muss nicht abgezogen werden, weil sie zum Deckel-Kunststoff passt.',
-         color='#3E7CB1', sortBias=100),
+         color='#3E7CB1', wand=0.3, boden=0),
     teil('etikett_hinten', 'plastic_label', 'Etikett hinten', 'Etikett', 'box',
-         x=-0.3, y=8, w=0.3, d=29, z=25, h=90, r=0, explode=[-50, 0, 0], mass=0.8,
+         x=15, y=-1.3, w=40, d=0.3, z=35, h=80, r=0, explode=[0, -45, 0], mass=0.8,
          materials=[['pp', 95], ['druck', 5]], label=False,
          info='Rückseite mit Inhaltsstoffen und Gebrauchsanweisung.',
          color='#E8EEF4'),
 ]
 explodiere(teile, abstand=22, fest=('rumpf', 'boden', 'schulter', 'hals'), gruppen=[['klappe', 'deckel_unterteil']])
+scheiben(teile, 'rumpf', 4)
 skaliere_masse(teile, oid='shampoo_bottle')
 schreibe('shampoo_bottle', teile)

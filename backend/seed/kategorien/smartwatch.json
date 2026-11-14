@@ -300,12 +300,15 @@
    "info": "Dünner Klebering zwischen Display und Gehäuse. Hält das Glas fest und macht die Uhr wasserdicht. Nach dem Öffnen muss er erneuert werden.",
    "color": "#E8E8E2",
    "opacity": 0.8,
+   "wand": 2,
+   "boden": 0,
    "marks": [
     {
      "shape": "box",
      "x": 2,
      "y": 2,
      "w": 30,
+     "zeichnung": true,
      "d": 31,
      "r": 7,
      "fill": "#2F3438"
@@ -794,12 +797,15 @@
    ],
    "info": "Gefräster Aluminiumrahmen. Erst alle Teile ausbauen, dann ist die leere Schale reines Aluminium.",
    "color": "#C3C8CC",
+   "wand": 1.5,
+   "boden": 0,
    "marks": [
     {
      "shape": "box",
      "x": 1.5,
      "y": 1.5,
      "w": 34,
+     "zeichnung": true,
      "d": 35,
      "r": 9,
      "fill": "#9DA4A9"

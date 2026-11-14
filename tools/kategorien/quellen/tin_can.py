@@ -9,7 +9,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from bau import teil, mark, explodiere, skaliere_masse, schreibe  # noqa: E402
 
-BLECH = '#C3C8CC'
+BLECH = '#E2E5E8'
 WB = [['weissblech', 97], ['druck', 3]]
 teile = [
     teil('ring', 'steel_can_lid', 'Aufreißring', 'Ring', 'box',
@@ -26,15 +26,15 @@ teile = [
          x=0.5, y=0.5, w=72, z=3, h=104, mass=36, materials=WB,
          info='Stahlblech, dünn verzinnt (Weißblech), zu einem Rohr gerollt und verschweißt. Die Sicken machen ihn '
               'stabil. Ein Magnet bleibt daran hängen, so erkennt man Stahl.',
-         color=BLECH, marks=[mark('cyl', 2, 2, 68, fill='#E6E2D6')]),
+         color=BLECH, wand=1, boden=0, marks=[mark('cyl', 2, 2, 68, fill='#E6E2D6', zeichnung=True)]),
     teil('boden', 'steel_can_lid', 'Dosenboden', 'Boden', 'cyl',
          x=0, y=0, w=73, z=0, h=3, mass=7, materials=WB,
          info='Wie der Deckel auf den Rumpf gefalzt, aber ohne Aufreißlinie. Bleibt an der Dose.',
          color=BLECH, marks=[mark('cyl', 3, 3, 67), mark('cyl', 12, 12, 49, fill='#B3B9BE')]),
-    teil('etikett', 'paper_label', 'Papierbanderole', 'Etikett', 'box',
-         x=73, y=11.5, w=0.3, d=50, z=10, h=90, r=0, explode=[50, 0, 0], mass=2,
+    teil('etikett', 'paper_label', 'Papierbanderole', 'Etikett', 'cyl',
+         x=0, y=0, w=73, z=10, h=90, explode=[100, 0, 0], mass=2,
          info='Rundum geklebtes Papier. Darf dranbleiben, beim Einschmelzen verbrennt es.',
-         color='#D9503F', sortBias=100),
+         color='#D9503F', wand=0.4, boden=0),
 ]
 explodiere(teile, abstand=25, nach_liste=True)
 skaliere_masse(teile, oid='tin_can')

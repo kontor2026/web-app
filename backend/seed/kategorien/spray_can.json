@@ -327,7 +327,7 @@
     ]
    ],
    "info": "Eingerollter Rand, auf den der Ventilteller gepresst wird.",
-   "color": "#C9CED3",
+   "color": "#D5D8DB",
    "marks": [
     {
      "shape": "cyl",
@@ -363,7 +363,7 @@
     ]
    ],
    "info": "Die Schulter wird aus dem Rohr gedrückt und zum Rand hin immer enger.",
-   "color": "#C9CED3",
+   "color": "#D5D8DB",
    "label": false
   },
   {
@@ -376,14 +376,14 @@
    "x": 0,
    "y": 0,
    "w": 53,
-   "z": 0,
-   "h": 135,
+   "z": 90,
+   "h": 45,
    "explode": [
     0,
     0,
     0.0
    ],
-   "mass": 36,
+   "mass": 12,
    "materials": [
     [
      "alu",
@@ -391,7 +391,7 @@
     ]
    ],
    "info": "Aus einem Aluminiumbutzen in einem Stück fließgepresst, der Boden ist nach innen gewölbt. Nur ganz leer in die Gelbe Tonne. Nie anstechen, zerdrücken oder erhitzen: Explosionsgefahr.",
-   "color": "#C9CED3",
+   "color": "#D5D8DB",
    "marks": [
     {
      "shape": "cyl",
@@ -400,6 +400,62 @@
      "w": 46
     }
    ]
+  },
+  {
+   "id": "rumpf_2",
+   "component_id": "aluminium_spray_can_body",
+   "material_id": "aluminium",
+   "name": "Dosenrumpf (Monoblock)",
+   "short": "Dose",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 53,
+   "z": 45,
+   "h": 45,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 12,
+   "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "info": "Aus einem Aluminiumbutzen in einem Stück fließgepresst, der Boden ist nach innen gewölbt. Nur ganz leer in die Gelbe Tonne. Nie anstechen, zerdrücken oder erhitzen: Explosionsgefahr.",
+   "color": "#D5D8DB",
+   "label": false
+  },
+  {
+   "id": "rumpf_1",
+   "component_id": "aluminium_spray_can_body",
+   "material_id": "aluminium",
+   "name": "Dosenrumpf (Monoblock)",
+   "short": "Dose",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 53,
+   "z": 0,
+   "h": 45,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 12,
+   "materials": [
+    [
+     "alu",
+     100
+    ]
+   ],
+   "info": "Aus einem Aluminiumbutzen in einem Stück fließgepresst, der Boden ist nach innen gewölbt. Nur ganz leer in die Gelbe Tonne. Nie anstechen, zerdrücken oder erhitzen: Explosionsgefahr.",
+   "color": "#D5D8DB",
+   "label": false
   },
   {
    "id": "steigrohr",
@@ -434,16 +490,14 @@
    "material_id": "aluminium",
    "name": "Außenlack und Druck",
    "short": "Druck",
-   "shape": "box",
-   "x": 53,
-   "y": 6.5,
-   "w": 0.3,
-   "d": 40,
-   "z": 10,
-   "h": 115,
-   "r": 0,
+   "shape": "cyl",
+   "x": -1,
+   "y": -1,
+   "w": 55,
+   "z": 12,
+   "h": 112,
    "explode": [
-    55,
+    110,
     0,
     0
    ],
@@ -456,7 +510,8 @@
    ],
    "info": "Direkt auf das Aluminium gedruckt. Verbrennt beim Einschmelzen, das Aluminium wird wieder zu Metall.",
    "color": "#2C5F8A",
-   "sortBias": 100
+   "wand": 0.3,
+   "boden": 0
   }
  ]
 }

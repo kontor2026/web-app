@@ -162,8 +162,8 @@
     ]
    ],
    "info": "Gehärtetes Mineralglas, in die Lünette eingepresst. Nicht herausdrücken: Es gehört mit zum Gehäuse.",
-   "color": "#C9DEDF",
-   "opacity": 0.6
+   "color": "#F2F6F7",
+   "opacity": 0.5
   },
   {
    "id": "luenette",
@@ -190,13 +190,16 @@
     ]
    ],
    "info": "Polierter Edelstahlring um das Glas, auf das Gehäuse gepresst.",
-   "color": "#C3C8CC",
+   "color": "#DADDE0",
+   "wand": 2,
+   "boden": 0,
    "marks": [
     {
      "shape": "cyl",
      "x": 2,
      "y": 2,
      "w": 32,
+     "zeichnung": true,
      "fill": "#9DA4A9"
     }
    ]
@@ -636,13 +639,16 @@
     ]
    ],
    "info": "Edelstahlgehäuse aus einem Stück mit den Hörnern für die Federstege. Leer ist es reiner Stahlschrott.",
-   "color": "#C3C8CC",
+   "color": "#DADDE0",
+   "wand": 3,
+   "boden": 0,
    "marks": [
     {
      "shape": "cyl",
      "x": 3,
      "y": 3,
      "w": 30,
+     "zeichnung": true,
      "fill": "#9DA4A9"
     }
    ]
@@ -678,7 +684,8 @@
     ]
    ],
    "info": "Ziehen, um die Uhrzeit zu stellen. Zum Ausbau des Werks die Welle nach Drücken eines Hebelchens herausziehen.",
-   "color": "#B7BCC0"
+   "color": "#B7BCC0",
+   "form": "liegend_x"
   },
   {
    "id": "dichtung",
@@ -706,12 +713,15 @@
    ],
    "info": "Gummiring zwischen Boden und Gehäuse, hält Wasser und Staub fern.",
    "color": "#22272B",
+   "wand": 1,
+   "boden": 0,
    "marks": [
     {
      "shape": "cyl",
      "x": 1,
      "y": 1,
      "w": 27,
+     "zeichnung": true,
      "fill": "#3A3F44"
     }
    ]
@@ -741,7 +751,7 @@
     ]
    ],
    "info": "Eingedrückter Stahlboden. Mit einem Gehäusemesser an der kleinen Kerbe aufhebeln.",
-   "color": "#C3C8CC",
+   "color": "#DADDE0",
    "marks": [
     {
      "shape": "box",

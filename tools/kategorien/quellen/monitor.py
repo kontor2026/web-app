@@ -86,11 +86,11 @@ teile = [
               'zu Hause weiter nutzbar oder ins Altmetall.',
          marks=[mark('box', 80, 10, 80, 120, 10, '#4A5156')]),
     teil('kabel', 'cable_insulation', 'Netzkabel (Isolierung)', 'Kabel', 'box',
-         x=320, y=110, w=180, d=10, z=0, h=8, r=4, mass=120, materials=[['pvc', 90], ['pp', 10]], color=GEH,
+         x=320, y=110, w=180, d=10, z=0, h=8, r=4, form='liegend_x', mass=120, materials=[['pvc', 90], ['pp', 10]], color=GEH,
          info='1,5 m Kaltgerätekabel mit PVC-Mantel. Stecker abschneiden und längs aufschlitzen.',
          marks=[mark('box', 0, 0, 30, 10, 2, '#4A5156'), mark('box', 150, 0, 30, 10, 2, '#4A5156')]),
     teil('kupferadern', 'cable_copper_core', 'Kupferadern', 'Kupferadern', 'box',
-         x=320, y=135, w=180, d=4, z=0, h=4, r=1, mass=60, color='#B87333',
+         x=320, y=135, w=180, d=4, z=0, h=4, r=1, form='liegend_x', mass=60, color='#B87333',
          info='Drei Kupferadern (Phase, Neutralleiter, Schutzleiter). Reines Kupfer lohnt sich beim Schrotthändler.'),
 ]
 
@@ -113,4 +113,7 @@ for p in (by[i] for i in RECHTS):
     p['explode'] = [W + 20, 0, 0]
 
 skaliere_masse(teile, oid='monitor')
+for p in teile:  # gerundete Formen (form): marks nur in der Zeichnung, oben flach würden sie schweben
+    if p.get('form'):
+        p['marks'] = [dict(m, zeichnung=True) for m in p.get('marks') or []]
 schreibe('monitor', teile)

@@ -64,12 +64,14 @@
    ],
    "info": "Rohr, aus dem die Seife kommt. Zum Verriegeln für den Transport dreht man den Kopf.",
    "color": "#FFFFFF",
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "cyl",
      "x": 21,
      "y": 2,
      "w": 4,
+     "zeichnung": true,
      "fill": "#2A2E31"
     }
    ]
@@ -254,12 +256,15 @@
    ],
    "info": "Gewindehals für die Pumpe. Darum lässt sich der Spender auch nachfüllen.",
    "color": "#F5F1E8",
+   "wand": 2.5,
+   "boden": 0,
    "marks": [
     {
      "shape": "cyl",
      "x": 4,
      "y": 4,
      "w": 18,
+     "zeichnung": true,
      "fill": "#DCD7CB"
     }
    ]
@@ -304,14 +309,14 @@
    "y": 1,
    "w": 60,
    "d": 48,
-   "z": 5,
-   "h": 110,
+   "z": 78.33,
+   "h": 36.67,
    "explode": [
     0,
     0,
     0
    ],
-   "mass": 17.8,
+   "mass": 5.9,
    "materials": [
     [
      "hdpe",
@@ -320,6 +325,64 @@
    ],
    "info": "HDPE, Recyclingcode 2. Leer machen, kurz ausspülen und mit Pumpe in die Gelbe Tonne. Besser: nachfüllen statt neu kaufen.",
    "color": "#F5F1E8"
+  },
+  {
+   "id": "rumpf_2",
+   "component_id": "hdpe_bottle_body",
+   "material_id": "hdpe",
+   "name": "Flaschenkörper",
+   "short": "Flasche",
+   "shape": "cyl",
+   "x": 0,
+   "y": 1,
+   "w": 60,
+   "d": 48,
+   "z": 41.67,
+   "h": 36.66,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 5.9,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "HDPE, Recyclingcode 2. Leer machen, kurz ausspülen und mit Pumpe in die Gelbe Tonne. Besser: nachfüllen statt neu kaufen.",
+   "color": "#F5F1E8",
+   "label": false
+  },
+  {
+   "id": "rumpf_1",
+   "component_id": "hdpe_bottle_body",
+   "material_id": "hdpe",
+   "name": "Flaschenkörper",
+   "short": "Flasche",
+   "shape": "cyl",
+   "x": 0,
+   "y": 1,
+   "w": 60,
+   "d": 48,
+   "z": 5,
+   "h": 36.67,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 5.9,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "HDPE, Recyclingcode 2. Leer machen, kurz ausspülen und mit Pumpe in die Gelbe Tonne. Besser: nachfüllen statt neu kaufen.",
+   "color": "#F5F1E8",
+   "label": false
   },
   {
    "id": "boden",
@@ -385,10 +448,10 @@
    "name": "Etikett",
    "short": "Etikett",
    "shape": "cyl",
-   "x": -0.5,
-   "y": 0.5,
-   "w": 61,
-   "d": 49,
+   "x": -1.2,
+   "y": -0.2,
+   "w": 62.4,
+   "d": 50.4,
    "z": 25,
    "h": 90,
    "explode": [
@@ -414,12 +477,15 @@
    "info": "Bedruckte PP-Folie rundum. Passt zum Kunststoffrecycling und darf dranbleiben.",
    "color": "#C98BB9",
    "sortBias": 1,
+   "wand": 0.4,
+   "boden": 0,
    "marks": [
     {
      "shape": "cyl",
-     "x": 1,
-     "y": 1,
+     "x": 1.7,
+     "y": 1.7,
      "w": 59,
+     "zeichnung": true,
      "d": 47,
      "fill": "#F5F1E8"
     }

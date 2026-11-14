@@ -304,13 +304,16 @@
     ]
    ],
    "info": "Breiter, gerollter Rand. Er wird über den Deckel gedrückt und hält ihn fest. Vorsicht, die Kante kann scharf sein.",
-   "color": "#C9CED3",
+   "color": "#EEF0F2",
+   "wand": 6,
+   "boden": 0,
    "marks": [
     {
      "shape": "box",
      "x": 1.5,
      "y": 1.5,
      "w": 197,
+     "zeichnung": true,
      "d": 147,
      "r": 9,
      "fill": "#B7BDC3"
@@ -320,15 +323,17 @@
      "x": 3,
      "y": 3,
      "w": 194,
+     "zeichnung": true,
      "d": 144,
      "r": 8,
-     "fill": "#C9CED3"
+     "fill": "#EEF0F2"
     },
     {
      "shape": "box",
      "x": 7,
      "y": 7,
      "w": 186,
+     "zeichnung": true,
      "d": 136,
      "r": 8,
      "fill": "#8E959C"
@@ -338,6 +343,7 @@
      "x": 20,
      "y": 20,
      "w": 160,
+     "zeichnung": true,
      "d": 110,
      "r": 10,
      "fill": "#9AA1A8"
@@ -347,6 +353,7 @@
      "x": 30,
      "y": 30,
      "w": 140,
+     "zeichnung": true,
      "d": 4,
      "r": 2,
      "fill": "#868D94"
@@ -356,6 +363,7 @@
      "x": 30,
      "y": 48,
      "w": 140,
+     "zeichnung": true,
      "d": 4,
      "r": 2,
      "fill": "#868D94"
@@ -365,6 +373,7 @@
      "x": 30,
      "y": 66,
      "w": 140,
+     "zeichnung": true,
      "d": 4,
      "r": 2,
      "fill": "#868D94"
@@ -374,6 +383,7 @@
      "x": 30,
      "y": 84,
      "w": 140,
+     "zeichnung": true,
      "d": 4,
      "r": 2,
      "fill": "#868D94"
@@ -383,6 +393,7 @@
      "x": 30,
      "y": 102,
      "w": 140,
+     "zeichnung": true,
      "d": 4,
      "r": 2,
      "fill": "#868D94"
@@ -392,6 +403,7 @@
      "x": 30,
      "y": 120,
      "w": 140,
+     "zeichnung": true,
      "d": 4,
      "r": 2,
      "fill": "#868D94"
@@ -497,8 +509,10 @@
     ]
    ],
    "info": "Etwa 0,08 mm dünnes Aluminium, in die Form gepresst. Die Falten an den Ecken entstehen dabei.",
-   "color": "#C9CED3",
-   "label": false
+   "color": "#EEF0F2",
+   "label": false,
+   "wand": 1,
+   "boden": 0
   },
   {
    "id": "boden",
@@ -527,7 +541,8 @@
     ]
    ],
    "info": "Essensreste auskratzen, dann in die Gelbe Tonne. Aluminium lässt sich ohne Qualitätsverlust einschmelzen.",
-   "color": "#C9CED3"
+   "color": "#EEF0F2",
+   "wand": 1
   }
  ]
 }

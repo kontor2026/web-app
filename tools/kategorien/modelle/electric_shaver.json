@@ -31,7 +31,7 @@
     ]
    ],
    "info": "Hauchdünne, gelochte Folie aus galvanisch geformtem Nickel. Sehr empfindlich; Nickel kann Allergien auslösen.",
-   "color": "#D5DADE",
+   "color": "#E6E8EA",
    "marks": [
     {
      "shape": "cyl",
@@ -802,7 +802,7 @@
     ]
    ],
    "info": "Kleiner Gleichstrommotor mit Kupferwicklung und Ferritmagnet. An die Platine gelötet; Lötfahnen mit einer Zange abknipsen.",
-   "color": "#9AA2A6",
+   "color": "#C9CDD0",
    "marks": [
     {
      "shape": "cyl",

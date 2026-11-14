@@ -68,7 +68,7 @@ teile = [
          info='Eine Kupferspule lässt einen Kolben hin und her schwingen und drückt das Wasser durch das Pad. In Gummilagern eingesetzt, lässt sich herausziehen.',
          color='#5F6B75', marks=[mark('box', 6, 6, 43, 33, 8, fill='#B87333')]),
     teil('platine', 'circuit_board', 'Steuerplatine', 'Platine', 'box',
-         x=15, y=80, w=18, d=100, z=30, h=120, r=1, mass=60,
+         x=15, y=80, w=18, d=92, z=30, h=120, r=1, mass=60,
          info='Steuert Pumpe, Heizung und Tasten. Steckverbinder abziehen und die Platine zum Elektroschrott geben.',
          color='#2F6B3A', marks=[mark('box', 4, 20, 10, 15, 1, fill='#222'), mark('box', 4, 60, 10, 20, 2, fill='#E0E4E7')]),
     teil('bodenplatte', 'plastic_housing', 'Bodenplatte', 'Bodenplatte', 'box',
@@ -79,7 +79,7 @@ teile = [
          x=15, y=0, w=170, d=65, z=30, h=280, r=14, explode=[0, -110, 0], mass=170,
          info='Durchsichtiger Kunststofftank, wird nach oben herausgehoben. Unten sitzt ein federbelastetes Ventil, '
               'das beim Abnehmen schließt.',
-         color='#CFE3EA', opacity=0.6, marks=[mark('box', 6, 6, 158, 53, 10, fill='#B5CCD5')]),
+         color='#D6E6EC', opacity=0.35, wand=2.5, marks=[mark('box', 6, 6, 158, 53, 10, fill='#B5CCD5', zeichnung=True)]),
     teil('tankdeckel', 'water_tank', 'Tankdeckel', 'Tankdeckel', 'box', material_id='pp',
          x=15, y=0, w=170, d=65, z=310, h=10, r=14, explode=[0, -110, 50], mass=30, materials=[['pp', 100]],
          color=DUNKEL, info='Klappdeckel aus Polypropylen, hält Staub vom Wasser fern. Einfach abziehen.',
@@ -91,7 +91,7 @@ teile = [
     teil('tropfschale', 'plastic_housing', 'Tropfschale', 'Tropfschale', 'box', material_id='pp',
          x=35, y=175, w=130, d=75, z=20, h=20, r=10, explode=[0, 110, 0], mass=80, materials=[['pp', 100]],
          info='Fängt Tropfen und Restwasser auf. Nach vorne herausziehen und regelmäßig leeren.',
-         color='#2E3338'),
+         color='#2E3338', wand=2),
     teil('kabel', 'cable_insulation', 'Netzkabel (Isolierung)', 'Kabel', 'box',
          x=130, y=40, w=70, d=8, z=5, h=8, r=4, explode=[80, 0, 0], mass=80, materials=[['pvc', 90], ['pp', 10]],
          info='Etwa 80 cm PVC-Mantel mit Stecker. Längs aufschlitzen, um die Kupferadern freizulegen.',
@@ -112,5 +112,14 @@ i, j = [next(k for k, p in enumerate(teile) if p['id'] == n) for n in ('durchlau
 teile.insert(i, teile.pop(j))
 explodiere(teile, abstand=25, fest=('bodenplatte',), nach_liste=True,
            abstaende={'thermosicherung': 15, 'duschsieb': 30, 'dichtung': 25, 'padhalter': 80, 'deckel': 60})
+# Foto-Ansicht: echte Formen (Kabel liegend, Spulen als Ring); Details darauf nur in der Zeichnung
+FORMEN = {'kabel': ('liegend_x', 1), 'kupferadern': ('liegend_x', 1)}
+for p in teile:
+    if p['id'] in FORMEN:
+        p['form'], nur_zeichnung = FORMEN[p['id']]
+        p.pop('wand', None)
+        p.pop('boden', None)
+        for m in (p.get('marks') or []) if nur_zeichnung else []:
+            m['zeichnung'] = True
 skaliere_masse(teile, oid='coffee_machine')
 schreibe('coffee_machine', teile)

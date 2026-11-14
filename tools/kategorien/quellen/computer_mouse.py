@@ -74,10 +74,10 @@ teile += [
          info='Klares Polycarbonat. Bündelt das LED-Licht auf den Tisch und das Bild zurück auf den Sensor.',
          marks=[mark('cyl', 6, 7, 7), mark('cyl', 15, 8, 6)]),
     teil('unterschale', 'plastic_housing', 'Unterschale mit Gleitfüßen', 'Unterschale', 'box',
-         x=0, y=0, w=63, d=115, z=0, h=10, r=26, mass=20, color='#26292C',
+         x=0, y=0, w=63, d=115, z=0, h=10, r=26, mass=20, color='#26292C', wand=2,
          info='Bodenplatte mit Sensoröffnung und Schraubendom. Nach dem Ausbau der Elektronik ist sie reiner Kunststoff.',
-         marks=[mark('box', 4, 4, 55, 107, 22, '#2F3336'), mark('cyl', 28, 56, 8, fill='#1A1D20'),
-                mark('cyl', 28.5, 94.5, 6, fill='#3A3F44')]),
+         marks=[mark('box', 4, 4, 55, 107, 22, '#2F3336', zeichnung=True), mark('cyl', 28, 56, 8, fill='#1A1D20', zeichnung=True),
+                mark('cyl', 28.5, 94.5, 6, fill='#3A3F44', zeichnung=True)]),
     teil('schraube', 'plastic_housing', 'Gehäuseschraube', 'Schraube', 'cyl', material_id='steel',
          x=29.5, y=95.5, w=4, z=1, h=12, mass=0.5, materials=[['stahl', 100]], color='#9BA3A8',
          info='Kreuzschlitzschraube, die Ober- und Unterschale zusammenhält. Sie steckt unter dem hinteren Gleitfuß.',
@@ -89,10 +89,10 @@ teile += [
     teil('gleitfuss_h', 'plastic_housing', 'Gleitfuß hinten', 'Gleitfuß', 'box', material_id='pp',
          x=10, y=92, w=43, d=12, z=0, h=0.6, r=5, mass=0.4, materials=[['ptfe', 85], ['klebstoff', 15]], color='#ECECE8',
          label=False, info='Hinterer Gleitfuß, verdeckt die Gehäuseschraube.'),
-    teil('kabel', 'cable_insulation', 'Kabelmantel mit Knickschutz', 'Kabel', 'box',
+    teil('kabel', 'cable_insulation', 'Kabelmantel mit Knickschutz', 'Kabel', 'box', form='liegend_y',
          x=29, y=-13, w=5, d=13, z=3, h=5, r=2.5, mass=22, explode=[60, -20, 0], color='#2B2F33',
          info='Etwa 1,8 m PVC-Kabel. Zum Recycling lassen sich Mantel und Kupfer mit einer Abisolierzange trennen.'),
-    teil('litzen', 'cable_copper_core', 'Kupferlitzen', 'Kupferlitzen', 'box',
+    teil('litzen', 'cable_copper_core', 'Kupferlitzen', 'Kupferlitzen', 'box', form='liegend_y',
          x=30, y=-13, w=3, d=13, z=4, h=3, r=1.5, mass=6, explode=[75, -20, 0], color='#C98F62',
          info='Vier dünne Kupferadern für Strom und Daten. Kupfer ist wertvoll und fast beliebig oft recycelbar.'),
     teil('usb', 'cable_copper_core', 'USB-Stecker', 'USB-Stecker', 'box',
@@ -105,4 +105,7 @@ teile += [
 explodiere(teile, abstand=26, gruppen=[['oberschale'] + [f'oberschale_{i}' for i in range(2, 7)]],
            abstaende={'schraube': 14, **{p['id']: 65 for p in teile if p['id'].startswith('oberschale')}})
 skaliere_masse(teile, oid='computer_mouse')
+for p in teile:   # Foto-Ansicht: echte Formen (form) tragen keine aufgemalten Details
+    if p.get('form') and p.get('marks'):
+        p['marks'] = [dict(k, zeichnung=True) for k in p['marks']]
 schreibe('computer_mouse', teile)

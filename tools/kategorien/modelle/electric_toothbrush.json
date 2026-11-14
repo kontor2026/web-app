@@ -169,12 +169,15 @@
    ],
    "info": "Silikonring, hält Wasser und Zahnpasta aus dem Griff fern. Ist er rissig, rostet der Motor.",
    "color": "#5A6670",
+   "wand": 4,
+   "boden": 0,
    "marks": [
     {
      "shape": "cyl",
      "x": 5,
      "y": 5,
      "w": 8,
+     "zeichnung": true,
      "fill": "#3A444C"
     }
    ]
@@ -502,12 +505,15 @@
    ],
    "info": "Wasserdichtes Kunststoffrohr mit Gummi-Griffzone. Das Innenleben lässt sich nach oben herausdrücken, oft erst nach Aufschneiden des Bodens.",
    "color": "#F4F6F7",
+   "wand": 2,
+   "boden": 0,
    "marks": [
     {
      "shape": "cyl",
      "x": 3,
      "y": 3,
      "w": 22,
+     "zeichnung": true,
      "fill": "#D5DCE2"
     }
    ]

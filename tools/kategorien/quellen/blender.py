@@ -25,8 +25,8 @@ teile = [
            info=('Bruchfester Kunststoff (Copolyester oder Polycarbonat) mit Skala. Er wird nach unten schmaler, '
                  'damit das Mixgut immer wieder zum Messer fällt. Materialcode steht am Boden.') if i == 3
            else 'Teil des Mixbehälters.',
-           color='#DDE6EC', opacity=0.55,
-           marks=[mark('box', w / 2 - 15, w - 16, 30, 3, 1, '#9FB0BC')] if i == 0 else None)
+           color='#E4ECF0', opacity=0.3, wand=3, boden=0,
+           marks=[mark('box', w / 2 - 15, w - 16, 30, 3, 1, '#9FB0BC', zeichnung=True)] if i == 0 else None)
       for i, (w, z, h) in enumerate([(140, 300, 60), (134, 250, 50), (124, 205, 45), (112, 160, 45)])],
     teil('griff', 'blender_jar', 'Behältergriff', 'Griff', 'box',
          x=155, y=70, w=25, d=30, z=200, h=150, r=10, mass=60,
@@ -77,7 +77,7 @@ teile = [
          info='Sitzt unten auf der Motorwelle und kühlt den Motor. Lässt sich nach dem Lösen der Mutter abziehen.',
          color='#5F6B75', marks=raster(10, 37, 6, 1, 8, 6, 10, r=1, fill='#4A545C')),
     *[teil(f'schraube{i}', 'plastic_housing', 'Gehäuseschraube', 'Schrauben', 'cyl', material_id='steel',
-           x=x, y=y, w=7, z=12, h=3, mass=1.5, materials=[['stahl', 100]], color='#9AA2A6', label=i == 0,
+           x=x, y=y, w=7, z=12, h=3, mass=1.5, materials=[['stahl', 100]], color='#C9CDD0', label=i == 0,
            info='Vier lange Schrauben von unten unter den Saugfüßen. Füße abhebeln, dann die Schrauben lösen.',
            marks=[mark('box', 1, 3, 5, 1), mark('box', 3, 1, 1, 5)])
       for i, (x, y) in enumerate([(18.5, 18.5), (144.5, 18.5), (18.5, 144.5), (144.5, 144.5)])],
@@ -100,5 +100,14 @@ next(p for p in teile if p['id'] == 'gehaeuse')['explode'] = [-260, 0, 0]
 explodiere(teile, abstand=25, fest=('bodenplatte',), nach_liste=True,
            gruppen=[['behaelter0', 'behaelter1', 'behaelter2', 'behaelter3', 'griff']],
            abstaende={**{f'schraube{i}': 15 for i in range(4)}, 'sicherung': 15, 'behaelterfuss': 60, 'motor': 70})
+# Foto-Ansicht: echte Formen (Kabel liegend, Spulen als Ring); Details darauf nur in der Zeichnung
+FORMEN = {'kabel': ('liegend_x', 1), 'kupferadern': ('liegend_x', 1)}
+for p in teile:
+    if p['id'] in FORMEN:
+        p['form'], nur_zeichnung = FORMEN[p['id']]
+        p.pop('wand', None)
+        p.pop('boden', None)
+        for m in (p.get('marks') or []) if nur_zeichnung else []:
+            m['zeichnung'] = True
 skaliere_masse(teile, oid='blender')
 schreibe('blender', teile)

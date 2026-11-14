@@ -11,7 +11,7 @@ from bau import teil, mark, raster, explodiere, skaliere_masse, schreibe  # noqa
 # Explosion nach Liste: Unterarm bleibt, darüber Federn, untere Heizung und Platte, obere Platte, Heizung, Federn,
 # Platine mit Anzeige und Oberarm. Gelenk nach hinten (dy < 0), Kabel nach rechts (dx > 0).
 SCHWARZ = '#2E3338'
-FEDER = '#9AA2A6'
+FEDER = '#C9CDD0'
 
 
 def platte(id, name, short, z):
@@ -98,5 +98,14 @@ teile = [
 explodiere(teile, abstand=22, fest=('unterarm',), nach_liste=True,
            abstaende={'anzeige': 12, 'fuehler': 10, **{f'feder_{s}{i}': 12 for s in ('oben', 'unten') for i in range(2)},
                       **{f'schraube{i}': 12 for i in range(2)}})
+# Foto-Ansicht: echte Formen (Kabel liegend, Spulen als Ring); Details darauf nur in der Zeichnung
+FORMEN = {'kabel': ('liegend_y', 1), 'kupferadern': ('liegend_y', 1)}
+for p in teile:
+    if p['id'] in FORMEN:
+        p['form'], nur_zeichnung = FORMEN[p['id']]
+        p.pop('wand', None)
+        p.pop('boden', None)
+        for m in (p.get('marks') or []) if nur_zeichnung else []:
+            m['zeichnung'] = True
 skaliere_masse(teile, oid='hair_straightener')
 schreibe('hair_straightener', teile)

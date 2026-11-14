@@ -27,7 +27,7 @@
     ]
    ],
    "info": "Gehärtetes, gewölbtes Glas über dem Display. Mit dem Rahmen verklebt.",
-   "color": "#9FB4BA",
+   "color": "#E8EFF1",
    "opacity": 0.3
   },
   {
@@ -208,12 +208,15 @@
    ],
    "info": "Rahmen aus Kunststoff, oft mit dem Glas und dem Unterteil verklebt. Nur mit Wärme zu öffnen.",
    "color": "#25292D",
+   "wand": 2,
+   "boden": 0,
    "marks": [
     {
      "shape": "box",
      "x": 2.5,
      "y": 4,
      "w": 14,
+     "zeichnung": true,
      "d": 30,
      "r": 2,
      "fill": "#1E2226"

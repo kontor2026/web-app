@@ -11,7 +11,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from bau import teil, mark, skaliere_masse, schreibe  # noqa: E402
 
-ALU = '#C9CED3'
+ALU = '#D5D8DB'
 KERN = '#B58C5E'
 MITTE_Y, MITTE_Z = 20, 20
 
@@ -27,7 +27,7 @@ def scheiben(z0, z1, n, radius):
 
 
 teile = []
-folie = scheiben(0, 40, 5, 20)
+folie = scheiben(0, 40, 8, 20)
 gesamt = sum(d for _, _, d in folie)
 for i, (z, h, d) in enumerate(reversed(folie)):
     oben = i == 0
@@ -38,7 +38,7 @@ for i, (z, h, d) in enumerate(reversed(folie)):
                       info='Gewalztes Aluminium, nur etwa 0,01 mm dick: eine Seite glänzt, die andere ist matt. '
                            'Saubere Reste zu einer faustgroßen Kugel knüllen, dann erkennt die Sortieranlage sie.',
                       marks=[mark('box', 0, round(d * 0.25, 1), 296, round(d * 0.2, 1), 0, '#E4E7EA')] if oben else None))
-kern = scheiben(5, 35, 3, 15)
+kern = scheiben(5, 35, 5, 15)
 for i, (z, h, d) in enumerate(reversed(kern)):
     oben = i == 0
     teile.append(teil(f'kern_{i + 1}', 'aluminium_foil_sheet', 'Papphülse (Wickelkern)', 'Papphülse', 'box',
@@ -78,6 +78,6 @@ teile[:0] = [
 teile.append(teil('karton', KOMP, 'Spenderkarton', 'Karton', 'box', x=0, y=0, w=306, d=44, z=0, h=40, r=1,
                   explode=[0, 0, 0], mass=24, color=KARTON, **KARTONINFO,
                   info='Bedruckter Faltkarton, schützt die Rolle. Pappe ins Altpapier, Folie und Rolle getrennt entsorgen.',
-                  marks=[mark('box', 2, 2, 302, 40, 1, '#3B3B38')]))
+                  wand=1, marks=[mark('box', 2, 2, 302, 40, 1, '#3B3B38', zeichnung=True)]))
 skaliere_masse(teile, oid='aluminium_foil', stellen=2)
 schreibe('aluminium_foil', teile)

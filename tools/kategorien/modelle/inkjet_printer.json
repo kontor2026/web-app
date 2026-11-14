@@ -466,7 +466,7 @@
     ]
    ],
    "info": "Gleichstrommotor mit Kupferwicklung und Magnet, treibt den Zahnriemen an. Drähte abschneiden, ausschrauben.",
-   "color": "#9AA2A8",
+   "color": "#C9CDD0",
    "marks": [
     {
      "shape": "cyl",
@@ -509,6 +509,7 @@
    ],
    "info": "Stahlwelle mit Gummirollen, die das Blatt Zeile für Zeile vorschieben. Gummi und Stahl lassen sich trennen.",
    "color": "#5E656A",
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
@@ -517,7 +518,8 @@
      "w": 30,
      "d": 16,
      "r": 8,
-     "fill": "#2B2F33"
+     "fill": "#2B2F33",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -526,7 +528,8 @@
      "w": 30,
      "d": 16,
      "r": 8,
-     "fill": "#2B2F33"
+     "fill": "#2B2F33",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -535,7 +538,8 @@
      "w": 30,
      "d": 16,
      "r": 8,
-     "fill": "#2B2F33"
+     "fill": "#2B2F33",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -544,7 +548,8 @@
      "w": 30,
      "d": 16,
      "r": 8,
-     "fill": "#2B2F33"
+     "fill": "#2B2F33",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -553,7 +558,8 @@
      "w": 30,
      "d": 16,
      "r": 8,
-     "fill": "#2B2F33"
+     "fill": "#2B2F33",
+     "zeichnung": true
     }
    ]
   },
@@ -594,7 +600,7 @@
     ]
    ],
    "info": "Schrittmotor mit Zahnrad, dreht die Papierwalze in genauen kleinen Schritten.",
-   "color": "#9AA2A8",
+   "color": "#C9CDD0",
    "marks": [
     {
      "shape": "cyl",
@@ -918,6 +924,7 @@
    ],
    "info": "Kunststoffwanne mit eingelegtem Stahlblech als Rahmen. Trägt alle Teile; zuletzt Stahl und Kunststoff trennen.",
    "color": "#CDD1D4",
+   "wand": 3,
    "marks": [
     {
      "shape": "cyl",
@@ -925,7 +932,8 @@
      "y": 15,
      "w": 20,
      "d": 20,
-     "fill": "#9AA2A8"
+     "fill": "#9AA2A8",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -933,7 +941,8 @@
      "y": 15,
      "w": 20,
      "d": 20,
-     "fill": "#9AA2A8"
+     "fill": "#9AA2A8",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -941,7 +950,8 @@
      "y": 325,
      "w": 20,
      "d": 20,
-     "fill": "#9AA2A8"
+     "fill": "#9AA2A8",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -949,7 +959,8 @@
      "y": 325,
      "w": 20,
      "d": 20,
-     "fill": "#9AA2A8"
+     "fill": "#9AA2A8",
+     "zeichnung": true
     }
    ]
   },
@@ -985,6 +996,7 @@
    ],
    "info": "1,5 m Netzkabel mit PVC-Mantel. Stecker abschneiden und längs aufschlitzen.",
    "color": "#3A3F44",
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
@@ -993,7 +1005,8 @@
      "w": 25,
      "d": 10,
      "r": 2,
-     "fill": "#4A5156"
+     "fill": "#4A5156",
+     "zeichnung": true
     }
    ]
   },
@@ -1024,7 +1037,8 @@
     ]
    ],
    "info": "Zwei Kupferadern im Kabel. Reines Kupfer lohnt sich beim Schrotthändler.",
-   "color": "#B87333"
+   "color": "#B87333",
+   "form": "liegend_x"
   }
  ]
 }

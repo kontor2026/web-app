@@ -13,11 +13,11 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from bau import teil, mark, raster, explodiere, skaliere_masse, schreibe  # noqa: E402
 
-GITTER = '#3C4650'
+GITTER = '#46525F'
 GUMMI = '#23272A'
 CHIP = '#22272B'
 TREIBER = [['ndfeb', 25], ['stahl', 35], ['kupfer', 15], ['papier', 10], ['pcabs', 15]]
-PASSIV = [['stahl', 40], ['gummi', 40], ['pcabs', 20]]
+PASSIV = [['gummi', 40], ['stahl', 40], ['pcabs', 20]]
 R = 35  # Radius der Röhre
 L = 152  # Länge des Gitters zwischen den Kappen (x 14..166)
 GRENZEN = [0, 7, 15, 25, 35, 45, 55, 63, 70]
@@ -32,12 +32,18 @@ def maschen(w, d):
     return raster(4, 2.5, int((w - 8) // 6), max(int((d - 4) // 6), 1), 3, 3, 6, shape='cyl', fill='#2F3840')
 
 
+def nur_zeichnung(ms):
+    for m in ms:
+        m['zeichnung'] = True  # Lochblech liegt unter dem Stoff: in der Foto-Ansicht nicht sichtbar
+    return ms
+
+
 gitter_o, gitter_u, kappe_l, kappe_r = [], [], [], []
 for i, (z, h, y, d) in enumerate(SCHEIBEN):
     oben = z >= R
     gruppe = gitter_o if oben else gitter_u
     erste = (oben and z == R) or (not oben and z + h == R)
-    marks = maschen(L, d)
+    marks = nur_zeichnung(maschen(L, d))
     if i == 0:
         marks = [mark('box', 30, 4, 92, d - 8, 4, GUMMI)]
     gruppe.append(teil(
@@ -45,7 +51,7 @@ for i, (z, h, y, d) in enumerate(SCHEIBEN):
         'Lautsprechergitter (Oberhälfte)' if oben else 'Lautsprechergitter (Unterhälfte)',
         'Gitter oben' if oben else 'Gitter unten', 'box', x=14, y=y, w=L, d=d, z=z, h=h, r=min(d / 2, 6),
         mass=h * d / 70 * 4, color=GITTER, label=erste,
-        materials=[['stahl', 70], ['polyester', 10], ['gummi', 20]] if i == 0 else [['stahl', 85], ['polyester', 15]],
+        materials=[['polyester', 10], ['stahl', 70], ['gummi', 20]] if i == 0 else [['polyester', 15], ['stahl', 85]],
         info=('Gelochtes Stahlblech, außen mit Stoff bespannt. Schützt die Lautsprecher und ist rundum eingeklebt '
               'oder eingeclipst; mit einem flachen Hebel lösen.') if erste else
              ('Unterste Scheibe mit Gummistreifen, damit der Lautsprecher nicht wegrollt.' if i == 0
@@ -97,7 +103,7 @@ innen = [
               'In die Elektro-Sammlung geben.',
          marks=raster(6, 30, 5, 1, 3, 3, 5, r=0.5, fill='#B08A3A') + raster(4, 4, 1, 3, 2, 4, 0, 6, r=0.5, fill='#8A6F4A')),
     *[teil(f'schraube{k}', 'rubber_shell', 'Schraube Innenrahmen', 'Schrauben', 'cyl', material_id='steel',
-           x=x, y=y, w=4, z=32, h=2, mass=0.4, materials=[['stahl', 100]], color='#9AA0A6', label=k == 0,
+           x=x, y=y, w=4, z=32, h=2, mass=0.4, materials=[['stahl', 100]], color='#C9CDD0', label=k == 0,
            info='Vier Kreuzschlitzschrauben halten den Innenrahmen im Gitter. Erst sichtbar, wenn die Kappen ab sind.',
            marks=[mark('box', 0.8, 1.7, 2.4, 0.6), mark('box', 1.7, 0.8, 0.6, 2.4)])
       for k, (x, y) in enumerate([(18, 10), (18, 56), (158, 10), (158, 56)])],

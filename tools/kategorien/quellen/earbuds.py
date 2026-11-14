@@ -43,9 +43,9 @@ ohrhoerer_l = [
          marks=[mark('cyl', 5, 12, 10, fill='#D6D6D2'), mark('cyl', 8, 15, 4, fill='#5A6066'),
                 mark('cyl', 4, 3, 2.5, fill='#D8B04A'), mark('cyl', 13.5, 3, 2.5, fill='#D8B04A')]),
     teil('ohrpolster', 'silicone_ear_tips', 'Silikon-Ohrstöpsel', 'Ohrstöpsel', 'cyl',
-         x=11, y=20, w=12, z=3.5, h=3, mass=0.4, color='#DCDCD8',
+         x=11, y=20, w=12, z=3.5, h=3, mass=0.4, color='#DCDCD8', wand=2, boden=0,
          info='Weiche Silikonkappe in S, M oder L. Lässt sich von Hand vom Schallröhrchen abziehen und waschen.',
-         marks=[mark('cyl', 3, 3, 6, fill='#C4C4C0'), mark('cyl', 4.5, 4.5, 3, fill='#5A6066')]),
+         marks=[mark('cyl', 3, 3, 6, fill='#C4C4C0', zeichnung=True), mark('cyl', 4.5, 4.5, 3, fill='#5A6066', zeichnung=True)]),
 ]
 explodiere(ohrhoerer_l, abstand=10, nach_liste=True)
 for p in ohrhoerer_l:   # Stapel neben das Etui ziehen
@@ -92,11 +92,11 @@ etui = [
               'nicht knicken oder durchstechen.',
          marks=[mark('box', 2, 2, 37, 22, 1.5), mark('box', 4, 4, 12, 6, 1, '#E8E8E2')]),
     teil('unterschale', 'plastic_housing', 'Etui-Unterteil', 'Etui', 'box',
-         material_id='pc', x=0, y=0, w=61, d=47, z=0, h=15, r=16, mass=15, color=WEISS,
+         material_id='pc', x=0, y=0, w=61, d=47, z=0, h=15, r=16, mass=15, color=WEISS, wand=2,
          info='Unterteil mit zwei Mulden für die Ohrhörer. Ist der Etui-Akku nicht ausbaubar, das ganze Etui '
               'zur Elektro-Sammlung bringen.',
-         marks=[mark('box', 5, 7, 24, 30, 10, '#E0E0DC'), mark('box', 32, 7, 24, 30, 10, '#E0E0DC'),
-                mark('cyl', 29, 41, 3, fill='#7FD36B')]),
+         marks=[mark('box', 5, 7, 24, 30, 10, '#E0E0DC', zeichnung=True), mark('box', 32, 7, 24, 30, 10, '#E0E0DC', zeichnung=True),
+                mark('cyl', 29, 41, 3, fill='#7FD36B', zeichnung=True)]),
 ]
 explodiere(etui, abstand=16, nach_liste=True)
 teile = etui + ohrhoerer_l

@@ -83,17 +83,17 @@ teile = [
          info='Etwas leichteres Gewicht als links, damit sich die beiden Vibrationen unterscheiden.',
          marks=[mark('cyl', 2, 20, 14, 7, fill='#B07A4A')]),
     teil('unterschale', 'plastic_housing', 'Unterschale', 'Unterschale', 'box',
-         x=40, y=6, w=75, d=62, z=3, h=19, r=14, mass=28, material_id='abs', materials=[['pcabs', 100]], color=GEH,
+         x=40, y=6, w=75, d=62, z=3, h=19, r=14, mass=28, material_id='abs', materials=[['pcabs', 100]], color=GEH, wand=2,
          info='Untere Gehäusehälfte aus ABS. Leer ausgebaut sortenreiner Kunststoff.',
-         marks=[mark('box', 3, 3, 69, 56, 11, '#30353A')]),
+         marks=[mark('box', 3, 3, 69, 56, 11, '#30353A', zeichnung=True)]),
     teil('griff_l', 'plastic_housing', 'Griff links', 'Griff', 'box',
-         x=0, y=24, w=40, d=81, r=20, z=0, h=24, mass=17, material_id='abs', materials=[['pcabs', 85], ['tpu', 15]], color=GEH,
+         x=0, y=24, w=40, d=81, r=20, z=0, h=24, mass=17, material_id='abs', materials=[['pcabs', 85], ['tpu', 15]], color=GEH, wand=2,
          info='Teil der Unterschale. Die Griffflächen sind oft mit weichem Kunststoff überzogen.',
-         marks=[mark('box', 4, 4, 32, 73, 16, '#30353A')]),
+         marks=[mark('box', 4, 4, 32, 73, 16, '#30353A', zeichnung=True)]),
     teil('griff_r', 'plastic_housing', 'Griff rechts', 'Griff', 'box',
-         x=115, y=24, w=40, d=81, r=20, z=0, h=24, mass=17, material_id='abs', materials=[['pcabs', 85], ['tpu', 15]], color=GEH,
+         x=115, y=24, w=40, d=81, r=20, z=0, h=24, mass=17, material_id='abs', materials=[['pcabs', 85], ['tpu', 15]], color=GEH, wand=2,
          label=False, info='Rechter Griff, Gegenstück zum linken.',
-         marks=[mark('box', 4, 4, 32, 73, 16, '#30353A')]),
+         marks=[mark('box', 4, 4, 32, 73, 16, '#30353A', zeichnung=True)]),
 ]
 
 explodiere(teile, abstand=40, fest=('unterschale', 'griff_l', 'griff_r'), abstaende={'oberschale': 60})

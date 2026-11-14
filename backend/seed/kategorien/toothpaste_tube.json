@@ -202,12 +202,14 @@
    ],
    "info": "Gespritzter Kopf aus HDPE mit der kleinen Austrittsöffnung, an den Schlauch angeschweißt. Er lässt sich nicht abtrennen.",
    "color": "#E9E9E4",
+   "form": "liegend_y",
    "marks": [
     {
      "shape": "cyl",
      "x": 11,
      "y": 2,
      "w": 10,
+     "zeichnung": true,
      "d": 10,
      "fill": "#D0D0CA"
     }
@@ -248,22 +250,25 @@
     ]
    ],
    "info": "Mehrschichtfolie aus Polyethylen, oft mit einer dünnen Aluminiumschicht gegen Austrocknen. Leer drücken reicht, ausspülen ist nicht nötig.",
-   "color": "#FFFFFF",
+   "color": "#2F6DB5",
+   "form": "liegend_y",
    "marks": [
     {
      "shape": "box",
      "x": 4,
      "y": 6,
      "w": 31,
+     "zeichnung": true,
      "d": 22,
      "r": 4,
-     "fill": "#2F6DB5"
+     "fill": "#F4F4F2"
     },
     {
      "shape": "box",
      "x": 4,
      "y": 34,
      "w": 31,
+     "zeichnung": true,
      "d": 10,
      "r": 3,
      "fill": "#C8423A"
@@ -305,23 +310,26 @@
     ]
    ],
    "info": "Zum Ende hin wird der Schlauch flacher. Von hinten nach vorne aufrollen, dann kommt auch der Rest heraus.",
-   "color": "#FFFFFF",
+   "color": "#2F6DB5",
    "label": false,
+   "form": "liegend_y",
    "marks": [
     {
      "shape": "box",
      "x": 4,
      "y": 6,
      "w": 34,
+     "zeichnung": true,
      "d": 40,
      "r": 6,
-     "fill": "#2F6DB5"
+     "fill": "#F4F4F2"
     },
     {
      "shape": "box",
      "x": 6,
      "y": 50,
      "w": 30,
+     "zeichnung": true,
      "d": 4,
      "r": 1,
      "fill": "#8E969A"
@@ -363,23 +371,26 @@
     ]
    ],
    "info": "Fast flach gedrückt. Die Farbstreifen dienen der Maschine als Markierung zum Abfüllen.",
-   "color": "#FFFFFF",
+   "color": "#2F6DB5",
    "label": false,
+   "form": "liegend_y",
    "marks": [
     {
      "shape": "box",
      "x": 4,
      "y": 4,
      "w": 36,
+     "zeichnung": true,
      "d": 14,
      "r": 4,
-     "fill": "#2F6DB5"
+     "fill": "#F4F4F2"
     },
     {
      "shape": "box",
      "x": 36,
      "y": 20,
      "w": 5,
+     "zeichnung": true,
      "d": 5,
      "r": 0,
      "fill": "#22272B"

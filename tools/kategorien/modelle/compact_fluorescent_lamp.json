@@ -26,25 +26,28 @@
    ],
    "info": "Oberes Ende der Glasspirale. Das Rohr enthält wenige Milligramm giftiges Quecksilber: nicht zerbrechen und die ganze Lampe zur Sammelstelle bringen.",
    "color": "#F2F4F2",
-   "opacity": 0.7,
+   "form": "torus",
    "marks": [
     {
      "shape": "cyl",
      "x": 0,
      "y": 0,
-     "w": 32
+     "w": 32,
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 5,
      "y": 5,
-     "w": 22
+     "w": 22,
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 10,
      "y": 10,
-     "w": 12
+     "w": 12,
+     "zeichnung": true
     }
    ]
   },
@@ -59,13 +62,13 @@
    "y": 1,
    "w": 44,
    "z": 62,
-   "h": 56,
+   "h": 14,
    "explode": [
     0,
     0,
     99.6
    ],
-   "mass": 32,
+   "mass": 8,
    "materials": [
     [
      "glas",
@@ -74,31 +77,123 @@
    ],
    "info": "Gewundenes Glasrohr, innen mit weißem Leuchtstoff beschichtet. Strom bringt Quecksilberdampf zum Leuchten, der Leuchtstoff macht daraus sichtbares Licht. Das Rohr enthält wenige Milligramm giftiges Quecksilber: nicht zerbrechen und die ganze Lampe zur Sammelstelle bringen.",
    "color": "#F2F4F2",
-   "opacity": 0.7,
+   "label": true,
+   "form": "torus"
+  },
+  {
+   "id": "rohr_2",
+   "component_id": "fluorescent_tube",
+   "material_id": "special_glass",
+   "name": "Leuchtstoffröhre (Glasspirale)",
+   "short": "Glasrohr",
+   "shape": "cyl",
+   "x": 1,
+   "y": 1,
+   "w": 44,
+   "z": 76,
+   "h": 14,
+   "explode": [
+    0,
+    0,
+    99.6
+   ],
+   "mass": 8,
+   "materials": [
+    [
+     "glas",
+     100
+    ]
+   ],
+   "info": "Weitere Windung der Glasspirale. Das Rohr enthält wenige Milligramm giftiges Quecksilber: nicht zerbrechen und die ganze Lampe zur Sammelstelle bringen.",
+   "color": "#F2F4F2",
+   "label": false,
+   "form": "torus"
+  },
+  {
+   "id": "rohr_3",
+   "component_id": "fluorescent_tube",
+   "material_id": "special_glass",
+   "name": "Leuchtstoffröhre (Glasspirale)",
+   "short": "Glasrohr",
+   "shape": "cyl",
+   "x": 1,
+   "y": 1,
+   "w": 44,
+   "z": 90,
+   "h": 14,
+   "explode": [
+    0,
+    0,
+    99.6
+   ],
+   "mass": 8,
+   "materials": [
+    [
+     "glas",
+     100
+    ]
+   ],
+   "info": "Weitere Windung der Glasspirale. Das Rohr enthält wenige Milligramm giftiges Quecksilber: nicht zerbrechen und die ganze Lampe zur Sammelstelle bringen.",
+   "color": "#F2F4F2",
+   "label": false,
+   "form": "torus"
+  },
+  {
+   "id": "rohr_4",
+   "component_id": "fluorescent_tube",
+   "material_id": "special_glass",
+   "name": "Leuchtstoffröhre (Glasspirale)",
+   "short": "Glasrohr",
+   "shape": "cyl",
+   "x": 1,
+   "y": 1,
+   "w": 44,
+   "z": 104,
+   "h": 14,
+   "explode": [
+    0,
+    0,
+    99.6
+   ],
+   "mass": 8,
+   "materials": [
+    [
+     "glas",
+     100
+    ]
+   ],
+   "info": "Weitere Windung der Glasspirale. Das Rohr enthält wenige Milligramm giftiges Quecksilber: nicht zerbrechen und die ganze Lampe zur Sammelstelle bringen.",
+   "color": "#F2F4F2",
+   "label": false,
+   "form": "torus",
    "marks": [
     {
      "shape": "cyl",
      "x": 0,
      "y": 0,
-     "w": 44
+     "w": 44,
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 4,
      "y": 4,
-     "w": 36
+     "w": 36,
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 8,
      "y": 8,
-     "w": 28
+     "w": 28,
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 12,
      "y": 12,
-     "w": 20
+     "w": 20,
+     "zeichnung": true
     }
    ]
   },
@@ -493,7 +588,7 @@
     ]
    ],
    "info": "Gewinde aus Aluminiumblech, passt in jede normale Lampenfassung.",
-   "color": "#C2C6C9",
+   "color": "#E2E5E7",
    "marks": [
     {
      "shape": "cyl",

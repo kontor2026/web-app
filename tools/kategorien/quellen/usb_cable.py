@@ -22,29 +22,30 @@ def windungen(dm, loch, n=3, breite=3.5):
         out.append(mark('cyl', (dm - w) / 2, (dm - w) / 2, w))
     w = dm - 2 * n * breite - 2
     out.append(mark('cyl', (dm - w) / 2, (dm - w) / 2, w, fill=loch))
-    return out
+    return [dict(m, zeichnung=True) for m in out]   # Foto-Ansicht: echter Ring (form torus)
 
 
 teile = [
-    teil('mantel', 'cable_insulation', 'Kabelmantel', 'Mantel', 'cyl',
+    teil('mantel', 'cable_insulation', 'Kabelmantel', 'Mantel', 'cyl', form='torus',
          x=0, y=6, w=D, z=0, h=H, mass=11,
          info='Außenhülle aus PVC mit Weichmachern. Mit einer Abisolierzange längs aufschlitzen, '
               'dann lassen sich die Drähte herausziehen.',
          color='#3A3D40', marks=windungen(D, '#26292B')),
-    teil('schirm', 'cable_copper_core', 'Abschirmung (Folie und Geflecht)', 'Abschirmung', 'cyl',
+    teil('schirm', 'cable_copper_core', 'Abschirmung (Folie und Geflecht)', 'Abschirmung', 'cyl', form='torus',
          x=1.5, y=7.5, w=D - 3, z=0.5, h=H - 1, mass=3,
          materials=[['alu', 40], ['kupfer', 50], ['folien', 10]],
          info='Alufolie und ein feines Drahtgeflecht unter dem Mantel. Halten Störungen von den Datenleitungen fern.',
          color='#C2C6C9', marks=windungen(D - 3, '#8E9498')),
-    teil('adern', 'cable_copper_core', 'Vier Kupferadern', 'Adern', 'cyl',
+    teil('adern', 'cable_copper_core', 'Vier Kupferadern', 'Adern', 'cyl', form='torus',
          x=3, y=9, w=D - 6, z=1, h=H - 2, mass=7,
          materials=[['kupfer', 70], ['hdpe', 30]],
          info='Rot und Schwarz leiten den Ladestrom, Grün und Weiß die Daten. Jede Ader ist einzeln isoliert, '
               'innen sind feine Kupferlitzen.',
-         color='#C5803D', marks=windungen(D - 6, '#8F5A2A') + [mark('cyl', 3, 44, 5, fill='#C8423A'),
-                                                    mark('cyl', 8.5, 44, 5, fill='#2B2B2B'),
-                                                    mark('cyl', 14, 44, 5, fill='#3E9A57'),
-                                                    mark('cyl', 19.5, 44, 5, fill='#F4F4F2')]),
+         color='#C5803D', 
+         marks=windungen(D - 6, '#8F5A2A') + [mark('cyl', 3, 44, 5, fill='#C8423A', zeichnung=True),
+                                             mark('cyl', 8.5, 44, 5, fill='#2B2B2B', zeichnung=True),
+                                             mark('cyl', 14, 44, 5, fill='#3E9A57', zeichnung=True),
+                                             mark('cyl', 19.5, 44, 5, fill='#F4F4F2', zeichnung=True)]),
     # USB-A-Stecker hinten rechts, Blechhülle zeigt nach hinten (y = 0)
     teil('huelle_a', 'plastic_housing', 'Steckergehäuse USB-A', 'Gehäuse A', 'box',
          x=103, y=12, w=16, d=28, z=0, h=8, r=3, explode=[28, 0, 0], mass=2.5,
@@ -61,7 +62,7 @@ teile = [
          x=105, y=0, w=12, d=12, z=1.75, h=4.5, r=0.3, explode=[28, -18, 0], mass=1.5,
          info='Vernickeltes Stahlblech. Lässt sich mit einem Magneten vom Kunststoff trennen.',
          color='#B7BCC0', marks=[mark('box', 2, 3, 2.5, 2, 0.3, '#5E656A'), mark('box', 7.5, 3, 2.5, 2, 0.3, '#5E656A')]),
-    teil('knick_a', 'plastic_housing', 'Knickschutz USB-A', 'Knickschutz', 'box', material_id='rubber',
+    teil('knick_a', 'plastic_housing', 'Knickschutz USB-A', 'Knickschutz', 'box', form='liegend_y', material_id='rubber',
          x=107, y=40, w=8, d=8, z=1, h=6, r=3, explode=[28, 8, 0], mass=0.6, materials=[['tpe', 100]],
          color='#2E3134', info='Weiche Gummitülle am Steckerende. Sie verhindert, dass die Adern beim Biegen brechen.',
          marks=raster(1, 1.5, 1, 3, 6, 0.6, 0, 2, fill='#232628')),
@@ -74,7 +75,7 @@ teile = [
          x=104, y=72, w=14, d=26, z=0.75, h=6.5, r=3, explode=[28, 0, 0], mass=1.8,
          info='Kleiner und flacher als USB-A. Wie beim anderen Stecker angespritzt und nicht zerlegbar.',
          color='#3A3D40', marks=[mark('box', 3, 1, 8, 3, 1)]),
-    teil('knick_c', 'plastic_housing', 'Knickschutz USB-C', 'Knickschutz C', 'box', material_id='rubber',
+    teil('knick_c', 'plastic_housing', 'Knickschutz USB-C', 'Knickschutz C', 'box', form='liegend_y', material_id='rubber',
          x=107.5, y=64, w=7, d=8, z=1.5, h=5.5, r=2.5, explode=[28, -8, 0], mass=0.5, materials=[['tpe', 100]],
          color='#2E3134', label=False, info='Gummitülle am USB-C-Ende, gleiche Aufgabe wie am anderen Stecker.',
          marks=raster(1, 1.5, 1, 3, 5, 0.6, 0, 2, fill='#232628')),
@@ -93,4 +94,7 @@ teile = [
          color='#B7BCC0', marks=[mark('box', 1.2, 0.8, 6, 1, 0.5, '#2A2E31')]),
 ]
 explodiere(teile, abstand=40)
+for p in teile:   # Foto-Ansicht: echte Formen (form) tragen keine aufgemalten Details
+    if p.get('form') and p.get('marks'):
+        p['marks'] = [dict(k, zeichnung=True) for k in p['marks']]
 schreibe('usb_cable', teile)

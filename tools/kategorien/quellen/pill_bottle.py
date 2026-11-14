@@ -10,6 +10,22 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from bau import teil, mark, raster, explodiere, skaliere_masse, schreibe  # noqa: E402
 
+
+def scheiben(teile, pid, n):
+    """Foto-Ansicht: hohes Teil in n Scheiben teilen, damit die glatte Hülle (Stapel) nur oben einzieht."""
+    i = next(k for k, p in enumerate(teile) if p['id'] == pid)
+    p = teile[i]
+    zs = [round(p['z'] + k * p['h'] / n, 2) for k in range(n)] + [p['z'] + p['h']]
+    neu = []
+    for k in range(n):
+        q = dict(p, z=zs[k], h=round(zs[k + 1] - zs[k], 2), mass=round(p['mass'] / n, 3))
+        if k < n - 1:
+            q.update(id=f'{pid}_{k + 1}', label=False, marks=None)
+            q = {f: v for f, v in q.items() if v is not None}
+        neu.append(q)
+    teile[i:i + 1] = neu[::-1]
+
+
 DOSE = '#F4F2EC'
 DECKEL = '#E9E7E0'
 teile = [
@@ -28,11 +44,11 @@ teile = [
          materials=[['alu', 40], ['ldpe', 35], ['papier', 25]],
          info='Aluminium-Kunststoff-Folie, die beim Abfüllen auf den Hals gesiegelt wird. Zeigt, dass die Dose noch '
               'nicht geöffnet war. Abziehen und in die Gelbe Tonne.',
-         color='#C9CED3'),
+         color='#DADDE0'),
     teil('hals', 'hdpe_bottle_body', 'Hals mit Gewinde', 'Hals', 'cyl',
          x=6.5, y=6.5, w=27, z=53, h=14, mass=0.8,
          info='Weite Öffnung, damit man die Tabletten gut herausschütten kann.',
-         color=DOSE, marks=[mark('cyl', 3, 3, 21, fill='#D6D3CA')]),
+         color=DOSE, wand=2, boden=0, marks=[mark('cyl', 3, 3, 21, fill='#D6D3CA', zeichnung=True)]),
     teil('schulter', 'hdpe_bottle_body', 'Schulter', 'Schulter', 'cyl',
          x=4, y=4, w=32, z=48, h=5, mass=0.6, info='Übergang vom Rumpf zum Hals.', color=DOSE, label=False),
     teil('rumpf', 'hdpe_bottle_body', 'Dosenrumpf', 'Dose', 'cyl',
@@ -44,11 +60,12 @@ teile = [
          x=2, y=2, w=36, z=0, h=3, mass=0.8,
          info='Am Boden steht das Recyclingzeichen 2 für HDPE.', color=DOSE, label=False),
     teil('etikett', 'paper_label', 'Papieretikett', 'Etikett', 'cyl',
-         x=0.5, y=0.5, w=39, z=8, h=40, explode=[58, 0, 0], mass=0.3,
+         x=0, y=0, w=40, z=8, h=40, explode=[58, 0, 0], mass=0.3,
          materials=[['papier', 92], ['druck', 5], ['klebstoff', 3]],
          info='Papier mit Name, Dosierung und Haltbarkeit, rundum geklebt. Darf beim Recycling dranbleiben.',
-         color='#CFE0EE', sortBias=1, marks=[mark('cyl', 0.8, 0.8, 37.4, fill=DOSE)]),
+         color='#CFE0EE', sortBias=1, wand=0.3, boden=0, marks=[mark('cyl', 1.3, 1.3, 37.4, fill=DOSE, zeichnung=True)]),
 ]
 explodiere(teile, abstand=16, nach_liste=True, gruppen=[['hals', 'schulter', 'rumpf', 'boden']])
+scheiben(teile, 'rumpf', 2)
 skaliere_masse(teile, oid='pill_bottle')
 schreibe('pill_bottle', teile)

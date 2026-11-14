@@ -526,7 +526,7 @@
     ]
    ],
    "info": "Halten Ober- und Unterteil zusammen; Köpfe sitzen unten, oft unter Gummifüßen oder Aufklebern.",
-   "color": "#9BA3A8",
+   "color": "#C9CDD0",
    "marks": [
     {
      "shape": "cyl",
@@ -564,7 +564,7 @@
     ]
    ],
    "info": "Gestanztes Messingblech mit federnden Klemmen für je einen Steckerstift. Wertvoll fürs Recycling.",
-   "color": "#D4B464",
+   "color": "#E8CC80",
    "marks": [
     {
      "shape": "box",
@@ -631,7 +631,7 @@
     ]
    ],
    "info": "Verbindet die Schutzkontakt-Bügel aller Steckdosen mit dem grün-gelben Leiter.",
-   "color": "#D4B464",
+   "color": "#E8CC80",
    "marks": [
     {
      "shape": "box",
@@ -698,7 +698,7 @@
     ]
    ],
    "info": "Zweite Messingschiene für den blauen Neutralleiter.",
-   "color": "#D4B464",
+   "color": "#E8CC80",
    "marks": [
     {
      "shape": "box",
@@ -809,12 +809,14 @@
    ],
    "info": "Wanne mit Stegen, in die die Schienen eingelegt sind. Ohne Metallteile kann der Kunststoff recycelt werden.",
    "color": "#F1F2F0",
+   "wand": 2,
    "marks": [
     {
      "shape": "box",
      "x": 4,
      "y": 4,
      "w": 46,
+     "zeichnung": true,
      "d": 217,
      "r": 6,
      "fill": "#E2E3E0"
@@ -828,15 +830,15 @@
    "name": "Drei Kupferadern (1,5 mm²)",
    "short": "Adern",
    "shape": "cyl",
-   "x": 3,
-   "y": 229,
-   "w": 52,
-   "z": 1,
-   "h": 14,
+   "x": 5,
+   "y": 231,
+   "w": 48,
+   "z": 3,
+   "h": 10,
    "explode": [
     0,
     0,
-    45.0
+    43.0
    ],
    "mass": 75.6,
    "materials": [
@@ -850,46 +852,53 @@
     ]
    ],
    "info": "Braun (Phase), Blau (Neutralleiter) und Grün-Gelb (Schutzleiter), jede Ader aus feinen Kupferdrähten mit eigener Isolierung.",
-   "color": "#C5803D",
+   "color": "#D9925A",
+   "form": "torus",
    "marks": [
     {
      "shape": "cyl",
      "x": 0,
      "y": 0,
-     "w": 52
+     "w": 48,
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 7,
      "y": 7,
-     "w": 38
+     "w": 34,
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 14,
      "y": 14,
-     "w": 24
+     "w": 20,
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 2,
      "y": 22,
      "w": 5,
-     "fill": "#7B4A2A"
+     "fill": "#7B4A2A",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 2,
      "y": 27,
      "w": 5,
-     "fill": "#3A6BB0"
+     "fill": "#3A6BB0",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 2,
      "y": 32,
      "w": 5,
-     "fill": "#7FB04A"
+     "fill": "#7FB04A",
+     "zeichnung": true
     }
    ]
   },
@@ -919,30 +928,35 @@
    ],
    "info": "Weißer PVC-Mantel, 1,4 m lang, hier aufgerollt. Stecker und Leiste abschneiden, dann längs aufschlitzen.",
    "color": "#F1F2F0",
+   "form": "torus",
    "marks": [
     {
      "shape": "cyl",
      "x": 0.0,
      "y": 0.0,
-     "w": 58.0
+     "w": 58.0,
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 7.5,
      "y": 7.5,
-     "w": 43.0
+     "w": 43.0,
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 15.0,
      "y": 15.0,
-     "w": 28.0
+     "w": 28.0,
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 22.5,
      "y": 22.5,
-     "w": 13.0
+     "w": 13.0,
+     "zeichnung": true
     }
    ]
   },

@@ -428,12 +428,12 @@
    "mass": 1346.2,
    "materials": [
     [
-     "kupfer",
-     25
-    ],
-    [
      "stahl",
      45
+    ],
+    [
+     "kupfer",
+     25
     ],
     [
      "alu",
@@ -625,6 +625,7 @@
    "info": "Großes Kunststoffrad mit Gummilauffläche auf einer Stahlachse. Abhebeln und zum Kunststoff geben.",
    "color": "#2E3338",
    "label": true,
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
@@ -633,7 +634,8 @@
      "w": 17,
      "d": 40,
      "r": 4,
-     "fill": "#9AA2A6"
+     "fill": "#9AA2A6",
+     "zeichnung": true
     }
    ]
   },
@@ -674,6 +676,7 @@
    "info": "Großes Kunststoffrad mit Gummilauffläche auf einer Stahlachse. Abhebeln und zum Kunststoff geben.",
    "color": "#2E3338",
    "label": false,
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
@@ -682,7 +685,8 @@
      "w": 17,
      "d": 40,
      "r": 4,
-     "fill": "#9AA2A6"
+     "fill": "#9AA2A6",
+     "zeichnung": true
     }
    ]
   },
@@ -866,12 +870,15 @@
    ],
    "info": "Gerippter Kunststoffschlauch (etwa 1,8 m, hier verkürzt) mit Drehanschluss. Drehen und abziehen; ohne Metallspirale gehört er zum Kunststoff.",
    "color": "#5A6670",
+   "wand": 5,
+   "boden": 0,
    "marks": [
     {
      "shape": "cyl",
      "x": 10,
      "y": 10,
      "w": 30,
+     "zeichnung": true,
      "fill": "#1E2226"
     }
    ]
@@ -908,6 +915,7 @@
    ],
    "info": "Etwa 7 m PVC-Kabel auf der Trommel. Am Stecker herausziehen und längs aufschlitzen, um die Kupferadern freizulegen.",
    "color": "#2E3338",
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
@@ -916,7 +924,8 @@
      "w": 10,
      "d": 6,
      "r": 2,
-     "fill": "#555"
+     "fill": "#555",
+     "zeichnung": true
     }
    ]
   },
@@ -947,7 +956,8 @@
     ]
    ],
    "info": "Zwei Kupferadern über die ganze Kabellänge. Kupfer lässt sich fast verlustfrei wiederverwerten.",
-   "color": "#B87333"
+   "color": "#B87333",
+   "form": "liegend_x"
   }
  ]
 }

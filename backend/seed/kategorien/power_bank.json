@@ -978,12 +978,14 @@
    ],
    "info": "Wanne mit Stegen, in der Zellen und Platine liegen. Oft mit Schaumstoff gepolstert.",
    "color": "#2F3438",
+   "wand": 1.8,
    "marks": [
     {
      "shape": "box",
      "x": 18,
      "y": 132,
      "w": 9,
+     "zeichnung": true,
      "d": 8,
      "r": 1.5
     },
@@ -992,6 +994,7 @@
      "x": 34,
      "y": 133,
      "w": 13.5,
+     "zeichnung": true,
      "d": 7,
      "r": 0.5
     }

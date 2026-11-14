@@ -10,9 +10,9 @@ from bau import teil, mark, raster, explodiere, skaliere_masse, schreibe  # noqa
 # kurzen Kopfarm nach vorn, an dem der kegelförmige Schirm (vier Scheiben) mit LED-Modul und Streuscheibe hängt.
 # Explosion: Bodenplatte bleibt liegen, Fuß, Gewicht, Gelenke und Armteile schweben übereinander. Der Schirm mit
 # LED-Modul und Streuscheibe wandert nach links (dx < 0), die Zugfeder nach vorn, Kabel und Stecker nach rechts.
-ALU = '#C9CED2'
+ALU = '#D5D8DB'
 SCHWARZ = '#2B2F33'
-SCHRAUBE = '#9AA2A8'
+SCHRAUBE = '#C9CDD0'
 KREUZ = [mark('box', 1.5, 4.5, 9, 3, 0.5, '#5E656A')]
 
 schirm_info = ('Pulverbeschichtetes Stahlblech, leitet die Wärme der LEDs ab. Den Haltering am Kopfarm abschrauben; '
@@ -60,7 +60,7 @@ teile = [
          info='Mittleres Gelenk aus Aluminiumguss. Nach Herausziehen der Gelenkschraube fallen die Armteile auseinander.',
          marks=[mark('cyl', 7, 7, 10, fill=SCHRAUBE)]),
     teil('zugfeder', 'lamp_arm', 'Zugfeder', 'Zugfeder', 'box', material_id='steel',
-         x=69, y=40, w=12, d=6, z=60, h=150, r=3, mass=20, materials=[['stahl', 100]], color='#9AA2A8',
+         x=69, y=40, w=12, d=6, z=60, h=150, r=3, mass=20, materials=[['stahl', 100]], color='#C9CDD0',
          info='Stahlfeder, die den Arm in jeder Stellung hält. Steht unter Spannung: beim Aushängen festhalten.',
          marks=[mark('box', 1, 1, 10, 4, 2, '#7E868C')]),
     teil('unterarm', 'lamp_arm', 'Unterarm', 'Unterarm', 'box',
@@ -126,5 +126,14 @@ for pid, dz in (('ledmodul', oben - 45), ('streuscheibe', oben - 90)):
     next(p for p in teile if p['id'] == pid)['explode'] = [-190, 0, dz]
 unten = next(p for p in teile if p['id'] == 'unterarm')['explode'][2]
 next(p for p in teile if p['id'] == 'zugfeder')['explode'] = [0, 60, unten]
+# Foto-Ansicht: echte Formen (Kabel liegend, Spulen als Ring); Details darauf nur in der Zeichnung
+FORMEN = {'kabel': ('liegend_x', 1), 'kupferadern': ('liegend_x', 1), 'kopfarm': ('liegend_y', 1), 'kopfgelenk': ('liegend_x', 1), 'ellbogen': ('liegend_x', 1)}
+for p in teile:
+    if p['id'] in FORMEN:
+        p['form'], nur_zeichnung = FORMEN[p['id']]
+        p.pop('wand', None)
+        p.pop('boden', None)
+        for m in (p.get('marks') or []) if nur_zeichnung else []:
+            m['zeichnung'] = True
 skaliere_masse(teile, oid='desk_lamp')
 schreibe('desk_lamp', teile)

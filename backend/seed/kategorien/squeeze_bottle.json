@@ -344,12 +344,15 @@
    ],
    "info": "Kurzer Gewindehals. Unter dem Deckel klebt beim Kauf oft eine Siegelfolie.",
    "color": "#E9E2D8",
+   "wand": 2.5,
+   "boden": 0,
    "marks": [
     {
      "shape": "cyl",
      "x": 4,
      "y": 4,
      "w": 18,
+     "zeichnung": true,
      "fill": "#CFC6B8"
     }
    ]
@@ -448,12 +451,15 @@
    "info": "Bedruckte PP-Folie mit Name, Zutaten und Nährwerten. Gleicher Kunststoff wie die Flasche, darf also dranbleiben.",
    "color": "#C8302C",
    "sortBias": 1,
+   "wand": 0.4,
+   "boden": 0,
    "marks": [
     {
      "shape": "cyl",
      "x": 0.4,
      "y": 0.4,
      "w": 60,
+     "zeichnung": true,
      "d": 45,
      "fill": "#E9E2D8"
     }

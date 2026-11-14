@@ -9,7 +9,23 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from bau import teil, mark, explodiere, skaliere_masse, schreibe  # noqa: E402
 
-ALU = '#C9CED3'
+
+def scheiben(teile, pid, n):
+    """Foto-Ansicht: hohes Teil in n Scheiben teilen, damit die glatte Hülle (Stapel) nur oben einzieht."""
+    i = next(k for k, p in enumerate(teile) if p['id'] == pid)
+    p = teile[i]
+    zs = [round(p['z'] + k * p['h'] / n, 2) for k in range(n)] + [p['z'] + p['h']]
+    neu = []
+    for k in range(n):
+        q = dict(p, z=zs[k], h=round(zs[k + 1] - zs[k], 2), mass=round(p['mass'] / n, 3))
+        if k < n - 1:
+            q.update(id=f'{pid}_{k + 1}', label=False, marks=None)
+            q = {f: v for f, v in q.items() if v is not None}
+        neu.append(q)
+    teile[i:i + 1] = neu[::-1]
+
+
+ALU = '#D5D8DB'
 teile = [
     teil('kappe', 'pp_spray_cap', 'Schutzkappe', 'Kappe', 'cyl',
          x=0.5, y=0.5, w=52, z=135, h=55, mass=8,
@@ -44,11 +60,12 @@ teile = [
          material_id='ldpe', x=24.75, y=24.75, w=3.5, z=4, h=134, explode=[45, 0, 0], mass=0.3,
          materials=[['ldpe', 100]],
          info='Dünner Schlauch bis zum Boden, durch den der Inhalt zum Ventil gedrückt wird.', color='#EDEDE8'),
-    teil('druck', 'aluminium_spray_can_body', 'Außenlack und Druck', 'Druck', 'box',
-         x=53, y=6.5, w=0.3, d=40, z=10, h=115, r=0, explode=[55, 0, 0], mass=0.4, materials=[['druck', 100]],
+    teil('druck', 'aluminium_spray_can_body', 'Außenlack und Druck', 'Druck', 'cyl',
+         x=-1, y=-1, w=55, z=12, h=112, explode=[110, 0, 0], mass=0.4, materials=[['druck', 100]],
          info='Direkt auf das Aluminium gedruckt. Verbrennt beim Einschmelzen, das Aluminium wird wieder zu Metall.',
-         color='#2C5F8A', sortBias=100),
+         color='#2C5F8A', wand=0.3, boden=0),
 ]
 explodiere(teile, abstand=18, nach_liste=True, gruppen=[['dosenrand', 'schulter', 'rumpf']])
+scheiben(teile, 'rumpf', 3)
 skaliere_masse(teile, oid='spray_can')
 schreibe('spray_can', teile)

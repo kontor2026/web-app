@@ -181,13 +181,15 @@
    ],
    "info": "Kunststoffstab mit einem Kupferstreifen als Strahler, über ein Gelenk mit Messing-Schraubanschluss. Von Hand abschrauben.",
    "color": "#23272A",
+   "form": "liegend_y",
    "marks": [
     {
      "shape": "cyl",
      "x": 2,
      "y": 2,
      "w": 8,
-     "fill": "#B8A060"
+     "fill": "#B8A060",
+     "zeichnung": true
     }
    ]
   },
@@ -228,13 +230,15 @@
    "info": "Gleich gebaut wie Antenne 1, sendet in einer eigenen Richtung.",
    "color": "#23272A",
    "label": false,
+   "form": "liegend_y",
    "marks": [
     {
      "shape": "cyl",
      "x": 2,
      "y": 2,
      "w": 8,
-     "fill": "#B8A060"
+     "fill": "#B8A060",
+     "zeichnung": true
     }
    ]
   },
@@ -275,13 +279,15 @@
    "info": "Gleich gebaut wie Antenne 1, sendet in einer eigenen Richtung.",
    "color": "#23272A",
    "label": false,
+   "form": "liegend_y",
    "marks": [
     {
      "shape": "cyl",
      "x": 2,
      "y": 2,
      "w": 8,
-     "fill": "#B8A060"
+     "fill": "#B8A060",
+     "zeichnung": true
     }
    ]
   },
@@ -322,13 +328,15 @@
    "info": "Gleich gebaut wie Antenne 1, sendet in einer eigenen Richtung.",
    "color": "#23272A",
    "label": false,
+   "form": "liegend_y",
    "marks": [
     {
      "shape": "cyl",
      "x": 2,
      "y": 2,
      "w": 8,
-     "fill": "#B8A060"
+     "fill": "#B8A060",
+     "zeichnung": true
     }
    ]
   },
@@ -1023,6 +1031,7 @@
    ],
    "info": "Wanne mit Füßen, Wandhalterungs-Löchern und Lüftungsschlitzen. Ohne Elektronik reiner Kunststoff.",
    "color": "#2B2F33",
+   "wand": 2,
    "marks": [
     {
      "shape": "box",
@@ -1031,7 +1040,8 @@
      "w": 3,
      "d": 60,
      "r": 1.5,
-     "fill": "#1E2226"
+     "fill": "#1E2226",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -1040,7 +1050,8 @@
      "w": 3,
      "d": 60,
      "r": 1.5,
-     "fill": "#1E2226"
+     "fill": "#1E2226",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -1049,7 +1060,8 @@
      "w": 3,
      "d": 60,
      "r": 1.5,
-     "fill": "#1E2226"
+     "fill": "#1E2226",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -1058,7 +1070,8 @@
      "w": 3,
      "d": 60,
      "r": 1.5,
-     "fill": "#1E2226"
+     "fill": "#1E2226",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -1067,7 +1080,8 @@
      "w": 3,
      "d": 60,
      "r": 1.5,
-     "fill": "#1E2226"
+     "fill": "#1E2226",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -1076,7 +1090,8 @@
      "w": 3,
      "d": 60,
      "r": 1.5,
-     "fill": "#1E2226"
+     "fill": "#1E2226",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -1085,7 +1100,8 @@
      "w": 3,
      "d": 60,
      "r": 1.5,
-     "fill": "#1E2226"
+     "fill": "#1E2226",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -1094,7 +1110,8 @@
      "w": 3,
      "d": 60,
      "r": 1.5,
-     "fill": "#1E2226"
+     "fill": "#1E2226",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -1103,7 +1120,8 @@
      "w": 3,
      "d": 60,
      "r": 1.5,
-     "fill": "#1E2226"
+     "fill": "#1E2226",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -1112,7 +1130,8 @@
      "w": 3,
      "d": 60,
      "r": 1.5,
-     "fill": "#1E2226"
+     "fill": "#1E2226",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -1121,7 +1140,8 @@
      "w": 3,
      "d": 60,
      "r": 1.5,
-     "fill": "#1E2226"
+     "fill": "#1E2226",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -1130,7 +1150,8 @@
      "w": 3,
      "d": 60,
      "r": 1.5,
-     "fill": "#1E2226"
+     "fill": "#1E2226",
+     "zeichnung": true
     }
    ]
   },
@@ -1170,6 +1191,7 @@
    ],
    "info": "Dünnes Kabel vom Netzteil zum Router, endet in einem Hohlstecker aus Messing. Kupferadern freilegen und getrennt sammeln.",
    "color": "#1E2226",
+   "form": "liegend_y",
    "marks": [
     {
      "shape": "box",
@@ -1178,7 +1200,8 @@
      "w": 5,
      "d": 8,
      "r": 2,
-     "fill": "#9BA3A8"
+     "fill": "#9BA3A8",
+     "zeichnung": true
     }
    ]
   },

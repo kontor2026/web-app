@@ -12,7 +12,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from bau import teil, mark, explodiere, skaliere_masse, schreibe  # noqa: E402
 
-STAHL = '#C3C8CC'
+STAHL = '#DADDE0'
 LEDER = '#6B4226'
 ZEIGER = '#2A2E31'
 # Mittelpunkt der Uhr
@@ -23,12 +23,12 @@ INDEX = [mark('cyl' if i % 3 else 'box', round(15 + 12.5 * math.sin(i * math.pi 
 
 teile = [
     teil('glas', 'watch_glass', 'Mineralglas', 'Glas', 'cyl',
-         x=3, y=7, w=32, z=10.5, h=1.5, mass=2, color='#C9DEDF', opacity=0.6,
+         x=3, y=7, w=32, z=10.5, h=1.5, mass=2, color='#F2F6F7', opacity=0.5,
          info='Gehärtetes Mineralglas, in die Lünette eingepresst. Nicht herausdrücken: Es gehört mit zum Gehäuse.'),
     teil('luenette', 'steel_watch_case', 'Lünette', 'Lünette', 'cyl',
-         x=1, y=5, w=36, z=10, h=1.5, mass=5, materials=[['stahl', 100]], color=STAHL,
+         x=1, y=5, w=36, z=10, h=1.5, mass=5, materials=[['stahl', 100]], color=STAHL, wand=2, boden=0,
          info='Polierter Edelstahlring um das Glas, auf das Gehäuse gepresst.',
-         marks=[mark('cyl', 2, 2, 32, fill='#9DA4A9')]),
+         marks=[mark('cyl', 2, 2, 32, fill='#9DA4A9', zeichnung=True)]),
     teil('sekundenzeiger', 'watch_movement', 'Sekundenzeiger', 'Sekundenzeiger', 'box', material_id='copper',
          x=CX - 0.4, y=CY - 13, w=0.8, d=16, z=9.6, h=0.2, r=0.3, mass=0.05, materials=[['messing', 100]],
          color='#C8423A', info='Dünner Messingzeiger, springt jede Sekunde einen Schritt weiter.'),
@@ -64,17 +64,17 @@ teile = [
          info='Silberoxid-Knopfzelle, hält zwei bis drei Jahre. Deckel öffnen, Zelle abkleben und zur Batteriesammlung bringen.',
          marks=[mark('cyl', 1, 1, 4.8, fill='#9DA6AD')]),
     teil('gehaeuse', 'steel_watch_case', 'Gehäusemittelteil mit Bandanstößen', 'Gehäuse', 'cyl',
-         x=1, y=5, w=36, z=1.5, h=8.5, mass=22, materials=[['stahl', 100]], color=STAHL, explode=[-55, 0, 0],
+         x=1, y=5, w=36, z=1.5, h=8.5, mass=22, materials=[['stahl', 100]], color=STAHL, explode=[-55, 0, 0], wand=3, boden=0,
          info='Edelstahlgehäuse aus einem Stück mit den Hörnern für die Federstege. Leer ist es reiner Stahlschrott.',
-         marks=[mark('cyl', 3, 3, 30, fill='#9DA4A9')]),
+         marks=[mark('cyl', 3, 3, 30, fill='#9DA4A9', zeichnung=True)]),
     teil('krone', 'steel_watch_case', 'Krone mit Aufzugswelle', 'Krone', 'box',
-         x=34, y=21.5, w=6, d=3, z=4.6, h=3, r=1, mass=0.8, materials=[['stahl', 90], ['gummi', 10]], color='#B7BCC0',
+         x=34, y=21.5, w=6, d=3, z=4.6, h=3, r=1, form='liegend_x', mass=0.8, materials=[['stahl', 90], ['gummi', 10]], color='#B7BCC0',
          explode=[20, 0, 0],
          info='Ziehen, um die Uhrzeit zu stellen. Zum Ausbau des Werks die Welle nach Drücken eines Hebelchens herausziehen.'),
     teil('dichtung', 'steel_watch_case', 'Dichtungsring', 'Dichtung', 'cyl', material_id='rubber',
-         x=4.5, y=8.5, w=29, z=1.3, h=0.3, mass=0.1, materials=[['gummi', 100]], color='#22272B',
+         x=4.5, y=8.5, w=29, z=1.3, h=0.3, mass=0.1, materials=[['gummi', 100]], color='#22272B', wand=1, boden=0,
          info='Gummiring zwischen Boden und Gehäuse, hält Wasser und Staub fern.',
-         marks=[mark('cyl', 1, 1, 27, fill='#3A3F44')]),
+         marks=[mark('cyl', 1, 1, 27, fill='#3A3F44', zeichnung=True)]),
     teil('boden', 'steel_watch_case', 'Gehäuseboden', 'Boden', 'cyl',
          x=4, y=8, w=30, z=0, h=1.3, mass=6, materials=[['stahl', 100]], color=STAHL,
          info='Eingedrückter Stahlboden. Mit einem Gehäusemesser an der kleinen Kerbe aufhebeln.',
@@ -95,4 +95,7 @@ teile = [
 explodiere(teile, abstand=10, abstaende={'sekundenzeiger': 4, 'minutenzeiger': 4, 'stundenzeiger': 4,
                                           'spule': 5, 'quarz': 5, 'knopfzelle': 5, 'dichtung': 5}, nach_liste=True)
 skaliere_masse(teile, oid='analog_wristwatch')
+for p in teile:  # gerundete Formen (form): marks nur in der Zeichnung, oben flach würden sie schweben
+    if p.get('form'):
+        p['marks'] = [dict(m, zeichnung=True) for m in p.get('marks') or []]
 schreibe('analog_wristwatch', teile)

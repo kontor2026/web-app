@@ -75,7 +75,8 @@
     ]
    ],
    "info": "Ineinandergeschobene Röhrchen aus verchromtem Stahl für den UKW-Empfang. Innen im Gehäuse mit einer Mutter festgeschraubt.",
-   "color": "#C9CDD0",
+   "color": "#E2E5E7",
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
@@ -84,7 +85,8 @@
      "w": 1.5,
      "d": 5,
      "r": 0.5,
-     "fill": "#8A939A"
+     "fill": "#8A939A",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -93,7 +95,8 @@
      "w": 1.5,
      "d": 5,
      "r": 0.5,
-     "fill": "#8A939A"
+     "fill": "#8A939A",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -102,7 +105,8 @@
      "w": 1.5,
      "d": 5,
      "r": 0.5,
-     "fill": "#8A939A"
+     "fill": "#8A939A",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -111,7 +115,8 @@
      "w": 1.5,
      "d": 5,
      "r": 0.5,
-     "fill": "#8A939A"
+     "fill": "#8A939A",
+     "zeichnung": true
     }
    ]
   },
@@ -895,12 +900,12 @@
    "mass": 57.7,
    "materials": [
     [
-     "stahl",
-     50
-    ],
-    [
      "papier",
      25
+    ],
+    [
+     "stahl",
+     50
     ],
     [
      "kupfer",
@@ -916,7 +921,7 @@
     ]
    ],
    "info": "Membran aus Pappe in einem Stahlkorb. Sie schwingt und erzeugt den Ton, angetrieben von der Schwingspule. Mit vier Schrauben an der Frontschale.",
-   "color": "#3B3B3B",
+   "color": "#2E2B28",
    "marks": [
     {
      "shape": "box",
@@ -925,7 +930,7 @@
      "w": 88,
      "d": 8,
      "r": 4,
-     "fill": "#55493C"
+     "fill": "#3E3830"
     }
    ]
   },
@@ -964,6 +969,7 @@
    ],
    "info": "Schwerer Ringmagnet aus Ferrit hinter der Membran. Zieht Schrauben und Büroklammern an.",
    "color": "#4A4F54",
+   "form": "liegend_y",
    "marks": [
     {
      "shape": "cyl",
@@ -971,7 +977,8 @@
      "y": 3,
      "w": 24,
      "d": 8,
-     "fill": "#8A939A"
+     "fill": "#8A939A",
+     "zeichnung": true
     }
    ]
   },
@@ -1011,6 +1018,7 @@
    ],
    "info": "Stab aus Ferrit mit Kupferwicklung. Empfängt Mittelwelle, deshalb funktioniert MW auch ohne ausgezogene Antenne.",
    "color": "#3A3F44",
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
@@ -1019,7 +1027,8 @@
      "w": 22,
      "d": 8,
      "r": 2,
-     "fill": "#C5803D"
+     "fill": "#C5803D",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -1028,7 +1037,8 @@
      "w": 12,
      "d": 8,
      "r": 2,
-     "fill": "#C5803D"
+     "fill": "#C5803D",
+     "zeichnung": true
     }
    ]
   },
@@ -1161,7 +1171,7 @@
    "shape": "box",
    "x": 10,
    "y": 3,
-   "w": 200,
+   "w": 37,
    "d": 26,
    "z": 4,
    "h": 26,
@@ -1171,7 +1181,7 @@
     -45,
     0
    ],
-   "mass": 276.8,
+   "mass": 57.7,
    "materials": [
     [
      "zinkmangan",
@@ -1183,81 +1193,254 @@
     ]
    ],
    "info": "Vier 1,5-Volt-Zellen in Reihe ergeben 6 Volt. Sie sind der schwerste Teil des Radios: herausnehmen und in die Batteriesammlung geben.",
-   "color": "#C8423A",
-   "marks": [
-    {
-     "shape": "box",
-     "x": 0,
-     "y": 0,
-     "w": 50,
-     "d": 26,
-     "r": 8,
-     "fill": "#C8423A"
-    },
-    {
-     "shape": "box",
-     "x": 50,
-     "y": 0,
-     "w": 50,
-     "d": 26,
-     "r": 8,
-     "fill": "#C8423A"
-    },
-    {
-     "shape": "box",
-     "x": 100,
-     "y": 0,
-     "w": 50,
-     "d": 26,
-     "r": 8,
-     "fill": "#C8423A"
-    },
-    {
-     "shape": "box",
-     "x": 150,
-     "y": 0,
-     "w": 50,
-     "d": 26,
-     "r": 8,
-     "fill": "#C8423A"
-    },
-    {
-     "shape": "box",
-     "x": 44,
-     "y": 6,
-     "w": 6,
-     "d": 14,
-     "r": 2,
-     "fill": "#B7BCC0"
-    },
-    {
-     "shape": "box",
-     "x": 94,
-     "y": 6,
-     "w": 6,
-     "d": 14,
-     "r": 2,
-     "fill": "#B7BCC0"
-    },
-    {
-     "shape": "box",
-     "x": 144,
-     "y": 6,
-     "w": 6,
-     "d": 14,
-     "r": 2,
-     "fill": "#B7BCC0"
-    },
-    {
-     "shape": "box",
-     "x": 194,
-     "y": 6,
-     "w": 6,
-     "d": 14,
-     "r": 2,
-     "fill": "#B7BCC0"
-    }
-   ]
+   "color": "#2A2C2E",
+   "label": true,
+   "form": "liegend_x"
+  },
+  {
+   "id": "batterie1",
+   "component_id": "alkaline_cell",
+   "material_id": "alkaline",
+   "name": "Babyzelle (C)",
+   "short": "Batterien C",
+   "shape": "box",
+   "x": 60,
+   "y": 3,
+   "w": 37,
+   "d": 26,
+   "z": 4,
+   "h": 26,
+   "r": 8,
+   "explode": [
+    0,
+    -45,
+    0
+   ],
+   "mass": 57.7,
+   "materials": [
+    [
+     "zinkmangan",
+     80
+    ],
+    [
+     "stahl",
+     20
+    ]
+   ],
+   "info": "Eine der vier Zellen.",
+   "color": "#2A2C2E",
+   "label": false,
+   "form": "liegend_x"
+  },
+  {
+   "id": "batterie2",
+   "component_id": "alkaline_cell",
+   "material_id": "alkaline",
+   "name": "Babyzelle (C)",
+   "short": "Batterien C",
+   "shape": "box",
+   "x": 110,
+   "y": 3,
+   "w": 37,
+   "d": 26,
+   "z": 4,
+   "h": 26,
+   "r": 8,
+   "explode": [
+    0,
+    -45,
+    0
+   ],
+   "mass": 57.7,
+   "materials": [
+    [
+     "zinkmangan",
+     80
+    ],
+    [
+     "stahl",
+     20
+    ]
+   ],
+   "info": "Eine der vier Zellen.",
+   "color": "#2A2C2E",
+   "label": false,
+   "form": "liegend_x"
+  },
+  {
+   "id": "batterie3",
+   "component_id": "alkaline_cell",
+   "material_id": "alkaline",
+   "name": "Babyzelle (C)",
+   "short": "Batterien C",
+   "shape": "box",
+   "x": 160,
+   "y": 3,
+   "w": 37,
+   "d": 26,
+   "z": 4,
+   "h": 26,
+   "r": 8,
+   "explode": [
+    0,
+    -45,
+    0
+   ],
+   "mass": 57.7,
+   "materials": [
+    [
+     "zinkmangan",
+     80
+    ],
+    [
+     "stahl",
+     20
+    ]
+   ],
+   "info": "Eine der vier Zellen.",
+   "color": "#2A2C2E",
+   "label": false,
+   "form": "liegend_x"
+  },
+  {
+   "id": "batteriekappe0",
+   "component_id": "alkaline_cell",
+   "material_id": "alkaline",
+   "name": "Babyzelle (C), Pluspol-Ende",
+   "short": "Batterien C",
+   "shape": "box",
+   "x": 47,
+   "y": 3,
+   "w": 13,
+   "d": 26,
+   "z": 4,
+   "h": 26,
+   "r": 8,
+   "explode": [
+    0,
+    -45,
+    0
+   ],
+   "mass": 11.5,
+   "materials": [
+    [
+     "zinkmangan",
+     80
+    ],
+    [
+     "stahl",
+     20
+    ]
+   ],
+   "info": "Kupferfarben bedrucktes Ende der Zelle mit dem Pluspol.",
+   "color": "#B8862E",
+   "label": false,
+   "form": "liegend_x"
+  },
+  {
+   "id": "batteriekappe1",
+   "component_id": "alkaline_cell",
+   "material_id": "alkaline",
+   "name": "Babyzelle (C), Pluspol-Ende",
+   "short": "Batterien C",
+   "shape": "box",
+   "x": 97,
+   "y": 3,
+   "w": 13,
+   "d": 26,
+   "z": 4,
+   "h": 26,
+   "r": 8,
+   "explode": [
+    0,
+    -45,
+    0
+   ],
+   "mass": 11.5,
+   "materials": [
+    [
+     "zinkmangan",
+     80
+    ],
+    [
+     "stahl",
+     20
+    ]
+   ],
+   "info": "Kupferfarben bedrucktes Ende der Zelle mit dem Pluspol.",
+   "color": "#B8862E",
+   "label": false,
+   "form": "liegend_x"
+  },
+  {
+   "id": "batteriekappe2",
+   "component_id": "alkaline_cell",
+   "material_id": "alkaline",
+   "name": "Babyzelle (C), Pluspol-Ende",
+   "short": "Batterien C",
+   "shape": "box",
+   "x": 147,
+   "y": 3,
+   "w": 13,
+   "d": 26,
+   "z": 4,
+   "h": 26,
+   "r": 8,
+   "explode": [
+    0,
+    -45,
+    0
+   ],
+   "mass": 11.5,
+   "materials": [
+    [
+     "zinkmangan",
+     80
+    ],
+    [
+     "stahl",
+     20
+    ]
+   ],
+   "info": "Kupferfarben bedrucktes Ende der Zelle mit dem Pluspol.",
+   "color": "#B8862E",
+   "label": false,
+   "form": "liegend_x"
+  },
+  {
+   "id": "batteriekappe3",
+   "component_id": "alkaline_cell",
+   "material_id": "alkaline",
+   "name": "Babyzelle (C), Pluspol-Ende",
+   "short": "Batterien C",
+   "shape": "box",
+   "x": 197,
+   "y": 3,
+   "w": 13,
+   "d": 26,
+   "z": 4,
+   "h": 26,
+   "r": 8,
+   "explode": [
+    0,
+    -45,
+    0
+   ],
+   "mass": 11.5,
+   "materials": [
+    [
+     "zinkmangan",
+     80
+    ],
+    [
+     "stahl",
+     20
+    ]
+   ],
+   "info": "Kupferfarben bedrucktes Ende der Zelle mit dem Pluspol.",
+   "color": "#B8862E",
+   "label": false,
+   "form": "liegend_x"
   },
   {
    "id": "rueckschale",

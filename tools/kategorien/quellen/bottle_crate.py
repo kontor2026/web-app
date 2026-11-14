@@ -54,10 +54,14 @@ teile = [
          info='Bedrucktes PP-Etikett, beim Spritzgießen eingeschmolzen. Nicht abreißen: Kästen haben Pfand und '
               'werden über Jahre wiederbefüllt.',
          color='#F2F0EA', sortBias=120),
-    teil('gefache', 'hdpe_crate_body', 'Gefache', 'Gefache', 'box',
-         x=12, y=12, w=376, d=276, z=12, h=170, r=2, mass=430, explode=[0, 0, 30],
-         info='Trennstege für 20 Flaschen, damit sie nicht aneinanderschlagen und zerbrechen.',
-         color=KASTEN, marks=raster(4, 4, 5, 4, 68, 62, 75, 69, r=8, fill=LOCH)),
+    # Gefache: 20 Zellen, in der Foto-Ansicht echt hohl (wand), in der Zeichnung mit gemalter Öffnung
+    *[teil('gefache' if n == 0 else f'gefache_{n + 1}', 'hdpe_crate_body', 'Gefache', 'Gefache', 'box',
+           x=12 + i * 75.2, y=12 + j * 69, w=75.2, d=69, z=12, h=170, r=2, mass=21.5, explode=[0, 0, 30],
+           info='Trennstege für 20 Flaschen, damit sie nicht aneinanderschlagen und zerbrechen.' if n == 0
+           else 'Eine der 20 Flaschenzellen des Gefaches.',
+           color=KASTEN, label=n == 0, wand=3.5, boden=0,
+           marks=[mark('box', 3.6, 3.5, 68, 62, 8, LOCH, zeichnung=True)])
+      for n, (j, i) in enumerate((j, i) for j in range(4) for i in range(5))],
     teil('boden', 'hdpe_crate_body', 'Boden mit Ablauflöchern', 'Boden', 'box',
          x=0, y=0, w=400, d=300, z=4, h=8, r=4, mass=200, explode=[0, 0, 0],
          info='Gitterboden, damit Wasser ablaufen kann. Am Ende wird der ganze Kasten gemahlen und zu neuen '

@@ -260,15 +260,18 @@
     ]
    ],
    "info": "Teil des Mixbehälters.",
-   "color": "#DDE6EC",
-   "opacity": 0.55,
+   "color": "#E4ECF0",
+   "opacity": 0.3,
    "label": false,
+   "wand": 3,
+   "boden": 0,
    "marks": [
     {
      "shape": "box",
      "x": 55.0,
      "y": 124,
      "w": 30,
+     "zeichnung": true,
      "d": 3,
      "r": 1,
      "fill": "#9FB0BC"
@@ -302,9 +305,11 @@
     ]
    ],
    "info": "Teil des Mixbehälters.",
-   "color": "#DDE6EC",
-   "opacity": 0.55,
-   "label": false
+   "color": "#E4ECF0",
+   "opacity": 0.3,
+   "label": false,
+   "wand": 3,
+   "boden": 0
   },
   {
    "id": "behaelter2",
@@ -333,9 +338,11 @@
     ]
    ],
    "info": "Teil des Mixbehälters.",
-   "color": "#DDE6EC",
-   "opacity": 0.55,
-   "label": false
+   "color": "#E4ECF0",
+   "opacity": 0.3,
+   "label": false,
+   "wand": 3,
+   "boden": 0
   },
   {
    "id": "behaelter3",
@@ -364,9 +371,11 @@
     ]
    ],
    "info": "Bruchfester Kunststoff (Copolyester oder Polycarbonat) mit Skala. Er wird nach unten schmaler, damit das Mixgut immer wieder zum Messer fällt. Materialcode steht am Boden.",
-   "color": "#DDE6EC",
-   "opacity": 0.55,
-   "label": true
+   "color": "#E4ECF0",
+   "opacity": 0.3,
+   "label": true,
+   "wand": 3,
+   "boden": 0
   },
   {
    "id": "griff",
@@ -946,7 +955,7 @@
     ]
    ],
    "info": "Vier lange Schrauben von unten unter den Saugfüßen. Füße abhebeln, dann die Schrauben lösen.",
-   "color": "#9AA2A6",
+   "color": "#C9CDD0",
    "label": true,
    "marks": [
     {
@@ -990,7 +999,7 @@
     ]
    ],
    "info": "Vier lange Schrauben von unten unter den Saugfüßen. Füße abhebeln, dann die Schrauben lösen.",
-   "color": "#9AA2A6",
+   "color": "#C9CDD0",
    "label": false,
    "marks": [
     {
@@ -1034,7 +1043,7 @@
     ]
    ],
    "info": "Vier lange Schrauben von unten unter den Saugfüßen. Füße abhebeln, dann die Schrauben lösen.",
-   "color": "#9AA2A6",
+   "color": "#C9CDD0",
    "label": false,
    "marks": [
     {
@@ -1078,7 +1087,7 @@
     ]
    ],
    "info": "Vier lange Schrauben von unten unter den Saugfüßen. Füße abhebeln, dann die Schrauben lösen.",
-   "color": "#9AA2A6",
+   "color": "#C9CDD0",
    "label": false,
    "marks": [
     {
@@ -1250,6 +1259,7 @@
    ],
    "info": "Etwa 1 m PVC-Mantel mit Stecker. Längs aufschlitzen, um Kupfer und PVC zu trennen.",
    "color": "#2E3338",
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
@@ -1258,7 +1268,8 @@
      "w": 10,
      "d": 6,
      "r": 2,
-     "fill": "#555"
+     "fill": "#555",
+     "zeichnung": true
     }
    ]
   },
@@ -1289,7 +1300,8 @@
     ]
    ],
    "info": "Drei Kupferadern. Kupfer ist der wertvollste Rohstoff im Kabel und wird fast vollständig recycelt.",
-   "color": "#B87333"
+   "color": "#B87333",
+   "form": "liegend_x"
   }
  ]
 }

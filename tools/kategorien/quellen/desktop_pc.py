@@ -14,7 +14,6 @@ from bau import teil, mark, raster, explodiere, skaliere_masse, schreibe  # noqa
 GEH = '#3A3F44'
 PCB = '#2E6B45'
 CHIP = '#22272B'
-STAHL = '#9AA2A8'
 
 teile = [
     teil('seitenwand', 'steel_pc_case', 'Seitenwand', 'Seitenwand', 'box',
@@ -80,14 +79,14 @@ teile = [
          info='Macht aus 230 Volt die Gleichspannungen für den PC. Nur ausschrauben, nicht öffnen: Die Kondensatoren können noch geladen sein.',
          marks=[mark('cyl', 15, 10, 120, fill='#1E2226')] + raster(25, 70, 1, 4, 100, 3, 0, 12, fill='#3A3F44')),
     teil('gehaeuse', 'steel_pc_case', 'Gehäuse (Stahlrahmen)', 'Gehäuse', 'box',
-         x=0, y=0, w=198, d=400, z=0, h=450, r=1, mass=3400, color=STAHL,
+         x=0, y=0, w=198, d=400, z=0, h=450, r=1, mass=3400, color=GEH,
          info='Leeres Gehäuse aus verzinktem Stahlblech mit Laufwerksschächten. Wenn alles ausgebaut ist: ab zum Altmetall.',
-         marks=raster(30, 50, 7, 6, 14, 3, 20, 8, fill='#7D858B') + [mark('box', 20, 250, 150, 120, 4, '#7D858B')]),
-    teil('kabel', 'cable_insulation', 'Netzkabel (Isolierung)', 'Kabel', 'box',
+         marks=raster(30, 50, 7, 6, 14, 3, 20, 8, fill='#22262A') + [mark('box', 20, 250, 150, 120, 4, '#2B2F33')]),
+    teil('kabel', 'cable_insulation', 'Netzkabel (Isolierung)', 'Kabel', 'box', form='liegend_x',
          x=20, y=180, w=160, d=10, z=0, h=8, r=4, explode=[0, 330, 0], mass=150, materials=[['pvc', 90], ['pp', 10]],
          color='#2B2F33', info='1,5 m Kaltgerätekabel mit PVC-Mantel. Stecker abschneiden und längs aufschlitzen.',
          marks=[mark('box', 0, 0, 25, 10, 2, '#4A5156'), mark('box', 135, 0, 25, 10, 2, '#4A5156')]),
-    teil('kupferadern', 'cable_copper_core', 'Kupferadern', 'Kupferadern', 'box',
+    teil('kupferadern', 'cable_copper_core', 'Kupferadern', 'Kupferadern', 'box', form='liegend_x',
          x=20, y=205, w=160, d=4, z=0, h=4, r=1, explode=[0, 340, 0], mass=70, color='#B87333',
          info='Drei Kupferadern (Phase, Neutralleiter, Schutzleiter). Reines Kupfer ist wertvoll.'),
 ]
@@ -106,4 +105,7 @@ for p in teile:
     elif p['explode'] is None:
         p['explode'] = [0, 0, 0]
 skaliere_masse(teile, oid='desktop_pc')
+for p in teile:   # Foto-Ansicht: echte Formen (form) tragen keine aufgemalten Details
+    if p.get('form') and p.get('marks'):
+        p['marks'] = [dict(k, zeichnung=True) for k in p['marks']]
 schreibe('desktop_pc', teile)

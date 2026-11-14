@@ -203,7 +203,7 @@
     ]
    ],
    "info": "Kunststoffknopf mit Alu-Hülle und feiner Düse. Er wird nur auf den Pumpenstift gesteckt.",
-   "color": "#C9A646",
+   "color": "#E6CC80",
    "marks": [
     {
      "shape": "cyl",
@@ -250,7 +250,7 @@
     ]
    ],
    "info": "Aluminiumkappe, die mit einer Gummidichtung fest um den Glashals gepresst ist. Nur mit einer Zange abhebeln, dann kann das Glas ins Altglas.",
-   "color": "#C9A646",
+   "color": "#E6CC80",
    "marks": [
     {
      "shape": "cyl",
@@ -406,12 +406,15 @@
    "info": "Kurzer Hals mit Wulst, unter den der Kragen gepresst wird.",
    "color": "#E6EEF0",
    "opacity": 0.65,
+   "wand": 3.5,
+   "boden": 0,
    "marks": [
     {
      "shape": "cyl",
      "x": 4,
      "y": 4,
      "w": 7,
+     "zeichnung": true,
      "fill": "#C8D6DA"
     }
    ]
@@ -445,12 +448,15 @@
    "info": "Dickes Glas, Recyclingcode GL 70. Leer, mit Pumpe nach Möglichkeit entfernt, ins Weißglas. Parfüm ist brennbar, Reste nicht in den Ausguss kippen.",
    "color": "#E6EEF0",
    "opacity": 0.65,
+   "wand": 5,
+   "boden": 0,
    "marks": [
     {
      "shape": "box",
      "x": 4,
      "y": 4,
      "w": 52,
+     "zeichnung": true,
      "d": 32,
      "r": 4
     }

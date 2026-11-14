@@ -65,7 +65,7 @@ teile = [
          x=40, y=55, w=36, d=120, z=60, h=12, r=8, explode=SR, mass=35, color=AKZENT, label=False,
          info='Fuß der rechten Schale mit Führungsschiene für den Akku.'),
     teil('schrauben', 'plastic_housing', 'Torx-Schrauben (10 Stück)', 'Schrauben', 'cyl', material_id='steel',
-         x=14, y=20, w=6, z=200, h=14, explode=[-195, 0, 0], mass=8, color='#7D858B',
+         x=14, y=20, w=6, z=200, h=14, explode=[-195, 0, 0], mass=8, color='#C9CDD0',
          info='Halten die beiden Schalen zusammen. Man braucht einen Torx-Schraubendreher T10 oder T15.',
          marks=[mark('cyl', 1.5, 1.5, 3, fill='#4A5156')]),
     teil('planetenraeder', 'gearbox', 'Planetenräder', 'Planetenräder', 'cyl',
@@ -78,7 +78,7 @@ teile = [
 # Antriebsstrang (Achse bei x = 40, z = 185)
 teile += liegend('bohrfutter', 'drill_chuck', 'Schnellspannbohrfutter', 'Bohrfutter', 40, 185, 18, 154, 46, 5,
                  [0, 105, 0], 180, 'Spannt Bohrer und Bits mit drei Stahlbacken. Ganz öffnen, die Linksschraube innen '
-                 'lösen, dann abschrauben.', materials=[['stahl', 85], ['pcabs', 15]], color='#3A3F44',
+                 'lösen, dann abschrauben.', materials=[['pcabs', 15], ['stahl', 85]], color='#2A2C2E',
                  marks_oben=lambda w: raster(1, 4, 1, 6, round(max(w - 2, 1), 2), 2, 0, 6, fill='#5E656A'))
 teile += liegend('drehmomentring', 'gearbox', 'Drehmomentring', 'Drehmoment', 40, 185, 27, 140, 13, 5,
                  [0, 70, 0], 30, 'Stellt ein, ab welcher Kraft die Rutschkupplung auslöst. Innen drücken Stahlfedern '
@@ -149,5 +149,14 @@ teile += [
          color=AKZENT, info='Drücken und den Akku nach vorn abziehen. Eine Feder lässt die Taste wieder einrasten.'),
 ]
 
+# Foto-Ansicht: echte Formen (Kabel liegend, Spulen als Ring); Details darauf nur in der Zeichnung
+FORMEN = {'luefter': ('liegend_y', 1)}
+for p in teile:
+    if p['id'] in FORMEN:
+        p['form'], nur_zeichnung = FORMEN[p['id']]
+        p.pop('wand', None)
+        p.pop('boden', None)
+        for m in (p.get('marks') or []) if nur_zeichnung else []:
+            m['zeichnung'] = True
 skaliere_masse(teile, oid='cordless_drill')
 schreibe('cordless_drill', teile)

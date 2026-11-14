@@ -36,7 +36,7 @@ teile = [
          marks=[mark('cyl', 0, 59, 12, fill='#9AA2A8')]),
 ] + [
     teil(f'motor_{n}', 'electric_motor', f'Motor {name}', 'Motor', 'cyl',
-         x=mx - 14, y=my - 14, w=28, z=ZM, h=24, mass=30, materials=MOTOR_MAT, color='#9AA2A8', info=MOTOR_INFO,
+         x=mx - 14, y=my - 14, w=28, z=ZM, h=24, mass=30, materials=MOTOR_MAT, color='#C3C8CC', info=MOTOR_INFO,
          label=(n == 'hl'), marks=[mark('cyl', 4, 4, 20, fill='#5E656A'), mark('cyl', 11, 11, 6, fill='#C9CED2')])
     for n, name, mx, my in (('hl', 'hinten links', MX[0], MY[0]), ('hr', 'hinten rechts', MX[1], MY[0]),
                             ('vl', 'vorne links', MX[0], MY[1]), ('vr', 'vorne rechts', MX[1], MY[1]))

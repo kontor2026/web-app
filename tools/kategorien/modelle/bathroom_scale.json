@@ -766,6 +766,7 @@
    ],
    "info": "Zwei 1,5-Volt-Zellen, von unten durch eine Klappe zugänglich. Herausnehmen und in die Batteriesammlung geben.",
    "color": "#2F6FB0",
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
@@ -774,7 +775,8 @@
      "w": 5,
      "d": 10.5,
      "r": 2.5,
-     "fill": "#B7BCC0"
+     "fill": "#B7BCC0",
+     "zeichnung": true
     }
    ]
   },
@@ -811,6 +813,7 @@
    "info": "Zweite Zelle, liegt umgekehrt zur ersten.",
    "color": "#2F6FB0",
    "label": false,
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
@@ -819,7 +822,8 @@
      "w": 5,
      "d": 10.5,
      "r": 2.5,
-     "fill": "#B7BCC0"
+     "fill": "#B7BCC0",
+     "zeichnung": true
     }
    ]
   },

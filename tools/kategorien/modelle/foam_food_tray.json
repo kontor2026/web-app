@@ -207,12 +207,15 @@
    ],
    "info": "Geschäumtes Polystyrol, zu 95 % Luft. Folie und Saugeinlage abziehen, die Schale in die Gelbe Tonne, nicht ins Altpapier.",
    "color": "#F3F1EC",
+   "wand": 8,
+   "boden": 0,
    "marks": [
     {
      "shape": "box",
      "x": 8,
      "y": 8,
      "w": 184,
+     "zeichnung": true,
      "d": 124,
      "r": 8,
      "fill": "#E2DFD8"
@@ -222,6 +225,7 @@
      "x": 16,
      "y": 16,
      "w": 168,
+     "zeichnung": true,
      "d": 108,
      "r": 6,
      "fill": "#D8D5CE"
@@ -232,7 +236,8 @@
      "y": 22.0,
      "w": 148,
      "d": 2,
-     "fill": "#CAC6BE"
+     "fill": "#CAC6BE",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -240,7 +245,8 @@
      "y": 41.5,
      "w": 148,
      "d": 2,
-     "fill": "#CAC6BE"
+     "fill": "#CAC6BE",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -248,7 +254,8 @@
      "y": 61.0,
      "w": 148,
      "d": 2,
-     "fill": "#CAC6BE"
+     "fill": "#CAC6BE",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -256,7 +263,8 @@
      "y": 80.5,
      "w": 148,
      "d": 2,
-     "fill": "#CAC6BE"
+     "fill": "#CAC6BE",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -264,7 +272,8 @@
      "y": 100.0,
      "w": 148,
      "d": 2,
-     "fill": "#CAC6BE"
+     "fill": "#CAC6BE",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -272,7 +281,8 @@
      "y": 119.5,
      "w": 148,
      "d": 2,
-     "fill": "#CAC6BE"
+     "fill": "#CAC6BE",
+     "zeichnung": true
     }
    ]
   },
@@ -304,7 +314,8 @@
    ],
    "info": "Rillen im Boden machen die Schale steif und halten Fleischsaft unter der Ware.",
    "color": "#F3F1EC",
-   "label": false
+   "label": false,
+   "wand": 3
   }
  ]
 }

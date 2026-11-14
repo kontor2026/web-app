@@ -27,7 +27,7 @@
     ]
    ],
    "info": "Hebel zum Öffnen, mit der Niete am Deckel befestigt. Dranlassen: Lose fällt sie in der Sortieranlage durch und geht verloren.",
-   "color": "#B9C0C6",
+   "color": "#CDD3D8",
    "marks": [
     {
      "shape": "box",
@@ -92,14 +92,14 @@
     ]
    ],
    "info": "Härtere Legierung mit Magnesium. Nach dem Befüllen wird sein Rand mit dem Rumpf zum Falz zusammengerollt, das macht die Dose dicht.",
-   "color": "#C9CED3",
+   "color": "#DDE1E4",
    "marks": [
     {
      "shape": "cyl",
      "x": 3.5,
      "y": 3.5,
      "w": 50,
-     "fill": "#B9C0C6"
+     "fill": "#CDD3D8"
     },
     {
      "shape": "box",
@@ -143,7 +143,7 @@
     ]
    ],
    "info": "Der Rumpf wird oben in mehreren Stufen enger gerollt, damit ein kleinerer Deckel passt. Das spart Aluminium.",
-   "color": "#C9CED3"
+   "color": "#DDE1E4"
   },
   {
    "id": "hals2",
@@ -170,7 +170,7 @@
     ]
    ],
    "info": "Gehört zum Rumpf aus Aluminium, in einem Stück gezogen.",
-   "color": "#C9CED3",
+   "color": "#DDE1E4",
    "label": false
   },
   {
@@ -198,7 +198,7 @@
     ]
    ],
    "info": "Gehört zum Rumpf aus Aluminium, in einem Stück gezogen.",
-   "color": "#C9CED3",
+   "color": "#DDE1E4",
    "label": false
   },
   {
@@ -226,7 +226,7 @@
     ]
    ],
    "info": "Aus einer Aluminiumscheibe tiefgezogen und gestreckt, die Wand ist dünner als ein Haar. Innen schützt ein Lack das Getränk vor dem Metall.",
-   "color": "#C9CED3"
+   "color": "#DDE1E4"
   },
   {
    "id": "schraege",
@@ -253,7 +253,7 @@
     ]
    ],
    "info": "Gehört zum Rumpf aus Aluminium, in einem Stück gezogen.",
-   "color": "#C9CED3",
+   "color": "#DDE1E4",
    "label": false
   },
   {
@@ -281,7 +281,7 @@
     ]
    ],
    "info": "Der Boden ist nach innen gewölbt (Dom). So hält die dünne Dose den Druck der Kohlensäure aus.",
-   "color": "#C9CED3"
+   "color": "#DDE1E4"
   },
   {
    "id": "druck",
@@ -310,13 +310,16 @@
    "info": "Farbe und Lack verbrennen beim Einschmelzen. Das Aluminium lässt sich danach ohne Qualitätsverlust immer wieder recyceln.",
    "color": "#C8362F",
    "sortBias": 3,
+   "wand": 0.2,
+   "boden": 0,
    "marks": [
     {
      "shape": "cyl",
      "x": 1.2,
      "y": 1.2,
      "w": 64,
-     "fill": "#C9CED3"
+     "zeichnung": true,
+     "fill": "#DDE1E4"
     }
    ]
   }

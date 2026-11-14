@@ -11,7 +11,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from bau import teil, mark, explodiere, skaliere_masse, schreibe  # noqa: E402
 
 DECKEL = '#F4F4F2'
-TUBE = '#FFFFFF'
+TUBE = '#2F6DB5'  # bedruckter Schlauch (Foto-Ansicht: Druck als Grundfarbe)
 LAMINAT = [['verbundfolie', 90], ['alu', 7], ['druck', 3]]  # PE-Laminat, oft mit Aluminium-Sperrschicht
 teile = [
     teil('klappdeckel', 'pp_flip_cap', 'Klappdeckel', 'Klappdeckel', 'box',
@@ -20,24 +20,24 @@ teile = [
               'bleiben, beides kommt in die Gelbe Tonne.',
          color=DECKEL, marks=[mark('box', 4, 13, 28, 3, 1.5, '#D9D9D4'), mark('box', 12, 2, 12, 4, 2, '#D9D9D4')]),
     teil('tubenkopf', 'toothpaste_tube_body', 'Tubenkopf mit Schulter und Gewinde', 'Tubenkopf', 'box',
-         material_id='hdpe', x=6.5, y=18, w=32, d=14, z=2, h=26, r=10, explode=[0, -30, 0], mass=1.6,
+         material_id='hdpe', x=6.5, y=18, w=32, d=14, z=2, h=26, r=10, explode=[0, -30, 0], mass=1.6, form='liegend_y',
          materials=[['hdpe', 100]],
          info='Gespritzter Kopf aus HDPE mit der kleinen Austrittsöffnung, an den Schlauch angeschweißt. '
               'Er lässt sich nicht abtrennen.',
-         color='#E9E9E4', marks=[mark('cyl', 11, 2, 10, 10, fill='#D0D0CA')]),
+         color='#E9E9E4', marks=[mark('cyl', 11, 2, 10, 10, fill='#D0D0CA', zeichnung=True)]),
     teil('schlauch_vorn', 'toothpaste_tube_body', 'Tubenschlauch (rund)', 'Schlauch', 'box',
-         x=3, y=32, w=39, d=60, z=2, h=26, r=12, mass=2.0, materials=LAMINAT,
+         x=3, y=32, w=39, d=60, z=2, h=26, r=12, mass=2.0, form='liegend_y', materials=LAMINAT,
          info='Mehrschichtfolie aus Polyethylen, oft mit einer dünnen Aluminiumschicht gegen Austrocknen. '
               'Leer drücken reicht, ausspülen ist nicht nötig.',
-         color=TUBE, marks=[mark('box', 4, 6, 31, 22, 4, '#2F6DB5'), mark('box', 4, 34, 31, 10, 3, '#C8423A')]),
+         color=TUBE, marks=[mark('box', 4, 6, 31, 22, 4, '#F4F4F2', zeichnung=True), mark('box', 4, 34, 31, 10, 3, '#C8423A', zeichnung=True)]),
     teil('schlauch_mitte', 'toothpaste_tube_body', 'Tubenschlauch (flacher)', 'Schlauch Mitte', 'box',
-         x=1.5, y=92, w=42, d=58, z=6, h=18, r=10, mass=1.8, materials=LAMINAT, label=False,
+         x=1.5, y=92, w=42, d=58, z=6, h=18, r=10, mass=1.8, form='liegend_y', materials=LAMINAT, label=False,
          info='Zum Ende hin wird der Schlauch flacher. Von hinten nach vorne aufrollen, dann kommt auch der Rest heraus.',
-         color=TUBE, marks=[mark('box', 4, 6, 34, 40, 6, '#2F6DB5'), mark('box', 6, 50, 30, 4, 1, '#8E969A')]),
+         color=TUBE, marks=[mark('box', 4, 6, 34, 40, 6, '#F4F4F2', zeichnung=True), mark('box', 6, 50, 30, 4, 1, '#8E969A', zeichnung=True)]),
     teil('schlauch_ende', 'toothpaste_tube_body', 'Tubenschlauch (flach)', 'Schlauch Ende', 'box',
-         x=0.5, y=150, w=44, d=27, z=10, h=10, r=6, mass=0.8, materials=LAMINAT, label=False,
+         x=0.5, y=150, w=44, d=27, z=10, h=10, r=6, mass=0.8, form='liegend_y', materials=LAMINAT, label=False,
          info='Fast flach gedrückt. Die Farbstreifen dienen der Maschine als Markierung zum Abfüllen.',
-         color=TUBE, marks=[mark('box', 4, 4, 36, 14, 4, '#2F6DB5'), mark('box', 36, 20, 5, 5, 0, '#22272B')]),
+         color=TUBE, marks=[mark('box', 4, 4, 36, 14, 4, '#F4F4F2', zeichnung=True), mark('box', 36, 20, 5, 5, 0, '#22272B', zeichnung=True)]),
     teil('endnaht', 'toothpaste_tube_body', 'Gepresste Endnaht', 'Endnaht', 'box',
          x=0, y=177, w=45, d=13, z=14, h=2, r=0, mass=0.6, materials=LAMINAT,
          info='Nach dem Befüllen von hinten heiß zusammengepresst. Darin ist das Herstelldatum geprägt.',

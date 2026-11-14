@@ -274,7 +274,7 @@
     ]
    ],
    "info": "Kleine Kreuzschlitzschrauben im Batteriefach halten beide Schalen zusammen.",
-   "color": "#9AA2A8",
+   "color": "#C9CDD0",
    "marks": [
     {
      "shape": "cyl",
@@ -812,6 +812,7 @@
    ],
    "info": "Zwei AA-Zellen mit je 1,5 V. Herausnehmen und in die Batterie-Sammelbox geben, nie in den Restmüll.",
    "color": "#3A6EA5",
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
@@ -820,7 +821,8 @@
      "w": 6,
      "d": 11.5,
      "r": 3,
-     "fill": "#C9A227"
+     "fill": "#C9A227",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -829,7 +831,8 @@
      "w": 30,
      "d": 8.5,
      "r": 2,
-     "fill": "#5E8CB8"
+     "fill": "#5E8CB8",
+     "zeichnung": true
     }
    ]
   },
@@ -866,6 +869,7 @@
    "info": "Zweite AA-Zelle, umgekehrt eingelegt. Ausgelaufene Batterien hinterlassen weißen Belag an den Federn.",
    "color": "#3A6EA5",
    "label": false,
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
@@ -874,7 +878,8 @@
      "w": 6,
      "d": 11.5,
      "r": 3,
-     "fill": "#C9A227"
+     "fill": "#C9A227",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -883,7 +888,8 @@
      "w": 30,
      "d": 8.5,
      "r": 2,
-     "fill": "#5E8CB8"
+     "fill": "#5E8CB8",
+     "zeichnung": true
     }
    ]
   },

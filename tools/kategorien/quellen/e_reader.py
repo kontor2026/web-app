@@ -53,7 +53,7 @@ teile = [
          color='#B7BCC0', info='Ladebuchse aus Stahlblech mit vergoldeten Kontakten.',
          marks=[mark('box', 1.5, 5, 6, 1.6, 0.8, '#2A2E31')]),
     *[teil(f'schraube{i}', 'circuit_board', 'Kreuzschlitz-Schraube M1,4', 'Schrauben', 'cyl', material_id='steel',
-           x=x, y=y, w=2.6, z=2.2, h=0.8, mass=0.1, materials=[['stahl', 100]], color='#9AA0A6', label=i == 0,
+           x=x, y=y, w=2.6, z=2.2, h=0.8, mass=0.1, materials=[['stahl', 100]], color='#C9CDD0', label=i == 0,
            info='Vier winzige Schrauben halten die Platine in der Rückschale. Mit einem Feinmechaniker-Schraubendreher (PH00) lösen.',
            marks=[mark('box', 0.5, 1.1, 1.6, 0.4), mark('box', 1.1, 0.5, 0.4, 1.6)])
       for i, (x, y) in enumerate([(12.5, 90.5), (99.5, 90.5), (12.5, 143.5), (99.5, 143.5)])],
@@ -68,8 +68,9 @@ teile = [
     teil('rueckschale', 'plastic_housing', 'Rückschale', 'Rückschale', 'box',
          x=0, y=0, w=115, d=160, z=0, h=7, r=8, mass=50, color=GEH,
          info='Gummierte Kunststoffwanne, in der alle Teile liegen. Leer ausgebaut ist sie reiner Kunststoff.',
-         marks=[mark('box', 3, 3, 109, 154, 6, '#23272A'), mark('box', 74, 154, 8, 3, 1, '#14171A'),
-                mark('box', 53, 155, 9, 2, 1, '#14171A')]),
+         wand=1.5, boden=1.5,
+         marks=[mark('box', 3, 3, 109, 154, 6, '#23272A', zeichnung=True), mark('box', 74, 154, 8, 3, 1, '#14171A', zeichnung=True),
+                mark('box', 53, 155, 9, 2, 1, '#14171A', zeichnung=True)]),
 ]
 
 explodiere(teile, abstand=65, abstaende={'soc': 18, 'speicher': 18, 'wlan': 18, 'flex': 18, **{f'schraube{i}': 12 for i in range(4)}}, nach_liste=True)

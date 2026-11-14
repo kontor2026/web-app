@@ -320,6 +320,7 @@
      "x": 20,
      "y": 20,
      "w": 250,
+     "zeichnung": true,
      "fill": "#BBD3DC"
     }
    ]
@@ -354,12 +355,15 @@
    ],
    "info": "Kunststoffring mit drei Rollen, auf dem der Drehteller läuft. Reiner Kunststoff, zum Spülen herausnehmen.",
    "color": "#9AA2A6",
+   "wand": 12,
+   "boden": 0,
    "marks": [
     {
      "shape": "cyl",
      "x": 15,
      "y": 15,
      "w": 120,
+     "zeichnung": true,
      "fill": "#7C858C"
     },
     {
@@ -1203,6 +1207,7 @@
    ],
    "info": "Etwa 1 m dickes PVC-Kabel mit Schutzkontaktstecker. Längs aufschlitzen, um die Kupferadern freizulegen.",
    "color": "#2E3338",
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
@@ -1211,7 +1216,8 @@
      "w": 10,
      "d": 6,
      "r": 2,
-     "fill": "#555"
+     "fill": "#555",
+     "zeichnung": true
     }
    ]
   },
@@ -1242,7 +1248,8 @@
     ]
    ],
    "info": "Drei Kupferadern für bis zu 1200 Watt. Kupfer lässt sich fast verlustfrei wiederverwerten.",
-   "color": "#B87333"
+   "color": "#B87333",
+   "form": "liegend_x"
   }
  ]
 }

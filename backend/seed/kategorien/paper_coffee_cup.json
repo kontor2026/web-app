@@ -243,12 +243,15 @@
    ],
    "info": "Der obere Rand ist eingerollt, damit der Becher stabil ist und der Deckel einrasten kann.",
    "color": "#F4F1EA",
+   "wand": 2,
+   "boden": 0,
    "marks": [
     {
      "shape": "cyl",
      "x": 3,
      "y": 3,
      "w": 74,
+     "zeichnung": true,
      "fill": "#5A3A22"
     }
    ]
@@ -282,7 +285,9 @@
     ]
    ],
    "info": "Karton mit einer dünnen Polyethylen-Schicht innen, damit der Kaffee nicht durchweicht. Wegen dieser Schicht gehört der Becher nicht ins Altpapier.",
-   "color": "#F4F1EA"
+   "color": "#F4F1EA",
+   "wand": 1,
+   "boden": 0
   },
   {
    "id": "wand_mitte",
@@ -314,7 +319,9 @@
    ],
    "info": "Die Wand ist aus einem Zuschnitt gerollt und an einer senkrechten Naht heiß verschweißt.",
    "color": "#F4F1EA",
-   "label": false
+   "label": false,
+   "wand": 1.1,
+   "boden": 0
   },
   {
    "id": "wand_unten",
@@ -346,7 +353,9 @@
    ],
    "info": "Unten ist die Wand nach innen um die Bodenscheibe gebördelt und dicht verpresst.",
    "color": "#F4F1EA",
-   "label": false
+   "label": false,
+   "wand": 1.2,
+   "boden": 0
   },
   {
    "id": "boden",
@@ -394,16 +403,14 @@
    "material_id": "cardboard",
    "name": "Papp-Banderole (Hitzeschutz)",
    "short": "Banderole",
-   "shape": "box",
-   "x": 80,
-   "y": 15,
-   "w": 0.5,
-   "d": 50,
+   "shape": "cyl",
+   "x": 1.5,
+   "y": 1.5,
+   "w": 77,
    "z": 30,
    "h": 55,
-   "r": 0,
    "explode": [
-    55,
+    115,
     0,
     0
    ],
@@ -419,8 +426,9 @@
     ]
    ],
    "info": "Wellpappe-Manschette, damit man sich nicht die Finger verbrennt. Abstreifen: Sie ist reines Papier und gehört ins Altpapier.",
-   "color": "#B5835A",
-   "sortBias": 100
+   "color": "#B8946A",
+   "wand": 1,
+   "boden": 0
   }
  ]
 }

@@ -71,11 +71,11 @@ teile = [
          x=0, y=0, w=250, d=160, z=0, h=12, r=22, mass=220, materials=[['stahl', 85], ['gummi', 5], ['pp', 10]],
          info='Verzinktes Stahlblech mit Gummifüßen und Kabelaufwicklung. Nach dem Ausschrauben liegen Heizplatten und Mechanik frei.',
          color='#7C858C', marks=raster(12, 12, 2, 2, 16, 16, 210, 120, shape='cyl', fill='#2E3338')),
-    teil('kabel', 'cable_insulation', 'Netzkabel (Isolierung)', 'Kabel', 'box',
+    teil('kabel', 'cable_insulation', 'Netzkabel (Isolierung)', 'Kabel', 'box', form='liegend_x',
          x=170, y=0, w=80, d=8, z=2, h=8, r=4, explode=[60, -110, 0], mass=60, materials=[['pvc', 90], ['pp', 10]],
          info='Etwa 1 m PVC-Mantel mit Schutzkontaktstecker. Längs aufschlitzen, um Kupfer und PVC zu trennen.',
          color='#2E3338', marks=[mark('box', 0, 1, 10, 6, 2, fill='#555')]),
-    teil('kupferadern', 'cable_copper_core', 'Kupferadern', 'Kupferadern', 'box',
+    teil('kupferadern', 'cable_copper_core', 'Kupferadern', 'Kupferadern', 'box', form='liegend_x',
          x=170, y=2.5, w=80, d=3, z=4.5, h=3, r=1, explode=[60, -135, 0], mass=30,
          info='Drei Kupferadern (Phase, Neutralleiter, Schutzleiter). Wertvollster Rohstoff des Toasters nach Gewicht.',
          color='#B87333'),
@@ -90,4 +90,7 @@ for pid, dy, dz in (('heizplatte_hinten', -55, 30), ('heizplatte_vorne', 55, -15
 oben = max(p['z'] + p['h'] + p['explode'][2] for p in innen if p['explode'][:2] == [0, 0])
 teile[0]['explode'] = [0, -230, round(oben + 40 - teile[0]['z'], 1)]  # Mantel nach hinten oben abziehen
 skaliere_masse(teile, oid='toaster')
+for p in teile:   # Foto-Ansicht: echte Formen (form) tragen keine aufgemalten Details
+    if p.get('form') and p.get('marks'):
+        p['marks'] = [dict(k, zeichnung=True) for k in p['marks']]
 schreibe('toaster', teile)

@@ -207,6 +207,7 @@
    ],
    "info": "Hohler Kunststoffbügel, in dem Schalter und Kabel verlaufen. Die beiden Hälften sind verschraubt.",
    "color": "#E9EEF2",
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
@@ -215,7 +216,8 @@
      "w": 34,
      "d": 12,
      "r": 6,
-     "fill": "#C5CDD3"
+     "fill": "#C5CDD3",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -224,7 +226,8 @@
      "w": 8,
      "d": 8,
      "r": 2,
-     "fill": "#5F6B75"
+     "fill": "#5F6B75",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -233,7 +236,8 @@
      "w": 66,
      "d": 26,
      "r": 12,
-     "fill": "#D5DCE1"
+     "fill": "#D5DCE1",
+     "zeichnung": true
     }
    ]
   },
@@ -848,7 +852,7 @@
     ]
    ],
    "info": "Drei Schrauben mit Sonderkopf (Dreiflügel) halten Ober- und Unterschale zusammen.",
-   "color": "#9AA2A6",
+   "color": "#C9CDD0",
    "label": true,
    "sortBias": -40,
    "marks": [
@@ -893,7 +897,7 @@
     ]
    ],
    "info": "Drei Schrauben mit Sonderkopf (Dreiflügel) halten Ober- und Unterschale zusammen.",
-   "color": "#9AA2A6",
+   "color": "#C9CDD0",
    "label": false,
    "sortBias": -40,
    "marks": [
@@ -938,7 +942,7 @@
     ]
    ],
    "info": "Drei Schrauben mit Sonderkopf (Dreiflügel) halten Ober- und Unterschale zusammen.",
-   "color": "#9AA2A6",
+   "color": "#C9CDD0",
    "label": false,
    "sortBias": -40,
    "marks": [
@@ -1432,6 +1436,7 @@
    ],
    "info": "Etwa 1,2 m PVC-Mantel mit Eurostecker. Längs aufschlitzen, um die Kupferadern freizulegen.",
    "color": "#2E3338",
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
@@ -1440,7 +1445,8 @@
      "w": 10,
      "d": 6,
      "r": 2,
-     "fill": "#555"
+     "fill": "#555",
+     "zeichnung": true
     }
    ]
   },
@@ -1471,7 +1477,8 @@
     ]
    ],
    "info": "Zwei Kupferadern aus feiner Litze. Kupfer lässt sich fast verlustfrei wiederverwerten.",
-   "color": "#B87333"
+   "color": "#B87333",
+   "form": "liegend_x"
   }
  ]
 }

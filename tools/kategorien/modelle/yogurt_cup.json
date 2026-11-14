@@ -29,13 +29,14 @@
     ]
    ],
    "info": "Aluminiumfolie mit Siegellack. Ganz abziehen und getrennt in die Gelbe Tonne werfen, sonst erkennt die Anlage den Becher als Metall.",
-   "color": "#D2D6DA",
+   "color": "#E3E6E9",
    "marks": [
     {
      "shape": "cyl",
      "x": 4,
      "y": 4,
-     "w": 67
+     "w": 67,
+     "fill": "#D8DCE0"
     }
    ]
   },
@@ -64,13 +65,16 @@
     ]
    ],
    "info": "Flacher Rand, auf den die Deckelfolie heiß gesiegelt wird.",
-   "color": "#F2EFE8",
+   "color": "#F2F0EA",
+   "wand": 3.5,
+   "boden": 0,
    "marks": [
     {
      "shape": "cyl",
      "x": 3,
      "y": 3,
-     "w": 69
+     "w": 69,
+     "zeichnung": true
     }
    ]
   },
@@ -99,7 +103,9 @@
     ]
    ],
    "info": "PP, Recyclingcode 5. Tiefgezogen aus einer dünnen Folie, darum nach oben breiter.",
-   "color": "#F2EFE8"
+   "color": "#F2F0EA",
+   "wand": 1,
+   "boden": 0
   },
   {
    "id": "mitte",
@@ -126,8 +132,10 @@
     ]
    ],
    "info": "Die Wand ist hier nur etwa 0,3 mm dick. Den Halt gibt die Papp-Banderole.",
-   "color": "#F2EFE8",
-   "label": false
+   "color": "#F2F0EA",
+   "label": false,
+   "wand": 1.1,
+   "boden": 0
   },
   {
    "id": "boden",
@@ -154,7 +162,8 @@
     ]
    ],
    "info": "Auskratzen reicht, ausspülen ist nicht nötig. Becher und Deckel getrennt einwerfen.",
-   "color": "#F2EFE8"
+   "color": "#F2F0EA",
+   "wand": 1.2
   },
   {
    "id": "banderole",
@@ -162,16 +171,14 @@
    "material_id": "cardboard",
    "name": "Papp-Banderole",
    "short": "Banderole",
-   "shape": "box",
-   "x": 75,
-   "y": 12,
-   "w": 0.5,
-   "d": 51,
+   "shape": "cyl",
+   "x": 1.5,
+   "y": 1.5,
+   "w": 72,
    "z": 5,
    "h": 60,
-   "r": 0,
    "explode": [
-    55,
+    95,
     0,
     0
    ],
@@ -184,7 +191,8 @@
    ],
    "info": "Bedruckter Karton rund um den Becher. An der Perforation aufreißen und ins Altpapier geben.",
    "color": "#8FB04A",
-   "sortBias": 100
+   "wand": 0.6,
+   "boden": 0
   }
  ]
 }

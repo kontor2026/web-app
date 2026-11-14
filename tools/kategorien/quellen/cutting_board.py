@@ -25,11 +25,11 @@ def rille(i):
         m.append(mark('box', 12, 12, 6, T - 24, fill=RILLE))
     if i == 3:
         m.append(mark('box', 232 - x0, 12, 6, T - 24, fill=RILLE))
-    # Maserung: feine Linien längs der Leiste, innerhalb der Saftrille
+    # Maserung: feine Linien längs der Leiste, innerhalb der Saftrille (nur Zeichnung, Foto hat Holztextur)
     for k, gx in enumerate((14, 31, 47)):
         x = gx + (i * 5) % 9
         if 22 - x0 <= x <= 226 - x0 or i in (1, 2):
-            m.append(mark('box', x, 26 + 9 * k, 0.8, T - 52 - 18 * k, fill=MASER))
+            m.append(mark('box', x, 26 + 9 * k, 0.8, T - 52 - 18 * k, fill=MASER, zeichnung=True))
     return m
 
 

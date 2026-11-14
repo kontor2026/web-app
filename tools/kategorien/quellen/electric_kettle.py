@@ -70,11 +70,11 @@ teile = [
          x=10, y=0, w=160, z=0, h=14, mass=110, materials=[['pp', 75], ['kupfer', 10], ['kontakte', 10], ['stahl', 5]],
          info='Die Kanne steht drehbar auf diesem Sockel; der Mittelkontakt leitet den Strom weiter. Darunter ist das Kabel aufgewickelt.',
          color='#2E3338', marks=[mark('cyl', 65, 65, 30, fill='#9AA2A6'), mark('cyl', 75, 75, 10, fill='#1E2226')]),
-    teil('kabel', 'cable_insulation', 'Netzkabel (Isolierung)', 'Kabel', 'box',
+    teil('kabel', 'cable_insulation', 'Netzkabel (Isolierung)', 'Kabel', 'box', form='liegend_x',
          x=120, y=76, w=70, d=8, z=3, h=8, r=4, explode=[80, 0, 0], mass=60, materials=[['pvc', 90], ['pp', 10]],
          info='Etwa 75 cm PVC-Mantel mit Stecker. Längs aufschlitzen, um die Kupferadern freizulegen.',
          color='#2E3338', marks=[mark('box', 60, 1, 10, 6, 2, fill='#555')]),
-    teil('kupferadern', 'cable_copper_core', 'Kupferadern', 'Kupferadern', 'box',
+    teil('kupferadern', 'cable_copper_core', 'Kupferadern', 'Kupferadern', 'box', form='liegend_x',
          x=120, y=78.5, w=70, d=3, z=5.5, h=3, r=1, explode=[80, 0, 15], mass=30,
          info='Drei Kupferadern für bis zu 3000 Watt, deshalb dicker als bei kleinen Geräten.',
          color='#B87333'),
@@ -98,4 +98,7 @@ for p in teile:
         p['explode'] = [-45, 0, dz]
 explodiere(teile, abstand=GAP)  # Deckel über die Kanne
 skaliere_masse(teile, oid='electric_kettle')
+for p in teile:   # Foto-Ansicht: echte Formen (form) tragen keine aufgemalten Details
+    if p.get('form') and p.get('marks'):
+        p['marks'] = [dict(k, zeichnung=True) for k in p['marks']]
 schreibe('electric_kettle', teile)

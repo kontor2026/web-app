@@ -29,7 +29,7 @@
     ]
    ],
    "info": "Weißblech, innen lackiert, mit vier Nocken. Der Knopf in der Mitte wölbt sich hoch, wenn das Vakuum weg ist. Abschrauben und in die Gelbe Tonne geben.",
-   "color": "#C9A646",
+   "color": "#E3C77A",
    "marks": [
     {
      "shape": "cyl",
@@ -130,6 +130,7 @@
      "x": 4,
      "y": 4,
      "w": 56,
+     "zeichnung": true,
      "fill": "#EEF4F2"
     }
    ]
@@ -399,12 +400,15 @@
    "info": "Papier mit Leim. Darf beim Altglas dranbleiben, es verbrennt in der Schmelze.",
    "color": "#E8DDC0",
    "sortBias": 11,
+   "wand": 0.3,
+   "boden": 0,
    "marks": [
     {
      "shape": "cyl",
      "x": 1,
      "y": 1,
      "w": 73.6,
+     "zeichnung": true,
      "fill": "#CCD8D4"
     }
    ]

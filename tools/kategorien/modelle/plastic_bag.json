@@ -31,8 +31,7 @@
     ]
    ],
    "info": "Etwa 0,03 mm dünne LDPE-Folie (Recyclingcode 4). Der Aufdruck ist nur Farbe auf der Folie und stört beim Recycling kaum.",
-   "color": "#EDEDE8",
-   "opacity": 0.85,
+   "color": "#EEEDE8",
    "marks": [
     {
      "shape": "cyl",
@@ -98,7 +97,6 @@
    ],
    "info": "Nach innen gefaltete Seitenwand, damit die Tüte voll gepackt breiter wird.",
    "color": "#E2E2DC",
-   "opacity": 0.85,
    "marks": [
     {
      "shape": "box",
@@ -139,7 +137,6 @@
    ],
    "info": "Gegenstück zur linken Seitenfalte.",
    "color": "#E2E2DC",
-   "opacity": 0.85,
    "label": false,
    "marks": [
     {
@@ -180,8 +177,7 @@
     ]
    ],
    "info": "Hinten und vorne sind unten heiß verschweißt. Leere Tüten lieber wiederverwenden, kaputte locker in die Gelbe Tonne geben.",
-   "color": "#EDEDE8",
-   "opacity": 0.9,
+   "color": "#EEEDE8",
    "marks": [
     {
      "shape": "box",
@@ -221,8 +217,7 @@
     ]
    ],
    "info": "Henkel aus derselben Folie, beim Ausstanzen der Griffmulde entstanden. Hier reißen Tüten am häufigsten ein.",
-   "color": "#EDEDE8",
-   "opacity": 0.85,
+   "color": "#EEEDE8",
    "marks": [
     {
      "shape": "box",
@@ -262,8 +257,7 @@
     ]
    ],
    "info": "Gegenstück zur linken Schlaufe.",
-   "color": "#EDEDE8",
-   "opacity": 0.85,
+   "color": "#EEEDE8",
    "label": false,
    "marks": [
     {

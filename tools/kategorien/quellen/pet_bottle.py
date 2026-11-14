@@ -30,7 +30,7 @@ def k(id, name, short, w, z, h, mass, info, **extra):
 
 k('hals', 'Flaschenhals mit Gewinde', 'Hals', 27, 200, 26, 1.6,
   'Dickwandig und nicht verstreckt, darum je Zentimeter der schwerste Teil der Flasche. Das Gewinde hält den Deckel.',
-  marks=[mark('cyl', 5, 5, 17, fill='#B8CFD5')])
+  marks=[mark('cyl', 5, 5, 17, fill='#B8CFD5', zeichnung=True)])
 k('tragring', 'Tragring', 'Tragring', 35, 198, 2, 0.4,
   'Ring am Hals, an dem die Flasche in der Abfüllanlage hängt und transportiert wird. Gehört zur Flasche.')
 k('halsunten', 'Flaschenhals', 'Hals', 27, 180, 18, 1.0, INFO_K, label=False)
@@ -57,13 +57,13 @@ teile = [
          marks=[mark('cyl', 3, 3, 24, fill='#3A7CC6'), mark('cyl', 9, 9, 12)]),
     teil('ring', 'hdpe_screw_cap', 'Sicherungsring mit Lasche', 'Ring', 'cyl', **rund(31, 204, 4), mass=0.4,
          info='Reißt beim ersten Öffnen teilweise ab und zeigt, dass die Flasche unbenutzt ist. '
-              'Die Lasche hält den Deckel fest.', **HDPE),
+              'Die Lasche hält den Deckel fest.', **HDPE, wand=2, boden=0),
     *koerper,
     teil('etikett', 'plastic_label', 'Rundum-Etikett', 'Etikett', 'cyl', **rund(66, 80, 70), mass=0.5,
          material_id='pp', materials=[['pp', 100]],
          info='Dünne bedruckte PP-Folie, rundum geklebt. In der Recyclinganlage schwimmt sie im Wasser oben und '
               'wird so vom PET getrennt.', color='#D9483B', sortBias=4,
-         marks=[mark('cyl', 1, 1, 64, fill='#C3D6DB')]),
+         wand=0.3, boden=0, marks=[mark('cyl', 1, 1, 64, fill='#C3D6DB', zeichnung=True)]),
 ]
 
 # Explosion: Flasche bleibt stehen, Deckel und Ring über dem Hals, Etikett nach rechts

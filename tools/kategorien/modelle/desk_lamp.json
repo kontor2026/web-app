@@ -30,13 +30,15 @@
    ],
    "info": "Gelenk zwischen Oberarm und Kopf mit Stahlschraube und Reibscheibe. Schraube lösen, dann trennen.",
    "color": "#2B2F33",
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "cyl",
      "x": 7,
      "y": 7,
      "w": 10,
-     "fill": "#9AA2A8"
+     "fill": "#C9CDD0",
+     "zeichnung": true
     }
    ]
   },
@@ -67,7 +69,8 @@
     ]
    ],
    "info": "Kurzes Aluminiumrohr zum Schirm. Innen läuft das dünne Kabel zum LED-Modul.",
-   "color": "#C9CED2"
+   "color": "#D5D8DB",
+   "form": "liegend_y"
   },
   {
    "id": "schirm0",
@@ -109,7 +112,7 @@
      "x": 24.0,
      "y": 24.0,
      "w": 8,
-     "fill": "#9AA2A8"
+     "fill": "#C9CDD0"
     }
    ]
   },
@@ -469,7 +472,7 @@
     ]
    ],
    "info": "Aluminiumrohr mit dem Kabel innen. Aluminium lässt sich sehr gut recyceln.",
-   "color": "#C9CED2"
+   "color": "#D5D8DB"
   },
   {
    "id": "gelenkschraube",
@@ -496,7 +499,7 @@
     ]
    ],
    "info": "Stahlschraube quer durch das Ellbogengelenk. Mit der Rändelmutter stellt man ein, wie schwer sich der Arm bewegt.",
-   "color": "#9AA2A8",
+   "color": "#C9CDD0",
    "sortBias": -30,
    "marks": [
     {
@@ -538,13 +541,15 @@
    ],
    "info": "Mittleres Gelenk aus Aluminiumguss. Nach Herausziehen der Gelenkschraube fallen die Armteile auseinander.",
    "color": "#2B2F33",
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "cyl",
      "x": 7,
      "y": 7,
      "w": 10,
-     "fill": "#9AA2A8"
+     "fill": "#C9CDD0",
+     "zeichnung": true
     }
    ]
   },
@@ -575,7 +580,7 @@
     ]
    ],
    "info": "Stahlfeder, die den Arm in jeder Stellung hält. Steht unter Spannung: beim Aushängen festhalten.",
-   "color": "#9AA2A8",
+   "color": "#C9CDD0",
    "marks": [
     {
      "shape": "box",
@@ -615,7 +620,7 @@
     ]
    ],
    "info": "Längstes Armteil aus Aluminiumrohr. Nach Lösen der Gelenkschrauben vom Fuß abnehmen.",
-   "color": "#C9CED2",
+   "color": "#D5D8DB",
    "marks": [
     {
      "shape": "cyl",
@@ -959,7 +964,7 @@
     ]
    ],
    "info": "Vier Kreuzschlitzschrauben halten Bodenplatte, Gewicht und Fußgehäuse zusammen.",
-   "color": "#9AA2A8",
+   "color": "#C9CDD0",
    "label": true,
    "marks": [
     {
@@ -1003,7 +1008,7 @@
     ]
    ],
    "info": "Vier Kreuzschlitzschrauben halten Bodenplatte, Gewicht und Fußgehäuse zusammen.",
-   "color": "#9AA2A8",
+   "color": "#C9CDD0",
    "label": false,
    "marks": [
     {
@@ -1047,7 +1052,7 @@
     ]
    ],
    "info": "Vier Kreuzschlitzschrauben halten Bodenplatte, Gewicht und Fußgehäuse zusammen.",
-   "color": "#9AA2A8",
+   "color": "#C9CDD0",
    "label": false,
    "marks": [
     {
@@ -1091,7 +1096,7 @@
     ]
    ],
    "info": "Vier Kreuzschlitzschrauben halten Bodenplatte, Gewicht und Fußgehäuse zusammen.",
-   "color": "#9AA2A8",
+   "color": "#C9CDD0",
    "label": false,
    "marks": [
     {
@@ -1186,6 +1191,7 @@
    ],
    "info": "1,8 m PVC-Kabel. Längs aufschlitzen, um die Kupferadern zu trennen.",
    "color": "#2B2F33",
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
@@ -1194,7 +1200,8 @@
      "w": 16,
      "d": 8,
      "r": 2,
-     "fill": "#4A5156"
+     "fill": "#4A5156",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -1203,7 +1210,8 @@
      "w": 22,
      "d": 8,
      "r": 3,
-     "fill": "#3A3F44"
+     "fill": "#3A3F44",
+     "zeichnung": true
     }
    ]
   },
@@ -1234,7 +1242,8 @@
     ]
    ],
    "info": "Zwei dünne Kupferadern. Kupfer ist wertvoll und wird eingeschmolzen.",
-   "color": "#B87333"
+   "color": "#B87333",
+   "form": "liegend_x"
   },
   {
    "id": "stecker",

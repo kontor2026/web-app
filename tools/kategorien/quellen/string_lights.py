@@ -20,10 +20,12 @@ LOCH = '#1A1C1B'  # Innenraum des Knäuels (Ring), dunkel wie ein Schatten
 
 
 def windungen(dm, n=6, breite=3.2, farben=None):
-    """Konzentrische Drahtwindungen, innen ein dunkles Loch: das Knäuel ist ein lockerer Ring."""
+    """Konzentrische Drahtwindungen, innen ein dunkles Loch: das Knäuel ist ein lockerer Ring.
+    Nur Zeichnung: In der Foto-Ansicht ist das Knäuel ein echter Ring (wand), die Scheiben würden das Loch zudecken."""
     m = [mark('cyl', round(i * breite, 2), round(i * breite, 2), round(dm - 2 * i * breite, 2),
-              fill=farben[i % 2] if farben else None) for i in range(n)]
-    return m + [mark('cyl', round(n * breite, 2), round(n * breite, 2), round(dm - 2 * n * breite, 2), fill=LOCH)]
+              fill=farben[i % 2] if farben else None, zeichnung=True) for i in range(n)]
+    return m + [mark('cyl', round(n * breite, 2), round(n * breite, 2), round(dm - 2 * n * breite, 2), fill=LOCH,
+                     zeichnung=True)]
 
 
 def led_kreise(dm, ringe=((0.46, 16), (0.4, 14), (0.34, 10))):
@@ -39,19 +41,19 @@ def led_kreise(dm, ringe=((0.46, 16), (0.4, 14), (0.34, 10))):
 AA = [['zinkmangan', 80], ['stahl', 20]]
 teile = [
     teil('leds', 'led_module', '40 Mini-LEDs', 'LEDs', 'cyl',
-         material_id='mixed_electronics', x=3, y=3, w=D - 6, z=28, h=4, mass=8,
+         material_id='mixed_electronics', x=3, y=3, w=D - 6, z=28, h=4, form='torus', mass=8,
          materials=[['led', 40], ['pcabs', 40], ['kupfer', 10], ['lot', 10]],
          info='Winzige Leuchtdioden, in Tropfen aus Kunstharz eingegossen und direkt auf den Draht gelötet. '
               'Sie lassen sich nicht einzeln abtrennen, die ganze Kette ist Elektroschrott.',
          color='#E4E6DC', opacity=0.75,
-         marks=[mark('cyl', 19, 19, D - 44, fill=LOCH)]
+         marks=[mark('cyl', 19, 19, D - 44, fill=LOCH, zeichnung=True)]
          + led_kreise(D - 6)),
     teil('draht', 'cable_copper_core', 'Kupferdraht (lackiert)', 'Kupferdraht', 'cyl',
-         x=2, y=2, w=D - 4, z=1, h=26, mass=30, materials=[['kupfer', 85], ['polyester', 15]],
+         x=2, y=2, w=D - 4, z=1, h=26, form='torus', mass=30, materials=[['kupfer', 85], ['polyester', 15]],
          info='Zwei dünne, lackisolierte Kupferdrähte, an denen die LEDs hängen. Biegsam, aber bricht bei häufigem Knicken.',
-         color='#C5803D', marks=windungen(D - 4, farben=('#C5803D', '#B06F33'))),
+         color='#D08A52', marks=windungen(D - 4, farben=('#C5803D', '#B06F33'))),
     teil('mantel', 'cable_insulation', 'Kabelisolierung', 'Isolierung', 'cyl',
-         x=0, y=0, w=D, z=0, h=28, mass=22, materials=[['pvc', 100]],
+         x=0, y=0, w=D, z=0, h=28, form='torus', mass=22, materials=[['pvc', 100]],
          info='Grüne oder durchsichtige PVC-Hülle um den Draht. Zum Recycling muss sie in der Anlage vom Kupfer '
               'getrennt werden.',
          color='#3E7A4A', marks=windungen(D, farben=('#3E7A4A', '#336A3F'))),
@@ -73,15 +75,15 @@ teile = [
          info='Wird zum Batteriewechsel aufgeschoben. Polypropylen, lässt sich gut recyceln, wenn die Elektronik entfernt ist.',
          color=KASTEN, marks=raster(10, 8, 1, 4, 48, 2, 0, 10, r=1, fill='#3A3D40')),
     teil('batterie_1', 'alkaline_cell', 'Mignon-Batterie (AA)', 'Batterie AA', 'box',
-         x=88, y=112, w=50.5, d=14.5, z=3, h=14.5, r=7, mass=23, materials=AA,
+         x=88, y=112, w=50.5, d=14.5, z=3, h=14.5, r=7, form='liegend_x', mass=23, materials=AA,
          info='Drei 1,5-Volt-Zellen in Reihe ergeben 4,5 Volt. Vor dem Wegwerfen herausnehmen und in die Batteriesammlung geben.',
          color='#C8423A', marks=[mark('box', 0, 0, 6, 14.5, 3, '#B7BCC0')]),
     teil('batterie_2', 'alkaline_cell', 'Mignon-Batterie (AA)', 'Batterie AA', 'box',
-         x=88, y=126.5, w=50.5, d=14.5, z=3, h=14.5, r=7, mass=23, materials=AA, label=False,
+         x=88, y=126.5, w=50.5, d=14.5, z=3, h=14.5, r=7, form='liegend_x', mass=23, materials=AA, label=False,
          info='Zweite Zelle, liegt umgekehrt zur ersten.', color='#C8423A',
          marks=[mark('box', 44.5, 0, 6, 14.5, 3, '#B7BCC0')]),
     teil('batterie_3', 'alkaline_cell', 'Mignon-Batterie (AA)', 'Batterie AA', 'box',
-         x=88, y=141, w=50.5, d=14.5, z=3, h=14.5, r=7, mass=23, materials=AA, label=False,
+         x=88, y=141, w=50.5, d=14.5, z=3, h=14.5, r=7, form='liegend_x', mass=23, materials=AA, label=False,
          info='Dritte Zelle.', color='#C8423A', marks=[mark('box', 0, 0, 6, 14.5, 3, '#B7BCC0')]),
     teil('kontakte', 'battery_box', 'Kontaktfedern', 'Federn', 'box',
          material_id='steel', x=83, y=111, w=4, d=45, z=3, h=14, r=0.5, mass=3,
@@ -92,11 +94,14 @@ teile = [
          x=80, y=108, w=68, d=50, z=0, h=18, r=4, mass=18,
          info='Gehäuse aus Polypropylen mit drei Mulden. Erst die Batterien herausnehmen, dann den Kasten mit Kette '
               'zur Elektro-Sammlung bringen.',
-         color=KASTEN, marks=[mark('box', 3, 3, 62, 44, 3, '#1E2022')]),
+         color=KASTEN, wand=2.5, marks=[mark('box', 3, 3, 62, 44, 3, '#1E2022', zeichnung=True)]),
 ]
 explodiere(teile, abstand=26, abstaende={'kontakte': 14})
 for p in teile:  # Batteriekasten samt Inhalt nach rechts vorne, damit er die Kette nicht verdeckt
     if p['component_id'] in ('battery_box', 'alkaline_cell'):
         p['explode'] = [p['explode'][0] + 70, p['explode'][1] + 50, p['explode'][2]]
 skaliere_masse(teile, oid='string_lights')
+for p in teile:  # gerundete Formen (form): marks nur in der Zeichnung, oben flach würden sie schweben
+    if p.get('form'):
+        p['marks'] = [dict(m, zeichnung=True) for m in p.get('marks') or []]
 schreibe('string_lights', teile)

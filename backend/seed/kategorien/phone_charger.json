@@ -810,7 +810,8 @@
    ],
    "info": "Hält Stifte und Platine. Auf dem Typenschild stehen Ausgangsspannung und Stromstärke.",
    "color": "#F1F2F0",
-   "sortBias": 10
+   "sortBias": 10,
+   "wand": 1.5
   },
   {
    "id": "kragen_l",
@@ -839,7 +840,8 @@
     ]
    ],
    "info": "Kunststoffkragen am Stiftansatz. Schützt die Finger, wenn der Stecker halb in der Dose steckt.",
-   "color": "#E4E5E2"
+   "color": "#E4E5E2",
+   "form": "liegend_y"
   },
   {
    "id": "kragen_r",
@@ -869,7 +871,8 @@
    ],
    "info": "Isolierhülse am zweiten Stift.",
    "color": "#E4E5E2",
-   "label": false
+   "label": false,
+   "form": "liegend_y"
   },
   {
    "id": "stift_l",
@@ -898,8 +901,9 @@
     ]
    ],
    "info": "Vernickeltes Messing (Kupfer und Zink). In die Schale eingepresst, kommt nur beim Aufbrechen heraus.",
-   "color": "#C9CDD0",
-   "sortBias": -1
+   "color": "#DCDFE2",
+   "sortBias": -1,
+   "form": "liegend_y"
   },
   {
    "id": "stift_r",
@@ -928,9 +932,10 @@
     ]
    ],
    "info": "Zweiter Stift des Euro-Steckers, 19 mm Abstand zum ersten.",
-   "color": "#C9CDD0",
+   "color": "#DCDFE2",
    "label": false,
-   "sortBias": -1
+   "sortBias": -1,
+   "form": "liegend_y"
   }
  ]
 }

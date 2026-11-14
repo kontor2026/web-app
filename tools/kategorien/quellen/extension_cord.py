@@ -13,12 +13,12 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from bau import teil, mark, raster, explodiere, skaliere_masse, schreibe  # noqa: E402
 
 WEISS = '#F1F2F0'
-MESSING = '#D4B464'
+MESSING = '#E8CC80'
 DOSEN = [10, 54, 98, 142]  # y-Anfang der vier Steckdosen (je 40 mm)
 
 
 def windungen(dm, n=4, breite=7.5):
-    return [mark('cyl', i * breite, i * breite, dm - 2 * i * breite) for i in range(n)]
+    return [mark('cyl', i * breite, i * breite, dm - 2 * i * breite, zeichnung=True) for i in range(n)]
 
 
 def steckdose(y0):
@@ -61,7 +61,7 @@ teile = [
          info='Federnder Schieber unter jeder Dose. Er gibt die Löcher nur frei, wenn beide Stifte gleichzeitig drücken.',
          marks=[mark('box', 3, 9, 8, 4, 1, '#C9CBC6'), mark('box', 19, 9, 8, 4, 1, '#C9CBC6')]),
     teil('schrauben', 'plastic_housing', 'Gehäuseschrauben (6 Stück)', 'Schrauben', 'cyl', material_id='steel',
-         x=4, y=120, w=4, z=3, h=28, mass=3, color='#9BA3A8', materials=[['stahl', 100]],
+         x=4, y=120, w=4, z=3, h=28, mass=3, color='#C9CDD0', materials=[['stahl', 100]],
          info='Halten Ober- und Unterteil zusammen; Köpfe sitzen unten, oft unter Gummifüßen oder Aufklebern.',
          marks=[mark('cyl', 1, 1, 2, fill='#5E656A')]),
     teil('schiene_l', 'plug_pins', 'Kontaktschiene Phase', 'Schiene Phase', 'box',
@@ -83,12 +83,12 @@ teile = [
     teil('unterteil', 'plastic_housing', 'Gehäuse-Unterteil', 'Unterteil', 'box',
          x=0, y=0, w=54, d=225, z=0, h=19, r=8, mass=80,
          info='Wanne mit Stegen, in die die Schienen eingelegt sind. Ohne Metallteile kann der Kunststoff recycelt werden.',
-         color=WEISS, marks=[mark('box', 4, 4, 46, 217, 6, '#E2E3E0')]),
+         color=WEISS, wand=2, marks=[mark('box', 4, 4, 46, 217, 6, '#E2E3E0', zeichnung=True)]),
     teil('adern', 'cable_copper_core', 'Drei Kupferadern (1,5 mm²)', 'Adern', 'cyl',
-         x=3, y=229, w=52, z=1, h=14, mass=62, materials=[['kupfer', 70], ['pvc', 30]],
+         x=5, y=231, w=48, z=3, h=10, mass=62, materials=[['kupfer', 70], ['pvc', 30]],
          info='Braun (Phase), Blau (Neutralleiter) und Grün-Gelb (Schutzleiter), jede Ader aus feinen Kupferdrähten '
               'mit eigener Isolierung.',
-         color='#C5803D', marks=windungen(52, 3, 7) + [mark('cyl', 2, 22, 5, fill='#7B4A2A'),
+         color='#D9925A', marks=windungen(48, 3, 7) + [mark('cyl', 2, 22, 5, fill='#7B4A2A'),
                                                        mark('cyl', 2, 27, 5, fill='#3A6BB0'),
                                                        mark('cyl', 2, 32, 5, fill='#7FB04A')]),
     teil('mantel', 'cable_insulation', 'Kabelmantel', 'Kabelmantel', 'cyl',
@@ -112,5 +112,14 @@ teile = [
          info='Zweiter Stift, 19 mm Abstand zum ersten.', color='#C9CDD0'),
 ]
 explodiere(teile, abstand=24, abstaende={'adern': 30, 'glimmlampe': 12})
+# Foto-Ansicht: echte Formen (Kabel liegend, Spulen als Ring); Details darauf nur in der Zeichnung
+FORMEN = {'mantel': ('torus', 1), 'adern': ('torus', 1)}
+for p in teile:
+    if p['id'] in FORMEN:
+        p['form'], nur_zeichnung = FORMEN[p['id']]
+        p.pop('wand', None)
+        p.pop('boden', None)
+        for m in (p.get('marks') or []) if nur_zeichnung else []:
+            m['zeichnung'] = True
 skaliere_masse(teile, oid='extension_cord')
 schreibe('extension_cord', teile)

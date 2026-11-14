@@ -982,12 +982,14 @@
    "info": "Trägt Platine und Batteriefach. Kunststoffe ohne Elektronik ließen sich gut recyceln, sind aber oft dunkel und schwer sortierbar.",
    "color": "#26292C",
    "sortBias": 5,
+   "wand": 2,
    "marks": [
     {
      "shape": "box",
      "x": 6,
      "y": 108,
      "w": 33,
+     "zeichnung": true,
      "d": 66,
      "r": 4,
      "fill": "#2B2F33"
@@ -1026,6 +1028,7 @@
    ],
    "info": "Zwei AAA-Zellen mit je 1,5 V. Herausnehmen und in die Batterie-Sammelbox geben, nie in den Restmüll.",
    "color": "#3A6EA5",
+   "form": "liegend_y",
    "marks": [
     {
      "shape": "box",
@@ -1034,7 +1037,8 @@
      "w": 8.5,
      "d": 6,
      "r": 3,
-     "fill": "#C9A227"
+     "fill": "#C9A227",
+     "zeichnung": true
     }
    ]
   },
@@ -1071,6 +1075,7 @@
    "info": "Zweite AAA-Zelle, eingelegt mit umgekehrter Polung. Batterien können auslaufen, darum bei längerer Pause herausnehmen.",
    "color": "#3A6EA5",
    "label": false,
+   "form": "liegend_y",
    "marks": [
     {
      "shape": "box",
@@ -1079,7 +1084,8 @@
      "w": 8.5,
      "d": 6,
      "r": 3,
-     "fill": "#C9A227"
+     "fill": "#C9A227",
+     "zeichnung": true
     }
    ]
   },

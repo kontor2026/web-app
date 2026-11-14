@@ -27,7 +27,7 @@ def scheiben(z0, z1, n, radius):
 
 
 teile = []
-folie = scheiben(0, 40, 5, 20)
+folie = scheiben(0, 40, 8, 20)
 gesamt = sum(d for _, _, d in folie)
 for i, (z, h, d) in enumerate(reversed(folie)):
     oben = i == 0
@@ -38,7 +38,7 @@ for i, (z, h, d) in enumerate(reversed(folie)):
                       info='Etwa 30 m hauchdünne LDPE-Folie (0,01 mm), die durch ihre Haftkraft an Schüsseln klebt. '
                            'Saubere Folienreste locker in die Gelbe Tonne, verschmutzte in den Restmüll.',
                       marks=[mark('box', 0, round(d * 0.3, 1), 296, round(d * 0.15, 1), 0, '#F4F9FA')] if oben else None))
-kern = scheiben(5, 35, 3, 15)
+kern = scheiben(5, 35, 5, 15)
 for i, (z, h, d) in enumerate(reversed(kern)):
     oben = i == 0
     teile.append(teil(f'kern_{i + 1}', 'ldpe_film', 'Papphülse (Wickelkern)', 'Papphülse', 'box',
@@ -79,6 +79,6 @@ teile[:0] = [
 teile.append(teil('karton', KOMP, 'Spenderkarton', 'Karton', 'box', x=0, y=0, w=306, d=44, z=0, h=40, r=1,
                   explode=[0, 0, 0], mass=24, color=KARTON, **KARTONINFO,
                   info='Bedruckter Faltkarton, schützt die Rolle. Pappe ins Altpapier, Folie und Rolle getrennt entsorgen.',
-                  marks=[mark('box', 2, 2, 302, 40, 1, '#3B3B38')]))
+                  wand=1, marks=[mark('box', 2, 2, 302, 40, 1, '#3B3B38', zeichnung=True)]))
 skaliere_masse(teile, oid='cling_film', stellen=2)
 schreibe('cling_film', teile)

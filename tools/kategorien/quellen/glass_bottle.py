@@ -10,7 +10,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from bau import teil, mark, skaliere_masse, schreibe  # noqa: E402
 
-GLAS = dict(color='#6B4A2B', opacity=0.75)
+GLAS = dict(color='#5C3A1E', opacity=0.75)
 INNEN = '#5A3D22'
 C = 30
 
@@ -30,7 +30,7 @@ def g(id, name, short, w, z, h, mass, info=INFO_G, **extra):
 
 g('muendung', 'Mündung mit Wulst', 'Mündung', 28.5, 216, 10, 9,
   'Verdickter Rand, unter den der Kronkorken gepresst wird. Ist er angeschlagen, wird die Flasche aussortiert.',
-  marks=[mark('cyl', 5, 5, 18.5, fill=INNEN)])
+  marks=[mark('cyl', 5, 5, 18.5, fill=INNEN, zeichnung=True)])
 g('hals', 'Flaschenhals', 'Hals', 25, 186, 30, 22,
   'Langer, schmaler Hals. Daran greifen die Maschinen in der Abfüllanlage.')
 g('halsfuss', 'Flaschenhals', 'Hals', 28, 172, 14, 12, label=False)
@@ -57,11 +57,11 @@ teile = [
     *glas,
     teil('halsetikett', 'paper_label', 'Halsschleife', 'Halsetikett', 'cyl', **rund(25.6, 192, 18), mass=0.5,
          materials=[['papier', 90], ['druck', 5], ['klebstoff', 5]], color='#C9A646', sortBias=9,
-         marks=[mark('cyl', 0.8, 0.8, 24, fill='#5C3F25')],
+         wand=0.3, boden=0, marks=[mark('cyl', 0.8, 0.8, 24, fill='#5C3F25', zeichnung=True)],
          info='Papierstreifen rund um den Hals. Darf beim Altglas dranbleiben, er verbrennt in der Schmelze.'),
     teil('etikett', 'paper_label', 'Bauchetikett', 'Etikett', 'cyl', **rund(60.6, 40, 70), mass=2,
          materials=[['papier', 90], ['druck', 5], ['klebstoff', 5]], color='#E8DDC0', sortBias=31,
-         marks=[mark('cyl', 1.3, 1.3, 58, fill='#5C3F25')],
+         wand=0.3, boden=0, marks=[mark('cyl', 1.3, 1.3, 58, fill='#5C3F25', zeichnung=True)],
          info='Papier mit wasserlöslichem Leim. In der Spülanlage der Brauerei weicht es in heißer Lauge ab.'),
 ]
 for p in teile:

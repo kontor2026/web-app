@@ -147,18 +147,47 @@
    "short": "Oberschale",
    "shape": "box",
    "x": 8,
-   "y": 0,
+   "y": 0.5,
    "w": 192,
-   "d": 90,
+   "d": 89,
    "z": 175,
-   "h": 45,
-   "r": 40,
+   "h": 11.25,
+   "r": 6,
    "explode": [
     0,
     0,
-    160
+    160.0
    ],
-   "mass": 75.9,
+   "mass": 23.9,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Obere Hälfte des Laufs aus hitzefestem Kunststoff. Schrauben sitzen oft unter dem Typenschild oder im Griff.",
+   "color": "#3C4248"
+  },
+  {
+   "id": "oberschale_2",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Gehäuse-Oberschale",
+   "short": "Oberschale",
+   "shape": "box",
+   "x": 8,
+   "y": 3.5,
+   "w": 192,
+   "d": 83,
+   "z": 186.25,
+   "h": 11.25,
+   "r": 6,
+   "explode": [
+    0,
+    0,
+    160.0
+   ],
+   "mass": 21.7,
    "materials": [
     [
      "pcabs",
@@ -167,13 +196,74 @@
    ],
    "info": "Obere Hälfte des Laufs aus hitzefestem Kunststoff. Schrauben sitzen oft unter dem Typenschild oder im Griff.",
    "color": "#3C4248",
+   "label": false
+  },
+  {
+   "id": "oberschale_3",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Gehäuse-Oberschale",
+   "short": "Oberschale",
+   "shape": "box",
+   "x": 8,
+   "y": 10,
+   "w": 192,
+   "d": 70,
+   "z": 197.5,
+   "h": 11.25,
+   "r": 6,
+   "explode": [
+    0,
+    0,
+    160.0
+   ],
+   "mass": 19.5,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Obere Hälfte des Laufs aus hitzefestem Kunststoff. Schrauben sitzen oft unter dem Typenschild oder im Griff.",
+   "color": "#3C4248",
+   "label": false
+  },
+  {
+   "id": "oberschale_4",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Gehäuse-Oberschale",
+   "short": "Oberschale",
+   "shape": "box",
+   "x": 8,
+   "y": 23.5,
+   "w": 192,
+   "d": 43,
+   "z": 208.75,
+   "h": 11.25,
+   "r": 6,
+   "explode": [
+    0,
+    0,
+    160.0
+   ],
+   "mass": 10.8,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Obere Hälfte des Laufs aus hitzefestem Kunststoff. Schrauben sitzen oft unter dem Typenschild oder im Griff.",
+   "color": "#3C4248",
+   "label": false,
    "marks": [
     {
      "shape": "box",
-     "x": 150,
-     "y": 25,
+     "x": 142,
+     "y": 6,
      "w": 30,
-     "d": 40,
+     "d": 31,
      "r": 8,
      "fill": "#2E3338"
     }
@@ -196,7 +286,7 @@
    "explode": [
     0,
     0,
-    34
+    34.0
    ],
    "mass": 3.3,
    "materials": [
@@ -234,7 +324,7 @@
    "explode": [
     0,
     0,
-    55
+    55.0
    ],
    "mass": 48.8,
    "materials": [
@@ -250,6 +340,7 @@
    "info": "Gewendelter Nickel-Chrom-Draht auf einem Kreuz aus Glimmer, glüht mit bis zu 2000 Watt. Vor dem Öffnen ganz abkühlen lassen.",
    "color": "#8C7B6B",
    "sortBias": -60,
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
@@ -258,7 +349,8 @@
      "w": 4,
      "d": 48,
      "r": 1,
-     "fill": "#C4672D"
+     "fill": "#C4672D",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -267,7 +359,8 @@
      "w": 4,
      "d": 48,
      "r": 1,
-     "fill": "#C4672D"
+     "fill": "#C4672D",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -276,7 +369,8 @@
      "w": 4,
      "d": 48,
      "r": 1,
-     "fill": "#C4672D"
+     "fill": "#C4672D",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -285,7 +379,8 @@
      "w": 4,
      "d": 48,
      "r": 1,
-     "fill": "#C4672D"
+     "fill": "#C4672D",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -294,7 +389,8 @@
      "w": 4,
      "d": 48,
      "r": 1,
-     "fill": "#C4672D"
+     "fill": "#C4672D",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -303,7 +399,8 @@
      "w": 4,
      "d": 48,
      "r": 1,
-     "fill": "#C4672D"
+     "fill": "#C4672D",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -312,7 +409,8 @@
      "w": 4,
      "d": 48,
      "r": 1,
-     "fill": "#C4672D"
+     "fill": "#C4672D",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -321,7 +419,8 @@
      "w": 4,
      "d": 48,
      "r": 1,
-     "fill": "#C4672D"
+     "fill": "#C4672D",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -330,7 +429,8 @@
      "w": 4,
      "d": 48,
      "r": 1,
-     "fill": "#C4672D"
+     "fill": "#C4672D",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -339,7 +439,8 @@
      "w": 4,
      "d": 48,
      "r": 1,
-     "fill": "#C4672D"
+     "fill": "#C4672D",
+     "zeichnung": true
     }
    ]
   },
@@ -360,7 +461,7 @@
    "explode": [
     0,
     0,
-    42
+    42.0
    ],
    "mass": 65.1,
    "materials": [
@@ -387,6 +488,7 @@
    ],
    "info": "Kleiner Motor mit Kupferwicklung und Ferritmagneten, davor Dioden, die den Wechselstrom gleichrichten. Steckt in einer Gummihalterung.",
    "sortBias": -60,
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
@@ -395,14 +497,16 @@
      "w": 24,
      "d": 26,
      "r": 10,
-     "fill": "#B87333"
+     "fill": "#B87333",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 12,
      "y": 13,
      "w": 8,
-     "fill": "#9AA2A6"
+     "fill": "#9AA2A6",
+     "zeichnung": true
     }
    ]
   },
@@ -423,7 +527,7 @@
    "explode": [
     0,
     0,
-    55
+    55.0
    ],
    "mass": 10.8,
    "materials": [
@@ -435,6 +539,7 @@
    "info": "Saugt die Luft hinten an und drückt sie über den Heizdraht. Sitzt auf der Motorwelle und lässt sich abziehen.",
    "color": "#5F6B75",
    "sortBias": -60,
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
@@ -443,7 +548,8 @@
      "w": 8,
      "d": 4,
      "r": 1,
-     "fill": "#4A545C"
+     "fill": "#4A545C",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -452,7 +558,8 @@
      "w": 8,
      "d": 4,
      "r": 1,
-     "fill": "#4A545C"
+     "fill": "#4A545C",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -461,7 +568,8 @@
      "w": 8,
      "d": 4,
      "r": 1,
-     "fill": "#4A545C"
+     "fill": "#4A545C",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -470,7 +578,8 @@
      "w": 8,
      "d": 4,
      "r": 1,
-     "fill": "#4A545C"
+     "fill": "#4A545C",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -479,7 +588,8 @@
      "w": 8,
      "d": 4,
      "r": 1,
-     "fill": "#4A545C"
+     "fill": "#4A545C",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -488,7 +598,8 @@
      "w": 8,
      "d": 4,
      "r": 1,
-     "fill": "#4A545C"
+     "fill": "#4A545C",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -497,7 +608,8 @@
      "w": 8,
      "d": 4,
      "r": 1,
-     "fill": "#4A545C"
+     "fill": "#4A545C",
+     "zeichnung": true
     }
    ]
   },
@@ -533,6 +645,7 @@
    ],
    "info": "Abnehmbares Gitter mit feinem Metallsieb. Regelmäßig von Haaren befreien, sonst überhitzt der Föhn.",
    "color": "#2E3338",
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
@@ -541,7 +654,8 @@
      "w": 4,
      "d": 4,
      "r": 1,
-     "fill": "#1E2226"
+     "fill": "#1E2226",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -550,7 +664,8 @@
      "w": 4,
      "d": 4,
      "r": 1,
-     "fill": "#1E2226"
+     "fill": "#1E2226",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -559,7 +674,8 @@
      "w": 4,
      "d": 4,
      "r": 1,
-     "fill": "#1E2226"
+     "fill": "#1E2226",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -568,7 +684,8 @@
      "w": 4,
      "d": 4,
      "r": 1,
-     "fill": "#1E2226"
+     "fill": "#1E2226",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -577,7 +694,8 @@
      "w": 4,
      "d": 4,
      "r": 1,
-     "fill": "#1E2226"
+     "fill": "#1E2226",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -586,7 +704,8 @@
      "w": 4,
      "d": 4,
      "r": 1,
-     "fill": "#1E2226"
+     "fill": "#1E2226",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -595,7 +714,8 @@
      "w": 4,
      "d": 4,
      "r": 1,
-     "fill": "#1E2226"
+     "fill": "#1E2226",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -604,7 +724,8 @@
      "w": 4,
      "d": 4,
      "r": 1,
-     "fill": "#1E2226"
+     "fill": "#1E2226",
+     "zeichnung": true
     }
    ]
   },
@@ -636,6 +757,7 @@
    ],
    "info": "Bündelt den Luftstrom. Nur aufgesteckt und schnell abgezogen; sie ist reiner Kunststoff.",
    "color": "#3C4248",
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
@@ -644,7 +766,8 @@
      "w": 9,
      "d": 16,
      "r": 3,
-     "fill": "#1E2226"
+     "fill": "#1E2226",
+     "zeichnung": true
     }
    ]
   },
@@ -656,18 +779,18 @@
    "short": "Unterschale",
    "shape": "box",
    "x": 8,
-   "y": 0,
+   "y": 23.5,
    "w": 192,
-   "d": 90,
+   "d": 43,
    "z": 130,
-   "h": 45,
-   "r": 40,
+   "h": 11.25,
+   "r": 6,
    "explode": [
     0,
     0,
     0
    ],
-   "mass": 75.9,
+   "mass": 10.8,
    "materials": [
     [
      "pcabs",
@@ -676,6 +799,96 @@
    ],
    "info": "Untere Hälfte des Laufs, trägt Motor und Heizelement. Die Schalen sind verschraubt und zusätzlich verclipst.",
    "color": "#3C4248"
+  },
+  {
+   "id": "unterschale_2",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Gehäuse-Unterschale",
+   "short": "Unterschale",
+   "shape": "box",
+   "x": 8,
+   "y": 10,
+   "w": 192,
+   "d": 70,
+   "z": 141.25,
+   "h": 11.25,
+   "r": 6,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 19.5,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Untere Hälfte des Laufs, trägt Motor und Heizelement. Die Schalen sind verschraubt und zusätzlich verclipst.",
+   "color": "#3C4248",
+   "label": false
+  },
+  {
+   "id": "unterschale_3",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Gehäuse-Unterschale",
+   "short": "Unterschale",
+   "shape": "box",
+   "x": 8,
+   "y": 3.5,
+   "w": 192,
+   "d": 83,
+   "z": 152.5,
+   "h": 11.25,
+   "r": 6,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 21.7,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Untere Hälfte des Laufs, trägt Motor und Heizelement. Die Schalen sind verschraubt und zusätzlich verclipst.",
+   "color": "#3C4248",
+   "label": false
+  },
+  {
+   "id": "unterschale_4",
+   "component_id": "plastic_housing",
+   "material_id": "abs",
+   "name": "Gehäuse-Unterschale",
+   "short": "Unterschale",
+   "shape": "box",
+   "x": 8,
+   "y": 0.5,
+   "w": 192,
+   "d": 89,
+   "z": 163.75,
+   "h": 11.25,
+   "r": 6,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 23.9,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Untere Hälfte des Laufs, trägt Motor und Heizelement. Die Schalen sind verschraubt und zusätzlich verclipst.",
+   "color": "#3C4248",
+   "label": false
   },
   {
    "id": "schalter",
@@ -766,7 +979,7 @@
    "material_id": "abs",
    "name": "Griff",
    "short": "Griff",
-   "shape": "box",
+   "shape": "cyl",
    "x": 45,
    "y": 25,
    "w": 44,
@@ -870,6 +1083,7 @@
    ],
    "info": "1,8 m Gummi- oder PVC-Mantel mit Stecker. Mit einem Kabelschäler längs aufschlitzen, um die Kupferadern freizulegen.",
    "color": "#2E3338",
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
@@ -878,7 +1092,8 @@
      "w": 10,
      "d": 7,
      "r": 2,
-     "fill": "#555"
+     "fill": "#555",
+     "zeichnung": true
     }
    ]
   },
@@ -909,7 +1124,8 @@
     ]
    ],
    "info": "Zwei Adern aus feinen Kupferlitzen. Kupfer lässt sich fast verlustfrei wiederverwerten.",
-   "color": "#B87333"
+   "color": "#B87333",
+   "form": "liegend_x"
   }
  ]
 }

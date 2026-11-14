@@ -14,7 +14,7 @@ FOLIE = '#E4EEF1'
 NOPPE = '#CFE0E6'
 LDPE = [['ldpe', 100]]
 NOPPEN = (raster(5, 5, 12, 16, 20, 20, 24.2, 24.5, shape='cyl', fill=NOPPE)  # 20-mm-Noppen auf 300 × 394 mm
-          + raster(9, 8, 12, 16, 6, 5, 24.2, 24.5, shape='cyl', fill='#F7FBFC'))  # Glanzlicht je Noppe
+          + [dict(m, zeichnung=True) for m in raster(9, 8, 12, 16, 6, 5, 24.2, 24.5, shape='cyl', fill='#F7FBFC')])  # Glanzlicht je Noppe
 teile = [
     teil('traeger_oben', 'ldpe_film', 'Trägerfolie (obere Hälfte)', 'Trägerfolie', 'box',
          x=0, y=6, w=300, d=394, z=9.5, h=0.5, r=1, mass=2.4, materials=LDPE, color=FOLIE, opacity=0.6,

@@ -67,7 +67,7 @@ teile = [
          color=WEISS, marks=[mark('cyl', 10, 3, 24, fill='#D5DADE'), mark('cyl', 10, 33, 24, fill='#D5DADE')]
          + [mark('box', 36, 25, 26, 10, 3, fill='#9AA2A6')] + raster(12, 5, 4, 1, 2, 2, 5, fill='#B5BDC3')),
     *[teil(f'schraube{i}', 'plastic_housing', 'Gehäuseschraube', 'Schrauben', 'cyl', material_id='steel',
-           x=x, y=y, w=6, z=54, h=3, mass=1, materials=[['stahl', 100]], color='#9AA2A6', label=i == 0,
+           x=x, y=y, w=6, z=54, h=3, mass=1, materials=[['stahl', 100]], color='#C9CDD0', label=i == 0,
            sortBias=INNEN, info='Drei Schrauben mit Sonderkopf (Dreiflügel) halten Ober- und Unterschale zusammen.',
            marks=[mark('box', 1, 2.5, 4, 1), mark('box', 2.5, 1, 1, 4)])
       for i, (x, y) in enumerate([(8, 42), (184, 14), (184, 70)])],
@@ -107,5 +107,14 @@ teile += [
 explodiere(teile, abstand=22, fest=besen_ids, gruppen=[['griff', 'steg_vorne', 'steg_hinten']],
            abstaende={'oberschale': 80, 'schaft_links': 10, 'schaft_rechts': 10, 'kohle1': 12, 'kohle2': 12,
                       **{f'schraube{i}': 12 for i in range(3)}})
+# Foto-Ansicht: echte Formen (Kabel liegend, Spulen als Ring); Details darauf nur in der Zeichnung
+FORMEN = {'kabel': ('liegend_x', 1), 'kupferadern': ('liegend_x', 1), 'griff': ('liegend_x', 1)}
+for p in teile:
+    if p['id'] in FORMEN:
+        p['form'], nur_zeichnung = FORMEN[p['id']]
+        p.pop('wand', None)
+        p.pop('boden', None)
+        for m in (p.get('marks') or []) if nur_zeichnung else []:
+            m['zeichnung'] = True
 skaliere_masse(teile, oid='hand_mixer')
 schreibe('hand_mixer', teile)

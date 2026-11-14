@@ -156,22 +156,25 @@
    "mass": 14.2,
    "materials": [
     [
-     "schaum",
-     75
-    ],
-    [
      "kunstleder",
      25
+    ],
+    [
+     "schaum",
+     75
     ]
    ],
    "info": "Schaumstoff mit Kunstleder-Bezug. Meist nur eingeklipst oder eingedreht: am Rand greifen und abziehen. Ersatzpolster gibt es günstig.",
    "color": "#3A3F44",
+   "wand": 16,
+   "boden": 0,
    "marks": [
     {
      "shape": "cyl",
      "x": 5,
      "y": 6,
      "w": 60,
+     "zeichnung": true,
      "d": 78,
      "fill": "#33383C"
     },
@@ -180,6 +183,7 @@
      "x": 15,
      "y": 19,
      "w": 40,
+     "zeichnung": true,
      "d": 52,
      "fill": "#25292C"
     }
@@ -206,23 +210,26 @@
    "mass": 14.2,
    "materials": [
     [
-     "schaum",
-     75
-    ],
-    [
      "kunstleder",
      25
+    ],
+    [
+     "schaum",
+     75
     ]
    ],
    "info": "Gleiches Polster für das rechte Ohr. Verschlissene Polster lieber tauschen als den ganzen Kopfhörer wegwerfen.",
    "color": "#3A3F44",
    "label": false,
+   "wand": 16,
+   "boden": 0,
    "marks": [
     {
      "shape": "cyl",
      "x": 5,
      "y": 6,
      "w": 60,
+     "zeichnung": true,
      "d": 78,
      "fill": "#33383C"
     },
@@ -231,6 +238,7 @@
      "x": 15,
      "y": 19,
      "w": 40,
+     "zeichnung": true,
      "d": 52,
      "fill": "#25292C"
     }
@@ -563,12 +571,12 @@
    "mass": 10.2,
    "materials": [
     [
-     "schaum",
-     75
-    ],
-    [
      "kunstleder",
      25
+    ],
+    [
+     "schaum",
+     75
     ]
    ],
    "info": "Polstert den Bügel oben am Kopf. Meist mit Klettband oder Klebstoff befestigt.",
@@ -666,12 +674,14 @@
    ],
    "info": "Gehäuse aus ABS. Die Schrauben liegen unter dem Ohrpolster. Erst Lautsprecher und Kabel entfernen, dann ist die Schale sortenreiner Kunststoff.",
    "color": "#2F3338",
+   "wand": 3,
    "marks": [
     {
      "shape": "cyl",
      "x": 4,
      "y": 5,
      "w": 62,
+     "zeichnung": true,
      "d": 80,
      "fill": "#272B2F"
     }
@@ -705,12 +715,14 @@
    "info": "Rechte Ohrmuschel, gleich aufgebaut. Hier kommt das Kabel innen von links über den Bügel an.",
    "color": "#2F3338",
    "label": false,
+   "wand": 3,
    "marks": [
     {
      "shape": "cyl",
      "x": 4,
      "y": 5,
      "w": 62,
+     "zeichnung": true,
      "d": 80,
      "fill": "#272B2F"
     },
@@ -719,6 +731,7 @@
      "x": 14,
      "y": 22,
      "w": 42,
+     "zeichnung": true,
      "d": 46,
      "fill": "#25292C"
     },
@@ -727,28 +740,32 @@
      "x": 11,
      "y": 42,
      "w": 3.5,
-     "fill": "#8A9095"
+     "fill": "#8A9095",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 59,
      "y": 42,
      "w": 3.5,
-     "fill": "#8A9095"
+     "fill": "#8A9095",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 33,
      "y": 10,
      "w": 3.5,
-     "fill": "#8A9095"
+     "fill": "#8A9095",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 33,
      "y": 76,
      "w": 3.5,
-     "fill": "#8A9095"
+     "fill": "#8A9095",
+     "zeichnung": true
     }
    ]
   },
@@ -1030,24 +1047,28 @@
    ],
    "info": "Etwa 1,2 m PVC-Kabel. Mit einer Abisolierzange lässt sich der Mantel vom Kupfer trennen.",
    "color": "#25292C",
+   "form": "torus",
    "marks": [
     {
      "shape": "cyl",
      "x": 3,
      "y": 3,
-     "w": 22
+     "w": 22,
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 6,
      "y": 6,
-     "w": 16
+     "w": 16,
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 9,
      "y": 9,
      "w": 10,
+     "zeichnung": true,
      "fill": "#3A3F44"
     }
    ]
@@ -1078,18 +1099,21 @@
    ],
    "info": "Drei sehr dünne lackierte Kupferlitzen für links, rechts und Masse. Kupfer ist fast beliebig oft recycelbar.",
    "color": "#C98F62",
+   "form": "torus",
    "marks": [
     {
      "shape": "cyl",
      "x": 3,
      "y": 3,
-     "w": 16
+     "w": 16,
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 6,
      "y": 6,
      "w": 10,
+     "zeichnung": true,
      "fill": "#B9805A"
     }
    ]
@@ -1130,6 +1154,7 @@
    ],
    "info": "Vergoldeter Messingstift mit drei Kontakten. Zum Recyceln einfach am Kabel lassen.",
    "color": "#B9BEC2",
+   "form": "liegend_y",
    "marks": [
     {
      "shape": "box",
@@ -1138,7 +1163,8 @@
      "w": 5,
      "d": 12,
      "r": 2.5,
-     "fill": "#25292C"
+     "fill": "#25292C",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -1147,7 +1173,8 @@
      "w": 3,
      "d": 1,
      "r": 0.5,
-     "fill": "#2B2F33"
+     "fill": "#2B2F33",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -1156,7 +1183,8 @@
      "w": 3,
      "d": 1,
      "r": 0.5,
-     "fill": "#2B2F33"
+     "fill": "#2B2F33",
+     "zeichnung": true
     }
    ]
   }

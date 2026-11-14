@@ -71,12 +71,15 @@
    ],
    "info": "Kunststoffring zwischen Deckel und Becher. Er isoliert die beiden Pole und hält den Elektrolyten dicht.",
    "color": "#2E3236",
+   "wand": 0.8,
+   "boden": 0,
    "marks": [
     {
      "shape": "cyl",
      "x": 1,
      "y": 1,
      "w": 16.4,
+     "zeichnung": true,
      "fill": "#5E656A"
     }
    ]
@@ -200,12 +203,14 @@
    ],
    "info": "Flacher Becher aus vernickeltem Stahl, der Pluspol mit der Aufschrift „CR2032“. Knopfzellen gehören in die Batteriesammlung und außer Reichweite kleiner Kinder: Verschluckt sind sie lebensgefährlich.",
    "color": "#C9CDD0",
+   "wand": 0.3,
    "marks": [
     {
      "shape": "cyl",
      "x": 0.8,
      "y": 0.8,
      "w": 18.4,
+     "zeichnung": true,
      "fill": "#5E656A"
     }
    ]

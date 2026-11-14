@@ -14,7 +14,7 @@ from bau import teil, mark, raster, skaliere_masse, schreibe  # noqa: E402
 # Malerreihenfolge über sortBias: Fuß < Motor/Gehäuse < Rückgitter < Flügel < Frontgitter.
 ZM, XM = 290, 150
 WEISS = '#E9EEF2'
-CHROM = '#C9CED2'
+CHROM = '#E2E5E8'
 
 
 def sehne(radius, dz):
@@ -90,7 +90,7 @@ teile = [
          marks=[mark('box', 10, 10, 70, 50, 15, fill='#B87333'), mark('cyl', 35, 25, 20, fill='#9AA2A6')]),
     teil('neigegelenk', 'plastic_housing', 'Neigegelenk', 'Neigegelenk', 'box', material_id='steel',
          x=125, y=55, w=50, d=50, z=215, h=25, r=8, explode=[0, -110, -40], mass=60, sortBias=-520,
-         materials=[['stahl', 70], ['pcabs', 30]], color='#9AA2A6',
+         materials=[['stahl', 70], ['pcabs', 30]], color='#C9CDD0',
          info='Gelenk mit Rastscheibe und Flügelschraube, damit man den Kopf nach oben oder unten neigen kann.',
          marks=[mark('cyl', 15, 15, 20, fill='#5E656A')]),
     teil('standrohr', 'plastic_housing', 'Standrohr', 'Standrohr', 'cyl', material_id='steel',
@@ -104,7 +104,7 @@ teile = [
          color='#9AA2A6', marks=raster(5, 5, 4, 1, 19, 20, 23.5, r=3, fill=WEISS)),
     teil('gewicht', 'plastic_housing', 'Stahlgewicht im Fuß', 'Gewicht', 'cyl', material_id='steel',
          x=55, y=30, w=190, z=6, h=14, explode=[0, 300, 0], mass=450, materials=[['stahl', 100]],
-         color='#6B7378', sortBias=-590,
+         color='#B3B9BE', sortBias=-590,
          info='Schwere Stahlscheibe, damit der Ventilator nicht kippt. Nach dem Ausschrauben reines Altmetall.',
          marks=[mark('cyl', 80, 80, 30, fill='#4A5156')]),
     teil('fuss', 'plastic_housing', 'Standfuß', 'Standfuß', 'cyl',
@@ -121,5 +121,14 @@ teile = [
          color='#B87333'),
 ]
 
+# Foto-Ansicht: echte Formen (Kabel liegend, Spulen als Ring); Details darauf nur in der Zeichnung
+FORMEN = {'kabel': ('liegend_x', 1), 'kupferadern': ('liegend_x', 1), 'spinner': ('kugel', 1)}
+for p in teile:
+    if p['id'] in FORMEN:
+        p['form'], nur_zeichnung = FORMEN[p['id']]
+        p.pop('wand', None)
+        p.pop('boden', None)
+        for m in (p.get('marks') or []) if nur_zeichnung else []:
+            m['zeichnung'] = True
 skaliere_masse(teile, oid='electric_fan')
 schreibe('electric_fan', teile)

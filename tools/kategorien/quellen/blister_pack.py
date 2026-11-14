@@ -14,11 +14,11 @@ TABLETTE = '#FFFFFF'
 # 2 × 5 Näpfe für ovale Tabletten (14 × 8 mm), Napf 16 × 12 mm, 5,3 mm hoch
 NAEPFE = [(round(5 + i * 18.5, 2), y0) for y0 in (12, 36) for i in range(5)]
 naepfe = [teil(f'napf{n}', 'pvc_blister', 'Tablettennapf', 'Napf', 'cyl',
-               x=x, y=y, w=16, d=12, z=0.4, h=5.3, mass=0.12, opacity=0.55, color=PVC, label=(n == 0),
+               x=x, y=y, w=16, d=12, z=0.4, h=5.3, mass=0.12, opacity=0.55, color=PVC, label=(n == 0), form='kugel',
                info='Tiefgezogene Mulde, je eine pro Tablette. Alle Tabletten herausdrücken; Medikamentenreste '
                     'gehören in die Apotheke oder den Restmüll, nicht in die Gelbe Tonne.' if n == 0 else
                     'Napf aus PVC, gehört zur Blisterfolie.',
-               marks=[mark('cyl', 1.5, 2, 13, 8, fill=TABLETTE), mark('box', 7.6, 3, 0.6, 6, 0, '#D5D9DC')])
+               marks=[mark('cyl', 1.5, 2, 13, 8, fill=TABLETTE, zeichnung=True), mark('box', 7.6, 3, 0.6, 6, 0, '#D5D9DC', zeichnung=True)])
           for n, (x, y) in enumerate(NAEPFE)]
 teile = naepfe + [
     teil('pvc_folie', 'pvc_blister', 'PVC-Trägerfolie', 'PVC-Folie', 'box',

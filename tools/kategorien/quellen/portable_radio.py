@@ -24,11 +24,11 @@ teile = [
          info='Kunststoffbügel, innen mit zwei Schrauben am Gehäuse befestigt. Zuerst abschrauben.',
          color='#2B2E31', marks=[mark('box', 10, 6, 120, 8, 4, '#3A3D40')]),
     teil('antenne', 'telescopic_antenna', 'Teleskopantenne', 'Antenne', 'box',
-         x=30, y=4, w=170, d=8, z=112, h=8, r=4, explode=[40, 0, OBEN], mass=25,
+         x=30, y=4, w=170, d=8, z=112, h=8, r=4, explode=[40, 0, OBEN], form='liegend_x', mass=25,
          materials=[['stahl', 85], ['messing', 10], ['pcabs', 5]],
          info='Ineinandergeschobene Röhrchen aus verchromtem Stahl für den UKW-Empfang. Innen im Gehäuse mit '
               'einer Mutter festgeschraubt.',
-         color='#C9CDD0', marks=raster(30, 1.5, 4, 1, 1.5, 5, 35, r=0.5, fill='#8A939A')),
+         color='#E2E5E7', marks=raster(30, 1.5, 4, 1, 1.5, 5, 35, r=0.5, fill='#8A939A')),
     teil('knoepfe', 'plastic_housing', 'Drehknöpfe (Sender und Lautstärke)', 'Drehknöpfe', 'box',
          x=150, y=52, w=56, d=22, z=112, h=8, r=3, explode=[0, 30, OBEN], mass=8,
          info='Gerändelte Kunststoffknöpfe, nur auf die Achsen gesteckt. Lassen sich mit den Fingern abziehen.',
@@ -67,17 +67,17 @@ teile = [
          explode=[0, 0, 40], color='#9AA0A6', marks=[mark('cyl', 1, 1, 4, fill='#5F666C')]),
     teil('lautsprecher', 'speaker_driver', 'Lautsprecher (100 mm)', 'Lautsprecher', 'box',
          x=15, y=40, w=100, d=12, z=6, h=100, r=6, mass=55,
-         materials=[['stahl', 50], ['papier', 25], ['kupfer', 10], ['gummi', 10], ['pcabs', 5]],
+         materials=[['papier', 25], ['stahl', 50], ['kupfer', 10], ['gummi', 10], ['pcabs', 5]],
          info='Membran aus Pappe in einem Stahlkorb. Sie schwingt und erzeugt den Ton, angetrieben von der '
               'Schwingspule. Mit vier Schrauben an der Frontschale.',
-         color='#3B3B3B', marks=[mark('box', 6, 2, 88, 8, 4, '#55493C')]),
+         color='#2E2B28', marks=[mark('box', 6, 2, 88, 8, 4, '#3E3830')]),
     teil('magnet', 'speaker_driver', 'Ferritmagnet des Lautsprechers', 'Magnet', 'cyl',
-         material_id='mixed_electronics', x=45, y=26, w=40, d=14, z=36, h=40, mass=95,
+         material_id='mixed_electronics', x=45, y=26, w=40, d=14, z=36, h=40, form='liegend_y', mass=95,
          materials=[['ferrit', 80], ['stahl', 15], ['kupfer', 5]],
          info='Schwerer Ringmagnet aus Ferrit hinter der Membran. Zieht Schrauben und Büroklammern an.',
          color='#4A4F54', marks=[mark('cyl', 8, 3, 24, 8, fill='#8A939A')]),
     teil('ferritstab', 'circuit_board', 'Ferritstab-Antenne (Mittelwelle)', 'Ferritantenne', 'box',
-         material_id='mixed_electronics', x=20, y=14, w=110, d=10, z=92, h=10, r=4, mass=18,
+         material_id='mixed_electronics', x=20, y=14, w=110, d=10, z=92, h=10, r=4, form='liegend_x', mass=18,
          materials=[['ferrit', 75], ['kupfer', 20], ['pcabs', 5]],
          info='Stab aus Ferrit mit Kupferwicklung. Empfängt Mittelwelle, deshalb funktioniert MW auch ohne '
               'ausgezogene Antenne.',
@@ -95,12 +95,16 @@ teile = [
          info='Senkrecht stehende Leiterplatte hinter der Senderskala. Mit Lautsprecher, Antennen und Batteriefach '
               'über Drähte verlötet.',
          color='#2E6B45'),
-    teil('batterien', 'alkaline_cell', 'Vier Babyzellen (C)', 'Batterien C', 'box',
-         x=10, y=3, w=200, d=26, z=4, h=26, r=8, explode=[0, -45, 0], mass=264, materials=C_ZELLE,
-         info='Vier 1,5-Volt-Zellen in Reihe ergeben 6 Volt. Sie sind der schwerste Teil des Radios: '
-              'herausnehmen und in die Batteriesammlung geben.',
-         color='#C8423A', marks=raster(0, 0, 4, 1, 50, 26, 50, r=8, fill='#C8423A')
-                              + raster(44, 6, 4, 1, 6, 14, 50, r=2, fill='#B7BCC0')),
+    *[teil(f'batterie{i}' if i else 'batterien', 'alkaline_cell', 'Vier Babyzellen (C)' if i == 0 else 'Babyzelle (C)',
+           'Batterien C', 'box', x=10 + i * 50, y=3, w=37, d=26, z=4, h=26, r=8, explode=[0, -45, 0], mass=55,
+           materials=C_ZELLE, label=i == 0, form='liegend_x', color='#2A2C2E',
+           info='Vier 1,5-Volt-Zellen in Reihe ergeben 6 Volt. Sie sind der schwerste Teil des Radios: '
+                'herausnehmen und in die Batteriesammlung geben.' if i == 0 else 'Eine der vier Zellen.')
+      for i in range(4)],
+    *[teil(f'batteriekappe{i}', 'alkaline_cell', 'Babyzelle (C), Pluspol-Ende', 'Batterien C', 'box',
+           x=47 + i * 50, y=3, w=13, d=26, z=4, h=26, r=8, explode=[0, -45, 0], mass=11, materials=C_ZELLE,
+           label=False, form='liegend_x', color='#B8862E',
+           info='Kupferfarben bedrucktes Ende der Zelle mit dem Pluspol.') for i in range(4)],
     teil('rueckschale', 'plastic_housing', 'Rückschale mit Batteriefach', 'Rückschale', 'box',
          x=0, y=0, w=220, d=52, z=0, h=112, r=10, explode=[0, -110, 0], mass=140,
          info='Hinteres Gehäuseteil mit Batteriefach-Deckel und Typenschild. Nach Lösen der Schrauben nach '
@@ -111,4 +115,7 @@ for p in teile:
     if p['explode'] is None:
         p['explode'] = [0, 0, 0]
 skaliere_masse(teile, oid='portable_radio')
+for p in teile:  # gerundete Formen (form): marks nur in der Zeichnung, oben flach würden sie schweben
+    if p.get('form'):
+        p['marks'] = [dict(m, zeichnung=True) for m in p.get('marks') or []]
 schreibe('portable_radio', teile)

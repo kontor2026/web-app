@@ -10,6 +10,22 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from bau import teil, mark, raster, explodiere, skaliere_masse, schreibe  # noqa: E402
 
+
+def scheiben(teile, pid, n):
+    """Foto-Ansicht: hohes Teil in n Scheiben teilen, damit die glatte Hülle (Stapel) nur oben einzieht."""
+    i = next(k for k, p in enumerate(teile) if p['id'] == pid)
+    p = teile[i]
+    zs = [round(p['z'] + k * p['h'] / n, 2) for k in range(n)] + [p['z'] + p['h']]
+    neu = []
+    for k in range(n):
+        q = dict(p, z=zs[k], h=round(zs[k + 1] - zs[k], 2), mass=round(p['mass'] / n, 3))
+        if k < n - 1:
+            q.update(id=f'{pid}_{k + 1}', label=False, marks=None)
+            q = {f: v for f, v in q.items() if v is not None}
+        neu.append(q)
+    teile[i:i + 1] = neu[::-1]
+
+
 FLASCHE = '#F3F1EC'
 KAPPE = '#2F6DB5'
 teile = [
@@ -25,13 +41,13 @@ teile = [
          color='#E6E9EC', marks=[mark('cyl', 4, 4, 26, fill='#C9CED3'), mark('cyl', 10, 10, 14, fill='#2A2E31')]),
     teil('hals', 'hdpe_bottle_body', 'Flaschenhals mit Gewinde', 'Hals', 'cyl',
          x=11, y=16, w=38, z=198, h=24, mass=6,
-         info='Weiter Hals mit grobem Gewinde für die Dosierkappe.', color=FLASCHE,
-         marks=[mark('cyl', 4, 4, 30, fill='#D6D3CA')]),
+         info='Weiter Hals mit grobem Gewinde für die Dosierkappe.', color=FLASCHE, wand=3, boden=0,
+         marks=[mark('cyl', 4, 4, 30, fill='#D6D3CA', zeichnung=True)]),
     teil('griff', 'hdpe_bottle_body', 'Angeformter Griff', 'Griff', 'box',
-         x=54, y=24, w=42, d=20, z=228, h=12, r=6, mass=4,
+         x=54, y=24, w=42, d=20, z=228, h=12, r=6, mass=4, form='liegend_x',
          info='Hohler Tragegriff, beim Blasformen in einem Stück mit der Flasche geformt. Durch das Griffloch '
               'passen vier Finger.',
-         color=FLASCHE, marks=[mark('box', 4, 5, 34, 10, 5, '#E2DFD7')]),
+         color=FLASCHE, marks=[mark('box', 4, 5, 34, 10, 5, '#E2DFD7', zeichnung=True)]),
     teil('griff_vorne', 'hdpe_bottle_body', 'Griffsteg', 'Griffsteg', 'box',
          x=54, y=24, w=8, d=20, z=198, h=30, r=3, mass=2, label=False, color=FLASCHE,
          info='Hohler Steg des Griffs. Beim Ausgießen läuft Luft hindurch, damit es nicht gluckert.'),
@@ -62,5 +78,6 @@ teile = [
          color='#E8EEF4'),
 ]
 explodiere(teile, abstand=25, nach_liste=True, gruppen=[['hals', 'griff', 'griff_vorne', 'griff_hinten', 'schulter', 'rumpf', 'boden']])
+scheiben(teile, 'rumpf', 4)
 skaliere_masse(teile, oid='detergent_bottle')
 schreibe('detergent_bottle', teile)

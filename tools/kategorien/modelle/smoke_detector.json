@@ -358,8 +358,10 @@
     ]
    ],
    "info": "Feines Edelstahlnetz rund um die Rauchkammer. Lässt Rauch hinein, aber keine Insekten, die Fehlalarm auslösen.",
-   "color": "#9AA2A8",
-   "opacity": 0.45
+   "color": "#C9CDD0",
+   "opacity": 0.45,
+   "wand": 0.6,
+   "boden": 0
   },
   {
    "id": "ir_led",
@@ -706,7 +708,8 @@
     ]
    ],
    "info": "Trägt Platine und Batteriefach. Ein Schieber verhindert, dass die Haube ohne Batterie schließt.",
-   "color": "#ECEDEA"
+   "color": "#ECEDEA",
+   "wand": 2
   },
   {
    "id": "duebel",
@@ -737,7 +740,7 @@
     ]
    ],
    "info": "Zwei Schrauben mit Kunststoffdübeln halten die Montageplatte an der Decke. Stahl und Kunststoff trennen.",
-   "color": "#9AA2A8",
+   "color": "#C9CDD0",
    "marks": [
     {
      "shape": "cyl",

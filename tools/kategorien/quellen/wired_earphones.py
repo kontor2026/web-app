@@ -15,10 +15,12 @@ SCHWARZ = '#2B2E31'
 
 
 def windungen(dm, n=6, breite=2.6, farben=('#34373B', '#26292C'), loch='#141618'):
-    """Konzentrische Kabelwindungen im Wechsel hell/dunkel, innen ein dunkles Loch (Rolle ist ein Ring)."""
-    m = [mark('cyl', round(i * breite, 2), round(i * breite, 2), round(dm - 2 * i * breite, 2), fill=farben[i % 2])
-         for i in range(n)]
-    return m + [mark('cyl', round(n * breite, 2), round(n * breite, 2), round(dm - 2 * n * breite, 2), fill=loch)]
+    """Konzentrische Kabelwindungen im Wechsel hell/dunkel, innen ein dunkles Loch (Rolle ist ein Ring).
+    Nur Zeichnung: In der Foto-Ansicht ist die Rolle ein echter Ring (wand)."""
+    m = [mark('cyl', round(i * breite, 2), round(i * breite, 2), round(dm - 2 * i * breite, 2), fill=farben[i % 2],
+              zeichnung=True) for i in range(n)]
+    return m + [mark('cyl', round(n * breite, 2), round(n * breite, 2), round(dm - 2 * n * breite, 2), fill=loch,
+                     zeichnung=True)]
 
 
 teile = [
@@ -57,21 +59,21 @@ teile = [
          marks=[mark('box', 2, 2, 8, 2, 1, '#3A3D40')]),
     # Klinkenstecker: Gehäuse und Metallstift, liegt längs (Stift zeigt nach vorne)
     teil('stecker_gehaeuse', 'audio_jack', 'Steckergehäuse', 'Steckergehäuse', 'box',
-         material_id='pvc', x=65, y=46, w=8, d=20, z=0, h=8, r=3.5, mass=1.0, materials=[['pvc', 85], ['lot', 15]],
+         material_id='pvc', x=65, y=46, w=8, d=20, z=0, h=8, r=3.5, form='liegend_y', mass=1.0, materials=[['pvc', 85], ['lot', 15]],
          info='Angespritzter Kunststoff mit Knickschutz. Innen sind die drei Adern an den Stift gelötet. '
               'Direkt dahinter abschneiden.',
          color=SCHWARZ, marks=[mark('box', 1.5, 2, 5, 12, 2, '#3A3D40')]),
     teil('klinkenstift', 'audio_jack', '3,5-mm-Klinkenstift', 'Klinkenstift', 'box',
-         x=67.25, y=66, w=3.5, d=14, z=2.25, h=3.5, r=1.7, explode=[0, 14, 0], mass=0.8,
+         x=67.25, y=66, w=3.5, d=14, z=2.25, h=3.5, r=1.7, explode=[0, 14, 0], form='liegend_y', mass=0.8,
          materials=[['messing', 85], ['nickel', 10], ['ptfe', 5]],
          info='Vernickeltes Messing mit drei Kontakten (links, rechts, Masse), getrennt durch schwarze Isolierringe.',
          color='#C9CDD0', marks=[mark('box', 0.5, 3, 2.5, 0.8, 0.3, '#22272B'), mark('box', 0.5, 7, 2.5, 0.8, 0.3, '#22272B')]),
     # Kabel als flache Rolle
     teil('adern', 'cable_copper_core', 'Kupferlitzen (Lackdraht)', 'Adern', 'cyl',
-         x=1, y=1, w=D - 2, z=0.5, h=3, mass=2.5, materials=[['kupfer', 80], ['polyester', 20]],
+         x=1, y=1, w=D - 2, z=0.5, h=3, form='torus', mass=2.5, materials=[['kupfer', 80], ['polyester', 20]],
          info='Hauchdünne Kupferlitzen, mit farbigem Lack isoliert (rot, grün, kupferfarben). Lack und Kupfer '
               'trennt erst die Recyclinganlage.',
-         color='#C5803D', marks=windungen(D - 2, farben=('#C5803D', '#B06F33'))
+         color='#D08A52', marks=windungen(D - 2, farben=('#C5803D', '#B06F33'))
          + [mark('cyl', 1, 27, 1.6, fill='#C8423A'), mark('cyl', 3.4, 27, 1.6, fill='#3E9A57')]),
     teil('fernbedienung', 'plastic_housing', 'Kabelfernbedienung mit Mikrofon', 'Fernbedienung', 'box',
          material_id='mixed_electronics', x=24, y=50, w=8, d=22, z=4, h=5, r=3.5, explode=[-10, 40, -4], mass=1.2,
@@ -81,10 +83,13 @@ teile = [
          marks=[mark('box', 1.5, 3, 5, 4, 1.5, '#3A3D40'), mark('cyl', 2, 9, 4, fill='#4A4F54'),
                 mark('box', 1.5, 15, 5, 4, 1.5, '#3A3D40'), mark('cyl', 3.3, 20, 1.4, fill='#1E2022')]),
     teil('mantel', 'cable_insulation', 'Kabelmantel', 'Mantel', 'cyl',
-         x=0, y=0, w=D, z=0, h=4, mass=4.5, materials=[['tpe', 100]],
+         x=0, y=0, w=D, z=0, h=4, form='torus', mass=4.5, materials=[['tpe', 100]],
          info='Dünner, weicher Mantel aus thermoplastischem Elastomer (früher PVC). Ein Kabel von 1,2 m wiegt nur wenige Gramm.',
          color=SCHWARZ, marks=windungen(D)),
 ]
 explodiere(teile, abstand=8, abstaende={'adern': 28})
 skaliere_masse(teile, oid='wired_earphones', stellen=2)
+for p in teile:  # gerundete Formen (form): marks nur in der Zeichnung, oben flach würden sie schweben
+    if p.get('form'):
+        p['marks'] = [dict(m, zeichnung=True) for m in p.get('marks') or []]
 schreibe('wired_earphones', teile)

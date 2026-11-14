@@ -19,11 +19,12 @@ teile = [
     teil('drehteller', 'glass_turntable', 'Drehteller (Glas)', 'Drehteller', 'cyl',
          x=25, y=25, w=290, z=48, h=6, mass=1200,
          info='Hitzebeständiges Glas, einfach herausheben. Gehört nicht in den Altglascontainer, sondern in den Restmüll oder wird weiterverwendet.',
-         color='#CFE3EA', opacity=0.65, marks=[mark('cyl', 20, 20, 250, fill='#BBD3DC')]),
+         color='#CFE3EA', opacity=0.65, marks=[mark('cyl', 20, 20, 250, fill='#BBD3DC', zeichnung=True)]),
     teil('rollenring', 'glass_turntable', 'Rollenring', 'Rollenring', 'cyl', material_id='pp',
          x=95, y=95, w=150, z=40, h=8, mass=80, materials=[['pp', 70], ['nylon', 30]],
          info='Kunststoffring mit drei Rollen, auf dem der Drehteller läuft. Reiner Kunststoff, zum Spülen herausnehmen.',
-         color='#9AA2A6', marks=[mark('cyl', 15, 15, 120, fill='#7C858C')] + [mark('cyl', x, y, 14, fill='#2E3338') for x, y in ((68, 0), (6, 100), (130, 100))]),
+         color='#9AA2A6', wand=12, boden=0,
+         marks=[mark('cyl', 15, 15, 120, fill='#7C858C', zeichnung=True)] + [mark('cyl', x, y, 14, fill='#2E3338') for x, y in ((68, 0), (6, 100), (130, 100))]),
     teil('garraum', 'steel_microwave_cavity', 'Garraum (Stahlblech)', 'Garraum', 'box',
          x=15, y=15, w=310, d=305, z=30, h=215, r=2, mass=3000,
          info='Innenraum aus beschichtetem Stahlblech, der die Mikrowellen einschließt. Ist mit dem Gehäuserahmen vernietet und kommt ins Altmetall.',
@@ -67,15 +68,18 @@ teile = [
          info='Kunststoffblende mit Anzeige, Tasten und Drehknopf. Ist eingeclipst: unten kräftig herausziehen.',
          color='#3C4248', marks=[mark('box', 10, 5, 100, 15, 2, fill='#2E3338')]),
     teil('kabel', 'cable_insulation', 'Netzkabel (Isolierung)', 'Kabel', 'box',
-         x=370, y=0, w=80, d=8, z=20, h=8, r=4, explode=[80, 0, 0], mass=150, materials=[['pvc', 90], ['pp', 10]],
+         x=370, y=0, w=80, d=8, z=20, h=8, r=4, explode=[80, 0, 0], form='liegend_x', mass=150, materials=[['pvc', 90], ['pp', 10]],
          info='Etwa 1 m dickes PVC-Kabel mit Schutzkontaktstecker. Längs aufschlitzen, um die Kupferadern freizulegen.',
          color='#2E3338', marks=[mark('box', 70, 1, 10, 6, 2, fill='#555')]),
     teil('kupferadern', 'cable_copper_core', 'Kupferadern', 'Kupferadern', 'box',
-         x=370, y=2.5, w=80, d=3, z=22.5, h=3, r=1, explode=[80, 0, 15], mass=80,
+         x=370, y=2.5, w=80, d=3, z=22.5, h=3, r=1, explode=[80, 0, 15], form='liegend_x', mass=80,
          info='Drei Kupferadern für bis zu 1200 Watt. Kupfer lässt sich fast verlustfrei wiederverwerten.',
          color='#B87333'),
 ]
 
 explodiere(teile, abstand=30, fest=('bodenplatte',), nach_liste=True)
 skaliere_masse(teile, oid='microwave')
+for p in teile:  # gerundete Formen (form): marks nur in der Zeichnung, oben flach würden sie schweben
+    if p.get('form'):
+        p['marks'] = [dict(m, zeichnung=True) for m in p.get('marks') or []]
 schreibe('microwave', teile)

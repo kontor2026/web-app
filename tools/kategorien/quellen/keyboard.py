@@ -75,12 +75,12 @@ teile = [
          info='Dünnes verzinktes Stahlblech, macht die Tastatur steif und schwer. Mit einem Magneten erkennt man es leicht.',
          marks=raster(20, 15, 8, 3, 30, 6, 50, 40, r=3)),
     teil('unterschale', 'plastic_housing', 'Unterschale mit Klappfüßen', 'Unterschale', 'box',
-         x=0, y=0, w=440, d=135, z=0, h=10, r=8, mass=150, color='#24272A',
+         x=0, y=0, w=440, d=135, z=0, h=10, r=8, mass=150, color='#24272A', wand=2.5,
          info='Bodenwanne aus ABS mit Schraubdomen. Nach dem Ausbau von Stahlplatte und Elektronik ist sie '
               'sortenreiner Kunststoff.',
-         marks=[mark('box', 4, 4, 432, 127, 6, '#2B2F33'), mark('box', 25, 5, 50, 12, 3, '#1F2225'),
-                mark('box', 365, 5, 50, 12, 3, '#1F2225')]
-               + raster(60, 60, 6, 1, 6, 6, 64, shape='cyl', fill='#3A3F44')),
+         marks=[dict(m, zeichnung=True) for m in [mark('box', 4, 4, 432, 127, 6, '#2B2F33'),
+                mark('box', 25, 5, 50, 12, 3, '#1F2225'), mark('box', 365, 5, 50, 12, 3, '#1F2225')]
+               + raster(60, 60, 6, 1, 6, 6, 64, shape='cyl', fill='#3A3F44')]),
     teil('schrauben', 'plastic_housing', 'Gehäuseschrauben (12 Stück)', 'Schrauben', 'cyl', material_id='steel',
          x=124, y=60, w=4, z=1, h=8, mass=6, explode=[0, 100, 0], materials=[['stahl', 100]], color='#9BA3A8',
          info='Kleine Kreuzschlitzschrauben von unten. Manche verstecken sich unter Aufklebern oder Gummifüßen.',
@@ -91,10 +91,10 @@ teile = [
     teil('klappfuss_r', 'plastic_housing', 'Klappfuß rechts', 'Klappfuß', 'box',
          x=367, y=6, w=46, d=10, z=1, h=3, r=2, mass=4, color='#1F2225', explode=[0, 150, 0], label=False,
          info='Zweiter Klappfuß. Gleich gebaut wie der linke.'),
-    teil('kabel', 'cable_insulation', 'Kabelmantel mit Knickschutz', 'Kabel', 'box',
+    teil('kabel', 'cable_insulation', 'Kabelmantel mit Knickschutz', 'Kabel', 'box', form='liegend_y',
          x=216, y=-14, w=8, d=14, z=3, h=6, r=3, mass=26, explode=[260, -30, 0], color='#2B2F33',
          info='Etwa 1,5 m PVC-Kabel. Mantel und Kupferadern lassen sich mit einer Abisolierzange trennen.'),
-    teil('litzen', 'cable_copper_core', 'Kupferlitzen', 'Kupferlitzen', 'box',
+    teil('litzen', 'cable_copper_core', 'Kupferlitzen', 'Kupferlitzen', 'box', form='liegend_y',
          x=218, y=-14, w=4, d=14, z=4, h=4, r=2, mass=8, explode=[280, -30, 0], color='#C98F62',
          info='Vier Kupferadern für Strom und Daten. Kupfer lässt sich ohne Qualitätsverlust immer wieder einschmelzen.'),
     teil('usb', 'cable_copper_core', 'USB-Stecker', 'USB-Stecker', 'box',
@@ -106,4 +106,7 @@ teile = [
 
 explodiere(teile, abstand=50, abstaende={'folie_mitte': 30, 'folie_oben': 30, 'chip': 12})
 skaliere_masse(teile, oid='keyboard')
+for p in teile:   # Foto-Ansicht: echte Formen (form) tragen keine aufgemalten Details
+    if p.get('form') and p.get('marks'):
+        p['marks'] = [dict(k, zeichnung=True) for k in p['marks']]
 schreibe('keyboard', teile)

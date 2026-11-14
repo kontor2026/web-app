@@ -39,7 +39,7 @@
   "metalle_mg": {},
   "herkunft": {},
   "materialien_g": {
-   "hdpe": 72.8,
+   "hdpe": 72.9,
    "pp": 14.3,
    "ldpe": 2.8
   },
@@ -230,12 +230,15 @@
    ],
    "info": "Weiter Hals mit grobem Gewinde für die Dosierkappe.",
    "color": "#F3F1EC",
+   "wand": 3,
+   "boden": 0,
    "marks": [
     {
      "shape": "cyl",
      "x": 4,
      "y": 4,
      "w": 30,
+     "zeichnung": true,
      "fill": "#D6D3CA"
     }
    ]
@@ -268,12 +271,14 @@
    ],
    "info": "Hohler Tragegriff, beim Blasformen in einem Stück mit der Flasche geformt. Durch das Griffloch passen vier Finger.",
    "color": "#F3F1EC",
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
      "x": 4,
      "y": 5,
      "w": 34,
+     "zeichnung": true,
      "d": 10,
      "r": 5,
      "fill": "#E2DFD7"
@@ -381,15 +386,15 @@
    "y": 0,
    "w": 100,
    "d": 70,
-   "z": 8,
-   "h": 164,
+   "z": 131,
+   "h": 41,
    "r": 18,
    "explode": [
     0,
     0,
     0.0
    ],
-   "mass": 41.5,
+   "mass": 10.4,
    "materials": [
     [
      "hdpe",
@@ -398,6 +403,96 @@
    ],
    "info": "HDPE, Recyclingcode 2, oft mit Rezyklat. Restlos leeren, Deckel draufschrauben und in die Gelbe Tonne. Waschmittel ist reizend, nicht ins Auge bringen.",
    "color": "#F3F1EC"
+  },
+  {
+   "id": "rumpf_3",
+   "component_id": "hdpe_bottle_body",
+   "material_id": "hdpe",
+   "name": "Flaschenrumpf",
+   "short": "Rumpf",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 100,
+   "d": 70,
+   "z": 90,
+   "h": 41,
+   "r": 18,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 10.4,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "HDPE, Recyclingcode 2, oft mit Rezyklat. Restlos leeren, Deckel draufschrauben und in die Gelbe Tonne. Waschmittel ist reizend, nicht ins Auge bringen.",
+   "color": "#F3F1EC",
+   "label": false
+  },
+  {
+   "id": "rumpf_2",
+   "component_id": "hdpe_bottle_body",
+   "material_id": "hdpe",
+   "name": "Flaschenrumpf",
+   "short": "Rumpf",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 100,
+   "d": 70,
+   "z": 49,
+   "h": 41,
+   "r": 18,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 10.4,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "HDPE, Recyclingcode 2, oft mit Rezyklat. Restlos leeren, Deckel draufschrauben und in die Gelbe Tonne. Waschmittel ist reizend, nicht ins Auge bringen.",
+   "color": "#F3F1EC",
+   "label": false
+  },
+  {
+   "id": "rumpf_1",
+   "component_id": "hdpe_bottle_body",
+   "material_id": "hdpe",
+   "name": "Flaschenrumpf",
+   "short": "Rumpf",
+   "shape": "box",
+   "x": 0,
+   "y": 0,
+   "w": 100,
+   "d": 70,
+   "z": 8,
+   "h": 41,
+   "r": 18,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 10.4,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "HDPE, Recyclingcode 2, oft mit Rezyklat. Restlos leeren, Deckel draufschrauben und in die Gelbe Tonne. Waschmittel ist reizend, nicht ins Auge bringen.",
+   "color": "#F3F1EC",
+   "label": false
   },
   {
    "id": "boden",

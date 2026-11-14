@@ -170,7 +170,7 @@
     ]
    ],
    "info": "Aluminium-Kunststoff-Folie, die beim Abfüllen auf den Hals gesiegelt wird. Zeigt, dass die Dose noch nicht geöffnet war. Abziehen und in die Gelbe Tonne.",
-   "color": "#C9CED3"
+   "color": "#DADDE0"
   },
   {
    "id": "hals",
@@ -198,12 +198,15 @@
    ],
    "info": "Weite Öffnung, damit man die Tabletten gut herausschütten kann.",
    "color": "#F4F2EC",
+   "wand": 2,
+   "boden": 0,
    "marks": [
     {
      "shape": "cyl",
      "x": 3,
      "y": 3,
      "w": 21,
+     "zeichnung": true,
      "fill": "#D6D3CA"
     }
    ]
@@ -246,14 +249,14 @@
    "x": 1,
    "y": 1,
    "w": 38,
-   "z": 3,
-   "h": 45,
+   "z": 25.5,
+   "h": 22.5,
    "explode": [
     0,
     0,
     0.0
    ],
-   "mass": 3.2,
+   "mass": 1.6,
    "materials": [
     [
      "hdpe",
@@ -262,6 +265,34 @@
    ],
    "info": "Weißes HDPE schützt die Tabletten vor Licht und Feuchtigkeit. Leer mit Deckel in die Gelbe Tonne, Medikamentenreste gehören nicht hinein.",
    "color": "#F4F2EC"
+  },
+  {
+   "id": "rumpf_1",
+   "component_id": "hdpe_bottle_body",
+   "material_id": "hdpe",
+   "name": "Dosenrumpf",
+   "short": "Dose",
+   "shape": "cyl",
+   "x": 1,
+   "y": 1,
+   "w": 38,
+   "z": 3,
+   "h": 22.5,
+   "explode": [
+    0,
+    0,
+    0.0
+   ],
+   "mass": 1.6,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "Weißes HDPE schützt die Tabletten vor Licht und Feuchtigkeit. Leer mit Deckel in die Gelbe Tonne, Medikamentenreste gehören nicht hinein.",
+   "color": "#F4F2EC",
+   "label": false
   },
   {
    "id": "boden",
@@ -298,9 +329,9 @@
    "name": "Papieretikett",
    "short": "Etikett",
    "shape": "cyl",
-   "x": 0.5,
-   "y": 0.5,
-   "w": 39,
+   "x": 0,
+   "y": 0,
+   "w": 40,
    "z": 8,
    "h": 40,
    "explode": [
@@ -326,12 +357,15 @@
    "info": "Papier mit Name, Dosierung und Haltbarkeit, rundum geklebt. Darf beim Recycling dranbleiben.",
    "color": "#CFE0EE",
    "sortBias": 1,
+   "wand": 0.3,
+   "boden": 0,
    "marks": [
     {
      "shape": "cyl",
-     "x": 0.8,
-     "y": 0.8,
+     "x": 1.3,
+     "y": 1.3,
      "w": 37.4,
+     "zeichnung": true,
      "fill": "#F4F2EC"
     }
    ]

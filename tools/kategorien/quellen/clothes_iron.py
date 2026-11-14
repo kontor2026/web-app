@@ -26,7 +26,7 @@ def abschnitte(pid, comp, name, short, segs, z, h, mass, info, **kw):
 
 sohle = abschnitte('sohle', 'iron_soleplate', 'Bügelsohle', 'Sohle', SOHLE, 0, 14, 450,
                    'Aluminiumguss mit Keramikbeschichtung und Dampflöchern. Wertvolles Aluminium für den Metallschrott.',
-                   materials=[['alu', 95], ['keramik', 5]], color='#C9CED2')
+                   materials=[['alu', 95], ['keramik', 5]], color='#E2E5E8')
 sohle[0]['marks'] = raster(14, 50, 6, 4, 4, 4, 16, 15, shape='cyl', fill='#7C858C')
 sohle[1]['marks'] = raster(14, 8, 6, 3, 4, 4, 15, 18, shape='cyl', fill='#7C858C')
 sohle[2]['marks'] = raster(16, 8, 5, 2, 4, 4, 15, 20, shape='cyl', fill='#7C858C')
@@ -38,7 +38,7 @@ gehaeuse[0]['marks'] = [mark('cyl', 36, 50, 40, fill='#4A9BD0')]
 tank = abschnitte('tank', 'water_tank', 'Wassertank', 'Wassertank',
                   [(155, 40, 100, 4), (195, 35, 80, 4), (230, 27, 56, 10)], 23, 46, 90,
                   'Durchsichtiger Kunststofftank für etwa 300 ml Wasser, vorne im Gehäuse. Eingeklipst; ohne Metall '
-                  'gehört er zum Kunststoff.', color='#CFE3EA', opacity=0.6)
+                  'gehört er zum Kunststoff.', color='#D6E6EC', opacity=0.4)
 tank[0]['marks'] = raster(12, 14, 4, 1, 12, 2, 20, r=1, fill='#9FB8C2')
 tank[1]['marks'] = [mark('box', 22, 8, 36, 18, 8, '#3C4248')]
 
@@ -78,7 +78,7 @@ teile = [
     teil('hitzeschild', 'iron_soleplate', 'Hitzeschutzblech', 'Hitzeschild', 'box', material_id='steel',
          x=12, y=10, w=96, d=200, z=20, h=3, r=30, mass=60, materials=[['stahl', 100]],
          info='Dünnes Stahlblech zwischen heißer Sohle und Kunststoffteilen. Kommt zum Altmetall.',
-         color='#9AA2A6', marks=[mark('box', 40, 145, 16, 16, 4, '#7C858C')]),
+         color='#C9CDD0', marks=[mark('box', 40, 145, 16, 16, 4, '#7C858C')]),
     teil('heizelement', 'heating_element', 'Rohrheizkörper', 'Heizelement', 'box',
          x=15, y=25, w=90, d=200, z=14, h=6, r=30, mass=150, materials=[['stahl', 50], ['nichrom', 20], ['keramik', 30]],
          info='U-förmiges Heizrohr mit Nickel-Chrom-Draht, in die Sohle eingegossen. Lässt sich nicht von der Sohle '
@@ -87,7 +87,7 @@ teile = [
                                  mark('box', 4, 160, 82, 14, 7, fill='#C4672D'), mark('cyl', 2, 2, 8, fill='#B87333'),
                                  mark('cyl', 80, 2, 8, fill='#B87333')]),
     *[teil(f'schraube{i}', 'iron_soleplate', 'Sohlenschraube', 'Schrauben', 'cyl', material_id='steel',
-           x=x, y=y, w=6, z=14, h=4, mass=1, materials=[['stahl', 100]], color='#7C858C', label=i == 0,
+           x=x, y=y, w=6, z=14, h=4, mass=1, materials=[['stahl', 100]], color='#C9CDD0', label=i == 0,
            info='Schrauben halten Sohle und Gehäuse zusammen; die hintere sitzt oft unter der Heckkappe.',
            marks=[mark('box', 1, 2.5, 4, 1), mark('box', 2.5, 1, 1, 4)])
       for i, (x, y) in enumerate([(57, 12), (57, 228)])],
@@ -115,5 +115,14 @@ for p in tank:
 explodiere(teile, abstand=22, fest=[p['id'] for p in sohle],
            gruppen=[[p['id'] for p in gehaeuse], ['griff', 'griffsteg', 'heck']],
            abstaende={'gehaeuse0': 55, 'gehaeuse1': 55, 'schraube0': 12, 'schraube1': 12, 'thermosicherung': 12})
+# Foto-Ansicht: echte Formen (Kabel liegend, Spulen als Ring); Details darauf nur in der Zeichnung
+FORMEN = {'kabel': ('liegend_x', 1), 'kupferadern': ('liegend_x', 1), 'griff': ('liegend_y', 0)}
+for p in teile:
+    if p['id'] in FORMEN:
+        p['form'], nur_zeichnung = FORMEN[p['id']]
+        p.pop('wand', None)
+        p.pop('boden', None)
+        for m in (p.get('marks') or []) if nur_zeichnung else []:
+            m['zeichnung'] = True
 skaliere_masse(teile, oid='clothes_iron')
 schreibe('clothes_iron', teile)

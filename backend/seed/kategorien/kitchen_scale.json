@@ -346,6 +346,7 @@
      "x": 8,
      "y": 8,
      "w": 134,
+     "zeichnung": true,
      "d": 150,
      "r": 8,
      "fill": "#C2D8D9"
@@ -1028,12 +1029,15 @@
    ],
    "info": "Flache Kunststoffwanne. Die Wägezellen stehen auf vier Gummifüßen, die durch den Boden ragen.",
    "color": "#2E3338",
+   "wand": 2.5,
+   "boden": 2,
    "marks": [
     {
      "shape": "box",
      "x": 50,
      "y": 75,
      "w": 50,
+     "zeichnung": true,
      "d": 30,
      "r": 3,
      "fill": "#1E2226"
@@ -1043,6 +1047,7 @@
      "x": 18,
      "y": 18,
      "w": 10,
+     "zeichnung": true,
      "fill": "#1E2226"
     },
     {
@@ -1050,6 +1055,7 @@
      "x": 122,
      "y": 18,
      "w": 10,
+     "zeichnung": true,
      "fill": "#1E2226"
     },
     {
@@ -1057,6 +1063,7 @@
      "x": 18,
      "y": 168,
      "w": 10,
+     "zeichnung": true,
      "fill": "#1E2226"
     },
     {
@@ -1064,6 +1071,7 @@
      "x": 122,
      "y": 168,
      "w": 10,
+     "zeichnung": true,
      "fill": "#1E2226"
     }
    ]

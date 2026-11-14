@@ -70,11 +70,11 @@ teile = [
          info='Leiterplatte mit Chip und Kontakten für die Wägezellen-Drähte. Zur Elektro-Sammlung geben.',
          color='#2E6B45', marks=raster(4, 40, 4, 1, 4, 4, 6, r=0.5, fill='#C9A74A')),
     teil('batterie_1', 'alkaline_cell', 'Micro-Batterie (AAA)', 'Batterie AAA', 'box',
-         x=128, y=138, w=44.5, d=10.5, z=4, h=10.5, r=5, mass=11.5, materials=AAA,
+         x=128, y=138, w=44.5, d=10.5, z=4, h=10.5, r=5, form='liegend_x', mass=11.5, materials=AAA,
          info='Zwei 1,5-Volt-Zellen, von unten durch eine Klappe zugänglich. Herausnehmen und in die Batteriesammlung geben.',
          color='#2F6FB0', marks=[mark('box', 0, 0, 5, 10.5, 2.5, '#B7BCC0')]),
     teil('batterie_2', 'alkaline_cell', 'Micro-Batterie (AAA)', 'Batterie AAA', 'box',
-         x=128, y=151, w=44.5, d=10.5, z=4, h=10.5, r=5, mass=11.5, materials=AAA, label=False,
+         x=128, y=151, w=44.5, d=10.5, z=4, h=10.5, r=5, form='liegend_x', mass=11.5, materials=AAA, label=False,
          info='Zweite Zelle, liegt umgekehrt zur ersten.', color='#2F6FB0',
          marks=[mark('box', 39.5, 0, 5, 10.5, 2.5, '#B7BCC0')]),
     *zellen,
@@ -109,4 +109,7 @@ for p in teile:
     else:
         p['explode'] = EX[p['id']]
 skaliere_masse(teile, oid='bathroom_scale')
+for p in teile:  # gerundete Formen (form): marks nur in der Zeichnung, oben flach würden sie schweben
+    if p.get('form'):
+        p['marks'] = [dict(m, zeichnung=True) for m in p.get('marks') or []]
 schreibe('bathroom_scale', teile)

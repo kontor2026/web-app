@@ -18,19 +18,22 @@ QUECKSILBER = ('Das Rohr enthält wenige Milligramm giftiges Quecksilber: nicht 
 
 
 def spirale(dm, n=4, schritt=4):
-    return [mark('cyl', i * schritt, i * schritt, dm - 2 * i * schritt) for i in range(n)]
+    """Gemalte Windungen, nur in der Zeichnung: in der Foto-Ansicht ist das Rohr ein hohler Ring (wand)."""
+    return [mark('cyl', i * schritt, i * schritt, dm - 2 * i * schritt, zeichnung=True) for i in range(n)]
 
 
 teile = [
     teil('rohr_kuppe', 'fluorescent_tube', 'Glasrohr (Spiralspitze)', 'Spiralspitze', 'cyl',
-         x=7, y=7, w=32, z=118, h=12, mass=4, color=GLAS, opacity=0.7,
+         x=7, y=7, w=32, z=118, h=12, mass=4, form='torus', color=GLAS,
          info='Oberes Ende der Glasspirale. ' + QUECKSILBER,
          marks=spirale(32, 3, 5)),
-    teil('rohr', 'fluorescent_tube', 'Leuchtstoffröhre (Glasspirale)', 'Glasrohr', 'cyl',
-         x=1, y=1, w=44, z=62, h=56, mass=24, color=GLAS, opacity=0.7,
-         info='Gewundenes Glasrohr, innen mit weißem Leuchtstoff beschichtet. Strom bringt Quecksilberdampf zum '
-              'Leuchten, der Leuchtstoff macht daraus sichtbares Licht. ' + QUECKSILBER,
-         marks=spirale(44)),
+    # Die Glasspirale als vier übereinanderliegende Windungen (Foto-Ansicht: je ein Ring, form='torus')
+    *[teil('rohr' if i == 0 else f'rohr_{i + 1}', 'fluorescent_tube', 'Leuchtstoffröhre (Glasspirale)',
+           'Glasrohr', 'cyl', x=1, y=1, w=44, z=62 + i * 14, h=14, mass=6, form='torus', color=GLAS, label=i == 0,
+           info='Gewundenes Glasrohr, innen mit weißem Leuchtstoff beschichtet. Strom bringt Quecksilberdampf zum '
+                'Leuchten, der Leuchtstoff macht daraus sichtbares Licht. ' + QUECKSILBER if i == 0
+           else 'Weitere Windung der Glasspirale. ' + QUECKSILBER,
+           marks=spirale(44) if i == 3 else None) for i in range(4)],
     teil('elektroden', 'fluorescent_tube', 'Rohrenden mit Glühwendeln', 'Elektroden', 'box',
          material_id='copper', x=8, y=18, w=30, d=10, z=56, h=8, r=4, explode=[48, 0, 0], mass=1.5,
          materials=[['glas', 50], ['nickel', 25], ['kupfer', 20], ['stahl', 5]],
@@ -72,7 +75,7 @@ teile = [
          info='Verjüngt sich zum Sockel hin. Der Sockel ist eingepresst oder eingeklebt.'),
     teil('sockel', 'plastic_housing', 'Schraubsockel E27', 'Sockel', 'cyl',
          material_id='aluminium', x=9.5, y=9.5, w=27, z=3, h=21, mass=4, materials=[['alu', 100]],
-         info='Gewinde aus Aluminiumblech, passt in jede normale Lampenfassung.', color='#C2C6C9',
+         info='Gewinde aus Aluminiumblech, passt in jede normale Lampenfassung.', color='#E2E5E7',
          marks=[mark('cyl', 1.5, 1.5, 24), mark('cyl', 3, 3, 21)]),
     teil('fusskontakt', 'plastic_housing', 'Fußkontakt mit Isolierglas', 'Fußkontakt', 'cyl',
          material_id='copper', x=17, y=17, w=12, z=0, h=3, mass=2,
@@ -84,7 +87,7 @@ teile = [
 # Senkrecht stapeln: Gruppen von unten nach oben, jede schwebt ABSTAND über der explodierten Oberkante der darunter.
 ABSTAND = 14
 gruppen = [['fusskontakt'], ['sockel'], ['gehaeuse_unten', 'gehaeuse_oben'], ['platine'],
-           ['elko', 'drossel', 'transistoren'], ['halter'], ['rohr', 'rohr_kuppe']]
+           ['elko', 'drossel', 'transistoren'], ['halter'], ['rohr', 'rohr_2', 'rohr_3', 'rohr_4', 'rohr_kuppe']]
 nach_id = {p['id']: p for p in teile}
 oben = None
 for g in gruppen:

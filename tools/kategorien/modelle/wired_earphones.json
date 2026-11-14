@@ -352,6 +352,7 @@
    ],
    "info": "Angespritzter Kunststoff mit Knickschutz. Innen sind die drei Adern an den Stift gelötet. Direkt dahinter abschneiden.",
    "color": "#2B2E31",
+   "form": "liegend_y",
    "marks": [
     {
      "shape": "box",
@@ -360,7 +361,8 @@
      "w": 5,
      "d": 12,
      "r": 2,
-     "fill": "#3A3D40"
+     "fill": "#3A3D40",
+     "zeichnung": true
     }
    ]
   },
@@ -400,6 +402,7 @@
    ],
    "info": "Vernickeltes Messing mit drei Kontakten (links, rechts, Masse), getrennt durch schwarze Isolierringe.",
    "color": "#C9CDD0",
+   "form": "liegend_y",
    "marks": [
     {
      "shape": "box",
@@ -408,7 +411,8 @@
      "w": 2.5,
      "d": 0.8,
      "r": 0.3,
-     "fill": "#22272B"
+     "fill": "#22272B",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -417,7 +421,8 @@
      "w": 2.5,
      "d": 0.8,
      "r": 0.3,
-     "fill": "#22272B"
+     "fill": "#22272B",
+     "zeichnung": true
     }
    ]
   },
@@ -450,13 +455,15 @@
     ]
    ],
    "info": "Hauchdünne Kupferlitzen, mit farbigem Lack isoliert (rot, grün, kupferfarben). Lack und Kupfer trennt erst die Recyclinganlage.",
-   "color": "#C5803D",
+   "color": "#D08A52",
+   "form": "torus",
    "marks": [
     {
      "shape": "cyl",
      "x": 0.0,
      "y": 0.0,
      "w": 58.0,
+     "zeichnung": true,
      "fill": "#C5803D"
     },
     {
@@ -464,6 +471,7 @@
      "x": 2.6,
      "y": 2.6,
      "w": 52.8,
+     "zeichnung": true,
      "fill": "#B06F33"
     },
     {
@@ -471,6 +479,7 @@
      "x": 5.2,
      "y": 5.2,
      "w": 47.6,
+     "zeichnung": true,
      "fill": "#C5803D"
     },
     {
@@ -478,6 +487,7 @@
      "x": 7.8,
      "y": 7.8,
      "w": 42.4,
+     "zeichnung": true,
      "fill": "#B06F33"
     },
     {
@@ -485,6 +495,7 @@
      "x": 10.4,
      "y": 10.4,
      "w": 37.2,
+     "zeichnung": true,
      "fill": "#C5803D"
     },
     {
@@ -492,6 +503,7 @@
      "x": 13.0,
      "y": 13.0,
      "w": 32.0,
+     "zeichnung": true,
      "fill": "#B06F33"
     },
     {
@@ -499,6 +511,7 @@
      "x": 15.6,
      "y": 15.6,
      "w": 26.8,
+     "zeichnung": true,
      "fill": "#141618"
     },
     {
@@ -506,14 +519,16 @@
      "x": 1,
      "y": 27,
      "w": 1.6,
-     "fill": "#C8423A"
+     "fill": "#C8423A",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 3.4,
      "y": 27,
      "w": 1.6,
-     "fill": "#3E9A57"
+     "fill": "#3E9A57",
+     "zeichnung": true
     }
    ]
   },
@@ -622,12 +637,14 @@
    ],
    "info": "Dünner, weicher Mantel aus thermoplastischem Elastomer (früher PVC). Ein Kabel von 1,2 m wiegt nur wenige Gramm.",
    "color": "#2B2E31",
+   "form": "torus",
    "marks": [
     {
      "shape": "cyl",
      "x": 0.0,
      "y": 0.0,
      "w": 60.0,
+     "zeichnung": true,
      "fill": "#34373B"
     },
     {
@@ -635,6 +652,7 @@
      "x": 2.6,
      "y": 2.6,
      "w": 54.8,
+     "zeichnung": true,
      "fill": "#26292C"
     },
     {
@@ -642,6 +660,7 @@
      "x": 5.2,
      "y": 5.2,
      "w": 49.6,
+     "zeichnung": true,
      "fill": "#34373B"
     },
     {
@@ -649,6 +668,7 @@
      "x": 7.8,
      "y": 7.8,
      "w": 44.4,
+     "zeichnung": true,
      "fill": "#26292C"
     },
     {
@@ -656,6 +676,7 @@
      "x": 10.4,
      "y": 10.4,
      "w": 39.2,
+     "zeichnung": true,
      "fill": "#34373B"
     },
     {
@@ -663,6 +684,7 @@
      "x": 13.0,
      "y": 13.0,
      "w": 34.0,
+     "zeichnung": true,
      "fill": "#26292C"
     },
     {
@@ -670,6 +692,7 @@
      "x": 15.6,
      "y": 15.6,
      "w": 28.8,
+     "zeichnung": true,
      "fill": "#141618"
     }
    ]

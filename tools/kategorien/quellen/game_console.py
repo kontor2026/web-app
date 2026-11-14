@@ -102,9 +102,9 @@ teile = [
          marks=[mark('box', 10, 120, 90, 20, 2, '#C9CED2'), mark('box', 10, 160, 90, 20, 2, '#C9CED2'),
                 mark('box', 80, 205, 24, 18, 2, '#1E2226')]),
     teil('unterschale', 'plastic_housing', 'Unterschale mit Laufwerksschacht', 'Unterschale', 'box',
-         x=0, y=0, w=350, d=260, z=0, h=50, r=10, mass=700, color=GEH,
+         x=0, y=0, w=350, d=260, z=0, h=50, r=10, mass=700, color=GEH, wand=3, boden=2.5,
          info='Untere Gehäusehälfte aus Kunststoff mit Gummifüßen. Trägt Platine und Netzteil; leer ab in die Elektro-Sammlung.',
-         marks=raster(20, 20, 2, 2, 20, 20, 290, 200, shape='cyl', fill='#1E2226')),
+         marks=[dict(m, zeichnung=True) for m in raster(20, 20, 2, 2, 20, 20, 290, 200, shape='cyl', fill='#1E2226')]),
 ]
 
 explodiere(teile, abstand=35, nach_liste=True, abstaende={'apu': 15, 'speicher': 15, 'trafo': 15, 'elko': 15, 'cmos': 15, 'wlan': 15, 'usb': 15,

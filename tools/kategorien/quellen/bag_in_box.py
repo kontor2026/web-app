@@ -11,7 +11,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from bau import teil, mark, raster, explodiere, skaliere_masse, schreibe  # noqa: E402
 
-PAPPE = '#C49A6C'
+PAPPE = '#B8946A'
 BEUTEL = '#B8BEC4'
 WELLE = [['papier', 100]]
 teile = [
@@ -23,7 +23,7 @@ teile = [
     teil('mantel', 'cardboard_box_body', 'Karton', 'Karton', 'box',
          x=0, y=0, w=250, d=160, z=6, h=288, r=1, mass=175, materials=[['papier', 97], ['druck', 2], ['klebstoff', 1]],
          info='Bedruckte Wellpappe, schützt den weichen Beutel. Leer flach gefaltet ins Altpapier.',
-         color=PAPPE, marks=[mark('box', 4, 4, 242, 152, 0, '#8E6B45')]),
+         color=PAPPE, wand=4, boden=0, marks=[mark('box', 4, 4, 242, 152, 0, '#8E6B45', zeichnung=True)]),
     teil('aufdruck', 'cardboard_box_body', 'Bedruckte Vorderseite', 'Aufdruck', 'box',
          x=20, y=160, w=210, d=0.3, z=110, h=170, r=0, mass=1, materials=[['druck', 70], ['papier', 30]],
          color='#7A1F33', sortBias=200, label=False,
@@ -31,7 +31,7 @@ teile = [
     teil('klappe', 'cardboard_box_body', 'Zapfklappe', 'Zapfklappe', 'box',
          x=95, y=159.7, w=60, d=0.3, z=15, h=60, r=0, explode=[0, 50, 0], mass=2, materials=WELLE,
          info='Perforiertes Fenster vorne unten. Herausdrücken und den Zapfhahn hindurchziehen.',
-         color='#B98D5F', sortBias=260),
+         color='#AD8960', sortBias=260),
     teil('boden', 'cardboard_box_body', 'Bodenlaschen', 'Boden', 'box',
          x=0, y=0, w=250, d=160, z=0, h=6, r=1, explode=[0, 0, 0], mass=32, materials=WELLE,
          info='Verklebte Bodenlaschen, tragen das Gewicht der Flüssigkeit.',

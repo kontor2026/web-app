@@ -29,12 +29,13 @@ teile = [
          x=0, y=0, w=200, d=140, z=14, h=4, r=10, mass=1.5,
          info='Geschäumtes Polystyrol, zu 95 % Luft. Folie und Saugeinlage abziehen, die Schale in die Gelbe Tonne, '
               'nicht ins Altpapier.',
-         color=WEISS, marks=[mark('box', 8, 8, 184, 124, 8, '#E2DFD8'), mark('box', 16, 16, 168, 108, 6, '#D8D5CE')]
-         + raster(26, 22, 1, 6, 148, 2, 0, 19.5, fill='#CAC6BE')),
+         color=WEISS, wand=8, boden=0, marks=[mark('box', 8, 8, 184, 124, 8, '#E2DFD8', zeichnung=True),
+                                         mark('box', 16, 16, 168, 108, 6, '#D8D5CE', zeichnung=True)]
+         + [dict(m, zeichnung=True) for m in raster(26, 22, 1, 6, 148, 2, 0, 19.5, fill='#CAC6BE')]),
     teil('schale', 'eps_tray', 'Schalenboden', 'Boden', 'box',
          x=8, y=8, w=184, d=124, z=0, h=14, r=9, mass=2.6, label=False,
          info='Rillen im Boden machen die Schale steif und halten Fleischsaft unter der Ware.',
-         color=WEISS),
+         color=WEISS, wand=3),
 ]
 explodiere(teile, abstand=75, abstaende={'folie': 125}, gruppen=[['rand', 'schale']])
 skaliere_masse(teile, oid='foam_food_tray')

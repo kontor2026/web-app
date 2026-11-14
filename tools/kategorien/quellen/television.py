@@ -92,11 +92,11 @@ teile = [
               'Abgeschraubt passt der Fernseher an eine Wandhalterung.',
          marks=[mark('box', 150, 20, 100, 80, 8, '#4A5156')]),
     teil('kabel', 'cable_insulation', 'Netzkabel (Isolierung)', 'Kabel', 'box',
-         x=860, y=250, w=250, d=12, z=0, h=8, r=4, mass=150, materials=[['pvc', 90], ['pp', 10]], color=GEH,
+         x=860, y=250, w=250, d=12, z=0, h=8, r=4, form='liegend_x', mass=150, materials=[['pvc', 90], ['pp', 10]], color=GEH,
          info='Zwei-Meter-Kabel mit PVC-Mantel. Stecker abschneiden und den Mantel längs aufschlitzen.',
          marks=[mark('box', 0, 0, 40, 12, 2, '#4A5156')]),
     teil('kupferadern', 'cable_copper_core', 'Kupferadern', 'Kupferadern', 'box',
-         x=860, y=280, w=250, d=4, z=0, h=4, r=1, mass=60, color='#B87333',
+         x=860, y=280, w=250, d=4, z=0, h=4, r=1, form='liegend_x', mass=60, color='#B87333',
          info='Zwei Kupferadern. Reines Kupfer wird eingeschmolzen und neu verwendet.'),
 ]
 
@@ -119,4 +119,7 @@ for p in (by[i] for i in RECHTS):
     p['explode'] = [W + 40 - 415, 0, 0]
 
 skaliere_masse(teile, oid='television')
+for p in teile:  # gerundete Formen (form): marks nur in der Zeichnung, oben flach würden sie schweben
+    if p.get('form'):
+        p['marks'] = [dict(m, zeichnung=True) for m in p.get('marks') or []]
 schreibe('television', teile)

@@ -4530,6 +4530,7 @@
    ],
    "info": "Bodenwanne aus ABS mit Schraubdomen. Nach dem Ausbau von Stahlplatte und Elektronik ist sie sortenreiner Kunststoff.",
    "color": "#24272A",
+   "wand": 2.5,
    "marks": [
     {
      "shape": "box",
@@ -4538,7 +4539,8 @@
      "w": 432,
      "d": 127,
      "r": 6,
-     "fill": "#2B2F33"
+     "fill": "#2B2F33",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -4547,7 +4549,8 @@
      "w": 50,
      "d": 12,
      "r": 3,
-     "fill": "#1F2225"
+     "fill": "#1F2225",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -4556,7 +4559,8 @@
      "w": 50,
      "d": 12,
      "r": 3,
-     "fill": "#1F2225"
+     "fill": "#1F2225",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -4564,7 +4568,8 @@
      "y": 60,
      "w": 6,
      "d": 6,
-     "fill": "#3A3F44"
+     "fill": "#3A3F44",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -4572,7 +4577,8 @@
      "y": 60,
      "w": 6,
      "d": 6,
-     "fill": "#3A3F44"
+     "fill": "#3A3F44",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -4580,7 +4586,8 @@
      "y": 60,
      "w": 6,
      "d": 6,
-     "fill": "#3A3F44"
+     "fill": "#3A3F44",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -4588,7 +4595,8 @@
      "y": 60,
      "w": 6,
      "d": 6,
-     "fill": "#3A3F44"
+     "fill": "#3A3F44",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -4596,7 +4604,8 @@
      "y": 60,
      "w": 6,
      "d": 6,
-     "fill": "#3A3F44"
+     "fill": "#3A3F44",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -4604,7 +4613,8 @@
      "y": 60,
      "w": 6,
      "d": 6,
-     "fill": "#3A3F44"
+     "fill": "#3A3F44",
+     "zeichnung": true
     }
    ]
   },
@@ -4739,7 +4749,8 @@
     ]
    ],
    "info": "Etwa 1,5 m PVC-Kabel. Mantel und Kupferadern lassen sich mit einer Abisolierzange trennen.",
-   "color": "#2B2F33"
+   "color": "#2B2F33",
+   "form": "liegend_y"
   },
   {
    "id": "litzen",
@@ -4768,7 +4779,8 @@
     ]
    ],
    "info": "Vier Kupferadern für Strom und Daten. Kupfer lässt sich ohne Qualitätsverlust immer wieder einschmelzen.",
-   "color": "#C98F62"
+   "color": "#C98F62",
+   "form": "liegend_y"
   },
   {
    "id": "usb",

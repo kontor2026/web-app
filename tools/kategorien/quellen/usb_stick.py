@@ -46,9 +46,9 @@ teile = [
          info='Vernickeltes Stahlblech um die Platine. Ist an der Platine angelötet.',
          marks=[mark('box', 2.5, 3, 2, 2, 0.2, '#2A2E31'), mark('box', 7.5, 3, 2, 2, 0.2, '#2A2E31')]),
     teil('unterschale', 'plastic_housing', 'Gehäuse-Unterteil', 'Unterteil', 'box',
-         x=0, y=15, w=20, d=40, z=0, h=4, r=3, mass=2.2, color=GEH,
+         x=0, y=15, w=20, d=40, z=0, h=4, r=3, wand=1, mass=2.2, color=GEH,
          info='Trägt die Platine und hat oft eine Öse für den Schlüsselring.',
-         marks=[mark('box', 4, 0, 12, 35, 1, '#1E2226'), mark('cyl', 7, 33, 6, fill='#1E2226')]),
+         marks=[mark('box', 4, 0, 12, 35, 1, '#1E2226', zeichnung=True), mark('cyl', 7, 33, 6, fill='#1E2226', zeichnung=True)]),
 ]
 
 explodiere(teile, abstand=14, abstaende={'led': 6, 'controller': 6, 'quarz': 6, 'flash': 6}, nach_liste=True)

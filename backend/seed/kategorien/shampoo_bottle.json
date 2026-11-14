@@ -39,7 +39,7 @@
   "metalle_mg": {},
   "herkunft": {},
   "materialien_g": {
-   "hdpe": 26.3,
+   "hdpe": 26.4,
    "pp": 8.8
   },
   "co2_kg": 0.074,
@@ -241,12 +241,14 @@
    ],
    "info": "Dickwandiger Hals mit Gewinde. Hier sitzt nach dem Ausspülen oft noch etwas Shampoo.",
    "color": "#F2EFEA",
+   "wand": 2.5,
    "marks": [
     {
      "shape": "cyl",
      "x": 4,
      "y": 4,
      "w": 14,
+     "zeichnung": true,
      "fill": "#D6D2CA"
     }
    ]
@@ -290,14 +292,14 @@
    "y": 0,
    "w": 70,
    "d": 45,
-   "z": 8,
-   "h": 130,
+   "z": 105.5,
+   "h": 32.5,
    "explode": [
     0,
     0,
     0
    ],
-   "mass": 15.9,
+   "mass": 4,
    "materials": [
     [
      "hdpe",
@@ -306,6 +308,93 @@
    ],
    "info": "HDPE, Recyclingcode 2. Leer drücken reicht, dann mit Deckel in die Gelbe Tonne. HDPE wird gut recycelt, zum Beispiel zu neuen Flaschen oder Rohren.",
    "color": "#F2EFEA"
+  },
+  {
+   "id": "rumpf_3",
+   "component_id": "hdpe_bottle_body",
+   "material_id": "hdpe",
+   "name": "Flaschenrumpf",
+   "short": "Rumpf",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 70,
+   "d": 45,
+   "z": 73,
+   "h": 32.5,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 4,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "HDPE, Recyclingcode 2. Leer drücken reicht, dann mit Deckel in die Gelbe Tonne. HDPE wird gut recycelt, zum Beispiel zu neuen Flaschen oder Rohren.",
+   "color": "#F2EFEA",
+   "label": false
+  },
+  {
+   "id": "rumpf_2",
+   "component_id": "hdpe_bottle_body",
+   "material_id": "hdpe",
+   "name": "Flaschenrumpf",
+   "short": "Rumpf",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 70,
+   "d": 45,
+   "z": 40.5,
+   "h": 32.5,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 4,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "HDPE, Recyclingcode 2. Leer drücken reicht, dann mit Deckel in die Gelbe Tonne. HDPE wird gut recycelt, zum Beispiel zu neuen Flaschen oder Rohren.",
+   "color": "#F2EFEA",
+   "label": false
+  },
+  {
+   "id": "rumpf_1",
+   "component_id": "hdpe_bottle_body",
+   "material_id": "hdpe",
+   "name": "Flaschenrumpf",
+   "short": "Rumpf",
+   "shape": "cyl",
+   "x": 0,
+   "y": 0,
+   "w": 70,
+   "d": 45,
+   "z": 8,
+   "h": 32.5,
+   "explode": [
+    0,
+    0,
+    0
+   ],
+   "mass": 4,
+   "materials": [
+    [
+     "hdpe",
+     100
+    ]
+   ],
+   "info": "HDPE, Recyclingcode 2. Leer drücken reicht, dann mit Deckel in die Gelbe Tonne. HDPE wird gut recycelt, zum Beispiel zu neuen Flaschen oder Rohren.",
+   "color": "#F2EFEA",
+   "label": false
   },
   {
    "id": "boden",
@@ -341,16 +430,15 @@
    "material_id": "pp",
    "name": "Etikett vorne",
    "short": "Etikett",
-   "shape": "box",
-   "x": 70,
-   "y": 8,
-   "w": 0.3,
-   "d": 29,
-   "z": 25,
-   "h": 100,
-   "r": 0,
+   "shape": "cyl",
+   "x": -1,
+   "y": -1,
+   "w": 72,
+   "d": 47,
+   "z": 28,
+   "h": 95,
    "explode": [
-    50,
+    100,
     0,
     0
    ],
@@ -367,7 +455,8 @@
    ],
    "info": "Selbstklebende PP-Folie. Sie muss nicht abgezogen werden, weil sie zum Deckel-Kunststoff passt.",
    "color": "#3E7CB1",
-   "sortBias": 100
+   "wand": 0.3,
+   "boden": 0
   },
   {
    "id": "etikett_hinten",
@@ -376,16 +465,16 @@
    "name": "Etikett hinten",
    "short": "Etikett",
    "shape": "box",
-   "x": -0.3,
-   "y": 8,
-   "w": 0.3,
-   "d": 29,
-   "z": 25,
-   "h": 90,
+   "x": 15,
+   "y": -1.3,
+   "w": 40,
+   "d": 0.3,
+   "z": 35,
+   "h": 80,
    "r": 0,
    "explode": [
-    -50,
     0,
+    -45,
     0
    ],
    "mass": 0.9,

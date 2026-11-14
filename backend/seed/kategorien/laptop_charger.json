@@ -270,13 +270,15 @@
     ]
    ],
    "info": "Zwei Leiter für Plus und Minus, oft als Innenader mit Kupfergeflecht darum. Nach dem Abisolieren kommt reines Kupfer zum Vorschein.",
-   "color": "#C5803D",
+   "color": "#D08A52",
+   "form": "torus",
    "marks": [
     {
      "shape": "cyl",
      "x": 6,
      "y": 4,
      "w": 48,
+     "zeichnung": true,
      "d": 24,
      "fill": "#B06F33"
     },
@@ -285,6 +287,7 @@
      "x": 12,
      "y": 8,
      "w": 36,
+     "zeichnung": true,
      "d": 16,
      "fill": "#C5803D"
     },
@@ -293,6 +296,7 @@
      "x": 18,
      "y": 11,
      "w": 24,
+     "zeichnung": true,
      "d": 10,
      "fill": "#34383C"
     }
@@ -325,12 +329,14 @@
    ],
    "info": "Schwarzer PVC-Mantel, hier aufgerollt. Mit Abisolierzange längs aufschlitzen; nahe am Stecker sitzt meist ein Ferritkern gegen Funkstörungen.",
    "color": "#34373B",
+   "form": "torus",
    "marks": [
     {
      "shape": "cyl",
      "x": 3,
      "y": 2,
      "w": 66,
+     "zeichnung": true,
      "d": 36,
      "fill": "#2B2E31"
     },
@@ -339,6 +345,7 @@
      "x": 7,
      "y": 4,
      "w": 58,
+     "zeichnung": true,
      "d": 32,
      "fill": "#34373B"
     },
@@ -347,6 +354,7 @@
      "x": 11,
      "y": 6.5,
      "w": 50,
+     "zeichnung": true,
      "d": 27,
      "fill": "#2B2E31"
     },
@@ -355,6 +363,7 @@
      "x": 15,
      "y": 9,
      "w": 42,
+     "zeichnung": true,
      "d": 22,
      "fill": "#34373B"
     },
@@ -363,6 +372,7 @@
      "x": 19,
      "y": 11.5,
      "w": 34,
+     "zeichnung": true,
      "d": 17,
      "fill": "#34383C"
     }
@@ -397,6 +407,7 @@
    "info": "Weiche Tülle, damit das Kabel am Gehäuse nicht abknickt. Hier brechen Kabel am häufigsten.",
    "color": "#2B2E31",
    "sortBias": 5,
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
@@ -404,7 +415,8 @@
      "y": 1.5,
      "w": 1,
      "d": 6,
-     "fill": "#3A3D40"
+     "fill": "#3A3D40",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -412,7 +424,8 @@
      "y": 1.5,
      "w": 1,
      "d": 6,
-     "fill": "#3A3D40"
+     "fill": "#3A3D40",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -420,7 +433,8 @@
      "y": 1.5,
      "w": 1,
      "d": 6,
-     "fill": "#3A3D40"
+     "fill": "#3A3D40",
+     "zeichnung": true
     }
    ]
   },
@@ -526,6 +540,7 @@
    ],
    "info": "Vernickelte Metallhülse (Minus) mit Kontakt innen (Plus). Ein Magnet zieht den Stahl an.",
    "color": "#C9CDD0",
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
@@ -534,7 +549,8 @@
      "w": 4,
      "d": 2.5,
      "r": 1.2,
-     "fill": "#2A2E31"
+     "fill": "#2A2E31",
+     "zeichnung": true
     }
    ]
   },

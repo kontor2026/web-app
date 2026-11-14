@@ -1205,6 +1205,7 @@
    ],
    "info": "Etwa 1 m PVC-Mantel mit Schutzkontaktstecker. Längs aufschlitzen, um Kupfer und PVC zu trennen.",
    "color": "#2E3338",
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
@@ -1213,7 +1214,8 @@
      "w": 10,
      "d": 6,
      "r": 2,
-     "fill": "#555"
+     "fill": "#555",
+     "zeichnung": true
     }
    ]
   },
@@ -1244,7 +1246,8 @@
     ]
    ],
    "info": "Drei Kupferadern (Phase, Neutralleiter, Schutzleiter). Wertvollster Rohstoff des Toasters nach Gewicht.",
-   "color": "#B87333"
+   "color": "#B87333",
+   "form": "liegend_x"
   }
  ]
 }

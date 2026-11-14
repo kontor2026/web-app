@@ -7,17 +7,17 @@
    "name": "Streukolben (Kuppe)",
    "short": "Kolben",
    "shape": "cyl",
-   "x": 10,
-   "y": 10,
-   "w": 40,
-   "z": 98,
-   "h": 12,
+   "x": 12,
+   "y": 12,
+   "w": 36,
+   "z": 104,
+   "h": 6,
    "explode": [
     0,
     0,
     80.3
    ],
-   "mass": 1.6,
+   "mass": 0.6,
    "materials": [
     [
      "pcabs",
@@ -29,6 +29,35 @@
    "opacity": 0.6
   },
   {
+   "id": "kolben_schulter",
+   "component_id": "bulb_diffuser",
+   "material_id": "pc",
+   "name": "Streukolben (Schulter)",
+   "short": "Kolben Schulter",
+   "shape": "cyl",
+   "x": 4,
+   "y": 4,
+   "w": 52,
+   "z": 96,
+   "h": 8,
+   "explode": [
+    0,
+    0,
+    80.3
+   ],
+   "mass": 1,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Hier rundet sich der Kolben zur Kuppe.",
+   "color": "#F4F4F0",
+   "opacity": 0.6,
+   "label": false
+  },
+  {
    "id": "kolben_mitte",
    "component_id": "bulb_diffuser",
    "material_id": "pc",
@@ -38,14 +67,14 @@
    "x": 0,
    "y": 0,
    "w": 60,
-   "z": 72,
-   "h": 26,
+   "z": 84,
+   "h": 12,
    "explode": [
     0,
     0,
     80.3
    ],
-   "mass": 3.6,
+   "mass": 2,
    "materials": [
     [
      "pcabs",
@@ -58,23 +87,81 @@
    "label": false
   },
   {
-   "id": "kolben_unten",
+   "id": "kolben_bauch",
    "component_id": "bulb_diffuser",
    "material_id": "pc",
-   "name": "Streukolben (Hals)",
-   "short": "Kolben Hals",
+   "name": "Streukolben (Bauch)",
+   "short": "Kolben Bauch",
    "shape": "cyl",
-   "x": 4,
-   "y": 4,
-   "w": 52,
-   "z": 56,
-   "h": 16,
+   "x": 1,
+   "y": 1,
+   "w": 58,
+   "z": 72,
+   "h": 12,
    "explode": [
     0,
     0,
     80.3
    ],
-   "mass": 2.4,
+   "mass": 1.8,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Unter der breitesten Stelle wird der Kolben wieder schmaler.",
+   "color": "#F4F4F0",
+   "opacity": 0.6,
+   "label": false
+  },
+  {
+   "id": "kolben_unten",
+   "component_id": "bulb_diffuser",
+   "material_id": "pc",
+   "name": "Streukolben (unten)",
+   "short": "Kolben unten",
+   "shape": "cyl",
+   "x": 4,
+   "y": 4,
+   "w": 52,
+   "z": 63,
+   "h": 9,
+   "explode": [
+    0,
+    0,
+    80.3
+   ],
+   "mass": 1.3,
+   "materials": [
+    [
+     "pcabs",
+     100
+    ]
+   ],
+   "info": "Unterer Teil des Kolbens über dem Kühlkörper.",
+   "color": "#F4F4F0",
+   "opacity": 0.6,
+   "label": false
+  },
+  {
+   "id": "kolben_hals",
+   "component_id": "bulb_diffuser",
+   "material_id": "pc",
+   "name": "Streukolben (Hals)",
+   "short": "Kolben Hals",
+   "shape": "cyl",
+   "x": 7,
+   "y": 7,
+   "w": 46,
+   "z": 56,
+   "h": 7,
+   "explode": [
+    0,
+    0,
+    80.3
+   ],
+   "mass": 0.9,
    "materials": [
     [
      "pcabs",
@@ -315,7 +402,7 @@
     ]
    ],
    "info": "Gegossenes Aluminium, oft mit Kunststoff ummantelt. Gibt die Wärme der LEDs an die Luft ab. Wertvoll fürs Recycling.",
-   "color": "#C9CDD0",
+   "color": "#DCDFE2",
    "marks": [
     {
      "shape": "cyl",
@@ -350,7 +437,7 @@
     ]
    ],
    "info": "Verjüngt sich zum Sockel hin. Innen ist Platz für die Treiberplatine.",
-   "color": "#C9CDD0",
+   "color": "#DCDFE2",
    "label": false
   },
   {
@@ -504,7 +591,7 @@
     ]
    ],
    "info": "Gewinde aus Aluminiumblech, in den Kühlkörper gepresst oder geklebt. Es passt in jede normale Lampenfassung.",
-   "color": "#C2C6C9",
+   "color": "#E2E5E7",
    "marks": [
     {
      "shape": "cyl",
