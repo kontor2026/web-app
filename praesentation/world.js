@@ -69,13 +69,12 @@ const MOOD = {
   wahl: { env: 0.32, key: 0.62, hemi: 0.22, spot: 0, rim: 0.5, fog: [10, 36], bloom: 0.8 },
   bausatz: { env: 0.65, key: 1.0, hemi: 0.32, spot: 0, rim: 0.45, fog: [7, 26], bloom: 0.5 },
   ueberall: { env: 0.35, key: 0.85, hemi: 0.3, spot: 0, rim: 0.3, fog: [300, 900], bloom: 0.85 },
-  projekte: { env: 0.7, key: 1.1, hemi: 0.32, spot: 0, rim: 0.5, fog: [8, 30], bloom: 0.55 },
-  gewaehlt: { env: 0.7, key: 1.1, hemi: 0.32, spot: 0, rim: 0.5, fog: [7, 26], bloom: 0.55 },
+  projekte: { env: 0.7, key: 1.1, hemi: 0.32, spot: 0, rim: 0.5, fog: [7, 26], bloom: 0.55 },
   ende: { env: 0.35, key: 0.85, hemi: 0.3, spot: 0, rim: 0.3, fog: [300, 900], bloom: 0.85 },
 };
 
 // Bis wann (s im Schritt) sich schattenwerfende Dinge bewegen
-const SCHATTEN_BIS = { gewaehlt: 1.6, projekte: 4.6, schublade: 2.5, muell: 3.6, ring: 3.5, station: 5.2, lernen: 6.0, haube: 2.6, wahl: 1.5, bausatz: 4.2, monitor: 0.5 };
+const SCHATTEN_BIS = { projekte: 3.2, schublade: 2.5, muell: 3.6, ring: 3.5, station: 5.2, lernen: 6.0, haube: 2.6, wahl: 1.5, bausatz: 4.2, monitor: 0.5 };
 
 // ---------- Bausteine ----------------------------------------------------------------------------
 function rbox(w, h, d, r, mat, seg = 3) {
@@ -426,9 +425,9 @@ export async function buildWorld(engine) {
   floor(scene, renderer);
   const glowTex = glowTexture();
 
-  const [phoneJ, ...drawerJ] = await Promise.all(['smartphone', 'phone_charger', 'usb_cable', 'earbuds', 'power_bank', 'remote_control', 'wired_earphones', 'computer_mouse', 'laptop', 'webcam', 'shoebox', 'pet_bottle', 'picture_frame']
+  const [phoneJ, ...drawerJ] = await Promise.all(['smartphone', 'phone_charger', 'usb_cable', 'earbuds', 'power_bank', 'remote_control', 'wired_earphones', 'computer_mouse', 'laptop', 'webcam', 'shoebox']
     .map((id) => ladeKategorie(id)));
-  const [chargerJ, , earbudsJ, powerJ, remoteJ, wiredJ, mouseJ, laptopJ, webcamJ, shoeJ, bottleJ, frameJ] = drawerJ;
+  const [chargerJ, , earbudsJ, powerJ, remoteJ, wiredJ, mouseJ, laptopJ, webcamJ, shoeJ] = drawerJ;
   const deJ = await (await fetch(new URL('./assets/deutschland.json', import.meta.url))).json();
 
   // Kommode und Tonne am Punkt „Gegenstand“
@@ -714,12 +713,10 @@ export async function buildWorld(engine) {
   webcam.root.position.set(laptopB / 2, 14, laptopT + 13);
   webcam.root.rotation.set(Math.PI, 0, 0);
 
-  // Projekte (Szene „Neues bauen“): drei Sockel in der Mitte, Teile fliegen zusammen
+  // Projekt (Szene „Neues bauen“): ein Sockel in der Mitte mit der Musik-Box, Teile fliegen zusammen
   const projM = new THREE.MeshPhysicalMaterial({ color: '#1d2126', roughness: 0.35, metalness: 0.3, clearcoat: 0.6 });
   const quat = (x, y, z, order = 'XYZ') => new THREE.Quaternion().setFromEuler(new THREE.Euler(x, y, z, order));
   const hochkant = quat(Math.PI / 2, 0, 0);                                             // Handy steht, Display nach vorn
-  // Weißes Passepartout leuchtet unter dem Bloom zu stark
-  const gedaempft = (m) => { for (const t of m.teile) if (/Passepartout|Fotoabzug/.test(t.name)) t.mesh.material.color.multiplyScalar(0.6); return m; };
   const handy = (bild) => {
     const m = baueModell(phoneJ, { pivot: 'mitte', glasEinfach: true });
     dunklesHandy(m);
@@ -736,22 +733,12 @@ export async function buildWorld(engine) {
     }
     return m;
   };
-  // Bilderrahmen steht leicht nach hinten geneigt, das Handy liegt hinter dem Glas statt des Fotos
-  const qRahmen = quat(0, -0.18, 0).multiply(quat(Math.PI / 2 - 0.22, 0, 0));
-  const nRahmen = v(0, 1, 0).applyQuaternion(qRahmen);
+  // Only one idea on stage (the Musik-Box): one key press less than three pillars plus a "chosen" step
   const PROJ = [
-    { name: 'Laterne', aus: 'Handy + Wasserflasche', lager: 'PET-Flasche', pos: v(-0.74, 0, 0.32), teile: [
-      [handy(), v(0, 0.0043, 0), quat(0, 0.4, Math.PI)],                                   // Display nach unten, Lampe nach oben
-      [baueModell(bottleJ, { glasEinfach: true }), v(0, 0.0087, 0), quat(0, 0.3, 0)]], licht: v(0, 0.1, 0) },
-    { name: 'Musik-Box', aus: 'Handy + Schuhkarton', lager: 'Schuhkarton', pos: v(0, 0, 0.52), teile: [
+    { name: 'Musik-Box', lager: 'Schuhkarton', pos: v(0, 0, 0.62), teile: [
       [baueModell(shoeJ, { glasEinfach: true }), v(0, 0, 0), quat(0, 0.15, 0)],
       [handy('musik'), v(0.01, 0.152, 0.01), quat(0, 0.15, 0).multiply(hochkant)]] },
-    { name: 'Bilderrahmen', aus: 'Handy + Bilderrahmen', lager: 'Bilderrahmen', pos: v(0.74, 0, 0.32), teile: [
-      [gedaempft(baueModell(frameJ, { glasEinfach: true, pivot: 'mitte' })), v(0, 0.118, 0.02), qRahmen],
-      [handy('foto'), v(0, 0.118, 0.02).addScaledVector(nRahmen, 0.002), qRahmen]] },
   ];
-  const MITTE = v(0, 0, 0.62);
-  let wahlProjekt = 1;
   for (const pr of PROJ) {
     pr.sockel = new THREE.Group();
     pr.sockel.position.copy(pr.pos);
@@ -761,14 +748,7 @@ export async function buildWorld(engine) {
     rim.rotation.x = Math.PI / 2;
     scene.add(pr.sockel);
     for (const [m] of pr.teile) scene.add(m.root);
-    pr.label = engine.addLabel(`<b>${pr.name}</b><span>${pr.aus}</span>`, 'project');
-    pr.labelGew = engine.addLabel(`<b>${pr.name}</b><span>Handy + ${pr.lager} aus dem Lager</span>`, 'project big');
-    if (pr.licht) {
-      pr.glowMat = new THREE.SpriteMaterial({ map: glowTex, color: hdr('#ffd9a0', 2.2), transparent: true, opacity: 0, depthWrite: false, blending: THREE.AdditiveBlending });
-      pr.glow = new THREE.Sprite(pr.glowMat);
-      pr.glow.scale.setScalar(0.24);
-      scene.add(pr.glow);
-    }
+    pr.label = engine.addLabel(`<b>${pr.name}</b><span>Handy + ${pr.lager}</span>`, 'project big gewaehlt');
   }
   const lagerLabel = engine.addLabel('', 'stamp ok');
 
@@ -848,8 +828,7 @@ export async function buildWorld(engine) {
     energie: { pos: v(-1.6, 10.6, R + 7.4), target: v(0.3, -0.4, 0.5) },
     station: { pos: v(2.2, 9.4, R + 7.2), target: v(0.6, -0.2, 0.9) },
     lernen: { pos: nrm(LERN_A0).multiplyScalar(R + 6.4).add(v(-1.8, 11.2, 0)), target: nrm(LERN_A0).multiplyScalar(1.4).add(v(-0.3, 0, 0)) },
-    projekte: { pos: v(0, 1.32, 2.4), target: v(0, 0.6, 0.38) },
-    gewaehlt: { pos: v(0.05, 1.18, 2.05), target: v(0, 0.74, 0.62) },
+    projekte: { pos: v(0.05, 1.18, 2.05), target: v(0, 0.74, 0.62) },
     monitor: { pos: screenCenter.clone().addScaledVector(ns, 1.42).addScaledVector(ts, -0.26).add(v(0, 0.06, 0)), target: screenCenter.clone().addScaledVector(ts, -0.2).add(v(0, -0.17, 0)), noDrift: true },
     live: null,                                                  // hängt vom Seitenverhältnis ab, siehe shot()
     haube: { pos: Ps.clone().addScaledVector(ns, 3.6).addScaledVector(ts, -1.45).add(v(0, 2.95, 0)), target: Ps.clone().addScaledVector(ts, 0.02).add(v(0, 1.92, 0)) },
@@ -1221,23 +1200,17 @@ export async function buildWorld(engine) {
     lab.terminal.pos.set(0.2, 0.84, 0.02);
     lab.terminal.show = k === K.bausatz ? sm(t, 3.9, 4.3) : 0;
 
-    // Projekte: Sockel steigen auf, Teile fliegen zusammen. Im nächsten Schritt rückt das gewählte in die Mitte.
-    PROJ.forEach((pr, i) => {
-      const gew = k === K.gewaehlt && i === wahlProjekt;
-      const weg = k === K.gewaehlt && !gew ? sm(t, 0, 0.9) : 0;
-      const rise = k === K.projekte ? sm(t, 0.2 + i * 0.25, 1.1 + i * 0.25) : k === K.gewaehlt ? 1 - weg : 0;
-      const move = gew ? sm(t, 0.2, 1.4) : 0;
-      const hebe = k === K.projekte && i === wahlProjekt ? sm(t, 1.0, 1.6) * 0.06 : k === K.gewaehlt && gew ? 0.06 : 0;
-      const bx = lerp(pr.pos.x, MITTE.x, move), bz = lerp(pr.pos.z, MITTE.z, move), by = -0.52 * (1 - rise) + hebe;
+    // Projekt: Sockel steigt auf, Teile fliegen zusammen, dann Name und „aus dem Lager“
+    PROJ.forEach((pr) => {
+      const an = k === K.projekte;
+      const rise = an ? sm(t, 0.2, 1.1) : 0;
+      const hebe = an ? sm(t, 1.0, 1.6) * 0.06 : 0;
+      const bx = pr.pos.x, bz = pr.pos.z, by = -0.52 * (1 - rise) + hebe;
       pr.sockel.visible = rise > 0.001;
       pr.sockel.position.set(bx, by, bz);
-      const vor = (k === K.projekte || k === K.gewaehlt) && i === wahlProjekt;
-      pr.rimMat.color.copy(hdr(COL.teal, vor ? 2.6 + 0.6 * Math.sin(time * 3) : 0.9));
-      pr.label.el.classList.toggle('gewaehlt', vor);
-      let gelandet = 1;
+      pr.rimMat.color.copy(hdr(COL.teal, an ? 2.6 + 0.6 * Math.sin(time * 3) : 0.9));
       pr.teile.forEach(([m, p, qEnd], j) => {
-        const land = k === K.projekte ? sm(t, 1.1 + i * 0.6 + j * 0.4, 2.2 + i * 0.6 + j * 0.4) : 1;
-        gelandet = Math.min(gelandet, land);
+        const land = an ? sm(t, 1.1 + j * 0.4, 2.2 + j * 0.4) : 1;
         m.root.visible = rise > 0.001 && land > 0.001;
         if (!m.root.visible) return;
         tmp.set(bx + p.x, by + 0.5 + p.y, bz + p.z);
@@ -1246,21 +1219,12 @@ export async function buildWorld(engine) {
         m.qStart ??= qEnd.clone().premultiply(new THREE.Quaternion().setFromEuler(new THREE.Euler(0.7, 1.4, 0.2)));
         m.root.quaternion.slerpQuaternions(m.qStart, qEnd, land);
       });
-      if (pr.glow) {
-        pr.glow.position.set(bx + pr.licht.x, by + 0.5 + pr.licht.y, bz + pr.licht.z);
-        pr.glowMat.opacity = (rise > 0.001 ? gelandet : 0) * (0.55 + 0.08 * Math.sin(time * 5.3) * Math.sin(time * 3.1));
-        pr.glow.visible = pr.glowMat.opacity > 0.01;
-      }
-      pr.label.pos.set(bx, 0.9 + by, bz);
-      pr.label.show = k === K.projekte ? sm(t, 2.2 + i * 0.6, 2.8 + i * 0.6) : 0;
-      pr.labelGew.pos.set(bx, 1.0 + by, bz);
-      pr.labelGew.show = gew ? sm(t, 1.2, 1.8) : 0;
-      if (gew) {
-        engine.setLabelHtml(lagerLabel, `✓ ${pr.lager} aus dem Lager`);
-        lagerLabel.pos.set(bx + 0.3, 0.62 + by, bz + 0.1);
-      }
+      pr.label.pos.set(bx, 1.0 + by, bz);
+      pr.label.show = an ? sm(t, 2.4, 3.0) : 0;
+      engine.setLabelHtml(lagerLabel, `✓ ${pr.lager} aus dem Lager`);
+      lagerLabel.pos.set(bx + 0.3, 0.62 + by, bz + 0.1);
+      lagerLabel.show = an ? sm(t, 3.0, 3.5) : 0;
     });
-    lagerLabel.show = k === K.gewaehlt ? sm(t, 1.9, 2.4) : 0;
 
     // Deutschlandkarte mit Werkstätten: Welle von Hamburg aus
     const karteAn = k === K.ueberall ? sm(t, 0.4, 1.8) : k === K.ende ? 1 : 0;
@@ -1314,15 +1278,5 @@ export async function buildWorld(engine) {
     return r;
   }
 
-  // Klick auf eine Säule: welches Projekt?
-  const ray = new THREE.Raycaster();
-  function pickProjekt(ndc) {
-    ray.setFromCamera(ndc, engine.camera);
-    const hit = ray.intersectObjects(PROJ.flatMap((pr) => [pr.sockel, ...pr.teile.map(([m]) => m.root)]), true)[0];
-    if (!hit) return -1;
-    return PROJ.findIndex((pr) => [pr.sockel, ...pr.teile.map(([m]) => m.root)].some((o) => { let x = hit.object; while (x) { if (x === o) return true; x = x.parent; } return false; }));
-  }
-  const setProjekt = (i) => { wahlProjekt = i; };
-
-  return { update, shot, pickProjekt, setProjekt, screenCorners, screenNormal, screenPos, allVisible, seen };
+  return { update, shot, screenCorners, screenNormal, screenPos, allVisible, seen };
 }

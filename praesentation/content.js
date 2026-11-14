@@ -71,11 +71,7 @@ export const slides = [
       },
       {
         id: 'projekte', name: 'Bauideen', caption: 'Aus Altem wird Neues.',
-        notes: 'Und jetzt der Teil, der Spaß macht: Der Scanner schlägt drei Projekte vor, die das alte Handy plus Material aus dem Lager der Werkstatt nutzen. [Hervorgehoben ist die Auswahl; Klick auf eine Säule ändert sie, → zeigt das gewählte Projekt.]',
-      },
-      {
-        id: 'gewaehlt', name: 'Projekt gewählt', caption: '',
-        notes: 'Wir nehmen die Musik-Box: Das Handy steckt im Deckel eines Schuhkartons, der Karton verstärkt den Klang. Der Schuhkarton kommt aus dem Lager der Werkstatt.',
+        notes: 'Und jetzt der Teil, der Spaß macht: Aus dem alten Handy wird eine Musik-Box. Das Handy steckt im Deckel eines Schuhkartons, der Karton verstärkt den Klang. Der Schuhkarton kommt aus dem Lager der Werkstatt.',
       },
     ],
   },

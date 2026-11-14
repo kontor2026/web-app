@@ -91,7 +91,6 @@ function go(k, { instant = false, backwards = false, replay = false } = {}) {
   setModeText();
 }
 
-// Bei den Bauideen wählt „weiter“ die mittlere; ein Klick auf eine Säule wählt diese (siehe unten)
 const next = () => go(state.k + 1);
 const prev = () => go(state.k - 1, { backwards: true });
 
@@ -287,15 +286,6 @@ $('#qr .url').textContent = QR_URL;
 document.querySelectorAll('.produktname').forEach((el) => { el.textContent = PRODUKTNAME; });
 document.title = PRODUKTNAME;
 $('#qr .text').textContent = QR_TEXT;
-
-// Bauideen: Klick (ohne Ziehen) auf eine Säule wählt dieses Projekt aus
-let druck = null;
-$('#world').addEventListener('pointerdown', (e) => { druck = [e.clientX, e.clientY]; });
-$('#world').addEventListener('pointerup', (e) => {
-  if (!druck || STEPS[state.k]?.id !== 'projekte' || Math.hypot(e.clientX - druck[0], e.clientY - druck[1]) > 5) return;
-  const i = world.pickProjekt({ x: (e.clientX / innerWidth) * 2 - 1, y: -(e.clientY / innerHeight) * 2 + 1 });
-  if (i >= 0) world.setProjekt(i);                  // Hervorhebung wandert, → zeigt das gewählte Projekt
-});
 
 // Für Prüfskripte: direkt zu einem Schritt springen (Endzustand) und warten, bis die Kamera steht
 window.__praesi = {

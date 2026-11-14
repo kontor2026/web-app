@@ -8,7 +8,7 @@ Zahlen nur so sagen, wie sie hier stehen. Sie kommen aus dem Repo oder aus unser
 - **Lösung:** Der ReSource Scanner erkennt einen Gegenstand per Kamera und zeigt, was drinsteckt, was es wert ist und was man daraus bauen kann.
 - **Nutzen:** Jugendliche erleben den Wert ihrer Sachen am eigenen Gegenstand. Wer versteht, wirft nicht weg.
 
-**Rollen (Vorschlag, höchstens zwei Wechsel):** Person A übernimmt Attention, Interest bis Schritt 7 und den Schluss. Person B macht die Demo und die Technik (8–13). A übernimmt wieder ab Schritt 14.
+**Rollen (Vorschlag, höchstens zwei Wechsel):** Person A übernimmt Attention, Interest bis Schritt 7 und den Schluss. Person B macht die Demo und die Technik (8–12). A übernimmt wieder ab Schritt 13.
 
 ---
 
@@ -39,15 +39,14 @@ Zahlen nur so sagen, wie sie hier stehen. Sie kommen aus dem Repo oder aus unser
 |---|---|---|---|
 | 1:40–1:45 | 8 Station | Kamera vor dem Monitor | „Und das zeigen wir jetzt live.“ |
 | 1:45–3:00 | 9 **Live-Demo** | App im Vollbild | Ein Beispiel von Anfang bis Ende, keine Funktions-Tour: Handy-Foto → Kandidat bestätigen („Die KI schlägt vor, ich bestätige.“) → Explosionszeichnung → Akku antippen → Kobalt und Herkunft → Entsorgung → Bauideen. **Danach X.** |
-| 3:00–3:15 | 10 Bauideen | Drei Säulen, die mittlere ist hervorgehoben | „Drei Ideen aus dem alten Handy plus Material aus dem Werkstattlager. Wir nehmen die Musik-Box.“ *(→ oder auf eine Säule klicken)* |
-| 3:15–3:30 | 11 Projekt gewählt | Musik-Box rückt in die Mitte | „Der Schuhkarton kommt aus dem Lager, das Handy wird zum Lautsprecher. Aus Altem wird Neues.“ |
+| 3:00–3:30 | 10 Bauideen | Eine Säule, die Musik-Box baut sich zusammen, „Schuhkarton aus dem Lager“ | „Aus dem alten Handy wird eine Musik-Box: Der Schuhkarton kommt aus dem Lager, das Handy wird zum Lautsprecher. Aus Altem wird Neues.“ |
 
 ## D · Desire (3:30–4:20)
 
 | Zeit | Schritt | Bild | Sagen |
 |---|---|---|---|
-| 3:30–4:00 | 12 Unter der Haube | Drei Container, Datenbank, Messwerte | „Unter der Haube: Die KI erkennt nur, was es ist. Alles Weitere kommt aus unserer Datenbank mit 201 Gegenständen: Bauteile, Materialien, Herkunft, alle mit Quellen. Unser Ziel war ein Demonstrator vom realen Material bis zum Nutzungsvorschlag. Ergebnis: **28 von 30 Testfotos richtig erkannt, 93 Prozent, in höchstens 5 Sekunden.** Was die KI neu anlegt, bleibt ein Entwurf, bis die Werkstatt es freigibt.“ |
-| 4:00–4:20 | 13 Deine Wahl | Schalter Lokal ↔ Cloud | „Und wo die KI läuft, entscheidet ihr: lokal, dann verlässt kein Foto das Haus, oder mit eurem eigenen Cloud-Zugang. Wir sperren niemanden ein. Der Code ist offen.“ |
+| 3:30–4:00 | 11 Unter der Haube | Drei Container, Datenbank, Messwerte | „Unter der Haube: Die KI erkennt nur, was es ist. Alles Weitere kommt aus unserer Datenbank mit 201 Gegenständen: Bauteile, Materialien, Herkunft, alle mit Quellen. Unser Ziel war ein Demonstrator vom realen Material bis zum Nutzungsvorschlag. Ergebnis: **28 von 30 Testfotos richtig erkannt, 93 Prozent, in höchstens 5 Sekunden.** Was die KI neu anlegt, bleibt ein Entwurf, bis die Werkstatt es freigibt.“ |
+| 4:00–4:20 | 12 Deine Wahl | Schalter Lokal ↔ Cloud | „Und wo die KI läuft, entscheidet ihr: lokal, dann verlässt kein Foto das Haus, oder mit eurem eigenen Cloud-Zugang. Wir sperren niemanden ein. Der Code ist offen.“ |
 
 **Wechsel zu Person A**
 
@@ -55,15 +54,15 @@ Zahlen nur so sagen, wie sie hier stehen. Sie kommen aus dem Repo oder aus unser
 
 | Zeit | Schritt | Bild | Sagen |
 |---|---|---|---|
-| 4:20–4:32 | 14 Bausatz | Laptop klappt auf, Webcam, `docker compose up` | „Was braucht eine Werkstatt? Einen Laptop, eine Kamera, einen Befehl. Rund 100 Euro Hardware, unter einem Euro Betrieb am Tag.“ |
-| 4:32–4:45 | 15 Überall | Deutschlandkarte, Welle ab Lübeck, QR-Code oben links | „Im Dezember und Januar starten wir mit 10 bis 15 Schülern in Lübeck, zusammen mit der AllWeShape gGmbH. Ab Februar läuft der Regelbetrieb. Und dann kann jede Werkstatt in Deutschland so eine Station aufstellen. Über den QR-Code könnt ihr schon heute schauen, was in euren Sachen steckt.“ |
-| 4:45–5:00 | 16 Bring es mit | Text kippt: Handy, Laptop, Powerbank … → Name | **Schlusssatz (auswendig):** „Also: Holt euer altes Handy aus der Schublade. Ab Februar 2027 in der Schützenstraße 62 in Lübeck. ReSource Scanner: KI für die Kreislaufwirtschaft von morgen.“ |
+| 4:20–4:32 | 13 Bausatz | Laptop klappt auf, Webcam, `docker compose up` | „Was braucht eine Werkstatt? Einen Laptop, eine Kamera, einen Befehl. Rund 100 Euro Hardware, unter einem Euro Betrieb am Tag.“ |
+| 4:32–4:45 | 14 Überall | Deutschlandkarte, Welle ab Lübeck, QR-Code oben links | „Im Dezember und Januar starten wir mit 10 bis 15 Schülern in Lübeck, zusammen mit der AllWeShape gGmbH. Ab Februar läuft der Regelbetrieb. Und dann kann jede Werkstatt in Deutschland so eine Station aufstellen. Über den QR-Code könnt ihr schon heute schauen, was in euren Sachen steckt.“ |
+| 4:45–5:00 | 15 Bring es mit | Text kippt: Handy, Laptop, Powerbank … → Name | **Schlusssatz (auswendig):** „Also: Holt euer altes Handy aus der Schublade. Ab Februar 2027 in der Schützenstraße 62 in Lübeck. ReSource Scanner: KI für die Kreislaufwirtschaft von morgen.“ |
 
 ---
 
 ## Zeitregeln
 
-- **4:00 erreicht:** Demo und Ergebnis müssen durch sein, sonst Schritt 13 kürzen.
+- **4:00 erreicht:** Demo und Ergebnis müssen durch sein, sonst Schritt 12 kürzen.
 - **5:00 erreicht:** nur noch den Schlusssatz.
 - **Puffer:** Schritt 5 (graue Energie) kann auf einen Satz schrumpfen.
 

@@ -32,23 +32,22 @@ node tools/serve.cjs 5181 --tunnel                                       # Präs
 | | | 7 Lernkreislauf | Brücke von der Station in den inneren Kreis, Wissen fließt in ein Gehirn, Brücke zurück („Katalog wächst“) | Was man versteht, wirft man nicht weg. |
 | **I** | 1:50–3:30 | 8 Station | Kamera vor den Monitor, die App liegt perspektivisch genau auf dem Bildschirm | – |
 | | | 9 **Live** | Flug in den Bildschirm, die App füllt das Bild und ist bedienbar (ca. 1:10) | – |
-| | | 10 Bauideen | Nach der Demo (X): Laterne, Musik-Box, Bilderrahmen. Die Auswahl ist sofort hervorgehoben, **Klick auf eine Säule ändert sie** | Aus Altem wird Neues. |
-| | | 11 Projekt gewählt | Die gewählte Säule rückt in die Mitte, „Schuhkarton aus dem Lager“ | – |
-| **D** | 3:30–4:20 | 12 Unter der Haube | Container und Datenbank, Paket: Foto-Abgleich → KI erkennt die Kategorie → Prüftor → Datenbank → Bildschirm. Rechts oben **93 % · 28 von 30** und **≤ 5 s** | Die KI erkennt. Die Datenbank weiß. Der Mensch entscheidet. |
-| | | 13 Deine Wahl | Haus um die Station, Schalter Lokal ↔ Cloud | Du entscheidest, wohin dein Foto geht. |
-| **A** | 4:20–5:00 | 14 Bausatz | Laptop klappt auf, Webcam oben, `docker compose up` | Ein Laptop. Eine Kamera. Ein Befehl. · ca. 100 € Hardware, unter 1 € am Tag |
-| | | 15 Überall | Deutschlandkarte, Welle von Lübeck aus („Pilot ab Dezember · 10–15 Schüler“), **QR-Code oben links** | Eine Station. Dann jede Werkstatt. |
-| | | 16 Bring es mit | „Bring dein altes Handy mit.“ kippt durch Laptop, Powerbank, Kopfhörer, Ladekabel, dann zu Name und Schlusssatz; Lübeck: „ab Februar 2027 · Schützenstraße 62“; QR bleibt | ReSource Scanner · KI für die Kreislaufwirtschaft von morgen. |
+| | | 10 Bauideen | Nach der Demo (X): eine Säule in der Mitte steigt auf, die Musik-Box (Handy + Schuhkarton) baut sich zusammen, „Schuhkarton aus dem Lager“ | Aus Altem wird Neues. |
+| **D** | 3:30–4:20 | 11 Unter der Haube | Container und Datenbank, Paket: Foto-Abgleich → KI erkennt die Kategorie → Prüftor → Datenbank → Bildschirm. Rechts oben **93 % · 28 von 30** und **≤ 5 s** | Die KI erkennt. Die Datenbank weiß. Der Mensch entscheidet. |
+| | | 12 Deine Wahl | Haus um die Station, Schalter Lokal ↔ Cloud | Du entscheidest, wohin dein Foto geht. |
+| **A** | 4:20–5:00 | 13 Bausatz | Laptop klappt auf, Webcam oben, `docker compose up` | Ein Laptop. Eine Kamera. Ein Befehl. · ca. 100 € Hardware, unter 1 € am Tag |
+| | | 14 Überall | Deutschlandkarte, Welle von Lübeck aus („Pilot ab Dezember · 10–15 Schüler“), **QR-Code oben links** | Eine Station. Dann jede Werkstatt. |
+| | | 15 Bring es mit | „Bring dein altes Handy mit.“ kippt durch Laptop, Powerbank, Kopfhörer, Ladekabel, dann zu Name und Schlusssatz; Lübeck: „ab Februar 2027 · Schützenstraße 62“; QR bleibt | ReSource Scanner · KI für die Kreislaufwirtschaft von morgen. |
 
 Sprechertext je Schritt: Taste **T** (steht in `content.js`). Die Jury-Kriterien aus `data/rating.md` werden gezeigt, aber nicht benannt:
 
 | Kriterium | Wo |
 |---|---|
 | New Approach | 4–7: der Weg reißt ab, graue Energie geht verloren, die Station schließt den Kreis, Lernkreis |
-| Usability | 9–11: Live-App und Bauideen |
-| Technical Solution | 12 (Container, Datenbank, Messwerte gegen das Ziel) |
-| Responsible Use of AI | 12 (KI nur für die Kategorie, Wissen aus der Datenbank mit Quellen, Mensch gibt frei) und 13 (lokal oder Cloud, Open Source) |
-| Makeability | 14–16 (Kosten, Pilot in Lübeck, Regelbetrieb ab Februar) |
+| Usability | 9–10: Live-App und Bauideen |
+| Technical Solution | 11 (Container, Datenbank, Messwerte gegen das Ziel) |
+| Responsible Use of AI | 11 (KI nur für die Kategorie, Wissen aus der Datenbank mit Quellen, Mensch gibt frei) und 12 (lokal oder Cloud, Open Source) |
+| Makeability | 13–15 (Kosten, Pilot in Lübeck, Regelbetrieb ab Februar) |
 | Pitch | durchgehend ein Gegenstand, kaum Text |
 
 ## Tasten
@@ -58,7 +57,6 @@ Sprechertext je Schritt: Taste **T** (steht in `content.js`). Die Jury-Kriterien
 | → ↓ Leertaste Bild↓ (Clicker) | weiter |
 | ← ↑ Bild↑ | zurück (Schritt im Endzustand) |
 | **X** | in die App und wieder heraus. In Schritt 9 führt X weiter zu den Bauideen. Von jeder anderen Folie springt X in die App und mit X wieder genau dorthin zurück (für Rückfragen). |
-| Klick auf eine Säule | wählt bei den Bauideen dieses Projekt |
 | **F** | Vollbild ohne Browserleiste |
 | 1–5 | direkt zur Folie |
 | Z | Animation des Schritts von vorn |
