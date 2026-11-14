@@ -117,15 +117,18 @@ function zeigeIdeen() {
         const n = postenName(p, teile, name), k = `${r.id}:${p.component_id}`;
         return `<div class="use ${p.ok ? 'da' : 'fehlt'}"><i></i><span title="${esc(n.alle)}">${esc(n.text)}${n.mehr ? ` <small>+${n.mehr}</small>` : ''}</span>
           <span class="q">${p.soll > 1 ? `${Math.min(p.da, p.soll)}/${geschaetzt(p) ? '≈' : ''}${p.soll}` : ''}</span>
-          <span></span></div>
-          ${p.ok ? '' : `<details class="wb-wo" data-k="${k}" ${offen.has(k) ? 'open' : ''}><summary>Wo finde ich das?</summary><div class="wb-quellen">${p.ids.flatMap((id) => K[id]?.in ?? []).filter((v, j, a) => a.indexOf(v) === j).slice(0, 6).map((oid) => `
-            <div>${bild(oid, 'mini')}<a href="../atlas/#kat=${oid}">${esc(objektVon.get(oid)?.name ?? oid)}</a><button data-id="${oid}" data-d="1" aria-label="hinzufügen">+</button></div>`).join('')}</div></details>`}`;
+          <span></span></div>`;
       }).join('')}</div>
+      <div class="idee-klappen">
+      ${s.posten.some((p) => !p.ok) ? `<details class="wb-wo" data-k="${r.id}" ${offen.has(r.id) ? 'open' : ''}><summary>Wo finde ich das?</summary>${s.posten.filter((p) => !p.ok).map((p) => `
+        <div class="wb-quellen"><b>${esc(postenName(p, teile, name).text)}</b>${p.ids.flatMap((id) => K[id]?.in ?? []).filter((v, j, a) => a.indexOf(v) === j).slice(0, 4).map((oid) => `
+          <div>${bild(oid, 'mini')}<a href="../atlas/#kat=${oid}">${esc(objektVon.get(oid)?.name ?? oid)}</a><button data-id="${oid}" data-d="1" aria-label="hinzufügen">+</button></div>`).join('')}</div>`).join('')}</details>` : ''}
       <details class="wb-anleitung"><summary>Anleitung</summary>
         <div class="tools">${(r.werkzeug ?? []).map((w) => `<span class="tag">${esc(WERKZEUG[w] ?? w)}</span>`).join('')}</div>
         <ol class="steps-list">${(r.schritte ?? []).map((x) => `<li>${esc(x)}</li>`).join('')}</ol>
         ${r.sicherheit ? `<p class="note warn">${esc(r.sicherheit)}</p>` : ''}
         <p class="wb-quelle">${chip(r.quelle?.url, r.quelle?.titel, 'Quelle', { was: `Anleitung: ${r.titel}` })}${s.posten.some(geschaetzt) ? '<span class="chip-q schaetzung" title="Mengen mit ≈ sind geschätzt">≈ Schätzung</span>' : ''}</p></details>
+      </div>
     </article>`).join('');
   beobachte(document.getElementById('ideen'));
 }

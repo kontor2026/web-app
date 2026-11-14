@@ -91,3 +91,9 @@
 .korb-leeren { height: 48px; gap: 6px; padding: 0 14px; min-width: 0; }
 .korb-leeren .icon { width: 16px; height: 16px; }
 @media (max-width: 900px) { .korb-knoepfe { margin: 0 0 0 auto; } .korb-leeren { height: 44px; padding: 0 10px; } .korb-leeren { font-size: 0; gap: 0; } .korb-leeren .icon { width: 18px; height: 18px; } }
+
+/* „Wo finde ich das?“ und „Anleitung“ als Gruppe am Kartenende */
+.idee-klappen { display: grid; margin-top: auto; border-top: 1px solid var(--rule); }
+.idee-klappen > details + details { border-top: 1px solid var(--rule-2); }
+.idee-klappen .wb-quellen { padding: 2px 0 8px; }
+.idee-klappen .wb-quellen > b { font: 500 12px var(--sans); color: var(--ink-2); padding-top: 4px; }
