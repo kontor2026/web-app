@@ -238,11 +238,10 @@ function zeigeUpcycling() {
     .map((r) => ({ r, s: stand(r, mitDiesem) })).sort((a, b) => b.s.ok / b.s.alle - a.s.ok / a.s.alle);
   const name = (cid) => daten.komponenten?.[cid]?.name ?? cid;
   setzePanel(passend.length ? `<div class="lw-rezepte">${passend.map(({ r, s }) => `
-    <article class="lw-rezept"><div class="lw-rezept-kopf"><h2>${esc(r.titel)}</h2><span class="wb-status ${s.baubar ? 'ok' : ''}">${s.baubar ? 'Baubar' : 'Fehlt noch'}</span></div>
-      <p class="lw-hinweis">${esc(r.kurz ?? '')}</p>
-      <div class="uses">${s.posten.map((p) => `<div class="use ${p.ok ? 'da' : 'fehlt'}"><i></i><span title="${esc(postenName(p, mitDiesem, name).alle)}">${esc(postenName(p, mitDiesem, name).text)}${postenName(p, mitDiesem, name).mehr ? ` <small>+${postenName(p, mitDiesem, name).mehr}</small>` : ''}</span><span class="q">${Math.min(p.da, p.soll)} von ${geschaetzt(p) ? '≈' : ''}${p.soll}</span></div>`).join('')}</div>
+    <article class="lw-rezept"><div class="lw-rezept-kopf"><h2>${esc(r.titel)}</h2>${s.baubar ? `<span class="haken" title="Alles da">${icon('haken')}</span>` : ''}</div>
+      <div class="uses">${s.posten.map((p) => `<div class="use ${p.ok ? 'da' : 'fehlt'}"><i></i><span title="${esc(postenName(p, mitDiesem, name).alle)}">${esc(postenName(p, mitDiesem, name).text)}${postenName(p, mitDiesem, name).mehr ? ` <small>+${postenName(p, mitDiesem, name).mehr}</small>` : ''}</span><span class="q">${p.soll > 1 ? `${geschaetzt(p) ? '≈' : ''}${p.soll}×` : ''}</span></div>`).join('')}</div>
       <p class="lw-fuss">${esc(r.dauer ?? '')}${chip(r.quelle?.url, r.quelle?.titel)}</p></article>`).join('')}</div>
-    <a class="btn ghost" href="../werkbank/">Zur Werkbank →</a>`
+    <a class="btn ghost" href="../werkbank/#bauen">${icon('werkbank')}Werkbank<span class="pfeil">→</span></a>`
     : `<p class="note">${REZEPTE?.length ? 'Noch keine Bauidee nutzt Teile dieses Gegenstands.' : 'Die Bauideen werden gerade geschrieben.'}</p>`);
 }
 

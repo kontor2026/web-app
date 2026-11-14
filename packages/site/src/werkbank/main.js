@@ -110,15 +110,14 @@ function zeigeIdeen() {
     .sort((a, b) => b.s.baubar - a.s.baubar || b.s.ok / b.s.alle - a.s.ok / a.s.alle || a.r.titel.localeCompare(b.r.titel, 'de'));
   document.getElementById('ideen').innerHTML = alle.map(({ r, s }, i) => `
     <article class="idee ${s.baubar ? 'baubar' : ''}">
-      <div class="idee-kopf"><span class="lw-nr">${String(i + 1).padStart(2, '0')}</span><span class="wb-status ${s.baubar ? 'ok' : ''}">${s.baubar ? 'Baubar' : 'Fehlt noch'}</span></div>
-      <h2>${esc(r.titel)}</h2>
+      <div class="idee-kopf"><h2>${esc(r.titel)}</h2>${s.baubar ? `<span class="haken" title="Alles da">${icon('haken')}</span>` : ''}</div>
       <div class="uses">${s.posten.map((p) => {
         const n = postenName(p, teile, name), k = `${r.id}:${p.component_id}`;
         return `<div class="use ${p.ok ? 'da' : 'fehlt'}"><i></i><span title="${esc(n.alle)}">${esc(n.text)}${n.mehr ? ` <small>+${n.mehr}</small>` : ''}</span>
-          <span class="q">${Math.min(p.da, p.soll)} von ${geschaetzt(p) ? '≈' : ''}${p.soll}</span>
-          ${p.ok ? '<span></span>' : `<button class="wb-wo" data-k="${k}" aria-expanded="${offen.has(k)}">Wo?</button>`}</div>
-          ${!p.ok && offen.has(k) ? `<div class="wb-quellen">${p.ids.flatMap((id) => K[id]?.in ?? []).filter((v, j, a) => a.indexOf(v) === j).slice(0, 6).map((oid) => `
-            <div>${bild(oid, 'mini')}<a href="../atlas/#kat=${oid}">${esc(objektVon.get(oid)?.name ?? oid)}</a><button data-id="${oid}" data-d="1" aria-label="hinzufügen">+</button></div>`).join('')}</div>` : ''}`;
+          <span class="q">${p.soll > 1 ? `${Math.min(p.da, p.soll)}/${geschaetzt(p) ? '≈' : ''}${p.soll}` : ''}</span>
+          <span></span></div>
+          ${p.ok ? '' : `<details class="wb-wo" data-k="${k}" ${offen.has(k) ? 'open' : ''}><summary>Wo finde ich das?</summary><div class="wb-quellen">${p.ids.flatMap((id) => K[id]?.in ?? []).filter((v, j, a) => a.indexOf(v) === j).slice(0, 6).map((oid) => `
+            <div>${bild(oid, 'mini')}<a href="../atlas/#kat=${oid}">${esc(objektVon.get(oid)?.name ?? oid)}</a><button data-id="${oid}" data-d="1" aria-label="hinzufügen">+</button></div>`).join('')}</div></details>`}`;
       }).join('')}</div>
       <details class="wb-anleitung"><summary>Anleitung · ${esc(r.dauer ?? '')}</summary>
         <div class="tools">${(r.werkzeug ?? []).map((w) => `<span class="tag">${esc(WERKZEUG[w] ?? w)}</span>`).join('')}</div>
@@ -142,9 +141,11 @@ app.addEventListener('click', (e) => {
   if (x.dataset.d) plus(x.dataset.id, +x.dataset.d);
   else if (x.dataset.a) { ansicht = x.dataset.a; history.replaceState(null, '', ansicht === 'bauen' ? '#bauen' : location.pathname); zeige(); scrollTo(0, 0); }
   else if (x.dataset.g !== undefined) { gruppe = x.dataset.g || null; zeigeRaster(); }
-  else if (x.dataset.k) { if (offen.has(x.dataset.k)) offen.delete(x.dataset.k); else offen.add(x.dataset.k); zeigeIdeen(); }
+
 });
 document.getElementById('suche').addEventListener('input', () => { if (ansicht !== 'sammeln') { ansicht = 'sammeln'; zeige(); } else zeigeRaster(); });
+// Offene „Wo finde ich das?“ merken, damit sie nach dem Hinzufügen offen bleiben
+app.addEventListener('toggle', (e) => { const k = e.target.dataset?.k; if (k) { if (e.target.open) offen.add(k); else offen.delete(k); } }, true);
 addEventListener('werkbank', zeige);
 addEventListener('storage', zeige);
 zeige();

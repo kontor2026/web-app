@@ -29,6 +29,7 @@ export function shell(aktiv, root) {
 
 // Der Lebensweg eines Gegenstands: sieben Stationen, überall gleich benannt und gleich gezeichnet
 const ICON = {
+  haken: '<path d="m5 12.5 4.5 4.5L19 7.5"/>',
   // Beispiel-Gegenstände
   smartphone: '<rect x="7" y="3" width="10" height="18" rx="2"/><path d="M11 18h2"/>',
   pet_bottle: '<path d="M10 2h4v3l1.5 2.5V20a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1V7.5L10 5Z"/><path d="M8.5 11h7M8.5 15h7"/>',
