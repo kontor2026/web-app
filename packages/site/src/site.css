@@ -263,3 +263,7 @@ html { scroll-padding-bottom: calc(var(--tabs) + 88px); }
 .wechsel-punkte button::before { content: ''; width: 8px; height: 8px; border-radius: 50%; border: 1px solid var(--ink-3); transition: background .2s, width .2s; }
 .wechsel-punkte button.on::before { background: var(--accent); border-color: var(--accent); width: 22px; border-radius: 4px; }
 @media (max-width: 900px) { .wechsel { order: 3; width: min(400px, 100%); margin: 0 auto 32px; } }
+
+/* Kreis: nur die hervorgehobene Station trägt ihren Namen */
+.kreis-punkt text { opacity: 0; transition: opacity .4s; }
+.kreis-punkt circle.mitte ~ text { opacity: 1; fill: var(--ink); }

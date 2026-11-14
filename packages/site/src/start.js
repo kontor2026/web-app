@@ -46,7 +46,7 @@ if (!ruhig) setInterval(() => {
   kreise[station]?.classList.remove('mitte');
   station = (station + 1) % kreise.length;
   kreise[station]?.classList.add('mitte');
-}, 1100);
+}, 2600);
 
 // ---------- Bilderwechsel: Kreislauf → Weltkarte → 3D-Modell ----------
 // Globus und 3D laden erst, wenn sie gezeigt werden. Stopp bei Berührung, ohne Automatik bei reduzierter Bewegung.
@@ -55,7 +55,7 @@ async function bereite(n) {
   if (n === 1 && !globus) {
     const { erzeugeGlobus } = await import('./atlas/globus.js');
     globus = erzeugeGlobus(document.getElementById('start-globus'), atlas.laender);
-    globus.zeige(atlas.rohstoffe.Co?.abbau?.anteile ?? {});
+    globus.zeige(atlas.rohstoffe.Co?.abbau?.anteile ?? {}, { namen: false });
   }
   if (n === 2 && !modell) {
     const { erzeugeViewer, ladeModell } = await import('./viewer.js');

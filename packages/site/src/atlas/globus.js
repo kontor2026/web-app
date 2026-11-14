@@ -68,7 +68,7 @@ export function erzeugeGlobus(el, laender) {
 
   return {
     // anteile: { ISO3: Prozent } — leer = nur Deutschland zeigen
-    zeige(anteile = {}, { fokus = true } = {}) {
+    zeige(anteile = {}, { fokus = true, namen = true } = {}) {
       clearTimeout(flug);
       const werte = Object.values(anteile);
       maxAnteil = Math.max(1, ...werte);
@@ -76,7 +76,7 @@ export function erzeugeGlobus(el, laender) {
       const rang = laenderGeo.filter((f) => f.anteil > 0 && f !== de).sort((a, b) => b.anteil - a.anteil);
       globus.polygonsData(laenderGeo);
       globus.arcsData(rang.map((f) => ({ startLat: f.lat, startLng: f.lng, endLat: de.lat, endLng: de.lng, anteil: f.anteil })));
-      globus.htmlElementsData([
+      globus.htmlElementsData(!namen ? [] : [
         ...rang.slice(0, 3).map((f, i) => ({ lat: f.lat, lng: f.lng, alt: hoehe(f) + 0.01, nr: String(i + 1).padStart(2, '0'), name: laender[f.a3]?.name ?? f.properties.name, anteil: f.anteil })),
         { lat: de.lat, lng: de.lng, alt: 0.03, de: true },
       ]);
@@ -96,7 +96,7 @@ export function erzeugeGlobus(el, laender) {
           .map((f) => ({ ...f, region: true, anteil: 0 }));
       }
       globus.polygonsData(feinGeo).arcsData([]);
-      globus.htmlElementsData([
+      globus.htmlElementsData(!namen ? [] : [
         ...orte.map((o) => ({ ...o, typ: 'ort', alt: 0.0008 })),
         ...hoefe.filter((h) => h.lat).map((h) => ({ lat: h.lat, lng: h.lng, name: h.name.replace('Recyclinghof ', ''), typ: 'hof', alt: 0.0008 })),
       ]);
