@@ -68,56 +68,65 @@
     ]
    ],
    "info": "Oberer Rand der Pfanne mit leicht nach außen gebogener Kante, damit beim Ausgießen nichts tropft.",
-   "color": "#B9BEC3",
+   "color": "#45464B",
+   "wand": 8,
+   "boden": 0,
    "marks": [
     {
      "shape": "cyl",
      "x": 3,
      "y": 3,
      "w": 230,
-     "fill": "#3A3A3F"
+     "fill": "#3A3A3F",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 12,
      "y": 12,
      "w": 212,
-     "fill": "#333337"
+     "fill": "#333337",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 22,
      "y": 22,
      "w": 192,
-     "fill": "#2B2B2E"
+     "fill": "#2B2B2E",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 50,
      "y": 50,
      "w": 136,
-     "fill": "#2F2F33"
+     "fill": "#2F2F33",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 54,
      "y": 54,
      "w": 128,
-     "fill": "#2B2B2E"
+     "fill": "#2B2B2E",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 90,
      "y": 90,
      "w": 56,
-     "fill": "#2F2F33"
+     "fill": "#2F2F33",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 94,
      "y": 94,
      "w": 48,
-     "fill": "#2B2B2E"
+     "fill": "#2B2B2E",
+     "zeichnung": true
     }
    ]
   },
@@ -146,8 +155,10 @@
     ]
    ],
    "info": "Schräge Wand aus gepresstem Aluminium, außen hitzefest lackiert.",
-   "color": "#B9BEC3",
-   "label": false
+   "color": "#45464B",
+   "label": false,
+   "wand": 8,
+   "boden": 0
   },
   {
    "id": "wand_unten",
@@ -174,8 +185,10 @@
     ]
    ],
    "info": "Unterer Teil der schrägen Pfannenwand.",
-   "color": "#B9BEC3",
-   "label": false
+   "color": "#45464B",
+   "label": false,
+   "wand": 8,
+   "boden": 0
   },
   {
    "id": "boden",
@@ -202,13 +215,14 @@
     ]
    ],
    "info": "Gepresstes Aluminium mit etwa 4 mm dickem Boden, damit er sich beim Erhitzen nicht verzieht. Aluminium ist leicht und leitet Wärme sehr gut.",
-   "color": "#B9BEC3",
+   "color": "#2B2B2E",
    "marks": [
     {
      "shape": "cyl",
      "x": 25,
      "y": 25,
      "w": 150,
+     "zeichnung": true,
      "fill": "#AEB3B8"
     }
    ]
@@ -385,6 +399,7 @@
    ],
    "info": "Lange Stahlschraube, die durch den hohlen Stiel in den Halter greift. Am Stielende mit einem Schraubendreher lösen, dann geht der Stiel ab.",
    "color": "#9AA2A6",
+   "form": "liegend_y",
    "marks": [
     {
      "shape": "box",
@@ -393,7 +408,8 @@
      "w": 5,
      "d": 4,
      "r": 1,
-     "fill": "#5A6268"
+     "fill": "#5A6268",
+     "zeichnung": true
     }
    ]
   },
@@ -425,6 +441,7 @@
    ],
    "info": "Edelstahlring zwischen Pfanne und Stiel. Er schützt den Kunststoff vor der Gasflamme.",
    "color": "#C9CED2",
+   "form": "liegend_y",
    "marks": [
     {
      "shape": "box",
@@ -433,7 +450,8 @@
      "w": 20,
      "d": 6,
      "r": 3,
-     "fill": "#B5BBC0"
+     "fill": "#B5BBC0",
+     "zeichnung": true
     }
    ]
   },
@@ -465,6 +483,7 @@
    ],
    "info": "Phenolharz (Bakelit) wird beim Erhitzen nicht weich und kann nicht recycelt werden. Abgeschraubt kommt er in den Restmüll, die Pfanne zum Metallschrott.",
    "color": "#1F2124",
+   "form": "liegend_y",
    "marks": [
     {
      "shape": "box",
@@ -473,7 +492,8 @@
      "w": 12,
      "d": 22,
      "r": 5,
-     "fill": "#2E3136"
+     "fill": "#2E3136",
+     "zeichnung": true
     }
    ]
   },
@@ -506,6 +526,7 @@
    "info": "Das breite Ende liegt gut in der Hand. Durch das Loch kann man die Pfanne aufhängen.",
    "color": "#1F2124",
    "label": false,
+   "form": "liegend_y",
    "marks": [
     {
      "shape": "box",
@@ -514,13 +535,15 @@
      "w": 20,
      "d": 14,
      "r": 5,
-     "fill": "#2E3136"
+     "fill": "#2E3136",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 9,
      "y": 17,
      "w": 14,
+     "zeichnung": true,
      "d": 11,
      "fill": "#EEECE5"
     }

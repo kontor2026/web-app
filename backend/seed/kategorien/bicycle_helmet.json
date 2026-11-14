@@ -965,12 +965,15 @@
    ],
    "info": "Kunststoffband, das um den Hinterkopf läuft und mit dem Drehrad enger gestellt wird. Am Schaum nur eingesteckt.",
    "color": "#2B2F33",
+   "wand": 3,
+   "boden": 0,
    "marks": [
     {
      "shape": "cyl",
      "x": 8,
      "y": 8,
      "w": 144,
+     "zeichnung": true,
      "d": 184,
      "fill": "#8C8F92"
     }

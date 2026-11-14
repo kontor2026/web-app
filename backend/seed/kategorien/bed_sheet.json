@@ -244,6 +244,7 @@
      "x": 0,
      "y": 0,
      "w": 296,
+     "zeichnung": true,
      "d": 2,
      "r": 1,
      "fill": "#C3D1DC"
@@ -253,6 +254,7 @@
      "x": 294,
      "y": 0,
      "w": 2,
+     "zeichnung": true,
      "d": 396,
      "r": 1,
      "fill": "#C3D1DC"
@@ -303,6 +305,7 @@
      "x": 0,
      "y": 0,
      "w": 296,
+     "zeichnung": true,
      "d": 2,
      "r": 1,
      "fill": "#C3D1DC"
@@ -312,6 +315,7 @@
      "x": 294,
      "y": 0,
      "w": 2,
+     "zeichnung": true,
      "d": 396,
      "r": 1,
      "fill": "#C3D1DC"
@@ -362,6 +366,7 @@
      "x": 0,
      "y": 0,
      "w": 296,
+     "zeichnung": true,
      "d": 2,
      "r": 1,
      "fill": "#C3D1DC"
@@ -371,6 +376,7 @@
      "x": 294,
      "y": 0,
      "w": 2,
+     "zeichnung": true,
      "d": 396,
      "r": 1,
      "fill": "#C3D1DC"
@@ -430,6 +436,7 @@
      "x": 0,
      "y": 0,
      "w": 296,
+     "zeichnung": true,
      "d": 2,
      "r": 1,
      "fill": "#C3D1DC"
@@ -439,6 +446,7 @@
      "x": 294,
      "y": 0,
      "w": 2,
+     "zeichnung": true,
      "d": 396,
      "r": 1,
      "fill": "#C3D1DC"

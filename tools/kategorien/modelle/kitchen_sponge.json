@@ -39,7 +39,8 @@
      "y": 6.0,
      "w": 6,
      "d": 6,
-     "fill": "#2F7039"
+     "fill": "#2F7039",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -47,7 +48,8 @@
      "y": 6.0,
      "w": 6,
      "d": 6,
-     "fill": "#2F7039"
+     "fill": "#2F7039",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -55,7 +57,8 @@
      "y": 6.0,
      "w": 6,
      "d": 6,
-     "fill": "#2F7039"
+     "fill": "#2F7039",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -63,7 +66,8 @@
      "y": 6.0,
      "w": 6,
      "d": 6,
-     "fill": "#2F7039"
+     "fill": "#2F7039",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -71,7 +75,8 @@
      "y": 6.0,
      "w": 6,
      "d": 6,
-     "fill": "#2F7039"
+     "fill": "#2F7039",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -79,7 +84,8 @@
      "y": 6.0,
      "w": 6,
      "d": 6,
-     "fill": "#2F7039"
+     "fill": "#2F7039",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -87,7 +93,8 @@
      "y": 17.5,
      "w": 6,
      "d": 6,
-     "fill": "#2F7039"
+     "fill": "#2F7039",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -95,7 +102,8 @@
      "y": 17.5,
      "w": 6,
      "d": 6,
-     "fill": "#2F7039"
+     "fill": "#2F7039",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -103,7 +111,8 @@
      "y": 17.5,
      "w": 6,
      "d": 6,
-     "fill": "#2F7039"
+     "fill": "#2F7039",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -111,7 +120,8 @@
      "y": 17.5,
      "w": 6,
      "d": 6,
-     "fill": "#2F7039"
+     "fill": "#2F7039",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -119,7 +129,8 @@
      "y": 17.5,
      "w": 6,
      "d": 6,
-     "fill": "#2F7039"
+     "fill": "#2F7039",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -127,7 +138,8 @@
      "y": 17.5,
      "w": 6,
      "d": 6,
-     "fill": "#2F7039"
+     "fill": "#2F7039",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -135,7 +147,8 @@
      "y": 29.0,
      "w": 6,
      "d": 6,
-     "fill": "#2F7039"
+     "fill": "#2F7039",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -143,7 +156,8 @@
      "y": 29.0,
      "w": 6,
      "d": 6,
-     "fill": "#2F7039"
+     "fill": "#2F7039",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -151,7 +165,8 @@
      "y": 29.0,
      "w": 6,
      "d": 6,
-     "fill": "#2F7039"
+     "fill": "#2F7039",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -159,7 +174,8 @@
      "y": 29.0,
      "w": 6,
      "d": 6,
-     "fill": "#2F7039"
+     "fill": "#2F7039",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -167,7 +183,8 @@
      "y": 29.0,
      "w": 6,
      "d": 6,
-     "fill": "#2F7039"
+     "fill": "#2F7039",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -175,7 +192,8 @@
      "y": 29.0,
      "w": 6,
      "d": 6,
-     "fill": "#2F7039"
+     "fill": "#2F7039",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -183,7 +201,8 @@
      "y": 40.5,
      "w": 6,
      "d": 6,
-     "fill": "#2F7039"
+     "fill": "#2F7039",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -191,7 +210,8 @@
      "y": 40.5,
      "w": 6,
      "d": 6,
-     "fill": "#2F7039"
+     "fill": "#2F7039",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -199,7 +219,8 @@
      "y": 40.5,
      "w": 6,
      "d": 6,
-     "fill": "#2F7039"
+     "fill": "#2F7039",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -207,7 +228,8 @@
      "y": 40.5,
      "w": 6,
      "d": 6,
-     "fill": "#2F7039"
+     "fill": "#2F7039",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -215,7 +237,8 @@
      "y": 40.5,
      "w": 6,
      "d": 6,
-     "fill": "#2F7039"
+     "fill": "#2F7039",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -223,7 +246,8 @@
      "y": 40.5,
      "w": 6,
      "d": 6,
-     "fill": "#2F7039"
+     "fill": "#2F7039",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -231,7 +255,8 @@
      "y": 52.0,
      "w": 6,
      "d": 6,
-     "fill": "#2F7039"
+     "fill": "#2F7039",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -239,7 +264,8 @@
      "y": 52.0,
      "w": 6,
      "d": 6,
-     "fill": "#2F7039"
+     "fill": "#2F7039",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -247,7 +273,8 @@
      "y": 52.0,
      "w": 6,
      "d": 6,
-     "fill": "#2F7039"
+     "fill": "#2F7039",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -255,7 +282,8 @@
      "y": 52.0,
      "w": 6,
      "d": 6,
-     "fill": "#2F7039"
+     "fill": "#2F7039",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -263,7 +291,8 @@
      "y": 52.0,
      "w": 6,
      "d": 6,
-     "fill": "#2F7039"
+     "fill": "#2F7039",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -271,7 +300,8 @@
      "y": 52.0,
      "w": 6,
      "d": 6,
-     "fill": "#2F7039"
+     "fill": "#2F7039",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -279,7 +309,8 @@
      "y": 63.5,
      "w": 6,
      "d": 6,
-     "fill": "#2F7039"
+     "fill": "#2F7039",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -287,7 +318,8 @@
      "y": 63.5,
      "w": 6,
      "d": 6,
-     "fill": "#2F7039"
+     "fill": "#2F7039",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -295,7 +327,8 @@
      "y": 63.5,
      "w": 6,
      "d": 6,
-     "fill": "#2F7039"
+     "fill": "#2F7039",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -303,7 +336,8 @@
      "y": 63.5,
      "w": 6,
      "d": 6,
-     "fill": "#2F7039"
+     "fill": "#2F7039",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -311,7 +345,8 @@
      "y": 63.5,
      "w": 6,
      "d": 6,
-     "fill": "#2F7039"
+     "fill": "#2F7039",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -319,7 +354,8 @@
      "y": 63.5,
      "w": 6,
      "d": 6,
-     "fill": "#2F7039"
+     "fill": "#2F7039",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -327,7 +363,8 @@
      "y": 75.0,
      "w": 6,
      "d": 6,
-     "fill": "#2F7039"
+     "fill": "#2F7039",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -335,7 +372,8 @@
      "y": 75.0,
      "w": 6,
      "d": 6,
-     "fill": "#2F7039"
+     "fill": "#2F7039",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -343,7 +381,8 @@
      "y": 75.0,
      "w": 6,
      "d": 6,
-     "fill": "#2F7039"
+     "fill": "#2F7039",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -351,7 +390,8 @@
      "y": 75.0,
      "w": 6,
      "d": 6,
-     "fill": "#2F7039"
+     "fill": "#2F7039",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -359,7 +399,8 @@
      "y": 75.0,
      "w": 6,
      "d": 6,
-     "fill": "#2F7039"
+     "fill": "#2F7039",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -367,7 +408,8 @@
      "y": 75.0,
      "w": 6,
      "d": 6,
-     "fill": "#2F7039"
+     "fill": "#2F7039",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -375,7 +417,8 @@
      "y": 86.5,
      "w": 6,
      "d": 6,
-     "fill": "#2F7039"
+     "fill": "#2F7039",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -383,7 +426,8 @@
      "y": 86.5,
      "w": 6,
      "d": 6,
-     "fill": "#2F7039"
+     "fill": "#2F7039",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -391,7 +435,8 @@
      "y": 86.5,
      "w": 6,
      "d": 6,
-     "fill": "#2F7039"
+     "fill": "#2F7039",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -399,7 +444,8 @@
      "y": 86.5,
      "w": 6,
      "d": 6,
-     "fill": "#2F7039"
+     "fill": "#2F7039",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -407,7 +453,8 @@
      "y": 86.5,
      "w": 6,
      "d": 6,
-     "fill": "#2F7039"
+     "fill": "#2F7039",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
@@ -415,7 +462,8 @@
      "y": 86.5,
      "w": 6,
      "d": 6,
-     "fill": "#2F7039"
+     "fill": "#2F7039",
+     "zeichnung": true
     }
    ]
   },

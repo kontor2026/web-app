@@ -290,12 +290,15 @@
    ],
    "info": "Gewölbtes, lackiertes Federstahlband mit aufgedruckter Skala. Das Band ist scharfkantig: Handschuhe tragen, es gehört zum Altmetall.",
    "color": "#F4D24A",
+   "wand": 10,
+   "boden": 0,
    "marks": [
     {
      "shape": "cyl",
      "x": 2,
      "y": 2,
      "w": 44,
+     "zeichnung": true,
      "fill": "#E6C23C"
     },
     {
@@ -303,6 +306,7 @@
      "x": 10,
      "y": 10,
      "w": 28,
+     "zeichnung": true,
      "fill": "#2B2B2B"
     }
    ]

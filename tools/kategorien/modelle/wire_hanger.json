@@ -27,12 +27,14 @@
    ],
    "info": "Der Haken ist das Drahtende, zu einem Bogen gebogen. Viele Reinigungen nehmen Drahtbügel zurück und verwenden sie wieder.",
    "color": "#AEB5BA",
+   "form": "torus",
    "marks": [
     {
      "shape": "cyl",
      "x": 3,
      "y": 3,
      "w": 28,
+     "zeichnung": true,
      "d": 24,
      "fill": "#EEECE5"
     },
@@ -41,6 +43,7 @@
      "x": 0,
      "y": 17,
      "w": 10,
+     "zeichnung": true,
      "d": 13,
      "r": 2,
      "fill": "#EEECE5"
@@ -75,7 +78,8 @@
    ],
    "info": "Gerades Drahtstück zwischen Haken und Verdrillung.",
    "color": "#AEB5BA",
-   "label": false
+   "label": false,
+   "form": "liegend_y"
   },
   {
    "id": "verdrillung",
@@ -105,6 +109,7 @@
    ],
    "info": "Hier sind Anfang und Ende des Drahts mehrfach umeinander gedreht. So hält der Bügel ohne Schweißen oder Kleben zusammen.",
    "color": "#AEB5BA",
+   "form": "liegend_y",
    "marks": [
     {
      "shape": "box",
@@ -113,7 +118,8 @@
      "w": 8,
      "d": 2,
      "r": 1,
-     "fill": "#7E868C"
+     "fill": "#7E868C",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -122,7 +128,8 @@
      "w": 8,
      "d": 2,
      "r": 1,
-     "fill": "#7E868C"
+     "fill": "#7E868C",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -131,7 +138,8 @@
      "w": 8,
      "d": 2,
      "r": 1,
-     "fill": "#7E868C"
+     "fill": "#7E868C",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -140,7 +148,8 @@
      "w": 8,
      "d": 2,
      "r": 1,
-     "fill": "#7E868C"
+     "fill": "#7E868C",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -149,7 +158,8 @@
      "w": 8,
      "d": 2,
      "r": 1,
-     "fill": "#7E868C"
+     "fill": "#7E868C",
+     "zeichnung": true
     }
    ]
   },
@@ -181,7 +191,8 @@
    ],
    "info": "Die schrägen Schultern geben dem Kleidungsstück seine Form. Der Draht ist dünn verzinkt oder lackiert gegen Rost.",
    "color": "#AEB5BA",
-   "label": true
+   "label": true,
+   "form": "liegend_x"
   },
   {
    "id": "schulter_l_2",
@@ -211,7 +222,8 @@
    ],
    "info": "Abschnitt der schrägen Schulter.",
    "color": "#AEB5BA",
-   "label": false
+   "label": false,
+   "form": "liegend_x"
   },
   {
    "id": "schulter_l_3",
@@ -241,7 +253,8 @@
    ],
    "info": "Abschnitt der schrägen Schulter.",
    "color": "#AEB5BA",
-   "label": false
+   "label": false,
+   "form": "liegend_x"
   },
   {
    "id": "schulter_l_4",
@@ -271,7 +284,8 @@
    ],
    "info": "Abschnitt der schrägen Schulter.",
    "color": "#AEB5BA",
-   "label": false
+   "label": false,
+   "form": "liegend_x"
   },
   {
    "id": "schulter_l_5",
@@ -301,7 +315,8 @@
    ],
    "info": "Abschnitt der schrägen Schulter.",
    "color": "#AEB5BA",
-   "label": false
+   "label": false,
+   "form": "liegend_x"
   },
   {
    "id": "schulter_l_6",
@@ -331,7 +346,8 @@
    ],
    "info": "Abschnitt der schrägen Schulter.",
    "color": "#AEB5BA",
-   "label": false
+   "label": false,
+   "form": "liegend_x"
   },
   {
    "id": "schulter_l_7",
@@ -361,7 +377,8 @@
    ],
    "info": "Abschnitt der schrägen Schulter.",
    "color": "#AEB5BA",
-   "label": false
+   "label": false,
+   "form": "liegend_x"
   },
   {
    "id": "schulter_l_8",
@@ -391,7 +408,8 @@
    ],
    "info": "Abschnitt der schrägen Schulter.",
    "color": "#AEB5BA",
-   "label": false
+   "label": false,
+   "form": "liegend_x"
   },
   {
    "id": "schulter_l_9",
@@ -421,7 +439,8 @@
    ],
    "info": "Abschnitt der schrägen Schulter.",
    "color": "#AEB5BA",
-   "label": false
+   "label": false,
+   "form": "liegend_x"
   },
   {
    "id": "schulter_l_10",
@@ -451,7 +470,8 @@
    ],
    "info": "Abschnitt der schrägen Schulter.",
    "color": "#AEB5BA",
-   "label": false
+   "label": false,
+   "form": "liegend_x"
   },
   {
    "id": "schulter_l_11",
@@ -481,7 +501,8 @@
    ],
    "info": "Abschnitt der schrägen Schulter.",
    "color": "#AEB5BA",
-   "label": false
+   "label": false,
+   "form": "liegend_x"
   },
   {
    "id": "schulter_l_12",
@@ -511,7 +532,8 @@
    ],
    "info": "Abschnitt der schrägen Schulter.",
    "color": "#AEB5BA",
-   "label": false
+   "label": false,
+   "form": "liegend_x"
   },
   {
    "id": "schulter_l_13",
@@ -541,7 +563,8 @@
    ],
    "info": "Abschnitt der schrägen Schulter.",
    "color": "#AEB5BA",
-   "label": false
+   "label": false,
+   "form": "liegend_x"
   },
   {
    "id": "schulter_l_14",
@@ -571,7 +594,8 @@
    ],
    "info": "Abschnitt der schrägen Schulter.",
    "color": "#AEB5BA",
-   "label": false
+   "label": false,
+   "form": "liegend_x"
   },
   {
    "id": "schulter_l_15",
@@ -601,7 +625,8 @@
    ],
    "info": "Abschnitt der schrägen Schulter.",
    "color": "#AEB5BA",
-   "label": false
+   "label": false,
+   "form": "liegend_x"
   },
   {
    "id": "schulter_l_16",
@@ -631,7 +656,8 @@
    ],
    "info": "Abschnitt der schrägen Schulter.",
    "color": "#AEB5BA",
-   "label": false
+   "label": false,
+   "form": "liegend_x"
   },
   {
    "id": "schulter_l_17",
@@ -661,7 +687,8 @@
    ],
    "info": "Abschnitt der schrägen Schulter.",
    "color": "#AEB5BA",
-   "label": false
+   "label": false,
+   "form": "liegend_x"
   },
   {
    "id": "schulter_l_18",
@@ -691,7 +718,8 @@
    ],
    "info": "Abschnitt der schrägen Schulter.",
    "color": "#AEB5BA",
-   "label": false
+   "label": false,
+   "form": "liegend_x"
   },
   {
    "id": "schulter_l_19",
@@ -721,7 +749,8 @@
    ],
    "info": "Abschnitt der schrägen Schulter.",
    "color": "#AEB5BA",
-   "label": false
+   "label": false,
+   "form": "liegend_x"
   },
   {
    "id": "schulter_l_20",
@@ -751,7 +780,8 @@
    ],
    "info": "Abschnitt der schrägen Schulter.",
    "color": "#AEB5BA",
-   "label": false
+   "label": false,
+   "form": "liegend_x"
   },
   {
    "id": "schulter_l_21",
@@ -781,7 +811,8 @@
    ],
    "info": "Abschnitt der schrägen Schulter.",
    "color": "#AEB5BA",
-   "label": false
+   "label": false,
+   "form": "liegend_x"
   },
   {
    "id": "schulter_l_22",
@@ -811,7 +842,8 @@
    ],
    "info": "Abschnitt der schrägen Schulter.",
    "color": "#AEB5BA",
-   "label": false
+   "label": false,
+   "form": "liegend_x"
   },
   {
    "id": "schulter_l_23",
@@ -841,7 +873,8 @@
    ],
    "info": "Abschnitt der schrägen Schulter.",
    "color": "#AEB5BA",
-   "label": false
+   "label": false,
+   "form": "liegend_x"
   },
   {
    "id": "schulter_l_24",
@@ -871,7 +904,8 @@
    ],
    "info": "Abschnitt der schrägen Schulter.",
    "color": "#AEB5BA",
-   "label": false
+   "label": false,
+   "form": "liegend_x"
   },
   {
    "id": "schulter_l_25",
@@ -901,7 +935,8 @@
    ],
    "info": "Abschnitt der schrägen Schulter.",
    "color": "#AEB5BA",
-   "label": false
+   "label": false,
+   "form": "liegend_x"
   },
   {
    "id": "schulter_l_26",
@@ -931,7 +966,8 @@
    ],
    "info": "Abschnitt der schrägen Schulter.",
    "color": "#AEB5BA",
-   "label": false
+   "label": false,
+   "form": "liegend_x"
   },
   {
    "id": "schulter_l_27",
@@ -961,7 +997,8 @@
    ],
    "info": "Abschnitt der schrägen Schulter.",
    "color": "#AEB5BA",
-   "label": false
+   "label": false,
+   "form": "liegend_x"
   },
   {
    "id": "schulter_l_28",
@@ -991,7 +1028,8 @@
    ],
    "info": "Abschnitt der schrägen Schulter.",
    "color": "#AEB5BA",
-   "label": false
+   "label": false,
+   "form": "liegend_x"
   },
   {
    "id": "schulter_l_29",
@@ -1021,7 +1059,8 @@
    ],
    "info": "Abschnitt der schrägen Schulter.",
    "color": "#AEB5BA",
-   "label": false
+   "label": false,
+   "form": "liegend_x"
   },
   {
    "id": "schulter_l_30",
@@ -1051,7 +1090,8 @@
    ],
    "info": "Abschnitt der schrägen Schulter.",
    "color": "#AEB5BA",
-   "label": false
+   "label": false,
+   "form": "liegend_x"
   },
   {
    "id": "schulter_r_1",
@@ -1081,7 +1121,8 @@
    ],
    "info": "Die schrägen Schultern geben dem Kleidungsstück seine Form. Der Draht ist dünn verzinkt oder lackiert gegen Rost.",
    "color": "#AEB5BA",
-   "label": true
+   "label": true,
+   "form": "liegend_x"
   },
   {
    "id": "schulter_r_2",
@@ -1111,7 +1152,8 @@
    ],
    "info": "Abschnitt der schrägen Schulter.",
    "color": "#AEB5BA",
-   "label": false
+   "label": false,
+   "form": "liegend_x"
   },
   {
    "id": "schulter_r_3",
@@ -1141,7 +1183,8 @@
    ],
    "info": "Abschnitt der schrägen Schulter.",
    "color": "#AEB5BA",
-   "label": false
+   "label": false,
+   "form": "liegend_x"
   },
   {
    "id": "schulter_r_4",
@@ -1171,7 +1214,8 @@
    ],
    "info": "Abschnitt der schrägen Schulter.",
    "color": "#AEB5BA",
-   "label": false
+   "label": false,
+   "form": "liegend_x"
   },
   {
    "id": "schulter_r_5",
@@ -1201,7 +1245,8 @@
    ],
    "info": "Abschnitt der schrägen Schulter.",
    "color": "#AEB5BA",
-   "label": false
+   "label": false,
+   "form": "liegend_x"
   },
   {
    "id": "schulter_r_6",
@@ -1231,7 +1276,8 @@
    ],
    "info": "Abschnitt der schrägen Schulter.",
    "color": "#AEB5BA",
-   "label": false
+   "label": false,
+   "form": "liegend_x"
   },
   {
    "id": "schulter_r_7",
@@ -1261,7 +1307,8 @@
    ],
    "info": "Abschnitt der schrägen Schulter.",
    "color": "#AEB5BA",
-   "label": false
+   "label": false,
+   "form": "liegend_x"
   },
   {
    "id": "schulter_r_8",
@@ -1291,7 +1338,8 @@
    ],
    "info": "Abschnitt der schrägen Schulter.",
    "color": "#AEB5BA",
-   "label": false
+   "label": false,
+   "form": "liegend_x"
   },
   {
    "id": "schulter_r_9",
@@ -1321,7 +1369,8 @@
    ],
    "info": "Abschnitt der schrägen Schulter.",
    "color": "#AEB5BA",
-   "label": false
+   "label": false,
+   "form": "liegend_x"
   },
   {
    "id": "schulter_r_10",
@@ -1351,7 +1400,8 @@
    ],
    "info": "Abschnitt der schrägen Schulter.",
    "color": "#AEB5BA",
-   "label": false
+   "label": false,
+   "form": "liegend_x"
   },
   {
    "id": "schulter_r_11",
@@ -1381,7 +1431,8 @@
    ],
    "info": "Abschnitt der schrägen Schulter.",
    "color": "#AEB5BA",
-   "label": false
+   "label": false,
+   "form": "liegend_x"
   },
   {
    "id": "schulter_r_12",
@@ -1411,7 +1462,8 @@
    ],
    "info": "Abschnitt der schrägen Schulter.",
    "color": "#AEB5BA",
-   "label": false
+   "label": false,
+   "form": "liegend_x"
   },
   {
    "id": "schulter_r_13",
@@ -1441,7 +1493,8 @@
    ],
    "info": "Abschnitt der schrägen Schulter.",
    "color": "#AEB5BA",
-   "label": false
+   "label": false,
+   "form": "liegend_x"
   },
   {
    "id": "schulter_r_14",
@@ -1471,7 +1524,8 @@
    ],
    "info": "Abschnitt der schrägen Schulter.",
    "color": "#AEB5BA",
-   "label": false
+   "label": false,
+   "form": "liegend_x"
   },
   {
    "id": "schulter_r_15",
@@ -1501,7 +1555,8 @@
    ],
    "info": "Abschnitt der schrägen Schulter.",
    "color": "#AEB5BA",
-   "label": false
+   "label": false,
+   "form": "liegend_x"
   },
   {
    "id": "schulter_r_16",
@@ -1531,7 +1586,8 @@
    ],
    "info": "Abschnitt der schrägen Schulter.",
    "color": "#AEB5BA",
-   "label": false
+   "label": false,
+   "form": "liegend_x"
   },
   {
    "id": "schulter_r_17",
@@ -1561,7 +1617,8 @@
    ],
    "info": "Abschnitt der schrägen Schulter.",
    "color": "#AEB5BA",
-   "label": false
+   "label": false,
+   "form": "liegend_x"
   },
   {
    "id": "schulter_r_18",
@@ -1591,7 +1648,8 @@
    ],
    "info": "Abschnitt der schrägen Schulter.",
    "color": "#AEB5BA",
-   "label": false
+   "label": false,
+   "form": "liegend_x"
   },
   {
    "id": "schulter_r_19",
@@ -1621,7 +1679,8 @@
    ],
    "info": "Abschnitt der schrägen Schulter.",
    "color": "#AEB5BA",
-   "label": false
+   "label": false,
+   "form": "liegend_x"
   },
   {
    "id": "schulter_r_20",
@@ -1651,7 +1710,8 @@
    ],
    "info": "Abschnitt der schrägen Schulter.",
    "color": "#AEB5BA",
-   "label": false
+   "label": false,
+   "form": "liegend_x"
   },
   {
    "id": "schulter_r_21",
@@ -1681,7 +1741,8 @@
    ],
    "info": "Abschnitt der schrägen Schulter.",
    "color": "#AEB5BA",
-   "label": false
+   "label": false,
+   "form": "liegend_x"
   },
   {
    "id": "schulter_r_22",
@@ -1711,7 +1772,8 @@
    ],
    "info": "Abschnitt der schrägen Schulter.",
    "color": "#AEB5BA",
-   "label": false
+   "label": false,
+   "form": "liegend_x"
   },
   {
    "id": "schulter_r_23",
@@ -1741,7 +1803,8 @@
    ],
    "info": "Abschnitt der schrägen Schulter.",
    "color": "#AEB5BA",
-   "label": false
+   "label": false,
+   "form": "liegend_x"
   },
   {
    "id": "schulter_r_24",
@@ -1771,7 +1834,8 @@
    ],
    "info": "Abschnitt der schrägen Schulter.",
    "color": "#AEB5BA",
-   "label": false
+   "label": false,
+   "form": "liegend_x"
   },
   {
    "id": "schulter_r_25",
@@ -1801,7 +1865,8 @@
    ],
    "info": "Abschnitt der schrägen Schulter.",
    "color": "#AEB5BA",
-   "label": false
+   "label": false,
+   "form": "liegend_x"
   },
   {
    "id": "schulter_r_26",
@@ -1831,7 +1896,8 @@
    ],
    "info": "Abschnitt der schrägen Schulter.",
    "color": "#AEB5BA",
-   "label": false
+   "label": false,
+   "form": "liegend_x"
   },
   {
    "id": "schulter_r_27",
@@ -1861,7 +1927,8 @@
    ],
    "info": "Abschnitt der schrägen Schulter.",
    "color": "#AEB5BA",
-   "label": false
+   "label": false,
+   "form": "liegend_x"
   },
   {
    "id": "schulter_r_28",
@@ -1891,7 +1958,8 @@
    ],
    "info": "Abschnitt der schrägen Schulter.",
    "color": "#AEB5BA",
-   "label": false
+   "label": false,
+   "form": "liegend_x"
   },
   {
    "id": "schulter_r_29",
@@ -1921,7 +1989,8 @@
    ],
    "info": "Abschnitt der schrägen Schulter.",
    "color": "#AEB5BA",
-   "label": false
+   "label": false,
+   "form": "liegend_x"
   },
   {
    "id": "schulter_r_30",
@@ -1951,7 +2020,8 @@
    ],
    "info": "Abschnitt der schrägen Schulter.",
    "color": "#AEB5BA",
-   "label": false
+   "label": false,
+   "form": "liegend_x"
   },
   {
    "id": "unterstange",
@@ -1980,7 +2050,8 @@
     ]
    ],
    "info": "Gerade Stange für Hosen, an den Enden zu den Schultern umgebogen. Ausgediente Bügel gehören zum Altmetall, nicht in die Gelbe Tonne.",
-   "color": "#AEB5BA"
+   "color": "#AEB5BA",
+   "form": "liegend_x"
   }
  ]
 }

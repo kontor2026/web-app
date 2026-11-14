@@ -11,9 +11,9 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from bau import teil, mark, raster, explodiere, skaliere_masse, schreibe  # noqa: E402
 
-STAHL = '#5E666C'
+STAHL = '#A3AAB0'
 BLANK = '#B9C0C5'
-HOLZ = '#D2A86E'
+HOLZ = '#C99A62'
 
 teile = [
     teil('holzkeil', 'wooden_handle', 'Holzkeil', 'Holzkeil', 'box',
@@ -52,16 +52,19 @@ teile = [
          info='Das obere Stielende ist geschlitzt und steckt im Auge. Hier sitzen die Keile.',
          color=HOLZ, marks=[mark('box', 1, 6, 26, 2, 1, '#9C7442')]),
     teil('stiel_hals', 'wooden_handle', 'Stielhals', 'Stielhals', 'box',
-         x=43, y=26, w=24, d=100, z=5, h=20, r=8, mass=30,
+         x=43, y=26, w=24, d=100, z=5, h=20, r=8, mass=30, form='liegend_y',
          info='Dünnere Stelle unter dem Kopf, federt Schläge ab. Bricht ein Stiel, dann meist hier.',
-         color=HOLZ, marks=[mark('box', 4, 10, 16, 80, 6, '#C99C60')]),
+         color=HOLZ, marks=[mark('box', 4, 10, 16, 80, 6, '#C99C60', zeichnung=True)]),
     teil('stiel_griff', 'wooden_handle', 'Holzstiel (Griff)', 'Stiel', 'box',
-         x=40, y=126, w=30, d=194, z=3, h=24, r=11, mass=60,
+         x=40, y=126, w=30, d=194, z=3, h=24, r=11, mass=60, form='liegend_y',
          info='Eschenholz, zäh und elastisch. Unbehandeltes Holz kann wiederverwendet oder als Altholz abgegeben werden.',
-         color=HOLZ, marks=[mark('box', 5, 20, 20, 160, 9, '#C99C60'), mark('cyl', 11, 182, 8, fill='#8E6A3E')]),
+         color=HOLZ, marks=[mark('box', 5, 20, 20, 160, 9, '#C99C60', zeichnung=True), mark('cyl', 11, 182, 8, fill='#8E6A3E')]),
 ]
 
 explodiere(teile, abstand=35, gruppen=[['finne', 'finne_mitte', 'finne_spitze', 'kopf', 'bahn', 'fase']],
            fest=('stiel_kopf', 'stiel_hals', 'stiel_griff'))
+for p in teile:  # Foto-Ansicht: flache marks schweben über runden Formen, dort nur in der Zeichnung
+    if p.get('form'):
+        p['marks'] = [dict(m, zeichnung=True) for m in p.get('marks') or []]
 skaliere_masse(teile, oid='hammer')
 schreibe('hammer', teile)

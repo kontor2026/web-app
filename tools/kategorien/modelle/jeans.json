@@ -10,12 +10,12 @@
    "x": 166,
    "y": 12,
    "w": 18,
-   "z": 25,
-   "h": 8,
+   "z": 25.5,
+   "h": 7,
    "explode": [
     0,
     0,
-    356.0
+    355.0
    ],
    "mass": 4.2,
    "materials": [
@@ -50,8 +50,8 @@
    "x": 12,
    "y": 46,
    "w": 7,
-   "z": 23,
-   "h": 3,
+   "z": 24,
+   "h": 2.5,
    "explode": [
     0,
     0,
@@ -90,8 +90,8 @@
    "x": 112,
    "y": 48,
    "w": 7,
-   "z": 23,
-   "h": 3,
+   "z": 24,
+   "h": 2.5,
    "explode": [
     0,
     0,
@@ -122,8 +122,8 @@
    "x": 231,
    "y": 48,
    "w": 7,
-   "z": 23,
-   "h": 3,
+   "z": 24,
+   "h": 2.5,
    "explode": [
     0,
     0,
@@ -154,8 +154,8 @@
    "x": 331,
    "y": 46,
    "w": 7,
-   "z": 23,
-   "h": 3,
+   "z": 24,
+   "h": 2.5,
    "explode": [
     0,
     0,
@@ -193,7 +193,7 @@
    "explode": [
     0,
     0,
-    286.0
+    285.5
    ],
    "mass": 31.6,
    "materials": [
@@ -282,7 +282,7 @@
    "explode": [
     0,
     0,
-    283.0
+    284.0
    ],
    "mass": 6.3,
    "materials": [
@@ -329,19 +329,19 @@
    "name": "Vorderteil",
    "short": "Vorderteil",
    "shape": "box",
-   "x": 0,
-   "y": 38,
-   "w": 350,
-   "d": 362,
-   "z": 17,
-   "h": 6,
-   "r": 6,
+   "x": 6,
+   "y": 42,
+   "w": 338,
+   "d": 354,
+   "z": 22.5,
+   "h": 1.5,
+   "r": 24,
    "explode": [
     0,
     0,
     210.0
    ],
-   "mass": 158.1,
+   "mass": 42.1,
    "materials": [
     [
      "baumwolle",
@@ -358,25 +358,25 @@
     {
      "shape": "box",
      "x": 0,
-     "y": 6,
-     "w": 120,
+     "y": 2,
+     "w": 114,
      "d": 2,
      "r": 1,
      "fill": "#C98A3D"
     },
     {
      "shape": "box",
-     "x": 230,
-     "y": 6,
-     "w": 120,
+     "x": 224,
+     "y": 2,
+     "w": 114,
      "d": 2,
      "r": 1,
      "fill": "#C98A3D"
     },
     {
      "shape": "box",
-     "x": 172,
-     "y": 6,
+     "x": 166,
+     "y": 2,
      "w": 3,
      "d": 170,
      "r": 1,
@@ -384,23 +384,91 @@
     },
     {
      "shape": "box",
-     "x": 174,
-     "y": 176,
+     "x": 168,
+     "y": 172,
      "w": 2,
-     "d": 186,
+     "d": 182,
      "r": 0,
      "fill": "#2E4766"
     },
     {
      "shape": "box",
-     "x": 260,
-     "y": 14,
+     "x": 254,
+     "y": 10,
      "w": 40,
      "d": 36,
      "r": 3,
      "fill": "#2E4766"
     }
    ]
+  },
+  {
+   "id": "vorderteil_1",
+   "component_id": "denim_fabric",
+   "material_id": "cotton",
+   "name": "Vorderteil",
+   "short": "Vorderteil",
+   "shape": "box",
+   "x": 3,
+   "y": 40,
+   "w": 344,
+   "d": 358,
+   "z": 20,
+   "h": 2.5,
+   "r": 14,
+   "explode": [
+    0,
+    0,
+    210.0
+   ],
+   "mass": 52.7,
+   "materials": [
+    [
+     "baumwolle",
+     98
+    ],
+    [
+     "polyester",
+     2
+    ]
+   ],
+   "info": "Baumwoll-Denim, das Vorderteil beider Hosenbeine. Tragbare Jeans in die Altkleidersammlung, kaputte zum Textilrecycling: Dort werden sie zu Fasern für Dämmstoff gerissen.",
+   "color": "#3C5A82",
+   "label": false
+  },
+  {
+   "id": "vorderteil_2",
+   "component_id": "denim_fabric",
+   "material_id": "cotton",
+   "name": "Vorderteil",
+   "short": "Vorderteil",
+   "shape": "box",
+   "x": 0,
+   "y": 38,
+   "w": 350,
+   "d": 362,
+   "z": 17,
+   "h": 3,
+   "r": 6,
+   "explode": [
+    0,
+    0,
+    210.0
+   ],
+   "mass": 63.2,
+   "materials": [
+    [
+     "baumwolle",
+     98
+    ],
+    [
+     "polyester",
+     2
+    ]
+   ],
+   "info": "Baumwoll-Denim, das Vorderteil beider Hosenbeine. Tragbare Jeans in die Altkleidersammlung, kaputte zum Textilrecycling: Dort werden sie zu Fasern für Dämmstoff gerissen.",
+   "color": "#3C5A82",
+   "label": false
   },
   {
    "id": "tasche_l",

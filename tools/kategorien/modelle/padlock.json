@@ -27,7 +27,8 @@
     ]
    ],
    "info": "Gehärteter, verchromter Stahl, damit man ihn nicht durchsägen kann. Nur mit einem Bolzenschneider aufknipsen, wenn der Schlüssel fehlt.",
-   "color": "#B8BEC4"
+   "color": "#B8BEC4",
+   "form": "liegend_x"
   },
   {
    "id": "buegel_lang",
@@ -260,7 +261,8 @@
    ],
    "info": "Unterschiedlich lange Messingstifte. Nur der passende Schlüssel schiebt jeden genau bis an den Rand des Kerns.",
    "color": "#D8B85A",
-   "label": true
+   "label": true,
+   "form": "liegend_x"
   },
   {
    "id": "kernstift_2",
@@ -290,7 +292,8 @@
    ],
    "info": "Weiterer Kernstift, andere Länge.",
    "color": "#D8B85A",
-   "label": false
+   "label": false,
+   "form": "liegend_x"
   },
   {
    "id": "kernstift_3",
@@ -320,7 +323,8 @@
    ],
    "info": "Weiterer Kernstift, andere Länge.",
    "color": "#D8B85A",
-   "label": false
+   "label": false,
+   "form": "liegend_x"
   },
   {
    "id": "kernstift_4",
@@ -350,7 +354,8 @@
    ],
    "info": "Weiterer Kernstift, andere Länge.",
    "color": "#D8B85A",
-   "label": false
+   "label": false,
+   "form": "liegend_x"
   },
   {
    "id": "gehaeusestift_1",
@@ -380,7 +385,8 @@
    ],
    "info": "Ohne Schlüssel ragen sie in den Kern und blockieren ihn. Mit dem richtigen Schlüssel liegt ihre Trennstelle genau am Kernrand und der Kern dreht sich.",
    "color": "#B8963E",
-   "label": true
+   "label": true,
+   "form": "liegend_x"
   },
   {
    "id": "gehaeusestift_2",
@@ -410,7 +416,8 @@
    ],
    "info": "Weiterer Gehäusestift.",
    "color": "#B8963E",
-   "label": false
+   "label": false,
+   "form": "liegend_x"
   },
   {
    "id": "gehaeusestift_3",
@@ -440,7 +447,8 @@
    ],
    "info": "Weiterer Gehäusestift.",
    "color": "#B8963E",
-   "label": false
+   "label": false,
+   "form": "liegend_x"
   },
   {
    "id": "gehaeusestift_4",
@@ -470,7 +478,8 @@
    ],
    "info": "Weiterer Gehäusestift.",
    "color": "#B8963E",
-   "label": false
+   "label": false,
+   "form": "liegend_x"
   },
   {
    "id": "feder_1",
@@ -501,6 +510,7 @@
    "info": "Winzige Stahlfedern drücken die Stifte in den Kern zurück.",
    "color": "#B8BEC4",
    "label": true,
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
@@ -508,7 +518,8 @@
      "y": 0.3,
      "w": 0.5,
      "d": 1.9,
-     "fill": "#7E868C"
+     "fill": "#7E868C",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -516,7 +527,8 @@
      "y": 0.3,
      "w": 0.5,
      "d": 1.9,
-     "fill": "#7E868C"
+     "fill": "#7E868C",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -524,7 +536,8 @@
      "y": 0.3,
      "w": 0.5,
      "d": 1.9,
-     "fill": "#7E868C"
+     "fill": "#7E868C",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -532,7 +545,8 @@
      "y": 0.3,
      "w": 0.5,
      "d": 1.9,
-     "fill": "#7E868C"
+     "fill": "#7E868C",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -540,7 +554,8 @@
      "y": 0.3,
      "w": 0.5,
      "d": 1.9,
-     "fill": "#7E868C"
+     "fill": "#7E868C",
+     "zeichnung": true
     }
    ]
   },
@@ -573,6 +588,7 @@
    "info": "Weitere Zuhaltungsfeder.",
    "color": "#B8BEC4",
    "label": false,
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
@@ -580,7 +596,8 @@
      "y": 0.3,
      "w": 0.5,
      "d": 1.9,
-     "fill": "#7E868C"
+     "fill": "#7E868C",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -588,7 +605,8 @@
      "y": 0.3,
      "w": 0.5,
      "d": 1.9,
-     "fill": "#7E868C"
+     "fill": "#7E868C",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -596,7 +614,8 @@
      "y": 0.3,
      "w": 0.5,
      "d": 1.9,
-     "fill": "#7E868C"
+     "fill": "#7E868C",
+     "zeichnung": true
     }
    ]
   },
@@ -629,6 +648,7 @@
    "info": "Weitere Zuhaltungsfeder.",
    "color": "#B8BEC4",
    "label": false,
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
@@ -636,7 +656,8 @@
      "y": 0.3,
      "w": 0.5,
      "d": 1.9,
-     "fill": "#7E868C"
+     "fill": "#7E868C",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -644,7 +665,8 @@
      "y": 0.3,
      "w": 0.5,
      "d": 1.9,
-     "fill": "#7E868C"
+     "fill": "#7E868C",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -652,7 +674,8 @@
      "y": 0.3,
      "w": 0.5,
      "d": 1.9,
-     "fill": "#7E868C"
+     "fill": "#7E868C",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -660,7 +683,8 @@
      "y": 0.3,
      "w": 0.5,
      "d": 1.9,
-     "fill": "#7E868C"
+     "fill": "#7E868C",
+     "zeichnung": true
     }
    ]
   },
@@ -693,6 +717,7 @@
    "info": "Weitere Zuhaltungsfeder.",
    "color": "#B8BEC4",
    "label": false,
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
@@ -700,7 +725,8 @@
      "y": 0.3,
      "w": 0.5,
      "d": 1.9,
-     "fill": "#7E868C"
+     "fill": "#7E868C",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -708,7 +734,8 @@
      "y": 0.3,
      "w": 0.5,
      "d": 1.9,
-     "fill": "#7E868C"
+     "fill": "#7E868C",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -716,7 +743,8 @@
      "y": 0.3,
      "w": 0.5,
      "d": 1.9,
-     "fill": "#7E868C"
+     "fill": "#7E868C",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -724,7 +752,8 @@
      "y": 0.3,
      "w": 0.5,
      "d": 1.9,
-     "fill": "#7E868C"
+     "fill": "#7E868C",
+     "zeichnung": true
     }
    ]
   },

@@ -30,7 +30,7 @@ def dichtung(seite, x, label=True):
                 x=x, y=2, w=56, d=36, z=0, h=10, mass=3, color=SILIKON, label=label,
                 info='Weicher Silikonrand, der am Gesicht abdichtet. Silikon kann nicht in die Gelbe Tonne: '
                      'Eine kaputte Brille kommt in den Restmüll.',
-                marks=[mark('cyl', 6, 5, 44, 26, fill='#1C232A')])
+                wand=3, boden=0, marks=[mark('cyl', 6, 5, 44, 26, fill='#1C232A', zeichnung=True)])
 
 
 def clip(seite, x, dx, label=True):

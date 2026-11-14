@@ -11,7 +11,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from bau import teil, mark, raster, explodiere, skaliere_masse, schreibe  # noqa: E402
 
-STAHL = '#5E666C'
+STAHL = '#A3AAB0'
 BLANK = '#AEB5BA'
 ROT = '#C8322B'
 GELB = '#E9B92D'
@@ -58,14 +58,14 @@ teile = [
          x=12, y=78, w=10, d=97, z=3, h=9, r=3, mass=34,
          info='Stahlkern des linken Griffs, unter der Kunststoffhülle.', color=STAHL, label=False),
     teil('griff_links', 'plastic_handles', 'Griffhülle links', 'Griff links', 'box',
-         x=4, y=86, w=24, d=94, z=0, h=15, r=10, explode=[-42, 0, 0], mass=16, materials=[['pp', 60], ['tpe', 40]],
+         x=4, y=86, w=24, d=94, z=0, h=15, r=10, explode=[-42, 0, 0], mass=16, form='liegend_y', materials=[['pp', 60], ['tpe', 40]],
          info='Zwei-Komponenten-Griff aus PP und weichem TPE. Abziehen oder aufschneiden, dann Kunststoff '
               'in den Restmüll und Stahl zum Altmetall.',
-         color=ROT, marks=[mark('box', 4, 12, 16, 70, 7, GELB)]),
+         color=ROT, marks=[mark('box', 4, 12, 16, 70, 7, GELB, zeichnung=True)]),
     teil('griff_rechts', 'plastic_handles', 'Griffhülle rechts', 'Griff rechts', 'box',
-         x=32, y=86, w=24, d=94, z=0, h=15, r=10, explode=[42, 0, 0], mass=16, materials=[['pp', 60], ['tpe', 40]],
+         x=32, y=86, w=24, d=94, z=0, h=15, r=10, explode=[42, 0, 0], mass=16, form='liegend_y', materials=[['pp', 60], ['tpe', 40]],
          info='Isoliert nicht gegen Strom, wenn kein VDE-Zeichen draufsteht.',
-         color=ROT, marks=[mark('box', 4, 12, 16, 70, 7, GELB)]),
+         color=ROT, marks=[mark('box', 4, 12, 16, 70, 7, GELB, zeichnung=True)]),
 ]
 
 for p in teile:
@@ -73,5 +73,8 @@ for p in teile:
         p['explode'] = [0, 0, 30]
     elif p['id'] in B:
         p['explode'] = [0, 0, 0]
+for p in teile:  # Foto-Ansicht: flache marks schweben über runden Formen, dort nur in der Zeichnung
+    if p.get('form'):
+        p['marks'] = [dict(m, zeichnung=True) for m in p.get('marks') or []]
 skaliere_masse(teile, oid='pliers')
 schreibe('pliers', teile)

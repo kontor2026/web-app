@@ -396,12 +396,15 @@
    "info": "Weicher Silikonrand, der am Gesicht abdichtet. Silikon kann nicht in die Gelbe Tonne: Eine kaputte Brille kommt in den Restmüll.",
    "color": "#2F3A44",
    "label": true,
+   "wand": 3,
+   "boden": 0,
    "marks": [
     {
      "shape": "cyl",
      "x": 6,
      "y": 5,
      "w": 44,
+     "zeichnung": true,
      "d": 26,
      "fill": "#1C232A"
     }
@@ -435,12 +438,15 @@
    "info": "Weicher Silikonrand, der am Gesicht abdichtet. Silikon kann nicht in die Gelbe Tonne: Eine kaputte Brille kommt in den Restmüll.",
    "color": "#2F3A44",
    "label": false,
+   "wand": 3,
+   "boden": 0,
    "marks": [
     {
      "shape": "cyl",
      "x": 6,
      "y": 5,
      "w": 44,
+     "zeichnung": true,
      "d": 26,
      "fill": "#1C232A"
     }

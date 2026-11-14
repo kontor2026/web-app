@@ -7,16 +7,16 @@
    "name": "Kordelstopper der Kapuze",
    "short": "Kordelstopper",
    "shape": "cyl",
-   "x": 88,
-   "y": 14,
+   "x": 86,
+   "y": 13,
    "w": 10,
    "d": 14,
-   "z": 26,
+   "z": 24,
    "h": 5,
    "explode": [
     0,
     0,
-    203.7
+    145.2
    ],
    "mass": 1.7,
    "materials": [
@@ -49,16 +49,16 @@
    "short": "Kapuze",
    "shape": "box",
    "x": 95,
-   "y": 0,
+   "y": 2,
    "w": 110,
-   "d": 42,
-   "z": 16,
-   "h": 14,
+   "d": 36,
+   "z": 12,
+   "h": 18,
    "r": 14,
    "explode": [
     0,
     0,
-    179.7
+    119.2
    ],
    "mass": 34,
    "materials": [
@@ -73,12 +73,14 @@
    ],
    "info": "Die Kapuze steckt eingerollt im Kragen und wird bei Regen herausgezogen. Mit Kordelzug am Gesicht.",
    "color": "#E8B83A",
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
      "x": 6,
-     "y": 21,
+     "y": 17,
      "w": 98,
+     "zeichnung": true,
      "d": 2,
      "r": 1,
      "fill": "#C99A22"
@@ -88,6 +90,7 @@
      "x": 70,
      "y": 8,
      "w": 28,
+     "zeichnung": true,
      "d": 8,
      "r": 3,
      "fill": "#D6A82E"

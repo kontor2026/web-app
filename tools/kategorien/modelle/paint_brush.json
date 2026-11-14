@@ -77,6 +77,7 @@
    ],
    "info": "Verzinntes Stahlblech, um Stiel und Borsten gequetscht. Zum Trennen mit einer Zange aufbiegen; die Zwinge gehört zum Altmetall.",
    "color": "#C4CACE",
+   "form": "liegend_y",
    "marks": [
     {
      "shape": "box",
@@ -85,7 +86,8 @@
      "w": 39,
      "d": 1.2,
      "r": 0.5,
-     "fill": "#A9B0B5"
+     "fill": "#A9B0B5",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -94,7 +96,8 @@
      "w": 39,
      "d": 1.2,
      "r": 0.5,
-     "fill": "#A9B0B5"
+     "fill": "#A9B0B5",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -103,7 +106,8 @@
      "w": 39,
      "d": 1.2,
      "r": 0.5,
-     "fill": "#A9B0B5"
+     "fill": "#A9B0B5",
+     "zeichnung": true
     }
    ]
   },
@@ -452,6 +456,7 @@
    "info": "Verdickter Hals des Stiels, auf dem die Zwinge sitzt.",
    "color": "#B5683A",
    "label": false,
+   "form": "liegend_y",
    "marks": [
     {
      "shape": "box",
@@ -460,7 +465,8 @@
      "w": 20,
      "d": 30,
      "r": 6,
-     "fill": "#C27646"
+     "fill": "#C27646",
+     "zeichnung": true
     }
    ]
   },
@@ -492,13 +498,15 @@
    ],
    "info": "Buchenholz, farbig lackiert, mit Loch zum Aufhängen. Nach dem Abtrennen der Zwinge kann das Holz wiederverwendet werden.",
    "color": "#B5683A",
+   "form": "liegend_y",
    "marks": [
     {
      "shape": "cyl",
      "x": 8,
      "y": 10,
      "w": 7,
-     "fill": "#5A3A22"
+     "fill": "#5A3A22",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -507,7 +515,8 @@
      "w": 17,
      "d": 84,
      "r": 6,
-     "fill": "#C27646"
+     "fill": "#C27646",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -516,7 +525,8 @@
      "w": 9,
      "d": 22,
      "r": 2,
-     "fill": "#E9D9B8"
+     "fill": "#E9D9B8",
+     "zeichnung": true
     }
    ]
   }

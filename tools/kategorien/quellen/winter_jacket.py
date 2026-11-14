@@ -7,6 +7,7 @@ from bau import teil, mark, raster, explodiere, skaliere_masse, schreibe  # noqa
 
 # Gesteppte Winterjacke flach hingelegt, Vorderseite oben, Kragen hinten (y = 0), Saum vorne. 400 × 500 × 80 mm.
 # Rumpf 240 mm breit in der Mitte, die Ärmel liegen links und rechts daneben, Strickbündchen an den Enden.
+# Foto-Ansicht: Vorderteile und Ärmel bestehen aus prallen Steppkammern (liegende Wülste).
 # Explodiert: Ärmel samt Bündchen zur Seite, vorne heben sich Reißverschluss, Obermaterial, Wattierung und Futter
 # als Ebenen vom Rückenteil ab, damit man den Schichtaufbau sieht.
 HUELLE = '#2E5B4A'
@@ -24,15 +25,25 @@ def stepp(w, d, y0=30, abstand=62):
     return [mark('box', 0, y, w, 2.5, 0, NAHT) for y in range(y0, int(d) - 10, abstand)]
 
 
+def kammern(pid, n, x, y, w, d, z, h, mass, erste, **kw):
+    """Steppkammern: n prall gefüllte Wülste quer (liegend_x), an den Steppnähten aneinander. Die erste trägt
+    Nummer und Beschreibung, die anderen sind Teil desselben Stücks."""
+    t = round(d / n, 2)
+    return [teil(pid if i == 0 else f'{pid}_{i}', 'nylon_fabric',
+                 erste['name'], erste['short'], 'box', form='liegend_x', x=x, y=round(y + i * t, 2), w=w, d=t, z=z, h=h,
+                 mass=round(mass / n, 1), label=erste.get('label', True) if i == 0 else False,
+                 info=erste['info'] if i == 0 else erste['name'] + ': eine der abgesteppten Kammern.',
+                 marks=erste.get('marks') if i == erste.get('marks_bei', 0) else None, **kw) for i in range(n)]
+
+
 def aermel(seite, x, dx, dy):
     links = seite == 'l'
     return [
-        teil(f'aermel_{seite}', 'nylon_fabric', f'Ärmel {"links" if links else "rechts"}', 'Ärmel', 'box',
-             x=x, y=60, w=80, d=405, z=0, h=55, r=18, mass=160, materials=KOMPLETT, color=HUELLE, explode=[dx, dy, 0],
-             label=links,
-             info='Gesteppter Ärmel mit Nylon außen, Polyesterwatte und Futter innen, wie der Rumpf aufgebaut.'
-             if links else 'Gegenstück zum linken Ärmel.',
-             marks=stepp(80, 405, 40, 62)),
+        *kammern(f'aermel_{seite}', 7, x, 60, 80, 405, 0, 55, 160,
+                 dict(name=f'Ärmel {"links" if links else "rechts"}', short='Ärmel', label=links,
+                      info='Gesteppter Ärmel mit Nylon außen, Polyesterwatte und Futter innen, wie der Rumpf aufgebaut.'
+                      if links else 'Gegenstück zum linken Ärmel.'),
+                 materials=KOMPLETT, color=HUELLE, explode=[dx, dy, 0]),
         teil(f'buendchen_{seite}', 'nylon_fabric', 'Strickbündchen', 'Bündchen', 'box', material_id='polyester',
              x=x + 8, y=465, w=64, d=32, z=6, h=42, r=10, mass=12, materials=[['polyester', 95], ['tpu', 5]],
              color=STRICK, explode=[dx, dy, 0], label=links,
@@ -43,10 +54,10 @@ def aermel(seite, x, dx, dy):
 
 
 teile = [
-    teil('kragen', 'nylon_fabric', 'Stehkragen mit Fleece', 'Kragen', 'box',
-         x=135, y=0, w=130, d=55, z=50, h=30, r=18, mass=45, materials=KOMPLETT, color=HUELLE,
+    teil('kragen', 'nylon_fabric', 'Stehkragen mit Fleece', 'Kragen', 'box', form='liegend_x',
+         x=135, y=0, w=130, d=55, z=40, h=40, r=18, mass=45, materials=KOMPLETT, color=HUELLE,
          info='Hochgestellter, wattierter Kragen, innen mit Fleece. In manchen Krägen ist eine Kapuze eingerollt.',
-         marks=[mark('box', 8, 24, 114, 2.5, 1, NAHT), mark('box', 10, 4, 110, 14, 6, '#3A4A44')]),
+         marks=[mark('box', 8, 24, 114, 2.5, 1, NAHT, zeichnung=True), mark('box', 10, 4, 110, 14, 6, '#3A4A44', zeichnung=True)]),
     teil('kordelstopper_1', 'nylon_fabric', 'Kordelstopper', 'Kordelstopper', 'cyl', material_id='pp',
          x=92, y=482, w=12, d=16, z=70, h=6, mass=2, materials=[['pp', 80], ['stahl', 20]], color='#22272B',
          explode=[0, 90, 0],
@@ -70,14 +81,15 @@ teile = [
               'abschneiden: Das Metall darf nicht ins Textilrecycling.',
          marks=[mark('box', 8, 0, 4, 460, 0.5, '#C9A24A'), mark('box', 5, 30, 10, 18, 2, '#B7BCC0'),
                 mark('box', 8, 48, 4, 22, 1, '#8E969A')]),
-    teil('aussen_l', 'nylon_fabric', 'Vorderteil links (Obermaterial)', 'Obermaterial', 'box',
-         x=80, y=30, w=113, d=470, z=30, h=40, r=10, mass=60, materials=SCHALE, color=HUELLE,
-         info='Wasserabweisendes Nylon-Gewebe, das die Wattierung umschließt und in Kammern abgesteppt ist. '
-              'Tragbare Jacken in die Altkleidersammlung.',
-         marks=stepp(113, 470) + [mark('box', 70, 60, 26, 14, 3, '#C9D3CE')]),
-    teil('aussen_r', 'nylon_fabric', 'Vorderteil rechts (Obermaterial)', 'Obermaterial', 'box',
-         x=207, y=30, w=113, d=470, z=30, h=40, r=10, mass=60, materials=SCHALE, color=HUELLE, label=False,
-         info='Gegenstück zur linken Vorderseite, mit Eingrifftasche.', marks=stepp(113, 470)),
+] + kammern('aussen_l', 8, 80, 30, 113, 470, 30, 40, 60,
+          dict(name='Vorderteil links (Obermaterial)', short='Obermaterial', marks_bei=1,
+               marks=[mark('box', 70, 22, 26, 14, 3, '#C9D3CE')],
+               info='Wasserabweisendes Nylon-Gewebe, das die Wattierung umschließt und in Kammern abgesteppt ist. '
+                    'Tragbare Jacken in die Altkleidersammlung.'),
+          materials=SCHALE, color=HUELLE) + kammern('aussen_r', 8, 207, 30, 113, 470, 30, 40, 60,
+          dict(name='Vorderteil rechts (Obermaterial)', short='Obermaterial', label=False,
+               info='Gegenstück zur linken Vorderseite, mit Eingrifftasche.'),
+          materials=SCHALE, color=HUELLE) + [
     teil('wattierung', 'polyester_fill', 'Wattierung', 'Wattierung', 'box',
          x=85, y=35, w=230, d=460, z=30, h=32, r=10, mass=110, color=WATTE,
          info='Polyester-Hohlfasern halten die warme Luft fest. Futter aufschneiden und die Watte als Füllmaterial '
@@ -99,6 +111,7 @@ teile = [
          marks=stepp(240, 470) + [mark('box', 0, 450, 240, 20, 4, NAHT)]),
 ] + aermel('l', 0, -150, 230) + aermel('r', 320, 150, 0)
 
-explodiere(teile, abstand=70, nach_liste=True, abstaende={'taschen_rv_l': 20, 'taschen_rv_r': 20})
+explodiere(teile, abstand=70, nach_liste=True,
+           gruppen=[[p['id'] for p in teile if p['id'].startswith(('aussen_l', 'aussen_r'))]], abstaende={'taschen_rv_l': 20, 'taschen_rv_r': 20})
 skaliere_masse(teile, oid='winter_jacket')
 schreibe('winter_jacket', teile)

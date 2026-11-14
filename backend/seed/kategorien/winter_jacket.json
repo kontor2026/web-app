@@ -26,12 +26,12 @@
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 5,16 kg",
+   "v": "≈ 5,17 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 4,99 kg",
+   "v": "≈ 5,00 kg",
    "hint": "spart 0,17 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
@@ -43,13 +43,13 @@
    "Cu": "Modellmassen (Schätzung)"
   },
   "materialien_g": {
-   "nylon": 986.5,
-   "polyester": 155.2,
+   "nylon": 987.5,
+   "polyester": 155.1,
    "copper": 53.5,
    "pp": 4.6
   },
-  "co2_kg": 5.162,
-  "co2_mit_recyclat_kg": 4.993,
+  "co2_kg": 5.166,
+  "co2_mit_recyclat_kg": 4.997,
   "co2_ersparnis_kg": 0.169,
   "co2_ohne_faktor": [],
   "rohstoffwert_eur": 0.68,
@@ -141,13 +141,13 @@
    "y": 0,
    "w": 130,
    "d": 55,
-   "z": 50,
-   "h": 30,
+   "z": 40,
+   "h": 40,
    "r": 18,
    "explode": [
     0,
     0,
-    408.0
+    418.0
    ],
    "mass": 51.3,
    "materials": [
@@ -162,12 +162,14 @@
    ],
    "info": "Hochgestellter, wattierter Kragen, innen mit Fleece. In manchen Krägen ist eine Kapuze eingerollt.",
    "color": "#2E5B4A",
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
      "x": 8,
      "y": 24,
      "w": 114,
+     "zeichnung": true,
      "d": 2.5,
      "r": 1,
      "fill": "#244A3C"
@@ -177,6 +179,7 @@
      "x": 10,
      "y": 4,
      "w": 110,
+     "zeichnung": true,
      "d": 14,
      "r": 6,
      "fill": "#3A4A44"
@@ -457,16 +460,15 @@
    "x": 80,
    "y": 30,
    "w": 113,
-   "d": 470,
+   "d": 58.75,
    "z": 30,
    "h": 40,
-   "r": 10,
    "explode": [
     0,
     0,
     242.0
    ],
-   "mass": 68.4,
+   "mass": 8.6,
    "materials": [
     [
      "nylon",
@@ -475,80 +477,229 @@
    ],
    "info": "Wasserabweisendes Nylon-Gewebe, das die Wattierung umschließt und in Kammern abgesteppt ist. Tragbare Jacken in die Altkleidersammlung.",
    "color": "#2E5B4A",
+   "label": true,
+   "form": "liegend_x"
+  },
+  {
+   "id": "aussen_l_1",
+   "component_id": "nylon_fabric",
+   "material_id": "nylon",
+   "name": "Vorderteil links (Obermaterial)",
+   "short": "Obermaterial",
+   "shape": "box",
+   "x": 80,
+   "y": 88.75,
+   "w": 113,
+   "d": 58.75,
+   "z": 30,
+   "h": 40,
+   "explode": [
+    0,
+    0,
+    242.0
+   ],
+   "mass": 8.6,
+   "materials": [
+    [
+     "nylon",
+     100
+    ]
+   ],
+   "info": "Vorderteil links (Obermaterial): eine der abgesteppten Kammern.",
+   "color": "#2E5B4A",
+   "label": false,
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
-     "x": 0,
-     "y": 30,
-     "w": 113,
-     "d": 2.5,
-     "r": 0,
-     "fill": "#244A3C"
-    },
-    {
-     "shape": "box",
-     "x": 0,
-     "y": 92,
-     "w": 113,
-     "d": 2.5,
-     "r": 0,
-     "fill": "#244A3C"
-    },
-    {
-     "shape": "box",
-     "x": 0,
-     "y": 154,
-     "w": 113,
-     "d": 2.5,
-     "r": 0,
-     "fill": "#244A3C"
-    },
-    {
-     "shape": "box",
-     "x": 0,
-     "y": 216,
-     "w": 113,
-     "d": 2.5,
-     "r": 0,
-     "fill": "#244A3C"
-    },
-    {
-     "shape": "box",
-     "x": 0,
-     "y": 278,
-     "w": 113,
-     "d": 2.5,
-     "r": 0,
-     "fill": "#244A3C"
-    },
-    {
-     "shape": "box",
-     "x": 0,
-     "y": 340,
-     "w": 113,
-     "d": 2.5,
-     "r": 0,
-     "fill": "#244A3C"
-    },
-    {
-     "shape": "box",
-     "x": 0,
-     "y": 402,
-     "w": 113,
-     "d": 2.5,
-     "r": 0,
-     "fill": "#244A3C"
-    },
-    {
-     "shape": "box",
      "x": 70,
-     "y": 60,
+     "y": 22,
      "w": 26,
      "d": 14,
      "r": 3,
      "fill": "#C9D3CE"
     }
    ]
+  },
+  {
+   "id": "aussen_l_2",
+   "component_id": "nylon_fabric",
+   "material_id": "nylon",
+   "name": "Vorderteil links (Obermaterial)",
+   "short": "Obermaterial",
+   "shape": "box",
+   "x": 80,
+   "y": 147.5,
+   "w": 113,
+   "d": 58.75,
+   "z": 30,
+   "h": 40,
+   "explode": [
+    0,
+    0,
+    242.0
+   ],
+   "mass": 8.6,
+   "materials": [
+    [
+     "nylon",
+     100
+    ]
+   ],
+   "info": "Vorderteil links (Obermaterial): eine der abgesteppten Kammern.",
+   "color": "#2E5B4A",
+   "label": false,
+   "form": "liegend_x"
+  },
+  {
+   "id": "aussen_l_3",
+   "component_id": "nylon_fabric",
+   "material_id": "nylon",
+   "name": "Vorderteil links (Obermaterial)",
+   "short": "Obermaterial",
+   "shape": "box",
+   "x": 80,
+   "y": 206.25,
+   "w": 113,
+   "d": 58.75,
+   "z": 30,
+   "h": 40,
+   "explode": [
+    0,
+    0,
+    242.0
+   ],
+   "mass": 8.6,
+   "materials": [
+    [
+     "nylon",
+     100
+    ]
+   ],
+   "info": "Vorderteil links (Obermaterial): eine der abgesteppten Kammern.",
+   "color": "#2E5B4A",
+   "label": false,
+   "form": "liegend_x"
+  },
+  {
+   "id": "aussen_l_4",
+   "component_id": "nylon_fabric",
+   "material_id": "nylon",
+   "name": "Vorderteil links (Obermaterial)",
+   "short": "Obermaterial",
+   "shape": "box",
+   "x": 80,
+   "y": 265,
+   "w": 113,
+   "d": 58.75,
+   "z": 30,
+   "h": 40,
+   "explode": [
+    0,
+    0,
+    242.0
+   ],
+   "mass": 8.6,
+   "materials": [
+    [
+     "nylon",
+     100
+    ]
+   ],
+   "info": "Vorderteil links (Obermaterial): eine der abgesteppten Kammern.",
+   "color": "#2E5B4A",
+   "label": false,
+   "form": "liegend_x"
+  },
+  {
+   "id": "aussen_l_5",
+   "component_id": "nylon_fabric",
+   "material_id": "nylon",
+   "name": "Vorderteil links (Obermaterial)",
+   "short": "Obermaterial",
+   "shape": "box",
+   "x": 80,
+   "y": 323.75,
+   "w": 113,
+   "d": 58.75,
+   "z": 30,
+   "h": 40,
+   "explode": [
+    0,
+    0,
+    242.0
+   ],
+   "mass": 8.6,
+   "materials": [
+    [
+     "nylon",
+     100
+    ]
+   ],
+   "info": "Vorderteil links (Obermaterial): eine der abgesteppten Kammern.",
+   "color": "#2E5B4A",
+   "label": false,
+   "form": "liegend_x"
+  },
+  {
+   "id": "aussen_l_6",
+   "component_id": "nylon_fabric",
+   "material_id": "nylon",
+   "name": "Vorderteil links (Obermaterial)",
+   "short": "Obermaterial",
+   "shape": "box",
+   "x": 80,
+   "y": 382.5,
+   "w": 113,
+   "d": 58.75,
+   "z": 30,
+   "h": 40,
+   "explode": [
+    0,
+    0,
+    242.0
+   ],
+   "mass": 8.6,
+   "materials": [
+    [
+     "nylon",
+     100
+    ]
+   ],
+   "info": "Vorderteil links (Obermaterial): eine der abgesteppten Kammern.",
+   "color": "#2E5B4A",
+   "label": false,
+   "form": "liegend_x"
+  },
+  {
+   "id": "aussen_l_7",
+   "component_id": "nylon_fabric",
+   "material_id": "nylon",
+   "name": "Vorderteil links (Obermaterial)",
+   "short": "Obermaterial",
+   "shape": "box",
+   "x": 80,
+   "y": 441.25,
+   "w": 113,
+   "d": 58.75,
+   "z": 30,
+   "h": 40,
+   "explode": [
+    0,
+    0,
+    242.0
+   ],
+   "mass": 8.6,
+   "materials": [
+    [
+     "nylon",
+     100
+    ]
+   ],
+   "info": "Vorderteil links (Obermaterial): eine der abgesteppten Kammern.",
+   "color": "#2E5B4A",
+   "label": false,
+   "form": "liegend_x"
   },
   {
    "id": "aussen_r",
@@ -560,16 +711,15 @@
    "x": 207,
    "y": 30,
    "w": 113,
-   "d": 470,
+   "d": 58.75,
    "z": 30,
    "h": 40,
-   "r": 10,
    "explode": [
     0,
     0,
     242.0
    ],
-   "mass": 68.4,
+   "mass": 8.6,
    "materials": [
     [
      "nylon",
@@ -579,71 +729,217 @@
    "info": "Gegenstück zur linken Vorderseite, mit Eingrifftasche.",
    "color": "#2E5B4A",
    "label": false,
-   "marks": [
-    {
-     "shape": "box",
-     "x": 0,
-     "y": 30,
-     "w": 113,
-     "d": 2.5,
-     "r": 0,
-     "fill": "#244A3C"
-    },
-    {
-     "shape": "box",
-     "x": 0,
-     "y": 92,
-     "w": 113,
-     "d": 2.5,
-     "r": 0,
-     "fill": "#244A3C"
-    },
-    {
-     "shape": "box",
-     "x": 0,
-     "y": 154,
-     "w": 113,
-     "d": 2.5,
-     "r": 0,
-     "fill": "#244A3C"
-    },
-    {
-     "shape": "box",
-     "x": 0,
-     "y": 216,
-     "w": 113,
-     "d": 2.5,
-     "r": 0,
-     "fill": "#244A3C"
-    },
-    {
-     "shape": "box",
-     "x": 0,
-     "y": 278,
-     "w": 113,
-     "d": 2.5,
-     "r": 0,
-     "fill": "#244A3C"
-    },
-    {
-     "shape": "box",
-     "x": 0,
-     "y": 340,
-     "w": 113,
-     "d": 2.5,
-     "r": 0,
-     "fill": "#244A3C"
-    },
-    {
-     "shape": "box",
-     "x": 0,
-     "y": 402,
-     "w": 113,
-     "d": 2.5,
-     "r": 0,
-     "fill": "#244A3C"
-    }
-   ]
+   "form": "liegend_x"
+  },
+  {
+   "id": "aussen_r_1",
+   "component_id": "nylon_fabric",
+   "material_id": "nylon",
+   "name": "Vorderteil rechts (Obermaterial)",
+   "short": "Obermaterial",
+   "shape": "box",
+   "x": 207,
+   "y": 88.75,
+   "w": 113,
+   "d": 58.75,
+   "z": 30,
+   "h": 40,
+   "explode": [
+    0,
+    0,
+    242.0
+   ],
+   "mass": 8.6,
+   "materials": [
+    [
+     "nylon",
+     100
+    ]
+   ],
+   "info": "Vorderteil rechts (Obermaterial): eine der abgesteppten Kammern.",
+   "color": "#2E5B4A",
+   "label": false,
+   "form": "liegend_x"
+  },
+  {
+   "id": "aussen_r_2",
+   "component_id": "nylon_fabric",
+   "material_id": "nylon",
+   "name": "Vorderteil rechts (Obermaterial)",
+   "short": "Obermaterial",
+   "shape": "box",
+   "x": 207,
+   "y": 147.5,
+   "w": 113,
+   "d": 58.75,
+   "z": 30,
+   "h": 40,
+   "explode": [
+    0,
+    0,
+    242.0
+   ],
+   "mass": 8.6,
+   "materials": [
+    [
+     "nylon",
+     100
+    ]
+   ],
+   "info": "Vorderteil rechts (Obermaterial): eine der abgesteppten Kammern.",
+   "color": "#2E5B4A",
+   "label": false,
+   "form": "liegend_x"
+  },
+  {
+   "id": "aussen_r_3",
+   "component_id": "nylon_fabric",
+   "material_id": "nylon",
+   "name": "Vorderteil rechts (Obermaterial)",
+   "short": "Obermaterial",
+   "shape": "box",
+   "x": 207,
+   "y": 206.25,
+   "w": 113,
+   "d": 58.75,
+   "z": 30,
+   "h": 40,
+   "explode": [
+    0,
+    0,
+    242.0
+   ],
+   "mass": 8.6,
+   "materials": [
+    [
+     "nylon",
+     100
+    ]
+   ],
+   "info": "Vorderteil rechts (Obermaterial): eine der abgesteppten Kammern.",
+   "color": "#2E5B4A",
+   "label": false,
+   "form": "liegend_x"
+  },
+  {
+   "id": "aussen_r_4",
+   "component_id": "nylon_fabric",
+   "material_id": "nylon",
+   "name": "Vorderteil rechts (Obermaterial)",
+   "short": "Obermaterial",
+   "shape": "box",
+   "x": 207,
+   "y": 265,
+   "w": 113,
+   "d": 58.75,
+   "z": 30,
+   "h": 40,
+   "explode": [
+    0,
+    0,
+    242.0
+   ],
+   "mass": 8.6,
+   "materials": [
+    [
+     "nylon",
+     100
+    ]
+   ],
+   "info": "Vorderteil rechts (Obermaterial): eine der abgesteppten Kammern.",
+   "color": "#2E5B4A",
+   "label": false,
+   "form": "liegend_x"
+  },
+  {
+   "id": "aussen_r_5",
+   "component_id": "nylon_fabric",
+   "material_id": "nylon",
+   "name": "Vorderteil rechts (Obermaterial)",
+   "short": "Obermaterial",
+   "shape": "box",
+   "x": 207,
+   "y": 323.75,
+   "w": 113,
+   "d": 58.75,
+   "z": 30,
+   "h": 40,
+   "explode": [
+    0,
+    0,
+    242.0
+   ],
+   "mass": 8.6,
+   "materials": [
+    [
+     "nylon",
+     100
+    ]
+   ],
+   "info": "Vorderteil rechts (Obermaterial): eine der abgesteppten Kammern.",
+   "color": "#2E5B4A",
+   "label": false,
+   "form": "liegend_x"
+  },
+  {
+   "id": "aussen_r_6",
+   "component_id": "nylon_fabric",
+   "material_id": "nylon",
+   "name": "Vorderteil rechts (Obermaterial)",
+   "short": "Obermaterial",
+   "shape": "box",
+   "x": 207,
+   "y": 382.5,
+   "w": 113,
+   "d": 58.75,
+   "z": 30,
+   "h": 40,
+   "explode": [
+    0,
+    0,
+    242.0
+   ],
+   "mass": 8.6,
+   "materials": [
+    [
+     "nylon",
+     100
+    ]
+   ],
+   "info": "Vorderteil rechts (Obermaterial): eine der abgesteppten Kammern.",
+   "color": "#2E5B4A",
+   "label": false,
+   "form": "liegend_x"
+  },
+  {
+   "id": "aussen_r_7",
+   "component_id": "nylon_fabric",
+   "material_id": "nylon",
+   "name": "Vorderteil rechts (Obermaterial)",
+   "short": "Obermaterial",
+   "shape": "box",
+   "x": 207,
+   "y": 441.25,
+   "w": 113,
+   "d": 58.75,
+   "z": 30,
+   "h": 40,
+   "explode": [
+    0,
+    0,
+    242.0
+   ],
+   "mass": 8.6,
+   "materials": [
+    [
+     "nylon",
+     100
+    ]
+   ],
+   "info": "Vorderteil rechts (Obermaterial): eine der abgesteppten Kammern.",
+   "color": "#2E5B4A",
+   "label": false,
+   "form": "liegend_x"
   },
   {
    "id": "wattierung",
@@ -664,7 +960,7 @@
     0,
     140.0
    ],
-   "mass": 125.5,
+   "mass": 125.4,
    "materials": [
     [
      "polyester",
@@ -878,7 +1174,7 @@
     0,
     0.0
    ],
-   "mass": 376.4,
+   "mass": 376.2,
    "materials": [
     [
      "nylon",
@@ -976,16 +1272,15 @@
    "x": 0,
    "y": 60,
    "w": 80,
-   "d": 405,
+   "d": 57.86,
    "z": 0,
    "h": 55,
-   "r": 18,
    "explode": [
     -150,
     230,
     0
    ],
-   "mass": 182.5,
+   "mass": 26.1,
    "materials": [
     [
      "nylon",
@@ -999,62 +1294,211 @@
    "info": "Gesteppter Ärmel mit Nylon außen, Polyesterwatte und Futter innen, wie der Rumpf aufgebaut.",
    "color": "#2E5B4A",
    "label": true,
-   "marks": [
-    {
-     "shape": "box",
-     "x": 0,
-     "y": 40,
-     "w": 80,
-     "d": 2.5,
-     "r": 0,
-     "fill": "#244A3C"
-    },
-    {
-     "shape": "box",
-     "x": 0,
-     "y": 102,
-     "w": 80,
-     "d": 2.5,
-     "r": 0,
-     "fill": "#244A3C"
-    },
-    {
-     "shape": "box",
-     "x": 0,
-     "y": 164,
-     "w": 80,
-     "d": 2.5,
-     "r": 0,
-     "fill": "#244A3C"
-    },
-    {
-     "shape": "box",
-     "x": 0,
-     "y": 226,
-     "w": 80,
-     "d": 2.5,
-     "r": 0,
-     "fill": "#244A3C"
-    },
-    {
-     "shape": "box",
-     "x": 0,
-     "y": 288,
-     "w": 80,
-     "d": 2.5,
-     "r": 0,
-     "fill": "#244A3C"
-    },
-    {
-     "shape": "box",
-     "x": 0,
-     "y": 350,
-     "w": 80,
-     "d": 2.5,
-     "r": 0,
-     "fill": "#244A3C"
-    }
-   ]
+   "form": "liegend_x"
+  },
+  {
+   "id": "aermel_l_1",
+   "component_id": "nylon_fabric",
+   "material_id": "nylon",
+   "name": "Ärmel links",
+   "short": "Ärmel",
+   "shape": "box",
+   "x": 0,
+   "y": 117.86,
+   "w": 80,
+   "d": 57.86,
+   "z": 0,
+   "h": 55,
+   "explode": [
+    -150,
+    230,
+    0
+   ],
+   "mass": 26.1,
+   "materials": [
+    [
+     "nylon",
+     55
+    ],
+    [
+     "polyester",
+     45
+    ]
+   ],
+   "info": "Ärmel links: eine der abgesteppten Kammern.",
+   "color": "#2E5B4A",
+   "label": false,
+   "form": "liegend_x"
+  },
+  {
+   "id": "aermel_l_2",
+   "component_id": "nylon_fabric",
+   "material_id": "nylon",
+   "name": "Ärmel links",
+   "short": "Ärmel",
+   "shape": "box",
+   "x": 0,
+   "y": 175.72,
+   "w": 80,
+   "d": 57.86,
+   "z": 0,
+   "h": 55,
+   "explode": [
+    -150,
+    230,
+    0
+   ],
+   "mass": 26.1,
+   "materials": [
+    [
+     "nylon",
+     55
+    ],
+    [
+     "polyester",
+     45
+    ]
+   ],
+   "info": "Ärmel links: eine der abgesteppten Kammern.",
+   "color": "#2E5B4A",
+   "label": false,
+   "form": "liegend_x"
+  },
+  {
+   "id": "aermel_l_3",
+   "component_id": "nylon_fabric",
+   "material_id": "nylon",
+   "name": "Ärmel links",
+   "short": "Ärmel",
+   "shape": "box",
+   "x": 0,
+   "y": 233.58,
+   "w": 80,
+   "d": 57.86,
+   "z": 0,
+   "h": 55,
+   "explode": [
+    -150,
+    230,
+    0
+   ],
+   "mass": 26.1,
+   "materials": [
+    [
+     "nylon",
+     55
+    ],
+    [
+     "polyester",
+     45
+    ]
+   ],
+   "info": "Ärmel links: eine der abgesteppten Kammern.",
+   "color": "#2E5B4A",
+   "label": false,
+   "form": "liegend_x"
+  },
+  {
+   "id": "aermel_l_4",
+   "component_id": "nylon_fabric",
+   "material_id": "nylon",
+   "name": "Ärmel links",
+   "short": "Ärmel",
+   "shape": "box",
+   "x": 0,
+   "y": 291.44,
+   "w": 80,
+   "d": 57.86,
+   "z": 0,
+   "h": 55,
+   "explode": [
+    -150,
+    230,
+    0
+   ],
+   "mass": 26.1,
+   "materials": [
+    [
+     "nylon",
+     55
+    ],
+    [
+     "polyester",
+     45
+    ]
+   ],
+   "info": "Ärmel links: eine der abgesteppten Kammern.",
+   "color": "#2E5B4A",
+   "label": false,
+   "form": "liegend_x"
+  },
+  {
+   "id": "aermel_l_5",
+   "component_id": "nylon_fabric",
+   "material_id": "nylon",
+   "name": "Ärmel links",
+   "short": "Ärmel",
+   "shape": "box",
+   "x": 0,
+   "y": 349.3,
+   "w": 80,
+   "d": 57.86,
+   "z": 0,
+   "h": 55,
+   "explode": [
+    -150,
+    230,
+    0
+   ],
+   "mass": 26.1,
+   "materials": [
+    [
+     "nylon",
+     55
+    ],
+    [
+     "polyester",
+     45
+    ]
+   ],
+   "info": "Ärmel links: eine der abgesteppten Kammern.",
+   "color": "#2E5B4A",
+   "label": false,
+   "form": "liegend_x"
+  },
+  {
+   "id": "aermel_l_6",
+   "component_id": "nylon_fabric",
+   "material_id": "nylon",
+   "name": "Ärmel links",
+   "short": "Ärmel",
+   "shape": "box",
+   "x": 0,
+   "y": 407.16,
+   "w": 80,
+   "d": 57.86,
+   "z": 0,
+   "h": 55,
+   "explode": [
+    -150,
+    230,
+    0
+   ],
+   "mass": 26.1,
+   "materials": [
+    [
+     "nylon",
+     55
+    ],
+    [
+     "polyester",
+     45
+    ]
+   ],
+   "info": "Ärmel links: eine der abgesteppten Kammern.",
+   "color": "#2E5B4A",
+   "label": false,
+   "form": "liegend_x"
   },
   {
    "id": "buendchen_l",
@@ -1182,16 +1626,15 @@
    "x": 320,
    "y": 60,
    "w": 80,
-   "d": 405,
+   "d": 57.86,
    "z": 0,
    "h": 55,
-   "r": 18,
    "explode": [
     150,
     0,
     0
    ],
-   "mass": 182.5,
+   "mass": 26.1,
    "materials": [
     [
      "nylon",
@@ -1205,62 +1648,211 @@
    "info": "Gegenstück zum linken Ärmel.",
    "color": "#2E5B4A",
    "label": false,
-   "marks": [
-    {
-     "shape": "box",
-     "x": 0,
-     "y": 40,
-     "w": 80,
-     "d": 2.5,
-     "r": 0,
-     "fill": "#244A3C"
-    },
-    {
-     "shape": "box",
-     "x": 0,
-     "y": 102,
-     "w": 80,
-     "d": 2.5,
-     "r": 0,
-     "fill": "#244A3C"
-    },
-    {
-     "shape": "box",
-     "x": 0,
-     "y": 164,
-     "w": 80,
-     "d": 2.5,
-     "r": 0,
-     "fill": "#244A3C"
-    },
-    {
-     "shape": "box",
-     "x": 0,
-     "y": 226,
-     "w": 80,
-     "d": 2.5,
-     "r": 0,
-     "fill": "#244A3C"
-    },
-    {
-     "shape": "box",
-     "x": 0,
-     "y": 288,
-     "w": 80,
-     "d": 2.5,
-     "r": 0,
-     "fill": "#244A3C"
-    },
-    {
-     "shape": "box",
-     "x": 0,
-     "y": 350,
-     "w": 80,
-     "d": 2.5,
-     "r": 0,
-     "fill": "#244A3C"
-    }
-   ]
+   "form": "liegend_x"
+  },
+  {
+   "id": "aermel_r_1",
+   "component_id": "nylon_fabric",
+   "material_id": "nylon",
+   "name": "Ärmel rechts",
+   "short": "Ärmel",
+   "shape": "box",
+   "x": 320,
+   "y": 117.86,
+   "w": 80,
+   "d": 57.86,
+   "z": 0,
+   "h": 55,
+   "explode": [
+    150,
+    0,
+    0
+   ],
+   "mass": 26.1,
+   "materials": [
+    [
+     "nylon",
+     55
+    ],
+    [
+     "polyester",
+     45
+    ]
+   ],
+   "info": "Ärmel rechts: eine der abgesteppten Kammern.",
+   "color": "#2E5B4A",
+   "label": false,
+   "form": "liegend_x"
+  },
+  {
+   "id": "aermel_r_2",
+   "component_id": "nylon_fabric",
+   "material_id": "nylon",
+   "name": "Ärmel rechts",
+   "short": "Ärmel",
+   "shape": "box",
+   "x": 320,
+   "y": 175.72,
+   "w": 80,
+   "d": 57.86,
+   "z": 0,
+   "h": 55,
+   "explode": [
+    150,
+    0,
+    0
+   ],
+   "mass": 26.1,
+   "materials": [
+    [
+     "nylon",
+     55
+    ],
+    [
+     "polyester",
+     45
+    ]
+   ],
+   "info": "Ärmel rechts: eine der abgesteppten Kammern.",
+   "color": "#2E5B4A",
+   "label": false,
+   "form": "liegend_x"
+  },
+  {
+   "id": "aermel_r_3",
+   "component_id": "nylon_fabric",
+   "material_id": "nylon",
+   "name": "Ärmel rechts",
+   "short": "Ärmel",
+   "shape": "box",
+   "x": 320,
+   "y": 233.58,
+   "w": 80,
+   "d": 57.86,
+   "z": 0,
+   "h": 55,
+   "explode": [
+    150,
+    0,
+    0
+   ],
+   "mass": 26.1,
+   "materials": [
+    [
+     "nylon",
+     55
+    ],
+    [
+     "polyester",
+     45
+    ]
+   ],
+   "info": "Ärmel rechts: eine der abgesteppten Kammern.",
+   "color": "#2E5B4A",
+   "label": false,
+   "form": "liegend_x"
+  },
+  {
+   "id": "aermel_r_4",
+   "component_id": "nylon_fabric",
+   "material_id": "nylon",
+   "name": "Ärmel rechts",
+   "short": "Ärmel",
+   "shape": "box",
+   "x": 320,
+   "y": 291.44,
+   "w": 80,
+   "d": 57.86,
+   "z": 0,
+   "h": 55,
+   "explode": [
+    150,
+    0,
+    0
+   ],
+   "mass": 26.1,
+   "materials": [
+    [
+     "nylon",
+     55
+    ],
+    [
+     "polyester",
+     45
+    ]
+   ],
+   "info": "Ärmel rechts: eine der abgesteppten Kammern.",
+   "color": "#2E5B4A",
+   "label": false,
+   "form": "liegend_x"
+  },
+  {
+   "id": "aermel_r_5",
+   "component_id": "nylon_fabric",
+   "material_id": "nylon",
+   "name": "Ärmel rechts",
+   "short": "Ärmel",
+   "shape": "box",
+   "x": 320,
+   "y": 349.3,
+   "w": 80,
+   "d": 57.86,
+   "z": 0,
+   "h": 55,
+   "explode": [
+    150,
+    0,
+    0
+   ],
+   "mass": 26.1,
+   "materials": [
+    [
+     "nylon",
+     55
+    ],
+    [
+     "polyester",
+     45
+    ]
+   ],
+   "info": "Ärmel rechts: eine der abgesteppten Kammern.",
+   "color": "#2E5B4A",
+   "label": false,
+   "form": "liegend_x"
+  },
+  {
+   "id": "aermel_r_6",
+   "component_id": "nylon_fabric",
+   "material_id": "nylon",
+   "name": "Ärmel rechts",
+   "short": "Ärmel",
+   "shape": "box",
+   "x": 320,
+   "y": 407.16,
+   "w": 80,
+   "d": 57.86,
+   "z": 0,
+   "h": 55,
+   "explode": [
+    150,
+    0,
+    0
+   ],
+   "mass": 26.1,
+   "materials": [
+    [
+     "nylon",
+     55
+    ],
+    [
+     "polyester",
+     45
+    ]
+   ],
+   "info": "Ärmel rechts: eine der abgesteppten Kammern.",
+   "color": "#2E5B4A",
+   "label": false,
+   "form": "liegend_x"
   },
   {
    "id": "buendchen_r",

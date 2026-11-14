@@ -6,6 +6,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from bau import teil, mark, explodiere, skaliere_masse, schreibe  # noqa: E402
 
 # Ledergürtel (ca. 110 cm, 35 mm breit) aufgerollt, die Kante steht auf dem Tisch. Rolle Ø 94 mm, 38 mm hoch,
+# Foto-Ansicht: die Windungen sind echte Ringe (wand, unten offen), innen bleibt ein Loch von gut 4 cm,
 # die Schnalle sitzt außen rechts am Riemenende. Explodiert heben sich die Windungen teleskopartig nach oben ab,
 # Schnalle, Dorn, Schraube und Schlaufe werden nach rechts gezogen.
 LEDER = '#7A4A2A'
@@ -14,18 +15,18 @@ STAHL = '#B7BCC0'
 
 teile = [
     teil('spitze', 'leather_strap', 'Riemenspitze mit Löchern (innere Windung)', 'Riemenspitze', 'cyl',
-         x=27, y=30, w=40, z=0, h=38, mass=30, materials=[['leder', 100]], color=LEDER,
+         x=16, y=19, w=62, z=0, h=38, wand=10, boden=0, mass=30, materials=[['leder', 100]], color=LEDER,
          info='Das Ende mit den Lochreihen, innen in der Rolle. Rindsleder, pflanzlich oder mit Chromsalzen gegerbt.',
-         marks=[mark('cyl', 4, 4, 32, fill=KANTE), mark('cyl', 7, 7, 26, fill=LEDER)]),
+         marks=[mark('cyl', 4, 4, 54, fill=KANTE, zeichnung=True), mark('cyl', 10, 10, 42, fill='#3A2416', zeichnung=True)]),
     teil('windung_mitte', 'leather_strap', 'Riemen, mittlere Windung', 'Riemen', 'cyl',
-         x=12, y=15, w=70, z=0, h=38, mass=40, materials=[['leder', 100]], color=LEDER,
+         x=8, y=11, w=78, z=0, h=38, wand=8, boden=0, mass=40, materials=[['leder', 100]], color=LEDER,
          info='Zwei Lagen Leder, an den Kanten verklebt und vernäht. Tragbare Gürtel in die Altkleidersammlung.',
-         marks=[mark('cyl', 4, 4, 62, fill=KANTE), mark('cyl', 7, 7, 56, fill=LEDER)]),
+         marks=[mark('cyl', 4, 4, 70, fill=KANTE, zeichnung=True), mark('cyl', 8, 8, 62, fill=LEDER, zeichnung=True)]),
     teil('windung_aussen', 'leather_strap', 'Riemen, äußere Windung', 'Riemen', 'cyl',
-         x=0, y=3, w=94, z=0, h=38, mass=55, materials=[['leder', 100]], color=LEDER, label=False,
+         x=0, y=3, w=94, z=0, h=38, wand=8, boden=0, mass=55, materials=[['leder', 100]], color=LEDER, label=False,
          info='Äußere Windung bis zur Schnalle. Leder lässt sich nicht wie Kunststoff einschmelzen; '
               'Reste werden zu Lederfaserplatten verarbeitet.',
-         marks=[mark('cyl', 4, 4, 86, fill=KANTE), mark('cyl', 7, 7, 80, fill=LEDER)]),
+         marks=[mark('cyl', 4, 4, 86, fill=KANTE, zeichnung=True), mark('cyl', 8, 8, 78, fill=LEDER, zeichnung=True)]),
     teil('schlaufe', 'leather_strap', 'Lederschlaufe', 'Schlaufe', 'box',
          x=93, y=78, w=7, d=10, z=0, h=40, r=2, mass=4, materials=[['leder', 100]], color=KANTE, explode=[60, 4, 0],
          info='Kleine Lederschlaufe hinter der Schnalle, sie hält das freie Riemenende fest.'),

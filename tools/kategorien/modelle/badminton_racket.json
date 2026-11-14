@@ -446,6 +446,7 @@
    ],
    "info": "Kunststoffband mit kleinen Röhrchen (Ösen), damit die Saiten nicht am scharfen Alurand reißen. Nach dem Ausschneiden der Saiten lässt es sich herausziehen.",
    "color": "#2B2F33",
+   "form": "torus",
    "marks": [
     {
      "shape": "cyl",
@@ -453,287 +454,328 @@
      "y": 6,
      "w": 186,
      "d": 226,
-     "fill": "#E7E5DD"
+     "fill": "#E7E5DD",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 193.5,
      "y": 117.5,
      "w": 3,
-     "fill": "#8A9096"
+     "fill": "#8A9096",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 192.3,
      "y": 135.6,
      "w": 3,
-     "fill": "#8A9096"
+     "fill": "#8A9096",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 188.8,
      "y": 153.3,
      "w": 3,
-     "fill": "#8A9096"
+     "fill": "#8A9096",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 183.0,
      "y": 170.2,
      "w": 3,
-     "fill": "#8A9096"
+     "fill": "#8A9096",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 175.2,
      "y": 185.7,
      "w": 3,
-     "fill": "#8A9096"
+     "fill": "#8A9096",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 165.4,
      "y": 199.5,
      "w": 3,
-     "fill": "#8A9096"
+     "fill": "#8A9096",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 153.9,
      "y": 211.3,
      "w": 3,
-     "fill": "#8A9096"
+     "fill": "#8A9096",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 141.1,
      "y": 220.9,
      "w": 3,
-     "fill": "#8A9096"
+     "fill": "#8A9096",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 127.2,
      "y": 227.8,
      "w": 3,
-     "fill": "#8A9096"
+     "fill": "#8A9096",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 112.5,
      "y": 232.1,
      "w": 3,
-     "fill": "#8A9096"
+     "fill": "#8A9096",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 97.5,
      "y": 233.5,
      "w": 3,
-     "fill": "#8A9096"
+     "fill": "#8A9096",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 82.5,
      "y": 232.1,
      "w": 3,
-     "fill": "#8A9096"
+     "fill": "#8A9096",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 67.8,
      "y": 227.8,
      "w": 3,
-     "fill": "#8A9096"
+     "fill": "#8A9096",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 53.9,
      "y": 220.9,
      "w": 3,
-     "fill": "#8A9096"
+     "fill": "#8A9096",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 41.1,
      "y": 211.3,
      "w": 3,
-     "fill": "#8A9096"
+     "fill": "#8A9096",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 29.6,
      "y": 199.5,
      "w": 3,
-     "fill": "#8A9096"
+     "fill": "#8A9096",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 19.8,
      "y": 185.7,
      "w": 3,
-     "fill": "#8A9096"
+     "fill": "#8A9096",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 12.0,
      "y": 170.2,
      "w": 3,
-     "fill": "#8A9096"
+     "fill": "#8A9096",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 6.2,
      "y": 153.3,
      "w": 3,
-     "fill": "#8A9096"
+     "fill": "#8A9096",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 2.7,
      "y": 135.6,
      "w": 3,
-     "fill": "#8A9096"
+     "fill": "#8A9096",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 1.5,
      "y": 117.5,
      "w": 3,
-     "fill": "#8A9096"
+     "fill": "#8A9096",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 2.7,
      "y": 99.4,
      "w": 3,
-     "fill": "#8A9096"
+     "fill": "#8A9096",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 6.2,
      "y": 81.7,
      "w": 3,
-     "fill": "#8A9096"
+     "fill": "#8A9096",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 12.0,
      "y": 64.8,
      "w": 3,
-     "fill": "#8A9096"
+     "fill": "#8A9096",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 19.8,
      "y": 49.3,
      "w": 3,
-     "fill": "#8A9096"
+     "fill": "#8A9096",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 29.6,
      "y": 35.5,
      "w": 3,
-     "fill": "#8A9096"
+     "fill": "#8A9096",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 41.1,
      "y": 23.7,
      "w": 3,
-     "fill": "#8A9096"
+     "fill": "#8A9096",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 53.9,
      "y": 14.1,
      "w": 3,
-     "fill": "#8A9096"
+     "fill": "#8A9096",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 67.8,
      "y": 7.2,
      "w": 3,
-     "fill": "#8A9096"
+     "fill": "#8A9096",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 82.5,
      "y": 2.9,
      "w": 3,
-     "fill": "#8A9096"
+     "fill": "#8A9096",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 97.5,
      "y": 1.5,
      "w": 3,
-     "fill": "#8A9096"
+     "fill": "#8A9096",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 112.5,
      "y": 2.9,
      "w": 3,
-     "fill": "#8A9096"
+     "fill": "#8A9096",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 127.2,
      "y": 7.2,
      "w": 3,
-     "fill": "#8A9096"
+     "fill": "#8A9096",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 141.1,
      "y": 14.1,
      "w": 3,
-     "fill": "#8A9096"
+     "fill": "#8A9096",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 153.9,
      "y": 23.7,
      "w": 3,
-     "fill": "#8A9096"
+     "fill": "#8A9096",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 165.4,
      "y": 35.5,
      "w": 3,
-     "fill": "#8A9096"
+     "fill": "#8A9096",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 175.2,
      "y": 49.3,
      "w": 3,
-     "fill": "#8A9096"
+     "fill": "#8A9096",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 183.0,
      "y": 64.8,
      "w": 3,
-     "fill": "#8A9096"
+     "fill": "#8A9096",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 188.8,
      "y": 81.7,
      "w": 3,
-     "fill": "#8A9096"
+     "fill": "#8A9096",
+     "zeichnung": true
     },
     {
      "shape": "cyl",
      "x": 192.3,
      "y": 99.4,
      "w": 3,
-     "fill": "#8A9096"
+     "fill": "#8A9096",
+     "zeichnung": true
     }
    ]
   },
@@ -768,6 +810,7 @@
    ],
    "info": "Gebogenes Aluminiumprofil mit Kunststoffösen für die Saiten. Ohne Saiten ist der Rahmen Altmetall für den Wertstoffhof.",
    "color": "#B8C0C6",
+   "form": "torus",
    "marks": [
     {
      "shape": "cyl",
@@ -775,7 +818,8 @@
      "y": 12,
      "w": 186,
      "d": 226,
-     "fill": "#E7E5DD"
+     "fill": "#E7E5DD",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -784,7 +828,8 @@
      "w": 20,
      "d": 4,
      "r": 2,
-     "fill": "#2B2F33"
+     "fill": "#2B2F33",
+     "zeichnung": true
     }
    ]
   },
@@ -845,6 +890,7 @@
    ],
    "info": "Dünnes Stahlrohr, das den Schlag federnd überträgt. Mit einem Magneten erkennt man: Stahl, kein Alu.",
    "color": "#8E979E",
+   "form": "liegend_y",
    "marks": [
     {
      "shape": "box",
@@ -853,7 +899,8 @@
      "w": 4,
      "d": 50,
      "r": 2,
-     "fill": "#C8323C"
+     "fill": "#C8323C",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -862,7 +909,8 @@
      "w": 4,
      "d": 12,
      "r": 2,
-     "fill": "#E7E5DD"
+     "fill": "#E7E5DD",
+     "zeichnung": true
     }
    ]
   },
@@ -898,6 +946,7 @@
    ],
    "info": "Spiralförmig gewickeltes PU-Band mit Klebestreifen. Am Ende das Klebeband lösen und abwickeln.",
    "color": "#C8323C",
+   "form": "liegend_y",
    "marks": [
     {
      "shape": "box",
@@ -906,7 +955,8 @@
      "w": 24,
      "d": 2,
      "r": 1,
-     "fill": "#A32832"
+     "fill": "#A32832",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -915,7 +965,8 @@
      "w": 24,
      "d": 2,
      "r": 1,
-     "fill": "#A32832"
+     "fill": "#A32832",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -924,7 +975,8 @@
      "w": 24,
      "d": 2,
      "r": 1,
-     "fill": "#A32832"
+     "fill": "#A32832",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -933,7 +985,8 @@
      "w": 24,
      "d": 2,
      "r": 1,
-     "fill": "#A32832"
+     "fill": "#A32832",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -942,7 +995,8 @@
      "w": 24,
      "d": 2,
      "r": 1,
-     "fill": "#A32832"
+     "fill": "#A32832",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -951,7 +1005,8 @@
      "w": 24,
      "d": 2,
      "r": 1,
-     "fill": "#A32832"
+     "fill": "#A32832",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -960,7 +1015,8 @@
      "w": 24,
      "d": 2,
      "r": 1,
-     "fill": "#A32832"
+     "fill": "#A32832",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -969,7 +1025,8 @@
      "w": 24,
      "d": 2,
      "r": 1,
-     "fill": "#A32832"
+     "fill": "#A32832",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -978,7 +1035,8 @@
      "w": 24,
      "d": 2,
      "r": 1,
-     "fill": "#A32832"
+     "fill": "#A32832",
+     "zeichnung": true
     }
    ]
   },
@@ -1009,7 +1067,8 @@
     ]
    ],
    "info": "Achteckiger Kern aus Holz oder Schaum, auf den Schaft geklebt. Er gibt dem Griff seine Form.",
-   "color": "#C9A26B"
+   "color": "#C9A26B",
+   "form": "liegend_y"
   },
   {
    "id": "endkappe",
@@ -1038,7 +1097,8 @@
     ]
    ],
    "info": "Aufgesteckte Kunststoffkappe am Griffende, oft mit Logo.",
-   "color": "#2B2F33"
+   "color": "#2B2F33",
+   "form": "liegend_y"
   }
  ]
 }

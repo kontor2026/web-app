@@ -20,7 +20,8 @@ def lage(nr, name, short, z, dx, info, marks, label=True):
     return teil(f'lage_{nr}', 'cotton_fabric', name, short, 'box',
                 x=2 + dx, y=2 - dx, w=296, d=396, z=z, h=7.5, r=6, mass=150, materials=BW, color=STOFF,
                 explode=[0, -80 * k, 60 * k], label=label, info=info,
-                marks=marks + [mark('box', 0, 0, 296, 2, 1, FALTE), mark('box', 294, 0, 2, 396, 1, FALTE)])
+                marks=marks + [mark('box', 0, 0, 296, 2, 1, FALTE, zeichnung=True),
+                                     mark('box', 294, 0, 2, 396, 1, FALTE, zeichnung=True)])
 
 
 teile = [

@@ -31,7 +31,8 @@ teile = [
          x=6, y=8, w=48, z=5, h=19, mass=55, materials=[['stahl', 93], ['druck', 7]],
          info='Gewölbtes, lackiertes Federstahlband mit aufgedruckter Skala. Das Band ist scharfkantig: '
               'Handschuhe tragen, es gehört zum Altmetall.',
-         color=BAND, marks=[mark('cyl', 2, 2, 44, fill='#E6C23C'), mark('cyl', 10, 10, 28, fill='#2B2B2B')]),
+         color=BAND, wand=10, boden=0,
+         marks=[mark('cyl', 2, 2, 44, fill='#E6C23C', zeichnung=True), mark('cyl', 10, 10, 28, fill='#2B2B2B', zeichnung=True)]),
     teil('feder', 'steel_spring', 'Rückholfeder (Spiralfeder)', 'Feder', 'cyl',
          x=17, y=20, w=26, z=7, h=15, mass=18,
          info='Aufgewickeltes Federstahlband, das das Maßband zurückzieht. Steht unter Spannung und kann '

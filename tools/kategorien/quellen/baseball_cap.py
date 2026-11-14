@@ -7,7 +7,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from bau import teil, mark, explodiere, skaliere_masse, schreibe  # noqa: E402
 
 # Basecap aufrecht auf dem Tisch, Verschluss hinten (y = 0), Schirm vorne (bis y = 250). 190 × 250 × 110 mm.
-# Die Krone (Kopföffnung 190 × 185 mm) ist als Kuppel aus sechs Ellipsenscheiben gestapelt, vorne steiler als
+# Die Krone (Kopföffnung 190 × 185 mm) ist als Kuppel aus zwölf Ellipsenscheiben gestapelt, vorne steiler als
 # hinten. Sie hebt sich als Ganzes ab, darunter liegt das Schweißband. Der Schirm (Ellipse, hintere Hälfte unter
 # der Krone) wird nach vorne gezogen und in Bezug, Einlage und Unterseite aufgefächert, der Klickverschluss nach
 # hinten.
@@ -17,21 +17,41 @@ OESE = '#1C2C40'
 BW = [['baumwolle', 100]]
 CX = 95  # Mitte in x
 
-# (z, h, y_hinten, y_vorne, breite): Kuppelprofil, vorne fast senkrecht, hinten flacher
-SCHEIBEN = [(0, 30, 0, 185, 190), (30, 22, 6, 184, 184), (52, 18, 18, 180, 168), (70, 15, 34, 172, 144),
-            (85, 12, 56, 160, 110), (97, 8, 80, 144, 64)]
+# Kuppelprofil: Ellipsoid, vorne fast senkrecht, hinten flacher. (z, h, y_hinten, y_vorne, breite) je Scheibe,
+# oben feiner unterteilt, damit die Foto-Ansicht die Scheiben zu einer runden Kuppel verbindet.
+HK = 106
+GRENZEN = [0, 18, 34, 48, 60, 70, 79, 86, 92, 97, 101, 104, HK]
+
+
+def profil(z):
+    t = z / HK
+    k = max(0.0, 1 - t ** 2.2) ** 0.5
+    w = 190 * k
+    yb = 0 + 105 * (1 - k) ** 0.9
+    yf = 185 - 75 * (1 - k) ** 1.3
+    return yb, yf, w
+
+
+SCHEIBEN = []
+for a, b in zip(GRENZEN, GRENZEN[1:]):
+    yb, yf, w = profil(a + 0.35 * (b - a))
+    w, yb, yf = max(w, 24), min(yb, 96), max(yf, 120)
+    SCHEIBEN.append((a, b - a, round(yb, 1), round(yf, 1), round(w, 1)))
+VOL = sum(h * (yf - yb) * w for _, h, yb, yf, w in SCHEIBEN)
 
 
 def scheibe(i, z, h, yb, yf, w):
-    d = yf - yb
-    marks = [mark('box', w / 2 - 0.75, 0, 1.5, d, 0, NAHT)]  # Mittelnaht vorne/hinten
-    if i == 3:  # gestickte Lüftungsösen, je eine pro Bahn, auf dem sichtbaren Ring
+    d = round(yf - yb, 1)
+    marks = [mark('box', round(w / 2 - 0.75, 1), 0, 1.5, d, 0, NAHT, zeichnung=True)]  # Mittelnaht vorne/hinten
+    if i == 4:  # gestickte Lüftungsösen, je eine pro Bahn (nur Zeichnung, in der Kuppel verdeckt)
         for a in (30, 90, 150, 210, 270, 330):
             marks.append(mark('cyl', round(w / 2 + 0.86 * w / 2 * math.cos(math.radians(a)) - 3, 1),
-                              round(d / 2 + 0.86 * d / 2 * math.sin(math.radians(a)) - 3, 1), 6, fill=OESE))
+                              round(d / 2 + 0.86 * d / 2 * math.sin(math.radians(a)) - 3, 1), 6, fill=OESE,
+                              zeichnung=True))
     oben = i == len(SCHEIBEN) - 1
     return teil(f'krone_{i + 1}', 'cotton_fabric', 'Krone aus sechs Stoffbahnen' if i == 0 else f'Krone, Lage {i + 1}',
-                'Krone', 'cyl', x=CX - w / 2, y=yb, w=w, d=d, z=z, h=h, mass=[22, 16, 11, 8, 5, 2][i],
+                'Krone', 'cyl', x=round(CX - w / 2, 1), y=yb, w=w, d=d, z=z, h=h,
+                mass=round(64 * h * d * w / VOL, 1),
                 materials=[['baumwolle', 90], ['polyester', 10]] if i == 0 else BW, color=STOFF, label=i == 0,
                 info='Sechs dreieckige Bahnen aus Baumwoll-Twill, oben zusammengenäht. Die zwei vorderen Bahnen sind '
                      'innen mit Vlies versteift. Tragbare Caps in die Altkleidersammlung.' if i == 0 else
@@ -41,7 +61,7 @@ def scheibe(i, z, h, yb, yf, w):
 
 teile = [
     teil('knopf', 'cotton_fabric', 'Stoffbezogener Knopf', 'Knopf', 'cyl', material_id='steel',
-         x=CX - 7, y=105, w=14, z=105, h=5, mass=1.5, materials=[['stahl', 70], ['baumwolle', 30]], color=STOFF,
+         x=CX - 7, y=round((SCHEIBEN[-1][2] + SCHEIBEN[-1][3]) / 2 - 7, 1), w=14, z=HK - 1.5, h=5, mass=1.5, materials=[['stahl', 70], ['baumwolle', 30]], color=STOFF,
          info='Metallknopf mit Stoffbezug, deckt die Stelle ab, an der die sechs Bahnen oben zusammenlaufen.',
          marks=[mark('cyl', 3, 3, 8, fill=NAHT)]),
 ] + [scheibe(i, *s) for i, s in reversed(list(enumerate(SCHEIBEN)))] + [

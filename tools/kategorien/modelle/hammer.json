@@ -93,7 +93,7 @@
     ]
    ],
    "info": "Die keilförmige schmale Seite zum Strecken und Treiben von Blech.",
-   "color": "#5E666C",
+   "color": "#A3AAB0",
    "marks": [
     {
      "shape": "box",
@@ -133,7 +133,7 @@
     ]
    ],
    "info": "Die Finne wird zur Spitze hin schmaler.",
-   "color": "#5E666C",
+   "color": "#A3AAB0",
    "label": false
   },
   {
@@ -163,7 +163,7 @@
     ]
    ],
    "info": "Abgerundete Schneide der Finne.",
-   "color": "#5E666C",
+   "color": "#A3AAB0",
    "label": false,
    "marks": [
     {
@@ -204,7 +204,7 @@
     ]
    ],
    "info": "Geschmiedeter, gehärteter Werkzeugstahl. Das ovale Auge nimmt den Stiel auf. Erst Keile heraustreiben, dann den Kopf vom Stiel schlagen: Er gehört zum Altmetall.",
-   "color": "#5E666C",
+   "color": "#A3AAB0",
    "marks": [
     {
      "shape": "box",
@@ -244,7 +244,7 @@
     ]
    ],
    "info": "Quadratische, gehärtete Schlagfläche. Hat sie Grate oder Risse, kann Stahl absplittern.",
-   "color": "#5E666C",
+   "color": "#A3AAB0",
    "marks": [
     {
      "shape": "box",
@@ -314,7 +314,7 @@
     ]
    ],
    "info": "Das obere Stielende ist geschlitzt und steckt im Auge. Hier sitzen die Keile.",
-   "color": "#D2A86E",
+   "color": "#C99A62",
    "marks": [
     {
      "shape": "box",
@@ -354,13 +354,15 @@
     ]
    ],
    "info": "Dünnere Stelle unter dem Kopf, federt Schläge ab. Bricht ein Stiel, dann meist hier.",
-   "color": "#D2A86E",
+   "color": "#C99A62",
+   "form": "liegend_y",
    "marks": [
     {
      "shape": "box",
      "x": 4,
      "y": 10,
      "w": 16,
+     "zeichnung": true,
      "d": 80,
      "r": 6,
      "fill": "#C99C60"
@@ -394,13 +396,15 @@
     ]
    ],
    "info": "Eschenholz, zäh und elastisch. Unbehandeltes Holz kann wiederverwendet oder als Altholz abgegeben werden.",
-   "color": "#D2A86E",
+   "color": "#C99A62",
+   "form": "liegend_y",
    "marks": [
     {
      "shape": "box",
      "x": 5,
      "y": 20,
      "w": 20,
+     "zeichnung": true,
      "d": 160,
      "r": 9,
      "fill": "#C99C60"
@@ -410,7 +414,8 @@
      "x": 11,
      "y": 182,
      "w": 8,
-     "fill": "#8E6A3E"
+     "fill": "#8E6A3E",
+     "zeichnung": true
     }
    ]
   }

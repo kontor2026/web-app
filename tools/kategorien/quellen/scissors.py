@@ -62,7 +62,7 @@ teile = [
          x=2, y=135, w=33, d=62, z=0.5, h=9, r=14, explode=[-46, 0, 0], mass=9, materials=[['pp', 80], ['tpe', 20]],
          info='Polypropylen mit weicher Griffzone, fest um das Klingenende gespritzt. Lässt er sich nicht abziehen, '
               'mit einer Zange aufbrechen, dann Kunststoff und Stahl getrennt entsorgen.',
-         color=GRIFF, marks=[mark('box', 4, 4, 25, 54, 11, SOFT), mark('box', 7, 8, 19, 46, 9, LOCH)]),
+         color=GRIFF, form='torus', marks=[mark('box', 4, 4, 25, 54, 11, SOFT, zeichnung=True), mark('box', 7, 8, 19, 46, 9, LOCH, zeichnung=True)]),
     teil('schaft_links', 'plastic_handles', 'Griffschaft links', 'Schaft', 'box',
          x=21, y=114, w=14, d=21, z=0.5, h=9, r=3, explode=[-46, 0, 0], mass=3, label=False,
          materials=[['pp', 100]],
@@ -73,7 +73,7 @@ teile = [
     teil('griff_rechts', 'plastic_handles', 'Griff mit großem Auge', 'Griff rechts', 'box',
          x=36, y=128, w=33, d=70, z=0.5, h=9, r=14, explode=[40, 0, 0], mass=11, materials=[['pp', 80], ['tpe', 20]],
          info='Das größere Auge ist für zwei bis drei Finger und gehört zur unteren Klinge.',
-         color=GRIFF, marks=[mark('box', 4, 4, 25, 62, 11, SOFT), mark('box', 7, 8, 19, 54, 9, LOCH)]),
+         color=GRIFF, form='torus', marks=[mark('box', 4, 4, 25, 62, 11, SOFT, zeichnung=True), mark('box', 7, 8, 19, 54, 9, LOCH, zeichnung=True)]),
     teil('schaft_rechts', 'plastic_handles', 'Griffschaft rechts', 'Schaft', 'box',
          x=35, y=114, w=14, d=14, z=0.5, h=9, r=3, explode=[40, 0, 0], mass=3, label=False,
          materials=[['pp', 100]],
@@ -83,5 +83,8 @@ teile = [
 
 explodiere(teile, abstand=14, gruppen=[['klinge_oben', 'klinge_oben_1', 'klinge_oben_2'],
                                        ['klinge_unten', 'klinge_unten_1', 'klinge_unten_2']])
+for p in teile:  # Foto-Ansicht: flache marks schweben über runden Formen, dort nur in der Zeichnung
+    if p.get('form'):
+        p['marks'] = [dict(m, zeichnung=True) for m in p.get('marks') or []]
 skaliere_masse(teile, oid='scissors')
 schreibe('scissors', teile)

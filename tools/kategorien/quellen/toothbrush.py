@@ -12,14 +12,15 @@ from bau import teil, mark, raster, explodiere, skaliere_masse, schreibe  # noqa
 PP = '#3B7DD8'
 
 teile = [
-    teil('borsten_spitze', 'nylon_bristles', 'Indikatorborsten', 'Indikator', 'box',
-         x=4.5, y=1.5, w=11, d=5, z=9, h=12, r=2.5, mass=0.2, sortBias=-1.5,
-         info='Gefärbte Büschel vorne am Kopf. Wenn die Farbe verblasst, ist es Zeit für eine neue Bürste.',
-         color='#3B9BD8', marks=raster(0.7, 1.3, 4, 1, 2, 2, 2.6, shape='cyl', fill='#2A7FB8')),
-    teil('borsten', 'nylon_bristles', 'Borstenfeld', 'Borsten', 'box',
-         x=4.5, y=6.5, w=11, d=20, z=9, h=11, r=3, mass=0.8,
-         info='Rund 30 Büschel aus Nylonfäden mit abgerundeten Enden. Wer sauberen Kunststoff will, zieht sie mit einer Zange heraus.',
-         color='#F4F6F8', marks=raster(0.7, 0.6, 4, 6, 2, 2, 2.6, 3.1, shape='cyl', fill='#BFE3F5')),
+    *[teil('borsten_spitze' if i == 0 else f'borsten_spitze_{i}', 'nylon_bristles', 'Indikatorborsten', 'Indikator', 'cyl',
+           x=5.0 + 2.6 * i, y=2.6, w=2.4, z=9, h=12, mass=0.05, sortBias=-1.5, color='#3B9BD8', label=(i == 0),
+           info='Gefärbte Büschel vorne am Kopf. Wenn die Farbe verblasst, ist es Zeit für eine neue Bürste.'
+           if i == 0 else 'Ein gefärbtes Borstenbüschel.') for i in range(4)],
+    *[teil('borsten' if k == 0 else f'borsten_{k}', 'nylon_bristles', 'Borstenfeld', 'Borsten', 'cyl',
+           x=5.0 + 2.6 * (k % 4), y=6.9 + 3.1 * (k // 4), w=2.4, z=9, h=11, mass=0.8 / 24, color='#F4F6F8',
+           label=(k == 0),
+           info='Rund 30 Büschel aus Nylonfäden mit abgerundeten Enden. Wer sauberen Kunststoff will, zieht sie mit einer Zange heraus.'
+           if k == 0 else 'Ein Borstenbüschel aus Nylon.') for k in range(24)],
     teil('anker', 'nylon_bristles', 'Borstenanker', 'Anker', 'box', material_id='copper',
          x=5, y=2, w=10, d=24, z=7.5, h=1.5, r=2, mass=0.2, materials=[['messing', 100]],
          info='Winzige Metallplättchen aus Messingdraht, die jedes Büschel in der Bohrung festklemmen. '
@@ -47,6 +48,7 @@ teile = [
          color=PP, marks=[mark('box', 3, 20, 10, 50, 5, '#9CD3F0', zeichnung=True)]),
 ]
 
-explodiere(teile, abstand=12, gruppen=[['kopf', 'hals', 'griff']], abstaende={'daumenauflage': 8})
+BUESCHEL = [p['id'] for p in teile if p['id'].startswith('borsten')]
+explodiere(teile, abstand=12, gruppen=[['kopf', 'hals', 'griff'], BUESCHEL], abstaende={'daumenauflage': 8})
 skaliere_masse(teile, oid='toothbrush', stellen=2)
 schreibe('toothbrush', teile)

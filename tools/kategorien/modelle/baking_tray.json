@@ -28,7 +28,8 @@
    ],
    "info": "Stahldraht, um den der obere Rand eingerollt ist. Er verhindert, dass sich das Blech in der Hitze verzieht.",
    "color": "#9DA4AA",
-   "label": true
+   "label": true,
+   "form": "liegend_x"
   },
   {
    "id": "draht_vorne",
@@ -58,7 +59,8 @@
    ],
    "info": "Weiteres Stück des Randdrahts.",
    "color": "#9DA4AA",
-   "label": false
+   "label": false,
+   "form": "liegend_x"
   },
   {
    "id": "draht_links",
@@ -88,7 +90,8 @@
    ],
    "info": "Weiteres Stück des Randdrahts.",
    "color": "#9DA4AA",
-   "label": false
+   "label": false,
+   "form": "liegend_y"
   },
   {
    "id": "draht_rechts",
@@ -118,7 +121,8 @@
    ],
    "info": "Weiteres Stück des Randdrahts.",
    "color": "#9DA4AA",
-   "label": false
+   "label": false,
+   "form": "liegend_y"
   },
   {
    "id": "emaille_innen",
@@ -647,7 +651,7 @@
     ]
    ],
    "info": "Hochgezogener Rand des Blechs, oben eingerollt um den Draht.",
-   "color": "#4F555A",
+   "color": "#3B3F43",
    "label": false,
    "marks": [
     {
@@ -688,7 +692,7 @@
     ]
    ],
    "info": "Hochgezogener Rand des Blechs, oben eingerollt um den Draht.",
-   "color": "#4F555A",
+   "color": "#3B3F43",
    "label": false,
    "marks": [
     {
@@ -729,7 +733,7 @@
     ]
    ],
    "info": "Hochgezogener Rand des Blechs, oben eingerollt um den Draht.",
-   "color": "#4F555A",
+   "color": "#3B3F43",
    "label": false,
    "marks": [
     {
@@ -770,7 +774,7 @@
     ]
    ],
    "info": "Hochgezogener Rand des Blechs, oben eingerollt um den Draht.",
-   "color": "#4F555A",
+   "color": "#3B3F43",
    "label": false,
    "marks": [
     {

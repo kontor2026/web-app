@@ -15,7 +15,7 @@
    "explode": [
     0,
     0,
-    200.0
+    120.0
    ],
    "mass": 0.2,
    "materials": [
@@ -60,7 +60,7 @@
    "explode": [
     0,
     0,
-    160.0
+    80.0
    ],
    "mass": 69.9,
    "materials": [
@@ -127,7 +127,7 @@
     ]
    ],
    "info": "Oberer, stärker gewölbter Teil der Schulter.",
-   "color": "#E6E7E2",
+   "color": "#F0F0EA",
    "label": false,
    "marks": [
     {
@@ -135,6 +135,7 @@
      "x": 6.0,
      "y": 6.0,
      "w": 250,
+     "zeichnung": true,
      "fill": "#C9CCC8"
     }
    ]
@@ -164,13 +165,14 @@
     ]
    ],
    "info": "Gewölbter Übergang zwischen Platte und Rand. Hier ist die Scheibe am stabilsten.",
-   "color": "#E6E7E2",
+   "color": "#F0F0EA",
    "marks": [
     {
      "shape": "cyl",
      "x": 10.0,
      "y": 10.0,
      "w": 250,
+     "zeichnung": true,
      "fill": "#C9CCC8"
     }
    ]
@@ -201,12 +203,15 @@
    ],
    "info": "Der nach unten gezogene, verdickte Rand. Er gibt Gewicht nach außen, so stabilisiert die Drehung den Flug, und man kann gut greifen. Kaputte Scheiben in den Restmüll, sie sind keine Verpackung.",
    "color": "#F0F0EA",
+   "wand": 6,
+   "boden": 0,
    "marks": [
     {
      "shape": "cyl",
      "x": 6.0,
      "y": 6.0,
      "w": 258,
+     "zeichnung": true,
      "fill": "#C9CCC8"
     },
     {
@@ -214,6 +219,7 @@
      "x": 10.0,
      "y": 10.0,
      "w": 250,
+     "zeichnung": true,
      "fill": "#B5B8B4"
     }
    ]

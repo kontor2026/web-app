@@ -6,20 +6,18 @@
    "material_id": "nylon",
    "name": "Indikatorborsten",
    "short": "Indikator",
-   "shape": "box",
-   "x": 4.5,
-   "y": 1.5,
-   "w": 11,
-   "d": 5,
+   "shape": "cyl",
+   "x": 5,
+   "y": 2.6,
+   "w": 2.4,
    "z": 9,
    "h": 12,
-   "r": 2.5,
    "explode": [
     0,
     0,
     25.5
    ],
-   "mass": 0.2,
+   "mass": 0.05,
    "materials": [
     [
      "nylon",
@@ -28,41 +26,95 @@
    ],
    "info": "Gefärbte Büschel vorne am Kopf. Wenn die Farbe verblasst, ist es Zeit für eine neue Bürste.",
    "color": "#3B9BD8",
-   "sortBias": -1.5,
-   "marks": [
-    {
-     "shape": "cyl",
-     "x": 0.7,
-     "y": 1.3,
-     "w": 2,
-     "d": 2,
-     "fill": "#2A7FB8"
-    },
-    {
-     "shape": "cyl",
-     "x": 3.3,
-     "y": 1.3,
-     "w": 2,
-     "d": 2,
-     "fill": "#2A7FB8"
-    },
-    {
-     "shape": "cyl",
-     "x": 5.9,
-     "y": 1.3,
-     "w": 2,
-     "d": 2,
-     "fill": "#2A7FB8"
-    },
-    {
-     "shape": "cyl",
-     "x": 8.5,
-     "y": 1.3,
-     "w": 2,
-     "d": 2,
-     "fill": "#2A7FB8"
-    }
-   ]
+   "label": true,
+   "sortBias": -1.5
+  },
+  {
+   "id": "borsten_spitze_1",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Indikatorborsten",
+   "short": "Indikator",
+   "shape": "cyl",
+   "x": 7.6,
+   "y": 2.6,
+   "w": 2.4,
+   "z": 9,
+   "h": 12,
+   "explode": [
+    0,
+    0,
+    25.5
+   ],
+   "mass": 0.05,
+   "materials": [
+    [
+     "nylon",
+     100
+    ]
+   ],
+   "info": "Ein gefärbtes Borstenbüschel.",
+   "color": "#3B9BD8",
+   "label": false,
+   "sortBias": -1.5
+  },
+  {
+   "id": "borsten_spitze_2",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Indikatorborsten",
+   "short": "Indikator",
+   "shape": "cyl",
+   "x": 10.2,
+   "y": 2.6,
+   "w": 2.4,
+   "z": 9,
+   "h": 12,
+   "explode": [
+    0,
+    0,
+    25.5
+   ],
+   "mass": 0.05,
+   "materials": [
+    [
+     "nylon",
+     100
+    ]
+   ],
+   "info": "Ein gefärbtes Borstenbüschel.",
+   "color": "#3B9BD8",
+   "label": false,
+   "sortBias": -1.5
+  },
+  {
+   "id": "borsten_spitze_3",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Indikatorborsten",
+   "short": "Indikator",
+   "shape": "cyl",
+   "x": 12.8,
+   "y": 2.6,
+   "w": 2.4,
+   "z": 9,
+   "h": 12,
+   "explode": [
+    0,
+    0,
+    25.5
+   ],
+   "mass": 0.05,
+   "materials": [
+    [
+     "nylon",
+     100
+    ]
+   ],
+   "info": "Ein gefärbtes Borstenbüschel.",
+   "color": "#3B9BD8",
+   "label": false,
+   "sortBias": -1.5
   },
   {
    "id": "borsten",
@@ -70,20 +122,18 @@
    "material_id": "nylon",
    "name": "Borstenfeld",
    "short": "Borsten",
-   "shape": "box",
-   "x": 4.5,
-   "y": 6.5,
-   "w": 11,
-   "d": 20,
+   "shape": "cyl",
+   "x": 5,
+   "y": 6.9,
+   "w": 2.4,
    "z": 9,
    "h": 11,
-   "r": 3,
    "explode": [
     0,
     0,
     25.5
    ],
-   "mass": 0.79,
+   "mass": 0.03,
    "materials": [
     [
      "nylon",
@@ -92,200 +142,651 @@
    ],
    "info": "Rund 30 Büschel aus Nylonfäden mit abgerundeten Enden. Wer sauberen Kunststoff will, zieht sie mit einer Zange heraus.",
    "color": "#F4F6F8",
-   "marks": [
-    {
-     "shape": "cyl",
-     "x": 0.7,
-     "y": 0.6,
-     "w": 2,
-     "d": 2,
-     "fill": "#BFE3F5"
-    },
-    {
-     "shape": "cyl",
-     "x": 3.3,
-     "y": 0.6,
-     "w": 2,
-     "d": 2,
-     "fill": "#BFE3F5"
-    },
-    {
-     "shape": "cyl",
-     "x": 5.9,
-     "y": 0.6,
-     "w": 2,
-     "d": 2,
-     "fill": "#BFE3F5"
-    },
-    {
-     "shape": "cyl",
-     "x": 8.5,
-     "y": 0.6,
-     "w": 2,
-     "d": 2,
-     "fill": "#BFE3F5"
-    },
-    {
-     "shape": "cyl",
-     "x": 0.7,
-     "y": 3.7,
-     "w": 2,
-     "d": 2,
-     "fill": "#BFE3F5"
-    },
-    {
-     "shape": "cyl",
-     "x": 3.3,
-     "y": 3.7,
-     "w": 2,
-     "d": 2,
-     "fill": "#BFE3F5"
-    },
-    {
-     "shape": "cyl",
-     "x": 5.9,
-     "y": 3.7,
-     "w": 2,
-     "d": 2,
-     "fill": "#BFE3F5"
-    },
-    {
-     "shape": "cyl",
-     "x": 8.5,
-     "y": 3.7,
-     "w": 2,
-     "d": 2,
-     "fill": "#BFE3F5"
-    },
-    {
-     "shape": "cyl",
-     "x": 0.7,
-     "y": 6.8,
-     "w": 2,
-     "d": 2,
-     "fill": "#BFE3F5"
-    },
-    {
-     "shape": "cyl",
-     "x": 3.3,
-     "y": 6.8,
-     "w": 2,
-     "d": 2,
-     "fill": "#BFE3F5"
-    },
-    {
-     "shape": "cyl",
-     "x": 5.9,
-     "y": 6.8,
-     "w": 2,
-     "d": 2,
-     "fill": "#BFE3F5"
-    },
-    {
-     "shape": "cyl",
-     "x": 8.5,
-     "y": 6.8,
-     "w": 2,
-     "d": 2,
-     "fill": "#BFE3F5"
-    },
-    {
-     "shape": "cyl",
-     "x": 0.7,
-     "y": 9.9,
-     "w": 2,
-     "d": 2,
-     "fill": "#BFE3F5"
-    },
-    {
-     "shape": "cyl",
-     "x": 3.3,
-     "y": 9.9,
-     "w": 2,
-     "d": 2,
-     "fill": "#BFE3F5"
-    },
-    {
-     "shape": "cyl",
-     "x": 5.9,
-     "y": 9.9,
-     "w": 2,
-     "d": 2,
-     "fill": "#BFE3F5"
-    },
-    {
-     "shape": "cyl",
-     "x": 8.5,
-     "y": 9.9,
-     "w": 2,
-     "d": 2,
-     "fill": "#BFE3F5"
-    },
-    {
-     "shape": "cyl",
-     "x": 0.7,
-     "y": 13.0,
-     "w": 2,
-     "d": 2,
-     "fill": "#BFE3F5"
-    },
-    {
-     "shape": "cyl",
-     "x": 3.3,
-     "y": 13.0,
-     "w": 2,
-     "d": 2,
-     "fill": "#BFE3F5"
-    },
-    {
-     "shape": "cyl",
-     "x": 5.9,
-     "y": 13.0,
-     "w": 2,
-     "d": 2,
-     "fill": "#BFE3F5"
-    },
-    {
-     "shape": "cyl",
-     "x": 8.5,
-     "y": 13.0,
-     "w": 2,
-     "d": 2,
-     "fill": "#BFE3F5"
-    },
-    {
-     "shape": "cyl",
-     "x": 0.7,
-     "y": 16.1,
-     "w": 2,
-     "d": 2,
-     "fill": "#BFE3F5"
-    },
-    {
-     "shape": "cyl",
-     "x": 3.3,
-     "y": 16.1,
-     "w": 2,
-     "d": 2,
-     "fill": "#BFE3F5"
-    },
-    {
-     "shape": "cyl",
-     "x": 5.9,
-     "y": 16.1,
-     "w": 2,
-     "d": 2,
-     "fill": "#BFE3F5"
-    },
-    {
-     "shape": "cyl",
-     "x": 8.5,
-     "y": 16.1,
-     "w": 2,
-     "d": 2,
-     "fill": "#BFE3F5"
-    }
-   ]
+   "label": true
+  },
+  {
+   "id": "borsten_1",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Borstenfeld",
+   "short": "Borsten",
+   "shape": "cyl",
+   "x": 7.6,
+   "y": 6.9,
+   "w": 2.4,
+   "z": 9,
+   "h": 11,
+   "explode": [
+    0,
+    0,
+    25.5
+   ],
+   "mass": 0.03,
+   "materials": [
+    [
+     "nylon",
+     100
+    ]
+   ],
+   "info": "Ein Borstenbüschel aus Nylon.",
+   "color": "#F4F6F8",
+   "label": false
+  },
+  {
+   "id": "borsten_2",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Borstenfeld",
+   "short": "Borsten",
+   "shape": "cyl",
+   "x": 10.2,
+   "y": 6.9,
+   "w": 2.4,
+   "z": 9,
+   "h": 11,
+   "explode": [
+    0,
+    0,
+    25.5
+   ],
+   "mass": 0.03,
+   "materials": [
+    [
+     "nylon",
+     100
+    ]
+   ],
+   "info": "Ein Borstenbüschel aus Nylon.",
+   "color": "#F4F6F8",
+   "label": false
+  },
+  {
+   "id": "borsten_3",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Borstenfeld",
+   "short": "Borsten",
+   "shape": "cyl",
+   "x": 12.8,
+   "y": 6.9,
+   "w": 2.4,
+   "z": 9,
+   "h": 11,
+   "explode": [
+    0,
+    0,
+    25.5
+   ],
+   "mass": 0.03,
+   "materials": [
+    [
+     "nylon",
+     100
+    ]
+   ],
+   "info": "Ein Borstenbüschel aus Nylon.",
+   "color": "#F4F6F8",
+   "label": false
+  },
+  {
+   "id": "borsten_4",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Borstenfeld",
+   "short": "Borsten",
+   "shape": "cyl",
+   "x": 5,
+   "y": 10,
+   "w": 2.4,
+   "z": 9,
+   "h": 11,
+   "explode": [
+    0,
+    0,
+    25.5
+   ],
+   "mass": 0.03,
+   "materials": [
+    [
+     "nylon",
+     100
+    ]
+   ],
+   "info": "Ein Borstenbüschel aus Nylon.",
+   "color": "#F4F6F8",
+   "label": false
+  },
+  {
+   "id": "borsten_5",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Borstenfeld",
+   "short": "Borsten",
+   "shape": "cyl",
+   "x": 7.6,
+   "y": 10,
+   "w": 2.4,
+   "z": 9,
+   "h": 11,
+   "explode": [
+    0,
+    0,
+    25.5
+   ],
+   "mass": 0.03,
+   "materials": [
+    [
+     "nylon",
+     100
+    ]
+   ],
+   "info": "Ein Borstenbüschel aus Nylon.",
+   "color": "#F4F6F8",
+   "label": false
+  },
+  {
+   "id": "borsten_6",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Borstenfeld",
+   "short": "Borsten",
+   "shape": "cyl",
+   "x": 10.2,
+   "y": 10,
+   "w": 2.4,
+   "z": 9,
+   "h": 11,
+   "explode": [
+    0,
+    0,
+    25.5
+   ],
+   "mass": 0.03,
+   "materials": [
+    [
+     "nylon",
+     100
+    ]
+   ],
+   "info": "Ein Borstenbüschel aus Nylon.",
+   "color": "#F4F6F8",
+   "label": false
+  },
+  {
+   "id": "borsten_7",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Borstenfeld",
+   "short": "Borsten",
+   "shape": "cyl",
+   "x": 12.8,
+   "y": 10,
+   "w": 2.4,
+   "z": 9,
+   "h": 11,
+   "explode": [
+    0,
+    0,
+    25.5
+   ],
+   "mass": 0.03,
+   "materials": [
+    [
+     "nylon",
+     100
+    ]
+   ],
+   "info": "Ein Borstenbüschel aus Nylon.",
+   "color": "#F4F6F8",
+   "label": false
+  },
+  {
+   "id": "borsten_8",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Borstenfeld",
+   "short": "Borsten",
+   "shape": "cyl",
+   "x": 5,
+   "y": 13.100000000000001,
+   "w": 2.4,
+   "z": 9,
+   "h": 11,
+   "explode": [
+    0,
+    0,
+    25.5
+   ],
+   "mass": 0.03,
+   "materials": [
+    [
+     "nylon",
+     100
+    ]
+   ],
+   "info": "Ein Borstenbüschel aus Nylon.",
+   "color": "#F4F6F8",
+   "label": false
+  },
+  {
+   "id": "borsten_9",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Borstenfeld",
+   "short": "Borsten",
+   "shape": "cyl",
+   "x": 7.6,
+   "y": 13.100000000000001,
+   "w": 2.4,
+   "z": 9,
+   "h": 11,
+   "explode": [
+    0,
+    0,
+    25.5
+   ],
+   "mass": 0.03,
+   "materials": [
+    [
+     "nylon",
+     100
+    ]
+   ],
+   "info": "Ein Borstenbüschel aus Nylon.",
+   "color": "#F4F6F8",
+   "label": false
+  },
+  {
+   "id": "borsten_10",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Borstenfeld",
+   "short": "Borsten",
+   "shape": "cyl",
+   "x": 10.2,
+   "y": 13.100000000000001,
+   "w": 2.4,
+   "z": 9,
+   "h": 11,
+   "explode": [
+    0,
+    0,
+    25.5
+   ],
+   "mass": 0.03,
+   "materials": [
+    [
+     "nylon",
+     100
+    ]
+   ],
+   "info": "Ein Borstenbüschel aus Nylon.",
+   "color": "#F4F6F8",
+   "label": false
+  },
+  {
+   "id": "borsten_11",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Borstenfeld",
+   "short": "Borsten",
+   "shape": "cyl",
+   "x": 12.8,
+   "y": 13.100000000000001,
+   "w": 2.4,
+   "z": 9,
+   "h": 11,
+   "explode": [
+    0,
+    0,
+    25.5
+   ],
+   "mass": 0.03,
+   "materials": [
+    [
+     "nylon",
+     100
+    ]
+   ],
+   "info": "Ein Borstenbüschel aus Nylon.",
+   "color": "#F4F6F8",
+   "label": false
+  },
+  {
+   "id": "borsten_12",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Borstenfeld",
+   "short": "Borsten",
+   "shape": "cyl",
+   "x": 5,
+   "y": 16.200000000000003,
+   "w": 2.4,
+   "z": 9,
+   "h": 11,
+   "explode": [
+    0,
+    0,
+    25.5
+   ],
+   "mass": 0.03,
+   "materials": [
+    [
+     "nylon",
+     100
+    ]
+   ],
+   "info": "Ein Borstenbüschel aus Nylon.",
+   "color": "#F4F6F8",
+   "label": false
+  },
+  {
+   "id": "borsten_13",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Borstenfeld",
+   "short": "Borsten",
+   "shape": "cyl",
+   "x": 7.6,
+   "y": 16.200000000000003,
+   "w": 2.4,
+   "z": 9,
+   "h": 11,
+   "explode": [
+    0,
+    0,
+    25.5
+   ],
+   "mass": 0.03,
+   "materials": [
+    [
+     "nylon",
+     100
+    ]
+   ],
+   "info": "Ein Borstenbüschel aus Nylon.",
+   "color": "#F4F6F8",
+   "label": false
+  },
+  {
+   "id": "borsten_14",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Borstenfeld",
+   "short": "Borsten",
+   "shape": "cyl",
+   "x": 10.2,
+   "y": 16.200000000000003,
+   "w": 2.4,
+   "z": 9,
+   "h": 11,
+   "explode": [
+    0,
+    0,
+    25.5
+   ],
+   "mass": 0.03,
+   "materials": [
+    [
+     "nylon",
+     100
+    ]
+   ],
+   "info": "Ein Borstenbüschel aus Nylon.",
+   "color": "#F4F6F8",
+   "label": false
+  },
+  {
+   "id": "borsten_15",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Borstenfeld",
+   "short": "Borsten",
+   "shape": "cyl",
+   "x": 12.8,
+   "y": 16.200000000000003,
+   "w": 2.4,
+   "z": 9,
+   "h": 11,
+   "explode": [
+    0,
+    0,
+    25.5
+   ],
+   "mass": 0.03,
+   "materials": [
+    [
+     "nylon",
+     100
+    ]
+   ],
+   "info": "Ein Borstenbüschel aus Nylon.",
+   "color": "#F4F6F8",
+   "label": false
+  },
+  {
+   "id": "borsten_16",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Borstenfeld",
+   "short": "Borsten",
+   "shape": "cyl",
+   "x": 5,
+   "y": 19.3,
+   "w": 2.4,
+   "z": 9,
+   "h": 11,
+   "explode": [
+    0,
+    0,
+    25.5
+   ],
+   "mass": 0.03,
+   "materials": [
+    [
+     "nylon",
+     100
+    ]
+   ],
+   "info": "Ein Borstenbüschel aus Nylon.",
+   "color": "#F4F6F8",
+   "label": false
+  },
+  {
+   "id": "borsten_17",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Borstenfeld",
+   "short": "Borsten",
+   "shape": "cyl",
+   "x": 7.6,
+   "y": 19.3,
+   "w": 2.4,
+   "z": 9,
+   "h": 11,
+   "explode": [
+    0,
+    0,
+    25.5
+   ],
+   "mass": 0.03,
+   "materials": [
+    [
+     "nylon",
+     100
+    ]
+   ],
+   "info": "Ein Borstenbüschel aus Nylon.",
+   "color": "#F4F6F8",
+   "label": false
+  },
+  {
+   "id": "borsten_18",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Borstenfeld",
+   "short": "Borsten",
+   "shape": "cyl",
+   "x": 10.2,
+   "y": 19.3,
+   "w": 2.4,
+   "z": 9,
+   "h": 11,
+   "explode": [
+    0,
+    0,
+    25.5
+   ],
+   "mass": 0.03,
+   "materials": [
+    [
+     "nylon",
+     100
+    ]
+   ],
+   "info": "Ein Borstenbüschel aus Nylon.",
+   "color": "#F4F6F8",
+   "label": false
+  },
+  {
+   "id": "borsten_19",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Borstenfeld",
+   "short": "Borsten",
+   "shape": "cyl",
+   "x": 12.8,
+   "y": 19.3,
+   "w": 2.4,
+   "z": 9,
+   "h": 11,
+   "explode": [
+    0,
+    0,
+    25.5
+   ],
+   "mass": 0.03,
+   "materials": [
+    [
+     "nylon",
+     100
+    ]
+   ],
+   "info": "Ein Borstenbüschel aus Nylon.",
+   "color": "#F4F6F8",
+   "label": false
+  },
+  {
+   "id": "borsten_20",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Borstenfeld",
+   "short": "Borsten",
+   "shape": "cyl",
+   "x": 5,
+   "y": 22.4,
+   "w": 2.4,
+   "z": 9,
+   "h": 11,
+   "explode": [
+    0,
+    0,
+    25.5
+   ],
+   "mass": 0.03,
+   "materials": [
+    [
+     "nylon",
+     100
+    ]
+   ],
+   "info": "Ein Borstenbüschel aus Nylon.",
+   "color": "#F4F6F8",
+   "label": false
+  },
+  {
+   "id": "borsten_21",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Borstenfeld",
+   "short": "Borsten",
+   "shape": "cyl",
+   "x": 7.6,
+   "y": 22.4,
+   "w": 2.4,
+   "z": 9,
+   "h": 11,
+   "explode": [
+    0,
+    0,
+    25.5
+   ],
+   "mass": 0.03,
+   "materials": [
+    [
+     "nylon",
+     100
+    ]
+   ],
+   "info": "Ein Borstenbüschel aus Nylon.",
+   "color": "#F4F6F8",
+   "label": false
+  },
+  {
+   "id": "borsten_22",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Borstenfeld",
+   "short": "Borsten",
+   "shape": "cyl",
+   "x": 10.2,
+   "y": 22.4,
+   "w": 2.4,
+   "z": 9,
+   "h": 11,
+   "explode": [
+    0,
+    0,
+    25.5
+   ],
+   "mass": 0.03,
+   "materials": [
+    [
+     "nylon",
+     100
+    ]
+   ],
+   "info": "Ein Borstenbüschel aus Nylon.",
+   "color": "#F4F6F8",
+   "label": false
+  },
+  {
+   "id": "borsten_23",
+   "component_id": "nylon_bristles",
+   "material_id": "nylon",
+   "name": "Borstenfeld",
+   "short": "Borsten",
+   "shape": "cyl",
+   "x": 12.8,
+   "y": 22.4,
+   "w": 2.4,
+   "z": 9,
+   "h": 11,
+   "explode": [
+    0,
+    0,
+    25.5
+   ],
+   "mass": 0.03,
+   "materials": [
+    [
+     "nylon",
+     100
+    ]
+   ],
+   "info": "Ein Borstenbüschel aus Nylon.",
+   "color": "#F4F6F8",
+   "label": false
   },
   {
    "id": "anker",

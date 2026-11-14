@@ -70,5 +70,8 @@ teile = [
          color='#9AA2A6', marks=[mark('cyl', 1, 1, 4, fill='#5A6268'), mark('cyl', 1, 23, 4, fill='#5A6268')]),
 ]
 explodiere(teile, abstand=30, nach_liste=True, abstaende={'koerper': 60})
+for p in teile:  # Foto-Ansicht: flache marks schweben über runden Formen, dort nur in der Zeichnung
+    if p.get('form'):
+        p['marks'] = [dict(m, zeichnung=True) for m in p.get('marks') or []]
 skaliere_masse(teile, oid='cooking_pot')
 schreibe('cooking_pot', teile)

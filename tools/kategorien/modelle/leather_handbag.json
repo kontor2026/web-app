@@ -8,16 +8,16 @@
    "short": "Henkel",
    "shape": "box",
    "x": 70,
-   "y": 113,
+   "y": 104,
    "w": 160,
-   "d": 7,
+   "d": 9,
    "z": 240,
    "h": 10,
    "r": 4,
    "explode": [
     0,
     0,
-    189.0
+    187.0
    ],
    "mass": 28.2,
    "materials": [
@@ -37,12 +37,14 @@
    "info": "Zwei verklebte Lederstreifen mit Kunststoffkern, die Kanten sind eingefärbt. An den Enden mit Metallnieten am Korpus befestigt: Nieten aufbohren, dann löst sich der Henkel.",
    "color": "#5C3A24",
    "label": true,
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
      "x": 4,
-     "y": 3,
+     "y": 4,
      "w": 152,
+     "zeichnung": true,
      "d": 1,
      "r": 0,
      "fill": "#4A2E1C"
@@ -57,7 +59,7 @@
    "short": "Henkelsteg",
    "shape": "box",
    "x": 70,
-   "y": 113,
+   "y": 105,
    "w": 12,
    "d": 7,
    "z": 203,
@@ -66,7 +68,7 @@
    "explode": [
     0,
     0,
-    189.0
+    187.0
    ],
    "mass": 7.6,
    "materials": [
@@ -104,7 +106,7 @@
    "short": "Henkelsteg",
    "shape": "box",
    "x": 218,
-   "y": 113,
+   "y": 105,
    "w": 12,
    "d": 7,
    "z": 203,
@@ -113,7 +115,7 @@
    "explode": [
     0,
     0,
-    189.0
+    187.0
    ],
    "mass": 7.6,
    "materials": [
@@ -151,16 +153,16 @@
    "short": "Henkel",
    "shape": "box",
    "x": 70,
-   "y": 0,
+   "y": 7,
    "w": 160,
-   "d": 7,
+   "d": 9,
    "z": 240,
    "h": 10,
    "r": 4,
    "explode": [
     0,
     0,
-    189.0
+    187.0
    ],
    "mass": 28.2,
    "materials": [
@@ -180,12 +182,14 @@
    "info": "Gegenstück an der Rückseite.",
    "color": "#5C3A24",
    "label": false,
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
      "x": 4,
-     "y": 3,
+     "y": 4,
      "w": 152,
+     "zeichnung": true,
      "d": 1,
      "r": 0,
      "fill": "#4A2E1C"
@@ -200,7 +204,7 @@
    "short": "Henkelsteg",
    "shape": "box",
    "x": 70,
-   "y": 0,
+   "y": 8,
    "w": 12,
    "d": 7,
    "z": 203,
@@ -209,7 +213,7 @@
    "explode": [
     0,
     0,
-    189.0
+    187.0
    ],
    "mass": 7.6,
    "materials": [
@@ -247,7 +251,7 @@
    "short": "Henkelsteg",
    "shape": "box",
    "x": 218,
-   "y": 0,
+   "y": 8,
    "w": 12,
    "d": 7,
    "z": 203,
@@ -256,7 +260,7 @@
    "explode": [
     0,
     0,
-    189.0
+    187.0
    ],
    "mass": 7.6,
    "materials": [
@@ -303,7 +307,7 @@
    "explode": [
     0,
     0,
-    192.0
+    190.0
    ],
    "mass": 5.4,
    "materials": [
@@ -337,9 +341,9 @@
    "name": "Reißverschluss",
    "short": "Reißverschluss",
    "shape": "box",
-   "x": 20,
+   "x": 30,
    "y": 52,
-   "w": 260,
+   "w": 240,
    "d": 16,
    "z": 200,
    "h": 3,
@@ -347,9 +351,9 @@
    "explode": [
     0,
     0,
-    177.0
+    175.0
    ],
-   "mass": 16.3,
+   "mass": 16.2,
    "materials": [
     [
      "messing",
@@ -371,7 +375,7 @@
      "shape": "box",
      "x": 0,
      "y": 6,
-     "w": 260,
+     "w": 240,
      "d": 4,
      "r": 0.5,
      "fill": "#C9A24A"
@@ -385,17 +389,17 @@
    "name": "Lederblende hinten",
    "short": "Blende",
    "shape": "box",
-   "x": 6,
-   "y": 6,
-   "w": 288,
-   "d": 48,
-   "z": 196,
+   "x": 18,
+   "y": 14,
+   "w": 264,
+   "d": 40,
+   "z": 197,
    "h": 6,
    "r": 2,
    "explode": [
     0,
     0,
-    150.0
+    147.0
    ],
    "mass": 21.7,
    "materials": [
@@ -415,8 +419,8 @@
     {
      "shape": "box",
      "x": 4,
-     "y": 42,
-     "w": 280,
+     "y": 36,
+     "w": 256,
      "d": 1.2,
      "r": 0,
      "fill": "#5C3A24"
@@ -430,17 +434,17 @@
    "name": "Lederblende vorne",
    "short": "Blende",
    "shape": "box",
-   "x": 6,
+   "x": 18,
    "y": 66,
-   "w": 288,
-   "d": 48,
-   "z": 196,
+   "w": 264,
+   "d": 40,
+   "z": 197,
    "h": 6,
    "r": 2,
    "explode": [
     0,
     0,
-    150.0
+    147.0
    ],
    "mass": 21.7,
    "materials": [
@@ -459,8 +463,8 @@
     {
      "shape": "box",
      "x": 4,
-     "y": 5,
-     "w": 280,
+     "y": 3,
+     "w": 256,
      "d": 1.2,
      "r": 0,
      "fill": "#5C3A24"
@@ -475,7 +479,7 @@
    "short": "Drehschloss",
    "shape": "box",
    "x": 138,
-   "y": 124,
+   "y": 119.5,
    "w": 24,
    "d": 4,
    "z": 140,
@@ -509,18 +513,18 @@
    "short": "Außentasche",
    "shape": "box",
    "x": 40,
-   "y": 120,
+   "y": 119.65,
    "w": 220,
    "d": 4,
    "z": 40,
-   "h": 130,
-   "r": 3,
+   "h": 10,
+   "r": 2,
    "explode": [
     0,
     280,
     0
    ],
-   "mass": 48.8,
+   "mass": 3.8,
    "materials": [
     [
      "leder",
@@ -533,7 +537,415 @@
    ],
    "info": "Aufgenähte Ledertasche für das Handy. Die Klappe wird vom Drehschloss gehalten.",
    "color": "#7C4F33",
-   "sortBias": 40
+   "label": true
+  },
+  {
+   "id": "vortasche_1",
+   "component_id": "leather_panel",
+   "material_id": "leather",
+   "name": "Außentasche mit Klappe",
+   "short": "Außentasche",
+   "shape": "box",
+   "x": 40,
+   "y": 119.46,
+   "w": 220,
+   "d": 4,
+   "z": 50,
+   "h": 10,
+   "r": 2,
+   "explode": [
+    0,
+    280,
+    0
+   ],
+   "mass": 3.8,
+   "materials": [
+    [
+     "leder",
+     95
+    ],
+    [
+     "polyester",
+     5
+    ]
+   ],
+   "info": "Außentasche: Teil desselben Lederstücks.",
+   "color": "#7C4F33",
+   "label": false
+  },
+  {
+   "id": "vortasche_2",
+   "component_id": "leather_panel",
+   "material_id": "leather",
+   "name": "Außentasche mit Klappe",
+   "short": "Außentasche",
+   "shape": "box",
+   "x": 40,
+   "y": 119.23,
+   "w": 220,
+   "d": 4,
+   "z": 60,
+   "h": 10,
+   "r": 2,
+   "explode": [
+    0,
+    280,
+    0
+   ],
+   "mass": 3.8,
+   "materials": [
+    [
+     "leder",
+     95
+    ],
+    [
+     "polyester",
+     5
+    ]
+   ],
+   "info": "Außentasche: Teil desselben Lederstücks.",
+   "color": "#7C4F33",
+   "label": false
+  },
+  {
+   "id": "vortasche_3",
+   "component_id": "leather_panel",
+   "material_id": "leather",
+   "name": "Außentasche mit Klappe",
+   "short": "Außentasche",
+   "shape": "box",
+   "x": 40,
+   "y": 118.96,
+   "w": 220,
+   "d": 4,
+   "z": 70,
+   "h": 10,
+   "r": 2,
+   "explode": [
+    0,
+    280,
+    0
+   ],
+   "mass": 3.8,
+   "materials": [
+    [
+     "leder",
+     95
+    ],
+    [
+     "polyester",
+     5
+    ]
+   ],
+   "info": "Außentasche: Teil desselben Lederstücks.",
+   "color": "#7C4F33",
+   "label": false
+  },
+  {
+   "id": "vortasche_4",
+   "component_id": "leather_panel",
+   "material_id": "leather",
+   "name": "Außentasche mit Klappe",
+   "short": "Außentasche",
+   "shape": "box",
+   "x": 40,
+   "y": 118.66,
+   "w": 220,
+   "d": 4,
+   "z": 80,
+   "h": 10,
+   "r": 2,
+   "explode": [
+    0,
+    280,
+    0
+   ],
+   "mass": 3.8,
+   "materials": [
+    [
+     "leder",
+     95
+    ],
+    [
+     "polyester",
+     5
+    ]
+   ],
+   "info": "Außentasche: Teil desselben Lederstücks.",
+   "color": "#7C4F33",
+   "label": false
+  },
+  {
+   "id": "vortasche_5",
+   "component_id": "leather_panel",
+   "material_id": "leather",
+   "name": "Außentasche mit Klappe",
+   "short": "Außentasche",
+   "shape": "box",
+   "x": 40,
+   "y": 118.31,
+   "w": 220,
+   "d": 4,
+   "z": 90,
+   "h": 10,
+   "r": 2,
+   "explode": [
+    0,
+    280,
+    0
+   ],
+   "mass": 3.8,
+   "materials": [
+    [
+     "leder",
+     95
+    ],
+    [
+     "polyester",
+     5
+    ]
+   ],
+   "info": "Außentasche: Teil desselben Lederstücks.",
+   "color": "#7C4F33",
+   "label": false
+  },
+  {
+   "id": "vortasche_6",
+   "component_id": "leather_panel",
+   "material_id": "leather",
+   "name": "Außentasche mit Klappe",
+   "short": "Außentasche",
+   "shape": "box",
+   "x": 40,
+   "y": 117.92,
+   "w": 220,
+   "d": 4,
+   "z": 100,
+   "h": 10,
+   "r": 2,
+   "explode": [
+    0,
+    280,
+    0
+   ],
+   "mass": 3.8,
+   "materials": [
+    [
+     "leder",
+     95
+    ],
+    [
+     "polyester",
+     5
+    ]
+   ],
+   "info": "Außentasche: Teil desselben Lederstücks.",
+   "color": "#7C4F33",
+   "label": false
+  },
+  {
+   "id": "vortasche_7",
+   "component_id": "leather_panel",
+   "material_id": "leather",
+   "name": "Außentasche mit Klappe",
+   "short": "Außentasche",
+   "shape": "box",
+   "x": 40,
+   "y": 117.49,
+   "w": 220,
+   "d": 4,
+   "z": 110,
+   "h": 10,
+   "r": 2,
+   "explode": [
+    0,
+    280,
+    0
+   ],
+   "mass": 3.8,
+   "materials": [
+    [
+     "leder",
+     95
+    ],
+    [
+     "polyester",
+     5
+    ]
+   ],
+   "info": "Außentasche: Teil desselben Lederstücks.",
+   "color": "#7C4F33",
+   "label": false
+  },
+  {
+   "id": "vortasche_8",
+   "component_id": "leather_panel",
+   "material_id": "leather",
+   "name": "Außentasche mit Klappe",
+   "short": "Außentasche",
+   "shape": "box",
+   "x": 40,
+   "y": 117.02,
+   "w": 220,
+   "d": 4,
+   "z": 120,
+   "h": 10,
+   "r": 2,
+   "explode": [
+    0,
+    280,
+    0
+   ],
+   "mass": 3.8,
+   "materials": [
+    [
+     "leder",
+     95
+    ],
+    [
+     "polyester",
+     5
+    ]
+   ],
+   "info": "Außentasche: Teil desselben Lederstücks.",
+   "color": "#7C4F33",
+   "label": false
+  },
+  {
+   "id": "vortasche_9",
+   "component_id": "leather_panel",
+   "material_id": "leather",
+   "name": "Außentasche mit Klappe",
+   "short": "Außentasche",
+   "shape": "box",
+   "x": 40,
+   "y": 116.52,
+   "w": 220,
+   "d": 4,
+   "z": 130,
+   "h": 10,
+   "r": 2,
+   "explode": [
+    0,
+    280,
+    0
+   ],
+   "mass": 3.8,
+   "materials": [
+    [
+     "leder",
+     95
+    ],
+    [
+     "polyester",
+     5
+    ]
+   ],
+   "info": "Außentasche: Teil desselben Lederstücks.",
+   "color": "#7C4F33",
+   "label": false
+  },
+  {
+   "id": "vortasche_10",
+   "component_id": "leather_panel",
+   "material_id": "leather",
+   "name": "Außentasche mit Klappe",
+   "short": "Außentasche",
+   "shape": "box",
+   "x": 40,
+   "y": 115.97,
+   "w": 220,
+   "d": 4,
+   "z": 140,
+   "h": 10,
+   "r": 2,
+   "explode": [
+    0,
+    280,
+    0
+   ],
+   "mass": 3.8,
+   "materials": [
+    [
+     "leder",
+     95
+    ],
+    [
+     "polyester",
+     5
+    ]
+   ],
+   "info": "Außentasche: Teil desselben Lederstücks.",
+   "color": "#7C4F33",
+   "label": false
+  },
+  {
+   "id": "vortasche_11",
+   "component_id": "leather_panel",
+   "material_id": "leather",
+   "name": "Außentasche mit Klappe",
+   "short": "Außentasche",
+   "shape": "box",
+   "x": 40,
+   "y": 115.38,
+   "w": 220,
+   "d": 4,
+   "z": 150,
+   "h": 10,
+   "r": 2,
+   "explode": [
+    0,
+    280,
+    0
+   ],
+   "mass": 3.8,
+   "materials": [
+    [
+     "leder",
+     95
+    ],
+    [
+     "polyester",
+     5
+    ]
+   ],
+   "info": "Außentasche: Teil desselben Lederstücks.",
+   "color": "#7C4F33",
+   "label": false
+  },
+  {
+   "id": "vortasche_12",
+   "component_id": "leather_panel",
+   "material_id": "leather",
+   "name": "Außentasche mit Klappe",
+   "short": "Außentasche",
+   "shape": "box",
+   "x": 40,
+   "y": 114.75,
+   "w": 220,
+   "d": 4,
+   "z": 160,
+   "h": 10,
+   "r": 2,
+   "explode": [
+    0,
+    280,
+    0
+   ],
+   "mass": 3.8,
+   "materials": [
+    [
+     "leder",
+     95
+    ],
+    [
+     "polyester",
+     5
+    ]
+   ],
+   "info": "Außentasche: Teil desselben Lederstücks.",
+   "color": "#7C4F33",
+   "label": false
   },
   {
    "id": "vorderteil",
@@ -542,19 +954,19 @@
    "name": "Vorderwand",
    "short": "Vorderwand",
    "shape": "box",
-   "x": 0,
-   "y": 114,
-   "w": 300,
+   "x": 0.6,
+   "y": 113.98,
+   "w": 298.8,
    "d": 6,
    "z": 3,
-   "h": 200,
+   "h": 20,
    "r": 2,
    "explode": [
     0,
     230,
     0
    ],
-   "mass": 119.2,
+   "mass": 11.9,
    "materials": [
     [
      "leder",
@@ -566,7 +978,314 @@
     ]
    ],
    "info": "Rindsleder, an den Kanten eingefasst und mit Polyestergarn vernäht. Nähte auftrennen, dann bleiben flache Lederstücke zum Basteln übrig.",
-   "color": "#8A5A3B"
+   "color": "#8A5A3B",
+   "label": true
+  },
+  {
+   "id": "vorderteil_1",
+   "component_id": "leather_panel",
+   "material_id": "leather",
+   "name": "Vorderwand",
+   "short": "Vorderwand",
+   "shape": "box",
+   "x": 1.8,
+   "y": 113.82,
+   "w": 296.4,
+   "d": 6,
+   "z": 23,
+   "h": 20,
+   "r": 2,
+   "explode": [
+    0,
+    230,
+    0
+   ],
+   "mass": 11.9,
+   "materials": [
+    [
+     "leder",
+     95
+    ],
+    [
+     "polyester",
+     5
+    ]
+   ],
+   "info": "Vorderwand: Teil derselben Lederwand.",
+   "color": "#8A5A3B",
+   "label": false
+  },
+  {
+   "id": "vorderteil_2",
+   "component_id": "leather_panel",
+   "material_id": "leather",
+   "name": "Vorderwand",
+   "short": "Vorderwand",
+   "shape": "box",
+   "x": 3,
+   "y": 113.5,
+   "w": 294,
+   "d": 6,
+   "z": 43,
+   "h": 20,
+   "r": 2,
+   "explode": [
+    0,
+    230,
+    0
+   ],
+   "mass": 11.9,
+   "materials": [
+    [
+     "leder",
+     95
+    ],
+    [
+     "polyester",
+     5
+    ]
+   ],
+   "info": "Vorderwand: Teil derselben Lederwand.",
+   "color": "#8A5A3B",
+   "label": false
+  },
+  {
+   "id": "vorderteil_3",
+   "component_id": "leather_panel",
+   "material_id": "leather",
+   "name": "Vorderwand",
+   "short": "Vorderwand",
+   "shape": "box",
+   "x": 4.2,
+   "y": 113.02,
+   "w": 291.6,
+   "d": 6,
+   "z": 63,
+   "h": 20,
+   "r": 2,
+   "explode": [
+    0,
+    230,
+    0
+   ],
+   "mass": 11.9,
+   "materials": [
+    [
+     "leder",
+     95
+    ],
+    [
+     "polyester",
+     5
+    ]
+   ],
+   "info": "Vorderwand: Teil derselben Lederwand.",
+   "color": "#8A5A3B",
+   "label": false
+  },
+  {
+   "id": "vorderteil_4",
+   "component_id": "leather_panel",
+   "material_id": "leather",
+   "name": "Vorderwand",
+   "short": "Vorderwand",
+   "shape": "box",
+   "x": 5.4,
+   "y": 112.38,
+   "w": 289.2,
+   "d": 6,
+   "z": 83,
+   "h": 20,
+   "r": 2,
+   "explode": [
+    0,
+    230,
+    0
+   ],
+   "mass": 11.9,
+   "materials": [
+    [
+     "leder",
+     95
+    ],
+    [
+     "polyester",
+     5
+    ]
+   ],
+   "info": "Vorderwand: Teil derselben Lederwand.",
+   "color": "#8A5A3B",
+   "label": false
+  },
+  {
+   "id": "vorderteil_5",
+   "component_id": "leather_panel",
+   "material_id": "leather",
+   "name": "Vorderwand",
+   "short": "Vorderwand",
+   "shape": "box",
+   "x": 6.6,
+   "y": 111.58,
+   "w": 286.8,
+   "d": 6,
+   "z": 103,
+   "h": 20,
+   "r": 2,
+   "explode": [
+    0,
+    230,
+    0
+   ],
+   "mass": 11.9,
+   "materials": [
+    [
+     "leder",
+     95
+    ],
+    [
+     "polyester",
+     5
+    ]
+   ],
+   "info": "Vorderwand: Teil derselben Lederwand.",
+   "color": "#8A5A3B",
+   "label": false
+  },
+  {
+   "id": "vorderteil_6",
+   "component_id": "leather_panel",
+   "material_id": "leather",
+   "name": "Vorderwand",
+   "short": "Vorderwand",
+   "shape": "box",
+   "x": 7.8,
+   "y": 110.62,
+   "w": 284.4,
+   "d": 6,
+   "z": 123,
+   "h": 20,
+   "r": 2,
+   "explode": [
+    0,
+    230,
+    0
+   ],
+   "mass": 11.9,
+   "materials": [
+    [
+     "leder",
+     95
+    ],
+    [
+     "polyester",
+     5
+    ]
+   ],
+   "info": "Vorderwand: Teil derselben Lederwand.",
+   "color": "#8A5A3B",
+   "label": false
+  },
+  {
+   "id": "vorderteil_7",
+   "component_id": "leather_panel",
+   "material_id": "leather",
+   "name": "Vorderwand",
+   "short": "Vorderwand",
+   "shape": "box",
+   "x": 9,
+   "y": 109.5,
+   "w": 282,
+   "d": 6,
+   "z": 143,
+   "h": 20,
+   "r": 2,
+   "explode": [
+    0,
+    230,
+    0
+   ],
+   "mass": 11.9,
+   "materials": [
+    [
+     "leder",
+     95
+    ],
+    [
+     "polyester",
+     5
+    ]
+   ],
+   "info": "Vorderwand: Teil derselben Lederwand.",
+   "color": "#8A5A3B",
+   "label": false
+  },
+  {
+   "id": "vorderteil_8",
+   "component_id": "leather_panel",
+   "material_id": "leather",
+   "name": "Vorderwand",
+   "short": "Vorderwand",
+   "shape": "box",
+   "x": 10.2,
+   "y": 108.22,
+   "w": 279.6,
+   "d": 6,
+   "z": 163,
+   "h": 20,
+   "r": 2,
+   "explode": [
+    0,
+    230,
+    0
+   ],
+   "mass": 11.9,
+   "materials": [
+    [
+     "leder",
+     95
+    ],
+    [
+     "polyester",
+     5
+    ]
+   ],
+   "info": "Vorderwand: Teil derselben Lederwand.",
+   "color": "#8A5A3B",
+   "label": false
+  },
+  {
+   "id": "vorderteil_9",
+   "component_id": "leather_panel",
+   "material_id": "leather",
+   "name": "Vorderwand",
+   "short": "Vorderwand",
+   "shape": "box",
+   "x": 11.4,
+   "y": 106.78,
+   "w": 277.2,
+   "d": 6,
+   "z": 183,
+   "h": 20,
+   "r": 2,
+   "explode": [
+    0,
+    230,
+    0
+   ],
+   "mass": 11.9,
+   "materials": [
+    [
+     "leder",
+     95
+    ],
+    [
+     "polyester",
+     5
+    ]
+   ],
+   "info": "Vorderwand: Teil derselben Lederwand.",
+   "color": "#8A5A3B",
+   "label": false
   },
   {
    "id": "rueckwand",
@@ -575,19 +1294,19 @@
    "name": "Rückwand",
    "short": "Rückwand",
    "shape": "box",
-   "x": 0,
-   "y": 0,
-   "w": 300,
+   "x": 0.6,
+   "y": 0.02,
+   "w": 298.8,
    "d": 6,
    "z": 3,
-   "h": 200,
+   "h": 20,
    "r": 2,
    "explode": [
     0,
     -160,
     0
    ],
-   "mass": 119.2,
+   "mass": 11.9,
    "materials": [
     [
      "leder",
@@ -599,7 +1318,314 @@
     ]
    ],
    "info": "Gleich aufgebaut wie die Vorderwand, innen mit Futter verklebt.",
-   "color": "#8A5A3B"
+   "color": "#8A5A3B",
+   "label": true
+  },
+  {
+   "id": "rueckwand_1",
+   "component_id": "leather_panel",
+   "material_id": "leather",
+   "name": "Rückwand",
+   "short": "Rückwand",
+   "shape": "box",
+   "x": 1.8,
+   "y": 0.18,
+   "w": 296.4,
+   "d": 6,
+   "z": 23,
+   "h": 20,
+   "r": 2,
+   "explode": [
+    0,
+    -160,
+    0
+   ],
+   "mass": 11.9,
+   "materials": [
+    [
+     "leder",
+     95
+    ],
+    [
+     "polyester",
+     5
+    ]
+   ],
+   "info": "Rückwand: Teil derselben Lederwand.",
+   "color": "#8A5A3B",
+   "label": false
+  },
+  {
+   "id": "rueckwand_2",
+   "component_id": "leather_panel",
+   "material_id": "leather",
+   "name": "Rückwand",
+   "short": "Rückwand",
+   "shape": "box",
+   "x": 3,
+   "y": 0.5,
+   "w": 294,
+   "d": 6,
+   "z": 43,
+   "h": 20,
+   "r": 2,
+   "explode": [
+    0,
+    -160,
+    0
+   ],
+   "mass": 11.9,
+   "materials": [
+    [
+     "leder",
+     95
+    ],
+    [
+     "polyester",
+     5
+    ]
+   ],
+   "info": "Rückwand: Teil derselben Lederwand.",
+   "color": "#8A5A3B",
+   "label": false
+  },
+  {
+   "id": "rueckwand_3",
+   "component_id": "leather_panel",
+   "material_id": "leather",
+   "name": "Rückwand",
+   "short": "Rückwand",
+   "shape": "box",
+   "x": 4.2,
+   "y": 0.98,
+   "w": 291.6,
+   "d": 6,
+   "z": 63,
+   "h": 20,
+   "r": 2,
+   "explode": [
+    0,
+    -160,
+    0
+   ],
+   "mass": 11.9,
+   "materials": [
+    [
+     "leder",
+     95
+    ],
+    [
+     "polyester",
+     5
+    ]
+   ],
+   "info": "Rückwand: Teil derselben Lederwand.",
+   "color": "#8A5A3B",
+   "label": false
+  },
+  {
+   "id": "rueckwand_4",
+   "component_id": "leather_panel",
+   "material_id": "leather",
+   "name": "Rückwand",
+   "short": "Rückwand",
+   "shape": "box",
+   "x": 5.4,
+   "y": 1.62,
+   "w": 289.2,
+   "d": 6,
+   "z": 83,
+   "h": 20,
+   "r": 2,
+   "explode": [
+    0,
+    -160,
+    0
+   ],
+   "mass": 11.9,
+   "materials": [
+    [
+     "leder",
+     95
+    ],
+    [
+     "polyester",
+     5
+    ]
+   ],
+   "info": "Rückwand: Teil derselben Lederwand.",
+   "color": "#8A5A3B",
+   "label": false
+  },
+  {
+   "id": "rueckwand_5",
+   "component_id": "leather_panel",
+   "material_id": "leather",
+   "name": "Rückwand",
+   "short": "Rückwand",
+   "shape": "box",
+   "x": 6.6,
+   "y": 2.42,
+   "w": 286.8,
+   "d": 6,
+   "z": 103,
+   "h": 20,
+   "r": 2,
+   "explode": [
+    0,
+    -160,
+    0
+   ],
+   "mass": 11.9,
+   "materials": [
+    [
+     "leder",
+     95
+    ],
+    [
+     "polyester",
+     5
+    ]
+   ],
+   "info": "Rückwand: Teil derselben Lederwand.",
+   "color": "#8A5A3B",
+   "label": false
+  },
+  {
+   "id": "rueckwand_6",
+   "component_id": "leather_panel",
+   "material_id": "leather",
+   "name": "Rückwand",
+   "short": "Rückwand",
+   "shape": "box",
+   "x": 7.8,
+   "y": 3.38,
+   "w": 284.4,
+   "d": 6,
+   "z": 123,
+   "h": 20,
+   "r": 2,
+   "explode": [
+    0,
+    -160,
+    0
+   ],
+   "mass": 11.9,
+   "materials": [
+    [
+     "leder",
+     95
+    ],
+    [
+     "polyester",
+     5
+    ]
+   ],
+   "info": "Rückwand: Teil derselben Lederwand.",
+   "color": "#8A5A3B",
+   "label": false
+  },
+  {
+   "id": "rueckwand_7",
+   "component_id": "leather_panel",
+   "material_id": "leather",
+   "name": "Rückwand",
+   "short": "Rückwand",
+   "shape": "box",
+   "x": 9,
+   "y": 4.5,
+   "w": 282,
+   "d": 6,
+   "z": 143,
+   "h": 20,
+   "r": 2,
+   "explode": [
+    0,
+    -160,
+    0
+   ],
+   "mass": 11.9,
+   "materials": [
+    [
+     "leder",
+     95
+    ],
+    [
+     "polyester",
+     5
+    ]
+   ],
+   "info": "Rückwand: Teil derselben Lederwand.",
+   "color": "#8A5A3B",
+   "label": false
+  },
+  {
+   "id": "rueckwand_8",
+   "component_id": "leather_panel",
+   "material_id": "leather",
+   "name": "Rückwand",
+   "short": "Rückwand",
+   "shape": "box",
+   "x": 10.2,
+   "y": 5.78,
+   "w": 279.6,
+   "d": 6,
+   "z": 163,
+   "h": 20,
+   "r": 2,
+   "explode": [
+    0,
+    -160,
+    0
+   ],
+   "mass": 11.9,
+   "materials": [
+    [
+     "leder",
+     95
+    ],
+    [
+     "polyester",
+     5
+    ]
+   ],
+   "info": "Rückwand: Teil derselben Lederwand.",
+   "color": "#8A5A3B",
+   "label": false
+  },
+  {
+   "id": "rueckwand_9",
+   "component_id": "leather_panel",
+   "material_id": "leather",
+   "name": "Rückwand",
+   "short": "Rückwand",
+   "shape": "box",
+   "x": 11.4,
+   "y": 7.22,
+   "w": 277.2,
+   "d": 6,
+   "z": 183,
+   "h": 20,
+   "r": 2,
+   "explode": [
+    0,
+    -160,
+    0
+   ],
+   "mass": 11.9,
+   "materials": [
+    [
+     "leder",
+     95
+    ],
+    [
+     "polyester",
+     5
+    ]
+   ],
+   "info": "Rückwand: Teil derselben Lederwand.",
+   "color": "#8A5A3B",
+   "label": false
   },
   {
    "id": "seite_l",
@@ -608,19 +1634,19 @@
    "name": "Seitenteil links",
    "short": "Seitenteil",
    "shape": "box",
-   "x": 0,
-   "y": 6,
+   "x": 0.6,
+   "y": 6.02,
    "w": 6,
-   "d": 108,
+   "d": 107.96,
    "z": 3,
-   "h": 200,
+   "h": 20,
    "r": 2,
    "explode": [
     -130,
     0,
     0
    ],
-   "mass": 37.9,
+   "mass": 3.8,
    "materials": [
     [
      "leder",
@@ -632,7 +1658,314 @@
     ]
    ],
    "info": "Schmaler Lederstreifen (Keder), der Vorder- und Rückwand verbindet und der Tasche ihre Tiefe gibt.",
-   "color": "#8A5A3B"
+   "color": "#8A5A3B",
+   "label": true
+  },
+  {
+   "id": "seite_l_1",
+   "component_id": "leather_panel",
+   "material_id": "leather",
+   "name": "Seitenteil links",
+   "short": "Seitenteil",
+   "shape": "box",
+   "x": 1.8,
+   "y": 6.18,
+   "w": 6,
+   "d": 107.64,
+   "z": 23,
+   "h": 20,
+   "r": 2,
+   "explode": [
+    -130,
+    0,
+    0
+   ],
+   "mass": 3.8,
+   "materials": [
+    [
+     "leder",
+     95
+    ],
+    [
+     "polyester",
+     5
+    ]
+   ],
+   "info": "Seitenteil links: Teil derselben Lederwand.",
+   "color": "#8A5A3B",
+   "label": false
+  },
+  {
+   "id": "seite_l_2",
+   "component_id": "leather_panel",
+   "material_id": "leather",
+   "name": "Seitenteil links",
+   "short": "Seitenteil",
+   "shape": "box",
+   "x": 3,
+   "y": 6.5,
+   "w": 6,
+   "d": 107,
+   "z": 43,
+   "h": 20,
+   "r": 2,
+   "explode": [
+    -130,
+    0,
+    0
+   ],
+   "mass": 3.8,
+   "materials": [
+    [
+     "leder",
+     95
+    ],
+    [
+     "polyester",
+     5
+    ]
+   ],
+   "info": "Seitenteil links: Teil derselben Lederwand.",
+   "color": "#8A5A3B",
+   "label": false
+  },
+  {
+   "id": "seite_l_3",
+   "component_id": "leather_panel",
+   "material_id": "leather",
+   "name": "Seitenteil links",
+   "short": "Seitenteil",
+   "shape": "box",
+   "x": 4.2,
+   "y": 6.98,
+   "w": 6,
+   "d": 106.04,
+   "z": 63,
+   "h": 20,
+   "r": 2,
+   "explode": [
+    -130,
+    0,
+    0
+   ],
+   "mass": 3.8,
+   "materials": [
+    [
+     "leder",
+     95
+    ],
+    [
+     "polyester",
+     5
+    ]
+   ],
+   "info": "Seitenteil links: Teil derselben Lederwand.",
+   "color": "#8A5A3B",
+   "label": false
+  },
+  {
+   "id": "seite_l_4",
+   "component_id": "leather_panel",
+   "material_id": "leather",
+   "name": "Seitenteil links",
+   "short": "Seitenteil",
+   "shape": "box",
+   "x": 5.4,
+   "y": 7.62,
+   "w": 6,
+   "d": 104.76,
+   "z": 83,
+   "h": 20,
+   "r": 2,
+   "explode": [
+    -130,
+    0,
+    0
+   ],
+   "mass": 3.8,
+   "materials": [
+    [
+     "leder",
+     95
+    ],
+    [
+     "polyester",
+     5
+    ]
+   ],
+   "info": "Seitenteil links: Teil derselben Lederwand.",
+   "color": "#8A5A3B",
+   "label": false
+  },
+  {
+   "id": "seite_l_5",
+   "component_id": "leather_panel",
+   "material_id": "leather",
+   "name": "Seitenteil links",
+   "short": "Seitenteil",
+   "shape": "box",
+   "x": 6.6,
+   "y": 8.42,
+   "w": 6,
+   "d": 103.16,
+   "z": 103,
+   "h": 20,
+   "r": 2,
+   "explode": [
+    -130,
+    0,
+    0
+   ],
+   "mass": 3.8,
+   "materials": [
+    [
+     "leder",
+     95
+    ],
+    [
+     "polyester",
+     5
+    ]
+   ],
+   "info": "Seitenteil links: Teil derselben Lederwand.",
+   "color": "#8A5A3B",
+   "label": false
+  },
+  {
+   "id": "seite_l_6",
+   "component_id": "leather_panel",
+   "material_id": "leather",
+   "name": "Seitenteil links",
+   "short": "Seitenteil",
+   "shape": "box",
+   "x": 7.8,
+   "y": 9.379999999999999,
+   "w": 6,
+   "d": 101.24,
+   "z": 123,
+   "h": 20,
+   "r": 2,
+   "explode": [
+    -130,
+    0,
+    0
+   ],
+   "mass": 3.8,
+   "materials": [
+    [
+     "leder",
+     95
+    ],
+    [
+     "polyester",
+     5
+    ]
+   ],
+   "info": "Seitenteil links: Teil derselben Lederwand.",
+   "color": "#8A5A3B",
+   "label": false
+  },
+  {
+   "id": "seite_l_7",
+   "component_id": "leather_panel",
+   "material_id": "leather",
+   "name": "Seitenteil links",
+   "short": "Seitenteil",
+   "shape": "box",
+   "x": 9,
+   "y": 10.5,
+   "w": 6,
+   "d": 99,
+   "z": 143,
+   "h": 20,
+   "r": 2,
+   "explode": [
+    -130,
+    0,
+    0
+   ],
+   "mass": 3.8,
+   "materials": [
+    [
+     "leder",
+     95
+    ],
+    [
+     "polyester",
+     5
+    ]
+   ],
+   "info": "Seitenteil links: Teil derselben Lederwand.",
+   "color": "#8A5A3B",
+   "label": false
+  },
+  {
+   "id": "seite_l_8",
+   "component_id": "leather_panel",
+   "material_id": "leather",
+   "name": "Seitenteil links",
+   "short": "Seitenteil",
+   "shape": "box",
+   "x": 10.2,
+   "y": 11.780000000000001,
+   "w": 6,
+   "d": 96.44,
+   "z": 163,
+   "h": 20,
+   "r": 2,
+   "explode": [
+    -130,
+    0,
+    0
+   ],
+   "mass": 3.8,
+   "materials": [
+    [
+     "leder",
+     95
+    ],
+    [
+     "polyester",
+     5
+    ]
+   ],
+   "info": "Seitenteil links: Teil derselben Lederwand.",
+   "color": "#8A5A3B",
+   "label": false
+  },
+  {
+   "id": "seite_l_9",
+   "component_id": "leather_panel",
+   "material_id": "leather",
+   "name": "Seitenteil links",
+   "short": "Seitenteil",
+   "shape": "box",
+   "x": 11.4,
+   "y": 13.219999999999999,
+   "w": 6,
+   "d": 93.56,
+   "z": 183,
+   "h": 20,
+   "r": 2,
+   "explode": [
+    -130,
+    0,
+    0
+   ],
+   "mass": 3.8,
+   "materials": [
+    [
+     "leder",
+     95
+    ],
+    [
+     "polyester",
+     5
+    ]
+   ],
+   "info": "Seitenteil links: Teil derselben Lederwand.",
+   "color": "#8A5A3B",
+   "label": false
   },
   {
    "id": "seite_r",
@@ -641,19 +1974,19 @@
    "name": "Seitenteil rechts",
    "short": "Seitenteil",
    "shape": "box",
-   "x": 294,
-   "y": 6,
+   "x": 293.4,
+   "y": 6.02,
    "w": 6,
-   "d": 108,
+   "d": 107.96,
    "z": 3,
-   "h": 200,
+   "h": 20,
    "r": 2,
    "explode": [
     130,
     0,
     0
    ],
-   "mass": 37.9,
+   "mass": 3.8,
    "materials": [
     [
      "leder",
@@ -669,18 +2002,324 @@
    "label": false
   },
   {
+   "id": "seite_r_1",
+   "component_id": "leather_panel",
+   "material_id": "leather",
+   "name": "Seitenteil rechts",
+   "short": "Seitenteil",
+   "shape": "box",
+   "x": 292.2,
+   "y": 6.18,
+   "w": 6,
+   "d": 107.64,
+   "z": 23,
+   "h": 20,
+   "r": 2,
+   "explode": [
+    130,
+    0,
+    0
+   ],
+   "mass": 3.8,
+   "materials": [
+    [
+     "leder",
+     95
+    ],
+    [
+     "polyester",
+     5
+    ]
+   ],
+   "info": "Seitenteil rechts: Teil derselben Lederwand.",
+   "color": "#8A5A3B",
+   "label": false
+  },
+  {
+   "id": "seite_r_2",
+   "component_id": "leather_panel",
+   "material_id": "leather",
+   "name": "Seitenteil rechts",
+   "short": "Seitenteil",
+   "shape": "box",
+   "x": 291,
+   "y": 6.5,
+   "w": 6,
+   "d": 107,
+   "z": 43,
+   "h": 20,
+   "r": 2,
+   "explode": [
+    130,
+    0,
+    0
+   ],
+   "mass": 3.8,
+   "materials": [
+    [
+     "leder",
+     95
+    ],
+    [
+     "polyester",
+     5
+    ]
+   ],
+   "info": "Seitenteil rechts: Teil derselben Lederwand.",
+   "color": "#8A5A3B",
+   "label": false
+  },
+  {
+   "id": "seite_r_3",
+   "component_id": "leather_panel",
+   "material_id": "leather",
+   "name": "Seitenteil rechts",
+   "short": "Seitenteil",
+   "shape": "box",
+   "x": 289.8,
+   "y": 6.98,
+   "w": 6,
+   "d": 106.04,
+   "z": 63,
+   "h": 20,
+   "r": 2,
+   "explode": [
+    130,
+    0,
+    0
+   ],
+   "mass": 3.8,
+   "materials": [
+    [
+     "leder",
+     95
+    ],
+    [
+     "polyester",
+     5
+    ]
+   ],
+   "info": "Seitenteil rechts: Teil derselben Lederwand.",
+   "color": "#8A5A3B",
+   "label": false
+  },
+  {
+   "id": "seite_r_4",
+   "component_id": "leather_panel",
+   "material_id": "leather",
+   "name": "Seitenteil rechts",
+   "short": "Seitenteil",
+   "shape": "box",
+   "x": 288.6,
+   "y": 7.62,
+   "w": 6,
+   "d": 104.76,
+   "z": 83,
+   "h": 20,
+   "r": 2,
+   "explode": [
+    130,
+    0,
+    0
+   ],
+   "mass": 3.8,
+   "materials": [
+    [
+     "leder",
+     95
+    ],
+    [
+     "polyester",
+     5
+    ]
+   ],
+   "info": "Seitenteil rechts: Teil derselben Lederwand.",
+   "color": "#8A5A3B",
+   "label": false
+  },
+  {
+   "id": "seite_r_5",
+   "component_id": "leather_panel",
+   "material_id": "leather",
+   "name": "Seitenteil rechts",
+   "short": "Seitenteil",
+   "shape": "box",
+   "x": 287.4,
+   "y": 8.42,
+   "w": 6,
+   "d": 103.16,
+   "z": 103,
+   "h": 20,
+   "r": 2,
+   "explode": [
+    130,
+    0,
+    0
+   ],
+   "mass": 3.8,
+   "materials": [
+    [
+     "leder",
+     95
+    ],
+    [
+     "polyester",
+     5
+    ]
+   ],
+   "info": "Seitenteil rechts: Teil derselben Lederwand.",
+   "color": "#8A5A3B",
+   "label": false
+  },
+  {
+   "id": "seite_r_6",
+   "component_id": "leather_panel",
+   "material_id": "leather",
+   "name": "Seitenteil rechts",
+   "short": "Seitenteil",
+   "shape": "box",
+   "x": 286.2,
+   "y": 9.379999999999999,
+   "w": 6,
+   "d": 101.24,
+   "z": 123,
+   "h": 20,
+   "r": 2,
+   "explode": [
+    130,
+    0,
+    0
+   ],
+   "mass": 3.8,
+   "materials": [
+    [
+     "leder",
+     95
+    ],
+    [
+     "polyester",
+     5
+    ]
+   ],
+   "info": "Seitenteil rechts: Teil derselben Lederwand.",
+   "color": "#8A5A3B",
+   "label": false
+  },
+  {
+   "id": "seite_r_7",
+   "component_id": "leather_panel",
+   "material_id": "leather",
+   "name": "Seitenteil rechts",
+   "short": "Seitenteil",
+   "shape": "box",
+   "x": 285,
+   "y": 10.5,
+   "w": 6,
+   "d": 99,
+   "z": 143,
+   "h": 20,
+   "r": 2,
+   "explode": [
+    130,
+    0,
+    0
+   ],
+   "mass": 3.8,
+   "materials": [
+    [
+     "leder",
+     95
+    ],
+    [
+     "polyester",
+     5
+    ]
+   ],
+   "info": "Seitenteil rechts: Teil derselben Lederwand.",
+   "color": "#8A5A3B",
+   "label": false
+  },
+  {
+   "id": "seite_r_8",
+   "component_id": "leather_panel",
+   "material_id": "leather",
+   "name": "Seitenteil rechts",
+   "short": "Seitenteil",
+   "shape": "box",
+   "x": 283.8,
+   "y": 11.780000000000001,
+   "w": 6,
+   "d": 96.44,
+   "z": 163,
+   "h": 20,
+   "r": 2,
+   "explode": [
+    130,
+    0,
+    0
+   ],
+   "mass": 3.8,
+   "materials": [
+    [
+     "leder",
+     95
+    ],
+    [
+     "polyester",
+     5
+    ]
+   ],
+   "info": "Seitenteil rechts: Teil derselben Lederwand.",
+   "color": "#8A5A3B",
+   "label": false
+  },
+  {
+   "id": "seite_r_9",
+   "component_id": "leather_panel",
+   "material_id": "leather",
+   "name": "Seitenteil rechts",
+   "short": "Seitenteil",
+   "shape": "box",
+   "x": 282.6,
+   "y": 13.219999999999999,
+   "w": 6,
+   "d": 93.56,
+   "z": 183,
+   "h": 20,
+   "r": 2,
+   "explode": [
+    130,
+    0,
+    0
+   ],
+   "mass": 3.8,
+   "materials": [
+    [
+     "leder",
+     95
+    ],
+    [
+     "polyester",
+     5
+    ]
+   ],
+   "info": "Seitenteil rechts: Teil derselben Lederwand.",
+   "color": "#8A5A3B",
+   "label": false
+  },
+  {
    "id": "futter",
    "component_id": "polyester_lining",
    "material_id": "polyester",
    "name": "Innenfutter mit Innentasche",
    "short": "Futter",
    "shape": "box",
-   "x": 8,
-   "y": 8,
-   "w": 284,
-   "d": 104,
+   "x": 20,
+   "y": 16,
+   "w": 260,
+   "d": 88,
    "z": 16,
-   "h": 180,
+   "h": 178,
    "r": 4,
    "explode": [
     0,
@@ -765,7 +2404,7 @@
     0,
     40.0
    ],
-   "mass": 75.9,
+   "mass": 75.8,
    "materials": [
     [
      "leder",

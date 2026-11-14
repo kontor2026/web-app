@@ -13,9 +13,9 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from bau import teil, mark, explodiere, skaliere_masse, schreibe  # noqa: E402
 
-FELL = '#B07A45'
-FELL_D = '#9C6A3B'
-HELL = '#D9B38A'
+FELL = '#93633A'
+FELL_D = '#7E5430'
+HELL = '#C9A27A'
 WATTE = '#F4F2EE'
 WATTE_D = '#E3DFD6'
 AUGE = '#1C1D1F'
@@ -44,7 +44,7 @@ kopf = scheiben('kopf', 'polyester_plush', 'Kopf (Plüschhülle)', 'Kopf', 72,
                     'mit dem Rumpf vernäht.', FELL, sortBias=3,
                 marks={0: [mark('box', 31, 4, 4, 50, 2, FELL_D)], 1: [mark('box', 49, 2, 4, 14, 2, FELL_D)]})
 kopffuellung = scheiben('kopffuellung', 'polyester_fill', 'Füllung Kopf', 'Füllung Kopf', 72,
-                        [(205, 14, 90, 78), (170, 35, 112, 96), (152, 18, 98, 84)],
+                        [(205, 13, 84, 72), (170, 35, 112, 96), (154, 16, 90, 78)],
                         50, 'Lockere Polyesterwatte, von Hand oder maschinell durch eine Naht gestopft. Naht auftrennen, '
                             'herausziehen und als Füllung weiterverwenden.', WATTE,
                         marks={0: [mark('cyl', 15, 12, 34, 24, fill=WATTE_D), mark('cyl', 46, 36, 30, 26, fill=WATTE_D)]})
@@ -55,7 +55,7 @@ rumpf = scheiben('rumpf', 'polyester_plush', 'Rumpf (Plüschhülle)', 'Rumpf', 6
                      'sonst Naht aufschneiden, Füllung und Kunststoffteile trennen, Rest in den Restmüll.', FELL,
                  sortBias=3, marks={1: [mark('cyl', 32, 58, 40, 26, fill=HELL)], 2: [mark('box', 60, 2, 4, 12, 2, FELL_D)]})
 rumpffuellung = scheiben('rumpffuellung', 'polyester_fill', 'Füllung Rumpf', 'Füllung Rumpf', 68,
-                         [(100, 25, 96, 80), (60, 40, 116, 96), (20, 40, 126, 104), (4, 16, 108, 90)],
+                         [(100, 22, 88, 74), (60, 40, 116, 96), (20, 40, 126, 104), (4, 16, 108, 90)],
                          90, 'Der größte Teil der Watte. Manche Kuscheltiere haben unten zusätzlich ein Säckchen mit '
                              'Kunststoffgranulat, damit sie sitzen.', WATTE,
                          marks={0: [mark('cyl', 18, 14, 34, 26, fill=WATTE_D), mark('cyl', 46, 40, 32, 28, fill=WATTE_D)]})
@@ -143,5 +143,13 @@ for i in ('arm_rechts', 'pfote_rechts'):
 for i in ('bein_links', 'bein_rechts', 'fuss_links', 'fuss_rechts', 'sohle_links', 'sohle_rechts'):
     by[i]['explode'] = [0, 170, 0]
 by['etikett']['explode'] = [90, 0, 0]
+# Foto-Ansicht: Gliedmaßen, Ohren, Schnauze, Augen und Nase als runde Körper; flache marks darauf nur in der Zeichnung
+FORMEN = {'ohr_links': 'kugel', 'ohr_rechts': 'kugel', 'schnauze': 'kugel', 'auge_links': 'kugel',
+          'auge_rechts': 'kugel', 'nase': 'kugel', 'arm_links': 'kugel', 'arm_rechts': 'kugel',
+          'pfote_links': 'kugel', 'pfote_rechts': 'kugel', 'bein_links': 'liegend_y', 'bein_rechts': 'liegend_y',
+          'fuss_links': 'kugel', 'fuss_rechts': 'kugel', 'sohle_links': 'kugel', 'sohle_rechts': 'kugel'}
+for i, form in FORMEN.items():
+    by[i]['form'] = form
+    by[i]['marks'] = [dict(m, zeichnung=True) for m in by[i].get('marks') or []]
 skaliere_masse(teile, oid='plush_toy')
 schreibe('plush_toy', teile)

@@ -22,7 +22,7 @@ def stifte():
         erst = n == 0
         teile.append(teil(f'kernstift_{n + 1}', 'padlock_body', 'Kernstifte', 'Kernstift', 'box',
                           material_id='copper', x=X0, y=8.75, w=kl, d=2.5, z=z, h=2.5, r=1.2,
-                          explode=[6, 0, 0], mass=0.15, materials=[['messing', 100]], label=erst,
+                          explode=[6, 0, 0], mass=0.15, form='liegend_x', materials=[['messing', 100]], label=erst,
                           info=('Unterschiedlich lange Messingstifte. Nur der passende Schlüssel schiebt jeden genau '
                                 'bis an den Rand des Kerns.') if erst else 'Weiterer Kernstift, andere Länge.',
                           color='#D8B85A'))
@@ -30,7 +30,7 @@ def stifte():
         erst = n == 0
         teile.append(teil(f'gehaeusestift_{n + 1}', 'padlock_body', 'Gehäusestifte', 'Gehäusestift', 'box',
                           material_id='copper', x=X0 + kl, y=8.75, w=3.5, d=2.5, z=z, h=2.5, r=1.2,
-                          explode=[14, 0, 0], mass=0.12, materials=[['messing', 100]], label=erst,
+                          explode=[14, 0, 0], mass=0.12, form='liegend_x', materials=[['messing', 100]], label=erst,
                           info=('Ohne Schlüssel ragen sie in den Kern und blockieren ihn. Mit dem richtigen Schlüssel '
                                 'liegt ihre Trennstelle genau am Kernrand und der Kern dreht sich.') if erst
                           else 'Weiterer Gehäusestift.',
@@ -40,7 +40,7 @@ def stifte():
         x = X0 + kl + 3.5
         teile.append(teil(f'feder_{n + 1}', 'padlock_body', 'Zuhaltungsfedern', 'Feder', 'box',
                           material_id='steel', x=x, y=8.75, w=ENDE - x, d=2.5, z=z, h=2.5, r=1,
-                          explode=[22, 0, 0], mass=0.05, materials=[['stahl', 100]], label=erst,
+                          explode=[22, 0, 0], mass=0.05, form='liegend_x', materials=[['stahl', 100]], label=erst,
                           info='Winzige Stahlfedern drücken die Stifte in den Kern zurück.' if erst
                           else 'Weitere Zuhaltungsfeder.',
                           color=STAHL, marks=raster(0.3, 0.3, int((ENDE - x) // 1.2), 1, 0.5, 1.9, 1.2,
@@ -50,7 +50,7 @@ def stifte():
 
 teile = [
     teil('buegel_bogen', 'steel_shackle', 'Bügel', 'Bügel', 'box',
-         x=5, y=7, w=30, d=6, z=64, h=6, r=3, explode=[0, 0, 35], mass=9,
+         x=5, y=7, w=30, d=6, z=64, h=6, r=3, explode=[0, 0, 35], mass=9, form='liegend_x',
          info='Gehärteter, verchromter Stahl, damit man ihn nicht durchsägen kann. Nur mit einem Bolzenschneider '
               'aufknipsen, wenn der Schlüssel fehlt.',
          color=STAHL),
@@ -94,5 +94,8 @@ teile = [
                               mark('cyl', 5, 7, 6, fill='#4A3B1E'), mark('cyl', 29, 7, 6, fill='#4A3B1E')]),
 ]
 
+for p in teile:  # Foto-Ansicht: flache marks schweben über runden Formen, dort nur in der Zeichnung
+    if p.get('form'):
+        p['marks'] = [dict(m, zeichnung=True) for m in p.get('marks') or []]
 skaliere_masse(teile, oid='padlock')
 schreibe('padlock', teile)

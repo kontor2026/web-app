@@ -348,7 +348,7 @@
   "name": "Sneaker",
   "name_en": "Sneaker",
   "klasse": "Textilien und Schuhe",
-  "teile": 8,
+  "teile": 34,
   "platzhalter": false
  },
  {
@@ -356,7 +356,7 @@
   "name": "T-Shirt",
   "name_en": "T-Shirt",
   "klasse": "Textilien und Schuhe",
-  "teile": 6,
+  "teile": 13,
   "platzhalter": false
  },
  {
@@ -364,7 +364,7 @@
   "name": "Jeans",
   "name_en": "Jeans",
   "klasse": "Textilien und Schuhe",
-  "teile": 14,
+  "teile": 16,
   "platzhalter": false
  },
  {
@@ -372,7 +372,7 @@
   "name": "Rucksack",
   "name_en": "Backpack",
   "klasse": "Textilien und Schuhe",
-  "teile": 13,
+  "teile": 24,
   "platzhalter": false
  },
  {
@@ -764,7 +764,7 @@
   "name": "Frischhaltefolie",
   "name_en": "Cling Film",
   "klasse": "Verpackung · Gelbe Tonne",
-  "teile": 17,
+  "teile": 6,
   "platzhalter": false
  },
  {
@@ -772,7 +772,7 @@
   "name": "Alufolie",
   "name_en": "Aluminium Foil",
   "klasse": "Verpackung · Gelbe Tonne",
-  "teile": 17,
+  "teile": 6,
   "platzhalter": false
  },
  {
@@ -980,7 +980,7 @@
   "name": "Zahnbürste",
   "name_en": "Toothbrush",
   "klasse": "Restmüll",
-  "teile": 8,
+  "teile": 34,
   "platzhalter": false
  },
  {
@@ -1036,7 +1036,7 @@
   "name": "Trinkglas",
   "name_en": "Drinking Glass",
   "klasse": "Restmüll",
-  "teile": 6,
+  "teile": 8,
   "platzhalter": false
  },
  {
@@ -1332,7 +1332,7 @@
   "name": "Wollpullover",
   "name_en": "Wool Sweater",
   "klasse": "Textilien und Schuhe",
-  "teile": 9,
+  "teile": 11,
   "platzhalter": false
  },
  {
@@ -1348,7 +1348,7 @@
   "name": "Lederschuh",
   "name_en": "Leather Shoe",
   "klasse": "Textilien und Schuhe",
-  "teile": 10,
+  "teile": 31,
   "platzhalter": false
  },
  {
@@ -1364,7 +1364,7 @@
   "name": "Basecap",
   "name_en": "Baseball Cap",
   "klasse": "Textilien und Schuhe",
-  "teile": 14,
+  "teile": 20,
   "platzhalter": false
  },
  {
@@ -1372,7 +1372,7 @@
   "name": "Winterjacke",
   "name_en": "Winter Jacket",
   "klasse": "Textilien und Schuhe",
-  "teile": 16,
+  "teile": 42,
   "platzhalter": false
  },
  {
@@ -1396,7 +1396,7 @@
   "name": "Lederhandtasche",
   "name_en": "Leather Handbag",
   "klasse": "Textilien und Schuhe",
-  "teile": 23,
+  "teile": 71,
   "platzhalter": false
  },
  {

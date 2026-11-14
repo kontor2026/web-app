@@ -131,16 +131,16 @@
    "name": "Kragenbündchen",
    "short": "Kragen",
    "shape": "cyl",
-   "x": 120,
-   "y": 0,
-   "w": 90,
-   "d": 46,
-   "z": 5,
-   "h": 1.5,
+   "x": 108,
+   "y": 12,
+   "w": 84,
+   "d": 50,
+   "z": 6,
+   "h": 5,
    "explode": [
     0,
     0,
-    180.0
+    274.8
    ],
    "mass": 7,
    "materials": [
@@ -154,38 +154,40 @@
     ]
    ],
    "info": "Elastischer Rippstrick, rund an den Halsausschnitt genäht. Etwas Elasthan sorgt dafür, dass er nicht ausleiert.",
-   "color": "#3F6E9E",
+   "color": "#244A73",
+   "form": "torus",
    "marks": [
     {
      "shape": "cyl",
      "x": 7,
      "y": 6,
-     "w": 76,
-     "d": 34,
+     "w": 70,
+     "zeichnung": true,
+     "d": 38,
      "fill": "#2E5277"
     }
    ]
   },
   {
-   "id": "vorderteil",
+   "id": "vorderteil_3",
    "component_id": "cotton_fabric",
    "material_id": "cotton",
    "name": "Vorderteil",
    "short": "Vorderteil",
    "shape": "box",
-   "x": 50,
-   "y": 26,
-   "w": 230,
-   "d": 319,
-   "z": 2.5,
-   "h": 2.5,
-   "r": 4,
+   "x": 56,
+   "y": 44,
+   "w": 188,
+   "d": 334,
+   "z": 9,
+   "h": 1.5,
+   "r": 50,
    "explode": [
     0,
     0,
-    90.0
+    180.3
    ],
-   "mass": 52,
+   "mass": 7.26,
    "materials": [
     [
      "baumwolle",
@@ -197,27 +199,120 @@
     ]
    ],
    "info": "Baumwoll-Single-Jersey. Tragbare Shirts in die Altkleidersammlung, kaputte zum Textilrecycling: Daraus werden Putzlappen oder Dämmstoff.",
-   "color": "#4C7FB5",
+   "color": "#2D5684",
    "marks": [
     {
      "shape": "box",
-     "x": 0,
-     "y": 305,
-     "w": 230,
-     "d": 3,
-     "r": 0,
-     "fill": "#3F6E9E"
-    },
-    {
-     "shape": "box",
-     "x": 75,
-     "y": 60,
-     "w": 80,
-     "d": 60,
-     "r": 6,
-     "fill": "#E8E6E1"
+     "x": 59,
+     "y": 54,
+     "w": 70,
+     "d": 50,
+     "r": 10,
+     "fill": "#E3E0D8"
     }
    ]
+  },
+  {
+   "id": "vorderteil_2",
+   "component_id": "cotton_fabric",
+   "material_id": "cotton",
+   "name": "Vorderteil",
+   "short": "Vorderteil",
+   "shape": "box",
+   "x": 44,
+   "y": 30,
+   "w": 212,
+   "d": 360,
+   "z": 7,
+   "h": 2,
+   "r": 30,
+   "explode": [
+    0,
+    0,
+    180.3
+   ],
+   "mass": 11.77,
+   "materials": [
+    [
+     "baumwolle",
+     98
+    ],
+    [
+     "polyester",
+     2
+    ]
+   ],
+   "info": "Baumwoll-Single-Jersey. Tragbare Shirts in die Altkleidersammlung, kaputte zum Textilrecycling: Daraus werden Putzlappen oder Dämmstoff.",
+   "color": "#2D5684",
+   "label": false
+  },
+  {
+   "id": "vorderteil_1",
+   "component_id": "cotton_fabric",
+   "material_id": "cotton",
+   "name": "Vorderteil",
+   "short": "Vorderteil",
+   "shape": "box",
+   "x": 38,
+   "y": 23,
+   "w": 224,
+   "d": 373,
+   "z": 4.5,
+   "h": 2.5,
+   "r": 16,
+   "explode": [
+    0,
+    0,
+    180.3
+   ],
+   "mass": 16.11,
+   "materials": [
+    [
+     "baumwolle",
+     98
+    ],
+    [
+     "polyester",
+     2
+    ]
+   ],
+   "info": "Baumwoll-Single-Jersey. Tragbare Shirts in die Altkleidersammlung, kaputte zum Textilrecycling: Daraus werden Putzlappen oder Dämmstoff.",
+   "color": "#2D5684",
+   "label": false
+  },
+  {
+   "id": "vorderteil_0",
+   "component_id": "cotton_fabric",
+   "material_id": "cotton",
+   "name": "Vorderteil",
+   "short": "Vorderteil",
+   "shape": "box",
+   "x": 35,
+   "y": 20,
+   "w": 230,
+   "d": 380,
+   "z": 2,
+   "h": 2.5,
+   "r": 8,
+   "explode": [
+    0,
+    0,
+    180.3
+   ],
+   "mass": 16.85,
+   "materials": [
+    [
+     "baumwolle",
+     98
+    ],
+    [
+     "polyester",
+     2
+    ]
+   ],
+   "info": "Baumwoll-Single-Jersey. Tragbare Shirts in die Altkleidersammlung, kaputte zum Textilrecycling: Daraus werden Putzlappen oder Dämmstoff.",
+   "color": "#2D5684",
+   "label": false
   },
   {
    "id": "etikett",
@@ -226,11 +321,11 @@
    "name": "Pflegeetikett",
    "short": "Etikett",
    "shape": "box",
-   "x": 155,
-   "y": 4,
+   "x": 140,
+   "y": 24,
    "w": 20,
    "d": 20,
-   "z": 2.5,
+   "z": 2,
    "h": 0.3,
    "r": 1,
    "explode": [
@@ -284,13 +379,13 @@
    "name": "Rückenteil",
    "short": "Rückenteil",
    "shape": "box",
-   "x": 50,
-   "y": 0,
+   "x": 35,
+   "y": 20,
    "w": 230,
-   "d": 345,
+   "d": 380,
    "z": 0,
-   "h": 2.5,
-   "r": 4,
+   "h": 2,
+   "r": 8,
    "explode": [
     0,
     0,
@@ -308,39 +403,40 @@
     ]
    ],
    "info": "Gleicher Stoff wie vorne, an Schultern und Seiten mit Polyestergarn vernäht. Zum Trennen die Nähte aufschneiden.",
-   "color": "#4C7FB5",
+   "color": "#2D5684",
    "marks": [
     {
      "shape": "box",
      "x": 0,
-     "y": 331,
+     "y": 366,
      "w": 230,
+     "zeichnung": true,
      "d": 3,
      "r": 0,
-     "fill": "#3F6E9E"
+     "fill": "#244A73"
     }
    ]
   },
   {
-   "id": "aermel_l",
+   "id": "aermel_l_2",
    "component_id": "cotton_fabric",
    "material_id": "cotton",
    "name": "Ärmel links",
    "short": "Ärmel",
    "shape": "box",
-   "x": 0,
-   "y": 10,
-   "w": 50,
-   "d": 120,
-   "z": 0,
-   "h": 5,
-   "r": 6,
+   "x": 5,
+   "y": 34,
+   "w": 46,
+   "d": 124,
+   "z": 5,
+   "h": 2,
+   "r": 20,
    "explode": [
-    -40,
-    0,
+    -90,
+    170,
     0
    ],
-   "mass": 16,
+   "mass": 3.77,
    "materials": [
     [
      "baumwolle",
@@ -352,39 +448,28 @@
     ]
    ],
    "info": "Doppellagiger Ärmel, an der Schulter angesetzt. Der umgenähte Saum verhindert, dass der Stoff ausfranst.",
-   "color": "#4C7FB5",
-   "marks": [
-    {
-     "shape": "box",
-     "x": 2,
-     "y": 0,
-     "w": 3,
-     "d": 120,
-     "r": 0,
-     "fill": "#3F6E9E"
-    }
-   ]
+   "color": "#2D5684"
   },
   {
-   "id": "aermel_r",
+   "id": "aermel_l_1",
    "component_id": "cotton_fabric",
    "material_id": "cotton",
-   "name": "Ärmel rechts",
+   "name": "Ärmel links",
    "short": "Ärmel",
    "shape": "box",
-   "x": 280,
-   "y": 10,
-   "w": 50,
-   "d": 120,
-   "z": 0,
-   "h": 5,
-   "r": 6,
+   "x": 2,
+   "y": 29,
+   "w": 52,
+   "d": 134,
+   "z": 2.5,
+   "h": 2.5,
+   "r": 18,
    "explode": [
-    40,
-    0,
+    -90,
+    170,
     0
    ],
-   "mass": 16,
+   "mass": 5.76,
    "materials": [
     [
      "baumwolle",
@@ -395,20 +480,145 @@
      2
     ]
    ],
-   "info": "Gegenstück zum linken Ärmel.",
-   "color": "#4C7FB5",
-   "label": false,
-   "marks": [
-    {
-     "shape": "box",
-     "x": 45,
-     "y": 0,
-     "w": 3,
-     "d": 120,
-     "r": 0,
-     "fill": "#3F6E9E"
-    }
-   ]
+   "info": "Doppellagiger Ärmel, an der Schulter angesetzt. Der umgenähte Saum verhindert, dass der Stoff ausfranst.",
+   "color": "#2D5684",
+   "label": false
+  },
+  {
+   "id": "aermel_l_0",
+   "component_id": "cotton_fabric",
+   "material_id": "cotton",
+   "name": "Ärmel links",
+   "short": "Ärmel",
+   "shape": "box",
+   "x": 0,
+   "y": 26,
+   "w": 56,
+   "d": 140,
+   "z": 0,
+   "h": 2.5,
+   "r": 14,
+   "explode": [
+    -90,
+    170,
+    0
+   ],
+   "mass": 6.48,
+   "materials": [
+    [
+     "baumwolle",
+     98
+    ],
+    [
+     "polyester",
+     2
+    ]
+   ],
+   "info": "Doppellagiger Ärmel, an der Schulter angesetzt. Der umgenähte Saum verhindert, dass der Stoff ausfranst.",
+   "color": "#2D5684",
+   "label": false
+  },
+  {
+   "id": "aermel_r_2",
+   "component_id": "cotton_fabric",
+   "material_id": "cotton",
+   "name": "Ärmel rechts",
+   "short": "Ärmel",
+   "shape": "box",
+   "x": 249,
+   "y": 34,
+   "w": 46,
+   "d": 124,
+   "z": 5,
+   "h": 2,
+   "r": 20,
+   "explode": [
+    90,
+    0,
+    0
+   ],
+   "mass": 3.77,
+   "materials": [
+    [
+     "baumwolle",
+     98
+    ],
+    [
+     "polyester",
+     2
+    ]
+   ],
+   "info": "Doppellagiger Ärmel, an der Schulter angesetzt. Der umgenähte Saum verhindert, dass der Stoff ausfranst.",
+   "color": "#2D5684",
+   "label": false
+  },
+  {
+   "id": "aermel_r_1",
+   "component_id": "cotton_fabric",
+   "material_id": "cotton",
+   "name": "Ärmel rechts",
+   "short": "Ärmel",
+   "shape": "box",
+   "x": 246,
+   "y": 29,
+   "w": 52,
+   "d": 134,
+   "z": 2.5,
+   "h": 2.5,
+   "r": 18,
+   "explode": [
+    90,
+    0,
+    0
+   ],
+   "mass": 5.76,
+   "materials": [
+    [
+     "baumwolle",
+     98
+    ],
+    [
+     "polyester",
+     2
+    ]
+   ],
+   "info": "Doppellagiger Ärmel, an der Schulter angesetzt. Der umgenähte Saum verhindert, dass der Stoff ausfranst.",
+   "color": "#2D5684",
+   "label": false
+  },
+  {
+   "id": "aermel_r_0",
+   "component_id": "cotton_fabric",
+   "material_id": "cotton",
+   "name": "Ärmel rechts",
+   "short": "Ärmel",
+   "shape": "box",
+   "x": 244,
+   "y": 26,
+   "w": 56,
+   "d": 140,
+   "z": 0,
+   "h": 2.5,
+   "r": 14,
+   "explode": [
+    90,
+    0,
+    0
+   ],
+   "mass": 6.48,
+   "materials": [
+    [
+     "baumwolle",
+     98
+    ],
+    [
+     "polyester",
+     2
+    ]
+   ],
+   "info": "Doppellagiger Ärmel, an der Schulter angesetzt. Der umgenähte Saum verhindert, dass der Stoff ausfranst.",
+   "color": "#2D5684",
+   "label": false
   }
  ]
 }

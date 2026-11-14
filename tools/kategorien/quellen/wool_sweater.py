@@ -13,21 +13,27 @@ STRICK = [['wolle', 100]]
 RIPPSTRICK = [['wolle', 95], ['polyester', 5]]
 
 teile = [
-    teil('kragen', 'wool_fabric', 'Rollkragen-Bündchen', 'Kragen', 'cyl',
-         x=125, y=0, w=100, d=50, z=36, h=4, mass=15, materials=RIPPSTRICK, color=RIPP,
+    teil('kragen', 'wool_fabric', 'Rollkragen-Bündchen', 'Kragen', 'cyl', form='torus',
+         x=125, y=2, w=100, d=50, z=31, h=9, mass=15, materials=RIPPSTRICK, color=RIPP,
          info='Rippstrick, rund an den Halsausschnitt gekettelt. Ein wenig Kunstfaser hält ihn elastisch.',
-         marks=[mark('cyl', 10, 7, 80, 36, fill='#4F2020')]),
+         marks=[mark('cyl', 10, 7, 80, 36, fill='#4F2020', zeichnung=True)]),
     teil('etikett', 'care_label', 'Pflegeetikett', 'Etikett', 'box',
          x=165, y=6, w=22, d=24, z=35.7, h=0.3, r=1, mass=1, explode=[230, -60, 0], color='#F4F2EE',
          info='Polyester-Etikett mit Waschsymbolen: Wolle nur kalt oder im Wollprogramm waschen. '
               'Vor dem Recycling an der Naht abschneiden.',
          marks=[mark('box', 3, 4, 16, 2, 0, '#8E969A'), mark('box', 3, 9, 16, 2, 0, '#8E969A'),
                 mark('box', 3, 14, 10, 2, 0, '#8E969A')]),
-    teil('vorderteil', 'wool_fabric', 'Vorderteil mit Zopfmuster', 'Vorderteil', 'box',
-         x=0, y=20, w=350, d=352, z=26, h=10, r=6, mass=150, materials=STRICK, color=WOLLE,
+] + [
+    # Weich gewölbte oberste Lage: drei nach oben schmalere Scheiben, in der Foto-Ansicht eine glatte Fläche
+    teil('vorderteil' if i == 0 else f'vorderteil_{i}', 'wool_fabric', 'Vorderteil mit Zopfmuster', 'Vorderteil', 'box',
+         x=x, y=y, w=w, d=d, z=z, h=h, r=r, mass=m, materials=STRICK, color=WOLLE, label=None if i == 0 else False,
          info='Gestrickte Schafwolle. Tragbare Pullover in die Altkleidersammlung, kaputte kann man aufribbeln '
               'und das Garn neu verstricken.',
-         marks=[mark('box', x, 50, 22, 290, 8, RIPP) for x in (60, 164, 268)]),
+         marks=[mark('box', x, 20, 22, 290, 8, RIPP) for x in (48, 152, 256)] if i == 0 else None)
+    for i, (x, y, w, d, z, h, r, m) in enumerate([(12, 30, 326, 334, 33.5, 2.5, 24, 30),
+                                                   (4, 23, 342, 346, 30, 3.5, 14, 50),
+                                                   (0, 20, 350, 352, 26, 4, 6, 70)])
+] + [
     teil('bund', 'wool_fabric', 'Bündchen am Saum', 'Bund', 'box',
          x=0, y=372, w=350, d=28, z=26, h=10, r=4, mass=25, materials=RIPPSTRICK, color=RIPP,
          info='Elastischer Rippstrick am unteren Rand, er hält den Pullover an der Hüfte.',
@@ -53,6 +59,6 @@ teile = [
          marks=raster(4, 4, 12, 1, 4, 52, 8, fill='#4F2020')),
 ]
 
-explodiere(teile, abstand=100, nach_liste=True)
+explodiere(teile, abstand=100, nach_liste=True, gruppen=[['vorderteil', 'vorderteil_1', 'vorderteil_2']])
 skaliere_masse(teile, oid='wool_sweater')
 schreibe('wool_sweater', teile)

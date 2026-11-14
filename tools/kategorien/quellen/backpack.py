@@ -22,30 +22,42 @@ teile = [
          info='Gurtband aus Polyamid zum Aufhängen. Mehrfach durch den Stoff genäht, deshalb mit der Schere abtrennen.',
          color=DUNKEL),
     teil('rv_haupt', 'metal_zipper', 'Reißverschluss Hauptfach', 'Reißverschluss', 'box',
-         x=15, y=68, w=270, d=10, z=440, h=1.5, r=2, explode=[0, 0, 62], mass=22,
+         x=85, y=66, w=130, d=10, z=440, h=1.5, r=2, explode=[0, 0, 62], mass=22,
          materials=[['polyester', 50], ['messing', 35], ['stahl', 15]],
          info='Läuft über Deckel und Seiten. Zipper und Schieber sind aus Metall: das Band beidseitig abschneiden, '
               'bevor der Stoff in die Textilsammlung geht.',
-         color='#2A2E31', marks=[mark('box', 0, 4, 270, 2, 0, '#8E969A'), mark('box', 30, 1, 12, 8, 2, '#B8BEC4'),
-                                 mark('box', 228, 1, 12, 8, 2, '#B8BEC4')]),
-    teil('hauptfach', 'nylon_fabric', 'Hauptfach', 'Hauptfach', 'box',
-         x=0, y=20, w=300, d=105, z=6, h=434, r=30, explode=[0, 0, KOERPER_DZ], mass=240,
+         color='#2A2E31', marks=[mark('box', 0, 4, 130, 2, 0, '#8E969A'), mark('box', 14, 1, 12, 8, 2, '#B8BEC4'),
+                                 mark('box', 104, 1, 12, 8, 2, '#B8BEC4')]),
+] + [
+    # Hauptfach als Stapel: unten gerade, in der Mitte leicht gebaucht, oben rund zulaufend (Foto-Ansicht: glatte Hülle)
+    teil('hauptfach' if i == 0 else f'hauptfach_{i}', 'nylon_fabric', 'Hauptfach', 'Hauptfach', 'box',
+         x=x, y=y, w=w, d=d, z=z, h=h, r=r, explode=[0, 0, KOERPER_DZ], mass=m, label=None if i == 0 else False,
          info='Robustes Polyamidgewebe mit wasserdichter PU-Beschichtung auf der Innenseite. Die Beschichtung macht '
               'das Recycling schwer, deshalb lieber reparieren oder weitergeben.',
-         color=STOFF, marks=[mark('box', 15, 48, 270, 2, 0, DUNKEL)]),
+         color=STOFF)
+    for i, (x, y, w, d, z, h, r, m) in enumerate([
+        (80, 46, 140, 50, 432, 8, 25, 1), (50, 36, 200, 70, 416, 16, 35, 4), (24, 28, 252, 88, 386, 30, 44, 12),
+        (10, 22, 280, 100, 346, 40, 50, 20), (3, 19, 294, 108, 286, 60, 40, 33), (0, 17, 300, 112, 166, 120, 34, 70),
+        (0, 18, 300, 110, 46, 120, 32, 70), (0, 20, 300, 105, 6, 40, 30, 30)])
+] + [
     teil('boden', 'nylon_fabric', 'Bodenplatte', 'Boden', 'box',
          x=0, y=20, w=300, d=105, z=0, h=6, r=30, explode=[0, 0, 0], mass=45, materials=[['nylon', 60], ['pp', 40]],
          info='Verstärkter Boden mit eingelegter Kunststoffplatte, damit der Rucksack steht. Die Platte vorher herausnehmen.',
          color=DUNKEL),
     teil('rv_vorne', 'metal_zipper', 'Reißverschluss Vortasche', 'RV Vortasche', 'box',
-         x=40, y=132, w=220, d=8, z=300, h=1.5, r=2, explode=[0, 80, 22], mass=10,
+         x=60, y=129, w=180, d=8, z=298, h=1.5, r=2, explode=[0, 80, 22], mass=10,
          materials=[['polyester', 50], ['messing', 35], ['stahl', 15]],
          info='Kleinerer Reißverschluss der Vortasche, ebenfalls mit Metallzähnen.',
-         color='#2A2E31', marks=[mark('box', 0, 3, 220, 2, 0, '#8E969A'), mark('box', 20, 0, 12, 8, 2, '#B8BEC4')]),
-    teil('vortasche', 'nylon_fabric', 'Vortasche', 'Vortasche', 'box',
-         x=30, y=125, w=240, d=25, z=40, h=260, r=10, explode=[0, 80, 0], mass=60,
-         info='Aufgenähte Tasche für Stifte und Kleinkram, mit Organizer-Fächern innen.',
-         color=STOFF, marks=[mark('box', 10, 3, 220, 2, 0, DUNKEL)]),
+         color='#2A2E31', marks=[mark('box', 0, 3, 180, 2, 0, '#8E969A'), mark('box', 20, 0, 12, 8, 2, '#B8BEC4')]),
+] + [
+    # Vortasche: nach vorne gewölbter Beutel mit rundem oberen Rand
+    teil('vortasche' if i == 0 else f'vortasche_{i}', 'nylon_fabric', 'Vortasche', 'Vortasche', 'box',
+         x=x, y=125, w=w, d=d, z=z, h=h, r=r, explode=[0, 80, 0], mass=m, label=None if i == 0 else False,
+         info='Aufgenähte Tasche für Stifte und Kleinkram, mit Organizer-Fächern innen.', color=STOFF)
+    for i, (x, w, d, z, h, r, m) in enumerate([
+        (70, 160, 10, 290, 10, 5, 3), (45, 210, 18, 270, 20, 8, 7), (32, 236, 25, 70, 200, 10, 40),
+        (36, 228, 20, 48, 22, 10, 6), (44, 212, 12, 40, 8, 6, 2)])
+] + [
     teil('polster', 'foam_padding', 'Rückenpolster', 'Polster', 'box',
          x=30, y=8, w=240, d=10, z=80, h=320, r=8, explode=[LINKS, 40, 0], mass=45,
          info='Weicher PU- oder EVA-Schaum, steckt zwischen Netzstoff und Hauptfach. Naht des Innenfutters öffnen und herausziehen.',

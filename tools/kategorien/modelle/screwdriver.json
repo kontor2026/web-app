@@ -57,12 +57,14 @@
    ],
    "info": "Chrom-Vanadium-Stahl, verchromt. Ist fest in den Griff gespritzt: Zum Trennen den Griff mit einer Säge aufschneiden. Der Stahl gehört zum Altmetall.",
    "color": "#B5BCC1",
+   "form": "liegend_y",
    "marks": [
     {
      "shape": "box",
      "x": 1.5,
      "y": 50,
      "w": 3,
+     "zeichnung": true,
      "d": 80,
      "r": 1.5,
      "fill": "#DCE1E4"
@@ -348,7 +350,7 @@
     ]
    ],
    "info": "Untere Rundung des Griffkörpers.",
-   "color": "#A82822",
+   "color": "#C8322B",
    "label": false
   },
   {
@@ -379,12 +381,14 @@
    ],
    "info": "Abgerundetes Griffende mit Aufhängeloch, Teil des Griffkörpers.",
    "color": "#C8322B",
+   "form": "liegend_y",
    "marks": [
     {
      "shape": "box",
      "x": 3,
      "y": 2,
      "w": 16,
+     "zeichnung": true,
      "d": 6,
      "r": 3,
      "fill": "#D8443C"
@@ -419,12 +423,14 @@
    ],
    "info": "Verjüngter Übergang zum Schaft, hier tritt der Stahl aus dem Griff.",
    "color": "#C8322B",
+   "form": "liegend_y",
    "marks": [
     {
      "shape": "box",
      "x": 3,
      "y": 3,
      "w": 16,
+     "zeichnung": true,
      "d": 10,
      "r": 5,
      "fill": "#D8443C"

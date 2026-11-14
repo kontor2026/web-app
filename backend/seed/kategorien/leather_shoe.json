@@ -26,28 +26,33 @@
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 5,01 kg",
+   "v": "≈ 5,00 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 5,01 kg",
+   "v": "≈ 4,99 kg",
    "hint": "spart 0,00 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
  "rohstoffe": {
-  "metalle_mg": {},
-  "herkunft": {},
-  "materialien_g": {
-   "leather": 259.2,
-   "rubber": 184.4,
-   "cardboard": 35.9,
-   "polyurethane": 15.4,
-   "polyester": 5.1
+  "metalle_mg": {
+   "Fe": 1960.0
   },
-  "co2_kg": 5.015,
-  "co2_mit_recyclat_kg": 5.015,
-  "co2_ersparnis_kg": 0.0,
+  "herkunft": {
+   "Fe": "Modellmassen (Schätzung)"
+  },
+  "materialien_g": {
+   "leather": 258.1,
+   "rubber": 183.6,
+   "cardboard": 35.7,
+   "polyurethane": 15.3,
+   "polyester": 5.0,
+   "steel": 2.0
+  },
+  "co2_kg": 4.998,
+  "co2_mit_recyclat_kg": 4.994,
+  "co2_ersparnis_kg": 0.004,
   "co2_ohne_faktor": [],
   "rohstoffwert_eur": 0,
   "wert_ohne_preis": [],
@@ -128,25 +133,24 @@
  "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "senkel",
+   "id": "senkel_0",
    "component_id": "shoelaces",
    "material_id": "polyester",
    "name": "Schnürsenkel",
    "short": "Schnürsenkel",
    "shape": "box",
    "x": 38,
-   "y": 100,
+   "y": 106.5,
    "w": 34,
-   "d": 70,
-   "z": 96,
-   "h": 4,
-   "r": 3,
+   "d": 3,
+   "z": 95,
+   "h": 3,
    "explode": [
     130,
     0,
     40
    ],
-   "mass": 5.1,
+   "mass": 1,
    "materials": [
     [
      "polyester",
@@ -155,53 +159,426 @@
    ],
    "info": "Dünne, gewachste Senkel mit Kunststoffenden. Ausfädeln und weiterverwenden.",
    "color": "#2A2420",
-   "marks": [
-    {
-     "shape": "box",
-     "x": 0,
-     "y": 6,
-     "w": 34,
-     "d": 2.5,
-     "r": 1,
-     "fill": "#4A3F38"
-    },
-    {
-     "shape": "box",
-     "x": 0,
-     "y": 20,
-     "w": 34,
-     "d": 2.5,
-     "r": 1,
-     "fill": "#4A3F38"
-    },
-    {
-     "shape": "box",
-     "x": 0,
-     "y": 34,
-     "w": 34,
-     "d": 2.5,
-     "r": 1,
-     "fill": "#4A3F38"
-    },
-    {
-     "shape": "box",
-     "x": 0,
-     "y": 48,
-     "w": 34,
-     "d": 2.5,
-     "r": 1,
-     "fill": "#4A3F38"
-    },
-    {
-     "shape": "box",
-     "x": 0,
-     "y": 62,
-     "w": 34,
-     "d": 2.5,
-     "r": 1,
-     "fill": "#4A3F38"
-    }
-   ]
+   "form": "liegend_x"
+  },
+  {
+   "id": "senkel_1",
+   "component_id": "shoelaces",
+   "material_id": "polyester",
+   "name": "Schnürsenkel",
+   "short": "Schnürsenkel",
+   "shape": "box",
+   "x": 38,
+   "y": 118.5,
+   "w": 34,
+   "d": 3,
+   "z": 90,
+   "h": 3,
+   "explode": [
+    130,
+    0,
+    40
+   ],
+   "mass": 1,
+   "materials": [
+    [
+     "polyester",
+     100
+    ]
+   ],
+   "info": "Dünne, gewachste Senkel mit Kunststoffenden. Ausfädeln und weiterverwenden.",
+   "color": "#2A2420",
+   "label": false,
+   "form": "liegend_x"
+  },
+  {
+   "id": "senkel_2",
+   "component_id": "shoelaces",
+   "material_id": "polyester",
+   "name": "Schnürsenkel",
+   "short": "Schnürsenkel",
+   "shape": "box",
+   "x": 38,
+   "y": 130.5,
+   "w": 34,
+   "d": 3,
+   "z": 86,
+   "h": 3,
+   "explode": [
+    130,
+    0,
+    40
+   ],
+   "mass": 1,
+   "materials": [
+    [
+     "polyester",
+     100
+    ]
+   ],
+   "info": "Dünne, gewachste Senkel mit Kunststoffenden. Ausfädeln und weiterverwenden.",
+   "color": "#2A2420",
+   "label": false,
+   "form": "liegend_x"
+  },
+  {
+   "id": "senkel_3",
+   "component_id": "shoelaces",
+   "material_id": "polyester",
+   "name": "Schnürsenkel",
+   "short": "Schnürsenkel",
+   "shape": "box",
+   "x": 38,
+   "y": 142.5,
+   "w": 34,
+   "d": 3,
+   "z": 82,
+   "h": 3,
+   "explode": [
+    130,
+    0,
+    40
+   ],
+   "mass": 1,
+   "materials": [
+    [
+     "polyester",
+     100
+    ]
+   ],
+   "info": "Dünne, gewachste Senkel mit Kunststoffenden. Ausfädeln und weiterverwenden.",
+   "color": "#2A2420",
+   "label": false,
+   "form": "liegend_x"
+  },
+  {
+   "id": "senkel_4",
+   "component_id": "shoelaces",
+   "material_id": "polyester",
+   "name": "Schnürsenkel",
+   "short": "Schnürsenkel",
+   "shape": "box",
+   "x": 38,
+   "y": 154.5,
+   "w": 34,
+   "d": 3,
+   "z": 78,
+   "h": 3,
+   "explode": [
+    130,
+    0,
+    40
+   ],
+   "mass": 1,
+   "materials": [
+    [
+     "polyester",
+     100
+    ]
+   ],
+   "info": "Dünne, gewachste Senkel mit Kunststoffenden. Ausfädeln und weiterverwenden.",
+   "color": "#2A2420",
+   "label": false,
+   "form": "liegend_x"
+  },
+  {
+   "id": "oese_0_0",
+   "component_id": "leather_upper",
+   "material_id": "steel",
+   "name": "Ösen",
+   "short": "Ösen",
+   "shape": "cyl",
+   "x": 31,
+   "y": 104.5,
+   "w": 7,
+   "d": 7,
+   "z": 94.5,
+   "h": 2,
+   "explode": [
+    130,
+    0,
+    40
+   ],
+   "mass": 0.2,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Kleine, brünierte Metallösen in den Quartieren. Sie verhindern, dass der Senkel das Leder einreißt.",
+   "color": "#8C7E62",
+   "form": "torus"
+  },
+  {
+   "id": "oese_0_1",
+   "component_id": "leather_upper",
+   "material_id": "steel",
+   "name": "Ösen",
+   "short": "Ösen",
+   "shape": "cyl",
+   "x": 72,
+   "y": 104.5,
+   "w": 7,
+   "d": 7,
+   "z": 94.5,
+   "h": 2,
+   "explode": [
+    130,
+    0,
+    40
+   ],
+   "mass": 0.2,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Kleine, brünierte Metallösen in den Quartieren. Sie verhindern, dass der Senkel das Leder einreißt.",
+   "color": "#8C7E62",
+   "label": false,
+   "form": "torus"
+  },
+  {
+   "id": "oese_1_0",
+   "component_id": "leather_upper",
+   "material_id": "steel",
+   "name": "Ösen",
+   "short": "Ösen",
+   "shape": "cyl",
+   "x": 31,
+   "y": 116.5,
+   "w": 7,
+   "d": 7,
+   "z": 89.5,
+   "h": 2,
+   "explode": [
+    130,
+    0,
+    40
+   ],
+   "mass": 0.2,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Kleine, brünierte Metallösen in den Quartieren. Sie verhindern, dass der Senkel das Leder einreißt.",
+   "color": "#8C7E62",
+   "label": false,
+   "form": "torus"
+  },
+  {
+   "id": "oese_1_1",
+   "component_id": "leather_upper",
+   "material_id": "steel",
+   "name": "Ösen",
+   "short": "Ösen",
+   "shape": "cyl",
+   "x": 72,
+   "y": 116.5,
+   "w": 7,
+   "d": 7,
+   "z": 89.5,
+   "h": 2,
+   "explode": [
+    130,
+    0,
+    40
+   ],
+   "mass": 0.2,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Kleine, brünierte Metallösen in den Quartieren. Sie verhindern, dass der Senkel das Leder einreißt.",
+   "color": "#8C7E62",
+   "label": false,
+   "form": "torus"
+  },
+  {
+   "id": "oese_2_0",
+   "component_id": "leather_upper",
+   "material_id": "steel",
+   "name": "Ösen",
+   "short": "Ösen",
+   "shape": "cyl",
+   "x": 31,
+   "y": 128.5,
+   "w": 7,
+   "d": 7,
+   "z": 85.5,
+   "h": 2,
+   "explode": [
+    130,
+    0,
+    40
+   ],
+   "mass": 0.2,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Kleine, brünierte Metallösen in den Quartieren. Sie verhindern, dass der Senkel das Leder einreißt.",
+   "color": "#8C7E62",
+   "label": false,
+   "form": "torus"
+  },
+  {
+   "id": "oese_2_1",
+   "component_id": "leather_upper",
+   "material_id": "steel",
+   "name": "Ösen",
+   "short": "Ösen",
+   "shape": "cyl",
+   "x": 72,
+   "y": 128.5,
+   "w": 7,
+   "d": 7,
+   "z": 85.5,
+   "h": 2,
+   "explode": [
+    130,
+    0,
+    40
+   ],
+   "mass": 0.2,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Kleine, brünierte Metallösen in den Quartieren. Sie verhindern, dass der Senkel das Leder einreißt.",
+   "color": "#8C7E62",
+   "label": false,
+   "form": "torus"
+  },
+  {
+   "id": "oese_3_0",
+   "component_id": "leather_upper",
+   "material_id": "steel",
+   "name": "Ösen",
+   "short": "Ösen",
+   "shape": "cyl",
+   "x": 31,
+   "y": 140.5,
+   "w": 7,
+   "d": 7,
+   "z": 81.5,
+   "h": 2,
+   "explode": [
+    130,
+    0,
+    40
+   ],
+   "mass": 0.2,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Kleine, brünierte Metallösen in den Quartieren. Sie verhindern, dass der Senkel das Leder einreißt.",
+   "color": "#8C7E62",
+   "label": false,
+   "form": "torus"
+  },
+  {
+   "id": "oese_3_1",
+   "component_id": "leather_upper",
+   "material_id": "steel",
+   "name": "Ösen",
+   "short": "Ösen",
+   "shape": "cyl",
+   "x": 72,
+   "y": 140.5,
+   "w": 7,
+   "d": 7,
+   "z": 81.5,
+   "h": 2,
+   "explode": [
+    130,
+    0,
+    40
+   ],
+   "mass": 0.2,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Kleine, brünierte Metallösen in den Quartieren. Sie verhindern, dass der Senkel das Leder einreißt.",
+   "color": "#8C7E62",
+   "label": false,
+   "form": "torus"
+  },
+  {
+   "id": "oese_4_0",
+   "component_id": "leather_upper",
+   "material_id": "steel",
+   "name": "Ösen",
+   "short": "Ösen",
+   "shape": "cyl",
+   "x": 31,
+   "y": 152.5,
+   "w": 7,
+   "d": 7,
+   "z": 77.5,
+   "h": 2,
+   "explode": [
+    130,
+    0,
+    40
+   ],
+   "mass": 0.2,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Kleine, brünierte Metallösen in den Quartieren. Sie verhindern, dass der Senkel das Leder einreißt.",
+   "color": "#8C7E62",
+   "label": false,
+   "form": "torus"
+  },
+  {
+   "id": "oese_4_1",
+   "component_id": "leather_upper",
+   "material_id": "steel",
+   "name": "Ösen",
+   "short": "Ösen",
+   "shape": "cyl",
+   "x": 72,
+   "y": 152.5,
+   "w": 7,
+   "d": 7,
+   "z": 77.5,
+   "h": 2,
+   "explode": [
+    130,
+    0,
+    40
+   ],
+   "mass": 0.2,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Kleine, brünierte Metallösen in den Quartieren. Sie verhindern, dass der Senkel das Leder einreißt.",
+   "color": "#8C7E62",
+   "label": false,
+   "form": "torus"
   },
   {
    "id": "zunge",
@@ -210,17 +587,17 @@
    "name": "Zunge",
    "short": "Zunge",
    "shape": "box",
-   "x": 32,
+   "x": 34,
    "y": 90,
-   "w": 46,
-   "d": 90,
-   "z": 72,
-   "h": 24,
-   "r": 18,
+   "w": 42,
+   "d": 30,
+   "z": 90,
+   "h": 16,
+   "r": 14,
    "explode": [
     0,
     0,
-    404.0
+    308.0
    ],
    "mass": 18.4,
    "materials": [
@@ -233,25 +610,25 @@
    "color": "#5A3522"
   },
   {
-   "id": "fersenteil",
+   "id": "fersenteil_2",
    "component_id": "leather_upper",
    "material_id": "leather",
    "name": "Quartiere mit Schnürleiste",
    "short": "Quartiere",
    "shape": "box",
-   "x": 6,
-   "y": 0,
-   "w": 98,
-   "d": 100,
-   "z": 22,
-   "h": 83,
-   "r": 42,
+   "x": 16,
+   "y": 2,
+   "w": 78,
+   "d": 98,
+   "z": 92,
+   "h": 12,
+   "r": 38,
    "explode": [
     0,
     0,
-    331.0
+    254.0
    ],
-   "mass": 87.1,
+   "mass": 26.1,
    "materials": [
     [
      "leder",
@@ -260,93 +637,102 @@
    ],
    "info": "Die beiden seitlichen Lederteile mit den Ösen für die Schnürsenkel, hinten an der Ferse zusammengenäht. Tragbare Schuhe paarweise in den Schuhcontainer.",
    "color": "#5A3522",
+   "wand": 2.5,
    "marks": [
     {
-     "shape": "cyl",
-     "x": 18,
-     "y": 18,
-     "w": 62,
-     "d": 70,
+     "shape": "box",
+     "x": 0,
+     "y": 0,
+     "w": 78,
+     "zeichnung": true,
+     "d": 98,
+     "r": 38,
      "fill": "#B88B62"
-    },
-    {
-     "shape": "cyl",
-     "x": 24,
-     "y": 80.0,
-     "w": 3,
-     "fill": "#B7BCC0"
-    },
-    {
-     "shape": "cyl",
-     "x": 71,
-     "y": 80.0,
-     "w": 3,
-     "fill": "#B7BCC0"
-    },
-    {
-     "shape": "cyl",
-     "x": 24,
-     "y": 84.5,
-     "w": 3,
-     "fill": "#B7BCC0"
-    },
-    {
-     "shape": "cyl",
-     "x": 71,
-     "y": 84.5,
-     "w": 3,
-     "fill": "#B7BCC0"
-    },
-    {
-     "shape": "cyl",
-     "x": 24,
-     "y": 89.0,
-     "w": 3,
-     "fill": "#B7BCC0"
-    },
-    {
-     "shape": "cyl",
-     "x": 71,
-     "y": 89.0,
-     "w": 3,
-     "fill": "#B7BCC0"
-    },
-    {
-     "shape": "cyl",
-     "x": 24,
-     "y": 93.5,
-     "w": 3,
-     "fill": "#B7BCC0"
-    },
-    {
-     "shape": "cyl",
-     "x": 71,
-     "y": 93.5,
-     "w": 3,
-     "fill": "#B7BCC0"
     }
    ]
   },
   {
-   "id": "vorderblatt",
+   "id": "fersenteil_1",
+   "component_id": "leather_upper",
+   "material_id": "leather",
+   "name": "Quartiere mit Schnürleiste",
+   "short": "Quartiere",
+   "shape": "box",
+   "x": 15,
+   "y": 3,
+   "w": 80,
+   "d": 112,
+   "z": 82,
+   "h": 10,
+   "r": 38,
+   "explode": [
+    0,
+    0,
+    254.0
+   ],
+   "mass": 25.5,
+   "materials": [
+    [
+     "leder",
+     100
+    ]
+   ],
+   "info": "Die beiden seitlichen Lederteile mit den Ösen für die Schnürsenkel, hinten an der Ferse zusammengenäht. Tragbare Schuhe paarweise in den Schuhcontainer.",
+   "color": "#5A3522",
+   "label": false,
+   "wand": 2.5
+  },
+  {
+   "id": "fersenteil_0",
+   "component_id": "leather_upper",
+   "material_id": "leather",
+   "name": "Quartiere mit Schnürleiste",
+   "short": "Quartiere",
+   "shape": "box",
+   "x": 14,
+   "y": 4,
+   "w": 82,
+   "d": 150,
+   "z": 72,
+   "h": 10,
+   "r": 38,
+   "explode": [
+    0,
+    0,
+    254.0
+   ],
+   "mass": 35.1,
+   "materials": [
+    [
+     "leder",
+     100
+    ]
+   ],
+   "info": "Die beiden seitlichen Lederteile mit den Ösen für die Schnürsenkel, hinten an der Ferse zusammengenäht. Tragbare Schuhe paarweise in den Schuhcontainer.",
+   "color": "#5A3522",
+   "label": false,
+   "wand": 2.5
+  },
+  {
+   "id": "vorderblatt_5",
    "component_id": "leather_upper",
    "material_id": "leather",
    "name": "Vorderblatt mit Kappe",
    "short": "Vorderblatt",
    "shape": "box",
-   "x": 4,
-   "y": 95,
-   "w": 102,
-   "d": 195,
-   "z": 10,
-   "h": 60,
-   "r": 48,
+   "x": 12,
+   "y": 5,
+   "w": 86,
+   "d": 200,
+   "z": 62,
+   "h": 10,
+   "r": 40,
    "explode": [
     0,
     0,
-    243.0
+    254.0
    ],
-   "mass": 97.3,
+   "mass": 11.4,
    "materials": [
     [
      "leder",
@@ -355,26 +741,168 @@
    ],
    "info": "Ein Stück Glattleder über Zehen und Rist. Der Schaft ist über einen Leisten gezogen und unter die Brandsohle geklebt: zum Trennen rundherum an der Sohlenkante aufschneiden.",
    "color": "#5A3522",
-   "marks": [
-    {
-     "shape": "box",
-     "x": 6,
-     "y": 120,
-     "w": 90,
-     "d": 3,
-     "r": 1,
-     "fill": "#40261A"
-    },
-    {
-     "shape": "box",
-     "x": 30,
-     "y": 0,
-     "w": 42,
-     "d": 70,
-     "r": 12,
-     "fill": "#40261A"
-    }
-   ]
+   "wand": 2.5,
+   "boden": 12
+  },
+  {
+   "id": "vorderblatt_4",
+   "component_id": "leather_upper",
+   "material_id": "leather",
+   "name": "Vorderblatt mit Kappe",
+   "short": "Vorderblatt",
+   "shape": "box",
+   "x": 10,
+   "y": 5,
+   "w": 90,
+   "d": 240,
+   "z": 52,
+   "h": 10,
+   "r": 42,
+   "explode": [
+    0,
+    0,
+    254.0
+   ],
+   "mass": 14.4,
+   "materials": [
+    [
+     "leder",
+     100
+    ]
+   ],
+   "info": "Ein Stück Glattleder über Zehen und Rist. Der Schaft ist über einen Leisten gezogen und unter die Brandsohle geklebt: zum Trennen rundherum an der Sohlenkante aufschneiden.",
+   "color": "#5A3522",
+   "label": false,
+   "wand": 2.5,
+   "boden": 12
+  },
+  {
+   "id": "vorderblatt_3",
+   "component_id": "leather_upper",
+   "material_id": "leather",
+   "name": "Vorderblatt mit Kappe",
+   "short": "Vorderblatt",
+   "shape": "box",
+   "x": 7,
+   "y": 4,
+   "w": 96,
+   "d": 268,
+   "z": 42,
+   "h": 10,
+   "r": 44,
+   "explode": [
+    0,
+    0,
+    254.0
+   ],
+   "mass": 17.1,
+   "materials": [
+    [
+     "leder",
+     100
+    ]
+   ],
+   "info": "Ein Stück Glattleder über Zehen und Rist. Der Schaft ist über einen Leisten gezogen und unter die Brandsohle geklebt: zum Trennen rundherum an der Sohlenkante aufschneiden.",
+   "color": "#5A3522",
+   "label": false,
+   "wand": 2.5,
+   "boden": 12
+  },
+  {
+   "id": "vorderblatt_2",
+   "component_id": "leather_upper",
+   "material_id": "leather",
+   "name": "Vorderblatt mit Kappe",
+   "short": "Vorderblatt",
+   "shape": "box",
+   "x": 5,
+   "y": 3,
+   "w": 100,
+   "d": 282,
+   "z": 32,
+   "h": 10,
+   "r": 46,
+   "explode": [
+    0,
+    0,
+    254.0
+   ],
+   "mass": 18.8,
+   "materials": [
+    [
+     "leder",
+     100
+    ]
+   ],
+   "info": "Ein Stück Glattleder über Zehen und Rist. Der Schaft ist über einen Leisten gezogen und unter die Brandsohle geklebt: zum Trennen rundherum an der Sohlenkante aufschneiden.",
+   "color": "#5A3522",
+   "label": false,
+   "wand": 2.5,
+   "boden": 12
+  },
+  {
+   "id": "vorderblatt_1",
+   "component_id": "leather_upper",
+   "material_id": "leather",
+   "name": "Vorderblatt mit Kappe",
+   "short": "Vorderblatt",
+   "shape": "box",
+   "x": 4,
+   "y": 2,
+   "w": 102,
+   "d": 286,
+   "z": 22,
+   "h": 10,
+   "r": 46,
+   "explode": [
+    0,
+    0,
+    254.0
+   ],
+   "mass": 19.5,
+   "materials": [
+    [
+     "leder",
+     100
+    ]
+   ],
+   "info": "Ein Stück Glattleder über Zehen und Rist. Der Schaft ist über einen Leisten gezogen und unter die Brandsohle geklebt: zum Trennen rundherum an der Sohlenkante aufschneiden.",
+   "color": "#5A3522",
+   "label": false,
+   "wand": 2.5,
+   "boden": 12
+  },
+  {
+   "id": "vorderblatt_0",
+   "component_id": "leather_upper",
+   "material_id": "leather",
+   "name": "Vorderblatt mit Kappe",
+   "short": "Vorderblatt",
+   "shape": "box",
+   "x": 4,
+   "y": 96,
+   "w": 102,
+   "d": 192,
+   "z": 10,
+   "h": 12,
+   "r": 48,
+   "explode": [
+    0,
+    0,
+    254.0
+   ],
+   "mass": 15.7,
+   "materials": [
+    [
+     "leder",
+     100
+    ]
+   ],
+   "info": "Ein Stück Glattleder über Zehen und Rist. Der Schaft ist über einen Leisten gezogen und unter die Brandsohle geklebt: zum Trennen rundherum an der Sohlenkante aufschneiden.",
+   "color": "#5A3522",
+   "label": false,
+   "wand": 2.5,
+   "boden": 12
   },
   {
    "id": "futter",
@@ -383,19 +911,19 @@
    "name": "Innenfutter",
    "short": "Futter",
    "shape": "box",
-   "x": 10,
-   "y": 4,
-   "w": 90,
-   "d": 200,
+   "x": 19,
+   "y": 5,
+   "w": 72,
+   "d": 92,
    "z": 26,
-   "h": 66,
-   "r": 40,
+   "h": 77,
+   "r": 34,
    "explode": [
     0,
     0,
     121.0
    ],
-   "mass": 41,
+   "mass": 40.8,
    "materials": [
     [
      "leder",
@@ -403,7 +931,10 @@
     ]
    ],
    "info": "Dünnes, ungefärbtes Leder innen im Schaft. Es nimmt Fußschweiß auf.",
-   "color": "#B88B62"
+   "color": "#B88B62",
+   "sortBias": -40,
+   "wand": 1.5,
+   "boden": 0
   },
   {
    "id": "hinterkappe",
@@ -412,19 +943,19 @@
    "name": "Hinterkappe",
    "short": "Hinterkappe",
    "shape": "box",
-   "x": 12,
-   "y": 3,
-   "w": 86,
-   "d": 42,
+   "x": 15,
+   "y": 6,
+   "w": 80,
+   "d": 40,
    "z": 26,
-   "h": 50,
-   "r": 34,
+   "h": 46,
+   "r": 32,
    "explode": [
     -130,
     0,
     0
    ],
-   "mass": 15.4,
+   "mass": 15.3,
    "materials": [
     [
      "tpu",
@@ -432,7 +963,8 @@
     ]
    ],
    "info": "Versteifung aus Kunststoff zwischen Oberleder und Futter. Sie hält die Ferse in Form.",
-   "color": "#B8BCC0"
+   "color": "#B8BCC0",
+   "sortBias": -40
   },
   {
    "id": "decksohle",
@@ -453,7 +985,7 @@
     0,
     80.0
    ],
-   "mass": 15.4,
+   "mass": 15.3,
    "materials": [
     [
      "leder",
@@ -493,7 +1025,7 @@
     0,
     40.0
    ],
-   "mass": 35.9,
+   "mass": 35.7,
    "materials": [
     [
      "papier",
@@ -541,7 +1073,7 @@
     0,
     0.0
    ],
-   "mass": 112.7,
+   "mass": 112.2,
    "materials": [
     [
      "gummi",
@@ -833,18 +1365,18 @@
     0,
     0.0
    ],
-   "mass": 71.7,
+   "mass": 71.4,
    "materials": [
-    [
-     "gummi",
-     70
-    ],
     [
      "leder",
      30
+    ],
+    [
+     "gummi",
+     70
     ]
    ],
-   "info": "Mehrere aufeinandergeklebte Lagen mit einem Gummiflecken unten. Mit kleinen Nägeln befestigt: vorsichtig abhebeln.",
+   "info": "Mehrere aufeinandergeklebte Lederlagen mit einem Gummiflecken unten. Mit kleinen Nägeln befestigt: vorsichtig abhebeln.",
    "color": "#3A332E",
    "marks": [
     {

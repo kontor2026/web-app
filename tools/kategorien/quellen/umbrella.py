@@ -60,7 +60,7 @@ teile = [
          color='#1E3C5A', marks=[mark('cyl', 46, 7, 12, fill='#C9A24A'), mark('cyl', 49, 10, 6, fill='#A8832F')]),
     *dach(),
     teil('kappen', 'steel_frame', 'Rippenkappen (8 Stück)', 'Rippenkappen', 'box', material_id='pp',
-         x=ACHSE_X - 22, y=705, w=44, d=12, z=ACHSE_Z - 22, h=44, r=10, explode=[0, 0, DACH_DZ],
+         x=ACHSE_X - 22, y=705, w=44, d=12, z=ACHSE_Z - 22, h=44, r=10, explode=[0, 0, DACH_DZ], form='liegend_y',
          mass=8, materials=[['pp', 100]],
          info='Kleine Kunststoffkappen auf den Rippenenden. Das Dach ist hier festgenäht, die Kappen schützen vor '
               'Stichen.',
@@ -71,7 +71,7 @@ teile = [
          info='Kunststoffstern oben an der Stange. Hier sind alle Rippen mit einem Draht eingehängt.',
          color='#2A2E31', marks=[mark('cyl', 4, 6, 12, fill='#3E444A')]),
     teil('rippen', 'steel_frame', 'Rippen und Streben', 'Rippen', 'box',
-         x=ACHSE_X - 10, y=70, w=20, d=635, z=ACHSE_Z - 10, h=20, r=6, explode=[0, 0, RIPPEN_DZ], mass=120, sortBias=-5,
+         x=ACHSE_X - 10, y=70, w=20, d=635, z=ACHSE_Z - 10, h=20, r=6, explode=[0, 0, RIPPEN_DZ], mass=120, sortBias=-5, form='liegend_y',
          materials=[['stahl', 85], ['pp', 10], ['messing', 5]],
          info='Acht lange Rippen und acht kurze Streben aus Federstahl, mit Drahtgelenken verbunden. '
               'Abgeknickte Rippen sind spitz: vorsichtig anfassen und als Metallschrott abgeben.',
@@ -90,32 +90,35 @@ teile = [
          x=ACHSE_X - 2, y=660, w=4, d=14, z=ACHSE_Z + 1, h=5.5, r=1, explode=[0, 0, 22], mass=1, label=False,
          info='Hält den Schieber unten, solange der Schirm geschlossen ist.', color='#B8BEC4'),
     teil('spitze', 'steel_frame', 'Schirmspitze', 'Spitze', 'box',
-         x=ACHSE_X - 4, y=0, w=8, d=45, z=ACHSE_Z - 4, h=8, r=4, explode=[0, -40, 0], mass=6,
+         x=ACHSE_X - 4, y=0, w=8, d=45, z=ACHSE_Z - 4, h=8, r=4, explode=[0, -40, 0], mass=6, form='liegend_y',
          materials=[['stahl', 70], ['pp', 30]],
          info='Vernickelte Metallspitze am Ende der Stange, mit Kunststoffkappe gegen Verletzungen.',
          color='#B8BEC4', marks=[mark('box', 1, 0, 6, 8, 3, '#2A2E31')]),
     teil('stange', 'steel_frame', 'Schirmstange', 'Stange', 'box',
-         x=ACHSE_X - 5, y=45, w=10, d=755, z=ACHSE_Z - 5, h=10, r=5, explode=[0, 0, 0], mass=70,
+         x=ACHSE_X - 5, y=45, w=10, d=755, z=ACHSE_Z - 5, h=10, r=5, explode=[0, 0, 0], mass=70, form='liegend_y',
          info='Verchromtes Stahlrohr, das Herzstück des Gestells. Lässt sich als Metallschrott verwerten, '
               'wenn Griff und Stoff entfernt sind.',
-         color='#B8BEC4', marks=[mark('box', 4, 0, 2, 755, 1, '#E3E7EA'),
+         color='#B8BEC4', marks=[mark('box', 4, 0, 2, 755, 1, '#E3E7EA', zeichnung=True),
                                  mark('box', 3, 427, 4, 12, 1, '#5A6268'), mark('box', 3, 617, 4, 12, 1, '#5A6268')]),
     # Rundhakengriff flach liegend: Schaft, Bogen, zurücklaufendes Hakenende (J-Form)
     teil('griff', 'plastic_handle', 'Hakengriff', 'Griff', 'box',
-         x=ACHSE_X - 13, y=770, w=26, d=95, z=ACHSE_Z - 13, h=26, r=12, explode=[0, GRIFF_DY, 0], mass=30,
+         x=ACHSE_X - 13, y=770, w=26, d=95, z=ACHSE_Z - 13, h=26, r=12, explode=[0, GRIFF_DY, 0], mass=30, form='liegend_y',
          info='Kunststoff in Holzoptik, mit einer Schraube oder Kleber auf der Stange befestigt. '
               'Schraube lösen und Griff abziehen, dann ist er sortenrein.',
-         color=GRIFF, marks=[mark('cyl', 9, 4, 8, fill='#9AA2A6'), mark('box', 5, 20, 3, 70, 1.5, '#6B4630'),
-                             mark('box', 15, 25, 2, 60, 1, '#6B4630')]),
+         color=GRIFF, marks=[mark('cyl', 9, 4, 8, fill='#9AA2A6'), mark('box', 5, 20, 3, 70, 1.5, '#6B4630', zeichnung=True),
+                             mark('box', 15, 25, 2, 60, 1, '#6B4630', zeichnung=True)]),
     teil('griff_bogen', 'plastic_handle', 'Griff: Bogen', 'Bogen', 'box',
-         x=ACHSE_X - 13, y=865, w=56, d=35, z=ACHSE_Z - 13, h=26, r=16, explode=[0, GRIFF_DY, 0], mass=20,
+         x=ACHSE_X - 13, y=865, w=56, d=35, z=ACHSE_Z - 13, h=26, r=16, explode=[0, GRIFF_DY, 0], mass=20, form='liegend_x',
          label=False, info='Die Rundung des Hakengriffs.', color=GRIFF,
-         marks=[mark('box', 10, 6, 36, 3, 1.5, '#6B4630')]),
+         marks=[mark('box', 10, 6, 36, 3, 1.5, '#6B4630', zeichnung=True)]),
     teil('griff_haken', 'plastic_handle', 'Griff: Hakenende', 'Haken', 'box',
-         x=ACHSE_X + 17, y=815, w=26, d=50, z=ACHSE_Z - 13, h=26, r=12, explode=[0, GRIFF_DY, 0], mass=12,
+         x=ACHSE_X + 17, y=815, w=26, d=50, z=ACHSE_Z - 13, h=26, r=12, explode=[0, GRIFF_DY, 0], mass=12, form='liegend_y',
          label=False, info='Das zurückgebogene Ende des Rundhakens. Damit hängt man den Schirm auf.',
-         color=GRIFF, marks=[mark('box', 11, 6, 3, 40, 1.5, '#6B4630')]),
+         color=GRIFF, marks=[mark('box', 11, 6, 3, 40, 1.5, '#6B4630', zeichnung=True)]),
 ]
 
+for p in teile:  # Foto-Ansicht: flache marks schweben über runden Formen, dort nur in der Zeichnung
+    if p.get('form'):
+        p['marks'] = [dict(m, zeichnung=True) for m in p.get('marks') or []]
 skaliere_masse(teile, oid='umbrella')
 schreibe('umbrella', teile)

@@ -20,9 +20,9 @@ def mitte(w):
     return (D - w) / 2
 
 
-def ring(aussen, innen, fill=INNEN):
+def ring(aussen, innen, fill=INNEN, zeichnung=False):
     o = (aussen - innen) / 2
-    return mark('cyl', o, o, innen, fill=fill)
+    return mark('cyl', o, o, innen, fill=fill, zeichnung=zeichnung)
 
 
 teile = [
@@ -36,19 +36,19 @@ teile = [
               'die feinen Rillen (Flugringe) beruhigen die Luftströmung.',
          marks=[ring(250, 230, '#E2E3DE'), ring(250, 220, FARBE), ring(250, 206, '#E2E3DE'), ring(250, 196, FARBE)]),
     teil('schulter_oben', 'pp_disc', 'Schulter oben', 'Schulter', 'cyl', label=False,
-         x=mitte(262), y=mitte(262), w=262, z=25, h=2, mass=14, color='#E6E7E2',
-         info='Oberer, stärker gewölbter Teil der Schulter.', marks=[ring(262, 250)]),
+         x=mitte(262), y=mitte(262), w=262, z=25, h=2, mass=14, color=FARBE,
+         info='Oberer, stärker gewölbter Teil der Schulter.', marks=[ring(262, 250, zeichnung=True)]),
     teil('schulter', 'pp_disc', 'Schulter', 'Schulter', 'cyl',
-         x=0, y=0, w=D, z=22, h=3, mass=26, color='#E6E7E2',
+         x=0, y=0, w=D, z=22, h=3, mass=26, color=FARBE,
          info='Gewölbter Übergang zwischen Platte und Rand. Hier ist die Scheibe am stabilsten.',
-         marks=[ring(D, 250)]),
+         marks=[ring(D, 250, zeichnung=True)]),
     teil('rand', 'pp_disc', 'Rand (Lippe)', 'Rand', 'cyl',
          x=0, y=0, w=D, z=0, h=22, mass=65, color=FARBE,
          info='Der nach unten gezogene, verdickte Rand. Er gibt Gewicht nach außen, so stabilisiert die Drehung den Flug, '
               'und man kann gut greifen. Kaputte Scheiben in den Restmüll, sie sind keine Verpackung.',
-         marks=[ring(D, 258), ring(D, 250, '#B5B8B4')]),
+         wand=6, boden=0, marks=[ring(D, 258, zeichnung=True), ring(D, 250, '#B5B8B4', zeichnung=True)]),
 ]
 
-explodiere(teile, abstand=80, abstaende={'aufdruck': 40}, gruppen=[['schulter_oben', 'schulter']])
+explodiere(teile, abstand=80, abstaende={'aufdruck': 40}, gruppen=[['flugplatte', 'schulter_oben', 'schulter']])
 skaliere_masse(teile, oid='frisbee')
 schreibe('frisbee', teile)

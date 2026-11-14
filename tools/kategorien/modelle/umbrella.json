@@ -553,6 +553,7 @@
    ],
    "info": "Kleine Kunststoffkappen auf den Rippenenden. Das Dach ist hier festgenäht, die Kappen schützen vor Stichen.",
    "color": "#2A2E31",
+   "form": "liegend_y",
    "marks": [
     {
      "shape": "box",
@@ -561,7 +562,8 @@
      "w": 6,
      "d": 8,
      "r": 3,
-     "fill": "#3E444A"
+     "fill": "#3E444A",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -570,7 +572,8 @@
      "w": 6,
      "d": 8,
      "r": 3,
-     "fill": "#3E444A"
+     "fill": "#3E444A",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -579,7 +582,8 @@
      "w": 6,
      "d": 8,
      "r": 3,
-     "fill": "#3E444A"
+     "fill": "#3E444A",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -588,7 +592,8 @@
      "w": 6,
      "d": 8,
      "r": 3,
-     "fill": "#3E444A"
+     "fill": "#3E444A",
+     "zeichnung": true
     }
    ]
   },
@@ -668,6 +673,7 @@
    "info": "Acht lange Rippen und acht kurze Streben aus Federstahl, mit Drahtgelenken verbunden. Abgeknickte Rippen sind spitz: vorsichtig anfassen und als Metallschrott abgeben.",
    "color": "#3A3F44",
    "sortBias": -5,
+   "form": "liegend_y",
    "marks": [
     {
      "shape": "box",
@@ -675,7 +681,8 @@
      "y": 10.0,
      "w": 1.5,
      "d": 615,
-     "fill": "#8E969A"
+     "fill": "#8E969A",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -683,7 +690,8 @@
      "y": 10.0,
      "w": 1.5,
      "d": 615,
-     "fill": "#8E969A"
+     "fill": "#8E969A",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -691,7 +699,8 @@
      "y": 10.0,
      "w": 1.5,
      "d": 615,
-     "fill": "#8E969A"
+     "fill": "#8E969A",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -699,7 +708,8 @@
      "y": 10.0,
      "w": 1.5,
      "d": 615,
-     "fill": "#8E969A"
+     "fill": "#8E969A",
+     "zeichnung": true
     }
    ]
   },
@@ -834,6 +844,7 @@
    ],
    "info": "Vernickelte Metallspitze am Ende der Stange, mit Kunststoffkappe gegen Verletzungen.",
    "color": "#B8BEC4",
+   "form": "liegend_y",
    "marks": [
     {
      "shape": "box",
@@ -842,7 +853,8 @@
      "w": 6,
      "d": 8,
      "r": 3,
-     "fill": "#2A2E31"
+     "fill": "#2A2E31",
+     "zeichnung": true
     }
    ]
   },
@@ -874,12 +886,14 @@
    ],
    "info": "Verchromtes Stahlrohr, das Herzstück des Gestells. Lässt sich als Metallschrott verwerten, wenn Griff und Stoff entfernt sind.",
    "color": "#B8BEC4",
+   "form": "liegend_y",
    "marks": [
     {
      "shape": "box",
      "x": 4,
      "y": 0,
      "w": 2,
+     "zeichnung": true,
      "d": 755,
      "r": 1,
      "fill": "#E3E7EA"
@@ -891,7 +905,8 @@
      "w": 4,
      "d": 12,
      "r": 1,
-     "fill": "#5A6268"
+     "fill": "#5A6268",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -900,7 +915,8 @@
      "w": 4,
      "d": 12,
      "r": 1,
-     "fill": "#5A6268"
+     "fill": "#5A6268",
+     "zeichnung": true
     }
    ]
   },
@@ -932,19 +948,22 @@
    ],
    "info": "Kunststoff in Holzoptik, mit einer Schraube oder Kleber auf der Stange befestigt. Schraube lösen und Griff abziehen, dann ist er sortenrein.",
    "color": "#5A3A26",
+   "form": "liegend_y",
    "marks": [
     {
      "shape": "cyl",
      "x": 9,
      "y": 4,
      "w": 8,
-     "fill": "#9AA2A6"
+     "fill": "#9AA2A6",
+     "zeichnung": true
     },
     {
      "shape": "box",
      "x": 5,
      "y": 20,
      "w": 3,
+     "zeichnung": true,
      "d": 70,
      "r": 1.5,
      "fill": "#6B4630"
@@ -954,6 +973,7 @@
      "x": 15,
      "y": 25,
      "w": 2,
+     "zeichnung": true,
      "d": 60,
      "r": 1,
      "fill": "#6B4630"
@@ -989,12 +1009,14 @@
    "info": "Die Rundung des Hakengriffs.",
    "color": "#5A3A26",
    "label": false,
+   "form": "liegend_x",
    "marks": [
     {
      "shape": "box",
      "x": 10,
      "y": 6,
      "w": 36,
+     "zeichnung": true,
      "d": 3,
      "r": 1.5,
      "fill": "#6B4630"
@@ -1030,12 +1052,14 @@
    "info": "Das zurückgebogene Ende des Rundhakens. Damit hängt man den Schirm auf.",
    "color": "#5A3A26",
    "label": false,
+   "form": "liegend_y",
    "marks": [
     {
      "shape": "box",
      "x": 11,
      "y": 6,
      "w": 3,
+     "zeichnung": true,
      "d": 40,
      "r": 1.5,
      "fill": "#6B4630"

@@ -16,22 +16,22 @@ NIETE = [['messing', 85], ['kupfer', 15]]
 
 teile = [
     teil('knopf', 'metal_rivets', 'Hosenknopf', 'Knopf', 'cyl',
-         x=166, y=12, w=18, z=25, h=8, mass=4, materials=[['messing', 70], ['stahl', 30]],
+         x=166, y=12, w=18, z=25.5, h=7, mass=4, materials=[['messing', 70], ['stahl', 30]],
          info='Metallknopf, mit einem Stift durch den Stoff genietet. Vor dem Textilrecycling mit dem Stoff drumherum herausschneiden.',
          color='#B08D4A', marks=[mark('cyl', 3, 3, 12, fill='#C9A24A')]),
     teil('niete_1', 'metal_rivets', 'Niete', 'Nieten', 'cyl',
-         x=12, y=46, w=7, z=23, h=3, mass=0.6, materials=NIETE,
+         x=12, y=46, w=7, z=24, h=2.5, mass=0.6, materials=NIETE,
          info='Kupfer- oder Messingnieten verstärken die Taschenecken. Jede einzeln ausschneiden: '
               'Metall stört beim Zerfasern der Baumwolle.',
          color='#B87333', marks=[mark('cyl', 2, 2, 3, fill='#8A5427')]),
     teil('niete_2', 'metal_rivets', 'Niete', 'Niete', 'cyl',
-         x=112, y=48, w=7, z=23, h=3, mass=0.6, materials=NIETE, label=False,
+         x=112, y=48, w=7, z=24, h=2.5, mass=0.6, materials=NIETE, label=False,
          info='Niete an der inneren Ecke der linken Vordertasche.', color='#B87333'),
     teil('niete_3', 'metal_rivets', 'Niete', 'Niete', 'cyl',
-         x=231, y=48, w=7, z=23, h=3, mass=0.6, materials=NIETE, label=False,
+         x=231, y=48, w=7, z=24, h=2.5, mass=0.6, materials=NIETE, label=False,
          info='Niete an der inneren Ecke der rechten Vordertasche.', color='#B87333'),
     teil('niete_4', 'metal_rivets', 'Niete', 'Niete', 'cyl',
-         x=331, y=46, w=7, z=23, h=3, mass=0.6, materials=NIETE, label=False,
+         x=331, y=46, w=7, z=24, h=2.5, mass=0.6, materials=NIETE, label=False,
          info='Niete an der äußeren Ecke der rechten Vordertasche.', color='#B87333'),
     teil('bund', 'denim_fabric', 'Hosenbund mit Gürtelschlaufen', 'Bund', 'box',
          x=0, y=0, w=350, d=42, z=17, h=8, r=4, mass=30, materials=DENIM_MAT,
@@ -43,13 +43,19 @@ teile = [
          info='Messingzähne auf einem Polyesterband, unter der Schlitzleiste versteckt. Links und rechts '
               'vom Band abschneiden, dann bleibt reiner Denim übrig.',
          color='#2A2E31', marks=[mark('box', 5, 0, 4, 156, 0.5, '#C9A24A'), mark('box', 3.5, 2, 7, 12, 1.5, '#B08D4A')]),
-    teil('vorderteil', 'denim_fabric', 'Vorderteil', 'Vorderteil', 'box',
-         x=0, y=38, w=350, d=362, z=17, h=6, r=6, mass=150, materials=DENIM_MAT,
+] + [
+    teil(f'vorderteil_{i}' if i else 'vorderteil', 'denim_fabric', 'Vorderteil', 'Vorderteil', 'box',
+         x=x, y=y, w=w, d=d, z=z, h=h, r=r, mass=m, materials=DENIM_MAT, label=None if i == 0 else False,
          info='Baumwoll-Denim, das Vorderteil beider Hosenbeine. Tragbare Jeans in die Altkleidersammlung, kaputte zum '
               'Textilrecycling: Dort werden sie zu Fasern für Dämmstoff gerissen.',
-         color=DENIM, marks=[mark('box', 0, 6, 120, 2, 1, NAHT), mark('box', 230, 6, 120, 2, 1, NAHT),
-                             mark('box', 172, 6, 3, 170, 1, NAHT), mark('box', 174, 176, 2, 186, 0, DUNKEL),
-                             mark('box', 260, 14, 40, 36, 3, DUNKEL)]),
+         color=DENIM, marks=[mark('box', 0, 2, 114, 2, 1, NAHT), mark('box', 224, 2, 114, 2, 1, NAHT),
+                             mark('box', 166, 2, 3, 170, 1, NAHT), mark('box', 168, 172, 2, 182, 0, DUNKEL),
+                             mark('box', 254, 10, 40, 36, 3, DUNKEL)] if i == 0 else None)
+    # Weich gewölbte Stofflage: drei nach oben schmalere Scheiben, in der Foto-Ansicht eine glatte Fläche
+    for i, (x, y, w, d, z, h, r, m) in enumerate([(6, 42, 338, 354, 22.5, 1.5, 24, 40),
+                                                   (3, 40, 344, 358, 20, 2.5, 14, 50),
+                                                   (0, 38, 350, 362, 17, 3, 6, 60)])
+] + [
     teil('tasche_l', 'denim_fabric', 'Taschenbeutel links', 'Taschenbeutel', 'box', material_id='cotton',
          x=15, y=30, w=110, d=170, z=16, h=1, r=10, mass=8, materials=[['baumwolle', 65], ['polyester', 35]],
          info='Dünnes Futter aus Baumwoll-Polyester-Mischgewebe innen in der Vordertasche.',
@@ -77,6 +83,6 @@ teile = [
          info='Gegenstück zum linken Unterschenkel.', color=DUNKEL, marks=[mark('box', 0, 268, 164, 3, 0, NAHT)]),
 ]
 
-explodiere(teile, abstand=70, abstaende={f'niete_{i}': 25 for i in range(1, 5)}, nach_liste=True)
+explodiere(teile, abstand=70, gruppen=[['vorderteil', 'vorderteil_1', 'vorderteil_2']], abstaende={f'niete_{i}': 25 for i in range(1, 5)}, nach_liste=True)
 skaliere_masse(teile, oid='jeans')
 schreibe('jeans', teile)

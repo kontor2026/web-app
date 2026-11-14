@@ -8,14 +8,14 @@
    "short": "Knopf",
    "shape": "cyl",
    "x": 88,
-   "y": 105,
+   "y": 100.5,
    "w": 14,
-   "z": 105,
+   "z": 104.5,
    "h": 5,
    "explode": [
     0,
     0,
-    90.0
+    91.5
    ],
    "mass": 1.5,
    "materials": [
@@ -41,24 +41,24 @@
    ]
   },
   {
-   "id": "krone_6",
+   "id": "krone_12",
    "component_id": "cotton_fabric",
    "material_id": "cotton",
-   "name": "Krone, Lage 6",
+   "name": "Krone, Lage 12",
    "short": "Krone",
    "shape": "cyl",
-   "x": 63,
-   "y": 80,
-   "w": 64,
-   "d": 64,
-   "z": 97,
-   "h": 8,
+   "x": 79.5,
+   "y": 89.4,
+   "w": 31.1,
+   "d": 36.1,
+   "z": 104,
+   "h": 2,
    "explode": [
     0,
     0,
     65.0
    ],
-   "mass": 2,
+   "mass": 0.1,
    "materials": [
     [
      "baumwolle",
@@ -71,10 +71,257 @@
    "marks": [
     {
      "shape": "box",
-     "x": 31.25,
+     "x": 14.8,
      "y": 0,
      "w": 1.5,
-     "d": 64,
+     "zeichnung": true,
+     "d": 36.1,
+     "r": 0,
+     "fill": "#243A55"
+    }
+   ]
+  },
+  {
+   "id": "krone_11",
+   "component_id": "cotton_fabric",
+   "material_id": "cotton",
+   "name": "Krone, Lage 11",
+   "short": "Krone",
+   "shape": "cyl",
+   "x": 68.1,
+   "y": 77.8,
+   "w": 53.8,
+   "d": 58.5,
+   "z": 101,
+   "h": 3,
+   "explode": [
+    0,
+    0,
+    65.0
+   ],
+   "mass": 0.2,
+   "materials": [
+    [
+     "baumwolle",
+     100
+    ]
+   ],
+   "info": "Teil der Kuppel aus Stoffbahnen.",
+   "color": "#2F4A6B",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 26.1,
+     "y": 0,
+     "w": 1.5,
+     "zeichnung": true,
+     "d": 58.5,
+     "r": 0,
+     "fill": "#243A55"
+    }
+   ]
+  },
+  {
+   "id": "krone_10",
+   "component_id": "cotton_fabric",
+   "material_id": "cotton",
+   "name": "Krone, Lage 10",
+   "short": "Krone",
+   "shape": "cyl",
+   "x": 58.1,
+   "y": 67.4,
+   "w": 73.8,
+   "d": 78,
+   "z": 97,
+   "h": 4,
+   "explode": [
+    0,
+    0,
+    65.0
+   ],
+   "mass": 0.6,
+   "materials": [
+    [
+     "baumwolle",
+     100
+    ]
+   ],
+   "info": "Teil der Kuppel aus Stoffbahnen.",
+   "color": "#2F4A6B",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 36.1,
+     "y": 0,
+     "w": 1.5,
+     "zeichnung": true,
+     "d": 78.0,
+     "r": 0,
+     "fill": "#243A55"
+    }
+   ]
+  },
+  {
+   "id": "krone_9",
+   "component_id": "cotton_fabric",
+   "material_id": "cotton",
+   "name": "Krone, Lage 9",
+   "short": "Krone",
+   "shape": "cyl",
+   "x": 48.8,
+   "y": 57.6,
+   "w": 92.4,
+   "d": 95.9,
+   "z": 92,
+   "h": 5,
+   "explode": [
+    0,
+    0,
+    65.0
+   ],
+   "mass": 1.1,
+   "materials": [
+    [
+     "baumwolle",
+     100
+    ]
+   ],
+   "info": "Teil der Kuppel aus Stoffbahnen.",
+   "color": "#2F4A6B",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 45.5,
+     "y": 0,
+     "w": 1.5,
+     "zeichnung": true,
+     "d": 95.9,
+     "r": 0,
+     "fill": "#243A55"
+    }
+   ]
+  },
+  {
+   "id": "krone_8",
+   "component_id": "cotton_fabric",
+   "material_id": "cotton",
+   "name": "Krone, Lage 8",
+   "short": "Krone",
+   "shape": "cyl",
+   "x": 40,
+   "y": 48.3,
+   "w": 109.9,
+   "d": 112.3,
+   "z": 86,
+   "h": 6,
+   "explode": [
+    0,
+    0,
+    65.0
+   ],
+   "mass": 1.8,
+   "materials": [
+    [
+     "baumwolle",
+     100
+    ]
+   ],
+   "info": "Teil der Kuppel aus Stoffbahnen.",
+   "color": "#2F4A6B",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 54.2,
+     "y": 0,
+     "w": 1.5,
+     "zeichnung": true,
+     "d": 112.3,
+     "r": 0,
+     "fill": "#243A55"
+    }
+   ]
+  },
+  {
+   "id": "krone_7",
+   "component_id": "cotton_fabric",
+   "material_id": "cotton",
+   "name": "Krone, Lage 7",
+   "short": "Krone",
+   "shape": "cyl",
+   "x": 32,
+   "y": 39.4,
+   "w": 126,
+   "d": 127.4,
+   "z": 79,
+   "h": 7,
+   "explode": [
+    0,
+    0,
+    65.0
+   ],
+   "mass": 2.6,
+   "materials": [
+    [
+     "baumwolle",
+     100
+    ]
+   ],
+   "info": "Teil der Kuppel aus Stoffbahnen.",
+   "color": "#2F4A6B",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 62.2,
+     "y": 0,
+     "w": 1.5,
+     "zeichnung": true,
+     "d": 127.4,
+     "r": 0,
+     "fill": "#243A55"
+    }
+   ]
+  },
+  {
+   "id": "krone_6",
+   "component_id": "cotton_fabric",
+   "material_id": "cotton",
+   "name": "Krone, Lage 6",
+   "short": "Krone",
+   "shape": "cyl",
+   "x": 24,
+   "y": 30.5,
+   "w": 141.9,
+   "d": 141.9,
+   "z": 70,
+   "h": 9,
+   "explode": [
+    0,
+    0,
+    65.0
+   ],
+   "mass": 4.3,
+   "materials": [
+    [
+     "baumwolle",
+     100
+    ]
+   ],
+   "info": "Teil der Kuppel aus Stoffbahnen.",
+   "color": "#2F4A6B",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 70.2,
+     "y": 0,
+     "w": 1.5,
+     "zeichnung": true,
+     "d": 141.9,
      "r": 0,
      "fill": "#243A55"
     }
@@ -87,18 +334,18 @@
    "name": "Krone, Lage 5",
    "short": "Krone",
    "shape": "cyl",
-   "x": 40,
-   "y": 56,
-   "w": 110,
-   "d": 104,
-   "z": 85,
-   "h": 12,
+   "x": 16.9,
+   "y": 22.2,
+   "w": 156.2,
+   "d": 154.9,
+   "z": 60,
+   "h": 10,
    "explode": [
     0,
     0,
     65.0
    ],
-   "mass": 4.9,
+   "mass": 5.8,
    "materials": [
     [
      "baumwolle",
@@ -111,12 +358,61 @@
    "marks": [
     {
      "shape": "box",
-     "x": 54.25,
+     "x": 77.3,
      "y": 0,
      "w": 1.5,
-     "d": 104,
+     "zeichnung": true,
+     "d": 154.9,
      "r": 0,
      "fill": "#243A55"
+    },
+    {
+     "shape": "cyl",
+     "x": 133.3,
+     "y": 107.8,
+     "w": 6,
+     "zeichnung": true,
+     "fill": "#1C2C40"
+    },
+    {
+     "shape": "cyl",
+     "x": 75.1,
+     "y": 141.1,
+     "w": 6,
+     "zeichnung": true,
+     "fill": "#1C2C40"
+    },
+    {
+     "shape": "cyl",
+     "x": 16.9,
+     "y": 107.8,
+     "w": 6,
+     "zeichnung": true,
+     "fill": "#1C2C40"
+    },
+    {
+     "shape": "cyl",
+     "x": 16.9,
+     "y": 41.1,
+     "w": 6,
+     "zeichnung": true,
+     "fill": "#1C2C40"
+    },
+    {
+     "shape": "cyl",
+     "x": 75.1,
+     "y": 7.8,
+     "w": 6,
+     "zeichnung": true,
+     "fill": "#1C2C40"
+    },
+    {
+     "shape": "cyl",
+     "x": 133.3,
+     "y": 41.1,
+     "w": 6,
+     "zeichnung": true,
+     "fill": "#1C2C40"
     }
    ]
   },
@@ -127,18 +423,18 @@
    "name": "Krone, Lage 4",
    "short": "Krone",
    "shape": "cyl",
-   "x": 23,
-   "y": 34,
-   "w": 144,
-   "d": 138,
-   "z": 70,
-   "h": 15,
+   "x": 10.6,
+   "y": 14.6,
+   "w": 168.8,
+   "d": 166.1,
+   "z": 48,
+   "h": 12,
    "explode": [
     0,
     0,
     65.0
    ],
-   "mass": 7.8,
+   "mass": 8,
    "materials": [
     [
      "baumwolle",
@@ -151,54 +447,13 @@
    "marks": [
     {
      "shape": "box",
-     "x": 71.25,
+     "x": 83.7,
      "y": 0,
      "w": 1.5,
-     "d": 138,
+     "zeichnung": true,
+     "d": 166.1,
      "r": 0,
      "fill": "#243A55"
-    },
-    {
-     "shape": "cyl",
-     "x": 122.6,
-     "y": 95.7,
-     "w": 6,
-     "fill": "#1C2C40"
-    },
-    {
-     "shape": "cyl",
-     "x": 69.0,
-     "y": 125.3,
-     "w": 6,
-     "fill": "#1C2C40"
-    },
-    {
-     "shape": "cyl",
-     "x": 15.4,
-     "y": 95.7,
-     "w": 6,
-     "fill": "#1C2C40"
-    },
-    {
-     "shape": "cyl",
-     "x": 15.4,
-     "y": 36.3,
-     "w": 6,
-     "fill": "#1C2C40"
-    },
-    {
-     "shape": "cyl",
-     "x": 69.0,
-     "y": 6.7,
-     "w": 6,
-     "fill": "#1C2C40"
-    },
-    {
-     "shape": "cyl",
-     "x": 122.6,
-     "y": 36.3,
-     "w": 6,
-     "fill": "#1C2C40"
     }
    ]
   },
@@ -209,18 +464,18 @@
    "name": "Krone, Lage 3",
    "short": "Krone",
    "shape": "cyl",
-   "x": 11,
-   "y": 18,
-   "w": 168,
-   "d": 162,
-   "z": 52,
-   "h": 18,
+   "x": 5.4,
+   "y": 7.9,
+   "w": 179.2,
+   "d": 175.3,
+   "z": 34,
+   "h": 14,
    "explode": [
     0,
     0,
     65.0
    ],
-   "mass": 10.8,
+   "mass": 10.5,
    "materials": [
     [
      "baumwolle",
@@ -233,10 +488,11 @@
    "marks": [
     {
      "shape": "box",
-     "x": 83.25,
+     "x": 88.8,
      "y": 0,
      "w": 1.5,
-     "d": 162,
+     "zeichnung": true,
+     "d": 175.3,
      "r": 0,
      "fill": "#243A55"
     }
@@ -249,18 +505,18 @@
    "name": "Krone, Lage 2",
    "short": "Krone",
    "shape": "cyl",
-   "x": 3,
-   "y": 6,
-   "w": 184,
-   "d": 178,
-   "z": 30,
-   "h": 22,
+   "x": 1.8,
+   "y": 2.9,
+   "w": 186.5,
+   "d": 181.7,
+   "z": 18,
+   "h": 16,
    "explode": [
     0,
     0,
     65.0
    ],
-   "mass": 15.7,
+   "mass": 12.9,
    "materials": [
     [
      "baumwolle",
@@ -273,10 +529,11 @@
    "marks": [
     {
      "shape": "box",
-     "x": 91.25,
+     "x": 92.5,
      "y": 0,
      "w": 1.5,
-     "d": 178,
+     "zeichnung": true,
+     "d": 181.7,
      "r": 0,
      "fill": "#243A55"
     }
@@ -289,18 +546,18 @@
    "name": "Krone aus sechs Stoffbahnen",
    "short": "Krone",
    "shape": "cyl",
-   "x": 0,
-   "y": 0,
-   "w": 190,
-   "d": 185,
+   "x": 0.1,
+   "y": 0.2,
+   "w": 189.8,
+   "d": 184.8,
    "z": 0,
-   "h": 30,
+   "h": 18,
    "explode": [
     0,
     0,
     65.0
    ],
-   "mass": 21.6,
+   "mass": 15,
    "materials": [
     [
      "baumwolle",
@@ -317,10 +574,11 @@
    "marks": [
     {
      "shape": "box",
-     "x": 94.25,
+     "x": 94.2,
      "y": 0,
      "w": 1.5,
-     "d": 185,
+     "zeichnung": true,
+     "d": 184.8,
      "r": 0,
      "fill": "#243A55"
     }
@@ -567,7 +825,7 @@
     130,
     30
    ],
-   "mass": 11.8,
+   "mass": 11.7,
    "materials": [
     [
      "pp",

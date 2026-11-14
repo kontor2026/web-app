@@ -39,9 +39,9 @@
   "metalle_mg": {},
   "herkunft": {},
   "materialien_g": {
-   "special_glass": 250.2
+   "special_glass": 250.0
   },
-  "co2_kg": 0.502,
+  "co2_kg": 0.501,
   "co2_mit_recyclat_kg": 0.326,
   "co2_ersparnis_kg": 0.176,
   "co2_ohne_faktor": [],
@@ -181,23 +181,23 @@
    ]
   },
   {
-   "id": "wand_4",
+   "id": "wand_6",
    "component_id": "drinking_glass_body",
    "material_id": "special_glass",
    "name": "Glaswand",
    "short": "Wand",
    "shape": "cyl",
-   "x": 0.97,
-   "y": 0.97,
-   "w": 73.06,
-   "z": 81,
-   "h": 23,
+   "x": 0.73,
+   "y": 0.73,
+   "w": 73.54,
+   "z": 88.67,
+   "h": 15.33,
    "explode": [
     0,
     0,
     28.0
    ],
-   "mass": 35.9,
+   "mass": 23.9,
    "materials": [
     [
      "glas",
@@ -206,10 +206,66 @@
    ],
    "info": "Nur etwa 2 mm dünne Wand aus gepresstem oder geblasenem Kalk-Natron-Glas. Trinkglas hat eine andere Zusammensetzung und einen höheren Schmelzpunkt als Flaschenglas.",
    "color": "#DCEAE6",
-   "opacity": 0.41000000000000003,
-   "label": true,
-   "wand": 2,
-   "boden": 0
+   "opacity": 0.4,
+   "label": true
+  },
+  {
+   "id": "wand_5",
+   "component_id": "drinking_glass_body",
+   "material_id": "special_glass",
+   "name": "Glaswand",
+   "short": "Wand",
+   "shape": "cyl",
+   "x": 1.69,
+   "y": 1.69,
+   "w": 71.62,
+   "z": 73.33,
+   "h": 15.33,
+   "explode": [
+    0,
+    0,
+    28.0
+   ],
+   "mass": 23.9,
+   "materials": [
+    [
+     "glas",
+     100
+    ]
+   ],
+   "info": "Abschnitt der leicht konischen Glaswand.",
+   "color": "#DCEAE6",
+   "opacity": 0.4,
+   "label": false
+  },
+  {
+   "id": "wand_4",
+   "component_id": "drinking_glass_body",
+   "material_id": "special_glass",
+   "name": "Glaswand",
+   "short": "Wand",
+   "shape": "cyl",
+   "x": 2.65,
+   "y": 2.65,
+   "w": 69.71,
+   "z": 58,
+   "h": 15.33,
+   "explode": [
+    0,
+    0,
+    28.0
+   ],
+   "mass": 23.9,
+   "materials": [
+    [
+     "glas",
+     100
+    ]
+   ],
+   "info": "Abschnitt der leicht konischen Glaswand.",
+   "color": "#DCEAE6",
+   "opacity": 0.4,
+   "label": false
   },
   {
    "id": "wand_3",
@@ -218,17 +274,17 @@
    "name": "Glaswand",
    "short": "Wand",
    "shape": "cyl",
-   "x": 2.41,
-   "y": 2.41,
-   "w": 70.19,
-   "z": 58,
-   "h": 23,
+   "x": 3.6,
+   "y": 3.6,
+   "w": 67.79,
+   "z": 42.67,
+   "h": 15.33,
    "explode": [
     0,
     0,
     28.0
    ],
-   "mass": 35.9,
+   "mass": 23.9,
    "materials": [
     [
      "glas",
@@ -238,9 +294,7 @@
    "info": "Abschnitt der leicht konischen Glaswand.",
    "color": "#DCEAE6",
    "opacity": 0.4,
-   "label": false,
-   "wand": 2,
-   "boden": 0
+   "label": false
   },
   {
    "id": "wand_2",
@@ -249,48 +303,17 @@
    "name": "Glaswand",
    "short": "Wand",
    "shape": "cyl",
-   "x": 3.84,
-   "y": 3.84,
-   "w": 67.31,
-   "z": 35,
-   "h": 23,
+   "x": 4.56,
+   "y": 4.56,
+   "w": 65.88,
+   "z": 27.33,
+   "h": 15.33,
    "explode": [
     0,
     0,
     28.0
    ],
-   "mass": 35.9,
-   "materials": [
-    [
-     "glas",
-     100
-    ]
-   ],
-   "info": "Abschnitt der leicht konischen Glaswand.",
-   "color": "#DCEAE6",
-   "opacity": 0.41000000000000003,
-   "label": false,
-   "wand": 2,
-   "boden": 0
-  },
-  {
-   "id": "wand_1",
-   "component_id": "drinking_glass_body",
-   "material_id": "special_glass",
-   "name": "Glaswand",
-   "short": "Wand",
-   "shape": "cyl",
-   "x": 5.28,
-   "y": 5.28,
-   "w": 64.44,
-   "z": 12,
-   "h": 23,
-   "explode": [
-    0,
-    0,
-    28.0
-   ],
-   "mass": 35.9,
+   "mass": 23.9,
    "materials": [
     [
      "glas",
@@ -300,9 +323,36 @@
    "info": "Abschnitt der leicht konischen Glaswand.",
    "color": "#DCEAE6",
    "opacity": 0.4,
-   "label": false,
-   "wand": 2,
-   "boden": 0
+   "label": false
+  },
+  {
+   "id": "wand_1",
+   "component_id": "drinking_glass_body",
+   "material_id": "special_glass",
+   "name": "Glaswand",
+   "short": "Wand",
+   "shape": "cyl",
+   "x": 5.52,
+   "y": 5.52,
+   "w": 63.96,
+   "z": 12,
+   "h": 15.33,
+   "explode": [
+    0,
+    0,
+    28.0
+   ],
+   "mass": 23.9,
+   "materials": [
+    [
+     "glas",
+     100
+    ]
+   ],
+   "info": "Abschnitt der leicht konischen Glaswand.",
+   "color": "#DCEAE6",
+   "opacity": 0.4,
+   "label": false
   },
   {
    "id": "boden",
@@ -329,8 +379,8 @@
     ]
    ],
    "info": "Massiver Boden, damit das Glas nicht umkippt. Kaputte Trinkgläser kommen in Zeitungspapier gewickelt in den Restmüll, nicht in den Altglascontainer: Schon ein Stück verdirbt eine ganze Ladung Flaschenglas.",
-   "color": "#CFE0DB",
-   "opacity": 0.7,
+   "color": "#DCEAE6",
+   "opacity": 0.4,
    "marks": [
     {
      "shape": "cyl",

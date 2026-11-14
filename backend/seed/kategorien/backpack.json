@@ -37,17 +37,17 @@
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Cu": 34900.0
+   "Cu": 35000.0
   },
   "herkunft": {
    "Cu": "Modellmassen (Schätzung)"
   },
   "materialien_g": {
-   "nylon": 520.1,
-   "polyester": 76.3,
-   "pu_foam": 49.1,
-   "copper": 34.9,
-   "pp": 19.7
+   "nylon": 519.7,
+   "polyester": 76.6,
+   "pu_foam": 49.2,
+   "copper": 35.0,
+   "pp": 19.8
   },
   "co2_kg": 2.93,
   "co2_mit_recyclat_kg": 2.792,
@@ -167,9 +167,9 @@
    "name": "Reißverschluss Hauptfach",
    "short": "Reißverschluss",
    "shape": "box",
-   "x": 15,
-   "y": 68,
-   "w": 270,
+   "x": 85,
+   "y": 66,
+   "w": 130,
    "d": 10,
    "z": 440,
    "h": 1.5,
@@ -179,7 +179,7 @@
     0,
     62
    ],
-   "mass": 24,
+   "mass": 24.1,
    "materials": [
     [
      "polyester",
@@ -201,14 +201,14 @@
      "shape": "box",
      "x": 0,
      "y": 4,
-     "w": 270,
+     "w": 130,
      "d": 2,
      "r": 0,
      "fill": "#8E969A"
     },
     {
      "shape": "box",
-     "x": 30,
+     "x": 14,
      "y": 1,
      "w": 12,
      "d": 8,
@@ -217,7 +217,7 @@
     },
     {
      "shape": "box",
-     "x": 228,
+     "x": 104,
      "y": 1,
      "w": 12,
      "d": 8,
@@ -233,19 +233,48 @@
    "name": "Hauptfach",
    "short": "Hauptfach",
    "shape": "box",
-   "x": 0,
-   "y": 20,
-   "w": 300,
-   "d": 105,
-   "z": 6,
-   "h": 434,
-   "r": 30,
+   "x": 80,
+   "y": 46,
+   "w": 140,
+   "d": 50,
+   "z": 432,
+   "h": 8,
+   "r": 25,
    "explode": [
     0,
     0,
     40
    ],
-   "mass": 261.7,
+   "mass": 1.1,
+   "materials": [
+    [
+     "nylon",
+     100
+    ]
+   ],
+   "info": "Robustes Polyamidgewebe mit wasserdichter PU-Beschichtung auf der Innenseite. Die Beschichtung macht das Recycling schwer, deshalb lieber reparieren oder weitergeben.",
+   "color": "#2F4B6E"
+  },
+  {
+   "id": "hauptfach_1",
+   "component_id": "nylon_fabric",
+   "material_id": "nylon",
+   "name": "Hauptfach",
+   "short": "Hauptfach",
+   "shape": "box",
+   "x": 50,
+   "y": 36,
+   "w": 200,
+   "d": 70,
+   "z": 416,
+   "h": 16,
+   "r": 35,
+   "explode": [
+    0,
+    0,
+    40
+   ],
+   "mass": 4.4,
    "materials": [
     [
      "nylon",
@@ -254,17 +283,187 @@
    ],
    "info": "Robustes Polyamidgewebe mit wasserdichter PU-Beschichtung auf der Innenseite. Die Beschichtung macht das Recycling schwer, deshalb lieber reparieren oder weitergeben.",
    "color": "#2F4B6E",
-   "marks": [
-    {
-     "shape": "box",
-     "x": 15,
-     "y": 48,
-     "w": 270,
-     "d": 2,
-     "r": 0,
-     "fill": "#22374F"
-    }
-   ]
+   "label": false
+  },
+  {
+   "id": "hauptfach_2",
+   "component_id": "nylon_fabric",
+   "material_id": "nylon",
+   "name": "Hauptfach",
+   "short": "Hauptfach",
+   "shape": "box",
+   "x": 24,
+   "y": 28,
+   "w": 252,
+   "d": 88,
+   "z": 386,
+   "h": 30,
+   "r": 44,
+   "explode": [
+    0,
+    0,
+    40
+   ],
+   "mass": 13.1,
+   "materials": [
+    [
+     "nylon",
+     100
+    ]
+   ],
+   "info": "Robustes Polyamidgewebe mit wasserdichter PU-Beschichtung auf der Innenseite. Die Beschichtung macht das Recycling schwer, deshalb lieber reparieren oder weitergeben.",
+   "color": "#2F4B6E",
+   "label": false
+  },
+  {
+   "id": "hauptfach_3",
+   "component_id": "nylon_fabric",
+   "material_id": "nylon",
+   "name": "Hauptfach",
+   "short": "Hauptfach",
+   "shape": "box",
+   "x": 10,
+   "y": 22,
+   "w": 280,
+   "d": 100,
+   "z": 346,
+   "h": 40,
+   "r": 50,
+   "explode": [
+    0,
+    0,
+    40
+   ],
+   "mass": 21.9,
+   "materials": [
+    [
+     "nylon",
+     100
+    ]
+   ],
+   "info": "Robustes Polyamidgewebe mit wasserdichter PU-Beschichtung auf der Innenseite. Die Beschichtung macht das Recycling schwer, deshalb lieber reparieren oder weitergeben.",
+   "color": "#2F4B6E",
+   "label": false
+  },
+  {
+   "id": "hauptfach_4",
+   "component_id": "nylon_fabric",
+   "material_id": "nylon",
+   "name": "Hauptfach",
+   "short": "Hauptfach",
+   "shape": "box",
+   "x": 3,
+   "y": 19,
+   "w": 294,
+   "d": 108,
+   "z": 286,
+   "h": 60,
+   "r": 40,
+   "explode": [
+    0,
+    0,
+    40
+   ],
+   "mass": 36.1,
+   "materials": [
+    [
+     "nylon",
+     100
+    ]
+   ],
+   "info": "Robustes Polyamidgewebe mit wasserdichter PU-Beschichtung auf der Innenseite. Die Beschichtung macht das Recycling schwer, deshalb lieber reparieren oder weitergeben.",
+   "color": "#2F4B6E",
+   "label": false
+  },
+  {
+   "id": "hauptfach_5",
+   "component_id": "nylon_fabric",
+   "material_id": "nylon",
+   "name": "Hauptfach",
+   "short": "Hauptfach",
+   "shape": "box",
+   "x": 0,
+   "y": 17,
+   "w": 300,
+   "d": 112,
+   "z": 166,
+   "h": 120,
+   "r": 34,
+   "explode": [
+    0,
+    0,
+    40
+   ],
+   "mass": 76.6,
+   "materials": [
+    [
+     "nylon",
+     100
+    ]
+   ],
+   "info": "Robustes Polyamidgewebe mit wasserdichter PU-Beschichtung auf der Innenseite. Die Beschichtung macht das Recycling schwer, deshalb lieber reparieren oder weitergeben.",
+   "color": "#2F4B6E",
+   "label": false
+  },
+  {
+   "id": "hauptfach_6",
+   "component_id": "nylon_fabric",
+   "material_id": "nylon",
+   "name": "Hauptfach",
+   "short": "Hauptfach",
+   "shape": "box",
+   "x": 0,
+   "y": 18,
+   "w": 300,
+   "d": 110,
+   "z": 46,
+   "h": 120,
+   "r": 32,
+   "explode": [
+    0,
+    0,
+    40
+   ],
+   "mass": 76.6,
+   "materials": [
+    [
+     "nylon",
+     100
+    ]
+   ],
+   "info": "Robustes Polyamidgewebe mit wasserdichter PU-Beschichtung auf der Innenseite. Die Beschichtung macht das Recycling schwer, deshalb lieber reparieren oder weitergeben.",
+   "color": "#2F4B6E",
+   "label": false
+  },
+  {
+   "id": "hauptfach_7",
+   "component_id": "nylon_fabric",
+   "material_id": "nylon",
+   "name": "Hauptfach",
+   "short": "Hauptfach",
+   "shape": "box",
+   "x": 0,
+   "y": 20,
+   "w": 300,
+   "d": 105,
+   "z": 6,
+   "h": 40,
+   "r": 30,
+   "explode": [
+    0,
+    0,
+    40
+   ],
+   "mass": 32.8,
+   "materials": [
+    [
+     "nylon",
+     100
+    ]
+   ],
+   "info": "Robustes Polyamidgewebe mit wasserdichter PU-Beschichtung auf der Innenseite. Die Beschichtung macht das Recycling schwer, deshalb lieber reparieren oder weitergeben.",
+   "color": "#2F4B6E",
+   "label": false
   },
   {
    "id": "boden",
@@ -285,7 +484,7 @@
     0,
     0
    ],
-   "mass": 49.1,
+   "mass": 49.2,
    "materials": [
     [
      "nylon",
@@ -306,11 +505,11 @@
    "name": "Reißverschluss Vortasche",
    "short": "RV Vortasche",
    "shape": "box",
-   "x": 40,
-   "y": 132,
-   "w": 220,
+   "x": 60,
+   "y": 129,
+   "w": 180,
    "d": 8,
-   "z": 300,
+   "z": 298,
    "h": 1.5,
    "r": 2,
    "explode": [
@@ -340,7 +539,7 @@
      "shape": "box",
      "x": 0,
      "y": 3,
-     "w": 220,
+     "w": 180,
      "d": 2,
      "r": 0,
      "fill": "#8E969A"
@@ -363,19 +562,48 @@
    "name": "Vortasche",
    "short": "Vortasche",
    "shape": "box",
-   "x": 30,
+   "x": 70,
    "y": 125,
-   "w": 240,
-   "d": 25,
-   "z": 40,
-   "h": 260,
-   "r": 10,
+   "w": 160,
+   "d": 10,
+   "z": 290,
+   "h": 10,
+   "r": 5,
    "explode": [
     0,
     80,
     0
    ],
-   "mass": 65.4,
+   "mass": 3.3,
+   "materials": [
+    [
+     "nylon",
+     100
+    ]
+   ],
+   "info": "Aufgenähte Tasche für Stifte und Kleinkram, mit Organizer-Fächern innen.",
+   "color": "#2F4B6E"
+  },
+  {
+   "id": "vortasche_1",
+   "component_id": "nylon_fabric",
+   "material_id": "nylon",
+   "name": "Vortasche",
+   "short": "Vortasche",
+   "shape": "box",
+   "x": 45,
+   "y": 125,
+   "w": 210,
+   "d": 18,
+   "z": 270,
+   "h": 20,
+   "r": 8,
+   "explode": [
+    0,
+    80,
+    0
+   ],
+   "mass": 7.7,
    "materials": [
     [
      "nylon",
@@ -384,17 +612,97 @@
    ],
    "info": "Aufgenähte Tasche für Stifte und Kleinkram, mit Organizer-Fächern innen.",
    "color": "#2F4B6E",
-   "marks": [
-    {
-     "shape": "box",
-     "x": 10,
-     "y": 3,
-     "w": 220,
-     "d": 2,
-     "r": 0,
-     "fill": "#22374F"
-    }
-   ]
+   "label": false
+  },
+  {
+   "id": "vortasche_2",
+   "component_id": "nylon_fabric",
+   "material_id": "nylon",
+   "name": "Vortasche",
+   "short": "Vortasche",
+   "shape": "box",
+   "x": 32,
+   "y": 125,
+   "w": 236,
+   "d": 25,
+   "z": 70,
+   "h": 200,
+   "r": 10,
+   "explode": [
+    0,
+    80,
+    0
+   ],
+   "mass": 43.8,
+   "materials": [
+    [
+     "nylon",
+     100
+    ]
+   ],
+   "info": "Aufgenähte Tasche für Stifte und Kleinkram, mit Organizer-Fächern innen.",
+   "color": "#2F4B6E",
+   "label": false
+  },
+  {
+   "id": "vortasche_3",
+   "component_id": "nylon_fabric",
+   "material_id": "nylon",
+   "name": "Vortasche",
+   "short": "Vortasche",
+   "shape": "box",
+   "x": 36,
+   "y": 125,
+   "w": 228,
+   "d": 20,
+   "z": 48,
+   "h": 22,
+   "r": 10,
+   "explode": [
+    0,
+    80,
+    0
+   ],
+   "mass": 6.6,
+   "materials": [
+    [
+     "nylon",
+     100
+    ]
+   ],
+   "info": "Aufgenähte Tasche für Stifte und Kleinkram, mit Organizer-Fächern innen.",
+   "color": "#2F4B6E",
+   "label": false
+  },
+  {
+   "id": "vortasche_4",
+   "component_id": "nylon_fabric",
+   "material_id": "nylon",
+   "name": "Vortasche",
+   "short": "Vortasche",
+   "shape": "box",
+   "x": 44,
+   "y": 125,
+   "w": 212,
+   "d": 12,
+   "z": 40,
+   "h": 8,
+   "r": 6,
+   "explode": [
+    0,
+    80,
+    0
+   ],
+   "mass": 2.2,
+   "materials": [
+    [
+     "nylon",
+     100
+    ]
+   ],
+   "info": "Aufgenähte Tasche für Stifte und Kleinkram, mit Organizer-Fächern innen.",
+   "color": "#2F4B6E",
+   "label": false
   },
   {
    "id": "polster",
@@ -415,7 +723,7 @@
     40,
     0
    ],
-   "mass": 49.1,
+   "mass": 49.2,
    "materials": [
     [
      "schaum",
@@ -455,7 +763,7 @@
     0,
     0
    ],
-   "mass": 76.3,
+   "mass": 76.6,
    "materials": [
     [
      "polyester",
@@ -594,7 +902,7 @@
     0,
     0
    ],
-   "mass": 8.7,
+   "mass": 8.8,
    "materials": [
     [
      "pp",
@@ -634,7 +942,7 @@
     0,
     0
    ],
-   "mass": 65.4,
+   "mass": 65.6,
    "materials": [
     [
      "nylon",
@@ -678,7 +986,7 @@
     0,
     0
    ],
-   "mass": 65.4,
+   "mass": 65.6,
    "materials": [
     [
      "nylon",

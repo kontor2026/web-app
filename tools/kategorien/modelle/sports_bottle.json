@@ -244,12 +244,14 @@
    ],
    "info": "Silikonring im Deckel, der den Hals abdichtet. Mit einem Fingernagel herausziehen und gut abspülen.",
    "color": "#E8E4DA",
+   "form": "torus",
    "marks": [
     {
      "shape": "cyl",
      "x": 4,
      "y": 4,
      "w": 30,
+     "zeichnung": true,
      "fill": "#8A8F94"
     }
    ]
@@ -286,6 +288,7 @@
      "x": 4,
      "y": 4,
      "w": 32,
+     "zeichnung": true,
      "fill": "#2F78AD"
     }
    ]
@@ -463,6 +466,7 @@
      "x": 3,
      "y": 3,
      "w": 55,
+     "zeichnung": true,
      "fill": "#2F78AD"
     }
    ]

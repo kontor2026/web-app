@@ -11,7 +11,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from bau import teil, mark, explodiere, skaliere_masse, schreibe  # noqa: E402
 
 EMAILLE = '#2E3134'
-BLECH = '#4F555A'
+BLECH = '#3B3F43'   # Rand: Stahl unter dunkler Emaille
 DRAHT = '#9DA4AA'
 B, T, H, WAND = 460, 380, 20, 6
 
@@ -22,7 +22,7 @@ draht = [teil(f'draht_{n}', 'steel_baking_tray', 'Versteifungsdraht im Rollrand'
               x=x, y=y, w=w, d=d, z=15.5, h=3, r=1.5, mass=w * d, label=n == 'hinten',
               info=('Stahldraht, um den der obere Rand eingerollt ist. Er verhindert, dass sich das Blech in der Hitze '
                     'verzieht.') if n == 'hinten' else 'Weiteres Stück des Randdrahts.',
-              color=DRAHT)
+              color=DRAHT, form='liegend_x' if w > d else 'liegend_y')
          for n, x, y, w, d in DRAHT_STAEBE]
 
 WAENDE = [('hinten', 0, 0, B, WAND), ('vorne', 0, T - WAND, B, WAND),

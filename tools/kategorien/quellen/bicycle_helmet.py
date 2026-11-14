@@ -101,7 +101,7 @@ teile = schale + eps + [
          x=25, y=20, w=160, d=200, z=45, h=18, mass=30, color='#2B2F33',
          info='Kunststoffband, das um den Hinterkopf läuft und mit dem Drehrad enger gestellt wird. '
               'Am Schaum nur eingesteckt.',
-         marks=[mark('cyl', 8, 8, 144, 184, fill='#8C8F92')]),
+         wand=3, boden=0, marks=[mark('cyl', 8, 8, 144, 184, fill='#8C8F92', zeichnung=True)]),
     teil('drehrad', 'plastic_buckles', 'Drehrad', 'Drehrad', 'cyl',
          x=90, y=8, w=30, z=45, h=14, mass=8, color='#C8302C', explode=[0, -60, 0],
          info='Rad mit Zahnstange im Inneren, das den Verstellring strafft. Mit Schraubenzieher aufclipsen.',

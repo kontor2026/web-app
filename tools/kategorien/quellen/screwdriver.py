@@ -20,10 +20,10 @@ teile = [
          info='Flach geschmiedete, gehärtete Spitze, schwarz brüniert. Sie greift in den Schlitz der Schraube.',
          color='#33383C'),
     teil('schaft', 'steel_shaft', 'Rundschaft', 'Schaft', 'box',
-         x=12, y=60, w=6, d=143, z=12, h=6, r=3, mass=36,
+         x=12, y=60, w=6, d=143, z=12, h=6, r=3, mass=36, form='liegend_y',
          info='Chrom-Vanadium-Stahl, verchromt. Ist fest in den Griff gespritzt: Zum Trennen den Griff '
               'mit einer Säge aufschneiden. Der Stahl gehört zum Altmetall.',
-         color=STAHL, marks=[mark('box', 1.5, 50, 3, 80, 1.5, '#DCE1E4')]),
+         color=STAHL, marks=[mark('box', 1.5, 50, 3, 80, 1.5, '#DCE1E4', zeichnung=True)]),
     teil('fluegel', 'steel_shaft', 'Verdrehsicherung (Flügel)', 'Flügel', 'box',
          x=9, y=46, w=12, d=14, z=14, h=2, r=1, mass=3,
          info='Angestauchte Flügel am Schaftende. Sie verhindern, dass sich der Schaft im Griff dreht.',
@@ -48,15 +48,15 @@ teile = [
               'aufschneiden.', color=ROT),
     teil('griff_unten', 'plastic_handle', 'Griffkörper unten', 'Griff', 'box',
          x=6, y=8, w=18, d=84, z=1, h=5, r=8, mass=5, label=False,
-         info='Untere Rundung des Griffkörpers.', color='#A82822'),
+         info='Untere Rundung des Griffkörpers.', color=ROT),
     teil('griff_kappe', 'plastic_handle', 'Griffende', 'Griffende', 'box',
-         x=4, y=0, w=22, d=8, z=4, h=22, r=8, mass=3,
+         x=4, y=0, w=22, d=8, z=4, h=22, r=8, mass=3, form='liegend_y',
          info='Abgerundetes Griffende mit Aufhängeloch, Teil des Griffkörpers.',
-         color=ROT, marks=[mark('box', 3, 2, 16, 6, 3, '#D8443C')]),
+         color=ROT, marks=[mark('box', 3, 2, 16, 6, 3, '#D8443C', zeichnung=True)]),
     teil('griff_hals', 'plastic_handle', 'Griffhals', 'Griffhals', 'box',
-         x=4, y=92, w=22, d=16, z=4, h=22, r=9, mass=4,
+         x=4, y=92, w=22, d=16, z=4, h=22, r=9, mass=4, form='liegend_y',
          info='Verjüngter Übergang zum Schaft, hier tritt der Stahl aus dem Griff.',
-         color=ROT, marks=[mark('box', 3, 3, 16, 10, 5, '#D8443C')]),
+         color=ROT, marks=[mark('box', 3, 3, 16, 10, 5, '#D8443C', zeichnung=True)]),
 ]
 
 GRIFF = ['griff_oben', 'griff_mitte', 'griff_unten', 'griff_kappe', 'griff_hals']
@@ -64,5 +64,8 @@ for p in teile:
     if p['id'] in ('klinge', 'schaft', 'fluegel'):
         p['explode'] = [0, 66, 0]  # Schaft in Achsrichtung aus dem Griff ziehen
 explodiere(teile, abstand=40, fest=GRIFF)
+for p in teile:  # Foto-Ansicht: flache marks schweben über runden Formen, dort nur in der Zeichnung
+    if p.get('form'):
+        p['marks'] = [dict(m, zeichnung=True) for m in p.get('marks') or []]
 skaliere_masse(teile, oid='screwdriver')
 schreibe('screwdriver', teile)

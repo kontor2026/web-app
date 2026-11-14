@@ -529,12 +529,14 @@
    ],
    "info": "Polypropylen mit weicher Griffzone, fest um das Klingenende gespritzt. Lässt er sich nicht abziehen, mit einer Zange aufbrechen, dann Kunststoff und Stahl getrennt entsorgen.",
    "color": "#D9473A",
+   "form": "torus",
    "marks": [
     {
      "shape": "box",
      "x": 4,
      "y": 4,
      "w": 25,
+     "zeichnung": true,
      "d": 54,
      "r": 11,
      "fill": "#2E3338"
@@ -544,6 +546,7 @@
      "x": 7,
      "y": 8,
      "w": 19,
+     "zeichnung": true,
      "d": 46,
      "r": 9,
      "fill": "#EEECE5"
@@ -638,12 +641,14 @@
    ],
    "info": "Das größere Auge ist für zwei bis drei Finger und gehört zur unteren Klinge.",
    "color": "#D9473A",
+   "form": "torus",
    "marks": [
     {
      "shape": "box",
      "x": 4,
      "y": 4,
      "w": 25,
+     "zeichnung": true,
      "d": 62,
      "r": 11,
      "fill": "#2E3338"
@@ -653,6 +658,7 @@
      "x": 7,
      "y": 8,
      "w": 19,
+     "zeichnung": true,
      "d": 54,
      "r": 9,
      "fill": "#EEECE5"

@@ -24,7 +24,7 @@ def schulter(seite, dx):
         erstes = i == 0
         teile.append(teil(f'schulter_{seite}_{i + 1}', 'steel_wire',
                           'Schulter links' if seite == 'l' else 'Schulter rechts', 'Schulter', 'box',
-                          x=round(x, 3), y=round(78 + i * d, 3), w=round(w, 3), d=round(d, 3), z=0, h=DRAHT, r=0.5,
+                          x=round(x, 3), y=round(78 + i * d, 3), w=round(w, 3), d=round(d, 3), z=0, h=DRAHT, r=0.5, form='liegend_x',
                           explode=[dx, 0, 0], mass=0.3, label=erstes,
                           info=('Die schrägen Schultern geben dem Kleidungsstück seine Form. Der Draht ist dünn '
                                 'verzinkt oder lackiert gegen Rost.') if erstes else 'Abschnitt der schrägen Schulter.',
@@ -37,23 +37,26 @@ teile = [
          x=184, y=0, w=34, d=30, z=1, h=DRAHT, explode=[0, -30, 10], mass=3,
          info='Der Haken ist das Drahtende, zu einem Bogen gebogen. Viele Reinigungen nehmen Drahtbügel zurück '
               'und verwenden sie wieder.',
-         color=STAHL, marks=[mark('cyl', 3, 3, 28, 24, fill=LOCH), mark('box', 0, 17, 10, 13, 2, LOCH)]),
+         color=STAHL, form='torus', marks=[mark('cyl', 3, 3, 28, 24, fill=LOCH, zeichnung=True), mark('box', 0, 17, 10, 13, 2, LOCH, zeichnung=True)]),
     teil('hakenschaft', 'steel_wire', 'Hakenschaft', 'Hakenschaft', 'box',
-         x=199.5, y=30, w=3, d=26, z=1, h=DRAHT, r=1.5, explode=[0, -30, 10], mass=1, label=False,
+         x=199.5, y=30, w=3, d=26, z=1, h=DRAHT, r=1.5, form='liegend_y', explode=[0, -30, 10], mass=1, label=False,
          info='Gerades Drahtstück zwischen Haken und Verdrillung.', color=STAHL),
     teil('verdrillung', 'steel_wire', 'Verdrillter Hals', 'Verdrillung', 'box',
-         x=196, y=56, w=10, d=22, z=0, h=5, r=3, explode=[0, -14, 5], mass=2,
+         x=196, y=56, w=10, d=22, z=0, h=5, r=3, form='liegend_y', explode=[0, -14, 5], mass=2,
          info='Hier sind Anfang und Ende des Drahts mehrfach umeinander gedreht. So hält der Bügel ohne Schweißen '
               'oder Kleben zusammen.',
          color=STAHL, marks=raster(1, 1.5, 1, 5, 8, 2, 0, 4, r=1, fill='#7E868C')),
     *schulter('l', -15),
     *schulter('r', 15),
     teil('unterstange', 'steel_wire', 'Unterstange', 'Unterstange', 'box',
-         x=2, y=192, w=396, d=4, z=0, h=DRAHT, r=2, explode=[0, 20, 0], mass=16,
+         x=2, y=192, w=396, d=4, z=0, h=DRAHT, r=2, form='liegend_x', explode=[0, 20, 0], mass=16,
          info='Gerade Stange für Hosen, an den Enden zu den Schultern umgebogen. Ausgediente Bügel gehören '
               'zum Altmetall, nicht in die Gelbe Tonne.',
          color=STAHL),
 ]
 
+for p in teile:  # Foto-Ansicht: flache marks schweben über runden Formen, dort nur in der Zeichnung
+    if p.get('form'):
+        p['marks'] = [dict(m, zeichnung=True) for m in p.get('marks') or []]
 skaliere_masse(teile, oid='wire_hanger', stellen=2)
 schreibe('wire_hanger', teile)

@@ -1,7 +1,7 @@
 """3D-Modell: aluminium_foil. Erzeugt tools/kategorien/modelle/aluminium_foil.json.
 
 Typische Haushaltsrolle Alufolie (30 cm breit, ca. 10 m, 0,011 mm dick, 40 mm Durchmesser) liegend auf dem
-Papphülsenkern. Die runde Rolle ist aus waagrechten Scheiben (Kreissehnen) aufgebaut, der Kern ragt an beiden
+Papphülsenkern. Die runde Rolle ist in der Zeichnung ein Quader, in der Foto-Ansicht ein liegender Zylinder (form='liegend_x'), der Kern ragt an beiden
 Enden 2 mm heraus. Explodiert wird der Kern seitlich herausgezogen, die Rolle hebt aus dem Spenderkarton, der Deckel darüber.
 """
 import math
@@ -27,27 +27,28 @@ def scheiben(z0, z1, n, radius):
 
 
 teile = []
-folie = scheiben(0, 40, 8, 20)
+folie = scheiben(0, 40, 1, 20)  # eine Rolle: Foto-Ansicht zeigt sie als liegenden Zylinder (form)
 gesamt = sum(d for _, _, d in folie)
 for i, (z, h, d) in enumerate(reversed(folie)):
     oben = i == 0
     teile.append(teil(f'folie_{i + 1}', 'aluminium_foil_sheet',
                       'Aufgewickelte Alufolie' if oben else 'Aufgewickelte Alufolie (Schnitt)', 'Alufolie', 'box',
-                      x=2, y=round(MITTE_Y - d / 2, 2), w=296, d=d, z=z, h=h, r=0, explode=[0, 0, 0],
+                      x=2, y=round(MITTE_Y - d / 2, 2), w=296, d=d, z=z, h=h, r=0, explode=[0, 0, 0], form='liegend_x',
                       mass=round(110 * d / gesamt, 2), color=ALU, label=oben,
                       info='Gewalztes Aluminium, nur etwa 0,01 mm dick: eine Seite glänzt, die andere ist matt. '
                            'Saubere Reste zu einer faustgroßen Kugel knüllen, dann erkennt die Sortieranlage sie.',
-                      marks=[mark('box', 0, round(d * 0.25, 1), 296, round(d * 0.2, 1), 0, '#E4E7EA')] if oben else None))
-kern = scheiben(5, 35, 5, 15)
+                      marks=[mark('box', 0, round(d * 0.25, 1), 296, round(d * 0.2, 1), 0, '#E4E7EA', zeichnung=True)] if oben else None))
+kern = scheiben(5, 35, 1, 15)
 for i, (z, h, d) in enumerate(reversed(kern)):
     oben = i == 0
     teile.append(teil(f'kern_{i + 1}', 'aluminium_foil_sheet', 'Papphülse (Wickelkern)', 'Papphülse', 'box',
-                      x=0, y=round(MITTE_Y - d / 2, 2), w=300, d=d, z=z, h=h, r=0, explode=[330, 0, 0],
+                      x=0, y=round(MITTE_Y - d / 2, 2), w=300, d=d, z=z, h=h, r=0, explode=[330, 0, 0], form='liegend_x',
                       mass=round(28 * d / sum(k[2] for k in kern), 2), material_id='cardboard',
                       materials=[['papier', 97], ['klebstoff', 3]], color=KERN, label=oben,
                       info='Gewickelte Pappe, auf der die Folie aufgerollt ist. Wenn die Rolle leer ist, '
                            'kommt die Hülse ins Altpapier.',
-                      marks=[mark('box', 0, 0, 300, d, 0, '#A27B50'), mark('box', 0, round(d / 2 - 1, 1), 300, 2, 0, '#8E6A42')]
+                      marks=[mark('box', 0, 0, 300, d, 0, '#A27B50', zeichnung=True),
+                             mark('box', 0, round(d / 2 - 1, 1), 300, 2, 0, '#8E6A42', zeichnung=True)]
                       if oben else None))
 # Spenderkarton mit Klappdeckel: Rolle liegt innen (zusammengebaut verdeckt), hebt explodiert heraus.
 KOMP = teile[0]['component_id']

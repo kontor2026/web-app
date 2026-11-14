@@ -161,12 +161,14 @@
    ],
    "info": "Weicher Ring um den Stopfen, hält die Flasche dicht. Zum Reinigen abziehen, am Ende in den Restmüll.",
    "color": "#E8E4DA",
+   "form": "torus",
    "marks": [
     {
      "shape": "cyl",
      "x": 4,
      "y": 4,
      "w": 38,
+     "zeichnung": true,
      "fill": "#454B51"
     }
    ]
@@ -199,12 +201,15 @@
    "color": "#B5BBC0",
    "label": false,
    "sortBias": -15,
+   "wand": 1.5,
+   "boden": 0,
    "marks": [
     {
      "shape": "cyl",
      "x": 3,
      "y": 3,
      "w": 34,
+     "zeichnung": true,
      "fill": "#8E959B"
     }
    ]
@@ -239,7 +244,8 @@
    ],
    "info": "Dünnwandiger Edelstahl, außen oft verkupfert oder verspiegelt. Zwischen ihr und dem Mantel ist ein Vakuum: Ohne Luft kann kaum Wärme hindurch. Nicht aufbohren!",
    "color": "#C27A4E",
-   "sortBias": -15
+   "sortBias": -15,
+   "wand": 1
   },
   {
    "id": "schulter",
@@ -268,12 +274,15 @@
    "info": "Gewinde, auf das der Becher geschraubt wird.",
    "color": "#C9CED2",
    "label": false,
+   "wand": 3,
+   "boden": 0,
    "marks": [
     {
      "shape": "cyl",
      "x": 8,
      "y": 8,
      "w": 40,
+     "zeichnung": true,
      "fill": "#8E959B"
     }
    ]

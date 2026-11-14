@@ -26,12 +26,12 @@
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 1,25 kg",
+   "v": "≈ 1,28 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 1,25 kg",
+   "v": "≈ 1,28 kg",
    "hint": "spart 0,00 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
@@ -39,14 +39,14 @@
   "metalle_mg": {},
   "herkunft": {},
   "materialien_g": {
-   "polyester": 138.0,
+   "polyester": 143.9,
    "rubber": 118.0,
    "eva_foam": 108.0,
    "pu_foam": 22.0,
-   "polyurethane": 14.0
+   "polyurethane": 17.6
   },
-  "co2_kg": 1.245,
-  "co2_mit_recyclat_kg": 1.245,
+  "co2_kg": 1.281,
+  "co2_mit_recyclat_kg": 1.281,
   "co2_ersparnis_kg": 0.0,
   "co2_ohne_faktor": [],
   "rohstoffwert_eur": 0,
@@ -128,25 +128,24 @@
  "quelle": "Bauteile und Materialien: data/classifier.json. Maße und Gewicht: typische Werte (Schätzung). Geometrie: handgebautes Modell. Metallgehalte: Öko-Institut 2012. CO2: Idemat 2026. Preise: Westmetall 2026-11-13.",
  "parts": [
   {
-   "id": "senkel",
+   "id": "senkel_0",
    "component_id": "shoelaces",
    "material_id": "polyester",
    "name": "Schnürsenkel",
    "short": "Schnürsenkel",
    "shape": "box",
-   "x": 38,
-   "y": 100,
-   "w": 34,
-   "d": 88,
-   "z": 104,
-   "h": 4,
-   "r": 3,
+   "x": 36,
+   "y": 105.5,
+   "w": 38,
+   "d": 5,
+   "z": 114,
+   "h": 5,
    "explode": [
     130,
     0,
     40
    ],
-   "mass": 10,
+   "mass": 1.5,
    "materials": [
     [
      "polyester",
@@ -155,62 +154,546 @@
    ],
    "info": "Geflochtenes Polyester mit Kunststoffenden. Ausfädeln: Sie lassen sich weiterverwenden oder mit dem Textil abgeben.",
    "color": "#F4F2EE",
-   "marks": [
-    {
-     "shape": "box",
-     "x": 0,
-     "y": 6,
-     "w": 34,
-     "d": 3,
-     "r": 1.5,
-     "fill": "#C9C6BF"
-    },
-    {
-     "shape": "box",
-     "x": 0,
-     "y": 20,
-     "w": 34,
-     "d": 3,
-     "r": 1.5,
-     "fill": "#C9C6BF"
-    },
-    {
-     "shape": "box",
-     "x": 0,
-     "y": 34,
-     "w": 34,
-     "d": 3,
-     "r": 1.5,
-     "fill": "#C9C6BF"
-    },
-    {
-     "shape": "box",
-     "x": 0,
-     "y": 48,
-     "w": 34,
-     "d": 3,
-     "r": 1.5,
-     "fill": "#C9C6BF"
-    },
-    {
-     "shape": "box",
-     "x": 0,
-     "y": 62,
-     "w": 34,
-     "d": 3,
-     "r": 1.5,
-     "fill": "#C9C6BF"
-    },
-    {
-     "shape": "box",
-     "x": 0,
-     "y": 76,
-     "w": 34,
-     "d": 3,
-     "r": 1.5,
-     "fill": "#C9C6BF"
-    }
-   ]
+   "form": "liegend_x"
+  },
+  {
+   "id": "senkel_1",
+   "component_id": "shoelaces",
+   "material_id": "polyester",
+   "name": "Schnürsenkel",
+   "short": "Schnürsenkel",
+   "shape": "box",
+   "x": 36,
+   "y": 119.5,
+   "w": 38,
+   "d": 5,
+   "z": 110,
+   "h": 5,
+   "explode": [
+    130,
+    0,
+    40
+   ],
+   "mass": 1.5,
+   "materials": [
+    [
+     "polyester",
+     100
+    ]
+   ],
+   "info": "Geflochtenes Polyester mit Kunststoffenden. Ausfädeln: Sie lassen sich weiterverwenden oder mit dem Textil abgeben.",
+   "color": "#F4F2EE",
+   "label": false,
+   "form": "liegend_x"
+  },
+  {
+   "id": "senkel_2",
+   "component_id": "shoelaces",
+   "material_id": "polyester",
+   "name": "Schnürsenkel",
+   "short": "Schnürsenkel",
+   "shape": "box",
+   "x": 36,
+   "y": 133.5,
+   "w": 38,
+   "d": 5,
+   "z": 106,
+   "h": 5,
+   "explode": [
+    130,
+    0,
+    40
+   ],
+   "mass": 1.5,
+   "materials": [
+    [
+     "polyester",
+     100
+    ]
+   ],
+   "info": "Geflochtenes Polyester mit Kunststoffenden. Ausfädeln: Sie lassen sich weiterverwenden oder mit dem Textil abgeben.",
+   "color": "#F4F2EE",
+   "label": false,
+   "form": "liegend_x"
+  },
+  {
+   "id": "senkel_3",
+   "component_id": "shoelaces",
+   "material_id": "polyester",
+   "name": "Schnürsenkel",
+   "short": "Schnürsenkel",
+   "shape": "box",
+   "x": 36,
+   "y": 147.5,
+   "w": 38,
+   "d": 5,
+   "z": 102,
+   "h": 5,
+   "explode": [
+    130,
+    0,
+    40
+   ],
+   "mass": 1.5,
+   "materials": [
+    [
+     "polyester",
+     100
+    ]
+   ],
+   "info": "Geflochtenes Polyester mit Kunststoffenden. Ausfädeln: Sie lassen sich weiterverwenden oder mit dem Textil abgeben.",
+   "color": "#F4F2EE",
+   "label": false,
+   "form": "liegend_x"
+  },
+  {
+   "id": "senkel_4",
+   "component_id": "shoelaces",
+   "material_id": "polyester",
+   "name": "Schnürsenkel",
+   "short": "Schnürsenkel",
+   "shape": "box",
+   "x": 36,
+   "y": 161.5,
+   "w": 38,
+   "d": 5,
+   "z": 98,
+   "h": 5,
+   "explode": [
+    130,
+    0,
+    40
+   ],
+   "mass": 1.5,
+   "materials": [
+    [
+     "polyester",
+     100
+    ]
+   ],
+   "info": "Geflochtenes Polyester mit Kunststoffenden. Ausfädeln: Sie lassen sich weiterverwenden oder mit dem Textil abgeben.",
+   "color": "#F4F2EE",
+   "label": false,
+   "form": "liegend_x"
+  },
+  {
+   "id": "senkel_5",
+   "component_id": "shoelaces",
+   "material_id": "polyester",
+   "name": "Schnürsenkel",
+   "short": "Schnürsenkel",
+   "shape": "box",
+   "x": 36,
+   "y": 175.5,
+   "w": 38,
+   "d": 5,
+   "z": 94,
+   "h": 5,
+   "explode": [
+    130,
+    0,
+    40
+   ],
+   "mass": 1.5,
+   "materials": [
+    [
+     "polyester",
+     100
+    ]
+   ],
+   "info": "Geflochtenes Polyester mit Kunststoffenden. Ausfädeln: Sie lassen sich weiterverwenden oder mit dem Textil abgeben.",
+   "color": "#F4F2EE",
+   "label": false,
+   "form": "liegend_x"
+  },
+  {
+   "id": "senkel_schleife",
+   "component_id": "shoelaces",
+   "material_id": "polyester",
+   "name": "Schnürsenkel",
+   "short": "Schnürsenkel",
+   "shape": "cyl",
+   "x": 40,
+   "y": 100,
+   "w": 30,
+   "d": 14,
+   "z": 119,
+   "h": 3.5,
+   "explode": [
+    130,
+    0,
+    40
+   ],
+   "mass": 1,
+   "materials": [
+    [
+     "polyester",
+     100
+    ]
+   ],
+   "info": "Schleife des Schnürsenkels.",
+   "color": "#F4F2EE",
+   "label": false,
+   "form": "torus"
+  },
+  {
+   "id": "oese_0_0",
+   "component_id": "textile_upper",
+   "material_id": "polyurethane",
+   "name": "Ösen",
+   "short": "Ösen",
+   "shape": "cyl",
+   "x": 27,
+   "y": 104,
+   "w": 9,
+   "d": 8,
+   "z": 112,
+   "h": 3,
+   "explode": [
+    130,
+    0,
+    40
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "tpu",
+     100
+    ]
+   ],
+   "info": "Verstärkte Schnürlöcher aus Kunststoff, mit dem Obermaterial verschweißt.",
+   "color": "#C9C6BF",
+   "form": "torus"
+  },
+  {
+   "id": "oese_0_1",
+   "component_id": "textile_upper",
+   "material_id": "polyurethane",
+   "name": "Ösen",
+   "short": "Ösen",
+   "shape": "cyl",
+   "x": 74,
+   "y": 104,
+   "w": 9,
+   "d": 8,
+   "z": 112,
+   "h": 3,
+   "explode": [
+    130,
+    0,
+    40
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "tpu",
+     100
+    ]
+   ],
+   "info": "Verstärkte Schnürlöcher aus Kunststoff, mit dem Obermaterial verschweißt.",
+   "color": "#C9C6BF",
+   "label": false,
+   "form": "torus"
+  },
+  {
+   "id": "oese_1_0",
+   "component_id": "textile_upper",
+   "material_id": "polyurethane",
+   "name": "Ösen",
+   "short": "Ösen",
+   "shape": "cyl",
+   "x": 27,
+   "y": 118,
+   "w": 9,
+   "d": 8,
+   "z": 108,
+   "h": 3,
+   "explode": [
+    130,
+    0,
+    40
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "tpu",
+     100
+    ]
+   ],
+   "info": "Verstärkte Schnürlöcher aus Kunststoff, mit dem Obermaterial verschweißt.",
+   "color": "#C9C6BF",
+   "label": false,
+   "form": "torus"
+  },
+  {
+   "id": "oese_1_1",
+   "component_id": "textile_upper",
+   "material_id": "polyurethane",
+   "name": "Ösen",
+   "short": "Ösen",
+   "shape": "cyl",
+   "x": 74,
+   "y": 118,
+   "w": 9,
+   "d": 8,
+   "z": 108,
+   "h": 3,
+   "explode": [
+    130,
+    0,
+    40
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "tpu",
+     100
+    ]
+   ],
+   "info": "Verstärkte Schnürlöcher aus Kunststoff, mit dem Obermaterial verschweißt.",
+   "color": "#C9C6BF",
+   "label": false,
+   "form": "torus"
+  },
+  {
+   "id": "oese_2_0",
+   "component_id": "textile_upper",
+   "material_id": "polyurethane",
+   "name": "Ösen",
+   "short": "Ösen",
+   "shape": "cyl",
+   "x": 27,
+   "y": 132,
+   "w": 9,
+   "d": 8,
+   "z": 104,
+   "h": 3,
+   "explode": [
+    130,
+    0,
+    40
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "tpu",
+     100
+    ]
+   ],
+   "info": "Verstärkte Schnürlöcher aus Kunststoff, mit dem Obermaterial verschweißt.",
+   "color": "#C9C6BF",
+   "label": false,
+   "form": "torus"
+  },
+  {
+   "id": "oese_2_1",
+   "component_id": "textile_upper",
+   "material_id": "polyurethane",
+   "name": "Ösen",
+   "short": "Ösen",
+   "shape": "cyl",
+   "x": 74,
+   "y": 132,
+   "w": 9,
+   "d": 8,
+   "z": 104,
+   "h": 3,
+   "explode": [
+    130,
+    0,
+    40
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "tpu",
+     100
+    ]
+   ],
+   "info": "Verstärkte Schnürlöcher aus Kunststoff, mit dem Obermaterial verschweißt.",
+   "color": "#C9C6BF",
+   "label": false,
+   "form": "torus"
+  },
+  {
+   "id": "oese_3_0",
+   "component_id": "textile_upper",
+   "material_id": "polyurethane",
+   "name": "Ösen",
+   "short": "Ösen",
+   "shape": "cyl",
+   "x": 27,
+   "y": 146,
+   "w": 9,
+   "d": 8,
+   "z": 100,
+   "h": 3,
+   "explode": [
+    130,
+    0,
+    40
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "tpu",
+     100
+    ]
+   ],
+   "info": "Verstärkte Schnürlöcher aus Kunststoff, mit dem Obermaterial verschweißt.",
+   "color": "#C9C6BF",
+   "label": false,
+   "form": "torus"
+  },
+  {
+   "id": "oese_3_1",
+   "component_id": "textile_upper",
+   "material_id": "polyurethane",
+   "name": "Ösen",
+   "short": "Ösen",
+   "shape": "cyl",
+   "x": 74,
+   "y": 146,
+   "w": 9,
+   "d": 8,
+   "z": 100,
+   "h": 3,
+   "explode": [
+    130,
+    0,
+    40
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "tpu",
+     100
+    ]
+   ],
+   "info": "Verstärkte Schnürlöcher aus Kunststoff, mit dem Obermaterial verschweißt.",
+   "color": "#C9C6BF",
+   "label": false,
+   "form": "torus"
+  },
+  {
+   "id": "oese_4_0",
+   "component_id": "textile_upper",
+   "material_id": "polyurethane",
+   "name": "Ösen",
+   "short": "Ösen",
+   "shape": "cyl",
+   "x": 27,
+   "y": 160,
+   "w": 9,
+   "d": 8,
+   "z": 96,
+   "h": 3,
+   "explode": [
+    130,
+    0,
+    40
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "tpu",
+     100
+    ]
+   ],
+   "info": "Verstärkte Schnürlöcher aus Kunststoff, mit dem Obermaterial verschweißt.",
+   "color": "#C9C6BF",
+   "label": false,
+   "form": "torus"
+  },
+  {
+   "id": "oese_4_1",
+   "component_id": "textile_upper",
+   "material_id": "polyurethane",
+   "name": "Ösen",
+   "short": "Ösen",
+   "shape": "cyl",
+   "x": 74,
+   "y": 160,
+   "w": 9,
+   "d": 8,
+   "z": 96,
+   "h": 3,
+   "explode": [
+    130,
+    0,
+    40
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "tpu",
+     100
+    ]
+   ],
+   "info": "Verstärkte Schnürlöcher aus Kunststoff, mit dem Obermaterial verschweißt.",
+   "color": "#C9C6BF",
+   "label": false,
+   "form": "torus"
+  },
+  {
+   "id": "oese_5_0",
+   "component_id": "textile_upper",
+   "material_id": "polyurethane",
+   "name": "Ösen",
+   "short": "Ösen",
+   "shape": "cyl",
+   "x": 27,
+   "y": 174,
+   "w": 9,
+   "d": 8,
+   "z": 92,
+   "h": 3,
+   "explode": [
+    130,
+    0,
+    40
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "tpu",
+     100
+    ]
+   ],
+   "info": "Verstärkte Schnürlöcher aus Kunststoff, mit dem Obermaterial verschweißt.",
+   "color": "#C9C6BF",
+   "label": false,
+   "form": "torus"
+  },
+  {
+   "id": "oese_5_1",
+   "component_id": "textile_upper",
+   "material_id": "polyurethane",
+   "name": "Ösen",
+   "short": "Ösen",
+   "shape": "cyl",
+   "x": 74,
+   "y": 174,
+   "w": 9,
+   "d": 8,
+   "z": 92,
+   "h": 3,
+   "explode": [
+    130,
+    0,
+    40
+   ],
+   "mass": 0.3,
+   "materials": [
+    [
+     "tpu",
+     100
+    ]
+   ],
+   "info": "Verstärkte Schnürlöcher aus Kunststoff, mit dem Obermaterial verschweißt.",
+   "color": "#C9C6BF",
+   "label": false,
+   "form": "torus"
   },
   {
    "id": "zunge",
@@ -219,19 +702,19 @@
    "name": "Zunge",
    "short": "Zunge",
    "shape": "box",
-   "x": 30,
-   "y": 95,
-   "w": 50,
-   "d": 100,
-   "z": 80,
+   "x": 33,
+   "y": 92,
+   "w": 44,
+   "d": 26,
+   "z": 96,
    "h": 24,
-   "r": 20,
+   "r": 12,
    "explode": [
     0,
     0,
-    164
+    194
    ],
-   "mass": 16,
+   "mass": 14,
    "materials": [
     [
      "polyester",
@@ -243,11 +726,11 @@
     ]
    ],
    "info": "Gepolsterte Lasche unter den Schnürsenkeln, oben am Schaft angenäht. Im Inneren steckt Schaumstoff.",
-   "color": "#E8E6E1",
+   "color": "#ECEAE5",
    "marks": [
     {
      "shape": "box",
-     "x": 15,
+     "x": 12,
      "y": 6,
      "w": 20,
      "d": 10,
@@ -257,25 +740,69 @@
    ]
   },
   {
-   "id": "ferse",
+   "id": "kragen",
+   "component_id": "textile_upper",
+   "material_id": "polyester",
+   "name": "Gepolsterter Kragen",
+   "short": "Kragen",
+   "shape": "cyl",
+   "x": 13,
+   "y": 1,
+   "w": 84,
+   "d": 100,
+   "z": 106,
+   "h": 12,
+   "explode": [
+    0,
+    0,
+    248
+   ],
+   "mass": 8,
+   "materials": [
+    [
+     "polyester",
+     60
+    ],
+    [
+     "schaum",
+     40
+    ]
+   ],
+   "info": "Schaumgepolsterter Rand um den Einstieg, innen mit Futterstoff bezogen.",
+   "color": "#DAD7D0",
+   "form": "torus",
+   "marks": [
+    {
+     "shape": "cyl",
+     "x": 10,
+     "y": 10,
+     "w": 64,
+     "zeichnung": true,
+     "d": 80,
+     "fill": "#5E656A"
+    }
+   ]
+  },
+  {
+   "id": "ferse_3",
    "component_id": "textile_upper",
    "material_id": "polyester",
    "name": "Fersenteil mit Kragen",
    "short": "Fersenteil",
    "shape": "box",
-   "x": 8,
-   "y": 0,
-   "w": 94,
-   "d": 95,
-   "z": 32,
-   "h": 86,
-   "r": 40,
+   "x": 16,
+   "y": 3,
+   "w": 78,
+   "d": 96,
+   "z": 114,
+   "h": 12,
+   "r": 38,
    "explode": [
     0,
     0,
-    124
+    80
    ],
-   "mass": 50,
+   "mass": 10.2,
    "materials": [
     [
      "polyester",
@@ -291,47 +818,167 @@
     ]
    ],
    "info": "Gepolsterter Schaft rund um Knöchel und Ferse. Mit dem Vorderschaft vernäht und an die Sohle geklebt.",
-   "color": "#E8E6E1",
+   "color": "#ECEAE5",
+   "wand": 3,
    "marks": [
     {
-     "shape": "cyl",
-     "x": 17,
-     "y": 20,
-     "w": 60,
-     "d": 70,
-     "fill": "#C9C6BF"
+     "shape": "box",
+     "x": 0,
+     "y": 0,
+     "w": 78,
+     "zeichnung": true,
+     "d": 96,
+     "r": 38,
+     "fill": "#D9D6CF"
     },
     {
-     "shape": "box",
-     "x": 40,
-     "y": 0,
-     "w": 14,
-     "d": 8,
-     "r": 3,
-     "fill": "#5E656A"
+     "shape": "cyl",
+     "x": 9,
+     "y": 8,
+     "w": 60,
+     "zeichnung": true,
+     "d": 80,
+     "fill": "#C9C6BF"
     }
    ]
   },
   {
-   "id": "vorfuss",
+   "id": "ferse_2",
+   "component_id": "textile_upper",
+   "material_id": "polyester",
+   "name": "Fersenteil mit Kragen",
+   "short": "Fersenteil",
+   "shape": "box",
+   "x": 15,
+   "y": 4,
+   "w": 80,
+   "d": 106,
+   "z": 102,
+   "h": 12,
+   "r": 38,
+   "explode": [
+    0,
+    0,
+    80
+   ],
+   "mass": 11.5,
+   "materials": [
+    [
+     "polyester",
+     65
+    ],
+    [
+     "schaum",
+     25
+    ],
+    [
+     "tpu",
+     10
+    ]
+   ],
+   "info": "Gepolsterter Schaft rund um Knöchel und Ferse. Mit dem Vorderschaft vernäht und an die Sohle geklebt.",
+   "color": "#ECEAE5",
+   "label": false,
+   "wand": 3
+  },
+  {
+   "id": "ferse_1",
+   "component_id": "textile_upper",
+   "material_id": "polyester",
+   "name": "Fersenteil mit Kragen",
+   "short": "Fersenteil",
+   "shape": "box",
+   "x": 14,
+   "y": 5,
+   "w": 82,
+   "d": 130,
+   "z": 92,
+   "h": 10,
+   "r": 40,
+   "explode": [
+    0,
+    0,
+    80
+   ],
+   "mass": 12.1,
+   "materials": [
+    [
+     "polyester",
+     65
+    ],
+    [
+     "schaum",
+     25
+    ],
+    [
+     "tpu",
+     10
+    ]
+   ],
+   "info": "Gepolsterter Schaft rund um Knöchel und Ferse. Mit dem Vorderschaft vernäht und an die Sohle geklebt.",
+   "color": "#ECEAE5",
+   "label": false,
+   "wand": 3
+  },
+  {
+   "id": "ferse_0",
+   "component_id": "textile_upper",
+   "material_id": "polyester",
+   "name": "Fersenteil mit Kragen",
+   "short": "Fersenteil",
+   "shape": "box",
+   "x": 13,
+   "y": 6,
+   "w": 84,
+   "d": 170,
+   "z": 82,
+   "h": 10,
+   "r": 40,
+   "explode": [
+    0,
+    0,
+    80
+   ],
+   "mass": 16.2,
+   "materials": [
+    [
+     "polyester",
+     65
+    ],
+    [
+     "schaum",
+     25
+    ],
+    [
+     "tpu",
+     10
+    ]
+   ],
+   "info": "Gepolsterter Schaft rund um Knöchel und Ferse. Mit dem Vorderschaft vernäht und an die Sohle geklebt.",
+   "color": "#ECEAE5",
+   "label": false,
+   "wand": 3
+  },
+  {
+   "id": "vorfuss_4",
    "component_id": "textile_upper",
    "material_id": "polyester",
    "name": "Obermaterial Vorfuß",
    "short": "Obermaterial",
    "shape": "box",
-   "x": 5,
-   "y": 95,
-   "w": 100,
-   "d": 195,
-   "z": 32,
-   "h": 48,
-   "r": 45,
+   "x": 12,
+   "y": 8,
+   "w": 86,
+   "d": 206,
+   "z": 72,
+   "h": 10,
+   "r": 40,
    "explode": [
     0,
     0,
-    124
+    80
    ],
-   "mass": 62,
+   "mass": 9.1,
    "materials": [
     [
      "polyester",
@@ -347,88 +994,164 @@
     ]
    ],
    "info": "Atmungsaktives Polyester-Netzgewebe mit aufgeschweißten Kunststoff-Verstärkungen. Mit dem Messer entlang der Sohlennaht abtrennen.",
-   "color": "#E8E6E1",
-   "marks": [
-    {
-     "shape": "cyl",
-     "x": 26,
-     "y": 10,
-     "w": 4,
-     "d": 4
-    },
-    {
-     "shape": "cyl",
-     "x": 38,
-     "y": 10,
-     "w": 4,
-     "d": 4
-    },
-    {
-     "shape": "cyl",
-     "x": 50,
-     "y": 10,
-     "w": 4,
-     "d": 4
-    },
-    {
-     "shape": "cyl",
-     "x": 62,
-     "y": 10,
-     "w": 4,
-     "d": 4
-    },
-    {
-     "shape": "cyl",
-     "x": 74,
-     "y": 10,
-     "w": 4,
-     "d": 4
-    },
-    {
-     "shape": "cyl",
-     "x": 26,
-     "y": 20,
-     "w": 4,
-     "d": 4
-    },
-    {
-     "shape": "cyl",
-     "x": 38,
-     "y": 20,
-     "w": 4,
-     "d": 4
-    },
-    {
-     "shape": "cyl",
-     "x": 50,
-     "y": 20,
-     "w": 4,
-     "d": 4
-    },
-    {
-     "shape": "cyl",
-     "x": 62,
-     "y": 20,
-     "w": 4,
-     "d": 4
-    },
-    {
-     "shape": "cyl",
-     "x": 74,
-     "y": 20,
-     "w": 4,
-     "d": 4
-    },
-    {
-     "shape": "box",
-     "x": 8,
-     "y": 130,
-     "w": 84,
-     "d": 50,
-     "r": 35,
-     "fill": "#D6D3CC"
-    }
-   ]
+   "color": "#ECEAE5",
+   "wand": 3
+  },
+  {
+   "id": "vorfuss_3",
+   "component_id": "textile_upper",
+   "material_id": "polyester",
+   "name": "Obermaterial Vorfuß",
+   "short": "Obermaterial",
+   "shape": "box",
+   "x": 10,
+   "y": 8,
+   "w": 90,
+   "d": 240,
+   "z": 62,
+   "h": 10,
+   "r": 42,
+   "explode": [
+    0,
+    0,
+    80
+   ],
+   "mass": 11.1,
+   "materials": [
+    [
+     "polyester",
+     80
+    ],
+    [
+     "tpu",
+     15
+    ],
+    [
+     "schaum",
+     5
+    ]
+   ],
+   "info": "Atmungsaktives Polyester-Netzgewebe mit aufgeschweißten Kunststoff-Verstärkungen. Mit dem Messer entlang der Sohlennaht abtrennen.",
+   "color": "#ECEAE5",
+   "label": false,
+   "wand": 3
+  },
+  {
+   "id": "vorfuss_2",
+   "component_id": "textile_upper",
+   "material_id": "polyester",
+   "name": "Obermaterial Vorfuß",
+   "short": "Obermaterial",
+   "shape": "box",
+   "x": 8,
+   "y": 6,
+   "w": 94,
+   "d": 266,
+   "z": 52,
+   "h": 10,
+   "r": 44,
+   "explode": [
+    0,
+    0,
+    80
+   ],
+   "mass": 12.9,
+   "materials": [
+    [
+     "polyester",
+     80
+    ],
+    [
+     "tpu",
+     15
+    ],
+    [
+     "schaum",
+     5
+    ]
+   ],
+   "info": "Atmungsaktives Polyester-Netzgewebe mit aufgeschweißten Kunststoff-Verstärkungen. Mit dem Messer entlang der Sohlennaht abtrennen.",
+   "color": "#ECEAE5",
+   "label": false,
+   "wand": 3
+  },
+  {
+   "id": "vorfuss_1",
+   "component_id": "textile_upper",
+   "material_id": "polyester",
+   "name": "Obermaterial Vorfuß",
+   "short": "Obermaterial",
+   "shape": "box",
+   "x": 6,
+   "y": 4,
+   "w": 98,
+   "d": 280,
+   "z": 42,
+   "h": 10,
+   "r": 45,
+   "explode": [
+    0,
+    0,
+    80
+   ],
+   "mass": 14.1,
+   "materials": [
+    [
+     "polyester",
+     80
+    ],
+    [
+     "tpu",
+     15
+    ],
+    [
+     "schaum",
+     5
+    ]
+   ],
+   "info": "Atmungsaktives Polyester-Netzgewebe mit aufgeschweißten Kunststoff-Verstärkungen. Mit dem Messer entlang der Sohlennaht abtrennen.",
+   "color": "#ECEAE5",
+   "label": false,
+   "wand": 3
+  },
+  {
+   "id": "vorfuss_0",
+   "component_id": "textile_upper",
+   "material_id": "polyester",
+   "name": "Obermaterial Vorfuß",
+   "short": "Obermaterial",
+   "shape": "box",
+   "x": 5,
+   "y": 3,
+   "w": 100,
+   "d": 285,
+   "z": 32,
+   "h": 10,
+   "r": 46,
+   "explode": [
+    0,
+    0,
+    80
+   ],
+   "mass": 14.7,
+   "materials": [
+    [
+     "polyester",
+     80
+    ],
+    [
+     "tpu",
+     15
+    ],
+    [
+     "schaum",
+     5
+    ]
+   ],
+   "info": "Atmungsaktives Polyester-Netzgewebe mit aufgeschweißten Kunststoff-Verstärkungen. Mit dem Messer entlang der Sohlennaht abtrennen.",
+   "color": "#ECEAE5",
+   "label": false,
+   "wand": 3
   },
   {
    "id": "fersenkappe",
@@ -437,12 +1160,12 @@
    "name": "Fersenkappe",
    "short": "Fersenkappe",
    "shape": "box",
-   "x": 12,
-   "y": 3,
-   "w": 86,
-   "d": 40,
-   "z": 36,
-   "h": 55,
+   "x": 20,
+   "y": 15,
+   "w": 70,
+   "d": 34,
+   "z": 38,
+   "h": 40,
    "r": 34,
    "explode": [
     -130,
@@ -457,7 +1180,8 @@
     ]
    ],
    "info": "Feste Kunststoffschale zwischen Futter und Obermaterial. Sie hält die Ferse im Schuh stabil.",
-   "color": "#B8BCC0"
+   "color": "#B8BCC0",
+   "sortBias": -40
   },
   {
    "id": "einlegesohle",
@@ -467,16 +1191,16 @@
    "short": "Einlegesohle",
    "shape": "box",
    "x": 12,
-   "y": 6,
+   "y": 8,
    "w": 86,
-   "d": 276,
-   "z": 32,
+   "d": 272,
+   "z": 35,
    "h": 4,
    "r": 40,
    "explode": [
     0,
     0,
-    80
+    211
    ],
    "mass": 22,
    "materials": [
@@ -514,8 +1238,8 @@
    "y": 0,
    "w": 104,
    "d": 290,
-   "z": 10,
-   "h": 22,
+   "z": 8,
+   "h": 24,
    "r": 48,
    "explode": [
     0,
@@ -530,7 +1254,7 @@
     ]
    ],
    "info": "Leichter EVA-Schaum, der beim Laufen federt. Mit der Laufsohle verklebt: nur mit Heißluft und Messer trennbar.",
-   "color": "#F4F2EE"
+   "color": "#F6F5F1"
   },
   {
    "id": "laufsohle",
@@ -544,7 +1268,7 @@
    "w": 110,
    "d": 290,
    "z": 0,
-   "h": 10,
+   "h": 8,
    "r": 50,
    "explode": [
     0,

@@ -219,7 +219,7 @@
     ]
    ],
    "info": "Schmale Spitze zum Greifen kleiner Teile.",
-   "color": "#5E666C",
+   "color": "#A3AAB0",
    "label": false,
    "marks": [
     {
@@ -287,7 +287,7 @@
     ]
    ],
    "info": "Schmale Spitze zum Greifen kleiner Teile.",
-   "color": "#5E666C",
+   "color": "#A3AAB0",
    "label": false,
    "marks": [
     {
@@ -355,7 +355,7 @@
     ]
    ],
    "info": "Gehärteter Chrom-Vanadium-Stahl mit Riffelung zum Greifen und Schneide zum Drahtschneiden.",
-   "color": "#5E666C",
+   "color": "#A3AAB0",
    "marks": [
     {
      "shape": "box",
@@ -430,7 +430,7 @@
     ]
    ],
    "info": "Am Gelenk ist jede Hälfte auf halbe Dicke abgeflacht, so liegen beide Hälften übereinander.",
-   "color": "#5E666C",
+   "color": "#A3AAB0",
    "label": false,
    "marks": [
     {
@@ -469,7 +469,7 @@
     ]
    ],
    "info": "Die Hälfte kreuzt im Gelenk: Die linke Backe gehört zum rechten Griff.",
-   "color": "#5E666C",
+   "color": "#A3AAB0",
    "label": false
   },
   {
@@ -499,7 +499,7 @@
     ]
    ],
    "info": "Gegenstück mit Riffelung. Der Stahl ist wertvoller Schrott für den Wertstoffhof.",
-   "color": "#5E666C",
+   "color": "#A3AAB0",
    "marks": [
     {
      "shape": "box",
@@ -574,7 +574,7 @@
     ]
    ],
    "info": "Untere Gelenkplatte mit Bohrung für den Niet.",
-   "color": "#5E666C",
+   "color": "#A3AAB0",
    "label": false,
    "marks": [
     {
@@ -613,7 +613,7 @@
     ]
    ],
    "info": "Stahlkern des linken Griffs, unter der Kunststoffhülle.",
-   "color": "#5E666C",
+   "color": "#A3AAB0",
    "label": false
   },
   {
@@ -648,12 +648,14 @@
    ],
    "info": "Zwei-Komponenten-Griff aus PP und weichem TPE. Abziehen oder aufschneiden, dann Kunststoff in den Restmüll und Stahl zum Altmetall.",
    "color": "#C8322B",
+   "form": "liegend_y",
    "marks": [
     {
      "shape": "box",
      "x": 4,
      "y": 12,
      "w": 16,
+     "zeichnung": true,
      "d": 70,
      "r": 7,
      "fill": "#E9B92D"
@@ -692,12 +694,14 @@
    ],
    "info": "Isoliert nicht gegen Strom, wenn kein VDE-Zeichen draufsteht.",
    "color": "#C8322B",
+   "form": "liegend_y",
    "marks": [
     {
      "shape": "box",
      "x": 4,
      "y": 12,
      "w": 16,
+     "zeichnung": true,
      "d": 70,
      "r": 7,
      "fill": "#E9B92D"

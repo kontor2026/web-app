@@ -35,14 +35,14 @@ def aermel(seite, x, dx, dy):
 
 teile = [
     teil('kordelstopper', 'coated_polyester_fabric', 'Kordelstopper der Kapuze', 'Kordelstopper', 'cyl',
-         material_id='pp', x=88, y=14, w=10, d=14, z=26, h=5, mass=1.5, materials=[['pp', 80], ['stahl', 20]],
+         material_id='pp', x=86, y=13, w=10, d=14, z=24, h=5, mass=1.5, materials=[['pp', 80], ['stahl', 20]],
          color='#22272B',
          info='Kunststoffklemme mit Stahlfeder für den Kapuzenzug. Vor dem Recycling abschneiden.',
          marks=[mark('cyl', 2.5, 4, 5, fill='#555C62')]),
-    teil('kapuze', 'coated_polyester_fabric', 'Kapuze, im Kragen eingerollt', 'Kapuze', 'box',
-         x=95, y=0, w=110, d=42, z=16, h=14, r=14, mass=30, materials=STOFF, color=GELB,
+    teil('kapuze', 'coated_polyester_fabric', 'Kapuze, im Kragen eingerollt', 'Kapuze', 'box', form='liegend_x',
+         x=95, y=2, w=110, d=36, z=12, h=18, r=14, mass=30, materials=STOFF, color=GELB,
          info='Die Kapuze steckt eingerollt im Kragen und wird bei Regen herausgezogen. Mit Kordelzug am Gesicht.',
-         marks=[mark('box', 6, 21, 98, 2, 1, NAHT), mark('box', 70, 8, 28, 8, 3, '#D6A82E')]),
+         marks=[mark('box', 6, 17, 98, 2, 1, NAHT, zeichnung=True), mark('box', 70, 8, 28, 8, 3, '#D6A82E', zeichnung=True)]),
     teil('leiste', 'coated_polyester_fabric', 'Abdeckleiste mit Druckknöpfen', 'Abdeckleiste', 'box',
          x=139, y=40, w=24, d=360, z=23.5, h=2.5, r=2, mass=12, materials=[['polyester', 80], ['tpu', 10], ['stahl', 10]],
          color=GELB,

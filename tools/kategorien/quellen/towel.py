@@ -11,7 +11,7 @@ from bau import teil, mark, raster, skaliere_masse, schreibe  # noqa: E402
 FROTTEE = '#C2554A'
 BORTE = '#A8443B'
 BW = [['baumwolle', 100]]
-SCHLINGEN = raster(15, 15, 14, 11, 4, 4, 20, 20, shape='cyl', fill='#B34C42')
+SCHLINGEN = [dict(m, zeichnung=True) for m in raster(15, 15, 14, 11, 4, 4, 20, 20, shape='cyl', fill='#B34C42')]  # Foto: Stoffstruktur
 KANTEN = [mark('box', 0, 0, 5, 250, 0, BORTE), mark('box', 295, 0, 5, 250, 0, BORTE)]  # umgenähte Webkanten
 
 teile = [
