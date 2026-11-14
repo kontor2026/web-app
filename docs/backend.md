@@ -25,7 +25,7 @@ Bei jedem Push auf `main` baut GitHub Actions die drei Images und veröffentlich
 ## Claude statt lokalem Modell
 
 - Braucht einen **API-Schlüssel aus der Claude Console** (https://platform.claude.com), abgerechnet pro Token. Ein claude.ai-Abo (Pro/Max) ist kein API-Zugang: Anthropic erlaubt nicht, den Abo-Login oder dessen Kontingent für eigene Produkte zu nutzen.
-- Kosten grob: Erkennung ca. 0,5–1 Cent, Steckbrief ca. 3–6 Cent, Bauideen ca. 1–2 Cent pro Gegenstand (Claude Opus 5.5, 4 $/20 $ pro Million Token, Schätzung).
+- Kosten grob: Erkennung ca. 0,5–1 Cent, Bauideen ca. 1–2 Cent pro neue Kategorie, Steckbrief-Entwurf (nur bei „weiß ich nicht“) ca. 3–6 Cent (Claude Opus 5.5, 4 $/20 $ pro Million Token, Schätzung).
 - Denktiefe pro Schritt (`EFFORT` in `llm_claude.py`): Erkennung und Bauideen `low`, Steckbrief `medium`.
 - Strukturierte Ausgaben kennen keine Zahlen- und Längengrenzen. `claude_schema()` verschiebt sie in die Feldbeschreibung, geprüft wird danach wie beim lokalen Modell.
 - Lehnt ein Sicherheitsfilter eine Anfrage ab, übernimmt serverseitig ein Ersatzmodell (`fallbacks: "default"`).
@@ -38,19 +38,19 @@ Bei jedem Push auf `main` baut GitHub Actions die drei Images und veröffentlich
 - Alle Claude-Code-Werkzeuge sind abgeschaltet, `setting_sources=[]` verhindert, dass Einstellungen oder CLAUDE.md des Rechners geladen werden.
 - Gemessen (AirPods-Foto, Claude Opus 5.5): Erkennung 8 s, Steckbrief 34 s, Bauideen 37 s. Ergebnisse deutlich genauer als das lokale 4B-Modell.
 
-## Vorausrechnen (parallel ab Upload)
+## Erkennung nur nach Kategorien, Steckbrief aus der Datenbank
 
-Steckbrief und Bauideen brauchen nur das Bild. Mit Claude (`claude`, `claude-abo`) starten sie deshalb beim Upload sofort parallel zur Erkennung, als Hintergrund-Jobs im Backend. Wählt der Schüler den wahrscheinlichsten Kandidaten (Normalfall), wird der vorbereitete Steckbrief übernommen. Wählt er einen anderen, wird für diesen neu gerechnet. Beim lokalen Modell (nur eine Anfrage gleichzeitig) starten die Bauideen direkt nach dem Steckbrief im Hintergrund. Steuerung: `VORAUSRECHNEN=auto|an|aus`. Stand der Jobs: `GET /api/scans/{id}/jobs`, im Frontend als „Bauideen bereit“ neben den Buttons.
+Die KI wählt ihre Kandidaten nur aus den 201 Kategorien (`backend/seed/kategorien/index.json`, im Schema als feste Liste). Jeder Kandidat ist damit ein Kategorie-Modell in der Datenbank, und der Steckbrief mit Explosionszeichnung kommt ohne KI sofort aus der Datenbank. Nur „Etwas anderes / weiß ich nicht“ lässt die KI wie früher einen Steckbrief-Entwurf rechnen (20–40 s).
 
-Gemessen (AirPods-Foto, Claude-Abo, Opus 5.5):
+Nach der Erkennung rechnet das Backend die Bauideen für die erkannte Kategorie im Hintergrund vor, solange die Kategorie noch keine hat. Fertige Ideen bleiben an der Kategorie gespeichert, beim nächsten Mal sind sie sofort da. Abschalten mit `VORAUSRECHNEN=aus`. Stand der Jobs: `GET /api/scans/{id}/jobs`, im Frontend als „Bauideen bereit“ neben den Buttons.
 
-| ab Upload | |
+Gemessen (Claude-Abo, Opus 5.5, über den Tunnel der Präsentation):
+
+| | |
 |---|---|
-| 8,7 s | Erkennung fertig, Steckbrief und Ideen laufen schon |
-| 38 s | Steckbrief fertig (nach dem Bestätigen nur noch 22 s Wartezeit) |
-| sofort | Bauideen beim Öffnen fertig |
-
-Ein kompletter neuer Gegenstand kostet beim Pro-Abo etwa 2 Prozentpunkte des 5-Stunden-Kontingents.
+| 5,5–6 s | Erkennung eines neuen Fotos (Smartphone, Glasflasche) |
+| 0,3 s | Steckbrief (im Backend 1 ms) |
+| 0,5 s | Bauideen, wenn der Vorlauf fertig ist (sonst ca. 30 s) |
 
 ## Ohne Docker starten
 
@@ -83,7 +83,7 @@ $env:LLM_PROVIDER="lokal"; $env:LLM_BASE_URL="http://127.0.0.1:4000/v1"; backend
 - `lokal` leitet unverändert an einen OpenAI-kompatiblen Server weiter, standardmäßig Ollama auf `localhost:11434` (ändern mit `--upstream`).
 - `claude` und `claude-abo` nutzen dieselben Module wie das Backend (`llm_claude.py`, `llm_claude_abo.py`) und dieselben Einstellungen (`ANTHROPIC_API_KEY`, `CLAUDE_MODEL`, Abo-Anmeldung des Rechners).
 - Der Proxy hört standardmäßig nur auf `127.0.0.1:4000` (`--host`, `--port`). Das Abo ist persönlich: den Proxy im Modus `claude-abo` nicht für andere Rechner freigeben.
-- Weil das Backend „lokal“ sieht, rechnet es nicht voraus und zeigt in der Kopfzeile „KI lokal · station-vl“. Mit Claude hinter dem Proxy `VORAUSRECHNEN=an` setzen.
+- Weil das Backend „lokal“ sieht, zeigt es in der Kopfzeile „KI lokal · station-vl“.
 
 ## Einstellungen (Umgebungsvariablen)
 

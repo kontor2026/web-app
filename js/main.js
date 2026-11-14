@@ -277,7 +277,7 @@ function showResultApi(v, res) {
   const side = v.querySelector('#side');
   const quelle = { 'foto-abgleich': 'Foto-Abgleich mit bekannten Gegenständen', ki: kiLabel(), mock: 'Mock-Modus' }[res.quelle];
   const cands = res.kandidaten.map((c) => ({ ...c, key: c.name }));
-  cands.push({ key: '', name: 'Anderes Modell / weiß ich nicht', conf: null });
+  cands.push({ key: '', name: 'Etwas anderes / weiß ich nicht', conf: null });
   state.model = cands[0].name;
   side.innerHTML = `
     <div class="result">
@@ -288,7 +288,7 @@ function showResultApi(v, res) {
       </div>
       ${res.qualitaet?.ok === false ? `<p class="note warn">${res.qualitaet.hinweis}</p>` : ''}
       <div>
-        <div class="eyebrow" style="margin-bottom:10px">Welches Modell ist es?</div>
+        <div class="eyebrow" style="margin-bottom:10px">Was ist es?</div>
         <div class="cands">${cands.map((c, i) => `
           <button class="cand ${i === 0 ? 'sel' : ''}" data-key="${c.key}">
             <span class="radio"></span><span>${c.name}${c.object_id ? ' <small class="known">bekannt</small>' : ''}</span>

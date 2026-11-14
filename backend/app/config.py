@@ -30,8 +30,8 @@ ANTHROPIC_API_KEY = secret('ANTHROPIC_API_KEY')
 CLAUDE_CODE_OAUTH_TOKEN = secret('CLAUDE_CODE_OAUTH_TOKEN')
 CLAUDE_MODEL = os.getenv('CLAUDE_MODEL', 'claude-opus-5-5')
 
-# Steckbrief und Bauideen schon beim Upload im Hintergrund starten ('auto': nur bei Claude, weil ein
-# lokales Modell auf CPU Anfragen ohnehin nacheinander abarbeitet). Werte: auto | an | aus
+# Precompute the build ideas for the recognized category right after recognition. 'aus' turns it off,
+# 'auto' and 'an' both turn it on (the data sheet itself always comes from the database).
 VORAUSRECHNEN = os.getenv('VORAUSRECHNEN', 'auto')
 LLM_TIMEOUT = float(os.getenv('LLM_TIMEOUT', '600'))
 LLM_REASONING = os.getenv('LLM_REASONING', 'none')  # 'none' schaltet das Denken ab; leer = Feld weglassen

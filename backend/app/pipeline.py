@@ -3,13 +3,12 @@
 Reihenfolge pro Scan:
   1. Qualitätscheck (Helligkeit, Schärfe)           ohne KI
   2. Foto-Abgleich mit bekannten Fotos (dHash)       ohne KI, sofort
-  3. Erkennung mit Vision-Modell                     KI, Ausgabe nach Schema
-  4. Steckbrief: Cache nach Modellname, sonst KI     KI liefert Struktur, Code rechnet Geometrie
+  3. Erkennung mit Vision-Modell                     KI wählt nur aus den 201 Kategorien (Schema-Enum)
+  4. Steckbrief: aus der Datenbank (Kategorie)       sofort; nur "weiß ich nicht" lässt die KI einen Entwurf rechnen
   5. Bauideen: Lagerbestand + KI, Lager-IDs im Schema erzwungen
 
-Vorausrechnen: Mit Claude starten Steckbrief (4) und Bauideen (5) schon beim Upload parallel zur
-Erkennung (3), denn beide brauchen nur das Bild. Beim lokalen Modell (eine Anfrage nach der anderen)
-laufen die Bauideen im Hintergrund direkt nach dem Steckbrief, während die Zeichnung angeschaut wird.
+Vorausrechnen: Nach der Erkennung starten die Bauideen (5) für die erkannte Kategorie im Hintergrund,
+während der Steckbrief angeschaut wird. Fertige Ideen bleiben an der Kategorie gespeichert.
 """
 import json
 import threading
@@ -50,24 +49,36 @@ def _with_retry(call, validate, repair=None):
 # ---------------------------------------------------------------- Hintergrund-Jobs
 
 _pool = ThreadPoolExecutor(max_workers=6, thread_name_prefix='ki')
-_jobs = {}                       # scan_id -> {'steckbrief': Future, 'ideen': Future}
+_jobs = {}                       # scan_id -> {'ideen': Future}
+_ziel = {}                       # scan_id -> object_id the running ideas job is for
+_letzter_scan = {}               # object_id -> scan_id that last opened it (categories have no scan_id of their own)
 _jobs_lock = threading.Lock()
 
 
-def vorausrechnen():
-    return config.VORAUSRECHNEN == 'an' or (config.VORAUSRECHNEN == 'auto' and config.LLM_PROVIDER != 'lokal')
-
-
-def _start(scan_id, art, fn, *args):
+def _start_ideen(scan_id, object_id):
+    """Bauideen für object_id im Hintergrund rechnen, während der Steckbrief angeschaut wird."""
+    if config.VORAUSRECHNEN == 'aus' or config.LLM_MODE == 'mock':
+        return
     with _jobs_lock:
-        _jobs.setdefault(scan_id, {})[art] = _pool.submit(fn, *args)
+        _jobs.setdefault(scan_id, {})['ideen'] = _pool.submit(_ideen_ki, object_id, scan_id)
+        _ziel[scan_id] = object_id
         for alt in sorted(_jobs)[:-50]:          # nur die letzten 50 Scans merken
             _jobs.pop(alt, None)
+            _ziel.pop(alt, None)
 
 
 def _job(scan_id, art):
     with _jobs_lock:
         return _jobs.get(scan_id, {}).get(art)
+
+
+def _ideen_job(object_id, scan_id):
+    """Laufender oder fertiger Ideen-Job, aber nur, wenn er für genau dieses Objekt gerechnet wird."""
+    with _jobs_lock:
+        for sid in (_letzter_scan.get(object_id), scan_id):
+            if sid is not None and _ziel.get(sid) == object_id:
+                return _jobs.get(sid, {}).get('ideen')
+    return None
 
 
 def jobs(scan_id):
@@ -91,10 +102,21 @@ def _warte(f):
 SCAN_PROMPT = ('Was für ein Gegenstand liegt auf diesem Foto? Bewerte nur den Gegenstand selbst, '
                'nicht den Untergrund (Tisch, Boden) und nicht den Hintergrund.\n'
                '- objekt: was für ein Gegenstand es ist, als allgemeiner Begriff ohne Marke.\n'
-               '- kandidaten: bis zu drei konkrete Modelle oder Produkte mit Marke, mit deiner Sicherheit (0 bis 1).\n'
-               '- sichtbarer_text: abgelesener Text wie Marke oder Typenschild.\n'
+               + ('- kandidaten: bis zu drei passende Kategorien aus der Kategorienliste unten, die beste zuerst, '
+                  'mit deiner Sicherheit (0 bis 1). Nur Namen genau wie in der Liste, keine Marken oder Modelle.\n'
+                  if schemas.KATEGORIE_NAMEN else
+                  '- kandidaten: bis zu drei konkrete Modelle oder Produkte mit Marke, mit deiner Sicherheit (0 bis 1).\n')
+               + '- sichtbarer_text: abgelesener Text wie Marke oder Typenschild.\n'
                '- material_vermutung: die Hauptmaterialien, jedes nur einmal. Achte auf Glas gegenüber Kunststoff.\n'
-               '- ist_gegenstand: false, wenn kein Gegenstand zu sehen ist.\n' + MATERIAL_LISTE)
+               '- ist_gegenstand: false, wenn kein Gegenstand zu sehen ist.\n' + MATERIAL_LISTE
+               + ('\nKategorienliste: ' + '; '.join(schemas.KATEGORIE_NAMEN) if schemas.KATEGORIE_NAMEN else ''))
+
+
+def _check_scan(d):
+    if not d.get('kandidaten'):
+        return ['mindestens ein Kandidat']
+    fremd = [k['name'] for k in d['kandidaten'] if schemas.KATEGORIE_NAMEN and not db.find_alias(k['name'])]
+    return [f'nur Namen aus der Kategorienliste, nicht {", ".join(fremd)}'] if fremd else []
 
 
 def scan(data_url):
@@ -125,21 +147,20 @@ def scan(data_url):
             'material_vermutung': [], 'sichtbarer_text': '', 'schritte': [{'name': 'Foto-Abgleich: kein Treffer', 'ms': 0}],
         }
     else:
-        if vorausrechnen():
-            # Steckbrief und Bauideen brauchen nur das Bild: sofort parallel zur Erkennung starten.
-            _start(sid, 'steckbrief', _steckbrief_ki, sid, None)
-            _start(sid, 'ideen', _ideen_ki, None, sid)
         data, info = _with_retry(
             lambda f: llm.chat_json(model=config.VISION_MODEL, system=SYSTEM,
                                     user=SCAN_PROMPT + (f'\nKorrigiere: {f}' if f else ''),
                                     schema=schemas.SCAN, name='scan', images=[images.to_data_url(obj_img)], max_tokens=600),
-            lambda d: [] if d.get('kandidaten') else ['mindestens ein Kandidat'])
-        kands = sorted(data['kandidaten'], key=lambda k: -k['sicherheit'])
+            _check_scan)
+        best = {}
+        for k in data['kandidaten']:                 # each category once, with its highest confidence
+            best[k['name']] = max(k['sicherheit'], best.get(k['name'], 0))
+        kandidaten = [{'name': n, 'conf': round(c, 2), 'object_id': db.find_alias(n)}
+                      for n, c in sorted(best.items(), key=lambda x: -x[1])]
+        top = db.get_object(kandidaten[0]['object_id']) if kandidaten[0]['object_id'] else None
         result = {
-            'quelle': 'ki', 'objekt': data['objekt'], 'kategorie': data['kategorie'], 'conf': data['sicherheit'],
-            'ist_gegenstand': data['ist_gegenstand'],
-            'kandidaten': [{'name': k['name'], 'conf': round(k['sicherheit'], 2),
-                            'object_id': db.find_alias(k['name'])} for k in kands],
+            'quelle': 'ki', 'objekt': data['objekt'], 'kategorie': top['klasse'] if top else 'Sonstiges',
+            'conf': data['sicherheit'], 'ist_gegenstand': data['ist_gegenstand'], 'kandidaten': kandidaten,
             'hinweis': 'Die Sicherheit ist eine Selbsteinschätzung des Modells. Bitte prüfen.',
             'material_vermutung': list(dict.fromkeys(data['material_vermutung'])), 'sichtbarer_text': data['sichtbarer_text'],
             'schritte': [{'name': 'Qualität geprüft', 'ms': 0}, {'name': 'Foto-Abgleich: kein Treffer', 'ms': 0},
@@ -151,6 +172,9 @@ def scan(data_url):
     result['dauer_ms'] = round((time.perf_counter() - t0) * 1000)
     result['scan_id'] = sid
     db.update_scan(sid, result)
+    top_id = result['kandidaten'][0]['object_id'] if result['quelle'] != 'mock' and result['kandidaten'] else None
+    if top_id and not (db.get_object(top_id) or {}).get('projekte'):
+        _start_ideen(sid, top_id)
     result['vorbereitung'] = jobs(sid)
     return result
 
@@ -193,16 +217,12 @@ STECKBRIEF_REGELN = (
 
 
 def _steckbrief_ki(scan_id, name, objekt=None):
-    """Steckbrief mit KI erzeugen und als Entwurf speichern. name=None: Die KI bestimmt den
-    Gegenstand selbst aus dem Bild (Vorausrechnen, bevor die Erkennung fertig ist)."""
+    """Steckbrief mit KI erzeugen und als Entwurf speichern. Nur für Gegenstände außerhalb der 201 Kategorien
+    ("weiß ich nicht"), alle anderen kommen sofort aus der Datenbank."""
     row, img = db.get_scan(scan_id) if scan_id else (None, None)
     scan_res = row['result'] if row else {}
-    if name:
-        kopf = (f'Gegenstand: {name}\nAllgemein: {scan_res.get("objekt") or objekt or "unbekannt"}\n'
-                f'Sichtbarer Text auf dem Foto: {scan_res.get("sichtbarer_text") or "keiner"}\n')
-    else:
-        kopf = ('Bestimme zuerst selbst, welcher Gegenstand auf dem Foto liegt, möglichst mit Marke und Modell, '
-                'und trage das in name ein.\n')
+    kopf = (f'Gegenstand: {name}\nAllgemein: {scan_res.get("objekt") or objekt or "unbekannt"}\n'
+            f'Sichtbarer Text auf dem Foto: {scan_res.get("sichtbarer_text") or "keiner"}\n')
     imgs = [images.to_data_url(img)] if img else []
     data, info = _with_retry(
         lambda f: llm.chat_json(model=config.VISION_MODEL if imgs else config.TEXT_MODEL, system=SYSTEM,
@@ -210,7 +230,6 @@ def _steckbrief_ki(scan_id, name, objekt=None):
                                 schema=schemas.STECKBRIEF, name='steckbrief', images=imgs, max_tokens=3500),
         _check_steckbrief)
 
-    name = name or data['name']
     oid = slug(name)
     if db.get_object(oid):
         oid = f'{oid}-{int(time.time()) % 100000}'
@@ -219,9 +238,9 @@ def _steckbrief_ki(scan_id, name, objekt=None):
     obj['scan_id'] = scan_id
     db.put_object(obj, 'entwurf', info['modell'], aliases=[name], photo_hash=row['hash'] if row else None)
     obj['status'] = 'entwurf'
-    if scan_id and not _job(scan_id, 'ideen'):
-        # Lokales Modell: Bauideen im Hintergrund, während die Explosionszeichnung angeschaut wird.
-        _start(scan_id, 'ideen', _ideen_ki, obj['id'], scan_id)
+    if scan_id:
+        # Bauideen für den neuen Entwurf im Hintergrund, während die Explosionszeichnung angeschaut wird.
+        _start_ideen(scan_id, obj['id'])
     return obj
 
 
@@ -229,28 +248,15 @@ def steckbrief(scan_id, modell, objekt=None):
     t0 = time.perf_counter()
     cached = db.find_alias(modell) if modell else None
     if cached:
-        return {'object': db.get_object(cached), 'quelle': 'cache', 'dauer_ms': 0}
+        if scan_id is not None:
+            with _jobs_lock:
+                _letzter_scan[cached] = scan_id   # lets ideen() find the ideas job of this scan
+        return {'object': db.get_object(cached), 'quelle': 'cache', 'dauer_ms': round((time.perf_counter() - t0) * 1000)}
     if config.LLM_MODE == 'mock':
         raise PipelineError('Die KI ist gerade abgeschaltet. Für neue Gegenstände ist kein Steckbrief möglich.')
 
     row, _ = db.get_scan(scan_id) if scan_id else (None, None)
     scan_res = row['result'] if row else {}
-    kands = scan_res.get('kandidaten') or []
-    vorlauf = _job(scan_id, 'steckbrief') if scan_id else None
-    # Der Vorlauf passt, wenn der wahrscheinlichste Kandidat oder "weiß ich nicht" gewählt wurde.
-    passt = not modell or modell in (scan_res.get('objekt'), objekt) or (kands and modell == kands[0]['name'])
-    if vorlauf and passt:
-        obj = _warte(vorlauf)
-        if obj:
-            obj['erkennung'] = {
-                'conf': scan_res.get('conf', 0.5),
-                'modelle': [[k['name'], k['conf']] for k in kands] or obj['erkennung']['modelle'],
-                'hinweis': obj['erkennung']['hinweis'],
-            }
-            status = obj.pop('status', 'entwurf')
-            db.put_object(obj, status, 'vorlauf', aliases=[modell] if modell else [])
-            obj['status'] = status
-            return {'object': obj, 'quelle': 'vorausberechnet', 'dauer_ms': round((time.perf_counter() - t0) * 1000)}
     obj = _steckbrief_ki(scan_id, modell or scan_res.get('objekt') or objekt or 'Gegenstand', objekt)
     return {'object': obj, 'quelle': 'ki', 'dauer_ms': round((time.perf_counter() - t0) * 1000)}
 
@@ -340,7 +346,7 @@ def ideen(object_id, neu=False):
     if config.LLM_MODE == 'mock':
         raise PipelineError('Die KI ist gerade abgeschaltet. Bauideen sind nur für bekannte Gegenstände da.')
 
-    vorlauf = _job(obj.get('scan_id'), 'ideen') if not neu else None
+    vorlauf = _ideen_job(object_id, obj.get('scan_id')) if not neu else None
     data = _warte(vorlauf) if vorlauf else None
     quelle = 'vorausberechnet' if data else 'ki'
     if not data:

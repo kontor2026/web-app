@@ -17,6 +17,13 @@ KATEGORIEN = [
 ]
 POSITIONEN = ['hinten-links', 'hinten', 'hinten-rechts', 'links', 'mitte', 'rechts', 'vorne-links', 'vorne', 'vorne-rechts']
 
+# The 201 category models (backend/seed/kategorien, built by tools/kategorien/build.py). Recognition only picks
+# from these names, so the data sheet always comes straight from the database. Without the seed folder the list
+# is empty and any candidate name is allowed again.
+_KATEGORIE_INDEX = config.SEED / 'kategorien' / 'index.json'
+KATEGORIE_NAMEN = ([k['name'] for k in json.loads(_KATEGORIE_INDEX.read_text(encoding='utf-8'))]
+                   if _KATEGORIE_INDEX.exists() else [])
+
 S = lambda maxlen=200: {'type': 'string', 'maxLength': maxlen}
 
 
@@ -27,10 +34,10 @@ def obj(props, required=None):
 SCAN = obj({
     'ist_gegenstand': {'type': 'boolean'},
     'objekt': S(60),
-    'kategorie': {'type': 'string', 'enum': KATEGORIEN},
     'sicherheit': {'type': 'number', 'minimum': 0, 'maximum': 1},
     'kandidaten': {'type': 'array', 'minItems': 1, 'maxItems': 3,
-                   'items': obj({'name': S(80), 'sicherheit': {'type': 'number', 'minimum': 0, 'maximum': 1}})},
+                   'items': obj({'name': {'type': 'string', 'enum': KATEGORIE_NAMEN} if KATEGORIE_NAMEN else S(80),
+                                 'sicherheit': {'type': 'number', 'minimum': 0, 'maximum': 1}})},
     'sichtbarer_text': S(200),
     'material_vermutung': {'type': 'array', 'maxItems': 4, 'items': {'type': 'string', 'enum': MATERIAL_IDS}},
 })
