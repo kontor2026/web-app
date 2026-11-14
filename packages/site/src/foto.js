@@ -163,6 +163,7 @@ function hohlGeometrie(t) {
     teile.push(boden);
   }
   const geo = mergeGeometries(teile);
+  if (t.offen === 'unten') { geo.rotateX(Math.PI); geo.translate(0, h, d); }   // Schale nach unten offen (Helm, Kappe, Deckel)
   geo.computeVertexNormals();
   return geo;
 }

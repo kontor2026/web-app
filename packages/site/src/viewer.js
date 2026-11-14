@@ -133,15 +133,17 @@ export function erzeugeViewer(el, { onHover, onSelect, tip } = {}) {
       kanten.userData.kante = true;
       g.add(mesh, kanten);
       const marks = [];
+      let mi = 0;
       for (const m of huellen.has(p) || etiketten.has(p) ? [] : p.marks ?? []) {   // Banderolen: aufgemalte Ringe entfallen, die Hülle ist echt
         const mg = new THREE.ShapeGeometry(grundriss(m), 24);
         mg.rotateX(Math.PI / 2); mg.translate(m.x, p.h + 0.12, m.y);
         const e = eigenschaften(p), o = p.opacity ?? 1;
         const mm = new THREE.Mesh(mg, new THREE.MeshPhysicalMaterial({ color: new THREE.Color(m.fill ?? farbe.clone().multiplyScalar(0.78)),
           metalness: e.m ?? 0, roughness: Math.max(0.25, e.r), clearcoat: e.cc ?? 0, side: THREE.DoubleSide, transparent: o < 0.98, opacity: o,
-          polygonOffset: true, polygonOffsetFactor: -1, polygonOffsetUnits: -4 * rang - 2 }));
+          polygonOffset: true, polygonOffsetFactor: -1, polygonOffsetUnits: -4 * rang - 2 - 2 * mi++ }));   // spätere Details liegen oben
         mm.receiveShadow = true;
-        if (m.zeichnung) mm.userData.kante = true;            // nur in der Zeichnung, z. B. aufgemalte Öffnung
+        // nur in der Zeichnung: aufgemalte Öffnungen, und flache Details auf runden Formen (würden darüber schweben)
+        if (m.zeichnung || p.form || p.wand > 0) mm.userData.kante = true;
         marks.push({ mesh: mm, farbe: mm.material.color.clone() });
         const ml = new THREE.LineSegments(new THREE.EdgesGeometry(mg), new THREE.LineBasicMaterial({ color: INK, transparent: true, opacity: 0.6 }));
         ml.userData.kante = true;
