@@ -233,3 +233,6 @@
 /* Kein Springen: Datenblatt auf dem Handy mit fester Höhe */
 @media (max-width: 900px) { .lw .panel { flex: 0 0 46%; max-height: none; } }
 @media (max-width: 900px) { .lw .panel { flex-basis: 48%; } .lw-wahl-liste select { height: 44px; } .lw-wahl-liste { gap: 4px; } }
+.teil-material { padding: 4px 0 8px 38px; background: var(--accent-soft); }
+.prow.sel { background: var(--accent-soft); }
+.prow.sel .n { color: var(--accent); }

@@ -288,3 +288,8 @@ details[open] > summary::after { transform: rotate(90deg); }
 details > summary:hover::after { color: var(--accent); }
 .lw-rezept > summary .haken { margin-left: auto; }
 .lw-rezept > summary:has(.haken)::after { margin-left: 8px; }
+
+/* Start: nur der Kreis, in seiner Spalte mittig */
+.start-inhalt { align-items: center; min-height: calc(100svh - 56px - 48px); }
+.kreis { justify-self: center; align-self: center; width: 100%; }
+@media (max-width: 900px) { .start-inhalt { min-height: 0; } .kreis { width: min(380px, 100%); } }

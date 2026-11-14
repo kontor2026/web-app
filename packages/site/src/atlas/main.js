@@ -76,7 +76,7 @@ function baueGeruest() {
   viewer = erzeugeViewer(document.getElementById('szene'), {
     tip: document.getElementById('tip'),
     onHover: (i) => panelHover(i),
-    onSelect: (i) => { if (schritt === 'gegenstand') zeigeTeil(i); },
+    onSelect: (i) => { if (schritt === 'gegenstand') zeigeTeilInListe(i); },
   });
   new ResizeObserver(() => { if (schritt === 'abbau' || schritt === 'verarbeitung') zeichneStrom(); }).observe(document.getElementById('strom'));
   // Wischen über dem Datenblatt wechselt die Station (das Bild darüber bleibt drehbar)
@@ -129,8 +129,10 @@ function setzePanel(html) {
   document.getElementById('frage').textContent = s.frage;
   const strom = document.getElementById('strom');
   if (strom && panel().contains(strom)) document.querySelector('.lw-strom').append(strom);
-  const i = IDS.indexOf(schritt), naechste = SCHRITTE[(i + 1) % IDS.length];
-  panel().innerHTML = `<div class="panel-inner">${html}<a class="lw-weiter" href="${link(naechste.id, null)}">${icon(naechste.id)}<span>${i < IDS.length - 1 ? 'Weiter' : 'Von vorn'}: ${naechste.name}</span><span class="pfeil">→</span></a></div>`;
+  const i = IDS.indexOf(schritt), naechste = SCHRITTE[i + 1];
+  const weiter = naechste ? `<a class="lw-weiter" href="${link(naechste.id, null)}">${icon(naechste.id)}<span>Weiter: ${naechste.name}</span><span class="pfeil">→</span></a>`
+    : `<a class="lw-weiter" href="../modelle/#kat=${obj.id}">${icon('gegenstand')}<span>3D-Modell ansehen</span><span class="pfeil">→</span></a>`;
+  panel().innerHTML = `<div class="panel-inner">${html}${weiter}</div>`;
   panel().scrollTop = 0;
 }
 const legende = (eintraege) => { document.getElementById('legende').innerHTML = eintraege.map(([f, t]) => `<span><i style="background:${f}"></i>${esc(t)}</span>`).join(''); };
@@ -222,8 +224,20 @@ function zeigeGegenstand() {
   panel().querySelectorAll('.prow').forEach((b) => {
     b.addEventListener('pointerenter', () => viewer.markiere(+b.dataset.i));
     b.addEventListener('pointerleave', () => viewer.markiere(null));
-    b.addEventListener('click', () => { viewer.waehle(+b.dataset.i); zeigeTeil(+b.dataset.i); });
+    b.addEventListener('click', () => { viewer.waehle(+b.dataset.i); zeigeTeilInListe(+b.dataset.i); });
   });
+}
+// Teil gewählt: Klappe „Teile“ öffnen, Zeile markieren und darunter die Materialien zeigen
+function zeigeTeilInListe(i) {
+  const klappe = panel().querySelector('.lw-block'), alt = panel().querySelector('.teil-material');
+  alt?.remove();
+  panel().querySelectorAll('.prow').forEach((r) => r.classList.toggle('sel', +r.dataset.i === i));
+  if (i == null || !klappe) return;
+  klappe.open = true;
+  const zeile = panel().querySelector(`.prow[data-i="${i}"]`), p = viewer.teile[i].p;
+  zeile.insertAdjacentHTML('afterend', `<div class="teil-material">${(p.materials ?? []).map(([m, a]) => `
+    <div class="mrow"><i style="background:${CLASSES[MATERIALS[m]?.cls]?.color ?? '#ccc'}"></i><span>${esc(MATERIALS[m]?.name ?? m)}</span><span class="pct">${a} %</span><span></span><div class="mbar"><b style="width:${a}%"></b></div></div>`).join('')}</div>`);
+  zeile.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
 }
 function zeigeTeil(i) {
   if (i == null) return zeigeGegenstand();
