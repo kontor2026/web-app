@@ -19,7 +19,7 @@ html, body { margin: 0; height: 100%; overflow: hidden; background: var(--bg); c
 #world { position: fixed; inset: 0; width: 100vw; height: 100vh; display: block; outline: none; touch-action: none; }
 
 /* ---------- Text auf dem Bild ---------- */
-.caption { position: fixed; left: calc(5.2 * var(--u)); bottom: calc(6.4 * var(--u)); max-width: calc(62 * var(--u)); pointer-events: none; z-index: 5; }
+.caption { position: fixed; left: calc(5.2 * var(--u)); bottom: calc(3.4 * var(--u)); max-width: calc(62 * var(--u)); pointer-events: none; z-index: 5; }
 .caption::before { content: ''; position: fixed; inset: auto 0 0 0; height: 50vh; z-index: -1; pointer-events: none;
   background: linear-gradient(to top, rgba(6, 8, 10, 0.92) 0%, rgba(6, 8, 10, 0.7) 35%, rgba(6, 8, 10, 0)); opacity: 0; transition: opacity 0.9s ease; }
 .caption.in::before { opacity: 1; }
@@ -122,18 +122,17 @@ body[data-app="full"] #app { pointer-events: auto; z-index: 20; }
 body[data-app="full"] #apphint { display: flex; }
 
 /* ---------- Footer ---------- */
-#footer { position: fixed; left: 0; right: 0; bottom: 0; z-index: 6; display: flex; align-items: center; gap: calc(2 * var(--u));
-  padding: calc(1.3 * var(--u)) calc(5.2 * var(--u)); font-size: calc(0.95 * var(--u)); color: var(--dim); opacity: 0.55; transition: opacity 0.4s; }
+/* Bottom right only, AIDA dots at the edge and the step name small above them: the caption gets the whole lower left */
+#footer { position: fixed; right: 0; bottom: 0; z-index: 6; display: flex; flex-direction: column-reverse; align-items: flex-end; gap: calc(0.7 * var(--u));
+  padding: calc(1.3 * var(--u)) calc(3 * var(--u)) calc(1.6 * var(--u)); font-size: calc(0.85 * var(--u)); color: var(--dim); opacity: 0.55; transition: opacity 0.4s; }
 #footer:hover { opacity: 1; }
-#footer .brand { display: flex; align-items: center; gap: calc(0.5 * var(--u)); font-weight: 600; color: #d9dee3; letter-spacing: 0.01em; }
-#footer .brand svg { width: calc(1.3 * var(--u)); height: calc(1.3 * var(--u)); fill: none; stroke: var(--teal); stroke-width: 2; }
-#dots { display: flex; gap: calc(1.2 * var(--u)); margin-left: auto; }
+#dots { display: flex; gap: calc(1.2 * var(--u)); }
 #dots .grp { display: flex; align-items: center; gap: calc(0.4 * var(--u)); }
 #dots em { font-style: normal; font: 600 calc(0.85 * var(--u)) 'IBM Plex Mono', monospace; color: #c5ccd3; margin-right: calc(0.2 * var(--u)); }
 #dots i { width: calc(0.55 * var(--u)); height: calc(0.55 * var(--u)); border-radius: 50%; background: rgba(255, 255, 255, 0.2); cursor: pointer; transition: background 0.4s, transform 0.4s; }
 #dots i.done { background: rgba(47, 211, 181, 0.45); }
 #dots i.on { background: var(--teal); transform: scale(1.5); }
-#mode { font-weight: 500; color: #c5ccd3; min-width: calc(20 * var(--u)); text-align: right; }
+#mode { font-weight: 500; color: #c5ccd3; text-align: right; white-space: nowrap; }
 body[data-app="full"] #footer { display: none; }
 
 /* ---------- Hilfe, Sprechertext, Schwarz, Laden ---------- */
