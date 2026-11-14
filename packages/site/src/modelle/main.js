@@ -22,7 +22,6 @@ app.innerHTML = `
             <button class="kipp" id="drehen" role="menuitemcheckbox" aria-checked="true"><span>Drehen</span><kbd>D</kbd><i></i></button>
             <button class="kipp" id="explodiert" role="menuitemcheckbox" aria-checked="true"><span>Explodiert</span><kbd>E</kbd><i></i></button>
             <button class="kipp" id="nummern" role="menuitemcheckbox" aria-checked="true"><span>Nummern</span><kbd>N</kbd><i></i></button>
-            <button class="kipp" id="foto" role="menuitemcheckbox" aria-checked="true"><span>Schatten</span><kbd>F</kbd><i></i></button>
           </div>
         </div>
       </div>
@@ -68,18 +67,7 @@ function setzeNummern(an) {
 }
 schalter.addEventListener('click', () => setzeNummern(schalter.getAttribute('aria-checked') !== 'true'));
 setzeNummern(localStorage.getItem('modelle-nummern') !== 'aus');
-const fotoSchalter = document.getElementById('foto');
-function setzeFoto(an) {
-  fotoSchalter.setAttribute('aria-checked', String(an));
-  viewer.foto(an); localStorage.setItem('modelle-foto', an ? 'an' : 'aus');
-}
-fotoSchalter.addEventListener('click', () => setzeFoto(fotoSchalter.getAttribute('aria-checked') !== 'true'));
-// Zahnrad öffnet das kleine Einstellungsmenü; Klick daneben oder Esc schließt es
-const zahnrad = document.getElementById('zahnrad'), menue = document.getElementById('menue');
-const menueAuf = (an) => { menue.hidden = !an; zahnrad.setAttribute('aria-expanded', String(an)); };
-zahnrad.addEventListener('click', (e) => { e.stopPropagation(); menueAuf(menue.hidden); });
-document.addEventListener('click', (e) => { if (!menue.hidden && !e.target.closest('.einstellungen')) menueAuf(false); });
-setzeFoto(localStorage.getItem('modelle-foto') !== 'aus');
+viewer.foto(true);   // immer Foto-Ansicht mit Schatten
 
 // ---------- Prüfung wie tools/kategorien/pruefe.py ----------
 const zahlAus = (s) => parseFloat(String(s).replace(/[^\d,.]/g, '').replace(',', '.'));
@@ -197,7 +185,6 @@ addEventListener('keydown', (e) => {
   if (e.key === 'ArrowLeft') blaettere(-1);
   if (e.key === 'Escape') { if (!menue.hidden) { menueAuf(false); return; } viewer.waehle(null); zeigeModell(); }
   if (e.key === 'n' || e.key === 'N') schalter.click();
-  if (e.key === 'f' || e.key === 'F') fotoSchalter.click();
   if (e.key === 'e' || e.key === 'E') exSchalter.click();
   if (e.key === 'd' || e.key === 'D') drehSchalter.click();
 });

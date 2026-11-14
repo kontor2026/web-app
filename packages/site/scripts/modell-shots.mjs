@@ -13,7 +13,7 @@ delete env.WAYLAND_DISPLAY; delete env.DISPLAY;
 const browser = await chromium.launch({ env, args: ['--use-angle=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist'] });
 try {
   const page = await browser.newPage({ viewport: { width: 1440, height: 900 }, deviceScaleFactor: 2 });
-  await page.addInitScript(() => { try { localStorage.setItem('modelle-foto', 'an'); localStorage.setItem('modelle-nummern', 'aus'); } catch {} });
+  await page.addInitScript(() => { try { localStorage.setItem('modelle-nummern', 'aus'); } catch {} });
   page.on('pageerror', (e) => console.log(`FEHLER: ${e.message}`));
   page.on('console', (m) => { if (m.type() === 'error') console.log(`console: ${m.text()}`); });
   for (const id of ids) for (const x of ['1', '0']) {

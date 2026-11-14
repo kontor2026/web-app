@@ -8,7 +8,7 @@ const env = { ...process.env }; delete env.WAYLAND_DISPLAY; delete env.DISPLAY;
 const b = await chromium.launch({ env, args: ['--use-angle=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist'] });
 try {
   const p = await b.newPage({ viewport: { width: 1200, height: 800 }, deviceScaleFactor: 1 });
-  await p.addInitScript(() => { try { localStorage.setItem('modelle-foto', 'an'); localStorage.setItem('modelle-nummern', 'an'); } catch {} });
+  await p.addInitScript(() => { try { localStorage.setItem('modelle-nummern', 'an'); } catch {} });
   p.on('pageerror', (e) => console.log(`FEHLER: ${e.message}`));
   await p.goto(`http://localhost:5190/modelle/?t=${Date.now()}#kat=${id}`, { waitUntil: 'networkidle' });
   await p.waitForTimeout(2500);
