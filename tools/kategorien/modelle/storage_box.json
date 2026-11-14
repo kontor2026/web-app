@@ -103,13 +103,13 @@
    ],
    "info": "Spritzgegossenes PP mit Versteifungsrippen und Stapelrand. Einfach abheben; sauber und ohne Etikett zum Wertstoffhof (Hartkunststoff).",
    "color": "#2F6DB5",
-   "opacity": 0.9,
    "marks": [
     {
      "shape": "box",
      "x": 16,
      "y": 16,
      "w": 354,
+     "zeichnung": true,
      "d": 254,
      "r": 12,
      "fill": "#2A62A3"
@@ -139,7 +139,8 @@
      "w": 4,
      "d": 206,
      "r": 2,
-     "fill": "#3A79C2"
+     "fill": "#3A79C2",
+     "zeichnung": true
     },
     {
      "shape": "box",
@@ -148,7 +149,8 @@
      "w": 4,
      "d": 206,
      "r": 2,
-     "fill": "#3A79C2"
+     "fill": "#3A79C2",
+     "zeichnung": true
     },
     {
      "shape": "box",

@@ -24,8 +24,11 @@ teile = [
          x=2, y=2, w=386, d=286, z=204, h=16, r=18, mass=300,
          info='Spritzgegossenes PP mit Versteifungsrippen und Stapelrand. Einfach abheben; '
               'sauber und ohne Etikett zum Wertstoffhof (Hartkunststoff).',
-         color=BLAU, opacity=0.9,
-         marks=[mark('box', 16, 16, 354, 254, 12, '#2A62A3')] + raster(40, 40, 6, 1, 4, 206, 60, r=2, fill='#3A79C2')),
+         color=BLAU,
+         # Rippen unter dem Etikett nur in der Zeichnung (in der Foto-Ansicht würden sie das Etikett übermalen)
+         marks=[mark('box', 16, 16, 354, 254, 12, '#2A62A3', zeichnung=True)]
+         + [{**m, 'zeichnung': True} if 110 < m['x'] < 270 else m
+            for m in raster(40, 40, 6, 1, 4, 206, 60, r=2, fill='#3A79C2')]),
     teil('clip_links', 'pp_lid', 'Klappverschluss links', 'Verschluss', 'box', label=False,
          x=0, y=95, w=7, d=100, z=150, h=62, r=2, explode=[-45, 0, 0], mass=25,
          info='Klappt über den Deckelrand und hält ihn fest. Er hängt mit Zapfen am Rand und lässt sich '

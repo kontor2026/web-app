@@ -134,8 +134,8 @@
    "y": 8,
    "w": 55,
    "d": 62,
-   "z": 0.1,
-   "h": 4.5,
+   "z": 4.4,
+   "h": 0.2,
    "r": 2,
    "explode": [
     0,
@@ -155,7 +155,6 @@
    ],
    "info": "Dünnes Papier aus Zellstoff und Hanf- oder Abacafasern. Viele Beutel enthalten etwas Kunststoff zum Heißsiegeln, darum kommen nicht alle in den Kompost.",
    "color": "#EFE9DC",
-   "form": "kugel",
    "marks": [
     {
      "shape": "box",
@@ -164,8 +163,7 @@
      "w": 55,
      "d": 2,
      "r": 0,
-     "fill": "#E0D8C6",
-     "zeichnung": true
+     "fill": "#E0D8C6"
     },
     {
      "shape": "box",
@@ -173,8 +171,7 @@
      "y": 4.0,
      "w": 4,
      "d": 2,
-     "fill": "#E0D8C6",
-     "zeichnung": true
+     "fill": "#E0D8C6"
     },
     {
      "shape": "box",
@@ -182,8 +179,7 @@
      "y": 4.0,
      "w": 4,
      "d": 2,
-     "fill": "#E0D8C6",
-     "zeichnung": true
+     "fill": "#E0D8C6"
     },
     {
      "shape": "box",
@@ -191,8 +187,7 @@
      "y": 4.0,
      "w": 4,
      "d": 2,
-     "fill": "#E0D8C6",
-     "zeichnung": true
+     "fill": "#E0D8C6"
     },
     {
      "shape": "box",
@@ -200,8 +195,7 @@
      "y": 4.0,
      "w": 4,
      "d": 2,
-     "fill": "#E0D8C6",
-     "zeichnung": true
+     "fill": "#E0D8C6"
     },
     {
      "shape": "box",
@@ -209,8 +203,7 @@
      "y": 4.0,
      "w": 4,
      "d": 2,
-     "fill": "#E0D8C6",
-     "zeichnung": true
+     "fill": "#E0D8C6"
     },
     {
      "shape": "box",
@@ -218,8 +211,7 @@
      "y": 4.0,
      "w": 4,
      "d": 2,
-     "fill": "#E0D8C6",
-     "zeichnung": true
+     "fill": "#E0D8C6"
     }
    ]
   },
@@ -251,7 +243,6 @@
    ],
    "info": "Etwa 2 g fein geschnittener Tee. Nach dem Aufbrühen gehört er in den Biomüll oder auf den Kompost.",
    "color": "#5A4632",
-   "form": "kugel",
    "marks": [
     {
      "shape": "cyl",
