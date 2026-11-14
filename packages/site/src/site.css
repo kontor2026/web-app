@@ -191,3 +191,7 @@ html { scroll-padding-bottom: calc(var(--tabs) + 88px); }
   .kreis { order: 3; }
   .waehler { order: 4; }
 }
+
+/* Piktogramm auf den Beispiel-Karten */
+.beispiel .icon { width: 28px; height: 28px; margin-bottom: 8px; color: var(--ink-2); }
+.beispiel:hover .icon { color: var(--accent); }

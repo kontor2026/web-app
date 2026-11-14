@@ -1,5 +1,5 @@
 // Gegenstand wählen: Suche, sechs Beispiele, alle 201 nach Gruppe. Gleich auf Start und Lebensweg.
-import { esc, gramm } from './shell.js';
+import { esc, gramm, icon } from './shell.js';
 
 export const BEISPIELE = ['smartphone', 'pet_bottle', 'laptop', 't_shirt', 'aluminium_can', 'hair_dryer'];
 
@@ -12,7 +12,7 @@ export function waehlerHtml(objekte, href) {
     <input class="suche-feld" type="search" placeholder="Gegenstand suchen" autocomplete="off" aria-label="Gegenstand suchen">
     <div class="beispiele">${BEISPIELE.filter((id) => von.has(id)).map((id) => {
       const o = von.get(id);
-      return `<a class="beispiel" href="${href(id)}"><b>${esc(o.name)}</b><span>${gramm(o.gramm)}</span></a>`;
+      return `<a class="beispiel" href="${href(id)}">${icon(id, 'gross')}<b>${esc(o.name)}</b><span>${gramm(o.gramm)}</span></a>`;
     }).join('')}</div>
     <details class="alle"><summary>Alle ${objekte.length} Gegenstände</summary>
       <div class="katalog">${[...gruppen].map(([g, os]) => `<div class="gruppe"><h4 class="eyebrow">${esc(g)} · ${os.length}</h4>

@@ -29,6 +29,13 @@ export function shell(aktiv, root) {
 
 // Der Lebensweg eines Gegenstands: sieben Stationen, überall gleich benannt und gleich gezeichnet
 const ICON = {
+  // Beispiel-Gegenstände
+  smartphone: '<rect x="7" y="3" width="10" height="18" rx="2"/><path d="M11 18h2"/>',
+  pet_bottle: '<path d="M10 2h4v3l1.5 2.5V20a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1V7.5L10 5Z"/><path d="M8.5 11h7M8.5 15h7"/>',
+  laptop: '<rect x="5" y="5" width="14" height="10" rx="1"/><path d="M2.5 18.5h19l-1.5-3.5H4Z"/>',
+  t_shirt: '<path d="M8 3 3 6l2 4 2-1v12h10V9l2 1 2-4-5-3a4 4 0 0 1-8 0Z"/>',
+  aluminium_can: '<path d="M7 5h10l-1 2v12l1 1H7l1-1V7Z"/><path d="M8 7h8M8 19h8M10 3.5h4"/>',
+  hair_dryer: '<path d="M14 4a6 6 0 1 1 0 12h-3l-1.5 5h-3L8 15A6 6 0 0 1 14 4Z"/><circle cx="14" cy="10" r="2"/><path d="M20 8.5v3"/>',
   // Bereiche
   start: '<path d="M4 11 12 4l8 7v9h-5v-6H9v6H4Z"/>',
   weg: '<circle cx="6" cy="18" r="2"/><circle cx="18" cy="6" r="2"/><path d="M8 18h5a3 3 0 0 0 0-6h-2a3 3 0 0 1 0-6h5"/>',
