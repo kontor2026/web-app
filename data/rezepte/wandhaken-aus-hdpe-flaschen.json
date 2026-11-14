@@ -1,0 +1,37 @@
+{
+  "titel": "Wandhaken aus Flaschendeckeln und Shampooflaschen",
+  "kurz": "HDPE-Deckel und -Flaschen werden geschreddert und zu einem Wandhaken gespritzt.",
+  "braucht": [
+    {
+      "component_id": "hdpe_screw_cap",
+      "menge": 15,
+      "oder": [
+        "hdpe_bottle_body",
+        "watering_can_body",
+        "hdpe_crate_body"
+      ],
+      "hinweis": "Menge geschätzt (ca. 2,5 g pro Deckel); Flaschen und andere Alternativen nach Gewicht."
+    }
+  ],
+  "werkzeug": [
+    "shredding_bike_shredder",
+    "injection_molding",
+    "drilling",
+    "screwing"
+  ],
+  "dauer": "90 min",
+  "stufe": 2,
+  "schritte": [
+    "Nur HDPE-Teile (Code 2) sammeln und waschen.",
+    "Deckel und Flaschenstücke schreddern.",
+    "In die Hakenform spritzen, kurz Druck halten.",
+    "Haken entformen, zwei Schraublöcher bohren.",
+    "Haken an die Wand schrauben."
+  ],
+  "sicherheit": "Spritzgussmaschine nur mit Lehrkraft, Hitzeschutzhandschuhen und Schutzbrille bedienen.",
+  "quelle": {
+    "titel": "Make a wall hook – Precious Plastic Community",
+    "url": "https://community.preciousplastic.com/library/make-a-wall-hook",
+    "abgerufen": "2026-11-14"
+  }
+}

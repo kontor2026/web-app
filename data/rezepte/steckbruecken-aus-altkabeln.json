@@ -1,0 +1,34 @@
+{
+  "titel": "Steckbrücken aus alten Kabeln",
+  "kurz": "Aus abgeschnittenen Gerätekabeln werden abisolierte, verzinnte Drahtbrücken für Schaltungen.",
+  "braucht": [
+    {
+      "component_id": "cable_copper_core",
+      "menge": 1,
+      "hinweis": "Ein abgeschnittenes Kabel (ca. 1 m) ergibt viele Brücken."
+    },
+    {
+      "component_id": "cable_insulation",
+      "menge": 1,
+      "hinweis": "Bleibt als Isolierung am Draht; nur mechanisch abziehen."
+    }
+  ],
+  "werkzeug": [
+    "soldering"
+  ],
+  "dauer": "45 min",
+  "stufe": 1,
+  "schritte": [
+    "Kabel vom ausgesteckten Gerät abschneiden.",
+    "Außenmantel aufschneiden, Einzeladern herausziehen.",
+    "Adern in 10-cm-Stücke schneiden.",
+    "Enden mit der Abisolierzange ca. 6 mm abisolieren.",
+    "Litzenenden verdrillen und verzinnen."
+  ],
+  "sicherheit": "Kabel nur von ausgesteckten Geräten abschneiden; Isolierung nie abbrennen, nur mechanisch abziehen.",
+  "quelle": {
+    "titel": "Wire Stripping – iFixit",
+    "url": "https://www.ifixit.com/Guide/Wire+Stripping/11008",
+    "abgerufen": "2026-11-14"
+  }
+}

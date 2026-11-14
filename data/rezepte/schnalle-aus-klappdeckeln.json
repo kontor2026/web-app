@@ -1,0 +1,36 @@
+{
+  "titel": "Rucksack-Schnalle aus Klappdeckeln",
+  "kurz": "Klappdeckel von Tuben und Flaschen werden zu einer neuen Steckschnalle gespritzt.",
+  "braucht": [
+    {
+      "component_id": "pp_flip_cap",
+      "menge": 5,
+      "oder": [
+        "plastic_buckles",
+        "child_safe_cap",
+        "perfume_cap",
+        "pp_spray_cap"
+      ],
+      "hinweis": "Menge geschätzt (ca. 3 g pro Deckel, ca. 15 g pro Schnalle mit Anguss); Alternativen nach Gewicht."
+    }
+  ],
+  "werkzeug": [
+    "shredding_bike_shredder",
+    "injection_molding"
+  ],
+  "dauer": "60 min",
+  "stufe": 2,
+  "schritte": [
+    "Klappdeckel nach Kunststoff und Farbe sortieren.",
+    "Deckel waschen, trocknen und schreddern.",
+    "Bei ca. 250 °C in die Schnallenform spritzen.",
+    "5–10 Sekunden Druck halten, dann Form öffnen.",
+    "Anguss abschneiden, Schnalle am Gurt testen."
+  ],
+  "sicherheit": "Spritzgussmaschine nur mit Lehrkraft, Hitzeschutzhandschuhen und Schutzbrille bedienen.",
+  "quelle": {
+    "titel": "Buckle mould – Precious Plastic Community",
+    "url": "https://community.preciousplastic.com/library/buckle-mould",
+    "abgerufen": "2026-11-14"
+  }
+}

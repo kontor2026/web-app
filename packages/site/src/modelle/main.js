@@ -7,7 +7,7 @@ import './modelle.css';
 
 const liste = index.filter((k) => hatModell(k.id));
 const hand = liste.filter((k) => !k.platzhalter).length;
-const app = shell('modelle', '../', `<span class="stock">Handgebaut <b>${hand}</b> / ${liste.length}</span>`);
+const app = shell('modelle', '../');
 app.innerHTML = `
 <section class="view sheet modelle">
   <div class="canvas">

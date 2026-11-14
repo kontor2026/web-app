@@ -1,0 +1,45 @@
+/* Werkbank: Layout „Bauen“ der Station (.craft, .ideas, .inv), ergänzt um Stand je Bauidee */
+.werkbank .craft-head h1 { font-size: 30px; }
+.werkbank .craft-head p { color: var(--ink-2); margin-top: 6px; }
+.werkbank .ideas { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); align-content: start; border-top: 1px solid var(--ink); }
+.wb-idee { border-bottom: 1px solid var(--rule); }
+.wb-kopf { display: flex; justify-content: space-between; align-items: flex-start; }
+.wb-status { font: 500 11px var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--ink-3); border: 1px solid var(--rule); padding: 2px 8px; }
+.wb-idee.baubar .wb-status { color: var(--good); border-color: var(--good); }
+.wb-idee.baubar .letter { color: var(--good); }
+.use.fehlt { color: var(--ink-3); }
+.use.fehlt i { background: transparent; border: 1px dashed var(--ink-3); }
+.use .q { min-width: 36px; text-align: right; }
+.wb-wo { font: 11px var(--mono); color: var(--accent); padding: 2px 4px; }
+.wb-wo:hover { text-decoration: underline; }
+.wb-quellen { display: grid; gap: 2px; padding: 6px 0 8px 20px; border-bottom: 1px solid var(--rule); font-size: 13px; }
+.wb-quellen div { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.wb-quellen a { color: var(--ink-2); text-underline-offset: 3px; text-decoration-color: var(--rule); }
+.wb-quellen button { font: 11px var(--mono); color: var(--ink-2); border: 1px solid var(--rule); padding: 2px 8px; }
+.wb-quellen button:hover { border-color: var(--accent); color: var(--accent); }
+.wb-anleitung summary { cursor: pointer; font-size: 13px; color: var(--ink-2); }
+.wb-anleitung[open] summary { margin-bottom: 8px; }
+.wb-quelle { font-size: 12px; color: var(--ink-3); margin-top: auto; }
+.werkbank .idea .btn { margin-top: 0; }
+
+.wb-suche { position: relative; margin-bottom: 14px; }
+#treffer { position: absolute; z-index: 5; top: calc(100% + 4px); left: 0; right: 0; list-style: none; background: var(--card); border: 1px solid var(--ink); }
+#treffer button { width: 100%; display: flex; justify-content: space-between; padding: 9px 12px; font-size: 14px; text-align: left; }
+#treffer button:hover { background: var(--accent-soft); }
+#treffer span { font: 13px var(--mono); color: var(--accent); }
+.wb-zeile { grid-template-columns: 1fr auto; align-items: center; }
+.wb-zeile .f { font: 14px var(--sans); color: var(--ink); text-decoration: none; }
+.wb-zeile .f:hover { color: var(--accent); }
+.wb-stepper { display: inline-flex; align-items: center; border: 1px solid var(--rule); }
+.wb-stepper button { width: 28px; height: 28px; font-size: 16px; color: var(--ink-2); }
+.wb-stepper button:hover { background: var(--rule-2); color: var(--ink); }
+.wb-stepper b { min-width: 24px; text-align: center; font: 500 13px var(--mono); }
+.wb-teile { margin-top: 14px; }
+.wb-teile summary { cursor: pointer; font: 500 11px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-2); padding: 6px 0; }
+.wb-leeren { margin-top: 16px; height: 36px; font-size: 13px; }
+@media (max-width: 900px) {
+  .werkbank { display: flex; flex-direction: column; }
+  .werkbank .inv { order: -1; border-top: 0; border-bottom: 1px solid var(--rule); }
+  .werkbank .craft-head .seg { align-self: stretch; }
+  .werkbank .craft-head .seg button { flex: 1; }
+}

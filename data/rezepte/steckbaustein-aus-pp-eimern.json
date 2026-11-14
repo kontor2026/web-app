@@ -1,0 +1,38 @@
+{
+  "titel": "Großer Steckbaustein aus alten Eimern",
+  "kurz": "Ein alter PP-Eimer wird geschreddert und zu einem großen Steckbaustein gespritzt.",
+  "braucht": [
+    {
+      "component_id": "pp_bucket_body",
+      "menge": 1,
+      "gramm": 300,
+      "oder": [
+        "pp_storage_box",
+        "water_tank",
+        "pp_plant_pot",
+        "pp_food_tray"
+      ],
+      "hinweis": "Quelle: ca. 300 g PP pro Baustein, 180 °C; ein Eimer wiegt geschätzt 300–500 g. Alternativen nach Gewicht."
+    }
+  ],
+  "werkzeug": [
+    "sawing",
+    "shredding_bike_shredder",
+    "injection_molding"
+  ],
+  "dauer": "120 min",
+  "stufe": 2,
+  "schritte": [
+    "Eimer leeren, Metallbügel abnehmen, gründlich waschen.",
+    "Eimer in Streifen sägen und schreddern.",
+    "Spritzgussmaschine auf ca. 180 °C heizen.",
+    "Form verschrauben, Kunststoff einspritzen, Druck halten.",
+    "Baustein entformen und Grat abschneiden."
+  ],
+  "sicherheit": "Spritzgussmaschine nur mit Lehrkraft, Hitzeschutzhandschuhen und Schutzbrille bedienen.",
+  "quelle": {
+    "titel": "Interlocking brick mould – Precious Plastic Community",
+    "url": "https://community.preciousplastic.com/library/interlocking-brick-mould",
+    "abgerufen": "2026-11-14"
+  }
+}

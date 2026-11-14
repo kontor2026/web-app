@@ -1,0 +1,40 @@
+{
+  "titel": "Lautsprecher-Box aus Karton",
+  "kurz": "Ein ausgebauter Lautsprecher kommt in eine Kartonbox und spielt über ein altes Kopfhörerkabel.",
+  "braucht": [
+    {
+      "component_id": "speaker_driver",
+      "menge": 1,
+      "hinweis": "Aus Bluetooth-Lautsprecher, Radio oder Fernseher."
+    },
+    {
+      "component_id": "cardboard_box_body",
+      "menge": 1
+    },
+    {
+      "component_id": "audio_jack",
+      "menge": 1,
+      "hinweis": "Klinkenstecker mit Kabel aus alten Kopfhörern."
+    }
+  ],
+  "werkzeug": [
+    "soldering",
+    "gluing_hot_glue",
+    "drilling"
+  ],
+  "dauer": "90 min",
+  "stufe": 2,
+  "schritte": [
+    "Gerät öffnen, Lautsprecher abschrauben, Stecker abziehen.",
+    "Loch in Lautsprechergröße in den Karton schneiden.",
+    "Lautsprecher mit Heißkleber dicht einkleben.",
+    "Kopfhörerkabel abisolieren und an Lautsprecher löten.",
+    "Am Handy-Kopfhörerausgang leise testen."
+  ],
+  "sicherheit": "Akkus im Gerät nur von der Lehrkraft abklemmen lassen; Magnet von Karten fernhalten.",
+  "quelle": {
+    "titel": "Sony SRS-XB23 Speaker Driver Replacement – iFixit",
+    "url": "https://www.ifixit.com/Guide/Sony+SRS-XB23+Speaker+Driver+Replacement/215780",
+    "abgerufen": "2026-11-14"
+  }
+}

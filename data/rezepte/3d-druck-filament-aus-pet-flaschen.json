@@ -1,0 +1,29 @@
+{
+  "titel": "3D-Druck-Filament aus PET-Flaschen",
+  "kurz": "PET-Flaschen werden in Streifen geschnitten und durch eine heiße Düse zu Filament gezogen.",
+  "braucht": [
+    {
+      "component_id": "pet_bottle_body",
+      "menge": 2
+    }
+  ],
+  "werkzeug": [
+    "extrusion",
+    "3d_printing"
+  ],
+  "dauer": "120 min",
+  "stufe": 3,
+  "schritte": [
+    "Flaschen waschen, Etiketten und Kleberreste entfernen.",
+    "Boden abschneiden, gleichmäßigen Streifen schneiden.",
+    "Streifen durch die heiße Düse ziehen und aufspulen.",
+    "Filamentdurchmesser prüfen, Enden sauber verbinden.",
+    "Kleines Teil mit dem 3D-Drucker drucken."
+  ],
+  "sicherheit": "Heiße Düse und das Erwärmen der Flaschen nur mit Lehrkraft, Schutzbrille und Handschuhen.",
+  "quelle": {
+    "titel": "PET-Filament from bottles – Precious Plastic Community",
+    "url": "https://community.preciousplastic.com/library/pet-filament-from-bottles",
+    "abgerufen": "2026-11-14"
+  }
+}

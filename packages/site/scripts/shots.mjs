@@ -9,7 +9,7 @@ const PORT = 4175, BASIS = `http://localhost:${PORT}/`;
 const SEITEN = [
   ['start', ''], ['lebensweg-wahl', 'atlas/'], ['gegenstand', 'atlas/#kat=smartphone'], ['abbau', 'atlas/#kat=smartphone&s=abbau&r=Co'],
   ['herstellung', 'atlas/#kat=t_shirt&s=herstellung'], ['upcycling', 'atlas/#kat=pet_bottle&s=upcycling'], ['entsorgung', 'atlas/#kat=glass_bottle&s=entsorgung'], ['entsorgung-handy', 'atlas/#kat=smartphone&s=entsorgung'],
-  ['verwertung', 'atlas/#kat=pet_bottle&s=verwertung'], ['modelle', 'modelle/#kat=laptop'], ['kompass', 'kompass/'], ['kompass-n', 'kompass/#transparenz'],
+  ['verwertung', 'atlas/#kat=pet_bottle&s=verwertung'], ['modelle', 'modelle/#kat=laptop'], ['kompass', 'kompass/'], ['kompass-n', 'kompass/#transparenz'], ['werkbank', 'werkbank/'],
 ];
 const GROESSEN = { 390: { width: 390, height: 844 }, 768: { width: 768, height: 1024 }, 1024: { width: 1024, height: 768 },
   1440: { width: 1440, height: 900 }, 1920: { width: 1920, height: 1080 } };
@@ -37,12 +37,14 @@ let fehler = 0;
 try {
   for (const schema of SCHEMAS) for (const [g, viewport] of Object.entries(GROESSEN)) {
     const page = await browser.newPage({ viewport, colorScheme: schema, deviceScaleFactor: 1 });
+    // Beispiel-Werkbank, damit Shop und Zähler gefüllt sind
+    await page.addInitScript(() => localStorage.setItem('werkbank', JSON.stringify({ smartphone: 1, pet_bottle: 3, laptop: 1, yogurt_cup: 4, hair_dryer: 1 })));
     page.on('pageerror', (e) => { fehler++; console.log(`  FEHLER ${page.url()}: ${e.message}`); });
     page.on('console', (m) => { if (m.type() === 'error') { fehler++; console.log(`  console ${page.url()}: ${m.text()}`); } });
     for (const [name, pfad] of SEITEN) {
       await page.goto(BASIS + pfad, { waitUntil: 'load', timeout: 60000 });
       await page.waitForTimeout(+(process.env.WARTE ?? 2200));
-      await page.screenshot({ path: `shots/${name}-${g}-${schema}.png`, fullPage: +g <= 768 });
+      await page.screenshot({ path: `shots/${name}-${g}-${schema}.png`, fullPage: +g <= 768, timeout: 120000 });
     }
     await page.close();
   }

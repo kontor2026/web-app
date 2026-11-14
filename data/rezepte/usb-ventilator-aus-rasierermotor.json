@@ -1,0 +1,43 @@
+{
+  "titel": "USB-Mini-Ventilator aus Rasierermotor",
+  "kurz": "Ein kleiner Gleichstrommotor aus einem Batteriegerät treibt einen alten Propeller per USB an.",
+  "braucht": [
+    {
+      "component_id": "electric_motor",
+      "menge": 1,
+      "hinweis": "Nur kleine Motoren aus batteriebetriebenen Geräten (Rasierer, Zahnbürste)."
+    },
+    {
+      "component_id": "fan_blades",
+      "menge": 1,
+      "oder": [
+        "propellers"
+      ]
+    },
+    {
+      "component_id": "cable_copper_core",
+      "menge": 1,
+      "hinweis": "Altes USB-Kabel: rote und schwarze Ader (5 V)."
+    }
+  ],
+  "werkzeug": [
+    "soldering",
+    "gluing_hot_glue",
+    "screwing"
+  ],
+  "dauer": "60 min",
+  "stufe": 2,
+  "schritte": [
+    "Batterien entnehmen, Gerät aufschrauben, Motor herausziehen.",
+    "USB-Kabel aufschneiden, rote und schwarze Ader abisolieren.",
+    "Adern an die Motorkontakte löten.",
+    "Propeller auf die Motorwelle stecken und kleben.",
+    "Motor auf Ständer kleben, an USB anschließen."
+  ],
+  "sicherheit": "Keine Motoren aus Netzgeräten (Föhn, Mixer, Staubsauger) verwenden; nur mit 5 V USB betreiben.",
+  "quelle": {
+    "titel": "Panasonic Compact Shaver ES4815 Motor Replacement – iFixit",
+    "url": "https://www.ifixit.com/Guide/Panasonic+Compact+Shaver+ES4815+Motor+Replacement/110190",
+    "abgerufen": "2026-11-14"
+  }
+}

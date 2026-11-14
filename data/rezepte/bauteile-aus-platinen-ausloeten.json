@@ -1,0 +1,29 @@
+{
+  "titel": "Bauteile-Kiste aus alten Platinen",
+  "kurz": "Schalter, LEDs, Buchsen und Widerstände werden aus alten Platinen ausgelötet und sortiert.",
+  "braucht": [
+    {
+      "component_id": "circuit_board",
+      "menge": 1,
+      "hinweis": "Nur Platinen aus Kleingeräten wie Maus, Fernbedienung, Tastatur; keine Netzteil-Platinen."
+    }
+  ],
+  "werkzeug": [
+    "soldering"
+  ],
+  "dauer": "60 min",
+  "stufe": 2,
+  "schritte": [
+    "Platine in Halter einspannen, Schutzbrille aufsetzen.",
+    "Lötstelle mit Flussmittel und Entlötlitze erhitzen.",
+    "Zinn mit Litze oder Entlötpumpe absaugen.",
+    "Bauteil mit Pinzette herausziehen.",
+    "Bauteile sortiert in eine Kiste legen."
+  ],
+  "sicherheit": "Nie an eingesteckten Geräten löten, Akkus vorher von Lehrkraft entfernen lassen, Lötdampf absaugen.",
+  "quelle": {
+    "titel": "How To Solder and Desolder Connections – iFixit",
+    "url": "https://www.ifixit.com/Guide/How+To+Solder+and+Desolder+Connections/750",
+    "abgerufen": "2026-11-14"
+  }
+}

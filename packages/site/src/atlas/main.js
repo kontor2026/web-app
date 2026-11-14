@@ -7,6 +7,7 @@ import { waehlerHtml, verbindeWaehler } from '../waehler.js';
 import { zeichneStoffstrom } from './stoffstrom.js';
 import { erzeugeGlobus } from './globus.js';
 import { erzeugeViewer, ladeModell, materialVon } from '../viewer.js';
+import { bestand, plus, bauteile, stand, postenName, geschaetzt } from '../werkbank.js';
 import './atlas.css';
 
 const { objekte, rohstoffe: ROH, materialien: MAT, laender: LAND, quellen: QUELLE, awsh: AWSH, verwertung: VW, importe: IMP, rezepte: REZEPTE } = daten;
@@ -175,11 +176,13 @@ function zeigeGegenstand() {
   const sortiert = [...mix].sort((a, b) => b[1] - a[1]);
   setzePanel(`
     <div class="lw-zahl"><b>${gramm(obj.gramm)}</b><span>${esc(obj.name)}</span>${schaetzung(CSV, 'Typisches Gewicht, eigene Schätzung')}</div>
+    <button class="btn ghost lw-habich" id="habich">${bestand()[obj.id] ? `Auf der Werkbank: ${bestand()[obj.id]}× · noch einer +` : '+ Hab ich, auf die Werkbank'}</button>
     <div><div class="mix">${sortiert.map(([c, g]) => `<i style="width:${(g / gesamt) * 100}%;background:${CLASSES[c]?.color}"></i>`).join('')}</div>
       <div class="mix-legend">${sortiert.map(([c, g]) => `<span><i style="background:${CLASSES[c]?.color}"></i>${esc(CLASSES[c]?.label)}<b>${zahl((g / gesamt) * 100, 0)} %</b></span>`).join('')}</div></div>
     <div><h3>${seed.parts.length} Teile ${chip(repoUrl(`tools/kategorien/modelle/${obj.id}.json`), '3D-Modell im Repository', 'Modell')}</h3>
       <div class="plist">${viewer.teile.map((t) => `<button class="prow" data-i="${t.i}"><span class="n">${t.nr ?? '–'}</span>
         <span>${esc(t.p.name)}<small>${esc(materialVon(t.p)?.name ?? '')}</small></span><span class="m">${gramm(t.p.mass)}</span></button>`).join('')}</div></div>`);
+  document.getElementById('habich').addEventListener('click', () => { plus(obj.id); zeigeGegenstand(); });
   panel().querySelectorAll('.prow').forEach((b) => {
     b.addEventListener('pointerenter', () => viewer.markiere(+b.dataset.i));
     b.addEventListener('pointerleave', () => viewer.markiere(null));
@@ -206,15 +209,20 @@ function zeigeUpcycling() {
   viewer.faerbe(null);
   viewer.waehle(null);
   legende([]);
-  const cids = new Set(obj.teile.map((t) => t.cid)), mids = new Set(obj.materialien.map((m) => m.mid));
-  const passend = (REZEPTE ?? []).filter((r) => (r.component_ids ?? []).some((c) => cids.has(c)) || (r.material_ids ?? []).some((m) => mids.has(m)));
-  setzePanel(passend.length ? `<div class="lw-rezepte">${passend.map((r) => `
-    <article class="lw-rezept"><h2>${esc(r.titel)}</h2>
-      <div class="meta"><span>${esc(r.dauer ?? '')}</span><span class="dots">${'●'.repeat(r.stufe ?? 1)}${'○'.repeat(3 - (r.stufe ?? 1))}</span></div>
-      <ol class="steps-list">${(r.schritte ?? []).map((s) => `<li>${esc(s)}</li>`).join('')}</ol>
-      ${r.sicherheit ? `<p class="note warn">${esc(r.sicherheit)}</p>` : ''}
-      <p class="lw-fuss">${esc(r.quelle?.titel ?? '')}${chip(r.quelle?.url, r.quelle?.titel)}</p></article>`).join('')}</div>`
-    : `<p class="note">Rezepte für diesen Gegenstand werden gerade geschrieben.</p>`);
+  // Rezepte, die ein Bauteil dieses Gegenstands nutzen; Stand wie auf der Werkbank (mit diesem Gegenstand dazu)
+  const cids = new Set(obj.teile.map((t) => t.cid));
+  const mitDiesem = { ...bauteile(objektVon) };
+  if (!bestand()[obj.id]) for (const c of cids) mitDiesem[c] = (mitDiesem[c] ?? 0) + 1;
+  const passend = (REZEPTE ?? []).filter((r) => (r.braucht ?? []).some((b) => [b.component_id, ...(b.oder ?? [])].some((c) => cids.has(c))))
+    .map((r) => ({ r, s: stand(r, mitDiesem) })).sort((a, b) => b.s.ok / b.s.alle - a.s.ok / a.s.alle);
+  const name = (cid) => daten.komponenten?.[cid]?.name ?? cid;
+  setzePanel(passend.length ? `<div class="lw-rezepte">${passend.map(({ r, s }) => `
+    <article class="lw-rezept"><div class="lw-rezept-kopf"><h2>${esc(r.titel)}</h2><span class="wb-status ${s.baubar ? 'ok' : ''}">${s.baubar ? 'Baubar' : `${s.ok} von ${s.alle}`}</span></div>
+      <p class="lw-hinweis">${esc(r.kurz ?? '')}</p>
+      <div class="uses">${s.posten.map((p) => `<div class="use ${p.ok ? 'da' : 'fehlt'}"><i></i><span title="${esc(postenName(p, mitDiesem, name).alle)}">${esc(postenName(p, mitDiesem, name).text)}${postenName(p, mitDiesem, name).mehr ? ` <small>+${postenName(p, mitDiesem, name).mehr}</small>` : ''}</span><span class="q">${Math.min(p.da, p.soll)}/${geschaetzt(p) ? '≈' : ''}${p.soll}</span></div>`).join('')}</div>
+      <p class="lw-fuss">${esc(r.dauer ?? '')}${chip(r.quelle?.url, r.quelle?.titel)}</p></article>`).join('')}</div>
+    <a class="btn ghost" href="../werkbank/">Zur Werkbank →</a>`
+    : `<p class="note">${REZEPTE?.length ? 'Noch keine Bauidee nutzt Teile dieses Gegenstands.' : 'Die Bauideen werden gerade geschrieben.'}</p>`);
 }
 
 // ---------- 6: Entsorgung ----------

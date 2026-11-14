@@ -1,0 +1,39 @@
+{
+  "titel": "Möbelknöpfe aus alten Gerätegehäusen",
+  "kurz": "ABS-Gehäuse von Elektrogeräten werden geschreddert, getrocknet und zu Knöpfen gespritzt.",
+  "braucht": [
+    {
+      "component_id": "plastic_housing",
+      "menge": 2,
+      "oder": [
+        "keycaps",
+        "plastic_front_panel",
+        "toy_car_body",
+        "abs_brick",
+        "hairbrush_body",
+        "plastic_comb"
+      ],
+      "hinweis": "Alternativen nach Gewicht abwiegen; ca. 2 Gehäuse einer Fernbedienung reichen für mehrere Knöpfe (Schätzung)."
+    }
+  ],
+  "werkzeug": [
+    "shredding_bike_shredder",
+    "injection_molding",
+    "drilling"
+  ],
+  "dauer": "120 min",
+  "stufe": 3,
+  "schritte": [
+    "Gehäuse leeren, Schrauben, Metall und Aufkleber entfernen.",
+    "Nur Teile mit Kennzeichnung >ABS< sammeln und schreddern.",
+    "Schredder gut trocknen, feuchtes ABS bildet Blasen.",
+    "Bei ca. 230 °C in vorgewärmte Form spritzen.",
+    "Anguss abschneiden, Schraubloch bohren."
+  ],
+  "sicherheit": "Spritzguss nur mit Lehrkraft und laufender Absaugung; Teile mit FR-Kennzeichnung (Flammschutz) aussortieren.",
+  "quelle": {
+    "titel": "3D Printer Plastics Scientific Tests & Properties (Abschnitt ABS) – Precious Plastic Community",
+    "url": "https://community.preciousplastic.com/research/3d-printer-plastics-scientific-tests--properties",
+    "abgerufen": "2026-11-14"
+  }
+}

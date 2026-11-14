@@ -1,0 +1,37 @@
+{
+  "titel": "Deko-Teller aus Plastiktüten",
+  "kurz": "LDPE-Folien werden zerkleinert und in einer Tellerform zu einem bunten Teller gespritzt.",
+  "braucht": [
+    {
+      "component_id": "ldpe_film",
+      "menge": 25,
+      "gramm": 150,
+      "oder": [
+        "bubble_lining",
+        "fruit_net_mesh",
+        "ldpe_rings",
+        "ldpe_squeeze_body"
+      ],
+      "hinweis": "Quelle: max. 150 g pro Schuss; 25 Tüten bei geschätzt 6 g pro Tüte. Alternativen nach Gewicht."
+    }
+  ],
+  "werkzeug": [
+    "shredding_bike_shredder",
+    "injection_molding"
+  ],
+  "dauer": "90 min",
+  "stufe": 2,
+  "schritte": [
+    "Saubere LDPE-Folien (Code 4) sammeln, Papier entfernen.",
+    "Folien klein schneiden oder schreddern.",
+    "Maschine ca. 15 min vorheizen, Folie einfüllen.",
+    "In einem Zug einspritzen, 30 Sekunden Druck halten.",
+    "Abkühlen lassen, Teller entformen, Rand schleifen."
+  ],
+  "sicherheit": "Nur mit Lehrkraft und Atemschutz spritzen; Teller nicht für Lebensmittel verwenden.",
+  "quelle": {
+    "titel": "Plate mould – Precious Plastic Community",
+    "url": "https://community.preciousplastic.com/library/plate-mould",
+    "abgerufen": "2026-11-14"
+  }
+}

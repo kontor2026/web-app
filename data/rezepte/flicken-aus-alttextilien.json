@@ -1,0 +1,30 @@
+{
+  "titel": "Jeans flicken mit Stoff aus Alttextilien",
+  "kurz": "Aus alter Jeans oder alten Baumwollshirts wird ein Flicken für ein Loch in der Hose.",
+  "braucht": [
+    {
+      "component_id": "denim_fabric",
+      "menge": 1,
+      "oder": [
+        "cotton_fabric"
+      ],
+      "hinweis": "Ein Stück, mind. 1,5 cm größer als das Loch."
+    }
+  ],
+  "werkzeug": [],
+  "dauer": "60 min",
+  "stufe": 1,
+  "schritte": [
+    "Lose Fäden am Loch abschneiden.",
+    "Flicken zuschneiden, rundum größer als das Loch.",
+    "Hose wenden, Flicken innen feststecken.",
+    "Flickenrand mit Nadel und Faden festnähen.",
+    "Fäden über das Loch spannen und verweben."
+  ],
+  "sicherheit": null,
+  "quelle": {
+    "titel": "How to Darn a Hole in Denim Jeans by Hand – iFixit",
+    "url": "https://www.ifixit.com/Guide/How+to+Darn+a+Hole+in+Denim+Jeans+by+Hand/140756",
+    "abgerufen": "2026-11-14"
+  }
+}

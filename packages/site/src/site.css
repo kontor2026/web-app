@@ -104,3 +104,15 @@ a { color: inherit; }
 .ballon.hot { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
 .ballon.aus { opacity: .25; }
 .ohne-nummern .ballon { display: none; }
+
+/* Werkbank-Zähler oben rechts, auf jeder Seite gleich */
+.werkbank-zahl { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; color: var(--ink-2); }
+.werkbank-zahl .icon { width: 18px; height: 18px; }
+.werkbank-zahl:hover { color: var(--accent); }
+
+/* Bauteil-Posten in Bauideen (Werkbank und Lebensweg): grün = da, gestrichelt = fehlt */
+.use.da i { background: var(--good); }
+.use small { color: var(--ink-3); font-size: 12px; }
+.use .wb-hinweis { display: block; font-size: 11px; line-height: 1.35; margin-top: 2px; }
+.steps .zaehler { font: 500 11px var(--mono); color: var(--sheet); background: var(--ink-3); border-radius: 8px; padding: 0 6px; line-height: 16px; }
+.steps a.active .zaehler { background: var(--accent); }

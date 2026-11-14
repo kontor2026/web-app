@@ -1,0 +1,55 @@
+{
+  "titel": "Wäscheklammern aus PP-Deckeln",
+  "kurz": "Geschredderte PP-Deckel werden in einer Klammer-Form zu acht neuen Wäscheklammern gespritzt.",
+  "braucht": [
+    {
+      "component_id": "pp_lid",
+      "menge": 5,
+      "gramm": 50,
+      "oder": [
+        "pp_food_tray",
+        "pp_cup_body",
+        "pp_jar_body",
+        "pp_flip_cap",
+        "pen_barrel",
+        "pen_cap",
+        "plastic_handle",
+        "plastic_handles",
+        "toothbrush_handle",
+        "razor_handle",
+        "knife_handle",
+        "peg_halves",
+        "pp_straw",
+        "pp_sheet",
+        "pp_disc",
+        "hose_connector",
+        "lipstick_case"
+      ],
+      "hinweis": "Quelle: ein Schuss (8 Klammern + Anguss) ca. 50 g PP; 5 Deckel bei geschätzt 10 g pro Deckel. Alternativen nach Gewicht."
+    },
+    {
+      "component_id": "steel_spring",
+      "menge": 8,
+      "hinweis": "Federn aus alten Wäscheklammern, Kulis oder Hefter wiederverwenden."
+    }
+  ],
+  "werkzeug": [
+    "shredding_bike_shredder",
+    "injection_molding"
+  ],
+  "dauer": "90 min",
+  "stufe": 2,
+  "schritte": [
+    "Nur PP-Teile (Code 5) sammeln, waschen, trocknen.",
+    "Teile schreddern, Farben getrennt halten.",
+    "Klammerform zuschrauben und PP einspritzen.",
+    "Form öffnen, Klammerhälften vom Anguss abtrennen.",
+    "Je zwei Hälften mit einer Feder zusammenstecken."
+  ],
+  "sicherheit": "Spritzgussmaschine nur mit Lehrkraft, Hitzeschutzhandschuhen und Schutzbrille bedienen.",
+  "quelle": {
+    "titel": "Precious Plastic Clothes Peg Mould – Precious Plastic Community",
+    "url": "https://community.preciousplastic.com/library/precious-plastic-clothes-peg-mould",
+    "abgerufen": "2026-11-14"
+  }
+}

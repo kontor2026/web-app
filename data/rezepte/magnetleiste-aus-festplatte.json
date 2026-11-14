@@ -1,0 +1,43 @@
+{
+  "titel": "Magnetleiste aus Festplatten-Magneten",
+  "kurz": "Die starken Magnete einer alten Festplatte halten an einer Holzleiste Werkzeug oder Schlüssel.",
+  "braucht": [
+    {
+      "component_id": "hard_drive",
+      "menge": 1,
+      "hinweis": "Enthält meist zwei Neodym-Magnete."
+    },
+    {
+      "component_id": "wooden_handle",
+      "menge": 1,
+      "oder": [
+        "wooden_board",
+        "wooden_frame",
+        "wooden_deck",
+        "wooden_spoon_body",
+        "hardboard_panel"
+      ]
+    }
+  ],
+  "werkzeug": [
+    "screwing",
+    "sawing",
+    "drilling",
+    "gluing_hot_glue"
+  ],
+  "dauer": "90 min",
+  "stufe": 2,
+  "schritte": [
+    "Platine und Deckel der Festplatte abschrauben.",
+    "Scheibe, Lesekopf und Magnet ausbauen.",
+    "Holzstiel auf ca. 30 cm Länge sägen.",
+    "Magnete mit Heißkleber auf das Holz kleben.",
+    "Zwei Löcher bohren und Leiste aufhängen."
+  ],
+  "sicherheit": "Schutzbrille tragen, Glasscheiben können splittern; starke Magnete klemmen Finger ein.",
+  "quelle": {
+    "titel": "WD Blue Hard Drive Teardown – iFixit",
+    "url": "https://www.ifixit.com/Teardown/WD+Blue+Hard+Drive+Teardown/159818",
+    "abgerufen": "2026-11-14"
+  }
+}

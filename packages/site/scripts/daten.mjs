@@ -128,7 +128,23 @@ const rezepte = [];
 const rezeptOrdner = new URL('data/rezepte/', root);
 if (existsSync(rezeptOrdner)) for (const f of readdirSync(rezeptOrdner).filter((f) => f.endsWith('.json')).sort())
   rezepte.push({ id: f.replace(/\.json$/, ''), ...JSON.parse(readFileSync(new URL(f, rezeptOrdner), 'utf8')) });
-const komponenten = Object.fromEntries(Object.entries(cls.components).map(([cid, c]) => [cid, { name: c.name, mid: c.material_id }]));
+// Bauteile: deutscher Name aus dem schwersten Teil eines handgebauten Modells, und in welchen Gegenständen sie stecken
+const komponenten = Object.fromEntries(Object.entries(cls.components).map(([cid, c]) => [cid, { en: c.name, name: c.name, mid: c.material_id, in: [] }]));
+for (const o of objekte) for (const t of o.teile) {
+  const k = komponenten[t.cid];
+  if (!k) continue;
+  k.in.push(o.id);
+  // Lage und Zusätze entfernen: „Lautsprecher links“ → „Lautsprecher“, „Gehäuse-Oberteil“ → „Gehäuse“
+  const allgemein = t.name.replace(/\s*\([^)]*\)/g, '').replace(/\s+(links|rechts|oben|unten|vorne|hinten|innen|außen|\d+)$/i, '')
+    .replace(/-(Ober|Unter|Vorder|Rück|Seiten)teil$/i, '').replace(/^(Ober|Unter|Vorder|Rück)(teil|seite) des /i, '').trim();
+  if (o.handgebaut && allgemein) (k.namen ??= {})[allgemein] = (k.namen[allgemein] ?? 0) + 1;
+}
+const deutsch = json('data/bauteile_de.json', {});   // gepflegte deutsche Namen haben Vorrang
+for (const [cid, k] of Object.entries(komponenten)) if (deutsch[cid]) { k.name = deutsch[cid]; delete k.namen; }
+for (const k of Object.values(komponenten)) {        // sonst: häufigster deutscher Name, bei Gleichstand der kürzeste
+  if (k.namen) k.name = Object.entries(k.namen).sort((a, b) => b[1] - a[1] || a[0].length - b[0].length)[0][0];
+  delete k.namen;
+}
 
 mkdirSync(new URL('../src/daten/', import.meta.url), { recursive: true });
 writeFileSync(new URL('../src/daten/atlas.json', import.meta.url), JSON.stringify({ objekte, rohstoffe, materialien, laender, quellen, awsh, verwertung, importe, rezepte, komponenten }));

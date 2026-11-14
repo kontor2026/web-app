@@ -1,0 +1,45 @@
+{
+  "titel": "LED-Leselicht mit 9-V-Block",
+  "kurz": "Eine ausgelötete LED aus einem Fahrradlicht leuchtet mit Vorwiderstand an einem 9-V-Block.",
+  "braucht": [
+    {
+      "component_id": "led_module",
+      "menge": 1,
+      "hinweis": "Nur aus Fahrradlicht oder Taschenlampe, nicht aus 230-V-LED-Lampen."
+    },
+    {
+      "component_id": "circuit_board",
+      "menge": 1,
+      "hinweis": "Liefert einen Vorwiderstand (ca. 470 Ohm) und einen Schalter."
+    },
+    {
+      "component_id": "cable_copper_core",
+      "menge": 1
+    },
+    {
+      "component_id": "plastic_housing",
+      "menge": 1,
+      "hinweis": "Altes Gehäuse als Leuchtenkörper."
+    }
+  ],
+  "werkzeug": [
+    "soldering",
+    "gluing_hot_glue",
+    "drilling"
+  ],
+  "dauer": "90 min",
+  "stufe": 2,
+  "schritte": [
+    "Fahrradlicht öffnen, Batterien herausnehmen, LED auslöten.",
+    "Widerstand und Schalter aus alter Platine auslöten.",
+    "LED, Widerstand und Schalter in Reihe löten.",
+    "Kabel an 9-V-Batterieclip löten, Polung beachten.",
+    "Alles mit Heißkleber ins Gehäuse kleben."
+  ],
+  "sicherheit": "Nur neue 9-V-Blockbatterie verwenden, alte Batterien nie öffnen; Lötdampf absaugen.",
+  "quelle": {
+    "titel": "5 LED 6 Mode Rear Bike Light LED Replacement – iFixit",
+    "url": "https://www.ifixit.com/Guide/5+LED+6+Mode+Rear+Bike+Light++LED+Replacement/53016",
+    "abgerufen": "2026-11-14"
+  }
+}

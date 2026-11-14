@@ -9,7 +9,7 @@ const NAME = { N: 'Norden', O: 'Osten', S: 'Süden', W: 'Westen' };
 const WER = { Mensch: 'mensch', KI: 'ki', Datenbank: 'db' };
 const zaehle = (w) => KOMPASS.ablauf.filter((a) => a.wer === w).length;
 
-const app = shell('kompass', '../', `<span class="stock">Offene Punkte <b>${KOMPASS.richtungen.reduce((s, r) => s + r.offen.length, 0)}</b></span>`);
+const app = shell('kompass', '../');
 
 // Kompassrose: Kreise, Teilstriche alle 10°, vier Richtungen als Positionsnummern-Ballons
 const striche = Array.from({ length: 36 }, (_, i) => {
