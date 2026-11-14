@@ -5,7 +5,7 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { CSS2DRenderer, CSS2DObject } from 'three/addons/renderers/CSS2DRenderer.js';
 import { CLASSES, MATERIALS } from '../../../js/data/catalog.js';
 import { esc, gramm, ruhig } from './shell.js';
-import { stoff, koerperGeometrie, studio, eigenschaften, nachbearbeitung } from './foto.js';
+import { stoff, koerperGeometrie, studio, eigenschaften, nachbearbeitung, stapelSuchen, huellenMesh } from './foto.js';
 
 const LADE = import.meta.glob('../../../backend/seed/kategorien/*.json', { import: 'default' });
 export const ladeModell = (id) => LADE[`../../../backend/seed/kategorien/${id}.json`]?.();
@@ -107,6 +107,19 @@ export function erzeugeViewer(el, { onHover, onSelect, tip } = {}) {
       }
       modell.add(g); teile.push(t);
     }
+    // Foto-Ansicht: gestapelte Scheiben (Flaschenschulter, Schuh, Ball) als eine glatte Hülle zeigen
+    for (const kette of stapelSuchen(obj.parts, farbeVon)) {
+      const unten = teile[kette[0]], p0 = unten.p;
+      const h = huellenMesh(kette.map((i) => obj.parts[i]), unten.mesh.material.clone());
+      h.geometry.translate(-p0.x, -p0.z, -p0.y);
+      h.userData.nurFoto = true;
+      unten.g.add(h);
+      unten.huelle = h;
+      kette.forEach((i, n) => {
+        teile[i].mesh.userData.ersetzt = true;
+        if (n < kette.length - 1) teile[i].marks.forEach((m) => { m.mesh.userData.ersetzt = true; });
+      });
+    }
     explosion(1, false);
     modell.position.set(0, 0, 0); modell.updateMatrixWorld(true);
     const box = new THREE.Box3().setFromObject(modell);
@@ -150,6 +163,7 @@ export function erzeugeViewer(el, { onHover, onSelect, tip } = {}) {
       m.userData.map ??= m.map;                                 // Holzmaserung nur in Materialfarbe
       if (m.map !== (c ? null : m.userData.map)) { m.map = c ? null : m.userData.map; m.needsUpdate = true; }
       m.color.set(c ?? (m.map ? 0xffffff : t.farbe));
+      t.huelle?.material.color.set(c ?? t.farbe);
       t.marks.forEach((m) => m.mesh.material.color.copy(c ? new THREE.Color(c).multiplyScalar(0.85) : m.farbe));
     }
     neu();
@@ -167,7 +181,10 @@ export function erzeugeViewer(el, { onHover, onSelect, tip } = {}) {
   function foto(an) {
     fotoAn = an;
     licht.an(an);
-    modell.traverse((o) => { if (o.userData.kante) o.visible = !an; });
+    modell.traverse((o) => {
+      if (o.userData.kante || o.userData.ersetzt) o.visible = !an;
+      if (o.userData.nurFoto) o.visible = an;
+    });
     neu();
   }
 

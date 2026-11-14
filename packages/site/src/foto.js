@@ -7,7 +7,7 @@ import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
 import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
 import { GTAOPass } from 'three/addons/postprocessing/GTAOPass.js';
 import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
-import { mergeGeometries } from 'three/addons/utils/BufferGeometryUtils.js';
+import { mergeGeometries, mergeVertices } from 'three/addons/utils/BufferGeometryUtils.js';
 import { MATERIALS } from '../../../js/data/catalog.js';
 
 // ---------- Oberflächen-Texturen (prozedural, einmal erzeugt, in mm gekachelt) ----------
@@ -165,10 +165,51 @@ function hohlGeometrie(t) {
   return geo;
 }
 
+const WEICH = new Set(['textil', 'baumwolle', 'wolle', 'polyester', 'leder', 'kunstleder', 'gummi', 'schaum', 'tpe', 'tpu', 'wachs', 'organisch', 'kork']);
+const SCHARF = new Set(['metall', 'glas', 'elektronik', 'magnet']);
+export function haerte(t) {
+  const id = t.materials?.[0]?.[0], cls = MATERIALS[id]?.cls;
+  const w = t.w, d = t.d ?? t.w;
+  // Kabel und Schnüre: dünn und lang, rund wie ein Schlauch
+  if (Math.max(w, d) > 6 * Math.min(w, d) && t.h <= Math.min(w, d) * 1.6 && ['pvc', 'tpe', 'gummi', 'kupfer', 'nylon', 'polyester'].includes(id)) return 'weich';
+  if (WEICH.has(id)) return 'weich';
+  if (SCHARF.has(cls) || id === 'papier' || id === 'druck' || id === 'verbund') return 'scharf';
+  return 'mittel';
+}
+
+// Echte Formen nur für die Foto-Ansicht (Feld form), füllen den Quader des Teils aus:
+// kugel (Ball, Knauf), torus (Kabelrolle, Reifen, Ring), liegend_x / liegend_y (Kabel, Rolle, Griff, Rad, Stift)
+function formGeometrie(t) {
+  const w = t.w, d = t.d ?? t.w, h = t.h, weich = haerte(t) === 'weich';
+  let geo;
+  if (t.form === 'kugel') {
+    geo = new THREE.SphereGeometry(0.5, 64, 40);
+    geo.scale(w, h, d);
+  } else if (t.form === 'torus') {
+    const rohr = Math.min(h / 2, Math.min(w, d) / 4), R = Math.min(w, d) / 2 - rohr;
+    geo = new THREE.TorusGeometry(R, rohr, 32, 96);
+    geo.rotateX(Math.PI / 2);
+    geo.scale((w / 2) / (R + rohr), (h / 2) / rohr, (d / 2) / (R + rohr));
+  } else {
+    const entlangX = t.form === 'liegend_x', L = entlangX ? w : d, q1 = entlangX ? d : w;
+    // Kreisquerschnitt (Breite quer × Höhe); weiche Teile mit halbrunden Enden wie ein Kabel
+    geo = weich ? new THREE.CapsuleGeometry(0.5, Math.max(0.01, L / Math.min(q1, h) - 1), 16, 48) : new THREE.CylinderGeometry(0.5, 0.5, L / Math.min(q1, h), 64, 1);
+    if (entlangX) geo.rotateZ(Math.PI / 2); else geo.rotateX(Math.PI / 2);
+    geo.computeBoundingBox();
+    const b = geo.boundingBox, f = [w / (b.max.x - b.min.x), h / (b.max.y - b.min.y), d / (b.max.z - b.min.z)];
+    geo.scale(...f);
+  }
+  geo.translate(w / 2, h / 2, d / 2);
+  return geo;
+}
+
 export function koerperGeometrie(t) {
+  if (t.form) return formGeometrie(t);
   if (t.wand > 0) return hohlGeometrie(t);
   const w = t.w, d = t.d ?? t.w, h = t.h;
-  const b = Math.min(1.2, 0.12 * Math.min(w, d), 0.3 * h);
+  const k = haerte(t), m = Math.min(w, d);
+  // Kantenradius nach Material: weich (Stoff, Leder, Gummi, Kabel) wie ein Kissen, Kunststoff mittel, Metall/Glas scharf
+  const b = k === 'weich' ? Math.min(0.45 * m, 0.48 * h, 30) : k === 'mittel' ? Math.min(0.18 * m, 0.3 * h, 6) : Math.min(0.08 * m, 0.25 * h, 2);
   const rund = t.shape === 'cyl';
   let geo;
   if (b < 0.12) {
@@ -176,8 +217,10 @@ export function koerperGeometrie(t) {
     geo.rotateX(Math.PI / 2);
     geo.translate(0, h, 0);
   } else {
-    geo = new THREE.ExtrudeGeometry(grundriss(b, b, w - 2 * b, d - 2 * b, Math.max(0, (t.r ?? 0) - b), rund), {
-      depth: h - 2 * b, bevelEnabled: true, bevelThickness: b, bevelSize: b, bevelOffset: 0, bevelSegments: 3, curveSegments: 32,
+    const ri = k === 'weich' ? Math.max((t.r ?? 0) - b, 0.25 * Math.min(w - 2 * b, d - 2 * b)) : Math.max(0, (t.r ?? 0) - b);
+    geo = new THREE.ExtrudeGeometry(grundriss(b, b, w - 2 * b, d - 2 * b, ri, rund), {
+      depth: Math.max(0.01, h - 2 * b), bevelEnabled: true, bevelThickness: b, bevelSize: b, bevelOffset: 0,
+      bevelSegments: k === 'weich' ? 8 : 4, curveSegments: 32,
     });
     geo.rotateX(Math.PI / 2);
     geo.translate(0, h - b, 0);
@@ -224,6 +267,7 @@ export function studio(renderer, scene) {
       const c = sonne.shadow.camera;
       c.left = c.bottom = -r * 1.4; c.right = c.top = r * 1.4; c.near = r * 0.5; c.far = r * 6;
       c.updateProjectionMatrix();
+      sonne.shadow.normalBias = r * 0.004;
       fuell.position.copy(m).add(new THREE.Vector3(-1, 0.4, -0.3).multiplyScalar(r * 3));
       boden.scale.set(r * 10, r * 10, 1);
       boden.position.set(m.x, box.min.y - 0.3, m.z);
@@ -245,4 +289,100 @@ export function nachbearbeitung(renderer, scene, kamera) {
     radius(r) { ao.updateGtaoMaterial({ radius: Math.max(4, r * 0.06), distanceExponent: 1.5, thickness: Math.max(2, r * 0.03), scale: 1, samples: 16 }); },
     render() { composer.render(); },
   };
+}
+
+
+// ---------- Rundung: übereinander gestapelte Scheiben zu einer glatten Hülle verbinden ----------
+// Die Modelle bauen runde Formen (Flaschenschulter, Schuh, Ball, Kegel) aus waagrechten Scheiben. In der Foto-Ansicht
+// wird so ein Stapel durch eine glatte Fläche ersetzt: Umrisse der Scheiben werden gleich abgetastet und senkrecht
+// mit Catmull-Rom interpoliert. Die Scheiben bleiben für Zeichnung, Klicks und Prüfung erhalten.
+const N_UM = 72;
+function umriss(t) {           // N_UM Punkte auf dem Umriss, nach Winkel um die Mitte (für konvexe Grundrisse)
+  const w = t.w, d = t.d ?? t.w, cx = t.x + w / 2, cy = t.y + d / 2;
+  const pts = [];
+  for (let i = 0; i < N_UM; i++) {
+    const a = (i / N_UM) * Math.PI * 2, c = Math.cos(a), s = Math.sin(a);
+    if (t.shape === 'cyl') { pts.push([cx + c * w / 2, cy + s * d / 2]); continue; }
+    // Strahl aus der Mitte gegen ein abgerundetes Rechteck (Superellipse als gute Näherung)
+    const r = Math.max(0, Math.min(t.r ?? 0, w / 2, d / 2)), n = 2 + 18 * (1 - r / Math.max(1e-6, Math.min(w, d) / 2)) ** 2;
+    const k = 1 / ((Math.abs(c) / (w / 2)) ** n + (Math.abs(s) / (d / 2)) ** n) ** (1 / n);
+    pts.push([cx + c * k, cy + s * k]);
+  }
+  return pts;
+}
+const cr = (p0, p1, p2, p3, u) => 0.5 * (2 * p1 + (-p0 + p2) * u + (2 * p0 - 5 * p1 + 4 * p2 - p3) * u * u + (-p0 + 3 * p1 - 3 * p2 + p3) * u * u * u);
+
+function huelle(stapel) {      // stapel: Teile von unten nach oben
+  const ebenen = [];
+  const u0 = umriss(stapel[0]), u1 = umriss(stapel.at(-1));
+  ebenen.push({ z: stapel[0].z, pts: u0 });
+  for (const t of stapel) ebenen.push({ z: t.z + t.h / 2, pts: umriss(t) });
+  ebenen.push({ z: stapel.at(-1).z + stapel.at(-1).h, pts: u1 });
+  const fein = [];
+  const SCHRITT = 6;
+  for (let i = 0; i < ebenen.length - 1; i++) {
+    const a = ebenen[Math.max(0, i - 1)], b = ebenen[i], c = ebenen[i + 1], e = ebenen[Math.min(ebenen.length - 1, i + 2)];
+    for (let k = 0; k < SCHRITT; k++) {
+      const u = k / SCHRITT;
+      fein.push({ z: b.z + (c.z - b.z) * u, pts: b.pts.map((_, j) => [0, 1].map((q) => cr(a.pts[j][q], b.pts[j][q], c.pts[j][q], e.pts[j][q], u))) });
+    }
+  }
+  fein.push(ebenen.at(-1));
+  const pos = [];
+  const v = (x, y, z) => pos.push(x, z, y);              // Station x, y, z → three X, Z(=Tiefe), Y(=Höhe)
+  for (let i = 0; i < fein.length - 1; i++) {
+    const A = fein[i], B = fein[i + 1];
+    for (let j = 0; j < N_UM; j++) {
+      const j2 = (j + 1) % N_UM;
+      v(A.pts[j][0], A.pts[j][1], A.z); v(B.pts[j][0], B.pts[j][1], B.z); v(A.pts[j2][0], A.pts[j2][1], A.z);
+      v(A.pts[j2][0], A.pts[j2][1], A.z); v(B.pts[j][0], B.pts[j][1], B.z); v(B.pts[j2][0], B.pts[j2][1], B.z);
+    }
+  }
+  for (const [E, oben] of [[fein[0], false], [fein.at(-1), true]]) {     // Deckel unten und oben
+    const mx = E.pts.reduce((s, p) => s + p[0], 0) / N_UM, my = E.pts.reduce((s, p) => s + p[1], 0) / N_UM;
+    for (let j = 0; j < N_UM; j++) {
+      const j2 = (j + 1) % N_UM;
+      if (oben) { v(mx, my, E.z); v(E.pts[j2][0], E.pts[j2][1], E.z); v(E.pts[j][0], E.pts[j][1], E.z); }
+      else { v(mx, my, E.z); v(E.pts[j][0], E.pts[j][1], E.z); v(E.pts[j2][0], E.pts[j2][1], E.z); }
+    }
+  }
+  let geo = new THREE.BufferGeometry();
+  geo.setAttribute('position', new THREE.Float32BufferAttribute(pos, 3));
+  geo = mergeVertices(geo, 0.01);
+  geo.computeVertexNormals();
+  return geo;
+}
+
+// Stapel finden: gleiche Explosion, gleiche Farbe und Oberfläche, lückenlos übereinander, Grundrisse überlappen
+export function stapelSuchen(parts, farbeVon) {
+  const schluessel = (p) => [JSON.stringify(p.explode ?? [0, 0, 0]), farbeVon(p), p.materials?.[0]?.[0], p.opacity ?? 1, p.wand ?? 0, p.form ?? ''].join('|');
+  const gruppen = new Map();
+  parts.forEach((p, i) => { const k = schluessel(p); if (!gruppen.has(k)) gruppen.set(k, []); gruppen.get(k).push(i); });
+  const stapel = [];
+  for (const [k, idx] of gruppen) {
+    if (idx.length < 3 || !k.endsWith('|')) continue;          // Teile mit eigener form nicht verbinden
+    const frei = new Set(idx);
+    for (const start of [...idx].sort((a, b) => parts[a].z - parts[b].z)) {
+      if (!frei.has(start)) continue;
+      const kette = [start]; frei.delete(start);
+      for (;;) {
+        const o = parts[kette.at(-1)], oben = o.z + o.h;
+        const ox = o.x + o.w / 2, oy = o.y + (o.d ?? o.w) / 2;
+        const naechste = [...frei].find((j) => {
+          const q = parts[j], qx = q.x + q.w / 2, qy = q.y + (q.d ?? q.w) / 2;
+          return Math.abs(q.z - oben) < 0.6 && Math.abs(qx - ox) < Math.min(o.w, q.w) * 0.35 && Math.abs(qy - oy) < Math.min(o.d ?? o.w, q.d ?? q.w) * 0.35;
+        });
+        if (naechste == null) break;
+        kette.push(naechste); frei.delete(naechste);
+      }
+      if (kette.length >= 3) stapel.push(kette);
+    }
+  }
+  return stapel;
+}
+
+export function huellenMesh(stapelTeile, material) {
+  const mesh = new THREE.Mesh(huelle(stapelTeile), material);
+  mesh.castShadow = mesh.receiveShadow = true;
+  return mesh;
 }

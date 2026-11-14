@@ -34,7 +34,7 @@ ZEILEN = {r['id']: r for r in csv.DictReader((SRC / 'kategorien.csv').open(encod
 
 # Reihenfolge der Felder wie in den Vorlagen
 REIHENFOLGE = ('id', 'component_id', 'material_id', 'name', 'short', 'shape', 'x', 'y', 'w', 'd', 'z', 'h', 'r',
-               'explode', 'mass', 'materials', 'info', 'color', 'opacity', 'label', 'sortBias', 'wand', 'boden', 'marks')
+               'explode', 'mass', 'materials', 'info', 'color', 'opacity', 'label', 'sortBias', 'wand', 'boden', 'form', 'marks')
 
 
 def masse(oid):
@@ -55,7 +55,9 @@ def teil(id, component_id, name, short, shape, *, x, y, w, z, h, d=None, r=None,
 
     extra: color, opacity, label, sortBias, marks, wand, boden.
     wand (mm): Teil ist in der Foto-Ansicht hohl mit dieser Wandstärke, oben offen; boden (mm): Bodendicke
-    (Standard = wand, 0 = auch unten offen, z. B. Ring, Reifen). Die Station zeichnet es weiter massiv."""
+    (Standard = wand, 0 = auch unten offen, z. B. Ring, Reifen). Die Station zeichnet es weiter massiv.
+    form: echte Form in der Foto-Ansicht, füllt den Quader des Teils: 'kugel', 'torus' (Ring, Kabelrolle, Reifen),
+    'liegend_x' / 'liegend_y' (liegender Zylinder entlang x bzw. y: Kabel, Rolle, Griff, Rad, Stift)."""
     if component_id not in CLS['components']:
         raise ValueError(f'{id}: unbekannte component_id {component_id}')
     mid = material_id or CLS['components'][component_id]['material_id']
@@ -72,6 +74,8 @@ def teil(id, component_id, name, short, shape, *, x, y, w, z, h, d=None, r=None,
     p = dict(id=id, component_id=component_id, material_id=mid, name=name, short=short, shape=shape,
              x=x, y=y, w=w, d=d, z=z, h=h, r=r, explode=list(explode) if explode else None,
              mass=mass, materials=mats, info=info, **extra)
+    if p.get('form') not in (None, 'kugel', 'torus', 'liegend_x', 'liegend_y'):
+        raise ValueError(f"{id}: form {p['form']} unbekannt (kugel, torus, liegend_x, liegend_y)")
     unbekannt = set(p) - set(REIHENFOLGE)
     if unbekannt:
         raise ValueError(f'{id}: unbekannte Felder {unbekannt}')

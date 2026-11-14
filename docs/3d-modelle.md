@@ -126,6 +126,8 @@ Maßstab sind Smartphone und Laptop:
 
 Die Seite unter `packages/site` zeigt die Modelle fotorealistisch (`packages/site/src/foto.js`): Material aus `materials[0]` (Metall spiegelt, Glas bricht das Licht, Stoff hat Glanz), gerundete Kanten, Schatten. Zusätzliche Felder, die nur dort wirken (die Station zeichnet weiter massiv):
 - `wand` (mm) am Teil: hohl mit dieser Wandstärke, oben offen. `boden` (mm): Bodendicke, Standard = `wand`, `0` = auch unten offen (Ring, Reifen, Manschette). Für Becher, Eimer, Töpfe, Rohre, Schläuche, Etikettenbänder.
+- `form` am Teil: echte Form, die den Quader des Teils ausfüllt: `kugel` (Ball, Knauf), `torus` (Ring, Kabelrolle, Reifen), `liegend_x` / `liegend_y` (liegender Zylinder entlang x bzw. y: Kabel, Rolle, Griff, Rad, Stift). Weiche Materialien bekommen runde Enden.
+- Automatisch: Kanten werden nach Material gerundet (Stoff, Leder, Gummi, Kabel weich wie ein Kissen), und mindestens drei gleich aussehende, lückenlos gestapelte Scheiben mit gleicher Explosion werden zu einer glatten Hülle verbunden (Flaschenschulter, Schuh, Kegel).
 - `zeichnung: true` an einem mark (`mark(..., zeichnung=True)`): nur in der Zeichnung, z. B. eine aufgemalte Öffnung, die in der Foto-Ansicht `wand` ersetzt.
 - Prüfen: Vite-Dev-Server in `packages/site` (`npx vite --port 5190`), dann `node scripts/foto-pruef.mjs <id> <ordner>`.
 
