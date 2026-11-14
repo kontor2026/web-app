@@ -7,19 +7,19 @@
    "name": "Griffkappe",
    "short": "Kappe",
    "shape": "box",
-   "x": 6,
+   "x": 4,
    "y": 40,
-   "w": 28,
+   "w": 32,
    "d": 106,
-   "z": 52,
+   "z": 54,
    "h": 6,
    "r": 10,
    "explode": [
     0,
     0,
-    208.0
+    95.0
    ],
-   "mass": 9.6,
+   "mass": 10,
    "materials": [
     [
      "pcabs",
@@ -47,19 +47,19 @@
    "name": "Bügel (Oberarm)",
    "short": "Bügel",
    "shape": "box",
-   "x": 3,
+   "x": 0,
    "y": 0,
-   "w": 34,
+   "w": 40,
    "d": 150,
-   "z": 36,
+   "z": 38,
    "h": 16,
    "r": 8,
    "explode": [
     0,
     0,
-    182.0
+    81.0
    ],
-   "mass": 81.7,
+   "mass": 85,
    "materials": [
     [
      "stahl",
@@ -73,17 +73,10 @@
      "shape": "box",
      "x": 4,
      "y": 4,
-     "w": 26,
+     "w": 32,
      "d": 30,
      "r": 6,
      "fill": "#AEB4B9"
-    },
-    {
-     "shape": "cyl",
-     "x": 14,
-     "y": 8,
-     "w": 6,
-     "fill": "#9AA2A6"
     }
    ]
   },
@@ -98,15 +91,15 @@
    "y": 136,
    "w": 14,
    "d": 2,
-   "z": 23,
-   "h": 12,
+   "z": 24,
+   "h": 14,
    "r": 0,
    "explode": [
     0,
     0,
-    157.0
+    67.0
    ],
-   "mass": 2.9,
+   "mass": 3,
    "materials": [
     [
      "stahl",
@@ -133,9 +126,9 @@
    "explode": [
     0,
     0,
-    151.0
+    62.0
    ],
-   "mass": 3.8,
+   "mass": 4,
    "materials": [
     [
      "stahl",
@@ -452,9 +445,9 @@
    "explode": [
     0,
     0,
-    152.0
+    63.0
    ],
-   "mass": 2.9,
+   "mass": 3,
    "materials": [
     [
      "pcabs",
@@ -481,9 +474,9 @@
    "explode": [
     0,
     0,
-    150.0
+    61.0
    ],
-   "mass": 1.9,
+   "mass": 2,
    "materials": [
     [
      "stahl",
@@ -616,9 +609,9 @@
    "explode": [
     0,
     0,
-    118.0
+    41.0
    ],
-   "mass": 33.7,
+   "mass": 35,
    "materials": [
     [
      "stahl",
@@ -656,9 +649,9 @@
    "explode": [
     0,
     0,
-    93.0
+    28.0
    ],
-   "mass": 5.8,
+   "mass": 6,
    "materials": [
     [
      "stahl",
@@ -675,11 +668,11 @@
    "name": "Scharnierstift",
    "short": "Scharnierstift",
    "shape": "box",
-   "x": 5,
-   "y": 8,
-   "w": 30,
+   "x": 0,
+   "y": 6,
+   "w": 40,
    "d": 4,
-   "z": 22,
+   "z": 24,
    "h": 4,
    "r": 2,
    "explode": [
@@ -687,7 +680,7 @@
     0,
     0
    ],
-   "mass": 1.9,
+   "mass": 2,
    "materials": [
     [
      "stahl",
@@ -714,9 +707,9 @@
    "explode": [
     0,
     0,
-    52.0
+    28.0
    ],
-   "mass": 4.8,
+   "mass": 5,
    "materials": [
     [
      "stahl",
@@ -747,46 +740,6 @@
    ]
   },
   {
-   "id": "scharnierbock",
-   "component_id": "plastic_base",
-   "material_id": "abs",
-   "name": "Scharnierbock",
-   "short": "Scharnierbock",
-   "shape": "box",
-   "x": 4,
-   "y": 2,
-   "w": 32,
-   "d": 22,
-   "z": 13,
-   "h": 15,
-   "r": 4,
-   "explode": [
-    0,
-    0,
-    52.0
-   ],
-   "mass": 7.7,
-   "materials": [
-    [
-     "pcabs",
-     100
-    ]
-   ],
-   "info": "Hinterer Aufbau des Unterteils mit der Bohrung für den Scharnierstift.",
-   "color": "#2A2E31",
-   "marks": [
-    {
-     "shape": "box",
-     "x": 3,
-     "y": 3,
-     "w": 26,
-     "d": 16,
-     "r": 3,
-     "fill": "#363B3F"
-    }
-   ]
-  },
-  {
    "id": "unterteil",
    "component_id": "plastic_base",
    "material_id": "abs",
@@ -803,9 +756,9 @@
    "explode": [
     0,
     0,
-    26.0
+    14.0
    ],
-   "mass": 38.5,
+   "mass": 40,
    "materials": [
     [
      "pcabs",
@@ -813,18 +766,7 @@
     ]
    ],
    "info": "Fuß aus ABS-Kunststoff, mit dem Amboss vernietet. Vom Stahl abhebeln: Kunststoff und Metall getrennt entsorgen.",
-   "color": "#2A2E31",
-   "marks": [
-    {
-     "shape": "box",
-     "x": 3,
-     "y": 30,
-     "w": 34,
-     "d": 115,
-     "r": 6,
-     "fill": "#33383C"
-    }
-   ]
+   "color": "#2A2E31"
   },
   {
    "id": "fuss",
@@ -845,7 +787,7 @@
     0,
     0.0
    ],
-   "mass": 4.8,
+   "mass": 5,
    "materials": [
     [
      "gummi",

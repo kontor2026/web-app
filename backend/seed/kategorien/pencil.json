@@ -76,27 +76,15 @@
    },
    "eucrm2023": {
     "titel": "Study on the Critical Raw Materials for the EU 2023 – Final Report",
-    "url": "https://op.europa.eu/o/opportal-service/download-handler?identifier=57318397-fdd4-11ed-a05c-01aa75ed71a1&format=pdf&language=en&productionSystem=cellar&part="
+    "url": "https://single-market-economy.ec.europa.eu/publications/study-critical-raw-materials-eu-2023-final-report_en"
    },
    "eu2024crma": {
     "titel": "Verordnung (EU) 2024/1252 zur Schaffung eines Rahmens zur Gewährleistung einer sicheren und nachhaltigen Versorgung mit kritischen Rohstoffen (Critical Raw Materials Act)",
-    "url": "https://op.europa.eu/o/opportal-service/download-handler?identifier=aa3c49f7-08e7-11ef-a251-01aa75ed71a1&format=pdf&language=en&productionSystem=cellar&part="
+    "url": "https://op.europa.eu/en/publication-detail/-/publication/aa3c49f7-08e7-11ef-a251-01aa75ed71a1"
    },
    "usdapsd2026": {
     "titel": "Production, Supply and Distribution Online (PSD), Datensatz Cotton (psd_cotton_csv.zip)",
     "url": "https://apps.fas.usda.gov/psdonline/downloads/psd_cotton_csv.zip"
-   },
-   "eia2026intl": {
-    "titel": "International Energy Statistics, Bulk-Download INTL.zip",
-    "url": "https://www.eia.gov/opendata/bulk/INTL.zip"
-   },
-   "faostat2025qcl": {
-    "titel": "FAOSTAT Crops and livestock products (QCL), Bulk-Download Production_Crops_Livestock_E_All_Data_(Normalized).zip",
-    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip"
-   },
-   "faostat2026fo": {
-    "titel": "FAOSTAT Forestry Production and Trade (FO), Bulk-Download Forestry_E_All_Data_(Normalized).zip",
-    "url": "https://bulks-faostat.fao.org/production/Forestry_E_All_Data_(Normalized).zip"
    }
   }
  },
@@ -139,15 +127,15 @@
    "name": "Minenspitze",
    "short": "Spitze",
    "shape": "cyl",
-   "x": 3.2,
-   "y": 3.2,
-   "w": 1.6,
+   "x": 3,
+   "y": 3,
+   "w": 2,
    "z": 171,
    "h": 4,
    "explode": [
     0,
     0,
-    72
+    60
    ],
    "mass": 0.02,
    "materials": [
@@ -157,35 +145,26 @@
     ]
    ],
    "info": "Die angespitzte Mine. Weiche Minen (B) enthalten mehr Grafit, harte (H) mehr Ton.",
-   "color": "#3A3F44",
-   "marks": [
-    {
-     "shape": "cyl",
-     "x": 0.4,
-     "y": 0.4,
-     "w": 0.8,
-     "fill": "#5A6268"
-    }
-   ]
+   "color": "#3A3F44"
   },
   {
-   "id": "holzspitze_3",
+   "id": "holzspitze_2",
    "component_id": "wooden_pencil_body",
    "material_id": "wood",
    "name": "Angespitztes Holz (vorne)",
    "short": "Holzkegel",
    "shape": "cyl",
-   "x": 2.2,
-   "y": 2.2,
-   "w": 3.6,
-   "z": 167,
-   "h": 4,
+   "x": 2,
+   "y": 2,
+   "w": 4,
+   "z": 166,
+   "h": 5,
    "explode": [
     0,
     0,
     60
    ],
-   "mass": 0.03,
+   "mass": 0.05,
    "materials": [
     [
      "holz",
@@ -198,45 +177,8 @@
    "marks": [
     {
      "shape": "cyl",
-     "x": 0.8,
-     "y": 0.8,
-     "w": 2,
-     "fill": "#3A3F44"
-    }
-   ]
-  },
-  {
-   "id": "holzspitze_2",
-   "component_id": "wooden_pencil_body",
-   "material_id": "wood",
-   "name": "Angespitztes Holz (Mitte)",
-   "short": "Holzkegel",
-   "shape": "cyl",
-   "x": 1.3,
-   "y": 1.3,
-   "w": 5.4,
-   "z": 163,
-   "h": 4,
-   "explode": [
-    0,
-    0,
-    60
-   ],
-   "mass": 0.06,
-   "materials": [
-    [
-     "holz",
-     100
-    ]
-   ],
-   "info": "Mittlerer Teil des Holzkegels.",
-   "color": "#D9B07A",
-   "label": false,
-   "marks": [
-    {
-     "shape": "cyl",
-     "x": 1.7,
-     "y": 1.7,
+     "x": 1,
+     "y": 1,
      "w": 2,
      "fill": "#3A3F44"
     }
@@ -249,17 +191,17 @@
    "name": "Angespitztes Holz",
    "short": "Holzkegel",
    "shape": "cyl",
-   "x": 0.4,
-   "y": 0.4,
-   "w": 7.2,
-   "z": 159,
-   "h": 4,
+   "x": 1,
+   "y": 1,
+   "w": 6,
+   "z": 160,
+   "h": 6,
    "explode": [
     0,
     0,
     60
    ],
-   "mass": 0.1,
+   "mass": 0.15,
    "materials": [
     [
      "holz",
@@ -271,8 +213,8 @@
    "marks": [
     {
      "shape": "cyl",
-     "x": 2.6,
-     "y": 2.6,
+     "x": 2,
+     "y": 2,
      "w": 2,
      "fill": "#3A3F44"
     }
@@ -303,8 +245,7 @@
     ]
    ],
    "info": "Gebrannte Mischung aus Grafit und Ton, kein Blei. Sie ist in die Holzrille eingeleimt und lässt sich nicht herausnehmen.",
-   "color": "#3A3F44",
-   "sortBias": -160
+   "color": "#3A3F44"
   },
   {
    "id": "holz_links",
@@ -317,8 +258,8 @@
    "y": 0,
    "w": 4,
    "d": 8,
-   "z": 16,
-   "h": 143,
+   "z": 13,
+   "h": 147,
    "r": 1.5,
    "explode": [
     -10,
@@ -337,20 +278,11 @@
    "marks": [
     {
      "shape": "box",
-     "x": 0.6,
-     "y": 0.6,
-     "w": 3.4,
-     "d": 6.8,
-     "r": 1,
-     "fill": "#D9B07A"
-    },
-    {
-     "shape": "box",
      "x": 3,
      "y": 3,
      "w": 1,
      "d": 2,
-     "fill": "#3A3F44"
+     "fill": "#D9B07A"
     }
    ]
   },
@@ -365,8 +297,8 @@
    "y": 0,
    "w": 4,
    "d": 8,
-   "z": 16,
-   "h": 143,
+   "z": 13,
+   "h": 147,
    "r": 1.5,
    "explode": [
     10,
@@ -386,19 +318,10 @@
     {
      "shape": "box",
      "x": 0,
-     "y": 0.6,
-     "w": 3.4,
-     "d": 6.8,
-     "r": 1,
-     "fill": "#D9B07A"
-    },
-    {
-     "shape": "box",
-     "x": 0,
      "y": 3,
      "w": 1,
      "d": 2,
-     "fill": "#3A3F44"
+     "fill": "#D9B07A"
     }
    ]
   },
@@ -409,17 +332,17 @@
    "name": "Zwinge",
    "short": "Zwinge",
    "shape": "cyl",
-   "x": -0.3,
-   "y": -0.3,
-   "w": 8.6,
-   "z": 9,
-   "h": 7,
+   "x": 0.3,
+   "y": 0.3,
+   "w": 7.4,
+   "z": 3,
+   "h": 13,
    "explode": [
     0,
     0,
     15
    ],
-   "mass": 0.13,
+   "mass": 0.25,
    "materials": [
     [
      "alu",
@@ -431,70 +354,12 @@
    "marks": [
     {
      "shape": "cyl",
-     "x": 0.5,
-     "y": 0.5,
-     "w": 7.6,
+     "x": 0.6,
+     "y": 0.6,
+     "w": 6.2,
      "fill": "#B0B6BA"
     }
    ]
-  },
-  {
-   "id": "zwinge_rille",
-   "component_id": "pencil_ferrule",
-   "material_id": "aluminium",
-   "name": "Zwinge (Rille)",
-   "short": "Zwinge",
-   "shape": "cyl",
-   "x": 0.1,
-   "y": 0.1,
-   "w": 7.8,
-   "z": 7,
-   "h": 2,
-   "explode": [
-    0,
-    0,
-    15
-   ],
-   "mass": 0.04,
-   "materials": [
-    [
-     "alu",
-     100
-    ]
-   ],
-   "info": "Eingedrückte Rille, mit der die Zwinge am Holz festgeklemmt ist.",
-   "color": "#9EA5AA",
-   "label": false,
-   "sortBias": 1.5
-  },
-  {
-   "id": "zwinge_unten",
-   "component_id": "pencil_ferrule",
-   "material_id": "aluminium",
-   "name": "Zwinge (unten)",
-   "short": "Zwinge",
-   "shape": "cyl",
-   "x": -0.3,
-   "y": -0.3,
-   "w": 8.6,
-   "z": 3,
-   "h": 4,
-   "explode": [
-    0,
-    0,
-    15
-   ],
-   "mass": 0.08,
-   "materials": [
-    [
-     "alu",
-     100
-    ]
-   ],
-   "info": "Unterer Rand der Zwinge, hält den Radiergummi.",
-   "color": "#C9CDD0",
-   "label": false,
-   "sortBias": 2.5
   },
   {
    "id": "radierer",

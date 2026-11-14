@@ -39,12 +39,11 @@
   "metalle_mg": {},
   "herkunft": {},
   "materialien_g": {
-   "cardboard": 247.5,
-   "pp": 2.6
+   "cardboard": 250.0
   },
-  "co2_kg": 0.194,
-  "co2_mit_recyclat_kg": 0.19,
-  "co2_ersparnis_kg": 0.004,
+  "co2_kg": 0.191,
+  "co2_mit_recyclat_kg": 0.191,
+  "co2_ersparnis_kg": 0.0,
   "co2_ohne_faktor": [],
   "rohstoffwert_eur": 0,
   "wert_ohne_preis": [],
@@ -68,27 +67,15 @@
    },
    "eucrm2023": {
     "titel": "Study on the Critical Raw Materials for the EU 2023 – Final Report",
-    "url": "https://op.europa.eu/o/opportal-service/download-handler?identifier=57318397-fdd4-11ed-a05c-01aa75ed71a1&format=pdf&language=en&productionSystem=cellar&part="
+    "url": "https://single-market-economy.ec.europa.eu/publications/study-critical-raw-materials-eu-2023-final-report_en"
    },
    "eu2024crma": {
     "titel": "Verordnung (EU) 2024/1252 zur Schaffung eines Rahmens zur Gewährleistung einer sicheren und nachhaltigen Versorgung mit kritischen Rohstoffen (Critical Raw Materials Act)",
-    "url": "https://op.europa.eu/o/opportal-service/download-handler?identifier=aa3c49f7-08e7-11ef-a251-01aa75ed71a1&format=pdf&language=en&productionSystem=cellar&part="
+    "url": "https://op.europa.eu/en/publication-detail/-/publication/aa3c49f7-08e7-11ef-a251-01aa75ed71a1"
    },
    "usdapsd2026": {
     "titel": "Production, Supply and Distribution Online (PSD), Datensatz Cotton (psd_cotton_csv.zip)",
     "url": "https://apps.fas.usda.gov/psdonline/downloads/psd_cotton_csv.zip"
-   },
-   "eia2026intl": {
-    "titel": "International Energy Statistics, Bulk-Download INTL.zip",
-    "url": "https://www.eia.gov/opendata/bulk/INTL.zip"
-   },
-   "faostat2025qcl": {
-    "titel": "FAOSTAT Crops and livestock products (QCL), Bulk-Download Production_Crops_Livestock_E_All_Data_(Normalized).zip",
-    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip"
-   },
-   "faostat2026fo": {
-    "titel": "FAOSTAT Forestry Production and Trade (FO), Bulk-Download Forestry_E_All_Data_(Normalized).zip",
-    "url": "https://bulks-faostat.fao.org/production/Forestry_E_All_Data_(Normalized).zip"
    }
   }
  },
@@ -141,9 +128,9 @@
    "explode": [
     0,
     0,
-    330
+    150
    ],
-   "mass": 72.4,
+   "mass": 76,
    "materials": [
     [
      "papier",
@@ -154,330 +141,58 @@
      2
     ]
    ],
-   "info": "Bedruckte Wellpappe. Ist der Deckel sauber, kommt er ins Altpapier. Ist nur der Boden fettig, den Deckel an der Knickkante abreißen und getrennt entsorgen.",
+   "info": "Bedruckte Wellpappe. Ist der Deckel sauber, kommt er ins Altpapier. Meist kann man ihn an der Knickkante abreißen, wenn der Boden fettig ist.",
    "color": "#C49A6C",
    "marks": [
     {
      "shape": "cyl",
-     "x": 85,
-     "y": 40,
-     "w": 160,
-     "fill": "#D9A55B"
-    },
-    {
-     "shape": "cyl",
      "x": 95,
-     "y": 50,
+     "y": 70,
      "w": 140,
      "fill": "#B3423A"
     },
     {
      "shape": "cyl",
-     "x": 102,
-     "y": 57,
-     "w": 126,
-     "fill": "#E8C65A"
-    },
-    {
-     "shape": "cyl",
-     "x": 119,
-     "y": 79,
-     "w": 22,
-     "fill": "#A3352E"
-    },
-    {
-     "shape": "cyl",
-     "x": 179,
-     "y": 71,
-     "w": 22,
-     "fill": "#A3352E"
-    },
-    {
-     "shape": "cyl",
-     "x": 194,
-     "y": 119,
-     "w": 22,
-     "fill": "#A3352E"
-    },
-    {
-     "shape": "cyl",
-     "x": 149,
-     "y": 114,
-     "w": 22,
-     "fill": "#A3352E"
-    },
-    {
-     "shape": "cyl",
-     "x": 112,
-     "y": 131,
-     "w": 22,
-     "fill": "#A3352E"
-    },
-    {
-     "shape": "cyl",
-     "x": 166,
-     "y": 151,
-     "w": 22,
-     "fill": "#A3352E"
-    },
-    {
-     "shape": "cyl",
-     "x": 139,
-     "y": 49,
-     "w": 22,
-     "fill": "#A3352E"
-    },
-    {
-     "shape": "cyl",
-     "x": 204,
-     "y": 97,
-     "w": 22,
-     "fill": "#A3352E"
-    },
-    {
-     "shape": "cyl",
-     "x": 169,
-     "y": 101,
-     "w": 12,
-     "d": 8,
-     "fill": "#3F7D4A"
-    },
-    {
-     "shape": "cyl",
-     "x": 134,
-     "y": 116,
-     "w": 12,
-     "d": 8,
-     "fill": "#3F7D4A"
-    },
-    {
-     "shape": "cyl",
-     "x": 187,
-     "y": 144,
-     "w": 12,
-     "d": 8,
-     "fill": "#3F7D4A"
+     "x": 115,
+     "y": 90,
+     "w": 100,
+     "fill": "#C49A6C"
     },
     {
      "shape": "box",
-     "x": 65,
-     "y": 222,
-     "w": 200,
-     "d": 30,
+     "x": 85,
+     "y": 240,
+     "w": 160,
+     "d": 18,
      "r": 4,
-     "fill": "#B3423A"
-    },
-    {
-     "shape": "box",
-     "x": 75,
-     "y": 230,
-     "w": 180,
-     "d": 14,
-     "r": 2,
-     "fill": "#F1E4C8"
-    },
-    {
-     "shape": "box",
-     "x": 105,
-     "y": 264,
-     "w": 120,
-     "d": 8,
-     "r": 2,
      "fill": "#3A3F44"
     },
     {
      "shape": "box",
-     "x": 125,
-     "y": 284,
-     "w": 26,
-     "d": 8,
-     "r": 0,
-     "fill": "#3F7D4A"
-    },
-    {
-     "shape": "box",
-     "x": 152,
-     "y": 284,
-     "w": 26,
-     "d": 8,
-     "r": 0,
-     "fill": "#F1E4C8"
-    },
-    {
-     "shape": "box",
-     "x": 179,
-     "y": 284,
-     "w": 26,
-     "d": 8,
-     "r": 0,
-     "fill": "#B3423A"
+     "x": 115,
+     "y": 268,
+     "w": 100,
+     "d": 10,
+     "r": 3,
+     "fill": "#3A3F44"
     },
     {
      "shape": "cyl",
-     "x": 18,
-     "y": 18,
-     "w": 10,
-     "d": 10,
-     "fill": "#6E5236"
+     "x": 20,
+     "y": 20,
+     "w": 8,
+     "d": 8,
+     "fill": "#9E7A52"
     },
     {
      "shape": "cyl",
      "x": 302,
-     "y": 18,
-     "w": 10,
-     "d": 10,
-     "fill": "#6E5236"
+     "y": 20,
+     "w": 8,
+     "d": 8,
+     "fill": "#9E7A52"
     }
    ]
-  },
-  {
-   "id": "lasche",
-   "component_id": "cardboard_box_body",
-   "material_id": "cardboard",
-   "name": "Einstecklasche des Deckels",
-   "short": "Deckellasche",
-   "shape": "box",
-   "x": 30,
-   "y": 321,
-   "w": 270,
-   "d": 4,
-   "z": 12,
-   "h": 25,
-   "r": 0,
-   "explode": [
-    0,
-    0,
-    330
-   ],
-   "mass": 9.3,
-   "materials": [
-    [
-     "papier",
-     100
-    ]
-   ],
-   "info": "Vorne am Deckel angeknickt. Sie wird in die doppelte Vorderwand gesteckt und hält den Karton zu.",
-   "color": "#C49A6C"
-  },
-  {
-   "id": "pizzaretter",
-   "component_id": "cardboard_box_body",
-   "material_id": "pp",
-   "name": "Pizza-Retter (Tischchen)",
-   "short": "Pizza-Retter",
-   "shape": "cyl",
-   "x": 150,
-   "y": 150,
-   "w": 30,
-   "z": 34,
-   "h": 2,
-   "explode": [
-    0,
-    0,
-    70
-   ],
-   "mass": 1.4,
-   "materials": [
-    [
-     "pp",
-     100
-    ]
-   ],
-   "info": "Kleines Kunststoff-Tischchen aus PP. Es hält den Deckel vom Käse fern. Gehört nicht ins Altpapier, sondern in die Gelbe Tonne.",
-   "color": "#F2F0EA",
-   "marks": [
-    {
-     "shape": "cyl",
-     "x": 9,
-     "y": 9,
-     "w": 12,
-     "fill": "#DAD7CF"
-    }
-   ]
-  },
-  {
-   "id": "bein_1",
-   "component_id": "cardboard_box_body",
-   "material_id": "pp",
-   "name": "Bein des Pizza-Retters",
-   "short": "Bein",
-   "shape": "cyl",
-   "x": 161,
-   "y": 152,
-   "w": 6,
-   "z": 3,
-   "h": 31,
-   "explode": [
-    0,
-    0,
-    70
-   ],
-   "mass": 0.4,
-   "materials": [
-    [
-     "pp",
-     100
-    ]
-   ],
-   "info": "Eines von drei Beinen, aus einem Stück mit dem Tischchen gespritzt.",
-   "color": "#E6E3DB",
-   "label": false
-  },
-  {
-   "id": "bein_2",
-   "component_id": "cardboard_box_body",
-   "material_id": "pp",
-   "name": "Bein des Pizza-Retters",
-   "short": "Bein",
-   "shape": "cyl",
-   "x": 152,
-   "y": 168,
-   "w": 6,
-   "z": 3,
-   "h": 31,
-   "explode": [
-    0,
-    0,
-    70
-   ],
-   "mass": 0.4,
-   "materials": [
-    [
-     "pp",
-     100
-    ]
-   ],
-   "info": "Eines von drei Beinen, aus einem Stück mit dem Tischchen gespritzt.",
-   "color": "#E6E3DB",
-   "label": false
-  },
-  {
-   "id": "bein_3",
-   "component_id": "cardboard_box_body",
-   "material_id": "pp",
-   "name": "Bein des Pizza-Retters",
-   "short": "Bein",
-   "shape": "cyl",
-   "x": 170,
-   "y": 168,
-   "w": 6,
-   "z": 3,
-   "h": 31,
-   "explode": [
-    0,
-    0,
-    70
-   ],
-   "mass": 0.4,
-   "materials": [
-    [
-     "pp",
-     100
-    ]
-   ],
-   "info": "Eines von drei Beinen, aus einem Stück mit dem Tischchen gespritzt.",
-   "color": "#E6E3DB",
-   "label": false
   },
   {
    "id": "wand_hinten",
@@ -495,10 +210,10 @@
    "r": 0,
    "explode": [
     0,
-    -110,
+    -70,
     0
    ],
-   "mass": 14,
+   "mass": 14.7,
    "materials": [
     [
      "papier",
@@ -506,18 +221,7 @@
     ]
    ],
    "info": "Hier ist der Deckel nur eingeknickt, nicht geklebt. Pizzakartons kommen ganz ohne Klebstoff aus.",
-   "color": "#C49A6C",
-   "marks": [
-    {
-     "shape": "box",
-     "x": 0,
-     "y": 1.5,
-     "w": 322,
-     "d": 1,
-     "r": 0,
-     "fill": "#9E7A52"
-    }
-   ]
+   "color": "#C49A6C"
   },
   {
    "id": "wand_links",
@@ -534,11 +238,11 @@
    "h": 34,
    "r": 0,
    "explode": [
-    -110,
+    -70,
     0,
     0
    ],
-   "mass": 28,
+   "mass": 29.4,
    "materials": [
     [
      "papier",
@@ -574,11 +278,11 @@
    "h": 34,
    "r": 0,
    "explode": [
-    110,
+    70,
     0,
     0
    ],
-   "mass": 28,
+   "mass": 29.4,
    "materials": [
     [
      "papier",
@@ -604,7 +308,7 @@
    "id": "wand_vorne",
    "component_id": "cardboard_box_body",
    "material_id": "cardboard",
-   "name": "Vorderwand (doppelt)",
+   "name": "Vorderwand mit Einstecklasche",
    "short": "Vorderwand",
    "shape": "box",
    "x": 4,
@@ -616,27 +320,27 @@
    "r": 0,
    "explode": [
     0,
-    110,
+    70,
     0
    ],
-   "mass": 23.4,
+   "mass": 24.5,
    "materials": [
     [
      "papier",
      100
     ]
    ],
-   "info": "Doppelte Wand mit Schlitz, in den die Deckellasche gesteckt wird. Zum Flachmachen alle Wände aufklappen.",
+   "info": "Doppelte Wand, in die die Lasche des Deckels gesteckt wird. Zum Flachmachen alle Wände aufklappen.",
    "color": "#C49A6C",
    "marks": [
     {
      "shape": "box",
-     "x": 26,
+     "x": 0,
      "y": 1.5,
-     "w": 270,
+     "w": 322,
      "d": 1,
      "r": 0,
-     "fill": "#6E5236"
+     "fill": "#9E7A52"
     },
     {
      "shape": "box",
@@ -668,7 +372,7 @@
     0,
     0
    ],
-   "mass": 72.4,
+   "mass": 76,
    "materials": [
     [
      "papier",
@@ -695,37 +399,11 @@
     },
     {
      "shape": "cyl",
-     "x": 190,
-     "y": 200,
+     "x": 180,
+     "y": 190,
      "w": 55,
      "d": 40,
      "fill": "#8E6B45"
-    },
-    {
-     "shape": "cyl",
-     "x": 210,
-     "y": 80,
-     "w": 30,
-     "d": 22,
-     "fill": "#9C764C"
-    },
-    {
-     "shape": "box",
-     "x": 0,
-     "y": 4,
-     "w": 330,
-     "d": 1,
-     "r": 0,
-     "fill": "#9E7A52"
-    },
-    {
-     "shape": "box",
-     "x": 0,
-     "y": 325,
-     "w": 330,
-     "d": 1,
-     "r": 0,
-     "fill": "#9E7A52"
     }
    ]
   }

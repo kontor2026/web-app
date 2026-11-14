@@ -1,81 +1,6 @@
 {
  "parts": [
   {
-   "id": "etikett",
-   "component_id": "pp_storage_box",
-   "material_id": "paper",
-   "name": "Papieretikett",
-   "short": "Etikett",
-   "shape": "box",
-   "x": 120,
-   "y": 110,
-   "w": 150,
-   "d": 70,
-   "z": 220,
-   "h": 0.3,
-   "r": 2,
-   "explode": [
-    0,
-    0,
-    200.0
-   ],
-   "mass": 4.1,
-   "materials": [
-    [
-     "papier",
-     85
-    ],
-    [
-     "druck",
-     5
-    ],
-    [
-     "klebstoff",
-     10
-    ]
-   ],
-   "info": "Aufgeklebtes Verkaufsetikett auf dem Deckel. Vor dem Abgeben abziehen, es stört beim Kunststoffrecycling.",
-   "color": "#F7F3E6",
-   "marks": [
-    {
-     "shape": "box",
-     "x": 10,
-     "y": 10,
-     "w": 130,
-     "d": 12,
-     "r": 1,
-     "fill": "#2F6DB5"
-    },
-    {
-     "shape": "box",
-     "x": 10,
-     "y": 32,
-     "w": 90,
-     "d": 6,
-     "r": 1,
-     "fill": "#8A9298"
-    },
-    {
-     "shape": "box",
-     "x": 10,
-     "y": 46,
-     "w": 60,
-     "d": 6,
-     "r": 1,
-     "fill": "#8A9298"
-    },
-    {
-     "shape": "box",
-     "x": 112,
-     "y": 40,
-     "w": 28,
-     "d": 22,
-     "r": 1,
-     "fill": "#22272B"
-    }
-   ]
-  },
-  {
    "id": "deckel",
    "component_id": "pp_lid",
    "material_id": "pp",
@@ -92,7 +17,7 @@
    "explode": [
     0,
     0,
-    110.0
+    60.0
    ],
    "mass": 304.1,
    "materials": [
@@ -175,7 +100,7 @@
    "component_id": "pp_lid",
    "material_id": "pp",
    "name": "Klappverschluss links",
-   "short": "Verschluss",
+   "short": "Verschluss links",
    "shape": "box",
    "x": 0,
    "y": 95,
@@ -198,7 +123,6 @@
    ],
    "info": "Klappt über den Deckelrand und hält ihn fest. Er hängt mit Zapfen am Rand und lässt sich mit etwas Kraft aushebeln.",
    "color": "#2F6DB5",
-   "label": false,
    "marks": [
     {
      "shape": "box",
@@ -216,7 +140,7 @@
    "component_id": "pp_lid",
    "material_id": "pp",
    "name": "Klappverschluss rechts",
-   "short": "Verschluss",
+   "short": "Verschluss rechts",
    "shape": "box",
    "x": 383,
    "y": 95,
@@ -422,6 +346,44 @@
      "fill": "#CDD3D6"
     }
    ]
+  },
+  {
+   "id": "etikett",
+   "component_id": "pp_storage_box",
+   "material_id": "paper",
+   "name": "Papieretikett",
+   "short": "Etikett",
+   "shape": "box",
+   "x": 120,
+   "y": 289.7,
+   "w": 150,
+   "d": 0.3,
+   "z": 110,
+   "h": 60,
+   "r": 0,
+   "explode": [
+    0,
+    50,
+    0
+   ],
+   "mass": 4.1,
+   "materials": [
+    [
+     "papier",
+     85
+    ],
+    [
+     "druck",
+     5
+    ],
+    [
+     "klebstoff",
+     10
+    ]
+   ],
+   "info": "Aufgeklebtes Verkaufsetikett. Vor dem Abgeben abziehen, es stört beim Kunststoffrecycling.",
+   "color": "#F7F3E6",
+   "sortBias": 100
   }
  ]
 }

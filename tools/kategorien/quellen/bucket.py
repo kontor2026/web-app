@@ -4,7 +4,6 @@ Typischer 12-l-Haushaltseimer aus PP (Ø 300 mm, 270 mm hoch, Bügel umgelegt 30
 Literskala, verstärktem Rand mit Ausguss und zwei Ösen, Drahtbügel mit Kunststoff-Griffstück.
 Eimerabschnitte bewegen sich gemeinsam, Bügel und Griffstück stapeln darüber.
 """
-import math
 import sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
@@ -27,11 +26,7 @@ teile = [
     teil('rand', 'pp_bucket_body', 'Rand mit Ausguss und Ösen', 'Rand', 'cyl',
          x=0, y=0, w=300, z=255, h=15, mass=70,
          info='Verstärkter Wulstrand, vorn mit Ausguss, seitlich zwei Ösen für den Bügel.',
-         color=EIMER, marks=[mark('cyl', 8, 8, 284, fill='#24548A'),  # Innenwand, von oben gesehen
-                             mark('cyl', 80, 80, 200, fill='#1E4877'),  # Schatten tief im Eimer
-                             mark('box', 135, 286, 30, 12, 5, '#5893D1')]
-         + [mark('box', round(150 + 128 * math.cos(math.radians(a)) - 5, 1), round(150 + 128 * math.sin(math.radians(a)) - 1, 1),
-                10, 2, 1, '#6FA3DB') for a in range(205, 250, 9)]),  # Literskala auf der Innenwand
+         color=EIMER, marks=[mark('cyl', 8, 8, 284, fill=INNEN), mark('box', 135, 286, 30, 12, 5, '#5893D1')]),
     teil('wand_oben', 'pp_bucket_body', 'Eimerwand oben mit Literskala', 'Wand', 'cyl',
          x=5, y=5, w=290, z=135, h=120, mass=170,
          info='PP, Recyclingcode 5. Innen eine eingeprägte Literskala. Ein Eimer ist keine Verpackung: '
@@ -44,7 +39,7 @@ teile = [
          x=25, y=25, w=250, z=0, h=10, mass=60, label=False,
          info='Boden mit Standring und eingeprägtem Recyclingzeichen.', color=EIMER),
 ]
-explodiere(teile, abstand=50, abstaende={'griffstueck': 110, 'buegel': 110}, nach_liste=True, gruppen=[['griffstueck', 'buegel'],
+explodiere(teile, abstand=50, nach_liste=True, gruppen=[['griffstueck', 'buegel'],
                                                        ['rand', 'wand_oben', 'wand_unten', 'boden']])
 skaliere_masse(teile, oid='bucket')
 schreibe('bucket', teile)

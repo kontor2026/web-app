@@ -68,27 +68,15 @@
    },
    "eucrm2023": {
     "titel": "Study on the Critical Raw Materials for the EU 2023 – Final Report",
-    "url": "https://op.europa.eu/o/opportal-service/download-handler?identifier=57318397-fdd4-11ed-a05c-01aa75ed71a1&format=pdf&language=en&productionSystem=cellar&part="
+    "url": "https://single-market-economy.ec.europa.eu/publications/study-critical-raw-materials-eu-2023-final-report_en"
    },
    "eu2024crma": {
     "titel": "Verordnung (EU) 2024/1252 zur Schaffung eines Rahmens zur Gewährleistung einer sicheren und nachhaltigen Versorgung mit kritischen Rohstoffen (Critical Raw Materials Act)",
-    "url": "https://op.europa.eu/o/opportal-service/download-handler?identifier=aa3c49f7-08e7-11ef-a251-01aa75ed71a1&format=pdf&language=en&productionSystem=cellar&part="
+    "url": "https://op.europa.eu/en/publication-detail/-/publication/aa3c49f7-08e7-11ef-a251-01aa75ed71a1"
    },
    "usdapsd2026": {
     "titel": "Production, Supply and Distribution Online (PSD), Datensatz Cotton (psd_cotton_csv.zip)",
     "url": "https://apps.fas.usda.gov/psdonline/downloads/psd_cotton_csv.zip"
-   },
-   "eia2026intl": {
-    "titel": "International Energy Statistics, Bulk-Download INTL.zip",
-    "url": "https://www.eia.gov/opendata/bulk/INTL.zip"
-   },
-   "faostat2025qcl": {
-    "titel": "FAOSTAT Crops and livestock products (QCL), Bulk-Download Production_Crops_Livestock_E_All_Data_(Normalized).zip",
-    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip"
-   },
-   "faostat2026fo": {
-    "titel": "FAOSTAT Forestry Production and Trade (FO), Bulk-Download Forestry_E_All_Data_(Normalized).zip",
-    "url": "https://bulks-faostat.fao.org/production/Forestry_E_All_Data_(Normalized).zip"
    }
   }
  },
@@ -141,7 +129,7 @@
    "explode": [
     0,
     0,
-    275.0
+    225.0
    ],
    "mass": 96.2,
    "materials": [
@@ -159,189 +147,29 @@
    "marks": [
     {
      "shape": "box",
+     "x": 115,
+     "y": 70,
+     "w": 100,
+     "d": 60,
+     "r": 4,
+     "fill": "#F2F0EA"
+    },
+    {
+     "shape": "box",
+     "x": 130,
+     "y": 88,
+     "w": 70,
+     "d": 24,
+     "r": 2,
+     "fill": "#3F5C78"
+    },
+    {
+     "shape": "box",
      "x": 0,
      "y": 0,
      "w": 330,
      "d": 4,
      "r": 0,
-     "fill": "#33495F"
-    },
-    {
-     "shape": "box",
-     "x": 0,
-     "y": 196,
-     "w": 330,
-     "d": 4,
-     "r": 0,
-     "fill": "#33495F"
-    },
-    {
-     "shape": "cyl",
-     "x": 40,
-     "y": 55,
-     "w": 90,
-     "d": 90,
-     "fill": "#E06A2C"
-    },
-    {
-     "shape": "cyl",
-     "x": 58,
-     "y": 73,
-     "w": 54,
-     "d": 54,
-     "fill": "#3F5C78"
-    },
-    {
-     "shape": "box",
-     "x": 150,
-     "y": 70,
-     "w": 140,
-     "d": 26,
-     "r": 3,
-     "fill": "#F2F0EA"
-    },
-    {
-     "shape": "box",
-     "x": 150,
-     "y": 104,
-     "w": 100,
-     "d": 10,
-     "r": 2,
-     "fill": "#9DB4C8"
-    },
-    {
-     "shape": "box",
-     "x": 150,
-     "y": 120,
-     "w": 70,
-     "d": 8,
-     "r": 2,
-     "fill": "#9DB4C8"
-    },
-    {
-     "shape": "box",
-     "x": 20,
-     "y": 176,
-     "w": 12,
-     "d": 12,
-     "r": 2,
-     "fill": "#33495F"
-    },
-    {
-     "shape": "box",
-     "x": 42,
-     "y": 176,
-     "w": 12,
-     "d": 12,
-     "r": 2,
-     "fill": "#33495F"
-    },
-    {
-     "shape": "box",
-     "x": 64,
-     "y": 176,
-     "w": 12,
-     "d": 12,
-     "r": 2,
-     "fill": "#33495F"
-    },
-    {
-     "shape": "box",
-     "x": 86,
-     "y": 176,
-     "w": 12,
-     "d": 12,
-     "r": 2,
-     "fill": "#33495F"
-    },
-    {
-     "shape": "box",
-     "x": 108,
-     "y": 176,
-     "w": 12,
-     "d": 12,
-     "r": 2,
-     "fill": "#33495F"
-    },
-    {
-     "shape": "box",
-     "x": 130,
-     "y": 176,
-     "w": 12,
-     "d": 12,
-     "r": 2,
-     "fill": "#33495F"
-    },
-    {
-     "shape": "box",
-     "x": 152,
-     "y": 176,
-     "w": 12,
-     "d": 12,
-     "r": 2,
-     "fill": "#33495F"
-    },
-    {
-     "shape": "box",
-     "x": 174,
-     "y": 176,
-     "w": 12,
-     "d": 12,
-     "r": 2,
-     "fill": "#33495F"
-    },
-    {
-     "shape": "box",
-     "x": 196,
-     "y": 176,
-     "w": 12,
-     "d": 12,
-     "r": 2,
-     "fill": "#33495F"
-    },
-    {
-     "shape": "box",
-     "x": 218,
-     "y": 176,
-     "w": 12,
-     "d": 12,
-     "r": 2,
-     "fill": "#33495F"
-    },
-    {
-     "shape": "box",
-     "x": 240,
-     "y": 176,
-     "w": 12,
-     "d": 12,
-     "r": 2,
-     "fill": "#33495F"
-    },
-    {
-     "shape": "box",
-     "x": 262,
-     "y": 176,
-     "w": 12,
-     "d": 12,
-     "r": 2,
-     "fill": "#33495F"
-    },
-    {
-     "shape": "box",
-     "x": 284,
-     "y": 176,
-     "w": 12,
-     "d": 12,
-     "r": 2,
-     "fill": "#33495F"
-    },
-    {
-     "shape": "box",
-     "x": 306,
-     "y": 176,
-     "w": 12,
-     "d": 12,
-     "r": 2,
      "fill": "#33495F"
     }
    ]
@@ -363,7 +191,7 @@
    "explode": [
     0,
     0,
-    124.0
+    114.0
    ],
    "mass": 6.1,
    "materials": [
@@ -383,32 +211,7 @@
      "w": 4,
      "d": 188,
      "r": 0,
-     "fill": "#E2DED5"
-    },
-    {
-     "shape": "box",
-     "x": 0,
-     "y": 92,
-     "w": 314,
-     "d": 2,
-     "r": 0,
      "fill": "#ECE9E2"
-    },
-    {
-     "shape": "cyl",
-     "x": 120,
-     "y": 30,
-     "w": 60,
-     "d": 30,
-     "fill": "#F0EDE6"
-    },
-    {
-     "shape": "cyl",
-     "x": 200,
-     "y": 120,
-     "w": 70,
-     "d": 34,
-     "fill": "#F0EDE6"
     }
    ]
   },
@@ -447,21 +250,12 @@
    "marks": [
     {
      "shape": "box",
-     "x": 3,
-     "y": 3,
-     "w": 320,
-     "d": 190,
+     "x": 2,
+     "y": 2,
+     "w": 322,
+     "d": 192,
      "r": 1,
-     "fill": "#8F887C"
-    },
-    {
-     "shape": "box",
-     "x": 3,
-     "y": 96,
-     "w": 320,
-     "d": 2,
-     "r": 0,
-     "fill": "#7E776C"
+     "fill": "#A8A196"
     }
    ]
   },
@@ -480,7 +274,7 @@
    "h": 70,
    "r": 0,
    "explode": [
-    110,
+    70,
     0,
     0
    ],

@@ -10,7 +10,7 @@
    "x": 0,
    "y": 0,
    "w": 23,
-   "d": 21,
+   "d": 22,
    "z": 0,
    "h": 3,
    "explode": [
@@ -18,7 +18,7 @@
     -10,
     0
    ],
-   "mass": 3.2,
+   "mass": 4,
    "materials": [
     [
      "messing",
@@ -34,34 +34,18 @@
    "marks": [
     {
      "shape": "cyl",
-     "x": 6.5,
-     "y": 1,
-     "w": 10,
-     "fill": "#B8BDC1"
-    },
-    {
-     "shape": "cyl",
-     "x": 8,
-     "y": 2.5,
-     "w": 7,
-     "fill": "#EEECE5"
+     "x": 8.5,
+     "y": 3,
+     "w": 6,
+     "fill": "#4A4F54"
     },
     {
      "shape": "box",
      "x": 5,
-     "y": 13,
+     "y": 12,
      "w": 13,
-     "d": 1.2,
-     "r": 0.5,
-     "fill": "#A9AFB4"
-    },
-    {
-     "shape": "box",
-     "x": 7,
-     "y": 16,
-     "w": 9,
-     "d": 1.2,
-     "r": 0.5,
+     "d": 3,
+     "r": 1,
      "fill": "#A9AFB4"
     }
    ]
@@ -74,7 +58,7 @@
    "short": "Anschlag",
    "shape": "box",
    "x": 4,
-   "y": 21,
+   "y": 22,
    "w": 15,
    "d": 4,
    "z": 0,
@@ -85,7 +69,7 @@
     -4,
     0
    ],
-   "mass": 0.71,
+   "mass": 0.89,
    "materials": [
     [
      "messing",
@@ -106,19 +90,19 @@
    "name": "Halm mit Profil",
    "short": "Halm",
    "shape": "box",
-   "x": 5,
-   "y": 25,
-   "w": 9,
-   "d": 30,
+   "x": 6,
+   "y": 26,
+   "w": 7,
+   "d": 29,
    "z": 0,
    "h": 2.4,
-   "r": 1.5,
+   "r": 1,
    "explode": [
     0,
     0,
     0
    ],
-   "mass": 1.6,
+   "mass": 2,
    "materials": [
     [
      "messing",
@@ -129,7 +113,7 @@
      3
     ]
    ],
-   "info": "Die Längsrillen passen nur in das Profil des eigenen Schließzylinders. So passt der Schlüssel nicht in fremde Schlösser.",
+   "info": "Die Längsrillen passen nur in das Profil des eigenen Schließzylinders.",
    "color": "#C9CDD0",
    "marks": [
     {
@@ -137,7 +121,7 @@
      "x": 1.5,
      "y": 0,
      "w": 1.2,
-     "d": 28,
+     "d": 27,
      "r": 0.5,
      "fill": "#A9AFB4"
     },
@@ -146,16 +130,7 @@
      "x": 4,
      "y": 0,
      "w": 1.2,
-     "d": 26,
-     "r": 0.5,
-     "fill": "#A9AFB4"
-    },
-    {
-     "shape": "box",
-     "x": 6.5,
-     "y": 0,
-     "w": 1,
-     "d": 24,
+     "d": 25,
      "r": 0.5,
      "fill": "#A9AFB4"
     }
@@ -168,19 +143,19 @@
    "name": "Bart mit Einschnitten",
    "short": "Bart",
    "shape": "box",
-   "x": 14,
+   "x": 13,
    "y": 26,
    "w": 4,
-   "d": 5,
+   "d": 27,
    "z": 0,
    "h": 2.4,
-   "r": 0.3,
+   "r": 1,
    "explode": [
-    9,
+    8,
     0,
     0
    ],
-   "mass": 0.71,
+   "mass": 1.11,
    "materials": [
     [
      "messing",
@@ -191,145 +166,55 @@
      3
     ]
    ],
-   "info": "Die unterschiedlich tiefen Zähne heben die Stifte im Schloss genau auf die Trennlinie. Alte Schlüssel sind wertvolles Messing für die Metallsammlung.",
+   "info": "Die unterschiedlich tiefen Einschnitte heben die Stifte im Schloss genau auf die Trennlinie. Alte Schlüssel sind wertvolles Messing für die Metallsammlung.",
    "color": "#C9CDD0",
-   "label": true
-  },
-  {
-   "id": "bart_2",
-   "component_id": "brass_key",
-   "material_id": "copper",
-   "name": "Bart mit Einschnitten",
-   "short": "Bart",
-   "shape": "box",
-   "x": 14,
-   "y": 31,
-   "w": 2,
-   "d": 5,
-   "z": 0,
-   "h": 2.4,
-   "r": 0.3,
-   "explode": [
-    9,
-    0,
-    0
-   ],
-   "mass": 0.36,
-   "materials": [
-    [
-     "messing",
-     97
-    ],
-    [
-     "nickel",
-     3
-    ]
-   ],
-   "info": "Ein Zahn des Barts. Seine Tiefe gehört zur Schließung.",
-   "color": "#C9CDD0",
-   "label": false
-  },
-  {
-   "id": "bart_3",
-   "component_id": "brass_key",
-   "material_id": "copper",
-   "name": "Bart mit Einschnitten",
-   "short": "Bart",
-   "shape": "box",
-   "x": 14,
-   "y": 36,
-   "w": 3.5,
-   "d": 5,
-   "z": 0,
-   "h": 2.4,
-   "r": 0.3,
-   "explode": [
-    9,
-    0,
-    0
-   ],
-   "mass": 0.62,
-   "materials": [
-    [
-     "messing",
-     97
-    ],
-    [
-     "nickel",
-     3
-    ]
-   ],
-   "info": "Ein Zahn des Barts. Seine Tiefe gehört zur Schließung.",
-   "color": "#C9CDD0",
-   "label": false
-  },
-  {
-   "id": "bart_4",
-   "component_id": "brass_key",
-   "material_id": "copper",
-   "name": "Bart mit Einschnitten",
-   "short": "Bart",
-   "shape": "box",
-   "x": 14,
-   "y": 41,
-   "w": 1.5,
-   "d": 5,
-   "z": 0,
-   "h": 2.4,
-   "r": 0.3,
-   "explode": [
-    9,
-    0,
-    0
-   ],
-   "mass": 0.27,
-   "materials": [
-    [
-     "messing",
-     97
-    ],
-    [
-     "nickel",
-     3
-    ]
-   ],
-   "info": "Ein Zahn des Barts. Seine Tiefe gehört zur Schließung.",
-   "color": "#C9CDD0",
-   "label": false
-  },
-  {
-   "id": "bart_5",
-   "component_id": "brass_key",
-   "material_id": "copper",
-   "name": "Bart mit Einschnitten",
-   "short": "Bart",
-   "shape": "box",
-   "x": 14,
-   "y": 46,
-   "w": 3,
-   "d": 5,
-   "z": 0,
-   "h": 2.4,
-   "r": 0.3,
-   "explode": [
-    9,
-    0,
-    0
-   ],
-   "mass": 0.53,
-   "materials": [
-    [
-     "messing",
-     97
-    ],
-    [
-     "nickel",
-     3
-    ]
-   ],
-   "info": "Ein Zahn des Barts. Seine Tiefe gehört zur Schließung.",
-   "color": "#C9CDD0",
-   "label": false
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2.2,
+     "y": 2,
+     "w": 1.8,
+     "d": 3,
+     "r": 0.5,
+     "fill": "#4A4F54"
+    },
+    {
+     "shape": "box",
+     "x": 1,
+     "y": 7,
+     "w": 3,
+     "d": 3,
+     "r": 0.5,
+     "fill": "#4A4F54"
+    },
+    {
+     "shape": "box",
+     "x": 2.8,
+     "y": 12,
+     "w": 1.2,
+     "d": 3,
+     "r": 0.5,
+     "fill": "#4A4F54"
+    },
+    {
+     "shape": "box",
+     "x": 1.6,
+     "y": 17,
+     "w": 2.4,
+     "d": 3,
+     "r": 0.5,
+     "fill": "#4A4F54"
+    },
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 22,
+     "w": 2,
+     "d": 4,
+     "r": 0.5,
+     "fill": "#4A4F54"
+    }
+   ]
   }
  ]
 }

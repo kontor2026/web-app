@@ -69,27 +69,15 @@
    },
    "eucrm2023": {
     "titel": "Study on the Critical Raw Materials for the EU 2023 – Final Report",
-    "url": "https://op.europa.eu/o/opportal-service/download-handler?identifier=57318397-fdd4-11ed-a05c-01aa75ed71a1&format=pdf&language=en&productionSystem=cellar&part="
+    "url": "https://single-market-economy.ec.europa.eu/publications/study-critical-raw-materials-eu-2023-final-report_en"
    },
    "eu2024crma": {
     "titel": "Verordnung (EU) 2024/1252 zur Schaffung eines Rahmens zur Gewährleistung einer sicheren und nachhaltigen Versorgung mit kritischen Rohstoffen (Critical Raw Materials Act)",
-    "url": "https://op.europa.eu/o/opportal-service/download-handler?identifier=aa3c49f7-08e7-11ef-a251-01aa75ed71a1&format=pdf&language=en&productionSystem=cellar&part="
+    "url": "https://op.europa.eu/en/publication-detail/-/publication/aa3c49f7-08e7-11ef-a251-01aa75ed71a1"
    },
    "usdapsd2026": {
     "titel": "Production, Supply and Distribution Online (PSD), Datensatz Cotton (psd_cotton_csv.zip)",
     "url": "https://apps.fas.usda.gov/psdonline/downloads/psd_cotton_csv.zip"
-   },
-   "eia2026intl": {
-    "titel": "International Energy Statistics, Bulk-Download INTL.zip",
-    "url": "https://www.eia.gov/opendata/bulk/INTL.zip"
-   },
-   "faostat2025qcl": {
-    "titel": "FAOSTAT Crops and livestock products (QCL), Bulk-Download Production_Crops_Livestock_E_All_Data_(Normalized).zip",
-    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip"
-   },
-   "faostat2026fo": {
-    "titel": "FAOSTAT Forestry Production and Trade (FO), Bulk-Download Forestry_E_All_Data_(Normalized).zip",
-    "url": "https://bulks-faostat.fao.org/production/Forestry_E_All_Data_(Normalized).zip"
    }
   }
  },
@@ -245,94 +233,27 @@
    "marks": [
     {
      "shape": "box",
-     "x": 3,
-     "y": 3,
-     "w": 4,
-     "d": 7,
+     "x": 4,
+     "y": 4,
+     "w": 6,
+     "d": 8,
      "r": 1,
      "fill": "#C8423A"
     },
     {
      "shape": "cyl",
-     "x": 3,
-     "y": 11,
-     "w": 4,
-     "fill": "#C8423A"
-    },
-    {
-     "shape": "box",
-     "x": 51,
-     "y": 78,
-     "w": 4,
-     "d": 7,
-     "r": 1,
-     "fill": "#C8423A"
-    },
-    {
-     "shape": "cyl",
-     "x": 51,
-     "y": 74,
-     "w": 4,
-     "fill": "#C8423A"
-    },
-    {
-     "shape": "cyl",
-     "x": 18,
+     "x": 20,
      "y": 32,
-     "w": 12,
-     "d": 12,
-     "fill": "#C8423A"
-    },
-    {
-     "shape": "cyl",
-     "x": 28,
-     "y": 32,
-     "w": 12,
-     "d": 12,
+     "w": 18,
+     "d": 18,
      "fill": "#C8423A"
     },
     {
      "shape": "box",
-     "x": 19,
-     "y": 38,
-     "w": 20,
-     "d": 3.2,
-     "r": 1,
-     "fill": "#C8423A"
-    },
-    {
-     "shape": "box",
-     "x": 21,
-     "y": 41,
-     "w": 16,
-     "d": 3.2,
-     "r": 1,
-     "fill": "#C8423A"
-    },
-    {
-     "shape": "box",
-     "x": 23,
-     "y": 44,
-     "w": 12,
-     "d": 3.2,
-     "r": 1,
-     "fill": "#C8423A"
-    },
-    {
-     "shape": "box",
-     "x": 25,
-     "y": 47,
-     "w": 8,
-     "d": 3.2,
-     "r": 1,
-     "fill": "#C8423A"
-    },
-    {
-     "shape": "box",
-     "x": 27,
-     "y": 50,
-     "w": 4,
-     "d": 3.2,
+     "x": 48,
+     "y": 76,
+     "w": 6,
+     "d": 8,
      "r": 1,
      "fill": "#C8423A"
     }
@@ -641,63 +562,20 @@
    "marks": [
     {
      "shape": "box",
-     "x": 3,
-     "y": 3,
-     "w": 54,
-     "d": 66,
-     "r": 2,
-     "fill": "#F2EEE4"
-    },
-    {
-     "shape": "box",
-     "x": 5,
-     "y": 5,
-     "w": 50,
-     "d": 62,
-     "r": 1.5,
-     "fill": "#2F5E9E"
-    },
-    {
-     "shape": "cyl",
-     "x": 15,
-     "y": 14,
-     "w": 30,
-     "d": 30,
-     "fill": "#F2EEE4"
-    },
-    {
-     "shape": "cyl",
-     "x": 18,
-     "y": 17,
-     "w": 24,
-     "d": 24,
-     "fill": "#C8423A"
-    },
-    {
-     "shape": "box",
-     "x": 10,
-     "y": 50,
-     "w": 40,
-     "d": 5,
+     "x": 1,
+     "y": 1,
+     "w": 58,
+     "d": 88,
      "r": 1,
-     "fill": "#F2EEE4"
-    },
-    {
-     "shape": "box",
-     "x": 16,
-     "y": 58,
-     "w": 28,
-     "d": 3,
-     "r": 1,
-     "fill": "#C9D4E4"
+     "fill": "#1E3B66"
     },
     {
      "shape": "box",
      "x": 20,
      "y": 2,
      "w": 20,
-     "d": 6,
-     "r": 3,
+     "d": 8,
+     "r": 4,
      "fill": "#244B80"
     }
    ]

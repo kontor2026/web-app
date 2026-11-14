@@ -33,7 +33,7 @@ def rillen(w):
 
 teile = [
     teil('folie', 'cardboard_sleeve', 'Schutzfolie', 'Folie', 'box', material_id='pp',
-         x=0, y=0, w=H, d=H, z=3.2, h=0.05, r=1, mass=3, materials=[['pp', 100]], color='#E4ECF0', opacity=0.2,
+         x=0, y=0, w=H, d=H, z=3.2, h=0.05, r=1, mass=3, materials=[['pp', 100]], color='#E4ECF0', opacity=0.35,
          info='Dünne Schrumpffolie aus Kunststoff, schützt die neue Hülle. Abziehen und in die Gelbe Tonne oder den Restmüll, '
               'nicht ins Altpapier.'),
     teil('etikett_oben', 'pvc_record', 'Etikett Seite A', 'Etikett A', 'cyl', material_id='paper',

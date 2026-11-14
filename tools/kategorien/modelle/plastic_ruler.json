@@ -27,8 +27,8 @@
     ]
    ],
    "info": "Millimeterskala im Siebdruck. Die Farbe ist fest mit dem Kunststoff verbunden und lässt sich nicht abtrennen.",
-   "color": "#D7E6EE",
-   "opacity": 0.25,
+   "color": "#EEF3F6",
+   "opacity": 0.7,
    "marks": [
     {
      "shape": "box",

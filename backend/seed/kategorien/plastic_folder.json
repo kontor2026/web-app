@@ -37,19 +37,18 @@
  ],
  "rohstoffe": {
   "metalle_mg": {
-   "Fe": 2842.0
+   "Fe": 2940.0
   },
   "herkunft": {
    "Fe": "Modellmassen (Schätzung)"
   },
   "materialien_g": {
-   "pp": 25.7,
-   "steel": 2.9,
-   "paper": 1.4
+   "pp": 27.0,
+   "steel": 3.0
   },
-  "co2_kg": 0.057,
+  "co2_kg": 0.059,
   "co2_mit_recyclat_kg": 0.01,
-  "co2_ersparnis_kg": 0.047,
+  "co2_ersparnis_kg": 0.05,
   "co2_ohne_faktor": [],
   "rohstoffwert_eur": 0,
   "wert_ohne_preis": [],
@@ -73,27 +72,15 @@
    },
    "eucrm2023": {
     "titel": "Study on the Critical Raw Materials for the EU 2023 – Final Report",
-    "url": "https://op.europa.eu/o/opportal-service/download-handler?identifier=57318397-fdd4-11ed-a05c-01aa75ed71a1&format=pdf&language=en&productionSystem=cellar&part="
+    "url": "https://single-market-economy.ec.europa.eu/publications/study-critical-raw-materials-eu-2023-final-report_en"
    },
    "eu2024crma": {
     "titel": "Verordnung (EU) 2024/1252 zur Schaffung eines Rahmens zur Gewährleistung einer sicheren und nachhaltigen Versorgung mit kritischen Rohstoffen (Critical Raw Materials Act)",
-    "url": "https://op.europa.eu/o/opportal-service/download-handler?identifier=aa3c49f7-08e7-11ef-a251-01aa75ed71a1&format=pdf&language=en&productionSystem=cellar&part="
+    "url": "https://op.europa.eu/en/publication-detail/-/publication/aa3c49f7-08e7-11ef-a251-01aa75ed71a1"
    },
    "usdapsd2026": {
     "titel": "Production, Supply and Distribution Online (PSD), Datensatz Cotton (psd_cotton_csv.zip)",
     "url": "https://apps.fas.usda.gov/psdonline/downloads/psd_cotton_csv.zip"
-   },
-   "eia2026intl": {
-    "titel": "International Energy Statistics, Bulk-Download INTL.zip",
-    "url": "https://www.eia.gov/opendata/bulk/INTL.zip"
-   },
-   "faostat2025qcl": {
-    "titel": "FAOSTAT Crops and livestock products (QCL), Bulk-Download Production_Crops_Livestock_E_All_Data_(Normalized).zip",
-    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip"
-   },
-   "faostat2026fo": {
-    "titel": "FAOSTAT Forestry Production and Trade (FO), Bulk-Download Forestry_E_All_Data_(Normalized).zip",
-    "url": "https://bulks-faostat.fao.org/production/Forestry_E_All_Data_(Normalized).zip"
    }
   }
  },
@@ -144,11 +131,11 @@
    "h": 0.2,
    "r": 3,
    "explode": [
-    -250,
     0,
-    0
+    0,
+    169.8
    ],
-   "mass": 11.4,
+   "mass": 12,
    "materials": [
     [
      "pp",
@@ -176,15 +163,6 @@
      "d": 297,
      "r": 0,
      "fill": "#C8D6DC"
-    },
-    {
-     "shape": "box",
-     "x": 214,
-     "y": 4,
-     "w": 2,
-     "d": 297,
-     "r": 0,
-     "fill": "#D3E0E6"
     }
    ]
   },
@@ -207,7 +185,7 @@
     0,
     49.9
    ],
-   "mass": 1.9,
+   "mass": 2,
    "materials": [
     [
      "pp",
@@ -252,7 +230,7 @@
     0,
     25.0
    ],
-   "mass": 2.9,
+   "mass": 3,
    "materials": [
     [
      "stahl",
@@ -283,55 +261,6 @@
    ]
   },
   {
-   "id": "etikett",
-   "component_id": "pp_sheet",
-   "material_id": "paper",
-   "name": "Beschriftungsstreifen (Papier)",
-   "short": "Etikett",
-   "shape": "box",
-   "x": 191,
-   "y": 22,
-   "w": 20,
-   "d": 266,
-   "z": 0.5,
-   "h": 0.2,
-   "r": 1,
-   "explode": [
-    0,
-    0,
-    80.0
-   ],
-   "mass": 1.4,
-   "materials": [
-    [
-     "papier",
-     100
-    ]
-   ],
-   "info": "Eingeschobener Papierstreifen zum Beschriften. Herausziehen und ins Altpapier geben.",
-   "color": "#F4F1EA",
-   "marks": [
-    {
-     "shape": "box",
-     "x": 4,
-     "y": 20,
-     "w": 2,
-     "d": 200,
-     "r": 0,
-     "fill": "#9AA3A8"
-    },
-    {
-     "shape": "box",
-     "x": 9,
-     "y": 30,
-     "w": 2,
-     "d": 150,
-     "r": 0,
-     "fill": "#B4BCC0"
-    }
-   ]
-  },
-  {
    "id": "rueckdeckel",
    "component_id": "pp_sheet",
    "material_id": "pp",
@@ -350,7 +279,7 @@
     0,
     0.0
    ],
-   "mass": 12.4,
+   "mass": 13,
    "materials": [
     [
      "pp",
@@ -371,35 +300,21 @@
     },
     {
      "shape": "box",
-     "x": 188,
-     "y": 18,
-     "w": 26,
-     "d": 274,
+     "x": 190,
+     "y": 20,
+     "w": 22,
+     "d": 270,
      "r": 1,
-     "fill": "#3A7DBF"
-    },
-    {
-     "shape": "cyl",
-     "x": 2,
-     "y": 112,
-     "w": 5,
-     "fill": "#EDEAE3"
-    },
-    {
-     "shape": "cyl",
-     "x": 2,
-     "y": 192,
-     "w": 5,
-     "fill": "#EDEAE3"
+     "fill": "#F4F1EA"
     },
     {
      "shape": "box",
-     "x": 30,
-     "y": 10,
-     "w": 150,
-     "d": 290,
-     "r": 2,
-     "fill": "#2A69A7"
+     "x": 194,
+     "y": 40,
+     "w": 3,
+     "d": 200,
+     "r": 0,
+     "fill": "#9AA3A8"
     }
    ]
   }

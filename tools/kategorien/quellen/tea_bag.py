@@ -48,9 +48,6 @@ teile = [
          info='Das Beutelende ist mehrfach umgefaltet und so ohne Kleber verschlossen. Hier sitzt die Klammer.',
          marks=[mark('box', 0, 3, 55, 1, 0, '#CFC6B2')]),
 ]
-EX = {'etikett': [-50, 50, 45], 'faden': [-50, 50, 45], 'klammer': [0, -40, 14], 'filter_oben': [0, 0, 55],
-      'tee': [0, 0, 26], 'filter_unten': [0, 0, 0], 'kopf': [0, -40, 0]}
-for p in teile:
-    p['explode'] = EX[p['id']]
+explodiere(teile, abstand=25, gruppen=[['faden', 'etikett']], abstaende={'klammer': 12})
 skaliere_masse(teile, oid='tea_bag', stellen=2)
 schreibe('tea_bag', teile)

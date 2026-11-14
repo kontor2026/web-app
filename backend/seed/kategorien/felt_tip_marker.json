@@ -39,8 +39,8 @@
   "metalle_mg": {},
   "herkunft": {},
   "materialien_g": {
-   "pp": 9.4,
-   "polyester": 2.6
+   "pp": 9.3,
+   "polyester": 2.7
   },
   "co2_kg": 0.027,
   "co2_mit_recyclat_kg": 0.011,
@@ -68,27 +68,15 @@
    },
    "eucrm2023": {
     "titel": "Study on the Critical Raw Materials for the EU 2023 – Final Report",
-    "url": "https://op.europa.eu/o/opportal-service/download-handler?identifier=57318397-fdd4-11ed-a05c-01aa75ed71a1&format=pdf&language=en&productionSystem=cellar&part="
+    "url": "https://single-market-economy.ec.europa.eu/publications/study-critical-raw-materials-eu-2023-final-report_en"
    },
    "eu2024crma": {
     "titel": "Verordnung (EU) 2024/1252 zur Schaffung eines Rahmens zur Gewährleistung einer sicheren und nachhaltigen Versorgung mit kritischen Rohstoffen (Critical Raw Materials Act)",
-    "url": "https://op.europa.eu/o/opportal-service/download-handler?identifier=aa3c49f7-08e7-11ef-a251-01aa75ed71a1&format=pdf&language=en&productionSystem=cellar&part="
+    "url": "https://op.europa.eu/en/publication-detail/-/publication/aa3c49f7-08e7-11ef-a251-01aa75ed71a1"
    },
    "usdapsd2026": {
     "titel": "Production, Supply and Distribution Online (PSD), Datensatz Cotton (psd_cotton_csv.zip)",
     "url": "https://apps.fas.usda.gov/psdonline/downloads/psd_cotton_csv.zip"
-   },
-   "eia2026intl": {
-    "titel": "International Energy Statistics, Bulk-Download INTL.zip",
-    "url": "https://www.eia.gov/opendata/bulk/INTL.zip"
-   },
-   "faostat2025qcl": {
-    "titel": "FAOSTAT Crops and livestock products (QCL), Bulk-Download Production_Crops_Livestock_E_All_Data_(Normalized).zip",
-    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip"
-   },
-   "faostat2026fo": {
-    "titel": "FAOSTAT Forestry Production and Trade (FO), Bulk-Download Forestry_E_All_Data_(Normalized).zip",
-    "url": "https://bulks-faostat.fao.org/production/Forestry_E_All_Data_(Normalized).zip"
    }
   }
  },
@@ -134,14 +122,14 @@
    "x": 1,
    "y": 1,
    "w": 13,
-   "z": 84,
-   "h": 56,
+   "z": 98,
+   "h": 42,
    "explode": [
     0,
     0,
-    80.0
+    32.0
    ],
-   "mass": 2.53,
+   "mass": 2.59,
    "materials": [
     [
      "pp",
@@ -171,13 +159,13 @@
    "y": 6,
    "w": 1.5,
    "d": 3,
-   "z": 100,
-   "h": 36,
+   "z": 104,
+   "h": 32,
    "r": 0.5,
    "explode": [
     0,
     0,
-    80.0
+    32.0
    ],
    "mass": 0.32,
    "materials": [
@@ -188,42 +176,6 @@
    ],
    "info": "An die Kappe angespritzter Kunststoffclip, gleiches Material wie die Kappe.",
    "color": "#C8423A"
-  },
-  {
-   "id": "innenkappe",
-   "component_id": "pen_cap",
-   "material_id": "pp",
-   "name": "Innenkappe",
-   "short": "Innenkappe",
-   "shape": "cyl",
-   "x": 3.5,
-   "y": 3.5,
-   "w": 8,
-   "z": 100,
-   "h": 24,
-   "explode": [
-    0,
-    0,
-    30.0
-   ],
-   "mass": 0.32,
-   "materials": [
-    [
-     "pp",
-     100
-    ]
-   ],
-   "info": "Kleiner Becher in der Kappe, der sich luftdicht über die Spitze schiebt. Er sorgt dafür, dass der Stift auch nach Wochen nicht austrocknet.",
-   "color": "#E9E6DF",
-   "marks": [
-    {
-     "shape": "cyl",
-     "x": 1.5,
-     "y": 1.5,
-     "w": 5,
-     "fill": "#C9CDD0"
-    }
-   ]
   },
   {
    "id": "spitze",
@@ -278,7 +230,7 @@
     0,
     20.0
    ],
-   "mass": 0.84,
+   "mass": 0.86,
    "materials": [
     [
      "pp",
@@ -314,7 +266,7 @@
     0,
     0
    ],
-   "mass": 2.32,
+   "mass": 2.38,
    "materials": [
     [
      "polyester",
@@ -358,7 +310,7 @@
     0,
     10.0
    ],
-   "mass": 4.74,
+   "mass": 4.86,
    "materials": [
     [
      "pp",
@@ -394,7 +346,7 @@
     0,
     0.0
    ],
-   "mass": 0.63,
+   "mass": 0.65,
    "materials": [
     [
      "pp",

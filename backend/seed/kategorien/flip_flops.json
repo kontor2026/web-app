@@ -68,27 +68,15 @@
    },
    "eucrm2023": {
     "titel": "Study on the Critical Raw Materials for the EU 2023 – Final Report",
-    "url": "https://op.europa.eu/o/opportal-service/download-handler?identifier=57318397-fdd4-11ed-a05c-01aa75ed71a1&format=pdf&language=en&productionSystem=cellar&part="
+    "url": "https://single-market-economy.ec.europa.eu/publications/study-critical-raw-materials-eu-2023-final-report_en"
    },
    "eu2024crma": {
     "titel": "Verordnung (EU) 2024/1252 zur Schaffung eines Rahmens zur Gewährleistung einer sicheren und nachhaltigen Versorgung mit kritischen Rohstoffen (Critical Raw Materials Act)",
-    "url": "https://op.europa.eu/o/opportal-service/download-handler?identifier=aa3c49f7-08e7-11ef-a251-01aa75ed71a1&format=pdf&language=en&productionSystem=cellar&part="
+    "url": "https://op.europa.eu/en/publication-detail/-/publication/aa3c49f7-08e7-11ef-a251-01aa75ed71a1"
    },
    "usdapsd2026": {
     "titel": "Production, Supply and Distribution Online (PSD), Datensatz Cotton (psd_cotton_csv.zip)",
     "url": "https://apps.fas.usda.gov/psdonline/downloads/psd_cotton_csv.zip"
-   },
-   "eia2026intl": {
-    "titel": "International Energy Statistics, Bulk-Download INTL.zip",
-    "url": "https://www.eia.gov/opendata/bulk/INTL.zip"
-   },
-   "faostat2025qcl": {
-    "titel": "FAOSTAT Crops and livestock products (QCL), Bulk-Download Production_Crops_Livestock_E_All_Data_(Normalized).zip",
-    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip"
-   },
-   "faostat2026fo": {
-    "titel": "FAOSTAT Forestry Production and Trade (FO), Bulk-Download Forestry_E_All_Data_(Normalized).zip",
-    "url": "https://bulks-faostat.fao.org/production/Forestry_E_All_Data_(Normalized).zip"
    }
   }
  },
@@ -132,7 +120,7 @@
    "short": "Zehensteg",
    "shape": "cyl",
    "x": 44,
-   "y": 176,
+   "y": 178,
    "w": 12,
    "d": 14,
    "z": 0,
@@ -163,97 +151,56 @@
    ]
   },
   {
-   "id": "arm_l1",
+   "id": "arm_l_vorn",
    "component_id": "rubber_strap",
    "material_id": "rubber",
-   "name": "Y-Riemen (Gummi)",
+   "name": "Riemen links, vorderer Teil",
    "short": "Riemen",
    "shape": "box",
-   "x": 35,
-   "y": 150,
-   "w": 14,
-   "d": 24,
-   "z": 13,
-   "h": 12,
-   "r": 6,
+   "x": 28,
+   "y": 148,
+   "w": 16,
+   "d": 36,
+   "z": 15,
+   "h": 10,
+   "r": 5,
    "explode": [
     0,
     0,
     95.0
    ],
-   "mass": 2,
+   "mass": 2.5,
    "materials": [
     [
      "gummi",
      100
     ]
    ],
-   "info": "Weicher Gummi- oder PVC-Riemen, mit dem Steg in einem Stück gespritzt. Die hinteren Enden stecken als Pfropfen in der Sohle und lassen sich von unten durchdrücken.",
+   "info": "Weicher Gummi- oder PVC-Riemen. Er hält den Fuß und ist mit dem Steg in einem Stück gespritzt.",
    "color": "#2D6FA3",
    "marks": [
     {
      "shape": "box",
      "x": 3,
-     "y": 3,
-     "w": 8,
-     "d": 18,
+     "y": 2,
+     "w": 10,
+     "d": 32,
      "r": 4,
      "fill": "#245A85"
     }
    ]
   },
   {
-   "id": "arm_l2",
+   "id": "arm_l_hinten",
    "component_id": "rubber_strap",
    "material_id": "rubber",
-   "name": "Riemen l 2",
+   "name": "Riemen links mit Pfropfen",
    "short": "Riemen",
    "shape": "box",
-   "x": 23,
-   "y": 126,
-   "w": 14,
-   "d": 24,
-   "z": 8,
-   "h": 15,
-   "r": 6,
-   "explode": [
-    0,
-    0,
-    95.0
-   ],
-   "mass": 2,
-   "materials": [
-    [
-     "gummi",
-     100
-    ]
-   ],
-   "info": "Weiteres Stück des Y-Riemens.",
-   "color": "#2D6FA3",
-   "label": false,
-   "marks": [
-    {
-     "shape": "box",
-     "x": 3,
-     "y": 3,
-     "w": 8,
-     "d": 18,
-     "r": 4,
-     "fill": "#245A85"
-    }
-   ]
-  },
-  {
-   "id": "arm_l3",
-   "component_id": "rubber_strap",
-   "material_id": "rubber",
-   "name": "Riemen l 3",
-   "short": "Riemen",
-   "shape": "box",
-   "x": 10.5,
-   "y": 100,
-   "w": 15,
-   "d": 26,
+   "x": 10,
+   "y": 112,
+   "w": 18,
+   "d": 36,
    "z": 3,
    "h": 18,
    "r": 6,
@@ -262,121 +209,80 @@
     0,
     95.0
    ],
-   "mass": 2,
+   "mass": 3.5,
    "materials": [
     [
      "gummi",
      100
     ]
    ],
-   "info": "Weiteres Stück des Y-Riemens.",
+   "info": "Das hintere Riemenende endet in einem Pfropfen, der in der Sohle steckt.",
    "color": "#2D6FA3",
    "label": false,
    "marks": [
     {
      "shape": "box",
-     "x": 3,
-     "y": 3,
-     "w": 9,
-     "d": 20,
+     "x": 4,
+     "y": 2,
+     "w": 10,
+     "d": 32,
      "r": 4,
      "fill": "#245A85"
     }
    ]
   },
   {
-   "id": "arm_r1",
+   "id": "arm_r_vorn",
    "component_id": "rubber_strap",
    "material_id": "rubber",
-   "name": "Riemen r 1",
+   "name": "Riemen rechts, vorderer Teil",
    "short": "Riemen",
    "shape": "box",
-   "x": 51,
-   "y": 150,
-   "w": 14,
-   "d": 24,
-   "z": 13,
-   "h": 12,
-   "r": 6,
+   "x": 56,
+   "y": 148,
+   "w": 16,
+   "d": 36,
+   "z": 15,
+   "h": 10,
+   "r": 5,
    "explode": [
     0,
     0,
     95.0
    ],
-   "mass": 2,
+   "mass": 2.5,
    "materials": [
     [
      "gummi",
      100
     ]
    ],
-   "info": "Weiteres Stück des Y-Riemens.",
+   "info": "Gegenstück zum linken Riemen.",
    "color": "#2D6FA3",
    "label": false,
    "marks": [
     {
      "shape": "box",
      "x": 3,
-     "y": 3,
-     "w": 8,
-     "d": 18,
+     "y": 2,
+     "w": 10,
+     "d": 32,
      "r": 4,
      "fill": "#245A85"
     }
    ]
   },
   {
-   "id": "arm_r2",
+   "id": "arm_r_hinten",
    "component_id": "rubber_strap",
    "material_id": "rubber",
-   "name": "Riemen r 2",
+   "name": "Riemen rechts mit Pfropfen",
    "short": "Riemen",
    "shape": "box",
-   "x": 63,
-   "y": 126,
-   "w": 14,
-   "d": 24,
-   "z": 8,
-   "h": 15,
-   "r": 6,
-   "explode": [
-    0,
-    0,
-    95.0
-   ],
-   "mass": 2,
-   "materials": [
-    [
-     "gummi",
-     100
-    ]
-   ],
-   "info": "Weiteres Stück des Y-Riemens.",
-   "color": "#2D6FA3",
-   "label": false,
-   "marks": [
-    {
-     "shape": "box",
-     "x": 3,
-     "y": 3,
-     "w": 8,
-     "d": 18,
-     "r": 4,
-     "fill": "#245A85"
-    }
-   ]
-  },
-  {
-   "id": "arm_r3",
-   "component_id": "rubber_strap",
-   "material_id": "rubber",
-   "name": "Riemen r 3",
-   "short": "Riemen",
-   "shape": "box",
-   "x": 74.5,
-   "y": 100,
-   "w": 15,
-   "d": 26,
+   "x": 72,
+   "y": 112,
+   "w": 18,
+   "d": 36,
    "z": 3,
    "h": 18,
    "r": 6,
@@ -385,23 +291,23 @@
     0,
     95.0
    ],
-   "mass": 2,
+   "mass": 3.5,
    "materials": [
     [
      "gummi",
      100
     ]
    ],
-   "info": "Weiteres Stück des Y-Riemens.",
+   "info": "Gegenstück zum linken Riemenende.",
    "color": "#2D6FA3",
    "label": false,
    "marks": [
     {
      "shape": "box",
-     "x": 3,
-     "y": 3,
-     "w": 9,
-     "d": 20,
+     "x": 4,
+     "y": 2,
+     "w": 10,
+     "d": 32,
      "r": 4,
      "fill": "#245A85"
     }

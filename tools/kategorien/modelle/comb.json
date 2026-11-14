@@ -19,7 +19,7 @@
     0,
     0
    ],
-   "mass": 3.97,
+   "mass": 4,
    "materials": [
     [
      "pcabs",
@@ -41,7 +41,7 @@
    ]
   },
   {
-   "id": "grob_0",
+   "id": "zinken_grob",
    "component_id": "plastic_comb",
    "material_id": "abs",
    "name": "Grobe Zinken",
@@ -49,17 +49,17 @@
    "shape": "box",
    "x": 9,
    "y": 2,
-   "w": 20,
-   "d": 2.2,
-   "z": 0.3,
-   "h": 3.2,
-   "r": 0.8,
+   "w": 21,
+   "d": 88,
+   "z": 0,
+   "h": 3.5,
+   "r": 1,
    "explode": [
     14,
     -8,
     0
    ],
-   "mass": 0.16,
+   "mass": 3.2,
    "materials": [
     [
      "pcabs",
@@ -68,598 +68,227 @@
    ],
    "info": "Weit auseinanderstehende Zinken zum Entwirren. Der Kamm ist aus einem Kunststoff gespritzt und lässt sich nicht weiter zerlegen.",
    "color": "#4A3B33",
-   "label": true
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 1.5,
+     "w": 18,
+     "d": 1.8,
+     "r": 0.5,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 5.4,
+     "w": 18,
+     "d": 1.8,
+     "r": 0.5,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 9.3,
+     "w": 18,
+     "d": 1.8,
+     "r": 0.5,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 13.2,
+     "w": 18,
+     "d": 1.8,
+     "r": 0.5,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 17.1,
+     "w": 18,
+     "d": 1.8,
+     "r": 0.5,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 21.0,
+     "w": 18,
+     "d": 1.8,
+     "r": 0.5,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 24.9,
+     "w": 18,
+     "d": 1.8,
+     "r": 0.5,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 28.8,
+     "w": 18,
+     "d": 1.8,
+     "r": 0.5,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 32.7,
+     "w": 18,
+     "d": 1.8,
+     "r": 0.5,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 36.6,
+     "w": 18,
+     "d": 1.8,
+     "r": 0.5,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 40.5,
+     "w": 18,
+     "d": 1.8,
+     "r": 0.5,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 44.4,
+     "w": 18,
+     "d": 1.8,
+     "r": 0.5,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 48.3,
+     "w": 18,
+     "d": 1.8,
+     "r": 0.5,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 52.2,
+     "w": 18,
+     "d": 1.8,
+     "r": 0.5,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 56.1,
+     "w": 18,
+     "d": 1.8,
+     "r": 0.5,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 60.0,
+     "w": 18,
+     "d": 1.8,
+     "r": 0.5,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 63.9,
+     "w": 18,
+     "d": 1.8,
+     "r": 0.5,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 67.8,
+     "w": 18,
+     "d": 1.8,
+     "r": 0.5,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 71.7,
+     "w": 18,
+     "d": 1.8,
+     "r": 0.5,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 75.6,
+     "w": 18,
+     "d": 1.8,
+     "r": 0.5,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 79.5,
+     "w": 18,
+     "d": 1.8,
+     "r": 0.5,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 83.4,
+     "w": 18,
+     "d": 1.8,
+     "r": 0.5,
+     "fill": "#2A211C"
+    }
+   ]
   },
   {
-   "id": "grob_1",
-   "component_id": "plastic_comb",
-   "material_id": "abs",
-   "name": "Grobe Zinken",
-   "short": "Grobe Zinken",
-   "shape": "box",
-   "x": 9,
-   "y": 6.4,
-   "w": 20,
-   "d": 2.2,
-   "z": 0.3,
-   "h": 3.2,
-   "r": 0.8,
-   "explode": [
-    14,
-    -8,
-    0
-   ],
-   "mass": 0.16,
-   "materials": [
-    [
-     "pcabs",
-     100
-    ]
-   ],
-   "info": "Eine der groben Zinken.",
-   "color": "#4A3B33",
-   "label": false
-  },
-  {
-   "id": "grob_2",
-   "component_id": "plastic_comb",
-   "material_id": "abs",
-   "name": "Grobe Zinken",
-   "short": "Grobe Zinken",
-   "shape": "box",
-   "x": 9,
-   "y": 10.8,
-   "w": 20,
-   "d": 2.2,
-   "z": 0.3,
-   "h": 3.2,
-   "r": 0.8,
-   "explode": [
-    14,
-    -8,
-    0
-   ],
-   "mass": 0.16,
-   "materials": [
-    [
-     "pcabs",
-     100
-    ]
-   ],
-   "info": "Eine der groben Zinken.",
-   "color": "#4A3B33",
-   "label": false
-  },
-  {
-   "id": "grob_3",
-   "component_id": "plastic_comb",
-   "material_id": "abs",
-   "name": "Grobe Zinken",
-   "short": "Grobe Zinken",
-   "shape": "box",
-   "x": 9,
-   "y": 15.200000000000001,
-   "w": 20,
-   "d": 2.2,
-   "z": 0.3,
-   "h": 3.2,
-   "r": 0.8,
-   "explode": [
-    14,
-    -8,
-    0
-   ],
-   "mass": 0.16,
-   "materials": [
-    [
-     "pcabs",
-     100
-    ]
-   ],
-   "info": "Eine der groben Zinken.",
-   "color": "#4A3B33",
-   "label": false
-  },
-  {
-   "id": "grob_4",
-   "component_id": "plastic_comb",
-   "material_id": "abs",
-   "name": "Grobe Zinken",
-   "short": "Grobe Zinken",
-   "shape": "box",
-   "x": 9,
-   "y": 19.6,
-   "w": 20,
-   "d": 2.2,
-   "z": 0.3,
-   "h": 3.2,
-   "r": 0.8,
-   "explode": [
-    14,
-    -8,
-    0
-   ],
-   "mass": 0.16,
-   "materials": [
-    [
-     "pcabs",
-     100
-    ]
-   ],
-   "info": "Eine der groben Zinken.",
-   "color": "#4A3B33",
-   "label": false
-  },
-  {
-   "id": "grob_5",
-   "component_id": "plastic_comb",
-   "material_id": "abs",
-   "name": "Grobe Zinken",
-   "short": "Grobe Zinken",
-   "shape": "box",
-   "x": 9,
-   "y": 24,
-   "w": 20,
-   "d": 2.2,
-   "z": 0.3,
-   "h": 3.2,
-   "r": 0.8,
-   "explode": [
-    14,
-    -8,
-    0
-   ],
-   "mass": 0.16,
-   "materials": [
-    [
-     "pcabs",
-     100
-    ]
-   ],
-   "info": "Eine der groben Zinken.",
-   "color": "#4A3B33",
-   "label": false
-  },
-  {
-   "id": "grob_6",
-   "component_id": "plastic_comb",
-   "material_id": "abs",
-   "name": "Grobe Zinken",
-   "short": "Grobe Zinken",
-   "shape": "box",
-   "x": 9,
-   "y": 28.400000000000002,
-   "w": 20,
-   "d": 2.2,
-   "z": 0.3,
-   "h": 3.2,
-   "r": 0.8,
-   "explode": [
-    14,
-    -8,
-    0
-   ],
-   "mass": 0.16,
-   "materials": [
-    [
-     "pcabs",
-     100
-    ]
-   ],
-   "info": "Eine der groben Zinken.",
-   "color": "#4A3B33",
-   "label": false
-  },
-  {
-   "id": "grob_7",
-   "component_id": "plastic_comb",
-   "material_id": "abs",
-   "name": "Grobe Zinken",
-   "short": "Grobe Zinken",
-   "shape": "box",
-   "x": 9,
-   "y": 32.800000000000004,
-   "w": 20,
-   "d": 2.2,
-   "z": 0.3,
-   "h": 3.2,
-   "r": 0.8,
-   "explode": [
-    14,
-    -8,
-    0
-   ],
-   "mass": 0.16,
-   "materials": [
-    [
-     "pcabs",
-     100
-    ]
-   ],
-   "info": "Eine der groben Zinken.",
-   "color": "#4A3B33",
-   "label": false
-  },
-  {
-   "id": "grob_8",
-   "component_id": "plastic_comb",
-   "material_id": "abs",
-   "name": "Grobe Zinken",
-   "short": "Grobe Zinken",
-   "shape": "box",
-   "x": 9,
-   "y": 37.2,
-   "w": 20,
-   "d": 2.2,
-   "z": 0.3,
-   "h": 3.2,
-   "r": 0.8,
-   "explode": [
-    14,
-    -8,
-    0
-   ],
-   "mass": 0.16,
-   "materials": [
-    [
-     "pcabs",
-     100
-    ]
-   ],
-   "info": "Eine der groben Zinken.",
-   "color": "#4A3B33",
-   "label": false
-  },
-  {
-   "id": "grob_9",
-   "component_id": "plastic_comb",
-   "material_id": "abs",
-   "name": "Grobe Zinken",
-   "short": "Grobe Zinken",
-   "shape": "box",
-   "x": 9,
-   "y": 41.6,
-   "w": 20,
-   "d": 2.2,
-   "z": 0.3,
-   "h": 3.2,
-   "r": 0.8,
-   "explode": [
-    14,
-    -8,
-    0
-   ],
-   "mass": 0.16,
-   "materials": [
-    [
-     "pcabs",
-     100
-    ]
-   ],
-   "info": "Eine der groben Zinken.",
-   "color": "#4A3B33",
-   "label": false
-  },
-  {
-   "id": "grob_10",
-   "component_id": "plastic_comb",
-   "material_id": "abs",
-   "name": "Grobe Zinken",
-   "short": "Grobe Zinken",
-   "shape": "box",
-   "x": 9,
-   "y": 46,
-   "w": 20,
-   "d": 2.2,
-   "z": 0.3,
-   "h": 3.2,
-   "r": 0.8,
-   "explode": [
-    14,
-    -8,
-    0
-   ],
-   "mass": 0.16,
-   "materials": [
-    [
-     "pcabs",
-     100
-    ]
-   ],
-   "info": "Eine der groben Zinken.",
-   "color": "#4A3B33",
-   "label": false
-  },
-  {
-   "id": "grob_11",
-   "component_id": "plastic_comb",
-   "material_id": "abs",
-   "name": "Grobe Zinken",
-   "short": "Grobe Zinken",
-   "shape": "box",
-   "x": 9,
-   "y": 50.400000000000006,
-   "w": 20,
-   "d": 2.2,
-   "z": 0.3,
-   "h": 3.2,
-   "r": 0.8,
-   "explode": [
-    14,
-    -8,
-    0
-   ],
-   "mass": 0.16,
-   "materials": [
-    [
-     "pcabs",
-     100
-    ]
-   ],
-   "info": "Eine der groben Zinken.",
-   "color": "#4A3B33",
-   "label": false
-  },
-  {
-   "id": "grob_12",
-   "component_id": "plastic_comb",
-   "material_id": "abs",
-   "name": "Grobe Zinken",
-   "short": "Grobe Zinken",
-   "shape": "box",
-   "x": 9,
-   "y": 54.800000000000004,
-   "w": 20,
-   "d": 2.2,
-   "z": 0.3,
-   "h": 3.2,
-   "r": 0.8,
-   "explode": [
-    14,
-    -8,
-    0
-   ],
-   "mass": 0.16,
-   "materials": [
-    [
-     "pcabs",
-     100
-    ]
-   ],
-   "info": "Eine der groben Zinken.",
-   "color": "#4A3B33",
-   "label": false
-  },
-  {
-   "id": "grob_13",
-   "component_id": "plastic_comb",
-   "material_id": "abs",
-   "name": "Grobe Zinken",
-   "short": "Grobe Zinken",
-   "shape": "box",
-   "x": 9,
-   "y": 59.2,
-   "w": 20,
-   "d": 2.2,
-   "z": 0.3,
-   "h": 3.2,
-   "r": 0.8,
-   "explode": [
-    14,
-    -8,
-    0
-   ],
-   "mass": 0.16,
-   "materials": [
-    [
-     "pcabs",
-     100
-    ]
-   ],
-   "info": "Eine der groben Zinken.",
-   "color": "#4A3B33",
-   "label": false
-  },
-  {
-   "id": "grob_14",
-   "component_id": "plastic_comb",
-   "material_id": "abs",
-   "name": "Grobe Zinken",
-   "short": "Grobe Zinken",
-   "shape": "box",
-   "x": 9,
-   "y": 63.60000000000001,
-   "w": 20,
-   "d": 2.2,
-   "z": 0.3,
-   "h": 3.2,
-   "r": 0.8,
-   "explode": [
-    14,
-    -8,
-    0
-   ],
-   "mass": 0.16,
-   "materials": [
-    [
-     "pcabs",
-     100
-    ]
-   ],
-   "info": "Eine der groben Zinken.",
-   "color": "#4A3B33",
-   "label": false
-  },
-  {
-   "id": "grob_15",
-   "component_id": "plastic_comb",
-   "material_id": "abs",
-   "name": "Grobe Zinken",
-   "short": "Grobe Zinken",
-   "shape": "box",
-   "x": 9,
-   "y": 68,
-   "w": 20,
-   "d": 2.2,
-   "z": 0.3,
-   "h": 3.2,
-   "r": 0.8,
-   "explode": [
-    14,
-    -8,
-    0
-   ],
-   "mass": 0.16,
-   "materials": [
-    [
-     "pcabs",
-     100
-    ]
-   ],
-   "info": "Eine der groben Zinken.",
-   "color": "#4A3B33",
-   "label": false
-  },
-  {
-   "id": "grob_16",
-   "component_id": "plastic_comb",
-   "material_id": "abs",
-   "name": "Grobe Zinken",
-   "short": "Grobe Zinken",
-   "shape": "box",
-   "x": 9,
-   "y": 72.4,
-   "w": 20,
-   "d": 2.2,
-   "z": 0.3,
-   "h": 3.2,
-   "r": 0.8,
-   "explode": [
-    14,
-    -8,
-    0
-   ],
-   "mass": 0.16,
-   "materials": [
-    [
-     "pcabs",
-     100
-    ]
-   ],
-   "info": "Eine der groben Zinken.",
-   "color": "#4A3B33",
-   "label": false
-  },
-  {
-   "id": "grob_17",
-   "component_id": "plastic_comb",
-   "material_id": "abs",
-   "name": "Grobe Zinken",
-   "short": "Grobe Zinken",
-   "shape": "box",
-   "x": 9,
-   "y": 76.80000000000001,
-   "w": 20,
-   "d": 2.2,
-   "z": 0.3,
-   "h": 3.2,
-   "r": 0.8,
-   "explode": [
-    14,
-    -8,
-    0
-   ],
-   "mass": 0.16,
-   "materials": [
-    [
-     "pcabs",
-     100
-    ]
-   ],
-   "info": "Eine der groben Zinken.",
-   "color": "#4A3B33",
-   "label": false
-  },
-  {
-   "id": "grob_18",
-   "component_id": "plastic_comb",
-   "material_id": "abs",
-   "name": "Grobe Zinken",
-   "short": "Grobe Zinken",
-   "shape": "box",
-   "x": 9,
-   "y": 81.2,
-   "w": 20,
-   "d": 2.2,
-   "z": 0.3,
-   "h": 3.2,
-   "r": 0.8,
-   "explode": [
-    14,
-    -8,
-    0
-   ],
-   "mass": 0.16,
-   "materials": [
-    [
-     "pcabs",
-     100
-    ]
-   ],
-   "info": "Eine der groben Zinken.",
-   "color": "#4A3B33",
-   "label": false
-  },
-  {
-   "id": "grob_19",
-   "component_id": "plastic_comb",
-   "material_id": "abs",
-   "name": "Grobe Zinken",
-   "short": "Grobe Zinken",
-   "shape": "box",
-   "x": 9,
-   "y": 85.60000000000001,
-   "w": 20,
-   "d": 2.2,
-   "z": 0.3,
-   "h": 3.2,
-   "r": 0.8,
-   "explode": [
-    14,
-    -8,
-    0
-   ],
-   "mass": 0.16,
-   "materials": [
-    [
-     "pcabs",
-     100
-    ]
-   ],
-   "info": "Eine der groben Zinken.",
-   "color": "#4A3B33",
-   "label": false
-  },
-  {
-   "id": "fein_0",
+   "id": "zinken_fein",
    "component_id": "plastic_comb",
    "material_id": "abs",
    "name": "Feine Zinken",
    "short": "Feine Zinken",
    "shape": "box",
    "x": 9,
-   "y": 92,
-   "w": 18,
-   "d": 1.2,
-   "z": 0.3,
-   "h": 3.2,
-   "r": 0.4,
+   "y": 90,
+   "w": 21,
+   "d": 88,
+   "z": 0,
+   "h": 3.5,
+   "r": 1,
    "explode": [
     14,
     8,
     0
    ],
-   "mass": 0.08,
+   "mass": 2.8,
    "materials": [
     [
      "pcabs",
@@ -668,1057 +297,360 @@
    ],
    "info": "Eng stehende Zinken zum Glätten und Scheiteln. Zwischen ihnen sammeln sich Haare und Talg, deshalb den Kamm ab und zu mit Seifenwasser reinigen.",
    "color": "#4A3B33",
-   "label": true
-  },
-  {
-   "id": "fein_1",
-   "component_id": "plastic_comb",
-   "material_id": "abs",
-   "name": "Feine Zinken",
-   "short": "Feine Zinken",
-   "shape": "box",
-   "x": 9,
-   "y": 94.4,
-   "w": 18,
-   "d": 1.2,
-   "z": 0.3,
-   "h": 3.2,
-   "r": 0.4,
-   "explode": [
-    14,
-    8,
-    0
-   ],
-   "mass": 0.08,
-   "materials": [
-    [
-     "pcabs",
-     100
-    ]
-   ],
-   "info": "Eine der feinen Zinken.",
-   "color": "#4A3B33",
-   "label": false
-  },
-  {
-   "id": "fein_2",
-   "component_id": "plastic_comb",
-   "material_id": "abs",
-   "name": "Feine Zinken",
-   "short": "Feine Zinken",
-   "shape": "box",
-   "x": 9,
-   "y": 96.8,
-   "w": 18,
-   "d": 1.2,
-   "z": 0.3,
-   "h": 3.2,
-   "r": 0.4,
-   "explode": [
-    14,
-    8,
-    0
-   ],
-   "mass": 0.08,
-   "materials": [
-    [
-     "pcabs",
-     100
-    ]
-   ],
-   "info": "Eine der feinen Zinken.",
-   "color": "#4A3B33",
-   "label": false
-  },
-  {
-   "id": "fein_3",
-   "component_id": "plastic_comb",
-   "material_id": "abs",
-   "name": "Feine Zinken",
-   "short": "Feine Zinken",
-   "shape": "box",
-   "x": 9,
-   "y": 99.2,
-   "w": 18,
-   "d": 1.2,
-   "z": 0.3,
-   "h": 3.2,
-   "r": 0.4,
-   "explode": [
-    14,
-    8,
-    0
-   ],
-   "mass": 0.08,
-   "materials": [
-    [
-     "pcabs",
-     100
-    ]
-   ],
-   "info": "Eine der feinen Zinken.",
-   "color": "#4A3B33",
-   "label": false
-  },
-  {
-   "id": "fein_4",
-   "component_id": "plastic_comb",
-   "material_id": "abs",
-   "name": "Feine Zinken",
-   "short": "Feine Zinken",
-   "shape": "box",
-   "x": 9,
-   "y": 101.6,
-   "w": 18,
-   "d": 1.2,
-   "z": 0.3,
-   "h": 3.2,
-   "r": 0.4,
-   "explode": [
-    14,
-    8,
-    0
-   ],
-   "mass": 0.08,
-   "materials": [
-    [
-     "pcabs",
-     100
-    ]
-   ],
-   "info": "Eine der feinen Zinken.",
-   "color": "#4A3B33",
-   "label": false
-  },
-  {
-   "id": "fein_5",
-   "component_id": "plastic_comb",
-   "material_id": "abs",
-   "name": "Feine Zinken",
-   "short": "Feine Zinken",
-   "shape": "box",
-   "x": 9,
-   "y": 104,
-   "w": 18,
-   "d": 1.2,
-   "z": 0.3,
-   "h": 3.2,
-   "r": 0.4,
-   "explode": [
-    14,
-    8,
-    0
-   ],
-   "mass": 0.08,
-   "materials": [
-    [
-     "pcabs",
-     100
-    ]
-   ],
-   "info": "Eine der feinen Zinken.",
-   "color": "#4A3B33",
-   "label": false
-  },
-  {
-   "id": "fein_6",
-   "component_id": "plastic_comb",
-   "material_id": "abs",
-   "name": "Feine Zinken",
-   "short": "Feine Zinken",
-   "shape": "box",
-   "x": 9,
-   "y": 106.4,
-   "w": 18,
-   "d": 1.2,
-   "z": 0.3,
-   "h": 3.2,
-   "r": 0.4,
-   "explode": [
-    14,
-    8,
-    0
-   ],
-   "mass": 0.08,
-   "materials": [
-    [
-     "pcabs",
-     100
-    ]
-   ],
-   "info": "Eine der feinen Zinken.",
-   "color": "#4A3B33",
-   "label": false
-  },
-  {
-   "id": "fein_7",
-   "component_id": "plastic_comb",
-   "material_id": "abs",
-   "name": "Feine Zinken",
-   "short": "Feine Zinken",
-   "shape": "box",
-   "x": 9,
-   "y": 108.8,
-   "w": 18,
-   "d": 1.2,
-   "z": 0.3,
-   "h": 3.2,
-   "r": 0.4,
-   "explode": [
-    14,
-    8,
-    0
-   ],
-   "mass": 0.08,
-   "materials": [
-    [
-     "pcabs",
-     100
-    ]
-   ],
-   "info": "Eine der feinen Zinken.",
-   "color": "#4A3B33",
-   "label": false
-  },
-  {
-   "id": "fein_8",
-   "component_id": "plastic_comb",
-   "material_id": "abs",
-   "name": "Feine Zinken",
-   "short": "Feine Zinken",
-   "shape": "box",
-   "x": 9,
-   "y": 111.2,
-   "w": 18,
-   "d": 1.2,
-   "z": 0.3,
-   "h": 3.2,
-   "r": 0.4,
-   "explode": [
-    14,
-    8,
-    0
-   ],
-   "mass": 0.08,
-   "materials": [
-    [
-     "pcabs",
-     100
-    ]
-   ],
-   "info": "Eine der feinen Zinken.",
-   "color": "#4A3B33",
-   "label": false
-  },
-  {
-   "id": "fein_9",
-   "component_id": "plastic_comb",
-   "material_id": "abs",
-   "name": "Feine Zinken",
-   "short": "Feine Zinken",
-   "shape": "box",
-   "x": 9,
-   "y": 113.6,
-   "w": 18,
-   "d": 1.2,
-   "z": 0.3,
-   "h": 3.2,
-   "r": 0.4,
-   "explode": [
-    14,
-    8,
-    0
-   ],
-   "mass": 0.08,
-   "materials": [
-    [
-     "pcabs",
-     100
-    ]
-   ],
-   "info": "Eine der feinen Zinken.",
-   "color": "#4A3B33",
-   "label": false
-  },
-  {
-   "id": "fein_10",
-   "component_id": "plastic_comb",
-   "material_id": "abs",
-   "name": "Feine Zinken",
-   "short": "Feine Zinken",
-   "shape": "box",
-   "x": 9,
-   "y": 116,
-   "w": 18,
-   "d": 1.2,
-   "z": 0.3,
-   "h": 3.2,
-   "r": 0.4,
-   "explode": [
-    14,
-    8,
-    0
-   ],
-   "mass": 0.08,
-   "materials": [
-    [
-     "pcabs",
-     100
-    ]
-   ],
-   "info": "Eine der feinen Zinken.",
-   "color": "#4A3B33",
-   "label": false
-  },
-  {
-   "id": "fein_11",
-   "component_id": "plastic_comb",
-   "material_id": "abs",
-   "name": "Feine Zinken",
-   "short": "Feine Zinken",
-   "shape": "box",
-   "x": 9,
-   "y": 118.4,
-   "w": 18,
-   "d": 1.2,
-   "z": 0.3,
-   "h": 3.2,
-   "r": 0.4,
-   "explode": [
-    14,
-    8,
-    0
-   ],
-   "mass": 0.08,
-   "materials": [
-    [
-     "pcabs",
-     100
-    ]
-   ],
-   "info": "Eine der feinen Zinken.",
-   "color": "#4A3B33",
-   "label": false
-  },
-  {
-   "id": "fein_12",
-   "component_id": "plastic_comb",
-   "material_id": "abs",
-   "name": "Feine Zinken",
-   "short": "Feine Zinken",
-   "shape": "box",
-   "x": 9,
-   "y": 120.8,
-   "w": 18,
-   "d": 1.2,
-   "z": 0.3,
-   "h": 3.2,
-   "r": 0.4,
-   "explode": [
-    14,
-    8,
-    0
-   ],
-   "mass": 0.08,
-   "materials": [
-    [
-     "pcabs",
-     100
-    ]
-   ],
-   "info": "Eine der feinen Zinken.",
-   "color": "#4A3B33",
-   "label": false
-  },
-  {
-   "id": "fein_13",
-   "component_id": "plastic_comb",
-   "material_id": "abs",
-   "name": "Feine Zinken",
-   "short": "Feine Zinken",
-   "shape": "box",
-   "x": 9,
-   "y": 123.2,
-   "w": 18,
-   "d": 1.2,
-   "z": 0.3,
-   "h": 3.2,
-   "r": 0.4,
-   "explode": [
-    14,
-    8,
-    0
-   ],
-   "mass": 0.08,
-   "materials": [
-    [
-     "pcabs",
-     100
-    ]
-   ],
-   "info": "Eine der feinen Zinken.",
-   "color": "#4A3B33",
-   "label": false
-  },
-  {
-   "id": "fein_14",
-   "component_id": "plastic_comb",
-   "material_id": "abs",
-   "name": "Feine Zinken",
-   "short": "Feine Zinken",
-   "shape": "box",
-   "x": 9,
-   "y": 125.6,
-   "w": 18,
-   "d": 1.2,
-   "z": 0.3,
-   "h": 3.2,
-   "r": 0.4,
-   "explode": [
-    14,
-    8,
-    0
-   ],
-   "mass": 0.08,
-   "materials": [
-    [
-     "pcabs",
-     100
-    ]
-   ],
-   "info": "Eine der feinen Zinken.",
-   "color": "#4A3B33",
-   "label": false
-  },
-  {
-   "id": "fein_15",
-   "component_id": "plastic_comb",
-   "material_id": "abs",
-   "name": "Feine Zinken",
-   "short": "Feine Zinken",
-   "shape": "box",
-   "x": 9,
-   "y": 128,
-   "w": 18,
-   "d": 1.2,
-   "z": 0.3,
-   "h": 3.2,
-   "r": 0.4,
-   "explode": [
-    14,
-    8,
-    0
-   ],
-   "mass": 0.08,
-   "materials": [
-    [
-     "pcabs",
-     100
-    ]
-   ],
-   "info": "Eine der feinen Zinken.",
-   "color": "#4A3B33",
-   "label": false
-  },
-  {
-   "id": "fein_16",
-   "component_id": "plastic_comb",
-   "material_id": "abs",
-   "name": "Feine Zinken",
-   "short": "Feine Zinken",
-   "shape": "box",
-   "x": 9,
-   "y": 130.4,
-   "w": 18,
-   "d": 1.2,
-   "z": 0.3,
-   "h": 3.2,
-   "r": 0.4,
-   "explode": [
-    14,
-    8,
-    0
-   ],
-   "mass": 0.08,
-   "materials": [
-    [
-     "pcabs",
-     100
-    ]
-   ],
-   "info": "Eine der feinen Zinken.",
-   "color": "#4A3B33",
-   "label": false
-  },
-  {
-   "id": "fein_17",
-   "component_id": "plastic_comb",
-   "material_id": "abs",
-   "name": "Feine Zinken",
-   "short": "Feine Zinken",
-   "shape": "box",
-   "x": 9,
-   "y": 132.8,
-   "w": 18,
-   "d": 1.2,
-   "z": 0.3,
-   "h": 3.2,
-   "r": 0.4,
-   "explode": [
-    14,
-    8,
-    0
-   ],
-   "mass": 0.08,
-   "materials": [
-    [
-     "pcabs",
-     100
-    ]
-   ],
-   "info": "Eine der feinen Zinken.",
-   "color": "#4A3B33",
-   "label": false
-  },
-  {
-   "id": "fein_18",
-   "component_id": "plastic_comb",
-   "material_id": "abs",
-   "name": "Feine Zinken",
-   "short": "Feine Zinken",
-   "shape": "box",
-   "x": 9,
-   "y": 135.2,
-   "w": 18,
-   "d": 1.2,
-   "z": 0.3,
-   "h": 3.2,
-   "r": 0.4,
-   "explode": [
-    14,
-    8,
-    0
-   ],
-   "mass": 0.08,
-   "materials": [
-    [
-     "pcabs",
-     100
-    ]
-   ],
-   "info": "Eine der feinen Zinken.",
-   "color": "#4A3B33",
-   "label": false
-  },
-  {
-   "id": "fein_19",
-   "component_id": "plastic_comb",
-   "material_id": "abs",
-   "name": "Feine Zinken",
-   "short": "Feine Zinken",
-   "shape": "box",
-   "x": 9,
-   "y": 137.6,
-   "w": 18,
-   "d": 1.2,
-   "z": 0.3,
-   "h": 3.2,
-   "r": 0.4,
-   "explode": [
-    14,
-    8,
-    0
-   ],
-   "mass": 0.08,
-   "materials": [
-    [
-     "pcabs",
-     100
-    ]
-   ],
-   "info": "Eine der feinen Zinken.",
-   "color": "#4A3B33",
-   "label": false
-  },
-  {
-   "id": "fein_20",
-   "component_id": "plastic_comb",
-   "material_id": "abs",
-   "name": "Feine Zinken",
-   "short": "Feine Zinken",
-   "shape": "box",
-   "x": 9,
-   "y": 140,
-   "w": 18,
-   "d": 1.2,
-   "z": 0.3,
-   "h": 3.2,
-   "r": 0.4,
-   "explode": [
-    14,
-    8,
-    0
-   ],
-   "mass": 0.08,
-   "materials": [
-    [
-     "pcabs",
-     100
-    ]
-   ],
-   "info": "Eine der feinen Zinken.",
-   "color": "#4A3B33",
-   "label": false
-  },
-  {
-   "id": "fein_21",
-   "component_id": "plastic_comb",
-   "material_id": "abs",
-   "name": "Feine Zinken",
-   "short": "Feine Zinken",
-   "shape": "box",
-   "x": 9,
-   "y": 142.4,
-   "w": 18,
-   "d": 1.2,
-   "z": 0.3,
-   "h": 3.2,
-   "r": 0.4,
-   "explode": [
-    14,
-    8,
-    0
-   ],
-   "mass": 0.08,
-   "materials": [
-    [
-     "pcabs",
-     100
-    ]
-   ],
-   "info": "Eine der feinen Zinken.",
-   "color": "#4A3B33",
-   "label": false
-  },
-  {
-   "id": "fein_22",
-   "component_id": "plastic_comb",
-   "material_id": "abs",
-   "name": "Feine Zinken",
-   "short": "Feine Zinken",
-   "shape": "box",
-   "x": 9,
-   "y": 144.8,
-   "w": 18,
-   "d": 1.2,
-   "z": 0.3,
-   "h": 3.2,
-   "r": 0.4,
-   "explode": [
-    14,
-    8,
-    0
-   ],
-   "mass": 0.08,
-   "materials": [
-    [
-     "pcabs",
-     100
-    ]
-   ],
-   "info": "Eine der feinen Zinken.",
-   "color": "#4A3B33",
-   "label": false
-  },
-  {
-   "id": "fein_23",
-   "component_id": "plastic_comb",
-   "material_id": "abs",
-   "name": "Feine Zinken",
-   "short": "Feine Zinken",
-   "shape": "box",
-   "x": 9,
-   "y": 147.2,
-   "w": 18,
-   "d": 1.2,
-   "z": 0.3,
-   "h": 3.2,
-   "r": 0.4,
-   "explode": [
-    14,
-    8,
-    0
-   ],
-   "mass": 0.08,
-   "materials": [
-    [
-     "pcabs",
-     100
-    ]
-   ],
-   "info": "Eine der feinen Zinken.",
-   "color": "#4A3B33",
-   "label": false
-  },
-  {
-   "id": "fein_24",
-   "component_id": "plastic_comb",
-   "material_id": "abs",
-   "name": "Feine Zinken",
-   "short": "Feine Zinken",
-   "shape": "box",
-   "x": 9,
-   "y": 149.6,
-   "w": 18,
-   "d": 1.2,
-   "z": 0.3,
-   "h": 3.2,
-   "r": 0.4,
-   "explode": [
-    14,
-    8,
-    0
-   ],
-   "mass": 0.08,
-   "materials": [
-    [
-     "pcabs",
-     100
-    ]
-   ],
-   "info": "Eine der feinen Zinken.",
-   "color": "#4A3B33",
-   "label": false
-  },
-  {
-   "id": "fein_25",
-   "component_id": "plastic_comb",
-   "material_id": "abs",
-   "name": "Feine Zinken",
-   "short": "Feine Zinken",
-   "shape": "box",
-   "x": 9,
-   "y": 152,
-   "w": 18,
-   "d": 1.2,
-   "z": 0.3,
-   "h": 3.2,
-   "r": 0.4,
-   "explode": [
-    14,
-    8,
-    0
-   ],
-   "mass": 0.08,
-   "materials": [
-    [
-     "pcabs",
-     100
-    ]
-   ],
-   "info": "Eine der feinen Zinken.",
-   "color": "#4A3B33",
-   "label": false
-  },
-  {
-   "id": "fein_26",
-   "component_id": "plastic_comb",
-   "material_id": "abs",
-   "name": "Feine Zinken",
-   "short": "Feine Zinken",
-   "shape": "box",
-   "x": 9,
-   "y": 154.4,
-   "w": 18,
-   "d": 1.2,
-   "z": 0.3,
-   "h": 3.2,
-   "r": 0.4,
-   "explode": [
-    14,
-    8,
-    0
-   ],
-   "mass": 0.08,
-   "materials": [
-    [
-     "pcabs",
-     100
-    ]
-   ],
-   "info": "Eine der feinen Zinken.",
-   "color": "#4A3B33",
-   "label": false
-  },
-  {
-   "id": "fein_27",
-   "component_id": "plastic_comb",
-   "material_id": "abs",
-   "name": "Feine Zinken",
-   "short": "Feine Zinken",
-   "shape": "box",
-   "x": 9,
-   "y": 156.8,
-   "w": 18,
-   "d": 1.2,
-   "z": 0.3,
-   "h": 3.2,
-   "r": 0.4,
-   "explode": [
-    14,
-    8,
-    0
-   ],
-   "mass": 0.08,
-   "materials": [
-    [
-     "pcabs",
-     100
-    ]
-   ],
-   "info": "Eine der feinen Zinken.",
-   "color": "#4A3B33",
-   "label": false
-  },
-  {
-   "id": "fein_28",
-   "component_id": "plastic_comb",
-   "material_id": "abs",
-   "name": "Feine Zinken",
-   "short": "Feine Zinken",
-   "shape": "box",
-   "x": 9,
-   "y": 159.2,
-   "w": 18,
-   "d": 1.2,
-   "z": 0.3,
-   "h": 3.2,
-   "r": 0.4,
-   "explode": [
-    14,
-    8,
-    0
-   ],
-   "mass": 0.08,
-   "materials": [
-    [
-     "pcabs",
-     100
-    ]
-   ],
-   "info": "Eine der feinen Zinken.",
-   "color": "#4A3B33",
-   "label": false
-  },
-  {
-   "id": "fein_29",
-   "component_id": "plastic_comb",
-   "material_id": "abs",
-   "name": "Feine Zinken",
-   "short": "Feine Zinken",
-   "shape": "box",
-   "x": 9,
-   "y": 161.6,
-   "w": 18,
-   "d": 1.2,
-   "z": 0.3,
-   "h": 3.2,
-   "r": 0.4,
-   "explode": [
-    14,
-    8,
-    0
-   ],
-   "mass": 0.08,
-   "materials": [
-    [
-     "pcabs",
-     100
-    ]
-   ],
-   "info": "Eine der feinen Zinken.",
-   "color": "#4A3B33",
-   "label": false
-  },
-  {
-   "id": "fein_30",
-   "component_id": "plastic_comb",
-   "material_id": "abs",
-   "name": "Feine Zinken",
-   "short": "Feine Zinken",
-   "shape": "box",
-   "x": 9,
-   "y": 164,
-   "w": 18,
-   "d": 1.2,
-   "z": 0.3,
-   "h": 3.2,
-   "r": 0.4,
-   "explode": [
-    14,
-    8,
-    0
-   ],
-   "mass": 0.08,
-   "materials": [
-    [
-     "pcabs",
-     100
-    ]
-   ],
-   "info": "Eine der feinen Zinken.",
-   "color": "#4A3B33",
-   "label": false
-  },
-  {
-   "id": "fein_31",
-   "component_id": "plastic_comb",
-   "material_id": "abs",
-   "name": "Feine Zinken",
-   "short": "Feine Zinken",
-   "shape": "box",
-   "x": 9,
-   "y": 166.39999999999998,
-   "w": 18,
-   "d": 1.2,
-   "z": 0.3,
-   "h": 3.2,
-   "r": 0.4,
-   "explode": [
-    14,
-    8,
-    0
-   ],
-   "mass": 0.08,
-   "materials": [
-    [
-     "pcabs",
-     100
-    ]
-   ],
-   "info": "Eine der feinen Zinken.",
-   "color": "#4A3B33",
-   "label": false
-  },
-  {
-   "id": "fein_32",
-   "component_id": "plastic_comb",
-   "material_id": "abs",
-   "name": "Feine Zinken",
-   "short": "Feine Zinken",
-   "shape": "box",
-   "x": 9,
-   "y": 168.8,
-   "w": 18,
-   "d": 1.2,
-   "z": 0.3,
-   "h": 3.2,
-   "r": 0.4,
-   "explode": [
-    14,
-    8,
-    0
-   ],
-   "mass": 0.08,
-   "materials": [
-    [
-     "pcabs",
-     100
-    ]
-   ],
-   "info": "Eine der feinen Zinken.",
-   "color": "#4A3B33",
-   "label": false
-  },
-  {
-   "id": "fein_33",
-   "component_id": "plastic_comb",
-   "material_id": "abs",
-   "name": "Feine Zinken",
-   "short": "Feine Zinken",
-   "shape": "box",
-   "x": 9,
-   "y": 171.2,
-   "w": 18,
-   "d": 1.2,
-   "z": 0.3,
-   "h": 3.2,
-   "r": 0.4,
-   "explode": [
-    14,
-    8,
-    0
-   ],
-   "mass": 0.08,
-   "materials": [
-    [
-     "pcabs",
-     100
-    ]
-   ],
-   "info": "Eine der feinen Zinken.",
-   "color": "#4A3B33",
-   "label": false
-  },
-  {
-   "id": "fein_34",
-   "component_id": "plastic_comb",
-   "material_id": "abs",
-   "name": "Feine Zinken",
-   "short": "Feine Zinken",
-   "shape": "box",
-   "x": 9,
-   "y": 173.6,
-   "w": 18,
-   "d": 1.2,
-   "z": 0.3,
-   "h": 3.2,
-   "r": 0.4,
-   "explode": [
-    14,
-    8,
-    0
-   ],
-   "mass": 0.08,
-   "materials": [
-    [
-     "pcabs",
-     100
-    ]
-   ],
-   "info": "Eine der feinen Zinken.",
-   "color": "#4A3B33",
-   "label": false
-  },
-  {
-   "id": "fein_35",
-   "component_id": "plastic_comb",
-   "material_id": "abs",
-   "name": "Feine Zinken",
-   "short": "Feine Zinken",
-   "shape": "box",
-   "x": 9,
-   "y": 176,
-   "w": 18,
-   "d": 1.2,
-   "z": 0.3,
-   "h": 3.2,
-   "r": 0.4,
-   "explode": [
-    14,
-    8,
-    0
-   ],
-   "mass": 0.08,
-   "materials": [
-    [
-     "pcabs",
-     100
-    ]
-   ],
-   "info": "Eine der feinen Zinken.",
-   "color": "#4A3B33",
-   "label": false
+   "marks": [
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 1.0,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 2.98,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 4.96,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 6.94,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 8.92,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 10.9,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 12.88,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 14.86,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 16.84,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 18.82,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 20.8,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 22.78,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 24.76,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 26.74,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 28.72,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 30.7,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 32.68,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 34.66,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 36.64,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 38.62,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 40.6,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 42.58,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 44.56,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 46.54,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 48.52,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 50.5,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 52.48,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 54.46,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 56.44,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 58.42,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 60.4,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 62.38,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 64.36,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 66.34,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 68.32,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 70.3,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 72.28,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 74.26,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 76.24,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 78.22,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 80.2,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 82.18,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 84.16,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 86.14,
+     "w": 18,
+     "d": 0.9,
+     "fill": "#2A211C"
+    }
+   ]
   }
  ]
 }

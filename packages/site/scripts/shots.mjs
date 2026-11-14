@@ -9,7 +9,7 @@ const PORT = 4175, BASIS = `http://localhost:${PORT}/`;
 const SEITEN = [
   ['start', ''], ['lebensweg-wahl', 'atlas/'], ['gegenstand', 'atlas/#kat=smartphone'], ['abbau', 'atlas/#kat=smartphone&s=abbau&r=Co'],
   ['herstellung', 'atlas/#kat=t_shirt&s=herstellung'], ['upcycling', 'atlas/#kat=pet_bottle&s=upcycling'], ['entsorgung', 'atlas/#kat=glass_bottle&s=entsorgung'], ['entsorgung-handy', 'atlas/#kat=smartphone&s=entsorgung'],
-  ['verwertung', 'atlas/#kat=pet_bottle&s=verwertung'], ['modelle', 'modelle/#kat=laptop'], ['kompass', 'kompass/'], ['kompass-n', 'kompass/#transparenz'], ['werkbank', 'werkbank/'],
+  ['verwertung', 'atlas/#kat=pet_bottle&s=verwertung'], ['modelle', 'modelle/#kat=laptop'], ['kompass', 'kompass/'], ['kompass-n', 'kompass/#transparenz'], ['werkbank', 'werkbank/'], ['quelle', 'quelle/?u=https%3A%2F%2Fpubs.usgs.gov%2Fperiodicals%2Fmcs2026%2Fmcs2026.pdf%23page%3D75&t=Mineral%20Commodity%20Summaries%202026&w=Kobalt%20%C2%B7%20Abbau%3A%20DR%20Kongo%2074%20%25&h=U.S.%20Geological%20Survey&j=2025&s=S.%2071'], ['qr', 'qr/'],
 ];
 const GROESSEN = { 390: { width: 390, height: 844 }, 768: { width: 768, height: 1024 }, 1024: { width: 1024, height: 768 },
   1440: { width: 1440, height: 900 }, 1920: { width: 1920, height: 1080 } };

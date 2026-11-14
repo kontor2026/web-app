@@ -67,27 +67,15 @@
    },
    "eucrm2023": {
     "titel": "Study on the Critical Raw Materials for the EU 2023 – Final Report",
-    "url": "https://op.europa.eu/o/opportal-service/download-handler?identifier=57318397-fdd4-11ed-a05c-01aa75ed71a1&format=pdf&language=en&productionSystem=cellar&part="
+    "url": "https://single-market-economy.ec.europa.eu/publications/study-critical-raw-materials-eu-2023-final-report_en"
    },
    "eu2024crma": {
     "titel": "Verordnung (EU) 2024/1252 zur Schaffung eines Rahmens zur Gewährleistung einer sicheren und nachhaltigen Versorgung mit kritischen Rohstoffen (Critical Raw Materials Act)",
-    "url": "https://op.europa.eu/o/opportal-service/download-handler?identifier=aa3c49f7-08e7-11ef-a251-01aa75ed71a1&format=pdf&language=en&productionSystem=cellar&part="
+    "url": "https://op.europa.eu/en/publication-detail/-/publication/aa3c49f7-08e7-11ef-a251-01aa75ed71a1"
    },
    "usdapsd2026": {
     "titel": "Production, Supply and Distribution Online (PSD), Datensatz Cotton (psd_cotton_csv.zip)",
     "url": "https://apps.fas.usda.gov/psdonline/downloads/psd_cotton_csv.zip"
-   },
-   "eia2026intl": {
-    "titel": "International Energy Statistics, Bulk-Download INTL.zip",
-    "url": "https://www.eia.gov/opendata/bulk/INTL.zip"
-   },
-   "faostat2025qcl": {
-    "titel": "FAOSTAT Crops and livestock products (QCL), Bulk-Download Production_Crops_Livestock_E_All_Data_(Normalized).zip",
-    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip"
-   },
-   "faostat2026fo": {
-    "titel": "FAOSTAT Forestry Production and Trade (FO), Bulk-Download Forestry_E_All_Data_(Normalized).zip",
-    "url": "https://bulks-faostat.fao.org/production/Forestry_E_All_Data_(Normalized).zip"
    }
   }
  },
@@ -190,15 +178,12 @@
    ],
    "info": "Abgerundete Lippe, rundum glasiert. Hier platzen oft kleine Stücke ab: dann lieber nicht mehr daraus trinken.",
    "color": "#3F7FA6",
-   "wand": 4,
-   "boden": 0,
    "marks": [
     {
      "shape": "cyl",
      "x": 4,
      "y": 4,
      "w": 70,
-     "zeichnung": true,
      "fill": "#F1EEE6"
     }
    ]
@@ -228,9 +213,7 @@
     ]
    ],
    "info": "Gebrannter Ton (Steingut), etwa 5 mm dick. Keramik gehört nicht ins Altglas, weil sie dort die neue Glasschmelze verdirbt. Ganze Becher spenden, Scherben in den Restmüll.",
-   "color": "#3F7FA6",
-   "wand": 5,
-   "boden": 0
+   "color": "#3F7FA6"
   },
   {
    "id": "standring",
@@ -269,25 +252,25 @@
    ]
   },
   {
-   "id": "henkel_oben",
+   "id": "henkel",
    "component_id": "ceramic_body",
    "material_id": "ceramic",
    "name": "Henkel",
    "short": "Henkel",
    "shape": "box",
-   "x": 76,
+   "x": 74,
    "y": 33,
-   "w": 19,
+   "w": 21,
    "d": 12,
-   "z": 68,
-   "h": 10,
-   "r": 4,
+   "z": 20,
+   "h": 60,
+   "r": 6,
    "explode": [
     35,
     0,
     0
    ],
-   "mass": 10,
+   "mass": 32,
    "materials": [
     [
      "keramik",
@@ -296,80 +279,17 @@
    ],
    "info": "Separat geformt und vor dem Brennen mit flüssigem Ton (Schlicker) angesetzt. Nach dem Brand ist er fest mit dem Becher verbunden.",
    "color": "#3F7FA6",
-   "sortBias": 40,
    "marks": [
     {
      "shape": "box",
-     "x": 2,
+     "x": 4,
      "y": 2,
-     "w": 15,
+     "w": 13,
      "d": 8,
-     "r": 3,
-     "fill": "#4A8DB5"
+     "r": 4,
+     "fill": "#346C8E"
     }
    ]
-  },
-  {
-   "id": "henkel_griff",
-   "component_id": "ceramic_body",
-   "material_id": "ceramic",
-   "name": "Henkel (Griffbogen)",
-   "short": "Henkel",
-   "shape": "box",
-   "x": 86,
-   "y": 33,
-   "w": 9.5,
-   "d": 12,
-   "z": 26,
-   "h": 42,
-   "r": 4,
-   "explode": [
-    35,
-    0,
-    0
-   ],
-   "mass": 14,
-   "materials": [
-    [
-     "keramik",
-     100
-    ]
-   ],
-   "info": "Der senkrechte Bogen, an dem man den Becher hält.",
-   "color": "#3F7FA6",
-   "label": false,
-   "sortBias": 40
-  },
-  {
-   "id": "henkel_unten",
-   "component_id": "ceramic_body",
-   "material_id": "ceramic",
-   "name": "Henkel (unterer Ansatz)",
-   "short": "Henkel",
-   "shape": "box",
-   "x": 76,
-   "y": 33,
-   "w": 10,
-   "d": 12,
-   "z": 26,
-   "h": 10,
-   "r": 4,
-   "explode": [
-    35,
-    0,
-    0
-   ],
-   "mass": 8,
-   "materials": [
-    [
-     "keramik",
-     100
-    ]
-   ],
-   "info": "Unterer Ansatzpunkt des Henkels. Hier bricht ein Henkel am häufigsten ab.",
-   "color": "#3F7FA6",
-   "label": false,
-   "sortBias": 40
   }
  ]
 }

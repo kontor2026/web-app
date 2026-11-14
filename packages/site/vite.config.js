@@ -10,7 +10,7 @@ export default defineConfig({
   build: {
     chunkSizeWarningLimit: 2500,
     rollupOptions: {
-      input: { start: seite('index.html'), atlas: seite('atlas/index.html'), modelle: seite('modelle/index.html'), kompass: seite('kompass/index.html'), werkbank: seite('werkbank/index.html'), quelle: seite('quelle/index.html') },
+      input: { start: seite('index.html'), atlas: seite('atlas/index.html'), modelle: seite('modelle/index.html'), kompass: seite('kompass/index.html'), werkbank: seite('werkbank/index.html'), quelle: seite('quelle/index.html'), qr: seite('qr/index.html') },
     },
   },
 });

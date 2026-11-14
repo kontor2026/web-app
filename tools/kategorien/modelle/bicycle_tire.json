@@ -15,7 +15,7 @@
    "explode": [
     0,
     0,
-    566.0
+    506.0
    ],
    "mass": 87,
    "materials": [
@@ -32,14 +32,7 @@
      "x": 40.0,
      "y": 40.0,
      "w": 566,
-     "fill": "#232527"
-    },
-    {
-     "shape": "cyl",
-     "x": 100.2,
-     "y": 100.2,
-     "w": 495.5,
-     "fill": "#DCD8CE"
+     "fill": "#45484B"
     },
     {
      "shape": "box",
@@ -76,7 +69,7 @@
    "explode": [
     0,
     0,
-    485.0
+    435.0
    ],
    "mass": 32.7,
    "materials": [
@@ -94,13 +87,6 @@
      "y": 8.0,
      "w": 558,
      "fill": "#5A6268"
-    },
-    {
-     "shape": "cyl",
-     "x": 12.8,
-     "y": 12.8,
-     "w": 552.4,
-     "fill": "#DCD8CE"
     }
    ]
   },
@@ -119,7 +105,7 @@
    "explode": [
     0,
     0,
-    402.0
+    362.0
    ],
    "mass": 307,
    "materials": [
@@ -130,21 +116,13 @@
    ],
    "info": "Dicke Gummimischung aus Natur- und Synthesekautschuk mit Ruß, außen mit Stollenprofil. Sie nutzt sich ab; ist das Profil weg, wird der Reifen getauscht.",
    "color": "#2B2D2F",
-   "sortBias": 4,
    "marks": [
     {
      "shape": "cyl",
      "x": 25.0,
      "y": 25.0,
      "w": 600,
-     "fill": "#1E2022"
-    },
-    {
-     "shape": "cyl",
-     "x": 73.2,
-     "y": 73.2,
-     "w": 543.6,
-     "fill": "#DCD8CE"
+     "fill": "#45484B"
     },
     {
      "shape": "box",
@@ -1027,7 +1005,7 @@
    "explode": [
     0,
     0,
-    285.0
+    255.0
    ],
    "mass": 40.9,
    "materials": [
@@ -1044,14 +1022,7 @@
      "x": 17.0,
      "y": 17.0,
      "w": 606,
-     "fill": "#A89A70"
-    },
-    {
-     "shape": "cyl",
-     "x": 58.0,
-     "y": 58.0,
-     "w": 558.1,
-     "fill": "#DCD8CE"
+     "fill": "#45484B"
     }
    ]
   },
@@ -1070,7 +1041,7 @@
    "explode": [
     0,
     0,
-    166.0
+    146.0
    ],
    "mass": 112.6,
    "materials": [
@@ -1091,14 +1062,7 @@
      "x": 40.0,
      "y": 40.0,
      "w": 562,
-     "fill": "#B3A57E"
-    },
-    {
-     "shape": "cyl",
-     "x": 93.0,
-     "y": 93.0,
-     "w": 500.0,
-     "fill": "#DCD8CE"
+     "fill": "#45484B"
     },
     {
      "shape": "box",
@@ -1135,7 +1099,7 @@
    "explode": [
     0,
     0,
-    81.0
+    71.0
    ],
    "mass": 32.7,
    "materials": [
@@ -1154,13 +1118,6 @@
      "y": 8.0,
      "w": 558,
      "fill": "#5A6268"
-    },
-    {
-     "shape": "cyl",
-     "x": 12.8,
-     "y": 12.8,
-     "w": 552.4,
-     "fill": "#DCD8CE"
     }
    ]
   },
@@ -1197,14 +1154,7 @@
      "x": 40.0,
      "y": 40.0,
      "w": 566,
-     "fill": "#232527"
-    },
-    {
-     "shape": "cyl",
-     "x": 46.0,
-     "y": 46.0,
-     "w": 559.0,
-     "fill": "#DCD8CE"
+     "fill": "#45484B"
     }
    ]
   }

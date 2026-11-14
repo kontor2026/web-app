@@ -26,12 +26,12 @@
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 1,76 kg",
+   "v": "≈ 1,75 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
    "k": "mit Recyclat",
-   "v": "≈ 1,76 kg",
+   "v": "≈ 1,75 kg",
    "hint": "spart 0,00 kg, wenn recycelte Materialien eingesetzt werden"
   }
  ],
@@ -39,12 +39,12 @@
   "metalle_mg": {},
   "herkunft": {},
   "materialien_g": {
-   "polyurethane": 267.4,
-   "rubber": 90.9,
+   "polyurethane": 267.6,
+   "rubber": 90.1,
    "polyester": 72.0
   },
-  "co2_kg": 1.757,
-  "co2_mit_recyclat_kg": 1.757,
+  "co2_kg": 1.755,
+  "co2_mit_recyclat_kg": 1.755,
   "co2_ersparnis_kg": 0.0,
   "co2_ohne_faktor": [],
   "rohstoffwert_eur": 0,
@@ -69,27 +69,15 @@
    },
    "eucrm2023": {
     "titel": "Study on the Critical Raw Materials for the EU 2023 – Final Report",
-    "url": "https://op.europa.eu/o/opportal-service/download-handler?identifier=57318397-fdd4-11ed-a05c-01aa75ed71a1&format=pdf&language=en&productionSystem=cellar&part="
+    "url": "https://single-market-economy.ec.europa.eu/publications/study-critical-raw-materials-eu-2023-final-report_en"
    },
    "eu2024crma": {
     "titel": "Verordnung (EU) 2024/1252 zur Schaffung eines Rahmens zur Gewährleistung einer sicheren und nachhaltigen Versorgung mit kritischen Rohstoffen (Critical Raw Materials Act)",
-    "url": "https://op.europa.eu/o/opportal-service/download-handler?identifier=aa3c49f7-08e7-11ef-a251-01aa75ed71a1&format=pdf&language=en&productionSystem=cellar&part="
+    "url": "https://op.europa.eu/en/publication-detail/-/publication/aa3c49f7-08e7-11ef-a251-01aa75ed71a1"
    },
    "usdapsd2026": {
     "titel": "Production, Supply and Distribution Online (PSD), Datensatz Cotton (psd_cotton_csv.zip)",
     "url": "https://apps.fas.usda.gov/psdonline/downloads/psd_cotton_csv.zip"
-   },
-   "eia2026intl": {
-    "titel": "International Energy Statistics, Bulk-Download INTL.zip",
-    "url": "https://www.eia.gov/opendata/bulk/INTL.zip"
-   },
-   "faostat2025qcl": {
-    "titel": "FAOSTAT Crops and livestock products (QCL), Bulk-Download Production_Crops_Livestock_E_All_Data_(Normalized).zip",
-    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip"
-   },
-   "faostat2026fo": {
-    "titel": "FAOSTAT Forestry Production and Trade (FO), Bulk-Download Forestry_E_All_Data_(Normalized).zip",
-    "url": "https://bulks-faostat.fao.org/production/Forestry_E_All_Data_(Normalized).zip"
    }
   }
  },
@@ -132,17 +120,17 @@
    "name": "Außenhülle obere Hälfte (PU-Waben)",
    "short": "Hülle oben",
    "shape": "cyl",
-   "x": 77.2,
-   "y": 77.2,
-   "w": 65.6,
-   "z": 215,
-   "h": 5,
+   "x": 68.8,
+   "y": 68.8,
+   "w": 82.4,
+   "z": 212,
+   "h": 8,
    "explode": [
     0,
     0,
     560.0
    ],
-   "mass": 0.7,
+   "mass": 1.9,
    "materials": [
     [
      "kunstleder",
@@ -166,17 +154,53 @@
    "marks": [
     {
      "shape": "cyl",
-     "x": 9.4,
-     "y": 9.4,
+     "x": 21,
+     "y": 21,
      "w": 40,
      "fill": "#2A2C2E"
     },
     {
      "shape": "cyl",
-     "x": 40,
-     "y": 18,
-     "w": 5,
+     "x": 37,
+     "y": 37,
+     "w": 8,
      "fill": "#55585A"
+    },
+    {
+     "shape": "box",
+     "x": 39,
+     "y": 2,
+     "w": 2,
+     "d": 19,
+     "r": 1,
+     "fill": "#C9C7C0"
+    },
+    {
+     "shape": "box",
+     "x": 39,
+     "y": 61,
+     "w": 2,
+     "d": 19,
+     "r": 1,
+     "fill": "#C9C7C0"
+    },
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 39,
+     "w": 19,
+     "d": 2,
+     "r": 1,
+     "fill": "#C9C7C0"
+    },
+    {
+     "shape": "box",
+     "x": 61,
+     "y": 39,
+     "w": 19,
+     "d": 2,
+     "r": 1,
+     "fill": "#C9C7C0"
     }
    ]
   },
@@ -187,17 +211,17 @@
    "name": "Außenhülle obere Hälfte (PU-Waben)",
    "short": "Hülle oben",
    "shape": "cyl",
-   "x": 56.3,
-   "y": 56.3,
-   "w": 107.4,
-   "z": 206,
-   "h": 9,
+   "x": 46.75,
+   "y": 46.75,
+   "w": 126.5,
+   "z": 200,
+   "h": 12,
    "explode": [
     0,
     0,
     560.0
    ],
-   "mass": 3.5,
+   "mass": 6.4,
    "materials": [
     [
      "kunstleder",
@@ -218,44 +242,7 @@
    ],
    "info": "Waben aus PU-Kunstleder mit Schaumrücken, an den Kanten vernäht. Zum Zerlegen die Nähte aufschneiden, dann lassen sich die Waben einzeln lösen.",
    "color": "#F2F1EC",
-   "label": false,
-   "marks": [
-    {
-     "shape": "cyl",
-     "x": 82.4,
-     "y": 72.9,
-     "w": 12.5,
-     "fill": "#2A2C2E"
-    },
-    {
-     "shape": "cyl",
-     "x": 34.1,
-     "y": 88.6,
-     "w": 12.5,
-     "fill": "#2A2C2E"
-    },
-    {
-     "shape": "cyl",
-     "x": 4.2,
-     "y": 47.4,
-     "w": 12.5,
-     "fill": "#2A2C2E"
-    },
-    {
-     "shape": "cyl",
-     "x": 34.1,
-     "y": 6.3,
-     "w": 12.5,
-     "fill": "#2A2C2E"
-    },
-    {
-     "shape": "cyl",
-     "x": 82.4,
-     "y": 22.0,
-     "w": 12.5,
-     "fill": "#2A2C2E"
-    }
-   ]
+   "label": false
   },
   {
    "id": "huelle_oben_2",
@@ -264,17 +251,17 @@
    "name": "Außenhülle obere Hälfte (PU-Waben)",
    "short": "Hülle oben",
    "shape": "cyl",
-   "x": 36.7,
-   "y": 36.7,
-   "w": 146.6,
-   "z": 192,
-   "h": 14,
+   "x": 25.15,
+   "y": 25.15,
+   "w": 169.7,
+   "z": 180,
+   "h": 20,
    "explode": [
     0,
     0,
     560.0
    ],
-   "mass": 10.2,
+   "mass": 19.1,
    "materials": [
     [
      "kunstleder",
@@ -295,51 +282,7 @@
    ],
    "info": "Waben aus PU-Kunstleder mit Schaumrücken, an den Kanten vernäht. Zum Zerlegen die Nähte aufschneiden, dann lassen sich die Waben einzeln lösen.",
    "color": "#F2F1EC",
-   "label": false,
-   "marks": [
-    {
-     "shape": "cyl",
-     "x": 130.9,
-     "y": 67.4,
-     "w": 11.8,
-     "fill": "#2A2C2E"
-    },
-    {
-     "shape": "cyl",
-     "x": 99.2,
-     "y": 122.4,
-     "w": 11.8,
-     "fill": "#2A2C2E"
-    },
-    {
-     "shape": "cyl",
-     "x": 35.7,
-     "y": 122.4,
-     "w": 11.8,
-     "fill": "#2A2C2E"
-    },
-    {
-     "shape": "cyl",
-     "x": 3.9,
-     "y": 67.4,
-     "w": 11.8,
-     "fill": "#2A2C2E"
-    },
-    {
-     "shape": "cyl",
-     "x": 35.7,
-     "y": 12.4,
-     "w": 11.8,
-     "fill": "#2A2C2E"
-    },
-    {
-     "shape": "cyl",
-     "x": 99.2,
-     "y": 12.4,
-     "w": 11.8,
-     "fill": "#2A2C2E"
-    }
-   ]
+   "label": false
   },
   {
    "id": "huelle_oben_3",
@@ -348,17 +291,17 @@
    "name": "Außenhülle obere Hälfte (PU-Waben)",
    "short": "Hülle oben",
    "shape": "cyl",
-   "x": 19.15,
-   "y": 19.15,
-   "w": 181.7,
-   "z": 172,
-   "h": 20,
+   "x": 7.55,
+   "y": 7.55,
+   "w": 204.9,
+   "z": 150,
+   "h": 30,
    "explode": [
     0,
     0,
     560.0
    ],
-   "mass": 22.3,
+   "mass": 42,
    "materials": [
     [
      "kunstleder",
@@ -379,131 +322,10 @@
    ],
    "info": "Waben aus PU-Kunstleder mit Schaumrücken, an den Kanten vernäht. Zum Zerlegen die Nähte aufschneiden, dann lassen sich die Waben einzeln lösen.",
    "color": "#F2F1EC",
-   "label": false,
-   "marks": [
-    {
-     "shape": "cyl",
-     "x": 152.0,
-     "y": 133.8,
-     "w": 10.5,
-     "fill": "#2A2C2E"
-    },
-    {
-     "shape": "cyl",
-     "x": 60.2,
-     "y": 163.6,
-     "w": 10.5,
-     "fill": "#2A2C2E"
-    },
-    {
-     "shape": "cyl",
-     "x": 3.5,
-     "y": 85.6,
-     "w": 10.5,
-     "fill": "#2A2C2E"
-    },
-    {
-     "shape": "cyl",
-     "x": 60.2,
-     "y": 7.5,
-     "w": 10.5,
-     "fill": "#2A2C2E"
-    },
-    {
-     "shape": "cyl",
-     "x": 152.0,
-     "y": 37.3,
-     "w": 10.5,
-     "fill": "#2A2C2E"
-    }
-   ]
+   "label": false
   },
   {
    "id": "huelle_oben_4",
-   "component_id": "pu_cover",
-   "material_id": "polyurethane",
-   "name": "Außenhülle obere Hälfte (PU-Waben)",
-   "short": "Hülle oben",
-   "shape": "cyl",
-   "x": 5.7,
-   "y": 5.7,
-   "w": 208.6,
-   "z": 145,
-   "h": 27,
-   "explode": [
-    0,
-    0,
-    560.0
-   ],
-   "mass": 39.7,
-   "materials": [
-    [
-     "kunstleder",
-     75
-    ],
-    [
-     "schaum",
-     18
-    ],
-    [
-     "druck",
-     2
-    ],
-    [
-     "klebstoff",
-     5
-    ]
-   ],
-   "info": "Waben aus PU-Kunstleder mit Schaumrücken, an den Kanten vernäht. Zum Zerlegen die Nähte aufschneiden, dann lassen sich die Waben einzeln lösen.",
-   "color": "#F2F1EC",
-   "label": false,
-   "marks": [
-    {
-     "shape": "cyl",
-     "x": 197.8,
-     "y": 100.3,
-     "w": 8.1,
-     "fill": "#2A2C2E"
-    },
-    {
-     "shape": "cyl",
-     "x": 149.1,
-     "y": 184.8,
-     "w": 8.1,
-     "fill": "#2A2C2E"
-    },
-    {
-     "shape": "cyl",
-     "x": 51.5,
-     "y": 184.8,
-     "w": 8.1,
-     "fill": "#2A2C2E"
-    },
-    {
-     "shape": "cyl",
-     "x": 2.7,
-     "y": 100.3,
-     "w": 8.1,
-     "fill": "#2A2C2E"
-    },
-    {
-     "shape": "cyl",
-     "x": 51.5,
-     "y": 15.8,
-     "w": 8.1,
-     "fill": "#2A2C2E"
-    },
-    {
-     "shape": "cyl",
-     "x": 149.1,
-     "y": 15.8,
-     "w": 8.1,
-     "fill": "#2A2C2E"
-    }
-   ]
-  },
-  {
-   "id": "huelle_oben_5",
    "component_id": "pu_cover",
    "material_id": "polyurethane",
    "name": "Außenhülle obere Hälfte (PU-Waben)",
@@ -513,13 +335,13 @@
    "y": 0,
    "w": 220,
    "z": 110,
-   "h": 35,
+   "h": 40,
    "explode": [
     0,
     0,
     560.0
    ],
-   "mass": 57.3,
+   "mass": 64.4,
    "materials": [
     [
      "kunstleder",
@@ -540,44 +362,7 @@
    ],
    "info": "Waben aus PU-Kunstleder mit Schaumrücken, an den Kanten vernäht. Zum Zerlegen die Nähte aufschneiden, dann lassen sich die Waben einzeln lösen.",
    "color": "#F2F1EC",
-   "label": false,
-   "marks": [
-    {
-     "shape": "cyl",
-     "x": 195.0,
-     "y": 171.3,
-     "w": 3.4,
-     "fill": "#2A2C2E"
-    },
-    {
-     "shape": "cyl",
-     "x": 75.2,
-     "y": 210.2,
-     "w": 3.4,
-     "fill": "#2A2C2E"
-    },
-    {
-     "shape": "cyl",
-     "x": 1.1,
-     "y": 108.3,
-     "w": 3.4,
-     "fill": "#2A2C2E"
-    },
-    {
-     "shape": "cyl",
-     "x": 75.2,
-     "y": 6.4,
-     "w": 3.4,
-     "fill": "#2A2C2E"
-    },
-    {
-     "shape": "cyl",
-     "x": 195.0,
-     "y": 45.3,
-     "w": 3.4,
-     "fill": "#2A2C2E"
-    }
-   ]
+   "label": false
   },
   {
    "id": "futter_oben_0",
@@ -586,17 +371,17 @@
    "name": "Futterlagen obere Hälfte",
    "short": "Futter oben",
    "shape": "cyl",
-   "x": 89.4,
-   "y": 89.4,
-   "w": 41.2,
-   "z": 215,
-   "h": 2,
+   "x": 49.15,
+   "y": 49.15,
+   "w": 121.7,
+   "z": 198,
+   "h": 19,
    "explode": [
     0,
     0,
     428.0
    ],
-   "mass": 0.1,
+   "mass": 2.7,
    "materials": [
     [
      "polyester",
@@ -612,8 +397,7 @@
     ]
    ],
    "info": "Drei bis vier Lagen Polyester- und Baumwollgewebe, auf die Rückseite der Waben geklebt. Sie halten den Ball rund.",
-   "color": "#E3D6B8",
-   "sortBias": -1
+   "color": "#E3D6B8"
   },
   {
    "id": "futter_oben_1",
@@ -622,17 +406,17 @@
    "name": "Futterlagen obere Hälfte",
    "short": "Futter oben",
    "shape": "cyl",
-   "x": 62.75,
-   "y": 62.75,
-   "w": 94.5,
-   "z": 206,
-   "h": 9,
+   "x": 27.4,
+   "y": 27.4,
+   "w": 165.2,
+   "z": 178,
+   "h": 20,
    "explode": [
     0,
     0,
     428.0
    ],
-   "mass": 0.8,
+   "mass": 5.2,
    "materials": [
     [
      "polyester",
@@ -649,8 +433,7 @@
    ],
    "info": "Drei bis vier Lagen Polyester- und Baumwollgewebe, auf die Rückseite der Waben geklebt. Sie halten den Ball rund.",
    "color": "#E3D6B8",
-   "label": false,
-   "sortBias": -1
+   "label": false
   },
   {
    "id": "futter_oben_2",
@@ -659,17 +442,17 @@
    "name": "Futterlagen obere Hälfte",
    "short": "Futter oben",
    "shape": "cyl",
-   "x": 41.25,
-   "y": 41.25,
-   "w": 137.5,
-   "z": 192,
-   "h": 14,
+   "x": 10,
+   "y": 10,
+   "w": 200,
+   "z": 148,
+   "h": 30,
    "explode": [
     0,
     0,
     428.0
    ],
-   "mass": 2.6,
+   "mass": 11.4,
    "materials": [
     [
      "polyester",
@@ -686,85 +469,10 @@
    ],
    "info": "Drei bis vier Lagen Polyester- und Baumwollgewebe, auf die Rückseite der Waben geklebt. Sie halten den Ball rund.",
    "color": "#E3D6B8",
-   "label": false,
-   "sortBias": -1
+   "label": false
   },
   {
    "id": "futter_oben_3",
-   "component_id": "pu_cover",
-   "material_id": "polyester",
-   "name": "Futterlagen obere Hälfte",
-   "short": "Futter oben",
-   "shape": "cyl",
-   "x": 22.8,
-   "y": 22.8,
-   "w": 174.4,
-   "z": 172,
-   "h": 20,
-   "explode": [
-    0,
-    0,
-    428.0
-   ],
-   "mass": 6,
-   "materials": [
-    [
-     "polyester",
-     60
-    ],
-    [
-     "baumwolle",
-     30
-    ],
-    [
-     "klebstoff",
-     10
-    ]
-   ],
-   "info": "Drei bis vier Lagen Polyester- und Baumwollgewebe, auf die Rückseite der Waben geklebt. Sie halten den Ball rund.",
-   "color": "#E3D6B8",
-   "label": false,
-   "sortBias": -1
-  },
-  {
-   "id": "futter_oben_4",
-   "component_id": "pu_cover",
-   "material_id": "polyester",
-   "name": "Futterlagen obere Hälfte",
-   "short": "Futter oben",
-   "shape": "cyl",
-   "x": 8.9,
-   "y": 8.9,
-   "w": 202.2,
-   "z": 145,
-   "h": 27,
-   "explode": [
-    0,
-    0,
-    428.0
-   ],
-   "mass": 10.8,
-   "materials": [
-    [
-     "polyester",
-     60
-    ],
-    [
-     "baumwolle",
-     30
-    ],
-    [
-     "klebstoff",
-     10
-    ]
-   ],
-   "info": "Drei bis vier Lagen Polyester- und Baumwollgewebe, auf die Rückseite der Waben geklebt. Sie halten den Ball rund.",
-   "color": "#E3D6B8",
-   "label": false,
-   "sortBias": -1
-  },
-  {
-   "id": "futter_oben_5",
    "component_id": "pu_cover",
    "material_id": "polyester",
    "name": "Futterlagen obere Hälfte",
@@ -774,13 +482,13 @@
    "y": 3,
    "w": 214,
    "z": 110,
-   "h": 35,
+   "h": 38,
    "explode": [
     0,
     0,
     428.0
    ],
-   "mass": 15.7,
+   "mass": 16.7,
    "materials": [
     [
      "polyester",
@@ -797,8 +505,7 @@
    ],
    "info": "Drei bis vier Lagen Polyester- und Baumwollgewebe, auf die Rückseite der Waben geklebt. Sie halten den Ball rund.",
    "color": "#E3D6B8",
-   "label": false,
-   "sortBias": -1
+   "label": false
   },
   {
    "id": "ventil",
@@ -813,9 +520,9 @@
    "z": 204,
    "h": 15,
    "explode": [
-    170,
     0,
-    350.0
+    0,
+    294.0
    ],
    "mass": 3.1,
    "materials": [
@@ -826,7 +533,6 @@
    ],
    "info": "Gummiventil, mit der Blase verschweißt. Zum Aufpumpen die Nadel anfeuchten und gerade einstecken.",
    "color": "#3C3F42",
-   "sortBias": -3,
    "marks": [
     {
      "shape": "cyl",
@@ -844,17 +550,17 @@
    "name": "Latexblase",
    "short": "Blase",
    "shape": "cyl",
-   "x": 72.7,
-   "y": 72.7,
-   "w": 74.6,
-   "z": 206,
-   "h": 7,
+   "x": 67.9,
+   "y": 67.9,
+   "w": 84.2,
+   "z": 204,
+   "h": 9,
    "explode": [
     0,
     0,
     260.0
    ],
-   "mass": 0.5,
+   "mass": 0.8,
    "materials": [
     [
      "gummi",
@@ -862,8 +568,7 @@
     ]
    ],
    "info": "Dünne Hülle aus Naturlatex, die die Luft hält. Sie kommt nach dem Aufschneiden einer Naht heraus.",
-   "color": "#C99A5B",
-   "sortBias": -2
+   "color": "#C99A5B"
   },
   {
    "id": "blase_1",
@@ -872,17 +577,17 @@
    "name": "Latexblase",
    "short": "Blase",
    "shape": "cyl",
-   "x": 47.65,
-   "y": 47.65,
-   "w": 124.7,
-   "z": 192,
-   "h": 14,
+   "x": 38.35,
+   "y": 38.35,
+   "w": 143.3,
+   "z": 184,
+   "h": 20,
    "explode": [
     0,
     0,
     260.0
    ],
-   "mass": 2.9,
+   "mass": 5.2,
    "materials": [
     [
      "gummi",
@@ -891,8 +596,7 @@
    ],
    "info": "Dünne Hülle aus Naturlatex, die die Luft hält. Sie kommt nach dem Aufschneiden einer Naht heraus.",
    "color": "#C99A5B",
-   "label": false,
-   "sortBias": -2
+   "label": false
   },
   {
    "id": "blase_2",
@@ -901,17 +605,17 @@
    "name": "Latexblase",
    "short": "Blase",
    "shape": "cyl",
-   "x": 27.75,
-   "y": 27.75,
-   "w": 164.5,
-   "z": 172,
-   "h": 20,
+   "x": 15.1,
+   "y": 15.1,
+   "w": 189.8,
+   "z": 150,
+   "h": 34,
    "explode": [
     0,
     0,
     260.0
    ],
-   "mass": 7.2,
+   "mass": 15.7,
    "materials": [
     [
      "gummi",
@@ -920,8 +624,7 @@
    ],
    "info": "Dünne Hülle aus Naturlatex, die die Luft hält. Sie kommt nach dem Aufschneiden einer Naht heraus.",
    "color": "#C99A5B",
-   "label": false,
-   "sortBias": -2
+   "label": false
   },
   {
    "id": "blase_3",
@@ -930,17 +633,17 @@
    "name": "Latexblase",
    "short": "Blase",
    "shape": "cyl",
-   "x": 13.15,
-   "y": 13.15,
-   "w": 193.7,
-   "z": 145,
-   "h": 27,
+   "x": 7,
+   "y": 7,
+   "w": 206,
+   "z": 110,
+   "h": 40,
    "explode": [
     0,
     0,
     260.0
    ],
-   "mass": 13.5,
+   "mass": 21.8,
    "materials": [
     [
      "gummi",
@@ -949,8 +652,7 @@
    ],
    "info": "Dünne Hülle aus Naturlatex, die die Luft hält. Sie kommt nach dem Aufschneiden einer Naht heraus.",
    "color": "#C99A5B",
-   "label": false,
-   "sortBias": -2
+   "label": false
   },
   {
    "id": "blase_4",
@@ -962,14 +664,14 @@
    "x": 7,
    "y": 7,
    "w": 206,
-   "z": 110,
-   "h": 35,
+   "z": 70,
+   "h": 40,
    "explode": [
     0,
     0,
     260.0
    ],
-   "mass": 19.8,
+   "mass": 21.8,
    "materials": [
     [
      "gummi",
@@ -978,8 +680,7 @@
    ],
    "info": "Dünne Hülle aus Naturlatex, die die Luft hält. Sie kommt nach dem Aufschneiden einer Naht heraus.",
    "color": "#C99A5B",
-   "label": false,
-   "sortBias": -2
+   "label": false
   },
   {
    "id": "blase_5",
@@ -988,17 +689,17 @@
    "name": "Latexblase",
    "short": "Blase",
    "shape": "cyl",
-   "x": 7,
-   "y": 7,
-   "w": 206,
-   "z": 75,
-   "h": 35,
+   "x": 15.1,
+   "y": 15.1,
+   "w": 189.8,
+   "z": 36,
+   "h": 34,
    "explode": [
     0,
     0,
     260.0
    ],
-   "mass": 19.8,
+   "mass": 15.7,
    "materials": [
     [
      "gummi",
@@ -1007,8 +708,7 @@
    ],
    "info": "Dünne Hülle aus Naturlatex, die die Luft hält. Sie kommt nach dem Aufschneiden einer Naht heraus.",
    "color": "#C99A5B",
-   "label": false,
-   "sortBias": -2
+   "label": false
   },
   {
    "id": "blase_6",
@@ -1017,17 +717,17 @@
    "name": "Latexblase",
    "short": "Blase",
    "shape": "cyl",
-   "x": 13.15,
-   "y": 13.15,
-   "w": 193.7,
-   "z": 48,
-   "h": 27,
+   "x": 38.35,
+   "y": 38.35,
+   "w": 143.3,
+   "z": 16,
+   "h": 20,
    "explode": [
     0,
     0,
     260.0
    ],
-   "mass": 13.5,
+   "mass": 5.2,
    "materials": [
     [
      "gummi",
@@ -1036,8 +736,7 @@
    ],
    "info": "Dünne Hülle aus Naturlatex, die die Luft hält. Sie kommt nach dem Aufschneiden einer Naht heraus.",
    "color": "#C99A5B",
-   "label": false,
-   "sortBias": -2
+   "label": false
   },
   {
    "id": "blase_7",
@@ -1046,75 +745,17 @@
    "name": "Latexblase",
    "short": "Blase",
    "shape": "cyl",
-   "x": 27.75,
-   "y": 27.75,
-   "w": 164.5,
-   "z": 28,
-   "h": 20,
-   "explode": [
-    0,
-    0,
-    260.0
-   ],
-   "mass": 7.2,
-   "materials": [
-    [
-     "gummi",
-     100
-    ]
-   ],
-   "info": "Dünne Hülle aus Naturlatex, die die Luft hält. Sie kommt nach dem Aufschneiden einer Naht heraus.",
-   "color": "#C99A5B",
-   "label": false,
-   "sortBias": -2
-  },
-  {
-   "id": "blase_8",
-   "component_id": "latex_bladder",
-   "material_id": "rubber",
-   "name": "Latexblase",
-   "short": "Blase",
-   "shape": "cyl",
-   "x": 47.65,
-   "y": 47.65,
-   "w": 124.7,
-   "z": 14,
-   "h": 14,
-   "explode": [
-    0,
-    0,
-    260.0
-   ],
-   "mass": 2.9,
-   "materials": [
-    [
-     "gummi",
-     100
-    ]
-   ],
-   "info": "Dünne Hülle aus Naturlatex, die die Luft hält. Sie kommt nach dem Aufschneiden einer Naht heraus.",
-   "color": "#C99A5B",
-   "label": false,
-   "sortBias": -2
-  },
-  {
-   "id": "blase_9",
-   "component_id": "latex_bladder",
-   "material_id": "rubber",
-   "name": "Latexblase",
-   "short": "Blase",
-   "shape": "cyl",
-   "x": 72.7,
-   "y": 72.7,
-   "w": 74.6,
+   "x": 67.9,
+   "y": 67.9,
+   "w": 84.2,
    "z": 7,
-   "h": 7,
+   "h": 9,
    "explode": [
     0,
     0,
     260.0
    ],
-   "mass": 0.5,
+   "mass": 0.8,
    "materials": [
     [
      "gummi",
@@ -1123,8 +764,7 @@
    ],
    "info": "Dünne Hülle aus Naturlatex, die die Luft hält. Sie kommt nach dem Aufschneiden einer Naht heraus.",
    "color": "#C99A5B",
-   "label": false,
-   "sortBias": -2
+   "label": false
   },
   {
    "id": "futter_unten_0",
@@ -1136,14 +776,14 @@
    "x": 3,
    "y": 3,
    "w": 214,
-   "z": 75,
-   "h": 35,
+   "z": 72,
+   "h": 38,
    "explode": [
     0,
     0,
     132.0
    ],
-   "mass": 15.7,
+   "mass": 16.7,
    "materials": [
     [
      "polyester",
@@ -1160,7 +800,6 @@
    ],
    "info": "Gewebe und Kleber lassen sich nicht vom Kunstleder trennen: Ein alter Ball gehört in den Restmüll.",
    "color": "#E3D6B8",
-   "sortBias": -1,
    "marks": [
     {
      "shape": "cyl",
@@ -1178,17 +817,17 @@
    "name": "Futterlagen untere Hälfte",
    "short": "Futter unten",
    "shape": "cyl",
-   "x": 8.9,
-   "y": 8.9,
-   "w": 202.2,
-   "z": 48,
-   "h": 27,
+   "x": 10,
+   "y": 10,
+   "w": 200,
+   "z": 42,
+   "h": 30,
    "explode": [
     0,
     0,
     132.0
    ],
-   "mass": 10.8,
+   "mass": 11.4,
    "materials": [
     [
      "polyester",
@@ -1205,8 +844,7 @@
    ],
    "info": "Gewebe und Kleber lassen sich nicht vom Kunstleder trennen: Ein alter Ball gehört in den Restmüll.",
    "color": "#E3D6B8",
-   "label": false,
-   "sortBias": -1
+   "label": false
   },
   {
    "id": "futter_unten_2",
@@ -1215,17 +853,17 @@
    "name": "Futterlagen untere Hälfte",
    "short": "Futter unten",
    "shape": "cyl",
-   "x": 22.8,
-   "y": 22.8,
-   "w": 174.4,
-   "z": 28,
+   "x": 27.4,
+   "y": 27.4,
+   "w": 165.2,
+   "z": 22,
    "h": 20,
    "explode": [
     0,
     0,
     132.0
    ],
-   "mass": 6,
+   "mass": 5.2,
    "materials": [
     [
      "polyester",
@@ -1242,8 +880,7 @@
    ],
    "info": "Gewebe und Kleber lassen sich nicht vom Kunstleder trennen: Ein alter Ball gehört in den Restmüll.",
    "color": "#E3D6B8",
-   "label": false,
-   "sortBias": -1
+   "label": false
   },
   {
    "id": "futter_unten_3",
@@ -1252,91 +889,17 @@
    "name": "Futterlagen untere Hälfte",
    "short": "Futter unten",
    "shape": "cyl",
-   "x": 41.25,
-   "y": 41.25,
-   "w": 137.5,
-   "z": 14,
-   "h": 14,
-   "explode": [
-    0,
-    0,
-    132.0
-   ],
-   "mass": 2.6,
-   "materials": [
-    [
-     "polyester",
-     60
-    ],
-    [
-     "baumwolle",
-     30
-    ],
-    [
-     "klebstoff",
-     10
-    ]
-   ],
-   "info": "Gewebe und Kleber lassen sich nicht vom Kunstleder trennen: Ein alter Ball gehört in den Restmüll.",
-   "color": "#E3D6B8",
-   "label": false,
-   "sortBias": -1
-  },
-  {
-   "id": "futter_unten_4",
-   "component_id": "pu_cover",
-   "material_id": "polyester",
-   "name": "Futterlagen untere Hälfte",
-   "short": "Futter unten",
-   "shape": "cyl",
-   "x": 62.75,
-   "y": 62.75,
-   "w": 94.5,
-   "z": 5,
-   "h": 9,
-   "explode": [
-    0,
-    0,
-    132.0
-   ],
-   "mass": 0.8,
-   "materials": [
-    [
-     "polyester",
-     60
-    ],
-    [
-     "baumwolle",
-     30
-    ],
-    [
-     "klebstoff",
-     10
-    ]
-   ],
-   "info": "Gewebe und Kleber lassen sich nicht vom Kunstleder trennen: Ein alter Ball gehört in den Restmüll.",
-   "color": "#E3D6B8",
-   "label": false,
-   "sortBias": -1
-  },
-  {
-   "id": "futter_unten_5",
-   "component_id": "pu_cover",
-   "material_id": "polyester",
-   "name": "Futterlagen untere Hälfte",
-   "short": "Futter unten",
-   "shape": "cyl",
-   "x": 89.4,
-   "y": 89.4,
-   "w": 41.2,
+   "x": 49.15,
+   "y": 49.15,
+   "w": 121.7,
    "z": 3,
-   "h": 2,
+   "h": 19,
    "explode": [
     0,
     0,
     132.0
    ],
-   "mass": 0.1,
+   "mass": 2.7,
    "materials": [
     [
      "polyester",
@@ -1353,8 +916,7 @@
    ],
    "info": "Gewebe und Kleber lassen sich nicht vom Kunstleder trennen: Ein alter Ball gehört in den Restmüll.",
    "color": "#E3D6B8",
-   "label": false,
-   "sortBias": -1
+   "label": false
   },
   {
    "id": "huelle_unten_0",
@@ -1366,14 +928,14 @@
    "x": 0,
    "y": 0,
    "w": 220,
-   "z": 75,
-   "h": 35,
+   "z": 70,
+   "h": 40,
    "explode": [
     0,
     0,
     0.0
    ],
-   "mass": 57.3,
+   "mass": 64.4,
    "materials": [
     [
      "kunstleder",
@@ -1411,17 +973,17 @@
    "name": "Außenhülle untere Hälfte",
    "short": "Hülle unten",
    "shape": "cyl",
-   "x": 5.7,
-   "y": 5.7,
-   "w": 208.6,
-   "z": 48,
-   "h": 27,
+   "x": 7.55,
+   "y": 7.55,
+   "w": 204.9,
+   "z": 40,
+   "h": 30,
    "explode": [
     0,
     0,
     0.0
    ],
-   "mass": 39.7,
+   "mass": 42,
    "materials": [
     [
      "kunstleder",
@@ -1451,17 +1013,17 @@
    "name": "Außenhülle untere Hälfte",
    "short": "Hülle unten",
    "shape": "cyl",
-   "x": 19.15,
-   "y": 19.15,
-   "w": 181.7,
-   "z": 28,
+   "x": 25.15,
+   "y": 25.15,
+   "w": 169.7,
+   "z": 20,
    "h": 20,
    "explode": [
     0,
     0,
     0.0
    ],
-   "mass": 22.3,
+   "mass": 19.1,
    "materials": [
     [
      "kunstleder",
@@ -1491,17 +1053,17 @@
    "name": "Außenhülle untere Hälfte",
    "short": "Hülle unten",
    "shape": "cyl",
-   "x": 36.7,
-   "y": 36.7,
-   "w": 146.6,
-   "z": 14,
-   "h": 14,
+   "x": 46.75,
+   "y": 46.75,
+   "w": 126.5,
+   "z": 8,
+   "h": 12,
    "explode": [
     0,
     0,
     0.0
    ],
-   "mass": 10.2,
+   "mass": 6.4,
    "materials": [
     [
      "kunstleder",
@@ -1531,57 +1093,17 @@
    "name": "Außenhülle untere Hälfte",
    "short": "Hülle unten",
    "shape": "cyl",
-   "x": 56.3,
-   "y": 56.3,
-   "w": 107.4,
-   "z": 5,
-   "h": 9,
-   "explode": [
-    0,
-    0,
-    0.0
-   ],
-   "mass": 3.5,
-   "materials": [
-    [
-     "kunstleder",
-     75
-    ],
-    [
-     "schaum",
-     18
-    ],
-    [
-     "druck",
-     2
-    ],
-    [
-     "klebstoff",
-     5
-    ]
-   ],
-   "info": "Bei Nähbällen halten gewachste Polyesterfäden die Waben zusammen, bei Thermobällen sind sie verklebt.",
-   "color": "#F2F1EC",
-   "label": false
-  },
-  {
-   "id": "huelle_unten_5",
-   "component_id": "pu_cover",
-   "material_id": "polyurethane",
-   "name": "Außenhülle untere Hälfte",
-   "short": "Hülle unten",
-   "shape": "cyl",
-   "x": 77.2,
-   "y": 77.2,
-   "w": 65.6,
+   "x": 68.8,
+   "y": 68.8,
+   "w": 82.4,
    "z": 0,
-   "h": 5,
+   "h": 8,
    "explode": [
     0,
     0,
     0.0
    ],
-   "mass": 0.7,
+   "mass": 1.9,
    "materials": [
     [
      "kunstleder",

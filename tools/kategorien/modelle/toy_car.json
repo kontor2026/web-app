@@ -7,17 +7,17 @@
    "name": "Dach (Karosserie)",
    "short": "Dach",
    "shape": "box",
-   "x": 6,
-   "y": 25,
-   "w": 18,
-   "d": 21,
-   "z": 21,
-   "h": 3,
+   "x": 7,
+   "y": 24,
+   "w": 16,
+   "d": 24,
+   "z": 21.5,
+   "h": 3.5,
    "r": 3,
    "explode": [
     0,
     0,
-    64.9
+    60.4
    ],
    "mass": 3.99,
    "materials": [
@@ -32,9 +32,9 @@
     {
      "shape": "box",
      "x": 3,
-     "y": 3,
-     "w": 12,
-     "d": 15,
+     "y": 4,
+     "w": 10,
+     "d": 16,
      "r": 2,
      "fill": "#D84A40"
     }
@@ -47,17 +47,17 @@
    "name": "Karosserie aus Zinkdruckguss",
    "short": "Karosserie",
    "shape": "box",
-   "x": 3,
+   "x": 1,
    "y": 0,
-   "w": 24,
+   "w": 28,
    "d": 70,
-   "z": 5.5,
-   "h": 9,
+   "z": 6.5,
+   "h": 10,
    "r": 5,
    "explode": [
     0,
     0,
-    64.9
+    60.4
    ],
    "mass": 26.93,
    "materials": [
@@ -71,84 +71,57 @@
    "marks": [
     {
      "shape": "box",
-     "x": 2,
-     "y": 52,
-     "w": 20,
-     "d": 12,
-     "r": 3,
-     "fill": "#D84A40"
-    },
-    {
-     "shape": "box",
-     "x": 11.5,
-     "y": 53,
-     "w": 1,
-     "d": 10,
-     "r": 0.5,
-     "fill": "#9E241F"
-    },
-    {
-     "shape": "box",
-     "x": 6,
-     "y": 66.5,
-     "w": 12,
-     "d": 3,
-     "r": 1,
-     "fill": "#2B2F33"
-    },
-    {
-     "shape": "box",
-     "x": 1.5,
-     "y": 65.5,
-     "w": 4,
-     "d": 3.5,
-     "r": 1.5,
-     "fill": "#F2E6C8"
-    },
-    {
-     "shape": "box",
-     "x": 18.5,
-     "y": 65.5,
-     "w": 4,
-     "d": 3.5,
-     "r": 1.5,
-     "fill": "#F2E6C8"
-    },
-    {
-     "shape": "box",
-     "x": 1.5,
-     "y": 0.8,
-     "w": 4,
-     "d": 2.5,
-     "r": 1,
-     "fill": "#E8A33C"
-    },
-    {
-     "shape": "box",
-     "x": 18.5,
-     "y": 0.8,
-     "w": 4,
-     "d": 2.5,
-     "r": 1,
-     "fill": "#E8A33C"
-    },
-    {
-     "shape": "box",
-     "x": 7,
-     "y": 0.6,
-     "w": 10,
-     "d": 2,
-     "r": 0.5,
+     "x": 5,
+     "y": 17,
+     "w": 18,
+     "d": 35,
+     "r": 2,
      "fill": "#3A3F44"
     },
     {
      "shape": "box",
-     "x": 2,
-     "y": 4,
+     "x": 4,
+     "y": 62,
      "w": 20,
-     "d": 13,
-     "r": 3,
+     "d": 6,
+     "r": 2,
      "fill": "#D84A40"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 66,
+     "w": 5,
+     "d": 3,
+     "r": 1,
+     "fill": "#F2E6C8"
+    },
+    {
+     "shape": "box",
+     "x": 20,
+     "y": 66,
+     "w": 5,
+     "d": 3,
+     "r": 1,
+     "fill": "#F2E6C8"
+    },
+    {
+     "shape": "box",
+     "x": 3,
+     "y": 1,
+     "w": 5,
+     "d": 2.5,
+     "r": 1,
+     "fill": "#E8A33C"
+    },
+    {
+     "shape": "box",
+     "x": 20,
+     "y": 1,
+     "w": 5,
+     "d": 2.5,
+     "r": 1,
+     "fill": "#E8A33C"
     }
    ]
   },
@@ -159,17 +132,17 @@
    "name": "Fenstereinsatz",
    "short": "Fenster",
    "shape": "box",
-   "x": 5,
-   "y": 20,
-   "w": 20,
-   "d": 31,
-   "z": 14.5,
-   "h": 6.5,
-   "r": 4,
+   "x": 6,
+   "y": 18,
+   "w": 18,
+   "d": 34,
+   "z": 16.5,
+   "h": 5,
+   "r": 3,
    "explode": [
     0,
     0,
-    35.4
+    33.4
    ],
    "mass": 1.2,
    "materials": [
@@ -180,24 +153,15 @@
    ],
    "info": "Klares Polystyrol, ein Stück für alle Scheiben. Es wird von innen in die Karosserie gesteckt.",
    "color": "#BFD3DD",
-   "opacity": 0.55,
+   "opacity": 0.6,
    "marks": [
     {
      "shape": "box",
-     "x": 2,
-     "y": 1,
+     "x": 1,
+     "y": 6,
      "w": 16,
-     "d": 3,
-     "r": 1,
-     "fill": "#A9C2CE"
-    },
-    {
-     "shape": "box",
-     "x": 2,
-     "y": 27,
-     "w": 16,
-     "d": 3,
-     "r": 1,
+     "d": 22,
+     "r": 2,
      "fill": "#A9C2CE"
     }
    ]
@@ -210,16 +174,16 @@
    "short": "Innenraum",
    "shape": "box",
    "x": 6,
-   "y": 22,
+   "y": 20,
    "w": 18,
-   "d": 27,
-   "z": 14.5,
-   "h": 2.5,
+   "d": 30,
+   "z": 8,
+   "h": 8,
    "r": 2,
    "explode": [
     0,
     0,
-    18.9
+    21.9
    ],
    "mass": 1.5,
    "materials": [
@@ -234,7 +198,7 @@
     {
      "shape": "box",
      "x": 2,
-     "y": 12,
+     "y": 4,
      "w": 6,
      "d": 7,
      "r": 1,
@@ -243,7 +207,7 @@
     {
      "shape": "box",
      "x": 10,
-     "y": 12,
+     "y": 4,
      "w": 6,
      "d": 7,
      "r": 1,
@@ -252,16 +216,16 @@
     {
      "shape": "box",
      "x": 2,
-     "y": 2,
+     "y": 16,
      "w": 14,
-     "d": 7,
+     "d": 8,
      "r": 1,
      "fill": "#22272B"
     },
     {
      "shape": "cyl",
      "x": 2.5,
-     "y": 21,
+     "y": 12,
      "w": 5,
      "d": 2,
      "fill": "#5B6166"
@@ -275,9 +239,9 @@
    "name": "Achsen aus Stahldraht",
    "short": "Achse",
    "shape": "box",
-   "x": 1,
-   "y": 14.4,
-   "w": 28,
+   "x": 2,
+   "y": 13.4,
+   "w": 26,
    "d": 1.2,
    "z": 5.9,
    "h": 1.2,
@@ -285,7 +249,7 @@
    "explode": [
     0,
     0,
-    27.5
+    24.0
    ],
    "mass": 0.4,
    "materials": [
@@ -304,9 +268,9 @@
    "name": "Achse hinten",
    "short": "Achse",
    "shape": "box",
-   "x": 1,
-   "y": 54.4,
-   "w": 28,
+   "x": 2,
+   "y": 55.4,
+   "w": 26,
    "d": 1.2,
    "z": 5.9,
    "h": 1.2,
@@ -314,7 +278,7 @@
    "explode": [
     0,
     0,
-    27.5
+    24.0
    ],
    "mass": 0.4,
    "materials": [
@@ -338,13 +302,13 @@
    "y": 1,
    "w": 22,
    "d": 68,
-   "z": 3.5,
+   "z": 4,
    "h": 1.9,
    "r": 3,
    "explode": [
     0,
     0,
-    14.0
+    12.0
    ],
    "mass": 2.99,
    "materials": [
@@ -368,7 +332,7 @@
     {
      "shape": "box",
      "x": 0,
-     "y": 52.8,
+     "y": 54.8,
      "w": 22,
      "d": 2.4,
      "r": 0.5,
@@ -376,49 +340,40 @@
     },
     {
      "shape": "cyl",
-     "x": 8.5,
-     "y": 4.5,
+     "x": 8,
+     "y": 5.5,
      "w": 5,
      "fill": "#7A8288"
     },
     {
      "shape": "cyl",
-     "x": 8.5,
-     "y": 58.5,
+     "x": 8,
+     "y": 59.5,
      "w": 5,
      "fill": "#7A8288"
-    },
-    {
-     "shape": "box",
-     "x": 6,
-     "y": 24,
-     "w": 10,
-     "d": 20,
-     "r": 1,
-     "fill": "#4E5459"
     }
    ]
   },
   {
-   "id": "rad_1_5",
+   "id": "rad_1",
    "component_id": "pp_wheels",
    "material_id": "pp",
    "name": "Räder (4 Stück)",
    "short": "Räder",
    "shape": "box",
    "x": 0,
-   "y": 12.25,
-   "w": 3,
-   "d": 5.5,
-   "z": 11.8,
-   "h": 1.2,
-   "r": 1,
+   "y": 7.5,
+   "w": 4,
+   "d": 13,
+   "z": 0,
+   "h": 13,
+   "r": 1.5,
    "explode": [
-    -40,
+    -14,
     0,
-    0
+    24.0
    ],
-   "mass": 0.1,
+   "mass": 0.6,
    "materials": [
     [
      "pp",
@@ -430,532 +385,35 @@
    "marks": [
     {
      "shape": "box",
-     "x": 0.6,
-     "y": 0.25,
-     "w": 1.8,
-     "d": 5,
-     "r": 0.8,
+     "x": 0.8,
+     "y": 3.5,
+     "w": 2.4,
+     "d": 6,
+     "r": 1,
      "fill": "#9AA2A6"
     }
    ]
   },
   {
-   "id": "rad_1_0",
+   "id": "rad_2",
    "component_id": "pp_wheels",
    "material_id": "pp",
-   "name": "Rad 1",
+   "name": "Rad 2",
    "short": "Räder",
    "shape": "box",
-   "x": 0,
-   "y": 12.25,
-   "w": 3,
-   "d": 5.5,
+   "x": 26,
+   "y": 7.5,
+   "w": 4,
+   "d": 13,
    "z": 0,
-   "h": 1.2,
-   "r": 1,
+   "h": 13,
+   "r": 1.5,
    "explode": [
-    -40,
+    14,
     0,
-    0
+    24.0
    ],
-   "mass": 0.1,
-   "materials": [
-    [
-     "pp",
-     100
-    ]
-   ],
-   "info": "Weiteres Rad.",
-   "color": "#2B2D2F",
-   "label": false
-  },
-  {
-   "id": "rad_1_1",
-   "component_id": "pp_wheels",
-   "material_id": "pp",
-   "name": "Rad 1",
-   "short": "Räder",
-   "shape": "box",
-   "x": 0,
-   "y": 10.2,
-   "w": 3,
-   "d": 9.6,
-   "z": 1.2,
-   "h": 1.8,
-   "r": 1,
-   "explode": [
-    -40,
-    0,
-    0
-   ],
-   "mass": 0.1,
-   "materials": [
-    [
-     "pp",
-     100
-    ]
-   ],
-   "info": "Weiteres Rad.",
-   "color": "#2B2D2F",
-   "label": false
-  },
-  {
-   "id": "rad_1_2",
-   "component_id": "pp_wheels",
-   "material_id": "pp",
-   "name": "Rad 1",
-   "short": "Räder",
-   "shape": "box",
-   "x": 0,
-   "y": 8.75,
-   "w": 3,
-   "d": 12.5,
-   "z": 3,
-   "h": 3.5,
-   "r": 1,
-   "explode": [
-    -40,
-    0,
-    0
-   ],
-   "mass": 0.1,
-   "materials": [
-    [
-     "pp",
-     100
-    ]
-   ],
-   "info": "Weiteres Rad.",
-   "color": "#2B2D2F",
-   "label": false
-  },
-  {
-   "id": "rad_1_3",
-   "component_id": "pp_wheels",
-   "material_id": "pp",
-   "name": "Rad 1",
-   "short": "Räder",
-   "shape": "box",
-   "x": 0,
-   "y": 8.75,
-   "w": 3,
-   "d": 12.5,
-   "z": 6.5,
-   "h": 3.5,
-   "r": 1,
-   "explode": [
-    -40,
-    0,
-    0
-   ],
-   "mass": 0.1,
-   "materials": [
-    [
-     "pp",
-     100
-    ]
-   ],
-   "info": "Weiteres Rad.",
-   "color": "#2B2D2F",
-   "label": false
-  },
-  {
-   "id": "rad_1_4",
-   "component_id": "pp_wheels",
-   "material_id": "pp",
-   "name": "Rad 1",
-   "short": "Räder",
-   "shape": "box",
-   "x": 0,
-   "y": 10.2,
-   "w": 3,
-   "d": 9.6,
-   "z": 10,
-   "h": 1.8,
-   "r": 1,
-   "explode": [
-    -40,
-    0,
-    0
-   ],
-   "mass": 0.1,
-   "materials": [
-    [
-     "pp",
-     100
-    ]
-   ],
-   "info": "Weiteres Rad.",
-   "color": "#2B2D2F",
-   "label": false
-  },
-  {
-   "id": "rad_2_0",
-   "component_id": "pp_wheels",
-   "material_id": "pp",
-   "name": "Rad 2",
-   "short": "Räder",
-   "shape": "box",
-   "x": 27,
-   "y": 12.25,
-   "w": 3,
-   "d": 5.5,
-   "z": 0,
-   "h": 1.2,
-   "r": 1,
-   "explode": [
-    40,
-    0,
-    14.0
-   ],
-   "mass": 0.1,
-   "materials": [
-    [
-     "pp",
-     100
-    ]
-   ],
-   "info": "Weiteres Rad.",
-   "color": "#2B2D2F",
-   "label": false,
-   "sortBias": 12
-  },
-  {
-   "id": "rad_2_1",
-   "component_id": "pp_wheels",
-   "material_id": "pp",
-   "name": "Rad 2",
-   "short": "Räder",
-   "shape": "box",
-   "x": 27,
-   "y": 10.2,
-   "w": 3,
-   "d": 9.6,
-   "z": 1.2,
-   "h": 1.8,
-   "r": 1,
-   "explode": [
-    40,
-    0,
-    14.0
-   ],
-   "mass": 0.1,
-   "materials": [
-    [
-     "pp",
-     100
-    ]
-   ],
-   "info": "Weiteres Rad.",
-   "color": "#2B2D2F",
-   "label": false,
-   "sortBias": 12
-  },
-  {
-   "id": "rad_2_2",
-   "component_id": "pp_wheels",
-   "material_id": "pp",
-   "name": "Rad 2",
-   "short": "Räder",
-   "shape": "box",
-   "x": 27,
-   "y": 8.75,
-   "w": 3,
-   "d": 12.5,
-   "z": 3,
-   "h": 3.5,
-   "r": 1,
-   "explode": [
-    40,
-    0,
-    14.0
-   ],
-   "mass": 0.1,
-   "materials": [
-    [
-     "pp",
-     100
-    ]
-   ],
-   "info": "Weiteres Rad.",
-   "color": "#2B2D2F",
-   "label": false,
-   "sortBias": 12
-  },
-  {
-   "id": "rad_2_3",
-   "component_id": "pp_wheels",
-   "material_id": "pp",
-   "name": "Rad 2",
-   "short": "Räder",
-   "shape": "box",
-   "x": 27,
-   "y": 8.75,
-   "w": 3,
-   "d": 12.5,
-   "z": 6.5,
-   "h": 3.5,
-   "r": 1,
-   "explode": [
-    40,
-    0,
-    14.0
-   ],
-   "mass": 0.1,
-   "materials": [
-    [
-     "pp",
-     100
-    ]
-   ],
-   "info": "Weiteres Rad.",
-   "color": "#2B2D2F",
-   "label": false,
-   "sortBias": 12
-  },
-  {
-   "id": "rad_2_4",
-   "component_id": "pp_wheels",
-   "material_id": "pp",
-   "name": "Rad 2",
-   "short": "Räder",
-   "shape": "box",
-   "x": 27,
-   "y": 10.2,
-   "w": 3,
-   "d": 9.6,
-   "z": 10,
-   "h": 1.8,
-   "r": 1,
-   "explode": [
-    40,
-    0,
-    14.0
-   ],
-   "mass": 0.1,
-   "materials": [
-    [
-     "pp",
-     100
-    ]
-   ],
-   "info": "Weiteres Rad.",
-   "color": "#2B2D2F",
-   "label": false,
-   "sortBias": 12
-  },
-  {
-   "id": "rad_2_5",
-   "component_id": "pp_wheels",
-   "material_id": "pp",
-   "name": "Rad 2",
-   "short": "Räder",
-   "shape": "box",
-   "x": 27,
-   "y": 12.25,
-   "w": 3,
-   "d": 5.5,
-   "z": 11.8,
-   "h": 1.2,
-   "r": 1,
-   "explode": [
-    40,
-    0,
-    14.0
-   ],
-   "mass": 0.1,
-   "materials": [
-    [
-     "pp",
-     100
-    ]
-   ],
-   "info": "Weiteres Rad.",
-   "color": "#2B2D2F",
-   "label": false,
-   "sortBias": 12,
-   "marks": [
-    {
-     "shape": "box",
-     "x": 0.6,
-     "y": 0.25,
-     "w": 1.8,
-     "d": 5,
-     "r": 0.8,
-     "fill": "#9AA2A6"
-    }
-   ]
-  },
-  {
-   "id": "rad_3_0",
-   "component_id": "pp_wheels",
-   "material_id": "pp",
-   "name": "Rad 3",
-   "short": "Räder",
-   "shape": "box",
-   "x": 0,
-   "y": 52.25,
-   "w": 3,
-   "d": 5.5,
-   "z": 0,
-   "h": 1.2,
-   "r": 1,
-   "explode": [
-    -40,
-    0,
-    0
-   ],
-   "mass": 0.1,
-   "materials": [
-    [
-     "pp",
-     100
-    ]
-   ],
-   "info": "Weiteres Rad.",
-   "color": "#2B2D2F",
-   "label": false
-  },
-  {
-   "id": "rad_3_1",
-   "component_id": "pp_wheels",
-   "material_id": "pp",
-   "name": "Rad 3",
-   "short": "Räder",
-   "shape": "box",
-   "x": 0,
-   "y": 50.2,
-   "w": 3,
-   "d": 9.6,
-   "z": 1.2,
-   "h": 1.8,
-   "r": 1,
-   "explode": [
-    -40,
-    0,
-    0
-   ],
-   "mass": 0.1,
-   "materials": [
-    [
-     "pp",
-     100
-    ]
-   ],
-   "info": "Weiteres Rad.",
-   "color": "#2B2D2F",
-   "label": false
-  },
-  {
-   "id": "rad_3_2",
-   "component_id": "pp_wheels",
-   "material_id": "pp",
-   "name": "Rad 3",
-   "short": "Räder",
-   "shape": "box",
-   "x": 0,
-   "y": 48.75,
-   "w": 3,
-   "d": 12.5,
-   "z": 3,
-   "h": 3.5,
-   "r": 1,
-   "explode": [
-    -40,
-    0,
-    0
-   ],
-   "mass": 0.1,
-   "materials": [
-    [
-     "pp",
-     100
-    ]
-   ],
-   "info": "Weiteres Rad.",
-   "color": "#2B2D2F",
-   "label": false
-  },
-  {
-   "id": "rad_3_3",
-   "component_id": "pp_wheels",
-   "material_id": "pp",
-   "name": "Rad 3",
-   "short": "Räder",
-   "shape": "box",
-   "x": 0,
-   "y": 48.75,
-   "w": 3,
-   "d": 12.5,
-   "z": 6.5,
-   "h": 3.5,
-   "r": 1,
-   "explode": [
-    -40,
-    0,
-    0
-   ],
-   "mass": 0.1,
-   "materials": [
-    [
-     "pp",
-     100
-    ]
-   ],
-   "info": "Weiteres Rad.",
-   "color": "#2B2D2F",
-   "label": false
-  },
-  {
-   "id": "rad_3_4",
-   "component_id": "pp_wheels",
-   "material_id": "pp",
-   "name": "Rad 3",
-   "short": "Räder",
-   "shape": "box",
-   "x": 0,
-   "y": 50.2,
-   "w": 3,
-   "d": 9.6,
-   "z": 10,
-   "h": 1.8,
-   "r": 1,
-   "explode": [
-    -40,
-    0,
-    0
-   ],
-   "mass": 0.1,
-   "materials": [
-    [
-     "pp",
-     100
-    ]
-   ],
-   "info": "Weiteres Rad.",
-   "color": "#2B2D2F",
-   "label": false
-  },
-  {
-   "id": "rad_3_5",
-   "component_id": "pp_wheels",
-   "material_id": "pp",
-   "name": "Rad 3",
-   "short": "Räder",
-   "shape": "box",
-   "x": 0,
-   "y": 52.25,
-   "w": 3,
-   "d": 5.5,
-   "z": 11.8,
-   "h": 1.2,
-   "r": 1,
-   "explode": [
-    -40,
-    0,
-    0
-   ],
-   "mass": 0.1,
+   "mass": 0.6,
    "materials": [
     [
      "pp",
@@ -968,35 +426,35 @@
    "marks": [
     {
      "shape": "box",
-     "x": 0.6,
-     "y": 0.25,
-     "w": 1.8,
-     "d": 5,
-     "r": 0.8,
+     "x": 0.8,
+     "y": 3.5,
+     "w": 2.4,
+     "d": 6,
+     "r": 1,
      "fill": "#9AA2A6"
     }
    ]
   },
   {
-   "id": "rad_4_0",
+   "id": "rad_3",
    "component_id": "pp_wheels",
    "material_id": "pp",
-   "name": "Rad 4",
+   "name": "Rad 3",
    "short": "Räder",
    "shape": "box",
-   "x": 27,
-   "y": 52.25,
-   "w": 3,
-   "d": 5.5,
+   "x": 0,
+   "y": 49.5,
+   "w": 4,
+   "d": 13,
    "z": 0,
-   "h": 1.2,
-   "r": 1,
+   "h": 13,
+   "r": 1.5,
    "explode": [
-    40,
+    -14,
     0,
-    14.0
+    24.0
    ],
-   "mass": 0.1,
+   "mass": 0.6,
    "materials": [
     [
      "pp",
@@ -1006,170 +464,55 @@
    "info": "Weiteres Rad.",
    "color": "#2B2D2F",
    "label": false,
-   "sortBias": 12
-  },
-  {
-   "id": "rad_4_1",
-   "component_id": "pp_wheels",
-   "material_id": "pp",
-   "name": "Rad 4",
-   "short": "Räder",
-   "shape": "box",
-   "x": 27,
-   "y": 50.2,
-   "w": 3,
-   "d": 9.6,
-   "z": 1.2,
-   "h": 1.8,
-   "r": 1,
-   "explode": [
-    40,
-    0,
-    14.0
-   ],
-   "mass": 0.1,
-   "materials": [
-    [
-     "pp",
-     100
-    ]
-   ],
-   "info": "Weiteres Rad.",
-   "color": "#2B2D2F",
-   "label": false,
-   "sortBias": 12
-  },
-  {
-   "id": "rad_4_2",
-   "component_id": "pp_wheels",
-   "material_id": "pp",
-   "name": "Rad 4",
-   "short": "Räder",
-   "shape": "box",
-   "x": 27,
-   "y": 48.75,
-   "w": 3,
-   "d": 12.5,
-   "z": 3,
-   "h": 3.5,
-   "r": 1,
-   "explode": [
-    40,
-    0,
-    14.0
-   ],
-   "mass": 0.1,
-   "materials": [
-    [
-     "pp",
-     100
-    ]
-   ],
-   "info": "Weiteres Rad.",
-   "color": "#2B2D2F",
-   "label": false,
-   "sortBias": 12
-  },
-  {
-   "id": "rad_4_3",
-   "component_id": "pp_wheels",
-   "material_id": "pp",
-   "name": "Rad 4",
-   "short": "Räder",
-   "shape": "box",
-   "x": 27,
-   "y": 48.75,
-   "w": 3,
-   "d": 12.5,
-   "z": 6.5,
-   "h": 3.5,
-   "r": 1,
-   "explode": [
-    40,
-    0,
-    14.0
-   ],
-   "mass": 0.1,
-   "materials": [
-    [
-     "pp",
-     100
-    ]
-   ],
-   "info": "Weiteres Rad.",
-   "color": "#2B2D2F",
-   "label": false,
-   "sortBias": 12
-  },
-  {
-   "id": "rad_4_4",
-   "component_id": "pp_wheels",
-   "material_id": "pp",
-   "name": "Rad 4",
-   "short": "Räder",
-   "shape": "box",
-   "x": 27,
-   "y": 50.2,
-   "w": 3,
-   "d": 9.6,
-   "z": 10,
-   "h": 1.8,
-   "r": 1,
-   "explode": [
-    40,
-    0,
-    14.0
-   ],
-   "mass": 0.1,
-   "materials": [
-    [
-     "pp",
-     100
-    ]
-   ],
-   "info": "Weiteres Rad.",
-   "color": "#2B2D2F",
-   "label": false,
-   "sortBias": 12
-  },
-  {
-   "id": "rad_4_5",
-   "component_id": "pp_wheels",
-   "material_id": "pp",
-   "name": "Rad 4",
-   "short": "Räder",
-   "shape": "box",
-   "x": 27,
-   "y": 52.25,
-   "w": 3,
-   "d": 5.5,
-   "z": 11.8,
-   "h": 1.2,
-   "r": 1,
-   "explode": [
-    40,
-    0,
-    14.0
-   ],
-   "mass": 0.1,
-   "materials": [
-    [
-     "pp",
-     100
-    ]
-   ],
-   "info": "Weiteres Rad.",
-   "color": "#2B2D2F",
-   "label": false,
-   "sortBias": 12,
    "marks": [
     {
      "shape": "box",
-     "x": 0.6,
-     "y": 0.25,
-     "w": 1.8,
-     "d": 5,
-     "r": 0.8,
+     "x": 0.8,
+     "y": 3.5,
+     "w": 2.4,
+     "d": 6,
+     "r": 1,
+     "fill": "#9AA2A6"
+    }
+   ]
+  },
+  {
+   "id": "rad_4",
+   "component_id": "pp_wheels",
+   "material_id": "pp",
+   "name": "Rad 4",
+   "short": "Räder",
+   "shape": "box",
+   "x": 26,
+   "y": 49.5,
+   "w": 4,
+   "d": 13,
+   "z": 0,
+   "h": 13,
+   "r": 1.5,
+   "explode": [
+    14,
+    0,
+    24.0
+   ],
+   "mass": 0.6,
+   "materials": [
+    [
+     "pp",
+     100
+    ]
+   ],
+   "info": "Weiteres Rad.",
+   "color": "#2B2D2F",
+   "label": false,
+   "marks": [
+    {
+     "shape": "box",
+     "x": 0.8,
+     "y": 3.5,
+     "w": 2.4,
+     "d": 6,
+     "r": 1,
      "fill": "#9AA2A6"
     }
    ]
@@ -1184,7 +527,7 @@
    "x": 13,
    "y": 5.5,
    "w": 4,
-   "z": 2,
+   "z": 2.5,
    "h": 1.5,
    "explode": [
     0,
@@ -1209,9 +552,9 @@
    "short": "Nieten",
    "shape": "cyl",
    "x": 13,
-   "y": 59.5,
+   "y": 60.5,
    "w": 4,
-   "z": 2,
+   "z": 2.5,
    "h": 1.5,
    "explode": [
     0,

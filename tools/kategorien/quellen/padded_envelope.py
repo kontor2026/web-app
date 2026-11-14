@@ -32,14 +32,14 @@ teile = [
          x=4, y=37, w=172, d=221, z=0.4, h=4.6, r=1, mass=2.2, color=POLSTER, opacity=0.6, label=False,
          info='Zweite Lage des Futters. Vorne und hinten sind an den Rändern zu einem Beutel verschweißt.',
          marks=NOPPEN),
-    teil('abdeckstreifen', 'paper_envelope_body', 'Abdeckstreifen (silikonisiert)', 'Abdeckpapier', 'box',
-         x=8, y=8, w=164, d=18, z=0.5, h=0.1, r=0, explode=[0, -70, 40], mass=0.3, sortBias=100, materials=[['papier', 92], ['pet', 8]],
+    teil('abdeckstreifen', 'paper_envelope_body', 'Abdeckstreifen (silikonisiert)', 'Abdeckstreifen', 'box',
+         x=8, y=8, w=164, d=18, z=0.5, h=0.1, r=0, mass=0.3, materials=[['papier', 92], ['pet', 8]],
          color='#F2EFE6',
          info='Silikonbeschichtetes Papier, das den Kleber schützt. Abziehen und in den Restmüll, die Beschichtung '
               'stört im Altpapier.',
          marks=[mark('box', 0, 7, 164, 4, 0, '#E1DCCF')]),
-    teil('klebestreifen', 'paper_envelope_body', 'Haftklebestreifen', 'Kleber', 'box',
-         x=10, y=10, w=160, d=14, z=0.4, h=0.1, r=0, explode=[0, -70, 15], mass=0.2, sortBias=100, materials=[['klebstoff', 100]], color='#E8DDB5',
+    teil('klebestreifen', 'paper_envelope_body', 'Haftklebestreifen', 'Klebestreifen', 'box',
+         x=10, y=10, w=160, d=14, z=0.4, h=0.1, r=0, mass=0.2, materials=[['klebstoff', 100]], color='#E8DDB5',
          info='Druckempfindlicher Kleber auf der Klappe. Klappe umlegen und fest andrücken, dann ist der Umschlag zu.'),
     teil('rueckseite', 'paper_envelope_body', 'Rückseite mit Verschlussklappe', 'Rückseite', 'box',
          x=0, y=0, w=180, d=260, z=0, h=0.4, r=1, mass=4.4, materials=[['papier', 96], ['klebstoff', 4]],
@@ -49,6 +49,6 @@ teile = [
          marks=[mark('box', 0, 33, 180, 4, 0, '#A98652'), mark('box', 0, 35, 4, 225, 0, '#B48E5C'),
                 mark('box', 176, 35, 4, 225, 0, '#B48E5C')]),
 ]
-explodiere(teile, abstand=100)
+explodiere(teile, abstand=100, abstaende={'abdeckstreifen': 25, 'klebestreifen': 25})
 skaliere_masse(teile, oid='padded_envelope')
 schreibe('padded_envelope', teile)

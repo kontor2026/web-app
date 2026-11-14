@@ -39,7 +39,7 @@
   "metalle_mg": {},
   "herkunft": {},
   "materialien_g": {
-   "multilayer_plastic": 11.5,
+   "multilayer_plastic": 11.4,
    "ldpe": 0.6
   },
   "co2_kg": 0.026,
@@ -68,27 +68,15 @@
    },
    "eucrm2023": {
     "titel": "Study on the Critical Raw Materials for the EU 2023 – Final Report",
-    "url": "https://op.europa.eu/o/opportal-service/download-handler?identifier=57318397-fdd4-11ed-a05c-01aa75ed71a1&format=pdf&language=en&productionSystem=cellar&part="
+    "url": "https://single-market-economy.ec.europa.eu/publications/study-critical-raw-materials-eu-2023-final-report_en"
    },
    "eu2024crma": {
     "titel": "Verordnung (EU) 2024/1252 zur Schaffung eines Rahmens zur Gewährleistung einer sicheren und nachhaltigen Versorgung mit kritischen Rohstoffen (Critical Raw Materials Act)",
-    "url": "https://op.europa.eu/o/opportal-service/download-handler?identifier=aa3c49f7-08e7-11ef-a251-01aa75ed71a1&format=pdf&language=en&productionSystem=cellar&part="
+    "url": "https://op.europa.eu/en/publication-detail/-/publication/aa3c49f7-08e7-11ef-a251-01aa75ed71a1"
    },
    "usdapsd2026": {
     "titel": "Production, Supply and Distribution Online (PSD), Datensatz Cotton (psd_cotton_csv.zip)",
     "url": "https://apps.fas.usda.gov/psdonline/downloads/psd_cotton_csv.zip"
-   },
-   "eia2026intl": {
-    "titel": "International Energy Statistics, Bulk-Download INTL.zip",
-    "url": "https://www.eia.gov/opendata/bulk/INTL.zip"
-   },
-   "faostat2025qcl": {
-    "titel": "FAOSTAT Crops and livestock products (QCL), Bulk-Download Production_Crops_Livestock_E_All_Data_(Normalized).zip",
-    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip"
-   },
-   "faostat2026fo": {
-    "titel": "FAOSTAT Forestry Production and Trade (FO), Bulk-Download Forestry_E_All_Data_(Normalized).zip",
-    "url": "https://bulks-faostat.fao.org/production/Forestry_E_All_Data_(Normalized).zip"
    }
   }
  },
@@ -132,16 +120,16 @@
    "short": "Siegelnaht",
    "shape": "box",
    "x": 0,
-   "y": 26,
+   "y": 27,
    "w": 100,
-   "d": 8,
-   "z": 207,
-   "h": 13,
+   "d": 6,
+   "z": 205,
+   "h": 15,
    "r": 0,
    "explode": [
     0,
     0,
-    140.0
+    105.0
    ],
    "mass": 0.6,
    "materials": [
@@ -166,7 +154,7 @@
      "x": 1,
      "y": 1,
      "w": 2,
-     "d": 6,
+     "d": 4,
      "fill": "#5A4436"
     },
     {
@@ -174,7 +162,7 @@
      "x": 4,
      "y": 1,
      "w": 2,
-     "d": 6,
+     "d": 4,
      "fill": "#5A4436"
     },
     {
@@ -182,7 +170,7 @@
      "x": 7,
      "y": 1,
      "w": 2,
-     "d": 6,
+     "d": 4,
      "fill": "#5A4436"
     },
     {
@@ -190,7 +178,7 @@
      "x": 10,
      "y": 1,
      "w": 2,
-     "d": 6,
+     "d": 4,
      "fill": "#5A4436"
     },
     {
@@ -198,7 +186,7 @@
      "x": 13,
      "y": 1,
      "w": 2,
-     "d": 6,
+     "d": 4,
      "fill": "#5A4436"
     },
     {
@@ -206,7 +194,7 @@
      "x": 16,
      "y": 1,
      "w": 2,
-     "d": 6,
+     "d": 4,
      "fill": "#5A4436"
     },
     {
@@ -214,7 +202,7 @@
      "x": 19,
      "y": 1,
      "w": 2,
-     "d": 6,
+     "d": 4,
      "fill": "#5A4436"
     },
     {
@@ -222,7 +210,7 @@
      "x": 22,
      "y": 1,
      "w": 2,
-     "d": 6,
+     "d": 4,
      "fill": "#5A4436"
     },
     {
@@ -230,7 +218,7 @@
      "x": 25,
      "y": 1,
      "w": 2,
-     "d": 6,
+     "d": 4,
      "fill": "#5A4436"
     },
     {
@@ -238,7 +226,7 @@
      "x": 28,
      "y": 1,
      "w": 2,
-     "d": 6,
+     "d": 4,
      "fill": "#5A4436"
     },
     {
@@ -246,7 +234,7 @@
      "x": 31,
      "y": 1,
      "w": 2,
-     "d": 6,
+     "d": 4,
      "fill": "#5A4436"
     },
     {
@@ -254,7 +242,7 @@
      "x": 34,
      "y": 1,
      "w": 2,
-     "d": 6,
+     "d": 4,
      "fill": "#5A4436"
     },
     {
@@ -262,7 +250,7 @@
      "x": 37,
      "y": 1,
      "w": 2,
-     "d": 6,
+     "d": 4,
      "fill": "#5A4436"
     },
     {
@@ -270,7 +258,7 @@
      "x": 40,
      "y": 1,
      "w": 2,
-     "d": 6,
+     "d": 4,
      "fill": "#5A4436"
     },
     {
@@ -278,7 +266,7 @@
      "x": 43,
      "y": 1,
      "w": 2,
-     "d": 6,
+     "d": 4,
      "fill": "#5A4436"
     },
     {
@@ -286,7 +274,7 @@
      "x": 46,
      "y": 1,
      "w": 2,
-     "d": 6,
+     "d": 4,
      "fill": "#5A4436"
     },
     {
@@ -294,7 +282,7 @@
      "x": 49,
      "y": 1,
      "w": 2,
-     "d": 6,
+     "d": 4,
      "fill": "#5A4436"
     },
     {
@@ -302,7 +290,7 @@
      "x": 52,
      "y": 1,
      "w": 2,
-     "d": 6,
+     "d": 4,
      "fill": "#5A4436"
     },
     {
@@ -310,7 +298,7 @@
      "x": 55,
      "y": 1,
      "w": 2,
-     "d": 6,
+     "d": 4,
      "fill": "#5A4436"
     },
     {
@@ -318,7 +306,7 @@
      "x": 58,
      "y": 1,
      "w": 2,
-     "d": 6,
+     "d": 4,
      "fill": "#5A4436"
     },
     {
@@ -326,7 +314,7 @@
      "x": 61,
      "y": 1,
      "w": 2,
-     "d": 6,
+     "d": 4,
      "fill": "#5A4436"
     },
     {
@@ -334,7 +322,7 @@
      "x": 64,
      "y": 1,
      "w": 2,
-     "d": 6,
+     "d": 4,
      "fill": "#5A4436"
     },
     {
@@ -342,7 +330,7 @@
      "x": 67,
      "y": 1,
      "w": 2,
-     "d": 6,
+     "d": 4,
      "fill": "#5A4436"
     },
     {
@@ -350,7 +338,7 @@
      "x": 70,
      "y": 1,
      "w": 2,
-     "d": 6,
+     "d": 4,
      "fill": "#5A4436"
     },
     {
@@ -358,7 +346,7 @@
      "x": 73,
      "y": 1,
      "w": 2,
-     "d": 6,
+     "d": 4,
      "fill": "#5A4436"
     },
     {
@@ -366,7 +354,7 @@
      "x": 76,
      "y": 1,
      "w": 2,
-     "d": 6,
+     "d": 4,
      "fill": "#5A4436"
     },
     {
@@ -374,7 +362,7 @@
      "x": 79,
      "y": 1,
      "w": 2,
-     "d": 6,
+     "d": 4,
      "fill": "#5A4436"
     },
     {
@@ -382,7 +370,7 @@
      "x": 82,
      "y": 1,
      "w": 2,
-     "d": 6,
+     "d": 4,
      "fill": "#5A4436"
     },
     {
@@ -390,7 +378,7 @@
      "x": 85,
      "y": 1,
      "w": 2,
-     "d": 6,
+     "d": 4,
      "fill": "#5A4436"
     },
     {
@@ -398,7 +386,7 @@
      "x": 88,
      "y": 1,
      "w": 2,
-     "d": 6,
+     "d": 4,
      "fill": "#5A4436"
     },
     {
@@ -406,7 +394,7 @@
      "x": 91,
      "y": 1,
      "w": 2,
-     "d": 6,
+     "d": 4,
      "fill": "#5A4436"
     },
     {
@@ -414,7 +402,7 @@
      "x": 94,
      "y": 1,
      "w": 2,
-     "d": 6,
+     "d": 4,
      "fill": "#5A4436"
     },
     {
@@ -422,7 +410,7 @@
      "x": 97,
      "y": 1,
      "w": 2,
-     "d": 6,
+     "d": 4,
      "fill": "#5A4436"
     }
    ]
@@ -435,18 +423,18 @@
    "short": "Kopf",
    "shape": "box",
    "x": 0,
-   "y": 18,
+   "y": 12,
    "w": 100,
-   "d": 24,
-   "z": 195,
-   "h": 12,
-   "r": 3,
+   "d": 36,
+   "z": 190,
+   "h": 15,
+   "r": 6,
    "explode": [
     0,
     0,
-    105.0
+    70.0
    ],
-   "mass": 0.8,
+   "mass": 1,
    "materials": [
     [
      "verbundfolie",
@@ -467,74 +455,8 @@
     {
      "shape": "box",
      "x": 0,
-     "y": 11,
+     "y": 17,
      "w": 100,
-     "d": 2,
-     "r": 0,
-     "fill": "#5A4436"
-    }
-   ]
-  },
-  {
-   "id": "schulter",
-   "component_id": "multilayer_film",
-   "material_id": "multilayer_plastic",
-   "name": "Gefaltete Schulter",
-   "short": "Schulter",
-   "shape": "box",
-   "x": 0,
-   "y": 0,
-   "w": 100,
-   "d": 60,
-   "z": 190,
-   "h": 5,
-   "r": 3,
-   "explode": [
-    0,
-    0,
-    70.0
-   ],
-   "mass": 0.6,
-   "materials": [
-    [
-     "verbundfolie",
-     96
-    ],
-    [
-     "druck",
-     3
-    ],
-    [
-     "alu",
-     1
-    ]
-   ],
-   "info": "Hier sind die Seitenfalten zu Dreiecken flach gelegt und auf den Mantel geklebt.",
-   "color": "#3B2A22",
-   "marks": [
-    {
-     "shape": "box",
-     "x": 0,
-     "y": 0,
-     "w": 22,
-     "d": 60,
-     "r": 2,
-     "fill": "#4A372D"
-    },
-    {
-     "shape": "box",
-     "x": 78,
-     "y": 0,
-     "w": 22,
-     "d": 60,
-     "r": 2,
-     "fill": "#4A372D"
-    },
-    {
-     "shape": "box",
-     "x": 22,
-     "y": 29,
-     "w": 56,
      "d": 2,
      "r": 0,
      "fill": "#5A4436"
@@ -557,7 +479,7 @@
    "r": 1.2,
    "explode": [
     0,
-    90,
+    50,
     35.0
    ],
    "mass": 0.6,
@@ -577,7 +499,6 @@
    ],
    "info": "Kleines Einwegventil: Frisch gerösteter Kaffee gibt Kohlendioxid ab, das hier entweicht, ohne dass Luft hineinkommt. Mit der Schere herausschneiden.",
    "color": "#E9E6DF",
-   "sortBias": 45,
    "marks": [
     {
      "shape": "cyl",
@@ -588,40 +509,6 @@
      "fill": "#9C968A"
     }
    ]
-  },
-  {
-   "id": "etikett",
-   "component_id": "multilayer_film",
-   "material_id": "multilayer_plastic",
-   "name": "Bedruckte Vorderseite",
-   "short": "Aufdruck",
-   "shape": "box",
-   "x": 10,
-   "y": 60,
-   "w": 80,
-   "d": 0.6,
-   "z": 40,
-   "h": 90,
-   "r": 0,
-   "explode": [
-    0,
-    0,
-    35.0
-   ],
-   "mass": 0.2,
-   "materials": [
-    [
-     "druck",
-     60
-    ],
-    [
-     "verbundfolie",
-     40
-    ]
-   ],
-   "info": "Die Farbe ist direkt auf die Folie gedruckt, nicht aufgeklebt. Sie wird beim Recycling mit der Folie zusammen verarbeitet.",
-   "color": "#C49A3A",
-   "sortBias": 150
   },
   {
    "id": "mantel",
@@ -642,7 +529,7 @@
     0,
     35.0
    ],
-   "mass": 7.2,
+   "mass": 7.6,
    "materials": [
     [
      "verbundfolie",
@@ -695,8 +582,8 @@
    "h": 187,
    "r": 0,
    "explode": [
-    30,
-    -50,
+    0,
+    -45,
     35.0
    ],
    "mass": 0.5,
@@ -736,7 +623,7 @@
     0,
     0.0
    ],
-   "mass": 1.6,
+   "mass": 1.7,
    "materials": [
     [
      "verbundfolie",

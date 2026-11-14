@@ -10,14 +10,14 @@
    "x": 1,
    "y": 1,
    "w": 13,
-   "z": 84,
-   "h": 56,
+   "z": 98,
+   "h": 42,
    "explode": [
     0,
     0,
-    80.0
+    32.0
    ],
-   "mass": 2.53,
+   "mass": 2.59,
    "materials": [
     [
      "pp",
@@ -47,13 +47,13 @@
    "y": 6,
    "w": 1.5,
    "d": 3,
-   "z": 100,
-   "h": 36,
+   "z": 104,
+   "h": 32,
    "r": 0.5,
    "explode": [
     0,
     0,
-    80.0
+    32.0
    ],
    "mass": 0.32,
    "materials": [
@@ -64,42 +64,6 @@
    ],
    "info": "An die Kappe angespritzter Kunststoffclip, gleiches Material wie die Kappe.",
    "color": "#C8423A"
-  },
-  {
-   "id": "innenkappe",
-   "component_id": "pen_cap",
-   "material_id": "pp",
-   "name": "Innenkappe",
-   "short": "Innenkappe",
-   "shape": "cyl",
-   "x": 3.5,
-   "y": 3.5,
-   "w": 8,
-   "z": 100,
-   "h": 24,
-   "explode": [
-    0,
-    0,
-    30.0
-   ],
-   "mass": 0.32,
-   "materials": [
-    [
-     "pp",
-     100
-    ]
-   ],
-   "info": "Kleiner Becher in der Kappe, der sich luftdicht über die Spitze schiebt. Er sorgt dafür, dass der Stift auch nach Wochen nicht austrocknet.",
-   "color": "#E9E6DF",
-   "marks": [
-    {
-     "shape": "cyl",
-     "x": 1.5,
-     "y": 1.5,
-     "w": 5,
-     "fill": "#C9CDD0"
-    }
-   ]
   },
   {
    "id": "spitze",
@@ -154,7 +118,7 @@
     0,
     20.0
    ],
-   "mass": 0.84,
+   "mass": 0.86,
    "materials": [
     [
      "pp",
@@ -190,7 +154,7 @@
     0,
     0
    ],
-   "mass": 2.32,
+   "mass": 2.38,
    "materials": [
     [
      "polyester",
@@ -234,7 +198,7 @@
     0,
     10.0
    ],
-   "mass": 4.74,
+   "mass": 4.86,
    "materials": [
     [
      "pp",
@@ -270,7 +234,7 @@
     0,
     0.0
    ],
-   "mass": 0.63,
+   "mass": 0.65,
    "materials": [
     [
      "pp",

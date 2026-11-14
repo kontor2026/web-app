@@ -15,9 +15,9 @@
    "explode": [
     0,
     0,
-    58
+    45
    ],
-   "mass": 1.28,
+   "mass": 1.56,
    "materials": [
     [
      "pp",
@@ -27,13 +27,6 @@
    "info": "Schützt die Spitze vor dem Austrocknen. Das kleine Loch oben ist Absicht: Verschluckt man die Kappe, kann man trotzdem atmen.",
    "color": "#2F5FA8",
    "marks": [
-    {
-     "shape": "cyl",
-     "x": 1.5,
-     "y": 1.5,
-     "w": 8,
-     "fill": "#3A6DB8"
-    },
     {
      "shape": "cyl",
      "x": 4,
@@ -60,9 +53,9 @@
    "explode": [
     6,
     0,
-    58
+    45
    ],
-   "mass": 0.32,
+   "mass": 0.33,
    "materials": [
     [
      "pp",
@@ -70,16 +63,40 @@
     ]
    ],
    "info": "Federnder Kunststoffclip, an die Kappe angespritzt. Hält den Stift in der Hemdtasche.",
-   "color": "#2F5FA8",
+   "color": "#2F5FA8"
+  },
+  {
+   "id": "feder",
+   "component_id": "steel_spring",
+   "material_id": "steel",
+   "name": "Druckfeder",
+   "short": "Feder",
+   "shape": "cyl",
+   "x": 2.75,
+   "y": 2.75,
+   "w": 4.5,
+   "z": 100,
+   "h": 10,
+   "explode": [
+    22,
+    0,
+    45
+   ],
+   "mass": 0.22,
+   "materials": [
+    [
+     "stahl",
+     100
+    ]
+   ],
+   "info": "Kleine Stahlfeder um die Mine. Sie drückt die Mine nach vorne, damit sie beim Schreiben nicht wackelt. Mit einer Pinzette abziehen; sie gehört nicht in die Gelbe Tonne.",
+   "color": "#B8BEC4",
    "marks": [
     {
-     "shape": "box",
-     "x": 0.2,
-     "y": 0.5,
-     "w": 1.1,
-     "d": 2,
-     "r": 0.3,
-     "fill": "#3A6DB8"
+     "shape": "cyl",
+     "x": 0.75,
+     "y": 0.75,
+     "w": 3
     }
    ]
   },
@@ -98,9 +115,9 @@
    "explode": [
     22,
     0,
-    26
+    8
    ],
-   "mass": 0.32,
+   "mass": 0.33,
    "materials": [
     [
      "messing",
@@ -113,7 +130,6 @@
    ],
    "info": "Messinghülse mit einer winzigen Kugel aus Hartmetall. Die Kugel rollt über das Papier und nimmt dabei Tinte mit.",
    "color": "#C9A24A",
-   "sortBias": -60,
    "marks": [
     {
      "shape": "cyl",
@@ -121,42 +137,6 @@
      "y": 0.75,
      "w": 1,
      "fill": "#8E969A"
-    }
-   ]
-  },
-  {
-   "id": "feder",
-   "component_id": "steel_spring",
-   "material_id": "steel",
-   "name": "Druckfeder",
-   "short": "Feder",
-   "shape": "cyl",
-   "x": 2.75,
-   "y": 2.75,
-   "w": 4.5,
-   "z": 100,
-   "h": 10,
-   "explode": [
-    22,
-    0,
-    28
-   ],
-   "mass": 0.21,
-   "materials": [
-    [
-     "stahl",
-     100
-    ]
-   ],
-   "info": "Kleine Stahlfeder um die Mine. Sie drückt die Mine nach vorne, damit sie beim Schreiben nicht wackelt. Mit einer Pinzette abziehen; sie gehört nicht in die Gelbe Tonne.",
-   "color": "#B8BEC4",
-   "sortBias": -60,
-   "marks": [
-    {
-     "shape": "cyl",
-     "x": 0.75,
-     "y": 0.75,
-     "w": 3
     }
    ]
   },
@@ -177,7 +157,7 @@
     0,
     0
    ],
-   "mass": 1.17,
+   "mass": 1.22,
    "materials": [
     [
      "pp",
@@ -190,7 +170,6 @@
    ],
    "info": "Polypropylen-Röhrchen mit zäher Kugelschreiberpaste. Lieber nur die Mine wechseln als den ganzen Stift wegwerfen.",
    "color": "#E4E8EA",
-   "sortBias": -60,
    "marks": [
     {
      "shape": "cyl",
@@ -202,115 +181,42 @@
    ]
   },
   {
-   "id": "griffzone",
-   "component_id": "pen_barrel",
-   "material_id": "rubber",
-   "name": "Gummierte Griffzone",
-   "short": "Griffzone",
-   "shape": "cyl",
-   "x": -0.25,
-   "y": -0.25,
-   "w": 10.5,
-   "z": 75,
-   "h": 27,
-   "explode": [
-    -20,
-    0,
-    20
-   ],
-   "mass": 0.64,
-   "materials": [
-    [
-     "tpe",
-     100
-    ]
-   ],
-   "info": "Weiche Hülle aus TPE, über das Griffstück geschoben. Sie lässt sich abziehen und gehört in den Restmüll.",
-   "color": "#2A2E31",
-   "sortBias": 12,
-   "marks": [
-    {
-     "shape": "cyl",
-     "x": 1.5,
-     "y": 1.5,
-     "w": 7.5,
-     "fill": "#3A3F44"
-    }
-   ]
-  },
-  {
    "id": "griffstueck",
    "component_id": "pen_barrel",
    "material_id": "pp",
    "name": "Griffstück",
    "short": "Griffstück",
    "shape": "cyl",
-   "x": 0.75,
-   "y": 0.75,
-   "w": 8.5,
+   "x": 0.25,
+   "y": 0.25,
+   "w": 9.5,
    "z": 75,
    "h": 37,
    "explode": [
     0,
     0,
-    20
+    14
    ],
-   "mass": 1.07,
+   "mass": 1.44,
    "materials": [
     [
      "pp",
-     100
-    ]
-   ],
-   "info": "Vorderer Teil des Schafts mit Gewinde. Abschrauben, dann lässt sich die Mine herausnehmen.",
-   "color": "#3A6DB8",
-   "marks": [
-    {
-     "shape": "cyl",
-     "x": 2.5,
-     "y": 2.5,
-     "w": 3.5,
-     "fill": "#C9A24A"
-    }
-   ]
-  },
-  {
-   "id": "zierring",
-   "component_id": "pen_barrel",
-   "material_id": "pp",
-   "name": "Zierring",
-   "short": "Zierring",
-   "shape": "cyl",
-   "x": -0.2,
-   "y": -0.2,
-   "w": 10.4,
-   "z": 72,
-   "h": 3,
-   "explode": [
-    0,
-    0,
-    10
-   ],
-   "mass": 0.21,
-   "materials": [
-    [
-     "pp",
-     90
+     85
     ],
     [
-     "alu",
-     10
+     "tpe",
+     15
     ]
    ],
-   "info": "Silbern bedampfter Kunststoffring an der Trennstelle. Die hauchdünne Metallschicht lässt sich nicht abtrennen.",
-   "color": "#C9CDD0",
+   "info": "Vorderer Teil des Schafts, oft mit gummierter Griffzone. Abschrauben, dann lässt sich die Mine herausnehmen.",
+   "color": "#2A2E31",
    "marks": [
     {
      "shape": "cyl",
-     "x": 1.5,
-     "y": 1.5,
-     "w": 7.4,
-     "fill": "#E4E8EA"
+     "x": 3,
+     "y": 3,
+     "w": 3.5,
+     "fill": "#C9A24A"
     }
    ]
   },
@@ -324,14 +230,14 @@
    "x": 0,
    "y": 0,
    "w": 10,
-   "z": 4,
-   "h": 68,
+   "z": 0,
+   "h": 75,
    "explode": [
     0,
     0,
     0
    ],
-   "mass": 2.56,
+   "mass": 2.89,
    "materials": [
     [
      "pp",
@@ -349,33 +255,6 @@
      "fill": "#E4E8EA"
     }
    ]
-  },
-  {
-   "id": "endstopfen",
-   "component_id": "pen_barrel",
-   "material_id": "pp",
-   "name": "Endstopfen",
-   "short": "Endstopfen",
-   "shape": "cyl",
-   "x": 0.5,
-   "y": 0.5,
-   "w": 9,
-   "z": 0,
-   "h": 4,
-   "explode": [
-    0,
-    0,
-    -10
-   ],
-   "mass": 0.21,
-   "materials": [
-    [
-     "pp",
-     100
-    ]
-   ],
-   "info": "Eingepresster Stopfen am Ende des Schafts. Er hält die Mine von hinten in Position.",
-   "color": "#1E3F73"
   }
  ]
 }

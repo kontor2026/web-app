@@ -43,7 +43,7 @@
    "Fe": "Modellmassen (Schätzung)"
   },
   "materialien_g": {
-   "pp": 370.4,
+   "pp": 370.3,
    "steel": 29.6
   },
   "co2_kg": 0.785,
@@ -72,27 +72,15 @@
    },
    "eucrm2023": {
     "titel": "Study on the Critical Raw Materials for the EU 2023 – Final Report",
-    "url": "https://op.europa.eu/o/opportal-service/download-handler?identifier=57318397-fdd4-11ed-a05c-01aa75ed71a1&format=pdf&language=en&productionSystem=cellar&part="
+    "url": "https://single-market-economy.ec.europa.eu/publications/study-critical-raw-materials-eu-2023-final-report_en"
    },
    "eu2024crma": {
     "titel": "Verordnung (EU) 2024/1252 zur Schaffung eines Rahmens zur Gewährleistung einer sicheren und nachhaltigen Versorgung mit kritischen Rohstoffen (Critical Raw Materials Act)",
-    "url": "https://op.europa.eu/o/opportal-service/download-handler?identifier=aa3c49f7-08e7-11ef-a251-01aa75ed71a1&format=pdf&language=en&productionSystem=cellar&part="
+    "url": "https://op.europa.eu/en/publication-detail/-/publication/aa3c49f7-08e7-11ef-a251-01aa75ed71a1"
    },
    "usdapsd2026": {
     "titel": "Production, Supply and Distribution Online (PSD), Datensatz Cotton (psd_cotton_csv.zip)",
     "url": "https://apps.fas.usda.gov/psdonline/downloads/psd_cotton_csv.zip"
-   },
-   "eia2026intl": {
-    "titel": "International Energy Statistics, Bulk-Download INTL.zip",
-    "url": "https://www.eia.gov/opendata/bulk/INTL.zip"
-   },
-   "faostat2025qcl": {
-    "titel": "FAOSTAT Crops and livestock products (QCL), Bulk-Download Production_Crops_Livestock_E_All_Data_(Normalized).zip",
-    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip"
-   },
-   "faostat2026fo": {
-    "titel": "FAOSTAT Forestry Production and Trade (FO), Bulk-Download Forestry_E_All_Data_(Normalized).zip",
-    "url": "https://bulks-faostat.fao.org/production/Forestry_E_All_Data_(Normalized).zip"
    }
   }
  },
@@ -286,55 +274,19 @@
      "fill": "#DADAD4"
     },
     {
-     "shape": "cyl",
-     "x": 56,
-     "y": 56,
-     "w": 88,
-     "fill": "#E2E2DC"
-    },
-    {
      "shape": "box",
-     "x": 62,
-     "y": 96,
-     "w": 76,
-     "d": 8,
-     "r": 2,
-     "fill": "#CFCFC8"
-    },
-    {
-     "shape": "box",
-     "x": 93,
-     "y": 0,
-     "w": 14,
-     "d": 6,
-     "r": 1,
-     "fill": "#2F6DB5"
-    },
-    {
-     "shape": "box",
-     "x": 93,
-     "y": 194,
-     "w": 14,
-     "d": 6,
-     "r": 1,
-     "fill": "#2F6DB5"
-    },
-    {
-     "shape": "box",
-     "x": 0,
-     "y": 93,
+     "x": 94,
+     "y": 2,
      "w": 6,
-     "d": 14,
-     "r": 1,
+     "d": 6,
      "fill": "#2F6DB5"
     },
     {
      "shape": "box",
-     "x": 194,
-     "y": 93,
+     "x": 100,
+     "y": 2,
      "w": 6,
-     "d": 14,
-     "r": 1,
+     "d": 6,
      "fill": "#2F6DB5"
     }
    ]
@@ -385,14 +337,14 @@
    "x": 2,
    "y": 2,
    "w": 196,
-   "z": 172,
-   "h": 14,
+   "z": 96,
+   "h": 90,
    "explode": [
     0,
     0,
     0.0
    ],
-   "mass": 19.8,
+   "mass": 108.6,
    "materials": [
     [
      "pp",
@@ -403,51 +355,23 @@
    "color": "#F4F4F1"
   },
   {
-   "id": "wand_mitte",
-   "component_id": "pp_bucket_body",
-   "material_id": "pp",
-   "name": "Eimerwand",
-   "short": "Wand",
-   "shape": "cyl",
-   "x": 4,
-   "y": 4,
-   "w": 192,
-   "z": 32,
-   "h": 140,
-   "explode": [
-    0,
-    0,
-    0.0
-   ],
-   "mass": 158,
-   "materials": [
-    [
-     "pp",
-     100
-    ]
-   ],
-   "info": "Die Wand wird nach unten etwas enger, so lassen sich leere Eimer ineinanderstapeln.",
-   "color": "#F4F4F1",
-   "label": false
-  },
-  {
    "id": "wand_unten",
    "component_id": "pp_bucket_body",
    "material_id": "pp",
    "name": "Eimerwand unten",
    "short": "Wand",
    "shape": "cyl",
-   "x": 7,
-   "y": 7,
-   "w": 186,
+   "x": 6,
+   "y": 6,
+   "w": 188,
    "z": 8,
-   "h": 24,
+   "h": 88,
    "explode": [
     0,
     0,
     0.0
    ],
-   "mass": 24.7,
+   "mass": 93.8,
    "materials": [
     [
      "pp",
@@ -462,7 +386,7 @@
    "id": "boden",
    "component_id": "pp_bucket_body",
    "material_id": "pp",
-   "name": "Eimerboden mit Standring",
+   "name": "Eimerboden",
    "short": "Boden",
    "shape": "cyl",
    "x": 9,
@@ -492,16 +416,18 @@
    "material_id": "pp",
    "name": "In-Mould-Etikett",
    "short": "Etikett",
-   "shape": "cyl",
-   "x": 3,
-   "y": 3,
-   "w": 194,
-   "z": 36,
-   "h": 136,
+   "shape": "box",
+   "x": 198,
+   "y": 50,
+   "w": 0.3,
+   "d": 100,
+   "z": 30,
+   "h": 150,
+   "r": 0,
    "explode": [
-    250,
+    70,
     0,
-    -30
+    0
    ],
    "mass": 4,
    "materials": [
@@ -514,26 +440,9 @@
      8
     ]
    ],
-   "info": "Bedruckte PP-Folie rund um den Eimer, beim Spritzgießen mit der Wand verschmolzen. Nicht ablösbar, muss aber auch nicht: Sie ist aus demselben Kunststoff.",
+   "info": "Bedruckte PP-Folie, die beim Spritzgießen mit der Wand verschmolzen wird. Nicht ablösbar, muss aber auch nicht: Sie ist aus demselben Kunststoff.",
    "color": "#2F6DB5",
-   "sortBias": 1,
-   "marks": [
-    {
-     "shape": "cyl",
-     "x": 1,
-     "y": 1,
-     "w": 192,
-     "fill": "#C9CCD0"
-    },
-    {
-     "shape": "cyl",
-     "x": 40,
-     "y": 60,
-     "w": 140,
-     "d": 128,
-     "fill": "#DADCDF"
-    }
-   ]
+   "sortBias": 100
   }
  ]
 }

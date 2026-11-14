@@ -20,6 +20,10 @@ erDiagram
     OBJECT {
         string id PK
         string name
+        float weight
+        float width
+        float depth
+        float height
     }
     OBJECT_COMPONENT {
         string object_id PK, FK

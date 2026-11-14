@@ -39,8 +39,8 @@
   "metalle_mg": {},
   "herkunft": {},
   "materialien_g": {
-   "hdpe": 568.3,
-   "pp": 31.4
+   "hdpe": 567.5,
+   "pp": 32.3
   },
   "co2_kg": 1.288,
   "co2_mit_recyclat_kg": 0.167,
@@ -68,27 +68,15 @@
    },
    "eucrm2023": {
     "titel": "Study on the Critical Raw Materials for the EU 2023 – Final Report",
-    "url": "https://op.europa.eu/o/opportal-service/download-handler?identifier=57318397-fdd4-11ed-a05c-01aa75ed71a1&format=pdf&language=en&productionSystem=cellar&part="
+    "url": "https://single-market-economy.ec.europa.eu/publications/study-critical-raw-materials-eu-2023-final-report_en"
    },
    "eu2024crma": {
     "titel": "Verordnung (EU) 2024/1252 zur Schaffung eines Rahmens zur Gewährleistung einer sicheren und nachhaltigen Versorgung mit kritischen Rohstoffen (Critical Raw Materials Act)",
-    "url": "https://op.europa.eu/o/opportal-service/download-handler?identifier=aa3c49f7-08e7-11ef-a251-01aa75ed71a1&format=pdf&language=en&productionSystem=cellar&part="
+    "url": "https://op.europa.eu/en/publication-detail/-/publication/aa3c49f7-08e7-11ef-a251-01aa75ed71a1"
    },
    "usdapsd2026": {
     "titel": "Production, Supply and Distribution Online (PSD), Datensatz Cotton (psd_cotton_csv.zip)",
     "url": "https://apps.fas.usda.gov/psdonline/downloads/psd_cotton_csv.zip"
-   },
-   "eia2026intl": {
-    "titel": "International Energy Statistics, Bulk-Download INTL.zip",
-    "url": "https://www.eia.gov/opendata/bulk/INTL.zip"
-   },
-   "faostat2025qcl": {
-    "titel": "FAOSTAT Crops and livestock products (QCL), Bulk-Download Production_Crops_Livestock_E_All_Data_(Normalized).zip",
-    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip"
-   },
-   "faostat2026fo": {
-    "titel": "FAOSTAT Forestry Production and Trade (FO), Bulk-Download Forestry_E_All_Data_(Normalized).zip",
-    "url": "https://bulks-faostat.fao.org/production/Forestry_E_All_Data_(Normalized).zip"
    }
   }
  },
@@ -131,17 +119,17 @@
    "name": "Lochplatte der Brause",
    "short": "Lochplatte",
    "shape": "cyl",
-   "x": 375,
+   "x": 380,
    "y": 40,
    "w": 70,
-   "z": 270,
+   "z": 272,
    "h": 3,
    "explode": [
     90,
     0,
     70
    ],
-   "mass": 7.6,
+   "mass": 7.8,
    "materials": [
     [
      "pp",
@@ -455,17 +443,17 @@
    "name": "Brausekopf",
    "short": "Brause",
    "shape": "cyl",
-   "x": 375,
+   "x": 380,
    "y": 40,
    "w": 70,
-   "z": 248,
+   "z": 250,
    "h": 22,
    "explode": [
     90,
     0,
     20
    ],
-   "mass": 23.8,
+   "mass": 24.5,
    "materials": [
     [
      "pp",
@@ -503,7 +491,7 @@
     0,
     0
    ],
-   "mass": 38.1,
+   "mass": 39.2,
    "materials": [
     [
      "hdpe",
@@ -543,7 +531,7 @@
     0,
     0
    ],
-   "mass": 7.6,
+   "mass": 7.8,
    "materials": [
     [
      "hdpe",
@@ -573,7 +561,7 @@
     0,
     0
    ],
-   "mass": 7.6,
+   "mass": 7.8,
    "materials": [
     [
      "hdpe",
@@ -602,7 +590,7 @@
     0,
     0
    ],
-   "mass": 14.3,
+   "mass": 14.7,
    "materials": [
     [
      "hdpe",
@@ -623,66 +611,25 @@
    ]
   },
   {
-   "id": "rohr_5",
-   "component_id": "watering_can_body",
-   "material_id": "hdpe",
-   "name": "Ausgussrohr",
-   "short": "Ausgussrohr",
-   "shape": "box",
-   "x": 390,
-   "y": 57,
-   "w": 40,
-   "d": 36,
-   "z": 210,
-   "h": 38,
-   "r": 14,
-   "explode": [
-    0,
-    0,
-    0
-   ],
-   "mass": 15.2,
-   "materials": [
-    [
-     "hdpe",
-     100
-    ]
-   ],
-   "info": "Das Ausgussrohr ist mit der Kanne aus einem Stück geblasen.",
-   "color": "#3F8F5A",
-   "label": true,
-   "marks": [
-    {
-     "shape": "box",
-     "x": 6,
-     "y": 6,
-     "w": 32,
-     "d": 24,
-     "r": 10,
-     "fill": "#347A4C"
-    }
-   ]
-  },
-  {
    "id": "rohr_4",
    "component_id": "watering_can_body",
    "material_id": "hdpe",
    "name": "Ausgussrohr",
    "short": "Ausgussrohr",
    "shape": "box",
-   "x": 360,
-   "y": 57,
+   "x": 385,
+   "y": 55,
    "w": 40,
-   "d": 36,
-   "z": 172,
-   "h": 38,
+   "d": 40,
+   "z": 190,
+   "h": 60,
    "r": 14,
    "explode": [
     0,
     0,
     0
    ],
-   "mass": 15.2,
+   "mass": 17.6,
    "materials": [
     [
      "hdpe",
@@ -690,8 +637,7 @@
     ]
    ],
    "info": "Das Ausgussrohr ist mit der Kanne aus einem Stück geblasen.",
-   "color": "#3F8F5A",
-   "label": false
+   "color": "#3F8F5A"
   },
   {
    "id": "rohr_3",
@@ -700,19 +646,19 @@
    "name": "Ausgussrohr",
    "short": "Ausgussrohr",
    "shape": "box",
-   "x": 330,
-   "y": 57,
-   "w": 40,
-   "d": 36,
-   "z": 134,
-   "h": 38,
+   "x": 340,
+   "y": 55,
+   "w": 45,
+   "d": 40,
+   "z": 130,
+   "h": 65,
    "r": 14,
    "explode": [
     0,
     0,
     0
    ],
-   "mass": 15.2,
+   "mass": 19.6,
    "materials": [
     [
      "hdpe",
@@ -730,19 +676,19 @@
    "name": "Ausgussrohr",
    "short": "Ausgussrohr",
    "shape": "box",
-   "x": 300,
-   "y": 57,
-   "w": 40,
-   "d": 36,
-   "z": 96,
-   "h": 38,
+   "x": 290,
+   "y": 55,
+   "w": 50,
+   "d": 40,
+   "z": 70,
+   "h": 65,
    "r": 14,
    "explode": [
     0,
     0,
     0
    ],
-   "mass": 15.2,
+   "mass": 19.6,
    "materials": [
     [
      "hdpe",
@@ -760,49 +706,19 @@
    "name": "Ausgussrohr",
    "short": "Ausgussrohr",
    "shape": "box",
-   "x": 270,
-   "y": 57,
-   "w": 40,
-   "d": 36,
-   "z": 58,
-   "h": 38,
-   "r": 14,
-   "explode": [
-    0,
-    0,
-    0
-   ],
-   "mass": 15.2,
-   "materials": [
-    [
-     "hdpe",
-     100
-    ]
-   ],
-   "info": "Das Ausgussrohr ist mit der Kanne aus einem Stück geblasen.",
-   "color": "#3F8F5A",
-   "label": false
-  },
-  {
-   "id": "rohr_0",
-   "component_id": "watering_can_body",
-   "material_id": "hdpe",
-   "name": "Ausgussrohr",
-   "short": "Ausgussrohr",
-   "shape": "box",
    "x": 240,
-   "y": 57,
-   "w": 40,
-   "d": 36,
+   "y": 55,
+   "w": 50,
+   "d": 40,
    "z": 20,
-   "h": 38,
+   "h": 55,
    "r": 14,
    "explode": [
     0,
     0,
     0
    ],
-   "mass": 15.2,
+   "mass": 19.6,
    "materials": [
     [
      "hdpe",
@@ -832,7 +748,7 @@
     0,
     0
    ],
-   "mass": 409.5,
+   "mass": 421.6,
    "materials": [
     [
      "hdpe",

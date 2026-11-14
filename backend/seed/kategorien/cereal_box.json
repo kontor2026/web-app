@@ -68,27 +68,15 @@
    },
    "eucrm2023": {
     "titel": "Study on the Critical Raw Materials for the EU 2023 – Final Report",
-    "url": "https://op.europa.eu/o/opportal-service/download-handler?identifier=57318397-fdd4-11ed-a05c-01aa75ed71a1&format=pdf&language=en&productionSystem=cellar&part="
+    "url": "https://single-market-economy.ec.europa.eu/publications/study-critical-raw-materials-eu-2023-final-report_en"
    },
    "eu2024crma": {
     "titel": "Verordnung (EU) 2024/1252 zur Schaffung eines Rahmens zur Gewährleistung einer sicheren und nachhaltigen Versorgung mit kritischen Rohstoffen (Critical Raw Materials Act)",
-    "url": "https://op.europa.eu/o/opportal-service/download-handler?identifier=aa3c49f7-08e7-11ef-a251-01aa75ed71a1&format=pdf&language=en&productionSystem=cellar&part="
+    "url": "https://op.europa.eu/en/publication-detail/-/publication/aa3c49f7-08e7-11ef-a251-01aa75ed71a1"
    },
    "usdapsd2026": {
     "titel": "Production, Supply and Distribution Online (PSD), Datensatz Cotton (psd_cotton_csv.zip)",
     "url": "https://apps.fas.usda.gov/psdonline/downloads/psd_cotton_csv.zip"
-   },
-   "eia2026intl": {
-    "titel": "International Energy Statistics, Bulk-Download INTL.zip",
-    "url": "https://www.eia.gov/opendata/bulk/INTL.zip"
-   },
-   "faostat2025qcl": {
-    "titel": "FAOSTAT Crops and livestock products (QCL), Bulk-Download Production_Crops_Livestock_E_All_Data_(Normalized).zip",
-    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip"
-   },
-   "faostat2026fo": {
-    "titel": "FAOSTAT Forestry Production and Trade (FO), Bulk-Download Forestry_E_All_Data_(Normalized).zip",
-    "url": "https://bulks-faostat.fao.org/production/Forestry_E_All_Data_(Normalized).zip"
    }
   }
  },
@@ -155,7 +143,7 @@
     ]
    ],
    "info": "Zwei lange und zwei kurze Laschen, mit Heißleim verklebt. Zum Öffnen an der Lasche aufziehen.",
-   "color": "#C8423A",
+   "color": "#D8A440",
    "marks": [
     {
      "shape": "box",
@@ -164,34 +152,16 @@
      "w": 190,
      "d": 4,
      "r": 0,
-     "fill": "#9E3530"
+     "fill": "#B3842E"
     },
     {
      "shape": "box",
      "x": 80,
-     "y": 31,
+     "y": 33,
      "w": 30,
-     "d": 8,
-     "r": 2,
-     "fill": "#F2EBDD"
-    },
-    {
-     "shape": "box",
-     "x": 20,
-     "y": 8,
-     "w": 60,
-     "d": 14,
-     "r": 2,
-     "fill": "#F2EBDD"
-    },
-    {
-     "shape": "box",
-     "x": 110,
-     "y": 48,
-     "w": 60,
-     "d": 14,
-     "r": 2,
-     "fill": "#F2EBDD"
+     "d": 4,
+     "r": 1,
+     "fill": "#3A3F44"
     }
    ]
   },
@@ -199,70 +169,22 @@
    "id": "mantel",
    "component_id": "cardboard_box_body",
    "material_id": "cardboard",
-   "name": "Faltschachtel (bedruckt)",
+   "name": "Faltschachtel",
    "short": "Schachtel",
    "shape": "box",
    "x": 0,
    "y": 0,
    "w": 190,
    "d": 70,
-   "z": 215,
-   "h": 69,
+   "z": 6,
+   "h": 278,
    "r": 0.5,
    "explode": [
     0,
     0,
     60
    ],
-   "mass": 14.2,
-   "materials": [
-    [
-     "papier",
-     93
-    ],
-    [
-     "druck",
-     6
-    ],
-    [
-     "klebstoff",
-     1
-    ]
-   ],
-   "info": "Bedruckter Frischfaserkarton, an einer Seitenkante verklebt. Leer flach drücken und ins Altpapier.",
-   "color": "#C8423A",
-   "marks": [
-    {
-     "shape": "box",
-     "x": 2,
-     "y": 2,
-     "w": 186,
-     "d": 66,
-     "r": 0,
-     "fill": "#8E6B45"
-    }
-   ]
-  },
-  {
-   "id": "mantel_mitte",
-   "component_id": "cardboard_box_body",
-   "material_id": "cardboard",
-   "name": "Faltschachtel, Mitte",
-   "short": "Schachtel",
-   "shape": "box",
-   "x": 0,
-   "y": 0,
-   "w": 190,
-   "d": 70,
-   "z": 40,
-   "h": 175,
-   "r": 0.5,
-   "explode": [
-    0,
-    0,
-    60
-   ],
-   "mass": 34.4,
+   "mass": 54.7,
    "materials": [
     [
      "papier",
@@ -277,43 +199,19 @@
      1
     ]
    ],
-   "info": "Der Aufdruck läuft um die ganze Schachtel: Bild vorne, Nährwerte und Zutaten an den Seiten.",
+   "info": "Bedruckter Karton, an einer Seitenkante verklebt. Leer flach drücken und ins Altpapier.",
    "color": "#D8A440",
-   "label": false
-  },
-  {
-   "id": "mantel_unten",
-   "component_id": "cardboard_box_body",
-   "material_id": "cardboard",
-   "name": "Faltschachtel, unten",
-   "short": "Schachtel",
-   "shape": "box",
-   "x": 0,
-   "y": 0,
-   "w": 190,
-   "d": 70,
-   "z": 6,
-   "h": 34,
-   "r": 0.5,
-   "explode": [
-    0,
-    0,
-    60
-   ],
-   "mass": 6.1,
-   "materials": [
-    [
-     "papier",
-     96
-    ],
-    [
-     "druck",
-     4
-    ]
-   ],
-   "info": "Unterer Rand mit Nährwerttabelle und Recyclinghinweis.",
-   "color": "#F2EBDD",
-   "label": false
+   "marks": [
+    {
+     "shape": "box",
+     "x": 2,
+     "y": 2,
+     "w": 186,
+     "d": 66,
+     "r": 0,
+     "fill": "#8E6B45"
+    }
+   ]
   },
   {
    "id": "laschen_unten",
@@ -363,9 +261,9 @@
    "h": 270,
    "r": 6,
    "explode": [
-    250,
+    230,
     0,
-    90
+    0
    ],
    "mass": 7.1,
    "materials": [
@@ -377,7 +275,6 @@
    "info": "PE-Beutel, hält das Müsli frisch und trocken. Gehört nicht ins Altpapier: leer in die Gelbe Tonne.",
    "color": "#E8EEF2",
    "opacity": 0.6,
-   "sortBias": -250,
    "marks": [
     {
      "shape": "box",

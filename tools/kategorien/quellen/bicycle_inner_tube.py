@@ -50,11 +50,8 @@ teile = [
          x=0, y=0, w=D, z=0, h=21, mass=130,
          info='Luftdichter Butylkautschuk mit Ruß, zusammengelegt. Ein Loch lässt sich flicken. Alte Schläuche '
               'eignen sich als Spanngummi oder Bastelmaterial, sonst Wertstoffhof oder Fahrradladen.',
-         color=GUMMI, marks=[mark('cyl', 8, 8, 284, fill='#323538'), mark('cyl', 20, 20, 260, fill='#2B2D2F'),
-                             mark('cyl', 42, 42, 216, fill='#323538'),
-                             mark('cyl', 50, 50, 200, fill='#1C1E20'),  # Innenwand des Lochs
-                             mark('cyl', 75.5, 75.5, 170, fill='#DCD8CE'),  # Tisch, durch das Loch gesehen
-                             mark('box', 126, 280, 48, 6, 2, '#8E969A'), mark('box', 120, 4, 8, 4, 1, '#8E969A')]),
+         color=GUMMI, marks=[mark('cyl', 50, 50, 200, fill='#45484B'), mark('cyl', 8, 8, 284, fill='#323538'),
+                             mark('cyl', 20, 20, 260, fill='#2B2D2F'), mark('box', 126, 280, 48, 6, 2, '#8E969A')]),
 ]
 explodiere(teile, abstand=25, nach_liste=True)
 skaliere_masse(teile, oid='bicycle_inner_tube')

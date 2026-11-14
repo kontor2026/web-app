@@ -26,7 +26,7 @@
   },
   {
    "k": "CO₂ der Materialien",
-   "v": "≈ 0,47 kg",
+   "v": "≈ 0,46 kg",
    "hint": "Neuware, ohne Montage und Transport (Idemat 2026)"
   },
   {
@@ -39,13 +39,13 @@
   "metalle_mg": {},
   "herkunft": {},
   "materialien_g": {
-   "cardboard": 591.5,
-   "pp": 7.0,
+   "cardboard": 592.8,
+   "pp": 5.6,
    "paper": 1.7
   },
-  "co2_kg": 0.465,
+  "co2_kg": 0.464,
   "co2_mit_recyclat_kg": 0.454,
-  "co2_ersparnis_kg": 0.011,
+  "co2_ersparnis_kg": 0.009,
   "co2_ohne_faktor": [],
   "rohstoffwert_eur": 0,
   "wert_ohne_preis": [],
@@ -69,27 +69,15 @@
    },
    "eucrm2023": {
     "titel": "Study on the Critical Raw Materials for the EU 2023 – Final Report",
-    "url": "https://op.europa.eu/o/opportal-service/download-handler?identifier=57318397-fdd4-11ed-a05c-01aa75ed71a1&format=pdf&language=en&productionSystem=cellar&part="
+    "url": "https://single-market-economy.ec.europa.eu/publications/study-critical-raw-materials-eu-2023-final-report_en"
    },
    "eu2024crma": {
     "titel": "Verordnung (EU) 2024/1252 zur Schaffung eines Rahmens zur Gewährleistung einer sicheren und nachhaltigen Versorgung mit kritischen Rohstoffen (Critical Raw Materials Act)",
-    "url": "https://op.europa.eu/o/opportal-service/download-handler?identifier=aa3c49f7-08e7-11ef-a251-01aa75ed71a1&format=pdf&language=en&productionSystem=cellar&part="
+    "url": "https://op.europa.eu/en/publication-detail/-/publication/aa3c49f7-08e7-11ef-a251-01aa75ed71a1"
    },
    "usdapsd2026": {
     "titel": "Production, Supply and Distribution Online (PSD), Datensatz Cotton (psd_cotton_csv.zip)",
     "url": "https://apps.fas.usda.gov/psdonline/downloads/psd_cotton_csv.zip"
-   },
-   "eia2026intl": {
-    "titel": "International Energy Statistics, Bulk-Download INTL.zip",
-    "url": "https://www.eia.gov/opendata/bulk/INTL.zip"
-   },
-   "faostat2025qcl": {
-    "titel": "FAOSTAT Crops and livestock products (QCL), Bulk-Download Production_Crops_Livestock_E_All_Data_(Normalized).zip",
-    "url": "https://bulks-faostat.fao.org/production/Production_Crops_Livestock_E_All_Data_(Normalized).zip"
-   },
-   "faostat2026fo": {
-    "titel": "FAOSTAT Forestry Production and Trade (FO), Bulk-Download Forestry_E_All_Data_(Normalized).zip",
-    "url": "https://bulks-faostat.fao.org/production/Forestry_E_All_Data_(Normalized).zip"
    }
   }
  },
@@ -142,7 +130,7 @@
    "explode": [
     0,
     0,
-    400
+    270.1
    ],
    "mass": 1.7,
    "materials": [
@@ -213,7 +201,7 @@
    "explode": [
     0,
     0,
-    370
+    225.0
    ],
    "mass": 2.8,
    "materials": [
@@ -229,42 +217,6 @@
    "info": "PP-Folie mit Klebstoff, verschließt die Mittelfuge der Deckelklappen. Vor dem Flachfalten abziehen und in die Gelbe Tonne oder den Restmüll geben.",
    "color": "#C8A15A",
    "opacity": 0.85
-  },
-  {
-   "id": "band_seite_oben",
-   "component_id": "packing_tape",
-   "material_id": "pp",
-   "name": "Klebeband, Seitenende oben",
-   "short": "Band",
-   "shape": "box",
-   "x": 400,
-   "y": 125,
-   "w": 0.2,
-   "d": 50,
-   "z": 190,
-   "h": 60.2,
-   "r": 0,
-   "explode": [
-    0,
-    0,
-    370
-   ],
-   "mass": 0.7,
-   "materials": [
-    [
-     "pp",
-     75
-    ],
-    [
-     "klebstoff",
-     25
-    ]
-   ],
-   "info": "Das Band läuft an den Seiten etwa 6 cm herunter, damit es sich nicht von der Fuge löst.",
-   "color": "#C8A15A",
-   "opacity": 0.9,
-   "label": false,
-   "sortBias": 12
   },
   {
    "id": "klappe_hinten",
@@ -283,9 +235,9 @@
    "explode": [
     0,
     0,
-    230
+    180.0
    ],
-   "mass": 53.4,
+   "mass": 53.5,
    "materials": [
     [
      "papier",
@@ -293,18 +245,7 @@
     ]
    ],
    "info": "Lange Außenklappe, an der Rückwand angeknickt. Die beiden Außenklappen treffen sich in der Mitte.",
-   "color": "#C49A6C",
-   "marks": [
-    {
-     "shape": "box",
-     "x": 0,
-     "y": 0,
-     "w": 400,
-     "d": 2,
-     "r": 0,
-     "fill": "#9E7A52"
-    }
-   ]
+   "color": "#C49A6C"
   },
   {
    "id": "klappe_vorne",
@@ -323,9 +264,9 @@
    "explode": [
     0,
     0,
-    230
+    180.0
    ],
-   "mass": 53.4,
+   "mass": 53.5,
    "materials": [
     [
      "papier",
@@ -352,56 +293,29 @@
      "d": 24,
      "r": 1,
      "fill": "#C49A6C"
-    },
-    {
-     "shape": "box",
-     "x": 300,
-     "y": 95,
-     "w": 22,
-     "d": 30,
-     "r": 2,
-     "fill": "#3A3F44"
-    },
-    {
-     "shape": "box",
-     "x": 305,
-     "y": 100,
-     "w": 12,
-     "d": 14,
-     "r": 6,
-     "fill": "#C49A6C"
-    },
-    {
-     "shape": "box",
-     "x": 0,
-     "y": 148,
-     "w": 400,
-     "d": 2,
-     "r": 0,
-     "fill": "#9E7A52"
     }
    ]
   },
   {
-   "id": "innenklappe_links",
+   "id": "innenklappen",
    "component_id": "cardboard_box_body",
    "material_id": "cardboard",
-   "name": "Innenklappe links",
+   "name": "Innenklappen links und rechts",
    "short": "Innenklappen",
    "shape": "box",
    "x": 4,
    "y": 4,
-   "w": 150,
+   "w": 392,
    "d": 292,
    "z": 242.1,
    "h": 4,
    "r": 0,
    "explode": [
-    -200,
     0,
-    110
+    0,
+    135.0
    ],
-   "mass": 27.8,
+   "mass": 55.7,
    "materials": [
     [
      "papier",
@@ -415,51 +329,19 @@
      "shape": "box",
      "x": 0,
      "y": 0,
-     "w": 2,
+     "w": 150,
      "d": 292,
      "r": 0,
-     "fill": "#8E6B45"
-    }
-   ]
-  },
-  {
-   "id": "innenklappe_rechts",
-   "component_id": "cardboard_box_body",
-   "material_id": "cardboard",
-   "name": "Innenklappe rechts",
-   "short": "Innenklappe",
-   "shape": "box",
-   "x": 246,
-   "y": 4,
-   "w": 150,
-   "d": 292,
-   "z": 242.1,
-   "h": 4,
-   "r": 0,
-   "explode": [
-    200,
-    0,
-    110
-   ],
-   "mass": 27.8,
-   "materials": [
-    [
-     "papier",
-     100
-    ]
-   ],
-   "info": "Gegenstück zur linken Innenklappe.",
-   "color": "#B98D5F",
-   "label": false,
-   "marks": [
+     "fill": "#C49A6C"
+    },
     {
      "shape": "box",
-     "x": 148,
+     "x": 242,
      "y": 0,
-     "w": 2,
+     "w": 150,
      "d": 292,
      "r": 0,
-     "fill": "#8E6B45"
+     "fill": "#C49A6C"
     }
    ]
   },
@@ -480,9 +362,9 @@
    "explode": [
     0,
     0,
-    60
+    90.0
    ],
-   "mass": 211.2,
+   "mass": 211.7,
    "materials": [
     [
      "papier",
@@ -533,9 +415,9 @@
    "explode": [
     0,
     0,
-    0
+    45.0
    ],
-   "mass": 217.9,
+   "mass": 218.4,
    "materials": [
     [
      "papier",
@@ -557,42 +439,6 @@
    ]
   },
   {
-   "id": "band_seite_unten",
-   "component_id": "packing_tape",
-   "material_id": "pp",
-   "name": "Klebeband, Seitenende unten",
-   "short": "Band",
-   "shape": "box",
-   "x": 400,
-   "y": 125,
-   "w": 0.2,
-   "d": 50,
-   "z": 0,
-   "h": 60,
-   "r": 0,
-   "explode": [
-    0,
-    0,
-    -45
-   ],
-   "mass": 0.7,
-   "materials": [
-    [
-     "pp",
-     75
-    ],
-    [
-     "klebstoff",
-     25
-    ]
-   ],
-   "info": "Unteres Bandende an der Seitenwand.",
-   "color": "#C8A15A",
-   "opacity": 0.9,
-   "label": false,
-   "sortBias": 200
-  },
-  {
    "id": "klebeband_unten",
    "component_id": "packing_tape",
    "material_id": "pp",
@@ -609,7 +455,7 @@
    "explode": [
     0,
     0,
-    -45
+    0.0
    ],
    "mass": 2.8,
    "materials": [

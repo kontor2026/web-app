@@ -16,29 +16,19 @@ SILBER = '#C9CDD0'
 VERBUND = [['verbundfolie', 96], ['druck', 3], ['alu', 1]]  # PET/Alu/PE-Verbund, bedruckt
 teile = [
     teil('siegelnaht', 'multilayer_film', 'Siegelnaht (Kopf)', 'Siegelnaht', 'box',
-         x=0, y=26, w=100, d=8, z=207, h=13, r=0, mass=0.6, materials=VERBUND, color=DRUCK,
+         x=0, y=27, w=100, d=6, z=205, h=15, r=0, mass=0.6, materials=VERBUND, color=DRUCK,
          info='Oben sind alle Folienlagen heiß verschweißt. Zum Öffnen unterhalb der Naht abschneiden.',
-         marks=raster(1, 1, 33, 1, 2, 6, 3, fill='#5A4436')),
+         marks=raster(1, 1, 33, 1, 2, 4, 3, fill='#5A4436')),
     teil('kopf', 'multilayer_film', 'Kopfteil (zusammengelegt)', 'Kopf', 'box',
-         x=0, y=18, w=100, d=24, z=195, h=12, r=3, mass=0.8, materials=VERBUND, color=DRUCK,
+         x=0, y=12, w=100, d=36, z=190, h=15, r=6, mass=1.0, materials=VERBUND, color=DRUCK,
          info='Beim Verschließen werden die Seitenfalten nach innen gelegt, so wird der Beutel oben flach.',
-         marks=[mark('box', 0, 11, 100, 2, 0, '#5A4436')]),
-    teil('schulter', 'multilayer_film', 'Gefaltete Schulter', 'Schulter', 'box',
-         x=0, y=0, w=100, d=60, z=190, h=5, r=3, mass=0.6, materials=VERBUND, color=DRUCK,
-         info='Hier sind die Seitenfalten zu Dreiecken flach gelegt und auf den Mantel geklebt.',
-         marks=[mark('box', 0, 0, 22, 60, 2, '#4A372D'), mark('box', 78, 0, 22, 60, 2, '#4A372D'),
-                mark('box', 22, 29, 56, 2, 0, '#5A4436')]),
+         marks=[mark('box', 0, 17, 100, 2, 0, '#5A4436')]),
     teil('ventil', 'degassing_valve', 'Aromaschutzventil', 'Ventil', 'box',
          x=39, y=60, w=22, d=2.5, z=150, h=22, r=1.2, mass=0.6, materials=[['ldpe', 85], ['pp', 10], ['klebstoff', 5]],
-         color='#E9E6DF', sortBias=45,
+         color='#E9E6DF',
          info='Kleines Einwegventil: Frisch gerösteter Kaffee gibt Kohlendioxid ab, das hier entweicht, ohne dass '
               'Luft hineinkommt. Mit der Schere herausschneiden.',
          marks=[mark('cyl', 7, 0.5, 8, 1.5, fill='#9C968A')]),
-    teil('etikett', 'multilayer_film', 'Bedruckte Vorderseite', 'Aufdruck', 'box',
-         x=10, y=60, w=80, d=0.6, z=40, h=90, r=0, mass=0.2, materials=[['druck', 60], ['verbundfolie', 40]],
-         color='#C49A3A', sortBias=150,
-         info='Die Farbe ist direkt auf die Folie gedruckt, nicht aufgeklebt. Sie wird beim Recycling mit der Folie '
-              'zusammen verarbeitet.'),
     teil('mantel', 'multilayer_film', 'Mantel aus Verbundfolie', 'Mantel', 'box',
          x=0, y=0, w=100, d=60, z=3, h=187, r=3, mass=7.6, materials=VERBUND, color=DRUCK,
          info='Mehrere fest verklebte Schichten aus Kunststoff und Aluminium halten Licht, Sauerstoff und Feuchte ab. '
@@ -54,7 +44,7 @@ teile = [
          marks=[mark('box', 2, 2, 96, 56, 2, SILBER), mark('box', 2, 28, 96, 4, 0, '#8E969A'),
                 mark('box', 2, 2, 20, 56, 0, '#B5BBBF'), mark('box', 78, 2, 20, 56, 0, '#B5BBBF')]),
 ]
-seitlich = {'ventil': (0, 90), 'etikett': (0, 0), 'laengsnaht': (30, -50)}
+seitlich = {'ventil': (0, 50), 'laengsnaht': (0, -45)}
 explodiere([p for p in teile if p['id'] not in seitlich], abstand=35)
 dz_mantel = next(p for p in teile if p['id'] == 'mantel')['explode'][2]
 for p in teile:

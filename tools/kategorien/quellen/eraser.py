@@ -13,19 +13,19 @@ HUELLE = '#3E6E9E'
 
 teile = [
     teil('manschette_oben', 'paper_label', 'Papiermanschette (Oberseite)', 'Manschette', 'box',
-         x=0, y=8, w=20, d=24, z=9.7, h=0.3, r=0, explode=[0, 0, 16], mass=0.08, materials=[['papier', 92], ['druck', 8]],
+         x=0, y=8, w=20, d=24, z=9.7, h=0.3, r=0, explode=[0, 0, 14], mass=0.08, materials=[['papier', 92], ['druck', 8]],
          info='Bedruckter Papierstreifen um den Radierer. Er schützt die Kanten und lässt sich einfach abstreifen; ins Altpapier.',
          color=HUELLE, marks=[mark('box', 2, 6, 16, 6, 1, WEISS), mark('box', 2, 15, 16, 3, 0.5, '#F2E23A')]),
     teil('manschette_links', 'paper_label', 'Manschette (linke Seite)', 'Seite links', 'box',
-         x=0, y=8, w=0.3, d=24, z=0.3, h=9.4, r=0, explode=[-14, 0, 22], mass=0.03, label=False,
+         x=0, y=8, w=0.3, d=24, z=0.3, h=9.4, r=0, explode=[-12, 0, 0], mass=0.03, label=False,
          info='Seitenteil des Papierstreifens.',
          color=HUELLE),
     teil('manschette_rechts', 'paper_label', 'Manschette (rechte Seite)', 'Seite rechts', 'box',
-         x=19.7, y=8, w=0.3, d=24, z=0.3, h=9.4, r=0, explode=[14, 0, 0], mass=0.03, label=False,
+         x=19.7, y=8, w=0.3, d=24, z=0.3, h=9.4, r=0, explode=[12, 0, 0], mass=0.03, label=False,
          info='Seitenteil des Papierstreifens.',
          color=HUELLE),
     teil('radierer', 'eraser_block', 'Radierblock', 'Radierer', 'box',
-         x=0.3, y=0, w=19.4, d=40, z=0.3, h=9.4, r=1.5, explode=[0, 52, 0], mass=14.8,
+         x=0.3, y=0, w=19.4, d=40, z=0.3, h=9.4, r=1.5, explode=[0, 48, 0], mass=14.8,
          materials=[['gummi', 65], ['tpe', 35]],
          info='Weicher Kunststoff-Radierer (synthetischer Kautschuk mit Weichmachern), nimmt Grafit vom Papier auf. '
               'Am besten ganz aufbrauchen, Reste in den Restmüll.',
