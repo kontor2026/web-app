@@ -1,0 +1,4276 @@
+{
+  "quelle": {
+    "titel": "UN Comtrade Database",
+    "herausgeber": "United Nations Statistics Division",
+    "url": "https://comtradeplus.un.org",
+    "abruf": "2026-11-13",
+    "methode": "Importe Deutschlands (Reporter 276, Flow M, Jahresdaten 2025, HS 2022 6-stellig). Anteile = Importwert (CIF, USD) je Partnerland / Partner World (0). Länder ≥3 %, max. 6; Rest = 100 − Summe der gerundeten Anteile. Partner 490 „Other Asia, nes“ = Taiwan. Partnerland ist bei Destatis-Meldungen in der Regel das Ursprungsland; NL/BE können dennoch Transit-/Versendungsländer sein."
+  },
+  "objekte": {
+    "smartphone": {
+      "hs": "851713",
+      "hs_text": "Telephone sets; smartphones for cellular or other wireless networks",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 13108592124,
+      "anteile": {
+        "CHN": 70,
+        "VNM": 11,
+        "IND": 6,
+        "CZE": 6
+      },
+      "rest": 7,
+      "menge": 39938863,
+      "menge_einheit": "Stück",
+      "nettogewicht_kg": 8431434,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=851713&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": ""
+    },
+    "laptop": {
+      "hs": "847130",
+      "hs_text": "Automatic data processing machines; portable, weighing not more than 10kg, consisting of at least a central processing unit, a keyboard and a display",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 13199601274,
+      "anteile": {
+        "CHN": 82,
+        "VNM": 5,
+        "THA": 4,
+        "CZE": 3
+      },
+      "rest": 6,
+      "menge": 22276330,
+      "menge_einheit": "Stück",
+      "nettogewicht_kg": 41289175,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=847130&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": "Tragbare ADV-Maschinen ≤10 kg; enthält auch Tablets."
+    },
+    "tablet": {
+      "hs": "847130",
+      "hs_text": "Automatic data processing machines; portable, weighing not more than 10kg, consisting of at least a central processing unit, a keyboard and a display",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 13199601274,
+      "anteile": {
+        "CHN": 82,
+        "VNM": 5,
+        "THA": 4,
+        "CZE": 3
+      },
+      "rest": 6,
+      "menge": 22276330,
+      "menge_einheit": "Stück",
+      "nettogewicht_kg": 41289175,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=847130&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": "Tablets werden zusammen mit Laptops unter 8471.30 erfasst."
+    },
+    "smartwatch": {
+      "hs": "851762",
+      "hs_text": "Communication apparatus (excluding telephone sets or base stations); machines for the reception, conversion and transmission or regeneration of voice, images or other data, including switching and routing apparatus",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 12293762621,
+      "anteile": {
+        "CHN": 40,
+        "TWN": 8,
+        "VNM": 8,
+        "USA": 6,
+        "NLD": 6,
+        "HUN": 4
+      },
+      "rest": 28,
+      "nettogewicht_kg": 58298498,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=851762&flowCode=M",
+      "zuordnung": "breit",
+      "hinweis": "Smartwatches werden unter 8517.62 eingereiht; der Code enthält auch Router, Switches u. a. Netzwerkgeräte."
+    },
+    "headphones": {
+      "hs": "851830",
+      "hs_text": "Headphones and earphones, whether or not combined with a microphone, and sets consisting of a microphone and one or more loudspeakers",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 2067756366,
+      "anteile": {
+        "CHN": 67,
+        "VNM": 13,
+        "MEX": 4
+      },
+      "rest": 16,
+      "menge": 34909921,
+      "menge_einheit": "Stück",
+      "nettogewicht_kg": 11866424,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=851830&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": "Kopfhörer und Ohrhörer, auch mit Mikrofon."
+    },
+    "earbuds": {
+      "hs": "851830",
+      "hs_text": "Headphones and earphones, whether or not combined with a microphone, and sets consisting of a microphone and one or more loudspeakers",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 2067756366,
+      "anteile": {
+        "CHN": 67,
+        "VNM": 13,
+        "MEX": 4
+      },
+      "rest": 16,
+      "menge": 34909921,
+      "menge_einheit": "Stück",
+      "nettogewicht_kg": 11866424,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=851830&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": "Kopfhörer und Ohrhörer, auch mit Mikrofon."
+    },
+    "computer_mouse": {
+      "hs": "847160",
+      "hs_text": "Units of automatic data processing machines; input or output units, whether or not containing storage units in the same housing",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 1248877915,
+      "anteile": {
+        "CHN": 80
+      },
+      "rest": 20,
+      "menge": 30922424,
+      "menge_einheit": "Stück",
+      "nettogewicht_kg": 14476754,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=847160&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": "Ein-/Ausgabeeinheiten (Mäuse, Tastaturen u. a.)."
+    },
+    "keyboard": {
+      "hs": "847160",
+      "hs_text": "Units of automatic data processing machines; input or output units, whether or not containing storage units in the same housing",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 1248877915,
+      "anteile": {
+        "CHN": 80
+      },
+      "rest": 20,
+      "menge": 30922424,
+      "menge_einheit": "Stück",
+      "nettogewicht_kg": 14476754,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=847160&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": "Ein-/Ausgabeeinheiten (Mäuse, Tastaturen u. a.)."
+    },
+    "phone_charger": {
+      "hs": "850440",
+      "hs_text": "Electrical static converters",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 9676661740,
+      "anteile": {
+        "CHN": 30,
+        "HUN": 16,
+        "CZE": 6,
+        "THA": 5,
+        "POL": 3,
+        "ITA": 3
+      },
+      "rest": 37,
+      "menge": 28386559,
+      "menge_einheit": "Stück",
+      "nettogewicht_kg": 172073567,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=850440&flowCode=M",
+      "zuordnung": "breit",
+      "hinweis": "Statische Stromrichter; enthält auch Industrie-Wechselrichter und Netzteile aller Art."
+    },
+    "usb_cable": {
+      "hs": "854442",
+      "hs_text": "Insulated electric conductors; for a voltage not exceeding 1000 volts, fitted with connectors",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 3474596629,
+      "anteile": {
+        "CHN": 28,
+        "CZE": 12,
+        "POL": 10,
+        "HUN": 6,
+        "ROU": 6,
+        "SVK": 4
+      },
+      "rest": 34,
+      "menge": 138215414,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 138215414,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=854442&flowCode=M",
+      "zuordnung": "breit",
+      "hinweis": "Isolierte Leiter ≤1000 V mit Steckverbindern; enthält alle konfektionierten Kabel."
+    },
+    "power_bank": {
+      "hs": "850760",
+      "hs_text": "Electric accumulators; lithium-ion, including separators, whether or not rectangular (including square)",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 28830479556,
+      "anteile": {
+        "CHN": 65,
+        "HUN": 14,
+        "POL": 10,
+        "CZE": 6
+      },
+      "rest": 5,
+      "menge": 396702488,
+      "menge_einheit": "Stück",
+      "nettogewicht_kg": 1134524241,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=850760&flowCode=M",
+      "zuordnung": "breit",
+      "hinweis": "Lithium-Ionen-Akkumulatoren; Powerbanks werden hier eingereiht, der Code enthält aber v. a. Traktionsbatterien."
+    },
+    "monitor": {
+      "hs": "852852",
+      "hs_text": "Monitors; other than cathode-ray tube; capable of directly connecting to and designed for use with an automatic data processing machine of heading 84.71",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 2289963765,
+      "anteile": {
+        "CHN": 63,
+        "VNM": 7,
+        "JPN": 6,
+        "CZE": 5,
+        "NLD": 4
+      },
+      "rest": 15,
+      "menge": 9415721,
+      "menge_einheit": "Stück",
+      "nettogewicht_kg": 63878636,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=852852&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": ""
+    },
+    "television": {
+      "hs": "852872",
+      "hs_text": "Reception apparatus for television, whether or not incorporating radio-broadcast receivers or sound or video recording or reproducing apparatus; incorporating a colour video display or screen",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 2329622530,
+      "anteile": {
+        "CHN": 29,
+        "POL": 24,
+        "SVK": 18,
+        "HUN": 12,
+        "TUR": 3,
+        "SVN": 3
+      },
+      "rest": 11,
+      "menge": 6086957,
+      "menge_einheit": "Stück",
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=852872&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": ""
+    },
+    "remote_control": {
+      "hs": "854370",
+      "hs_text": "Electrical machines and apparatus; having individual functions, not specified or included elsewhere in this chapter, n.e.c. in heading no. 8543",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 3775226138,
+      "anteile": {
+        "CHN": 20,
+        "NLD": 13,
+        "CZE": 11,
+        "USA": 7,
+        "FRA": 6,
+        "GBR": 6
+      },
+      "rest": 37,
+      "nettogewicht_kg": 61971770,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=854370&flowCode=M",
+      "zuordnung": "breit",
+      "hinweis": "Fernbedienungen (IR) fallen unter „andere elektrische Maschinen mit eigener Funktion“ – sehr breiter Sammelcode. 14 % kommen über die Niederlande/Belgien; das können Transitlieferungen (Rotterdam/Antwerpen) von Waren aus Drittstaaten sein."
+    },
+    "led_bulb": {
+      "hs": "853952",
+      "hs_text": "Lamps; light-emitting diode (LED) light sources, light-emitting diode (LED) lamps",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 374026836,
+      "anteile": {
+        "CHN": 77,
+        "FRA": 9
+      },
+      "rest": 14,
+      "nettogewicht_kg": 10041467,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=853952&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": ""
+    },
+    "flashlight": {
+      "hs": "851310",
+      "hs_text": "Lamps; portable, electric, designed to function by their own source of energy (excluding lighting equipment of heading no. 8512)",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 235881647,
+      "anteile": {
+        "CHN": 80,
+        "USA": 3
+      },
+      "rest": 17,
+      "nettogewicht_kg": 7023578,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=851310&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": ""
+    },
+    "alkaline_battery": {
+      "hs": "850610",
+      "hs_text": "Cells and batteries; primary, manganese dioxide",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 324108762,
+      "anteile": {
+        "CHN": 58,
+        "BEL": 18,
+        "POL": 5,
+        "VNM": 3
+      },
+      "rest": 16,
+      "menge": 1918211712,
+      "menge_einheit": "Stück",
+      "nettogewicht_kg": 46100012,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=850610&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": "Primärbatterien Mangandioxid (Alkali und Zink-Kohle). 20 % kommen über die Niederlande/Belgien; das können Transitlieferungen (Rotterdam/Antwerpen) von Waren aus Drittstaaten sein."
+    },
+    "electric_toothbrush": {
+      "hs": "850980",
+      "hs_text": "Electro-mechanical domestic appliances; with self-contained electric motor, other than vacuum cleaners of heading 85.08, n.e.c. in heading no. 8509",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 1391826324,
+      "anteile": {
+        "CHN": 51,
+        "HUN": 25,
+        "POL": 4,
+        "ITA": 4,
+        "NLD": 3
+      },
+      "rest": 13,
+      "nettogewicht_kg": 52402051,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=850980&flowCode=M",
+      "zuordnung": "breit",
+      "hinweis": "Sonstige elektromechanische Haushaltsgeräte."
+    },
+    "hair_dryer": {
+      "hs": "851631",
+      "hs_text": "Hair-dressing apparatus; electro-thermic hair dryers",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 234070695,
+      "anteile": {
+        "CHN": 65,
+        "MYS": 14,
+        "PHL": 14
+      },
+      "rest": 7,
+      "menge": 10620648,
+      "menge_einheit": "Stück",
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=851631&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": ""
+    },
+    "electric_kettle": {
+      "hs": "851679",
+      "hs_text": "Electro-thermic appliances; n.e.c. in heading no. 8516, used for domestic purposes",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 1286539631,
+      "anteile": {
+        "CHN": 55,
+        "FRA": 38
+      },
+      "rest": 7,
+      "menge": 34036808,
+      "menge_einheit": "Stück",
+      "nettogewicht_kg": 84930883,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=851679&flowCode=M",
+      "zuordnung": "breit",
+      "hinweis": "Sonstige elektrothermische Haushaltsgeräte; Wasserkocher sind der größte, aber nicht einzige Posten."
+    },
+    "toaster": {
+      "hs": "851672",
+      "hs_text": "Electro-thermic appliances; toasters, of a kind used for domestic purposes",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 76181947,
+      "anteile": {
+        "CHN": 95
+      },
+      "rest": 5,
+      "menge": 4847916,
+      "menge_einheit": "Stück",
+      "nettogewicht_kg": 7389950,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=851672&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": ""
+    },
+    "coffee_capsule": {
+      "hs": "090121",
+      "hs_text": "Coffee; roasted, not decaffeinated",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 1248093895,
+      "anteile": {
+        "ITA": 43,
+        "CHE": 21,
+        "NLD": 9,
+        "POL": 9,
+        "CZE": 6,
+        "FRA": 4
+      },
+      "rest": 8,
+      "menge": 99983792,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 99983792,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=090121&flowCode=M",
+      "zuordnung": "breit",
+      "hinweis": "Kapseln werden gefüllt gehandelt; Code = gerösteter Kaffee (nicht entkoffeiniert) insgesamt, nicht nur Kapseln. 10 % kommen über die Niederlande/Belgien; das können Transitlieferungen (Rotterdam/Antwerpen) von Waren aus Drittstaaten sein."
+    },
+    "pet_bottle": {
+      "hs": "392330",
+      "hs_text": "Plastics; carboys, bottles, flasks and similar articles, for the conveyance or packing of goods",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 856885785,
+      "anteile": {
+        "LUX": 12,
+        "AUT": 12,
+        "POL": 11,
+        "NLD": 10,
+        "CHN": 8,
+        "CZE": 8
+      },
+      "rest": 39,
+      "menge": 219746953,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 219746953,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=392330&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": "Ballons, Flaschen, Flakons u. ä. aus Kunststoff. 13 % kommen über die Niederlande/Belgien; das können Transitlieferungen (Rotterdam/Antwerpen) von Waren aus Drittstaaten sein."
+    },
+    "glass_bottle": {
+      "hs": "701090",
+      "hs_text": "Glass; carboys, bottles, flasks, jars, pots, phials and other containers of glass, (not ampoules), used for the conveyance or packing of goods",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 674852958,
+      "anteile": {
+        "CZE": 30,
+        "POL": 15,
+        "ITA": 10,
+        "AUT": 8,
+        "FRA": 8,
+        "CHN": 8
+      },
+      "rest": 21,
+      "menge": 500985670,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 500985670,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=701090&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": "Flaschen, Gläser u. ä. Behältnisse aus Glas (>0,15 l bis ≤…; Restposten 7010.90)."
+    },
+    "wine_bottle": {
+      "hs": "701090",
+      "hs_text": "Glass; carboys, bottles, flasks, jars, pots, phials and other containers of glass, (not ampoules), used for the conveyance or packing of goods",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 674852958,
+      "anteile": {
+        "CZE": 30,
+        "POL": 15,
+        "ITA": 10,
+        "AUT": 8,
+        "FRA": 8,
+        "CHN": 8
+      },
+      "rest": 21,
+      "menge": 500985670,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 500985670,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=701090&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": ""
+    },
+    "glass_jar": {
+      "hs": "701090",
+      "hs_text": "Glass; carboys, bottles, flasks, jars, pots, phials and other containers of glass, (not ampoules), used for the conveyance or packing of goods",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 674852958,
+      "anteile": {
+        "CZE": 30,
+        "POL": 15,
+        "ITA": 10,
+        "AUT": 8,
+        "FRA": 8,
+        "CHN": 8
+      },
+      "rest": 21,
+      "menge": 500985670,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 500985670,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=701090&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": ""
+    },
+    "aluminium_can": {
+      "hs": "761290",
+      "hs_text": "Aluminium; casks, drums, cans, boxes and the like for any material (not compressed or liquefied gas), 300l capacity or less, whether or not lined or heat-insulated, no mechanical or thermal equipment",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 567591186,
+      "anteile": {
+        "CZE": 41,
+        "NLD": 11,
+        "CHE": 8,
+        "FRA": 6,
+        "POL": 6,
+        "ITA": 5
+      },
+      "rest": 23,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=761290&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": "Aluminium-Behältnisse ≤300 l, inkl. Getränkedosen und Aerosoldosen. 14 % kommen über die Niederlande/Belgien; das können Transitlieferungen (Rotterdam/Antwerpen) von Waren aus Drittstaaten sein."
+    },
+    "tin_can": {
+      "hs": "731021",
+      "hs_text": "Cans; which are to be closed by soldering or crimping, for any material (excluding compressed or liquefied gas), less than 50l capacity, of iron or steel",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 296392721,
+      "anteile": {
+        "NLD": 20,
+        "AUT": 12,
+        "ESP": 12,
+        "BEL": 9,
+        "CZE": 8,
+        "POL": 8
+      },
+      "rest": 31,
+      "menge": 66533640,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 66533640,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=731021&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": "29 % kommen über die Niederlande/Belgien; das können Transitlieferungen (Rotterdam/Antwerpen) von Waren aus Drittstaaten sein."
+    },
+    "beverage_carton": {
+      "hs": "481920",
+      "hs_text": "Paper and paperboard; folding cartons, boxes and cases, of non-corrugated paper or paperboard",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 667070808,
+      "anteile": {
+        "POL": 36,
+        "NLD": 12,
+        "CHN": 7,
+        "AUT": 7,
+        "CHE": 6,
+        "CZE": 6
+      },
+      "rest": 26,
+      "menge": 240230408,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 240230408,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=481920&flowCode=M",
+      "zuordnung": "breit",
+      "hinweis": "Faltschachteln aus nicht gewellter Pappe; Getränkekartons werden meist als Rollen/Zuschnitte gehandelt. 14 % kommen über die Niederlande/Belgien; das können Transitlieferungen (Rotterdam/Antwerpen) von Waren aus Drittstaaten sein."
+    },
+    "yogurt_cup": {
+      "hs": "392390",
+      "hs_text": "Plastics; articles for the conveyance or packing of goods n.e.c. in heading no. 3923",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 788987087,
+      "anteile": {
+        "CHE": 19,
+        "NLD": 13,
+        "POL": 10,
+        "AUT": 8,
+        "CZE": 7,
+        "FRA": 6
+      },
+      "rest": 37,
+      "menge": 160092003,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 160092003,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=392390&flowCode=M",
+      "zuordnung": "breit",
+      "hinweis": "Sonstige Transport-/Verpackungsmittel aus Kunststoff. 18 % kommen über die Niederlande/Belgien; das können Transitlieferungen (Rotterdam/Antwerpen) von Waren aus Drittstaaten sein."
+    },
+    "paper_coffee_cup": {
+      "hs": "482369",
+      "hs_text": "Paper and paperboard; trays, dishes, plates, cups and the like, of paper or paperboard other than of bamboo",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 231810813,
+      "anteile": {
+        "CHN": 36,
+        "ITA": 20,
+        "POL": 14,
+        "CZE": 5,
+        "NLD": 3,
+        "TUR": 3
+      },
+      "rest": 19,
+      "menge": 64425781,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 64425781,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=482369&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": "Tabletts, Schalen, Teller, Becher aus Papier/Pappe (nicht Bambus)."
+    },
+    "pizza_box": {
+      "hs": "481910",
+      "hs_text": "Paper and paperboard; cartons, boxes and cases, of corrugated paper or paperboard",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 724208586,
+      "anteile": {
+        "AUT": 24,
+        "POL": 20,
+        "NLD": 10,
+        "ITA": 7,
+        "CHE": 6,
+        "CZE": 6
+      },
+      "rest": 27,
+      "menge": 458857091,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 458857091,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=481910&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": "Kartons aus Wellpapier/-pappe. 14 % kommen über die Niederlande/Belgien; das können Transitlieferungen (Rotterdam/Antwerpen) von Waren aus Drittstaaten sein."
+    },
+    "cardboard_box": {
+      "hs": "481910",
+      "hs_text": "Paper and paperboard; cartons, boxes and cases, of corrugated paper or paperboard",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 724208586,
+      "anteile": {
+        "AUT": 24,
+        "POL": 20,
+        "NLD": 10,
+        "ITA": 7,
+        "CHE": 6,
+        "CZE": 6
+      },
+      "rest": 27,
+      "menge": 458857091,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 458857091,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=481910&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": "14 % kommen über die Niederlande/Belgien; das können Transitlieferungen (Rotterdam/Antwerpen) von Waren aus Drittstaaten sein."
+    },
+    "newspaper": {
+      "hs": "490210",
+      "hs_text": "Newspapers, journals and periodicals; whether or not illustrated or containing advertising material, appearing at least four times a week",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 733721,
+      "anteile": {
+        "FRA": 46,
+        "USA": 15,
+        "AUT": 9,
+        "CZE": 6
+      },
+      "rest": 24,
+      "menge": 95494,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 95494,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=490210&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": "Zeitungen, mind. 4-mal wöchentlich erscheinend. Sehr geringes Importvolumen (ca. 1 Mio. USD); Zeitungen werden überwiegend im Inland gedruckt."
+    },
+    "plastic_bag": {
+      "hs": "392321",
+      "hs_text": "Ethylene polymers; sacks and bags (including cones), for the conveyance or packing of goods",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 946707479,
+      "anteile": {
+        "POL": 21,
+        "VNM": 15,
+        "CHN": 10,
+        "TUR": 8,
+        "ITA": 6,
+        "NLD": 4
+      },
+      "rest": 36,
+      "menge": 365533827,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 365533827,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=392321&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": ""
+    },
+    "chips_bag": {
+      "hs": "392329",
+      "hs_text": "Plastics; sacks and bags (including cones), for the conveyance or packing of goods, of plastics other than ethylene polymers",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 332472609,
+      "anteile": {
+        "POL": 15,
+        "FRA": 12,
+        "CHE": 11,
+        "CHN": 10,
+        "LTU": 9,
+        "ITA": 8
+      },
+      "rest": 35,
+      "menge": 88524046,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 88524046,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=392329&flowCode=M",
+      "zuordnung": "breit",
+      "hinweis": "Säcke/Beutel aus anderen Kunststoffen; Chipstüten werden überwiegend gefüllt bzw. als Verbundfolie gehandelt."
+    },
+    "toothpaste_tube": {
+      "hs": "392390",
+      "hs_text": "Plastics; articles for the conveyance or packing of goods n.e.c. in heading no. 3923",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 788987087,
+      "anteile": {
+        "CHE": 19,
+        "NLD": 13,
+        "POL": 10,
+        "AUT": 8,
+        "CZE": 7,
+        "FRA": 6
+      },
+      "rest": 37,
+      "menge": 160092003,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 160092003,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=392390&flowCode=M",
+      "zuordnung": "breit",
+      "hinweis": "Leere Kunststofftuben fallen in den Sammelcode für Verpackungsmittel aus Kunststoff. 18 % kommen über die Niederlande/Belgien; das können Transitlieferungen (Rotterdam/Antwerpen) von Waren aus Drittstaaten sein."
+    },
+    "shampoo_bottle": {
+      "hs": "392330",
+      "hs_text": "Plastics; carboys, bottles, flasks and similar articles, for the conveyance or packing of goods",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 856885785,
+      "anteile": {
+        "LUX": 12,
+        "AUT": 12,
+        "POL": 11,
+        "NLD": 10,
+        "CHN": 8,
+        "CZE": 8
+      },
+      "rest": 39,
+      "menge": 219746953,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 219746953,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=392330&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": "13 % kommen über die Niederlande/Belgien; das können Transitlieferungen (Rotterdam/Antwerpen) von Waren aus Drittstaaten sein."
+    },
+    "spray_can": {
+      "hs": "761290",
+      "hs_text": "Aluminium; casks, drums, cans, boxes and the like for any material (not compressed or liquefied gas), 300l capacity or less, whether or not lined or heat-insulated, no mechanical or thermal equipment",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 567591186,
+      "anteile": {
+        "CZE": 41,
+        "NLD": 11,
+        "CHE": 8,
+        "FRA": 6,
+        "POL": 6,
+        "ITA": 5
+      },
+      "rest": 23,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=761290&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": "Aerosoldosen aus Aluminium; Code enthält auch Getränkedosen. 14 % kommen über die Niederlande/Belgien; das können Transitlieferungen (Rotterdam/Antwerpen) von Waren aus Drittstaaten sein."
+    },
+    "ballpoint_pen": {
+      "hs": "960810",
+      "hs_text": "Pens; ball point",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 187574474,
+      "anteile": {
+        "CHN": 51,
+        "CHE": 11,
+        "JPN": 8,
+        "ITA": 6,
+        "CZE": 5,
+        "FRA": 4
+      },
+      "rest": 15,
+      "menge": 451012734,
+      "menge_einheit": "Stück",
+      "nettogewicht_kg": 7696270,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=960810&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": ""
+    },
+    "pencil": {
+      "hs": "960910",
+      "hs_text": "Pencils and crayons; with leads encased in sheath",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 112006125,
+      "anteile": {
+        "CHN": 37,
+        "CZE": 36,
+        "BRA": 4,
+        "IDN": 4,
+        "POL": 3
+      },
+      "rest": 16,
+      "menge": 8297374,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 8297374,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=960910&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": ""
+    },
+    "scissors": {
+      "hs": "821300",
+      "hs_text": "Scissors; tailors' shears, similar shears and blades therefore",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 62416579,
+      "anteile": {
+        "CHN": 52,
+        "ITA": 11,
+        "PAK": 8,
+        "JPN": 5,
+        "CZE": 4
+      },
+      "rest": 20,
+      "menge": 3899619,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 3899619,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=821300&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": ""
+    },
+    "umbrella": {
+      "hs": "660191",
+      "hs_text": "Umbrellas and sun umbrellas; having a telescopic shaft, (excluding garden or similar umbrellas)",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 66034613,
+      "anteile": {
+        "CHN": 87,
+        "KHM": 6,
+        "NLD": 5
+      },
+      "rest": 2,
+      "menge": 25047219,
+      "menge_einheit": "Stück",
+      "nettogewicht_kg": 7779528,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=660191&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": "Schirme mit Teleskopstock (Knirpse); Stockschirme stehen unter 6601.99."
+    },
+    "sneaker": {
+      "hs": "640411",
+      "hs_text": "Sports footwear; tennis shoes, basketball shoes, gym shoes, training shoes and the like, with outer soles of rubber or plastics and uppers of textile materials",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 2015378463,
+      "anteile": {
+        "VNM": 44,
+        "CHN": 14,
+        "IDN": 10,
+        "NLD": 8,
+        "ITA": 6
+      },
+      "rest": 18,
+      "menge": 61140900,
+      "menge_einheit": "Paar",
+      "nettogewicht_kg": 40753238,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=640411&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": "Sportschuhe mit Oberteil aus Spinnstoff, Sohle aus Kautschuk/Kunststoff. 10 % kommen über die Niederlande/Belgien; das können Transitlieferungen (Rotterdam/Antwerpen) von Waren aus Drittstaaten sein."
+    },
+    "t_shirt": {
+      "hs": "610910",
+      "hs_text": "T-shirts, singlets and other vests; of cotton, knitted or crocheted",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 3434767879,
+      "anteile": {
+        "BGD": 44,
+        "TUR": 12,
+        "IND": 9,
+        "CHN": 6,
+        "PAK": 3,
+        "PRT": 3
+      },
+      "rest": 23,
+      "menge": 927100972,
+      "menge_einheit": "Stück",
+      "nettogewicht_kg": 154293772,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=610910&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": ""
+    },
+    "jeans": {
+      "hs": "620342",
+      "hs_text": "Trousers, bib and brace overalls, breeches and shorts; men's or boys', of cotton (not knitted or crocheted)",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 3287369612,
+      "anteile": {
+        "BGD": 32,
+        "PAK": 17,
+        "TUR": 10,
+        "TUN": 8,
+        "CHN": 6,
+        "EGY": 5
+      },
+      "rest": 22,
+      "menge": 245440509,
+      "menge_einheit": "Stück",
+      "nettogewicht_kg": 133630821,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=620342&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": "Herrenhosen aus Baumwolle; Damenjeans stehen unter 6204.62."
+    },
+    "backpack": {
+      "hs": "420292",
+      "hs_text": "Cases and containers; n.e.c. in heading 4202, with outer surface of sheeting of plastics or of textile materials",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 1777102854,
+      "anteile": {
+        "CHN": 55,
+        "VNM": 19,
+        "IND": 4,
+        "IDN": 4
+      },
+      "rest": 18,
+      "menge": 121737611,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 121737611,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=420292&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": "Behältnisse mit Außenseite aus Kunststoff/Spinnstoff (Rucksäcke, Sporttaschen u. a.)."
+    },
+    "sunglasses": {
+      "hs": "900410",
+      "hs_text": "Sunglasses; corrective, protective or other",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 497532385,
+      "anteile": {
+        "ITA": 43,
+        "CHN": 35,
+        "JPN": 5
+      },
+      "rest": 17,
+      "menge": 60498416,
+      "menge_einheit": "Stück",
+      "nettogewicht_kg": 3024340,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=900410&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": ""
+    },
+    "bicycle_tire": {
+      "hs": "401150",
+      "hs_text": "Rubber; new pneumatic tyres, of a kind used on bicycles",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 121413684,
+      "anteile": {
+        "VNM": 40,
+        "CHN": 27,
+        "TWN": 8,
+        "ITA": 6,
+        "THA": 5,
+        "IND": 5
+      },
+      "rest": 9,
+      "menge": 13117161,
+      "menge_einheit": "Stück",
+      "nettogewicht_kg": 9277996,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=401150&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": ""
+    },
+    "compact_disc": {
+      "hs": "852349",
+      "hs_text": "Optical media; recorded, excluding products of Chapter 37",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 711325000,
+      "anteile": {
+        "POL": 18,
+        "CZE": 17,
+        "FRA": 15,
+        "AUT": 13,
+        "JPN": 8,
+        "CHN": 5
+      },
+      "rest": 24,
+      "menge": 53555505,
+      "menge_einheit": "Stück",
+      "nettogewicht_kg": 6646599,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=852349&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": "Optische Datenträger (bespielt und unbespielt, außer 8523.41)."
+    },
+    "tea_light": {
+      "hs": "340600",
+      "hs_text": "Candles, tapers and the like",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 552920880,
+      "anteile": {
+        "POL": 52,
+        "CHN": 16,
+        "VNM": 5,
+        "HUN": 5,
+        "USA": 3,
+        "NLD": 3
+      },
+      "rest": 16,
+      "menge": 193317985,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 193317985,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=340600&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": "Kerzen aller Art."
+    },
+    "desktop_pc": {
+      "hs": "847150",
+      "hs_text": "Units of automatic data processing machines; processing units other than those of item no. 8471.41 or 8471.49, whether or not containing in the same housing one or two of the following types of unit: storage units, input units or output units",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 7132256630,
+      "anteile": {
+        "CHN": 22,
+        "CZE": 15,
+        "TWN": 12,
+        "HUN": 11,
+        "USA": 9,
+        "IRL": 7
+      },
+      "rest": 24,
+      "menge": 6486599,
+      "menge_einheit": "Stück",
+      "nettogewicht_kg": 21203949,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=847150&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": "Verarbeitungseinheiten (PCs/Server ohne integrierte Ein-/Ausgabe)."
+    },
+    "game_controller": {
+      "hs": "950450",
+      "hs_text": "Games; video game consoles and machines, other than those of subheading 9504.30",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 2468559509,
+      "anteile": {
+        "CHN": 67,
+        "JPN": 25
+      },
+      "rest": 8,
+      "menge": 14382181,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 14382181,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=950450&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": "Videospielkonsolen und -geräte inkl. Controller."
+    },
+    "wifi_router": {
+      "hs": "851762",
+      "hs_text": "Communication apparatus (excluding telephone sets or base stations); machines for the reception, conversion and transmission or regeneration of voice, images or other data, including switching and routing apparatus",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 12293762621,
+      "anteile": {
+        "CHN": 40,
+        "TWN": 8,
+        "VNM": 8,
+        "USA": 6,
+        "NLD": 6,
+        "HUN": 4
+      },
+      "rest": 28,
+      "nettogewicht_kg": 58298498,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=851762&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": ""
+    },
+    "smart_speaker": {
+      "hs": "851822",
+      "hs_text": "Loudspeakers; multiple, mounted in the same enclosure",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 575515201,
+      "anteile": {
+        "CHN": 69,
+        "ITA": 4
+      },
+      "rest": 27,
+      "menge": 5808595,
+      "menge_einheit": "Stück",
+      "nettogewicht_kg": 24232103,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=851822&flowCode=M",
+      "zuordnung": "breit",
+      "hinweis": "Mehrfachlautsprecher in einem Gehäuse; Einreihung smarter Lautsprecher uneinheitlich (z. T. 8517.62)."
+    },
+    "digital_camera": {
+      "hs": "852589",
+      "hs_text": "Television cameras; n.e.c. in item no 8525.8",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 3710978705,
+      "anteile": {
+        "CHN": 38,
+        "JPN": 8,
+        "ROU": 4,
+        "HUN": 4,
+        "USA": 4,
+        "SVK": 4
+      },
+      "rest": 38,
+      "nettogewicht_kg": 22392206,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=852589&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": "Andere Fernsehkameras, Digitalkameras und Videokamerarekorder (HS 2022)."
+    },
+    "e_reader": {
+      "hs": "847130",
+      "hs_text": "Automatic data processing machines; portable, weighing not more than 10kg, consisting of at least a central processing unit, a keyboard and a display",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 13199601274,
+      "anteile": {
+        "CHN": 82,
+        "VNM": 5,
+        "THA": 4,
+        "CZE": 3
+      },
+      "rest": 6,
+      "menge": 22276330,
+      "menge_einheit": "Stück",
+      "nettogewicht_kg": 41289175,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=847130&flowCode=M",
+      "zuordnung": "breit",
+      "hinweis": "E-Reader werden in der EU als tragbare ADV-Maschinen eingereiht; Code wird von Laptops dominiert."
+    },
+    "bluetooth_speaker": {
+      "hs": "851822",
+      "hs_text": "Loudspeakers; multiple, mounted in the same enclosure",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 575515201,
+      "anteile": {
+        "CHN": 69,
+        "ITA": 4
+      },
+      "rest": 27,
+      "menge": 5808595,
+      "menge_einheit": "Stück",
+      "nettogewicht_kg": 24232103,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=851822&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": "Mehrfachlautsprecher in einem Gehäuse."
+    },
+    "desk_lamp": {
+      "hs": "940521",
+      "hs_text": "Luminaires and light fittings; electric, table, desk, bedside or floor-standing, for use solely with light-emitting diode (LED) light sources",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 270399575,
+      "anteile": {
+        "CHN": 75,
+        "POL": 4,
+        "ITA": 4,
+        "DNK": 3
+      },
+      "rest": 14,
+      "menge": 23103498,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 23103498,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=940521&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": "Elektrische Tisch-, Schreibtisch-, Nachttisch-, Stehleuchten für LED (HS 2022)."
+    },
+    "electric_fan": {
+      "hs": "841451",
+      "hs_text": "Fans; table, floor, wall, window, ceiling or roof fans, with a self-contained electric motor of an output not exceeding 125W",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 191995522,
+      "anteile": {
+        "CHN": 65,
+        "SWE": 9,
+        "MYS": 5,
+        "ITA": 5,
+        "AUT": 4
+      },
+      "rest": 12,
+      "menge": 6197942,
+      "menge_einheit": "Stück",
+      "nettogewicht_kg": 17387689,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=841451&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": "Tisch-, Boden-, Wand-, Deckenventilatoren ≤125 W."
+    },
+    "vacuum_cleaner": {
+      "hs": "850811",
+      "hs_text": "Vacuum cleaners, with self-contained electric motor, of a power not exceeding 1,500 W and having a dust bag or other receptacle capacity not exceeding 20L",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 2340794023,
+      "anteile": {
+        "CHN": 69,
+        "MYS": 13,
+        "AUT": 4,
+        "ROU": 3
+      },
+      "rest": 11,
+      "menge": 18662456,
+      "menge_einheit": "Stück",
+      "nettogewicht_kg": 93321305,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=850811&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": "Staubsauger mit Elektromotor ≤1500 W, Behälter ≤20 l."
+    },
+    "blender": {
+      "hs": "850940",
+      "hs_text": "Electro-mechanical domestic appliances; food grinders and mixers, fruit or vegetable juice extractors, with self-contained electric motor",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 541648540,
+      "anteile": {
+        "CHN": 69,
+        "SVN": 13,
+        "USA": 5,
+        "KOR": 3
+      },
+      "rest": 10,
+      "menge": 21781750,
+      "menge_einheit": "Stück",
+      "nettogewicht_kg": 36110174,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=850940&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": "Küchenmaschinen, Mixer, Entsafter."
+    },
+    "microwave": {
+      "hs": "851650",
+      "hs_text": "Ovens; microwave, of a kind used for domestic purposes",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 203168255,
+      "anteile": {
+        "CHN": 64,
+        "GBR": 23,
+        "MYS": 3
+      },
+      "rest": 10,
+      "menge": 2709294,
+      "menge_einheit": "Stück",
+      "nettogewicht_kg": 33915201,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=851650&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": ""
+    },
+    "coffee_machine": {
+      "hs": "851671",
+      "hs_text": "Electro-thermic appliances; coffee or tea makers, of a kind used for domestic purposes",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 1248163982,
+      "anteile": {
+        "CHN": 28,
+        "ROU": 19,
+        "SVN": 16,
+        "PRT": 10,
+        "CHE": 8,
+        "ITA": 6
+      },
+      "rest": 13,
+      "menge": 11371056,
+      "menge_einheit": "Stück",
+      "nettogewicht_kg": 50908250,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=851671&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": "Kaffee- und Teemaschinen."
+    },
+    "hand_mixer": {
+      "hs": "850940",
+      "hs_text": "Electro-mechanical domestic appliances; food grinders and mixers, fruit or vegetable juice extractors, with self-contained electric motor",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 541648540,
+      "anteile": {
+        "CHN": 69,
+        "SVN": 13,
+        "USA": 5,
+        "KOR": 3
+      },
+      "rest": 10,
+      "menge": 21781750,
+      "menge_einheit": "Stück",
+      "nettogewicht_kg": 36110174,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=850940&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": ""
+    },
+    "electric_shaver": {
+      "hs": "851010",
+      "hs_text": "Shavers; with self-contained electric motor",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 290859320,
+      "anteile": {
+        "HUN": 41,
+        "CHN": 23,
+        "NLD": 13,
+        "IDN": 7,
+        "POL": 5
+      },
+      "rest": 11,
+      "menge": 10245847,
+      "menge_einheit": "Stück",
+      "nettogewicht_kg": 4021405,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=851010&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": "13 % kommen über die Niederlande/Belgien; das können Transitlieferungen (Rotterdam/Antwerpen) von Waren aus Drittstaaten sein."
+    },
+    "hair_straightener": {
+      "hs": "851632",
+      "hs_text": "Hair-dressing apparatus; electro-thermic, other than hair dryers",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 518529584,
+      "anteile": {
+        "CHN": 48,
+        "PHL": 48
+      },
+      "rest": 4,
+      "nettogewicht_kg": 7894778,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=851632&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": "Andere elektrothermische Haarbehandlungsgeräte."
+    },
+    "clothes_iron": {
+      "hs": "851640",
+      "hs_text": "Smoothing irons; electric",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 119458710,
+      "anteile": {
+        "CHN": 58,
+        "FRA": 17,
+        "IDN": 15,
+        "HUN": 6
+      },
+      "rest": 4,
+      "menge": 4420497,
+      "menge_einheit": "Stück",
+      "nettogewicht_kg": 7230324,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=851640&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": ""
+    },
+    "calculator": {
+      "hs": "847010",
+      "hs_text": "Calculating machines; electronic calculators capable of operation without an external source of electric power and pocket-size data recording, reproducing and displaying machines with calculating functions",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 106645539,
+      "anteile": {
+        "PHL": 38,
+        "THA": 31,
+        "CHN": 29
+      },
+      "rest": 2,
+      "menge": 10198730,
+      "menge_einheit": "Stück",
+      "nettogewicht_kg": 1635800,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=847010&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": "Elektronische Rechner ohne externe Stromquelle."
+    },
+    "smoke_detector": {
+      "hs": "853110",
+      "hs_text": "Signalling apparatus; electric, sound or visual, burglar or fire alarms and similar, other than those of heading no. 8512 or 8530",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 538731292,
+      "anteile": {
+        "CHN": 23,
+        "ROU": 18,
+        "IRL": 13,
+        "CHE": 10,
+        "USA": 6,
+        "GBR": 6
+      },
+      "rest": 24,
+      "menge": 27918890,
+      "menge_einheit": "Stück",
+      "nettogewicht_kg": 6233125,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=853110&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": "Einbruch- und Brandmelder."
+    },
+    "extension_cord": {
+      "hs": "853669",
+      "hs_text": "Electrical apparatus; plugs and sockets, for a voltage not exceeding 1000 volts",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 3091976590,
+      "anteile": {
+        "CHN": 22,
+        "CZE": 9,
+        "POL": 7,
+        "CHE": 7,
+        "USA": 6,
+        "HUN": 6
+      },
+      "rest": 43,
+      "menge": 45715080,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 45715080,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=853669&flowCode=M",
+      "zuordnung": "breit",
+      "hinweis": "Steckvorrichtungen ≤1000 V; enthält alle Stecker/Steckdosen."
+    },
+    "webcam": {
+      "hs": "852589",
+      "hs_text": "Television cameras; n.e.c. in item no 8525.8",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 3710978705,
+      "anteile": {
+        "CHN": 38,
+        "JPN": 8,
+        "ROU": 4,
+        "HUN": 4,
+        "USA": 4,
+        "SVK": 4
+      },
+      "rest": 38,
+      "nettogewicht_kg": 22392206,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=852589&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": ""
+    },
+    "inkjet_printer": {
+      "hs": "844332",
+      "hs_text": "Printing, copying, and facsimile machines; single-function printing, copying or facsimile machines, capable of connecting to an automatic data processing machine or to a network",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 1144993659,
+      "anteile": {
+        "CHN": 42,
+        "VNM": 8,
+        "JPN": 7,
+        "PHL": 6,
+        "USA": 4,
+        "IDN": 4
+      },
+      "rest": 29,
+      "menge": 4186558,
+      "menge_einheit": "Stück",
+      "nettogewicht_kg": 31897951,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=844332&flowCode=M",
+      "zuordnung": "breit",
+      "hinweis": "Drucker mit ADV-Anschluss (ohne Multifunktion); enthält auch Laserdrucker."
+    },
+    "external_hard_drive": {
+      "hs": "847170",
+      "hs_text": "Units of automatic data processing machines; storage units",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 4708242210,
+      "anteile": {
+        "CHN": 36,
+        "PHL": 12,
+        "THA": 11,
+        "IRL": 7,
+        "KOR": 6,
+        "TWN": 5
+      },
+      "rest": 23,
+      "menge": 27780765,
+      "menge_einheit": "Stück",
+      "nettogewicht_kg": 9517786,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=847170&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": "Speichereinheiten."
+    },
+    "usb_stick": {
+      "hs": "852351",
+      "hs_text": "Semiconductor media; solid-state non-volatile storage devices, whether or not recorded, excluding products of Chapter 37",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 1281813419,
+      "anteile": {
+        "CHN": 40,
+        "KOR": 18,
+        "TWN": 14,
+        "MYS": 5,
+        "VNM": 5,
+        "USA": 3
+      },
+      "rest": 15,
+      "menge": 457313603,
+      "menge_einheit": "Stück",
+      "nettogewicht_kg": 1264695,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=852351&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": "Nichtflüchtige Halbleiterspeicher."
+    },
+    "fitness_tracker": {
+      "hs": "851762",
+      "hs_text": "Communication apparatus (excluding telephone sets or base stations); machines for the reception, conversion and transmission or regeneration of voice, images or other data, including switching and routing apparatus",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 12293762621,
+      "anteile": {
+        "CHN": 40,
+        "TWN": 8,
+        "VNM": 8,
+        "USA": 6,
+        "NLD": 6,
+        "HUN": 4
+      },
+      "rest": 28,
+      "nettogewicht_kg": 58298498,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=851762&flowCode=M",
+      "zuordnung": "breit",
+      "hinweis": "Wie Smartwatch; Sammelcode für Netzwerkgeräte."
+    },
+    "alarm_clock": {
+      "hs": "910511",
+      "hs_text": "Clocks; (excluding those with watch movements and instrument panel clocks), alarm clocks, electrically operated",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 30838509,
+      "anteile": {
+        "CHN": 93
+      },
+      "rest": 7,
+      "menge": 6744958,
+      "menge_einheit": "Stück",
+      "nettogewicht_kg": 1239428,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=910511&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": ""
+    },
+    "cordless_drill": {
+      "hs": "846721",
+      "hs_text": "Tools; for working in the hand, with self-contained electric motor; drills of all kinds",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 452592661,
+      "anteile": {
+        "CHN": 51,
+        "ROU": 10,
+        "CZE": 9,
+        "HUN": 9,
+        "GBR": 4,
+        "JPN": 4
+      },
+      "rest": 13,
+      "menge": 6520514,
+      "menge_einheit": "Stück",
+      "nettogewicht_kg": 23336110,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=846721&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": "Elektrowerkzeuge: Bohrmaschinen aller Art."
+    },
+    "portable_radio": {
+      "hs": "852719",
+      "hs_text": "Radio broadcast receivers capable of operating without an external power source; n.e.c. in item no. 8527.1",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 53749102,
+      "anteile": {
+        "CHN": 87,
+        "IDN": 5
+      },
+      "rest": 8,
+      "menge": 2271030,
+      "menge_einheit": "Stück",
+      "nettogewicht_kg": 2093798,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=852719&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": ""
+    },
+    "compact_fluorescent_lamp": {
+      "hs": "853931",
+      "hs_text": "Lamps; discharge, (excluding ultra-violet), fluorescent, hot cathode",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 12628667,
+      "anteile": {
+        "CHN": 41,
+        "FRA": 24,
+        "NLD": 6,
+        "POL": 6,
+        "RUS": 4,
+        "ITA": 4
+      },
+      "rest": 15,
+      "menge": 4823613,
+      "menge_einheit": "Stück",
+      "nettogewicht_kg": 521317,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=853931&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": "Leuchtstofflampen mit Glühkathode."
+    },
+    "game_console": {
+      "hs": "950450",
+      "hs_text": "Games; video game consoles and machines, other than those of subheading 9504.30",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 2468559509,
+      "anteile": {
+        "CHN": 67,
+        "JPN": 25
+      },
+      "rest": 8,
+      "menge": 14382181,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 14382181,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=950450&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": ""
+    },
+    "laptop_charger": {
+      "hs": "850440",
+      "hs_text": "Electrical static converters",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 9676661740,
+      "anteile": {
+        "CHN": 30,
+        "HUN": 16,
+        "CZE": 6,
+        "THA": 5,
+        "POL": 3,
+        "ITA": 3
+      },
+      "rest": 37,
+      "menge": 28386559,
+      "menge_einheit": "Stück",
+      "nettogewicht_kg": 172073567,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=850440&flowCode=M",
+      "zuordnung": "breit",
+      "hinweis": "Statische Stromrichter, s. Handy-Ladegerät."
+    },
+    "wired_earphones": {
+      "hs": "851830",
+      "hs_text": "Headphones and earphones, whether or not combined with a microphone, and sets consisting of a microphone and one or more loudspeakers",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 2067756366,
+      "anteile": {
+        "CHN": 67,
+        "VNM": 13,
+        "MEX": 4
+      },
+      "rest": 16,
+      "menge": 34909921,
+      "menge_einheit": "Stück",
+      "nettogewicht_kg": 11866424,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=851830&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": ""
+    },
+    "bike_light": {
+      "hs": "851210",
+      "hs_text": "Lighting or visual signalling equipment; electrical, of a kind used on bicycles, excluding articles of heading no. 8539",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 65311080,
+      "anteile": {
+        "CHN": 64,
+        "TWN": 9,
+        "HUN": 6,
+        "NLD": 4
+      },
+      "rest": 17,
+      "nettogewicht_kg": 1265884,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=851210&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": "Beleuchtungsgeräte für Fahrräder."
+    },
+    "string_lights": {
+      "hs": "940531",
+      "hs_text": "Luminaires and light fittings; electric, lighting strings of a kind used for Christmas trees, for use solely with light-emitting diode (LED) light sources",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 54775866,
+      "anteile": {
+        "CHN": 85,
+        "NLD": 12
+      },
+      "rest": 3,
+      "menge": 5083635,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 5083635,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=940531&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": "Lichterketten für Weihnachtsbäume, für LED (HS 2022). 12 % kommen über die Niederlande/Belgien; das können Transitlieferungen (Rotterdam/Antwerpen) von Waren aus Drittstaaten sein."
+    },
+    "kitchen_scale": {
+      "hs": "842310",
+      "hs_text": "Weighing machines; personal (including baby scales) and household scales",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 102434385,
+      "anteile": {
+        "CHN": 78
+      },
+      "rest": 22,
+      "menge": 12951860,
+      "menge_einheit": "Stück",
+      "nettogewicht_kg": 12820245,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=842310&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": "Personen- und Haushaltswaagen."
+    },
+    "bathroom_scale": {
+      "hs": "842310",
+      "hs_text": "Weighing machines; personal (including baby scales) and household scales",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 102434385,
+      "anteile": {
+        "CHN": 78
+      },
+      "rest": 22,
+      "menge": 12951860,
+      "menge_einheit": "Stück",
+      "nettogewicht_kg": 12820245,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=842310&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": ""
+    },
+    "sandwich_maker": {
+      "hs": "851660",
+      "hs_text": "Ovens, cookers, cooking plates, boiling rings, grillers and roasters; of a kind used for domestic purposes (excluding microwaves)",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 1303008414,
+      "anteile": {
+        "CHN": 37,
+        "ESP": 16,
+        "POL": 12,
+        "ITA": 8,
+        "TUR": 8,
+        "FRA": 7
+      },
+      "rest": 12,
+      "menge": 14431800,
+      "menge_einheit": "Stück",
+      "nettogewicht_kg": 139821229,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=851660&flowCode=M",
+      "zuordnung": "breit",
+      "hinweis": "Andere Öfen, Kochplatten, Grillgeräte."
+    },
+    "button_cell_battery": {
+      "hs": "850650",
+      "hs_text": "Cells and batteries; primary, lithium",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 275843240,
+      "anteile": {
+        "CHN": 28,
+        "ISR": 10,
+        "JPN": 8,
+        "FRA": 8,
+        "USA": 8,
+        "HUN": 7
+      },
+      "rest": 31,
+      "menge": 556765144,
+      "menge_einheit": "Stück",
+      "nettogewicht_kg": 5163576,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=850650&flowCode=M",
+      "zuordnung": "breit",
+      "hinweis": "Lithium-Primärbatterien (alle Bauformen); Silberoxid-Knopfzellen unter 8506.40."
+    },
+    "soldering_iron": {
+      "hs": "851511",
+      "hs_text": "Brazing or soldering machines and apparatus; soldering irons and guns, whether or not capable of cutting",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 20196433,
+      "anteile": {
+        "CHN": 46,
+        "MEX": 21,
+        "ESP": 19,
+        "TWN": 7
+      },
+      "rest": 7,
+      "nettogewicht_kg": 724668,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=851511&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": ""
+    },
+    "drone": {
+      "hs": "880622",
+      "hs_text": "Unmanned aircraft; for remote-controlled flight only, for other than for carriage of passengers, with the maximum take-off weight of more than 250g but not more than 7kg",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 182089049,
+      "anteile": {
+        "CHN": 90,
+        "VNM": 3
+      },
+      "rest": 7,
+      "menge": 85796,
+      "menge_einheit": "Stück",
+      "nettogewicht_kg": 383849,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=880622&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": "Unbemannte Luftfahrzeuge 250 g–7 kg (HS 2022)."
+    },
+    "egg_carton": {
+      "hs": "482370",
+      "hs_text": "Paper pulp; moulded or pressed articles or paper pulp",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 155314809,
+      "anteile": {
+        "NLD": 24,
+        "DNK": 23,
+        "CHN": 15,
+        "HUN": 12,
+        "POL": 6,
+        "FRA": 4
+      },
+      "rest": 16,
+      "menge": 58074556,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 58074556,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=482370&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": "Formteile aus Papierhalbstoff. 24 % kommen über die Niederlande/Belgien; das können Transitlieferungen (Rotterdam/Antwerpen) von Waren aus Drittstaaten sein."
+    },
+    "plastic_cup": {
+      "hs": "392410",
+      "hs_text": "Plastics; tableware and kitchenware",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 684620707,
+      "anteile": {
+        "CHN": 43,
+        "NLD": 9,
+        "ITA": 8,
+        "POL": 7,
+        "TUR": 4
+      },
+      "rest": 29,
+      "menge": 106988576,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 106988576,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=392410&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": "Geschirr und Küchengeräte aus Kunststoff. 12 % kommen über die Niederlande/Belgien; das können Transitlieferungen (Rotterdam/Antwerpen) von Waren aus Drittstaaten sein."
+    },
+    "takeaway_container": {
+      "hs": "392410",
+      "hs_text": "Plastics; tableware and kitchenware",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 684620707,
+      "anteile": {
+        "CHN": 43,
+        "NLD": 9,
+        "ITA": 8,
+        "POL": 7,
+        "TUR": 4
+      },
+      "rest": 29,
+      "menge": 106988576,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 106988576,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=392410&flowCode=M",
+      "zuordnung": "breit",
+      "hinweis": "12 % kommen über die Niederlande/Belgien; das können Transitlieferungen (Rotterdam/Antwerpen) von Waren aus Drittstaaten sein."
+    },
+    "foam_food_tray": {
+      "hs": "392390",
+      "hs_text": "Plastics; articles for the conveyance or packing of goods n.e.c. in heading no. 3923",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 788987087,
+      "anteile": {
+        "CHE": 19,
+        "NLD": 13,
+        "POL": 10,
+        "AUT": 8,
+        "CZE": 7,
+        "FRA": 6
+      },
+      "rest": 37,
+      "menge": 160092003,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 160092003,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=392390&flowCode=M",
+      "zuordnung": "breit",
+      "hinweis": "18 % kommen über die Niederlande/Belgien; das können Transitlieferungen (Rotterdam/Antwerpen) von Waren aus Drittstaaten sein."
+    },
+    "cling_film": {
+      "hs": "392010",
+      "hs_text": "Plastics; plates, sheets, film, foil and strip (not self-adhesive), of polymers of ethylene, non-cellular and not reinforced, laminated, supported or similarly combined with other materials",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 1380214654,
+      "anteile": {
+        "POL": 21,
+        "ITA": 13,
+        "TUR": 8,
+        "NLD": 7,
+        "AUT": 5,
+        "BEL": 5
+      },
+      "rest": 41,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=392010&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": "Folien aus Polyethylen (nicht verstärkt). 12 % kommen über die Niederlande/Belgien; das können Transitlieferungen (Rotterdam/Antwerpen) von Waren aus Drittstaaten sein."
+    },
+    "aluminium_foil": {
+      "hs": "760711",
+      "hs_text": "Aluminium; foil, (not backed), rolled (but not further worked), of a thickness not exceeding 0.2mm",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 533306197,
+      "anteile": {
+        "ARM": 14,
+        "ITA": 14,
+        "GRC": 10,
+        "CHN": 10,
+        "TUR": 9,
+        "AUT": 8
+      },
+      "rest": 35,
+      "menge": 107434144,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 107434144,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=760711&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": ""
+    },
+    "blister_pack": {
+      "hs": "392049",
+      "hs_text": "Plastics; polymers of vinyl chloride, containing by weight, less than 6% of plasticisers; plates, sheets, film, foil and strip (not self-adhesive), non-cellular and not reinforced, laminated, supported or similarly combined with other materials",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 152481116,
+      "anteile": {
+        "CHE": 29,
+        "USA": 18,
+        "HUN": 7,
+        "ITA": 6,
+        "BEL": 6,
+        "POL": 6
+      },
+      "rest": 28,
+      "menge": 29005307,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 29005307,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=392049&flowCode=M",
+      "zuordnung": "breit",
+      "hinweis": "PVC-Folien (<6 % Weichmacher); Blister werden gefüllt gehandelt."
+    },
+    "pill_bottle": {
+      "hs": "392330",
+      "hs_text": "Plastics; carboys, bottles, flasks and similar articles, for the conveyance or packing of goods",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 856885785,
+      "anteile": {
+        "LUX": 12,
+        "AUT": 12,
+        "POL": 11,
+        "NLD": 10,
+        "CHN": 8,
+        "CZE": 8
+      },
+      "rest": 39,
+      "menge": 219746953,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 219746953,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=392330&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": "13 % kommen über die Niederlande/Belgien; das können Transitlieferungen (Rotterdam/Antwerpen) von Waren aus Drittstaaten sein."
+    },
+    "detergent_bottle": {
+      "hs": "392330",
+      "hs_text": "Plastics; carboys, bottles, flasks and similar articles, for the conveyance or packing of goods",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 856885785,
+      "anteile": {
+        "LUX": 12,
+        "AUT": 12,
+        "POL": 11,
+        "NLD": 10,
+        "CHN": 8,
+        "CZE": 8
+      },
+      "rest": 39,
+      "menge": 219746953,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 219746953,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=392330&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": "13 % kommen über die Niederlande/Belgien; das können Transitlieferungen (Rotterdam/Antwerpen) von Waren aus Drittstaaten sein."
+    },
+    "spray_bottle": {
+      "hs": "392330",
+      "hs_text": "Plastics; carboys, bottles, flasks and similar articles, for the conveyance or packing of goods",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 856885785,
+      "anteile": {
+        "LUX": 12,
+        "AUT": 12,
+        "POL": 11,
+        "NLD": 10,
+        "CHN": 8,
+        "CZE": 8
+      },
+      "rest": 39,
+      "menge": 219746953,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 219746953,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=392330&flowCode=M",
+      "zuordnung": "breit",
+      "hinweis": "Flaschenkörper; Sprühpumpen stehen unter 8424/9616. 13 % kommen über die Niederlande/Belgien; das können Transitlieferungen (Rotterdam/Antwerpen) von Waren aus Drittstaaten sein."
+    },
+    "soap_dispenser": {
+      "hs": "392330",
+      "hs_text": "Plastics; carboys, bottles, flasks and similar articles, for the conveyance or packing of goods",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 856885785,
+      "anteile": {
+        "LUX": 12,
+        "AUT": 12,
+        "POL": 11,
+        "NLD": 10,
+        "CHN": 8,
+        "CZE": 8
+      },
+      "rest": 39,
+      "menge": 219746953,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 219746953,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=392330&flowCode=M",
+      "zuordnung": "breit",
+      "hinweis": "Flaschenkörper aus HDPE; Pumpen separat. 13 % kommen über die Niederlande/Belgien; das können Transitlieferungen (Rotterdam/Antwerpen) von Waren aus Drittstaaten sein."
+    },
+    "bubble_wrap": {
+      "hs": "392119",
+      "hs_text": "Plastics; plates, sheets, film, foil and strip, of plastics n.e.c. in heading no. 3921, cellular",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 389072448,
+      "anteile": {
+        "USA": 21,
+        "NLD": 13,
+        "POL": 11,
+        "ITA": 10,
+        "BEL": 5,
+        "FRA": 5
+      },
+      "rest": 35,
+      "menge": 39863848,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 39863848,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=392119&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": "Zellige Platten/Folien aus anderen Kunststoffen (inkl. PE-Luftpolsterfolie). 18 % kommen über die Niederlande/Belgien; das können Transitlieferungen (Rotterdam/Antwerpen) von Waren aus Drittstaaten sein."
+    },
+    "padded_envelope": {
+      "hs": "481710",
+      "hs_text": "Paper and paperboard; envelopes",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 103083949,
+      "anteile": {
+        "POL": 55,
+        "NLD": 8,
+        "CZE": 7,
+        "HUN": 6,
+        "CHE": 6,
+        "SVK": 4
+      },
+      "rest": 14,
+      "menge": 38709544,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 38709544,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=481710&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": "Briefumschläge."
+    },
+    "paper_bag": {
+      "hs": "481940",
+      "hs_text": "Paper and paperboard; sacks and bags, including cones, of paper, paperboard, cellulose wadding or fibres, having a base width less than 40cm",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 461085671,
+      "anteile": {
+        "CHN": 19,
+        "POL": 17,
+        "ITA": 16,
+        "CZE": 8,
+        "HRV": 6,
+        "TUR": 5
+      },
+      "rest": 29,
+      "menge": 160285739,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 160285739,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=481940&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": "Andere Säcke und Beutel aus Papier."
+    },
+    "shoebox": {
+      "hs": "481920",
+      "hs_text": "Paper and paperboard; folding cartons, boxes and cases, of non-corrugated paper or paperboard",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 667070808,
+      "anteile": {
+        "POL": 36,
+        "NLD": 12,
+        "CHN": 7,
+        "AUT": 7,
+        "CHE": 6,
+        "CZE": 6
+      },
+      "rest": 26,
+      "menge": 240230408,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 240230408,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=481920&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": "Faltschachteln aus nicht gewellter Pappe. 14 % kommen über die Niederlande/Belgien; das können Transitlieferungen (Rotterdam/Antwerpen) von Waren aus Drittstaaten sein."
+    },
+    "aluminium_tray": {
+      "hs": "761510",
+      "hs_text": "Aluminium; table, kitchen or other household articles and parts thereof; pot scourers and scouring or polishing pads, gloves and the like",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 361870040,
+      "anteile": {
+        "CHN": 51,
+        "FRA": 18,
+        "ITA": 12,
+        "POL": 4
+      },
+      "rest": 15,
+      "menge": 41544744,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 41544744,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=761510&flowCode=M",
+      "zuordnung": "breit",
+      "hinweis": "Haushaltsartikel aus Aluminium; Einweg-Schalen teils unter 7612.90."
+    },
+    "cereal_box": {
+      "hs": "481920",
+      "hs_text": "Paper and paperboard; folding cartons, boxes and cases, of non-corrugated paper or paperboard",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 667070808,
+      "anteile": {
+        "POL": 36,
+        "NLD": 12,
+        "CHN": 7,
+        "AUT": 7,
+        "CHE": 6,
+        "CZE": 6
+      },
+      "rest": 26,
+      "menge": 240230408,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 240230408,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=481920&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": "14 % kommen über die Niederlande/Belgien; das können Transitlieferungen (Rotterdam/Antwerpen) von Waren aus Drittstaaten sein."
+    },
+    "tea_bag": {
+      "hs": "090230",
+      "hs_text": "Tea, black; (fermented) and partly fermented tea, in immediate packings of a content not exceeding 3kg",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 92259524,
+      "anteile": {
+        "LKA": 47,
+        "TUR": 15,
+        "POL": 6,
+        "GBR": 5,
+        "IND": 4,
+        "ARE": 4
+      },
+      "rest": 19,
+      "menge": 12590230,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 12590230,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=090230&flowCode=M",
+      "zuordnung": "breit",
+      "hinweis": "Schwarzer Tee in Packungen ≤3 kg (inkl. Teebeutel); Kräutertee unter Kap. 12/21."
+    },
+    "plastic_straw": {
+      "hs": "392410",
+      "hs_text": "Plastics; tableware and kitchenware",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 684620707,
+      "anteile": {
+        "CHN": 43,
+        "NLD": 9,
+        "ITA": 8,
+        "POL": 7,
+        "TUR": 4
+      },
+      "rest": 29,
+      "menge": 106988576,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 106988576,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=392410&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": "12 % kommen über die Niederlande/Belgien; das können Transitlieferungen (Rotterdam/Antwerpen) von Waren aus Drittstaaten sein."
+    },
+    "coffee_bag": {
+      "hs": "392329",
+      "hs_text": "Plastics; sacks and bags (including cones), for the conveyance or packing of goods, of plastics other than ethylene polymers",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 332472609,
+      "anteile": {
+        "POL": 15,
+        "FRA": 12,
+        "CHE": 11,
+        "CHN": 10,
+        "LTU": 9,
+        "ITA": 8
+      },
+      "rest": 35,
+      "menge": 88524046,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 88524046,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=392329&flowCode=M",
+      "zuordnung": "breit",
+      "hinweis": "Wie Chipstüte; Kaffeeverpackungen werden gefüllt gehandelt."
+    },
+    "roll_on_deodorant": {
+      "hs": "330720",
+      "hs_text": "Perfumery, cosmetic or toilet preparations; personal deodorants and antiperspirants",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 341047080,
+      "anteile": {
+        "GBR": 24,
+        "FRA": 23,
+        "POL": 18,
+        "NLD": 9,
+        "ITA": 8,
+        "ESP": 7
+      },
+      "rest": 11,
+      "menge": 33124018,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 33124018,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=330720&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": ""
+    },
+    "lipstick": {
+      "hs": "330410",
+      "hs_text": "Cosmetic and toilet preparations; lip make-up",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 324520085,
+      "anteile": {
+        "FRA": 23,
+        "CHN": 21,
+        "ITA": 20,
+        "POL": 9,
+        "USA": 5,
+        "CZE": 5
+      },
+      "rest": 17,
+      "menge": 6548206,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 6548206,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=330410&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": ""
+    },
+    "cosmetic_jar": {
+      "hs": "392330",
+      "hs_text": "Plastics; carboys, bottles, flasks and similar articles, for the conveyance or packing of goods",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 856885785,
+      "anteile": {
+        "LUX": 12,
+        "AUT": 12,
+        "POL": 11,
+        "NLD": 10,
+        "CHN": 8,
+        "CZE": 8
+      },
+      "rest": 39,
+      "menge": 219746953,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 219746953,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=392330&flowCode=M",
+      "zuordnung": "breit",
+      "hinweis": "Tiegel aus PP; Abgrenzung zu 3923.90 nicht eindeutig. 13 % kommen über die Niederlande/Belgien; das können Transitlieferungen (Rotterdam/Antwerpen) von Waren aus Drittstaaten sein."
+    },
+    "fruit_net": {
+      "hs": "630533",
+      "hs_text": "Sacks and bags; of a kind used for the packing of goods, of man-made textile materials, of polyethylene or polypropylene strip or the like, not flexible intermediate bulk containers",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 27748124,
+      "anteile": {
+        "TUR": 24,
+        "GRC": 19,
+        "IND": 14,
+        "CHN": 11,
+        "CZE": 5,
+        "HRV": 4
+      },
+      "rest": 23,
+      "menge": 7867275,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 7867275,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=630533&flowCode=M",
+      "zuordnung": "breit",
+      "hinweis": "Säcke aus PE/PP-Streifen; Raschelnetze z. T. auch 5608."
+    },
+    "can_carrier": {
+      "hs": "392390",
+      "hs_text": "Plastics; articles for the conveyance or packing of goods n.e.c. in heading no. 3923",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 788987087,
+      "anteile": {
+        "CHE": 19,
+        "NLD": 13,
+        "POL": 10,
+        "AUT": 8,
+        "CZE": 7,
+        "FRA": 6
+      },
+      "rest": 37,
+      "menge": 160092003,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 160092003,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=392390&flowCode=M",
+      "zuordnung": "breit",
+      "hinweis": "18 % kommen über die Niederlande/Belgien; das können Transitlieferungen (Rotterdam/Antwerpen) von Waren aus Drittstaaten sein."
+    },
+    "bag_in_box": {
+      "hs": "392329",
+      "hs_text": "Plastics; sacks and bags (including cones), for the conveyance or packing of goods, of plastics other than ethylene polymers",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 332472609,
+      "anteile": {
+        "POL": 15,
+        "FRA": 12,
+        "CHE": 11,
+        "CHN": 10,
+        "LTU": 9,
+        "ITA": 8
+      },
+      "rest": 35,
+      "menge": 88524046,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 88524046,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=392329&flowCode=M",
+      "zuordnung": "breit",
+      "hinweis": "Innenbeutel aus Verbundfolie; Karton wäre 4819.10."
+    },
+    "bottle_crate": {
+      "hs": "392310",
+      "hs_text": "Plastics; boxes, cases, crates and similar articles for the conveyance or packing of goods",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 920894660,
+      "anteile": {
+        "NLD": 17,
+        "POL": 15,
+        "FRA": 9,
+        "BEL": 6,
+        "CHN": 6,
+        "CZE": 6
+      },
+      "rest": 41,
+      "menge": 232863856,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 232863856,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=392310&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": "Kästen, Kisten, Steigen aus Kunststoff. 24 % kommen über die Niederlande/Belgien; das können Transitlieferungen (Rotterdam/Antwerpen) von Waren aus Drittstaaten sein."
+    },
+    "paint_bucket": {
+      "hs": "392390",
+      "hs_text": "Plastics; articles for the conveyance or packing of goods n.e.c. in heading no. 3923",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 788987087,
+      "anteile": {
+        "CHE": 19,
+        "NLD": 13,
+        "POL": 10,
+        "AUT": 8,
+        "CZE": 7,
+        "FRA": 6
+      },
+      "rest": 37,
+      "menge": 160092003,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 160092003,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=392390&flowCode=M",
+      "zuordnung": "breit",
+      "hinweis": "18 % kommen über die Niederlande/Belgien; das können Transitlieferungen (Rotterdam/Antwerpen) von Waren aus Drittstaaten sein."
+    },
+    "perfume_bottle": {
+      "hs": "701090",
+      "hs_text": "Glass; carboys, bottles, flasks, jars, pots, phials and other containers of glass, (not ampoules), used for the conveyance or packing of goods",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 674852958,
+      "anteile": {
+        "CZE": 30,
+        "POL": 15,
+        "ITA": 10,
+        "AUT": 8,
+        "FRA": 8,
+        "CHN": 8
+      },
+      "rest": 21,
+      "menge": 500985670,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 500985670,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=701090&flowCode=M",
+      "zuordnung": "breit",
+      "hinweis": "Glasbehälter allgemein; Parfümflakons nicht separat erfasst."
+    },
+    "squeeze_bottle": {
+      "hs": "392330",
+      "hs_text": "Plastics; carboys, bottles, flasks and similar articles, for the conveyance or packing of goods",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 856885785,
+      "anteile": {
+        "LUX": 12,
+        "AUT": 12,
+        "POL": 11,
+        "NLD": 10,
+        "CHN": 8,
+        "CZE": 8
+      },
+      "rest": 39,
+      "menge": 219746953,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 219746953,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=392330&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": "13 % kommen über die Niederlande/Belgien; das können Transitlieferungen (Rotterdam/Antwerpen) von Waren aus Drittstaaten sein."
+    },
+    "kitchen_sponge": {
+      "hs": "392490",
+      "hs_text": "Plastics; household articles and hygienic or toilet articles",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 695562291,
+      "anteile": {
+        "CHN": 34,
+        "POL": 14,
+        "NLD": 7,
+        "ITA": 6,
+        "HUN": 6,
+        "CHE": 5
+      },
+      "rest": 28,
+      "menge": 120367385,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 120367385,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=392490&flowCode=M",
+      "zuordnung": "breit",
+      "hinweis": "Andere Haushaltsartikel aus Kunststoff."
+    },
+    "toothbrush": {
+      "hs": "960321",
+      "hs_text": "Brushes; toothbrushes",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 493373145,
+      "anteile": {
+        "CHE": 29,
+        "HUN": 16,
+        "CHN": 9,
+        "IRL": 7,
+        "NLD": 6,
+        "POL": 5
+      },
+      "rest": 28,
+      "menge": 756322977,
+      "menge_einheit": "Stück",
+      "nettogewicht_kg": 11614141,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=960321&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": ""
+    },
+    "disposable_razor": {
+      "hs": "821210",
+      "hs_text": "Razors",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 180223546,
+      "anteile": {
+        "CZE": 27,
+        "POL": 22,
+        "CHN": 19,
+        "VNM": 15,
+        "USA": 6,
+        "NLD": 4
+      },
+      "rest": 7,
+      "menge": 361431110,
+      "menge_einheit": "Stück",
+      "nettogewicht_kg": 6047799,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=821210&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": "Rasiermesser und Rasierer (nicht elektrisch)."
+    },
+    "hairbrush": {
+      "hs": "960329",
+      "hs_text": "Brushes; shaving, hair, nail, eyelash and other toilet brushes for use on the person, including brushes as parts of appliances",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 96721965,
+      "anteile": {
+        "CHN": 65,
+        "GBR": 14,
+        "KOR": 3,
+        "ITA": 3
+      },
+      "rest": 15,
+      "menge": 54495043,
+      "menge_einheit": "Stück",
+      "nettogewicht_kg": 6111012,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=960329&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": ""
+    },
+    "comb": {
+      "hs": "961511",
+      "hs_text": "Combs, hair slides and the like; of hard rubber or plastics",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 58267280,
+      "anteile": {
+        "CHN": 83,
+        "CZE": 4
+      },
+      "rest": 13,
+      "menge": 2665590,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 2665590,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=961511&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": ""
+    },
+    "cooking_pot": {
+      "hs": "732393",
+      "hs_text": "Steel, stainless; table, kitchen and other household articles and parts thereof",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 704785422,
+      "anteile": {
+        "CHN": 72,
+        "ITA": 6,
+        "IND": 3,
+        "FRA": 3
+      },
+      "rest": 16,
+      "menge": 80300686,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 80300686,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=732393&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": "Haushaltsartikel aus nichtrostendem Stahl."
+    },
+    "frying_pan": {
+      "hs": "761510",
+      "hs_text": "Aluminium; table, kitchen or other household articles and parts thereof; pot scourers and scouring or polishing pads, gloves and the like",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 361870040,
+      "anteile": {
+        "CHN": 51,
+        "FRA": 18,
+        "ITA": 12,
+        "POL": 4
+      },
+      "rest": 15,
+      "menge": 41544744,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 41544744,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=761510&flowCode=M",
+      "zuordnung": "breit",
+      "hinweis": "Haushaltsartikel aus Aluminium (beschichtete Pfannen)."
+    },
+    "ceramic_mug": {
+      "hs": "691200",
+      "hs_text": "Ceramic tableware, kitchenware, other household articles and toilet articles; other than of porcelain or china",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 365892474,
+      "anteile": {
+        "CHN": 58,
+        "PRT": 15,
+        "ROU": 5,
+        "THA": 4,
+        "POL": 3
+      },
+      "rest": 15,
+      "menge": 104347292,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 104347292,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=691200&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": "Geschirr aus Keramik (nicht Porzellan); Porzellanbecher unter 6911.10."
+    },
+    "drinking_glass": {
+      "hs": "701337",
+      "hs_text": "Glassware; drinking glasses (not stemware), other than of lead crystal or glass-ceramics",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 169064917,
+      "anteile": {
+        "CHN": 24,
+        "POL": 15,
+        "BGR": 12,
+        "TUR": 12,
+        "CZE": 9,
+        "ITA": 8
+      },
+      "rest": 20,
+      "menge": 68312340,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 68312340,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=701337&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": ""
+    },
+    "kitchen_knife": {
+      "hs": "821192",
+      "hs_text": "Knives; having fixed cutting blades, (other than table knives), serrated or not, excluding knives and blades of heading no. 8208",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 136076922,
+      "anteile": {
+        "CHN": 37,
+        "CHE": 35,
+        "JPN": 8
+      },
+      "rest": 20,
+      "nettogewicht_kg": 4256742,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=821192&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": "Andere Messer mit feststehender Klinge."
+    },
+    "cutting_board": {
+      "hs": "441990",
+      "hs_text": "Tableware and kitchenware, of wood; not of bamboo or tropical wood",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 97027038,
+      "anteile": {
+        "CHN": 50,
+        "POL": 9,
+        "IND": 7,
+        "TUN": 5,
+        "VNM": 4,
+        "ROU": 4
+      },
+      "rest": 21,
+      "menge": 16409790,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 16409790,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=441990&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": "Tisch- und Küchengeräte aus Holz (nicht Bambus/Tropenholz)."
+    },
+    "wooden_spoon": {
+      "hs": "441990",
+      "hs_text": "Tableware and kitchenware, of wood; not of bamboo or tropical wood",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 97027038,
+      "anteile": {
+        "CHN": 50,
+        "POL": 9,
+        "IND": 7,
+        "TUN": 5,
+        "VNM": 4,
+        "ROU": 4
+      },
+      "rest": 21,
+      "menge": 16409790,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 16409790,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=441990&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": ""
+    },
+    "food_container": {
+      "hs": "392410",
+      "hs_text": "Plastics; tableware and kitchenware",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 684620707,
+      "anteile": {
+        "CHN": 43,
+        "NLD": 9,
+        "ITA": 8,
+        "POL": 7,
+        "TUR": 4
+      },
+      "rest": 29,
+      "menge": 106988576,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 106988576,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=392410&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": "12 % kommen über die Niederlande/Belgien; das können Transitlieferungen (Rotterdam/Antwerpen) von Waren aus Drittstaaten sein."
+    },
+    "thermos_flask": {
+      "hs": "961700",
+      "hs_text": "Vacuum flasks and other vacuum vessels, complete with cases; parts thereof other than glass inners",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 237582139,
+      "anteile": {
+        "CHN": 84,
+        "USA": 4,
+        "NLD": 4
+      },
+      "rest": 8,
+      "menge": 17009186,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 17009186,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=961700&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": ""
+    },
+    "wire_hanger": {
+      "hs": "732690",
+      "hs_text": "Iron or steel; articles n.e.c. in heading 7326",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 5372052382,
+      "anteile": {
+        "CHN": 19,
+        "POL": 11,
+        "CZE": 10,
+        "ITA": 8,
+        "AUT": 6,
+        "USA": 5
+      },
+      "rest": 41,
+      "menge": 1018471221,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 1018471221,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=732690&flowCode=M",
+      "zuordnung": "breit",
+      "hinweis": "Andere Waren aus Eisen/Stahl (Sammelcode)."
+    },
+    "plastic_hanger": {
+      "hs": "392690",
+      "hs_text": "Plastics; other articles n.e.c. in chapter 39",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 7699880203,
+      "anteile": {
+        "CHN": 19,
+        "POL": 10,
+        "CZE": 7,
+        "ITA": 7,
+        "CHE": 6,
+        "USA": 6
+      },
+      "rest": 45,
+      "menge": 737721372,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 737721372,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=392690&flowCode=M",
+      "zuordnung": "breit",
+      "hinweis": "Andere Waren aus Kunststoff (Sammelcode)."
+    },
+    "clothes_peg": {
+      "hs": "392690",
+      "hs_text": "Plastics; other articles n.e.c. in chapter 39",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 7699880203,
+      "anteile": {
+        "CHN": 19,
+        "POL": 10,
+        "CZE": 7,
+        "ITA": 7,
+        "CHE": 6,
+        "USA": 6
+      },
+      "rest": 45,
+      "menge": 737721372,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 737721372,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=392690&flowCode=M",
+      "zuordnung": "breit",
+      "hinweis": "Kunststoff-Klammern; Holzklammern unter 4421."
+    },
+    "picture_frame": {
+      "hs": "441490",
+      "hs_text": "Wooden frames; for paintings, photographs, mirrors or similar objects; not of tropical wood",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 105384872,
+      "anteile": {
+        "CHN": 53,
+        "POL": 24,
+        "NLD": 6,
+        "ITA": 4,
+        "BEL": 3
+      },
+      "rest": 10,
+      "menge": 29887580,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 29887580,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=441490&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": "Holzrahmen für Bilder, Fotos, Spiegel (nicht aus Tropenholz)."
+    },
+    "candle_jar": {
+      "hs": "340600",
+      "hs_text": "Candles, tapers and the like",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 552920880,
+      "anteile": {
+        "POL": 52,
+        "CHN": 16,
+        "VNM": 5,
+        "HUN": 5,
+        "USA": 3,
+        "NLD": 3
+      },
+      "rest": 16,
+      "menge": 193317985,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 193317985,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=340600&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": ""
+    },
+    "door_key": {
+      "hs": "830170",
+      "hs_text": "Keys; presented separately, of base metal",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 45227234,
+      "anteile": {
+        "ITA": 21,
+        "ESP": 17,
+        "CZE": 11,
+        "CHE": 8,
+        "AUT": 7,
+        "CHN": 7
+      },
+      "rest": 29,
+      "menge": 1203256,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 1203256,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=830170&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": ""
+    },
+    "padlock": {
+      "hs": "830110",
+      "hs_text": "Padlocks; (key, combination or electrically operated), of base metal",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 56023624,
+      "anteile": {
+        "CHN": 73,
+        "TWN": 5,
+        "POL": 5,
+        "FRA": 4
+      },
+      "rest": 13,
+      "menge": 3318095,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 3318095,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=830110&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": ""
+    },
+    "bicycle_inner_tube": {
+      "hs": "401320",
+      "hs_text": "Rubber; inner tubes, of a kind used on bicycles",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 27103481,
+      "anteile": {
+        "VNM": 45,
+        "CHN": 43
+      },
+      "rest": 12,
+      "menge": 19233785,
+      "menge_einheit": "Stück",
+      "nettogewicht_kg": 3585884,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=401320&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": ""
+    },
+    "garden_hose": {
+      "hs": "391739",
+      "hs_text": "Plastics; tubes, pipes and hoses thereof, n.e.c. in item no. 3917.30",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 520269412,
+      "anteile": {
+        "ITA": 13,
+        "CHN": 12,
+        "CHE": 11,
+        "CZE": 9,
+        "USA": 7,
+        "SVN": 6
+      },
+      "rest": 42,
+      "menge": 57395123,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 57395123,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=391739&flowCode=M",
+      "zuordnung": "breit",
+      "hinweis": "Andere Kunststoffschläuche."
+    },
+    "plant_pot": {
+      "hs": "392490",
+      "hs_text": "Plastics; household articles and hygienic or toilet articles",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 695562291,
+      "anteile": {
+        "CHN": 34,
+        "POL": 14,
+        "NLD": 7,
+        "ITA": 6,
+        "HUN": 6,
+        "CHE": 5
+      },
+      "rest": 28,
+      "menge": 120367385,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 120367385,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=392490&flowCode=M",
+      "zuordnung": "breit",
+      "hinweis": ""
+    },
+    "watering_can": {
+      "hs": "392490",
+      "hs_text": "Plastics; household articles and hygienic or toilet articles",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 695562291,
+      "anteile": {
+        "CHN": 34,
+        "POL": 14,
+        "NLD": 7,
+        "ITA": 6,
+        "HUN": 6,
+        "CHE": 5
+      },
+      "rest": 28,
+      "menge": 120367385,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 120367385,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=392490&flowCode=M",
+      "zuordnung": "breit",
+      "hinweis": ""
+    },
+    "broom": {
+      "hs": "960390",
+      "hs_text": "Brooms, brushes, mops, feather dusters, squeegees, hand operated mechanical floor sweepers; (not motorised), prepared knots and tufts for brooms or brush making n.e.c.",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 331492602,
+      "anteile": {
+        "CHN": 49,
+        "CZE": 12,
+        "POL": 7,
+        "BEL": 5,
+        "ITA": 4,
+        "LTU": 4
+      },
+      "rest": 19,
+      "nettogewicht_kg": 46481864,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=960390&flowCode=M",
+      "zuordnung": "breit",
+      "hinweis": "Andere Besen und Bürsten."
+    },
+    "bucket": {
+      "hs": "392490",
+      "hs_text": "Plastics; household articles and hygienic or toilet articles",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 695562291,
+      "anteile": {
+        "CHN": 34,
+        "POL": 14,
+        "NLD": 7,
+        "ITA": 6,
+        "HUN": 6,
+        "CHE": 5
+      },
+      "rest": 28,
+      "menge": 120367385,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 120367385,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=392490&flowCode=M",
+      "zuordnung": "breit",
+      "hinweis": ""
+    },
+    "ice_cube_tray": {
+      "hs": "392410",
+      "hs_text": "Plastics; tableware and kitchenware",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 684620707,
+      "anteile": {
+        "CHN": 43,
+        "NLD": 9,
+        "ITA": 8,
+        "POL": 7,
+        "TUR": 4
+      },
+      "rest": 29,
+      "menge": 106988576,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 106988576,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=392410&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": "12 % kommen über die Niederlande/Belgien; das können Transitlieferungen (Rotterdam/Antwerpen) von Waren aus Drittstaaten sein."
+    },
+    "baking_tray": {
+      "hs": "732399",
+      "hs_text": "Iron or steel; table, kitchen and other household articles and parts thereof, of iron or steel n.e.c. in heading no. 7323",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 683015565,
+      "anteile": {
+        "NLD": 26,
+        "CHN": 25,
+        "ITA": 23,
+        "CZE": 6,
+        "POL": 4,
+        "FRA": 3
+      },
+      "rest": 13,
+      "menge": 80507556,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 80507556,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=732399&flowCode=M",
+      "zuordnung": "breit",
+      "hinweis": "Haushaltsartikel aus Eisen/Stahl (nicht rostfrei/emailliert/Guss). 29 % kommen über die Niederlande/Belgien; das können Transitlieferungen (Rotterdam/Antwerpen) von Waren aus Drittstaaten sein."
+    },
+    "fork": {
+      "hs": "821599",
+      "hs_text": "Cutlery; other than plated with precious metal",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 105175241,
+      "anteile": {
+        "CHN": 56,
+        "VNM": 26,
+        "IDN": 4
+      },
+      "rest": 14,
+      "menge": 8295418,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 8295418,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=821599&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": ""
+    },
+    "stapler": {
+      "hs": "847290",
+      "hs_text": "Office machines; not elsewhere classified",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 247249910,
+      "anteile": {
+        "CHN": 36,
+        "AUT": 13,
+        "HUN": 13,
+        "JPN": 8,
+        "PHL": 7,
+        "NLD": 5
+      },
+      "rest": 18,
+      "menge": 97783,
+      "menge_einheit": "Stück",
+      "nettogewicht_kg": 15575955,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=847290&flowCode=M",
+      "zuordnung": "breit",
+      "hinweis": "Andere Büromaschinen."
+    },
+    "ring_binder": {
+      "hs": "482030",
+      "hs_text": "Paper and paperboard; binders, folders and file covers",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 73749250,
+      "anteile": {
+        "POL": 47,
+        "CZE": 11,
+        "CHN": 10,
+        "FRA": 9,
+        "HUN": 5,
+        "SVN": 4
+      },
+      "rest": 14,
+      "menge": 21070435,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 21070435,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=482030&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": ""
+    },
+    "spiral_notebook": {
+      "hs": "482010",
+      "hs_text": "Paper and paperboard; registers, account books, note books, order books, receipt books, letter pads, memorandum pads, diaries and similar articles",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 204104249,
+      "anteile": {
+        "CHN": 45,
+        "USA": 12,
+        "POL": 11,
+        "ITA": 6,
+        "NLD": 4,
+        "AUT": 4
+      },
+      "rest": 18,
+      "menge": 36389916,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 36389916,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=482010&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": ""
+    },
+    "felt_tip_marker": {
+      "hs": "960820",
+      "hs_text": "Pens; felt tipped and other porous-tipped pens and markers",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 141901748,
+      "anteile": {
+        "CHN": 38,
+        "CZE": 15,
+        "JPN": 10,
+        "ITA": 8,
+        "AUT": 6,
+        "POL": 5
+      },
+      "rest": 18,
+      "menge": 407679729,
+      "menge_einheit": "Stück",
+      "nettogewicht_kg": 11867144,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=960820&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": ""
+    },
+    "highlighter": {
+      "hs": "960820",
+      "hs_text": "Pens; felt tipped and other porous-tipped pens and markers",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 141901748,
+      "anteile": {
+        "CHN": 38,
+        "CZE": 15,
+        "JPN": 10,
+        "ITA": 8,
+        "AUT": 6,
+        "POL": 5
+      },
+      "rest": 18,
+      "menge": 407679729,
+      "menge_einheit": "Stück",
+      "nettogewicht_kg": 11867144,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=960820&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": ""
+    },
+    "plastic_ruler": {
+      "hs": "901780",
+      "hs_text": "Mathematical instruments and equipment; n.e.c. in heading no. 9017",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 102143071,
+      "anteile": {
+        "CHN": 38,
+        "CZE": 23,
+        "CHE": 7,
+        "SWE": 5,
+        "NLD": 4,
+        "AUT": 4
+      },
+      "rest": 19,
+      "nettogewicht_kg": 6228678,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=901780&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": "Andere Längenmessinstrumente."
+    },
+    "eraser": {
+      "hs": "401692",
+      "hs_text": "Rubber; vulcanised (other than hard rubber), erasers, of non-cellular rubber",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 9193914,
+      "anteile": {
+        "CHN": 52,
+        "POL": 12,
+        "MYS": 8,
+        "CZE": 7,
+        "NLD": 3,
+        "ITA": 3
+      },
+      "rest": 15,
+      "menge": 973542,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 973542,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=401692&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": ""
+    },
+    "glue_stick": {
+      "hs": "350610",
+      "hs_text": "Glues or adhesives; prepared, products suitable for use as glues or adhesives, put up for retail sale as glues or adhesives, not exceeding a net weight of 1kg",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 236606587,
+      "anteile": {
+        "NLD": 12,
+        "POL": 11,
+        "USA": 11,
+        "IRL": 10,
+        "CHE": 9,
+        "CHN": 9
+      },
+      "rest": 38,
+      "menge": 25652801,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 25652801,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=350610&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": "Klebstoffe in Kleinverkaufspackungen ≤1 kg. 18 % kommen über die Niederlande/Belgien; das können Transitlieferungen (Rotterdam/Antwerpen) von Waren aus Drittstaaten sein."
+    },
+    "tape_dispenser": {
+      "hs": "392610",
+      "hs_text": "Plastics; office or school supplies",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 233173206,
+      "anteile": {
+        "CHN": 30,
+        "NLD": 22,
+        "POL": 13,
+        "CZE": 9,
+        "FRA": 4,
+        "TUR": 3
+      },
+      "rest": 19,
+      "menge": 28705379,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 28705379,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=392610&flowCode=M",
+      "zuordnung": "breit",
+      "hinweis": "Büro- und Schulbedarf aus Kunststoff. 25 % kommen über die Niederlande/Belgien; das können Transitlieferungen (Rotterdam/Antwerpen) von Waren aus Drittstaaten sein."
+    },
+    "envelope": {
+      "hs": "481710",
+      "hs_text": "Paper and paperboard; envelopes",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 103083949,
+      "anteile": {
+        "POL": 55,
+        "NLD": 8,
+        "CZE": 7,
+        "HUN": 6,
+        "CHE": 6,
+        "SVK": 4
+      },
+      "rest": 14,
+      "menge": 38709544,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 38709544,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=481710&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": ""
+    },
+    "printer_cartridge": {
+      "hs": "844399",
+      "hs_text": "Printing machinery; parts and accessories, n.e.c. in item no. 8443.91",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 4514192415,
+      "anteile": {
+        "JPN": 30,
+        "CHN": 21,
+        "MYS": 17,
+        "NLD": 10,
+        "VNM": 5,
+        "POL": 4
+      },
+      "rest": 13,
+      "menge": 60727012,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 60727012,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=844399&flowCode=M",
+      "zuordnung": "breit",
+      "hinweis": "Teile und Zubehör für Drucker (HS 2022); Tintenpatronen ohne Druckkopf z. T. 3215. 10 % kommen über die Niederlande/Belgien; das können Transitlieferungen (Rotterdam/Antwerpen) von Waren aus Drittstaaten sein."
+    },
+    "pencil_case": {
+      "hs": "420292",
+      "hs_text": "Cases and containers; n.e.c. in heading 4202, with outer surface of sheeting of plastics or of textile materials",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 1777102854,
+      "anteile": {
+        "CHN": 55,
+        "VNM": 19,
+        "IND": 4,
+        "IDN": 4
+      },
+      "rest": 18,
+      "menge": 121737611,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 121737611,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=420292&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": ""
+    },
+    "plastic_folder": {
+      "hs": "392610",
+      "hs_text": "Plastics; office or school supplies",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 233173206,
+      "anteile": {
+        "CHN": 30,
+        "NLD": 22,
+        "POL": 13,
+        "CZE": 9,
+        "FRA": 4,
+        "TUR": 3
+      },
+      "rest": 19,
+      "menge": 28705379,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 28705379,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=392610&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": "25 % kommen über die Niederlande/Belgien; das können Transitlieferungen (Rotterdam/Antwerpen) von Waren aus Drittstaaten sein."
+    },
+    "pencil_sharpener": {
+      "hs": "821410",
+      "hs_text": "Cutlery; paper knives, letter openers, erasing knives, pencil sharpeners and blades therefore",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 15333231,
+      "anteile": {
+        "CHN": 74,
+        "CZE": 14
+      },
+      "rest": 12,
+      "menge": 982964,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 982964,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=821410&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": ""
+    },
+    "clipboard": {
+      "hs": "482030",
+      "hs_text": "Paper and paperboard; binders, folders and file covers",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 73749250,
+      "anteile": {
+        "POL": 47,
+        "CZE": 11,
+        "CHN": 10,
+        "FRA": 9,
+        "HUN": 5,
+        "SVN": 4
+      },
+      "rest": 14,
+      "menge": 21070435,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 21070435,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=482030&flowCode=M",
+      "zuordnung": "breit",
+      "hinweis": "Schnellhefter/Mappen aus Pappe; Klemmbretter aus Hartfaser nicht separat erfasst."
+    },
+    "wool_sweater": {
+      "hs": "611011",
+      "hs_text": "Jerseys, pullovers, cardigans, waistcoats and similar articles; knitted or crocheted, of wool or fine animal hair",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 533359345,
+      "anteile": {
+        "CHN": 38,
+        "ITA": 14,
+        "TUR": 8,
+        "BGD": 6,
+        "KHM": 5,
+        "TUN": 3
+      },
+      "rest": 26,
+      "menge": 14473440,
+      "menge_einheit": "Stück",
+      "nettogewicht_kg": 5724777,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=611011&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": ""
+    },
+    "leather_belt": {
+      "hs": "420330",
+      "hs_text": "Clothing accessories; belts and bandoliers, of leather or of composition leather",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 191967186,
+      "anteile": {
+        "ITA": 30,
+        "CHN": 14,
+        "ROU": 12,
+        "IND": 11,
+        "FRA": 6,
+        "ESP": 5
+      },
+      "rest": 22,
+      "menge": 3841706,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 3841706,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=420330&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": ""
+    },
+    "leather_shoe": {
+      "hs": "640399",
+      "hs_text": "Footwear; n.e.c. in heading no. 6403, (not covering the ankle), outer soles of rubber, plastics or composition leather, uppers of leather",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 3879218593,
+      "anteile": {
+        "VNM": 24,
+        "CHN": 15,
+        "ITA": 10,
+        "IDN": 9,
+        "PRT": 8,
+        "IND": 6
+      },
+      "rest": 28,
+      "menge": 135411377,
+      "menge_einheit": "Paar",
+      "nettogewicht_kg": 93051048,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=640399&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": "Schuhe mit Oberteil aus Leder, Sohle aus Kautschuk/Kunststoff/Leder, nicht knöchelhoch."
+    },
+    "sock": {
+      "hs": "611595",
+      "hs_text": "Hosiery and footwear; without applied soles, of cotton, knitted or crocheted (excluding graduated compression hosiery, panty hose, tights, full or knee-length hosiery measuring per single yarn less than 67 decitex)",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 777311021,
+      "anteile": {
+        "TUR": 29,
+        "CHN": 28,
+        "PAK": 16,
+        "VNM": 4,
+        "NLD": 4,
+        "IDN": 4
+      },
+      "rest": 15,
+      "menge": 40559370,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 40559370,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=611595&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": "Strumpfwaren aus Baumwolle."
+    },
+    "baseball_cap": {
+      "hs": "650500",
+      "hs_text": "Hats and other headgear; knitted or crocheted, or made up from lace, felt or other textile fabric, in the piece (but not in strips), whether or not lined or trimmed; hair-nets of any material, whether or not lined or trimmed",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 589125081,
+      "anteile": {
+        "CHN": 57,
+        "VNM": 7,
+        "BGD": 6,
+        "ITA": 5,
+        "KHM": 3,
+        "NLD": 3
+      },
+      "rest": 19,
+      "menge": 15526824,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 15526824,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=650500&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": ""
+    },
+    "winter_jacket": {
+      "hs": "620140",
+      "hs_text": "Coats; men's or boys', overcoats, raincoats, car-coats, capes, cloaks, anoraks (including ski-jackets) and similar articles, of man-made fibres, other than those of heading no. 6203 (not knitted or crocheted)",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 1142408123,
+      "anteile": {
+        "CHN": 36,
+        "VNM": 17,
+        "BGD": 11,
+        "MMR": 6,
+        "KHM": 4,
+        "ITA": 4
+      },
+      "rest": 22,
+      "menge": 30920899,
+      "menge_einheit": "Stück",
+      "nettogewicht_kg": 26513243,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=620140&flowCode=M",
+      "zuordnung": "breit",
+      "hinweis": "Herren-Mäntel, Anoraks u. ä. aus Chemiefasern; Damen unter 6202.40."
+    },
+    "bed_sheet": {
+      "hs": "630231",
+      "hs_text": "Bed linen; of cotton (not printed, knitted or crocheted)",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 400884833,
+      "anteile": {
+        "PAK": 39,
+        "CHN": 16,
+        "TUR": 10,
+        "POL": 7,
+        "IND": 6,
+        "CZE": 6
+      },
+      "rest": 16,
+      "menge": 41083490,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 41083490,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=630231&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": ""
+    },
+    "towel": {
+      "hs": "630260",
+      "hs_text": "Kitchen and toilet linen; of terry towelling or similar terry fabrics, of cotton",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 385344394,
+      "anteile": {
+        "TUR": 24,
+        "PAK": 24,
+        "IND": 12,
+        "BGD": 9,
+        "CHN": 7,
+        "PRT": 5
+      },
+      "rest": 19,
+      "menge": 48630399,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 48630399,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=630260&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": ""
+    },
+    "leather_handbag": {
+      "hs": "420221",
+      "hs_text": "Cases and containers; handbags (whether or not with shoulder strap and including those without handle), with outer surface of leather or of composition leather",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 716518659,
+      "anteile": {
+        "ITA": 39,
+        "FRA": 26,
+        "CHN": 9,
+        "IND": 7
+      },
+      "rest": 19,
+      "menge": 5877170,
+      "menge_einheit": "Stück",
+      "nettogewicht_kg": 3451989,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=420221&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": ""
+    },
+    "flip_flops": {
+      "hs": "640220",
+      "hs_text": "Footwear; with outer soles and uppers of rubber or plastics, upper straps or thongs assembled to the sole by plugs",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 29805156,
+      "anteile": {
+        "CHN": 43,
+        "VNM": 18,
+        "BRA": 18,
+        "ITA": 7
+      },
+      "rest": 14,
+      "menge": 6856258,
+      "menge_einheit": "Paar",
+      "nettogewicht_kg": 1762762,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=640220&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": ""
+    },
+    "rain_jacket": {
+      "hs": "620140",
+      "hs_text": "Coats; men's or boys', overcoats, raincoats, car-coats, capes, cloaks, anoraks (including ski-jackets) and similar articles, of man-made fibres, other than those of heading no. 6203 (not knitted or crocheted)",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 1142408123,
+      "anteile": {
+        "CHN": 36,
+        "VNM": 17,
+        "BGD": 11,
+        "MMR": 6,
+        "KHM": 4,
+        "ITA": 4
+      },
+      "rest": 22,
+      "menge": 30920899,
+      "menge_einheit": "Stück",
+      "nettogewicht_kg": 26513243,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=620140&flowCode=M",
+      "zuordnung": "breit",
+      "hinweis": "Wie Winterjacke."
+    },
+    "analog_wristwatch": {
+      "hs": "910211",
+      "hs_text": "Wrist-watches; electrically operated, with or without a stop-watch, (other than those of heading no. 9101) with mechanical display only",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 638016026,
+      "anteile": {
+        "CHN": 44,
+        "CHE": 39,
+        "AUT": 5
+      },
+      "rest": 12,
+      "menge": 17667283,
+      "menge_einheit": "Stück",
+      "nettogewicht_kg": 1530010,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=910211&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": ""
+    },
+    "building_brick": {
+      "hs": "950300",
+      "hs_text": "Tricycles, scooters, pedal cars and similar wheeled toys; dolls' carriages; dolls; other toys; reduced-size (scale) models and similar recreational models, working or not; puzzles of all kinds",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 4417638772,
+      "anteile": {
+        "CHN": 49,
+        "CZE": 16,
+        "HUN": 6,
+        "VNM": 4,
+        "NLD": 3
+      },
+      "rest": 22,
+      "menge": 285230424,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 285230424,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=950300&flowCode=M",
+      "zuordnung": "breit",
+      "hinweis": "Spielzeug (alle Arten)."
+    },
+    "football": {
+      "hs": "950662",
+      "hs_text": "Balls; inflatable",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 128675356,
+      "anteile": {
+        "PAK": 45,
+        "CHN": 25,
+        "IDN": 12,
+        "VNM": 6,
+        "NLD": 3
+      },
+      "rest": 9,
+      "menge": 23281813,
+      "menge_einheit": "Stück",
+      "nettogewicht_kg": 8290271,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=950662&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": ""
+    },
+    "tennis_ball": {
+      "hs": "950661",
+      "hs_text": "Lawn-tennis balls",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 23690941,
+      "anteile": {
+        "PHL": 49,
+        "THA": 21,
+        "CHN": 18,
+        "FRA": 5
+      },
+      "rest": 7,
+      "menge": 26953553,
+      "menge_einheit": "Stück",
+      "nettogewicht_kg": 1515275,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=950661&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": ""
+    },
+    "yoga_mat": {
+      "hs": "950691",
+      "hs_text": "Athletics and gymnastics equipment",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 866374901,
+      "anteile": {
+        "CHN": 57,
+        "NLD": 9,
+        "USA": 8,
+        "ITA": 5,
+        "TWN": 3
+      },
+      "rest": 18,
+      "menge": 172459130,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 172459130,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=950691&flowCode=M",
+      "zuordnung": "breit",
+      "hinweis": "Turn-, Gymnastik- und Fitnessgeräte."
+    },
+    "skateboard": {
+      "hs": "950699",
+      "hs_text": "Equipment for outdoor games and recreation n.e.c. in heading no. 9506",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 507159032,
+      "anteile": {
+        "CHN": 40,
+        "CZE": 9,
+        "POL": 7,
+        "FRA": 5,
+        "AUT": 4,
+        "SVK": 4
+      },
+      "rest": 31,
+      "menge": 27393550,
+      "menge_einheit": "Stück",
+      "nettogewicht_kg": 64610368,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=950699&flowCode=M",
+      "zuordnung": "breit",
+      "hinweis": "Andere Sport- und Spielgeräte."
+    },
+    "bicycle_helmet": {
+      "hs": "650610",
+      "hs_text": "Headgear; safety, whether or not lined or trimmed",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 523890876,
+      "anteile": {
+        "CHN": 47,
+        "TUR": 8,
+        "ITA": 8,
+        "CZE": 5,
+        "JPN": 5,
+        "POL": 4
+      },
+      "rest": 23,
+      "menge": 16846179,
+      "menge_einheit": "Stück",
+      "nettogewicht_kg": 9133435,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=650610&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": "Schutzkopfbedeckungen."
+    },
+    "sports_bottle": {
+      "hs": "392330",
+      "hs_text": "Plastics; carboys, bottles, flasks and similar articles, for the conveyance or packing of goods",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 856885785,
+      "anteile": {
+        "LUX": 12,
+        "AUT": 12,
+        "POL": 11,
+        "NLD": 10,
+        "CHN": 8,
+        "CZE": 8
+      },
+      "rest": 39,
+      "menge": 219746953,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 219746953,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=392330&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": "13 % kommen über die Niederlande/Belgien; das können Transitlieferungen (Rotterdam/Antwerpen) von Waren aus Drittstaaten sein."
+    },
+    "plush_toy": {
+      "hs": "950300",
+      "hs_text": "Tricycles, scooters, pedal cars and similar wheeled toys; dolls' carriages; dolls; other toys; reduced-size (scale) models and similar recreational models, working or not; puzzles of all kinds",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 4417638772,
+      "anteile": {
+        "CHN": 49,
+        "CZE": 16,
+        "HUN": 6,
+        "VNM": 4,
+        "NLD": 3
+      },
+      "rest": 22,
+      "menge": 285230424,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 285230424,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=950300&flowCode=M",
+      "zuordnung": "breit",
+      "hinweis": "Spielzeug (alle Arten)."
+    },
+    "board_game": {
+      "hs": "950490",
+      "hs_text": "Games; articles for funfair, table or parlour games, including pintables, special tables for casino games, automatic bowling alley equipment, n.e.c. in heading 9504",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 439982960,
+      "anteile": {
+        "CHN": 57,
+        "CZE": 10,
+        "POL": 6,
+        "KEN": 4,
+        "NLD": 3
+      },
+      "rest": 20,
+      "nettogewicht_kg": 41789948,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=950490&flowCode=M",
+      "zuordnung": "breit",
+      "hinweis": "Gesellschaftsspiele u. a."
+    },
+    "playing_cards": {
+      "hs": "950440",
+      "hs_text": "Games; playing cards",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 511830783,
+      "anteile": {
+        "BEL": 27,
+        "JPN": 17,
+        "USA": 17,
+        "CZE": 13,
+        "CHN": 10,
+        "NLD": 7
+      },
+      "rest": 9,
+      "nettogewicht_kg": 15859871,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=950440&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": "34 % kommen über die Niederlande/Belgien; das können Transitlieferungen (Rotterdam/Antwerpen) von Waren aus Drittstaaten sein."
+    },
+    "toy_car": {
+      "hs": "950300",
+      "hs_text": "Tricycles, scooters, pedal cars and similar wheeled toys; dolls' carriages; dolls; other toys; reduced-size (scale) models and similar recreational models, working or not; puzzles of all kinds",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 4417638772,
+      "anteile": {
+        "CHN": 49,
+        "CZE": 16,
+        "HUN": 6,
+        "VNM": 4,
+        "NLD": 3
+      },
+      "rest": 22,
+      "menge": 285230424,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 285230424,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=950300&flowCode=M",
+      "zuordnung": "breit",
+      "hinweis": "Spielzeug (alle Arten)."
+    },
+    "badminton_racket": {
+      "hs": "950659",
+      "hs_text": "Tennis, badminton and similar rackets; whether or not strung",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 25692874,
+      "anteile": {
+        "CHN": 78,
+        "PAK": 6,
+        "ESP": 5,
+        "TWN": 4
+      },
+      "rest": 7,
+      "menge": 1303209,
+      "menge_einheit": "Stück",
+      "nettogewicht_kg": 903748,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=950659&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": ""
+    },
+    "swim_goggles": {
+      "hs": "900490",
+      "hs_text": "Spectacles, goggles and the like; (other than sunglasses) corrective, protective or other",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 425185601,
+      "anteile": {
+        "CHN": 33,
+        "POL": 23,
+        "HUN": 19,
+        "TWN": 9,
+        "ITA": 5
+      },
+      "rest": 11,
+      "nettogewicht_kg": 4202728,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=900490&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": ""
+    },
+    "frisbee": {
+      "hs": "950699",
+      "hs_text": "Equipment for outdoor games and recreation n.e.c. in heading no. 9506",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 507159032,
+      "anteile": {
+        "CHN": 40,
+        "CZE": 9,
+        "POL": 7,
+        "FRA": 5,
+        "AUT": 4,
+        "SVK": 4
+      },
+      "rest": 31,
+      "menge": 27393550,
+      "menge_einheit": "Stück",
+      "nettogewicht_kg": 64610368,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=950699&flowCode=M",
+      "zuordnung": "breit",
+      "hinweis": "Andere Sport- und Spielgeräte."
+    },
+    "vinyl_record": {
+      "hs": "852380",
+      "hs_text": "Media n.e.c. in heading 8523, whether or not recorded, excluding products of Chapter 37",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 149623013,
+      "anteile": {
+        "CZE": 23,
+        "FRA": 14,
+        "USA": 12,
+        "NLD": 10,
+        "AUT": 9,
+        "GBR": 9
+      },
+      "rest": 23,
+      "menge": 7945012,
+      "menge_einheit": "Stück",
+      "nettogewicht_kg": 6297222,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=852380&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": "11 % kommen über die Niederlande/Belgien; das können Transitlieferungen (Rotterdam/Antwerpen) von Waren aus Drittstaaten sein."
+    },
+    "hammer": {
+      "hs": "820520",
+      "hs_text": "Tools, hand; hammers and sledge hammers",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 32939905,
+      "anteile": {
+        "CHN": 43,
+        "ITA": 18,
+        "TWN": 9,
+        "IND": 8,
+        "FRA": 4,
+        "POL": 4
+      },
+      "rest": 14,
+      "menge": 5925452,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 5925452,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=820520&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": ""
+    },
+    "screwdriver": {
+      "hs": "820540",
+      "hs_text": "Tools, hand; screwdrivers",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 150122971,
+      "anteile": {
+        "CZE": 46,
+        "CHN": 22,
+        "POL": 6,
+        "TWN": 6,
+        "SVN": 5,
+        "HUN": 4
+      },
+      "rest": 11,
+      "menge": 7966509,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 7966509,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=820540&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": ""
+    },
+    "paint_brush": {
+      "hs": "960340",
+      "hs_text": "Brushes; paint, distemper, varnish or similar brushes (not those of item no. 9603.30), paint pads and rollers",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 95319757,
+      "anteile": {
+        "CHN": 55,
+        "CZE": 30
+      },
+      "rest": 15,
+      "menge": 191339532,
+      "menge_einheit": "Stück",
+      "nettogewicht_kg": 13957492,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=960340&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": ""
+    },
+    "tape_measure": {
+      "hs": "901780",
+      "hs_text": "Mathematical instruments and equipment; n.e.c. in heading no. 9017",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 102143071,
+      "anteile": {
+        "CHN": 38,
+        "CZE": 23,
+        "CHE": 7,
+        "SWE": 5,
+        "NLD": 4,
+        "AUT": 4
+      },
+      "rest": 19,
+      "nettogewicht_kg": 6228678,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=901780&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": ""
+    },
+    "silicone_cartridge": {
+      "hs": "321410",
+      "hs_text": "Mastics; painters' fillings",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 706138402,
+      "anteile": {
+        "CHE": 39,
+        "BEL": 19,
+        "NLD": 9,
+        "ITA": 8,
+        "FRA": 5,
+        "USA": 3
+      },
+      "rest": 17,
+      "menge": 215064479,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 215064479,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=321410&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": "Kitte und Dichtungsmassen. 28 % kommen über die Niederlande/Belgien; das können Transitlieferungen (Rotterdam/Antwerpen) von Waren aus Drittstaaten sein."
+    },
+    "incandescent_bulb": {
+      "hs": "853922",
+      "hs_text": "Lamps; filament, (excluding ultra-violet or infra-red), of a power not exceeding 200W and for a voltage exceeding 100 volts, other than tungsten halogen",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 9518126,
+      "anteile": {
+        "CHN": 68,
+        "FRA": 5,
+        "JPN": 5,
+        "POL": 5,
+        "ITA": 5
+      },
+      "rest": 12,
+      "menge": 7126786,
+      "menge_einheit": "Stück",
+      "nettogewicht_kg": 192241,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=853922&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": ""
+    },
+    "storage_box": {
+      "hs": "392490",
+      "hs_text": "Plastics; household articles and hygienic or toilet articles",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 695562291,
+      "anteile": {
+        "CHN": 34,
+        "POL": 14,
+        "NLD": 7,
+        "ITA": 6,
+        "HUN": 6,
+        "CHE": 5
+      },
+      "rest": 28,
+      "menge": 120367385,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 120367385,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=392490&flowCode=M",
+      "zuordnung": "breit",
+      "hinweis": ""
+    },
+    "pliers": {
+      "hs": "820320",
+      "hs_text": "Tools, hand; pliers (including cutting pliers), pincers, tweezers and similar tools",
+      "jahr": 2025,
+      "wert": "Importwert in USD",
+      "importwert_usd": 170276528,
+      "anteile": {
+        "CHN": 32,
+        "USA": 14,
+        "TWN": 10,
+        "CHE": 8,
+        "SWE": 5,
+        "FRA": 3
+      },
+      "rest": 28,
+      "menge": 8292487,
+      "menge_einheit": "kg",
+      "nettogewicht_kg": 8292487,
+      "api_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=276&period=2025&cmdCode=820320&flowCode=M",
+      "zuordnung": "eng",
+      "hinweis": ""
+    }
+  },
+  "neue_laender": {
+    "ARM": {
+      "name": "Armenien",
+      "num": "051"
+    },
+    "AUT": {
+      "name": "Österreich",
+      "num": "040"
+    },
+    "BGD": {
+      "name": "Bangladesch",
+      "num": "050"
+    },
+    "BGR": {
+      "name": "Bulgarien",
+      "num": "100"
+    },
+    "CHE": {
+      "name": "Schweiz",
+      "num": "757"
+    },
+    "CZE": {
+      "name": "Tschechien",
+      "num": "203"
+    },
+    "DNK": {
+      "name": "Dänemark",
+      "num": "208"
+    },
+    "EGY": {
+      "name": "Ägypten",
+      "num": "818"
+    },
+    "GRC": {
+      "name": "Griechenland",
+      "num": "300"
+    },
+    "HRV": {
+      "name": "Kroatien",
+      "num": "191"
+    },
+    "HUN": {
+      "name": "Ungarn",
+      "num": "348"
+    },
+    "IRL": {
+      "name": "Irland",
+      "num": "372"
+    },
+    "ISR": {
+      "name": "Israel",
+      "num": "376"
+    },
+    "KEN": {
+      "name": "Kenia",
+      "num": "404"
+    },
+    "KHM": {
+      "name": "Kambodscha",
+      "num": "116"
+    },
+    "LKA": {
+      "name": "Sri Lanka",
+      "num": "144"
+    },
+    "LTU": {
+      "name": "Litauen",
+      "num": "440"
+    },
+    "LUX": {
+      "name": "Luxemburg",
+      "num": "442"
+    },
+    "ROU": {
+      "name": "Rumänien",
+      "num": "642"
+    },
+    "SVK": {
+      "name": "Slowakei",
+      "num": "703"
+    },
+    "SVN": {
+      "name": "Slowenien",
+      "num": "705"
+    },
+    "TWN": {
+      "name": "Taiwan",
+      "num": "158"
+    }
+  }
+}

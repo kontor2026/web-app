@@ -1,6 +1,6 @@
 // KI-Kompass: vier Richtungen für verantwortungsvollen Umgang mit KI, belegt aus dem Code (inhalt.js).
 // Links eine Kompassrose als technische Zeichnung, darunter der Ablauf; rechts das Datenblatt wie im Steckbrief.
-import { shell, esc, repoLink } from '../shell.js';
+import { shell, esc, chip, repoUrl } from '../shell.js';
 import { KOMPASS } from './inhalt.js';
 import './kompass.css';
 
@@ -64,20 +64,20 @@ function setzePanel(html, crumbs) {
   panel.querySelectorAll('[data-r]').forEach((b) => b.addEventListener('click', () => (location.hash = b.dataset.r)));
   panel.scrollTop = 0;
 }
-const beleg = (b) => `<span class="beleg">${repoLink(b)}</span>`;
+const beleg = (b) => chip(repoUrl(b), b, 'Code');
 const start = { label: 'KI-Kompass', go: () => (location.hash = '') };
 
 function uebersicht() {
   markiere(null);
   setzePanel(`
     <div><div class="eyebrow">Verantwortungsvoller Umgang mit KI</div><h1 style="margin-top:8px">${esc(KOMPASS.frage)}</h1>
-      <p class="sub">${esc(KOMPASS.einleitung)}</p></div>
+</div>
     <div><h3>Vier Richtungen · tippe eine an</h3><div class="plist">${KOMPASS.richtungen.map((r) => `
       <button class="prow" data-r="${r.id}"><span class="n">${r.himmelsrichtung}</span>
         <span>${esc(r.titel)}<small>${esc(r.frage)}</small></span><span class="m">${r.offen.length} offen →</span></button>`).join('')}</div></div>
     <div><h3>Bevor du selbst KI nutzt</h3><ol class="howto">${KOMPASS.checkliste.map((c) => `<li>${esc(c)}</li>`).join('')}</ol></div>
-    <div><h3>Zum Nachlesen</h3><div class="quellen">${KOMPASS.quellen.map((q) => `<a href="${esc(q.url)}" target="_blank" rel="noopener">${esc(q.titel)} →</a>`).join('')}</div></div>
-    <p class="source">Jede Aussage im Kompass ist mit der Datei belegt, aus der sie stammt.</p>`, null);
+    <div><h3>Zum Nachlesen</h3><ul class="quellen-liste">${KOMPASS.quellen.map((q) => `<li><a class="ql" href="${esc(q.url)}" target="_blank" rel="noopener">${esc(q.titel)} →</a></li>`).join('')}</ul></div>
+`, null);
 }
 
 function richtung(r) {
@@ -85,7 +85,7 @@ function richtung(r) {
   setzePanel(`
     <div><div class="eyebrow">${r.himmelsrichtung} · ${NAME[r.himmelsrichtung]}</div><h1 style="margin-top:8px">${esc(r.titel)}</h1>
       <p class="sub">${esc(r.frage)}</p></div>
-    <div><h3>So machen wir es</h3><dl class="belege">${r.so_machen_wirs.map((s) => `<div><dd>${esc(s.text)}</dd>${beleg(s.beleg)}</div>`).join('')}</dl></div>
+    <div><h3>So machen wir es</h3><dl class="belege">${r.so_machen_wirs.map((s) => `<div><dd>${esc(s.text)}${beleg(s.beleg)}</dd></div>`).join('')}</dl></div>
     <div><h3>Noch offen</h3><div class="pruef">${r.offen.map((o) => `<p class="note warn">${esc(o)}</p>`).join('')}</div></div>
     <div class="goal"><small>Tipp für dich</small>${esc(r.tipp_fuer_dich)}</div>`, [start, { label: r.titel, go: () => richtung(r) }]);
 }
@@ -97,7 +97,7 @@ function schritt(i) {
     <div><div class="eyebrow">Schritt ${String(i + 1).padStart(2, '0')} von ${KOMPASS.ablauf.length}</div><h1 style="margin-top:8px">${esc(a.schritt)}</h1>
       <p class="sub"><span class="schritt-wer ${WER[a.wer]}">${esc(a.wer)}</span></p></div>
     <p>${esc(a.text)}</p>
-    <p class="source">Beleg: ${beleg(a.beleg)}</p>
+    <p class="source">${beleg(a.beleg)}</p>
     <div class="row-knoepfe">
       ${i > 0 ? `<button class="btn ghost" data-s="${i - 1}">← ${esc(KOMPASS.ablauf[i - 1].schritt)}</button>` : ''}
       ${i < KOMPASS.ablauf.length - 1 ? `<button class="btn" data-s="${i + 1}">${esc(KOMPASS.ablauf[i + 1].schritt)} →</button>` : ''}

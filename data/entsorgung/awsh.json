@@ -1,0 +1,2044 @@
+{
+  "stand": "2026-11-13",
+  "gebiet": "Kreis Stormarn und Kreis Herzogtum Lauenburg",
+  "quelle": "https://www.awsh.de/privatkunden/abfall-abc/",
+  "wege": {
+    "wertstofftonne": {
+      "name": "Wertstofftonne",
+      "farbe": "gelb",
+      "url": "https://www.awsh.de/privatkunden/wertstofftonne/",
+      "kurz": "Verpackungen und Gegenstände aus Plastik oder Metall."
+    },
+    "restmuell": {
+      "name": "Restabfalltonne / Restabfallsack",
+      "farbe": null,
+      "url": "https://www.awsh.de/privatkunden/restabfall/",
+      "kurz": "Nur was sich nicht verwerten lässt."
+    },
+    "papier": {
+      "name": "Papiertonne / Altpapiercontainer",
+      "farbe": null,
+      "url": "https://www.awsh.de/privatkunden/altpapier/",
+      "kurz": "Sauberes Papier, Pappe und Kartons."
+    },
+    "bio": {
+      "name": "Biotonne",
+      "farbe": null,
+      "url": "https://www.awsh.de/privatkunden/bioabfall/",
+      "kurz": "Küchen- und Gartenabfälle, ohne Plastiktüte."
+    },
+    "glas": {
+      "name": "Altglascontainer",
+      "farbe": "weiß / braun / grün",
+      "url": "https://www.awsh.de/privatkunden/depotcontainer/",
+      "kurz": "Leere Glasverpackungen, nach Farben getrennt."
+    },
+    "recyclinghof": {
+      "name": "Recyclinghof",
+      "farbe": null,
+      "url": "https://www.awsh.de/recyclinghoefe/uebersicht/",
+      "kurz": "Für Schrott und alles, was nicht in die Tonnen gehört."
+    },
+    "elektro": {
+      "name": "Elektroschrott",
+      "farbe": null,
+      "url": "https://www.awsh.de/privatkunden/e-schrott/",
+      "kurz": "Geräte mit Stecker, Akku oder Batterie: Recyclinghof oder Abholung."
+    },
+    "batterie": {
+      "name": "Batterien & Akkus",
+      "farbe": null,
+      "url": "https://www.awsh.de/privatkunden/e-schrott/",
+      "kurz": "Sammelbox im Handel oder Recyclinghof."
+    },
+    "lampen": {
+      "name": "Energiespar- & LED-Lampen",
+      "farbe": null,
+      "url": "https://www.awsh.de/recyclinghoefe/uebersicht/",
+      "kurz": "Sammelbehälter auf dem Recyclinghof."
+    },
+    "schadstoff": {
+      "name": "Schadstoffe",
+      "farbe": null,
+      "url": "https://www.awsh.de/privatkunden/schadstoff/",
+      "kurz": "Gefährliche Reste nur zum Recyclinghof."
+    },
+    "sperrmuell": {
+      "name": "Sperrmüll",
+      "farbe": null,
+      "url": "https://www.awsh.de/privatkunden/sperrmuell/",
+      "kurz": "Zu groß für die Tonne: Abholung oder Recyclinghof."
+    },
+    "textil": {
+      "name": "Altkleidercontainer",
+      "farbe": null,
+      "url": "https://www.awsh.de/privatkunden/depotcontainer/",
+      "kurz": "Tragbare Kleidung und Schuhe im Beutel."
+    },
+    "pfand": {
+      "name": "Pfandrückgabe",
+      "farbe": null,
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=P&cHash=79db9e01371dc45cabf2629f3cc555f18bd692fe9e3babae6bd173e31ec9b783#abc-567419",
+      "kurz": "Pfandflaschen und -dosen zurück ins Pfandsystem."
+    }
+  },
+  "recyclinghoefe": [
+    {
+      "name": "Recyclinghof Ahrensburg",
+      "adresse": "An der Strusbek 48",
+      "ort": "22926 Ahrensburg",
+      "url": "https://www.awsh.de/recyclinghoefe/ahrensburg/",
+      "lat": 53.690398,
+      "lng": 10.267292
+    },
+    {
+      "name": "Recyclinghof Bad Oldesloe",
+      "adresse": "Elly-Heuss-Knapp-Str. 11",
+      "ort": "23843 Bad Oldesloe",
+      "url": "https://www.awsh.de/recyclinghoefe/bad-oldesloe/",
+      "lat": 53.799744,
+      "lng": 10.411462
+    },
+    {
+      "name": "Recyclinghof Bargteheide",
+      "adresse": "Lise-Meitner-Str. 11",
+      "ort": "22941 Bargteheide",
+      "url": "https://www.awsh.de/recyclinghoefe/bargteheide/",
+      "lat": 53.719369,
+      "lng": 10.289674
+    },
+    {
+      "name": "Recyclinghof Grambek",
+      "adresse": "Vor dem Bockholt",
+      "ort": "23883 Grambek",
+      "url": "https://www.awsh.de/recyclinghoefe/grambek/",
+      "lat": 53.587428,
+      "lng": 10.676383
+    },
+    {
+      "name": "Recyclinghof Lanken",
+      "adresse": "Kesselflickerstraße 14",
+      "ort": "21493 Elmenhorst",
+      "url": "https://www.awsh.de/recyclinghoefe/lanken/",
+      "lat": 53.535065,
+      "lng": 10.510365
+    },
+    {
+      "name": "Recyclinghof Lauenburg",
+      "adresse": "Juliusburger Landstr. 12",
+      "ort": "21481 Lauenburg",
+      "url": "https://www.awsh.de/recyclinghoefe/lauenburg/",
+      "lat": 53.382186,
+      "lng": 10.543877
+    },
+    {
+      "name": "Recyclinghof Ratzeburg",
+      "adresse": "Robert-Bosch-Str. 7 b",
+      "ort": "23909 Ratzeburg",
+      "url": "https://www.awsh.de/recyclinghoefe/ratzeburg/",
+      "lat": 53.705891,
+      "lng": 10.740246
+    },
+    {
+      "name": "Recyclinghof Reinbek",
+      "adresse": "Glinder Str. 30",
+      "ort": "21465 Reinbek",
+      "url": "https://www.awsh.de/recyclinghoefe/reinbek/",
+      "lat": 53.53028,
+      "lng": 10.246671
+    },
+    {
+      "name": "Recyclinghof Reinfeld",
+      "adresse": "Weddernkoppel",
+      "ort": "23858 Reinfeld",
+      "url": "https://www.awsh.de/recyclinghoefe/reinfeld/",
+      "lat": 53.822313,
+      "lng": 10.494819
+    },
+    {
+      "name": "Recyclinghof Stapelfeld",
+      "adresse": "Meiendorfer Amtsweg",
+      "ort": "22145 Stapelfeld",
+      "url": "https://www.awsh.de/recyclinghoefe/stapelfeld/",
+      "lat": 53.619687,
+      "lng": 10.225214,
+      "hinweis": "Schließt dauerhaft nach dem 30.12.2026."
+    },
+    {
+      "name": "Recyclinghof Trittau",
+      "adresse": "Technologiepark 23",
+      "ort": "22946 Trittau",
+      "url": "https://www.awsh.de/recyclinghoefe/trittau/",
+      "lat": 53.612514,
+      "lng": 10.390599
+    },
+    {
+      "name": "Recyclinghof Wentorf",
+      "adresse": "Auf dem Ralande 11",
+      "ort": "21465 Wentorf",
+      "url": "https://www.awsh.de/recyclinghoefe/wentorf/",
+      "lat": 53.486829,
+      "lng": 10.26881
+    },
+    {
+      "name": "Recyclinghof Wiershop",
+      "adresse": "Rappenberg",
+      "ort": "21502 Wiershop",
+      "url": "https://www.awsh.de/recyclinghoefe/wiershop/",
+      "lat": 53.435182,
+      "lng": 10.442848
+    }
+  ],
+  "objekte": {
+    "smartphone": {
+      "weg": "elektro",
+      "teile": [],
+      "hinweis": "Fest eingebauten Akku nicht ausbauen.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=H&cHash=8d6ea9bb21759e533030fd80e2b6aa3f6e446e17865ebb2afd72e06bc81d662a#abc-567096",
+      "begruendung": "Abfall-ABC 'Handy': Elektrogeräte, Recyclinghöfe. AWSH: Geräte mit fest eingebauten Akkus gelten als Elektroschrott (E-Schrott-Seite, Abschnitt Einbaubatterien).",
+      "unsicher": false
+    },
+    "laptop": {
+      "weg": "elektro",
+      "teile": [
+        {
+          "component_id": "li_ion_battery",
+          "weg": "batterie",
+          "hinweis": "Nur herausnehmbaren Akku separat abgeben."
+        }
+      ],
+      "hinweis": "Wechselakku vorher entnehmen.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=C&cHash=22a7fdd5aa64c083129f7bf3fcdf57c3d30723eccbdf107a8e3dcb8b39ca9ec9#abc-566848",
+      "begruendung": "Abfall-ABC 'Computer': Elektrogeräte. AWSH: Batterien/Akkus, die nicht vom Gerät umschlossen sind, vor Abgabe zerstörungsfrei entnehmen (E-Schrott-Seite).",
+      "unsicher": false
+    },
+    "tablet": {
+      "weg": "elektro",
+      "teile": [],
+      "hinweis": "Fest eingebauten Akku nicht ausbauen.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=E&cHash=a91e0f78b7bccd2a23a5bd2e2be756c39cda32425feef2d2e99fdc4d02fe698a#abc-566913",
+      "begruendung": "Tablet nicht einzeln im Abfall-ABC; Eintrag 'Elektrogeräte mit Akku': Recyclinghöfe. AWSH: Geräte mit fest eingebauten Akkus gelten als Elektroschrott (E-Schrott-Seite, Abschnitt Einbaubatterien).",
+      "unsicher": false
+    },
+    "smartwatch": {
+      "weg": "elektro",
+      "teile": [],
+      "hinweis": "Fest eingebauten Akku nicht ausbauen.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=E&cHash=a91e0f78b7bccd2a23a5bd2e2be756c39cda32425feef2d2e99fdc4d02fe698a#abc-566913",
+      "begruendung": "Nicht einzeln genannt; Abfall-ABC 'Elektrogeräte mit Akku'. AWSH: Geräte mit fest eingebauten Akkus gelten als Elektroschrott (E-Schrott-Seite, Abschnitt Einbaubatterien).",
+      "unsicher": false
+    },
+    "headphones": {
+      "weg": "elektro",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=E&cHash=a91e0f78b7bccd2a23a5bd2e2be756c39cda32425feef2d2e99fdc4d02fe698a#abc-566912",
+      "begruendung": "Kopfhörer nicht einzeln genannt; Abfall-ABC 'Elektrogeräte': Recyclinghöfe, t.w. Elektrohandel.",
+      "unsicher": false
+    },
+    "earbuds": {
+      "weg": "elektro",
+      "teile": [],
+      "hinweis": "Fest eingebauten Akku nicht ausbauen.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=E&cHash=a91e0f78b7bccd2a23a5bd2e2be756c39cda32425feef2d2e99fdc4d02fe698a#abc-566913",
+      "begruendung": "Nicht einzeln genannt; Abfall-ABC 'Elektrogeräte mit Akku'. AWSH: Geräte mit fest eingebauten Akkus gelten als Elektroschrott (E-Schrott-Seite, Abschnitt Einbaubatterien).",
+      "unsicher": false
+    },
+    "computer_mouse": {
+      "weg": "elektro",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=M&cHash=d0572c938488a22ca24fd226c58469b5488919518c9cc5212b475d4ea65f7965#abc-567326",
+      "begruendung": "Abfall-ABC 'Maus (PC)': Elektrogeräte.",
+      "unsicher": false
+    },
+    "keyboard": {
+      "weg": "elektro",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=T&cHash=a722c46cae0a0bffd97890a1c72c76cf78346686a0d589cb907c67960b496ec3#abc-567702",
+      "begruendung": "Abfall-ABC 'Tastatur (Computer)': Elektrogeräte.",
+      "unsicher": false
+    },
+    "phone_charger": {
+      "weg": "elektro",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=E&cHash=a91e0f78b7bccd2a23a5bd2e2be756c39cda32425feef2d2e99fdc4d02fe698a#abc-566912",
+      "begruendung": "Ladegerät nicht einzeln genannt; Abfall-ABC 'Elektrogeräte' bzw. 'Kabel von Elektrogeräten': Recyclinghöfe.",
+      "unsicher": false
+    },
+    "usb_cable": {
+      "weg": "elektro",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=K&cHash=17a18ac97fe6c67d6ca766a1ca11a673fa081352946da9770f1fcbee71ea84d0#abc-567166",
+      "begruendung": "Abfall-ABC 'Kabel von Elektrogeräten': Recyclinghöfe.",
+      "unsicher": false
+    },
+    "power_bank": {
+      "weg": "batterie",
+      "teile": [],
+      "hinweis": "Gehört zu den Batterien, nicht in den Elektroschrott.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=P&cHash=79db9e01371dc45cabf2629f3cc555f18bd692fe9e3babae6bd173e31ec9b783#abc-567456",
+      "begruendung": "Abfall-ABC 'Powerbank': Batterien (Gerätebatterien), Rücknahme durch Einzelhandel, Recyclinghöfe.",
+      "unsicher": false
+    },
+    "monitor": {
+      "weg": "elektro",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=M&cHash=d0572c938488a22ca24fd226c58469b5488919518c9cc5212b475d4ea65f7965#abc-567346",
+      "begruendung": "Abfall-ABC 'Monitor': Elektrogeräte, Recyclinghöfe, E-Schrottabholung.",
+      "unsicher": false
+    },
+    "television": {
+      "weg": "elektro",
+      "teile": [],
+      "hinweis": "Große Geräte kann die AWSH abholen.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=F&cHash=94d154b50959394aebee2db1fc483d4f51de6aa81f8afcb6d2f783c7331c4b3e#abc-566962",
+      "begruendung": "Abfall-ABC 'Fernseher': Elektrogeräte, Recyclinghöfe, E-Schrottabholung.",
+      "unsicher": false
+    },
+    "remote_control": {
+      "weg": "elektro",
+      "teile": [
+        {
+          "component_id": "alkaline_cell",
+          "weg": "batterie",
+          "hinweis": "Batterien vorher herausnehmen."
+        }
+      ],
+      "hinweis": "Batterien vorher herausnehmen.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=E&cHash=a91e0f78b7bccd2a23a5bd2e2be756c39cda32425feef2d2e99fdc4d02fe698a#abc-566912",
+      "begruendung": "Fernbedienung nicht einzeln genannt; Abfall-ABC 'Elektrogeräte'. AWSH: Batterien/Akkus, die nicht vom Gerät umschlossen sind, vor Abgabe zerstörungsfrei entnehmen (E-Schrott-Seite).",
+      "unsicher": false
+    },
+    "led_bulb": {
+      "weg": "lampen",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=L&cHash=144a15175c162dd1e34c7d44eccf4a7e28fec5ad9745905f77161ddd81201ee4#abc-567291",
+      "begruendung": "Abfall-ABC 'LED-Lampen': Kategorie Leuchtstoffröhren und Energiesparlampen, Recyclinghöfe.",
+      "unsicher": false
+    },
+    "flashlight": {
+      "weg": "elektro",
+      "teile": [
+        {
+          "component_id": "alkaline_cell",
+          "weg": "batterie",
+          "hinweis": "Batterien vorher herausnehmen."
+        }
+      ],
+      "hinweis": "Batterien vorher herausnehmen.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=T&cHash=a722c46cae0a0bffd97890a1c72c76cf78346686a0d589cb907c67960b496ec3#abc-567700",
+      "begruendung": "Abfall-ABC 'Taschenlampe': Elektrogeräte. AWSH: Batterien/Akkus, die nicht vom Gerät umschlossen sind, vor Abgabe zerstörungsfrei entnehmen (E-Schrott-Seite).",
+      "unsicher": false
+    },
+    "alkaline_battery": {
+      "weg": "batterie",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=A&cHash=23d0285d546f15850959908e688b955c6be08e55f9c8d2bfc5a33cf532c7a2af#abc-566696",
+      "begruendung": "Abfall-ABC 'Alkali-Mangan-Batterien': Rücknahme durch Einzelhandel, Recyclinghöfe.",
+      "unsicher": false
+    },
+    "electric_toothbrush": {
+      "weg": "elektro",
+      "teile": [
+        {
+          "component_id": "brush_head",
+          "weg": "restmuell",
+          "hinweis": "Aufsteckbürste abnehmen: Restabfall."
+        }
+      ],
+      "hinweis": "Fest eingebauten Akku nicht ausbauen.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=E&cHash=a91e0f78b7bccd2a23a5bd2e2be756c39cda32425feef2d2e99fdc4d02fe698a#abc-566913",
+      "begruendung": "Abfall-ABC 'Elektrogeräte mit Akku'; Wertstofftonnen-Seite: elektrische Zahnbürsten gehören nicht in die Wertstofftonne. Aufsteckbürste wie Zahnbürste (Kunststoff) = Restabfall.",
+      "unsicher": false
+    },
+    "hair_dryer": {
+      "weg": "elektro",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=H&cHash=8d6ea9bb21759e533030fd80e2b6aa3f6e446e17865ebb2afd72e06bc81d662a#abc-567102",
+      "begruendung": "Föhn nicht einzeln genannt; Abfall-ABC 'Haushaltsgerät elektrisch'.",
+      "unsicher": false
+    },
+    "electric_kettle": {
+      "weg": "elektro",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/e-schrott/",
+      "begruendung": "Wasserkocher im Abfall-ABC nicht einzeln; 'Küchengeräte': Elektrogeräte. E-Schrott-Seite nennt Wasserkocher als Kleingerät.",
+      "unsicher": false
+    },
+    "toaster": {
+      "weg": "elektro",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/e-schrott/",
+      "begruendung": "E-Schrott-Seite: 'Toaster defekt?' – Elektrogeräte zum Recyclinghof oder Abholung.",
+      "unsicher": false
+    },
+    "coffee_capsule": {
+      "weg": "wertstofftonne",
+      "teile": [],
+      "hinweis": "Nur leer.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=K&cHash=17a18ac97fe6c67d6ca766a1ca11a673fa081352946da9770f1fcbee71ea84d0#abc-567175",
+      "begruendung": "Abfall-ABC 'Kaffeekapseln (nur leer)': Leichtverpackungen, Wertstofftonne.",
+      "unsicher": false
+    },
+    "pet_bottle": {
+      "weg": "pfand",
+      "teile": [],
+      "hinweis": "Ohne Pfand: Wertstofftonne.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=P&cHash=79db9e01371dc45cabf2629f3cc555f18bd692fe9e3babae6bd173e31ec9b783#abc-567419",
+      "begruendung": "Abfall-ABC 'PET-Flasche': Pfandsystem, sonst Wertstofftonne.",
+      "unsicher": false
+    },
+    "glass_bottle": {
+      "weg": "glas",
+      "teile": [
+        {
+          "component_id": "crown_cap",
+          "weg": "wertstofftonne",
+          "hinweis": "Abgenommener Kronkorken: Wertstofftonne."
+        }
+      ],
+      "hinweis": "Pfandflasche? Zurück ins Pfandsystem.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=G&cHash=e4b5337162b58db64cbbe96cbc29e76ed13a84bacbd5b3ce8edd6ba9d22d731f#abc-567058",
+      "begruendung": "Abfall-ABC 'Glasflasche, mit und ohne Deckel': falls kein Pfand, Altglascontainer. Kronkorken einzeln: Abfall-ABC 'Kronkorken' = Wertstofftonne.",
+      "unsicher": false
+    },
+    "wine_bottle": {
+      "weg": "glas",
+      "teile": [
+        {
+          "component_id": "cork_stopper",
+          "weg": "restmuell",
+          "hinweis": "Korken: Restabfall oder Korkensammlung."
+        },
+        {
+          "component_id": "aluminium_capsule_foil",
+          "weg": "wertstofftonne",
+          "hinweis": "Alu-Kapsel: Wertstofftonne."
+        }
+      ],
+      "hinweis": "Korken und Alu-Kapsel vorher abnehmen.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=W&cHash=544731e8833c969d2c2e38a18005a88dedf5dbabb9d8c53a96afca2045bd8de2#abc-567842",
+      "begruendung": "Abfall-ABC 'Weinflasche': Altglascontainer. 'Flaschenkorken': Korkensammlung oder als Restabfall; Alu-Kapsel wie 'Aluminiumverpackung' = Wertstofftonne.",
+      "unsicher": false
+    },
+    "glass_jar": {
+      "weg": "glas",
+      "teile": [
+        {
+          "component_id": "twist_off_lid",
+          "weg": "wertstofftonne",
+          "hinweis": "Abgeschraubter Deckel: Wertstofftonne."
+        }
+      ],
+      "hinweis": "Deckel darf dran bleiben.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=K&cHash=17a18ac97fe6c67d6ca766a1ca11a673fa081352946da9770f1fcbee71ea84d0#abc-567235",
+      "begruendung": "Abfall-ABC 'Konservenglas, mit und ohne Deckel': Altglascontainer. Einzelner Metalldeckel wie 'Blechdose' = Wertstofftonne.",
+      "unsicher": false
+    },
+    "aluminium_can": {
+      "weg": "pfand",
+      "teile": [],
+      "hinweis": "Ohne Pfandzeichen: Wertstofftonne.",
+      "url": "https://www.awsh.de/privatkunden/wertstofftonne/",
+      "begruendung": "Wertstofftonnen-Seite: 'Getränkedosen (ohne Pfand)' gehören in die Wertstofftonne – Pfanddosen also ins Pfandsystem. Abfall-ABC 'Aluminiumdose' = Wertstofftonne.",
+      "unsicher": false
+    },
+    "tin_can": {
+      "weg": "wertstofftonne",
+      "teile": [],
+      "hinweis": "Löffelrein reicht, nicht ausspülen.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=K&cHash=17a18ac97fe6c67d6ca766a1ca11a673fa081352946da9770f1fcbee71ea84d0#abc-567234",
+      "begruendung": "Abfall-ABC 'Konservendose': Leichtverpackungen, Wertstofftonne.",
+      "unsicher": false
+    },
+    "beverage_carton": {
+      "weg": "wertstofftonne",
+      "teile": [],
+      "hinweis": "Deckel darf dran bleiben.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=M&cHash=d0572c938488a22ca24fd226c58469b5488919518c9cc5212b475d4ea65f7965#abc-567336",
+      "begruendung": "Abfall-ABC 'Milch- und Safttüten': Wertstofftonne; Altpapier-Seite: Getränkekartons nicht ins Altpapier.",
+      "unsicher": false
+    },
+    "yogurt_cup": {
+      "weg": "wertstofftonne",
+      "teile": [
+        {
+          "component_id": "cardboard_sleeve",
+          "weg": "papier",
+          "hinweis": "Papp-Banderole: Altpapier."
+        }
+      ],
+      "hinweis": "Aludeckel ganz abziehen, getrennt einwerfen.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=J&cHash=682f61de17af378b470882ff9452a2ec45708888343ec80f94e5a52499638cd3#abc-567163",
+      "begruendung": "Abfall-ABC 'Joghurtbecher': Wertstofftonne. Wertstofftonnen-Seite: Aludeckel vom Becher lösen. Papp-Banderole = Kartonverpackung (Altpapier).",
+      "unsicher": false
+    },
+    "paper_coffee_cup": {
+      "weg": "wertstofftonne",
+      "teile": [
+        {
+          "component_id": "cardboard_sleeve",
+          "weg": "papier",
+          "hinweis": "Papp-Manschette: Altpapier."
+        }
+      ],
+      "hinweis": "Deckel mit in die Wertstofftonne.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=K&cHash=17a18ac97fe6c67d6ca766a1ca11a673fa081352946da9770f1fcbee71ea84d0#abc-567172",
+      "begruendung": "Abfall-ABC 'Kaffeebecher, Einweg / Coffee to go Becher': Wertstoffe, Wertstofftonne. Papp-Manschette = Kartonverpackung (Altpapier).",
+      "unsicher": false
+    },
+    "pizza_box": {
+      "weg": "restmuell",
+      "teile": [],
+      "hinweis": "Fettige Pizzakartons nicht ins Altpapier.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=P&cHash=79db9e01371dc45cabf2629f3cc555f18bd692fe9e3babae6bd173e31ec9b783#abc-567431",
+      "begruendung": "Abfall-ABC 'Pizzakartons, verschmutzte Fast-Food-Verpackungen': Restabfall. Altpapier-Seite: fettige Pappe in den Restabfall.",
+      "unsicher": false
+    },
+    "cardboard_box": {
+      "weg": "papier",
+      "teile": [
+        {
+          "component_id": "packing_tape",
+          "weg": "restmuell",
+          "hinweis": "Klebeband möglichst abziehen: Restabfall."
+        }
+      ],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=K&cHash=17a18ac97fe6c67d6ca766a1ca11a673fa081352946da9770f1fcbee71ea84d0#abc-567186",
+      "begruendung": "Abfall-ABC 'Kartonage': Altpapier. 'Klebeetikett/-bänder': Restabfall.",
+      "unsicher": false
+    },
+    "newspaper": {
+      "weg": "papier",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=Z&cHash=0fc906e538a8da1601782228e205081b1d56d5a6e6e9ce3b5747542675461dab#abc-567871",
+      "begruendung": "Abfall-ABC 'Zeitschrift / Zeitung': Altpapier.",
+      "unsicher": false
+    },
+    "plastic_bag": {
+      "weg": "wertstofftonne",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=P&cHash=79db9e01371dc45cabf2629f3cc555f18bd692fe9e3babae6bd173e31ec9b783#abc-567436",
+      "begruendung": "Abfall-ABC 'Plastiktüte': Leichtverpackungen, Wertstofftonne.",
+      "unsicher": false
+    },
+    "chips_bag": {
+      "weg": "wertstofftonne",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=V&cHash=0cfcb4572ee47ab06e0513bfe9cf5ad99bf9c879ca537aaeda4f3026054826a1#abc-567783",
+      "begruendung": "Chipstüte nicht einzeln genannt; Wertstofftonnen-Seite: Verpackungen aus Kunststoff/Verbund, Abfall-ABC 'Verpackung': Wertstofftonne.",
+      "unsicher": false
+    },
+    "toothpaste_tube": {
+      "weg": "wertstofftonne",
+      "teile": [],
+      "hinweis": "Deckel darf dran bleiben.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=T&cHash=a722c46cae0a0bffd97890a1c72c76cf78346686a0d589cb907c67960b496ec3#abc-567762",
+      "begruendung": "Abfall-ABC 'Tube restentleert': Wertstofftonne.",
+      "unsicher": false
+    },
+    "shampoo_bottle": {
+      "weg": "wertstofftonne",
+      "teile": [],
+      "hinweis": "Nur restentleert.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=K&cHash=17a18ac97fe6c67d6ca766a1ca11a673fa081352946da9770f1fcbee71ea84d0#abc-567243",
+      "begruendung": "Abfall-ABC 'Shampooflaschen restentleert': Wertstofftonne; mit Resten: Restabfall.",
+      "unsicher": false
+    },
+    "spray_can": {
+      "weg": "schadstoff",
+      "teile": [
+        {
+          "component_id": "pp_spray_cap",
+          "weg": "wertstofftonne",
+          "hinweis": "Plastikkappe: Wertstofftonne."
+        }
+      ],
+      "hinweis": "Auch leer zum Recyclinghof.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=S&cHash=300df1801ed2441fda7f6b6b36148ed4a1978cf6e6e7d42812edf322f9bad405#abc-567642",
+      "begruendung": "Abfall-ABC 'Spraydose (auch leer…)': Sonderabfälle, alle Recyclinghöfe (nicht Stapelfeld). Kappe aus Kunststoff wie 'Kunststoffverpackung' = Wertstofftonne.",
+      "unsicher": false
+    },
+    "ballpoint_pen": {
+      "weg": "wertstofftonne",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=K&cHash=17a18ac97fe6c67d6ca766a1ca11a673fa081352946da9770f1fcbee71ea84d0#abc-567255",
+      "begruendung": "Abfall-ABC 'Kugelschreiber': Wertstoffe, Wertstofftonne.",
+      "unsicher": false
+    },
+    "pencil": {
+      "weg": "restmuell",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/restabfall/",
+      "begruendung": "Bleistift nicht im Abfall-ABC. Holz mit Mine ist kein Plastik/Metall; nach Regel der Restabfall-Seite (nicht verwertbar) = Restabfall.",
+      "unsicher": false
+    },
+    "scissors": {
+      "weg": "wertstofftonne",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=B&cHash=00a0304996f97ea24fb7fe3dc82014eab2912ee49ba7e5c5289b3b2e1e00d140#abc-566833",
+      "begruendung": "Schere nicht genannt; Abfall-ABC 'Büromaterial aus Kunststoff oder Metall' und Wertstofftonnen-Seite (Werkzeuge): Wertstofftonne.",
+      "unsicher": false
+    },
+    "umbrella": {
+      "weg": "restmuell",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=R&cHash=859604207f1af6fa418f4937681ec8a4f09d3fb85fcd057ac06bc0e5c0b035b6#abc-567497",
+      "begruendung": "Abfall-ABC 'Regenschirm': Restabfall.",
+      "unsicher": false
+    },
+    "sneaker": {
+      "weg": "textil",
+      "teile": [],
+      "hinweis": "Paarweise bündeln; kaputt: Restabfall.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=S&cHash=300df1801ed2441fda7f6b6b36148ed4a1978cf6e6e7d42812edf322f9bad405#abc-567591",
+      "begruendung": "Abfall-ABC 'Schuhe, brauchbar': Altkleidercontainer; 'Schuhe, unbrauchbar': Restabfall.",
+      "unsicher": false
+    },
+    "t_shirt": {
+      "weg": "textil",
+      "teile": [],
+      "hinweis": "Kaputt: Restabfall.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=K&cHash=17a18ac97fe6c67d6ca766a1ca11a673fa081352946da9770f1fcbee71ea84d0#abc-567214",
+      "begruendung": "Abfall-ABC 'Kleidung brauchbar': Altkleidercontainer; 'Altkleider, unbrauchbar': Restabfall.",
+      "unsicher": false
+    },
+    "jeans": {
+      "weg": "textil",
+      "teile": [],
+      "hinweis": "Kaputt: Restabfall.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=K&cHash=17a18ac97fe6c67d6ca766a1ca11a673fa081352946da9770f1fcbee71ea84d0#abc-567214",
+      "begruendung": "Abfall-ABC 'Kleidung brauchbar': Altkleidercontainer.",
+      "unsicher": false
+    },
+    "backpack": {
+      "weg": "restmuell",
+      "teile": [],
+      "hinweis": "Noch gut? Weitergeben.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=S&cHash=300df1801ed2441fda7f6b6b36148ed4a1978cf6e6e7d42812edf322f9bad405#abc-567594",
+      "begruendung": "Rucksack nicht genannt; wie Abfall-ABC 'Schulranzen': Restabfall. Unsicher: gut erhaltene Rucksäcke lieber weitergeben.",
+      "unsicher": true
+    },
+    "sunglasses": {
+      "weg": "wertstofftonne",
+      "teile": [],
+      "hinweis": "Mit Glasgläsern: Restabfall.",
+      "url": "https://www.awsh.de/privatkunden/wertstofftonne/",
+      "begruendung": "Sonnenbrille nicht genannt. Überwiegend Kunststoff = stoffgleiche Nichtverpackung (Wertstofftonnen-Seite). Unsicher: Gläser können aus Glas sein (dann Restabfall).",
+      "unsicher": true
+    },
+    "bicycle_tire": {
+      "weg": "restmuell",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=F&cHash=94d154b50959394aebee2db1fc483d4f51de6aa81f8afcb6d2f783c7331c4b3e#abc-566937",
+      "begruendung": "Abfall-ABC 'Fahrradreifen': Restabfall, Recyclinghöfe.",
+      "unsicher": false
+    },
+    "compact_disc": {
+      "weg": "wertstofftonne",
+      "teile": [
+        {
+          "component_id": "paper_booklet",
+          "weg": "papier",
+          "hinweis": "Booklet: Altpapier."
+        }
+      ],
+      "hinweis": "Booklet ins Altpapier.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=C&cHash=22a7fdd5aa64c083129f7bf3fcdf57c3d30723eccbdf107a8e3dcb8b39ca9ec9#abc-566840",
+      "begruendung": "Abfall-ABC 'CDs ohne Hüllen' und 'Hüllen von CDs': Wertstofftonne; Booklet = Papier.",
+      "unsicher": false
+    },
+    "tea_light": {
+      "weg": "wertstofftonne",
+      "teile": [
+        {
+          "component_id": "paraffin_wax",
+          "weg": "restmuell",
+          "hinweis": "Wachsreste: Restabfall."
+        }
+      ],
+      "hinweis": "Wachsreste in den Restabfall.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=T&cHash=a722c46cae0a0bffd97890a1c72c76cf78346686a0d589cb907c67960b496ec3#abc-567705",
+      "begruendung": "Abfall-ABC 'Teelicht (leer)': Wertstofftonne; 'Teelicht (voll)': Restabfall.",
+      "unsicher": false
+    },
+    "desktop_pc": {
+      "weg": "elektro",
+      "teile": [],
+      "hinweis": "Daten vorher löschen.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=P&cHash=79db9e01371dc45cabf2629f3cc555f18bd692fe9e3babae6bd173e31ec9b783#abc-567411",
+      "begruendung": "Abfall-ABC 'PC, Rechner': Elektrogeräte, Recyclinghöfe, E-Schrottabholung.",
+      "unsicher": false
+    },
+    "game_controller": {
+      "weg": "elektro",
+      "teile": [],
+      "hinweis": "Fest eingebauten Akku nicht ausbauen.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=E&cHash=a91e0f78b7bccd2a23a5bd2e2be756c39cda32425feef2d2e99fdc4d02fe698a#abc-566913",
+      "begruendung": "Nicht einzeln genannt; Abfall-ABC 'Elektrogeräte mit Akku'. AWSH: Geräte mit fest eingebauten Akkus gelten als Elektroschrott (E-Schrott-Seite, Abschnitt Einbaubatterien).",
+      "unsicher": false
+    },
+    "wifi_router": {
+      "weg": "elektro",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=E&cHash=a91e0f78b7bccd2a23a5bd2e2be756c39cda32425feef2d2e99fdc4d02fe698a#abc-566912",
+      "begruendung": "Router nicht einzeln genannt; Abfall-ABC 'Elektrogeräte'.",
+      "unsicher": false
+    },
+    "smart_speaker": {
+      "weg": "elektro",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=L&cHash=144a15175c162dd1e34c7d44eccf4a7e28fec5ad9745905f77161ddd81201ee4#abc-567285",
+      "begruendung": "Abfall-ABC 'Lautsprecher': Elektrogeräte.",
+      "unsicher": false
+    },
+    "digital_camera": {
+      "weg": "elektro",
+      "teile": [
+        {
+          "component_id": "li_ion_battery",
+          "weg": "batterie",
+          "hinweis": "Wechselakku entnehmen."
+        }
+      ],
+      "hinweis": "Akku und Speicherkarte vorher entnehmen.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=D&cHash=4dadb20a39fbe2a4469e34571b007508eb03acdb438bc2190721f2341427f3cc#abc-566868",
+      "begruendung": "Abfall-ABC 'Digitalkamera': Elektrogeräte. AWSH: Batterien/Akkus, die nicht vom Gerät umschlossen sind, vor Abgabe zerstörungsfrei entnehmen (E-Schrott-Seite).",
+      "unsicher": false
+    },
+    "e_reader": {
+      "weg": "elektro",
+      "teile": [],
+      "hinweis": "Fest eingebauten Akku nicht ausbauen.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=E&cHash=a91e0f78b7bccd2a23a5bd2e2be756c39cda32425feef2d2e99fdc4d02fe698a#abc-566913",
+      "begruendung": "Nicht einzeln genannt; Abfall-ABC 'Elektrogeräte mit Akku'. AWSH: Geräte mit fest eingebauten Akkus gelten als Elektroschrott (E-Schrott-Seite, Abschnitt Einbaubatterien).",
+      "unsicher": false
+    },
+    "bluetooth_speaker": {
+      "weg": "elektro",
+      "teile": [],
+      "hinweis": "Fest eingebauten Akku nicht ausbauen.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=L&cHash=144a15175c162dd1e34c7d44eccf4a7e28fec5ad9745905f77161ddd81201ee4#abc-567285",
+      "begruendung": "Abfall-ABC 'Lautsprecher': Elektrogeräte. AWSH: Geräte mit fest eingebauten Akkus gelten als Elektroschrott (E-Schrott-Seite, Abschnitt Einbaubatterien).",
+      "unsicher": false
+    },
+    "desk_lamp": {
+      "weg": "elektro",
+      "teile": [],
+      "hinweis": "Herausschraubbare Lampe separat abgeben.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=L&cHash=144a15175c162dd1e34c7d44eccf4a7e28fec5ad9745905f77161ddd81201ee4#abc-567274",
+      "begruendung": "Abfall-ABC 'Lampe': Elektrogeräte. AWSH: herausnehmbare Leuchtmittel vorher entnehmen (E-Schrott-Seite).",
+      "unsicher": false
+    },
+    "electric_fan": {
+      "weg": "elektro",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=V&cHash=0cfcb4572ee47ab06e0513bfe9cf5ad99bf9c879ca537aaeda4f3026054826a1#abc-567778",
+      "begruendung": "Abfall-ABC 'Ventilator': Elektrogeräte.",
+      "unsicher": false
+    },
+    "vacuum_cleaner": {
+      "weg": "elektro",
+      "teile": [
+        {
+          "component_id": "dust_bag",
+          "weg": "restmuell",
+          "hinweis": "Staubsaugerbeutel: Restabfall."
+        }
+      ],
+      "hinweis": "Beutel vorher in den Restabfall.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=S&cHash=300df1801ed2441fda7f6b6b36148ed4a1978cf6e6e7d42812edf322f9bad405#abc-567657",
+      "begruendung": "Abfall-ABC 'Staubsauger': Elektrogeräte; 'Staubsaugerbeutel': Restabfall.",
+      "unsicher": false
+    },
+    "blender": {
+      "weg": "elektro",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=K&cHash=17a18ac97fe6c67d6ca766a1ca11a673fa081352946da9770f1fcbee71ea84d0#abc-567249",
+      "begruendung": "Abfall-ABC 'Küchengeräte': Elektrogeräte.",
+      "unsicher": false
+    },
+    "microwave": {
+      "weg": "elektro",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=M&cHash=d0572c938488a22ca24fd226c58469b5488919518c9cc5212b475d4ea65f7965#abc-567335",
+      "begruendung": "Abfall-ABC 'Mikrowelle': Elektrogeräte, E-Schrottabholung möglich.",
+      "unsicher": false
+    },
+    "coffee_machine": {
+      "weg": "elektro",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=K&cHash=17a18ac97fe6c67d6ca766a1ca11a673fa081352946da9770f1fcbee71ea84d0#abc-567176",
+      "begruendung": "Abfall-ABC 'Kaffeemaschine': Elektrogeräte.",
+      "unsicher": false
+    },
+    "hand_mixer": {
+      "weg": "elektro",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=K&cHash=17a18ac97fe6c67d6ca766a1ca11a673fa081352946da9770f1fcbee71ea84d0#abc-567249",
+      "begruendung": "Abfall-ABC 'Küchengeräte': Elektrogeräte.",
+      "unsicher": false
+    },
+    "electric_shaver": {
+      "weg": "elektro",
+      "teile": [],
+      "hinweis": "Fest eingebauten Akku nicht ausbauen.",
+      "url": "https://www.awsh.de/privatkunden/e-schrott/",
+      "begruendung": "E-Schrott-Seite, Einbaubatterien: Rasierer mit fest eingebautem Akku gelten als Elektroschrott.",
+      "unsicher": false
+    },
+    "hair_straightener": {
+      "weg": "elektro",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=H&cHash=8d6ea9bb21759e533030fd80e2b6aa3f6e446e17865ebb2afd72e06bc81d662a#abc-567102",
+      "begruendung": "Nicht einzeln genannt; Abfall-ABC 'Haushaltsgerät elektrisch'.",
+      "unsicher": false
+    },
+    "clothes_iron": {
+      "weg": "elektro",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/e-schrott/",
+      "begruendung": "E-Schrott-Seite nennt Bügeleisen als defektes Kleingerät für Recyclinghof oder Abholung.",
+      "unsicher": false
+    },
+    "calculator": {
+      "weg": "elektro",
+      "teile": [
+        {
+          "component_id": "button_cell",
+          "weg": "batterie",
+          "hinweis": "Knopfzelle herausnehmen, wenn möglich."
+        }
+      ],
+      "hinweis": "Knopfzelle entnehmen, wenn möglich.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=E&cHash=a91e0f78b7bccd2a23a5bd2e2be756c39cda32425feef2d2e99fdc4d02fe698a#abc-566912",
+      "begruendung": "Taschenrechner nicht einzeln genannt; Abfall-ABC 'Elektrogeräte'. AWSH: Batterien/Akkus, die nicht vom Gerät umschlossen sind, vor Abgabe zerstörungsfrei entnehmen (E-Schrott-Seite).",
+      "unsicher": false
+    },
+    "smoke_detector": {
+      "weg": "elektro",
+      "teile": [
+        {
+          "component_id": "alkaline_cell",
+          "weg": "batterie",
+          "hinweis": "Batterien vorher herausnehmen."
+        }
+      ],
+      "hinweis": "Batterie entnehmen; radioaktive Melder nicht abgeben.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=R&cHash=859604207f1af6fa418f4937681ec8a4f09d3fb85fcd057ac06bc0e5c0b035b6#abc-567488",
+      "begruendung": "Abfall-ABC 'Rauchmelder, ohne radioaktive Stoffe': Elektrogeräte. Radioaktive Rauchmelder: keine Annahme, untere Abfallbehörde. Unsicher: radioaktive Melder (Spezialfall) sind äußerlich kaum zu erkennen.",
+      "unsicher": true
+    },
+    "extension_cord": {
+      "weg": "elektro",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=M&cHash=d0572c938488a22ca24fd226c58469b5488919518c9cc5212b475d4ea65f7965#abc-567330",
+      "begruendung": "Abfall-ABC 'Mehrfachsteckdose…': Kategorie Elektrogeräte, Recyclinghöfe (dort zusätzlich Restabfall genannt).",
+      "unsicher": false
+    },
+    "webcam": {
+      "weg": "elektro",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=E&cHash=a91e0f78b7bccd2a23a5bd2e2be756c39cda32425feef2d2e99fdc4d02fe698a#abc-566912",
+      "begruendung": "Webcam nicht einzeln genannt; Abfall-ABC 'Elektrogeräte'.",
+      "unsicher": false
+    },
+    "inkjet_printer": {
+      "weg": "elektro",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=D&cHash=4dadb20a39fbe2a4469e34571b007508eb03acdb438bc2190721f2341427f3cc#abc-566877",
+      "begruendung": "Abfall-ABC 'Drucker': Elektrogeräte.",
+      "unsicher": false
+    },
+    "external_hard_drive": {
+      "weg": "elektro",
+      "teile": [],
+      "hinweis": "Daten vorher löschen.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=E&cHash=a91e0f78b7bccd2a23a5bd2e2be756c39cda32425feef2d2e99fdc4d02fe698a#abc-566912",
+      "begruendung": "Nicht einzeln genannt; Abfall-ABC 'Elektrogeräte'.",
+      "unsicher": false
+    },
+    "usb_stick": {
+      "weg": "elektro",
+      "teile": [],
+      "hinweis": "Daten vorher löschen.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=U&cHash=3ab199286cf844cbac8663542a6c56496116e02355f3448f17e4c8e3c84bb836#abc-567777",
+      "begruendung": "Abfall-ABC 'USB-Stick': Elektrogeräte.",
+      "unsicher": false
+    },
+    "fitness_tracker": {
+      "weg": "elektro",
+      "teile": [],
+      "hinweis": "Fest eingebauten Akku nicht ausbauen.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=E&cHash=a91e0f78b7bccd2a23a5bd2e2be756c39cda32425feef2d2e99fdc4d02fe698a#abc-566913",
+      "begruendung": "Nicht einzeln genannt; Abfall-ABC 'Elektrogeräte mit Akku'. AWSH: Geräte mit fest eingebauten Akkus gelten als Elektroschrott (E-Schrott-Seite, Abschnitt Einbaubatterien).",
+      "unsicher": false
+    },
+    "alarm_clock": {
+      "weg": "elektro",
+      "teile": [
+        {
+          "component_id": "alkaline_cell",
+          "weg": "batterie",
+          "hinweis": "Batterien vorher herausnehmen."
+        }
+      ],
+      "hinweis": "Batterien vorher herausnehmen.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=E&cHash=a91e0f78b7bccd2a23a5bd2e2be756c39cda32425feef2d2e99fdc4d02fe698a#abc-566912",
+      "begruendung": "Wecker nicht einzeln genannt; Abfall-ABC 'Elektrogeräte'. AWSH: Batterien/Akkus, die nicht vom Gerät umschlossen sind, vor Abgabe zerstörungsfrei entnehmen (E-Schrott-Seite).",
+      "unsicher": false
+    },
+    "cordless_drill": {
+      "weg": "elektro",
+      "teile": [
+        {
+          "component_id": "battery_pack",
+          "weg": "batterie",
+          "hinweis": "Wechselakku: Batteriesammlung."
+        }
+      ],
+      "hinweis": "Akku abnehmen und separat abgeben.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=E&cHash=a91e0f78b7bccd2a23a5bd2e2be756c39cda32425feef2d2e99fdc4d02fe698a#abc-566913",
+      "begruendung": "Abfall-ABC 'Elektrogeräte mit Akku'. AWSH: Batterien/Akkus, die nicht vom Gerät umschlossen sind, vor Abgabe zerstörungsfrei entnehmen (E-Schrott-Seite).",
+      "unsicher": false
+    },
+    "portable_radio": {
+      "weg": "elektro",
+      "teile": [
+        {
+          "component_id": "alkaline_cell",
+          "weg": "batterie",
+          "hinweis": "Batterien vorher herausnehmen."
+        }
+      ],
+      "hinweis": "Batterien vorher herausnehmen.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=K&cHash=17a18ac97fe6c67d6ca766a1ca11a673fa081352946da9770f1fcbee71ea84d0#abc-567225",
+      "begruendung": "Abfall-ABC 'Kofferradio': Elektrogeräte. AWSH: Batterien/Akkus, die nicht vom Gerät umschlossen sind, vor Abgabe zerstörungsfrei entnehmen (E-Schrott-Seite).",
+      "unsicher": false
+    },
+    "compact_fluorescent_lamp": {
+      "weg": "lampen",
+      "teile": [],
+      "hinweis": "Nicht zerbrechen.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=E&cHash=a91e0f78b7bccd2a23a5bd2e2be756c39cda32425feef2d2e99fdc4d02fe698a#abc-566918",
+      "begruendung": "Abfall-ABC 'Energiesparlampe': Recyclinghöfe; Recyclinghof-Seite: nicht in den Restabfall (Schadstoffe).",
+      "unsicher": false
+    },
+    "game_console": {
+      "weg": "elektro",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=P&cHash=79db9e01371dc45cabf2629f3cc555f18bd692fe9e3babae6bd173e31ec9b783#abc-567438",
+      "begruendung": "Abfall-ABC 'Playstation': Elektrogeräte.",
+      "unsicher": false
+    },
+    "laptop_charger": {
+      "weg": "elektro",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=E&cHash=a91e0f78b7bccd2a23a5bd2e2be756c39cda32425feef2d2e99fdc4d02fe698a#abc-566912",
+      "begruendung": "Netzteil nicht einzeln genannt; Abfall-ABC 'Elektrogeräte' / 'Kabel von Elektrogeräten'.",
+      "unsicher": false
+    },
+    "wired_earphones": {
+      "weg": "elektro",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=E&cHash=a91e0f78b7bccd2a23a5bd2e2be756c39cda32425feef2d2e99fdc4d02fe698a#abc-566912",
+      "begruendung": "Nicht einzeln genannt; Abfall-ABC 'Elektrogeräte'.",
+      "unsicher": false
+    },
+    "bike_light": {
+      "weg": "elektro",
+      "teile": [],
+      "hinweis": "Fest eingebauten Akku nicht ausbauen.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=E&cHash=a91e0f78b7bccd2a23a5bd2e2be756c39cda32425feef2d2e99fdc4d02fe698a#abc-566913",
+      "begruendung": "Nicht einzeln genannt; Abfall-ABC 'Elektrogeräte mit Akku'. AWSH: Geräte mit fest eingebauten Akkus gelten als Elektroschrott (E-Schrott-Seite, Abschnitt Einbaubatterien).",
+      "unsicher": false
+    },
+    "string_lights": {
+      "weg": "elektro",
+      "teile": [
+        {
+          "component_id": "alkaline_cell",
+          "weg": "batterie",
+          "hinweis": "Batterien vorher herausnehmen."
+        }
+      ],
+      "hinweis": "Batterien vorher herausnehmen.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=L&cHash=144a15175c162dd1e34c7d44eccf4a7e28fec5ad9745905f77161ddd81201ee4#abc-567300",
+      "begruendung": "Abfall-ABC 'Lichterkette': Elektrogeräte. AWSH: Batterien/Akkus, die nicht vom Gerät umschlossen sind, vor Abgabe zerstörungsfrei entnehmen (E-Schrott-Seite).",
+      "unsicher": false
+    },
+    "kitchen_scale": {
+      "weg": "elektro",
+      "teile": [
+        {
+          "component_id": "button_cell",
+          "weg": "batterie",
+          "hinweis": "Knopfzelle herausnehmen, wenn möglich."
+        }
+      ],
+      "hinweis": "Knopfzelle vorher herausnehmen.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=W&cHash=544731e8833c969d2c2e38a18005a88dedf5dbabb9d8c53a96afca2045bd8de2#abc-567800",
+      "begruendung": "Abfall-ABC 'Waage Digital': Elektrogeräte. AWSH: Batterien/Akkus, die nicht vom Gerät umschlossen sind, vor Abgabe zerstörungsfrei entnehmen (E-Schrott-Seite).",
+      "unsicher": false
+    },
+    "bathroom_scale": {
+      "weg": "elektro",
+      "teile": [
+        {
+          "component_id": "alkaline_cell",
+          "weg": "batterie",
+          "hinweis": "Batterien vorher herausnehmen."
+        }
+      ],
+      "hinweis": "Batterien vorher herausnehmen.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=W&cHash=544731e8833c969d2c2e38a18005a88dedf5dbabb9d8c53a96afca2045bd8de2#abc-567800",
+      "begruendung": "Abfall-ABC 'Waage Digital': Elektrogeräte. AWSH: Batterien/Akkus, die nicht vom Gerät umschlossen sind, vor Abgabe zerstörungsfrei entnehmen (E-Schrott-Seite).",
+      "unsicher": false
+    },
+    "sandwich_maker": {
+      "weg": "elektro",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=K&cHash=17a18ac97fe6c67d6ca766a1ca11a673fa081352946da9770f1fcbee71ea84d0#abc-567249",
+      "begruendung": "Abfall-ABC 'Küchengeräte': Elektrogeräte.",
+      "unsicher": false
+    },
+    "button_cell_battery": {
+      "weg": "batterie",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=K&cHash=17a18ac97fe6c67d6ca766a1ca11a673fa081352946da9770f1fcbee71ea84d0#abc-567222",
+      "begruendung": "Abfall-ABC 'Knopfzelle': Batterien, Einzelhandel oder Recyclinghöfe.",
+      "unsicher": false
+    },
+    "soldering_iron": {
+      "weg": "elektro",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=E&cHash=a91e0f78b7bccd2a23a5bd2e2be756c39cda32425feef2d2e99fdc4d02fe698a#abc-566912",
+      "begruendung": "Lötkolben nicht einzeln genannt; Abfall-ABC 'Elektrogeräte'.",
+      "unsicher": false
+    },
+    "drone": {
+      "weg": "elektro",
+      "teile": [
+        {
+          "component_id": "li_ion_battery",
+          "weg": "batterie",
+          "hinweis": "Wechselakku: Batteriesammlung."
+        }
+      ],
+      "hinweis": "Wechselakku separat abgeben.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=E&cHash=a91e0f78b7bccd2a23a5bd2e2be756c39cda32425feef2d2e99fdc4d02fe698a#abc-566913",
+      "begruendung": "Nicht einzeln genannt; Abfall-ABC 'Elektrogeräte mit Akku'. AWSH: Batterien/Akkus, die nicht vom Gerät umschlossen sind, vor Abgabe zerstörungsfrei entnehmen (E-Schrott-Seite).",
+      "unsicher": false
+    },
+    "egg_carton": {
+      "weg": "papier",
+      "teile": [],
+      "hinweis": "Verschmutzt: Restabfall.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=E&cHash=a91e0f78b7bccd2a23a5bd2e2be756c39cda32425feef2d2e99fdc4d02fe698a#abc-566897",
+      "begruendung": "Abfall-ABC 'Eierkarton Pappe, unverschmutzt': Altpapier; verschmutzt: Restabfall.",
+      "unsicher": false
+    },
+    "plastic_cup": {
+      "weg": "wertstofftonne",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=E&cHash=a91e0f78b7bccd2a23a5bd2e2be756c39cda32425feef2d2e99fdc4d02fe698a#abc-566907",
+      "begruendung": "Abfall-ABC 'Einweggeschirr Plastik': Wertstofftonne.",
+      "unsicher": false
+    },
+    "takeaway_container": {
+      "weg": "wertstofftonne",
+      "teile": [],
+      "hinweis": "Löffelrein reicht.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=T&cHash=a722c46cae0a0bffd97890a1c72c76cf78346686a0d589cb907c67960b496ec3#abc-567740",
+      "begruendung": "Abfall-ABC 'To Go Verpackungen': Wertstofftonne.",
+      "unsicher": false
+    },
+    "foam_food_tray": {
+      "weg": "wertstofftonne",
+      "teile": [
+        {
+          "component_id": "absorbent_pad",
+          "weg": "restmuell",
+          "hinweis": "Saugeinlage: Restabfall."
+        }
+      ],
+      "hinweis": "Saugeinlage in den Restabfall.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=S&cHash=300df1801ed2441fda7f6b6b36148ed4a1978cf6e6e7d42812edf322f9bad405#abc-567683",
+      "begruendung": "Abfall-ABC 'Styroporverpackung': Wertstofftonne. Saugeinlage nicht genannt; wie verschmutztes Papier ('Papier, verschmutzt') = Restabfall.",
+      "unsicher": false
+    },
+    "cling_film": {
+      "weg": "wertstofftonne",
+      "teile": [],
+      "hinweis": "Stark verschmutzt: Restabfall.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=K&cHash=17a18ac97fe6c67d6ca766a1ca11a673fa081352946da9770f1fcbee71ea84d0#abc-567209",
+      "begruendung": "Abfall-ABC 'Klarsichtfolie': Wertstofftonne.",
+      "unsicher": false
+    },
+    "aluminium_foil": {
+      "weg": "wertstofftonne",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=A&cHash=23d0285d546f15850959908e688b955c6be08e55f9c8d2bfc5a33cf532c7a2af#abc-566706",
+      "begruendung": "Abfall-ABC 'Alufolie': Wertstofftonne.",
+      "unsicher": false
+    },
+    "blister_pack": {
+      "weg": "wertstofftonne",
+      "teile": [],
+      "hinweis": "Nur leer, ohne Tabletten.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=V&cHash=0cfcb4572ee47ab06e0513bfe9cf5ad99bf9c879ca537aaeda4f3026054826a1#abc-567783",
+      "begruendung": "Blister nicht genannt; Wertstofftonnen-Seite: Verbundverpackungen aus Kunststoff/Metall gehören hinein.",
+      "unsicher": false
+    },
+    "pill_bottle": {
+      "weg": "wertstofftonne",
+      "teile": [],
+      "hinweis": "Nur leer.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=K&cHash=17a18ac97fe6c67d6ca766a1ca11a673fa081352946da9770f1fcbee71ea84d0#abc-567270",
+      "begruendung": "Tablettendose nicht genannt; Abfall-ABC 'Kunststoffverpackung': Wertstofftonne. Medikamentenreste: Apotheke/Recyclinghof ('Medikamente').",
+      "unsicher": false
+    },
+    "detergent_bottle": {
+      "weg": "wertstofftonne",
+      "teile": [],
+      "hinweis": "Nur leer.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=K&cHash=17a18ac97fe6c67d6ca766a1ca11a673fa081352946da9770f1fcbee71ea84d0#abc-567270",
+      "begruendung": "Abfall-ABC 'Kunststoffverpackung': Wertstofftonne. 'Waschmittel flüssig' (Reste) = Sonderabfall.",
+      "unsicher": false
+    },
+    "spray_bottle": {
+      "weg": "wertstofftonne",
+      "teile": [],
+      "hinweis": "Nur leer.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=K&cHash=17a18ac97fe6c67d6ca766a1ca11a673fa081352946da9770f1fcbee71ea84d0#abc-567270",
+      "begruendung": "Abfall-ABC 'Kunststoffverpackung': Wertstofftonne. Reste von Reinigern sind Sonderabfall ('Reinigungsmittel').",
+      "unsicher": false
+    },
+    "soap_dispenser": {
+      "weg": "wertstofftonne",
+      "teile": [],
+      "hinweis": "Nur leer.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=K&cHash=17a18ac97fe6c67d6ca766a1ca11a673fa081352946da9770f1fcbee71ea84d0#abc-567243",
+      "begruendung": "Wie Abfall-ABC 'Shampooflaschen restentleert': Wertstofftonne.",
+      "unsicher": false
+    },
+    "bubble_wrap": {
+      "weg": "wertstofftonne",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=L&cHash=144a15175c162dd1e34c7d44eccf4a7e28fec5ad9745905f77161ddd81201ee4#abc-567312",
+      "begruendung": "Abfall-ABC 'Luftpolsterfolie': Wertstofftonne.",
+      "unsicher": false
+    },
+    "padded_envelope": {
+      "weg": "papier",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=K&cHash=17a18ac97fe6c67d6ca766a1ca11a673fa081352946da9770f1fcbee71ea84d0#abc-567273",
+      "begruendung": "Abfall-ABC 'Kuvert, mit Plastik gefüttert': Altpapier.",
+      "unsicher": false
+    },
+    "paper_bag": {
+      "weg": "papier",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=P&cHash=79db9e01371dc45cabf2629f3cc555f18bd692fe9e3babae6bd173e31ec9b783#abc-567405",
+      "begruendung": "Abfall-ABC 'Papiertüte': Altpapier.",
+      "unsicher": false
+    },
+    "shoebox": {
+      "weg": "papier",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=K&cHash=17a18ac97fe6c67d6ca766a1ca11a673fa081352946da9770f1fcbee71ea84d0#abc-567187",
+      "begruendung": "Abfall-ABC 'Kartonverpackungen / Schachteln' und 'Seidenpapier': Altpapier.",
+      "unsicher": false
+    },
+    "aluminium_tray": {
+      "weg": "wertstofftonne",
+      "teile": [
+        {
+          "component_id": "cardboard_lid",
+          "weg": "papier",
+          "hinweis": "Papp-Deckel: Altpapier; wenn alu-beschichtet: Wertstofftonne."
+        }
+      ],
+      "hinweis": "Papp-Deckel abnehmen.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=A&cHash=23d0285d546f15850959908e688b955c6be08e55f9c8d2bfc5a33cf532c7a2af#abc-566709",
+      "begruendung": "Abfall-ABC 'Aluminiumverpackung': Wertstofftonne. Deckel: 'Lebensmittelverpackung, Pappe mit Glanzfolie beschichtet' = Altpapier; Altpapier-Seite schließt aber beschichtete Kartons aus.",
+      "unsicher": true
+    },
+    "cereal_box": {
+      "weg": "papier",
+      "teile": [
+        {
+          "component_id": "ldpe_film",
+          "weg": "wertstofftonne",
+          "hinweis": "Innenbeutel: Wertstofftonne."
+        }
+      ],
+      "hinweis": "Innenbeutel herausnehmen.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=K&cHash=17a18ac97fe6c67d6ca766a1ca11a673fa081352946da9770f1fcbee71ea84d0#abc-567187",
+      "begruendung": "Abfall-ABC 'Kartonverpackungen': Altpapier; Innenbeutel = 'Kunststoffverpackung': Wertstofftonne.",
+      "unsicher": false
+    },
+    "tea_bag": {
+      "weg": "bio",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=T&cHash=a722c46cae0a0bffd97890a1c72c76cf78346686a0d589cb907c67960b496ec3#abc-567704",
+      "begruendung": "Abfall-ABC 'Teebeutel': Bioabfall; Bioabfall-Seite: Teesud auch im Filterbeutel.",
+      "unsicher": false
+    },
+    "plastic_straw": {
+      "weg": "wertstofftonne",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=E&cHash=a91e0f78b7bccd2a23a5bd2e2be756c39cda32425feef2d2e99fdc4d02fe698a#abc-566906",
+      "begruendung": "Trinkhalm nicht genannt; wie Abfall-ABC 'Einwegbesteck Kunststoff' / 'Einweggeschirr Plastik': Wertstofftonne.",
+      "unsicher": false
+    },
+    "coffee_bag": {
+      "weg": "wertstofftonne",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=V&cHash=0cfcb4572ee47ab06e0513bfe9cf5ad99bf9c879ca537aaeda4f3026054826a1#abc-567783",
+      "begruendung": "Kaffeeverpackung nicht genannt; Wertstofftonnen-Seite: Verbundverpackungen; Abfall-ABC 'Verpackung': Wertstofftonne.",
+      "unsicher": false
+    },
+    "roll_on_deodorant": {
+      "weg": "wertstofftonne",
+      "teile": [],
+      "hinweis": "Glasflasche: Altglas.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=D&cHash=4dadb20a39fbe2a4469e34571b007508eb03acdb438bc2190721f2341427f3cc#abc-566861",
+      "begruendung": "Abfall-ABC 'Deodorant': Leichtverpackungen, Wertstofftonne. Unsicher: Deoroller aus Glas gehören zum Altglas.",
+      "unsicher": true
+    },
+    "lipstick": {
+      "weg": "wertstofftonne",
+      "teile": [
+        {
+          "component_id": "lipstick_bullet",
+          "weg": "restmuell",
+          "hinweis": "Lippenstiftreste: Restabfall."
+        }
+      ],
+      "hinweis": "Mit Resten: Restabfall.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=K&cHash=17a18ac97fe6c67d6ca766a1ca11a673fa081352946da9770f1fcbee71ea84d0#abc-567243",
+      "begruendung": "Abfall-ABC 'Kosmetika restentleert': Wertstofftonne; 'mit Resten': Restabfall.",
+      "unsicher": false
+    },
+    "cosmetic_jar": {
+      "weg": "wertstofftonne",
+      "teile": [],
+      "hinweis": "Nur restentleert.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=K&cHash=17a18ac97fe6c67d6ca766a1ca11a673fa081352946da9770f1fcbee71ea84d0#abc-567243",
+      "begruendung": "Abfall-ABC 'Cremedosen restentleert': Wertstofftonne.",
+      "unsicher": false
+    },
+    "fruit_net": {
+      "weg": "wertstofftonne",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=K&cHash=17a18ac97fe6c67d6ca766a1ca11a673fa081352946da9770f1fcbee71ea84d0#abc-567270",
+      "begruendung": "Obstnetz nicht genannt; Abfall-ABC 'Kunststoffverpackung': Wertstofftonne.",
+      "unsicher": false
+    },
+    "can_carrier": {
+      "weg": "wertstofftonne",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=K&cHash=17a18ac97fe6c67d6ca766a1ca11a673fa081352946da9770f1fcbee71ea84d0#abc-567270",
+      "begruendung": "Dosenträger nicht genannt; Abfall-ABC 'Kunststoffverpackung': Wertstofftonne.",
+      "unsicher": false
+    },
+    "bag_in_box": {
+      "weg": "papier",
+      "teile": [
+        {
+          "component_id": "multilayer_bag",
+          "weg": "wertstofftonne",
+          "hinweis": "Innenbeutel: Wertstofftonne."
+        },
+        {
+          "component_id": "pp_tap",
+          "weg": "wertstofftonne",
+          "hinweis": "Zapfhahn: Wertstofftonne."
+        }
+      ],
+      "hinweis": "Beutel aus dem Karton nehmen.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=K&cHash=17a18ac97fe6c67d6ca766a1ca11a673fa081352946da9770f1fcbee71ea84d0#abc-567186",
+      "begruendung": "Bag-in-Box nicht genannt; Karton nach 'Kartonage' = Altpapier, Innenbeutel/Zapfhahn nach 'Verpackung' = Wertstofftonne.",
+      "unsicher": false
+    },
+    "bottle_crate": {
+      "weg": "recyclinghof",
+      "teile": [],
+      "hinweis": "Pfandkiste? Im Pfandsystem zurückgeben.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=G&cHash=e4b5337162b58db64cbbe96cbc29e76ed13a84bacbd5b3ce8edd6ba9d22d731f#abc-567050",
+      "begruendung": "Abfall-ABC 'Getränkekiste': Restabfall, Abgabe auf Recyclinghöfen. Pfand wird dort nicht erwähnt. Unsicher: Pfandkisten gehören zurück ins Pfandsystem.",
+      "unsicher": true
+    },
+    "paint_bucket": {
+      "weg": "schadstoff",
+      "teile": [],
+      "hinweis": "Restleerer Dispersionsfarbe-Eimer: Wertstofftonne.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=F&cHash=94d154b50959394aebee2db1fc483d4f51de6aa81f8afcb6d2f783c7331c4b3e#abc-566948",
+      "begruendung": "Abfall-ABC 'Farbeimer/-dose (auch leer)': Sonderabfall. Ausnahme 'Binderfarb-Eimer restentleert': Wertstofftonne. Unsicher, welche Farbe drin war.",
+      "unsicher": true
+    },
+    "perfume_bottle": {
+      "weg": "glas",
+      "teile": [
+        {
+          "component_id": "perfume_cap",
+          "weg": "wertstofftonne",
+          "hinweis": "Plastikkappe: Wertstofftonne."
+        }
+      ],
+      "hinweis": "Nur leer; mit Rest: Restabfall.",
+      "url": "https://www.awsh.de/privatkunden/depotcontainer/",
+      "begruendung": "Depotcontainer-Seite: Parfümflakons gehören in den Glascontainer. Abfall-ABC 'Parfum, mit Flasche' (mit Inhalt): Restabfall.",
+      "unsicher": false
+    },
+    "squeeze_bottle": {
+      "weg": "wertstofftonne",
+      "teile": [],
+      "hinweis": "Nur leer.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=F&cHash=94d154b50959394aebee2db1fc483d4f51de6aa81f8afcb6d2f783c7331c4b3e#abc-566979",
+      "begruendung": "Abfall-ABC 'Flasche Kunststoff': Wertstofftonne.",
+      "unsicher": false
+    },
+    "kitchen_sponge": {
+      "weg": "restmuell",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=S&cHash=300df1801ed2441fda7f6b6b36148ed4a1978cf6e6e7d42812edf322f9bad405#abc-567558",
+      "begruendung": "Küchenschwamm nicht genannt; wie Abfall-ABC 'Schaumgummi': Restabfall.",
+      "unsicher": false
+    },
+    "toothbrush": {
+      "weg": "restmuell",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=Z&cHash=0fc906e538a8da1601782228e205081b1d56d5a6e6e9ce3b5747542675461dab#abc-567863",
+      "begruendung": "Abfall-ABC 'Zahnbürste (Kunststoff)': Restabfall.",
+      "unsicher": false
+    },
+    "disposable_razor": {
+      "weg": "wertstofftonne",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=R&cHash=859604207f1af6fa418f4937681ec8a4f09d3fb85fcd057ac06bc0e5c0b035b6#abc-567486",
+      "begruendung": "Einwegrasierer nicht genannt; Abfall-ABC 'Rasierklingen': Wertstofftonne; Griff aus Kunststoff = stoffgleiche Nichtverpackung.",
+      "unsicher": true
+    },
+    "hairbrush": {
+      "weg": "wertstofftonne",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=H&cHash=8d6ea9bb21759e533030fd80e2b6aa3f6e446e17865ebb2afd72e06bc81d662a#abc-567086",
+      "begruendung": "Abfall-ABC 'Haarbürste (Kunststoff)': Wertstofftonne.",
+      "unsicher": false
+    },
+    "comb": {
+      "weg": "wertstofftonne",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=H&cHash=8d6ea9bb21759e533030fd80e2b6aa3f6e446e17865ebb2afd72e06bc81d662a#abc-567086",
+      "begruendung": "Kamm nicht genannt; wie Abfall-ABC 'Haarbürste (Kunststoff)' und Wertstofftonnen-Seite (Nichtverpackungen aus Plastik): Wertstofftonne.",
+      "unsicher": false
+    },
+    "cooking_pot": {
+      "weg": "wertstofftonne",
+      "teile": [
+        {
+          "component_id": "pot_lid_glass",
+          "weg": "restmuell",
+          "hinweis": "Glasdeckel: Restabfall, nicht Altglas."
+        }
+      ],
+      "hinweis": "Glasdeckel in den Restabfall.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=K&cHash=17a18ac97fe6c67d6ca766a1ca11a673fa081352946da9770f1fcbee71ea84d0#abc-567223",
+      "begruendung": "Abfall-ABC 'Kochtopf Metall': Recyclinghöfe, Wertstofftonne; Wertstofftonnen-Seite nennt Töpfe. Glasdeckel ist kein Behälterglas ('Glasschale' = Restabfall).",
+      "unsicher": false
+    },
+    "frying_pan": {
+      "weg": "wertstofftonne",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=P&cHash=79db9e01371dc45cabf2629f3cc555f18bd692fe9e3babae6bd173e31ec9b783#abc-567690",
+      "begruendung": "Abfall-ABC 'Pfannen': Recyclinghöfe, Wertstofftonne; Wertstofftonnen-Seite nennt Pfannen.",
+      "unsicher": false
+    },
+    "ceramic_mug": {
+      "weg": "restmuell",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=T&cHash=a722c46cae0a0bffd97890a1c72c76cf78346686a0d589cb907c67960b496ec3#abc-567701",
+      "begruendung": "Abfall-ABC 'Tasse': Restabfall; Depotcontainer-Seite: Keramik nicht ins Altglas.",
+      "unsicher": false
+    },
+    "drinking_glass": {
+      "weg": "restmuell",
+      "teile": [],
+      "hinweis": "Nicht in den Glascontainer.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=T&cHash=a722c46cae0a0bffd97890a1c72c76cf78346686a0d589cb907c67960b496ec3#abc-567759",
+      "begruendung": "Abfall-ABC 'Trinkglas': Restabfall (kein Behälterglas).",
+      "unsicher": false
+    },
+    "kitchen_knife": {
+      "weg": "wertstofftonne",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=B&cHash=00a0304996f97ea24fb7fe3dc82014eab2912ee49ba7e5c5289b3b2e1e00d140#abc-566784",
+      "begruendung": "Küchenmesser nicht genannt; wie Abfall-ABC 'Besteck': Wertstofftonne.",
+      "unsicher": false
+    },
+    "cutting_board": {
+      "weg": "restmuell",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=V&cHash=0cfcb4572ee47ab06e0513bfe9cf5ad99bf9c879ca537aaeda4f3026054826a1#abc-567794",
+      "begruendung": "Schneidebrett nicht genannt. Kleiner Holzgegenstand wie 'Vogelhäuschen (tonnengängig)' = Restabfall; alternativ Recyclinghof (Holz Innenbereich). Unsicher.",
+      "unsicher": true
+    },
+    "wooden_spoon": {
+      "weg": "restmuell",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=V&cHash=0cfcb4572ee47ab06e0513bfe9cf5ad99bf9c879ca537aaeda4f3026054826a1#abc-567794",
+      "begruendung": "Kochlöffel nicht genannt. Kleiner Holzgegenstand wie 'Vogelhäuschen (tonnengängig)' = Restabfall; Bioabfall-Seite: behandeltes Holz nicht in die Biotonne. Unsicher.",
+      "unsicher": true
+    },
+    "food_container": {
+      "weg": "wertstofftonne",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=P&cHash=79db9e01371dc45cabf2629f3cc555f18bd692fe9e3babae6bd173e31ec9b783#abc-567433",
+      "begruendung": "Abfall-ABC 'Plastikdosen (Tupperware)': Wertstofftonne.",
+      "unsicher": false
+    },
+    "thermos_flask": {
+      "weg": "restmuell",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=T&cHash=a722c46cae0a0bffd97890a1c72c76cf78346686a0d589cb907c67960b496ec3#abc-567731",
+      "begruendung": "Abfall-ABC 'Thermoskanne': Restabfall (auch Recyclinghof). Unsicher: reine Edelstahlkanne wäre Metall.",
+      "unsicher": true
+    },
+    "wire_hanger": {
+      "weg": "wertstofftonne",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=K&cHash=17a18ac97fe6c67d6ca766a1ca11a673fa081352946da9770f1fcbee71ea84d0#abc-567213",
+      "begruendung": "Abfall-ABC 'Kleiderbügel': Wertstofftonne.",
+      "unsicher": false
+    },
+    "plastic_hanger": {
+      "weg": "wertstofftonne",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=K&cHash=17a18ac97fe6c67d6ca766a1ca11a673fa081352946da9770f1fcbee71ea84d0#abc-567213",
+      "begruendung": "Abfall-ABC 'Kleiderbügel': Wertstofftonne.",
+      "unsicher": false
+    },
+    "clothes_peg": {
+      "weg": "wertstofftonne",
+      "teile": [],
+      "hinweis": "Holzklammern: Restabfall.",
+      "url": "https://www.awsh.de/privatkunden/wertstofftonne/",
+      "begruendung": "Wäscheklammer nicht genannt. Kunststoff mit Metallfeder = stoffgleiche Nichtverpackung (Wertstofftonnen-Seite). Holzklammern: Restabfall. Unsicher wegen Material.",
+      "unsicher": true
+    },
+    "picture_frame": {
+      "weg": "restmuell",
+      "teile": [],
+      "hinweis": "Nicht ins Altglas.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=B&cHash=00a0304996f97ea24fb7fe3dc82014eab2912ee49ba7e5c5289b3b2e1e00d140#abc-566793",
+      "begruendung": "Abfall-ABC 'Bilder, Bilderrahmen - mit Glas': Restabfall.",
+      "unsicher": false
+    },
+    "candle_jar": {
+      "weg": "glas",
+      "teile": [
+        {
+          "component_id": "paraffin_wax",
+          "weg": "restmuell",
+          "hinweis": "Wachsreste: Restabfall."
+        },
+        {
+          "component_id": "cotton_wick",
+          "weg": "restmuell",
+          "hinweis": "Docht: Restabfall."
+        },
+        {
+          "component_id": "wick_holder",
+          "weg": "wertstofftonne",
+          "hinweis": "Metallplättchen: Wertstofftonne."
+        }
+      ],
+      "hinweis": "Wachs vorher entfernen.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=K&cHash=17a18ac97fe6c67d6ca766a1ca11a673fa081352946da9770f1fcbee71ea84d0#abc-567235",
+      "begruendung": "Duftkerze nicht genannt. Glas wie 'Konservenglas' = Altglas, Wachsreste nach 'Kerze, Kerzenwachs' = Restabfall. Unsicher: AWSH nennt Kerzengläser nicht.",
+      "unsicher": true
+    },
+    "door_key": {
+      "weg": "wertstofftonne",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=M&cHash=d0572c938488a22ca24fd226c58469b5488919518c9cc5212b475d4ea65f7965#abc-567331",
+      "begruendung": "Schlüssel nicht genannt; Abfall-ABC 'Metalle': Recyclinghöfe, Wertstofftonne.",
+      "unsicher": false
+    },
+    "padlock": {
+      "weg": "wertstofftonne",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=M&cHash=d0572c938488a22ca24fd226c58469b5488919518c9cc5212b475d4ea65f7965#abc-567331",
+      "begruendung": "Vorhängeschloss nicht genannt; Abfall-ABC 'Metalle': Recyclinghöfe, Wertstofftonne.",
+      "unsicher": false
+    },
+    "bicycle_inner_tube": {
+      "weg": "restmuell",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=F&cHash=94d154b50959394aebee2db1fc483d4f51de6aa81f8afcb6d2f783c7331c4b3e#abc-566940",
+      "begruendung": "Abfall-ABC 'Fahrradschlauch': Restabfall.",
+      "unsicher": false
+    },
+    "garden_hose": {
+      "weg": "wertstofftonne",
+      "teile": [],
+      "hinweis": "Große Mengen: Recyclinghof.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=G&cHash=e4b5337162b58db64cbbe96cbc29e76ed13a84bacbd5b3ce8edd6ba9d22d731f#abc-567025",
+      "begruendung": "Abfall-ABC 'Gartenschlauch': Wertstofftonne (haushaltsübliche Menge), Recyclinghöfe.",
+      "unsicher": false
+    },
+    "plant_pot": {
+      "weg": "wertstofftonne",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=B&cHash=00a0304996f97ea24fb7fe3dc82014eab2912ee49ba7e5c5289b3b2e1e00d140#abc-566812",
+      "begruendung": "Abfall-ABC 'Blumentopf Kunststoff': Wertstofftonne.",
+      "unsicher": false
+    },
+    "watering_can": {
+      "weg": "wertstofftonne",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=G&cHash=e4b5337162b58db64cbbe96cbc29e76ed13a84bacbd5b3ce8edd6ba9d22d731f#abc-567053",
+      "begruendung": "Abfall-ABC 'Gießkanne (Metall, Kunststoff)': Wertstofftonne.",
+      "unsicher": false
+    },
+    "broom": {
+      "weg": "sperrmuell",
+      "teile": [],
+      "hinweis": "Stiel ab: Kopf in den Restabfall.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=G&cHash=e4b5337162b58db64cbbe96cbc29e76ed13a84bacbd5b3ce8edd6ba9d22d731f#abc-567021",
+      "begruendung": "Besen nicht genannt; ähnlich 'Gartenhandgerät (nicht elektrisch)' / 'Harke': Sperrmüll bzw. Recyclinghof. Unsicher: ohne Stiel passt der Besenkopf in den Restabfall.",
+      "unsicher": true
+    },
+    "bucket": {
+      "weg": "wertstofftonne",
+      "teile": [],
+      "hinweis": "Nur leer; sehr große Eimer: Recyclinghof.",
+      "url": "https://www.awsh.de/privatkunden/wertstofftonne/",
+      "begruendung": "Wertstofftonnen-Seite nennt Eimer als stoffgleiche Nichtverpackung. Abfall-ABC 'Eimer leer': Sperrmüll, Kleinteile Wertstofftonne.",
+      "unsicher": false
+    },
+    "ice_cube_tray": {
+      "weg": "restmuell",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=G&cHash=e4b5337162b58db64cbbe96cbc29e76ed13a84bacbd5b3ce8edd6ba9d22d731f#abc-567079",
+      "begruendung": "Silikonform nicht genannt; Silikon ist kein Kunststoffverpackungsmaterial, wie 'Gummi' = Restabfall. Unsicher.",
+      "unsicher": true
+    },
+    "baking_tray": {
+      "weg": "wertstofftonne",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=B&cHash=00a0304996f97ea24fb7fe3dc82014eab2912ee49ba7e5c5289b3b2e1e00d140#abc-566752",
+      "begruendung": "Abfall-ABC 'Backblech': Wertstofftonne.",
+      "unsicher": false
+    },
+    "fork": {
+      "weg": "wertstofftonne",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=B&cHash=00a0304996f97ea24fb7fe3dc82014eab2912ee49ba7e5c5289b3b2e1e00d140#abc-566784",
+      "begruendung": "Abfall-ABC 'Besteck': Wertstofftonne.",
+      "unsicher": false
+    },
+    "stapler": {
+      "weg": "wertstofftonne",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=B&cHash=00a0304996f97ea24fb7fe3dc82014eab2912ee49ba7e5c5289b3b2e1e00d140#abc-566833",
+      "begruendung": "Abfall-ABC 'Büromaterial … Hefter (aus Kunststoff oder Metall)': Wertstofftonne.",
+      "unsicher": false
+    },
+    "ring_binder": {
+      "weg": "restmuell",
+      "teile": [],
+      "hinweis": "Papier vorher herausnehmen.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=A&cHash=23d0285d546f15850959908e688b955c6be08e55f9c8d2bfc5a33cf532c7a2af#abc-566693",
+      "begruendung": "Abfall-ABC 'Aktenordner, Leitzordner': Restabfall.",
+      "unsicher": false
+    },
+    "spiral_notebook": {
+      "weg": "papier",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=C&cHash=22a7fdd5aa64c083129f7bf3fcdf57c3d30723eccbdf107a8e3dcb8b39ca9ec9#abc-566847",
+      "begruendung": "Abfall-ABC 'Collegeblock (auch mit Spirale)': Altpapier.",
+      "unsicher": false
+    },
+    "felt_tip_marker": {
+      "weg": "restmuell",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=F&cHash=94d154b50959394aebee2db1fc483d4f51de6aa81f8afcb6d2f783c7331c4b3e#abc-566972",
+      "begruendung": "Abfall-ABC 'Filzstifte, Textmarker': Restabfall.",
+      "unsicher": false
+    },
+    "highlighter": {
+      "weg": "restmuell",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=F&cHash=94d154b50959394aebee2db1fc483d4f51de6aa81f8afcb6d2f783c7331c4b3e#abc-566972",
+      "begruendung": "Abfall-ABC 'Filzstifte, Textmarker': Restabfall.",
+      "unsicher": false
+    },
+    "plastic_ruler": {
+      "weg": "wertstofftonne",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=B&cHash=00a0304996f97ea24fb7fe3dc82014eab2912ee49ba7e5c5289b3b2e1e00d140#abc-566833",
+      "begruendung": "Lineal nicht genannt; Abfall-ABC 'Büromaterial aus Kunststoff': Wertstofftonne.",
+      "unsicher": false
+    },
+    "eraser": {
+      "weg": "restmuell",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=G&cHash=e4b5337162b58db64cbbe96cbc29e76ed13a84bacbd5b3ce8edd6ba9d22d731f#abc-567079",
+      "begruendung": "Radiergummi nicht genannt; wie Abfall-ABC 'Gummi': Restabfall.",
+      "unsicher": false
+    },
+    "glue_stick": {
+      "weg": "restmuell",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/restabfall/",
+      "begruendung": "Klebestift nicht genannt. Kunststoffhülse mit Kleberest; 'Klebstoff' ist Sonderabfall, Büromaterial aus Kunststoff Wertstofftonne. Unsicher; Restabfall nach Regel der Restabfall-Seite.",
+      "unsicher": true
+    },
+    "tape_dispenser": {
+      "weg": "wertstofftonne",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=B&cHash=00a0304996f97ea24fb7fe3dc82014eab2912ee49ba7e5c5289b3b2e1e00d140#abc-566833",
+      "begruendung": "Nicht genannt; Abfall-ABC 'Büromaterial aus Kunststoff oder Metall': Wertstofftonne.",
+      "unsicher": false
+    },
+    "envelope": {
+      "weg": "papier",
+      "teile": [],
+      "hinweis": "Sichtfenster darf dran bleiben.",
+      "url": "https://www.awsh.de/privatkunden/altpapier/",
+      "begruendung": "Altpapier-Seite: Briefe gehören ins Altpapier; Abfall-ABC 'Kuvert, mit Plastik gefüttert' ebenfalls Altpapier.",
+      "unsicher": false
+    },
+    "printer_cartridge": {
+      "weg": "elektro",
+      "teile": [],
+      "hinweis": "Ohne Chip: Restabfall.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=D&cHash=4dadb20a39fbe2a4469e34571b007508eb03acdb438bc2190721f2341427f3cc#abc-566879",
+      "begruendung": "Abfall-ABC: Patrone mit Chip = Elektrogeräte; ohne elektrische Funktion = Restabfall. Unsicher, ob die Patrone einen Chip hat.",
+      "unsicher": true
+    },
+    "pencil_case": {
+      "weg": "restmuell",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=S&cHash=300df1801ed2441fda7f6b6b36148ed4a1978cf6e6e7d42812edf322f9bad405#abc-567594",
+      "begruendung": "Mäppchen nicht genannt; wie Abfall-ABC 'Schulranzen': Restabfall. Unsicher: gut erhaltene Mäppchen lieber weitergeben.",
+      "unsicher": true
+    },
+    "plastic_folder": {
+      "weg": "wertstofftonne",
+      "teile": [],
+      "hinweis": "Papier vorher herausnehmen.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=B&cHash=00a0304996f97ea24fb7fe3dc82014eab2912ee49ba7e5c5289b3b2e1e00d140#abc-566833",
+      "begruendung": "Abfall-ABC 'Büroabfall/-material Stifte, Hefter usw. (aus Kunststoff oder Metall)': Wertstofftonne.",
+      "unsicher": false
+    },
+    "pencil_sharpener": {
+      "weg": "wertstofftonne",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=B&cHash=00a0304996f97ea24fb7fe3dc82014eab2912ee49ba7e5c5289b3b2e1e00d140#abc-566833",
+      "begruendung": "Anspitzer nicht genannt; Abfall-ABC 'Büromaterial aus Kunststoff oder Metall': Wertstofftonne.",
+      "unsicher": false
+    },
+    "clipboard": {
+      "weg": "restmuell",
+      "teile": [
+        {
+          "component_id": "steel_clip",
+          "weg": "wertstofftonne",
+          "hinweis": "Metallklemme, wenn abschraubbar: Wertstofftonne."
+        }
+      ],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=V&cHash=0cfcb4572ee47ab06e0513bfe9cf5ad99bf9c879ca537aaeda4f3026054826a1#abc-567794",
+      "begruendung": "Klemmbrett nicht genannt. Hartfaserplatte = Holzwerkstoff; kleine Holzgegenstände wie 'Vogelhäuschen (tonnengängig)' = Restabfall. Metallklammer könnte in die Wertstofftonne.",
+      "unsicher": true
+    },
+    "wool_sweater": {
+      "weg": "textil",
+      "teile": [],
+      "hinweis": "Kaputt: Restabfall.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=K&cHash=17a18ac97fe6c67d6ca766a1ca11a673fa081352946da9770f1fcbee71ea84d0#abc-567214",
+      "begruendung": "Abfall-ABC 'Kleidung brauchbar': Altkleidercontainer.",
+      "unsicher": false
+    },
+    "leather_belt": {
+      "weg": "textil",
+      "teile": [],
+      "hinweis": "Kaputt: Restabfall.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=K&cHash=17a18ac97fe6c67d6ca766a1ca11a673fa081352946da9770f1fcbee71ea84d0#abc-567214",
+      "begruendung": "Gürtel nicht genannt; als tragbares Bekleidungszubehör wie 'Kleidung brauchbar'. Kaputt wie 'Leder' = Restabfall. Unsicher.",
+      "unsicher": true
+    },
+    "leather_shoe": {
+      "weg": "textil",
+      "teile": [],
+      "hinweis": "Paarweise bündeln; kaputt: Restabfall.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=S&cHash=300df1801ed2441fda7f6b6b36148ed4a1978cf6e6e7d42812edf322f9bad405#abc-567591",
+      "begruendung": "Abfall-ABC 'Schuhe, brauchbar': Altkleidercontainer.",
+      "unsicher": false
+    },
+    "sock": {
+      "weg": "textil",
+      "teile": [],
+      "hinweis": "Löchrig: Restabfall.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=K&cHash=17a18ac97fe6c67d6ca766a1ca11a673fa081352946da9770f1fcbee71ea84d0#abc-567214",
+      "begruendung": "Abfall-ABC 'Kleidung brauchbar': Altkleidercontainer; kaputt: 'Altkleider, unbrauchbar' = Restabfall.",
+      "unsicher": false
+    },
+    "baseball_cap": {
+      "weg": "textil",
+      "teile": [],
+      "hinweis": "Kaputt: Restabfall.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=K&cHash=17a18ac97fe6c67d6ca766a1ca11a673fa081352946da9770f1fcbee71ea84d0#abc-567214",
+      "begruendung": "Abfall-ABC 'Kleidung brauchbar': Altkleidercontainer.",
+      "unsicher": false
+    },
+    "winter_jacket": {
+      "weg": "textil",
+      "teile": [],
+      "hinweis": "Kaputt: Restabfall.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=K&cHash=17a18ac97fe6c67d6ca766a1ca11a673fa081352946da9770f1fcbee71ea84d0#abc-567214",
+      "begruendung": "Abfall-ABC 'Kleidung brauchbar': Altkleidercontainer.",
+      "unsicher": false
+    },
+    "bed_sheet": {
+      "weg": "textil",
+      "teile": [],
+      "hinweis": "Kaputt: Restabfall.",
+      "url": "https://www.awsh.de/privatkunden/depotcontainer/",
+      "begruendung": "Depotcontainer-Seite: Bettwäsche gehört in den Altkleidercontainer.",
+      "unsicher": false
+    },
+    "towel": {
+      "weg": "textil",
+      "teile": [],
+      "hinweis": "Kaputt: Restabfall.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=H&cHash=8d6ea9bb21759e533030fd80e2b6aa3f6e446e17865ebb2afd72e06bc81d662a#abc-567095",
+      "begruendung": "Abfall-ABC 'Handtuch brauchbar': Altkleidercontainer.",
+      "unsicher": false
+    },
+    "leather_handbag": {
+      "weg": "textil",
+      "teile": [],
+      "hinweis": "Kaputt: Restabfall.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=K&cHash=17a18ac97fe6c67d6ca766a1ca11a673fa081352946da9770f1fcbee71ea84d0#abc-567214",
+      "begruendung": "Handtasche nicht genannt; brauchbar wie 'Kleidung brauchbar', kaputt wie 'Leder' = Restabfall. Unsicher.",
+      "unsicher": true
+    },
+    "flip_flops": {
+      "weg": "textil",
+      "teile": [],
+      "hinweis": "Abgenutzt: Restabfall.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=S&cHash=300df1801ed2441fda7f6b6b36148ed4a1978cf6e6e7d42812edf322f9bad405#abc-567591",
+      "begruendung": "Abfall-ABC 'Schuhe, brauchbar': Altkleidercontainer; abgenutzt: 'Schuhe, unbrauchbar' = Restabfall.",
+      "unsicher": false
+    },
+    "rain_jacket": {
+      "weg": "textil",
+      "teile": [],
+      "hinweis": "Kaputt: Restabfall.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=K&cHash=17a18ac97fe6c67d6ca766a1ca11a673fa081352946da9770f1fcbee71ea84d0#abc-567214",
+      "begruendung": "Abfall-ABC 'Kleidung brauchbar': Altkleidercontainer.",
+      "unsicher": false
+    },
+    "analog_wristwatch": {
+      "weg": "elektro",
+      "teile": [
+        {
+          "component_id": "button_cell",
+          "weg": "batterie",
+          "hinweis": "Knopfzelle herausnehmen, wenn möglich."
+        }
+      ],
+      "hinweis": "Knopfzelle entnehmen lassen.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=E&cHash=a91e0f78b7bccd2a23a5bd2e2be756c39cda32425feef2d2e99fdc4d02fe698a#abc-566912",
+      "begruendung": "Armbanduhr nicht im Abfall-ABC. Quarzuhr mit Batterie = Elektrogerät (vgl. 'Spielzeug batteriebetrieben'). AWSH: Batterien/Akkus, die nicht vom Gerät umschlossen sind, vor Abgabe zerstörungsfrei entnehmen (E-Schrott-Seite). Unsicher: rein mechanische Uhren wären Metallschrott.",
+      "unsicher": true
+    },
+    "building_brick": {
+      "weg": "wertstofftonne",
+      "teile": [],
+      "hinweis": "Noch gut? Weitergeben.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=K&cHash=17a18ac97fe6c67d6ca766a1ca11a673fa081352946da9770f1fcbee71ea84d0#abc-567204",
+      "begruendung": "Abfall-ABC 'Kinderspielzeug, Kleinteile': Wertstofftonne.",
+      "unsicher": false
+    },
+    "football": {
+      "weg": "wertstofftonne",
+      "teile": [],
+      "hinweis": "Lederball: Restabfall.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=B&cHash=00a0304996f97ea24fb7fe3dc82014eab2912ee49ba7e5c5289b3b2e1e00d140#abc-566763",
+      "begruendung": "Abfall-ABC 'Ball (Kunststoff)': Wertstofftonne; 'Ball (Leder)': Restabfall.",
+      "unsicher": false
+    },
+    "tennis_ball": {
+      "weg": "restmuell",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=G&cHash=e4b5337162b58db64cbbe96cbc29e76ed13a84bacbd5b3ce8edd6ba9d22d731f#abc-567079",
+      "begruendung": "Tennisball nicht genannt; Gummi mit Filz wie Abfall-ABC 'Gummi': Restabfall.",
+      "unsicher": false
+    },
+    "yoga_mat": {
+      "weg": "wertstofftonne",
+      "teile": [],
+      "hinweis": "Gerollt oder zerschnitten.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=I&cHash=adb6d0a5583f3be8fe952df091eb0e7fc7b5b9fb1d47c4d8a0db35decfbe520d#abc-567159",
+      "begruendung": "Abfall-ABC 'Yogamatte (gerollt oder zerschnitten)': Wertstofftonne.",
+      "unsicher": false
+    },
+    "skateboard": {
+      "weg": "recyclinghof",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=R&cHash=859604207f1af6fa418f4937681ec8a4f09d3fb85fcd057ac06bc0e5c0b035b6#abc-567512",
+      "begruendung": "Skateboard nicht genannt; ähnlich 'Roller (Kinder-)' / 'Kinderspielzeug, Großteile': Sperrmüll über Recyclinghof. Unsicher.",
+      "unsicher": true
+    },
+    "bicycle_helmet": {
+      "weg": "wertstofftonne",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=F&cHash=94d154b50959394aebee2db1fc483d4f51de6aa81f8afcb6d2f783c7331c4b3e#abc-566935",
+      "begruendung": "Abfall-ABC 'Fahrradhelm': Wertstofftonne.",
+      "unsicher": false
+    },
+    "sports_bottle": {
+      "weg": "wertstofftonne",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/wertstofftonne/",
+      "begruendung": "Trinkflasche nicht genannt; Kunststoff-Gegenstand = stoffgleiche Nichtverpackung (Wertstofftonnen-Seite).",
+      "unsicher": false
+    },
+    "plush_toy": {
+      "weg": "restmuell",
+      "teile": [],
+      "hinweis": "Noch gut? Weitergeben.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=S&cHash=300df1801ed2441fda7f6b6b36148ed4a1978cf6e6e7d42812edf322f9bad405#abc-567666",
+      "begruendung": "Abfall-ABC 'Stofftiere, klein': Restabfall.",
+      "unsicher": false
+    },
+    "board_game": {
+      "weg": "papier",
+      "teile": [
+        {
+          "component_id": "wooden_pieces",
+          "weg": "restmuell",
+          "hinweis": "Holzfiguren: Restabfall."
+        }
+      ],
+      "hinweis": "Figuren vorher heraus.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=P&cHash=79db9e01371dc45cabf2629f3cc555f18bd692fe9e3babae6bd173e31ec9b783#abc-567466",
+      "begruendung": "Brettspiel nicht genannt; Karton/Papier wie Abfall-ABC 'Puzzle' = Altpapier; Holzfiguren als kleiner Holzgegenstand = Restabfall.",
+      "unsicher": false
+    },
+    "playing_cards": {
+      "weg": "restmuell",
+      "teile": [
+        {
+          "component_id": "cardboard_box_body",
+          "weg": "papier",
+          "hinweis": "Schachtel: Altpapier."
+        }
+      ],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/altpapier/",
+      "begruendung": "Spielkarten nicht genannt; Altpapier-Seite: beschichtete Papiere gehören in den Restabfall. Schachtel = Karton (Altpapier).",
+      "unsicher": false
+    },
+    "toy_car": {
+      "weg": "wertstofftonne",
+      "teile": [],
+      "hinweis": "Mit Batterie: Elektroschrott.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=K&cHash=17a18ac97fe6c67d6ca766a1ca11a673fa081352946da9770f1fcbee71ea84d0#abc-567204",
+      "begruendung": "Abfall-ABC 'Kinderspielzeug, Kleinteile': Wertstofftonne.",
+      "unsicher": false
+    },
+    "badminton_racket": {
+      "weg": "restmuell",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=B&cHash=00a0304996f97ea24fb7fe3dc82014eab2912ee49ba7e5c5289b3b2e1e00d140#abc-566761",
+      "begruendung": "Abfall-ABC 'Badmintonschläger': Restabfall.",
+      "unsicher": false
+    },
+    "swim_goggles": {
+      "weg": "wertstofftonne",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/wertstofftonne/",
+      "begruendung": "Schwimmbrille nicht genannt; Kunststoff/Silikon-Gegenstand, nach Wertstofftonnen-Seite (Nichtverpackungen aus Plastik). Unsicher.",
+      "unsicher": true
+    },
+    "frisbee": {
+      "weg": "wertstofftonne",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=K&cHash=17a18ac97fe6c67d6ca766a1ca11a673fa081352946da9770f1fcbee71ea84d0#abc-567204",
+      "begruendung": "Frisbee nicht genannt; Kunststoffspielzeug wie 'Kinderspielzeug, Kleinteile': Wertstofftonne.",
+      "unsicher": false
+    },
+    "vinyl_record": {
+      "weg": "wertstofftonne",
+      "teile": [
+        {
+          "component_id": "cardboard_sleeve",
+          "weg": "papier",
+          "hinweis": "Papphülle: Altpapier."
+        }
+      ],
+      "hinweis": "Papphülle ins Altpapier.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=S&cHash=300df1801ed2441fda7f6b6b36148ed4a1978cf6e6e7d42812edf322f9bad405#abc-567554",
+      "begruendung": "Abfall-ABC 'Schallplatten': Wertstofftonne; Papphülle = Altpapier.",
+      "unsicher": false
+    },
+    "hammer": {
+      "weg": "wertstofftonne",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=H&cHash=8d6ea9bb21759e533030fd80e2b6aa3f6e446e17865ebb2afd72e06bc81d662a#abc-567093",
+      "begruendung": "Abfall-ABC 'Hammer': Recyclinghöfe, haushaltsübliche Mengen Wertstofftonne.",
+      "unsicher": false
+    },
+    "screwdriver": {
+      "weg": "wertstofftonne",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=S&cHash=300df1801ed2441fda7f6b6b36148ed4a1978cf6e6e7d42812edf322f9bad405#abc-567582",
+      "begruendung": "Abfall-ABC 'Schraubezieher': Recyclinghöfe, haushaltsübliche Mengen Wertstofftonne.",
+      "unsicher": false
+    },
+    "paint_brush": {
+      "weg": "restmuell",
+      "teile": [],
+      "hinweis": "Mit nasser Farbe: Recyclinghof.",
+      "url": "https://www.awsh.de/privatkunden/restabfall/",
+      "begruendung": "Pinsel nicht genannt. Holzstiel mit Borsten, kein reines Plastik/Metall: nach Regel der Restabfall-Seite Restabfall. Farbreste/Pinselreiniger sind Sonderabfall. Unsicher.",
+      "unsicher": true
+    },
+    "tape_measure": {
+      "weg": "wertstofftonne",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=W&cHash=544731e8833c969d2c2e38a18005a88dedf5dbabb9d8c53a96afca2045bd8de2#abc-567850",
+      "begruendung": "Maßband nicht genannt; Abfall-ABC 'Werkzeug': Recyclinghöfe, Wertstofftonne.",
+      "unsicher": false
+    },
+    "silicone_cartridge": {
+      "weg": "restmuell",
+      "teile": [],
+      "hinweis": "Nicht ausgehärtet: Recyclinghof (Schadstoffe).",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=S&cHash=300df1801ed2441fda7f6b6b36148ed4a1978cf6e6e7d42812edf322f9bad405#abc-567610",
+      "begruendung": "Abfall-ABC: 'Silikon (in Tube hart geworden)' = Restabfall; 'Silikonkartuschen (unter Druck)' = Sonderabfall. Unsicher je nach Zustand.",
+      "unsicher": true
+    },
+    "incandescent_bulb": {
+      "weg": "restmuell",
+      "teile": [],
+      "hinweis": "Nicht ins Altglas.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=G&cHash=e4b5337162b58db64cbbe96cbc29e76ed13a84bacbd5b3ce8edd6ba9d22d731f#abc-567066",
+      "begruendung": "Abfall-ABC 'Glühbirnen': Restabfall; Depotcontainer-Seite: nicht ins Altglas.",
+      "unsicher": false
+    },
+    "storage_box": {
+      "weg": "wertstofftonne",
+      "teile": [],
+      "hinweis": "Große Boxen: Sperrmüll.",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=K&cHash=17a18ac97fe6c67d6ca766a1ca11a673fa081352946da9770f1fcbee71ea84d0#abc-567208",
+      "begruendung": "Abfall-ABC 'Kiste, Korb (klein - leer), Plastik/Metall': Wertstofftonne; groß: Sperrmüll.",
+      "unsicher": false
+    },
+    "pliers": {
+      "weg": "wertstofftonne",
+      "teile": [],
+      "hinweis": "",
+      "url": "https://www.awsh.de/privatkunden/abfall-abc/?tx_pmabc_main%5Bcontroller%5D=Abc&tx_pmabc_main%5Bletter%5D=Z&cHash=0fc906e538a8da1601782228e205081b1d56d5a6e6e9ce3b5747542675461dab#abc-567864",
+      "begruendung": "Abfall-ABC 'Zange': Recyclinghöfe, haushaltsübliche Mengen Wertstofftonne.",
+      "unsicher": false
+    }
+  }
+}

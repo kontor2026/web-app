@@ -1,61 +1,39 @@
-// Übersicht: drei Bereiche als Karten, rechts der Stand der Daten. Layout wie „Bauen“ in der Station (.craft).
-import { shell, esc, quelleA, repoLink } from './shell.js';
-import index from '../../../backend/seed/kategorien/index.json';
+// Start: Der Kreislauf als Bild, darunter sofort die Wahl des Gegenstands. Wenig Text, eine Hauptaktion.
+import { shell, SCHRITTE, icon, ruhig } from './shell.js';
+import { waehlerHtml, verbindeWaehler } from './waehler.js';
 import atlas from './daten/atlas.json';
-import { KOMPASS } from './kompass/inhalt.js';
 
 const app = shell('start', './');
-const hand = index.filter((k) => !k.platzhalter).length;
-const mitHerkunft = Object.values(atlas.rohstoffe).filter((r) => r.abbau || r.verarbeitung).length;
-const offen = KOMPASS.richtungen.reduce((s, r) => s + (r.offen?.length ?? 0), 0);
 
-const KARTEN = [
-  { href: 'atlas/', titel: 'Rohstoff-Atlas', frage: 'Woraus besteht ein Gegenstand, und woher kommen seine Rohstoffe?',
-    meta: [`${atlas.objekte.length} Gegenstände`, `${Object.keys(atlas.rohstoffe).length} Rohstoffe`],
-    ziel: 'Vom Gegenstand über Bauteile und Materialien bis zu den Ländern, in denen die Rohstoffe abgebaut werden.', knopf: 'Gegenstand wählen' },
-  { href: 'modelle/', titel: '3D-Modelle', frage: 'Stimmen die Explosionszeichnungen?',
-    meta: [`${hand} von ${index.length} handgebaut`, 'drehbar in 3D'],
-    ziel: 'Jedes Modell zusammengebaut und explodiert ansehen, Teile antippen, Gewicht und Prüfhinweise vergleichen.', knopf: 'Modelle prüfen' },
-  { href: 'kompass/', titel: 'KI-Kompass', frage: KOMPASS.frage,
-    meta: [`${KOMPASS.richtungen.length} Richtungen`, `${offen} offene Punkte`],
-    ziel: 'Wo die KI in der Station arbeitet, wer entscheidet und was wir noch nicht gelöst haben.', knopf: 'Kompass öffnen' },
-];
+// Kreis mit den sieben Stationen, Uhrzeigersinn ab oben
+const R = 150;
+const punkte = SCHRITTE.map((s, i) => {
+  const a = (i / SCHRITTE.length) * Math.PI * 2 - Math.PI / 2;
+  return { ...s, x: Math.cos(a) * R, y: Math.sin(a) * R, cx: Math.cos(a), cy: Math.sin(a) };
+});
 
 app.innerHTML = `
-<section class="view craft start">
-  <div class="craft-main">
-    <div class="craft-head">
-      <div>
-        <div class="eyebrow">Übersicht</div>
-        <h1 style="margin-top:8px">Was steckt in unseren Dingen?</h1>
-        <p class="lead">Drei Bereiche der Kreislauf-Station zum Ansehen im Browser. Wähle einen aus.</p>
-      </div>
-    </div>
-    <div class="ideas">
-      ${KARTEN.map((k, i) => `
-      <a class="idea karte-link" href="${k.href}">
-        <div class="letter">0${i + 1}</div>
-        <div>
-          <h2>${esc(k.titel)}</h2>
-          <p class="kurz">${esc(k.frage)}</p>
-        </div>
-        <div class="meta">${k.meta.map((m) => `<span>${esc(m)}</span>`).join('')}</div>
-        <div class="goal"><small>Was du hier machst</small>${esc(k.ziel)}</div>
-        <span class="btn primary">${esc(k.knopf)} →</span>
-      </a>`).join('')}
+<section class="view start">
+  <div class="start-inhalt">
+    <figure class="kreis" aria-label="Der Lebensweg eines Gegenstands in sieben Stationen">
+      <svg viewBox="-290 -215 580 430" class="kreis-svg">
+        <circle class="kreis-ring" r="${R}" pathLength="1"/>
+        ${punkte.map((p, i) => `<g transform="translate(${p.x.toFixed(1)} ${p.y.toFixed(1)})"><g class="kreis-punkt" style="--i:${i}">
+          <circle r="30" class="${p.id === 'gegenstand' ? 'mitte' : ''}"/>
+          <g transform="translate(-13 -13) scale(1.0833)">${icon(p.id).replace('<svg class="icon "', '<svg width="24" height="24" class="icon"')}</g>
+          <text x="${(p.cx * 46).toFixed(1)}" y="${(p.cy * 46 + 4.5).toFixed(1)}" text-anchor="${p.cx > 0.3 ? 'start' : p.cx < -0.3 ? 'end' : 'middle'}">${p.name}</text></g></g>`).join('')}
+      </svg>
+    </figure>
+    <div class="start-text">
+      <h1>Wo kommt es her?<br>Wo geht es hin?</h1>
+      <p class="lead">Wähle einen Gegenstand und folge seinem Weg.</p>
+      ${waehlerHtml(atlas.objekte, (id) => `atlas/#kat=${id}`)}
     </div>
   </div>
-  <aside class="inv">
-    <h3>Stand der Daten</h3>
-    <p>Alles auf dieser Seite kommt aus dem Repository, ohne KI und ohne Server.</p>
-    <div class="irow"><span class="f">Modelle</span><span>handgebaut</span><span class="q">${hand} / ${index.length}</span></div>
-    <div class="mbar fortschritt"><b style="width:${(hand / index.length) * 100}%"></b></div>
-    <div class="irow"><span class="f">Herkunft</span><span>Rohstoffe mit Länderdaten</span><span class="q">${mitHerkunft} / ${Object.keys(atlas.rohstoffe).length}</span></div>
-    <div class="irow"><span class="f">KI</span><span>offene Punkte im Kompass</span><span class="q">${offen}</span></div>
-    <h3 style="margin-top:28px">Quellen</h3>
-    <ul class="quellen-liste">
-      <li>${repoLink('data/classifier.json', 'Bauteile und Materialien (data/classifier.json)')}</li>
-      ${Object.keys(atlas.quellen).map((k) => `<li>${quelleA(atlas.quellen, k)}</li>`).join('')}
-    </ul>
-  </aside>
+  <nav class="start-mehr" aria-label="Weitere Bereiche">
+    <a href="modelle/">${icon('gegenstand')}<span><b>3D-Modelle</b><small>Alle ${atlas.objekte.length} Modelle prüfen</small></span><i>→</i></a>
+    <a href="kompass/"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="m15 9-2 4-4 2 2-4Z"/></svg><span><b>KI-Kompass</b><small>Wie wir KI verantwortungsvoll nutzen</small></span><i>→</i></a>
+  </nav>
 </section>`;
+if (ruhig) document.querySelector('.kreis').classList.add('ruhig');
+verbindeWaehler(app.querySelector('.waehler'));

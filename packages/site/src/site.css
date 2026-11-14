@@ -1,37 +1,106 @@
-/* Ergänzungen zur Station (css/app.css). Nur deren Tokens und Formensprache verwenden. */
+/* Gemeinsame Bausteine aller Seiten. Ergänzt css/app.css der Station und nutzt nur deren Tokens:
+   Papier, Tinte, Orange als Akzent, IBM Plex, 1px-Linien, 2px-Radien. */
 a { color: inherit; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .brand { text-decoration: none; color: var(--ink); }
+.btn { text-decoration: none; }
+
+/* Kopfzeile: Bereiche wie die Schritte der Station */
 .steps a {
   display: flex; align-items: center; gap: 8px; padding: 6px 14px; font-size: 13px; color: var(--ink-3); text-decoration: none;
   border-bottom: 2px solid transparent; transition: color .2s, border-color .2s;
 }
 .steps a:hover { color: var(--ink); }
 .steps a.active { color: var(--ink); border-color: var(--accent); }
-.lead { color: var(--ink-2); max-width: 62ch; }
+
+/* Symbole: Linienzeichnung wie das Logo */
+.icon { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linejoin: round; stroke-linecap: round; flex: none; }
+.icon.gross { width: 28px; height: 28px; }
+
+/* Suchfeld */
 .suche-feld {
-  height: 44px; width: min(360px, 100%); padding: 0 14px; border: 1px solid var(--ink); border-radius: 2px; background: var(--card);
-  font: 14px var(--sans); color: var(--ink);
+  height: 44px; width: 100%; padding: 0 14px 0 40px; border: 1px solid var(--ink); border-radius: 2px; background: var(--card);
+  font: 15px var(--sans); color: var(--ink);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill='none' stroke='%238D918A' stroke-width='1.6'%3E%3Ccircle cx='8' cy='8' r='5.5'/%3E%3Cpath d='m12 12 4 4'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: 13px center;
 }
 .suche-feld:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
-.btn { text-decoration: none; }
-.hint-puls { animation: puls 1.6s ease-in-out 3; }
-@keyframes puls { 50% { color: var(--accent); } }
+
+/* Belege: kleiner Chip direkt an der Zahl */
+.chip-q {
+  display: inline-block; margin-left: 6px; padding: 0 6px; border: 1px solid var(--rule); border-radius: 2px; vertical-align: 2px;
+  font: 10px/16px var(--mono); letter-spacing: .02em; color: var(--ink-3); text-decoration: none; white-space: nowrap;
+}
+.chip-q:hover { border-color: var(--accent); color: var(--accent); }
+.chip-q.schaetzung { border-style: dashed; }
+.ql { color: var(--ink-2); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--rule); }
+.ql:hover { color: var(--accent); text-decoration-color: currentColor; }
+.quellen-liste { list-style: none; display: grid; gap: 6px; font-size: 12px; }
 .leer { color: var(--ink-3); font-size: 13px; }
-:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* Gegenstand wählen: gleiche Liste auf Start und Lebensweg */
+.waehler { display: grid; gap: 22px; }
+.beispiele { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.beispiel {
+  display: grid; gap: 2px; padding: 14px 14px 12px; border: 1px solid var(--rule); background: var(--card); text-decoration: none; color: inherit;
+  transition: border-color .15s, background .15s;
+}
+.beispiel:hover { border-color: var(--accent); background: var(--accent-soft); }
+.beispiel b { font-size: 16px; font-weight: 600; }
+.beispiel span { font: 12px var(--mono); color: var(--ink-3); }
+.waehler .gruppe[hidden], .waehler .kat-list a[hidden] { display: none; }
+.waehler details summary { cursor: pointer; font: 500 11px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-2); padding: 8px 0; }
+.waehler details summary:hover { color: var(--accent); }
+.waehler details[open] summary { margin-bottom: 8px; }
+.waehler .katalog { gap: 16px; }
+
 @media (max-width: 900px) {
   .steps { overflow-x: auto; }
   .steps a { padding: 4px 8px; white-space: nowrap; }
+  .beispiele { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
+@media (max-width: 600px) { .steps b { display: none; } .steps { gap: 0; justify-content: space-between; } }
 
-/* Übersicht */
-.start .ideas { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-.karte-link { text-decoration: none; color: inherit; }
-.karte-link:hover .letter { color: var(--accent); }
-.karte-link .btn { align-self: flex-start; margin-top: auto; }
-.start .irow { grid-template-columns: 74px 1fr auto; }
-.fortschritt { margin: 2px 6px 10px; }
-.fortschritt b { background: var(--good); }
-@media (max-width: 900px) { .start .ideas { grid-template-columns: minmax(0, 1fr); } }
-.ql { color: var(--ink-2); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--rule); }
-.ql:hover { color: var(--accent); text-decoration-color: currentColor; }
-.quellen-liste { list-style: none; display: grid; gap: 6px; font-size: 12px; margin-top: 8px; }
+/* ---------- Start ---------- */
+.start { overflow-y: auto; display: grid; align-content: center; padding-bottom: 24px; }
+.start-inhalt { width: min(1120px, 100% - 48px); margin: 0 auto; padding: 48px 0 32px; display: grid; grid-template-columns: minmax(0, 440px) minmax(0, 1fr); gap: 56px; align-items: center; }
+.kreis { margin: 0; }
+.kreis-svg { width: 100%; height: auto; display: block; overflow: visible; }
+.kreis-ring { fill: none; stroke: var(--ink); stroke-width: 1; stroke-dasharray: 1; stroke-dashoffset: 1; animation: ring 1.4s cubic-bezier(.65, 0, .35, 1) .1s forwards; }
+.kreis-punkt { opacity: 0; transform-box: view-box; transform-origin: 0 0; animation: punkt .45s cubic-bezier(.2, .8, .2, 1) forwards; animation-delay: calc(.2s + var(--i) * .12s); }
+.kreis-punkt circle { fill: var(--sheet); stroke: var(--ink); stroke-width: 1; }
+.kreis-punkt circle.mitte { fill: var(--accent); stroke: var(--accent); }
+.kreis-punkt circle.mitte + g .icon { stroke: var(--accent-ink); }
+.kreis-punkt .icon { fill: none; stroke: var(--ink); stroke-width: 1.5; stroke-linejoin: round; stroke-linecap: round; }
+.kreis-punkt text { font: 500 14px var(--sans); fill: var(--ink-2); }
+.kreis.ruhig .kreis-ring { animation: none; stroke-dashoffset: 0; }
+.kreis.ruhig .kreis-punkt { animation: none; opacity: 1; }
+@keyframes ring { to { stroke-dashoffset: 0; } }
+@keyframes punkt { from { opacity: 0; transform: scale(.7); } to { opacity: 1; transform: scale(1); } }
+.start-text h1 { font-size: 44px; line-height: 1.08; font-weight: 600; letter-spacing: -.025em; }
+.start-text .lead { color: var(--ink-2); font-size: 17px; margin: 14px 0 26px; }
+.start-mehr { width: min(1120px, 100% - 48px); margin: 0 auto 32px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.start-mehr a { display: flex; align-items: center; gap: 14px; padding: 16px 18px; border: 1px solid var(--rule); background: var(--sheet); text-decoration: none; transition: border-color .15s; }
+.start-mehr a:hover { border-color: var(--accent); }
+.start-mehr a span { display: grid; flex: 1; }
+.start-mehr b { font-weight: 600; }
+.start-mehr small { color: var(--ink-3); font-size: 13px; }
+.start-mehr i { font-style: normal; color: var(--ink-3); }
+.start-mehr a:hover i { color: var(--accent); }
+@media (max-width: 900px) {
+  .start-inhalt { grid-template-columns: minmax(0, 1fr); gap: 8px; padding-top: 24px; }
+  .kreis { width: min(400px, 100%); margin: 0 auto; }
+  .start-text h1 { font-size: 32px; }
+  .start-mehr { grid-template-columns: minmax(0, 1fr); }
+}
+@media (prefers-reduced-motion: reduce) { .kreis-ring, .kreis-punkt { animation: none !important; opacity: 1; stroke-dashoffset: 0; } }
+
+/* Nummern im 3D-Modell (viewer.js), wie die Positionsnummern der Station */
+.ballon {
+  display: grid; place-items: center; width: 22px; height: 22px; border-radius: 50%; padding: 0;
+  background: var(--sheet); border: 1px solid var(--ink); font: 500 10px var(--mono); color: var(--ink);
+  transition: opacity .2s, background .15s; pointer-events: auto;
+}
+.ballon.hot { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.ballon.aus { opacity: .25; }
+.ohne-nummern .ballon { display: none; }

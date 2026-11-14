@@ -5,7 +5,7 @@
 //   data/rohstoffe/herkunft.json       Länderanteile je Rohstoff (Abbau, Verarbeitung) mit Quelle
 //   data/rohstoffe/laender.json        deutsche Ländernamen und ISO-Nummern
 //   data/rohstoffe/quellen.json        Zitate
-import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'node:fs';
+import { readFileSync, writeFileSync, existsSync, mkdirSync, readdirSync } from 'node:fs';
 
 const root = new URL('../../../', import.meta.url);
 const da = (p) => existsSync(new URL(p, root));
@@ -119,7 +119,18 @@ for (const [key, r] of Object.entries(ROHSTOFF)) {
 const haeufigste = (o) => Object.entries(o ?? {}).sort((a, b) => b[1] - a[1])[0]?.[0] ?? null;
 const materialien = Object.fromEntries(Object.keys(cls.materials).map((mid) => [mid, { en: cls.materials[mid].name ?? mid, kat: haeufigste(katalogVon[mid]) }]));
 
+// Weitere Stationen des Lebenswegs (optional, solange die Daten noch entstehen)
+const awsh = json('data/entsorgung/awsh.json', null);
+const verwertung = json('data/entsorgung/verwertung.json', null);
+const importe = json('data/herstellung/importe.json', null);
+Object.assign(laender, importe?.neue_laender ?? {});
+const rezepte = [];
+const rezeptOrdner = new URL('data/rezepte/', root);
+if (existsSync(rezeptOrdner)) for (const f of readdirSync(rezeptOrdner).filter((f) => f.endsWith('.json')).sort())
+  rezepte.push({ id: f.replace(/\.json$/, ''), ...JSON.parse(readFileSync(new URL(f, rezeptOrdner), 'utf8')) });
+const komponenten = Object.fromEntries(Object.entries(cls.components).map(([cid, c]) => [cid, { name: c.name, mid: c.material_id }]));
+
 mkdirSync(new URL('../src/daten/', import.meta.url), { recursive: true });
-writeFileSync(new URL('../src/daten/atlas.json', import.meta.url), JSON.stringify({ objekte, rohstoffe, materialien, laender, quellen }));
+writeFileSync(new URL('../src/daten/atlas.json', import.meta.url), JSON.stringify({ objekte, rohstoffe, materialien, laender, quellen, awsh, verwertung, importe, rezepte, komponenten }));
 const mitHerkunft = Object.values(rohstoffe).filter((r) => r.abbau || r.verarbeitung).length;
-console.log(`atlas.json: ${objekte.length} Gegenstände, ${Object.keys(rohstoffe).length} Rohstoffe (${mitHerkunft} mit Herkunftsdaten)`);
+console.log(`atlas.json: ${objekte.length} Gegenstände, ${Object.keys(rohstoffe).length} Rohstoffe (${mitHerkunft} mit Herkunft), AWSH ${awsh ? 'ja' : 'nein'}, Verwertung ${verwertung ? 'ja' : 'nein'}, Importe ${importe ? 'ja' : 'nein'}, ${rezepte.length} Rezepte`);

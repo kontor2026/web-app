@@ -1,19 +1,17 @@
-// Rohstoff-Atlas: Gegenstand wählen → Stoffstrom (Bauteile → Materialien → Rohstoffe) → Herkunft auf dem Globus.
-// Layout und Bausteine wie in der Station: Katalog wie #katalog, Objektansicht wie der Steckbrief (.sheet).
-import { shell, esc, zahl, gramm, quelleA, repoLink } from '../shell.js';
+// Lebensweg: ein Gegenstand, sieben Stationen. Links das Bild (Globus, 3D-Modell, Balken), rechts das Datenblatt.
+// Regel: Jede Zahl trägt einen Beleg (Chip „Quelle“) oder ist als „Schätzung“ markiert.
+import { shell, esc, zahl, gramm, datum, SCHRITTE, icon, chip, schaetzung, quelleUrl, repoUrl } from '../shell.js';
 import { CLASSES, MATERIALS } from '../../../../js/data/catalog.js';
 import daten from '../daten/atlas.json';
+import { waehlerHtml, verbindeWaehler } from '../waehler.js';
 import { zeichneStoffstrom } from './stoffstrom.js';
 import { erzeugeGlobus } from './globus.js';
+import { erzeugeViewer, ladeModell, materialVon } from '../viewer.js';
 import './atlas.css';
 
-const { objekte, rohstoffe: ROH, materialien: MAT, laender: LAND, quellen: QUELLE } = daten;
+const { objekte, rohstoffe: ROH, materialien: MAT, laender: LAND, quellen: QUELLE, awsh: AWSH, verwertung: VW, importe: IMP, rezepte: REZEPTE } = daten;
 const objektVon = new Map(objekte.map((o) => [o.id, o]));
-const BEISPIELE = ['smartphone', 'pet_bottle', 'laptop', 't_shirt', 'aluminium_can', 'hair_dryer'].filter((id) => objektVon.has(id));
-const STUFE = {
-  abbau: { name: 'Abbau', erklaert: 'wo der Rohstoff aus der Erde oder vom Feld kommt' },
-  verarbeitung: { name: 'Verarbeitung', erklaert: 'wo er gereinigt und zu Metall oder Chemikalie verarbeitet wird' },
-};
+const IDS = SCHRITTE.map((s) => s.id);
 
 const material = (mid) => {
   const k = MATERIALS[MAT[mid]?.kat];
@@ -21,256 +19,260 @@ const material = (mid) => {
 };
 const rohstoff = (key) => ({ ...ROH[key], key, farbe: CLASSES[ROH[key]?.art]?.color ?? '#cccccc' });
 const land = (a3) => LAND[a3]?.name ?? a3;
-// „aus der DR Kongo“, „aus den USA“, „aus China“
-const ARTIKEL = { COD: 'der', USA: 'den', TUR: 'der', PHL: 'den', NLD: 'den', ARE: 'den', SVK: 'der', UKR: 'der', MNG: 'der', CHE: 'der', CAF: 'der', DOM: 'der' };
-const ausLand = (a3) => `aus ${ARTIKEL[a3] ? ARTIKEL[a3] + ' ' : ''}${land(a3)}`;
+const stufeDaten = (key, stufe) => ROH[key]?.[stufe] ?? null;
+const belegStufe = (st) => chip(quelleUrl(QUELLE, st.quelle, st.pdf_seite), `${QUELLE[st.quelle]?.titel ?? st.quelle}${st.seite ? `, ${st.seite}` : ''}`);
+const CSV = 'tools/kategorien/kategorien.csv';
 
-let stufe = 'abbau';
-const ankuendigung = sessionStorage.getItem('atlas-hinweis') !== 'aus';
+// Farben der Entsorgungswege: nur zur Unterscheidung im Bild, keine Tonnenfarben
+const WEG_FARBE = { wertstofftonne: '#E3C14A', papier: '#7FA3C8', glas: '#8DB89A', bio: '#A88B5E', restmuell: '#8D918A', elektro: '#5B8C99',
+  lampen: '#E38B5A', batterie: '#9C97B5', schadstoff: '#B5473A', sperrmuell: '#6E7378', textil: '#C9A3B9', pfand: '#5E9C8F', recyclinghof: '#4F5A66' };
+// Entsorgungsweg → Datenreihe zur Verwertung (bei Wertstofftonne und Pfand nach Hauptmaterial)
+function verwertungsStrom(weg, o) {
+  const cls = material(o.materialien[0]?.mid).cls, mid = o.materialien[0]?.mid;
+  const nachMaterial = mid === 'aluminium' ? 'verpackung_alu' : mid === 'steel' ? 'verpackung_stahl' : cls === 'glas' ? 'verpackung_glas' : 'verpackung_kunststoff';
+  return { wertstofftonne: nachMaterial, pfand: nachMaterial, papier: 'verpackung_papier', glas: 'verpackung_glas', elektro: 'elektro', lampen: 'elektro',
+    batterie: 'batterie', restmuell: 'restmuell', bio: 'bio', sperrmuell: 'sperrmuell', textil: 'textil' }[weg] ?? null;
+}
 
-const app = shell('atlas', '../', `<span class="stock">Gegenstände <b>${objekte.length}</b></span>`);
+const app = shell('atlas', '../');
+let obj = null, schritt = 'gegenstand', gewaehlt = null, globus = null, viewer = null, strom = null, seed = null;
 
-// ---------- 01 Gegenstand wählen ----------
-function zeigeKatalog() {
-  document.title = 'Rohstoff-Atlas · Kreislauf-Station';
-  const gruppen = new Map();
-  for (const o of [...objekte].sort((a, b) => a.name.localeCompare(b.name, 'de')))
-    (gruppen.get(o.klasse) ?? gruppen.set(o.klasse, []).get(o.klasse)).push(o);
+// ---------- Ohne Gegenstand: wählen ----------
+function zeigeWahl() {
+  obj = null;
+  document.title = 'Lebensweg · Kreislauf-Station';
+  app.innerHTML = `<section class="view lw-wahl"><div class="lw-wahl-inhalt">
+    <h1>Welchen Gegenstand?</h1>${waehlerHtml(objekte, (id) => `#kat=${id}`)}</div></section>`;
+  verbindeWaehler(app.querySelector('.waehler'));
+}
+
+// ---------- Gerüst der Ansicht ----------
+function baueGeruest() {
   app.innerHTML = `
-  <section class="view craft atlas-katalog">
-    <div class="craft-main">
-      <div class="craft-head">
-        <div><div class="eyebrow">Schritt 1 von 3</div>
-          <h1 style="margin-top:8px">Welchen Gegenstand willst du untersuchen?</h1>
-          <p class="lead">Du siehst danach, woraus er besteht und aus welchen Ländern seine Rohstoffe kommen.</p></div>
-        <input id="suche" class="suche-feld" type="search" placeholder="Suchen, z. B. Wasserkocher" autocomplete="off" aria-label="Gegenstand suchen">
+  <section class="view sheet lw">
+    <div class="canvas">
+      <nav class="lw-schritte" aria-label="Lebensweg">${SCHRITTE.map((s, i) => `
+        <a href="#" data-s="${s.id}" title="${s.name}" aria-label="${i + 1}. ${s.name}"><span class="lw-nr">${i + 1}</span>${icon(s.id)}<span class="lw-name">${s.name}</span></a>`).join('')}
+      </nav>
+      <div class="lw-buehne">
+        <div class="lw-globus" id="globus"></div>
+        <div class="lw-szene" id="szene"></div>
+        <div class="lw-balken" id="balken"></div>
+        <div class="lw-strom"><div class="strom" id="strom"></div></div>
       </div>
-      <div>
-        <div class="beispiele">${BEISPIELE.map((id, i) => karte(objektVon.get(id), i)).join('')}</div>
-        <div class="katalog" id="katalog" style="margin-top:32px">
-          <h3 class="eyebrow">Alle ${objekte.length} Gegenstände</h3>
-          ${[...gruppen].map(([g, os]) => `<div class="gruppe"><h4 class="eyebrow">${esc(g)} · ${os.length}</h4>
-            <div class="kat-list">${os.map((o) => `<a href="#kat=${o.id}" class="tag" data-name="${esc(`${o.name} ${o.id}`.toLowerCase())}">${esc(o.name)}</a>`).join('')}</div></div>`).join('')}
-        </div>
-      </div>
+      <div class="legend" id="legende"></div>
     </div>
-    <aside class="inv">
-      <h3>So funktioniert es</h3>
-      <ol class="howto" style="margin-top:12px">
-        <li>Gegenstand wählen.</li>
-        <li>Im Stoffstrom ablesen, woraus er besteht: links die Bauteile, in der Mitte die Materialien, rechts die Rohstoffe.</li>
-        <li>Einen Rohstoff antippen. Der Globus zeigt, aus welchen Ländern er kommt.</li>
-      </ol>
-      <h3 style="margin-top:28px">Farben</h3>
-      <div class="mix-legend einspaltig">${Object.values(CLASSES).map((c) => `<span><i style="background:${c.color}"></i>${esc(c.label)}</span>`).join('')}
-        <span><i class="krit-i">▲</i>kritischer Rohstoff für die EU</span></div>
-      <h3 style="margin-top:28px">Quellen</h3>
-      <ul class="quellen-liste">${Object.keys(QUELLE).map((k) => `<li>${quelleA(QUELLE, k)}</li>`).join('')}
-        <li>${repoLink('data/classifier.json', 'Bauteile und Materialien: data/classifier.json')}</li></ul>
-    </aside>
+    <aside class="panel" id="panel"></aside>
+    <div class="actionbar">
+      <a class="btn ghost" id="zurueck" href="#">←</a>
+      <div class="q" id="ort"></div>
+      <a class="btn" id="weiter" href="#">→</a>
+    </div>
   </section>`;
-  const suche = document.getElementById('suche');
-  suche.addEventListener('input', () => {
-    const q = suche.value.trim().toLowerCase();
-    document.querySelectorAll('#katalog .tag').forEach((a) => { a.hidden = !!q && !a.dataset.name.includes(q); });
-    document.querySelectorAll('#katalog .gruppe').forEach((g) => { g.hidden = ![...g.querySelectorAll('.tag')].some((a) => !a.hidden); });
+  globus = erzeugeGlobus(document.getElementById('globus'), LAND);
+  viewer = erzeugeViewer(document.getElementById('szene'), {
+    tip: document.getElementById('tip'),
+    onHover: (i) => panelHover(i),
+    onSelect: (i) => { if (schritt === 'gegenstand') zeigeTeil(i); },
   });
-  suche.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter') { const a = document.querySelector('#katalog .tag:not([hidden])'); if (a) location.hash = a.getAttribute('href'); }
+  new ResizeObserver(() => { if (schritt === 'abbau' || schritt === 'verarbeitung') zeichneStrom(); }).observe(document.getElementById('strom'));
+}
+
+const link = (s = schritt, r = gewaehlt) => `#kat=${obj.id}&s=${s}${r ? `&r=${r}` : ''}`;
+
+async function zeige(o, s, r) {
+  const neu = obj !== o;
+  if (!document.querySelector('.lw')) baueGeruest();
+  obj = o; schritt = s; gewaehlt = r;
+  document.title = `${o.name} · Lebensweg`;
+  const i = IDS.indexOf(s);
+  document.querySelectorAll('.lw-schritte a').forEach((a, j) => {
+    a.href = link(IDS[j], null); a.classList.toggle('on', j === i); a.toggleAttribute('aria-current', j === i);
   });
-}
-function karte(o, i) {
-  const laender = new Set(o.rohstoffe.flatMap((r) => Object.keys(ROH[r.key]?.abbau?.anteile ?? {})));
-  return `<a class="beispiel" href="#kat=${o.id}">
-    <span class="letter">0${i + 1}</span><b>${esc(o.name)}</b>
-    <span class="meta"><span>${gramm(o.gramm)}</span><span>${o.rohstoffe.length} ${o.rohstoffe.length === 1 ? 'Rohstoff' : 'Rohstoffe'}</span>${laender.size ? `<span>${laender.size} Länder</span>` : ''}</span></a>`;
-}
-
-// ---------- 02/03 Gegenstand: Stoffstrom, Globus, Datenblatt ----------
-let obj = null, gewaehlt = null, globus = null, strom = null;
-
-function zeigeObjekt(o, r) {
-  const neu = obj !== o || !document.querySelector('.atlas-sheet');
-  obj = o; gewaehlt = r ?? null;
-  document.title = `${o.name} · Rohstoff-Atlas`;
-  if (neu) {
-    app.innerHTML = `
-    <section class="view sheet atlas-sheet">
-      <div class="canvas">
-        <div class="canvas-head">
-          <div><h2 id="globus-titel"></h2><p id="globus-unter"></p></div>
-          <div class="seg" role="group" aria-label="Stufe der Wertschöpfung">
-            ${Object.entries(STUFE).map(([k, s]) => `<button data-stufe="${k}" title="${esc(s.erklaert)}">${s.name}</button>`).join('')}
-          </div>
-        </div>
-        <div class="globus" id="globus" aria-label="Globus: Herkunftsländer"></div>
-        <div class="globus-legende" id="globus-legende"></div>
-        <div class="strom-flaeche">
-          <div class="strom-kopf"><span class="eyebrow">Stoffstrom</span><span>von links nach rechts gelesen · je breiter, desto mehr Gramm</span><span class="nur-schmal">· Bauteile siehe 3D-Modelle</span></div>
-          <div class="strom" id="strom"></div>
-        </div>
-        <div class="hint-hover ${ankuendigung ? 'hint-puls' : ''}" id="hinweis" ${ankuendigung ? '' : 'hidden'}>Tippe einen Rohstoff an, im Stoffstrom oder rechts</div>
-      </div>
-      <aside class="panel" id="panel"></aside>
-      <div class="actionbar">
-        <div class="q">${esc(o.name)} <span>· ${gramm(o.gramm)} · ${o.rohstoffe.length} ${o.rohstoffe.length === 1 ? 'Rohstoff' : 'Rohstoffe'}</span></div>
-        <a class="btn ghost" href="#">← Anderen Gegenstand wählen</a>
-      </div>
-    </section>`;
-    document.querySelectorAll('[data-stufe]').forEach((b) => b.addEventListener('click', () => { stufe = b.dataset.stufe; aktualisiere(); }));
-    globus = erzeugeGlobus(document.getElementById('globus'), LAND);
-    zeichneStrom();
-    new ResizeObserver(() => zeichneStrom()).observe(document.getElementById('strom'));
-  }
-  aktualisiere();
+  document.querySelector('.lw').dataset.schritt = s;
+  document.getElementById('zurueck').href = i > 0 ? link(IDS[i - 1], null) : '#';
+  document.getElementById('zurueck').innerHTML = i > 0 ? `← ${SCHRITTE[i - 1].name}` : '← Gegenstand wählen';
+  document.getElementById('weiter').href = i < IDS.length - 1 ? link(IDS[i + 1], null) : link(IDS[0], null);
+  document.getElementById('weiter').innerHTML = i < IDS.length - 1 ? `${SCHRITTE[i + 1].name} →` : 'Von vorn →';
+  document.getElementById('ort').innerHTML = `<b>${esc(o.name)}</b> <span>· ${i + 1} / ${IDS.length}</span>`;
+  if (neu || !seed) { seed = await ladeModell(o.id); viewer.lade(seed); }
+  viewer.nummern(s === 'gegenstand');
+  ({ abbau: zeigeRohstoffe, verarbeitung: zeigeRohstoffe, herstellung: zeigeHerstellung, gegenstand: zeigeGegenstand,
+    upcycling: zeigeUpcycling, entsorgung: zeigeEntsorgung, verwertung: zeigeVerwertung })[s]();
 }
 
-function zeichneStrom() {
-  strom = zeichneStoffstrom(document.getElementById('strom'), obj, {
-    teilName: (t) => t.name, material, rohstoff,
-    onHover: (id, typ) => {
-      if (typ !== 'rohstoff') return;
-      zeigeGlobus(id ?? gewaehlt, false);
-    },
-    onClick: (id, typ) => { if (typ === 'rohstoff') location.hash = `kat=${obj.id}&r=${id}`; },
-  });
-  strom.markiere(gewaehlt);
-}
-
-// Länderanteile: ein Rohstoff, oder alle Rohstoffe des Gegenstands nach Gramm gewichtet
-function anteile(key) {
-  if (key) return { werte: ROH[key]?.[stufe]?.anteile ?? {}, mitDaten: !!ROH[key]?.[stufe] };
-  const summe = {}; let gesamt = 0;
-  for (const r of obj.rohstoffe) {
-    const a = ROH[r.key]?.[stufe]?.anteile;
-    if (!a) continue;
-    gesamt += r.g;
-    for (const [l, p] of Object.entries(a)) summe[l] = (summe[l] ?? 0) + r.g * p;
-  }
-  for (const l in summe) summe[l] /= gesamt || 1;
-  return { werte: summe, mitDaten: gesamt > 0, anteilMitDaten: gesamt / obj.rohstoffe.reduce((s, r) => s + r.g, 0) };
-}
-
-function zeigeGlobus(key, fokus = true) {
-  const { werte, mitDaten } = anteile(key);
-  globus.zeige(werte, { fokus });
-  const r = key && rohstoff(key);
-  document.getElementById('globus-titel').textContent = r ? `Woher kommt ${r.artikel} ${r.name}?` : `Woher kommen die Rohstoffe?`;
-  document.getElementById('globus-unter').textContent = !mitDaten ? `Für diese Stufe gibt es noch keine Länderdaten mit Quelle.`
-    : `${STUFE[stufe].name}: ${STUFE[stufe].erklaert}${r ? '' : ' · alle Rohstoffe nach Gramm gewichtet'}`;
-  const top = Object.entries(werte).sort((a, b) => b[1] - a[1]).slice(0, 5);
-  document.getElementById('globus-legende').innerHTML = mitDaten ? `<div class="eyebrow">Höher und dunkler = größerer Anteil</div>
-    ${top.map(([l, p], i) => `<button class="gl-zeile" data-land="${l}"><span class="nr">0${i + 1}</span>${esc(land(l))}<b>${zahl(p, 0)} %</b></button>`).join('')}
-    <div class="gl-de"><i></i>DE = Deutschland: hier wird der Gegenstand genutzt</div>` : '';
-  document.querySelectorAll('.gl-zeile').forEach((b) => {
-    b.addEventListener('pointerenter', () => globus.hebeHervor(b.dataset.land));
-    b.addEventListener('pointerleave', () => globus.hebeHervor(null));
-  });
-}
-
-function aktualisiere() {
-  document.querySelectorAll('[data-stufe]').forEach((b) => b.classList.toggle('on', b.dataset.stufe === stufe));
-  zeigeGlobus(gewaehlt);
-  strom?.markiere(gewaehlt);
-  gewaehlt ? panelRohstoff(gewaehlt) : panelObjekt();
-}
-
-// Link direkt auf die Fundstelle: bei PDFs mit #page=N (Seitenindex im PDF), daneben die gedruckte Seite
-function quelleLink(key, st = {}) {
-  const q = QUELLE[key];
-  if (!q?.url) return '';
-  const pdf = /\.pdf($|[?#])|format=pdf/i.test(q.url);
-  const href = pdf && st.pdf_seite ? `${q.url.split('#')[0]}#page=${st.pdf_seite}` : q.url;
-  const text = pdf ? `PDF öffnen${st.pdf_seite ? ` auf Seite ${st.pdf_seite}` : ''}` : 'Quelle öffnen';
-  return `<a class="btn ghost quelle-link" href="${esc(href)}" target="_blank" rel="noopener">${text} →</a>${st.seite ? `<span class="source">${esc(st.seite)} (gedruckte Seitenzahl)</span>` : ''}`;
-}
-
-// ---------- Datenblatt rechts ----------
+// ---------- Datenblatt ----------
 const panel = () => document.getElementById('panel');
-function setzePanel(html, crumbs) {
-  const p = panel();
-  p.innerHTML = `<div class="panel-inner">${crumbs ? `<nav class="crumbs">${crumbs.map((c, i) => (i < crumbs.length - 1
-    ? `<a href="${c.href}">${esc(c.label)}</a><span></span>` : `<b style="font-weight:500;color:var(--ink)">${esc(c.label)}</b>`)).join('')}</nav>` : ''}${html}</div>`;
-  p.querySelectorAll('[data-r]').forEach((b) => {
-    b.addEventListener('click', () => (location.hash = `kat=${obj.id}&r=${b.dataset.r}`));
-    b.addEventListener('pointerenter', () => { strom.markiere(b.dataset.r); zeigeGlobus(b.dataset.r, false); });
-    b.addEventListener('pointerleave', () => { strom.markiere(gewaehlt); zeigeGlobus(gewaehlt, false); });
-  });
-  p.scrollTop = 0;
+function setzePanel(html) {
+  const s = SCHRITTE.find((x) => x.id === schritt);
+  panel().innerHTML = `<div class="panel-inner"><div class="lw-kopf">
+      <div class="eyebrow">${icon(schritt)}${s.name}</div><h1>${esc(s.frage)}</h1></div>${html}</div>`;
+  panel().scrollTop = 0;
 }
-const kachel = (r, g) => `<button class="el ${r.kritisch ? 'crit' : ''} ${r.abbau || r.verarbeitung ? '' : 'ohne'}" data-r="${r.key}" title="${esc(r.name)}${r.kritisch ? ' · kritisch für die EU' : ''}">
-  <span class="z">${r.z ?? ''}</span><span class="share">${gramm(g)}</span><span class="sym">${esc(r.sym)}</span><span class="nm">${esc(r.name)}</span></button>`;
-
-function panelObjekt() {
-  const o = obj, gesamt = o.materialien.reduce((s, m) => s + m.g, 0) || 1;
-  const klassen = new Map();
-  for (const m of o.materialien) { const c = material(m.mid).cls ?? 'metall'; klassen.set(c, (klassen.get(c) ?? 0) + m.g); }
-  const mix = [...klassen].sort((a, b) => b[1] - a[1]);
-  const kritisch = o.rohstoffe.filter((r) => ROH[r.key]?.kritisch).length;
-  const { werte, mitDaten, anteilMitDaten } = anteile(null);
-  const top = Object.entries(werte).sort((a, b) => b[1] - a[1]);
-  const meist = o.materialien[0];
-  const satz = [
-    `${o.name} wiegt ${gramm(o.gramm)}.`,
-    meist ? `Am meisten steckt ${material(meist.mid).name} drin (${gramm(meist.g)}).` : '',
-    `${o.rohstoffe.length} ${o.rohstoffe.length === 1 ? 'Rohstoff' : 'Rohstoffe'}${kritisch ? `, davon ${kritisch} kritisch für die EU` : ''}.`,
-    mitDaten && top.length ? `Beim ${STUFE[stufe].name} kommt das meiste ${ausLand(top[0][0])} (${zahl(top[0][1], 0)} %).` : '',
-  ].filter(Boolean).join(' ');
-  setzePanel(`
-    <div><div class="eyebrow">Schritt 2 von 3 · Woraus besteht dieser Gegenstand?</div>
-      <h1 style="margin-top:8px">${esc(o.name)}</h1><p class="sub">${esc(satz)}</p></div>
-    <div class="stats">
-      <div><b>${gramm(o.gramm)}</b><span>Gewicht</span><small>laut Tabelle</small></div>
-      <div><b>${o.rohstoffe.length}</b><span>Rohstoffe</span><small>${kritisch} kritisch ▲</small></div>
-      <div><b>${mitDaten ? top.length : '–'}</b><span>Länder</span><small>${mitDaten ? `für ${zahl(anteilMitDaten * 100, 0)} % der Masse bekannt` : 'noch keine Daten'}</small></div>
-    </div>
-    <div><h3>Rohstoffe · tippe einen an</h3><div class="elements">${o.rohstoffe.map((r) => kachel(rohstoff(r.key), r.g)).join('')}</div>
-      <p class="source" style="margin-top:10px">▲ Ecke: kritischer Rohstoff für die EU. Blass: noch keine Länderdaten.</p></div>
-    <div><h3>Materialmix nach Gewicht</h3>
-      <div class="mix">${mix.map(([c, g]) => `<i style="width:${(g / gesamt) * 100}%;background:${CLASSES[c]?.color}"></i>`).join('')}</div>
-      <div class="mix-legend">${mix.map(([c, g]) => `<span><i style="background:${CLASSES[c]?.color}"></i>${esc(CLASSES[c]?.label)}<b>${zahl((g / gesamt) * 100, 0)} %</b></span>`).join('')}</div></div>
-    <p class="source">Bauteile und Massen: ${repoLink(`tools/kategorien/modelle/${o.id}.json`, o.handgebaut ? 'handgebautes 3D-Modell' : 'Platzhalter-Modell')} · Metallgehalte: ${quelleA(QUELLE, 'oeko2012', 'Öko-Institut 2012')} · Herkunft: beim Rohstoff, mit Link zur Seite in der Quelle.</p>`, null);
-}
-
-function panelRohstoff(key) {
-  const r = rohstoff(key), menge = obj.rohstoffe.find((x) => x.key === key)?.g ?? 0;
-  const st = ROH[key]?.[stufe], andere = stufe === 'abbau' ? 'verarbeitung' : 'abbau';
-  const herMaterial = obj.mr.filter(([, k]) => k === key).sort((a, b) => b[2] - a[2]).map(([mid]) => material(mid).name);
-  const zeilen = st ? Object.entries(st.anteile).sort((a, b) => b[1] - a[1]) : [];
-  const q = st && QUELLE[st.quelle];
-  setzePanel(`
-    <div class="el-hero">${kachel(r, menge).replace('<button', '<div').replace('</button>', '</div>')}
-      <div><div class="eyebrow">Schritt 3 von 3</div><h1 style="margin-top:6px">Woher kommt ${esc(r.artikel)} ${esc(r.name)}?</h1>
-        <p class="sub">Im Gegenstand ${esc(obj.name)}: ${gramm(menge)}${herMaterial.length ? `, steckt in ${esc(herMaterial.join(', '))}` : ''}.</p></div></div>
-    <div class="seg stufe-wahl" role="group" aria-label="Stufe">${Object.entries(STUFE).map(([k, s]) => `<button data-stufe2="${k}" class="${k === stufe ? 'on' : ''}">${s.name}</button>`).join('')}</div>
-    <p class="erklaerung"><b>${STUFE[stufe].name}:</b> ${STUFE[stufe].erklaert}.</p>
-    ${st ? `<div><h3>Länder nach Anteil</h3>
-      ${zeilen.map(([l, p], i) => `<div class="mrow land" data-land="${l}"><span class="nr">${String(i + 1).padStart(2, '0')}</span><span>${esc(land(l))}</span>
-        <span class="pct">${p} %</span><span></span><div class="mbar"><b style="width:${p}%"></b></div></div>`).join('')}
-      ${st.rest ? `<div class="mrow land rest"><span class="nr">··</span><span>Übrige Länder</span><span class="pct">${st.rest} %</span><span></span><div class="mbar"><b style="width:${st.rest}%"></b></div></div>` : ''}</div>
-      <div class="quelle"><h3>Quelle</h3><p>${quelleA(QUELLE, st.quelle)}${q?.herausgeber ? ` · ${esc(q.herausgeber)}` : ''}</p>
-        <p class="source">${esc(st.was ?? '')}</p>${quelleLink(st.quelle, st)}</div>`
-    : `<p class="note warn">Für ${esc(r.name)} haben wir beim ${STUFE[stufe].name} noch keine Länderdaten mit Quelle. Wir zeigen nichts Geschätztes.${ROH[key]?.[andere] ? ` Für die ${STUFE[andere].name} gibt es Daten.` : ''}</p>`}
-    <dl class="facts">
-      <div><dt>Kritisch für die EU</dt><dd class="${r.kritisch ? 'yes' : ''}">${r.kritisch ? 'ja, laut Verordnung (EU) 2024/1252' : r.kritisch === false ? 'nein' : 'unbekannt'}${ROH[key]?.kritisch_quelle && QUELLE[ROH[key].kritisch_quelle]?.url ? ` · <a href="${esc(QUELLE[ROH[key].kritisch_quelle].url)}${ROH[key].kritisch_pdf_seite ? `#page=${ROH[key].kritisch_pdf_seite}` : ''}" target="_blank" rel="noopener">Verordnung →</a>` : ''}</dd></div>
-      <div><dt>Farbe im Bild</dt><dd>${esc(CLASSES[r.art]?.label ?? '')}</dd></div>
-    </dl>`, [{ label: obj.name, href: `#kat=${obj.id}` }, { label: r.name }]);
-  document.querySelectorAll('[data-stufe2]').forEach((b) => b.addEventListener('click', () => { stufe = b.dataset.stufe2; aktualisiere(); }));
-  document.querySelectorAll('.mrow.land[data-land]').forEach((z) => {
+const legende = (eintraege) => { document.getElementById('legende').innerHTML = eintraege.map(([f, t]) => `<span><i style="background:${f}"></i>${esc(t)}</span>`).join(''); };
+const laenderListe = (anteile, rest) => `${Object.entries(anteile).sort((a, b) => b[1] - a[1]).map(([l, p], i) => `
+  <div class="lw-land" data-land="${l}"><span class="nr">${String(i + 1).padStart(2, '0')}</span><span>${esc(land(l))}</span><b>${p} %</b><div class="mbar"><b style="width:${p}%"></b></div></div>`).join('')}
+  ${rest ? `<div class="lw-land rest"><span class="nr">··</span><span>Andere</span><b>${rest} %</b><div class="mbar"><b style="width:${rest}%"></b></div></div>` : ''}`;
+function verbindeLaender() {
+  panel().querySelectorAll('.lw-land[data-land]').forEach((z) => {
     z.addEventListener('pointerenter', () => globus.hebeHervor(z.dataset.land));
     z.addEventListener('pointerleave', () => globus.hebeHervor(null));
   });
-  if (ankuendigung) { sessionStorage.setItem('atlas-hinweis', 'aus'); document.getElementById('hinweis').hidden = true; }
 }
 
-// ---------- Navigation über den Hash, wie die Station: #kat=<id>[&r=<rohstoff>] ----------
+// ---------- 1 + 2: Abbau und Verarbeitung ----------
+function zeichneStrom() {
+  strom = zeichneStoffstrom(document.getElementById('strom'), obj, {
+    teilName: (t) => t.name, material, rohstoff,
+    onHover: (id, typ) => { if (typ === 'rohstoff') globus.zeige(stufeDaten(id ?? gewaehlt, schritt)?.anteile ?? {}, { fokus: false }); },
+    onClick: (id, typ) => { if (typ === 'rohstoff') location.hash = link(schritt, id); },
+  });
+  strom.markiere(gewaehlt);
+}
+function zeigeRohstoffe() {
+  const mitDaten = obj.rohstoffe.filter((r) => stufeDaten(r.key, schritt));
+  if (!gewaehlt || !obj.rohstoffe.some((r) => r.key === gewaehlt)) gewaehlt = (mitDaten[0] ?? obj.rohstoffe[0])?.key ?? null;
+  zeichneStrom();
+  const r = gewaehlt && rohstoff(gewaehlt), st = gewaehlt && stufeDaten(gewaehlt, schritt), menge = obj.rohstoffe.find((x) => x.key === gewaehlt)?.g;
+  globus.zeige(st?.anteile ?? {});
+  legende([]);
+  setzePanel(`
+    <div class="lw-chips">${obj.rohstoffe.map((x) => {
+      const y = rohstoff(x.key), da = !!stufeDaten(x.key, schritt);
+      return `<a href="${link(schritt, x.key)}" class="lw-chip ${x.key === gewaehlt ? 'on' : ''} ${da ? '' : 'leer'}" title="${da ? '' : 'Keine Länderdaten'}">
+        <i style="background:${y.farbe}"></i>${esc(y.name)}</a>`;
+    }).join('')}</div>
+    ${r ? `<div class="lw-zahl"><b>${gramm(menge)}</b><span>${esc(r.name)} im Gegenstand${r.kritisch ? ` · <em class="krit">▲ kritisch für die EU</em>${chip(quelleUrl(QUELLE, ROH[gewaehlt].kritisch_quelle, ROH[gewaehlt].kritisch_pdf_seite), 'Verordnung (EU) 2024/1252, Anhang II')}` : ''}</span>${schaetzung('tools/kategorien/rohstoffe.py', 'Aus den Massen des 3D-Modells berechnet')}</div>` : ''}
+    ${st ? `<div><h3>Nach Land ${belegStufe(st)}</h3>${laenderListe(st.anteile, st.rest)}
+      <p class="lw-fuss">${esc(st.jahr ?? '')} · ${esc(QUELLE[st.quelle]?.herausgeber ?? QUELLE[st.quelle]?.titel ?? '')}</p></div>`
+    : `<p class="note">Keine Länderdaten mit Quelle.</p>`}`);
+  verbindeLaender();
+}
+
+// ---------- 3: Herstellung ----------
+function zeigeHerstellung() {
+  const im = IMP?.objekte?.[obj.id];
+  globus.zeige(im?.anteile ?? {});
+  legende([]);
+  setzePanel(im?.anteile ? `
+    <div><h3>Importe nach Deutschland ${chip(im.api_url ?? IMP.quelle?.url, `${IMP.quelle?.titel ?? 'UN Comtrade'}, HS ${im.hs}`)}</h3>${laenderListe(im.anteile, im.rest)}
+      <p class="lw-fuss">${esc(im.jahr)} · nach Importwert · HS ${esc(im.hs)}</p>
+      ${im.zuordnung === 'breit' ? `<p class="note">Die Zollnummer umfasst auch andere Waren. Die Länder gelten für die ganze Warengruppe.</p>` : ''}
+      ${im.hinweis ? `<details class="lw-mehr"><summary>Zur Zollnummer</summary><p>${esc(im.hinweis)}</p><p>HS ${esc(im.hs)}: ${esc(im.hs_text ?? '')}</p></details>` : ''}</div>`
+    : `<p class="note">${IMP ? 'Für diesen Gegenstand gibt es keine passende Zollnummer.' : 'Die Importdaten werden gerade zusammengestellt.'}</p>`);
+  verbindeLaender();
+}
+
+// ---------- 4: Gegenstand ----------
+function zeigeGegenstand() {
+  viewer.faerbe(null);
+  viewer.waehle(null);
+  const klassen = [...new Set(seed.parts.map((p) => materialVon(p)?.cls).filter(Boolean))];
+  legende(klassen.map((c) => [CLASSES[c].color, CLASSES[c].label]));
+  const gesamt = obj.materialien.reduce((s, m) => s + m.g, 0) || 1;
+  const mix = new Map();
+  for (const m of obj.materialien) { const c = material(m.mid).cls ?? 'metall'; mix.set(c, (mix.get(c) ?? 0) + m.g); }
+  const sortiert = [...mix].sort((a, b) => b[1] - a[1]);
+  setzePanel(`
+    <div class="lw-zahl"><b>${gramm(obj.gramm)}</b><span>${esc(obj.name)}</span>${schaetzung(CSV, 'Typisches Gewicht, eigene Schätzung')}</div>
+    <div><div class="mix">${sortiert.map(([c, g]) => `<i style="width:${(g / gesamt) * 100}%;background:${CLASSES[c]?.color}"></i>`).join('')}</div>
+      <div class="mix-legend">${sortiert.map(([c, g]) => `<span><i style="background:${CLASSES[c]?.color}"></i>${esc(CLASSES[c]?.label)}<b>${zahl((g / gesamt) * 100, 0)} %</b></span>`).join('')}</div></div>
+    <div><h3>${seed.parts.length} Teile ${chip(repoUrl(`tools/kategorien/modelle/${obj.id}.json`), '3D-Modell im Repository', 'Modell')}</h3>
+      <div class="plist">${viewer.teile.map((t) => `<button class="prow" data-i="${t.i}"><span class="n">${t.nr ?? '–'}</span>
+        <span>${esc(t.p.name)}<small>${esc(materialVon(t.p)?.name ?? '')}</small></span><span class="m">${gramm(t.p.mass)}</span></button>`).join('')}</div></div>`);
+  panel().querySelectorAll('.prow').forEach((b) => {
+    b.addEventListener('pointerenter', () => viewer.markiere(+b.dataset.i));
+    b.addEventListener('pointerleave', () => viewer.markiere(null));
+    b.addEventListener('click', () => { viewer.waehle(+b.dataset.i); zeigeTeil(+b.dataset.i); });
+  });
+}
+function zeigeTeil(i) {
+  if (i == null) return zeigeGegenstand();
+  const p = viewer.teile[i].p;
+  setzePanel(`
+    <nav class="crumbs"><button id="zu">${esc(obj.name)}</button><span></span><b style="font-weight:500;color:var(--ink)">${esc(p.name)}</b></nav>
+    <div class="lw-zahl"><b>${gramm(p.mass)}</b><span>${esc(p.name)}</span>${chip(repoUrl(`tools/kategorien/modelle/${obj.id}.json`), '3D-Modell im Repository', 'Modell')}</div>
+    <div><h3>Material</h3>${(p.materials ?? []).map(([m, a]) => `
+      <div class="mrow"><i style="background:${CLASSES[MATERIALS[m]?.cls]?.color ?? '#ccc'}"></i><span>${esc(MATERIALS[m]?.name ?? m)}</span>
+        <span class="pct">${a} %</span><span></span><div class="mbar"><b style="width:${a}%"></b></div></div>`).join('')}</div>`);
+  document.getElementById('zu').addEventListener('click', () => zeigeGegenstand());
+}
+function panelHover(i) {
+  panel()?.querySelectorAll('.prow').forEach((r) => r.classList.toggle('hot', +r.dataset.i === i));
+}
+
+// ---------- 5: Upcycling ----------
+function zeigeUpcycling() {
+  viewer.faerbe(null);
+  viewer.waehle(null);
+  legende([]);
+  const cids = new Set(obj.teile.map((t) => t.cid)), mids = new Set(obj.materialien.map((m) => m.mid));
+  const passend = (REZEPTE ?? []).filter((r) => (r.component_ids ?? []).some((c) => cids.has(c)) || (r.material_ids ?? []).some((m) => mids.has(m)));
+  setzePanel(passend.length ? `<div class="lw-rezepte">${passend.map((r) => `
+    <article class="lw-rezept"><h2>${esc(r.titel)}</h2>
+      <div class="meta"><span>${esc(r.dauer ?? '')}</span><span class="dots">${'●'.repeat(r.stufe ?? 1)}${'○'.repeat(3 - (r.stufe ?? 1))}</span></div>
+      <ol class="steps-list">${(r.schritte ?? []).map((s) => `<li>${esc(s)}</li>`).join('')}</ol>
+      ${r.sicherheit ? `<p class="note warn">${esc(r.sicherheit)}</p>` : ''}
+      <p class="lw-fuss">${esc(r.quelle?.titel ?? '')}${chip(r.quelle?.url, r.quelle?.titel)}</p></article>`).join('')}</div>`
+    : `<p class="note">Rezepte für diesen Gegenstand werden gerade geschrieben.</p>`);
+}
+
+// ---------- 6: Entsorgung ----------
+function zeigeEntsorgung() {
+  const e = AWSH?.objekte?.[obj.id];
+  viewer.waehle(null);
+  if (!e) { viewer.faerbe(null); legende([]); setzePanel('<p class="note">Keine Daten.</p>'); return; }
+  const wegVon = new Map((e.teile ?? []).map((t) => [t.component_id, t.weg]));
+  viewer.faerbe((p) => WEG_FARBE[wegVon.get(p.component_id) ?? e.weg]);
+  const wege = [e.weg, ...(e.teile ?? []).map((t) => t.weg)].filter((w, i, a) => a.indexOf(w) === i);
+  legende(wege.map((w) => [WEG_FARBE[w], AWSH.wege[w]?.name ?? w]));
+  const w = AWSH.wege[e.weg];
+  const hof = ['elektro', 'lampen', 'batterie', 'schadstoff', 'sperrmuell', 'recyclinghof'].includes(e.weg);
+  setzePanel(`
+    <div class="lw-tonne" style="--f:${WEG_FARBE[e.weg]}"><i></i><div><b>${esc(w?.name ?? e.weg)}${chip(e.url, 'AWSH Abfall-ABC')}</b><span>${esc(w?.kurz ?? '')}</span></div></div>
+    ${e.hinweis ? `<p class="lw-hinweis">${esc(e.hinweis)}</p>` : ''}
+    ${(e.teile ?? []).length ? `<div><h3>Getrennt entsorgen</h3>${e.teile.map((t) => `<div class="lw-teil" style="--f:${WEG_FARBE[t.weg]}"><i></i><span>${esc(obj.teile.find((x) => x.cid === t.component_id)?.name ?? daten.komponenten?.[t.component_id]?.name ?? t.component_id)}</span><b>${esc(AWSH.wege[t.weg]?.name ?? t.weg)}</b></div>`).join('')}</div>` : ''}
+    ${e.unsicher ? `<p class="note">AWSH nennt den Gegenstand nicht direkt. Zuordnung nach der Regel für sein Material.</p>` : ''}
+    ${hof ? `<details class="lw-mehr lw-hof"><summary>${AWSH.recyclinghoefe.length} Recyclinghöfe ${chip('https://www.awsh.de/recyclinghoefe/uebersicht/', 'AWSH Recyclinghöfe')}</summary><div class="lw-hoefe">${AWSH.recyclinghoefe.map((h) => `
+      <a href="${esc(h.lat ? `https://www.openstreetmap.org/?mlat=${h.lat}&mlon=${h.lng}#map=16/${h.lat}/${h.lng}` : h.url)}" target="_blank" rel="noopener">
+        <b>${esc(h.name.replace('Recyclinghof ', ''))}</b><span>${esc(h.adresse)}</span>${h.hinweis ? `<em>${esc(h.hinweis)}</em>` : ''}</a>`).join('')}</div></details>` : ''}
+    <p class="lw-fuss">${esc(AWSH.gebiet)} · Stand ${esc(datum(AWSH.stand))}</p>`);
+}
+
+// ---------- 7: Verwertung ----------
+function zeigeVerwertung() {
+  const e = AWSH?.objekte?.[obj.id], key = e && verwertungsStrom(e.weg, obj), s = key && VW?.stroeme?.[key];
+  legende([]);
+  const teile = s ? [['recycelt', 'recycelt', 'var(--good)'], ['verbrannt', 'verbrannt, mit Energie', 'var(--ink-3)'], ['deponiert', 'deponiert', 'var(--accent)']]
+    .filter(([k]) => s[k] != null) : [];
+  const rest = s ? Math.max(0, 100 - teile.reduce((x, [k]) => x + s[k], 0)) : 0;
+  const q = s && VW.quellen?.[s.quelle];
+  document.getElementById('balken').innerHTML = s ? `<div class="lw-balken-bild">
+      <div class="lw-saeule">${teile.map(([k, , f]) => `<i style="flex-basis:${s[k]}%;background:${f}"></i>`).join('')}${rest > 0.5 ? `<i class="rest" style="flex-basis:${rest}%"></i>` : ''}</div>
+      <div class="lw-saeule-text">${(() => { let unten = 0; return [...teile.map(([k, n, f]) => [s[k], n, f, '']), ...(rest > 0.5 ? [[rest, 'nicht ausgewiesen', 'var(--rule)', 'rest']] : [])]
+        .map(([v, n, f, k]) => { const m = unten + v / 2; unten += v; return `<p class="${k}" style="--f:${f};bottom:${m}%"><b>${zahl(v)} %</b>${n}</p>`; }).join(''); })()}</div></div>`
+    : '<p class="lw-leer">Keine amtliche Zahl</p>';
+  setzePanel(s ? `
+    <div class="lw-zahl"><b>${zahl(s.recycelt ?? s.sammelquote ?? 0)} %</b><span>${s.recycelt != null ? 'recycelt' : 'gesammelt'} · gilt für: ${esc(s.name)}</span>${chip(s.url ?? q?.url, q?.titel)}</div>
+    ${e.weg === 'pfand' ? `<p class="note">Pfandflaschen und -dosen werden getrennt zurückgenommen. Eine eigene amtliche Quote dafür enthält diese Quelle nicht.</p>` : ''}
+    ${s.sammelquote != null && s.recycelt != null ? `<p class="lw-hinweis">Aber nur ${zahl(s.sammelquote)} % werden überhaupt gesammelt.</p>` : ''}
+    <p class="lw-fuss">Deutschland · ${esc(s.jahr)} · ${esc(q?.herausgeber ?? '')}</p>
+    <details class="lw-mehr"><summary>Was genau gezählt wird</summary><p>${esc(s.was ?? '')}</p>${s.hinweis ? `<p>${esc(s.hinweis)}</p>` : ''}</details>`
+    : `<p class="note">${e ? 'Für diesen Entsorgungsweg gibt es keine amtliche Zahl.' : 'Keine Daten.'}</p>`);
+}
+
+// ---------- Navigation über den Hash: #kat=<id>&s=<schritt>&r=<rohstoff> ----------
 function ausHash() {
   const p = new URLSearchParams(location.hash.slice(1));
   const o = objektVon.get(p.get('kat'));
-  const r = p.get('r');
-  if (o) zeigeObjekt(o, r && o.rohstoffe.some((x) => x.key === r) ? r : null);
-  else { obj = null; zeigeKatalog(); }
+  if (!o) return zeigeWahl();
+  zeige(o, IDS.includes(p.get('s')) ? p.get('s') : 'gegenstand', p.get('r'));
 }
 addEventListener('hashchange', ausHash);
-addEventListener('keydown', (e) => { if (e.key === 'Escape' && obj) location.hash = gewaehlt ? `kat=${obj.id}` : ''; });
+addEventListener('keydown', (e) => {
+  if (!obj || e.target.closest('input')) return;
+  const i = IDS.indexOf(schritt);
+  if (e.key === 'ArrowRight' && i < IDS.length - 1) location.hash = link(IDS[i + 1], null);
+  if (e.key === 'ArrowLeft' && i > 0) location.hash = link(IDS[i - 1], null);
+});
 ausHash();

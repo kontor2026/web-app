@@ -1,0 +1,247 @@
+{
+  "stand": "2026-11-13",
+  "stroeme": {
+    "verpackung_kunststoff": {
+      "name": "Kunststoffverpackungen",
+      "jahr": 2024,
+      "recycelt": 51.3,
+      "verbrannt": 48.2,
+      "deponiert": null,
+      "sonstig": 0.4,
+      "verwertet": 99.9,
+      "was": "Anteil der Verpackungsabfälle, die recycelt bzw. energetisch verwertet werden, gemessen an der in Verkehr gebrachten Menge (in Deutschland gleich dem Verpackungsabfallaufkommen).",
+      "hinweis": "verbrannt = energetische Verwertung (RCV_E_PAC); sonstig = sonstige Verwertung (RCV_OTH); der Rest bis 100 % ist nicht verwertet (Beseitigung), Eurostat weist Deponie und Verbrennung ohne Energierückgewinnung für Verpackungen nicht getrennt aus.",
+      "quelle": "eurostat_env_waspac",
+      "abfrage": "env_waspac: geo=DE, waste=W150102, unit=PC, time=2024, wst_oper=RCY (recycelt) / RCV_E_PAC (verbrannt) / RCV_OTH (sonstig) / RCV (verwertet)",
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/env_waspac?geo=DE&waste=W150102&unit=PC&time=2024&format=JSON&lang=EN"
+    },
+    "verpackung_papier": {
+      "name": "Papier-, Pappe- und Kartonverpackungen",
+      "jahr": 2024,
+      "recycelt": 86.8,
+      "verbrannt": 13.2,
+      "deponiert": null,
+      "sonstig": 0.0,
+      "verwertet": 100.0,
+      "was": "Anteil der Verpackungsabfälle, die recycelt bzw. energetisch verwertet werden, gemessen an der in Verkehr gebrachten Menge (in Deutschland gleich dem Verpackungsabfallaufkommen).",
+      "hinweis": "verbrannt = energetische Verwertung (RCV_E_PAC); sonstig = sonstige Verwertung (RCV_OTH); der Rest bis 100 % ist nicht verwertet (Beseitigung), Eurostat weist Deponie und Verbrennung ohne Energierückgewinnung für Verpackungen nicht getrennt aus.",
+      "quelle": "eurostat_env_waspac",
+      "abfrage": "env_waspac: geo=DE, waste=W150101, unit=PC, time=2024, wst_oper=RCY (recycelt) / RCV_E_PAC (verbrannt) / RCV_OTH (sonstig) / RCV (verwertet)",
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/env_waspac?geo=DE&waste=W150101&unit=PC&time=2024&format=JSON&lang=EN"
+    },
+    "verpackung_glas": {
+      "name": "Glasverpackungen",
+      "jahr": 2024,
+      "recycelt": 79.8,
+      "verbrannt": null,
+      "deponiert": null,
+      "sonstig": 0.0,
+      "verwertet": 79.8,
+      "was": "Anteil der Verpackungsabfälle, die recycelt bzw. energetisch verwertet werden, gemessen an der in Verkehr gebrachten Menge (in Deutschland gleich dem Verpackungsabfallaufkommen).",
+      "hinweis": "verbrannt = energetische Verwertung (RCV_E_PAC); sonstig = sonstige Verwertung (RCV_OTH); der Rest bis 100 % ist nicht verwertet (Beseitigung), Eurostat weist Deponie und Verbrennung ohne Energierückgewinnung für Verpackungen nicht getrennt aus. Für Glas meldet Eurostat keine energetische Verwertung (verbrannt = null).",
+      "quelle": "eurostat_env_waspac",
+      "abfrage": "env_waspac: geo=DE, waste=W150107, unit=PC, time=2024, wst_oper=RCY (recycelt) / RCV_E_PAC (verbrannt) / RCV_OTH (sonstig) / RCV (verwertet)",
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/env_waspac?geo=DE&waste=W150107&unit=PC&time=2024&format=JSON&lang=EN"
+    },
+    "verpackung_alu": {
+      "name": "Aluminiumverpackungen",
+      "jahr": 2024,
+      "recycelt": 67.4,
+      "verbrannt": 32.5,
+      "deponiert": null,
+      "sonstig": 0.0,
+      "verwertet": 100.0,
+      "was": "Anteil der Verpackungsabfälle, die recycelt bzw. energetisch verwertet werden, gemessen an der in Verkehr gebrachten Menge (in Deutschland gleich dem Verpackungsabfallaufkommen).",
+      "hinweis": "verbrannt = energetische Verwertung (RCV_E_PAC); sonstig = sonstige Verwertung (RCV_OTH); der Rest bis 100 % ist nicht verwertet (Beseitigung), Eurostat weist Deponie und Verbrennung ohne Energierückgewinnung für Verpackungen nicht getrennt aus.",
+      "quelle": "eurostat_env_waspac",
+      "abfrage": "env_waspac: geo=DE, waste=W15010401, unit=PC, time=2024, wst_oper=RCY (recycelt) / RCV_E_PAC (verbrannt) / RCV_OTH (sonstig) / RCV (verwertet)",
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/env_waspac?geo=DE&waste=W15010401&unit=PC&time=2024&format=JSON&lang=EN"
+    },
+    "verpackung_stahl": {
+      "name": "Stahl- und Eisenverpackungen",
+      "jahr": 2024,
+      "recycelt": 87.5,
+      "verbrannt": null,
+      "deponiert": null,
+      "sonstig": 0.0,
+      "verwertet": 87.5,
+      "was": "Anteil der Verpackungsabfälle, die recycelt bzw. energetisch verwertet werden, gemessen an der in Verkehr gebrachten Menge (in Deutschland gleich dem Verpackungsabfallaufkommen).",
+      "hinweis": "verbrannt = energetische Verwertung (RCV_E_PAC); sonstig = sonstige Verwertung (RCV_OTH); der Rest bis 100 % ist nicht verwertet (Beseitigung), Eurostat weist Deponie und Verbrennung ohne Energierückgewinnung für Verpackungen nicht getrennt aus. Für Stahl/Eisen meldet Eurostat keine energetische Verwertung (verbrannt = null).",
+      "quelle": "eurostat_env_waspac",
+      "abfrage": "env_waspac: geo=DE, waste=W15010402, unit=PC, time=2024, wst_oper=RCY (recycelt) / RCV_E_PAC (verbrannt) / RCV_OTH (sonstig) / RCV (verwertet)",
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/env_waspac?geo=DE&waste=W15010402&unit=PC&time=2024&format=JSON&lang=EN"
+    },
+    "elektro": {
+      "name": "Elektro- und Elektronikaltgeräte",
+      "jahr": 2024,
+      "recycelt": 84.8,
+      "verbrannt": null,
+      "deponiert": null,
+      "sonstig": null,
+      "sammelquote": 51.0,
+      "verwertet": 98.7,
+      "was": "Anteil der gesammelten und behandelten Altgeräte, die recycelt oder zur Wiederverwendung vorbereitet werden; die Sammelquote misst die gesammelte Menge am Durchschnitt der in den drei Vorjahren in Verkehr gebrachten Geräte.",
+      "hinweis": "recycelt = RCY_PRP_REU, verwertet = RCV (beide in % der behandelten Menge); eine Aufteilung des Rests in Verbrennung/Deponie weist Eurostat nicht aus. Laut Sammelquote wird knapp die Hälfte der Altgeräte nicht über die offizielle Sammlung erfasst.",
+      "quelle": "eurostat_env_waseleeos",
+      "abfrage": "env_waseleeos: geo=DE, waste=EE_TEE, time=2024, wst_oper=RCY_PRP_REU & unit=PC (recycelt), wst_oper=RCV & unit=PC (verwertet), wst_oper=COL & unit=AVG_3Y (sammelquote)",
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/env_waseleeos?geo=DE&waste=EE_TEE&time=2024&format=JSON&lang=EN"
+    },
+    "batterie": {
+      "name": "Geräte-Altbatterien",
+      "jahr": 2024,
+      "recycelt": null,
+      "verbrannt": null,
+      "deponiert": null,
+      "sonstig": null,
+      "sammelquote": 53.8,
+      "verwertungsquote_der_gesammelten": 100.2,
+      "recyclingeffizienz_sonstige": 75.8,
+      "was": "Sammelquote: Anteil der zurückgenommenen Geräte-Altbatterien an der in Verkehr gebrachten Menge; Verwertungsquote: Anteil der gesammelten Menge, der dem Recycling zugeführt wurde (über 100 % durch Lagerabbau).",
+      "hinweis": "Ein Recyclinganteil bezogen auf die in Verkehr gebrachte Menge wird nicht amtlich ausgewiesen (recycelt = null). Recyclingeffizienz 75,8 % = Masse zurückgewonnener Sekundärrohstoffe je Input bei 'sonstigen' Batterien (Li-Ion, AlMn, ZnC); Blei-Säure 82,2 %, NiCd 75,2 %. Eurostat env_waspb nennt für 2023 eine Sammelquote von 50,4 % (gleicher Wert wie UBA).",
+      "quelle": "uba_altbatterien",
+      "abfrage": "UBA-Seite Altbatterien, Abschnitte 'Geräte-Altbatterien: Sammelmenge sowie Sammelquote' (53,8 %), 'Analyse der spezifischen Recyclingergebnisse' (Verwertungsquote 100,2 %), Recyclingeffizienzen 2024; Vergleich: Eurostat env_waspb geo=DE, waste=W1606B, wst_oper=COL, unit=PC, time=2023 = 50,4",
+      "url": "https://www.umweltbundesamt.de/daten/umweltzustand-trends/ressourcen-abfall/verwertung-entsorgung-ausgewaehlter-abfallarten/altbatterien",
+      "quelle_zusatz": "eurostat_env_waspb"
+    },
+    "restmuell": {
+      "name": "Restmüll (Hausmüll und hausmüllähnliche Gewerbeabfälle)",
+      "jahr": 2024,
+      "recycelt": 18.3,
+      "verbrannt": 78.0,
+      "deponiert": 0.0,
+      "sonstig": null,
+      "thermisch_beseitigt": 1.6,
+      "behandlung_zur_beseitigung": 2.1,
+      "was": "Anteil des über die Restmülltonne gesammelten Abfalls nach Entsorgungsweg, gemessen am Aufkommen (14,8 Mio. t).",
+      "hinweis": "Anteile berechnet als Menge je Entsorgungsweg geteilt durch das Aufkommen; 'recycelt' = Input in Anlagen mit stofflicher Verwertung (inputbezogen, enthält also auch spätere Sortierreste). verbrannt = energetische Verwertung (v. a. Müllverbrennung mit Energienutzung); thermisch_beseitigt = Verbrennung ohne Verwertungsstatus. Unbehandelte Siedlungsabfälle dürfen seit Juni 2005 nicht mehr deponiert werden (Ablagerung 2024: 0 Tsd. t).",
+      "quelle": "destatis_abfallbilanz_2024",
+      "abfrage": "Abfallbilanz 2024, Tabelle 'Aufkommen, Beseitigung und Verwertung von Abfällen im Jahr 2024', Zeile 'Hausmüll, hausmüllähnliche Gewerbeabfälle gemeinsam über die öffentliche Müllabfuhr eingesammelt': Spalten Stoffliche Verwertung, Energetische Verwertung, Ablagerung, Thermische Beseitigung, Behandlung zur Beseitigung je geteilt durch Abfallaufkommen insgesamt",
+      "url": "https://www.umweltbundesamt.de/system/files/medien/384/bilder/dateien/3_Tab_Verwertung_2026-10-29.xlsx"
+    },
+    "sperrmuell": {
+      "name": "Sperrmüll",
+      "jahr": 2024,
+      "recycelt": 58.1,
+      "verbrannt": 40.1,
+      "deponiert": 0.0,
+      "sonstig": null,
+      "thermisch_beseitigt": 0.8,
+      "behandlung_zur_beseitigung": 1.1,
+      "was": "Anteil des Sperrmülls nach Entsorgungsweg, gemessen am Aufkommen (2,5 Mio. t).",
+      "hinweis": "Anteile berechnet als Menge je Entsorgungsweg geteilt durch das Aufkommen; 'recycelt' = Input in Anlagen mit stofflicher Verwertung (inputbezogen, enthält also auch spätere Sortierreste). Ablagerung in der Tabelle als '-' (nichts vorhanden) ausgewiesen.",
+      "quelle": "destatis_abfallbilanz_2024",
+      "abfrage": "Abfallbilanz 2024, Tabelle 'Aufkommen, Beseitigung und Verwertung von Abfällen im Jahr 2024', Zeile 'Sperrmüll': Spalten Stoffliche Verwertung, Energetische Verwertung, Ablagerung, Thermische Beseitigung, Behandlung zur Beseitigung je geteilt durch Abfallaufkommen insgesamt",
+      "url": "https://www.umweltbundesamt.de/system/files/medien/384/bilder/dateien/3_Tab_Verwertung_2026-10-29.xlsx"
+    },
+    "bio": {
+      "name": "Bioabfall (Biotonne)",
+      "jahr": 2024,
+      "recycelt": 96.6,
+      "verbrannt": 3.4,
+      "deponiert": 0.0,
+      "sonstig": null,
+      "thermisch_beseitigt": null,
+      "behandlung_zur_beseitigung": null,
+      "was": "Anteil der Abfälle aus der Biotonne, die kompostiert oder vergoren (stofflich verwertet) bzw. energetisch verwertet werden, gemessen am Aufkommen (4,9 Mio. t).",
+      "hinweis": "Anteile berechnet als Menge je Entsorgungsweg geteilt durch das Aufkommen; 'recycelt' = Input in Anlagen mit stofflicher Verwertung (inputbezogen, enthält also auch spätere Sortierreste). Beseitigung in der Tabelle als '-' ausgewiesen. Laut UBA wurden 2024 etwa 53 % aller Bioabfälle in Anlagen mit Vergärungsstufe behandelt (Biotonne 2023: 54 %), der Rest in reinen Kompostierungsanlagen.",
+      "quelle": "destatis_abfallbilanz_2024",
+      "abfrage": "Abfallbilanz 2024, Tabelle 'Aufkommen, Beseitigung und Verwertung von Abfällen im Jahr 2024', Zeile 'Abfälle aus der Biotonne': Spalten Stoffliche Verwertung, Energetische Verwertung, Ablagerung, Thermische Beseitigung, Behandlung zur Beseitigung je geteilt durch Abfallaufkommen insgesamt",
+      "url": "https://www.umweltbundesamt.de/system/files/medien/384/bilder/dateien/3_Tab_Verwertung_2026-10-29.xlsx",
+      "url_zusatz": "https://www.umweltbundesamt.de/daten/umweltzustand-trends/ressourcen-abfall/verwertung-entsorgung-ausgewaehlter-abfallarten/bioabfaelle",
+      "quelle_zusatz": "uba_bioabfaelle"
+    },
+    "holz": {
+      "name": "Holzabfälle",
+      "jahr": 2022,
+      "recycelt": 26.5,
+      "verbrannt": 73.5,
+      "deponiert": 0.0,
+      "sonstig": null,
+      "was": "Anteil der in Deutschland behandelten Holzabfälle (alle Herkünfte, auch Gewerbe und Bau) nach Behandlungsweg, gemessen an der behandelten Menge.",
+      "hinweis": "Berechnet als RCV_R/TRT, RCV_E/TRT, (DSP_L)/TRT; Verbrennung ohne Energierückgewinnung (DSP_I) 526 t = 0,0 %. Für 2024 weist Eurostat für DE keine Aufteilung RCV_R aus (nur RCV_R_B mit stark abweichender Gesamtmenge), daher 2022.",
+      "quelle": "eurostat_env_wastrt",
+      "abfrage": "env_wastrt: geo=DE, waste=W075, hazard=HAZ_NHAZ, unit=T, time=2022, wst_oper=RCV_R, RCV_E, DSP_L, DSP_I, je geteilt durch TRT (10.621.920 t)",
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/env_wastrt?geo=DE&waste=W075&hazard=HAZ_NHAZ&unit=T&time=2022&format=JSON&lang=EN"
+    },
+    "textil": {
+      "name": "Textilabfälle",
+      "jahr": 2024,
+      "recycelt": 72.1,
+      "verbrannt": 27.5,
+      "deponiert": 0.0,
+      "sonstig": null,
+      "verbrannt_ohne_energie": 0.5,
+      "was": "Anteil der in Deutschland behandelten Textilabfälle (alle Herkünfte, nicht nur Alttextilien aus Haushalten) nach Behandlungsweg, gemessen an der behandelten Menge.",
+      "hinweis": "Keine amtliche Zahl speziell für Alttextilien aus Haushalten (Sammelquote, Wiederverwendung, Recycling) gefunden; Wiederverwendung (Second-Hand, Export) ist nicht Teil der Abfallbehandlungsstatistik. 'recycelt' = RCV_R (stoffliche Verwertung inkl. Vorbereitung, nicht zwingend Faser-zu-Faser). Berechnet als RCV_R/TRT, RCV_E/TRT, DSP_L/TRT, DSP_I/TRT.",
+      "quelle": "eurostat_env_wastrt",
+      "abfrage": "env_wastrt: geo=DE, waste=W076, hazard=HAZ_NHAZ, unit=T, time=2024, wst_oper=RCV_R, RCV_E, DSP_L, DSP_I, je geteilt durch TRT (207.156 t)",
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/env_wastrt?geo=DE&waste=W076&hazard=HAZ_NHAZ&unit=T&time=2024&format=JSON&lang=EN"
+    },
+    "siedlungsabfall": {
+      "name": "Siedlungsabfälle insgesamt",
+      "jahr": 2024,
+      "recycelt": 69.0,
+      "verbrannt": 29.4,
+      "deponiert": 0.5,
+      "sonstig": null,
+      "verbrannt_ohne_energie": 1.1,
+      "davon_kompostiert_vergoren": 23.3,
+      "was": "Anteil der Siedlungsabfälle (Haushalte und ähnliche Gewerbeabfälle) nach Behandlungsweg, gemessen am Aufkommen.",
+      "hinweis": "Berechnet als RCY, RCV_E, DSP_L_OTH, DSP_I bzw. RCY_C_D je geteilt durch GEN (51.449 Tsd. t); RCY enthält Kompostierung/Vergärung (RCY_C_D). Die nationale Abfallbilanz nennt eine Deponierungsquote von 0,12 % (andere Abgrenzung).",
+      "quelle": "eurostat_env_wasmun",
+      "abfrage": "env_wasmun: geo=DE, unit=THS_T, time=2024, wst_oper=RCY, RCV_E, DSP_L_OTH, DSP_I, RCY_C_D, je geteilt durch GEN",
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/env_wasmun?geo=DE&unit=THS_T&time=2024&format=JSON&lang=EN"
+    }
+  },
+  "quellen": {
+    "eurostat_env_waspac": {
+      "titel": "Packaging waste by waste management operations (env_waspac)",
+      "herausgeber": "Eurostat",
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/env_waspac?geo=DE&format=JSON&lang=EN",
+      "abruf": "2026-11-13"
+    },
+    "eurostat_env_waseleeos": {
+      "titel": "Waste electrical and electronic equipment (WEEE) by waste management operations - open scope, 6 product categories (env_waseleeos)",
+      "herausgeber": "Eurostat",
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/env_waseleeos?geo=DE&format=JSON&lang=EN",
+      "abruf": "2026-11-13"
+    },
+    "eurostat_env_waspb": {
+      "titel": "Sales and collection of portable batteries and accumulators (env_waspb)",
+      "herausgeber": "Eurostat",
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/env_waspb?geo=DE&format=JSON&lang=EN",
+      "abruf": "2026-11-13"
+    },
+    "eurostat_env_wasmun": {
+      "titel": "Municipal waste by waste management operations (env_wasmun)",
+      "herausgeber": "Eurostat",
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/env_wasmun?geo=DE&format=JSON&lang=EN",
+      "abruf": "2026-11-13"
+    },
+    "eurostat_env_wastrt": {
+      "titel": "Treatment of waste by waste category, hazardousness and waste management operations (env_wastrt)",
+      "herausgeber": "Eurostat",
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/env_wastrt?geo=DE&format=JSON&lang=EN",
+      "abruf": "2026-11-13"
+    },
+    "uba_altbatterien": {
+      "titel": "Altbatterien (Daten zur Umwelt, zuletzt aktualisiert 15.01.2026)",
+      "herausgeber": "Umweltbundesamt",
+      "url": "https://www.umweltbundesamt.de/daten/umweltzustand-trends/ressourcen-abfall/verwertung-entsorgung-ausgewaehlter-abfallarten/altbatterien",
+      "abruf": "2026-11-13"
+    },
+    "uba_bioabfaelle": {
+      "titel": "Bioabfälle (Daten zur Umwelt, zuletzt aktualisiert 28.10.2026)",
+      "herausgeber": "Umweltbundesamt",
+      "url": "https://www.umweltbundesamt.de/daten/umweltzustand-trends/ressourcen-abfall/verwertung-entsorgung-ausgewaehlter-abfallarten/bioabfaelle",
+      "abruf": "2026-11-13"
+    },
+    "destatis_abfallbilanz_2024": {
+      "titel": "Aufkommen, Beseitigung und Verwertung von Abfällen im Jahr 2024 in Tausend Tonnen (Quelle: Statistisches Bundesamt, Statistischer Bericht – Abfallbilanz 2024, Wiesbaden 2026), veröffentlicht auf der UBA-Seite 'Verwertungsquoten der wichtigsten Abfallarten'",
+      "herausgeber": "Statistisches Bundesamt / Umweltbundesamt",
+      "url": "https://www.umweltbundesamt.de/system/files/medien/384/bilder/dateien/3_Tab_Verwertung_2026-10-29.xlsx",
+      "seite": "https://www.umweltbundesamt.de/daten/umweltzustand-trends/ressourcen-abfall/verwertungsquoten-der-wichtigsten-abfallarten",
+      "abruf": "2026-11-13"
+    }
+  }
+}

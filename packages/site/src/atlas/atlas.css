@@ -1,34 +1,62 @@
-/* Rohstoff-Atlas: Ergänzungen zu Katalog (.craft) und Steckbrief (.sheet) der Station */
-.atlas-katalog .craft-head { align-items: flex-end; }
-.beispiele { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--ink); }
-.beispiel { display: grid; gap: 6px; padding: 18px 20px 20px 0; border-bottom: 1px solid var(--rule); text-decoration: none; color: inherit; transition: background .2s; }
-.beispiel:hover { background: var(--sheet); }
-.beispiel .letter { font: 500 28px/1 var(--mono); color: var(--rule); transition: color .2s; }
-.beispiel:hover .letter { color: var(--accent); }
-.beispiel b { font-size: 19px; font-weight: 600; letter-spacing: -.01em; }
-.katalog .gruppe[hidden], .kat-list a[hidden] { display: none; }
-.mix-legend.einspaltig { grid-template-columns: 1fr; margin-top: 12px; }
-.krit-i { border: 0 !important; color: var(--accent); font-style: normal; font-size: 10px; line-height: 10px; text-align: center; }
+/* Lebensweg: Steckbrief-Layout der Station (.sheet). Oben die sieben Stationen, darunter die Bühne. */
 
-.atlas-sheet .canvas { display: block; }
-.globus { position: absolute; left: 330px; right: 14px; top: 60px; bottom: 41%; }
-.globus canvas { outline: none; }
-.globus-legende { position: absolute; left: 36px; top: 140px; z-index: 2; display: grid; gap: 2px; min-width: 210px; font-size: 13px; }
-.globus-legende .eyebrow { margin-bottom: 6px; }
-.gl-zeile { display: grid; grid-template-columns: 26px 1fr auto; gap: 8px; text-align: left; padding: 3px 6px; background: color-mix(in srgb, var(--sheet) 85%, transparent); border-bottom: 1px solid var(--rule-2); }
-.gl-zeile:hover { background: var(--accent-soft); }
-.gl-zeile .nr { font: 11px/20px var(--mono); color: var(--ink-3); }
-.gl-zeile b { font: 500 12px/20px var(--mono); }
-.gl-de { display: flex; align-items: center; gap: 8px; margin-top: 8px; font-size: 12px; color: var(--ink-2); }
-.gl-de i { width: 10px; height: 10px; background: var(--ink-3); border: 1px solid var(--ink); }
+/* Wahl ohne Gegenstand */
+.lw-wahl { overflow-y: auto; }
+.lw-wahl-inhalt { width: min(760px, 100% - 48px); margin: 0 auto; padding: 48px 0; display: grid; gap: 24px; }
+.lw-wahl h1 { font-size: 32px; font-weight: 600; letter-spacing: -.02em; }
+
+/* Stationen: Zahl, Symbol, Name. Aktive Station mit Akzentlinie wie die Kopfzeile. */
+.lw .canvas { display: grid; grid-template-rows: auto 1fr; }
+.lw .canvas::after { display: none; }
+.lw-schritte {
+  position: relative; z-index: 3; display: grid; grid-template-columns: repeat(7, minmax(0, 1fr));
+  border-bottom: 1px solid var(--rule); background: var(--sheet);
+}
+.lw-schritte a {
+  display: flex; align-items: center; justify-content: center; gap: 8px; height: 56px; padding: 0 8px; text-decoration: none;
+  color: var(--ink-3); font-size: 13px; border-bottom: 2px solid transparent; margin-bottom: -1px; transition: color .15s, border-color .15s;
+}
+.lw-schritte a:hover { color: var(--ink); }
+.lw-schritte a.on { color: var(--ink); border-bottom-color: var(--accent); }
+.lw-schritte a.on .icon { color: var(--accent); }
+.lw-nr { font: 500 11px var(--mono); }
+.lw-schritte a + a { border-left: 1px solid var(--rule-2); }
+
+/* Bühne: je Station ein Bild */
+.lw-buehne { position: relative; min-height: 0; }
+.lw-globus, .lw-szene, .lw-balken, .lw-strom { position: absolute; display: none; }
+.lw-globus { inset: 0 0 40% 0; }
+.lw-strom { left: 0; right: 0; bottom: 0; height: 40%; border-top: 1px solid var(--rule); padding: 16px 28px 10px; }
+.lw-strom .strom { position: relative; height: 100%; }
+.lw-szene, .lw-balken { inset: 0 0 56px 0; }
+.lw-szene canvas, .lw-szene .labels { position: absolute; inset: 0; }
+.lw[data-schritt="abbau"] .lw-globus, .lw[data-schritt="verarbeitung"] .lw-globus, .lw[data-schritt="herstellung"] .lw-globus,
+.lw[data-schritt="abbau"] .lw-strom, .lw[data-schritt="verarbeitung"] .lw-strom,
+.lw[data-schritt="gegenstand"] .lw-szene, .lw[data-schritt="upcycling"] .lw-szene, .lw[data-schritt="entsorgung"] .lw-szene,
+.lw[data-schritt="verwertung"] .lw-balken { display: block; }
+.lw[data-schritt="herstellung"] .lw-globus { inset: 0 0 56px 0; }
+.lw .legend { left: 28px; bottom: 22px; }
+.lw .legend i { border-radius: 0; }
+
+/* Verwertung: eine Säule, beschriftet */
+.lw-balken { display: none; place-items: center; }
+.lw[data-schritt="verwertung"] .lw-balken { display: grid; }
+.lw-balken-bild { display: grid; grid-template-columns: 96px auto; gap: 24px; height: min(420px, 70%); align-items: stretch; }
+.lw-saeule { display: flex; flex-direction: column-reverse; border: 1px solid var(--ink); background: var(--sheet); }
+.lw-saeule i { display: block; }
+.lw-saeule i + i { border-bottom: 1px solid var(--ink); }
+.lw-saeule .rest { background: repeating-linear-gradient(45deg, var(--rule-2) 0 4px, transparent 4px 8px); }
+.lw-saeule-text { position: relative; width: 220px; }
+.lw-saeule-text p { position: absolute; left: 0; transform: translateY(50%); display: grid; border-left: 3px solid var(--f, var(--rule)); padding-left: 10px; font-size: 14px; color: var(--ink-2); white-space: nowrap; }
+.lw-saeule-text b { font: 500 22px var(--mono); color: var(--ink); }
+.lw-saeule-text .rest { border-left-style: dashed; }
+.lw-leer { color: var(--ink-3); }
+
+/* Kugel- und Stromdarstellung (globus.js, stoffstrom.js) */
 .globus-ballon { display: flex; align-items: center; gap: 6px; transform: translate(-11px, -11px); pointer-events: none; white-space: nowrap; }
 .globus-ballon b { display: grid; place-items: center; width: 22px; height: 22px; border-radius: 50%; background: var(--sheet); border: 1px solid var(--ink); font: 500 10px var(--mono); }
 .globus-ballon span { font: 12px var(--sans); color: var(--ink); background: color-mix(in srgb, var(--sheet) 85%, transparent); padding: 0 4px; }
 .globus-ballon.de b { background: var(--ink); color: var(--sheet); font-size: 9px; }
-
-.strom-flaeche { position: absolute; left: 14px; right: 14px; bottom: 14px; height: 41%; border-top: 1px solid var(--rule); background: color-mix(in srgb, var(--paper) 70%, transparent); padding: 12px 22px 10px; display: grid; grid-template-rows: auto 1fr; }
-.strom-kopf { display: flex; gap: 12px; align-items: baseline; font-size: 12px; color: var(--ink-3); }
-.strom { position: relative; min-height: 0; }
 .strom-svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
 .strom-svg .spalte { font: 500 10px var(--mono); letter-spacing: .08em; text-transform: uppercase; fill: var(--ink-3); }
 .strom-svg .band { opacity: .42; transition: opacity .2s; }
@@ -44,33 +72,72 @@
 .strom-svg .knoten.hot rect:first-child { stroke: var(--accent); stroke-width: 1.6; }
 .strom-svg .knoten:focus-visible { outline: none; }
 .strom-svg .knoten:focus-visible rect:first-child { stroke: var(--accent); stroke-width: 2; }
+.strom-svg .fuehrung { fill: none; stroke: var(--ink-3); stroke-width: .7; }
 
-.atlas-sheet .hint-hover { bottom: calc(41% + 22px); background: var(--sheet); padding: 2px 10px; border: 1px solid var(--rule); }
-.atlas-sheet .elements .el { cursor: pointer; }
-.atlas-sheet .el.ohne { opacity: .55; }
-.atlas-sheet .el-hero .el { cursor: default; }
-.atlas-sheet .el-hero h1 { font-size: 24px; }
-.stufe-wahl { align-self: start; width: max-content; }
-.erklaerung { font-size: 14px; }
-.mrow.land { grid-template-columns: 26px 1fr auto 0; }
-.mrow.land .nr { font: 11px var(--mono); color: var(--ink-3); }
-.mrow.land.rest { color: var(--ink-3); }
-.panel .source a { color: var(--ink-2); }
-.crumbs a { color: var(--ink-2); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--rule); }
-.crumbs a:hover { color: var(--accent); }
-.actionbar .btn.ghost { text-decoration: none; }
+/* Datenblatt */
+.lw .panel-inner { gap: 24px; }
+.lw-kopf .eyebrow { display: flex; align-items: center; gap: 8px; }
+.lw-kopf .eyebrow .icon { width: 16px; height: 16px; color: var(--accent); }
+.lw-kopf h1 { margin-top: 8px; font-size: 26px; line-height: 1.15; }
+.lw-zahl { display: grid; grid-template-columns: 1fr auto; align-items: baseline; gap: 2px 10px; border-top: 1px solid var(--ink); padding-top: 12px; }
+.lw-zahl b { font: 500 34px/1.1 var(--mono); letter-spacing: -.03em; }
+.lw-zahl span { grid-column: 1; font-size: 14px; color: var(--ink-2); }
+.lw-zahl .chip-q { grid-column: 2; grid-row: 1; align-self: start; }
+.lw-zahl .krit { font-style: normal; color: var(--accent); }
+.lw-hinweis { font-size: 15px; color: var(--ink); }
+.lw-fuss { font: 12px var(--mono); color: var(--ink-3); margin-top: 8px; }
+.lw-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.lw-chip { display: inline-flex; align-items: center; gap: 7px; height: 32px; padding: 0 12px; border: 1px solid var(--rule); background: var(--card); font-size: 13px; text-decoration: none; }
+.lw-chip i { width: 9px; height: 9px; border: 1px solid var(--ink); }
+.lw-chip:hover { border-color: var(--ink-3); }
+.lw-chip.on { background: var(--ink); color: var(--sheet); border-color: var(--ink); }
+.lw-chip.on i { border-color: var(--sheet); }
+.lw-chip.leer { color: var(--ink-3); border-style: dashed; }
+.lw-land { display: grid; grid-template-columns: 28px 1fr auto; gap: 4px 10px; align-items: baseline; padding: 9px 2px 7px; border-bottom: 1px solid var(--rule); font-size: 15px; }
+.lw-land .nr { font: 11px var(--mono); color: var(--ink-3); }
+.lw-land > b { font: 500 13px var(--mono); }
+.lw-land .mbar { grid-column: 2 / 4; }
+.lw-land.rest { color: var(--ink-3); }
+.lw-land[data-land]:hover { background: var(--accent-soft); }
+.lw-tonne { display: grid; grid-template-columns: 44px 1fr; gap: 14px; align-items: center; border-top: 1px solid var(--ink); padding-top: 14px; }
+.lw-tonne > i { width: 44px; height: 52px; background: var(--f); border: 1px solid var(--ink); border-radius: 2px 2px 6px 6px; position: relative; }
+.lw-tonne > i::before { content: ''; position: absolute; left: -5px; right: -5px; top: -7px; height: 6px; background: var(--f); border: 1px solid var(--ink); }
+.lw-tonne b { display: block; font-size: 22px; font-weight: 600; letter-spacing: -.01em; }
+.lw-tonne span { font-size: 14px; color: var(--ink-2); }
+.lw-teil { display: grid; grid-template-columns: 12px 1fr auto; gap: 10px; align-items: center; padding: 10px 2px; border-bottom: 1px solid var(--rule); font-size: 14px; }
+.lw-teil i { width: 12px; height: 12px; background: var(--f); border: 1px solid var(--ink); }
+.lw-teil b { font-weight: 500; }
+.lw-hoefe { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+.lw-hoefe a { display: grid; padding: 9px 11px; border: 1px solid var(--rule); background: var(--card); text-decoration: none; font-size: 13px; }
+.lw-hoefe a:hover { border-color: var(--accent); }
+.lw-hoefe span { color: var(--ink-3); font-size: 12px; }
+.lw-hoefe em { font-style: normal; color: var(--accent); font-size: 11px; }
+.lw-mehr summary { cursor: pointer; font-size: 13px; color: var(--ink-2); }
+.lw-mehr p { font-size: 13px; color: var(--ink-2); margin-top: 8px; }
+.lw-rezepte { display: grid; gap: 16px; }
+.lw-rezept { border-top: 1px solid var(--ink); padding-top: 14px; display: grid; gap: 10px; }
+.lw-rezept h2 { font-size: 19px; font-weight: 600; }
+
+/* Fußleiste: zurück · Ort · weiter */
+.lw .actionbar { justify-content: space-between; }
+.lw .actionbar .q { margin: 0 auto; text-align: center; }
+.lw .actionbar .q b { font-weight: 500; }
+.lw .actionbar .btn { min-width: 168px; }
+
+@media (max-width: 1100px) { .lw-name { display: none; } }
 @media (max-width: 900px) {
-  .beispiele { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .atlas-sheet .canvas { height: auto; min-height: 0; display: flex; flex-direction: column; padding-bottom: 14px; }
-  .atlas-sheet .canvas-head { position: relative; top: auto; left: auto; right: auto; padding: 24px 24px 0; }
-  .globus { position: relative; inset: auto; height: 340px; overflow: hidden; flex: none; }
-  .globus-legende { position: relative; inset: auto; margin: 0 24px; }
-  .strom-flaeche { position: relative; inset: auto; height: 440px; margin: 16px 14px 0; flex: none; }
-  .atlas-sheet .hint-hover { display: none; }
+  .lw .canvas { height: auto; min-height: 0; }
+  .lw-schritte { position: sticky; top: 0; }
+  .lw-schritte a { height: 48px; gap: 4px; }
+  .lw-schritte a .lw-nr, .lw-schritte a.on .lw-name { display: none; }
+  .lw-buehne { height: 62vh; min-height: 420px; }
+  .lw[data-schritt="abbau"] .lw-buehne, .lw[data-schritt="verarbeitung"] .lw-buehne { height: 780px; }
+  .lw-globus { inset: 0 0 420px 0; }
+  .lw-strom { height: 420px; padding: 12px 14px; }
+  .lw .legend { left: 16px; right: 16px; bottom: 12px; }
+  .lw .actionbar .btn { min-width: 0; flex: 1; }
+  .lw .actionbar .q { display: none; }
+  .lw-hoefe { grid-template-columns: 1fr; }
 }
-.nur-schmal { display: none; }
-@media (max-width: 620px) { .nur-schmal { display: inline; } .strom-kopf { flex-wrap: wrap; } }
-.quelle { display: grid; gap: 6px; }
-.quelle h3 { margin-bottom: 0; }
-.quelle-link { justify-self: start; height: 36px; padding: 0 14px; font-size: 13px; margin-top: 4px; }
-.facts dd a { color: var(--ink-2); text-underline-offset: 3px; }
+.lw-hof summary { font-size: 15px; color: var(--ink); padding: 10px 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+.lw-hof[open] summary { margin-bottom: 10px; }
