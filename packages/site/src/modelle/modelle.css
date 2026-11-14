@@ -12,9 +12,18 @@
 .panel .facts dd { font: 13px var(--mono); overflow-wrap: anywhere; }
 .actionbar .q span { color: var(--ink-3); }
 .kopf-rechts { display: flex; gap: 10px; align-items: flex-start; }
-.nummern-schalter { display: flex; align-items: center; gap: 8px; padding: 7px 14px; font-size: 13px; border: 1px solid var(--ink); background: var(--sheet); }
-.nummern-schalter::before { content: ''; width: 12px; height: 12px; border: 1px solid var(--ink); background: var(--sheet); }
-.nummern-schalter.on::before { background: var(--ink); box-shadow: inset 0 0 0 2px var(--sheet); }
+.einstellungen { position: relative; }
+.zahnrad { display: grid; place-items: center; width: 34px; height: 34px; padding: 0; border: 1px solid var(--ink); background: var(--sheet); color: var(--ink); cursor: pointer; }
+.zahnrad[aria-expanded="true"] { background: var(--ink); color: var(--sheet); }
+.menue { position: absolute; right: 0; top: calc(100% + 6px); z-index: 20; min-width: 190px; padding: 6px; border: 1px solid var(--ink); background: var(--sheet); box-shadow: 0 6px 18px rgb(0 0 0 / .12); }
+.kipp { display: flex; align-items: center; gap: 10px; width: 100%; padding: 8px 8px; border: 0; background: none; color: var(--ink); font-size: 13px; text-align: left; cursor: pointer; }
+.kipp:hover { background: var(--paper); }
+.kipp span { flex: 1; }
+.kipp kbd { font: 11px var(--mono); color: var(--ink-3); }
+.kipp i { position: relative; width: 30px; height: 16px; border: 1px solid var(--ink); border-radius: 9px; background: var(--sheet); transition: background .15s; }
+.kipp i::after { content: ''; position: absolute; top: 2px; left: 2px; width: 10px; height: 10px; border-radius: 50%; background: var(--ink); transition: transform .15s; }
+.kipp[aria-checked="true"] i { background: var(--ink); }
+.kipp[aria-checked="true"] i::after { transform: translateX(14px); background: var(--sheet); }
 .ohne-nummern .ballon { display: none; }
 .modelle .actionbar { justify-content: space-between; }
 .modelle .actionbar .q { margin: 0 auto; }
