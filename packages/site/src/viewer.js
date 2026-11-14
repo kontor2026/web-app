@@ -48,6 +48,9 @@ export function erzeugeViewer(el, { onHover, onSelect, tip } = {}) {
   const neu = () => { geaendert = true; };
   const steuerung = new OrbitControls(kamera, labels.domElement);
   steuerung.enableDamping = true;
+  // Langsam um das Objekt kreisen (eine Runde in etwa 50 s); bei „weniger Bewegung“ aus
+  steuerung.autoRotate = !ruhig;
+  steuerung.autoRotateSpeed = 1.2;
   const modell = new THREE.Group();
   scene.add(modell);
 
@@ -243,6 +246,7 @@ export function erzeugeViewer(el, { onHover, onSelect, tip } = {}) {
 
   return {
     lade, explosion, faerbe, markiere, waehle, foto,
+    drehen: (an) => { steuerung.autoRotate = an; },
     nummern: (an) => flaeche.classList.toggle('ohne-nummern', !an),
     get teile() { return teile; },
   };

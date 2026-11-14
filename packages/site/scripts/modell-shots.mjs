@@ -20,7 +20,7 @@ try {
     await page.goto('about:blank');
     await page.goto(BASIS + id, { waitUntil: 'networkidle' });
     await page.waitForTimeout(3000);
-    if (x === '0') { await page.evaluate(() => document.querySelector('.modelle .seg button[data-x="0"]').click()); await page.waitForTimeout(2500); }
+    if (x === '0') { await page.evaluate(() => document.getElementById('explodiert').click()); await page.waitForTimeout(2500); }
     const f = `shots/modell-${id}-${x === '1' ? 'ex' : 'zu'}.png`;
     await page.locator('#szene').screenshot({ path: f, timeout: 180000 });
     console.log(f);

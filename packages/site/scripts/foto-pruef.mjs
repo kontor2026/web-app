@@ -13,7 +13,7 @@ try {
   await p.goto(`http://localhost:5190/modelle/?t=${Date.now()}#kat=${id}`, { waitUntil: 'networkidle' });
   await p.waitForTimeout(2500);
   await p.locator('#szene').screenshot({ path: `${out}/${id}-ex.png`, timeout: 240000 });
-  await p.evaluate(() => document.querySelector('.modelle .seg button[data-x="0"]').click());
+  await p.evaluate(() => document.getElementById('explodiert').click());
   await p.waitForTimeout(2000);
   await p.locator('#szene').screenshot({ path: `${out}/${id}-zu.png`, timeout: 240000 });
   console.log(`${out}/${id}-ex.png\n${out}/${id}-zu.png`);

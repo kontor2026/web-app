@@ -1,5 +1,5 @@
 // 3D-Modelle prüfen: jedes Kategorie-Modell aus backend/seed/kategorien/ in echtem 3D (gemeinsame Ansicht viewer.js).
-import { shell, esc, zahl, gramm, chip, schaetzung, repoUrl } from '../shell.js';
+import { shell, esc, zahl, gramm, chip, schaetzung, repoUrl, ruhig } from '../shell.js';
 import { CLASSES, MATERIALS } from '../../../../js/data/catalog.js';
 import index from '../../../../backend/seed/kategorien/index.json';
 import { erzeugeViewer, ladeModell, hatModell, materialVon } from '../viewer.js';
@@ -19,11 +19,12 @@ app.innerHTML = `
             <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M19.4 13a7.6 7.6 0 0 0 0-2l2.1-1.6-2-3.5-2.5 1a7.4 7.4 0 0 0-1.7-1L14.9 3h-4l-.4 2.9a7.4 7.4 0 0 0-1.7 1l-2.5-1-2 3.5L6.4 11a7.6 7.6 0 0 0 0 2l-2.1 1.6 2 3.5 2.5-1c.5.4 1.1.7 1.7 1l.4 2.9h4l.4-2.9c.6-.3 1.2-.6 1.7-1l2.5 1 2-3.5zM12.9 15.5a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7z"/></svg>
           </button>
           <div class="menue" id="menue" role="menu" hidden>
+            <button class="kipp" id="drehen" role="menuitemcheckbox" aria-checked="true"><span>Drehen</span><kbd>D</kbd><i></i></button>
+            <button class="kipp" id="explodiert" role="menuitemcheckbox" aria-checked="true"><span>Explodiert</span><kbd>E</kbd><i></i></button>
             <button class="kipp" id="nummern" role="menuitemcheckbox" aria-checked="true"><span>Nummern</span><kbd>N</kbd><i></i></button>
             <button class="kipp" id="foto" role="menuitemcheckbox" aria-checked="true"><span>Schatten</span><kbd>F</kbd><i></i></button>
           </div>
         </div>
-        <div class="seg" role="group" aria-label="Ansicht"><button data-x="0">Zusammen</button><button data-x="1" class="on">Explodiert</button></div>
       </div>
     </div>
     <div class="drawing" id="szene" aria-label="3D-Modell, mit der Maus drehbar"></div>
@@ -44,10 +45,22 @@ const viewer = erzeugeViewer(document.getElementById('szene'), {
   onSelect: (i) => (i == null ? zeigeModell() : zeigeTeil(i)),
 });
 
-document.querySelectorAll('.modelle .seg button').forEach((b) => b.addEventListener('click', () => {
-  viewer.explosion(+b.dataset.x);
-  document.querySelectorAll('.modelle .seg button').forEach((x) => x.classList.toggle('on', x === b));
-}));
+// Langsames Kreisen um das Objekt, Wahl bleibt gespeichert
+const drehSchalter = document.getElementById('drehen');
+function setzeDrehen(an) {
+  drehSchalter.setAttribute('aria-checked', String(an));
+  viewer.drehen(an); localStorage.setItem('modelle-drehen', an ? 'an' : 'aus');
+}
+drehSchalter.addEventListener('click', () => setzeDrehen(drehSchalter.getAttribute('aria-checked') !== 'true'));
+setzeDrehen(localStorage.getItem('modelle-drehen') ? localStorage.getItem('modelle-drehen') === 'an' : !ruhig);
+
+// Zusammengebaut oder explodiert, als Schalter im Zahnrad-Menü
+const exSchalter = document.getElementById('explodiert');
+exSchalter.addEventListener('click', () => {
+  const an = exSchalter.getAttribute('aria-checked') !== 'true';
+  exSchalter.setAttribute('aria-checked', String(an));
+  viewer.explosion(an ? 1 : 0);
+});
 const schalter = document.getElementById('nummern');
 function setzeNummern(an) {
   schalter.setAttribute('aria-checked', String(an));
@@ -185,6 +198,8 @@ addEventListener('keydown', (e) => {
   if (e.key === 'Escape') { if (!menue.hidden) { menueAuf(false); return; } viewer.waehle(null); zeigeModell(); }
   if (e.key === 'n' || e.key === 'N') schalter.click();
   if (e.key === 'f' || e.key === 'F') fotoSchalter.click();
+  if (e.key === 'e' || e.key === 'E') exSchalter.click();
+  if (e.key === 'd' || e.key === 'D') drehSchalter.click();
 });
 const ausHash = () => oeffne(location.hash.match(/kat=([\w-]+)/)?.[1] ?? 'smartphone');
 addEventListener('hashchange', ausHash);
