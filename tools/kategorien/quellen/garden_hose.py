@@ -67,12 +67,12 @@ teile = [
          material_id='polyester', x=2, y=2, w=D - 4, z=2, h=56, mass=110, form='torus', materials=[['polyester', 100]],
          info='Kreuzgewebe aus Polyesterfäden zwischen den PVC-Schichten. Es verhindert, dass der Schlauch unter '
               'Wasserdruck platzt oder abknickt. Lässt sich nicht vom PVC trennen.',
-         color='#E9E3C8', marks=windungen(D - 4, fill='#A9A388', tiefe=58)),
+         color='#E9E3C8', marks=windungen(D - 4, fill='#A9A388', tiefe=56)),
     teil('seele', 'pvc_hose', 'Innenschlauch', 'Innenschlauch', 'cyl',
          x=4, y=4, w=D - 8, z=4, h=52, mass=880, form='torus',
          info='Glatte Innenschicht aus PVC, durch die das Wasser fließt. Kein Trinkwasser aus Gartenschläuchen '
               'trinken: Weichmacher können sich lösen.',
-         color='#2F3A33', marks=windungen(D - 8, fill='#1C231F', tiefe=56)),
+         color='#2F3A33', marks=windungen(D - 8, fill='#1C231F', tiefe=52)),
 ]
 rolle = [p for p in teile if p['id'] in ('mantel', 'gewebe', 'seele')]
 explodiere(rolle, abstand=45, nach_liste=True)
