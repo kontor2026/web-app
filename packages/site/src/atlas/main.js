@@ -174,7 +174,7 @@ function zeigeRohstoffe() {
         <i style="background:${y.farbe}"></i>${esc(y.name)}</a>`;
     }).join('')}</div>
     ${r ? `<div class="lw-zahl"><b>${gramm(menge)}</b><span>${esc(r.name)} im Gegenstand${st && spitze(st.anteile) ? ` · meist aus ${esc(land(spitze(st.anteile)[0]))} (${spitze(st.anteile)[1]} %)` : ''}${r.kritisch ? ` · <em class="krit">▲ kritisch für die EU</em>${chip(quelleUrl(QUELLE, ROH[gewaehlt].kritisch_quelle, ROH[gewaehlt].kritisch_pdf_seite), 'Verordnung (EU) 2024/1252, Anhang II', 'Quelle', { was: `${r.name} steht auf der EU-Liste kritischer Rohstoffe`, jahr: 2024 })}` : ''}</span>${schaetzung('tools/kategorien/rohstoffe.py', 'Aus dem 3D-Modell berechnet')}</div>` : ''}
-    ${st ? block(`Länder ${belegStufe(st, `${r.name} · ${SCHRITTE.find((x) => x.id === schritt).name}: ${land(spitze(st.anteile)[0])} ${spitze(st.anteile)[1]} %`)}`, `${alleLaender(st.anteile, st.rest)}<p class="lw-fuss">${esc(st.jahr ?? '')} · ${esc(QUELLE[st.quelle]?.herausgeber ?? QUELLE[st.quelle]?.titel ?? '')}</p>`)
+    ${st ? block(`Länder ${belegStufe(st, `${r.name} · ${SCHRITTE.find((x) => x.id === schritt).name}: ${land(spitze(st.anteile)[0])} ${spitze(st.anteile)[1]} %`)}`, `${alleLaender(st.anteile, st.rest)}`)
     : `<p class="note">Keine Länderdaten mit Quelle.</p>`}
     <details class="lw-fluss lw-block" id="fluss"><summary>Woher kommt was?</summary><div class="lw-fluss-ort"></div></details>`);
   verbindeLaender();
@@ -194,7 +194,7 @@ function zeigeHerstellung() {
   legende([]);
   setzePanel(im?.anteile ? `
     <div class="lw-zahl"><b>${spitze(im.anteile)[1]} %</b><span>aus ${esc(land(spitze(im.anteile)[0]))}, nach Wert der Importe nach Deutschland</span>${chip(im.api_url ?? IMP.quelle?.url, IMP.quelle?.titel ?? 'UN Comtrade', 'Quelle', { was: `Importe nach Deutschland: ${land(spitze(im.anteile)[0])} ${spitze(im.anteile)[1]} %`, von: IMP.quelle?.herausgeber, jahr: im.jahr })}</div>
-    ${block('Länder', `${alleLaender(im.anteile, im.rest)}<p class="lw-fuss">${esc(im.jahr)} · nach Wert der Importe</p>`)}
+    ${block('Länder', `${alleLaender(im.anteile, im.rest)}`)}
       ${im.zuordnung === 'breit' ? `<p class="note">Die Zahlen gelten für eine größere Warengruppe, zu der dieser Gegenstand gehört.</p>` : ''}</div>`
     : `<p class="note">${IMP ? 'Für diesen Gegenstand gibt es keine passende Zollnummer.' : 'Die Importdaten werden gerade zusammengestellt.'}</p>`);
   verbindeLaender();
@@ -282,7 +282,7 @@ function zeigeEntsorgung() {
     ${hof ? `<details class="lw-block lw-hof"><summary>${AWSH.recyclinghoefe.length} Recyclinghöfe ${chip('https://www.awsh.de/recyclinghoefe/uebersicht/', 'AWSH Recyclinghöfe', 'Quelle', { was: 'Adressen der Recyclinghöfe', von: 'Abfallwirtschaft Südholstein (AWSH)' })}</summary><div class="lw-hoefe">${AWSH.recyclinghoefe.map((h) => `
       <a href="${esc(h.lat ? `https://www.openstreetmap.org/?mlat=${h.lat}&mlon=${h.lng}#map=16/${h.lat}/${h.lng}` : h.url)}" target="_blank" rel="noopener">
         <b>${esc(h.name.replace('Recyclinghof ', ''))}</b><span>${esc(h.adresse)}</span>${h.hinweis ? `<em>${esc(h.hinweis)}</em>` : ''}</a>`).join('')}</div></details>` : ''}
-    <p class="lw-fuss">${esc(AWSH.gebiet)} · Stand ${esc(datum(AWSH.stand))}</p>`);
+    <p class="lw-fuss">${esc(AWSH.gebiet)}</p>`);
 }
 
 // ---------- 7: Verwertung ----------
@@ -302,7 +302,6 @@ function zeigeVerwertung() {
     <div class="lw-zahl"><b>${zahl(s.recycelt ?? s.sammelquote ?? 0)} %</b><span>${s.recycelt != null ? 'recycelt' : 'gesammelt'} · gilt für: ${esc(s.name)}</span>${chip(s.url ?? q?.url, q?.titel, 'Quelle', { was: `${s.name}: ${zahl(s.recycelt ?? s.sammelquote ?? 0)} % ${s.recycelt != null ? 'recycelt' : 'gesammelt'}`, von: q?.herausgeber, jahr: s.jahr })}</div>
     ${e.weg === 'pfand' ? `<p class="note">Pfandflaschen und -dosen werden getrennt zurückgenommen. Eine eigene amtliche Quote dafür enthält diese Quelle nicht.</p>` : ''}
     ${s.sammelquote != null && s.recycelt != null ? `<p class="lw-hinweis">Aber nur ${zahl(s.sammelquote)} % werden überhaupt gesammelt.</p>` : ''}
-    <p class="lw-fuss">Deutschland · ${esc(s.jahr)} · ${esc(q?.herausgeber ?? '')}</p>
     ${block('Was genau gezählt wird', `<p>${esc(s.was ?? '')}</p>`)}`
     : `<p class="note">${e ? 'Für diesen Entsorgungsweg gibt es keine amtliche Zahl.' : 'Keine Daten.'}</p>`);
 }

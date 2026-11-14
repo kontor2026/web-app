@@ -47,8 +47,8 @@
 .wb-status { font: 500 11px var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--ink-3); border: 1px solid var(--rule); padding: 2px 8px; }
 .wb-status.ok { color: var(--good); border-color: var(--good); }
 .use .q { min-width: 64px; text-align: right; white-space: nowrap; }
-.wb-wo { margin: 0 0 4px 28px; }
-.wb-wo > summary { min-height: 32px; font-size: 13px; }
+.wb-wo { margin: 0; }
+.wb-wo > summary { min-height: 40px; font-size: 13px; }
 .wb-quellen { display: grid; gap: 4px; padding: 4px 0 8px 0; border-bottom: 1px solid var(--rule); font-size: 13px; }
 .wb-quellen div { display: grid; grid-template-columns: 32px 1fr auto; gap: 8px; align-items: center; }
 .laden-bild.mini { width: 32px; height: 32px; background: var(--sheet); }

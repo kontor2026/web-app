@@ -14,12 +14,7 @@ app.innerHTML = `
   <p class="eyebrow">${icon(ziel ? 'beleg' : 'schaetzung')}${ziel ? 'Quelle prüfen' : 'Eigene Schätzung'}</p>
   <h1>${esc(titel)}</h1>
   ${was ? `<p class="quelle-was">${esc(was)}</p>` : ''}
-  <dl class="facts">
-    ${von ? `<div><dt>Von</dt><dd>${esc(von)}</dd></div>` : ''}
-    ${jahr ? `<div><dt>Jahr</dt><dd>${esc(jahr)}</dd></div>` : ''}
-    ${seite ? `<div><dt>Seite</dt><dd>${esc(seite)}</dd></div>` : ''}
-    ${sicher ? `<div><dt>Du landest auf</dt><dd class="quelle-ziel">${esc(ziel.hostname)}</dd></div>` : ''}
-  </dl>
+  <p class="quelle-zeile">${[von, jahr, seite, sicher ? ziel.hostname : null].filter(Boolean).map(esc).join(' · ')}</p>
   <div class="quelle-knoepfe">
     <button class="btn ghost" id="zurueck"><span class="pfeil">←</span>Zurück</button>
     ${sicher ? `<a class="btn primary" href="${esc(ziel.href)}" rel="noopener noreferrer">Zur Quelle<span class="pfeil">→</span></a>` : ''}

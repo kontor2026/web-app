@@ -121,7 +121,7 @@ function zeigeIdeen() {
           ${p.ok ? '' : `<details class="wb-wo" data-k="${k}" ${offen.has(k) ? 'open' : ''}><summary>Wo finde ich das?</summary><div class="wb-quellen">${p.ids.flatMap((id) => K[id]?.in ?? []).filter((v, j, a) => a.indexOf(v) === j).slice(0, 6).map((oid) => `
             <div>${bild(oid, 'mini')}<a href="../atlas/#kat=${oid}">${esc(objektVon.get(oid)?.name ?? oid)}</a><button data-id="${oid}" data-d="1" aria-label="hinzufügen">+</button></div>`).join('')}</div></details>`}`;
       }).join('')}</div>
-      <details class="wb-anleitung"><summary>Anleitung · ${esc(r.dauer ?? '')}</summary>
+      <details class="wb-anleitung"><summary>Anleitung</summary>
         <div class="tools">${(r.werkzeug ?? []).map((w) => `<span class="tag">${esc(WERKZEUG[w] ?? w)}</span>`).join('')}</div>
         <ol class="steps-list">${(r.schritte ?? []).map((x) => `<li>${esc(x)}</li>`).join('')}</ol>
         ${r.sicherheit ? `<p class="note warn">${esc(r.sicherheit)}</p>` : ''}

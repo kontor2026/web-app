@@ -208,3 +208,12 @@ html { scroll-padding-bottom: calc(var(--tabs) + 88px); }
 /* Quellen-Chip: überall gleich, Symbol + Wort */
 .chip-q { display: inline-flex; align-items: center; gap: 4px; }
 .chip-q .icon { width: 12px; height: 12px; stroke-width: 1.8; }
+
+/* Quellen-Chip: feste Form, erbt nichts vom Umfeld */
+.chip-q, h3 .chip-q, summary .chip-q, .lw-zahl .chip-q, b .chip-q {
+  display: inline-flex; align-items: center; gap: 4px; height: 22px; padding: 0 7px; margin-left: 6px; vertical-align: middle;
+  font: 400 11px/1 var(--mono); letter-spacing: 0; text-transform: none; color: var(--ink-3);
+  border: 1px solid var(--rule); border-radius: 2px; background: transparent; text-decoration: none; white-space: nowrap;
+}
+.chip-q.schaetzung { border-style: dashed; }
+.chip-q:hover { border-color: var(--accent); color: var(--accent); }
