@@ -7,15 +7,15 @@
    "name": "40 Mini-LEDs",
    "short": "LEDs",
    "shape": "cyl",
-   "x": 3,
-   "y": 3,
-   "w": 99,
-   "z": 28,
+   "x": 12,
+   "y": 12,
+   "w": 81,
+   "z": 27,
    "h": 4,
    "explode": [
     0,
     0,
-    78.0
+    75.0
    ],
    "mass": 9.6,
    "materials": [
@@ -37,334 +37,334 @@
     ]
    ],
    "info": "Winzige Leuchtdioden, in Tropfen aus Kunstharz eingegossen und direkt auf den Draht gelötet. Sie lassen sich nicht einzeln abtrennen, die ganze Kette ist Elektroschrott.",
-   "color": "#E4E6DC",
+   "color": "#F3EBCB",
    "opacity": 0.75,
    "form": "torus",
    "marks": [
     {
      "shape": "cyl",
-     "x": 19,
-     "y": 19,
+     "x": 10,
+     "y": 10,
      "w": 61,
      "zeichnung": true,
      "fill": "#1A1C1B"
     },
     {
      "shape": "cyl",
-     "x": 93.04,
-     "y": 47.5,
+     "x": 75.76,
+     "y": 38.5,
      "w": 4,
      "fill": "#F6D86B",
      "zeichnung": true
     },
     {
      "shape": "cyl",
-     "x": 89.57,
-     "y": 64.93,
+     "x": 72.92,
+     "y": 52.76,
      "w": 4,
      "fill": "#F6D86B",
      "zeichnung": true
     },
     {
      "shape": "cyl",
-     "x": 79.7,
-     "y": 79.7,
+     "x": 64.85,
+     "y": 64.85,
      "w": 4,
      "fill": "#F6D86B",
      "zeichnung": true
     },
     {
      "shape": "cyl",
-     "x": 64.93,
-     "y": 89.57,
+     "x": 52.76,
+     "y": 72.92,
      "w": 4,
      "fill": "#F6D86B",
      "zeichnung": true
     },
     {
      "shape": "cyl",
-     "x": 47.5,
-     "y": 93.04,
+     "x": 38.5,
+     "y": 75.76,
      "w": 4,
      "fill": "#F6D86B",
      "zeichnung": true
     },
     {
      "shape": "cyl",
-     "x": 30.07,
-     "y": 89.57,
+     "x": 24.24,
+     "y": 72.92,
      "w": 4,
      "fill": "#F6D86B",
      "zeichnung": true
     },
     {
      "shape": "cyl",
-     "x": 15.3,
-     "y": 79.7,
+     "x": 12.15,
+     "y": 64.85,
      "w": 4,
      "fill": "#F6D86B",
      "zeichnung": true
     },
     {
      "shape": "cyl",
-     "x": 5.43,
-     "y": 64.93,
+     "x": 4.08,
+     "y": 52.76,
      "w": 4,
      "fill": "#F6D86B",
      "zeichnung": true
     },
     {
      "shape": "cyl",
-     "x": 1.96,
-     "y": 47.5,
+     "x": 1.24,
+     "y": 38.5,
      "w": 4,
      "fill": "#F6D86B",
      "zeichnung": true
     },
     {
      "shape": "cyl",
-     "x": 5.43,
-     "y": 30.07,
+     "x": 4.08,
+     "y": 24.24,
      "w": 4,
      "fill": "#F6D86B",
      "zeichnung": true
     },
     {
      "shape": "cyl",
-     "x": 15.3,
-     "y": 15.3,
+     "x": 12.15,
+     "y": 12.15,
      "w": 4,
      "fill": "#F6D86B",
      "zeichnung": true
     },
     {
      "shape": "cyl",
-     "x": 30.07,
-     "y": 5.43,
+     "x": 24.24,
+     "y": 4.08,
      "w": 4,
      "fill": "#F6D86B",
      "zeichnung": true
     },
     {
      "shape": "cyl",
-     "x": 47.5,
-     "y": 1.96,
+     "x": 38.5,
+     "y": 1.24,
      "w": 4,
      "fill": "#F6D86B",
      "zeichnung": true
     },
     {
      "shape": "cyl",
-     "x": 64.93,
-     "y": 5.43,
+     "x": 52.76,
+     "y": 4.08,
      "w": 4,
      "fill": "#F6D86B",
      "zeichnung": true
     },
     {
      "shape": "cyl",
-     "x": 79.7,
-     "y": 15.3,
+     "x": 64.85,
+     "y": 12.15,
      "w": 4,
      "fill": "#F6D86B",
      "zeichnung": true
     },
     {
      "shape": "cyl",
-     "x": 89.57,
-     "y": 30.07,
+     "x": 72.92,
+     "y": 24.24,
      "w": 4,
      "fill": "#F6D86B",
      "zeichnung": true
     },
     {
      "shape": "cyl",
-     "x": 87.1,
-     "y": 47.5,
+     "x": 72.52,
+     "y": 38.5,
      "w": 4,
      "fill": "#F6D86B",
      "zeichnung": true
     },
     {
      "shape": "cyl",
-     "x": 83.18,
-     "y": 64.68,
+     "x": 69.15,
+     "y": 53.26,
      "w": 4,
      "fill": "#F6D86B",
      "zeichnung": true
     },
     {
      "shape": "cyl",
-     "x": 72.19,
-     "y": 78.46,
+     "x": 59.71,
+     "y": 65.1,
      "w": 4,
      "fill": "#F6D86B",
      "zeichnung": true
     },
     {
      "shape": "cyl",
-     "x": 56.31,
-     "y": 86.11,
+     "x": 46.07,
+     "y": 71.67,
      "w": 4,
      "fill": "#F6D86B",
      "zeichnung": true
     },
     {
      "shape": "cyl",
-     "x": 38.69,
-     "y": 86.11,
+     "x": 30.93,
+     "y": 71.67,
      "w": 4,
      "fill": "#F6D86B",
      "zeichnung": true
     },
     {
      "shape": "cyl",
-     "x": 22.81,
-     "y": 78.46,
+     "x": 17.29,
+     "y": 65.1,
      "w": 4,
      "fill": "#F6D86B",
      "zeichnung": true
     },
     {
      "shape": "cyl",
-     "x": 11.82,
-     "y": 64.68,
+     "x": 7.85,
+     "y": 53.26,
      "w": 4,
      "fill": "#F6D86B",
      "zeichnung": true
     },
     {
      "shape": "cyl",
-     "x": 7.9,
-     "y": 47.5,
+     "x": 4.48,
+     "y": 38.5,
      "w": 4,
      "fill": "#F6D86B",
      "zeichnung": true
     },
     {
      "shape": "cyl",
-     "x": 11.82,
-     "y": 30.32,
+     "x": 7.85,
+     "y": 23.74,
      "w": 4,
      "fill": "#F6D86B",
      "zeichnung": true
     },
     {
      "shape": "cyl",
-     "x": 22.81,
-     "y": 16.54,
+     "x": 17.29,
+     "y": 11.9,
      "w": 4,
      "fill": "#F6D86B",
      "zeichnung": true
     },
     {
      "shape": "cyl",
-     "x": 38.69,
-     "y": 8.89,
+     "x": 30.93,
+     "y": 5.33,
      "w": 4,
      "fill": "#F6D86B",
      "zeichnung": true
     },
     {
      "shape": "cyl",
-     "x": 56.31,
-     "y": 8.89,
+     "x": 46.07,
+     "y": 5.33,
      "w": 4,
      "fill": "#F6D86B",
      "zeichnung": true
     },
     {
      "shape": "cyl",
-     "x": 72.19,
-     "y": 16.54,
+     "x": 59.71,
+     "y": 11.9,
      "w": 4,
      "fill": "#F6D86B",
      "zeichnung": true
     },
     {
      "shape": "cyl",
-     "x": 83.18,
-     "y": 30.32,
+     "x": 69.15,
+     "y": 23.74,
      "w": 4,
      "fill": "#F6D86B",
      "zeichnung": true
     },
     {
      "shape": "cyl",
-     "x": 81.16,
-     "y": 47.5,
+     "x": 70.09,
+     "y": 38.5,
      "w": 4,
      "fill": "#F6D86B",
      "zeichnung": true
     },
     {
      "shape": "cyl",
-     "x": 74.73,
-     "y": 67.28,
+     "x": 64.06,
+     "y": 57.07,
      "w": 4,
      "fill": "#F6D86B",
      "zeichnung": true
     },
     {
      "shape": "cyl",
-     "x": 57.9,
-     "y": 79.51,
+     "x": 48.26,
+     "y": 68.54,
      "w": 4,
      "fill": "#F6D86B",
      "zeichnung": true
     },
     {
      "shape": "cyl",
-     "x": 37.1,
-     "y": 79.51,
+     "x": 28.74,
+     "y": 68.54,
      "w": 4,
      "fill": "#F6D86B",
      "zeichnung": true
     },
     {
      "shape": "cyl",
-     "x": 20.27,
-     "y": 67.28,
+     "x": 12.94,
+     "y": 57.07,
      "w": 4,
      "fill": "#F6D86B",
      "zeichnung": true
     },
     {
      "shape": "cyl",
-     "x": 13.84,
-     "y": 47.5,
+     "x": 6.91,
+     "y": 38.5,
      "w": 4,
      "fill": "#F6D86B",
      "zeichnung": true
     },
     {
      "shape": "cyl",
-     "x": 20.27,
-     "y": 27.72,
+     "x": 12.94,
+     "y": 19.93,
      "w": 4,
      "fill": "#F6D86B",
      "zeichnung": true
     },
     {
      "shape": "cyl",
-     "x": 37.1,
-     "y": 15.49,
+     "x": 28.74,
+     "y": 8.46,
      "w": 4,
      "fill": "#F6D86B",
      "zeichnung": true
     },
     {
      "shape": "cyl",
-     "x": 57.9,
-     "y": 15.49,
+     "x": 48.26,
+     "y": 8.46,
      "w": 4,
      "fill": "#F6D86B",
      "zeichnung": true
     },
     {
      "shape": "cyl",
-     "x": 74.73,
-     "y": 27.72,
+     "x": 64.06,
+     "y": 19.93,
      "w": 4,
      "fill": "#F6D86B",
      "zeichnung": true
@@ -378,15 +378,15 @@
    "name": "Kupferdraht (lackiert)",
    "short": "Kupferdraht",
    "shape": "cyl",
-   "x": 2,
-   "y": 2,
-   "w": 101,
-   "z": 1,
-   "h": 26,
+   "x": 2.5,
+   "y": 2.5,
+   "w": 100,
+   "z": 3,
+   "h": 22,
    "explode": [
     0,
     0,
-    53.0
+    51.0
    ],
    "mass": 36,
    "materials": [
@@ -407,7 +407,7 @@
      "shape": "cyl",
      "x": 0.0,
      "y": 0.0,
-     "w": 101.0,
+     "w": 100.0,
      "zeichnung": true,
      "fill": "#C5803D"
     },
@@ -415,7 +415,7 @@
      "shape": "cyl",
      "x": 3.2,
      "y": 3.2,
-     "w": 94.6,
+     "w": 93.6,
      "zeichnung": true,
      "fill": "#B06F33"
     },
@@ -423,7 +423,7 @@
      "shape": "cyl",
      "x": 6.4,
      "y": 6.4,
-     "w": 88.2,
+     "w": 87.2,
      "zeichnung": true,
      "fill": "#C5803D"
     },
@@ -431,7 +431,7 @@
      "shape": "cyl",
      "x": 9.6,
      "y": 9.6,
-     "w": 81.8,
+     "w": 80.8,
      "zeichnung": true,
      "fill": "#B06F33"
     },
@@ -439,7 +439,7 @@
      "shape": "cyl",
      "x": 12.8,
      "y": 12.8,
-     "w": 75.4,
+     "w": 74.4,
      "zeichnung": true,
      "fill": "#C5803D"
     },
@@ -447,7 +447,7 @@
      "shape": "cyl",
      "x": 16.0,
      "y": 16.0,
-     "w": 69.0,
+     "w": 68.0,
      "zeichnung": true,
      "fill": "#B06F33"
     },
@@ -455,7 +455,7 @@
      "shape": "cyl",
      "x": 19.2,
      "y": 19.2,
-     "w": 62.6,
+     "w": 61.6,
      "zeichnung": true,
      "fill": "#1A1C1B"
     }

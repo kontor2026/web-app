@@ -27,8 +27,8 @@
     ]
    ],
    "info": "Gehärtetes Glas, auf die Wägezellen geklebt oder geschraubt. Zerspringt bei einem Schlag auf die Kante in viele Krümel.",
-   "color": "#C9DEDF",
-   "opacity": 0.65,
+   "color": "#202427",
+   "opacity": 0.92,
    "marks": [
     {
      "shape": "box",

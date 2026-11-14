@@ -22,7 +22,7 @@ teile = [
          info='Hält das aufgerollte Kabel zusammen. Einfach abziehen, es kommt in den Restmüll oder wird weiterverwendet.',
          color='#55606A', marks=raster(1.5, 2, 1, 8, 6, 2, 0, 5, fill='#4A535C')),
     teil('kabel_adern', 'cable_copper_core', 'Kupferadern des Ladekabels', 'Adern', 'cyl',
-         x=20, y=9, w=60, d=32, z=25, h=4, explode=[DX, 0, 14], form='torus', mass=28,
+         x=16, y=7, w=68, d=36, z=25, h=4, explode=[DX, 0, 14], form='torus', mass=28,
          materials=[['kupfer', 75], ['pvc', 25]],
          info='Zwei Leiter für Plus und Minus, oft als Innenader mit Kupfergeflecht darum. '
               'Nach dem Abisolieren kommt reines Kupfer zum Vorschein.',

@@ -584,6 +584,7 @@
     ]
    ],
    "info": "Schnell drehender Motor mit Kupferwicklung, Kohlebürsten und Lüfterrad aus Aluminium. Sitzt in Gummilagern, die Kabel sind gesteckt.",
+   "color": "#C3C8CC",
    "marks": [
     {
      "shape": "cyl",

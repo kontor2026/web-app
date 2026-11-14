@@ -25,7 +25,7 @@ def waegezelle(i, x, y):
 
 teile = [
     teil('glasplatte', 'glass_platform', 'Glasplatte (Sicherheitsglas)', 'Glasplatte', 'box',
-         x=0, y=0, w=150, d=200, z=15, h=4.5, r=10, mass=320, color='#C9DEDF', opacity=0.65,
+         x=0, y=0, w=150, d=200, z=15, h=4.5, r=10, mass=320, color='#202427', opacity=0.92,
          info='Gehärtetes Glas, auf die Wägezellen geklebt oder geschraubt. Zerspringt bei einem Schlag auf die Kante in viele Krümel.',
          marks=[mark('box', 45, 164, 60, 30, 3, '#1E2226'), mark('box', 49, 168, 52, 22, 1, '#A9B4A2')]
          + [m for i in range(3) for m in (mark('box', 54 + i * 11, 171, 1.4, 16, 0.4, '#2B302C'),

@@ -166,16 +166,16 @@
    "mass": 1657.5,
    "materials": [
     [
-     "stahl",
-     97
-    ],
-    [
      "druck",
      3
+    ],
+    [
+     "stahl",
+     97
     ]
    ],
    "info": "Lackiertes Stahlblech, U-förmig über das Gerät gebogen und hinten verschraubt. Nie selbst öffnen: Der Hochspannungskondensator kann auch ausgesteckt noch tödliche Spannung speichern; nur der Wertstoffhof bzw. die Elektroschrott-Annahme darf das Gerät zerlegen.",
-   "color": "#E4E7EA",
+   "color": "#DADCDD",
    "marks": [
     {
      "shape": "box",

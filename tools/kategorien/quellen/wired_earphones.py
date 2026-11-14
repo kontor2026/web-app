@@ -70,10 +70,10 @@ teile = [
          color='#C9CDD0', marks=[mark('box', 0.5, 3, 2.5, 0.8, 0.3, '#22272B'), mark('box', 0.5, 7, 2.5, 0.8, 0.3, '#22272B')]),
     # Kabel als flache Rolle
     teil('adern', 'cable_copper_core', 'Kupferlitzen (Lackdraht)', 'Adern', 'cyl',
-         x=1, y=1, w=D - 2, z=0.5, h=3, form='torus', mass=2.5, materials=[['kupfer', 80], ['polyester', 20]],
+         x=0.5, y=0.5, w=D - 1, z=0.5, h=3, form='torus', mass=2.5, materials=[['kupfer', 80], ['polyester', 20]],
          info='Hauchdünne Kupferlitzen, mit farbigem Lack isoliert (rot, grün, kupferfarben). Lack und Kupfer '
               'trennt erst die Recyclinganlage.',
-         color='#D08A52', marks=windungen(D - 2, farben=('#C5803D', '#B06F33'))
+         color='#D08A52', marks=windungen(D - 1, farben=('#C5803D', '#B06F33'))
          + [mark('cyl', 1, 27, 1.6, fill='#C8423A'), mark('cyl', 3.4, 27, 1.6, fill='#3E9A57')]),
     teil('fernbedienung', 'plastic_housing', 'Kabelfernbedienung mit Mikrofon', 'Fernbedienung', 'box',
          material_id='mixed_electronics', x=24, y=50, w=8, d=22, z=4, h=5, r=3.5, explode=[-10, 40, -4], mass=1.2,

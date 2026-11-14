@@ -13,9 +13,9 @@ WARNUNG = ' Nie selbst öffnen: Der Hochspannungskondensator kann auch ausgestec
 
 teile = [
     teil('haube', 'steel_microwave_cavity', 'Gehäusehaube (Stahlblech)', 'Haube', 'box',
-         x=0, y=0, w=450, d=325, z=10, h=250, r=4, mass=2000, materials=[['stahl', 97], ['druck', 3]],
+         x=0, y=0, w=450, d=325, z=10, h=250, r=4, mass=2000, materials=[['druck', 3], ['stahl', 97]],  # sichtbar: lackiertes Blech
          info='Lackiertes Stahlblech, U-förmig über das Gerät gebogen und hinten verschraubt.' + WARNUNG,
-         color='#E4E7EA', marks=raster(345, 40, 1, 12, 90, 6, 0, 14, r=2, fill='#B8BEC4')),
+         color='#DADCDD', marks=raster(345, 40, 1, 12, 90, 6, 0, 14, r=2, fill='#B8BEC4')),
     teil('drehteller', 'glass_turntable', 'Drehteller (Glas)', 'Drehteller', 'cyl',
          x=25, y=25, w=290, z=48, h=6, mass=1200,
          info='Hitzebeständiges Glas, einfach herausheben. Gehört nicht in den Altglascontainer, sondern in den Restmüll oder wird weiterverwendet.',

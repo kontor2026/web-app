@@ -41,17 +41,17 @@ def led_kreise(dm, ringe=((0.46, 16), (0.4, 14), (0.34, 10))):
 AA = [['zinkmangan', 80], ['stahl', 20]]
 teile = [
     teil('leds', 'led_module', '40 Mini-LEDs', 'LEDs', 'cyl',
-         material_id='mixed_electronics', x=3, y=3, w=D - 6, z=28, h=4, form='torus', mass=8,
+         material_id='mixed_electronics', x=12, y=12, w=81, z=27, h=4, form='torus', mass=8,
          materials=[['led', 40], ['pcabs', 40], ['kupfer', 10], ['lot', 10]],
          info='Winzige Leuchtdioden, in Tropfen aus Kunstharz eingegossen und direkt auf den Draht gelötet. '
               'Sie lassen sich nicht einzeln abtrennen, die ganze Kette ist Elektroschrott.',
-         color='#E4E6DC', opacity=0.75,
-         marks=[mark('cyl', 19, 19, D - 44, fill=LOCH, zeichnung=True)]
-         + led_kreise(D - 6)),
+         color='#F3EBCB', opacity=0.75,
+         marks=[mark('cyl', 10, 10, 61, fill=LOCH, zeichnung=True)]
+         + led_kreise(81, ringe=((0.46, 16), (0.42, 14), (0.39, 10)))),
     teil('draht', 'cable_copper_core', 'Kupferdraht (lackiert)', 'Kupferdraht', 'cyl',
-         x=2, y=2, w=D - 4, z=1, h=26, form='torus', mass=30, materials=[['kupfer', 85], ['polyester', 15]],
+         x=2.5, y=2.5, w=100, z=3, h=22, form='torus', mass=30, materials=[['kupfer', 85], ['polyester', 15]],
          info='Zwei dünne, lackisolierte Kupferdrähte, an denen die LEDs hängen. Biegsam, aber bricht bei häufigem Knicken.',
-         color='#D08A52', marks=windungen(D - 4, farben=('#C5803D', '#B06F33'))),
+         color='#D08A52', marks=windungen(100, farben=('#C5803D', '#B06F33'))),
     teil('mantel', 'cable_insulation', 'Kabelisolierung', 'Isolierung', 'cyl',
          x=0, y=0, w=D, z=0, h=28, form='torus', mass=22, materials=[['pvc', 100]],
          info='Grüne oder durchsichtige PVC-Hülle um den Draht. Zum Recycling muss sie in der Anlage vom Kupfer '

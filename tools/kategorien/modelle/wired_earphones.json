@@ -433,9 +433,9 @@
    "name": "Kupferlitzen (Lackdraht)",
    "short": "Adern",
    "shape": "cyl",
-   "x": 1,
-   "y": 1,
-   "w": 58,
+   "x": 0.5,
+   "y": 0.5,
+   "w": 59,
    "z": 0.5,
    "h": 3,
    "explode": [
@@ -462,7 +462,7 @@
      "shape": "cyl",
      "x": 0.0,
      "y": 0.0,
-     "w": 58.0,
+     "w": 59.0,
      "zeichnung": true,
      "fill": "#C5803D"
     },
@@ -470,7 +470,7 @@
      "shape": "cyl",
      "x": 2.6,
      "y": 2.6,
-     "w": 52.8,
+     "w": 53.8,
      "zeichnung": true,
      "fill": "#B06F33"
     },
@@ -478,7 +478,7 @@
      "shape": "cyl",
      "x": 5.2,
      "y": 5.2,
-     "w": 47.6,
+     "w": 48.6,
      "zeichnung": true,
      "fill": "#C5803D"
     },
@@ -486,7 +486,7 @@
      "shape": "cyl",
      "x": 7.8,
      "y": 7.8,
-     "w": 42.4,
+     "w": 43.4,
      "zeichnung": true,
      "fill": "#B06F33"
     },
@@ -494,7 +494,7 @@
      "shape": "cyl",
      "x": 10.4,
      "y": 10.4,
-     "w": 37.2,
+     "w": 38.2,
      "zeichnung": true,
      "fill": "#C5803D"
     },
@@ -502,7 +502,7 @@
      "shape": "cyl",
      "x": 13.0,
      "y": 13.0,
-     "w": 32.0,
+     "w": 33.0,
      "zeichnung": true,
      "fill": "#B06F33"
     },
@@ -510,7 +510,7 @@
      "shape": "cyl",
      "x": 15.6,
      "y": 15.6,
-     "w": 26.8,
+     "w": 27.8,
      "zeichnung": true,
      "fill": "#141618"
     },

@@ -40,7 +40,7 @@ teile = [
          x=140, y=40, w=130, z=30, h=130, mass=1400,
          materials=[['stahl', 45], ['kupfer', 25], ['alu', 10], ['pcabs', 15], ['graphit', 5]],
          info='Schnell drehender Motor mit Kupferwicklung, Kohlebürsten und Lüfterrad aus Aluminium. Sitzt in Gummilagern, die Kabel sind gesteckt.',
-         marks=[mark('cyl', 15, 15, 100, fill='#B87333'), mark('cyl', 45, 45, 40, fill='#9AA2A6')]),
+         color='#C3C8CC', marks=[mark('cyl', 15, 15, 100, fill='#B87333'), mark('cyl', 45, 45, 40, fill='#9AA2A6')]),
     teil('kabeltrommel', 'cable_insulation', 'Kabeltrommel', 'Kabeltrommel', 'cyl', material_id='pp',
          x=35, y=30, w=95, z=40, h=70, mass=350, materials=[['pp', 80], ['stahl', 15], ['kupfer', 5]],
          info='Rolle mit Federmotor, die das Kabel aufwickelt. Vorsicht: Die gespannte Stahlfeder kann herausschnellen.',
