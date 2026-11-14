@@ -127,7 +127,7 @@ function setCaption(step, delay) {
 // Letzte Folie: „Bring … mit.“ kippt durch mehrere Gegenstände, dann kippt alles zum Namen, dazu der QR-Code
 function finale(el) {
   el.classList.add('finale');
-  el.innerHTML = `<div class="rad">${MITBRINGEN.map((w) => `<h2>Bring ${w} mit.</h2>`).join('')}</div><div class="name"><h1>${PRODUKTNAME}</h1><p>${SCHLUSSSATZ}</p></div>`;
+  el.innerHTML = `<div class="rad">${MITBRINGEN.map((w) => `<h2>Bring ${w} mit.</h2>`).join('')}</div><div class="name"><h1>${SCHLUSSSATZ}</h1><p>${PRODUKTNAME}</p></div>`;
   const zeilen = [...el.querySelectorAll('.rad h2')];
   const zeige = (i) => zeilen.forEach((z, j) => { z.classList.toggle('an', j === i); z.classList.toggle('weg', j < i); });
   requestAnimationFrame(() => { el.classList.add('in'); zeige(0); });

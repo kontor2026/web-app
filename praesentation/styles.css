@@ -179,10 +179,10 @@ body.ready #loader { opacity: 0; visibility: hidden; }
   transform-origin: 50% 50% calc(-2 * var(--u)); transition: transform 0.75s cubic-bezier(.3,0,.2,1), opacity 0.5s ease; backface-visibility: hidden; }
 .caption.finale .rad h2.an { opacity: 1; transform: none; }
 .caption.finale .rad h2.weg { opacity: 0; transform: rotateX(80deg) translateY(calc(-1.5 * var(--u))); }
-.caption.finale .name { position: absolute; left: 0; bottom: 0; margin: 0; white-space: nowrap; color: #f2f0ea;
+.caption.finale .name { position: absolute; left: 0; bottom: 0; margin: 0; width: calc(62 * var(--u)); color: #f2f0ea;
   opacity: 0; transform: perspective(calc(120 * var(--u))) rotateX(-90deg); transform-origin: 50% 100%; transition: transform 1s cubic-bezier(.2,.7,.2,1) 0.35s, opacity 0.6s ease 0.35s; }
-.caption.finale .name h1 { margin: 0; font-size: calc(7 * var(--u)); font-weight: 700; letter-spacing: -0.035em; line-height: 1; }
-.caption.finale .name p { margin: calc(1.4 * var(--u)) 0 0; font-size: calc(2 * var(--u)); font-weight: 500; color: #c9d3dc; }
+.caption.finale .name h1 { margin: 0; font-size: calc(5.6 * var(--u)); font-weight: 700; letter-spacing: -0.03em; line-height: 1.05; text-wrap: balance; }
+.caption.finale .name p { margin: calc(1.4 * var(--u)) 0 0; font-size: calc(1.8 * var(--u)); font-weight: 600; letter-spacing: 0.02em; color: var(--teal); }
 .caption.finale .name h1::after { content: ''; display: block; height: calc(0.5 * var(--u)); width: calc(9 * var(--u)); margin-top: calc(1.2 * var(--u)); background: var(--teal); border-radius: 999px; }
 .caption.finale.kipp .rad { transform: perspective(calc(120 * var(--u))) rotateX(90deg); opacity: 0; }
 .caption.finale.kipp .name { opacity: 1; transform: perspective(calc(120 * var(--u))) rotateX(0deg); }

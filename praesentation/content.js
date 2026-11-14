@@ -8,7 +8,7 @@ export const APP_URL = new URLSearchParams(location.search).get('app') || './moc
 
 // Name auf der letzten Folie (steht noch nicht fest) und Ziel des QR-Codes (assets/qr-app.svg, neu erzeugen bei Änderung)
 export const PRODUKTNAME = 'ReSource Scanner';
-export const SCHLUSSSATZ = 'KI für die Kreislaufwirtschaft von morgen.';
+export const SCHLUSSSATZ = 'Was man versteht, wirft man nicht weg.';
 export const QR_URL = 'kontor2026.github.io/web-app';
 export const QR_TEXT = 'Schau nach, was bei dir noch rumliegt.';
 
@@ -53,7 +53,7 @@ export const slides = [
         notes: 'Genau hier setzt der ReSource Scanner an. Gegenstand drauflegen, und er zeigt, was drin steckt, was es wert ist und was man daraus bauen kann. Das Handy kommt zurück in den Kreislauf, und mit ihm die graue Energie: weiternutzen, umbauen, und erst am Ende fachgerecht recyceln.',
       },
       {
-        id: 'lernen', name: 'Lernkreislauf', caption: 'Was man versteht, wirft man nicht weg.',
+        id: 'lernen', name: 'Lernkreislauf', caption: 'Aus Müll wird Wissen.',
         notes: 'Unsere These: Erst wer hautnah erlebt, was in seinen alten Geräten steckt, lässt sie nicht mehr in der Schublade vergammeln. Darum ist der Scanner ein Lernkreislauf: entdecken, was drin steckt; verstehen, woher es kommt und was es wert ist; daraus bauen; und das Wissen weitergeben. Jeder bestätigte Scan macht den Katalog für alle besser.',
       },
     ],
@@ -105,7 +105,7 @@ export const slides = [
       },
       {
         id: 'ende', name: 'Bring es mit', caption: '', finale: true, qr: true,
-        notes: 'Und damit zurück zur Schublade vom Anfang: Bringt mit, was bei euch noch rumliegt. Ab Ende Februar 2027 in der Schützenstraße 62 in Lübeck. [Text dreht sich durch die Gegenstände, dann der Name.] ReSource Scanner: KI für die Kreislaufwirtschaft von morgen.',
+        notes: 'Und damit zurück zur Schublade vom Anfang: Bringt mit, was bei euch noch rumliegt. Ab Ende Februar 2027 in der Schützenstraße 62 in Lübeck. [Text dreht sich durch die Gegenstände, dann der Name.] Was man versteht, wirft man nicht weg. ReSource Scanner.',
       },
     ],
   },
