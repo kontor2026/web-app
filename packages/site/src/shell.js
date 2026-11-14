@@ -40,7 +40,37 @@ export function shell(aktiv, root) {
   document.querySelector('.menue-scrim').addEventListener('click', zu);
   document.querySelector('.menue-zu').addEventListener('click', zu);
   addEventListener('keydown', (e) => { if (e.key === 'Escape') zu(); });
+  sperreSeitenScroll();
   return document.getElementById('app');
+}
+
+// Handy: Die Seite selbst bewegt sich nie. iOS (Safari wie Chrome, beide WebKit) schiebt die Seite trotz overflow:hidden
+// mit dem Finger und dem Gummiband-Effekt; deshalb ist body fest (site.css) und jede Wischbewegung wird hier verworfen,
+// außer sie trifft eine Fläche, die wirklich etwas zu scrollen hat (aufgeklappte Liste) oder ein 3D-Bild / einen Globus.
+function sperreSeitenScroll() {
+  const handy = matchMedia('(max-width: 900px)');
+  let start = null;
+  const kannScrollen = (el, dy) => {
+    for (; el && el !== document.body; el = el.parentElement) {
+      if (el.tagName === 'CANVAS' || el.closest?.('.lw-globus, .lw-szene, .viewer, [data-wischen]')) return true;
+      const s = getComputedStyle(el);
+      if (/(auto|scroll)/.test(s.overflowY) && el.scrollHeight > el.clientHeight + 1) {
+        if (dy == null) return true;
+        if (dy > 0 && el.scrollTop > 0) return true;                                        // Finger nach unten: nach oben scrollen
+        if (dy < 0 && el.scrollTop + el.clientHeight < el.scrollHeight - 1) return true;     // Finger nach oben: nach unten scrollen
+      }
+      if (/(auto|scroll)/.test(s.overflowX) && el.scrollWidth > el.clientWidth + 1) return true;
+    }
+    return false;
+  };
+  document.addEventListener('touchstart', (e) => { start = e.touches[0]?.clientY ?? null; }, { passive: true });
+  document.addEventListener('touchmove', (e) => {
+    if (!handy.matches || e.touches.length > 1) return;
+    const dy = start == null ? null : e.touches[0].clientY - start;
+    if (!kannScrollen(e.target, dy)) e.preventDefault();
+  }, { passive: false });
+  // iOS zoomt beim Doppeltippen und Zwei-Finger-Ziehen auf die ganze Seite; nur 3D-Bilder dürfen zoomen
+  document.addEventListener('gesturestart', (e) => { if (handy.matches && !e.target.closest?.('canvas, .lw-globus, .lw-szene')) e.preventDefault(); });
 }
 
 // Der Lebensweg eines Gegenstands: sieben Stationen, überall gleich benannt und gleich gezeichnet

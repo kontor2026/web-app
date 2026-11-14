@@ -236,3 +236,31 @@
 .teil-material { padding: 4px 0 8px 38px; background: var(--accent-soft); }
 .prow.sel { background: var(--accent-soft); }
 .prow.sel .n { color: var(--accent); }
+
+/* ---------- Handy: Datenblatt passt ohne Scrollen, „Weiter“ steht immer unten ---------- */
+.lw-paar { display: contents; }
+@media (min-width: 901px) { .lw .panel > .lw-weiter-zeile { padding: 0 30px 32px; margin-top: -24px; } }
+@media (max-width: 900px) {
+  .lw .panel { display: flex; flex-direction: column; overflow: hidden; }
+  .lw .panel-inner { flex: 1 1 auto; min-height: 0; overflow-y: auto; overscroll-behavior: contain; align-content: start; }
+  .lw-weiter-zeile { flex: none; padding: 8px 16px max(10px, env(safe-area-inset-bottom, 0px)); border-top: 1px solid var(--rule-2); background: var(--sheet); }
+  .lw-weiter-zeile .lw-weiter { margin: 0; }
+  .lw-wahl-liste > span { display: none; }
+  /* Zwei Aufklapper nebeneinander; der geöffnete nimmt die ganze Breite */
+  .lw-paar { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .lw-paar > .lw-block { border-top: 0; min-width: 0; }
+  .lw-paar > .lw-block[open] { grid-column: 1 / -1; order: -1; }
+  .lw-paar > .note, .lw-paar > p { grid-column: 1 / -1; }
+  .lw-paar summary { white-space: nowrap; padding: 0 6px 0 10px !important; gap: 6px; font-size: 13px !important; overflow: hidden; }
+  .lw-paar summary::after { width: 24px !important; height: 24px !important; font-size: 18px !important; }
+  .lw-paar > .btn { height: 46px; border-radius: 8px; justify-content: space-between; font-size: 14px; padding: 0 12px; }
+  .lw-paar > .lw-block:only-child, .lw-paar > .btn:only-child { grid-column: 1 / -1; }
+  /* Bauideen dicht untereinander */
+  .lw-rezepte { gap: 8px; }
+  .lw-rezept { border-top: 0; padding-top: 0; gap: 6px; }
+  /* Datenblatt so hoch wie nötig (zwischen 46 und 58 % der Fläche), das Bild darüber nimmt den Rest */
+  .lw .panel, .lw[data-schritt] .panel { flex: 0 1 auto; min-height: 46%; max-height: 58%; }
+  .lw-paar summary .chip-q { font-size: 0; gap: 0; padding: 0 5px; margin-left: auto; }
+  .lw-paar summary .chip-q .icon { width: 13px; height: 13px; }
+  .lw-zahl span { font-size: 13px; line-height: 1.35; }
+}

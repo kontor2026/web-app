@@ -103,7 +103,7 @@ export function erzeugeGlobus(el, laender) {
       }
       drehe(false);                                  // Region bleibt ruhig stehen
       globus.polygonsData(feinGeo).arcsData([]);
-      globus.htmlElementsData(!namen ? [] : [
+      globus.htmlElementsData([
         ...orte.map((o) => ({ ...o, typ: 'ort', alt: 0.0008 })),
         ...hoefe.filter((h) => h.lat).map((h) => ({ lat: h.lat, lng: h.lng, name: h.name.replace('Recyclinghof ', ''), typ: 'hof', alt: 0.0008 })),
       ]);

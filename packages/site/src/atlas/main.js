@@ -133,7 +133,9 @@ function setzePanel(html) {
   const i = IDS.indexOf(schritt), naechste = SCHRITTE[i + 1];
   const weiter = naechste ? `<a class="lw-weiter" href="${link(naechste.id, null)}">${icon(naechste.id)}<span>Weiter: ${naechste.name}</span><span class="pfeil">→</span></a>`
     : `<a class="lw-weiter" href="../modelle/#kat=${obj.id}">${icon('gegenstand')}<span>3D-Modell ansehen</span><span class="pfeil">→</span></a>`;
-  panel().innerHTML = `<div class="panel-inner">${html}${weiter}</div>`;
+  // „Weiter“ steht außerhalb des Inhalts: auf dem Handy immer unten sichtbar, egal was aufgeklappt ist
+  panel().innerHTML = `<div class="panel-inner">${html}</div><div class="lw-weiter-zeile">${weiter}</div>`;
+  panel().querySelector('.panel-inner').scrollTop = 0;
   panel().scrollTop = 0;
 }
 const legende = (eintraege) => { document.getElementById('legende').innerHTML = eintraege.map(([f, t]) => `<span><i style="background:${f}"></i>${esc(t)}</span>`).join(''); };
@@ -176,9 +178,9 @@ function zeigeRohstoffe() {
         <i style="background:${y.farbe}"></i>${esc(y.name)}</a>`;
     }).join('')}</div>
     ${r ? `<div class="lw-zahl"><b>${gramm(menge)}</b><span>${esc(r.name)} im Gegenstand${st && spitze(st.anteile) ? ` · meist aus ${esc(land(spitze(st.anteile)[0]))} (${spitze(st.anteile)[1]} %)` : ''}${r.kritisch ? ` · <em class="krit">▲ kritisch für die EU</em>${chip(quelleUrl(QUELLE, ROH[gewaehlt].kritisch_quelle, ROH[gewaehlt].kritisch_pdf_seite), 'Verordnung (EU) 2024/1252, Anhang II', 'Quelle', { was: `${r.name} steht auf der EU-Liste kritischer Rohstoffe`, jahr: 2024 })}` : ''}</span>${schaetzung('tools/kategorien/rohstoffe.py', 'Aus dem 3D-Modell berechnet')}</div>` : ''}
-    ${st ? block(`Länder ${belegStufe(st, `${r.name} · ${SCHRITTE.find((x) => x.id === schritt).name}: ${land(spitze(st.anteile)[0])} ${spitze(st.anteile)[1]} %`)}`, `${alleLaender(st.anteile, st.rest)}`)
+    <div class="lw-paar">${st ? block(`Länder ${belegStufe(st, `${r.name} · ${SCHRITTE.find((x) => x.id === schritt).name}: ${land(spitze(st.anteile)[0])} ${spitze(st.anteile)[1]} %`)}`, `${alleLaender(st.anteile, st.rest)}`)
     : `<p class="note">Keine Länderdaten mit Quelle.</p>`}
-    <details class="lw-fluss lw-block" id="fluss"><summary>Woher kommt was?</summary><div class="lw-fluss-ort"></div></details>`);
+    <details class="lw-fluss lw-block" id="fluss"><summary>Woher kommt was?</summary><div class="lw-fluss-ort"></div></details></div>`);
   verbindeLaender();
   document.getElementById('rohstoff-wahl').addEventListener('change', (e) => { location.hash = link(schritt, e.target.value); });
   const fluss = document.getElementById('fluss');
@@ -267,11 +269,14 @@ function zeigeUpcycling() {
   const passend = (REZEPTE ?? []).filter((r) => (r.braucht ?? []).some((b) => [b.component_id, ...(b.oder ?? [])].some((c) => cids.has(c))))
     .map((r) => ({ r, s: stand(r, mitDiesem) })).sort((a, b) => b.s.ok / b.s.alle - a.s.ok / a.s.alle);
   const name = (cid) => daten.komponenten?.[cid]?.name ?? cid;
-  setzePanel(passend.length ? `<div class="lw-rezepte">${passend.map(({ r, s }) => `
+  // Die drei passendsten sofort, der Rest hinter einem Aufklapper (daneben der Weg zur Werkbank)
+  const rezept = ({ r, s }) => `
     <details class="lw-block lw-rezept"><summary><span class="lw-rezept-titel">${esc(r.titel)}</span>${s.baubar ? `<span class="haken" title="Alles da">${icon('haken')}</span>` : ''}</summary>
       <div class="uses">${s.posten.map((p) => `<div class="use ${p.ok ? 'da' : 'fehlt'}"><i></i><span title="${esc(postenName(p, mitDiesem, name).alle)}">${esc(postenName(p, mitDiesem, name).text)}${postenName(p, mitDiesem, name).mehr ? ` <small>+${postenName(p, mitDiesem, name).mehr}</small>` : ''}</span><span class="q">${p.soll > 1 ? `${geschaetzt(p) ? '≈' : ''}${p.soll}×` : ''}</span></div>`).join('')}</div>
-      <p class="lw-fuss">${esc(r.dauer ?? '')}${chip(r.quelle?.url, r.quelle?.titel, 'Quelle', { was: `Anleitung: ${r.titel}` })}</p></details>`).join('')}</div>
-    <a class="btn ghost" href="../werkbank/#bauen">${icon('werkbank')}Werkbank<span class="pfeil">→</span></a>`
+      <p class="lw-fuss">${esc(r.dauer ?? '')}${chip(r.quelle?.url, r.quelle?.titel, 'Quelle', { was: `Anleitung: ${r.titel}` })}</p></details>`;
+  setzePanel(passend.length ? `<div class="lw-rezepte">${passend.slice(0, 3).map(rezept).join('')}</div>
+    <div class="lw-paar">${passend.length > 3 ? `<details class="lw-block lw-mehr-rezepte"><summary>${passend.length - 3} weitere</summary><div class="lw-rezepte">${passend.slice(3).map(rezept).join('')}</div></details>` : ''}
+    <a class="btn ghost lw-zur-werkbank" href="../werkbank/#bauen">${icon('werkbank')}Werkbank<span class="pfeil">→</span></a></div>`
     : `<p class="note">${REZEPTE?.length ? 'Noch keine Bauidee nutzt Teile dieses Gegenstands.' : 'Die Bauideen werden gerade geschrieben.'}</p>`);
 }
 
@@ -291,11 +296,11 @@ function zeigeEntsorgung() {
   setzePanel(`
     <div class="lw-tonne" style="--f:${WEG_FARBE[e.weg]}"><i>${icon(WEG_ICON[e.weg] ?? 'tonne')}</i><div><b>${esc(w?.name ?? e.weg)}${chip(e.url, 'AWSH Abfall-ABC', 'Quelle', { was: `${obj.name}: ${w?.name ?? e.weg}`, von: 'Abfallwirtschaft Südholstein (AWSH)' })}</b><span>${esc(w?.kurz ?? '')}</span></div></div>
     ${e.hinweis ? `<p class="lw-hinweis">${esc(e.hinweis)}</p>` : ''}
-    ${(e.teile ?? []).length ? block('Getrennt entsorgen', `${e.teile.map((t) => `<div class="lw-teil" style="--f:${WEG_FARBE[t.weg]}"><i>${icon(WEG_ICON[t.weg] ?? 'tonne')}</i><span>${esc(obj.teile.find((x) => x.cid === t.component_id)?.name ?? daten.komponenten?.[t.component_id]?.name ?? t.component_id)}</span><b>${esc(AWSH.wege[t.weg]?.name ?? t.weg)}</b></div>`).join('')}`) : ''}
+    <div class="lw-paar">${(e.teile ?? []).length ? block('Getrennt entsorgen', `${e.teile.map((t) => `<div class="lw-teil" style="--f:${WEG_FARBE[t.weg]}"><i>${icon(WEG_ICON[t.weg] ?? 'tonne')}</i><span>${esc(obj.teile.find((x) => x.cid === t.component_id)?.name ?? daten.komponenten?.[t.component_id]?.name ?? t.component_id)}</span><b>${esc(AWSH.wege[t.weg]?.name ?? t.weg)}</b></div>`).join('')}`) : ''}
     ${e.unsicher ? `<p class="note">AWSH nennt den Gegenstand nicht direkt. Zuordnung nach der Regel für sein Material.</p>` : ''}
-    ${hof ? `<details class="lw-block lw-hof"><summary>${AWSH.recyclinghoefe.length} Recyclinghöfe ${chip('https://www.awsh.de/recyclinghoefe/uebersicht/', 'AWSH Recyclinghöfe', 'Quelle', { was: 'Adressen der Recyclinghöfe', von: 'Abfallwirtschaft Südholstein (AWSH)' })}</summary><div class="lw-hoefe">${AWSH.recyclinghoefe.map((h) => `
+    ${hof ? `<details class="lw-block lw-hof"><summary>${AWSH.recyclinghoefe.length} Recyclinghöfe</summary><p class="lw-fuss">Adressen ${chip('https://www.awsh.de/recyclinghoefe/uebersicht/', 'AWSH Recyclinghöfe', 'Quelle', { was: 'Adressen der Recyclinghöfe', von: 'Abfallwirtschaft Südholstein (AWSH)' })}</p><div class="lw-hoefe">${AWSH.recyclinghoefe.map((h) => `
       <a href="${esc(h.lat ? `https://www.openstreetmap.org/?mlat=${h.lat}&mlon=${h.lng}#map=16/${h.lat}/${h.lng}` : h.url)}" target="_blank" rel="noopener">
-        <b>${esc(h.name.replace('Recyclinghof ', ''))}</b><span>${esc(h.adresse)}</span>${h.hinweis ? `<em>${esc(h.hinweis)}</em>` : ''}</a>`).join('')}</div></details>` : ''}
+        <b>${esc(h.name.replace('Recyclinghof ', ''))}</b><span>${esc(h.adresse)}</span>${h.hinweis ? `<em>${esc(h.hinweis)}</em>` : ''}</a>`).join('')}</div></details>` : ''}</div>
     <p class="lw-fuss">${esc(AWSH.gebiet)}</p>`);
 }
 
@@ -335,4 +340,8 @@ addEventListener('keydown', (e) => {
   if (e.key === 'ArrowLeft' && i > 0) location.hash = link(IDS[i - 1], null);
 });
 ausHash();
-zeigeIntro({ seite: 'atlas', zahlen: { objekte: objekte.length, rohstoffe: Object.keys(ROH).length, rezepte: REZEPTE.length } });
+// Mo erzählt mit den echten Zahlen des gewählten Gegenstands
+zeigeIntro({ seite: 'atlas', zahlen: { objekte: objekte.length, rohstoffe: Object.keys(ROH).length, rezepte: REZEPTE.length }, info: () => {
+  const st = gewaehlt && stufeDaten(gewaehlt, 'abbau'), top = st && spitze(st.anteile);
+  return { name: obj?.name, rohstoff: gewaehlt && rohstoff(gewaehlt).name, land: top && land(top[0]), prozent: top?.[1], teile: seed?.parts?.length, gramm: obj && gramm(obj.gramm) };
+} });
