@@ -449,3 +449,5 @@ details[open] > summary:hover::after { color: var(--accent-ink); }
 .rundgang.pause .rg-karte { opacity: 0; transform: translateY(20px); transition: opacity .25s, transform .25s; }
 /* „Rundgang wiederholen“ gehört nur ins Handy-Menü (sonst gewinnt .steps a und zeigt ihn riesig in der Kopfzeile) */
 @media (min-width: 901px) { .steps a.menue-rundgang { display: none; } }
+/* Schritt „Zeigen“: Mo zeigt nur, wo man tippen könnte; kein Fingerhinweis, weiter geht es per Knopf */
+.rundgang.zeigen .rg-finger { display: none; }

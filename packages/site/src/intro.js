@@ -20,8 +20,8 @@ const SCHRITTE = [
       : `Station 1: Abbau. Hier siehst du, woher die Rohstoffe kommen. Dreh mal die Erde!` },
   { seite: 'atlas', art: 'tipp', ziel: '.lw-schritte a[data-s="gegenstand"]',
     text: () => 'Oben stehen alle 7 Stationen seines Lebens, vom Abbau bis zum Recycling. Tipp auf den Würfel: Da nehmen wir es auseinander.' },
-  { seite: 'atlas', art: 'tipp', pause: 1600, ziel: '.lw[data-schritt="gegenstand"] .panel-inner .lw-block > summary',
-    text: (d, i) => `${i.teile ? `${i.teile} Teile, ${i.gramm}. ` : ''}Alles mit dem Pfeil › klappt auf und geht in die Tiefe. Probier’s!` },
+  { seite: 'atlas', art: 'zeige', ziel: '.lw[data-schritt="gegenstand"] .panel-inner .lw-block > summary',
+    text: (d, i) => `${i.teile ? `${i.teile} Teile, ${i.gramm}. ` : ''}Hier könntest du tippen: Alles mit dem Pfeil › klappt auf und zeigt dir mehr, z. B. jedes Teil mit Material.` },
   { seite: 'atlas', art: 'tipp', ende: true, ziel: () => (handy.matches ? '.menue-knopf' : '.steps'),
     text: () => 'Werkbank, 3D-Modelle, KI-Kompass: alles im Menü. Tipp drauf, ab jetzt gehört die Seite dir!' },
 ];
@@ -126,11 +126,12 @@ export function zeigeIntro({ seite, zahlen, info = () => ({}), erzwingen = false
     const x = Math.max(2, r.left - p), y = Math.max(2, r.top - p);
     const w = Math.min(innerWidth - 2, r.right + p) - x, h = Math.min(innerHeight - 2, r.bottom + p) - y;
     Object.assign(spot.style, { width: `${w}px`, height: `${h}px`, transform: `translate(${x}px, ${y}px)` });
-    block.style.clipPath = `polygon(evenodd, 0 0, 100% 0, 100% 100%, 0 100%, 0 0, ${x}px ${y}px, ${x}px ${y + h}px, ${x + w}px ${y + h}px, ${x + w}px ${y}px, ${x}px ${y}px)`;
+    block.style.clipPath = s.art === 'zeige' ? 'none' : `polygon(evenodd, 0 0, 100% 0, 100% 100%, 0 100%, 0 0, ${x}px ${y}px, ${x}px ${y + h}px, ${x + w}px ${y + h}px, ${x + w}px ${y}px, ${x}px ${y}px)`;
     const f = (s.finger && zielEl.querySelector(s.finger)?.getBoundingClientRect()) || { left: x, top: y, width: w, height: h };
     finger.style.transform = `translate(${f.left + f.width / 2}px, ${f.top + f.height / 2}px)`;
     el.classList.add('leuchtet');
     el.classList.toggle('wischen', s.art === 'wisch');
+    el.classList.toggle('zeigen', s.art === 'zeige');
     const oben = r.top + r.height / 2 > innerHeight * 0.48;
     if (el.classList.contains('oben') !== oben) { el.classList.toggle('oben', oben); karte.classList.remove('rein'); void karte.offsetWidth; karte.classList.add('rein'); }
     requestAnimationFrame(() => setzeArme(zielEl?.getBoundingClientRect()));
@@ -176,6 +177,7 @@ export function zeigeIntro({ seite, zahlen, info = () => ({}), erzwingen = false
     mo.classList.remove('hopst'); void mo.getBoundingClientRect(); mo.classList.add('hopst');
     knoepfe.innerHTML = s.art === 'frage'
       ? '<button class="btn primary" data-ja>Ja, zeig’s mir<span class="pfeil">→</span></button><button class="btn ghost" data-nein>Nein, danke</button>'
+      : s.art === 'zeige' ? '<button class="btn primary" data-weiter>Weiter<span class="pfeil">→</span></button>'
       : `<p class="rg-hinweis"><i></i>${s.art === 'wisch' ? 'Mit dem Finger über die Erde ziehen' : 'Tipp auf das leuchtende Feld'}</p>`;
     knoepfe.querySelector('.primary')?.focus({ preventScroll: true });
     ausrichten();
@@ -199,6 +201,7 @@ export function zeigeIntro({ seite, zahlen, info = () => ({}), erzwingen = false
     const b = e.target.closest('button');
     if (!b) return;
     if (b.hasAttribute('data-ja')) gehe(i + 1);
+    else if (b.hasAttribute('data-weiter')) weiter();
     else if (b.hasAttribute('data-nein')) {
       knoepfe.innerHTML = '';
       sprich('Alles klar! Du findest mich jederzeit im Menü oben links.');
