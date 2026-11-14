@@ -296,7 +296,7 @@ function ausHash() {
   const p = new URLSearchParams(location.hash.slice(1));
   const o = objektVon.get(p.get('kat'));
   if (!o) return location.replace(`#kat=${objektVon.has(localStorage.getItem('lebensweg-letzt')) ? localStorage.getItem('lebensweg-letzt') : 'smartphone'}`);
-  zeige(o, IDS.includes(p.get('s')) ? p.get('s') : 'gegenstand', p.get('r'));
+  zeige(o, IDS.includes(p.get('s')) ? p.get('s') : 'abbau', p.get('r'));
 }
 addEventListener('hashchange', ausHash);
 addEventListener('keydown', (e) => {
