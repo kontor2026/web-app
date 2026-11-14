@@ -163,20 +163,6 @@
 .wb-stepper button:hover { background: var(--rule-2); color: var(--ink); }
 .wb-stepper b { min-width: 28px; text-align: center; font: 500 13px var(--mono); }
 
-.lw-strom-auf { display: none; }
-@media (max-width: 900px) {
-  .lw[data-schritt="abbau"] .lw-buehne, .lw[data-schritt="verarbeitung"] .lw-buehne { height: calc(44svh + 56px); }
-  .lw-globus { inset: 0 0 56px 0; }
-  .lw-strom { height: 56px; padding: 8px 14px; overflow: hidden; }
-  .lw-strom .strom { display: none; }
-  .lw-strom-auf { display: inline-flex; align-items: center; gap: 8px; height: 40px; padding: 0 14px; border: 1px solid var(--rule); background: var(--sheet); font-size: 14px; }
-  .lw-strom-auf .icon { width: 18px; height: 18px; }
-  .lw.strom-offen .lw-buehne { height: calc(44svh + 420px); }
-  .lw.strom-offen .lw-globus { inset: 0 0 420px 0; }
-  .lw.strom-offen .lw-strom { height: 420px; }
-  .lw.strom-offen .lw-strom .strom { display: block; height: calc(100% - 52px); margin-top: 8px; }
-  .lw .actionbar .btn { height: 44px; }
-}
 
 .lw-chip { height: 40px; }
 
@@ -184,3 +170,25 @@
 .lw-frage { display: flex; align-items: center; gap: 12px; margin: 0; padding: 18px 28px 6px; font-size: 26px; line-height: 1.15; font-weight: 600; letter-spacing: -.02em; }
 .lw-frage .icon { width: 26px; height: 26px; color: var(--accent); flex: none; }
 @media (max-width: 900px) { .lw-frage { padding: 14px 16px 4px; font-size: 22px; } .lw-frage .icon { width: 22px; height: 22px; } }
+
+/* ---------- Handy zuerst: weniger auf einmal ---------- */
+.lw-wahl-liste { display: none; }
+.lw-fluss { display: none; }
+.lw-weiter { display: none; }
+.lw-alle > summary { min-height: 40px; }
+@media (max-width: 900px) {
+  .lw .actionbar { display: none; }
+  .lw-chips { display: none; }
+  .lw-wahl-liste { display: grid; gap: 6px; font: 500 11px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); }
+  .lw-wahl-liste select { height: 48px; padding: 0 40px 0 14px; border: 1px solid var(--ink); border-radius: 2px; background: var(--card); font: 500 16px var(--sans); color: var(--ink); text-transform: none; letter-spacing: 0;
+    appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' fill='none' stroke='%231D201E' stroke-width='1.6'%3E%3Cpath d='m3 5 4 4 4-4'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; }
+  .lw-strom { display: none !important; }
+  .lw[data-schritt="abbau"] .lw-buehne, .lw[data-schritt="verarbeitung"] .lw-buehne { height: 44svh; min-height: 300px; }
+  .lw[data-schritt="abbau"] .lw-globus, .lw[data-schritt="verarbeitung"] .lw-globus { inset: 0; }
+  .lw-fluss { display: block; border-top: 1px solid var(--rule); }
+  .lw-fluss .lw-fluss-ort .strom { position: relative; height: 380px; display: block; }
+  .lw-weiter { display: flex; align-items: center; gap: 12px; min-height: 56px; padding: 0 16px; margin-top: 8px; background: var(--ink); color: var(--sheet); text-decoration: none; font-weight: 500; }
+  .lw-weiter .icon { width: 20px; height: 20px; }
+  .lw-weiter .pfeil { margin-left: auto; }
+  .lw .panel-inner { padding-bottom: 24px; }
+}

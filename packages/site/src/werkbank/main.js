@@ -75,7 +75,9 @@ function beobachte(wurzel) { wurzel.querySelectorAll('img[data-bild]').forEach((
 function zeigeRaster() {
   const q = document.getElementById('suche').value.trim().toLowerCase(), b = bestand();
   document.getElementById('chips').innerHTML = [null, ...GRUPPEN].map((g) =>
-    `<button class="lw-chip ${gruppe === g ? 'on' : ''}" data-g="${g ?? ''}">${g ?? 'Alle'}</button>`).join('');
+    `<button class="lw-chip ${gruppe === g ? 'on' : ''}" data-g="${g ?? ''}">${g ?? 'Alle'}</button>`).join('')
+    + `<select class="laden-gruppe" aria-label="Kategorie">${[null, ...GRUPPEN].map((g) => `<option value="${g ?? ''}" ${gruppe === g ? 'selected' : ''}>${g ?? 'Alle Kategorien'}</option>`).join('')}</select>`;
+  document.querySelector('.laden-gruppe').onchange = (e) => { gruppe = e.target.value || null; zeigeRaster(); };
   const liste = objekte.filter((o) => (!gruppe || o.gruppe === gruppe) && (!q || o.name.toLowerCase().includes(q)))
     .sort((a, c) => a.name.localeCompare(c.name, 'de'));
   document.getElementById('raster').innerHTML = liste.map((o) => `

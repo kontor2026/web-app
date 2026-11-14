@@ -60,7 +60,7 @@ function baueGeruest() {
         <div class="lw-globus" id="globus"></div>
         <div class="lw-szene" id="szene"></div>
         <div class="lw-balken" id="balken"></div>
-        <div class="lw-strom"><button class="lw-strom-auf" id="strom-auf" aria-expanded="false">${icon('weg')}Materialfluss zeigen</button><div class="strom" id="strom"></div></div>
+        <div class="lw-strom"><div class="strom" id="strom"></div></div>
       </div>
       <div class="legend" id="legende"></div>
     </div>
@@ -78,12 +78,6 @@ function baueGeruest() {
     onSelect: (i) => { if (schritt === 'gegenstand') zeigeTeil(i); },
   });
   new ResizeObserver(() => { if (schritt === 'abbau' || schritt === 'verarbeitung') zeichneStrom(); }).observe(document.getElementById('strom'));
-  document.getElementById('strom-auf').addEventListener('click', (e) => {
-    const auf = document.querySelector('.lw').classList.toggle('strom-offen');
-    e.currentTarget.setAttribute('aria-expanded', String(auf));
-    e.currentTarget.lastChild.textContent = auf ? 'Materialfluss ausblenden' : 'Materialfluss zeigen';
-    requestAnimationFrame(() => zeichneStrom());   // war versteckt und daher ohne Größe gezeichnet
-  });
   // Wischen über dem Datenblatt wechselt die Station (das Bild darüber bleibt drehbar)
   let wisch = null;
   const pan = document.getElementById('panel');
@@ -127,13 +121,21 @@ const panel = () => document.getElementById('panel');
 function setzePanel(html) {
   const s = SCHRITTE.find((x) => x.id === schritt);
   document.getElementById('frage').innerHTML = `${icon(schritt)}<span>${esc(s.frage)}</span>`;
-  panel().innerHTML = `<div class="panel-inner">${html}</div>`;
+  const strom = document.getElementById('strom');
+  if (strom && panel().contains(strom)) document.querySelector('.lw-strom').append(strom);
+  const i = IDS.indexOf(schritt), naechste = SCHRITTE[(i + 1) % IDS.length];
+  panel().innerHTML = `<div class="panel-inner">${html}<a class="lw-weiter" href="${link(naechste.id, null)}">${icon(naechste.id)}<span>${i < IDS.length - 1 ? 'Weiter' : 'Von vorn'}: ${naechste.name}</span><span class="pfeil">→</span></a></div>`;
   panel().scrollTop = 0;
 }
 const legende = (eintraege) => { document.getElementById('legende').innerHTML = eintraege.map(([f, t]) => `<span><i style="background:${f}"></i>${esc(t)}</span>`).join(''); };
-const laenderListe = (anteile, rest) => `${Object.entries(anteile).sort((a, b) => b[1] - a[1]).map(([l, p], i) => `
-  <div class="lw-land" data-land="${l}"><span class="nr">${String(i + 1).padStart(2, '0')}</span><span>${esc(land(l))}</span><b>${p} %</b><div class="mbar"><b style="width:${p}%"></b></div></div>`).join('')}
-  ${rest ? `<div class="lw-land rest"><span class="nr">··</span><span>Andere</span><b>${rest} %</b><div class="mbar"><b style="width:${rest}%"></b></div></div>` : ''}`;
+const landZeile = ([l, p], i) => `
+  <div class="lw-land" data-land="${l}"><span class="nr">${String(i + 1).padStart(2, '0')}</span><span>${esc(land(l))}</span><b>${p} %</b><div class="mbar"><b style="width:${p}%"></b></div></div>`;
+// Antwort zuerst: die drei größten Länder, der Rest aufklappbar
+const laenderListe = (anteile, rest) => {
+  const z = Object.entries(anteile).sort((a, b) => b[1] - a[1]);
+  const restZeile = rest ? `<div class="lw-land rest"><span class="nr">··</span><span>Andere</span><b>${rest} %</b><div class="mbar"><b style="width:${rest}%"></b></div></div>` : '';
+  return `${z.slice(0, 3).map(landZeile).join('')}${z.length > 3 ? `<details class="lw-alle"><summary>Alle ${z.length} Länder</summary>${z.slice(3).map((e, i) => landZeile(e, i + 3)).join('')}${restZeile}</details>` : restZeile}`;
+};
 function verbindeLaender() {
   panel().querySelectorAll('.lw-land[data-land]').forEach((z) => {
     z.addEventListener('pointerenter', () => globus.hebeHervor(z.dataset.land));
@@ -158,6 +160,7 @@ function zeigeRohstoffe() {
   globus.zeige(st?.anteile ?? {});
   legende([]);
   setzePanel(`
+    <label class="lw-wahl-liste"><span>Rohstoff</span><select id="rohstoff-wahl">${obj.rohstoffe.map((x) => `<option value="${x.key}" ${x.key === gewaehlt ? 'selected' : ''}>${esc(rohstoff(x.key).name)}${stufeDaten(x.key, schritt) ? '' : ' (keine Daten)'}</option>`).join('')}</select></label>
     <div class="lw-chips">${obj.rohstoffe.map((x) => {
       const y = rohstoff(x.key), da = !!stufeDaten(x.key, schritt);
       return `<a href="${link(schritt, x.key)}" class="lw-chip ${x.key === gewaehlt ? 'on' : ''} ${da ? '' : 'leer'}" title="${da ? '' : 'Keine Länderdaten'}">
@@ -166,8 +169,16 @@ function zeigeRohstoffe() {
     ${r ? `<div class="lw-zahl"><b>${gramm(menge)}</b><span>${esc(r.name)} im Gegenstand${r.kritisch ? ` · <em class="krit">▲ kritisch für die EU</em>${chip(quelleUrl(QUELLE, ROH[gewaehlt].kritisch_quelle, ROH[gewaehlt].kritisch_pdf_seite), 'Verordnung (EU) 2024/1252, Anhang II')}` : ''}</span>${schaetzung('tools/kategorien/rohstoffe.py', 'Aus dem 3D-Modell berechnet')}</div>` : ''}
     ${st ? `<div><h3>Nach Land ${belegStufe(st)}</h3>${laenderListe(st.anteile, st.rest)}
       <p class="lw-fuss">${esc(st.jahr ?? '')} · ${esc(QUELLE[st.quelle]?.herausgeber ?? QUELLE[st.quelle]?.titel ?? '')}</p></div>`
-    : `<p class="note">Keine Länderdaten mit Quelle.</p>`}`);
+    : `<p class="note">Keine Länderdaten mit Quelle.</p>`}
+    <details class="lw-fluss" id="fluss"><summary>Woher kommt was?</summary><div class="lw-fluss-ort"></div></details>`);
   verbindeLaender();
+  document.getElementById('rohstoff-wahl').addEventListener('change', (e) => { location.hash = link(schritt, e.target.value); });
+  const fluss = document.getElementById('fluss');
+  fluss.addEventListener('toggle', () => {
+    if (!fluss.open) return;
+    fluss.querySelector('.lw-fluss-ort').append(document.getElementById('strom'));
+    requestAnimationFrame(() => zeichneStrom());
+  });
 }
 
 // ---------- 3: Herstellung ----------
