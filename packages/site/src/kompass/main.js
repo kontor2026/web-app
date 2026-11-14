@@ -42,7 +42,7 @@ app.innerHTML = `
         ${richtungen}
       </svg>
     </div>
-    <details class="ablauf lw-block" id="ablauf"><summary>Ablauf in der Station · Mensch ${zaehle('Mensch')} · KI ${zaehle('KI')} · Datenbank ${zaehle('Datenbank')}</summary>
+    <details class="ablauf lw-block" id="ablauf"><summary>Ablauf</summary>
       <ol>${KOMPASS.ablauf.map((a, i) => `<li><button data-schritt="${i}" class="schritt ${WER[a.wer]}">
         <span class="nr">${String(i + 1).padStart(2, '0')}</span><b>${esc(a.schritt)}</b><span class="wer">${esc(a.wer)}</span></button></li>`).join('')}</ol>
     </details>
@@ -76,7 +76,7 @@ function richtung(r) {
   markiere(r);
   setzePanel(`
     <p class="kompass-kern">${esc(r.so_machen_wirs[0]?.text ?? '')}</p>
-    <div class="goal"><small>Tipp für dich</small>${esc(r.tipp_fuer_dich)}</div>`, null);
+    <p class="goal">${esc(r.tipp_fuer_dich)}</p>`, null);
 }
 
 function schritt(i) {

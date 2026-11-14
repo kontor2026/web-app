@@ -76,3 +76,12 @@
   .kompass .panel-inner { gap: 12px; padding: 12px 16px; }
   .kompass .plist .prow small { display: none; }
 }
+
+@media (max-width: 900px) {
+  .rose .lbl { display: none; }
+  .kompass-schritte .lw-name, .kompass-schritte a.on .lw-name { display: none; }
+  .kompass .rose-flaeche, .kompass .ablauf { margin: 0 16px; }
+  .kompass .ablauf > summary { min-height: 44px; }
+  .kompass-kern { font-size: 16px; }
+  .kompass .goal { margin: 0; }
+}
