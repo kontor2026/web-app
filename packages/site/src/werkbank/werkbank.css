@@ -109,3 +109,15 @@
   .laden { height: calc(100svh - 52px - var(--tabs)); display: flex; flex-direction: column; overflow: hidden; }
   .laden-haupt { flex: 1; min-height: 0; padding: 12px 16px 72px; gap: 10px; }
 }
+
+@media (max-width: 900px) {
+  .laden-haupt { padding-bottom: 12px; }
+  .ware { padding: 8px; gap: 6px 4px; }
+  .ware-bild { aspect-ratio: 4 / 3; }
+  .ware-text b { font-size: 13px; }
+  .ware-plus { width: 40px; height: 40px; font-size: 18px; }
+  .laden-kopf .seg button { height: 40px; }
+  .laden-kopf .suche-feld, .laden-gruppe { height: 44px; }
+  .blaettern { min-height: 44px; }
+  .laden { padding-bottom: 68px; }
+}

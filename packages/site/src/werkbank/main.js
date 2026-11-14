@@ -98,7 +98,7 @@ function seitenweise(liste) {
   karten.forEach((k) => { k.hidden = false; });
   if (!karten.length) { nav.innerHTML = ''; return; }
   const haupt = document.querySelector('.laden-haupt'), oben = liste.getBoundingClientRect().top - haupt.getBoundingClientRect().top;
-  const frei = haupt.clientHeight - oben - 72;
+  const frei = haupt.clientHeight - oben - (document.getElementById('blaettern').offsetHeight || 48) - parseFloat(getComputedStyle(haupt).paddingBottom) - 8;
   const stil = getComputedStyle(liste), luecke = parseFloat(stil.rowGap) || 0;
   const hoch = Math.max(...karten.slice(0, 6).map((k) => k.getBoundingClientRect().height));
   const spalten = Math.max(1, stil.gridTemplateColumns.split(' ').length);
