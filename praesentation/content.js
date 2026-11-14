@@ -20,6 +20,10 @@ export const slides = [
     id: 'schublade', aida: 'Attention', title: 'Die Schublade',
     steps: [
       {
+        id: 'start', name: 'Start', caption: '',
+        notes: 'Ruhiges Startbild, Schublade zu. Hier stehen, bis es losgeht. [→ öffnet die Schublade]',
+      },
+      {
         id: 'schublade', name: 'Schublade', caption: '',
         notes: 'Kein Hallo, keine Vorstellung, direkt rein. Die Schublade geht auf. Jeder hat so eine: alte Handys, Ladegeräte, Kopfhörer, Powerbanks. Frage ans Publikum: Wer hat zu Hause ein altes Handy in der Schublade?',
       },

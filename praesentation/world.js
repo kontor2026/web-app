@@ -55,6 +55,7 @@ const icon = (id) => `<svg viewBox="0 0 24 24" aria-hidden="true">${ICON[id]}</s
 
 // Stimmung je Schritt: Licht, Umgebung, Nebel, Bloom (wird weich überblendet)
 const MOOD = {
+  start: { env: 0.2, key: 0.22, hemi: 0.1, spot: 0.7, rim: 0.15, fog: [5, 17], bloom: 0.5 },
   schublade: { env: 0.2, key: 0.22, hemi: 0.1, spot: 1, rim: 0.15, fog: [5, 17], bloom: 0.55 },
   inhalt: { env: 0.85, key: 0.35, hemi: 0.2, spot: 0.4, rim: 0.55, fog: [5, 17], bloom: 0.45 },
   muell: { env: 0.35, key: 0.42, hemi: 0.18, spot: 0.9, rim: 0.3, fog: [6, 22], bloom: 0.5 },
@@ -839,6 +840,7 @@ export async function buildWorld(engine) {
   st.group.updateMatrixWorld(true);
   st.screen.getWorldPosition(screenCenter);
   const shots = {
+    start: { pos: Pc.clone().addScaledVector(nc, 1.6).addScaledVector(tc, 0.35).add(v(0, 1.25, 0)), target: Pc.clone().addScaledVector(nc, 0.2).add(v(0, 0.5, 0)) },
     schublade: { pos: Pc.clone().addScaledVector(nc, 0.92).addScaledVector(tc, 0.1).add(v(0, 1.32, 0)), target: Pc.clone().addScaledVector(nc, 0.42).add(v(0, 0.6, 0)) },
     inhalt: { pos: Pshow.clone().addScaledVector(nc, 1.02).addScaledVector(tc, 0.06).add(v(0, 0.26, 0)), target: Pshow.clone().add(v(0, 0.125, 0)) },
     muell: { pos: mid.clone().add(v(0.15, 1.4, 2.75)), target: mid.clone().add(v(0.05, 0.62, 0.2)) },
