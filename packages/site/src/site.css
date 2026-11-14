@@ -183,3 +183,14 @@ html { scroll-padding-bottom: calc(var(--tabs) + 88px); }
 .lw-chip.on i { border-color: var(--sheet); }
 .lw-chip.leer { color: var(--ink-3); border-style: dashed; }
 .lw-chip { height: 40px; }
+<<<<<<< ours
+=======
+/* Handy-Start: Titel, dann Kreislauf, dann Suche und Gegenstände */
+@media (max-width: 900px) {
+  .start-text { display: contents; }
+  .start-text h1 { order: 1; margin-top: 8px; }
+  .start-text .lead { order: 2; margin: 8px 0 0; }
+  .kreis { order: 3; }
+  .waehler { order: 4; }
+}
+>>>>>>> theirs

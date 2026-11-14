@@ -2,7 +2,6 @@
 // Lebensweg-Schritte mit Symbolen, Quellen-Chips, Formatierung.
 import '../../../css/app.css';
 import './site.css';
-import { anzahl } from './werkbank.js';
 
 export const SEITEN = [
   { id: 'start', pfad: '', name: 'Start', icon: 'start' },
@@ -21,11 +20,10 @@ export function shell(aktiv, root) {
       <span>Kreislauf-Station</span>
     </a>
     <nav class="steps" aria-label="Bereiche">
-      ${SEITEN.map((s) => `<a href="${root}${s.pfad}" class="${s.id === aktiv ? 'active' : ''}" ${s.id === aktiv ? 'aria-current="page"' : ''}>${icon(s.icon)}<span class="lang">${s.name}</span><span class="kurz">${s.kurz ?? s.name}</span>${s.id === 'werkbank' ? `<span class="zaehler" ${anzahl() ? '' : 'hidden'}>${anzahl()}</span>` : ''}</a>`).join('')}
+      ${SEITEN.map((s) => `<a href="${root}${s.pfad}" class="${s.id === aktiv ? 'active' : ''}" ${s.id === aktiv ? 'aria-current="page"' : ''}>${icon(s.icon)}<span class="lang">${s.name}</span><span class="kurz">${s.kurz ?? s.name}</span></a>`).join('')}
     </nav>
     <div class="status"></div>
   </header>`);
-  addEventListener('werkbank', () => { const z = document.querySelector('.steps .zaehler'); z.textContent = anzahl(); z.hidden = !anzahl(); });
   return document.getElementById('app');
 }
 
@@ -52,7 +50,7 @@ const ICON = {
   verarbeitung: '<path d="M12 3c3 4 5 6.5 5 10a5 5 0 0 1-10 0c0-3 2-5.5 5-10Z"/><path d="M12 14a2 2 0 0 0 2-2"/>',
   herstellung: '<path d="M3 20V10l5 3v-3l5 3V6h5v14Z"/><path d="M7 17h2M12 17h2"/>',
   gegenstand: '<path d="m12 3 8 4.5v9L12 21l-8-4.5v-9Z"/><path d="m4 7.5 8 4.5 8-4.5M12 12v9"/>',
-  werkbank: '<path d="M3 10h18v3H3zM5 13v7M19 13v7M8 10V6h8v4"/>',
+  werkbank: '<path d="M3 9h18v10H3Z"/><path d="M8 9V6.5A1.5 1.5 0 0 1 9.5 5h5A1.5 1.5 0 0 1 16 6.5V9M3 13h18M10 12v3h4v-3"/>',
   upcycling: '<path d="M14.5 5.5 18.5 9.5 9 19H5v-4Z"/><path d="m12.5 7.5 4 4"/>',
   entsorgung: '<path d="M4 7h16M9 7V4h6v3M6 7l1 13h10l1-13"/><path d="M10 11v6M14 11v6"/>',
   verwertung: '<path d="M20 12a8 8 0 1 1-2.3-5.7"/><path d="M20 4v4h-4"/>',
