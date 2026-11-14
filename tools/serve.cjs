@@ -58,7 +58,8 @@ http.createServer((req, res) => {
     if (!err && st.isDirectory()) { res.writeHead(302, { Location: `${pathname}/` }); res.end(); return; }
     fs.readFile(file, (error, data) => {
       if (error) { res.writeHead(404); res.end('Not found'); return; }
-      res.writeHead(200, { 'Content-Type': types[path.extname(file).toLowerCase()] || 'application/octet-stream', 'Cache-Control': 'no-cache' });
+      // no-store: the browser never keeps a copy, a reload always shows the files as they are on disk right now
+      res.writeHead(200, { 'Content-Type': types[path.extname(file).toLowerCase()] || 'application/octet-stream', 'Cache-Control': 'no-store' });
       res.end(data);
     });
   });
